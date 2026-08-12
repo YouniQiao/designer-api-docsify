@@ -101,7 +101,7 @@ ScrollBar(value: ScrollBarOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollBarOptions](../arkts-apis/arkts-arkui-scrollbar-scrollbaroptions-i.md) | 是 | 滚动条组件参数。 |
+| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | 是 | 滚动条组件参数。 |
 
 ## 汇总
 

@@ -6,7 +6,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.ability.featureAbility.FeatureAbility
+**Substitutes:** [FeatureAbility](ohos.ability.featureAbility.FeatureAbility)
 
 <!--Device-unnamed-export declare class FeatureAbility--><!--Device-unnamed-export declare class FeatureAbility-End-->
 
@@ -64,7 +64,7 @@ Start FA migration.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result data returned by the AA. The result is a JSON string. |
 
 ## finishWithResult
 
@@ -80,7 +80,7 @@ FA call the interface to destroy itself and set the result as parameters.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.ability.featureAbility.FeatureAbility#terminateSelfWithResult
+**Substitutes:** [terminateSelfWithResult](ohos.ability.featureAbility.FeatureAbility#terminateSelfWithResult)
 
 <!--Device-FeatureAbility-static finishWithResult(param: FinishWithResultParams): Promise<Result>--><!--Device-FeatureAbility-static finishWithResult(param: FinishWithResultParams): Promise<Result>-End-->
 
@@ -96,7 +96,7 @@ FA call the interface to destroy itself and set the result as parameters.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | A Promise object is returned, which contains the result whether to callback successfully. |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result whether to callback successfully. |
 
 ## getDeviceList
 
@@ -126,7 +126,7 @@ Get device information list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | A Promise object is returned, which contains the result whether the device information list is obtained successfully. |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result whether the device information list is obtained successfully. |
 
 ## sendMsg
 
@@ -166,7 +166,7 @@ Start a FA without callback result.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.ability.featureAbility.FeatureAbility#startAbility
+**Substitutes:** [startAbility](ohos.ability.featureAbility.FeatureAbility#startAbility)
 
 <!--Device-FeatureAbility-static startAbility(request: RequestParams): Promise<Result>--><!--Device-FeatureAbility-static startAbility(request: RequestParams): Promise<Result>-End-->
 
@@ -182,7 +182,7 @@ Start a FA without callback result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | A Promise object is returned, which contains the result of whether to call Ability's interface successfully. |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result of whether to call Ability's interface successfully. |
 
 ## startAbilityForResult
 
@@ -198,7 +198,7 @@ Start a FA with callback result.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.ability.featureAbility.FeatureAbility#startAbilityForResult
+**Substitutes:** [startAbilityForResult](ohos.ability.featureAbility.FeatureAbility#startAbilityForResult)
 
 <!--Device-FeatureAbility-static startAbilityForResult(request: RequestParams): Promise<Result>--><!--Device-FeatureAbility-static startAbilityForResult(request: RequestParams): Promise<Result>-End-->
 
@@ -214,7 +214,7 @@ Start a FA with callback result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&gt; | A Promise object is returned, which contains the result of the data FA returned. |
+| Promise&lt;[Result](arkts-arkui-featureability-result-i.md)&gt; | A Promise object is returned, which contains the result of the data FA returned. |
 
 ## subscribeAbilityEvent
 

@@ -52,7 +52,7 @@
 | [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) |
 | [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) |
 | [KeyboardController](arkts-ime-inputmethodengine-keyboardcontroller-i.md) |
-| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过  [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取该实例。  **核心功能概述：**  - **物理键盘按键事件**：通过on('keyDown'\|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回  false表示不消费。  - **光标与选区变化事件**：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。  - **文本变化事件**：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。  - **编辑框属性变化事件**：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。  **使用场景：**  - 开发物理键盘快捷键处理功能时，订阅on('keyDown'\|
+| [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) | KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过  [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate)获取该实例。  **核心功能概述：**  - **物理键盘按键事件**：通过on('keyDown'\|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回  false表示不消费。  - **光标与选区变化事件**：通过on('cursorContextChange')订阅光标位置变化事件，通过on('selectionChange')订阅文本选区变化事件。输入法应用可根据这些事件调整候选词位置或输入策略。  - **文本变化事件**：通过on('textChange')订阅编辑框文本内容变化事件，输入法应用可据此更新候选词或输入建议。  - **编辑框属性变化事件**：通过on('editorAttributeChanged')订阅编辑框属性变化事件，输入法应用可根据编辑框属性变化动态调整键盘布局。  **使用场景：**  - 开发物理键盘快捷键处理功能时，订阅on('keyDown'\|
 | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) |
 | [Movement](arkts-ime-inputmethodengine-movement-i.md) |
 | [Panel](arkts-ime-inputmethodengine-panel-i.md) |
@@ -82,7 +82,7 @@
 | [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md) |
 | [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md) | 枚举，输入法渐变模式。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| NONE \| 0 \| 不使用渐变模式。 \|  \| LINEAR_GRADIENT \| 1 \| 线性渐变。 \|
 | [ImmersiveMode](arkts-ime-inputmethodengine-immersivemode-e.md) | 枚举，输入法沉浸模式。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| NONE_IMMERSIVE \| 0 \| 不使用沉浸模式。 \|  \| IMMERSIVE \| 1 \| 沉浸模式，由输入法应用确定沉浸模式类型。 \|  \| LIGHT_IMMERSIVE \| 2 \| 浅色沉浸模式。 \|  \| DARK_IMMERSIVE \| 3 \| 深色沉浸模式。 \|
-| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 输入法面板状态类型枚举。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| FLG_FIXED \| 0 \| 固定态面板类型。 \|  \| FLG_FLOATING \| 1 \| 悬浮态面板类型。 \|  \| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; \| 2 \| 候选词态面板类型。 \|
+| [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | 输入法面板状态类型枚举。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| FLG_FIXED \| 0 \| 固定态面板类型。 \|  \| FLG_FLOATING \| 1 \| 悬浮态面板类型。 \|  \| FLAG_CANDIDATE & lt;sup & gt;15+ & lt;/sup & gt; \ | 2 \| 候选词态面板类型。 \|
 | [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) | 输入法面板类型枚举。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| SOFT_KEYBOARD \| 0 \| 软键盘类型。 \|  \| STATUS_BAR \| 1 \| 状态栏类型。 \|
 | [RequestKeyboardReason](arkts-ime-inputmethodengine-requestkeyboardreason-e.md) | 枚举，请求键盘输入的原因。  \| 名称 \| 值 \| 说明 \|  \| ------------ \| -- \| ------------------ \|  \| NONE \| 0 \| 表示没有特定的原因触发键盘请求。 \|  \| MOUSE \| 1 \| 表示键盘请求是由鼠标操作触发的。 \|  \| TOUCH \| 2 \| 表示键盘请求是由触摸操作触发的。 \|  \| OTHER \| 20 \| 表示键盘请求是由其他原因触发的。 \|
 | [SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md) |

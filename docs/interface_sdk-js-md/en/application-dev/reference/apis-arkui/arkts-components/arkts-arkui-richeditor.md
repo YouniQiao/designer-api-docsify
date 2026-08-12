@@ -57,7 +57,7 @@ Called when create RichEditor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RichEditorStyledStringOptions](../arkts-apis/arkts-arkui-richeditor-richeditorstyledstringoptions-i.md) | Yes | Options for initializing the component. |
+| options | [RichEditorStyledStringOptions](arkts-arkui-richeditorstyledstringoptions-i.md) | Yes | Options for initializing the component. |
 
 ## Summary
 

@@ -24,7 +24,7 @@ function begin(scene: string, startInputType: ActionType, note?: string): void
 | --- | --- | --- |
 | scene | string | 是 |
 | startInputType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
-| note | string | 否 |
+| [note](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-contact-c.md) | string | 否 |
 
 ## 示例
 

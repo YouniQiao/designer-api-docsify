@@ -11,7 +11,7 @@
 > - 从API version 12开始，ScrollBar组件没有子节点时，支持显示默认样式的滚动条。
 > 
 > - ScrollBar组件的显隐是通过BarState设置，组件内部会自动根据BarState设置调整opacity来控制显隐，因此ScrollBar组件设置
-> [opacity](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#opacity)属性不生效。
+> [opacity](CommonMethod#opacity(opacity: Optional&lt;number | Resource&gt;))属性不生效。
 
 **起始版本：** 8
 
@@ -49,7 +49,7 @@ scroller: Scroller
 
 可滚动组件的控制器。用于与可滚动组件进行绑定。
 
-**类型：** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**类型：** Scroller
 
 **起始版本：** 8
 
@@ -69,7 +69,7 @@ state?: BarState
 
 滚动条状态。&lt;br/&gt;默认值：BarState.Auto
 
-**类型：** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
+**类型：** BarState
 
 **起始版本：** 8
 

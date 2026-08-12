@@ -18,7 +18,7 @@ color: ResourceColor
 
 Color value at the gradient color stop.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ If the value is a string that represents a number, it will be converted to a num
 
 For example, **'10vp'** is converted to 10, and **'10%'** is converted to 0.1.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 

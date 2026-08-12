@@ -37,7 +37,7 @@ Use new function to create Rect.Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](../arkts-apis/arkts-arkui-rect-roundedrectoptions-i.md) | 否 |
+| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | 否 |
 
 ## Rect
 
@@ -63,7 +63,7 @@ Rect(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](../arkts-apis/arkts-arkui-rect-roundedrectoptions-i.md) | 否 |
+| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | 否 |
 
 ## 汇总
 

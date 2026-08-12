@@ -134,7 +134,7 @@ options?: Array<RevocationCheckOptions>
 
 表示证书吊销状态查询的策略组合。
 
-**类型：** Array&lt;RevocationCheckOptions&gt;
+**类型：** Array&lt;[RevocationCheckOptions](arkts-devicecertificate-cert-revocationcheckoptions-e.md)&gt;
 
 **起始版本：** 12
 

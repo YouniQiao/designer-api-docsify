@@ -8,7 +8,7 @@ Provides APIs for managing the **Authenticator** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
+**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
 
 <!--Device-userAuth-interface Authenticator--><!--Device-userAuth-interface Authenticator-End-->
 
@@ -17,7 +17,7 @@ Provides APIs for managing the **Authenticator** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## execute
@@ -34,7 +34,7 @@ Starts user authentication. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -46,9 +46,9 @@ Starts user authentication. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. &lt;br&gt;**ALL** is reserved and not supported by the current version. |
+| type | AuthType | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. &lt;br&gt;**ALL** is reserved and not supported by the current version. |
 | level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). &lt;br&gt;Devices capable of 3D facial recognition support S3 and lower-level authentication. &lt;br&gt;Devices capable of 2D facial recognition support S2 and lower-level authentication. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. **number** indicates the [AuthenticationResult](arkts-userauthentication-userauth-authenticationresult-e.md#AuthenticationResult). |
 
 ## Examples
 
@@ -79,7 +79,7 @@ Starts user authentication. This API uses a promise to return the result.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -91,7 +91,7 @@ Starts user authentication. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [AuthType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtype-e-sys.md) | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. &lt;br&gt;**ALL** is reserved and not supported by the current version. |
+| type | AuthType | Yes | Authentication type. Currently, only **FACE_ONLY** is supported. &lt;br&gt;**ALL** is reserved and not supported by the current version. |
 | level | [SecureLevel](arkts-userauthentication-userauth-securelevel-t.md) | Yes | Security level of the authentication. It can be **S1** (lowest), **S2**, **S3**, or **S4** (highest). &lt;br&gt;Devices capable of 3D facial recognition support S3 and lower-level authentication. &lt;br&gt;Devices capable of 2D facial recognition support S2 and lower-level authentication. |
 
 **Return value:**

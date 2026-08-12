@@ -32,7 +32,7 @@ readonly componentType: ComponentType
 
 组件类型。
 
-**类型：** [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md)
+**类型：** ComponentType
 
 **起始版本：** 9
 

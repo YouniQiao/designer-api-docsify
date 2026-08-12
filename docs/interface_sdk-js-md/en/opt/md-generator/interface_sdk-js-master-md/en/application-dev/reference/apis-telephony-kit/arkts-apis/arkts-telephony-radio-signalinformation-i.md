@@ -11,7 +11,7 @@ Returns child class objects specific to the network type.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## dBm
@@ -54,7 +54,7 @@ signalType: NetworkType
 
 Obtains the network type corresponding to the signal.
 
-**Type:** [NetworkType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workscheduler-networktype-e.md)
+**Type:** NetworkType
 
 **Since:** 6
 

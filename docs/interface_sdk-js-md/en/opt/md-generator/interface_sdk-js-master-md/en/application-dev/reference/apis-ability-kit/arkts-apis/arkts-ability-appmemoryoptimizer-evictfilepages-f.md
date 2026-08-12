@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## evictFilePages
@@ -26,13 +26,13 @@ Sends a request to the system to release file page cache of specified files. The
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fileNames | Array&lt;string&gt; | Yes |
+| fileNames | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 

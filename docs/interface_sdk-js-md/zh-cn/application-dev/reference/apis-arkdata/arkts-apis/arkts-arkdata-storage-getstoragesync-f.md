@@ -14,7 +14,7 @@ function getStorageSync(path: string): Storage
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.getPreferences
+**替代接口：** [getPreferences](ohos.preferences.preferences.getPreferences)
 
 <!--Device-storage-function getStorageSync(path: string): Storage--><!--Device-storage-function getStorageSync(path: string): Storage-End-->
 
@@ -28,5 +28,5 @@ function getStorageSync(path: string): Storage
 
 | 类型 | 说明 |
 | --- | --- |
-| [Storage](arkts-arkdata-system-storage-storage-c.md) | 获取到要操作的Storage实例，用于进行数据存储操作。 |
+| Storage | 获取到要操作的Storage实例，用于进行数据存储操作。 |
 

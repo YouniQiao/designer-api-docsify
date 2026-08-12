@@ -20,7 +20,7 @@ condition:Geofence
 
 条件具体描述。
 
-**类型：** [Geofence](arkts-notification-notificationmanager-geofence-t-sys.md)
+**类型：** [Geofence](arkts-notification-notificationrequest-geofence-i-sys.md)
 
 **起始版本：** 23
 
@@ -60,7 +60,7 @@ type:TriggerType
 
 条件类型。
 
-**类型：** [TriggerType](arkts-notification-notificationmanager-triggertype-t-sys.md)
+**类型：** [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md)
 
 **起始版本：** 23
 

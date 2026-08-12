@@ -16,7 +16,7 @@
 command: AVCastControlCommandType
 ```
 
-命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)。
+命令。每种命令对应的参数不同，具体的对应关系可查阅[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md#AVCastControlCommandType)。
 
 **类型：** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 
@@ -38,7 +38,7 @@ parameter?: media.PlaybackSpeed | double | string | LoopMode
 
 命令对应的参数。
 
-**类型：** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| LoopMode  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| LoopMode
+**类型：** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **起始版本：** 10
 

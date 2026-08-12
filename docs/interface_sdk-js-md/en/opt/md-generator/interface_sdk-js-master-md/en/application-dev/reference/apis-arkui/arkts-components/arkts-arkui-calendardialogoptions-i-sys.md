@@ -2,7 +2,7 @@
 
 Defines the configuration options of the calendar picker dialog box.
 
-Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions).
 
 > **NOTE：**
 > 
@@ -10,7 +10,7 @@ Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
 > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)
 
 **Since:** 10
 

@@ -11,7 +11,7 @@ Describes the parameters used for creating a child window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## decorEnabled
@@ -137,10 +137,10 @@ windowRect?: Rect
 
 Rectangle of the child window, and the size of the child window is limited. For details, see  
 [resize()](arkts-arkui-window-window-i.md#resize). If this parameter is not set and  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow) is not called, the default value {left: 0, top: 0, width: 0, height: 0} is used. For details, see  
+[showWindow()](arkts-arkui-window-window-i.md#showWindow) is not called, the default value {left: 0, top: 0, width: 0, height: 0} is used. For details, see  
 [Setting a Child Window of an Application](../../../windowmanager/application-window-stage.md#setting-a-child-window-of-an-application).
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 18
 

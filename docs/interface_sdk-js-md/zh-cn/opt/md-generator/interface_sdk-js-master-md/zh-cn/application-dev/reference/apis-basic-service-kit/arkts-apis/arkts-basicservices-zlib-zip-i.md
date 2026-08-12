@@ -36,14 +36,14 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<Zi
 
 | 类型 |
 | --- |
-| Promise&lt;ZipOutputInfo&gt; |
+| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
 
 ## 示例
 
@@ -95,15 +95,15 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 | 类型 |
 | --- |
-| Promise&lt;ZipOutputInfo&gt; |
+| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## compressBound
 
@@ -131,13 +131,13 @@ compressBound(sourceLen: number): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -188,15 +188,15 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -252,19 +252,19 @@ deflateBound(strm: ZStream, sourceLength: number): Promise<number>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| sourceLength | number | 是 |
+| [sourceLength](arkts-basicservices-zlib-decompressionoutputinfo-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -325,14 +325,14 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -393,14 +393,14 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -467,14 +467,14 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 类型 |
 | --- |
-| Promise&lt;DictionaryOutputInfo&gt; |
+| Promise&lt;[DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -541,14 +541,14 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -603,21 +603,21 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 |
 | method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | 是 |
 | windowBits | number | 是 |
-| memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 |
+| [memLevel](arkts-basicservices-zlib-options-i.md) | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | 是 |
 | strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -676,14 +676,14 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -744,14 +744,14 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;DeflatePendingOutputInfo&gt; |
+| Promise&lt;[DeflatePendingOutputInfo](arkts-basicservices-zlib-deflatependingoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -807,21 +807,21 @@ deflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| bits | number | 是 |
+| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | 是 |
 | value | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -882,14 +882,14 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -950,14 +950,14 @@ deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1019,14 +1019,14 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1088,14 +1088,14 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1161,14 +1161,14 @@ deflateTune(strm: ZStream, goodLength: number, maxLazy: number, niceLength: numb
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1223,7 +1223,7 @@ getZStream(): Promise<ZStream>
 
 | 类型 |
 | --- |
-| Promise&lt;ZStream&gt; |
+| Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md)&gt; |
 
 ## 示例
 
@@ -1264,15 +1264,15 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1358,14 +1358,14 @@ inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, bac
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1530,14 +1530,14 @@ inflateBackInit()函数分配的所有内存都被释放。使用Promise异步�
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1571,14 +1571,14 @@ inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1610,13 +1610,13 @@ inflateCodesUsed(strm: ZStream): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1672,14 +1672,14 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1736,14 +1736,14 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1805,14 +1805,14 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 | 类型 |
 | --- |
-| Promise&lt;DictionaryOutputInfo&gt; |
+| Promise&lt;[DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1869,14 +1869,14 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -1932,13 +1932,13 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1991,14 +1991,14 @@ inflateInit2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2050,13 +2050,13 @@ inflateMark(strm: ZStream): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -2107,21 +2107,21 @@ inflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| bits | number | 是 |
+| [bits](arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | 是 |
 | value | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2177,14 +2177,14 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2241,14 +2241,14 @@ inflateReset2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2304,14 +2304,14 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2368,15 +2368,15 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2469,16 +2469,16 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
+| [17800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2565,14 +2565,14 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2623,20 +2623,20 @@ inflateValidate(strm: ZStream, check: number): Promise<ReturnStatus>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | 是 |
-| check | number | 是 |
+| [check](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-jsleakwatcher-check-f.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ReturnStatus&gt; |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) |
 
 ## 示例
 
@@ -2694,15 +2694,15 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<Z
 
 | 类型 |
 | --- |
-| Promise&lt;ZipOutputInfo&gt; |
+| Promise&lt;[ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
+| [17800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 
 ## 示例
 
@@ -2759,15 +2759,15 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;DecompressionOutputInfo&gt; |
+| Promise&lt;[DecompressionOutputInfo](arkts-basicservices-zlib-decompressionoutputinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
-| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-传入的缓冲区错误) |
+| [17800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-传入的数据错误) |
 
 ## 示例
 
@@ -2816,7 +2816,7 @@ zlibCompileFlags(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 
@@ -2850,7 +2850,7 @@ zlibVersion(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 

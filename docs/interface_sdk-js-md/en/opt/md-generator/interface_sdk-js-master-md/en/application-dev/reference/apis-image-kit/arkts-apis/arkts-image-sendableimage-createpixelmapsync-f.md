@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMapSync
@@ -37,7 +37,7 @@ Create PixelMap by data buffer.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

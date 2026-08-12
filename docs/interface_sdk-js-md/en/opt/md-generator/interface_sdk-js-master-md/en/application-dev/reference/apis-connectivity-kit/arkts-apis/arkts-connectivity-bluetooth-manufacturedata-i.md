@@ -6,7 +6,7 @@ Describes the manufacturer data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ManufactureData
+**Substitutes:** [ManufactureData](ohos.bluetoothManager/bluetoothManager.ManufactureData)
 
 <!--Device-bluetooth-interface ManufactureData--><!--Device-bluetooth-interface ManufactureData-End-->
 
@@ -15,7 +15,7 @@ Describes the manufacturer data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## manufactureId
@@ -32,7 +32,7 @@ Indicates the manufacturer ID assigned by Bluetooth SIG
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ManufactureData.manufactureId
+**Substitutes:** [manufactureId](ohos.bluetoothManager/bluetoothManager.ManufactureData.manufactureId)
 
 <!--Device-ManufactureData-manufactureId: number--><!--Device-ManufactureData-manufactureId: number-End-->
 
@@ -52,7 +52,7 @@ Indicates the manufacturer data to add
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ManufactureData.manufactureValue
+**Substitutes:** [manufactureValue](ohos.bluetoothManager/bluetoothManager.ManufactureData.manufactureValue)
 
 <!--Device-ManufactureData-manufactureValue: ArrayBuffer--><!--Device-ManufactureData-manufactureValue: ArrayBuffer-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## onSystemBarTintChange
@@ -28,11 +28,11 @@ Subscribes to the property change event of the status bar and navigation bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SystemBarTintState&gt; | Yes | Callback used to return the properties of the system bar. |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[SystemBarTintState](arkts-arkui-window-systembartintstate-i-sys.md)&gt; | Yes | Callback used to return the properties of the system bar. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

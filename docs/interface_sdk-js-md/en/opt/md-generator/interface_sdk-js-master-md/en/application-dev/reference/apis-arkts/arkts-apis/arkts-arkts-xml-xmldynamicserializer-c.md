@@ -11,7 +11,7 @@ The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement
@@ -40,8 +40,8 @@ Add an empty element.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -82,7 +82,7 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance.T
 
 | Error Code ID |
 | --- |
-| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) |
+| [10200066](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200066-incorrect-encoding-format) |
 
 ## Examples
 
@@ -110,8 +110,8 @@ Writes end tag of the element.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200065](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) |
 
 ## Examples
 
@@ -192,9 +192,9 @@ Write an attribute to xml element.
 
 | Error Code ID |
 | --- |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -237,8 +237,8 @@ Writes the CDATA.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -279,8 +279,8 @@ Writes the comment to xml.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -315,8 +315,8 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 | Error Code ID |
 | --- |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
 
 ## Examples
 
@@ -357,8 +357,8 @@ Writes the DOCTYPE.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -400,8 +400,8 @@ Writes the namespace of the current element tag.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -444,8 +444,8 @@ Writes the text to xml element.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -489,8 +489,8 @@ Writes a element start tag with the given name.
 
 | Error Code ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 

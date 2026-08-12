@@ -40,4 +40,4 @@ Returns a new object with properties reflecting the locale and style formatting 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ResolvedDisplayNamesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddisplaynamesoptions-i.md) |
+| [ResolvedDisplayNamesOptions](arkts-intl-resolveddisplaynamesoptions-i.md) |

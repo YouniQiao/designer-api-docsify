@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## getPowerConfig
@@ -44,9 +44,9 @@ Query the power configuration value for a given scene name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes: 1. The sceneName parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes. |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
-| [4900501](../../apis-basic-services-kit/errorcode-power.md#4900501-failure-to-read-the-power-supply-configuration-node) | Failed to read the power configuration value. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900400](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes: 1. The sceneName parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes. |
+| [4900101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| [4900501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900501-failure-to-read-the-power-supply-configuration-node) | Failed to read the power configuration value. |
 

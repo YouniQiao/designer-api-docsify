@@ -11,7 +11,7 @@ Optional configuration items for creating the time and date formatting object fo
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## day
@@ -22,7 +22,7 @@ day?: TextStyle
 
 Specifies the text style of the day. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ dayPeriod?: TextStyle
 
 Specifies the text style of the period. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ era?: TextStyle
 
 Specifies the text style of the era. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ hour?: TextStyle
 
 Specifies the text style of the hour. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -94,7 +94,7 @@ minute?: TextStyle
 
 Specifies the text style of the minute. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ month?: TextStyle
 
 Specifies the text style of the month. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -130,7 +130,7 @@ second?: TextStyle
 
 Specifies the text style of the second. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -148,7 +148,7 @@ timeZoneName?: TextStyle
 
 Specifies the text style of the time zone name. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -166,7 +166,7 @@ weekday?: TextStyle
 
 Specifies the text style of the week. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 
@@ -184,7 +184,7 @@ year?: TextStyle
 
 Specifies the text style of the year. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 23
 

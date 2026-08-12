@@ -1,8 +1,8 @@
 # PhotoSessionForSys (System API)
 
-Implements a photo session for system applications, which sets the parameters of the normal photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md).
+Implements a photo session for system applications, which sets the parameters of the normal photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
 
-**Inheritance/Implementation:** PhotoSessionForSys extends [PhotoSession](arkts-camera-camera-photosession-i.md), [Beauty](arkts-camera-camera-beauty-i-sys.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md), [ColorManagement](arkts-camera-camera-colormanagement-i.md), [Macro](arkts-camera-camera-macro-i.md), [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md), [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md), [DepthFusion](arkts-camera-camera-depthfusion-i-sys.md), [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md)
+**Inheritance/Implementation:** PhotoSessionForSys extends [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [Macro](arkts-camera-camera-macro-i.md#Macro), [SceneDetection](arkts-camera-camera-scenedetection-i-sys.md#SceneDetection), [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md#EffectSuggestion), [DepthFusion](arkts-camera-camera-depthfusion-i-sys.md#DepthFusion), [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md#ImagingMode)
 
 **Since:** 11
 
@@ -17,6 +17,6 @@ Implements a photo session for system applications, which sets the parameters of
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 

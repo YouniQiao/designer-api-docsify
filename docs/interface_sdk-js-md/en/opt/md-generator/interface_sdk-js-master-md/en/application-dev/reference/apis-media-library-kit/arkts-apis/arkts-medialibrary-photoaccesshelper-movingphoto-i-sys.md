@@ -11,7 +11,7 @@ MovingPhoto provides APIs for managing a moving photo instance.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## isVideoReady
@@ -36,15 +36,15 @@ Checks whether the video of the moving photo is ready. This API uses a promise t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

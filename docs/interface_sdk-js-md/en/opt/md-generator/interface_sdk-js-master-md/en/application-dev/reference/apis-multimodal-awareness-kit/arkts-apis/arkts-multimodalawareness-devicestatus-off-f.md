@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off('steadyStandingDetect')
@@ -25,15 +25,15 @@ Unsubscribes from steady standing state events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'steadyStandingDetect' | Yes |
-| callback | [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;SteadyStandingStatus&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [32500003](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500003-unsubscription-failed) |
-| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [32500003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500003-unsubscription-failed) |
+| [32500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) |
 
 ## Examples
 

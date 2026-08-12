@@ -27,7 +27,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [SwiperDisplayMode#STRETCH](arkts-arkui-swiperdisplaymode-e.md#stretch)
+**Substitutes:** [STRETCH](#STRETCH)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 7.
 
@@ -54,7 +54,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [SwiperDisplayMode#AUTO_LINEAR](arkts-arkui-swiperdisplaymode-e.md#auto_linear)
+**Substitutes:** [AUTO_LINEAR](#AUTO_LINEAR)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 7.
 
@@ -95,7 +95,7 @@ The width of each page in the **Swiper** component equals the width of the leftm
 [displayCount](SwiperAttribute#displayCount(value: number | string | SwiperAutoFill, swipeByGroup?: boolean)).
 
 Note: This API is supported since API version 10 and deprecated since API version 12. You are advised to use  
-[Scroller.scrollTo](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrollto) instead.
+[Scroller.scrollTo](Scroller#scrollTo) instead.
 
 **Since:** 10
 
@@ -103,7 +103,7 @@ Note: This API is supported since API version 10 and deprecated since API versio
 
 **Deprecated since:** 12
 
-**Substitutes:** [Scroller#scrollTo](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md#scrollto)
+**Substitutes:** [scrollTo](Scroller#scrollTo)
 
 **Model restriction:** This API can be used only in the stage model.
 

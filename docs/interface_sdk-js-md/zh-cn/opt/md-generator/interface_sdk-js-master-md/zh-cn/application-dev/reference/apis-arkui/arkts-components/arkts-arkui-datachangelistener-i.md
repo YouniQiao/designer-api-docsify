@@ -55,7 +55,7 @@ onDataAdded(index: number): void
 
 **废弃版本：** 8
 
-**替代接口：** [DataChangeListener.onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd)
+**替代接口：** [onDataAdd](#onDataAdd)
 
 <!--Device-DataChangeListener-onDataAdded(index: number): void--><!--Device-DataChangeListener-onDataAdded(index: number): void-End-->
 
@@ -109,7 +109,7 @@ onDataChanged(index: number): void
 
 **废弃版本：** 8
 
-**替代接口：** [DataChangeListener.onDataChange](arkts-arkui-datachangelistener-i.md#ondatachange)
+**替代接口：** [onDataChange](#onDataChange)
 
 <!--Device-DataChangeListener-onDataChanged(index: number): void--><!--Device-DataChangeListener-onDataChanged(index: number): void-End-->
 
@@ -165,7 +165,7 @@ onDataDeleted(index: number): void
 
 **废弃版本：** 8
 
-**替代接口：** [DataChangeListener.onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete)
+**替代接口：** [onDataDelete](#onDataDelete)
 
 <!--Device-DataChangeListener-onDataDeleted(index: number): void--><!--Device-DataChangeListener-onDataDeleted(index: number): void-End-->
 
@@ -224,7 +224,7 @@ onDataMoved(from: number, to: number): void
 
 **废弃版本：** 8
 
-**替代接口：** [DataChangeListener.onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove)
+**替代接口：** [onDataMove](#onDataMove)
 
 <!--Device-DataChangeListener-onDataMoved(from: number, to: number): void--><!--Device-DataChangeListener-onDataMoved(from: number, to: number): void-End-->
 
@@ -286,7 +286,7 @@ onDataReloaded(reuseImmediately: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| reuseImmediately | boolean | 是 |
+| [reuseImmediately](arkts-arkui-datareloadoperation-i.md) | boolean | 是 |
 
 ## onDatasetChange
 

@@ -43,9 +43,9 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter, size.height or size.width is less than or equal to 0. |
-| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) | Alloc memory failed. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter, size.height or size.width is less than or equal to 0. |
+| [7600205](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
+| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Alloc memory failed. |
 
 ## 示例
 

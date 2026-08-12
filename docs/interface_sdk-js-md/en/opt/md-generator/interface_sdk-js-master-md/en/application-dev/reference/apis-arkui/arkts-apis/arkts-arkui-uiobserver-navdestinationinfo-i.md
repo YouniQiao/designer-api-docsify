@@ -11,7 +11,7 @@ Information about the **NavDestination** component, returned by the system to de
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## index
@@ -142,7 +142,7 @@ size?: Size
 
 Size of the **NavDestination** component, in vp.
 
-**Type:** [Size](../arkts-components/arkts-arkui-size-i.md)
+**Type:** Size
 
 **Since:** 23
 

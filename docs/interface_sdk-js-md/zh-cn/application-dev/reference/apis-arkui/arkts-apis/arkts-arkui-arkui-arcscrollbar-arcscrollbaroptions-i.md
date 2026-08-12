@@ -22,7 +22,7 @@ scroller: Scroller
 
 可滚动组件的控制器，用于与可滚动组件进行绑定。
 
-**类型：** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
+**类型：** Scroller
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ state?: BarState
 
 滚动条状态。
 
-**类型：** [BarState](arkts-arkui-barstate-e.md)
+**类型：** BarState
 
 **起始版本：** 23
 

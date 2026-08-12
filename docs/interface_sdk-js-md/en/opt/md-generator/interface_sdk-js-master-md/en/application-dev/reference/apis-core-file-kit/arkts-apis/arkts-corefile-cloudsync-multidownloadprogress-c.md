@@ -11,7 +11,7 @@ Represents the batch download progress of a file from the Drive Kit.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## getFailedFiles
@@ -32,7 +32,7 @@ Obtains the list of files that fail to be downloaded in batches.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;FailedFileInfo&gt; |
+| Array&lt;[FailedFileInfo](arkts-corefile-cloudsync-failedfileinfo-i.md)&gt; |
 
 **Error codes:**
 
@@ -90,7 +90,7 @@ Obtains the list of files that are successfully downloaded in batches.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
@@ -185,7 +185,7 @@ state: State
 
 Execution state of the batch download.
 
-**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Since:** 20
 

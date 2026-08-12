@@ -8,7 +8,7 @@ Enumerates the KV store types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreType
+**Substitutes:** [KVStoreType](ohos.data.distributedKVStore.KVStoreType)
 
 <!--Device-distributedData-enum KVStoreType--><!--Device-distributedData-enum KVStoreType-End-->
 
@@ -30,7 +30,7 @@ The device KV store manages data by device, which eliminates conflicts. Data can
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreType#DEVICE_COLLABORATION
+**Substitutes:** [DEVICE_COLLABORATION](ohos.data.distributedKVStore.KVStoreType#DEVICE_COLLABORATION)
 
 <!--Device-KVStoreType-DEVICE_COLLABORATION = 0--><!--Device-KVStoreType-DEVICE_COLLABORATION = 0-End-->
 
@@ -52,7 +52,7 @@ The single KV store does not differentiate data by device. If the same key is mo
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreType#SINGLE_VERSION
+**Substitutes:** [SINGLE_VERSION](ohos.data.distributedKVStore.KVStoreType#SINGLE_VERSION)
 
 <!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## containsCheckRule
@@ -38,7 +38,7 @@ Checks whether the specified rule exists in the collection of added rules. If th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | the parameter check failed, only one bigint type parameter is needed |
 
 ## Examples
 

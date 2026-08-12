@@ -13,7 +13,7 @@ The inputDevice module implements input device management functions such as list
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## Summary
@@ -22,10 +22,10 @@ import { inputDevice } from 'kits/@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice) | Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) instead. |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice-1) | Obtains the information about the input device with the specified ID. This API uses a promise to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) instead. |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids) | Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) instead. |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids-1) | Obtains the IDs of all input devices. This API uses a promise to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) instead. |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice) | Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead. |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice-1) | Obtains the information about the input device with the specified ID. This API uses a promise to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead. |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids) | Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead. |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids-1) | Obtains the IDs of all input devices. This API uses a promise to return the result.  > **NOTE：** >  > This API is supported since API version 8 and deprecated since API version 9. Use > [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead. |
 | [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) | Obtains information about the specified input device. This API uses an asynchronous callback to return the result. |
 | [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo-1) | Obtains the information about the input device with the specified ID. This API uses a promise to return the result. |
 | [getDeviceInfoSync](arkts-input-inputdevice-getdeviceinfosync-f.md#getdeviceinfosync) | Obtains information about the specified input device. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsRawHeapData
@@ -39,20 +39,20 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-quota-exceeded) |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
+| [11400109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) |
+| [11400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) |
+| [11400111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) |
+| [11400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) |
+| [11400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) |
+| [11400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) |
+| [11400113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
+| [11400112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
 
 ## Examples
 
@@ -96,20 +96,20 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-quota-exceeded) |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
+| [11400109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) |
+| [11400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) |
+| [11400111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) |
+| [11400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) |
+| [11400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) |
+| [11400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) |
+| [11400113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
+| [11400112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
 
 ## Examples
 
@@ -157,20 +157,20 @@ The generated file will be stored in a folder within the application directory. 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-quota-exceeded) |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
+| [11400109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) |
+| [11400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) |
+| [11400111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) |
+| [11400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) |
+| [11400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) |
+| [11400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) |
+| [11400113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) |
+| [11400112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) |
 
 ## Examples
 

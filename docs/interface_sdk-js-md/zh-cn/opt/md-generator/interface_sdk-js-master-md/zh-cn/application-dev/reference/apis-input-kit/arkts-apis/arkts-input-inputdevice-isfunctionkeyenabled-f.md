@@ -24,14 +24,14 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [3900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-键盘设备没有连接) |
 
 ## 示例
 

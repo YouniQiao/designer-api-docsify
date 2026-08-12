@@ -1,8 +1,8 @@
 # GetInsightIntentFlag (System API)
 
-Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename),  
-[getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename), and  
-[getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname).
+Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo)). It is used in [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getInsightIntentInfoByBundleName),  
+[getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getInsightIntentInfoByBundleName), and  
+[getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getInsightIntentInfoByIntentName).
 
 > **NOTE：**
 > 
@@ -51,7 +51,7 @@ GET_FULL_INSIGHT_INTENT = 0x00000001
 ```
 
 Used to query all intent information (except entities) in  
-[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md). To query entities information, use  
+[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo). To query entities information, use  
 **GET_ENTITY_INFO**.
 
 **Since:** 20
@@ -72,7 +72,7 @@ Used to query all intent information (except entities) in
 GET_SUMMARY_INSIGHT_INTENT = 0x00000002
 ```
 
-Used to query brief intent information in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md).
+Used to query brief intent information in [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo).
 
 **Since:** 20
 
@@ -92,7 +92,7 @@ Used to query brief intent information in [InsightIntentInfo](arkts-ability-insi
 GET_ENTITY_INFO = 0x00000004
 ```
 
-Used to query [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md). It must be used together with  
+Used to query [EntityInfo](arkts-ability-insightintentdriver-entityinfo-i-sys.md#EntityInfo). It must be used together with  
 **GET_FULL_INSIGHT_INTENT** or **GET_SUMMARY_INSIGHT_INTENT**. Example usage: `GET_FULL_INSIGHT_INTENT |GET_ENTITY_INFO`.
 
 **Since:** 20

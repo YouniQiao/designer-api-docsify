@@ -62,7 +62,7 @@ colorMode?: ThemeColorMode
 
 Color mode used for the foreground blur.&lt;br&gt;Default value: **ThemeColorMode.SYSTEM**.
 
-**类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
+**类型：** [ThemeColorMode](arkts-arkui-common-themecolormode-e.md)
 
 **默认值：** ThemeColorMode.SYSTEM
 

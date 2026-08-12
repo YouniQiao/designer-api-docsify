@@ -2,7 +2,7 @@
 
 OIS (Optical Image Stabilization) interface.
 
-**继承/实现关系：** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md)
+**继承/实现关系：** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md#OISQuery)
 
 **起始版本：** 24
 
@@ -38,8 +38,8 @@ Sets the OIS mode.
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## setOISModeCustom
 
@@ -70,5 +70,5 @@ Sets custom OIS bias values for each axis.
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |

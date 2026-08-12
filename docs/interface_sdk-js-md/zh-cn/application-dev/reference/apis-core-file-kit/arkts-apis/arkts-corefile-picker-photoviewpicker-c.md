@@ -9,7 +9,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker
+**替代接口：** [PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker)
 
 <!--Device-picker-class PhotoViewPicker--><!--Device-picker-class PhotoViewPicker-End-->
 
@@ -27,7 +27,7 @@ constructor()
 
 **废弃版本：** 18
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker
+**替代接口：** [PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,7 +53,7 @@ constructor(context: Context)
 
 **废弃版本：** 18
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker
+**替代接口：** [PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker)
 
 <!--Device-PhotoViewPicker-constructor(context: Context)--><!--Device-PhotoViewPicker-constructor(context: Context)-End-->
 
@@ -63,7 +63,7 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。 Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。 Stage模型的应用Context定义见[Context](./app/context)。 |
 
 ## 示例
 
@@ -107,7 +107,7 @@ save(option?: PhotoSaveOptions): Promise<Array<string>>
 
 **废弃版本：** 12
 
-**替代接口：** SaveButton
+**替代接口：** [SaveButton](SaveButton)
 
 <!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>--><!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>-End-->
 
@@ -162,7 +162,7 @@ save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** SaveButton
+**替代接口：** [SaveButton](SaveButton)
 
 <!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -214,7 +214,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** SaveButton
+**替代接口：** [SaveButton](SaveButton)
 
 <!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -263,7 +263,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option?:
+**替代接口：** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option?:)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -281,7 +281,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PhotoSelectResult&gt; | Promise对象。返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets]{ |
+| Promise&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Promise对象。返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets]{ |
 
 ## 示例
 
@@ -321,7 +321,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option:
+**替代接口：** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option:)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -334,7 +334,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | 是 | photoPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult<PhotoAsset>&gt;&lt;PhotoAsset&gt;>)) 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult<PhotoAsset>&gt;&lt;PhotoAsset&gt;>)) 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
 ## 示例
 
@@ -376,7 +376,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(callback:
+**替代接口：** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(callback:)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -388,7 +388,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | 是 | callback返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult<PhotoAsset>&gt;&lt;PhotoAsset&gt;>)) 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。 &lt;br&gt;**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口 [photoAccessHelper.getAssets](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult<PhotoAsset>&gt;&lt;PhotoAsset&gt;>)) 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
 ## 示例
 

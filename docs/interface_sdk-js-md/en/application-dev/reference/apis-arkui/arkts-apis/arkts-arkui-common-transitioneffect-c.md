@@ -32,7 +32,7 @@ Set the animation of current transition effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | animation parameters |
+| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) | Yes | animation parameters |
 
 **Return value:**
 
@@ -174,7 +174,7 @@ move TransitionEffect constructor
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'move' | Yes | transition type |
-| effect | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | Yes | transition options |
+| effect | [TransitionEdge](arkts-arkui-common-transitionedge-e.md) | Yes | transition options |
 
 ## constructor
 
@@ -224,7 +224,7 @@ rotate TransitionEffect constructor
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rotate' | Yes | transition type |
-| effect | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | transition options |
+| effect | [RotateOptions](arkts-arkui-common-rotateoptions-i.md) | Yes | transition options |
 
 ## constructor
 
@@ -249,7 +249,7 @@ scale TransitionEffect constructor
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'scale' | Yes | transition type |
-| effect | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | transition options |
+| effect | [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) | Yes | transition options |
 
 ## constructor
 
@@ -298,7 +298,7 @@ Creates a move transition effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edge | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | Yes | the edge that component will move to |
+| edge | [TransitionEdge](arkts-arkui-common-transitionedge-e.md) | Yes | the edge that component will move to |
 
 **Return value:**
 
@@ -358,7 +358,7 @@ Creates a rotation transition effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | Yes | rotate options Set the rotation effect for component transitions when inserting and deleting. The value represents the starting rotation point for the inserting animation and the ending rotation point for the deleting animation. -x: Horizontal component of the rotational vector. -y: Vertical component of the rotational vector. -z: Vertical component of the rotational vector. -centerX, centerY specify the rotation center point, with default values of "50%", meaning that the default rotation center point is the center point of the component. -The center point of (0, 0) represents the upper-left corner of the component. -centerZ refers to the Z-axis anchor point. The default value of centerZ is 0. -perspective indicates the visual distance. The perspective property does not support transition animation. |
+| options | [RotateOptions](arkts-arkui-common-rotateoptions-i.md) | Yes | rotate options Set the rotation effect for component transitions when inserting and deleting. The value represents the starting rotation point for the inserting animation and the ending rotation point for the deleting animation. -x: Horizontal component of the rotational vector. -y: Vertical component of the rotational vector. -z: Vertical component of the rotational vector. -centerX, centerY specify the rotation center point, with default values of "50%", meaning that the default rotation center point is the center point of the component. -The center point of (0, 0) represents the upper-left corner of the component. -centerZ refers to the Z-axis anchor point. The default value of centerZ is 0. -perspective indicates the visual distance. The perspective property does not support transition animation. |
 
 **Return value:**
 
@@ -388,7 +388,7 @@ Creates a scale transition effect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | Yes | scale options |
+| options | [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) | Yes | scale options |
 
 **Return value:**
 

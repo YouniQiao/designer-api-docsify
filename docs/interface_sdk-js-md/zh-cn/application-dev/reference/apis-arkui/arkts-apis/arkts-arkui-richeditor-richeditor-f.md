@@ -24,7 +24,7 @@ export declare function RichEditor(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RichEditorOptions](../arkts-components/arkts-arkui-richeditoroptions-i.md) \| RichEditorStyledStringOptions | 是 |  |
+| options | [RichEditorOptions](arkts-arkui-richeditor-richeditoroptions-i.md) \| [RichEditorStyledStringOptions](arkts-arkui-richeditor-richeditorstyledstringoptions-i.md) | 是 |  |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function RichEditor(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RichEditorAttribute&gt; | 是 | RichEditor attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md)&gt; | 是 | RichEditor attribute instance |
 
 **返回值：**
 

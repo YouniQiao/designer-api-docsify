@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 NavDestination的模式，如果是根视图(NavBar)，则返回值为undefined。
 
-**类型：** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
+**类型：** NavDestinationMode
 
 **起始版本：** 11
 

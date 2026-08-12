@@ -41,11 +41,11 @@ function setPowerSaveMode(pid: int, powerSaveMode: PowerSaveMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [31800004](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-系统调度原因导致设置失败) | The setting failed due to system scheduling reasons. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [31800003](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-已经被任务管理器设置) | Setup error, This setting is overridden by settings in Task Manager |
-| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [31800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-系统调度原因导致设置失败) | The setting failed due to system scheduling reasons. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-已经被任务管理器设置) | Setup error, This setting is overridden by settings in Task Manager |
+| [31800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

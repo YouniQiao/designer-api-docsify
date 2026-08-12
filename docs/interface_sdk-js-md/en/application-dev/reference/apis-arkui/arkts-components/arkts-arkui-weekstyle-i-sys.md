@@ -46,7 +46,7 @@ weekColor?: ResourceColor
 
 Style of week color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ weekendDayColor?: ResourceColor
 
 Style of week day color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -166,7 +166,7 @@ weekendLunarColor?: ResourceColor
 
 Style of lunar color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 

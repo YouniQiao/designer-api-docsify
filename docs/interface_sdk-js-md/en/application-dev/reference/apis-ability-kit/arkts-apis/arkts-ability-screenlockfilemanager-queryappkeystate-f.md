@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## queryAppKeyState
@@ -32,8 +32,8 @@ Queries the status of the caller app's sensitive data key under the lock screen 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
+| [29300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
 
 ## Examples
 

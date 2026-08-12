@@ -25,4 +25,4 @@ declare type Dimension = PX | VP | FP | LPX | Percentage | Resource
 | [FP](arkts-arkui-fp-t.md) |
 | [LPX](arkts-arkui-lpx-t.md) |
 | [Percentage](arkts-arkui-percentage-t.md) |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| [Resource](arkts-arkui-resource-t.md) |

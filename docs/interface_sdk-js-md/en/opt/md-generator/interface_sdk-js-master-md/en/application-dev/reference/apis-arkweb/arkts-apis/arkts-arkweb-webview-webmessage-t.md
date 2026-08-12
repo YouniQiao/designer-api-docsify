@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-Defines the data types supported by {@link onMessageEventExt}.
+Defines the data types supported by [onMessageEventExt](onMessageEventExt).
 
 **Since:** 9
 

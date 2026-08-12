@@ -21,20 +21,20 @@ function setScannerParameter(scannerId: string, optionIndex: number, value: Scan
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | scannerId | string | 是 |
-| optionIndex | number | 是 |
+| [optionIndex](arkts-basicservices-scan-scannerparameter-i.md) | number | 是 |
 | value | [ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

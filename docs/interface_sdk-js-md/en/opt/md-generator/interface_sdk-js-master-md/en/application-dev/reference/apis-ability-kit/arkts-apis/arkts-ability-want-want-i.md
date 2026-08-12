@@ -1,14 +1,14 @@
 # Want
 
 Want is a carrier for information transfer between objects (application components). Want can be used as a parameter of  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startability) to specify a startup target and information that needs to be carried during startup, for example, **bundleName** and  
+[startAbility](./application/UIAbilityContext:UIAbilityContext.startAbility(want: Want, callback: AsyncCallback&lt;void&gt;)) to specify a startup target and information that needs to be carried during startup, for example, **bundleName** and  
  **abilityName**, which respectively indicate the bundle name of the target ability and the ability name in the bundle. When ability A needs to start ability B and transfer some data to ability B, it can use Want a carrier to transfer the data.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want](arkts-ability-want-want-i.md)
+**Substitutes:** [Want](arkts-ability-app-ability-want-want-c.md#Want)
 
 <!--Device-unnamed-export declare interface Want--><!--Device-unnamed-export declare interface Want-End-->
 
@@ -28,7 +28,7 @@ ability name
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.abilityName](arkts-ability-want-want-i.md#abilityname)
+**Substitutes:** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityName)
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
@@ -48,7 +48,7 @@ The description of an action in an want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.action](arkts-ability-want-want-i.md#action)
+**Substitutes:** [action](arkts-ability-app-ability-want-want-c.md#action)
 
 <!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
@@ -68,7 +68,7 @@ bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.bundleName](arkts-ability-want-want-i.md#bundlename)
+**Substitutes:** [bundleName](arkts-ability-app-ability-want-want-c.md#bundleName)
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
@@ -88,7 +88,7 @@ device id
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.deviceId](arkts-ability-want-want-i.md#deviceid)
+**Substitutes:** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceId)
 
 <!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
@@ -108,7 +108,7 @@ The description of a entities in a Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.entities](arkts-ability-want-want-i.md#entities)
+**Substitutes:** [entities](arkts-ability-app-ability-want-want-c.md#entities)
 
 <!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
@@ -128,7 +128,7 @@ The options of the flags in this Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.flags](arkts-ability-want-want-i.md#flags)
+**Substitutes:** [flags](arkts-ability-app-ability-want-want-c.md#flags)
 
 <!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
@@ -148,7 +148,7 @@ The description of the WantParams object in an Want
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.parameters](arkts-ability-want-want-i.md#parameters)
+**Substitutes:** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
 
 <!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
 
@@ -168,7 +168,7 @@ The description of the type in this Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.type](arkts-ability-want-want-i.md#type)
+**Substitutes:** [type](arkts-ability-app-ability-want-want-c.md#type)
 
 <!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
@@ -188,7 +188,7 @@ The description of a URI in a Want.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.Want:Want.uri](arkts-ability-want-want-i.md#uri)
+**Substitutes:** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 <!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 

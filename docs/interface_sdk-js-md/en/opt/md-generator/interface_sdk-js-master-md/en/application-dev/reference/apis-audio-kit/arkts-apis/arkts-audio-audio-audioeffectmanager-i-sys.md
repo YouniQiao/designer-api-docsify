@@ -13,7 +13,7 @@ Implements audio effect management.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getAudioEffectProperty
@@ -38,15 +38,15 @@ Gets current audio effect properties.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;AudioEffectProperty&gt; |
+| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## Examples
 
@@ -84,15 +84,15 @@ Gets supported audio effect properties based on current devices.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;AudioEffectProperty&gt; |
+| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## Examples
 
@@ -136,7 +136,7 @@ Checks whether the current device supports audio separation effect in system.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## offAudioSeparationEffectEnabledChange
 
@@ -166,8 +166,8 @@ Unsubscribes from the system audio separation effect enabled state change event.
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onAudioSeparationEffectEnabledChange
 
@@ -197,7 +197,7 @@ Subscribes to system audio separation effect enabled state change event.The audi
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setAudioEffectProperty
 
@@ -221,16 +221,16 @@ Sets current audio effect properties.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| propertyArray | Array&lt;AudioEffectProperty&gt; | Yes |
+| propertyArray | Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## Examples
 
@@ -279,17 +279,17 @@ Sets audio separation effect enable or disable for specific application process,
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |
 
 ## setAudioSeparationEffectVolume
 
@@ -322,14 +322,14 @@ Sets audio separation effect volume for specific volume type.This API uses a pro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |

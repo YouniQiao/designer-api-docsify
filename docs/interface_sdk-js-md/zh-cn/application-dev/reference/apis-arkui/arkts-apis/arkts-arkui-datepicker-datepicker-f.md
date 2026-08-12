@@ -30,5 +30,5 @@ export declare function DatePicker(
 
 | 类型 | 说明 |
 | --- | --- |
-| [DatePickerAttribute](../arkts-components/arkts-arkui-datepicker-attribute.md) | 日期选择器属性. |
+| [DatePickerAttribute](arkts-arkui-datepicker-datepickerattribute-i.md) | 日期选择器属性. |
 

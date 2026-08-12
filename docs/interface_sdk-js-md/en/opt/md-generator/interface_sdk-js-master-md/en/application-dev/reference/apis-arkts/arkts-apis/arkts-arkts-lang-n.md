@@ -11,7 +11,7 @@ ArkTS language
 ## Modules to Import
 
 ```TypeScript
-import { Retention, RetentionPolicy } from 'kits/@kit.ArkTS';
+import { Retention, RetentionPolicy } from '@kit.ArkTS';
 ```
 
 ## Summary

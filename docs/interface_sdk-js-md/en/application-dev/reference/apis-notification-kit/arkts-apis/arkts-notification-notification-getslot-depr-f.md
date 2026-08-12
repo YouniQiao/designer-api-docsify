@@ -14,7 +14,7 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlot
+**Substitutes:** [getSlot](ohos.notificationManager/notificationManager#getSlot)
 
 <!--Device-notification-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notification-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
@@ -24,8 +24,8 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | Yes | Callback used to return the result. |
+| slotType | SlotType | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | Yes | Callback used to return the result. |
 
 
 ## getSlot
@@ -42,7 +42,7 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlot
+**Substitutes:** [getSlot](ohos.notificationManager/notificationManager#getSlot)
 
 <!--Device-notification-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notification-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 
@@ -52,7 +52,7 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotType | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
+| slotType | SlotType | Yes | Type of the notification slot, which can be used for social communication, service information, content consultation, and other purposes. |
 
 **Return value:**
 

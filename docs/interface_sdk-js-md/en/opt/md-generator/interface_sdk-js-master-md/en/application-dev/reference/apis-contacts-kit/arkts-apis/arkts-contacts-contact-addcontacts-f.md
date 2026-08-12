@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## addContacts
@@ -28,22 +28,22 @@ Adds contacts in batches. This API uses a promise to return the result.
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
-| contacts | Array&lt;Contact&gt; | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [16700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) |
+| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 

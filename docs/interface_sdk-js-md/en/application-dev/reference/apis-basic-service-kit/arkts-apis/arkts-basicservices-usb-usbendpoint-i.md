@@ -1,7 +1,7 @@
 # USBEndpoint
 
 Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
-[USBInterface](arkts-basicservices-usb-usbinterface-i.md).
+[USBInterface](arkts-basicservices-usb-usbinterface-i.md#USBInterface).
 
 **Since:** 8
 
@@ -9,7 +9,7 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md)
+**Substitutes:** [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md#USBEndpoint)
 
 <!--Device-usb-interface USBEndpoint--><!--Device-usb-interface USBEndpoint-End-->
 
@@ -18,7 +18,7 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## address
@@ -37,7 +37,7 @@ Endpoint address.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.address](arkts-basicservices-usbmanager-usbendpoint-i.md#address)
+**Substitutes:** [address](arkts-basicservices-usbmanager-usbendpoint-i.md#address)
 
 <!--Device-USBEndpoint-address: number--><!--Device-USBEndpoint-address: number-End-->
 
@@ -59,7 +59,7 @@ Endpoint attributes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.attributes](arkts-basicservices-usbmanager-usbendpoint-i.md#attributes)
+**Substitutes:** [attributes](arkts-basicservices-usbmanager-usbendpoint-i.md#attributes)
 
 <!--Device-USBEndpoint-attributes: number--><!--Device-USBEndpoint-attributes: number-End-->
 
@@ -73,7 +73,7 @@ direction: USBRequestDirection
 
 Endpoint direction.
 
-**Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
+**Type:** USBRequestDirection
 
 **Since:** 8
 
@@ -81,7 +81,7 @@ Endpoint direction.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.direction](arkts-basicservices-usbmanager-usbendpoint-i.md#direction)
+**Substitutes:** [direction](arkts-basicservices-usbmanager-usbendpoint-i.md#direction)
 
 <!--Device-USBEndpoint-direction: USBRequestDirection--><!--Device-USBEndpoint-direction: USBRequestDirection-End-->
 
@@ -103,7 +103,7 @@ Unique ID of the interface to which the endpoint belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.interfaceId](arkts-basicservices-usbmanager-usbendpoint-i.md#interfaceid)
+**Substitutes:** [interfaceId](arkts-basicservices-usbmanager-usbendpoint-i.md#interfaceId)
 
 <!--Device-USBEndpoint-interfaceId: number--><!--Device-USBEndpoint-interfaceId: number-End-->
 
@@ -125,7 +125,7 @@ Endpoint interval.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.interval](arkts-basicservices-usbmanager-usbendpoint-i.md#interval)
+**Substitutes:** [interval](arkts-basicservices-usbmanager-usbendpoint-i.md#interval)
 
 <!--Device-USBEndpoint-interval: number--><!--Device-USBEndpoint-interval: number-End-->
 
@@ -147,7 +147,7 @@ Maximum size of data packets on the endpoint.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.maxPacketSize](arkts-basicservices-usbmanager-usbendpoint-i.md#maxpacketsize)
+**Substitutes:** [maxPacketSize](arkts-basicservices-usbmanager-usbendpoint-i.md#maxPacketSize)
 
 <!--Device-USBEndpoint-maxPacketSize: number--><!--Device-USBEndpoint-maxPacketSize: number-End-->
 
@@ -169,7 +169,7 @@ Endpoint number.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.number](arkts-basicservices-usbmanager-usbendpoint-i.md#number)
+**Substitutes:** [number](arkts-basicservices-usbmanager-usbendpoint-i.md#number)
 
 <!--Device-USBEndpoint-number: number--><!--Device-USBEndpoint-number: number-End-->
 
@@ -191,7 +191,7 @@ Endpoint type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBEndpoint.type](arkts-basicservices-usbmanager-usbendpoint-i.md#type)
+**Substitutes:** [type](arkts-basicservices-usbmanager-usbendpoint-i.md#type)
 
 <!--Device-USBEndpoint-type: number--><!--Device-USBEndpoint-type: number-End-->
 

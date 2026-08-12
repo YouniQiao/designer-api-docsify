@@ -12,7 +12,7 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+**Substitutes:** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## symlink
@@ -44,7 +44,7 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+**Substitutes:** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 

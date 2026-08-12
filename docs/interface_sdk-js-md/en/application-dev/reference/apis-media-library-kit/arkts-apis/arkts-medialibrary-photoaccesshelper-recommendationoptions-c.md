@@ -13,7 +13,7 @@ Defines the image recommendation options. The image recommendation feature depen
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## recommendationType

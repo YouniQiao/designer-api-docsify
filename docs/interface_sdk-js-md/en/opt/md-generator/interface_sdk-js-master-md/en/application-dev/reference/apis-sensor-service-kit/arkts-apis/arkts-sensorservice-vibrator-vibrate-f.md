@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -18,7 +18,7 @@ Triggers vibration based on a specified duration. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**Substitutes:** [startVibration](vibrator.startVibration(effect:)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -61,7 +61,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**Substitutes:** [startVibration](vibrator.startVibration(effect:)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -79,7 +79,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -107,7 +107,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**Substitutes:** [startVibration](vibrator.startVibration(effect:)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -125,7 +125,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -153,7 +153,7 @@ Triggers vibration based on a specified effect. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**Substitutes:** [startVibration](vibrator.startVibration(effect:)
 
 **Required permissions:** ohos.permission.VIBRATE
 

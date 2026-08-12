@@ -2,7 +2,7 @@
 
 手势识别器对象。
 
-**继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
 
 **起始版本：** 12
 
@@ -74,7 +74,7 @@ getDistanceMap(): Map<SourceTool, number>
 
 > **说明：**
 > 
-> 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询[SourceTool](arkts-arkui-common-sourcetool-e.md).Unknown类型获取。其他未主动设置的类型则无法获取。
+> 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询[SourceTool](SourceTool).Unknown类型获取。其他未主动设置的类型则无法获取。
 
 **起始版本：** 19
 
@@ -92,7 +92,7 @@ getDistanceMap(): Map<SourceTool, number>
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt; | 不同输入源的滑动手势识别器触发的最小滑动距离。滑动距离的单位：vp |
+| Map&lt;SourceTool, number&gt; | 不同输入源的滑动手势识别器触发的最小滑动距离。滑动距离的单位：vp |
 
 ## getPanGestureOptions
 

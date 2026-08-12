@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## stat
@@ -34,7 +34,7 @@ Obtains detailed attribute information of a file or directory. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise used to return the file or directory information. |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise used to return the file or directory information. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ Obtains detailed attribute information of a file or directory. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string \| number | Yes | Application sandbox path, URI, or FD of the file or directory.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | Callback used to return the file or directory information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the file or directory information obtained. |
 
 **Error codes:**
 

@@ -1,16 +1,16 @@
 # IvParamsSpec
 
-加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
+加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)的子类，用于在对称加解密时作为  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3)方法的参数。
 
 &lt;br&gt;适用于CBC、CTR、OFB、CFB这些需要iv作为参数的加解密模式。
 
 > **说明：**
 > 
-> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
-> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3)方法前需要
+> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)）。
 
-**继承/实现关系：** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
+**继承/实现关系：** IvParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ iv: DataBlob
 - 3DES的CBC|OFB|CFB模式：iv长度为8字节。  
 - SM4&lt;sup&gt;10+&lt;/sup&gt;的CBC|CTR|OFB|CFB模式：iv长度为16字节。
 
-**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
+**类型：** DataBlob
 
 **起始版本：** 9
 

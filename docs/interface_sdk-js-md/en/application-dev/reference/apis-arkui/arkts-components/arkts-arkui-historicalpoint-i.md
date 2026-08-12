@@ -92,7 +92,7 @@ touchObject: TouchObject
 
 Basic touch event information for the historical point.
 
-**Type:** [TouchObject](../arkts-apis/arkts-arkui-common-touchobject-i.md)
+**Type:** [TouchObject](arkts-arkui-touchobject-i.md)
 
 **Since:** 10
 

@@ -18,5 +18,5 @@ type ProgressListener = (progress: Progress) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | 是 | indicates the progress data of copyFile |
+| progress | [Progress](arkts-corefile-file-fs-progress-i.md) | 是 | indicates the progress data of copyFile |
 

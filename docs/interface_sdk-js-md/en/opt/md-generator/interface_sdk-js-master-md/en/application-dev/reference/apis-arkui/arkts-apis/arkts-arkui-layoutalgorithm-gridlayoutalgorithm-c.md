@@ -9,7 +9,7 @@ Grid layout algorithm class.
 > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the
 > layout algorithm.
 
-**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
@@ -81,7 +81,7 @@ Default value: **'1fr'**
 
 Invalid values are treated as the default value.
 
-**Type:** string \| ItemFillPolicy
+**Type:** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 

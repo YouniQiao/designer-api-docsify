@@ -13,7 +13,7 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，参数id传入null或undefined时，可能会导致callback无法得到执行，建议使用
-> [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 7
 
@@ -21,7 +21,7 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -33,9 +33,9 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 | 窗口类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
+| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的name。 |
+| type | WindowType | 是 | 窗口类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
 
 ## 示例
 
@@ -67,7 +67,7 @@ function create(id: string, type: WindowType): Promise<Window>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow-1)替代。
 
 **起始版本：** 7
 
@@ -75,7 +75,7 @@ function create(id: string, type: WindowType): Promise<Window>
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -87,14 +87,14 @@ function create(id: string, type: WindowType): Promise<Window>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 | 窗口类型。 |
+| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的name。 |
+| type | WindowType | 是 | 窗口类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前创建的子窗口对象。 |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise对象。返回当前创建的子窗口对象。 |
 
 ## 示例
 
@@ -122,7 +122,7 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow-1)替代。
 
 **起始版本：** 8
 
@@ -130,7 +130,7 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>-End-->
 
@@ -141,14 +141,14 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用上下文信息。 |
-| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 | 窗口类型。 |
+| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的name。 |
+| type | WindowType | 是 | 窗口类型。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前创建的子窗口对象。 |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise对象。返回当前创建的子窗口对象。 |
 
 ## 示例
 
@@ -177,7 +177,7 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 8
 
@@ -185,7 +185,7 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void-End-->
 
@@ -196,9 +196,9 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用上下文信息。 |
-| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md)中的name。 |
-| type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 | 窗口类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
+| id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的name。 |
+| type | WindowType | 是 | 窗口类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
 
 ## 示例
 

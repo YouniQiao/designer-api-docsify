@@ -38,7 +38,7 @@ size: ParticleTuple<Dimension, Dimension>
 
 Particle image size.
 
-**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **Since:** 10
 

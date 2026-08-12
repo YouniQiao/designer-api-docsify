@@ -11,7 +11,7 @@ Information about the system font.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## family
@@ -195,7 +195,7 @@ weight: number
 Weight of the system font.
 
 Value range: [100, 900], with intervals of 100, corresponding to the values in the  
-[FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md/arkts-arkgraphics2d-text-fontweight-e.md) enum
+[FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md#FontWeight) enum
 
 Default value: **100**
 
@@ -220,7 +220,7 @@ width: number
 Width of the system font.
 
 Value range: [1, 9], with intervals of 1, corresponding to the values in the  
-[FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md/arkts-arkgraphics2d-text-fontwidth-e.md) enum
+[FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md#FontWidth) enum
 
 **Type:** number
 

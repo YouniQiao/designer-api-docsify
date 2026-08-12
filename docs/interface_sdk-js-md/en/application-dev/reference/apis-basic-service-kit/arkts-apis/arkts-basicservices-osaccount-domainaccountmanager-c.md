@@ -13,7 +13,7 @@ Provides APIs for domain account management.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## updateAccountInfo
@@ -51,12 +51,12 @@ Updates information of a domain account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The old account not found. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | The new account info is invalid. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | The new account already exists. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The old account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | The new account info is invalid. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | The new account already exists. |
 
 ## Examples
 

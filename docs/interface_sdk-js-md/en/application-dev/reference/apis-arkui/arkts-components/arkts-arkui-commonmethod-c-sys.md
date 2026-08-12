@@ -17,7 +17,7 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
 Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with   
-[blendMode](arkts-arkui-commonmethod-c.md#blendmode).
+[blendMode](arkts-arkui-commonmethod-c.md#blendMode).
 
 **Since:** 13
 
@@ -37,8 +37,8 @@ Defines how the component's content (including the content of it child component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [BlendMode](../arkts-apis/arkts-arkui-common-blendmode-e.md) \| Blender | Yes | Blend mode or blender type, depending on the parameter type.&lt;br&gt;When the parameter type is **BlendMode**, it indicates the blend mode.&lt;br&gt;Default value: **BlendMode.NONE**&lt;br&gt;When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.&lt;br&gt;A **Blender** instance must be created using methods, for example, [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender), from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | No | Whether the blend mode is implemented offscreen.&lt;br&gt;Default value: **BlendApplyType.FAST**&lt;br&gt;**NOTE：**&lt;br&gt;1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.&lt;br&gt;2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.&lt;br&gt;3. For text components, this API does not apply to emoji expressions when not offscreen.&lt;br&gt;4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | Yes | Blend mode or blender type, depending on the parameter type.&lt;br&gt;When the parameter type is **BlendMode**, it indicates the blend mode.&lt;br&gt;Default value: **BlendMode.NONE**&lt;br&gt;When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.&lt;br&gt;A **Blender** instance must be created using methods, for example, [uiEffect.createBrightnessBlender](../../../reference/apis-arkgraphics2d/js-apis-uiEffect-sys.md#uieffectcreatebrightnessblender), from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.&lt;br&gt;Default value: **BlendApplyType.FAST**&lt;br&gt;**NOTE：**&lt;br&gt;1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.&lt;br&gt;2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.&lt;br&gt;3. For text components, this API does not apply to emoji expressions when not offscreen.&lt;br&gt;4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
 
 **Return value:**
 
@@ -92,7 +92,7 @@ Sets the edge light effect for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](../arkts-apis/arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | Yes | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
+| params | [EdgeLightParams](arkts-arkui-edgelightparams-i-sys.md) \| undefined | Yes | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
 
 **Return value:**
 
@@ -107,7 +107,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
 Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the   
-[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) attribute of the ancestor component. 
+[renderGroup](arkts-arkui-commonmethod-c.md#renderGroup) attribute of the ancestor component. 
 
 Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting   
 **excludeFromRenderGroup** helps optimize the drawing performance.
@@ -123,7 +123,7 @@ If this attribute is not set, the current component and its children are not rem
 > [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries
 > because the current component has attributes such as
 > [shadow](arkts-arkui-commonmethod-c.md#shadow) and
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the displayed
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelStretchEffect), the displayed
 > content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
 
 **Since:** 22

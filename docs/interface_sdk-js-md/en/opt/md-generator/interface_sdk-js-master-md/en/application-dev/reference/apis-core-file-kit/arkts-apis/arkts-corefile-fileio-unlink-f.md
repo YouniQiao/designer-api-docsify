@@ -12,7 +12,7 @@ Removes a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:unlink](arkts-corefile-fileio-unlink-f.md#unlink)
+**Substitutes:** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-unnamed-declare function unlink(path: string): Promise<void>--><!--Device-unnamed-declare function unlink(path: string): Promise<void>-End-->
 
@@ -28,7 +28,7 @@ Removes a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## unlink
@@ -43,7 +43,7 @@ Removes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:unlink](arkts-corefile-fileio-unlink-f.md#unlink)
+**Substitutes:** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void-End-->
 

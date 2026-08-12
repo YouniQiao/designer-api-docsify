@@ -1,7 +1,7 @@
 # KeyboardDelegate
 
 KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过  
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取该实例。  
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate)获取该实例。  
 **核心功能概述：**
 
 - **物理键盘按键事件**：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回  
@@ -13,7 +13,7 @@ false表示不消费。
 - 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。  
 - 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。
 
-下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取到KeyboardDelegate实例后，通过实例调用。
+下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate)获取到KeyboardDelegate实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -40,7 +40,7 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
-| callback | (event: KeyEvent) =&gt; boolean | 否 |
+| callback | (event: KeyEvent) = & gt; boolean | 否 |
 
 ## 示例
 
@@ -74,7 +74,7 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
-| callback | (event: KeyEvent) =&gt; boolean | 否 |
+| callback | (event: KeyEvent) = & gt; boolean | 否 |
 
 ## 示例
 
@@ -108,7 +108,7 @@ off(type: 'keyEvent', callback?: (event: InputKeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyEvent' | 是 |
-| callback | (event: InputKeyEvent) =&gt; boolean | 否 |
+| callback | (event: InputKeyEvent) = & gt; boolean | 否 |
 
 ## 示例
 
@@ -141,7 +141,7 @@ off(type: 'cursorContextChange', callback?: (x: number, y: number, height: numbe
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'cursorContextChange' | 是 |
-| callback | (x: number, y: number, height: number) =&gt; void | 否 |
+| callback | (x: number, y: number, height: number) = & gt; void | 否 |
 
 ## 示例
 
@@ -171,7 +171,7 @@ off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'selectionChange' | 是 |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | 否 |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | 否 |
 
 ## 示例
 
@@ -201,7 +201,7 @@ off(type: 'textChange', callback?: (text: string) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'textChange' | 是 |
-| callback | (text: string) =&gt; void | 否 |
+| callback | (text: string) = & gt; void | 否 |
 
 ## 示例
 
@@ -230,7 +230,7 @@ off(type: 'editorAttributeChanged', callback?: (attr: EditorAttribute) => void):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'editorAttributeChanged' | 是 |
-| callback | (attr: EditorAttribute) =&gt; void | 否 |
+| callback | (attr: EditorAttribute) = & gt; void | 否 |
 
 ## 示例
 
@@ -261,7 +261,7 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
-| callback | (event: KeyEvent) =&gt; boolean | 是 |
+| callback | (event: KeyEvent) = & gt; boolean | 是 |
 
 ## 示例
 
@@ -301,7 +301,7 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | 是 |
-| callback | (event: KeyEvent) =&gt; boolean | 是 |
+| callback | (event: KeyEvent) = & gt; boolean | 是 |
 
 ## 示例
 
@@ -341,7 +341,7 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyEvent' | 是 |
-| callback | (event: InputKeyEvent) =&gt; boolean | 是 |
+| callback | (event: InputKeyEvent) = & gt; boolean | 是 |
 
 ## 示例
 
@@ -380,7 +380,7 @@ on(type: 'cursorContextChange', callback: (x: number, y: number, height: number)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'cursorContextChange' | 是 |
-| callback | (x: number, y: number, height: number) =&gt; void | 是 |
+| callback | (x: number, y: number, height: number) = & gt; void | 是 |
 
 ## 示例
 
@@ -418,7 +418,7 @@ on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'selectionChange' | 是 |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | 是 |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | 是 |
 
 ## 示例
 
@@ -455,7 +455,7 @@ on(type: 'textChange', callback: (text: string) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'textChange' | 是 |
-| callback | (text: string) =&gt; void | 是 |
+| callback | (text: string) = & gt; void | 是 |
 
 ## 示例
 
@@ -488,7 +488,7 @@ on(type: 'editorAttributeChanged', callback: (attr: EditorAttribute) => void): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'editorAttributeChanged' | 是 |
-| callback | (attr: EditorAttribute) =&gt; void | 是 |
+| callback | (attr: EditorAttribute) = & gt; void | 是 |
 
 ## 示例
 

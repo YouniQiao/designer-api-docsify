@@ -42,7 +42,7 @@ backgroundColor?: ResourceColor
 
 Button背景颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -114,7 +114,7 @@ fontColor?: ResourceColor
 
 Button的文本颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -136,7 +136,7 @@ style?: DialogButtonStyle
 
 设置Button的风格样式，默认值DialogButtonStyle.DEFAULT。
 
-**类型：** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
+**类型：** DialogButtonStyle
 
 **默认值：** -
 
@@ -160,7 +160,7 @@ value: ResourceStr
 
 Button的文本内容，若值为null，则该按钮不显示。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 

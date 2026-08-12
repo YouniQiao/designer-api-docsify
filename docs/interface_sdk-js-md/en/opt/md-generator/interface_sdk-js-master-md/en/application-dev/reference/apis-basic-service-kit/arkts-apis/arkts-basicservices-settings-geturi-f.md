@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## getURI
@@ -64,7 +64,7 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;object&gt; |
+| Promise & lt;object & gt; |
 
 ## Examples
 

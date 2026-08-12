@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## constructTLSSocketInstance
@@ -57,7 +57,7 @@ Creates a TLSSocket object with a TCPSocket object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tcpSocket | [TCPSocket](arkts-network-socket-tcpsocket-i.md) | Yes | Parameter for creating a TLSSocket object. |
+| tcpSocket | TCPSocket | Yes | Parameter for creating a TLSSocket object. |
 
 **Return value:**
 
@@ -69,8 +69,8 @@ Creates a TLSSocket object with a TCPSocket object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
 | 2303602 | Socket is not connected. |
 | 2303601 | Invalid socket FD. |
 

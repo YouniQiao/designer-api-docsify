@@ -28,7 +28,7 @@ new(array: Iterable<bigint>): BigUint64Array
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | Iterable&lt;bigint&gt; | Yes |
+| array | Iterable & lt;bigint & gt; | Yes |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigUint64Arr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -70,7 +70,7 @@ Creates an array from an array-like or iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;bigint&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;bigint&gt; | Yes |
 
 **Return value:**
 
@@ -88,8 +88,8 @@ from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;U&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
-| mapfn | (v: U, k: number) =&gt; bigint | Yes |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;U&gt; | Yes |
+| mapfn | (v: U, k: number) = & gt; bigint | Yes |
 | thisArg | any | No |
 
 **Return value:**

@@ -6,7 +6,7 @@ Enumerates the audio output formats.
 
 **Deprecated since:** 8
 
-**Substitutes:** [media.ContainerFormatType](arkts-media-media-containerformattype-e.md)
+**Substitutes:** [ContainerFormatType](arkts-media-media-containerformattype-e.md#ContainerFormatType)
 
 <!--Device-media-enum AudioOutputFormat--><!--Device-media-enum AudioOutputFormat-End-->
 
@@ -23,7 +23,7 @@ Default output format.
 This API is defined but not implemented yet.
 
 Note: It is supported since API version 6 and deprecated since API version 8. You are advised to select one from   
-[ContainerFormatType](arkts-media-media-containerformattype-e.md) as required.
+[ContainerFormatType](arkts-media-media-containerformattype-e.md#ContainerFormatType) as required.
 
 **Since:** 6
 
@@ -42,13 +42,13 @@ MPEG_4 = 2
 MPEG-4.
 
 Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use   
-**CFT_MPEG_4** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
+**CFT_MPEG_4** in [ContainerFormatType](arkts-media-media-containerformattype-e.md#ContainerFormatType) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.multimedia.media/media.ContainerFormatType#CFT_MPEG_4
+**Substitutes:** [CFT_MPEG_4](arkts-media-media-containerformattype-e.md#CFT_MPEG_4)
 
 <!--Device-AudioOutputFormat-MPEG_4 = 2--><!--Device-AudioOutputFormat-MPEG_4 = 2-End-->
 
@@ -64,13 +64,13 @@ AMR_NB.
 
 This API is defined but not implemented yet.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead. For the encoding format, use **AUDIO_AMR_NB** in [CodecMimeType](arkts-media-media-codecmimetype-e.md).
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR** in [ContainerFormatType](arkts-media-media-containerformattype-e.md#ContainerFormatType) instead. For the encoding format, use **AUDIO_AMR_NB** in [CodecMimeType](arkts-media-media-codecmimetype-e.md#CodecMimeType).
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.multimedia.media/media.ContainerFormatType#CFT_AMR
+**Substitutes:** [CFT_AMR](arkts-media-media-containerformattype-e.md#CFT_AMR)
 
 <!--Device-AudioOutputFormat-AMR_NB = 3--><!--Device-AudioOutputFormat-AMR_NB = 3-End-->
 
@@ -86,13 +86,13 @@ AMR_WB.
 
 This API is defined but not implemented yet.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead. For the encoding format, use **AUDIO_AMR_WB** in [CodecMimeType](arkts-media-media-codecmimetype-e.md).
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AMR** in [ContainerFormatType](arkts-media-media-containerformattype-e.md#ContainerFormatType) instead. For the encoding format, use **AUDIO_AMR_WB** in [CodecMimeType](arkts-media-media-codecmimetype-e.md#CodecMimeType).
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.multimedia.media/media.ContainerFormatType#CFT_AMR
+**Substitutes:** [CFT_AMR](arkts-media-media-containerformattype-e.md#CFT_AMR)
 
 <!--Device-AudioOutputFormat-AMR_WB = 4--><!--Device-AudioOutputFormat-AMR_WB = 4-End-->
 
@@ -106,13 +106,13 @@ AAC_ADTS = 6
 
 Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-based audio.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC** in [ContainerFormatType](arkts-media-media-containerformattype-e.md#ContainerFormatType) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.multimedia.media/media.ContainerFormatType#CFT_AAC
+**Substitutes:** [CFT_AAC](arkts-media-media-containerformattype-e.md#CFT_AAC)
 
 <!--Device-AudioOutputFormat-AAC_ADTS = 6--><!--Device-AudioOutputFormat-AAC_ADTS = 6-End-->
 

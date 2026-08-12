@@ -14,7 +14,7 @@ Get inspector node info by node id.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInspectorByKey](arkts-arkui-global-getinspectorbykey-f.md#getinspectorbykey)
+**Substitutes:** [getInspectorByKey](getInspectorByKey)
 
 <!--Device-unnamed-declare function getInspectorNodeById(id: number): object--><!--Device-unnamed-declare function getInspectorNodeById(id: number): object-End-->
 

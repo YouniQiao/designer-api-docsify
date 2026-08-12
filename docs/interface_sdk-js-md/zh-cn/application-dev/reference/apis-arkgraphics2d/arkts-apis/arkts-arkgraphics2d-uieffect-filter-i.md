@@ -1,6 +1,6 @@
 # Filter
 
-Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter)创建一个Filter实例。
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createFilter)创建一个Filter实例。
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ blur(blurRadius: double): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
+| Filter | 返回挂载了模糊效果的Filter，支持链式调用继续添加其他效果。 |
 
 ## 示例
 
@@ -116,14 +116,14 @@ hdrBrightnessRatio(ratio: double): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
+| Filter | 返回挂载了HDR提亮效果的Filter，支持链式调用继续添加其他效果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**适用版本：** 24+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。<br>**适用版本：** 20 - 23 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败，应用无权限使用该API，需要申请权限。<br>**适用版本：** 24+ |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。<br>**适用版本：** 20 - 23 |
 
 ## 示例
 

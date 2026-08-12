@@ -2,7 +2,7 @@
 
 Provides methods to implement **RemoteObject**. The service provider must inherit from this class.
 
-**Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
+**Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#IRemoteObject)
 
 **Since:** 7
 
@@ -13,7 +13,7 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## attachLocalInterface
@@ -28,7 +28,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [modifyLocalInterface](arkts-ipc-rpc-remoteobject-c.md#modifylocalinterface)(localInterface:
+**Substitutes:** [modifyLocalInterface](modifyLocalInterface(localInterface:)
 
 <!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -213,7 +213,7 @@ Obtains the interface descriptor of this object. The interface descriptor is a s
 
 | Error Code ID |
 | --- |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
 
 ## Examples
 
@@ -255,7 +255,7 @@ Obtains the interface descriptor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.IRemoteObject#getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+**Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getDescriptor)()
 
 <!--Device-RemoteObject-getInterfaceDescriptor(): string--><!--Device-RemoteObject-getInterfaceDescriptor(): string-End-->
 
@@ -323,7 +323,7 @@ Obtains the string of the interface descriptor.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -377,7 +377,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -682,7 +682,7 @@ Called to return a response to **sendRequest()**. The server processes the reque
 
 **Deprecated since:** 9
 
-**Substitutes:** [onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)(code:
+**Substitutes:** [onRemoteMessageRequest](onRemoteMessageRequest(code:)
 
 <!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -737,7 +737,7 @@ Checks whether the remote object corresponding to the specified interface token 
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.IRemoteObject#getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor:
+**Substitutes:** [getLocalInterface](rpc.IRemoteObject#getLocalInterface(descriptor:)
 
 <!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -812,13 +812,13 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RequestResult&gt; |
+| Promise & lt;RequestResult & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -901,7 +901,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sendRequest
 
@@ -915,7 +915,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 8
 
-**Substitutes:** [rpc.IRemoteObject#sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
 
 <!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -989,7 +989,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.IRemoteObject#sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -1008,7 +1008,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SendRequestResult&gt; |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; |
 
 ## Examples
 
@@ -1074,7 +1074,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.IRemoteObject#sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -1088,4 +1088,4 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes |

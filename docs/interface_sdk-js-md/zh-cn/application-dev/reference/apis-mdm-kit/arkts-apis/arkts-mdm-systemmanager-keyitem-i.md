@@ -1,6 +1,6 @@
 # KeyItem
 
-其他按键信息。当前[KeyCode](arkts-mdm-systemmanager-keycode-e.md)事件发生时，其他已被按下的按键信息。
+其他按键信息。当前[KeyCode](arkts-mdm-systemmanager-keycode-e.md#KeyCode)事件发生时，其他已被按下的按键信息。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
+**类型：** KeyCode
 
 **起始版本：** 23
 

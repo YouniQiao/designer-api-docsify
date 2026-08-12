@@ -11,7 +11,7 @@ UI font configuration of the system.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## fallbackGroups
@@ -22,7 +22,7 @@ fallbackGroups: Array<UIFontFallbackGroupInfo>
 
 List of fallback generic font families.
 
-**Type:** Array&lt;UIFontFallbackGroupInfo&gt;
+**Type:** Array&lt;[UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md)&gt;
 
 **Since:** 11
 
@@ -62,7 +62,7 @@ generic: Array<UIFontGenericInfo>
 
 List of supported generic font families.
 
-**Type:** Array&lt;UIFontGenericInfo&gt;
+**Type:** Array&lt;[UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)&gt;
 
 **Since:** 11
 

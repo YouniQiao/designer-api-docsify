@@ -11,14 +11,14 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getInclination)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix:
+**替代接口：** [getInclination](sensor.getInclination(inclinationMatrix:)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
 
@@ -28,7 +28,7 @@ function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | 是 |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 ## 示例
@@ -58,13 +58,13 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)替代。
+> [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getInclination)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix:
+**替代接口：** [getInclination](sensor.getInclination(inclinationMatrix:)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
 
@@ -74,13 +74,13 @@ function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | 是 |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

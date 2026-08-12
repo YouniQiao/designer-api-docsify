@@ -11,7 +11,7 @@ Defines the parameters used to match a certificate. If no parameter is specified
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## authorityKeyIdentifier
@@ -204,7 +204,7 @@ publicKey?: DataBlob
 
 Public key of the certificate, in DER format.
 
-**Type:** [DataBlob](arkts-devicecertificate-cert-datablob-i.md)
+**Type:** DataBlob
 
 **Since:** 11
 
@@ -276,7 +276,7 @@ subjectAlternativeNames?: Array<GeneralName>
 
 Subject Alternative Names (SANs) of the certificate.
 
-**Type:** Array&lt;GeneralName&gt;
+**Type:** Array&lt;[GeneralName](arkts-devicecertificate-cert-generalname-i.md)&gt;
 
 **Since:** 12
 
@@ -330,7 +330,7 @@ x509Cert?: X509Cert
 
 Certificate object.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 11
 

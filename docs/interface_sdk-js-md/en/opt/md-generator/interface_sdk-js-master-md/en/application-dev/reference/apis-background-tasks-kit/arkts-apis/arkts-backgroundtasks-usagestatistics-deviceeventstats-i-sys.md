@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## count

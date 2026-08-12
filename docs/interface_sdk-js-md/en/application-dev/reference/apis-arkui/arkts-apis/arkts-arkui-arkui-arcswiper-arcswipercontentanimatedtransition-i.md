@@ -13,7 +13,7 @@ Defines the swiper content animated transition options.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## timeout
@@ -46,7 +46,7 @@ transition: Callback<ArcSwiperContentTransitionProxy>
 
 Called when custom content transition animation start.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;ArcSwiperContentTransitionProxy&gt;
+**Type:** Callback&lt;[ArcSwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-arcswipercontenttransitionproxy-i.md)&gt;
 
 **Since:** 26.0.0
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime](arkts-systemdatetime.md)
+**替代接口：** [systemDateTime](arkts-systemdatetime.md#systemDateTime)
 
 <!--Device-unnamed-declare namespace systemTime--><!--Device-unnamed-declare namespace systemTime-End-->
 

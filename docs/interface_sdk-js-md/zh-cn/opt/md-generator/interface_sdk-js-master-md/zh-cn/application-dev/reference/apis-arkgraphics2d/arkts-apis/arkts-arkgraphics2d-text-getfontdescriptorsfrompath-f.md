@@ -12,8 +12,8 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 > 
 > - 如果字体文件未找到、字体文件路径无效、字体文件无权限或者文件非字体格式，返回空数组。
 > 
-> - [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md)中的weight字段并不精准对应字体文件内部的字重数值，而是将字体文件中的实际字重四舍五入映射到
-> [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md)枚举值后的结果。例如，字体文件字重350会映射为400，对应枚举为W400。
+> - [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md#FontDescriptor)中的weight字段并不精准对应字体文件内部的字重数值，而是将字体文件中的实际字重四舍五入映射到
+> [FontWeight](arkts-arkgraphics2d-text-fontweight-e.md#FontWeight)枚举值后的结果。例如，字体文件字重350会映射为400，对应枚举为W400。
 
 **起始版本：** 22
 
@@ -33,7 +33,7 @@ function getFontDescriptorsFromPath(path: string | Resource): Promise<Array<Font
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;FontDescriptor&gt;&gt; |
+| Promise&lt;Array&lt;[FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md)&gt;&gt; |
 
 ## 示例
 

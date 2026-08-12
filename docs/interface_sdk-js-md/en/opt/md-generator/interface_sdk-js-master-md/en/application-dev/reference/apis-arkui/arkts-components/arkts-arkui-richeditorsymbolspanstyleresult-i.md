@@ -40,7 +40,7 @@ Color of the symbol span.
 
 Default value: depending on the rendering strategy
 
-**Type:** Array&lt;ResourceColor&gt;
+**Type:** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;
 
 **Since:** 11
 

@@ -21,7 +21,7 @@ function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | 是 | 配置音频采集器。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer&gt; | 是 | 回调函数。当获取音频采集器成功，err为undefined，data为获取到的音频采集器对象；否则为错误对象。异常将返回 error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | 是 | 回调函数。当获取音频采集器成功，err为undefined，data为获取到的音频采集器对象；否则为错误对象。异常将返回 error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
 
 ## 示例
 
@@ -64,7 +64,7 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
 ```
 
-Obtains an {@link AudioCapturer} instance. This method uses an asynchronous callback to return the capturer instance.Using {@link #AudioCapturer} to record audio will need permission according to different {@link #Sourcetype}in options parameter, like {@link #ohos.permission.MICROPHONE} for the most microphone recording cases.
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses an asynchronous callback to return the capturer instance.Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different [Sourcetype](#Sourcetype)in options parameter, like [MICROPHONE](#ohos.permission.MICROPHONE) for the most microphone recording cases.
 
 **起始版本：** 23
 
@@ -81,14 +81,14 @@ Obtains an {@link AudioCapturer} instance. This method uses an asynchronous call
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | 是 | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer \| null&gt; | 是 | Callback used to return the audio capturer instance, or null if any error occurs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | 是 | Callback used to return the audio capturer instance, or null if any error occurs. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
+| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
 
 
 ## createAudioCapturer
@@ -117,7 +117,7 @@ function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCaptur
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioCapturer&gt; | Promise对象，成功将返回音频采集器对象，异常将返回error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Promise对象，成功将返回音频采集器对象，异常将返回error对象： &lt;br&gt;错误码6800301：表示参数校验异常、权限校验异常或系统处理异常（具体错误查看系统日志）。 &lt;br&gt;错误码6800101：表示必选参数为空或参数类型错误。 |
 
 ## 示例
 
@@ -159,7 +159,7 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>
 ```
 
-Obtains an {@link AudioCapturer} instance. This method uses a promise to return the capturer instance.Using {@link #AudioCapturer} to record audio will need permission according to different {@link #Sourcetype}in options parameter, like {@link #ohos.permission.MICROPHONE} for the most microphone recording cases.
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance.Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different [Sourcetype](#Sourcetype)in options parameter, like [MICROPHONE](#ohos.permission.MICROPHONE) for the most microphone recording cases.
 
 **起始版本：** 23
 
@@ -181,12 +181,12 @@ Obtains an {@link AudioCapturer} instance. This method uses a promise to return 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioCapturer \| null&gt; | Promise used to return the audio capturer instance, or null if any error occurs. |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Promise used to return the audio capturer instance, or null if any error occurs. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
+| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) | Audio system internal error, such as system crash. |
 

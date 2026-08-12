@@ -1,7 +1,7 @@
 # AtomicServiceNavigation
 
 **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)) and non-home page content through routing.
+[NavDestination](./@internal/component/ets/nav_destination)) and non-home page content through routing.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@kit.ArkUI';
 ```
 
 ## navDestinationBuilder
@@ -91,7 +91,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 The layout style users defined and inserted.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;NavigationMenuItem&gt;
+**Type:** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
 
 **Since:** 18
 
@@ -113,7 +113,7 @@ minContentWidth?: Dimension
 
 Sets the minimum width of content.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 12
 
@@ -135,7 +135,7 @@ mode?: NavigationMode
 
 Sets the mode of navigation.
 
-**Type:** [NavigationMode](arkts-arkui-navigation-navigationmode-e.md)
+**Type:** NavigationMode
 
 **Since:** 12
 
@@ -157,7 +157,7 @@ modeChangeCallback?: Callback<NavigationMode>
 
 Trigger callback when navigation mode changes.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavigationMode&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;NavigationMode&gt;
 
 **Since:** 12
 
@@ -177,7 +177,7 @@ navBarWidth?: Length
 
 Sets the width of navigation bar.
 
-**Type:** [Length](arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 12
 
@@ -224,7 +224,7 @@ navPathStack?: NavPathStack
 
 the information of route page.Providers methods for controlling destination page in the stack.
 
-**Type:** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
+**Type:** NavPathStack
 
 **Since:** 12
 
@@ -246,7 +246,7 @@ navigationContent?: Callback<void>
 
 the content of Navigation.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -268,7 +268,7 @@ sideBarContent?: Callback<void>
 
 Set side bar content.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 18
 
@@ -312,7 +312,7 @@ stateChangeCallback?: Callback<boolean>
 
 Trigger callback when the visibility of navigation bar change.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
 
 **Since:** 12
 
@@ -332,7 +332,7 @@ title?: ResourceStr
 
 Sets the Navigation title.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## newSEService
@@ -18,7 +18,7 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 **Deprecated since:** 12
 
-**Substitutes:** [omapi#createService](arkts-connectivity-omapi-createservice-f.md#createservice)
+**Substitutes:** [createService](arkts-connectivity-omapi-createservice-f.md#createService)
 
 <!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService--><!--Device-omapi-function newSEService(type: 'serviceState', callback: Callback<ServiceState>): SEService-End-->
 
@@ -29,7 +29,7 @@ Establish a new connection that can be used to connect to all the SEs available 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'serviceState' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ServiceState&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceState](arkts-connectivity-omapi-servicestate-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -41,8 +41,8 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 

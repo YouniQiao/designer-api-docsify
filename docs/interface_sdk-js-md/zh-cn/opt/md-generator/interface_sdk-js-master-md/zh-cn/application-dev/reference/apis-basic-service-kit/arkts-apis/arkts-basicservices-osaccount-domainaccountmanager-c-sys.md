@@ -30,7 +30,7 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 | credential | Uint8Array | 是 |
 | callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 |
 
@@ -38,22 +38,22 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
-| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [12300112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
 
 ## 示例
 
@@ -104,7 +104,7 @@ static auth(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 | credential | Uint8Array | 是 |
 | options | [DomainAccountAuthOptions](arkts-basicservices-osaccount-domainaccountauthoptions-i-sys.md) | 是 |
 | callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | 是 |
@@ -113,21 +113,21 @@ static auth(
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
-| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [12300112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
 
 ## 示例
 
@@ -188,20 +188,20 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
-| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [12300112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
 
 ## 示例
 
@@ -251,21 +251,21 @@ static authWithPopup(localId: number, callback: IUserAuthCallback): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
-| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [12300112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) |
 
 ## 示例
 
@@ -305,24 +305,24 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| businessParams | Record&lt;string, Object&gt; | 是 |
+| [businessParams](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Record & lt;string, Object & gt; | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
 | 12300211 |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -368,29 +368,29 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| businessParams | Record&lt;string, Object&gt; | 是 |
+| [businessParams](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
 | 12300211 |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -437,23 +437,23 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DomainAccountInfo&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -507,23 +507,23 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 
 | 类型 |
 | --- |
-| Promise&lt;DomainAccountInfo&gt; |
+| Promise&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -569,24 +569,24 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -633,29 +633,29 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
-| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
-| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) |
+| [12300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) |
+| [12300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -700,24 +700,24 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -766,10 +766,10 @@ static registerPlugin(plugin: DomainPlugin): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300201 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -825,9 +825,9 @@ static unregisterPlugin(): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -869,7 +869,7 @@ static updateAccountToken(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 | token | Uint8Array | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -877,12 +877,12 @@ static updateAccountToken(
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -931,25 +931,25 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 | token | Uint8Array | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 

@@ -13,7 +13,7 @@ Sequence text can be grouped under the specified area,and grouping index with di
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addLocale

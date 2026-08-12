@@ -6,7 +6,7 @@ export type UidNetStatsInfo = {
   }
 ```
 
-{@link NetStatsInfo} for every UID. Key is UID.
+[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) for every UID. Key is UID.
 
 **Since:** 12
 

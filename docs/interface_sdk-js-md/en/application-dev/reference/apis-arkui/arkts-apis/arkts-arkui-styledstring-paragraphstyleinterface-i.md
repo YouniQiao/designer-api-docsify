@@ -18,7 +18,7 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 
 Leading margin.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| LeadingMarginPlaceholder
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ shaderStyle?: ShaderStyle
 
 Set the shader style of the StyledString.
 
-**Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**Type:** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
 **Since:** 26.0.0
 
@@ -180,7 +180,7 @@ textDirection?: TextDirection
 
 Set the text direction of the StyledString.
 
-**Type:** [TextDirection](arkts-arkui-textdirection-e.md)
+**Type:** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **Since:** 23
 
@@ -220,7 +220,7 @@ textVerticalAlign?: TextVerticalAlign
 
 Vertical alignment of text.
 
-**Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
+**Type:** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
 
 **Since:** 24
 

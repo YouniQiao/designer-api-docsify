@@ -2,7 +2,7 @@
 
 Declares interface for the attributes of the save button.
 
-**Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md)
+**Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod](SecurityComponentMethod)
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ Sets the size of the icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Dimension](arkts-arkui-dimension-t.md) \| SizeOptions \| undefined | Yes | Dimensions of the icon to set. |
+| size | [Dimension](arkts-arkui-dimension-t.md) \| [SizeOptions](arkts-arkui-sizeoptions-i.md) \| undefined | Yes | Dimensions of the icon to set. |
 
 **Return value:**
 
@@ -160,7 +160,7 @@ Sets the text of the save button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string \| Resource \| undefined | Yes | Content of text. |
+| text | string \| [Resource](arkts-arkui-resource-t.md) \| undefined | Yes | Content of text. |
 
 **Return value:**
 
@@ -224,7 +224,7 @@ Sets the font weight of the symbol icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | int \| FontWeight \| string \| Resource \| undefined | Yes | Font weight of the symbol icon. |
+| fontWeight | int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](arkts-arkui-resource-t.md) \| undefined | Yes | Font weight of the symbol icon. |
 
 **Return value:**
 

@@ -5,33 +5,33 @@ InputClient是输入法客户端对象，代表当前绑定到输入法应用的
 **核心功能概述：**
 
 - **文本获取**：通过  
-[getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)/  
-[getForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getforwardsync)获取光标前的文本，通过  
-[getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)/  
-[getBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#getbackwardsync)获取光标后的文本，用于分析已输入内容并提供智能补全。  
+[getForward](#getForward)/  
+[getForwardSync](#getForwardSync)获取光标前的文本，通过  
+[getBackward](#getBackward)/  
+[getBackwardSync](#getBackwardSync)获取光标后的文本，用于分析已输入内容并提供智能补全。  
 - **文本编辑**：通过  
-[insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)/  
-[insertTextSync](arkts-ime-inputmethodengine-inputclient-i.md#inserttextsync)插入文本，通过  
-[deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)/  
-[deleteForwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deleteforwardsync)删除光标前的文本，通过  
-[deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)/[deleteBackwardSync](arkts-ime-inputmethodengine-inputclient-i.md#deletebackwardsync)删除光标后的文本。  
+[insertText](#insertText)/  
+[insertTextSync](#insertTextSync)插入文本，通过  
+[deleteForward](#deleteForward)/  
+[deleteForwardSync](#deleteForwardSync)删除光标前的文本，通过  
+[deleteBackward](#deleteBackward)/[deleteBackwardSync](#deleteBackwardSync)删除光标后的文本。  
 - **功能键与光标**：通过  
-[sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)发送功能键（如回车键），通过  
-[moveCursor](arkts-ime-inputmethodengine-inputclient-i.md#movecursor)/  
-[moveCursorSync](arkts-ime-inputmethodengine-inputclient-i.md#movecursorsync)移动光标。  
+[sendKeyFunction](#sendKeyFunction)发送功能键（如回车键），通过  
+[moveCursor](#moveCursor)/  
+[moveCursorSync](#moveCursorSync)移动光标。  
 - **选区操作**：通过  
-[selectByRange](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrange)/  
-[selectByRangeSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbyrangesync)按范围选中文本，通过  
-[selectByMovement](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovement)/[selectByMovementSync](arkts-ime-inputmethodengine-inputclient-i.md#selectbymovementsync)按方向选中文本。  
+[selectByRange](#selectByRange)/  
+[selectByRangeSync](#selectByRangeSync)按范围选中文本，通过  
+[selectByMovement](#selectByMovement)/[selectByMovementSync](#selectByMovementSync)按方向选中文本。  
 - **编辑框属性**：通过  
-[getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)/[getEditorAttributeSync](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattributesync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
-- **文本预览**：通过[setPreviewText](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtext)/  
-[setPreviewTextSync](arkts-ime-inputmethodengine-inputclient-i.md#setpreviewtextsync)设置预览文本，通过  
-[finishTextPreview](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreview)/  
-[finishTextPreviewSync](arkts-ime-inputmethodengine-inputclient-i.md#finishtextpreviewsync)结束文本预览。  
-- **私有通信**：通过[sendPrivateCommand](arkts-ime-inputmethodengine-inputclient-i.md#sendprivatecommand)向应用发送私有命令，通过  
-[sendMessage](arkts-ime-inputmethodengine-inputclient-i.md#sendmessage)/  
-[recvMessage](arkts-ime-inputmethodengine-inputclient-i.md#recvmessage)进行消息通信。
+[getEditorAttribute](#getEditorAttribute)/[getEditorAttributeSync](#getEditorAttributeSync)获取编辑框属性信息（输入类型、回车键类型等），据此调整键盘布局。  
+- **文本预览**：通过[setPreviewText](#setPreviewText)/  
+[setPreviewTextSync](#setPreviewTextSync)设置预览文本，通过  
+[finishTextPreview](#finishTextPreview)/  
+[finishTextPreviewSync](#finishTextPreviewSync)结束文本预览。  
+- **私有通信**：通过[sendPrivateCommand](#sendPrivateCommand)向应用发送私有命令，通过  
+[sendMessage](#sendMessage)/  
+[recvMessage](#recvMessage)进行消息通信。
 
 下列API均需使用  
 [on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))获取到InputClient实例后，通过实例调用。
@@ -71,9 +71,9 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -118,15 +118,15 @@ deleteBackward(length: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -169,9 +169,9 @@ deleteBackwardSync(length: number): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -209,9 +209,9 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -256,15 +256,15 @@ deleteForward(length: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -307,9 +307,9 @@ deleteForwardSync(length: number): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -336,14 +336,14 @@ finishTextPreview(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
 
 ## 示例
 
@@ -375,8 +375,8 @@ finishTextPreviewSync(): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
 
 ## 示例
 
@@ -408,7 +408,7 @@ getAttachOptions(): AttachOptions
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 
@@ -442,9 +442,9 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -485,15 +485,15 @@ getBackward(length: number): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -538,9 +538,9 @@ getBackwardSync(length: number): string
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -568,15 +568,15 @@ getCallingWindowInfo(): Promise<WindowInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;WindowInfo&gt; |
+| Promise & lt;WindowInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
-| [12800012](../errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) |
+| [12800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800012-软键盘类型面板未创建) |
 
 ## 示例
 
@@ -613,13 +613,13 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## getEditorAttribute
 
@@ -639,13 +639,13 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 | 类型 |
 | --- |
-| Promise&lt;EditorAttribute&gt; |
+| Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## 示例
 
@@ -684,7 +684,7 @@ getEditorAttributeSync(): EditorAttribute
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## 示例
 
@@ -721,9 +721,9 @@ getForward(length: number, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -764,15 +764,15 @@ getForward(length: number): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -817,9 +817,9 @@ getForwardSync(length: number): string
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -853,8 +853,8 @@ getTextIndexAtCursor(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -888,14 +888,14 @@ getTextIndexAtCursor(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -933,8 +933,8 @@ getTextIndexAtCursorSync(): number
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -972,9 +972,9 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -1019,15 +1019,15 @@ insertText(text: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -1069,9 +1069,9 @@ insertTextSync(text: string): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-输入法应用异常) |
 
 ## 示例
 
@@ -1108,8 +1108,8 @@ moveCursor(direction: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1149,14 +1149,14 @@ moveCursor(direction: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1194,8 +1194,8 @@ moveCursorSync(direction: number): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1263,7 +1263,7 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 
@@ -1306,7 +1306,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1353,8 +1353,8 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1396,14 +1396,14 @@ selectByMovement(movement: Movement): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1443,8 +1443,8 @@ selectByMovementSync(movement: Movement): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1479,8 +1479,8 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1523,14 +1523,14 @@ selectByRange(range: Range): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1571,8 +1571,8 @@ selectByRangeSync(range: Range): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1608,9 +1608,9 @@ sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -1650,15 +1650,15 @@ sendExtendAction(action: ExtendAction): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 
@@ -1697,8 +1697,8 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1744,14 +1744,14 @@ sendKeyFunction(action: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1795,18 +1795,18 @@ sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800016](../errorcode-inputmethod-framework.md#12800016-输入法客户端未处于编辑状态) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) |
-| [12800015](../errorcode-inputmethod-framework.md#12800015-消息接收端无法接收自定义通信数据) |
-| [12800014](../errorcode-inputmethod-framework.md#12800014-输入法应用非完全访问模式) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800016-输入法客户端未处于编辑状态) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-输入法客户端未绑定) |
+| [12800015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800015-消息接收端无法接收自定义通信数据) |
+| [12800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800014-输入法应用非完全访问模式) |
 
 ## 示例
 
@@ -1840,21 +1840,21 @@ sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 |
+| commandData | Record & lt;string, CommandDataType & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
 
 ## 示例
 
@@ -1901,15 +1901,15 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
 
 ## 示例
 
@@ -1951,9 +1951,9 @@ setPreviewTextSync(text: string, range: Range): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-当前输入框不支持预上屏) |
 
 ## 示例
 

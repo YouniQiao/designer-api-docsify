@@ -30,5 +30,5 @@ function onSystemPrivateCommand(callback: Callback<Record<string, CommandDataTyp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 

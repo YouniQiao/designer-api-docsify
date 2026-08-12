@@ -11,7 +11,7 @@ Provides configuration for decimal.
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## crypto

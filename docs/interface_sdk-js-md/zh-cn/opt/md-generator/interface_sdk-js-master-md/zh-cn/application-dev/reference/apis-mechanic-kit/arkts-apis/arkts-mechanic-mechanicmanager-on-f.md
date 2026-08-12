@@ -19,13 +19,13 @@ Subscribes to device attachment state change events.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'attachStateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachStateChangeInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AttachStateChangeInfo](arkts-mechanic-mechanicmanager-attachstatechangeinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
 
 ## 示例
 
@@ -63,13 +63,13 @@ Subscribes to tracking events.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'trackingStateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TrackingEventInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TrackingEventInfo](arkts-mechanic-mechanicmanager-trackingeventinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
 
 ## 示例
 

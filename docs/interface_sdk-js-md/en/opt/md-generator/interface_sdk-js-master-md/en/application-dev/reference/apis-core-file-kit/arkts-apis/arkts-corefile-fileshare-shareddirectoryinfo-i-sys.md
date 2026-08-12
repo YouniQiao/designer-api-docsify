@@ -13,7 +13,7 @@ The directory information shared with the system by the application.
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

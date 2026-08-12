@@ -13,7 +13,7 @@ Sets regular expression for input filtering.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## error
@@ -25,7 +25,7 @@ error?: Callback<string>
 Callback used to return the filtered-out content when regular expression matching fails. Default value:  
 **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 18
 
@@ -45,7 +45,7 @@ inputFilterValue: ResourceStr
 
 Regular expression.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 

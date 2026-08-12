@@ -6,7 +6,7 @@
 function requestTrace(config: RequestTraceConfig): Promise<string>
 ```
 
-��ȡ��ǰ���̵�trace��Ϣ������Ӧ��tag��ͼ�񴰿�tag��cpu���Ⱥ�binder�ں���Ϣ��ʹ��Promise�첽�ص����ɼ�trace���ص�.sys�ļ���Ŀ¼�����洢3�ݣ��������ڵ���3��ʱ�ٴε��ýӿڻ��׳�������11400120��
+获取当前进程的trace信息，包含应用tag、图像窗口tag、cpu调度和binder内核信息。使用Promise异步回调。采集trace返回的.sys文件在目录下最多存储3份，数量大于等于3份时再次调用接口会抛出错误码11400120。
 
 **起始版本：** 24
 
@@ -28,15 +28,15 @@ function requestTrace(config: RequestTraceConfig): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace采集超出资源配额) |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
-| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) |
+| [11400302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400302-trace采集超出资源配额) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400120](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400120-trace文件存储达到限制) |
 
 ## 示例
 

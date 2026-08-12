@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## disableNfc
@@ -28,7 +28,7 @@ Disables NFC.This API can be called only by system applications
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [3100101](../errorcode-nfc.md#3100101-nfc-switch-error) | The NFC state is abnormal in the service. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3100101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100101-nfc-switch-error) | The NFC state is abnormal in the service. |
 

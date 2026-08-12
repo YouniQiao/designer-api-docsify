@@ -13,7 +13,7 @@ Provides KV store configuration.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## autoSync
@@ -121,7 +121,7 @@ Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, w
 
 SystemCapability.DistributedDataManager.KVStore.Core
 
-**Type:** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
+**Type:** KVStoreType
 
 **Since:** 9
 
@@ -163,7 +163,7 @@ Schema that defines the values stored in the KV store. The default value is **un
 
 SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
-**Type:** [Schema](arkts-arkdata-distributedkvstore-schema-c.md)
+**Type:** Schema
 
 **Since:** 9
 
@@ -185,7 +185,7 @@ Security level of the KV store.
 
 SystemCapability.DistributedDataManager.KVStore.Core
 
-**Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
+**Type:** SecurityLevel
 
 **Since:** 9
 

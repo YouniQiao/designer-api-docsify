@@ -18,7 +18,7 @@ function finishTrace(name: string, taskId: number): void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.hiTraceMeter.finishTrace
+**替代接口：** [finishTrace](ohos.hiTraceMeter.finishTrace)
 
 <!--Device-bytrace-function finishTrace(name: string, taskId: number): void--><!--Device-bytrace-function finishTrace(name: string, taskId: number): void-End-->
 

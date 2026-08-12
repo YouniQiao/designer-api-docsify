@@ -12,7 +12,7 @@ const MAX_BATCH_SIZE = 128
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants#MAX_BATCH_SIZE
+**替代接口：** [MAX_BATCH_SIZE](ohos.data.distributedKVStore.Constants#MAX_BATCH_SIZE)
 
 <!--Device-Constants-const MAX_BATCH_SIZE = 128--><!--Device-Constants-const MAX_BATCH_SIZE = 128-End-->
 
@@ -30,7 +30,7 @@ const MAX_KEY_LENGTH = 1024
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH
+**替代接口：** [MAX_KEY_LENGTH](ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH)
 
 <!--Device-Constants-const MAX_KEY_LENGTH = 1024--><!--Device-Constants-const MAX_KEY_LENGTH = 1024-End-->
 
@@ -48,7 +48,7 @@ const MAX_KEY_LENGTH_DEVICE = 896
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH_DEVICEs
+**替代接口：** [MAX_KEY_LENGTH_DEVICEs](ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH_DEVICEs)
 
 <!--Device-Constants-const MAX_KEY_LENGTH_DEVICE = 896--><!--Device-Constants-const MAX_KEY_LENGTH_DEVICE = 896-End-->
 
@@ -66,7 +66,7 @@ const MAX_QUERY_LENGTH = 512000
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants#MAX_QUERY_LENGTH
+**替代接口：** [MAX_QUERY_LENGTH](ohos.data.distributedKVStore.Constants#MAX_QUERY_LENGTH)
 
 <!--Device-Constants-const MAX_QUERY_LENGTH = 512000--><!--Device-Constants-const MAX_QUERY_LENGTH = 512000-End-->
 
@@ -84,7 +84,7 @@ const MAX_STORE_ID_LENGTH = 128
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants#MAX_STORE_ID_LENGTH
+**替代接口：** [MAX_STORE_ID_LENGTH](ohos.data.distributedKVStore.Constants#MAX_STORE_ID_LENGTH)
 
 <!--Device-Constants-const MAX_STORE_ID_LENGTH = 128--><!--Device-Constants-const MAX_STORE_ID_LENGTH = 128-End-->
 
@@ -102,7 +102,7 @@ const MAX_VALUE_LENGTH = 4194303
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants#MAX_VALUE_LENGTH
+**替代接口：** [MAX_VALUE_LENGTH](ohos.data.distributedKVStore.Constants#MAX_VALUE_LENGTH)
 
 <!--Device-Constants-const MAX_VALUE_LENGTH = 4194303--><!--Device-Constants-const MAX_VALUE_LENGTH = 4194303-End-->
 

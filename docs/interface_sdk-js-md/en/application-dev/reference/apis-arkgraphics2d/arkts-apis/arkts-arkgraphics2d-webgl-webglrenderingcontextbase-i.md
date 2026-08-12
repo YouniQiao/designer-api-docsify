@@ -2256,7 +2256,7 @@ Sets pixel storage parameters
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
-| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| GLboolean | Yes | Parameter value |
+| param | [GLint](arkts-arkgraphics2d-glint-t.md) \| [GLboolean](arkts-arkgraphics2d-glboolean-t.md) | Yes | Parameter value |
 
 ## polygonOffset
 

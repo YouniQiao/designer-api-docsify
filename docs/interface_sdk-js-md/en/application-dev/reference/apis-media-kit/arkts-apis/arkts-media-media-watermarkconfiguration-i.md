@@ -13,7 +13,7 @@ Set configuration of a watermark. The position starts at top left corner.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## height

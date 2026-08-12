@@ -22,5 +22,5 @@ declare type OnFoldStatusChangeCallback = (event: OnFoldStatusChangeInfo) => voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [OnFoldStatusChangeInfo](../arkts-apis/arkts-arkui-folderstack-onfoldstatuschangeinfo-i.md) | 是 | 折叠状态改变时的信息，仅在横屏状态下生效。 |
+| event | [OnFoldStatusChangeInfo](arkts-arkui-onfoldstatuschangeinfo-i.md) | 是 | 折叠状态改变时的信息，仅在横屏状态下生效。 |
 

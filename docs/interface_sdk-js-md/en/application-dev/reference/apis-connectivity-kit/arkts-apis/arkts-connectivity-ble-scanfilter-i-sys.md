@@ -13,7 +13,7 @@ Describes the criteria for filtering scanning results can be set.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## irk
@@ -22,7 +22,7 @@ import { ble } from 'kits/@kit.ConnectivityKit';
 irk?: Uint8Array
 ```
 
-Identity Resolving Key of BLE peripheral device.{@link ScanFilter#irk} needs to be used with {@link ScanFilter#address}.
+Identity Resolving Key of BLE peripheral device.[irk](#irk) needs to be used with [address](arkts-connectivity-ble-scanfilter-i.md#address).
 
 **Type:** Uint8Array
 

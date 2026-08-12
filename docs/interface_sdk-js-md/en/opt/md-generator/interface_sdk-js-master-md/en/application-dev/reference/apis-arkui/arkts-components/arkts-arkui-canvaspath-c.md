@@ -262,7 +262,7 @@ Creates a rectangle on the canvas.
 | x | number | Yes |
 | y | number | Yes |
 | w | number | Yes |
-| h | number | Yes |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
 
 ## roundRect
 
@@ -291,11 +291,11 @@ Creates a rounded rectangle path. This API does not directly render content. To 
 | x | number | Yes |
 | y | number | Yes |
 | w | number | Yes |
-| h | number | Yes |
-| radii | number \| Array&lt;number&gt; | No |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
+| radii | number \| Array & lt;number & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [103701](../errorcode-canvas.md#103701-parameter-error) |
+| [103701](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) |

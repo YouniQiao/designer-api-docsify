@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## loadTrainModelFromFile
@@ -37,7 +37,7 @@ Load train model from file
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Model&gt; |
+| Promise&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; |
 
 **Error codes:**
 

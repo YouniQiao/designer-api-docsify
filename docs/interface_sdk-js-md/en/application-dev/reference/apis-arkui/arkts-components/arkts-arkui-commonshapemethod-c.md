@@ -68,7 +68,7 @@ Sets the color of the fill area.An invalid value is handled as the default value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the fill area. Default value: Color.Black. |
+| value | ResourceColor | Yes | Color of the fill area. Default value: Color.Black. |
 
 **Return value:**
 
@@ -132,7 +132,7 @@ Sets the stroke color.If this attribute is not set, the component does not have 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Stroke color. |
+| value | ResourceColor | Yes | Stroke color. |
 
 **Return value:**
 
@@ -228,7 +228,7 @@ Sets the cap style of the stroke.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LineCapStyle](../arkts-apis/arkts-arkui-linecapstyle-e.md) | Yes | Cap style of the stroke. Default value: LineCapStyle.Butt |
+| value | LineCapStyle | Yes | Cap style of the stroke. Default value: LineCapStyle.Butt |
 
 **Return value:**
 
@@ -260,7 +260,7 @@ Sets the join style of the stroke.This attribute does not work for the Circle co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LineJoinStyle](../arkts-apis/arkts-arkui-linejoinstyle-e.md) | Yes | Join style of the stroke. Default value: LineJoinStyle.Miter |
+| value | LineJoinStyle | Yes | Join style of the stroke. Default value: LineJoinStyle.Miter |
 
 **Return value:**
 
@@ -356,7 +356,7 @@ Sets the stroke width.If this attribute is of the string type, percentage values
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Stroke width. The value must be greater than or equal to 0. Default value: 1. Default unit: vp. An invalid value is handled as the default value. |
+| value | Length | Yes | Stroke width. The value must be greater than or equal to 0. Default value: 1. Default unit: vp. An invalid value is handled as the default value. |
 
 **Return value:**
 

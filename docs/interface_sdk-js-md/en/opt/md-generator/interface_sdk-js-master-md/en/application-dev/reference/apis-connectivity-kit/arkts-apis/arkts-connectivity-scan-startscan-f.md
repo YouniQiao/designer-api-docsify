@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## startScan
@@ -28,23 +28,23 @@ Starts scanning for specified NearLink devices with filters.It is allowed to set
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filters | ScanFilters[] \| null | Yes |
+| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes |
 | options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 36100042 |
 | 36100040 |
 | 36100041 |

@@ -15,7 +15,7 @@ A picker view to show availale streaming device list.
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
+import { AVCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## build
@@ -60,7 +60,7 @@ activeColor?: Color | int | string
 
 Assigns the color of picker component at active state.
 
-**Type:** [Color](../../apis-arkui/arkts-apis/arkts-arkui-color-e.md) \| int \| string
+**Type:** Color \| int \| string
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ customPicker?: CustomBuilder
 
 Set the custom builder for the picker appearance.If not set, system will show the default appearance for different device type.
 
-**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 23
 
@@ -116,7 +116,7 @@ normalColor?: Color | int | string
 
 Assigns the color of picker component at normal state .
 
-**Type:** [Color](../../apis-arkui/arkts-apis/arkts-arkui-color-e.md) \| int \| string
+**Type:** Color \| int \| string
 
 **Since:** 23
 

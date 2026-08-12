@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedFormInfoById
@@ -17,7 +17,7 @@ Obtains the information of the widget that has been added to the home screen on 
 > **NOTE：**
 > 
 > This field is supported since API version 18 and deprecated since API version 20. You are advised to use
-> [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid) instead.
+> [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getPublishedRunningFormInfoById) instead.
 
 **Since:** 18
 
@@ -25,7 +25,7 @@ Obtains the information of the widget that has been added to the home screen on 
 
 **Deprecated since:** 20
 
-**Substitutes:** [formProvider.getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getpublishedrunningforminfobyid)
+**Substitutes:** [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md#getPublishedRunningFormInfoById)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -49,9 +49,9 @@ Obtains the information of the widget that has been added to the home screen on 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## Examples
 

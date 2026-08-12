@@ -17,7 +17,7 @@ Provides an iterator object of the device root directory.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## next

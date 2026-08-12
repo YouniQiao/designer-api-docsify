@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## isActive

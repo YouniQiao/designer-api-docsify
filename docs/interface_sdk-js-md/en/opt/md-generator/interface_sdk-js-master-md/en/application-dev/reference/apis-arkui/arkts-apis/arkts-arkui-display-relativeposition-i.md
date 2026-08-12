@@ -11,7 +11,7 @@ Describes a coordinate position in the relative coordinate system, with the orig
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -38,7 +38,7 @@ position: Position
 
 Coordinates with the top-left corner of the screen specified by **displayId** as the origin.
 
-**Type:** [Position](arkts-arkui-display-position-i.md)
+**Type:** Position
 
 **Since:** 20
 

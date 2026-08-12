@@ -1,6 +1,6 @@
 # BackForwardList
 
-Provides back and forward history list information method. related to {@link HistoryItem}.
+Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem).
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Provides back and forward history list information method. related to {@link His
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getItemAtIndex
@@ -46,7 +46,7 @@ Get history entry at given index.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## currentIndex
 

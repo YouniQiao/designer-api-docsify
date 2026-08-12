@@ -4,7 +4,7 @@
 
 **废弃版本：** 26.0.0
 
-**替代接口：** ohos.arkui.UIContext.UIContext#showAlertDialog
+**替代接口：** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)
 
 <!--Device-unnamed-declare class AlertDialog--><!--Device-unnamed-declare class AlertDialog-End-->
 
@@ -20,16 +20,16 @@ static show(value: AlertDialogParamWithConfirm | AlertDialogParamWithButtons | A
 
 > **说明：**
 
-showAlertDialog需先获取[UIContext](arkts-arkui-uicontext.md)实例后再进行调用。
+showAlertDialog需先获取[UIContext](@ohos.arkui.UIContext)实例后再进行调用。
 
-> 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog)来明确UI的执行上下文。
+> 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
+> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)来明确UI的执行上下文。
 
 **起始版本：** 7
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.UIContext#showAlertDialog
+**替代接口：** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,4 +41,4 @@ showAlertDialog需先获取[UIContext](arkts-arkui-uicontext.md)实例后再进�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| [AlertDialogParamWithOptions](arkts-arkui-alertdialog-alertdialogparamwithoptions-i.md) | 是 |
+| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 |

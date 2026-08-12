@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## createGroup
@@ -20,7 +20,7 @@ Creates a P2P group.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.createP2pGroup
+**Substitutes:** [createP2pGroup](ohos.wifiManager/wifiManager.createP2pGroup)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -32,7 +32,7 @@ Creates a P2P group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes | Indicates the configuration for creating a group. |
+| config | WifiP2PConfig | Yes | Indicates the configuration for creating a group. |
 
 **Return value:**
 

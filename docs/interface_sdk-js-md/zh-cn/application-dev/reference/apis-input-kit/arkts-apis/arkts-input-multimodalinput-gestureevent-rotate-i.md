@@ -36,7 +36,7 @@ type: ActionType
 
 手势事件类型。如：手势开始、手势更新、手势结束等。
 
-**类型：** [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md)
+**类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **起始版本：** 11
 

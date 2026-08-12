@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPremultipliedPixelMap
@@ -26,18 +26,18 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The source pixelmap. |
-| dst | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| src | PixelMap | Yes | The source pixelmap. |
+| dst | PixelMap | Yes | The destination pixelmap. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
-| [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980246](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
+| [62980248](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
 ## Examples
 
@@ -89,8 +89,8 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The source pixelMap. |
-| dst | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | The destination pixelmap. |
+| src | PixelMap | Yes | The source pixelMap. |
+| dst | PixelMap | Yes | The destination pixelmap. |
 
 **Return value:**
 
@@ -102,10 +102,10 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
-| [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980246](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
+| [62980248](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
 ## Examples
 

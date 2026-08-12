@@ -28,5 +28,5 @@ Create a FrameNode of Divider type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Divider](arkts-arkui-typenode-divider-t.md) | Return Divider type FrameNode. |
+| Divider | Return Divider type FrameNode. |
 

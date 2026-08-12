@@ -54,7 +54,7 @@ reason: RenderProcessNotRespondingReason
 
 Reason for the render process not responding.
 
-**Type:** [RenderProcessNotRespondingReason](../arkts-components/arkts-arkweb-renderprocessnotrespondingreason-e.md)
+**Type:** [RenderProcessNotRespondingReason](arkts-arkweb-web-renderprocessnotrespondingreason-e.md)
 
 **Since:** 23
 

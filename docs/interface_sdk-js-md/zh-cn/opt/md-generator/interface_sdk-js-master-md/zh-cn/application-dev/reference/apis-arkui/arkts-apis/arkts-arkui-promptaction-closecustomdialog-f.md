@@ -24,7 +24,7 @@ closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中�
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.PromptAction#closeCustomDialog
+**替代接口：** [closeCustomDialog](ohos.arkui.UIContext.PromptAction#closeCustomDialog)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,5 +44,5 @@ closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中�
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getAutoTimeStatus
@@ -32,7 +32,7 @@ Obtains the switch status of the automatic time setting. This API returns the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
+| [13000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000001-network-or-os-error) | Network connection error or OS error. Possible causes: 1.System memory is insufficient; 2.Calls the underlying system interface failed. |
 
 ## Examples
 

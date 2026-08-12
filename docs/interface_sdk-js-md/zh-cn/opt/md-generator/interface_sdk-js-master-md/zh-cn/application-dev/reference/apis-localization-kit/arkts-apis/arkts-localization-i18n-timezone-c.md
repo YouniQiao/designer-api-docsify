@@ -14,7 +14,7 @@
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](arkts-localization-i18n-timezone-c.md#setappdefaulttimezonebyid)设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setAppDefaultTimeZoneById)设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
@@ -71,7 +71,7 @@ static getAvailableIDs(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 
@@ -102,7 +102,7 @@ static getAvailableZoneCityIDs(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 
@@ -356,8 +356,8 @@ static getTimezonesByLocation(longitude: number, latitude: number): Array<TimeZo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -457,7 +457,7 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 | 错误码ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
 
 ## 示例
 

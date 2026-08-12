@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## exit
@@ -33,9 +33,9 @@ Exits the share of the specified shared resource.This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -78,15 +78,15 @@ Exits the share of the specified shared resource.This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;void&gt;&gt; |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

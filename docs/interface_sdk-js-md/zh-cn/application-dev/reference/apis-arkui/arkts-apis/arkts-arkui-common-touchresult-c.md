@@ -38,7 +38,7 @@ strategy: TouchTestStrategy
 
 Defines the touch test strategy.
 
-**类型：** [TouchTestStrategy](../arkts-components/arkts-arkui-touchteststrategy-e.md)
+**类型：** [TouchTestStrategy](arkts-arkui-common-touchteststrategy-e.md)
 
 **起始版本：** 23
 

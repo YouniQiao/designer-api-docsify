@@ -2,7 +2,7 @@
 
 Represents an error that occurs when null pointer is dereferenced.
 
-**Inheritance/Implementation:** NullPointerError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** NullPointerError extends [Error](Error)
 
 **Since:** 26.0.0
 

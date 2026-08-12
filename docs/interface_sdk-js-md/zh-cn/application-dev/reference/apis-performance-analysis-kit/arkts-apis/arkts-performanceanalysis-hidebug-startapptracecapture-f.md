@@ -6,7 +6,7 @@
 function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): string
 ```
 
-�ýӿڲ�����hitrace���ܣ������߿�ͨ���ýӿ����ָ����Χ��trace�Զ����ɼ������ڸýӿ���trace�ɼ����������ĵ���������Ҫ�ɼ��ķ�Χ������أ����鿪������ʹ�øýӿ�ǰ��ͨ��hitrace����ץȡӦ�õ�trace��־������ɸѡ������trace�ɼ��Ĺؼ���Χ������߸ýӿ����ܡ�`startAppTraceCapture()`�����ĵ�����Ҫ��`stopAppTraceCapture()`�����ĵ���һһ��Ӧ���ظ�����trace�ɼ������½ӿڵ����쳣������trace�ɼ������л����Ľ϶����ܣ�������Ӧ����ɲɼ���ʱ�رա�Ӧ�õ���startAppTraceCapture�ӿ������ɼ�trace�����ɼ���trace��С������limitSize��ϵͳ���Զ�����stopAppTraceCapture�ӿ�ֹͣ�ɼ������limitSize��С���ò���������������trace���ݲ��㣬�޷�������Ϸ���������Ҫ�󿪷��߸���ʵ�����������limitSize��С������������limitSize = Ԥ��trace�ɼ�ʱ�� * trace��λ������Ԥ��trace�ɼ�ʱ���������߸��ݷ����Ĺ��ϳ������о�������λ�롣trace��λ������Ӧ��ÿ�������trace��С��ϵͳ�Ƽ�ֵΪ300KB/s�����鿪���߲�������Ӧ�õ�ʵ��ֵ����λKB/s��trace��λ����ʵ�ⷽ����limitSize����Ϊ���ֵ500M������startAppTraceCapture�ӿڣ���Ӧ���ϲ���N��󣬵���stopAppTraceCaptureֹͣ�ɼ���Ȼ��鿴trace��СS��KB������ôtrace��λ���� = S/N��KB/s����
+该接口补充了hitrace功能，开发者可通过该接口完成指定范围的trace自动化采集。由于该接口中trace采集过程中消耗的性能与需要采集的范围成正相关，建议开发者在使用该接口前，通过hitrace命令抓取应用的trace日志，从中筛选出所需trace采集的关键范围，以提高该接口性能。`startAppTraceCapture()`方法的调用需要与`stopAppTraceCapture()`方法的调用一一对应，重复开启trace采集将导致接口调用异常，由于trace采集过程中会消耗较多性能，开发者应在完成采集后及时关闭。应用调用startAppTraceCapture接口启动采集trace，当采集的trace大小超过了limitSize，系统将自动调用stopAppTraceCapture接口停止采集。因此limitSize大小设置不当，将导致生成trace数据不足，无法满足故障分析。所以要求开发者根据实际情况，评估limitSize大小。评估方法：limitSize = 预期trace采集时长 * trace单位流量。预期trace采集时长：开发者根据分析的故障场景自行决定，单位秒。trace单位流量：应用每秒产生的trace大小，系统推荐值为300KB/s，建议开发者采用自身应用的实测值，单位KB/s。trace单位流量实测方法：limitSize设置为最大值500M，调用startAppTraceCapture接口，在应用上操作N秒后，调用stopAppTraceCapture停止采集，然后查看trace大小S（KB）。那么trace单位流量 = S/N（KB/s）。
 
 **起始版本：** 12
 
@@ -20,24 +20,24 @@ function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tags | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | 是 | trace��Χ���������tags�� |
-| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | 是 | �������TraceFlag�� |
-| limitSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | ����trace�ļ���С���ƣ���λΪByte��ȡֵ��Χ��0, 500MB]��������Χʱ���ش�����401�� |
+| tags | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | 是 | trace范围，详情请见tags。 |
+| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | 是 | 详情请见TraceFlag。 |
+| limitSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 开启trace文件大小限制，单位为Byte，取值范围（0, 500MB]。超出范围时返回错误码401。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | ����trace�ļ���·�����ӿڷ�����ʵ����·������Ӧ������Ҫ���ʣ���ο�Ӧ��ɳ��·������ʵ����·���Ķ�Ӧ��ϵ����·��ת������ |
+| string | 返回trace文件名路径（接口返回真实物理路径，若应用内需要访问，请参考应用沙箱路径和真实物理路径的对应关系进行路径转换）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not within the enumeration type 3.The parameter type error or parameter order error |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Abnormal trace status. |
-| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-权限校验失败) | No write permission on the file. |
-| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-重复采集) | Capture trace already enabled. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid argument, Possible causes: 1.The limit parameter is too small 2.The parameter is not within the enumeration type 3.The parameter type error or parameter order error |
+| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Abnormal trace status. |
+| [11400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400103-权限校验失败) | No write permission on the file. |
+| [11400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400102-重复采集) | Capture trace already enabled. |
 
 ## 示例
 

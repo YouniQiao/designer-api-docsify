@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## getFontByName
@@ -18,7 +18,7 @@ Obtains information about a system font based on the font name.
 > 
 > - Since API version 10, you can use the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Font](arkts-arkui-uicontext.md) object associated with
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Font](@ohos.arkui.UIContext) object associated with
 > the current UI context.
 
 **Since:** 10
@@ -27,7 +27,7 @@ Obtains information about a system font based on the font name.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.Font#getFontByName
+**Substitutes:** [getFontByName](ohos.arkui.UIContext.Font#getFontByName)
 
 **Model restriction:** This API can be used only in the stage model.
 

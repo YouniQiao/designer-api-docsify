@@ -45,5 +45,5 @@ Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，�
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 根据入参创建的四阶矩阵对象。 |
+| Matrix4Transit | 根据入参创建的四阶矩阵对象。 |
 

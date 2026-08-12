@@ -28,16 +28,16 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getEncoded
 
@@ -59,16 +59,16 @@ getEncoded(): Promise<EncodingBlob>
 
 | 类型 |
 | --- |
-| Promise&lt;EncodingBlob&gt; |
+| Promise&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getExtensions
 
@@ -96,9 +96,9 @@ getExtensions(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getExtensionsObject
 
@@ -126,9 +126,9 @@ getExtensionsObject(): CertExtension
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getIssuerName
 
@@ -160,9 +160,9 @@ getIssuerName(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getIssuerName
 
@@ -184,7 +184,7 @@ getIssuerName(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | 是 |
+| [encodingType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md) | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | 是 |
 
 **返回值：**
 
@@ -196,10 +196,10 @@ getIssuerName(encodingType: EncodingType): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getIssuerX500DistinguishedName
 
@@ -227,9 +227,9 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getLastUpdate
 
@@ -257,9 +257,9 @@ getLastUpdate(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getNextUpdate
 
@@ -287,9 +287,9 @@ getNextUpdate(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getRevokedCert
 
@@ -323,9 +323,9 @@ getRevokedCert(serialNumber: bigint): X509CRLEntry
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getRevokedCertWithCert
 
@@ -347,7 +347,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
+| [cert](arkts-security-cert.md) | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
 
 **返回值：**
 
@@ -359,9 +359,9 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getRevokedCerts
 
@@ -383,15 +383,15 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;X509CRLEntry&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getRevokedCerts
 
@@ -413,15 +413,15 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;X509CRLEntry&gt;&gt; |
+| Promise&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getSignature
 
@@ -449,9 +449,9 @@ getSignature(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getSignatureAlgName
 
@@ -479,9 +479,9 @@ getSignatureAlgName(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getSignatureAlgOid
 
@@ -509,9 +509,9 @@ getSignatureAlgOid(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getSignatureAlgParams
 
@@ -539,10 +539,10 @@ getSignatureAlgParams(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getTBSInfo
 
@@ -570,9 +570,9 @@ getTBSInfo(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getType
 
@@ -644,9 +644,9 @@ hashCode(): Uint8Array
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## isRevoked
 
@@ -668,7 +668,7 @@ isRevoked(cert: X509Cert): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
+| [cert](arkts-security-cert.md) | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
 
 **返回值：**
 
@@ -680,7 +680,7 @@ isRevoked(cert: X509Cert): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## match
 
@@ -714,9 +714,9 @@ match(param: X509CRLMatchParameters): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## toString
 
@@ -744,9 +744,9 @@ toString(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## toString
 
@@ -768,7 +768,7 @@ toString(encodingType: EncodingType): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | 是 |
+| [encodingType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md) | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | 是 |
 
 **返回值：**
 
@@ -780,10 +780,10 @@ toString(encodingType: EncodingType): string
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## verify
 
@@ -812,8 +812,8 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## verify
 
@@ -841,11 +841,11 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |

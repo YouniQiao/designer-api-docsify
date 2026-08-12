@@ -20,7 +20,7 @@ readonly abilities: Array<ModuleAbilityInfo>
 
 module包含的ability组件信息。
 
-**类型：** Array&lt;ModuleAbilityInfo&gt;
+**类型：** Array&lt;[ModuleAbilityInfo](arkts-ability-bundlepackinfo-moduleabilityinfo-i-sys.md)&gt;
 
 **起始版本：** 9
 
@@ -40,7 +40,7 @@ readonly apiVersion: ApiVersion
 
 module的api版本。
 
-**类型：** [ApiVersion](arkts-ability-freeinstall-apiversion-t-sys.md)
+**类型：** [ApiVersion](arkts-ability-bundlepackinfo-apiversion-i-sys.md)
 
 **起始版本：** 9
 
@@ -80,7 +80,7 @@ readonly distro: ModuleDistroInfo
 
 module发行版信息。
 
-**类型：** [ModuleDistroInfo](arkts-ability-freeinstall-moduledistroinfo-t-sys.md)
+**类型：** [ModuleDistroInfo](arkts-ability-bundlepackinfo-moduledistroinfo-i-sys.md)
 
 **起始版本：** 9
 
@@ -100,7 +100,7 @@ readonly extensionAbilities: Array<ExtensionAbility>
 
 描述extensionAbilities的配置信息。
 
-**类型：** Array&lt;ExtensionAbility&gt;
+**类型：** Array&lt;[ExtensionAbility](arkts-ability-bundlepackinfo-extensionability-i-sys.md)&gt;
 
 **起始版本：** 9
 

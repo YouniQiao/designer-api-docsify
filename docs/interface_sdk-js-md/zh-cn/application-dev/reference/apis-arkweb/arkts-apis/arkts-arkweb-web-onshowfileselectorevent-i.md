@@ -36,7 +36,7 @@ result: FileSelectorResult
 
 Defines the file selector result.
 
-**类型：** [FileSelectorResult](../arkts-components/arkts-arkweb-fileselectorresult-c.md)
+**类型：** [FileSelectorResult](arkts-arkweb-web-fileselectorresult-c.md)
 
 **起始版本：** 23
 

@@ -13,7 +13,7 @@ Represents the peripheral device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## busType

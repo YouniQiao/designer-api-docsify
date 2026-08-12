@@ -1,8 +1,8 @@
 # ToggleAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** ToggleAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** ToggleAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of toggle.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ToggleAttribute](arkts-arkui-toggle-toggleattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | The attribute modifier of toggle. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ToggleAttribute](arkts-arkui-toggle-toggleattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | The attribute modifier of toggle. |
 
 **返回值：**
 
@@ -64,7 +64,7 @@ default contentModifier(modifier: ContentModifier<ToggleConfiguration> | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;ToggleConfiguration&gt; \| undefined | 是 | 在Toggle组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发 者需要自定义class实现ContentModifier接口。取值为undefined时，则不使用contentModifier。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggle-toggleconfiguration-i.md)&gt; \| undefined | 是 | 在Toggle组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发 者需要自定义class实现ContentModifier接口。取值为undefined时，则不使用contentModifier。 |
 
 **返回值：**
 

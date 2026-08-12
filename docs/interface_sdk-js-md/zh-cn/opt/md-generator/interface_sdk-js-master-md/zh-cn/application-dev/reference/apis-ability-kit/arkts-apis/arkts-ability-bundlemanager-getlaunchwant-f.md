@@ -26,7 +26,7 @@ function getLaunchWant(): Want
 
 | 错误码ID |
 | --- |
-| [17700072](../errorcode-bundle.md#17700072-launch-want不存在) |
+| [17700072](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700072-launch-want不存在) |
 
 ## 示例
 

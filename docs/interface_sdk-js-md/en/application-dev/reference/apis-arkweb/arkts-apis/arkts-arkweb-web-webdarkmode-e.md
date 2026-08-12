@@ -1,6 +1,6 @@
 # WebDarkMode
 
-Enum type supplied to {@link darkMode} for setting the web dark mode.
+Enum type supplied to [darkMode](arkts-arkweb-web-webattribute-i.md#darkMode) for setting the web dark mode.
 
 **Since:** 23
 

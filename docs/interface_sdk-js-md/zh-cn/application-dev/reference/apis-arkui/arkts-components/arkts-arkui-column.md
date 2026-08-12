@@ -72,7 +72,7 @@ Column(options?: ColumnOptions | ColumnOptionsV2)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、 string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) \| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | 否 | Column组件的间距配置选项。通过space属性设置纵向布局元素垂直方向间距，space支持设置number、 string或Resource类型。当需要为子组件设置固定垂直间距时传入此参数；省略时不设置子组件间距。 |
 
 ## 汇总
 

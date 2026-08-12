@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from 'kits/@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## removePreferencesFromCache
@@ -12,8 +12,8 @@ import { sendablePreferences } from 'kits/@kit.ArkData';
 function removePreferencesFromCache(context: Context, options: Options): Promise<void>
 ```
 
-Removes a **Preferences** instance from the cache. This API uses a promise to return the result.After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls   
-[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
+Removes a **Preferences** instance from the cache. This API uses a promise to return the result.After an application calls [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences) for the first time to obtain a **Preferences** instance, the obtained **Preferences** instance is cached. When the application calls   
+[getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences) again, the **Preferences** instance will be read from the cache instead of from the persistent file. After this API is called to remove the instance from the cache, calling **getPreferences** again will read data from the persistent file and create a **Preferences** instance.
 
 **Since:** 12
 
@@ -29,8 +29,8 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Configuration options of the **Preferences** instance. |
+| context | Context | Yes | Application context. |
+| options | Options | Yes | Configuration options of the **Preferences** instance. |
 
 **Return value:**
 
@@ -42,11 +42,11 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [15501001](../errorcode-preferences.md#15501001-stage-model-required) | The operations is supported in stage mode only. |
-| [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) | Invalid dataGroupId. |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [15501001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-stage-model-required) | The operations is supported in stage mode only. |
+| [15501002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) | Invalid dataGroupId. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 

@@ -40,7 +40,7 @@ options?: TextChangeOptions
 
 Information about the text change.
 
-**Type:** [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md)
+**Type:** [TextChangeOptions](arkts-arkui-textchangeoptions-i.md)
 
 **Since:** 15
 

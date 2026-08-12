@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## execute
@@ -42,9 +42,9 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 11 |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 11 |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 
@@ -96,8 +96,8 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 
@@ -154,8 +154,8 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
+| task | Task | Yes | Task to be executed. |
+| priority | Priority | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
@@ -168,11 +168,11 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 17 |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 9 - 17 |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 
@@ -221,7 +221,7 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | Yes | Generic task to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task to be executed. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
@@ -233,10 +233,10 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 
@@ -285,7 +285,7 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | Yes | Task group to be executed. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task group. The default value is **taskpool.Priority.MEDIUM**. |
 
 **Return value:**
 
@@ -298,7 +298,7 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | Error Code ID | Error Message |
 | --- | --- |
 | 10200059 | TaskGroup cannot be re-executed.<br>**Applicable version:** 24 and later |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 
@@ -352,7 +352,7 @@ Execute a concurrent task with Configs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be executed. |
+| task | Task | Yes | Task to be executed. |
 | configs | [Configs](arkts-arkts-taskpool-configs-i.md) | Yes | Configs of the task. |
 
 **Return value:**
@@ -366,10 +366,10 @@ Execute a concurrent task with Configs.
 | Error Code ID | Error Message |
 | --- | --- |
 | 10200058 | Task timed out. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 
 ## execute
@@ -408,10 +408,10 @@ Execute a concurrent generics task with Configs.
 | Error Code ID | Error Message |
 | --- | --- |
 | 10200058 | Task timed out. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 
 ## execute
@@ -450,6 +450,6 @@ Execute a concurrent task group with Configs.
 | Error Code ID | Error Message |
 | --- | --- |
 | 10200059 | TaskGroup cannot be re-executed. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 | 10200070 | TaskGroup timed out. |
 

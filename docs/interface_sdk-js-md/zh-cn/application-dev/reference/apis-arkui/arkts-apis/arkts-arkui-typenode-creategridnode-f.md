@@ -29,5 +29,5 @@ export function createGridNode(context: UIContext, options?: FrameNodeOptions): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Grid](arkts-arkui-typenode-grid-t.md) | 返回Grid类型的 FrameNode。 |
+| Grid | 返回Grid类型的 FrameNode。 |
 

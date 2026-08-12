@@ -15,7 +15,7 @@ The **ArcSlider** component is designed for circular screens on wearables to qui
 ## Modules to Import
 
 ```TypeScript
-import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from 'kits/@kit.ArkUI';
+import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from '@kit.ArkUI';
 ```
 
 ## options
@@ -26,7 +26,7 @@ options: ArcSliderOptions
 
 Parameters of the arc slider.
 
-Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
+Default value: default values of all properties of [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md#ArcSliderOptions)
 
 **Type:** [ArcSliderOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptions-c.md)
 

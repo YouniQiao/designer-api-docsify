@@ -11,7 +11,7 @@ Satellite status information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## altitudes
@@ -102,7 +102,7 @@ satelliteConstellation?: Array<SatelliteConstellationCategory>
 
 Satellite constellation type array.
 
-**Type:** Array&lt;SatelliteConstellationCategory&gt;
+**Type:** Array&lt;[SatelliteConstellationCategory](arkts-location-geolocationmanager-satelliteconstellationcategory-e.md)&gt;
 
 **Since:** 12
 

@@ -38,7 +38,7 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 Schemas about custom event.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Record&lt;string, Object&gt;&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 26.0.0
 
@@ -220,7 +220,7 @@ readonly subcommands?: Record<string, SubCommandInfo>
 
 SubCommandInfo list.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, SubCommandInfo&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [SubCommandInfo](arkts-ability-toolinfo-subcommandinfo-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

@@ -11,7 +11,7 @@ Configuring parameters in geo fence requests.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## geofence
@@ -22,7 +22,7 @@ geofence: Geofence
 
 Circular fence information.
 
-**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
+**Type:** Geofence
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ scenario: LocationRequestScenario
 
 Indicate the user scenario.
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 9
 

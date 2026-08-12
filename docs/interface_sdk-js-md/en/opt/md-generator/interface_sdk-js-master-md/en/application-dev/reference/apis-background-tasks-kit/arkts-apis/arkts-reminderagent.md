@@ -8,7 +8,7 @@ You can use the APIs to create scheduled reminders for countdown timers, calenda
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager](arkts-reminderagentmanager.md)
+**Substitutes:** [reminderAgentManager](arkts-reminderagentmanager.md#reminderAgentManager)
 
 <!--Device-unnamed-declare namespace reminderAgent--><!--Device-unnamed-declare namespace reminderAgent-End-->
 
@@ -17,7 +17,7 @@ You can use the APIs to create scheduled reminders for countdown timers, calenda
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

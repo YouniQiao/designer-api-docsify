@@ -57,17 +57,17 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | 是 |
+| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -130,22 +130,22 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| upgradeFiles | Array&lt;UpgradeFile&gt; | 是 |
+| upgradeFiles | Array&lt;[UpgradeFile](arkts-basicservices-update-upgradefile-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -210,7 +210,7 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -278,7 +278,7 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -349,10 +349,10 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -425,16 +425,16 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

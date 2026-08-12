@@ -73,10 +73,10 @@ SEEK_CONTINUOUS = 3
 Offers a smooth and fluid visual experience for seeking. Applications can use a progress bar component to continuously invoke the **seek** method, and the AVPlayer will update the video frames smoothly in response to these calls.
 
 Applications can call   
-[isSeekContinuousSupported](arkts-media-media-avplayer-i.md#isseekcontinuoussupported) to check whether the video source supports this seeking mode.
+[isSeekContinuousSupported](arkts-media-media-avplayer-i.md#isSeekContinuousSupported) to check whether the video source supports this seeking mode.
 
 If the video source does not support this mode, calling **seek** will result in an   
-**AVERR_SEEK_CONTINUOUS_UNSUPPORTED** error (see [AVErrorCode](arkts-media-media-averrorcode-e.md)), and the smoothness of frame updates will be compromised.
+**AVERR_SEEK_CONTINUOUS_UNSUPPORTED** error (see [AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)), and the smoothness of frame updates will be compromised.
 
 This seek mode does not trigger the   
 [on('seekDone')](@ohos.multimedia.media:media.AVPlayer.on(type: 'seekDone', callback: Callback&lt;int&gt;)) event.

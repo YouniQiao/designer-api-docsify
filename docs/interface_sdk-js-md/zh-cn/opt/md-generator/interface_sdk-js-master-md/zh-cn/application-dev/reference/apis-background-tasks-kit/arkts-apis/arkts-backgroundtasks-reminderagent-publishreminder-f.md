@@ -7,13 +7,13 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 ```
 
 发布一个后台代理提醒，使用回调的方式实现异步调用，该方法需要申请通知弹窗权限  
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。
+[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)后才能调用。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder)
+**替代接口：** [publishReminder](reminderAgentManager.publishReminder)
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -25,7 +25,7 @@ function publishReminder(reminderReq: ReminderRequest, callback: AsyncCallback<n
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 |
+| [reminderReq](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 ## 示例
@@ -52,13 +52,13 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 ```
 
 发布一个后台代理提醒，使用Promise方式实现异步调用，该方法需要申请通知弹窗权限  
-[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md/arkts-notification-notification-requestenablenotification-depr-f.md#requestenablenotification)后才能调用。
+[Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification)后才能调用。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder)
+**替代接口：** [publishReminder](reminderAgentManager.publishReminder)
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -70,13 +70,13 @@ function publishReminder(reminderReq: ReminderRequest): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| reminderReq | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 |
+| [reminderReq](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md) | [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

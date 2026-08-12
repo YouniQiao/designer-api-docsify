@@ -28,23 +28,23 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| parameters | Record&lt;string, Object&gt; | 是 |
+| parameters | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;DomainServerConfig&gt; |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300215 |
 | 12300213 |
 
@@ -85,22 +85,22 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
+| [domainAccountInfo](arkts-basicservices-osaccount-getdomainaccesstokenoptions-i-sys.md) | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;DomainServerConfig&gt; |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -139,15 +139,15 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;DomainServerConfig&gt;&gt; |
+| Promise&lt;Array&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -191,21 +191,21 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| configId | string | 是 |
+| [configId](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;DomainServerConfig&gt; |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300212 |
 
 ## 示例
@@ -250,21 +250,21 @@ static removeServerConfig(configId: string): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| configId | string | 是 |
+| [configId](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300214 |
 | 12300212 |
 
@@ -307,24 +307,24 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| configId | string | 是 |
-| parameters | Record&lt;string, Object&gt; | 是 |
+| [configId](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | 是 |
+| parameters | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;DomainServerConfig&gt; |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300214 |
 | 12300213 |
 | 12300212 |

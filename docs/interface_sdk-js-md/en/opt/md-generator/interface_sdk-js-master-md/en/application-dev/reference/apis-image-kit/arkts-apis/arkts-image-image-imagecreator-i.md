@@ -3,10 +3,10 @@
 The ImageCreator class provides APIs for applications to request an image data area and compile image data.
 
 Before calling any APIs in ImageCreator, you must use   
-[image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)to create an ImageCreator instance. ImageCreator does not support multiple threads.
+[image.createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator-1)to create an ImageCreator instance. ImageCreator does not support multiple threads.
 
 Images occupy a large amount of memory. When you finish using an ImageCreator instance, call   
-[release](arkts-image-image-imagecreator-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -17,7 +17,7 @@ Images occupy a large amount of memory. When you finish using an ImageCreator in
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## dequeueImage
@@ -58,7 +58,7 @@ Obtains an image buffer from the idle queue and writes image data into it. This 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Image&gt; |
+| Promise & lt;Image & gt; |
 
 ## off('imageRelease')
 
@@ -120,7 +120,7 @@ Places the drawn image in the queue. This API uses an asynchronous callback to r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
+| [image](arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## queueImage
@@ -141,13 +141,13 @@ Places the drawn image in the queue. This API uses a promise to return the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
+| [image](arkts-multimedia-image.md) | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## release
 
@@ -195,7 +195,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## capacity
 

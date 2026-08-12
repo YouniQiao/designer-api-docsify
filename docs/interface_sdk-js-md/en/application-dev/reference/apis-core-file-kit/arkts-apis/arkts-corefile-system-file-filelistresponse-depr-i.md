@@ -20,7 +20,7 @@ fileList: Array<FileResponse>
 
 File list. The format of each file is as follows:{uri:'file1',lastModifiedTime:1589965924479,length:10240,type:'file'}
 
-**Type:** Array&lt;FileResponse&gt;
+**Type:** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
 **Since:** 3
 

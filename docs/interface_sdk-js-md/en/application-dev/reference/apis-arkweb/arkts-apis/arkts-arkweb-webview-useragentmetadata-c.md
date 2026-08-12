@@ -13,7 +13,7 @@ Holds User-Agent metadata information and uses to generate User-Agent client hin
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArchitecture
@@ -86,7 +86,7 @@ Returns the current list of UserAgentBrandVersion which are used to generate the
 
 | Type | Description |
 | --- | --- |
-| Array&lt;UserAgentBrandVersion&gt; | Returns the current list of UserAgentBrandVersion. |
+| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Returns the current list of UserAgentBrandVersion. |
 
 ## getFormFactors
 
@@ -110,7 +110,7 @@ Gets the value for the sec-ch-ua-form-factors.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;UserAgentFormFactor&gt; | Returns the form factors. |
+| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Returns the form factors. |
 
 ## getFullVersion
 
@@ -330,7 +330,7 @@ Sets User-Agent metadata brands and their versions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brandVersionList | Array&lt;UserAgentBrandVersion&gt; | Yes | The brandVersionList is used to generate User-Agent client hints sec-ch-ua-full-version-list. |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes | The brandVersionList is used to generate User-Agent client hints sec-ch-ua-full-version-list. |
 
 ## setFormFactors
 
@@ -356,7 +356,7 @@ Sets User-Agent metadata form factors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formFactors | Array&lt;UserAgentFormFactor&gt; | Yes | The formFactors is used to generate User-Agent client hints sec-ch-ua-form-factors. |
+| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes | The formFactors is used to generate User-Agent client hints sec-ch-ua-form-factors. |
 
 ## setFullVersion
 

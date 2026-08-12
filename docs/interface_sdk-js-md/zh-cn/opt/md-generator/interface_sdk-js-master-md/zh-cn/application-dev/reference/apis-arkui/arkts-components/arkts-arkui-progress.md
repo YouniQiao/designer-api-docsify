@@ -29,7 +29,7 @@ Progress(options: ProgressOptions<Type>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | 是 |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;[Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)&gt; | 是 |
 
 ## 汇总
 

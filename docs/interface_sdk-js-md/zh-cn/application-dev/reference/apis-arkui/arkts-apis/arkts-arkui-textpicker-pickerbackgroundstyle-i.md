@@ -22,9 +22,9 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 **说明：**
 
-1. [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)类型的value参数同时作用于四个圆角半径大小，unit参数用于设置单位。2. [BorderRadiuses](arkts-arkui-borderradiuses-t.md)类型可以设置四个不同值的圆角半径，所有单位固定为VP。3. [LocalizedBorderRadiuses](arkts-arkui-units-localizedborderradiuses-i.md)类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
+1. [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics)类型的value参数同时作用于四个圆角半径大小，unit参数用于设置单位。2. [BorderRadiuses](BorderRadiuses)类型可以设置四个不同值的圆角半径，所有单位固定为VP。3. [LocalizedBorderRadiuses](LocalizedBorderRadiuses)类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 23
 

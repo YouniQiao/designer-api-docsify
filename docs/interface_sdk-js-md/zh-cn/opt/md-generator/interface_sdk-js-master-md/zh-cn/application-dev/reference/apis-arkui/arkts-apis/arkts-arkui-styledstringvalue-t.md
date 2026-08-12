@@ -20,17 +20,17 @@ UserDataSpan | BackgroundColorStyle | LineSpacingStyle
 
 | 类型 |
 | --- |
-| [TextStyle](arkts-arkui-styledstring-textstyle-c.md) |
-| [DecorationStyle](arkts-arkui-styledstring-decorationstyle-c.md) |
+| [TextStyle](arkts-arkui-textstyle-c.md) |
+| [DecorationStyle](arkts-arkui-decorationstyle-c.md) |
 | [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md) |
 | [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md) |
-| [TextShadowStyle](arkts-arkui-styledstring-textshadowstyle-c.md) |
+| [TextShadowStyle](arkts-arkui-textshadowstyle-c.md) |
 | [GestureStyle](arkts-arkui-gesturestyle-c.md) |
-| [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) |
-| [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md) |
-| [LineHeightStyle](arkts-arkui-styledstring-lineheightstyle-c.md) |
+| [ImageAttachment](arkts-arkui-imageattachment-c.md) |
+| [ParagraphStyle](arkts-arkui-paragraphstyle-c.md) |
+| [LineHeightStyle](arkts-arkui-lineheightstyle-c.md) |
 | [UrlStyle](arkts-arkui-urlstyle-c.md) |
-| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) |
-| [UserDataSpan](arkts-arkui-styledstring-userdataspan-c.md) |
+| [CustomSpan](arkts-arkui-customspan-c.md) |
+| [UserDataSpan](arkts-arkui-userdataspan-c.md) |
 | [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md) |
-| [LineSpacingStyle](arkts-arkui-styledstring-linespacingstyle-c.md) |
+| [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md) |

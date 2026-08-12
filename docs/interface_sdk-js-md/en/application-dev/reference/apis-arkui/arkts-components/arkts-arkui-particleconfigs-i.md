@@ -18,7 +18,7 @@ Defines the particle configs.
 
 Image particle configuration.
 
-**Type:** [ImageParticleParameters](../arkts-apis/arkts-arkui-particle-imageparticleparameters-i.md)
+**Type:** [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md)
 
 **Since:** 10
 

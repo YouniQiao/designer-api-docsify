@@ -1,12 +1,12 @@
 # USBConfig
 
-USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md)中可以含有多个配置。
+USB配置，一个[USBDevice](arkts-basicservices-usb-usbdevice-i.md#USBDevice)中可以含有多个配置。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
+**替代接口：** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)
 
 <!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
@@ -26,7 +26,7 @@ attributes: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
+**替代接口：** [attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
 
 <!--Device-USBConfig-attributes: number--><!--Device-USBConfig-attributes: number-End-->
 
@@ -46,7 +46,7 @@ id: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
+**替代接口：** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
 
 <!--Device-USBConfig-id: number--><!--Device-USBConfig-id: number-End-->
 
@@ -66,7 +66,7 @@ interfaces: Array<USBInterface>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
+**替代接口：** [interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
 
 <!--Device-USBConfig-interfaces: Array<USBInterface>--><!--Device-USBConfig-interfaces: Array<USBInterface>-End-->
 
@@ -86,7 +86,7 @@ isRemoteWakeup: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
+**替代接口：** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isRemoteWakeup)
 
 <!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
@@ -106,7 +106,7 @@ isSelfPowered: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isselfpowered)
+**替代接口：** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isSelfPowered)
 
 <!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
 
@@ -126,7 +126,7 @@ maxPower: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
+**替代接口：** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxPower)
 
 <!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
 
@@ -146,7 +146,7 @@ name: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBConfiguration.name](arkts-basicservices-usbmanager-usbconfiguration-i.md#name)
+**替代接口：** [name](arkts-basicservices-usbmanager-usbconfiguration-i.md#name)
 
 <!--Device-USBConfig-name: string--><!--Device-USBConfig-name: string-End-->
 

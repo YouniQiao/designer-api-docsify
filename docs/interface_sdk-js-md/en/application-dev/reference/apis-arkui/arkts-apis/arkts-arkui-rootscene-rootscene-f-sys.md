@@ -28,11 +28,11 @@ Defines the RootScene Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | session | [RootSceneSession](arkts-arkui-rootscene-rootscenesession-i.md) | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RootSceneAttribute](../arkts-components/arkts-arkui-rootscene-attribute.md) |  |
+| [RootSceneAttribute](arkts-arkui-rootscene-rootsceneattribute-i-sys.md) |  |
 

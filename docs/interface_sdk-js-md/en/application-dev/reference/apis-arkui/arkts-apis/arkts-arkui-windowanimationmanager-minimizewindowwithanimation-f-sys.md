@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## minimizeWindowWithAnimation
@@ -29,8 +29,8 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | The window target to be minimized. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowAnimationFinishedCallback&gt; | Yes | Returns the animation finished callback. |
+| windowTarget | WindowAnimationTarget | Yes | The window target to be minimized. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Yes | Returns the animation finished callback. |
 
 ## Examples
 
@@ -119,13 +119,13 @@ Minimize the window target with animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes |  |
+| windowTarget | WindowAnimationTarget | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;WindowAnimationFinishedCallback&gt; | Promise used to return the animation finished callback. |
+| Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Promise used to return the animation finished callback. |
 
 ## Examples
 

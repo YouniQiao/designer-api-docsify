@@ -1,8 +1,8 @@
 # Banner
 
-海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。
+海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)。
 
-**继承/实现关系：** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)
+**继承/实现关系：** Banner extends [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)
 
 **起始版本：** 23
 

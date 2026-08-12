@@ -18,7 +18,7 @@ icon?: IconOptions
 
 Set the CancelButton icon Icon of the Cancel button on the right.
 
-**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
+**Type:** [IconOptions](arkts-arkui-search-iconoptions-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ style?: CancelButtonStyle
 
 Set the CancelButton style Display state of the Cancel button on the right.
 
-**Type:** [CancelButtonStyle](../arkts-components/arkts-arkui-cancelbuttonstyle-e.md)
+**Type:** [CancelButtonStyle](arkts-arkui-search-cancelbuttonstyle-e.md)
 
 **Since:** 23
 

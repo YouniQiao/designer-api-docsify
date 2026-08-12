@@ -32,15 +32,15 @@ Gets current audio effect properties.
 
 | 类型 |
 | --- |
-| Array&lt;AudioEffectProperty&gt; |
+| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -78,15 +78,15 @@ Gets supported audio effect properties based on current devices.
 
 | 类型 |
 | --- |
-| Array&lt;AudioEffectProperty&gt; |
+| Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -130,7 +130,7 @@ isAudioSeparationEffectSupported(): boolean
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -169,8 +169,8 @@ offAudioSeparationEffectEnabledChange(callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -208,7 +208,7 @@ onAudioSeparationEffectEnabledChange(callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -242,16 +242,16 @@ Sets current audio effect properties.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| propertyArray | Array&lt;AudioEffectProperty&gt; | 是 |
+| propertyArray | Array&lt;[AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -300,17 +300,17 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: number, streamId?: number
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 
@@ -356,17 +356,17 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: number):
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 

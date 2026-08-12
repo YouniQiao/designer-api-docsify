@@ -8,7 +8,7 @@ Defines the type of data to return for a subscription to data changes of the gyr
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#GYROSCOPE
+**Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -19,7 +19,7 @@ Defines the type of data to return for a subscription to data changes of the gyr
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -36,7 +36,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -67,7 +67,7 @@ Callback invoked when the gyroscope sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -81,7 +81,7 @@ Callback invoked when the gyroscope sensor data changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md) | Yes |  |
+| data | [GyroscopeResponse](arkts-sensorservice-system-sensor-gyroscoperesponse-i.md) | Yes |  |
 
 ## interval
 
@@ -105,7 +105,7 @@ The default value is **normal**. The options are as follows:
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#Options.interval
+**Substitutes:** [interval](ohos.sensor/sensor#Options.interval)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

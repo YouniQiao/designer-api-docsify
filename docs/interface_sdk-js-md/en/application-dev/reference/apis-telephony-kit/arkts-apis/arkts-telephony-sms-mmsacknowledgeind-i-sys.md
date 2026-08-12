@@ -15,7 +15,7 @@ Defines an MMS confirmation indication.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## reportAllowed
@@ -26,7 +26,7 @@ reportAllowed?: ReportType
 
 Indicates the report allowed for the MMS confirmation indication.
 
-**Type:** [ReportType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-reporttype-e.md)
+**Type:** ReportType
 
 **Since:** 8
 

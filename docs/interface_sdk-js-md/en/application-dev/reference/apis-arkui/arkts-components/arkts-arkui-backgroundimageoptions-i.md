@@ -18,7 +18,7 @@ repeat?: ImageRepeat
 
 Set the repeat style of the background image.
 
-**Type:** [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md)
+**Type:** ImageRepeat
 
 **Since:** 18
 

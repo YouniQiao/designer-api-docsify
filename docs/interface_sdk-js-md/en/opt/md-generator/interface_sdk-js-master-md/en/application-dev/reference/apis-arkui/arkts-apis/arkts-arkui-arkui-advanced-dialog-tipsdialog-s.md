@@ -11,7 +11,7 @@ Declare CustomDialog TipsDialog
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from 'kits/@kit.ArkUI';
+import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
 ```
 
 ## checkAction
@@ -168,7 +168,7 @@ onCheckedChange?: Callback<boolean>
 
 Sets the TipsDialog CheckBox Callback.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
 
@@ -188,7 +188,7 @@ primaryButton?: ButtonOptions
 
 Sets the TipsDialog primary button.
 
-**Type:** [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md)
+**Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **Since:** 18
 
@@ -208,7 +208,7 @@ secondaryButton?: ButtonOptions
 
 Sets the TipsDialog secondary button.
 
-**Type:** [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md)
+**Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **Since:** 18
 
@@ -228,7 +228,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| CustomTheme
+**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **Since:** 12
 

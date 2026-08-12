@@ -29,5 +29,5 @@ export function createGridItemNode(context: UIContext, options?: FrameNodeOption
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItem](arkts-arkui-typenode-griditem-t.md) | 返回 GridItem 类型的 FrameNode |
+| GridItem | 返回 GridItem 类型的 FrameNode |
 

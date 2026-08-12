@@ -81,7 +81,7 @@ spanPosition: RichEditorSpanPosition
 
 Span位置。
 
-**类型：** [RichEditorSpanPosition](../arkts-components/arkts-arkui-richeditorspanposition-i.md)
+**类型：** [RichEditorSpanPosition](arkts-arkui-richeditor-richeditorspanposition-i.md)
 
 **起始版本：** 23
 
@@ -121,7 +121,7 @@ textStyle: RichEditorTextStyleResult
 
 文本Span样式信息。
 
-**类型：** [RichEditorTextStyleResult](../arkts-components/arkts-arkui-richeditortextstyleresult-i.md)
+**类型：** [RichEditorTextStyleResult](arkts-arkui-richeditor-richeditortextstyleresult-i.md)
 
 **起始版本：** 23
 
@@ -183,7 +183,7 @@ valueResource?: Resource
 
 组件SymbolSpan内容。
 
-**类型：** [Resource](arkts-arkui-resource-t.md)
+**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

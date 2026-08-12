@@ -3,8 +3,8 @@
 Represents a window instance, which is the basic unit managed by the window manager.
 
 In the following API examples, you must use  
-[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow),  
-[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow),or [findWindow()](arkts-arkui-window-findwindow-f.md#findwindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getLastWindow),  
+[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow),or [findWindow()](arkts-arkui-window-findwindow-f.md#findWindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 6
 
@@ -15,7 +15,7 @@ In the following API examples, you must use
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## clearWindowMask
@@ -38,16 +38,16 @@ Clear the window mask of window
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## clientToGlobalDisplay
 
@@ -82,10 +82,10 @@ This API is not supported in windows that are subject to display scaling, such a
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## convertOrientationAndRotation
 
@@ -95,8 +95,8 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 
 Enables conversion between window orientation, screen orientation, and screen angle.
 
-Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3,corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) and the  
-[Orientation](arkts-arkui-window-orientation-e.md) enum. For example, setting **Orientation** to **LANDSCAPE**indicates a landscape window orientation.  
+Window orientation refers to the direction of the screen where the window resides, using the Window module's definitions for portrait and landscape modes. Window orientations are represented by the digits 0, 1, 2, and 3,corresponding to portrait, reverse landscape, reverse portrait, and landscape, respectively. These definitions match those in [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo) and the  
+[Orientation](arkts-arkui-window-orientation-e.md#Orientation) enum. For example, setting **Orientation** to **LANDSCAPE**indicates a landscape window orientation.  
 > **NOTE：**
 > 
 > The following figure and table show the relationship between the window orientation, screen orientation, and
@@ -135,9 +135,9 @@ Window orientation refers to the direction of the screen where the window reside
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## createSubWindowWithOptions
 
@@ -174,11 +174,11 @@ Creates a child window under the main window, another child window, or floating 
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## destroy
 
@@ -192,7 +192,7 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.destroyWindow](arkts-arkui-window-window-i.md#destroywindow)(callback:
+**Substitutes:** [destroyWindow](window.Window.destroyWindow(callback:)
 
 <!--Device-Window-destroy(callback: AsyncCallback<void>): void--><!--Device-Window-destroy(callback: AsyncCallback<void>): void-End-->
 
@@ -216,7 +216,7 @@ Destroys this window. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.destroyWindow](arkts-arkui-window-window-i.md#destroywindow)()
+**Substitutes:** [destroyWindow](#destroyWindow)()
 
 <!--Device-Window-destroy(): Promise<void>--><!--Device-Window-destroy(): Promise<void>-End-->
 
@@ -226,7 +226,7 @@ Destroys this window. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## destroyWindow
 
@@ -254,8 +254,8 @@ Destroys this window. This API uses an asynchronous callback to return the resul
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## destroyWindow
 
@@ -277,14 +277,14 @@ Destroys this window. This API uses a promise to return the result. It takes eff
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## disableLandscapeMultiWindow
 
@@ -309,14 +309,14 @@ This API takes effect only for the main window of the application. In addition, 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## enableDrag
 
@@ -344,17 +344,17 @@ After window dragging is enabled, the window can be resized using the mouse or t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## enableLandscapeMultiWindow
 
@@ -379,14 +379,14 @@ This API takes effect only for the main window of the application. In addition, 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getAvoidArea
 
@@ -401,9 +401,9 @@ Main window/Child window:
 - In the free-floating window mode under the  
 [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is  
 **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type (  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_KEYBOARD**) is available.  
 - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
 not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
 - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
@@ -412,13 +412,13 @@ to obtain the calculated avoidance area only when the position and size of the c
 Global floating window, modal window, or system window:
 
 - This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.getWindowAvoidArea](arkts-arkui-window-window-i.md#getwindowavoidarea)
+**Substitutes:** [getWindowAvoidArea](#getWindowAvoidArea)
 
 <!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void--><!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void-End-->
 
@@ -429,7 +429,7 @@ Global floating window, modal window, or system window:
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AvoidArea&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes |
 
 ## getAvoidArea
 
@@ -444,9 +444,9 @@ Main window/Child window:
 - In the free-floating window mode under the  
 [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is  
 **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type (  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_KEYBOARD**) is available.  
 - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
 not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
 - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
@@ -455,13 +455,13 @@ to obtain the calculated avoidance area only when the position and size of the c
 Global floating window, modal window, or system window:
 
 - This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.getWindowAvoidArea](arkts-arkui-window-window-i.md#getwindowavoidarea)
+**Substitutes:** [getWindowAvoidArea](#getWindowAvoidArea)
 
 <!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>--><!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>-End-->
 
@@ -477,7 +477,7 @@ Global floating window, modal window, or system window:
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AvoidArea&gt; |
+| Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; |
 
 ## getColorSpace
 
@@ -491,7 +491,7 @@ Obtains the color space of this window. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.getWindowColorSpace](arkts-arkui-window-window-i.md#getwindowcolorspace)
+**Substitutes:** [getWindowColorSpace](#getWindowColorSpace)
 
 <!--Device-Window-getColorSpace(): Promise<ColorSpace>--><!--Device-Window-getColorSpace(): Promise<ColorSpace>-End-->
 
@@ -501,7 +501,7 @@ Obtains the color space of this window. This API uses a promise to return the re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ColorSpace&gt; |
+| Promise & lt;ColorSpace & gt; |
 
 ## getColorSpace
 
@@ -515,7 +515,7 @@ Obtains the color space of this window. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.getWindowColorSpace](arkts-arkui-window-window-i.md#getwindowcolorspace)
+**Substitutes:** [getWindowColorSpace](#getWindowColorSpace)
 
 <!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void--><!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void-End-->
 
@@ -553,10 +553,10 @@ Obtains the button style of the decoration bar. The setting takes effect only fo
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## getGlobalRect
 
@@ -586,9 +586,9 @@ This API can determine the actual on-screen location and size of a window that h
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getImmersiveModeEnabledState
 
@@ -601,8 +601,8 @@ Checks whether the immersive layout is enabled for this window.
 This API can be called only by the main window and child windows.
 
 The return value is consistent with the settings applied via  
-[setImmersiveModeEnabledState()](arkts-arkui-window-window-i.md#setimmersivemodeenabledstate) and  
-[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen). If neither of these APIs has been called, the default return value is **false**.
+[setImmersiveModeEnabledState()](#setImmersiveModeEnabledState) and  
+[setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1). If neither of these APIs has been called, the default return value is **false**.
 
 **Since:** 12
 
@@ -622,8 +622,8 @@ The return value is consistent with the settings applied via
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## getParentWindow
 
@@ -651,10 +651,10 @@ Obtains the parent window of this child window.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
 
 ## getPreferredOrientation
 
@@ -682,7 +682,7 @@ Obtains the orientation of the window. If no orientation is specified, **window.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getProperties
 
@@ -696,7 +696,7 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)
+**Substitutes:** [getWindowProperties](#getWindowProperties)
 
 <!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void--><!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void-End-->
 
@@ -706,7 +706,7 @@ Obtains the properties of this window. This API uses an asynchronous callback to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowProperties&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | Yes |
 
 ## getProperties
 
@@ -720,7 +720,7 @@ Obtains the properties of this window. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)
+**Substitutes:** [getWindowProperties](#getWindowProperties)
 
 <!--Device-Window-getProperties(): Promise<WindowProperties>--><!--Device-Window-getProperties(): Promise<WindowProperties>-End-->
 
@@ -730,7 +730,7 @@ Obtains the properties of this window. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WindowProperties&gt; |
+| Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; |
 
 ## getStatusBarProperty
 
@@ -760,8 +760,8 @@ Calling this API is not supported for child window and will cause error code 130
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## getSubWindowZLevel
 
@@ -789,9 +789,9 @@ Obtains the z-level of the current child window. This API cannot be called by th
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## getTitleButtonRect
 
@@ -819,8 +819,8 @@ Obtains the rectangle that holds the minimize, maximize, and close buttons on th
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getUIContext
 
@@ -850,7 +850,7 @@ Obtains a UIContext instance.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowAvoidArea
 
@@ -865,9 +865,9 @@ Main window/Child window:
 - In the free-floating window mode under the  
 [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is  
 **window.WindowStatusType.FLOATING**), only the avoidance area of the fixed soft keyboard type (  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**) is available.  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_KEYBOARD**) is available.  
 - In the free-floating window mode of the main window in the non-freeform window state, only the avoidance area  
-of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
 not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
 - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
@@ -876,11 +876,11 @@ to obtain the calculated avoidance area only when the position and size of the c
 Global floating window, modal window, or system window:
 
 - This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled) is called. Otherwise, the obtained avoidance area is empty.
 
 This API is generally applicable to the following scenarios:
 
-- In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) callback, this  
+- In the [onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) callback, this  
 API is used to obtain the initial layout avoid area when the application starts.  
 - This API is used when a child window needs to temporarily display content and requires layout adjustments to  
 avoid certain areas.
@@ -909,8 +909,8 @@ avoid certain areas.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowAvoidAreaIgnoringVisibility
 
@@ -925,7 +925,7 @@ Main window/Child window:
 - When the main window is in the free-floating window mode under a non-  
 [freeform window](../../../windowmanager/window-terminology.md#freeform-window) state (the window mode is  
 **window.WindowStatusType.FLOATING**), only the avoidance area of the system bar type (  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM**) is available.  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_SYSTEM**) is available.  
 - In other scenarios, this API can be called to obtain the calculated avoidance area only when the main window is  
 not in the free-floating window mode or the device type is phone or tablet. Otherwise, the obtained avoidance area is empty.  
 - For the child window in the non-freeform window state or non-free-floating window mode, this API can be called  
@@ -934,7 +934,7 @@ to obtain the calculated avoidance area only when the position and size of the c
 Global floating window, modal window, or system window:
 
 - This API can be called to obtain the avoidance area only after  
-[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, the obtained avoidance area is empty.
+[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled) is called. Otherwise, the obtained avoidance area is empty.
 
 **Since:** 22
 
@@ -958,10 +958,10 @@ Global floating window, modal window, or system window:
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## getWindowColorSpace
 
@@ -989,7 +989,7 @@ Obtains the color space of this window.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowCornerRadius
 
@@ -998,7 +998,7 @@ getWindowCornerRadius(): number
 ```
 
 Obtains the radius of rounded corners of a child window or floating window. If  
-[setWindowCornerRadius()](arkts-arkui-window-window-i.md#setwindowcornerradius) is not called to set the radius of rounded corners, this API returns the default radius of rounded corners.
+[setWindowCornerRadius()](#setWindowCornerRadius) is not called to set the radius of rounded corners, this API returns the default radius of rounded corners.
 
 **Since:** 17
 
@@ -1018,9 +1018,9 @@ Obtains the radius of rounded corners of a child window or floating window. If
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## getWindowDecorHeight
 
@@ -1029,7 +1029,7 @@ getWindowDecorHeight(): number
 ```
 
 Obtains the height of the title bar of this window. This API takes effect for the window that has a title bar and a three-button area. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 11
 
@@ -1049,8 +1049,8 @@ Obtains the height of the title bar of this window. This API takes effect for th
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowDecorVisible
 
@@ -1059,7 +1059,7 @@ getWindowDecorVisible(): boolean
 ```
 
 Checks whether the title bar of this window is visible. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 18
 
@@ -1079,8 +1079,8 @@ Checks whether the title bar of this window is visible. In the stage model, this
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowDensityInfo
 
@@ -1108,8 +1108,8 @@ Obtains the display density information of this window.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowLimits
 
@@ -1137,8 +1137,8 @@ Obtains the size limits of this application window, in px.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowLimitsVP
 
@@ -1166,8 +1166,8 @@ For system windows and global floating windows, the default minimum width and he
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowProperties
 
@@ -1195,7 +1195,7 @@ Obtains the properties of this window.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowStateSnapshot
 
@@ -1219,15 +1219,15 @@ Get window state snapshot, including isPcMode information.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowStatus
 
@@ -1264,8 +1264,8 @@ Obtains the mode of this window.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## getWindowSystemBarProperties
 
@@ -1293,9 +1293,9 @@ Obtains the properties of the &lt;!--Del--&gt;three-button navigation bar and &l
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## getWindowTransitionAnimation
 
@@ -1333,11 +1333,11 @@ Currently, this API can be used only on the main window of an application.
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## globalDisplayToClient
 
@@ -1372,10 +1372,10 @@ This API is not supported in windows that are subject to display scaling, such a
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## isFloatNavigationAvoidAreaEnabled
 
@@ -1405,7 +1405,7 @@ Get whether the float navigation avoid area can be obtained.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isFocused
 
@@ -1433,7 +1433,7 @@ Checks whether this window is focused.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isGestureBackEnabled
 
@@ -1461,9 +1461,9 @@ Obtains whether the back gesture is enabled for the current window. This API can
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## isImmersiveLayout
 
@@ -1489,8 +1489,8 @@ Checks whether this window is in immersive mode.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isInFreeWindowMode
 
@@ -1518,8 +1518,8 @@ Checks whether this window is in [freeform window](../../../windowmanager/window
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isInWindowPostureMode
 
@@ -1553,9 +1553,9 @@ Checks whether this window is in the specified window posture mode.
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## isReceiveDragEventEnabled
 
@@ -1563,7 +1563,7 @@ Checks whether this window is in the specified window posture mode.
 isReceiveDragEventEnabled(): boolean
 ```
 
-Obtains whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md/arkts-arkui-dragevent-i.md).
+Obtains whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md#DragEvent).
 
 **Since:** 23
 
@@ -1583,9 +1583,9 @@ Obtains whether the current window can receive [drag events](../arkts-components
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isSeparationTouchEnabled
 
@@ -1613,9 +1613,9 @@ Obtains whether the current window supports the event separation state.
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isShowing
 
@@ -1629,7 +1629,7 @@ Checks whether this window is displayed. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.isWindowShowing](arkts-arkui-window-window-i.md#iswindowshowing)
+**Substitutes:** [isWindowShowing](#isWindowShowing)
 
 <!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void--><!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1653,7 +1653,7 @@ Checks whether this window is displayed. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.isWindowShowing](arkts-arkui-window-window-i.md#iswindowshowing)
+**Substitutes:** [isWindowShowing](#isWindowShowing)
 
 <!--Device-Window-isShowing(): Promise<boolean>--><!--Device-Window-isShowing(): Promise<boolean>-End-->
 
@@ -1663,7 +1663,7 @@ Checks whether this window is displayed. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## isSupportWideGamut
 
@@ -1677,7 +1677,7 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.isWindowSupportWideGamut](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)()
+**Substitutes:** [isWindowSupportWideGamut](#isWindowSupportWideGamut)()
 
 <!--Device-Window-isSupportWideGamut(): Promise<boolean>--><!--Device-Window-isSupportWideGamut(): Promise<boolean>-End-->
 
@@ -1687,7 +1687,7 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## isSupportWideGamut
 
@@ -1701,7 +1701,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.isWindowSupportWideGamut](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)(callback:
+**Substitutes:** [isWindowSupportWideGamut](window.Window.isWindowSupportWideGamut(callback:)
 
 <!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1719,7 +1719,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area](arkts-arkui-window-avoidarea-i.md).
+Checks whether a floating window, modal window, or system window (**WindowType** is a system window) is enabled to access the [avoid area](arkts-arkui-window-avoidarea-i.md#AvoidArea).
 
 **Since:** 18
 
@@ -1739,10 +1739,10 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## isWindowHighlighted
 
@@ -1751,7 +1751,7 @@ isWindowHighlighted(): boolean
 ```
 
 Checks whether the window is active. To obtain the active state, call this API when the  
-[WindowEventType](arkts-arkui-window-windoweventtype-e.md) lifecycle is **WINDOW_ACTIVE**.
+[WindowEventType](arkts-arkui-window-windoweventtype-e.md#WindowEventType) lifecycle is **WINDOW_ACTIVE**.
 
 You can use  
 [on('windowHighlightChange')](window.Window.on(type: 'windowHighlightChange', callback: Callback&lt;boolean&gt;))to listen for status changes and then execute the corresponding service.
@@ -1774,8 +1774,8 @@ You can use
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isWindowShowing
 
@@ -1803,7 +1803,7 @@ Checks whether this window is displayed.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isWindowSupportWideGamut
 
@@ -1825,13 +1825,13 @@ Checks whether this window supports the wide-gamut color space. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## isWindowSupportWideGamut
 
@@ -1859,7 +1859,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## keepKeyboardOnFocus
 
@@ -1887,10 +1887,10 @@ Determines whether to retain the soft keyboard created by another window when th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## loadContent
 
@@ -1922,9 +1922,9 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## loadContent
 
@@ -1955,15 +1955,15 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## loadContent
 
@@ -1977,7 +1977,7 @@ Loads content from a page to this window. This API uses an asynchronous callback
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setUIContent](arkts-arkui-window-window-i.md#setuicontent)(path:
+**Substitutes:** [setUIContent](window.Window.setUIContent(path:)
 
 <!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2002,7 +2002,7 @@ Loads content from a page to this window. This API uses a promise to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setUIContent](arkts-arkui-window-window-i.md#setuicontent)(path:
+**Substitutes:** [setUIContent](window.Window.setUIContent(path:)
 
 <!--Device-Window-loadContent(path: string): Promise<void>--><!--Device-Window-loadContent(path: string): Promise<void>-End-->
 
@@ -2018,7 +2018,7 @@ Loads content from a page to this window. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## loadContentByName
 
@@ -2050,9 +2050,9 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## loadContentByName
 
@@ -2083,9 +2083,9 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## loadContentByName
 
@@ -2116,15 +2116,15 @@ Loads the content of a [named route](../../../ui/arkts-routing.md#named-route) p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## maximize
 
@@ -2153,17 +2153,17 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300005](../errorcode-window.md#1300005-abnormal-windowstage) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300005-abnormal-windowstage) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## maximize
 
@@ -2192,16 +2192,16 @@ Maximizes the window. The main window can use this API to maximize. For child wi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## maximizeWithOptions
 
@@ -2229,17 +2229,17 @@ Maximize the app window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## minimize
 
@@ -2250,10 +2250,10 @@ minimize(callback: AsyncCallback<void>): void
 The behavior of this API varies based on the caller:
 
 - Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.  
-For 2-in-1 devices, it can be restored by calling [restore()](arkts-arkui-window-window-i.md#restore).  
+For 2-in-1 devices, it can be restored by calling [restore()](#restore).  
 - Hides the child window or global floating window if the caller is a child window. The child window or floating  
 window cannot be restored in the dock bar. It can be made visible again by calling  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow).
+[showWindow()](#showWindow).
 
 This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses an asynchronous callback to return the result.
 
@@ -2275,9 +2275,9 @@ This API can be called only by the main window, child window, or global floating
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## minimize
 
@@ -2288,10 +2288,10 @@ minimize(): Promise<void>
 The behavior of this API varies based on the caller:
 
 - Minimizes the main window if the caller is the main window. The main window can be restored in the dock bar.  
-For 2-in-1 devices, it can be restored by calling [restore()](arkts-arkui-window-window-i.md#restore).  
+For 2-in-1 devices, it can be restored by calling [restore()](#restore).  
 - Hides the child window or global floating window if the caller is a child window. The child window or floating  
 window cannot be restored in the dock bar. It can be made visible again by calling  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow).
+[showWindow()](#showWindow).
 
 This API can be called only by the main window, child window, or global floating window. If it is called by other windows, error code 1300002 is thrown. This API uses a promise to return the result.
 
@@ -2307,15 +2307,15 @@ This API can be called only by the main window, child window, or global floating
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## moveTo
 
@@ -2331,7 +2331,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.moveWindowTo](arkts-arkui-window-window-i.md#movewindowto)(x:
+**Substitutes:** [moveWindowTo](window.Window.moveWindowTo(x:)
 
 <!--Device-Window-moveTo(x: number, y: number): Promise<void>--><!--Device-Window-moveTo(x: number, y: number): Promise<void>-End-->
 
@@ -2348,7 +2348,7 @@ This operation is not supported in a window in full-screen mode.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## moveTo
 
@@ -2364,7 +2364,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.moveWindowTo](arkts-arkui-window-window-i.md#movewindowto)(x:
+**Substitutes:** [moveWindowTo](window.Window.moveWindowTo(x:)
 
 <!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void--><!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void-End-->
 
@@ -2384,20 +2384,20 @@ This operation is not supported in a window in full-screen mode.
 moveWindowTo(x: number, y: number): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](arkts-arkui-window-window-i.md#movewindowtoasync).
+Moves this window. This API uses a promise to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#moveWindowToAsync).
 
 > **NOTE：**
 > 
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which you can check using
-> [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)). You are not advised to use it in other window modes.
+> [getWindowStatus()](#getWindowStatus)). You are not advised to use it in other window modes.
 > 
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
 > relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
 > the upper-left corner of its parent window.
 > 
 > - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
-> [moveWindowToGlobal()](arkts-arkui-window-window-i.md#movewindowtoglobal)
+> [moveWindowToGlobal()](#moveWindowToGlobal-1)
 > .
 > 
 > - This API does not work for the main window in non-freeform window mode.
@@ -2425,15 +2425,15 @@ Moves this window. This API uses a promise to return the result. A value is retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## moveWindowTo
 
@@ -2441,20 +2441,20 @@ Moves this window. This API uses a promise to return the result. A value is retu
 moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](arkts-arkui-window-window-i.md#movewindowtoasync).
+Moves this window. This API uses an asynchronous callback to return the result. A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call [moveWindowToAsync()](#moveWindowToAsync).
 
 > **NOTE：**
 > 
 > - This API is best suited for the floating window mode (when the window mode is
 > **window.WindowStatusType.FLOATING**, which can obtained using
-> [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)). You are advised not to use it in other window modes.
+> [getWindowStatus()](#getWindowStatus)). You are advised not to use it in other window modes.
 > 
 > - In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the window moves
 > relative to the upper-left corner of the screen. In non-freeform window mode, the window moves relative to
 > the upper-left corner of its parent window.
 > 
 > - To move the window relative to the top-left corner of the screen while in non-freeform window mode, call
-> [moveWindowToGlobal()](arkts-arkui-window-window-i.md#movewindowtoglobal)
+> [moveWindowToGlobal()](#moveWindowToGlobal-1)
 > .
 > 
 > - This API does not work for the main window in non-freeform window mode.
@@ -2483,9 +2483,9 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## moveWindowToAsync
 
@@ -2493,9 +2493,9 @@ Moves this window. This API uses an asynchronous callback to return the result. 
 moveWindowToAsync(x: number, y: number): Promise<void>
 ```
 
-Moves this window. This API uses a promise to return the result. A value is returned once the call takes effect.You can use [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+Moves this window. This API uses a promise to return the result. A value is returned once the call takes effect.You can use [getWindowProperties()](#getWindowProperties) in the callback (see the code snippet below) to obtain the final effect immediately.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).In floating window mode, the movement behavior of different types of windows is as follows.
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).In floating window mode, the movement behavior of different types of windows is as follows.
 
 > **NOTE：**
 > 
@@ -2522,16 +2522,16 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## moveWindowToAsync
 
@@ -2540,9 +2540,9 @@ moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): 
 ```
 
 Moves this window to the specified position. This API uses a promise to return the result. You can use the  
-**moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+**moveConfiguration** parameter to specify the target display ID for the window movement. A value is returned once the call takes effect. You can use [getWindowProperties()](#getWindowProperties) in the callback (see the code snippet below) to obtain the final effect immediately.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).In floating window mode, the movement behavior of different types of windows is as follows.
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).In floating window mode, the movement behavior of different types of windows is as follows.
 
 | Window Type| [Freeform Window](../../windowmanager/window-terminology.md#freeform-window) State| Non-freeform Window State|
 |---------|---------------|-----------------|
@@ -2576,16 +2576,16 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## moveWindowToGlobal
 
@@ -2593,9 +2593,9 @@ This API takes effect only when the window is in floating window mode (**window.
 moveWindowToGlobal(x: number, y: number): Promise<void>
 ```
 
-Moves this window based on the coordinates. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+Moves this window based on the coordinates. This API uses a promise to return the result. A value is returned once the call takes effect. You can use [getWindowProperties()](#getWindowProperties) in the callback (see the code snippet below) to obtain the final effect immediately.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).
 
 > **NOTE：**
 > 
@@ -2625,16 +2625,16 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## moveWindowToGlobal
 
@@ -2643,9 +2643,9 @@ moveWindowToGlobal(x: number, y: number, moveConfiguration?: MoveConfiguration):
 ```
 
 Moves this window to the specified position based on the coordinates. This API uses a promise to return the result. You can use the **moveConfiguration** parameter to specify the target display ID for the window movement.A value is returned once the call takes effect. You can use  
-[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+[getWindowProperties()](#getWindowProperties) in the callback (see the code snippet below) to obtain the final effect immediately.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).
 
 > **NOTE：**
 > 
@@ -2676,16 +2676,16 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## moveWindowToGlobalDisplay
 
@@ -2696,7 +2696,7 @@ moveWindowToGlobalDisplay(x: number, y: number): Promise<void>
 Moves the window based on the  
 [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). This API uses a promise to return the result asynchronously.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other window modes, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).
 
 > **NOTE：**
 > 
@@ -2727,17 +2727,17 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## off('rotationChange')
 
@@ -2761,15 +2761,15 @@ Unsubscribes from the window rotation change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'rotationChange' | Yes |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | No |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off
 
@@ -2792,15 +2792,15 @@ Unsubscribes from the event indicating changes in the security restrictions of t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventType | 'uiExtensionSecureLimitChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('frameMetricsMeasured')
 
@@ -2809,7 +2809,7 @@ off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 ```
 
 Unsubscribes from events indicating changes in window frame metrics. This API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 22
 
@@ -2822,14 +2822,14 @@ Unsubscribes from events indicating changes in window frame metrics. This API mu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameMetricsMeasured' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FrameMetrics&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('occlusionStateChanged')
 
@@ -2850,15 +2850,15 @@ Unsubscribes from the visibility status change event of the window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'occlusionStateChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OcclusionState&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('windowSizeChange')
 
@@ -2881,13 +2881,13 @@ Unsubscribes from the window size change event. This API can be called only by t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowSizeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Size&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('systemAvoidAreaChange')
 
@@ -2901,7 +2901,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 
 **Deprecated since:** 9
 
-**Substitutes:** window.Window.off(type:
+**Substitutes:** [off](window.Window.off(type:)
 
 <!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void--><!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void-End-->
 
@@ -2912,7 +2912,7 @@ Unsubscribes from the event indicating changes to the area where this window can
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'systemAvoidAreaChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidArea&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | No |
 
 ## off('avoidAreaChange')
 
@@ -2935,13 +2935,13 @@ Unsubscribes from the event indicating changes to the area where this window can
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaOptions&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('keyboardHeightChange')
 
@@ -2950,7 +2950,7 @@ off(type: 'keyboardHeightChange', callback?: Callback<number>): void
 ```
 
 Unsubscribes from the event indicating soft keyboard height changes in the fixed state so that the application does not receive notifications of soft keyboard height changes. Starting from API version 10, the soft keyboard can be set to the fixed or floating state. For details, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 7
 
@@ -2965,13 +2965,13 @@ Unsubscribes from the event indicating soft keyboard height changes in the fixed
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardHeightChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('keyboardWillShow')
 
@@ -2980,7 +2980,7 @@ off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 ```
 
 Unsubscribes from the event indicating that the soft keyboard in the fixed state is about to show. For details about the APIs used to set the input method panel to the fixed or floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 20
 
@@ -2995,14 +2995,14 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardWillShow' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('keyboardDidShow')
 
@@ -3011,7 +3011,7 @@ off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 ```
 
 Unsubscribes from the event indicating that the show animation of the soft keyboard in the fixed state is completed, For details about the APIs used to set the input method panel to the fixed or floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 18
 
@@ -3026,14 +3026,14 @@ Unsubscribes from the event indicating that the show animation of the soft keybo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardDidShow' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('keyboardWillHide')
 
@@ -3042,7 +3042,7 @@ off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 ```
 
 Unsubscribes from the event indicating that the soft keyboard in the fixed state is about to hide. For details about the APIs used to transition the input method panel from the fixed state to the floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 20
 
@@ -3057,14 +3057,14 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardWillHide' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('keyboardDidHide')
 
@@ -3072,7 +3072,7 @@ Unsubscribes from the event indicating that the soft keyboard in the fixed state
 off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 ```
 
-Unsubscribes from the event indicating that the hide animation of the soft keyboard in the fixed state is completed, For details about the APIs used to transition the input method panel from the fixed state to the floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+Unsubscribes from the event indicating that the hide animation of the soft keyboard in the fixed state is completed, For details about the APIs used to transition the input method panel from the fixed state to the floating state, see [Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 18
 
@@ -3087,14 +3087,14 @@ Unsubscribes from the event indicating that the hide animation of the soft keybo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardDidHide' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('touchOutside')
 
@@ -3117,13 +3117,13 @@ Unsubscribes from the touch event outside this window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'touchOutside' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('displayIdChange')
 
@@ -3146,15 +3146,15 @@ Unsubscribes from the display change event of this window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'displayIdChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('windowVisibilityChange')
 
@@ -3177,16 +3177,16 @@ Unsubscribes from the visibility status change event of this window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowVisibilityChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('systemDensityChange')
 
@@ -3211,15 +3211,15 @@ In the callback function, you are advised to directly use the return value to co
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'systemDensityChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('noInteractionDetected')
 
@@ -3242,16 +3242,16 @@ Unsubscribes from non-interaction events in a window within the specified period
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'noInteractionDetected' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('screenshot')
 
@@ -3274,13 +3274,13 @@ Unsubscribes from the screenshot event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'screenshot' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('screenshotAppEvent')
 
@@ -3301,14 +3301,14 @@ Unsubscribes from the screenshot event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'screenshotAppEvent' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScreenshotEventType&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('dialogTargetTouch')
 
@@ -3331,13 +3331,13 @@ Unsubscribes from the touch event of the target window in the modal window mode.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dialogTargetTouch' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('windowEvent')
 
@@ -3360,13 +3360,13 @@ Unsubscribes from the window lifecycle change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowEvent' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowEventType&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowEventType](arkts-arkui-window-windoweventtype-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('windowStatusChange')
 
@@ -3389,14 +3389,14 @@ Disables the listening for window status changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowStatusChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## off('windowStatusDidChange')
 
@@ -3417,14 +3417,14 @@ Unsubscribes from the event indicating that the window status has changed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowStatusDidChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('subWindowClose')
 
@@ -3447,16 +3447,16 @@ Unsubscribes from the event indicating that the child window is closed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'subWindowClose' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## off('windowWillClose')
 
@@ -3479,16 +3479,16 @@ Unsubscribes from the event indicating that the main window or child window will
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowWillClose' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## off('windowHighlightChange')
 
@@ -3511,16 +3511,16 @@ Unsubscribes from the highlighted state change event of the window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowHighlightChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('windowTitleButtonRectChange')
 
@@ -3529,7 +3529,7 @@ off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): 
 ```
 
 Unsubscribes from the change event of the rectangle that holds the minimize, maximize, and close buttons on the title bar of the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 11
 
@@ -3544,15 +3544,15 @@ Unsubscribes from the change event of the rectangle that holds the minimize, max
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowTitleButtonRectChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TitleButtonRect&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('windowRectChange')
 
@@ -3575,16 +3575,16 @@ Unsubscribes from window rectangle (position and size) change events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowRectChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('rectChangeInGlobalDisplay')
 
@@ -3606,15 +3606,15 @@ Disables the listening event for changes in the window rectangle (window positio
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'rectChangeInGlobalDisplay' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## off('freeWindowModeChange')
 
@@ -3637,14 +3637,14 @@ Unsubscribes from the freeform window mode change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'freeWindowModeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## offWindowPostureModeChange
 
@@ -3667,15 +3667,15 @@ Unregisters a callback that is invoked when he window changes to the specified w
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [WindowPostureMode](arkts-arkui-window-windowposturemode-e.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## on('rotationChange')
 
@@ -3684,11 +3684,11 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 ```
 
 Subscribes to the window rotation change event. If the window rotation event type in  
-[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) is **WINDOW_WILL_ROTATE**,  
-[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) does not take effect.
+[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo) is **WINDOW_WILL_ROTATE**,  
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) must be returned. If the window rotation event type is **WINDOW_DID_ROTATE**, [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) does not take effect.
 
 This API can be registered only on the main thread. If a window registers multiple callbacks of the same type,only the return value of the most recently registered callback will be effective. The system provides a timeout protection mechanism. If the window does not return  
-[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) within 20 ms, the system does not process the return value.
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) within 20 ms, the system does not process the return value.
 
 **Since:** 19
 
@@ -3703,15 +3703,15 @@ This API can be registered only on the main thread. If a window registers multip
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'rotationChange' | Yes |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | Yes |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on
 
@@ -3734,15 +3734,15 @@ Subscribes to the event indicating changes in the security restrictions of the U
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventType | 'uiExtensionSecureLimitChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('frameMetricsMeasured')
 
@@ -3751,7 +3751,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 ```
 
 Subscribes to events indicating changes in window frame metrics. This API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 The callback is triggered only when the client UI content is redrawn (for example, during page transitions,interactions with responsive components, setting background colors, or adjusting opacity).
 
@@ -3766,14 +3766,14 @@ The callback is triggered only when the client UI content is redrawn (for exampl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameMetricsMeasured' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FrameMetrics&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('occlusionStateChanged')
 
@@ -3784,8 +3784,8 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 Subscribes to the visibility status change event of the window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
 
 - If the shadow area of a non-main window (  
-[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled) and  
-[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
+[setWindowShadowEnabled](#setWindowShadowEnabled) and  
+[setWindowShadowRadius](#setWindowShadowRadius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
 - If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
 opaque degree), the lower-layer window will not be blocked and is visible.  
 - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
@@ -3802,15 +3802,15 @@ window on a mobile phone, the lower-layer window returned remains visible.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'occlusionStateChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OcclusionState&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('windowSizeChange')
 
@@ -3833,13 +3833,13 @@ Subscribes to the window size change event. This API can be called only by the m
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowSizeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Size&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('systemAvoidAreaChange')
 
@@ -3853,7 +3853,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 
 **Deprecated since:** 9
 
-**Substitutes:** window.Window.on(type:
+**Substitutes:** [on](window.Window.on(type:)
 
 <!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void--><!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void-End-->
 
@@ -3864,7 +3864,7 @@ Subscribes to the event indicating changes to the area where this window cannot 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'systemAvoidAreaChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidArea&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | Yes |
 
 ## on('avoidAreaChange')
 
@@ -3878,9 +3878,9 @@ Main window/Child window:
 
 - When the callback is triggered in the free-floating window mode (the window mode is  
 **window.WindowStatusType.FLOATING**) under the  
-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD**)is available.  
+[freeform window](../../../windowmanager/window-terminology.md#freeform-window) state, only the avoidance area of the fixed soft keyboard type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_KEYBOARD**)is available.  
 - When the callback is triggered in the free-floating window mode of the main window in the non-freeform window  
-state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)is **TYPE_SYSTEM**) is available.  
+state, only the avoidance area of the system bar type ([AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)is **TYPE_SYSTEM**) is available.  
 - When the callback is triggered in the other scenarios of the main window, the calculated avoidance area can be  
 returned only when the window is not in the free-floating window mode or the device type is phone or tablet.Otherwise, an empty avoidance area is returned.  
 - When the callback is triggered for the child window in the non-freeform window state or non-free-floating  
@@ -3889,7 +3889,7 @@ window mode, the calculated avoidance area of the child window is returned only 
 Global floating window, modal window, or system window:
 
 - The calculated avoidance area is returned only when the callback is triggered after  
-[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled) is called. Otherwise, an empty avoidance area is returned.
+[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled) is called. Otherwise, an empty avoidance area is returned.
 
 &lt;!--RP7--&gt;Common scenarios for triggering this event are as follows: transitions between full-screen mode, floating mode, and split-screen mode of the application window; rotation of the application window; transitions between folded and unfolded states of a foldable device; transfer of the application window between multiple devices.&lt;!--RP7End--&gt;
 
@@ -3906,13 +3906,13 @@ Global floating window, modal window, or system window:
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaOptions&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('keyboardHeightChange')
 
@@ -3921,7 +3921,7 @@ on(type: 'keyboardHeightChange', callback: Callback<number>): void
 ```
 
 Subscribes to the event indicating soft keyboard height changes in the fixed state. The system notifies the keyboard height change when the soft keyboard is invoked by the window and overlaps with the window. Starting from API version 10, the soft keyboard can be set to the fixed or floating state. For details, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 7
 
@@ -3936,13 +3936,13 @@ Subscribes to the event indicating soft keyboard height changes in the fixed sta
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardHeightChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('keyboardWillShow')
 
@@ -3953,7 +3953,7 @@ on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 Subscribes to the event indicating that the soft keyboard in the fixed state is about to show, or the soft keyboard is transitioning from the floating state to the fixed state.
 
 For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 20
 
@@ -3968,14 +3968,14 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardWillShow' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('keyboardDidShow')
 
@@ -3986,7 +3986,7 @@ on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 Subscribes to the event indicating that the show animation of the soft keyboard in the fixed state is completed,or when the soft keyboard finishes transitioning from the floating state to the fixed state.
 
 For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 18
 
@@ -4001,14 +4001,14 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardDidShow' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('keyboardWillHide')
 
@@ -4019,7 +4019,7 @@ on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 Subscribes to the event indicating that the soft keyboard in the fixed state is about to hide, or the soft keyboard is transitioning from the fixed state to the floating state.
 
 For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 20
 
@@ -4034,14 +4034,14 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardWillHide' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('keyboardDidHide')
 
@@ -4052,7 +4052,7 @@ on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 Subscribes to the event indicating that the hide animation of the soft keyboard in the fixed state is completed,or when the soft keyboard finishes transitioning from the fixed state to the floating state.
 
 For details about the APIs used to set the soft keyboard to the fixed or floating state, see  
-[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag).
+[Input Method Service](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag).
 
 **Since:** 18
 
@@ -4067,14 +4067,14 @@ For details about the APIs used to set the soft keyboard to the fixed or floatin
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardDidHide' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('touchOutside')
 
@@ -4097,13 +4097,13 @@ Subscribes to the touch event outside this window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'touchOutside' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('displayIdChange')
 
@@ -4126,15 +4126,15 @@ Subscribes to the display change event of this window. For example, this event i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'displayIdChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('windowVisibilityChange')
 
@@ -4145,8 +4145,8 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 Subscribes to the visibility status change event of this window. The visibility returned by this API may be different from that perceived by human eyes in the following scenarios:
 
 - If the shadow area of a non-main window (  
-[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled) and  
-[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
+[setWindowShadowEnabled](#setWindowShadowEnabled) and  
+[setWindowShadowRadius](#setWindowShadowRadius) can be used to set whether the shadow area is displayed and the shadow radius,respectively) is blocked, the window will be considered as partially visible even though it is completely visible to human eyes.  
 - If the upper-layer window has a transparency effect (including all transparency degrees except the completely  
 opaque degree), the lower-layer window will not be blocked and is visible.  
 - Most windows with animation effects do not block lower-layer windows. For example, when you drag a floating  
@@ -4165,16 +4165,16 @@ window on a mobile phone, the lower-layer window returned remains visible.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowVisibilityChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('systemDensityChange')
 
@@ -4199,15 +4199,15 @@ In the callback function, you are advised to directly use the return value to co
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'systemDensityChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('noInteractionDetected')
 
@@ -4231,16 +4231,16 @@ Register the callback function that has no interaction for a long time.Interacti
 | --- | --- | --- |
 | type | 'noInteractionDetected' | Yes |
 | timeout | number | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('screenshot')
 
@@ -4263,13 +4263,13 @@ Subscribes to the screenshot event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'screenshot' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('screenshotAppEvent')
 
@@ -4290,14 +4290,14 @@ Subscribes to the screenshot event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'screenshotAppEvent' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScreenshotEventType&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('dialogTargetTouch')
 
@@ -4320,13 +4320,13 @@ Subscribes to click or touch events in a window covered by a modal window. This 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dialogTargetTouch' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('windowEvent')
 
@@ -4349,13 +4349,13 @@ Subscribes to the window lifecycle change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowEvent' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowEventType&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowEventType](arkts-arkui-window-windoweventtype-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('windowStatusChange')
 
@@ -4392,14 +4392,14 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowStatusChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## on('windowStatusDidChange')
 
@@ -4407,7 +4407,7 @@ After the listening is enabled using this API, multiple callbacks will be receiv
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md)property of the window has been updated).
+Subscribes to the event indicating that the window status has changed (the [Rect](arkts-arkui-window-rect-i.md#Rect)property of the window has been updated).
 
 **Since:** 20
 
@@ -4420,14 +4420,14 @@ Subscribes to the event indicating that the window status has changed (the [Rect
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowStatusDidChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('subWindowClose')
 
@@ -4459,16 +4459,16 @@ If there is an existing event subscribed to by calling
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'subWindowClose' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## on('windowWillClose')
 
@@ -4494,16 +4494,16 @@ The callback function in this API is executed asynchronously. For synchronous cl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowWillClose' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## on('windowHighlightChange')
 
@@ -4526,16 +4526,16 @@ Subscribes to the highlighted state change event of the window.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowHighlightChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('windowTitleButtonRectChange')
 
@@ -4544,7 +4544,7 @@ on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): vo
 ```
 
 Subscribes to the change event of the rectangle that holds the minimize, maximize, and close buttons on the title bar of the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 11
 
@@ -4559,15 +4559,15 @@ Subscribes to the change event of the rectangle that holds the minimize, maximiz
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowTitleButtonRectChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TitleButtonRect&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('windowRectChange')
 
@@ -4590,16 +4590,16 @@ Subscribes to window rectangle (position and size) change events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowRectChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('rectChangeInGlobalDisplay')
 
@@ -4621,15 +4621,15 @@ Enables the listening event for changes in the window rectangle (window position
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'rectChangeInGlobalDisplay' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## on('freeWindowModeChange')
 
@@ -4652,14 +4652,14 @@ Subscribes to the freeform window mode change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'freeWindowModeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## onWindowPostureModeChange
 
@@ -4682,15 +4682,15 @@ Registers a callback that is invoked when the window changes to the specified wi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [WindowPostureMode](arkts-arkui-window-windowposturemode-e.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## raiseToAppTop
 
@@ -4701,7 +4701,7 @@ raiseToAppTop(): Promise<void>
 Brings a child window to the top. This action is limited to child windows of the same type under the same parent window within the current application. For child windows with a custom zLevel property, it only applies to child windows with the same zLevel value under the same parent window within the current application. This API uses a promise to return the result.
 
 Before calling this API, ensure that the child window has been created and  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+[showWindow()](#showWindow) has been successfully executed.
 
 **Since:** 14
 
@@ -4713,16 +4713,16 @@ Before calling this API, ensure that the child window has been created and
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
 
 ## recover
 
@@ -4745,15 +4745,15 @@ Restores the main window from the full-screen, maximized, or split-screen mode t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
 
 ## recover
 
@@ -4775,24 +4775,24 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| snapshotAnimationConfig | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | Yes |
+| [snapshotAnimationConfig](arkts-arkui-window-maximizeoptions-i.md) | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## resetAspectRatio
 
@@ -4822,8 +4822,8 @@ This API is valid only for the main window. After it is called, the persistently
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## resetAspectRatio
 
@@ -4847,14 +4847,14 @@ This API is valid only for the main window. After it is called, the persistently
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## resetSize
 
@@ -4866,7 +4866,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 
 The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
 
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits) to obtain size limits.
+The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getWindowLimits) to obtain size limits.
 
 The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
 
@@ -4882,7 +4882,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.resize](arkts-arkui-window-window-i.md#resize)(width:
+**Substitutes:** [resize](window.Window.resize(width:)
 
 <!--Device-Window-resetSize(width: number, height: number): Promise<void>--><!--Device-Window-resetSize(width: number, height: number): Promise<void>-End-->
 
@@ -4899,7 +4899,7 @@ This operation is not supported in a window in full-screen mode.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## resetSize
 
@@ -4911,7 +4911,7 @@ Changes the size of this window based on the top-left vertex of the window. This
 
 The main window and child window have the following default size limits: [320, 1920] in width and [240, 1920] in height, both in units of vp.
 
-The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits) to obtain size limits.
+The minimum width and height of the main window and child window of the application depends on the configuration on the product side. You can call [getWindowLimits](#getWindowLimits) to obtain size limits.
 
 The system window has the following size limits: (0, 1920] in width and (0, 1920] in height, both in units of vp.
 
@@ -4927,7 +4927,7 @@ This operation is not supported in a window in full-screen mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.resize](arkts-arkui-window-window-i.md#resize)(width:
+**Substitutes:** [resize](window.Window.resize(width:)
 
 <!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void--><!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void-End-->
 
@@ -4950,10 +4950,10 @@ resize(width: number, height: number): Promise<void>
 Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
 
 A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call  
-[resizeAsync()](arkts-arkui-window-window-i.md#resizeasync).
+[resizeAsync()](#resizeAsync).
 
-The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits) to find out the exact limits.
+The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits). You can call  
+[getWindowLimits](#getWindowLimits) to find out the exact limits.
 
 The new window width and height you set must meet the following limits:
 
@@ -4961,7 +4961,7 @@ If the window width or height is less than the minimum width or height limit, th
 
 If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).If this API is called when the window is in other window modes, error code 1300002 is reported.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).If this API is called when the window is in other window modes, error code 1300002 is reported.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).
 
 > **NOTE：**
 > 
@@ -4987,15 +4987,15 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## resize
 
@@ -5006,10 +5006,10 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 Changes the size of this window based on the top-left vertex of the window. This API uses an asynchronous callback to return the result.
 
 A value is returned once the API is called successfully. However, the final effect cannot be obtained immediately from the return value. To obtain the final effect immediately, call  
-[resizeAsync()](arkts-arkui-window-window-i.md#resizeasync).
+[resizeAsync()](#resizeAsync).
 
-The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits) to find out the exact limits.
+The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits). You can call  
+[getWindowLimits](#getWindowLimits) to find out the exact limits.
 
 The new window width and height you set must meet the following limits:
 
@@ -5042,9 +5042,9 @@ If the window width or height is greater than the maximum width or height limit,
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## resizeAsync
 
@@ -5055,10 +5055,10 @@ resizeAsync(width: number, height: number): Promise<void>
 Changes the size of this window based on the top-left vertex of the window. This API uses a promise to return the result.
 
 A value is returned once the call takes effect. You can use  
-[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties) in the callback (see the code snippet below) to obtain the final effect immediately.
+[getWindowProperties()](#getWindowProperties) in the callback (see the code snippet below) to obtain the final effect immediately.
 
-The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md). You can call  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits) to find out the exact limits.
+The window size is restricted by [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits). You can call  
+[getWindowLimits](#getWindowLimits) to find out the exact limits.
 
 The new window width and height you set must meet the following limits:
 
@@ -5066,7 +5066,7 @@ If the window width or height is less than the minimum width or height limit, th
 
 If the window width or height is greater than the maximum width or height limit, then the maximum width or height limit takes effect.
 
-This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other scenarios, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)).
+This API takes effect only when the window is in floating window mode (**window.WindowStatusType.FLOATING**).In other scenarios, this API returns error code 1300010.(The window mode can be obtained through [getWindowStatus()](#getWindowStatus)).
 
 > **NOTE：**
 > 
@@ -5092,17 +5092,17 @@ This API takes effect only when the window is in floating window mode (**window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
 
 ## restore
 
@@ -5124,16 +5124,16 @@ Restores the main window from minimization to the foreground, returning it to it
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## restoreMainWindow
 
@@ -5142,7 +5142,7 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
 Restores the main window of the current window to the foreground. If the main window is already in the foreground, the main window level is raised. This API is applicable only to  
-[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md) windows and can be called only after the  
+[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md#WindowType) windows and can be called only after the  
 [DOWN](DOWN) event is triggered in the windows. This API uses a promise to return the result.
 
 **Since:** 23
@@ -5157,23 +5157,23 @@ Restores the main window of the current window to the foreground. If the main wi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| wantParameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No |
+| [wantParameters](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationparameters-i.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300007](../errorcode-window.md#1300007-application-startup-failure-by-windowextensionability) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300007-application-startup-failure-by-windowextensionability) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setAspectRatio
 
@@ -5186,8 +5186,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 > **NOTE：**
 > 
 > - When the window size is set by using other APIs such as
-> [resize](arkts-arkui-window-window-i.md#resize) and
-> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync), the window size is not restricted by **ratio**.
+> [resize](#resize) and
+> [resizeAsync](#resizeAsync), the window size is not restricted by **ratio**.
 > 
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
@@ -5195,7 +5195,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 > 
 > - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
 > main windows. If you need to set the aspect ratio for just one main window, use
-> [setContentAspectRatio](arkts-arkui-window-window-i.md#setcontentaspectratio) instead.
+> [setContentAspectRatio](#setContentAspectRatio) instead.
 
 **Since:** 10
 
@@ -5209,16 +5209,16 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratio | number | Yes |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setAspectRatio
 
@@ -5231,8 +5231,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 > **NOTE：**
 > 
 > - When the window size is set by using other APIs such as
-> [resize](arkts-arkui-window-window-i.md#resize) and
-> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync), the window size is not restricted by **ratio**.
+> [resize](#resize) and
+> [resizeAsync](#resizeAsync), the window size is not restricted by **ratio**.
 > 
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode). The aspect ratio is saved persistently, which means that the
@@ -5240,7 +5240,7 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 > 
 > - After the aspect ratio is set for a main window of an application, the aspect ratio is used for subsequent
 > main windows. If you need to set the aspect ratio for just one main window, use
-> [setContentAspectRatio](arkts-arkui-window-window-i.md#setcontentaspectratio) instead.
+> [setContentAspectRatio](#setContentAspectRatio) instead.
 
 **Since:** 10
 
@@ -5254,21 +5254,21 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratio | number | Yes |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setBackgroundColor
 
@@ -5277,13 +5277,13 @@ setBackgroundColor(color: string): Promise<void>
 ```
 
 Sets the background color for this window. This API uses a promise to return the result. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)
+**Substitutes:** [setWindowBackgroundColor](#setWindowBackgroundColor)
 
 <!--Device-Window-setBackgroundColor(color: string): Promise<void>--><!--Device-Window-setBackgroundColor(color: string): Promise<void>-End-->
 
@@ -5299,7 +5299,7 @@ Sets the background color for this window. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setBackgroundColor
 
@@ -5308,13 +5308,13 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 ```
 
 Sets the background color for this window. This API uses an asynchronous callback to return the result. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)
+**Substitutes:** [setWindowBackgroundColor](#setWindowBackgroundColor)
 
 <!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void--><!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5341,7 +5341,7 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowBrightness](arkts-arkui-window-window-i.md#setwindowbrightness)(brightness:
+**Substitutes:** [setWindowBrightness](window.Window.setWindowBrightness(brightness:)
 
 <!--Device-Window-setBrightness(brightness: number): Promise<void>--><!--Device-Window-setBrightness(brightness: number): Promise<void>-End-->
 
@@ -5357,7 +5357,7 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setBrightness
 
@@ -5373,7 +5373,7 @@ When the screen brightness setting for the window takes effect, Control Panel ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowBrightness](arkts-arkui-window-window-i.md#setwindowbrightness)(brightness:
+**Substitutes:** [setWindowBrightness](window.Window.setWindowBrightness(brightness:)
 
 <!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void--><!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void-End-->
 
@@ -5398,7 +5398,7 @@ Sets a color space for this window. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)(colorSpace:ColorSpace)
+**Substitutes:** [setWindowColorSpace](#setWindowColorSpace)(colorSpace:ColorSpace)
 
 <!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>--><!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>-End-->
 
@@ -5414,7 +5414,7 @@ Sets a color space for this window. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setColorSpace
 
@@ -5428,7 +5428,7 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)(colorSpace:ColorSpace,
+**Substitutes:** [setWindowColorSpace](window.Window.setWindowColorSpace(colorSpace:ColorSpace,)
 
 <!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void-End-->
 
@@ -5455,12 +5455,12 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 > changes in the border decoration size or visibility.
 > 
 > - When the window title bar is set to invisible by using
-> [setWindowDecorVisible](arkts-arkui-window-window-i.md#setwindowdecorvisible), the window content area takes over the
+> [setWindowDecorVisible](#setWindowDecorVisible), the window content area takes over the
 > space that was previously used by the title bar.
 > 
 > - When the window size is set by using other APIs such as
-> [resize](arkts-arkui-window-window-i.md#resize) and
-> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync), the window size is not restricted by **ratio**.
+> [resize](#resize) and
+> [resizeAsync](#resizeAsync), the window size is not restricted by **ratio**.
 > 
 > - This setting is available only for the main window and takes effect only in floating window mode (
 > **window.WindowStatusType.FLOATING** mode).
@@ -5475,25 +5475,25 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratio | number | Yes |
-| isPersistent | boolean | No |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | Yes |
+| [isPersistent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md) | boolean | No |
 | needUpdateRect | boolean | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setDecorButtonStyle
 
@@ -5502,7 +5502,7 @@ setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 ```
 
 Sets the button style of the decoration bar. The setting takes effect only for the main window and child windows.In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 14
 
@@ -5522,10 +5522,10 @@ Sets the button style of the decoration bar. The setting takes effect only for t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setDialogBackGestureEnabled
 
@@ -5553,17 +5553,17 @@ Sets whether the modal window responds to the back gesture event. An error code 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setDimBehind
 
@@ -5585,7 +5585,7 @@ Sets the dimness of the window that is not on top. This API uses an asynchronous
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dimBehindValue | number | Yes |
+| [dimBehindValue](arkts-arkui-window-windowproperties-i.md) | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## setDimBehind
@@ -5608,13 +5608,13 @@ Sets the dimness of the window that is not on top. This API uses a promise to re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dimBehindValue | number | Yes |
+| [dimBehindValue](arkts-arkui-window-windowproperties-i.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setDragKeyFramePolicy
 
@@ -5642,17 +5642,17 @@ If this API is called by a non-main window, error code 1300004 is returned.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;KeyFramePolicy&gt; |
+| Promise&lt;[KeyFramePolicy](arkts-arkui-window-keyframepolicy-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setExclusivelyHighlighted
 
@@ -5682,17 +5682,17 @@ This API does not take effect for the main window or modal window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setFloatNavigationAvoidAreaEnabled
 
@@ -5722,15 +5722,15 @@ Specifies whether to enable the avoid area for the float navigation type. When e
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setFocusable
 
@@ -5744,7 +5744,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowFocusable](arkts-arkui-window-window-i.md#setwindowfocusable)(isFocusable:
+**Substitutes:** [setWindowFocusable](window.Window.setWindowFocusable(isFocusable:)
 
 <!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>--><!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>-End-->
 
@@ -5760,7 +5760,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setFocusable
 
@@ -5774,7 +5774,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowFocusable](arkts-arkui-window-window-i.md#setwindowfocusable)(isFocusable:
+**Substitutes:** [setWindowFocusable](window.Window.setWindowFocusable(isFocusable:)
 
 <!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -5796,7 +5796,7 @@ setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 Sets whether a child window can span multiple screens and be simultaneously displayed while its parent window is being dragged or resized. This API uses a promise to return the result.
 
 By default, when a child window follows its parent window's layout changes (by using  
-[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)), it does not support spanning multiple screens and being simultaneously displayed.
+[moveWindowTo()](#moveWindowTo)), it does not support spanning multiple screens and being simultaneously displayed.
 
 However, calling this API on the child window enables it to span multiple screens and be simultaneously displayed during the layout adjustment process.
 
@@ -5818,17 +5818,17 @@ However, calling this API on the child window enables it to span multiple screen
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setFollowParentWindowLayoutEnabled
 
@@ -5842,7 +5842,7 @@ Sets whether the layout information (position and size) of a child window or mod
 1. This API applies only to first-level child windows or modal windows of the main window.2. Once this API is called on a child window or modal window, its layout information will immediately match the main window and remain synchronized. This effect will persist until this API is called again with **false**.3. If this API is called on a child window or modal window, subsequent calls to APIs like **moveTo** or **resize** to modify the layout information will not take effect.4. When a child window or modal window stops using this functionality, its layout information (position and size) may not be a specific value. The application needs to reset it.
 
 Once this API is successfully called, the  
-[setRelativePositionToParentWindowEnabled()](arkts-arkui-window-window-i.md#setrelativepositiontoparentwindowenabled) API will no longer take effect.
+[setRelativePositionToParentWindowEnabled()](#setRelativePositionToParentWindowEnabled) API will no longer take effect.
 
 **Since:** 17
 
@@ -5864,17 +5864,17 @@ Once this API is successfully called, the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setFullScreen
 
@@ -5892,15 +5892,15 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 > **NOTE：**
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
-> and [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
+> and [setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)
 > to implement the full-screen mode.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -5910,7 +5910,7 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isFullScreen | boolean | Yes |
+| [isFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## setFullScreen
@@ -5929,15 +5929,15 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 > **NOTE：**
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
-> and [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
+> and [setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)
 > to implement the full-screen mode.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
 
@@ -5947,13 +5947,13 @@ Non-full-screen mode means that the layout avoids the status bar and &lt;!--RP15
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isFullScreen | boolean | Yes |
+| [isFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setGestureBackEnabled
 
@@ -5985,17 +5985,17 @@ After this function is disabled, the gesture hot zone of the current application
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setImmersiveModeEnabledState
 
@@ -6023,10 +6023,10 @@ Sets whether to enable the immersive layout for the main window. This API does n
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setKeepScreenOn
 
@@ -6040,7 +6040,7 @@ Sets whether to keep the screen always on. This API uses a promise to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowKeepScreenOn](arkts-arkui-window-window-i.md#setwindowkeepscreenon)(isKeepScreenOn:
+**Substitutes:** [setWindowKeepScreenOn](window.Window.setWindowKeepScreenOn(isKeepScreenOn:)
 
 <!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
@@ -6050,13 +6050,13 @@ Sets whether to keep the screen always on. This API uses a promise to return the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setKeepScreenOn
 
@@ -6070,7 +6070,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowKeepScreenOn](arkts-arkui-window-window-i.md#setwindowkeepscreenon)(isKeepScreenOn:
+**Substitutes:** [setWindowKeepScreenOn](window.Window.setWindowKeepScreenOn(isKeepScreenOn:)
 
 <!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6080,7 +6080,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## setLayoutFullScreen
@@ -6099,7 +6099,7 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6109,7 +6109,7 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## setLayoutFullScreen
@@ -6128,7 +6128,7 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
 
@@ -6138,13 +6138,13 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setOutsideTouchable
 
@@ -6175,7 +6175,7 @@ Sets whether the area outside the child window is touchable. This API uses a pro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setOutsideTouchable
 
@@ -6233,17 +6233,17 @@ If the child window is focused and the new parent window has a modal child windo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
 
 ## setPreferredOrientation
 
@@ -6276,14 +6276,14 @@ Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can b
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setPreferredOrientation
 
@@ -6318,8 +6318,8 @@ Starting from &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, this API can b
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setPreferredOrientationWithResult
 
@@ -6349,15 +6349,15 @@ Sets the preferred orientation for the main window.This API uses a promise to re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OrientationResult&gt; |
+| Promise&lt;[OrientationResult](arkts-arkui-window-orientationresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setPrivacyMode
 
@@ -6371,7 +6371,7 @@ Sets whether this window is in privacy mode. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)(isPrivacyMode:
+**Substitutes:** [setWindowPrivacyMode](window.Window.setWindowPrivacyMode(isPrivacyMode:)
 
 <!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
@@ -6381,13 +6381,13 @@ Sets whether this window is in privacy mode. This API uses a promise to return t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacyMode | boolean | Yes |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setPrivacyMode
 
@@ -6401,7 +6401,7 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)(isPrivacyMode:
+**Substitutes:** [setWindowPrivacyMode](window.Window.setWindowPrivacyMode(isPrivacyMode:)
 
 <!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6411,7 +6411,7 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacyMode | boolean | Yes |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## setRaiseByClickEnabled
@@ -6425,7 +6425,7 @@ Sets whether to enable a child window to raise itself by click. This API uses a 
 Generally, when a child window is clicked, it is brought to the forefront among sibling child windows of the same type that share the same parent window within the application. If the **enable** parameter is set to **false**,when the child window is clicked, it still stays in its existing position.
 
 Before calling this API, ensure that the child window has been created and  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+[showWindow()](#showWindow) has been successfully executed.
 
 **Since:** 14
 
@@ -6443,18 +6443,18 @@ Before calling this API, ensure that the child window has been created and
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
 
 ## setReceiveDragEventEnabled
 
@@ -6462,7 +6462,7 @@ Before calling this API, ensure that the child window has been created and
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-Sets whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md/arkts-arkui-dragevent-i.md). This API uses a promise to return the result.
+Sets whether the current window can receive [drag events](../arkts-components/arkts-arkui-dragevent-i.md#DragEvent). This API uses a promise to return the result.
 
 By default, the value of **enabled** is **true**, indicating that the window can receive drag events.
 
@@ -6486,15 +6486,15 @@ If the value of **enabled** is **false**, the current window cannot receive drag
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setRelativePositionToParentWindowEnabled
 
@@ -6507,10 +6507,10 @@ Sets whether a first-level child window can maintain a fixed relative position t
 
 The relative position is defined by the offset between the anchor points of the child window and the main window.Both the child window and the main window use the same type of anchor point.
 
-1. This API applies only to level-1 child windows that are not maximized.2. Once this API is called on a child window, its display position will immediately follow the main window and maintain a fixed relative position. This effect will persist until this API is called again with **false**.3. If this API is called on a child window, subsequent calls to [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or [maximize()](arkts-arkui-window-window-i.md#maximize) to modify the window's position or size will not take effect.
+1. This API applies only to level-1 child windows that are not maximized.2. Once this API is called on a child window, its display position will immediately follow the main window and maintain a fixed relative position. This effect will persist until this API is called again with **false**.3. If this API is called on a child window, subsequent calls to [moveWindowTo()](#moveWindowTo) or [maximize()](#maximize) to modify the window's position or size will not take effect.
 
 Once this API is successfully called, the  
-[setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled) API will no longer take effect.
+[setFollowParentWindowLayoutEnabled()](#setFollowParentWindowLayoutEnabled) API will no longer take effect.
 
 **Since:** 20
 
@@ -6531,16 +6531,16 @@ Once this API is successfully called, the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setResizeByDragEnabled
 
@@ -6569,10 +6569,10 @@ Sets whether to enable the main window or child window with decorations to resiz
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setResizeByDragEnabled
 
@@ -6600,16 +6600,16 @@ Sets whether to enable the main window or child window with decorations to resiz
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setSeparationTouchEnabled
 
@@ -6648,15 +6648,15 @@ taps of other fingers are not distributed to the window and are discarded by the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setSpecificSystemBarEnabled
 
@@ -6688,15 +6688,15 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setStatusBarColor
 
@@ -6720,21 +6720,21 @@ Setting the status bar text color is not supported for child windows. Calling th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes |
+| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setSubWindowModal
 
@@ -6766,17 +6766,17 @@ If this API is called by a main window, an error is reported.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setSubWindowModal
 
@@ -6791,7 +6791,7 @@ When the child window is of the window-modal type, its parent window does not re
 When the child window is of the application-modal type, its parent window and the windows from other instances of the application do not respond to user interactions until the child window is closed or the child window's modal property is disabled.
 
 This API is used to set the modality type. To disable the modal property, you are advised to use  
-[setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-window-window-i.md#setsubwindowmodal).
+[setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](#setSubWindowModal).
 
 If this API is called by a window other than the child window, an error is reported.
 
@@ -6808,23 +6808,23 @@ If this API is called by a window other than the child window, an error is repor
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | isModal | boolean | Yes |
-| modalityType | [ModalityType](arkts-arkui-window-modalitytype-e.md) | Yes |
+| [modalityType](arkts-arkui-window-subwindowoptions-i.md) | [ModalityType](arkts-arkui-window-modalitytype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setSubWindowZLevel
 
@@ -6835,7 +6835,7 @@ setSubWindowZLevel(zLevel: number): Promise<void>
 Sets the z-level of the current child window. Child windows with modal properties are not supported. This API uses a promise to return the result.
 
 Changing the z-level of a child window using this API will not cause a focus switch. You are advised to use  
-[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus) for focus switching.
+[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftAppWindowFocus) for focus switching.
 
 **Since:** 18
 
@@ -6849,24 +6849,24 @@ Changing the z-level of a child window using this API will not cause a focus swi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| zLevel | number | Yes |
+| [zLevel](arkts-arkui-window-subwindowoptions-i.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
 
 ## setSupportedWindowModes
 
@@ -6888,23 +6888,23 @@ Sets the supported window modes of the app window.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| supportedWindowModes | Array&lt;bundleManager.SupportWindowMode&gt; | Yes |
+| supportedWindowModes | Array & lt;bundleManager.SupportWindowMode & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setSystemAvoidAreaEnabled
 
@@ -6913,7 +6913,7 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
 Enables the capability to obtain the window avoidance area information using  
-[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea) or listen for window avoidance area changes using  
+[getWindowAvoidArea()](#getWindowAvoidArea) or listen for window avoidance area changes using  
 [on('avoidAreaChange')](window.Window.on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;))after a global floating window, modal window, or system window is created.
 
 **Since:** 18
@@ -6934,16 +6934,16 @@ Enables the capability to obtain the window avoidance area information using
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setSystemBarEnable
 
@@ -6961,7 +6961,7 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**Substitutes:** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
 
@@ -6971,7 +6971,7 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes |
+| names | Array & lt;'status' \ | 'navigation' & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## setSystemBarEnable
@@ -6990,7 +6990,7 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**Substitutes:** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>-End-->
 
@@ -7000,13 +7000,13 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes |
+| names | Array & lt;'status' \ | 'navigation' & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setSystemBarProperties
 
@@ -7022,7 +7022,7 @@ This API does not take effect when it is called by a child window. The configura
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowSystemBarProperties](arkts-arkui-window-window-i.md#setwindowsystembarproperties)(systemBarProperties:
+**Substitutes:** [setWindowSystemBarProperties](window.Window.setWindowSystemBarProperties(systemBarProperties:)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
 
@@ -7049,7 +7049,7 @@ This API does not take effect when it is called by a child window.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowSystemBarProperties](arkts-arkui-window-window-i.md#setwindowsystembarproperties)(systemBarProperties:
+**Substitutes:** [setWindowSystemBarProperties](window.Window.setWindowSystemBarProperties(systemBarProperties:)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
 
@@ -7065,7 +7065,7 @@ This API does not take effect when it is called by a child window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setTitleAndDockHoverShown
 
@@ -7094,15 +7094,15 @@ Sets whether to show the window title bar and dock bar when the cursor hovers ov
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setTouchable
 
@@ -7116,7 +7116,7 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowTouchable](arkts-arkui-window-window-i.md#setwindowtouchable)(isTouchable:
+**Substitutes:** [setWindowTouchable](window.Window.setWindowTouchable(isTouchable:)
 
 <!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>--><!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>-End-->
 
@@ -7132,7 +7132,7 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setTouchable
 
@@ -7146,7 +7146,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.setWindowTouchable](arkts-arkui-window-window-i.md#setwindowtouchable)(isTouchable:
+**Substitutes:** [setWindowTouchable](window.Window.setWindowTouchable(isTouchable:)
 
 <!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -7182,23 +7182,23 @@ Sets the touchable areas for this window. By default, the entire window is touch
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rects | Array&lt;Rect&gt; | Yes |
+| rects | Array & lt;Rect & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setUIContent
 
@@ -7227,9 +7227,9 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setUIContent
 
@@ -7257,15 +7257,15 @@ Loads the content of a page, with its path in the current project specified, to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowBackgroundColor
 
@@ -7279,7 +7279,7 @@ If this API is not called, the default background color of the window is **'#FFF
 **'#FF1A1A1A'** in dark mode.
 
 In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 9
 
@@ -7299,7 +7299,7 @@ In the stage model, this API must be used after the call of
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowBrightness
 
@@ -7333,15 +7333,15 @@ When the window moves to the background, the setting becomes invalid, and bright
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowBrightness
 
@@ -7376,9 +7376,9 @@ When the window moves to the background, the setting becomes invalid, and bright
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowColorSpace
 
@@ -7406,14 +7406,14 @@ Sets a color space for this window. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowColorSpace
 
@@ -7442,8 +7442,8 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowContainerColor
 
@@ -7452,9 +7452,9 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 ```
 
 Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
+[loadContent()](#loadContent)or [setUIContent()](#setUIContent).
 
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
+The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](#setWindowBackgroundColor), the content area shows the window background color, whereas the title bar shows the container background color.
 
 **Since:** 20
 
@@ -7475,10 +7475,10 @@ The background color you set here covers the entire window, including both the t
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## setWindowContainerModalColor
 
@@ -7487,9 +7487,9 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
 Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
+[loadContent()](#loadContent)or [setUIContent()](#setUIContent).
 
-The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor), the content area shows the window background color, whereas the title bar shows the container background color.
+The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](#setWindowBackgroundColor), the content area shows the window background color, whereas the title bar shows the container background color.
 
 **Since:** 26.0.0
 
@@ -7511,11 +7511,11 @@ The background color you set here covers the entire window, including both the t
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setWindowCornerRadius
 
@@ -7527,7 +7527,7 @@ Sets the radius of the rounded corners for a child window or floating window. Th
 
 If the radius of the rounded corner is too large, it may cause the three buttons (maximize, minimize, and close)to be clipped and make their hotspots less recognizable. Set an appropriate radius based on the window size.
 
-Before calling this API, you can call [getWindowCornerRadius()](arkts-arkui-window-window-i.md#getwindowcornerradius) to obtain the default radius of rounded corners of the window.
+Before calling this API, you can call [getWindowCornerRadius()](#getWindowCornerRadius) to obtain the default radius of rounded corners of the window.
 
 **Since:** 17
 
@@ -7547,17 +7547,17 @@ Before calling this API, you can call [getWindowCornerRadius()](arkts-arkui-wind
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowDecorHeight
 
@@ -7566,7 +7566,7 @@ setWindowDecorHeight(height: number): void
 ```
 
 Sets the height of the title bar of this window. This API takes effect for the window that has a title bar and a three-button area. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 For tablets, if this API is called outside of  
 [free windows](../../../windowmanager/window-terminology.md#free-windows) mode, the change applies once the device switches to free windows mode. If this API is called in free windows mode, the change takes effect immediately.
@@ -7591,9 +7591,9 @@ When the main window transitions into full-screen mode, hovering the mouse over 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowDecorVisible
 
@@ -7602,10 +7602,10 @@ setWindowDecorVisible(isVisible: boolean): void
 ```
 
 Sets whether the title bar is visible in the window. This API takes effect for the window that has a title bar or a three-button area. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 When the window title bar is hidden and the main window transitions into full-screen mode, hovering the cursor over the hot zone of the top window's title bar will cause a floating title bar to appear. To prevent the floating title bar from appearing, call  
-[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown).
+[setTitleAndDockHoverShown()](#setTitleAndDockHoverShown).
 
 **Since:** 11
 
@@ -7625,10 +7625,10 @@ When the window title bar is hidden and the main window transitions into full-sc
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowDelayRaiseOnDrag
 
@@ -7660,8 +7660,8 @@ When this API is called to enable delayed raising, in cross-window drag-and-drop
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowFocusable
 
@@ -7672,7 +7672,7 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 Sets whether this window is focusable. This API uses a promise to return the result.
 
 Starting from API version 22, if a virtual screen is created by calling  
-[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) with **supportsFocus** set to **false**,windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createVirtualScreen) with **supportsFocus** set to **false**,windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
 
 **Since:** 9
 
@@ -7692,15 +7692,15 @@ Starting from API version 22, if a virtual screen is created by calling
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowFocusable
 
@@ -7711,7 +7711,7 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 Sets whether this window is focusable. This API uses an asynchronous callback to return the result.
 
 Starting from API version 22, if a virtual screen is created by calling  
-[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen) with **supportsFocus** set to **false**,windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
+[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createVirtualScreen) with **supportsFocus** set to **false**,windows on that virtual screen cannot call the current API to change their focusability. Attempting to do so will result in error code 1300002.
 
 **Since:** 9
 
@@ -7732,9 +7732,9 @@ Starting from API version 22, if a virtual screen is created by calling
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowGrayScale
 
@@ -7743,7 +7743,7 @@ setWindowGrayScale(grayScale: number): Promise<void>
 ```
 
 Sets the grayscale effect for this window. This API uses a promise to return the result. This API can be called only after  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) is called.
+[loadContent()](#loadContent)or [setUIContent()](#setUIContent) is called.
 
 **Since:** 12
 
@@ -7763,16 +7763,16 @@ Sets the grayscale effect for this window. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowKeepScreenOn
 
@@ -7796,21 +7796,21 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowKeepScreenOn
 
@@ -7834,16 +7834,16 @@ Set **isKeepScreenOn** to **true** only in necessary scenarios (such as navigati
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowLayoutFullScreen
 
@@ -7861,7 +7861,7 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 **Deprecated since:** 12
 
-**Substitutes:** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**Substitutes:** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -7873,16 +7873,16 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowLayoutFullScreen
 
@@ -7908,21 +7908,21 @@ A non-immersive layout means that the layout avoids the status bar and &lt;!--RP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | Yes |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowLimits
 
@@ -7934,7 +7934,7 @@ Sets the size limits for this window. This API uses a promise to return the resu
 
 By default, system size limits are provided. They are determined by the product configuration and cannot be modified.
 
-If **setWindowLimits** has not been called, you can call [getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)or [getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp) to obtain the system size limits.
+If **setWindowLimits** has not been called, you can call [getWindowLimits](#getWindowLimits)or [getWindowLimitsVP](#getWindowLimitsVP) to obtain the system size limits.
 
 **Since:** 11
 
@@ -7954,17 +7954,17 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits](arkts
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WindowLimits&gt; |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowLimits
 
@@ -7976,7 +7976,7 @@ Sets the size limits for this window. This API uses a promise to return the resu
 
 By default, system size limits are provided. They are determined by the product configuration and cannot be modified.
 
-If **setWindowLimits** has not been called, you can call [getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)or [getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp) to obtain the system size limits.
+If **setWindowLimits** has not been called, you can call [getWindowLimits](#getWindowLimits)or [getWindowLimitsVP](#getWindowLimitsVP) to obtain the system size limits.
 
 **Since:** 15
 
@@ -7997,17 +7997,17 @@ If **setWindowLimits** has not been called, you can call [getWindowLimits](arkts
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WindowLimits&gt; |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowMask
 
@@ -8033,23 +8033,23 @@ Error code 1300002 may be returned only when multiple threads operate the same w
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowMask | Array&lt;Array&lt;number&gt;&gt; | Yes |
+| windowMask | Array & lt;Array & lt;number & gt; & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowMaskWithAlpha
 
@@ -8079,17 +8079,17 @@ Set the window mask using a per-pixel alpha array
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowPrivacyMode
 
@@ -8119,20 +8119,20 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacyMode | boolean | Yes |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## setWindowPrivacyMode
 
@@ -8162,15 +8162,15 @@ If this API is not called, the privacy mode is disabled by default, and the wind
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacyMode | boolean | Yes |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## setWindowShadowEnabled
 
@@ -8198,17 +8198,17 @@ Sets whether the main window displays a shadow. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## setWindowShadowRadius
 
@@ -8236,10 +8236,10 @@ Sets the blur radius of the shadow on the edges of a child window or floating wi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowSystemBarEnable
 
@@ -8257,7 +8257,7 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 **Deprecated since:** 12
 
-**Substitutes:** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**Substitutes:** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -8269,16 +8269,16 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes |
+| names | Array & lt;'status' \ | 'navigation' & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowSystemBarEnable
 
@@ -8302,21 +8302,21 @@ The return value does not indicate that the status bar and &lt;!--RP15--&gt;thre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes |
+| names | Array & lt;'status' \ | 'navigation' & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowSystemBarProperties
 
@@ -8332,7 +8332,7 @@ This API does not take effect when it is called by a child window.
 
 **Deprecated since:** 12
 
-**Substitutes:** [window.Window.setWindowSystemBarProperties](arkts-arkui-window-window-i.md#setwindowsystembarproperties)(systemBarProperties:
+**Substitutes:** [setWindowSystemBarProperties](window.Window.setWindowSystemBarProperties(systemBarProperties:)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -8351,10 +8351,10 @@ This API does not take effect when it is called by a child window.
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowSystemBarProperties
 
@@ -8384,15 +8384,15 @@ This API does not take effect when it is called by a child window. The setting d
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowTitle
 
@@ -8401,7 +8401,7 @@ setWindowTitle(titleName: string): Promise<void>
 ```
 
 Sets the window title. This API uses a promise to return the result. In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 15
 
@@ -8415,21 +8415,21 @@ Sets the window title. This API uses a promise to return the result. In the stag
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| titleName | string | Yes |
+| [titleName](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-qrcodeinfo-i.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowTitleButtonVisible
 
@@ -8459,10 +8459,10 @@ Shows or hides the maximize, minimize, and close buttons on the title bar of the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowTitleMoveEnabled
 
@@ -8471,8 +8471,8 @@ setWindowTitleMoveEnabled(enabled: boolean): void
 ```
 
 Enables or disables the capability to move the window (either main window or child window) by dragging its title bar and to maximize the window with a double-click. When this capability is disabled, you can use  
-[startMoving()](arkts-arkui-window-window-i.md#startmoving) to move the window by dragging in the application's hot zone and use [maximize()](arkts-arkui-window-window-i.md#maximize) to maximize the window.In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[startMoving()](#startMoving) to move the window by dragging in the application's hot zone and use [maximize()](#maximize) to maximize the window.In the stage model, this API must be used after the call of  
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 14
 
@@ -8492,10 +8492,10 @@ Enables or disables the capability to move the window (either main window or chi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## setWindowTopmost
 
@@ -8527,17 +8527,17 @@ Applications use custom shortcut keys to pin or unpin the main window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## setWindowTouchable
 
@@ -8565,15 +8565,15 @@ Sets whether this window is touchable. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowTouchable
 
@@ -8602,9 +8602,9 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## setWindowTransitionAnimation
 
@@ -8637,17 +8637,17 @@ Currently, this API can be used only on the main window of an application.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## show
 
@@ -8661,7 +8661,7 @@ Shows this window. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.showWindow](arkts-arkui-window-window-i.md#showwindow)(callback:
+**Substitutes:** [showWindow](window.Window.showWindow(callback:)
 
 <!--Device-Window-show(callback: AsyncCallback<void>): void--><!--Device-Window-show(callback: AsyncCallback<void>): void-End-->
 
@@ -8685,7 +8685,7 @@ Shows this window. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.Window.showWindow](arkts-arkui-window-window-i.md#showwindow)()
+**Substitutes:** [showWindow](#showWindow)()
 
 <!--Device-Window-show(): Promise<void>--><!--Device-Window-show(): Promise<void>-End-->
 
@@ -8695,7 +8695,7 @@ Shows this window. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## showWindow
 
@@ -8708,8 +8708,8 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 > **NOTE：**
 > 
 > Before calling this API, you are advised to load the page by using
-> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If the main window has not
+> [loadContent](#loadContent) or
+> [setUIContent](#setUIContent-1). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, modal window, or global floating window has finished loading and you call
 > this API directly, the window is in the foreground but is not visible.
@@ -8732,7 +8732,7 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## showWindow
 
@@ -8745,8 +8745,8 @@ Shows this window. This API uses a promise to return the result. This API takes 
 > **NOTE：**
 > 
 > Before calling this API, you are advised to load the page by using
-> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If the main window has not
+> [loadContent](#loadContent) or
+> [setUIContent](#setUIContent-1). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, modal window, or global floating window has finished loading and you call
 > this API directly, the window is in the foreground but is not visible.
@@ -8763,13 +8763,13 @@ Shows this window. This API uses a promise to return the result. This API takes 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## showWindow
 
@@ -8784,8 +8784,8 @@ This API can be used only for application child windows, application main window
 > **NOTE：**
 > 
 > Before calling this API, you are advised to load the page by using
-> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If the main window has not
+> [loadContent](#loadContent) or
+> [setUIContent](#setUIContent-1). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, or global floating window has finished loading and you call this API directly
 > , the window is in the foreground but is not visible.
@@ -8808,16 +8808,16 @@ This API can be used only for application child windows, application main window
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## snapshot
 
@@ -8826,7 +8826,7 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
 Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen.
+[setWindowPrivacyMode](#setWindowPrivacyMode)), taking a screenshot will result in a blank screen.
 
 **Since:** 9
 
@@ -8846,7 +8846,7 @@ Captures this window. This API uses an asynchronous callback to return the resul
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## snapshot
 
@@ -8855,7 +8855,7 @@ snapshot(): Promise<image.PixelMap>
 ```
 
 Captures this window. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen.
+[setWindowPrivacyMode](#setWindowPrivacyMode)), taking a screenshot will result in a blank screen.
 
 **Since:** 9
 
@@ -8869,13 +8869,13 @@ Captures this window. If privacy mode is enabled for the current window (using
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## snapshotIgnorePrivacy
 
@@ -8884,7 +8884,7 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
 Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)).
+[setWindowPrivacyMode](#setWindowPrivacyMode)).
 
 **Since:** 18
 
@@ -8898,14 +8898,14 @@ Captures this window. This API can be called to obtain the screenshot of the cur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## snapshotSync
 
@@ -8914,10 +8914,10 @@ snapshotSync(): image.PixelMap
 ```
 
 Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)), taking a screenshot will result in a blank screen.
+[setWindowPrivacyMode](#setWindowPrivacyMode)), taking a screenshot will result in a blank screen.
 
 In the stage model, this API must be used after the call of  
-[loadContent](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent) takes effect.
+[loadContent](#loadContent)or [setUIContent()](#setUIContent) takes effect.
 
 **Since:** 20
 
@@ -8935,9 +8935,9 @@ In the stage model, this API must be used after the call of
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300018](../errorcode-window.md#1300018-api-call-timeout) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300018-api-call-timeout) |
 
 ## startMoving
 
@@ -8948,9 +8948,9 @@ startMoving(): Promise<void>
 In [freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, this API takes effect for system windows, application main windows, application child windows, global floating windows, and modal windows. In non-freeform window mode, this API takes effect only for system windows, application child windows,global floating windows, and modal windows. Starts moving this window. This API uses a promise to return the result.
 
 The window moves along with the cursor or touch point only when this API is called in the callback function of  
-[onTouch](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md/arkts-input-multimodalinput-touchevent-touchevent-i.md), where the event type is **TouchType.Down**.
+[onTouch](TouchEvent), where the event type is **TouchType.Down**.
 
-In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](arkts-arkui-touchtype-e.md) (as long as  
+In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](arkts-arkui-touchtype-e.md#TouchType) (as long as  
 **TouchType.Down** has already been triggered) to start the moving effect.
 
 **Since:** 14
@@ -8965,17 +8965,17 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## startMoving
 
@@ -8988,9 +8988,9 @@ Specifies the cursor position within the window and moves the window. This API u
 When windows within the same application are split or merged, and the mouse is pressed down to move the new window directly, the cursor may move outside the window if it moves too quickly. This API allows you to set the cursor position within the window during movement. It first adjusts the window to the cursor position before starting to move the window.
 
 The window moves along with the cursor only when this API is called in the callback function of  
-[onTouch](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md/arkts-input-multimodalinput-touchevent-touchevent-i.md), where the event type is **TouchType.Down**.
+[onTouch](TouchEvent), where the event type is **TouchType.Down**.
 
-In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](arkts-arkui-touchtype-e.md) (as long as  
+In click-and-drag scenarios, if you do not want the drag to start as soon as you press down, you can call this API when the event type is [TouchType.Move](arkts-arkui-touchtype-e.md#TouchType) (as long as  
 **TouchType.Down** has already been triggered) to start the moving effect.
 
 **Since:** 15
@@ -9012,18 +9012,18 @@ In click-and-drag scenarios, if you do not want the drag to start as soon as you
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../errorcode-window.md#1300001-repeated-operation) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## stopMoving
 
@@ -9045,13 +9045,13 @@ Stops window movement when a window is being dragged. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |

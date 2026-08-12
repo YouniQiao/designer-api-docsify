@@ -15,7 +15,7 @@ Contains the sync ID, current batch, and total batch.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## currentBatch

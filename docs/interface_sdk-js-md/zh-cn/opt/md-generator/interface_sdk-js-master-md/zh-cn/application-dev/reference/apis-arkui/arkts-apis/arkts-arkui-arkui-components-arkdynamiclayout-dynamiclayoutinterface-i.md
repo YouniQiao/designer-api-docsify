@@ -34,7 +34,7 @@
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 |
 
 **返回值：**
 

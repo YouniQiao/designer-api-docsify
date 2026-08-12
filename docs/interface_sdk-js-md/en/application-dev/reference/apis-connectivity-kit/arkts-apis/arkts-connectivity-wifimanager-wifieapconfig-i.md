@@ -13,7 +13,7 @@ Wi-Fi EAP config.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## altSubjectMatch
@@ -168,7 +168,7 @@ eapMethod: EapMethod
 
 EAP authentication method
 
-**Type:** [EapMethod](arkts-connectivity-wifimanager-eapmethod-e.md)
+**Type:** EapMethod
 
 **Since:** 10
 
@@ -240,7 +240,7 @@ phase2Method: Phase2Method
 
 Phase 2 authentication method
 
-**Type:** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
+**Type:** Phase2Method
 
 **Since:** 10
 

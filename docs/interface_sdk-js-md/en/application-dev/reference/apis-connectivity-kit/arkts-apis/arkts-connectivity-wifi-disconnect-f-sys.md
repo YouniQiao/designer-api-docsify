@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## disconnect
@@ -20,7 +20,7 @@ Disconnect Wi-Fi network.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.disconnect
+**Substitutes:** [disconnect](ohos.wifiManager/wifiManager.disconnect)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

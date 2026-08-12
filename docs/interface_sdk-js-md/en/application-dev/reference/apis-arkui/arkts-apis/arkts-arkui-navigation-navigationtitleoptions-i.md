@@ -98,7 +98,7 @@ barStyle?: BarStyle
 
 Set title bar style.Default value: BarStyle.STANDARD.
 
-**Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
+**Type:** [BarStyle](arkts-arkui-navigation-barstyle-e.md)
 
 **Default:** BarStyle.STANDARD
 
@@ -206,7 +206,7 @@ scrollEffectOptions?: ScrollEffectOptions
 
 Title scroll blur style.
 
-**Type:** [ScrollEffectOptions](../arkts-components/arkts-arkui-scrolleffectoptions-i.md)
+**Type:** [ScrollEffectOptions](arkts-arkui-navigation-scrolleffectoptions-i.md)
 
 **Since:** 26.0.0
 

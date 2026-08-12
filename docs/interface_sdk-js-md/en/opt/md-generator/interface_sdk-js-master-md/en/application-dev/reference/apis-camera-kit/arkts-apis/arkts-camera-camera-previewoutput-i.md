@@ -1,8 +1,8 @@
 # PreviewOutput
 
-PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
 
-**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-c
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addDeferredSurface
@@ -22,7 +22,7 @@ import { camera } from 'kits/@kit.CameraKit';
 addDeferredSurface(surfaceId: string): void
 ```
 
-Adds a surface for delayed preview. This API can run after [commitConfig](arkts-camera-camera-session-i.md#commitconfig) or  
+Adds a surface for delayed preview. This API can run after [commitConfig](arkts-camera-camera-session-i.md#commitConfig) or  
 [start](arkts-camera-camera-session-i.md#start) is called.
 
 **Since:** 24
@@ -43,8 +43,8 @@ Adds a surface for delayed preview. This API can run after [commitConfig](arkts-
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## enableBandwidthCompression
 
@@ -55,12 +55,12 @@ enableBandwidthCompression(enabled: boolean): void
 Enables preview bandwidth compression.
 
 Before enabling this feature, you can call   
-[isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported) to check whether the device supports preview bandwidth compression.
+[isBandwidthCompressionSupported](#isBandwidthCompressionSupported) to check whether the device supports preview bandwidth compression.
 
 > **NOTE：**
 > 
 > This function must be called prior to
-> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the
+> [Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig). Otherwise, the
 > preview output stream format will be affected.
 
 **Since:** 23
@@ -81,9 +81,9 @@ Before enabling this feature, you can call
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getActiveFrameRate
 
@@ -93,7 +93,7 @@ getActiveFrameRate(): FrameRateRange
 
 Obtains the configured frame rate range.
 
-This API is valid only after [setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate) is called to set a frame rate range for preview streams.
+This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for preview streams.
 
 **Since:** 12
 
@@ -135,7 +135,7 @@ Obtains the profile that takes effect currently.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getPreviewRotation
 
@@ -178,8 +178,8 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getSupportedFrameRates
 
@@ -201,7 +201,7 @@ Obtains the supported frame rates.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;FrameRateRange&gt; |
+| Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; |
 
 ## isBandwidthCompressionSupported
 
@@ -407,12 +407,12 @@ setFrameRate(minFps: number, maxFps: number): void
 
 Sets a frame rate range for preview streams. The range must be within the supported frame rate range,
 
-which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates).
+which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates).
 
 > **NOTE：**
 > 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
-> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or
+> [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
 
 **Since:** 12
 
@@ -433,8 +433,8 @@ which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-pr
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-configuration-conflicts) |
 
 ## setLogViewAssistEnable
 
@@ -443,7 +443,7 @@ setLogViewAssistEnable(enable: boolean): void
 ```
 
 Log video view assistance toggle. Before enabling this feature, you can call  
-[isLogViewAssistSupported](arkts-camera-camera-previewoutput-i.md#islogviewassistsupported) to check whether the device supports log video view assistance.
+[isLogViewAssistSupported](#isLogViewAssistSupported) to check whether the device supports log video view assistance.
 
 **Since:** 26.0.0
 
@@ -465,9 +465,9 @@ Log video view assistance toggle. Before enabling this feature, you can call
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## setPreviewRotation
 
@@ -496,8 +496,8 @@ Sets the preview rotation angle.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -511,7 +511,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.start](arkts-camera-camera-session-i.md#start)(callback:
+**Substitutes:** [start](camera.Session.start(callback:)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -527,7 +527,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## start
 
@@ -541,7 +541,7 @@ Starts to output preview streams. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.start](arkts-camera-camera-session-i.md#start)()
+**Substitutes:** [start](arkts-camera-camera-session-i.md#start)()
 
 <!--Device-PreviewOutput-start(): Promise<void>--><!--Device-PreviewOutput-start(): Promise<void>-End-->
 
@@ -551,13 +551,13 @@ Starts to output preview streams. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## stop
 
@@ -571,7 +571,7 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)(callback:
+**Substitutes:** [stop](camera.Session.stop(callback:)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -595,7 +595,7 @@ Stops outputting preview streams. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)()
+**Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)()
 
 <!--Device-PreviewOutput-stop(): Promise<void>--><!--Device-PreviewOutput-stop(): Promise<void>-End-->
 
@@ -605,4 +605,4 @@ Stops outputting preview streams. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

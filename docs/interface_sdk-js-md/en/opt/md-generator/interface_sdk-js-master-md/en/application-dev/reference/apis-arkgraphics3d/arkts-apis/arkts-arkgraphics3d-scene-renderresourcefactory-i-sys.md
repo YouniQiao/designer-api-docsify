@@ -37,4 +37,4 @@ Create a new scene from a SceneLoadParams.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Scene&gt; |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |

@@ -54,7 +54,7 @@ readonly slot: NotificationSlot
 
 通道类型。
 
-**类型：** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)
+**类型：** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
 **起始版本：** 7
 

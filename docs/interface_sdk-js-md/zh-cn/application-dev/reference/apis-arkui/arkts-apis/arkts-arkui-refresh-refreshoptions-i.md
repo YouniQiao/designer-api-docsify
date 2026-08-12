@@ -18,7 +18,7 @@ builder?: CustomBuilder
 
 自定义刷新区域显示内容。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ refreshing: boolean | Bindable<boolean>
 
 组件当前是否处于刷新中状态。该参数支持\$用于双向绑定变量。
 
-**类型：** boolean \| Bindable&lt;boolean&gt;
+**类型：** boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt;
 
 **起始版本：** 23
 

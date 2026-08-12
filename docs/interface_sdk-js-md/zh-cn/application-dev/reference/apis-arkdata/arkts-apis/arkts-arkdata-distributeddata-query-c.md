@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query
+**替代接口：** [Query](ohos.data.distributedKVStore.Query)
 
 <!--Device-distributedData-class Query--><!--Device-distributedData-class Query-End-->
 
@@ -28,7 +28,7 @@ and(): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#and
+**替代接口：** [and](ohos.data.distributedKVStore.Query#and)
 
 <!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
 
@@ -38,7 +38,7 @@ and(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| Query | 返回查询对象。 |
 
 ## 示例
 
@@ -69,7 +69,7 @@ beginGroup(): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#beginGroup
+**替代接口：** [beginGroup](ohos.data.distributedKVStore.Query#beginGroup)
 
 <!--Device-Query-beginGroup(): Query--><!--Device-Query-beginGroup(): Query-End-->
 
@@ -79,7 +79,7 @@ beginGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -110,7 +110,7 @@ constructor()
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#constructor
+**替代接口：** [constructor](ohos.data.distributedKVStore.Query#constructor)
 
 <!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
 
@@ -127,7 +127,7 @@ deviceId(deviceId: string): Query
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -137,7 +137,7 @@ deviceId(deviceId: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#deviceId
+**替代接口：** [deviceId](ohos.data.distributedKVStore.Query#deviceId)
 
 <!--Device-Query-deviceId(deviceId: string): Query--><!--Device-Query-deviceId(deviceId: string): Query-End-->
 
@@ -153,7 +153,7 @@ deviceId(deviceId: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -181,7 +181,7 @@ endGroup(): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#endGroup
+**替代接口：** [endGroup](ohos.data.distributedKVStore.Query#endGroup)
 
 <!--Device-Query-endGroup(): Query--><!--Device-Query-endGroup(): Query-End-->
 
@@ -191,7 +191,7 @@ endGroup(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -222,7 +222,7 @@ equalTo(field: string, value: number | string | boolean): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#equalTo
+**替代接口：** [equalTo](ohos.data.distributedKVStore.Query#equalTo)
 
 <!--Device-Query-equalTo(field: string, value: number | string | boolean): Query--><!--Device-Query-equalTo(field: string, value: number | string | boolean): Query-End-->
 
@@ -239,7 +239,7 @@ equalTo(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -268,7 +268,7 @@ getSqlLike(): string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#getSqlLike
+**替代接口：** [getSqlLike](ohos.data.distributedKVStore.Query#getSqlLike)
 
 <!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
 
@@ -306,7 +306,7 @@ greaterThan(field: string, value: number | string | boolean): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#greaterThan
+**替代接口：** [greaterThan](ohos.data.distributedKVStore.Query#greaterThan)
 
 <!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query--><!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query-End-->
 
@@ -323,7 +323,7 @@ greaterThan(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -352,7 +352,7 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#greaterThanOrEqualTo
+**替代接口：** [greaterThanOrEqualTo](ohos.data.distributedKVStore.Query#greaterThanOrEqualTo)
 
 <!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query-End-->
 
@@ -369,7 +369,7 @@ greaterThanOrEqualTo(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -398,7 +398,7 @@ inNumber(field: string, valueList: number[]): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#inNumber
+**替代接口：** [inNumber](ohos.data.distributedKVStore.Query#inNumber)
 
 <!--Device-Query-inNumber(field: string, valueList: number[]): Query--><!--Device-Query-inNumber(field: string, valueList: number[]): Query-End-->
 
@@ -415,7 +415,7 @@ inNumber(field: string, valueList: number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -444,7 +444,7 @@ inString(field: string, valueList: string[]): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#inString
+**替代接口：** [inString](ohos.data.distributedKVStore.Query#inString)
 
 <!--Device-Query-inString(field: string, valueList: string[]): Query--><!--Device-Query-inString(field: string, valueList: string[]): Query-End-->
 
@@ -461,7 +461,7 @@ inString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -490,7 +490,7 @@ isNotNull(field: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#isNotNull
+**替代接口：** [isNotNull](ohos.data.distributedKVStore.Query#isNotNull)
 
 <!--Device-Query-isNotNull(field: string): Query--><!--Device-Query-isNotNull(field: string): Query-End-->
 
@@ -506,7 +506,7 @@ isNotNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -535,7 +535,7 @@ isNull(field: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#isNull
+**替代接口：** [isNull](ohos.data.distributedKVStore.Query#isNull)
 
 <!--Device-Query-isNull(field: string): Query--><!--Device-Query-isNull(field: string): Query-End-->
 
@@ -551,7 +551,7 @@ isNull(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -580,7 +580,7 @@ lessThan(field: string, value: number | string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#lessThan
+**替代接口：** [lessThan](ohos.data.distributedKVStore.Query#lessThan)
 
 <!--Device-Query-lessThan(field: string, value: number | string): Query--><!--Device-Query-lessThan(field: string, value: number | string): Query-End-->
 
@@ -597,7 +597,7 @@ lessThan(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -626,7 +626,7 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#lessThanOrEqualTo
+**替代接口：** [lessThanOrEqualTo](ohos.data.distributedKVStore.Query#lessThanOrEqualTo)
 
 <!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query-End-->
 
@@ -643,7 +643,7 @@ lessThanOrEqualTo(field: string, value: number | string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -672,7 +672,7 @@ like(field: string, value: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#like
+**替代接口：** [like](ohos.data.distributedKVStore.Query#like)
 
 <!--Device-Query-like(field: string, value: string): Query--><!--Device-Query-like(field: string, value: string): Query-End-->
 
@@ -689,7 +689,7 @@ like(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -718,7 +718,7 @@ limit(total: number, offset: number): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#limit
+**替代接口：** [limit](ohos.data.distributedKVStore.Query#limit)
 
 <!--Device-Query-limit(total: number, offset: number): Query--><!--Device-Query-limit(total: number, offset: number): Query-End-->
 
@@ -735,7 +735,7 @@ limit(total: number, offset: number): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -767,7 +767,7 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#notEqualTo
+**替代接口：** [notEqualTo](ohos.data.distributedKVStore.Query#notEqualTo)
 
 <!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query--><!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query-End-->
 
@@ -784,7 +784,7 @@ notEqualTo(field: string, value: number | string | boolean): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -813,7 +813,7 @@ notInNumber(field: string, valueList: number[]): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#notInNumber
+**替代接口：** [notInNumber](ohos.data.distributedKVStore.Query#notInNumber)
 
 <!--Device-Query-notInNumber(field: string, valueList: number[]): Query--><!--Device-Query-notInNumber(field: string, valueList: number[]): Query-End-->
 
@@ -830,7 +830,7 @@ notInNumber(field: string, valueList: number[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -859,7 +859,7 @@ notInString(field: string, valueList: string[]): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#notInString
+**替代接口：** [notInString](ohos.data.distributedKVStore.Query#notInString)
 
 <!--Device-Query-notInString(field: string, valueList: string[]): Query--><!--Device-Query-notInString(field: string, valueList: string[]): Query-End-->
 
@@ -876,7 +876,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -905,7 +905,7 @@ or(): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#or
+**替代接口：** [or](ohos.data.distributedKVStore.Query#or)
 
 <!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
 
@@ -915,7 +915,7 @@ or(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回查询对象。 |
+| Query | 返回查询对象。 |
 
 ## 示例
 
@@ -946,7 +946,7 @@ orderByAsc(field: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#orderByAsc
+**替代接口：** [orderByAsc](ohos.data.distributedKVStore.Query#orderByAsc)
 
 <!--Device-Query-orderByAsc(field: string): Query--><!--Device-Query-orderByAsc(field: string): Query-End-->
 
@@ -962,7 +962,7 @@ orderByAsc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -992,7 +992,7 @@ orderByDesc(field: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#orderByDesc
+**替代接口：** [orderByDesc](ohos.data.distributedKVStore.Query#orderByDesc)
 
 <!--Device-Query-orderByDesc(field: string): Query--><!--Device-Query-orderByDesc(field: string): Query-End-->
 
@@ -1008,7 +1008,7 @@ orderByDesc(field: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -1038,7 +1038,7 @@ prefixKey(prefix: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#prefixKey
+**替代接口：** [prefixKey](ohos.data.distributedKVStore.Query#prefixKey)
 
 <!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
 
@@ -1054,7 +1054,7 @@ prefixKey(prefix: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -1084,7 +1084,7 @@ reset(): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#reset
+**替代接口：** [reset](ohos.data.distributedKVStore.Query#reset)
 
 <!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
 
@@ -1094,7 +1094,7 @@ reset(): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回重置的Query对象。 |
+| Query | 返回重置的Query对象。 |
 
 ## 示例
 
@@ -1125,7 +1125,7 @@ setSuggestIndex(index: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#setSuggestIndex
+**替代接口：** [setSuggestIndex](ohos.data.distributedKVStore.Query#setSuggestIndex)
 
 <!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
 
@@ -1141,7 +1141,7 @@ setSuggestIndex(index: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 
@@ -1171,7 +1171,7 @@ unlike(field: string, value: string): Query
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Query#unlike
+**替代接口：** [unlike](ohos.data.distributedKVStore.Query#unlike)
 
 <!--Device-Query-unlike(field: string, value: string): Query--><!--Device-Query-unlike(field: string, value: string): Query-End-->
 
@@ -1188,7 +1188,7 @@ unlike(field: string, value: string): Query
 
 | 类型 | 说明 |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | 返回Query对象。 |
+| Query | 返回Query对象。 |
 
 ## 示例
 

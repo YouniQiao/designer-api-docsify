@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfoById
@@ -32,17 +32,17 @@ Obtains the information of a specified widget that has been added to the home sc
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;formInfo.RunningFormInfo&gt; |
+| Promise & lt;formInfo.RunningFormInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
+| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

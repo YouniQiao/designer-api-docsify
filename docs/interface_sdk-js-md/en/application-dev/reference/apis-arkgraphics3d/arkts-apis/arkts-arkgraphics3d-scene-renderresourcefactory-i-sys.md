@@ -34,12 +34,12 @@ Create a new scene from a SceneLoadParams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | the resource of creating a scene |
+| uri | ResourceStr | Yes | the resource of creating a scene |
 | param | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Yes | the params for scene load |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Scene&gt; | Promise used to return a scene |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return a scene |
 

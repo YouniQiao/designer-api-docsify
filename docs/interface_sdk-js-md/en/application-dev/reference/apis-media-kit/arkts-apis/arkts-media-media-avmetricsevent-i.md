@@ -13,7 +13,7 @@ Describes the information of an Metrics Event.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## details
@@ -24,7 +24,7 @@ details: Record<string, Object>
 
 The detailed information of the event.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

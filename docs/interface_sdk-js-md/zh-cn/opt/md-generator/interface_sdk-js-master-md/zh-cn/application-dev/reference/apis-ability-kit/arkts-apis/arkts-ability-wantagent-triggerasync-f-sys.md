@@ -22,25 +22,25 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-t.md) | 是 |
 | triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | 是 |
-| context | [Context](arkts-ability-context-c-sys.md) | 是 |
+| context | [Context](arkts-ability-context-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;CompleteData&gt; |
+| Promise & lt;CompleteData & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16000020](../errorcode-ability.md#16000020-传入的context对象不是ability级别context) |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000153](../errorcode-ability.md#16000153-wantagent对象已被取消) |
+| [16000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000020-传入的context对象不是ability级别context) |
+| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16000153](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000153-wantagent对象已被取消) |
 
 ## 示例
 

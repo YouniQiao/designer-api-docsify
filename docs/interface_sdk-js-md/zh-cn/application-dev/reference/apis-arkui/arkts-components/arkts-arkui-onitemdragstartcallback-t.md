@@ -20,7 +20,7 @@ declare type OnItemDragStartCallback = (event: ItemDragInfo, itemIndex: number) 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [ItemDragInfo](../arkts-apis/arkts-arkui-common-itemdraginfo-i.md) | 是 | 拖拽点的信息。 |
+| event | [ItemDragInfo](arkts-arkui-itemdraginfo-i.md) | 是 | 拖拽点的信息。 |
 | itemIndex | number | 是 | 被拖拽列表元素索引值。 |
 
 **返回值：**

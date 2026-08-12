@@ -164,7 +164,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines popup background blur Style
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -206,7 +206,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the popup's background effect with options
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -226,7 +226,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 The LinearGradient of popup's innerline.
 
-**Type:** [PopupBorderLinearGradient](../arkts-components/arkts-arkui-popupborderlineargradient-i.md)
+**Type:** [PopupBorderLinearGradient](arkts-arkui-common-popupborderlineargradient-i.md)
 
 **Since:** 23
 
@@ -266,7 +266,7 @@ colorMode?: AnchoredColorMode
 
 Define the popup theme color mode.
 
-**Type:** [AnchoredColorMode](../arkts-components/arkts-arkui-anchoredcolormode-e.md)
+**Type:** [AnchoredColorMode](arkts-arkui-common-anchoredcolormode-e.md)
 
 **Default:** AnchoredColorMode.FOLLOW_TARGET
 
@@ -396,7 +396,7 @@ mask?: boolean | PopupMaskType
 
 The mask to block gesture events of popup.When mask is set false, gesture events are not blocked.When mask is set true, gesture events are blocked and mask color is transparent.
 
-**Type:** boolean \| PopupMaskType
+**Type:** boolean \| [PopupMaskType](arkts-arkui-common-popupmasktype-i.md)
 
 **Since:** 23
 
@@ -516,7 +516,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 Callback function when the popup interactive dismiss.Use boolean to respond all interactive dismiss event. Use Callback to customize which event should be responded.
 
-**Type:** boolean \| Callback&lt;DismissPopupAction&gt;
+**Type:** boolean \| [Callback](arkts-arkui-callback-t.md)&lt;[DismissPopupAction](arkts-arkui-common-dismisspopupaction-i.md)&gt;
 
 **Since:** 23
 
@@ -536,7 +536,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 The LinearGradient of popup's outline.
 
-**Type:** [PopupBorderLinearGradient](../arkts-components/arkts-arkui-popupborderlineargradient-i.md)
+**Type:** [PopupBorderLinearGradient](arkts-arkui-common-popupborderlineargradient-i.md)
 
 **Since:** 23
 
@@ -640,7 +640,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 The style of popup Shadow.
 
-**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-common-shadowstyle-e.md)
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 

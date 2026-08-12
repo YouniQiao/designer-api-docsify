@@ -6,11 +6,11 @@
 function dumpJsHeapData(filename : string) : void
 ```
 
-�����������ת����
+虚拟机堆数据转储。
 
-> **ע��**
+> **注意**
 > 
-> ����������ѵ��������ʱ���Ҹýӿ�Ϊͬ���ӿڣ����鲻Ҫ���ϼܰ汾�е��øýӿڣ��Ա���Ӧ�ö�����Ӱ���û����顣
+> 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 9
 
@@ -24,13 +24,13 @@ function dumpJsHeapData(filename : string) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filename | string | 是 | �û��Զ���������������ת��������ļ���������Ӧ�õ�`files`Ŀ¼�������Ըò���������heapsnapshot�ļ���string���ȵ����ֵΪ128�ֽڡ� |
+| filename | string | 是 | 用户自定义的虚拟机堆数据转储输出的文件名，将在应用的`files`目录下生成以该参数命名的heapsnapshot文件。string长度的最大值为128字节。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameter check failed, Parameter type error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | the parameter check failed, Parameter type error |
 
 ## 示例
 
@@ -52,11 +52,11 @@ try {
 function dumpJsHeapData(filename: string, needClean: boolean): void
 ```
 
-�����������ת����֧�����nodeId���档
+虚拟机堆数据转储，支持清除nodeId缓存。
 
-> **ע��**
+> **注意**
 > 
-> ����������ѵ��������ʱ���Ҹýӿ�Ϊͬ���ӿڣ����鲻Ҫ���ϼܰ汾�е��øýӿڣ��Ա���Ӧ�ö�����Ӱ���û����顣
+> 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 24
 
@@ -74,8 +74,8 @@ function dumpJsHeapData(filename: string, needClean: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filename | string | 是 | �û��Զ�����������ת���ļ���������Ӧ�õ�filesĿ¼������fileName.heapsnapshot��ʽ�ļ���string���ȵ����ֵΪ128�ֽڡ� |
-| needClean | boolean | 是 | ת���ѿ���ǰ�Ƿ���Ҫ���nodeId���档true����Ҫ�����false������Ҫ����� |
+| filename | string | 是 | 用户自定义的虚拟机堆转储文件名，将在应用的files目录下生成fileName.heapsnapshot格式文件。string长度的最大值为128字节。 |
+| needClean | boolean | 是 | 转储堆快照前是否需要清除nodeId缓存。true：需要清除；false：不需要清除。 |
 
 ## 示例
 

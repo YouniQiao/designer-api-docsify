@@ -13,7 +13,7 @@ ArkTS collections.
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## Summary

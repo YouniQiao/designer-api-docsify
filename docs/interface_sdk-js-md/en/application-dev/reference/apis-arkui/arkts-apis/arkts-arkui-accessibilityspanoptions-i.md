@@ -22,7 +22,7 @@ Default value: **''**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 
@@ -92,7 +92,7 @@ Default value: **''**
 
 If the value is **undefined**, the default value is used.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 

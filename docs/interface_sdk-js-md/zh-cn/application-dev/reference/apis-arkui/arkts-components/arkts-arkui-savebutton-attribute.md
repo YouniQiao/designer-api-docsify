@@ -38,7 +38,7 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses | 是 | 保存控件图标的圆角半径，支持设置四个圆角。 &lt;br&gt;默认值：四个圆角均为0vp。支持像素单位（vp、px等），取值范围≥0。传入负值时自动修正为0。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则图标的圆角半径 设置不生效。 |
+| radius | Dimension \| BorderRadiuses | 是 | 保存控件图标的圆角半径，支持设置四个圆角。 &lt;br&gt;默认值：四个圆角均为0vp。支持像素单位（vp、px等），取值范围≥0。传入负值时自动修正为0。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则图标的圆角半径 设置不生效。 |
 
 ## iconSize
 
@@ -64,7 +64,7 @@ iconSize(size: Dimension | SizeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| SizeOptions | 是 | 图标尺寸，支持像素单位（vp、px等）。 &lt;br&gt;不支持设置百分比字符串。若设置Dimension类型入参的百分比字符串，则图标尺寸显示为默认值； 若设置SizeOptions类型入参的width或height属性为百分比字符串，则图标尺寸显示为0vp。&lt;br/&gt;对于保存控件提供的系统图标：&lt;br/&gt;- 使用Dimension类型入参时，宽 、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，若宽、高设定值不一致，则宽、高相等取两者较小值；若仅设定其中一个值，则取该值作为宽、高值。系统提供图标采用此规则是为保证图标的正方形显示和视觉一致 性。&lt;br/&gt;对于自定义图标：&lt;br/&gt;- 使用Dimension类型入参时，宽、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，建议同时设定宽和高，此时按照指定宽、高生效；若仅设定其中一个值，则宽 高均显示为该设定值。自定义图标允许灵活设定尺寸以适应不同图片比例。&lt;br/&gt;- 当设定的宽高与自定义图标的宽高比例不一致时，图片按[ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md)的方式填充显示区域。 |
+| size | Dimension \| SizeOptions | 是 | 图标尺寸，支持像素单位（vp、px等）。 &lt;br&gt;不支持设置百分比字符串。若设置Dimension类型入参的百分比字符串，则图标尺寸显示为默认值； 若设置SizeOptions类型入参的width或height属性为百分比字符串，则图标尺寸显示为0vp。&lt;br/&gt;对于保存控件提供的系统图标：&lt;br/&gt;- 使用Dimension类型入参时，宽 、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，若宽、高设定值不一致，则宽、高相等取两者较小值；若仅设定其中一个值，则取该值作为宽、高值。系统提供图标采用此规则是为保证图标的正方形显示和视觉一致 性。&lt;br/&gt;对于自定义图标：&lt;br/&gt;- 使用Dimension类型入参时，宽、高相等，均为设定值。&lt;br/&gt;- 使用SizeOptions类型入参时，建议同时设定宽和高，此时按照指定宽、高生效；若仅设定其中一个值，则宽 高均显示为该设定值。自定义图标允许灵活设定尺寸以适应不同图片比例。&lt;br/&gt;- 当设定的宽高与自定义图标的宽高比例不一致时，图片按[ImageFit.Cover](ImageFit)的方式填充显示区域。 |
 
 ## onClick
 
@@ -118,7 +118,7 @@ setIcon(icon: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。 &lt;br&gt;可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)。当资源为非图片资源或不支持的格式时，图标显示为空白。&lt;br/&gt;从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。&lt;br/&gt;若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
+| icon | Resource | 是 | 自定义图标资源信息，仅支持Resource类型的数据源。 &lt;br&gt;可支持的图片格式：png、jpg、jpeg、bmp、svg、webp、gif和heif等，支持的图片格式范围见[Image](./image)。当资源为非图片资源或不支持的格式时，图标显示为空白。&lt;br/&gt;从API版本26.0.0开始，支持Symbol格式的Resource类型的数据源。&lt;br/&gt;若应用不具备ohos.permission.CUS TOMIZE_SAVE_BUTTON权限，则自定义图标设置不生效，保存控件保持默认样式。 |
 
 ## setText
 
@@ -205,7 +205,7 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | 是 | 设置保存控件Symbol图标粗细。 &lt;br&gt;支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。&lt;br/&gt;支持string类型：可传入number类型的数字字符串（如"400"），或[FontWeight](../arkts-apis/arkts-arkui-enums-fontweight-e.md/arkts-arkui-enums-fontweight-e.md)的枚举值的小写字符串（如"normal"）。&lt;br/&gt;默认值：FontWeight.Normal（对应数值400）。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
+| fontWeight | number \| FontWeight \| string \| Resource | 是 | 设置保存控件Symbol图标粗细。 &lt;br&gt;支持number类型：取值范围为[100, 900]，取值间隔为100，数值越大字体越粗。&lt;br/&gt;支持string类型：可传入number类型的数字字符串（如"400"），或[FontWeight](FontWeight)的枚举值的小写字符串（如"normal"）。&lt;br/&gt;默认值：FontWeight.Normal（对应数值400）。&lt;br/&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_ BUTTON权限，则该设置不生效。 |
 
 ## symbolIconColor
 
@@ -269,7 +269,7 @@ symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| strategy | [SymbolRenderingStrategy](../arkts-apis/arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md) | 是 | 保存控件Symbol图标渲染策略，用于控制Symbol图标的渲染方式。 &lt;br&gt;默认值：SymbolRenderingStrategy.SINGLE。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
+| strategy | SymbolRenderingStrategy | 是 | 保存控件Symbol图标渲染策略，用于控制Symbol图标的渲染方式。 &lt;br&gt;默认值：SymbolRenderingStrategy.SINGLE。 &lt;br&gt;若应用不具备ohos.permission.CUSTOMIZE_SAVE_BUTTON权限，则该设置不生效。 |
 
 ## userCancelEvent
 

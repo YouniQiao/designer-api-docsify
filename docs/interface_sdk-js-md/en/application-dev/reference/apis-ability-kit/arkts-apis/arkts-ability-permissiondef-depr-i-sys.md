@@ -5,7 +5,7 @@ The module provides permission details defined in the configuration file.
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md) instead.
+> [bundleManager-PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef) instead.
 > 
 > The APIs provided by this module are system APIs.
 
@@ -15,7 +15,7 @@ The module provides permission details defined in the configuration file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PermissionDef:PermissionDef](arkts-ability-permissiondef-i-sys.md)
+**Substitutes:** [PermissionDef](arkts-ability-permissiondef-i-sys.md#PermissionDef)
 
 <!--Device-unnamed-export interface PermissionDef--><!--Device-unnamed-export interface PermissionDef-End-->
 
@@ -41,7 +41,7 @@ ID of the permission description.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.PermissionDef#descriptionId
+**Substitutes:** [descriptionId](ohos.bundle.bundleManager/bundleManager.PermissionDef#descriptionId)
 
 <!--Device-PermissionDef-descriptionId: number--><!--Device-PermissionDef-descriptionId: number-End-->
 
@@ -67,7 +67,7 @@ Grant mode of the permission. The value **0** means that the system automaticall
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.PermissionDef#grantMode
+**Substitutes:** [grantMode](ohos.bundle.bundleManager/bundleManager.PermissionDef#grantMode)
 
 <!--Device-PermissionDef-grantMode: number--><!--Device-PermissionDef-grantMode: number-End-->
 
@@ -93,7 +93,7 @@ ID of the permission label.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.PermissionDef#labelId
+**Substitutes:** [labelId](ohos.bundle.bundleManager/bundleManager.PermissionDef#labelId)
 
 <!--Device-PermissionDef-labelId: number--><!--Device-PermissionDef-labelId: number-End-->
 
@@ -119,7 +119,7 @@ Name of the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.PermissionDef#permissionName
+**Substitutes:** [permissionName](ohos.bundle.bundleManager/bundleManager.PermissionDef#permissionName)
 
 <!--Device-PermissionDef-permissionName: string--><!--Device-PermissionDef-permissionName: string-End-->
 

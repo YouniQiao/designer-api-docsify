@@ -6,7 +6,7 @@ Wi-Fi hotspot configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.HotspotConfig
+**Substitutes:** [HotspotConfig](ohos.wifiManager/wifiManager.HotspotConfig)
 
 <!--Device-wifi-interface HotspotConfig--><!--Device-wifi-interface HotspotConfig-End-->
 
@@ -17,7 +17,7 @@ Wi-Fi hotspot configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## band
@@ -34,7 +34,7 @@ The frequency band of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.HotspotConfig.band
+**Substitutes:** [band](ohos.wifiManager/wifiManager.HotspotConfig.band)
 
 <!--Device-HotspotConfig-band: number--><!--Device-HotspotConfig-band: number-End-->
 
@@ -56,7 +56,7 @@ The maximum number of connections allowed by the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.HotspotConfig.maxConn
+**Substitutes:** [maxConn](ohos.wifiManager/wifiManager.HotspotConfig.maxConn)
 
 <!--Device-HotspotConfig-maxConn: number--><!--Device-HotspotConfig-maxConn: number-End-->
 
@@ -78,7 +78,7 @@ The password of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.HotspotConfig.preSharedKey
+**Substitutes:** [preSharedKey](ohos.wifiManager/wifiManager.HotspotConfig.preSharedKey)
 
 <!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
 
@@ -94,13 +94,13 @@ securityType: WifiSecurityType
 
 The encryption mode of the Wi-Fi hotspot
 
-**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
+**Type:** WifiSecurityType
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.HotspotConfig.securityType
+**Substitutes:** [securityType](ohos.wifiManager/wifiManager.HotspotConfig.securityType)
 
 <!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
 
@@ -122,7 +122,7 @@ The SSID of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.HotspotConfig.ssid
+**Substitutes:** [ssid](ohos.wifiManager/wifiManager.HotspotConfig.ssid)
 
 <!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
 

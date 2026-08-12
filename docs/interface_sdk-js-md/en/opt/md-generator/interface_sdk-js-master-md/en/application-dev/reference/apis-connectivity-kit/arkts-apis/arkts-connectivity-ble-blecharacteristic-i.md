@@ -11,7 +11,7 @@ Describes the Gatt characteristic.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -80,7 +80,7 @@ The characteristic value handle of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of {@link BLEDescriptor} contained in the characteristic
+The list of [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md#BLEDescriptor) contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
@@ -140,7 +140,7 @@ The properties of a BLECharacteristic instance
 serviceUuid: string
 ```
 
-The UUID of the {@link GattService} instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#GattService) instance to which the characteristic belongs
 
 **Type:** string
 

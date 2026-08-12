@@ -11,7 +11,7 @@ Provides APIs for creating diverse query conditions.
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from 'kits/@kit.ArkData';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## and
@@ -425,7 +425,7 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
@@ -458,7 +458,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | Array&lt;ValueType&gt; | Yes |
+| value | Array & lt;ValueType & gt; | Yes |
 
 **Return value:**
 
@@ -829,7 +829,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | Array&lt;ValueType&gt; | Yes |
+| value | Array & lt;ValueType & gt; | Yes |
 
 **Return value:**
 

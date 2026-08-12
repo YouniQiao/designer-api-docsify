@@ -11,7 +11,7 @@ Represents data of the widget type defined by the system.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abilityName
@@ -129,7 +129,7 @@ readonly uniformDataType: 'openharmony.form'
 ```
 
 Uniform data type, which has a fixed value of **openharmony.form**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'openharmony.form'
 

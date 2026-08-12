@@ -8,7 +8,7 @@ Enumerates the button types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
+**Substitutes:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#ActionButtonType)
 
 <!--Device-reminderAgent-export enum ActionButtonType--><!--Device-reminderAgent-export enum ActionButtonType-End-->
 
@@ -28,7 +28,7 @@ Button for closing the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_CLOSE](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#action_button_type_close)
+**Substitutes:** [ACTION_BUTTON_TYPE_CLOSE](reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_CLOSE)
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CLOSE = 0-End-->
 
@@ -48,7 +48,7 @@ Button for snoozing the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_SNOOZE](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md#action_button_type_snooze)
+**Substitutes:** [ACTION_BUTTON_TYPE_SNOOZE](reminderAgentManager.ActionButtonType.ACTION_BUTTON_TYPE_SNOOZE)
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_SNOOZE = 1-End-->
 

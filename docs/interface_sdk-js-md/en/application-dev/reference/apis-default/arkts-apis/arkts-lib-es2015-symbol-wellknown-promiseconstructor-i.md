@@ -8,7 +8,7 @@
 readonly [Symbol.species]: PromiseConstructor
 ```
 
-**Type:** [PromiseConstructor](arkts-lib-es2021-promise-promiseconstructor-i.md)
+**Type:** [PromiseConstructor](arkts-lib-es2015-symbol-wellknown-promiseconstructor-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

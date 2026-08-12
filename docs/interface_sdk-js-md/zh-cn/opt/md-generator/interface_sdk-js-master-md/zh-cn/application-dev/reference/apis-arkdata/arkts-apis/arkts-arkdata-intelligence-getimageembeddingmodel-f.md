@@ -24,15 +24,15 @@ function getImageEmbeddingModel(config: ModelConfig): Promise<ImageEmbedding>
 
 | 类型 |
 | --- |
-| Promise&lt;ImageEmbedding&gt; |
+| Promise&lt;[ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [31300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-服务内部异常) |
 
 ## 示例
 

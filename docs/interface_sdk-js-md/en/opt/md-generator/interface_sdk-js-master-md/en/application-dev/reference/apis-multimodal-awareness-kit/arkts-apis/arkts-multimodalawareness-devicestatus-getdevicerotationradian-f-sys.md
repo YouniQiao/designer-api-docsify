@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## getDeviceRotationRadian
@@ -28,15 +28,15 @@ The posture data contains the rotation angles of the x, y, and z axes, that is, 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DeviceRotationRadian&gt; |
+| Promise&lt;[DeviceRotationRadian](arkts-multimodalawareness-devicestatus-devicerotationradian-i-sys.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) |
 
 ## Examples
 

@@ -37,7 +37,7 @@ Creates a date picker in the given date range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DatePickerOptions](../arkts-apis/arkts-arkui-datepicker-datepickeroptions-i.md) | No | Parameters of the date picker. |
+| options | [DatePickerOptions](arkts-arkui-datepickeroptions-i.md) | No | Parameters of the date picker. |
 
 ## Summary
 

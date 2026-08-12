@@ -28,5 +28,5 @@ Create a FrameNode of Marquee type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Marquee](arkts-arkui-typenode-marquee-t.md) | Return Marquee type FrameNode. |
+| Marquee | Return Marquee type FrameNode. |
 

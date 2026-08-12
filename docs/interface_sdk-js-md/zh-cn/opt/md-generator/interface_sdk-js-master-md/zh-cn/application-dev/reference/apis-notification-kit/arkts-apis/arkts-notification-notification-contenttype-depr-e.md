@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#ContentType
+**替代接口：** [ContentType](ohos.notificationManager/notificationManager#ContentType)
 
 <!--Device-notification-export enum ContentType--><!--Device-notification-export enum ContentType-End-->
 
@@ -24,7 +24,7 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_BASIC_TEXT
+**替代接口：** [NOTIFICATION_CONTENT_BASIC_TEXT](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_BASIC_TEXT)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
@@ -42,7 +42,7 @@ NOTIFICATION_CONTENT_LONG_TEXT
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_LONG_TEXT
+**替代接口：** [NOTIFICATION_CONTENT_LONG_TEXT](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_LONG_TEXT)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
@@ -60,7 +60,7 @@ NOTIFICATION_CONTENT_PICTURE
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_PICTURE
+**替代接口：** [NOTIFICATION_CONTENT_PICTURE](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_PICTURE)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
@@ -78,7 +78,7 @@ NOTIFICATION_CONTENT_CONVERSATION
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_CONVERSATION
+**替代接口：** [NOTIFICATION_CONTENT_CONVERSATION](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_CONVERSATION)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
 
@@ -96,7 +96,7 @@ NOTIFICATION_CONTENT_MULTILINE
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_MULTILINE
+**替代接口：** [NOTIFICATION_CONTENT_MULTILINE](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_MULTILINE)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 

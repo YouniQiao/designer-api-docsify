@@ -16,7 +16,7 @@ TabBar布局模式枚举。
 Scrollable = 0
 ```
 
-每一个TabBar均使用实际布局宽度，超过总长度（横向Tabs的[barWidth](TabsAttribute.barWidth)，纵向Tabs的  
+每一个TabBar均使用实际布局宽度，超过总长度（横向Tabs的[barWidth](arkts-arkui-tabs-tabsattribute-i.md#barWidth)，纵向Tabs的  
 [barHeight](TabsAttribute.default barHeight(value: Length | undefined))）后可滑动。
 
 **起始版本：** 23

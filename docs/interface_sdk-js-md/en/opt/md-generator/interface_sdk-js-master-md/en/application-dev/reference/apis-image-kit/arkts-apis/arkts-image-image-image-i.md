@@ -3,11 +3,11 @@
 The **Image** class is used to obtain image content.
 
 An Image instance is returned when   
-[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and  
-[readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)are called.
+[readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage) and  
+[readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage)are called.
 
-Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md) by the data source.Images occupy a large amount of memory. When you finish using an Image instance, call   
-[release](arkts-image-image-image-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver) by the data source.Images occupy a large amount of memory. When you finish using an Image instance, call   
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ Image properties are initialized only during image creation and cannot be change
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getBufferData
@@ -93,7 +93,7 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise & lt;Component & gt; |
 
 ## getMetadata
 
@@ -127,8 +127,8 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## release
 
@@ -180,7 +180,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## clipRect
 
@@ -190,7 +190,7 @@ clipRect: Region
 
 Image area to be cropped.
 
-**Type:** [Region](arkts-image-image-region-i.md)
+**Type:** Region
 
 **Since:** 9
 
@@ -251,7 +251,7 @@ For details about the best practices of camera preview and photo capture, see
 [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and  
 [Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 9
 
@@ -266,7 +266,7 @@ readonly timestamp: number
 ```
 
 Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use   
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)to read the related Exif information.
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)to read the related Exif information.
 
 **Type:** number
 

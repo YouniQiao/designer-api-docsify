@@ -18,7 +18,7 @@ error?: ResourceStr | PixelMap
 
 Set the placeholder image when loading fails .
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ placeholder?: ResourceStr | PixelMap
 
 Set the placeholder image during the loading process.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 23
 

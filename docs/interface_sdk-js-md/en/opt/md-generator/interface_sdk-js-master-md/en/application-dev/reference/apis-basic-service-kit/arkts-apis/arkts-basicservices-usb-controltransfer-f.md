@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## controlTransfer
@@ -14,15 +14,15 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 Performs control transfer.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, call  
-[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, and call  
-[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call  
+[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  
+[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md#controltransfer)
+**Substitutes:** [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md#controlTransfer)
 
 <!--Device-usb-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>--><!--Device-usb-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>-End-->
 
@@ -32,7 +32,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
 | controlparam | [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md) | Yes |
 | timeout | number | No |
 
@@ -40,7 +40,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

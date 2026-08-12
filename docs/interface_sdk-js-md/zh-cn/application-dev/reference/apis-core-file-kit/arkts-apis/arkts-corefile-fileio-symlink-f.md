@@ -14,7 +14,7 @@ declare function symlink(target: string, srcPath: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+**替代接口：** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ declare function symlink(target: string, srcPath: string, callback: AsyncCallbac
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+**替代接口：** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 

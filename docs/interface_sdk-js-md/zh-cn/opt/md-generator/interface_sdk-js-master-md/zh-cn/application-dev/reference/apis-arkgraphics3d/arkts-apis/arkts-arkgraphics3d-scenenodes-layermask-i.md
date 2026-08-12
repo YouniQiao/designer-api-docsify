@@ -34,6 +34,28 @@ getEnabled(index: number): boolean
 | --- |
 | boolean |
 
+## 示例
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+function layerMask(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result) {
+      let node : Node | null = result.getNodeByPath("rootNode_");
+      if (node) {
+          // 获取掩码的使能状态，可根据业务需求对返回值进行后续处理
+          let enabled: boolean = node.layerMask.getEnabled(1);
+      }
+    }
+  }).catch((error: Error) => {
+    console.error('Scene load failed:', error);
+  });
+}
+```
+
 ## setEnabled
 
 ```TypeScript
@@ -54,3 +76,25 @@ setEnabled(index: number, enabled: boolean): void
 | --- | --- | --- |
 | index | number | 是 |
 | enabled | boolean | 是 |
+
+## 示例
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+function layerMask(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result) {
+      let node : Node | null = result.getNodeByPath("rootNode/Scene/");
+      if (node) {
+          // 设置掩码状态
+          node.layerMask.setEnabled(1, true);
+      }
+    }
+  }).catch((error: Error) => {
+    console.error('Scene load failed:', error);
+  });
+}
+```

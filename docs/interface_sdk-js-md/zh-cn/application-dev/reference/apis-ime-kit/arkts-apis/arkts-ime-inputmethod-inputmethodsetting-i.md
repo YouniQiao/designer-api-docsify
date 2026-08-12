@@ -5,15 +5,15 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 - **输入法变化订阅**：通过  
 [on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
 - **输入法列表查询**：通过  
-[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过  
-[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过  
-[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
+[getInputMethods](#getInputMethods)查询已激活/未激活输入法列表，通过  
+[getAllInputMethods](#getAllInputMethods)查询所有已安装输入法列表，通过  
+[listInputMethodSubtype](#listInputMethodSubtype)查询指定输入法的子类型列表。  
 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。  
 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。
 
-需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取InputMethodSetting实例后使用。
+需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取InputMethodSetting实例后使用。
 
-下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取到InputMethodSetting实例后，通过实例调用。
+下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取到InputMethodSetting实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -37,7 +37,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.inputMethodList/InputMethodListDialog
+**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
 
@@ -77,7 +77,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.inputMethodList/InputMethodListDialog
+**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
 
@@ -121,14 +121,14 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | 是 | 回调函数，返回所有输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回所有输入法列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -181,14 +181,14 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | Promise对象，返回所有输入法列表。 |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise对象，返回所有输入法列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -237,14 +237,14 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | 返回所有输入法列表。 |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; | 返回所有输入法列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -272,14 +272,14 @@ getInputMethodState(): Promise<EnabledState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EnabledState&gt; | Promise对象，返回EnabledState.DISABLED表示未启用; 返回EnabledState.BASIC_MODE表示基础模式; 返回 EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式。 |
+| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise对象，返回EnabledState.DISABLED表示未启用; 返回EnabledState.BASIC_MODE表示基础模式; 返回 EnabledState.FULL_EXPERIENCE_MODE表示完整体验模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -329,15 +329,15 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | true表示返回已激活输入法列表，false表示返回未激活输入法列表。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | 是 | 回调函数，返回已激活/未激活输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已激活/未激活输入法列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -396,15 +396,15 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | Promise对象，返回已激活/未激活输入法列表。 |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise对象，返回已激活/未激活输入法列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -460,15 +460,15 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;InputMethodProperty&gt; | 返回已激活/未激活输入法列表。 |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; | 返回已激活/未激活输入法列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -502,8 +502,8 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -565,8 +565,8 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -614,7 +614,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethod.InputMethodSetting#getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)
+**替代接口：** [getInputMethods](#getInputMethods)
 
 <!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
@@ -624,7 +624,7 @@ listInputMethod(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;InputMethodProperty&gt;&gt; | 是 | 回调函数，返回已安装的输入法列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | 是 | 回调函数，返回已安装的输入法列表。 |
 
 ## 示例
 
@@ -654,7 +654,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethod.InputMethodSetting#getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)
+**替代接口：** [getInputMethods](#getInputMethods)
 
 <!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-listInputMethod(): Promise<Array<InputMethodProperty>>-End-->
 
@@ -664,7 +664,7 @@ listInputMethod(): Promise<Array<InputMethodProperty>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;InputMethodProperty&gt;&gt; | Promise对象，返回已安装输入法列表。 |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise对象，返回已安装输入法列表。 |
 
 ## 示例
 
@@ -708,9 +708,9 @@ listInputMethodSubtype(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -790,9 +790,9 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) | bundle manager error. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -981,7 +981,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 18
 
-**替代接口：** ohos.inputMethodList/InputMethodListDialog
+**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
 
@@ -997,7 +997,7 @@ showOptionalInputMethods(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 
@@ -1031,7 +1031,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 **废弃版本：** 18
 
-**替代接口：** ohos.inputMethodList/InputMethodListDialog
+**替代接口：** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
 
@@ -1047,7 +1047,7 @@ showOptionalInputMethods(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 

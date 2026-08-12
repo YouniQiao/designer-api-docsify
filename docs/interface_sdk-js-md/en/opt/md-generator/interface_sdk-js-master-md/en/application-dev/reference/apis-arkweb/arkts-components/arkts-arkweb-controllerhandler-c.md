@@ -1,6 +1,6 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to {@link onWindowNew} method.
+Defines the onWindowNew callback, related to [onWindowNew](onWindowNew) method.
 
 **Since:** 9
 

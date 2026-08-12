@@ -18,7 +18,7 @@ color?: ResourceColor
 
 Sets the color of decoration.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ style?: TextDecorationStyle
 
 The style value of decoration.
 
-**类型：** [TextDecorationStyle](../arkts-apis/arkts-arkui-textdecorationstyle-e.md)
+**类型：** TextDecorationStyle
 
 **起始版本：** 12
 
@@ -84,7 +84,7 @@ type: TextDecorationType
 
 The decoration type.
 
-**类型：** [TextDecorationType](../arkts-apis/arkts-arkui-textdecorationtype-e.md)
+**类型：** TextDecorationType
 
 **起始版本：** 12
 

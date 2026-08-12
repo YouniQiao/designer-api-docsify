@@ -22,19 +22,19 @@ function createKVManager(config: KVManagerConfig): KVManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | 是 | 提供KVManager实例的配置信息，包括应用的上下文和调用方的包名（不能为空）。 |
+| config | KVManagerConfig | 是 | 提供KVManager实例的配置信息，包括应用的上下文和调用方的包名（不能为空）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | 返回创建的KVManager对象实例。 |
+| KVManager | 返回创建的KVManager对象实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 

@@ -18,7 +18,7 @@ handler: DataResubmissionHandler
 
 Form data resubmission handle.
 
-**Type:** [DataResubmissionHandler](../arkts-components/arkts-arkweb-dataresubmissionhandler-c.md)
+**Type:** [DataResubmissionHandler](arkts-arkweb-web-dataresubmissionhandler-c.md)
 
 **Since:** 23
 

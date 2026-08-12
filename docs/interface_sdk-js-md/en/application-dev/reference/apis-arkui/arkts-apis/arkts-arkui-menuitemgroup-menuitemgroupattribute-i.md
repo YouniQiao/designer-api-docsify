@@ -2,7 +2,7 @@
 
 Defines the MenuItemGroup component attribute functions.
 
-**Inheritance/Implementation:** MenuItemGroupAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** MenuItemGroupAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Set the attribute modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -65,7 +65,7 @@ Set menuitemgroup options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemGroupOptions](../arkts-components/arkts-arkui-menuitemgroupoptions-i.md) | No | menuitemgroup constructor options |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroup-menuitemgroupoptions-i.md) | No | menuitemgroup constructor options |
 
 **Return value:**
 

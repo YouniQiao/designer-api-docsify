@@ -29,7 +29,7 @@ Creates a page component for the [Stepper]{@link stepper} container.
 
 **Deprecated since:** 22
 
-**Substitutes:** <!--SUBSTITUTE_API-->Swiper#SwiperAttribute<!--/SUBSTITUTE_API-->
+**Substitutes:** [SwiperAttribute](Swiper#SwiperAttribute)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

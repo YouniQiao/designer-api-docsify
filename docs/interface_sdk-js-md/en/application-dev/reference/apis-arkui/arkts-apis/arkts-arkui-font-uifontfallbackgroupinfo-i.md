@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## fallback
@@ -22,7 +22,7 @@ fallback: Array<UIFontFallbackInfo>
 
 Fallback font list related.
 
-**Type:** Array&lt;UIFontFallbackInfo&gt;
+**Type:** Array&lt;[UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md)&gt;
 
 **Since:** 23
 

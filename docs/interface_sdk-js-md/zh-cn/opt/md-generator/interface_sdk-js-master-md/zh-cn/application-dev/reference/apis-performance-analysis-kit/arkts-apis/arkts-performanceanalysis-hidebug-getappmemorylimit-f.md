@@ -6,7 +6,7 @@
 function getAppMemoryLimit(): MemoryLimit
 ```
 
-��ȡӦ�ó�����̵��ڴ����ơ�
+获取应用程序进程的内存限制。
 
 **起始版本：** 12
 

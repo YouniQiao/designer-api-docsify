@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## convertToPixelMap
@@ -36,8 +36,8 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
 
 ## Examples
 

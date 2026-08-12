@@ -13,7 +13,7 @@ Describes the attributes of the input method panel.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## flag
@@ -24,7 +24,7 @@ flag?: PanelFlag
 
 State type of the panel.
 
-**Type:** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
+**Type:** PanelFlag
 
 **Default:** FLG_FIXED
 
@@ -44,7 +44,7 @@ type: PanelType
 
 Type of the panel.
 
-**Type:** [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
+**Type:** PanelType
 
 **Since:** 10
 

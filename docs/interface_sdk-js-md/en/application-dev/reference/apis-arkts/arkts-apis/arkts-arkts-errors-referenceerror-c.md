@@ -2,7 +2,7 @@
 
 Represents an error that occurs when a variable that doesn't exist (or hasn't yet been initialized)in the current scope is referenced
 
-**Inheritance/Implementation:** ReferenceError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ReferenceError extends [Error](Error)
 
 **Since:** 26.0.0
 

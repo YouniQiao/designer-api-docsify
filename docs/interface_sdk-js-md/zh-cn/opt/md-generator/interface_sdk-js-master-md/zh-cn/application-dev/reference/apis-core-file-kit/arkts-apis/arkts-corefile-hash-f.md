@@ -21,13 +21,13 @@ function hash(path: string, algorithm: string): Promise<string>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| algorithm | string | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ function hash(path: string, algorithm: string, callback: AsyncCallback<string>):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| algorithm | string | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**

@@ -10,7 +10,7 @@ Defines the routing policy.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation#NavPathStack
+**Substitutes:** [NavPathStack](Navigation#NavPathStack)
 
 <!--Device-unnamed-declare enum NavRouteMode--><!--Device-unnamed-declare enum NavRouteMode-End-->
 
@@ -30,7 +30,7 @@ The new navigation destination page replaces the current one. The current page i
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation#LaunchMode
+**Substitutes:** [LaunchMode](Navigation#LaunchMode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ The new navigation destination page overwrites the current one. The current page
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation#LaunchMode
+**Substitutes:** [LaunchMode](Navigation#LaunchMode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ The new navigation destination page replaces the current one. The current page i
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation#LaunchMode
+**Substitutes:** [LaunchMode](Navigation#LaunchMode)
 
 **Model restriction:** This API can be used only in the stage model.
 

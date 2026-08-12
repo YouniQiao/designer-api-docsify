@@ -13,7 +13,7 @@ Options for obtaining the screen brightness mode.
 ## Modules to Import
 
 ```TypeScript
-import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
+import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -62,7 +62,7 @@ success?: (data: BrightnessModeResponse) => void
 ```
 
 Called when an API call is successful. **data** is a return value of the  
-[BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md) type.
+[BrightnessModeResponse](arkts-basicservices-system-brightness-brightnessmoderesponse-i.md#BrightnessModeResponse) type.
 
 **Since:** 3
 

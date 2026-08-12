@@ -2,7 +2,7 @@
 
 Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
+**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)
 
 **Since:** 20
 
@@ -22,7 +22,7 @@ Sets the distortion animation mode for the dialog.
 
 Default Value: DistortionMode.DISTORTION_AUTO
 
-**Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
+**Type:** DistortionMode
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -48,7 +48,7 @@ Sets the edge light animation mode for the dialog.
 
 Default Value: EdgeLightMode.EDGELIGHT_AUTO
 
-**Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
+**Type:** EdgeLightMode
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

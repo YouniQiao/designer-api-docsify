@@ -60,7 +60,7 @@ function getWindow(): Promise<window.Window>
 
 | 类型 |
 | --- |
-| Promise&lt;window.Window&gt; |
+| Promise & lt;window.Window & gt; |
 
 ## 示例
 

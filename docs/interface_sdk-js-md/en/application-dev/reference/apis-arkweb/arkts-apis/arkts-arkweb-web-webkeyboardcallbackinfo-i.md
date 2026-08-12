@@ -1,6 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the {@link onInterceptKeyboardAttach} event.
+Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-arkweb-web-webattribute-i.md#onInterceptKeyboardAttach) event.
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ attributes: Record<string, string>
 
 The attributes of web input element.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ controller: WebKeyboardController
 
 The web keyboard controller.
 
-**Type:** [WebKeyboardController](../arkts-components/arkts-arkweb-webkeyboardcontroller-c.md)
+**Type:** [WebKeyboardController](arkts-arkweb-web-webkeyboardcontroller-c.md)
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ Describes the spp parameters.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.ConnectivityKit';
+import { socket } from '@kit.ConnectivityKit';
 ```
 
 ## psm
@@ -54,7 +54,7 @@ type: SppType
 
 Spp link type
 
-**Type:** [SppType](arkts-connectivity-socket-spptype-e.md)
+**Type:** SppType
 
 **Since:** 10
 

@@ -356,7 +356,7 @@ Returns an iterator for this string
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | an iterator for this string |
+| IterableIterator&lt;string&gt; | an iterator for this string |
 
 ## anchor
 
@@ -1379,7 +1379,7 @@ Resolves the replacement template string by parsing special substitution pattern
 | str | string | Yes | the original full string on which the replacement operation is being performed. |
 | position | int | Yes | the zero-based start index of the matched substring within the original string str. &lt;br&gt;The value must be an integer greater than or equal to 0. |
 | captures | string[] | Yes | an array of capture group matches. |
-| namedCaptures | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| undefined&gt; \| undefined | Yes | a mapping object for named capturing groups. |
+| namedCaptures | Record&lt;string, string \| undefined&gt; \| undefined | Yes | a mapping object for named capturing groups. |
 | replacement | string | Yes | the replacement template string. |
 
 **Return value:**
@@ -1853,7 +1853,7 @@ Retrieves the result of matching a string against a regular expression
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| RegExpMatchArray | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
 
 ## match
 
@@ -1883,7 +1883,7 @@ Retrieves the result of matching a string against a regular expression
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| RegExpMatchArray | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
 
 ## match
 
@@ -1913,7 +1913,7 @@ Retrieves the result of matching a string against a regular expression
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md) | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
+| RegExpMatchArray | If the regexp.global is true, all results matching the complete regular expression will be returned, but capturing groups are not included Otherwise, only the first complete match and its related capturing groups are returned |
 
 ## matchAll
 
@@ -1943,7 +1943,7 @@ Returns an iterator of all results matching a string against a regular expressio
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;RegExpMatchArray&gt; | an iterator of all results matching |
+| IterableIterator&lt;RegExpMatchArray&gt; | an iterator of all results matching |
 
 ## normalize
 

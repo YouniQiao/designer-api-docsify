@@ -16,7 +16,7 @@
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
 ```
 
-继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置快滑手势事件。
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface)，设置快滑手势事件。
 
 **起始版本：** 8
 
@@ -44,7 +44,7 @@
 (options?: SwipeGestureHandlerOptions): SwipeGestureInterface
 ```
 
-设置快滑手势事件。与[SwipeGesture](arkts-arkui-swipegestureinterface-i.md))}相比，options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
+设置快滑手势事件。与[SwipeGesture](SwipeGestureInterface(value?: { fingers?: number; direction?: SwipeDirection; speed?: number))}相比，options参数新增了isFingerCountLimited，表示是否检查触摸屏幕的手指数量。
 
 **起始版本：** 15
 
@@ -88,7 +88,7 @@ Swipe手势识别成功时触发回调。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 

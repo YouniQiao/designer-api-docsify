@@ -21,7 +21,7 @@ readonly action: Action
 - UPLOAD表示上传任务。  
 - DOWNLOAD表示下载任务。
 
-**类型：** [Action](arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 10
 
@@ -41,7 +41,7 @@ readonly ctime: long
 
 说明：使用  
 [request.agent.search](arkts-basicservices-agent-search-f.md#search)进行查询时，该值需处于[after,before]区间内才可正常查询到任务id，before和after信息详见  
-[Filter](arkts-basicservices-agent-filter-i.md)。
+[Filter](arkts-basicservices-agent-filter-i.md#Filter)。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -61,10 +61,10 @@ readonly data?: string | Array<FormItem>
 
 任务值。
 
-- 通过[request.agent.show](arkts-basicservices-agent-show-f.md#show)、  
-[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)进行查询。
+- 通过[request.agent.show](arkts-basicservices-agent-show-f.md#show-1)、  
+[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch-1)进行查询。
 
-**类型：** string \| Array&lt;FormItem&gt;
+**类型：** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **起始版本：** 10
 
@@ -232,7 +232,7 @@ readonly progress: Progress
 
 任务的过程进度。
 
-**类型：** [Progress](arkts-basicservices-agent-progress-i.md)
+**类型：** Progress
 
 **起始版本：** 10
 
@@ -361,8 +361,8 @@ readonly url?: string
 
 任务的url。
 
-- 通过[request.agent.show](arkts-basicservices-agent-show-f.md#show)、  
-[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)进行查询。
+- 通过[request.agent.show](arkts-basicservices-agent-show-f.md#show-1)、  
+[request.agent.touch](arkts-basicservices-agent-touch-f.md#touch-1)进行查询。
 
 **类型：** string
 

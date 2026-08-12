@@ -14,7 +14,7 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 
 **废弃版本：** 12
 
-**替代接口：** [systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -31,7 +31,7 @@ function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
 
 ## 示例
 
@@ -67,7 +67,7 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 **废弃版本：** 12
 
-**替代接口：** [systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealActiveTime(callback: AsyncCallback<number>): void-End-->
 
@@ -83,7 +83,7 @@ function getRealActiveTime(callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
 
 ## 示例
 
@@ -119,7 +119,7 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 
 **废弃版本：** 12
 
-**替代接口：** [systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemDateTime-function getRealActiveTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getRealActiveTime(isNano?: boolean): Promise<number>-End-->
 
@@ -141,7 +141,7 @@ function getRealActiveTime(isNano?: boolean): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
 
 ## 示例
 

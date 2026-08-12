@@ -2,13 +2,13 @@
 
 Manager pan profile.
 
-**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
+**Inheritance/Implementation:** PanProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.pan/pan.PanProfile
+**Substitutes:** [PanProfile](ohos.bluetooth.pan/pan.PanProfile)
 
 <!--Device-bluetoothManager-interface PanProfile extends BaseProfile--><!--Device-bluetoothManager-interface PanProfile extends BaseProfile-End-->
 
@@ -17,7 +17,7 @@ Manager pan profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## off('connectionStateChange')
@@ -32,7 +32,7 @@ Unsubscribe the event reported when the profile connection state changes.On API 
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.pan/pan.PanProfile.off#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetooth.pan/pan.PanProfile.off#event:connectionStateChange)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -52,8 +52,8 @@ Unsubscribe the event reported when the profile connection state changes.On API 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## on('connectionStateChange')
 
@@ -67,7 +67,7 @@ Subscribe the event reported when the profile connection state changes.On API 10
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.pan/pan.PanProfile.on#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetooth.pan/pan.PanProfile.on#event:connectionStateChange)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -87,5 +87,5 @@ Subscribe the event reported when the profile connection state changes.On API 10
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |

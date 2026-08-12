@@ -2,7 +2,7 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-a2dp-baseprofile-t.md#BaseProfile)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from 'kits/@kit.ConnectivityKit';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## getPlayingState
@@ -46,16 +46,16 @@ Obtains the playing state of device.
 
 | Type | Description |
 | --- | --- |
-| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | Returns the playing state. |
+| PlayingState | Returns the playing state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## setSeniorModeStateForSelf
@@ -40,5 +40,5 @@ Set this application's senior mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
+| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
 

@@ -30,7 +30,7 @@ Defines NodeContainer Component
 
 | Type | Description |
 | --- | --- |
-| [NodeContainerAttribute](../arkts-components/arkts-arkui-nodecontainer-attribute.md) |  |
+| [NodeContainerAttribute](arkts-arkui-nodecontainer-nodecontainerattribute-i.md) |  |
 
 
 ## NodeContainer
@@ -59,11 +59,11 @@ Defines NodeContainer Component. It requires calling setNodeContainerOptions at 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NodeContainerAttribute&gt; | Yes | callback to set up NodeContainer's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[NodeContainerAttribute](arkts-arkui-nodecontainer-nodecontainerattribute-i.md)&gt; | Yes | callback to set up NodeContainer's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeContainerAttribute](../arkts-components/arkts-arkui-nodecontainer-attribute.md) | The attribute of NodeContainer. |
+| [NodeContainerAttribute](arkts-arkui-nodecontainer-nodecontainerattribute-i.md) | The attribute of NodeContainer. |
 

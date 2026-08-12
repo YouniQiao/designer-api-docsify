@@ -28,13 +28,13 @@ export declare function TabContent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 支持单个子组件。&lt;br/&gt;**说明：**&lt;br/&gt;可内置系统组件和自定义组件，支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 支持单个子组件。&lt;br/&gt;**说明：**&lt;br/&gt;可内置系统组件和自定义组件，支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TabContentAttribute](../arkts-components/arkts-arkui-tabcontent-attribute.md) |  |
+| [TabContentAttribute](arkts-arkui-tabcontent-tabcontentattribute-i.md) |  |
 
 
 ## TabContent
@@ -64,12 +64,12 @@ export declare function TabContent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TabContentAttribute&gt; | 是 | tabContent属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 选项卡内容 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TabContentAttribute](arkts-arkui-tabcontent-tabcontentattribute-i.md)&gt; | 是 | tabContent属性实例 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 选项卡内容 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TabContentAttribute](../arkts-components/arkts-arkui-tabcontent-attribute.md) |  |
+| [TabContentAttribute](arkts-arkui-tabcontent-tabcontentattribute-i.md) |  |
 

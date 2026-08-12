@@ -11,7 +11,7 @@ This class is used for set proxy for ArkWeb.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## applyProxyOverride
@@ -34,14 +34,14 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| proxyConfig | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | Yes |
+| [proxyConfig](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md) | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | Yes |
 | callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## removeProxyOverride
 
@@ -69,4 +69,4 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

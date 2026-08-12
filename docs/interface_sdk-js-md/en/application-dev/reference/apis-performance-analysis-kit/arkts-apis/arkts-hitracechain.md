@@ -13,7 +13,7 @@ The **hiTraceChain** module implements call chain trace throughout a service pro
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary
@@ -31,7 +31,7 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 | [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md#isflagenabled) | Checks whether the trace flag is enabled for **HiTraceId**. This API returns the result synchronously. |
 | [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md#isvalid) | Checks whether a **HiTraceId** instance is valid. This API returns the result synchronously. |
 | [setId](arkts-performanceanalysis-hitracechain-setid-f.md#setid) | Sets a trace ID. This API returns the result synchronously.  Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is performed. |
-| [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint) | Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md)logging, which is synchronous.  When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start.  The trace points for **CS** and **CR** types must be used as a pair; likewise, trace points for **SR** and **SS**types must also be used together. Otherwise, the start and end trace points of HiTraceMeter cannot match each other. |
+| [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint) | Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md#hiTraceMeter)logging, which is synchronous.  When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start.  The trace points for **CS** and **CR** types must be used as a pair; likewise, trace points for **SR** and **SS**types must also be used together. Otherwise, the start and end trace points of HiTraceMeter cannot match each other. |
 
 ### Interfaces
 

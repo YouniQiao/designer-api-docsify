@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## queryPrinterCapabilityByUri
@@ -37,12 +37,12 @@ Query printer capabilityies by printer uri.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PrinterCapabilities&gt; |
+| Promise&lt;[PrinterCapabilities](arkts-basicservices-print-printercapabilities-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100005-invalid-printer) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

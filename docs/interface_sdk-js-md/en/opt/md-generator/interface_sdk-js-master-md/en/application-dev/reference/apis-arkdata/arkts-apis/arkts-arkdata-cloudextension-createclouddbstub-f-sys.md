@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## createCloudDBStub
@@ -32,7 +32,7 @@ Creates a RemoteObject instance based on a CloudDB instance.The system uses this
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## Examples
 

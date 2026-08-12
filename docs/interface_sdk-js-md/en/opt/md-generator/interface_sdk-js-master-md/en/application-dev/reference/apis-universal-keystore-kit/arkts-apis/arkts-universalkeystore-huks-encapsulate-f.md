@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## encapsulate
@@ -36,24 +36,24 @@ Post-Quantum Cryptography key encapsulation operation, supporting key management
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksReturnResult&gt; |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000017](../errorcode-huks.md#12000017-duplicate-key-alias) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000017-duplicate-key-alias) |
 | 12000016 |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../errorcode-huks.md#12000004-file-error) |
-| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
-| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
-| [12000015](../errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
-| [12000013](../errorcode-huks.md#12000013-the-credential-does-not-exist) |
-| [12000012](../errorcode-huks.md#12000012-external-error) |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
+| [12000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
+| [12000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) |
+| [12000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-failed-to-invoke-other-system-services) |
+| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
+| [12000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000013-the-credential-does-not-exist) |
+| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
+| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |

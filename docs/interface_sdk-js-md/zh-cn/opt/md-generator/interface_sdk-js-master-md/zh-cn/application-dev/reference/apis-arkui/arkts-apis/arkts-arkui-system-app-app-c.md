@@ -17,7 +17,7 @@ static getInfo(): AppResponse
 获取当前应用配置文件中声明的信息。在Stage模型下接口返回值为null。
 
 从API version9开始，推荐使用  
-[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)。
+[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)。
 
 **起始版本：** 3
 
@@ -160,7 +160,7 @@ Requests the application to run in full window.In some scenarios, such as semi-m
 
 **废弃版本：** 8
 
-**替代接口：** startAbility
+**替代接口：** [startAbility](startAbility)
 
 <!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void--><!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void-End-->
 
@@ -361,7 +361,7 @@ static terminate(): void
 
 退出当前Ability。在Stage模型下接口功能不生效。
 
-从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md/arkts-ability-featureability.md)。
+从API version 7开始，推荐使用[`@ohos.ability.featureAbility`](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#featureAbility)。
 
 **起始版本：** 3
 

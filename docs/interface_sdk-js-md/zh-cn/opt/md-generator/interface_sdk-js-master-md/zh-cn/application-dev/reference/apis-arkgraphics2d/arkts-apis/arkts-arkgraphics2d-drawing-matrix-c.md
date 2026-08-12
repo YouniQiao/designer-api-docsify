@@ -78,7 +78,7 @@ getAll(): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## getValue
 
@@ -110,7 +110,7 @@ getValue(index: number): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## invert
 
@@ -142,7 +142,7 @@ invert(matrix: Matrix): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isAffine
 
@@ -194,7 +194,7 @@ isEqual(matrix: Matrix): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isIdentity
 
@@ -234,19 +234,19 @@ mapPoints(src: Array<common2D.Point>): Array<common2D.Point>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 |
+| src | Array & lt;common2D.Point & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## mapRadius
 
@@ -294,7 +294,7 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | common2D.Rect | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | 是 |
 | src | common2D.Rect | 是 |
 
 **返回值：**
@@ -307,7 +307,7 @@ mapRect(dst: common2D.Rect, src: common2D.Rect): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## postConcat
 
@@ -348,14 +348,14 @@ postRotate(degree: number, px: number, py: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | degree | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## postScale
 
@@ -377,14 +377,14 @@ postScale(sx: number, sy: number, px: number, py: number): void
 | --- | --- | --- |
 | sx | number | 是 |
 | sy | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## postSkew
 
@@ -406,7 +406,7 @@ postSkew(kx: number, ky: number, px: number, py: number): void
 | --- | --- | --- |
 | kx | number | 是 |
 | ky | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## postTranslate
@@ -434,7 +434,7 @@ postTranslate(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## preConcat
 
@@ -460,7 +460,7 @@ preConcat(matrix: Matrix): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## preRotate
 
@@ -481,14 +481,14 @@ preRotate(degree: number, px: number, py: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | degree | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## preScale
 
@@ -510,14 +510,14 @@ preScale(sx: number, sy: number, px: number, py: number): void
 | --- | --- | --- |
 | sx | number | 是 |
 | sy | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## preSkew
 
@@ -539,7 +539,7 @@ preSkew(kx: number, ky: number, px: number, py: number): void
 | --- | --- | --- |
 | kx | number | 是 |
 | ky | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## preTranslate
@@ -567,7 +567,7 @@ preTranslate(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## rectStaysRect
 
@@ -642,13 +642,13 @@ setMatrix(values: Array<number>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| values | Array&lt;number&gt; | 是 |
+| values | Array & lt;number & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setMatrix
 
@@ -668,7 +668,7 @@ setMatrix(matrix: Array<number> | Matrix): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| matrix | Array&lt;number&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
+| matrix | Array & lt;number & gt; \ | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | 是 |
 
 ## setPolyToPoly
 
@@ -688,8 +688,8 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: num
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | 是 |
-| dst | Array&lt;common2D.Point&gt; | 是 |
+| src | Array & lt;common2D.Point & gt; | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | Array & lt;common2D.Point & gt; | 是 |
 | count | number | 是 |
 
 **返回值：**
@@ -702,7 +702,7 @@ setPolyToPoly(src: Array<common2D.Point>, dst: Array<common2D.Point>, count: num
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setRectToRect
 
@@ -723,7 +723,7 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | src | common2D.Rect | 是 |
-| dst | common2D.Rect | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | 是 |
 | scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | 是 |
 
 **返回值：**
@@ -736,7 +736,7 @@ setRectToRect(src: common2D.Rect, dst: common2D.Rect, scaleToFit: ScaleToFit): b
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setRotation
 
@@ -757,14 +757,14 @@ setRotation(degree: number, px: number, py: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | degree | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setScale
 
@@ -786,14 +786,14 @@ setScale(sx: number, sy: number, px: number, py: number): void
 | --- | --- | --- |
 | sx | number | 是 |
 | sy | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setSinCos
 
@@ -801,7 +801,7 @@ setScale(sx: number, sy: number, px: number, py: number): void
 setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 ```
 
-设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](arkts-arkgraphics2d-drawing-matrix-c.md#setrotation)功能类似，但setRotation直接传入角度值，而本方法传入正弦值和余弦值。
+设置矩阵为单位矩阵，使其围绕旋转中心点(px, py)以指定的正弦值和余弦值旋转。与[setRotation](#setRotation)功能类似，但setRotation直接传入角度值，而本方法传入正弦值和余弦值。
 
 **起始版本：** 20
 
@@ -815,7 +815,7 @@ setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 | --- | --- | --- |
 | sinValue | number | 是 |
 | cosValue | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## setSkew
@@ -824,8 +824,8 @@ setSinCos(sinValue: number, cosValue: number, px: number, py: number): void
 setSkew(kx: number, ky: number, px: number, py: number): void
 ```
 
-设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](arkts-arkgraphics2d-drawing-matrix-c.md#setrotation)、  
-[setScale](arkts-arkgraphics2d-drawing-matrix-c.md#setscale)、[setTranslation](arkts-arkgraphics2d-drawing-matrix-c.md#settranslation)类似，均为重置矩阵后施加单一变换。
+设置矩阵为单位矩阵，并围绕倾斜中心点(px, py)按(kx, ky)进行倾斜变换。与[setRotation](#setRotation)、  
+[setScale](#setScale)、[setTranslation](#setTranslation)类似，均为重置矩阵后施加单一变换。
 
 **起始版本：** 20
 
@@ -839,7 +839,7 @@ setSkew(kx: number, ky: number, px: number, py: number): void
 | --- | --- | --- |
 | kx | number | 是 |
 | ky | number | 是 |
-| px | number | 是 |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | 是 |
 | py | number | 是 |
 
 ## setTranslation
@@ -867,4 +867,4 @@ setTranslation(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

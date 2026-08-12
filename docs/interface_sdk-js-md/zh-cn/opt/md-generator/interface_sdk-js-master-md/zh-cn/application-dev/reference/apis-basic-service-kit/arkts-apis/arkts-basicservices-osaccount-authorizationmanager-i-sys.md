@@ -41,16 +41,16 @@ acquireAuthorization(privilege: string, options?: AcquireAuthorizationOptions): 
 
 | 类型 |
 | --- |
-| Promise&lt;AcquireAuthorizationResult&gt; |
+| Promise&lt;[AcquireAuthorizationResult](arkts-basicservices-osaccount-acquireauthorizationresult-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -104,15 +104,15 @@ hasAuthorization(privilege: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -163,15 +163,15 @@ releaseAuthorization(privilege: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 

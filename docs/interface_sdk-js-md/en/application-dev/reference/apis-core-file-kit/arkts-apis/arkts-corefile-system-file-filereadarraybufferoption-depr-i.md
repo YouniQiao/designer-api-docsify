@@ -67,7 +67,7 @@ success?: (data: FileReadArrayBufferResponse) => void
 ```
 
 Callback invoked when the API call is successful. **data** is  
-[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md).
+[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#FileReadArrayBufferResponse).
 
 **Since:** 3
 

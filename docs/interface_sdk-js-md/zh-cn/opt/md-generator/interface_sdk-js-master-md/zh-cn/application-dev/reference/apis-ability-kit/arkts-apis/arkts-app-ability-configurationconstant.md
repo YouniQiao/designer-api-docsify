@@ -1,6 +1,6 @@
 # @ohos.app.ability.ConfigurationConstant
 
-ConfigurationConstant模块提供了[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)操作相关的系统预置枚举。
+ConfigurationConstant模块提供了[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)操作相关的系统预置枚举。
 
 **起始版本：** 9
 

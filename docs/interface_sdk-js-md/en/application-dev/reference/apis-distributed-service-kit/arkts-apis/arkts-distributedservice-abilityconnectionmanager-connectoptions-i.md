@@ -13,7 +13,7 @@ Connection options for the application.
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## needSendData
@@ -44,7 +44,7 @@ parameters?: Record<string, string>
 
 Additional configuration for the connection.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 18
 

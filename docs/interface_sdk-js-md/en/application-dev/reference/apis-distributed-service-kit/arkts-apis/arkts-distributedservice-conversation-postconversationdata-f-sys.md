@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## postConversationData
@@ -37,8 +37,8 @@ Sends session data to the target device. The target device must be a trusted dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | string | Yes | Network ID or UDID of the target device, which can be obtained by calling [getTrustedDevices()](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices). The length of both the network ID and UDID must be 64 bytes. If an invalid value is passed, error code 401 is returned. |
-| bundleName | string | Yes | Name of the target bundle to which data is sent. The value contains 1 to 127 bytes and must be the same as the bundle name of the app registered with a listener on the target device by calling [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener). If this requirement is not met, data cannot be sent to the target app. If an invalid or empty value is passed, error code 401 is returned. |
+| deviceId | string | Yes | Network ID or UDID of the target device, which can be obtained by calling [getTrustedDevices()](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#getTrustedDevices). The length of both the network ID and UDID must be 64 bytes. If an invalid value is passed, error code 401 is returned. |
+| bundleName | string | Yes | Name of the target bundle to which data is sent. The value contains 1 to 127 bytes and must be the same as the bundle name of the app registered with a listener on the target device by calling [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerConversationListener). If this requirement is not met, data cannot be sent to the target app. If an invalid or empty value is passed, error code 401 is returned. |
 | abilityName | string | Yes | Name of the target ability to which data is sent. The value contains 1 to 127 bytes and must be the same as the ability name of the app registered with a session listener on the target device. If this requirement is not met, data cannot be sent to the target app. If an invalid or empty value is passed, error code 401 is returned. |
 | msg | ArrayBuffer | Yes | Message to be sent. A maximum of 10,240 bytes can be sent at a time. The data structure is defined by the application layer protocol. If empty or invalid data is passed, error code 401 is returned. |
 
@@ -52,13 +52,13 @@ Sends session data to the target device. The target device must be a trusted dev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [2004004](../../apis-distributedservice-kit/errorcode-conversation.md#2004004-peer-confirmation-timeout) | Timeout while waiting for acknowledgement from the remote side. |
-| [2004002](../../apis-distributedservice-kit/errorcode-conversation.md#2004002-failed-to-start-the-peer-ability) | Failed to start ability on the remote side. |
-| [2004003](../../apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) | Failed to send data. |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
-| [2004001](../../apis-distributedservice-kit/errorcode-conversation.md#2004001-peer-device-system-version-outdated) | Remote system version is too low. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. The deviceId, bundleName, abilityName or msg is invalid or empty. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. The application does not have the required permission to access distributed data. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [2004004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004004-peer-confirmation-timeout) | Timeout while waiting for acknowledgement from the remote side. |
+| [2004002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004002-failed-to-start-the-peer-ability) | Failed to start ability on the remote side. |
+| [2004003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) | Failed to send data. |
+| [2000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) | Internal error. |
+| [2004001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004001-peer-device-system-version-outdated) | Remote system version is too low. |
 

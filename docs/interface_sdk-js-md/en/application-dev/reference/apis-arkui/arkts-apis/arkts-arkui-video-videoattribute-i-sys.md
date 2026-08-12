@@ -2,7 +2,7 @@
 
 Defines the Video attribute.
 
-**Inheritance/Implementation:** VideoAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** VideoAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 

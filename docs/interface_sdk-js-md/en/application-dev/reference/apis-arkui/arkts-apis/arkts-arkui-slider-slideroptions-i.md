@@ -128,7 +128,7 @@ style?: SliderStyle
 
 Style of the slider thumb and track.
 
-**Type:** [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md)
+**Type:** [SliderStyle](arkts-arkui-slider-sliderstyle-e.md)
 
 **Default:** SliderStyle.OutSet
 
@@ -150,7 +150,7 @@ value?: double | undefined | Bindable<double>
 
 Current value of Slider.
 
-**Type:** double \| undefined \| Bindable&lt;double&gt;
+**Type:** double \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;double&gt;
 
 **Since:** 23
 

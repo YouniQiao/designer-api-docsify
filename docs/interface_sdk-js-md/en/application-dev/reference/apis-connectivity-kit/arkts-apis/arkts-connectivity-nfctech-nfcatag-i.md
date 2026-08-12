@@ -1,8 +1,8 @@
 # NfcATag
 
-Provides interfaces to control the read and write of tags that support the NFC-A technology.&lt;p&gt;This class is inherited from the {@link TagSession} abstract class, and provides methods to create{@code NfcATag} objects and obtain the ATQA and SAK.
+Provides interfaces to control the read and write of tags that support the NFC-A technology.&lt;p&gt;This class is inherited from the [TagSession](TagSession) abstract class, and provides methods to create{@code NfcATag} objects and obtain the ATQA and SAK.
 
-**Inheritance/Implementation:** NfcATag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** NfcATag extends [TagSession](TagSession)
 
 **Since:** 12
 
@@ -42,6 +42,16 @@ Obtains the ATQA of an NFC-A tag.
 | --- | --- |
 | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the ATQA of the NFC-A tag. |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcA tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let atqa : number[] = nfcA.getAtqa();
+console.info("nfcA atqa: " + atqa);
+```
+
 ## getSak
 
 ArkTS-Dyn:
@@ -71,4 +81,14 @@ Obtains the SAK of an NFC-A tag.
 | Type | Description |
 | --- | --- |
 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the SAK of the NFC-A tag. |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcA tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let sak : number = nfcA.getSak();
+console.info("nfcA sak: " + sak);
+```
 

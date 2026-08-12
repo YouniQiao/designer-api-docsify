@@ -20,13 +20,13 @@ declare function close(file: number | File): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | number \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
@@ -60,7 +60,7 @@ declare function close(file: number | File, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | number \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**

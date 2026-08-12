@@ -15,7 +15,7 @@ Defines user status data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## errCode

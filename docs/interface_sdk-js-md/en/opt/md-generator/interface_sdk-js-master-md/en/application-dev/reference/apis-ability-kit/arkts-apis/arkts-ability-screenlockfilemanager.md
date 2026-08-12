@@ -1,7 +1,7 @@
 # @ohos.ability.screenLockFileManager(Sensitive Data Access Management Under Lock Screen)
 
 This module provides the capability to protect app sensitive data under the lock screen, supporting requesting and releasing access permissions for sensitive data under the lock screen, as well as querying the status of sensitive data keys. When the reference count of a sensitive data key reaches zero and the screen has been locked for a duration reaching the system-configured lock duration threshold, the key is destroyed, and operations on that data become impossible. These keys can be restored only after the screen is unlocked. By calling the   
-[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess) API of this module, you can prevent the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
+[acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireAccess) API of this module, you can prevent the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
 
 > **NOTE：**
 > 
@@ -18,7 +18,7 @@ This module provides the capability to protect app sensitive data under the lock
 ## Modules to Import
 
 ```TypeScript
-import { screenLockFileManager } from 'kits/@kit.AbilityKit';
+import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

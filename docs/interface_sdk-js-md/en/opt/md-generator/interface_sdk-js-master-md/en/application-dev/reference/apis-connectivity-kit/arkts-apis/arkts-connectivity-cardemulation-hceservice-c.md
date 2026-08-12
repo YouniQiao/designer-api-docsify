@@ -11,7 +11,7 @@ A class for NFC host application.&lt;p&gt;The NFC host application use this clas
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## off('hceCmd')
@@ -43,8 +43,8 @@ Unsubscribe the event to receive the APDU data.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -110,9 +110,9 @@ register HCE event to receive the APDU data.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## sendResponse
 
@@ -126,7 +126,7 @@ Sends a response APDU to the remote device.&lt;p&gt;This method is used by a hos
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation.HceService#transmit
+**Substitutes:** [transmit](ohos.nfc.cardEmulation/cardEmulation.HceService#transmit)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -171,10 +171,10 @@ Starts the HCE, register more aids and allows this application to be preferred w
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## startHCE
 
@@ -188,7 +188,7 @@ start HCE
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation.HceService#start
+**Substitutes:** [start](ohos.nfc.cardEmulation/cardEmulation.HceService#start)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -238,10 +238,10 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## stopHCE
 
@@ -255,7 +255,7 @@ stop HCE
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation.HceService#stop
+**Substitutes:** [stop](ohos.nfc.cardEmulation/cardEmulation.HceService#stop)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -299,16 +299,16 @@ Sends a response APDU to the remote device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -373,10 +373,10 @@ Sends a response APDU to the remote device.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

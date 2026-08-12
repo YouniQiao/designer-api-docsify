@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfoForSelf
@@ -45,5 +45,5 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 | Error Code ID | Error Message |
 | --- | --- |
 | 17700093 | The specified skillName is not found. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
 

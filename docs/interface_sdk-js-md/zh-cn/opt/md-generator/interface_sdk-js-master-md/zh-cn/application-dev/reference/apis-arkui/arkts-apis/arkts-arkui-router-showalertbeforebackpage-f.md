@@ -11,20 +11,20 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 > **说明：**
 > 
 > - 从API version 9开始支持，从API version 18开始废弃，建议使用
-> [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)替代。showAlertBeforeBackPage需先
-> 通过[UIContext](arkts-arkui-uicontext.md)中的
+> [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showAlertBeforeBackPage)替代。showAlertBeforeBackPage需先
+> 通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showalertbeforebackpage)
+**替代接口：** [showAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#showAlertBeforeBackPage)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -42,8 +42,8 @@ function showAlertBeforeBackPage(options: EnableAlertOptions): void
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

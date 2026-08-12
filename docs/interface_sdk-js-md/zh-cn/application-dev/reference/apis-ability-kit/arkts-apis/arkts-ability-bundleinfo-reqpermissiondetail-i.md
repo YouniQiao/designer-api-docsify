@@ -102,7 +102,7 @@ usedScene: UsedScene
 
 权限使用的场景和时机。
 
-**类型：** [UsedScene](arkts-ability-bundlemanager-usedscene-t.md)
+**类型：** [UsedScene](arkts-ability-bundleinfo-usedscene-i.md)
 
 **起始版本：** 9
 

@@ -1,7 +1,7 @@
 # PlaybackStatus
 
 Enumerates the playback statuses of the player, which is an input parameter of the  
-[handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handlestatuschanged) API.
+[handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handleStatusChanged) API.
 
 **Since:** 12
 

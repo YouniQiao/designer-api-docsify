@@ -68,7 +68,7 @@ minimumSignificantDigits?: number
 pluralCategories: LDMLPluralRule[]
 ```
 
-**Type:** [LDMLPluralRule](../../apis-arkts/arkts-apis/arkts-arkts-intl-ldmlpluralrule-t.md)[]
+**Type:** LDMLPluralRule[]
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -78,7 +78,7 @@ pluralCategories: LDMLPluralRule[]
 type: PluralRuleType
 ```
 
-**Type:** [PluralRuleType](../../apis-arkts/arkts-apis/arkts-arkts-intl-pluralruletype-t.md)
+**Type:** PluralRuleType
 
 **ArkTS mode:** ArkTS-Dyn only
 

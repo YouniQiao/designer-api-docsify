@@ -36,7 +36,7 @@ curve?: Curve | string | ICurve
 
 Animation curve of this keyframe.
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| ICurve
+**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-t.md)
 
 **Since:** 23
 

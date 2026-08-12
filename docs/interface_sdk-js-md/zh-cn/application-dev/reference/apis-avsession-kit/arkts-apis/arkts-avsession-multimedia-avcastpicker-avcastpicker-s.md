@@ -62,7 +62,7 @@ activeColor?: Color | int | string
 
 未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-color-e.md) \| int \| string
+**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) \| int \| string
 
 **起始版本：** 23
 
@@ -103,7 +103,7 @@ customPicker?: CustomBuilder
 
 If not set, system will show the default appearance for different device type.
 
-**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -125,7 +125,7 @@ normalColor?: Color | int | string
 
 未设置时，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-color-e.md) \| int \| string
+**类型：** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) \| int \| string
 
 **起始版本：** 23
 
@@ -162,7 +162,7 @@ pickerStyle?: AVCastPickerStyle
 sessionType?: string
 ```
 
-会话类型，可参考[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)。默认值为当前应用创建的AVSessionType。
+会话类型，可参考[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#AVSessionType)。默认值为当前应用创建的AVSessionType。
 
 **类型：** string
 

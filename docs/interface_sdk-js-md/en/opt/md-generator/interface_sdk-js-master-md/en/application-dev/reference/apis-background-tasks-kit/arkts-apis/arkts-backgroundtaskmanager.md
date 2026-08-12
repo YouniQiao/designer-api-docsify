@@ -12,7 +12,7 @@ If an application has a service that can be intuitively perceived by users and n
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager](arkts-backgroundtaskmanager.md)
+**Substitutes:** [backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#backgroundTaskManager)
 
 <!--Device-unnamed-declare namespace backgroundTaskManager--><!--Device-unnamed-declare namespace backgroundTaskManager-End-->
 

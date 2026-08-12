@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## connectPrinterByIdAndPpd
@@ -32,18 +32,18 @@ Query recommend printer drivers by printer ID.
 | --- | --- | --- |
 | printerId | string | Yes |
 | protocol | string | Yes |
-| ppdName | string | Yes |
+| [ppdName](arkts-basicservices-print-ppdinfo-i.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

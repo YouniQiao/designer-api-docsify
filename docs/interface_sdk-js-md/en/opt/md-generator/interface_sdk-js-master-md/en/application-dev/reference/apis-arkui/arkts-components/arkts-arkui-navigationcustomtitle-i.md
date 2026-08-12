@@ -34,7 +34,7 @@ height: TitleHeight | Length
 
 Height of the title bar.
 
-**Type:** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| Length
+**Type:** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
 

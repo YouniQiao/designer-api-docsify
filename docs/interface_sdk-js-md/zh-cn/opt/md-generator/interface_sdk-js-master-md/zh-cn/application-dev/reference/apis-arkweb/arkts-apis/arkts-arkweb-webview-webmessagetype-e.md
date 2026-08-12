@@ -1,6 +1,6 @@
 # WebMessageType
 
-向 {@link onMessageEventExt} 提供的枚举类型，用于指示网络消息的类型。
+向 [onMessageEventExt](onMessageEventExt) 提供的枚举类型，用于指示网络消息的类型。
 
 **起始版本：** 10
 

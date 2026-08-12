@@ -71,16 +71,16 @@ deepFactoryReset(factoryResetStrategy: FactoryResetStrategy): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
 
 ## 示例
 
@@ -146,10 +146,10 @@ factoryReset(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
 
 ## 示例
 
@@ -208,16 +208,16 @@ factoryReset(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
 
 ## 示例
 
@@ -275,16 +275,16 @@ forceFactoryReset(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
 
 ## 示例
 
@@ -348,15 +348,15 @@ getDeepFactoryResetInfo(factoryResetStrategy: FactoryResetStrategy): Promise<Fac
 
 | 类型 |
 | --- |
-| Promise&lt;FactoryResetInfo&gt; |
+| Promise&lt;[FactoryResetInfo](arkts-basicservices-update-factoryresetinfo-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11500104](../../apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [11500104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-update.md#11500104-ipc通信异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

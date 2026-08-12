@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## replace
@@ -20,7 +20,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options:
+**Substitutes:** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
 
 <!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
 
@@ -30,7 +30,7 @@ Replaces the current page with another one in the application and destroys the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Description of the new page. |
+| options | RouterOptions | Yes | Description of the new page. |
 
 ## Examples
 

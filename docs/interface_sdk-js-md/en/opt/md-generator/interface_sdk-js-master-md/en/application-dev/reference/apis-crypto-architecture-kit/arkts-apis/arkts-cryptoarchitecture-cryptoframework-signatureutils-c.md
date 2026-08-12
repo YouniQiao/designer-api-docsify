@@ -11,7 +11,7 @@ Provides utilities for converting ECC/SM2 signature data.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## genEccSignature
@@ -46,10 +46,10 @@ Converts an ECC/SM2 signature (r, s) to the ASN.1 DER encoding.
 
 | Error Code ID |
 | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -106,10 +106,10 @@ Generates r and s from the ECC/SM2 signature data in ASN.1 DER encoding.
 
 | Error Code ID |
 | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
-| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 

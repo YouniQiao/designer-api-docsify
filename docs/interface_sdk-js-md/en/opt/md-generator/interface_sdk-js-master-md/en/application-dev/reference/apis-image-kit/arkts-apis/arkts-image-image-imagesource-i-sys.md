@@ -3,7 +3,7 @@
 The **ImageSource** class provides APIs to obtain image information.
 
 Before calling any API in ImageSource, you must use   
-[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
+[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
@@ -19,7 +19,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap
@@ -42,16 +42,16 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
 
 ## Examples
 
@@ -110,14 +110,14 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
 
 ## Examples
 
@@ -156,22 +156,22 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700304](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) |
 
 ## Examples
 

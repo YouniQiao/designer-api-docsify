@@ -13,7 +13,7 @@ Describes the scan filters.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## address

@@ -50,8 +50,8 @@ gzbuffer(size: long): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -191,14 +191,14 @@ gzclose(): Promise<ReturnStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -260,13 +260,13 @@ gzcloser(): Promise<ReturnStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -330,14 +330,14 @@ gzclosew(): Promise<ReturnStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -475,7 +475,7 @@ gzdopen(fd: int, mode: string): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。通常情况下，通过系统调用“open”或其他方法获得的。 |
-| mode | string | 是 | 用于指定访问模式。详情与[gzopen](arkts-basicservices-zlib-gzip-i.md#gzopen)一致。 |
+| mode | string | 是 | 用于指定访问模式。详情与[gzopen](#gzopen)一致。 |
 
 **返回值：**
 
@@ -487,8 +487,8 @@ gzdopen(fd: int, mode: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
 
 ## 示例
 
@@ -630,13 +630,13 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GzErrorOutputInfo&gt; | Promise对象，返回结果状态和出现的最后一个状态的状态消息。 |
+| Promise&lt;[GzErrorOutputInfo](arkts-basicservices-zlib-gzerroroutputinfo-i.md)&gt; | Promise对象，返回结果状态和出现的最后一个状态的状态消息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -711,20 +711,20 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-zlib-compressflushmode-e.md)的定义。 |
+| flush | [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md) | 是 | 控制刷新操作的行为，参考[CompressFlushMode枚举](arkts-basicservices-zlib-compressflushmode-e.md#CompressFlushMode)的定义。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -807,8 +807,8 @@ gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -900,8 +900,8 @@ gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -981,7 +981,7 @@ gzgetc(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1059,8 +1059,8 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1139,7 +1139,7 @@ gzoffset(): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1215,8 +1215,8 @@ gzopen(path: string, mode: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
 
 ## 示例
 
@@ -1297,9 +1297,9 @@ gzprintf(format: string, ...args: Array<string | double>): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1380,8 +1380,8 @@ gzputc(ch: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1462,8 +1462,8 @@ gzputs(str: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1544,8 +1544,8 @@ gzread(buf: ArrayBuffer): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1617,13 +1617,13 @@ gzrewind(): Promise<ReturnStatus>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1695,7 +1695,7 @@ gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 目标偏移位置。 |
-| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md)。 |
+| whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md#OffsetReferencePoint)。 |
 
 **返回值：**
 
@@ -1707,8 +1707,8 @@ gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1771,21 +1771,21 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md)。 |
-| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md)。 |
+| level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | 是 | 压缩级别，参考[CompressLevel枚举定义](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel)。 |
+| strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | 是 | 压缩策略，参考[CompressStrategy枚举定义](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReturnStatus&gt; | Promise对象，返回结果状态。 |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; | Promise对象，返回结果状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1861,7 +1861,7 @@ gztell(): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1942,8 +1942,8 @@ gzungetc(c: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -2028,8 +2028,8 @@ gzwrite(buf: ArrayBuffer, len: long): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 

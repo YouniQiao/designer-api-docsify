@@ -13,7 +13,7 @@ Provides APIs for randomly reading and writing a stream. Before invoking any API
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -71,14 +71,14 @@ Obtains a **ReadStream** instance of this **RandomAccessFile**.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -114,14 +114,14 @@ Obtains a **WriteStream** instance of this **RandomAccessFile**.
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -229,7 +229,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -271,7 +271,7 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
 | options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows:&lt;br&gt;- **length** (number): length of the data to read , in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. return the length of the data read, in bytes. |
 
 **Error codes:**
 
@@ -483,7 +483,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -528,7 +528,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
 | options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:&lt;br&gt;- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**.&lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. The call back returns the length of the data written, in bytes. |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getGraphicsMemory
@@ -26,13 +26,13 @@ Obtains the total GPU memory size (**gl** + **graph**) of the application. This 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
 
 ## Examples
 

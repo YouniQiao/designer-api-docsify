@@ -36,16 +36,16 @@ clearSearchHistory(): Promise<OperResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回清除搜索历史的操作结果。 |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回清除搜索历史的操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## destroy
 
@@ -75,7 +75,7 @@ destroy(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
 
 ## downloadMediaEntity
 
@@ -106,16 +106,16 @@ downloadMediaEntity(controlType: DownloadControlType, mediaEntity: MediaEntity):
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回下载媒体实体的操作结果。 |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回下载媒体实体的操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## executeAction
 
@@ -152,10 +152,10 @@ executeAction(actionType: string, params: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## favoriteMediaEntity
 
@@ -186,16 +186,16 @@ favoriteMediaEntity(actionType: MediaFavoriteType, mediaEntity: MediaEntity): Pr
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回收藏媒体的操作结果。 |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回收藏媒体的操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## handleMemberPurchase
 
@@ -225,16 +225,16 @@ handleMemberPurchase(info: MemberPurchaseInfo): Promise<DialogInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | Promise对象，返回对话框信息。 |
+| Promise&lt;[DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md)&gt; | Promise对象，返回对话框信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## login
 
@@ -265,16 +265,16 @@ login(controlType: LoginType, id?: string): Promise<QrCodeInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | Promise对象，返回二维码信息的数组。 |
+| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; | Promise对象，返回二维码信息的数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## offCurrentSingleChange
 
@@ -304,9 +304,9 @@ offCurrentSingleChange(callback?: Callback<Single>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offCustomElementsChange
 
@@ -336,9 +336,9 @@ offCustomElementsChange(callback?: ReportCustomElementsChangeEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offDialogCommandChange
 
@@ -368,9 +368,9 @@ offDialogCommandChange(callback?: ReportDialogCommandEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offDownloadMediaEntityStatusChange
 
@@ -394,15 +394,15 @@ offDownloadMediaEntityStatusChange(callback?: Callback<MediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity&gt; | 否 | 回调函数，返回媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | 否 | 回调函数，返回媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offExtensionAbilityChange
 
@@ -432,9 +432,9 @@ offExtensionAbilityChange(callback?: ReportExecuteAbilityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offMediaEntitiesChange
 
@@ -458,15 +458,15 @@ offMediaEntitiesChange(callback?: Callback<MediaEntity[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity[]&gt; | 否 | 回调函数，返回媒体实体数组。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | 否 | 回调函数，返回媒体实体数组。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offPlaylistChange
 
@@ -490,15 +490,15 @@ offPlaylistChange(callback?: Callback<PageMediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PageMediaEntity&gt; | 否 | 回调函数，返回标签页媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 否 | 回调函数，返回标签页媒体实体信息。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offReportExecuteAction
 
@@ -528,9 +528,9 @@ offReportExecuteAction(callback?: ReportExecuteActionEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offSettingsChange
 
@@ -554,15 +554,15 @@ offSettingsChange(callback?: Callback<SettingItem[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SettingItem[]&gt; | 否 | 回调函数，用于接收并处理设置项数组。不填该参数则注销该类型对应的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | 否 | 回调函数，用于接收并处理设置项数组。不填该参数则注销该类型对应的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offTabContentChange
 
@@ -592,9 +592,9 @@ offTabContentChange(callback?: ReportTabContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## offUserInfoChange
 
@@ -624,9 +624,9 @@ offUserInfoChange(callback?: Callback<UserInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onCurrentSingleChange
 
@@ -656,9 +656,9 @@ onCurrentSingleChange(callback: Callback<Single>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onCustomElementsChange
 
@@ -688,9 +688,9 @@ onCustomElementsChange(callback: ReportCustomElementsChangeEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onDialogCommandChange
 
@@ -720,9 +720,9 @@ onDialogCommandChange(callback: ReportDialogCommandEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onDownloadMediaEntityStatusChange
 
@@ -746,15 +746,15 @@ onDownloadMediaEntityStatusChange(callback: Callback<MediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity&gt; | 是 | 回调函数，返回媒体实体信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | 是 | 回调函数，返回媒体实体信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onExtensionAbilityChange
 
@@ -784,9 +784,9 @@ onExtensionAbilityChange(callback: ReportExecuteAbilityEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onMediaEntitiesChange
 
@@ -810,15 +810,15 @@ onMediaEntitiesChange(callback: Callback<MediaEntity[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity[]&gt; | 是 | 回调函数，返回媒体实体数组。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | 是 | 回调函数，返回媒体实体数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onPlaylistChange
 
@@ -842,15 +842,15 @@ onPlaylistChange(callback: Callback<PageMediaEntity>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PageMediaEntity&gt; | 是 | 回调函数，返回标签页媒体实体信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 是 | 回调函数，返回标签页媒体实体信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onReportExecuteAction
 
@@ -880,9 +880,9 @@ onReportExecuteAction(callback: ReportExecuteActionEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onSettingsChange
 
@@ -906,15 +906,15 @@ onSettingsChange(callback: Callback<SettingItem[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SettingItem[]&gt; | 是 | 回调函数，返回设置项数组。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | 是 | 回调函数，返回设置项数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onTabContentChange
 
@@ -944,9 +944,9 @@ onTabContentChange(callback: ReportTabContentEvent): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## onUserInfoChange
 
@@ -976,9 +976,9 @@ onUserInfoChange(callback: Callback<UserInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) | AVMusicTemplate error. |
 
 ## playForSearch
 
@@ -1009,16 +1009,16 @@ playForSearch(command: SearchPlayInfoType, args: SearchPlayInfo): Promise<OperRe
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回操作结果。 |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## playMediaEntity
 
@@ -1054,10 +1054,10 @@ playMediaEntity(mediaEntity: MediaEntity): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryCompilation
 
@@ -1094,16 +1094,16 @@ queryCompilation(compilationId: string, pageIndex: int): Promise<PageMediaEntity
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的合集的分页对象。 |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回查询的合集的分页对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryCompilationByKeyword
 
@@ -1133,16 +1133,16 @@ queryCompilationByKeyword(keyword: string): Promise<Compilation[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Compilation[]&gt; | Promise对象，返回合集数组。 |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; | Promise对象，返回合集数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryCurrentSingle
 
@@ -1172,10 +1172,10 @@ queryCurrentSingle(): Promise<Single>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryCustomContent
 
@@ -1205,16 +1205,16 @@ queryCustomContent(queryType: CustomType[]): Promise<CustomElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | Promise对象，返回查询的自定义元素。 |
+| Promise&lt;[CustomElement](arkts-avsession-avmusictemplate-customelement-i.md)&gt; | Promise对象，返回查询的自定义元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryHotWords
 
@@ -1244,10 +1244,10 @@ queryHotWords(): Promise<string[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryMainTabs
 
@@ -1271,16 +1271,16 @@ queryMainTabs(): Promise<MediaTab[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MediaTab[]&gt; | Promise对象，返回查询的主标签页数组。 |
+| Promise&lt;[MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md)[]&gt; | Promise对象，返回查询的主标签页数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryMediaEntity
 
@@ -1310,16 +1310,16 @@ queryMediaEntity(params: QueryMediaEntityParam): Promise<PageMediaEntity>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的媒体实体分页对象。 |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回查询的媒体实体分页对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryMediaEntityByKeyword
 
@@ -1357,16 +1357,16 @@ queryMediaEntityByKeyword(keyword: string, searchType: EntityType, pageIndex: in
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回与该关键字相关的媒体实体分页对象。 |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回与该关键字相关的媒体实体分页对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryMediaTabContent
 
@@ -1396,16 +1396,16 @@ queryMediaTabContent(tabId: string): Promise<MediaTabContent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | Promise对象，返回媒体标签页内容。 |
+| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; | Promise对象，返回媒体标签页内容。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryMemberPurchase
 
@@ -1435,16 +1435,16 @@ queryMemberPurchase(memberPurchaseType: MemberPurchaseType): Promise<MemberPurch
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; | Promise对象，返回购买会员信息的数组。 |
+| Promise&lt;[MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md)[]&gt; | Promise对象，返回购买会员信息的数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryPlaylist
 
@@ -1481,16 +1481,16 @@ queryPlaylist(pageIndex: int, sort: Sort): Promise<PageMediaEntity>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的播放列表的分页对象。 |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回查询的播放列表的分页对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## queryRecommendMediaEntityList
 
@@ -1514,16 +1514,16 @@ queryRecommendMediaEntityList(): Promise<MediaEntity[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MediaEntity[]&gt; | Promise对象，返回推荐的媒体实体数组。 |
+| Promise&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | Promise对象，返回推荐的媒体实体数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## querySearchHistory
 
@@ -1553,10 +1553,10 @@ querySearchHistory(): Promise<string[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## reportProblemAndAdvice
 
@@ -1586,16 +1586,16 @@ reportProblemAndAdvice(advice: string): Promise<OperResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回报告问题和建议的操作结果。 |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回报告问题和建议的操作结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## requestDialogInfo
 
@@ -1626,16 +1626,16 @@ requestDialogInfo(actionType: DialogActionType, actionInfo?: DialogActionInfo): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | Promise对象，返回对话框信息。 |
+| Promise&lt;[DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md)&gt; | Promise对象，返回对话框信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## updateSettings
 
@@ -1665,16 +1665,16 @@ updateSettings(settingItem: SettingItem): Promise<SettingItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | Promise对象，返回更新后的设置项。 |
+| Promise&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)&gt; | Promise对象，返回更新后的设置项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000003](../errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
+| [35000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-模板控制器不存在) | AVMusicTemplateController does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-模板监听未注册) | Template listener not registered. |
 
 ## isDestroy
 

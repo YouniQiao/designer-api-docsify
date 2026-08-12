@@ -2,7 +2,7 @@
 
 Represents optional configuration items for the SymbolNumberFormat object.Define the symbol element and value that need to be replaced.
 
-**Inheritance/Implementation:** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformatoptions-i.md/arkts-arkts-intl-numberformatoptions-i.md)
+**Inheritance/Implementation:** SymbolNumberFormatOptions extends [Intl.NumberFormatOptions](Intl.NumberFormatOptions)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Represents optional configuration items for the SymbolNumberFormat object.Define
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## groupingSeparator

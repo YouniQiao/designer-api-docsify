@@ -20,7 +20,7 @@ Detailed functional description for assistive technologies.
 
 Default value: **"Double-tap to activate"**
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 20
 
@@ -104,7 +104,7 @@ Text for assistive technologies (for example, screen readers).
 
 Default value: **""**
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 20
 

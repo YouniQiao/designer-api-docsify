@@ -13,7 +13,7 @@ Describes the options used in the **Readable** constructor.
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## encoding

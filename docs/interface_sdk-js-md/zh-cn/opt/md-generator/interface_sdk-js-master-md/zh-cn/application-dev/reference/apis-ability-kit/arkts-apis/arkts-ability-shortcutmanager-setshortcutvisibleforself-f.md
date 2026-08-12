@@ -25,13 +25,13 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
+| [17700070](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
 
 ## 示例
 

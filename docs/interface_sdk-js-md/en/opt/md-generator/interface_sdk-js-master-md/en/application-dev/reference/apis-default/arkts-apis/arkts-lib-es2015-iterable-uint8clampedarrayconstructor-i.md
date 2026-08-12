@@ -10,13 +10,13 @@ new (elements: Iterable<number>): Uint8ClampedArray
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| elements | Iterable&lt;number&gt; | Yes |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Iterable & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |
+| [Uint8ClampedArray](arkts-lib-es2015-iterable-uint8clampedarray-i.md) |
 
 ## from
 
@@ -32,12 +32,12 @@ Creates an array from an array-like or iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | Iterable&lt;number&gt; | Yes |
-| mapfn | (v: number, k: number) =&gt; number | No |
+| arrayLike | Iterable & lt;number & gt; | Yes |
+| mapfn | (v: number, k: number) = & gt; number | No |
 | thisArg | any | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |
+| [Uint8ClampedArray](arkts-lib-es2015-iterable-uint8clampedarray-i.md) |

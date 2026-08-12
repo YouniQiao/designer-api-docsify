@@ -25,14 +25,14 @@ export declare function Refresh(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RefreshOptions](../arkts-components/arkts-arkui-refreshoptions-i.md) | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
+| value | [RefreshOptions](arkts-arkui-refresh-refreshoptions-i.md) | 是 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RefreshAttribute](../arkts-components/arkts-arkui-refresh-attribute.md) | 返回Refresh组件的属性。 |
+| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | 返回Refresh组件的属性。 |
 
 
 ## Refresh
@@ -62,12 +62,12 @@ export declare function Refresh(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RefreshAttribute&gt; | 是 | 创建刷新的样式。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md)&gt; | 是 | 创建刷新的样式。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RefreshAttribute](../arkts-components/arkts-arkui-refresh-attribute.md) | Refresh的属性。 |
+| [RefreshAttribute](arkts-arkui-refresh-refreshattribute-i.md) | Refresh的属性。 |
 

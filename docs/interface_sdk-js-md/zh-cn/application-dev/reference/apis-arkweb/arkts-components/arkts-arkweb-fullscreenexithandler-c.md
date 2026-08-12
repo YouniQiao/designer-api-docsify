@@ -1,6 +1,6 @@
 # FullScreenExitHandler
 
-Define the handler to exit the full screen mode, related to the {@link onFullScreenEnter} event.
+Define the handler to exit the full screen mode, related to the [onFullScreenEnter](onFullScreenEnter) event.
 
 **起始版本：** 18
 

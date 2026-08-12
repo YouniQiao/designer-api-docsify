@@ -22,7 +22,7 @@ A carrier that carries the drawn content and drawing status.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## attachBrush
@@ -54,7 +54,7 @@ Attaches a brush to the canvas. When you draw on the canvas, the brush's style i
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## attachPen
 
@@ -85,7 +85,7 @@ Attaches a pen to the canvas. When you draw on the canvas, the pen's style is us
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clear
 
@@ -94,7 +94,7 @@ clear(color: common2D.Color): void
 ```
 
 Clears the canvas with a given color. This API has the same effect as  
-[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor).
+[drawColor](#drawColor).
 
 **Since:** 12
 
@@ -112,7 +112,7 @@ Clears the canvas with a given color. This API has the same effect as
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clear
 
@@ -160,7 +160,7 @@ Clips the drawable area of the canvas using a custom path.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clipRect
 
@@ -188,7 +188,7 @@ Clips the drawable area of the canvas using a rectangle.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clipRegion
 
@@ -208,14 +208,14 @@ Clips a region on the canvas.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 | clipOp | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clipRoundRect
 
@@ -243,7 +243,7 @@ Clips a rounded rectangle on the canvas.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## concatMatrix
 
@@ -263,13 +263,13 @@ Multiplies the current canvas matrix by the incoming matrix on the left. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## constructor
 
@@ -297,7 +297,7 @@ Creates a **Canvas** object that uses a **PixelMap** as the drawing target.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## detachBrush
 
@@ -353,7 +353,7 @@ Draws an arc on the canvas. with the start angle and sweep angle specified. If t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawArcWithCenter
 
@@ -402,7 +402,7 @@ Uses a brush to fill the drawable area of the canvas.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawCircle
 
@@ -430,7 +430,7 @@ Draws a circle. If the radius is less than or equal to zero, nothing is drawn. B
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawColor
 
@@ -439,7 +439,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
 Fills the drawable area of the canvas with the specified color and  
-[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md).
+[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode).
 
 **Since:** 11
 
@@ -452,13 +452,13 @@ Fills the drawable area of the canvas with the specified color and
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | color | common2D.Color | Yes |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | No |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawColor
 
@@ -467,8 +467,8 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 ```
 
 Fills the drawable area of the canvas with the specified color and  
-[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md). This API provides better performance than  
-[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor) and is recommended.
+[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode). This API provides better performance than  
+[drawColor](#drawColor) and is recommended.
 
 **Since:** 12
 
@@ -484,13 +484,13 @@ Fills the drawable area of the canvas with the specified color and
 | red | number | Yes |
 | green | number | Yes |
 | blue | number | Yes |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | No |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawColor
 
@@ -499,7 +499,7 @@ drawColor(color: number, blendMode?: BlendMode): void
 ```
 
 Fills the drawable area of the canvas with the specified color and  
-[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md).
+[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode).
 
 **Since:** 18
 
@@ -512,13 +512,13 @@ Fills the drawable area of the canvas with the specified color and
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | color | number | Yes |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | No |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawGlyphs
 
@@ -541,9 +541,9 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| glyphIds | Array&lt;number&gt; | Yes |
+| glyphIds | Array & lt;number & gt; | Yes |
 | glyphIdOffset | number | Yes |
-| positions | Array&lt;common2D.Point&gt; | Yes |
+| positions | Array & lt;common2D.Point & gt; | Yes |
 | positionOffset | number | Yes |
 | glyphCount | number | Yes |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
@@ -552,7 +552,7 @@ Draws the array of glyphs with specified font. Nothing is drawn if glyphCount is
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## drawImage
 
@@ -581,7 +581,7 @@ Draws an image. The coordinates of the upper left corner of the image are (left,
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawImageLattice
 
@@ -613,7 +613,7 @@ The intersections of even-numbered rows and columns (starting from 0) are fixed 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawImageNine
 
@@ -645,7 +645,7 @@ If the four corner sections are smaller than the target rectangle, they will be 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawImageRect
 
@@ -673,7 +673,7 @@ Draws an image onto a specified area of the canvas.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawImageRectWithSrc
 
@@ -704,7 +704,7 @@ Draws a portion of an image onto a specified area of the canvas.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawLine
 
@@ -733,7 +733,7 @@ Draws a line segment from the start point to the end point. If the coordinates o
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawNestedRoundRect
 
@@ -760,7 +760,7 @@ Draws two nested rounded rectangles. The outer rectangle boundary must contain t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawOval
 
@@ -786,7 +786,7 @@ Draws an oval on the canvas, where the shape and position of the oval are define
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawPath
 
@@ -812,7 +812,7 @@ Draws a custom path, which contains a set of path outlines. Each path outline ca
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawPixelMapMesh
 
@@ -836,16 +836,16 @@ Draws a **PixelMap** based on a mesh, with the mesh vertices evenly distributed 
 | pixelmap | image.PixelMap | Yes |
 | meshWidth | number | Yes |
 | meshHeight | number | Yes |
-| vertices | Array&lt;number&gt; | Yes |
+| [vertices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | Array & lt;number & gt; | Yes |
 | vertOffset | number | Yes |
-| colors | Array&lt;number&gt; \| null | Yes |
+| colors | Array & lt;number & gt; \ | null | Yes |
 | colorOffset | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawPoint
 
@@ -872,7 +872,7 @@ Draws a point.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawPoints
 
@@ -892,14 +892,14 @@ Draws a group of points, line segments, or polygons on the canvas, with the spec
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes |
+| points | Array & lt;common2D.Point & gt; | Yes |
 | mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawRect
 
@@ -925,7 +925,7 @@ Draws a rectangle. By default, black is used for filling.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawRect
 
@@ -934,7 +934,7 @@ drawRect(left: number, top: number, right: number, bottom: number): void
 ```
 
 Draws a rectangle. By default, black is used for filling. This API provides better performance than  
-[drawRect](arkts-arkgraphics2d-drawing-canvas-c.md#drawrect) and is recommended.
+[drawRect](#drawRect) and is recommended.
 
 **Since:** 12
 
@@ -955,7 +955,7 @@ Draws a rectangle. By default, black is used for filling. This API provides bett
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawRegion
 
@@ -975,13 +975,13 @@ Draws a region.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawRoundRect
 
@@ -1007,7 +1007,7 @@ Draws a rounded rectangle.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawShadow
 
@@ -1040,7 +1040,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawShadow
 
@@ -1073,7 +1073,7 @@ Draws a spot shadow and uses a given path to outline the ambient shadow.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawSingleCharacter
 
@@ -1102,7 +1102,7 @@ Draws a single character. If the typeface of the current font does not support t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawSingleCharacterWithFeatures
 
@@ -1126,13 +1126,13 @@ Draws a single character with font features. If the typeface of the current font
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
 | x | number | Yes |
 | y | number | Yes |
-| features | Array&lt;FontFeature&gt; | Yes |
+| features | Array & lt;FontFeature & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## drawTextBlob
 
@@ -1160,7 +1160,7 @@ Draws a text blob. If the typeface used to construct **blob** does not support a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## drawVertices
 
@@ -1184,18 +1184,18 @@ Draws a triangle mesh described by the vertex array.
 | --- | --- | --- |
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | Yes |
 | vertexCount | number | Yes |
-| positions | Array&lt;common2D.Point&gt; | Yes |
-| texs | Array&lt;common2D.Point&gt; \| null | Yes |
-| colors | Array&lt;number&gt; \| null | Yes |
+| positions | Array & lt;common2D.Point & gt; | Yes |
+| texs | Array & lt;common2D.Point & gt; \ | null | Yes |
+| colors | Array & lt;number & gt; \ | null | Yes |
 | indexCount | number | Yes |
-| indices | Array&lt;number&gt; \| null | Yes |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes |
+| indices | Array & lt;number & gt; \ | null | Yes |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## getHeight
 
@@ -1459,7 +1459,7 @@ Restores the canvas state (canvas matrix and clipping area) to a specified numbe
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## rotate
 
@@ -1487,7 +1487,7 @@ Applies a rotation matrix on top of the current canvas matrix (identity matrix b
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## save
 
@@ -1495,7 +1495,7 @@ Applies a rotation matrix on top of the current canvas matrix (identity matrix b
 save(): number
 ```
 
-Saves the canvas states (canvas matrix and drawable area) to the top of the stack. This API must be used in pair with [restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore).
+Saves the canvas states (canvas matrix and drawable area) to the top of the stack. This API must be used in pair with [restore](#restore).
 
 **Since:** 12
 
@@ -1515,7 +1515,7 @@ Saves the canvas states (canvas matrix and drawable area) to the top of the stac
 saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 ```
 
-Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore), changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
+Saves the matrix and cropping region of the canvas, and allocates a **PixelMap** for subsequent drawing. If you call [restore](#restore), changes made to the matrix and clipping region are discarded, and the PixelMap is drawn.
 
 **Since:** 12
 
@@ -1540,7 +1540,7 @@ Saves the matrix and cropping region of the canvas, and allocates a **PixelMap**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## scale
 
@@ -1567,7 +1567,7 @@ Applies a scaling matrix on top of the current canvas matrix (identity matrix by
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setMatrix
 
@@ -1587,13 +1587,13 @@ Sets a matrix for the canvas. Subsequent drawing and clipping operations will be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## skew
 
@@ -1620,7 +1620,7 @@ Applies a skewing matrix on top of the current canvas matrix (identity matrix by
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## translate
 
@@ -1647,4 +1647,4 @@ Applies a translation matrix on top of the current canvas matrix (identity matri
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

@@ -15,7 +15,7 @@ Represents information about the new version.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## versionComponents
@@ -26,7 +26,7 @@ versionComponents: Array<VersionComponent>
 
 Version components.
 
-**Type:** Array&lt;VersionComponent&gt;
+**Type:** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
 **Since:** 9
 

@@ -5,13 +5,13 @@
 
 > **说明：**
 > 
-> 从API version 3开始支持，从API version 8开始废弃。建议使用替代类型[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)。
+> 从API version 3开始支持，从API version 8开始废弃。建议使用替代类型[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)。
 
 **起始版本：** 3
 
 **废弃版本：** 8
 
-**替代接口：** ohos.vibrator/vibrator.VibrateTime
+**替代接口：** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -31,7 +31,7 @@ complete?: () => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.vibrator/vibrator#startVibration
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -53,7 +53,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.vibrator/vibrator#startVibration
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -82,7 +82,7 @@ success: () => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.vibrator/vibrator#startVibration
+**替代接口：** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -106,7 +106,7 @@ mode?: 'number' | 'short'
 
 **废弃版本：** 8
 
-**替代接口：** ohos.vibrator/vibrator.VibrateTime
+**替代接口：** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)
 
 **需要权限：** ohos.permission.VIBRATE
 

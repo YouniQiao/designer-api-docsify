@@ -194,7 +194,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：**
 
-> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的[onAppear](arkts-arkui-commonmethod-c.md#onappear)生命周期中去控制。
+> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的[onAppear](CommonMethod#onAppear)生命周期中去控制。
 
 **起始版本：** 18
 
@@ -212,20 +212,20 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## showNext
 

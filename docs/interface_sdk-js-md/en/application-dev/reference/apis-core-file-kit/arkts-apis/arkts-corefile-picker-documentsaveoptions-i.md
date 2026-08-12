@@ -15,6 +15,6 @@ Defines the options for saving documents.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 

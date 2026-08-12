@@ -12,7 +12,7 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 > 
 > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
-**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **起始版本：** 8
 
@@ -119,7 +119,7 @@ clip(path: Path2D, fillRule?: CanvasFillRule): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Path2D剪切路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | Path2D剪切路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要剪切对象的规则。&lt;br&gt;可选参数为："nonzero"，"evenodd"。&lt;br&gt;异常值undefined或null按默认值处理。&lt;br&gt;默认值："nonzero" |
 
 ## createConicGradient
@@ -284,14 +284,14 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | 是 | 图源对象，具体参考ImageBitmap对象。&lt;br&gt;异常值undefined或null按无效值处理。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 | 图源对象，具体参考ImageBitmap对象。&lt;br&gt;异常值undefined或null按无效值处理。 |
 | repetition | string \| null | 是 | 设置图像重复的方式：&lt;br&gt;'repeat'：沿x轴和y轴重复绘制图像；&lt;br&gt;'repeat-x'：沿x轴重复绘制图像；&lt;br&gt;'repeat-y'：沿y轴重复绘制图像；&lt;br&gt;'no-repeat'：不重复绘制图像；&lt;br&gt;'clamp'：在原始边界外绘制时，超出部分使用边缘的颜色绘制；&lt;br&gt;'mirror'：沿x轴和y轴重复翻转绘制图像。&lt;br&gt;异常值undefined或null按无效值处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) | 通过指定图像和重复方式创建图片填充的模板对象。 |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | 通过指定图像和重复方式创建图片填充的模板对象。 |
 
 ## createRadialGradient
 
@@ -354,7 +354,7 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。&lt;br&gt; 异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。&lt;br&gt; 异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | number | 是 | 绘制区域左上角在x轴的位置。&lt;br&gt;异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。&lt;br&gt;默认单位：vp |
 | dy | number | 是 | 绘制区域左上角在y轴的位置。&lt;br&gt;异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。&lt;br&gt;默认单位：vp |
 
@@ -382,7 +382,7 @@ drawImage(image: ImageBitmap | PixelMap, dx: number, dy: number, dw: number, dh:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。&lt;br&gt; 异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。&lt;br&gt; 异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | number | 是 | 绘制区域左上角在x轴的位置。&lt;br&gt;异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。&lt;br&gt;默认单位：vp |
 | dy | number | 是 | 绘制区域左上角在y轴的位置。&lt;br&gt;异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。&lt;br&gt;默认单位：vp |
 | dw | number | 是 | 绘制区域的宽度。当绘制区域的宽度和裁剪图像的宽度不一致时，将图像宽度拉伸或压缩为绘制区域 的宽度。&lt;br&gt;负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。&lt;br&gt;默认单位：vp |
@@ -422,7 +422,7 @@ drawImage(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。&lt;br&gt;异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | 是 | 图片资源，请参考ImageBitmap或PixelMap。&lt;br&gt;异常值undefined或null按无效值处理，不进行绘制。 |
 | sx | number | 是 | 裁剪源图像时矩形左上角的x轴坐标。&lt;br&gt;异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。&lt;br&gt;默认单位：vp |
 | sy | number | 是 | 裁剪源图像时矩形左上角的y轴坐标。&lt;br&gt;异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。&lt;br&gt;默认单位：vp |
 | sw | number | 是 | 裁剪源图像的目标宽度。&lt;br&gt;负数、异常值undefined或null按0处理，NaN和Infinity按无效值处理，不进行绘制。&lt;br&gt;默认单位：vp |
@@ -482,7 +482,7 @@ fill(path: Path2D, fillRule?: CanvasFillRule): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | Path2D填充路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | Path2D填充路径。&lt;br&gt;异常值undefined或null按无效值处理。 |
 | fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | 否 | 指定要填充对象的规则。&lt;br&gt;可选参数为："nonzero"，"evenodd"。&lt;br&gt;异常值undefined或null按默认值处理。&lt;br&gt;默认值："nonzero" |
 
 ## fillRect
@@ -635,7 +635,7 @@ getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | PixelMap对象。 |
+| PixelMap | PixelMap对象。 |
 
 ## getTransform
 
@@ -661,7 +661,7 @@ getTransform(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-matrix2d-c.md) | 当前被应用到上下文的转换矩阵。 |
+| Matrix2D | 当前被应用到上下文的转换矩阵。 |
 
 ## measureText
 
@@ -984,7 +984,7 @@ setPixelMap(value?: PixelMap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 否 | 含有像素值的PixelMap对象。&lt;br&gt;异常值undefined和null按无效值处理，不进行绘制。&lt;br&gt;默认值：null |
+| value | PixelMap | 否 | 含有像素值的PixelMap对象。&lt;br&gt;异常值undefined和null按无效值处理，不进行绘制。&lt;br&gt;默认值：null |
 
 ## setTransform
 
@@ -1051,7 +1051,7 @@ setTransform(transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 变换矩阵。&lt;br&gt;异常值undefined或null按无效值处理。&lt;br&gt;默认值：null |
+| transform | Matrix2D | 否 | 变换矩阵。&lt;br&gt;异常值undefined或null按无效值处理。&lt;br&gt;默认值：null |
 
 ## stroke
 
@@ -1097,7 +1097,7 @@ stroke(path: Path2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | 是 | 需要绘制的Path2D。&lt;br&gt;异常值undefined或null按无效值处理，不进行绘制。 |
+| path | [Path2D](arkts-arkui-path2d-c.md) | 是 | 需要绘制的Path2D。&lt;br&gt;异常值undefined或null按无效值处理，不进行绘制。 |
 
 ## strokeRect
 
@@ -1181,7 +1181,7 @@ transferFromImageBitmap(bitmap: ImageBitmap): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bitmap | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | 是 | 需要显示的ImageBitmap对象。 |
+| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 是 | 需要显示的ImageBitmap对象。 |
 
 ## transform
 
@@ -1257,13 +1257,13 @@ translate(x: number, y: number): void
 antialias: boolean | undefined
 ```
 
-用于设置绘制图形和文本时是否开启抗锯齿。设置此接口会覆盖[RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md)中的抗锯齿效果，未通过该接口设置时，默认值为undefined，与[RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md)中的抗锯齿效果保持一致。
+用于设置绘制图形和文本时是否开启抗锯齿。设置此接口会覆盖[RenderingContextSettings](./renderingcontextsettings)中的抗锯齿效果，未通过该接口设置时，默认值为undefined，与[RenderingContextSettings](./renderingcontextsettings)中的抗锯齿效果保持一致。
 
 设置绘制图形和文本时是否开启抗锯齿。
 
 **true**表示开启抗锯齿；**false**表示不开启抗锯齿。
 
-值为**undefined**时，与[RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md)中的抗锯齿效果保持一致。
+值为**undefined**时，与[RenderingContextSettings](./renderingcontextsettings)中的抗锯齿效果保持一致。
 
 **类型：** boolean \| undefined
 
@@ -1319,15 +1319,15 @@ fillStyle: string | number | CanvasGradient | CanvasPattern
 
 - 类型为number时，表示设置填充区域的颜色，不支持设置全透明色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中number类型说明。
 
-- 类型为[CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
+- 类型为[CanvasGradient](./canvasgradient)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
 
-- 类型为[CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md)时，使用[createPattern](./createpattern)方法创建。
+- 类型为[CanvasPattern](./canvaspattern)时，使用[createPattern](./createpattern)方法创建。
 
  默认值：'#000000'（黑色）
 
  异常值设置无效，保持设置前效果。
 
-**类型：** string \| number \| CanvasGradient \| CanvasPattern
+**类型：** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **默认值：** #000000 (black)
 
@@ -1566,7 +1566,7 @@ letterSpacing: LengthMetrics | string
 > 
 > 推荐使用LengthMetrics，性能更好。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| string
+**类型：** LengthMetrics \| string
 
 **默认值：** 0vp
 
@@ -1854,15 +1854,15 @@ strokeStyle: string | number | CanvasGradient | CanvasPattern
 
 - 类型为number时，表示设置线条使用的颜色，不支持设置全透明色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中number类型说明。
 
-- 类型为[CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
+- 类型为[CanvasGradient](./canvasgradient)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
 
-- 类型为[CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md)时，使用[createPattern](./createpattern)方法创建。
+- 类型为[CanvasPattern](./canvaspattern)时，使用[createPattern](./createpattern)方法创建。
 
  默认值：'#000000'（黑色）
 
  异常值设置无效，保持设置前效果。
 
-**类型：** string \| number \| CanvasGradient \| CanvasPattern
+**类型：** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **默认值：** #000000 (black)
 

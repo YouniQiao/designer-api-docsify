@@ -2,7 +2,7 @@
 
 The WindowSceneAttribute
 
-**Inheritance/Implementation:** WindowSceneAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** WindowSceneAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ Set the attribute modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;WindowSceneAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[WindowSceneAttribute](arkts-arkui-windowscene-windowsceneattribute-i-sys.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 

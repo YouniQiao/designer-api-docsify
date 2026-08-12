@@ -13,7 +13,7 @@ Provides the geographical location definitions for media resources.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## latitude

@@ -12,7 +12,7 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#addSlot
+**替代接口：** [addSlot](ohos.notificationManager/notificationManager#addSlot)
 
 <!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ function addSlot(type: SlotType): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#addSlot
+**替代接口：** [addSlot](ohos.notificationManager/notificationManager#addSlot)
 
 <!--Device-notification-function addSlot(type: SlotType): Promise<void>--><!--Device-notification-function addSlot(type: SlotType): Promise<void>-End-->
 
@@ -54,4 +54,4 @@ function addSlot(type: SlotType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

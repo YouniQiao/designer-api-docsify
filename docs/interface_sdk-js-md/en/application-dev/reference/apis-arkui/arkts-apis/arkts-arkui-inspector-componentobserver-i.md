@@ -13,7 +13,7 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'kits/@kit.ArkUI';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## offDraw
@@ -38,7 +38,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | callback of the listened event. |
+| callback | VoidCallback | No | callback of the listened event. |
 
 ## offDrawChildren
 
@@ -62,7 +62,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | callback of the listened event. |
+| callback | VoidCallback | No | callback of the listened event. |
 
 ## offDrawChildren
 
@@ -86,7 +86,7 @@ Deregisters a callback with the corresponding query conditiion by using the hand
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | No | callback of the listened event. &lt;br&gt;Default value undefined |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | No | callback of the listened event. &lt;br&gt;Default value undefined |
 
 ## offLayout
 
@@ -110,7 +110,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | callback of the listened event. |
+| callback | VoidCallback | No | callback of the listened event. |
 
 ## offLayoutChildren
 
@@ -134,7 +134,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | No | callback of the listened event. |
+| callback | VoidCallback | No | callback of the listened event. |
 
 ## onDraw
 
@@ -158,7 +158,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | callback of the listened event. |
+| callback | VoidCallback | Yes | callback of the listened event. |
 
 ## onDrawChildren
 
@@ -182,7 +182,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | callback of the listened event. |
+| callback | VoidCallback | Yes | callback of the listened event. |
 
 ## onDrawChildren
 
@@ -206,7 +206,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | Yes | callback of the listened event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int[]&gt; | Yes | callback of the listened event. |
 
 ## onLayout
 
@@ -230,7 +230,7 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | callback of the listened event. |
+| callback | VoidCallback | Yes | callback of the listened event. |
 
 ## onLayoutChildren
 
@@ -254,5 +254,5 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | callback of the listened event. |
+| callback | VoidCallback | Yes | callback of the listened event. |
 

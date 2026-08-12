@@ -18,7 +18,7 @@ rect: Rectangle
 
 HDR合成的矩形区域。
 
-**类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**类型：** Rectangle
 
 **起始版本：** 26.0.0
 

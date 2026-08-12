@@ -11,7 +11,7 @@ Defines the attributes required for initiating a drag action and information car
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## autoHideComponentUniqueIds
@@ -26,7 +26,7 @@ After the proactive dragging is successfully initiated, the system automatically
 
 If the proactive dragging source also needs to be hidden, its unique ID must be passed as well.
 
-The unique ID of a component can be obtained by using [UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid)together with [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getuniqueid).
+The unique ID of a component can be obtained by using [UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById)together with [FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getUniqueId).
 
 You need to restore the component display status as required in the drag end callback.
 
@@ -157,7 +157,7 @@ touchPoint?: TouchPoint
 
 Coordinates of the touch point. If this parameter is not set, the touch point is centered horizontally and shifted downward by 20% from the top.
 
-**Type:** [TouchPoint](arkts-arkui-touchpoint-i.md)
+**Type:** TouchPoint
 
 **Since:** 11
 

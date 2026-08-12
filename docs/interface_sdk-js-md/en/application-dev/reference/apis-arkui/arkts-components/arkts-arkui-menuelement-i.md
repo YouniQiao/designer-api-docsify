@@ -64,7 +64,7 @@ icon?: ResourceStr
 
 Menu item icon.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 
@@ -108,7 +108,7 @@ value: ResourceStr
 
 Menu item text.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 

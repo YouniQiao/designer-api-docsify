@@ -3,7 +3,7 @@
 The **ImageSource** class provides APIs to obtain image information.
 
 Before calling any API in ImageSource, you must use   
-[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
+[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-1) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
@@ -21,7 +21,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createWideGamutSdrPixelMap
@@ -52,10 +52,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
 ## createWideGamutSdrPixelMap
 
@@ -85,10 +85,10 @@ Decodes to a SDR PixelMap, using a as wide gamut as possible.For a SDR ImageSour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) | Decoding failed. |
 
 ## isJpegProgressive
 
@@ -120,8 +120,8 @@ Checks whether a JPEG image is progressive. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) | Bad source. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 
 ## Examples
 
@@ -162,7 +162,7 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
+| records | Record&lt;string, string \| null&gt; | Yes | Property Records whose values are to be modified, when the value is set to null the tag will be removed. |
 
 **Return value:**
 
@@ -174,8 +174,8 @@ Modify the value of properties in an image with the specified keys.The HwMnote r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
+| [7700304](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) | Failed to write image properties to the file. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 

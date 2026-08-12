@@ -1,12 +1,12 @@
 # ApplicationContext
 
-ApplicationContext inherits from [Context](arkts-ability-context-t.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+ApplicationContext inherits from [Context](./../app/context) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE：**
 > 
 > The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-t.md)
+**Inheritance/Implementation:** ApplicationContext extends [Context](Context)
 
 **Since:** 9
 
@@ -30,7 +30,7 @@ Obtains information about the running processes.This API uses a promise to retur
 
 **Deprecated since:** 10
 
-**Substitutes:** [ApplicationContext#getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getRunningProcessInformation)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +50,8 @@ Obtains information about the running processes.This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## getProcessRunningInformation
 
@@ -67,7 +67,7 @@ Obtains information about the running processes.This API uses an asynchronous ca
 
 **Deprecated since:** 10
 
-**Substitutes:** [ApplicationContext#getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-applicationcontext-c.md#getRunningProcessInformation)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,14 +81,14 @@ Obtains information about the running processes.This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessInformation](arkts-ability-processinformation-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## preloadUIExtensionAbility
 
@@ -104,7 +104,7 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 
 | Name| Type| Mandatory| Description|  
 | -------- | -------- | -------- | -------- |  
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+| want | [Want](arkts-ability-app-ability-want-want-c.md#Want) | Yes| Want information of the UIExtensionAbility.|
 
 **Since:** 12
 
@@ -136,14 +136,52 @@ A UIExtensionAbility instance can be preloaded for multiple times. Each time a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## Examples
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    let want: Want = {
+      bundleName: 'com.ohos.uiextensionprovider',
+      abilityName: 'UIExtensionProvider',
+      moduleName: 'entry',
+      parameters: {
+        // The value must be the same as the value of type in the module.json5 file of the UIExtensionAbility.
+        'ability.want.params.uiExtensionType': 'sys/commonUI'
+      }
+    };
+    try {
+      let applicationContext = this.context.getApplicationContext();
+      applicationContext.preloadUIExtensionAbility(want)
+        .then(() => {
+          // Carry out normal service processing.
+          console.info('preloadUIExtensionAbility succeed');
+        })
+        .catch((err: BusinessError) => {
+          // Process service logic errors.
+          console.error('preloadUIExtensionAbility failed');
+        });
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`preloadUIExtensionAbility failed. code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## registerAbilityLifecycleCallback
 
@@ -161,7 +199,7 @@ Registers a listener to monitor the ability lifecycle of the application.This AP
 
 **Deprecated since:** 10
 
-**Substitutes:** ApplicationContext#on(type:
+**Substitutes:** [on](ApplicationContext#on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,7 +235,7 @@ Register environment callback.
 
 **Deprecated since:** 10
 
-**Substitutes:** ApplicationContext#on(type:
+**Substitutes:** [on](ApplicationContext#on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,7 +273,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 **Deprecated since:** 10
 
-**Substitutes:** ApplicationContext#off(type:
+**Substitutes:** [off](ApplicationContext#off(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,7 +288,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | Event type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterAbilityLifecycleCallback
 
@@ -268,7 +306,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 **Deprecated since:** 10
 
-**Substitutes:** ApplicationContext#off(type:
+**Substitutes:** [off](ApplicationContext#off(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,7 +332,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## unregisterEnvironmentCallback
 
@@ -310,7 +348,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 **Deprecated since:** 10
 
-**Substitutes:** ApplicationContext#off(type:
+**Substitutes:** [off](ApplicationContext#off(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -325,7 +363,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackId | number | Yes | Event type. |
-| envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
+| envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterEnvironmentCallback
 
@@ -341,7 +379,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 **Deprecated since:** 10
 
-**Substitutes:** ApplicationContext#off(type:
+**Substitutes:** [off](ApplicationContext#off(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -367,5 +405,5 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 

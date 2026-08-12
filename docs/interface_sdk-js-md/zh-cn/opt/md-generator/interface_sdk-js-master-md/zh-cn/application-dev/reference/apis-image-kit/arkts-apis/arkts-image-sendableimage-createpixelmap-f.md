@@ -25,7 +25,7 @@ Create PixelMap by data buffer.
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## 示例
 

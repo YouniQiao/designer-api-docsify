@@ -8,7 +8,7 @@ Location subsystem command structure
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationCommand
+**Substitutes:** [LocationCommand](ohos.geoLocationManager/geoLocationManager.LocationCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -19,7 +19,7 @@ Location subsystem command structure
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## command
@@ -36,7 +36,7 @@ command: string
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationCommand#command
+**Substitutes:** [command](ohos.geoLocationManager/geoLocationManager.LocationCommand#command)
 
 <!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
 
@@ -48,7 +48,7 @@ command: string
 scenario: LocationRequestScenario
 ```
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 8
 
@@ -56,7 +56,7 @@ scenario: LocationRequestScenario
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationCommand#scenario
+**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.LocationCommand#scenario)
 
 <!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
 

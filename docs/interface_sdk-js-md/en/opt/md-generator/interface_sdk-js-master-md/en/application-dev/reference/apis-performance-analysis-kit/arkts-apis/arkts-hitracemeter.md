@@ -8,11 +8,11 @@ For details about the development process, see
 > **NOTE：**
 > 
 > You are advised to use the performance tracing APIs of API version 19. The
-> [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace), [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace), and
-> [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue) APIs will be deprecated.
+> [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace), [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace), and
+> [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue) APIs will be deprecated.
 > 
-> The trace output level cannot be specified in the [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace),
-> [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace) and [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue) APIs. By
+> The trace output level cannot be specified in the [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace),
+> [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace) and [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue) APIs. By
 > default, the trace output level is **COMMERCIAL**.
 > 
 > The vertical bar (|) is used as the separator in
@@ -31,7 +31,7 @@ For details about the development process, see
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

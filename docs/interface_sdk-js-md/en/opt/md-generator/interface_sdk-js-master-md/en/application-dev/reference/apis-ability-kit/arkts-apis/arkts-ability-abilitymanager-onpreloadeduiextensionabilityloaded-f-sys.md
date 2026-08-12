@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## onPreloadedUIExtensionAbilityLoaded
@@ -13,7 +13,7 @@ function onPreloadedUIExtensionAbilityLoaded(callback: PreloadedUIExtensionAbili
 ```
 
 Subscribes to loaded events of a preloaded  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instance in the current process.
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance in the current process.
 
 **Since:** 23
 
@@ -37,9 +37,9 @@ Subscribes to loaded events of a preloaded
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

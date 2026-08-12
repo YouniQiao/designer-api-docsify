@@ -8,7 +8,7 @@ Defines the reminder to publish.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
+**Substitutes:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
 <!--Device-reminderAgent-interface ReminderRequest--><!--Device-reminderAgent-interface ReminderRequest-End-->
 
@@ -17,7 +17,7 @@ Defines the reminder to publish.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## actionButton
@@ -36,7 +36,7 @@ Button displayed in the reminder notification. (The parameter is optional. Up to
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.actionButton](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#actionbutton)
+**Substitutes:** [actionButton](reminderAgentManager.ReminderRequest.actionButton)
 
 <!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]-End-->
 
@@ -58,7 +58,7 @@ Reminder content.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.content](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#content)
+**Substitutes:** [content](reminderAgentManager.ReminderRequest.content)
 
 <!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
@@ -80,7 +80,7 @@ Content to be displayed after the reminder expires.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.expiredContent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#expiredcontent)
+**Substitutes:** [expiredContent](reminderAgentManager.ReminderRequest.expiredContent)
 
 <!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
@@ -94,7 +94,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 Information about the ability that is automatically started when the reminder arrives. If the device is in use, a notification will be displayed.
 
-**Type:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
+**Type:** MaxScreenWantAgent
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ Information about the ability that is automatically started when the reminder ar
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.maxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#maxscreenwantagent)
+**Substitutes:** [maxScreenWantAgent](reminderAgentManager.ReminderRequest.maxScreenWantAgent)
 
 <!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
@@ -124,7 +124,7 @@ Notification ID used by the reminder. If there are reminders with the same notif
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.notificationId](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#notificationid)
+**Substitutes:** [notificationId](reminderAgentManager.ReminderRequest.notificationId)
 
 <!--Device-ReminderRequest-notificationId?: number--><!--Device-ReminderRequest-notificationId?: number-End-->
 
@@ -138,7 +138,7 @@ reminderType: ReminderType
 
 Type of the reminder.
 
-**Type:** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
+**Type:** ReminderType
 
 **Since:** 7
 
@@ -146,7 +146,7 @@ Type of the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.reminderType](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#remindertype)
+**Substitutes:** [reminderType](reminderAgentManager.ReminderRequest.reminderType)
 
 <!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
@@ -168,7 +168,7 @@ Ringing duration, in seconds. The default value is **1**.Unit: s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.ringDuration](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ringduration)
+**Substitutes:** [ringDuration](reminderAgentManager.ReminderRequest.ringDuration)
 
 <!--Device-ReminderRequest-ringDuration?: number--><!--Device-ReminderRequest-ringDuration?: number-End-->
 
@@ -190,7 +190,7 @@ Type of the slot used by the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.slotType](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#slottype)
+**Substitutes:** [slotType](reminderAgentManager.ReminderRequest.slotType)
 
 <!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
@@ -212,7 +212,7 @@ Content to be displayed when the reminder is snoozing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.snoozeContent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#snoozecontent)
+**Substitutes:** [snoozeContent](reminderAgentManager.ReminderRequest.snoozeContent)
 
 <!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
@@ -234,7 +234,7 @@ Number of reminder snooze times. The default value is **0**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.snoozeTimes](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#snoozetimes)
+**Substitutes:** [snoozeTimes](reminderAgentManager.ReminderRequest.snoozeTimes)
 
 <!--Device-ReminderRequest-snoozeTimes?: number--><!--Device-ReminderRequest-snoozeTimes?: number-End-->
 
@@ -256,7 +256,7 @@ Reminder snooze interval, in seconds. The default value is **0**.Unit: s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.timeInterval](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#timeinterval)
+**Substitutes:** [timeInterval](reminderAgentManager.ReminderRequest.timeInterval)
 
 <!--Device-ReminderRequest-timeInterval?: number--><!--Device-ReminderRequest-timeInterval?: number-End-->
 
@@ -278,7 +278,7 @@ Reminder title.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.title](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#title)
+**Substitutes:** [title](reminderAgentManager.ReminderRequest.title)
 
 <!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
@@ -292,7 +292,7 @@ wantAgent?: WantAgent
 
 Information about the ability that is redirected to when the notification is clicked.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** WantAgent
 
 **Since:** 7
 
@@ -300,7 +300,7 @@ Information about the ability that is redirected to when the notification is cli
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequest.wantAgent](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#wantagent)
+**Substitutes:** [wantAgent](reminderAgentManager.ReminderRequest.wantAgent)
 
 <!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 

@@ -58,7 +58,7 @@ previewText?: PreviewText
 
 Info of previewText, contains previewText value and start index.
 
-**Type:** [PreviewText](arkts-arkui-previewtext-i.md)
+**Type:** [PreviewText](arkts-arkui-textcommon-previewtext-i.md)
 
 **Since:** 23
 

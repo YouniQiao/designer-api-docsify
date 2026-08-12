@@ -11,7 +11,7 @@ The URLParams interface defines some practical methods to process URL query stri
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
+import { url } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -34,7 +34,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[string, string]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
 
 ## Examples
 
@@ -99,7 +99,7 @@ A constructor used to create a URLParams instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| init | string[][] \| [Record&lt;string, string&gt; \](../../apis-default/arkts-apis/arkts-record-t.md) | string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
+| init | string[][] \| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No |
 
 ## Examples
 
@@ -168,7 +168,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[string, string]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[string, string]&gt; |
 
 ## Examples
 
@@ -202,7 +202,7 @@ Callback functions are used to traverse key-value pairs on the URLParams instanc
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | Yes |
+| callbackFn | (value: string, key: string, searchParams: URLParams) = & gt; void | Yes |
 | thisArg | Object | No |
 
 ## Examples
@@ -344,7 +344,7 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;string&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
 
 ## Examples
 
@@ -464,7 +464,7 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;string&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
 
 ## Examples
 

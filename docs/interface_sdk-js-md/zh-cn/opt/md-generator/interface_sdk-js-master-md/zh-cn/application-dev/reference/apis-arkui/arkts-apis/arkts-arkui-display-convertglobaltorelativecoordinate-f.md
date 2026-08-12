@@ -33,8 +33,8 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: numbe
 
 | 错误码ID |
 | --- |
-| [1400004](../errorcode-display.md#1400004-参数异常) |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [1400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400004-参数异常) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

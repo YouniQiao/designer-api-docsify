@@ -15,7 +15,7 @@ Do Not Disturb profile.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## id

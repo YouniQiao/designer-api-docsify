@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## hasCall
@@ -26,7 +26,7 @@ Checks whether a call is ongoing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of hasCall. Returns {@code true} if at least one call is not in the {@link CallState#CALL_STATE_IDLE} state; returns {@code false} otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of hasCall. Returns {@code true} if at least one call is not in the [CALL_STATE_IDLE](arkts-telephony-call-callstate-e.md#CALL_STATE_IDLE) state; returns {@code false} otherwise. |
 
 ## Examples
 

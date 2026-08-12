@@ -40,8 +40,8 @@ getPiPSettingSwitch(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## 示例
 
@@ -82,14 +82,14 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PiPWindowInfo&gt; | Promise对象，返回当前画中画窗口信息。 |
+| Promise&lt;[PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md)&gt; | Promise对象，返回当前画中画窗口信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## 示例
 
@@ -136,7 +136,7 @@ isPiPActive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## 示例
 
@@ -192,7 +192,7 @@ off(type: 'controlPanelActionEvent'): void
 ```
 
 关闭画中画控制面板控件动作事件的监听。推荐使用  
-[off('controlEvent')](PiPWindow.PiPController.off(type: 'controlEvent', callback?: Callback&lt;ControlEventParam&gt;))来关闭画中画控制面板控件动作事件的监听。
+[off('controlEvent')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -239,7 +239,7 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除type为'controlEvent'的所有回调。 |
 
 ## 示例
 
@@ -273,13 +273,13 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。如果传入参数，则关闭该监听。如果未传入参数，解除type为'pipWindowSizeChange '的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## 示例
 
@@ -364,8 +364,8 @@ offActiveStatusChange(callback?: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 
 ## offControlEvent
 
@@ -387,7 +387,7 @@ offControlEvent(callback?: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 | 描述画中画控制面板控件动作事件回调。如果未传入参数，解除画中画控制面板控件动作事件的所有回调。 |
 
 ## 示例
 
@@ -440,13 +440,13 @@ offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 | 回调函数。返回当前画中画窗口的尺寸。 如果传入参数，则关闭该监听。如果未传入参数，解除窗口尺寸变化事件的所有回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## 示例
 
@@ -516,7 +516,7 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'stateChange' | 是 | 事件类型，固定为'stateChange'，即画中画生命周期状态变化事件。 |
-| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。&lt;br/&gt;state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md)，表示当前画中画生命周期状态。 &lt;br/&gt;reason：string，表示当前生命周期的切换原因。 &lt;br/&gt;在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 &lt;br/&gt;从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： &lt;br/&gt;"requestStart"：应用调用startPip接口； &lt;br/&gt;"autoStart"：应用退后台触发画中画自动启动； &lt;br/&gt;"requestDelete"：应用调用stopPip接口； &lt;br/&gt;"panelActionDelete"：用户点击画中画窗口的关闭按钮； &lt;br/&gt;"dragDelete"：用户将画中画窗口拖入垃圾桶； &lt;br/&gt;"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； &lt;br/&gt;"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
+| callback | (state: PiPState, reason: string) =&gt; void | 是 | 回调生命周期状态变化事件以及原因。&lt;br/&gt;state：[PiPState](arkts-arkui-pipwindow-pipstate-e.md#PiPState)，表示当前画中画生命周期状态。 &lt;br/&gt;reason：string，表示当前生命周期的切换原因。 &lt;br/&gt;在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，reason始终为“0”，无需关注。 &lt;br/&gt;从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，reason为当前生命周期的切换原因： &lt;br/&gt;"requestStart"：应用调用startPip接口； &lt;br/&gt;"autoStart"：应用退后台触发画中画自动启动； &lt;br/&gt;"requestDelete"：应用调用stopPip接口； &lt;br/&gt;"panelActionDelete"：用户点击画中画窗口的关闭按钮； &lt;br/&gt;"dragDelete"：用户将画中画窗口拖入垃圾桶； &lt;br/&gt;"panelActionRestore"：用户点击画中画窗口的还原按钮（无还原按钮时可点击画中画窗口）触发还原； &lt;br/&gt;"other"：其他原因，如新的画中画窗口拉起导致当前窗口被关闭、应用主窗口被关闭等场景。 |
 
 ## 示例
 
@@ -629,7 +629,7 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | 是 | 事件类型，固定为'controlEvent'，即画中画控制面板控件动作事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 ## 示例
 
@@ -685,14 +685,14 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 | 事件类型，固定为'pipWindowSizeChange'，即画中画窗口尺寸变化事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. |
 
 ## 示例
 
@@ -766,8 +766,8 @@ onActiveStatusChange(callback: Callback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## 示例
 
@@ -798,7 +798,7 @@ onControlEvent(callback: Callback<ControlEventParam>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 | 描述画中画控制面板控件动作事件回调。 |
 
 ## 示例
 
@@ -904,14 +904,14 @@ onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 | 回调函数。返回当前画中画窗口的尺寸。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## 示例
 
@@ -1072,11 +1072,11 @@ startPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
-| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**适用版本：** 26.0.0+ |
+| [1300015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| [1300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300013-创建画中画窗口失败) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
+| [1300012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## 示例
 
@@ -1118,9 +1118,9 @@ stopPiP(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300011](../errorcode-window.md#1300011-销毁画中画窗口失败) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
-| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
+| [1300011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300011-销毁画中画窗口失败) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
+| [1300015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300015-重复操作画中画) | Repeated PiP operation. |
+| [1300012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300012-画中画窗口状态异常) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
 
 ## 示例
 
@@ -1167,8 +1167,8 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## 示例
 

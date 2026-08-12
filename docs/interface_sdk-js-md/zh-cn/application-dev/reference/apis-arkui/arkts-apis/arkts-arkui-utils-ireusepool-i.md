@@ -40,7 +40,7 @@ getReusableInfo(componentConstructor : Class,
 
 | 类型 | 说明 |
 | --- | --- |
-| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md)[] | undefined if this pool does not accepts given Component. returns IReusableInfo if this pool accepts given Component/V2, reuseId was not used to recycle instances returns IReusableInfo[] if this pool accepts given Component/V2, reuseId was used to recycle instances. |
+| [IReusableInfo](arkts-arkui-utils-ireusableinfo-i.md)[] | undefined if this pool does not accepts given Component. returns IReusableInfo if this pool accepts given Component/V2, reuseId was not used to recycle instances returns IReusableInfo[] if this pool accepts given Component/V2, reuseId was used to recycle instances. |
 
 ## preRender
 

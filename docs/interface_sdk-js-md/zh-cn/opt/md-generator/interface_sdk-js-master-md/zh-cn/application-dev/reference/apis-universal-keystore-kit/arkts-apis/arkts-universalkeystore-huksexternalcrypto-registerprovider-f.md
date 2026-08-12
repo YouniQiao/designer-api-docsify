@@ -10,7 +10,7 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 若需使用自定义PIN码弹窗，在注册provider时需要同步注册UIExtensionAbility，注意事项如下：
 
-1. 自定义ability通过UIExtensionAbility扩展实现。2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md/arkts-security-certmanager.md)接口统一拉起。 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
+1. 自定义ability通过UIExtensionAbility扩展实现。2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md#certificateManager)接口统一拉起。 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
  - Action：string参数类型，在拉起自定义弹窗时want传输的Action为"UkeyPINAuth"。  
  - appUid：number参数类型，通过want.parameters传输。"appUid"字段为应用id，开发者可以通过该字段完成应用隔离。  
  - keyUri：string参数类型其值为resourceId，通过want.parameters传输，表示Ukey证书的索引。  
@@ -33,27 +33,27 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | providerName | string | 是 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | 是 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000019](../errorcode-huks.md#12000019-同名provider已注册) |
-| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12000014](../errorcode-huks.md#12000014-内存不足) |
-| [12000025](../errorcode-huks.md#12000025-资源超过限制) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
+| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000019-同名provider已注册) |
+| [12000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) |
+| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
+| [12000025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000025-资源超过限制) |
 
 ## 示例
 

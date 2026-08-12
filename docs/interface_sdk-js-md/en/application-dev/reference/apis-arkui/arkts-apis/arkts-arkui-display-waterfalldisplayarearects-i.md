@@ -13,7 +13,7 @@ Describes the curved area on a waterfall display.
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -24,7 +24,7 @@ readonly bottom: Rect
 
 Rectangle of the curved area at the bottom of the waterfall display.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ readonly left: Rect
 
 Rectangle of the curved area on the left of the waterfall display.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ readonly right: Rect
 
 Rectangle of the curved area on the right of the waterfall display.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 9
 
@@ -84,7 +84,7 @@ readonly top: Rect
 
 Rectangle of the curved area on the top of the waterfall display.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 9
 

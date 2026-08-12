@@ -26,7 +26,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | 是 |
+| [extensionAbilityType](arkts-ability-extensionabilityinfo-i.md) | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | 是 |
 | extensionAbilityFlags | number | 是 |
 | userId | number | 否 |
 
@@ -34,19 +34,19 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 
 | 类型 |
 | --- |
-| Array&lt;ExtensionAbilityInfo&gt; |
+| Array & lt;ExtensionAbilityInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-指定应用被禁用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -124,7 +124,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 |
-| extensionAbilityType | string | 是 |
+| [extensionAbilityType](arkts-ability-extensionabilityinfo-i.md) | string | 是 |
 | extensionAbilityFlags | number | 是 |
 | userId | number | 否 |
 
@@ -132,19 +132,19 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 | 类型 |
 | --- |
-| Array&lt;ExtensionAbilityInfo&gt; |
+| Array & lt;ExtensionAbilityInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-指定应用被禁用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -221,7 +221,7 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| extensionAbilityType | string | 是 |
+| [extensionAbilityType](arkts-ability-extensionabilityinfo-i.md) | string | 是 |
 | extensionAbilityFlags | number | 是 |
 | userId | number | 否 |
 
@@ -229,17 +229,17 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 
 | 类型 |
 | --- |
-| Array&lt;ExtensionAbilityInfo&gt; |
+| Array & lt;ExtensionAbilityInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 ## 示例
 

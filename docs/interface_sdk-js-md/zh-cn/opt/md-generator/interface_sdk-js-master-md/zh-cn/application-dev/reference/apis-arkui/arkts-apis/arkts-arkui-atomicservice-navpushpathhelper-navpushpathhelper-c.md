@@ -1,6 +1,6 @@
 # NavPushPathHelper
 
-当跳转的目标[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用NavPushPathHelper先下载安装相应hsp分包，再将指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈或替换当前栈顶页面，从而使[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)支持动态加载hsp分包后再跳转。
+当跳转的目标[NavDestination](./@internal/component/ets/nav_destination)在不同的hsp分包且未被主包依赖时，首次运行原子化服务只会下载安装主包。此时需要使用NavPushPathHelper先下载安装相应hsp分包，再将指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈或替换当前栈顶页面，从而使[Navigation](./@internal/component/ets/navigation)支持动态加载hsp分包后再跳转。
 
 > **说明：**
 > 
@@ -40,7 +40,7 @@ NavPushPathHelper的构造函数。
 pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -62,17 +62,17 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestination
 
@@ -80,9 +80,9 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，使用Promise异步回调。
 
-具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，有不同的行为。
+具体根据options中指定不同的[LaunchMode](LaunchMode)，有不同的行为。
 
 **起始版本：** 12
 
@@ -104,17 +104,17 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestinationByName
 
@@ -122,7 +122,7 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 pushDestinationByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，传递的数据为param，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -145,17 +145,17 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestinationByName
 
@@ -164,7 +164,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，添加用于页面出栈时处理返回结果的onPop回调，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，传递的数据为param，添加用于页面出栈时处理返回结果的onPop回调，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -181,24 +181,24 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 | moduleName | string | 是 |
 | name | string | 是 |
 | param | Object | 是 |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | 是 |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushPath
 
@@ -206,7 +206,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -228,13 +228,13 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
 
 ## pushPath
 
@@ -242,9 +242,9 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将info指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，使用Promise异步回调。
 
-具体根据options中指定的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)不同，执行不同的跳转行为。
+具体根据options中指定的[LaunchMode](LaunchMode)不同，执行不同的跳转行为。
 
 **起始版本：** 12
 
@@ -266,13 +266,13 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
 
 ## pushPathByName
 
@@ -280,7 +280,7 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 pushPathByName(moduleName: string, name: string, param: Object, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，传递的数据为param，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -303,13 +303,13 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
 
 ## pushPathByName
 
@@ -318,7 +318,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
     onPop: Callback<PopInfo>, animated?: boolean): Promise<void>
 ```
 
-先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，添加onPop回调接收入栈页面出栈时的返回结果，并进行处理，使用Promise异步回调。
+先判断分包是否存在，若不存在，则通过moduleName下载分包，再将name指定的[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，传递的数据为param，添加onPop回调接收入栈页面出栈时的返回结果，并进行处理，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -335,20 +335,20 @@ pushPathByName(moduleName: string, name: string, param: Object,
 | moduleName | string | 是 |
 | name | string | 是 |
 | param | Object | 是 |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | 是 |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
 
 ## replacePath
 
@@ -357,7 +357,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 ```
 
 先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将info指定的  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
+[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -379,13 +379,13 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
 
 ## replacePath
 
@@ -394,9 +394,9 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 ```
 
 先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将info指定的  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，使用Promise异步回调。
+[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，使用Promise异步回调。
 
-具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，有不同的行为。
+具体根据options中指定不同的[LaunchMode](LaunchMode)，有不同的行为。
 
 **起始版本：** 12
 
@@ -418,13 +418,13 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
 
 ## replacePathByName
 
@@ -433,7 +433,7 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 ```
 
 先判断分包是否存在，若不存在，则通过moduleName下载分包，再将当前页面栈栈顶退出，将name指定的  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面信息入栈，传递的数据为param，使用Promise异步回调。
+[NavDestination](./@internal/component/ets/nav_destination)页面信息入栈，传递的数据为param，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -456,10 +456,10 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) |

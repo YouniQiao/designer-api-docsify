@@ -11,7 +11,7 @@ Describes the size of a PiP window.
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## height

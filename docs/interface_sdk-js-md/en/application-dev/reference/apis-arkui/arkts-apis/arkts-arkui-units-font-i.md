@@ -18,7 +18,7 @@ family?: string | Resource
 
 font family.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 

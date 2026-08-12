@@ -2,7 +2,7 @@
 
 Define the attribute functions of DynamicComponent.
 
-**Inheritance/Implementation:** DynamicComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** DynamicComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Called when the dynamic component is error.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)&lt;[BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&gt; \| undefined | Yes | called when some error occurred&lt;br/&gt; except disconnected from DynamicAbility. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)&lt;[BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&gt; \| undefined | Yes | called when some error occurred&lt;br/&gt; except disconnected from DynamicAbility. |
 
 **Return value:**
 
@@ -70,7 +70,7 @@ Sets dynamic component options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | Yes | The options |
+| options | [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md) | Yes | The options |
 
 **Return value:**
 

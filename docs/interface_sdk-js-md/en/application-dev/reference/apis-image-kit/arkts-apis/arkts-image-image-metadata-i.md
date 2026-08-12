@@ -1,6 +1,6 @@
 # Metadata
 
-The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md).
+The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md#MetadataType).
 
 **Since:** 13
 
@@ -13,7 +13,7 @@ The **Metadata** class provides APIs for storing image metadata. For details abo
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -69,10 +69,10 @@ getAllProperties(): Promise<Record<string, string | null>>
 Obtains all properties and values from the image's metadata. This API uses a promise to return the result.
 
 For details about how to query the property values, see   
-[PropertyKey](arkts-image-image-propertykey-e.md),   
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md),   
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey),   
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey),   
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and   
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 13
 
@@ -141,10 +141,10 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
 Obtains the values of properties from the image's metadata. This API uses a promise to return the result.For details about how to query the property values, see   
-[PropertyKey](arkts-image-image-propertykey-e.md),   
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md),   
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey),   
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey),   
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and   
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 13
 
@@ -170,8 +170,8 @@ Obtains the values of properties from the image's metadata. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 
 ## setBlob
 
@@ -207,7 +207,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -218,10 +218,10 @@ setProperties(records: Record<string, string | null>): Promise<void>
 Sets the values of properties for the image's metadata. This API uses a promise to return the result.
 
 For details about how to query the property values, see   
-[PropertyKey](arkts-image-image-propertykey-e.md),   
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md),   
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey),   
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey),   
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and   
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 13
 
@@ -235,7 +235,7 @@ For details about how to query the property values, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | Array of properties and their values. |
+| records | Record&lt;string, string \| null&gt; | Yes | Array of properties and their values. |
 
 **Return value:**
 
@@ -247,6 +247,6 @@ For details about how to query the property values, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: 1. Unsupported metadata type. 2. The metadata type does not match the auxiliary picture type. |
 

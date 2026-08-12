@@ -1,8 +1,8 @@
 # MenuItemAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** MenuItemAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** MenuItemAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;MenuItemAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | MenuItem 组件的属性修改器。取值为undefined时，则不使用属性修改器。&lt;br/&gt;CommonMethod：[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | MenuItem 组件的属性修改器。取值为undefined时，则不使用属性修改器。&lt;br/&gt;CommonMethod：[通用属性](common) |
 
 **返回值：**
 
@@ -215,7 +215,7 @@ default selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier | undefine
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| ResourceStr \| SymbolGlyphModifier \| undefined | 是 | 菜单项被选中时，是否显示被选中的图标。取值为undefined时，按默认值处 理。&lt;br/&gt;true：显示默认的对勾图标；false：不显示图标。&lt;br/&gt;ResourceStr：显示指定的图标。&lt;br/&gt;SymbolGlyphModifier：显示指定的HMSymbol图标。&lt;br/&gt;默认值： false |
+| value | boolean \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) \| undefined | 是 | 菜单项被选中时，是否显示被选中的图标。取值为undefined时，按默认值处 理。&lt;br/&gt;true：显示默认的对勾图标；false：不显示图标。&lt;br/&gt;ResourceStr：显示指定的图标。&lt;br/&gt;SymbolGlyphModifier：显示指定的HMSymbol图标。&lt;br/&gt;默认值： false |
 
 **返回值：**
 
@@ -249,7 +249,7 @@ default selected(value: boolean | undefined | Bindable<boolean>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| undefined \| Bindable&lt;boolean&gt; | 是 | 菜单项是否选中。取值为undefined时，按默认值处理。&lt;br/&gt;true：菜单项被选中；false：菜单 项不被选中。&lt;br /&gt;默认值：false |
+| value | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | 是 | 菜单项是否选中。取值为undefined时，按默认值处理。&lt;br/&gt;true：菜单项被选中；false：菜单 项不被选中。&lt;br /&gt;默认值：false |
 
 **返回值：**
 

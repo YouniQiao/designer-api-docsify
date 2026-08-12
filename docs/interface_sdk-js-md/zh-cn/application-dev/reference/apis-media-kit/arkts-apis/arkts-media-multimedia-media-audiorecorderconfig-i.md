@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderConfig
+**替代接口：** [AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md#AVRecorderConfig)
 
 <!--Device-unnamed-interface AudioRecorderConfig--><!--Device-unnamed-interface AudioRecorderConfig-End-->
 
@@ -30,7 +30,7 @@ audioEncodeBitRate?: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderProfile#audioBitrate
+**替代接口：** [audioBitrate](ohos.multimedia.media/media.AVRecorderProfile#audioBitrate)
 
 <!--Device-AudioRecorderConfig-audioEncodeBitRate?: number--><!--Device-AudioRecorderConfig-audioEncodeBitRate?: number-End-->
 
@@ -52,7 +52,7 @@ audioEncoder?: AudioEncoder
 
 **废弃版本：** 8
 
-**替代接口：** ohos.multimedia.media/media.AudioRecorderConfig.audioEncoderMime
+**替代接口：** [audioEncoderMime](#audioEncoderMime)
 
 <!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder--><!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder-End-->
 
@@ -74,7 +74,7 @@ audioEncoderMime?: CodecMimeType
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderProfile#audioCodec
+**替代接口：** [audioCodec](ohos.multimedia.media/media.AVRecorderProfile#audioCodec)
 
 <!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType--><!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType-End-->
 
@@ -96,7 +96,7 @@ audioSampleRate?: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderProfile#audioSampleRate
+**替代接口：** [audioSampleRate](ohos.multimedia.media/media.AVRecorderProfile#audioSampleRate)
 
 <!--Device-AudioRecorderConfig-audioSampleRate?: number--><!--Device-AudioRecorderConfig-audioSampleRate?: number-End-->
 
@@ -118,7 +118,7 @@ fileFormat?: ContainerFormatType
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderProfile#fileFormat
+**替代接口：** [fileFormat](ohos.multimedia.media/media.AVRecorderProfile#fileFormat)
 
 <!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType--><!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType-End-->
 
@@ -140,7 +140,7 @@ format?: AudioOutputFormat
 
 **废弃版本：** 8
 
-**替代接口：** ohos.multimedia.media/media.AudioRecorderConfig.fileFormat
+**替代接口：** [fileFormat](ohos.multimedia.media/media.AudioRecorderConfig.fileFormat)
 
 <!--Device-AudioRecorderConfig-format?: AudioOutputFormat--><!--Device-AudioRecorderConfig-format?: AudioOutputFormat-End-->
 
@@ -154,7 +154,7 @@ location?: Location
 
 地理位置信息。
 
-**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
+**类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
 **起始版本：** 6
 
@@ -162,7 +162,7 @@ location?: Location
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVMetadata#location
+**替代接口：** [location](ohos.multimedia.media/media.AVMetadata#location)
 
 <!--Device-AudioRecorderConfig-location?: Location--><!--Device-AudioRecorderConfig-location?: Location-End-->
 
@@ -184,7 +184,7 @@ numberOfChannels?: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderProfile#audioChannels
+**替代接口：** [audioChannels](ohos.multimedia.media/media.AVRecorderProfile#audioChannels)
 
 <!--Device-AudioRecorderConfig-numberOfChannels?: number--><!--Device-AudioRecorderConfig-numberOfChannels?: number-End-->
 
@@ -206,7 +206,7 @@ uri: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVRecorderConfig#url
+**替代接口：** [url](ohos.multimedia.media/media.AVRecorderConfig#url)
 
 <!--Device-AudioRecorderConfig-uri: string--><!--Device-AudioRecorderConfig-uri: string-End-->
 

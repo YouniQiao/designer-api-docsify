@@ -26,13 +26,13 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 | 类型 | 说明 |
 | --- | --- |
-| [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) | 返回设备管理器对象实例。 |
+| DeviceManager | 返回设备管理器对象实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
 
 ## 示例
 

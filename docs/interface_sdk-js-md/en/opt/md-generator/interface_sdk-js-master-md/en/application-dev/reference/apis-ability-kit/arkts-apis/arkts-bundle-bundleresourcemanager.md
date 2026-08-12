@@ -1,8 +1,8 @@
 # @ohos.bundle.bundleResourceManager
 
 The module provides APIs for obtaining resource information, including  
-[BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md) and  
-[LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md).
+[BundleResourceInfo](arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo) and  
+[LauncherAbilityResourceInfo](arkts-ability-launcherabilityresourceinfo-i-sys.md#LauncherAbilityResourceInfo).
 
 > **NOTE：**
 > 
@@ -22,7 +22,7 @@ The module provides APIs for obtaining resource information, including
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

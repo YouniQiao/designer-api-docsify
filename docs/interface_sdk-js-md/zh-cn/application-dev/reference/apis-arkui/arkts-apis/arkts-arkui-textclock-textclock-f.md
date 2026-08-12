@@ -24,7 +24,7 @@ export declare function TextClock(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。 |
+| options | [TextClockOptions](arkts-arkui-textclock-textclockoptions-i.md) | 否 | 通过文本显示当前系统时间的组件参数。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function TextClock(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextClockAttribute&gt; | 是 | TextClock属性的实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextClockAttribute](arkts-arkui-textclock-textclockattribute-i.md)&gt; | 是 | TextClock属性的实例。 |
 
 **返回值：**
 

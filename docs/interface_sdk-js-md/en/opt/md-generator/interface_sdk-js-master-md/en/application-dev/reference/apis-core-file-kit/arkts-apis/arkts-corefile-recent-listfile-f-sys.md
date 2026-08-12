@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -32,7 +32,7 @@ Lists the files that are accessed recently.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;FileInfo&gt; |
+| Array & lt;FileInfo & gt; |
 
 **Error codes:**
 

@@ -24,7 +24,7 @@ alignment?: DialogAlignment
 
 若在UIExtension中设置showInSubWindow为true, 弹窗将基于UIExtension的宿主窗口对齐。
 
-**类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**类型：** DialogAlignment
 
 **起始版本：** 23
 
@@ -50,7 +50,7 @@ backgroundBlurStyle?: BlurStyle
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -72,7 +72,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 背景模糊效果。默认值请参考BackgroundBlurStyleOptions类型说明。
 
-**类型：** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
+**类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ backgroundColor?: ResourceColor
 
 backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** Color.Transparent
 
@@ -120,7 +120,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 背景效果参数。默认值请参考BackgroundEffectOptions类型说明。
 
-**类型：** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**类型：** BackgroundEffectOptions
 
 **起始版本：** 23
 
@@ -190,7 +190,7 @@ hoverModeArea?: HoverModeAreaType
 
 默认值：HoverModeAreaType.BOTTOM_SCREEN
 
-**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**类型：** HoverModeAreaType
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -217,7 +217,7 @@ immersiveMode?: ImmersiveMode
 - 默认值：ImmersiveMode.DEFAULT   
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -315,7 +315,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级对话框需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。
+设置页面级对话框需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)获取。
 
 取值范围：大于等于0的数字。
 
@@ -351,7 +351,7 @@ showInSubWindow为true时，maskRect不生效。
 
 maskRect在设置[Rectangle](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#rectangle8)中的部分属性后，若未设置其余的属性，则其余属性的默认值为0。
 
-**类型：** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**类型：** Rectangle
 
 **起始版本：** 23
 
@@ -395,7 +395,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 23
 
@@ -425,7 +425,7 @@ onDidAppear?: VoidCallback
 
 4.对话框入场动效未完成时彻底关闭对话框，动效打断，onDidAppear不会触发。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -449,7 +449,7 @@ onDidDisappear?: VoidCallback
 
 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -475,7 +475,7 @@ onWillAppear?: VoidCallback
 
 2.在onWillAppear内设置改变对话框显示效果的回调事件，二次弹出生效。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -499,7 +499,7 @@ onWillDisappear?: VoidCallback
 
 1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -521,7 +521,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** ShadowOptions \| ShadowStyle
 
 **起始版本：** 23
 
@@ -570,9 +570,9 @@ systemMaterial?: uiMaterial.Material
 **说明：**
 
 - 默认值：ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。  
-- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊  
-[backgroundBlurStyle](arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)、背景效果[backgroundEffect](arkts-arkui-common-commonmethod-i.md#backgroundeffect)、阴影  
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow)，不建议与上述接口一起使用。
+- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、背景模糊  
+[backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))、背景效果[backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、阴影  
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，不建议与上述接口一起使用。
 
 **类型：** uiMaterial.Material
 

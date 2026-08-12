@@ -2,7 +2,7 @@
 
 Style the DepthComponent.
 
-**Inheritance/Implementation:** DepthComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** DepthComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ Depth map for depth calculation and rendering.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Depth map path or PixelMap. |
+| depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | Depth map path or PixelMap. |
 | callback | [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) | No | Callback invoked when the depth map resource is loaded. |
 
 **Return value:**
@@ -103,7 +103,7 @@ Lighting parameters for depth rendering.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| light | [DepthLightParams](../arkts-components/arkts-arkui-depthlightparams-i-sys.md) | Yes | Lighting parameters including direction, color and intensity. |
+| light | [DepthLightParams](arkts-arkui-depthcomponent-depthlightparams-i-sys.md) | Yes | Lighting parameters including direction, color and intensity. |
 
 **Return value:**
 
@@ -135,7 +135,7 @@ Triggered when the background resource is loaded successfully.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [DepthComponentCompleteCallback](../arkts-components/arkts-arkui-depthcomponentcompletecallback-t-sys.md) | Yes |  |
+| callback | [DepthComponentCompleteCallback](arkts-arkui-depthcomponentcompletecallback-t-sys.md) | Yes |  |
 
 **Return value:**
 
@@ -199,7 +199,7 @@ Set DepthComponent options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| background | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Background resource (required). |
+| background | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | Background resource (required). |
 | options | [DepthComponentOptions](arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | No | DepthComponent options. |
 
 **Return value:**

@@ -21,5 +21,5 @@ Declare the event listener callback of the enter key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchContent | string | Yes | The submitted content of search. |
-| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | No | Provides the method of keeping Search editable state when submitted. |
+| event | [SubmitEvent](arkts-arkui-textinput-submitevent-i.md) | No | Provides the method of keeping Search editable state when submitted. |
 

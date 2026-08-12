@@ -12,7 +12,7 @@ declare function unlink(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:unlink](arkts-corefile-fileio-unlink-f.md#unlink)
+**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-unnamed-declare function unlink(path: string): Promise<void>--><!--Device-unnamed-declare function unlink(path: string): Promise<void>-End-->
 
@@ -28,7 +28,7 @@ declare function unlink(path: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## unlink
@@ -43,7 +43,7 @@ declare function unlink(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:unlink](arkts-corefile-fileio-unlink-f.md#unlink)
+**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function unlink(path: string, callback: AsyncCallback<void>): void-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## cancelReminder
@@ -18,7 +18,7 @@ Cancels the reminder with the specified ID. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder)
+**Substitutes:** [cancelReminder](reminderAgentManager.cancelReminder)
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -55,7 +55,7 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder)
+**Substitutes:** [cancelReminder](reminderAgentManager.cancelReminder)
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>--><!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>-End-->
 
@@ -71,7 +71,7 @@ Cancels the reminder with the specified ID. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

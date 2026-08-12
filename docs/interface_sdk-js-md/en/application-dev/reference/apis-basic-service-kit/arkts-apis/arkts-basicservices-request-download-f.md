@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## download
@@ -20,7 +20,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context:
+**Substitutes:** [downloadFile](request.downloadFile(context:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -35,13 +35,13 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -73,7 +73,7 @@ Downloads a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context:
+**Substitutes:** [downloadFile](request.downloadFile(context:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -93,13 +93,13 @@ Downloads a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DownloadTask&gt; | Promise used to return the **DownloadTask** object. |
+| Promise&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Promise used to return the **DownloadTask** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 

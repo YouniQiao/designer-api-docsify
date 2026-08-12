@@ -1,6 +1,6 @@
 # FileSelectorMode
 
-Enum type supplied to {@link FileSelectorParam} when onFileSelectorShow being called.
+Enum type supplied to [FileSelectorParam](arkts-arkweb-web-fileselectorparam-c.md#FileSelectorParam) when onFileSelectorShow being called.
 
 **起始版本：** 23
 

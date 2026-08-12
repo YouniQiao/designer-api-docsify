@@ -15,7 +15,7 @@ Provides APIs for uploading and downloading assets.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## download
@@ -43,13 +43,13 @@ Downloads assets. This API uses a promise to return the result.
 | table | string | Yes | Table name. |
 | gid | string | Yes | Unique identifier generated for the data added to the cloud. |
 | prefix | string | Yes | Asset prefix information. |
-| assets | Array&lt;CloudAsset&gt; | Yes | Assets to download. |
+| assets | Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt; | Yes | Assets to download. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise used to return the asset download result, including the asset IDs and asset hash values. |
+| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise used to return the asset download result, including the asset IDs and asset hash values. |
 
 ## Examples
 
@@ -88,13 +88,13 @@ Uploads assets. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
 | gid | string | Yes | Unique identifier generated for the data added to the cloud. |
-| assets | Array&lt;CloudAsset&gt; | Yes | Assets to upload. |
+| assets | Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt; | Yes | Assets to upload. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; | Promise used to return the asset upload result, including the asset IDs and asset hash values. |
+| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; | Promise used to return the asset upload result, including the asset IDs and asset hash values. |
 
 ## Examples
 

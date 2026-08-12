@@ -18,7 +18,7 @@ function off(type: 'cooperation', callback?: AsyncCallback<void>): void
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function off(type: 'cooperation', callback?: AsyncCallback<void>): void-End-->
 
@@ -37,8 +37,8 @@ function off(type: 'cooperation', callback?: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

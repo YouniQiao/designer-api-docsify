@@ -62,11 +62,11 @@ Sets the callback for successful tap gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked upon successful tap gesture recognition. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful tap gesture recognition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TapGestureHandler](arkts-arkui-gesture-tapgesturehandler-c.md) | Tap gesture handler object. |
+| [TapGestureHandler](arkts-arkui-tapgesturehandler-c.md) | Tap gesture handler object. |
 

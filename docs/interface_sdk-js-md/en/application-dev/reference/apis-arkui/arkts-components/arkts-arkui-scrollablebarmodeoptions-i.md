@@ -24,7 +24,7 @@ Unit: vp
 
 Value range: [0, +∞)
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ Tab layout mode of the tab bar when not scrolling in scrollable mode.
 
 Default value: **LayoutStyle.ALWAYS_CENTER**
 
-**Type:** [LayoutStyle](../arkts-apis/arkts-arkui-tabs-layoutstyle-e.md)
+**Type:** [LayoutStyle](arkts-arkui-layoutstyle-e.md)
 
 **Since:** 10
 

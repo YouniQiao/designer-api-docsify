@@ -18,7 +18,7 @@ Indent of the text paragraph. The value cannot be in percentage.
 
 Default value: **0**.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| LeadingMarginPlaceholder
+**Type:** LengthMetrics \| [LeadingMarginPlaceholder](../arkts-components/arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ Paragraph spacing of the styled string text.
 
 Default value: **0**. The value cannot be in percentage.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 19
 
@@ -126,8 +126,8 @@ shaderStyle?: ShaderStyle
 
 Text shader effect.
 
-This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)  
-**strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md)  
+This API does not take effect when used together with [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#TextStyleInterface)  
+**strokeWidth**. **shaderStyle** has a higher priority than [TextStyleInterface](arkts-arkui-textstyleinterface-i.md#TextStyleInterface)  
 **fontColor**.
 
 **Since**: 26.0.0.
@@ -154,7 +154,7 @@ Specify the tail indentation for each line in a paragraph.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;When a single LengthMetrics value is provided, all lines share the same tail indent.&lt;br&gt;When an array is provided, the i-th element specifies the tail indent for the i-th line.If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines.&lt;br&gt;Negative values are treated as 0.&lt;/p&gt;
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Array&lt;LengthMetrics&gt;
+**Type:** LengthMetrics \| Array&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 
@@ -176,7 +176,7 @@ Horizontal alignment of the text paragraph.
 
 Default value: **TextAlign.Start**.
 
-**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ Text direction.
 
 Default value: **TextDirection.DEFAULT**
 
-**Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**Type:** TextDirection
 
 **Since:** 23
 
@@ -220,7 +220,7 @@ First line indent of the text paragraph. The value cannot be in percentage.
 
 Default value: **0**.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 
@@ -242,7 +242,7 @@ Vertical alignment mode of text paragraphs.
 
 Default value: **TextVerticalAlign.BASELINE**.
 
-**Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
+**Type:** TextVerticalAlign
 
 **Since:** 20
 
@@ -264,7 +264,7 @@ Word break rule of the text paragraph.
 
 Default value: **WordBreak.NORMAL**.
 
-**Type:** [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 12
 

@@ -32,7 +32,7 @@ customRender(uri: ResourceStr, selfRenderUpdate: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 渲染管线配置文件的路径 |
+| uri | ResourceStr | 是 | 渲染管线配置文件的路径 |
 | selfRenderUpdate | boolean | 是 | 每帧触发动效渲染 |
 
 ## environment
@@ -57,7 +57,7 @@ environment(uri: ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 3D环境资源的路径 |
+| uri | ResourceStr | 是 | 3D环境资源的路径 |
 
 ## renderHeight
 
@@ -81,7 +81,7 @@ renderHeight(value: Dimension)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | GPU渲染目标的高度，目标将上采样或下采样到视图高度. |
+| value | Dimension | 是 | GPU渲染目标的高度，目标将上采样或下采样到视图高度. |
 
 ## renderWidth
 
@@ -105,7 +105,7 @@ renderWidth(value: Dimension)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | 是 | GPU渲染目标的宽度，目标将上采样或下采样到视图宽度. |
+| value | Dimension | 是 | GPU渲染目标的宽度，目标将上采样或下采样到视图宽度. |
 
 ## shader
 
@@ -129,7 +129,7 @@ shader(uri: ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 自定义着色器的路径 |
+| uri | ResourceStr | 是 | 自定义着色器的路径 |
 
 ## shaderImageTexture
 
@@ -153,7 +153,7 @@ shaderImageTexture(uri: ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 着色器所用纹理的路径 |
+| uri | ResourceStr | 是 | 着色器所用纹理的路径 |
 
 ## shaderInputBuffer
 

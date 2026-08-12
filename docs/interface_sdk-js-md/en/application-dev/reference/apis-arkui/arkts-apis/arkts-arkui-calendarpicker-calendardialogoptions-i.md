@@ -2,7 +2,7 @@
 
 Defines the DatePickerDialogOptions for Calendar Picker Dialog.
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md#CalendarOptions)
 
 **Since:** 23
 
@@ -350,7 +350,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 

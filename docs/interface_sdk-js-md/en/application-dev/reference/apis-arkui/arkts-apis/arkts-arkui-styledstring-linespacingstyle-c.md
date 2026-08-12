@@ -33,7 +33,7 @@ constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | line spacing value. |
-| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | line spacing options value. |
+| options | [LineSpacingOptions](arkts-arkui-textcommon-linespacingoptions-i.md) | No | line spacing options value. |
 
 ## lineSpacing
 
@@ -63,7 +63,7 @@ readonly options?: LineSpacingOptions
 
 Get the lineSpacing options value of the StyledString.
 
-**Type:** [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md)
+**Type:** [LineSpacingOptions](arkts-arkui-textcommon-linespacingoptions-i.md)
 
 **Since:** 26.0.0
 

@@ -13,7 +13,7 @@ InputMethodListDialog({controller: CustomDialogController, patternOptions?: Patt
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ```
 
 ## build
@@ -42,7 +42,7 @@ controller: CustomDialogController
 
 Sets the controller.
 
-**Type:** [CustomDialogController](../../apis-arkui/arkts-apis/arkts-arkui-customdialogcontroller-c.md)
+**Type:** CustomDialogController
 
 **Since:** 11
 

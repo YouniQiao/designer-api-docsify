@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## closeToast
@@ -19,7 +19,7 @@ Closes the specified toast.
 > Directly using **closeToast** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
 > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the
-> [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closetoast) API through this object.
+> [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closeToast) API through this object.
 
 **Since:** 18
 
@@ -41,6 +41,6 @@ Closes the specified toast.
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103401](../errorcode-promptAction.md#103401-toast-not-found) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103401-toast-not-found) |

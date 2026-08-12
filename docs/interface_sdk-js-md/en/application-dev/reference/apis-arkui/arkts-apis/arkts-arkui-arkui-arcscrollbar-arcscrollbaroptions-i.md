@@ -13,7 +13,7 @@ Defines the arc scroll bar options.
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
+import { ArcScrollBarAttribute, ArcScrollBar } from '@kit.ArkUI';
 ```
 
 ## scroller
@@ -24,7 +24,7 @@ scroller: Scroller
 
 Describes the controller for scrollable container.
 
-**Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
+**Type:** Scroller
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ state?: BarState
 
 Sets the state of scroll bar.
 
-**Type:** [BarState](arkts-arkui-barstate-e.md)
+**Type:** BarState
 
 **Since:** 23
 

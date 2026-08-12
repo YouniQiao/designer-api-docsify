@@ -58,7 +58,7 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| country | string | 是 |
+| [country](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-postaladdress-c.md) | string | 是 |
 | locale | string | 是 |
 | sentenceCase | boolean | 否 |
 
@@ -72,8 +72,8 @@ static getDisplayCountry(country: string, locale: string, sentenceCase?: boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -123,8 +123,8 @@ static getDisplayLanguage(language: string, locale: string, sentenceCase?: boole
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -221,7 +221,7 @@ static getPreferredLanguageList(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 
@@ -263,8 +263,8 @@ static getSimplifiedLanguage(language?: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -309,14 +309,14 @@ static getSystemCountries(language: string): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -387,7 +387,7 @@ static getSystemLanguages(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 
@@ -404,14 +404,14 @@ let systemLanguages: Array<string> = i18n.System.getSystemLanguages();
 static getSystemLocale(): string
 ```
 
-> [System.getSystemLocaleInstance](arkts-localization-i18n-system-c.md#getsystemlocaleinstance)代替。
+> [System.getSystemLocaleInstance](#getSystemLocaleInstance)代替。
 > 获取系统当前设置的区域。
 
 **起始版本：** 9
 
 **废弃版本：** 20
 
-**替代接口：** [i18n.System.getSystemLocaleInstance](arkts-localization-i18n-system-c.md#getsystemlocaleinstance)
+**替代接口：** [getSystemLocaleInstance](#getSystemLocaleInstance)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -529,7 +529,7 @@ static getTemperatureName(type: TemperatureType): string
 
 | 错误码ID |
 | --- |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -673,8 +673,8 @@ static isSuggested(language: string, region?: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -717,8 +717,8 @@ static setAppPreferredLanguage(language: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 

@@ -22,5 +22,5 @@ export type UpgradeTaskCallback = (eventInfo: EventInfo) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| eventInfo | [EventInfo](arkts-basicservices-update-eventinfo-i-sys.md) | 是 | Event information. |
+| eventInfo | EventInfo | 是 | Event information. |
 

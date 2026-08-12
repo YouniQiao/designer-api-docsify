@@ -30,7 +30,7 @@ constructor()
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -66,12 +66,12 @@ registerInputer(inputer: IInputer): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300103](../../apis-basic-services-kit/errorcode-account.md#12300103-凭据输入器已注册) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300103-凭据输入器已注册) |
 
 ## 示例
 
@@ -115,8 +115,8 @@ unregisterInputer(): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

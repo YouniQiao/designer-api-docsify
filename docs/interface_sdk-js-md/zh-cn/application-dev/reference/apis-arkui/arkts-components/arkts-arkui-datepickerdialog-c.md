@@ -20,8 +20,8 @@ static show(options?: DatePickerDialogOptions)
 
 > **说明：**
 > 
-> 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的
-> [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#showdatepickerdialog)来明确UI的执行上下文。
+> 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
+> [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showDatePickerDialog)来明确UI的执行上下文。
 
 **起始版本：** 8
 
@@ -29,7 +29,7 @@ static show(options?: DatePickerDialogOptions)
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.UIContext#showDatePickerDialog
+**替代接口：** [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showDatePickerDialog)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,5 +41,5 @@ static show(options?: DatePickerDialogOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DatePickerDialogOptions](../arkts-apis/arkts-arkui-datepicker-datepickerdialogoptions-i.md) | 否 | 配置日期选择器弹窗的参数，缺省时不弹出弹窗。 |
+| options | [DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) | 否 | 配置日期选择器弹窗的参数，缺省时不弹出弹窗。 |
 

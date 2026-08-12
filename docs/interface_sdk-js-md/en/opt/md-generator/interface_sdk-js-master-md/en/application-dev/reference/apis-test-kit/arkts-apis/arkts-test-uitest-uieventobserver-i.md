@@ -1,7 +1,7 @@
 # UIEventObserver
 
 Defines a UI event listener, which is used to listen for various events on the UI, including the display of the  
-**Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using {@link Driver#createUIEventObserver}.
+**Toast** and **Dialog** components, window change event, and component operation event. An instance can be created using [createUIEventObserver](arkts-test-uitest-driver-c.md#createUIEventObserver).
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Defines a UI event listener, which is used to listen for various events on the U
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## once('toastShow')
@@ -36,13 +36,13 @@ Subscribes to events of the toast component. This API uses a callback to return 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'toastShow' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -87,13 +87,13 @@ Subscribes to events of the dialog component. This API uses a callback to return
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dialogShow' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -134,16 +134,16 @@ Starts listening for window change events of the specified type with extended co
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'windowChange' | Yes |
-| windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes |
+| [windowChangeType](arkts-test-uitest-uielementinfo-i.md) | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | Yes |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -190,16 +190,16 @@ Starts listening for component operation events of the specified type with exten
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'componentEventOccur' | Yes |
-| componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes |
+| [componentEventType](arkts-test-uitest-uielementinfo-i.md) | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | Yes |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 

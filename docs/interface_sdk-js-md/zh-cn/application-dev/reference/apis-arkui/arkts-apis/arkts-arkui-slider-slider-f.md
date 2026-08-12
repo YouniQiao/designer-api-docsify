@@ -25,12 +25,12 @@ Defines Slider Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md) | 否 | The options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| options | [SliderOptions](arkts-arkui-slider-slideroptions-i.md) | 否 | The options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |  |
+| [SliderAttribute](arkts-arkui-slider-sliderattribute-i.md) |  |
 

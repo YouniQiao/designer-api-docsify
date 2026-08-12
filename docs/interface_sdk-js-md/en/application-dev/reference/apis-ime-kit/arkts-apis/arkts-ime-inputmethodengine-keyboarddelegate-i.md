@@ -1,7 +1,7 @@
 # KeyboardDelegate
 
 In the following API examples, you must first use   
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -14,7 +14,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('keyDown' | 'keyUp')
@@ -292,7 +292,7 @@ Unsubscribe input text attribute change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | No | optional, the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | No | optional, the callback called when editor's attribute changes. |
 
 ## offKeyDown
 
@@ -402,7 +402,7 @@ Unsubscribe text change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | optional, the callback called when the text changes. |
 
 ## on('keyDown' | 'keyUp')
 
@@ -501,7 +501,7 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | Yes | Event type, which is **'keyEvent'**. |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. &lt;br&gt;- Input parameter: [InputKeyEvent](arkts-ime-inputmethodengine-keyevent-i.md). &lt;br&gt;- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
+| callback | (event: InputKeyEvent) =&gt; boolean | Yes | Callback used to return the result. The input parameter is the key event information and the return value is of the Boolean type. &lt;br&gt;- Input parameter: [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#KeyEvent). &lt;br&gt;- If the event is consumed by the event subscriber, **true** is returned. Otherwise, **false** is returned. |
 
 ## Examples
 
@@ -693,7 +693,7 @@ Subscribe input text attribute change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | Yes | the callback called when editor's attribute changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | the callback called when editor's attribute changes. |
 
 ## onKeyDown
 
@@ -803,5 +803,5 @@ Subscribe text change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | the callback called when the text changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | the callback called when the text changes. |
 

@@ -16,7 +16,7 @@ Provides the information about the custom page transition animation.
 timeout?: number
 ```
 
-Timeout for the page transition animation. The timeout timer starts when the default animation (page scrolling)reaches the point where the first frame is moved out of the viewport. If you do not call the **finishTransition**API of [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md) before the timer expires, the component considers that the custom animation of the page ends and immediately removes the page node from the render tree.The unit is ms. The default value is **0**.
+Timeout for the page transition animation. The timeout timer starts when the default animation (page scrolling)reaches the point where the first frame is moved out of the viewport. If you do not call the **finishTransition**API of [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md#SwiperContentTransitionProxy) before the timer expires, the component considers that the custom animation of the page ends and immediately removes the page node from the render tree.The unit is ms. The default value is **0**.
 
 **Type:** number
 
@@ -44,7 +44,7 @@ transition: Callback<SwiperContentTransitionProxy>
 
 Content of the custom page transition animation.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;SwiperContentTransitionProxy&gt;
+**Type:** Callback&lt;[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md)&gt;
 
 **Since:** 12
 

@@ -24,12 +24,12 @@ Create a FrameNode of XComponent type with options for native developing.On API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
-| parameters | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | initialization parameters. |
+| parameters | NativeXComponentParameters | Yes | initialization parameters. |
 | options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | Return XComponent type FrameNode. |
+| XComponent | Return XComponent type FrameNode. |
 

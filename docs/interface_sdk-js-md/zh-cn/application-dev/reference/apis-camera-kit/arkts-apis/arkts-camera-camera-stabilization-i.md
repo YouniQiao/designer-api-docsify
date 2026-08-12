@@ -1,12 +1,12 @@
 # Stabilization
 
-Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)。
+Stabilization继承自[StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#StabilizationQuery)。
 
 提供设备在录像模式下设置视频防抖的操作。
 
-需要会话中有录像流（[VideoOutput](arkts-camera-camera-videooutput-i.md)）的前提下，才可以对视频进行防抖设置。
+需要会话中有录像流（[VideoOutput](arkts-camera-camera-videooutput-i.md#VideoOutput)）的前提下，才可以对视频进行防抖设置。
 
-**继承/实现关系：** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md)
+**继承/实现关系：** Stabilization extends [StabilizationQuery](arkts-camera-camera-stabilizationquery-i.md#StabilizationQuery)
 
 **起始版本：** 11
 
@@ -44,7 +44,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setVideoStabilizationMode
 
@@ -53,7 +53,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
 设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过  
-[isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。建议在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)与[Start](arkts-camera-camera-session-i.md#start)之间设置视频防抖。
+[isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isVideoStabilizationModeSupported)方法判断所设置的模式是否支持。建议在[commitConfig](arkts-camera-camera-session-i.md#commitConfig)与[Start](arkts-camera-camera-session-i.md#start)之间设置视频防抖。
 
 **起始版本：** 11
 
@@ -75,5 +75,5 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

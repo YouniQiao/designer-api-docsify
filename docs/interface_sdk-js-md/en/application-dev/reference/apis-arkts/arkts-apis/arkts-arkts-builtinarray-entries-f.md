@@ -28,7 +28,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, boolean]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, boolean]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -59,7 +59,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, byte]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, byte]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -90,7 +90,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, short]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, short]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -121,7 +121,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, int]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, int]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -152,7 +152,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, long]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, long]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -183,7 +183,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, float]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, float]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -214,7 +214,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, double]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, double]&gt; | A new Array Iterator object. |
 
 
 ## entries
@@ -245,5 +245,5 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, char]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, char]&gt; | A new Array Iterator object. |
 

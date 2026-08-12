@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from 'kits/@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## getPowerModel
@@ -20,7 +20,7 @@ Obtains the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManagerExt/wifiManagerExt.getPowerMode
+**Substitutes:** [getPowerMode](ohos.wifiManagerExt/wifiManagerExt.getPowerMode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -32,7 +32,7 @@ Obtains the current Wi-Fi power mode.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PowerModel&gt; | Returns the current Wi-Fi power mode. If a value less than zero is returned, it indicates a failure. |
+| Promise&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Returns the current Wi-Fi power mode. If a value less than zero is returned, it indicates a failure. |
 
 
 ## getPowerModel
@@ -49,7 +49,7 @@ Obtains the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManagerExt/wifiManagerExt.getPowerMode
+**Substitutes:** [getPowerMode](ohos.wifiManagerExt/wifiManagerExt.getPowerMode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -61,5 +61,5 @@ Obtains the current Wi-Fi power mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PowerModel&gt; | Yes | callback function, no return value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PowerModel](arkts-connectivity-wifiext-powermodel-e.md)&gt; | Yes | callback function, no return value. |
 

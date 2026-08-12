@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## closeAccessory
@@ -12,7 +12,7 @@ import { usbManager } from 'kits/@kit.BasicServicesKit';
 function closeAccessory(accessoryHandle: USBAccessoryHandle): void
 ```
 
-Closes the accessory file descriptor.You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openaccessory) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md) as a parameter.
+Closes the accessory file descriptor.You need to call [usbManager.openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md#openAccessory) to obtain the accessory list and use [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md#USBAccessoryHandle) as a parameter.
 
 **Since:** 14
 
@@ -30,9 +30,9 @@ Closes the accessory file descriptor.You need to call [usbManager.openAccessory]
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [14400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-service-exception) |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # FileSelectorResult
 
-定义文件选择器结果，与 {@link onFileSelectorShow} 方法相关联。
+定义文件选择器结果，与 [onFileSelectorShow](onFileSelectorShow) 方法相关联。
 
 **起始版本：** 9
 

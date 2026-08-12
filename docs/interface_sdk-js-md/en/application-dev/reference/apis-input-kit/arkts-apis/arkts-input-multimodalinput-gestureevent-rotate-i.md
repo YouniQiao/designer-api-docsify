@@ -13,7 +13,7 @@ Defines a rotation gesture event.
 ## Modules to Import
 
 ```TypeScript
-import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
 ```
 
 ## angle
@@ -42,7 +42,7 @@ type: ActionType
 
 Gesture event type, for example, gesture start, gesture update, or gesture end.
 
-**Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
+**Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **Since:** 11
 

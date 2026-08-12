@@ -8,7 +8,7 @@ Enumerates the file location.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md/arkts-medialibrary-photoaccesshelper-positiontype-e.md)
+**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#PositionType)
 
 <!--Device-userFileManager-enum PositionType--><!--Device-userFileManager-enum PositionType-End-->
 
@@ -30,7 +30,7 @@ Stored only on a local device.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PositionType.LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md/arkts-medialibrary-photoaccesshelper-positiontype-e.md#local)
+**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#LOCAL)
 
 <!--Device-PositionType-LOCAL = 1--><!--Device-PositionType-LOCAL = 1-End-->
 
@@ -52,7 +52,7 @@ Stored only on the cloud.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PositionType.CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md/arkts-medialibrary-photoaccesshelper-positiontype-e.md#cloud)
+**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#CLOUD)
 
 <!--Device-PositionType-CLOUD--><!--Device-PositionType-CLOUD-End-->
 
@@ -74,7 +74,7 @@ Stored both on a local device and the cloud.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PositionType.LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md/arkts-medialibrary-photoaccesshelper-positiontype-e.md#local_and_cloud)
+**Substitutes:** [LOCAL_AND_CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#LOCAL_AND_CLOUD)
 
 <!--Device-PositionType-BOTH--><!--Device-PositionType-BOTH-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## isFloatingBallEnabled

@@ -2,7 +2,7 @@
 
 Defines the Select component attributes.
 
-**Inheritance/Implementation:** SelectAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** SelectAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Set the layout direction for text and arrow in select
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md) \| undefined | Yes | indicates the arrow position in the select |
+| value | [ArrowPosition](arkts-arkui-select-arrowposition-e.md) \| undefined | Yes | indicates the arrow position in the select |
 
 **Return value:**
 
@@ -95,7 +95,7 @@ Set the attribute modifier of select.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SelectAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of select. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SelectAttribute](arkts-arkui-select-selectattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of select. |
 
 **Return value:**
 
@@ -185,7 +185,7 @@ Set the divider of select.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md) \| null \| undefined | Yes | Set custom and hidden divider. |
+| options | [DividerOptions](arkts-arkui-textpicker-divideroptions-i.md) \| null \| undefined | Yes | Set custom and hidden divider. |
 
 **Return value:**
 
@@ -338,7 +338,7 @@ Set the alignment between select and menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | alignType | [MenuAlignType](arkts-arkui-select-menualigntype-e.md) \| undefined | Yes | The type of alignment between select and menu. |
-| offset | [Offset](arkts-arkui-componentutils-offset-i.md) \| undefined | No | The offset between select and menu. |
+| offset | Offset \| undefined | No | The offset between select and menu. |
 
 **Return value:**
 
@@ -488,7 +488,7 @@ Register a ContentModifier for each menu item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;MenuItemConfiguration&gt; \| undefined | Yes | The content modifier of select menu item. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-select-menuitemconfiguration-i.md)&gt; \| undefined | Yes | The content modifier of select menu item. |
 
 **Return value:**
 
@@ -790,7 +790,7 @@ Set the width of each option and set whether the option width fit the trigger.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| OptionWidthMode \| undefined | Yes | The length of option width and decide option width to fit trigger or content. |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md) \| undefined | Yes | The length of option width and decide option width to fit trigger or content. |
 
 **Return value:**
 
@@ -820,7 +820,7 @@ Sets the serial number of the select item, starting from 0.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numCount | int \| Resource \| undefined \| Bindable&lt;int&gt; \| Bindable&lt;Resource&gt; | Yes | the serial number of the select item. |
+| numCount | int \| [Resource](arkts-arkui-resource-t.md) \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](arkts-arkui-resource-t.md)&gt; | Yes | the serial number of the select item. |
 
 **Return value:**
 
@@ -970,7 +970,7 @@ Set select options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optionArray | Array&lt;SelectOption&gt; | Yes | select constructor options |
+| optionArray | Array&lt;[SelectOption](arkts-arkui-select-selectoption-i.md)&gt; | Yes | select constructor options |
 
 **Return value:**
 
@@ -1122,7 +1122,7 @@ Sets the text display of the select button itself.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resStr | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined \| Bindable&lt;string&gt; \| Bindable&lt;Resource&gt; | Yes | the text display of the select button itself. |
+| resStr | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](arkts-arkui-resource-t.md)&gt; | Yes | the text display of the select button itself. |
 
 **Return value:**
 

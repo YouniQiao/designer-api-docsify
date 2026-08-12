@@ -11,7 +11,7 @@ Defines ChipGroupV2 item style.
 ## Modules to Import
 
 ```TypeScript
-import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from 'kits/@kit.ArkUI';
+import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -22,7 +22,7 @@ backgroundColor?: ColorMetrics
 
 ChipV2 item background color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ fontColor?: ColorMetrics
 
 Text font color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 26.0.0
 
@@ -82,7 +82,7 @@ selectedBackgroundColor?: ColorMetrics
 
 Selected ChipV2 item background color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 26.0.0
 
@@ -122,7 +122,7 @@ selectedFontColor?: ColorMetrics
 
 Selected Text font color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 26.0.0
 
@@ -142,7 +142,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 ChipV2 size.
 
-**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
+**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

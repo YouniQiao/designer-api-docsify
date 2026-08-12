@@ -60,7 +60,7 @@ versionComponents: Array<VersionComponent>
 
 版本组件。
 
-**类型：** Array&lt;VersionComponent&gt;
+**类型：** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
 **起始版本：** 9
 

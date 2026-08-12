@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## decomposeToPicture
@@ -30,22 +30,22 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | An HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
+| hdrPixelMap | PixelMap | Yes | An HDR PixelMap, whose PixelMapFormat should be RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
 | options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | No | The HDR decomposition configurations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Picture \| undefined&gt; | Promise used to return the Picture object. |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise used to return the Picture object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600208](../errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: hdrPixelMap is empty. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
+| [7600208](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) | HDR image decomposition failed. Possible causes: 1. Decomposition processing is not supported. 2. Processing error occurs. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. hdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010\YCRCB_P010. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible cause: hdrPixelMap is empty. |
+| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
 

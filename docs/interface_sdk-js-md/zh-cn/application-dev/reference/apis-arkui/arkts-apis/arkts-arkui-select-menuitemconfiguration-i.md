@@ -18,7 +18,7 @@
 triggerSelect(index: int, value: string): void
 ```
 
-下拉菜单选中某一项的回调函数。&lt;br/&gt;index：选中菜单项的索引。&lt;br/&gt;value：选中菜单项的文本。&lt;br/&gt;**说明：** &lt;br/&gt;index会赋值给事件[onSelect](../arkts-components/arkts-arkui-onselectcallback-t.md/arkts-arkui-onselectcallback-t.md)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](../arkts-components/arkts-arkui-onselectcallback-t.md/arkts-arkui-onselectcallback-t.md)回调中的文本参数。
+下拉菜单选中某一项的回调函数。&lt;br/&gt;index：选中菜单项的索引。&lt;br/&gt;value：选中菜单项的文本。&lt;br/&gt;**说明：** &lt;br/&gt;index会赋值给事件[onSelect](arkts-arkui-onselectcallback-t.md#OnSelectCallback)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](arkts-arkui-onselectcallback-t.md#OnSelectCallback)回调中的文本参数。
 
 **起始版本：** 23
 

@@ -16,7 +16,7 @@ bigIntMode: BigIntMode
 
 定义处理BigInt的模式。
 
-**类型：** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
+**类型：** BigIntMode
 
 **起始版本：** 12
 

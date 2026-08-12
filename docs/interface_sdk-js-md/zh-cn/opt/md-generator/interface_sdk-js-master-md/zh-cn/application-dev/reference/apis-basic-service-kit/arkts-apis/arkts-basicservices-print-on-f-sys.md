@@ -23,15 +23,15 @@ function on(type: 'printerStateChange', callback: (state: PrinterState, info: Pr
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'printerStateChange' | 是 |
-| callback | (state: PrinterState, info: PrinterInfo) =&gt; void | 是 |
+| callback | (state: PrinterState, info: PrinterInfo) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -73,15 +73,15 @@ function on(type: 'jobStateChange', callback: (state: PrintJobState, job: PrintJ
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'jobStateChange' | 是 |
-| callback | (state: PrintJobState, job: PrintJob) =&gt; void | 是 |
+| callback | (state: PrintJobState, job: PrintJob) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -117,15 +117,15 @@ function on(type: 'extInfoChange', callback: (extensionId: string, info: string)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'extInfoChange' | 是 |
-| callback | (extensionId: string, info: string) =&gt; void | 是 |
+| callback | (extensionId: string, info: string) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

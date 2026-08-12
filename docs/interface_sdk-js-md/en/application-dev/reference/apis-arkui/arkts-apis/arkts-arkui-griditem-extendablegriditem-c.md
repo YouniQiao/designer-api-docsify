@@ -2,7 +2,7 @@
 
 Defines the Extendable GridItem.
 
-**Inheritance/Implementation:** ExtendableGridItem implements [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md/arkts-arkui-griditem-attribute.md)
+**Inheritance/Implementation:** ExtendableGridItem implements [GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md#GridItemAttribute)
 
 **Since:** 26.0.0
 
@@ -39,8 +39,8 @@ Constructor of Extendable GridItem.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| value | [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -76,9 +76,9 @@ Entry of Extendable GridItem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setGridItemOptions
 
@@ -102,7 +102,7 @@ Set the GridItem Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No |  |
+| value | [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md) | No |  |
 
 **Return value:**
 

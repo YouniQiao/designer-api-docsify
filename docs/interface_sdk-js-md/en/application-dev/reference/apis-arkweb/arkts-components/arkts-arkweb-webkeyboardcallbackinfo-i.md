@@ -1,6 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Represents input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](../arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web) and editable element attributes.
+Represents input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](web) and editable element attributes.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ attributes: Record<string, string>
 
 Attribute of the web page element that triggers the display of the soft keyboard.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 

@@ -40,7 +40,7 @@ consumeKeyEvents?: boolean
 - 值为true，表示具备此能力。  
 - 值为false，表示不具备此能力。  
 - 该字段在调用  
-[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)/ [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)时提供给输入法应用。
+[attach](arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)/ [InputAttribute](#InputAttribute)时提供给输入法应用。
 
 **类型：** boolean
 
@@ -62,7 +62,7 @@ enterKeyType: EnterKeyType
 
 Enter键功能类型。
 
-**类型：** [EnterKeyType](../../apis-arkui/arkts-components/arkts-arkui-enterkeytype-e.md)
+**类型：** EnterKeyType
 
 **起始版本：** 10
 

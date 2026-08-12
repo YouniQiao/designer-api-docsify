@@ -36,7 +36,7 @@ reminderReq: ReminderRequest
 
 代理提醒对象。
 
-**类型：** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
+**类型：** ReminderRequest
 
 **起始版本：** 12
 

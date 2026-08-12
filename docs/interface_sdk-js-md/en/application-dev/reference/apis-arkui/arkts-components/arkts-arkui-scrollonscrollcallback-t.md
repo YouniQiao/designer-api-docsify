@@ -26,5 +26,5 @@ Represents the callback triggered when the &lt;em&gt;Scroll&lt;/em&gt; component
 | --- | --- | --- | --- |
 | xOffset | number | Yes | Horizontal offset per frame during scrolling. A positive offset indicates scrolling to the left, and a negative offset indicates scrolling to the right. <br>Unit: vp |
 | yOffset | number | Yes | Vertical offset per frame during scrolling. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. <br>Unit: vp |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | Current scrolling state. |
+| scrollState | ScrollState | Yes | Current scrolling state. |
 

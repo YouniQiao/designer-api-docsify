@@ -23,7 +23,7 @@ Defines the LoadingProgress component.
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
+| [LoadingProgressAttribute](arkts-arkui-loadingprogress-loadingprogressattribute-i.md) |  |
 
 
 ## LoadingProgress
@@ -52,11 +52,11 @@ Defines LoadingProgress Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LoadingProgressAttribute&gt; | Yes | LoadingProgress attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LoadingProgressAttribute](arkts-arkui-loadingprogress-loadingprogressattribute-i.md)&gt; | Yes | LoadingProgress attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
+| [LoadingProgressAttribute](arkts-arkui-loadingprogress-loadingprogressattribute-i.md) |  |
 

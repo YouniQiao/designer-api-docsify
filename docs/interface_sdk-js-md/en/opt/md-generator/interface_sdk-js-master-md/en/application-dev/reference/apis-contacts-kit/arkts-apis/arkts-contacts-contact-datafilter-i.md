@@ -11,7 +11,7 @@ Defines the contact data filter item.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## field
@@ -40,7 +40,7 @@ options: Array<FilterOptions>
 
 Contact filtering parameter. Multiple filter options in the array are ORed. The maximum length of the array is 3.
 
-**Type:** Array&lt;FilterOptions&gt;
+**Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
 

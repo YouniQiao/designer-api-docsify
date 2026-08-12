@@ -34,7 +34,7 @@ source: SourceType
 
 音源类型。
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** SourceType
 
 **起始版本：** 8
 

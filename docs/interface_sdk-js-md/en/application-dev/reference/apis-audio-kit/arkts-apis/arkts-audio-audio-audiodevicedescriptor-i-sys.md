@@ -13,7 +13,7 @@ Describes an audio device.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## dmDeviceInfo
@@ -44,7 +44,7 @@ Extended information for distributed device, includes whether the device support
 readonly dmDeviceType?: int
 ```
 
-Only {@link DeviceType.SPEAKER} with networkId、{@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#SPEAKER) with networkId、[REMOTE_CAST](arkts-audio-audio-devicetype-e.md#REMOTE_CAST)or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#REMOTE_DAUDIO) has dmDeviceType which indicated deviceTypeId.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

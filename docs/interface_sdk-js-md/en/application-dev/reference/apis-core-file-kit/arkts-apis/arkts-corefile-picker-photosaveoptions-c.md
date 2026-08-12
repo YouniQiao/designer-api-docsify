@@ -8,7 +8,7 @@ Defines the options for saving images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebuttonoptions-i.md/arkts-arkui-savebutton-savebuttonoptions-i.md)
+**Substitutes:** [SaveButtonOptions](SaveButtonOptions)
 
 <!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the options for saving images or videos.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## newFileNames
@@ -36,7 +36,7 @@ File name of the image or video to save. If this parameter is not specified, the
 
 **Deprecated since:** 18
 
-**Substitutes:** [SaveButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-savebutton-savebuttonoptions-i.md/arkts-arkui-savebutton-savebuttonoptions-i.md)
+**Substitutes:** [SaveButtonOptions](SaveButtonOptions)
 
 <!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
 

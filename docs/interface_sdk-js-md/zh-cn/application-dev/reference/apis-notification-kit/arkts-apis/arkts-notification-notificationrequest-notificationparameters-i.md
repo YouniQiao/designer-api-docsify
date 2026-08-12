@@ -1,6 +1,6 @@
 # NotificationParameters
 
-描述[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中wantAgent的部分信息。
+描述[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)中wantAgent的部分信息。
 
 **起始版本：** 24
 
@@ -16,7 +16,7 @@
 wantAction?:string
 ```
 
-应用在创建wantAgent时，传入的want的action字段，具体含义请参考[action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md)。
+应用在创建wantAgent时，传入的want的action字段，具体含义请参考[action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)。
 
 **类型：** string
 
@@ -36,7 +36,7 @@ wantAction?:string
 wantParameters?:Record<string, Object>
 ```
 
-应用在创建wantAgent时，传入的want的parameters字段，具体含义请参考[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md)。
+应用在创建wantAgent时，传入的want的parameters字段，具体含义请参考[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)。
 
 **类型：** Record&lt;string, Object&gt;
 
@@ -56,7 +56,7 @@ wantParameters?:Record<string, Object>
 wantUri?:string
 ```
 
-应用在创建wantAgent时，传入的want的uri字段，具体含义请参考[uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md)。
+应用在创建wantAgent时，传入的want的uri字段，具体含义请参考[uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)。
 
 **类型：** string
 

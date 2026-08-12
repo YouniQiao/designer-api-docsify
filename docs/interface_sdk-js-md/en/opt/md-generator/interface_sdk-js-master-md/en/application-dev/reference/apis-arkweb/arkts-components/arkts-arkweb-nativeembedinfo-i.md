@@ -70,7 +70,7 @@ position?: Position
 
 Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin,This position is different from the standard position.&lt;br&gt;Unit: pixels.
 
-**Type:** [Position](../../apis-arkui/arkts-apis/arkts-arkui-display-position-i.md)
+**Type:** Position
 
 **Since:** 12
 

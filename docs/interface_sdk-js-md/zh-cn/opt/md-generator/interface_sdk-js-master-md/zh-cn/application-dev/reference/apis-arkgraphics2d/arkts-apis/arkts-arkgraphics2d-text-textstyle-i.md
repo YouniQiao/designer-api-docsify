@@ -1,7 +1,7 @@
 # TextStyle
 
-文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)的  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)（控制段落级别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
+文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)的  
+[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)（控制段落级别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
 
 **起始版本：** 12
 
@@ -143,7 +143,7 @@ ellipsisMode?: EllipsisMode
 
 省略号类型，默认为END，行尾省略号。
 
-**类型：** [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)
+**类型：** EllipsisMode
 
 **起始版本：** 12
 
@@ -235,7 +235,7 @@ fontStyle?: FontStyle
 
 字体样式，默认为常规样式。
 
-**类型：** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 12
 
@@ -253,7 +253,7 @@ fontTypefaces?: Array<drawing.Typeface>
 
 指定排版字体对象数组，用于优先使用指定的字体对象进行文本塑形，跳过字体匹配流程。当数组中某个字体对象无法塑形部分文字时，未能塑形的文字将使用系统字体进行塑形。默认为空数组，表示不指定字体对象，使用默认字体匹配流程。
 
-当fontTypefaces与[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies同时设置时，fontTypefaces优先级更高。
+当fontTypefaces与[TextStyle](#TextStyle).fontFamilies同时设置时，fontTypefaces优先级更高。
 
 **类型：** Array&lt;drawing.Typeface&gt;
 
@@ -293,7 +293,7 @@ fontWeight?: FontWeight
 
 字重，默认为W400。 在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
 
-**类型：** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
+**类型：** FontWeight
 
 **起始版本：** 12
 
@@ -399,7 +399,7 @@ letterSpacing?: number
 lineHeightMaximum?: number
 ```
 
-行高上限，单位为物理像素px。若同时应用行高缩放，行高上限在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale大于0时生效。取值为正数浮点数，默认值为Number.MAX_VALUE。
+行高上限，单位为物理像素px。若同时应用行高缩放，行高上限在[TextStyle](#TextStyle).heightScale大于0时生效。取值为正数浮点数，默认值为Number.MAX_VALUE。
 
 **类型：** number
 
@@ -417,7 +417,7 @@ lineHeightMaximum?: number
 lineHeightMinimum?: number
 ```
 
-行高下限，单位为物理像素px。若同时应用行高缩放，行高下限在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale大于0时生效。取值范围为非负浮点数，默认值为0。
+行高下限，单位为物理像素px。若同时应用行高缩放，行高下限在[TextStyle](#TextStyle).heightScale大于0时生效。取值范围为非负浮点数，默认值为0。
 
 **类型：** number
 
@@ -437,7 +437,7 @@ lineHeightStyle?: LineHeightStyle
 
 行高缩放基数样式。默认为FONT_SIZE。
 
-**类型：** [LineHeightStyle](../../apis-arkui/arkts-apis/arkts-arkui-lineheightstyle-c.md)
+**类型：** LineHeightStyle
 
 **起始版本：** 21
 
@@ -473,7 +473,7 @@ textShadows?: Array<TextShadow>
 
 文本阴影数组。当需要为文本添加阴影效果时传入。
 
-**类型：** Array&lt;TextShadow&gt;
+**类型：** Array&lt;[TextShadow](arkts-arkgraphics2d-text-textshadow-i.md)&gt;
 
 **起始版本：** 12
 

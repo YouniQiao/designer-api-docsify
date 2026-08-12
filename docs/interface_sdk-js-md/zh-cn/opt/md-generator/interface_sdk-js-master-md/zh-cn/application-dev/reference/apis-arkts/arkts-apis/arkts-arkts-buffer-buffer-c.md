@@ -50,7 +50,7 @@ compare(
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -103,7 +103,7 @@ copy(target: Buffer | Uint8Array, targetStart?: number, sourceStart?: number, so
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -142,8 +142,8 @@ entries(): IterableIterator<[number, number]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[number, number]&gt; |
-| IterableIterator&lt;[number, number]&gt; |
+| IterableIterator & lt;[number, number] & gt; |
+| IterableIterator & lt;[number, number] & gt; |
 
 ## 示例
 
@@ -187,7 +187,7 @@ equals(otherBuffer: Uint8Array | Buffer): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| otherBuffer | Uint8Array \| [Buffer](#buffer) | 是 |
+| otherBuffer | Uint8Array \| [Buffer](arkts-arkts-buffer-buffer-c.md) | 是 |
 
 **返回值：**
 
@@ -235,7 +235,7 @@ fill(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| Buffer \| Uint8Array \| number \| number \| number | 是 |
+| value | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array \| number \| number \| number | 是 |
 | offset | number | 否 |
 | end | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
@@ -250,7 +250,7 @@ fill(
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## includes
 
@@ -272,7 +272,7 @@ includes(value: string | number | number | number | Buffer | Uint8Array, byteOff
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 |
+| value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
 | [byteOffset](#byteoffset) | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
@@ -302,7 +302,7 @@ indexOf(value: string | number | number | number | Buffer | Uint8Array, byteOffs
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 |
+| value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
 | [byteOffset](#byteoffset) | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
@@ -332,7 +332,7 @@ keys(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 ## 示例
 
@@ -374,7 +374,7 @@ lastIndexOf(value: string | number | number | number | Buffer | Uint8Array, byte
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | 是 |
+| value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 |
 | [byteOffset](#byteoffset) | number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
@@ -416,7 +416,7 @@ readBigInt64BE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -466,7 +466,7 @@ readBigInt64LE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -516,7 +516,7 @@ readBigUInt64BE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -565,7 +565,7 @@ readBigUInt64LE(offset?: number): bigint
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -615,7 +615,7 @@ readDoubleBE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -663,7 +663,7 @@ readDoubleLE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -711,7 +711,7 @@ readFloatBE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -759,7 +759,7 @@ readFloatLE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -807,7 +807,7 @@ readInt16BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -855,7 +855,7 @@ readInt16LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -903,7 +903,7 @@ readInt32BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -951,7 +951,7 @@ readInt32LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -999,7 +999,7 @@ readInt8(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1050,7 +1050,7 @@ readIntBE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1100,7 +1100,7 @@ readIntLE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1148,7 +1148,7 @@ readUInt16BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1198,7 +1198,7 @@ readUInt16LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1248,7 +1248,7 @@ readUInt32BE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1296,7 +1296,7 @@ readUInt32LE(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1344,7 +1344,7 @@ readUInt8(offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1395,7 +1395,7 @@ readUIntBE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1444,7 +1444,7 @@ readUIntLE(offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1530,7 +1530,7 @@ swap16(): Buffer
 
 | 错误码ID |
 | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
+| [10200009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) |
 
 ## 示例
 
@@ -1571,7 +1571,7 @@ swap32(): Buffer
 
 | 错误码ID |
 | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
+| [10200009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) |
 
 ## 示例
 
@@ -1612,7 +1612,7 @@ swap64(): Buffer
 
 | 错误码ID |
 | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) |
+| [10200009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) |
 
 ## 示例
 
@@ -1723,7 +1723,7 @@ values(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 ## 示例
 
@@ -1782,7 +1782,7 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1833,7 +1833,7 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1879,7 +1879,7 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1925,7 +1925,7 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1971,7 +1971,7 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2017,7 +2017,7 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2063,7 +2063,7 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2109,7 +2109,7 @@ writeFloatBE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2155,7 +2155,7 @@ writeFloatLE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2201,7 +2201,7 @@ writeInt16BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2247,7 +2247,7 @@ writeInt16LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2293,7 +2293,7 @@ writeInt32BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2339,7 +2339,7 @@ writeInt32LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2385,7 +2385,7 @@ writeInt8(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2435,7 +2435,7 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2482,7 +2482,7 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2528,7 +2528,7 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2577,7 +2577,7 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2626,7 +2626,7 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2672,7 +2672,7 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2718,7 +2718,7 @@ writeUInt8(value: number, offset?: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2774,7 +2774,7 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2821,7 +2821,7 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -2858,7 +2858,7 @@ ArrayBuffer对象。
 byteOffset: number
 ```
 
-当前Buffer所在内存池的偏移量。&lt;br&gt;- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocuninitializedfrompool)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。&lt;br&gt;- 当Buffer直接分配内存时（如使用  
+当前Buffer所在内存池的偏移量。&lt;br&gt;- 当Buffer通过内存池创建时（如使用[allocUninitializedFromPool](arkts-arkts-buffer-allocuninitializedfrompool-f.md#allocUninitializedFromPool)创建Buffer，或使用buffer.from()传入字符串，且字符串长度加当前内存池偏移量小于4kb），返回相对于内存池的偏移量。&lt;br&gt;- 当Buffer直接分配内存时（如使用  
 [alloc](arkts-arkts-buffer-alloc-f.md#alloc)），返回值为0。
 
 **类型：** number

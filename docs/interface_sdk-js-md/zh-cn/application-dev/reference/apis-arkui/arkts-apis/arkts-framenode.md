@@ -10,7 +10,7 @@
 | --- | --- |
 | [FrameNode](arkts-arkui-framenode-c.md) | 定义FrameNode。 |
 | [NodeAdapter](arkts-arkui-framenode-nodeadapter-c.md) | NodeAdapter提供FrameNode的数据懒加载能力，通过[LazyForEach](lazy_for_each)实现接口功能。 |
-| [TypedFrameNode](arkts-arkui-framenode-typedframenode-c.md) | TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-framenodeoptions-i.md)，用于声明具体类型的FrameNode。 |
+| [TypedFrameNode](arkts-arkui-framenode-typedframenode-c.md) | TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-framenodeoptions-i.md#FrameNodeOptions)，用于声明具体类型的FrameNode。 |
 
 ### 接口
 

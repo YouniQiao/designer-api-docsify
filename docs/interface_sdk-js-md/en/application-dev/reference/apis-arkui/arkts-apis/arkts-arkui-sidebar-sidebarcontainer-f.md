@@ -26,13 +26,13 @@ Defines sidebar Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [SideBarContainerType](arkts-arkui-sidebar-sidebarcontainertype-e.md) | No | sidebar constructor options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SideBarContainerAttribute](../arkts-components/arkts-arkui-sidebarcontainer-attribute.md) |  |
+| [SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md) |  |
 
 
 ## SideBarContainer
@@ -62,12 +62,12 @@ Defines sidebar Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SideBarContainerAttribute&gt; | Yes | sidebar attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md)&gt; | Yes | sidebar attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SideBarContainerAttribute](../arkts-components/arkts-arkui-sidebarcontainer-attribute.md) |  |
+| [SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md) |  |
 

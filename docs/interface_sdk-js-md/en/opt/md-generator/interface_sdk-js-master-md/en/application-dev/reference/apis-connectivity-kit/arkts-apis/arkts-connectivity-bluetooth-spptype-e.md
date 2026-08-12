@@ -6,7 +6,7 @@ The enum of SPP type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.SppType
+**Substitutes:** [SppType](ohos.bluetoothManager/bluetoothManager.SppType)
 
 <!--Device-bluetooth-enum SppType--><!--Device-bluetooth-enum SppType-End-->
 
@@ -24,7 +24,7 @@ RFCOMM
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.SppType.SPP_RFCOMM
+**Substitutes:** [SPP_RFCOMM](ohos.bluetoothManager/bluetoothManager.SppType.SPP_RFCOMM)
 
 <!--Device-SppType-SPP_RFCOMM = 0--><!--Device-SppType-SPP_RFCOMM = 0-End-->
 

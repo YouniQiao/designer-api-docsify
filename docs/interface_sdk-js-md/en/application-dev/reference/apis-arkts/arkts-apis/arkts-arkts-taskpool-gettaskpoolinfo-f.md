@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## getTaskPoolInfo

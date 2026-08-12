@@ -1,6 +1,6 @@
 # MediaEntity
 
-媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
 
 **起始版本：** 23
 
@@ -138,7 +138,7 @@ playState: PlaybackState
 
 媒体资源的播放状态。
 
-**类型：** [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md)
+**类型：** PlaybackState
 
 **起始版本：** 23
 

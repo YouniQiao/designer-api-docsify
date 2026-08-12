@@ -2,12 +2,12 @@
 
 Image类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的Image对象存储了JPEG文件。
 
-调用[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage)和  
-[readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)接口时会返回Image实例。
+调用[readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage)和  
+[readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage)接口时会返回Image实例。
 
-Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md)发送图片数据的发送方实际写入的内容为准。
+Image的属性仅支持在创建时初始化，后续无法再修改，且其属性不对图片内容产生实际影响，请以图片生产者写入的属性为准，即以向[ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver)发送图片数据的发送方实际写入的内容为准。
 
-由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](arkts-image-image-image-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当Image实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 > **说明：**
 > 
@@ -90,7 +90,7 @@ getComponent(componentType: ComponentType): Promise<Component>
 
 | 类型 |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise & lt;Component & gt; |
 
 ## getMetadata
 
@@ -124,8 +124,8 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue | null
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## release
 
@@ -177,7 +177,7 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## clipRect
 
@@ -187,7 +187,7 @@ clipRect: Region
 
 要裁剪的图像区域。恒等于整个图像，不支持修改。
 
-**类型：** [Region](arkts-image-image-region-i.md)
+**类型：** Region
 
 **起始版本：** 9
 
@@ -243,13 +243,13 @@ readonly size: Size
 如果Image对象所存储的是相机拍照流数据（JPEG图像数据），由于已是编码后的文件，size中的宽等于JPEG文件大小，高等于1。
 
 Image对象所存储的数据是预览流还是拍照流，取决于应用将receiver中的surfaceId通过  
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput)接口还是  
-[createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createphotooutput)接口传给相机。
+[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput)接口还是  
+[createPhotoOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPhotoOutput)接口传给相机。
 
 相机预览与拍照最佳实践请参考[双路预览(ArkTS)](../../../media/camera/camera-dual-channel-preview.md)与  
 [拍照实践(ArkTS)](../../../media/camera/camera-shooting-case.md)。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 9
 
@@ -264,7 +264,7 @@ readonly timestamp: number
 ```
 
 图像时间戳。时间戳以纳秒为单位，通常是单调递增的。时间戳的具体含义和基准取决于图像的生产者，在相机预览/拍照场景，生产者就是相机。来自不同生产者的图像的时间戳可能有不同的含义和基准，因此可能无法进行比较。如果要获取某张照片的生成时间，可以通过  
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)接口读取EXIF时间戳信息。
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)接口读取EXIF时间戳信息。
 
 **类型：** number
 

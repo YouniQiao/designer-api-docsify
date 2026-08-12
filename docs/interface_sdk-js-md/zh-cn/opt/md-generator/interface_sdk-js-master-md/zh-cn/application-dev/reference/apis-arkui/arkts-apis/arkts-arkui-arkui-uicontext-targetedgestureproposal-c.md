@@ -2,7 +2,7 @@
 
 带目标节点的智慧手势处理基类。
 
-**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
+**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
 
 **起始版本：** 26.0.0
 
@@ -18,7 +18,7 @@ node: FrameNode
 
 处理当前智慧手势的目标节点。
 
-**类型：** [FrameNode](arkts-arkui-framenode-t.md)
+**类型：** FrameNode
 
 **起始版本：** 26.0.0
 

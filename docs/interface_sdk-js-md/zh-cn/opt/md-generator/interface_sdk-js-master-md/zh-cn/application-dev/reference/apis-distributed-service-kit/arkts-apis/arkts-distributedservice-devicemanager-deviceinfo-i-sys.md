@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
+**替代接口：** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)
 
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
@@ -48,7 +48,7 @@ deviceId: string
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.deviceId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceid)
+**替代接口：** [deviceId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceId)
 
 <!--Device-DeviceInfo-deviceId: string--><!--Device-DeviceInfo-deviceId: string-End-->
 
@@ -70,7 +70,7 @@ deviceName: string
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.deviceName](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicename)
+**替代接口：** [deviceName](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceName)
 
 <!--Device-DeviceInfo-deviceName: string--><!--Device-DeviceInfo-deviceName: string-End-->
 
@@ -86,13 +86,13 @@ deviceType: DeviceType
 
 设备类型。
 
-**类型：** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
+**类型：** DeviceType
 
 **起始版本：** 7
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.deviceType](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicetype)
+**替代接口：** [deviceType](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceType)
 
 <!--Device-DeviceInfo-deviceType: DeviceType--><!--Device-DeviceInfo-deviceType: DeviceType-End-->
 
@@ -114,7 +114,7 @@ networkId: string
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.networkId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#networkid)
+**替代接口：** [networkId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#networkId)
 
 <!--Device-DeviceInfo-networkId: string--><!--Device-DeviceInfo-networkId: string-End-->
 

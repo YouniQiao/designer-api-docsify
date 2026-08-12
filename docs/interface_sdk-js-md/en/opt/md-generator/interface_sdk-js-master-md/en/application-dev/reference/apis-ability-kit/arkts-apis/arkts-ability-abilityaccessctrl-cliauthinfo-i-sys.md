@@ -13,7 +13,7 @@ Represents CLI authorization information.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## authorizationResults

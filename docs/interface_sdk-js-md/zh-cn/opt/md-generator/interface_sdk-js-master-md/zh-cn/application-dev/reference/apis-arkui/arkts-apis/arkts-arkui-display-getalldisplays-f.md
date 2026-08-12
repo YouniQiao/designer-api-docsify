@@ -20,13 +20,13 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Display&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
 
 ## 示例
 
@@ -66,13 +66,13 @@ function getAllDisplays(): Promise<Array<Display>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; |
+| Promise&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
 
 ## 示例
 

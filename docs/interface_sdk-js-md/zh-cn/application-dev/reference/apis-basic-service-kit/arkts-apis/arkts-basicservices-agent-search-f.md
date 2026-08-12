@@ -6,7 +6,7 @@
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-根据默认[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id，即查询调用时刻至24小时前的所有任务的任务id。使用callback异步回调。
+根据默认[Filter](arkts-basicservices-agent-filter-i.md#Filter)过滤条件查找任务id，即查询调用时刻至24小时前的所有任务的任务id。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -26,8 +26,8 @@ function search(callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
 
@@ -52,7 +52,7 @@ request.agent.search((err: BusinessError<void> | null, data: Array<string> | und
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用callback异步回调。
+根据[Filter](arkts-basicservices-agent-filter-i.md#Filter)过滤条件查找任务id。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -66,15 +66,15 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-basicservices-agent-filter-i.md) | 是 | 过滤条件。 |
+| filter | Filter | 是 | 过滤条件。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数。当根据过滤条件查找任务成功，err为undefined，data为满足条件的任务id；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
 
@@ -103,7 +103,7 @@ request.agent.search(filter, (err: BusinessError<void> | null, data: Array<strin
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用Promise异步回调。
+根据[Filter](arkts-basicservices-agent-filter-i.md#Filter)过滤条件查找任务id。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -117,7 +117,7 @@ function search(filter?: Filter): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](arkts-basicservices-agent-filter-i.md) | 否 | 过滤条件。默认值为空。 |
+| filter | Filter | 否 | 过滤条件。默认值为空。 |
 
 **返回值：**
 
@@ -129,8 +129,8 @@ function search(filter?: Filter): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) | Task service ability error. |
 
 ## 示例
 

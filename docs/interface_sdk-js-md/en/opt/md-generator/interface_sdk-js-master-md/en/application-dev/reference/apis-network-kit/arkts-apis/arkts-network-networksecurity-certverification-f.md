@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## certVerification
@@ -31,30 +31,30 @@ Certificate verification to the server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2305027](../errorcode-net-networkSecurity.md#2305027-untrusted-certificate) |
-| [2305024](../errorcode-net-networkSecurity.md#2305024-invalid-ca) |
-| [2305003](../errorcode-net-networkSecurity.md#2305003-failed-to-obtain-the-certificate-revocation-list) |
-| [2305002](../errorcode-net-networkSecurity.md#2305002-failed-to-obtain-the-issuer-certificate) |
-| [2305001](../errorcode-net-networkSecurity.md#2305001-unspecified-error) |
-| [2305007](../errorcode-net-networkSecurity.md#2305007-failed-to-sign-the-certificate) |
-| [2305006](../errorcode-net-networkSecurity.md#2305006-failed-to-decode-the-issuer-public-key) |
-| [2305005](../errorcode-net-networkSecurity.md#2305005-failed-to-decrypt-the-crl-signature) |
-| [2305069](../errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) |
-| [2305004](../errorcode-net-networkSecurity.md#2305004-failed-to-decrypt-the-certificate-signature) |
-| [2305011](../errorcode-net-networkSecurity.md#2305011-invalid-crl) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2305010](../errorcode-net-networkSecurity.md#2305010-certificate-expired) |
-| [2305009](../errorcode-net-networkSecurity.md#2305009-invalid-certificate) |
-| [2305008](../errorcode-net-networkSecurity.md#2305008-failed-to-sign-the-crl) |
-| [2305012](../errorcode-net-networkSecurity.md#2305012-crl-expired) |
-| [2305018](../errorcode-net-networkSecurity.md#2305018-selfsigned-certificate) |
-| [2305023](../errorcode-net-networkSecurity.md#2305023-certificate-revoked) |
+| [2305027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305027-untrusted-certificate) |
+| [2305024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305024-invalid-ca) |
+| [2305003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305003-failed-to-obtain-the-certificate-revocation-list) |
+| [2305002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305002-failed-to-obtain-the-issuer-certificate) |
+| [2305001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305001-unspecified-error) |
+| [2305007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305007-failed-to-sign-the-certificate) |
+| [2305006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305006-failed-to-decode-the-issuer-public-key) |
+| [2305005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305005-failed-to-decrypt-the-crl-signature) |
+| [2305069](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305069-invalid-certificate-verification-context) |
+| [2305004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305004-failed-to-decrypt-the-certificate-signature) |
+| [2305011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305011-invalid-crl) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2305010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305010-certificate-expired) |
+| [2305009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305009-invalid-certificate) |
+| [2305008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305008-failed-to-sign-the-crl) |
+| [2305012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305012-crl-expired) |
+| [2305018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305018-selfsigned-certificate) |
+| [2305023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-networkSecurity.md#2305023-certificate-revoked) |
 
 ## Examples
 

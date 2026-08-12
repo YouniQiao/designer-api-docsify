@@ -11,7 +11,7 @@ Defines the application account manager, which is used to manage account informa
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccount
@@ -25,14 +25,14 @@ Adds an application account with the given name. This API uses an asynchronous c
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)
+> [createAccount](#createAccount)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)(name:
+**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
 
 <!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -66,14 +66,14 @@ Adds an application account name and additional information. This API uses an as
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)
+> [createAccount](#createAccount)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)(name:
+**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -107,14 +107,14 @@ Adds an application account name and additional information. This API uses a pro
 
 > **NOTE：**
 > > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)
+> [createAccount](#createAccount-2)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.createAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccount)(name:
+**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
@@ -131,7 +131,7 @@ Adds an application account name and additional information. This API uses a pro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -161,14 +161,14 @@ Adds an application account implicitly based on the specified owner. This API us
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [createAccountImplicitly](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccountimplicitly)
+> [createAccountImplicitly](#createAccountImplicitly)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.createAccountImplicitly](arkts-basicservices-appaccount-appaccountmanager-i.md#createaccountimplicitly)(owner:
+**Substitutes:** [createAccountImplicitly](appAccount.AppAccountManager.createAccountImplicitly(owner:)
 
 <!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -251,13 +251,13 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -339,13 +339,13 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -413,14 +413,14 @@ Authenticates an application account. This API uses an asynchronous callback to 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [auth](arkts-basicservices-appaccount-appaccountmanager-i.md#auth)
+> [auth](#auth)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.auth](arkts-basicservices-appaccount-appaccountmanager-i.md#auth)(name:
+**Substitutes:** [auth](appAccount.AppAccountManager.auth(name:)
 
 <!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -497,20 +497,20 @@ Checks whether an application account has specific labels. This API uses an asyn
 | --- | --- | --- |
 | name | string | Yes |
 | owner | string | Yes |
-| labels | Array&lt;string&gt; | Yes |
+| labels | Array & lt;string & gt; | Yes |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -553,25 +553,25 @@ Checks whether an application account has specific labels. This API uses a promi
 | --- | --- | --- |
 | name | string | Yes |
 | owner | string | Yes |
-| labels | Array&lt;string&gt; | Yes |
+| labels | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -618,10 +618,10 @@ Checks whether an application can access the data of an account. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -668,16 +668,16 @@ Checks whether an application can access the data of an account. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -707,14 +707,14 @@ Checks whether data synchronization is enabled for an application account. This 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled)
+> [checkDataSyncEnabled](#checkDataSyncEnabled)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled)(name:
+**Substitutes:** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -754,13 +754,13 @@ Checks whether data synchronization is enabled for an application account. This 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled) instead.
+> [checkDataSyncEnabled](#checkDataSyncEnabled-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.checkDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#checkdatasyncenabled)(name:
+**Substitutes:** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -778,7 +778,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -819,11 +819,11 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -871,17 +871,17 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -928,11 +928,11 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -979,17 +979,17 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1024,14 +1024,14 @@ Checks the visibility of an authorization token of the specified authentication 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#checkauthtokenvisibility)
+> [checkAuthTokenVisibility](#checkAuthTokenVisibility)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.checkAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#checkauthtokenvisibility)(name:
+**Substitutes:** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
 
@@ -1072,14 +1072,14 @@ Checks the visibility of an authorization token of the specified authentication 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#checkauthtokenvisibility)
+> [checkAuthTokenVisibility](#checkAuthTokenVisibility-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.checkAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#checkauthtokenvisibility)(name:
+**Substitutes:** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -1097,7 +1097,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -1137,11 +1137,11 @@ Creates an application account with the given name. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 
@@ -1188,11 +1188,11 @@ Creates an application account with custom data. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 
@@ -1243,17 +1243,17 @@ Creates an application account with custom data. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
-| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 
@@ -1302,13 +1302,13 @@ Creates an application account implicitly based on the specified account owner. 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
 
 ## Examples
 
@@ -1381,13 +1381,13 @@ Creates an application account implicitly based on the specified account owner a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
-| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [12300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) |
 
 ## Examples
 
@@ -1449,14 +1449,14 @@ Deletes an application account. This API uses an asynchronous callback to return
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)
+> [removeAccount](#removeAccount)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)(name:
+**Substitutes:** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
 
 <!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1490,14 +1490,14 @@ Deletes an application account. This API uses a promise to return the result.
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)
+> [removeAccount](#removeAccount-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.removeAccount](arkts-basicservices-appaccount-appaccountmanager-i.md#removeaccount)(name:
+**Substitutes:** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
 
 <!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
@@ -1513,7 +1513,7 @@ Deletes an application account. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1555,11 +1555,11 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1608,17 +1608,17 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -1663,11 +1663,11 @@ Deletes the credential of the specified type from an application account. This A
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -1713,17 +1713,17 @@ Deletes the credential of the specified type from an application account. This A
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -1753,14 +1753,14 @@ Deletes the authorization token of the specified authentication type for an appl
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#deleteauthtoken)
+> [deleteAuthToken](#deleteAuthToken)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.deleteAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#deleteauthtoken)(name:
+**Substitutes:** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1802,14 +1802,14 @@ Deletes the authorization token of the specified authentication type for an appl
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#deleteauthtoken)
+> [deleteAuthToken](#deleteAuthToken-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.deleteAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#deleteauthtoken)(name:
+**Substitutes:** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1828,7 +1828,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1853,14 +1853,14 @@ Disables an application account from accessing an application. This API uses an 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
+> [setAppAccess](#setAppAccess)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)(name:
+**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1895,14 +1895,14 @@ Disables an application account from accessing an application. This API uses a p
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
+> [setAppAccess](#setAppAccess-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)(name:
+**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -1919,7 +1919,7 @@ Disables an application account from accessing an application. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1944,14 +1944,14 @@ Enables an application account to access an application. This API uses an asynch
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
+> [setAppAccess](#setAppAccess)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)(name:
+**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1990,14 +1990,14 @@ Enables an application account to access an application. This API uses a promise
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)
+> [setAppAccess](#setAppAccess-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAppAccess](arkts-basicservices-appaccount-appaccountmanager-i.md#setappaccess)(name:
+**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -2014,7 +2014,7 @@ Enables an application account to access an application. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -2039,14 +2039,14 @@ Obtains the credential of an application account. This API uses an asynchronous 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)
+> [getCredential](#getCredential)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)(name:
+**Substitutes:** [getCredential](appAccount.AppAccountManager.getCredential(name:)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2085,14 +2085,14 @@ Obtains the credential of an application account. This API uses a promise to ret
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)
+> [getCredential](#getCredential-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#getcredential)(name:
+**Substitutes:** [getCredential](appAccount.AppAccountManager.getCredential(name:)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -2109,7 +2109,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -2134,14 +2134,14 @@ Obtains additional information of an application account. Additional information
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)
+> [getCustomData](#getCustomData)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)(name:
+**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2179,13 +2179,13 @@ Obtains additional information of an application account. Additional information
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata) instead.
+> [getCustomData](#getCustomData-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)(name:
+**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
@@ -2201,7 +2201,7 @@ Obtains additional information of an application account. Additional information
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -2234,15 +2234,15 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | owner | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -2288,15 +2288,15 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -2327,14 +2327,14 @@ Obtains information about all accessible application accounts. This API uses an 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts)
+> [getAllAccounts](#getAllAccounts)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts)(callback:
+**Substitutes:** [getAllAccounts](appAccount.AppAccountManager.getAllAccounts(callback:)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2346,7 +2346,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -2373,13 +2373,13 @@ Obtains information about all accessible application accounts. This API uses a p
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts) instead.
+> [getAllAccounts](#getAllAccounts) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAllAccounts](arkts-basicservices-appaccount-appaccountmanager-i.md#getallaccounts)()
+**Substitutes:** [getAllAccounts](#getAllAccounts)()
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2391,7 +2391,7 @@ Obtains information about all accessible application accounts. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; |
 
 ## Examples
 
@@ -2423,14 +2423,14 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2469,13 +2469,13 @@ Obtains information about all accessible application accounts. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2505,14 +2505,14 @@ Obtains the application accounts that can be accessed by the invoker based on th
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner)
+> [getAccountsByOwner](#getAccountsByOwner)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner)(owner:
+**Substitutes:** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2525,7 +2525,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | owner | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -2553,13 +2553,13 @@ Obtains the application accounts that can be accessed by the invoker based on th
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner) instead.
+> [getAccountsByOwner](#getAccountsByOwner-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAccountsByOwner](arkts-basicservices-appaccount-appaccountmanager-i.md#getaccountsbyowner)(owner:
+**Substitutes:** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2577,7 +2577,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; |
 
 ## Examples
 
@@ -2612,16 +2612,16 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- |
 | name | string | Yes |
 | owner | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AuthTokenInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2668,16 +2668,16 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AuthTokenInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2708,14 +2708,14 @@ Obtains all tokens visible to the invoker for an application account. This API u
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens)
+> [getAllAuthTokens](#getAllAuthTokens)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens)(name:
+**Substitutes:** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
@@ -2727,7 +2727,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- |
 | name | string | Yes |
 | owner | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OAuthTokenInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -2755,13 +2755,13 @@ Obtains all tokens visible to the invoker for an application account. This API u
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens) instead.
+> [getAllAuthTokens](#getAllAuthTokens-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAllAuthTokens](arkts-basicservices-appaccount-appaccountmanager-i.md#getallauthtokens)(name:
+**Substitutes:** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
@@ -2778,7 +2778,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;OAuthTokenInfo&gt;&gt; |
+| Promise&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; |
 
 ## Examples
 
@@ -2804,14 +2804,14 @@ Obtains the associated data of an application account based on the specified key
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)
+> [getCustomData](#getCustomData)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)(name:
+**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2850,13 +2850,13 @@ Obtains data associated with an application account. This API uses a promise to 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata) instead.
+> [getCustomData](#getCustomData-1) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#getcustomdata)(name:
+**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
@@ -2873,7 +2873,7 @@ Obtains data associated with an application account. This API uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -2906,16 +2906,16 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | sessionId | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthCallback&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -2976,16 +2976,16 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AuthCallback&gt; |
+| Promise&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3027,7 +3027,7 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 ```
 
 Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility). This API uses an asynchronous callback to return the result.
+[setAuthTokenVisibility](#setAuthTokenVisibility). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -3047,11 +3047,11 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3079,7 +3079,7 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
 Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility). This API uses a promise to return the result.
+[setAuthTokenVisibility](#setAuthTokenVisibility). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3098,17 +3098,17 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3154,11 +3154,11 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3206,17 +3206,17 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -3246,14 +3246,14 @@ Obtains the authenticator callback for an authentication session. This API uses 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback)
+> [getAuthCallback](#getAuthCallback)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback)(sessionId:
+**Substitutes:** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
@@ -3264,7 +3264,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | sessionId | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorCallback&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -3303,13 +3303,13 @@ Obtains the authenticator callback for an authentication session. This API uses 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback) instead.
+> [getAuthCallback](#getAuthCallback-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAuthCallback](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthcallback)(sessionId:
+**Substitutes:** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
@@ -3325,7 +3325,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AuthenticatorCallback&gt; |
+| Promise&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; |
 
 ## Examples
 
@@ -3362,14 +3362,14 @@ Obtains the authenticator information of an application. This API uses an asynch
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo)
+> [queryAuthenticatorInfo](#queryAuthenticatorInfo)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo)(owner:
+**Substitutes:** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -3380,7 +3380,7 @@ Obtains the authenticator information of an application. This API uses an asynch
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | owner | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorInfo&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -3408,13 +3408,13 @@ Obtains the authenticator information of an application. This API uses a promise
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo) instead.
+> [queryAuthenticatorInfo](#queryAuthenticatorInfo-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.queryAuthenticatorInfo](arkts-basicservices-appaccount-appaccountmanager-i.md#queryauthenticatorinfo)(owner:
+**Substitutes:** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -3430,7 +3430,7 @@ Obtains the authenticator information of an application. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AuthenticatorInfo&gt; |
+| Promise&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; |
 
 ## Examples
 
@@ -3471,11 +3471,11 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -3521,17 +3521,17 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) |
 
 ## Examples
 
@@ -3576,11 +3576,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
 
 ## Examples
 
@@ -3626,17 +3626,17 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
 
 ## Examples
 
@@ -3686,11 +3686,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) |
 
 ## Examples
 
@@ -3713,19 +3713,19 @@ getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<strin
 ```
 
 Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setOAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setoauthtokenvisibility). This API uses an asynchronous callback to return the result.
+[setOAuthTokenVisibility](#setOAuthTokenVisibility). This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist)
+> [getAuthList](#getAuthList)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist)(name:
+**Substitutes:** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3760,18 +3760,18 @@ getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
 Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setOAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setoauthtokenvisibility). This API uses a promise to return the result.
+[setOAuthTokenVisibility](#setOAuthTokenVisibility). This API uses a promise to return the result.
 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist) instead.
+> [getAuthList](#getAuthList-1) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAuthList](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthlist)(name:
+**Substitutes:** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3788,7 +3788,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## Examples
 
@@ -3813,14 +3813,14 @@ Obtains the authorization token of the specified authentication type for an appl
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)
+> [getAuthToken](#getAuthToken)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)(name:
+**Substitutes:** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3861,14 +3861,14 @@ Obtains the authorization token of the specified authentication type for an appl
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)
+> [getAuthToken](#getAuthToken-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.getAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#getauthtoken)(name:
+**Substitutes:** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -3886,7 +3886,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -3911,14 +3911,14 @@ Unsubscribes from account information changes.
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [off('accountChange')](appAccount.AppAccountManager.off(type: 'accountChange', callback?: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
+> [off('accountChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** appAccount.AppAccountManager.off(type:
+**Substitutes:** [off](appAccount.AppAccountManager.off(type:)
 
 <!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -3929,7 +3929,7 @@ Unsubscribes from account information changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'change' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No |
 
 ## Examples
 
@@ -3970,15 +3970,15 @@ Unsubscribes from account information changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'accountChange' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | No |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4021,7 +4021,7 @@ Subscribes to account information changes of apps.
 
 **Deprecated since:** 9
 
-**Substitutes:** appAccount.AppAccountManager.on(type:
+**Substitutes:** [on](appAccount.AppAccountManager.on(type:)
 
 <!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -4032,8 +4032,8 @@ Subscribes to account information changes of apps.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'change' | Yes |
-| owners | Array&lt;string&gt; | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| owners | Array & lt;string & gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -4071,16 +4071,16 @@ Subscribes to account information changes of apps.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'accountChange' | Yes |
-| owners | Array&lt;string&gt; | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| owners | Array & lt;string & gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -4118,16 +4118,16 @@ Obtains the authenticator information of an application. This API uses an asynch
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | owner | string | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AuthenticatorInfo&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -4173,16 +4173,16 @@ Obtains the authenticator information of an application. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AuthenticatorInfo&gt; |
+| Promise&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -4227,10 +4227,10 @@ Removes an application account. This API uses an asynchronous callback to return
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4275,16 +4275,16 @@ Removes an application account. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4322,17 +4322,17 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AppAccountInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4382,17 +4382,17 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppAccountInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4425,14 +4425,14 @@ Sets a credential for an application account. This API uses an asynchronous call
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#setcredential)
+> [setCredential](#setCredential)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#setcredential)(name:
+**Substitutes:** [setCredential](appAccount.AppAccountManager.setCredential(name:)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4472,14 +4472,14 @@ Sets a credential for an application account. This API uses a promise to return 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#setcredential)
+> [setCredential](#setCredential-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setCredential](arkts-basicservices-appaccount-appaccountmanager-i.md#setcredential)(name:
+**Substitutes:** [setCredential](appAccount.AppAccountManager.setCredential(name:)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -4497,7 +4497,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -4522,14 +4522,14 @@ Sets additional information for an application account. This API uses an asynchr
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
+> [setCustomData](#setCustomData)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)(name:
+**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4568,14 +4568,14 @@ Sets additional information for an application account. This API uses a promise 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
+> [setCustomData](#setCustomData-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)(name:
+**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
@@ -4592,7 +4592,7 @@ Sets additional information for an application account. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -4633,11 +4633,11 @@ Sets the access to the data of an account for an application. This API uses an a
 
 | Error Code ID |
 | --- |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -4684,17 +4684,17 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -4724,14 +4724,14 @@ Sets data synchronization for an application account. This API uses an asynchron
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)
+> [setDataSyncEnabled](#setDataSyncEnabled)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)(name:
+**Substitutes:** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4772,14 +4772,14 @@ Sets data synchronization for an application account. This API uses a promise to
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)
+> [setDataSyncEnabled](#setDataSyncEnabled-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setDataSyncEnabled](arkts-basicservices-appaccount-appaccountmanager-i.md#setdatasyncenabled)(name:
+**Substitutes:** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4798,7 +4798,7 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -4823,14 +4823,14 @@ Sets data to be associated with an application account. This API uses an asynchr
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
+> [setCustomData](#setCustomData)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)(name:
+**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4870,14 +4870,14 @@ Sets data to be associated with an application account. This API uses a promise 
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)
+> [setCustomData](#setCustomData-1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setCustomData](arkts-basicservices-appaccount-appaccountmanager-i.md#setcustomdata)(name:
+**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -4895,7 +4895,7 @@ Sets data to be associated with an application account. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -4936,11 +4936,11 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -4987,17 +4987,17 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5050,12 +5050,12 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -5104,18 +5104,18 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
+| [12300107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) |
 
 ## Examples
 
@@ -5159,12 +5159,12 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -5214,12 +5214,12 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -5274,10 +5274,10 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5324,16 +5324,16 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5379,11 +5379,11 @@ Sets custom data for an application account. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
 
 ## Examples
 
@@ -5430,17 +5430,17 @@ Sets custom data for an application account. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) |
 
 ## Examples
 
@@ -5487,11 +5487,11 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5535,17 +5535,17 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -5575,14 +5575,14 @@ Sets an authorization token of the specific authentication type for an applicati
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)
+> [setAuthToken](#setAuthToken)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)(name:
+**Substitutes:** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5622,14 +5622,14 @@ Sets an authorization token of the specific authentication type for an applicati
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)
+> [setAuthToken](#setAuthToken-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAuthToken](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtoken)(name:
+**Substitutes:** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -5647,7 +5647,7 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -5678,14 +5678,14 @@ Sets the visibility of an authorization token to an application. This API uses a
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)
+> [setAuthTokenVisibility](#setAuthTokenVisibility)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)(
+**Substitutes:** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility()
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5727,14 +5727,14 @@ Sets the visibility of an authorization token to an application. This API uses a
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)
+> [setAuthTokenVisibility](#setAuthTokenVisibility-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AppAccountManager.setAuthTokenVisibility](arkts-basicservices-appaccount-appaccountmanager-i.md#setauthtokenvisibility)(name:
+**Substitutes:** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility(name:)
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -5753,7 +5753,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -5793,13 +5793,13 @@ Verifies the credential of an application account. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 
@@ -5850,13 +5850,13 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) |
+| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) |
 
 ## Examples
 

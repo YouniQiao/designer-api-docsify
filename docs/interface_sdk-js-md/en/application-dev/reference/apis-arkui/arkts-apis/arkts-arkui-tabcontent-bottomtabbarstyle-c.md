@@ -32,7 +32,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | indicates the icon of the bottom tab bar |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabcontent-tabbarsymbol-c.md) | Yes | indicates the icon of the bottom tab bar |
 | text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | indicates the text of the bottom tab bar |
 
 ## iconStyle
@@ -57,7 +57,7 @@ Sets the style of the label icon on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TabBarIconStyle](../arkts-components/arkts-arkui-tabbariconstyle-i.md) | Yes | style of the label icon on the bottom tab. |
+| style | [TabBarIconStyle](arkts-arkui-tabcontent-tabbariconstyle-i.md) | Yes | style of the label icon on the bottom tab. |
 
 **Return value:**
 
@@ -177,7 +177,7 @@ Static constructor used to create a BottomTabBarStyle instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | indicates the icon of the bottom tab bar |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabcontent-tabbarsymbol-c.md) | Yes | indicates the icon of the bottom tab bar |
 | text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | indicates the text of the bottom tab bar |
 
 **Return value:**
@@ -210,7 +210,7 @@ Set the padding of the bottom tab bar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension \| LocalizedPadding | Yes | indicates the padding of the bottom tab bar Default value is { left:4.0vp, right:4.0vp, top:0.0vp, bottom:0.0vp }. |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) \| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) | Yes | indicates the padding of the bottom tab bar Default value is { left:4.0vp, right:4.0vp, top:0.0vp, bottom:0.0vp }. |
 
 **Return value:**
 

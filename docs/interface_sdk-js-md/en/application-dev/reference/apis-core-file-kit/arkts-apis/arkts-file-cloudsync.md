@@ -13,7 +13,7 @@ The **cloudSync** module provides the device-cloud sync capabilities for applica
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## Summary
@@ -66,9 +66,9 @@ import { cloudSync } from 'kits/@kit.CoreFileKit';
 | [ChangeData](arkts-corefile-cloudsync-changedata-i.md) | Represents the data change information. |
 | [DownloadProgress](arkts-corefile-cloudsync-downloadprogress-i.md) | Represents information about the download progress of a cloud file. |
 | [FailedFileInfo](arkts-corefile-cloudsync-failedfileinfo-i.md) | Represents a list of files that fail to be downloaded from the Drive Kit and failure causes. |
-| [HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md) | Represents the historical version information of the device-cloud file when the  [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) method of the  [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called. |
+| [HistoryVersion](arkts-corefile-cloudsync-historyversion-i.md) | Represents the historical version information of the device-cloud file when the  [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#getHistoryVersionList) method of the  [FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion) class is called. |
 | [SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md) | Represents information about the device-cloud sync progress. |
-| [VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md) | Represents the download state and progress information of historical version files when the  [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method of the  [FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called. |
+| [VersionDownloadProgress](arkts-corefile-cloudsync-versiondownloadprogress-i.md) | Represents the download state and progress information of historical version files when the  [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadHistoryVersion) method of the  [FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion) class is called. |
 
 <!--Del-->
 ### Interfaces（系统接口）

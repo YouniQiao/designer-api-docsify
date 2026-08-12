@@ -36,7 +36,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | 是 | 指定的焦距模式。传参为null或者undefined，作为0处理，手动对焦模式。 |
+| afMode | FocusMode | 是 | 指定的焦距模式。传参为null或者undefined，作为0处理，手动对焦模式。 |
 
 **返回值：**
 
@@ -48,7 +48,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 
 ## isLockFocusTrackingSupported
 
@@ -80,5 +80,5 @@ isLockFocusTrackingSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 

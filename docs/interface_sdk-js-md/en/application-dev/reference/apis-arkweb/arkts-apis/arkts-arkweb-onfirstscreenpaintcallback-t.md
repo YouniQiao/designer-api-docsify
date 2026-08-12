@@ -18,5 +18,5 @@ The callback reports the time required for the first screen painting of the curr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstScreenPaint | [FirstScreenPaint](../arkts-components/arkts-arkweb-firstscreenpaint-i.md) | Yes | the first screen paint info. |
+| firstScreenPaint | [FirstScreenPaint](arkts-arkweb-web-firstscreenpaint-i.md) | Yes | the first screen paint info. |
 

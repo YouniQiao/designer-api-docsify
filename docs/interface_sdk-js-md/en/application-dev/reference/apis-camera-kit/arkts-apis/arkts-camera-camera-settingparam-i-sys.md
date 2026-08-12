@@ -15,7 +15,7 @@ Defines the effect parameters used to preheat an image.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## faceSlender
@@ -25,7 +25,7 @@ faceSlender: int
 ```
 
 Face slimming level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). For example, the value **1**indicates level-1 slimming.
+[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1**indicates level-1 slimming.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -46,7 +46,7 @@ skinSmoothLevel: int
 ```
 
 Skin smoothing level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). For example, the value **1**indicates level-1 smoothing.
+[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1**indicates level-1 smoothing.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -67,7 +67,7 @@ skinTone: int
 ```
 
 Skin tone perfection level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange). For example, the value  
+[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value  
 **0xBF986C** indicates a specific color.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int

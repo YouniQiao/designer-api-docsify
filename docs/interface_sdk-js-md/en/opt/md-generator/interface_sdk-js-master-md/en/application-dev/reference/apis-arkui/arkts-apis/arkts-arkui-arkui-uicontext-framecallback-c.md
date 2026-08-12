@@ -4,10 +4,10 @@ Implements the API for setting the task that needs to be executed during the nex
 
 > **NOTE：**
 > 
-> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) and
-> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback) from [UIContext](arkts-arkui-uicontext.md).
-> Extend this class and override either the [onFrame](arkts-arkui-arkui-uicontext-framecallback-c.md#onframe) or
-> [onIdle](arkts-arkui-arkui-uicontext-framecallback-c.md#onidle) method to implement specific service logic.
+> - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback) and
+> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postDelayedFrameCallback) from [UIContext](@ohos.arkui.UIContext).
+> Extend this class and override either the [onFrame](#onFrame) or
+> [onIdle](#onIdle) method to implement specific service logic.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Implements the API for setting the task that needs to be executed during the nex
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## onFrame

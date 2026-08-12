@@ -18,7 +18,7 @@ decoratorInfo: DecoratorInfo[]
 
 The UI component information associated with the object data.If the data object can not be observed, will return empty array.
 
-**Type:** [DecoratorInfo](arkts-arkui-arkui-statemanagement-decoratorinfo-i.md)[]
+**Type:** [DecoratorInfo](arkts-arkui-utils-decoratorinfo-i.md)[]
 
 **Since:** 24
 

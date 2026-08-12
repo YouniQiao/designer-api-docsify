@@ -11,7 +11,7 @@ Session represent a connection session to one of the SEs available on the device
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -32,8 +32,8 @@ Close the connection with the SE. This will close any channels opened by this ap
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -70,8 +70,8 @@ Close any channels opened on this session.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -114,8 +114,8 @@ Get the ATR of this SE.A empty array SHALL be returned if the ATR for this SE is
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -159,7 +159,7 @@ Get the reader that provides this session.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 
@@ -215,7 +215,7 @@ Check if this session is closed.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 
@@ -259,18 +259,18 @@ This method is provided to ease the development of mobile applications and for b
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Channel&gt; |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -320,18 +320,18 @@ This method is provided to ease the development of mobile applications and for b
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | aid | number[] | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Channel&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -389,18 +389,18 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Channel&gt; |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -452,18 +452,18 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 | --- | --- | --- |
 | aid | number[] | Yes |
 | p2 | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Channel&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -521,18 +521,18 @@ This method is provided to ease the development of mobile applications and for b
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Channel&gt; |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -582,18 +582,18 @@ This method is provided to ease the development of mobile applications and for b
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | aid | number[] | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Channel&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -651,18 +651,18 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Channel&gt; |
+| Promise&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 
@@ -714,18 +714,18 @@ Open a logical channel with the SE, selecting the applet represented by the give
 | --- | --- | --- |
 | aid | number[] | Yes |
 | p2 | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Channel&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) |
-| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
-| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3300102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) |
+| [3300103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) |
+| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 

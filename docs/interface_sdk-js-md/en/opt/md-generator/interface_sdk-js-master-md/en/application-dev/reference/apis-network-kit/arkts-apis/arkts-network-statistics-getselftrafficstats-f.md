@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## getSelfTrafficStats
@@ -30,17 +30,17 @@ Get the traffic usage details of the specified network of the calling applicatio
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;NetStatsInfo&gt; |
+| Promise&lt;[NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-| [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
-| [2103019](../errorcode-net-statistics.md#2103019-invalid-timestamp) |
+| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [2103017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
+| [2103019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103019-invalid-timestamp) |
 
 ## Examples
 

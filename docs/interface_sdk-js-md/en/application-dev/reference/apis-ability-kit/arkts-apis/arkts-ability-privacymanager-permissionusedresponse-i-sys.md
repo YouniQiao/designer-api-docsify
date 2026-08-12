@@ -15,7 +15,7 @@ Represents the access records of all applications or devices.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## beginTime
@@ -46,7 +46,7 @@ bundleRecords: Array<BundleUsedRecord>
 
 Each element represents the permission access record under an application dimension. Developers can further traverse permissionRecords to obtain specific permission usage details.
 
-**Type:** Array&lt;BundleUsedRecord&gt;
+**Type:** Array&lt;[BundleUsedRecord](arkts-ability-privacymanager-bundleusedrecord-i-sys.md)&gt;
 
 **Since:** 9
 

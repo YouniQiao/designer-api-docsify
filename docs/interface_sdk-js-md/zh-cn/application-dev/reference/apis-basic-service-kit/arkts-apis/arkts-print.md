@@ -43,7 +43,7 @@
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate) | 更新打印任务状态，使用callback异步回调。 |
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate-1) | 更新打印任务状态，使用Promise异步回调。 |
 | [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md#updateprinterindiscovery) | 更新打印机能力到系统打印机发现列表，使用Promise异步回调。 |
-| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) | 更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)的alias和options字段。 |
+| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) | 更新系统中打印机的部分信息，使用Promise异步回调。当前仅允许更新[PrinterInformation](arkts-basicservices-print-printerinformation-i.md#PrinterInformation)的alias和options字段。 |
 
 <!--Del-->
 ### 函数（系统接口）

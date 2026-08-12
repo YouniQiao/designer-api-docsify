@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## setDefaultFreezeObserver
@@ -42,5 +42,5 @@ Set the default freeze observer, This function will be executed right after the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
+| [16000205](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 

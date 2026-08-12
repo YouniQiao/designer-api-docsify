@@ -2,7 +2,7 @@
 
 Component sheet options
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the bindSheet.
 
-**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
+**Type:** [EdgeLightMode](arkts-arkui-common-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_DISABLED
 

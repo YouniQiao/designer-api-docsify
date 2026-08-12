@@ -34,7 +34,7 @@ Defines the constructor of SymbolGlyph.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | Resource of the **SymbolGlyph** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
+| value | Resource | No | Resource of the **SymbolGlyph** component, for example, **\$r('sys.symbol.ohos_wifi')**. |
 
 ## Summary
 

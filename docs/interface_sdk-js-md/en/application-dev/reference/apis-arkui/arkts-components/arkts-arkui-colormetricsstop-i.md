@@ -18,7 +18,7 @@ color: ColorMetrics
 
 Color value of the linear gradient color breakpoint.
 
-**Type:** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ Value of the linear gradient color stop. The value is a proportion ranging from 
 
 If the value is a string that represents a number, it will be converted to a number. For example, **'10vp'** is converted to **10**, and **'10%'** is converted to **0.1**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 23
 

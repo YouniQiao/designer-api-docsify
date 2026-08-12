@@ -32,5 +32,5 @@ Method to customize JSON serialization.
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Any&gt; | A record representing the serialized object |
+| Record&lt;string, Any&gt; | A record representing the serialized object |
 

@@ -2,7 +2,7 @@
 
 Defines a UIListEvent which is used to set different common event to target component.
 
-**Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **Since:** 26.0.0
 

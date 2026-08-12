@@ -2,7 +2,7 @@
 
 Describes the FD of a custom vibration configuration file. Ensure that the file is available, and the parameters in it can be obtained from the sandbox path through the  
 [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen) API or from the HAP resource through the  
-[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see  
+[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd)API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see  
 [Vibration Effect Description](../../../device/sensor/vibrator-guidelines.md#vibration-effect-description).
 
 **Since:** 10
@@ -14,7 +14,7 @@ Describes the FD of a custom vibration configuration file. Ensure that the file 
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## fd

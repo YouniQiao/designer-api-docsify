@@ -1,6 +1,6 @@
 # Vector
 
-Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements.Both Vector and [ArrayList](arkts-util-arraylist.md) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%.  
+Vector is a linear data structure that is implemented based on arrays. When the memory of a vector is used up, a larger contiguous memory area is automatically allocated, all the elements are copied to the new memory area, and the current memory area is reclaimed. Vector can be used to efficiently access elements.Both Vector and [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList) are implemented based on arrays, but Vector provides more interfaces for operating the arrays. Both of them can dynamically adjust the capacity. Vector doubles the capacity each time, whereas ArrayList increases the capacity by 50%.  
 **Recommended use case**: Use Vector when the data volume is large.This topic uses the following to identify the use of generics:
 
 - T: Type
@@ -8,13 +8,13 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 > **NOTE：**
 > 
 > - The APIs provided by this module are deprecated since API version 9. You are advised to use
-> [@ohos.util.ArrayList](arkts-util-arraylist.md).
+> [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ArrayList
+**Substitutes:** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList)
 
 <!--Device-unnamed-declare class Vector<T>--><!--Device-unnamed-declare class Vector<T>-End-->
 
@@ -23,7 +23,7 @@ Vector is a linear data structure that is implemented based on arrays. When the 
 ## Modules to Import
 
 ```TypeScript
-import { Vector } from 'kits/@kit.ArkTS';
+import { Vector } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -46,7 +46,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;T&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## Examples
 
@@ -217,7 +217,7 @@ Converts this Vector into an array.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## Examples
 
@@ -250,7 +250,7 @@ Copies elements in this Vector into an array to overwrite elements of the same p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | Array&lt;T&gt; | Yes |
+| array | Array & lt;T & gt; | Yes |
 
 ## forEach
 
@@ -272,7 +272,7 @@ Uses a callback to traverse the elements in this Vector and obtain their positio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | Yes |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | Yes |
 | thisArg | Object | No |
 
 ## Examples
@@ -859,7 +859,7 @@ Replaces all elements in this Vector with new elements, and returns the new ones
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | Yes |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | Yes |
 | thisArg | Object | No |
 
 ## Examples
@@ -959,7 +959,7 @@ Sorts elements in this Vector.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | No |
+| comparator | (firstValue: T, secondValue: T) = & gt; number | No |
 
 ## Examples
 

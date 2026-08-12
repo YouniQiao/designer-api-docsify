@@ -12,7 +12,7 @@ function getRdbStore(context: Context, config: StoreConfig, version: number, cal
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore)
+**替代接口：** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore)
 
 <!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void--><!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void-End-->
 
@@ -56,4 +56,4 @@ function getRdbStore(context: Context, config: StoreConfig, version: number): Pr
 
 | 类型 |
 | --- |
-| Promise&lt;RdbStore&gt; |
+| Promise & lt;RdbStore & gt; |

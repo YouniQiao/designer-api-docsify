@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## setKioskFeatures
@@ -35,16 +35,16 @@ In non-kiosk mode, this API can be called normally but does not take effect. The
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| features | Array&lt;KioskFeature&gt; | Yes | Feature set of the Kiosk mode. (Since API version 24, swiping up from the bottom to access the recent taskbar and swiping left or right to display the side dock are supported.) &lt;br&gt; If an empty array is passed, the system will clear all previously delivered features and restore the kiosk mode to its default state. To be specific, abilities such as the notification center, control panel, recent task bar, and side dock are disabled. |
+| features | Array&lt;[KioskFeature](arkts-mdm-applicationmanager-kioskfeature-e.md)&gt; | Yes | Feature set of the Kiosk mode. (Since API version 24, swiping up from the bottom to access the recent taskbar and swiping left or right to display the side dock are supported.) &lt;br&gt; If an empty array is passed, the system will clear all previously delivered features and restore the kiosk mode to its default state. To be specific, abilities such as the notification center, control panel, recent task bar, and side dock are disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

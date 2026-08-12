@@ -1,8 +1,8 @@
 # Scroller
 
-可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到[ArcList](arkts-arkui-arclist.md)、  
-[ArcScrollBar](arkts-arkui-arcscrollbar.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、Scroll、[ScrollBar](scroll_bar)、  
-[Grid](arkts-arkui-grid-grid-f.md#grid)、[WaterFlow](water_flow)上。
+可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到[ArcList](arkts-arkui-arkui-arclist-con.md#ArcList)、  
+[ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md#ArcScrollBar)、[List](list)、Scroll、[ScrollBar](scroll_bar)、  
+[Grid](grid)、[WaterFlow](water_flow)上。
 
 > **说明：**
 > 
@@ -14,7 +14,7 @@
 > aboutToAppear在创建自定义组件的新实例后，在执行其build()方法之前执行。因此如果滚动组件在自定义组件build内，在该自定义组件aboutToAppear执行时，内部滚动组件还没有创建，是不能正常调用上述
 > Scroller方法的。
 
-> 4、以[onAppear](arkts-arkui-common-commonmethod-i.md#onappear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用
+> 4、以[onAppear](CommonMethod#onAppear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用
 > Scroller方法的。
 
 **起始版本：** 23
@@ -87,7 +87,7 @@ contentSize() : SizeResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## currentOffset
 
@@ -99,10 +99,10 @@ currentOffset(): OffsetResult | undefined
 
 > **说明：**
 > 
-> 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明，推荐使用[offset](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md#offset)函数。
+> 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明，推荐使用[offset](#offset)函数。
 > 
 > 2. Grid、List、WaterFlow组件有懒加载机制，组件内容没有加载并布局完成时，内容总偏移量通过估算得到，估算结果可能会有误差。其中List组件可以通过
-> [childrenMainSize](arkts-arkui-list-listattribute-i.md#childrenmainsize)属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
+> [childrenMainSize](ListAttribute#childrenMainSize)属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
 
 **起始版本：** 23
 
@@ -118,7 +118,7 @@ currentOffset(): OffsetResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffsetResult](../arkts-components/arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
+| [OffsetResult](arkts-arkui-scroll-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
 
 ## fling
 
@@ -148,8 +148,8 @@ fling(velocity: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getFrameNode
 
@@ -173,7 +173,7 @@ getFrameNode(): FrameNode | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
+| FrameNode | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
 
 ## getItemIndex
 
@@ -216,8 +216,8 @@ getItemIndex(x: double, y: double): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getItemRect
 
@@ -257,8 +257,8 @@ getItemRect(index: int): RectResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## isAtEnd
 
@@ -294,7 +294,7 @@ isAtEnd(): boolean
 offset(): OffsetResult | undefined
 ```
 
-获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md#currentoffset)接口保持一致。
+获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](#currentOffset)接口保持一致。
 
 **起始版本：** 23
 
@@ -310,7 +310,7 @@ offset(): OffsetResult | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffsetResult](../arkts-components/arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
+| [OffsetResult](arkts-arkui-scroll-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
 
 ## scrollBy
 
@@ -326,7 +326,7 @@ scrollBy(dx: Length, dy: Length): void
 > 
 > - 各组件行为存在差异：
 > 
-> - [ArcList](arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
+> - [ArcList](arkts-arkui-arkui-arclist-con.md#ArcList)和[List](list)组件会对所有经过的item进行加载和布局。
 > 
 > - Grid组件和[SLIDING_WINDOW]模式的[WaterFlow](water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。
 > 
@@ -374,7 +374,7 @@ Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Edge](arkts-arkui-edge-e.md) | 是 | 滚动到的边缘位置。 |
-| options | [ScrollEdgeOptions](../arkts-components/arkts-arkui-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。 |
+| options | [ScrollEdgeOptions](arkts-arkui-scroll-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。 |
 
 ## scrollPage
 
@@ -398,7 +398,7 @@ scrollPage(value: ScrollPageOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScrollPageOptions](../arkts-components/arkts-arkui-scrollpageoptions-i.md) | 是 |  |
+| value | [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md) | 是 |  |
 
 ## scrollTo
 
@@ -414,7 +414,7 @@ scrollTo(options: ScrollOptions): void
 > 
 > - 各组件行为存在差异：
 > 
-> - [ArcList](arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
+> - [ArcList](arkts-arkui-arkui-arclist-con.md#ArcList)和[List](list)组件会对所有经过的item进行加载和布局。
 > 
 > - Grid组件和[SLIDING_WINDOW]模式的[WaterFlow](water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。
 > 
@@ -450,7 +450,7 @@ scrollToIndex(value: int, smooth?: boolean, align?: ScrollAlign, options?: Scrol
 > 
 > 1.仅支持ArcList、Grid、List、WaterFlow组件。
 > 
-> 2.在[LazyForEach](lazy_for_each)、[ForEach](for_each)、[Repeat](arkts-arkui-repeat-repeat-f.md#repeat)刷新数据源时，需确保在数据刷新完成之后再调用此接
+> 2.在[LazyForEach](lazy_for_each)、[ForEach](for_each)、[Repeat](repeat)刷新数据源时，需确保在数据刷新完成之后再调用此接
 > 口。
 > 
 > 3.从API version 11开始，在List中支持
@@ -484,6 +484,6 @@ scrollToIndex(value: int, smooth?: boolean, align?: ScrollAlign, options?: Scrol
 | --- | --- | --- | --- |
 | value | int | 是 | 要滑动到的目标元素在当前容器中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 &lt;br&gt;取值限定为整数。 |
 | smooth | boolean | 否 | 设置滑动到列表项在列表中的索引值时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;。 &lt;br&gt;默认值：false。 |
-| align | [ScrollAlign](../arkts-components/arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;List中的默认值为：ScrollAlign.START。Grid中默认值为：ScrollAlign.AUTO。 WaterFlow中的默认值为：ScrollAlign.START。&lt;br/&gt;**说明：** &lt;br/&gt;仅List、Grid、WaterFlow组件支持该参数。 |
+| align | [ScrollAlign](arkts-arkui-scroll-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;List中的默认值为：ScrollAlign.START。Grid中默认值为：ScrollAlign.AUTO。 WaterFlow中的默认值为：ScrollAlign.START。&lt;br/&gt;**说明：** &lt;br/&gt;仅List、Grid、WaterFlow组件支持该参数。 |
 | options | [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，如额外偏移量。&lt;br/&gt;。 &lt;br&gt;单位为：vp。默认值：0，单位：vp。 |
 

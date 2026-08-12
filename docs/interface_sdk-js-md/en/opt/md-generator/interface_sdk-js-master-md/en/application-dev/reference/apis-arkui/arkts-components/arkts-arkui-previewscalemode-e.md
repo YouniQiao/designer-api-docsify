@@ -14,7 +14,7 @@ Enumerates the scale modes of the preview image.
 AUTO = 0
 ```
 
-The preview image automatically adjusts its width, height, and scale based on [Placement](../arkts-apis/arkts-arkui-placement-e.md/arkts-arkui-placement-e.md).
+The preview image automatically adjusts its width, height, and scale based on [Placement](../arkts-apis/arkts-arkui-placement-e.md#Placement).
 
 **Since:** 20
 

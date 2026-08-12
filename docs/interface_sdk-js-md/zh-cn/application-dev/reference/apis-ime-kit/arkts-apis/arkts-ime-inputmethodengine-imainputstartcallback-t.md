@@ -20,6 +20,6 @@ export type IMAInputStartCallback = (kbController: KeyboardController, inputClie
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| kbController | [KeyboardController](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyboardcontroller-i.md) | 是 | 回调函数，返回输入法操作相关实例。 |
+| kbController | KeyboardController | 是 | 回调函数，返回输入法操作相关实例。 |
 | inputClient | [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | 是 | 输入法操作相关实例。 |
 

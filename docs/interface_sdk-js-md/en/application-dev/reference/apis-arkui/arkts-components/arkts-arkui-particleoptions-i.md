@@ -24,7 +24,7 @@ Particle acceleration.
 
 Default value: **{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }**
 
-**Type:** [AccelerationOptions](../arkts-apis/arkts-arkui-particle-accelerationoptions-i.md)&lt;ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER&gt;
+**Type:** [AccelerationOptions](arkts-arkui-accelerationoptions-i.md)&lt;ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER&gt;
 
 **Default:** {speed:{range:[0,0]};angle:{range:[0,0]}}
 
@@ -184,7 +184,7 @@ Particle velocity.
 
 Default value: **{speed: [0.0,0.0],angle: [0.0,0.0] }**
 
-**Type:** [VelocityOptions](../arkts-apis/arkts-arkui-particle-velocityoptions-i.md)
+**Type:** [VelocityOptions](arkts-arkui-velocityoptions-i.md)
 
 **Default:** {speed:[0,0];angle:[0,0]}
 

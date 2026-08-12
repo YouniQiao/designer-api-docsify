@@ -38,7 +38,7 @@ updater?: ParticleUpdaterOptions
 
 Particle property updater.
 
-**Type:** [ParticleUpdaterOptions](../arkts-components/arkts-arkui-particleupdateroptions-i.md)
+**Type:** [ParticleUpdaterOptions](arkts-arkui-particle-particleupdateroptions-i.md)
 
 **Default:** {type:UPDATER.NONE;config:undefined}
 

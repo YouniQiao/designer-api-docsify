@@ -28,8 +28,8 @@ Defines the DepthComponent constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| background | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Background resource or PixelMap (required). |
-| options | [DepthComponentOptions](../arkts-apis/arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | No | DepthComponent options. |
+| background | ResourceStr \| PixelMap | Yes | Background resource or PixelMap (required). |
+| options | [DepthComponentOptions](arkts-arkui-depthcomponentoptions-i-sys.md) | No | DepthComponent options. |
 
 ## Summary
 

@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#RouterOptions
+**替代接口：** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-unnamed-export interface DisableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface DisableAlertBeforeBackPageOptions-End-->
 
@@ -28,7 +28,7 @@ cancel?: (errMsg: string) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#RouterOptions
+**替代接口：** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-DisableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-DisableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -54,7 +54,7 @@ complete?: () => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#RouterOptions
+**替代接口：** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-DisableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-DisableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -74,7 +74,7 @@ success?: (errMsg: string) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#RouterOptions
+**替代接口：** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-DisableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-DisableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 

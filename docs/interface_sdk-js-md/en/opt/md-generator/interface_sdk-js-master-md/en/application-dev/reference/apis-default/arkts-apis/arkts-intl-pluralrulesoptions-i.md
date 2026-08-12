@@ -54,4 +54,4 @@ minimumSignificantDigits?: number | undefined
 type?: PluralRuleType | undefined
 ```
 
-**Type:** PluralRuleType \| undefined
+**Type:** [PluralRuleType](arkts-intl-pluralruletype-t.md) \| undefined

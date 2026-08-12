@@ -65,7 +65,7 @@ bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [bottom](#bottom) | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
+| [bottom](#bottom) | LengthMetrics \| [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 |
 | ignoreSize | boolean | 是 |
 
 **返回值：**
@@ -228,7 +228,7 @@ right(value: Length): T
 start(value: LengthMetrics): T
 ```
 
-在[RTL](../arkts-apis/arkts-arkui-layoutdirection-e.md/arkts-arkui-layoutdirection-e.md)模式下为导航点距离Swiper组件右边的距离，在[LTR](../arkts-apis/arkts-arkui-layoutdirection-e.md/arkts-arkui-layoutdirection-e.md)模式下为导航点距离Swiper组件左边的距离。
+在[RTL](../arkts-apis/arkts-arkui-layoutdirection-e.md#LayoutDirection)模式下为导航点距离Swiper组件右边的距离，在[LTR](../arkts-apis/arkts-arkui-layoutdirection-e.md#LayoutDirection)模式下为导航点距离Swiper组件左边的距离。
 
 **起始版本：** 12
 

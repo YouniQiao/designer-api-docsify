@@ -18,7 +18,7 @@ event: DragEvent
 
 当前状态所对应的拖拽事件。通过dragController发起的dragEvent仅支持获取result和behavior，且用于拖拽结束状态。
 
-**类型：** [DragEvent](../arkts-components/arkts-arkui-dragevent-i.md)
+**类型：** DragEvent
 
 **起始版本：** 11
 

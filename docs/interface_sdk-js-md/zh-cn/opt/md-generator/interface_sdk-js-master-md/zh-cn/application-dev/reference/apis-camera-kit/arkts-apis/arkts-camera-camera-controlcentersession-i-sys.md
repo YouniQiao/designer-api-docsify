@@ -2,7 +2,7 @@
 
 Control center session object.
 
-**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
+**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty), [Aperture](arkts-camera-camera-aperture-i.md#Aperture), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect)
 
 **起始版本：** 20
 
@@ -38,9 +38,9 @@ Enable auto-framing effect.
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getAutoFramingStatus
 
@@ -68,7 +68,7 @@ Gets the status of auto-framing effect.
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getControlCenterHeight
 
@@ -98,7 +98,7 @@ Gets the control center height.
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getCurrentDevice
 
@@ -122,14 +122,14 @@ Gets the current camera device.
 
 | 类型 |
 | --- |
-| [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) |
+| [CameraDevice](arkts-camera-camera-cameradevice-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isAutoFramingSupported
 
@@ -157,7 +157,7 @@ Checks whether auto-framing is supported.
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## release
 
@@ -179,13 +179,13 @@ Release control center session object.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## usedAsPosition
 
@@ -215,6 +215,6 @@ Sets the camera to be used as a camera at the specified position.
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

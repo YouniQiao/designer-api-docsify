@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## withinComponent
@@ -12,7 +12,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 export function withinComponent(com: Component): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given {@link Component}object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Requires that the target Component which is inside of another Component that spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| com | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | Yes | describes the Component which the target one is inside of. |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes | describes the Component which the target one is inside of. |
 
 **Return value:**
 
@@ -38,5 +38,5 @@ Requires that the target Component which is inside of another Component that spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

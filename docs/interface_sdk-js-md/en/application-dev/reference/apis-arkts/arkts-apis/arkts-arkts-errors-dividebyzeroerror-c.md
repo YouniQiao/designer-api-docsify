@@ -2,7 +2,7 @@
 
 Represents an error that occurs when division by zero is performed.
 
-**Inheritance/Implementation:** DivideByZeroError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** DivideByZeroError extends [Error](Error)
 
 **Since:** 26.0.0
 

@@ -28,5 +28,5 @@ Create a FrameNode of Blank type.
 
 | Type | Description |
 | --- | --- |
-| [Blank](arkts-arkui-typenode-blank-t.md) | Return Blank type FrameNode. |
+| Blank | Return Blank type FrameNode. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { trash } from 'kits/@kit.CoreFileKit';
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## recover

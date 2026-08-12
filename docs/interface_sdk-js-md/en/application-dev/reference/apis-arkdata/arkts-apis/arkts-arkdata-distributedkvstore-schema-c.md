@@ -1,7 +1,7 @@
 # Schema
 
 Defines the schema of a KV store. You can create a **Schema** object and pass it in  
-[Options](arkts-arkdata-distributedkvstore-options-i.md) when creating or opening a KV store.
+[Options](arkts-arkdata-distributedkvstore-options-i.md#Options) when creating or opening a KV store.
 
 **Since:** 9
 
@@ -14,7 +14,7 @@ Defines the schema of a KV store. You can create a **Schema** object and pass it
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## constructor
@@ -103,7 +103,7 @@ set root(root: FieldNode)
 
 Set the root json object.
 
-**Type:** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
+**Type:** FieldNode
 
 **Since:** 9
 

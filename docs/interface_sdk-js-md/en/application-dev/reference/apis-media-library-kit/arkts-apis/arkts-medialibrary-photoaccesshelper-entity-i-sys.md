@@ -15,7 +15,7 @@ Provides APIs for output Entity.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## alias
@@ -48,7 +48,7 @@ field: FieldType
 
 Indicates Entity Name.
 
-**Type:** [FieldType](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-fieldtype-e-sys.md)
+**Type:** FieldType
 
 **Since:** 23
 

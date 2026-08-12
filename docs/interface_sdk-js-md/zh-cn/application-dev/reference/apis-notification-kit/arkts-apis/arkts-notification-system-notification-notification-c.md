@@ -8,7 +8,7 @@
 
 **废弃版本：** 7
 
-**替代接口：** ohos.notification/notification
+**替代接口：** [notification/notification](ohos.notification/notification)
 
 <!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
@@ -17,7 +17,7 @@
 ## 导入模块
 
 ```TypeScript
-import { ActionResult, ShowNotificationOptions } from 'kits/@kit.NotificationKit';
+import { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
 ```
 
 ## show
@@ -34,7 +34,7 @@ static show(options?: ShowNotificationOptions): void
 
 **废弃版本：** 7
 
-**替代接口：** ohos.notification/notification
+**替代接口：** [notification/notification](ohos.notification/notification)
 
 <!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableValues
@@ -24,7 +24,7 @@ Converts the array data that can be passed across threads into the data that can
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| values | collections.Array&lt;ValueType&gt; | Yes |
+| values | collections.Array & lt;ValueType & gt; | Yes |
 
 **Return value:**
 
@@ -36,7 +36,7 @@ Converts the array data that can be passed across threads into the data that can
 
 | Error Code ID |
 | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
 
 ## Examples
 

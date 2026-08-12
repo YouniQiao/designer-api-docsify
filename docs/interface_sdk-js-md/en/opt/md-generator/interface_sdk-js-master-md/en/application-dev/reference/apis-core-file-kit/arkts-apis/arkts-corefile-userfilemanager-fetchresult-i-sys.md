@@ -6,7 +6,7 @@ Provides APIs to manage the file retrieval result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md)
+**Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#FetchResult)
 
 <!--Device-userFileManager-interface FetchResult<T>--><!--Device-userFileManager-interface FetchResult<T>-End-->
 
@@ -17,7 +17,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -32,7 +32,7 @@ Releases and invalidates the **FetchFileResult** instance. After this instance i
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.close](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#close)
+**Substitutes:** [close](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#close)
 
 <!--Device-FetchResult-close(): void--><!--Device-FetchResult-close(): void-End-->
 
@@ -76,7 +76,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getallobjects)
+**Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getAllObjects)
 
 <!--Device-FetchResult-getAllObject(callback: AsyncCallback<Array<T>>): void--><!--Device-FetchResult-getAllObject(callback: AsyncCallback<Array<T>>): void-End-->
 
@@ -127,7 +127,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getallobjects)
+**Substitutes:** [getAllObjects](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getAllObjects)
 
 <!--Device-FetchResult-getAllObject(): Promise<Array<T>>--><!--Device-FetchResult-getAllObject(): Promise<Array<T>>-End-->
 
@@ -139,7 +139,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;T&gt;&gt; |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 ## Examples
 
@@ -173,7 +173,7 @@ Obtains the total number of files in the result set.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getCount](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getcount)
+**Substitutes:** [getCount](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getCount)
 
 <!--Device-FetchResult-getCount(): number--><!--Device-FetchResult-getCount(): number-End-->
 
@@ -219,7 +219,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getfirstobject)
+**Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getFirstObject)
 
 <!--Device-FetchResult-getFirstObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getFirstObject(callback: AsyncCallback<T>): void-End-->
 
@@ -270,7 +270,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getfirstobject)
+**Substitutes:** [getFirstObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getFirstObject)
 
 <!--Device-FetchResult-getFirstObject(): Promise<T>--><!--Device-FetchResult-getFirstObject(): Promise<T>-End-->
 
@@ -282,7 +282,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## Examples
 
@@ -316,7 +316,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getlastobject)
+**Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getLastObject)
 
 <!--Device-FetchResult-getLastObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getLastObject(callback: AsyncCallback<T>): void-End-->
 
@@ -367,7 +367,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getlastobject)
+**Substitutes:** [getLastObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getLastObject)
 
 <!--Device-FetchResult-getLastObject(): Promise<T>--><!--Device-FetchResult-getLastObject(): Promise<T>-End-->
 
@@ -379,7 +379,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## Examples
 
@@ -409,13 +409,13 @@ getNextObject(callback: AsyncCallback<T>): void
 
 Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-corefile-userfilemanager-fetchresult-i-sys.md#isafterlast) to check whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getnextobject)
+**Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getNextObject)
 
 <!--Device-FetchResult-getNextObject(callback: AsyncCallback<T>): void--><!--Device-FetchResult-getNextObject(callback: AsyncCallback<T>): void-End-->
 
@@ -465,13 +465,13 @@ getNextObject(): Promise<T>
 
 Obtains the next file asset in the result set. This API uses a promise to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-corefile-userfilemanager-fetchresult-i-sys.md#isafterlast) to check whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getnextobject)
+**Substitutes:** [getNextObject](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getNextObject)
 
 <!--Device-FetchResult-getNextObject(): Promise<T>--><!--Device-FetchResult-getNextObject(): Promise<T>-End-->
 
@@ -483,7 +483,7 @@ Before using this API, you must use [isAfterLast()](arkts-corefile-userfilemanag
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## Examples
 
@@ -520,7 +520,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getobjectbyposition)
+**Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getObjectByPosition)
 
 <!--Device-FetchResult-getPositionObject(index: number, callback: AsyncCallback<T>): void--><!--Device-FetchResult-getPositionObject(index: number, callback: AsyncCallback<T>): void-End-->
 
@@ -578,7 +578,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getobjectbyposition)
+**Substitutes:** [getObjectByPosition](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#getObjectByPosition)
 
 <!--Device-FetchResult-getPositionObject(index: number): Promise<T>--><!--Device-FetchResult-getPositionObject(index: number): Promise<T>-End-->
 
@@ -596,7 +596,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
@@ -640,7 +640,7 @@ Checks whether the cursor is in the last row of the result set.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchResult.isAfterLast](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#isafterlast)
+**Substitutes:** [isAfterLast](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#isAfterLast)
 
 <!--Device-FetchResult-isAfterLast(): boolean--><!--Device-FetchResult-isAfterLast(): boolean-End-->
 

@@ -13,7 +13,7 @@ Defines a system event.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## domain
@@ -42,7 +42,7 @@ eventType: EventType
 
 Event type.
 
-**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**Type:** EventType
 
 **Since:** 9
 

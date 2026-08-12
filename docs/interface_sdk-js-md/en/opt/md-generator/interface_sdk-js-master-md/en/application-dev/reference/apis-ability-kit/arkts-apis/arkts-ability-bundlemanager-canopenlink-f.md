@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## canOpenLink
@@ -39,9 +39,9 @@ Checks whether the target application can be accessed based on the provided link
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700056](../errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) |
-| [17700055](../errorcode-bundle.md#17700055-invalid-link) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) |
+| [17700055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700055-invalid-link) |
 
 ## Examples
 

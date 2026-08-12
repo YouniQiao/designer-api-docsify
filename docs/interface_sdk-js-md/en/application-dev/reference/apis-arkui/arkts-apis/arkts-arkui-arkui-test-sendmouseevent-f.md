@@ -22,7 +22,7 @@ Send a mock mouse event to the current application. This interface is only suita
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | Yes | MouseEvent to be sent. |
+| event | MouseEvent | Yes | MouseEvent to be sent. |
 
 **Return value:**
 

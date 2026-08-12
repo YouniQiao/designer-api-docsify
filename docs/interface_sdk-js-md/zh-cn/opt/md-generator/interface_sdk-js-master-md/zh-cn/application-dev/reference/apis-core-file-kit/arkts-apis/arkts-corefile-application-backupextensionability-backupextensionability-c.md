@@ -260,13 +260,13 @@ onRelease(scenario: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| scenario | number | 是 |
+| [scenario](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

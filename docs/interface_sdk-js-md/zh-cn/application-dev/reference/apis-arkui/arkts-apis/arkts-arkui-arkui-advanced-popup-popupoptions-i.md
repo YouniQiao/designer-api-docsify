@@ -45,7 +45,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** [Direction](arkts-arkui-direction-e.md)
+**类型：** Direction
 
 **默认值：** Direction.Auto
 
@@ -99,7 +99,7 @@ maxWidth?: Dimension
 
 默认值：400vp
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 400.0_vp
 
@@ -151,7 +151,7 @@ onClose?: VoidCallback
 
 设置popup关闭按钮回调函数。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 

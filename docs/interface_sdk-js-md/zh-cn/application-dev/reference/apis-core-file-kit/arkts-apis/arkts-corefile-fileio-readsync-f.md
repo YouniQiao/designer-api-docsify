@@ -22,7 +22,7 @@ declare function readSync(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:readSync](arkts-corefile-fileio-readsync-f.md#readsync)
+**替代接口：** [readSync](arkts-corefile-file-fs-readsync-f.md#readSync)
 
 <!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
 

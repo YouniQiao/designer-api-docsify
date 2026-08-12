@@ -23,7 +23,7 @@ contentTransitionEffect?: ContentTransitionEffect
 
 设置为undefined或null时，取值为ContentTransitionEffect.IDENTITY。
 
-**类型：** [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md)
+**类型：** ContentTransitionEffect
 
 **默认值：** ContentTransitionEffect.IDENTITY
 

@@ -26,13 +26,13 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVTranscoder&gt; | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
+| Promise&lt;[AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md)&gt; | Promise对象。异步返回AVTranscoder实例，失败时返回null。可用于视频转码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -77,11 +77,11 @@ A maximum of 2 **AVTranscoder** instances can be created.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVTranscoder \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
+| Promise&lt;[AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVTranscoder** instance is returned; otherwise, **null** is returned. The instance can be used for video transcoding. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

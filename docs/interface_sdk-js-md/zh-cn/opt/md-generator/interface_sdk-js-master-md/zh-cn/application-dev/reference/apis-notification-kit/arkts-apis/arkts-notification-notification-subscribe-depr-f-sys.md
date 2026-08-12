@@ -12,7 +12,7 @@ function subscribe(subscriber: NotificationSubscriber, callback: AsyncCallback<v
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#subscribe
+**替代接口：** [subscribe](ohos.notificationSubscribe/notificationSubscribe#subscribe)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,7 +46,7 @@ function subscribe(
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#subscribe
+**替代接口：** [subscribe](ohos.notificationSubscribe/notificationSubscribe#subscribe)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -77,7 +77,7 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#subscribe
+**替代接口：** [subscribe](ohos.notificationSubscribe/notificationSubscribe#subscribe)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -98,4 +98,4 @@ function subscribe(subscriber: NotificationSubscriber, info?: NotificationSubscr
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

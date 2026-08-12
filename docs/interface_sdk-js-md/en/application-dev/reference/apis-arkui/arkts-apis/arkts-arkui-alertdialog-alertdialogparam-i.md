@@ -142,7 +142,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Defines the alertDialog's border color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 23
 
@@ -162,7 +162,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the alertDialog's border style.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Since:** 23
 
@@ -182,7 +182,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Defines the alertDialog's border width.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 23
 
@@ -222,7 +222,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines the alertDialog's corner radius.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 23
 
@@ -474,7 +474,7 @@ offset?: Offset
 
 Offset of the pop-up window relative to the alignment position.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -574,7 +574,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback function when the dialog interactive dismiss
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-actionsheet-dismissdialogaction-i.md)&gt;
 
 **Since:** 23
 
@@ -594,7 +594,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the alertDialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 

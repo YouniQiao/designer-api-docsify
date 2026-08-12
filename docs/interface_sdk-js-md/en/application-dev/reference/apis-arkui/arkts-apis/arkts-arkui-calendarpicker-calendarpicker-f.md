@@ -24,13 +24,13 @@ Defines CalendarPicker Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CalendarOptions](../arkts-components/arkts-arkui-calendaroptions-i.md) | No | calendar options. |
+| options | [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md) | No | calendar options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CalendarPickerAttribute](../arkts-components/arkts-arkui-calendarpicker-attribute.md) |  |
+| [CalendarPickerAttribute](arkts-arkui-calendarpicker-calendarpickerattribute-i.md) |  |
 
 
 ## CalendarPicker
@@ -57,11 +57,11 @@ Defines the CalendarPicker component. It requires call setCalendarPickerOptions 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CalendarPickerAttribute&gt; | Yes | the callback to set up component's attribute. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CalendarPickerAttribute](arkts-arkui-calendarpicker-calendarpickerattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CalendarPickerAttribute](../arkts-components/arkts-arkui-calendarpicker-attribute.md) | The attribute of the CalendarPicker. |
+| [CalendarPickerAttribute](arkts-arkui-calendarpicker-calendarpickerattribute-i.md) | The attribute of the CalendarPicker. |
 

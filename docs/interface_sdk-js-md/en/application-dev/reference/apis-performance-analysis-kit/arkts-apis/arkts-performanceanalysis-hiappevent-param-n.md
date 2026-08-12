@@ -19,7 +19,7 @@ Provides parameter name constants.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

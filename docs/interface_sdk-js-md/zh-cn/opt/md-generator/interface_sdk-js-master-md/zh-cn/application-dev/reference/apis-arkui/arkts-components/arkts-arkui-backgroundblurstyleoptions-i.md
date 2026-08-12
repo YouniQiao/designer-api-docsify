@@ -1,8 +1,8 @@
 # BackgroundBlurStyleOptions
 
-继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)。
+继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)。
 
-**继承/实现关系：** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
+**继承/实现关系：** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)
 
 **起始版本：** 10
 

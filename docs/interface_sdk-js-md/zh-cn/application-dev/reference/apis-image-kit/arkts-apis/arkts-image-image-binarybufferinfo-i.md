@@ -58,7 +58,7 @@ size: Size
 
 图像尺寸，包含宽度和高度。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 26.0.0
 

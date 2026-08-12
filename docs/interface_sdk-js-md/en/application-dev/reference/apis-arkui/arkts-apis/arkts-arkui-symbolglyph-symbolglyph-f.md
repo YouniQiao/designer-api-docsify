@@ -30,7 +30,7 @@ Defines SymbolGlyph Component.
 
 | Type | Description |
 | --- | --- |
-| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
+| [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) |  |
 
 
 ## SymbolGlyph
@@ -59,11 +59,11 @@ Defines SymbolGlyph Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolGlyphAttribute&gt; | Yes | SymbolGlyph attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md)&gt; | Yes | SymbolGlyph attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
+| [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) |  |
 

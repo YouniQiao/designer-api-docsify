@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## querySelfFaultLog
@@ -18,7 +18,7 @@ Obtains the fault information about the current application. This API uses an as
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.faultlogger/FaultLogger#query
+**Substitutes:** [query](ohos.faultlogger/FaultLogger#query)
 
 <!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -29,7 +29,7 @@ Obtains the fault information about the current application. This API uses an as
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;FaultLogInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -72,7 +72,7 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.faultlogger/FaultLogger#query
+**Substitutes:** [query](ohos.faultlogger/FaultLogger#query)
 
 <!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
@@ -88,7 +88,7 @@ Obtains the fault information about the current application. This API uses a pro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; |
+| Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; |
 
 ## Examples
 

@@ -7,7 +7,7 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 ```
 
 设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)或[setUIContent()](arkts-arkui-window-window-i.md#setUIContent)调用生效后使用。
 
 **起始版本：** 21
 
@@ -25,15 +25,15 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
 
 ## 示例
 

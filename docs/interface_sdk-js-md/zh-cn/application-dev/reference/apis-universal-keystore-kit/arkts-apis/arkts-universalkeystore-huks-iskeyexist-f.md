@@ -11,7 +11,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)
+> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)
 > 替代。
 
 **起始版本：** 8
@@ -20,7 +20,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 
 **废弃版本：** 9
 
-**替代接口：** [huks.isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)(keyAlias:
+**替代接口：** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -60,7 +60,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)替代。
+> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist-1)替代。
 
 **起始版本：** 8
 
@@ -68,7 +68,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [huks.isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)(keyAlias:
+**替代接口：** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 

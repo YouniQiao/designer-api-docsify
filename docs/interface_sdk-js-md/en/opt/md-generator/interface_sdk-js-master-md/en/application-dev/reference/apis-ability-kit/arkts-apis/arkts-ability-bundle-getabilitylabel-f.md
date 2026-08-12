@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getAbilityLabel
@@ -66,4 +66,4 @@ No permission is required for obtaining the caller's own information.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |

@@ -23,12 +23,12 @@ export declare function Component3D(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sceneOptions | [SceneOptions](../arkts-components/arkts-arkui-sceneoptions-i.md) | 否 | 3D场景控制器 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器 |
+| sceneOptions | [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | 否 | 3D场景控制器 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Component3DAttribute](../arkts-components/arkts-arkui-component3d-attribute.md) |  |
+| [Component3DAttribute](arkts-arkui-component3d-component3dattribute-i.md) |  |
 

@@ -258,7 +258,7 @@ routeInfo?: string
 userIds?: string[]
 ```
 
-数据处理者可以上报的用户ID的name数组。name对应[setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid)接口的name参数。默认为空数组。
+数据处理者可以上报的用户ID的name数组。name对应[setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setUserId)接口的name参数。默认为空数组。
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 
@@ -278,7 +278,7 @@ userIds?: string[]
 userProperties?: string[]
 ```
 
-数据处理者可以上报的用户属性的name数组。name对应[setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty)接口的name参数。默认为空数组。
+数据处理者可以上报的用户属性的name数组。name对应[setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setUserProperty)接口的name参数。默认为空数组。
 
 **原子化服务API：** 从API version 11开始，该参数支持在原子化服务中使用。
 

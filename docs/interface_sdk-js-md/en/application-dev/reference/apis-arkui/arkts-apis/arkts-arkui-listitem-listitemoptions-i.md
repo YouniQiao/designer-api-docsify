@@ -18,7 +18,7 @@ style?: ListItemStyle
 
 Describes the ListItem style.
 
-**Type:** [ListItemStyle](../arkts-components/arkts-arkui-listitemstyle-e.md)
+**Type:** [ListItemStyle](arkts-arkui-listitem-listitemstyle-e.md)
 
 **Since:** 23
 

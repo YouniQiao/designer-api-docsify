@@ -14,11 +14,11 @@ User gesture event.
 onDoubleClick?: Callback<GestureEvent>
 ```
 
-[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md/arkts-arkui-gestureevent-i.md) indicates the double-tap event.
+[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md#GestureEvent) indicates the double-tap event.
 
 Callback event when the double-tap is complete.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt;
+**Type:** Callback&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 14
 

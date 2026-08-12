@@ -22,7 +22,7 @@ Get want parameters callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formInfo | Array&lt;formInfo.FormInfo&gt; | Yes | The list of the form information. |
+| formInfo | Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | Yes | The list of the form information. |
 
 **Return value:**
 

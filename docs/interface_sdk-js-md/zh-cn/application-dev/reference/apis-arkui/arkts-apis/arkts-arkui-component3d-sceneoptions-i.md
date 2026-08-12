@@ -18,7 +18,7 @@ modelType?: ModelType
 
 3D渲染时的场景类型
 
-**类型：** [ModelType](../arkts-components/arkts-arkui-modeltype-e.md)
+**类型：** [ModelType](arkts-arkui-component3d-modeltype-e.md)
 
 **默认值：** ModelType.SURFACE 表面模型类型
 

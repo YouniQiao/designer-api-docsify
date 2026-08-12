@@ -11,7 +11,7 @@ Defines the icon options.
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## borderRadius
@@ -24,7 +24,7 @@ Rounded corner of the icon.
 
 Default value: **\$r('sys.float.ohos_id_corner_radius_default_s')**
 
-**Type:** [Length](arkts-arkui-length-t.md) \| BorderRadiuses
+**Type:** [Length](arkts-arkui-length-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 11
 

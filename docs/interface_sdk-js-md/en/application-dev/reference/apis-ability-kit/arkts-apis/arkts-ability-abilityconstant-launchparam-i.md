@@ -13,7 +13,7 @@ Describes the launch parameters, which mainly include the ability launch reasons
 ## Modules to Import
 
 ```TypeScript
-import { AbilityConstant } from 'kits/@kit.AbilityKit';
+import { AbilityConstant } from '@kit.AbilityKit';
 ```
 
 ## lastExitDetailInfo
@@ -88,9 +88,9 @@ An enumerated value indicating the reason for the last exit of the ability.
 launchReason: LaunchReason
 ```
 
-An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md).
+An enumerated value indicating the reason for ability launch (for example, recovery from a fault, intent invocation, or atomic service sharing). For details, see [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md#LaunchReason).
 
-**Type:** [LaunchReason](arkts-ability-abilityconstant-launchreason-e.md)
+**Type:** LaunchReason
 
 **Since:** 9
 

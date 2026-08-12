@@ -18,7 +18,7 @@ function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mechDeviceType | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | 否 |
+| [mechDeviceType](arkts-mechanic-mechanicmanager-mechinfo-i.md) | [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md) | 否 |
 
 **返回值：**
 

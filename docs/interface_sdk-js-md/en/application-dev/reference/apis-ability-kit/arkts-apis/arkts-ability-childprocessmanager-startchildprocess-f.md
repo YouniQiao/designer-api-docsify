@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startChildProcess
@@ -17,7 +17,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > **NOTE：**
 > 
 > If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
 > function is done, the child process is automatically destroyed.
 > 
 > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
@@ -50,10 +50,10 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
 ## Examples
 
@@ -101,7 +101,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > **NOTE：**
 > 
 > If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
 > function is done, the child process is automatically destroyed.
 > 
 > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
@@ -123,16 +123,16 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 | --- | --- | --- | --- |
 | srcEntry | string | Yes | Path of the source file of the child process relative to the root directory **src/main**. The source file can be stored only in the module of the entry type. For example, if the source file of a child process is **src/main/ets/process/DemoProcess.ets** in the entry module, then **srcEntry** is **./ets/process/ DemoProcess.ets**.&lt;br&gt;In addition, ensure that the source file of the child process is referenced by other files to prevent it from being optimized by the build tool. (For details, see the sample code below.) |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | Yes | Start mode of the child process. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
+| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the subprocess is started, **err** is **undefined** and **data** is the PID of the child process. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit. |
 
 ## Examples
 

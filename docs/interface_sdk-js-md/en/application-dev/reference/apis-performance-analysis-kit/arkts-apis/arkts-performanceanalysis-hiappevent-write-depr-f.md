@@ -14,7 +14,7 @@ Writes event information to the event file of the current day. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent#write
+**Substitutes:** [write](ohos.hiviewdfx.hiAppEvent/hiAppEvent#write)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
 
@@ -25,7 +25,7 @@ Writes event information to the event file of the current day. This API uses a p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventName | string | Yes | Application event name. |
-| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Application event type. |
+| eventType | EventType | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
 
 **Return value:**
@@ -68,7 +68,7 @@ Writes event information to the event file of the current day. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent#write
+**Substitutes:** [write](ohos.hiviewdfx.hiAppEvent/hiAppEvent#write)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 
@@ -79,9 +79,9 @@ Writes event information to the event file of the current day. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventName | string | Yes | Application event name. |
-| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Application event type. |
+| eventType | EventType | Yes | Application event type. |
 | keyValues | object | Yes | Application event key-value pair params. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback function. |
 
 ## Examples
 

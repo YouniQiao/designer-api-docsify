@@ -2,7 +2,7 @@
 
 定义ComponentContent的基类.
 
-**继承/实现关系：** ComponentContentBase extends [Content](arkts-arkui-content-c.md)
+**继承/实现关系：** ComponentContentBase extends [Content](Content)
 
 **起始版本：** 23
 

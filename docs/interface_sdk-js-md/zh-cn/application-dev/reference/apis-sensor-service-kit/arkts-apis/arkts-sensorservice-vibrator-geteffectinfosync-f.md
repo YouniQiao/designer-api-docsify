@@ -20,8 +20,8 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effectId | string | 是 | 待确认的预置振动效果ID。字符串最大长度64，超出部分截取前64个字符。使用场景：不同设备预置的振动效果可能不同，需传入具体的effectId查询是否支持。取值可参考 [EffectId](arkts-sensorservice-vibrator-effectid-e.md)和[HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md)中定义的值。 |
-| param | [VibratorInfoParam](arkts-sensorservice-vibrator-vibratorinfoparam-i.md) | 否 | 指出需要查询的设备和马达信息。不传param时默认查询本地设备。deviceId默认值为-1（本地设备），vibratorId默认值为0（该设备的全部马达）。 deviceId和vibratorId可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或 [vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。 |
+| effectId | string | 是 | 待确认的预置振动效果ID。字符串最大长度64，超出部分截取前64个字符。使用场景：不同设备预置的振动效果可能不同，需传入具体的effectId查询是否支持。取值可参考 [EffectId](arkts-sensorservice-vibrator-effectid-e.md#EffectId)和[HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md#HapticFeedback)中定义的值。 |
+| param | [VibratorInfoParam](arkts-sensorservice-vibrator-vibratorinfoparam-i.md) | 否 | 指出需要查询的设备和马达信息。不传param时默认查询本地设备。deviceId默认值为-1（本地设备），vibratorId默认值为0（该设备的全部马达）。 deviceId和vibratorId可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync)或 [vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。 |
 
 **返回值：**
 
@@ -33,7 +33,7 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

@@ -11,7 +11,7 @@ Beacon equipment manufacturer data.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## manufactureData

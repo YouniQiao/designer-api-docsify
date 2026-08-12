@@ -28,9 +28,9 @@ Start Streaming
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [32300002](../../apis-distributedservice-kit/errorcode-device-manager.md#32300002-流接收端未启动) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [32300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300002-流接收端未启动) |
 
 ## 示例
 

@@ -33,7 +33,7 @@ Creates a new ListFormat.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No | the locales. |
-| options | [ListFormatOptions](arkts-arkts-intl-listformatoptions-i.md) | No | the options. |
+| options | ListFormatOptions | No | the options. |
 
 ## format
 
@@ -93,7 +93,7 @@ Formats a list to parts.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FormatToPartsResult&gt; | formatted parts. |
+| Array&lt;[FormatToPartsResult](arkts-arkts-intl-formattopartsresult-i.md)&gt; | formatted parts. |
 
 ## supportedLocalesOf
 
@@ -118,7 +118,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | Yes | the locales. |
-| options | [ListFormatLocaleMatcher](arkts-arkts-intl-listformatlocalematcher-t.md) | No | the options. |
+| options | ListFormatLocaleMatcher | No | the options. |
 
 **Return value:**
 

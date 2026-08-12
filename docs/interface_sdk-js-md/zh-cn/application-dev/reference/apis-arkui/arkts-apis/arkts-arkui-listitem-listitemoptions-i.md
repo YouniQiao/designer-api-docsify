@@ -18,7 +18,7 @@ style?: ListItemStyle
 
 设置List组件卡片样式。
 
-**类型：** [ListItemStyle](../arkts-components/arkts-arkui-listitemstyle-e.md)
+**类型：** [ListItemStyle](arkts-arkui-listitem-listitemstyle-e.md)
 
 **起始版本：** 23
 

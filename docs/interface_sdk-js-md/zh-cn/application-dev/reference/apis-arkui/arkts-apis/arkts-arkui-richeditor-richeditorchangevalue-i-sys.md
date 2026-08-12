@@ -19,7 +19,7 @@ changeReason?: TextChangeReason
 组件内容变化的原因。&lt;br/&gt;**系统接口：** 此接口为系统接口。&lt;br&gt;  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [TextChangeReason](arkts-arkui-textchangereason-e-sys.md)
+**类型：** [TextChangeReason](arkts-arkui-textcommon-textchangereason-e-sys.md)
 
 **起始版本：** 24
 

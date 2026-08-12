@@ -38,7 +38,7 @@ launchMode?: LaunchMode
 
 Indicates the launchMode of stack operation.Default value: LaunchMode.STANDARD.
 
-**Type:** [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md)
+**Type:** [LaunchMode](arkts-arkui-navigation-launchmode-e.md)
 
 **Since:** 23
 

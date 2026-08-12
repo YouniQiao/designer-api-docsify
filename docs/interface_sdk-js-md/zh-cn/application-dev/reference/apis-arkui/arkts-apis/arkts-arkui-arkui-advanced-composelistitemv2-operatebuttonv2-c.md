@@ -44,7 +44,7 @@ public accessibilityDescription?: ResourceStr
 
 按钮的无障碍描述。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -86,7 +86,7 @@ public accessibilityText?: ResourceStr
 
 按钮的无障碍文本属性。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -106,7 +106,7 @@ public text?: ResourceStr
 
 按钮文本。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

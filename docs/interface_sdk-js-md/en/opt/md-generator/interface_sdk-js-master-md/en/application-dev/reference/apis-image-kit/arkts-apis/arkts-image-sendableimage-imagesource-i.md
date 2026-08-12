@@ -1,7 +1,7 @@
 # ImageSource
 
 Provides APIs to obtain image information. Before calling any API in ImageSource, you must use   
-[sendableImage.createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource) to create an ImageSource instance.
+[sendableImage.createImageSource](arkts-image-sendableimage-createimagesource-f.md#createImageSource) to create an ImageSource instance.
 
 Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
@@ -15,7 +15,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -49,7 +49,7 @@ Images occupy a large amount of memory. When you finish using a PixelMap instanc
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## Examples
 
@@ -90,7 +90,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

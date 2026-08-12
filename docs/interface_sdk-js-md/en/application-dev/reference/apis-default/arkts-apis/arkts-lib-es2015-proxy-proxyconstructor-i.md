@@ -19,7 +19,7 @@ Creates a Proxy object. The Proxy object allows you to create an object that can
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| handler | ProxyHandler&lt;T&gt; | Yes |  |
+| handler | [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md)&lt;T&gt; | Yes |  |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ Creates a revocable Proxy object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | T | Yes |  |
-| handler | ProxyHandler&lt;T&gt; | Yes |  |
+| handler | [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md)&lt;T&gt; | Yes |  |
 
 **Return value:**
 

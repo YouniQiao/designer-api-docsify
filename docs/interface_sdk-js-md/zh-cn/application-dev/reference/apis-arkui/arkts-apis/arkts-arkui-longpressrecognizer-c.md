@@ -1,8 +1,8 @@
 # LongPressRecognizer
 
-长按手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+长按手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)。
 
-**继承/实现关系：** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**继承/实现关系：** LongPressRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
 
 **起始版本：** 18
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## setKeepAliveForBundle
@@ -48,21 +48,21 @@ Sets or cancels the keep-alive status for an application that belongs to a speci
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16300008](../errorcode-ability.md#16300008-specified-package-does-not-have-a-main-uiability) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16300009](../errorcode-ability.md#16300009-specified-package-does-not-have-a-status-bar) |
-| [16300010](../errorcode-ability.md#16300010-running-application-is-not-attached-to-a-status-bar) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300005](../errorcode-ability.md#16300005-bundle-information-does-not-exist) |
+| [16300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300008-specified-package-does-not-have-a-main-uiability) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300009-specified-package-does-not-have-a-status-bar) |
+| [16300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300010-running-application-is-not-attached-to-a-status-bar) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300005-bundle-information-does-not-exist) |
 
 ## Examples
 

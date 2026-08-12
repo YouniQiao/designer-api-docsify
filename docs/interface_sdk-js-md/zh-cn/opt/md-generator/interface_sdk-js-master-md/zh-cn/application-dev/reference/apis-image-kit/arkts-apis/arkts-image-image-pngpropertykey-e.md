@@ -18,18 +18,18 @@
 - 1表示相对比色意图。  
 - 2表示饱和度意图。  
 - 3绝对色度意图。 |  
-| [AUTHOR](#author) | 'PngAuthor' | PNG图像的作者。 |
+| [AUTHOR](arkts-image-image-pngpropertykey-e.md) | 'PngAuthor' | PNG图像的作者。 |
 | INTERLACE_TYPE | 'PngInterlaceType' | PNG图像的交错模式。  
 - 0表示无交错模式（图像按照从上到下、从左到右的顺序加载）。  
 - 1表示交错模式（通过多次扫描逐步显示图像，图像在加载过程中逐渐清晰）。 |  
 | [WARNING](#warning) | 'PngWarning' | PNG图像的警告信息。 |
-| [Y_PIXELS_PER_METER](#y_pixels_per_meter) | 'PngYPixelsPerMeter' | PNG图像Y方向每米像素数。 |
+| [Y_PIXELS_PER_METER](arkts-image-image-pngpropertykey-e.md) | 'PngYPixelsPerMeter' | PNG图像Y方向每米像素数。 |
 | [GAMMA](#gamma) | 'PngGamma' | PNG图像的系数伽马的值。 |
-| [CHROMATICITIES](#chromaticities) | 'PngChromaticities' | PNG图像的原色与白点色度坐标cHRM（primary chromaticities and white point）。该信息可用于与设备无关的色彩校正。 |
-| [DESCRIPTION](#description) | 'PngDescription' | PNG图像的描述。 |
+| [CHROMATICITIES](arkts-image-image-pngpropertykey-e.md) | 'PngChromaticities' | PNG图像的原色与白点色度坐标cHRM（primary chromaticities and white point）。该信息可用于与设备无关的色彩校正。 |
+| [DESCRIPTION](arkts-image-image-pngpropertykey-e.md) | 'PngDescription' | PNG图像的描述。 |
 | [TITLE](#title) | 'PngTitle' | PNG图像的标题。 |
 | [COMMENT](#comment) | 'PngComment' | PNG图像的注释。 |
-| [DISCLAIMER](#disclaimer) | 'PngDisclaimer' |
+| [DISCLAIMER](arkts-image-image-pngpropertykey-e.md) | 'PngDisclaimer' |
 
 **起始版本：** 26.0.0
 

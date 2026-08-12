@@ -11,7 +11,7 @@ Observes lifecycle status changes of a custom component,and triggers the lifecyc
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## aboutToAppear
@@ -20,7 +20,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 aboutToAppear?(): void
 ```
 
-Called after a new instance of the custom component is created and before its **build()** function is executed.You can modify the status variables in this phase.Its function is similar to that of [aboutToAppear](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#abouttoappear),but it is triggered under the constraints of the custom component state machine.
+Called after a new instance of the custom component is created and before its **build()** function is executed.You can modify the status variables in this phase.Its function is similar to that of [aboutToAppear](BaseCustomComponent.aboutToAppear),but it is triggered under the constraints of the custom component state machine.
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ Called when a reusable custom component is re-added to the node tree from the ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| params | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object \| undefined \| null&gt; | No |
+| params | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object \| undefined \| null & gt; | No |
 
 ## onDidBuild
 

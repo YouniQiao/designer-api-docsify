@@ -28,7 +28,7 @@ onCollaborate(wantParam: Record<string, Object>): AbilityConstant.CollaborateRes
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| wantParam | Record&lt;string, Object&gt; | 是 |
+| wantParam | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 

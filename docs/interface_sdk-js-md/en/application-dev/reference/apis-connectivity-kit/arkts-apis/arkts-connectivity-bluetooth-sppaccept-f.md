@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppAccept
@@ -20,7 +20,7 @@ Waits for a remote device to connect.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppAccept
+**Substitutes:** [sppAccept](ohos.bluetoothManager/bluetoothManager.sppAccept)
 
 <!--Device-bluetooth-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void--><!--Device-bluetooth-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void-End-->
 
@@ -30,8 +30,8 @@ Waits for a remote device to connect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | number | Yes | Indicates the server socket ID, returned by {@link sppListen}. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| serverSocket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#sppListen). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 ## Examples
 

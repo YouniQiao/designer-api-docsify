@@ -13,7 +13,7 @@ Wi-Fi device configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## configStatus
@@ -104,7 +104,7 @@ ipType?: IpType
 
 IP Type
 
-**Type:** [IpType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-iptype-e.md)
+**Type:** IpType
 
 **Since:** 9
 
@@ -224,7 +224,7 @@ staticIp?: IpConfig
 
 IP config of static
 
-**Type:** [IpConfig](arkts-connectivity-wifi-ipconfig-i-sys.md)
+**Type:** IpConfig
 
 **Since:** 9
 

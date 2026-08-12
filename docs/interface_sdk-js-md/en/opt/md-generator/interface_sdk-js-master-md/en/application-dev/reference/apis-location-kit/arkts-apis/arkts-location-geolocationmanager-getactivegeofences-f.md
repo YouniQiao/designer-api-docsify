@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## getActiveGeoFences
@@ -26,14 +26,14 @@ Get all active fences.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Map&lt;number, Geofence&gt;&gt; |
+| Promise & lt;Map & lt;number, Geofence & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

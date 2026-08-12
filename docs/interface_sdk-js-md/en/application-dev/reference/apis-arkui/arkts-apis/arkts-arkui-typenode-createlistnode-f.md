@@ -29,5 +29,5 @@ Create a FrameNode of List type.On API 26.0.0 and above, It can also create a Fr
 
 | Type | Description |
 | --- | --- |
-| [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md) | Return List type FrameNode. |
+| List | Return List type FrameNode. |
 

@@ -23,7 +23,7 @@ declare function write(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:write](arkts-corefile-fileio-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>-End-->
 
@@ -58,7 +58,7 @@ declare function write(fd: number, buffer: ArrayBuffer | string, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:write](arkts-corefile-fileio-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
@@ -97,7 +97,7 @@ declare function write(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:write](arkts-corefile-fileio-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void-End-->
 

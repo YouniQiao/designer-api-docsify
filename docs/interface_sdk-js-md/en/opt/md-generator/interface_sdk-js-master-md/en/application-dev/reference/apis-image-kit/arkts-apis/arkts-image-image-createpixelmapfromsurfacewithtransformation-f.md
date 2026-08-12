@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurfaceWithTransformation
@@ -33,16 +33,16 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## Examples
 

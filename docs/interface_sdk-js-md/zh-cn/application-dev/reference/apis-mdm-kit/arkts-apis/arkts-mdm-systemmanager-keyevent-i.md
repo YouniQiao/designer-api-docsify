@@ -1,7 +1,7 @@
 # KeyEvent
 
 按键事件。  
-[EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)按键事件回调触发时，传递当前按键事件信息。
+[EnterpriseAdminExtensionAbility.onKeyEvent](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent)按键事件回调触发时，传递当前按键事件信息。
 
 **起始版本：** 23
 
@@ -59,7 +59,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
+**类型：** KeyCode
 
 **起始版本：** 23
 
@@ -79,7 +79,7 @@ keyItems: Array<KeyItem>
 
 其他按键信息，当前按键事件发生时，其他正在被按下的按键信息。
 
-**类型：** Array&lt;KeyItem&gt;
+**类型：** Array&lt;[KeyItem](arkts-mdm-systemmanager-keyitem-i.md)&gt;
 
 **起始版本：** 23
 

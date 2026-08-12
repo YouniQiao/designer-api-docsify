@@ -32,7 +32,7 @@ function getInsertSqlInfo(table: string, values: ValuesBucket, conflict?: Confli
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
 
 ## 示例
 

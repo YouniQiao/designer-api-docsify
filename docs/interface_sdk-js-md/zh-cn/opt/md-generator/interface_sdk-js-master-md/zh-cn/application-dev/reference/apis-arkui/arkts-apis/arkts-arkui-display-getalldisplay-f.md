@@ -12,7 +12,7 @@ function getAllDisplay(callback: AsyncCallback<Array<Display>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [display.getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays)(callback:
+**替代接口：** [getAllDisplays](display.getAllDisplays(callback:)
 
 <!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
 
@@ -22,7 +22,7 @@ function getAllDisplay(callback: AsyncCallback<Array<Display>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Display&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -52,7 +52,7 @@ function getAllDisplay(): Promise<Array<Display>>
 
 **废弃版本：** 9
 
-**替代接口：** [display.getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays)()
+**替代接口：** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)()
 
 <!--Device-display-function getAllDisplay(): Promise<Array<Display>>--><!--Device-display-function getAllDisplay(): Promise<Array<Display>>-End-->
 
@@ -62,7 +62,7 @@ function getAllDisplay(): Promise<Array<Display>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; |
+| Promise&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; |
 
 ## 示例
 

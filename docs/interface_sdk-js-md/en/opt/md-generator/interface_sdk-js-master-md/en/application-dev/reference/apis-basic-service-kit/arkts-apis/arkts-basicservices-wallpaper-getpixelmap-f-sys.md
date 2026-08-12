@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getPixelMap
@@ -79,7 +79,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 ## Examples
 

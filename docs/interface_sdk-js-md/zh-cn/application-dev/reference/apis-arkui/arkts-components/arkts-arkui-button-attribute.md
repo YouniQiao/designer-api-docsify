@@ -1,8 +1,8 @@
 # Button属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+支持[通用事件](common)。
 
 **继承/实现关系：** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -21,12 +21,12 @@ buttonStyle(value: ButtonStyleMode)
 ```
 
 设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
 [fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
 
 > **说明：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 11
 
@@ -46,7 +46,7 @@ buttonStyle(value: ButtonStyleMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md) | 是 | Button组件的样式和重要程度。&lt;br/&gt;默认值：ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | 是 | Button组件的样式和重要程度。&lt;br/&gt;默认值：ButtonStyleMode.EMPHASIZED |
 
 ## contentModifier
 
@@ -72,7 +72,7 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | 是 | 在Button组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
+| modifier | ContentModifier&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | 是 | 在Button组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需要自定义class实现 ContentModifier接口。 |
 
 ## controlSize
 
@@ -84,7 +84,7 @@ controlSize(value: ControlSize)
 
 > **说明：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 11
 
@@ -130,7 +130,7 @@ fontColor(value: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 文本显示颜色。&lt;br/&gt;默认值：\\$r('sys.color.font_on_primary')，显示为白色字体。 |
+| value | ResourceColor | 是 | 文本显示颜色。&lt;br/&gt;默认值：\\$r('sys.color.font_on_primary')，显示为白色字体。 |
 
 ## fontFamily
 
@@ -156,7 +156,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](../arkts-apis/arkts-font.md/arkts-font.md)。 |
+| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](../arkts-apis/arkts-font.md#font)。 |
 
 ## fontSize
 
@@ -182,7 +182,7 @@ fontSize(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置文本显示字号。&lt;br/&gt;默认值：当controlSize为ControlSize.NORMAL时，默认值为`\\$r('sys.float.Body_L')`。&lt;br/&gt;当 controlSize为ControlSize.SMALL时，默认值为`\\$r('sys.float.Body_S')`。&lt;br/&gt;**说明：**设置string类型时，不支持百分比。 |
+| value | Length | 是 | 设置文本显示字号。&lt;br/&gt;默认值：当controlSize为ControlSize.NORMAL时，默认值为`\\$r('sys.float.Body_L')`。&lt;br/&gt;当 controlSize为ControlSize.SMALL时，默认值为`\\$r('sys.float.Body_S')`。&lt;br/&gt;**说明：**设置string类型时，不支持百分比。 |
 
 ## fontStyle
 
@@ -208,7 +208,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | 是 | 文本的字体样式。&lt;br/&gt;默认值：FontStyle.Normal |
+| value | FontStyle | 是 | 文本的字体样式。&lt;br/&gt;默认值：FontStyle.Normal |
 
 ## fontWeight
 
@@ -321,7 +321,7 @@ role(value: ButtonRole)
 ```
 
 设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
 [fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
 
 **起始版本：** 12
@@ -394,5 +394,5 @@ type(value: ButtonType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md) | 是 | Button样式。&lt;br/&gt;API version 18及之后，ButtonType的默认值从ButtonType.Capsule变更为 ButtonType.ROUNDED_RECTANGLE。 |
+| value | [ButtonType](arkts-arkui-buttontype-e.md) | 是 | Button样式。&lt;br/&gt;API version 18及之后，ButtonType的默认值从ButtonType.Capsule变更为 ButtonType.ROUNDED_RECTANGLE。 |
 

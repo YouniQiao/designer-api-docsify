@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## isOpenAccessibility
@@ -18,7 +18,7 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 **Deprecated since:** 10
 
-**Substitutes:** [accessibility.isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isOpenAccessibilitySync)
 
 <!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void--><!--Device-accessibility-function isOpenAccessibility(callback: AsyncCallback<boolean>): void-End-->
 
@@ -58,7 +58,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 **Deprecated since:** 10
 
-**Substitutes:** [accessibility.isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync)
+**Substitutes:** [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isOpenAccessibilitySync)
 
 <!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>--><!--Device-accessibility-function isOpenAccessibility(): Promise<boolean>-End-->
 
@@ -68,7 +68,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

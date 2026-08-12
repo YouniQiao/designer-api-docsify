@@ -17,7 +17,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
 Sets the execution function of the custom drop animation. This parameter is valid only when  
-[useCustomDropAnimation](arkts-arkui-dragevent-i.md#usecustomdropanimation) is set to **true**.
+[useCustomDropAnimation](#useCustomDropAnimation) is set to **true**.
 
 **Since:** 18
 
@@ -35,7 +35,7 @@ Sets the execution function of the custom drop animation. This parameter is vali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Custom drop animation in this callback.&lt;br&gt; **NOTE：**&lt;br&gt;1. This API is valid only in the **onDrop** callback.&lt;br&gt; 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.&lt;br&gt; 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.&lt;br&gt; **NOTE：**&lt;br&gt;1. This API is valid only in the **onDrop** callback.&lt;br&gt; 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.&lt;br&gt; 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
 ## getData
 
@@ -67,8 +67,8 @@ Obtains drag-related data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [190002](../errorcode-uicontext.md#190002-invalid-callback-function) | Data error. |
-| [190001](../errorcode-uicontext.md#190001-invalid-uicontext-object) | Data not found. |
+| [190002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
+| [190001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-data-not-found) | Data not found. |
 
 ## getDisplayId
 
@@ -77,7 +77,7 @@ getDisplayId(): number
 ```
 
 Obtains the ID of the screen where the current drag event occurs. This API is not supported in the  
-[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend) callback.
+[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd) callback.
 
 **Since:** 20
 
@@ -263,7 +263,7 @@ Obtains the pressed status of modifier keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -289,7 +289,7 @@ Obtains the position of the drag preview relative to the current window and the 
 
 | Type | Description |
 | --- | --- |
-| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | Position of the drag preview relative to the current window and the preview size, in vp. x and y indicate the window coordinates of the upper left corner of the preview, and width and height indicate the preview size. |
+| [Rectangle](arkts-arkui-rectangle-i.md) | Position of the drag preview relative to the current window and the preview size, in vp. x and y indicate the window coordinates of the upper left corner of the preview, and width and height indicate the preview size. |
 
 ## getResult
 
@@ -341,7 +341,7 @@ Obtains a summary of drag data, including data type and size information. In a d
 
 | Type | Description |
 | --- | --- |
-| [Summary](../arkts-apis/arkts-arkui-summary-t.md) | Summary of drag data. |
+| [Summary](arkts-arkui-summary-t.md) | Summary of drag data. |
 
 ## getVelocity
 
@@ -489,7 +489,7 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **Deprecated since:** 10
 
-**Substitutes:** [DragEvent#getWindowX](arkts-arkui-dragevent-i.md#getwindowx)
+**Substitutes:** [getWindowX](#getWindowX)
 
 <!--Device-DragEvent-getX(): number--><!--Device-DragEvent-getX(): number-End-->
 
@@ -517,7 +517,7 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **Deprecated since:** 10
 
-**Substitutes:** [DragEvent#getWindowY](arkts-arkui-dragevent-i.md#getwindowy)
+**Substitutes:** [getWindowY](#getWindowY)
 
 <!--Device-DragEvent-getY(): number--><!--Device-DragEvent-getY(): number-End-->
 
@@ -587,8 +587,8 @@ Sets drag-related data in **DragEvent**.
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application,the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](arkts-arkui-dragevent-i.md#setdata), the last called API takes precedence. This API takes effect only in the  
-[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) callback.
+Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application,the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](#setData), the last called API takes precedence. This API takes effect only in the  
+[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart) callback.
 
 **Since:** 20
 
@@ -606,7 +606,7 @@ Sets the parameters for deferred data loading from the drag source. This API pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataLoadParams | [DataLoadParams](../arkts-apis/arkts-arkui-dataloadparams-t.md) | Yes | Data loading parameters used during a drop operation. |
+| dataLoadParams | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | Yes | Data loading parameters used during a drop operation. |
 
 ## setResult
 
@@ -658,7 +658,7 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading) API to cancel data loading during data transmission. |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | Parameters for obtaining drag data, including the target path, file conflict options, and progress bar type. You can use the [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#cancelDataLoading) API to cancel data loading during data transmission. |
 
 **Return value:**
 
@@ -670,8 +670,8 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [190003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -731,7 +731,7 @@ Whether to disable the default drop animation when the dragging ends.
 
 If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.
 
-If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](arkts-arkui-dragevent-i.md#setresult)is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
+If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setResult)is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
 
 When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.
 

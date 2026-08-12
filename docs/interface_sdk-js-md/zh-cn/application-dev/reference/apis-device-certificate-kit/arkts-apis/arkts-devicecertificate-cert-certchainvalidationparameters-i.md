@@ -41,7 +41,7 @@ certCRLs?: Array<CertCRLCollection>
 
 用于检查证书是否被吊销的CRL集合。
 
-**类型：** Array&lt;CertCRLCollection&gt;
+**类型：** Array&lt;[CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md)&gt;
 
 **起始版本：** 11
 
@@ -81,7 +81,7 @@ keyUsage?: Array<KeyUsageType>
 
 表示需要校验证书中的密钥用途。
 
-**类型：** Array&lt;KeyUsageType&gt;
+**类型：** Array&lt;[KeyUsageType](arkts-devicecertificate-cert-keyusagetype-e.md)&gt;
 
 **起始版本：** 12
 
@@ -161,7 +161,7 @@ trustAnchors: Array<X509TrustAnchor>
 
 表示信任锚列表。
 
-**类型：** Array&lt;X509TrustAnchor&gt;
+**类型：** Array&lt;[X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)&gt;
 
 **起始版本：** 11
 

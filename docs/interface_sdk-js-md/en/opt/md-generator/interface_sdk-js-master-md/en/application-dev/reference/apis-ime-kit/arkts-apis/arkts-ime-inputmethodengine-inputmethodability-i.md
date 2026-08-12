@@ -1,7 +1,7 @@
 # InputMethodAbility
 
 In the following API examples, you must first use   
-[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
+[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
 
 **Since:** 9
 
@@ -12,7 +12,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -22,20 +22,20 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 Creates an input method panel. This API can be called only by the input method application in the   
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result.
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility) class. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one
-> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method.
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel and one
+> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel can be created for a single input method.
 
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such
 > as
-> [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-createwindow-f.md/arkts-arkui-window-createwindow-f.md#createwindow)
-> , [bindContextMenu](CommonMethod&lt;T&gt;.bindContextMenu),
-> and [CustomDialog](../../apis-arkui/arkts-components/arkts-arkui-custom_dialog_controller-i). You are advised to adopt
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md/arkts-arkui-advanced-dialog.md) or
-> [bindMenu](CommonMethod&lt;T&gt;.bindMenu), or set
+> [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-createwindow-f.md#createWindow)
+> , [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindContextMenu),
+> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt
+> alternative solutions to sub-windows, such as using a [dialog box](@ohos.arkui.advanced.Dialog) or
+> [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindMenu), or set
 > **showInSubwindow** to **false**.
 
 **Since:** 10
@@ -48,7 +48,7 @@ Creates an input method panel. This API can be called only by the input method a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
+| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
 | info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes |
 
@@ -56,8 +56,8 @@ Creates an input method panel. This API can be called only by the input method a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
 
 ## Examples
 
@@ -95,20 +95,20 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 Creates an input method panel. This API can be called only by the input method application in the   
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result.
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility) class. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one
-> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method.
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel and one
+> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel can be created for a single input method.
 
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such
 > as
 > [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application)
-> , [bindContextMenu](CommonMethod&lt;T&gt;.bindContextMenu),
-> and [CustomDialog](../../apis-arkui/arkts-components/arkts-arkui-custom_dialog_controller-i). You are advised to adopt
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md/arkts-arkui-advanced-dialog.md) or
-> [bindMenu](CommonMethod&lt;T&gt;.bindMenu), or set
+> , [bindContextMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindContextMenu),
+> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt
+> alternative solutions to sub-windows, such as using a [dialog box](@ohos.arkui.advanced.Dialog) or
+> [bindMenu](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindMenu), or set
 > **showInSubwindow** to **false**.
 
 **Since:** 10
@@ -121,21 +121,21 @@ Creates an input method panel. This API can be called only by the input method a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
+| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
 | info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Panel&gt; |
+| Promise & lt;Panel & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
 
 ## Examples
 
@@ -189,7 +189,7 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -249,13 +249,13 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -313,7 +313,7 @@ Obtains the current security mode of the input method.
 
 | Error Code ID |
 | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| [12800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
 
 ## Examples
 
@@ -341,7 +341,7 @@ Disables listening for the input method binding event. This API uses an asynchro
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'inputStart' | Yes |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | No |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | No |
 
 ## Examples
 
@@ -368,7 +368,7 @@ Disables listening for the input method stop event. This API uses an asynchronou
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'inputStop' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## Examples
 
@@ -397,7 +397,7 @@ Disables listening for the window invocation setting event. This API uses an asy
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setCallingWindow' | Yes |
-| callback | (wid: number) =&gt; void | Yes |
+| callback | (wid: number) = & gt; void | Yes |
 
 ## Examples
 
@@ -426,7 +426,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 ## Examples
 
@@ -458,7 +458,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 ## Examples
 
@@ -490,7 +490,7 @@ Disables listening for the input method subtype setting event. This API uses an 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setSubtype' | Yes |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | No |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | No |
 
 ## Examples
 
@@ -519,7 +519,7 @@ Disables listening for the security mode changes of the input method. This API u
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'securityModeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No |
 
 ## Examples
 
@@ -552,13 +552,13 @@ Disables listening for the private data event of the input method. This API uses
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'privateCommand' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
 
 ## Examples
 
@@ -650,7 +650,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'inputStart' | Yes |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | Yes |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | Yes |
 
 ## Examples
 
@@ -682,7 +682,7 @@ Enables listening for the input method unbinding event. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'inputStop' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## Examples
 
@@ -711,7 +711,7 @@ Enables listening for the window invocation setting event. This API uses an asyn
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setCallingWindow' | Yes |
-| callback | (wid: number) =&gt; void | Yes |
+| callback | (wid: number) = & gt; void | Yes |
 
 ## Examples
 
@@ -740,7 +740,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## Examples
 
@@ -772,7 +772,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## Examples
 
@@ -804,7 +804,7 @@ Enables listening for the input method subtype setting event. This API uses an a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setSubtype' | Yes |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | Yes |
 
 ## Examples
 
@@ -835,7 +835,7 @@ Enables listening for the security mode changes of the input method. This API us
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'securityModeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes |
 
 ## Examples
 
@@ -865,13 +865,13 @@ Enables listening for the private data event of the input method. This API uses 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'privateCommand' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
 
 ## Examples
 
@@ -910,7 +910,7 @@ Enables listening for changes of the screen ID of the window associated with the
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 

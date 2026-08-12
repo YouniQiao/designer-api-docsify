@@ -11,7 +11,7 @@ Defines the options of the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## onDidAppear
@@ -292,7 +292,7 @@ immersiveMode?: ImmersiveMode
 
 Overlay effect for the page-level dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -336,7 +336,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 Distance between the dialog box and the keyboard after keyboard avoidance is applied.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **16vp**&lt;br&gt;- Default unit: vp&lt;br&gt;- This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 15
 
@@ -356,7 +356,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 How the dialog box avoids the soft keyboard when it is brought up.&lt;br&gt;Default value: **KeyboardAvoidMode.DEFAULT**
 
-**Type:** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**Type:** KeyboardAvoidMode
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
@@ -502,7 +502,7 @@ offset?: Offset
 
 Offset of the dialog box based on the **alignment** settings.&lt;br&gt;Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 11
 
@@ -522,7 +522,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback for interactive dismissal of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**.&lt;br&gt;2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissDialogAction&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 

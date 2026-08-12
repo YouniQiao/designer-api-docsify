@@ -25,15 +25,15 @@ Creates a PixelMap object from surface id.
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
-| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980178](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) |
+| [62980105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-图片获取数据错误) |
 
 ## 示例
 
@@ -77,15 +77,15 @@ Creates a PixelMap object from surface id.
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
-| [62980105](../errorcode-image.md#62980105-图片获取数据错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980178](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) |
+| [62980105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-图片获取数据错误) |
 
 ## 示例
 

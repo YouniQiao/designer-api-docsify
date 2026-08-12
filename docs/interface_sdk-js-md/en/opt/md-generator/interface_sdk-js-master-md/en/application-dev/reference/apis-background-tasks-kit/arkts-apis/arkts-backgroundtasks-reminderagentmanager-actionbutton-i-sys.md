@@ -11,7 +11,7 @@ Describes the button displayed for a reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## dataShareUpdate
@@ -40,7 +40,7 @@ wantAgent?: WantAgent
 
 Information about the ability that is displayed after the button is clicked.
 
-**Type:** [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
+**Type:** WantAgent
 
 **Since:** 10
 

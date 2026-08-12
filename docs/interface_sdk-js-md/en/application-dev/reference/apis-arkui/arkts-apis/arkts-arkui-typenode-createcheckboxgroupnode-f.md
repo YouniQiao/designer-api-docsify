@@ -29,5 +29,5 @@ Create a FrameNode of CheckboxGroup type.On API 26.0.0 and above, It can also cr
 
 | Type | Description |
 | --- | --- |
-| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | Return CheckboxGroup type FrameNode. |
+| CheckboxGroup | Return CheckboxGroup type FrameNode. |
 

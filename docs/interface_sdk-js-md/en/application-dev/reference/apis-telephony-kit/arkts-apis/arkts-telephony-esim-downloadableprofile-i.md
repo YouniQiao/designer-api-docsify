@@ -13,7 +13,7 @@ Information about a profile which is downloadable to an eUICC using.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## accessRules
@@ -24,7 +24,7 @@ accessRules?: Array<AccessRule>
 
 Gets the accessRules.
 
-**Type:** Array&lt;AccessRule&gt;
+**Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
 
 **Since:** 18
 

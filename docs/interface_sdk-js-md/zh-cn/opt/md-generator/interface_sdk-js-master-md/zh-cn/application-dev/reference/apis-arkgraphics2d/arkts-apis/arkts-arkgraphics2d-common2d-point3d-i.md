@@ -1,8 +1,8 @@
 # Point3d
 
-三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md)。
+三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md#Point)。
 
-**继承/实现关系：** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md)
+**继承/实现关系：** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md#Point)
 
 **起始版本：** 12
 

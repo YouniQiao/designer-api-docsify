@@ -13,7 +13,7 @@ NavDestination switch info
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -24,7 +24,7 @@ context: UIAbilityContext | UIContext
 
 The context of the navigation operation.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**Type:** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**Type:** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**Type:** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
 
 **Since:** 23
 

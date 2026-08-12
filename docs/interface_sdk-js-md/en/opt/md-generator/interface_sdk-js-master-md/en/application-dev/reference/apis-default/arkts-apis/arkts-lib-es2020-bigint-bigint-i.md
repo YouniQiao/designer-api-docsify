@@ -15,7 +15,7 @@ Returns a string representation appropriate to the host environment's current lo
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | locales | Intl.LocalesArgument | No |
-| options | [BigIntToLocaleStringOptions](../../apis-arkts/arkts-apis/arkts-arkts-bigint-biginttolocalestringoptions-i.md) | No |
+| options | [BigIntToLocaleStringOptions](arkts-lib-es2020-bigint-biginttolocalestringoptions-i.md) | No |
 
 **Return value:**
 

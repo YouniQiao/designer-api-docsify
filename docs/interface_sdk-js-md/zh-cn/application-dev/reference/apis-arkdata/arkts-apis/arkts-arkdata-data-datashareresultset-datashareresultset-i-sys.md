@@ -237,7 +237,7 @@ getDataType(columnIndex: int): DataType
 
 | 类型 | 说明 |
 | --- | --- |
-| [DataType](../../apis-ability-kit/arkts-apis/arkts-ability-screenlockfilemanager-datatype-e.md) | 返回指定列的类型。 |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | 返回指定列的类型。 |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getGraphicsMemorySummary
@@ -34,13 +34,13 @@ Obtains the size of the GPU memory summary. This API uses a promise to return th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GraphicsMemorySummary&gt; | Returns the size of the GPU memory summary, in KB. |
+| Promise&lt;[GraphicsMemorySummary](arkts-performanceanalysis-hidebug-graphicsmemorysummary-i.md)&gt; | Returns the size of the GPU memory summary, in KB. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
+| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
 
 ## Examples
 

@@ -1,10 +1,10 @@
 # Zoom
 
-**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md).
+**Zoom** inherits from [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery).
 
 It provides APIs related to zoom operations.
 
-**Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
+**Inheritance/Implementation:** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
 
 **Since:** 11
 
@@ -15,7 +15,7 @@ It provides APIs related to zoom operations.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getZoomRatio
@@ -44,8 +44,8 @@ Obtains the zoom ratio in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## setSmoothZoom
 
@@ -74,7 +74,7 @@ Sets smooth zoom.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setZoomRatio
 
@@ -96,10 +96,10 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| zoomRatio | number | Yes |
+| [zoomRatio](arkts-camera-camera-zoompointinfo-i.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |

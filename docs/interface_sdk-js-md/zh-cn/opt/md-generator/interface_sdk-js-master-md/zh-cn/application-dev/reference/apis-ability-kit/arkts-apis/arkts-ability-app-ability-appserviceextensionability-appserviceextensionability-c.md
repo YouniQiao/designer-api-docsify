@@ -2,7 +2,7 @@
 
 AppServiceExtensionAbility模块提供后台服务相关扩展能力，包括后台服务的创建、销毁、连接、断开等生命周期回调。
 
-**继承/实现关系：** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
+**继承/实现关系：** AppServiceExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **起始版本：** 20
 
@@ -17,7 +17,7 @@ onConnect(want: Want): rpc.RemoteObject
 ```
 
 调用方使用  
-[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability)连接AppServiceExtensionAbility实例时，系统会触发该回调。
+[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectAppServiceExtensionAbility)连接AppServiceExtensionAbility实例时，系统会触发该回调。
 
 应用需要在该接口中返回一个RemoteObject对象，用于客户端和服务端进行通信。当AppServiceExtensionAbility实例处于连接状态时，如果调用方发起新的连接，系统会返回缓存的RemoteObject对象，而不会重复回调onConnect()接口。
 
@@ -184,7 +184,7 @@ onRequest(want: Want, startId: number): void
 ```
 
 调用方每次使用  
-[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability)拉起AppServiceExtensionAbility实例时，系统都会触发该回调。
+[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startAppServiceExtensionAbility)拉起AppServiceExtensionAbility实例时，系统都会触发该回调。
 
 **起始版本：** 20
 
@@ -222,7 +222,7 @@ export default class AppServiceExtAbility extends AppServiceExtensionAbility {
 context: AppServiceExtensionContext
 ```
 
-AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md)。
+AppServiceExtensionAbility的上下文环境，继承自[ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext)。
 
 **类型：** [AppServiceExtensionContext](../../apis-default/arkts-apis/arkts-appserviceextensioncontext-c.md)
 

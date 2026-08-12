@@ -11,7 +11,7 @@ A simple API for XML handling
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## characters
@@ -125,4 +125,4 @@ CallBack function triggered at the beginning of the element
 | elementName | string | Yes |
 | namespaceURI | string \| undefined | Yes |
 | qName | string \| undefined | Yes |
-| attributes | Map&lt;string, string&gt; | Yes |
+| attributes | Map & lt;string, string & gt; | Yes |

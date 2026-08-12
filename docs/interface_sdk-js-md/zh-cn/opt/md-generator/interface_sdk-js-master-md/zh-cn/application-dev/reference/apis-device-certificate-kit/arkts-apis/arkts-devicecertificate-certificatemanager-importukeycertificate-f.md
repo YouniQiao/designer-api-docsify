@@ -30,18 +30,18 @@ function importUkeyCertificate(keyUri: string, cert: Uint8Array, ukeyInfo: UkeyI
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17500011](../errorcode-certManager.md#17500011-入参校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17500010](../errorcode-certManager.md#17500010-访问usb证书凭据失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17500002](../errorcode-certManager.md#17500002-证书不存在) |
-| [17500001](../errorcode-certManager.md#17500001-内部错误) |
+| [17500011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500011-入参校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500010-访问usb证书凭据失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500002-证书不存在) |
+| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
 
 ## 示例
 

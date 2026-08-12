@@ -1,8 +1,8 @@
 # HistoryVersion
 
 Represents the historical version information of the device-cloud file when the  
-[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist) method of the  
-[FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
+[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#getHistoryVersionList) method of the  
+[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion) class is called.
 
 **Since:** 20
 
@@ -13,7 +13,7 @@ Represents the historical version information of the device-cloud file when the
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## autoResolved

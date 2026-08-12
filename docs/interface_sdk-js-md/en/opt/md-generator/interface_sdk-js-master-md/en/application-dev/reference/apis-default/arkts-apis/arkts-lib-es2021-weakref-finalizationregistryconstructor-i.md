@@ -14,13 +14,13 @@ Creates a finalization registry with an associated cleanup callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cleanupCallback | (heldValue: T) =&gt; void | Yes |
+| cleanupCallback | (heldValue: T) = & gt; void | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| FinalizationRegistry&lt;T&gt; |
+| [FinalizationRegistry](arkts-lib-es2021-weakref-finalizationregistry-i.md)&lt;T&gt; |
 
 ## prototype
 
@@ -28,4 +28,4 @@ Creates a finalization registry with an associated cleanup callback
 readonly prototype: FinalizationRegistry<any>
 ```
 
-**Type:** FinalizationRegistry&lt;any&gt;
+**Type:** [FinalizationRegistry](arkts-lib-es2021-weakref-finalizationregistry-i.md)&lt;any&gt;

@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to {@link onConsole} method.
+Encompassed message information as parameters to [onConsole](arkts-arkweb-web-webattribute-i.md#onConsole) method.
 
 **起始版本：** 23
 
@@ -90,7 +90,7 @@ Gets the message level of a console message.
 
 | 类型 | 说明 |
 | --- | --- |
-| [MessageLevel](../arkts-components/arkts-arkweb-messagelevel-e.md) | Return the message level of a console message, which can be { |
+| [MessageLevel](arkts-arkweb-web-messagelevel-e.md) | Return the message level of a console message, which can be { |
 
 ## getSource
 

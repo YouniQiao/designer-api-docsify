@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from 'kits/@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## activateOsAccount
@@ -12,7 +12,7 @@ import { accountManager } from 'kits/@kit.MDMKit';
 function activateOsAccount(admin: Want, accountId: number): Promise<void>
 ```
 
-Switches the system account. Currently, this API is supported only on phones and tablets, and can only switch between normal system accounts created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createnormalosaccount) and the default system account (ID: 100).
+Switches the system account. Currently, this API is supported only on phones and tablets, and can only switch between normal system accounts created via [createNormalOsAccount](arkts-mdm-accountmanager-createnormalosaccount-f.md#createNormalOsAccount) and the default system account (ID: 100).
 
 **Since:** 26.0.0
 
@@ -35,20 +35,20 @@ Switches the system account. Currently, this API is supported only on phones and
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9201046](../errorcode-enterpriseDeviceManager.md#9201046-signedin-system-account-count-reached-the-upper-limit) |
-| [9200016](../errorcode-enterpriseDeviceManager.md#9200016-service-timeout) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9201041](../errorcode-enterpriseDeviceManager.md#9201041-system-account-type-restricted) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9201046](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201046-signedin-system-account-count-reached-the-upper-limit) |
+| [9200016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200016-service-timeout) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9201041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201041-system-account-type-restricted) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

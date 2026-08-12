@@ -1,8 +1,8 @@
 # BaseGestureEvent
 
-Defines the basic gesture event type. Inherits from [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md).
+Defines the basic gesture event type. Inherits from [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md#BaseEvent).
 
-**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 11
 

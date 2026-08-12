@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## subscribe
@@ -22,26 +22,32 @@ function subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[unsubscribe](notificationExtensionSubscription.unsubscribe(): Promise<void>) 取消通知扩展订阅。
+
+[getSubscribeInfo](notificationExtensionSubscription.getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>) 获取应用通知扩展订阅信息。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| info | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscriptioninfo-i.md)[] | 是 |
+| info | [NotificationExtensionSubscriptionInfo[]](arkts-notification-notificationextensionsubscriptioninfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
 
 ## 示例
 

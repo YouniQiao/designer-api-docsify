@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## setDlpFeature
@@ -38,16 +38,16 @@ This API is used to enable or disable the DLP function in enterprise policies.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;StatusInfoResult&gt; |
+| Promise&lt;[StatusInfoResult](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

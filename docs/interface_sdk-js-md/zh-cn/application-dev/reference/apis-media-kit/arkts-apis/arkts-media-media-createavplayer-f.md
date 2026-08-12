@@ -30,13 +30,13 @@ function createAVPlayer(callback: AsyncCallback<AVPlayer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlayer&gt; | 是 | 回调函数。异步返回AVPlayer实例，失败时返回null。可用于音视频播放。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | 是 | 回调函数。异步返回AVPlayer实例，失败时返回null。可用于音视频播放。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 ## 示例
 
@@ -77,13 +77,13 @@ The actual number of instances that can be created may be different.It depends o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlayer \| undefined&gt; | 是 | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | 是 | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 
 ## createAVPlayer
@@ -116,13 +116,13 @@ function createAVPlayer(): Promise<AVPlayer>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVPlayer&gt; | Promise对象。成功时异步返回AVPlayer实例，可用于音视频播放。失败时返回null。 |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Promise对象。成功时异步返回AVPlayer实例，可用于音视频播放。失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -165,11 +165,11 @@ The actual number of instances that can be created may be different. It depends 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AVPlayer \| undefined&gt; | A Promise instance used to return the result. If the operation is successful, an **AVPlayer** instance is returned; **null** is returned otherwise. The instance can be used to play audio and video. |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | A Promise instance used to return the result. If the operation is successful, an **AVPlayer** instance is returned; **null** is returned otherwise. The instance can be used to play audio and video. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

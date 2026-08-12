@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 设置ListItemGroup尾部组件。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ header?: CustomBuilder
 
 设置ListItemGroup头部组件。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 

@@ -1,16 +1,16 @@
 # UIServiceExtensionContext (System API)
 
 The UIServiceExtensionContext module provides the context environment for a  
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility). It inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 UIServiceExtensionContext provides access to a  
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
+[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility) and APIs for operating the ability, for example, starting, terminating, connecting, and disconnecting ability.
 
 > **NOTE：**
 > 
 > - The APIs of this module must be used on the main thread, but not on child threads such as Worker and TaskPool.
 
-**Inheritance/Implementation:** UIServiceExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** UIServiceExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 14
 
@@ -34,7 +34,7 @@ ArkTS-Sta:
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): long
 ```
 
-Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) and returns the connection ID.
+Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) and returns the connection ID.
 
 > **NOTE：**
 > 
@@ -70,20 +70,77 @@ Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## Examples
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG: string = '[Page_ServiceExtensionAbility]';
+const DOMAIN_NUMBER: number = 0xFF00;
+
+let connectionId: number;
+let want: Want = {
+  deviceId: '',
+  bundleName: 'com.samples.stagemodelabilitydevelop',
+  abilityName: 'ServiceExtAbility'
+};
+
+let options: common.ConnectOptions = {
+  onConnect(elementName, remote: rpc.IRemoteObject): void {
+    hilog.info(DOMAIN_NUMBER, TAG, 'onConnect callback');
+  },
+  onDisconnect(elementName): void {
+    hilog.info(DOMAIN_NUMBER, TAG, 'onDisconnect callback');
+  },
+  onFailed(code: number): void {
+    hilog.info(DOMAIN_NUMBER, TAG, `onFailed callback, ${code}`);
+  }
+};
+
+@Entry
+@Component
+struct Page_UIServiceExtensionAbility {
+  build() {
+    Column() {
+      List({ initialIndex: 0 }) {
+        ListItem() {
+          Row() {
+          }
+          .onClick(() => {
+            let context: common.UIServiceExtensionContext =
+              this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
+            // The ID returned after the connection is set up must be saved. The ID will be used for disconnection.
+            connectionId = context.connectServiceExtensionAbility(want, options);
+            // The background service is connected.
+            this.getUIContext().getPromptAction().showToast({
+              message: 'SuccessfullyConnectBackendService'
+            });
+            // connectionId = context.connectAbility(want, options);
+            hilog.info(DOMAIN_NUMBER, TAG, `connectionId is : ${connectionId}`);
+          })
+        }
+      }
+    }
+  }
+}
+```
 
 ## disconnectServiceExtensionAbility
 
@@ -97,7 +154,7 @@ ArkTS-Sta:
 disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). This API is opposite to [connectServiceExtensionAbility](arkts-ability-uiserviceextensioncontext-c-sys.md#connectserviceextensionability). This API uses a promise to return the result.
+Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API is opposite to [connectServiceExtensionAbility](#connectServiceExtensionAbility). This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -115,7 +172,7 @@ Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionabi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connectionId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Connection ID returned by [connectServiceExtensionAbility](arkts-ability-uiserviceextensioncontext-c-sys.md#connectserviceextensionability). |
+| connectionId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Connection ID returned by [connectServiceExtensionAbility](#connectServiceExtensionAbility). |
 
 **Return value:**
 
@@ -127,9 +184,52 @@ Disconnects from a [UIExtensionAbility](arkts-ability-app-ability-uiextensionabi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## Examples
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[Page_ServiceExtensionAbility]';
+const DOMAIN_NUMBER: number = 0xFF00;
+
+let connectionId: number;
+
+@Entry
+@Component
+struct Page_UIServiceExtensionAbility {
+  build() {
+    Column() {
+      List({ initialIndex: 0 }) {
+        ListItem() {
+          Row() {
+          }
+          .onClick(() => {
+            let context: common.UIServiceExtensionContext =
+              this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
+            // connectionId is returned when connectServiceExtensionAbility is called and needs to be manually maintained.
+            context.disconnectServiceExtensionAbility(connectionId).then(() => {
+              hilog.info(DOMAIN_NUMBER, TAG, 'disconnectServiceExtensionAbility success');
+              // The background service is disconnected.
+              this.getUIContext().getPromptAction().showToast({
+                message: 'SuccessfullyDisconnectBackendService'
+              });
+            }).catch((err: BusinessError) => {
+              hilog.error(DOMAIN_NUMBER, TAG,
+                `disconnectServiceExtensionAbility failed, err code: ${err.code}, err msg: ${err.message}`);
+            });
+          })
+        }
+      }
+    }
+  }
+}
+```
 
 ## startAbility
 
@@ -161,7 +261,7 @@ Starts an ability. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No | Parameters used for starting the ability. |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the ability. |
 
 **Return value:**
 
@@ -173,24 +273,58 @@ Starts an ability. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
-| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
-| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) | No matching ability is found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled. |
+| [16000013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM. |
+| [16000008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## Examples
+
+```TypeScript
+import { UIServiceExtensionAbility, Want, StartOptions } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class UIEntryAbility extends UIServiceExtensionAbility {
+  onCreate() {
+    let want: Want = {
+      bundleName: 'com.example.myapp',
+      abilityName: 'MyAbility'
+    };
+    let options: StartOptions = {
+      windowMode: 0,
+    };
+
+    try {
+      this.context.startAbility(want, options)
+        .then((data: void) => {
+          // Carry out normal service processing.
+          console.info('startAbility succeed');
+        })
+        .catch((error: BusinessError) => {
+          // Process service logic errors.
+          console.error(`startAbility failed, error.code: ${error.code}, error.message: ${error.message}`);
+        });
+    } catch (paramError) {
+      // Process input parameter errors.
+      console.error(`error.code: ${paramError.code}, error.message: ${paramError.message}`);
+    }
+  }
+}
+```
 
 ## startAbilityByType
 
@@ -199,8 +333,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-app-ability-uiability.md) or  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -224,7 +358,7 @@ Starts a [UIAbility](arkts-app-ability-uiability.md) or
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Want parameter. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Want parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
@@ -237,8 +371,69 @@ Starts a [UIAbility](arkts-app-ability-uiability.md) or
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+## Examples
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[Extension_Sub] ';
+
+@Entry
+@Component
+struct SubIndex {
+  build() {
+    Row() {
+      Column() {
+        Button("startAbilityByType")
+          .fontSize(10)
+          .fontWeight(FontWeight.Bold)
+          .onClick(() => {
+            let context = this.getUIContext().getHostContext() as common.UIServiceExtensionContext;
+            let startWant: Record<string, Object> = {
+              'sceneType': 1,
+              'email': [encodeURI('xxx@example.com'),
+                encodeURI('xxx@example.com')], // Email address of the recipient. Multiple values are separated by commas (,). The array content is URL-encoded using the **encodeURI()** method.
+              'cc': [encodeURI('xxx@example.com'),
+                encodeURI('xxx@example.com')], // Email address of the CC recipient. Multiple values are separated by commas (,). The array content is URL-encoded using the **encodeURI()** method.
+              'bcc': [encodeURI('xxx@example.com'),
+                encodeURI('xxx@example.com')], // Email address of the BCC recipient. Multiple values are separated by commas (,). The array content is URL-encoded using the **encodeURI()** method.
+              'subject': encodeURI('Email subject'), // Email subject. The content is URL encoded using encodeURI().
+              'body': encodeURI('Email body'), // Email body. The content is URL encoded using encodeURI().
+              'ability.params.stream': [encodeURI ('attachment uri1'),
+                encodeURI ('attachment uri2') ], // Attachment URI. Multiple values are separated by commas (,). The array content is URL-encoded using the encodeURI() method.
+              'ability.want.params.uriPermissionFlag': 1
+            };
+            let abilityStartCallback: common.AbilityStartCallback = {
+              onError: (code: number, name: string, message: string) => {
+                console.error(TAG + `code: ${code}  name:${name}  message:${message}`);
+              }
+            };
+            try {
+              // Start a UIAbility or UIExtensionAbility based on the type of the target ability.
+              context.startAbilityByType("mail", startWant, abilityStartCallback)
+                .then(() => {
+                  console.info(TAG + `Succeeded in windows starting ability`);
+                }).catch((err: BusinessError) => {
+                console.error(TAG +
+                  `Failed to windows starting ability, Code is ${err.code}, message is ${err.message}.`);
+              })
+            } catch (err) {
+              let code = (err as BusinessError).code;
+              let msg = (err as BusinessError).message;
+              console.error(TAG + `Failed to windows starting ability, Code is ${code}, message is ${msg}.`);
+            }
+          })
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## startAbilityByType
 
@@ -247,8 +442,8 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts a [UIAbility](arkts-app-ability-uiability.md) or  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
+Starts a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) based on the type of the target ability. This API can be called only by applications running in the foreground. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -272,7 +467,7 @@ Starts a [UIAbility](arkts-app-ability-uiability.md) or
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of the target ability. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Want parameter. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Callback invoked to return the UIExtensionAbility startup result. |
 
 **Return value:**
@@ -285,8 +480,8 @@ Starts a [UIAbility](arkts-app-ability-uiability.md) or
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 ## terminateSelf
 
@@ -295,7 +490,7 @@ terminateSelf(): Promise<void>
 ```
 
 Terminates this  
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This API uses a promise to return the result.
+[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility). This API uses a promise to return the result.
 
 **Since:** 14
 
@@ -314,4 +509,23 @@ Terminates this
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+## Examples
+
+```TypeScript
+import { UIServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class UIEntryAbility extends UIServiceExtensionAbility {
+  onCreate() {
+    this.context.terminateSelf().then(() => {
+      // Carry out normal service processing.
+      console.info('terminateSelf succeed');
+    }).catch((error: BusinessError) => {
+      // Process service logic errors.
+      console.error(`terminateSelf failed, error.code: ${error.code}, error.message: ${error.message}`);
+    });
+  }
+}
+```
 

@@ -2,7 +2,7 @@
 
 Provides the method of switching the cursor position.
 
-**Inheritance/Implementation:** SearchController extends [TextContentControllerBase](arkts-arkui-common-textcontentcontrollerbase-c.md)
+**Inheritance/Implementation:** SearchController extends [TextContentControllerBase](TextContentControllerBase)
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ color: DepthColorRGB
 
 Light color.
 
-**Type:** [DepthColorRGB](../arkts-apis/arkts-arkui-common-depthcolorrgb-i-sys.md)
+**Type:** DepthColorRGB
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ direction: DepthVector3
 
 Light direction vector.
 
-**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**Type:** DepthVector3
 
 **Since:** 26.0.0
 

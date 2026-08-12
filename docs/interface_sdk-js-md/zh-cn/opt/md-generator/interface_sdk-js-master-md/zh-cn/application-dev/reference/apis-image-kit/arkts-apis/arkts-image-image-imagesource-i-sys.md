@@ -2,7 +2,7 @@
 
 ImageSource类，用于获取图片相关信息。
 
-在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
+在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)构建一个ImageSource实例。
 
 ImageSource的所有方法均不支持并发调用。
 
@@ -29,7 +29,7 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 > - 对带有单通道GainMap的HDR图片源，解码其基础图（SDR图），忽略GainMap。
 > 
 > - 对带有3通道GainMap的HDR图片源，解码其基础图（SDR图），并将输出SDR图的色域扩展为
-> [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md).DISPLAY_BT2020_SRGB。
+> [ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md#ColorSpace).DISPLAY_BT2020_SRGB。
 
 **起始版本：** 20
 
@@ -43,16 +43,16 @@ createWideGamutSdrPixelMap(): Promise<PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
 
 ## 示例
 
@@ -111,14 +111,14 @@ isJpegProgressive(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
 
 ## 示例
 
@@ -147,8 +147,8 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 > **说明：**
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例。
 > 
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
 
@@ -166,22 +166,22 @@ Exif属性中除"JPEGInterchangeFormat"/"JPEGInterchangeFormatLength"/"GIFLoopCo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700304](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-图片信息写入文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) |
 
 ## 示例
 

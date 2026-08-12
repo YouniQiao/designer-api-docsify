@@ -2,7 +2,7 @@
 
 Photo Conflict Functions object.
 
-**继承/实现关系：** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [MacroQuery](arkts-camera-camera-macroquery-i.md)
+**继承/实现关系：** PhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [MacroQuery](arkts-camera-camera-macroquery-i.md#MacroQuery)
 
 **起始版本：** 13
 

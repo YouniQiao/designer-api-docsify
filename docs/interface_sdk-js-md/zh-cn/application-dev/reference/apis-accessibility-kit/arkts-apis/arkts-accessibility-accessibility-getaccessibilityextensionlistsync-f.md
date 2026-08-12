@@ -27,14 +27,14 @@ function getAccessibilityExtensionListSync(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 | 辅助应用的类型。 |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 | 辅助应用的状态。 |
+| abilityType | AbilityType | 是 | 辅助应用的类型。 |
+| stateType | AbilityState | 是 | 辅助应用的状态。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; | 返回辅助应用信息列表。 |
+| Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt; | 返回辅助应用信息列表。 |
 
 ## 示例
 

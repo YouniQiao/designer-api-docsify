@@ -14,7 +14,7 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:stat](arkts-corefile-fileio-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-unnamed-declare function fstat(fd: number): Promise<Stat>--><!--Device-unnamed-declare function fstat(fd: number): Promise<Stat>-End-->
 
@@ -30,7 +30,7 @@ Obtains file status based on the file descriptor. This API uses a promise to ret
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise that returns the detailed file status obtained. |
+| Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise that returns the detailed file status obtained. |
 
 
 ## fstat
@@ -47,7 +47,7 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:stat](arkts-corefile-fileio-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-unnamed-declare function fstat(fd: number, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function fstat(fd: number, callback: AsyncCallback<Stat>): void-End-->
 
@@ -58,5 +58,5 @@ Obtains file status based on the file descriptor. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file whose status is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | Callback used to return the file status obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the file status obtained. |
 

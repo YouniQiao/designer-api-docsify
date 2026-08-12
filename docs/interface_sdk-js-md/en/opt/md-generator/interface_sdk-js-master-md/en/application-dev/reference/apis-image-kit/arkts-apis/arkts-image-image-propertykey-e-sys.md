@@ -6,10 +6,10 @@ Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
 example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
 - The format example is used only to show how to modify values and read results. For details about how to use them,  
 see   
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(to modify a single Exif field),   
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)(to modify multiple Exif fields),   
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(to read a single Exif field), and   
-[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) (to read multiple Exif fields).
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty)(to modify a single Exif field),   
+[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties)(to modify multiple Exif fields),   
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)(to read a single Exif field), and   
+[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) (to read multiple Exif fields).
 
 **Since:** 7
 

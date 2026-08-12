@@ -6,7 +6,7 @@ Enumerates the audio content types.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage
+**Substitutes:** [StreamUsage](arkts-audio-audio-streamusage-e.md#StreamUsage)
 
 <!--Device-audio-enum ContentType--><!--Device-audio-enum ContentType-End-->
 
@@ -24,7 +24,7 @@ Unknown content.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_UNKNOWN
+**Substitutes:** [STREAM_USAGE_UNKNOWN](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_UNKNOWN)
 
 <!--Device-ContentType-CONTENT_TYPE_UNKNOWN = 0--><!--Device-ContentType-CONTENT_TYPE_UNKNOWN = 0-End-->
 
@@ -42,7 +42,7 @@ Speech.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_VOICE_COMMUNICATION
+**Substitutes:** [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_VOICE_COMMUNICATION)
 
 <!--Device-ContentType-CONTENT_TYPE_SPEECH = 1--><!--Device-ContentType-CONTENT_TYPE_SPEECH = 1-End-->
 
@@ -60,7 +60,7 @@ Music.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_MUSIC
+**Substitutes:** [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC)
 
 <!--Device-ContentType-CONTENT_TYPE_MUSIC = 2--><!--Device-ContentType-CONTENT_TYPE_MUSIC = 2-End-->
 
@@ -78,7 +78,7 @@ Movie.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_MOVIE
+**Substitutes:** [STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE)
 
 <!--Device-ContentType-CONTENT_TYPE_MOVIE = 3--><!--Device-ContentType-CONTENT_TYPE_MOVIE = 3-End-->
 
@@ -96,7 +96,7 @@ Notification tone.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_NOTIFICATION
+**Substitutes:** [STREAM_USAGE_NOTIFICATION](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_NOTIFICATION)
 
 <!--Device-ContentType-CONTENT_TYPE_SONIFICATION = 4--><!--Device-ContentType-CONTENT_TYPE_SONIFICATION = 4-End-->
 
@@ -114,7 +114,7 @@ Ringtone.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_RINGTONE
+**Substitutes:** [STREAM_USAGE_RINGTONE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_RINGTONE)
 
 <!--Device-ContentType-CONTENT_TYPE_RINGTONE = 5--><!--Device-ContentType-CONTENT_TYPE_RINGTONE = 5-End-->
 

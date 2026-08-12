@@ -13,7 +13,7 @@ Provides information about the UI event.
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## bundleName
@@ -42,7 +42,7 @@ Bundle name of the application.
 readonly componentEventType?: ComponentEventType
 ```
 
-Component operation event type.If it is not a component operation event, {@link ComponentEventType.COMPONENT_UNDEFINED} is returned.
+Component operation event type.If it is not a component operation event, [COMPONENT_UNDEFINED](arkts-test-uitest-componenteventtype-e.md#COMPONENT_UNDEFINED) is returned.
 
 **Type:** [ComponentEventType](arkts-test-uitest-componenteventtype-e.md)
 
@@ -82,9 +82,9 @@ Component ID. If it is not a component operation event, an empty string is retur
 readonly componentRect?: Rect
 ```
 
-Component border information. If it is not a component operation event, a {@link Rect} object whose attribute values are all **0** is returned.
+Component border information. If it is not a component operation event, a [Rect](arkts-test-uitest-rect-i.md#Rect) object whose attribute values are all **0** is returned.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** [Rect](arkts-test-uitest-rect-i.md)
 
 **Since:** 22
 
@@ -142,7 +142,7 @@ Component or window type.
 readonly windowChangeType?: WindowChangeType
 ```
 
-Window change event type.If the event is not a window change event, {@link WindowChangeType.WINDOW_UNDEFINED} is returned.
+Window change event type.If the event is not a window change event, [WINDOW_UNDEFINED](arkts-test-uitest-windowchangetype-e.md#WINDOW_UNDEFINED) is returned.
 
 **Type:** [WindowChangeType](arkts-test-uitest-windowchangetype-e.md)
 

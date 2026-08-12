@@ -78,7 +78,7 @@ Unit: vp.
 
 Percentage values are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 8.0_vp.
 
@@ -105,7 +105,7 @@ Position of the tooltip arrow relative to its parent component. Available positi
 
 Default value: **ArrowPointPosition.CENTER**.
 
-**Type:** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
+**Type:** ArrowPointPosition
 
 **Since:** 19
 
@@ -135,7 +135,7 @@ Unit: vp.
 
 Percentage values are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 16.0_vp.
 
@@ -249,7 +249,7 @@ Default value: **TipsAnchorType.TARGET**.
 
 If the anchor type of the tooltip is **TipsAnchorType.CURSOR**, the tooltip does not display an arrow.
 
-**Type:** [TipsAnchorType](../arkts-apis/arkts-arkui-tipsanchortype-e.md)
+**Type:** TipsAnchorType
 
 **Since:** 20
 
@@ -271,7 +271,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for tips. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of tips.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 

@@ -28,5 +28,5 @@ Get the event instance of Scroll node.
 
 | Type | Description |
 | --- | --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIScrollEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

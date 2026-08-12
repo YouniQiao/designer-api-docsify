@@ -8,7 +8,7 @@ Defines the vibration options.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.vibrator/vibrator.VibrateTime
+**Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -19,7 +19,7 @@ Defines the vibration options.
 ## Modules to Import
 
 ```TypeScript
-import { VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## complete
@@ -36,7 +36,7 @@ Called when the API call is complete.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.vibrator/vibrator#startVibration
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -60,7 +60,7 @@ Called when the API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.vibrator/vibrator#startVibration
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -91,7 +91,7 @@ Called when the vibrator data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.vibrator/vibrator#startVibration
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -117,7 +117,7 @@ Vibration mode. The value **long** indicates long vibration, and **short** indic
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.vibrator/vibrator.VibrateTime
+**Substitutes:** [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)
 
 **Required permissions:** ohos.permission.VIBRATE
 

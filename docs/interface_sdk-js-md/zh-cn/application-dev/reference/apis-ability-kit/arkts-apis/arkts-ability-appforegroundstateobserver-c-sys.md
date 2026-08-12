@@ -37,3 +37,34 @@ onAppStateChanged(appStateData: AppStateData): void
 | --- | --- | --- | --- |
 | appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | 是 | 应用状态信息。 |
 
+## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+let observer: appManager.AppForegroundStateObserver = {
+  onAppStateChanged(appStateData: appManager.AppStateData) {
+    console.info(`onAppStateChanged appStateData: ${JSON.stringify(appStateData)}`);
+  },
+};
+appManager.on('appForegroundState', observer);
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+
+class MyObserver implements appManager.AppForegroundStateObserver {
+  onAppStateChanged(appStateData: appManager.AppStateData) {
+    console.info(`onAppStateChanged appStateData: ${JSON.stringify(appStateData)}`);
+  }
+}
+
+let observer = new MyObserver();
+appManager.onAppForegroundStateChange(observer);
+```
+

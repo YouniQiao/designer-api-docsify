@@ -15,7 +15,7 @@ Defines a touchscreen gesture event.
 ## Modules to Import
 
 ```TypeScript
-import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
 ```
 
 ## action
@@ -46,7 +46,7 @@ touches: Touch[]
 
 Touch point information.
 
-**Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i-sys.md)[]
+**Type:** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **Since:** 18
 

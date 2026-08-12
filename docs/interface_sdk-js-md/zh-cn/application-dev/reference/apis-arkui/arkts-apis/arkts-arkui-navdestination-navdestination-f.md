@@ -9,7 +9,7 @@ export declare function NavDestination(
 ): NavDestinationAttribute
 ```
 
-创建[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)子页面的根容器。
+创建[Navigation](./../../@internal/component/ets/navigation)子页面的根容器。
 
 **起始版本：** 23
 
@@ -25,7 +25,7 @@ export declare function NavDestination(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 支持多个子组件。&lt;br/&gt;**说明：** &lt;br/&gt;子组件类型：系统组件和自定义组件，支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 支持多个子组件。&lt;br/&gt;**说明：** &lt;br/&gt;子组件类型：系统组件和自定义组件，支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。 |
 
 **返回值：**
 
@@ -61,8 +61,8 @@ export declare function NavDestination(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NavDestinationAttribute&gt; | 是 | navDestination属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 内容区 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md)&gt; | 是 | navDestination属性实例 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 内容区 |
 
 **返回值：**
 

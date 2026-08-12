@@ -15,7 +15,7 @@ commands: string
 ```
 
 Commands for drawing a path. For details about how to convert pixel units, see  
-[Pixel Units](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md).
+[Pixel Units](../@internal/component/ets/common).
 
 Unit: px
 

@@ -1,7 +1,7 @@
 # ParagraphStyle
 
-Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) constructor, and works together with  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) (which controls text-level styles) to determine the final typesetting result of the paragraph.
+Represents a paragraph style, which controls the overall layout behavior of a paragraph, including attributes such as alignment, line break strategy, and maximum number of lines. ParagraphStyle serves as a required parameter of the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) constructor, and works together with  
+[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) (which controls text-level styles) to determine the final typesetting result of the paragraph.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Represents a paragraph style, which controls the overall layout behavior of a pa
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## align
@@ -23,7 +23,7 @@ align?: TextAlign
 
 Text alignment mode. The default value is **START**. This parameter is invalid when the **tab** parameter is configured.
 
-**Type:** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ Sets whether to use punctuation compression at the beginning of a line in text l
 
 **NOTE：**
 
-1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md).Otherwise, compression cannot be performed.2. Only the punctuations within the punctuation compression range at the beginning of a line are in the scope of this feature.
+1. The font file must support the ss08 feature in [FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#FontFeature).Otherwise, compression cannot be performed.2. Only the punctuations within the punctuation compression range at the beginning of a line are in the scope of this feature.
 
 Punctuation range at the beginning of a line.  
 | Punctuation| Unicode Code Point| Unicode Name|
@@ -190,8 +190,8 @@ Sets whether to use padding at the beginning and end of a line in text layout. *
 lineSpacing?: number
 ```
 
-Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md). The last line retains line spacing by default. You can disable line spacing for the last line by setting  
-[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
+Line spacing, in physical pixels (px). The default value is **0**. lineSpacing is not restricted by lineHeightMaximum and lineHeightMinimum in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle). The last line retains line spacing by default. You can disable line spacing for the last line by setting  
+[ParagraphStyle](#ParagraphStyle)'s textHeightBehavior to DISABLE_ALL or DISABLE_LAST_ASCENT.
 
 **Type:** number
 
@@ -227,7 +227,7 @@ Maximum number of lines. The value is an integer. The default value is **1e9**.
 orphanCharOptimization?: boolean
 ```
 
-Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md) is not BREAK_ALL and the locale of the first [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) of the text to be typeset is "zh-Hans" or "zh-Hant". The value **true** enables orphan character optimization, and **false** disables it. The default value is  
+Whether to enable orphan character optimization during text typesetting. Orphan character optimization improves text layout by handling isolated characters (the first character of the last line of a paragraph) more efficiently. When enabled, it adjusts line break points to avoid isolated characters as much as possible. The orphan character optimization feature takes effect only when [wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#WordBreak) is not BREAK_ALL and the locale of the first [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) of the text to be typeset is "zh-Hans" or "zh-Hant". The value **true** enables orphan character optimization, and **false** disables it. The default value is  
 **false**.
 
 **Type:** boolean
@@ -287,7 +287,7 @@ tab?: TextTab
 ```
 
 Alignment mode and position of the text after the tab character in a paragraph. By default, the tab character is replaced with a space. This parameter is invalid when it is used together with the **align** parameter or the  
-**ellipsis** parameter in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).
+**ellipsis** parameter in [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle).
 
 **Type:** [TextTab](arkts-arkgraphics2d-text-texttab-i.md)
 
@@ -327,7 +327,7 @@ textDirection?: TextDirection
 
 Text direction. The default value is **LTR**.
 
-**Type:** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
+**Type:** TextDirection
 
 **Since:** 12
 
@@ -363,7 +363,7 @@ textStyle?: TextStyle
 
 Text style applied to the paragraph. The default value is the initial text style.
 
-**Type:** [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 12
 
@@ -397,10 +397,10 @@ Whether to consider the alignment impact of trailing spaces during text layout. 
 verticalAlign?: TextVerticalAlign
 ```
 
-Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s fontSize is set). If there is superscript or subscript text in the line(that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
+Text vertical alignment mode. The default value is BASELINE, which means text baseline alignment. This attribute takes effect when line height scaling is enabled (that is, when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)'s heightScale is set) or when text in different font sizes is mixed in a line (that is, when  
+[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)'s fontSize is set). If there is superscript or subscript text in the line(that is, text with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)'s badgeType attribute set), the superscript or subscript text participates in vertical alignment in the same way as normal text.
 
-**Type:** [TextVerticalAlign](../../apis-arkui/arkts-apis/arkts-arkui-textverticalalign-e.md)
+**Type:** TextVerticalAlign
 
 **Since:** 20
 
@@ -418,7 +418,7 @@ wordBreak?: WordBreak
 
 Word break type. The default value is **BREAK_WORD**.
 
-**Type:** [WordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 12
 

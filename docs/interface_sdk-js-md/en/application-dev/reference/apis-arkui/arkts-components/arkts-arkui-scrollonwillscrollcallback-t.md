@@ -25,12 +25,12 @@ Called before scroll to allow developer to control real offset the Scroll can sc
 | --- | --- | --- | --- |
 | xOffset | number | Yes | Horizontal offset per frame during scrolling. A positive offset indicates scrolling to the left, and a negative offset indicates scrolling to the right. <br>Unit: vp |
 | yOffset | number | Yes | offset per frame during scrolling. A positive offset indicates scrolling upward, and a negative offset indicates scrolling downward. <br>Unit: vp |
-| scrollState | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | Current scrolling state. |
-| scrollSource | [ScrollSource](../arkts-apis/arkts-arkui-scrollsource-e.md) | Yes | Source of the current scrolling operation. |
+| scrollState | ScrollState | Yes | Current scrolling state. |
+| scrollSource | ScrollSource | Yes | Source of the current scrolling operation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| void \| OffsetResult | the remain offset for the Scroll, same as (xOffset, yOffset) when no OffsetResult is returned. |
+| void \| [OffsetResult](arkts-arkui-offsetresult-i.md) | the remain offset for the Scroll, same as (xOffset, yOffset) when no OffsetResult is returned. |
 

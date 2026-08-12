@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -195,7 +195,7 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
 Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
@@ -237,7 +237,7 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 ```
 
 Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9

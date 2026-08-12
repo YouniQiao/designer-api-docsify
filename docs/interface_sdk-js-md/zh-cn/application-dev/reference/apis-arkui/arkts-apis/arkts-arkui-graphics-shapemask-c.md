@@ -98,7 +98,7 @@ setOvalShape(oval: Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 | 椭圆形的形状。 |
+| oval | [Rect](arkts-arkui-rect-t.md) | 是 | 椭圆形的形状。 |
 
 ## setRectShape
 
@@ -122,7 +122,7 @@ setRectShape(rect: Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 | 矩形的形状。 |
+| rect | [Rect](arkts-arkui-rect-t.md) | 是 | 矩形的形状。 |
 
 ## setRoundRectShape
 
@@ -146,7 +146,7 @@ setRoundRectShape(roundRect: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形的形状。 |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | 是 | 圆角矩形的形状。 |
 
 ## fillColor
 
@@ -154,7 +154,7 @@ setRoundRectShape(roundRect: RoundRect): void
 fillColor: int
 ```
 
-遮罩的填充颜色，使用ARGB格式。默认值为`0XFF000000`。通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md)方式与RenderNode本身的颜色混合，生成最终颜色。取值限定为整数。
+遮罩的填充颜色，使用ARGB格式。默认值为`0XFF000000`。通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)方式与RenderNode本身的颜色混合，生成最终颜色。取值限定为整数。
 
 **类型：** int
 
@@ -176,7 +176,7 @@ fillColor: int
 strokeColor: int
 ```
 
-遮罩的边框颜色，使用ARGB格式。默认值为`0XFF000000`。通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md)方式与RenderNode本身的颜色混合，生成最终颜色。取值限定为整数。
+遮罩的边框颜色，使用ARGB格式。默认值为`0XFF000000`。通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)方式与RenderNode本身的颜色混合，生成最终颜色。取值限定为整数。
 
 **类型：** int
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)
+**替代接口：** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DataRoleType)
 
 <!--Device-usb-export enum DataRoleType--><!--Device-usb-export enum DataRoleType-End-->
 
@@ -26,7 +26,7 @@ NONE = 0
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.DataRoleType.NONE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#none)
+**替代接口：** [NONE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#NONE)
 
 <!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
@@ -46,7 +46,7 @@ HOST = 1
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.DataRoleType.HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#host)
+**替代接口：** [HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#HOST)
 
 <!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
@@ -66,7 +66,7 @@ DEVICE = 2
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.DataRoleType.DEVICE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#device)
+**替代接口：** [DEVICE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DEVICE)
 
 <!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 

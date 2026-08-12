@@ -14,7 +14,7 @@ Provides preferred playback settings for player.
 enableSuperResolution?: boolean
 ```
 
-Enable super-resolution feature. default is false.Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
+Enable super-resolution feature. default is false.Must enable super-resolution feature before calling [setSuperResolution](#setSuperResolution) and [setVideoWindowSize](#setVideoWindowSize).
 
 **类型：** boolean
 

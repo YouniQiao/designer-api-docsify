@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## setEventHubMultithreadingEnabled
@@ -12,8 +12,8 @@ import { sendableContextManager } from 'kits/@kit.AbilityKit';
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md) in  
-[Context](arkts-ability-context-t.md).
+Enables the cross-thread data transfer feature of [EventHub](arkts-ability-eventhub-c.md#EventHub) in  
+[Context](./app/context).
 
 > **NOTE：**
 > 

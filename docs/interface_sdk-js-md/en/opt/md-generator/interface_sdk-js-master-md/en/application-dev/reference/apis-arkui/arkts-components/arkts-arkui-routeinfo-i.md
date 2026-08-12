@@ -6,7 +6,7 @@ Route information.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation#NavPathStack
+**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md#NavPathStack)
 
 <!--Device-unnamed-declare interface RouteInfo--><!--Device-unnamed-declare interface RouteInfo-End-->
 
@@ -26,7 +26,7 @@ Name of the navigation destination page to be redirected to.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation.NavPathInfo#name
+**Substitutes:** [name](Navigation.NavPathInfo#name)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Parameter transferred during redirection.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation.NavPathInfo#param
+**Substitutes:** [param](Navigation.NavPathInfo#param)
 
 **Model restriction:** This API can be used only in the stage model.
 

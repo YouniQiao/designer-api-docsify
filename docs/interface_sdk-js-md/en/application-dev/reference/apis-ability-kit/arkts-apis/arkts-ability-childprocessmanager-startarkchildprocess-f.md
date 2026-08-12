@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startArkChildProcess
@@ -18,9 +18,9 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > 
 > The child process started by calling this API does not inherit the resources of the parent process. If the child
 > process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. After the
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. After the
 > function is done, the child process is not automatically destroyed. Instead, it must be destroyed by calling
-> [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md/arkts-arkts-process-abort-f.md#abort). After the process that calls this API is destroyed, the
+> [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md#abort). After the process that calls this API is destroyed, the
 > created child process is also destroyed.
 
 **Since:** 12
@@ -51,11 +51,11 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit.<br>**Applicable version:** 13 and later |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) | Operation not supported. |
+| [16000062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) | The number of child processes exceeds the upper limit.<br>**Applicable version:** 13 and later |
 
 ## Examples
 

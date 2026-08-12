@@ -13,7 +13,7 @@ Defines the properties of the data records in the unified data object, including
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## getDelayData
@@ -44,7 +44,7 @@ extras?: Record<string, object>
 
 Object of the dictionary type used to set other properties. The default value is an empty dictionary object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**Type:** Record&lt;string, object&gt;
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Object of the dictionary type used to set other properties. The default value is
 shareOptions?: ShareOptions
 ```
 
-Range, in which [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) can be used. The default value is   
+Range, in which [UnifiedData](#UnifiedDataProperties) can be used. The default value is   
 **CROSS_APP**.
 
 **Type:** [ShareOptions](arkts-arkdata-unifieddatachannel-shareoptions-e.md)
@@ -109,7 +109,7 @@ Customized tag. The default value is an empty string.
 readonly timestamp?: Date
 ```
 
-Timestamp when [UnifiedData](arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) is generated. The default value is January 1, 1970 (UTC).
+Timestamp when [UnifiedData](#UnifiedDataProperties) is generated. The default value is January 1, 1970 (UTC).
 
 **Type:** Date
 
@@ -133,7 +133,7 @@ uriAuthorizationPolicies?: Array<UriPermission>
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array&lt;UriPermission&gt;
+**Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
 
 **Since:** 26.0.0
 

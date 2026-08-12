@@ -34,7 +34,7 @@ footerContent?: ComponentContent
 
 设置WaterFlow尾部组件。该参数的优先级高于参数footer，即同时设置footer和footerContent时，以footerContent设置的组件为准。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 18
 

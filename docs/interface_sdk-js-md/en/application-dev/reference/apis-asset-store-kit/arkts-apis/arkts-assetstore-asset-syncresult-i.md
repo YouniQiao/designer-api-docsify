@@ -13,7 +13,7 @@ Represents the sync result of an asset.
 ## Modules to Import
 
 ```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## failedCount
@@ -41,7 +41,7 @@ readonly resultCode: number
 ```
 
 Sync result code of an asset. If the sync is successful, the result code is **0**. If the sync fails, see  
-[ErrorCode](arkts-assetstore-asset-errorcode-e.md) for the result code.
+[ErrorCode](arkts-assetstore-asset-errorcode-e.md#ErrorCode) for the result code.
 
 **Type:** number
 

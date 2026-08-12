@@ -26,16 +26,16 @@ function createVirtualScreen(config: VirtualScreenConfig): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

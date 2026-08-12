@@ -13,7 +13,7 @@ Defines the frame info when fetch picture form a video.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## actualTimeUs
@@ -84,7 +84,7 @@ result: FetchResult
 
 The fetch result code - succeed, failed or cancelled.
 
-**Type:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md)
+**Type:** FetchResult
 
 **Since:** 23
 

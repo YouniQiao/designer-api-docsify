@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
 ```
 
 ## ContainerReader
@@ -32,13 +32,13 @@ Defines ContainerReader Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | Yes | ContainerReader options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) |  |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
 
 
 ## ContainerReader
@@ -68,12 +68,12 @@ Defines ContainerReader Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContainerReaderInfo&gt; | Yes | The custom builder function for container content. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | The configuration options for containerreader. |
+| style_ | CustomBuilderT&lt;[ContainerReaderInfo](arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md)&gt; | Yes | The custom builder function for container content. |
+| content_ | CustomBuilder | No | The configuration options for containerreader. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md) | The attribute of the containerreader |
+| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) | The attribute of the containerreader |
 

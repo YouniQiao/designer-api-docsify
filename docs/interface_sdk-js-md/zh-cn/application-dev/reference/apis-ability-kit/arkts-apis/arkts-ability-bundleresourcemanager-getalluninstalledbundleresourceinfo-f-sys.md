@@ -24,7 +24,7 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定返回的BundleResourceInfo所包含的信息，取值请参考 [ResourceFlag枚举值](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md)。 |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定返回的BundleResourceInfo所包含的信息，取值请参考 [ResourceFlag枚举值](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag)。 |
 
 **返回值：**
 
@@ -36,8 +36,8 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: int): Promise<Array<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 

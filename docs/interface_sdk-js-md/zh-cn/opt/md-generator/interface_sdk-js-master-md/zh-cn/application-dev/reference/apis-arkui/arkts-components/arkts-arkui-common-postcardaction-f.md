@@ -24,5 +24,5 @@ Post Card Action.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| component | Object | 是 |
+| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | 是 |
 | action | Object | 是 |

@@ -1,6 +1,6 @@
 # @ohos.selectionInput.selectionManager(Word Selection Management)
 
-This module provides word selection management capabilities, including creating, displaying, moving, hiding, and destroying panels, listening for word selection events using a mouse or touchpad, and retrieving the selected text.The typical usage process is as follows:1. Call [on('selectionCompleted')](selectionManager.on) to subscribe to the selection completion event.2. In the callback, call [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md#getselectioncontent) to obtain the selected text.3. Call [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) to create a word selection panel.4. Call [setUiContent](arkts-basicservices-selectionmanager-panel-i.md#setuicontent) to load the page content.5. Call [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay) to move the panel to the specified position.6. Call [show](arkts-basicservices-selectionmanager-panel-i.md#show) to display the panel.7. Call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) to destroy the panel.8. Call [off('selectionCompleted')](selectionManager.off) to unsubscribe from the selection completion event.
+This module provides word selection management capabilities, including creating, displaying, moving, hiding, and destroying panels, listening for word selection events using a mouse or touchpad, and retrieving the selected text.The typical usage process is as follows:1. Call [on('selectionCompleted')](selectionManager.on) to subscribe to the selection completion event.2. In the callback, call [getSelectionContent](arkts-basicservices-selectionmanager-getselectioncontent-f.md#getSelectionContent) to obtain the selected text.3. Call [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel) to create a word selection panel.4. Call [setUiContent](arkts-basicservices-selectionmanager-panel-i.md#setUiContent) to load the page content.5. Call [moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#moveToGlobalDisplay) to move the panel to the specified position.6. Call [show](arkts-basicservices-selectionmanager-panel-i.md#show) to display the panel.7. Call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroyPanel) to destroy the panel.8. Call [off('selectionCompleted')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off) to unsubscribe from the selection completion event.
 
 > **NOTE：**
 > 
@@ -9,7 +9,7 @@ This module provides word selection management capabilities, including creating,
 > function.
 > - APIs of this module can be called only by apps that integrate the extension ability for word selection. For
 > details about how to implement the extension ability for word selection, see
-> [SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md).
+> [SelectionExtensionAbility](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md#SelectionExtensionAbility).
 
 **Since:** 24
 
@@ -22,7 +22,7 @@ This module provides word selection management capabilities, including creating,
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

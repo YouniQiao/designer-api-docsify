@@ -18,7 +18,7 @@ mainTitle?: ResourceStr
 
 主标题内容。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ subTitle?: ResourceStr
 
 副标题内容。需要在标题下方显示补充说明信息时传入此参数。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

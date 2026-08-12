@@ -22,7 +22,7 @@ export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyD
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 是 |
 
 **返回值：**
 

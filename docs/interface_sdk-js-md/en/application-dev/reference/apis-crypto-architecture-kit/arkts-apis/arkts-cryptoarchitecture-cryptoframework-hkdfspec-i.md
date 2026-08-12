@@ -1,6 +1,6 @@
 # HKDFSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for HKDF key derivation.
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for HKDF key derivation.
 
 > **NOTE：**
 > 
@@ -13,7 +13,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 > The default mode is **EXTRACT_AND_EXPAND**. The value **HKDF|SHA256|EXTRACT_AND_EXPAND** is equivalent to
 > **HKDF|SHA256**.
 
-**Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
+**Inheritance/Implementation:** HKDFSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec)
 
 **Since:** 12
 
@@ -26,7 +26,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## info

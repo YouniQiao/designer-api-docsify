@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## register
@@ -18,7 +18,7 @@ Registers the continuation management service and obtains a token. This API does
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +61,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +73,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | Yes |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 ## Examples
@@ -109,7 +109,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,13 +121,13 @@ Registers the continuation management service and obtains a token. This API uses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md) | No |
+| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

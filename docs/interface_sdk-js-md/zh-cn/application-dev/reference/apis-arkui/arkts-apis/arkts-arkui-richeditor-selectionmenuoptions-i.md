@@ -72,7 +72,7 @@ menuType?: MenuType
 
 自定义选择菜单类型。
 
-**类型：** [MenuType](arkts-arkui-menutype-e.md)
+**类型：** [MenuType](arkts-arkui-textcommon-menutype-e.md)
 
 **起始版本：** 23
 
@@ -112,7 +112,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 预览菜单的选项。
 
-**类型：** [PreviewMenuOptions](../arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**类型：** [PreviewMenuOptions](arkts-arkui-richeditor-previewmenuoptions-i.md)
 
 **起始版本：** 23
 

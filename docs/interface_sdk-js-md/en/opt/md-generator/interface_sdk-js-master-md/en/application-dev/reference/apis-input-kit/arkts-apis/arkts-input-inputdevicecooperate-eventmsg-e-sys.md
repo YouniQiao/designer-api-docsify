@@ -6,7 +6,7 @@ Enumerates screen hopping events.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate.CooperateState
+**Substitutes:** [CooperateState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState)
 
 <!--Device-inputDeviceCooperate-enum EventMsg--><!--Device-inputDeviceCooperate-enum EventMsg-End-->
 
@@ -26,7 +26,7 @@ Screen hopping starts.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate.CooperateState#COOPERATE_ACTIVATE
+**Substitutes:** [COOPERATE_ACTIVATE](ohos.cooperate/cooperate.CooperateState#COOPERATE_ACTIVATE)
 
 <!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200--><!--Device-EventMsg-MSG_COOPERATE_INFO_START = 200-End-->
 
@@ -46,7 +46,7 @@ Screen hopping succeeds.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate.CooperateState#COOPERATE_ACTIVATE_SUCCESS
+**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](ohos.cooperate/cooperate.CooperateState#COOPERATE_ACTIVATE_SUCCESS)
 
 <!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201--><!--Device-EventMsg-MSG_COOPERATE_INFO_SUCCESS = 201-End-->
 
@@ -66,7 +66,7 @@ Screen hopping fails.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate.CooperateState#COOPERATE_ACTIVATE_FAILURE
+**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_FAILURE)
 
 <!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202--><!--Device-EventMsg-MSG_COOPERATE_INFO_FAIL = 202-End-->
 
@@ -86,7 +86,7 @@ Screen hopping is enabled.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate.CooperateState#COOPERATE_PREPARE
+**Substitutes:** [COOPERATE_PREPARE](ohos.cooperate/cooperate.CooperateState#COOPERATE_PREPARE)
 
 <!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500--><!--Device-EventMsg-MSG_COOPERATE_STATE_ON = 500-End-->
 
@@ -106,7 +106,7 @@ Screen hopping is disabled.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate.CooperateState#COOPERATE_UNPREPARE
+**Substitutes:** [COOPERATE_UNPREPARE](ohos.cooperate/cooperate.CooperateState#COOPERATE_UNPREPARE)
 
 <!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501--><!--Device-EventMsg-MSG_COOPERATE_STATE_OFF = 501-End-->
 

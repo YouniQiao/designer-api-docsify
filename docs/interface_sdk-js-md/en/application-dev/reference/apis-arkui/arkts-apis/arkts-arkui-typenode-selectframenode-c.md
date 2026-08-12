@@ -34,11 +34,11 @@ Initialize Select FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt; | Yes |  |
+| value | Array&lt;SelectOption&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md) |  |
+| SelectAttribute |  |
 

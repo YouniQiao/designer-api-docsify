@@ -13,7 +13,7 @@ AI Text Model Abstract Interface.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## cancelTextGeneration
@@ -91,4 +91,4 @@ Request AI text generation task to get the generated text.
 | --- | --- | --- |
 | sessionId | number | Yes |
 | value | string | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GenerateTextTaskPartialResult&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GenerateTextTaskPartialResult](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md)&gt; | Yes |

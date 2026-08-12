@@ -16,7 +16,7 @@ group?: string
 
 群组名称。
 
-默认值：undefined，默认状态下管理[CheckboxOptions](arkts-arkui-checkboxoptions-i.md)属性group信息为undefined的节点。 
+默认值：undefined，默认状态下管理[CheckboxOptions](arkts-arkui-checkboxoptions-i.md#CheckboxOptions)属性group信息为undefined的节点。 
 
 **说明：**
 

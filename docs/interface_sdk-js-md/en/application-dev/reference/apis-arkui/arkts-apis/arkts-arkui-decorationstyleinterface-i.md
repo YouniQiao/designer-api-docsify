@@ -28,7 +28,7 @@ Color of the text decorative line.
 
 Default value: **Color.Black**.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -52,7 +52,7 @@ Style of the text decorative line.
 
 Default value: **TextDecorationStyle.SOLID**.
 
-**Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ Type of the text decorative line.
 
 Default value: **TextDecorationType.None**.
 
-**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

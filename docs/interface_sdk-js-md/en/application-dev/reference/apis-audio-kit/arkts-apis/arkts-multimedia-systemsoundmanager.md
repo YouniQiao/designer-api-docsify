@@ -13,7 +13,7 @@ This module provides basic capabilities for managing system sound effects, inclu
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## Summary

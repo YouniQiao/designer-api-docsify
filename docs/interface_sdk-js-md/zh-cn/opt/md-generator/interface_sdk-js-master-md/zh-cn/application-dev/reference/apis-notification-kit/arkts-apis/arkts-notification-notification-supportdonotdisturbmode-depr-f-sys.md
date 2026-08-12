@@ -12,7 +12,7 @@ function supportDoNotDisturbMode(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isSupportDoNotDisturbMode
+**替代接口：** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md#isSupportDoNotDisturbMode)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ function supportDoNotDisturbMode(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isSupportDoNotDisturbMode
+**替代接口：** [isSupportDoNotDisturbMode](arkts-notification-notificationmanager-issupportdonotdisturbmode-f-sys.md#isSupportDoNotDisturbMode)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -55,4 +55,4 @@ function supportDoNotDisturbMode(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |

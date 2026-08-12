@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pan } from 'kits/@kit.ConnectivityKit';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## createPanProfile
@@ -26,14 +26,14 @@ create the instance of pan profile.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PanProfile](arkts-connectivity-pan-panprofile-i.md) |
+| [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 

@@ -64,7 +64,7 @@ getBlob(columnIndex: number): Uint8Array
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -153,7 +153,7 @@ getColumnName(columnIndex: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -195,13 +195,13 @@ getDataType(columnIndex: number): DataType
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [DataType](../../apis-ability-kit/arkts-apis/arkts-ability-screenlockfilemanager-datatype-e.md) |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) |
 
 ## 示例
 
@@ -242,7 +242,7 @@ getDouble(columnIndex: number): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -289,7 +289,7 @@ getLong(columnIndex: number): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -336,7 +336,7 @@ getString(columnIndex: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 

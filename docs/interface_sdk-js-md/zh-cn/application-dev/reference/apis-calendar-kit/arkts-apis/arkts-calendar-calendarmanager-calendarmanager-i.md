@@ -1,6 +1,6 @@
 # CalendarManager
 
-下列API示例中需先通过[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
+下列API示例中需先通过[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
@@ -44,10 +44,10 @@ createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 
@@ -99,10 +99,10 @@ createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calenda
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 
@@ -152,7 +152,7 @@ deleteCalendar(calendar: Calendar): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
+| calendar | Calendar | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
 
 **返回值：**
 
@@ -164,10 +164,10 @@ deleteCalendar(calendar: Calendar): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 
@@ -223,17 +223,17 @@ deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
+| calendar | Calendar | 是 | 即将删除的Calendar对象。无法删除默认账户。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当删除账户成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 
@@ -292,7 +292,7 @@ editEvent(event: Event): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 | Event对象。 |
+| event | Event | 是 | Event对象。 |
 
 **返回值：**
 
@@ -347,10 +347,10 @@ getAllCalendars(): Promise<Calendar[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 
@@ -401,10 +401,10 @@ getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 
@@ -463,11 +463,11 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
-| [23900003](../errorcode-calendarManager.md#23900003-未找到指定的账户) | 未找到指定的账户。<br>**适用版本：** 23+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [23900003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-未找到指定的账户) | 未找到指定的账户。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -516,11 +516,11 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
-| [23900003](../errorcode-calendarManager.md#23900003-未找到指定的账户) | 未找到指定的账户。<br>**适用版本：** 23+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [23900003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-未找到指定的账户) | 未找到指定的账户。<br>**适用版本：** 23+ |
 
 ## 示例
 
@@ -580,10 +580,10 @@ getCalendar(callback: AsyncCallback<Calendar>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数检查失败，可能原因: &lt;br&gt;1. 必填参数为空； &lt;br&gt;2. 参数类型不正确。 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该设备不支持此API。 |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | 权限校验失败。 |
 
 ## 示例
 

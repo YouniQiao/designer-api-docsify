@@ -64,7 +64,7 @@ paragraphStyle?: RichEditorParagraphStyle
 
 段落样式。当需要设置文本的对齐方式、缩进、断行规则等段落级排版属性时传入此参数。不传入时，使用系统默认段落样式（左对齐、无缩进、按单词断行）。
 
-**类型：** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**类型：** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **起始版本：** 11
 
@@ -110,7 +110,7 @@ url信息。
 
 默认值：undefined
 
-**类型：** [RichEditorUrlStyle](../arkts-apis/arkts-arkui-richeditor-richeditorurlstyle-i.md)
+**类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **起始版本：** 19
 

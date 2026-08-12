@@ -19,7 +19,7 @@ This module applies to the following scenarios:
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## onAuthResult

@@ -40,7 +40,7 @@ size?: Length
 
 图标尺寸，不支持百分比。
 
-默认值根据[searchIcon](searchIcon)、[cancelButton](cancelButton)属性中的实际配置生效。
+默认值根据[searchIcon](arkts-arkui-search-searchattribute-i.md#searchIcon)、[cancelButton](arkts-arkui-search-searchattribute-i.md#cancelButton)属性中的实际配置生效。
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

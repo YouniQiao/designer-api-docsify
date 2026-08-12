@@ -13,7 +13,7 @@ Defines the field type of an elliptic curve. Currently, only the **Fp** field is
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## fieldType

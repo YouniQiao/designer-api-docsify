@@ -48,7 +48,7 @@ flipDirection?: FlipDirection
 
 默认值：FlipDirection.DOWN
 
-**类型：** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
+**类型：** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **起始版本：** 20
 

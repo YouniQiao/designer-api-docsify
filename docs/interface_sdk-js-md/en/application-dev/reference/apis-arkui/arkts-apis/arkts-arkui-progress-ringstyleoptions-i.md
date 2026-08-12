@@ -2,7 +2,7 @@
 
 Defines the ring style Options.
 
-**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ status?: ProgressStatus
 
 The status of progress, default is PROGRESSING. Set to LOADING status will trigger the loading animation.Default value: ProgressStatus.PROGRESSING.
 
-**Type:** [ProgressStatus](../arkts-components/arkts-arkui-progressstatus-e.md)
+**Type:** [ProgressStatus](arkts-arkui-progress-progressstatus-e.md)
 
 **Since:** 23
 

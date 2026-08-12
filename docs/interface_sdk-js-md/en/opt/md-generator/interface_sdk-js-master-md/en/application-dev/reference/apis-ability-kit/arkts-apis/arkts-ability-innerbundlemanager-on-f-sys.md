@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## on('BundleStatusChange')
@@ -25,7 +25,7 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor#on
+**Substitutes:** [on](ohos.bundle.bundleMonitor#on)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -62,7 +62,7 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor#on
+**Substitutes:** [on](ohos.bundle.bundleMonitor#on)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -83,4 +83,4 @@ Registers a callback to receive bundle status changes. This API uses an asynchro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |

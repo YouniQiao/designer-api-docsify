@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## offSystemLoadChange
@@ -26,5 +26,5 @@ Unregister system load callback for perception system load change
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SystemLoadLevel&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; | No | Asynchronous callback interface. |
 

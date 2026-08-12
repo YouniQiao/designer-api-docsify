@@ -1,7 +1,7 @@
 # Tool
 
 A utility class that provides only static methods to convert data structs defined in other modules and  
-[common2D](arkts-graphics-common2d.md).
+[common2D](arkts-graphics-common2d.md#common2D).
 
 > **NOTE：**
 > 
@@ -21,7 +21,7 @@ A utility class that provides only static methods to convert data structs define
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## makeColorFromResourceColor
@@ -42,7 +42,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
+| [resourceColor](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
 **Return value:**
 
@@ -54,4 +54,4 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

@@ -44,7 +44,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. The type of the input parameter is not ColorMetrics. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. The type of the input parameter is not ColorMetrics. |
 
 ## colorWithSpace
 
@@ -68,7 +68,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗 口设置为广色域模式。 |
+| colorSpace | ColorSpace | 是 | 颜色空间，用于指定颜色的色彩空间。使用ColorSpace.DISPLAY_P3，需要对应窗口调用 [setWindowColorSpace](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowcolorspace9-1)接口，将当前窗 口设置为广色域模式。 |
 | red | double | 是 | 颜色的R分量（红色），值是0~1的浮动数值。 |
 | green | double | 是 | 颜色的G分量（绿色），值是0~1的浮动数值。 |
 | blue | double | 是 | 颜色的B分量（蓝色），值是0~1的浮动数值。 |
@@ -132,7 +132,7 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | 是 | 资源格式颜色。 |
+| color | ResourceColor | 是 | 资源格式颜色。 |
 
 **返回值：**
 
@@ -144,8 +144,8 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [180003](../errorcode-event.md#180003-该事件不是克隆事件) | Failed to obtain the color resource. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
+| [180003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-event.md#180003-该事件不是克隆事件) | Failed to obtain the color resource. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
 
 ## rgba
 

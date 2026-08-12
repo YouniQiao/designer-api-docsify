@@ -1,6 +1,6 @@
 # WebKeyboardAvoidMode
 
-Enum type supplied to {@link keyboardAvoidMode} for setting the web keyboard avoid mode.
+Enum type supplied to [keyboardAvoidMode](keyboardAvoidMode) for setting the web keyboard avoid mode.
 
 **起始版本：** 12
 

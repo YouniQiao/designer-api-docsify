@@ -9,7 +9,7 @@ Want is a carrier for information transfer between objects (application componen
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want
+**Substitutes:** [Want/Want](ohos.app.ability.Want/Want)
 
 <!--Device-unnamed-export default class Want--><!--Device-unnamed-export default class Want-End-->
 
@@ -31,7 +31,7 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#abilityName
+**Substitutes:** [abilityName](ohos.app.ability.Want/Want#abilityName)
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
@@ -43,7 +43,7 @@ Name of the ability. If both **bundleName** and **abilityName** are specified in
 action?: string
 ```
 
-Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and  use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details,see [action](arkts-ability-wantconstant-action-e.md). For details about the definition and matching rules of implicit Want, see  
+Action to take, such as viewing and sharing application details. In implicit Want, you can define this property and  use it together with **uri** or **parameters** to specify the operation to be performed on the data. For details,see [action](arkts-ability-wantconstant-action-depr-e.md#Action). For details about the definition and matching rules of implicit Want, see  
 [Matching Rules of Explicit Want and Implicit Want](../../../application-models/explicit-implicit-want-mappings.md).
 
 **Type:** string
@@ -54,7 +54,7 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#action
+**Substitutes:** [action](ohos.app.ability.Want/Want#action)
 
 <!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
@@ -76,7 +76,7 @@ Bundle name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#bundleName
+**Substitutes:** [bundleName](ohos.app.ability.Want/Want#bundleName)
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
@@ -98,7 +98,7 @@ ID of the device running the ability. If this field is unspecified, the local de
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#deviceId
+**Substitutes:** [deviceId](ohos.app.ability.Want/Want#deviceId)
 
 <!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
@@ -112,7 +112,7 @@ entities?: Array<string>
 
 Additional category information (such as browser and video player) of the ability. It is a supplement to the  
 **action** field for implicit Want. and is used to filter ability types. For details, see  
-[entity](arkts-ability-wantconstant-entity-depr-e.md).
+[entity](arkts-ability-wantconstant-entity-depr-e.md#Entity).
 
 **Type:** Array&lt;string&gt;
 
@@ -122,7 +122,7 @@ Additional category information (such as browser and video player) of the abilit
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#entities
+**Substitutes:** [entities](ohos.app.ability.Want/Want#entities)
 
 <!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
@@ -135,7 +135,7 @@ flags?: number
 ```
 
 How the Want object will be handled. By default, numbers are passed in. For details, see  
-[flags](arkts-ability-wantconstant-flags-e.md).
+[flags](arkts-ability-wantconstant-flags-depr-e.md#Flags).
 
 **Type:** number
 
@@ -145,7 +145,7 @@ How the Want object will be handled. By default, numbers are passed in. For deta
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#flags
+**Substitutes:** [flags](ohos.app.ability.Want/Want#flags)
 
 <!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
@@ -178,7 +178,7 @@ sent to the peer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#parameters
+**Substitutes:** [parameters](ohos.app.ability.Want/Want#parameters)
 
 <!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
 
@@ -200,7 +200,7 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#type
+**Substitutes:** [type](ohos.app.ability.Want/Want#type)
 
 <!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
@@ -222,7 +222,7 @@ URI information to match. If **Uri** is specified in a Want object, the Want obj
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Want/Want#uri
+**Substitutes:** [uri](ohos.app.ability.Want/Want#uri)
 
 <!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 

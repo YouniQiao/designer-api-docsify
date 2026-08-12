@@ -27,7 +27,7 @@ This module provides APIs for controlling the Data Loss Prevention (DLP) feature
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## Summary

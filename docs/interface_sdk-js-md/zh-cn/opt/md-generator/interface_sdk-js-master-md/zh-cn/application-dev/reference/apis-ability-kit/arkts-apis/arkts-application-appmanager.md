@@ -6,7 +6,7 @@ appManager模块提供应用管理的能力，包括查询当前系统是否处�
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager
+**替代接口：** [appManager/appManager](ohos.app.ability.appManager/appManager)
 
 <!--Device-unnamed-declare namespace appManager--><!--Device-unnamed-declare namespace appManager-End-->
 

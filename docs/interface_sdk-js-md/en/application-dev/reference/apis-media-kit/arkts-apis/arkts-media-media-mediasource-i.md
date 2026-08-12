@@ -1,7 +1,7 @@
 # MediaSource
 
 The MediaSource class defines the media data information, which is from   
-[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl).
+[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl).
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ The MediaSource class defines the media data information, which is from
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableOfflineCache

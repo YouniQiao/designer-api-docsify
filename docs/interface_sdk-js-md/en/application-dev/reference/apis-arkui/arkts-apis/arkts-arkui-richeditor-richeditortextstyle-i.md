@@ -18,7 +18,7 @@ decoration?: DecorationStyleInterface
 
 Font decoration.
 
-**Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
+**Type:** [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
 **Since:** 23
 
@@ -138,7 +138,7 @@ fontWeight?: int | FontWeight | string
 
 font weight.
 
-**Type:** int \| FontWeight \| string
+**Type:** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **Since:** 23
 
@@ -198,7 +198,7 @@ lineHeight?: double | string | Resource
 
 line height.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 The stroke join style of the text.
 
-**Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 

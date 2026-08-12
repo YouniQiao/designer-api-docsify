@@ -58,7 +58,7 @@ function hasWindowFocus(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 

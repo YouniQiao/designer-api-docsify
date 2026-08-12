@@ -1,10 +1,10 @@
 # UIGridEvent
 
-frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给Grid节点设置滚动事件。
+frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-3)方法的返回值，可用于给Grid节点设置滚动事件。
 
-UIGridEvent继承于[UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)。
+UIGridEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。
 
-**继承/实现关系：** UIGridEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)
+**继承/实现关系：** UIGridEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **起始版本：** 19
 
@@ -40,7 +40,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。传入undefined时，会重置事件回调。 |
+| callback | OnScrollCallback \| undefined | 是 | onDidScroll事件的回调函数。传入undefined时，会重置事件回调。 |
 
 ## setOnScrollIndex
 
@@ -96,5 +96,5 @@ setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。传入undefined时，会重置事件回调。 |
+| callback | OnWillScrollCallback \| undefined | 是 | onWillScroll事件的回调函数。传入undefined时，会重置事件回调。 |
 

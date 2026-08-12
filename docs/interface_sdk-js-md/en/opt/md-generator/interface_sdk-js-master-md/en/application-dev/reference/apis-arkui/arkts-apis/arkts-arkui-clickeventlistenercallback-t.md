@@ -21,4 +21,4 @@ Defines the callback type for listening for click events in **UIObserver**.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | Yes |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | No |

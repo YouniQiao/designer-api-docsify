@@ -24,7 +24,7 @@ dx: double | string | Resource
 
 不指定像素单位时，默认单位vp，如'10'，等同于10。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -50,7 +50,7 @@ dy: double | string | Resource
 
 不指定像素单位时，默认单位vp，如'10'，等同于10。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

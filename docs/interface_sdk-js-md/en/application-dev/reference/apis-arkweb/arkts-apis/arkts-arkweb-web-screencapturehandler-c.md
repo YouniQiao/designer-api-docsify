@@ -93,5 +93,5 @@ Grants the screen capture permission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ScreenCaptureConfig](../arkts-components/arkts-arkweb-screencaptureconfig-i.md) | Yes | Screen capture configuration. |
+| config | [ScreenCaptureConfig](arkts-arkweb-web-screencaptureconfig-i.md) | Yes | Screen capture configuration. |
 

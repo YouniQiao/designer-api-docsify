@@ -2,7 +2,7 @@
 
 基于物理的金属粗糙度材质资源.
 
-**继承/实现关系：** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
+**继承/实现关系：** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)
 
 **起始版本：** 20
 

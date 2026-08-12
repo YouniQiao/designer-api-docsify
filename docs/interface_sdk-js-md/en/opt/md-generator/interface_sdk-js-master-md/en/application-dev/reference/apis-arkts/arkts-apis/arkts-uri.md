@@ -11,7 +11,7 @@ The uri module provides APIs for parsing URI strings that comply with the RFC398
 ## Modules to Import
 
 ```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
+import { uri } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -20,7 +20,7 @@ function setEventParam(params: Record<string, ParamType>, domain: string, name?:
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| params | Record&lt;string, ParamType&gt; | 是 |
+| params | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | 是 |
 | domain | string | 是 |
 | name | string | 否 |
 
@@ -28,19 +28,19 @@ function setEventParam(params: Record<string, ParamType>, domain: string, name?:
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-非法的事件领域名称) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11101002](../errorcode-hiappevent.md#11101002-非法的事件名称) |
-| [11101005](../errorcode-hiappevent.md#11101005-非法的事件参数名称) |
-| [11101004](../errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
-| [11101007](../errorcode-hiappevent.md#11101007-非法的事件自定义参数数量) |
-| [11100001](../errorcode-hiappevent.md#11100001-打点功能被关闭) |
+| [11101001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-非法的事件领域名称) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11101002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-非法的事件名称) |
+| [11101005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-非法的事件参数名称) |
+| [11101004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
+| [11101007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101007-非法的事件自定义参数数量) |
+| [11100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-打点功能被关闭) |
 
 ## 示例
 

@@ -34,7 +34,7 @@ Returns an iterable of [v, v] pairs for every value in the Set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; | an iterable of [v, v] pairs. |
+| IterableIterator&lt;[T, T]&gt; | an iterable of [v, v] pairs. |
 
 ## forEach
 
@@ -112,7 +112,7 @@ Despite name, returns elements from the Set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | an iterable of the values in the Set. |
+| IterableIterator&lt;T&gt; | an iterable of the values in the Set. |
 
 ## values
 
@@ -136,7 +136,7 @@ Returns elements from the Set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | an iterable of the values in the Set. |
+| IterableIterator&lt;T&gt; | an iterable of the values in the Set. |
 
 ## size
 

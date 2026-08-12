@@ -1,6 +1,6 @@
 # NotificationPictureContent
 
-描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
+描述附有图片的通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)。
 
 > **说明：**
 > 
@@ -14,7 +14,7 @@
 > 
 > - 实际显示效果依赖于设备能力和通知中心UI样式。
 
-**继承/实现关系：** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**继承/实现关系：** NotificationPictureContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **起始版本：** 7
 
@@ -67,7 +67,7 @@ picture: image.PixelMap
 ```
 
 通知展开后显示的图片内容。图标像素的总字节数不能超过2MB（图标像素的总字节数通过  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)获取）。
+[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)获取）。
 
 **类型：** image.PixelMap
 

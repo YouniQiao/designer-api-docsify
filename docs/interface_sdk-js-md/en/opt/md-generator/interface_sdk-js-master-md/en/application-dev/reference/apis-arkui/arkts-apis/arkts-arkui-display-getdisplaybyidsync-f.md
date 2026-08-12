@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getDisplayByIdSync
@@ -38,8 +38,8 @@ Obtains a Display object based on the display ID.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

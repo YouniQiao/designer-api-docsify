@@ -2,9 +2,9 @@
 
 frameNode中[getEvent('List')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventlist19)方法的返回值，可用于给List节点设置滚动事件。
 
-UIListEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。
+UIListEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。
 
-**继承/实现关系：** UIListEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
+**继承/实现关系：** UIListEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](onScrollIndex)事件的回调。
+设置[onScrollIndex](arkts-arkui-list-listattribute-i.md#onScrollIndex)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 
@@ -72,7 +72,7 @@ setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback | undefined): void
 ```
 
-设置[onScrollVisibleContentChange](onScrollVisibleContentChange)事件的回调。
+设置[onScrollVisibleContentChange](arkts-arkui-list-listattribute-i.md#onScrollVisibleContentChange)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 

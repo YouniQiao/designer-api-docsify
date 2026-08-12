@@ -38,7 +38,7 @@ Returns an instance of BigInt at passed index.
 
 | Type | Description |
 | --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | the raw value at the index. |
+| BigInt | the raw value at the index. |
 
 ## $_iterator
 
@@ -62,7 +62,7 @@ Iterable interface implementation.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;BigInt&gt; | iterator that yields each element in order. |
+| IterableIterator&lt;BigInt&gt; | iterator that yields each element in order. |
 
 ## $_set
 
@@ -137,7 +137,7 @@ Assigns val as element on index.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | index to change |
-| val | [BigInt](arkts-arkts-bigint-c.md) | Yes | value to set |
+| val | BigInt | Yes | value to set |
 
 ## at
 
@@ -167,7 +167,7 @@ Returns an instance of primitive type at passed index if index is correct.
 
 | Type | Description |
 | --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | the element at the index, or undefined if out of bounds. |
+| BigInt | the element at the index, or undefined if out of bounds. |
 
 ## constructor
 
@@ -329,7 +329,7 @@ Creates a new BigUint64Array initialized from another BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | Yes | data initializer |
+| other | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | data initializer |
 
 ## constructor
 
@@ -377,7 +377,7 @@ Creates an BigUint64Array with respect to data, byteOffset and length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | [ArrayBufferLike](arkts-arkts-arraybufferlike-t.md) | Yes | data initializer |
+| buf | ArrayBufferLike | Yes | data initializer |
 | byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
 | length | int | Yes | size of elements of type long in newly created BigUint64Array &lt;br&gt;The value should be an integer. |
 
@@ -479,7 +479,7 @@ Creates an BigUint64Array with respect to buf.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
+| buf | ArrayLike&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
 
 ## copyWithin
 
@@ -511,7 +511,7 @@ Makes a copy of internal elements to targetPos from startPos to endPos.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | the modified BigUint64Array. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | the modified BigUint64Array. |
 
 ## copyWithin
 
@@ -541,7 +541,7 @@ Makes a copy of internal elements to targetPos from begin to end of BigUint64Arr
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | the modified BigUint64Array. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | the modified BigUint64Array. |
 
 ## entries
 
@@ -565,7 +565,7 @@ Returns an array of key, value pairs for every entry in the BigUint64Array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, BigInt]&gt; | iterator over [index, value] pairs for each element. |
+| IterableIterator&lt;[int, BigInt]&gt; | iterator over [index, value] pairs for each element. |
 
 ## every
 
@@ -627,7 +627,7 @@ Fills the BigUint64Array with specified value
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | modified BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | modified BigUint64Array |
 
 ## fill
 
@@ -651,7 +651,7 @@ Fills the BigUint64Array with specified value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BigInt](arkts-arkts-bigint-c.md) | Yes | new value. |
+| value | BigInt | Yes | new value. |
 | start | int | No | start index to begin fill from &lt;br&gt;The value should be an integer. |
 | end | int | No | last index to end fill from, excluded &lt;br&gt;The value should be an integer. |
 
@@ -659,7 +659,7 @@ Fills the BigUint64Array with specified value
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | modified BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | modified BigUint64Array |
 
 ## filter
 
@@ -689,7 +689,7 @@ Creates a new BigUint64Array from current BigUint64Array based on a condition fn
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with the elements that pass the test. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements that pass the test. |
 
 ## find
 
@@ -719,7 +719,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | Type | Description |
 | --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | the found element, or undefined if no element matches |
+| BigInt | the found element, or undefined if no element matches |
 
 ## findIndex
 
@@ -779,7 +779,7 @@ Returns the last element in the BigUint64Array that satisfies the given predicat
 
 | Type | Description |
 | --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | the last element that satisfies the predicate. |
+| BigInt | the last element that satisfies the predicate. |
 
 ## findLastIndex
 
@@ -863,7 +863,7 @@ Creates an array from an object of FixedArray&lt;BigInt&gt;.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## from
 
@@ -893,7 +893,7 @@ Creates an array from a set of type std.core.Set&lt;BigInt&gt;.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## from
 
@@ -917,13 +917,13 @@ Creates an array from an array of the same type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | Yes | An array to convert to a new array. |
+| arr | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | An array to convert to a new array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## from
 
@@ -953,7 +953,7 @@ Creates an array from an object of std.core.Array&lt;BigInt&gt;.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## from
 
@@ -977,13 +977,13 @@ Creates an array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;BigInt&gt; | Yes | An array-like object to convert to an array. |
+| arr | ArrayLike&lt;BigInt&gt; | Yes | An array-like object to convert to an array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## from
 
@@ -1007,14 +1007,14 @@ Creates an array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | An array-like object to convert to an array. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an array. |
 | mapfn | (v: T, k: double) =&gt; BigInt | Yes | A mapping function to call on every element of the array. Defaults to the identity function (returns the element unchanged). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## from
 
@@ -1045,7 +1045,7 @@ Creates an array from an iterable object.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | A new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | A new BigUint64Array |
 
 ## includes
 
@@ -1130,7 +1130,7 @@ Determines whether BigUint64Array includes a certain element, returning true or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes | The element to search for. |
+| searchElement | BigInt | Yes | The element to search for. |
 | fromIndex | int | No | The position in this array at which to begin searching. Defaults to 0. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
@@ -1222,7 +1222,7 @@ Returns the index of the first occurrence of a value in BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to locate in the array. |
+| searchElement | BigInt | Yes | The value to locate in the array. |
 | fromIndex | int | No | The array index at which to begin the search. Defaults to 0. |
 
 **Return value:**
@@ -1283,7 +1283,7 @@ Returns an list of indices in the BigUint64Array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | iterator over the array indices. |
+| IterableIterator&lt;int&gt; | iterator over the array indices. |
 
 ## lastIndexOf
 
@@ -1337,7 +1337,7 @@ Returns the index of the last occurrence of a value in BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to locate in the array. The search begins at index length - 1. |
+| searchElement | BigInt | Yes | The value to locate in the array. The search begins at index length - 1. |
 
 **Return value:**
 
@@ -1398,7 +1398,7 @@ Returns the index of the last occurrence of a value in BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | [BigInt](arkts-arkts-bigint-c.md) | Yes | The value to locate in the array. |
+| searchElement | BigInt | Yes | The value to locate in the array. |
 | fromIndex | int \| undefined | Yes | The array index at which to begin the search. If fromIndex is undefined, the search starts at index 0. |
 
 **Return value:**
@@ -1435,7 +1435,7 @@ Creates a new BigUint64Array using fn(arr[i]) over all elements of current BigUi
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with each element being the result of the callback function where for each element from current BigUint64Array fn was applied |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with each element being the result of the callback function where for each element from current BigUint64Array fn was applied |
 
 ## of
 
@@ -1465,7 +1465,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array containing the given elements. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array containing the given elements. |
 
 ## of
 
@@ -1495,7 +1495,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
 
 ## of
 
@@ -1525,7 +1525,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
 
 ## of
 
@@ -1555,7 +1555,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
 
 ## of
 
@@ -1579,7 +1579,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array |
 
 ## reduce
 
@@ -1642,7 +1642,7 @@ Calls the specified callback function for all the elements in an array.The retur
 
 | Type | Description |
 | --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | the accumulated result from the last call to the callback function. |
+| BigInt | the accumulated result from the last call to the callback function. |
 
 ## reduceRight
 
@@ -1706,7 +1706,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | Type | Description |
 | --- | --- |
-| [BigInt](arkts-arkts-bigint-c.md) | the accumulated result from the last call to the callback function. |
+| BigInt | the accumulated result from the last call to the callback function. |
 
 ## reverse
 
@@ -1730,7 +1730,7 @@ Creates a new BigUint64Array using reversed data from the current one
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with the elements in reverse order. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements in reverse order. |
 
 ## set
 
@@ -1780,7 +1780,7 @@ Assigns val as element on index.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| val | [BigInt](arkts-arkts-bigint-c.md) | Yes | value to set |
+| val | BigInt | Yes | value to set |
 
 ## set
 
@@ -1902,7 +1902,7 @@ Copies all elements of arr to the current BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | Yes | array to copy data from |
+| array | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | array to copy data from |
 
 ## set
 
@@ -1926,7 +1926,7 @@ Copies all elements of arr to the current BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | Yes | array to copy data from |
+| array | [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | Yes | array to copy data from |
 | offset | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
 
 ## set
@@ -1951,7 +1951,7 @@ Copies elements from an ArrayLike object to the BigUint64Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;BigInt&gt; | Yes | An ArrayLike object containing the elements to copy. |
+| array | ArrayLike&lt;BigInt&gt; | Yes | An ArrayLike object containing the elements to copy. |
 | offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
 
 ## slice
@@ -1983,7 +1983,7 @@ Creates a slice of current BigUint64Array using range [begin, end]
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with elements of current BigUint64Array[begin;end), where end index is excluded |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with elements of current BigUint64Array[begin;end), where end index is excluded |
 
 ## slice
 
@@ -2013,7 +2013,7 @@ Creates a slice of current BigUint64Array using range [begin, this.lengthInt].
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with elements of current BigUint64Array[begin, this.lengthInt]. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with elements of current BigUint64Array[begin, this.lengthInt]. |
 
 ## some
 
@@ -2128,7 +2128,7 @@ Creates a new BigUint64Array that shares the same underlying ArrayBuffer as the 
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array sharing the same underlying ArrayBuffer. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array sharing the same underlying ArrayBuffer. |
 
 ## toLocaleString
 
@@ -2183,7 +2183,7 @@ Returns a new BigUint64Array with the elements in reverse order.The original arr
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with the elements reversed. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements reversed. |
 
 ## toSorted
 
@@ -2207,7 +2207,7 @@ Returns a new BigUint64Array with the elements sorted in ascending order.The ori
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with the elements sorted. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the elements sorted. |
 
 ## toString
 
@@ -2255,7 +2255,7 @@ Calls the given callback function once for each element in the BigUint64Array, i
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | the BigUint64Array object itself |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | the BigUint64Array object itself |
 
 ## values
 
@@ -2279,7 +2279,7 @@ Returns array values iterator
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;BigInt&gt; | iterator that yields each element in order. |
+| IterableIterator&lt;BigInt&gt; | iterator that yields each element in order. |
 
 ## with
 
@@ -2310,7 +2310,7 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with the element at index replaced. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the element at index replaced. |
 
 ## with
 
@@ -2335,13 +2335,13 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| value | [BigInt](arkts-arkts-bigint-c.md) | Yes | value to set |
+| value | BigInt | Yes | value to set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BigUint64Array](../../apis-default/arkts-apis/arkts-lib-es2020-bigint-biguint64array-i.md) | a new BigUint64Array with the element at index replaced. |
+| [BigUint64Array](arkts-arkts-typeduarrays-biguint64array-c.md) | a new BigUint64Array with the element at index replaced. |
 
 ## BYTES_PER_ELEMENT
 

@@ -12,7 +12,7 @@ Obtains the DND time. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getDoNotDisturbDate
+**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ Obtains the DND time. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getDoNotDisturbDate
+**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -55,7 +55,7 @@ Obtains the DND time. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DoNotDisturbDate&gt; |
+| Promise & lt;DoNotDisturbDate & gt; |
 
 
 ## getDoNotDisturbDate
@@ -70,7 +70,7 @@ Obtains the DND time of a specified user. This API uses an asynchronous callback
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getDoNotDisturbDate
+**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -100,7 +100,7 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getDoNotDisturbDate
+**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -120,4 +120,4 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DoNotDisturbDate&gt; |
+| Promise & lt;DoNotDisturbDate & gt; |

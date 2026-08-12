@@ -18,7 +18,7 @@ keyEvent: KeyEvent
 
 按键注入描述信息。
 
-**类型：** [KeyEvent](../../apis-arkui/arkts-apis/arkts-arkui-common-keyevent-i.md)
+**类型：** KeyEvent
 
 **起始版本：** 11
 

@@ -13,7 +13,7 @@ The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## addEmptyElement
@@ -44,8 +44,8 @@ Add an empty element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -88,7 +88,7 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance.T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
+| [10200066](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
 
 ## Examples
 
@@ -118,8 +118,8 @@ Writes end tag of the element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200065](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
 
 ## Examples
 
@@ -204,9 +204,9 @@ Write an attribute to xml element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -251,8 +251,8 @@ Writes the CDATA.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -295,8 +295,8 @@ Writes the comment to xml.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -333,8 +333,8 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 
 ## Examples
 
@@ -377,8 +377,8 @@ Writes the DOCTYPE.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -422,8 +422,8 @@ Writes the namespace of the current element tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -468,8 +468,8 @@ Writes the text to xml element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -515,8 +515,8 @@ Writes a element start tag with the given name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 

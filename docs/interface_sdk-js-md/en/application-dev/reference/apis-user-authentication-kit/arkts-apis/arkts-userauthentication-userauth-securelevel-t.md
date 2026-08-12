@@ -12,7 +12,7 @@ Enumerates the authentication security levels.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md)
+**Substitutes:** [AuthTrustLevel](arkts-userauthentication-userauth-authtrustlevel-e.md#AuthTrustLevel)
 
 <!--Device-userAuth-type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'--><!--Device-userAuth-type SecureLevel = 'S1' | 'S2' | 'S3' | 'S4'-End-->
 

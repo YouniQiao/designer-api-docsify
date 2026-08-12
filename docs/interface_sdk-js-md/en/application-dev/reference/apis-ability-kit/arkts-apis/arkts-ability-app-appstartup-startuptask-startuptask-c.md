@@ -14,7 +14,7 @@ The module provides capabilities related to startup tasks in
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from 'kits/@kit.AbilityKit';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init

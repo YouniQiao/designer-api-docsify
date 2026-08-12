@@ -11,7 +11,7 @@ Serial port device information.
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## manufacturer

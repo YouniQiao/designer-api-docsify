@@ -42,7 +42,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: number, index: number, array: Uint16Array) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: number, index: number, array: Uint16Array) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -89,7 +89,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: number, index: number, array: Uint16Array) =&gt; any | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: number, index: number, array: Uint16Array) = & gt; any | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -112,7 +112,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: number, index: number, obj: Uint16Array) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: number, index: number, obj: Uint16Array) = & gt; boolean | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -135,7 +135,7 @@ Returns the index of the first element in the array where predicate is true, and
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: number, index: number, obj: Uint16Array) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: number, index: number, obj: Uint16Array) = & gt; boolean | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -158,7 +158,7 @@ Performs the specified action for each element in an array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: number, index: number, array: Uint16Array) =&gt; void | Yes |
+| callbackfn | (value: number, index: number, array: Uint16Array) = & gt; void | Yes |
 | thisArg | any | No |
 
 ## indexOf
@@ -243,7 +243,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: number, index: number, array: Uint16Array) =&gt; number | Yes |
+| callbackfn | (value: number, index: number, array: Uint16Array) = & gt; number | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -266,7 +266,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) =&gt; number | Yes |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) = & gt; number | Yes |
 
 **Return value:**
 
@@ -284,7 +284,7 @@ reduce(callbackfn: (previousValue: number, currentValue: number, currentIndex: n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) =&gt; number | Yes |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) = & gt; number | Yes |
 | initialValue | number | Yes |
 
 **Return value:**
@@ -307,7 +307,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Uint16Array) =&gt; U | Yes |
+| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Uint16Array) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -330,7 +330,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) =&gt; number | Yes |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) = & gt; number | Yes |
 
 **Return value:**
 
@@ -348,7 +348,7 @@ reduceRight(callbackfn: (previousValue: number, currentValue: number, currentInd
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) =&gt; number | Yes |
+| callbackfn | (previousValue: number, currentValue: number, currentIndex: number, array: Uint16Array) = & gt; number | Yes |
 | initialValue | number | Yes |
 
 **Return value:**
@@ -371,7 +371,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Uint16Array) =&gt; U | Yes |
+| callbackfn | (previousValue: U, currentValue: number, currentIndex: number, array: Uint16Array) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -410,7 +410,7 @@ Sets a value or an array of values.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | [ArrayLike&lt;number&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |
 | offset | number | No |
 
 ## slice
@@ -450,7 +450,7 @@ Determines whether the specified callback function returns true for any element 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: number, index: number, array: Uint16Array) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: number, index: number, array: Uint16Array) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -473,7 +473,7 @@ Sorts an array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| compareFn | (a: number, b: number) =&gt; number | No |
+| compareFn | (a: number, b: number) = & gt; number | No |
 
 **Return value:**
 
@@ -580,7 +580,7 @@ readonly buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** ArrayBufferLike
+**Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
 <!--Device-Uint16Array-readonly buffer: ArrayBufferLike--><!--Device-Uint16Array-readonly buffer: ArrayBufferLike-End-->
 

@@ -6,7 +6,7 @@ Enumerates the ability lifecycle states.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.abilityDelegatorRegistry:abilityDelegatorRegistry.AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md)
+**Substitutes:** [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#AbilityLifecycleState)
 
 <!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState--><!--Device-abilityDelegatorRegistry-export enum AbilityLifecycleState-End-->
 
@@ -24,7 +24,7 @@ The ability is in an invalid state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.abilityDelegatorRegistry:abilityDelegatorRegistry.AbilityLifecycleState.UNINITIALIZED](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#uninitialized)
+**Substitutes:** [UNINITIALIZED](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#UNINITIALIZED)
 
 <!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
 
@@ -42,7 +42,7 @@ The ability is created.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.abilityDelegatorRegistry:abilityDelegatorRegistry.AbilityLifecycleState.CREATE](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#create)
+**Substitutes:** [CREATE](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#CREATE)
 
 <!--Device-AbilityLifecycleState-CREATE = 1--><!--Device-AbilityLifecycleState-CREATE = 1-End-->
 
@@ -60,7 +60,7 @@ The ability is running in the foreground.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.abilityDelegatorRegistry:abilityDelegatorRegistry.AbilityLifecycleState.FOREGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#foreground)
+**Substitutes:** [FOREGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#FOREGROUND)
 
 <!--Device-AbilityLifecycleState-FOREGROUND = 2--><!--Device-AbilityLifecycleState-FOREGROUND = 2-End-->
 
@@ -78,7 +78,7 @@ The ability is running in the background.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.abilityDelegatorRegistry:abilityDelegatorRegistry.AbilityLifecycleState.BACKGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#background)
+**Substitutes:** [BACKGROUND](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#BACKGROUND)
 
 <!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
 
@@ -96,7 +96,7 @@ The ability is destroyed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.ability.abilityDelegatorRegistry:abilityDelegatorRegistry.AbilityLifecycleState.DESTROY](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-depr-e.md#destroy)
+**Substitutes:** [DESTROY](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md#DESTROY)
 
 <!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
 

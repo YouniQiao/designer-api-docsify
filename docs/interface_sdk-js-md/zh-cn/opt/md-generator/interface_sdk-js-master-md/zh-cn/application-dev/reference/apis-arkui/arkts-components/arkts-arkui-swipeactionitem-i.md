@@ -1,6 +1,6 @@
 # SwipeActionItem
 
-SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。
+SwipeActionItem用于配置[SwipeActionOptions](arkts-arkui-swipeactionoptions-i.md#SwipeActionOptions)中的start或end划出项，包括划出时显示的操作项、长距离操作区域的距离阈值，以及进入、退出长距离操作区域、抬手触发操作和状态变化时的回调。
 
 作为start划出项时，List为垂直布局时显示在ListItem左侧，List为水平布局时显示在ListItem上方；作为end划出项时，List为垂直布局时显示在ListItem右侧，List为水平布局时显示在ListItem下方。
 
@@ -138,7 +138,7 @@ builderComponent?: ComponentContent
 
 当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。该参数的优先级高于参数builder。即同时设置builder和builderComponent时，以builderComponent设置的值为准。同一个builderComponent不推荐同时给不同的start/end使用，否则会导致显示问题。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 18
 

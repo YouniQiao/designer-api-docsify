@@ -2,7 +2,7 @@
 
 Provides attribute for Ellipse.
 
-**Inheritance/Implementation:** EllipseAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** EllipseAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;EllipseAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Set Ellipse options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](../arkts-components/arkts-arkui-ellipseoptions-i.md) | No | Ellipse constructor options. |
+| options | [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | No | Ellipse constructor options. |
 
 **Return value:**
 

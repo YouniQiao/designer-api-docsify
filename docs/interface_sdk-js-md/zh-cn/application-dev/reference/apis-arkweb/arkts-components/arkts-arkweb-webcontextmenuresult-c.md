@@ -1,6 +1,6 @@
 # WebContextMenuResult
 
-Defines the context menu result, related to {@link WebContextMenuResult} method.
+Defines the context menu result, related to [WebContextMenuResult](#WebContextMenuResult) method.
 
 **起始版本：** 9
 

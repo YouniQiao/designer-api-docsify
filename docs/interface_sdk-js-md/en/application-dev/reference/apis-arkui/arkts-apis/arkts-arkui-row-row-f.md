@@ -25,14 +25,14 @@ Defines Row Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptions \| RowOptionsV2 | No | Row options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| options | [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | No | Row options. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |  |
+| [RowAttribute](arkts-arkui-row-rowattribute-i.md) |  |
 
 
 ## Row
@@ -62,12 +62,12 @@ Defines Row Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RowAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RowAttribute](arkts-arkui-row-rowattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |  |
+| [RowAttribute](arkts-arkui-row-rowattribute-i.md) |  |
 

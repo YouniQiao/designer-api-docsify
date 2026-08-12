@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createModuleContext
@@ -44,7 +44,7 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | Application context. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Application context. |
 | bundleName | string | Yes | Bundle name of the application. If an empty string is passed in, the current application is used by default. |
 | moduleName | string | Yes | Module name. |
 
@@ -52,15 +52,15 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise used to return the context created. |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise used to return the context created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

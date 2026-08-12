@@ -35,22 +35,22 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
-| [19100014](../errorcode-dlp.md#19100014-账号未登录) |
+| [19100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) |
+| [19100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
+| [19100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-凭据认证服务器错误) |
+| [19100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [19100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-操作dlp文件失败) |
+| [19100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100014-账号未登录) |
 
 ## 示例
 

@@ -18,7 +18,7 @@ controller?: TextAreaController
 
 Text area controller.
 
-**Type:** [TextAreaController](../arkts-apis/arkts-arkui-textarea-textareacontroller-c.md)
+**Type:** [TextAreaController](arkts-arkui-textareacontroller-c.md)
 
 **Since:** 8
 
@@ -40,7 +40,7 @@ Text displayed when there is no input.
 
 When only the **placeholder** attribute is set, the text selection handle is still available; the caret stays at the beginning of the placeholder text when the handle is released.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 
@@ -68,7 +68,7 @@ Since API version 10, this parameter supports two-way binding through
 Since API version 18, this parameter supports two-way binding through  
 [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 

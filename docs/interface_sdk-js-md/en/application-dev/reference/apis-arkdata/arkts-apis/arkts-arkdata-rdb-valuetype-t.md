@@ -12,7 +12,7 @@ Defines the data types allowed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.ValueType](arkts-arkdata-relationalstore-valuetype-t.md)
+**Substitutes:** [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueType)
 
 <!--Device-rdb-type ValueType = number | string | boolean--><!--Device-rdb-type ValueType = number | string | boolean-End-->
 

@@ -30,7 +30,7 @@ Passes the PIN code verify result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [PinVerifyResult](../arkts-components/arkts-arkweb-pinverifyresult-e.md) | 是 | The PIN code verify result. |
+| result | [PinVerifyResult](arkts-arkweb-web-pinverifyresult-e.md) | 是 | The PIN code verify result. |
 
 ## constructor
 

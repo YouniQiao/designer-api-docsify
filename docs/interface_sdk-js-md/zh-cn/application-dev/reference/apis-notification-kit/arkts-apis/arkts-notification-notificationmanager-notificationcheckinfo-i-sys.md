@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundleName
@@ -48,7 +48,7 @@ contentType: ContentType
 
 通知类型。
 
-**类型：** [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-contenttype-e.md)
+**类型：** ContentType
 
 **起始版本：** 10
 
@@ -158,7 +158,7 @@ slotType: SlotType
 
 渠道类型。
 
-**类型：** [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md)
+**类型：** SlotType
 
 **起始版本：** 11
 

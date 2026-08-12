@@ -1,10 +1,10 @@
 # Zoom
 
-Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。
+Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)。
 
 变焦类，对设备变焦操作。
 
-**继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md)
+**继承/实现关系：** Zoom extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery)
 
 **起始版本：** 11
 
@@ -38,8 +38,8 @@ Gets zoom center point.
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## prepareZoom
 
@@ -61,8 +61,8 @@ Instructs the bottom layer to prepare for zooming, for example, powering on the 
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -106,8 +106,8 @@ Sets zoom center point.
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## unprepareZoom
 
@@ -129,8 +129,8 @@ Instructs the bottom layer to unprepare for zooming.
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

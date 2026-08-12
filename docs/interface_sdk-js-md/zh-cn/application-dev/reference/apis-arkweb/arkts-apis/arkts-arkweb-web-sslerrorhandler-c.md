@@ -1,6 +1,6 @@
 # SslErrorHandler
 
-Defines the ssl error request result, related to {@link onSslErrorEventReceive} method.
+Defines the ssl error request result, related to [onSslErrorEventReceive](arkts-arkweb-web-webattribute-i.md#onSslErrorEventReceive) method.
 
 **起始版本：** 23
 

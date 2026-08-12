@@ -11,7 +11,7 @@ Firewall rules.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## action
@@ -102,7 +102,7 @@ domains?: Array<NetFirewallDomainParams>
 
 Domain name list: valid when ruleType = RULE_DOMAIN, otherwise it will be ignored.
 
-**Type:** Array&lt;NetFirewallDomainParams&gt;
+**Type:** Array&lt;[NetFirewallDomainParams](arkts-network-netfirewall-netfirewalldomainparams-i.md)&gt;
 
 **Since:** 15
 
@@ -168,7 +168,7 @@ localIps?: Array<NetFirewallIpParams>
 
 Local IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array&lt;NetFirewallIpParams&gt;
+**Type:** Array&lt;[NetFirewallIpParams](arkts-network-netfirewall-netfirewallipparams-i.md)&gt;
 
 **Since:** 15
 
@@ -184,7 +184,7 @@ localPorts?: Array<NetFirewallPortParams>
 
 Local ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array&lt;NetFirewallPortParams&gt;
+**Type:** Array&lt;[NetFirewallPortParams](arkts-network-netfirewall-netfirewallportparams-i.md)&gt;
 
 **Since:** 15
 
@@ -232,7 +232,7 @@ remoteIps?: Array<NetFirewallIpParams>
 
 Remote IP address: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array&lt;NetFirewallIpParams&gt;
+**Type:** Array&lt;[NetFirewallIpParams](arkts-network-netfirewall-netfirewallipparams-i.md)&gt;
 
 **Since:** 15
 
@@ -248,7 +248,7 @@ remotePorts?: Array<NetFirewallPortParams>
 
 Remote ports: valid when ruleType = RULE_IP, otherwise it will be ignored.
 
-**Type:** Array&lt;NetFirewallPortParams&gt;
+**Type:** Array&lt;[NetFirewallPortParams](arkts-network-netfirewall-netfirewallportparams-i.md)&gt;
 
 **Since:** 15
 

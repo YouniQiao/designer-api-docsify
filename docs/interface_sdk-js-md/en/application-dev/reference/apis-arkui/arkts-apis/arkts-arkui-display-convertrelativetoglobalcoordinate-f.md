@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## convertRelativeToGlobalCoordinate
@@ -34,14 +34,14 @@ Converts relative coordinates (based on the top-left corner of the screen) into 
 
 | Type | Description |
 | --- | --- |
-| [Position](arkts-arkui-display-position-i.md) | Global coordinates based on the top-left corner of the primary screen. |
+| Position | Global coordinates based on the top-left corner of the primary screen. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 

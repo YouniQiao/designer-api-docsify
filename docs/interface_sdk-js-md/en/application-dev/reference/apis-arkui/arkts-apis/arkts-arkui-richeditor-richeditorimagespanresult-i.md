@@ -18,7 +18,7 @@ imageStyle: RichEditorImageSpanStyleResult
 
 image attribute.
 
-**Type:** [RichEditorImageSpanStyleResult](../arkts-components/arkts-arkui-richeditorimagespanstyleresult-i.md)
+**Type:** [RichEditorImageSpanStyleResult](arkts-arkui-richeditor-richeditorimagespanstyleresult-i.md)
 
 **Since:** 23
 
@@ -61,7 +61,7 @@ spanPosition: RichEditorSpanPosition
 
 The position of the image span.
 
-**Type:** [RichEditorSpanPosition](../arkts-components/arkts-arkui-richeditorspanposition-i.md)
+**Type:** [RichEditorSpanPosition](arkts-arkui-richeditor-richeditorspanposition-i.md)
 
 **Since:** 23
 

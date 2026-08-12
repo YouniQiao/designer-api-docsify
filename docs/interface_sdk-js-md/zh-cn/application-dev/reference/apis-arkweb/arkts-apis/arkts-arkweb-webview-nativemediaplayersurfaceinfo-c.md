@@ -26,7 +26,7 @@ id: string
 
 surface的id，用于同层渲染的NativeImage的surfaceId。
 
-详见[NativeEmbedDataInfo](arkts-arkweb-web-nativeembeddatainfo-i.md)。
+详见[NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md#NativeEmbedDataInfo)。
 
 **类型：** string
 

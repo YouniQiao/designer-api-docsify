@@ -22,7 +22,7 @@ function lseek(fd: int, offset: long, whence?: WhenceType): long
 | --- | --- | --- | --- |
 | fd | int | 是 | 文件描述符。 |
 | offset | long | 是 | 相对偏移位置，单位为Byte。 |
-| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | 否 | 偏移指针相对位置类型。不指定则默认为文件起始位置处。 |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 | 偏移指针相对位置类型。不指定则默认为文件起始位置处。 |
 
 **返回值：**
 

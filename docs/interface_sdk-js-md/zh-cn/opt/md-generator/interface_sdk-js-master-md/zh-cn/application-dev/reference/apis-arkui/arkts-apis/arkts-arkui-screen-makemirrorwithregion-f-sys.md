@@ -21,21 +21,21 @@ function makeMirrorWithRegion(mainScreen: number, mirrorScreen: Array<number>, m
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mainScreen | number | 是 |
-| mirrorScreen | Array&lt;number&gt; | 是 |
+| mirrorScreen | Array & lt;number & gt; | 是 |
 | mainScreenRegion | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

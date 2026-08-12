@@ -32,7 +32,7 @@ Judge if two TextMenuItemId are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Yes | id TextMenuItemId. |
+| id | [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md) | Yes | id TextMenuItemId. |
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Init a TextMenuItemId with id.
 
 | Type | Description |
 | --- | --- |
-| [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) | Returns the TextMenuItemId object. |
+| [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md) | Returns the TextMenuItemId object. |
 
 ## AI_WRITER
 
@@ -78,7 +78,7 @@ static readonly AI_WRITER: TextMenuItemId
 
 Indicates the TextMenuItemId to help with text creation by invoking large models.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ static readonly CAMERA_INPUT: TextMenuItemId
 
 Indicates the TextMenuItemId to recognize the text in the picture and input it into the text view.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ static readonly COLLABORATION_SERVICE: TextMenuItemId
 
 Indicates the TextMenuItemId for collaboration service menu items.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -138,7 +138,7 @@ static readonly COPY: TextMenuItemId
 
 Indicates the TextMenuItemId to copy the currently selected text to the clipboard.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -158,7 +158,7 @@ static readonly CUT: TextMenuItemId
 
 Indicates the TextMenuItemId to copy and delete the currently selected text.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ static readonly PASTE: TextMenuItemId
 
 Indicates the TextMenuItemId to copy the current contents of the clipboard into the text view.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -198,7 +198,7 @@ static readonly SEARCH: TextMenuItemId
 
 Indicates the TextMenuItemId to search the selected content.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -218,7 +218,7 @@ static readonly SELECT_ALL: TextMenuItemId
 
 Indicates the TextMenuItemId to select all text in a text view.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ static readonly SHARE: TextMenuItemId
 
 Indicates the TextMenuItemId to share the selected content.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -258,7 +258,7 @@ static readonly TRANSLATE: TextMenuItemId
 
 Indicates the TextMenuItemId to translate the selected content.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -278,7 +278,7 @@ static readonly address: TextMenuItemId
 
 Indicates the TextMenuItemId to open map.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 26.0.0
 
@@ -298,7 +298,7 @@ static readonly askAI: TextMenuItemId
 
 Indicates the TextMenuItemId for asking AI.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 26.0.0
 
@@ -318,7 +318,7 @@ static readonly autoFill: TextMenuItemId
 
 Indicates the TextMenuItemId for auto fill.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -338,7 +338,7 @@ static readonly dateTime: TextMenuItemId
 
 Indicates the TextMenuItemId to open calendar.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 26.0.0
 
@@ -358,7 +358,7 @@ static readonly email: TextMenuItemId
 
 Indicates the TextMenuItemId to open email.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 26.0.0
 
@@ -378,7 +378,7 @@ static readonly passwordVault: TextMenuItemId
 
 Indicates the TextMenuItemId for password vault.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 
@@ -398,7 +398,7 @@ static readonly phoneNumber: TextMenuItemId
 
 Indicates the TextMenuItemId to call the phone number.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 26.0.0
 
@@ -418,7 +418,7 @@ static readonly url: TextMenuItemId
 
 Indicates the TextMenuItemId to open url.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 26.0.0
 

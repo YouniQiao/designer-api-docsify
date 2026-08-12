@@ -12,7 +12,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#getAppMemorySize
+**Substitutes:** [getAppMemorySize](ohos.app.ability.appManager/appManager#getAppMemorySize)
 
 <!--Device-appManager-function getAppMemorySize(): Promise<number>--><!--Device-appManager-function getAppMemorySize(): Promise<number>-End-->
 
@@ -22,7 +22,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 
@@ -50,7 +50,7 @@ Obtains the maximum memory (RAM allocation) available to the current application
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#getAppMemorySize
+**Substitutes:** [getAppMemorySize](ohos.app.ability.appManager/appManager#getAppMemorySize)
 
 <!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void--><!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void-End-->
 

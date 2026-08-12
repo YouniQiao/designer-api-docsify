@@ -1,6 +1,6 @@
 # CalendarManager
 
-下列API示例中需先通过[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
+下列API示例中需先通过[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager)方法获取CalendarManager对象，再通过此对象调用对应方法，进行Calendar的创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
@@ -34,16 +34,16 @@ createCalendar(calendarAccount: CalendarAccount): Promise<Calendar>
 
 | 类型 |
 | --- |
-| Promise&lt;Calendar&gt; |
+| Promise & lt;Calendar & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -93,10 +93,10 @@ createCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calenda
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -150,16 +150,16 @@ deleteCalendar(calendar: Calendar): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -220,10 +220,10 @@ deleteCalendar(calendar: Calendar, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -286,7 +286,7 @@ editEvent(event: Event): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 
@@ -327,16 +327,16 @@ getAllCalendars(): Promise<Calendar[]>
 
 | 类型 |
 | --- |
-| Promise&lt;Calendar[]&gt; |
+| Promise & lt;Calendar[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -385,10 +385,10 @@ getAllCalendars(callback: AsyncCallback<Calendar[]>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -439,17 +439,17 @@ getCalendar(calendarAccount?: CalendarAccount): Promise<Calendar>
 
 | 类型 |
 | --- |
-| Promise&lt;Calendar&gt; |
+| Promise & lt;Calendar & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [23900003](../errorcode-calendarManager.md#23900003-未找到指定的账户) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [23900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-未找到指定的账户) |
 
 ## 示例
 
@@ -496,11 +496,11 @@ getCalendar(calendarAccount: CalendarAccount, callback: AsyncCallback<Calendar>)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [23900003](../errorcode-calendarManager.md#23900003-未找到指定的账户) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [23900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-未找到指定的账户) |
 
 ## 示例
 
@@ -558,10 +558,10 @@ getCalendar(callback: AsyncCallback<Calendar>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

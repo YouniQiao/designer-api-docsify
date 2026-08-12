@@ -13,7 +13,7 @@ Batch operation options
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## countProgressListener
@@ -98,7 +98,7 @@ taskSignal?: TaskSignal
 
 interrupting of batch operations.
 
-**Type:** [TaskSignal](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-tasksignal-c.md)
+**Type:** TaskSignal
 
 **Since:** 26.0.0
 

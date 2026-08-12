@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## createAVMusicTemplate
@@ -26,7 +26,7 @@ Create an AVMusicTemplate instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| accessType | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes |
+| [accessType](../../apis-telephony-kit/arkts-apis/arkts-telephony-esim-accessrule-i.md) | [AVMusicTemplateType](arkts-avsession-avmusictemplate-avmusictemplatetype-e.md) | Yes |
 
 **Return value:**
 
@@ -38,5 +38,5 @@ Create an AVMusicTemplate instance.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000001](../errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000001-audio-template-creation-failure) |

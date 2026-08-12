@@ -18,7 +18,7 @@ decoration: DecorationStyleResult
 
 Font decoration.
 
-**Type:** [DecorationStyleResult](arkts-arkui-decorationstyleresult-i.md)
+**Type:** [DecorationStyleResult](arkts-arkui-textcommon-decorationstyleresult-i.md)
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 Get the stroke join style of the text.
 
-**Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 

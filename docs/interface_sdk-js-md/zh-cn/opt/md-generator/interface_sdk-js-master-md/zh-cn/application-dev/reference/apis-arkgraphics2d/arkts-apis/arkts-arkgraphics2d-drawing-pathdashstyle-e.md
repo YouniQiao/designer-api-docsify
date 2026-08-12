@@ -4,8 +4,8 @@
 | 名称 | 值 | 说明 |
 | ------ | - | ------------------ |
 | [TRANSLATE](#translate) | 0 | 不会随着路径旋转，只会平移。 |
-| [ROTATE](#rotate) | 1 | 随着路径的旋转而旋转。 |
-| [MORPH](#morph) | 2 |
+| [ROTATE](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 1 | 随着路径的旋转而旋转。 |
+| [MORPH](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 2 |
 
 **起始版本：** 18
 

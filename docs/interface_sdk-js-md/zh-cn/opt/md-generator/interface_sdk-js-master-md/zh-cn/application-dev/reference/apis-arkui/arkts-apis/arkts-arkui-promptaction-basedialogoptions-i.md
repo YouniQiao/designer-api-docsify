@@ -278,7 +278,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -322,7 +322,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 弹窗避让键盘后，和键盘之间距离。&lt;br /&gt;**说明：**&lt;br/&gt;- 默认值：16vp&lt;br /&gt;- 默认单位：vp&lt;br /&gt;- 当且仅当keyboardAvoidMode属性设置为DEFAULT时生效。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 15
 
@@ -342,7 +342,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 用于设置弹窗是否在拉起软键盘时进行自动避让。&lt;br/&gt;默认值：KeyboardAvoidMode.DEFAULT
 
-**类型：** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**类型：** KeyboardAvoidMode
 
 **默认值：** KeyboardAvoidMode.DEFAULT
 
@@ -488,7 +488,7 @@ offset?: Offset
 
 弹窗相对alignment所在位置的偏移量。&lt;br/&gt;默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 11
 
@@ -508,7 +508,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 交互式关闭回调函数。&lt;br/&gt;**说明：** &lt;br/&gt;1.当用户执行点击遮障层关闭、侧滑（左滑/右滑）、三键back、键盘ESC关闭交互操作时，如果注册该回调函数，则不会立刻关闭弹窗。在回调函数中可以通过reason得到阻拦关闭弹窗的操作类型，从而根据原因选择是否能关闭弹窗。当前组件返回的reason中，暂不支持CLOSE_BUTTON的枚举值。&lt;br/&gt;2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissDialogAction&gt;
+**类型：** Callback&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
 

@@ -25,8 +25,8 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的访问令牌标识。 |
-| policies | Array&lt;PathPolicyInfo&gt; | 是 | 需要查询授权状态的路径策略信息数组。 |
-| policyType | [PolicyType](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-policytype-e.md) | 是 | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
+| policies | Array&lt;[PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)&gt; | 是 | 需要查询授权状态的路径策略信息数组。 |
+| policyType | PolicyType | 是 | 要查询的授权类型，使用TEMPORARY_TYPE查询临时授权，使用PERSISTENT_TYPE查询持久化授权。 |
 
 **返回值：**
 
@@ -38,10 +38,10 @@ function checkPathPermission(tokenID: int, policies: Array<PathPolicyInfo>, poli
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application |
 | 13900042 | Out of memory. |
 
 ## 示例

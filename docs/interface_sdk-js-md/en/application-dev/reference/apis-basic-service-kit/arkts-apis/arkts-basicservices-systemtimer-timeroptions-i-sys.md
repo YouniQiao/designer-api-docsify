@@ -15,7 +15,7 @@ Defines the initialization options for the system timer.
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from 'kits/@kit.BasicServicesKit';
+import { systemTimer } from '@kit.BasicServicesKit';
 ```
 
 ## callback

@@ -107,7 +107,7 @@ readonly uniformDataType: 'general.plain-text'
 ```
 
 统一数据类型标识为纯文本类型数据，固定为“general.plain-text”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
 
 **类型：** 'general.plain-text'
 

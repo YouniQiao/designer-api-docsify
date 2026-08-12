@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getBundleInfos
@@ -18,7 +18,7 @@ Obtains all BundleInfo for a specified user in the system.This API uses an async
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.bundle.bundleManager#getAllBundleInfo
+**Substitutes:** [getAllBundleInfo](ohos.bundle.bundleManager#getAllBundleInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -66,7 +66,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.bundle.bundleManager#getAllBundleInfo
+**Substitutes:** [getAllBundleInfo](ohos.bundle.bundleManager#getAllBundleInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -112,7 +112,7 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.bundle.bundleManager#getAllBundleInfo
+**Substitutes:** [getAllBundleInfo](ohos.bundle.bundleManager#getAllBundleInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

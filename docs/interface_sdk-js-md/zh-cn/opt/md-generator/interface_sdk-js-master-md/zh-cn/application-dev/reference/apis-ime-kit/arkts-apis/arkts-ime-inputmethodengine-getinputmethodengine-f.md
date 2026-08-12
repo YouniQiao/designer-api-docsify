@@ -6,7 +6,7 @@
 function getInputMethodEngine(): InputMethodEngine
 ```
 
-获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。
+获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md#InputMethodEngine)（输入法引擎）。
 
 输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。
 
@@ -14,7 +14,7 @@ function getInputMethodEngine(): InputMethodEngine
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)()
+**替代接口：** [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)()
 
 <!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine--><!--Device-inputMethodEngine-function getInputMethodEngine(): InputMethodEngine-End-->
 

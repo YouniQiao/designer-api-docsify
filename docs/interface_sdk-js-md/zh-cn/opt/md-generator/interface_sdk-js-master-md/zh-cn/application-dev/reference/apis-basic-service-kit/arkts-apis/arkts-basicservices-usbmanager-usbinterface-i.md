@@ -1,6 +1,6 @@
 # USBInterface
 
-一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)中可以含有多个USBInterface，每个USBInterface提供一个功能。
+一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
 **起始版本：** 9
 

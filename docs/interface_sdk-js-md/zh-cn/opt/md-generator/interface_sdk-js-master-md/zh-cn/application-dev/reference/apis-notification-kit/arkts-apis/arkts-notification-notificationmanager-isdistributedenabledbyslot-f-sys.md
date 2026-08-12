@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isDistributedEnabledBySlot
@@ -28,22 +28,22 @@ function isDistributedEnabledBySlot(slot: SlotType, deviceType: string): Promise
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slot | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | 是 |
+| [slot](arkts-notification-notificationsorting-notificationsorting-i-sys.md) | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 |
 | deviceType | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

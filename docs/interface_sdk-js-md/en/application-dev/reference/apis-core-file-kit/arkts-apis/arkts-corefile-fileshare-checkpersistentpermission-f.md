@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileShare } from 'kits/@kit.CoreFileKit';
+import { fileShare } from '@kit.CoreFileKit';
 ```
 
 ## checkPersistentPermission
@@ -26,7 +26,7 @@ Check persistent permissions for the URI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | Yes | Policy information to grant permission on URIs. |
+| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | Yes | Policy information to grant permission on URIs. |
 
 **Return value:**
 
@@ -38,8 +38,8 @@ Check persistent permissions for the URI.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 13900042 | Out of memory |
 
 ## Examples

@@ -14,7 +14,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager](arkts-backgroundtaskmanager.md)
+**替代接口：** [backgroundTaskManager](arkts-resourceschedule-backgroundtaskmanager.md#backgroundTaskManager)
 
 <!--Device-unnamed-declare namespace backgroundTaskManager--><!--Device-unnamed-declare namespace backgroundTaskManager-End-->
 

@@ -14,7 +14,7 @@ Determines whether an object has a property with the specified name.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| v | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
+| v | [PropertyKey](arkts-propertykey-t.md) | Yes |
 
 **Return value:**
 
@@ -58,7 +58,7 @@ Determines whether a specified property is enumerable.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| v | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
+| v | [PropertyKey](arkts-propertykey-t.md) | Yes |
 
 **Return value:**
 

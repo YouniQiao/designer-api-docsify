@@ -32,8 +32,8 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
-| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab.<br>**Since:** 12 |
+| text | ResourceStr | Yes | Text for the tab. |
 
 ## iconStyle
 
@@ -65,7 +65,7 @@ Sets the style of the label icon on the bottom tab.
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## id
 
@@ -91,13 +91,13 @@ Sets the ID of the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | [ID](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#id) of the bottom tab. |
+| value | string | Yes | [ID](CommonMethod#id) of the bottom tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## labelStyle
 
@@ -129,7 +129,7 @@ Sets the style of the label text and font for the bottom tab.
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## layoutMode
 
@@ -155,13 +155,13 @@ Sets the layout mode of the images and texts on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LayoutMode](../arkts-apis/arkts-arkui-tabcontent-layoutmode-e.md) | Yes | Layout mode of the images and text on the bottom tab.&lt;br&gt;Default value: **LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | Yes | Layout mode of the images and text on the bottom tab.&lt;br&gt;Default value: **LayoutMode.VERTICAL |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## of
 
@@ -187,14 +187,14 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | Image for the tab.<br>**Since:** 12 |
-| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes | Image for the tab.<br>**Since:** 12 |
+| text | ResourceStr | Yes | Text for the tab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object created. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object created. |
 
 ## padding
 
@@ -226,7 +226,7 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## symmetricExtensible
 
@@ -258,7 +258,7 @@ Sets whether the images and text on the bottom tab can be symmetrically extended
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 
 ## verticalAlign
 
@@ -284,11 +284,11 @@ Sets the vertical alignment mode of the images and text on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-enums-verticalalign-e.md) | Yes | Vertical alignment mode of the images and text on the bottom tab.&lt;br&gt;Default value: **VerticalAlign.Center |
+| value | VerticalAlign | Yes | Vertical alignment mode of the images and text on the bottom tab.&lt;br&gt;Default value: **VerticalAlign.Center |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BottomTabBarStyle](../arkts-apis/arkts-arkui-tabcontent-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
+| [BottomTabBarStyle](arkts-arkui-bottomtabbarstyle-c.md) | BottomTabBarStyle** object. |
 

@@ -6,7 +6,7 @@ Provides information about geographic locations
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location
+**Substitutes:** [Location](ohos.geoLocationManager/geoLocationManager.Location)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@ Provides information about geographic locations
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## accuracy
@@ -34,7 +34,7 @@ Indicates location accuracy, in meters.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#accuracy
+**Substitutes:** [accuracy](ohos.geoLocationManager/geoLocationManager.Location#accuracy)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -56,7 +56,7 @@ Indicates the amount of additional descriptive information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#additionSize
+**Substitutes:** [additionSize](ohos.geoLocationManager/geoLocationManager.Location#additionSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -78,7 +78,7 @@ Indicates additional information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#additions
+**Substitutes:** [additions](ohos.geoLocationManager/geoLocationManager.Location#additions)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -100,7 +100,7 @@ Indicates location altitude, in meters.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#altitude
+**Substitutes:** [altitude](ohos.geoLocationManager/geoLocationManager.Location#altitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -122,7 +122,7 @@ Indicates direction information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#direction
+**Substitutes:** [direction](ohos.geoLocationManager/geoLocationManager.Location#direction)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -144,7 +144,7 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#latitude
+**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.Location#latitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -166,7 +166,7 @@ Indicates Longitude information.A positive value indicates east longitude ,and a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#longitude
+**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.Location#longitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -188,7 +188,7 @@ Indicates speed, in m/s.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#speed
+**Substitutes:** [speed](ohos.geoLocationManager/geoLocationManager.Location#speed)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -210,7 +210,7 @@ Indicates location timestamp since boot.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#timeSinceBoot
+**Substitutes:** [timeSinceBoot](ohos.geoLocationManager/geoLocationManager.Location#timeSinceBoot)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -232,7 +232,7 @@ Indicates location timestamp in the UTC format.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#timeStamp
+**Substitutes:** [timeStamp](ohos.geoLocationManager/geoLocationManager.Location#timeStamp)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## on('bluetoothDeviceFind')
@@ -18,7 +18,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered.On API
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.on#event:bluetoothDeviceFind
+**Substitutes:** [bluetoothDeviceFind](ohos.bluetooth.connection/connection.on#event:bluetoothDeviceFind)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -39,9 +39,9 @@ Subscribe the event reported when a remote Bluetooth device is discovered.On API
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -71,7 +71,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded.On API 10 
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.on#event:bondStateChange
+**Substitutes:** [bondStateChange](ohos.bluetooth.connection/connection.on#event:bondStateChange)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -92,9 +92,9 @@ Subscribe the event reported when a remote Bluetooth device is bonded.On API 10 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -124,7 +124,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device.On API 1
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.on#event:pinRequired
+**Substitutes:** [pinRequired](ohos.bluetooth.connection/connection.on#event:pinRequired)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -145,9 +145,9 @@ Subscribe the event of a pairing request from a remote Bluetooth device.On API 1
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -177,7 +177,7 @@ Subscribe the event reported when the Bluetooth state changes.On API 10 and abov
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.access/access.on#event:stateChange
+**Substitutes:** [stateChange](ohos.bluetooth.access/access.on#event:stateChange)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -198,9 +198,9 @@ Subscribe the event reported when the Bluetooth state changes.On API 10 and abov
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -230,7 +230,7 @@ Subscribe the event reported when data is read from the socket.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.socket/socket.on#event:sppRead
+**Substitutes:** [sppRead](ohos.bluetooth.socket/socket.on#event:sppRead)
 
 <!--Device-bluetoothManager-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void--><!--Device-bluetoothManager-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void-End-->
 
@@ -248,8 +248,8 @@ Subscribe the event reported when data is read from the socket.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2901054 |
 | 2900099 |
 

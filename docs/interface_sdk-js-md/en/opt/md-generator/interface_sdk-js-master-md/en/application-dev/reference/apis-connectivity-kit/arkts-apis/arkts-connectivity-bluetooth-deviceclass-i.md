@@ -6,7 +6,7 @@ Describes the class of a bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DeviceClass
+**Substitutes:** [DeviceClass](ohos.bluetoothManager/bluetoothManager.DeviceClass)
 
 <!--Device-bluetooth-interface DeviceClass--><!--Device-bluetooth-interface DeviceClass-End-->
 
@@ -15,7 +15,7 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## classOfDevice
@@ -32,7 +32,7 @@ Class of the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DeviceClass.classOfDevice
+**Substitutes:** [classOfDevice](ohos.bluetoothManager/bluetoothManager.DeviceClass.classOfDevice)
 
 <!--Device-DeviceClass-classOfDevice: number--><!--Device-DeviceClass-classOfDevice: number-End-->
 
@@ -46,13 +46,13 @@ majorClass: MajorClass
 
 Major classes of Bluetooth devices.
 
-**Type:** [MajorClass](arkts-connectivity-connection-majorclass-t.md)
+**Type:** MajorClass
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DeviceClass.majorClass
+**Substitutes:** [majorClass](ohos.bluetoothManager/bluetoothManager.DeviceClass.majorClass)
 
 <!--Device-DeviceClass-majorClass: MajorClass--><!--Device-DeviceClass-majorClass: MajorClass-End-->
 
@@ -66,13 +66,13 @@ majorMinorClass: MajorMinorClass
 
 Major and minor classes of Bluetooth devices.
 
-**Type:** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md)
+**Type:** MajorMinorClass
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DeviceClass.majorMinorClass
+**Substitutes:** [majorMinorClass](ohos.bluetoothManager/bluetoothManager.DeviceClass.majorMinorClass)
 
 <!--Device-DeviceClass-majorMinorClass: MajorMinorClass--><!--Device-DeviceClass-majorMinorClass: MajorMinorClass-End-->
 

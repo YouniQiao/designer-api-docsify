@@ -18,7 +18,7 @@ content: ResourceStr
 
 Menu name.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ Menu icon.
 
 Online images are not supported.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ Shortcut key hint.
 
 This field is only supported on 2-in-1 devices.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 15
 

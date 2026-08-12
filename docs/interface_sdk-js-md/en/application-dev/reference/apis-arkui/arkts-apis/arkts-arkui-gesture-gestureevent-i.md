@@ -2,7 +2,7 @@
 
 Defines event info for gesture.
 
-**Inheritance/Implementation:** GestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
+**Inheritance/Implementation:** GestureEvent extends [BaseEvent](BaseEvent)
 
 **Since:** 23
 
@@ -220,7 +220,7 @@ tapLocation?: EventLocationInfo
 
 The tap location info used in tap gesture.
 
-**Type:** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
+**Type:** [EventLocationInfo](arkts-arkui-gesture-eventlocationinfo-i.md)
 
 **Since:** 23
 

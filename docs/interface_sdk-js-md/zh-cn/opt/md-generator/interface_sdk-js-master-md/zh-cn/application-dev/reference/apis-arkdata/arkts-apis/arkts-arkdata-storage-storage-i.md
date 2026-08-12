@@ -2,14 +2,14 @@
 
 提供获取和修改存储数据的接口。
 
-下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md#getstorage)或  
-[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync)获取到Storage实例，再通过此实例调用对应接口。
+下列接口都需先使用[data_storage.getStorage](arkts-arkdata-storage-getstorage-f.md#getStorage)或  
+[data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync)获取到Storage实例，再通过此实例调用对应接口。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences
+**替代接口：** [preferences](ohos.preferences.preferences)
 
 <!--Device-storage-interface Storage--><!--Device-storage-interface Storage-End-->
 
@@ -27,7 +27,7 @@ clear(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.clear
+**替代接口：** [clear](ohos.preferences.preferences.clear)
 
 <!--Device-Storage-clear(callback: AsyncCallback<void>): void--><!--Device-Storage-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -61,7 +61,7 @@ clear(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.clear
+**替代接口：** [clear](ohos.preferences.preferences.clear)
 
 <!--Device-Storage-clear(): Promise<void>--><!--Device-Storage-clear(): Promise<void>-End-->
 
@@ -69,7 +69,7 @@ clear(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -94,7 +94,7 @@ clearSync(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.clear
+**替代接口：** [clear](ohos.preferences.preferences.clear)
 
 <!--Device-Storage-clearSync(): void--><!--Device-Storage-clearSync(): void-End-->
 
@@ -116,7 +116,7 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.delete
+**替代接口：** [delete](ohos.preferences.preferences.delete)
 
 <!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-Storage-delete(key: string, callback: AsyncCallback<void>): void-End-->
 
@@ -151,7 +151,7 @@ delete(key: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.delete
+**替代接口：** [delete](ohos.preferences.preferences.delete)
 
 <!--Device-Storage-delete(key: string): Promise<void>--><!--Device-Storage-delete(key: string): Promise<void>-End-->
 
@@ -165,7 +165,7 @@ delete(key: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -190,7 +190,7 @@ deleteSync(key: string): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.delete
+**替代接口：** [delete](ohos.preferences.preferences.delete)
 
 <!--Device-Storage-deleteSync(key: string): void--><!--Device-Storage-deleteSync(key: string): void-End-->
 
@@ -218,7 +218,7 @@ flush(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.flush
+**替代接口：** [flush](ohos.preferences.preferences.flush)
 
 <!--Device-Storage-flush(callback: AsyncCallback<void>): void--><!--Device-Storage-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -252,7 +252,7 @@ flush(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.flush
+**替代接口：** [flush](ohos.preferences.preferences.flush)
 
 <!--Device-Storage-flush(): Promise<void>--><!--Device-Storage-flush(): Promise<void>-End-->
 
@@ -260,7 +260,7 @@ flush(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -285,7 +285,7 @@ flushSync(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.flush
+**替代接口：** [flush](ohos.preferences.preferences.flush)
 
 <!--Device-Storage-flushSync(): void--><!--Device-Storage-flushSync(): void-End-->
 
@@ -307,7 +307,7 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.get
+**替代接口：** [get](ohos.preferences.preferences.get)
 
 <!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void--><!--Device-Storage-get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void-End-->
 
@@ -343,7 +343,7 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.get
+**替代接口：** [get](ohos.preferences.preferences.get)
 
 <!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>--><!--Device-Storage-get(key: string, defValue: ValueType): Promise<ValueType>-End-->
 
@@ -358,7 +358,7 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 | 类型 |
 | --- |
-| Promise&lt;ValueType&gt; |
+| Promise & lt;ValueType & gt; |
 
 ## 示例
 
@@ -383,7 +383,7 @@ getSync(key: string, defValue: ValueType): ValueType
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.get
+**替代接口：** [get](ohos.preferences.preferences.get)
 
 <!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType--><!--Device-Storage-getSync(key: string, defValue: ValueType): ValueType-End-->
 
@@ -419,7 +419,7 @@ has(key: string, callback: AsyncCallback<boolean>): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.has
+**替代接口：** [has](ohos.preferences.preferences.has)
 
 <!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean--><!--Device-Storage-has(key: string, callback: AsyncCallback<boolean>): boolean-End-->
 
@@ -462,7 +462,7 @@ has(key: string): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.has
+**替代接口：** [has](ohos.preferences.preferences.has)
 
 <!--Device-Storage-has(key: string): Promise<boolean>--><!--Device-Storage-has(key: string): Promise<boolean>-End-->
 
@@ -476,7 +476,7 @@ has(key: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 
@@ -503,7 +503,7 @@ hasSync(key: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.has
+**替代接口：** [has](ohos.preferences.preferences.has)
 
 <!--Device-Storage-hasSync(key: string): boolean--><!--Device-Storage-hasSync(key: string): boolean-End-->
 
@@ -540,7 +540,7 @@ off(type: 'change', callback: Callback<StorageObserver>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-off(type: 'change', callback: Callback<StorageObserver>): void-End-->
 
@@ -549,7 +549,7 @@ off(type: 'change', callback: Callback<StorageObserver>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StorageObserver&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -572,7 +572,7 @@ on(type: 'change', callback: Callback<StorageObserver>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.on
+**替代接口：** [on](ohos.preferences.preferences.on)
 
 <!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void--><!--Device-Storage-on(type: 'change', callback: Callback<StorageObserver>): void-End-->
 
@@ -581,7 +581,7 @@ on(type: 'change', callback: Callback<StorageObserver>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'change' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StorageObserver&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StorageObserver](arkts-arkdata-storage-storageobserver-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -606,7 +606,7 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.put
+**替代接口：** [put](ohos.preferences.preferences.put)
 
 <!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void--><!--Device-Storage-put(key: string, value: ValueType, callback: AsyncCallback<void>): void-End-->
 
@@ -642,7 +642,7 @@ put(key: string, value: ValueType): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.put
+**替代接口：** [put](ohos.preferences.preferences.put)
 
 <!--Device-Storage-put(key: string, value: ValueType): Promise<void>--><!--Device-Storage-put(key: string, value: ValueType): Promise<void>-End-->
 
@@ -657,7 +657,7 @@ put(key: string, value: ValueType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -682,7 +682,7 @@ putSync(key: string, value: ValueType): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.put
+**替代接口：** [put](ohos.preferences.preferences.put)
 
 <!--Device-Storage-putSync(key: string, value: ValueType): void--><!--Device-Storage-putSync(key: string, value: ValueType): void-End-->
 

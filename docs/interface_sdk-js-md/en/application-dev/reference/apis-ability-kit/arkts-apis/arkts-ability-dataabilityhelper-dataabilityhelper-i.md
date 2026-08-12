@@ -1,7 +1,7 @@
 # DataAbilityHelper
 
 A DataAbilityHelper object is obtained through  
-[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper).
+[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper).
 
 **Since:** 7
 
@@ -35,7 +35,29 @@ Inserts multiple data records into the database.This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | Yes | Data records to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of inserted data records. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array({'name': 'roe11', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe12', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe13', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket);
+DAHelper.batchInsert('dataability:///com.example.DataAbility', cars, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`batchInsert fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`batchInsert success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## batchInsert
 
@@ -68,6 +90,24 @@ Inserts multiple data records into the database. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of inserted data records. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array({'name': 'roe11', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe12', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe13', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket);
+DAHelper.batchInsert('dataability:///com.example.DataAbility', cars).then((data) => {
+    console.info(`batchInsert data: ${JSON.stringify(data)}`);
+});
+```
+
 ## call
 
 ```TypeScript
@@ -93,8 +133,27 @@ Calls an extended method defined by the DataAbility. This API uses an asynchrono
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
 | method | string | Yes | Name of the API to call. |
 | arg | string | Yes | Parameter to pass in. |
-| extras | [PacMap](arkts-ability-common-pacmap-t.md) | Yes | Key-value pair parameter. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PacMap&gt; | Yes | Callback used to return the extended parameters in the format of key-value pairs. |
+| extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Key-value pair parameter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | Yes | Callback used to return the extended parameters in the format of key-value pairs. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.call('dataability:///com.example.jsapidemo.UserDataAbility',
+    'method', 'arg', {'key1':'value1'}, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`call fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`call success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## call
 
@@ -121,13 +180,31 @@ Calls an extended method defined by the DataAbility. This API uses a promise to 
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
 | method | string | Yes | Name of the API to call. |
 | arg | string | Yes | Parameter to pass in. |
-| extras | [PacMap](arkts-ability-common-pacmap-t.md) | Yes | Key-value pair parameter. |
+| extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | Yes | Key-value pair parameter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PacMap&gt; | Promise used to return the extended parameters in the format of key-value pairs. |
+| Promise&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | Promise used to return the extended parameters in the format of key-value pairs. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import { BusinessError } from '@ohos.base';
+
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.call('dataability:///com.example.jsapidemo.UserDataAbility',
+    'method', 'arg', {'key1':'value1'}).then((data) => {
+    console.info('call success, data: ${data}');
+}).catch((error: BusinessError) => {
+    console.error('call failed, error: ${error}');
+});
+```
 
 ## delete
 
@@ -153,7 +230,27 @@ Deletes one or more data records from the database. This API uses an asynchronou
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.delete('dataability:///com.example.DataAbility', da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`delete fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`delete success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## delete
 
@@ -186,6 +283,22 @@ Deletes one or more data records from the database. This API uses a promise to r
 | --- | --- |
 | Promise&lt;number&gt; | Returns the number of data records deleted. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.delete('dataability:///com.example.DataAbility', da).then((data) => {
+    console.info(`delete data: ${JSON.stringify(data)}`);
+});
+```
+
 ## delete
 
 ```TypeScript
@@ -209,7 +322,25 @@ Uses a custom processing logic to delete data records from the database.This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to delete. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of deleted data records. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.delete('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`delete fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`delete success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## denormalizeUri
 
@@ -234,7 +365,25 @@ Converts a normalized URI generated by normalizeUri to a denormalized one.This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI object to denormalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the denormalized URI object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the denormalized URI object. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.denormalizeUri('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`denormalizeUri fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`denormalizeUri success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## denormalizeUri
 
@@ -266,6 +415,20 @@ Converts a normalized URI generated by normalizeUri to a denormalized one.This A
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the denormalized URI object |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.denormalizeUri('dataability:///com.example.DataAbility').then((data) => {
+    console.info(`denormalizeUri data: ${JSON.stringify(data)}`);
+});
+```
+
 ## executeBatch
 
 ```TypeScript
@@ -294,7 +457,27 @@ Operates data in the database in batches. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the DataAbility. Example: 'dataability:///com.example.xxx.xxxx'. |
 | operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | Yes | An array holding the data operations on the database. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes | Callback used to return the result of each operation in the DataAbilityResult array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Yes | Callback used to return the result of each operation in the DataAbilityResult array. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+// Select the operations to be performed on the database according to the DataAbilityOperation array.
+let op: Array<ability.DataAbilityOperation> = new Array();
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.executeBatch('dataability:///com.example.jsapidemo.UserDataAbility', op, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`executeBatch fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`executeBatch success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## executeBatch
 
@@ -327,6 +510,25 @@ Operates data in the database in batches. This API uses a promise to return the 
 | --- | --- |
 | Promise&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | Promise used to return the result of each operation in the DataAbilityResult array. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import { BusinessError } from '@ohos.base';
+
+// Select the operations to be performed on the database according to the DataAbilityOperation array.
+let op: Array<ability.DataAbilityOperation> = new Array();
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.executeBatch('dataability:///com.example.jsapidemo.UserDataAbility', op).then((data) => {
+    console.info('executeBatch success, data: ${data}');
+}).catch((error: BusinessError) => {
+    console.error('executeBatch failed, error: ${error}');
+});
+```
+
 ## getFileTypes
 
 ```TypeScript
@@ -351,7 +553,25 @@ Obtains the supported media resource types of a specified file.This API uses an 
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file. |
 | mimeTypeFilter | string | Yes | Media resource type of the file to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array holding the media resource types. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return an array holding the media resource types. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getFileTypes( 'dataability:///com.example.DataAbility', 'image/*', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`getFileTypes fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`getFileTypes success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## getFileTypes
 
@@ -384,6 +604,20 @@ Obtains the supported media resource types of a specified file. This API uses a 
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return an array holding the media resource types. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getFileTypes('dataability:///com.example.DataAbility', 'image/*').then((data) => {
+    console.info(`getFileTypes data: ${JSON.stringify(data)}`);
+});
+```
+
 ## getType
 
 ```TypeScript
@@ -407,7 +641,25 @@ Obtains the media resource type of the data specified by a given URI.This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the media resource type. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the media resource type. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getType('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`getType fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`getType success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## getType
 
@@ -439,6 +691,20 @@ Obtains the media resource type of the data specified by a given URI.This API us
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the media resource type. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getType('dataability:///com.example.DataAbility').then((data) => {
+    console.info(`getType data: ${JSON.stringify(data)}`);
+});
+```
+
 ## insert
 
 ```TypeScript
@@ -463,7 +729,7 @@ Inserts a single data record into the database. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to insert. |
 | valuesBucket | rdb.ValuesBucket | Yes | Data record to insert. If this parameter is null, a blank row will be inserted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the index of the inserted data record. |
 
 ## insert
 
@@ -519,7 +785,25 @@ Converts the URI that refers to a DataAbility into a normalized URI.This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI object to normalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.normalizeUri('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`normalizeUri fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`normalizeUri success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## normalizeUri
 
@@ -551,6 +835,20 @@ Converts a normalized URI generated by normalizeUri to a denormalized one.This A
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the normalized URI object if the DataAbility supports URI normalization. If the DataAbility does not support URI normalization, null is returned. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.normalizeUri('dataability:///com.example.DataAbility').then((data) => {
+    console.info(`normalizeUri data: ${JSON.stringify(data)}`);
+});
+```
+
 ## notifyChange
 
 ```TypeScript
@@ -574,7 +872,25 @@ Notifies the registered observer of a change to the data specified by the URI.Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data that changes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.notifyChange('dataability:///com.example.DataAbility', (error) => {
+    if (error && error.code !== 0) {
+        console.error(`notifyChange fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info('notifyChange success');
+    }
+});
+```
 
 ## notifyChange
 
@@ -606,6 +922,20 @@ Notifies the registered observer of a change to the data specified by the URI.Th
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.notifyChange('dataability:///com.example.DataAbility').then(() => {
+    console.info('================>notifyChangeCallback================>');
+});
+```
+
 ## off('dataChange')
 
 ```TypeScript
@@ -630,7 +960,30 @@ Deregisters the observer that listens for changes in the data specified by a giv
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | The value 'dataChange' means data changes. |
 | uri | string | Yes | URI of the data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If the observer is deregistered, err is undefined. Otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If the observer is deregistered, err is undefined. Otherwise, err is an error object. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+function onChangeNotify() {
+    console.info('onChangeNotify call back');
+};
+DAHelper.off(
+    'dataChange',
+    'dataability:///com.example.DataAbility',
+    onChangeNotify
+);
+DAHelper.off(
+    'dataChange',
+    'dataability:///com.example.DataAbility',
+);
+```
 
 ## on('dataChange')
 
@@ -656,7 +1009,26 @@ Registers an observer to listen for changes in the data specified by a given URI
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | The value 'dataChange' means data changes. |
 | uri | string | Yes | URI of the data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the observer is registered, err is undefined. Otherwise, err is an error object. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+function onChangeNotify() {
+    console.info('onChangeNotify call back');
+};
+DAHelper.on(
+    'dataChange',
+    'dataability:///com.example.DataAbility',
+    onChangeNotify
+);
+```
 
 ## openFile
 
@@ -682,7 +1054,26 @@ Opens a file with a specified URI. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file to open. |
 | mode | string | Yes | Mode for opening the file. The value r indicates read-only access, w indicates write-only access, and rw indicates read-write access. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the file descriptor. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the file descriptor. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let mode = 'rw';
+DAHelper.openFile('dataability:///com.example.DataAbility', mode, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`openFile fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`openFile success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## openFile
 
@@ -715,6 +1106,21 @@ Opens a file with a specified URI. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the file descriptor. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let mode = 'rw';
+DAHelper.openFile('dataability:///com.example.DataAbility', mode).then((data) => {
+    console.info(`openFile data: ${JSON.stringify(data)}`);
+});
+```
+
 ## query
 
 ```TypeScript
@@ -745,7 +1151,28 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | uri | string | Yes | URI of the data to query. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars=new Array('value1', 'value2', 'value3', 'value4');
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.query('dataability:///com.example.DataAbility', cars, da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -770,7 +1197,25 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.query('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -796,7 +1241,26 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is null, all columns will be queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array('value1', 'value2', 'value3', 'value4');
+DAHelper.query('dataability:///com.example.DataAbility', cars, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -822,7 +1286,27 @@ Queries data in the database. This API uses an asynchronous callback to return t
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to query. |
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. When null is passed in, you need to customize the logic for querying data in the database. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.query('dataability:///com.example.DataAbility', da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -854,7 +1338,24 @@ Queries data in the database. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResultSet&gt; | Returns the query result { |
+| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | Returns the query result { |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array('value1', 'value2', 'value3', 'value4');
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.query('dataability:///com.example.DataAbility', cars, da).then((data) => {
+    console.info(`query data: ${JSON.stringify(data)}`);
+});
+```
 
 ## update
 
@@ -886,7 +1387,34 @@ Updates data in the database.This API uses an asynchronous callback to return th
 | uri | string | Yes | URI of the data to update. |
 | valuesBucket | rdb.ValuesBucket | Yes | New values. |
 | predicates | dataAbility.DataAbilityPredicates | Yes | Filter criteria. You should define the processing logic when this parameter is null. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+const va: rdb.ValuesBucket = {
+    'name': 'roe1',
+    'age': 21,
+    'salary': 20.5,
+    'blobType': 'u8',
+};
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.update('dataability:///com.example.DataAbility', va, da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`update fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`update success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## update
 
@@ -920,6 +1448,29 @@ Updates data in the database. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of updated data records. |
 
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+const va: rdb.ValuesBucket = {
+    'name': 'roe1',
+    'age': 21,
+    'salary': 20.5,
+    'blobType': 'u8',
+};
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.update('dataability:///com.example.DataAbility', va, da).then((data) => {
+    console.info(`update data: ${JSON.stringify(data)}`);
+});
+```
+
 ## update
 
 ```TypeScript
@@ -944,5 +1495,30 @@ Uses a custom processing logic to update data records in the database.This API u
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the data to update. |
 | valuesBucket | rdb.ValuesBucket | Yes | New values. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of updated data records. |
+
+## Examples
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+const va: rdb.ValuesBucket = {
+    'name': 'roe1',
+    'age': 21,
+    'salary': 20.5,
+    'blobType': 'u8',
+};
+DAHelper.update('dataability:///com.example.DataAbility', va, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`update fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`update success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 

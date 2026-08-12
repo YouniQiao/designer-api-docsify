@@ -13,7 +13,7 @@ Get All Volumes.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## description

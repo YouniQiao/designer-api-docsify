@@ -47,7 +47,7 @@
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) |  |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) |  |
 
 ## [[Call]]
 
@@ -68,11 +68,11 @@
 | width | number | 是 |  |
 | height | number | 是 |  |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |  |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |  |
+| unit | LengthMetricsUnit | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) |  |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) |  |
 

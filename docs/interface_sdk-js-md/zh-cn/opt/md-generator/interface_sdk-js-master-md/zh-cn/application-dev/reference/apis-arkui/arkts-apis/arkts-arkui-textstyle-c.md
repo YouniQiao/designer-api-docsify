@@ -126,7 +126,7 @@ readonly fontStyle?: FontStyle
 
 获取属性字符串的文本字体样式。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 12
 

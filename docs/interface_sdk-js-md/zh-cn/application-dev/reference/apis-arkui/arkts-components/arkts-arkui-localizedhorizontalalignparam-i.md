@@ -18,7 +18,7 @@ align: HorizontalAlign
 
 The align of localized align param.
 
-**类型：** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
+**类型：** HorizontalAlign
 
 **起始版本：** 12
 

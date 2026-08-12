@@ -13,7 +13,7 @@ ConvertXML representation refers to extensible markup language.
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import { convertxml } from '@kit.ArkTS';
 ```
 
 ## convert
@@ -30,7 +30,7 @@ Converts an XML text to a JavaScript object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [xml.ConvertXML#fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)
+**Substitutes:** [fastConvertToJSObject](#fastConvertToJSObject)
 
 <!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
 
@@ -94,7 +94,7 @@ Converts an XML text to an object of the object type.
 
 **Deprecated since:** 14
 
-**Substitutes:** [xml.ConvertXML#fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)
+**Substitutes:** [fastConvertToJSObject](#fastConvertToJSObject)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -119,7 +119,7 @@ Converts an XML text to an object of the object type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
 
 ## Examples
 
@@ -199,7 +199,7 @@ Converts an XML text to an object of the object type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
 
 ## Examples
 
@@ -272,7 +272,7 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) | Invalid xml string. |
 
 ## Examples
 

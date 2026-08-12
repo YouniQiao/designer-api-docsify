@@ -18,7 +18,7 @@ param: WebContextMenuParam
 
 Parameters related to the context menu.
 
-**Type:** [WebContextMenuParam](../arkts-apis/arkts-arkweb-web-webcontextmenuparam-c.md)
+**Type:** [WebContextMenuParam](arkts-arkweb-webcontextmenuparam-c.md)
 
 **Since:** 12
 

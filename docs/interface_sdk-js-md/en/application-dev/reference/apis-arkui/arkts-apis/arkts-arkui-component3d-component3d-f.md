@@ -24,7 +24,7 @@ Defines Component3D.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sceneOptions | [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md) | No | The 3D scene controller |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

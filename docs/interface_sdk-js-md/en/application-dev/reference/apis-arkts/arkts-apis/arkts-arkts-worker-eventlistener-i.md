@@ -8,7 +8,7 @@ Implements event listening.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventListener
+**Substitutes:** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md#WorkerEventListener)
 
 <!--Device-unnamed-export interface EventListener--><!--Device-unnamed-export interface EventListener-End-->
 
@@ -17,7 +17,7 @@ Implements event listening.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## [[Call]]
@@ -34,7 +34,7 @@ Specifies the callback to invoke.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventListener.(event:
+**Substitutes:** [ohos.worker.WorkerEventListener.](ohos.worker.WorkerEventListener.(event:)
 
 <!--Device-EventListener-(evt: Event): void | Promise<void>--><!--Device-EventListener-(evt: Event): void | Promise<void>-End-->
 
@@ -44,7 +44,7 @@ Specifies the callback to invoke.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | evt evt Event class for the callback to invoke. |
+| evt | [Event](arkts-arkts-worker-event-i.md) | Yes | evt evt Event class for the callback to invoke. |
 
 ## Examples
 

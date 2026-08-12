@@ -30,7 +30,7 @@ Default value: **ProgressStyle.Linear**
 
 **Deprecated since:** 8
 
-**Substitutes:** [type](arkts-arkui-progressoptions-i.md#type)
+**Substitutes:** [type](#type)
 
 <!--Device-ProgressOptions-style?: ProgressStyle--><!--Device-ProgressOptions-style?: ProgressStyle-End-->
 

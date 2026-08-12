@@ -11,7 +11,7 @@ Declare NodeParam
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from 'kits/@kit.ArkUI';
+import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
 ```
 
 ## container

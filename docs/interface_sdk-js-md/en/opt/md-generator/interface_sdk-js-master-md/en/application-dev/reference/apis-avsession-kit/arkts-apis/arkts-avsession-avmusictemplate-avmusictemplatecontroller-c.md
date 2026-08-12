@@ -11,7 +11,7 @@ The definition of the AVMusicTemplateController.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## clearSearchHistory
@@ -34,16 +34,16 @@ Clear search history.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## destroy
 
@@ -65,13 +65,13 @@ Destroy the controller.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## downloadMediaEntity
 
@@ -100,16 +100,16 @@ Download media entity.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## executeAction
 
@@ -138,16 +138,16 @@ Execute action.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## favoriteMediaEntity
 
@@ -176,16 +176,16 @@ Favorite media entity.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## handleMemberPurchase
 
@@ -213,16 +213,16 @@ Handle member purchase.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DialogInfo&gt; |
+| Promise&lt;[DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## login
 
@@ -251,16 +251,16 @@ Login.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;QrCodeInfo[]&gt; |
+| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## offCurrentSingleChange
 
@@ -288,8 +288,8 @@ Unregister report current single callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offCustomElementsChange
@@ -318,8 +318,8 @@ Unregister report custom elements change callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offDialogCommandChange
@@ -348,8 +348,8 @@ Unregister report dialog command callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offDownloadMediaEntityStatusChange
@@ -372,14 +372,14 @@ Unregister report download media entity status callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offExtensionAbilityChange
@@ -408,8 +408,8 @@ Unregister report extension ability callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offMediaEntitiesChange
@@ -432,14 +432,14 @@ Unregister report media entities change callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity[]&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offPlaylistChange
@@ -462,14 +462,14 @@ Unregister report playlist callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PageMediaEntity&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offReportExecuteAction
@@ -498,8 +498,8 @@ Unregister report execute action callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offSettingsChange
@@ -522,14 +522,14 @@ Unregister report settings callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SettingItem[]&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offTabContentChange
@@ -558,8 +558,8 @@ Unregister report tab content callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## offUserInfoChange
@@ -588,8 +588,8 @@ Unregister report user info callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onCurrentSingleChange
@@ -618,8 +618,8 @@ Register report current single callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onCustomElementsChange
@@ -648,8 +648,8 @@ Register report custom elements change callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onDialogCommandChange
@@ -678,8 +678,8 @@ Register report dialog command callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onDownloadMediaEntityStatusChange
@@ -702,14 +702,14 @@ Register report download media entity status callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onExtensionAbilityChange
@@ -738,8 +738,8 @@ Register report extension ability callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onMediaEntitiesChange
@@ -762,14 +762,14 @@ Register report media entities change callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaEntity[]&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onPlaylistChange
@@ -792,14 +792,14 @@ Register report playlist callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PageMediaEntity&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onReportExecuteAction
@@ -828,8 +828,8 @@ Register report execute action callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onSettingsChange
@@ -852,14 +852,14 @@ Register report settings callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SettingItem[]&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)[]&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onTabContentChange
@@ -888,8 +888,8 @@ Register report tab content callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## onUserInfoChange
@@ -918,8 +918,8 @@ Register report user info callback.
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 35000012 |
 
 ## playForSearch
@@ -943,22 +943,22 @@ Play for search.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | command | [SearchPlayInfoType](arkts-avsession-avmusictemplate-searchplayinfotype-e.md) | Yes |
-| args | [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## playMediaEntity
 
@@ -986,16 +986,16 @@ Play media entity.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCompilation
 
@@ -1024,16 +1024,16 @@ Query compilation.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PageMediaEntity&gt; |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCompilationByKeyword
 
@@ -1061,16 +1061,16 @@ Query compilation by keyword.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Compilation[]&gt; |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCurrentSingle
 
@@ -1092,16 +1092,16 @@ Query current single.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Single&gt; |
+| Promise & lt;Single & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryCustomContent
 
@@ -1123,22 +1123,22 @@ Query custom content.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| queryType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | Yes |
+| [queryType](../../apis-ability-kit/arkts-apis/arkts-ability-insightintent-queryentityparam-i.md) | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;CustomElement&gt; |
+| Promise&lt;[CustomElement](arkts-avsession-avmusictemplate-customelement-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryHotWords
 
@@ -1160,16 +1160,16 @@ Query hot words.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string[]&gt; |
+| Promise & lt;string[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMainTabs
 
@@ -1191,16 +1191,16 @@ Query main tabs.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;MediaTab[]&gt; |
+| Promise&lt;[MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMediaEntity
 
@@ -1228,16 +1228,16 @@ Query media entity.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PageMediaEntity&gt; |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMediaEntityByKeyword
 
@@ -1267,16 +1267,16 @@ Query media entity by keyword.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PageMediaEntity&gt; |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMediaTabContent
 
@@ -1304,16 +1304,16 @@ Query media tab content.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;MediaTabContent&gt; |
+| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryMemberPurchase
 
@@ -1335,22 +1335,22 @@ Query member purchase.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| memberPurchaseType | [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Yes |
+| [memberPurchaseType](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | [MemberPurchaseType](arkts-avsession-avmusictemplate-memberpurchasetype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; |
+| Promise&lt;[MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryPlaylist
 
@@ -1379,16 +1379,16 @@ Query playlist.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PageMediaEntity&gt; |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## queryRecommendMediaEntityList
 
@@ -1410,16 +1410,16 @@ Query recommend media entity list.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;MediaEntity[]&gt; |
+| Promise&lt;[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## querySearchHistory
 
@@ -1441,16 +1441,16 @@ Query search history.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string[]&gt; |
+| Promise & lt;string[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## reportProblemAndAdvice
 
@@ -1478,16 +1478,16 @@ Report problem and advice.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## requestDialogInfo
 
@@ -1516,16 +1516,16 @@ Request dialog info.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DialogInfo&gt; |
+| Promise&lt;[DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## sendCustomCommand
 
@@ -1548,21 +1548,21 @@ Send custom commands to AVMusicTemplate
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | command | string | Yes |
-| args | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## updateSettings
 
@@ -1590,16 +1590,16 @@ Report settings change.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SettingItem&gt; |
+| Promise&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [35000006](../errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
-| [35000003](../errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
+| [35000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000006-template-controller-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-audio-template-does-not-exist) |
+| [35000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000003-template-listener-not-registered) |
 
 ## isDestroy
 

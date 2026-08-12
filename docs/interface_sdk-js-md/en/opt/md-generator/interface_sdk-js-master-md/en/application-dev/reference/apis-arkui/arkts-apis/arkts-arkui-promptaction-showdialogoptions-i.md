@@ -11,7 +11,7 @@ Describes the options for showing the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -43,7 +43,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the dialog box.&lt;br&gt;Default value: **BlurStyle.COMPONENT_ULTRA_THICK**&lt;br&gt;**NOTE：**&lt;br&gt;Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -189,7 +189,7 @@ immersiveMode?: ImmersiveMode
 
 Overlay effect for the page-level dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -337,7 +337,7 @@ offset?: Offset
 
 Offset of the dialog box relative to the alignment position.&lt;br&gt;Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 10
 
@@ -357,7 +357,7 @@ onDidAppear?: Callback<void>
 
 Callback invoked after the dialog box appears.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.&lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.&lt;br&gt;3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.&lt;br&gt;4. If the dialog box is dismissed before its appearance animation is finished, the animation will be interrupted, and **onDidAppear** will not be invoked.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -377,7 +377,7 @@ onDidDisappear?: Callback<void>
 
 Callback invoked after the dialog box disappears.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -397,7 +397,7 @@ onWillAppear?: Callback<void>
 
 Callback invoked before the dialog box appearance animation.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.&lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -417,7 +417,7 @@ onWillDisappear?: Callback<void>
 
 Callback invoked before the dialog box disappearance animation.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -437,7 +437,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.&lt;br&gt; Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

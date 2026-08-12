@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## parseUUID
@@ -38,5 +38,5 @@ Parse a UUID from the string standard representation as described in the RFC 412
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid uuid string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) | Invalid uuid string. |
 

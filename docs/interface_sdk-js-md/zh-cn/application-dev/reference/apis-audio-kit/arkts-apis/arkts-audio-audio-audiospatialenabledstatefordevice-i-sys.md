@@ -20,7 +20,7 @@ deviceDescriptor: AudioDeviceDescriptor
 
 Audio device description.
 
-**类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i-sys.md)
+**类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 12
 

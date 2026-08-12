@@ -18,7 +18,7 @@ backgroundColor?: ResourceColor
 
 标题栏背景颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ barStyle?: BarStyle
 
 设置标题栏样式。
 
-**类型：** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
+**类型：** BarStyle
 
 **默认值：** BarStyle.STANDARD
 
@@ -104,7 +104,7 @@ titleIcon?: Resource | SymbolGlyphModifier
 
 设置标题栏的图标。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
+**类型：** Resource \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **默认值：** atomicservice icon
 

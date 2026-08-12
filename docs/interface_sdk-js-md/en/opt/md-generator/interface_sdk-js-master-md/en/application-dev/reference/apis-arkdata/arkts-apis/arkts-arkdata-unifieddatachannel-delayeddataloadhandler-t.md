@@ -22,10 +22,10 @@ This API is an asynchronous function, which uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| acceptableInfo | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No |
+| [acceptableInfo](arkts-arkdata-unifieddatachannel-getdataparams-i.md) | [DataLoadInfo](arkts-arkdata-unifieddatachannel-dataloadinfo-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;UnifiedData \| null&gt; |
+| Promise & lt;UnifiedData \ | null & gt; |

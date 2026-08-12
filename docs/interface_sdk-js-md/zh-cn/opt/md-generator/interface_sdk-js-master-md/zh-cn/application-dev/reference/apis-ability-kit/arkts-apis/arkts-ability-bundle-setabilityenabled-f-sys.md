@@ -12,7 +12,7 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -43,7 +43,7 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -64,4 +64,4 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

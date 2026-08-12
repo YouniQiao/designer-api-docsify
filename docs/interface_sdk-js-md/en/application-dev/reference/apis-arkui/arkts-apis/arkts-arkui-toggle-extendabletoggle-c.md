@@ -2,7 +2,7 @@
 
 Defines the Extendable Toggle.
 
-**Inheritance/Implementation:** ExtendableToggle implements [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md/arkts-arkui-toggle-attribute.md)
+**Inheritance/Implementation:** ExtendableToggle implements [ToggleAttribute](arkts-arkui-toggle-toggleattribute-i.md#ToggleAttribute)
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ Constructor of Extendable Toggle.
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
 | options | [ToggleOptions](arkts-arkui-toggle-toggleoptions-i.md) | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -76,9 +76,9 @@ Entry of Extendable Toggle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setToggleOptions
 

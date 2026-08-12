@@ -13,7 +13,7 @@ Before calling any APIs in ImageReceiver, you must create an ImageReceiver insta
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -34,7 +34,7 @@ Obtains a surface ID for the camera or other components. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -107,7 +107,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 > **NOTE：**
 > 
 > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
-> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#ImageSource) object returned by this API is no longer needed,
 > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
 > the release.
 
@@ -121,7 +121,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Image&gt; |
+| Promise & lt;Image & gt; |
 
 ## Examples
 
@@ -155,7 +155,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 > **NOTE：**
 > 
 > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
-> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#ImageSource) object returned by this API is no longer needed,
 > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
 > the release.
 
@@ -169,7 +169,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Image&gt; |
+| Promise & lt;Image & gt; |
 
 ## Examples
 
@@ -210,7 +210,7 @@ Releases this ImageReceiver instance. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

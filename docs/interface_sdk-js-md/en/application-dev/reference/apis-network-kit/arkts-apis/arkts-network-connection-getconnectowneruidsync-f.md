@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getConnectOwnerUidSync
@@ -30,9 +30,9 @@ Obtains the data network that is activated by default.You can only call this met
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-protocoltype-e.md) | Yes | Protocol type. |
-| local | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Local net address. |
-| remote | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes | Remote net address. |
+| protocol | ProtocolType | Yes | Protocol type. |
+| local | NetAddress | Yes | Local net address. |
+| remote | NetAddress | Yes | Remote net address. |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ Obtains the data network that is activated by default.You can only call this met
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-nonvpn-application) | Incorrect usage in non-VPN application. |
+| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-nonvpn-application) | Incorrect usage in non-VPN application. |
 
 ## Examples
 

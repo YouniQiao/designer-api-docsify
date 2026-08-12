@@ -37,3 +37,51 @@ Ability首帧绘制完成时触发的回调函数。
 | --- | --- | --- | --- |
 | data | [AbilityFirstFrameStateData](arkts-ability-abilityfirstframestatedata-i-sys.md) | 是 | 表示首帧绘制完成时返回的数据。 |
 
+## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 创建Ability首帧绘制状态监听对象
+let observer: appManager.AbilityFirstFrameStateObserver = {
+  onAbilityFirstFrameDrawn(data: appManager.AbilityFirstFrameStateData) {
+    console.info(`onAbilityFirstFrameDrawn success, abilityFirstFrameStateData: ${data}.`);
+  }
+};
+
+try {
+  // 注册Ability首帧绘制完成事件监听
+  appManager.on('abilityFirstFrameState', observer);
+} catch (e) {
+  let code = (e as BusinessError).code;
+  let msg = (e as BusinessError).message;
+  console.error(`appmanager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class MyObserver implements appManager.AbilityFirstFrameStateObserver {
+  onAbilityFirstFrameDrawn(data: appManager.AbilityFirstFrameStateData) {
+    console.info(`onAbilityFirstFrameDrawn success, abilityFirstFrameStateData: ${data}.`);
+  }
+}
+
+try {
+  let observer = new MyObserver();
+  appManager.onAbilityFirstFrameStateChange(observer);
+} catch (e) {
+  let code = (e as BusinessError).code;
+  let msg = (e as BusinessError).message;
+  console.error(`appmanager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
+

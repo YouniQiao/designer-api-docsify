@@ -1,7 +1,7 @@
 # @ohos.resourceManager
 
 This module provides the capabilities to access application resources and system resources. It allows applications to obtain the best-matching application or system resources based on the current   
-[configuration](arkts-localization-resourcemanager-configuration-c.md), supporting internationalization resource matching and multi-device adaptation. For details about the matching rules, see   
+[configuration](arkts-localization-resourcemanager-configuration-c.md#Configuration), supporting internationalization resource matching and multi-device adaptation. For details about the matching rules, see   
 [Matching Resources](../../../quick-start/resource-categories-and-access.md#matching-resources).
 
 The configuration includes language, script, country/region, orientation, color mode, Mobile Country Code (MCC), Mobile Network Code (MNC), device type, and screen density.
@@ -15,7 +15,7 @@ and color mode.
 
 **How to Use**  
 - In the FA model, you need to import the module and then call   
-[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) to obtain a **ResourceManager** object.  
+[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) to obtain a **ResourceManager** object.  
 - Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object   
 through context without importing any module. For details about the context, see   
 [application context](../../../application-models/application-context-stage.md).
@@ -35,7 +35,7 @@ through context without importing any module. For details about the context, see
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary
@@ -63,7 +63,7 @@ import { resourceManager } from 'kits/@kit.LocalizationKit';
 | Name | Description |
 | --- | --- |
 | [AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md) | Asynchronous callback interface. |
-| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.  > **NOTE：** >  > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. >  > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\\$r(*resource-address*).id`, for example, `\\$r('app.string.test').id`. >  > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md/arkts-ability-application-createmodulecontext-f.md#createmodulecontext) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). >  > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). |
+| [ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md) | Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.  > **NOTE：** >  > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. >  > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\\$r(*resource-address*).id`, for example, `\\$r('app.string.test').id`. >  > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). >  > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). |
 
 ### Enums
 

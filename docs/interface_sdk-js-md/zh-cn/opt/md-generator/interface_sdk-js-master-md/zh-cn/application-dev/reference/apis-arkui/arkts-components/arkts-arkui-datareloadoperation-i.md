@@ -51,7 +51,7 @@ type: DataOperationType.RELOAD
 
 数据全部重载类型。
 
-**类型：** DataOperationType.RELOAD
+**类型：** [DataOperationType.RELOAD](arkts-arkui-dataoperationtype-e.md)
 
 **起始版本：** 12
 

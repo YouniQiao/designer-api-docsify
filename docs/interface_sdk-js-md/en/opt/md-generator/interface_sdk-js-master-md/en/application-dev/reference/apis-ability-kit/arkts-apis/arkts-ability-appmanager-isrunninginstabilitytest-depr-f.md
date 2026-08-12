@@ -17,7 +17,7 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#isRunningInStabilityTest
+**Substitutes:** [isRunningInStabilityTest](ohos.app.ability.appManager/appManager#isRunningInStabilityTest)
 
 <!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void-End-->
 
@@ -61,7 +61,7 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#isRunningInStabilityTest
+**Substitutes:** [isRunningInStabilityTest](ohos.app.ability.appManager/appManager#isRunningInStabilityTest)
 
 <!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>--><!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>-End-->
 
@@ -71,7 +71,7 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

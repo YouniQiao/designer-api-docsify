@@ -1,6 +1,6 @@
 # AVMusicTemplate
 
-调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。
+调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。
 
 > **说明：**
 > 
@@ -32,13 +32,13 @@ destroy(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## offClearSearchHistory
 
@@ -66,9 +66,9 @@ offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offDownloadMediaEntity
 
@@ -96,9 +96,9 @@ offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offExecuteAction
 
@@ -126,9 +126,9 @@ offExecuteAction(callback?: ExecuteActionEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offFavoriteMediaEntity
 
@@ -156,9 +156,9 @@ offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offHandleMemberPurchase
 
@@ -186,9 +186,9 @@ offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offLogin
 
@@ -216,9 +216,9 @@ offLogin(callback?: LoginEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offPlayForSearch
 
@@ -246,9 +246,9 @@ offPlayForSearch(callback?: PlayForSearchEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offPlayMediaEntity
 
@@ -276,9 +276,9 @@ offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offProblemAndAdvice
 
@@ -306,9 +306,9 @@ offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCompilation
 
@@ -336,9 +336,9 @@ offQueryCompilation(callback?: QueryCompilationEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCompilationByKeyword
 
@@ -366,9 +366,9 @@ offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCurrentSingle
 
@@ -396,9 +396,9 @@ offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCustomContent
 
@@ -426,9 +426,9 @@ offQueryCustomContent(callback?: QueryCustomContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryHotWords
 
@@ -456,9 +456,9 @@ offQueryHotWords(callback?: QueryHotWordsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMainTabs
 
@@ -486,9 +486,9 @@ offQueryMainTabs(callback?: QueryMainTabsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMediaEntity
 
@@ -516,9 +516,9 @@ offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMediaEntityByKeyword
 
@@ -546,9 +546,9 @@ offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMediaTabContent
 
@@ -576,9 +576,9 @@ offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMemberPurchase
 
@@ -606,9 +606,9 @@ offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryPlaylist
 
@@ -636,9 +636,9 @@ offQueryPlaylist(callback?: QueryPlaylistEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryRecommendMediaEntityList
 
@@ -666,9 +666,9 @@ offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent):
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQuerySearchHistory
 
@@ -696,9 +696,9 @@ offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offRequestDialogInfo
 
@@ -726,9 +726,9 @@ offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offSettingsChange
 
@@ -756,9 +756,9 @@ offSettingsChange(callback?: SettingsChangeEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onClearSearchHistory
 
@@ -786,9 +786,9 @@ onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onDownloadMediaEntity
 
@@ -816,9 +816,9 @@ onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onExecuteAction
 
@@ -846,9 +846,9 @@ onExecuteAction(callback: ExecuteActionEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onFavoriteMediaEntity
 
@@ -876,9 +876,9 @@ onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onHandleMemberPurchase
 
@@ -906,9 +906,9 @@ onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onLogin
 
@@ -936,9 +936,9 @@ onLogin(callback: LoginEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onPlayForSearch
 
@@ -966,9 +966,9 @@ onPlayForSearch(callback: PlayForSearchEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onPlayMediaEntity
 
@@ -996,9 +996,9 @@ onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onProblemAndAdvice
 
@@ -1026,9 +1026,9 @@ onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCompilation
 
@@ -1056,9 +1056,9 @@ onQueryCompilation(callback: QueryCompilationEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCompilationByKeyword
 
@@ -1086,9 +1086,9 @@ onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCurrentSingle
 
@@ -1116,9 +1116,9 @@ onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCustomContent
 
@@ -1146,9 +1146,9 @@ onQueryCustomContent(callback: QueryCustomContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryHotWords
 
@@ -1176,9 +1176,9 @@ onQueryHotWords(callback: QueryHotWordsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMainTabs
 
@@ -1206,9 +1206,9 @@ onQueryMainTabs(callback: QueryMainTabsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMediaEntity
 
@@ -1236,9 +1236,9 @@ onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMediaEntityByKeyword
 
@@ -1266,9 +1266,9 @@ onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMediaTabContent
 
@@ -1296,9 +1296,9 @@ onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMemberPurchase
 
@@ -1326,9 +1326,9 @@ onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryPlaylist
 
@@ -1356,9 +1356,9 @@ onQueryPlaylist(callback: QueryPlaylistEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryRecommendMediaEntityList
 
@@ -1386,9 +1386,9 @@ onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): v
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQuerySearchHistory
 
@@ -1416,9 +1416,9 @@ onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onRequestDialogInfo
 
@@ -1446,9 +1446,9 @@ onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onSettingsChange
 
@@ -1476,9 +1476,9 @@ onSettingsChange(callback: SettingsChangeEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## reportExecuteAction
 
@@ -1507,15 +1507,15 @@ reportExecuteAction(actionType: string, params: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setCurrentSingle
 
@@ -1543,15 +1543,15 @@ setCurrentSingle(single: Single): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setCustomElements
 
@@ -1582,15 +1582,15 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setDialogCommand
 
@@ -1619,15 +1619,15 @@ setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setDownloadMediaEntityStatus
 
@@ -1655,15 +1655,15 @@ setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setExtensionAbility
 
@@ -1691,15 +1691,15 @@ setExtensionAbility(want: WantAgent): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setMediaEntities
 
@@ -1727,15 +1727,15 @@ setMediaEntities(entities: MediaEntity[]): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setPlaylist
 
@@ -1763,15 +1763,15 @@ setPlaylist(playlist: PageMediaEntity): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setSettings
 
@@ -1799,15 +1799,15 @@ setSettings(settingItems: SettingItem[]): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setTabContent
 
@@ -1836,15 +1836,15 @@ setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setUserInfo
 
@@ -1872,15 +1872,15 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## startTemplate
 
@@ -1902,13 +1902,13 @@ startTemplate(): Promise<OperResult>
 
 | 类型 |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## sessionId
 

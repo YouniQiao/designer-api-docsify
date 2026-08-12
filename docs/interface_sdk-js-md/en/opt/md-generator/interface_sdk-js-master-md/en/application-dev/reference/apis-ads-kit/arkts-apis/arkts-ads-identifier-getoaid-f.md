@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from 'kits/@kit.AdsKit';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## getOAID
@@ -37,7 +37,7 @@ Obtains the OAID. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
+| [17300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-system-internal-error) |
 
 ## Examples
 
@@ -79,13 +79,13 @@ Obtains the OAID. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
+| [17300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-system-internal-error) |
 
 ## Examples
 

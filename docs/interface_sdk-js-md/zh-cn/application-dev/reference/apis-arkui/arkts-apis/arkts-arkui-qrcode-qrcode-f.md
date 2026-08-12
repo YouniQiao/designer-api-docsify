@@ -30,7 +30,7 @@ export declare function QRCode(
 
 | 类型 | 说明 |
 | --- | --- |
-| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
+| [QRCodeAttribute](arkts-arkui-qrcode-qrcodeattribute-i.md) |  |
 
 
 ## QRCode
@@ -59,11 +59,11 @@ export declare function QRCode(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;QRCodeAttribute&gt; | 是 | QRCode属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[QRCodeAttribute](arkts-arkui-qrcode-qrcodeattribute-i.md)&gt; | 是 | QRCode属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
+| [QRCodeAttribute](arkts-arkui-qrcode-qrcodeattribute-i.md) |  |
 

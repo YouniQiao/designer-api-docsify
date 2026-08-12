@@ -13,7 +13,7 @@ Represents detailed information about a certificate.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert

@@ -15,7 +15,7 @@ Declaration of the menu item on the right side.
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from 'kits/@kit.ArkUI';
+import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from '@kit.ArkUI';
 ```
 
 ## action
@@ -68,7 +68,7 @@ accessibilityDescription?: ResourceStr
 
 The accessibilityDescription of this menu item.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -110,7 +110,7 @@ accessibilityText?: ResourceStr
 
 The accessibilityText of this menu item.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -150,7 +150,7 @@ label?: ResourceStr
 
 Icon label for this menu item.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -190,7 +190,7 @@ value: ResourceStr
 
 Icon resource for this menu item.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

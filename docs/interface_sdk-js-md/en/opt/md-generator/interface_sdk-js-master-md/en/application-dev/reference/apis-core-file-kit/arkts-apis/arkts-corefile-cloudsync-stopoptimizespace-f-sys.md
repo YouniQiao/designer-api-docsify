@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## stopOptimizeSpace
@@ -29,8 +29,8 @@ Synchronously stops optimizing cloud resource space. This method is used with **
 | Error Code ID |
 | --- |
 | 22400005 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## Examples

@@ -144,7 +144,7 @@ Sets the video playback position with the specified seek mode.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | number | Yes |
-| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | Yes |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | Yes |
 
 ## start
 

@@ -2,7 +2,7 @@
 
 消息类，持有Worker线程间传递的数据，MessageEvent类继承Event。
 
-**继承/实现关系：** MessageEvent extends [Event](arkts-arkts-worker-event-i.md)
+**继承/实现关系：** MessageEvent extends [Event](arkts-arkts-worker-event-i.md#Event)
 
 **起始版本：** 7
 

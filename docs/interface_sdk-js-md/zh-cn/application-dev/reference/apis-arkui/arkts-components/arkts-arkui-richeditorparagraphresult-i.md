@@ -40,7 +40,7 @@ style: RichEditorParagraphStyle
 
 段落样式。
 
-**类型：** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**类型：** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **起始版本：** 11
 

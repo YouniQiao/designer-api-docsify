@@ -25,14 +25,14 @@ export declare function ToolBarItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | 否 | 分栏选项 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器 |
+| options | [ToolBarItemOptions](arkts-arkui-toolbar-toolbaritemoptions-i.md) | 否 | 分栏选项 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarItemAttribute](../arkts-components/arkts-arkui-toolbaritem-attribute.md) |  |
+| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) |  |
 
 
 ## ToolBarItem
@@ -62,12 +62,12 @@ export declare function ToolBarItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ToolBarItemAttribute&gt; | 是 | 用于设置toolbaritem属性的回调。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md)&gt; | 是 | 用于设置toolbaritem属性的回调。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToolBarItemAttribute](../arkts-components/arkts-arkui-toolbaritem-attribute.md) | ToolBarItem的属性。 |
+| [ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md) | ToolBarItem的属性。 |
 

@@ -5,7 +5,7 @@ Lightweight storage provides applications with data processing capability and al
 > **NOTE：**
 
 > - The APIs of this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.data.preferences](arkts-data-preferences.md).
+> [@ohos.data.preferences](arkts-data-preferences.md#preferences).
 
 **Since:** 6
 
@@ -13,7 +13,7 @@ Lightweight storage provides applications with data processing capability and al
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.preferences.preferences
+**Substitutes:** [preferences](ohos.preferences.preferences)
 
 <!--Device-unnamed-declare namespace storage--><!--Device-unnamed-declare namespace storage-End-->
 
@@ -39,7 +39,7 @@ Lightweight storage provides applications with data processing capability and al
 
 | Name | Description |
 | --- | --- |
-| [Storage](arkts-arkdata-storage-storage-i.md) | Provides APIs for obtaining and modifying storage data.  Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync) or  [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getstoragesync) to obtain the **Storage** instance. |
+| [Storage](arkts-arkdata-storage-storage-i.md) | Provides APIs for obtaining and modifying storage data.  Before calling the following APIs, use [data_storage.getStorage](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) or  [data_storage.getStorageSync](arkts-arkdata-storage-getstoragesync-f.md#getStorageSync) to obtain the **Storage** instance. |
 | [StorageObserver](arkts-arkdata-storage-storageobserver-i.md) | Define the change data information object. |
 
 ### Types

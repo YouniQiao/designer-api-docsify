@@ -6,7 +6,7 @@
 function setUserId(name: string, value: string): void
 ```
 
-设置用户ID值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md)数据处理者时进行关联。
+设置用户ID值。用于在配置[Processor](arkts-performanceanalysis-hiappevent-processor-i.md#Processor)数据处理者时进行关联。
 
 **起始版本：** 11
 
@@ -27,7 +27,7 @@ function setUserId(name: string, value: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

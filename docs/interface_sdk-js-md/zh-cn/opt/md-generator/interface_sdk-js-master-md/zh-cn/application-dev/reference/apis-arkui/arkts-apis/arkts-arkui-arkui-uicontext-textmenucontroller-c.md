@@ -23,16 +23,16 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 > >
 > - 此接口调用后整个应用进程都会生效。
 > >
-> - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md)使用。
+> - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)使用。
 > >
 > - 此接口调用后将影响文本组件的接口[editMenuOptions](TextAttribute#editMenuOptions)，其回调方法
-> [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu)的入参列表中不包含被屏蔽的菜单选项。
+> [onCreateMenu](EditMenuOptions.onCreateMenu)的入参列表中不包含被屏蔽的菜单选项。
 > >
-> - 涉及文本选择菜单的组件有 [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i)、[TextArea](../../apis-arkui/arkts-components/arkts-arkui-text_area-i)
-> 、[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、[Search](../../apis-arkui/arkts-components/arkts-arkui-search-i)、
-> [RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)、[Web](../../apis-arkui/arkts-components/arkts-arkui-web-i)。
+> - 涉及文本选择菜单的组件有 [Text](./@internal/component/ets/text)、[TextArea](./@internal/component/ets/text_area)
+> 、[TextInput](./@internal/component/ets/text_input)、[Search](./@internal/component/ets/search)、
+> [RichEditor](./@internal/component/ets/rich_editor)、[Web](./@internal/component/ets/web)。
 > >
-> - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的复制、剪切、全选、粘贴以外的菜单项。
+> - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md#TextMenuItemId)中的复制、剪切、全选、粘贴以外的菜单项。
 > >
 > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先设置的disableSystemServiceMenuItems的设置结果为准。。
 > >
@@ -60,7 +60,7 @@ static disableMenuItems(items: Array<TextMenuItemId>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| items | Array&lt;TextMenuItemId&gt; | 是 |
+| items | Array&lt;[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)&gt; | 是 |
 
 ## disableSystemServiceMenuItems
 
@@ -74,13 +74,13 @@ static disableSystemServiceMenuItems(disable: boolean): void
 > >
 > - 此接口调用后整个应用进程都会生效。
 > >
-> - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md)使用。
+> - 此接口可在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)使用。
 > >
 > - 此接口调用后将影响文本组件的接口[editMenuOptions](TextAttribute#editMenuOptions)，其回调方法[onCreateMenu](> EditMenuOptions.onCreateMenu)的入参列表中不包含被屏蔽的菜单选项。
 > >
-> - 涉及文本选择菜单的组件有 [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i)、[TextArea](> ./@internal/component/ets/text_area)、[TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)、[Search](> ./@internal/component/ets/search)、[RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)、[Web](> ./@internal/component/ets/web)。
+> - 涉及文本选择菜单的组件有 [Text](./@internal/component/ets/text)、[TextArea](> ./@internal/component/ets/text_area)、[TextInput](./@internal/component/ets/text_input)、[Search](> ./@internal/component/ets/search)、[RichEditor](./@internal/component/ets/rich_editor)、[Web](> ./@internal/component/ets/web)。
 > >
-> - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)中的复制、剪切、全选、粘贴以外的菜单项。
+> - 系统服务菜单项指除[TextMenuItemId](arkts-arkui-textmenuitemid-c.md#TextMenuItemId)中的复制、剪切、全选、粘贴以外的菜单项。
 > >
 > - 当disableSystemServiceMenuItems与disableMenuItems同时设置时，以先调用的方法为准。例如：先调用disableSystemServiceMenuItems(true)，再调用disableMenuItems([...])时，以disableSystemServiceMenuItems的设置为准；反之，先调用disableMenuItems([...])时，则以disableMenuItems的设置为准。建议根据实际禁用范围需求选择使用其中一个方法，避免同时调用。
 > >

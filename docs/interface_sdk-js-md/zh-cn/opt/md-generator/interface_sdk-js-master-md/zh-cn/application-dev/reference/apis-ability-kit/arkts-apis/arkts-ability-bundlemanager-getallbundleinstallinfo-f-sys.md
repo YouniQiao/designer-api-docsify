@@ -24,14 +24,14 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; |
+| Promise & lt;Array & lt;Record & lt;string, Object & gt; & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -18,7 +18,7 @@ function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; |
+| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; |
 
 ## 示例
 

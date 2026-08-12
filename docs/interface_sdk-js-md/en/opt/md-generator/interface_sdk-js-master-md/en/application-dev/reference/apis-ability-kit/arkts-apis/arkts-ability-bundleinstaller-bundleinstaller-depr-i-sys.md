@@ -6,7 +6,7 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md)
+**Substitutes:** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller)
 
 <!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
 
@@ -26,7 +26,7 @@ Install an application in a HAP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller.install](arkts-ability-installer-bundleinstaller-i-sys.md#install)
+**Substitutes:** [install](arkts-ability-installer-bundleinstaller-i-sys.md#install)
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -40,9 +40,9 @@ Install an application in a HAP.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundleFilePaths | Array&lt;string&gt; | Yes |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | Yes |
+| bundleFilePaths | Array & lt;string & gt; | Yes |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes |
 
 ## recover
 
@@ -56,7 +56,7 @@ recover an application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller.recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover)
+**Substitutes:** [recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover)
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -71,8 +71,8 @@ recover an application.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | Yes |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes |
 
 ## uninstall
 
@@ -86,7 +86,7 @@ Uninstall an application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.BundleInstaller.uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
+**Substitutes:** [uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -101,5 +101,5 @@ Uninstall an application.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | Yes |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes |

@@ -1,8 +1,8 @@
 # ClickEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)。
 
-**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**继承/实现关系：** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **起始版本：** 7
 
@@ -58,7 +58,7 @@ preventDefault: () => void
 
 | 错误码ID |
 | --- |
-| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) |
+| [100017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-event.md#100017-组件不支持阻止默认事件) |
 
 ## displayX
 
@@ -188,7 +188,7 @@ screenX: number
 
 **废弃版本：** 10
 
-**替代接口：** [ClickEvent#windowX](arkts-arkui-clickevent-i.md#windowx)
+**替代接口：** [windowX](#windowX)
 
 <!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
@@ -210,7 +210,7 @@ screenY: number
 
 **废弃版本：** 10
 
-**替代接口：** [ClickEvent#windowY](arkts-arkui-clickevent-i.md#windowy)
+**替代接口：** [windowY](#windowY)
 
 <!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
@@ -267,7 +267,7 @@ x: number
 ```
 
 点击位置在被点击元素为基准的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中的X坐标。onClick的  
-[distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
+[distanceThreshold](arkts-arkui-commonmethod-c.md#onClick)设置后，点击位置为抬手点。触发事件的是键盘或手柄时，点击位置为被点击元素的中心点。
 
 单位：vp
 

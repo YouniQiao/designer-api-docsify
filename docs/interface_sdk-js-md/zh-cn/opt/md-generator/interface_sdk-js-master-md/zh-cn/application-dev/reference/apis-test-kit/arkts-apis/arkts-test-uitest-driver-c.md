@@ -1,6 +1,6 @@
 # Driver
 
-Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过{@link create}创建实例。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+Driver类为uitest测试框架的总入口，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。通过[create](create)创建实例。该类提供的方法除Driver.create()和Driver.createUIEventObserver()以外的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 9
 
@@ -34,15 +34,15 @@ assertComponentExist(on: On): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000003](../errorcode-uitest.md#17000003-断言失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-断言失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -83,14 +83,14 @@ click(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -132,14 +132,14 @@ clickAt(point: Point): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -180,14 +180,14 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -231,7 +231,7 @@ static create(): Driver
 
 | 错误码ID |
 | --- |
-| [17000001](../errorcode-uitest.md#17000001-初始化失败) |
+| [17000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000001-初始化失败) |
 
 ## 示例
 
@@ -270,7 +270,7 @@ createUIEventObserver(): UIEventObserver
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -304,22 +304,22 @@ crownRotate(d: number, speed?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| d | number | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | speed | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -362,14 +362,14 @@ delayMs(duration: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -410,14 +410,14 @@ doubleClick(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -457,14 +457,14 @@ doubleClickAt(point: Point): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -508,14 +508,14 @@ drag(startx: number, starty: number, endx: number, endy: number, speed?: number)
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -558,14 +558,14 @@ dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -607,14 +607,14 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -661,14 +661,14 @@ Get the current layout information and save as file with json format.
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -709,14 +709,14 @@ findComponent(on: On): Promise<Component>
 
 | 类型 |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -758,14 +758,14 @@ findComponents(on: On): Promise<Array<Component>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Component&gt;&gt; |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -807,14 +807,14 @@ findWindow(filter: WindowFilter): Promise<UiWindow>
 
 | 类型 |
 | --- |
-| Promise&lt;UiWindow&gt; |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -857,14 +857,14 @@ fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -905,14 +905,14 @@ fling(direction: UiDirection, speed: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -954,14 +954,14 @@ fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -995,13 +995,13 @@ getDisplayDensity(): Promise<Point>
 
 | 类型 |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1041,14 +1041,14 @@ getDisplayDensity(displayId: number): Promise<Point>
 
 | 类型 |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1082,13 +1082,13 @@ getDisplayRotation(): Promise<DisplayRotation>
 
 | 类型 |
 | --- |
-| Promise&lt;DisplayRotation&gt; |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1128,14 +1128,14 @@ getDisplayRotation(displayId: number): Promise<DisplayRotation>
 
 | 类型 |
 | --- |
-| Promise&lt;DisplayRotation&gt; |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1169,13 +1169,13 @@ getDisplaySize(): Promise<Point>
 
 | 类型 |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1215,14 +1215,14 @@ getDisplaySize(displayId: number): Promise<Point>
 
 | 类型 |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1267,15 +1267,15 @@ injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<voi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -1324,14 +1324,14 @@ injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boole
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1389,14 +1389,14 @@ injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: numbe
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1444,14 +1444,14 @@ inputText(p: Point, text: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1499,15 +1499,15 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1561,14 +1561,14 @@ isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, durat
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1610,14 +1610,14 @@ isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promis
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1660,14 +1660,14 @@ isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Pro
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1705,22 +1705,22 @@ knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pointers | Array&lt;Point&gt; | 是 |
+| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | 是 |
 | times | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -1763,14 +1763,14 @@ longClick(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1811,14 +1811,14 @@ longClickAt(point: Point, duration?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1859,14 +1859,14 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -1907,21 +1907,21 @@ mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| key1 | number | 否 |
-| key2 | number | 否 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -1957,21 +1957,21 @@ mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Pr
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| key1 | number | 否 |
-| key2 | number | 否 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2013,14 +2013,14 @@ mouseDrag(from: Point, to: Point, speed?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2063,14 +2063,14 @@ mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<vo
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2113,14 +2113,14 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -2165,21 +2165,21 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Prom
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| key1 | number | 否 |
-| key2 | number | 否 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2216,22 +2216,22 @@ mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, durat
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | 是 |
-| key1 | number | 否 |
-| key2 | number | 否 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 | duration | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2272,14 +2272,14 @@ mouseMoveTo(p: Point): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2321,14 +2321,14 @@ mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2364,22 +2364,22 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number): P
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 |
 | down | boolean | 是 |
-| d | number | 是 |
-| key1 | number | 否 |
-| key2 | number | 否 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2415,23 +2415,23 @@ mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, sp
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | 是 |
 | down | boolean | 是 |
-| d | number | 是 |
-| key1 | number | 否 |
-| key2 | number | 否 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 否 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 | speed | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2471,14 +2471,14 @@ penClick(point: Point): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2518,14 +2518,14 @@ penDoubleClick(point: Point): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2566,14 +2566,14 @@ penLongClick(point: Point, pressure?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2616,14 +2616,14 @@ penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number):
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2657,13 +2657,13 @@ pressBack(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2703,14 +2703,14 @@ pressBack(displayId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -2744,13 +2744,13 @@ pressHome(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2790,14 +2790,14 @@ pressHome(displayId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -2837,14 +2837,14 @@ screenCap(savePath: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2885,14 +2885,14 @@ screenCap(savePath: string, displayId: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2933,14 +2933,14 @@ screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -2985,14 +2985,14 @@ setDisplayRotation(rotation: DisplayRotation): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3032,14 +3032,14 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3083,14 +3083,14 @@ swipe(startx: number, starty: number, endx: number, endy: number, speed?: number
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3134,14 +3134,14 @@ swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -3183,14 +3183,14 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -3237,15 +3237,15 @@ touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: Touc
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -3281,22 +3281,22 @@ touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?
 | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | 是 |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | 是 |
-| d | number | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | speed | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -3331,21 +3331,21 @@ triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | key0 | number | 是 |
-| key1 | number | 是 |
-| key2 | number | 否 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 是 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3381,22 +3381,22 @@ triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | key0 | number | 是 |
-| key1 | number | 是 |
-| key2 | number | 否 |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | 是 |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | 否 |
 | displayId | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3436,14 +3436,14 @@ triggerKey(keyCode: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3485,14 +3485,14 @@ triggerKey(keyCode: number, displayId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3542,15 +3542,15 @@ HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK opera
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
 
 ## 示例
 
@@ -3596,14 +3596,14 @@ waitForComponent(on: On, time: number): Promise<Component>
 
 | 类型 |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3644,14 +3644,14 @@ waitForIdle(idleTime: number, timeout: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 
@@ -3685,13 +3685,13 @@ wakeUpDisplay(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
 
 ## 示例
 

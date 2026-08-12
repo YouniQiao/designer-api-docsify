@@ -42,7 +42,7 @@ edgeEffect?: SwipeEdgeEffect
 
 Sets whether sliding to a boundary has a spring effect.
 
-**Type:** [SwipeEdgeEffect](../arkts-components/arkts-arkui-swipeedgeeffect-e.md)
+**Type:** [SwipeEdgeEffect](arkts-arkui-listitem-swipeedgeeffect-e.md)
 
 **Since:** 23
 
@@ -62,7 +62,7 @@ end?: CustomBuilder | SwipeActionItem
 
 An action item that appears when a list item slides left (when list direction is Vertical) or slides up (when list direction Horizontal).
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md)
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ start?: CustomBuilder | SwipeActionItem
 
 An action item that appears when a list item slides right (when list direction is Vertical) or slides down (when list direction Horizontal).
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md)
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 Provide an interface to set transition style when a page exits.
 
-**Inheritance/Implementation:** PageTransitionExit extends [CommonTransition](arkts-arkui-pagetransition-commontransition-c.md)
+**Inheritance/Implementation:** PageTransitionExit extends [CommonTransition](arkts-arkui-pagetransition-commontransition-c.md#CommonTransition)
 
 **Since:** 23
 

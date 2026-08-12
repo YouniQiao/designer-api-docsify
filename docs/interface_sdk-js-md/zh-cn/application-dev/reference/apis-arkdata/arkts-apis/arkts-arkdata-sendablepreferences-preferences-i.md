@@ -2,9 +2,9 @@
 
 Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable)，可以在ArkTS并发实例间（包括主线程、TaskPool&Worker工作线程）传递，传递的行为是引用传递，提供获取和修改存储数据的接口。
 
-下列接口都需先使用[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences)获取到Preferences实例，再通过此实例调用对应接口。
+下列接口都需先使用[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)获取到Preferences实例，再通过此实例调用对应接口。
 
-**继承/实现关系：** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**继承/实现关系：** Preferences extends [lang.ISendable](lang.ISendable)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ Preferences继承自[ISendable](../../../arkts-utils/arkts-sendable.md#isendable
 clear(): Promise<void>
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+清除缓存的Preferences实例中的所有数据，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ clear(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -63,7 +63,7 @@ promise.then(() => {
 clearSync(): void
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+清除缓存的Preferences实例中的所有数据，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
 **起始版本：** 12
 
@@ -79,7 +79,7 @@ clearSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -93,7 +93,7 @@ preferences.clearSync();
 delete(key: string): Promise<void>
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -121,8 +121,8 @@ delete(key: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -143,7 +143,7 @@ promise.then(() => {
 deleteSync(key: string): void
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
 **起始版本：** 12
 
@@ -165,8 +165,8 @@ deleteSync(key: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -206,7 +206,7 @@ flush(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -247,7 +247,7 @@ flushSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -290,8 +290,8 @@ get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -336,7 +336,7 @@ getAll(): Promise<lang.ISendable>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -382,7 +382,7 @@ getAllSync(): lang.ISendable
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -430,8 +430,8 @@ getSync(key: string, defValue: lang.ISendable): lang.ISendable
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -475,8 +475,8 @@ has(key: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -529,8 +529,8 @@ hasSync(key: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -572,8 +572,8 @@ off(type: 'change', callback?: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -601,7 +601,7 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 取消订阅进程间数据变更。
 
-本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
+本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
 
 **起始版本：** 12
 
@@ -624,8 +624,8 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -675,8 +675,8 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -716,9 +716,9 @@ on(type: 'change', callback: Callback<string>): void
 > **选取建议：** 需要监听所有数据变更时使用on('change')；需要精确知道特定Key变化并获取新值时使用on('dataChange')。
 > > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或者
-> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者
+> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -741,8 +741,8 @@ on(type: 'change', callback: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -767,17 +767,17 @@ preferences.flush().then(() => {
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)方法，持久化文件发生变更后，触发callback回调。
+订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行[flush](#flush)方法，持久化文件发生变更后，触发callback回调。
 
-本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
+本接口提供给申请了[dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用，多进程操作可能会损坏持久化文件，导致数据丢失。
 
 > **说明：**
 > 
 > 同一持久化文件在当前进程订阅进程间数据变更的最大数量为50次，超过最大限制后会订阅失败。建议在触发callback回调后及时取消订阅。
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或者
-> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者
+> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -800,9 +800,9 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
-| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [15500019](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500019-获取订阅服务失败) | Failed to obtain the subscription service. |
 
 ## 示例
 
@@ -827,13 +827,13 @@ preferences.flush().then(() => {
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
 ```
 
-精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)方法后，触发callback回调。
+精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](#flush)方法后，触发callback回调。
 
 > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或者
-> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-sendablepreferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或者
+> [deletePreferences](arkts-arkdata-sendablepreferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -857,8 +857,8 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -886,7 +886,7 @@ preferences.flush().then(() => {
 put(key: string, value: lang.ISendable): Promise<void>
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 > **说明：**
 > 
@@ -921,8 +921,8 @@ put(key: string, value: lang.ISendable): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 
@@ -943,7 +943,7 @@ promise.then(() => {
 putSync(key: string, value: lang.ISendable): void
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
 > **说明：**
 > 
@@ -972,8 +972,8 @@ putSync(key: string, value: lang.ISendable): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error. |
 
 ## 示例
 

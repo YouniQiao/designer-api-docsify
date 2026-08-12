@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## queryDriverInfo
@@ -36,16 +36,16 @@ Obtains the list of detailed information about peripheral drivers. If the device
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;DriverInfo&gt;&gt; | List of detailed information about peripheral drivers. |
+| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md)&gt;&gt; | List of detailed information about peripheral drivers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
+| [26300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application cannot call a system API. |
 
 ## Examples
 

@@ -8,7 +8,7 @@ Enum for location privacy type
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationPrivacyType
+**Substitutes:** [LocationPrivacyType](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -28,7 +28,7 @@ OTHERS = 0
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#OTHERS
+**Substitutes:** [OTHERS](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#OTHERS)
 
 <!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
 
@@ -46,7 +46,7 @@ STARTUP
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#STARTUP
+**Substitutes:** [STARTUP](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#STARTUP)
 
 <!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
 
@@ -64,7 +64,7 @@ CORE_LOCATION
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#CORE_LOCATION
+**Substitutes:** [CORE_LOCATION](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#CORE_LOCATION)
 
 <!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 

@@ -6,7 +6,7 @@
 function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySummary>
 ```
 
-��ȡӦ���Դ����ݣ�ʹ��Promise�����첽�ص���
+获取应用显存数据，使用Promise进行异步回调。
 
 **起始版本：** 21
 
@@ -26,13 +26,13 @@ function getGraphicsMemorySummary(interval?: number): Promise<GraphicsMemorySumm
 
 | 类型 |
 | --- |
-| Promise&lt;GraphicsMemorySummary&gt; |
+| Promise&lt;[GraphicsMemorySummary](arkts-performanceanalysis-hidebug-graphicsmemorysummary-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

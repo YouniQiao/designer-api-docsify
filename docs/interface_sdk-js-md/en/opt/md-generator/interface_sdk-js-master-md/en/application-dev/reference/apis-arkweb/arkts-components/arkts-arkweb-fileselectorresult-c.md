@@ -1,6 +1,6 @@
 # FileSelectorResult
 
-Defines the file selector result, related to {@link onFileSelectorShow} method.
+Defines the file selector result, related to [onFileSelectorShow](onFileSelectorShow) method.
 
 **Since:** 9
 
@@ -44,4 +44,4 @@ select a list of files.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fileList | Array&lt;string&gt; | Yes |
+| [fileList](../../apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistresponse-depr-i.md) | Array & lt;string & gt; | Yes |

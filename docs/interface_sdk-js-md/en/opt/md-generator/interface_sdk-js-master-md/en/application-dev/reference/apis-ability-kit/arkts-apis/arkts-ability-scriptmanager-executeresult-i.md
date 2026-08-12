@@ -11,7 +11,7 @@ Result of arkTS script execution.
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from 'kits/@kit.AbilityKit';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## code
@@ -40,7 +40,7 @@ Indicates result code.The value range is all integers.
 flags?: number
 ```
 
-Indicates the URIs read and write permissions which consistent with {@link Want#flags},flags must be one of {@link wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION},{@link wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION},{@link wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION}|{@link wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION}.The value range is all integers.
+Indicates the URIs read and write permissions which consistent with [flags](Want#flags),flags must be one of [FLAG_AUTH_READ_URI_PERMISSION](wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION),[FLAG_AUTH_WRITE_URI_PERMISSION](wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION),[FLAG_AUTH_READ_URI_PERMISSION](wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION)|[FLAG_AUTH_WRITE_URI_PERMISSION](wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION).The value range is all integers.
 
 **Type:** number
 

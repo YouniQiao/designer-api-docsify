@@ -18,7 +18,7 @@ coordinateSystemType:CoordinateSystemType
 
 Coordinate system type of the center point.
 
-**Type:** [CoordinateSystemType](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-coordinatesystemtype-e.md)
+**Type:** [CoordinateSystemType](arkts-notification-notificationrequest-coordinatesystemtype-e-sys.md)
 
 **Since:** 23
 

@@ -36,10 +36,10 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -78,16 +78,16 @@ getInputSurface(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -131,10 +131,10 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -173,10 +173,10 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -213,16 +213,16 @@ pause(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -266,11 +266,11 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -338,17 +338,17 @@ Prepares for recording.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -412,8 +412,8 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -450,14 +450,14 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -498,9 +498,9 @@ reset(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -537,15 +537,15 @@ reset(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -586,10 +586,10 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -626,16 +626,16 @@ resume(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -676,10 +676,10 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -716,16 +716,16 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -766,10 +766,10 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 
@@ -806,16 +806,16 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## 示例
 

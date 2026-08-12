@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| FlowItemAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

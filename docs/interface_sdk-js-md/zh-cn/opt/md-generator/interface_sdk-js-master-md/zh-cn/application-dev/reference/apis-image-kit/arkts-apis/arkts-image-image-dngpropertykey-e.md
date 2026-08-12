@@ -6,7 +6,7 @@
 > 
 > - 关于字段的更详细描述请参考DNG协议文档DNG Specification 1.4.0.0。
 > 
-> - 返回字段类型具体参考[DngMetadata](arkts-image-image-dngmetadata-c.md)。
+> - 返回字段类型具体参考[DngMetadata](arkts-image-image-dngmetadata-c.md#DngMetadata)。
 
 **起始版本：** 24
 

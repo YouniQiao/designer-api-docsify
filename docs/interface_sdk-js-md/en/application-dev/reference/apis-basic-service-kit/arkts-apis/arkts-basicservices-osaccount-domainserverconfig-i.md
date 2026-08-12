@@ -13,7 +13,7 @@ Represents the configuration of a domain server.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## domain
@@ -60,7 +60,7 @@ parameters: Record<string, Object>
 
 Server configuration parameters.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 18
 

@@ -2,9 +2,9 @@
 
 Defines the configuration options of the time picker dialog box.
 
-Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
+Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions).
 
-**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
+**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)
 
 **Since:** 8
 
@@ -172,7 +172,7 @@ Style of the accept button.
 
 **NOTE：**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md), the displayed effect is still a  capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a  capsule button ([Capsule](ButtonType)).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -222,7 +222,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -315,7 +315,7 @@ Style of the cancel button.
 
 **NOTE：**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. If both are set to **true**, the **primary** field will remain at the default value of false.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. If both are set to **true**, the **primary** field will remain at the default value of false.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -344,7 +344,7 @@ Default value:
 
 **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
 
-**Type:** [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-intl-datetimeoptions-i.md)
+**Type:** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
 
 **Since:** 12
 
@@ -523,7 +523,7 @@ Offset of the dialog box relative to the alignment position.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 10
 
@@ -547,7 +547,7 @@ Represents the callback triggered during the scrolling of the text picker when a
 
 When **enableCascade** is set to **true**, using this callback is not recommended due to the interdependent relationship between the AM/PM and hour columns. This callback indicates the moment an option enters the divider area during scrolling, and only the value of the currently scrolled column will change. The values of other non-scrolled columns will remain unchanged.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TimePickerResult&gt;
+**Type:** Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
 
 **Since:** 18
 
@@ -594,7 +594,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
 **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

@@ -18,7 +18,7 @@ controller: TextController
 
 Text controller.
 
-**Type:** [TextController](../arkts-apis/arkts-arkui-text-textcontroller-c.md)
+**Type:** [TextController](arkts-arkui-textcontroller-c.md)
 
 **Since:** 11
 

@@ -13,7 +13,7 @@ Define the WithEnv attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
+import { WithEnvAttribute, WithEnv } from '@kit.ArkUI';
 ```
 
 ## customEnv
@@ -40,14 +40,14 @@ Defining Custom Environment Variables
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | Key for custom environment variables. |
+| key | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | Yes | Key for custom environment variables. |
 | value | T | Yes | Value of custom environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
 
 ## env
 
@@ -73,12 +73,12 @@ Defining System Environment Variables
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Key for system environment variables. |
+| key | [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md)&lt;T&gt; | Yes | Key for system environment variables. |
 | value | T | Yes | Value of system environment variables. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute object. |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute object. |
 

@@ -4,7 +4,7 @@ Describes the parameters of the date picker.
 
 > **NOTE：**
 > 
-> - For details about how to use **Date**, see [TimePickerOptions](../arkts-apis/arkts-arkui-timepicker-timepickeroptions-i.md/arkts-arkui-timepicker-timepickeroptions-i.md).
+> - For details about how to use **Date**, see [TimePickerOptions](TimePickerOptions).
 > 
 > - Property modifications made to **DatePickerOptions** during the **DatePicker** scrolling process may not take
 > effect.
@@ -58,9 +58,9 @@ Date display mode.
 Default value: **DatePickerMode.DATE**, which means to display three columns: year, month, and day.
 
 In [DatePickerDialog](./date_picker), when **showTime** in  
-[DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md) is **true**, this parameter is ignored and the year,month, day columns are always shown.
+[DatePickerDialogOptions](arkts-arkui-datepickerdialogoptions-i.md#DatePickerDialogOptions) is **true**, this parameter is ignored and the year,month, day columns are always shown.
 
-**Type:** [DatePickerMode](../arkts-apis/arkts-arkui-datepicker-datepickermode-e.md)
+**Type:** [DatePickerMode](arkts-arkui-datepickermode-e.md)
 
 **Default:** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 

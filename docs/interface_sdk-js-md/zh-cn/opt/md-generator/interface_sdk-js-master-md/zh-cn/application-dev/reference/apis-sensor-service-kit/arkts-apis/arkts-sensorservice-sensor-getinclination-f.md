@@ -18,15 +18,15 @@ function getInclination(inclinationMatrix: Array<number>, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | 是 |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
 
 ## 示例
 
@@ -74,20 +74,20 @@ function getInclination(inclinationMatrix: Array<number>): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | 是 |
+| inclinationMatrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
 
 ## 示例
 

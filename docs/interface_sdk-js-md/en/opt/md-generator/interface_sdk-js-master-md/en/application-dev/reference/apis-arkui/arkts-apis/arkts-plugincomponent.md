@@ -17,7 +17,7 @@ The **PluginComponentManager** module provides APIs for the **PluginComponent** 
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## Summary

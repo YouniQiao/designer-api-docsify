@@ -62,7 +62,7 @@ actionControllerRoleType?: AccessibilityRoleType
 
 actionControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over part of the accessibility action of the composition
 
-**Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
+**Type:** AccessibilityRoleType
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ stateControllerRoleType?: AccessibilityRoleType
 
 stateControllerRoleType - the first component of a specific type found within the composition defined by accessibility group will take over the state attributes and announcement of the composition
 
-**Type:** [AccessibilityRoleType](../arkts-components/arkts-arkui-accessibilityroletype-e.md)
+**Type:** AccessibilityRoleType
 
 **Since:** 23
 

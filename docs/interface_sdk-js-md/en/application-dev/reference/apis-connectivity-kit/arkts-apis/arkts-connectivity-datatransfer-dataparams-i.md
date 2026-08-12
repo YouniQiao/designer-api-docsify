@@ -13,7 +13,7 @@ Describes the parameters for Data.
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address

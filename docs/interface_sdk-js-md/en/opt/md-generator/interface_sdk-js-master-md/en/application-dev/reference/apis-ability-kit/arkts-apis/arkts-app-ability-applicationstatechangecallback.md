@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from 'kits/@kit.AbilityKit';
+import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

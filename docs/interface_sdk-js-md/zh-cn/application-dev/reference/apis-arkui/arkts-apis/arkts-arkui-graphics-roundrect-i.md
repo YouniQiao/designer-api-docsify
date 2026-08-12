@@ -38,7 +38,7 @@ rect: Rect
 
 设置矩形的属性。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-arkui-rect-t.md)
 
 **起始版本：** 23
 

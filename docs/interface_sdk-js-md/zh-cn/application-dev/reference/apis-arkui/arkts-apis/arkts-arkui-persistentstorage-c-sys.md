@@ -38,5 +38,5 @@ constructor(appStorage: AppStorage, storage: Storage)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appStorage | [AppStorage](arkts-arkui-appstorage-c.md) | 是 | 应用级存储对象，PersistentStorage将基于此对象进行持久化管理 |
-| storage | [Storage](../../apis-arkdata/arkts-apis/arkts-arkdata-system-storage-storage-c.md) | 是 | 持久化存储对象，用于实际读写持久化数据。 |
+| storage | Storage | 是 | 持久化存储对象，用于实际读写持久化数据。 |
 

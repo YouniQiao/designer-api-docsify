@@ -32,27 +32,27 @@ function encapsulate(keyAlias: string, params: HuksParam[],
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | 函数返回的promise。 |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | 函数返回的promise。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | API is not supported. |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | The input parameter is invalid. |
-| [12000017](../errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists. |
-| [12000016](../errorcode-huks.md#12000016-设备密码未设置) | The screen lock password is not set. |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | The algorithm engine reported an error, please check the input parameters. |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | File operation failed. |
-| [12000003](../errorcode-huks.md#12000003-无效的密钥算法参数) | The algorithm parameters are invalid, please check the algorithm parameters. |
-| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | Algorithm parameters are missing, please check the algorithm parameters. |
-| [12000001](../errorcode-huks.md#12000001-该子功能不支持特性) | Algorithm mode is not supported |
-| [12000015](../errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM. |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | Memory is insufficient. |
-| [12000013](../errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | Queried credential does not exist |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameters are abnormal. |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | The queried key does not exist, please check the key-related parameters. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | API is not supported. |
+| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) | The input parameter is invalid. |
+| [12000017](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000017-同名密钥已存在) | The key with the same alias already exists. |
+| [12000016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000016-设备密码未设置) | The screen lock password is not set. |
+| [12000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) | The algorithm engine reported an error, please check the input parameters. |
+| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
+| [12000004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) | File operation failed. |
+| [12000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-无效的密钥算法参数) | The algorithm parameters are invalid, please check the algorithm parameters. |
+| [12000002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) | Algorithm parameters are missing, please check the algorithm parameters. |
+| [12000001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-该子功能不支持特性) | Algorithm mode is not supported |
+| [12000015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000015-调用其他系统服务失败) | Failed to obtain the security information via UserIAM. |
+| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) | Memory is insufficient. |
+| [12000013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000013-密钥设置生物访问控制时待绑定的凭据不存在) | Queried credential does not exist |
+| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) | Device environment or input parameters are abnormal. |
+| [12000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) | The queried key does not exist, please check the key-related parameters. |
 
 ## 示例
 

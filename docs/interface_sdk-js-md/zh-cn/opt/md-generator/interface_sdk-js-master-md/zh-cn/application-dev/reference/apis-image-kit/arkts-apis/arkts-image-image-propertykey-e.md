@@ -4,9 +4,9 @@
 
 - 格式示例中的key为：image.PropertyKey.XXX（XXX为枚举的名称，如：image.PropertyKey.NEW_SUBFILE_TYPE） 。  
 - 格式示例仅用于说明修改传值和读取结果的格式。具体接口使用方法请参考：  
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)（修改单个Exif字段）、  
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)（修改多个Exif字段）、  
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties)（读取多个Exif字段）。
+[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty)（修改单个Exif字段）、  
+[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties)（修改多个Exif字段）、  
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)（读取单个Exif字段）、[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties)（读取多个Exif字段）。
 
 **起始版本：** 7
 

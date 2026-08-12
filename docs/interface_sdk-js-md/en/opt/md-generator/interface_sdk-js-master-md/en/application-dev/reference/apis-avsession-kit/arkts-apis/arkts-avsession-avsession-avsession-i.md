@@ -11,7 +11,7 @@ AVSession object.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## activate
@@ -38,8 +38,8 @@ Activate the session, indicating that the session can accept control commands
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## activate
 
@@ -61,14 +61,14 @@ Activate the session, indicating that the session can accept control commands
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## deactivate
 
@@ -94,8 +94,8 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## deactivate
 
@@ -117,14 +117,14 @@ Deactivate the session, indicating that the session not ready to accept control 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## destroy
 
@@ -150,8 +150,8 @@ Destroy this session, the server will clean up the session resources
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## destroy
 
@@ -173,14 +173,14 @@ Destroy this session, the server will clean up the session resources
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## dispatchSessionEvent
 
@@ -201,16 +201,16 @@ Dispatch the session event of this session.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | string | Yes |
-| args | {[key: string]: Object} | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## dispatchSessionEvent
 
@@ -233,21 +233,21 @@ Dispatch the session event of this session.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | string | Yes |
-| args | {[key: string]: Object} | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## enableDesktopLyric
 
@@ -275,15 +275,15 @@ Enable desktop lyric for this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## getAVCastController
 
@@ -303,14 +303,14 @@ Get the cast controller when the session is casted to remote device.If the avses
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCastController&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## getAVCastController
 
@@ -332,14 +332,14 @@ Get the cast controller when the session is casted to remote device.If the avses
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVCastController&gt; |
+| Promise&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## getAllCastDisplays
 
@@ -361,14 +361,14 @@ Get all the current virtual display information for extended display.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;CastDisplayInfo&gt;&gt; |
+| Promise&lt;Array&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## getController
 
@@ -388,14 +388,14 @@ Get the current session's own controller
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVSessionController&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## getController
 
@@ -417,14 +417,14 @@ Get the current session's own controller
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVSessionController&gt; |
+| Promise&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## getDesktopLyricState
 
@@ -446,16 +446,16 @@ Get desktop lyric state such as lock state for this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DesktopLyricState&gt; |
+| Promise&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## getOutputDevice
 
@@ -475,14 +475,14 @@ Get output device information
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OutputDeviceInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## getOutputDevice
 
@@ -504,14 +504,14 @@ Get output device information
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;OutputDeviceInfo&gt; |
+| Promise&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## getOutputDeviceSync
 
@@ -539,8 +539,8 @@ Get output device information
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## isDesktopLyricVisible
 
@@ -562,16 +562,16 @@ Query desktop lyric visible state for this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## off('play')
 
@@ -594,15 +594,15 @@ Unregister play command callback.When canceling the callback, need to update the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'play' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('pause')
 
@@ -625,15 +625,15 @@ Unregister pause command callback.When canceling the callback, need to update th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'pause' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('stop')
 
@@ -656,15 +656,15 @@ Unregister stop command callback.When canceling the callback, need to update the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stop' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('playNext')
 
@@ -687,15 +687,15 @@ Unregister playNext command callback.When canceling the callback, need to update
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playNext' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('playPrevious')
 
@@ -718,15 +718,15 @@ Unregister playPrevious command callback.When canceling the callback, need to up
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playPrevious' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('fastForward')
 
@@ -749,15 +749,15 @@ Unregister fastForward command callback.When canceling the callback, need to upd
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'fastForward' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('rewind')
 
@@ -780,15 +780,15 @@ Unregister rewind command callback.When canceling the callback, need to update t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'rewind' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('playFromAssetId')
 
@@ -802,7 +802,7 @@ Unregister playFromAssetId command callback.
 
 **Deprecated since:** 20
 
-**Substitutes:** ohos.multimedia.avsession.AVSession#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -815,15 +815,15 @@ Unregister playFromAssetId command callback.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playFromAssetId' | Yes |
-| callback | (assetId: number) =&gt; void | No |
+| callback | (assetId: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('playWithAssetId')
 
@@ -852,8 +852,8 @@ Unsubscribes from playWithAssetId events.
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('seek')
 
@@ -876,15 +876,15 @@ Unregister seek command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'seek' | Yes |
-| callback | (time: number) =&gt; void | No |
+| callback | (time: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('setSpeed')
 
@@ -907,15 +907,15 @@ Unregister setSpeed command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setSpeed' | Yes |
-| callback | (speed: number) =&gt; void | No |
+| callback | (speed: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('setLoopMode')
 
@@ -938,15 +938,15 @@ Unregister setLoopMode command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setLoopMode' | Yes |
-| callback | (mode: LoopMode) =&gt; void | No |
+| callback | (mode: LoopMode) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('setTargetLoopMode')
 
@@ -969,14 +969,14 @@ Unregister setTargetLoopMode command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('toggleFavorite')
 
@@ -999,15 +999,15 @@ Unregister toggle favorite command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'toggleFavorite' | Yes |
-| callback | (assetId: string) =&gt; void | No |
+| callback | (assetId: string) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('handleKeyEvent')
 
@@ -1030,15 +1030,15 @@ Unregister media key handling callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'handleKeyEvent' | Yes |
-| callback | (event: KeyEvent) =&gt; void | No |
+| callback | (event: KeyEvent) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('outputDeviceChange')
 
@@ -1061,15 +1061,15 @@ Unregister session output device change callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | No |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('commonCommand')
 
@@ -1092,15 +1092,15 @@ Unregister session custom command change callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'commonCommand' | Yes |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | No |
+| callback | (command: string, args: {[key: string]: Object}) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('skipToQueueItem')
 
@@ -1123,15 +1123,15 @@ Unregister the item to play from the playlist change callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'skipToQueueItem' | Yes |
-| callback | (itemId: number) =&gt; void | No |
+| callback | (itemId: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('answer')
 
@@ -1160,9 +1160,9 @@ Unregister answer command callback.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('hangUp')
 
@@ -1191,9 +1191,9 @@ Unregister hangUp command callback.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('toggleCallMute')
 
@@ -1222,9 +1222,9 @@ Unregister toggleCallMute command callback.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('castDisplayChange')
 
@@ -1247,15 +1247,15 @@ Unregister listener for cast display information changed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'castDisplayChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CastDisplayInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## off('customDataChange')
 
@@ -1278,14 +1278,14 @@ Unsubscribes from custom data changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offDesktopLyricStateChanged
 
@@ -1307,14 +1307,14 @@ Unregister desktop lyric state changed callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1342,8 +1342,8 @@ Unregister desktop lyric visible state change callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offFastForward
 
@@ -1363,14 +1363,14 @@ Unregister fastForward command callback.When canceling the callback, need to upd
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt; | No |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offPlay
 
@@ -1390,14 +1390,14 @@ Unregister play command callback.When canceling the callback, need to update the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offPlayNext
 
@@ -1417,14 +1417,14 @@ Unregister playNext command callback.When canceling the callback, need to update
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offPlayPrevious
 
@@ -1444,14 +1444,14 @@ Unregister playPrevious command callback.When canceling the callback, need to up
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## offRewind
 
@@ -1471,14 +1471,14 @@ Unregister rewind command callback.When canceling the callback, need to update t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt; | No |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('play')
 
@@ -1486,7 +1486,7 @@ Unregister rewind command callback.When canceling the callback, need to update t
 on(type: 'play', callback: () => void): void
 ```
 
-Register play command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register play command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1501,15 +1501,15 @@ Register play command callback.As long as it is registered, it means that the ab
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'play' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('pause')
 
@@ -1517,7 +1517,7 @@ Register play command callback.As long as it is registered, it means that the ab
 on(type: 'pause', callback: () => void): void
 ```
 
-Register pause command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register pause command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1532,15 +1532,15 @@ Register pause command callback.As long as it is registered, it means that the a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'pause' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('stop')
 
@@ -1548,7 +1548,7 @@ Register pause command callback.As long as it is registered, it means that the a
 on(type: 'stop', callback: () => void): void
 ```
 
-Register stop command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register stop command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1563,15 +1563,15 @@ Register stop command callback.As long as it is registered, it means that the ab
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stop' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('playNext')
 
@@ -1579,7 +1579,7 @@ Register stop command callback.As long as it is registered, it means that the ab
 on(type: 'playNext', callback: () => void): void
 ```
 
-Register playNext command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register playNext command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1594,15 +1594,15 @@ Register playNext command callback.As long as it is registered, it means that th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playNext' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('playPrevious')
 
@@ -1610,7 +1610,7 @@ Register playNext command callback.As long as it is registered, it means that th
 on(type: 'playPrevious', callback: () => void): void
 ```
 
-Register playPrevious command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register playPrevious command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1625,15 +1625,15 @@ Register playPrevious command callback.As long as it is registered, it means tha
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playPrevious' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('fastForward')
 
@@ -1641,7 +1641,7 @@ Register playPrevious command callback.As long as it is registered, it means tha
 on(type: 'fastForward', callback: (time ?: number) => void): void
 ```
 
-Register fastForward command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register fastForward command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1656,15 +1656,15 @@ Register fastForward command callback.As long as it is registered, it means that
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'fastForward' | Yes |
-| callback | (time ?: number) =&gt; void | Yes |
+| callback | (time ?: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('rewind')
 
@@ -1672,7 +1672,7 @@ Register fastForward command callback.As long as it is registered, it means that
 on(type: 'rewind', callback: (time ?: number) => void): void
 ```
 
-Register rewind command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register rewind command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 10
 
@@ -1687,15 +1687,15 @@ Register rewind command callback.As long as it is registered, it means that the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'rewind' | Yes |
-| callback | (time ?: number) =&gt; void | Yes |
+| callback | (time ?: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('playFromAssetId')
 
@@ -1703,13 +1703,13 @@ Register rewind command callback.As long as it is registered, it means that the 
 on(type: 'playFromAssetId', callback: (assetId: number) => void): void
 ```
 
-Register playFromAssetId command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
+Register playFromAssetId command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)When canceling the callback, need to update the supported commands list.Each playback command only supports registering one callback,and the new callback will replace the previous one.
 
 **Since:** 11
 
 **Deprecated since:** 20
 
-**Substitutes:** ohos.multimedia.avsession.AVSession#on
+**Substitutes:** [on](ohos.multimedia.avsession.AVSession#on)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1722,15 +1722,15 @@ Register playFromAssetId command callback.As long as it is registered, it means 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playFromAssetId' | Yes |
-| callback | (assetId: number) =&gt; void | Yes |
+| callback | (assetId: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('playWithAssetId')
 
@@ -1759,8 +1759,8 @@ Subscribes to playWithAssetId events.
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('seek')
 
@@ -1783,15 +1783,15 @@ Register seek command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'seek' | Yes |
-| callback | (time: number) =&gt; void | Yes |
+| callback | (time: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('setSpeed')
 
@@ -1814,15 +1814,15 @@ Register setSpeed command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setSpeed' | Yes |
-| callback | (speed: number) =&gt; void | Yes |
+| callback | (speed: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('setLoopMode')
 
@@ -1845,15 +1845,15 @@ Register setLoopMode command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setLoopMode' | Yes |
-| callback | (mode: LoopMode) =&gt; void | Yes |
+| callback | (mode: LoopMode) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('setTargetLoopMode')
 
@@ -1876,14 +1876,14 @@ Register setTargetLoopMode command callback Application should change playmode t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'setTargetLoopMode' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LoopMode&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('toggleFavorite')
 
@@ -1906,15 +1906,15 @@ Register toggle favorite command callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'toggleFavorite' | Yes |
-| callback | (assetId: string) =&gt; void | Yes |
+| callback | (assetId: string) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('handleKeyEvent')
 
@@ -1937,15 +1937,15 @@ Register media key handling callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'handleKeyEvent' | Yes |
-| callback | (event: KeyEvent) =&gt; void | Yes |
+| callback | (event: KeyEvent) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('outputDeviceChange')
 
@@ -1968,15 +1968,15 @@ Register session output device change callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | Yes |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('commonCommand')
 
@@ -1999,15 +1999,15 @@ Register session custom command change callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'commonCommand' | Yes |
-| callback | (command: string, args: {[key: string]: Object}) =&gt; void | Yes |
+| callback | (command: string, args: {[key: string]: Object}) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('skipToQueueItem')
 
@@ -2030,15 +2030,15 @@ Register the item to play from the playlist change callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'skipToQueueItem' | Yes |
-| callback | (itemId: number) =&gt; void | Yes |
+| callback | (itemId: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('answer')
 
@@ -2046,7 +2046,7 @@ Register the item to play from the playlist change callback
 on(type: 'answer', callback: Callback<void>): void
 ```
 
-Register answer command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
+Register answer command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Since:** 11
 
@@ -2067,9 +2067,9 @@ Register answer command callback.As long as it is registered, it means that the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('hangUp')
 
@@ -2077,7 +2077,7 @@ Register answer command callback.As long as it is registered, it means that the 
 on(type: 'hangUp', callback: Callback<void>): void
 ```
 
-Register hangUp command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
+Register hangUp command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Since:** 11
 
@@ -2098,9 +2098,9 @@ Register hangUp command callback.As long as it is registered, it means that the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('toggleCallMute')
 
@@ -2108,7 +2108,7 @@ Register hangUp command callback.As long as it is registered, it means that the 
 on(type: 'toggleCallMute', callback: Callback<void>): void
 ```
 
-Register toggleCallMute command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off {@link off}
+Register toggleCallMute command callback.As long as it is registered, it means that the ability supports this command.If you cancel the callback, you need to call off [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Since:** 11
 
@@ -2129,9 +2129,9 @@ Register toggleCallMute command callback.As long as it is registered, it means t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('castDisplayChange')
 
@@ -2154,15 +2154,15 @@ Register listener for cast display information changed.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'castDisplayChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CastDisplayInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CastDisplayInfo](arkts-avsession-avsession-castdisplayinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## on('customDataChange')
 
@@ -2185,14 +2185,14 @@ Register listener for custom data sent from remote device.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onDesktopLyricStateChanged
 
@@ -2214,14 +2214,14 @@ Register desktop lyric state changed callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2249,8 +2249,8 @@ Register desktop lyric visible state change callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onFastForward
 
@@ -2258,7 +2258,7 @@ Register desktop lyric visible state change callback.
 onFastForward(callback: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Register fastForward command callback.The application will receive forward time and {@link CommandInfo} from a controller.
+Register fastForward command callback.The application will receive forward time and [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#CommandInfo) from a controller.
 
 **Since:** 22
 
@@ -2270,14 +2270,14 @@ Register fastForward command callback.The application will receive forward time 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt; | Yes |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onPlay
 
@@ -2285,7 +2285,7 @@ Register fastForward command callback.The application will receive forward time 
 onPlay(callback: Callback<CommandInfo>): void
 ```
 
-Register play command callback.The application will receive {@link CommandInfo} from a controller.
+Register play command callback.The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#CommandInfo) from a controller.
 
 **Since:** 22
 
@@ -2297,14 +2297,14 @@ Register play command callback.The application will receive {@link CommandInfo} 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onPlayNext
 
@@ -2312,7 +2312,7 @@ Register play command callback.The application will receive {@link CommandInfo} 
 onPlayNext(callback: Callback<CommandInfo>): void
 ```
 
-Register playNext command callback.The application will receive {@link CommandInfo} from a controller.
+Register playNext command callback.The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#CommandInfo) from a controller.
 
 **Since:** 22
 
@@ -2324,14 +2324,14 @@ Register playNext command callback.The application will receive {@link CommandIn
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onPlayPrevious
 
@@ -2339,7 +2339,7 @@ Register playNext command callback.The application will receive {@link CommandIn
 onPlayPrevious(callback: Callback<CommandInfo>): void
 ```
 
-Register playPrevious command callback.The application will receive {@link CommandInfo} from a controller.
+Register playPrevious command callback.The application will receive [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#CommandInfo) from a controller.
 
 **Since:** 22
 
@@ -2353,14 +2353,14 @@ Register playPrevious command callback.The application will receive {@link Comma
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CommandInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## onRewind
 
@@ -2368,7 +2368,7 @@ Register playPrevious command callback.The application will receive {@link Comma
 onRewind(callback: TwoParamCallback<number, CommandInfo>): void
 ```
 
-Register rewind command callback.The application will receive rewind time and {@link CommandInfo} from a controller.
+Register rewind command callback.The application will receive rewind time and [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#CommandInfo) from a controller.
 
 **Since:** 22
 
@@ -2380,14 +2380,14 @@ Register rewind command callback.The application will receive rewind time and {@
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, CommandInfo&gt; | Yes |
+| callback | [TwoParamCallback](arkts-avsession-avsession-twoparamcallback-t.md)&lt;number, [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## sendCustomData
 
@@ -2415,14 +2415,14 @@ Sends custom data to a remote device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVCallState
 
@@ -2449,9 +2449,9 @@ Set the call state of this session.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVCallState
 
@@ -2477,15 +2477,15 @@ Set the call state of this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVMetadata
 
@@ -2512,9 +2512,9 @@ Set the metadata of this session.In addition to the required properties, users c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVMetadata
 
@@ -2542,15 +2542,15 @@ Set the metadata of this session.In addition to the required properties, users c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVPlaybackState
 
@@ -2577,9 +2577,9 @@ Set the playback state of this session.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVPlaybackState
 
@@ -2607,15 +2607,15 @@ Set the playback state of this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVQueueItems
 
@@ -2635,16 +2635,16 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | Array&lt;AVQueueItem&gt; | Yes |
+| items | Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVQueueItems
 
@@ -2666,21 +2666,21 @@ Set the playlist of queueItem. Identifies the content of the playlist presented 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | Array&lt;AVQueueItem&gt; | Yes |
+| items | Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVQueueTitle
 
@@ -2707,9 +2707,9 @@ Set the name of the playlist presented by this session.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setAVQueueTitle
 
@@ -2737,15 +2737,15 @@ Set the name of the playlist presented by this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setBackgroundPlayMode
 
@@ -2753,7 +2753,7 @@ Set the name of the playlist presented by this session.
 setBackgroundPlayMode(mode: BackgroundPlayMode): Promise<void>
 ```
 
-Set the background playback mode.It is recommended that you associate it with the background playback switch in the app.If not set, the default value for 'audio' session is {@link ENABLE_BACKGROUND_PLAY} and the default value for 'video' session is {@link DISENABLE_BACKGROUND_PLAY}.
+Set the background playback mode.It is recommended that you associate it with the background playback switch in the app.If not set, the default value for 'audio' session is [ENABLE_BACKGROUND_PLAY](arkts-avsession-avsession-backgroundplaymode-e.md#ENABLE_BACKGROUND_PLAY) and the default value for 'video' session is [DISENABLE_BACKGROUND_PLAY](DISENABLE_BACKGROUND_PLAY).
 
 **Since:** 24
 
@@ -2773,14 +2773,14 @@ Set the background playback mode.It is recommended that you associate it with th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setCallMetadata
 
@@ -2807,9 +2807,9 @@ Set the metadata related with current call.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setCallMetadata
 
@@ -2835,15 +2835,15 @@ Set the metadata related with current call.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setDesktopLyricState
 
@@ -2871,16 +2871,16 @@ Set desktop lyric state such as lock state for this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## setDesktopLyricVisible
 
@@ -2908,16 +2908,16 @@ Set desktop lyric visible state for this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## setExtras
 
@@ -2944,9 +2944,9 @@ Set the custom media packets for this session.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setExtras
 
@@ -2974,15 +2974,15 @@ Set the custom media packets for this session.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setLaunchAbility
 
@@ -3009,9 +3009,9 @@ Set the ability to start the session corresponding to
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setLaunchAbility
 
@@ -3039,15 +3039,15 @@ Set the ability to start the session corresponding to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setMediaCenterControlType
 
@@ -3069,20 +3069,20 @@ Set media control types that can be displayed on the media center.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | Array&lt;AVMediaCenterControlType&gt; | Yes |
+| type | Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setSupportedLoopModes
 
@@ -3106,20 +3106,20 @@ Set supported loop modes supplied by application.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| loopModes | Array&lt;LoopMode&gt; | Yes |
+| loopModes | Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## setSupportedPlaySpeeds
 
@@ -3143,20 +3143,20 @@ Set supported speeds supplied by application.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| speeds | Array&lt;number&gt; | Yes |
+| speeds | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
 
 ## stopCasting
 
@@ -3182,7 +3182,7 @@ Stop current cast and disconnect device connection.
 
 | Error Code ID |
 | --- |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## stopCasting
 
@@ -3204,13 +3204,13 @@ Stop current cast and disconnect device connection.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## sessionId
 

@@ -20,7 +20,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-t.md) | 是 |
 | triggerInfo | [TriggerInfo](arkts-ability-wantagent-triggerinfo-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CompleteData&gt; | 否 |
 
@@ -28,7 +28,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

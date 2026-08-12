@@ -11,7 +11,7 @@ Describes the window parameters during application startup.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animationParams

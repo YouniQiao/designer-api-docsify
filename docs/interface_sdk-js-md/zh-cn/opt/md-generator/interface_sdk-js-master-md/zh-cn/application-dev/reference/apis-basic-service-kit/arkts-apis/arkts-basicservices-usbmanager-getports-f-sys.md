@@ -12,7 +12,7 @@ function getPorts(): Array<USBPort>
 
 **废弃版本：** 12
 
-**替代接口：** [usbManager.getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist)()
+**替代接口：** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getPortList)()
 
 <!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
 
@@ -24,4 +24,4 @@ function getPorts(): Array<USBPort>
 
 | 类型 |
 | --- |
-| Array&lt;USBPort&gt; |
+| Array & lt;USBPort & gt; |

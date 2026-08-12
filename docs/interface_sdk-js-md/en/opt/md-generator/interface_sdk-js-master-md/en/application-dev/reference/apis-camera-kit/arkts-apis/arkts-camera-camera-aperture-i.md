@@ -1,8 +1,8 @@
 # Aperture
 
-Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i.md).
+Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i.md#ApertureQuery).
 
-**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i.md)
+**Inheritance/Implementation:** Aperture extends [ApertureQuery](arkts-camera-camera-aperturequery-i.md#ApertureQuery)
 
 **Since:** 24
 
@@ -13,7 +13,7 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getPhysicalAperture
@@ -42,9 +42,9 @@ Gets current physical aperture value.
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getVirtualAperture
 
@@ -70,8 +70,8 @@ Obtains the virtual aperture in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -102,15 +102,15 @@ Sets physical aperture value.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| aperture | number | Yes |
+| [aperture](arkts-camera-camera-apertureinfo-i-sys.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setVirtualAperture
 
@@ -119,7 +119,7 @@ setVirtualAperture(aperture: number): void
 ```
 
 Sets a virtual aperture. Before the setting, call  
-[getSupportedVirtualApertures](arkts-camera-camera-aperturequery-i.md#getsupportedvirtualapertures) to obtain the supported virtual apertures.
+[getSupportedVirtualApertures](arkts-camera-camera-aperturequery-i.md#getSupportedVirtualApertures) to obtain the supported virtual apertures.
 
 **Since:** 11
 
@@ -131,14 +131,14 @@ Sets a virtual aperture. Before the setting, call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| aperture | number | Yes |
+| [aperture](arkts-camera-camera-apertureinfo-i-sys.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -28,7 +28,7 @@ Changes the file owner based on the file descriptor. This API uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## fchown

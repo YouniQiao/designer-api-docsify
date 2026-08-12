@@ -1,6 +1,6 @@
 # OpenLinkOptions
 
-OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#openlink)的入参，用于标识是否仅打开AppLinking和传递键值对可选参数。
+OpenLinkOptions可以作为[openLink()](arkts-ability-uiabilitycontext-c.md#openLink)的入参，用于标识是否仅打开AppLinking和传递键值对可选参数。
 
 **起始版本：** 12
 
@@ -89,7 +89,7 @@ parameters?: Record<string, Object>
 
 表示WantParams参数。
 
-**说明：**具体使用规则请参考[want](arkts-ability-app-ability-want-want-c.md)中的parameters属性。
+**说明：**具体使用规则请参考[want](arkts-ability-app-ability-want-want-c.md#Want)中的parameters属性。
 
 **类型：** Record&lt;string, Object&gt;
 

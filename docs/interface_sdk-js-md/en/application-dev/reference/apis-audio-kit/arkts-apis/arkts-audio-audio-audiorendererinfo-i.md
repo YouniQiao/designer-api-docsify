@@ -13,7 +13,7 @@ Describes audio renderer information.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## content
@@ -24,7 +24,7 @@ content?: ContentType
 
 Audio content type.
 
-**Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
+**Type:** ContentType
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Audio content type.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.AudioRendererInfo#usage
+**Substitutes:** [usage](ohos.multimedia.audio.AudioRendererInfo#usage)
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 
@@ -86,7 +86,7 @@ Audio stream usage.
 volumeMode?: AudioVolumeMode
 ```
 
-Audio volume mode config. If volumeMode is set to {@link AudioVolumeMode.APP_INDIVIDUAL}, this audio renderer will be affected by app volume percentage set by {@link setAppVolumePercentage}
+Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-audio-audiovolumemode-e.md#APP_INDIVIDUAL), this audio renderer will be affected by app volume percentage set by [setAppVolumePercentage](arkts-audio-audio-audiovolumemanager-i.md#setAppVolumePercentage)
 
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 

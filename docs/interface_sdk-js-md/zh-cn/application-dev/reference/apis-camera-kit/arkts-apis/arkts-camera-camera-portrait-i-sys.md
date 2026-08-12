@@ -1,8 +1,8 @@
 # Portrait（系统接口）
 
-Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md).Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery).Provides the APIs for portrait photo settings.
 
-**继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md)
+**继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery)
 
 **起始版本：** 11
 
@@ -42,8 +42,8 @@ Obtains the portrait effect in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -61,7 +61,7 @@ setPortraitEffect(effect: PortraitEffect): void
 ```
 
 Sets a portrait effect. Before the setting, use  
-[getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getsupportedportraiteffects) to obtain the supported portrait effects and check whether the target portrait effect is supported.
+[getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getSupportedPortraitEffects) to obtain the supported portrait effects and check whether the target portrait effect is supported.
 
 **起始版本：** 10
 
@@ -83,8 +83,8 @@ Sets a portrait effect. Before the setting, use
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 

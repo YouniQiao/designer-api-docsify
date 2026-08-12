@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryKey
@@ -20,7 +20,7 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryKey](arkts-contacts-contact-querykey-f.md#querykey)(context:
+**Substitutes:** [queryKey](contact.queryKey(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -33,7 +33,7 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Contact ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -72,16 +72,16 @@ Queries the key of a contact based on the specified contact ID. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -117,7 +117,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryKey](arkts-contacts-contact-querykey-f.md#querykey)(context:
+**Substitutes:** [queryKey](contact.queryKey(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -131,7 +131,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 | --- | --- | --- | --- |
 | id | number | Yes | Contact ID. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -174,17 +174,17 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes | Application that creates the contacts.If the passed parameter is empty, the system contact application is used by default. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the key of the queried contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -224,7 +224,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryKey](arkts-contacts-contact-querykey-f.md#querykey)(context:
+**Substitutes:** [queryKey](contact.queryKey(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -285,7 +285,7 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | id | number | Yes | Contact ID. |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | No | Application information for a contact. If this parameter is not specified, the system contact application is used by default. |
 
@@ -299,8 +299,8 @@ Queries the key of a contact based on the specified contact ID and holder. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

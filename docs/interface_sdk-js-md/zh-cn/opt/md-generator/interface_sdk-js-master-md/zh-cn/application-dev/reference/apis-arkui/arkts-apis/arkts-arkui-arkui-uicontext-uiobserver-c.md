@@ -4,7 +4,7 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 
 > **说明：**
 
-> - 以下API需先使用UIContext中的[getUIObserver()](arkts-arkui-arkui-uicontext-uicontext-c.md#getuiobserver)方法获取到UIObserver对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getUIObserver()](arkts-arkui-arkui-uicontext-uicontext-c.md#getUIObserver)方法获取到UIObserver对象，再通过该对象调用对应方法。
 > 
 > - UIObserver仅能监听到本进程内的UI组件状态变化信息，不支持获取&lt;!--Del--&gt;[UIExtensionComponent](ui_extension_component)等&lt;!--DelEnd--&gt;跨进程场景的信息。
 
@@ -432,7 +432,7 @@ off(type: 'beforePanStart', callback?: PanListenerCallback): void
 ```
 
 取消[on('beforePanStart')](UIObserver#on(type: 'beforePanStart', callback: PanListenerCallback))监听Pan手势  
-[onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart)事件执行前的callback回调。
+[onActionStart](PanGestureInterface.onActionStart)事件执行前的callback回调。
 
 **起始版本：** 19
 
@@ -458,7 +458,7 @@ off(type: 'beforePanEnd', callback?: PanListenerCallback): void
 ```
 
 取消[on('beforePanEnd')](UIObserver#on(type: 'beforePanEnd', callback: PanListenerCallback))监听Pan手势  
-[onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend)事件执行前的callback回调。
+[onActionEnd](PanGestureInterface.onActionEnd)事件执行前的callback回调。
 
 **起始版本：** 19
 
@@ -484,7 +484,7 @@ off(type: 'afterPanStart', callback?: PanListenerCallback): void
 ```
 
 取消[on('afterPanStart')](UIObserver#on(type: 'afterPanStart', callback: PanListenerCallback))监听Pan手势  
-[onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart)事件执行后的callback回调。
+[onActionStart](PanGestureInterface.onActionStart)事件执行后的callback回调。
 
 **起始版本：** 19
 
@@ -510,7 +510,7 @@ off(type: 'afterPanEnd', callback?: PanListenerCallback): void
 ```
 
 取消[on('afterPanEnd')](UIObserver#on(type: 'afterPanEnd', callback: PanListenerCallback))监听Pan手势  
-[onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend)事件执行后的callback回调。
+[onActionEnd](PanGestureInterface.onActionEnd)事件执行后的callback回调。
 
 **起始版本：** 19
 
@@ -828,7 +828,7 @@ offSwiperContentUpdate(callback?: Callback<SwiperContentInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | 否 |
 
 ## offSwiperContentUpdate
 
@@ -853,7 +853,7 @@ offSwiperContentUpdate(config: observer.ObserverOptions, callback?: Callback<Swi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | config | observer.ObserverOptions | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | 否 |
 
 ## on('navDestinationUpdate')
 
@@ -1245,8 +1245,8 @@ Registers a callback function to be called after tapGesture is called.
 on(type: 'beforePanStart', callback: PanListenerCallback): void
 ```
 
-监听Pan手势[onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart)事件，在  
-[onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart)事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionStart](PanGestureInterface.onActionStart)事件，在  
+[onActionStart](PanGestureInterface.onActionStart)事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -1271,8 +1271,8 @@ on(type: 'beforePanStart', callback: PanListenerCallback): void
 on(type: 'beforePanEnd', callback: PanListenerCallback): void
 ```
 
-监听Pan手势[onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend)事件执行前的指令下发情况，在  
-[onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend)事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionEnd](PanGestureInterface.onActionEnd)事件执行前的指令下发情况，在  
+[onActionEnd](PanGestureInterface.onActionEnd)事件执行之前执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -1297,8 +1297,8 @@ on(type: 'beforePanEnd', callback: PanListenerCallback): void
 on(type: 'afterPanStart', callback: PanListenerCallback): void
 ```
 
-监听Pan手势[onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart)事件执行后的指令下发情况，在  
-[onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart)事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionStart](PanGestureInterface.onActionStart)事件执行后的指令下发情况，在  
+[onActionStart](PanGestureInterface.onActionStart)事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -1323,8 +1323,8 @@ on(type: 'afterPanStart', callback: PanListenerCallback): void
 on(type: 'afterPanEnd', callback: PanListenerCallback): void
 ```
 
-监听Pan手势[onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend)事件执行后的指令下发情况，在  
-[onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend)事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
+监听Pan手势[onActionEnd](PanGestureInterface.onActionEnd)事件执行后的指令下发情况，在  
+[onActionEnd](PanGestureInterface.onActionEnd)事件执行之后执行callback回调。支持手指滑动、鼠标滑动、鼠标滚轮和触摸板拖动，暂不支持屏幕朗读触控模式。
 
 **起始版本：** 19
 
@@ -1505,7 +1505,7 @@ on(type: 'nodeRenderState', nodeIdentity: NodeIdentity, callback: NodeRenderStat
 
 | 错误码ID |
 | --- |
-| [161001](../errorcode-node-render-monitor.md#161001-监听渲染状态的节点数超过限制) |
+| [161001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node-render-monitor.md#161001-监听渲染状态的节点数超过限制) |
 
 ## on('textChange')
 
@@ -1653,7 +1653,7 @@ onSwiperContentUpdate(callback: Callback<SwiperContentInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | 是 |
 
 ## onSwiperContentUpdate
 
@@ -1678,7 +1678,7 @@ onSwiperContentUpdate(config: observer.ObserverOptions, callback: Callback<Swipe
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | config | observer.ObserverOptions | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | 是 |
 
 ## removeGlobalGestureListener
 

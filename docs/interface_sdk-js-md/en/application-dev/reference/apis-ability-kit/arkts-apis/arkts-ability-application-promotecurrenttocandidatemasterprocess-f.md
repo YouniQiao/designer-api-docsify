@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## promoteCurrentToCandidateMasterProcess
@@ -17,7 +17,7 @@ Adds the current process into the
 
 - If a candidate master process exists, the system sets the process at the head of the candidate master process  
 list as the new master process and triggers the  
-[onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest) callback.  
+[onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onNewProcessRequest) callback.  
 - If no candidate master process exists, the system performs the following operations based on the component type:  
  - For a UIAbility, the system creates an empty process as the master process.  
  - For a UIExtensionAbility, the system first tries to reuse an existing UIExtensionAbility process as the new  
@@ -65,8 +65,8 @@ master process. If no available process exists, it creates an empty process as t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000115](../errorcode-ability.md#16000115-current-process-cannot-be-set-as-candidate-master-process) | The current process cannot be set as a candidate master process. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000115-current-process-cannot-be-set-as-candidate-master-process) | The current process cannot be set as a candidate master process. |
 
 ## Examples
 

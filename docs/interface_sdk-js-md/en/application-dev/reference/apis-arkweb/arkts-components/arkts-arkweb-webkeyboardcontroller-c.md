@@ -1,6 +1,6 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the {@link onInterceptKeyboardAttach} event.
+Define the controller to interact with a custom keyboard, related to the [onInterceptKeyboardAttach](onInterceptKeyboardAttach) event.
 
 **Since:** 12
 
@@ -117,7 +117,7 @@ sendFunctionKey(key: number): void
 ```
 
 Inserts a function key. Currently, only the Enter key type is supported.For details about the value, see  
-[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md/arkts-ime-inputmethod-enterkeytype-e.md).
+[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType).
 
 **Since:** 12
 

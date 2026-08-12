@@ -24,13 +24,13 @@ Defines FlowItem Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |  |
+| [FlowItemAttribute](arkts-arkui-flowitem-flowitemattribute-i.md) |  |
 
 
 ## FlowItem
@@ -60,12 +60,12 @@ Defines FlowItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FlowItemAttribute&gt; | Yes | The style to create a FlowItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FlowItemAttribute](arkts-arkui-flowitem-flowitemattribute-i.md)&gt; | Yes | The style to create a FlowItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | The attribute of the FlowItem. |
+| [FlowItemAttribute](arkts-arkui-flowitem-flowitemattribute-i.md) | The attribute of the FlowItem. |
 

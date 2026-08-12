@@ -16,7 +16,7 @@ KeyEvent: KeyEvent
 
 按键注入描述信息。
 
-**类型：** [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
+**类型：** KeyEvent
 
 **起始版本：** 23
 

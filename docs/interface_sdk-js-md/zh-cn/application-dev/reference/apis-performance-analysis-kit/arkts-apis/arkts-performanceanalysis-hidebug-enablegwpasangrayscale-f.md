@@ -6,7 +6,7 @@
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 ```
 
-ʹ��GWP-ASan�����ڼ����ڴ�ʹ���еķǷ���Ϊ���ýӿ���Ҫ���ڶ�̬���ò�����GWP-ASan��������Ӧ���Զ����GWP-ASan�����ԡ�������Ӧ��������������Ч��
+使能GWP-ASan，用于检测堆内存使用中的非法行为。该接口主要用于动态配置并启用GWP-ASan，以适配应用自定义的GWP-ASan检测策略。配置在应用重新启动后生效。
 
 **起始版本：** 20
 
@@ -20,14 +20,14 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
+| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | 否 | GWP-ASan配置项。未设置时，使用默认参数。 |
+| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | GWP-ASan持续时间，单位为天，默认值为7。需传入大于0的正整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| [11400114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
 ## 示例
 
@@ -62,7 +62,7 @@ taskpool.execute(enableGwpAsanTask).then(() => {
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void
 ```
 
-ʹ��GWP-ASan�����ڼ����ڴ�ʹ���еķǷ���Ϊ��
+使能GWP-ASan，用于检测堆内存使用中的非法行为。
 
 **起始版本：** 20
 
@@ -76,14 +76,14 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | 否 | GWP-ASan�����δ����ʱ��ʹ��Ĭ�ϲ����� |
-| duration | number | 否 | GWP-ASan����ʱ�䣬��λΪ�죬Ĭ��ֵΪ7���贫�����0���������� |
+| options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | 否 | GWP-ASan配置项。未设置时，使用默认参数。 |
+| duration | number | 否 | GWP-ASan持续时间，单位为天，默认值为7。需传入大于0的正整数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| [11400114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
 ## 示例
 

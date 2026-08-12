@@ -19,18 +19,18 @@ function getSelectionContent(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) |
-| [33600004](../../apis-basic-services-kit/errorcode-selection.md#33600004-该接口被调用过于频繁) |
-| [33600005](../../apis-basic-services-kit/errorcode-selection.md#33600005-接口调用时机错误) |
-| [33600006](../../apis-basic-services-kit/errorcode-selection.md#33600006-当前应用禁止获取内容) |
-| [33600007](../../apis-basic-services-kit/errorcode-selection.md#33600007-划词内容长度超出范围) |
-| [33600008](../../apis-basic-services-kit/errorcode-selection.md#33600008-获取选中内容超时) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) |
+| [33600004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600004-该接口被调用过于频繁) |
+| [33600005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600005-接口调用时机错误) |
+| [33600006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600006-当前应用禁止获取内容) |
+| [33600007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600007-划词内容长度超出范围) |
+| [33600008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600008-获取选中内容超时) |
 
 ## 示例
 

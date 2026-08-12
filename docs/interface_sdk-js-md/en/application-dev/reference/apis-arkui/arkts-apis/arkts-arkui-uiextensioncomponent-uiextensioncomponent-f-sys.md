@@ -33,7 +33,7 @@ Defines UIExtensionComponent Component.
 
 | Type | Description |
 | --- | --- |
-| [UIExtensionComponentAttribute](../arkts-components/arkts-arkui-uiextensioncomponent-attribute.md) | return instance of UIExtensionComponentAttribute. |
+| [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-uiextensioncomponentattribute-i-sys.md) | return instance of UIExtensionComponentAttribute. |
 
 
 ## UIExtensionComponent
@@ -64,11 +64,11 @@ Defines UIExtensionComponent Component.It requires call setUIExtensionComponentO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;UIExtensionComponentAttribute&gt; | Yes | the callback to set up uiextensioncomponent's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-uiextensioncomponentattribute-i-sys.md)&gt; | Yes | the callback to set up uiextensioncomponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIExtensionComponentAttribute](../arkts-components/arkts-arkui-uiextensioncomponent-attribute.md) | The attribute of the UIExtensionComponent. |
+| [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-uiextensioncomponentattribute-i-sys.md) | The attribute of the UIExtensionComponent. |
 

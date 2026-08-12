@@ -1,7 +1,7 @@
 # AVMetadataExtractor
 
 元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过  
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)构建一个AVMetadataExtractor实例。
+[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor)构建一个AVMetadataExtractor实例。
 
 获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
 
@@ -61,8 +61,8 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -90,8 +90,8 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -119,8 +119,8 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchAlbumCover
 
@@ -148,8 +148,8 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -185,10 +185,10 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -224,10 +224,10 @@ It will decode the given video resource. Then fetch a picture at @timeUs accordi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -274,11 +274,11 @@ fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Operation timeout. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) | Operation timeout. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## fetchFramesByTimes
 
@@ -325,12 +325,12 @@ fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: Pix
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Fetch timeout, Returned by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) | Fetch timeout, Returned by callback. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchFramesByTimesWithTimeout
 
@@ -380,12 +380,12 @@ fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Fetch timeout, Returned by callback. |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) | Fetch timeout, Returned by callback. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchMetadata
 
@@ -413,9 +413,9 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -443,9 +443,9 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -473,9 +473,9 @@ fetchMetadata(): Promise<AVMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted.<br>**适用版本：** 23+ |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchMetadata
 
@@ -503,9 +503,9 @@ Obtains media metadata. This API uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
 
 ## fetchMetadataWithTimeout
 
@@ -547,11 +547,11 @@ fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
-| [5400104](../errorcode-media.md#5400104-操作超时) | Operation timeout. |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) | Http cleartext traffic is not permitted. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Returned by promise. |
+| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) | Operation timeout. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## release
 
@@ -579,7 +579,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by callback. |
 
 ## release
 
@@ -607,7 +607,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Returned by promise. |
 
 ## setUrlSource
 
@@ -616,8 +616,8 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
 网络点播资源地址描述，通过该接口设置数据源。只支持获取网络  
-[fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata)（元数据）和  
-[fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime)（缩略图），在获取之前，必须设置媒体资源URL。
+[fetchMetadata](#fetchMetadata)（元数据）和  
+[fetchFrameByTime](#fetchFrameByTime)（缩略图），在获取之前，必须设置媒体资源URL。
 
 **起始版本：** 20
 

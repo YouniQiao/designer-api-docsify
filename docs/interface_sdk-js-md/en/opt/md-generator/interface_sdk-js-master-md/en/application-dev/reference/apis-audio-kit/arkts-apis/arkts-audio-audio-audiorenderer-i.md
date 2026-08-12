@@ -3,7 +3,7 @@
 This interface provides APIs for audio rendering.
 
 Before calling any API in AudioRenderer, you must use  
-[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer)to create an AudioRenderer instance.
+[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer)to create an AudioRenderer instance.
 
 > **NOTE：**
 > 
@@ -18,7 +18,7 @@ Before calling any API in AudioRenderer, you must use
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## drain
@@ -59,7 +59,7 @@ Drains the playback buffer. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## flush
 
@@ -67,7 +67,7 @@ Drains the playback buffer. This API uses a promise to return the result.
 flush(): Promise<void>
 ```
 
-Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md) is  
+Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-audiostate-e.md#AudioState) is  
 **STATE_RUNNING**, **STATE_PAUSED**, or **STATE_STOPPED**. This API uses a promise to return the result.
 
 **Since:** 11
@@ -80,13 +80,13 @@ Flushes the buffer. This API is available when [AudioState](arkts-audio-audio-au
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
 
 ## getAudioEffectMode
 
@@ -106,7 +106,7 @@ Obtains the audio effect mode in use. This API uses an asynchronous callback to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioEffectMode&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | Yes |
 
 ## getAudioEffectMode
 
@@ -126,7 +126,7 @@ Obtains the audio effect mode in use. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioEffectMode&gt; |
+| Promise&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; |
 
 ## getAudioStreamId
 
@@ -166,7 +166,7 @@ Obtains the stream ID of this audio renderer. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getAudioStreamIdSync
 
@@ -226,7 +226,7 @@ Obtains the timestamp of the current playback position, measured in nanoseconds 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getAudioTimeSync
 
@@ -272,13 +272,13 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioTimestampInfo&gt; |
+| Promise&lt;[AudioTimestampInfo](arkts-audio-audio-audiotimestampinfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
 
 ## getAudioTimestampInfoSync
 
@@ -310,7 +310,7 @@ Additionally, changes in the audio stream route, such as switching devices or ou
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
 
 ## getBufferSize
 
@@ -350,7 +350,7 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getBufferSizeSync
 
@@ -390,7 +390,7 @@ Obtains the output device information of the audio stream. This API uses an asyn
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes |
 
 ## getCurrentOutputDevices
 
@@ -410,7 +410,7 @@ Obtains the output device information of the audio stream. This API uses a promi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; |
+| Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; |
 
 ## getCurrentOutputDevicesSync
 
@@ -447,8 +447,8 @@ Obtains the estimated latency of the current audio route.
 > - Since the latency is not counted in the real-time buffer, you are advised to obtain the latency only when the
 > audio playback starts to avoid frequent calls. Otherwise, the API call may be blocked due to route switching.
 > 
-> - You are advised to use [getAudioTimestampInfo](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfo) or
-> [getAudioTimestampInfoSync](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfosync) to implement audio and video
+> - You are advised to use [getAudioTimestampInfo](#getAudioTimestampInfo) or
+> [getAudioTimestampInfoSync](#getAudioTimestampInfoSync) to implement audio and video
 > synchronization after the audio is output to the hardware.
 
 **Since:** 23
@@ -475,9 +475,9 @@ Obtains the estimated latency of the current audio route.
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## getLoudnessGain
 
@@ -537,7 +537,7 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getMaxStreamVolumeSync
 
@@ -597,7 +597,7 @@ Obtains the minimum volume of the audio stream. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getMinStreamVolumeSync
 
@@ -631,7 +631,7 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#getSpeed
+**Substitutes:** [getSpeed](#getSpeed)
 
 <!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void--><!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void-End-->
 
@@ -641,7 +641,7 @@ Obtains the audio renderer rate. This API uses an asynchronous callback to retur
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererRate&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | Yes |
 
 ## getRenderRate
 
@@ -655,7 +655,7 @@ Obtains the audio renderer rate. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#getSpeed
+**Substitutes:** [getSpeed](#getSpeed)
 
 <!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>--><!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>-End-->
 
@@ -665,7 +665,7 @@ Obtains the audio renderer rate. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioRendererRate&gt; |
+| Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; |
 
 ## getRenderRateSync
 
@@ -679,7 +679,7 @@ Obtains the audio renderer rate. This API returns the result synchronously.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#getSpeed
+**Substitutes:** [getSpeed](#getSpeed)
 
 <!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate--><!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate-End-->
 
@@ -709,7 +709,7 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Yes |
 
 ## getRendererInfo
 
@@ -729,7 +729,7 @@ Obtains the information about this audio renderer. This API uses a promise to re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioRendererInfo&gt; |
+| Promise&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; |
 
 ## getRendererInfoSync
 
@@ -809,7 +809,7 @@ Obtains the stream information of this audio renderer. This API uses an asynchro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioStreamInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | Yes |
 
 ## getStreamInfo
 
@@ -829,7 +829,7 @@ Obtains the stream information of this audio renderer. This API uses a promise t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioStreamInfo&gt; |
+| Promise&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; |
 
 ## getStreamInfoSync
 
@@ -889,7 +889,7 @@ Obtains the number of underflow audio frames in the audio stream that is being p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getUnderflowCountSync
 
@@ -950,13 +950,13 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioInterrupt' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptEvent&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## off('markReach')
 
@@ -1025,7 +1025,7 @@ Unsubscribes from the audio renderer state change event. This API uses an asynch
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## off('outputDeviceChange')
 
@@ -1046,14 +1046,14 @@ Unsubscribes from the audio output device change event. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## off('outputDeviceChangeWithInfo')
 
@@ -1074,14 +1074,14 @@ Unsubscribes from the change event of audio output devices and reasons. This API
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'outputDeviceChangeWithInfo' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioStreamDeviceChangeInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## off('writeData')
 
@@ -1108,8 +1108,8 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('audioInterrupt')
 
@@ -1121,7 +1121,7 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 
 The AudioRenderer instance proactively gains the focus when the **start** event occurs and releases the focus when the **pause** or **stop** event occurs. Therefore, you do not need to request to gain or release the focus.
 
-After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see  
+After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent) is received when the AudioRenderer instance fails to obtain the focus or an audio interruption event occurs (for example, the audio stream is interrupted by others). It is recommended that the application perform further processing based on the **InterruptEvent** information. For details, see  
 [Introduction to Audio Focus](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
@@ -1135,14 +1135,14 @@ After this API is called, an [InterruptEvent](arkts-audio-audio-interruptevent-i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioInterrupt' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptEvent&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('markReach')
 
@@ -1165,7 +1165,7 @@ For example, if **frame** is set to **100**, the callback is invoked when the nu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'markReach' | Yes |
-| frame | number | Yes |
+| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
 
 ## on('periodReach')
@@ -1189,7 +1189,7 @@ For example, if **frame** is set to **10**, the callback is invoked each time 10
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'periodReach' | Yes |
-| frame | number | Yes |
+| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
 
 ## on('stateChange')
@@ -1232,14 +1232,14 @@ Subscribes to the audio output device change event, which is triggered when an a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('outputDeviceChangeWithInfo')
 
@@ -1260,14 +1260,14 @@ Subscribes to the change event of audio output devices and reasons, which is tri
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'outputDeviceChangeWithInfo' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioStreamDeviceChangeInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('writeData')
 
@@ -1296,8 +1296,8 @@ The callback function is used only to write audio data. Do not call AudioRendere
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## pause
 
@@ -1337,7 +1337,7 @@ Pauses this audio renderer. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## release
 
@@ -1377,7 +1377,7 @@ Releases the renderer. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setAudioEffectMode
 
@@ -1404,8 +1404,8 @@ Sets an audio effect mode. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setAudioEffectMode
 
@@ -1431,14 +1431,14 @@ Sets an audio effect mode. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setChannelBlendMode
 
@@ -1464,9 +1464,9 @@ Sets the audio channel blending mode. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setDefaultOutputDevice
 
@@ -1486,21 +1486,21 @@ Temporarily changes the current audio device This function applies on audiorende
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes |
+| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1513,7 +1513,7 @@ Sets the independent audio session strategy and behavior parameters.
 > **NOTE：**
 > 
 > If this API is called while an audio renderer is running, you must call the
-> [start](arkts-audio-audio-audiorenderer-i.md#start) API again for
+> [start](#start) API again for
 > the settings to take effect.
 
 **Since:** 24
@@ -1535,8 +1535,8 @@ Sets the independent audio session strategy and behavior parameters.
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setInterruptMode
 
@@ -1583,7 +1583,7 @@ Sets the audio interruption mode for the application. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setInterruptModeSync
 
@@ -1609,8 +1609,8 @@ Sets the audio interruption mode for the application. This API returns the resul
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setLoudnessGain
 
@@ -1618,7 +1618,7 @@ Sets the audio interruption mode for the application. This API returns the resul
 setLoudnessGain(loudnessGain: number): Promise<void>
 ```
 
-Sets the loudness gain of this stream. The default loudness gain is 0.0dB.The stream usage of the audio renderer must be {@link StreamUsage#STREAM_USAGE_MUSIC},{@link StreamUsage#STREAM_USAGE_MOVIE} or {@link StreamUsage#STREAM_USAGE_AUDIOBOOK}.After calling this interface, the adjustment of loundness gain will take effect immediately.
+Sets the loudness gain of this stream. The default loudness gain is 0.0dB.The stream usage of the audio renderer must be [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MUSIC),[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_MOVIE) or [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#STREAM_USAGE_AUDIOBOOK).After calling this interface, the adjustment of loundness gain will take effect immediately.
 
 **Since:** 20
 
@@ -1636,14 +1636,14 @@ Sets the loudness gain of this stream. The default loudness gain is 0.0dB.The st
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |
 
 ## setRenderRate
 
@@ -1657,7 +1657,7 @@ Sets the render rate. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#setSpeed
+**Substitutes:** [setSpeed](ohos.multimedia.audio.AudioRenderer#setSpeed)
 
 <!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
@@ -1682,7 +1682,7 @@ Sets the render rate. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#setSpeed
+**Substitutes:** [setSpeed](ohos.multimedia.audio.AudioRenderer#setSpeed)
 
 <!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>-End-->
 
@@ -1698,7 +1698,7 @@ Sets the render rate. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setSilentModeAndMixWithOthers
 
@@ -1746,8 +1746,8 @@ Sets the playback speed.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setVolume
 
@@ -1794,7 +1794,7 @@ Sets the volume for the audio stream. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setVolumeWithRamp
 
@@ -1821,8 +1821,8 @@ Sets a volume ramp. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## start
 
@@ -1862,7 +1862,7 @@ Starts this audio renderer. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## stop
 
@@ -1902,7 +1902,7 @@ Stops this audio renderer. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## write
 
@@ -1916,7 +1916,7 @@ Writes the buffer. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#event:writeData
+**Substitutes:** [writeData](ohos.multimedia.audio.AudioRenderer#event:writeData)
 
 <!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
@@ -1941,7 +1941,7 @@ Writes the buffer. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.audio.AudioRenderer#event:writeData
+**Substitutes:** [writeData](ohos.multimedia.audio.AudioRenderer#event:writeData)
 
 <!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>--><!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>-End-->
 
@@ -1957,7 +1957,7 @@ Writes the buffer. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## state
 
@@ -1967,7 +1967,7 @@ readonly state: AudioState
 
 Audio renderer state.
 
-**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-media-audiostate-t.md)
+**Type:** AudioState
 
 **Since:** 8
 

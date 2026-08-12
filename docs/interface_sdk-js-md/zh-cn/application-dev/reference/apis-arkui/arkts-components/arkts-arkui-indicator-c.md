@@ -37,7 +37,7 @@ bottom(value: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置导航点底部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交叉轴方向上，位于底部，效果与设置 bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于top属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
+| value | Length | 是 | 设置导航点底部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交叉轴方向上，位于底部，效果与设置 bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于top属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
 
 **返回值：**
 
@@ -71,8 +71,8 @@ bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bottom | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| Length | 是 | 设置导航点底部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交 叉轴方向上，位于底部，效果与设置bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于top属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
-| ignoreSize | boolean | 是 | 设置是否忽略导航点本身大小，默认false。&lt;br/&gt;设置为true时，忽略导航点大小，可以将导航点更靠近Swiper底部；设置为false时，不忽略导航点大小，导航点按默认大小布局。使用方法可以参考 [示例9演示导航点space与bottom](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例9演示导航点space与bottom)。&lt;br /&gt; 说明：[数字导航点](arkts-arkui-digitindicator-c.md)ignoreSize属性，不生效的场景如下：&lt;br/&gt; • 当[vertical](SwiperAttribute#vertical) 设 置为false，且bottom > 0。&lt;br/&gt; • 当[vertical](SwiperAttribute#vertical) 设置为true时：&lt;br/&gt;1、bottom > 0 时。&lt;br/&gt; 2、 bottom设为undefined。 &lt;br/&gt; 3、isSidebarMiddle设置为false时。 |
+| bottom | LengthMetrics \| Length | 是 | 设置导航点底部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交 叉轴方向上，位于底部，效果与设置bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于top属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
+| ignoreSize | boolean | 是 | 设置是否忽略导航点本身大小，默认false。&lt;br/&gt;设置为true时，忽略导航点大小，可以将导航点更靠近Swiper底部；设置为false时，不忽略导航点大小，导航点按默认大小布局。使用方法可以参考 [示例9演示导航点space与bottom](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#示例9演示导航点space与bottom)。&lt;br /&gt; 说明：[数字导航点](arkts-arkui-digitindicator-c.md#DigitIndicator)ignoreSize属性，不生效的场景如下：&lt;br/&gt; • 当[vertical](SwiperAttribute#vertical) 设 置为false，且bottom > 0。&lt;br/&gt; • 当[vertical](SwiperAttribute#vertical) 设置为true时：&lt;br/&gt;1、bottom > 0 时。&lt;br/&gt; 2、 bottom设为undefined。 &lt;br/&gt; 3、isSidebarMiddle设置为false时。 |
 
 **返回值：**
 
@@ -106,7 +106,7 @@ static digit(): DigitIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 数字指示器对象，用于设置Swiper组件的数字导航样式。 |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 数字指示器对象，用于设置Swiper组件的数字导航样式。 |
 
 ## dot
 
@@ -134,7 +134,7 @@ static dot(): DotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 圆点指示器对象，用于设置Swiper组件的圆点导航样式。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 圆点指示器对象，用于设置Swiper组件的圆点导航样式。 |
 
 ## end
 
@@ -162,7 +162,7 @@ end(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 设置在RTL模式下为导航点距离Swiper组件左边的距离，在LTR模式下为导航点距离Swiper组件右边的距离。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp&lt;br/&gt;取 值范围：[0, Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
+| value | LengthMetrics | 是 | 设置在RTL模式下为导航点距离Swiper组件左边的距离，在LTR模式下为导航点距离Swiper组件右边的距离。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp&lt;br/&gt;取 值范围：[0, Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
 
 **返回值：**
 
@@ -196,7 +196,7 @@ left(value: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置导航点左侧相对于Swiper的位置。&lt;br/&gt;未设置left和right时，进行自适应大小布局，按照指示器本身大小和Swiper的大小在主轴方向上进行居中对齐。&lt;br/&gt;设置 为0时：按照0位置布局计算。&lt;br/&gt;优先级：高于right属性。&lt;br/&gt;取值范围：[0,Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
+| value | Length | 是 | 设置导航点左侧相对于Swiper的位置。&lt;br/&gt;未设置left和right时，进行自适应大小布局，按照指示器本身大小和Swiper的大小在主轴方向上进行居中对齐。&lt;br/&gt;设置 为0时：按照0位置布局计算。&lt;br/&gt;优先级：高于right属性。&lt;br/&gt;取值范围：[0,Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
 
 **返回值：**
 
@@ -230,7 +230,7 @@ right(value: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置导航点右侧相对于Swiper的位置。&lt;br/&gt;未设置left和right时，进行自适应大小布局，按照指示器本身大小和Swiper的大小在主轴方向上进行居中对齐。&lt;br/&gt;设置 为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于left属性。&lt;br/&gt;取值范围：[0,Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
+| value | Length | 是 | 设置导航点右侧相对于Swiper的位置。&lt;br/&gt;未设置left和right时，进行自适应大小布局，按照指示器本身大小和Swiper的大小在主轴方向上进行居中对齐。&lt;br/&gt;设置 为0时：按照0位置布局计算。&lt;br/&gt;优先级：低于left属性。&lt;br/&gt;取值范围：[0,Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
 
 **返回值：**
 
@@ -244,7 +244,7 @@ right(value: Length): T
 start(value: LengthMetrics): T
 ```
 
-在[RTL](../arkts-apis/arkts-arkui-layoutdirection-e.md/arkts-arkui-layoutdirection-e.md)模式下为导航点距离Swiper组件右边的距离，在[LTR](../arkts-apis/arkts-arkui-layoutdirection-e.md/arkts-arkui-layoutdirection-e.md)模式下为导航点距离Swiper组件左边的距离。
+在[RTL](LayoutDirection)模式下为导航点距离Swiper组件右边的距离，在[LTR](LayoutDirection)模式下为导航点距离Swiper组件左边的距离。
 
 **起始版本：** 12
 
@@ -264,7 +264,7 @@ start(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 设置在RTL模式下为导航点距离Swiper组件右边的距离，在LTR模式下为导航点距离Swiper组件左边的距离。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp&lt;br/&gt;取 值范围：[0, Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
+| value | LengthMetrics | 是 | 设置在RTL模式下为导航点距离Swiper组件右边的距离，在LTR模式下为导航点距离Swiper组件左边的距离。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp&lt;br/&gt;取 值范围：[0, Swiper宽度-导航点区域宽度]，超出该范围时，取最近的边界值。 |
 
 **返回值：**
 
@@ -298,7 +298,7 @@ top(value: Length): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置导航点顶部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交叉轴方向上，位于底部，效果与设置 bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：高于bottom属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
+| value | Length | 是 | 设置导航点顶部相对于Swiper的位置。&lt;br/&gt;未设置top和bottom时，进行自适应大小布局，按照指示器本身大小和Swiper的大小，在交叉轴方向上，位于底部，效果与设置 bottom=0一致。&lt;br/&gt;设置为0时：按照0位置布局计算。&lt;br/&gt;优先级：高于bottom属性。&lt;br/&gt;取值范围：[0,Swiper高度-导航点区域高度]，超出该范围时，取最近的边界值。 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## parseAdResponse
@@ -35,10 +35,10 @@ Parses and processes the body of an ad response(this API is only open to some pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported. |
-| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported. |
+| [21800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800005-ad-data-parsing-failure) | Failed to parse the ad response. |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 

@@ -13,7 +13,7 @@ The **InterstitialDialogAction** component is a dialog box used in atomic servic
 ## Modules to Import
 
 ```TypeScript
-import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from 'kits/@kit.ArkUI';
+import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@kit.ArkUI';
 ```
 
 ## closeDialog

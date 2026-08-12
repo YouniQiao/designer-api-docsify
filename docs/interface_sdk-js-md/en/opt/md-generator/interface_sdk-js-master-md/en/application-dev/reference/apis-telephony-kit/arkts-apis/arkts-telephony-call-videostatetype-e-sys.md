@@ -38,7 +38,7 @@ Indicates the call is in video state.
 
 **Deprecated since:** 11
 
-**Substitutes:** telephony.call#TYPE_VIDEO_BIDIRECTIONAL
+**Substitutes:** [TYPE_VIDEO_BIDIRECTIONAL](#TYPE_VIDEO_BIDIRECTIONAL)
 
 <!--Device-VideoStateType-TYPE_VIDEO = 1--><!--Device-VideoStateType-TYPE_VIDEO = 1-End-->
 

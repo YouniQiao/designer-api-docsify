@@ -12,7 +12,7 @@ function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime)(requestId:
+**替代接口：** [getRemainingDelayTime](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.getRemainingDelayTime(requestId:)
 
 <!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -54,7 +54,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-depr-f.md#getremainingdelaytime)(requestId:
+**替代接口：** [getRemainingDelayTime](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.getRemainingDelayTime(requestId:)
 
 <!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>--><!--Device-backgroundTaskManager-function getRemainingDelayTime(requestId: number): Promise<number>-End-->
 
@@ -70,7 +70,7 @@ function getRemainingDelayTime(requestId: number): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

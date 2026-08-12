@@ -13,7 +13,7 @@ Describes a GUI change event.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -98,9 +98,9 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes | Accessibility event types. |
+| type | EventType | Yes | Accessibility event types. |
 | bundleName | string | Yes | Target application name. |
-| triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes | Action that triggers the event. |
+| triggerAction | Action | Yes | Action that triggers the event. |
 
 ## Examples
 
@@ -453,7 +453,7 @@ triggerAction: Action
 
 Action that triggers the event (mandatory).
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 7
 
@@ -475,7 +475,7 @@ type: EventType
 
 Accessibility event type (mandatory).
 
-**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**Type:** EventType
 
 **Since:** 7
 

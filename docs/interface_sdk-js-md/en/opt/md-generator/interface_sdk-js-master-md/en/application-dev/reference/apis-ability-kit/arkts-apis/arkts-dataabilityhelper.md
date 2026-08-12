@@ -1,7 +1,7 @@
 # dataAbilityHelper
 
 A DataAbilityHelper object is obtained through
- [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper).
+ [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper).
 
 
 ## Summary

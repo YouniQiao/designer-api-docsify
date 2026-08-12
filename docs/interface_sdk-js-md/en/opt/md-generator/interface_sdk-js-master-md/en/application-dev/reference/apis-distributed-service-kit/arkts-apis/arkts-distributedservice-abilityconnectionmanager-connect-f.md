@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## connect
@@ -32,13 +32,13 @@ Sets up a UIAbility connection after a collaboration session is created and the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ConnectResult&gt; |
+| Promise & lt;ConnectResult & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

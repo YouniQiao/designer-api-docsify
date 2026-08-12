@@ -13,7 +13,7 @@ Plugin component request parameters which is used in request function.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data

@@ -33,17 +33,17 @@
 | [DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md) | 通知订阅者共享配置变更的数据结构。包括数据变更类型、变化的URI、变更的数据内容。 |
 | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 数据代理操作配置的数据结构。 |
 | [DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md) | 配置共享批量获取操作结果的数据结构。 |
-| [DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md) | 数据代理操作句柄的实例，可使用此实例访问或管理共享配置信息。在调用DataProxyHandle提供的方法前，需要先通过  [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle)构建一个实例。 |
+| [DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md) | 数据代理操作句柄的实例，可使用此实例访问或管理共享配置信息。在调用DataProxyHandle提供的方法前，需要先通过  [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle)构建一个实例。 |
 | [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md) | 配置共享批量操作结果的数据结构。 |
-| [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i.md) | DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过  [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createdatasharehelper)构建一个实例。 |
-| [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i.md) | 指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md)的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。 |
+| [DataShareHelper](arkts-arkdata-datashare-datasharehelper-i.md) | DataShare管理工具实例，可使用此实例访问或管理服务端的数据。在调用DataShareHelper提供的方法前，需要先通过  [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f.md#createDataShareHelper)构建一个实例。 |
+| [DataShareHelperOptions](arkts-arkdata-datashare-datasharehelperoptions-i.md) | 指定[DataShareHelper](arkts-arkdata-datashare-datasharehelperoptions-i.md#DataShareHelperOptions)的可选参数，包含是否在代理模式下，以及非静默访问的拉起等待时间。 |
 | [OperationResult](arkts-arkdata-datashare-operationresult-i.md) | 订阅/取消订阅数据变更和发布数据的操作结果。 |
 | [ProxyData](arkts-arkdata-datashare-proxydata-i.md) | 共享配置的数据结构。 |
 | [PublishedDataChangeNode](arkts-arkdata-datashare-publisheddatachangenode-i.md) | 订阅/取消订阅已发布数据变更的结果。 |
 | [PublishedItem](arkts-arkdata-datashare-publisheditem-i.md) | 指定发布的数据类型。 |
 | [RdbDataChangeNode](arkts-arkdata-datashare-rdbdatachangenode-i.md) | 订阅/取消订阅RDB数据变更的结果，回调支持传输不大于10M的数据。 |
 | [Template](arkts-arkdata-datashare-template-i.md) | 指定订阅中的模板结构。 |
-| [TemplateId](arkts-arkdata-datashare-templateid-i.md) | 标记模板的数据结构，TemplateId是在[addTemplate](arkts-arkdata-datashare-datasharehelper-i.md#addtemplate)中自动生成的，在  [addTemplate](arkts-arkdata-datashare-datasharehelper-i.md#addtemplate)后，可以使用模板id来标记模板。 |
+| [TemplateId](arkts-arkdata-datashare-templateid-i.md) | 标记模板的数据结构，TemplateId是在[addTemplate](arkts-arkdata-datashare-datasharehelper-i.md#addTemplate)中自动生成的，在  [addTemplate](arkts-arkdata-datashare-datasharehelper-i.md#addTemplate)后，可以使用模板id来标记模板。 |
 | [UpdateOperation](arkts-arkdata-datashare-updateoperation-i.md) | 批量更新操作的参数结构。 |
 
 ### 枚举
@@ -52,7 +52,7 @@
 | --- | --- |
 | [ChangeType](arkts-arkdata-datashare-changetype-e.md) | 数据变更类型枚举。 |
 | [DataProxyErrorCode](arkts-arkdata-datashare-dataproxyerrorcode-e.md) | 配置共享批量操作返回值的状态码枚举。 |
-| [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md) | [共享配置](arkts-arkdata-datashare-proxydata-i.md)的值允许的最大长度的枚举值。 |
+| [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md) | [共享配置](arkts-arkdata-datashare-proxydata-i.md#ProxyData)的值允许的最大长度的枚举值。 |
 | [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md) | 数据代理类型的枚举。 |
 | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e.md) | 数据订阅类型枚举。 |
 

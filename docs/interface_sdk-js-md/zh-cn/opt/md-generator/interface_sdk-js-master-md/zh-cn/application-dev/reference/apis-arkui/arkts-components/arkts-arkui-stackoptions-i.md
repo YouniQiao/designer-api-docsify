@@ -24,7 +24,7 @@ alignContent?: Alignment
 
 非法值：按默认值处理。
 
-**说明：** 该参数与[align](arkts-arkui-commonmethod-c.md#align)同时设置时，后设置的属性值会覆盖先设置的属性值。
+**说明：** 该参数与[align](CommonMethod#align(value: Alignment))同时设置时，后设置的属性值会覆盖先设置的属性值。
 
 **类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 

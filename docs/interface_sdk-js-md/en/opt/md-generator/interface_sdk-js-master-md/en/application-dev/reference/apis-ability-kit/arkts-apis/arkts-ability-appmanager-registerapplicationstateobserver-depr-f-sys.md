@@ -12,7 +12,7 @@ Register application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#on
+**Substitutes:** [on](ohos.app.ability.appManager/appManager#on)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 

@@ -23,13 +23,17 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| nodeType | 'Scroll' | Yes |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 
 
 ## getEvent
@@ -55,13 +59,17 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| nodeType | 'List' | Yes |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 
 
 ## getEvent
@@ -70,7 +78,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -87,13 +95,17 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| nodeType | 'WaterFlow' | Yes |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 
 
 ## getEvent
@@ -119,10 +131,14 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | Yes |
-| nodeType | 'Grid' | Yes |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).

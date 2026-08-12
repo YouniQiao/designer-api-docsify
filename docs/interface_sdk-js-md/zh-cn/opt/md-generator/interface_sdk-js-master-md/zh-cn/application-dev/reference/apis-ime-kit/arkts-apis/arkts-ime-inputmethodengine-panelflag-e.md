@@ -4,9 +4,9 @@
 
 | 名称 | 值 | 说明 |
 | ------------ | -- | ------------------ |
-| [FLG_FIXED](#flg_fixed) | 0 | 固定态面板类型。 |
-| [FLG_FLOATING](#flg_floating) | 1 | 悬浮态面板类型。 |
-| [FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt;](#flag_candidate) | 2 |
+| [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) | 0 | 固定态面板类型。 |
+| [FLG_FLOATING](arkts-ime-inputmethodengine-panelflag-e.md) | 1 | 悬浮态面板类型。 |
+| FLAG_CANDIDATE & lt;sup & gt;15+ & lt;/sup & gt; | 2 |
 
 **起始版本：** 10
 

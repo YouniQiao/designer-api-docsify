@@ -1,7 +1,7 @@
 # AbilityRunningInfo
 
 AbilityRunningInfo is a struct that records the running information and state of an ability. It is obtained through  
-[getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getabilityrunninginfos).
+[getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos).
 
 **Since:** 14
 

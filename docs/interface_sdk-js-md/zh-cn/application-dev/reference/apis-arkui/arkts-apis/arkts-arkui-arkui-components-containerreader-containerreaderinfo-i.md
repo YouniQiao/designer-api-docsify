@@ -18,7 +18,7 @@ heightBreakpoint?: HeightBreakpoint
 
 容器的高度断点，为获取到的当前ContainerReader组件在不同高宽比阈值下对应的高度断点枚举值。&lt;br/&gt;**说明：**&lt;br/&gt;该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。绑定后组件高度断点值变化时，heightBreakpoint绑定的变量值会自动更新。
 
-**类型：** [HeightBreakpoint](arkts-arkui-enums-heightbreakpoint-e.md)
+**类型：** HeightBreakpoint
 
 **起始版本：** 26.0.0
 
@@ -66,7 +66,7 @@ widthBreakpoint?: WidthBreakpoint
 
 容器的宽度断点，为获取到的当前ContainerReader组件的宽度断点枚举值。&lt;br/&gt;**说明：**&lt;br/&gt;该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。绑定后组件宽度断点值变化时，widthBreakpoint绑定的变量值会自动更新。
 
-**类型：** [WidthBreakpoint](arkts-arkui-enums-widthbreakpoint-e.md)
+**类型：** WidthBreakpoint
 
 **起始版本：** 26.0.0
 

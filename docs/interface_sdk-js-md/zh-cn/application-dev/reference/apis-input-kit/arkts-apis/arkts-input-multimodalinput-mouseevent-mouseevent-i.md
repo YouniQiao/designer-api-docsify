@@ -2,7 +2,7 @@
 
 鼠标事件。
 
-**继承/实现关系：** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
+**继承/实现关系：** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ action: Action
 
 鼠标事件类型。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
 
 **起始版本：** 9
 
@@ -76,7 +76,7 @@ button: Button
 
 鼠标按键。
 
-**类型：** [Button](../../apis-arkui/arkts-apis/arkts-arkui-typenode-button-t.md)
+**类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
 **起始版本：** 9
 
@@ -153,7 +153,7 @@ globalX?: int
 ```
 
 该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -172,7 +172,7 @@ globalY?: int
 ```
 
 该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -232,7 +232,7 @@ pressedButtons: Button[]
 
 当前处于按下状态的鼠标按键。
 
-**类型：** [Button](../../apis-arkui/arkts-apis/arkts-arkui-typenode-button-t.md)[]
+**类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
 **起始版本：** 9
 
@@ -380,7 +380,7 @@ toolType: ToolType
 
 工具类型。
 
-**类型：** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
+**类型：** [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
 
 **起始版本：** 11
 

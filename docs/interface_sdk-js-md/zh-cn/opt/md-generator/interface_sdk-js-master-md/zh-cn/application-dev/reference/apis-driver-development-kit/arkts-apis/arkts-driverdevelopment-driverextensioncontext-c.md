@@ -5,7 +5,7 @@ DriverExtensionContext模块是DriverExtensionAbility的上下文环境，继承
 > **说明：**
 > - 本模块接口仅可在Stage模型下使用。
 
-**继承/实现关系：** DriverExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**继承/实现关系：** DriverExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **起始版本：** 10
 

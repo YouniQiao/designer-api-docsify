@@ -32,7 +32,7 @@ Register a lifecycle listener. When the lifecycle state of a custom component ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | Yes | Custom component lifecycle observer |
+| observer | [CustomComponentLifecycleObserver](arkts-arkui-customcomponent-customcomponentlifecycleobserver-i.md) | Yes | Custom component lifecycle observer |
 
 ## getCurrentState
 
@@ -56,7 +56,7 @@ Get the current lifecycle state.
 
 | Type | Description |
 | --- | --- |
-| [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | lifecycle state |
+| [CustomComponentLifecycleState](arkts-arkui-customcomponent-customcomponentlifecyclestate-e.md) | lifecycle state |
 
 ## removeObserver
 
@@ -80,5 +80,5 @@ Remove custom component lifecycle callbacks. Even if the custom component's life
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | Yes | Custom component lifecycle observer. |
+| observer | [CustomComponentLifecycleObserver](arkts-arkui-customcomponent-customcomponentlifecycleobserver-i.md) | Yes | Custom component lifecycle observer. |
 

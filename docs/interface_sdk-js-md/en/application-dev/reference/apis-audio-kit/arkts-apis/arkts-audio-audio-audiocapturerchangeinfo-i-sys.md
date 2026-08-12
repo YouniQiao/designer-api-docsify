@@ -13,7 +13,7 @@ Describes the audio capturer change event.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerState
@@ -24,7 +24,7 @@ readonly capturerState: AudioState
 
 Audio state.
 
-**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-media-audiostate-t.md)
+**Type:** AudioState
 
 **Since:** 9
 

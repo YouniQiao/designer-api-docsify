@@ -1085,7 +1085,7 @@ OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_Aud
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorendererstruct.md)* renderer | 指向{@link OH_AudioStreamBuilder_GenerateRenderer}创建的音频流实例。 |
-| const OH_AudioSession_Strategy *strategy | 用于设置独立的音频会话策略。 |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | 用于设置独立的音频会话策略。 |
 | uint32_t behavior | 音频会话行为标志，可以是单个标志，也可以是多个标志的按位OR组合。当前支持的音频会话行为详见[OH_AudioSession_BehaviorFlags](capi-native-audio-session-base-h.md#oh_audiosession_behaviorflags)。 |
 
 **返回：**

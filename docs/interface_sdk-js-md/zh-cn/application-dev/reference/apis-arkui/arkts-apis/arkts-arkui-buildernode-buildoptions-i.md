@@ -20,7 +20,7 @@ localStorage?: LocalStorage
 
 默认值：undefined
 
-**类型：** [LocalStorage](arkts-arkui-localstorage-c.md)
+**类型：** LocalStorage
 
 **起始版本：** 26.0.0
 

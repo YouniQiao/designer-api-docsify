@@ -2,7 +2,7 @@
 
 Provide a DateTime formatting interface that supports custom symbols.This interface formats date time values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "2:23 PM" with "2:23 afternoon").
 
-**Inheritance/Implementation:** SymbolDateTimeFormat extends [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
+**Inheritance/Implementation:** SymbolDateTimeFormat extends [Intl.DateTimeFormat](Intl.DateTimeFormat)
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ Provide a DateTime formatting interface that supports custom symbols.This interf
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -45,7 +45,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 
 | Error Code ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## format
 
@@ -205,7 +205,7 @@ Parse a date time localized string to Unix timestamp.Unix timestamp, indicating 
 
 | Error Code ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## resolvedOptions
 

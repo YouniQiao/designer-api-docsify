@@ -1,7 +1,7 @@
 # ChildProcessArgs
 
 The module describes the parameters transferred to the child process. When starting a child process through  
-[childProcessManager](arkts-app-ability-childprocessmanager.md), you can transfer parameters to the child process through **ChildProcessArgs**.
+[childProcessManager](arkts-app-ability-childprocessmanager.md#childProcessManager), you can transfer parameters to the child process through **ChildProcessArgs**.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ The module describes the parameters transferred to the child process. When start
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
+import { ChildProcessArgs } from '@kit.AbilityKit';
 ```
 
 ## entryParams
@@ -24,7 +24,7 @@ entryParams?: string
 ```
 
 Custom parameters to be transparently transmitted to the child process. The parameters can be obtained through  
-**args.entryParams** in [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart). The maximum data volume supported by **entryParams** is 150 KB.
+**args.entryParams** in [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart). The maximum data volume supported by **entryParams** is 150 KB.
 
 **Type:** string
 
@@ -45,14 +45,14 @@ fds?: Record<string, int>
 ```
 
 File Descriptor (FD) handles, which are used for communication between the main process and child process. They are passed to the child process in the form of key-value pairs, where **key** is a custom string and **value** is a DF handle. The FD handles can be obtained through **args.fds** in  
-[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart).
+[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart).
 
 &lt;b&gt;NOTE&lt;/b&gt;
 
 - **fds** supports a maximum of 16 groups. In each group, **key** contains a maximum of 20 characters.  
 - The ID of a handle passed to the child process may change, but the handle always points to the same file.
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt;
 
 **Since:** 12
 

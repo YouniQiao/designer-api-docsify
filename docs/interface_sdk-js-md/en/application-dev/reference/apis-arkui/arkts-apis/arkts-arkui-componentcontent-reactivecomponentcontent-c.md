@@ -2,7 +2,7 @@
 
 Defines ReactiveComponentContent.
 
-**Inheritance/Implementation:** ReactiveComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
+**Inheritance/Implementation:** ReactiveComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md#ComponentContentBase)
 
 **Since:** 26.0.0
 
@@ -35,7 +35,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ReactiveComponentContent |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Defines the builder that will be called to build ReactiveComponentContent. |
+| builder | CustomBuilder | Yes | Defines the builder that will be called to build ReactiveComponentContent. |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
 
 ## dispose

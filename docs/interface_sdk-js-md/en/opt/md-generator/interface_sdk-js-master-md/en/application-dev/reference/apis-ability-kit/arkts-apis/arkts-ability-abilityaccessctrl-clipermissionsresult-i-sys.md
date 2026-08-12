@@ -13,7 +13,7 @@ Represents the CLI permission query result.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## permList
@@ -24,7 +24,7 @@ permList: Array<CliCommandPermissionResult>
 
 List of CLI permission information.
 
-**Type:** Array&lt;CliCommandPermissionResult&gt;
+**Type:** Array&lt;[CliCommandPermissionResult](arkts-ability-abilityaccessctrl-clicommandpermissionresult-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@ Badge的样式。包括文本颜色、尺寸、字重、圆点颜色和尺寸等
 
 > **说明：**
 > > 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边
-> 线。如需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件设置[outline](arkts-arkui-common-commonmethod-i.md#outline)代替Badge组件。
+> 线。如需实现相关场景，建议使用[Text](text)组件设置[outline](CommonMethod#outline(value: OutlineOptions))代替Badge组件。
 
 **起始版本：** 23
 
@@ -44,7 +44,7 @@ badgeSize?: double | ResourceStr
 
 Badge的大小。string类型支持number类型取值的字符串形式，可以附带单位，，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"16"、"16vp"，不附带单位时默认单位为"fp"。默认值：16vp。
 
-**类型：** double \| ResourceStr
+**类型：** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -152,7 +152,7 @@ fontSize?: double | ResourceStr
 
 文本大小。string类型仅支持number类型取值的字符串形式，可以附带单位，支持的单位有"px"、"vp"、"fp"、"lpx"，例如"10"、"10fp"，不附带单位时默认单位为"fp"。默认值：10vp。
 
-**类型：** double \| ResourceStr
+**类型：** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -172,7 +172,7 @@ fontWeight?: int | FontWeight | ResourceStr
 
 设置文本的字体粗细。默认值：FontWeight.Normal。&lt;br&gt;number类型取值范围：[100,900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
 
-**类型：** int \| FontWeight \| ResourceStr
+**类型：** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 

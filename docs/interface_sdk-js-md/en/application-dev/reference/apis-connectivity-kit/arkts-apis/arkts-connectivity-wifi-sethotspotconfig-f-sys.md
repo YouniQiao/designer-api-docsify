@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## setHotspotConfig
@@ -22,7 +22,7 @@ Sets the hotspot for a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.setHotspotConfig
+**Substitutes:** [setHotspotConfig](ohos.wifiManager/wifiManager.setHotspotConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 
@@ -36,7 +36,7 @@ Sets the hotspot for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HotspotConfig](arkts-connectivity-wifi-hotspotconfig-i-sys.md) | Yes |  |
+| config | HotspotConfig | Yes |  |
 
 **Return value:**
 

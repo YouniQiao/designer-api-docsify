@@ -58,7 +58,7 @@ urlRegexRules? : Array<UrlRegexRule>
 
 一组允许来源的正则匹配规则。 当scriptRules设置为[]时，才使用urlRegexRules进行匹配。
 
-**类型：** Array&lt;UrlRegexRule&gt;
+**类型：** Array&lt;[UrlRegexRule](arkts-arkweb-urlregexrule-i.md)&gt;
 
 **起始版本：** 23
 

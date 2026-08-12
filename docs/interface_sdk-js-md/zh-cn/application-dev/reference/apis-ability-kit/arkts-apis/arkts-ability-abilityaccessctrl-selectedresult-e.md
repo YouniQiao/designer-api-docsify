@@ -10,21 +10,21 @@
 
 ## 核心枚举类型
 
-- **[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)：** 权限授权状态枚举，用于表示当前权限的授权状态。  
-- **[SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md)：** 全局开关类型枚举，用于表示需要请求的系统全局开关类型。  
-- **[PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md)：** 权限状态变化类型枚举，用于表示授权、取消授权等变化。  
-- **[PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md)：** 权限状态枚举，用于表示当前权限状态。  
-- **[SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md)：** 设置页授权选择结果枚举，用于表示用户在权限设置弹窗中的选择结果。
+- **[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md#GrantStatus)：** 权限授权状态枚举，用于表示当前权限的授权状态。  
+- **[SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md#SwitchType)：** 全局开关类型枚举，用于表示需要请求的系统全局开关类型。  
+- **[PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md#PermissionStateChangeType)：** 权限状态变化类型枚举，用于表示授权、取消授权等变化。  
+- **[PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md#PermissionStatus)：** 权限状态枚举，用于表示当前权限状态。  
+- **[SelectedResult](#SelectedResult)：** 设置页授权选择结果枚举，用于表示用户在权限设置弹窗中的选择结果。
 
 ## 核心接口类型
 
-- **[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)：** 权限状态变化事件对象，用于返回变化类型、应用身份标识和权限名。  
-- **[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)：** 权限申请结果对象，用于返回权限申请后的权限名列表、授权结果和弹窗展示结果。  
-- **[Context](arkts-ability-context-t.md)：** 上下文对象，用于发起权限申请或打开权限设置弹窗。
+- **[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md#PermissionStateChangeInfo)：** 权限状态变化事件对象，用于返回变化类型、应用身份标识和权限名。  
+- **[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md#PermissionRequestResult)：** 权限申请结果对象，用于返回权限申请后的权限名列表、授权结果和弹窗展示结果。  
+- **[Context](arkts-ability-context-t.md#Context)：** 上下文对象，用于发起权限申请或打开权限设置弹窗。
 
 ## 核心类
 
-- **[AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md)：** 程序访问控制管理类，提供权限校验、权限弹窗申请、设置页授权引导和权限状态监听等能力。
+- **[AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md#AtManager)：** 程序访问控制管理类，提供权限校验、权限弹窗申请、设置页授权引导和权限状态监听等能力。
 
 ![image_abilityAccessCtrl](../../../reference/apis-ability-kit/figures/abilityAccessCtrl.png)
 

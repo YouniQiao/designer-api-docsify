@@ -4,7 +4,7 @@
 
 **BasicPrefetcher** objects do not support JSON serialization.
 
-**Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
+**Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md#IPrefetcher)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.ArkUI';
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
 ```
 
 ## constructor

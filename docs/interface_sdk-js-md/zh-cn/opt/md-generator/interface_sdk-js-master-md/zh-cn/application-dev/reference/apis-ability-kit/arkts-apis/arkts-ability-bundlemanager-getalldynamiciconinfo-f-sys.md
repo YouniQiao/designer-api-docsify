@@ -32,16 +32,16 @@ function getAllDynamicIconInfo(userId?: number): Promise<Array<DynamicIconInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;DynamicIconInfo&gt;&gt; |
+| Promise & lt;Array & lt;DynamicIconInfo & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700306](../errorcode-bundle.md#17700306-动态图标查询失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700306](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700306-动态图标查询失败) |
 
 ## 示例
 

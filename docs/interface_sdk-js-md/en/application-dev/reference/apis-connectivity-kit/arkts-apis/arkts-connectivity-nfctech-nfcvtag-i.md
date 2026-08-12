@@ -1,8 +1,8 @@
 # NfcVTag
 
-Provides methods for creating an NFC-V tag, obtaining tag information, and controlling tag read and write.&lt;p&gt;This class inherits from the {@link TagSession} abstract class and provides interfaces to create an{@code NfcVTag} and obtain the tag information.
+Provides methods for creating an NFC-V tag, obtaining tag information, and controlling tag read and write.&lt;p&gt;This class inherits from the [TagSession](TagSession) abstract class and provides interfaces to create an{@code NfcVTag} and obtain the tag information.
 
-**Inheritance/Implementation:** NfcVTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** NfcVTag extends [TagSession](TagSession)
 
 **Since:** 12
 
@@ -42,6 +42,16 @@ Obtains the response flags from this {@code NfcVTag} instance.
 | --- | --- |
 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the response flags. |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcV tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let dsfId : number = nfcV.getDsfId();
+console.info("nfcV dsfId: " + dsfId);
+```
+
 ## getResponseFlags
 
 ArkTS-Dyn:
@@ -71,4 +81,14 @@ Obtains the response flags from this {@code NfcVTag} instance.
 | Type | Description |
 | --- | --- |
 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the response flags. |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcV tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let responseFlags : number = nfcV.getResponseFlags();
+console.info("nfcV responseFlags: " + responseFlags);
+```
 

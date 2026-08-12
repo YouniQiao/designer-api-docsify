@@ -34,5 +34,5 @@ Defines a calendar picker dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CalendarDialogOptions](../arkts-apis/arkts-arkui-calendarpicker-calendardialogoptions-i.md) | No | Parameters of the calendar picker dialog box. |
+| options | [CalendarDialogOptions](arkts-arkui-calendardialogoptions-i.md) | No | Parameters of the calendar picker dialog box. |
 

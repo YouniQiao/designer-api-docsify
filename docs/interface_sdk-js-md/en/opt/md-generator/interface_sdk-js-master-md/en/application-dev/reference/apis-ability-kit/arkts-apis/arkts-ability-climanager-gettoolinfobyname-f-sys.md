@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## getToolInfoByName
@@ -30,7 +30,7 @@ Get detailed information of a single tool by its name
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| toolName | string | Yes |
+| [toolName](arkts-ability-climanager-clisessioninfo-i-sys.md) | string | Yes |
 
 **Return value:**
 
@@ -43,6 +43,6 @@ Get detailed information of a single tool by its name
 | Error Code ID |
 | --- |
 | 35600030 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 35600050 |

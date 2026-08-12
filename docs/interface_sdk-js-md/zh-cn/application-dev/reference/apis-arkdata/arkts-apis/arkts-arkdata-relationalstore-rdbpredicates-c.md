@@ -30,7 +30,7 @@ and(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有和条件的谓词。 |
+| RdbPredicates | 返回带有和条件的谓词。 |
 
 ## beginWrap
 
@@ -52,7 +52,7 @@ beginWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有左括号的谓词。 |
+| RdbPredicates | 返回带有左括号的谓词。 |
 
 ## beginsWith
 
@@ -81,13 +81,13 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## between
 
@@ -110,20 +110,20 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## constructor
 
@@ -151,7 +151,7 @@ constructor(name: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## contains
 
@@ -180,13 +180,13 @@ contains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## distinct
 
@@ -208,7 +208,7 @@ distinct(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回可用于过滤重复记录的谓词。 |
+| RdbPredicates | 返回可用于过滤重复记录的谓词。 |
 
 ## endWrap
 
@@ -230,7 +230,7 @@ endWrap(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有右括号的谓词。 |
+| RdbPredicates | 返回带有右括号的谓词。 |
 
 ## endsWith
 
@@ -259,13 +259,13 @@ endsWith(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## equalTo
 
@@ -288,19 +288,19 @@ equalTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## glob
 
@@ -329,13 +329,13 @@ glob(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## greaterThan
 
@@ -358,19 +358,19 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -393,19 +393,19 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## groupBy
 
@@ -433,13 +433,13 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回分组查询列的谓词。 |
+| RdbPredicates | 返回分组查询列的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## having
 
@@ -461,20 +461,20 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| conditions | string | 是 | 用于过滤使用[groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)获得的数据，conditions参数不能为空 字符串且必须与[groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)配合使用。 |
+| conditions | string | 是 | 用于过滤使用[groupBy](#groupBy)获得的数据，conditions参数不能为空 字符串且必须与[groupBy](#groupBy)配合使用。 |
 | args | Array&lt;ValueType&gt; | 否 | 条件中使用的参数，用来替换条件语句中的占位符，不传时默认为空数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range; &lt;br&gt;2. Missing GROUP BY clause. |
+| [14800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range; &lt;br&gt;2. Missing GROUP BY clause. |
 
 ## in
 
@@ -507,13 +507,13 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## inAllDevices
 
@@ -535,7 +535,7 @@ inAllDevices(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 ## inDevices
 
@@ -548,7 +548,7 @@ inDevices(devices: Array<string>): RdbPredicates
 > **说明：**
 > 
 > 其中devices通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 > 方法得到。
 > 
 > 调用
@@ -573,13 +573,13 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## inValues
 
@@ -608,13 +608,13 @@ inValues(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了谓词条件的RdbPredicates对象。 |
+| RdbPredicates | 返回配置了谓词条件的RdbPredicates对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## indexedBy
 
@@ -642,13 +642,13 @@ indexedBy(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回具有指定索引列的谓词。 |
+| RdbPredicates | 返回具有指定索引列的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isNotNull
 
@@ -676,13 +676,13 @@ isNotNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isNull
 
@@ -710,13 +710,13 @@ isNull(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## lessThan
 
@@ -739,19 +739,19 @@ lessThan(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -774,19 +774,19 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## like
 
@@ -815,13 +815,13 @@ like(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## limitAs
 
@@ -855,13 +855,13 @@ limitAs(value: int): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回可用于设置最大数据记录数的谓词。 |
+| RdbPredicates | 返回可用于设置最大数据记录数的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notBetween
 
@@ -884,20 +884,20 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notContains
 
@@ -926,13 +926,13 @@ notContains(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notEqualTo
 
@@ -955,19 +955,19 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值，长度不超过1024字节。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notIn
 
@@ -996,13 +996,13 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notInValues
 
@@ -1031,13 +1031,13 @@ notInValues(field: string, value: Array<ValueType>): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回配置了谓词条件的RdbPredicates对象。 |
+| RdbPredicates | 返回配置了谓词条件的RdbPredicates对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## notLike
 
@@ -1066,13 +1066,13 @@ notLike(field: string, value: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offsetAs
 
@@ -1106,13 +1106,13 @@ offsetAs(rowOffset: int): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回具有指定返回结果起始位置的谓词。 |
+| RdbPredicates | 返回具有指定返回结果起始位置的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## or
 
@@ -1134,7 +1134,7 @@ or(): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回带有或条件的谓词。 |
+| RdbPredicates | 返回带有或条件的谓词。 |
 
 ## orderByAsc
 
@@ -1162,13 +1162,13 @@ orderByAsc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## orderByDesc
 
@@ -1196,11 +1196,11 @@ orderByDesc(field: string): RdbPredicates
 
 | 类型 | 说明 |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 返回与指定字段匹配的谓词。 |
+| RdbPredicates | 返回与指定字段匹配的谓词。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

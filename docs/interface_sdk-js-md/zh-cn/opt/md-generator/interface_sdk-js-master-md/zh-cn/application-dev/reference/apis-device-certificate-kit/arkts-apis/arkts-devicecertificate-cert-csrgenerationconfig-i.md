@@ -26,7 +26,7 @@ attributes?: Array<CsrAttribute>
 
 属性的集合。
 
-**类型：** Array&lt;CsrAttribute&gt;
+**类型：** Array&lt;[CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md)&gt;
 
 **起始版本：** 18
 

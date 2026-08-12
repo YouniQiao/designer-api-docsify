@@ -24,13 +24,13 @@ Defines Span Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes |  |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SpanAttribute](../arkts-components/arkts-arkui-span-attribute.md) |  |
+| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
 
 
 ## Span
@@ -59,11 +59,11 @@ Defines Span Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SpanAttribute&gt; | Yes | Span attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SpanAttribute](arkts-arkui-span-spanattribute-i.md)&gt; | Yes | Span attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SpanAttribute](../arkts-components/arkts-arkui-span-attribute.md) |  |
+| [SpanAttribute](arkts-arkui-span-spanattribute-i.md) |  |
 

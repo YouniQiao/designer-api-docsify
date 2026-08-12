@@ -13,7 +13,7 @@ Defines the configuration options for ContainerReader component.Used to specify 
 ## Modules to Import
 
 ```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint
@@ -24,7 +24,7 @@ heightBreakpoint?: Bindable<HeightBreakpoint>
 
 Optional height breakpoint configuration for container height analysis.Defines the height thresholds that trigger different layout behaviors.
 
-**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;[HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)&gt;
+**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;HeightBreakpoint&gt;
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ widthBreakpoint?: Bindable<WidthBreakpoint>
 
 Optional width breakpoint configuration for container width analysis.Defines the width thresholds that trigger different layout behaviors.
 
-**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;[WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)&gt;
+**Type:** [Bindable](arkts-arkui-common-bindable-i.md)&lt;WidthBreakpoint&gt;
 
 **Since:** 26.0.0
 

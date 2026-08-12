@@ -1,8 +1,8 @@
 # AccelerometerResponse
 
-加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+加速度传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
 
-**继承/实现关系：** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**继承/实现关系：** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **起始版本：** 8
 

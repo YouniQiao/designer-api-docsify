@@ -1,8 +1,8 @@
 # SheetOptions
 
-Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md).
+Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions).
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Defines the sheet's border color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Defines the sheet's border width.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ detentSelection?: SheetSize | Length
 
 Select a detent from detents property
 
-**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** detents[0]
 
@@ -276,7 +276,7 @@ height?: SheetSize | Length
 
 Defines sheet height
 
-**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Default:** SheetSize.LARGE
 
@@ -406,7 +406,7 @@ onDetentsDidChange?: Callback<number>
 
 Called when detents of the sheet changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -426,7 +426,7 @@ onHeightDidChange?: Callback<number>
 
 Called when height of the sheet is changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -446,7 +446,7 @@ onTypeDidChange?: Callback<SheetType>
 
 Called when the sheet type changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SheetType&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[SheetType](arkts-arkui-sheettype-e.md)&gt;
 
 **Since:** 12
 
@@ -466,7 +466,7 @@ onWidthDidChange?: Callback<number>
 
 Called when width of the sheet changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -486,7 +486,7 @@ onWillDismiss?: Callback<DismissSheetAction>
 
 Callback function when the sheet will dismiss
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissSheetAction&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)&gt;
 
 **Since:** 12
 
@@ -506,7 +506,7 @@ onWillSpringBackWhenDismiss?: Callback<SpringBackAction>
 
 Sheet springs back callback when dismiss
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SpringBackAction&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[SpringBackAction](arkts-arkui-springbackaction-i.md)&gt;
 
 **Since:** 12
 
@@ -590,7 +590,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 15
 
@@ -656,7 +656,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the sheet's shadow.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 
@@ -740,7 +740,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 Defines the sheet title
 
-**Type:** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| CustomBuilder
+**Type:** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 11
 

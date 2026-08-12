@@ -13,7 +13,7 @@ Defines the options for obtaining a domain access token.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## businessParams
@@ -60,7 +60,7 @@ domainAccountInfo: DomainAccountInfo
 
 Domain account information.
 
-**Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md)
+**Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **Since:** 10
 

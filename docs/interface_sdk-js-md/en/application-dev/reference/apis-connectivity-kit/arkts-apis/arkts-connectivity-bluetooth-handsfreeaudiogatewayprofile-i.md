@@ -2,7 +2,7 @@
 
 Manager handsfree AG profile.
 
-**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md)
+**Inheritance/Implementation:** HandsFreeAudioGatewayProfile extends [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md#BaseProfile)
 
 **Since:** 7
 
@@ -10,7 +10,7 @@ Manager handsfree AG profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile
+**Substitutes:** [HandsFreeAudioGatewayProfile](ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile)
 
 <!--Device-bluetooth-interface HandsFreeAudioGatewayProfile extends BaseProfile--><!--Device-bluetooth-interface HandsFreeAudioGatewayProfile extends BaseProfile-End-->
 
@@ -19,7 +19,7 @@ Manager handsfree AG profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -36,7 +36,7 @@ Connect to device with hfp.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile#connect
+**Substitutes:** [connect](ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile#connect)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -78,7 +78,7 @@ Disconnect to device with hfp.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile#disconnect
+**Substitutes:** [disconnect](ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile#disconnect)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -120,7 +120,7 @@ Unsubscribe the event reported when the profile connection state changes .
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile.off#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile.off#event:connectionStateChange)
 
 <!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
 
@@ -131,7 +131,7 @@ Unsubscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
 ## on('connectionStateChange')
 
@@ -147,7 +147,7 @@ Subscribe the event reported when the profile connection state changes .
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile.on#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetoothManager/bluetoothManager.HandsFreeAudioGatewayProfile.on#event:connectionStateChange)
 
 <!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-HandsFreeAudioGatewayProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
@@ -158,5 +158,5 @@ Subscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
 

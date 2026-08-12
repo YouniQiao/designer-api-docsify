@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPicture
@@ -29,7 +29,7 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | Main PixelMap. |
+| mainPixelmap | PixelMap | Yes | Main PixelMap. |
 
 **Return value:**
 
@@ -41,7 +41,7 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

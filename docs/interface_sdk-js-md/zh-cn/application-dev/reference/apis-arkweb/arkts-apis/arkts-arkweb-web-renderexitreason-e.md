@@ -1,6 +1,6 @@
 # RenderExitReason
 
-Enum type supplied to {@link renderExitReason} when onRenderExited being called.
+Enum type supplied to [renderExitReason](arkts-arkweb-web-onrenderexitedevent-i.md#renderExitReason) when onRenderExited being called.
 
 **起始版本：** 23
 

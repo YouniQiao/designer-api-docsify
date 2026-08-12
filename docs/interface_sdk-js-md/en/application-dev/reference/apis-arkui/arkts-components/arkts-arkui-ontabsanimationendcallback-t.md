@@ -23,5 +23,5 @@ Defines the callback triggered when the tab switching animation ends.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the currently displayed element. The index is zero-based. |
-| extraInfo | [TabsAnimationEvent](../arkts-apis/arkts-arkui-tabs-tabsanimationevent-i.md) | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Tabs** along the main axis. |
+| extraInfo | [TabsAnimationEvent](arkts-arkui-tabsanimationevent-i.md) | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **Tabs** along the main axis. |
 

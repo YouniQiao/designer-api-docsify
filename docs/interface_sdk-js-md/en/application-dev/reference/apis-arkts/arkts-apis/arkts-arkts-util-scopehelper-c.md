@@ -13,7 +13,7 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## clamp

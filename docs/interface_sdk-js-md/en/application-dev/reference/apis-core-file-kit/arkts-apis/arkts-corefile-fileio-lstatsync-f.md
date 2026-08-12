@@ -14,7 +14,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:lstatSync](arkts-corefile-fileio-lstatsync-f.md#lstatsync)
+**Substitutes:** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md#lstatSync)
 
 <!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
 
@@ -30,5 +30,5 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-fileio-stat-i.md) | File information obtained. |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | File information obtained. |
 

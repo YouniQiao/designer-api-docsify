@@ -19,12 +19,12 @@ The type of conversion result function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| this | [ISendable](arkts-arkts-ason-isendable-t.md) | Yes |
+| this | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | Yes |
 | key | string | Yes |
-| value | [ISendable](arkts-arkts-ason-isendable-t.md) \| undefined \| null | Yes |
+| value | ISendable \| undefined \| null | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [ISendable](arkts-arkts-ason-isendable-t.md) \| undefined \| null |
+| ISendable \| undefined \| null |

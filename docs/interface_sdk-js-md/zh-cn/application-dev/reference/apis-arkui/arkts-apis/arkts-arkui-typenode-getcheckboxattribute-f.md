@@ -28,5 +28,5 @@ export function getCheckboxAttribute(node: FrameNode): CheckboxAttribute | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| CheckboxAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

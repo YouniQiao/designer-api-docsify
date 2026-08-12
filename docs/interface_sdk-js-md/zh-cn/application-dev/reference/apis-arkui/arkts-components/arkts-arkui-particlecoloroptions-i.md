@@ -22,7 +22,7 @@ a: ParticleTuple<number, number>
 
 a颜色通道的差值。
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **起始版本：** 10
 
@@ -44,7 +44,7 @@ b: ParticleTuple<number, number>
 
 b颜色通道的差值。
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **起始版本：** 10
 
@@ -66,7 +66,7 @@ g: ParticleTuple<number, number>
 
 g颜色通道的差值。
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **起始版本：** 10
 
@@ -88,7 +88,7 @@ r: ParticleTuple<number, number>
 
 r颜色通道的差值。
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **起始版本：** 10
 

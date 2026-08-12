@@ -2,7 +2,7 @@
 
 Defines DisappearSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** DisappearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** DisappearSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
 
 **Since:** 12
 

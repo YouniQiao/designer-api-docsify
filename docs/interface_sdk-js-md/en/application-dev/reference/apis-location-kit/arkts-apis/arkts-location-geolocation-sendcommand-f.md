@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -20,7 +20,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.sendCommand
+**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +32,8 @@ Send extended commands to location subsystem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
+| command | LocationCommand | Yes | Indicates the extended Command Message Body. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the send command result. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.sendCommand
+**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +77,7 @@ Send extended commands to location subsystem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| command | [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md) | Yes | Indicates the extended Command Message Body. |
+| command | LocationCommand | Yes | Indicates the extended Command Message Body. |
 
 **Return value:**
 

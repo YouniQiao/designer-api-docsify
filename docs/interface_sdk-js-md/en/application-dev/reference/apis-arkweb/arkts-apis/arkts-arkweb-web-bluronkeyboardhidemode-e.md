@@ -1,6 +1,6 @@
 # BlurOnKeyboardHideMode
 
-Enum type supplied to {@link blurOnKeyboardHideMode} for setting the web blurOnKeyboardHide mode.
+Enum type supplied to [blurOnKeyboardHideMode](arkts-arkweb-web-webattribute-i.md#blurOnKeyboardHideMode) for setting the web blurOnKeyboardHide mode.
 
 **Since:** 23
 

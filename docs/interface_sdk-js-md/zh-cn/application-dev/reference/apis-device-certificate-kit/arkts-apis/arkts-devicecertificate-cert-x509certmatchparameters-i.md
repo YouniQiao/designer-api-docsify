@@ -220,7 +220,7 @@ publicKey?: DataBlob
 
 指定证书公钥，DER编码格式。
 
-**类型：** [DataBlob](arkts-devicecertificate-cert-datablob-i.md)
+**类型：** DataBlob
 
 **起始版本：** 11
 
@@ -300,7 +300,7 @@ subjectAlternativeNames?: Array<GeneralName>
 
 指定证书主体备用名称。
 
-**类型：** Array&lt;GeneralName&gt;
+**类型：** Array&lt;[GeneralName](arkts-devicecertificate-cert-generalname-i.md)&gt;
 
 **起始版本：** 12
 

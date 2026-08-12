@@ -62,7 +62,7 @@ Iterable interface implementation.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;double&gt; | iterator that yields each element in order. |
+| IterableIterator&lt;double&gt; | iterator that yields each element in order. |
 
 ## $_set
 
@@ -377,7 +377,7 @@ Creates an Uint32Array with respect to data, byteOffset and length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | [ArrayBufferLike](arkts-arkts-arraybufferlike-t.md) | Yes | data initializer |
+| buf | ArrayBufferLike | Yes | data initializer |
 | byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
 | length | int | Yes | size of elements of type long in newly created Uint32Array &lt;br&gt;The value should be an integer. |
 
@@ -479,7 +479,7 @@ Creates an Uint32Array with respect to buf.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
+| buf | ArrayLike&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
 
 ## copyWithin
 
@@ -565,7 +565,7 @@ Returns an array of key, value pairs for every entry in the Uint32Array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, double]&gt; | iterator over [index, value] pairs for each element. |
+| IterableIterator&lt;[int, double]&gt; | iterator over [index, value] pairs for each element. |
 
 ## every
 
@@ -1007,7 +1007,7 @@ Creates an array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; | Yes | An array-like object to convert to an array. |
+| arr | ArrayLike&lt;double&gt; | Yes | An array-like object to convert to an array. |
 
 **Return value:**
 
@@ -1037,7 +1037,7 @@ Creates an array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | An array-like object to convert to an array. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an array. |
 | mapfn | (v: T, k: double) =&gt; number | Yes | A mapping function to call on every element of the array. Defaults to the identity function (returns the element unchanged). |
 
 **Return value:**
@@ -1313,7 +1313,7 @@ Returns an list of indices in the Uint32Array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | iterator over the array indices. |
+| IterableIterator&lt;int&gt; | iterator over the array indices. |
 
 ## lastIndexOf
 
@@ -1952,7 +1952,7 @@ Copies elements from an ArrayLike object to the Uint32Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
+| array | ArrayLike&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
 | offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
 
 ## slice
@@ -2280,7 +2280,7 @@ Returns array values iterator
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;double&gt; | an iterator |
+| IterableIterator&lt;double&gt; | an iterator |
 
 ## with
 

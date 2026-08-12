@@ -30,7 +30,7 @@ export declare function Polygon(
 
 | 类型 | 说明 |
 | --- | --- |
-| [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) | 多边形的属性。 |
+| [PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md) | 多边形的属性。 |
 
 
 ## Polygon
@@ -59,11 +59,11 @@ export declare function Polygon(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolygonAttribute&gt; | 是 | 设置组件属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) |  |
+| [PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md) |  |
 

@@ -29,5 +29,5 @@ Create a FrameNode of Radio type.On API 26.0.0 and above, It can also create a F
 
 | Type | Description |
 | --- | --- |
-| [Radio](arkts-arkui-typenode-radio-t.md) | Return Radio type FrameNode. |
+| Radio | Return Radio type FrameNode. |
 

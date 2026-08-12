@@ -13,7 +13,7 @@ Defines the PrefetchOptions class.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

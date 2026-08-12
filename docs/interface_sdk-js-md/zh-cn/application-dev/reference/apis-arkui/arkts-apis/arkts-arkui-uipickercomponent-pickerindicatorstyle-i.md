@@ -50,9 +50,9 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 **说明：**
 
-1. 当type为PickerIndicatorType.BACKGROUND时生效。2. [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)：统一设置四个圆角半径的大小和单位。3. [BorderRadiuses](arkts-arkui-borderradiuses-t.md)：单独设置四个圆角半径的大小（单位为vp）。4. [LocalizedBorderRadiuses](arkts-arkui-units-localizedborderradiuses-i.md)：单独设置四个圆角半径的大小和单位。
+1. 当type为PickerIndicatorType.BACKGROUND时生效。2. [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics)：统一设置四个圆角半径的大小和单位。3. [BorderRadiuses](BorderRadiuses)：单独设置四个圆角半径的大小（单位为vp）。4. [LocalizedBorderRadiuses](LocalizedBorderRadiuses)：单独设置四个圆角半径的大小和单位。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 23
 
@@ -108,7 +108,7 @@ endMargin?: LengthMetrics
 
 当type为PickerIndicatorType.DIVIDER时生效。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -138,7 +138,7 @@ startMargin?: LengthMetrics
 
 当type为PickerIndicatorType.DIVIDER时生效。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -168,7 +168,7 @@ strokeWidth?: LengthMetrics
 
 1. 当type为PickerIndicatorType.DIVIDER时生效。2. 通过LengthMetrics.resource方式设置时，使用非长度属性的值会按照0vp处理。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
@@ -192,7 +192,7 @@ type: PickerIndicatorType
 
 当type的值为小数时，使用向下取整后的整数；当type的值不在PickerIndicatorType枚举范围内时，使用默认值。
 
-**类型：** [PickerIndicatorType](../arkts-components/arkts-arkui-pickerindicatortype-e.md)
+**类型：** [PickerIndicatorType](arkts-arkui-uipickercomponent-pickerindicatortype-e.md)
 
 **起始版本：** 23
 

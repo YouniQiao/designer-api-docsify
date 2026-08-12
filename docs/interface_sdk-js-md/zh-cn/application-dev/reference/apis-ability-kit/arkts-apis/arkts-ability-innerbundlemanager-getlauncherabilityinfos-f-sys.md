@@ -12,7 +12,7 @@ function getLauncherAbilityInfos(bundleName: string,
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo)
+> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo)
 > 替代。
 
 **起始版本：** 8
@@ -21,7 +21,7 @@ function getLauncherAbilityInfos(bundleName: string,
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo)(bundleName:
+**替代接口：** [getLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo(bundleName:)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -51,7 +51,7 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo)
+> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo)
 > 替代。
 
 **起始版本：** 8
@@ -60,7 +60,7 @@ function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Ar
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo)(bundleName:
+**替代接口：** [getLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo(bundleName:)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

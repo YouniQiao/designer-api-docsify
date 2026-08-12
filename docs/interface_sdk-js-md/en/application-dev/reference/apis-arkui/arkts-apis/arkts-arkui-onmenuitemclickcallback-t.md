@@ -20,8 +20,8 @@ Invoke upon clicking an item, capable of intercepting the default system menu ex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | Yes | current default menu. |
-| range | [TextRange](arkts-arkui-textrange-i.md) | Yes | current selected range. |
+| menuItem | [TextMenuItem](arkts-arkui-textcommon-textmenuitem-i.md) | Yes | current default menu. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | Yes | current selected range. |
 
 **Return value:**
 

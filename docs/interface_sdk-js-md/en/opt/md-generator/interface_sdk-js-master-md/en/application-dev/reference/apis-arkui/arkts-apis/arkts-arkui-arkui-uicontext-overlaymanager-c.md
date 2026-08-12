@@ -6,7 +6,7 @@ Provides the capability to draw overlays.
 > 
 > - The initial APIs of this class are supported since API version 12.
 > 
-> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager) in
+> - In the following API examples, you must first use [getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getOverlayManager) in
 > **UIContext** to obtain an **OverlayManager** instance, and then call the APIs using the obtained instance.
 > 
 > - The nodes on **OverlayManager** are above the page level, but below such components as created through
@@ -27,7 +27,7 @@ Provides the capability to draw overlays.
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## addComponentContent
@@ -52,7 +52,7 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 | index | number | No |
 
 ## addComponentContentWithOrder
@@ -79,7 +79,7 @@ This API allows you to define the stacking order of the nodes when they are crea
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |
 
 ## hideAllComponentContents
@@ -122,7 +122,7 @@ Hides a specified **ComponentContent** node on the **OverlayManager**.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 
 ## openOrderOverlay
 
@@ -146,20 +146,20 @@ Opens an overlay with the specified ComponentContent and options.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) |
+| [103307](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) |
 
 ## removeComponentContent
 
@@ -183,7 +183,7 @@ Removes a specified node from the **OverlayManager**.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |
 
 ## showAllComponentContents
 
@@ -225,4 +225,4 @@ Shows a specified **ComponentContent** node on the **OverlayManager**.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | Yes |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | Yes |

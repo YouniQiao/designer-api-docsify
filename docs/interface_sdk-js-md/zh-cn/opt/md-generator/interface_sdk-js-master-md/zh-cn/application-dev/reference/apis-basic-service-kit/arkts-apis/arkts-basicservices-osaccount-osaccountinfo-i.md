@@ -104,7 +104,7 @@ isActived: boolean
 
 **废弃版本：** 11
 
-**替代接口：** [osAccount.OsAccountInfo.isActivated](arkts-basicservices-osaccount-osaccountinfo-i.md#isactivated)
+**替代接口：** [isActivated](#isActivated)
 
 <!--Device-OsAccountInfo-isActived: boolean--><!--Device-OsAccountInfo-isActived: boolean-End-->
 
@@ -158,7 +158,7 @@ isVerified: boolean
 
 **废弃版本：** 11
 
-**替代接口：** [osAccount.OsAccountInfo.isUnlocked](arkts-basicservices-osaccount-osaccountinfo-i.md#isunlocked)
+**替代接口：** [isUnlocked](#isUnlocked)
 
 <!--Device-OsAccountInfo-isVerified: boolean--><!--Device-OsAccountInfo-isVerified: boolean-End-->
 

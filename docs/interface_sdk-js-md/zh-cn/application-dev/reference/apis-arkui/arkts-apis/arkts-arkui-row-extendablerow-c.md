@@ -2,7 +2,7 @@
 
 Defines the Extendable Row.
 
-**继承/实现关系：** ExtendableRow implements [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md/arkts-arkui-row-attribute.md)
+**继承/实现关系：** ExtendableRow implements [RowAttribute](arkts-arkui-row-rowattribute-i.md#RowAttribute)
 
 **起始版本：** 26.0.0
 
@@ -39,8 +39,8 @@ Constructor of Extendable Row.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| options | [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -76,9 +76,9 @@ Entry of Extendable Row.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setRowOptions
 
@@ -102,7 +102,7 @@ Set the Row Options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | 否 |  |
+| options | [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | 否 |  |
 
 **返回值：**
 

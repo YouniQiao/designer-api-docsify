@@ -1,6 +1,6 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the {@link onInterceptKeyboardAttach} event.
+Define the controller to interact with a custom keyboard, related to the [onInterceptKeyboardAttach](arkts-arkweb-web-webattribute-i.md#onInterceptKeyboardAttach) event.
 
 **Since:** 23
 
@@ -128,5 +128,5 @@ Send the function of the key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | int | Yes | action indicates the "enter" key related to the {@link inputMethodEngine} |
+| key | int | Yes | action indicates the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md#inputMethodEngine) |
 

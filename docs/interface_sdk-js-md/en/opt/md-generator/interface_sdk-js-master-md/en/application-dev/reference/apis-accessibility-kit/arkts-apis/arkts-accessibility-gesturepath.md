@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## Summary

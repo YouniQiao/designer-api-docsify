@@ -2,7 +2,7 @@
 
 Defines a UIScrollableCommonEvent which is used to set event to target component.
 
-**继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](../arkts-components/arkts-arkui-uicommonevent-i.md/arkts-arkui-uicommonevent-i.md)
+**继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-common-uicommonevent-i.md#UICommonEvent)
 
 **起始版本：** 26.0.0
 

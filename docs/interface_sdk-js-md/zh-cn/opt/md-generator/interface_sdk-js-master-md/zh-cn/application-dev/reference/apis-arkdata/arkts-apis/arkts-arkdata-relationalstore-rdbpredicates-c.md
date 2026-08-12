@@ -79,7 +79,7 @@ beginsWith(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## between
 
@@ -113,7 +113,7 @@ between(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## constructor
 
@@ -139,7 +139,7 @@ constructor(name: string)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## contains
 
@@ -172,7 +172,7 @@ contains(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## distinct
 
@@ -245,7 +245,7 @@ endsWith(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## equalTo
 
@@ -278,7 +278,7 @@ equalTo(field: string, value: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## glob
 
@@ -311,7 +311,7 @@ glob(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## greaterThan
 
@@ -344,7 +344,7 @@ greaterThan(field: string, value: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## greaterThanOrEqualTo
 
@@ -377,7 +377,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## groupBy
 
@@ -397,7 +397,7 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fields | Array&lt;string&gt; | 是 |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
@@ -409,7 +409,7 @@ groupBy(fields: Array<string>): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## having
 
@@ -430,7 +430,7 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | conditions | string | 是 |
-| args | Array&lt;ValueType&gt; | 否 |
+| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
@@ -442,7 +442,7 @@ having(conditions: string, args?: Array<ValueType>): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
 
 ## in
 
@@ -467,7 +467,7 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | Array&lt;ValueType&gt; | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
@@ -479,7 +479,7 @@ in(field: string, value: Array<ValueType>): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## inAllDevices
 
@@ -512,7 +512,7 @@ inDevices(devices: Array<string>): RdbPredicates
 > **说明：**
 > 
 > 其中devices通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 > 方法得到。
 > 
 > 调用
@@ -529,7 +529,7 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| devices | Array&lt;string&gt; | 是 |
+| devices | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
@@ -541,7 +541,7 @@ inDevices(devices: Array<string>): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## indexedBy
 
@@ -573,7 +573,7 @@ indexedBy(field: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isNotNull
 
@@ -605,7 +605,7 @@ isNotNull(field: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isNull
 
@@ -637,7 +637,7 @@ isNull(field: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## lessThan
 
@@ -670,7 +670,7 @@ lessThan(field: string, value: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## lessThanOrEqualTo
 
@@ -703,7 +703,7 @@ lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## like
 
@@ -736,7 +736,7 @@ like(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## limitAs
 
@@ -768,7 +768,7 @@ limitAs(value: number): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notBetween
 
@@ -802,7 +802,7 @@ notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notContains
 
@@ -835,7 +835,7 @@ notContains(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notEqualTo
 
@@ -868,7 +868,7 @@ notEqualTo(field: string, value: ValueType): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notIn
 
@@ -889,7 +889,7 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | Array&lt;ValueType&gt; | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
@@ -901,7 +901,7 @@ notIn(field: string, value: Array<ValueType>): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notLike
 
@@ -934,7 +934,7 @@ notLike(field: string, value: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## offsetAs
 
@@ -966,7 +966,7 @@ offsetAs(rowOffset: number): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## or
 
@@ -1018,7 +1018,7 @@ orderByAsc(field: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## orderByDesc
 
@@ -1050,4 +1050,4 @@ orderByDesc(field: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

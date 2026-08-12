@@ -38,7 +38,7 @@ get size() :Size
 
 Get size of the DrawContext.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ get sizeInPixel(): Size
 
 Get size of the DrawContext with pixel unit.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 

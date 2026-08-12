@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentContext } from 'kits/@kit.AbilityKit';
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## Summary

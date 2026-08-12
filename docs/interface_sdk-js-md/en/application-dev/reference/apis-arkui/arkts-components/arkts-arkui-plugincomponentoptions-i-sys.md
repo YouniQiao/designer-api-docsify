@@ -46,7 +46,7 @@ template: PluginComponentTemplate
 
 Template of the **PluginComponent**, which is bound to the component defined by the provider.
 
-**Type:** [PluginComponentTemplate](../arkts-apis/arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
+**Type:** [PluginComponentTemplate](arkts-arkui-plugincomponenttemplate-i-sys.md)
 
 **Since:** 9
 

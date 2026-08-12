@@ -1,6 +1,6 @@
 # ReadonlySystemEnvKey
 
-只读系统环境变量Key，继承自[SystemEnvKey](../arkts-components/arkts-arkui-systemenvkey-c.md/arkts-arkui-systemenvkey-c.md)。
+只读系统环境变量Key，继承自[SystemEnvKey](arkts-arkui-decorator-systemenvkey-c.md#SystemEnvKey)。
 
 **继承/实现关系：** ReadonlySystemEnvKey extends [SystemEnvKey<T>](SystemEnvKey<T>)
 

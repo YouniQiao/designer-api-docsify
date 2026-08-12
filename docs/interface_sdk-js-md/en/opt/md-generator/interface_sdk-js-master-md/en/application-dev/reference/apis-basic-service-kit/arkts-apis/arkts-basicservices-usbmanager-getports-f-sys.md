@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## getPorts
@@ -18,7 +18,7 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 **Deprecated since:** 12
 
-**Substitutes:** [usbManager.getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getportlist)()
+**Substitutes:** [getPortList](arkts-basicservices-usbmanager-getportlist-f-sys.md#getPortList)()
 
 <!--Device-usbManager-function getPorts(): Array<USBPort>--><!--Device-usbManager-function getPorts(): Array<USBPort>-End-->
 
@@ -30,4 +30,4 @@ Obtains the list of all physical USB ports. When the developer mode is disabled,
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;USBPort&gt; |
+| Array & lt;USBPort & gt; |

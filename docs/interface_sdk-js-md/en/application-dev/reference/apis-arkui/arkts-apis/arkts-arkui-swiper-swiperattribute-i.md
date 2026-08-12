@@ -2,7 +2,7 @@
 
 Defines the swiper attribute functions.
 
-**Inheritance/Implementation:** SwiperAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** SwiperAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of swiper.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SwiperAttribute](arkts-arkui-swiper-swiperattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of swiper. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SwiperAttribute](arkts-arkui-swiper-swiperattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of swiper. |
 
 **Return value:**
 
@@ -217,7 +217,7 @@ Sets the animation curve Curve is an enumeration type for common curves ICurve i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Curve](arkts-arkui-curve-e.md) \| string \| ICurve \| undefined | Yes |  |
+| value | [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -247,7 +247,7 @@ Custom swiper content transition animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transition | [SwiperContentAnimatedTransition](../arkts-components/arkts-arkui-swipercontentanimatedtransition-i.md) \| undefined | Yes | custom content transition animation. |
+| transition | [SwiperContentAnimatedTransition](arkts-arkui-swiper-swipercontentanimatedtransition-i.md) \| undefined | Yes | custom content transition animation. |
 
 **Return value:**
 
@@ -341,7 +341,7 @@ If swipeByGroup is set to true:1.All sub-items are grouped from index 0.2.The nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int \| string \| SwiperAutoFill \| ItemFillPolicy \| undefined | Yes | The number of elements to display per page.<br>**Since:** 26.0.0 |
+| value | int \| string \| [SwiperAutoFill](arkts-arkui-swiper-swiperautofill-i.md) \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | Yes | The number of elements to display per page.<br>**Since:** 26.0.0 |
 | swipeByGroup | boolean \| undefined | No | if swipe by group. &lt;br&gt;Default value: false &lt;br&gt;true: The page is turned by group. The number of subelements in each group is the value of displayCount. false: The default page turning behavior is used. That is, pages are turned based on subelements.<br>**Since:** 23 |
 
 **Return value:**
@@ -462,7 +462,7 @@ Called when the index value of the displayed subcomponent is set in the containe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int \| Bindable&lt;int&gt; \| undefined | Yes |  |
+| value | int \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -492,7 +492,7 @@ Use indicator component controller.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicator | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) \| DotIndicator \| DigitIndicator \| boolean \| undefined | Yes | the style value or show indicator of the swiper indicator. |
+| indicator | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) \| [DotIndicator](arkts-arkui-swiper-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-swiper-digitindicator-c.md) \| boolean \| undefined | Yes | the style value or show indicator of the swiper indicator. |
 
 **Return value:**
 
@@ -672,7 +672,7 @@ Called to setting the nested scroll mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwiperNestedScrollMode](../arkts-components/arkts-arkui-swipernestedscrollmode-e.md) \| undefined | Yes | mode for nested scrolling. |
+| value | [SwiperNestedScrollMode](arkts-arkui-swiper-swipernestedscrollmode-e.md) \| undefined | Yes | mode for nested scrolling. |
 
 **Return value:**
 
@@ -763,7 +763,7 @@ Called when the swiper animation start.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnSwiperAnimationStartCallback](../arkts-components/arkts-arkui-onswiperanimationstartcallback-t.md) \| undefined | Yes |  |
+| event | [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -883,7 +883,7 @@ Called when the swiper swipe with the gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [OnSwiperGestureSwipeCallback](../arkts-components/arkts-arkui-onswipergestureswipecallback-t.md) \| undefined | Yes |  |
+| event | [OnSwiperGestureSwipeCallback](arkts-arkui-onswipergestureswipecallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 

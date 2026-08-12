@@ -18,7 +18,7 @@
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 7
 
@@ -49,7 +49,7 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 ```
 
 Sets the parameters for the rotation gesture. Compared with  
-[RotationGesture](arkts-arkui-rotationgestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+[RotationGesture](RotationGestureInterface(value?: { fingers?: number; angle?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
@@ -67,7 +67,7 @@ Sets the parameters for the rotation gesture. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | No | Parameters of the rotation gesture handler. |
+| options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | No | Parameters of the rotation gesture handler. |
 
 **Return value:**
 
@@ -112,7 +112,7 @@ onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
 Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with   
-[onActionCancel](arkts-arkui-rotationgestureinterface-i.md#onactioncancel), this callback returns gesture event information.
+[onActionCancel](RotationGestureInterface.onActionCancel(event: () => void)), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -130,7 +130,7 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback for the gesture event. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for the gesture event. |
 
 **Return value:**
 

@@ -36,7 +36,7 @@ Media.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_MUSIC
+**Substitutes:** [STREAM_USAGE_MUSIC](#STREAM_USAGE_MUSIC)
 
 <!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1--><!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1-End-->
 
@@ -134,7 +134,7 @@ Notification or ringtone usage.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.multimedia.audio.StreamUsage#STREAM_USAGE_RINGTONE
+**Substitutes:** [STREAM_USAGE_RINGTONE](#STREAM_USAGE_RINGTONE)
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6-End-->
 

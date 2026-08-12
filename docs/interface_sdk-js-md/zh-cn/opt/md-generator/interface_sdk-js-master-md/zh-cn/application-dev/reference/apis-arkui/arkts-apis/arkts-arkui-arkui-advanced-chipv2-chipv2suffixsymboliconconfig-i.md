@@ -2,9 +2,9 @@
 
 ChipV2SuffixSymbolIconConfig定义后缀Symbol图标的属性配置。
 
-继承自[ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)。
+继承自[ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md#ChipV2SymbolIconConfig)。
 
-**继承/实现关系：** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md)
+**继承/实现关系：** ChipV2SuffixSymbolIconConfig extends [ChipV2SymbolIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2symboliconconfig-i.md#ChipV2SymbolIconConfig)
 
 **起始版本：** 26.0.0
 

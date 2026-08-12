@@ -2,7 +2,7 @@
 
 矩形绘制组件。
 
-**继承/实现关系：** RectAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**继承/实现关系：** RectAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;RectAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -65,7 +65,7 @@ default radius(value: Length | Array<RadiusItem> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Array&lt;RadiusItem&gt; \| undefined | 是 | 圆角半径大小。 默认值：0 默认单位：vp 异常值undefined和null按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。 |
+| value | [Length](arkts-arkui-length-t.md) \| Array&lt;[RadiusItem](arkts-arkui-radiusitem-t.md)&gt; \| undefined | 是 | 圆角半径大小。 默认值：0 默认单位：vp 异常值undefined和null按照[[0, 0], [0, 0], [0, 0], [0, 0]]处理。 |
 
 **返回值：**
 
@@ -157,7 +157,7 @@ Set Rect options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectOptions](../arkts-components/arkts-arkui-rectoptions-i.md) \| RoundedRectOptions | 否 | Rect constructor options |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | 否 | Rect constructor options |
 
 **返回值：**
 

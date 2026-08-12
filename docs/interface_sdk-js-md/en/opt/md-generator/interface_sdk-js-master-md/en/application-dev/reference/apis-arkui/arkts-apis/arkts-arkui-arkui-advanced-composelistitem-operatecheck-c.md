@@ -12,7 +12,7 @@ Defines the type where the element on the right of the **ComposeListItem** compo
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from 'kits/@kit.ArkUI';
+import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from '@kit.ArkUI';
 ```
 
 ## onChange

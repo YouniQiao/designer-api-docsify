@@ -20,7 +20,7 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient:
+**替代接口：** [registerDeathRecipient](registerDeathRecipient(recipient:)
 
 <!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -63,7 +63,7 @@ getDescriptor(): string
 
 | 错误码ID |
 | --- |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) |
 
 ## getInterfaceDescriptor
 
@@ -77,7 +77,7 @@ getInterfaceDescriptor(): string
 
 **废弃版本：** 9
 
-**替代接口：** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+**替代接口：** [getDescriptor](getDescriptor())
 
 <!--Device-IRemoteObject-getInterfaceDescriptor(): string--><!--Device-IRemoteObject-getInterfaceDescriptor(): string-End-->
 
@@ -119,7 +119,7 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isObjectDead
 
@@ -153,7 +153,7 @@ queryLocalInterface(descriptor: string): IRemoteBroker
 
 **废弃版本：** 9
 
-**替代接口：** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor:
+**替代接口：** [getLocalInterface](getLocalInterface(descriptor:)
 
 <!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -196,9 +196,9 @@ registerDeathRecipient(recipient: DeathRecipient, flags: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) |
-| [1900005](../errorcode-rpc.md#1900005-ipc对象权限错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) |
+| [1900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900005-ipc对象权限错误) |
 
 ## removeDeathRecipient
 
@@ -212,7 +212,7 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient:
+**替代接口：** [unregisterDeathRecipient](unregisterDeathRecipient(recipient:)
 
 <!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -263,13 +263,13 @@ sendMessageRequest(
 
 | 类型 |
 | --- |
-| Promise&lt;RequestResult&gt; |
+| Promise & lt;RequestResult & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sendMessageRequest
 
@@ -305,7 +305,7 @@ sendMessageRequest(
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sendRequest
 
@@ -319,7 +319,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**替代接口：** [sendMessageRequest](sendMessageRequest(code:)
 
 <!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -357,7 +357,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**替代接口：** [sendMessageRequest](sendMessageRequest(code:)
 
 <!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -376,7 +376,7 @@ sendRequest(
 
 | 类型 |
 | --- |
-| Promise&lt;SendRequestResult&gt; |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; |
 
 ## sendRequest
 
@@ -396,7 +396,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**替代接口：** [sendMessageRequest](sendMessageRequest(code:)
 
 <!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -410,7 +410,7 @@ sendRequest(
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 |
 
 ## unregisterDeathRecipient
 
@@ -437,6 +437,6 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) |
-| [1900005](../errorcode-rpc.md#1900005-ipc对象权限错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) |
+| [1900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900005-ipc对象权限错误) |

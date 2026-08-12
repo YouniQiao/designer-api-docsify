@@ -13,7 +13,7 @@ Options for HDR composition configuration.
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## rect
@@ -24,7 +24,7 @@ rect: Rectangle
 
 Rectangle area for HDR composition.
 
-**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**Type:** Rectangle
 
 **Since:** 26.0.0
 

@@ -11,7 +11,7 @@ Provides the aspect ratio range of the float view. The aspect ratio is obtained 
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## maxRatio

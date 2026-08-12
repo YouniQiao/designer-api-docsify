@@ -11,7 +11,7 @@ Describes compose parameters.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## desiredPixelFormat
@@ -22,7 +22,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Pixel format used for composite image, RGBA_1010102\YCBCR_P010\YCRCB_P010 are supported.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 23
 

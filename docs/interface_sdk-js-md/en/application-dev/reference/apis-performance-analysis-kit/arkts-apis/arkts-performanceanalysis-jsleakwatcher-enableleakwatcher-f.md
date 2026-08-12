@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## enableLeakWatcher
@@ -33,15 +33,15 @@ If a memory leak occurs, the leaked file is returned through the callback.
 | --- | --- | --- | --- |
 | isEnabled | boolean | Yes | Whether to enable the detection for JS object memory leaks. **true**: yes; **false** : no. |
 | configs | Array&lt;string&gt; | Yes | Configuration item. Each element in the array indicates a specific object type to monitor.&lt;br&gt;Options: **XComponent**, **NodeContainer**, **Window**, **CustomComponent**, and **Ability**.&lt;br &gt;Note: An empty array indicates that all the preceding objects are monitored. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.&lt;br&gt;You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
+| callback | Callback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.&lt;br&gt;You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
+| [10801002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
+| [10801003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -80,15 +80,15 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 | --- | --- | --- | --- |
 | isEnabled | boolean | Yes | Whether to enable the detection for ArkTS object memory leaks.&lt;br&gt;**true**: yes;&lt;br&gt; **false**: no. |
 | configs | [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | Yes | LeakWatcherConfig object, which contains multiple configurable properties for memory leak monitoring.&lt;br&gt;Note: If the parameter type in the object is set to null or a false value, the default value is used. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.&lt;br&gt;You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
+| callback | Callback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to receive the memory-leaked object returned by the **jsLeakWatcher.enableLeakWatcher** API.&lt;br&gt;You need to input an array object in the callback. Index **0** is the name of the leak list file, whose extension is **.jsleaklist**. Index **1** is the name of the VM memory snapshot file, whose extension is **.rawheap**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [10801001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801001-invalid-isenabled) | The parameter isEnabled is invalid. |
+| [10801002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801002-invalid-config) | The parameter config is invalid. |
+| [10801003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801003-invalid-callback) | The parameter callback is invalid. Input parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

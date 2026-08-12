@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## pairDeviceOutOfBand
@@ -33,7 +33,7 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism.Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transport | [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | Yes | Indicates the transport of a remote Bluetooth device. |
+| transport | BluetoothTransport | Yes | Indicates the transport of a remote Bluetooth device. |
 | p192Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes | The out-of-band data (P192), or null if not available. |
 | p256Data | [OobData](arkts-connectivity-connection-oobdata-i-sys.md) \| null | Yes | The out-of-band data (P256), or null if not available. |
 
@@ -47,9 +47,9 @@ Starts pairing with a remote Bluetooth device using the Out Of Band mechanism.Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 

@@ -14,5 +14,5 @@ new (): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| Uint8ClampedArray |  |
 

@@ -2,7 +2,7 @@
 
 Upload task information, which is the callback parameter of the   
 [on('complete' | 'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))and   
-[off('complete' | 'fail')](request.UploadTask.off(type: 'complete' | 'fail', callback?: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))APIs.
+[off('complete' | 'fail')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)APIs.
 
 **Since:** 9
 
@@ -13,7 +13,7 @@ Upload task information, which is the callback parameter of the
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## message
@@ -57,7 +57,7 @@ responseCode: number
 Return value of an upload task. The value **0** means that the task is successful, and other values means that the task fails. For details about the task result, see **message**.
 
 You are advised to create an upload task by using   
-[request.agent.create](arkts-basicservices-agent-create-f.md#create)and handle exceptions based on standard error codes.
+[request.agent.create](arkts-basicservices-agent-create-f.md#create-1)and handle exceptions based on standard error codes.
 
 **Type:** number
 

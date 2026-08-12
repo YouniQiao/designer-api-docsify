@@ -1,9 +1,9 @@
 # @ohos.bundle.bundleManager
 
-本模块提供应用信息的查询能力，支持应用包信息[BundleInfo](arkts-bundleinfo.md)、应用程序信息  
-[ApplicationInfo](arkts-applicationinfo.md)、UIAbility组件信息  
-[AbilityInfo](arkts-abilityinfo.md)、ExtensionAbility组件信息  
-[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)等信息的查询。
+本模块提供应用信息的查询能力，支持应用包信息[BundleInfo](bundleManager/BundleInfo)、应用程序信息  
+[ApplicationInfo](bundleManager/ApplicationInfo)、UIAbility组件信息  
+[AbilityInfo](bundleManager/AbilityInfo)、ExtensionAbility组件信息  
+[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md#ExtensionAbilityInfo)等信息的查询。
 
 **起始版本：** 9
 

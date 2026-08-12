@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isNotificationSlotEnabledByBundles
@@ -31,7 +31,7 @@ function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundles | Array&lt;BundleOption&gt; | 是 | 应用包信息数组。 &lt;br&gt;最大长度为1000且不能为空。 |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | 是 | 渠道类型。所有应用共享同一个渠道类型。 |
+| type | SlotType | 是 | 渠道类型。所有应用共享同一个渠道类型。 |
 
 **返回值：**
 
@@ -43,11 +43,11 @@ function isNotificationSlotEnabledByBundles(bundles: Array<BundleOption>, type: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
 

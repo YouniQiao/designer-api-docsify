@@ -15,7 +15,7 @@ Represents the permission dialog query result.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## detailList
@@ -26,7 +26,7 @@ detailList: Array<PermissionDialogDetail>
 
 List of permission dialog information.
 
-**Type:** Array&lt;PermissionDialogDetail&gt;
+**Type:** Array&lt;[PermissionDialogDetail](arkts-ability-abilityaccessctrl-permissiondialogdetail-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

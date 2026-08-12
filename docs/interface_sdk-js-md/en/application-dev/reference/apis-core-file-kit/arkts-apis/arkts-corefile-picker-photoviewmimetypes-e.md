@@ -8,7 +8,7 @@ Enumerates the media file types that can be selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
+**Substitutes:** [PhotoViewMIMETypes](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#PhotoViewMIMETypes)
 
 <!--Device-picker-export enum PhotoViewMIMETypes--><!--Device-picker-export enum PhotoViewMIMETypes-End-->
 
@@ -28,7 +28,7 @@ Image.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_type)
+**Substitutes:** [IMAGE_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#IMAGE_TYPE)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,7 +50,7 @@ Video.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#video_type)
+**Substitutes:** [VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#VIDEO_TYPE)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,7 +72,7 @@ Image and video.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewMIMETypes.IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#image_video_type)
+**Substitutes:** [IMAGE_VIDEO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md#IMAGE_VIDEO_TYPE)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

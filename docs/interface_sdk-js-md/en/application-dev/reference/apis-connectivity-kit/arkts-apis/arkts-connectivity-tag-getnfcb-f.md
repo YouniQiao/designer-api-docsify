@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcB
@@ -12,7 +12,7 @@ import { tag } from 'kits/@kit.ConnectivityKit';
 function getNfcB(tagInfo: TagInfo): NfcBTag
 ```
 
-Obtains an {@link NfcBTag} object based on the tag information.During tag reading, if the tag supports the NFC-B technology, an {@link NfcBTag} object will be created based on the tag information.
+Obtains an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#NfcBTag) object based on the tag information.During tag reading, if the tag supports the NFC-B technology, an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#NfcBTag) object will be created based on the tag information.
 
 **Since:** 12
 
@@ -34,13 +34,13 @@ Obtains an {@link NfcBTag} object based on the tag information.During tag readin
 
 | Type | Description |
 | --- | --- |
-| [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md) | The { |
+| NfcBTag | The { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
 

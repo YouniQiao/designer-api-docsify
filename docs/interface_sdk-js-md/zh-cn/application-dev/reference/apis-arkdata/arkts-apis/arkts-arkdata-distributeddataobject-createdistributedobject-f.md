@@ -14,7 +14,7 @@ function createDistributedObject(source: object): DistributedObject
 
 **废弃版本：** 9
 
-**替代接口：** [distributedDataObject.create](arkts-arkdata-distributeddataobject-create-f.md#create)
+**替代接口：** [create](arkts-arkdata-distributeddataobject-create-f.md#create)
 
 <!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject--><!--Device-distributedDataObject-function createDistributedObject(source: object): DistributedObject-End-->
 

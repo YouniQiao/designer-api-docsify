@@ -4,7 +4,7 @@
 export type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo
 ```
 
-根据指定的目标索引，计算Grid滚动到该位置时页面内对应的起始行，用于支持[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex)等操作。  
+根据指定的目标索引，计算Grid滚动到该位置时页面内对应的起始行，用于支持[scrollToIndex](Scroller#scrollToIndex)等操作。  
 **系统接口：** 此接口为系统接口。  
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -30,5 +30,5 @@ export type OnGetStartIndexByIndexCallback = (targetIndex: int) => StartLineInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [StartLineInfo](../arkts-components/arkts-arkui-startlineinfo-i-sys.md) | - |
+| [StartLineInfo](arkts-arkui-grid-startlineinfo-i-sys.md) | - |
 

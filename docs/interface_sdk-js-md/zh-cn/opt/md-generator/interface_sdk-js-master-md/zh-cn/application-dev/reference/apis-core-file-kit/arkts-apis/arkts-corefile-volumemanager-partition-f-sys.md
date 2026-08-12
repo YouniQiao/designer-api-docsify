@@ -22,7 +22,7 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| diskId | string | 是 |
+| [diskId](arkts-corefile-volumemanager-volume-i-sys.md) | string | 是 |
 | type | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -30,10 +30,10 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13600008 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |
 
@@ -60,22 +60,22 @@ function partition(diskId: string, type: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| diskId | string | 是 |
+| [diskId](arkts-corefile-volumemanager-volume-i-sys.md) | string | 是 |
 | type | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13600008 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |

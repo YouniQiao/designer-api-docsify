@@ -18,7 +18,7 @@ This module provides enterprise device security management capabilities, includi
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from 'kits/@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## Summary

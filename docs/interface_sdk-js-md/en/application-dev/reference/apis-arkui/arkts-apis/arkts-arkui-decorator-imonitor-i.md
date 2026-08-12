@@ -38,7 +38,7 @@ Return the pair of the value before the most recent change and current value for
 
 | Type | Description |
 | --- | --- |
-| [IMonitorValue](../arkts-components/arkts-arkui-imonitorvalue-i.md)&lt;T&gt; |  |
+| [IMonitorValue](arkts-arkui-decorator-imonitorvalue-i.md)&lt;T&gt; |  |
 
 ## dirty
 

@@ -28,13 +28,13 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -101,7 +101,7 @@ add(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -142,7 +142,7 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -172,14 +172,14 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value: T, index?: number, Queue?: Queue&lt;T&gt;) =&gt; void | 是 |
+| callbackFn | (value: T, index?: number, Queue?: Queue & lt;T & gt;) = & gt; void | 是 |
 | thisArg | Object | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -225,8 +225,8 @@ getFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -267,8 +267,8 @@ pop(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 

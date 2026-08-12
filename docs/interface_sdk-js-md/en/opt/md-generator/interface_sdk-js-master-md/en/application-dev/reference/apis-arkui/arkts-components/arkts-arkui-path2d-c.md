@@ -8,12 +8,12 @@
 > is required, you can create an empty Path2D object.
 > 
 > The methods of the Path2D object do not take effect for the paths set in the
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
 > and
-> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
+> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D)
 > objects.
 
-**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ Adds a path to this path.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-canvaspattern-matrix2d-c.md) | No |
+| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No |
 
 ## constructor
 
@@ -88,7 +88,7 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |
 
 ## constructor
 
@@ -139,7 +139,7 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |
 
 ## constructor
 
@@ -163,7 +163,7 @@ Constructs a Path2D object using a path string that complies with the SVG path d
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| d | string | Yes |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | string | Yes |
 
 ## constructor
 
@@ -190,4 +190,4 @@ Constructs a Path2D object using a path string that complies with the SVG path s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | description | string | Yes |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |

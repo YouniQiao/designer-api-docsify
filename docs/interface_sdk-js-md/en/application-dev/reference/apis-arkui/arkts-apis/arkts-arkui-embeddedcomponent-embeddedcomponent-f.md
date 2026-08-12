@@ -31,7 +31,7 @@ Defines EmbeddedComponent Component.
 
 | Type | Description |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) |  |
+| [EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md) |  |
 
 
 ## EmbeddedComponent
@@ -66,7 +66,7 @@ Defines EmbeddedComponent Component.
 
 | Type | Description |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) |  |
+| [EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md) |  |
 
 
 ## EmbeddedComponent
@@ -95,11 +95,11 @@ Defines EmbeddedComponent Component.It requires call setEmbeddedComponentOptions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EmbeddedComponentAttribute&gt; | Yes | the callback to set up embeddedcomponent's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md)&gt; | Yes | the callback to set up embeddedcomponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) | The attribute of the EmbeddedComponent. |
+| [EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md) | The attribute of the EmbeddedComponent. |
 

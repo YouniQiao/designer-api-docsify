@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## unregisterProvider
@@ -29,7 +29,7 @@ Unregisters a specified external Provider. This API uses a promise to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | providerName | string | Yes | Provider name, which contains a maximum of 128 characters. It is recommended that the value contain the vendor information, be globally unique, and not contain sensitive data such as personal contact information. If a provider has registered multiple extension capabilities, all the extension capabilities of the provider will be unregistered. |
-| params | Array&lt;HuksExternalCryptoParam&gt; | No | Parameters to be passed during the operation.&lt;br&gt;You can specify [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md) in the **params** parameter to unregister the corresponding **cryptoExtensionAbility** based on the bundle name, **providerName**, and **abilityName**.&lt;br&gt;If [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md) is not specified in the **params** parameter or the **params** parameter is not passed, all providers under the corresponding **providerName** are unregistered. |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | No | Parameters to be passed during the operation.&lt;br&gt;You can specify [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType) in the **params** parameter to unregister the corresponding **cryptoExtensionAbility** based on the bundle name, **providerName**, and **abilityName**.&lt;br&gt;If [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType) is not specified in the **params** parameter or the **params** parameter is not passed, all providers under the corresponding **providerName** are unregistered. |
 
 **Return value:**
 
@@ -41,13 +41,13 @@ Unregisters a specified external Provider. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | check permission failed. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | the provider is not found. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | api is not supported. |
+| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) | IPC communication failed. |
+| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) | the input parameter is invalid. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | check permission failed. |
+| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient. |
+| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) | Device environment or input parameter is abnormal. This may happen for several reasons, such as the model already being unloaded. |
+| [12000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) | the provider is not found. |
 
 ## Examples
 

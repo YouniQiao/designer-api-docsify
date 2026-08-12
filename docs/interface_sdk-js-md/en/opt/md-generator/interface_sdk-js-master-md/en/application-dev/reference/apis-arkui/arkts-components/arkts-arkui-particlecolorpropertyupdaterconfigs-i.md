@@ -16,7 +16,7 @@ Defines the particle color property updater configs.
 
 The color changes with the animation curve. The array type indicates that multiple animation segments can be set for the current property, for example, 0–3000 ms, 3000–5000 ms, and 5000–8000 ms.
 
-**Type:** Array&lt;ParticlePropertyAnimation&lt;ResourceColor&gt;&gt;
+**Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;&gt;
 
 **Since:** 10
 

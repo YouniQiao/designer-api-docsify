@@ -45,7 +45,7 @@ Creates a gauge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GaugeOptions](../arkts-apis/arkts-arkui-gauge-gaugeoptions-i.md) | Yes | Settings of the gauge. |
+| options | [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | Yes | Settings of the gauge. |
 
 ## Summary
 

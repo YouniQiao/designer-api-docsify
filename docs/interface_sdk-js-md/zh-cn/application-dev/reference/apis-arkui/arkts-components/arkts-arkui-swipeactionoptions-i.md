@@ -66,7 +66,7 @@ end?: CustomBuilder | SwipeActionItem
 
 ListItem向左划动时item右边的组件（List垂直布局时）或ListItem向上划动时item下方的组件（List水平布局时）。
 
-**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**类型：** CustomBuilder \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
 
 **起始版本：** 9
 
@@ -86,7 +86,7 @@ start?: CustomBuilder | SwipeActionItem
 
 ListItem向右划动时item左边的组件（List垂直布局时）或ListItem向下划动时item上方的组件（List水平布局时）。
 
-**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**类型：** CustomBuilder \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
 
 **起始版本：** 9
 

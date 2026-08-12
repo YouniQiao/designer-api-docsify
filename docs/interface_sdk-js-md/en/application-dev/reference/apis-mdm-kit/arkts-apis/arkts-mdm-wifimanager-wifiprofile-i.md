@@ -13,7 +13,7 @@ Represents the Wi-Fi configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## bssid
@@ -105,7 +105,7 @@ ipType?: IpType
 
 IP address type. The default value is **DHCP**.
 
-**Type:** [IpType](arkts-mdm-wifimanager-iptype-e.md)
+**Type:** IpType
 
 **Since:** 12
 
@@ -225,7 +225,7 @@ securityType: WifiSecurityType
 
 Security type.
 
-**Type:** [WifiSecurityType](arkts-mdm-wifimanager-wifisecuritytype-e.md)
+**Type:** WifiSecurityType
 
 **Since:** 12
 

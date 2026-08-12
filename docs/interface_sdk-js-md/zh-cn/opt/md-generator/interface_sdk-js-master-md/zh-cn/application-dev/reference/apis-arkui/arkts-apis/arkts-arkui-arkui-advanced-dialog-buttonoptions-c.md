@@ -160,7 +160,7 @@ textAlign?: TextAlign
 
 默认值：TextAlign.Start
 
-**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **默认值：** { TextAlign.Start }
 

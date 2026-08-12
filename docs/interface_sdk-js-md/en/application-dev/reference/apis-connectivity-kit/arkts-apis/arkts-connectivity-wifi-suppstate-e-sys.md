@@ -8,7 +8,7 @@ The state of the supplicant enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState
+**Substitutes:** [SuppState](ohos.wifiManager/wifiManager.SuppState)
 
 <!--Device-wifi-export enum SuppState--><!--Device-wifi-export enum SuppState-End-->
 
@@ -30,7 +30,7 @@ The supplicant is not associated with or is disconnected from the AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.DISCONNECTED
+**Substitutes:** [DISCONNECTED](ohos.wifiManager/wifiManager.SuppState.DISCONNECTED)
 
 <!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
@@ -52,7 +52,7 @@ The network interface is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.INTERFACE_DISABLED
+**Substitutes:** [INTERFACE_DISABLED](ohos.wifiManager/wifiManager.SuppState.INTERFACE_DISABLED)
 
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
@@ -74,7 +74,7 @@ The supplicant is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.INACTIVE
+**Substitutes:** [INACTIVE](ohos.wifiManager/wifiManager.SuppState.INACTIVE)
 
 <!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
@@ -96,7 +96,7 @@ The supplicant is scanning for a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.SCANNING
+**Substitutes:** [SCANNING](ohos.wifiManager/wifiManager.SuppState.SCANNING)
 
 <!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
 
@@ -118,7 +118,7 @@ The supplicant is authenticating with a specified AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.AUTHENTICATING
+**Substitutes:** [AUTHENTICATING](ohos.wifiManager/wifiManager.SuppState.AUTHENTICATING)
 
 <!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
@@ -140,7 +140,7 @@ The supplicant is associating with a specified AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.ASSOCIATING
+**Substitutes:** [ASSOCIATING](ohos.wifiManager/wifiManager.SuppState.ASSOCIATING)
 
 <!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
 
@@ -162,7 +162,7 @@ The supplicant is associated with a specified AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.ASSOCIATED
+**Substitutes:** [ASSOCIATED](ohos.wifiManager/wifiManager.SuppState.ASSOCIATED)
 
 <!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
@@ -184,7 +184,7 @@ The four-way handshake is ongoing.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.FOUR_WAY_HANDSHAKE
+**Substitutes:** [FOUR_WAY_HANDSHAKE](ohos.wifiManager/wifiManager.SuppState.FOUR_WAY_HANDSHAKE)
 
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
@@ -206,7 +206,7 @@ The group handshake is ongoing.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.GROUP_HANDSHAKE
+**Substitutes:** [GROUP_HANDSHAKE](ohos.wifiManager/wifiManager.SuppState.GROUP_HANDSHAKE)
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
@@ -228,7 +228,7 @@ All authentication is completed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.COMPLETED
+**Substitutes:** [COMPLETED](ohos.wifiManager/wifiManager.SuppState.COMPLETED)
 
 <!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
 
@@ -250,7 +250,7 @@ Failed to establish a connection to the supplicant.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.UNINITIALIZED
+**Substitutes:** [UNINITIALIZED](ohos.wifiManager/wifiManager.SuppState.UNINITIALIZED)
 
 <!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
 
@@ -272,7 +272,7 @@ The supplicant is in an unknown or invalid state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.SuppState.INVALID
+**Substitutes:** [INVALID](ohos.wifiManager/wifiManager.SuppState.INVALID)
 
 <!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 

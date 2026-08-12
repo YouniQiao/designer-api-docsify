@@ -18,7 +18,7 @@ windowType: WindowType
 
 窗口类型。无默认类型，不配置会导致窗口创建失败。不支持TYPE_DIALOG类型。
 
-**类型：** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+**类型：** WindowType
 
 **起始版本：** 14
 

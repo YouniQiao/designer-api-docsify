@@ -30,7 +30,7 @@ close(): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -76,14 +76,14 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'connectionAccepted' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -141,8 +141,8 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -194,14 +194,14 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'connectionAccepted' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Connection&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -259,8 +259,8 @@ on(type: 'serverStopped', callback: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -311,9 +311,9 @@ start(): void
 
 | 错误码ID |
 | --- |
-| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
-| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [32390300](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
+| [32390202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390202-服务个数超出限制) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -357,7 +357,7 @@ stop(): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

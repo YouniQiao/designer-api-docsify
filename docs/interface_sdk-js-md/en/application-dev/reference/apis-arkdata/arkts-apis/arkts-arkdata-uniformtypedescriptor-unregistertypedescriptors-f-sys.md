@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## unregisterTypeDescriptors
@@ -46,7 +46,7 @@ Unregister one or more type descriptors from the system by the given type IDs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20400004](../errorcode-udmf.md#20400004-invalid-utd-ids) | One or more typeIds are invalid or do not exist. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [20400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-udmf.md#20400004-invalid-utd-ids) | One or more typeIds are invalid or do not exist. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 

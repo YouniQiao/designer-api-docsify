@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## getOriginalFileName
@@ -38,9 +38,9 @@ Determine the file type based on the original file name extension and select an 
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

@@ -23,7 +23,7 @@ Converts locales to language tags.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | string \| Intl.Locale \| ReadonlyArray&lt;string \| Intl.Locale&gt; \| undefined | Yes | the locales. |
+| locales | string \| [Intl.Locale](arkts-arkts-intl-locale-c.md) \| ReadonlyArray&lt;string \| [Intl.Locale](arkts-arkts-intl-locale-c.md)&gt; \| undefined | Yes | the locales. |
 
 **Return value:**
 

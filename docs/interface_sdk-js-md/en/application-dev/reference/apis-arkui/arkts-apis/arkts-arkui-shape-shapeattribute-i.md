@@ -2,7 +2,7 @@
 
 Provides attribute for Shape.
 
-**Inheritance/Implementation:** ShapeAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** ShapeAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;ShapeAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Called when the transparency of the border is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double \| string \| Resource \| undefined | Yes |  |
+| value | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -396,7 +396,7 @@ Called when the opacity of the border is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double \| string \| Resource \| undefined | Yes |  |
+| value | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

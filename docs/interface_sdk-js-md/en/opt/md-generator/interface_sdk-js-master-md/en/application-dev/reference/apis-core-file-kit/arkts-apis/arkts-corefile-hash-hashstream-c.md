@@ -4,7 +4,7 @@ The **HashStream** class is a utility for creating a message digest of data. You
 [createHash](../../../reference/apis-core-file-kit/js-apis-file-hash.md#hashcreatehash12) to create a  
 **HashStream** instance.
 
-**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md/arkts-arkts-stream-transform-c.md)
+**Inheritance/Implementation:** HashStream extends [stream.Transform](../../apis-arkts/arkts-apis/arkts-arkts-stream-transform-c.md#Transform)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ The **HashStream** class is a utility for creating a message digest of data. You
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## digest
@@ -42,7 +42,7 @@ Generates a message digest.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900042 |
 
 ## Examples
@@ -81,7 +81,7 @@ Updates the data for generating a message digest. This API can be called multipl
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900042 |
 
 ## Examples

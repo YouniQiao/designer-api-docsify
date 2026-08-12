@@ -11,7 +11,7 @@ Represents the parameters for checking the certificate revocation status for a c
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## crlDownloadURI
@@ -83,7 +83,7 @@ ocspResponderCert?: X509Cert
 
 Signing certificate used for verifying the signature of the OCSP response.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 12
 
@@ -141,7 +141,7 @@ options?: Array<RevocationCheckOptions>
 
 A set of rules for obtaining the certificate revocation status.
 
-**Type:** Array&lt;RevocationCheckOptions&gt;
+**Type:** Array&lt;[RevocationCheckOptions](arkts-devicecertificate-cert-revocationcheckoptions-e.md)&gt;
 
 **Since:** 12
 

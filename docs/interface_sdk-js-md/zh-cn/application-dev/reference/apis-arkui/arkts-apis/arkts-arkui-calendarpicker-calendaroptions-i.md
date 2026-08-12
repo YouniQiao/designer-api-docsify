@@ -76,7 +76,7 @@ hintRadius?: double | Resource
 
 当hintRadius为0.0时表示底板样式为直角矩形；当hintRadius为(0.0, 16.0)时，底板样式为圆角矩形；当hintRadius为负数或大于16.0时，恢复为默认值16.0。
 
-**类型：** double \| Resource
+**类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

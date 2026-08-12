@@ -11,7 +11,7 @@ Represents data of the HTML type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -85,7 +85,7 @@ readonly uniformDataType: 'general.html'
 ```
 
 Uniform data type, which has a fixed value of **general.html**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'general.html'
 

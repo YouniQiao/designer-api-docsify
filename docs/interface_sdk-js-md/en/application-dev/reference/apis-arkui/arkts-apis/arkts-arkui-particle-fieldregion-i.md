@@ -40,7 +40,7 @@ shape?: DisturbanceFieldShape
 
 The shape of the field
 
-**Type:** [DisturbanceFieldShape](../arkts-components/arkts-arkui-disturbancefieldshape-e.md)
+**Type:** [DisturbanceFieldShape](arkts-arkui-particle-disturbancefieldshape-e.md)
 
 **Default:** DisturbanceFieldShape.RECT
 

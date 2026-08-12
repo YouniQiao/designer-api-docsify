@@ -38,7 +38,7 @@ changeIndex(index: int | undefined, animationMode?: SwiperAnimationMode | boolea
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int \| undefined | 是 | 指定页面在Swiper中的索引值。&lt;br/&gt;取值为undefined时，按默认值处理。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大页面索引时，取 0。 |
-| animationMode | [SwiperAnimationMode](../arkts-components/arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页至指定页面时的动效模式。&lt;br/&gt;默认值： SwiperAnimationMode.NO_ANIMATION&lt;br/&gt; **说明：** &lt;br/&gt;当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。&lt;br/&gt;true：有动效翻页；false：无动效翻页。 |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiper-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页至指定页面时的动效模式。&lt;br/&gt;默认值： SwiperAnimationMode.NO_ANIMATION&lt;br/&gt; **说明：** &lt;br/&gt;当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。&lt;br/&gt;true：有动效翻页；false：无动效翻页。 |
 
 ## constructor
 
@@ -70,12 +70,12 @@ fakeDragBy(offset: float): boolean
 > 
 > - 模拟拖拽的距离需要依赖布局体现，建议接口在布局前调用，拖拽效果可以在当前帧布局后体现。如果在未布局前调用了多次该接口，当前帧布局时只生效最后一次调用传入的拖拽距离。
 > 
-> - 在[loop](SwiperAttribute.loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
+> - 在[loop](arkts-arkui-swiper-swiperattribute-i.md#loop)设置为true的循环场景下，如果设置的模拟拖拽的距离大于布局总长度，此时模拟拖拽距离会被调整为拖拽到刚好显示第一个子节点（向布局起点拖拽）或者最后一个子
 > 节点（向布局终点方向拖拽）的距离。
 > 
-> - [onGestureSwipe](SwiperAttribute.onGestureSwipe)事件、
-> [onContentWillScroll](SwiperAttribute.onContentWillScroll)事件在拖拽过程中不触发。
-> [customContentTransition](SwiperAttribute.customContentTransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
+> - [onGestureSwipe](arkts-arkui-swiper-swiperattribute-i.md#onGestureSwipe)事件、
+> [onContentWillScroll](arkts-arkui-swiper-swiperattribute-i.md#onContentWillScroll)事件在拖拽过程中不触发。
+> [customContentTransition](arkts-arkui-swiper-swiperattribute-i.md#customContentTransition)会在布局前触发，由于真实的拖拽距离可能在布局时被调整，在传入拖拽距离过大时，触发事
 > 件时的返回的节点显示信息可能与布局结果不一致。
 
 **起始版本：** 23
@@ -192,8 +192,8 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
 
 ## showNext
 
@@ -201,7 +201,7 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 showNext(): void
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](SwiperAttribute.duration)属性设置。
+翻至下一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-swiperattribute-i.md#duration)属性设置。
 
 **起始版本：** 23
 
@@ -219,7 +219,7 @@ showNext(): void
 showPrevious(): void
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](SwiperAttribute.duration)属性设置。
+翻至上一页。翻页带动效切换过程，时长通过Swiper的[duration](arkts-arkui-swiper-swiperattribute-i.md#duration)属性设置。
 
 **起始版本：** 23
 

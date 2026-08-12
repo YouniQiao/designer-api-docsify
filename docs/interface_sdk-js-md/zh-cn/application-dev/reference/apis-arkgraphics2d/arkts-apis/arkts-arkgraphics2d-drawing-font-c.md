@@ -56,7 +56,7 @@ countText(text: string): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createPathForGlyph
 
@@ -80,13 +80,13 @@ createPathForGlyph(index: number): Path
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 字形索引，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
+| index | number | 是 | 字形索引，可由 [textToGlyphs](#textToGlyphs)生成。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回指定字形的路径轮廓。 |
+| Path | 返回指定字形的路径轮廓。 |
 
 ## createPathForGlyph
 
@@ -108,13 +108,13 @@ createPathForGlyph(index: int): Path | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 字形索引，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
+| index | int | 是 | 字形索引，可由 [textToGlyphs](#textToGlyphs)生成。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回指定字形的路径轮廓。获取失败时返回undefined。 |
+| Path | 返回指定字形的路径轮廓。获取失败时返回undefined。 |
 
 ## enableEmbolden
 
@@ -144,7 +144,7 @@ enableEmbolden(isEmbolden: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## enableLinearMetrics
 
@@ -174,7 +174,7 @@ enableLinearMetrics(isLinearMetrics: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## enableSubpixel
 
@@ -204,7 +204,7 @@ enableSubpixel(isSubpixel: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getBounds
 
@@ -228,7 +228,7 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;number&gt; | 是 | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
+| glyphs | Array&lt;number&gt; | 是 | 字形索引数组，可由 [textToGlyphs](#textToGlyphs)生成。 |
 
 **返回值：**
 
@@ -256,7 +256,7 @@ getBounds(glyphs: Array<int>): Array<common2D.Rect> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;int&gt; | 是 | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
+| glyphs | Array&lt;int&gt; | 是 | 字形索引数组，可由 [textToGlyphs](#textToGlyphs)生成。 |
 
 **返回值：**
 
@@ -523,13 +523,13 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本的路径轮廓。 |
+| Path | 返回获取到的文本的路径轮廓。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getTextPath
 
@@ -560,13 +560,13 @@ getTextPath(text: string, byteLength: int, x: double, y: double): Path | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本的路径轮廓。获取失败时返回undefined。 |
+| Path | 返回获取到的文本的路径轮廓。获取失败时返回undefined。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getTextPathWithFallback
 
@@ -599,7 +599,7 @@ getTextPathWithFallback(text: string, byteLength: number, x: number, y: number):
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
+| Path | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 ## getTextPathWithFallback
 
@@ -632,7 +632,7 @@ getTextPathWithFallback(text: string, byteLength: int, x: double, y: double): Pa
 
 | 类型 | 说明 |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
+| Path | 返回获取到的文本路径轮廓。路径对象创建失败时返回undefined。 |
 
 ## getTypeface
 
@@ -702,7 +702,7 @@ getWidths(glyphs: Array<number>): Array<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;number&gt; | 是 | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
+| glyphs | Array&lt;number&gt; | 是 | 字形索引数组，可由 [textToGlyphs](#textToGlyphs)生成。 |
 
 **返回值：**
 
@@ -714,7 +714,7 @@ getWidths(glyphs: Array<number>): Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getWidths
 
@@ -736,7 +736,7 @@ getWidths(glyphs: Array<int>): Array<double> | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphs | Array&lt;int&gt; | 是 | 字形索引数组，可由 [textToGlyphs](arkts-arkgraphics2d-drawing-font-c.md#texttoglyphs)生成。 |
+| glyphs | Array&lt;int&gt; | 是 | 字形索引数组，可由 [textToGlyphs](#textToGlyphs)生成。 |
 
 **返回值：**
 
@@ -748,7 +748,7 @@ getWidths(glyphs: Array<int>): Array<double> | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isBaselineSnap
 
@@ -958,7 +958,7 @@ measureSingleCharacter(text: string): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## measureSingleCharacterWithFeatures
 
@@ -1001,7 +1001,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## measureText
 
@@ -1037,7 +1037,7 @@ measureText(text: string, encoding: TextEncoding): double
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待测量的文本内容，将按encoding指定的编码方式进行解析。 |
-| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | 是 | 指定文本的编码格式。 |
+| encoding | TextEncoding | 是 | 指定文本的编码格式。 |
 
 **返回值：**
 
@@ -1049,7 +1049,7 @@ measureText(text: string, encoding: TextEncoding): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setBaselineSnap
 
@@ -1079,7 +1079,7 @@ setBaselineSnap(isBaselineSnap: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setEdging
 
@@ -1109,7 +1109,7 @@ setEdging(edging: FontEdging): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setEmbeddedBitmaps
 
@@ -1139,7 +1139,7 @@ setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setForceAutoHinting
 
@@ -1169,7 +1169,7 @@ setForceAutoHinting(isForceAutoHinting: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setHinting
 
@@ -1199,7 +1199,7 @@ setHinting(hinting: FontHinting): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setScaleX
 
@@ -1235,7 +1235,7 @@ setScaleX(scaleX: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setSize
 
@@ -1271,7 +1271,7 @@ setSize(textSize: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setSkewX
 
@@ -1307,7 +1307,7 @@ setSkewX(skewX: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setThemeFontFollowed
 
@@ -1337,7 +1337,7 @@ setThemeFontFollowed(followed: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setTypeface
 
@@ -1367,7 +1367,7 @@ setTypeface(typeface: Typeface): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## textToGlyphs
 
@@ -1392,7 +1392,7 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待转换为字形索引的文本字符串。 |
-| glyphCount | number | 否 | 文本表示的字符数量，该参数为整数。传入时必须与[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取的值相等，不传入时默认为 text表示的字符数量。 |
+| glyphCount | number | 否 | 文本表示的字符数量，该参数为整数。传入时必须与[countText](#countText)获取的值相等，不传入时默认为 text表示的字符数量。 |
 
 **返回值：**
 
@@ -1404,7 +1404,7 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## textToGlyphs
 
@@ -1427,7 +1427,7 @@ textToGlyphs(text: string, glyphCount?: int): Array<int> | undefined
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待转换为字形索引的文本字符串。 |
-| glyphCount | int | 否 | 文本表示的字符数量，必须与[countText](arkts-arkgraphics2d-drawing-font-c.md#counttext)获取的值相等。 当不传该参数，或者glyphCount传入undefined时，默认为text的字符数量，该参数为整数。 |
+| glyphCount | int | 否 | 文本表示的字符数量，必须与[countText](#countText)获取的值相等。 当不传该参数，或者glyphCount传入undefined时，默认为text的字符数量，该参数为整数。 |
 
 **返回值：**
 
@@ -1439,5 +1439,5 @@ textToGlyphs(text: string, glyphCount?: int): Array<int> | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

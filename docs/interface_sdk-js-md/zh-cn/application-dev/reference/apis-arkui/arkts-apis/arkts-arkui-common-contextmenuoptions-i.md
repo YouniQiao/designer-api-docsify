@@ -154,7 +154,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the menu.
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -238,7 +238,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 Border radius of the menu.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The value can be in percentage.&lt;br&gt;If the sum of the two maximum corner radii in the horizontal direction exceeds the menu's width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu's height, the default corner radius of the menu will be used.&lt;/p&gt;
 
-**类型：** [Length](arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [Length](arkts-arkui-length-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -260,7 +260,7 @@ colorMode?: AnchoredColorMode
 
 Define the menu theme color mode.
 
-**类型：** [AnchoredColorMode](../arkts-components/arkts-arkui-anchoredcolormode-e.md)
+**类型：** [AnchoredColorMode](arkts-arkui-common-anchoredcolormode-e.md)
 
 **默认值：** AnchoredColorMode.FOLLOW_TARGET
 
@@ -326,7 +326,7 @@ gridStyle?: MenuGridStyleOptions
 
 Define grid style of menu. Only fixed-style menus are effective.For example, using MenuElement in bindMenu/bindContextMenu or using MenuItemOptions in MenuItem.
 
-**类型：** [MenuGridStyleOptions](../arkts-components/arkts-arkui-menugridstyleoptions-i.md)
+**类型：** [MenuGridStyleOptions](arkts-arkui-common-menugridstyleoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -412,7 +412,7 @@ mask?: boolean | MenuMaskType
 
 Whether it is a menu without mask.
 
-**类型：** boolean \| MenuMaskType
+**类型：** boolean \| [MenuMaskType](arkts-arkui-common-menumasktype-i.md)
 
 **默认值：** true when preview is enabled, or is false
 
@@ -598,7 +598,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 The color of menu's outer border.
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md)
 
 **默认值：** '#19ffffff'
 
@@ -620,7 +620,7 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 The width of menu's outer border.If outline effects are required, outlineWidth is required.
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md)
 
 **默认值：** 0vp - Percentage values are not supported.
 
@@ -664,7 +664,7 @@ preview?: MenuPreviewMode | CustomBuilder
 
 Preview displayed when the context menu is triggered by a long-press or use the isShown variable of bindContextMenu to display the preview content style of the menu.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This parameter has no effect when responseType is set to ResponseType.RightClick.&lt;br&gt;If preview is set to MenuPreviewMode.NONE or is not set, the enableArrow parameter is effective.&lt;br&gt;If preview is set to MenuPreviewMode.IMAGE or CustomBuilder, no arrow will be displayed even when enableArrow is true.&lt;/p&gt;
 
-**类型：** [MenuPreviewMode](arkts-arkui-common-menupreviewmode-e.md) \| CustomBuilder
+**类型：** [MenuPreviewMode](arkts-arkui-common-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **默认值：** MenuPreviewMode.NONE
 
@@ -726,7 +726,7 @@ previewScaleMode?: PreviewScaleMode
 
 Defines the scaling mode for custom preview of contextMenu.
 
-**类型：** [PreviewScaleMode](../arkts-components/arkts-arkui-previewscalemode-e.md)
+**类型：** [PreviewScaleMode](arkts-arkui-common-previewscalemode-e.md)
 
 **默认值：** PreviewScaleMode.AUTO
 
@@ -810,7 +810,7 @@ transition?: TransitionEffect
 
 Defines the transition effect of menu opening and closing.
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 23
 

@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| TextAreaAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

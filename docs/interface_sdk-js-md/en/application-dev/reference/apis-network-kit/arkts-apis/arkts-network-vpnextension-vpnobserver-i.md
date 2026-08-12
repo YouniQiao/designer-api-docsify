@@ -13,7 +13,7 @@ Defines a VPN observer.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## offAuthorizationResult
@@ -38,7 +38,7 @@ Unregisters the listener for user authorization results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | the callback used to return the result. |
+| callback | Callback&lt;boolean&gt; | No | the callback used to return the result. |
 
 ## onAuthorizationResult
 
@@ -62,5 +62,5 @@ Registers a listener for user authorization results.The authorization results ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | the callback used to return the result. |
+| callback | Callback&lt;boolean&gt; | Yes | the callback used to return the result. |
 

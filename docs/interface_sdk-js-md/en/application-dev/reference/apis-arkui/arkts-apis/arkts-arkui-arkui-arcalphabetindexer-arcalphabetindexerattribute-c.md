@@ -1,8 +1,8 @@
 # ArcAlphabetIndexerAttribute
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](common), the following events are supported.
 
 **Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends [CommonMethod<ArcAlphabetIndexerAttribute>](CommonMethod<ArcAlphabetIndexerAttribute>)
 
@@ -17,7 +17,7 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## autoCollapse
@@ -42,13 +42,13 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the adaptive collapse behavior for the indexer.&lt;br&gt;Default value: **true**.&lt;br&gt;**true**: Enable the adaptive collapse behavior.&lt;br&gt;**false**: Disable the adaptive collapse behavior. |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable the adaptive collapse behavior for the indexer.&lt;br&gt;Default value: **true**.&lt;br&gt;**true**: Enable the adaptive collapse behavior.&lt;br&gt;**false**: Disable the adaptive collapse behavior. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## color
 
@@ -72,13 +72,13 @@ Sets the text color of the index items in the normal state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Text color.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Text color.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## font
 
@@ -102,13 +102,13 @@ Sets the default font style of the index items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | Default font style of the index items.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'13.0fp',&lt;br &gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| font | Optional&lt;Font&gt; | Yes | Default font style of the index items.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'13.0fp',&lt;br &gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## itemSize
 
@@ -132,13 +132,13 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt; | Yes | Size of the index item area. For the circular item area, this represents the diameter of the circle. Percentage values are not supported.&lt;br&gt;Default value: **24.0**&lt;br&gt;Unit: vp |
+| size | Optional&lt;LengthMetrics&gt; | Yes | Size of the index item area. For the circular item area, this represents the diameter of the circle. Percentage values are not supported.&lt;br&gt;Default value: **24.0**&lt;br&gt;Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## onSelect
 
@@ -162,13 +162,13 @@ Triggered when an index item is selected. The return value is the index of the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnSelectCallback&gt; | Yes | Callback used to return the result. |
+| handler | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupBackground
 
@@ -192,13 +192,13 @@ Sets the background color of the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Background color of the pop-up window.&lt;br&gt;Default value: **0xD8404040**, displayed as dark gray with slight transparency |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the pop-up window.&lt;br&gt;Default value: **0xD8404040**, displayed as dark gray with slight transparency |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupBackgroundBlurStyle
 
@@ -211,7 +211,7 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 > **NOTE：**
 
 > After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying
-> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#popupbackground).
+> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md#popupBackground).
 
 **Since:** 18
 
@@ -227,13 +227,13 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)&gt; | Yes | Background blur style of the pop-up window. |
+| style | Optional&lt;BlurStyle&gt; | Yes | Background blur style of the pop-up window. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupColor
 
@@ -257,13 +257,13 @@ Sets the text color for the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Text color of the pop-up window.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the pop-up window.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## popupFont
 
@@ -287,13 +287,13 @@ Sets the font style of the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | Font style of the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'19.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| font | Optional&lt;Font&gt; | Yes | Font style of the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'19.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selected
 
@@ -317,13 +317,13 @@ Sets the index of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Index of the selected item.&lt;br&gt;Default value: **0**&lt;br&gt;This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
+| index | Optional&lt;number&gt; | Yes | Index of the selected item.&lt;br&gt;Default value: **0**&lt;br&gt;This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selectedBackgroundColor
 
@@ -347,13 +347,13 @@ Sets the background color of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1F71FF**, displayed as dark blue |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1F71FF**, displayed as dark blue |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selectedColor
 
@@ -377,13 +377,13 @@ Sets the text color of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-colormetrics-t.md)&gt; | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## selectedFont
 
@@ -407,13 +407,13 @@ Sets the font style of the selected item, including size, weight, style, and fon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[Font](arkts-arkui-font-i.md)&gt; | Yes | Font style of the selected item.&lt;br&gt;Default value: {&lt;br&gt;size:'13.0fp',&lt;br&gt; style: FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| font | Optional&lt;Font&gt; | Yes | Font style of the selected item.&lt;br&gt;Default value: {&lt;br&gt;size:'13.0fp',&lt;br&gt; style: FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 
 ## usePopup
 
@@ -437,11 +437,11 @@ Sets whether to display the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to display the pop-up window.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **false |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether to display the pop-up window.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **false |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 

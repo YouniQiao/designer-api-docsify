@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -32,7 +32,7 @@ This method is called when a custom message is received.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| msgId | string | Yes |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
 | msgParam | ArrayBuffer | No |
 
 ## Examples

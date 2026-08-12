@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-unnamed-export default class Cipher--><!--Device-unnamed-export default class Cipher-End-->
 
@@ -24,7 +24,7 @@ static aes(options: CipherAesOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-Cipher-static aes(options: CipherAesOptions): void--><!--Device-Cipher-static aes(options: CipherAesOptions): void-End-->
 
@@ -48,7 +48,7 @@ static rsa(options: CipherRsaOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-Cipher-static rsa(options: CipherRsaOptions): void--><!--Device-Cipher-static rsa(options: CipherRsaOptions): void-End-->
 

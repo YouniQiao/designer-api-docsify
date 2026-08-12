@@ -14,7 +14,7 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.abilityManager/abilityManager#getAbilityRunningInfos
+**替代接口：** [getAbilityRunningInfos](ohos.app.ability.abilityManager/abilityManager#getAbilityRunningInfos)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -45,7 +45,7 @@ function getAbilityRunningInfos(callback: AsyncCallback<Array<AbilityRunningInfo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.abilityManager/abilityManager#getAbilityRunningInfos
+**替代接口：** [getAbilityRunningInfos](ohos.app.ability.abilityManager/abilityManager#getAbilityRunningInfos)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 

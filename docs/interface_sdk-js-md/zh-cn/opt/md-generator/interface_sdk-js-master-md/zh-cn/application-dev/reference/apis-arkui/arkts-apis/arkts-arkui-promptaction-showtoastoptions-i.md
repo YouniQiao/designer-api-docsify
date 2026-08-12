@@ -36,7 +36,7 @@ backgroundBlurStyle?: BlurStyle
 
 Toast的背板模糊材质。&lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。&lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **起始版本：** 12
 
@@ -174,7 +174,7 @@ offset?: Offset
 
 在对齐方式上的偏移。&lt;br/&gt;默认值：{ dx: 0, dy: 0 }，默认没有偏移。&lt;br/&gt;**说明：** &lt;br/&gt;仅支持设置px类型的数值。如需设置其他类型的数值，应将其他类型转换为px类型后传入。例如，若需设置vp，应将其转换为px后传入。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 12
 
@@ -194,7 +194,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Toast的背板阴影。&lt;br/&gt;默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 

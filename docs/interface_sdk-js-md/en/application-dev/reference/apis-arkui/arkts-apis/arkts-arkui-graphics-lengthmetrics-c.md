@@ -38,7 +38,7 @@ Sets automatic refresh for the LengthMetrics object.When enabled, the length val
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the LengthMetrics object for chaining. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the LengthMetrics object for chaining. |
 
 ## constructor
 
@@ -93,7 +93,7 @@ Init a lengthMetrics with fp unit.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit fp. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit fp. |
 
 ## lpx
 
@@ -123,7 +123,7 @@ Init a lengthMetrics with lpx unit.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit lpx. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit lpx. |
 
 ## percent
 
@@ -153,7 +153,7 @@ Init a lengthMetrics with percent unit.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit percent. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit percent. |
 
 ## px
 
@@ -183,7 +183,7 @@ Init a lengthMetrics with px unit.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit px. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit px. |
 
 ## resource
 
@@ -213,7 +213,7 @@ Init a lengthMetrics with Resource unit.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit Resource. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit Resource. |
 
 ## vp
 
@@ -243,7 +243,7 @@ Init a lengthMetrics with vp unit.
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Returns the lengthMetrics object with unit vp. |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit vp. |
 
 ## unit
 

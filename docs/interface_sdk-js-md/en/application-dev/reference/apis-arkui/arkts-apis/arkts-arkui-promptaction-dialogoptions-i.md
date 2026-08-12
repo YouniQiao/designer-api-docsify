@@ -2,7 +2,7 @@
 
 Dialog options
 
-**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
+**Inheritance/Implementation:** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Dialog options
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -26,7 +26,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines the dialog's background blur Style
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -48,7 +48,7 @@ backgroundColor?: ResourceColor
 
 Defines the dialog's background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -148,7 +148,7 @@ height?: Dimension
 
 Defines the dialog's height.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 
@@ -188,7 +188,7 @@ width?: Dimension
 
 Defines the dialog's width.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 

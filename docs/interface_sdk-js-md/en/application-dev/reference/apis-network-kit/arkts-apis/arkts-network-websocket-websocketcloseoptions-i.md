@@ -13,7 +13,7 @@ Defines the optional parameters carried in the request for closing a WebSocket c
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## code

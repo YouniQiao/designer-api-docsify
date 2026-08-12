@@ -26,5 +26,5 @@ wrapBuilder是一个模板函数，返回一个`WrappedBuilder`对象。模板�
 
 | 类型 | 说明 |
 | --- | --- |
-| [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;T&gt; | WrappedBuilder对象。 |
+| [WrappedBuilder](arkts-arkui-builder-wrappedbuilder-c.md)&lt;T&gt; | WrappedBuilder对象。 |
 

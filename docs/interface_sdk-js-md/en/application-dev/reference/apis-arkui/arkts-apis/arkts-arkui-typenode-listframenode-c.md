@@ -34,11 +34,11 @@ Initialize List FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | No | list options |
+| options | ListOptions | No | list options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |  |
+| ListAttribute |  |
 

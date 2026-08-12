@@ -30,7 +30,7 @@ Line is returned when the parameter is transferred.
 
 | Type | Description |
 | --- | --- |
-| [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md) | The attribute of the Line. |
+| [LineAttribute](arkts-arkui-line-lineattribute-i.md) | The attribute of the Line. |
 
 
 ## Line
@@ -59,11 +59,11 @@ Defines Line Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LineAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LineAttribute](arkts-arkui-line-lineattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md) |  |
+| [LineAttribute](arkts-arkui-line-lineattribute-i.md) |  |
 

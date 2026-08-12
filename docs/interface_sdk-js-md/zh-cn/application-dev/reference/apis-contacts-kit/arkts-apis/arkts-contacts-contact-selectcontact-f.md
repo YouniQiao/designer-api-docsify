@@ -14,7 +14,7 @@ function selectContact(callback: AsyncCallback<Array<Contact>>): void
 
 **废弃版本：** 10
 
-**替代接口：** [contact.selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)(callback:
+**替代接口：** [selectContacts](contact.selectContacts(callback:)
 
 <!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
 
@@ -24,7 +24,7 @@ function selectContact(callback: AsyncCallback<Array<Contact>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 | 回调函数。成功返回选择的联系人对象数组；失败返回具体的错误码信息。 |
 
 ## 示例
 
@@ -57,7 +57,7 @@ function selectContact(): Promise<Array<Contact>>
 
 **废弃版本：** 10
 
-**替代接口：** [contact.selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)()
+**替代接口：** [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectContacts)()
 
 <!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
 
@@ -67,7 +67,7 @@ function selectContact(): Promise<Array<Contact>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Promise对象。返回选择的联系人数组对象。 |
 
 ## 示例
 

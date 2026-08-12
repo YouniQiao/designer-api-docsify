@@ -87,7 +87,7 @@ placeholder?: ComponentContent
 
 Placeholder to be displayed before the UIExtensionComponent establishes a connection with the UIExtensionAbility.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 12
 

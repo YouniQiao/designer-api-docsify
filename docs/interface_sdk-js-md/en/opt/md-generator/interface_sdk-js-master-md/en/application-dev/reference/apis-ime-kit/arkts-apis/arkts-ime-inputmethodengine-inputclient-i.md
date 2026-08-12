@@ -12,7 +12,7 @@ You must first use [on('inputStart')](inputMethodEngine.InputMethodAbility. on(t
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -40,9 +40,9 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -87,15 +87,15 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -138,9 +138,9 @@ Deletes the fixed-length text after the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -174,9 +174,9 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -221,15 +221,15 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -272,9 +272,9 @@ Deletes the fixed-length text before the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -305,14 +305,14 @@ Finishes the text preview. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 
@@ -348,8 +348,8 @@ Finishes the text preview.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 
@@ -381,7 +381,7 @@ Obtains the additional options for binding an input method.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 
@@ -415,9 +415,9 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -458,15 +458,15 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -511,9 +511,9 @@ Obtains the specific-length text after the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -533,7 +533,7 @@ Obtains information about the application window, in which the input box that st
 
 > **NOTE：**
 > 
-> This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md) as the
+> This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md#Panel) as the
 > soft keyboard window.
 
 **Since:** 12
@@ -546,15 +546,15 @@ Obtains information about the application window, in which the input box that st
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WindowInfo&gt; |
+| Promise & lt;WindowInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
-| [12800012](../errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) |
 
 ## Examples
 
@@ -587,13 +587,13 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -628,13 +628,13 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;EditorAttribute&gt; |
+| Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -673,7 +673,7 @@ Obtains the attribute of the edit box.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -708,9 +708,9 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -751,15 +751,15 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -804,9 +804,9 @@ Obtains the specific-length text before the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -840,8 +840,8 @@ Obtains the index of the text where the cursor is located. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -875,14 +875,14 @@ Obtains the index of the text where the cursor is located. This API uses a promi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -920,8 +920,8 @@ Obtains the index of the text where the cursor is located.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -955,9 +955,9 @@ Inserts text. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -1002,15 +1002,15 @@ Inserts text. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -1052,9 +1052,9 @@ Inserts text.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -1087,8 +1087,8 @@ Moves the cursor. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1128,14 +1128,14 @@ Moves the cursor. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1173,8 +1173,8 @@ Moves the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1242,7 +1242,7 @@ Subscribes to the event indicating that the additional options for binding an in
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 
@@ -1268,13 +1268,13 @@ Registers or unregisters MessageHandler.
 
 > **NOTE：**
 > 
-> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is globally unique. After multiple
+> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler) object is globally unique. After multiple
 > registrations, only the last registered object is valid and retained, and the
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback of the penultimate registered
 > object is triggered.
 > 
-> If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered.
+> If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler). Its
+> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback will be triggered.
 
 **Since:** 15
 
@@ -1292,7 +1292,7 @@ Registers or unregisters MessageHandler.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1339,8 +1339,8 @@ Selects text based on the cursor movement direction. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1381,14 +1381,14 @@ Selects text based on the cursor movement direction. This API uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1427,8 +1427,8 @@ Selects text based on the cursor movement direction.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1462,8 +1462,8 @@ Selects text based on the specified range. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1504,14 +1504,14 @@ Selects text based on the specified range. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1550,8 +1550,8 @@ Selects text based on the specified range.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1574,7 +1574,7 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 > for the corresponding event using
 > [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction',callback: (action: ExtendAction) => void): void) for further processing.
 > 
-> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md),
+> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#ExtendAction),
 > the edit box application needs to apply for the
 > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
 > permission.
@@ -1596,9 +1596,9 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -1629,7 +1629,7 @@ Sends an extended edit action. This API uses a promise to return the result.
 > [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction',callback: (action: ExtendAction) => void): void;) for
 > further processing.
 > 
-> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md),
+> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#ExtendAction),
 > the edit box application needs to apply for the
 > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
 > permission.
@@ -1650,15 +1650,15 @@ Sends an extended edit action. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -1697,8 +1697,8 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1744,14 +1744,14 @@ Sends the function key. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1795,25 +1795,25 @@ Sends the custom communication to the edit box application attached to the input
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| msgId | string | Yes |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
 | msgParam | ArrayBuffer | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
-| [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
+| [12800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) |
 
 ## Examples
 
@@ -1861,15 +1861,15 @@ Sends private data to the system component that needs to communicate with the in
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
 
 ## Examples
 
@@ -1916,15 +1916,15 @@ Sets the preview text. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 
@@ -1964,9 +1964,9 @@ Sets the preview text.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 

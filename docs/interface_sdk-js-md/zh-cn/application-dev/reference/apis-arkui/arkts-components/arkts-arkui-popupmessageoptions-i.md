@@ -22,7 +22,7 @@ font?: Font
 
 1. 不支持设置family。2. Font中的weight属性不支持传入number类型。
 
-**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
+**类型：** Font
 
 **起始版本：** 10
 
@@ -44,7 +44,7 @@ textColor?: ResourceColor
 
 设置气泡信息文本颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 

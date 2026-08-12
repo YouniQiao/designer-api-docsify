@@ -60,7 +60,7 @@ end?: CustomBuilder | SwipeActionItem
 
 Swipe action item displayed on the right of the list item when the item is swiped left(in vertical list layout) or below the list item when the item is swiped up (in horizontal list layout).
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
 
 **Since:** 9
 
@@ -78,7 +78,7 @@ start?: CustomBuilder | SwipeActionItem
 
 Swipe action item displayed on the left of the list item when the item is swiped right(in vertical list layout) or above the list item when the item is swiped down (in horizontal list layout).
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-swipeactionitem-i.md)
 
 **Since:** 9
 

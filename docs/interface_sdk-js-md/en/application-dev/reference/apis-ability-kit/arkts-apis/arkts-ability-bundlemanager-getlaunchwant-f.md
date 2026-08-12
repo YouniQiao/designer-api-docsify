@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getLaunchWant
@@ -35,7 +35,7 @@ Obtains the **Want** parameters of the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700072](../errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
+| [17700072](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700072-launch-want-does-not-exist) | The launch want is not found. |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createAuxiliaryPicture
@@ -30,7 +30,7 @@ Images occupy a large amount of memory. When you finish using an AuxiliaryPictur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Image data stored in the buffer. |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | Size of the auxiliary picture, in px. |
+| size | Size | Yes | Size of the auxiliary picture, in px. |
 | type | [AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md) | Yes | Type of the auxiliary picture. |
 
 **Return value:**
@@ -43,7 +43,7 @@ Images occupy a large amount of memory. When you finish using an AuxiliaryPictur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

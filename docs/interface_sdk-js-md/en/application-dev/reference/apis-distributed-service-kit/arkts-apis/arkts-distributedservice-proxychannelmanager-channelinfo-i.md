@@ -13,7 +13,7 @@ Represents the proxy channel information, including the MAC address and service 
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## linkType

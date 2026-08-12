@@ -34,7 +34,7 @@ onDragStart?: Callback<number>
 
 当项目被拖动时，会触发此回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **起始版本：** 20
 
@@ -54,7 +54,7 @@ onDrop?: Callback<number>
 
 当项目被释放时，会触发此回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **起始版本：** 20
 
@@ -74,7 +74,7 @@ onLongPress?: Callback<number>
 
 当项目被长按时触发此回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **起始版本：** 20
 

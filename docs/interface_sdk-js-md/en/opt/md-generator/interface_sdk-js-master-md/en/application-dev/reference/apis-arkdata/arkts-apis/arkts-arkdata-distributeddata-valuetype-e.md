@@ -6,7 +6,7 @@ Enumerates the data types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType
+**Substitutes:** [ValueType](ohos.data.distributedKVStore.ValueType)
 
 <!--Device-distributedData-enum ValueType--><!--Device-distributedData-enum ValueType-End-->
 
@@ -24,7 +24,7 @@ String.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType#STRING
+**Substitutes:** [STRING](ohos.data.distributedKVStore.ValueType#STRING)
 
 <!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
 
@@ -42,7 +42,7 @@ Integer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType#INTEGER
+**Substitutes:** [INTEGER](ohos.data.distributedKVStore.ValueType#INTEGER)
 
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
@@ -60,7 +60,7 @@ Float (single-precision floating point).
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType#FLOAT
+**Substitutes:** [FLOAT](ohos.data.distributedKVStore.ValueType#FLOAT)
 
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
@@ -78,7 +78,7 @@ Byte array.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType#BYTE_ARRAY
+**Substitutes:** [BYTE_ARRAY](ohos.data.distributedKVStore.ValueType#BYTE_ARRAY)
 
 <!--Device-ValueType-BYTE_ARRAY = 3--><!--Device-ValueType-BYTE_ARRAY = 3-End-->
 
@@ -96,7 +96,7 @@ Boolean.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType#BOOLEAN
+**Substitutes:** [BOOLEAN](ohos.data.distributedKVStore.ValueType#BOOLEAN)
 
 <!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
 
@@ -114,7 +114,7 @@ Double (double-precision floating point).
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ValueType#DOUBLE
+**Substitutes:** [DOUBLE](ohos.data.distributedKVStore.ValueType#DOUBLE)
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
 

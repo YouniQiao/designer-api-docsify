@@ -28,5 +28,5 @@ Create a FrameNode of Rating type.
 
 | Type | Description |
 | --- | --- |
-| [Rating](arkts-arkui-typenode-rating-t.md) | Return Rating type FrameNode. |
+| Rating | Return Rating type FrameNode. |
 

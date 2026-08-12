@@ -6,7 +6,7 @@ Defines the callback invoked upon change in the wearing state of the device that
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#WEAR_DETECTION
+**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
 
 <!--Device-unnamed-export interface SubscribeOnBodyStateOptions--><!--Device-unnamed-export interface SubscribeOnBodyStateOptions-End-->
 
@@ -15,7 +15,7 @@ Defines the callback invoked upon change in the wearing state of the device that
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -30,7 +30,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -57,7 +57,7 @@ Callback invoked when the wearing state of the device that houses the sensor is 
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -12,7 +12,7 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#publish
+**替代接口：** [publish](ohos.notificationManager/notificationManager#publish)
 
 <!--Device-notification-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void--><!--Device-notification-function publish(request: NotificationRequest, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ function publish(request: NotificationRequest): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#publish
+**替代接口：** [publish](ohos.notificationManager/notificationManager#publish)
 
 <!--Device-notification-function publish(request: NotificationRequest): Promise<void>--><!--Device-notification-function publish(request: NotificationRequest): Promise<void>-End-->
 
@@ -54,4 +54,4 @@ function publish(request: NotificationRequest): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

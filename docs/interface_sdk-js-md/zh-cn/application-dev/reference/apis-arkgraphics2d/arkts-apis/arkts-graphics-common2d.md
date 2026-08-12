@@ -23,6 +23,6 @@
 | [Color](arkts-arkgraphics2d-common2d-color-i.md) | ARGB格式的颜色描述。 |
 | [Color4f](arkts-arkgraphics2d-common2d-color4f-i.md) | ARGB格式的颜色描述。 |
 | [Point](arkts-arkgraphics2d-common2d-point-i.md) | 坐标点。 |
-| [Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md)。 |
+| [Point3d](arkts-arkgraphics2d-common2d-point3d-i.md) | 三维的坐标点。继承自[Point](arkts-arkgraphics2d-common2d-point-i.md#Point)。 |
 | [Rect](arkts-arkgraphics2d-common2d-rect-i.md) | 矩形区域，通过2个坐标点可以描述出一个矩形区域，这2个点分别认为是矩形区域的左上角点与右下角点。 |
 

@@ -19,7 +19,7 @@ static Clear(): boolean
 
 Deletes all properties from [AppStorage](../../../ui/state-management/arkts-appstorage.md). The deletion is only successful if none of the properties in AppStorage have any subscribers. If there are subscribers, this API does not take effect and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
 
-For details about the subscriber, see [delete](arkts-arkui-appstorage-c.md#delete).
+For details about the subscriber, see [delete](#delete).
 
 **Since:** 9
 
@@ -27,7 +27,7 @@ For details about the subscriber, see [delete](arkts-arkui-appstorage-c.md#delet
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#clear](arkts-arkui-appstorage-c.md#clear)
+**Substitutes:** [clear](#clear)
 
 <!--Device-AppStorage-static Clear(): boolean--><!--Device-AppStorage-static Clear(): boolean-End-->
 
@@ -38,6 +38,17 @@ For details about the subscriber, see [delete](arkts-arkui-appstorage-c.md#delet
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+let simple = AppStorage.staticClear();
+```
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.Clear(); // true: There are no subscribers.
+```
 
 ## Delete
 
@@ -50,7 +61,7 @@ Deletes the property corresponding to **propName** from
 
 The deletion is only successful if the property has no subscribers. If there is a subscriber, the deletion fails and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
 
-Subscribers include properties bound using [Link](arkts-arkui-appstorage-c.md#link) and [Prop](arkts-arkui-appstorage-c.md#prop) APIs, as well as those decorated with  
+Subscribers include properties bound using [Link](#Link) and [Prop](#Prop) APIs, as well as those decorated with  
 [\@StorageLink('propName')](../../../ui/state-management/arkts-appstorage.md#storagelink) and  
 [\@StorageProp('propName')](../../../ui/state-management/arkts-appstorage.md#storageprop). This means that if\@StorageLink('propName') and \@StorageProp('propName') are used in a custom component or if there is still a  
 **SubscribedAbstractProperty** instance in a synchronization relationship with the property, the property cannot be deleted from AppStorage.
@@ -61,7 +72,7 @@ Subscribers include properties bound using [Link](arkts-arkui-appstorage-c.md#li
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#delete](arkts-arkui-appstorage-c.md#delete)
+**Substitutes:** [delete](#delete)
 
 <!--Device-AppStorage-static Delete(propName: string): boolean--><!--Device-AppStorage-static Delete(propName: string): boolean-End-->
 
@@ -79,6 +90,17 @@ Subscribers include properties bound using [Link](arkts-arkui-appstorage-c.md#li
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
 
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+AppStorage.Link('PropA');
+let res: boolean = AppStorage.Delete('PropA'); // false: PropA still has subscribers.
+
+AppStorage.SetOrCreate('PropB', 48);
+let res1: boolean = AppStorage.Delete('PropB'); // true: PropB is successfully deleted from AppStorage.
+```
+
 ## Get
 
 ```TypeScript
@@ -95,7 +117,7 @@ Obtains the value of the property corresponding to **propName** from
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#get](arkts-arkui-appstorage-c.md#get)
+**Substitutes:** [get](#get)
 
 <!--Device-AppStorage-static Get<T>(propName: string): T | undefined--><!--Device-AppStorage-static Get<T>(propName: string): T | undefined-End-->
 
@@ -113,6 +135,13 @@ Obtains the value of the property corresponding to **propName** from
 | --- | --- |
 | T | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
 
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let value: number = AppStorage.Get('PropA') as number; // 47
+```
+
 ## Has
 
 ```TypeScript
@@ -128,7 +157,7 @@ Checks whether the property corresponding to **propName** exists in
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#has](arkts-arkui-appstorage-c.md#has)
+**Substitutes:** [has](#has)
 
 <!--Device-AppStorage-static Has(propName: string): boolean--><!--Device-AppStorage-static Has(propName: string): boolean-End-->
 
@@ -145,6 +174,12 @@ Checks whether the property corresponding to **propName** exists in
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the property exists in AppStorage; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+AppStorage.Has('simpleProp');
+```
 
 ## IsMutable
 
@@ -177,6 +212,13 @@ Checks whether the property corresponding to **propName** in
 | --- | --- |
 | boolean | Whether the property corresponding to **propName** is mutable. Currently, this return value is always **true**. |
 
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.IsMutable('PropA');
+```
+
 ## Keys
 
 ```TypeScript
@@ -191,7 +233,7 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#keys](arkts-arkui-appstorage-c.md#keys)
+**Substitutes:** [keys](#keys)
 
 <!--Device-AppStorage-static Keys(): IterableIterator<string>--><!--Device-AppStorage-static Keys(): IterableIterator<string>-End-->
 
@@ -201,7 +243,14 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | All property names in AppStorage. |
+| IterableIterator&lt;string&gt; | All property names in AppStorage. |
+
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.Keys();
+```
 
 ## Link
 
@@ -222,7 +271,7 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#link](arkts-arkui-appstorage-c.md#link)
+**Substitutes:** [link](#link)
 
 <!--Device-AppStorage-static Link(propName: string): any--><!--Device-AppStorage-static Link(propName: string): any-End-->
 
@@ -239,6 +288,15 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 | Type | Description |
 | --- | --- |
 | any | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.Link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.Link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ## Prop
 
@@ -260,7 +318,7 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#prop](arkts-arkui-appstorage-c.md#prop)
+**Substitutes:** [prop](#prop)
 
 <!--Device-AppStorage-static Prop(propName: string): any--><!--Device-AppStorage-static Prop(propName: string): any-End-->
 
@@ -278,6 +336,15 @@ Establishes a one-way data binding with the property corresponding to **propName
 | --- | --- |
 | any | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
 
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
+prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
+```
+
 ## Set
 
 ```TypeScript
@@ -293,7 +360,7 @@ Sets the value of the property corresponding to **propName** in
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#set](arkts-arkui-appstorage-c.md#set)
+**Substitutes:** [set](#set)
 
 <!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean--><!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean-End-->
 
@@ -312,13 +379,21 @@ Sets the value of the property corresponding to **propName** in
 | --- | --- |
 | boolean | Returns **false** if the property corresponding to **propName** does not exist in AppStorage. Returns **true** if the operation is successful. |
 
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 48);
+let res: boolean = AppStorage.Set('PropA', 47) // true
+let res1: boolean = AppStorage.Set('PropB', 47) // false
+```
+
 ## SetAndLink
 
 ```TypeScript
 static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [Link](arkts-arkui-appstorage-c.md#link) API, establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two-way bound data. The value of **defaultValue** must be of the **T** type and cannot be **null** or **undefined**.
+Similar to the [Link](#Link) API, establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two-way bound data. The value of **defaultValue** must be of the **T** type and cannot be **null** or **undefined**.
 
 **Since:** 7
 
@@ -326,7 +401,7 @@ Similar to the [Link](arkts-arkui-appstorage-c.md#link) API, establishes a two-w
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#setAndLink](arkts-arkui-appstorage-c.md#setandlink)
+**Substitutes:** [setAndLink](#setAndLink)
 
 <!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
 
@@ -343,7 +418,15 @@ Similar to the [Link](arkts-arkui-appstorage-c.md#link) API, establishes a two-w
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;** and two-way bound data of the given property in AppStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;** and two-way bound data of the given property in AppStorage. |
+
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## SetAndProp
 
@@ -351,7 +434,7 @@ Similar to the [Link](arkts-arkui-appstorage-c.md#link) API, establishes a two-w
 static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 ```
 
-Similar to the [Prop](arkts-arkui-appstorage-c.md#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one-way bound data. The value of **defaultValue** must be of the **S** type and cannot be **null** or **undefined**.
+Similar to the [Prop](#Prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one-way bound data. The value of **defaultValue** must be of the **S** type and cannot be **null** or **undefined**.
 
 **Since:** 7
 
@@ -359,7 +442,7 @@ Similar to the [Prop](arkts-arkui-appstorage-c.md#prop) API, establishes a one-w
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#setAndProp](arkts-arkui-appstorage-c.md#setandprop)
+**Substitutes:** [setAndProp](#setAndProp)
 
 <!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>--><!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>-End-->
 
@@ -376,7 +459,14 @@ Similar to the [Prop](arkts-arkui-appstorage-c.md#prop) API, establishes a one-w
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;S&gt; | Instance of **SubscribedAbstractProperty&lt;S&gt;**. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | Instance of **SubscribedAbstractProperty&lt;S&gt;**. |
+
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.SetAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
 
 ## SetOrCreate
 
@@ -395,7 +485,7 @@ The value of **newValue** cannot be **null** or **undefined**.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#setOrCreate](arkts-arkui-appstorage-c.md#setorcreate)
+**Substitutes:** [setOrCreate](#setOrCreate)
 
 <!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void--><!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void-End-->
 
@@ -407,6 +497,12 @@ The value of **newValue** cannot be **null** or **undefined**.
 | --- | --- | --- | --- |
 | propName | string | Yes | Property name in AppStorage. |
 | newValue | T | Yes | Property value, which cannot be **null** or **undefined**. |
+
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('simpleProp', 121);
+```
 
 ## Size
 
@@ -422,7 +518,7 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 
 **Deprecated since:** 10
 
-**Substitutes:** [AppStorage#size](arkts-arkui-appstorage-c.md#size)
+**Substitutes:** [size](#size)
 
 <!--Device-AppStorage-static Size(): number--><!--Device-AppStorage-static Size(): number-End-->
 
@@ -434,6 +530,13 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 | --- | --- |
 | number | Number of properties in AppStorage. |
 
+## Examples
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let res: number = AppStorage.Size(); // 1
+```
+
 ## clear
 
 ```TypeScript
@@ -442,7 +545,7 @@ static clear(): boolean
 
 Deletes all properties from [AppStorage](../../../ui/state-management/arkts-appstorage.md). The deletion is only successful if none of the properties in AppStorage have any subscribers. If there are subscribers, this API does not take effect and **false** is returned. If there are no subscribers, the deletion is successful and **true** is returned.
 
-For details about the subscriber, see [delete](arkts-arkui-appstorage-c.md#delete).
+For details about the subscriber, see [delete](#delete).
 
 **Since:** 10
 
@@ -460,6 +563,13 @@ For details about the subscriber, see [delete](arkts-arkui-appstorage-c.md#delet
 | --- | --- |
 | boolean | Returns **true** if the properties in AppStorage have no subscribers and the deletion is successful; returns **false** if there are still subscribers. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let res: boolean = AppStorage.clear(); // true: There are no subscribers.
+```
+
 ## delete
 
 ```TypeScript
@@ -476,15 +586,15 @@ The property subscribers include the following:
 1. Variables decorated by [\@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink) or  
 [\@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)
 
-2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md) returned by  
-[link](arkts-arkui-appstorage-c.md#link), [prop](arkts-arkui-appstorage-c.md#prop), [setAndLink](arkts-arkui-appstorage-c.md#setandlink),or [setAndProp](arkts-arkui-appstorage-c.md#setandprop)
+2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty) returned by  
+[link](#link), [prop](#prop), [setAndLink](#setAndLink),or [setAndProp](#setAndProp)
 
 To delete these subscribers:
 
 1. Remove the custom component containing \@StorageLink or \@StorageProp. For details, see  
 [Custom Component Deletion](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#custom-component-deletion).
 
-2. Call the [aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted) API on instances of  
+2. Call the [aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#aboutToBeDeleted) API on instances of  
 **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**, or **setAndProp**.
 
 **Since:** 10
@@ -508,6 +618,17 @@ To delete these subscribers:
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** if the operation fails. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+AppStorage.link<number>('PropA');
+let res: boolean = AppStorage.delete('PropA'); // false: PropA still has subscribers.
+
+AppStorage.setOrCreate('PropB', 48);
+let res1: boolean = AppStorage.delete('PropB'); // true: PropB is successfully deleted from AppStorage.
+```
 
 ## get
 
@@ -541,6 +662,13 @@ Obtains the value of the property corresponding to **propName** from
 | --- | --- |
 | T | Value of the property corresponding to **propName** in AppStorage, or **undefined** if it does not exist. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let value: number = AppStorage.get('PropA') as number; // 47
+```
+
 ## has
 
 ```TypeScript
@@ -572,6 +700,12 @@ Checks whether the property corresponding to **propName** exists in
 | --- | --- |
 | boolean | Returns **true** if the property exists in AppStorage; returns **false** otherwise. |
 
+## Examples
+
+```TypeScript
+AppStorage.has('simpleProp');
+```
+
 ## keys
 
 ```TypeScript
@@ -594,7 +728,14 @@ Obtains all property names in [AppStorage](../../../ui/state-management/arkts-ap
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | All property names in AppStorage. |
+| IterableIterator&lt;string&gt; | All property names in AppStorage. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
 
 ## link
 
@@ -629,7 +770,16 @@ If the given property does not exist in AppStorage, **undefined** is returned.
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Two-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ## prop
 
@@ -661,7 +811,16 @@ Establishes a one-way data binding with the property corresponding to **propName
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | One-way bound data of the specified property in AppStorage, or **undefined** if the property does not exist. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
+```
 
 ## ref
 
@@ -672,7 +831,7 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 Returns a reference to the property corresponding to **propName** in  
 [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the provided **propName** does not exist, this API returns **undefined**.
 
-This API is similar to [link](arkts-arkui-appstorage-c.md#link) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
+This API is similar to [link](#link) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md#AbstractProperty) type.
 
 **Since:** 12
 
@@ -695,6 +854,15 @@ This API is similar to [link](arkts-arkui-appstorage-c.md#link) but does not req
 | Type | Description |
 | --- | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | A reference to the property in AppStorage, or **undefined** if the property does not exist. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // Synchronously modify AppStorage: refToPropA1.get() == refToPropA2.get() == 48.
+```
 
 ## set
 
@@ -737,13 +905,21 @@ Sets the value of the property corresponding to **propName** in
 | --- | --- |
 | boolean | Returns **false** if the property corresponding to **propName** does not exist in AppStorage or if the assignment fails. Returns **true** if the assignment is successful. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 48);
+let res: boolean = AppStorage.set('PropA', 47) // true
+let res1: boolean = AppStorage.set('PropB', 47) // false
+```
+
 ## setAndLink
 
 ```TypeScript
 static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [link](arkts-arkui-appstorage-c.md#link) API, establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two-way bound data.
+Similar to the [link](#link) API, establishes a two-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its two-way bound data.
 
 > **NOTE：**
 
@@ -775,7 +951,15 @@ Similar to the [link](arkts-arkui-appstorage-c.md#link) API, establishes a two-w
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;**, which is two-way bound data of the given property in AppStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;**, which is two-way bound data of the given property in AppStorage. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## setAndProp
 
@@ -783,7 +967,7 @@ Similar to the [link](arkts-arkui-appstorage-c.md#link) API, establishes a two-w
 static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [prop](arkts-arkui-appstorage-c.md#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one-way bound data.
+Similar to the [prop](#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property exists in AppStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its one-way bound data.
 
 > **NOTE：**
 
@@ -815,7 +999,14 @@ Similar to the [prop](arkts-arkui-appstorage-c.md#prop) API, establishes a one-w
 
 | Type | Description |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;**. |
+| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | Instance of **SubscribedAbstractProperty&lt;T&gt;**. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
 
 ## setAndRef
 
@@ -823,9 +1014,9 @@ Similar to the [prop](arkts-arkui-appstorage-c.md#prop) API, establishes a one-w
 static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 ```
 
-Similar to the [ref](arkts-arkui-appstorage-c.md#ref) API, returns a reference to the property corresponding to **propName**in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its reference.
+Similar to the [ref](#ref) API, returns a reference to the property corresponding to **propName**in [AppStorage](../../../ui/state-management/arkts-appstorage.md). If the given property does not exist, this API creates and initializes the property in AppStorage using **defaultValue** and returns its reference.
 
-This API is similar to [setAndLink](arkts-arkui-appstorage-c.md#setandlink) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
+This API is similar to [setAndLink](#setAndLink) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md#AbstractProperty) type.
 
 > **NOTE：**
 
@@ -858,6 +1049,14 @@ This API is similar to [setAndLink](arkts-arkui-appstorage-c.md#setandlink) but 
 | Type | Description |
 | --- | --- |
 | [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | Instance of **AbstractProperty&lt;T&gt;**, which is a reference to the property in AppStorage corresponding to **propName**. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // Create PropB with the default value 49.
+let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA already exists with the value 47.
+```
 
 ## setOrCreate
 
@@ -896,6 +1095,12 @@ If the property does not exist, this API creates it with the value of **newValue
 | propName | string | Yes | Property name in AppStorage. |
 | newValue | T | Yes | Property value. Since API version 12, the value can be **null** or **undefined**. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('simpleProp', 121);
+```
+
 ## size
 
 ```TypeScript
@@ -920,6 +1125,13 @@ Obtains the number of properties in [AppStorage](../../../ui/state-management/ar
 | --- | --- |
 | number | Number of properties in AppStorage. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let res: number = AppStorage.size(); // 1
+```
+
 ## staticClear
 
 ```TypeScript
@@ -934,7 +1146,7 @@ Deletes all properties.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AppStorage.Clear](arkts-arkui-appstorage-c.md#clear)
+**Substitutes:** [Clear](#Clear)
 
 <!--Device-AppStorage-static staticClear(): boolean--><!--Device-AppStorage-static staticClear(): boolean-End-->
 
@@ -945,4 +1157,15 @@ Deletes all properties.
 | Type | Description |
 | --- | --- |
 | boolean | Deletes all properties. Returns **true** if all properties are deleted; returns **false** if any of the properties is being referenced by a state variable. |
+
+## Examples
+
+```TypeScript
+let simple = AppStorage.staticClear();
+```
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.Clear(); // true: There are no subscribers.
+```
 

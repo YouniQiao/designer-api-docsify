@@ -1,9 +1,9 @@
 # DeviceKVStore
 
 设备协同数据库，继承自KVStore，提供查询数据和同步数据的方法。设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。在调用DeviceKVStore的方法前，需要先通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个DeviceKVStore实例。
+[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个DeviceKVStore实例。
 
-**继承/实现关系：** DeviceKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md)
+**继承/实现关系：** DeviceKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md#KVStore)
 
 **起始版本：** 8
 
@@ -11,7 +11,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore
+**替代接口：** [DeviceKVStore](ohos.data.distributedKVStore.DeviceKVStore)
 
 <!--Device-distributedData-interface DeviceKVStore extends KVStore--><!--Device-distributedData-interface DeviceKVStore extends KVStore-End-->
 
@@ -31,7 +31,7 @@ closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#closeResultSet
+**替代接口：** [closeResultSet](ohos.data.distributedKVStore.DeviceKVStore#closeResultSet)
 
 <!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void--><!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void-End-->
 
@@ -77,7 +77,7 @@ closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#closeResultSet
+**替代接口：** [closeResultSet](ohos.data.distributedKVStore.DeviceKVStore#closeResultSet)
 
 <!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>--><!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>-End-->
 
@@ -123,7 +123,7 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -133,7 +133,7 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#get
+**替代接口：** [get](ohos.data.distributedKVStore.DeviceKVStore#get)
 
 <!--Device-DeviceKVStore-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void--><!--Device-DeviceKVStore-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void-End-->
 
@@ -176,7 +176,7 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -186,7 +186,7 @@ get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Arr
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#get
+**替代接口：** [get](ohos.data.distributedKVStore.DeviceKVStore#get)
 
 <!--Device-DeviceKVStore-get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>--><!--Device-DeviceKVStore-get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>-End-->
 
@@ -238,7 +238,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -248,7 +248,7 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getEntries
+**替代接口：** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -304,7 +304,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -314,7 +314,7 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getEntries
+**替代接口：** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>-End-->
 
@@ -384,7 +384,7 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getEntries
+**替代接口：** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
 
 <!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -394,7 +394,7 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数，返回与指定Query对象匹配的键值对列表。 |
 
 ## 示例
@@ -447,7 +447,7 @@ getEntries(query: Query): Promise<Entry[]>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getEntries
+**替代接口：** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
 
 <!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
 
@@ -457,7 +457,7 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -513,7 +513,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -523,7 +523,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getEntries
+**替代接口：** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -534,7 +534,7 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 键值对所属的设备ID。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Entry[]&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的键值对列表。 |
 
 ## 示例
@@ -584,7 +584,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -594,7 +594,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getEntries
+**替代接口：** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query): Promise<Entry[]>-End-->
 
@@ -605,7 +605,7 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 键值对所属的设备ID。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -662,7 +662,7 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStor
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -672,7 +672,7 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStor
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSet
+**替代接口：** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -684,7 +684,7 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStor
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 标识要查询其数据的设备。 |
 | keyPrefix | string | 是 | 表示要匹配的键前缀。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | 是 | 回调函数。返回与指定设备ID和key前缀匹配的KvStoreResultSet对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和key前缀匹配的KvStoreResultSet对象。 |
 
 ## 示例
 
@@ -715,7 +715,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -725,7 +725,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSet
+**替代接口：** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>-End-->
 
@@ -742,7 +742,7 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回与指定设备ID和key前缀匹配的KvStoreResultSet对象。 |
+| Promise&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Promise对象。返回与指定设备ID和key前缀匹配的KvStoreResultSet对象。 |
 
 ## 示例
 
@@ -780,7 +780,7 @@ getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSet
+**替代接口：** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
 
 <!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -790,8 +790,8 @@ getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | 是 | 回调函数，返回与指定Query对象匹配的KvStoreResultSet对象。 |
+| query | Query | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | 是 | 回调函数，返回与指定Query对象匹配的KvStoreResultSet对象。 |
 
 ## 示例
 
@@ -843,7 +843,7 @@ getResultSet(query: Query): Promise<KvStoreResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSet
+**替代接口：** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
 
 <!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>-End-->
 
@@ -853,13 +853,13 @@ getResultSet(query: Query): Promise<KvStoreResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回与指定Query对象匹配的KvStoreResultSet对象。 |
+| Promise&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Promise对象。返回与指定Query对象匹配的KvStoreResultSet对象。 |
 
 ## 示例
 
@@ -915,7 +915,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -925,7 +925,7 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSet
+**替代接口：** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -936,8 +936,8 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KvStoreResultSet&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
+| query | Query | 是 | 表示查询对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
 
 ## 示例
 
@@ -985,7 +985,7 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -995,7 +995,7 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSet
+**替代接口：** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>-End-->
 
@@ -1006,13 +1006,13 @@ getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;KvStoreResultSet&gt; | Promise对象。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
+| Promise&lt;[KvStoreResultSet](arkts-arkdata-distributeddata-kvstoreresultset-i.md)&gt; | Promise对象。返回与指定设备ID和Query对象匹配的KvStoreResultSet对象。 |
 
 ## 示例
 
@@ -1072,7 +1072,7 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSize
+**替代接口：** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
 
 <!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void--><!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void-End-->
 
@@ -1082,7 +1082,7 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回与指定Query对象匹配的结果数。 |
 
 ## 示例
@@ -1130,7 +1130,7 @@ getResultSize(query: Query): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSize
+**替代接口：** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
 
 <!--Device-DeviceKVStore-getResultSize(query: Query): Promise<number>--><!--Device-DeviceKVStore-getResultSize(query: Query): Promise<number>-End-->
 
@@ -1140,7 +1140,7 @@ getResultSize(query: Query): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1194,7 +1194,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1204,7 +1204,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSize
+**替代接口：** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
 
 <!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void--><!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void-End-->
 
@@ -1215,7 +1215,7 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。返回与指定设备ID和Query对象匹配的结果数。 |
 
 ## 示例
@@ -1259,7 +1259,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1269,7 +1269,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#getResultSize
+**替代接口：** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
 
 <!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query): Promise<number>--><!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query): Promise<number>-End-->
 
@@ -1280,7 +1280,7 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | KvStoreResultSet对象所属的设备ID。 |
-| query | [Query](arkts-arkdata-distributeddata-query-c.md) | 是 | 表示查询对象。 |
+| query | Query | 是 | 表示查询对象。 |
 
 **返回值：**
 
@@ -1336,7 +1336,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-DeviceKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-DeviceKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -1384,7 +1384,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-DeviceKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-DeviceKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -1432,7 +1432,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#on
+**替代接口：** [on](ohos.data.distributedKVStore.DeviceKVStore#on)
 
 <!--Device-DeviceKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-DeviceKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -1443,7 +1443,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 表示订阅的类型。 |
+| type | SubscribeType | 是 | 表示订阅的类型。 |
 | listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。 |
 
 ## 示例
@@ -1469,7 +1469,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#on
+**替代接口：** [on](ohos.data.distributedKVStore.DeviceKVStore#on)
 
 <!--Device-DeviceKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-DeviceKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -1513,7 +1513,7 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1523,7 +1523,7 @@ removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#removeDeviceData
+**替代接口：** [removeDeviceData](ohos.data.distributedKVStore.DeviceKVStore#removeDeviceData)
 
 <!--Device-DeviceKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-DeviceKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1573,7 +1573,7 @@ removeDeviceData(deviceId: string): Promise<void>
 > **说明：**
 > 
 > 其中deviceId通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 > > deviceId具体获取方式请参考[sync接口示例](arkts-arkdata-distributeddata-singlekvstore-i.md#sync)。
 
@@ -1583,7 +1583,7 @@ removeDeviceData(deviceId: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#removeDeviceData
+**替代接口：** [removeDeviceData](ohos.data.distributedKVStore.DeviceKVStore#removeDeviceData)
 
 <!--Device-DeviceKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-DeviceKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
 
@@ -1639,9 +1639,9 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 > **说明：**
 > 
-> 其中deviceIds为&lt;!--RP2--&gt;[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)中的
+> 其中deviceIds为&lt;!--RP2--&gt;[DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md#DeviceInfo)中的
 > networkId, 通过调用
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
@@ -1650,7 +1650,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.DeviceKVStore#sync
+**替代接口：** [sync](ohos.data.distributedKVStore.DeviceKVStore#sync)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1663,7 +1663,7 @@ sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceIds | string[] | 是 | 需要同步DeviceKVStore数据库的设备networkId列表。 |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 同步模式。 |
+| mode | SyncMode | 是 | 同步模式。 |
 | delayMs | number | 否 | 可选参数，允许延时时间，单位：ms（毫秒），默认为0。 |
 
 ## 示例

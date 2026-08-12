@@ -23,7 +23,7 @@
 NORMAL = 0
 ```
 
-Both the outer edges and the inner solid parts are blurred.
+全面模糊，外圈边缘和内部实体一起模糊。
 
 **起始版本：** 12
 
@@ -39,7 +39,7 @@ Both the outer edges and the inner solid parts are blurred.
 SOLID = 1
 ```
 
-The inner solid part remains unchanged, while only the outer edges are blurred.
+内部实体不变，只模糊外圈边缘部分。
 
 **起始版本：** 12
 
@@ -55,7 +55,7 @@ The inner solid part remains unchanged, while only the outer edges are blurred.
 OUTER = 2
 ```
 
-Only the outer edges are blurred, with the inner solid part being fully transparent.
+只有外圈边缘模糊，内部实体完全透明。
 
 **起始版本：** 12
 
@@ -71,7 +71,7 @@ Only the outer edges are blurred, with the inner solid part being fully transpar
 INNER = 3
 ```
 
-Only the inner solid part is blurred, while the outer edges remain sharp.
+只有内部实体模糊，外圈边缘清晰。
 
 **起始版本：** 12
 

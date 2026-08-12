@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## request
@@ -31,5 +31,5 @@ Plugin component request method used to send a request for the information of th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | param | [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | Yes | Plugin component request event callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Plugin component request event callback. |
 

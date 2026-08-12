@@ -20,7 +20,7 @@ borderRadius?: Length | BorderRadiuses
 
 默认值：`\$r('sys.float.ohos_id_corner_radius_default_s')`
 
-**类型：** [Length](arkts-arkui-length-t.md) \| BorderRadiuses
+**类型：** Length \| BorderRadiuses
 
 **默认值：** $r('sys.float.ohos_id_corner_radius_default_s')
 
@@ -44,7 +44,7 @@ fillColor?: ResourceColor
 
 默认不改变图标颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 23
 
@@ -66,7 +66,7 @@ height?: Dimension
 
 默认值：32VP
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 32.0_vp
 
@@ -92,7 +92,7 @@ image?: ResourceStr
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 23
 
@@ -114,7 +114,7 @@ width?: Dimension
 
 默认值：32VP
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 32.0_vp
 

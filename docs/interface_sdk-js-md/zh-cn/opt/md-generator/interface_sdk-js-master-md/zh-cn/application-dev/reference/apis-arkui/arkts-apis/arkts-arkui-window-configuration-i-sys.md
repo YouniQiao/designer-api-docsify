@@ -18,11 +18,11 @@ defaultDensityEnabled?: boolean
 
 当创建的系统窗口设置此参数为true时，表示当前窗口使用系统默认Density，且不会受到  
 [setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
-[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setdefaultdensityenabled)设置的本窗口的相关影响。
+[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setDefaultDensityEnabled)设置的本窗口的相关影响。
 
 当创建的系统窗口设置此参数为false时，表示当前窗口不使用系统默认Density，且会受到  
 [setDefaultDensityEnabled()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setdefaultdensityenabled12)和[setCustomDensity()](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#setcustomdensity15)设置的主窗口以及  
-[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setdefaultdensityenabled)设置的本窗口的相关影响。
+[setDefaultDensityEnabled()](arkts-arkui-window-window-i-sys.md#setDefaultDensityEnabled)设置的本窗口的相关影响。
 
 默认为false。
 
@@ -42,7 +42,7 @@ defaultDensityEnabled?: boolean
 zIndex?: number
 ```
 
-当前系统窗口的层级，仅在[WindowType](arkts-arkui-window-windowtype-e.md)为TYPE_DYNAMIC时生效。
+当前系统窗口的层级，仅在[WindowType](arkts-arkui-window-windowtype-e.md#WindowType)为TYPE_DYNAMIC时生效。
 
 **类型：** number
 

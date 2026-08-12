@@ -18,22 +18,22 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| portId | number | 是 |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Readonly&lt;SerialAttribute&gt; |
+| Readonly&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
-| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
-| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [31400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
+| [31400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
+| [31400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
 
 ## 示例
 

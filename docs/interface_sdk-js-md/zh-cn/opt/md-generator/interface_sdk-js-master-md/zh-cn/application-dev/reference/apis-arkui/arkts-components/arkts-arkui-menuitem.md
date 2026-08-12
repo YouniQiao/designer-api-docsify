@@ -28,7 +28,7 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md) | 否 |
+| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |
 
 ## 汇总
 

@@ -25,8 +25,8 @@ Defines MenuItem Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [MenuItemGroupOptions](../arkts-components/arkts-arkui-menuitemgroupoptions-i.md) | 否 | The options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroup-menuitemgroupoptions-i.md) | 否 | The options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 

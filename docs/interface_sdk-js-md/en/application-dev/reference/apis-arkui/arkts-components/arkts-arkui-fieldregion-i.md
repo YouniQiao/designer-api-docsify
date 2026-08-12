@@ -18,7 +18,7 @@ position?: PositionT<number>
 
 The coordinates of the center position of the field. The top-left corner of the component is the origin of the coordinate system. The coordinate unit is vp.
 
-**Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
+**Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **Default:** {x:0,y:0}
 
@@ -66,7 +66,7 @@ size?: SizeT<number>
 
 The size of the field. The unit of value is vp.
 
-**Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**Type:** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **Default:** {width:0,height:0}
 

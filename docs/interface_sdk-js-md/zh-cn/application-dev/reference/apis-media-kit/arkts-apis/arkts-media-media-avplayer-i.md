@@ -1,7 +1,7 @@
 # AVPlayer
 
 播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过  
-[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer)构建一个AVPlayer实例。
+[createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer)构建一个AVPlayer实例。
 
 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。  
 [on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))：监听播放状态机AVPlayerState切换。[on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback))：监听错误事件。
@@ -51,7 +51,7 @@ addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 资源句柄，通过 [resourceManager.getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd) 获取。 |
+| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 资源句柄，通过 [resourceManager.getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd) 获取。 |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 资源偏移量，需要基于预置资源的信息输入，非法值会造成字幕频资源解析错误，默认值:0。 |
 | length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 资源长度，默认值为文件中从偏移量开始的剩余字节，需要基于预置资源的信息输入，非法值会造成字幕频资源解析错误，默认值:0。 |
 
@@ -65,8 +65,8 @@ addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## addSubtitleFromUrl
 
@@ -102,8 +102,8 @@ addSubtitleFromUrl(url: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## deselectTrack
 
@@ -133,7 +133,7 @@ deselectTrack(index: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 多音视频资源的轨道索引，来自[getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)接口所获取的轨道信息 [MediaDescription](@ohos.multimedia.media:media.MediaDescription)。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 多音视频资源的轨道索引，来自[getTrackDescription](#getTrackDescription)接口所获取的轨道信息 [MediaDescription](@ohos.multimedia.media:media.MediaDescription)。 |
 
 **返回值：**
 
@@ -145,8 +145,8 @@ deselectTrack(index: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## getLoadedTimeRanges
 
@@ -176,7 +176,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 &lt;br&gt;时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
+| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 &lt;br&gt;时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getPlaybackInfo
 
@@ -198,7 +198,7 @@ getPlaybackInfo(): Promise<PlaybackInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PlaybackInfo&gt; | Promise对象，返回播放器信息PlaybackInfo。 |
+| Promise&lt;[PlaybackInfo](arkts-media-multimedia-media-playbackinfo-i.md)&gt; | Promise对象，返回播放器信息PlaybackInfo。 |
 
 ## getPlaybackRate
 
@@ -248,7 +248,7 @@ getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PlaybackMetrics&gt; | Promise对象，返回当前播放器的指标信息PlaybackMetrics。 |
+| Promise&lt;[PlaybackMetrics](arkts-media-playbackmetrics-t.md)&gt; | Promise对象，返回当前播放器的指标信息PlaybackMetrics。 |
 
 ## getSeekableTimeRanges
 
@@ -278,7 +278,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 &lt;br&gt;时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
+| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 &lt;br&gt;时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getSelectedTracks
 
@@ -314,7 +314,7 @@ getSelectedTracks(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## getTrackDescription
 
@@ -338,13 +338,13 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | 是 | 回调函数，当获取音视频轨道信息成功，err为undefined，data为获取到的 MediaDescription数组；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数，当获取音视频轨道信息成功，err为undefined，data为获取到的 MediaDescription数组；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## getTrackDescription
 
@@ -368,13 +368,13 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; | Promise对象，返回音视频轨道信息MediaDescription数组。 |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | Promise对象，返回音视频轨道信息MediaDescription数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## getTrackSelectionFilter
 
@@ -398,13 +398,13 @@ getTrackSelectionFilter(): Promise<TrackSelectionFilter>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TrackSelectionFilter&gt; | Promise对象，返回当前配置的轨道选择过滤器。 |
+| Promise&lt;[TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md)&gt; | Promise对象，返回当前配置的轨道选择过滤器。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## pause
 
@@ -434,7 +434,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## pause
 
@@ -464,7 +464,7 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## play
 
@@ -494,7 +494,7 @@ play(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## play
 
@@ -524,7 +524,7 @@ play(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## prepare
 
@@ -554,8 +554,8 @@ prepare(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by callback. |
 
 ## prepare
 
@@ -588,8 +588,8 @@ prepare(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupported format. Return by promise. |
 
 ## release
 
@@ -619,7 +619,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## release
 
@@ -649,7 +649,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## reset
 
@@ -679,7 +679,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## reset
 
@@ -709,7 +709,7 @@ reset(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## seek
 
@@ -747,7 +747,7 @@ seek(timeMs: int, mode?: SeekMode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为 [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#属性)]。&lt;br&gt;当模式为 [SEEK_CONTINUOUS](@ohos.multimedia.media:media.SeekMode)时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
-| mode | [SeekMode](../../apis-arkui/arkts-apis/arkts-arkui-video-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
+| mode | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
 
 ## seekToDefaultPosition
 
@@ -771,7 +771,7 @@ seekToDefaultPosition(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## selectTrack
 
@@ -803,7 +803,7 @@ selectTrack(index: int, mode?: SwitchMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 多音视频资源的轨道索引。该值必须为整数。&lt;br&gt;取值约束：可通过 [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)接口返回的音视频轨道信息 [MediaDescription](@ohos.multimedia.media:media.MediaDescription)中读取的key为MD_KEY_TRACK_INDEX所对应的值。&lt;br&gt;每个 key值的Object类型和范围，请参考[MediaDescriptionKey](@ohos.multimedia.media:media.MediaDescriptionKey)对应Key值的说明。 |
+| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 多音视频资源的轨道索引。该值必须为整数。&lt;br&gt;取值约束：可通过 [getTrackDescription](#getTrackDescription)接口返回的音视频轨道信息 [MediaDescription](@ohos.multimedia.media:media.MediaDescription)中读取的key为MD_KEY_TRACK_INDEX所对应的值。&lt;br&gt;每个 key值的Object类型和范围，请参考[MediaDescriptionKey](@ohos.multimedia.media:media.MediaDescriptionKey)对应Key值的说明。 |
 | mode | [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 否 | 切换轨道的模式。&lt;br&gt;取值约束：该模式仅适用于视频轨道的切换。&lt;br&gt;默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。 **仅在DASH/HLS协议网络流视频轨切换时生效。**&lt;br&gt;从API版本26.0.0开始支持HLS协议网络流视频。<br>**起始版本：** 26.0.0 |
 
 **返回值：**
@@ -816,8 +816,8 @@ selectTrack(index: int, mode?: SwitchMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setMediaMuted
 
@@ -856,8 +856,8 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. Return by promise. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setMediaSource
 
@@ -894,8 +894,8 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setPlaybackStrategy
 
@@ -931,8 +931,8 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setTrackSelectionFilter
 
@@ -968,7 +968,7 @@ setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## setVolume
 
@@ -1029,7 +1029,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 
 ## stop
 
@@ -1059,5 +1059,5 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 

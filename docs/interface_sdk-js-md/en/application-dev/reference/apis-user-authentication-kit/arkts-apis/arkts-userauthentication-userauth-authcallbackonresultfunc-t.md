@@ -18,5 +18,5 @@ Called to return the authentication result. If the authentication is successful,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | Authentication result information. |
+| result | UserAuthResult | Yes | Authentication result information. |
 

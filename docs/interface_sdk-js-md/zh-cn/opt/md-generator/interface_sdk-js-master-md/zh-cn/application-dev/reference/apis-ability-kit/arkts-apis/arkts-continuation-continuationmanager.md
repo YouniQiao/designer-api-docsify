@@ -6,7 +6,7 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 
 **废弃版本：** 22
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md/arkts-distributeddevicemanager.md)
+**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#distributedDeviceManager)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

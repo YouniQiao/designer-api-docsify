@@ -1,6 +1,6 @@
 # Session
 
-会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能（录像，拍照）。
+会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相机功能（录像，拍照）。
 
 **起始版本：** 11
 
@@ -14,7 +14,7 @@
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。
+把[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)加入到会话。
 
 **起始版本：** 11
 
@@ -34,10 +34,10 @@ addInput(cameraInput: CameraInput): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## addOutput
 
@@ -45,7 +45,7 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)加入到会话。
 
 **起始版本：** 11
 
@@ -65,10 +65,10 @@ addOutput(cameraOutput: CameraOutput): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## beginConfig
 
@@ -90,8 +90,8 @@ beginConfig(): void
 
 | 错误码ID |
 | --- |
-| [7400105](../errorcode-camera.md#7400105-会话配置被锁定) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400105-会话配置被锁定) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## canAddInput
 
@@ -99,8 +99,8 @@ beginConfig(): void
 canAddInput(cameraInput: CameraInput): boolean
 ```
 
-判断当前cameraInput是否可以添加到session中。当前函数需要在[beginConfig](arkts-camera-camera-session-i.md#beginconfig)和  
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之间生效。
+判断当前cameraInput是否可以添加到session中。当前函数需要在[beginConfig](#beginConfig)和  
+[commitConfig](#commitConfig)之间生效。
 
 **起始版本：** 11
 
@@ -128,8 +128,8 @@ canAddInput(cameraInput: CameraInput): boolean
 canAddOutput(cameraOutput: CameraOutput): boolean
 ```
 
-判断当前cameraOutput是否可以添加到session中。当前函数需要在[addInput](arkts-camera-camera-session-i.md#addinput)和  
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之间生效。
+判断当前cameraOutput是否可以添加到session中。当前函数需要在[addInput](#addInput)和  
+[commitConfig](#commitConfig)之间生效。
 
 **起始版本：** 11
 
@@ -177,8 +177,8 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## commitConfig
 
@@ -200,14 +200,14 @@ commitConfig(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## release
 
@@ -235,7 +235,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## release
 
@@ -257,13 +257,13 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## removeInput
 
@@ -271,8 +271,8 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput](arkts-camera-camera-camerainput-i.md)。当前函数需要在[beginConfig](arkts-camera-camera-session-i.md#beginconfig)和  
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig)之间生效。
+移除[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)。当前函数需要在[beginConfig](#beginConfig)和  
+[commitConfig](#commitConfig)之间生效。
 
 **起始版本：** 11
 
@@ -292,10 +292,10 @@ removeInput(cameraInput: CameraInput): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## removeOutput
 
@@ -303,7 +303,7 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
 **起始版本：** 11
 
@@ -323,10 +323,10 @@ removeOutput(cameraOutput: CameraOutput): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## start
 
@@ -354,9 +354,9 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## start
 
@@ -378,15 +378,15 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## stop
 
@@ -414,7 +414,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## stop
 
@@ -436,10 +436,10 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |

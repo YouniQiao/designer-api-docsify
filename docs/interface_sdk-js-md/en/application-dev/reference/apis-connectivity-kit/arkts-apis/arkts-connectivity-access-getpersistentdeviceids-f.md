@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
+import { access } from '@kit.ConnectivityKit';
 ```
 
 ## getPersistentDeviceIds
@@ -36,8 +36,8 @@ Obtains the persistent randomized device address of the application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Get persistent device address failed. |
 

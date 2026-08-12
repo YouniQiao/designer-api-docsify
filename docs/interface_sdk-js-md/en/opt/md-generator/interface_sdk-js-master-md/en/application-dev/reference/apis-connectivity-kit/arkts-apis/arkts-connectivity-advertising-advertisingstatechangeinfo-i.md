@@ -11,7 +11,7 @@ Advertising state change information.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## advertisingId
@@ -40,7 +40,7 @@ state: AdvertisingState
 
 Indicates the advertising state.
 
-**Type:** [AdvertisingState](arkts-connectivity-ble-advertisingstate-e.md)
+**Type:** AdvertisingState
 
 **Since:** 26.0.0
 

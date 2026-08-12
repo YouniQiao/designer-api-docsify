@@ -11,7 +11,7 @@ Defines the result of the request for the modal dialog box. It contains **Result
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## result
@@ -22,7 +22,7 @@ result: ResultCode
 
 Result code of the request.
 
-**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
+**Type:** ResultCode
 
 **Since:** 9
 

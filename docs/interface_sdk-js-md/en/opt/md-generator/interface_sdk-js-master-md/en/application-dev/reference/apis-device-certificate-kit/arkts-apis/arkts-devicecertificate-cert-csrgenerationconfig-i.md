@@ -23,7 +23,7 @@ Configuration parameters for generating a CSR, including the subject name, diges
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## attributes
@@ -34,7 +34,7 @@ attributes?: Array<CsrAttribute>
 
 A collection of attributes.
 
-**Type:** Array&lt;CsrAttribute&gt;
+**Type:** Array&lt;[CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md)&gt;
 
 **Since:** 18
 

@@ -13,7 +13,7 @@ Configuration parameters for simulating reverse geocoding.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## geoAddress
@@ -24,7 +24,7 @@ geoAddress: GeoAddress
 
 Actual address information corresponding to the location.
 
-**Type:** [GeoAddress](arkts-location-geolocationmanager-geoaddress-i-sys.md)
+**Type:** GeoAddress
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ location: ReverseGeoCodeRequest
 
 Location for which reverse geocoding query is required.
 
-**Type:** [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md)
+**Type:** ReverseGeoCodeRequest
 
 **Since:** 9
 

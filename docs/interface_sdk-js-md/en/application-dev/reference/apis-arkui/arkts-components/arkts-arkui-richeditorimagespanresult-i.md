@@ -84,7 +84,7 @@ valuePixelMap?: PixelMap
 
 Image content.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** PixelMap
 
 **Since:** 10
 
@@ -106,7 +106,7 @@ valueResourceStr?: ResourceStr
 
 Image resource ID.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 

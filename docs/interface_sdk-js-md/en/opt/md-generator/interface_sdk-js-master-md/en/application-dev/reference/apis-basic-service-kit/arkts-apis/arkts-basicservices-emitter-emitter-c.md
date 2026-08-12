@@ -12,7 +12,7 @@ This module provides the capabilities of sending and processing inter- or intra-
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## constructor
@@ -326,7 +326,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventId | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -353,7 +353,7 @@ Unsubscribes from an event of the Emitter instance. This API takes effect only w
 [once](emitter.Emitter#once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
 After this API is used to unsubscribe from an event, the event that has been published through the   
-[emit](arkts-basicservices-emitter-emitter-c.md#emit) API but has not been executed will be unsubscribed.
+[emit](emitter.Emitter#emit&lt;T&gt;(eventId: string, data?: GenericEventData&lt;T&gt;)) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
@@ -368,7 +368,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventId | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes |
 
 ## Examples
 
@@ -419,7 +419,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventId | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -456,7 +456,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventId | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes |
 
 ## Examples
 
@@ -507,7 +507,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventId | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -544,7 +544,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | eventId | string | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes |
 
 ## Examples
 

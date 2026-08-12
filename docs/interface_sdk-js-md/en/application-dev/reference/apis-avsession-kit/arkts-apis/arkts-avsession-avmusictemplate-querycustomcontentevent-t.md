@@ -26,5 +26,5 @@ The query custom content event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | (CustomElement) returned through promise |
+| Promise&lt;[CustomElement](arkts-avsession-avmusictemplate-customelement-i.md)&gt; | (CustomElement) returned through promise |
 

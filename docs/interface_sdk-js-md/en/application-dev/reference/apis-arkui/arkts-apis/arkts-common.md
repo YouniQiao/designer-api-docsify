@@ -18,7 +18,7 @@ Defines the namespace of focus controller.
 | [$$](arkts-arkui-common-$$-f.md#$$) | Convert to a bindable property. |
 | [$r](arkts-arkui-common-$r-f.md#$r) | global \\$r function |
 | [$rawfile](arkts-arkui-common-$rawfile-f.md#$rawfile) | global \\$rawfile function |
-| [animateToImmediately](arkts-arkui-common-animatetoimmediately-f.md#animatetoimmediately) | Define animation functions for immediate distribution.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use{@link ohos.arkui.UIContext.UIContext#animateToImmediately} to explicitly specify the UI context. |
+| [animateToImmediately](arkts-arkui-common-animatetoimmediately-f.md#animatetoimmediately) | Define animation functions for immediate distribution.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use[animateToImmediately](ohos.arkui.UIContext.UIContext#animateToImmediately) to explicitly specify the UI context. |
 | [applyStyles](arkts-arkui-common-applystyles-f.md#applystyles) | Apply style function on this CommonMethod. |
 | [makeBindable](arkts-arkui-common-makebindable-f.md#makebindable) | Create a bindable property instance. |
 

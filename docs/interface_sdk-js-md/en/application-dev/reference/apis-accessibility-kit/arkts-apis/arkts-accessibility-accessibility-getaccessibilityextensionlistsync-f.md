@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## getAccessibilityExtensionListSync
@@ -33,12 +33,12 @@ Query the list of accessibility applications in the current system, which can be
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes | Accessibility application type. |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes | Accessibility application status. |
+| abilityType | AbilityType | Yes | Accessibility application type. |
+| stateType | AbilityState | Yes | Accessibility application status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; | Promise used to return the accessibility application list. |
+| Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt; | Promise used to return the accessibility application list. |
 

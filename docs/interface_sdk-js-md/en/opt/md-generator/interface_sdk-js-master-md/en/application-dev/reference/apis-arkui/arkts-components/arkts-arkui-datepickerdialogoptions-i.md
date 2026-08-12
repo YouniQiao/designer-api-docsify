@@ -2,9 +2,9 @@
 
 Defines the configuration options of the date picker dialog box.
 
-Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
+Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions).
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)
 
 **Since:** 8
 
@@ -29,7 +29,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 **Deprecated since:** 10
 
-**Substitutes:** datePicker/DatePickerDialogOptions#onDateAccept
+**Substitutes:** [onDateAccept](#onDateAccept)
 
 <!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
@@ -74,7 +74,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 **Deprecated since:** 10
 
-**Substitutes:** datePicker/DatePickerDialogOptions#onDateChange
+**Substitutes:** [onDateChange](datePicker/DatePickerDialogOptions#onDateChange)
 
 <!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
@@ -184,7 +184,7 @@ Style of the accept button.
 
 **NOTE：**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -236,7 +236,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -359,7 +359,7 @@ Style of the cancel button.
 
 **NOTE：**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](arkts-arkui-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -388,7 +388,7 @@ Default value:
 
 **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
 
-**Type:** [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-intl-datetimeoptions-i.md)
+**Type:** DateTimeOptions
 
 **Default:** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
@@ -636,7 +636,7 @@ Offset of the dialog box based on the **alignment** settings.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
@@ -662,7 +662,7 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -686,7 +686,7 @@ Callback triggered when date selection changes through scrolling in the dialog b
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -733,7 +733,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
 **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

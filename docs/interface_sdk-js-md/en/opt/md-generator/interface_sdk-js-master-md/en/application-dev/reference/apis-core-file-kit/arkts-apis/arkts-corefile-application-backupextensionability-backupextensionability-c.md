@@ -11,7 +11,7 @@ Class to be override for backup extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { BundleVersion } from 'kits/@kit.CoreFileKit';
+import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## onBackup
@@ -255,7 +255,7 @@ Callback to be called before extension ability exits.Developer could override th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

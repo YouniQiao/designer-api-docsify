@@ -29,5 +29,5 @@ export function createWaterFlowNode(context: UIContext, options?: FrameNodeOptio
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | 返回 WaterFlow 类型的 FrameNode |
+| WaterFlow | 返回 WaterFlow 类型的 FrameNode |
 

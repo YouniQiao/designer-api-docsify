@@ -34,11 +34,11 @@ Initialize GridItem FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No | Grid item options. |
+| options | GridItemOptions | No | Grid item options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |  |
+| GridItemAttribute |  |
 

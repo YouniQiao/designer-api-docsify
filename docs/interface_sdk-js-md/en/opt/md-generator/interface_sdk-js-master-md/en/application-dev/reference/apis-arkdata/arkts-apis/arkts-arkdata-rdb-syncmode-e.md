@@ -6,7 +6,7 @@ Defines the database sync mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
+**Substitutes:** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md#SyncMode)
 
 <!--Device-rdb-enum SyncMode--><!--Device-rdb-enum SyncMode-End-->
 
@@ -24,7 +24,7 @@ Data is pushed from a local device to a remote device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.SyncMode.SYNC_MODE_PUSH](arkts-arkdata-relationalstore-syncmode-e.md#sync_mode_push)
+**Substitutes:** [SYNC_MODE_PUSH](arkts-arkdata-relationalstore-syncmode-e.md#SYNC_MODE_PUSH)
 
 <!--Device-SyncMode-SYNC_MODE_PUSH = 0--><!--Device-SyncMode-SYNC_MODE_PUSH = 0-End-->
 
@@ -42,7 +42,7 @@ Data is pulled from a remote device to a local device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.SyncMode.SYNC_MODE_PULL](arkts-arkdata-relationalstore-syncmode-e.md#sync_mode_pull)
+**Substitutes:** [SYNC_MODE_PULL](arkts-arkdata-relationalstore-syncmode-e.md#SYNC_MODE_PULL)
 
 <!--Device-SyncMode-SYNC_MODE_PULL = 1--><!--Device-SyncMode-SYNC_MODE_PULL = 1-End-->
 

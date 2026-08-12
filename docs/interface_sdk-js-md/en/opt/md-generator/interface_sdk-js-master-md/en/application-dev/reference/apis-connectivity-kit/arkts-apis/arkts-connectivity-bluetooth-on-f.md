@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## on('bluetoothDeviceFind')
@@ -18,7 +18,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:bluetoothDeviceFind
+**Substitutes:** [bluetoothDeviceFind](ohos.bluetoothManager/bluetoothManager.on#event:bluetoothDeviceFind)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -55,7 +55,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:bondStateChange
+**Substitutes:** [bondStateChange](ohos.bluetoothManager/bluetoothManager.on#event:bondStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -92,7 +92,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:pinRequired
+**Substitutes:** [pinRequired](ohos.bluetoothManager/bluetoothManager.on#event:pinRequired)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -129,7 +129,7 @@ Subscribe the event reported when the Bluetooth state changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:stateChange
+**Substitutes:** [stateChange](ohos.bluetoothManager/bluetoothManager.on#event:stateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -166,7 +166,7 @@ Subscribe the event reported when data is read from the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:sppRead
+**Substitutes:** [sppRead](ohos.bluetoothManager/bluetoothManager.on#event:sppRead)
 
 <!--Device-bluetooth-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void--><!--Device-bluetooth-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void-End-->
 

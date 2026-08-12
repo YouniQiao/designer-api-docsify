@@ -19,7 +19,7 @@ function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturer&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -80,7 +80,7 @@ function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCaptur
 
 | 类型 |
 | --- |
-| Promise&lt;AudioCapturer&gt; |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; |
 
 ## 示例
 

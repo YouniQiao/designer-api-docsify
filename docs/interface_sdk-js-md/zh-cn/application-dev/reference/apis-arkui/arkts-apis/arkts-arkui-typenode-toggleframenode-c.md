@@ -34,11 +34,11 @@ abstract initialize(value: ToggleOptions): ToggleAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | 是 |  |
+| value | ToggleOptions | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) |  |
+| ToggleAttribute |  |
 

@@ -33,7 +33,7 @@ Unsubscribes from the callback triggered for the asynchronous registration of th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No |
 
 ## off('syncReceiverRegister')
 
@@ -58,7 +58,7 @@ Unsubscribes from the callback triggered for the synchronous registration of the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | No |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No |
 
 ## on('asyncReceiverRegister')
 
@@ -83,7 +83,7 @@ Subscribes to the callback triggered for asynchronous registration of the starte
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes |
 
 ## on('syncReceiverRegister')
 
@@ -108,7 +108,7 @@ Subscribes to the callback triggered for synchronous registration of the started
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIExtensionProxy&gt; | Yes |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes |
 
 ## send
 
@@ -168,5 +168,5 @@ Synchronously sends data to the ability started by the component host through th
 
 | Error Code ID |
 | --- |
-| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) |
-| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) |
+| [100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100011-no-synchronous-callback-registered) |
+| [100012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100012-data-transfer-failure) |

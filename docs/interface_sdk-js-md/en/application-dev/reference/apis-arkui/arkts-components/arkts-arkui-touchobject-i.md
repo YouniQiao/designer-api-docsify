@@ -34,7 +34,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
+| Coordinate2D | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -146,7 +146,7 @@ hand?: InteractionHand
 
 Whether the event was triggered by a left-hand or right-hand tap.
 
-**Type:** [InteractionHand](../arkts-apis/arkts-arkui-interactionhand-e.md)
+**Type:** InteractionHand
 
 **Since:** 15
 
@@ -273,7 +273,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [TouchObject#windowX](arkts-arkui-touchobject-i.md#windowx)
+**Substitutes:** [windowX](#windowX)
 
 <!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
 
@@ -300,7 +300,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [TouchObject#windowY](arkts-arkui-touchobject-i.md#windowy)
+**Substitutes:** [windowY](#windowY)
 
 <!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
 
@@ -314,7 +314,7 @@ type: TouchType
 
 Type of the touch event.
 
-**Type:** [TouchType](../arkts-apis/arkts-arkui-touchtype-e.md)
+**Type:** TouchType
 
 **Since:** 7
 

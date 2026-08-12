@@ -2,13 +2,13 @@
 
 Worker线程自身的运行环境，与宿主线程环境隔离。
 
-**继承/实现关系：** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
+**继承/实现关系：** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md#WorkerGlobalScope)
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope
+**替代接口：** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#ThreadWorkerGlobalScope)
 
 <!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope-End-->
 
@@ -26,7 +26,7 @@ close(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope.close
+**替代接口：** [close](ohos.worker.ThreadWorkerGlobalScope.close)
 
 <!--Device-DedicatedWorkerGlobalScope-close(): void--><!--Device-DedicatedWorkerGlobalScope-close(): void-End-->
 
@@ -64,7 +64,7 @@ onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope.onmessage
+**替代接口：** [onmessage](ohos.worker.ThreadWorkerGlobalScope.onmessage)
 
 <!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
 
@@ -89,7 +89,7 @@ onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope.onmessageerror
+**替代接口：** [onmessageerror](ohos.worker.ThreadWorkerGlobalScope.onmessageerror)
 
 <!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
 
@@ -114,7 +114,7 @@ Worker线程向宿主线程发送消息。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope.postMessage
+**替代接口：** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void-End-->
 
@@ -139,7 +139,7 @@ Worker线程向宿主线程发送消息。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope.postMessage
+**替代接口：** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
 
@@ -187,7 +187,7 @@ Worker线程向宿主线程发送消息。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorkerGlobalScope.postMessage
+**替代接口：** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
 

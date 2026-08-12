@@ -98,7 +98,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 | 类型 | 说明 |
 | --- | --- |
-| Required&lt;SurfaceRotationOptions&gt; | 获取XComponent持有Surface在屏幕旋转时是否锁定方向的设置。 |
+| Required&lt;[SurfaceRotationOptions](arkts-arkui-xcomponent-surfacerotationoptions-i.md)&gt; | 获取XComponent持有Surface在屏幕旋转时是否锁定方向的设置。 |
 
 ## lockCanvas
 
@@ -122,7 +122,7 @@ lockCanvas(): DrawingCanvas | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | 可用于向XComponent区域绘制的画布对象或者空对象null。 如果surface不可用，则返回null。 |
+| DrawingCanvas | 可用于向XComponent区域绘制的画布对象或者空对象null。 如果surface不可用，则返回null。 |
 
 ## onSurfaceChanged
 
@@ -219,7 +219,7 @@ setXComponentSurfaceConfig(config: SurfaceConfig):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [SurfaceConfig](../arkts-components/arkts-arkui-surfaceconfig-i.md) | 是 | Surface配置选项，用于设置XComponent持有的Surface在渲染时是否需要被视为不透明。 |
+| config | [SurfaceConfig](arkts-arkui-xcomponent-surfaceconfig-i.md) | 是 | Surface配置选项，用于设置XComponent持有的Surface在渲染时是否需要被视为不透明。 |
 
 ## setXComponentSurfaceRect
 
@@ -293,7 +293,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | 是 | 执行AI分析所需要的入参，用于配置AI分析功能。 |
+| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | 是 | 执行AI分析所需要的入参，用于配置AI分析功能。 |
 
 **返回值：**
 
@@ -305,9 +305,9 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | 不支持图像分析特性。 |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | 图像分析正在执行中。 |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | 不支持图像分析特性。 |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | 图像分析已停止。 |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | 图像分析正在执行中。 |
 
 ## stopImageAnalyzer
 
@@ -349,5 +349,5 @@ unlockCanvasAndPost(canvas: DrawingCanvas): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | 是 | 之前调用lockCanvas方法返回的画布对象。 |
+| canvas | DrawingCanvas | 是 | 之前调用lockCanvas方法返回的画布对象。 |
 

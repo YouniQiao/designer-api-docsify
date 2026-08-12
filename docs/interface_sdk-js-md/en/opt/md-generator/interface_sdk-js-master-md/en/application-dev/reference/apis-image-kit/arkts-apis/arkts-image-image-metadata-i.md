@@ -1,6 +1,6 @@
 # Metadata
 
-The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md).
+The **Metadata** class provides APIs for storing image metadata. For details about the supported metadata types, see [MetadataType](arkts-image-image-metadatatype-e.md#MetadataType).
 
 **Since:** 13
 
@@ -11,7 +11,7 @@ The **Metadata** class provides APIs for storing image metadata. For details abo
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -32,7 +32,7 @@ Clones the metadata. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Metadata&gt; |
+| Promise & lt;Metadata & gt; |
 
 ## getAllProperties
 
@@ -43,10 +43,10 @@ getAllProperties(): Promise<Record<string, string | null>>
 Obtains all properties and values from the image's metadata. This API uses a promise to return the result.
 
 For details about how to query the property values, see   
-[PropertyKey](arkts-image-image-propertykey-e.md),   
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md),   
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey),   
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey),   
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and   
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 13
 
@@ -58,7 +58,7 @@ For details about how to query the property values, see
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 ## getBlob
 
@@ -80,7 +80,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## getProperties
 
@@ -89,10 +89,10 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
 Obtains the values of properties from the image's metadata. This API uses a promise to return the result.For details about how to query the property values, see   
-[PropertyKey](arkts-image-image-propertykey-e.md),   
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md),   
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey),   
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey),   
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and   
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 13
 
@@ -104,20 +104,20 @@ Obtains the values of properties from the image's metadata. This API uses a prom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes |
+| key | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## setBlob
 
@@ -145,13 +145,13 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## setProperties
 
@@ -162,10 +162,10 @@ setProperties(records: Record<string, string | null>): Promise<void>
 Sets the values of properties for the image's metadata. This API uses a promise to return the result.
 
 For details about how to query the property values, see   
-[PropertyKey](arkts-image-image-propertykey-e.md),   
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md),   
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md), and   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey),   
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey),   
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey), and   
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 13
 
@@ -177,17 +177,17 @@ For details about how to query the property values, see
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |

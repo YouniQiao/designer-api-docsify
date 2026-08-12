@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## enableLeakWatcher
@@ -30,16 +30,16 @@ If a memory leak occurs, the leaked file is returned through the callback.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | isEnabled | boolean | Yes |
-| configs | Array&lt;string&gt; | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
+| configs | Array & lt;string & gt; | Yes |
+| callback | Callback & lt;Array & lt;string & gt; & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) |
+| [10801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801001-invalid-isenabled) |
+| [10801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801002-invalid-config) |
+| [10801003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801003-invalid-callback) |
 
 ## Examples
 
@@ -76,15 +76,15 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 | --- | --- | --- |
 | isEnabled | boolean | Yes |
 | configs | [LeakWatcherConfig](arkts-performanceanalysis-jsleakwatcher-leakwatcherconfig-i.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
+| callback | Callback & lt;Array & lt;string & gt; & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10801001](../errorcode-jsleakwatcher.md#10801001-invalid-isenabled) |
-| [10801002](../errorcode-jsleakwatcher.md#10801002-invalid-config) |
-| [10801003](../errorcode-jsleakwatcher.md#10801003-invalid-callback) |
+| [10801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801001-invalid-isenabled) |
+| [10801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801002-invalid-config) |
+| [10801003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-jsleakwatcher.md#10801003-invalid-callback) |
 
 ## Examples
 

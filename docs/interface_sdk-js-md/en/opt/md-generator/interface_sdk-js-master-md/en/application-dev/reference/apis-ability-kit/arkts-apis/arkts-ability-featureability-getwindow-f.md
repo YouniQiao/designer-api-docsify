@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -65,7 +65,7 @@ Obtains the window corresponding to this ability. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;window.Window&gt; |
+| Promise & lt;window.Window & gt; |
 
 ## Examples
 

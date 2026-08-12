@@ -78,7 +78,7 @@ type: DataOperationType.ADD
 
 数据添加类型。
 
-**类型：** DataOperationType.ADD
+**类型：** [DataOperationType.ADD](arkts-arkui-dataoperationtype-e.md)
 
 **起始版本：** 12
 

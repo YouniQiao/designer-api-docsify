@@ -12,7 +12,7 @@ function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getSlotNumByBundle
+**替代接口：** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function getSlotNumByBundle(bundle: BundleOption): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getSlotNumByBundle
+**替代接口：** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -62,4 +62,4 @@ function getSlotNumByBundle(bundle: BundleOption): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |

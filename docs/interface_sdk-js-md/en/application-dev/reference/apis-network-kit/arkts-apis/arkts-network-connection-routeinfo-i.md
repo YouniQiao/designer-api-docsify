@@ -13,7 +13,7 @@ Defines network route information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## destination
@@ -24,7 +24,7 @@ destination: LinkAddress
 
 Destination Address
 
-**Type:** [LinkAddress](arkts-network-vpn-linkaddress-t.md)
+**Type:** LinkAddress
 
 **Since:** 8
 
@@ -42,7 +42,7 @@ gateway: NetAddress
 
 Gateway address.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 8
 

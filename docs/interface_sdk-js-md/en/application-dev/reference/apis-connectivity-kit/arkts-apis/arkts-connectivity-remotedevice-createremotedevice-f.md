@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## createRemoteDevice
@@ -40,6 +40,6 @@ Creates a remote device instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100041 | Invalid address. |
 

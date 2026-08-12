@@ -19,7 +19,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from '@kit.ArkUI';
 ```
 
 ## onLoadIntercept
@@ -70,7 +70,7 @@ darkMode?: WebDarkMode
 
 Sets the dark mode of Web.
 
-**Type:** [WebDarkMode](../../apis-arkweb/arkts-components/arkts-arkweb-webdarkmode-e.md)
+**Type:** WebDarkMode
 
 **Since:** 12
 
@@ -114,7 +114,7 @@ mixedMode?: MixedMode
 
 Sets how to load HTTP and HTTPS content.
 
-**Type:** [MixedMode](../../apis-arkweb/arkts-apis/arkts-arkweb-web-mixedmode-e.md)
+**Type:** MixedMode
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ navPathStack?: NavPathStack
 
 The navPathStack to control page route in Navigation and NavDestination.
 
-**Type:** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
+**Type:** NavPathStack
 
 **Since:** 12
 
@@ -156,7 +156,7 @@ nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 
 Sets the nested scroll options.
 
-**Type:** [NestedScrollOptions](arkts-arkui-common-nestedscrolloptions-i.md) \| NestedScrollOptionsExt
+**Type:** NestedScrollOptions \| NestedScrollOptionsExt
 
 **Since:** 15
 
@@ -178,7 +178,7 @@ onControllerAttached?: Callback<void>
 
 Triggered when The controller is bound to the web component, this controller must be a WebviewController.This callback can not use the interface about manipulating web pages.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ onErrorReceive?: Callback<OnErrorReceiveEvent>
 
 Triggered when the web page receives a web resource loading error.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnErrorReceiveEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md)&gt;
 
 **Since:** 12
 
@@ -218,7 +218,7 @@ onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>
 
 Triggered when the web page receives a web resource loading HTTP error.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnHttpErrorReceiveEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnHttpErrorReceiveEvent](arkts-arkui-atomicservice-atomicserviceweb-onhttperrorreceiveevent-i.md)&gt;
 
 **Since:** 12
 
@@ -238,7 +238,7 @@ onMessage?: Callback<OnMessageEvent>
 
 The callback method to invoke after page is back or destroyed if postMessage() is called in H5 page.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnMessageEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md)&gt;
 
 **Since:** 12
 
@@ -258,7 +258,7 @@ onPageBegin?: Callback<OnPageBeginEvent>
 
 Triggered at the begin of web page loading.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnPageBeginEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnPageBeginEvent](arkts-arkui-atomicservice-atomicserviceweb-onpagebeginevent-i.md)&gt;
 
 **Since:** 12
 
@@ -278,7 +278,7 @@ onPageEnd?: Callback<OnPageEndEvent>
 
 Triggered at the end of web page loading.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnPageEndEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md)&gt;
 
 **Since:** 12
 
@@ -298,7 +298,7 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 
 Triggered when the page loading progress changes.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OnProgressChangeEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[OnProgressChangeEvent](arkts-arkui-atomicservice-atomicserviceweb-onprogresschangeevent-i.md)&gt;
 
 **Since:** 12
 
@@ -318,7 +318,7 @@ src: ResourceStr
 
 The address of the web page to be displayed.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 

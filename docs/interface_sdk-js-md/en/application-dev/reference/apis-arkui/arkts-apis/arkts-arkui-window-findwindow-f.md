@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## findWindow
@@ -28,7 +28,7 @@ Finds a window based on the name.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-window-configuration-i.md). When searching for the main window, use [getWindowName](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12) to obtain the window name of the current instance. |
+| name | string | Yes | Window name. When searching for a child window or system window, use the window name in [Configuration](arkts-arkui-window-configuration-i.md#Configuration). When searching for the main window, use [getWindowName](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12) to obtain the window name of the current instance. |
 
 **Return value:**
 
@@ -40,8 +40,8 @@ Finds a window based on the name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
 
 ## Examples
 

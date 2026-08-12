@@ -101,7 +101,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -329,9 +329,9 @@ You can set separate radii for the four corners.
 Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }**
 
 Note: The default corner radius of the background is 32 vp. This attribute must be used together with the   
-[borderRadius](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderradius) attribute.
+[borderRadius](CommonMethod#borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses)) attribute.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 10
 
@@ -536,7 +536,7 @@ Overlay effect for the page-level dialog box.
 - Default value: **ImmersiveMode.DEFAULT**  
 - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**Type:** ImmersiveMode
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -592,7 +592,7 @@ Distance between the dialog box and the keyboard after keyboard avoidance is app
 - Default unit: vp  
 - This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 15
 
@@ -614,7 +614,7 @@ How the dialog box avoids the soft keyboard when it is brought up.
 
 Default value: **KeyboardAvoidMode.DEFAULT**
 
-**Type:** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**Type:** KeyboardAvoidMode
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
@@ -641,7 +641,7 @@ Display level of the dialog box.
 - Default value: **LevelMode.OVERLAY.**  
 - This parameter takes effect only when **showInSubWindow** is set to **false**.
 
-**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**Type:** LevelMode
 
 **Default:** LevelMode.OVERLAY
 
@@ -668,7 +668,7 @@ Display order of the dialog box.
 - Default value: **LevelOrder.clamp(0)**  
 - Dynamic updating is not supported.
 
-**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**Type:** LevelOrder
 
 **Default:** The value returns by LevelOrder.clamp(0)
 
@@ -688,7 +688,7 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box.
+[Unique ID](arkts-arkui-framenode-c.md#getUniqueId) of the node under the display level for the page-level dialog box.
 
 Value range: a number no less than 0
 
@@ -766,7 +766,7 @@ Offset of the dialog box relative to the alignment position.
 
 Default value: **{dx: 0, dy: 0}**
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 7
 
@@ -788,7 +788,7 @@ Event callback after the dialog box appears.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -812,7 +812,7 @@ Event callback after the dialog box disappears.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -836,7 +836,7 @@ Event callback when the dialog box is about to appear.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -860,7 +860,7 @@ Event callback when the dialog box is about to disappear.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -884,7 +884,7 @@ Callback for interactive closure of the dialog box.
 
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissDialogAction&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 
@@ -935,7 +935,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and   
 **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

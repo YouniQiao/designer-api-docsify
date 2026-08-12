@@ -1,6 +1,6 @@
 # AccessibilityGrid（系统接口）
 
-辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性currentItem。
+辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)中的属性currentItem。
 
 **起始版本：** 20
 

@@ -13,7 +13,7 @@ Provides APIs for interacting with the cloud sync service.You need to inherit th
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## connectAssetLoader
@@ -43,7 +43,7 @@ Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## Examples
 
@@ -91,7 +91,7 @@ Connects to a cloud database by obtaining a RemoteObject instance of CloudDB,whi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## Examples
 
@@ -139,7 +139,7 @@ Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter,whic
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## Examples
 
@@ -180,7 +180,7 @@ Obtains brief application information. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
 
 ## Examples
 
@@ -230,7 +230,7 @@ Obtains the application database schema information. This API uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;AppSchema&gt;&gt; |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; |
 
 ## Examples
 
@@ -275,7 +275,7 @@ Obtains the server information. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ServiceInfo&gt; |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; |
 
 ## Examples
 
@@ -325,14 +325,14 @@ Subscribes to data. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| subInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;Database&gt;&gt; | Yes |
+| subInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes |
 | expirationTime | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; |
+| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; |
 
 ## Examples
 
@@ -383,7 +383,7 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

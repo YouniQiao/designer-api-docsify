@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## removeCheckRule
@@ -30,7 +30,7 @@ Removes one or more rules. The removed rules will become ineffective.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

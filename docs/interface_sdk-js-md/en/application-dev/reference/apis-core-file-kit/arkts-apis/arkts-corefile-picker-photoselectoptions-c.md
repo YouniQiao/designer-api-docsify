@@ -8,7 +8,7 @@ Defines the options for selecting images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md)
+**Substitutes:** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md#PhotoSelectOptions)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the options for selecting images or videos.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## MIMEType
@@ -30,7 +30,7 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 
 **Note：**: This API is supported since API version 9 and deprecated since API version 18.
 
-**Type:** [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
+**Type:** PhotoViewMIMETypes
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ Media file types to select. If this parameter is not specified, **IMAGE_VIDEO_TY
 
 **Deprecated since:** 18
 
-**Substitutes:** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions#MIMEType
+**Substitutes:** [MIMEType](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions#MIMEType)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,7 +62,7 @@ Maximum number of media files that can be selected. The default value is **50**,
 
 **Deprecated since:** 18
 
-**Substitutes:** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions#maxSelectNumber
+**Substitutes:** [maxSelectNumber](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectOptions#maxSelectNumber)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

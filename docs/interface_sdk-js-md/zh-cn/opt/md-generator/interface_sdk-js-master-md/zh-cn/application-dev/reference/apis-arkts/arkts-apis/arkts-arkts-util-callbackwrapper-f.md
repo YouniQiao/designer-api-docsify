@@ -39,7 +39,7 @@ function callbackWrapper(original: Function): (err: Object, value: Object) => vo
 
 | 类型 |
 | --- |
-| (err: Object, value: Object) =&gt; void |
+| (err: Object, value: Object) = & gt; void |
 
 ## 示例
 

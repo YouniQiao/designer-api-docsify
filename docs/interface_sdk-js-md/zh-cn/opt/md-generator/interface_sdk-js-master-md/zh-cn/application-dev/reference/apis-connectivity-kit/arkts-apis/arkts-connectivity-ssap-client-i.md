@@ -1,6 +1,6 @@
 # Client
 
-管理SSAP客户端。在调用ssap客户端方法之前，必须使用{@link createClient}创建ssap客户端实例。
+管理SSAP客户端。在调用ssap客户端方法之前，必须使用[createClient](arkts-connectivity-ssap-createclient-f.md#createClient)创建ssap客户端实例。
 
 **起始版本：** 26.0.0
 
@@ -30,9 +30,9 @@ close(): void
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## connect
 
@@ -56,15 +56,15 @@ connect(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## disconnect
 
@@ -88,15 +88,15 @@ disconnect(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getServices
 
@@ -120,15 +120,15 @@ getServices(): Promise<Service[]>
 
 | 类型 |
 | --- |
-| Promise&lt;Service[]&gt; |
+| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## offConnectionStateChange
 
@@ -150,7 +150,7 @@ offConnectionStateChange(callback?: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 否 |
 
 ## offMtuChange
 
@@ -194,7 +194,7 @@ offPropertyChange(callback?: Callback<Property>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 否 |
 
 ## onConnectionStateChange
 
@@ -218,7 +218,7 @@ onConnectionStateChange(callback: Callback<ConnectionChangeState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | 是 |
 
 ## onMtuChange
 
@@ -266,7 +266,7 @@ onPropertyChange(callback: Callback<Property>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | 是 |
 
 ## readProperty
 
@@ -296,17 +296,17 @@ readProperty(property: Property): Promise<Property>
 
 | 类型 |
 | --- |
-| Promise&lt;Property&gt; |
+| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
+| [36100043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) |
 
 ## requestMtuSize
 
@@ -330,21 +330,21 @@ requestMtuSize(mtu: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mtu | number | 是 |
+| [mtu](arkts-connectivity-datatransfer-connectionresult-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## setPropertyNotification
 
@@ -375,17 +375,17 @@ setPropertyNotification(property: Property, enable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
+| [36100043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) |
 
 ## writeProperty
 
@@ -410,20 +410,20 @@ writeProperty(property: Property, writeType: PropertyWriteType): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | property | [Property](arkts-connectivity-ssap-property-i.md) | 是 |
-| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 是 |
+| [writeType](arkts-connectivity-ssap-propertywriterequest-i.md) | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100044](../errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
-| [36100043](../errorcode-nearlink-service.md#36100043-无效uuid) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100044-禁止使用星闪标准服务uuid) |
+| [36100043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100043-无效uuid) |

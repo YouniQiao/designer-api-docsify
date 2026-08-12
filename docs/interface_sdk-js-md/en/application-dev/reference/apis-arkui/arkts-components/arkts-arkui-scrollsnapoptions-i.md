@@ -70,7 +70,7 @@ snapAlign: ScrollSnapAlign
 
 Alignment mode for the scroll snap position.
 
-**Type:** [ScrollSnapAlign](arkts-arkui-scrollsnapalign-e.md)
+**Type:** ScrollSnapAlign
 
 **Default:** ScrollSnapAlign.NONE [since 11]
 
@@ -96,7 +96,7 @@ Pagination points for scroll snapping.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;1. If the value is of the Dimension type, it indicates the size of each page,and the system will paginate based on this size.&lt;br&gt;2. If the value is of the Array\&lt;Dimension\&gt; type, each &lt;em&gt;Dimension&lt;/em&gt; represents a pagination point,and the system will paginate accordingly.Each &lt;em&gt;Dimension&lt;/em&gt; value must be within the [0, scrollable distance] range.&lt;br&gt;3. If this parameter is not set or &lt;em&gt;Dimension&lt;/em&gt; is set to a value less than or equal to 0,the value is regarded as an invalid value.In this case, there is no scroll snapping. When the value is of the Array\&lt;Dimension\&gt; type,the items in the array must be monotonically increasing.&lt;br&gt;4. When the value is a percentage,the actual size is the product of the viewport of the &lt;em&gt;Scroll&lt;/em&gt; component and the percentage value.&lt;/p&gt;
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Array&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**Type:** Dimension \| Array&lt;Dimension&gt;
 
 **Default:** 100%
 

@@ -6,7 +6,7 @@ Describes input parameters of audio interruption events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.AudioRendererOptions
+**Substitutes:** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md#AudioRendererOptions)
 
 <!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
 
@@ -15,7 +15,7 @@ Describes input parameters of audio interruption events.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## contentType
@@ -26,13 +26,13 @@ contentType: ContentType
 
 Audio content type.
 
-**Type:** [ContentType](arkts-audio-audio-contenttype-e.md)
+**Type:** ContentType
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.AudioRendererOptions#rendererInfo
+**Substitutes:** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
 
 <!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
 
@@ -53,7 +53,7 @@ Whether audio playback can be paused during an audio interruption. **true** if a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.InterruptEvent#hintType
+**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
 
 <!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
 
@@ -73,7 +73,7 @@ Audio stream usage.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.AudioRendererOptions#rendererInfo
+**Substitutes:** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
 
 <!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
 

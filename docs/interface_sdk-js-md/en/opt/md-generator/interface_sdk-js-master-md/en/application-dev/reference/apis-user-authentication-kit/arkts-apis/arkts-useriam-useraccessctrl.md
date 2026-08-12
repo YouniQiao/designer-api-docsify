@@ -19,7 +19,7 @@ management.
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

@@ -92,7 +92,7 @@ cancelIcon?: IconOptions
 
 当style为CancelButtonStyle.CONSTANT时，默认显示清除样式。
 
-**类型：** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
+**类型：** IconOptions
 
 **起始版本：** 18
 
@@ -112,7 +112,7 @@ caretStyle?: CaretStyle
 
 光标样式。默认值：`{width: '1.5vp', color: '#007DFF'}`。
 
-**类型：** [CaretStyle](arkts-arkui-textcommon-caretstyle-i.md)
+**类型：** CaretStyle
 
 **起始版本：** 18
 
@@ -132,7 +132,7 @@ componentBackgroundColor?: ResourceColor
 
 设置组件的背景色。默认值：`\$r('sys.color.ohos_id_color_text_field_sub_bg')`。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -152,7 +152,7 @@ copyOptions?: CopyOptions
 
 输入的文本是否可复制。默认值：`CopyOptions.LocalDevice`，支持设备内复制。
 
-**类型：** [CopyOptions](arkts-arkui-enums-copyoptions-e.md)
+**类型：** CopyOptions
 
 **起始版本：** 18
 
@@ -172,7 +172,7 @@ decoration?: TextDecorationOptions
 
 文本装饰线对象。默认值：`{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}`。
 
-**类型：** [TextDecorationOptions](../arkts-components/arkts-arkui-textdecorationoptions-i.md)
+**类型：** TextDecorationOptions
 
 **起始版本：** 18
 
@@ -192,7 +192,7 @@ editMenuOptions?: EditMenuOptions
 
 设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。默认值为`undefined`。
 
-**类型：** [EditMenuOptions](arkts-arkui-textcommon-editmenuoptions-i.md)
+**类型：** EditMenuOptions
 
 **起始版本：** 18
 
@@ -274,7 +274,7 @@ enterKeyType?: EnterKeyType
 
 输入法回车键类型。默认值：`EnterKeyType.Search`。
 
-**类型：** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
+**类型：** EnterKeyType
 
 **起始版本：** 18
 
@@ -294,7 +294,7 @@ fontColor?: ResourceColor
 
 输入文本的字体颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -322,7 +322,7 @@ fontFeature?: ResourceStr
 
 例如，使用等宽数字的输入格式为："ss01" on。默认值为`undefined`。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 18
 
@@ -468,7 +468,7 @@ onCopy?: Callback<string>
 
 进行复制操作时，触发该回调，string为被复制的文本内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
 
@@ -488,7 +488,7 @@ onCut?: Callback<string>
 
 进行剪切操作时，触发该回调，string为被剪切的文本内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
 
@@ -508,7 +508,7 @@ onDidDelete?: Callback<DeleteValue>
 
 在删除完成时触发该回调，在onWillDelete之后触发。当onWillDelete返回false拦截删除操作时，该回调不触发。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DeleteValue&gt;
+**类型：** Callback&lt;DeleteValue&gt;
 
 **起始版本：** 18
 
@@ -528,7 +528,7 @@ onDidInsert?: Callback<InsertValue>
 
 在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;InsertValue&gt;
+**类型：** Callback&lt;InsertValue&gt;
 
 **起始版本：** 18
 
@@ -548,7 +548,7 @@ onEditChange?: Callback<boolean>
 
 输入状态变化时，触发该回调。有光标时为编辑态，无光标时为非编辑态。isEditing为true表示正在输入。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
+**类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 18
 
@@ -568,7 +568,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; \| SearchSubmitCallback
+**类型：** Callback&lt;string&gt; \| SearchSubmitCallback
 
 **起始版本：** 18
 
@@ -588,7 +588,7 @@ onWillDelete?: Callback<DeleteValue, boolean>
 
 在将要删除时，触发该回调。true表示正常删除，false表示不删除。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DeleteValue, boolean&gt;
+**类型：** Callback&lt;DeleteValue, boolean&gt;
 
 **起始版本：** 18
 
@@ -608,7 +608,7 @@ onWillInsert?: Callback<InsertValue, boolean>
 
 在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;InsertValue, boolean&gt;
+**类型：** Callback&lt;InsertValue, boolean&gt;
 
 **起始版本：** 18
 
@@ -628,7 +628,7 @@ placeholderColor?: ResourceColor
 
 placeholder文本颜色。默认值：`\$r('sys.color.ohos_id_color_text_secondary')`。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -648,7 +648,7 @@ placeholderFont?: Font
 
 设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
-**类型：** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 18
 
@@ -668,7 +668,7 @@ pressedBackgroundColor?: ResourceColor
 
 设置组件按压态的背景色。默认值：`\$r('sys.color.ohos_id_color_click_effect')`。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -716,7 +716,7 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 
 深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
 
-**类型：** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier
+**类型：** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 18
 
@@ -736,7 +736,7 @@ searchKey?: ResourceStr
 
 用作标识内部search组件的唯一键值，便于外部通过该键值引用或查找对应的Search组件。默认值：`undefined`。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 18
 
@@ -756,7 +756,7 @@ selectedBackgroundColor?: ResourceColor
 
 文本选中底板颜色。默认值：系统默认底板颜色，20%不透明度。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -776,7 +776,7 @@ textAlign?: TextAlign
 
 文本在搜索框中的对齐方式。默认值：`TextAlign.Start`。
 
-**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **起始版本：** 18
 
@@ -796,7 +796,7 @@ textFont?: Font
 
 设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
-**类型：** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 18
 
@@ -816,7 +816,7 @@ textIndent?: Dimension
 
 首行文本缩进。默认值：`0`。单位：vp。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 18
 
@@ -836,7 +836,7 @@ type?: SearchType
 
 输入框类型。默认值：`SearchType.Normal`。
 
-**类型：** [SearchType](arkts-arkui-search-searchtype-e.md)
+**类型：** SearchType
 
 **起始版本：** 18
 

@@ -70,7 +70,7 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 
 开发者通过设置有效的期望帧率后，系统会收集设置的请求帧率，进行决策和分发，在渲染管线上进行分频，尽量能够满足开发者的期望帧率。开发者设置的期望帧率值不能代表最终实际效果，会受限于系统能力和屏幕刷新率。
 
-**类型：** [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md)
+**类型：** [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md)
 
 **起始版本：** 23
 

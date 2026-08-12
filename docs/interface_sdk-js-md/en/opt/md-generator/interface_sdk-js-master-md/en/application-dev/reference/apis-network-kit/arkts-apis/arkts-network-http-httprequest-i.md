@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## destroy
@@ -130,7 +130,7 @@ Unregisters the observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [off_headersReceive](arkts-network-http-httprequest-i.md#off)
+**Substitutes:** [off_headersReceive](#off-1)
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -315,7 +315,7 @@ Unregisters an observer for progress of receiving HTTP Response data events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataReceiveProgressInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | No |
 
 ## Examples
 
@@ -360,7 +360,7 @@ Unregisters an observer for progress of sendSize HTTP Response data events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dataSendProgress' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataSendProgressInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | No |
 
 ## Examples
 
@@ -396,7 +396,7 @@ Registers an observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](arkts-network-http-httprequest-i.md#on)
+**Substitutes:** [on_headersReceive](#on-1)
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -587,7 +587,7 @@ Registers an observer for progress of receiving HTTP Response data events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dataReceiveProgress' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataReceiveProgressInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -632,7 +632,7 @@ Registers an observer for progress of sendSize HTTP Response data events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dataSendProgress' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataSendProgressInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -710,8 +710,8 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 > **NOTE：**
 > 
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
-> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream) to
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call
+> [requestInStream](#requestInStream) to
 > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
 > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
 > will fail to be received.
@@ -742,40 +742,40 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 
@@ -824,8 +824,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 > **NOTE：**
 > 
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
-> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream) to
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call
+> [requestInStream](#requestInStream) to
 > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
 > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
 > will fail to be received.
@@ -857,40 +857,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 
@@ -989,8 +989,8 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 > **NOTE：**
 > 
 > (1) This API can receive only data whose size is less than 5 MB. If the data size exceeds 5 MB, you need to set
-> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) or call
-> [requestInStream](arkts-network-http-httprequest-i.md#requestinstream) to
+> **maxLimit** to a larger value in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions) or call
+> [requestInStream](#requestInStream) to
 > initiate a streaming request. Since API version 23, this API can receive a maximum of 50 MB data. In versions
 > earlier than API version 23, this API can receive a maximum of 5 MB data, and any data exceeding this threshold
 > will fail to be received.
@@ -1021,46 +1021,46 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HttpResponse&gt; |
+| Promise & lt;HttpResponse & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 
@@ -1155,40 +1155,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 
@@ -1250,40 +1250,40 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 
@@ -1388,46 +1388,46 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 
@@ -1492,7 +1492,7 @@ Initiates an HTTP network request based on the URL and related configuration opt
 > **NOTE：**
 > 
 > (1) This API can receive data of up to 50 MB. To receive more than 50 MB of data, set the **maxLimit**
-> parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md).
+> parameter in [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md#HttpRequestOptions).
 
 > (2) If you need to pass in cookies, add them to the **options** parameter.
 
@@ -1530,39 +1530,39 @@ Initiates an HTTP network request based on the URL and related configuration opt
 
 | Error Code ID |
 | --- |
-| [2300003](../errorcode-net-http.md#2300003-incorrect-url-format) |
-| [2300001](../errorcode-net-http.md#2300001-protocol-not-supported) |
-| [2300007](../errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [2300006](../errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
-| [2300070](../errorcode-net-http.md#2300070-insufficient-server-disk-space) |
-| [2300005](../errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2300009](../errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
-| [2300073](../errorcode-net-http.md#2300073-uploaded-file-already-exists) |
-| [2300008](../errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
-| [2300078](../errorcode-net-http.md#2300078-url-requested-file-not-found) |
-| [2300077](../errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
-| [2300018](../errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
-| [2300016](../errorcode-net-http.md#2300016-http2-framing-layer-error) |
-| [2300023](../errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
-| [2300027](../errorcode-net-http.md#2300027-insufficient-memory) |
-| [2300026](../errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
-| [2300025](../errorcode-net-http.md#2300025-failed-to-upload-data) |
-| [2300094](../errorcode-net-http.md#2300094-identity-verification-failed) |
-| [2300028](../errorcode-net-http.md#2300028-operation-timeout) |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
-| [2300998](../errorcode-net-http.md#2300998-domain-access-denied) |
-| [2300997](../errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
+| [2300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300003-incorrect-url-format) |
+| [2300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300001-protocol-not-supported) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [2300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300006-failed-to-resolve-the-domain-name-of-the-host) |
+| [2300070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300070-insufficient-server-disk-space) |
+| [2300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300005-failed-to-resolve-the-domain-name-of-the-proxy-server) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300009-access-to-remote-resources-denied) |
+| [2300073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300073-uploaded-file-already-exists) |
+| [2300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300008-invalid-data-returned-by-the-server) |
+| [2300078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300078-url-requested-file-not-found) |
+| [2300077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300077-no-ssl-ca-certificate-or-access-permission) |
+| [2300018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300018-incomplete-data-returned-by-the-server) |
+| [2300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300016-http2-framing-layer-error) |
+| [2300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300023-failed-to-write-received-data-to-a-disk-or-application) |
+| [2300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300027-insufficient-memory) |
+| [2300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300026-failed-to-open-or-read-local-data-from-a-file-or-application) |
+| [2300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300025-failed-to-upload-data) |
+| [2300094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300094-identity-verification-failed) |
+| [2300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300028-operation-timeout) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
+| [2300998](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300998-domain-access-denied) |
+| [2300997](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300997-plaintext-http-access-intercepted) |
 | 2300996 |
-| [2300047](../errorcode-net-http.md#2300047-maximum-redirections-reached) |
-| [2300055](../errorcode-net-http.md#2300055-failed-to-send-network-data) |
-| [2300052](../errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
-| [2300059](../errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
-| [2300058](../errorcode-net-http.md#2300058-local-ssl-certificate-error) |
-| [2300056](../errorcode-net-http.md#2300056-failed-to-receive-network-data) |
-| [2300063](../errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
-| [2300061](../errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
-| [2300060](../errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
+| [2300047](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300047-maximum-redirections-reached) |
+| [2300055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300055-failed-to-send-network-data) |
+| [2300052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300052-no-content-returned-by-the-server) |
+| [2300059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300059-failed-to-use-the-specified-ssl-cipher-algorithm) |
+| [2300058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300058-local-ssl-certificate-error) |
+| [2300056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300056-failed-to-receive-network-data) |
+| [2300063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300063-maximum-file-size-exceeded) |
+| [2300061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300061-unrecognized-or-incorrect-http-encoding-format) |
+| [2300060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300060-incorrect-ssl-certificate-or-ssh-key-of-the-remote-server) |
 
 ## Examples
 

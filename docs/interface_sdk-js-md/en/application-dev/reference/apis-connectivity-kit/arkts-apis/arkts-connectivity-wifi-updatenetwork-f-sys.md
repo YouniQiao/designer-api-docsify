@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## updateNetwork
@@ -20,7 +20,7 @@ Updates the specified Wi-Fi configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.updateDeviceConfig
+**Substitutes:** [updateDeviceConfig](ohos.wifiManager/wifiManager.updateDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
@@ -34,7 +34,7 @@ Updates the specified Wi-Fi configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the Wi-Fi configuration to update. |
+| config | WifiDeviceConfig | Yes | Indicates the Wi-Fi configuration to update. |
 
 **Return value:**
 

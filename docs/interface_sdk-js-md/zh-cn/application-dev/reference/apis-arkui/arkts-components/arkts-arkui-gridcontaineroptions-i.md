@@ -12,7 +12,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions
+**替代接口：** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-unnamed-declare interface GridContainerOptions--><!--Device-unnamed-declare interface GridContainerOptions-End-->
 
@@ -36,7 +36,7 @@ columns?: number | "auto"
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions
+**替代接口：** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-columns?: number | "auto"--><!--Device-GridContainerOptions-columns?: number | "auto"-End-->
 
@@ -58,7 +58,7 @@ gutter?: number | string
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions
+**替代接口：** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-gutter?: number | string--><!--Device-GridContainerOptions-gutter?: number | string-End-->
 
@@ -80,7 +80,7 @@ margin?: number | string
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions
+**替代接口：** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-margin?: number | string--><!--Device-GridContainerOptions-margin?: number | string-End-->
 
@@ -104,7 +104,7 @@ sizeType?: SizeType
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColOptions
+**替代接口：** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-sizeType?: SizeType--><!--Device-GridContainerOptions-sizeType?: SizeType-End-->
 

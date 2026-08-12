@@ -18,7 +18,7 @@ info: NavPathInfo
 
 The info of the popped page.
 
-**Type:** [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md)
+**Type:** [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md)
 
 **Since:** 23
 

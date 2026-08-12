@@ -22,7 +22,7 @@ export declare function setTimeout(handler: Function | string, delay?: number, .
 | --- | --- | --- |
 | handler | Function \| string | 是 |
 | delay | number | 否 |
-| arguments | any[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 **返回值：**
 

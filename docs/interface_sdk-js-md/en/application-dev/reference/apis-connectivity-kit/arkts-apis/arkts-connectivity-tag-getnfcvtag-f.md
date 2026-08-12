@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcVTag
@@ -12,7 +12,7 @@ import { tag } from 'kits/@kit.ConnectivityKit';
 function getNfcVTag(tagInfo: TagInfo): NfcVTag
 ```
 
-Obtains an {@link NfcVTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-V technology, an {@link NfcVTag} object will be created based on the tag information.
+Obtains an [NfcVTag](arkts-connectivity-tag-nfcvtag-t.md#NfcVTag) object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-V technology, an [NfcVTag](arkts-connectivity-tag-nfcvtag-t.md#NfcVTag) object will be created based on the tag information.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Obtains an {@link NfcVTag} object based on the tag information.&lt;p&gt;During t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.tag/tag#getNfcV
+**Substitutes:** [getNfcV](arkts-connectivity-tag-getnfcv-f.md#getNfcV)
 
 <!--Device-tag-function getNfcVTag(tagInfo: TagInfo): NfcVTag--><!--Device-tag-function getNfcVTag(tagInfo: TagInfo): NfcVTag-End-->
 
@@ -36,5 +36,5 @@ Obtains an {@link NfcVTag} object based on the tag information.&lt;p&gt;During t
 
 | Type | Description |
 | --- | --- |
-| [NfcVTag](arkts-connectivity-tag-nfcvtag-t.md) | The { |
+| NfcVTag | The { |
 

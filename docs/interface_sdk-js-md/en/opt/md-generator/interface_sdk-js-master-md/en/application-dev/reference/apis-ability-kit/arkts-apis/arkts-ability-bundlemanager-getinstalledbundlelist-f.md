@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getInstalledBundleList
@@ -34,13 +34,13 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;BundleInfo&gt;&gt; |
+| Promise & lt;Array & lt;BundleInfo & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

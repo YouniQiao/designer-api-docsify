@@ -8,7 +8,7 @@
 | --- | --- |
 | [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | Define a rectangular cuboid. |
 | [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | An array of vertices and their data defining a custom geometric shape. |
-| [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md).  > **NOTE：** >  > You must ensure that all three parameters are set correctly. > Invalid values may prevent cylinder creation or cause undefined behavior. |
+| [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition).  > **NOTE：** >  > You must ensure that all three parameters are set correctly. > Invalid values may prevent cylinder creation or cause undefined behavior. |
 | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Define a geometric shape for mesh creation. |
 | [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | Define a plane. |
 | [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | Define a sphere. |

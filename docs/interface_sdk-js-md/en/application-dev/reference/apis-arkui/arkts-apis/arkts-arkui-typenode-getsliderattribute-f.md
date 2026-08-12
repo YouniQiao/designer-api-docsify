@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| SliderAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

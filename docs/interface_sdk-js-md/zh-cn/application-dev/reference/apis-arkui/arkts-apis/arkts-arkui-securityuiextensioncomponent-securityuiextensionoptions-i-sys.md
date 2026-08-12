@@ -20,7 +20,7 @@ dpiFollowStrategy?: SecurityDpiFollowStrategy
 
 设置SecurityUIExtensionComponent内容分辨率跟随策略，用于控制嵌入的UIExtensionAbility内容是跟随宿主应用的分辨率还是使用自身的分辨率。
 
-**类型：** [SecurityDpiFollowStrategy](../arkts-components/arkts-arkui-securitydpifollowstrategy-e-sys.md)
+**类型：** [SecurityDpiFollowStrategy](arkts-arkui-securityuiextensioncomponent-securitydpifollowstrategy-e-sys.md)
 
 **默认值：** SecurityDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 

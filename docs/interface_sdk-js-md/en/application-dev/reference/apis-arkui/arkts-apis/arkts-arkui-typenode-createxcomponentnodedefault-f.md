@@ -29,5 +29,5 @@ Create a FrameNode of XComponent type.On API 26.0.0 and above, It can also creat
 
 | Type | Description |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | Return XComponent type FrameNode. |
+| XComponent | Return XComponent type FrameNode. |
 

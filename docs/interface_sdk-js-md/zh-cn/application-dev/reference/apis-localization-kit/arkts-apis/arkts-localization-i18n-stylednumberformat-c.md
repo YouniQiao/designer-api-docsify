@@ -32,7 +32,7 @@ constructor(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| SimpleNumberFormat | 是 | 用于格式化数字的对象。 |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | 是 | 用于格式化数字的对象。 |
 | options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | 否 | 指定数字格式化对象的配置项。默认值：默认的文本样式。 |
 
 ## format
@@ -63,5 +63,5 @@ format(value: double): StyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | 格式化后的富文本对象。 |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | 格式化后的富文本对象。 |
 

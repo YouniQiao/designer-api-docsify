@@ -13,7 +13,7 @@ The **GesturePath** module provides APIs for creating gesture path information r
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## constructor

@@ -20,7 +20,7 @@ bottom?: Length
 
 默认值：0vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** 0
 
@@ -46,7 +46,7 @@ left?: Length
 
 默认值：0vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** 0
 
@@ -72,7 +72,7 @@ right?: Length
 
 默认值：0vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** 0
 
@@ -98,7 +98,7 @@ top?: Length
 
 默认值：0vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** 0
 

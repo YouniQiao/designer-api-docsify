@@ -24,7 +24,7 @@ export declare function ArcScrollBar(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
@@ -60,8 +60,8 @@ export declare function ArcScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcScrollBarAttribute&gt; | 是 | 用于创建ArcScrollBar的样式 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | CustomBuilderT&lt;[ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md)&gt; | 是 | 用于创建ArcScrollBar的样式 |
+| content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 

@@ -11,7 +11,7 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -34,7 +34,7 @@ Specifies the default iterator for an object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[K, V]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## Examples
 
@@ -57,15 +57,15 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#get),  
-[put&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#remove),  
-[clear&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#clear), and  
-[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#updatecapacity).
+Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get),  
+[put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove),  
+[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and  
+[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity).
 
 > **NOTE：**
 > 
-> If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#clear) and
-> [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#updatecapacity) are called and the input **key** and
+> If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and
+> [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) are called and the input **key** and
 > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
 
 **Since:** 9
@@ -238,7 +238,7 @@ Returns an iterator object that traverses all key-value pairs ([key, value]) in 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[K, V]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## Examples
 
@@ -262,8 +262,8 @@ get(key: K): V | undefined
 ```
 
 Obtains the value of a key. If the key is not in the cache,  
-[createDefault&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#createdefault) is called to create the key. If the value specified in **createDefault** is not **undefined**,  
-[afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#afterremoval) is called to return the value specified in  
+[createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) is called to create the key. If the value specified in **createDefault** is not **undefined**,  
+[afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) is called to return the value specified in  
 **createDefault**.
 
 **Since:** 9

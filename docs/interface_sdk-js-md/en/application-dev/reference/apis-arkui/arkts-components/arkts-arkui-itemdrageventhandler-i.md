@@ -38,7 +38,7 @@ onDragStart?: Callback<number>
 
 This callback is triggered when the item is dragged.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 20
 
@@ -60,7 +60,7 @@ onDrop?: Callback<number>
 
 This callback is triggered when the item is dropped.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 20
 
@@ -82,7 +82,7 @@ onLongPress?: Callback<number>
 
 This callback is triggered when the item is long pressed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 20
 

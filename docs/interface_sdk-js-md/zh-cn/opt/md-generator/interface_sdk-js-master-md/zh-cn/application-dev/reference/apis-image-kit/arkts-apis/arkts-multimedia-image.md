@@ -4,41 +4,41 @@
 
 本模块包含以下基础类：
 
-- [ImageSource](arkts-image-image-imagesource-i.md)类，提供获取[图片信息](arkts-image-image-imageinfo-i.md)、将图片解码为PixelMap或Picture、读取和修改  
-[图片属性](arkts-image-image-propertykey-e.md)的能力。[支持解码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)包括png、jpeg、bmp、gif、webp、dng、heic&lt;sup&gt;12+&lt;/sup&gt;、wbmp&lt;sup&gt;23+&lt;/sup&gt;、heifs&lt;sup&gt;23+&lt;/sup&gt;、tiff&lt;sup&gt;23+&lt;/sup&gt;。  
-- [ImagePacker](arkts-image-image-imagepacker-i.md)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。  
+- [ImageSource](arkts-image-image-imagesource-i.md#ImageSource)类，提供获取[图片信息](arkts-image-image-imageinfo-i.md#ImageInfo)、将图片解码为PixelMap或Picture、读取和修改  
+[图片属性](arkts-image-image-propertykey-e.md#PropertyKey)的能力。[支持解码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)包括png、jpeg、bmp、gif、webp、dng、heic&lt;sup&gt;12+&lt;/sup&gt;、wbmp&lt;sup&gt;23+&lt;/sup&gt;、heifs&lt;sup&gt;23+&lt;/sup&gt;、tiff&lt;sup&gt;23+&lt;/sup&gt;。  
+- [ImagePacker](arkts-image-image-imagepacker-i.md#ImagePacker)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。  
 [支持编码的图片格式](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)包括jpeg、webp、png、heic&lt;sup&gt;12+&lt;/sup&gt;、gif&lt;sup&gt;18+&lt;/sup&gt;。  
-- [PixelMap](arkts-image-image-pixelmap-i.md)类，位图对象，包含像素数据以及[图片信息](arkts-image-image-imageinfo-i.md)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传  
-给[Image组件](../../apis-arkui/arkts-components/arkts-arkui-image-i)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。  
-- [Picture](arkts-image-image-picture-i.md)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图  
+- [PixelMap](arkts-image-image-pixelmap-i.md#PixelMap)类，位图对象，包含像素数据以及[图片信息](arkts-image-image-imageinfo-i.md#ImageInfo)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传  
+给[Image组件](./@internal/component/ets/image)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。  
+- [Picture](arkts-image-image-picture-i.md#Picture)类，多图对象，由主图、辅助图和元数据组成。其中，主图包含了主要图像信息；辅助图用于存储与主图相关的附加信息；元数据用于存储与图片相关的其他信息。Picture提供获取主图  
 、合成HDR图、获取辅助图、设置辅助图、获取元数据、设置元数据等方法。  
-- [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md)类，辅助图一般用于辅助主图进行特殊信息的展示，使图像包含更丰富的信息。目前支持的辅助图的类型可参考  
-[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)。  
-- [Metadata](arkts-image-image-metadata-i.md)类，以Key-Value的形式存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md)，包含  
-Exif元数据、水印裁剪图元数据和HEIF序列图像元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-image-propertykey-e.md)；水印裁剪图元数据的Key可参考  
-[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)；HEIF序列图像元数据的Key可参考  
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。  
-- [ExifMetadata](arkts-image-image-exifmetadata-c.md)类，以Key-Value的形式存储图像的Exif元数据。Exif元数据的Key可参考  
-[PropertyKey](arkts-image-image-propertykey-e.md)。  
-- [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)类，以Key-Value的形式存储图像Huawei相机定义的照片元数据。Huawei相机定义的照片元数据的  
-Key可参考[PropertyKey](arkts-image-image-propertykey-e.md)。  
-- [HeifsMetadata](arkts-image-image-heifsmetadata-c.md)类，以Key-Value的形式存储图像的HEIF序列图像元数据。HEIF序列图像元数据的Key可参考  
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。  
+- [AuxiliaryPicture](arkts-image-image-auxiliarypicture-i.md#AuxiliaryPicture)类，辅助图一般用于辅助主图进行特殊信息的展示，使图像包含更丰富的信息。目前支持的辅助图的类型可参考  
+[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#AuxiliaryPictureType)。  
+- [Metadata](arkts-image-image-metadata-i.md#Metadata)类，以Key-Value的形式存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md#MetadataType)，包含  
+Exif元数据、水印裁剪图元数据和HEIF序列图像元数据。Exif元数据的Key可参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)；水印裁剪图元数据的Key可参考  
+[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey)；HEIF序列图像元数据的Key可参考  
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。  
+- [ExifMetadata](arkts-image-image-exifmetadata-c.md#ExifMetadata)类，以Key-Value的形式存储图像的Exif元数据。Exif元数据的Key可参考  
+[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。  
+- [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md#MakerNoteHuaweiMetadata)类，以Key-Value的形式存储图像Huawei相机定义的照片元数据。Huawei相机定义的照片元数据的  
+Key可参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。  
+- [HeifsMetadata](arkts-image-image-heifsmetadata-c.md#HeifsMetadata)类，以Key-Value的形式存储图像的HEIF序列图像元数据。HEIF序列图像元数据的Key可参考  
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。  
 - [WebPMetadata](../../../reference/apis-image-kit/arkts-apis-image-WebPMetadata.md)类，以Key-Value的形式存储图像的WebP图像元数据。  
-WebP图像元数据的Key可参考[WebPPropertyKey](arkts-image-image-webppropertykey-e.md)。  
+WebP图像元数据的Key可参考[WebPPropertyKey](arkts-image-image-webppropertykey-e.md#WebPPropertyKey)。  
 - [GifMetadata](../../../reference/apis-image-kit/arkts-apis-image-GifMetadata.md)类，以Key-Value的形式存储图像的GIF图像元数据。GIF图像  
-元数据的Key可参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。  
+元数据的Key可参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。  
 - [JfifMetadata](../../../reference/apis-image-kit/arkts-apis-image-JfifMetadata.md)类，以Key-Value的形式存储图像的JFIF图像元数据。  
-JFIF图像元数据的Key可参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。  
+JFIF图像元数据的Key可参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。  
 - [TiffMetadata](../../../reference/apis-image-kit/arkts-apis-image-TiffMetadata.md)类，以Key-Value的形式存储图像的TIFF图像元数据。  
-TIFF图像元数据的Key可参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。  
+TIFF图像元数据的Key可参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。  
 - [PngMetadata](../../../reference/apis-image-kit/arkts-apis-image-PngMetadata.md)类，以Key-Value的形式存储图像的PNG图像元数据。PNG图像  
-元数据的Key可参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。  
+元数据的Key可参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。  
 - [AvisMetadata](../../../reference/apis-image-kit/arkts-apis-image-AvisMetadata.md)类，以Key-Value的形式存储图像的AVIS图像元数据。  
-AVIS图像元数据的Key可参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。  
-- [ImageReceiver](arkts-image-image-imagereceiver-i.md)类，作为图片的消费者，用于从Surface中接收、读取图片。  
-- [ImageCreator](arkts-image-image-imagecreator-i.md)类，作为图片的生产者，用于将图片写入到Surface中。  
-- [Image](arkts-image-image-image-i.md)类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的  
+AVIS图像元数据的Key可参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。  
+- [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver)类，作为图片的消费者，用于从Surface中接收、读取图片。  
+- [ImageCreator](arkts-image-image-imagecreator-i.md#ImageCreator)类，作为图片的生产者，用于将图片写入到Surface中。  
+- [Image](arkts-image-image-image-i.md#Image)类，供ImageReceiver和ImageCreator使用，用于传输图片对象，其实际内容由生产者决定。如相机预览流提供的Image对象存储了YUV数据、相机拍照提供的  
 Image对象存储了JPEG文件。
 
 **起始版本：** 6

@@ -6,7 +6,7 @@ type RotationChangeCallback<T, U> = (info: T) => U
 
 Describes a generic callback function for rotation event notifications.
 
-In this callback function, the parameter type is [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), and the return value type is [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void.
+In this callback function, the parameter type is [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo), and the return value type is [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) \| void.
 
 **Since:** 19
 
@@ -22,7 +22,7 @@ In this callback function, the parameter type is [RotationChangeInfo](arkts-arku
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | T | Yes | Parameter of type [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md) passed by the system when the callback function is called. |
+| info | T | Yes | Parameter of type [RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo) passed by the system when the callback function is called. |
 
 **Return value:**
 

@@ -25,13 +25,13 @@ Defines TabContent Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | TabContent |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | TabContent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TabContentAttribute](../arkts-components/arkts-arkui-tabcontent-attribute.md) |  |
+| [TabContentAttribute](arkts-arkui-tabcontent-tabcontentattribute-i.md) |  |
 
 
 ## TabContent
@@ -61,12 +61,12 @@ Defines TabContent Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TabContentAttribute&gt; | Yes | tabContent attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | TabContent |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TabContentAttribute](arkts-arkui-tabcontent-tabcontentattribute-i.md)&gt; | Yes | tabContent attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | TabContent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TabContentAttribute](../arkts-components/arkts-arkui-tabcontent-attribute.md) |  |
+| [TabContentAttribute](arkts-arkui-tabcontent-tabcontentattribute-i.md) |  |
 

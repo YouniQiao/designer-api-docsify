@@ -34,11 +34,11 @@ Initialize SymbolGlyph FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](arkts-arkui-resource-t.md) | No |  |
+| value | Resource | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
+| SymbolGlyphAttribute |  |
 

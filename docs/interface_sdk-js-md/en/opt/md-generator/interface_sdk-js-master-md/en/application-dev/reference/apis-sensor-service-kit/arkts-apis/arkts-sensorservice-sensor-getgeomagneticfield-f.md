@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticField
@@ -18,7 +18,7 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo)(locationOptions:
+**Substitutes:** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void-End-->
 
@@ -30,7 +30,7 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | Yes |
 | timeMillis | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeomagneticResponse&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo)(locationOptions:
+**Substitutes:** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>-End-->
 
@@ -80,7 +80,7 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;GeomagneticResponse&gt; |
+| Promise&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; |
 
 ## Examples
 

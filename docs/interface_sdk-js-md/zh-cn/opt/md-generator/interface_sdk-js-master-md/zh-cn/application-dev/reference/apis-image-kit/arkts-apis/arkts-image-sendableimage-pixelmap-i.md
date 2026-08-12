@@ -2,7 +2,7 @@
 
 Sendable PixelMap instance.
 
-**继承/实现关系：** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md)
+**继承/实现关系：** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md#ISendable)
 
 **起始版本：** 12
 
@@ -36,16 +36,16 @@ This method is used to change color space of PixelMap.Pixel data will be changed
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
-| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
+| [62980108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-图片颜色转换错误) |
 
 ## 示例
 
@@ -85,7 +85,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## 示例
 
@@ -124,14 +124,14 @@ Obtains new pixelmap with alpha information.
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -170,7 +170,7 @@ Crop the image. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -218,8 +218,8 @@ Crop the image.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -262,7 +262,7 @@ Image flipping. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -311,8 +311,8 @@ Image flipping.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -384,9 +384,9 @@ Get color space of pixelmap.
 
 | 错误码ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
 
 ## 示例
 
@@ -452,7 +452,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 | 类型 |
 | --- |
-| Promise&lt;image.ImageInfo&gt; |
+| Promise & lt;image.ImageInfo & gt; |
 
 ## 示例
 
@@ -500,7 +500,7 @@ Get image information from image source.
 
 | 错误码ID |
 | --- |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -571,8 +571,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 | 错误码ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
 
 ## 示例
 
@@ -660,7 +660,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -706,8 +706,8 @@ Set the transparent rate of pixelmap.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -748,7 +748,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -800,8 +800,8 @@ Reads image pixelmap data in an area.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -842,13 +842,13 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -888,14 +888,14 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -931,7 +931,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -976,7 +976,7 @@ Image rotation. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -1022,8 +1022,8 @@ Image rotation.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1065,7 +1065,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -1114,8 +1114,8 @@ Image zoom in width and height.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1157,8 +1157,8 @@ This method is only used to set the colorspace property of PixelMap,while all pi
 
 | 错误码ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
 
 ## 示例
 
@@ -1202,7 +1202,7 @@ Image position transformation. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -1250,8 +1250,8 @@ Image position transformation.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1291,15 +1291,15 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
 
 ## 示例
 
@@ -1387,7 +1387,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -1437,8 +1437,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 
@@ -1484,7 +1484,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -1540,8 +1540,8 @@ Writes image pixelmap data to the specified area.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## 示例
 

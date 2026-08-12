@@ -1,7 +1,7 @@
 # CameraManager
 
 **CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use   
-[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) to obtain a **CameraManager** instance.
+[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager) to obtain a **CameraManager** instance.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## createCameraInput
@@ -23,7 +23,7 @@ createCameraInput(camera: CameraDevice): CameraInput
 
 Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously.
 
-Before calling this API, call [getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
+Before calling this API, call [getSupportedCameras](#getSupportedCameras) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
 
 **Since:** 10
 
@@ -39,7 +39,7 @@ Before calling this API, call [getSupportedCameras](arkts-camera-camera-camerama
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 
 **Return value:**
 
@@ -51,9 +51,9 @@ Before calling this API, call [getSupportedCameras](arkts-camera-camera-camerama
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createCameraInput
 
@@ -92,9 +92,9 @@ Before calling this API, specify the camera position and type based on the usage
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createCaptureSession
 
@@ -108,7 +108,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.CameraManager.createSession](arkts-camera-camera-cameramanager-i.md#createsession)
+**Substitutes:** [createSession](#createSession)
 
 <!--Device-CameraManager-createCaptureSession(): CaptureSession--><!--Device-CameraManager-createCaptureSession(): CaptureSession-End-->
 
@@ -124,7 +124,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createDeferredPreviewOutput
 
@@ -158,9 +158,9 @@ Creates a deferred **PreviewOutput** instance and adds it, instead of a common *
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## createMetadataOutput
 
@@ -182,7 +182,7 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| metadataObjectTypes | Array&lt;MetadataObjectType&gt; | Yes |
+| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -194,8 +194,8 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createPhotoOutput
 
@@ -213,7 +213,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.CameraManager.createPhotoOutput](arkts-camera-camera-cameramanager-i.md#createphotooutput)(profile?:
+**Substitutes:** [createPhotoOutput](camera.CameraManager.createPhotoOutput(profile?:)
 
 <!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
 
@@ -236,7 +236,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
 
 ## createPhotoOutput
 
@@ -270,8 +270,8 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createPreviewOutput
 
@@ -306,8 +306,8 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createPreviewOutput
 
@@ -341,8 +341,8 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createSession
 
@@ -376,8 +376,8 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createVideoOutput
 
@@ -391,8 +391,8 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | SDR/HDR Photo Capture | [CameraFormat](arkts-camera-camera-cameraformat-e.md) | [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) |
 |--------------------|--------------------------|------------------|
-| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |
-| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 |
+| SDR | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) |
+| HDR_VIVID | [CAMERA_FORMAT_YCRCB_P010](arkts-camera-camera-cameraformat-e.md) & lt;br & gt;CAMERA_FORMAT_YCBCR_P010 |
 
 **Since:** 10
 
@@ -419,8 +419,8 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## createVideoOutput
 
@@ -454,8 +454,8 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getCameraConcurrentInfos
 
@@ -477,19 +477,19 @@ Obtains the concurrency information of the specified cameras. If the return valu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cameras | Array&lt;CameraDevice&gt; | Yes |
+| cameras | Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;CameraConcurrentInfo&gt; |
+| Array&lt;[CameraConcurrentInfo](arkts-camera-camera-cameraconcurrentinfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getCameraDevice
 
@@ -499,8 +499,8 @@ getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 
 Obtains the specified camera based on the camera position and type.
 
-Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-cameraposition-e.md) and   
-[CameraType](arkts-camera-camera-cameratype-e.md). If the returned result is undefined, the camera lens is not found on the current device.
+Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-cameraposition-e.md#CameraPosition) and   
+[CameraType](arkts-camera-camera-cameratype-e.md#CameraType). If the returned result is undefined, the camera lens is not found on the current device.
 
 **Since:** 18
 
@@ -527,7 +527,7 @@ Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-ca
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getCameraDevices
 
@@ -550,20 +550,20 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | Yes |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;CameraType&gt; | Yes |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[CameraType](arkts-camera-camera-cameratype-e.md)&gt; | Yes |
 | connectType | [ConnectionType](arkts-camera-camera-connectiontype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;CameraDevice&gt; |
+| Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getSupportedCameras
 
@@ -573,7 +573,7 @@ getSupportedCameras(): Array<CameraDevice>
 
 Obtains the supported cameras (such as the default camera whose **CameraType** is **CAMERA_TYPE_DEFAULT**). This API returns the result synchronously.
 
-Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYPE_TELEPHOTO**) can be obtained using [getCameraDevices](arkts-camera-camera-cameramanager-i.md#getcameradevices) API.
+Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYPE_TELEPHOTO**) can be obtained using [getCameraDevices](#getCameraDevices) API.
 
 **Since:** 10
 
@@ -587,7 +587,7 @@ Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;CameraDevice&gt; |
+| Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; |
 
 ## getSupportedFullOutputCapability
 
@@ -616,7 +616,7 @@ Obtains the complete output capabilities supported by a specified camera in a sp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 | mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | Yes |
 
 **Return value:**
@@ -637,7 +637,7 @@ Obtains the output capability supported by a camera device. This API returns the
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.CameraManager.getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability)(camera:
+**Substitutes:** [getSupportedOutputCapability](camera.CameraManager.getSupportedOutputCapability(camera:)
 
 <!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
 
@@ -647,7 +647,7 @@ Obtains the output capability supported by a camera device. This API returns the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 
 **Return value:**
 
@@ -675,7 +675,7 @@ Obtains the output capability supported by a camera device in a given scene mode
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 | mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | Yes |
 
 **Return value:**
@@ -704,13 +704,13 @@ Obtains the scene modes supported by a camera device. This API returns the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;SceneMode&gt; |
+| Array&lt;[SceneMode](arkts-camera-camera-scenemode-e.md)&gt; |
 
 ## getTorchMode
 
@@ -784,7 +784,7 @@ Checks whether the device supports flashlight brightness control.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isTorchModeSupported
 
@@ -857,7 +857,7 @@ Unsubscribes from camera status events. This API uses an asynchronous callback t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'cameraStatus' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | No |
 
 ## off('foldStatusChange')
 
@@ -880,7 +880,7 @@ Unsubscribes from fold state change events of the foldable device.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'foldStatusChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | No |
 
 ## off('torchStatusChange')
 
@@ -903,7 +903,7 @@ Unsubscribes from flashlight status change events. This API uses an asynchronous
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'torchStatusChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | No |
 
 ## on('cameraStatus')
 
@@ -930,7 +930,7 @@ Subscribes to camera status events. This API uses an asynchronous callback to re
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'cameraStatus' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | Yes |
 
 ## on('foldStatusChange')
 
@@ -957,7 +957,7 @@ Subscribes to fold status change events of the foldable device. This API uses an
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'foldStatusChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | Yes |
 
 ## on('torchStatusChange')
 
@@ -984,7 +984,7 @@ Subscribes to flashlight status change events. This API uses an asynchronous cal
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'torchStatusChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | Yes |
 
 ## setTorchMode
 
@@ -1012,9 +1012,9 @@ Sets the flashlight mode.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## setTorchModeOnWithLevel
 
@@ -1022,7 +1022,7 @@ Sets the flashlight mode.
 setTorchModeOnWithLevel(torchLevel: number): void
 ```
 
-Sets the torch mode to {@link camera.TorchMode.ON} with the specified torch level.
+Sets the torch mode to [ON](arkts-camera-camera-torchmode-e.md#ON) with the specified torch level.
 
 **Since:** 26.0.0
 
@@ -1038,12 +1038,12 @@ Sets the torch mode to {@link camera.TorchMode.ON} with the specified torch leve
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| torchLevel | number | Yes |
+| [torchLevel](arkts-camera-camera-torchstatusinfo-i.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

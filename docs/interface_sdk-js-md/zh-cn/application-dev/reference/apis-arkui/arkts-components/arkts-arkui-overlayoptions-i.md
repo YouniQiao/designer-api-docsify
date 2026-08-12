@@ -26,7 +26,7 @@ align?: Alignment
 
 默认值：TopStart
 
-**类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
+**类型：** Alignment
 
 **起始版本：** 7
 

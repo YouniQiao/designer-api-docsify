@@ -20,7 +20,7 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 > 
 > The global restriction policies are provided by **restrictions**. To disable Wi-Fi globally, see
-> [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
+> [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md#restrictions).
 
 **Since:** 12
 
@@ -33,7 +33,7 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## getUidForName
@@ -18,7 +18,7 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **Deprecated since:** 9
 
-**Substitutes:** [process.ProcessManager.getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
+**Substitutes:** [getUidForName](arkts-arkts-process-processmanager-c.md#getUidForName)
 
 <!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
 

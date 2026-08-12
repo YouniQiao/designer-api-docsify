@@ -35,6 +35,32 @@ Called when the application encounters an exception and reports it to the JavaSc
 | --- | --- | --- | --- |
 | errObject | Error | Yes | Event name, message, and error stack of the exception. |
 
+## Examples
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errorMsg) {
+    console.error('onUnhandledException, errorMsg: ', errorMsg);
+  },
+  onException(errorObj) {
+    console.error('onException, name: ', errorObj.name);
+    console.error('onException, message: ', errorObj.message);
+    if (typeof (errorObj.stack) === 'string') {
+      console.error('onException, stack: ', errorObj.stack);
+    }
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (error) {
+  console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+}
+```
+
 ## onUnhandledException
 
 ```TypeScript
@@ -58,4 +84,23 @@ Called when an uncaught exception occurs in the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | errMsg | string | Yes | Message and error stack trace about the exception. |
+
+## Examples
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errorMsg) {
+    console.error('onUnhandledException, errorMsg: ', errorMsg);
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (error) {
+  console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+}
+```
 

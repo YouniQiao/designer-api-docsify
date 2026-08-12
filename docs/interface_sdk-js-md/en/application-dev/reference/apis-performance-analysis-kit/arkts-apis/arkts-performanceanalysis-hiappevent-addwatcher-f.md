@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## addWatcher
@@ -28,7 +28,7 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | Event watcher. |
+| watcher | Watcher | Yes | Event watcher. |
 
 **Return value:**
 
@@ -40,12 +40,12 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [11102001](../errorcode-hiappevent.md#11102001-invalid-watcher-name) | Invalid watcher name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11102003](../errorcode-hiappevent.md#11102003-invalid-event-number) | Invalid row value. Possibly caused by the row value is less than zero. |
-| [11102002](../errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
-| [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11102001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102001-invalid-watcher-name) | Invalid watcher name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11102003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102003-invalid-event-number) | Invalid row value. Possibly caused by the row value is less than zero. |
+| [11102002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11102005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
+| [11102004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
 
 ## Examples
 

@@ -28,14 +28,14 @@ function uninstallFont(fullName: string): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [31100107](../errorcode-font-manager.md#31100107-卸载的字体文件不存在) |
-| [31100108](../errorcode-font-manager.md#31100108-无法删除字体) |
-| [31100109](../errorcode-font-manager.md#31100109-其他错误导致卸载失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [31100107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-卸载的字体文件不存在) |
+| [31100108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-无法删除字体) |
+| [31100109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-其他错误导致卸载失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

@@ -1,17 +1,17 @@
 # AbilityInfo
 
 Ability信息，未做特殊说明的属性，均通过  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)获取。
+[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)获取。
 
 > **说明：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)替代。
+> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#AbilityInfo)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [abilityInfo:AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)
+**替代接口：** [AbilityInfo](#AbilityInfo)
 
 <!--Device-unnamed-export interface AbilityInfo--><!--Device-unnamed-export interface AbilityInfo-End-->
 
@@ -25,7 +25,7 @@ readonly applicationInfo: ApplicationInfo
 
 应用程序的配置信息。
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -35,7 +35,7 @@ readonly applicationInfo: ApplicationInfo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#applicationInfo
+**替代接口：** [applicationInfo](ohos.bundle.bundleManager/bundleManager.AbilityInfo#applicationInfo)
 
 <!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
@@ -81,7 +81,7 @@ readonly bundleName: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#bundleName
+**替代接口：** [bundleName](ohos.bundle.bundleManager/bundleManager.AbilityInfo#bundleName)
 
 <!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
@@ -103,7 +103,7 @@ Ability的描述。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#description
+**替代接口：** [description](ohos.bundle.bundleManager/bundleManager.AbilityInfo#description)
 
 <!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
 
@@ -125,7 +125,7 @@ Ability的描述的资源id值。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#descriptionId
+**替代接口：** [descriptionId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#descriptionId)
 
 <!--Device-AbilityInfo-readonly descriptionId: number--><!--Device-AbilityInfo-readonly descriptionId: number-End-->
 
@@ -167,7 +167,7 @@ Ability支持的设备类型。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#deviceTypes
+**替代接口：** [deviceTypes](ohos.bundle.bundleManager/bundleManager.AbilityInfo#deviceTypes)
 
 <!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -189,7 +189,7 @@ Ability是否可用，取值为true表示Ability可用，取值为false表示Abi
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#enabled
+**替代接口：** [enabled](ohos.bundle.bundleManager/bundleManager.AbilityInfo#enabled)
 
 <!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
 
@@ -235,7 +235,7 @@ Ability的图标资源文件索引。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#icon
+**替代接口：** [icon](ohos.bundle.bundleManager/bundleManager.AbilityInfo#icon)
 
 <!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
 
@@ -257,7 +257,7 @@ Ability的图标的资源id值。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#iconId
+**替代接口：** [iconId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#iconId)
 
 <!--Device-AbilityInfo-readonly iconId: number--><!--Device-AbilityInfo-readonly iconId: number-End-->
 
@@ -279,7 +279,7 @@ readonly isVisible: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#exported
+**替代接口：** [exported](ohos.bundle.bundleManager/bundleManager.AbilityInfo#exported)
 
 <!--Device-AbilityInfo-readonly isVisible: boolean--><!--Device-AbilityInfo-readonly isVisible: boolean-End-->
 
@@ -301,7 +301,7 @@ Ability对用户显示的名称。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#label
+**替代接口：** [label](ohos.bundle.bundleManager/bundleManager.AbilityInfo#label)
 
 <!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
 
@@ -323,7 +323,7 @@ Ability的标签的资源id值。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#labelId
+**替代接口：** [labelId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#labelId)
 
 <!--Device-AbilityInfo-readonly labelId: number--><!--Device-AbilityInfo-readonly labelId: number-End-->
 
@@ -345,7 +345,7 @@ Ability的启动模式。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#launchType
+**替代接口：** [launchType](arkts-ability-abilityinfo-i.md#launchType)
 
 <!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode--><!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode-End-->
 
@@ -359,7 +359,7 @@ readonly metaData: Array<CustomizeData>
 
 Ability的元信息。
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
 
 **类型：** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
@@ -369,7 +369,7 @@ Ability的元信息。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#metadata
+**替代接口：** [metadata](ohos.bundle.bundleManager/bundleManager.AbilityInfo#metadata)
 
 <!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>--><!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>-End-->
 
@@ -391,7 +391,7 @@ Ability所属的HAP的名称。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#moduleName
+**替代接口：** [moduleName](ohos.bundle.bundleManager/bundleManager.AbilityInfo#moduleName)
 
 <!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
 
@@ -413,7 +413,7 @@ Ability名称。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#name
+**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.AbilityInfo#name)
 
 <!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
 
@@ -435,7 +435,7 @@ Ability的显示模式。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#orientation
+**替代接口：** [orientation](ohos.bundle.bundleManager/bundleManager.AbilityInfo#orientation)
 
 <!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation-End-->
 
@@ -449,7 +449,7 @@ readonly permissions: Array<string>
 
 被其他应用Ability调用时需要申请的权限集合。
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo)接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -459,7 +459,7 @@ readonly permissions: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#permissions
+**替代接口：** [permissions](ohos.bundle.bundleManager/bundleManager.AbilityInfo#permissions)
 
 <!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
 
@@ -481,7 +481,7 @@ Ability的进程名称。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityInfo#process
+**替代接口：** [process](ohos.bundle.bundleManager/bundleManager.AbilityInfo#process)
 
 <!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 

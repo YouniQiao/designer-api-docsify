@@ -32,13 +32,13 @@ board(value: BoardStyle): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BoardStyle](../arkts-components/arkts-arkui-boardstyle-i.md) | 是 | 选中子页签的背板风格对象。 |
+| value | [BoardStyle](arkts-arkui-tabcontent-boardstyle-i.md) | 是 | 选中子页签的背板风格对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## constructor
 
@@ -62,7 +62,7 @@ SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| ComponentContentBase | 是 | 页签内的内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持labelStyle属性。&lt;br /&gt;2.自定 义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | 是 | 页签内的内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持labelStyle属性。&lt;br /&gt;2.自定 义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 ## id
 
@@ -92,7 +92,7 @@ id(value: string): SubTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## indicator
 
@@ -122,7 +122,7 @@ indicator(style: SubTabBarIndicatorStyle): SubTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## indicator
 
@@ -146,13 +146,13 @@ indicator(value: SubTabBarIndicatorStyle | DrawableTabBarIndicator): SubTabBarSt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SubTabBarIndicatorStyle](arkts-arkui-tabcontent-subtabbarindicatorstyle-i.md) \| DrawableTabBarIndicator | 是 | 选中子页签的下划线风格对象。 |
+| value | [SubTabBarIndicatorStyle](arkts-arkui-tabcontent-subtabbarindicatorstyle-i.md) \| [DrawableTabBarIndicator](arkts-arkui-tabcontent-drawabletabbarindicator-i.md) | 是 | 选中子页签的下划线风格对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## labelStyle
 
@@ -182,7 +182,7 @@ labelStyle(style: TabBarLabelStyle): SubTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## of
 
@@ -206,13 +206,13 @@ SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| ComponentContentBase | 是 | 页签内的内容。支持ComponentContentBase设置自定义内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自 定义内容不支持labelStyle属性。&lt;br /&gt;2.自定义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | 是 | 页签内的内容。支持ComponentContentBase设置自定义内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自 定义内容不支持labelStyle属性。&lt;br /&gt;2.自定义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象。 |
 
 ## padding
 
@@ -236,13 +236,13 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension | 是 | 子页签的内边距属性。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值：{left:8.0vp,right:8.0vp, top:17.0vp,bottom:18.0vp} |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) | 是 | 子页签的内边距属性。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值：{left:8.0vp,right:8.0vp, top:17.0vp,bottom:18.0vp} |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## padding
 
@@ -272,7 +272,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
 ## selectedMode
 
@@ -296,11 +296,11 @@ selectedMode(value: SelectedMode): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SelectedMode](../arkts-components/arkts-arkui-selectedmode-e.md) | 是 | 选中子页签的显示方式。&lt;br /&gt;默认值：SelectedMode.INDICATOR |
+| value | [SelectedMode](arkts-arkui-tabcontent-selectedmode-e.md) | 是 | 选中子页签的显示方式。&lt;br /&gt;默认值：SelectedMode.INDICATOR |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 

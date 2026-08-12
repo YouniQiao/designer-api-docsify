@@ -22,6 +22,6 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| restart | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | 否 |
+| [restart](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-animation-i.md) | [RestartFlag](arkts-ability-apprecovery-restartflag-e.md) | 否 |
 | saveOccasion | [SaveOccasionFlag](arkts-ability-apprecovery-saveoccasionflag-e.md) | 否 |
 | saveMode | [SaveModeFlag](arkts-ability-apprecovery-savemodeflag-e.md) | 否 |

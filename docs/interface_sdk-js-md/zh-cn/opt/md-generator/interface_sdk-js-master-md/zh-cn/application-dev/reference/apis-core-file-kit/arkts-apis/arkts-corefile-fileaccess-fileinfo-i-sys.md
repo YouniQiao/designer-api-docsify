@@ -19,13 +19,13 @@ listFile(filter?: Filter): FileIterator
 ```
 
 以同步方法从某个目录，基于过滤器，获取下一级符合条件的文件(夹)信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
+[FileInfo](#FileInfo)。目前仅支持内置存储设备过滤，外置存储设备不支持过滤。
 
 **起始版本：** 9
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.listFile
+**替代接口：** [listFile](@ohos.file.fs:fileIo.listFile)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -127,7 +127,7 @@ scanFile(filter?: Filter): FileIterator
 ```
 
 以同步方法从某个目录，基于过滤器，递归获取符合条件的文件信息的迭代器对象FileIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)。目前仅支持内置存储设备。
+[FileInfo](#FileInfo)。目前仅支持内置存储设备。
 
 **起始版本：** 9
 

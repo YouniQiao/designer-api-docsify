@@ -52,9 +52,9 @@ ACTION_FIRST = 1
 NO_ANIMATION = 2
 ```
 
-关闭默认动画。调用TabsController的[changeIndex](../arkts-components/arkts-arkui-tabscontroller-c.md/arkts-arkui-tabscontroller-c.md#changeindex)接口切换TabContent时该枚举值不生效。
+关闭默认动画。调用TabsController的[changeIndex](arkts-arkui-tabs-tabscontroller-c.md#changeIndex)接口切换TabContent时该枚举值不生效。
 
-可以通过设置[animationDuration](TabsAttribute.animationDuration)为0实现调用TabsController的changeIndex接口时不带动画。
+可以通过设置[animationDuration](arkts-arkui-tabs-tabsattribute-i.md#animationDuration)为0实现调用TabsController的changeIndex接口时不带动画。
 
 **起始版本：** 23
 

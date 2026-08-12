@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## createRandomAccessFile
@@ -25,7 +25,7 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | Yes |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
 | mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. &lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|
 | options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No |
 
@@ -33,7 +33,7 @@ Creates a **RandomAccessFile** instance based on the specified file path or file
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RandomAccessFile&gt; |
+| Promise&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; |
 
 **Error codes:**
 
@@ -86,8 +86,8 @@ Creates a **RandomAccessFile** object in read-only mode based on a file path or 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RandomAccessFile&gt; | Yes |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | Yes |
 
 **Error codes:**
 
@@ -139,9 +139,9 @@ Creates a **RandomAccessFile** instance based on a file path or file object. Thi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | Yes |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes |
 | mode | number | Yes | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. &lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RandomAccessFile&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | Yes |
 
 **Error codes:**
 

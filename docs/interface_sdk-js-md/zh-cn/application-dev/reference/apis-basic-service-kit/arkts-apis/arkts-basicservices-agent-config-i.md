@@ -21,7 +21,7 @@ action: Action
 - UPLOAD表示上传任务。  
 - DOWNLOAD表示下载任务。
 
-**类型：** [Action](arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 10
 
@@ -64,9 +64,9 @@ data?: string | Array<FormItem>
 
 - 下载时，data为字符串类型，通常情况下使用json格式（object将被转换为json文本），默认为空。  
 - 上传时，data是表单项数组Array&lt;  
-[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
+[FormItem](arkts-basicservices-agent-formitem-i.md#FormItem)&gt;。从API version15开始，创建单个任务可以上传最多100个文件。默认为空。
 
-**类型：** string \| Array&lt;FormItem&gt;
+**类型：** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **起始版本：** 10
 
@@ -346,7 +346,7 @@ notification?: Notification
 
 通知栏自定义设置。默认值为`{}`。
 
-**类型：** [Notification](arkts-basicservices-agent-notification-i.md)
+**类型：** Notification
 
 **起始版本：** 15
 
@@ -551,9 +551,9 @@ timeout?: Timeout
 ```
 
 超时时间自定义设置，连接超时时间默认60秒，总超时时间默认604800秒（1周）。当retry参数为true时，  
-[timeout](arkts-basicservices-agent-timeout-i.md)事件会触发立即重试，导致  
-[timeout](arkts-basicservices-agent-timeout-i.md)在外部观察中被重试动作所掩盖，但内部[timeout](arkts-basicservices-agent-timeout-i.md)条件已实际触发。若需显性观察  
-[timeout](arkts-basicservices-agent-timeout-i.md)事件，需关闭retry参数。
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout)事件会触发立即重试，导致  
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout)在外部观察中被重试动作所掩盖，但内部[timeout](arkts-basicservices-agent-timeout-i.md#Timeout)条件已实际触发。若需显性观察  
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout)事件，需关闭retry参数。
 
 **类型：** [Timeout](arkts-basicservices-agent-timeout-i.md)
 

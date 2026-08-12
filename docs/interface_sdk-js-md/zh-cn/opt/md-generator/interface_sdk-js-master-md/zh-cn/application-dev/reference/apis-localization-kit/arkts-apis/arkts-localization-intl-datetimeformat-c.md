@@ -6,7 +6,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+**替代接口：** [DateTimeFormat]]([Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat))
 
 <!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
 
@@ -24,7 +24,7 @@ constructor()
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
+**替代接口：** [constructor]]([Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -55,7 +55,7 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
+**替代接口：** [constructor]]([Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -69,8 +69,8 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 |
-| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | 否 |
+| locale | string \| Array & lt;string & gt; | 是 |
+| options | [DateTimeOptions](../../apis-default/arkts-apis/arkts-intl-datetimeoptions-i.md) | 否 |
 
 ## 示例
 
@@ -96,7 +96,7 @@ format(date: Date): string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
+**替代接口：** [format]]([Intl.DateTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -145,7 +145,7 @@ formatRange(startDate: Date, endDate: Date): string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat.formatRange](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)
+**替代接口：** [formatRange]]([Intl.DateTimeFormat.formatRange](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -192,7 +192,7 @@ resolvedOptions(): DateTimeOptions
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.DateTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+**替代接口：** [resolvedOptions]]([Intl.DateTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -206,7 +206,7 @@ resolvedOptions(): DateTimeOptions
 
 | 类型 |
 | --- |
-| [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) |
+| [DateTimeOptions](../../apis-default/arkts-apis/arkts-intl-datetimeoptions-i.md) |
 
 ## 示例
 

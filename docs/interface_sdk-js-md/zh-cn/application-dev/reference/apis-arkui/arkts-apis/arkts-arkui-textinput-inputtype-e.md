@@ -102,7 +102,7 @@ Password = 7
 
 TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。
 
-密码输入模式中，[decoration](decoration)、[showUnderline](showUnderline)、[lineHeight](lineHeight)不生效。
+密码输入模式中，[decoration](arkts-arkui-textinput-textinputattribute-i.md#decoration)、[showUnderline](arkts-arkui-textinput-textinputattribute-i.md#showUnderline)、[lineHeight](arkts-arkui-textinput-textinputattribute-i.md#lineHeight)不生效。
 
 在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
 
@@ -149,8 +149,6 @@ USER_NAME = 10
 用户名输入模式，无特殊限制。
 
 在已启用密码保险箱的情况下，支持用户名、密码的自动保存和自动填充。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 

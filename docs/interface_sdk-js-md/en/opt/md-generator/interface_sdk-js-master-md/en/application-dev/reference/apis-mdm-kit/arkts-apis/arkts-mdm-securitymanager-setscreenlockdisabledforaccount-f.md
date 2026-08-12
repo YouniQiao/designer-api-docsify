@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from 'kits/@kit.MDMKit';
+import { securityManager } from '@kit.MDMKit';
 ```
 
 ## setScreenLockDisabledForAccount
@@ -48,11 +48,11 @@ Disables or enables swipe-to-unlock for the current user. When enabled, the user
 
 | Error Code ID |
 | --- |
-| [9201021](../errorcode-enterpriseDeviceManager.md#9201021-the-device-has-a-screen-lock-password) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9201021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201021-the-device-has-a-screen-lock-password) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

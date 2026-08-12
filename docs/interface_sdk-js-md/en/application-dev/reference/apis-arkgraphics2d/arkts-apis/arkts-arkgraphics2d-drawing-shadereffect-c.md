@@ -22,7 +22,7 @@ Implements the shader effect. After a shader effect is set for a pen or brush, t
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createColorShader
@@ -57,7 +57,7 @@ Creates a **ShaderEffect** object with a single color.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createColorShader
 
@@ -91,7 +91,7 @@ Creates a ShaderEffect object with a single color.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createComposeShader
 
@@ -116,7 +116,7 @@ Creates a shader by blending two existing shaders in a certain way.
 | --- | --- | --- | --- |
 | dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Shader that serves as the destination color in blend mode. |
 | srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Shader that serves as the source color in blend mode. |
-| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
+| blendMode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
@@ -128,7 +128,7 @@ Creates a shader by blending two existing shaders in a certain way.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createComposeShader
 
@@ -153,7 +153,7 @@ Creates an ShaderEffect object that generates a blend ShaderEffect object by two
 | --- | --- | --- | --- |
 | dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Indicates a destination ShaderEffect pointer. |
 | srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes | Indicates a source ShaderEffect pointer. |
-| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | BlendMode. |
+| blendMode | BlendMode | Yes | BlendMode. |
 
 **Return value:**
 
@@ -165,7 +165,7 @@ Creates an ShaderEffect object that generates a blend ShaderEffect object by two
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createConicalGradient
 
@@ -194,7 +194,7 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 | endPt | common2D.Point | Yes | Center of the end circle of the gradient. |
 | endRadius | number | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -208,7 +208,7 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createConicalGradient
 
@@ -237,7 +237,7 @@ Creates a ShaderEffect object that generates a conical gradient between two give
 | endPt | common2D.Point | Yes | Center of the end circle of the gradient. |
 | endRadius | double | Yes | Radius of the end circle of the gradient. A negative value is invalid. The value is a floating point number. |
 | colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the start circle and end circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two circles. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -251,7 +251,7 @@ Creates a ShaderEffect object that generates a conical gradient between two give
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createImageShader
 
@@ -275,8 +275,8 @@ Creates a shader based on an image. You are advised not to use the function for 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | Yes | Image object to be sampled. |
-| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode in the horizontal direction. |
-| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode in the vertical direction. |
+| tileX | TileMode | Yes | Tile mode in the horizontal direction. |
+| tileY | TileMode | Yes | Tile mode in the vertical direction. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | Image sampling options. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | (Optional) Matrix transformation applied to an image. If this parameter is left empty, no transformation is applied. |
 
@@ -290,7 +290,7 @@ Creates a shader based on an image. You are advised not to use the function for 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createImageShader
 
@@ -314,8 +314,8 @@ Creates an ShaderEffect object that generates a shader with single image.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pixelmap | image.PixelMap | Yes | PixelMap. |
-| tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Indicates the type of tile mode for horizontal shader effect. |
-| tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Indicates the type of tile mode for vertical shader effect. |
+| tileX | TileMode | Yes | Indicates the type of tile mode for horizontal shader effect. |
+| tileY | TileMode | Yes | Indicates the type of tile mode for vertical shader effect. |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes | SamplingOptions used to describe the sampling mode. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Indicates the Matrix object. The default value is null. |
 
@@ -329,7 +329,7 @@ Creates an ShaderEffect object that generates a shader with single image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createLinearGradient
 
@@ -355,7 +355,7 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 | startPt | common2D.Point | Yes | Start point. |
 | endPt | common2D.Point | Yes | End point. |
 | colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -369,7 +369,7 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createLinearGradient
 
@@ -395,7 +395,7 @@ Creates a ShaderEffect object that generates a linear gradient between two point
 | startPt | common2D.Point | Yes | Start point. |
 | endPt | common2D.Point | Yes | End point. |
 | colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the two points. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the two points. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -409,7 +409,7 @@ Creates a ShaderEffect object that generates a linear gradient between two point
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createRadialGradient
 
@@ -435,7 +435,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 | centerPt | common2D.Point | Yes | Center of the circle. |
 | radius | double | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
 | colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix** object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -449,7 +449,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createRadialGradient
 
@@ -475,7 +475,7 @@ Creates a ShaderEffect object that generates a radial gradient based on the cent
 | centerPt | common2D.Point | Yes | Center of the circle. |
 | radius | double | Yes | Radius of the gradient. A negative number is invalid. The value is a floating point number. |
 | colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the center and ending shape of the circle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that colors are evenly distributed between the center and ending shape of the circle. |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No | Matrix object used to perform matrix transformation on the shader effect. The default value is null, indicating the identity matrix. |
 
@@ -489,7 +489,7 @@ Creates a ShaderEffect object that generates a radial gradient based on the cent
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSweepGradient
 
@@ -515,7 +515,7 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 | --- | --- | --- | --- |
 | centerPt | common2D.Point | Yes | Center of the circle. |
 | colors | Array&lt;number&gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | startAngle | number | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
 | endAngle | number | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
 | pos | Array&lt;number&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of **colors**. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
@@ -531,7 +531,7 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSweepGradient
 
@@ -557,7 +557,7 @@ Creates a ShaderEffect object that generates a color sweep gradient around a giv
 | --- | --- | --- | --- |
 | centerPt | common2D.Point | Yes | Center of the circle. |
 | colors | Array&lt;int&gt; | Yes | Array of colors to distribute between the start angle and end angle. The values in the array are 32-bit (ARGB) unsigned integers. |
-| mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode of the shader effect. |
+| mode | TileMode | Yes | Tile mode of the shader effect. |
 | startAngle | double | Yes | Start angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. The value is a floating point number. |
 | endAngle | double | Yes | End angle of the sweep gradient, in degrees. The value 0 indicates the positive direction of the X axis. A positive number indicates an offset towards the positive direction, and a negative number indicates an offset towards the negative direction. A value less than the start angle is invalid. The value is a floating point number. |
 | pos | Array&lt;double&gt; \| null | No | Relative position of each color in the color array. The array length must be the same as that of colors. The first element in the array must be 0.0, the last element must be 1.0, and the middle elements must be between 0.0 and 1.0 and increase by index. The default value is null, indicating that the colors are evenly distributed between the start angle and end angle. |
@@ -573,5 +573,5 @@ Creates a ShaderEffect object that generates a color sweep gradient around a giv
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

@@ -13,7 +13,7 @@ Represents information about a remote device driver.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## deviceId

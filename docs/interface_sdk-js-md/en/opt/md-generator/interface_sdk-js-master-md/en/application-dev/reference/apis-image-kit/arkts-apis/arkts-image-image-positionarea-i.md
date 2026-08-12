@@ -11,7 +11,7 @@ Describes area information in an image.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## offset
@@ -62,7 +62,7 @@ region: Region
 
 Region to read or write. The width of the region to write plus the X coordinate cannot be greater than the width of the original image. The height of the region to write plus the Y coordinate cannot be greater than the height of the original image.
 
-**Type:** [Region](arkts-image-image-region-i.md)
+**Type:** Region
 
 **Since:** 7
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## getUserFileMgr
@@ -20,7 +20,7 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper)
+**Substitutes:** [getPhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +34,7 @@ Obtains a **UserFileManager** instance. This instance can be used to access and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c-sys.md) | Yes | Context of the ability instance. |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Context of the ability instance. |
 
 **Return value:**
 

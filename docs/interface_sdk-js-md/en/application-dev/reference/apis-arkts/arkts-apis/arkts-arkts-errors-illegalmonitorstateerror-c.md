@@ -2,7 +2,7 @@
 
 Represents an error that is thrown when attempting to wait, notify or notifyAll on object, that hasn't been synchronised
 
-**Inheritance/Implementation:** IllegalMonitorStateError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** IllegalMonitorStateError extends [Error](Error)
 
 **Since:** 26.0.0
 

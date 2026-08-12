@@ -46,7 +46,7 @@ static createColorShader(color: number): ShaderEffect
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createComposeShader
 
@@ -81,7 +81,7 @@ static createComposeShader(dstShaderEffect: ShaderEffect, srcShaderEffect: Shade
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## createConicalGradient
 
@@ -107,9 +107,9 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 | startRadius | number | 是 |
 | endPt | common2D.Point | 是 |
 | endRadius | number | 是 |
-| colors | Array&lt;number&gt; | 是 |
+| colors | Array & lt;number & gt; | 是 |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| pos | Array&lt;number&gt; \| null | 否 |
+| pos | Array & lt;number & gt; \ | null | 否 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
 
 **返回值：**
@@ -122,7 +122,7 @@ static createConicalGradient(startPt: common2D.Point, startRadius: number, endPt
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createImageShader
 
@@ -159,7 +159,7 @@ static createImageShader(pixelmap: image.PixelMap, tileX: TileMode, tileY: TileM
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## createLinearGradient
 
@@ -182,9 +182,9 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 | --- | --- | --- |
 | startPt | common2D.Point | 是 |
 | endPt | common2D.Point | 是 |
-| colors | Array&lt;number&gt; | 是 |
+| colors | Array & lt;number & gt; | 是 |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| pos | Array&lt;number&gt; \| null | 否 |
+| pos | Array & lt;number & gt; \ | null | 否 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
 
 **返回值：**
@@ -197,7 +197,7 @@ static createLinearGradient(startPt: common2D.Point, endPt: common2D.Point, colo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createRadialGradient
 
@@ -220,9 +220,9 @@ static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Ar
 | --- | --- | --- |
 | centerPt | common2D.Point | 是 |
 | radius | number | 是 |
-| colors | Array&lt;number&gt; | 是 |
+| colors | Array & lt;number & gt; | 是 |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
-| pos | Array&lt;number&gt; \| null | 否 |
+| pos | Array & lt;number & gt; \ | null | 否 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
 
 **返回值：**
@@ -235,7 +235,7 @@ static createRadialGradient(centerPt: common2D.Point, radius: number, colors: Ar
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createSweepGradient
 
@@ -258,11 +258,11 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | centerPt | common2D.Point | 是 |
-| colors | Array&lt;number&gt; | 是 |
+| colors | Array & lt;number & gt; | 是 |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
 | startAngle | number | 是 |
 | endAngle | number | 是 |
-| pos | Array&lt;number&gt; \| null | 否 |
+| pos | Array & lt;number & gt; \ | null | 否 |
 | matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | 否 |
 
 **返回值：**
@@ -275,4 +275,4 @@ static createSweepGradient(centerPt: common2D.Point, colors: Array<number>,
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

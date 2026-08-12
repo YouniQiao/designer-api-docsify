@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.InstallParam](arkts-ability-installer-installparam-i-sys.md)
+**替代接口：** [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam)
 
 <!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 
@@ -34,7 +34,7 @@ installFlag: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.InstallParam.installFlag](arkts-ability-installer-installparam-i-sys.md#installflag)
+**替代接口：** [installFlag](arkts-ability-installer-installparam-i-sys.md#installFlag)
 
 <!--Device-InstallParam-installFlag: number--><!--Device-InstallParam-installFlag: number-End-->
 
@@ -60,7 +60,7 @@ isKeepData: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.InstallParam.isKeepData](arkts-ability-installer-installparam-i-sys.md#iskeepdata)
+**替代接口：** [isKeepData](arkts-ability-installer-installparam-i-sys.md#isKeepData)
 
 <!--Device-InstallParam-isKeepData: boolean--><!--Device-InstallParam-isKeepData: boolean-End-->
 
@@ -86,7 +86,7 @@ userId: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.InstallParam.userId](arkts-ability-installer-installparam-i-sys.md#userid)
+**替代接口：** [userId](arkts-ability-installer-installparam-i-sys.md#userId)
 
 <!--Device-InstallParam-userId: number--><!--Device-InstallParam-userId: number-End-->
 

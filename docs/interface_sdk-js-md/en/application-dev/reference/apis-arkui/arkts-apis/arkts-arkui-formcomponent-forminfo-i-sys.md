@@ -64,7 +64,7 @@ dimension?: FormDimension
 
 The dimension of the form.
 
-**Type:** [FormDimension](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formdimension-e.md)
+**Type:** [FormDimension](arkts-arkui-formcomponent-formdimension-e-sys.md)
 
 **Since:** 23
 
@@ -196,7 +196,7 @@ shape?: FormShape
 
 The shape of the form.
 
-**Type:** [FormShape](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formshape-e.md)
+**Type:** [FormShape](arkts-arkui-formcomponent-formshape-e-sys.md)
 
 **Since:** 23
 

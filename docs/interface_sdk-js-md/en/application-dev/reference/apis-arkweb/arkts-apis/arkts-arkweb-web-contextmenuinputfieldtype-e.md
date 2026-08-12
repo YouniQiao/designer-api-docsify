@@ -1,6 +1,6 @@
 # ContextMenuInputFieldType
 
-Defines the context menu input field type, related to {@link onContextMenuShow} method.
+Defines the context menu input field type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method.
 
 **Since:** 23
 

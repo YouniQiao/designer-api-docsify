@@ -18,7 +18,7 @@ Defines the namespace of focus controller.
 | [$$](arkts-arkui-common-$$-f.md#$$) | Convert to a bindable property. |
 | [$r](arkts-arkui-common-$r-f.md#$r) | global \\$r function |
 | [$rawfile](arkts-arkui-common-$rawfile-f.md#$rawfile) | global \\$rawfile function |
-| [animateToImmediately](arkts-arkui-common-animatetoimmediately-f.md#animatetoimmediately) | Define animation functions for immediate distribution.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use{@link ohos.arkui.UIContext.UIContext#animateToImmediately} to explicitly specify the UI context. |
+| [animateToImmediately](arkts-arkui-common-animatetoimmediately-f.md#animatetoimmediately) | Define animation functions for immediate distribution.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use[animateToImmediately](ohos.arkui.UIContext.UIContext#animateToImmediately) to explicitly specify the UI context. |
 | [applyStyles](arkts-arkui-common-applystyles-f.md#applystyles) | Apply style function on this CommonMethod. |
 | [makeBindable](arkts-arkui-common-makebindable-f.md#makebindable) | Create a bindable property instance. |
 
@@ -58,7 +58,7 @@ Defines the namespace of focus controller.
 | [AsymmetricTransitionOption](arkts-arkui-common-asymmetrictransitionoption-i.md) | Defines the option of asymmetric transition. |
 | [AttributeModifier](arkts-arkui-common-attributemodifier-i.md) | Defines the attribute modifier. |
 | [AxisEvent](arkts-arkui-common-axisevent-i.md) | The axis event triggers this method invocation. |
-| [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](../arkts-components/arkts-arkui-blurstyleoptions-i.md/arkts-arkui-blurstyleoptions-i.md)。 |
+| [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md#BlurStyleOptions)。 |
 | [BackgroundBrightnessOptions](arkts-arkui-common-backgroundbrightnessoptions-i.md) | 背景亮度选项。 |
 | [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md) | 背景效果参数。 |
 | [BackgroundImageOptions](arkts-arkui-common-backgroundimageoptions-i.md) | Define the options for background image. |
@@ -75,7 +75,7 @@ Defines the namespace of focus controller.
 | [CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md) | Defines the common configuration. |
 | [CommonMethod](arkts-arkui-common-commonmethod-i.md) | CommonMethod |
 | [Configuration](arkts-arkui-common-configuration-i.md) | Defines the data type of the interface restriction. |
-| [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | 继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。  全屏模态页面内容选项。 |
+| [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | 继承自[BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)。  全屏模态页面内容选项。 |
 | [ContentModifier](arkts-arkui-common-contentmodifier-i.md) | Defines the content modifier. |
 | [ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md) | Defines the ContextMenu's preview animator options. |
 | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | Defines the context menu options. |
@@ -160,7 +160,7 @@ Defines the namespace of focus controller.
 | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | Defines the selection options. |
 | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) | Define the options of shadow |
 | [SheetDismiss](arkts-arkui-common-sheetdismiss-i.md) | 控制半模态的关闭。 |
-| [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。  半模态页面内容选项。 |
+| [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 继承自[BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)。  半模态页面内容选项。 |
 | [SheetTitleOptions](arkts-arkui-common-sheettitleoptions-i.md) | 半模态面板的标题。 |
 | [SizeResult](arkts-arkui-common-sizeresult-i.md) | Provides the component size information. |
 | [SmartGestureShortcutOptions](arkts-arkui-common-smartgestureshortcutoptions-i.md) | Options for configuring smart gesture shortcuts. |
@@ -199,7 +199,7 @@ Defines the namespace of focus controller.
 | [LightSource](arkts-arkui-common-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
 | [PixelMapMock](arkts-arkui-common-pixelmapmock-i-sys.md) | pixelmap object with release function. |
 | [PointLightStyle](arkts-arkui-common-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
-| [SheetOptions](arkts-arkui-common-sheetoptions-i-sys.md) | 继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。  半模态页面内容选项。 |
+| [SheetOptions](arkts-arkui-common-sheetoptions-i-sys.md) | 继承自[BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)。  半模态页面内容选项。 |
 | [SpatialEffectParams](arkts-arkui-common-spatialeffectparams-i-sys.md) | Spatial effect params. |
 | [SpatialPosition](arkts-arkui-common-spatialposition-i-sys.md) | Spatial corner positions in 3D space. |
 <!--DelEnd-->

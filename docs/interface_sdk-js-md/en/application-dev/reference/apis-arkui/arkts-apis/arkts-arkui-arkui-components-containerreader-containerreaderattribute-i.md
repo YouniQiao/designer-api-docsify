@@ -2,7 +2,7 @@
 
 Defines the container reader attribute.
 
-**Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** ContainerReaderAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Defines the container reader attribute.
 ## Modules to Import
 
 ```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from 'kits/@kit.ArkUI';
+import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
 ```
 
 ## attributeModifier
@@ -40,7 +40,7 @@ Sets the attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | AttributeModifier&lt;[ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 

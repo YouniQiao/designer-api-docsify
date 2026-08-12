@@ -13,7 +13,7 @@ Information about contact synchronization for the calling application.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## completedBatches

@@ -18,6 +18,6 @@ Represents the tuple union type used to store button information.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ItemRestriction&lt;SegmentButtonTextItem&gt;](arkts-arkui-itemrestriction-t.md) |
-| [ItemRestriction&lt;SegmentButtonIconItem&gt;](arkts-arkui-itemrestriction-t.md) |
-| [ItemRestriction&lt;SegmentButtonIconTextItem&gt;](arkts-arkui-itemrestriction-t.md) |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonTextItem & gt; |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconItem & gt; |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconTextItem & gt; |

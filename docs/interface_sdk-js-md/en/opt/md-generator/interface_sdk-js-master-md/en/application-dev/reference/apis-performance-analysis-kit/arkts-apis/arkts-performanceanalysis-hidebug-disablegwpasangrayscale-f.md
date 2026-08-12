@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## disableGwpAsanGrayscale
@@ -13,7 +13,7 @@ function disableGwpAsanGrayscale(): void
 ```
 
 Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter  
-[GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md).
+[GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md#GwpAsanOptions).
 
 **Since:** 20
 

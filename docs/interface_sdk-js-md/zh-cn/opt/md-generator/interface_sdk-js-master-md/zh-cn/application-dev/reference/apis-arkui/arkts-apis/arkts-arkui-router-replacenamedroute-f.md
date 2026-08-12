@@ -11,20 +11,20 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)
-> 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replaceNamedRoute)
+> 替代。replaceNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options:
+**替代接口：** [replaceNamedRoute](@ohos.arkui.UIContext:Router#replaceNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,9 +45,9 @@ function replaceNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## 示例
 
@@ -86,20 +86,20 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)替代。
-> replaceNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replaceNamedRoute-1)替代。
+> replaceNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options:
+**替代接口：** [replaceNamedRoute](@ohos.arkui.UIContext:Router#replaceNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -119,15 +119,15 @@ function replaceNamedRoute(options: NamedRouterOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## 示例
 
@@ -168,20 +168,20 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)
-> 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replaceNamedRoute)
+> 替代。replaceNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options:
+**替代接口：** [replaceNamedRoute](@ohos.arkui.UIContext:Router#replaceNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -203,9 +203,9 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode, callba
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## 示例
 
@@ -244,20 +244,20 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)
-> 替代。replaceNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replaceNamedRoute-3)
+> 替代。replaceNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options:
+**替代接口：** [replaceNamedRoute](@ohos.arkui.UIContext:Router#replaceNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -278,15 +278,15 @@ function replaceNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## 示例
 

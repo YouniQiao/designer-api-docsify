@@ -8,7 +8,7 @@ Defines the DND time type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#DoNotDisturbType
+**Substitutes:** [DoNotDisturbType](ohos.notificationManager/notificationManager#DoNotDisturbType)
 
 <!--Device-notification-export enum DoNotDisturbType--><!--Device-notification-export enum DoNotDisturbType-End-->
 
@@ -30,7 +30,7 @@ Non-DND.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_NONE
+**Substitutes:** [TYPE_NONE](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_NONE)
 
 <!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
@@ -52,7 +52,7 @@ One-shot DND at the specified time segment (only considering the hour and minute
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_ONCE
+**Substitutes:** [TYPE_ONCE](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_ONCE)
 
 <!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
@@ -74,7 +74,7 @@ Daily DND at the specified time segment (only considering the hour and minute).
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_DAILY
+**Substitutes:** [TYPE_DAILY](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_DAILY)
 
 <!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
 
@@ -96,7 +96,7 @@ DND at the specified time segment (considering the year, month, day, hour, and m
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_CLEARLY
+**Substitutes:** [TYPE_CLEARLY](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_CLEARLY)
 
 <!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 

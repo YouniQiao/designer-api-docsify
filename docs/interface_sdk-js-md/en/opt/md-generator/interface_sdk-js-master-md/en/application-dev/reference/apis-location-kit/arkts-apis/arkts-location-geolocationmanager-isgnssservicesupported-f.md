@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## isGnssServiceSupported
@@ -34,4 +34,4 @@ Check whether the GNSS service is supported.
 
 | Error Code ID |
 | --- |
-| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
+| [3301000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) |

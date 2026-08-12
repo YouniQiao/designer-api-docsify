@@ -6,7 +6,7 @@ The LauncherAbilityInfo module provides information about the launcher ability, 
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md) instead.
+> [bundleManager-LauncherAbilityInfo](#LauncherAbilityInfo) instead.
 > 
 > The APIs provided by this module are system APIs.
 
@@ -16,7 +16,7 @@ The LauncherAbilityInfo module provides information about the launcher ability, 
 
 **Deprecated since:** 9
 
-**Substitutes:** [launcherAbilityInfo:LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)
+**Substitutes:** [LauncherAbilityInfo](#LauncherAbilityInfo)
 
 <!--Device-unnamed-export interface LauncherAbilityInfo--><!--Device-unnamed-export interface LauncherAbilityInfo-End-->
 
@@ -40,7 +40,7 @@ Application information of the launcher ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#applicationInfo
+**Substitutes:** [applicationInfo](ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#applicationInfo)
 
 <!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-LauncherAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
@@ -64,7 +64,7 @@ Element name of the launcher ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#elementName
+**Substitutes:** [elementName](ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#elementName)
 
 <!--Device-LauncherAbilityInfo-readonly elementName: ElementName--><!--Device-LauncherAbilityInfo-readonly elementName: ElementName-End-->
 
@@ -88,7 +88,7 @@ ID of the launcher ability icon.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#iconId
+**Substitutes:** [iconId](ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#iconId)
 
 <!--Device-LauncherAbilityInfo-readonly iconId: number--><!--Device-LauncherAbilityInfo-readonly iconId: number-End-->
 
@@ -112,7 +112,7 @@ Timestamp when the launcher ability was installed, in milliseconds.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#installTime
+**Substitutes:** [installTime](ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#installTime)
 
 <!--Device-LauncherAbilityInfo-readonly installTime: number--><!--Device-LauncherAbilityInfo-readonly installTime: number-End-->
 
@@ -136,7 +136,7 @@ ID of the launcher ability label.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#labelId
+**Substitutes:** [labelId](ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#labelId)
 
 <!--Device-LauncherAbilityInfo-readonly labelId: number--><!--Device-LauncherAbilityInfo-readonly labelId: number-End-->
 
@@ -160,7 +160,7 @@ User ID of the launcher ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#userId
+**Substitutes:** [userId](ohos.bundle.launcherBundleManager/launcherBundleManager.LauncherAbilityInfo#userId)
 
 <!--Device-LauncherAbilityInfo-readonly userId: number--><!--Device-LauncherAbilityInfo-readonly userId: number-End-->
 

@@ -41,14 +41,14 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000204](../errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) | The target bundle is not in u1. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [16000202](../errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) | Invalid main element type. |
-| [16000203](../errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) | Cannot change the keep-alive status. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000081](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) | The target bundle is not in u1. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) | Invalid main element type. |
+| [16000203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) | Cannot change the keep-alive status. |
 
 ## 示例
 

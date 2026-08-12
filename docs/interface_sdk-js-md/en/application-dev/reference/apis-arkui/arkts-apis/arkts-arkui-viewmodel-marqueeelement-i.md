@@ -2,7 +2,7 @@
 
 The &lt;marquee&gt; component inserts scrolling text, which is displayed in a single line by default.When the text length exceeds the display area of the component, the marquee effect is displayed.
 
-**Inheritance/Implementation:** MarqueeElement extends [Element](arkts-arkui-viewmodel-element-i.md)
+**Inheritance/Implementation:** MarqueeElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
 
 **Since:** 4
 

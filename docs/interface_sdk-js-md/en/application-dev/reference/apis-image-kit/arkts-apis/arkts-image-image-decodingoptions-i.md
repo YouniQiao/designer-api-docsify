@@ -13,7 +13,7 @@ Describes the image decoding options.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## cropAndScaleStrategy
@@ -63,7 +63,7 @@ desiredDynamicRange?: DecodingDynamicRange
 Desired dynamic range. The default value is **SDR**.
 
 This property cannot be set for an image source created using   
-[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource). By default, the image source is decoded as SDR content.
+[CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#CreateIncrementalSource). By default, the image source is decoded as SDR content.
 
 If the platform does not support HDR, the setting is invalid and the content is decoded as SDR content by default.
 
@@ -85,7 +85,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Pixel format for decoding. The default value is **RGBA_8888**. Only RGBA_8888, BGRA_8888, and RGB_565 are supported. RGB_565 is not supported for images with alpha channels, such as PNG, GIF, ICO, and WEBP.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 7
 
@@ -110,7 +110,7 @@ Rectangle specified by **Region** in the decoded image. When the original image 
 Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include   
 **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
-**Type:** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
+**Type:** Region
 
 **Since:** 7
 
@@ -135,7 +135,7 @@ Expected output size. The value must be a positive integer and defaults to the o
 Note: If both **desiredSize** and **desiredRegion** are passed to the decoding API, you must also include   
 **cropAndScaleStrategy** to determine whether to crop or scale first. **CROP_FIRST** is recommended.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 7
 

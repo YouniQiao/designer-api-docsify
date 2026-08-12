@@ -6,7 +6,7 @@ Provides methods to operate or manage Bluetooth.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager
+**Substitutes:** [bluetoothManager](ohos.bluetoothManager)
 
 <!--Device-unnamed-declare namespace bluetooth--><!--Device-unnamed-declare namespace bluetooth-End-->
 
@@ -15,7 +15,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

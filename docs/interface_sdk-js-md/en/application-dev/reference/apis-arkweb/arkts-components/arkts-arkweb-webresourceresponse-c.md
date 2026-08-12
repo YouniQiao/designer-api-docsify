@@ -168,7 +168,7 @@ Gets the response headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the response headers. |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Return the response headers. |
 
 ## getResponseIsReady
 
@@ -334,7 +334,7 @@ Sets the response headers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | Yes | the response headers. |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes | the response headers. |
 
 ## setResponseIsReady
 

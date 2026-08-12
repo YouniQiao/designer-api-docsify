@@ -64,7 +64,7 @@ public accessibilityDescription?: ResourceStr
 
 默认值："单指双击即可执行"。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -120,7 +120,7 @@ public accessibilityText?: ResourceStr
 
 默认值：有label时默认值为当前项label属性内容，没有设置label时，默认值为" "。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -194,7 +194,7 @@ public label?: ResourceStr
 
 长按对话框的标签文本。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -236,7 +236,7 @@ public value: ResourceStr
 
 默认值：''。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **默认值：** ''
 

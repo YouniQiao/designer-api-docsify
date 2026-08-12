@@ -36,7 +36,7 @@ Send authentication to an agent service host.
 
 | Error Code ID |
 | --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
+| [35600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
 
 ## sendData
 
@@ -66,4 +66,4 @@ Send data to an agent service host.
 
 | Error Code ID |
 | --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) |
+| [35600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#35600002-failed-to-send-ipc-messages) |

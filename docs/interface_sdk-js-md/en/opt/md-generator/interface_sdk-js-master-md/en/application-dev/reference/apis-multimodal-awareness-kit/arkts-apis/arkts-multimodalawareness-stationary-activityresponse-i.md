@@ -11,7 +11,7 @@ Defines the response interface to receive the device status.
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+import { stationary } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## state

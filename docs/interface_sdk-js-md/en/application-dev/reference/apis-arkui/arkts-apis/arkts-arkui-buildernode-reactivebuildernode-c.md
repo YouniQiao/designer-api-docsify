@@ -32,7 +32,7 @@ Build the ReactiveBuilderNode with the builder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Defines the builder that will be called to build the node. |
+| builder | CustomBuilder | Yes | Defines the builder that will be called to build the node. |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | No | Defines the options that will be used when building. |
 
 ## constructor
@@ -201,7 +201,7 @@ Notes:The input coordinate values need to be converted to pixels (px). Left mous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [InputEventType](arkts-arkui-inputeventtype-t.md) | Yes | The event which will be sent to the targetNode. |
-| competitionStrategy | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | No | The competition strategy. |
+| competitionStrategy | CompetitionStrategy | No | The competition strategy. |
 
 **Return value:**
 
@@ -233,7 +233,7 @@ Dispatch the touchEvent to the FrameNode in the current ReactiveBuilderNode.post
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | Yes | The touchEvent which will be sent. |
+| event | TouchEvent | Yes | The touchEvent which will be sent. |
 
 **Return value:**
 

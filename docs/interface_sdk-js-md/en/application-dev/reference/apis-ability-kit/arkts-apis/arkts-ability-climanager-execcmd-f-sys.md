@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## execCmd
@@ -39,14 +39,14 @@ Execute a command. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;CliSessionInfo&gt; | Promise used to return CliSessionInfo. |
+| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; | Promise used to return CliSessionInfo. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 35600031 | Maximum number of processes has been reached. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | 35600050 | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
 

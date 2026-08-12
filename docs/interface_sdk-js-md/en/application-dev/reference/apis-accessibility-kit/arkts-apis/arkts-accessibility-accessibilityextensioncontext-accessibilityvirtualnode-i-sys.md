@@ -284,7 +284,7 @@ rect?: Rect
 
 Area of the accessibility virtual node.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 26.0.0
 
@@ -372,7 +372,7 @@ touchPosition?: TouchPosition
 
 Click position of the accessibility virtual node.
 
-**Type:** [TouchPosition](arkts-accessibility-touchposition-t-sys.md)
+**Type:** [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md)
 
 **Since:** 26.0.0
 

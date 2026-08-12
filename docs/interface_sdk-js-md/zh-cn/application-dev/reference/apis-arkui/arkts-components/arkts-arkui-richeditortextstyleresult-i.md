@@ -24,7 +24,7 @@ decoration: DecorationStyleResult
 
 文本装饰线样式信息。
 
-**类型：** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
+**类型：** DecorationStyleResult
 
 **起始版本：** 10
 
@@ -46,7 +46,7 @@ fontColor: ResourceColor
 
 文本颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -134,7 +134,7 @@ fontStyle: FontStyle
 
 字体样式。
 
-**类型：** [FontStyle](../arkts-apis/arkts-arkui-enums-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 10
 
@@ -248,7 +248,7 @@ strokeColor?: ResourceColor
 
 文本描边颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 23
 
@@ -272,7 +272,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
+**类型：** StrokeJoinStyle
 
 **起始版本：** 26.0.0
 
@@ -318,7 +318,7 @@ textBackgroundStyle?: TextBackgroundStyle
 
 文本背景样式。
 
-**类型：** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
+**类型：** TextBackgroundStyle
 
 **起始版本：** 18
 

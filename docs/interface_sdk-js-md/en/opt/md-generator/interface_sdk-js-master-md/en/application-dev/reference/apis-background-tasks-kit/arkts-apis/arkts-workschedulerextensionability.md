@@ -8,7 +8,7 @@ The **WorkSchedulerExtensionAbility** module provides callbacks for deferred tas
 ## Modules to Import
 
 ```TypeScript
-import { WorkSchedulerExtensionContext } from 'kits/@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

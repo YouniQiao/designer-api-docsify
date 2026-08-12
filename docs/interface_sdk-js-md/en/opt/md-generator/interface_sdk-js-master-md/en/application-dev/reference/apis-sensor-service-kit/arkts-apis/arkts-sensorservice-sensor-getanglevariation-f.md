@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getAngleVariation
@@ -25,16 +25,16 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| currentRotationMatrix | Array&lt;number&gt; | Yes |
-| preRotationMatrix | Array&lt;number&gt; | Yes |
+| currentRotationMatrix | Array & lt;number & gt; | Yes |
+| preRotationMatrix | Array & lt;number & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 
@@ -93,21 +93,21 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| currentRotationMatrix | Array&lt;number&gt; | Yes |
-| preRotationMatrix | Array&lt;number&gt; | Yes |
+| currentRotationMatrix | Array & lt;number & gt; | Yes |
+| preRotationMatrix | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

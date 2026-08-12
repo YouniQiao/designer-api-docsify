@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getMinHeightSync
@@ -32,7 +32,7 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

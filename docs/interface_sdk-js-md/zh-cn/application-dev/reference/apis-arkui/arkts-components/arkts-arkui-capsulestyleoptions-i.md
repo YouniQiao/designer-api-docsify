@@ -2,9 +2,9 @@
 
 胶囊样式选项。
 
-继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
+继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)。
 
-**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **起始版本：** 10
 
@@ -28,7 +28,7 @@ API version 10：'#33006cde'
 
 API version 11及以上：'#33007dff'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -54,7 +54,7 @@ Capsule进度条圆角半径（不支持百分比设置）。
 
 设置非法数值时，按照默认值处理。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** LengthMetrics
 
 **默认值：** min(width, height) / 2
 
@@ -84,7 +84,7 @@ borderWidth?: Length
 
 超出取值范围或设置非法值时按默认值处理。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 10
 
@@ -110,7 +110,7 @@ content?: ResourceStr
 
 从API version 20开始，支持Resource类型。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 
@@ -136,9 +136,9 @@ font?: Font
 
 文本大小（不支持百分比设置）：12fp 
 
-其他文本参数跟随[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件的主题值。
+其他文本参数跟随[Text](./text)组件的主题值。
 
-**类型：** [Font](../arkts-apis/arkts-arkui-font-i.md)
+**类型：** Font
 
 **起始版本：** 10
 
@@ -162,7 +162,7 @@ fontColor?: ResourceColor
 
 默认值：'#ff182431'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 

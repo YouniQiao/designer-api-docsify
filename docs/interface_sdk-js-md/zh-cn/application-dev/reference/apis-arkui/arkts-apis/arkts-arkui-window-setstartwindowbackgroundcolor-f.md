@@ -26,7 +26,7 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 需要设置的UIAbility所属模块名，moduleName的长度范围为0-200字节，仅支持设置当前同一应用包名内的模块。模块名由开发者在 [module.json5配置文件](../../../quick-start/module-configuration-file.md#配置文件标签)中的name字段指定。 |
 | abilityName | string | 是 | 需要设置的UIAbility名字，abilityName的长度范围为0-200字节，仅支持设置当前同一应用包名内的abilityName。UIAbility名由开发者 在[module.json5配置文件abilities标签](../../../quick-start/module-configuration-file.md#abilities标签)的name字段指定。 |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | 是 | 设置的启动页背景色。 |
+| color | ColorMetrics | 是 | 设置的启动页背景色。 |
 
 **返回值：**
 
@@ -38,9 +38,9 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal task error. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. Possible cause: Internal task error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
 ## 示例
 

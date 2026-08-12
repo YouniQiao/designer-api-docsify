@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from 'kits/@kit.AbilityKit';
+import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
 ## getLauncherAbilityResourceInfoList
@@ -33,7 +33,7 @@ Obtains the launcher ability resource information of each application correspond
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | optionsList | Array&lt;[BundleOptions](arkts-ability-bundleinfo-bundleoptions-i-sys.md)&gt; | Yes | Parameters of the applications to query.&lt;br&gt;**bundleName**, **moduleName**, and **abilityName** are mandatory parameters.&lt;br&gt;Value range of **appIndex**: [0, 5]. The default value is **0** if not specified.&lt;br&gt;**userId** is an invalid parameter. It does not need to be passed, and will not take effect if passed. |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource information flags, which indicate the type of resource information to obtain. The value is an enumerated value of [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md), excluding [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
+| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource information flags, which indicate the type of resource information to obtain. The value is an enumerated value of [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag), excluding [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag).GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL and [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md#ResourceFlag).GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY. |
 
 **Return value:**
 
@@ -45,13 +45,13 @@ Obtains the launcher ability resource information of each application correspond
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
+| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 
 ## Examples
 

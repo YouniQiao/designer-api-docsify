@@ -32,7 +32,7 @@ HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYP
 HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002
 ```
 
-表示[CryptoExtensionAbility](arkts-security-cryptoextensionability.md)的名称。
+表示[CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#CryptoExtensionAbility)的名称。
 
 **起始版本：** 22
 
@@ -81,7 +81,7 @@ HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE
 ```
 
 表示证书链对应密钥的使用类型，具体类型详见  
-[CertificatePurpose定义](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)。
+[CertificatePurpose定义](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md#CertificatePurpose)。
 
 **起始版本：** 22
 

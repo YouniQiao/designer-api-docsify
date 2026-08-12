@@ -11,7 +11,7 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -56,7 +56,7 @@ Compares this **Buffer** object with another object.
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -109,7 +109,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -148,8 +148,8 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[number, number]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
-| [IterableIterator&lt;[number, number]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, number]&gt; |
 
 ## Examples
 
@@ -193,7 +193,7 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| otherBuffer | Uint8Array \| [Buffer](#buffer) | Yes |
+| otherBuffer | Uint8Array \| [Buffer](arkts-arkts-buffer-buffer-c.md) | Yes |
 
 **Return value:**
 
@@ -241,7 +241,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| Buffer \| Uint8Array \| number \| number \| number | Yes |
+| value | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array \| number \| number \| number | Yes |
 | offset | number | No |
 | end | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
@@ -256,7 +256,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## includes
 
@@ -278,7 +278,7 @@ Checks whether this **Buffer** object contains the specified value.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes |
+| value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
 | [byteOffset](#byteoffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
@@ -309,7 +309,7 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes |
+| value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
 | [byteOffset](#byteoffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
@@ -339,7 +339,7 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;number&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## Examples
 
@@ -382,7 +382,7 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| number \| number \| number \| Buffer \| Uint8Array | Yes |
+| value | string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
 | [byteOffset](#byteoffset) | number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
@@ -424,7 +424,7 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -474,7 +474,7 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -524,7 +524,7 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -573,7 +573,7 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -623,7 +623,7 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -671,7 +671,7 @@ Reads a 64-bit, little-endian, double-precision floating-point number from this 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -719,7 +719,7 @@ Reads a 32-bit, big-endian, single-precision floating-point number from this **B
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -767,7 +767,7 @@ Reads a 32-bit, little-endian, single-precision floating-point number from this 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -815,7 +815,7 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -863,7 +863,7 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -911,7 +911,7 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -959,7 +959,7 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1007,7 +1007,7 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1058,7 +1058,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1108,7 +1108,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1156,7 +1156,7 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1206,7 +1206,7 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1256,7 +1256,7 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1304,7 +1304,7 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1352,7 +1352,7 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1403,7 +1403,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1452,7 +1452,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1538,7 +1538,7 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 | Error Code ID |
 | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1579,7 +1579,7 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 | Error Code ID |
 | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1620,7 +1620,7 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 | Error Code ID |
 | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) |
+| [10200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) |
 
 ## Examples
 
@@ -1731,7 +1731,7 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;number&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## Examples
 
@@ -1790,7 +1790,7 @@ Writes a string of the specified length to this **Buffer** object at the specifi
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1841,7 +1841,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1887,7 +1887,7 @@ Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1933,7 +1933,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -1979,7 +1979,7 @@ Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object a
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2025,7 +2025,7 @@ Writes a 64-bit, big-endian, double-precision floating-point number to this **Bu
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2071,7 +2071,7 @@ Writes a 64-bit, little-endian, double-precision floating-point number to this *
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2117,7 +2117,7 @@ Writes a 32-bit, big-endian, single-precision floating-point number to this **Bu
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2163,7 +2163,7 @@ Writes a 32-bit, little-endian, single-precision floating-point number to this *
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2209,7 +2209,7 @@ Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2255,7 +2255,7 @@ Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2301,7 +2301,7 @@ Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2347,7 +2347,7 @@ Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2393,7 +2393,7 @@ Writes an 8-bit signed integer to this **Buffer** object at the specified offset
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2443,7 +2443,7 @@ Writes a big-endian signed value of the specified length to this **Buffer** obje
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2490,7 +2490,7 @@ Writes a little-endian signed value of the specified length to this **Buffer** o
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2536,7 +2536,7 @@ Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2585,7 +2585,7 @@ Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2634,7 +2634,7 @@ Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2680,7 +2680,7 @@ Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2726,7 +2726,7 @@ Writes an 8-bit unsigned integer to this **Buffer** object at the specified offs
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2782,7 +2782,7 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -2829,7 +2829,7 @@ Writes an unsigned little-endian value of the specified length to this **Buffer*
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 

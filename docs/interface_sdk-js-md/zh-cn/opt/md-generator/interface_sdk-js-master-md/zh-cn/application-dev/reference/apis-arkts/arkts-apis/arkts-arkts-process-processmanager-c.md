@@ -253,7 +253,7 @@ kill(signal: number, pid: number): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| signal | number | 是 |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number | 是 |
 | pid | number | 是 |
 
 **返回值：**

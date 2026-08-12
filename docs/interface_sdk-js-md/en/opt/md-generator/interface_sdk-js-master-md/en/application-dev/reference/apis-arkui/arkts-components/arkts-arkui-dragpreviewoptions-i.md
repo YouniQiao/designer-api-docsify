@@ -20,7 +20,7 @@ Default value: **DragPreviewMode.AUTO**
 
 If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **DragPreviewMode.AUTO** takes precedence and the other values are ignored.
 
-**Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;DragPreviewMode&gt;
+**Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **Since:** 11
 

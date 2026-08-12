@@ -6,7 +6,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md/arkts-arkui-savebuttonoptions-i.md)
+**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md#SaveButtonOptions)
 
 <!--Device-picker-class PhotoSaveOptions--><!--Device-picker-class PhotoSaveOptions-End-->
 
@@ -26,7 +26,7 @@ newFileNames?: Array<string>
 
 **废弃版本：** 18
 
-**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md/arkts-arkui-savebuttonoptions-i.md)
+**替代接口：** [SaveButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-savebuttonoptions-i.md#SaveButtonOptions)
 
 <!--Device-PhotoSaveOptions-newFileNames?: Array<string>--><!--Device-PhotoSaveOptions-newFileNames?: Array<string>-End-->
 

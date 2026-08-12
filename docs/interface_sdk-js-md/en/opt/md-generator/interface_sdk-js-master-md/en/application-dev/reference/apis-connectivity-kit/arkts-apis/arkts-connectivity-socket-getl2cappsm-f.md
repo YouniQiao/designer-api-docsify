@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.ConnectivityKit';
+import { socket } from '@kit.ConnectivityKit';
 ```
 
 ## getL2capPsm

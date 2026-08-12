@@ -1,6 +1,6 @@
 # FileSelectorResult
 
-Defines the file selector result, related to {@link onFileSelectorShow} method.
+Defines the file selector result, related to [onFileSelectorShow](onFileSelectorShow) method.
 
 **起始版本：** 23
 

@@ -6,7 +6,7 @@ Represents the certificate information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.enterprise.securityManager:securityManager.CertBlob](arkts-mdm-securitymanager-certblob-i.md)
+**Substitutes:** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#CertBlob)
 
 <!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
 
@@ -15,7 +15,7 @@ Represents the certificate information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from 'kits/@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## alias
@@ -32,7 +32,7 @@ Certificate alias. The value length must be less than 40 characters.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** @ohos.enterprise.securityManager:securityManager.alias
+**Substitutes:** [alias](@ohos.enterprise.securityManager:securityManager.alias)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +54,7 @@ Binary content of the certificate.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** @ohos.enterprise.securityManager:securityManager.inData
+**Substitutes:** [inData](@ohos.enterprise.securityManager:securityManager.inData)
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -20,4 +20,4 @@ Defines the length property with string, number and resource unit.
 | --- |
 | string |
 | number |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| [Resource](arkts-arkui-resource-t.md) |

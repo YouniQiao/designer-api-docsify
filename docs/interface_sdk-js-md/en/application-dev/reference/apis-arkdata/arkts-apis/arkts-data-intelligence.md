@@ -13,7 +13,7 @@ Provides methods for intelligent data processing.
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## Summary

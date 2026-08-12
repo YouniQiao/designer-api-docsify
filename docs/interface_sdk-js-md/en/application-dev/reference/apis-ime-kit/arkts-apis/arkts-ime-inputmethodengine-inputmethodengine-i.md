@@ -1,7 +1,7 @@
 # InputMethodEngine
 
 In the following API examples, you must first use   
-[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getInputMethodEngine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -9,7 +9,7 @@ In the following API examples, you must first use
 
 **Deprecated since:** 23
 
-**Substitutes:** [inputMethodEngine.InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)
+**Substitutes:** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#InputMethodAbility)
 
 <!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
 
@@ -18,7 +18,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('inputStart')
@@ -38,7 +38,7 @@ Disables listening for the input method binding event.
 
 **Deprecated since:** 23
 
-**Substitutes:** inputMethodEngine.InputMethodAbility.off(type:
+**Substitutes:** [off](inputMethodEngine.InputMethodAbility.off(type:)
 
 <!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -75,7 +75,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Deprecated since:** 23
 
-**Substitutes:** inputMethodEngine.InputMethodAbility.off(type:
+**Substitutes:** [off](inputMethodEngine.InputMethodAbility.off(type:)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -109,7 +109,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Deprecated since:** 23
 
-**Substitutes:** inputMethodEngine.InputMethodAbility.off(type:
+**Substitutes:** [off](inputMethodEngine.InputMethodAbility.off(type:)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -146,7 +146,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Deprecated since:** 23
 
-**Substitutes:** inputMethodEngine.InputMethodAbility.on(type:
+**Substitutes:** [on](inputMethodEngine.InputMethodAbility.on(type:)
 
 <!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -184,7 +184,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Deprecated since:** 23
 
-**Substitutes:** inputMethodEngine.InputMethodAbility.on(type:
+**Substitutes:** [on](inputMethodEngine.InputMethodAbility.on(type:)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -222,7 +222,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Deprecated since:** 23
 
-**Substitutes:** inputMethodEngine.InputMethodAbility.on(type:
+**Substitutes:** [on](inputMethodEngine.InputMethodAbility.on(type:)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 

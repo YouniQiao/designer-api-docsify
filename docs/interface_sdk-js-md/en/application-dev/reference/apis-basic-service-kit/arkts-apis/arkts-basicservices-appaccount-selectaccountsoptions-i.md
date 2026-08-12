@@ -13,7 +13,7 @@ Defines the options for selecting accounts.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## allowedAccounts
@@ -24,7 +24,7 @@ allowedAccounts?: Array<AppAccountInfo>
 
 Array of allowed accounts. By default, no value is passed in.
 
-**Type:** Array&lt;AppAccountInfo&gt;
+**Type:** Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;
 
 **Since:** 9
 

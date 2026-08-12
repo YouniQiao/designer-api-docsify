@@ -15,7 +15,7 @@ Before calling the following APIs, you must use [floatView.create()](arkts-arkui
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getWindowProperties
@@ -46,8 +46,8 @@ Obtains the properties of the float view.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window has not started, has stopped, or is in an error state. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window has not started, has stopped, or is in an error state. |
 
 ## offLimitsChange
 
@@ -71,13 +71,13 @@ Unregisters the callback for listening to limit changes of the float view.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | No | Callback used to return the limit change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the limit change event of the float view are unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | No | Callback used to return the limit change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the limit change event of the float view are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## offRectChange
 
@@ -101,13 +101,13 @@ Unregisters the callback for listening to changes in the rectangular area of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | No | Callback used to return the rectangle area change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the rectangle area change event of the float view are unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | No | Callback used to return the rectangle area change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the rectangle area change event of the float view are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## offStateChange
 
@@ -131,13 +131,13 @@ Unregisters the callback for listening to float view state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | No | Callback used to return the status change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the status change event of the float view are unregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | No | Callback used to return the status change information of the current float view. If a value is passed in, the corresponding callback is unregistered. If no value is passed in, all callbacks associated with the status change event of the float view are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## onLimitsChange
 
@@ -161,14 +161,14 @@ Registers a callback for listening to limit changes of the float view. When the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | Yes | Callback used to return the limit change information of the current float view. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | Yes | Callback used to return the limit change information of the current float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300030](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
 ## onRectChange
 
@@ -192,14 +192,14 @@ Registers a callback for listening to changes in the rectangular area (position 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | Yes | Callback used to return the rectangle area change information of the current float view. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | Yes | Callback used to return the rectangle area change information of the current float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300030](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
 ## onStateChange
 
@@ -223,14 +223,14 @@ Registers a callback for listening to float view state changes. To prevent memor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | Yes | Callback used to return the status change information of the current float view. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | Yes | Callback used to return the status change information of the current float view. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300030](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The callback has already registered. |
 
 ## restoreMainWindow
 
@@ -254,7 +254,7 @@ Restores the main window of the float view to display in the foreground. If this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the [onNewWant](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md/arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md#onabilitycreate) callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
+| wantParameters | Record&lt;string, Object&gt; | No | Custom parameters passed to the main window when the main window of the float view is restored. The main window will receive the parameters when the [onNewWant](@ohos.app.ability.AbilityLifecycleCallback:AbilityLifecycleCallback#onNewWant?(ability: UIAbility)) callback is triggered. The default value is empty, indicating that no custom parameters are passed to the main window. |
 
 **Return value:**
 
@@ -266,10 +266,10 @@ Restores the main window of the float view to display in the foreground. If this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300032](../errorcode-window.md#1300032-failed-to-restore-the-main-window) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300032](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300032-failed-to-restore-the-main-window) | Failed to restore the main window. Possible cause: 1. User has never clicked the float view window before restore. 2. The float view window is not in the foreground. 3. The main window is in PAUSED lifecycle state. 4. The main window is in background during recent. |
+| [1300031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started when restoring. |
 
 ## setFloatViewVisibilityInApp
 
@@ -307,8 +307,8 @@ After the float view is created and before this API is called, the float view is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
 
 ## setUIContext
 
@@ -333,7 +333,7 @@ Loads the content of a page, with its path specified in the current project, for
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page content which needs to be loaded to the window. The path needs to be configured in the **main_pages.json** file of the project. The path cannot be a relative path and must be the same as the value of **src** in the **main_pages.json** file. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. By default, the value is empty. |
+| storage | LocalStorage | No | Page-level UI state storage unit, which is used to transfer the state attribute for the page. By default, the value is empty. |
 
 **Return value:**
 
@@ -345,8 +345,8 @@ Loads the content of a page, with its path specified in the current project, for
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible causes: Invalid path. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible causes: Invalid path. |
 
 ## setUIContextByName
 
@@ -371,7 +371,7 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the named route page. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | The data object shared within the content instance loaded by the window. |
+| storage | LocalStorage | No | The data object shared within the content instance loaded by the window. |
 
 **Return value:**
 
@@ -383,8 +383,8 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible causes: Invalid name. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible causes: Invalid name. |
 
 ## setWindowSize
 
@@ -393,7 +393,7 @@ setWindowSize(size: window.Size): Promise<void>
 ```
 
 Sets the size of the float view. You are advised to call the  
-[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the  
+[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the  
 [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
@@ -410,7 +410,7 @@ Sets the size of the float view. You are advised to call the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
+| size | window.Size | Yes | Window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API. |
 
 **Return value:**
 
@@ -422,9 +422,9 @@ Sets the size of the float view. You are advised to call the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: The value of the size is less than or equal to 0. |
 
 ## start
 
@@ -434,7 +434,7 @@ start(): Promise<void>
 
 Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the  
 [onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call  
-**start ()** after calling [setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext). This API uses a promise to return the result.
+**start ()** after calling [setUIContext()](#setUIContext). This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -458,13 +458,13 @@ Starts the float view. The return value of this API does not indicate that the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
-| [1300033](../errorcode-window.md#1300033-failed-to-start-the-float-view) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The float view state does not support this operation. Possible cause: The float view is stopping. |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is starting or has already started. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300034](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started floating ball or pip window. |
+| [1300033](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300033-failed-to-start-the-float-view) | Failed to start float view. Possible causes: 1. Start multiple float views. 2. The main window of context is not foreground. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. Possible cause: The application does not have the permission required to call the API. |
+| [1300031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | The float view state does not support this operation. Possible cause: The float view is stopping. |
+| [1300030](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is starting or has already started. |
 
 ## stop
 
@@ -495,10 +495,10 @@ Stops the float view. The return value of this API does not indicate that the st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) | This operation is not supported on the float view in the current state. Possible cause: The float view window is not started. |
+| [1300030](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) | Repeated operations on the float view. Possible cause: The float view is stopping or has already stopped. |
 
 ## switchTemplate
 
@@ -507,7 +507,7 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
 Switches the template of the flow view and changes the window size. You are advised to call the  
-[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the  
+[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the  
 [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
@@ -524,7 +524,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API. |
+| templateProperty | [TemplateProperty](arkts-arkui-floatview-templateproperty-i.md) | Yes | Target flow view template and window size. It is recommended that the size meet the limits returned by the [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API. |
 
 **Return value:**
 
@@ -536,7 +536,7 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal IPC error. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: The float view controller object is null. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid template type. 2. The value of the size is less than or equal to 0. |
 

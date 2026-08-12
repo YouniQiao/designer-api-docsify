@@ -13,7 +13,7 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionAbility } from 'kits/@kit.DistributedServiceKit';
+import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
 ```
 
 ## onCollaborate
@@ -38,7 +38,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **" ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **" ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 

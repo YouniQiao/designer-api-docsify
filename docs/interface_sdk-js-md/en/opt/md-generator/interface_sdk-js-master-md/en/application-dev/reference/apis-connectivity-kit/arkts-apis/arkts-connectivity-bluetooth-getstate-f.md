@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getState
@@ -18,7 +18,7 @@ Obtains the Bluetooth status of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getState
+**Substitutes:** [getState](ohos.bluetoothManager/bluetoothManager.getState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

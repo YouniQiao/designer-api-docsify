@@ -6,7 +6,7 @@ Callback invoked when the step counter sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#PedometerResponse
+**Substitutes:** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md#PedometerResponse)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -17,7 +17,7 @@ Callback invoked when the step counter sensor data changes.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## steps
@@ -34,7 +34,7 @@ Number of counted steps after the sensor is restarted.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#PedometerResponse.steps
+**Substitutes:** [steps](ohos.sensor/sensor#PedometerResponse.steps)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 

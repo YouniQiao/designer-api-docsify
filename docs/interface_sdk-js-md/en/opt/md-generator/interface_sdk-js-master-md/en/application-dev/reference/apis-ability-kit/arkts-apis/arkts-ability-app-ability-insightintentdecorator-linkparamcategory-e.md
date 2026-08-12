@@ -34,7 +34,7 @@ WANT = 'want'
 ```
 
 Category of want. Intent parameters are passed to the application through the **parameters** field in  
-[Want](arkts-ability-app-ability-want-want-c.md).
+[Want](arkts-ability-app-ability-want-want-c.md#Want).
 
 **Since:** 20
 

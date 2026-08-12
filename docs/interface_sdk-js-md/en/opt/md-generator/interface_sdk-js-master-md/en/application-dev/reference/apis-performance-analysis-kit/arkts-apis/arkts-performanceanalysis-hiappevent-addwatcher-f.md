@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## addWatcher
@@ -26,7 +26,7 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-watcher-i.md) | Yes |
+| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes |
 
 **Return value:**
 
@@ -38,12 +38,12 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11102001](../errorcode-hiappevent.md#11102001-invalid-watcher-name) |
-| [11102003](../errorcode-hiappevent.md#11102003-invalid-event-number) |
-| [11102002](../errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) |
-| [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) |
-| [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [11102001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102001-invalid-watcher-name) |
+| [11102003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102003-invalid-event-number) |
+| [11102002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) |
+| [11102005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102005-invalid-timeout-value) |
+| [11102004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102004-invalid-event-size) |
 
 ## Examples
 

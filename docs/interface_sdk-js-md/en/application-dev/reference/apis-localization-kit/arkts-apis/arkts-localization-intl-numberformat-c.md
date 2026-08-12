@@ -13,7 +13,7 @@ Provides the API for formatting number strings.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor

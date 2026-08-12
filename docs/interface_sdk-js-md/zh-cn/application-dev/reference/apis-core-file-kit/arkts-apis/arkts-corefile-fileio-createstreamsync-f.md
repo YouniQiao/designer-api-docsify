@@ -14,7 +14,7 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:createStreamSync](arkts-corefile-fileio-createstreamsync-f.md#createstreamsync)
+**替代接口：** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createStreamSync)
 
 <!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
 
@@ -31,5 +31,5 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) | 返回文件流的结果。 |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) | 返回文件流的结果。 |
 

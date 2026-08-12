@@ -1,9 +1,9 @@
 # AnimatedDrawableDescriptor
 
-Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the [Image](../../apis-arkui/arkts-components/arkts-arkui-image-i) component. It inherits from   
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
+Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the [Image](./@internal/component/ets/image) component. It inherits from   
+[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
 
-**Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Defines a descriptor object used to play animated content (for example, **PixelM
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -39,7 +39,7 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pixelMaps | Array&lt;image.PixelMap&gt; | Yes |
+| pixelMaps | Array & lt;image.PixelMap & gt; | Yes |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No |
 
 ## constructor
@@ -64,7 +64,7 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array&lt;image.PixelMap&gt; | Yes |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array & lt;image.PixelMap & gt; | Yes |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No |
 
 ## Examples

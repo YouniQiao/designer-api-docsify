@@ -27,15 +27,15 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## 示例
 
@@ -90,14 +90,14 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## 示例
 

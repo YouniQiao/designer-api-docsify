@@ -13,7 +13,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [PickerIndicatorStyle](arkts-arkui-uipickercomponent-pickerindicatorstyle-i.md) | 选中项指示器样式的参数说明。 |
-| [UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：  除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件： |
+| [UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md) | 除支持[通用属性](./common)外，还支持以下属性：  除支持[通用事件](./common)外，还支持以下事件： |
 | [UIPickerComponentOptions](arkts-arkui-uipickercomponent-uipickercomponentoptions-i.md) | UIPickerComponent容器的参数说明。 |
 
 ### 枚举
@@ -26,5 +26,5 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md) | 定义[onChange](onChange)和[onScrollStop](onScrollStop)事件的回调类型。 |
+| [OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md) | 定义[onChange](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md#onChange)和[onScrollStop](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md#onScrollStop)事件的回调类型。 |
 

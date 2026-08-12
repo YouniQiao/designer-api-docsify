@@ -20,7 +20,7 @@ Sets the vertical alignment relative to the anchor component.
 
 Anonymous Object Rectification
 
-**类型：** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
+**类型：** VerticalAlign
 
 **起始版本：** 23
 

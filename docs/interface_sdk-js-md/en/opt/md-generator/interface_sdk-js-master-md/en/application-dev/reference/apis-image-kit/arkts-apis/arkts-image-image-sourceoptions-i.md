@@ -11,7 +11,7 @@ Defines image source initialization options.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## sourceDensity
@@ -22,7 +22,7 @@ sourceDensity: number
 
 Pixel density of the image resource, in ppi.
 
-If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md) and   
+If **desiredSize** is not set in [DecodingOptions](arkts-image-image-decodingoptions-i.md#DecodingOptions) and   
 **SourceOptions.sourceDensity** and **DecodingOptions.fitDensity** are not 0, the PixelMap output after decoding will be scaled.
 
 The formula for calculating the width after scaling is as follows (the same applies to the height): (width * fitDensity + (sourceDensity >> 1)) / sourceDensity.
@@ -47,7 +47,7 @@ sourcePixelFormat?: PixelMapFormat
 
 Image pixel format. The default value is **UNKNOWN**.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 9
 
@@ -67,7 +67,7 @@ sourceSize?: Size
 
 Image pixel size. The default value is null.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 9
 

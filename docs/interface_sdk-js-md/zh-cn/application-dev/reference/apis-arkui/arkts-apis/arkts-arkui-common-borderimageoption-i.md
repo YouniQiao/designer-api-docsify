@@ -40,7 +40,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Amount by which the border image is extended beyond the border box.
 
-**类型：** [Length](arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Length](arkts-arkui-length-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -84,7 +84,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Slice width of the upper left corner, upper right corner, lower left corner,and lower right corner of the border image.
 
-**类型：** [Length](arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Length](arkts-arkui-length-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -106,7 +106,7 @@ source?: string | Resource | LinearGradientOptions
 
 Border image source
 
-**类型：** string \| Resource \| LinearGradientOptions
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [LinearGradientOptions](arkts-arkui-common-lineargradientoptions-i.md)
 
 **起始版本：** 23
 
@@ -126,7 +126,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Width of the border image.
 
-**类型：** [Length](arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Length](arkts-arkui-length-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 

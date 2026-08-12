@@ -6,7 +6,7 @@ Defines the response of ShowDialog.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ShowDialogSuccessResponse
+**Substitutes:** [ShowDialogSuccessResponse](ohos.promptAction/promptAction.ShowDialogSuccessResponse)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
@@ -15,7 +15,7 @@ Defines the response of ShowDialog.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## index
@@ -32,7 +32,7 @@ Defines the index of data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ShowDialogSuccessResponse#index
+**Substitutes:** [index](ohos.promptAction/promptAction.ShowDialogSuccessResponse#index)
 
 <!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 

@@ -26,7 +26,7 @@ function isCaptured(): boolean
 
 | 错误码ID |
 | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 
@@ -59,7 +59,7 @@ function isCaptured(bundleNameList: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundleNameList | Array&lt;string&gt; | 是 |
+| bundleNameList | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
@@ -71,8 +71,8 @@ function isCaptured(bundleNameList: Array<string>): boolean
 
 | 错误码ID |
 | --- |
-| [1400004](../errorcode-display.md#1400004-参数异常) |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [1400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400004-参数异常) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

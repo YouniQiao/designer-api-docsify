@@ -12,7 +12,7 @@ Synchronizes a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fsyncSync](arkts-corefile-fileio-fsyncsync-f.md#fsyncsync)
+**Substitutes:** [fsyncSync](arkts-corefile-file-fs-fsyncsync-f.md#fsyncSync)
 
 <!--Device-unnamed-declare function fsyncSync(fd: number): void--><!--Device-unnamed-declare function fsyncSync(fd: number): void-End-->
 

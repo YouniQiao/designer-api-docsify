@@ -20,13 +20,13 @@ function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AlternateIconInfo&gt;&gt; |
+| Promise & lt;Array & lt;AlternateIconInfo & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700311](../errorcode-bundle.md#17700311-查询备用图标失败) |
+| [17700311](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700311-查询备用图标失败) |
 
 ## 示例
 

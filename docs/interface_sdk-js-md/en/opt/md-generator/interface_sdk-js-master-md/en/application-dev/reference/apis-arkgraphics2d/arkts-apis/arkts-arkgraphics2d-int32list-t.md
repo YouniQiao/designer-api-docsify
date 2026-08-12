@@ -17,4 +17,4 @@ WebGL 1.0
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Int32Array |
-| [GLint[]](arkts-arkgraphics2d-glint-t.md) |
+| [GLint](arkts-arkgraphics2d-glint-t.md)[] |

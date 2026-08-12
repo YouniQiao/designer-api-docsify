@@ -308,7 +308,7 @@ static translate(options: TranslateOptions): TransitionEffect<"translate">
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | 是 | 组件转场时的平移效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的平移距离。&lt;br/&gt;-y：纵向的平移距离。&lt;br/&gt;-z：竖向的平移距离。 |
+| options | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 组件转场时的平移效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的平移距离。&lt;br/&gt;-y：纵向的平移距离。&lt;br/&gt;-z：竖向的平移距离。 |
 
 **返回值：**
 
@@ -378,7 +378,7 @@ static readonly SLIDE: TransitionEffect<
 
 相当于TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move(TransitionEdge.END))。从START边滑入，END边滑出。即在LTR模式下，从左侧滑入，右侧滑出；在RTL模式下，从右侧滑入，左侧滑出。
 
-**类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", TransitionEdge&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
+**类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", [TransitionEdge](arkts-arkui-transitionedge-e.md)&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
 
 **起始版本：** 10
 

@@ -20,6 +20,6 @@ Describes the handle used to obtain SEI messages. This is used when in subscript
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| messages | Array&lt;SeiMessage&gt; | Yes | Array of SEI messages. |
+| messages | Array&lt;[SeiMessage](arkts-media-media-seimessage-i.md)&gt; | Yes | Array of SEI messages. |
 | playbackPosition | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Current playback position, in milliseconds. |
 

@@ -40,7 +40,7 @@ function savePdfFileJob(jobId: string, fd: int): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13100007 | Save file failed. |
-| [13100006](../../apis-basic-services-kit/errorcode-print.md#13100006-无效的打印任务) | Invalid job ID. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [13100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100006-无效的打印任务) | Invalid job ID. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 

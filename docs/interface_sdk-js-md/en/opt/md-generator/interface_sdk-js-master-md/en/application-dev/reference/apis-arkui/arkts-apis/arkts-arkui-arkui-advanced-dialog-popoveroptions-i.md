@@ -2,7 +2,7 @@
 
 Defines PopoverDialog Options
 
-**Inheritance/Implementation:** PopoverOptions extends [CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md/arkts-arkui-custompopupoptions-i.md)
+**Inheritance/Implementation:** PopoverOptions extends [CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md#CustomPopupOptions)
 
 **Since:** 14
 
@@ -17,5 +17,5 @@ Defines PopoverDialog Options
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from 'kits/@kit.ArkUI';
+import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
 ```

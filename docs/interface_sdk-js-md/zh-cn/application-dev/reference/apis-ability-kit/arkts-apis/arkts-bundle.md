@@ -1,11 +1,11 @@
 # @ohos.bundle
 
-本模块提供应用信息查询能力，支持[包信息](arkts-ability-bundleinfo-i.md)、[应用信息](arkts-ability-applicationinfo-i.md)、  
-[Ability组件信息](arkts-ability-abilityinfo-i.md)等信息的查询，以及应用禁用状态的查询、设置等。
+本模块提供应用信息查询能力，支持[包信息](./bundle/bundleInfo)、[应用信息](arkts-ability-applicationinfo-applicationinfo-depr-i.md#ApplicationInfo)、  
+[Ability组件信息](arkts-ability-abilityinfo-abilityinfo-depr-i.md#AbilityInfo)等信息的查询，以及应用禁用状态的查询、设置等。
 
 > **说明：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md)替代。
+> 从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md#bundleManager)替代。
 
 **起始版本：** 7
 
@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.bundleManager:bundleManager](arkts-bundle-bundlemanager.md)
+**替代接口：** [bundleManager](arkts-bundle-bundlemanager.md#bundleManager)
 
 <!--Device-unnamed-declare namespace bundle--><!--Device-unnamed-declare namespace bundle-End-->
 
@@ -25,8 +25,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon) | 通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |
-| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon-1) | 通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)，使用Promise异步回调。  获取调用方自己的信息时不需要权限。 |
+| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon) | 通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |
+| [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md#getabilityicon-1) | 通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)，使用Promise异步回调。  获取调用方自己的信息时不需要权限。 |
 | [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo) | 通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |
 | [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo-1) | 通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。  获取调用方自己的信息时不需要权限。 |
 | [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md#getabilitylabel) | 通过Bundle名称和Ability组件名获取应用名称，使用callback异步回调。  获取调用方自己的信息时不需要权限。 |

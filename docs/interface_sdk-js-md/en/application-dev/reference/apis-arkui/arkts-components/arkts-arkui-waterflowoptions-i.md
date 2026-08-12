@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 Footer component of the **WaterFlow** component, which is used to display custom content (such as loading prompts and bottom icons) at the end of the waterfall. If this parameter is not set, no footer component is displayed.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 9
 
@@ -39,7 +39,7 @@ footerContent?: ComponentContent
 Footer of the **WaterFlow** component. This parameter has a higher priority than **footer**. If both  
 **footer** and **footerContent** are set, the component set by **footerContent** will be used.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 18
 
@@ -61,7 +61,7 @@ layoutMode?: WaterFlowLayoutMode
 
 Layout mode of the &lt;em&gt;WaterFlow&lt;/em&gt; component.
 
-**Type:** [WaterFlowLayoutMode](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md)
+**Type:** [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md)
 
 **Default:** ALWAYS_TOP_DOWN
 
@@ -87,7 +87,7 @@ Controller of the scrollable component, bound to the scrollable component.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;The scroller cannot be bound to other scrollable components, such as ArcList, List, Grid, Scroll, or WaterFlow.&lt;/p&gt;
 
-**Type:** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**Type:** Scroller
 
 **Since:** 9
 

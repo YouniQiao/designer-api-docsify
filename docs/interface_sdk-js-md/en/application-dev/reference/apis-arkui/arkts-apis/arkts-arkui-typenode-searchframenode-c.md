@@ -34,11 +34,11 @@ Initialize Search FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SearchOptions](../arkts-components/arkts-arkui-searchoptions-i.md) | No |  |
+| value | SearchOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md) |  |
+| SearchAttribute |  |
 

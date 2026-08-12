@@ -13,7 +13,7 @@ Provides methods for accessing NDEF tag.
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

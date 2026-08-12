@@ -2,7 +2,7 @@
 
 快滑手势处理器对象类型。
 
-**继承/实现关系：** SwipeGestureHandler extends [GestureHandler](arkts-arkui-gesturehandler-c.md)
+**继承/实现关系：** SwipeGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#GestureHandler)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ onAction(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 快滑手势处理器识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 快滑手势处理器识别成功回调。 |
 
 **返回值：**
 

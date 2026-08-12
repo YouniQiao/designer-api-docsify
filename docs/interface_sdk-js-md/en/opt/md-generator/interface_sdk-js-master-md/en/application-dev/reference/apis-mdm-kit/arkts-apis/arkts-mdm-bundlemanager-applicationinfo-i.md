@@ -11,7 +11,7 @@ Defines the application information.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## accessTokenId
@@ -21,7 +21,7 @@ readonly accessTokenId: number
 ```
 
 Access token ID of the application, which is used in the  
-[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md/arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken).
+[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken).
 
 **Type:** number
 
@@ -40,7 +40,7 @@ readonly appDistributionType: string
 ```
 
 Distribution type of the application signing certificate. For details, see the **appProvisionType** field in  
-[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md).
+[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo).
 
 **Type:** string
 
@@ -188,7 +188,7 @@ readonly descriptionResource: Resource
 
 Resource information of the application description, including the bundle name, module name, and ID of the resource.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 20
 
@@ -280,7 +280,7 @@ readonly iconResource: Resource
 
 Resource information of the application icon, including the bundle name, module name, and ID of the resource.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 20
 
@@ -358,7 +358,7 @@ readonly labelResource: Resource
 
 Resource information of the application label, including the bundle name, module name, and ID of the resource.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 20
 
@@ -429,7 +429,7 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1,Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1,Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo)) to determine the compatibility.
 
 **Type:** string
 

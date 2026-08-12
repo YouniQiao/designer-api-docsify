@@ -11,7 +11,7 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -54,7 +54,7 @@ Compares the current RationalNumber object to the given object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.compare
+**Substitutes:** [compare](ohos.util.compare)
 
 <!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
 
@@ -84,7 +84,7 @@ A constructor used to create a **RationalNumber** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.RationalNumber.parseRationalNumber](arkts-arkts-util-rationalnumber-c.md#parserationalnumber)
+**Substitutes:** [parseRationalNumber](#parseRationalNumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -225,7 +225,7 @@ Obtains the greatest common divisor of two specified integers.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.RationalNumber.getCommonFactor](arkts-arkts-util-rationalnumber-c.md#getcommonfactor)
+**Substitutes:** [getCommonFactor](#getCommonFactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 

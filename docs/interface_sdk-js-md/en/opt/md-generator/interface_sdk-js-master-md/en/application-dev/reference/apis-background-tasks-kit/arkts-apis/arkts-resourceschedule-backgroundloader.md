@@ -13,7 +13,7 @@ The **BackgroundLoader** module provides the APIs for registering, unregistering
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

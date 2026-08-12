@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-该配置只支持[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件和[RichEditor](./rich_editor)组件。
+该配置只支持[Text](./text)组件和[RichEditor](./rich_editor)组件。
 
 **起始版本：** 11
 
@@ -98,7 +98,7 @@ onDetectResultUpdate?: Callback<string>
 
 默认值：undefined，不触发回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 11
 

@@ -26,7 +26,7 @@ ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.Constants.ACTION_CREATE_ACCOUNT_IMPLICITLY](arkts-basicservices-appaccount-constants-e.md#action_create_account_implicitly)
+**替代接口：** [ACTION_CREATE_ACCOUNT_IMPLICITLY](#ACTION_CREATE_ACCOUNT_IMPLICITLY)
 
 <!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'--><!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'-End-->
 
@@ -48,7 +48,7 @@ ACTION_AUTHENTICATE = 'authenticate'
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.Constants.ACTION_AUTH](arkts-basicservices-appaccount-constants-e.md#action_auth)
+**替代接口：** [ACTION_AUTH](#ACTION_AUTH)
 
 <!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'--><!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function write(info: AppEventInfo): Promise<void>
 ```
 
-Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)).
+Writes events of the **AppEventInfo** type. This API uses a promise to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)).
 
 **Since:** 9
 
@@ -32,20 +32,20 @@ Writes events of the **AppEventInfo** type. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11101003](../errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) |
-| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) |
-| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
-| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
-| [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
-| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
+| [11101001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [11101003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) |
+| [11101002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-invalid-event-name) |
+| [11101005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
+| [11101004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
+| [11101006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
+| [11100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
 
 ## Examples
 
@@ -78,7 +78,7 @@ hiAppEvent.write({
 function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 ```
 
-Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)).
+Writes events of the **AppEventInfo** type. This API uses an asynchronous callback to return the result. The event object written by calling this API is a custom object. To avoid conflicts with system events, you are not advised to write it to system events (system event name constants defined in [Event](arkts-performanceanalysis-hiappevent-event-n.md#event)). The events written by this API can be subscribed to through ([addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)).
 
 **Since:** 9
 
@@ -99,14 +99,14 @@ Writes events of the **AppEventInfo** type. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11101003](../errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) |
-| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) |
-| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
-| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
-| [11101006](../errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
-| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
+| [11101001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [11101003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101003-invalid-number-of-event-parameters) |
+| [11101002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-invalid-event-name) |
+| [11101005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
+| [11101004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
+| [11101006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101006-invalid-array-length-of-event-parameter-values) |
+| [11100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
 
 ## Examples
 

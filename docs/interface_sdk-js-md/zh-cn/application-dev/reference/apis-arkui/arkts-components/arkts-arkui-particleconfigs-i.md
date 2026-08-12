@@ -40,7 +40,7 @@
 
 点状粒子配置。
 
-**类型：** [PointParticleParameters](../arkts-apis/arkts-arkui-particle-pointparticleparameters-i.md)
+**类型：** [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md)
 
 **起始版本：** 10
 

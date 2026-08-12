@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## removeAllStartupTaskResults

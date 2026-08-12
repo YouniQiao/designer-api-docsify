@@ -46,7 +46,7 @@ fontColor?: ResourceColor
 
 Font color of the button.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -68,7 +68,7 @@ fontSize?: Length
 
 Font size of the button. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 

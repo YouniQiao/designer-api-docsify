@@ -12,7 +12,7 @@
 > [OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)
 > 对象中设置的路径生效。
 
-**继承/实现关系：** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**继承/实现关系：** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **起始版本：** 8
 
@@ -87,7 +87,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 ## constructor
 
@@ -138,7 +138,7 @@ constructor(path: Path2D, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 ## constructor
 
@@ -162,7 +162,7 @@ constructor(d: string)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| d | string | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | string | 是 |
 
 ## constructor
 
@@ -189,4 +189,4 @@ constructor(description: string, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | description | string | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |

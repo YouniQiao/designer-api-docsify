@@ -37,7 +37,7 @@ Height of the touch target.
 
 Default value: **LengthMetrics.percent(1)**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**Type:** LengthMetrics \| string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -85,7 +85,7 @@ Width of the touch target.
 
 Default value: **LengthMetrics.percent(1)**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**Type:** LengthMetrics \| string
 
 **Default:** LengthMetrics.percent(1)
 
@@ -109,7 +109,7 @@ X coordinate of the touch point relative to the upper left corner of the compone
 
 Default value: **LengthMetrics.vp(0)**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** LengthMetrics.vp(0)
 
@@ -133,7 +133,7 @@ Y coordinate of the touch point relative to the upper left corner of the compone
 
 Default value: **LengthMetrics.vp(0)**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** LengthMetrics.vp(0)
 

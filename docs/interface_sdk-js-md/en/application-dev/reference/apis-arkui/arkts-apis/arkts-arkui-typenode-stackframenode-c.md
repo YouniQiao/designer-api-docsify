@@ -34,11 +34,11 @@ Initialize Stack FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No | Stack options. |
+| options | StackOptions | No | Stack options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |  |
+| StackAttribute |  |
 

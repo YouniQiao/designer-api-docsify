@@ -8,7 +8,7 @@ function finishSyncTrace(level: HiTraceOutputLevel): void
 
 标记一个同步跟踪耗时任务的结束，分级控制跟踪输出。
 
-finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace)对应参数值一致。
+finishSyncTrace的level必须与流程开始的[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startSyncTrace)对应参数值一致。
 
 **起始版本：** 19
 

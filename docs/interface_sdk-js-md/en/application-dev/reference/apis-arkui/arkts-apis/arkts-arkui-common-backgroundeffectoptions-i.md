@@ -40,7 +40,7 @@ blurOptions?: BlurOptions
 
 Define the blurOptions of BackgroundEffect.
 
-**Type:** [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md)
+**Type:** [BlurOptions](arkts-arkui-common-bluroptions-i.md)
 
 **Default:** { grayScale: [0,0] }
 
@@ -128,7 +128,7 @@ policy?: BlurStyleActivePolicy
 
 Defines the policy for activating the blur style.
 
-**Type:** [BlurStyleActivePolicy](../arkts-components/arkts-arkui-blurstyleactivepolicy-e.md)
+**Type:** [BlurStyleActivePolicy](arkts-arkui-common-blurstyleactivepolicy-e.md)
 
 **Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
 

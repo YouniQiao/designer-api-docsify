@@ -35,3 +35,17 @@ onLoopTimeOut?(timeout: int): void
 | --- | --- | --- | --- |
 | timeout | int | 是 | 返回应用主线程消息实际执行时间。 阈值必须大于0。 单位为毫秒（ms）。 |
 
+## 示例
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+let observer: errorManager.LoopObserver = {
+  onLoopTimeOut(timeout: number) {
+    console.info('Duration timeout: ' + timeout);
+  }
+};
+
+errorManager.on('loopObserver', 1, observer);
+```
+

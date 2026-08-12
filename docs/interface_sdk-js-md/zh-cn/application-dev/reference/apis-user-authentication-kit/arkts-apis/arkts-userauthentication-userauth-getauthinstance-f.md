@@ -18,7 +18,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 **废弃版本：** 10
 
-**替代接口：** [userAuth.getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance)
+**替代接口：** [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance)
 
 <!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance--><!--Device-userAuth-function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance-End-->
 
@@ -30,7 +30,7 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 | --- | --- | --- | --- |
 | challenge | Uint8Array | 是 | 挑战值，最大长度为32字节，可以传Uint8Array([])。 |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | 是 | 认证类型，当前支持FACE和FINGERPRINT。 |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | 是 | 认证信任等级。 |
+| authTrustLevel | AuthTrustLevel | 是 | 认证信任等级。 |
 
 **返回值：**
 
@@ -42,10 +42,10 @@ function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. |
+| [12500006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
+| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 

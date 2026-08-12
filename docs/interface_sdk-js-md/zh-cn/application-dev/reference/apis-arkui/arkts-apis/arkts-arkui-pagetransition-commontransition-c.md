@@ -92,7 +92,7 @@ slide(value: SlideEffect): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SlideEffect](../arkts-components/arkts-arkui-slideeffect-e.md) | 是 | 页面转场时的滑入滑出效果。 |
+| value | [SlideEffect](arkts-arkui-pagetransition-slideeffect-e.md) | 是 | 页面转场时的滑入滑出效果。 |
 
 **返回值：**
 

@@ -11,7 +11,7 @@ Describes the behavioral parameters for the **decodeToString** method when decod
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## stream

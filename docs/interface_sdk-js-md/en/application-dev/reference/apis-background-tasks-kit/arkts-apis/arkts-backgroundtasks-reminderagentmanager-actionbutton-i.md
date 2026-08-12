@@ -13,7 +13,7 @@ Describes the button displayed for a reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## title
@@ -60,7 +60,7 @@ type: ActionButtonType
 
 Button type.
 
-**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
+**Type:** ActionButtonType
 
 **Since:** 9
 

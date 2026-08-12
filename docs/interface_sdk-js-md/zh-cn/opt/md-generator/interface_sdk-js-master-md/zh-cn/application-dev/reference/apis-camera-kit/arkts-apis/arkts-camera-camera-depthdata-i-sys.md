@@ -30,13 +30,13 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -90,7 +90,7 @@ readonly format: CameraFormat
 
 Camera output format.
 
-**类型：** [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md)
+**类型：** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
 **起始版本：** 13
 

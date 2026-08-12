@@ -10,4 +10,4 @@
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Iterator&lt;T&gt; |
+| Iterator & lt;T & gt; |

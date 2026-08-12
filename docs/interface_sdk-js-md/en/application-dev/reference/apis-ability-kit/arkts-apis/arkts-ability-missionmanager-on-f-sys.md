@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from 'kits/@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## on('mission')
@@ -31,7 +31,7 @@ Registers a listener to observe the mission status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'mission' | Yes | Name of the target mission. The value is fixed at **'mission'**, indicating the system mission status listener. |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | Mission status listener to register. |
+| listener | MissionListener | Yes | Mission status listener to register. |
 
 **Return value:**
 
@@ -43,9 +43,9 @@ Registers a listener to observe the mission status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -128,7 +128,7 @@ Registers a listener to observe the mission status.
 
 **Deprecated since:** 10
 
-**Substitutes:** missionManager#on(type:
+**Substitutes:** [on](missionManager#on(type:)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -143,7 +143,7 @@ Registers a listener to observe the mission status.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'missionEvent' | Yes | Name of the target mission. The value is fixed at **'missionEvent'**, indicating the system mission status listener. |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | Mission status listener to register. |
+| listener | MissionListener | Yes | Mission status listener to register. |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ Registers a listener to observe the mission status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

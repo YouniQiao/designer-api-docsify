@@ -11,7 +11,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## 汇总

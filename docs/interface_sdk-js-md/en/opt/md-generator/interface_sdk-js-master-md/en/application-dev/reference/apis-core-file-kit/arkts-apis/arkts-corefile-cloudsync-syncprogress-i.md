@@ -11,7 +11,7 @@ Represents information about the device-cloud sync progress.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## error
@@ -22,7 +22,7 @@ error: ErrorType
 
 Sync error.
 
-**Type:** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
+**Type:** ErrorType
 
 **Since:** 12
 

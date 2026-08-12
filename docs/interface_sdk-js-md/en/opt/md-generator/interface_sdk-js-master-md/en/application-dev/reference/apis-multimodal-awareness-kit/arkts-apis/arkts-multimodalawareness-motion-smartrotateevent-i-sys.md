@@ -13,7 +13,7 @@ The basic data structure of the smart rotate sensor event.
 ## Modules to Import
 
 ```TypeScript
-import { motion } from 'kits/@kit.MultimodalAwarenessKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## logicalOrientation

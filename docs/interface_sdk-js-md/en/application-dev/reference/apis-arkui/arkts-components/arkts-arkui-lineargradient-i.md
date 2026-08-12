@@ -58,7 +58,7 @@ direction?: GradientDirection
 
 Linear Gradient Direction
 
-**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
+**Type:** GradientDirection
 
 **Since:** 11
 

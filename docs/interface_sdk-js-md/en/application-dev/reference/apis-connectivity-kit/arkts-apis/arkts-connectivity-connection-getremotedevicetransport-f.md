@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceTransport
@@ -34,13 +34,13 @@ Get the transport of the bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md) | The transport of bluetooth device. |
+| BluetoothTransport | The transport of bluetooth device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Get transport failed. |

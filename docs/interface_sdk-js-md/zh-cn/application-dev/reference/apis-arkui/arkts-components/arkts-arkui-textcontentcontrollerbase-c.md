@@ -35,7 +35,7 @@ Add a text.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | text value. |
-| textOperationOptions | [TextContentControllerOptions](../arkts-apis/arkts-arkui-common-textcontentcontrolleroptions-i.md) | 否 | operation info. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-textcontentcontrolleroptions-i.md) | 否 | operation info. |
 
 **返回值：**
 
@@ -107,7 +107,7 @@ Delete text in TextRange.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | range for deleting. |
+| range | TextRange | 否 | range for deleting. |
 
 ## getCaretOffset
 
@@ -135,7 +135,7 @@ Get the index and relative position of the CaretOffset.
 
 | 类型 | 说明 |
 | --- | --- |
-| [CaretOffset](../arkts-apis/arkts-arkui-common-caretoffset-i.md) | index and relative position of the CaretOffset. |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | index and relative position of the CaretOffset. |
 
 ## getSelection
 
@@ -161,7 +161,7 @@ Gets the selected range of text content.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | range for selecting. |
+| TextRange | range for selecting. |
 
 ## getTextContentLineCount
 
@@ -215,7 +215,7 @@ Get the start and end positions of the text content.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Text content rect.The unit of the return value is pixel. |
+| [RectResult](arkts-arkui-rectresult-i.md) | Text content rect.The unit of the return value is pixel. |
 
 ## scrollToVisible
 
@@ -241,7 +241,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | 否 | 可见区范围。 若该参数非法，则本方法不会生效。 |
+| range | TextRange | 否 | 可见区范围。 若该参数非法，则本方法不会生效。 |
 
 ## setStyledPlaceholder
 
@@ -267,5 +267,5 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | 是 | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |
+| styledString | StyledString | 是 | 设置提示文本样式的属性字符串 若传入的入参无效，则本接口不生效 |
 

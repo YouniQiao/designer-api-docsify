@@ -21,4 +21,4 @@ Defines the callback type for listening for the rendering state of a specific no
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | No |

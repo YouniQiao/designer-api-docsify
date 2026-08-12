@@ -46,7 +46,7 @@ weekColor?: ResourceColor
 
 Style of week color.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 7
 
@@ -142,7 +142,7 @@ weekendDayColor?: ResourceColor
 
 Style of week day color.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 7
 
@@ -166,7 +166,7 @@ weekendLunarColor?: ResourceColor
 
 Style of lunar color.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 7
 

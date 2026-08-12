@@ -32,7 +32,7 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 > **说明：**
 > 
 > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
-> [getGlyphPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getglyphpositionatcoordinate)方法。
+> [getGlyphPositionAtCoordinate](#getGlyphPositionAtCoordinate)方法。
 > 
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
@@ -88,7 +88,7 @@ getCharacterPositionAtCoordinate(
 | --- | --- | --- | --- |
 | x | number | 是 | 相对于组件的横坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 | y | number | 是 | 相对于组件的纵坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符位置使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 | 字符位置使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
 
@@ -132,13 +132,13 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字形范围。 |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字形范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -164,14 +164,14 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字形范围。 |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
+| glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字形范围。 |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -184,7 +184,7 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 > **说明：**
 > 
 > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
-> [getCharacterPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getcharacterpositionatcoordinate)方法。
+> [getCharacterPositionAtCoordinate](#getCharacterPositionAtCoordinate)方法。
 > 
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
@@ -249,13 +249,13 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字符范围。 |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字符范围。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -281,14 +281,14 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| charRange | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 文本的字符范围。 |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
+| charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 | 文本的字符范围。 |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 | 字符范围使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextRange&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
 
 ## getLineCount
 
@@ -384,13 +384,13 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | [RectWidthStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
-| heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度规格，用于控制返回矩形的高度计算方式，不同规格值会影响矩形的高度边界。 |
+| range | [TextRange](arkts-arkui-textrange-i.md) | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 是 | 返回的矩形区域的宽度规格，用于控制返回矩形的宽度计算方式，不同规格值会影响矩形的宽度边界。 |
+| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | 是 | 返回的矩形区域的高度规格，用于控制返回矩形的高度计算方式，不同规格值会影响矩形的高度边界。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextBox&gt; | 矩形区域数组。当[LayoutManager]{ |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; | 矩形区域数组。当[LayoutManager]{ |
 

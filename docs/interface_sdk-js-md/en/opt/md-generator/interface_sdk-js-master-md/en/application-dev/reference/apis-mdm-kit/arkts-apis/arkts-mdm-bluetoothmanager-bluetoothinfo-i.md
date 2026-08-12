@@ -11,7 +11,7 @@ Represents the device Bluetooth information.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## connectionState

@@ -2,7 +2,7 @@
 
 Control center session object.
 
-**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md), [Aperture](arkts-camera-camera-aperture-i.md), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)
+**Inheritance/Implementation:** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty), [Aperture](arkts-camera-camera-aperture-i.md#Aperture), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect)
 
 **Since:** 20
 
@@ -15,7 +15,7 @@ Control center session object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableAutoFraming
@@ -44,9 +44,9 @@ Enable auto-framing effect.
 
 | Error Code ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getAutoFramingStatus
 
@@ -74,7 +74,7 @@ Gets the status of auto-framing effect.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getControlCenterHeight
 
@@ -104,7 +104,7 @@ Gets the control center height.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getCurrentDevice
 
@@ -128,14 +128,14 @@ Gets the current camera device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md) |
+| [CameraDevice](arkts-camera-camera-cameradevice-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isAutoFramingSupported
 
@@ -163,7 +163,7 @@ Checks whether auto-framing is supported.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## release
 
@@ -185,13 +185,13 @@ Release control center session object.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## usedAsPosition
 
@@ -221,6 +221,6 @@ Sets the camera to be used as a camera at the specified position.
 
 | Error Code ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

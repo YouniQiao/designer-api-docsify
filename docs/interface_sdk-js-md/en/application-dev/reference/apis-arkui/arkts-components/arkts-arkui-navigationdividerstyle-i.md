@@ -20,7 +20,7 @@ Color of the divider.
 
 Default value: **#33000000**, indicating gray
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ Unit: vp
 
 Value range: [0, +��)
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ Unit: vp
 
 Value range: [0, +��)
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 23
 

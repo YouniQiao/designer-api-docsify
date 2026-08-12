@@ -28,10 +28,10 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
-| [21800005](../errorcode-ads.md#21800005-广告数据解析失败) | Failed to parse the ad response. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter.Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
+| [21800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800005-广告数据解析失败) | Failed to parse the ad response. |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 ## 示例
 

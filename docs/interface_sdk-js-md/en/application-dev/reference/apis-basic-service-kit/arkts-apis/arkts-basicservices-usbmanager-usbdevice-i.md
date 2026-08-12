@@ -13,7 +13,7 @@ Represents the USB device information.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum
@@ -60,7 +60,7 @@ configs: Array<USBConfiguration>
 
 Device configuration descriptor information.
 
-**Type:** Array&lt;USBConfiguration&gt;
+**Type:** Array&lt;[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)&gt;
 
 **Since:** 9
 

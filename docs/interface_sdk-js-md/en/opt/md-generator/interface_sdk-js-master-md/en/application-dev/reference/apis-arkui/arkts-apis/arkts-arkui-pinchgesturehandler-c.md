@@ -56,7 +56,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| event | Callback & lt;void & gt; | Yes |
 
 **Return value:**
 
@@ -71,7 +71,7 @@ onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
 Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](arkts-arkui-pinchgesturehandler-c.md#onactioncancel), this API returns gesture event information.
+[onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -87,7 +87,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -117,7 +117,7 @@ Sets the callback for pinch gesture recognition completion. This callback is tri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -147,7 +147,7 @@ Sets the callback for successful pinch gesture recognition.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -177,7 +177,7 @@ Sets the callback for pinch gesture movement updates. The callback is triggered 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 

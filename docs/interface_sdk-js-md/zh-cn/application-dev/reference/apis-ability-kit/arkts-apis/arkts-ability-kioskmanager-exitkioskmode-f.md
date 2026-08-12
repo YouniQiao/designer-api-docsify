@@ -34,10 +34,10 @@ function exitKioskMode(context: UIAbilityContext): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000112](../errorcode-ability.md#16000112-当前系统没有应用进入kiosk模式) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
-| [16000110](../errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000112-当前系统没有应用进入kiosk模式) | The current application is not in Kiosk mode and cannot exit Kiosk mode. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
+| [16000110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000110-当前应用不在kiosk模式的列表内) | The current application is not in Kiosk app list and cannot enter Kiosk mode. |
 
 ## 示例
 

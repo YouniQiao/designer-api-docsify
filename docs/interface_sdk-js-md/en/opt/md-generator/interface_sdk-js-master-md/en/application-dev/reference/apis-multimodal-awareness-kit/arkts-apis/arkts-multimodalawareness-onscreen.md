@@ -14,7 +14,7 @@ This module provides the onscreen awareness capability.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

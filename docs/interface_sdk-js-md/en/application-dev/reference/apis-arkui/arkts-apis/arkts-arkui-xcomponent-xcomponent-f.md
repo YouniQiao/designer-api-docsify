@@ -24,7 +24,7 @@ XComponent is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| XComponentOptions \| NativeXComponentParameters | Yes | The options to create an XComponent. |
+| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md) \| [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | Yes | The options to create an XComponent. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines XComponent Component.It requires call setXComponentOptions at start of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;XComponentAttribute&gt; | Yes | the callback to set up xcomponent's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; | Yes | the callback to set up xcomponent's attributes. |
 
 **Return value:**
 

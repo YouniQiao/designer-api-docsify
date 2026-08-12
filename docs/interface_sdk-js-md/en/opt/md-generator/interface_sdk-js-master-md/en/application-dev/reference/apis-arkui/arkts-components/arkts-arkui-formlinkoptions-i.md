@@ -40,7 +40,7 @@ Action type.
 
 - **"router"**: redirection to the specified UIAbility of the widget provider.  
 - **"message"**: custom message. If this type of action is triggered, the   
-[onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md/arkts-form-app-form-formextensionability-formextensionability-c.md#onformevent)lifecycle callback of the provider FormExtensionAbility is called.  
+[onFormEvent()](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#onFormEvent)lifecycle callback of the provider FormExtensionAbility is called.  
 - **"call"**: launch of the widget provider in the background. If this type of action is triggered, the specified   
 UIAbility (whose launch type must be [singleton](../../../application-models/uiability-launch-type.md#singleton)of the widget provider is started in the background, but not displayed in the foreground. This action type requires  that the widget provider should have the   
 [ohos.permission.KEEP_BACKGROUND_RUNNING](../../../security/AccessToken/permissions-for-all.md#ohospermissionkeep_background_running) permission.

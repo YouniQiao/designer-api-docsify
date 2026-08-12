@@ -22,7 +22,7 @@ Default value: **MenuType.SELECTION_MENU**
 
 Since API version 20, **MenuType.PREVIEW_MENU** supports hyperlink preview.
 
-**Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
+**Type:** MenuType
 
 **Since:** 13
 
@@ -40,7 +40,7 @@ onAppear?: Callback<void>
 
 Callback invoked when the custom selection menu appears.
 
-**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 13
 
@@ -58,7 +58,7 @@ onDisappear?: Callback<void>
 
 Callback invoked when the custom selection menu disappears.
 
-**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 13
 
@@ -76,7 +76,7 @@ onMenuHide?: Callback<void>
 
 Callback invoked when the custom context menu on selection is hidden.
 
-**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 21
 
@@ -94,7 +94,7 @@ onMenuShow?: Callback<void>
 
 Callback invoked when the custom context menu on selection is shown.
 
-**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 21
 
@@ -112,7 +112,7 @@ preview?: CustomBuilder
 
 Preview content style of the custom selection menu. If this parameter is not set, there is no preview content.
 
-**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 13
 
@@ -130,7 +130,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 Custom preview menu options.
 
-**Type:** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**Type:** [PreviewMenuOptions](arkts-arkweb-previewmenuoptions-i.md)
 
 **Since:** 20
 

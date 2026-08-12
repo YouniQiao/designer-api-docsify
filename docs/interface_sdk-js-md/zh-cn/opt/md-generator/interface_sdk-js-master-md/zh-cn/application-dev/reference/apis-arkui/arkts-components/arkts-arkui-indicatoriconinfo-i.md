@@ -16,7 +16,7 @@ icon: ResourceStr | SymbolGlyphModifier
 
 需要设置的图标。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier
+**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 

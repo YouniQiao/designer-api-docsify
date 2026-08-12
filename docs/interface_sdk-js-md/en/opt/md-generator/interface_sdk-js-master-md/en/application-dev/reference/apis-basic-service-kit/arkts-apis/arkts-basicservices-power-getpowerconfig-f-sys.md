@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## getPowerConfig
@@ -30,7 +30,7 @@ Query the power configuration value for a given scene name.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sceneName | string | Yes |
+| [sceneName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md) | string | Yes |
 
 **Return value:**
 
@@ -42,11 +42,11 @@ Query the power configuration value for a given scene name.
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
-| [4900501](../../apis-basic-services-kit/errorcode-power.md#4900501-failure-to-read-the-power-supply-configuration-node) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [4900400](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) |
+| [4900101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
+| [4900501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900501-failure-to-read-the-power-supply-configuration-node) |
 
 ## Examples
 

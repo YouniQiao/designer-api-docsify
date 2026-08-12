@@ -28,5 +28,5 @@ export function getListAttribute(node: FrameNode): ListAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ListAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

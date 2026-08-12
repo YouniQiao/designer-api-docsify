@@ -11,7 +11,7 @@ Represents a **Schema** instance, which provides the methods for defining the va
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## appendChild
@@ -32,13 +32,13 @@ Appends a child node to this **FieldNode**.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributeddata-fieldnode-c.md) | Yes |
+| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
 
@@ -46,7 +46,7 @@ Appends a child node to this **FieldNode**.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -88,7 +88,7 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | name | string | Yes |
 
@@ -96,7 +96,7 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## default
 

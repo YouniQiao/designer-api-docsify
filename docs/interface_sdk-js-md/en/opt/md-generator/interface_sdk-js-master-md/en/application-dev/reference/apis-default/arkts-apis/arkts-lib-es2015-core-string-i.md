@@ -292,7 +292,7 @@ Returns the String value result of normalizing the string into the normalization
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| form | "NFC" \| "NFD" \| "NFKC" \| "NFKD" | Yes |
+| [form](../../apis-ability-kit/arkts-apis/arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | "NFC" \| "NFD" \| "NFKC" \| "NFKD" | Yes |
 
 **Return value:**
 
@@ -314,7 +314,7 @@ Returns the String value result of normalizing the string into the normalization
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| form | string | No |
+| [form](../../apis-ability-kit/arkts-apis/arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | No |
 
 **Return value:**
 

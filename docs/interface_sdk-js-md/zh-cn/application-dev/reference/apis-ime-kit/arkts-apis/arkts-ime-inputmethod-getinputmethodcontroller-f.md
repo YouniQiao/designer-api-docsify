@@ -6,7 +6,7 @@
 function getInputMethodController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
+获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md#InputMethodController)。
 
 **起始版本：** 6
 
@@ -14,7 +14,7 @@ function getInputMethodController(): InputMethodController
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethod#getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)
+**替代接口：** [getController](arkts-ime-inputmethod-getcontroller-f.md#getController)
 
 <!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
 

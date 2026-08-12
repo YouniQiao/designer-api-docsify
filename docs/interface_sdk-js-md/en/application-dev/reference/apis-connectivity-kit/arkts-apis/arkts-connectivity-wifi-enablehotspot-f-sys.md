@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## enableHotspot
@@ -22,7 +22,7 @@ Enables a Wi-Fi hotspot.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.enableHotspot
+**Substitutes:** [enableHotspot](ohos.wifiManager/wifiManager.enableHotspot)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

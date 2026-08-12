@@ -96,7 +96,7 @@ Sets the custom accessibility operations of the component, allowing developers t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| actions | Array&lt;AccessibilityCustomAction&gt; \| undefined | Yes |
+| [actions](../../apis-ability-kit/arkts-apis/arkts-ability-skill-i.md) | Array&lt;[AccessibilityCustomAction](../arkts-apis/arkts-arkui-accessibilitycustomaction-i.md)&gt; \| undefined | Yes |
 
 **Return value:**
 
@@ -729,7 +729,7 @@ Sets an accessibility virtual child node. For custom drawing components, a **Cus
 align(value: Alignment): T
 ```
 
-Sets the alignment mode for child elements within the container's drawing area. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+Sets the alignment mode for child elements within the container's drawing area. This attribute can be dynamically set using [attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -759,7 +759,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 align(alignment: Alignment | LocalizedAlignment): T
 ```
 
-Sets the alignment mode for child elements within the container's drawing area. The mirroring capability is supported. This attribute can be dynamically set using [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+Sets the alignment mode for child elements within the container's drawing area. The mirroring capability is supported. This attribute can be dynamically set using [attributeModifier](#attributeModifier).
 
 **Since:** 20
 
@@ -777,7 +777,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) \| [LocalizedAlignment](../arkts-apis/arkts-arkui-enums-localizedalignment-e.md) | Yes |
+| alignment | [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) \| [LocalizedAlignment](../arkts-apis/arkts-arkui-localizedalignment-e.md) | Yes |
 
 **Return value:**
 
@@ -791,7 +791,7 @@ Sets the alignment mode for child elements within the container's drawing area. 
 alignRules(value: AlignRuleOption): T
 ```
 
-Sets the alignment rule for child components within the relative container. This attribute only takes effect when the parent container is [RelativeContainer](RelativeContainer),and supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+Sets the alignment rule for child components within the relative container. This attribute only takes effect when the parent container is [RelativeContainer](RelativeContainer),and supports dynamic configuration via [attributeModifier](#attributeModifier).
 
 **Since:** 9
 
@@ -822,7 +822,7 @@ alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
 Sets the alignment rules in the relative container. This API is valid only when the container is  
-[RelativeContainer](RelativeContainer),.This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+[RelativeContainer](RelativeContainer),.This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](#attributeModifier).
 
 **Since:** 12
 
@@ -900,7 +900,7 @@ Sets the types of data that can be dropped to the component. If **allowDrop** is
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array&lt;UniformDataType&gt; \| null \| Array&lt;string&gt; | Yes |
+| value | Array&lt;[UniformDataType](arkts-arkui-uniformdatatype-t.md)&gt; \| null \| Array & lt;string & gt; | Yes |
 
 **Return value:**
 
@@ -949,12 +949,12 @@ Sets a property animation for the component.
 > **NOTE：**
 > 
 > - When a single page contains a large number of components with animations, use
-> [renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) to minimize frame freezing and improve animation
+> [renderGroup](#renderGroup) to minimize frame freezing and improve animation
 > performance. For best practices, see
 > [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
 > 
 > 
-> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> - This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -984,7 +984,7 @@ Sets a property animation for the component.
 aspectRatio(value: number): T
 ```
 
-Sets the aspect ratio of the component, which can be obtained using the following formula: width/height.&lt;br&gt;- If only **width** and **aspectRatio** are set, the height is calculated using the following formula:width/aspectRatio.&lt;br&gt;- If only **height** and **aspectRatio** are set, the width is calculated using the following formula:height x aspectRatio.&lt;br&gt;- If **width**, **height**, and **aspectRatio** are all set, the explicitly set height is ignored, and the effective height is calculated using the following formula: width/aspectRatio.&lt;br&gt;After the **aspectRatio** attribute is set, the component's width and height will be limited by the size of the parent component's content area. The priority of [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize) is higher than that of **aspectRatio**.
+Sets the aspect ratio of the component, which can be obtained using the following formula: width/height.&lt;br&gt;- If only **width** and **aspectRatio** are set, the height is calculated using the following formula:width/aspectRatio.&lt;br&gt;- If only **height** and **aspectRatio** are set, the width is calculated using the following formula:height x aspectRatio.&lt;br&gt;- If **width**, **height**, and **aspectRatio** are all set, the explicitly set height is ignored, and the effective height is calculated using the following formula: width/aspectRatio.&lt;br&gt;After the **aspectRatio** attribute is set, the component's width and height will be limited by the size of the parent component's content area. The priority of [constraintSize](#constraintSize) is higher than that of **aspectRatio**.
 
 **Since:** 7
 
@@ -1075,7 +1075,7 @@ Applies a background blur effect to the component. You can customize the blur ra
 backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 ```
 
-Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared to [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur), the **radius** parameter supports the **undefined** type.
+Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared to [backdropBlur](#backdropBlur), the **radius** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1109,7 +1109,7 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: Syste
 ```
 
 Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared with   
-[backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backdropblur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+[backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropBlur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -1208,7 +1208,7 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 ```
 
 Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to   
-[backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundblurstyle),the **style** parameter supports the **undefined** type.
+[backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundBlurStyle),the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1226,7 +1226,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | Yes |
 | options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | No |
 
 **Return value:**
@@ -1242,7 +1242,7 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 ```
 
 Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared with   
-[backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundblurstyle),this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+[backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundBlurStyle),this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -1260,7 +1260,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | Yes |
 | options | [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md) | No |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No |
 
@@ -1307,7 +1307,7 @@ backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 ```
 
 Sets the background brightness of the component. Compared to   
-[backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundbrightness),the **options** parameter supports the **undefined** type.
+[backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundBrightness),the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1323,7 +1323,7 @@ Sets the background brightness of the component. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;BackgroundBrightnessOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundBrightnessOptions](arkts-arkui-backgroundbrightnessoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -1385,7 +1385,7 @@ Background color
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor&gt; | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -1417,7 +1417,7 @@ Background color
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| [ColorMetrics&gt;](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| ColorMetrics & gt; | Yes |
 
 **Return value:**
 
@@ -1461,7 +1461,7 @@ Sets the background effect of the component, including the blur radius, brightne
 backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 ```
 
-Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundeffect), the   
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundEffect), the   
 **options** parameter supports the **undefined** type.
 
 **Since:** 18
@@ -1478,7 +1478,7 @@ Sets the background effect of the component, including the blur radius, brightne
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;BackgroundEffectOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -1493,13 +1493,13 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: System
 ```
 
 Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared with   
-[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#backgroundeffect), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundEffect), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 > **NOTE：**
 > 
 > **backgroundEffect** performs real-time rendering per frame, resulting in high performance overhead. When the
 > background blur effect remains unchanged, it is recommended that you use the static blur API
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see
+> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur). For best practices, see
 > [Image Blurring Optimization – When to Use](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519).
 
 **Since:** 19
@@ -1516,7 +1516,7 @@ Sets the background effect of the component, including the blur radius, brightne
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;BackgroundEffectOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)&gt; | Yes |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No |
 
 **Return value:**
@@ -1535,7 +1535,7 @@ Sets the visual effect of the background filter.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -1551,7 +1551,7 @@ Sets the visual effect of the background filter.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes |
+| filter | [Filter](arkts-arkui-filter-t.md) | Yes |
 
 **Return value:**
 
@@ -1581,7 +1581,7 @@ Background image src: Image address url
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes |
 | repeat | [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md) | No |
 
 **Return value:**
@@ -1614,7 +1614,7 @@ Background image
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) | Yes |
 | options | [BackgroundImageOptions](arkts-arkui-backgroundimageoptions-i.md) | No |
 
 **Return value:**
@@ -1645,7 +1645,7 @@ Background image position x:Horizontal coordinate;y:Vertical axis coordinate.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) \| [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes |
+| value | Position \| [Alignment](../arkts-apis/arkts-arkui-alignment-e.md) | Yes |
 
 **Return value:**
 
@@ -1723,7 +1723,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 10
 
@@ -1866,7 +1866,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | isShow | boolean | Yes |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | Yes |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1898,7 +1898,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; | Yes |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; | Yes |
 | responseType | [ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md) | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
@@ -1930,7 +1930,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;ResponseType&gt; \| undefined | Yes |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| undefined | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1962,7 +1962,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;ResponseType&gt; \| Array&lt;MenuElement&gt; \| undefined | Yes |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](../arkts-apis/arkts-arkui-responsetype-e.md)&gt; \| Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; \| undefined | Yes |
 | options | [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md) | No |
 
 **Return value:**
@@ -1991,7 +1991,7 @@ Menu control
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | Array&lt;MenuElement&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| content | Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
 | options | [MenuOptions](arkts-arkui-menuoptions-i.md) | No |
 
 **Return value:**
@@ -2023,7 +2023,7 @@ Menu control
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | isShow | boolean | Yes |
-| content | Array&lt;MenuElement&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
+| content | Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes |
 | options | [MenuOptions](arkts-arkui-menuoptions-i.md) | No |
 
 **Return value:**
@@ -2053,7 +2053,7 @@ Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | show | boolean | Yes |
-| popup | [PopupOptions](arkts-arkui-popupoptions-i.md) \| [CustomPopupOptions](../arkts-apis/arkts-arkui-common-custompopupoptions-i.md) | Yes |
+| popup | [PopupOptions](arkts-arkui-popupoptions-i.md) \| [CustomPopupOptions](arkts-arkui-custompopupoptions-i.md) | Yes |
 
 **Return value:**
 
@@ -2071,7 +2071,7 @@ Binds a sheet to the component, which is displayed when the component is touched
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 10
 
@@ -2168,7 +2168,7 @@ blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 ```
 
 Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. Compared to   
-[blendMode&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#blendmode), the **mode** parameter supports the **undefined** type.
+[blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendMode), the **mode** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -2186,7 +2186,7 @@ Defines how the component's content (including the content of it child component
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [Optional](arkts-arkui-optional-t.md)&lt;BlendMode&gt; | Yes |
+| mode | [Optional](arkts-arkui-optional-t.md)&lt;[BlendMode](arkts-arkui-blendmode-e.md)&gt; | Yes |
 | type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No |
 
 **Return value:**
@@ -2233,7 +2233,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 ```
 
 Applies a foreground blur effect to the component. Compared to   
-[blur](arkts-arkui-commonmethod-c.md#blur), the **blurRadius** parameter supports the   
+[blur](#blur), the **blurRadius** parameter supports the   
 **undefined** type.
 
 **Since:** 18
@@ -2252,7 +2252,7 @@ Applies a foreground blur effect to the component. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| blurRadius | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| [blurRadius](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textshadow-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 | options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No |
 
 **Return value:**
@@ -2268,7 +2268,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAda
 ```
 
 Applies a foreground blur effect to the component. Compared to   
-[blur&lt;sup&gt;18+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#blur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+[blur&lt;sup&gt;18+&lt;/sup&gt;](#blur), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -2286,7 +2286,7 @@ Applies a foreground blur effect to the component. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| blurRadius | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| [blurRadius](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textshadow-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
 | options | [BlurOptions](arkts-arkui-bluroptions-i.md) | No |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No |
 
@@ -2348,7 +2348,7 @@ Sets the border color.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-units-localizededgecolors-i.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes |
 
 **Return value:**
 
@@ -2408,7 +2408,7 @@ Sets the border radius.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
 
 **Return value:**
 
@@ -2440,7 +2440,7 @@ Sets the border corner radius and the rendering strategy for rounded corners.NOT
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md) | Yes |
 | type | [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md) | No |
 
 **Return value:**
@@ -2501,7 +2501,7 @@ Sets the border width.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-units-localizededgewidths-i.md) | Yes |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | Yes |
 
 **Return value:**
 
@@ -2545,7 +2545,7 @@ Applies a brightness effect to the component. If this API is not used, there wil
 brightness(brightness: Optional<number>): T
 ```
 
-Applies a brightness effect to the component. If this API is not used, there will be no change by default. Compared with [brightness](arkts-arkui-commonmethod-c.md#brightness), this API supports the **undefined** type for the   
+Applies a brightness effect to the component. If this API is not used, there will be no change by default. Compared with [brightness](#brightness), this API supports the **undefined** type for the   
 **brightness** parameter.
 
 **Since:** 18
@@ -2594,7 +2594,7 @@ Sets the parameters of the chain in which the component is the head. This attrib
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [direction](#direction) | [Axis](../arkts-apis/arkts-arkui-axis-e.md) | Yes |
+| [direction](#direction) | [Axis](../arkts-apis/arkts-arkui-enums-axis-e.md) | Yes |
 | style | [ChainStyle](arkts-arkui-chainstyle-e.md) | Yes |
 
 **Return value:**
@@ -2614,7 +2614,7 @@ Sets the weight of the component in a chain, which is used to re-lay out compone
 
 **NOTE：**
 
-Since API version 23, dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) is supported
+Since API version 23, dynamic configuration via [attributeModifier](#attributeModifier) is supported
 
 **Since:** 14
 
@@ -2675,7 +2675,7 @@ clickEffect(effect: Optional<ClickEffect | null>): T
 ```
 
 Sets the click feedback effect of the component. Compared with   
-[clickEffect](arkts-arkui-commonmethod-c.md#clickeffect), this API supports the **undefined** type.
+[clickEffect](#clickEffect), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2691,7 +2691,7 @@ Sets the click feedback effect of the component. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| effect | [Optional](arkts-arkui-optional-t.md)&lt;ClickEffect \| null&gt; | Yes |
+| effect | [Optional](arkts-arkui-optional-t.md)&lt;[ClickEffect](arkts-arkui-clickeffect-i.md) \| null & gt; | Yes |
 
 **Return value:**
 
@@ -2738,7 +2738,7 @@ clip(clip: Optional<boolean>): T
 ```
 
 Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default. Compared with   
-[clip&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#clip), this API supports the **undefined** type.
+[clip&lt;sup&gt;12+&lt;/sup&gt;](#clip), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2776,7 +2776,7 @@ Sets whether to clip this component based on the given shape.
 
 **Deprecated since:** 12
 
-**Substitutes:** [CommonMethod#clipShape](arkts-arkui-commonmethod-c.md#clipshape)
+**Substitutes:** [clipShape](#clipShape)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2790,7 +2790,7 @@ Sets whether to clip this component based on the given shape.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | boolean \| CircleAttribute \| EllipseAttribute \| PathAttribute \| [RectAttribute](arkts-arkui-rect-attribute.md) | Yes |
+| value | boolean \| [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md) | Yes |
 
 **Return value:**
 
@@ -2814,7 +2814,7 @@ Clips this component according to the specified shape (which may include positio
 > Path shapes do not support setting width and height attributes. For details about the supported attributes, see
 > the specific shape documentation.
 > 
-> The [fill](arkts-arkui-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
 > API.
 
 **Since:** 12
@@ -2833,7 +2833,7 @@ Clips this component according to the specified shape (which may include positio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-circleshape-t.md) \| EllipseShape \| PathShape \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) | Yes |
+| value | [CircleShape](arkts-arkui-circleshape-t.md) \| [EllipseShape](arkts-arkui-ellipseshape-t.md) \| [PathShape](arkts-arkui-pathshape-t.md) \| [RectShape](arkts-arkui-rectshape-t.md) | Yes |
 
 **Return value:**
 
@@ -2848,7 +2848,7 @@ clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 ```
 
 Clips this component according to the specified shape (which may include position information). Compared with   
-[clipShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#clipshape),this API supports the **undefined** type.
+[clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipShape),this API supports the **undefined** type.
 
 > **NOTE：**
 > 
@@ -2858,7 +2858,7 @@ Clips this component according to the specified shape (which may include positio
 > Path shapes do not support setting width and height attributes. For details about the supported attributes, see
 > the specific shape documentation.
 > 
-> The [fill](arkts-arkui-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
+> The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape**
 > API.
 
 **Since:** 18
@@ -2877,7 +2877,7 @@ Clips this component according to the specified shape (which may include positio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shape | [Optional](arkts-arkui-optional-t.md)&lt;CircleShape \| EllipseShape \| PathShape \| [RectShape&gt;](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) | Yes |
+| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CircleShape](arkts-arkui-circleshape-t.md) \| [EllipseShape](arkts-arkui-ellipseshape-t.md) \| [PathShape](arkts-arkui-pathshape-t.md) \| [RectShape](arkts-arkui-rectshape-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -2907,7 +2907,7 @@ Applies a color blend effect to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| value | Color \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
 **Return value:**
 
@@ -2922,7 +2922,7 @@ colorBlend(color: Optional<Color | string | Resource>): T
 ```
 
 Applies a color blend effect to the component. Compared with   
-[colorBlend](arkts-arkui-commonmethod-c.md#colorblend), this API supports the **undefined** type for the **color** parameter.
+[colorBlend](#colorBlend), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
 
@@ -2940,7 +2940,7 @@ Applies a color blend effect to the component. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;Color \| string \| [Resource&gt;](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;Color \| string \| Resource & gt; | Yes |
 
 **Return value:**
 
@@ -2958,7 +2958,7 @@ Sets the visual effect of the compositing filter.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -2974,7 +2974,7 @@ Sets the visual effect of the compositing filter.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes |
+| filter | [Filter](arkts-arkui-filter-t.md) | Yes |
 
 **Return value:**
 
@@ -2993,15 +2993,15 @@ Sets the constraint size of the component, which is used to limit the size range
 **Impact of constraintSize(minWidth/maxWidth/minHeight/maxHeight) on width/height**  
 | Default Value | [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md) |
 | ---------------------------------------- | ---------------------------------------- |
-| \ | width=MAX(minWidth,MIN(maxWidth,width))&lt;br&gt;height=MAX(minHeight,MIN(maxHeight,height)) |
+| \ | width=MAX(minWidth,MIN(maxWidth,width)) & lt;br & gt;height=MAX(minHeight,MIN(maxHeight,height)) |
 | maxWidth, maxHeight| width=MAX(minWidth,width)&lt;br&gt;height=MAX(minHeight,height)  
-| minWidth, minHeight| width=MIN(maxWidth,width)&lt;br&gt;height=MIN(maxHeight,height) |
+| minWidth, minHeight| width=MIN(maxWidth,width) & lt;br & gt;height=MIN(maxHeight,height) |
 | width, height| If minWidth < maxWidth, the layout logic of the component takes effect, and the value range of  
 **width** is [minWidth, maxWidth]. Otherwise, width = MAX(minWidth, maxWidth).&lt;br&gt;If minHeight < maxHeight,the layout logic of the component takes effect, and the value range of **height** is [minHeight, maxHeight].Otherwise, height = MAX (minHeight, maxHeight).|  
-| width and maxWidth; height and maxHeight| width = minWidth&lt;br&gt;height = minHeight |
+| width and maxWidth; height and maxHeight| width = minWidth & lt;br & gt;height = minHeight |
 | width and minWidth; and height and minHeight| The layout logic of the component takes effect, and the value of  
 **width** cannot be greater than that of **maxWidth**.&lt;br&gt;The layout logic of the component takes effect, and the value of **height** cannot be greater than that of **maxHeight**.|  
-| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes.&lt;br&gt;The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes.|
+| minWidth and maxWidth; minHeight and maxHeight| The width of the component is initially determined by the value of **width**, and it may be adjusted based on other layout attributes. & lt;br & gt;The height of the component is initially determined by the value of **height**, and it may be adjusted based on other layout attributes. |
 | width, minWidth, and maxWidth| The layout restrictions passed by the parent container are used for layout.|
 | height, minHeight, and maxHeight|
 
@@ -3063,7 +3063,7 @@ Applies a contrast effect to the component. If this API is not used, there will 
 contrast(contrast: Optional<number>): T
 ```
 
-Applies a contrast effect to the component. If this API is not used, there will be no change by default. Compared to [contrast](arkts-arkui-commonmethod-c.md#contrast), the **contrast** parameter supports the **undefined** type.
+Applies a contrast effect to the component. If this API is not used, there will be no change by default. Compared to [contrast](#contrast), the **contrast** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -3165,7 +3165,7 @@ Specifies whether to set this component as the default focus of the current
 direction(value: Direction): T
 ```
 
-Sets how elements are laid out along the main axis of the container. This attribute supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+Sets how elements are laid out along the main axis of the container. This attribute supports dynamic configuration via [attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -3181,7 +3181,7 @@ Sets how elements are laid out along the main axis of the container. This attrib
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md) | Yes |
+| value | [Direction](#direction) | Yes |
 
 **Return value:**
 
@@ -3274,7 +3274,7 @@ Sets the preview image displayed during component drag operations.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string | Yes |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | Yes |
 
 **Return value:**
 
@@ -3292,7 +3292,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 15
 
@@ -3308,7 +3308,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string | Yes |
+| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | Yes |
 | config | [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | No |
 
 **Return value:**
@@ -3328,7 +3328,7 @@ Sets the preview image processing mode, badge count, and interaction behavior du
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 11
 
@@ -3544,8 +3544,8 @@ if
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;SafeAreaType&gt; | No |
-| edges | Array&lt;SafeAreaEdge&gt; | No |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[SafeAreaType](arkts-arkui-safeareatype-e.md)&gt; | No |
+| edges | Array&lt;[SafeAreaEdge](arkts-arkui-safeareaedge-e.md)&gt; | No |
 
 **Return value:**
 
@@ -3837,7 +3837,7 @@ Applies a foreground blur style to the component.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 18.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 18.
 
 **Since:** 10
 
@@ -3869,7 +3869,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 ```
 
 Applies a foreground blur style to the component. Compared to   
-[foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle),the **style** parameter supports the **undefined** type.
+[foregroundBlurStyle](#foregroundBlurStyle),the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -3885,7 +3885,7 @@ Applies a foreground blur style to the component. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | Yes |
 | options | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | No |
 
 **Return value:**
@@ -3916,7 +3916,7 @@ Foreground blur style.blurStyle:Blur style type.sysOptions: system adaptive opti
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;BlurStyle&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[BlurStyle](arkts-arkui-blurstyle-e.md)&gt; | Yes |
 | options | [ForegroundBlurStyleOptions](arkts-arkui-foregroundblurstyleoptions-i.md) | No |
 | sysOptions | [SystemAdaptiveOptions](arkts-arkui-systemadaptiveoptions-i.md) | No |
 
@@ -3948,7 +3948,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-enums-coloringstrategy-e.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md) | Yes |
 
 **Return value:**
 
@@ -3963,7 +3963,7 @@ foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 ```
 
 Sets the foreground color of the component. Components without explicit foreground color settings inherit from their parent components by default. Compared to   
-[foregroundColor](arkts-arkui-commonmethod-c.md#foregroundcolor), the **color** parameter supports the **undefined** type.
+[foregroundColor](#foregroundColor), the **color** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -3979,7 +3979,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| [ColoringStrategy&gt;](../arkts-apis/arkts-arkui-enums-coloringstrategy-e.md) | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -4027,7 +4027,7 @@ Sets the visual effect of the foreground (content) filter.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -4043,7 +4043,7 @@ Sets the visual effect of the foreground (content) filter.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Yes |
+| filter | [Filter](arkts-arkui-filter-t.md) | Yes |
 
 **Return value:**
 
@@ -4061,7 +4061,7 @@ Sets whether to freeze the component. When frozen, the component and its childre
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -4092,11 +4092,11 @@ freeze(freeze: Optional<boolean>): T
 ```
 
 Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. Compared with   
-[freeze](arkts-arkui-commonmethod-c.md#freeze), this API supports the **undefined** type for the **freeze** parameter.
+[freeze](#freeze), this API supports the **undefined** type for the **freeze** parameter.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 18
 
@@ -4189,7 +4189,7 @@ Gesture to bind.
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -4203,7 +4203,7 @@ Gesture to bind.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gesture](#gesture) | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes |
+| [gesture](#gesture) | [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) | Yes |
 | [mask](#mask) | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
 
 **Return value:**
@@ -4224,7 +4224,7 @@ Creates a gesture modifier.
 > 
 > **gestureModifier** does not support custom components.
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 12
 
@@ -4285,7 +4285,7 @@ grayscale(grayscale: Optional<number>): T
 ```
 
 Applies a grayscale effect to the component. The grayscale rendering of the upper layer will overlay that of lower-layer child components. If this API is not used, there will be no change by default. Compared to   
-[grayscale](arkts-arkui-commonmethod-c.md#grayscale), the **grayscale** parameter supports the **undefined** type.
+[grayscale](#grayscale), the **grayscale** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4323,7 +4323,7 @@ The default offset column number indicates the number of offset columns of the c
 
 **Deprecated since:** 14
 
-**Substitutes:** grid_col/GridColInterface
+**Substitutes:** [grid_col/GridColInterface](grid_col/GridColInterface)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4355,7 +4355,7 @@ Default number of occupied columns, indicating the number of occupied grid colum
 
 **Deprecated since:** 14
 
-**Substitutes:** grid_col/GridColInterface
+**Substitutes:** [grid_col/GridColInterface](grid_col/GridColInterface)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4457,7 +4457,7 @@ Sets the height of the component or its vertical layout policy. By default, the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md) | Yes |
+| heightValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes |
 
 **Return value:**
 
@@ -4562,7 +4562,7 @@ hueRotate(rotation: Optional<number | string>): T
 ```
 
 Rotates the hue of the component. If this API is not used, there will be no change by default. Compared to   
-[hueRotate](arkts-arkui-commonmethod-c.md#huerotate), the **rotation** parameter supports the   
+[hueRotate](#hueRotate), the **rotation** parameter supports the   
 **undefined** type.
 
 **Since:** 18
@@ -4581,7 +4581,7 @@ Rotates the hue of the component. If this API is not used, there will be no chan
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rotation | [Optional](arkts-arkui-optional-t.md)&lt;number \| string&gt; | Yes |
+| rotation | [Optional](arkts-arkui-optional-t.md)&lt;number \| string & gt; | Yes |
 
 **Return value:**
 
@@ -4630,7 +4630,7 @@ Ignores the safe area for component layout.
 > **NOTE：**
 > 
 > - For a component that ignores layout safe area edges: If its width or height is set to
-> [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchparent), both its size and position
+> [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchParent), both its size and position
 > will change; otherwise, only its position will change.
 > 
 > - Based on the **safeAreaPadding** accumulation feature, a component can expand its safe area edges to all
@@ -4658,8 +4658,8 @@ Ignores the safe area for component layout.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;LayoutSafeAreaType&gt; | No |
-| edges | Array&lt;LayoutSafeAreaEdge&gt; | No |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[LayoutSafeAreaType](arkts-arkui-layoutsafeareatype-e.md)&gt; | No |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt; | No |
 
 **Return value:**
 
@@ -4733,7 +4733,7 @@ Inverts an image.
 invert(options: Optional<number | InvertOptions>): T
 ```
 
-Inverts an image. Compared with [invert](arkts-arkui-commonmethod-c.md#invert), this API supports the **undefined** type for the **options** parameter.
+Inverts an image. Compared with [invert](#invert), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 
@@ -4751,7 +4751,7 @@ Inverts an image. Compared with [invert](arkts-arkui-commonmethod-c.md#invert), 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;number \| [InvertOptions&gt;](arkts-arkui-invertoptions-i.md) | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;number \| [InvertOptions](arkts-arkui-invertoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -4812,8 +4812,8 @@ Sets a keyboard shortcut for the component.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| [FunctionKey](../../apis-input-kit/arkts-apis/arkts-input-inputdevice-functionkey-e.md) | Yes |
-| keys | Array&lt;ModifierKey&gt; | Yes |
-| action | () =&gt; void | No |
+| keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes |
+| action | () = & gt; void | No |
 
 **Return value:**
 
@@ -4827,7 +4827,7 @@ Sets a keyboard shortcut for the component.
 layoutGravity(alignment: LocalizedAlignment): T
 ```
 
-Sets the alignment rule for child components in the **Stack** container. This API only takes effect when the parent container is **Stack**. When used with the [align](arkts-arkui-commonmethod-c.md#align) attribute, **layoutGravity** takes precedence. This attribute supports dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+Sets the alignment rule for child components in the **Stack** container. This API only takes effect when the parent container is **Stack**. When used with the [align](align) attribute, **layoutGravity** takes precedence. This attribute supports dynamic configuration via [attributeModifier](#attributeModifier).
 
 **Since:** 20
 
@@ -4920,7 +4920,7 @@ lightUpEffect(degree: Optional<number>): T
 ```
 
 Applies a light up effect to the component. Compared to   
-[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lightupeffect), the **degree** parameter supports the **undefined** type.
+[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightUpEffect), the **degree** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4981,7 +4981,7 @@ linearGradient(options: Optional<LinearGradientOptions>): T
 ```
 
 Creates a linear gradient. Compared to   
-[linearGradient](arkts-arkui-commonmethod-c.md#lineargradient), this API supports the   
+[linearGradient](#linearGradient), this API supports the   
 **undefined** type for the **options** parameter.
 
 **Since:** 18
@@ -5000,7 +5000,7 @@ Creates a linear gradient. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;LinearGradientOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[LinearGradientOptions](arkts-arkui-lineargradientoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5046,7 +5046,7 @@ linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradien
 ```
 
 Applies a linear gradient foreground blur effect to the component. Compared with   
-[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#lineargradientblur),this API supports the **undefined** type.
+[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#linearGradientBlur),this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5062,8 +5062,8 @@ Applies a linear gradient foreground blur effect to the component. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| blurRadius | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;LinearGradientBlurOptions&gt; | Yes |
+| [blurRadius](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textshadow-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[LinearGradientBlurOptions](arkts-arkui-lineargradientbluroptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5093,7 +5093,7 @@ Sets the margin of the component. The margin is considered as a part of the comp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| Length \| [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | Yes |
+| value | [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LocalizedMargin](../arkts-apis/arkts-arkui-localizedmargin-t.md) | Yes |
 
 **Return value:**
 
@@ -5108,7 +5108,7 @@ markAnchor(value: Position | LocalizedPosition): T
 ```
 
 Sets the anchor for element positioning. This attribute supports dynamic configuration via  
-[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+[attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -5124,7 +5124,7 @@ Sets the anchor for element positioning. This attribute supports dynamic configu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) \| [LocalizedPosition](../arkts-apis/arkts-arkui-units-localizedposition-i.md) | Yes |
+| value | Position \| [LocalizedPosition](../arkts-apis/arkts-arkui-localizedposition-i.md) | Yes |
 
 **Return value:**
 
@@ -5169,7 +5169,7 @@ mask(mask: Optional<ProgressMask>): T
 ```
 
 Adds a mask to the component to indicate the progress. Compared with   
-[mask&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#mask), this API supports the **undefined** type.
+[mask&lt;sup&gt;12+&lt;/sup&gt;](#mask), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5185,7 +5185,7 @@ Adds a mask to the component to indicate the progress. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [mask](#mask) | [Optional](arkts-arkui-optional-t.md)&lt;ProgressMask&gt; | Yes |
+| [mask](#mask) | [Optional](arkts-arkui-optional-t.md)&lt;[ProgressMask](arkts-arkui-progressmask-c.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5205,7 +5205,7 @@ Adds a mask of the specified shape to the component.
 
 **Deprecated since:** 12
 
-**Substitutes:** [CommonMethod#maskShape](arkts-arkui-commonmethod-c.md#maskshape)
+**Substitutes:** [maskShape](#maskShape)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5219,7 +5219,7 @@ Adds a mask of the specified shape to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute \| [ProgressMask](arkts-arkui-progressmask-c.md) | Yes |
+| value | [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md) \| [ProgressMask](arkts-arkui-progressmask-c.md) | Yes |
 
 **Return value:**
 
@@ -5251,7 +5251,7 @@ Adds a mask of the specified shape to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-circleshape-t.md) \| EllipseShape \| PathShape \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) | Yes |
+| value | [CircleShape](arkts-arkui-circleshape-t.md) \| [EllipseShape](arkts-arkui-ellipseshape-t.md) \| [PathShape](arkts-arkui-pathshape-t.md) \| [RectShape](arkts-arkui-rectshape-t.md) | Yes |
 
 **Return value:**
 
@@ -5266,7 +5266,7 @@ maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 ```
 
 Adds a mask of the specified shape to the component. Compared with   
-[maskShape&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#maskshape),this API supports the **undefined** type.
+[maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskShape),this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5284,7 +5284,7 @@ Adds a mask of the specified shape to the component. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shape | [Optional](arkts-arkui-optional-t.md)&lt;CircleShape \| EllipseShape \| PathShape \| [RectShape&gt;](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) | Yes |
+| shape | [Optional](arkts-arkui-optional-t.md)&lt;[CircleShape](arkts-arkui-circleshape-t.md) \| [EllipseShape](arkts-arkui-ellipseshape-t.md) \| [PathShape](arkts-arkui-pathshape-t.md) \| [RectShape](arkts-arkui-rectshape-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5314,7 +5314,7 @@ Sets the visual effect of the material filter. The effects it contains are rende
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | Yes |
+| filter | [Filter](arkts-arkui-filter-t.md) \| undefined | Yes |
 
 **Return value:**
 
@@ -5409,7 +5409,7 @@ motionBlur(motionBlur: Optional<MotionBlurOptions>): T
 ```
 
 Applies a motion blur effect to the component being scaled or moved. Compared with   
-[motionBlur](arkts-arkui-commonmethod-c.md#motionblur), this API supports the **undefined** type for the **motionBlur** parameter.
+[motionBlur](#motionBlur), this API supports the **undefined** type for the **motionBlur** parameter.
 
 1. Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,or particle animations. Doing so may cause unexpected results.
 
@@ -5437,7 +5437,7 @@ Applies a motion blur effect to the component being scaled or moved. Compared wi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [motionBlur](#motionblur) | [Optional](arkts-arkui-optional-t.md)&lt;MotionBlurOptions&gt; | Yes |
+| [motionBlur](#motionblur) | [Optional](arkts-arkui-optional-t.md)&lt;[MotionBlurOptions](arkts-arkui-motionbluroptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5495,7 +5495,7 @@ Sets one or more mouse response regions.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array&lt;Rectangle&gt; \| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | Yes |
+| value | Array&lt;[Rectangle](arkts-arkui-rectangle-i.md)&gt; \| [Rectangle](arkts-arkui-rectangle-i.md) | Yes |
 
 **Return value:**
 
@@ -5525,7 +5525,7 @@ Set nextFocus.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| nextStep | [Optional](arkts-arkui-optional-t.md)&lt;FocusMovement&gt; | Yes |
+| nextStep | [Optional](arkts-arkui-optional-t.md)&lt;[FocusMovement](arkts-arkui-focusmovement-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5555,7 +5555,7 @@ Sets how the component content is obscured.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| reasons | Array&lt;ObscuredReasons&gt; | Yes |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5570,8 +5570,8 @@ offset(value: Position | Edges | LocalizedEdges): T
 ```
 
 Sets the offset of the component relative to its original position. When **offset** is used in combination with the  
-[position](arkts-arkui-commonmethod-c.md#position) attribute, the **position** attribute takes precedence and the configured offset will not be applied. This attribute supports dynamic configuration via  
-[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+[position](position) attribute, the **position** attribute takes precedence and the configured offset will not be applied. This attribute supports dynamic configuration via  
+[attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -5587,7 +5587,7 @@ Sets the offset of the component relative to its original position. When **offse
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes |
+| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes |
 
 **Return value:**
 
@@ -5745,7 +5745,7 @@ Triggered when this component appears.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -5762,16 +5762,16 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 Triggered when the component area changes in size or position due to layout updates.
 
 This event is not triggered for render attribute changes caused by re-rendering, such as changes to  
-[translate](arkts-arkui-commonmethod-c.md#translate), [offset](arkts-arkui-commonmethod-c.md#offset),  
-[markAnchor](arkts-arkui-commonmethod-c.md#markanchor), [scale](arkts-arkui-commonmethod-c.md#scale), or  
-[transform](arkts-arkui-commonmethod-c.md#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](arkts-arkui-commonmethod-c.md#bindsheet), this event is also not triggered.
+[translate](#translate), [offset](#offset),  
+[markAnchor](#markAnchor), [scale](#scale), or  
+[transform](#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindSheet), this event is also not triggered.
 
 > **NOTE：**
 > 
-> When a component is bound to both the **onAreaChange** event and the [position](arkts-arkui-commonmethod-c.md#position)
+> When a component is bound to both the **onAreaChange** event and the [position](#position)
 > attribute, the **onAreaChange** event responds to changes in the **position** attribute of type
-> [Position](../arkts-apis/arkts-arkui-position-t.md/arkts-arkui-position-t.md), but does not respond to changes in the **position** attribute of type
-> [Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md/arkts-arkui-graphics-edges-i.md) or [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md/arkts-arkui-localizededges-i.md).
+> [Position](Position), but does not respond to changes in the **position** attribute of type
+> [Edges](Edges) or [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md#LocalizedEdges).
 
 **Since:** 8
 
@@ -5785,7 +5785,7 @@ This event is not triggered for render attribute changes caused by re-rendering,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (oldValue: Area, newValue: Area) =&gt; void | Yes |
+| event | (oldValue: Area, newValue: Area) = & gt; void | Yes |
 
 **Return value:**
 
@@ -5799,7 +5799,7 @@ This event is not triggered for render attribute changes caused by re-rendering,
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md). This event is triggered only in response to changes in component size or position caused by layout updates.
+Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-areachangeoptions-i.md#AreaChangeOptions). This event is triggered only in response to changes in component size or position caused by layout updates.
 
 **Since:** 26.0.0
 
@@ -5830,7 +5830,7 @@ Triggered when the component area changes. The interval at which the callback is
 onAttach(callback: Callback<void>): T
 ```
 
-Triggered when this component is mounted to the component tree. Due to the following limitations, it is recommended that you use [onAppear](arkts-arkui-commonmethod-c.md#onappear) instead of this callback.
+Triggered when this component is mounted to the component tree. Due to the following limitations, it is recommended that you use [onAppear](#onAppear) instead of this callback.
 
 > **NOTE：**
 > 
@@ -5853,7 +5853,7 @@ Triggered when this component is mounted to the component tree. Due to the follo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes |
 
 **Return value:**
 
@@ -5883,7 +5883,7 @@ Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch ges
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AxisEvent&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[AxisEvent](arkts-arkui-axisevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -5911,7 +5911,7 @@ Triggered when the current component loses focus.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -5932,7 +5932,7 @@ Allows the current component to customize the hit test and control child compone
 > - The array of child node information only includes information about named nodes, that is, nodes for which the
 > **id** attribute is explicitly set.
 > 
-> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> - This API can be called in [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 11
 
@@ -5948,7 +5948,7 @@ Allows the current component to customize the hit test and control child compone
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (value: Array&lt;TouchTestInfo&gt;) =&gt; TouchResult | Yes |
+| event | (value: Array&lt;[TouchTestInfo](arkts-arkui-touchtestinfo-c.md)&gt;) =&gt; TouchResult | Yes |
 
 **Return value:**
 
@@ -5965,7 +5965,7 @@ onClick(event: (event: ClickEvent) => void): T
 Called when a click event occurs.
 
 When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and  
-[SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
+[SourceType](arkts-arkui-sourcetype-e.md#SourceType) is **KEY** or **JOYSTICK**.
 
 > **NOTE：**
 > 
@@ -5989,7 +5989,7 @@ When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unk
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: ClickEvent) =&gt; void | Yes |
+| event | (event: ClickEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6005,8 +6005,8 @@ onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 
 Called when a click event occurs.
 
-When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md) is **Unknown**, and  
-[SourceType](arkts-arkui-sourcetype-e.md) is **KEY** or **JOYSTICK**.
+When triggered by keyboard or gamepad input, the event's [SourceTool](arkts-arkui-sourcetool-e.md#SourceTool) is **Unknown**, and  
+[SourceType](arkts-arkui-sourcetype-e.md#SourceType) is **KEY** or **JOYSTICK**.
 
 Compared with the original **onClick** API, this API has the **distanceThreshold** parameter that specifies the finger movement threshold for click events. If the finger's movement exceeds the set threshold, the gesture recognition will fail. The click gesture recognition will fail if finger movement exceeds this threshold.
 
@@ -6018,7 +6018,7 @@ For scenarios where there is no restriction on the finger movement distance duri
 > > 1. Click events will not be triggered if the finger is pressed for more than 800 ms.
 > > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 > 
-> - This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> - This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 12
 
@@ -6036,7 +6036,7 @@ For scenarios where there is no restriction on the finger movement distance duri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt; | Yes |
 | distanceThreshold | number | Yes |
 
 **Return value:**
@@ -6052,7 +6052,7 @@ onDetach(callback: Callback<void>): T
 ```
 
 Triggered when this component is unmounted from the component tree. You are advised to use  
-[onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear) instead.
+[onDisAppear](#onDisAppear) instead.
 
 **Since:** 12
 
@@ -6068,7 +6068,7 @@ Triggered when this component is unmounted from the component tree. You are advi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes |
 
 **Return value:**
 
@@ -6086,7 +6086,7 @@ Called when the crown is rotated while the component has focus.
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 18
 
@@ -6102,7 +6102,7 @@ Called when the crown is rotated while the component has focus.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;CrownEvent&gt;&gt; | Yes |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[Callback](arkts-arkui-callback-i.md)&lt;[CrownEvent](arkts-arkui-crownevent-i.md)&gt;&gt; | Yes |
 
 **Return value:**
 
@@ -6132,7 +6132,7 @@ Triggered when this component disappears.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -6162,7 +6162,7 @@ Triggered when the dragging of the component bound to the event ends.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes |
+| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6177,7 +6177,7 @@ onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
 Triggered when a dragged item enters a valid drop target. This event takes effect only when a listener for the  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop) event is enabled.
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)) event is enabled.
 
 **Since:** 8
 
@@ -6191,7 +6191,7 @@ Triggered when a dragged item enters a valid drop target. This event takes effec
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes |
+| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6206,7 +6206,7 @@ onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
 Triggered when a dragged item leaves a valid drop target. This event takes effect only when a listener for the  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop) event is enabled.
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)) event is enabled.
 
 **Since:** 8
 
@@ -6220,7 +6220,7 @@ Triggered when a dragged item leaves a valid drop target. This event takes effec
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes |
+| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6235,7 +6235,7 @@ onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
 Triggered when a dragged item moves in a valid drop target. This event takes effect only when a listener for the  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop) event is enabled.
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)) event is enabled.
 
 **Since:** 8
 
@@ -6249,7 +6249,7 @@ Triggered when a dragged item moves in a valid drop target. This event takes eff
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes |
+| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6282,7 +6282,7 @@ For details about the hover detection triggering mechanism and usage, see
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SpringLoadingContext&gt; \| null | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[SpringLoadingContext](arkts-arkui-springloadingcontext-t.md)&gt; \| null | Yes |
 | configuration | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | No |
 
 **Return value:**
@@ -6305,12 +6305,12 @@ For components that provide drag and drop capabilities by default, a custom **on
 - If drag data is set, it is used in place of the default drag data.
 
 The custom drag preview is not supported for dragging selected text in the following components:  
-[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md), [Search](search), [TextInput](text_input), [TextArea](text_area),  
+[Text](text), [Search](search), [TextInput](text_input), [TextArea](text_area),  
 [RichEditor](rich_editor) When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged.
 
 > **NOTE：**
 > 
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 13.
+> This API can be called in [attributeModifier](#attributeModifier) since API version 13.
 
 **Since:** 8
 
@@ -6324,7 +6324,7 @@ The custom drag preview is not supported for dragging selected text in the follo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; CustomBuilder \| [DragItemInfo](../arkts-apis/arkts-arkui-common-dragiteminfo-i.md) | Yes |
+| event | (event: DragEvent, extraParams?: string) = & gt; CustomBuilder \ | [DragItemInfo](arkts-arkui-dragiteminfo-i.md) | Yes |
 
 **Return value:**
 
@@ -6353,7 +6353,7 @@ A component bound with this event can serve as a drop target. This callback is t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: DragEvent, extraParams?: string) =&gt; void | Yes |
+| event | (event: DragEvent, extraParams?: string) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6368,7 +6368,7 @@ onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 ```
 
 Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event.  
-[setResult](arkts-arkui-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
+[setResult](arkts-arkui-dragevent-i.md#setResult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
 
 - If the component being dragged is one that supports drop actions by default, the system's actual data processing  
 result is used.  
@@ -6417,7 +6417,7 @@ Triggered when the current component obtains focus.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -6447,7 +6447,7 @@ Binds a focus axis event callback to the component. Triggered when any operation
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FocusAxisEvent&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[FocusAxisEvent](arkts-arkui-focusaxisevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -6507,7 +6507,7 @@ Binds a custom gesture determination callback to the component. When the gesture
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (gestureInfo: GestureInfo, event: BaseGestureEvent) =&gt; GestureJudgeResult | Yes |
+| callback | (gestureInfo: GestureInfo, event: BaseGestureEvent) = & gt; GestureJudgeResult | Yes |
 
 **Return value:**
 
@@ -6556,7 +6556,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 The **exposeInnerGesture** parameter indicates whether to expose gestures from built-in components within ArkUI system composite components to developers. When this parameter is set to **true**, these internal gestures are exposed.
 
 For scenarios where exposure of internal gestures is not required, use the original  
-[onGestureRecognizerJudgeBegin](arkts-arkui-commonmethod-c.md#ongesturerecognizerjudgebegin)API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
+[onGestureRecognizerJudgeBegin](#onGestureRecognizerJudgeBegin)API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
 
 **Since:** 13
 
@@ -6601,7 +6601,7 @@ Triggered when the mouse pointer or stylus enters or leaves the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (isHover: boolean, event: HoverEvent) =&gt; void | Yes |
+| event | (isHover: boolean, event: HoverEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6631,7 +6631,7 @@ Triggered when a stylus hovers over the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;HoverEvent&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[HoverEvent](arkts-arkui-hoverevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -6659,7 +6659,7 @@ Triggered when a key event occurs.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: KeyEvent) =&gt; void | Yes |
+| event | (event: KeyEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6690,7 +6690,7 @@ Triggered when a key operation is performed on the bound component after it obta
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyEvent, boolean&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md), boolean&gt; | Yes |
 
 **Return value:**
 
@@ -6723,7 +6723,7 @@ If the callback returns **true**, the key event is marked as consumed and will n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyEvent, boolean&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md), boolean&gt; | Yes |
 
 **Return value:**
 
@@ -6755,7 +6755,7 @@ If the return value of this callback is **true**, the key event is considered co
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyEvent, boolean&gt; | Yes |
+| event | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md), boolean&gt; | Yes |
 
 **Return value:**
 
@@ -6783,7 +6783,7 @@ Triggered when the component is clicked by a mouse button or the mouse pointer m
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: MouseEvent) =&gt; void | Yes |
+| event | (event: MouseEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6827,11 +6827,11 @@ Called when component is focused, the return value indicates whether keyboard is
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md). This API cannot be triggered in mouse-based drag scenarios.
+Triggered when the component enters a state prior to a gesture-based drag operation. For details about the state prior to the drag-and-drop operation, see [PreDragStatus](arkts-arkui-predragstatus-e.md#PreDragStatus). This API cannot be triggered in mouse-based drag scenarios.
 
 > **NOTE：**
 > 
-> This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called in [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -6847,7 +6847,7 @@ Triggered when the component enters a state prior to a gesture-based drag operat
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PreDragStatus&gt; | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[PreDragStatus](arkts-arkui-predragstatus-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -6873,8 +6873,8 @@ Triggered when the component size changes due to layout updates.
 > animations compare the layout state before the animation starts with the state after the animation closure is
 > executed. If the **onSizeChange** callback is triggered synchronously during the pre-animation layout phase, the
 > changes made in this callback will be processed as part of the animation, along with the changes in the animation
-> closure. To avoid this issue, you can use [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md/arkts-arkui-global-settimeout-f.md#settimeout) or
-> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback) (with a 0 ms delay) inside
+> closure. To avoid this issue, you can use [setTimeout](api/@internal/ets/global:setTimeout) or
+> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback) (with a 0 ms delay) inside
 > **onSizeChange** to defer the UI processing logic to asynchronous execution.
 
 **Since:** 12
@@ -6908,7 +6908,7 @@ onTouch(event: (event: TouchEvent) => void): T
 ```
 
 Invoked when a touch event is triggered. Touch events  
-[bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md).Mouse left-click events are converted to touch events and will also trigger this callback.
+[bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-touchevent-i.md#TouchEvent).Mouse left-click events are converted to touch events and will also trigger this callback.
 
 **Since:** 7
 
@@ -6922,7 +6922,7 @@ Invoked when a touch event is triggered. Touch events
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: TouchEvent) =&gt; void | Yes |
+| event | (event: TouchEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -6952,7 +6952,7 @@ Binds a custom event interception callback to a component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent, HitTestMode&gt; | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md), [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7001,7 +7001,7 @@ Configures a callback for the **onVisibleAreaApproximateChange** event, with opt
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 23.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 23.
 
 **Since:** 17
 
@@ -7037,23 +7037,23 @@ Called when the visible area of the component changes. For details about the dev
 
 > **NOTE：**
 > 
-> - This API can be called in [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> - This API can be called in [attributeModifier](#attributeModifier) since API version 20.
 > 
 > - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor
 > nodes (up to the window boundary) and its own area.
 > 
 > - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any
 > ancestor node, window-level occlusion, and component rotation. Examples include layouts using
-> [Stack](../../apis-arkts/arkts-apis/arkts-arkts-util-stack-stack-c.md/arkts-arkts-util-stack-stack-c.md), [z-order control](arkts-arkui-commonmethod-c.md#zindex), and
-> [rotate](arkts-arkui-commonmethod-c.md#rotate) transformations.
+> [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zIndex), and
+> [rotate](#rotate) transformations.
 > 
 > - It does not support visibility change calculations for nodes that are not in the component tree. For example,
 > preloaded nodes or custom nodes mounted using the
 > [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - This API does not support the [scale](arkts-arkui-commonmethod-c.md#scale) attribute. To enable
-> support for the [scale](arkts-arkui-commonmethod-c.md#scale) attribute, use
-> [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#onvisibleareachange)
+> - This API does not support the [scale](#scale) attribute. To enable
+> support for the [scale](#scale) attribute, use
+> [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onVisibleAreaChange)
 > and set **measureFromViewport** to **true**.
 
 **Since:** 9
@@ -7068,7 +7068,7 @@ Called when the visible area of the component changes. For details about the dev
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratios | Array&lt;number&gt; | Yes |
+| ratios | Array & lt;number & gt; | Yes |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Yes |
 
 **Return value:**
@@ -7100,7 +7100,7 @@ Called when the visible area of the component changes. You can use **measureFrom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratios | Array&lt;number&gt; | Yes |
+| ratios | Array & lt;number & gt; | Yes |
 | event | [VisibleAreaChangeCallback](arkts-arkui-visibleareachangecallback-t.md) | Yes |
 | measureFromViewport | boolean | Yes |
 
@@ -7165,7 +7165,7 @@ Sets the opacity of the component. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [opacity](#opacity) | [Optional](arkts-arkui-optional-t.md)&lt;number \| [Resource&gt;](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
+| [opacity](#opacity) | [Optional](arkts-arkui-optional-t.md)&lt;number \| Resource & gt; | Yes |
 
 **Return value:**
 
@@ -7230,7 +7230,7 @@ Sets the outline attributes in one declaration. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;OutlineOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineOptions](../arkts-apis/arkts-arkui-outlineoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7262,7 +7262,7 @@ Sets the outline color. If this API is not used, the default color black will be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-units-localizededgecolors-i.md) | Yes |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | Yes |
 
 **Return value:**
 
@@ -7277,7 +7277,7 @@ outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>):
 ```
 
 Sets the outline color. If this API is not used, the default color black will be applied. Compared with   
-[outlineColor](arkts-arkui-commonmethod-c.md#outlinecolor), this API supports the **undefined** type for the **color** parameter.
+[outlineColor](#outlineColor), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
 
@@ -7295,7 +7295,7 @@ Sets the outline color. If this API is not used, the default color black will be
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| EdgeColors \| [LocalizedEdgeColors&gt;](../arkts-apis/arkts-arkui-units-localizededgecolors-i.md) | Yes |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7342,7 +7342,7 @@ outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 ```
 
 Sets the radius of the outline corners. If this API is not used, there will be no change by default. Compared with   
-[outlineRadius](arkts-arkui-commonmethod-c.md#outlineradius), this API supports the   
+[outlineRadius](#outlineRadius), this API supports the   
 **undefined** type for the **radius** parameter.
 
 **Since:** 18
@@ -7361,7 +7361,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| [OutlineRadiuses&gt;](../arkts-apis/arkts-arkui-units-outlineradiuses-i.md) | Yes |
+| radius | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [OutlineRadiuses](../arkts-apis/arkts-arkui-units-outlineradiuses-i.md) & gt; | Yes |
 
 **Return value:**
 
@@ -7408,7 +7408,7 @@ outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 ```
 
 Sets the outline style. If this API is not used, a solid line is displayed by default. Compared with   
-[outlineStyle](arkts-arkui-commonmethod-c.md#outlinestyle), this API supports the   
+[outlineStyle](#outlineStyle), this API supports the   
 **undefined** type for the **style** parameter.
 
 **Since:** 18
@@ -7427,7 +7427,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;OutlineStyle \| [EdgeOutlineStyles&gt;](../arkts-apis/arkts-arkui-units-edgeoutlinestyles-i.md) | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| [EdgeOutlineStyles](../arkts-apis/arkts-arkui-units-edgeoutlinestyles-i.md) & gt; | Yes |
 
 **Return value:**
 
@@ -7474,7 +7474,7 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 ```
 
 Sets the thickness of the outline. If this API is not used, there will be no change by default. Compared with   
-[outlineWidth](arkts-arkui-commonmethod-c.md#outlinewidth), this API supports the   
+[outlineWidth](#outlineWidth), this API supports the   
 **undefined** type for the **width** parameter.
 
 **Since:** 18
@@ -7493,7 +7493,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [width](#width) | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| [EdgeOutlineWidths&gt;](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md) | Yes |
+| [width](#width) | [Optional](arkts-arkui-optional-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md) & gt; | Yes |
 
 **Return value:**
 
@@ -7508,8 +7508,8 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 ```
 
 Adds an overlay to this component, which can be text, a custom component, or  
-[ComponentContent](arkts-arkui-componentcontent-t.md). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example,  
-[getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md/arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid)) cannot access components within the overlay.
+[ComponentContent](arkts-arkui-componentcontent-t.md#ComponentContent). The overlay is positioned based on the current component. The overlay is not rendered through the component tree, meaning some APIs (for example,  
+[getRectangleById](../arkts-apis/arkts-arkui-componentutils-getrectanglebyid-f.md#getRectangleById)) cannot access components within the overlay.
 
 > **NOTE：**
 > 
@@ -7534,7 +7534,7 @@ Adds an overlay to this component, which can be text, a custom component, or
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| CustomBuilder \| [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md) | Yes |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [ComponentContent](arkts-arkui-componentcontent-t.md) | Yes |
 | options | [OverlayOptions](arkts-arkui-overlayoptions-i.md) | No |
 
 **Return value:**
@@ -7565,7 +7565,7 @@ Sets the padding of the component.&lt;br&gt;Since API version 10, this API suppo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Padding \| Length \| [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes |
+| value | Padding \| [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 
@@ -7583,7 +7583,7 @@ Gesture that can be recognized at once by the component and its child component.
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -7597,7 +7597,7 @@ Gesture that can be recognized at once by the component and its child component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gesture](#gesture) | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes |
+| [gesture](#gesture) | [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) | Yes |
 | [mask](#mask) | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
 
 **Return value:**
@@ -7621,7 +7621,7 @@ Sets the pixel rounding policy for the current component in the specified direct
 > disable pixel rounding for individual components.
 > 
 > - This API can be called within
-> [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)
+> [attributeModifier](#attributeModifier)
 > since API version 12.
 
 In normal calculations, the vertical direction (top and bottom) correspond to the component height, and the horizontal direction (the starting direction of mirroring is considered "left") correspond to the component width.For ease of description, these two sets of directions are referred to as top-left and bottom-right.
@@ -7694,7 +7694,7 @@ pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 ```
 
 Applies a pixel stretch effect to the component. Compared to   
-[pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the   
+[pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelStretchEffect), the   
 **options** parameter supports the **undefined** type.
 
 **Since:** 18
@@ -7711,7 +7711,7 @@ Applies a pixel stretch effect to the component. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;PixelStretchEffectOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[PixelStretchEffectOptions](arkts-arkui-pixelstretcheffectoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7725,20 +7725,20 @@ Applies a pixel stretch effect to the component. Compared to
 position(value: Position | Edges | LocalizedEdges): T
 ```
 
-Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) is supported.
+Sets the absolute positioning, which determines the position of a child component relative to the content area of the parent component. Dynamic configuration via [attributeModifier](#attributeModifier) is supported.
 
 **NOTE：**
 - This API takes effect after the component's size measurement is complete.
 - When the parent container is [Row](Row),
 [Column](Column), or  
 [Flex](Flex), the child component with **position** set does not occupy any space.  
-- The [Position](arkts-arkui-commonmethod-c.md#position) type uses the upper left corner of the parent's content area as the  
-reference point. The [Edges](../arkts-apis/arkts-arkui-graphics-edges-i.md/arkts-arkui-graphics-edges-i.md) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md/arkts-arkui-localizededges-i.md) type provides the same functionality as Edges while supporting layout mirroring.  
+- The [Position](position) type uses the upper left corner of the parent's content area as the  
+reference point. The [Edges](Edges) type uses all four sides of the parent's content area as reference, where **top**, **left**, **right**, and **bottom** define the margins between the component and corresponding sides of the parent's content area. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md#LocalizedEdges) type provides the same functionality as Edges while supporting layout mirroring.  
 - This attribute is applicable to scenarios where the component's position in the parent container is fixed, for  
 example, where it is pinned to top or floating on the UI.  
 - This attribute is unavailable for a layout container whose width and height are zero.  
 - In [RelativeContainer](../../../reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md), if the child  
-component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules) set, the **position** attribute will not take effect
+component has [alignRules](#alignRules) set, the **position** attribute will not take effect
 
 **Since:** 7
 
@@ -7754,7 +7754,7 @@ component has [alignRules](arkts-arkui-commonmethod-c.md#alignrules) set, the **
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes |
+| value | Position \| Edges \| [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) | Yes |
 
 **Return value:**
 
@@ -7775,7 +7775,7 @@ Gesture to preferentially recognize.
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 7
 
@@ -7789,7 +7789,7 @@ Gesture to preferentially recognize.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [gesture](#gesture) | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md) | Yes |
+| [gesture](#gesture) | [GestureType](../arkts-apis/arkts-arkui-gesturecontrol-gesturetype-e.md) | Yes |
 | [mask](#mask) | [GestureMask](../arkts-apis/arkts-arkui-gesturemask-e.md) | No |
 
 **Return value:**
@@ -7854,7 +7854,7 @@ Radial Gradient center:Center point of radial gradient radius:Radius of Radial G
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;RadialGradientOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[RadialGradientOptions](arkts-arkui-radialgradientoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -7901,7 +7901,7 @@ renderFit(fitMode: Optional<RenderFit>): T
 ```
 
 Sets how the final state of the component's content is rendered during its width and height animation process. If it is not set via this API, the content size at the end of the animation is maintained, and the content always remains top-left aligned with the component. Compared to   
-[renderFit](arkts-arkui-commonmethod-c.md#renderfit), this API supports the **undefined** type for the   
+[renderFit](#renderFit), this API supports the **undefined** type for the   
 **fitMode** parameter.
 
 **Since:** 18
@@ -7920,7 +7920,7 @@ Sets how the final state of the component's content is rendered during its width
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fitMode | [Optional](arkts-arkui-optional-t.md)&lt;RenderFit&gt; | Yes |
+| fitMode | [Optional](arkts-arkui-optional-t.md)&lt;[RenderFit](../arkts-apis/arkts-arkui-renderfit-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8016,7 +8016,7 @@ Sets one or more touch targets.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array&lt;Rectangle&gt; \| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | Yes |
+| value | Array&lt;[Rectangle](arkts-arkui-rectangle-i.md)&gt; \| [Rectangle](arkts-arkui-rectangle-i.md) | Yes |
 
 **Return value:**
 
@@ -8031,8 +8031,8 @@ responseRegionList(regions: Array<ResponseRegion>): T
 ```
 
 Sets the touch target list for the component. When this API is called, the  
-[responseRegion](arkts-arkui-commonmethod-c.md#responseregion) and  
-[mouseResponseRegion](arkts-arkui-commonmethod-c.md#mouseresponseregion) APIs do not take effect.
+[responseRegion](#responseRegion) and  
+[mouseResponseRegion](#mouseResponseRegion) APIs do not take effect.
 
 **Since:** 22
 
@@ -8048,7 +8048,7 @@ Sets the touch target list for the component. When this API is called, the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| regions | Array&lt;ResponseRegion&gt; | Yes |
+| regions | Array&lt;[ResponseRegion](arkts-arkui-responseregion-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8180,7 +8180,7 @@ Rotates the component.
 rotate(options: Optional<RotateOptions>): T
 ```
 
-Rotates the component. Compared with [rotate](arkts-arkui-commonmethod-c.md#rotate), this API supports the **undefined** type.
+Rotates the component. Compared with [rotate](#rotate), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -8198,7 +8198,7 @@ Rotates the component. Compared with [rotate](arkts-arkui-commonmethod-c.md#rota
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;RotateOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[RotateOptions](arkts-arkui-rotateoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8213,7 +8213,7 @@ rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 ```
 
 Sets the component rotation effect. Compared with   
-[rotate](arkts-arkui-commonmethod-c.md#rotate), this API supports the **RotateAngleOptions**type for the **options** parameter.
+[rotate](#rotate), this API supports the **RotateAngleOptions**type for the **options** parameter.
 
 **Since:** 20
 
@@ -8231,7 +8231,7 @@ Sets the component rotation effect. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;RotateOptions \| [RotateAngleOptions&gt;](../arkts-apis/arkts-arkui-common-rotateangleoptions-i.md) | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[RotateOptions](arkts-arkui-rotateoptions-i.md) \| [RotateAngleOptions](arkts-arkui-rotateangleoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8246,7 +8246,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 ```
 
 Sets the safe area padding. This allows the container to add a component-level safe area for its child components to extend into. This attribute can be dynamically set using  
-[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+[attributeModifier](#attributeModifier).
 
 > **NOTE：**
 > In API version 18, this API can be invoked in attributeModifier.
@@ -8279,7 +8279,7 @@ Sets the safe area padding. This allows the container to add a component-level s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| paddingValue | Padding \| LengthMetrics \| [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes |
+| paddingValue | Padding \| LengthMetrics \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 
@@ -8323,7 +8323,7 @@ Applies a saturation effect to the component. If this API is not used, there wil
 saturate(saturate: Optional<number>): T
 ```
 
-Applies a saturation effect to the component. If this API is not used, there will be no change by default. Compared to [saturate](arkts-arkui-commonmethod-c.md#saturate), the **saturate** parameter supports the **undefined** type.
+Applies a saturation effect to the component. If this API is not used, there will be no change by default. Compared to [saturate](#saturate), the **saturate** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8385,7 +8385,7 @@ Scales the component.
 scale(options: Optional<ScaleOptions>): T
 ```
 
-Scales the component. Compared with [scale](arkts-arkui-commonmethod-c.md#scale), this API supports the   
+Scales the component. Compared with [scale](#scale), this API supports the   
 **undefined** type.
 
 **Since:** 18
@@ -8404,7 +8404,7 @@ Scales the component. Compared with [scale](arkts-arkui-commonmethod-c.md#scale)
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;ScaleOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[ScaleOptions](arkts-arkui-scaleoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8449,7 +8449,7 @@ sepia(sepia: Optional<number>): T
 ```
 
 Converts the image to a sepia tone, reducing color intensity to create a warm, vintage image style. Compared to   
-[sepia](arkts-arkui-commonmethod-c.md#sepia), this API supports the **undefined** type for the **sepia** parameter.
+[sepia](#sepia), this API supports the **undefined** type for the **sepia** parameter.
 
 **Since:** 18
 
@@ -8497,7 +8497,7 @@ Applies a shadow effect to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-apis/arkts-arkui-common-shadowstyle-e.md) | Yes |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md) | Yes |
 
 **Return value:**
 
@@ -8512,7 +8512,7 @@ shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 ```
 
 Applies a shadow effect to the component. Compared to   
-[shadow](arkts-arkui-commonmethod-c.md#shadow), the **options** parameter supports the   
+[shadow](#shadow), the **options** parameter supports the   
 **undefined** type.
 
 **Since:** 18
@@ -8531,7 +8531,7 @@ Applies a shadow effect to the component. Compared to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;ShadowOptions \| [ShadowStyle&gt;](../arkts-apis/arkts-arkui-common-shadowstyle-e.md) | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8727,7 +8727,7 @@ sphericalEffect(effect: Optional<number>): T
 ```
 
 Applies a spherical effect to the component. Compared to   
-[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#sphericaleffect), the **effect** parameter supports the **undefined** type.
+[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericalEffect), the **effect** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8761,7 +8761,7 @@ Sets the state-specific styles for the component.
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](#attributeModifier).
 
 **Since:** 8
 
@@ -8841,7 +8841,7 @@ Angle Gradient center:is the center point of the angle gradient start:Start poin
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;SweepGradientOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[SweepGradientOptions](arkts-arkui-sweepgradientoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -8879,7 +8879,7 @@ Applies a system bar effect to the component, which means to invert colors based
 systemMaterial(material: SystemUiMaterial | undefined): T
 ```
 
-Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)), border color ([borderColor](arkts-arkui-commonmethod-c.md#bordercolor)), border width ([borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)), and shadow ([shadow](arkts-arkui-commonmethod-c.md#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see   
+Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](#backgroundColor)), border color ([borderColor](#borderColor)), border width ([borderWidth](#borderWidth)), and shadow ([shadow](#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see   
 [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
 
 **Since:** 26.0.0
@@ -8917,7 +8917,7 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 > **NOTE：**
 > 
 > - **tabIndex** only customizes **Tab** key navigation. For arrow key navigation customization, use
-> [nextFocus](arkts-arkui-commonmethod-c.md#nextfocus).
+> [nextFocus](#nextFocus).
 
 **Since:** 9
 
@@ -9009,7 +9009,7 @@ Whether the component can respond to finger interactions such as click and touch
 
 **Deprecated since:** 9
 
-**Substitutes:** [hitTestBehavior](arkts-arkui-commonmethod-c.md#hittestbehavior)
+**Substitutes:** [hitTestBehavior](#hitTestBehavior)
 
 <!--Device-CommonMethod-touchable(value: boolean): T--><!--Device-CommonMethod-touchable(value: boolean): T-End-->
 
@@ -9034,7 +9034,7 @@ transform(value: object): T
 ```
 
 Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the   
-[transform3D](arkts-arkui-commonmethod-c.md#transform3d) API is required.
+[transform3D](#transform3D) API is required.
 
 **Since:** 7
 
@@ -9063,7 +9063,7 @@ transform(transform: Optional<object>): T
 ```
 
 Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the   
-[transform3D](arkts-arkui-commonmethod-c.md#transform3d) API is required. Compared with   
+[transform3D](#transform3D) API is required. Compared with   
 [transform](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform), the transform&lt;sup&gt;18+&lt;/sup&gt; parameter supports the undefined type.
 
 **Since:** 18
@@ -9110,7 +9110,7 @@ Sets the 3D transformation matrix of the component. When 3D transformation with 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [transform](#transform) | [Optional](arkts-arkui-optional-t.md)&lt;Matrix4Transit&gt; | Yes |
+| [transform](#transform) | [Optional](arkts-arkui-optional-t.md)&lt;[Matrix4Transit](arkts-arkui-matrix4transit-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -9140,7 +9140,7 @@ Sets the transition effects used when a component is inserted or removed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TransitionOptions](arkts-arkui-transitionoptions-i.md) \| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Yes |
+| value | [TransitionOptions](arkts-arkui-transitionoptions-i.md) \| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
 
 **Return value:**
 
@@ -9155,11 +9155,11 @@ transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback
 ```
 
 Sets the transition effects used when a component is inserted or removed. Compared with   
-[transition](arkts-arkui-commonmethod-c.md#transition), this API provides the callback when the transition animation ends.
+[transition](#transition), this API provides the callback when the transition animation ends.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -9178,7 +9178,7 @@ Sets the transition effects used when a component is inserted or removed. Compar
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | effect | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
-| onFinish | [Optional](arkts-arkui-optional-t.md)&lt;TransitionFinishCallback&gt; | Yes |
+| onFinish | [Optional](arkts-arkui-optional-t.md)&lt;[TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -9222,7 +9222,7 @@ Translates the component.
 translate(translate: Optional<TranslateOptions>): T
 ```
 
-Translates the component. Compared with [translate](arkts-arkui-commonmethod-c.md#translate), this API supports the **undefined** type.
+Translates the component. Compared with [translate](#translate), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -9240,7 +9240,7 @@ Translates the component. Compared with [translate](arkts-arkui-commonmethod-c.m
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [translate](#translate) | [Optional](arkts-arkui-optional-t.md)&lt;TranslateOptions&gt; | Yes |
+| [translate](#translate) | [Optional](arkts-arkui-optional-t.md)&lt;[TranslateOptions](arkts-arkui-translateoptions-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -9271,7 +9271,7 @@ Sets whether the component should apply the effects template defined by the pare
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [useEffect](#useeffect) | boolean | Yes |
-| effectType | [EffectType](arkts-arkui-effecttype-e.md) | Yes |
+| [effectType](../../apis-camera-kit/arkts-apis/arkts-camera-camera-controlcenterstatusinfo-i.md) | [EffectType](arkts-arkui-effecttype-e.md) | Yes |
 
 **Return value:**
 
@@ -9302,7 +9302,7 @@ Sets whether the component should apply the effects template defined by the pare
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [useEffect](#useeffect) | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes |
-| effectType | [EffectType](arkts-arkui-effecttype-e.md) | No |
+| [effectType](../../apis-camera-kit/arkts-apis/arkts-camera-camera-controlcenterstatusinfo-i.md) | [EffectType](arkts-arkui-effecttype-e.md) | No |
 
 **Return value:**
 
@@ -9378,7 +9378,7 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 useShadowBatching(use: Optional<boolean>): T
 ```
 
-Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#useshadowbatching), this API supports the **undefined** type for the **use** parameter.
+Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useShadowBatching), this API supports the **undefined** type for the **use** parameter.
 
 **Since:** 18
 
@@ -9421,7 +9421,7 @@ Sets the number of occupied columns and offset columns for a specific device wid
 
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColColumnOption
+**Substitutes:** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-CommonMethod-useSizeType(value: {    xs?: number | { span: number; offset: number };    sm?: number | { span: number; offset: number };    md?: number | { span: number; offset: number };    lg?: number | { span: number; offset: number };  }): T--><!--Device-CommonMethod-useSizeType(value: {    xs?: number | { span: number; offset: number };    sm?: number | { span: number; offset: number };    md?: number | { span: number; offset: number };    lg?: number | { span: number; offset: number };  }): T-End-->
 
@@ -9461,7 +9461,7 @@ Sets the visibility of the component. If **visibility** is not set, the componen
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Visibility](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-visibility-e.md) | Yes |
+| value | [Visibility](#visibility) | Yes |
 
 **Return value:**
 
@@ -9479,7 +9479,7 @@ Sets a visual effect that is not a filter effect.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 20.
+> This API can be called within [attributeModifier](#attributeModifier) since API version 20.
 
 **Since:** 12
 
@@ -9557,7 +9557,7 @@ Sets the width of the component or its horizontal layout policy. By default, the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md) | Yes |
+| widthValue | [Length](../arkts-apis/arkts-arkui-length-t.md) \| [LayoutPolicy](arkts-arkui-layoutpolicy-c.md) | Yes |
 
 **Return value:**
 

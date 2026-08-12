@@ -36,8 +36,8 @@ Get exposure bias step.
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getSupportedExposureDurationRange
 
@@ -59,14 +59,14 @@ Gets the supported manual exposure duration range, units: microseconds.
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getSupportedExposureRange
 
@@ -86,15 +86,15 @@ Obtains the supported manual exposure durations.
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

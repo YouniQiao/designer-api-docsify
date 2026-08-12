@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#EnableAlertOptions
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions-End-->
 
@@ -28,7 +28,7 @@ cancel?: (errMsg: string) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#EnableAlertOptions
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -54,7 +54,7 @@ complete?: () => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#EnableAlertOptions
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -74,7 +74,7 @@ success?: (errMsg: string) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#EnableAlertOptions
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 
@@ -102,7 +102,7 @@ message: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router.EnableAlertOptions#message
+**替代接口：** [message](ohos.router.EnableAlertOptions#message)
 
 <!--Device-EnableAlertBeforeBackPageOptions-message: string--><!--Device-EnableAlertBeforeBackPageOptions-message: string-End-->
 

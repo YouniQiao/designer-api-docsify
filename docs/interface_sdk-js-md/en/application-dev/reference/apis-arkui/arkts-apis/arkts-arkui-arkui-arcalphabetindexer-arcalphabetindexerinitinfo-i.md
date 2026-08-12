@@ -13,7 +13,7 @@ Define the initialization parameters of the arc alphabet index bar
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## arrayValue
@@ -44,7 +44,7 @@ selected: int | Bindable<int>
 
 The index value of the initial selected item.If it is out of the index range, the default value is 0
 
-**Type:** int \| Bindable&lt;int&gt;
+**Type:** int \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt;
 
 **Since:** 26.0.0
 

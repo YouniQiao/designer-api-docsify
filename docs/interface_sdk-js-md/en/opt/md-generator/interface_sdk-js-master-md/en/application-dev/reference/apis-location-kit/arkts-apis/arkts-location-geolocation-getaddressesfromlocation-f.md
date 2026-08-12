@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getAddressesFromLocation
@@ -18,7 +18,7 @@ Obtain address info from location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation
+**Substitutes:** [getAddressesFromLocation](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -61,7 +61,7 @@ Obtain address info from location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation
+**Substitutes:** [getAddressesFromLocation](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -79,7 +79,7 @@ Obtain address info from location
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;GeoAddress&gt;&gt; |
+| Promise & lt;Array & lt;GeoAddress & gt; & gt; |
 
 ## Examples
 

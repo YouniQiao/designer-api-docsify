@@ -11,7 +11,7 @@ Declare ToolBarV2Modifier used in ToolBar
 ## Modules to Import
 
 ```TypeScript
-import { ToolBarV2ItemImageOptions, ToolBarV2Item, ToolBarV2ItemText, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemAction, ToolBarV2ItemOptions, ToolBarV2, ToolBarV2SymbolGlyph, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemState, ToolBarV2ItemTextOptions, ToolBarV2Modifier } from 'kits/@kit.ArkUI';
+import { ToolBarV2ItemImageOptions, ToolBarV2Item, ToolBarV2ItemText, ToolBarV2SymbolGlyphOptions, ToolBarV2ItemAction, ToolBarV2ItemOptions, ToolBarV2, ToolBarV2SymbolGlyph, ToolBarV2ItemIconType, ToolBarV2ItemImage, ToolBarV2ItemState, ToolBarV2ItemTextOptions, ToolBarV2Modifier } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -36,7 +36,7 @@ Sets the backgroundColor of the toolBarV2.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [backgroundColor](#backgroundcolor) | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes |
+| [backgroundColor](#backgroundcolor) | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -66,7 +66,7 @@ Sets the height of the toolBarV2.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [height](#height) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| [height](#height) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -96,7 +96,7 @@ Sets the left and right padding of the toolbarV2.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [padding](#padding) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes |
+| [padding](#padding) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes |
 
 **Return value:**
 

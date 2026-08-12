@@ -13,7 +13,7 @@ Summarizes the data information of the **unifiedData** object, including the dat
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## overview
@@ -24,7 +24,7 @@ get overview(): Record<string, long>
 
 Indicates the overview information of unifiedData.
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, long&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, long&gt;
 
 **Since:** 22
 
@@ -46,7 +46,7 @@ set summary(value: Record<string, long>)
 
 A map for each type and data size, key is data type, value is the corresponding data size
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, long&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, long&gt;
 
 **Since:** 10
 

@@ -34,5 +34,5 @@ function evictFilePages(fileNames: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000163](../errorcode-ability.md#16000163-文件类型错误) | 文件类型错误。文件名未以.so、.hap或.hsp结尾。 |
+| [16000163](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000163-文件类型错误) | 文件类型错误。文件名未以.so、.hap或.hsp结尾。 |
 

@@ -11,7 +11,7 @@ Defines the scanner.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## deviceName

@@ -9,7 +9,7 @@ function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>
 Obtains information about the running processes. This API uses a promise to return the result.
 
 > This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 > instead.
 
 **Since:** 8
@@ -18,7 +18,7 @@ Obtains information about the running processes. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [ohos.app.ability.appManager:appManager#getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager:appManager#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -39,7 +39,7 @@ Obtains information about the running processes. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
 
 
 ## getProcessRunningInformation
@@ -60,7 +60,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [ohos.app.ability.appManager:appManager#getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager:appManager#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -75,12 +75,12 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the information about the running processes. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
 

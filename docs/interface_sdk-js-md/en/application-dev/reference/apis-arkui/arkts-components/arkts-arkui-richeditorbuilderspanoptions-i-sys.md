@@ -18,7 +18,7 @@ dragBackgroundColor? : ColorMetrics
 
 Background color of the builder when it is dragged independently. If no valid value is specified, the default color is used.
 
-**Type:** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c-sys.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 

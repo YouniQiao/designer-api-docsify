@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## demoteCurrentFromCandidateMasterProcess
@@ -35,9 +35,9 @@ Removes the current process from the candidate master process list. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000116](../errorcode-ability.md#16000116-process-is-already-a-master-process) | The current process is already a master process and does not support cancellation. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000117](../errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
+| [16000116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000116-process-is-already-a-master-process) | The current process is already a master process and does not support cancellation. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000117](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
 
 ## Examples
 

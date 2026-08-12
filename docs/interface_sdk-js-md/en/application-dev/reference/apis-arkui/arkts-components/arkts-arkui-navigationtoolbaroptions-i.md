@@ -18,7 +18,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the title bar. If this parameter is not set, the background blur effect is disabled.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 11
 
@@ -46,7 +46,7 @@ This parameter is only effective when **backgroundBlurStyle** is set.
 
 Avoid using this API in conjunction with **backgroundEffect**.
 
-**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
@@ -68,7 +68,7 @@ backgroundColor?: ResourceColor
 
 Background color of the title bar. If this parameter is not set, the default color is used.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 11
 
@@ -94,7 +94,7 @@ Title bar background properties, including blur radius, brightness, saturation, 
 
 Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
-**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 19
 
@@ -172,7 +172,7 @@ moreButtonOptions?: MoreButtonOptions
 
 Options for the toolbar's more button menu.
 
-**Type:** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
+**Type:** [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md)
 
 **Since:** 19
 

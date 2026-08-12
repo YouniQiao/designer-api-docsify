@@ -20,7 +20,7 @@ This module applies to the following scenarios:
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

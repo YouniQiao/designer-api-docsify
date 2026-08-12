@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
+import { access } from '@kit.ConnectivityKit';
 ```
 
 ## convertUuid

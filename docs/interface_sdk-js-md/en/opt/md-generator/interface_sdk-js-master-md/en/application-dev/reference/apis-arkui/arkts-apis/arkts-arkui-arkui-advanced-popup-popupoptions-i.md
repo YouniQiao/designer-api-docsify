@@ -11,7 +11,7 @@ Defines the style parameters of the popup.
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## onClose
@@ -66,7 +66,7 @@ Layout direction.
 
 Default value: **Direction.Auto**
 
-**Type:** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**Type:** Direction
 
 **Since:** 12
 

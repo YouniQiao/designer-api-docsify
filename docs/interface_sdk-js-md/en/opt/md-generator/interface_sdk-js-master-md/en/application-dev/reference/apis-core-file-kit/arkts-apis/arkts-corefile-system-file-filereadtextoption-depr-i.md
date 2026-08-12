@@ -61,7 +61,7 @@ Callback invoked when the API call fails.
 success?: (data: FileReadTextResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md).
+Callback invoked when the API call is successful. **data** is [FileReadTextResponse](arkts-corefile-system-file-filereadtextresponse-depr-i.md#FileReadTextResponse).
 
 **Since:** 3
 

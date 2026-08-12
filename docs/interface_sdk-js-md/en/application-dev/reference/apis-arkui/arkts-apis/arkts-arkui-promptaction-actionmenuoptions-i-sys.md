@@ -13,7 +13,7 @@ ActionMenu options.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## distortionMode
@@ -24,7 +24,7 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation Mode of the dialog.
 
-**Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
+**Type:** DistortionMode
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -48,7 +48,7 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the dialog.
 
-**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
+**Type:** EdgeLightMode
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

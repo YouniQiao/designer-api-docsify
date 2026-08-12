@@ -58,7 +58,7 @@ location?: Location
 
 录制视频的地理位置。默认不记录地理位置信息。&lt;br&gt;此接口从API version 6开始支持，从API version 12开始废弃，建议使用**AVMetadata.location**替代。如果同时设置了两个参数，将使用**AVMetadata.location**。
 
-**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
+**类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
 **起始版本：** 9
 
@@ -66,7 +66,7 @@ location?: Location
 
 **废弃版本：** 12
 
-**替代接口：** ohos.multimedia.media/media.AVMetadata#location
+**替代接口：** [location](ohos.multimedia.media/media.AVMetadata#location)
 
 <!--Device-AVRecorderConfig-location?: Location--><!--Device-AVRecorderConfig-location?: Location-End-->
 
@@ -98,7 +98,7 @@ metadata?: AVMetadata
 
 元数据。详见AVMetadata。
 
-**类型：** [AVMetadata](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-avmetadata-i.md)
+**类型：** AVMetadata
 
 **起始版本：** 12
 
@@ -144,7 +144,7 @@ rotation?: number
 
 **废弃版本：** 12
 
-**替代接口：** ohos.multimedia.media/media.AVMetadata#videoOrientation
+**替代接口：** [videoOrientation](arkts-media-media-avmetadata-i.md#videoOrientation)
 
 <!--Device-AVRecorderConfig-rotation?: number--><!--Device-AVRecorderConfig-rotation?: number-End-->
 

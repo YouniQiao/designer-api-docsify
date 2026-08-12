@@ -20,7 +20,7 @@ image?: ResourceStr
 
 图片显示区域大小由blockSize属性控制，请勿输入尺寸过大的图片。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 
@@ -42,7 +42,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 
 设置滑块使用的自定义形状。
 
-**类型：** [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute
+**类型：** CircleAttribute \| EllipseAttribute \| PathAttribute \| RectAttribute
 
 **起始版本：** 10
 
@@ -66,7 +66,7 @@ type: SliderBlockType
 
 默认值：SliderBlockType.DEFAULT，使用圆形滑块。
 
-**类型：** [SliderBlockType](../arkts-apis/arkts-arkui-slider-sliderblocktype-e.md)
+**类型：** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
 **默认值：** SliderBlockType.DEFAULT - indicating the round slider. [since 11]
 

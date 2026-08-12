@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## getDefaultCellularDataSlotId
@@ -60,7 +60,7 @@ Get the default cellular data card.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

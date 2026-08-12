@@ -32,7 +32,7 @@ getStatus(): AnimationStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| [AnimationStatus](arkts-arkui-animationstatus-e.md) | 动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
+| AnimationStatus | 动图的播放状态。包含4种状态：初始态、播放态、暂停态、停止态。 |
 
 ## pause
 

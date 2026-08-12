@@ -2,7 +2,7 @@
 
 定义RichText属性函数。
 
-**继承/实现关系：** RichTextAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** RichTextAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<RichTextAttribute> | Attri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;RichTextAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RichTextAttribute](arkts-arkui-richtext-richtextattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 

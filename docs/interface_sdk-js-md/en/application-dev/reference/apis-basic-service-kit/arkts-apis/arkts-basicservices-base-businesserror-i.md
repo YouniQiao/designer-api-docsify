@@ -2,7 +2,7 @@
 
 Defines an error parameter. This API inherits from the **Error** class and is used to pass standard error information, including the error code and optional additional information.
 
-**Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
+**Inheritance/Implementation:** BusinessError extends [Error](Error)
 
 **Since:** 6
 
@@ -15,7 +15,7 @@ Defines an error parameter. This API inherits from the **Error** class and is us
 ## Modules to Import
 
 ```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
 ```
 
 ## code

@@ -2,7 +2,7 @@
 
 Defines the configuration options of the calendar picker dialog box.
 
-Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions).
 
 > **NOTE：**
 > 
@@ -10,7 +10,7 @@ Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
 > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)
 
 **Since:** 10
 
@@ -165,7 +165,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -361,7 +361,7 @@ Triggered when the OK button in the dialog box is clicked.
 
 The callback parameter represents the selected date value.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -383,7 +383,7 @@ Triggered when the selection in the picker changes the selected date.
 
 The callback parameter represents the selected date value.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -406,7 +406,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
 **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

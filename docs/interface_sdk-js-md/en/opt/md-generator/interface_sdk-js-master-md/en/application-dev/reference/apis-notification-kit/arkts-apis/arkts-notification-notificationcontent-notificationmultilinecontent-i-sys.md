@@ -15,7 +15,7 @@ Describes the multi-line text notification. This API is inherited from Notificat
 > 
 > - The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**Inheritance/Implementation:** NotificationMultiLineContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **Since:** 7
 
@@ -31,7 +31,7 @@ lineWantAgents?: Array<WantAgent>
 
 **wantAgent**s triggered when a line of text in the multi-line text is tapped. The text in different lines corresponds to different **wantAgent**s. The maximum number of lines configured for this field is equal to the value of lines. This parameter is left empty by default.
 
-**Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt;
+**Type:** Array&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)&gt;
 
 **Since:** 20
 

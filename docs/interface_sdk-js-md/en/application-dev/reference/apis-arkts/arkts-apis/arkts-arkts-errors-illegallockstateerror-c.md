@@ -2,7 +2,7 @@
 
 Represents error that is thrown when lock is in an illegal state
 
-**Inheritance/Implementation:** IllegalLockStateError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** IllegalLockStateError extends [Error](Error)
 
 **Since:** 26.0.0
 

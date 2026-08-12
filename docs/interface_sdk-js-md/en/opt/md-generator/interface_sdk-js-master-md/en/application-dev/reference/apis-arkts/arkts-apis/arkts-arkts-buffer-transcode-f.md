@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## transcode

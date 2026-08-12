@@ -16,9 +16,9 @@ Enumerates the ability flags, which indicate the type of ability information to 
 GET_ABILITY_INFO_DEFAULT = 0x00000000
 ```
 
-Used to obtain the default [ability information](arkts-abilityinfo.md), which does not contain permissions, metadata, or ability information of disabled abilities. &lt;!--Del--&gt;You can use  
-[setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled)to set the ability enabling status and use  
-[isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled) to obtain the ability enabling status.&lt;!--DelEnd--&gt;
+Used to obtain the default [ability information](bundleManager/AbilityInfo), which does not contain permissions, metadata, or ability information of disabled abilities. &lt;!--Del--&gt;You can use  
+[setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setAbilityEnabled)to set the ability enabling status and use  
+[isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isAbilityEnabled-2) to obtain the ability enabling status.&lt;!--DelEnd--&gt;
 
 **Since:** 20
 

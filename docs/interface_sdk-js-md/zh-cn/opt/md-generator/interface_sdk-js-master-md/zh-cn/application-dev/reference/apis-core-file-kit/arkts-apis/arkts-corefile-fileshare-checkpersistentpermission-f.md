@@ -18,20 +18,20 @@ function checkPersistentPermission(policies: Array<PolicyInfo>): Promise<Array<b
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| policies | Array&lt;PolicyInfo&gt; | 是 |
+| policies | Array&lt;[PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; |
+| Promise & lt;Array & lt;boolean & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 | 13900042 |
 
 ## 示例

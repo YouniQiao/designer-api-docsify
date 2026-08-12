@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## addDisallowedBluetoothProtocols
@@ -30,15 +30,15 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | accountId | number | Yes |
-| protocols | Array&lt;Protocol&gt; | Yes |
+| [protocols](../../apis-network-kit/arkts-apis/arkts-network-socket-tlssecureoptions-i.md) | Array & lt;Protocol & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 
@@ -83,7 +83,7 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
 > 
 > 3. This API and
-> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-adddisallowedbluetoothprotocols-f.md#adddisallowedbluetoothprotocols) are
+> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#addDisallowedBluetoothProtocols) are
 > overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-
 > grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving,
 > or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be
@@ -105,17 +105,17 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
 | accountId | number | Yes |
-| protocols | Array&lt;Protocol&gt; | Yes |
+| [protocols](../../apis-network-kit/arkts-apis/arkts-network-socket-tlssecureoptions-i.md) | Array & lt;Protocol & gt; | Yes |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

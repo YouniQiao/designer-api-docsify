@@ -13,7 +13,7 @@ Defines the touch point information.
 ## Modules to Import
 
 ```TypeScript
-import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@kit.InputKit';
 ```
 
 ## globalX
@@ -23,7 +23,7 @@ globalX?: int
 ```
 
 X coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. &lt;!--Del--&gt; When being used as an input parameter, this parameter is mandatory if the value of  
-[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md)is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
+[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md#TouchEventData)is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -42,7 +42,7 @@ globalY?: int
 ```
 
 Y coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. &lt;!--Del--&gt; When being used as an input parameter, this parameter is mandatory if the value of  
-[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md)is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
+[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md#TouchEventData)is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

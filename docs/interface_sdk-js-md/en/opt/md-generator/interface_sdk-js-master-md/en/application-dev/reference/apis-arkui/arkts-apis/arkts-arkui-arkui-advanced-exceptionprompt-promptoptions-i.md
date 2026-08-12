@@ -11,7 +11,7 @@ Configuration parameter of ExceptionPrompt.
 ## Modules to Import
 
 ```TypeScript
-import { ExceptionPrompt, MarginType, PromptOptions } from 'kits/@kit.ArkUI';
+import { ExceptionPrompt, MarginType, PromptOptions } from '@kit.ArkUI';
 ```
 
 ## actionText

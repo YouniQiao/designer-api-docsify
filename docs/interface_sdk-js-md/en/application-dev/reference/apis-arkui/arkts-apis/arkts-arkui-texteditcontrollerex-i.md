@@ -2,9 +2,9 @@
 
 Implements an extended text editing controller.
 
-Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md).
+Inherits [TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController).
 
-**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textbasecontroller-i.md)
+**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController)
 
 **Since:** 12
 

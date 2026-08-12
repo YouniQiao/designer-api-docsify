@@ -29,5 +29,5 @@ Defines the callback invoked when the custom tab transition animation starts.
 
 | Type | Description |
 | --- | --- |
-| [TabContentAnimatedTransition](../arkts-apis/arkts-arkui-tabs-tabcontentanimatedtransition-i.md) \| undefined | Information about the custom tab switching animation. |
+| [TabContentAnimatedTransition](arkts-arkui-tabcontentanimatedtransition-i.md) \| undefined | Information about the custom tab switching animation. |
 

@@ -34,7 +34,7 @@ constructor(value: ImageAttachmentInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ImageAttachmentInterface](arkts-arkui-styledstring-imageattachmentinterface-i.md) | 是 | 图片设置项。 |
+| value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | 是 | 图片设置项。 |
 
 ## constructor
 
@@ -42,7 +42,7 @@ constructor(value: ImageAttachmentInterface)
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片的支持。
+图片对象的构造函数。与value类型入参构造函数相比，attachment参数增加了对undefined类型和[ResourceStr](ResourceStr)类型图片的支持。
 
 **起始版本：** 15
 
@@ -60,7 +60,7 @@ constructor(attachment: Optional<AttachmentType>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| attachment | [Optional](arkts-arkui-optional-t.md)&lt;AttachmentType&gt; | 是 | PixelMap类型或[ResourceStr](arkts-arkui-resourcestr-t.md)类型图片设置项。 |
+| attachment | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | 是 | PixelMap类型或[ResourceStr](ResourceStr)类型图片设置项。 |
 
 ## colorFilter
 
@@ -92,7 +92,7 @@ readonly layoutStyle?: ImageAttachmentLayoutStyle
 
 获取属性字符串的图片布局。
 
-**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 12
 
@@ -114,7 +114,7 @@ readonly objectFit?: ImageFit
 
 获取属性字符串的图片缩放类型。
 
-**类型：** [ImageFit](arkts-arkui-imagefit-e.md)
+**类型：** ImageFit
 
 **起始版本：** 12
 
@@ -138,7 +138,7 @@ readonly size?: SizeOptions
 
 返回number类型值的单位为`px`。
 
-**类型：** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**类型：** SizeOptions
 
 **起始版本：** 12
 
@@ -164,7 +164,7 @@ readonly sizeInVp?: SizeOptions
 
 当ImageAttachment尺寸设置为负数值或undefined时，返回为undefined。
 
-**类型：** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**类型：** SizeOptions
 
 **起始版本：** 21
 
@@ -212,7 +212,7 @@ readonly value: PixelMap
 
 获取属性字符串的图片数据源。
 
-**类型：** [PixelMap](arkts-arkui-pixelmap-t.md)
+**类型：** PixelMap
 
 **起始版本：** 12
 
@@ -234,7 +234,7 @@ readonly verticalAlign?: ImageSpanAlignment
 
 获取属性字符串的图片对齐方式。
 
-**类型：** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
+**类型：** ImageSpanAlignment
 
 **起始版本：** 12
 

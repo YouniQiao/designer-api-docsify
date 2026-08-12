@@ -1,8 +1,8 @@
 # IDataSourcePrefetching
 
-Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md/arkts-arkui-idatasource-i.md) API to provide a data source that can be prefetched.
+Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md#IDataSource) API to provide a data source that can be prefetched.
 
-**Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md/arkts-arkui-idatasource-i.md)
+**Inheritance/Implementation:** IDataSourcePrefetching extends [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md#IDataSource)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Extends the [IDataSource](../arkts-components/arkts-arkui-idatasource-i.md/arkts
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.ArkUI';
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -44,7 +44,7 @@ Cancels the prefetching of a specified data item from the dataset. This API can 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## prefetch
 
@@ -74,4 +74,4 @@ Prefetches a specified data item from the dataset. This API can be either synchr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

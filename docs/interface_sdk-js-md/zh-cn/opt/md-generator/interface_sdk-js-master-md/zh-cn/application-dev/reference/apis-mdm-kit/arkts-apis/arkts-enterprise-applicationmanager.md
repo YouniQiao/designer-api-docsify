@@ -5,7 +5,7 @@
 > **说明：**
 > 
 > 本模块接口仅对设备管理应用开放，且调用接口前需激活设备管理应用，具体请参考[MDM Kit开发指南](../../../mdm/mdm-kit-guide.md)。
-> [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md#isappkioskallowed)除外，该接口对所有应用开放。
+> [applicationManager.isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md#isAppKioskAllowed)除外，该接口对所有应用开放。
 
 **起始版本：** 12
 

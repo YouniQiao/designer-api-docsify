@@ -244,7 +244,7 @@ screenX: number
 
 **废弃版本：** 10
 
-**替代接口：** [TouchObject#windowX](arkts-arkui-touchobject-i.md#windowx)
+**替代接口：** [windowX](#windowX)
 
 <!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
 
@@ -266,7 +266,7 @@ screenY: number
 
 **废弃版本：** 10
 
-**替代接口：** [TouchObject#windowY](arkts-arkui-touchobject-i.md#windowy)
+**替代接口：** [windowY](#windowY)
 
 <!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
 

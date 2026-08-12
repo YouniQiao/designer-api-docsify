@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## setPortRoles
@@ -20,7 +20,7 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Deprecated since:** 12
 
-**Substitutes:** [usbManager.setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md#setportroletypes)(portId:
+**Substitutes:** [setPortRoleTypes](usbManager.setPortRoleTypes(portId:)
 
 <!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
 
@@ -33,8 +33,8 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | portId | number | Yes | Port number. |
-| powerRole | [PowerRoleType](arkts-basicservices-usb-powerroletype-e-sys.md) | Yes | Role for charging. |
-| dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | Yes | Role for data transfer. |
+| powerRole | PowerRoleType | Yes | Role for charging. |
+| dataRole | DataRoleType | Yes | Role for data transfer. |
 
 **Return value:**
 
@@ -46,5 +46,5 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

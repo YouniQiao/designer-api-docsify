@@ -6,7 +6,7 @@ Provides APIs for encapsulating file asset attributes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md)
+**Substitutes:** [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset)
 
 <!--Device-userFileManager-interface FileAsset--><!--Device-userFileManager-interface FileAsset-End-->
 
@@ -17,7 +17,7 @@ Provides APIs for encapsulating file asset attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -32,7 +32,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** @ohos.file.fs:fileIo.close
+**Substitutes:** [close](@ohos.file.fs:fileIo.close)
 
 <!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -91,7 +91,7 @@ Closes this file. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** @ohos.file.fs:fileIo.close
+**Substitutes:** [close](@ohos.file.fs:fileIo.close)
 
 <!--Device-FileAsset-close(fd: number): Promise<void>--><!--Device-FileAsset-close(fd: number): Promise<void>-End-->
 
@@ -109,7 +109,7 @@ Closes this file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -150,7 +150,7 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
+**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitModify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -211,7 +211,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitmodify)
+**Substitutes:** [commitModify](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#commitModify)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -225,7 +225,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -271,7 +271,7 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
+**Substitutes:** [setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setFavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -326,7 +326,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setfavorite)
+**Substitutes:** [setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setFavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -346,7 +346,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -385,7 +385,7 @@ Obtains the value of a **FileAsset** parameter.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.get](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#get)
+**Substitutes:** [get](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#get)
 
 <!--Device-FileAsset-get(member: string): MemberType--><!--Device-FileAsset-get(member: string): MemberType-End-->
 
@@ -439,7 +439,7 @@ getExif(callback: AsyncCallback<string>): void
 
 Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
 
-For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md/arkts-image-image-propertykey-e.md).
+For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey).
 
 | Key Value | Description |
 | --------------------------------------- | ----------------- |
@@ -482,14 +482,14 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 > **NOTE：**
 > 
 > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
-> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
+> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#ImageVideoKey).USER_COMMENT. The two fields need to be passed to
 > **fetchColumns**.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getexif)
+**Substitutes:** [getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getExif)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -509,7 +509,7 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -559,7 +559,7 @@ getExif(): Promise<string>
 
 Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result.
 
-For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md/arkts-image-image-propertykey-e.md).
+For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey).
 
 | Key Value | Description |
 | --------------------------------------- | ----------------- |
@@ -602,14 +602,14 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 > **NOTE：**
 > 
 > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
-> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md).USER_COMMENT. The two fields need to be passed to
+> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#ImageVideoKey).USER_COMMENT. The two fields need to be passed to
 > **fetchColumns**.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getexif)
+**Substitutes:** [getExif](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i-sys.md#getExif)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -623,13 +623,13 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -673,7 +673,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
+**Substitutes:** [getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getThumbnail)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO
 
@@ -728,7 +728,7 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
+**Substitutes:** [getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getThumbnail)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO
 
@@ -786,7 +786,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getthumbnail)
+**Substitutes:** [getThumbnail](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#getThumbnail)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO
 
@@ -806,7 +806,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 ## Examples
 
@@ -853,7 +853,7 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** @ohos.file.fs:fileIo.open
+**Substitutes:** [open](@ohos.file.fs:fileIo.open)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -907,7 +907,7 @@ Opens this file asset. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** @ohos.file.fs:fileIo.open
+**Substitutes:** [open](@ohos.file.fs:fileIo.open)
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -927,7 +927,7 @@ Opens this file asset. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 
@@ -964,7 +964,7 @@ Sets a **FileAsset** parameter.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.set](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#set)
+**Substitutes:** [set](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#set)
 
 <!--Device-FileAsset-set(member: string, value: string): void--><!--Device-FileAsset-set(member: string, value: string): void-End-->
 
@@ -1019,7 +1019,7 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
+**Substitutes:** [setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setHidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1041,7 +1041,7 @@ The private files set to hidden state are located in the private album (in hidde
 | Error Code ID |
 | --- |
 | 13900020 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1084,7 +1084,7 @@ The private files set to hidden state are located in the private album (in hidde
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#sethidden)
+**Substitutes:** [setHidden](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setHidden)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1104,14 +1104,14 @@ The private files set to hidden state are located in the private album (in hidde
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1157,7 +1157,7 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
+**Substitutes:** [setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setUserComment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1178,8 +1178,8 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1228,7 +1228,7 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MediaAssetChangeRequest#setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setusercomment)
+**Substitutes:** [setUserComment](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setUserComment)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1248,14 +1248,14 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1296,7 +1296,7 @@ File name, including the file name extension, to display.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.displayName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#displayname)
+**Substitutes:** [displayName](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#displayName)
 
 <!--Device-FileAsset-displayName: string--><!--Device-FileAsset-displayName: string-End-->
 
@@ -1318,7 +1318,7 @@ Type of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.photoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#phototype)
+**Substitutes:** [photoType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#photoType)
 
 <!--Device-FileAsset-readonly fileType: FileType--><!--Device-FileAsset-readonly fileType: FileType-End-->
 
@@ -1341,7 +1341,7 @@ Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayNa
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAsset.uri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md/arkts-medialibrary-photoaccesshelper-photoasset-i.md#uri)
+**Substitutes:** [uri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoasset-i.md#uri)
 
 <!--Device-FileAsset-readonly uri: string--><!--Device-FileAsset-readonly uri: string-End-->
 

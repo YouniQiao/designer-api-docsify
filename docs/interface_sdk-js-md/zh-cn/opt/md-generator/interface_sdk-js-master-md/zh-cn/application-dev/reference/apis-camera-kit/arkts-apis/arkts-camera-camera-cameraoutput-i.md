@@ -1,6 +1,6 @@
 # CameraOutput
 
-会话中[Session](arkts-camera-camera-session-i.md)使用的输出信息，output的基类。
+会话中[Session](arkts-camera-camera-session-i.md#Session)使用的输出信息，output的基类。
 
 **起始版本：** 10
 
@@ -34,7 +34,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## release
 
@@ -56,10 +56,10 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |

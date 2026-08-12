@@ -24,15 +24,15 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 | 类型 |
 | --- |
-| Promise&lt;FloatingBallController&gt; |
+| Promise&lt;[FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300023](../errorcode-window.md#1300023-闪控球内部错误) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300019-闪控球参数校验错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300023-闪控球内部错误) |
 
 ## 示例
 

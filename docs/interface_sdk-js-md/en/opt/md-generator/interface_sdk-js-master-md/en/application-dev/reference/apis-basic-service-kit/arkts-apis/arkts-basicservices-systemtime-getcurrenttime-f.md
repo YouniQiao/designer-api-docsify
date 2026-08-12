@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -18,7 +18,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -69,7 +69,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
 
@@ -119,7 +119,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
 
@@ -135,7 +135,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

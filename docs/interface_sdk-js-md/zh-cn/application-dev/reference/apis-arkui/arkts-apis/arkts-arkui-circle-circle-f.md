@@ -24,13 +24,13 @@ export declare function Circle(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CircleOptions](../arkts-components/arkts-arkui-circleoptions-i.md) | 否 | 设置圆形尺寸。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [CircleOptions](arkts-arkui-circle-circleoptions-i.md) | 否 | 设置圆形尺寸。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CircleAttribute](../arkts-components/arkts-arkui-circle-attribute.md) | Circle的属性。 |
+| [CircleAttribute](arkts-arkui-circle-circleattribute-i.md) | Circle的属性。 |
 
 
 ## Circle
@@ -59,11 +59,11 @@ export declare function Circle(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CircleAttribute&gt; | 是 | Circle选项。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CircleAttribute](arkts-arkui-circle-circleattribute-i.md)&gt; | 是 | Circle选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CircleAttribute](../arkts-components/arkts-arkui-circle-attribute.md) |  |
+| [CircleAttribute](arkts-arkui-circle-circleattribute-i.md) |  |
 

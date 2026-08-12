@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from 'kits/@kit.BasicServicesKit';
+import { deviceAttest } from '@kit.BasicServicesKit';
 ```
 
 ## getAttestStatus
@@ -28,15 +28,15 @@ Obtains the AttestResultInfo object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;AttestResultInfo&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md)&gt; | Yes | Indicates the callback containing the AttestResultInfo object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
+| [20000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
 
 ## Examples
 
@@ -86,15 +86,15 @@ Obtains the AttestResultInfo object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AttestResultInfo&gt; | Returns that the AttestResultInfo object is returned in Promise mode. |
+| Promise&lt;[AttestResultInfo](arkts-basicservices-deviceattest-attestresultinfo-i-sys.md)&gt; | Returns that the AttestResultInfo object is returned in Promise mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
+| [20000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) | System service exception, please try again or reboot your device. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameters wrong, the number of parameters is incorrect,or the type of parameters is incorrect. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | This api is system api, Please use the system application to call this api. |
 
 ## Examples
 

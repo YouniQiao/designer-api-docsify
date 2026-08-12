@@ -42,7 +42,7 @@ margin?: Dimension | Margin
 
 参数为Dimension类型时，四个方向外边距同时生效。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| Margin
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [Margin](arkts-arkui-margin-t.md)
 
 **起始版本：** 23
 

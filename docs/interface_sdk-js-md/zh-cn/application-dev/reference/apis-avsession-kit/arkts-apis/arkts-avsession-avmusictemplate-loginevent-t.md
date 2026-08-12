@@ -27,5 +27,5 @@ type LoginEvent = (controlType: LoginType, id?: string) => Promise<QrCodeInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | Promise对象，返回二维码信息的数组。 |
+| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; | Promise对象，返回二维码信息的数组。 |
 

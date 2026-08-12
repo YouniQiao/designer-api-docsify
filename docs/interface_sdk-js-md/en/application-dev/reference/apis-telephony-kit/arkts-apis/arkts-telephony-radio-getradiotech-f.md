@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## getRadioTech
@@ -29,18 +29,18 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetworkRadioTech&gt; | Yes | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Yes | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_UNKNOWN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_GSM} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_1XRTT} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_WCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_HSPAP} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_TD_SCDMA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EVDO} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_EHRPD} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_LTE_CA} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_IWLAN} &lt;li&gt;{@code RadioTechnology#RADIO_TECHNOLOGY_NR} &lt;/ul&gt; |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
 
 ## getRadioTech
@@ -71,16 +71,16 @@ Obtains radio access technology (RAT) of the registered network. The system retu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NetworkRadioTech&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{ |
+| Promise&lt;[NetworkRadioTech](arkts-telephony-radio-networkradiotech-i.md)&gt; | Returns the RAT of PS domain and CS domain of registered network. The values of RAT are as follows: &lt;ul&gt; &lt;li&gt;{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 

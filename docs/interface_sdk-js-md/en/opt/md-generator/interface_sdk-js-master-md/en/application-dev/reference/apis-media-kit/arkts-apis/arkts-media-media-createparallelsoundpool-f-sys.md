@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createParallelSoundPool
@@ -14,7 +14,7 @@ function createParallelSoundPool(maxStreams: number, audioRenderInfo: audio.Audi
 
 Creates a **SoundPool** instance. This API uses a promise to return the result.
 
-If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using  
+If a **SoundPool** instance created using [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) is used to play the same sound again, it stops the current audio and restarts the audio. However, if the instance is created using  
 **createParallelSoundPool**, it keeps playing the first audio and starts the new one alongside it.
 
 **Since:** 20
@@ -36,14 +36,14 @@ If a **SoundPool** instance created using [createSoundPool](#createSoundPool) is
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SoundPool&gt; |
+| Promise & lt;SoundPool & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -57,14 +57,14 @@ getReadStream(): ReadStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |
@@ -90,14 +90,14 @@ getWriteStream(): WriteStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
 | 13900012 | Permission denied |
 | 13900008 | Bad file descriptor |
 | 13900042 | Unknown error |

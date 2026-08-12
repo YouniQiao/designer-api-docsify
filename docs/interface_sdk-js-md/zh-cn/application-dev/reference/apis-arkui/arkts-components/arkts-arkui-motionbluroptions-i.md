@@ -18,7 +18,7 @@ anchor: MotionBlurAnchor
 
 运动模糊锚点坐标。运动模糊锚点坐标设置时需要与动画缩放的锚点保持一致设置。
 
-**类型：** [MotionBlurAnchor](../arkts-apis/arkts-arkui-common-motionbluranchor-i.md)
+**类型：** [MotionBlurAnchor](arkts-arkui-motionbluranchor-i.md)
 
 **起始版本：** 12
 

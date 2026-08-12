@@ -1,11 +1,11 @@
 # LayeredDrawableDescriptor
 
 Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from   
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md).
+[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
 
 The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
-**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The **drawable.json** file is located under **entry/src/main/resources/base/medi
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -77,7 +77,7 @@ Obtains the **DrawableDescriptor** object of the background.
 
 | Error Code ID |
 | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
+| [111002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-resource-released) |
 
 ## Examples
 
@@ -146,7 +146,7 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 | Error Code ID |
 | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
+| [111002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-resource-released) |
 
 ## Examples
 
@@ -220,7 +220,7 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 | Error Code ID |
 | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-resource-released) |
+| [111002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-resource-released) |
 
 ## Examples
 

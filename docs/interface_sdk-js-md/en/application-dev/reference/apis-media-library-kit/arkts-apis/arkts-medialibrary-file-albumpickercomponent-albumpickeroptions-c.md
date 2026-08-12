@@ -13,7 +13,7 @@ AlbumPickerOptions Object
 ## Modules to Import
 
 ```TypeScript
-import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from 'kits/@kit.MediaLibraryKit';
+import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from '@kit.MediaLibraryKit';
 ```
 
 ## filterType

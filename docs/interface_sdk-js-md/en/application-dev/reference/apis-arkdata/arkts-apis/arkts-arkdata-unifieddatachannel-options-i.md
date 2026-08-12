@@ -13,7 +13,7 @@ Defines the data operation performed by the UDMF. It includes three optional par
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## intention
@@ -45,7 +45,7 @@ key?: string
 ```
 
 Unique identifier of the data object in the UDMF, which can be obtained from the value returned by   
-[insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata).
+[insertData](arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData).
 
 The key consists of **udmf:/**, **intention**, **bundleName**, and **groupId** with a (/) in between, for example, **udmf://DataHub/com.ohos.test/0123456789**.
 
@@ -74,7 +74,7 @@ visibility?: Visibility
 
 Data visibility level. This parameter is effective only when specified during data writing. If unspecified, the default value **Visibility.ALL** is used.
 
-**Type:** [Visibility](../../apis-arkui/arkts-apis/arkts-arkui-visibility-e.md)
+**Type:** Visibility
 
 **Since:** 20
 

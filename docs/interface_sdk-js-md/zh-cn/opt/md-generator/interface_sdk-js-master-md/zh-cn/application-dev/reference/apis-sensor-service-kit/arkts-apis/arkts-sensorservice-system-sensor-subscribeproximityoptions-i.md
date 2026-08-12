@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#PROXIMITY
+**替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 <!--Device-unnamed-export interface SubscribeProximityOptions--><!--Device-unnamed-export interface SubscribeProximityOptions-End-->
 
@@ -24,7 +24,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -51,7 +51,7 @@ success: (data: ProximityResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -63,4 +63,4 @@ success: (data: ProximityResponse) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [ProximityResponse](arkts-sensorservice-sensor-proximityresponse-i.md) | 是 |
+| data | [ProximityResponse](arkts-sensorservice-system-sensor-proximityresponse-i.md) | 是 |

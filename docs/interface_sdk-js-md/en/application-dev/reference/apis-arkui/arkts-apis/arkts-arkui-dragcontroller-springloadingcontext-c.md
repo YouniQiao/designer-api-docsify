@@ -13,7 +13,7 @@ Context information for the current spring loading trigger. This object is passe
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## abort
@@ -56,7 +56,7 @@ Updates the spring loading configuration for the current trigger. Only effective
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | Yes |  |
+| config | DragSpringLoadingConfiguration | Yes |  |
 
 ## currentConfig
 
@@ -66,7 +66,7 @@ currentConfig?: DragSpringLoadingConfiguration
 
 Current spring loading configuration. Absent when the state is CANCEL.
 
-**Type:** [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md)
+**Type:** DragSpringLoadingConfiguration
 
 **Since:** 26.0.0
 

@@ -33,20 +33,20 @@ function setKeepAliveForAppServiceExtension(bundleName: string, enabled: boolean
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000204](../errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000202](../errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) |
-| [16000203](../errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [16000081](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000081-获取目标应用信息失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000204-指定的应用未安装在userid为1的用户下) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16000202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000202-仅支持为appservice类型的extensionability设置保活) |
+| [16000203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000203-无法更改appserviceextensionability保活状态) |
 
 ## 示例
 

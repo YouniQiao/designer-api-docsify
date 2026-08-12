@@ -38,7 +38,7 @@ filterType: FilterType
 
 过滤类型。
 
-**类型：** [FilterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filtertype-e.md)
+**类型：** FilterType
 
 **起始版本：** 15
 

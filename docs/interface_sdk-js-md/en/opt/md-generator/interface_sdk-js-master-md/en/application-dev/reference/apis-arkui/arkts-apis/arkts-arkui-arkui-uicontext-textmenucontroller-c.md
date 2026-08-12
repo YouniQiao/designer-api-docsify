@@ -5,7 +5,7 @@ Provides the capability to control text menus.
 > **NOTE：**
 > 
 > - In the following non-static API examples, you must first use
-> [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#gettextmenucontroller) in **UIContext** to obtain a
+> [getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getTextMenuController) in **UIContext** to obtain a
 > **TextMenuController** instance, and then call the APIs using the obtained instance.
 
 **Since:** 16
@@ -17,7 +17,7 @@ Provides the capability to control text menus.
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## disableMenuItems
@@ -32,19 +32,19 @@ Disables specified system service menu items in the text selection menu.
 > 
 > - This API takes effect globally for the entire application process after being called.
 > 
-> - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md).
+> - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility).
 > 
 > - After this API is called, the [editMenuOptions](TextAttribute#editMenuOptions) API of text components
-> will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback will not
+> will be affected. The parameter list of its [onCreateMenu](EditMenuOptions.onCreateMenu) callback will not
 > include the disabled menu options.
 > 
-> - Components involving text selection menus include the following: [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i),
-> [TextArea](../../apis-arkui/arkts-components/arkts-arkui-text_area-i), [TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i),
-> [Search](../../apis-arkui/arkts-components/arkts-arkui-search-i), [RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i), and
-> [Web](../../apis-arkui/arkts-components/arkts-arkui-web-i).
+> - Components involving text selection menus include the following: [Text](./@internal/component/ets/text),
+> [TextArea](./@internal/component/ets/text_area), [TextInput](./@internal/component/ets/text_input),
+> [Search](./@internal/component/ets/search), [RichEditor](./@internal/component/ets/rich_editor), and
+> [Web](./@internal/component/ets/web).
 > 
 > - System service menu items refer to menu items other than copy, cut, select all, and paste in
-> [TextMenuItemId](arkts-arkui-textmenuitemid-c.md).
+> [TextMenuItemId](arkts-arkui-textmenuitemid-c.md#TextMenuItemId).
 > 
 > - When both **disableSystemServiceMenuItems** and **disableMenuItems** are set, the earlier-set
 > **disableSystemServiceMenuItems** takes precedence.
@@ -52,7 +52,7 @@ Disables specified system service menu items in the text selection menu.
 > - This API takes effect globally, and multiple calls are subject to the last call.
 > 
 > - Disabling a first-level menu item will also disable all its second-level menu items. For example, disabling the
-> first-level menu item **autoFill** (parent item) in [TextMenuItemId](arkts-arkui-textmenuitemid-c.md) will simultaneously
+> first-level menu item **autoFill** (parent item) in [TextMenuItemId](arkts-arkui-textmenuitemid-c.md#TextMenuItemId) will simultaneously
 > disable the second-level menu item **passwordVault** (child item) in **TextMenuItemId**.
 > 
 > - Disabling individual second-level menu items is not supported. If required, this can be achieved by disabling
@@ -81,7 +81,7 @@ Disables specified system service menu items in the text selection menu.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | Array&lt;TextMenuItemId&gt; | Yes |
+| items | Array&lt;[TextMenuItemId](arkts-arkui-textmenuitemid-c.md)&gt; | Yes |
 
 ## disableSystemServiceMenuItems
 
@@ -95,19 +95,19 @@ Disables all system service menu items in the text selection menu.
 > 
 > - This API takes effect globally for the entire application process after being called.
 > 
-> - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md).
+> - This API can be used in [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility).
 > 
 > - After this API is called, the [editMenuOptions](TextAttribute#editMenuOptions) API of text components
-> will be affected. The parameter list of its [onCreateMenu](arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback will not
+> will be affected. The parameter list of its [onCreateMenu](EditMenuOptions.onCreateMenu) callback will not
 > include the disabled menu options.
 > 
-> - Components involving text selection menus include the following: [Text](../../apis-arkui/arkts-components/arkts-arkui-text-i),
-> [TextArea](../../apis-arkui/arkts-components/arkts-arkui-text_area-i), [TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i),
-> [Search](../../apis-arkui/arkts-components/arkts-arkui-search-i), [RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i), and
-> [Web](../../apis-arkui/arkts-components/arkts-arkui-web-i).
+> - Components involving text selection menus include the following: [Text](./@internal/component/ets/text),
+> [TextArea](./@internal/component/ets/text_area), [TextInput](./@internal/component/ets/text_input),
+> [Search](./@internal/component/ets/search), [RichEditor](./@internal/component/ets/rich_editor), and
+> [Web](./@internal/component/ets/web).
 > 
 > - System service menu items refer to menu items other than copy, cut, select all, and paste in
-> [TextMenuItemId](arkts-arkui-textmenuitemid-c.md).
+> [TextMenuItemId](arkts-arkui-textmenuitemid-c.md#TextMenuItemId).
 > 
 > - When both **disableSystemServiceMenuItems** and **disableMenuItems** are set, the earlier-set
 > **disableSystemServiceMenuItems** takes precedence.

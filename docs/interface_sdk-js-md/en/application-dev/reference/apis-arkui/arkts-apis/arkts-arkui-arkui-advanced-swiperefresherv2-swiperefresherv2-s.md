@@ -15,7 +15,7 @@ Declare component SwipeRefresherV2
 ## Modules to Import
 
 ```TypeScript
-import { SwipeRefresherV2 } from 'kits/@kit.ArkUI';
+import { SwipeRefresherV2 } from '@kit.ArkUI';
 ```
 
 ## build
@@ -46,7 +46,7 @@ content?: ResourceStr
 
 Sets the content when loading.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

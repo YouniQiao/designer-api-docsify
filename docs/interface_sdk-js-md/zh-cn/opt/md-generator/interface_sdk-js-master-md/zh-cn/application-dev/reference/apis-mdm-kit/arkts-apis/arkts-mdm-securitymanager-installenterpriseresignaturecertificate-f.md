@@ -9,7 +9,7 @@ function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: 
 安装企业应用重签名证书。安装成功后，企业可使用该证书对应用进行重签名。
 
 同一用户下最多可下发10本不同证书。证书别名作为证书的唯一标识，不支持重复下发相同别名的证书。如需更新同一别名的证书，需先调用  
-[uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md#uninstallenterpriseresignaturecertificate)进行卸载。
+[uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md#uninstallEnterpriseReSignatureCertificate)进行卸载。
 
 在MDM应用卸载或admin取消激活场景下，已安装的证书会保留在设备上，不会被移除。
 
@@ -56,12 +56,12 @@ function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: 
 
 | 错误码ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [9201006](../errorcode-enterpriseDeviceManager.md#9201006-安装企业重签名证书超过数量上限) |
-| [9201007](../errorcode-enterpriseDeviceManager.md#9201007-企业重签名证书无效) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [9201006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201006-安装企业重签名证书超过数量上限) |
+| [9201007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201007-企业重签名证书无效) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

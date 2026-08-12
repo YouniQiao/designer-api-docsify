@@ -26,8 +26,8 @@ function queryAppKeyState(): KeyStatus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
-| [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) | The system ability works abnormally. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | The specified SystemCapability name was not found. |
+| [29300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300002-系统服务工作异常) | The system ability works abnormally. |
 
 ## 示例
 

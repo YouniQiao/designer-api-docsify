@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getPrimaryDisplaySync
@@ -34,7 +34,7 @@ Obtains the information about the primary display. For devices other than 2-in-1
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
+| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
 
 ## Examples
 

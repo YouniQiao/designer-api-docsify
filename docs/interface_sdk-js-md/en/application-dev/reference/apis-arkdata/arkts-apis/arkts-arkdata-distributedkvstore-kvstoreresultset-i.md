@@ -1,7 +1,7 @@
 # KVStoreResultSet
 
 Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a  time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)  
+[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))  
 ** to construct a **SingleKVStore** or **DeviceKVStore** instance.
 
 > **NOTE：**
@@ -19,7 +19,7 @@ Provides APIs for obtaining the distributed KV store result sets. A maximum of e
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## getCount
@@ -95,7 +95,7 @@ Obtains the KV pair from the current position.
 
 | Type | Description |
 | --- | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | KV pair obtained. |
+| Entry | KV pair obtained. |
 
 ## Examples
 
@@ -129,8 +129,8 @@ ArkTS-Sta:
 getPosition(): int
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst) and  
-[moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast).
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#moveToFirst) and  
+[moveToLast](#moveToLast).
 
 **Since:** 9
 
@@ -387,7 +387,7 @@ Moves the data read position with the specified offset from the current position
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -588,7 +588,7 @@ Moves the data read position from 0 to an absolute position.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 扩展图像组件定义
 
-**继承/实现关系：** ExtendableImage implements [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md/arkts-arkui-image-attribute.md)
+**继承/实现关系：** ExtendableImage implements [ImageAttribute](arkts-arkui-image-imageattribute-i.md#ImageAttribute)
 
 **起始版本：** 26.0.0
 
@@ -39,8 +39,8 @@ static $_instantiate<T extends ExtendableImage>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -76,8 +76,8 @@ static $_instantiate<T extends ExtendableImage>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |  |
 | reloadKey | string | 否 |  |
 
 **返回值：**
@@ -113,7 +113,7 @@ static $_instantiate<T extends ExtendableImage>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |  |
 | reloadKey | string | 否 |  |
 
 **返回值：**
@@ -149,7 +149,7 @@ static _instantiateImpl<T extends ExtendableImage>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
 
 ## setImageOptions
@@ -177,8 +177,8 @@ public setImageOptions(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -212,8 +212,8 @@ public setImageOptions(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 |  |
 | reloadKey | string | 否 |  |
 
 **返回值：**
@@ -247,7 +247,7 @@ public setImageOptions(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 |  |
 | reloadKey | string | 否 |  |
 
 **返回值：**

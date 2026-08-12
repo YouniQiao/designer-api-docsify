@@ -11,7 +11,7 @@ InflateGetDictionary and deflateGetDictionary return value information.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## dictionaryLength
@@ -38,7 +38,7 @@ Length of a dictionary.
 status: ReturnStatus
 ```
 
-For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md).
+For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#ReturnStatus).
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 

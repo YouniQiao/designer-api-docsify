@@ -20,7 +20,7 @@ detailList: Array<PermissionDialogDetail>
 
 权限弹窗的信息列表。
 
-**类型：** Array&lt;PermissionDialogDetail&gt;
+**类型：** Array&lt;[PermissionDialogDetail](arkts-ability-abilityaccessctrl-permissiondialogdetail-i-sys.md)&gt;
 
 **起始版本：** 26.0.0
 

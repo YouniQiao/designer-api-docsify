@@ -1,10 +1,10 @@
 # UIGridEvent
 
-frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给Grid节点设置滚动事件。
+frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-3)方法的返回值，可用于给Grid节点设置滚动事件。
 
-UIGridEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)。
+UIGridEvent继承于[UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#UIScrollableCommonEvent)。
 
-**继承/实现关系：** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
+**继承/实现关系：** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#UIScrollableCommonEvent)
 
 **起始版本：** 19
 

@@ -34,7 +34,7 @@ constructor(value?: TextStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md) | 否 | 字体样式设置项。 &lt;br&gt;默认值：不传入时继承TextStyleInterface各属性的默认值。 |
+| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 否 | 字体样式设置项。 &lt;br&gt;默认值：不传入时继承TextStyleInterface各属性的默认值。 |
 
 ## fontColor
 
@@ -44,7 +44,7 @@ readonly fontColor?: ResourceColor
 
 获取属性字符串的文本颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ readonly fontConfigs?: FontConfigs
 
 默认返回undefined，表示未设置fontConfigs。
 
-**类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
+**类型：** FontConfigs
 
 **起始版本：** 24
 
@@ -138,7 +138,7 @@ readonly fontStyle?: FontStyle
 
 获取属性字符串的文本字体样式。
 
-**类型：** [FontStyle](arkts-arkui-enums-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 12
 
@@ -214,7 +214,7 @@ readonly strokeColor?: ResourceColor
 
 默认返回字体颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 20
 
@@ -238,7 +238,7 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 
 默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
+**类型：** StrokeJoinStyle
 
 **起始版本：** 26.0.0
 
@@ -286,7 +286,7 @@ readonly superscript?: SuperscriptStyle
 
 默认值：SuperscriptStyle.NORMAL。
 
-**类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
+**类型：** SuperscriptStyle
 
 **起始版本：** 20
 

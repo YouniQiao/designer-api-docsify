@@ -14,7 +14,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param
+**替代接口：** [Param](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param)
 
 <!--Device-hiAppEvent-namespace Param--><!--Device-hiAppEvent-namespace Param-End-->
 

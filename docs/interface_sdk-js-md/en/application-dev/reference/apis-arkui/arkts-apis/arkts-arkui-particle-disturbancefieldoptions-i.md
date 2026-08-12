@@ -128,7 +128,7 @@ shape?: DisturbanceFieldShape
 
 Disturbance filed shape.
 
-**Type:** [DisturbanceFieldShape](../arkts-components/arkts-arkui-disturbancefieldshape-e.md)
+**Type:** [DisturbanceFieldShape](arkts-arkui-particle-disturbancefieldshape-e.md)
 
 **Default:** DisturbanceFieldShape.RECT
 

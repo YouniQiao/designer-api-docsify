@@ -13,7 +13,7 @@ Defines the Measure interface.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from 'kits/@kit.ArkUI';
+import { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## measureText
@@ -74,5 +74,5 @@ Displays the text width and height.
 
 | Type | Description |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | width and height for text to display \ |
+| SizeOptions | width and height for text to display \ |
 

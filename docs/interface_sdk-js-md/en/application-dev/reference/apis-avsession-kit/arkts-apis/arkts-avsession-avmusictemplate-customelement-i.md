@@ -2,7 +2,7 @@
 
 Custom elements of mine page.
 
-**Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
+**Inheritance/Implementation:** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Custom elements of mine page.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## customCompilations
@@ -86,7 +86,7 @@ userInfo?: UserInfo
 
 User information
 
-**Type:** [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md)
+**Type:** UserInfo
 
 **Since:** 23
 

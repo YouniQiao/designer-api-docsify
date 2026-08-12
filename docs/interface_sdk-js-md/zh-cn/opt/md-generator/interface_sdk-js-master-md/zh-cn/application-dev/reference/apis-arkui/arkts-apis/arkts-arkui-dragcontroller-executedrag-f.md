@@ -13,7 +13,7 @@ Execute a drag event.
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.DragController#executeDrag
+**替代接口：** [executeDrag](ohos.arkui.UIContext.DragController#executeDrag)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -27,16 +27,16 @@ Execute a drag event.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | 是 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DragEventParam&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -130,15 +130,15 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 > **说明：**
 > 
-> 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
-> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> 从API version 11开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController)方法获取当前UI
+> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController)对象。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.DragController#executeDrag
+**替代接口：** [executeDrag](ohos.arkui.UIContext.DragController#executeDrag)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,22 +152,22 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | 是 |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | 是 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string |
-| Promise&lt;DragEventParam&gt; |
+| Promise & lt;{ event: DragEvent, extraParams: string |
+| Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

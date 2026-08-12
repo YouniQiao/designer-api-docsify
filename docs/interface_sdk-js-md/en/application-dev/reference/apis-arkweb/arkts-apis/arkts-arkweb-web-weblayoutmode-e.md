@@ -1,6 +1,6 @@
 # WebLayoutMode
 
-Enum type supplied to {@link layoutMode} for setting the web layout mode.
+Enum type supplied to [layoutMode](arkts-arkweb-web-webattribute-i.md#layoutMode) for setting the web layout mode.
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ The class of a running form information.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -60,7 +60,7 @@ Obtains the bundle name of the application to which this form belongs.
 readonly dimension: number
 ```
 
-Obtains the grid style of this form.The value must be a positive integer, refer to {@link formInfo.FormDimension}.
+Obtains the grid style of this form.The value must be a positive integer, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#FormDimension).
 
 **Type:** number
 

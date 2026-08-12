@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## byteLength
@@ -29,7 +29,7 @@ Obtains the number of bytes of a string based on the encoding format.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes |
+| string | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**

@@ -20,7 +20,7 @@ Color of the background when the radio button is selected.
 
 Default value: **\$r('sys.color.ohos_id_color_text_primary_activated')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #007DFF
 
@@ -46,7 +46,7 @@ Color of the indicator when the radio button is selected. Since API version 12, 
 
 Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #FFFFFF
 
@@ -72,7 +72,7 @@ Color of the border when the radio button is deselected.
 
 Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #182431
 

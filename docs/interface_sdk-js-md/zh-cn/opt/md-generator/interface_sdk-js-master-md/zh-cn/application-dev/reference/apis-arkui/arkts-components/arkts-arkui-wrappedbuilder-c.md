@@ -30,7 +30,7 @@ builder: (...args: Args) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| args | Args | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Args | 是 |
 
 ## constructor
 
@@ -54,4 +54,17 @@ constructor(builder: (...args: Args) => void)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [builder](#builder) | (...args: Args) =&gt; void | 是 |
+| [builder](#builder) | (...args: Args) = & gt; void | 是 |
+
+## 示例
+
+```TypeScript
+@Builder
+function myBuilder(value: string, size: number) {
+  Text(value)
+    .fontSize(size)
+}
+
+// 使用WrappedBuilder封装myBuilder
+let builderVar: WrappedBuilder<[string, number]> = new WrappedBuilder<[string, number]>(myBuilder);
+```

@@ -6,7 +6,7 @@
 function getGwpAsanGrayscaleState(): number
 ```
 
-��ȡ��ǰGWP-ASanʣ��ʹ��������
+获取当前GWP-ASan剩余使能天数。
 
 **起始版本：** 20
 
@@ -42,7 +42,7 @@ taskpool.execute(getGwpAsanStateTask).then((remainDays: Object) => {
 function getGwpAsanGrayscaleState(): number
 ```
 
-��ȡ��ǰGWP-ASanʣ��ʹ��������
+获取当前GWP-ASan剩余使能天数。
 
 **起始版本：** 20
 

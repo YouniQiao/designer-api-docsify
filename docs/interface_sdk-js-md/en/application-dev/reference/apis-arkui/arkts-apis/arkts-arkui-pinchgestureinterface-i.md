@@ -23,7 +23,7 @@
 (value?: { fingers?: number; distance?: number }): PinchGestureInterface
 ```
 
-Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 7
 
@@ -54,7 +54,7 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&
 ```
 
 Sets the parameters for the pinch gesture. Compared with  
-[PinchGesture](arkts-arkui-pinchgestureinterface-i.md))},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+[PinchGesture](PinchGestureInterface(value?: { fingers?: number; distance?: number))},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
@@ -72,7 +72,7 @@ Sets the parameters for the pinch gesture. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PinchGestureHandlerOptions](arkts-arkui-gesture-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
+| options | [PinchGestureHandlerOptions](arkts-arkui-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
 
 **Return value:**
 
@@ -117,7 +117,7 @@ onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
 Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with   
-[onActionCancel](arkts-arkui-pinchgestureinterface-i.md#onactioncancel), this callback returns gesture event information.
+[onActionCancel](PinchGestureInterface.onActionCancel(event: () => void)), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -135,7 +135,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback for the pinch event. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for the pinch event. |
 
 **Return value:**
 

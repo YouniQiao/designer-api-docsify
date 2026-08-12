@@ -2,7 +2,7 @@
 
 Represents an error that occurs when JSONValue can not be assigned to a type
 
-**Inheritance/Implementation:** JSONTypeError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** JSONTypeError extends [Error](Error)
 
 **Since:** 26.0.0
 

@@ -1,7 +1,7 @@
 # VibratorStopMode
 
 Enumerates vibration stop modes. This parameter is required for  
-[vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md).
+[vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect).
 
 **Since:** 8
 

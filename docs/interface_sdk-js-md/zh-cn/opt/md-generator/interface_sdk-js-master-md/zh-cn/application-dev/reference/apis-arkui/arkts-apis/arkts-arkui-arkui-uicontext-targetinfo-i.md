@@ -34,7 +34,7 @@ componentId?: number
 id: string | number
 ```
 
-指定popup或menu绑定的目标节点。&lt;br/&gt;**说明：** &lt;br/&gt;1. 当id是number时，对应组件实例的UniqueID，此id由系统保证唯一性。&lt;br/&gt;2. 当id是string时，对应[通用属性id](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#id)所指定的组件 此id的唯一性需由开发者确保，但实际可能会有多个。
+指定popup或menu绑定的目标节点。&lt;br/&gt;**说明：** &lt;br/&gt;1. 当id是number时，对应组件实例的UniqueID，此id由系统保证唯一性。&lt;br/&gt;2. 当id是string时，对应[通用属性id](CommonMethod#id)所指定的组件 此id的唯一性需由开发者确保，但实际可能会有多个。
 
 **类型：** string \| number
 

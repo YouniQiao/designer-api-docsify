@@ -16,7 +16,7 @@ Describes the unique information of the
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## entities
@@ -27,7 +27,7 @@ readonly entities?: Record<string, Object>
 
 Entity information contained in the intent.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

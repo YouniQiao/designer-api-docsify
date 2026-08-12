@@ -28,7 +28,7 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 
 | 类型 | 说明 |
 | --- | --- |
-| [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | 返回应用包名和分身索引信息。 |
+| AppCloneIdentity | 返回应用包名和分身索引信息。 |
 
 ## 示例
 

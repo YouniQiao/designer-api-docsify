@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## cancel
@@ -24,6 +24,14 @@ function cancel(id: int, callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[publish](notificationManager.publish(request: NotificationRequest,callback: AsyncCallback<void>): void) 发布通知。
+
+[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) 取消当前应用所有已发布的通知。
+
+[cancelGroup](notificationManager.cancelGroup(groupName: string,callback: AsyncCallback<void,void>): void) 取消当前应用指定组下的通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -35,11 +43,11 @@ function cancel(id: int, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
 ## 示例
 
@@ -94,6 +102,14 @@ function cancel(id: int, label: string, callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[publish](notificationManager.publish(request: NotificationRequest,callback: AsyncCallback<void>): void) 发布通知。
+
+[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) 取消当前应用所有已发布的通知。
+
+[cancelGroup](notificationManager.cancelGroup(groupName: string,callback: AsyncCallback<void,void>): void) 取消当前应用指定组下的通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -106,11 +122,11 @@ function cancel(id: int, label: string, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
 ## 示例
 
@@ -165,6 +181,14 @@ function cancel(id: int, label?: string): Promise<void>
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[publish](notificationManager.publish(request: NotificationRequest, callback: AsyncCallback<void>): void) 发布通知。
+
+[cancelAll](notificationManager.cancelAll(): Promise<void>) 取消当前应用所有已发布的通知。
+
+[cancelGroup](notificationManager.cancelGroup(groupName: string): Promise<void>) 取消当前应用指定组下的通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -182,11 +206,11 @@ function cancel(id: int, label?: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
 ## 示例
 

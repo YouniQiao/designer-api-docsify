@@ -1,9 +1,9 @@
 # ParagraphBuilder
 
-Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) and  
-[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) to the constructor, then set the text style through  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle), add text content through  
-[addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext), and finally call [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) object for typesetting and drawing.
+Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) and  
+[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection) to the constructor, then set the text style through  
+[pushStyle](#pushStyle), add text content through  
+[addText](#addText), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) object for typesetting and drawing.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Implements a paragraph builder that uses the builder pattern to construct paragr
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## addPlaceholder
@@ -150,7 +150,7 @@ Inserts a text string into the paragraph being built.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| text | string | Yes |
+| [text](arkts-graphics-text.md) | string | Yes |
 
 ## Examples
 
@@ -357,9 +357,9 @@ Restores the previous text style.
 
 > **NOTE：**
 > 
-> This method must be called after [pushStyle()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle). After it is called,
+> This method must be called after [pushStyle()](#pushStyle). After it is called,
 > subsequently added text will use the text style before the pop operation. If the style stack is empty, the
-> textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
+> textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) will be used as the default style.
 
 **Since:** 12
 
@@ -427,7 +427,7 @@ Applies a new style to the current text blob.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | Yes |
+| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | Yes |
 
 ## Examples
 

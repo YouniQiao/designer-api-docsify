@@ -13,7 +13,7 @@ Definition callback of receiving the query data.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## onComplete
@@ -74,4 +74,4 @@ Triggered when data is returned.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| events | Array&lt;SecurityEvent&gt; | Yes |
+| events | Array&lt;[SecurityEvent](arkts-securityguard-securityguard-securityevent-i-sys.md)&gt; | Yes |

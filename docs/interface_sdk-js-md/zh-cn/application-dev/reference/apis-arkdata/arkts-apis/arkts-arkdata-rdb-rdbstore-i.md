@@ -3,7 +3,7 @@
 提供管理关系数据库（RDB）方法的接口。
 
 在使用以下相关接口前，请使用  
-[executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)接口初始化数据库表结构和相关数据。
+[executeSql](#executeSql)接口初始化数据库表结构和相关数据。
 
 **起始版本：** 7
 
@@ -11,7 +11,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)
+**替代接口：** [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#RdbStore)
 
 <!--Device-rdb-interface RdbStore--><!--Device-rdb-interface RdbStore-End-->
 
@@ -31,7 +31,7 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
@@ -109,7 +109,7 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
 
@@ -191,7 +191,7 @@ beginTransaction(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)
+**替代接口：** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#beginTransaction)
 
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
@@ -240,7 +240,7 @@ commit(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
+**替代接口：** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
 
 <!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
@@ -289,7 +289,7 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+**替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -299,7 +299,7 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的删除条件。 |
+| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的删除条件。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
 
 ## 示例
@@ -330,7 +330,7 @@ delete(predicates: RdbPredicates): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+**替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>-End-->
 
@@ -340,7 +340,7 @@ delete(predicates: RdbPredicates): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的删除条件。 |
+| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的删除条件。 |
 
 **返回值：**
 
@@ -375,7 +375,7 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
@@ -416,7 +416,7 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
@@ -461,7 +461,7 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+**替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
@@ -472,7 +472,7 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要插入到表中的数据行。 |
+| values | ValuesBucket | 是 | 表示要插入到表中的数据行。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为行ID；否则为错误对象。 |
 
 ## 示例
@@ -518,7 +518,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+**替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>-End-->
 
@@ -529,7 +529,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 指定的目标表名，不能为空字符串。 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 表示要插入到表中的数据行。 |
+| values | ValuesBucket | 是 | 表示要插入到表中的数据行。 |
 
 **返回值：**
 
@@ -576,7 +576,7 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 > **说明：**
 > 
 > 其中device通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
@@ -585,7 +585,7 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
+**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -638,7 +638,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 > **说明：**
 > 
 > 其中device通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
@@ -647,7 +647,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
+**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -707,7 +707,7 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.data.relationalStore:relationalStore.RdbStore.off
+**替代接口：** [off](@ohos.data.relationalStore:relationalStore.RdbStore.off)
 
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -718,7 +718,7 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 订阅类型。 |
+| type | SubscribeType | 是 | 订阅类型。 |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指已注册的数据更改观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
 
 ## 示例
@@ -751,7 +751,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.data.relationalStore:relationalStore.RdbStore.on
+**替代接口：** [on](@ohos.data.relationalStore:relationalStore.RdbStore.on)
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -762,7 +762,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 订阅类型。 |
+| type | SubscribeType | 是 | 订阅类型。 |
 | observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指分布式数据库中数据更改事件的观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
 
 ## 示例
@@ -795,7 +795,7 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+**替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -805,7 +805,7 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
+| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 | 回调函数。当操作成功，err为undefined，data为ResultSet对象；否则为错误对象。 |
 
@@ -838,7 +838,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+**替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
@@ -848,7 +848,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的查询条件。 |
+| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的查询条件。 |
 | columns | Array&lt;string&gt; | 否 | 表示要查询的列。如果值为空，则查询应用于所有列。 |
 
 **返回值：**
@@ -885,7 +885,7 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -926,7 +926,7 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
@@ -971,7 +971,7 @@ rollBack(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
+**替代接口：** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollBack)
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
@@ -1025,7 +1025,7 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
+**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1066,7 +1066,7 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
+**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1111,7 +1111,7 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+**替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1123,8 +1123,8 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 指同步模式。该值可以是推、拉。 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 约束同步数据和设备。 |
+| mode | SyncMode | 是 | 指同步模式。该值可以是推、拉。 |
+| predicates | RdbPredicates | 是 | 约束同步数据和设备。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | 是 | 回调函数。当操作成功，err为undefined，data为同步结果，其中string为设备ID， number为每个设备同步状态，0表示成功，其他值表示失败；否则为错误对象。 |
 
 ## 示例
@@ -1174,7 +1174,7 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+**替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1186,8 +1186,8 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | 是 | 指同步模式。该值可以是推、拉。 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 约束同步数据和设备。 |
+| mode | SyncMode | 是 | 指同步模式。该值可以是推、拉。 |
+| predicates | RdbPredicates | 是 | 约束同步数据和设备。 |
 
 **返回值：**
 
@@ -1241,7 +1241,7 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+**替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -1251,8 +1251,8 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的更新条件。 |
+| values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的更新条件。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。当操作成功，err为undefined，data为受影响的行数；否则为错误对象。 |
 
 ## 示例
@@ -1300,7 +1300,7 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+**替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>-End-->
 
@@ -1310,8 +1310,8 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | RdbPredicates的实例对象指定的更新条件。 |
+| values | ValuesBucket | 是 | values指示数据库中要更新的数据行。键值对与数据库表的列名相关联。 |
+| predicates | RdbPredicates | 是 | RdbPredicates的实例对象指定的更新条件。 |
 
 **返回值：**
 

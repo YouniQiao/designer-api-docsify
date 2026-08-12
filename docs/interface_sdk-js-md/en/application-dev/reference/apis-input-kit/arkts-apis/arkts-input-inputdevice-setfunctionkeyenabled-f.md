@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## setFunctionKeyEnabled
@@ -28,7 +28,7 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | Yes | Type of the function key. |
+| functionKey | FunctionKey | Yes | Type of the function key. |
 | enabled | boolean | Yes | Status of the function key. The value **true** indicates that the function key is enabled, and the value **false** indicates the opposite. |
 
 **Return value:**
@@ -41,10 +41,10 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-noninput-application) | It is prohibited for non-input applications. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [3900003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900003-api-call-failed-for-a-noninput-application) | It is prohibited for non-input applications. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-keyboard-not-connected) | There is currently no keyboard device connected. |
 
 ## Examples
 

@@ -16,7 +16,7 @@
 onClick?: Callback<ClickEvent>
 ```
 
-[ClickEvent](arkts-arkui-common-clickevent-i.md)为用户点击事件。
+[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md#ClickEvent)为用户点击事件。
 
 点击完成时回调事件。
 

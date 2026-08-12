@@ -14,7 +14,7 @@ Returns an object created by key-value entries for properties and methods
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| entries | Iterable&lt;readonly [PropertyKey, T]&gt; | Yes |
+| entries | Iterable & lt;readonly [PropertyKey, T] & gt; | Yes |
 
 **Return value:**
 
@@ -36,7 +36,7 @@ Returns an object created by key-value entries for properties and methods
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| entries | Iterable&lt;readonly any[]&gt; | Yes |
+| entries | Iterable & lt;readonly any[] & gt; | Yes |
 
 **Return value:**
 

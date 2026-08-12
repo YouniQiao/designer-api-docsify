@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## createRemoteDevice
@@ -38,5 +38,5 @@ Creates a remote device instance.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 36100041 |

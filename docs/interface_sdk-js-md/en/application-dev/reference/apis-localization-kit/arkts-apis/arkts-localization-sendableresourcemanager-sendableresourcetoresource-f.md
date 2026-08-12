@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+import { sendableResourceManager } from '@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource
@@ -28,19 +28,19 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | Yes | SendableResource** object. |
+| resource | SendableResource | Yes | SendableResource** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Resource](arkts-localization-resource-resource-i.md) | Resource** object after conversion. |
+| Resource | Resource** object after conversion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## Examples
 

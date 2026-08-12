@@ -11,7 +11,7 @@ An arbitrary-precision Decimal type
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## abs
@@ -56,7 +56,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## acos
 
@@ -96,7 +96,7 @@ Return a new Decimal whose value is the arccosine (inverse cosine) in radians of
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## acos
 
@@ -118,7 +118,7 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -130,8 +130,8 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## acosh
 
@@ -159,7 +159,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## acosh
 
@@ -181,7 +181,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -193,8 +193,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## add
 
@@ -216,7 +216,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -228,7 +228,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## add
 
@@ -250,8 +250,8 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -263,7 +263,7 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## asin
 
@@ -291,7 +291,7 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## asin
 
@@ -313,7 +313,7 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -325,8 +325,8 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## asinh
 
@@ -354,7 +354,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## asinh
 
@@ -376,7 +376,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -388,8 +388,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## atan
 
@@ -417,7 +417,7 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## atan
 
@@ -439,7 +439,7 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -451,8 +451,8 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## atan2
 
@@ -474,8 +474,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -487,8 +487,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## atanh
 
@@ -516,7 +516,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## atanh
 
@@ -538,7 +538,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -550,8 +550,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## cbrt
 
@@ -595,7 +595,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -607,7 +607,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## ceil
 
@@ -651,7 +651,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -663,7 +663,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clamp
 
@@ -685,8 +685,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [min](#min) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| [max](#max) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -698,8 +698,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## clamp
 
@@ -721,9 +721,9 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| [min](#min) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| [max](#max) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -735,8 +735,8 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## comparedTo
 
@@ -760,7 +760,7 @@ Return1 if the value of this Decimal is greater than the value of `n`,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -772,7 +772,7 @@ Return1 if the value of this Decimal is greater than the value of `n`,
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## constructor
 
@@ -794,13 +794,13 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## cos
 
@@ -844,7 +844,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -856,7 +856,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## cosh
 
@@ -900,7 +900,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -912,7 +912,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## decimalPlaces
 
@@ -956,7 +956,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -968,7 +968,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## div
 
@@ -990,8 +990,8 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1003,7 +1003,7 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## dividedToIntegerBy
 
@@ -1025,7 +1025,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1037,7 +1037,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## equals
 
@@ -1059,7 +1059,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1071,7 +1071,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## exp
 
@@ -1099,7 +1099,7 @@ Return a new Decimal whose value is the natural exponential of the value of this
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## exp
 
@@ -1121,7 +1121,7 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1133,8 +1133,8 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## floor
 
@@ -1178,7 +1178,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1190,7 +1190,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## greaterThan
 
@@ -1212,7 +1212,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1224,7 +1224,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## greaterThanOrEqualTo
 
@@ -1246,7 +1246,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1258,7 +1258,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## hypot
 
@@ -1280,7 +1280,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1292,7 +1292,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isFinite
 
@@ -1446,7 +1446,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1458,7 +1458,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## lessThanOrEqualTo
 
@@ -1480,7 +1480,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1492,7 +1492,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## ln
 
@@ -1520,7 +1520,7 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 
 | Error Code ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## ln
 
@@ -1542,7 +1542,7 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1554,8 +1554,8 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## log
 
@@ -1577,7 +1577,7 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1589,8 +1589,8 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## log
 
@@ -1612,8 +1612,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| base | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1625,8 +1625,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## log10
 
@@ -1648,7 +1648,7 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1660,8 +1660,8 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## log2
 
@@ -1683,7 +1683,7 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1695,8 +1695,8 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## max
 
@@ -1718,7 +1718,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1730,7 +1730,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## min
 
@@ -1752,7 +1752,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1764,7 +1764,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## mod
 
@@ -1786,7 +1786,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1798,7 +1798,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## mod
 
@@ -1820,8 +1820,8 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1833,7 +1833,7 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## mul
 
@@ -1855,7 +1855,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1867,7 +1867,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## mul
 
@@ -1889,8 +1889,8 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1902,7 +1902,7 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## negate
 
@@ -1946,7 +1946,7 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1958,8 +1958,8 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## pow
 
@@ -1981,8 +1981,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| base | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| exponent | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| exponent | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -1994,8 +1994,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) |
 
 ## precision
 
@@ -2051,7 +2051,7 @@ Return the number of significant digits of the value of this Decimal, whether to
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## random
 
@@ -2079,7 +2079,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID |
 | --- |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) |
+| [10200061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) |
 
 ## random
 
@@ -2113,8 +2113,8 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) |
 
 ## round
 
@@ -2136,7 +2136,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2148,7 +2148,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## set
 
@@ -2176,9 +2176,9 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## sign
 
@@ -2204,7 +2204,7 @@ NaN otherwise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2217,7 +2217,7 @@ NaN otherwise
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sin
 
@@ -2261,7 +2261,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2273,7 +2273,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sinh
 
@@ -2317,7 +2317,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2329,7 +2329,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sqrt
 
@@ -2373,7 +2373,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2385,7 +2385,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sub
 
@@ -2407,7 +2407,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2419,7 +2419,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sub
 
@@ -2441,8 +2441,8 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2454,7 +2454,7 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sum
 
@@ -2478,7 +2478,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2490,7 +2490,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## tan
 
@@ -2534,7 +2534,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2546,7 +2546,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## tanh
 
@@ -2590,7 +2590,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -2602,7 +2602,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## toBinary
 
@@ -2658,7 +2658,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toBinary
 
@@ -2681,7 +2681,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | significantDigits | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -2693,7 +2693,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
 
 ## toDecimalPlaces
 
@@ -2737,7 +2737,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 
 **Return value:**
 
@@ -2749,7 +2749,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toDecimalPlaces
 
@@ -2771,8 +2771,8 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -2784,7 +2784,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
 
 ## toExponential
 
@@ -2828,7 +2828,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 
 **Return value:**
 
@@ -2840,7 +2840,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toExponential
 
@@ -2862,8 +2862,8 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -2875,7 +2875,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
 
 ## toFixed
 
@@ -2920,7 +2920,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 
 **Return value:**
 
@@ -2932,7 +2932,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toFixed
 
@@ -2954,8 +2954,8 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -2967,7 +2967,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \|
 
 ## toFraction
 
@@ -3011,7 +3011,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| maxDenominator | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -3023,7 +3023,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## toHexadecimal
 
@@ -3079,7 +3079,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toHexadecimal
 
@@ -3102,7 +3102,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | significantDigits | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -3114,7 +3114,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
 
 ## toNearest
 
@@ -3136,7 +3136,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -3148,7 +3148,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## toNearest
 
@@ -3170,8 +3170,8 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -3183,8 +3183,8 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toNumber
 
@@ -3262,7 +3262,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toOctal
 
@@ -3285,7 +3285,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | significantDigits | number | Yes | {double \| string \|
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -3297,7 +3297,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
 
 ## toPrecision
 
@@ -3353,7 +3353,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toPrecision
 
@@ -3376,7 +3376,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | significantDigits | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -3388,7 +3388,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
 
 ## toSignificantDigits
 
@@ -3444,7 +3444,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## toSignificantDigits
 
@@ -3467,7 +3467,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | significantDigits | number | Yes |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | Yes |
 
 **Return value:**
 
@@ -3479,7 +3479,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \|
 
 ## toString
 
@@ -3545,7 +3545,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | Yes | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \|
 
 **Return value:**
 
@@ -3557,7 +3557,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## valueOf
 

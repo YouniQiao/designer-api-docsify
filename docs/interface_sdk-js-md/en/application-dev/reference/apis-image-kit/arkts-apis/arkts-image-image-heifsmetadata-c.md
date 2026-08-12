@@ -4,7 +4,7 @@ HeifsMetadata implements Metadata
 
 HEIF image sequence metadata.
 
-**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
+**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ HEIF image sequence metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -50,7 +50,7 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 static createInstance(): HeifsMetadata
 ```
 
-Creates an empty [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) instance.
+Creates an empty [HeifsMetadata](#HeifsMetadata) instance.
 
 **Since:** 23
 
@@ -77,7 +77,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
 
 For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
 
@@ -153,7 +153,7 @@ Obtains the property values of image metadata. This API returns the result async
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type |
+| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type |
 
 ## setBlob
 
@@ -189,7 +189,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -200,7 +200,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
 
 For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
 
@@ -216,7 +216,7 @@ For details about the properties, see
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
+| records | Record&lt;string, string \| null&gt; | Yes | Set of key-value pairs representing the **HeifsMetadata** properties and corresponding values. |
 
 **Return value:**
 
@@ -228,7 +228,7 @@ For details about the properties, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## heifsCanvasHeight
 

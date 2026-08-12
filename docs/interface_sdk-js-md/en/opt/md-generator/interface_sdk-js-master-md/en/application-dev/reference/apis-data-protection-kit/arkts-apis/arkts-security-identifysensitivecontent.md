@@ -1,6 +1,6 @@
 # @ohos.security.identifySensitiveContent(Identify sensitive file)
 
-This module identifies sensitive information in a specified file based on the input [Policy](arkts-dataprotection-identifysensitivecontent-policy-i.md).The system matches the file content against the provided [Policy](arkts-dataprotection-identifysensitivecontent-policy-i.md) (including sensitive labels,keyword sets, and regular expressions) and returns the matched sensitive content.
+This module identifies sensitive information in a specified file based on the input [Policy](identifySensitiveContent.policy).The system matches the file content against the provided [Policy](identifySensitiveContent.policy) (including sensitive labels,keyword sets, and regular expressions) and returns the matched sensitive content.
 
 **Since:** 21
 
@@ -11,7 +11,7 @@ This module identifies sensitive information in a specified file based on the in
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## Summary

@@ -1,8 +1,8 @@
 # AlertDialogParamWithOptions
 
-继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
+继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)。
 
-**继承/实现关系：** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
+**继承/实现关系：** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
 **起始版本：** 10
 
@@ -20,7 +20,7 @@ buttonDirection?: DialogButtonDirection
 
 按钮排布方向默认为DialogButtonDirection.AUTO。建议3个以上按钮使用Auto模式，Auto模式下两个以上按钮会切换为纵向排布，通常能显示更多按钮。非Auto模式下，3个以上按钮可能会显示不全，超出显示范围的按钮会被截断。
 
-**类型：** [DialogButtonDirection](arkts-arkui-alertdialog-dialogbuttondirection-e.md)
+**类型：** [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md)
 
 **默认值：** DialogButtonDirection.AUTO
 
@@ -44,7 +44,7 @@ buttons: Array<AlertDialogButtonOptions>
 
 弹窗容器中的多个按钮。
 
-**类型：** Array&lt;AlertDialogButtonOptions&gt;
+**类型：** Array&lt;[AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md)&gt;
 
 **起始版本：** 10
 

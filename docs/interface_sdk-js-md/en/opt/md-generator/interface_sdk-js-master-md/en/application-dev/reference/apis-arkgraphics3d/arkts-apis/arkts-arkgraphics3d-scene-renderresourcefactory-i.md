@@ -34,6 +34,26 @@ Create an image.
 | --- |
 | Promise&lt;[Image](arkts-arkgraphics3d-sceneresources-image-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { Image, SceneResourceParameters, Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
+
+function createImageResource(): Promise<Image> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  // Load image resources. The path and file name can be customized based on the specific project resources.
+  let imageParams: SceneResourceParameters = {
+    name: "sampleImage",
+    uri: $rawfile("image/Cube_BaseColor.png")
+  };
+  return renderResourceFactory.createImage(imageParams);
+}
+```
+
 ## createImageStream
 
 ```TypeScript
@@ -89,6 +109,77 @@ Create a Mesh from an array of vertices.
 | --- |
 | Promise&lt;[MeshResource](arkts-arkgraphics3d-sceneresources-meshresource-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { SceneResourceParameters, Scene, CustomGeometry, PrimitiveTopology, RenderContext, RenderResourceFactory,
+  MeshResource }  from '@kit.ArkGraphics3D';
+
+function createMeshResource(): Promise<MeshResource> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  const geometry = new CustomGeometry();
+  geometry.vertices = [
+    { x: 0, y: 0, z: 0 },
+    { x: 1, y: 0, z: 0 },
+    { x: 1, y: 1, z: 0 },
+    { x: 0, y: 1, z: 0 },
+    { x: 0, y: 0, z: 1 },
+    { x: 1, y: 0, z: 1 },
+    { x: 1, y: 1, z: 1 },
+    { x: 0, y: 1, z: 1 }
+  ];
+  geometry.indices = [
+    0, 1, 2, 2, 3, 0,     // front
+    4, 5, 6, 6, 7, 4,     // back
+    0, 4, 5, 5, 1, 0,     // bottom
+    1, 5, 6, 6, 2, 1,     // right
+    3, 2, 6, 6, 7, 3,     // top
+    3, 7, 4, 4, 0, 3      // left
+  ];
+  geometry.topology = PrimitiveTopology.TRIANGLE_LIST;
+  geometry.normals = [
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 },
+    { x: 0, y: 0, z: 1 }
+  ];
+  geometry.uvs = [
+    { x: 0, y: 0 },
+    { x: 1, y: 0 },
+    { x: 1, y: 1 },
+    { x: 0, y: 1 },
+    { x: 0, y: 0 },
+    { x: 1, y: 0 },
+    { x: 1, y: 1 },
+    { x: 0, y: 1 }
+  ];
+  geometry.colors = [
+    { r: 1, g: 0, b: 0, a: 1 },
+    { r: 0, g: 1, b: 0, a: 1 },
+    { r: 0, g: 0, b: 1, a: 1 },
+    { r: 1, g: 1, b: 0, a: 1 },
+    { r: 1, g: 0, b: 1, a: 1 },
+    { r: 0, g: 1, b: 1, a: 1 },
+    { r: 1, g: 1, b: 1, a: 1 },
+    { r: 0, g: 0, b: 0, a: 1 }
+  ];
+  // Load image resources. The path and file name can be customized based on the specific project resources.
+  let sceneResourceParameter: SceneResourceParameters = {
+    name: "cubeMesh",
+    uri: $rawfile("image/Cube_BaseColor.png")
+  };
+  return renderResourceFactory.createMesh(sceneResourceParameter, geometry);
+}
+```
+
 ## createSampler
 
 ```TypeScript
@@ -115,6 +206,26 @@ Create a Sampler.
 | --- |
 | Promise&lt;[Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { SceneResourceParameters, Scene, RenderContext, RenderResourceFactory, Sampler } from '@kit.ArkGraphics3D';
+
+function createSamplerResource(): Promise<Sampler> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  // Load image resources. The path and file name can be customized based on the specific project resources.
+  let samplerParams: SceneResourceParameters = {
+    name: "sampler1",
+    uri: $rawfile("image/Cube_BaseColor.png")
+  };
+  return renderResourceFactory.createSampler(samplerParams);
+}
+```
+
 ## createScene
 
 ```TypeScript
@@ -139,7 +250,30 @@ Create a new scene from a Resource.If uri is not provided, will return an empty 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Scene&gt; |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
+
+## Examples
+
+```TypeScript
+import { Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
+
+// fromFile=true: loads a scene from the specified GLB file. fromFile=false: creates an empty scene. This parameter illustrates two typical methods for creating scenes.
+function createScenePromise(fromFile: boolean = false): Promise<Scene> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  if (fromFile) {
+    // Create a scene and load a .gltf or .glb file as the initial content. The path and name can be customized based on the actual project resources.
+    return renderResourceFactory.createScene($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  } else {
+    // Create an empty scene.
+    return renderResourceFactory.createScene();
+  }
+}
+```
 
 ## createShader
 
@@ -166,3 +300,23 @@ Create a shader.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Shader](arkts-arkgraphics3d-sceneresources-shader-i.md)&gt; |
+
+## Examples
+
+```TypeScript
+import { Shader, SceneResourceParameters, Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
+
+function createShaderResource(): Promise<Shader> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  // Create shader resources. The path and file name can be customized based on the specific project resources.
+  let shaderParams: SceneResourceParameters = {
+    name: "custom_shader",
+    uri: $rawfile("shaders/custom_shader/custom_material_sample.shader")
+  };
+  return renderResourceFactory.createShader(shaderParams);
+}
+```

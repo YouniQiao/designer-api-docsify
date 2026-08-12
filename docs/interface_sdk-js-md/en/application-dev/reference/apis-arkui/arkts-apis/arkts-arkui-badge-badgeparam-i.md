@@ -20,7 +20,7 @@ Position to display the badge relative to the parent component.Default value: Ba
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:Percentage values are not supported for location types.&lt;br&gt;If an invalid value is set, the default value (0, 0) is used.Represents the upper left corner of the component, which will be used.&lt;br&gt;When using the BadgePosition type, the location is mirrored based on the orientation attribute.&lt;/p&gt;
 
-**Type:** [BadgePosition](arkts-arkui-badge-badgeposition-e.md) \| Position
+**Type:** [BadgePosition](arkts-arkui-badge-badgeposition-e.md) \| [Position](arkts-arkui-position-i.md)
 
 **Default:** BadgePosition.RightTop
 
@@ -42,7 +42,7 @@ style: BadgeStyle
 
 Style of the badge, including the font color, font size, badge color, and badge size.
 
-**Type:** [BadgeStyle](../arkts-components/arkts-arkui-badgestyle-i.md)
+**Type:** [BadgeStyle](arkts-arkui-badge-badgestyle-i.md)
 
 **Since:** 23
 

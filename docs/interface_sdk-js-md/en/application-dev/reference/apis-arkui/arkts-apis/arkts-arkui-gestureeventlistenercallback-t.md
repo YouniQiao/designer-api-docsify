@@ -20,6 +20,6 @@ Defines the callback type used in UIObserver watch gesture.The value of event in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes | the information of GestureEvent |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No | the information of frameNode |
+| event | GestureEvent | Yes | the information of GestureEvent |
+| node | FrameNode | No | the information of frameNode |
 

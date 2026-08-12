@@ -66,7 +66,7 @@ direction: TextDirection
 
 文本内容的方向。
 
-**类型：** [TextDirection](arkts-arkui-textdirection-e.md)
+**类型：** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **起始版本：** 24
 

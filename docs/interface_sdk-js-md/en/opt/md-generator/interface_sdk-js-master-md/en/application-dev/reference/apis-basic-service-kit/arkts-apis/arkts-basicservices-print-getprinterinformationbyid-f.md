@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## getPrinterInformationById
@@ -32,14 +32,14 @@ Obtains printer information based on the printer ID. This API uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PrinterInformation&gt; |
+| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

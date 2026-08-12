@@ -26,13 +26,13 @@ Defines ListItemGroup Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ListItemGroupOptions](arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | No | options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |  |
+| [ListItemGroupAttribute](arkts-arkui-listitemgroup-listitemgroupattribute-i.md) |  |
 
 
 ## ListItemGroup
@@ -62,12 +62,12 @@ Defines ListItemGroup Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ListItemGroupAttribute&gt; | Yes | The style to create a ListItemGroup. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ListItemGroupAttribute](arkts-arkui-listitemgroup-listitemgroupattribute-i.md)&gt; | Yes | The style to create a ListItemGroup. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) | The attribute of the ListItemGroup. |
+| [ListItemGroupAttribute](arkts-arkui-listitemgroup-listitemgroupattribute-i.md) | The attribute of the ListItemGroup. |
 

@@ -6,7 +6,7 @@ Defines a **CompassResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#OrientationResponse
+**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
 
 <!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
 
@@ -15,7 +15,7 @@ Defines a **CompassResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## direction
@@ -32,7 +32,7 @@ Direction of the device, in degrees.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#OrientationResponse.alpha
+**Substitutes:** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
 
 **Model restriction:** This API can be used only in the FA model.
 

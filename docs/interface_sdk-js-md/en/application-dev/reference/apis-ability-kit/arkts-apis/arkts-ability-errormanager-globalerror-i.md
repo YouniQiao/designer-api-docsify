@@ -2,7 +2,7 @@
 
 Describes the object related to the exception event name, message, error stack information, exception thread name, and exception thread type.
 
-**Inheritance/Implementation:** GlobalError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
+**Inheritance/Implementation:** GlobalError extends [Error](Error)
 
 **Since:** 18
 
@@ -15,7 +15,7 @@ Describes the object related to the exception event name, message, error stack i
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## instanceName
@@ -54,7 +54,7 @@ instanceType: InstanceType
 
 Type of the VM instance.
 
-**Type:** [InstanceType](arkts-ability-errormanager-instancetype-e.md)
+**Type:** InstanceType
 
 **Since:** 18
 

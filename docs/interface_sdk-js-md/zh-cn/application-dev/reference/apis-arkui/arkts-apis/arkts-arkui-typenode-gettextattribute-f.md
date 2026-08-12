@@ -28,5 +28,5 @@ export function getTextAttribute(node: FrameNode): TextAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| TextAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

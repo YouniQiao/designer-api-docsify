@@ -24,5 +24,5 @@ Post Card Action.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| component | Object | Yes |
+| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | Yes |
 | action | Object | Yes |

@@ -2,7 +2,7 @@
 
 Defines the IndicatorComponent attribute functions.
 
-**Inheritance/Implementation:** IndicatorComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** IndicatorComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -154,7 +154,7 @@ Set indicatorComponent options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) | No | IndicatorComponent constructor options |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponent-indicatorcomponentcontroller-c.md) | No | IndicatorComponent constructor options |
 
 **Return value:**
 
@@ -184,7 +184,7 @@ Sets the indicator style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicatorStyle | [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) \| DigitIndicator \| undefined | Yes | the style value |
+| indicatorStyle | [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../arkts-components/arkts-arkui-digitindicator-c.md) \| undefined | Yes | the style value |
 
 **Return value:**
 

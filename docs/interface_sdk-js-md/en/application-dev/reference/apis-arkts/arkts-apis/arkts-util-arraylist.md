@@ -2,7 +2,7 @@
 
 ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the
  capacity based on project requirements. It increases the capacity by 50% each time.
- When compared with [LinkedList](arkts-util-linkedlist.md), ArrayList is more efficient in random access but less
+ When compared with [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md#LinkedList), ArrayList is more efficient in random access but less
  efficient in the addition or removal operation, because its addition or removal operation affects the position of
  other elements in the container.
  **Recommended use case**: Use ArrayList when elements in a container need to be frequently read.
@@ -17,7 +17,7 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from 'kits/@kit.ArkTS';
+import { ArrayList } from '@kit.ArkTS';
 ```
 
 ## Summary

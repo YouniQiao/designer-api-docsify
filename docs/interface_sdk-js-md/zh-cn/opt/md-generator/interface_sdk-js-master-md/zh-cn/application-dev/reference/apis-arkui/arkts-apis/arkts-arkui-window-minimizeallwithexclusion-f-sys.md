@@ -29,15 +29,15 @@ function minimizeAllWithExclusion(displayId: number, excludeWindowId: number): P
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -14,7 +14,7 @@ function deleteContact(key: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 10
 
-**替代接口：** [contact.deleteContact](arkts-contacts-contact-deletecontact-f.md#deletecontact)(context:
+**替代接口：** [deleteContact](contact.deleteContact(context:)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -73,7 +73,7 @@ function deleteContact(context: Context, key: string, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | key | string | 是 | 联系人的唯一查询键key，一个联系人对应一个key，可以通过[queryKey](contact.queryKey(context: Context, id: number, callback: AsyncCallback&lt;string&gt;): void)获取。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。成功返回删除的联系人id；失败返回具体的错误码信息。 |
 
@@ -81,8 +81,8 @@ function deleteContact(context: Context, key: string, callback: AsyncCallback<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -123,7 +123,7 @@ function deleteContact(key: string): Promise<void>
 
 **废弃版本：** 10
 
-**替代接口：** [contact.deleteContact](arkts-contacts-contact-deletecontact-f.md#deletecontact)(context:
+**替代接口：** [deleteContact](contact.deleteContact(context:)
 
 **需要权限：** ohos.permission.WRITE_CONTACTS
 
@@ -181,7 +181,7 @@ function deleteContact(context: Context, key: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | key | string | 是 | 联系人的唯一查询键key，一个联系人对应一个key，可以通过[queryKey](contact.queryKey(context: Context, id: number, callback: AsyncCallback&lt;string&gt;): void)获取。 |
 
 **返回值：**
@@ -194,8 +194,8 @@ function deleteContact(context: Context, key: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

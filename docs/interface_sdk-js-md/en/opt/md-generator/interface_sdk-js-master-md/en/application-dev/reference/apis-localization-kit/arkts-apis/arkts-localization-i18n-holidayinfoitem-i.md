@@ -11,7 +11,7 @@ Represents the holiday information.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## baseName
@@ -58,7 +58,7 @@ localNames?: Array<HolidayLocalName>
 
 Local names of the holiday.
 
-**Type:** Array&lt;HolidayLocalName&gt;
+**Type:** Array&lt;[HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md)&gt;
 
 **Since:** 11
 

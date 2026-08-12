@@ -1,6 +1,6 @@
 # TriggerCondition
 
-Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md).
+Defines the triggering condition parameters of the **onTrigger** callback of a [Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher).
 
 **Since:** 9
 
@@ -13,7 +13,7 @@ Defines the triggering condition parameters of the **onTrigger** callback of a [
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## row

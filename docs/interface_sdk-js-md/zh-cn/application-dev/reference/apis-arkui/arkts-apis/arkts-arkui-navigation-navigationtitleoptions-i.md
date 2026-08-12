@@ -100,7 +100,7 @@ barStyle?: BarStyle
 
 设置标题栏布局方式。默认值： BarStyle.STANDARD。
 
-**类型：** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
+**类型：** [BarStyle](arkts-arkui-navigation-barstyle-e.md)
 
 **默认值：** BarStyle.STANDARD
 
@@ -120,7 +120,7 @@ barStyle?: BarStyle
 enableHoverMode?: boolean
 ```
 
-是否响应悬停态。使用规则：1. 需满足Navigation为全屏大小；2. 标题栏显示模式为[Free](../arkts-components/arkts-arkui-navigationtitlemode-e.md/arkts-arkui-navigationtitlemode-e.md)时或者标题栏布局方式为[STANDARD](../arkts-components/arkts-arkui-barstyle-e.md/arkts-arkui-barstyle-e.md)时，此接口设置无效。true：响应悬停态；false：不响应悬停态。默认值： false。
+是否响应悬停态。使用规则：1. 需满足Navigation为全屏大小；2. 标题栏显示模式为[Free](arkts-arkui-navigation-navigationtitlemode-e.md#NavigationTitleMode)时或者标题栏布局方式为[STANDARD](arkts-arkui-navigation-barstyle-e.md#BarStyle)时，此接口设置无效。true：响应悬停态；false：不响应悬停态。默认值： false。
 
 **类型：** boolean
 
@@ -142,7 +142,7 @@ enableHoverMode?: boolean
 mainTitleModifier?: TextModifier
 ```
 
-主标题属性修改器。1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）；2. 不设该属性或者设置了异常值，则恢复系统默认设置；3. [Free](../arkts-components/arkts-arkui-navigationtitlemode-e.md/arkts-arkui-navigationtitlemode-e.md)模式下设置字体大小时，原有滑动改变标题大小的效果失效。
+主标题属性修改器。1. 通过Modifier设置的属性会覆盖系统默认的属性（如果Modifier设置了fontSize，maxFontSize，minFontSize任一属性，则系统设置的大小相关属性不生效，以开发者的设置为准）；2. 不设该属性或者设置了异常值，则恢复系统默认设置；3. [Free](arkts-arkui-navigation-navigationtitlemode-e.md#NavigationTitleMode)模式下设置字体大小时，原有滑动改变标题大小的效果失效。
 
 **类型：** TextModifier
 
@@ -162,7 +162,7 @@ mainTitleModifier?: TextModifier
 paddingEnd?: LengthMetrics
 ```
 
-标题栏结束端内间距。仅支持以下任一场景：1. 使用非自定义菜单，即[菜单value](NavigationAttribute.menus)为Array&lt;NavigationMenuItem&gt;；2. 没有右上角菜单，且使用非自定义标题，即[标题value](NavigationAttribute.title)类型为ResourceStr或NavigationCommonTitle。默认值： LengthMetrics.resource(`\$r('sys.float.margin_right')`)。
+标题栏结束端内间距。仅支持以下任一场景：1. 使用非自定义菜单，即[菜单value](arkts-arkui-navigation-navigationattribute-i.md#menus)为Array&lt;NavigationMenuItem&gt;；2. 没有右上角菜单，且使用非自定义标题，即[标题value](arkts-arkui-navigation-navigationattribute-i.md#title)类型为ResourceStr或NavigationCommonTitle。默认值： LengthMetrics.resource(`\$r('sys.float.margin_right')`)。
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
@@ -184,7 +184,7 @@ paddingEnd?: LengthMetrics
 paddingStart?: LengthMetrics
 ```
 
-标题栏起始端内间距。仅支持以下任一场景：1. 显示返回图标，即[hideBackButton](NavigationAttribute.hideBackButton)为false；2. 使用非自定义标题，即[标题value](NavigationAttribute.title)类型为ResourceStr或NavigationCommonTitle。默认值： LengthMetrics.resource(\$r('sys.float.margin_left'))。
+标题栏起始端内间距。仅支持以下任一场景：1. 显示返回图标，即[hideBackButton](arkts-arkui-navigation-navigationattribute-i.md#hideBackButton)为false；2. 使用非自定义标题，即[标题value](arkts-arkui-navigation-navigationattribute-i.md#title)类型为ResourceStr或NavigationCommonTitle。默认值： LengthMetrics.resource(\$r('sys.float.margin_left'))。
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 

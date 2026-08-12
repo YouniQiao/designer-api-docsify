@@ -1,6 +1,6 @@
 # MutableStyledString
 
-继承于[StyledString](arkts-arkui-styledstring-c.md)类。
+继承于[StyledString](arkts-arkui-styledstring-c.md#StyledString)类。
 
 > **以下接口异常入参处理统一说明：**
 > 
@@ -8,7 +8,7 @@
 > 
 > 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
 
-**继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
+**继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md#StyledString)
 
 **起始版本：** 12
 
@@ -48,7 +48,7 @@ clearStyles(): void
 
 清除属性字符串对象的所有样式。
 
-被清空样式类型对象属性使用的是对应[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+被清空样式类型对象属性使用的是对应[Text](./text)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 **起始版本：** 12
 
@@ -89,7 +89,7 @@ insertString(start: number, other: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## insertStyledString
 
@@ -120,7 +120,7 @@ insertStyledString(start: number, other: StyledString): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## removeString
 
@@ -130,7 +130,7 @@ removeString(start: number, length: number): void
 
 移除指定范围的字符串。
 
-当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md)时，同样生效。
+当属性字符串中包含图片或[CustomSpan](arkts-arkui-customspan-c.md#CustomSpan)时，同样生效。
 
 **起始版本：** 12
 
@@ -153,7 +153,7 @@ removeString(start: number, length: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## removeStyle
 
@@ -163,7 +163,7 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 清除指定范围内容的指定类型样式。
 
-被清空样式类型对象属性使用的是对应[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+被清空样式类型对象属性使用的是对应[Text](./text)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 当属性字符串中包含图片时，同样生效。
 
@@ -189,7 +189,7 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## removeStyles
 
@@ -199,7 +199,7 @@ removeStyles(start: number, length: number): void
 
 清除指定范围内容的所有样式。
 
-被清空样式类型对象属性使用的是对应[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
+被清空样式类型对象属性使用的是对应[Text](./text)组件属性的设置值，若Text组件未设置值，则使用对应Text组件属性的默认值。
 
 当属性字符串中包含图片时，同样生效。
 
@@ -224,7 +224,7 @@ removeStyles(start: number, length: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## replaceString
 
@@ -256,7 +256,7 @@ replaceString(start: number, length: number, other: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## replaceStyle
 
@@ -286,7 +286,7 @@ replaceStyle(spanStyle: SpanStyle): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## replaceStyledString
 
@@ -318,7 +318,7 @@ replaceStyledString(start: number, length: number, other: StyledString): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setStyle
 
@@ -348,4 +348,4 @@ setStyle(spanStyle: SpanStyle): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

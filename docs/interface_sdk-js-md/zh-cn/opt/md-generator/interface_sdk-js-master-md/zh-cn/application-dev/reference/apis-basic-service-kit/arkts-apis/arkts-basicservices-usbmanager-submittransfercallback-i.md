@@ -32,7 +32,7 @@ isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 
 实时传输的分包信息。
 
-**类型：** Array&lt;Readonly&lt;UsbIsoPacketDescriptor&gt;&gt;
+**类型：** Array&lt;Readonly&lt;[UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)&gt;&gt;
 
 **起始版本：** 18
 

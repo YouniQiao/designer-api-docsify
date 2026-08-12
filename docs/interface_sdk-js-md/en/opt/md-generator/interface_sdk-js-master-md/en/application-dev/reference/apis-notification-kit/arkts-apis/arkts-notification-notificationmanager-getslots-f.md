@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getSlots
@@ -22,6 +22,14 @@ This API is used to batch query the configuration information of all notificatio
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[addSlot](notificationManager.addSlot(slotType: SlotType,callback: AsyncCallback<void>): void) adds a notification slot of
+
+[removeSlot](notificationManager.removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void) removes a notification slot of
+
+[removeAllSlots](notificationManager.removeAllSlots(callback: AsyncCallback): void) removes all notification
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -32,10 +40,10 @@ This API is used to batch query the configuration information of all notificatio
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -70,19 +78,27 @@ This API is used to batch query the configuration information of all notificatio
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[addSlot](notificationManager.addSlot(slotType: SlotType): Promise<void>) adds a notification slot of
+
+[removeSlot](notificationManager.removeSlot(slotType: SlotType): Promise<void>) removes a notification slot of
+
+[removeAllSlots](notificationManager.removeAllSlots(): Promise<void>) removes all notification
+
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;NotificationSlot&gt;&gt; |
+| Promise & lt;Array & lt;NotificationSlot & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

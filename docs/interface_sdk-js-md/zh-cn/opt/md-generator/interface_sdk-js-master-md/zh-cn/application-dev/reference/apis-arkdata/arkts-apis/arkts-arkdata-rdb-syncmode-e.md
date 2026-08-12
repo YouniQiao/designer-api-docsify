@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
+**替代接口：** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md#SyncMode)
 
 <!--Device-rdb-enum SyncMode--><!--Device-rdb-enum SyncMode-End-->
 
@@ -24,7 +24,7 @@ SYNC_MODE_PUSH = 0
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.SyncMode.SYNC_MODE_PUSH](arkts-arkdata-relationalstore-syncmode-e.md#sync_mode_push)
+**替代接口：** [SYNC_MODE_PUSH](arkts-arkdata-relationalstore-syncmode-e.md#SYNC_MODE_PUSH)
 
 <!--Device-SyncMode-SYNC_MODE_PUSH = 0--><!--Device-SyncMode-SYNC_MODE_PUSH = 0-End-->
 
@@ -42,7 +42,7 @@ SYNC_MODE_PULL = 1
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.SyncMode.SYNC_MODE_PULL](arkts-arkdata-relationalstore-syncmode-e.md#sync_mode_pull)
+**替代接口：** [SYNC_MODE_PULL](arkts-arkdata-relationalstore-syncmode-e.md#SYNC_MODE_PULL)
 
 <!--Device-SyncMode-SYNC_MODE_PULL = 1--><!--Device-SyncMode-SYNC_MODE_PULL = 1-End-->
 

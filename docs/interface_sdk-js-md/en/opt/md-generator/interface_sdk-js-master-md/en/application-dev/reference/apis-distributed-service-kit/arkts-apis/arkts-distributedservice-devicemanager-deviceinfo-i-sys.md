@@ -6,7 +6,7 @@ Defines device information.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
+**Substitutes:** [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)
 
 <!--Device-deviceManager-interface DeviceInfo--><!--Device-deviceManager-interface DeviceInfo-End-->
 
@@ -17,7 +17,7 @@ Defines device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authForm
@@ -54,7 +54,7 @@ Unique identifier of the device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.deviceId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceid)
+**Substitutes:** [deviceId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceId)
 
 <!--Device-DeviceInfo-deviceId: string--><!--Device-DeviceInfo-deviceId: string-End-->
 
@@ -76,7 +76,7 @@ Device name.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.deviceName](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicename)
+**Substitutes:** [deviceName](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceName)
 
 <!--Device-DeviceInfo-deviceName: string--><!--Device-DeviceInfo-deviceName: string-End-->
 
@@ -92,13 +92,13 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
+**Type:** DeviceType
 
 **Since:** 7
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.deviceType](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#devicetype)
+**Substitutes:** [deviceType](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#deviceType)
 
 <!--Device-DeviceInfo-deviceType: DeviceType--><!--Device-DeviceInfo-deviceType: DeviceType-End-->
 
@@ -120,7 +120,7 @@ Network ID of the device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo.networkId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#networkid)
+**Substitutes:** [networkId](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#networkId)
 
 <!--Device-DeviceInfo-networkId: string--><!--Device-DeviceInfo-networkId: string-End-->
 

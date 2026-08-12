@@ -12,7 +12,7 @@ Kill process with account.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#killProcessWithAccount
+**Substitutes:** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -33,7 +33,7 @@ Kill process with account.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Kill process with account.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#killProcessWithAccount
+**Substitutes:** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 

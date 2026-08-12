@@ -11,7 +11,7 @@ Defines the type of the element on the right of the **ComposeListItem** componen
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from 'kits/@kit.ArkUI';
+import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from '@kit.ArkUI';
 ```
 
 ## arrow

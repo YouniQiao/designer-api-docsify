@@ -2,7 +2,7 @@
 
 Defines the Extendable ListItem.
 
-**Inheritance/Implementation:** ExtendableListItem implements [ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md)
+**Inheritance/Implementation:** ExtendableListItem implements [ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md#ListItemAttribute)
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ Constructor of Extendable ListItem.
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
 | value | [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -76,9 +76,9 @@ Entry of Extendable ListItem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setListItemOptions
 

@@ -3,7 +3,7 @@
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)替代。
+> [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md#PermissionGrantState)替代。
 
 权限授予状态。
 
@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.bundleManager:bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md)
+**替代接口：** [PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md#PermissionGrantState)
 
 <!--Device-bundle-export enum GrantStatus--><!--Device-bundle-export enum GrantStatus-End-->
 
@@ -33,7 +33,7 @@ PERMISSION_DENIED = -1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_DENIED
+**替代接口：** [PERMISSION_DENIED](ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_DENIED)
 
 <!--Device-GrantStatus-PERMISSION_DENIED = -1--><!--Device-GrantStatus-PERMISSION_DENIED = -1-End-->
 
@@ -53,7 +53,7 @@ PERMISSION_GRANTED = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_GRANTED
+**替代接口：** [PERMISSION_GRANTED](ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_GRANTED)
 
 <!--Device-GrantStatus-PERMISSION_GRANTED = 0--><!--Device-GrantStatus-PERMISSION_GRANTED = 0-End-->
 

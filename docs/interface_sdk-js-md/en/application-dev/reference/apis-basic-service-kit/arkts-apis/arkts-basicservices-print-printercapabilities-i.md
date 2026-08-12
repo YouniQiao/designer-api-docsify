@@ -13,7 +13,7 @@ Defines the printer capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## options
@@ -42,7 +42,7 @@ supportedColorModes: Array<PrintColorMode>
 
 List of color modes supported by the printer.
 
-**Type:** Array&lt;PrintColorMode&gt;
+**Type:** Array&lt;[PrintColorMode](arkts-basicservices-print-printcolormode-e.md)&gt;
 
 **Since:** 14
 
@@ -60,7 +60,7 @@ supportedDuplexModes: Array<PrintDuplexMode>
 
 List of single- and double-sided modes supported by the printer.
 
-**Type:** Array&lt;PrintDuplexMode&gt;
+**Type:** Array&lt;[PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)&gt;
 
 **Since:** 14
 
@@ -96,7 +96,7 @@ supportedOrientations?: Array<PrintOrientationMode>
 
 List of print directions supported by the printer.
 
-**Type:** Array&lt;PrintOrientationMode&gt;
+**Type:** Array&lt;[PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)&gt;
 
 **Since:** 14
 
@@ -114,7 +114,7 @@ supportedPageSizes: Array<PrintPageSize>
 
 List of paper sizes supported by the printer.
 
-**Type:** Array&lt;PrintPageSize&gt;
+**Type:** Array&lt;[PrintPageSize](arkts-basicservices-print-printpagesize-i.md)&gt;
 
 **Since:** 14
 
@@ -132,7 +132,7 @@ supportedQualities?: Array<PrintQuality>
 
 List of print quality supported by the printer.
 
-**Type:** Array&lt;PrintQuality&gt;
+**Type:** Array&lt;[PrintQuality](arkts-basicservices-print-printquality-e.md)&gt;
 
 **Since:** 14
 

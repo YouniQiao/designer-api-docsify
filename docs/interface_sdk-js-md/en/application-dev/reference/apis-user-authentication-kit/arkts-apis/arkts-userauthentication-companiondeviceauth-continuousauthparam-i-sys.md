@@ -15,7 +15,7 @@ Defines continuous authentication parameters. They are used to configure paramet
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## templateId

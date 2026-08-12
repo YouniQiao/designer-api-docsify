@@ -20,7 +20,7 @@ Caret color.
 
 Default value: **'#ff007dff'**
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ Caret size. It cannot be set in percentage.
 
 Default value: **'2vp'**
 
-**Type:** [Length](arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 

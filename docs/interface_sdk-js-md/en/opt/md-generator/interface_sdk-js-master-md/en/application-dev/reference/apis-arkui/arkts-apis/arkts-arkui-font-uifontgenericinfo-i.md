@@ -11,7 +11,7 @@ UI font configuration of the system.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## adjust
@@ -22,7 +22,7 @@ adjust: Array<UIFontAdjustInfo>
 
 Weight of the font when displayed, which corresponds to the original weight.
 
-**Type:** Array&lt;UIFontAdjustInfo&gt;
+**Type:** Array&lt;[UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md)&gt;
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ alias: Array<UIFontAliasInfo>
 
 Font alias configuration information.
 
-**Type:** Array&lt;UIFontAliasInfo&gt;
+**Type:** Array&lt;[UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md)&gt;
 
 **Since:** 11
 

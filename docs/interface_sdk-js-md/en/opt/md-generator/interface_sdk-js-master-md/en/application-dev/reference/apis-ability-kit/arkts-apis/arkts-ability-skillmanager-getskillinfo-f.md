@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfo
@@ -33,7 +33,7 @@ Obtains SkillInfo of a specified application based on bundleName, moduleName and
 | --- | --- | --- |
 | bundleName | string | Yes |
 | moduleName | string | Yes |
-| skillName | string | Yes |
+| [skillName](arkts-ability-skillinfo-i.md) | string | Yes |
 | flags | number | Yes |
 | userId | number | No |
 
@@ -41,14 +41,14 @@ Obtains SkillInfo of a specified application based on bundleName, moduleName and
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SkillInfo&gt; |
+| Promise & lt;SkillInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 17700093 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |

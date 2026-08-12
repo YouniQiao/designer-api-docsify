@@ -13,7 +13,7 @@ Defines the struct for a HUKS handle.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## challenge
@@ -23,7 +23,7 @@ challenge?: Uint8Array
 ```
 
 Challenge obtained after the  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)operation. The default value is **undefined**.
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 

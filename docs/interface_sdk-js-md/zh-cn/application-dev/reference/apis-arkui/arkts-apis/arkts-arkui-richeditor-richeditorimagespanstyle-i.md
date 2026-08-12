@@ -18,7 +18,7 @@ layoutStyle?: RichEditorLayoutStyle
 
 图片布局风格。
 
-**类型：** [RichEditorLayoutStyle](../arkts-components/arkts-arkui-richeditorlayoutstyle-i.md)
+**类型：** [RichEditorLayoutStyle](arkts-arkui-richeditor-richeditorlayoutstyle-i.md)
 
 **起始版本：** 23
 

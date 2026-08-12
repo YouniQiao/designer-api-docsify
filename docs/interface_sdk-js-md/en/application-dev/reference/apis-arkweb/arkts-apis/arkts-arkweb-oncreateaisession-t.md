@@ -22,7 +22,7 @@ Triggered when an AI session is created.Allows custom model initialization and r
 | --- | --- | --- | --- |
 | id | string | Yes | The session task ID. |
 | params | string | Yes | Contextual data passed during creation. |
-| result | [OnAISessionCallback](../arkts-components/arkts-arkweb-onaisessioncallback-t.md) | Yes | Callback function to notify the system of the creation result. |
+| result | [OnAISessionCallback](arkts-arkweb-onaisessioncallback-t.md) | Yes | Callback function to notify the system of the creation result. |
 
 **Return value:**
 

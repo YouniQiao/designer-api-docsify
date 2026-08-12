@@ -4,10 +4,10 @@ The module provides basic audio control capabilities, including volume adjustmen
 
 This module provides the following common audio-related functions:
 
-- [AudioManager](arkts-multimedia-audio.md): audio manager.  
-- [AudioRenderer](arkts-multimedia-audio.md): audio renderer, used to play Pulse Code Modulation (PCM) audio  
+- [AudioManager](#audio): audio manager.  
+- [AudioRenderer](#audio): audio renderer, used to play Pulse Code Modulation (PCM) audio  
 data.  
-- [AudioCapturer](arkts-multimedia-audio.md): audio capturer, used to record PCM audio data.
+- [AudioCapturer](#audio): audio capturer, used to record PCM audio data.
 
 **Since:** 7
 
@@ -19,7 +19,7 @@ data.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## Summary

@@ -95,7 +95,7 @@ Notification level.
 
 **Deprecated since:** 20
 
-**Substitutes:** [NotificationSlot#notificationLevel](arkts-notification-notificationslot-notificationslot-i.md#notificationlevel)
+**Substitutes:** [notificationLevel](#notificationLevel)
 
 <!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
 
@@ -215,7 +215,7 @@ Channel type.
 
 **Deprecated since:** 11
 
-**Substitutes:** [NotificationSlot#notificationType](arkts-notification-notificationslot-notificationslot-i.md#notificationtype)
+**Substitutes:** [notificationType](#notificationType)
 
 <!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 

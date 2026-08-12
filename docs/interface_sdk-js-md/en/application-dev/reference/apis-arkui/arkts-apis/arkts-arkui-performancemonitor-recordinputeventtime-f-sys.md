@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## recordInputEventTime
@@ -30,13 +30,13 @@ recordInputEventTime monitoring an application scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | Indicates the scene input event type. |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes | Indicates the scene input source type. |
+| type | ActionType | Yes | Indicates the scene input event type. |
+| sourceType | SourceType | Yes | Indicates the scene input source type. |
 | time | long | Yes | Indicates the scene input time. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 

@@ -23,7 +23,7 @@ Defines the MediaCachedImageInterface type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ASTCResource | Yes | mediaCachedImage resource type. |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ASTCResource](arkts-arkui-mediacachedimage-astcresource-i-sys.md) | Yes | mediaCachedImage resource type. |
 
 **Return value:**
 

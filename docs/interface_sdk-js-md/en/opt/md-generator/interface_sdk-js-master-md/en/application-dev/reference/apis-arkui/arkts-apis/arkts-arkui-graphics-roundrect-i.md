@@ -36,7 +36,7 @@ rect: Rect
 
 Attributes of the rectangle.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** [Rect](arkts-arkui-rect-t.md)
 
 **Since:** 12
 

@@ -40,7 +40,7 @@ backgroundBlurStyle: BlurStyle
 
 默认值：BlurStyle.NONE。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **起始版本：** 18
 
@@ -62,7 +62,7 @@ ArcButtonStyleMode需要设置为CUSTOM。
 
 默认值：Color.Black。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -84,7 +84,7 @@ ArcButtonStyleMode需要设置为CUSTOM。
 
 默认值：Color.White。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -142,7 +142,7 @@ fontSize: LengthMetrics
 
 默认值：19fp。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 18
 
@@ -162,7 +162,7 @@ fontStyle: FontStyle
 
 默认值：FontStyle.Normal。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 18
 
@@ -198,7 +198,7 @@ onClick?: Callback<ClickEvent>
 
 弧形按钮点击动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
+**类型：** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
 **起始版本：** 18
 
@@ -216,7 +216,7 @@ onTouch?: Callback<TouchEvent>
 
 弧形按钮手指触摸动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
+**类型：** Callback&lt;TouchEvent&gt;
 
 **起始版本：** 18
 
@@ -258,7 +258,7 @@ ArcButtonStyleMode需要设置为CUSTOM。
 
 默认值：Color.White。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -277,9 +277,9 @@ progressConfig?: ArcButtonProgressConfig
 ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（  
 [示例1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#示例1-设置弧形按钮)），设置后表现为进度条样式（  
 [示例2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#示例2-设置设备进度条按钮)），进度条样式不受  
-[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。 
+[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode)属性设置影响。 
 
-默认值：[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
+默认值：[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig) 的各项子属性均取其默认值。
 
 **类型：** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
@@ -303,7 +303,7 @@ shadowColor: ColorMetrics
 
 默认值：Color.Black。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -361,7 +361,7 @@ status: ArcButtonStatus
 styleMode: ArcButtonStyleMode
 ```
 
-弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)同时使用。
+弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig)同时使用。
 
 默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT。
 

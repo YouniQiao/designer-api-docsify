@@ -22,7 +22,7 @@ Defines the ImageAnimator component.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md) | The attribute of the ImageAnimator. |
+| [ImageAnimatorAttribute](arkts-arkui-imageanimator-imageanimatorattribute-i.md) | The attribute of the ImageAnimator. |
 
 
 ## ImageAnimator
@@ -49,11 +49,11 @@ export declare function ImageAnimator(style: CustomBuilderT<ImageAnimatorAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAnimatorAttribute&gt; | 是 | 设置组件属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageAnimatorAttribute](arkts-arkui-imageanimator-imageanimatorattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md) | ImageAnimator的属性。 |
+| [ImageAnimatorAttribute](arkts-arkui-imageanimator-imageanimatorattribute-i.md) | ImageAnimator的属性。 |
 

@@ -11,7 +11,7 @@ The message for indicating the of result of JavaScript code execution.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray
@@ -34,13 +34,13 @@ Get the array value of the the JavaScript code execution result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string \| number \| boolean&gt; |
+| Array & lt;string \ | number \| boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getArrayBuffer
 
@@ -68,7 +68,7 @@ Get the array buffer value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getBoolean
 
@@ -96,7 +96,7 @@ Get the boolean value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getErrorDescription
 
@@ -116,7 +116,7 @@ Get the object or exception of the the JavaScript code execution result and seri
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| string | If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: &lt;{exception\|
+| string | If an exception occurs, or the returned type is object, return the serialized string in the format of "Not support type: & lt;{exception\ |
 
 ## getNumber
 
@@ -144,7 +144,7 @@ Get the number value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getString
 
@@ -172,7 +172,7 @@ Get the string value of the JavaScript code execution result.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getType
 

@@ -22,7 +22,7 @@ mode?: DragPreviewMode | Array<DragPreviewMode>
 
 当组件同时设置DragPreviewMode.AUTO和其它枚举值时，以DragPreviewMode.AUTO为准，其它枚举值设置无效。
 
-**类型：** [DragPreviewMode](../arkts-apis/arkts-arkui-common-dragpreviewmode-e.md) \| Array&lt;DragPreviewMode&gt;
+**类型：** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **起始版本：** 11
 
@@ -74,7 +74,7 @@ sizeChangeEffect?: DraggingSizeChangeEffect
 
 默认值：DraggingSizeChangeEffect.DEFAULT。
 
-**类型：** [DraggingSizeChangeEffect](../arkts-apis/arkts-arkui-common-draggingsizechangeeffect-e.md)
+**类型：** [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md)
 
 **起始版本：** 19
 

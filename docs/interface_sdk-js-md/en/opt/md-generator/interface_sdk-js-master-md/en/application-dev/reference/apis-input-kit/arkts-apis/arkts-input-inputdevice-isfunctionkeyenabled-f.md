@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## isFunctionKeyEnabled
@@ -30,14 +30,14 @@ Checks whether the specified function key (for example, **CapsLock**) is enabled
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [3900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-keyboard-not-connected) |
 
 ## Examples
 

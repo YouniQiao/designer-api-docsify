@@ -13,7 +13,7 @@ Result of all eUICC profile information.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## isRemovable
@@ -42,7 +42,7 @@ profiles: Array<EuiccProfile>
 
 Gets the profile list (only upon success).
 
-**Type:** Array&lt;EuiccProfile&gt;
+**Type:** Array&lt;[EuiccProfile](arkts-telephony-esim-euiccprofile-i-sys.md)&gt;
 
 **Since:** 18
 
@@ -60,7 +60,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
+**Type:** ResultCode
 
 **Since:** 18
 

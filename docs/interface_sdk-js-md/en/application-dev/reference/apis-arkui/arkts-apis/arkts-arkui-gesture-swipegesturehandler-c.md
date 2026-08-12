@@ -2,7 +2,7 @@
 
 Defines the SwipeGesture handler.
 
-**Inheritance/Implementation:** SwipeGestureHandler extends [GestureHandler](arkts-arkui-gesturehandler-c.md)
+**Inheritance/Implementation:** SwipeGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#GestureHandler)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ Swipe gesture recognition success callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 

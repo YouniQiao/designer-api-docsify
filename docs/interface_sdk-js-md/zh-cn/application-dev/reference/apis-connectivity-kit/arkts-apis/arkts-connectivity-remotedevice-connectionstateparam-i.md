@@ -58,7 +58,7 @@ preState: ConnectionState
 
 上一个连接状态。
 
-**类型：** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
+**类型：** ConnectionState
 
 **起始版本：** 26.0.0
 
@@ -98,7 +98,7 @@ state: ConnectionState
 
 当前连接状态。
 
-**类型：** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
+**类型：** ConnectionState
 
 **起始版本：** 26.0.0
 

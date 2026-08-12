@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## offSeniorModeStateChangeForSelf
@@ -28,5 +28,5 @@ Unregister the observer for this application's senior mode state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Asynchronous callback interface. &lt;br&gt;Default behavior: Unregister all callbacks for app senior mode state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Asynchronous callback interface. &lt;br&gt;Default behavior: Unregister all callbacks for app senior mode state changes. |
 

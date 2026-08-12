@@ -41,7 +41,7 @@ OFFSCREEN = 1
 
 **说明：**
 
-1. 离屏绘制模式相比在线绘制模式会带来额外的性能损失。2. 离屏绘制模式是指将内容绘制到主画布之前，先在一个额外的画布上完成绘制工作，然后将绘制结果绘制到主画布上。3. 离屏绘制模式仅针对需要多层组件切圆角的场景使用，单组件需设置[clip](arkts-arkui-common-commonmethod-i.md#clip)属性、[背景](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)或[前景色](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)时才可使能离屏绘制模式。
+1. 离屏绘制模式相比在线绘制模式会带来额外的性能损失。2. 离屏绘制模式是指将内容绘制到主画布之前，先在一个额外的画布上完成绘制工作，然后将绘制结果绘制到主画布上。3. 离屏绘制模式仅针对需要多层组件切圆角的场景使用，单组件需设置[clip](CommonMethod#clip(value: boolean))属性、[背景](common)或[前景色](common)时才可使能离屏绘制模式。
 
 **起始版本：** 23
 

@@ -11,7 +11,7 @@ Defines callback context information passed to applications during hover detecti
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## abort
@@ -39,7 +39,7 @@ updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
 Updates the hover detection configuration. This API is effective only when the hover detection state is BEGIN.Applications typically set the hover detection configuration when binding  
-[onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#ondragspringloading) or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
+[onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#onDragSpringLoading) or use the default configuration. This API does not modify the original configuration set during binding, but updates dynamic configuration information for subsequent hover detection. Use this API with caution, as different drag data types may require different UX timing.
 
 **Since:** 20
 
@@ -64,10 +64,10 @@ currentConfig?: DragSpringLoadingConfiguration
 ```
 
 Configuration information in the current callback. Omitted in CANCEL state; uses the  
-[DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) default value when  
+[DragSpringLoadingConfiguration](arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md#DragSpringLoadingConfiguration) default value when  
 **undefined**.
 
-**Type:** [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md)
+**Type:** DragSpringLoadingConfiguration
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ dragInfos?: SpringLoadingDragInfos
 ```
 
 Drag information. Omitted in CANCEL state; uses the  
-[SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md) default value when **undefined**.
+[SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md#SpringLoadingDragInfos) default value when **undefined**.
 
 **Type:** [SpringLoadingDragInfos](arkts-arkui-dragcontroller-springloadingdraginfos-i.md)
 

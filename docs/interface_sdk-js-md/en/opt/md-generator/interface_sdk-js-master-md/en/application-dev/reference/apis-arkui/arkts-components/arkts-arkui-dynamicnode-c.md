@@ -30,7 +30,7 @@ Invoked when data is moved during drag and drop sorting.This callback is only ap
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;OnMoveHandler&gt; | Yes |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -60,7 +60,7 @@ Set the move action.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;OnMoveHandler&gt; | Yes |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | Yes |
 | eventHandler | [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | Yes |
 
 **Return value:**

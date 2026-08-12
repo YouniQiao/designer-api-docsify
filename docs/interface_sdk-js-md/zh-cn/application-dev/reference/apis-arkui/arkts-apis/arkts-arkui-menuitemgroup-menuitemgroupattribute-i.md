@@ -1,8 +1,8 @@
 # MenuItemGroupAttribute
 
-不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+不支持[通用属性](common)。
 
-**继承/实现关系：** MenuItemGroupAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** MenuItemGroupAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | MenuItemGroup组件的属性修改器。&lt;br/&gt;CommonMethod：[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | MenuItemGroup组件的属性修改器。&lt;br/&gt;CommonMethod：[通用属性](common) |
 
 **返回值：**
 

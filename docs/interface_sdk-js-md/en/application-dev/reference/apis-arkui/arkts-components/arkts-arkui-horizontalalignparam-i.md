@@ -20,7 +20,7 @@ Sets the horizontal alignment relative to the anchor component.
 
 Anonymous Object Rectification
 
-**Type:** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
+**Type:** HorizontalAlign
 
 **Since:** 23
 

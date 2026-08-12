@@ -8,7 +8,7 @@ Defines the notification source type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#SourceType
+**Substitutes:** [SourceType](ohos.notificationManager/notificationManager#SourceType)
 
 <!--Device-notification-export enum SourceType--><!--Device-notification-export enum SourceType-End-->
 
@@ -30,7 +30,7 @@ Normal notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SourceType#TYPE_NORMAL
+**Substitutes:** [TYPE_NORMAL](ohos.notificationManager/notificationManager.SourceType#TYPE_NORMAL)
 
 <!--Device-SourceType-TYPE_NORMAL = 0--><!--Device-SourceType-TYPE_NORMAL = 0-End-->
 
@@ -52,7 +52,7 @@ Continuous notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SourceType#TYPE_CONTINUOUS
+**Substitutes:** [TYPE_CONTINUOUS](ohos.notificationManager/notificationManager.SourceType#TYPE_CONTINUOUS)
 
 <!--Device-SourceType-TYPE_CONTINUOUS = 1--><!--Device-SourceType-TYPE_CONTINUOUS = 1-End-->
 
@@ -74,7 +74,7 @@ Timed notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SourceType#TYPE_TIMER
+**Substitutes:** [TYPE_TIMER](ohos.notificationManager/notificationManager.SourceType#TYPE_TIMER)
 
 <!--Device-SourceType-TYPE_TIMER = 2--><!--Device-SourceType-TYPE_TIMER = 2-End-->
 

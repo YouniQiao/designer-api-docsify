@@ -3,7 +3,7 @@
 Provides APIs for managing data in an RDB store.
 
 Before using the APIs of this class, use   
-[executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)to initialize the database table structure and related data.
+[executeSql](#executeSql)to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -11,7 +11,7 @@ Before using the APIs of this class, use
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)
+**Substitutes:** [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#RdbStore)
 
 <!--Device-rdb-interface RdbStore--><!--Device-rdb-interface RdbStore-End-->
 
@@ -31,7 +31,7 @@ Inserts a batch of data into a table. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
@@ -43,7 +43,7 @@ Inserts a batch of data into a table. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
 | values | Array&lt;ValuesBucket&gt; | Yes | An array of data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the number of inserted data records is returned. Otherwise, **-1** is returned. |
 
 ## Examples
 
@@ -109,7 +109,7 @@ Inserts a batch of data into a table. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+**Substitutes:** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
 
@@ -191,7 +191,7 @@ Starts the transaction before executing an SQL statement.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)
+**Substitutes:** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#beginTransaction)
 
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
@@ -240,7 +240,7 @@ Commits the executed SQL statements.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
+**Substitutes:** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
 
 <!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
@@ -289,7 +289,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+**Substitutes:** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -299,8 +299,8 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Deletion conditions specified by the **RdbPredicates** object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the number of rows deleted. |
+| predicates | RdbPredicates | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the number of rows deleted. |
 
 ## Examples
 
@@ -330,7 +330,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+**Substitutes:** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>-End-->
 
@@ -340,7 +340,7 @@ Deletes data from the RDB store based on the specified **RdbPredicates** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Deletion conditions specified by the **RdbPredicates** object. |
+| predicates | RdbPredicates | Yes | Deletion conditions specified by the **RdbPredicates** object. |
 
 **Return value:**
 
@@ -375,7 +375,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+**Substitutes:** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
@@ -387,7 +387,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -416,7 +416,7 @@ Executes an SQL statement that contains specified arguments but returns no value
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+**Substitutes:** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
@@ -461,7 +461,7 @@ Inserts a row of data into a table. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+**Substitutes:** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
@@ -472,8 +472,8 @@ Inserts a row of data into a table. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Row of data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
+| values | ValuesBucket | Yes | Row of data to insert. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, the row ID will be returned. Otherwise, **-1** will be returned. |
 
 ## Examples
 
@@ -518,7 +518,7 @@ Inserts a row of data into a table. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+**Substitutes:** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>-End-->
 
@@ -529,7 +529,7 @@ Inserts a row of data into a table. This API uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the target table. |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Row of data to insert. |
+| values | ValuesBucket | Yes | Row of data to insert. |
 
 **Return value:**
 
@@ -576,7 +576,7 @@ Obtains the distributed table name of a remote device based on the local table n
 > **NOTE：**
 
 > The value of **device** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 
@@ -586,7 +586,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
+**Substitutes:** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -600,7 +600,7 @@ Obtains the distributed table name of a remote device based on the local table n
 | --- | --- | --- | --- |
 | device | string | Yes | ID of the remote device. |
 | table | string | Yes | Local table name of the remote device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation succeeds, the distributed table name of the remote device is returned. |
 
 ## Examples
 
@@ -639,7 +639,7 @@ Obtains the distributed table name of a remote device based on the local table n
 > **NOTE：**
 
 > The value of **device** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 
@@ -649,7 +649,7 @@ Obtains the distributed table name of a remote device based on the local table n
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
+**Substitutes:** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -709,7 +709,7 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.data.relationalStore:relationalStore.RdbStore.off
+**Substitutes:** [off](@ohos.data.relationalStore:relationalStore.RdbStore.off)
 
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -720,8 +720,8 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
+| type | SubscribeType | Yes | Subscription type to register. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 ## Examples
 
@@ -753,7 +753,7 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.data.relationalStore:relationalStore.RdbStore.on
+**Substitutes:** [on](@ohos.data.relationalStore:relationalStore.RdbStore.on)
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -764,8 +764,8 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
+| type | SubscribeType | Yes | Subscription type to register. |
+| observer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
 
 ## Examples
 
@@ -797,7 +797,7 @@ Queries data from the RDB store based on specified conditions. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+**Substitutes:** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -807,9 +807,9 @@ Queries data from the RDB store based on specified conditions. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Query conditions specified by the **RdbPredicates** object. |
+| predicates | RdbPredicates | Yes | Query conditions specified by the **RdbPredicates** object. |
 | columns | Array&lt;string&gt; | Yes | Columns to query. If this parameter is not specified, the query applies to all columns. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
 
 ## Examples
 
@@ -840,7 +840,7 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+**Substitutes:** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
@@ -850,7 +850,7 @@ Queries data from the RDB store based on specified conditions. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Query conditions specified by the **RdbPredicates** object. |
+| predicates | RdbPredicates | Yes | Query conditions specified by the **RdbPredicates** object. |
 | columns | Array&lt;string&gt; | No | Columns to query. If this parameter is not specified, the query applies to all columns. |
 
 **Return value:**
@@ -887,7 +887,7 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+**Substitutes:** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -899,7 +899,7 @@ Queries data using the specified SQL statement. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | sql | string | Yes | SQL statement to run. |
 | bindArgs | Array&lt;ValueType&gt; | Yes | Arguments in the SQL statement. The value corresponds to the placeholders in the SQL parameter statement. If the SQL parameter statement is complete, the value of this parameter must be an empty array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResultSet&gt; | Yes | Callback used to return the result. If the operation is successful , a **ResultSet** object will be returned. |
 
 ## Examples
 
@@ -928,7 +928,7 @@ Queries data using the specified SQL statement. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+**Substitutes:** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
@@ -973,7 +973,7 @@ Rolls back the SQL statements that have been executed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
+**Substitutes:** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollBack)
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
@@ -1027,7 +1027,7 @@ Sets distributed tables. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
+**Substitutes:** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1040,7 +1040,7 @@ Sets distributed tables. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | Yes | Names of the distributed tables to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -1068,7 +1068,7 @@ Sets distributed tables. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
+**Substitutes:** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1113,7 +1113,7 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+**Substitutes:** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1125,9 +1125,9 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. &lt;br&gt;**string** indicates the device ID. &lt;br&gt;**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
+| mode | SyncMode | Yes | Data sync mode. The value can be **push** or **pull**. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. &lt;br&gt;**string** indicates the device ID. &lt;br&gt;**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 ## Examples
 
@@ -1176,7 +1176,7 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+**Substitutes:** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1188,8 +1188,8 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md) | Yes | Data sync mode. The value can be **push** or **pull**. |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
+| mode | SyncMode | Yes | Data sync mode. The value can be **push** or **pull**. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
 
 **Return value:**
 
@@ -1243,7 +1243,7 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+**Substitutes:** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -1253,9 +1253,9 @@ Updates data in the RDB store based on the specified **RdbPredicates** object. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Update conditions specified by the **RdbPredicates** object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the number of rows updated. |
+| values | ValuesBucket | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
+| predicates | RdbPredicates | Yes | Update conditions specified by the **RdbPredicates** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked to return the number of rows updated. |
 
 ## Examples
 
@@ -1302,7 +1302,7 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbStore.update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+**Substitutes:** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>-End-->
 
@@ -1312,8 +1312,8 @@ Updates data based on the specified **RdbPredicates** object. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | Update conditions specified by the **RdbPredicates** object. |
+| values | ValuesBucket | Yes | Rows of data to update in the RDB store. The key-value pair is associated with the column name in the target table. |
+| predicates | RdbPredicates | Yes | Update conditions specified by the **RdbPredicates** object. |
 
 **Return value:**
 

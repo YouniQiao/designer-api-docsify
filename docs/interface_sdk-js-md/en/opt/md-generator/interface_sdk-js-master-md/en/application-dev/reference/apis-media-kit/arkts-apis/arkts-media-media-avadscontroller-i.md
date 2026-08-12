@@ -11,7 +11,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource
@@ -41,13 +41,13 @@ Add an advertisement film source to the advertisement controller,The insertion t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## disableAllAdsMediaSource
 
@@ -283,7 +283,7 @@ Remove the ad source specified in the AdsController.
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## skipCurrentAdsMediaSource
 

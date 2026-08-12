@@ -13,7 +13,7 @@ General callbacks for both backup and restore procedure.The backup service will 
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## onBackupSizeReport
@@ -56,7 +56,7 @@ Callback called when the backup service tries to send files to the client.The Fi
 | --- |
 | 13900020 |
 | 13900005 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900025 |
 | 13600001 |
 | 13900011 |
@@ -91,11 +91,11 @@ Callback called when the backup_sa service return result information.The first r
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900005 |
 | 13500008 |
 | 13900001 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13500006 |
 | 13900025 |
 | 13600001 |
@@ -130,9 +130,9 @@ Callback called when the backup service return result information.The first retu
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900005 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900025 |
 | 13600001 |
 | 13900042 |

@@ -44,7 +44,7 @@ position: DepthVector3
 
 Camera position in 3D space.
 
-**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**Type:** DepthVector3
 
 **Since:** 26.0.0
 
@@ -68,7 +68,7 @@ quaternion: DepthVector4
 
 Camera rotation as quaternion (x, y, z, w).Represents the orientation of the camera in 3D space.
 
-**Type:** [DepthVector4](../arkts-apis/arkts-arkui-common-depthvector4-i-sys.md)
+**Type:** DepthVector4
 
 **Since:** 26.0.0
 

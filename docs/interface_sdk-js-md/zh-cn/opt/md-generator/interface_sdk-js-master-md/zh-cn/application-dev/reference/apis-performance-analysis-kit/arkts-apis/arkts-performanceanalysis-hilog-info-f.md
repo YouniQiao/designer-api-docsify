@@ -23,7 +23,7 @@ function info(domain: number, tag: string, format: string, ...args: any[]): void
 | domain | number | 是 |
 | tag | string | 是 |
 | format | string | 是 |
-| args | any[] | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | 是 |
 
 ## 示例
 

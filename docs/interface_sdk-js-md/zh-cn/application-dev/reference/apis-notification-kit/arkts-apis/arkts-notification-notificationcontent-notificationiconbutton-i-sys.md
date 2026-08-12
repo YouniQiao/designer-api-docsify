@@ -43,7 +43,7 @@ iconResource: IconType
 
 按钮的背景图。
 
-**类型：** [IconType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
+**类型：** [IconType](arkts-notification-icontype-t-sys.md)
 
 **起始版本：** 18
 

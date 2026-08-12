@@ -9,7 +9,7 @@
 > - 不支持[图形变换](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md)，跨节点场景中Text子组件不支持图形变
 > 换。
 
-**继承/实现关系：** SelectionContainerAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** SelectionContainerAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ default attributeModifier(modifier: AttributeModifier<SelectionContainerAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SelectionContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -83,9 +83,9 @@ default bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBui
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md) \| undefined | 是 | 选择菜单类型。用于指定选择菜单作用的文本类型范围，不同类型对应不同的菜单行为。各枚举值的含义及适用场景详见 [TextSpanType](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#textspantype11枚举说明)。 |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | 选择菜单内容。 |
-| responseType | [TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md) \| undefined | 是 | 选择菜单响应类型。 |
+| spanType | TextSpanType \| undefined | 是 | 选择菜单类型。用于指定选择菜单作用的文本类型范围，不同类型对应不同的菜单行为。各枚举值的含义及适用场景详见 [TextSpanType](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#textspantype11枚举说明)。 |
+| content | CustomBuilder \| undefined | 是 | 选择菜单内容。 |
+| responseType | TextResponseType \| undefined | 是 | 选择菜单响应类型。 |
 | options | [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | 否 | 选择菜单选项，用于配置菜单出现、消失、显示、隐藏等事件的回调。当需要监听这些菜单事件时传入此参数，不 传入时默认不监听菜单事件。 |
 
 **返回值：**
@@ -123,7 +123,7 @@ default caretColor(color: ResourceColor | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 手柄颜色。 |
+| color | ResourceColor \| undefined | 是 | 手柄颜色。 |
 
 **返回值：**
 
@@ -158,7 +158,7 @@ default copyOption(value: CopyOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CopyOptions](arkts-arkui-copyoptions-e.md) \| undefined | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
+| value | CopyOptions \| undefined | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
 
 **返回值：**
 
@@ -176,7 +176,7 @@ default editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined)
 
 > **说明：**
 > 
-> 当同时为当前场景设置了[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindselectionmenu)和editMenuOptions时，优先使用bindSelectionMenu，editMenuOptions不生
+> 当同时为当前场景设置了[bindSelectionMenu](#bindSelectionMenu)和editMenuOptions时，优先使用bindSelectionMenu，editMenuOptions不生
 > 效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩展项，触发条件不变。建议根据自定义程度需求选择。
 
 **起始版本：** 26.0.0
@@ -243,9 +243,9 @@ default onCopy(callback: Callback<string> | undefined): this
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textjoinstyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textJoinStyle)配置决定。
 > 
-> - 仅当容器级[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onwillcopy)返回true时，该回调才会触发。
+> - 仅当容器级[onWillCopy](#onWillCopy)返回true时，该回调才会触发。
 
 **起始版本：** 26.0.0
 
@@ -261,7 +261,7 @@ default onCopy(callback: Callback<string> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt; \| undefined | 是 | 复制回调。 |
+| callback | Callback&lt;string&gt; \| undefined | 是 | 复制回调。 |
 
 **返回值：**
 
@@ -299,7 +299,7 @@ SelectionContainer中选中文本发生变化时触发该回调。使用callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;Array&lt;string&gt;&gt; \| undefined | 是 | 选中文本变化回调。 |
+| callback | Callback&lt;Array&lt;string&gt;&gt; \| undefined | 是 | 选中文本变化回调。 |
 
 **返回值：**
 
@@ -317,9 +317,9 @@ default onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textjoinstyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textJoinStyle)配置决定。
 > 
-> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#oncopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
+> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](#onCopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
 
 **起始版本：** 26.0.0
 
@@ -335,7 +335,7 @@ default onWillCopy(callback: Callback<string, boolean> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string, boolean&gt; \| undefined | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
+| callback | Callback&lt;string, boolean&gt; \| undefined | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
 
 **返回值：**
 
@@ -373,7 +373,7 @@ default selectedBackgroundColor(color: ResourceColor | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 选中文本底板颜色。 |
+| color | ResourceColor \| undefined | 是 | 选中文本底板颜色。 |
 
 **返回值：**
 
@@ -415,7 +415,7 @@ default textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 > **说明：**
 > 
-> - 该配置会影响[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onwillcopy)、[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#oncopy)、[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindselectionmenu)相关回调中返回
+> - 该配置会影响[onWillCopy](#onWillCopy)、[onCopy](#onCopy)、[bindSelectionMenu](#bindSelectionMenu)相关回调中返回
 > 的文本内容。
 > 
 > - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置

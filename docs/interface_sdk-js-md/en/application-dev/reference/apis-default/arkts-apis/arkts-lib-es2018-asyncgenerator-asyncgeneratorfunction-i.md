@@ -24,7 +24,7 @@ Creates a new AsyncGenerator object.
 
 | Type | Description |
 | --- | --- |
-| AsyncGenerator |  |
+| [AsyncGenerator](arkts-lib-es2018-asyncgenerator-asyncgenerator-i.md) |  |
 
 ## [[Construct]]
 
@@ -48,7 +48,7 @@ Creates a new AsyncGenerator object.
 
 | Type | Description |
 | --- | --- |
-| AsyncGenerator |  |
+| [AsyncGenerator](arkts-lib-es2018-asyncgenerator-asyncgenerator-i.md) |  |
 
 ## length
 
@@ -86,7 +86,7 @@ readonly prototype: AsyncGenerator
 
 A reference to the prototype.
 
-**Type:** AsyncGenerator
+**Type:** [AsyncGenerator](arkts-lib-es2018-asyncgenerator-asyncgenerator-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

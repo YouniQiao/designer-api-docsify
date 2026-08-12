@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from 'kits/@kit.ConnectivityKit';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## startPassiveRanging
@@ -32,20 +32,20 @@ The returned handle can be used to stop the passive ranging broadcast via stopPa
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| capabilityType | [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md) | Yes |
+| [capabilityType](arkts-connectivity-ranging-rangingparams-i.md) | [RangingTypes](arkts-connectivity-ranging-rangingtypes-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 34900052 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 34900053 |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [34900099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |

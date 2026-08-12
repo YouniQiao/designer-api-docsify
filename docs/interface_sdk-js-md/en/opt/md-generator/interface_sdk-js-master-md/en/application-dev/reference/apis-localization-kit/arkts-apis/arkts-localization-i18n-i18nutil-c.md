@@ -11,7 +11,7 @@ Internationalization utility class, which provides the capabilities of unit conv
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## convertCanonicalLocaleIdentifier
@@ -77,8 +77,8 @@ Obtains the locale that best matches a region from the specified locale list.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
 
 ## getDateOrder
 
@@ -142,8 +142,8 @@ For example, the two-letter language code of Chinese is **zh**, and the correspo
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
 
 ## getThreeLetterRegion
 
@@ -180,8 +180,8 @@ For example, the two-letter region code of China is **CN**, and the correspondin
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
 
 ## getTimePeriodName
 
@@ -216,8 +216,8 @@ Obtains the localized expression of the specified time in the specified locale.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
 
 ## getUnicodeWrappedFilePath
 
@@ -255,7 +255,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 | Error Code ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## getUnicodeWrappedFilePath
 
@@ -271,7 +271,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Deprecated since:** 20
 
-**Substitutes:** [i18n.I18NUtil.getUnicodeWrappedFilePath](arkts-localization-i18n-i18nutil-c.md#getunicodewrappedfilepath)(path:
+**Substitutes:** [getUnicodeWrappedFilePath](i18n.I18NUtil.getUnicodeWrappedFilePath(path:)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -297,7 +297,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 | Error Code ID |
 | --- |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
 
 ## setUnicodeWrappedBidiDirection
 

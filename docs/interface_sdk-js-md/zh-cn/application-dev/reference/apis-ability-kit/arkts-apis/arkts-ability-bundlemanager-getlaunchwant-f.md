@@ -28,7 +28,7 @@ function getLaunchWant(): Want
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700072](../errorcode-bundle.md#17700072-launch-want不存在) | The launch want is not found. |
+| [17700072](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700072-launch-want不存在) | The launch want is not found. |
 
 ## 示例
 

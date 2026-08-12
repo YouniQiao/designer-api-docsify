@@ -33,22 +33,22 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| subWindowOptions | window.SubWindowOptions | 是 |
+| [subWindowOptions](arkts-arkui-window-extensionwindowconfig-i-sys.md) | window.SubWindowOptions | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;window.Window&gt; |
+| Promise & lt;window.Window & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 1300035 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -128,15 +128,15 @@ createSubWindowWithOptions(name: string, subWindowConfig: window.SubWindowOption
 
 | 类型 |
 | --- |
-| Promise&lt;window.Window&gt; |
+| Promise & lt;window.Window & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 1300035 |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -219,7 +219,7 @@ getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -249,8 +249,8 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 > **说明：**
 > 
-> - 不安全窗口是指可能遮挡[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)（或
-> [UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i)）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
+> - 不安全窗口是指可能遮挡[EmbeddedComponent](./@internal/component/ets/embedded_component)（或
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component)）组件的窗口，如全局悬浮窗、宿主子窗口和宿主创建的Dialog窗口
 > （不包括系统应用创建的上述类型窗口）。
 > 
 > - 当EmbeddedComponent（或UIExtensionComponent）组件被用来显示敏感操作提示内容时，可以选择隐藏不安全窗口，保护敏感操作提示内容不会被遮挡。当EmbeddedComponent（或
@@ -281,16 +281,16 @@ hideNonSecureWindows(shouldHide: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -356,15 +356,15 @@ hidePrivacyContentForHost(shouldHide: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -415,8 +415,8 @@ off(type: 'avoidAreaChange', callback?: Callback<{ type: window.AvoidAreaType, a
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -462,8 +462,8 @@ off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -509,8 +509,8 @@ on(type: 'avoidAreaChange', callback: Callback<{ type: window.AvoidAreaType, are
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -558,8 +558,8 @@ on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -610,15 +610,15 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300008](../errorcode-window.md#1300008-显示设备异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) |
 
 ## 示例
 
@@ -658,7 +658,7 @@ properties: UIExtensionHostWindowProxyProperties
 UIExtensionComponent组件以及宿主窗口的信息。
 
 **约束：** 由于架构约束，不建议在  
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)阶段同步获取该值，建议在收到  
+[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)阶段同步获取该值，建议在收到  
 [on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))回调之后获取。
 
 **类型：** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)

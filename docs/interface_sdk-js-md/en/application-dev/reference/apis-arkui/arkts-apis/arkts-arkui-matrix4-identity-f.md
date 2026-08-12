@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## identity
@@ -28,5 +28,5 @@ Matrix initialization function, which can return an identity matrix object.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 

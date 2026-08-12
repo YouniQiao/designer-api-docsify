@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## connectToDevice
@@ -18,7 +18,7 @@ Connects to Wi-Fi network.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.connectToDevice
+**Substitutes:** [connectToDevice](ohos.wifiManager/wifiManager.connectToDevice)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG and ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -32,7 +32,7 @@ Connects to Wi-Fi network.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes |
+| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i.md) | Yes |
 
 **Return value:**
 

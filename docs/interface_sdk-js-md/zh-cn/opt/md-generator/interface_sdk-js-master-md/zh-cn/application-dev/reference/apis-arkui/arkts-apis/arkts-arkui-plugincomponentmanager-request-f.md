@@ -21,7 +21,7 @@ function request(param: RequestParameters, callback: AsyncCallback<RequestCallba
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | param | [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestCallbackParameters&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | 是 |
 
 ## 示例
 

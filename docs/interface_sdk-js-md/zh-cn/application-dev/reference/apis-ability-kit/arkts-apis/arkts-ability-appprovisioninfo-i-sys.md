@@ -220,7 +220,7 @@ readonly validity: Validity
 
 配置文件中的有效期。
 
-**类型：** [Validity](arkts-ability-bundlemanager-validity-t-sys.md)
+**类型：** [Validity](arkts-ability-appprovisioninfo-validity-i-sys.md)
 
 **起始版本：** 10
 

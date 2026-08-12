@@ -15,7 +15,7 @@ TransitionOptions通过指定结构体内的参数来指定转场效果。
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -41,7 +41,7 @@ opacity?: number
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#opacity](arkts-arkui-transitioneffect-c.md#opacity)
+**替代接口：** [opacity](arkts-arkui-transitioneffect-c.md#opacity)
 
 <!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
 
@@ -71,7 +71,7 @@ rotate?: RotateOptions
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#rotate](arkts-arkui-transitioneffect-c.md#rotate)
+**替代接口：** [rotate](arkts-arkui-transitioneffect-c.md#rotate)
 
 <!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
 
@@ -105,7 +105,7 @@ scale?: ScaleOptions
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#scale](arkts-arkui-transitioneffect-c.md#scale)
+**替代接口：** [scale](arkts-arkui-transitioneffect-c.md#scale)
 
 <!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
 
@@ -131,7 +131,7 @@ translate?: TranslateOptions
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect#translate](arkts-arkui-transitioneffect-c.md#translate)
+**替代接口：** [translate](arkts-arkui-transitioneffect-c.md#translate)
 
 <!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
 
@@ -157,7 +157,7 @@ type?: TransitionType
 
 **废弃版本：** 10
 
-**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+**替代接口：** [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

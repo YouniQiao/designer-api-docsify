@@ -6,7 +6,7 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 > 
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
 > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](arkts-arkui-uicontext.md).
+> [UIContext](@ohos.arkui.UIContext).
 > 
 > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
@@ -21,7 +21,7 @@ This module provides APIs for initiating drag actions. When receiving a gesture 
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## Summary

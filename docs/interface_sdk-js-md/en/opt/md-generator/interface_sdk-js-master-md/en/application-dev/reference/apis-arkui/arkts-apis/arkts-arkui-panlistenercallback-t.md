@@ -22,4 +22,4 @@ Defines a callback for pan gesture events.
 | --- | --- | --- |
 | event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes |
 | current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | No |

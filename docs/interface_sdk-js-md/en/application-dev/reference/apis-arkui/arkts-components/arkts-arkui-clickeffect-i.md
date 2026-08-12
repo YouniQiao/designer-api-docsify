@@ -25,7 +25,7 @@ Default value: **ClickEffectLevel.LIGHT**
 When **level** is **undefined** or **null**, **ClickEffect** uses the effect corresponding to   
 **ClickEffectLevel.LIGHT** with a scaling ratio as described below.
 
-**Type:** [ClickEffectLevel](../arkts-apis/arkts-arkui-clickeffectlevel-e.md)
+**Type:** ClickEffectLevel
 
 **Default:** ClickEffectLevel.LIGHT
 

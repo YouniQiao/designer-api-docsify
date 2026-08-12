@@ -2,7 +2,7 @@
 
 Provides methods for managing bundle usage statistics,including the methods for querying bundle usage information and state data.
 
-You can use the methods defined in this class to query the usage history and states of bundles in a specified period.The system stores the query result in a {@link BundleStatsInfo} instance and then returns it to you.
+You can use the methods defined in this class to query the usage history and states of bundles in a specified period.The system stores the query result in a [BundleStatsInfo](arkts-backgroundtasks-usagestatistics-bundlestatsinfo-i-sys.md#BundleStatsInfo) instance and then returns it to you.
 
 **Since:** 9
 
@@ -13,7 +13,7 @@ You can use the methods defined in this class to query the usage history and sta
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

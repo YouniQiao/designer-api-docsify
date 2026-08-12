@@ -13,7 +13,7 @@ A color picker class used to obtain the main color from image data. It is suitab
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree
@@ -80,7 +80,7 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -140,7 +140,7 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -196,7 +196,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the deepened immersion color. If the image processing fails or the immersion color cannot be generated, null is returned. |
+| Color | Color value of the deepened immersion color. If the image processing fails or the immersion color cannot be generated, null is returned. |
 
 ## getImmersiveBackgroundColor
 
@@ -224,7 +224,7 @@ Generates an immersive background color that creates an immersive visual effect,
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the immersive background color. If the image processing fails or the immersive background color cannot be generated, null is returned. |
+| Color | Color value of the immersive background color. If the image processing fails or the immersive background color cannot be generated, null is returned. |
 
 ## getImmersiveForegroundColor
 
@@ -252,7 +252,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the immersive foreground color. If the image processing fails or the immersive foreground color cannot be generated, null is returned. |
+| Color | Color value of the immersive foreground color. If the image processing fails or the immersive foreground color cannot be generated, null is returned. |
 
 ## getMorandiShadowColor
 
@@ -280,7 +280,7 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the Morandi shadow color. If the image processing fails or the Morandi shadow color cannot be obtained, null is returned. |
+| Color | Color value of the Morandi shadow color. If the image processing fails or the Morandi shadow color cannot be obtained, null is returned. |
 
 ## getReverseColor
 
@@ -308,7 +308,7 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the reverse color. If the image processing fails or the reverse color cannot be generated, null is returned. |
+| Color | Color value of the reverse color. If the image processing fails or the reverse color cannot be generated, null is returned. |
 
 ## getShadeDegree
 
@@ -340,7 +340,7 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -412,7 +412,7 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

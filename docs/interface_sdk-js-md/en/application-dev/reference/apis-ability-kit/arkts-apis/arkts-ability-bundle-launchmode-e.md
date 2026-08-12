@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md) instead.
+> [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType) instead.
 
 Enumerates the ability launch modes.
 
@@ -13,7 +13,7 @@ Enumerates the ability launch modes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.bundleManager:bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
+**Substitutes:** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType)
 
 <!--Device-bundle-export enum LaunchMode--><!--Device-bundle-export enum LaunchMode-End-->
 
@@ -33,7 +33,7 @@ The ability has only one instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.LaunchType#SINGLETON
+**Substitutes:** [SINGLETON](ohos.bundle.bundleManager/bundleManager.LaunchType#SINGLETON)
 
 <!--Device-LaunchMode-SINGLETON = 0--><!--Device-LaunchMode-SINGLETON = 0-End-->
 
@@ -53,7 +53,7 @@ The ability can have multiple instances.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.LaunchType#MULTITON
+**Substitutes:** [MULTITON](arkts-ability-bundlemanager-launchtype-e.md#MULTITON)
 
 <!--Device-LaunchMode-STANDARD = 1--><!--Device-LaunchMode-STANDARD = 1-End-->
 

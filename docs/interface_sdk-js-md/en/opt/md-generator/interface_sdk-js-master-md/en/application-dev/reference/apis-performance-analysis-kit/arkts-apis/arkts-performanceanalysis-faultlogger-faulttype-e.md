@@ -6,7 +6,7 @@ Enumerates the fault types.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.event
+**Substitutes:** [event](ohos.hiviewdfx.hiAppEvent/hiAppEvent.event)
 
 <!--Device-FaultLogger-enum FaultType--><!--Device-FaultLogger-enum FaultType-End-->
 

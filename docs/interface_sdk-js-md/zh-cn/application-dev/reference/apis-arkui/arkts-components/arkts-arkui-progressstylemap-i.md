@@ -18,7 +18,7 @@
 
 胶囊形进度条对应的进度条样式。
 
-**类型：** [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) \| ProgressStyleOptions
+**类型：** [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -40,7 +40,7 @@
 
 圆形进度条对应的进度条样式。
 
-**类型：** [EclipseStyleOptions](../arkts-apis/arkts-arkui-progress-eclipsestyleoptions-i.md) \| ProgressStyleOptions
+**类型：** [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -62,7 +62,7 @@
 
 线性进度条对应的进度条样式。
 
-**类型：** [LinearStyleOptions](../arkts-apis/arkts-arkui-progress-linearstyleoptions-i.md) \| ProgressStyleOptions
+**类型：** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -84,7 +84,7 @@
 
 环形无刻度进度条对应的进度条样式。
 
-**类型：** [RingStyleOptions](../arkts-apis/arkts-arkui-progress-ringstyleoptions-i.md) \| ProgressStyleOptions
+**类型：** [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
 
@@ -106,7 +106,7 @@
 
 环形有刻度进度条对应的进度条样式。
 
-**类型：** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| ProgressStyleOptions
+**类型：** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **起始版本：** 10
 

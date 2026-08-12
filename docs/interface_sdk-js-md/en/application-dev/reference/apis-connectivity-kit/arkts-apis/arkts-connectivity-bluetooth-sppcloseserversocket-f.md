@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppCloseServerSocket
@@ -20,7 +20,7 @@ Disables an spp server socket and releases related resources.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppCloseServerSocket
+**Substitutes:** [sppCloseServerSocket](ohos.bluetoothManager/bluetoothManager.sppCloseServerSocket)
 
 <!--Device-bluetooth-function sppCloseServerSocket(socket: number): void--><!--Device-bluetooth-function sppCloseServerSocket(socket: number): void-End-->
 
@@ -30,7 +30,7 @@ Disables an spp server socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | number | Yes | Indicates the server socket ID, returned by {@link sppListen}. |
+| socket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#sppListen). |
 
 ## Examples
 

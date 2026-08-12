@@ -6,7 +6,7 @@ Widget information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo#FormInfo
+**Substitutes:** [FormInfo](ohos.app.form.formInfo/formInfo#FormInfo)
 
 <!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
 
@@ -26,7 +26,7 @@ Name of the ability to which the widget belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#abilityName
+**Substitutes:** [abilityName](ohos.app.form.formInfo/formInfo.FormInfo#abilityName)
 
 <!--Device-FormInfo-abilityName: string--><!--Device-FormInfo-abilityName: string-End-->
 
@@ -46,7 +46,7 @@ Name of the bundle to which the widget belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#bundleName
+**Substitutes:** [bundleName](ohos.app.form.formInfo/formInfo.FormInfo#bundleName)
 
 <!--Device-FormInfo-bundleName: string--><!--Device-FormInfo-bundleName: string-End-->
 
@@ -60,13 +60,13 @@ colorMode: ColorMode
 
 Color mode of the widget.
 
-**Type:** [ColorMode](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-colormode-e.md)
+**Type:** ColorMode
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#colorMode
+**Substitutes:** [colorMode](ohos.app.form.formInfo/formInfo.FormInfo#colorMode)
 
 <!--Device-FormInfo-colorMode: ColorMode--><!--Device-FormInfo-colorMode: ColorMode-End-->
 
@@ -86,7 +86,7 @@ Custom data of the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#customizeData
+**Substitutes:** [customizeData](ohos.app.form.formInfo/formInfo.FormInfo#customizeData)
 
 <!--Device-FormInfo-customizeData: { [key: string]: [value: string] }--><!--Device-FormInfo-customizeData: { [key: string]: [value: string] }-End-->
 
@@ -106,7 +106,7 @@ Default dimension of the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#defaultDimension
+**Substitutes:** [defaultDimension](ohos.app.form.formInfo/formInfo.FormInfo#defaultDimension)
 
 <!--Device-FormInfo-defaultDimension: number--><!--Device-FormInfo-defaultDimension: number-End-->
 
@@ -126,7 +126,7 @@ Description of the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#description
+**Substitutes:** [description](ohos.app.form.formInfo/formInfo.FormInfo#description)
 
 <!--Device-FormInfo-description: string--><!--Device-FormInfo-description: string-End-->
 
@@ -146,7 +146,7 @@ Configuration ability of the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#formConfigAbility
+**Substitutes:** [formConfigAbility](ohos.app.form.formInfo/formInfo.FormInfo#formConfigAbility)
 
 <!--Device-FormInfo-formConfigAbility: string--><!--Device-FormInfo-formConfigAbility: string-End-->
 
@@ -169,7 +169,7 @@ Whether to send a notification when the widget is visible.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#formVisibleNotify
+**Substitutes:** [formVisibleNotify](ohos.app.form.formInfo/formInfo.FormInfo#formVisibleNotify)
 
 <!--Device-FormInfo-formVisibleNotify: boolean--><!--Device-FormInfo-formVisibleNotify: boolean-End-->
 
@@ -192,7 +192,7 @@ Whether the widget is the default one.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#isDefault
+**Substitutes:** [isDefault](ohos.app.form.formInfo/formInfo.FormInfo#isDefault)
 
 <!--Device-FormInfo-isDefault: boolean--><!--Device-FormInfo-isDefault: boolean-End-->
 
@@ -212,7 +212,7 @@ Component name of the JS widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#jsComponentName
+**Substitutes:** [jsComponentName](ohos.app.form.formInfo/formInfo.FormInfo#jsComponentName)
 
 <!--Device-FormInfo-jsComponentName: string--><!--Device-FormInfo-jsComponentName: string-End-->
 
@@ -232,7 +232,7 @@ Name of the module to which the widget belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#moduleName
+**Substitutes:** [moduleName](ohos.app.form.formInfo/formInfo.FormInfo#moduleName)
 
 <!--Device-FormInfo-moduleName: string--><!--Device-FormInfo-moduleName: string-End-->
 
@@ -252,7 +252,7 @@ Widget name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#name
+**Substitutes:** [name](ohos.app.form.formInfo/formInfo.FormInfo#name)
 
 <!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
 
@@ -290,7 +290,7 @@ Time when the widget was updated.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#scheduledUpdateTime
+**Substitutes:** [scheduledUpdateTime](ohos.app.form.formInfo/formInfo.FormInfo#scheduledUpdateTime)
 
 <!--Device-FormInfo-scheduledUpdateTime: string--><!--Device-FormInfo-scheduledUpdateTime: string-End-->
 
@@ -310,7 +310,7 @@ Dimensions supported by the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#supportDimensions
+**Substitutes:** [supportDimensions](ohos.app.form.formInfo/formInfo.FormInfo#supportDimensions)
 
 <!--Device-FormInfo-supportDimensions: Array<number>--><!--Device-FormInfo-supportDimensions: Array<number>-End-->
 
@@ -324,13 +324,13 @@ type: FormType
 
 Type of the widget. Currently, only JS widgets are supported.
 
-**Type:** [FormType](arkts-form-forminfo-formtype-e.md)
+**Type:** FormType
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#type
+**Substitutes:** [type](ohos.app.form.formInfo/formInfo.FormInfo#type)
 
 <!--Device-FormInfo-type: FormType--><!--Device-FormInfo-type: FormType-End-->
 
@@ -350,7 +350,7 @@ Update period of the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#updateDuration
+**Substitutes:** [updateDuration](ohos.app.form.formInfo/formInfo.FormInfo#updateDuration)
 
 <!--Device-FormInfo-updateDuration: number--><!--Device-FormInfo-updateDuration: number-End-->
 
@@ -373,7 +373,7 @@ Whether the widget is updatable.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormInfo#updateEnabled
+**Substitutes:** [updateEnabled](ohos.app.form.formInfo/formInfo.FormInfo#updateEnabled)
 
 <!--Device-FormInfo-updateEnabled: boolean--><!--Device-FormInfo-updateEnabled: boolean-End-->
 

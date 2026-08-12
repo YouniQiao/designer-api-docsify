@@ -11,7 +11,7 @@ Provides tag information.&lt;p&gt;This class provides the technology a tag suppo
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## supportedProfiles
@@ -28,7 +28,7 @@ The supported technology list of this tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.tag/tag.TagInfo#technology
+**Substitutes:** [technology](ohos.nfc.tag/tag.TagInfo#technology)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

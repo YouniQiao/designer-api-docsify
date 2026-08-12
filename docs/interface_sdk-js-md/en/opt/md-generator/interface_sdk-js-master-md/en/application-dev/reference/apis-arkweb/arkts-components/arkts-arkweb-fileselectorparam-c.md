@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-Encompassed message information as parameters to {@link onFileSelectorShow} method.
+Encompassed message information as parameters to [onFileSelectorShow](onFileSelectorShow) method.
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ Gets an array of acceptable MIME type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getAcceptableFileTypes
 
@@ -64,7 +64,7 @@ Gets an array of selected types for web page files.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Array&lt;AcceptableFileType&gt;&gt; |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; |
 
 ## getDefaultPath
 
@@ -104,7 +104,7 @@ Gets a description array of file types.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getMimeTypes
 
@@ -124,7 +124,7 @@ Gets an array of raw acceptable MIME type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getMode
 

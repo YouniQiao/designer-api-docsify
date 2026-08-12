@@ -73,7 +73,7 @@ innerRadius: LengthMetrics
 
 The inner radius of the annulus
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 20
 
@@ -93,7 +93,7 @@ outerRadius: LengthMetrics
 
 The outer radius of the annulus
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 20
 

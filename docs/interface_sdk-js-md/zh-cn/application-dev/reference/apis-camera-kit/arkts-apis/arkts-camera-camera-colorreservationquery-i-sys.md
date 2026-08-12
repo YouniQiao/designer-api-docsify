@@ -34,14 +34,14 @@ Obtains the supported color reservation types.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ColorReservationType&gt; | Array of color reservation types supported. |
+| Array&lt;[ColorReservationType](arkts-camera-camera-colorreservationtype-e-sys.md)&gt; | Array of color reservation types supported. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application. |
 
 ## 示例
 

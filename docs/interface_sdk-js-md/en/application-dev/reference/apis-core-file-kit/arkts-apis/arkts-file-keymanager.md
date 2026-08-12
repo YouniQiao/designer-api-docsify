@@ -17,7 +17,7 @@ This module provides common features related to user key management, including u
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from 'kits/@kit.CoreFileKit';
+import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

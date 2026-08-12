@@ -18,7 +18,7 @@ Radius of the rounded corners of the component.
 
 If of the **Dimension** type, this parameter cannot be set in percentage.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ Margins in different directions of the component.
 
 When the parameter is of the **Dimension** type, the four margins take effect.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Margin
+**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **Since:** 11
 

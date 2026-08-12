@@ -24,7 +24,7 @@ Returns a new array with all sub-array elements concatenated into it recursively
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| FlatArray&lt;A, D&gt;[] |
+| [FlatArray](arkts-flatarray-t.md)&lt;A, D&gt;[] |
 
 ## flatMap
 
@@ -43,7 +43,7 @@ Calls a defined callback function on each element of an array. Then, flattens th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (this: This, value: T, index: number, array: T[]) =&gt; U \| [ReadonlyArray&lt;U&gt;](../../apis-arkts/arkts-apis/arkts-arkts-readonlyarray-i.md) | Yes |
+| callback | (this: This, value: T, index: number, array: T[]) = & gt; U \ | [ReadonlyArray](arkts-lib-es2019-array-readonlyarray-i.md) & lt;U & gt; | Yes |
 | thisArg | This | No |
 
 **Return value:**

@@ -8,7 +8,7 @@ Provides APIs for managing the **UserAuth** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
+**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
 
 <!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
@@ -17,7 +17,7 @@ Provides APIs for managing the **UserAuth** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## auth
@@ -39,7 +39,7 @@ Starts user authentication. This API uses a callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -53,8 +53,8 @@ Starts user authentication. This API uses a callback to return the result.
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value, which can be passed in Uint8Array([]) format. |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
-| callback | [IUserAuthCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Callback used to return the result. |
+| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
+| callback | IUserAuthCallback | Yes | Callback used to return the result. |
 
 **Return value:**
 
@@ -100,7 +100,7 @@ Cancels the authentication based on the context ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthInstance.cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
+**Substitutes:** [cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -112,7 +112,7 @@ Cancels the authentication based on the context ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextID | Uint8Array | Yes | Context ID, which is obtained by [auth](arkts-userauthentication-userauth-userauth-c.md#auth). |
+| contextID | Uint8Array | Yes | Context ID, which is obtained by [auth](#auth). |
 
 **Return value:**
 
@@ -150,7 +150,7 @@ A constructor used to create a **UserAuth** instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -178,7 +178,7 @@ Checks whether the specified authentication capability is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
+**Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getAvailableStatus)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -191,7 +191,7 @@ Checks whether the specified authentication capability is supported.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md) | Yes | Authentication type. Currently, **FACE** and **FINGERPRINT** are supported. |
-| authTrustLevel | [AuthTrustLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authtrustlevel-e-sys.md) | Yes | Authentication trust level. |
+| authTrustLevel | AuthTrustLevel | Yes | Authentication trust level. |
 
 **Return value:**
 

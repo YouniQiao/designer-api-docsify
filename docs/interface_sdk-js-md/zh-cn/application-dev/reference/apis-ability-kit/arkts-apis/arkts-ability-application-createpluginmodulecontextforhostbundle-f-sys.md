@@ -27,7 +27,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | 是 | 表示应用上下文。 |
+| context | [Context](arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
 | pluginBundleName | string | 是 | 表示应用的插件包名。 |
 | pluginModuleName | string | 是 | 表示应用的插件模块名。 |
 | hostBundleName | string | 是 | 表示安装插件的应用包名。 |
@@ -36,14 +36,14 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise对象。返回创建的Context，返回的Context中的属性processName和config与入参Context中的属性processName和config的值相 同。 |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise对象。返回创建的Context，返回的Context中的属性processName和config与入参Context中的属性processName和config的值相 同。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 

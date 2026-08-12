@@ -13,7 +13,7 @@ Provides VPN related interfaces.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## Summary

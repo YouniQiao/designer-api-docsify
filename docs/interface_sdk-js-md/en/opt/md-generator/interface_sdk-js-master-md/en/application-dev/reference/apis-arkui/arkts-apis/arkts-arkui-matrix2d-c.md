@@ -52,7 +52,7 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes |
 
 ## identity
 
@@ -76,7 +76,7 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## invert
 
@@ -100,7 +100,7 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## multiply
 
@@ -124,13 +124,13 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | No |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## rotate
 
@@ -144,7 +144,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Deprecated since:** 10
 
-**Substitutes:** [rotate](arkts-arkui-matrix2d-c.md#rotate)
+**Substitutes:** [rotate](#rotate)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -163,7 +163,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## rotate
 
@@ -197,7 +197,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## scale
 
@@ -228,7 +228,7 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## translate
 
@@ -259,7 +259,7 @@ Performs a left multiplication translation operation on this matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## rotateX
 

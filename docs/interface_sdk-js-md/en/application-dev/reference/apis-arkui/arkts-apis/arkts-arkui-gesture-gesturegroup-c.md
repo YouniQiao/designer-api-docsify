@@ -34,7 +34,7 @@ Return to Obtain GestureGroup.
 | --- | --- | --- | --- |
 | factory | () =&gt; GestureGroup | Yes |  |
 | mode | [GestureMode](arkts-arkui-gesture-gesturemode-e.md) | Yes |  |
-| gesture | [GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)[] | Yes |  |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | Yes |  |
 
 **Return value:**
 

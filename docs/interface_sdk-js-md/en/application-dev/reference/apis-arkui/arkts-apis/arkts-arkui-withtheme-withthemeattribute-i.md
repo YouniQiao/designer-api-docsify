@@ -81,7 +81,7 @@ Sets the WithTheme options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | Yes | The options to create a WithTheme. |
+| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | Yes | The options to create a WithTheme. |
 
 **Return value:**
 

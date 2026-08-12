@@ -18,7 +18,7 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| valuesBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 |
+| [valuesBucket](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 |
 
 **返回值：**
 
@@ -30,8 +30,8 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
 
 ## 示例
 

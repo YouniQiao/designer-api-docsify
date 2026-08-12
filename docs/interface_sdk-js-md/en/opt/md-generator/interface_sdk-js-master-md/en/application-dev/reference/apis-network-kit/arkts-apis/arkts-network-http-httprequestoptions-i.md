@@ -11,7 +11,7 @@ Specifies the type and value range of the optional parameters in the HTTP reques
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## addressFamily
@@ -99,9 +99,9 @@ If this parameter is set, the system will use ca path specified by user, or else
 certificatePinning?: CertificatePinning | CertificatePinning[]
 ```
 
-Certificate pinning option. If server certificate's digest does not match{@link CertificatePinning.publicKeyHash}, request will fail.
+Certificate pinning option. If server certificate's digest does not match[publicKeyHash](arkts-network-http-certificatepinning-i.md#publicKeyHash), request will fail.
 
-**Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| CertificatePinning[]
+**Type:** [CertificatePinning](arkts-network-http-certificatepinning-i.md) \| [CertificatePinning](arkts-network-http-certificatepinning-i.md)[]
 
 **Since:** 12
 
@@ -117,7 +117,7 @@ clientCert?: ClientCert
 
 Support the application to pass in client certificates, allowing the server to verify the client's identity.
 
-**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
+**Type:** ClientCert
 
 **Since:** 12
 
@@ -133,7 +133,7 @@ clientEncCert?: ClientCert
 
 Support the application to pass in client certificates, allowing the server to verify the client's encryption identity.
 
-**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
+**Type:** ClientCert
 
 **Since:** 20
 
@@ -357,7 +357,7 @@ multiFormDataList?: Array<MultiFormData>
 
 The data fields which is supported by the HTTP protocol to post forms and by the SMTP and IMAP protocols to provide the email data to send/upload.
 
-**Type:** Array&lt;MultiFormData&gt;
+**Type:** Array&lt;[MultiFormData](arkts-network-http-multiformdata-i.md)&gt;
 
 **Since:** 12
 
@@ -415,7 +415,7 @@ Notes:1. For `string`, do not include the leading `?`(for example, use `"key=val
 
 If both `queryParams` and `extraData` are specified, `queryParams` takes precedence for URL construction, and `extraData` will be ignored.
 
-**Type:** string \| QueryParamObject
+**Type:** string \| [QueryParamObject](arkts-network-http-queryparamobject-t.md)
 
 **Since:** 26.0.0
 
@@ -553,7 +553,7 @@ sslType?: SslType
 
 Which secure communication protocol is used, TLS (by defaul) or TLCP.If TLCP is used, all TLS related options, such as caPath, caData and clientCert, are ignored.
 
-**Type:** [SslType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-cachedownload-ssltype-e.md)
+**Type:** SslType
 
 **Since:** 20
 
@@ -643,7 +643,7 @@ usingSocks5Proxy?: Socks5Proxy
 
 Specifies the use of a SOCKS5 proxy. Note that this configuration takes precedence over usingProxy.It is recommend not to configure both simultaneously.
 
-**Type:** [Socks5Proxy](arkts-network-connection-socks5proxy-i.md)
+**Type:** Socks5Proxy
 
 **Since:** 26.0.0
 

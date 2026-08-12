@@ -84,7 +84,7 @@ valuePixelMap?: PixelMap
 
 图片内容。
 
-**类型：** [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md)
+**类型：** PixelMap
 
 **起始版本：** 10
 
@@ -106,7 +106,7 @@ valueResourceStr?: ResourceStr
 
 图片资源id。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 

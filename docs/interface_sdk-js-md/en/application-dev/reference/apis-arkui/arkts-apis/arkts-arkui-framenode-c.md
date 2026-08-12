@@ -32,13 +32,13 @@ Mount ComponentContent to FrameNode.On API 26.0.0 and above, It can also mount C
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| ReactiveComponentContent | Yes | Newly added ComponentContent.<br>**Since:** 23 - 24 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md) | Yes | Newly added ComponentContent.<br>**Since:** 23 - 24 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 ## addSupportedUIStates
 
@@ -94,9 +94,9 @@ The current node adopts the target child node. The node being adopted must not h
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The current FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
-| [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The current FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 
 ## appendChild
 
@@ -126,8 +126,8 @@ Add child to the end of the FrameNode's children.If this FrameNode is not modifi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
 
 ## cancelAnimations
 
@@ -181,7 +181,7 @@ Clear children of the current FrameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 ## constructor
 
@@ -243,8 +243,8 @@ Converts a point's coordinates from the current node's coordinate system to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
-| [100024](../errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The current FrameNode and the target FrameNode do not have a common ancestor node. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
+| [100024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The current FrameNode and the target FrameNode do not have a common ancestor node. |
 
 ## convertPositionFromWindow
 
@@ -280,8 +280,8 @@ Converts a point's coordinates from the current window's coordinate system to th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
-| [100028](../errorcode-node.md#100028-current-node-is-not-on-the-main-node-tree) | The current FrameNode is not on the main tree. |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
+| [100028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100028-current-node-is-not-on-the-main-node-tree) | The current FrameNode is not on the main tree. |
 
 ## convertPositionToWindow
 
@@ -317,8 +317,8 @@ Converts a point's coordinates from the current node's coordinate system to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
-| [100028](../errorcode-node.md#100028-current-node-is-not-on-the-main-node-tree) | The current FrameNode is not on the main tree. |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
+| [100028](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100028-current-node-is-not-on-the-main-node-tree) | The current FrameNode is not on the main tree. |
 
 ## createAnimation
 
@@ -345,7 +345,7 @@ create property animation in FrameNode.
 | property | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md) | Yes | enumeration of property that produces the animation. |
 | startValue | double[] \| undefined | Yes | start value of animation. Undefined means that the last final value is used as the starting value of the animation, and it is recommended to set undefined if the property already has a value. |
 | endValue | double[] | Yes | end value of animation. |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | param of animation. |
+| param | AnimateParam | Yes | param of animation. |
 
 **Return value:**
 
@@ -557,7 +557,7 @@ Get the custom property of the component corresponding to this FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [CustomProperty](arkts-arkui-customproperty-t.md) | Returns the value of the custom property. |
+| CustomProperty | Returns the value of the custom property. |
 
 ## getFirstChild
 
@@ -1310,8 +1310,8 @@ Add child to the current FrameNode.If this FrameNode is not modifiable, an excep
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted." |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted." |
 
 ## invalidate
 
@@ -1523,7 +1523,7 @@ Get if the FrameNode is attached to the root node tree.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 
 ## isTransferred
 
@@ -1652,8 +1652,8 @@ Move node to the target Framenode as child.If this FrameNode is not modifiable, 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100027](../errorcode-node.md#100027-the-current-node-has-been-adopted-as-a-child-node) | The current node has been adopted. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100027-the-current-node-has-been-adopted-as-a-child-node) | The current node has been adopted. |
 
 ## onDraw
 
@@ -1773,9 +1773,9 @@ Remove the target adopted child node.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The current FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
-| [100026](../errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The current FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100025-invalid-parameter-value) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100026-the-instance-object-used-to-call-the-api-has-been-unbound-from-the-backend-entity-node) | The current FrameNode has been disposed. |
 
 ## removeChild
 
@@ -1805,7 +1805,7 @@ Remove child from the current FrameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
 
 ## removeSupportedUIStates
 
@@ -1877,7 +1877,7 @@ Set the cross-language options of the target FrameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100022](../errorcode-node.md#100022-crosslanguage-common-attribute-configuration-not-supported) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
+| [100022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100022-crosslanguage-common-attribute-configuration-not-supported) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
 
 ## setLayoutPosition
 
@@ -1953,7 +1953,7 @@ get commonEvent(): UICommonEvent
 
 Set commonEvent response to the current FrameNode.
 
-**Type:** [UICommonEvent](../arkts-components/arkts-arkui-uicommonevent-i.md)
+**Type:** UICommonEvent
 
 **Since:** 23
 
@@ -1973,7 +1973,7 @@ get gestureEvent(): UIGestureEvent
 
 Get gestureEvent of the current FrameNode.
 
-**Type:** [UIGestureEvent](../arkts-components/arkts-arkui-uigestureevent-i.md)
+**Type:** UIGestureEvent
 
 **Since:** 23
 

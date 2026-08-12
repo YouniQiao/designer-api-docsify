@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## unregisterThermalLevelCallback
@@ -26,13 +26,13 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | (Optional) Callback that returns no value. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | (Optional) Callback that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 
 ## Examples
 

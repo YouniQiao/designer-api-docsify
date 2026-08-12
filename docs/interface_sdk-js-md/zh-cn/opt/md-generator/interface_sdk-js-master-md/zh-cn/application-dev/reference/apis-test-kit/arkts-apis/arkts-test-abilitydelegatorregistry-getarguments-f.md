@@ -6,7 +6,7 @@
 function getArguments(): AbilityDelegatorArgs
 ```
 
-获取单元测试参数[AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md)对象。
+获取单元测试参数[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#AbilityDelegatorArgs)对象。
 
 **起始版本：** 9
 

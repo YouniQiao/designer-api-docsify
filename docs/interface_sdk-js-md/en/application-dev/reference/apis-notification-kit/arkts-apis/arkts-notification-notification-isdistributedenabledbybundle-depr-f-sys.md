@@ -14,7 +14,7 @@ Obtains whether an application supports distributed notifications based on the b
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isDistributedEnabledByBundle
+**Substitutes:** [isDistributedEnabledByBundle](ohos.notificationManager/notificationManager#isDistributedEnabledByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,8 +28,8 @@ Obtains whether an application supports distributed notifications based on the b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Application bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| bundle | BundleOption | Yes | Application bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isDistributedEnabledByBundle
@@ -46,7 +46,7 @@ Checks whether a specified application supports distributed notifications.This A
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isDistributedEnabledByBundle
+**Substitutes:** [isDistributedEnabledByBundle](ohos.notificationManager/notificationManager#isDistributedEnabledByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -60,7 +60,7 @@ Checks whether a specified application supports distributed notifications.This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Application bundle. |
+| bundle | BundleOption | Yes | Application bundle. |
 
 **Return value:**
 

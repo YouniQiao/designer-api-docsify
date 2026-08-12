@@ -12,7 +12,7 @@ Opens a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-unnamed-declare function opendir(path: string): Promise<Dir>--><!--Device-unnamed-declare function opendir(path: string): Promise<Dir>-End-->
 
@@ -28,7 +28,7 @@ Opens a directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Dir&gt; |
+| Promise&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; |
 
 
 ## opendir
@@ -43,7 +43,7 @@ Opens a file directory. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void--><!--Device-unnamed-declare function opendir(path: string, callback: AsyncCallback<Dir>): void-End-->
 
@@ -54,4 +54,4 @@ Opens a file directory. This API uses an asynchronous callback to return the res
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dir&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dir](arkts-corefile-fileio-dir-depr-i.md)&gt; | Yes |

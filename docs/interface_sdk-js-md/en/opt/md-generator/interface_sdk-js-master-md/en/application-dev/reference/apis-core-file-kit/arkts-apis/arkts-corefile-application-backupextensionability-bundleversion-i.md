@@ -11,7 +11,7 @@ Describe bundle version
 ## Modules to Import
 
 ```TypeScript
-import { BundleVersion } from 'kits/@kit.CoreFileKit';
+import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## code

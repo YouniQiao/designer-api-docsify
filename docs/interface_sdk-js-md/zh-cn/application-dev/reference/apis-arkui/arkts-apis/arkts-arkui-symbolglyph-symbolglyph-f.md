@@ -30,7 +30,7 @@ export declare function SymbolGlyph(
 
 | 类型 | 说明 |
 | --- | --- |
-| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
+| [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) |  |
 
 
 ## SymbolGlyph
@@ -59,11 +59,11 @@ export declare function SymbolGlyph(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolGlyphAttribute&gt; | 是 | SymbolGlyph选项实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md)&gt; | 是 | SymbolGlyph选项实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
+| [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) |  |
 

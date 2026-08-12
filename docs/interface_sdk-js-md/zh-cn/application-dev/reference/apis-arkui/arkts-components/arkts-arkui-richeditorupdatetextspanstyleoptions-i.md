@@ -2,9 +2,9 @@
 
 文本样式选项。
 
-继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)。
+继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)。
 
-**继承/实现关系：** RichEditorUpdateTextSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md)
+**继承/实现关系：** RichEditorUpdateTextSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)
 
 **起始版本：** 10
 
@@ -46,7 +46,7 @@ url信息。
 
 默认值：undefined
 
-**类型：** [RichEditorUrlStyle](../arkts-apis/arkts-arkui-richeditor-richeditorurlstyle-i.md)
+**类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **起始版本：** 19
 

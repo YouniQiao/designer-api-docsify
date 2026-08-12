@@ -1,7 +1,7 @@
 # ProgressInfo
 
 Defines the progress information. This information is reported only when  
-[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.
+[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**.
 
 **Since:** 15
 
@@ -14,7 +14,7 @@ Defines the progress information. This information is reported only when
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## progress

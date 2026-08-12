@@ -71,7 +71,7 @@ placeholder?: ComponentContent
 Placeholder to be displayed before the **SecurityUIExtensionComponent** establishes a connection with the  
 **UIExtensionAbility**.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 26.0.0
 

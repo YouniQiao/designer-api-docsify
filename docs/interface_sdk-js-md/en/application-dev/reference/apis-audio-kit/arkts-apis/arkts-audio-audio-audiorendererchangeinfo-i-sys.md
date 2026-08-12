@@ -13,7 +13,7 @@ Describes the audio renderer change event.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## clientUid
@@ -44,7 +44,7 @@ readonly rendererState: AudioState
 
 Audio state.
 
-**Type:** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-media-audiostate-t.md)
+**Type:** AudioState
 
 **Since:** 9
 

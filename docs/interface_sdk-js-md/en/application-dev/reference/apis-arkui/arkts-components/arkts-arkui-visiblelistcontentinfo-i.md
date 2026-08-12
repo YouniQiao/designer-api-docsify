@@ -40,7 +40,7 @@ itemGroupArea?: ListItemGroupArea
 
 Position of the top or bottom edge of the viewport in the list item group to which the edge is located, if applicable.
 
-**Type:** [ListItemGroupArea](../arkts-apis/arkts-arkui-list-listitemgrouparea-e.md)
+**Type:** [ListItemGroupArea](arkts-arkui-listitemgrouparea-e.md)
 
 **Since:** 12
 

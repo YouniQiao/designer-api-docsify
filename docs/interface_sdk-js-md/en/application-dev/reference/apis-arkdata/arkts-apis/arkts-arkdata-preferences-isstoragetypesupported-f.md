@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from 'kits/@kit.ArkData';
+import { preferences } from '@kit.ArkData';
 ```
 
 ## isStorageTypeSupported
@@ -40,7 +40,7 @@ Checks whether the specified storage type is supported. This API returns the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types |
 
 ## Examples
 

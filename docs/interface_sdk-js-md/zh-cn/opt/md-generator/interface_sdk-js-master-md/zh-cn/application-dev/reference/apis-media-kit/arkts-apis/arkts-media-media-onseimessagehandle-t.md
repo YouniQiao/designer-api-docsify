@@ -18,5 +18,5 @@ type OnSeiMessageHandle = (messages: Array<SeiMessage>, playbackPosition?: numbe
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| messages | Array&lt;SeiMessage&gt; | 是 |
-| playbackPosition | number | 否 |
+| messages | Array&lt;[SeiMessage](arkts-media-media-seimessage-i.md)&gt; | 是 |
+| [playbackPosition](arkts-media-media-avmetricsevent-i.md) | number | 否 |

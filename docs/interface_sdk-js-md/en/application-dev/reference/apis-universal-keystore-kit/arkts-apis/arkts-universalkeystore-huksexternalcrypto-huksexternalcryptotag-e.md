@@ -32,7 +32,7 @@ Tag of the PIN.
 HUKS_EXT_CRYPTO_TAG_ABILITY_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200002
 ```
 
-Name of [CryptoExtensionAbility](arkts-security-cryptoextensionability.md).
+Name of [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensionability-cryptoextensionability-c.md#CryptoExtensionAbility).
 
 **Since:** 22
 
@@ -81,7 +81,7 @@ HUKS_EXT_CRYPTO_TAG_PURPOSE = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE
 ```
 
 Usage type of the key corresponding to the certificate chain. For details, see  
-[CertificatePurpose](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md).
+[CertificatePurpose](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-certificatepurpose-e.md#CertificatePurpose).
 
 **Since:** 22
 

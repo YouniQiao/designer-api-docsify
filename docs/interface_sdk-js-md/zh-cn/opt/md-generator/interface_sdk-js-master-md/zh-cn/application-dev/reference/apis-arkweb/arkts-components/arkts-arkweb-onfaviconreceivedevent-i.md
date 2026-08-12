@@ -16,7 +16,7 @@ favicon: PixelMap
 
 接收到的favicon图标的PixelMap对象。
 
-**类型：** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**类型：** PixelMap
 
 **起始版本：** 12
 

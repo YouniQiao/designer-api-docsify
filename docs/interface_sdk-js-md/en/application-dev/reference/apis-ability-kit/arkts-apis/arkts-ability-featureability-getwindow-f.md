@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getWindow
@@ -28,7 +28,7 @@ Obtains the window corresponding to this ability. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;window.Window&gt; | Yes | Callback used to return the window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;window.Window&gt; | Yes | Callback used to return the window. |
 
 ## Examples
 

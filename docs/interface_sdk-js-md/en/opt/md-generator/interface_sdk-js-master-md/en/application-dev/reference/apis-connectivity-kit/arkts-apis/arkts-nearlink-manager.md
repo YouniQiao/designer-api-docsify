@@ -13,7 +13,7 @@ Provides methods to manage NearLink devices.
 ## Modules to Import
 
 ```TypeScript
-import { manager } from 'kits/@kit.ConnectivityKit';
+import { manager } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

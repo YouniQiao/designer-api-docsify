@@ -18,7 +18,7 @@ previewText?: StyledString
 
 Preview StyledString.
 
-**Type:** [StyledString](arkts-arkui-styledstring-c.md)
+**Type:** [StyledString](arkts-arkui-styledstring-styledstring-c.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ range: TextRange
 
 Range of the content to be replaced.
 
-**Type:** [TextRange](arkts-arkui-textrange-i.md)
+**Type:** [TextRange](arkts-arkui-textcommon-textrange-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ replacementString: StyledString
 
 StyledString to replace.
 
-**Type:** [StyledString](arkts-arkui-styledstring-c.md)
+**Type:** [StyledString](arkts-arkui-styledstring-styledstring-c.md)
 
 **Since:** 23
 

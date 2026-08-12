@@ -18,7 +18,7 @@
 displayId?: long
 ```
 
-表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md)的ID号，该参数应为整数。
+表示截取图像的显示设备[Display](arkts-arkui-display-displaystate-e.md#DisplayState)的ID号，该参数应为整数。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -40,7 +40,7 @@ imageSize?: Size
 
 表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
 
-**类型：** [Size](arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 7
 
@@ -121,7 +121,7 @@ screenRect?: Rect
 
 表示截取图像的区域，不传值默认返回displayId所在逻辑屏的区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 7
 

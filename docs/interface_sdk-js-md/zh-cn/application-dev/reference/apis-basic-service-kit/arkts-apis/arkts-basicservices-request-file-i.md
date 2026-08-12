@@ -1,6 +1,6 @@
 # File
 
-[UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的文件列表。
+[UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)中的文件列表。
 
 **起始版本：** 6
 

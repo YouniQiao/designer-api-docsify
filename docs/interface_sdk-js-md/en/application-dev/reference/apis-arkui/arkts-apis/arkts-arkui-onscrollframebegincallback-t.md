@@ -27,5 +27,5 @@ Represents the callback triggered before each frame scrolling starts.
 
 | Type | Description |
 | --- | --- |
-| [OnScrollFrameBeginHandlerResult](../arkts-components/arkts-arkui-onscrollframebeginhandlerresult-i.md) | data - the scroll data return by handler |
+| [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-onscrollframebeginhandlerresult-i.md) | data - the scroll data return by handler |
 

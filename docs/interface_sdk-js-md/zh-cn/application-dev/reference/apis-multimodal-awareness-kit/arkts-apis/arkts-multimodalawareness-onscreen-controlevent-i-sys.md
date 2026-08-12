@@ -20,7 +20,7 @@ eventType: EventType
 
 控制事件类型。
 
-**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
+**类型：** EventType
 
 **起始版本：** 20
 
@@ -38,7 +38,7 @@ eventType: EventType
 hookId?: long
 ```
 
-控制事件对应的hook ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)提供。
+控制事件对应的hook ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent)提供。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -58,7 +58,7 @@ hookId?: long
 sessionId: long
 ```
 
-控制事件要操作的session ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md)提供。
+控制事件要操作的session ID。控制事件要操作的hook ID和该次会话对应的session ID都由某次会话获取的[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent)提供。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

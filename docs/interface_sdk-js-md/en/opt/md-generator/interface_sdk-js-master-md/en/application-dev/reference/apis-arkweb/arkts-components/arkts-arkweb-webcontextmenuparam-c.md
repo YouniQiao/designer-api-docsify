@@ -1,6 +1,6 @@
 # WebContextMenuParam
 
-Defines the context menu param, related to {@link WebContextMenuParam} method.
+Defines the context menu param, related to [WebContextMenuParam](#WebContextMenuParam) method.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Returns the type of context node.
 getEditStateFlags(): number
 ```
 
-Returns the context editable flags {@link ContextMenuEditStateFlags}.
+Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md#ContextMenuEditStateFlags).
 
 **Since:** 9
 

@@ -11,7 +11,7 @@ Provides usage information of the Web SQL Database.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## origin

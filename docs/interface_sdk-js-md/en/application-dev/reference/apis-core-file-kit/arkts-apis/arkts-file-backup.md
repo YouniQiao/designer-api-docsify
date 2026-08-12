@@ -15,7 +15,7 @@ Module providing backup and restore capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## Summary

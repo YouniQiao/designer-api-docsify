@@ -1,6 +1,6 @@
 # DigitIndicator
 
-构造数字指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
+构造数字指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md#Indicator)。
 
 > **说明：**
 

@@ -13,7 +13,7 @@ Provides internationalization related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## Summary

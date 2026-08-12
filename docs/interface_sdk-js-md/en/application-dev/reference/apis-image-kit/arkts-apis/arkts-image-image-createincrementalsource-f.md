@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createIncrementalSource
@@ -32,7 +32,7 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createIncrementalSource
@@ -63,5 +63,5 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

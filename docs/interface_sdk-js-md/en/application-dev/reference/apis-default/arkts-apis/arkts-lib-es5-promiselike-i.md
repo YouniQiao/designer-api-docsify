@@ -25,5 +25,5 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| [PromiseLike](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md)&lt;TResult1 \| TResult2&gt; |  |
+| [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;TResult1 \| TResult2&gt; |  |
 

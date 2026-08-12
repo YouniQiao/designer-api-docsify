@@ -3,7 +3,7 @@
 Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.
 
 Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using  
-[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance).
+[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance).
 
 > **NOTE：**
 
@@ -19,7 +19,7 @@ Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInsta
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -48,9 +48,9 @@ Cancels this authentication. This API is commonly used in the following scenario
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -105,7 +105,7 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 > **NOTE：**
 
-> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 10
@@ -127,8 +127,8 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -184,7 +184,7 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 > **NOTE：**
 
-> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 20
@@ -206,7 +206,7 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 | Error Code ID |
 | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -262,7 +262,7 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 > **NOTE：**
 
 > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
-> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam) is
 > configured) and receives the authentication result, and if other windows need to be displayed, the application
 > needs to obtain the flag message released by the component pop-up window and subscribe to the component release
 > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
@@ -287,8 +287,8 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## on('authTip')
 
@@ -301,7 +301,7 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 > **NOTE：**
 
 > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
-> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam) is
 > configured) and receives the authentication result, and if other windows need to be displayed, the application
 > needs to obtain the flag message released by the component pop-up window and subscribe to the component release
 > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
@@ -326,7 +326,7 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 
 | Error Code ID |
 | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -402,19 +402,19 @@ Starts authentication. This API is commonly used in the following service scenar
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500013](../errorcode-useriam.md#12500013-password-expired) |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) |
-| [12500009](../errorcode-useriam.md#12500009-authentication-locked) |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) |
-| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) |
-| [12500001](../errorcode-useriam.md#12500001-authentication-failed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12500013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500013-password-expired) |
+| [12500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [12500011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500011-switched-to-custom-authentication) |
+| [12500009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-authentication-locked) |
+| [12500006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| [12500007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-authentication-service-is-busy) |
+| [12500004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-authentication-timed-out) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-authentication-canceled) |
+| [12500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-authentication-failed) |
 
 ## Examples
 

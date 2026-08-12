@@ -1,6 +1,6 @@
 # ViewportFit
 
-Defines the viewport-fit type, related to {@link ViewportFit}.
+Defines the viewport-fit type, related to [ViewportFit](#ViewportFit).
 
 **起始版本：** 23
 

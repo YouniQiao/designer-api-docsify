@@ -20,6 +20,6 @@ Declare the event listener callback of the enter key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enterKeyType | [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md) | 是 | The enter key type of soft keyboard. If the type is EnterKeyType.NEW_LINE, onSubmit is not triggered. |
-| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | 否 | Provides the method of keeping textArea editable state when submitted. |
+| enterKeyType | [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md) | 是 | The enter key type of soft keyboard. If the type is EnterKeyType.NEW_LINE, onSubmit is not triggered. |
+| event | [SubmitEvent](arkts-arkui-textinput-submitevent-i.md) | 否 | Provides the method of keeping textArea editable state when submitted. |
 

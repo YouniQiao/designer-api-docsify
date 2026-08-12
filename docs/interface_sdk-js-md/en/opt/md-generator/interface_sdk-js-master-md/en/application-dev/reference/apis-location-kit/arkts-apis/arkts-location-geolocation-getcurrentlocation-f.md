@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getCurrentLocation
@@ -18,7 +18,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -63,7 +63,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -106,7 +106,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -124,7 +124,7 @@ Obtain current location
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Location&gt; |
+| Promise & lt;Location & gt; |
 
 ## Examples
 

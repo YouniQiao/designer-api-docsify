@@ -13,7 +13,7 @@ Defines a struct for the details about the device-cloud sync process.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## deleted
@@ -78,7 +78,7 @@ type: ChangeType
 
 Type of the data changed, which can be data or asset.
 
-**Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
+**Type:** ChangeType
 
 **Since:** 10
 

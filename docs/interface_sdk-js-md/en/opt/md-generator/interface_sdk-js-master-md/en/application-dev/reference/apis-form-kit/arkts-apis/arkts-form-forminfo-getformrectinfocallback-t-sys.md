@@ -24,4 +24,4 @@ Get form rect info callback
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;formInfo.Rect&gt; |
+| Promise&lt;[formInfo.Rect](arkts-form-forminfo-rect-i.md)&gt; |

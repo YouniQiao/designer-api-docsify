@@ -15,7 +15,7 @@ Provides callbacks for IDM.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo
@@ -95,7 +95,7 @@ Called to return the result code and request result information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
-| extraInfo | [RequestResult](arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes |  |
+| extraInfo | RequestResult | Yes |  |
 
 ## Examples
 

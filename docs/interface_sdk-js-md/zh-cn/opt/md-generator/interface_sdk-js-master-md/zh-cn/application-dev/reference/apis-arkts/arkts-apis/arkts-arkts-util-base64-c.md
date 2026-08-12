@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper](arkts-arkts-util-base64helper-c.md)
+**替代接口：** [Base64Helper](arkts-arkts-util-base64helper-c.md#Base64Helper)
 
 <!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 
@@ -24,7 +24,7 @@ constructor()
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.constructor](arkts-arkts-util-base64helper-c.md#constructor)
+**替代接口：** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
 
 <!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
@@ -42,7 +42,7 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.decode](arkts-arkts-util-base64helper-c.md#decode)
+**替代接口：** [decode](arkts-arkts-util-base64helper-c.md#decode)
 
 <!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
 
@@ -58,7 +58,7 @@ decode(src: Uint8Array | string): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## decodeSync
 
@@ -72,7 +72,7 @@ decodeSync(src: Uint8Array | string): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.decodeSync](arkts-arkts-util-base64helper-c.md#decodesync)
+**替代接口：** [decodeSync](arkts-arkts-util-base64helper-c.md#decodeSync)
 
 <!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
 
@@ -102,7 +102,7 @@ encode(src: Uint8Array): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.encode](arkts-arkts-util-base64helper-c.md#encode)
+**替代接口：** [encode](arkts-arkts-util-base64helper-c.md#encode)
 
 <!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
 
@@ -118,7 +118,7 @@ encode(src: Uint8Array): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## encodeSync
 
@@ -132,7 +132,7 @@ encodeSync(src: Uint8Array): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.encodeSync](arkts-arkts-util-base64helper-c.md#encodesync)
+**替代接口：** [encodeSync](arkts-arkts-util-base64helper-c.md#encodeSync)
 
 <!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
 
@@ -162,7 +162,7 @@ encodeToString(src: Uint8Array): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.encodeToString](arkts-arkts-util-base64helper-c.md#encodetostring)
+**替代接口：** [encodeToString](arkts-arkts-util-base64helper-c.md#encodeToString)
 
 <!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
 
@@ -178,7 +178,7 @@ encodeToString(src: Uint8Array): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## encodeToStringSync
 
@@ -192,7 +192,7 @@ encodeToStringSync(src: Uint8Array): string
 
 **废弃版本：** 9
 
-**替代接口：** [util.Base64Helper.encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodetostringsync)
+**替代接口：** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodeToStringSync)
 
 <!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
 

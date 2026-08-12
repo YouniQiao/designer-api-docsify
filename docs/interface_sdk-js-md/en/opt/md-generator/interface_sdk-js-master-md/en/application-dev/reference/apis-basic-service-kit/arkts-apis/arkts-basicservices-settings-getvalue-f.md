@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## getValue
@@ -18,7 +18,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#getValue
+**Substitutes:** [getValue](ohos.settings#getValue)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -63,7 +63,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#getValue
+**Substitutes:** [getValue](ohos.settings#getValue)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -82,7 +82,7 @@ Obtains the value of a specified character string in the database.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;object&gt; |
+| Promise & lt;object & gt; |
 
 ## Examples
 
@@ -166,7 +166,7 @@ Get value from settingsdata
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -211,7 +211,7 @@ Get value from settingsdata
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 

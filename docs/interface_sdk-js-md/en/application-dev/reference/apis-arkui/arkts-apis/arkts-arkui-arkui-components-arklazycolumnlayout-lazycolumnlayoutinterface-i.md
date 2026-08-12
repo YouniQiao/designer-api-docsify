@@ -13,7 +13,7 @@ Defines the lazy column layout component.
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
 ## [[Call]]

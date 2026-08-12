@@ -6,7 +6,7 @@ Provides a stream for file operations. Before calling any API of the **Stream** 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream](arkts-corefile-fileio-stream-depr-i.md)
+**Substitutes:** [Stream](arkts-corefile-file-fs-stream-i.md#Stream)
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -24,7 +24,7 @@ Closes the file stream. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.close](arkts-corefile-fileio-stream-depr-i.md#close)
+**Substitutes:** [close](arkts-corefile-file-fs-stream-i.md#close)
 
 <!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
 
@@ -34,7 +34,7 @@ Closes the file stream. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -61,7 +61,7 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.close](arkts-corefile-fileio-stream-depr-i.md#close)
+**Substitutes:** [close](arkts-corefile-file-fs-stream-i.md#close)
 
 <!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
 
@@ -96,7 +96,7 @@ Closes the file stream. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.closeSync](arkts-corefile-fileio-stream-depr-i.md#closesync)
+**Substitutes:** [closeSync](arkts-corefile-file-fs-stream-i.md#closeSync)
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
 
@@ -122,7 +122,7 @@ Flushes the file stream. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.flush](arkts-corefile-fileio-stream-depr-i.md#flush)
+**Substitutes:** [flush](arkts-corefile-file-fs-stream-i.md#flush)
 
 <!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
 
@@ -132,7 +132,7 @@ Flushes the file stream. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -159,7 +159,7 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.flush](arkts-corefile-fileio-stream-depr-i.md#flush)
+**Substitutes:** [flush](arkts-corefile-file-fs-stream-i.md#flush)
 
 <!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -194,7 +194,7 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.flushSync](arkts-corefile-fileio-stream-depr-i.md#flushsync)
+**Substitutes:** [flushSync](arkts-corefile-file-fs-stream-i.md#flushSync)
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
@@ -227,7 +227,7 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.read](arkts-corefile-fileio-stream-depr-i.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): Promise<ReadOut>--><!--Device-Stream-read(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): Promise<ReadOut>-End-->
 
@@ -244,7 +244,7 @@ Reads data from a stream file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ReadOut&gt; |
+| Promise&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; |
 
 ## Examples
 
@@ -284,7 +284,7 @@ read.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.read](arkts-corefile-fileio-stream-depr-i.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -295,7 +295,7 @@ read.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | buffer | ArrayBuffer | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes |
 
 ## read
 
@@ -317,7 +317,7 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.read](arkts-corefile-fileio-stream-depr-i.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void--><!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void-End-->
 
@@ -329,7 +329,7 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 | --- | --- | --- |
 | buffer | ArrayBuffer | Yes |
 | options | {       position?: number;       offset?: number;       length?: number;     } | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -376,7 +376,7 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.readSync](arkts-corefile-fileio-stream-depr-i.md#readsync)
+**Substitutes:** [readSync](arkts-corefile-file-fs-stream-i.md#readSync)
 
 <!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number--><!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number-End-->
 
@@ -433,7 +433,7 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.write](arkts-corefile-fileio-stream-depr-i.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): Promise<number>--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): Promise<number>-End-->
 
@@ -450,7 +450,7 @@ Writes data to a stream file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 
@@ -487,7 +487,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.write](arkts-corefile-fileio-stream-depr-i.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
@@ -521,7 +521,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.write](arkts-corefile-fileio-stream-depr-i.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void-End-->
 
@@ -579,7 +579,7 @@ Writes data to a stream file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stream.writeSync](arkts-corefile-fileio-stream-depr-i.md#writesync)
+**Substitutes:** [writeSync](arkts-corefile-file-fs-stream-i.md#writeSync)
 
 <!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number--><!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number-End-->
 

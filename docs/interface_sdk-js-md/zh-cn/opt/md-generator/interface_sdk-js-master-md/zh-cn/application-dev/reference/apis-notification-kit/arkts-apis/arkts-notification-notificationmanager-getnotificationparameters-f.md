@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationParameters
@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function getNotificationParameters(id: number, label?: string): Promise<NotificationParameters>
 ```
 
-获取通知[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md)中wantAgent字段的部分信息。使用Promise异步回调。
+获取通知[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)中wantAgent字段的部分信息。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -33,16 +33,16 @@ function getNotificationParameters(id: number, label?: string): Promise<Notifica
 
 | 类型 |
 | --- |
-| Promise&lt;NotificationParameters&gt; |
+| Promise & lt;NotificationParameters & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) |
 
 ## 示例
 

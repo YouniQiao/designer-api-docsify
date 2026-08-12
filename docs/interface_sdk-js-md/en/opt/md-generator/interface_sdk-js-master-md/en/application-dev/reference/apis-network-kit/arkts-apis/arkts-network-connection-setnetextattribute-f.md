@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## setNetExtAttribute
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>
 ```
 
-Set the network extended attribute for a {@link NetHandle} object.To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
+Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object.To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
 
 **Since:** 20
 
@@ -33,16 +33,16 @@ Set the network extended attribute for a {@link NetHandle} object.To invoke this
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

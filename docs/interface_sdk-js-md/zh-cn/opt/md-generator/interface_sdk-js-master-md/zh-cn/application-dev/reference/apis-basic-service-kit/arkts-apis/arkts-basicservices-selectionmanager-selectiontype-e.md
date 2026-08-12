@@ -4,9 +4,9 @@
 
 | 名称 | 值 | 说明 |
 | ------------ | -- | ------------------ |
-| [MOUSE_MOVE](#mouse_move) | 1 | 鼠标或触控板滑动划词。 |
+| [MOUSE_MOVE](arkts-basicservices-selectionmanager-selectiontype-e.md) | 1 | 鼠标或触控板滑动划词。 |
 | [DOUBLE_CLICK](#double_click) | 2 | 鼠标或触控板双击划词。 |
-| [TRIPLE_CLICK](#triple_click) | 3 |
+| [TRIPLE_CLICK](arkts-basicservices-selectionmanager-selectiontype-e.md) | 3 |
 
 **起始版本：** 24
 

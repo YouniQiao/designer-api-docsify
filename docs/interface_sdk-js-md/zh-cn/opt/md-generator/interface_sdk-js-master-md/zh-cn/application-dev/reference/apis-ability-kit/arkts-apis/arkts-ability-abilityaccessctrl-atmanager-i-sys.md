@@ -1,6 +1,6 @@
 # AtManager
 
-程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager)获取实例。
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager)获取实例。
 
 **起始版本：** 8
 
@@ -37,25 +37,25 @@ generateCliAuthResult(
 | --- | --- | --- |
 | hostTokenID | number | 是 |
 | agentID | string | 是 |
-| authInfoList | Array&lt;CliAuthInfo&gt; | 是 |
+| authInfoList | Array&lt;[CliAuthInfo](arkts-ability-abilityaccessctrl-cliauthinfo-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ToolAuthResult&gt; |
+| Promise&lt;[ToolAuthResult](arkts-ability-abilityaccessctrl-toolauthresult-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -106,23 +106,23 @@ getCliPermissionRequestInfo(agentID: string, cliInfoList: Array<CliInfo>): Promi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | agentID | string | 是 |
-| cliInfoList | Array&lt;CliInfo&gt; | 是 |
+| cliInfoList | Array&lt;[CliInfo](arkts-ability-abilityaccessctrl-cliinfo-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PermissionDialogResult&gt; |
+| Promise&lt;[PermissionDialogResult](arkts-ability-abilityaccessctrl-permissiondialogresult-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -172,24 +172,24 @@ getCliPermissions(
 | --- | --- | --- |
 | hostTokenID | number | 是 |
 | agentID | string | 是 |
-| cliInfoList | Array&lt;CliInfo&gt; | 是 |
+| cliInfoList | Array&lt;[CliInfo](arkts-ability-abilityaccessctrl-cliinfo-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;CliPermissionsResult&gt; |
+| Promise&lt;[CliPermissionsResult](arkts-ability-abilityaccessctrl-clipermissionsresult-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -240,20 +240,20 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -298,19 +298,19 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 | 类型 |
 | --- |
-| Promise&lt;PermissionRequestToggleStatus&gt; |
+| Promise&lt;[PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -359,25 +359,25 @@ getPermissionRequestToggleStatus(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | permissionName | Permissions | 是 |
-| subProfileId | number | 是 |
+| [subProfileId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PermissionRequestToggleStatus&gt; |
+| Promise&lt;[PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -418,24 +418,24 @@ getPermissionsStatus(tokenID: number, permissionList: Array<Permissions>): Promi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | tokenID | number | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;PermissionStatus&gt;&gt; |
+| Promise&lt;Array&lt;[PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -472,13 +472,13 @@ getVersion(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -502,7 +502,7 @@ grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: n
 ```
 
 授予应用权限。调用成功后，指定应用获得该权限，可以访问相应的受保护资源。与  
-[grantUserGrantedPermission](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#grantusergrantedpermission)仅支持user_grant类型权限不同,该接口同时支持user_grant和manual_settings类型的权限授予。使用Promise异步回调。
+[grantUserGrantedPermission](#grantUserGrantedPermission)仅支持user_grant类型权限不同,该接口同时支持user_grant和manual_settings类型的权限授予。使用Promise异步回调。
 
 **起始版本：** 21
 
@@ -526,20 +526,20 @@ grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: n
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-非预期的权限) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -566,7 +566,7 @@ grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permiss
 授予应用user_grant权限。调用成功后，应用获得该user_grant权限，可以访问相应的受保护资源。使用Promise异步回调。
 
 本接口仅支持授予user_grant类型的权限。若需要授予user_grant或manual_settings类型权限，建议使用  
-[grantPermission](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#grantpermission)。
+[grantPermission](#grantPermission)。
 
 **起始版本：** 8
 
@@ -590,20 +590,20 @@ grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permiss
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -657,14 +657,14 @@ grantUserGrantedPermission(
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -717,19 +717,19 @@ off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'permissionStateChange' | 是 |
-| tokenIDList | Array&lt;number&gt; | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 否 |
+| tokenIDList | Array & lt;number & gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -783,21 +783,21 @@ on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'permissionStateChange' | 是 |
-| tokenIDList | Array&lt;number&gt; | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 是 |
+| tokenIDList | Array & lt;number & gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100005-监听器数量超过限制) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -846,24 +846,24 @@ queryStatusByPermission(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| permissionList | Array&lt;Permissions&gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;PermissionStatusInfo&gt;&gt; |
+| Promise&lt;Array&lt;[PermissionStatusInfo](arkts-ability-abilityaccessctrl-permissionstatusinfo-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100015](../errorcode-access-token.md#12100015-查询的数据超过上限) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100015-查询的数据超过上限) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -904,24 +904,24 @@ queryStatusByTokenID(tokenIDList: Array<number>): Promise<Array<PermissionStatus
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tokenIDList | Array&lt;number&gt; | 是 |
+| tokenIDList | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;PermissionStatusInfo&gt;&gt; |
+| Promise&lt;Array&lt;[PermissionStatusInfo](arkts-ability-abilityaccessctrl-permissionstatusinfo-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100015](../errorcode-access-token.md#12100015-查询的数据超过上限) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100015-查询的数据超过上限) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -967,16 +967,16 @@ requestPermissionOnApplicationSetting(tokenID: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1007,7 +1007,7 @@ requestPermissionsFromUserWithWindowId(
 适用于系统应用需要将权限申请弹窗明确附着到指定窗口的场景。
 
 如果用户拒绝授权，将无法再次拉起弹窗，可通过以下方式重新获取权限：1. 在系统设置界面中手动授权；2. 调用  
-[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)，拉起权限设置弹窗引导用户授权。
+[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionOnSetting)，拉起权限设置弹窗引导用户授权。
 
 **起始版本：** 23
 
@@ -1023,22 +1023,22 @@ requestPermissionsFromUserWithWindowId(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| context | [Context](arkts-ability-context-t.md) | 是 |
 | windowId | number | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PermissionRequestResult&gt; |
+| Promise&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -1102,20 +1102,20 @@ revokePermission(
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-非预期的权限) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1149,7 +1149,7 @@ revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permis
 撤销应用user_grant权限。调用成功后，应用失去该user_grant权限，无法访问相应的受保护资源。使用Promise异步回调。
 
 本接口仅支持撤销user_grant类型的权限，且不支持控制是否终止应用进程。若需要撤销user_grant或manual_settings类型权限，或需要控制撤销权限后是否终止应用进程，建议使用  
-[revokePermission](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#revokepermission)。
+[revokePermission](#revokePermission)。
 
 当权限状态从“已授权”变为“未授权”时，应用进程会被终止。
 
@@ -1175,20 +1175,20 @@ revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permis
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1242,14 +1242,14 @@ revokeUserGrantedPermission(
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1298,20 +1298,20 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1358,26 +1358,26 @@ setPermissionRequestToggleStatus(
 | --- | --- | --- |
 | permissionName | Permissions | 是 |
 | status | [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | 是 |
-| subProfileId | number | 是 |
+| [subProfileId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofileeventdata-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 

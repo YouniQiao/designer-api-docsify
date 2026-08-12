@@ -13,7 +13,7 @@ Defines static functions of App class
 ## Modules to Import
 
 ```TypeScript
-import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from 'kits/@kit.ArkUI';
+import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
 ```
 
 ## getInfo
@@ -25,7 +25,7 @@ static getInfo(): AppResponse
 Obtains the declared information in the **config.json** file of an application. In the stage model, this API returns **null**.
 
 This API is deprecated since API version 9. You are advised to use  
-[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)instead.
+[bundleManager.getBundleInfoForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)instead.
 
 **Since:** 3
 
@@ -172,7 +172,7 @@ Requests the application to run in full window.In some scenarios, such as semi-m
 
 **Deprecated since:** 8
 
-**Substitutes:** startAbility
+**Substitutes:** [startAbility](startAbility)
 
 <!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void--><!--Device-App-static requestFullWindow(options?: RequestFullWindowOptions): void-End-->
 
@@ -380,7 +380,7 @@ static terminate(): void
 Terminates the current ability. In the stage model, this API has no effect.
 
 This API is deprecated since API version 7. You are advised to use  
-[@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md/arkts-ability-featureability.md) instead.
+[@ohos.ability.featureAbility](../../apis-ability-kit/arkts-apis/arkts-ability-featureability.md#featureAbility) instead.
 
 **Since:** 3
 

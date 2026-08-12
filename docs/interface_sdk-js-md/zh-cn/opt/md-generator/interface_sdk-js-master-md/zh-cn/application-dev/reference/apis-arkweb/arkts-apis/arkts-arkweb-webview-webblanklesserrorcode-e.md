@@ -71,8 +71,8 @@ ERR_KEY_NOT_MATCH = -4
 ```
 
 未匹配到key值，对于  
-[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey)需与  
-[getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey)配套使用并且key值一致，否则返回该错误码。
+[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey)需与  
+[getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)配套使用并且key值一致，否则返回该错误码。
 
 **起始版本：** 20
 
@@ -87,7 +87,7 @@ ERR_SIGNIFICANT_CHANGE = -5
 ```
 
 当相似度较低时，系统会判定为跳变太大，  
-[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey)接口不会成功启用插帧。
+[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey)接口不会成功启用插帧。
 
 **起始版本：** 20
 
@@ -101,7 +101,7 @@ ERR_SIGNIFICANT_CHANGE = -5
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)设置的历史帧失效时间超出范围。
+在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam)设置的历史帧失效时间超出范围。
 
 此接口仅可在Stage模型下使用。
 
@@ -119,7 +119,7 @@ ERR_DURATION_OUT_OF_RANGE = -6
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md)设置的历史帧失效时间超出范围。
+在[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam)设置的历史帧失效时间超出范围。
 
 此接口仅可在Stage模型下使用。
 

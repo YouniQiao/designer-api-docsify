@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setWatermarkImageForAppWindows
@@ -13,7 +13,7 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 ```
 
 Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)takes effect.
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent)takes effect.
 
 **Since:** 21
 
@@ -39,9 +39,9 @@ Sets a watermark image for windows in the current application process. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 ## Examples
 

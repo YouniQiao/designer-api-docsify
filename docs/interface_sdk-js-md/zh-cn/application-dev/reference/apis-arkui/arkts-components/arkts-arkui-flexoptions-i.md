@@ -31,7 +31,7 @@ alignContent?: FlexAlign
 - SpaceAround：每行两侧间距相等。  
 - SpaceEvenly：行与行之间及两端间距完全相等。
 
-**类型：** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
+**类型：** FlexAlign
 
 **起始版本：** 7
 
@@ -66,7 +66,7 @@ alignItems?: ItemAlign
 - Stretch：拉伸填充。  
 - Baseline：基线对齐。
 
-**类型：** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
+**类型：** ItemAlign
 
 **起始版本：** 7
 
@@ -101,7 +101,7 @@ direction?: FlexDirection
 
 Row和RowReverse的起点位置受容器的direction属性影响。
 
-**类型：** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
+**类型：** FlexDirection
 
 **起始版本：** 7
 
@@ -138,7 +138,7 @@ justifyContent?: FlexAlign
 
 **说明：** 当justifyContent设置为SpaceBetween、SpaceAround、SpaceEvenly时，space参数不生效。
 
-**类型：** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
+**类型：** FlexAlign
 
 **起始版本：** 7
 
@@ -166,7 +166,7 @@ space?: FlexSpaceOptions
 
 当space.main或space.cross的值为负数，或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、FlexAlign.SpaceEvenly时，space参数不生效。其中main属性在单行或多行布局时均生效，cross属性仅在wrap为Wrap或WrapReverse（多行布局）时生效。
 
-**类型：** [FlexSpaceOptions](../arkts-apis/arkts-arkui-flex-flexspaceoptions-i.md)
+**类型：** [FlexSpaceOptions](arkts-arkui-flexspaceoptions-i.md)
 
 **起始版本：** 12
 
@@ -202,7 +202,7 @@ Flex容器是单行/列还是多行/列排列。设置后，子组件将在容�
 
 在多行布局时，通过交叉轴方向，确认新行堆叠方向。
 
-**类型：** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
+**类型：** FlexWrap
 
 **起始版本：** 7
 

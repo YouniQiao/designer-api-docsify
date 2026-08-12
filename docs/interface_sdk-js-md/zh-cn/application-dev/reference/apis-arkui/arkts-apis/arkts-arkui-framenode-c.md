@@ -16,7 +16,7 @@
 addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent): void
 ```
 
-支持添加ComponentContent类型的组件内容。要求当前节点是一个可修改的节点，即[isModifiable](arkts-arkui-framenode-c.md#ismodifiable)的返回值为true，否则抛出异常信息。
+支持添加ComponentContent类型的组件内容。要求当前节点是一个可修改的节点，即[isModifiable](#isModifiable)的返回值为true，否则抛出异常信息。
 
 **起始版本：** 23
 
@@ -32,13 +32,13 @@ addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| ReactiveComponentContent | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 23 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-arkui-componentcontent-reactivecomponentcontent-c.md) | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 23 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 ## addSupportedUIStates
 
@@ -94,9 +94,9 @@ adoptChild(child: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The current FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
-| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The current FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be disposed." |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
 
 ## appendChild
 
@@ -128,8 +128,8 @@ appendChild(node: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'node' is invalid: it cannot be adopted." |
 
 ## cancelAnimations
 
@@ -183,7 +183,7 @@ clearChildren(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 ## constructor
 
@@ -245,8 +245,8 @@ convertPosition(position: NodePosition, targetNode: FrameNode): NodePosition
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
-| [100024](../errorcode-node.md#100024-节点没有公共祖先节点) | The current FrameNode and the target FrameNode do not have a common ancestor node. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'targetNode' is invalid: it cannot be disposed." |
+| [100024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100024-节点没有公共祖先节点) | The current FrameNode and the target FrameNode do not have a common ancestor node. |
 
 ## convertPositionFromWindow
 
@@ -280,8 +280,8 @@ convertPositionFromWindow(positionByWindow: NodePosition): NodePosition
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
-| [100028](../errorcode-node.md#100028-当前节点不在主节点树上) | The current FrameNode is not on the main tree. |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
+| [100028](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100028-当前节点不在主节点树上) | The current FrameNode is not on the main tree. |
 
 ## convertPositionToWindow
 
@@ -315,8 +315,8 @@ convertPositionToWindow(positionByLocal: NodePosition): NodePosition
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
-| [100028](../errorcode-node.md#100028-当前节点不在主节点树上) | The current FrameNode is not on the main tree. |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
+| [100028](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100028-当前节点不在主节点树上) | The current FrameNode is not on the main tree. |
 
 ## createAnimation
 
@@ -343,7 +343,7 @@ createAnimation(property: AnimationPropertyType, startValue: double[] | undefine
 | property | [AnimationPropertyType](arkts-arkui-enums-animationpropertytype-e.md) | 是 | 动画属性枚举。 |
 | startValue | double[] \| undefined | 是 | 动画属性的起始值。取值为undefined或数组，取值为数组时数组长度需要和属性枚举匹配。如果为undefined则表示不显式指定动画初值， 节点上一次设置的属性终值为此次动画的起点值。如果取值为数组，&lt;br/&gt;- 对于AnimationPropertyType.ROTATION，取值格式为[rotationX, rotationY, rotationZ]，单位 为度（°），表示绕x、y、z轴的旋转角。&lt;br/&gt;- 对于AnimationPropertyType.TRANSLATION，取值格式为[translateX, translateY]，单位为px，表示沿x、y轴的平移量。 &lt;br/&gt;- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩放比例。&lt;br/&gt;- 对于AnimationPropertyType.OPACITY， 取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。&lt;br/&gt;当节点上从未设置过该属性时，需要显式指定startValue才能正常创建动画。当节点上已经设置过属性（如第二次及之后创建动画）， 则推荐不显式指定startValue或者显式指定startValue为上一次的终值，表示使用上一次的终值作为新的动画起点，避免起始值跳变。 |
 | endValue | double[] | 是 | 动画属性的终止值。取值为数组，数组长度需要和属性枚举匹配。&lt;br/&gt;- 对于AnimationPropertyType.ROTATION，取值格式为 [rotationX, rotationY, rotationZ]，单位为度（°），表示绕x、y、z轴的旋转角。&lt;br/&gt;- 对于AnimationPropertyType.TRANSLATION，取值格式为 [translateX, translateY]，单位为px，表示沿x、y轴的平移量。&lt;br/&gt;- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩 放比例。&lt;br/&gt;- 对于AnimationPropertyType.OPACITY，取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。 |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 动画参数。包含时长、动画曲线、结束回调等参数。 |
+| param | AnimateParam | 是 | 动画参数。包含时长、动画曲线、结束回调等参数。 |
 
 **返回值：**
 
@@ -392,10 +392,10 @@ dispose(): void
 
 > **说明：**
 > 
-> - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](arkts-arkui-framenode-c.md#getmeasuredsize)、
-> [getLayoutPosition](arkts-arkui-framenode-c.md#getlayoutposition))的时候会导致应用出现jscrash。
+> - FrameNode对象调用dispose后，由于不对应任何实体FrameNode节点，在调用部分查询接口([getMeasuredSize](#getMeasuredSize)、
+> [getLayoutPosition](#getLayoutPosition))的时候会导致应用出现jscrash。
 > 
-> - 通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)可以判断当前FrameNode是否对应一个实体FrameNode节点。当UniqueId大于0时表示该对象对应一个实体
+> - 通过[getUniqueId](#getUniqueId)可以判断当前FrameNode是否对应一个实体FrameNode节点。当UniqueId大于0时表示该对象对应一个实体
 > FrameNode节点。
 
 **起始版本：** 23
@@ -563,7 +563,7 @@ getCustomProperty(name: string): CustomProperty
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomProperty](arkts-arkui-customproperty-t.md) | 自定义属性的值。 |
+| CustomProperty | 自定义属性的值。 |
 
 ## getFirstChild
 
@@ -637,7 +637,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | 查询的子节点id，为通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。 |
+| id | string | 是 | 查询的子节点id，为通用属性设置的[组件标识](common)。 |
 
 **返回值：**
 
@@ -651,7 +651,7 @@ getFrameNodeById(id: string): FrameNode | null
 getFrameNodeByUniqueId(id: int): FrameNode | null
 ```
 
-以当前节点为根节点，查找并返回指定UniqueID（系统分配的节点唯一标识，该标识可通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)接口获取）的子节点。
+以当前节点为根节点，查找并返回指定UniqueID（系统分配的节点唯一标识，该标识可通过[getUniqueId](#getUniqueId)接口获取）的子节点。
 
 1.如果唯一标识对应的是内置组件，则返回关联的FrameNode。2.如果该onlyId对应自定义组件：如果该组件已经渲染了内容，则其根节点为返回，类型为__Common__；如果组件没有渲染的内容，则返回其第一个子项的FrameNode组件返回。3.如果不对应任何组件，则返回null。
 
@@ -707,7 +707,7 @@ getGlobalPositionOnDisplay(): NodePosition
 getId(): string
 ```
 
-获取用户设置的节点ID（通用属性设置的[组件标识](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)）。
+获取用户设置的节点ID（通用属性设置的[组件标识](common)）。
 
 **起始版本：** 23
 
@@ -911,7 +911,7 @@ getNodePropertyValue(property: AnimationPropertyType): double[]
 getNodeType(): string
 ```
 
-获取节点的类型。系统组件类型为组件名称，例如，按钮组件[Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md/arkts-input-multimodalinput-mouseevent-button-e.md)的类型为Button。而对于自定义组件，若其有渲染内容，则其类型为__Common__。
+获取节点的类型。系统组件类型为组件名称，例如，按钮组件[Button](button)的类型为Button。而对于自定义组件，若其有渲染内容，则其类型为__Common__。
 
 **起始版本：** 23
 
@@ -1047,8 +1047,8 @@ getPositionToScreen(): NodePosition
 getPositionToScreenWithTransform(): NodePosition
 ```
 
-获取FrameNode相对于屏幕带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](arkts-arkui-common-commonmethod-i.md#transform),  
-[translate](arkts-arkui-common-commonmethod-i.md#translate)等，返回的坐标是组件布局时左上角变换后的坐标。
+获取FrameNode相对于屏幕带有绘制属性的位置偏移，单位为VP，绘制属性比如[transform](CommonMethod#transform(value: object)),  
+[translate](CommonMethod#translate(value: TranslateOptions))等，返回的坐标是组件布局时左上角变换后的坐标。
 
 **起始版本：** 23
 
@@ -1142,7 +1142,7 @@ getPreviousSibling(): FrameNode | null
 getRenderNode(): RenderNode | null
 ```
 
-获取FrameNode中持有的[RenderNode](arkts-arkui-rendernode-c.md)。
+获取FrameNode中持有的[RenderNode](arkts-arkui-rendernode-c.md#RenderNode)。
 
 **起始版本：** 23
 
@@ -1301,8 +1301,8 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted." |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be adopted." |
 
 ## invalidate
 
@@ -1374,7 +1374,7 @@ isAttached(): boolean
 isClipToFrame(): boolean
 ```
 
-获取节点是否是剪裁到组件区域。当调用[dispose](arkts-arkui-framenode-c.md#dispose)解除对实体FrameNode节点的引用关系之后，返回值为true。
+获取节点是否是剪裁到组件区域。当调用[dispose](#dispose)解除对实体FrameNode节点的引用关系之后，返回值为true。
 
 **起始版本：** 23
 
@@ -1516,7 +1516,7 @@ isOnMainTree(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The curent FrameNode has been disposed. |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The curent FrameNode has been disposed. |
 
 ## isTransferred
 
@@ -1598,7 +1598,7 @@ layout(position: NodePosition): void
 measure(constraint: LayoutConstraint): void
 ```
 
-调用FrameNode的测量方法，根据父容器的布局约束，对FrameNode进行测量，计算出尺寸，如果测量方法被重写，则调用重写的方法。建议在[onMeasure](arkts-arkui-framenode-c.md#onmeasure)方法中调用。
+调用FrameNode的测量方法，根据父容器的布局约束，对FrameNode进行测量，计算出尺寸，如果测量方法被重写，则调用重写的方法。建议在[onMeasure](#onMeasure)方法中调用。
 
 **起始版本：** 23
 
@@ -1647,8 +1647,8 @@ moveTo(targetParent: FrameNode, index?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
-| [100027](../errorcode-node.md#100027-当前节点已被接纳为附属节点) | The current node has been adopted. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100027](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100027-当前节点已被接纳为附属节点) | The current node has been adopted. |
 
 ## onDraw
 
@@ -1656,7 +1656,7 @@ moveTo(targetParent: FrameNode, index?: int): void
 onDraw(context: DrawContext): void
 ```
 
-该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见  
+该接口的[DrawContext](arkts-arkui-graphics-drawcontext-c.md#DrawContext)中的Canvas是用于记录指令的临时Canvas，并非节点的真实Canvas。使用请参见  
 [调整自定义绘制Canvas的变换矩阵](../../../ui/arkts-user-defined-arktsNode-frameNode.md#调整自定义绘制canvas的变换矩阵)。
 
 **起始版本：** 23
@@ -1767,9 +1767,9 @@ removeAdoptedChild(child: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The current FrameNode is not modifiable. |
-| [100025](../errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
-| [100026](../errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The current FrameNode is not modifiable. |
+| [100025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100025-传入参数不符合要求) | The parameter is invalid. Details about the invalid parameter and the reason are included in the error message. For example: "The parameter 'child' is invalid: it cannot be null." |
+| [100026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100026-调用接口的实例对象已与后端实体节点解绑) | The current FrameNode has been disposed. |
 
 ## removeChild
 
@@ -1799,7 +1799,7 @@ removeChild(node: FrameNode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
+| [100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) | The FrameNode is not modifiable. |
 
 ## removeSupportedUIStates
 
@@ -1876,7 +1876,7 @@ setCrossLanguageOptions(value: CrossLanguageOptions): void
 > [Slider](../../../reference/apis-arkui/js-apis-arkui-typeNode.md#slider18)，
 > [Toggle](../../../reference/apis-arkui/js-apis-arkui-typeNode.md#toggle18)，
 > [XComponent](../../../reference/apis-arkui/js-apis-arkui-typeNode.md#xcomponent)类型的
-> [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md)设置跨ArkTS语言访问选项。
+> [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#TypedFrameNode)设置跨ArkTS语言访问选项。
 
 **起始版本：** 23
 
@@ -1898,7 +1898,7 @@ setCrossLanguageOptions(value: CrossLanguageOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100022](../errorcode-node.md#100022-framenode节点的组件类型不支持调整跨语言的通用属性设置权限) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
+| [100022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100022-framenode节点的组件类型不支持调整跨语言的通用属性设置权限) | The FrameNode cannot be set whether to support cross-language common attribute setting. |
 
 ## setLayoutPosition
 
@@ -1974,7 +1974,7 @@ get commonEvent(): UICommonEvent
 
 LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点需要重新设置事件回调才能保证监听事件正常响应。
 
-**类型：** [UICommonEvent](../arkts-components/arkts-arkui-uicommonevent-i.md)
+**类型：** UICommonEvent
 
 **起始版本：** 23
 
@@ -1992,9 +1992,9 @@ LazyForEach场景下，由于存在节点的销毁重建，对于重建的节点
 get gestureEvent(): UIGestureEvent
 ```
 
-获取FrameNode中持有的UIGestureEvent对象，用于设置组件绑定的手势事件。通过gestureEvent接口设置的手势不会覆盖通过声明式手势接口[（绑定手势事件）](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)绑定的手势，两者同时设置了手势时，优先回调声明式接口设置的手势事件。
+获取FrameNode中持有的UIGestureEvent对象，用于设置组件绑定的手势事件。通过gestureEvent接口设置的手势不会覆盖通过声明式手势接口[（绑定手势事件）](common)绑定的手势，两者同时设置了手势时，优先回调声明式接口设置的手势事件。
 
-**类型：** [UIGestureEvent](../arkts-components/arkts-arkui-uigestureevent-i.md)
+**类型：** UIGestureEvent
 
 **起始版本：** 23
 

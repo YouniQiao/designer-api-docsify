@@ -34,14 +34,14 @@ getRAWCaptureZoomRatioRange(): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getZoomPointInfos
 
@@ -63,14 +63,14 @@ getZoomPointInfos(): Array<ZoomPointInfo>
 
 | 类型 |
 | --- |
-| Array&lt;ZoomPointInfo&gt; |
+| Array&lt;[ZoomPointInfo](arkts-camera-camera-zoompointinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getZoomRatioRange
 
@@ -92,10 +92,10 @@ getZoomRatioRange(): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |

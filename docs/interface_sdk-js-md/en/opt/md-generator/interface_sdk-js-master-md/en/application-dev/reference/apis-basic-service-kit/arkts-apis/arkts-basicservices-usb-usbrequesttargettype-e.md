@@ -6,7 +6,7 @@ Enumerates request target types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
+**Substitutes:** [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USBRequestTargetType)
 
 <!--Device-usb-export enum USBRequestTargetType--><!--Device-usb-export enum USBRequestTargetType-End-->
 
@@ -24,7 +24,7 @@ Device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestTargetType.USB_REQUEST_TARGET_DEVICE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_device)
+**Substitutes:** [USB_REQUEST_TARGET_DEVICE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_DEVICE)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0-End-->
 
@@ -42,7 +42,7 @@ Interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestTargetType.USB_REQUEST_TARGET_INTERFACE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_interface)
+**Substitutes:** [USB_REQUEST_TARGET_INTERFACE](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_INTERFACE)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1-End-->
 
@@ -60,7 +60,7 @@ Endpoint.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestTargetType.USB_REQUEST_TARGET_ENDPOINT](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_endpoint)
+**Substitutes:** [USB_REQUEST_TARGET_ENDPOINT](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_ENDPOINT)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2-End-->
 
@@ -78,7 +78,7 @@ Other.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestTargetType.USB_REQUEST_TARGET_OTHER](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#usb_request_target_other)
+**Substitutes:** [USB_REQUEST_TARGET_OTHER](arkts-basicservices-usbmanager-usbrequesttargettype-e.md#USB_REQUEST_TARGET_OTHER)
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3-End-->
 

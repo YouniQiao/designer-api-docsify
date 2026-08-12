@@ -16,7 +16,7 @@ parameters?: Array<ParameterItem>
 
 拉起快捷方式时的自定义数据，仅支持配置字符串类型的数据。其中键值均最大支持1024长度的字符串。
 
-**类型：** Array&lt;ParameterItem&gt;
+**类型：** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)&gt;
 
 **起始版本：** 20
 

@@ -50,7 +50,7 @@ Obtains the default card slot for the voice service.
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

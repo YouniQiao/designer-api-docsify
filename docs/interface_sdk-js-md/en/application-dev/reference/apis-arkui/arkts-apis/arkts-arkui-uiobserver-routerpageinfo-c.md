@@ -13,7 +13,7 @@ Router page info.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -24,7 +24,7 @@ context: UIAbilityContext | UIContext
 
 The context of the changed router page.
 
-**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
+**Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ size?: Size
 
 The size of the router page.
 
-**Type:** [Size](../arkts-components/arkts-arkui-size-i.md)
+**Type:** Size
 
 **Since:** 23
 

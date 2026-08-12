@@ -39,8 +39,8 @@ Obtains the position of the character nearest to the specified coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
-| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: [px](common) |
+| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: [px](common) |
 
 **Return value:**
 
@@ -73,9 +73,9 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
-| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | No | Encoding type used for the character position. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
+| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: [px](common) |
+| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: [px](common) |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character position. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
@@ -113,7 +113,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -140,13 +140,13 @@ Obtains the character range and the actual glyph range based on the specified gl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | Glyph range of the text. |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the character range, and the second is the actual glyph range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -172,8 +172,8 @@ Obtains the position of a glyph close to a given coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
-| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: [px](common) |
+| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: [px](common) |
 
 **Return value:**
 
@@ -211,7 +211,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -238,13 +238,13 @@ Obtains the glyph range and the actual character range based on the specified ch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes | Character range of the text. |
-| encoding | [TextEncoding](arkts-arkui-textcommon-textencoding-e.md) | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character range. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextRange&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | Contains two elements: the first is the glyph range, and the second is the actual character range. When the returned range is invalid, the element in the range is **-1**. Returns **undefined** when [LayoutManager]{ |
 
 ## getLineCount
 
@@ -330,11 +330,11 @@ Obtains the drawing area information of the characters or placeholders within an
 | --- | --- | --- | --- |
 | range | [TextRange](arkts-arkui-textrange-i.md) | Yes | Text range for which the drawing area is to be obtained. |
 | widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Yes | Width style of the rectangle. |
-| heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes | Height style of the rectangle. |
+| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Yes | Height style of the rectangle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextBox&gt; | Array of drawing rectangles. |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; | Array of drawing rectangles. |
 

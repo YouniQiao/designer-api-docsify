@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## p2pCancelConnect
@@ -18,7 +18,7 @@ Canceling a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.p2pCancelConnect
+**Substitutes:** [p2pCancelConnect](ohos.wifiManager/wifiManager.p2pCancelConnect)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

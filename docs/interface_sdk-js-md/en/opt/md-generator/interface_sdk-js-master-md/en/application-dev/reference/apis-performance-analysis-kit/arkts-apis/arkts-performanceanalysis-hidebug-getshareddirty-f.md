@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getSharedDirty
@@ -19,7 +19,7 @@ Obtains the size of the shared dirty memory of a process. This API is implemente
 > 
 > Reading the **\/proc/{pid}/smaps_rollup** node is time-consuming. Therefore, you are advised not to use this API
 > in the main thread. You can use this API in the asynchronous thread started by calling
-> [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md) to avoid frame freezing.
+> [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) or [@ohos.worker](@ohos.worker) to avoid frame freezing.
 
 **Since:** 8
 

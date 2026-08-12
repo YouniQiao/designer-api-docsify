@@ -98,7 +98,7 @@ Set the oval shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | The oval shape will be set. |
+| oval | [Rect](arkts-arkui-rect-t.md) | Yes | The oval shape will be set. |
 
 ## setRectShape
 
@@ -122,7 +122,7 @@ Set the rect shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | The rect shape will be set. |
+| rect | [Rect](arkts-arkui-rect-t.md) | Yes | The rect shape will be set. |
 
 ## setRoundRectShape
 
@@ -146,7 +146,7 @@ Set the round rect shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes | The round rect shape will be set. |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Yes | The round rect shape will be set. |
 
 ## fillColor
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVDownloaderManager
@@ -28,5 +28,5 @@ Creating a Streaming Resource Download Task Manager
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVDownloaderManager&gt; | Promise used to return AVDownloaderManager. |
+| Promise&lt;[AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)&gt; | Promise used to return AVDownloaderManager. |
 

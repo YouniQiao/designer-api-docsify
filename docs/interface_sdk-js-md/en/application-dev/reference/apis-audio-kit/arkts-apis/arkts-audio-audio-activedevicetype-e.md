@@ -8,7 +8,7 @@ Enumerates the active device types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.CommunicationDeviceType
+**Substitutes:** [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md#CommunicationDeviceType)
 
 <!--Device-audio-enum ActiveDeviceType--><!--Device-audio-enum ActiveDeviceType-End-->
 
@@ -28,7 +28,7 @@ Speaker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.CommunicationDeviceType.SPEAKER
+**Substitutes:** [SPEAKER](ohos.multimedia.audio.CommunicationDeviceType.SPEAKER)
 
 <!--Device-ActiveDeviceType-SPEAKER = 2--><!--Device-ActiveDeviceType-SPEAKER = 2-End-->
 
@@ -48,7 +48,7 @@ Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.DeviceType#BLUETOOTH_SCO
+**Substitutes:** [BLUETOOTH_SCO](ohos.multimedia.audio.DeviceType#BLUETOOTH_SCO)
 
 <!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7--><!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7-End-->
 

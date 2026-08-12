@@ -6,7 +6,7 @@ Defines a **GyroscopeResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse
+**Substitutes:** [GyroscopeResponse](ohos.sensor/sensor#GyroscopeResponse)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -17,7 +17,7 @@ Defines a **GyroscopeResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## x
@@ -34,7 +34,7 @@ Rotation angular velocity of the X axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse.x
+**Substitutes:** [x](ohos.sensor/sensor#GyroscopeResponse.x)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -58,7 +58,7 @@ Rotation angular velocity of the Y axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse.y
+**Substitutes:** [y](ohos.sensor/sensor#GyroscopeResponse.y)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -82,7 +82,7 @@ Rotation angular velocity of the Z axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#GyroscopeResponse.z
+**Substitutes:** [z](ohos.sensor/sensor#GyroscopeResponse.z)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 

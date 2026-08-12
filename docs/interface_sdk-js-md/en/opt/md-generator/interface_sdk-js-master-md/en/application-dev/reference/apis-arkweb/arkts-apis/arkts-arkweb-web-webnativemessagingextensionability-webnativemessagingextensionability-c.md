@@ -1,8 +1,8 @@
 # WebNativeMessagingExtensionAbility
 
-class of web native messaging extension ability.
+Provides the web native messaging capability and is inherited from ExtensionAbility.
 
-**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **Since:** 21
 
@@ -13,7 +13,7 @@ class of web native messaging extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'kits/@kit.ArkWeb';
+import { ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## onConnectNative
@@ -22,7 +22,7 @@ import { ConnectionInfo } from 'kits/@kit.ArkWeb';
 onConnectNative(info: ConnectionInfo): void
 ```
 
-Called when a web native messaging connection is established.
+Called when a web native message connection is established. In this callback, you can obtain the connection information for subsequent message communication processing.
 
 **Since:** 21
 
@@ -59,7 +59,7 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 onDestroy(): void
 ```
 
-Called when the WebNativeMessagingExtensionAbility is destroyed.
+Called when the WebNativeMessagingExtensionAbility is destroyed. In this callback, you can release all occupied resources and complete final cleanup operations.
 
 **Since:** 21
 
@@ -88,7 +88,7 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 onDisconnectNative(info: ConnectionInfo): void
 ```
 
-Called when a web native messaging connection is disconnected.
+Called when a web native message connection is disconnected. In this callback, you can release resources related to the connection and complete necessary cleanup.
 
 **Since:** 21
 
@@ -124,7 +124,7 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
 context: WebNativeMessagingExtensionContext
 ```
 
-Context of web native messaging.
+Context of the current web native message ExtensionAbility.
 
 **Type:** [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 

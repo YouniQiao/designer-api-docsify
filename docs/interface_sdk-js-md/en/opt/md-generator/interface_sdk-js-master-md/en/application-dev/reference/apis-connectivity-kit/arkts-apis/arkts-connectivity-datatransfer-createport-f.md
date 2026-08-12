@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## createPort
@@ -34,11 +34,11 @@ Creates a NearLink listening port that can receive data by UUID.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 36100020 |
 | 36100021 |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |

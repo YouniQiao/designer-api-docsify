@@ -25,8 +25,8 @@ export declare function WithTheme(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | 是 | 设置作用域内组件配色。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 支持单个子组件。 |
+| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | 是 | 设置作用域内组件配色。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 支持单个子组件。 |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ export declare function WithTheme(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;WithThemeAttribute&gt; | 是 | WithTheme属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md)&gt; | 是 | WithTheme属性实例 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器 |
 
 **返回值：**
 

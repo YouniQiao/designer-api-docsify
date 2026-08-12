@@ -12,7 +12,7 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 **废弃版本：** 18
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher
+**替代接口：** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -23,15 +23,15 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;FaultLogInfo&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [10600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-服务未启动或故障) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 
@@ -78,7 +78,7 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 **废弃版本：** 18
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher
+**替代接口：** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
@@ -94,15 +94,15 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;FaultLogInfo&gt;&gt; |
+| Promise&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [10600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-服务未启动或故障) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

@@ -11,7 +11,7 @@ Provides the light sensing interaction feedback configuration for immersive mate
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## color

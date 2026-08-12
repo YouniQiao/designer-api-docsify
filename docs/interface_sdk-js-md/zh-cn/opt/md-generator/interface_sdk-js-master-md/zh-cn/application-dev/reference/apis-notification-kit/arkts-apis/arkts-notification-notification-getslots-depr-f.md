@@ -12,7 +12,7 @@ function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getSlots
+**替代接口：** [getSlots](ohos.notificationManager/notificationManager#getSlots)
 
 <!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void--><!--Device-notification-function getSlots(callback: AsyncCallback<Array<NotificationSlot>>): void-End-->
 
@@ -37,7 +37,7 @@ function getSlots(): Promise<Array<NotificationSlot>>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getSlots
+**替代接口：** [getSlots](ohos.notificationManager/notificationManager#getSlots)
 
 <!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>--><!--Device-notification-function getSlots(): Promise<Array<NotificationSlot>>-End-->
 

@@ -13,7 +13,7 @@ Enumerates the return results of intent execution.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## code
@@ -49,7 +49,7 @@ Permissions to be granted to the system entry point for the URI list returned by
 **NOTE：**
 
 This parameter supports only FLAG_AUTH_READ_URI_PERMISSION, FLAG_AUTH_WRITE_URI_PERMISSION, and FLAG_AUTH_READ_URI_PERMISSION|FLAG_AUTH_WRITE_URI_PERMISSION. For details about the permissions, see  
-[Flags](arkts-ability-wantconstant-flags-e.md).
+[Flags](arkts-ability-wantconstant-flags-e.md#Flags).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -73,7 +73,7 @@ result?: Record<string, Object>
 
 Result data returned by the intent execution, typically containing information to be passed back to the system entry point.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 

@@ -51,7 +51,7 @@ static envProp<T>(key: string, value: T): boolean
 static envProps(props: EnvPropsOptions[]): void
 ```
 
-和[envProp](../../apis-arkui/arkts-apis/arkts-arkui-environment-c.md/arkts-arkui-environment-c.md#envprop)类似，不同点在于参数为数组，可以一次性初始化多个数据。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)中。需注意的是，如果传入的dafultValue为  
+和[envProp](#envProp)类似，不同点在于参数为数组，可以一次性初始化多个数据。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)中。需注意的是，如果传入的dafultValue为  
 [ColorMode](../../../ui/state-management-static/arkts-static-environment.md#environment内置参数)、  
 [LayoutDirection](../../../ui/state-management-static/arkts-static-environment.md#environment内置参数)类型，或是数字，则需额外指定其具体类型。
 

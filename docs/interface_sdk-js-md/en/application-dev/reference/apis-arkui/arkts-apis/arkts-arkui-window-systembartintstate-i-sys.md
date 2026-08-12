@@ -15,7 +15,7 @@ Describes the callback for the current system bar.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -46,7 +46,7 @@ regionTint: Array<SystemBarRegionTint>
 
 All system bar information that has been changed.
 
-**Type:** Array&lt;SystemBarRegionTint&gt;
+**Type:** Array&lt;[SystemBarRegionTint](arkts-arkui-window-systembarregiontint-i-sys.md)&gt;
 
 **Since:** 8
 

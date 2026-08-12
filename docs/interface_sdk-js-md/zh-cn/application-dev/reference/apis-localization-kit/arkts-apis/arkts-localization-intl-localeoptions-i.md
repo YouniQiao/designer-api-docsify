@@ -13,7 +13,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions](arkts-intl.md#intl.localeoptions)
+**替代接口：** [LocaleOptions]]([Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options))
 
 <!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
 
@@ -37,7 +37,7 @@ calendar?: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.calendar](arkts-intl.md#intl.localeoptions.calendar)
+**替代接口：** [calendar]]([Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#calendar))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -69,7 +69,7 @@ caseFirst?: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#casefirst)
+**替代接口：** [caseFirst]]([Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#casefirst))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -127,7 +127,7 @@ collation?: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#collation)
+**替代接口：** [collation]]([Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#collation))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -155,7 +155,7 @@ hourCycle?: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#hourcycle)
+**替代接口：** [hourCycle]]([Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#hourcycle))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -183,7 +183,7 @@ numberingSystem?: string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numberingsystem)
+**替代接口：** [numberingSystem]]([Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numberingsystem))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -209,7 +209,7 @@ true表示将数字字符视为数字进行排序处理，false表示将数字�
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numeric)
+**替代接口：** [numeric]]([Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numeric))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

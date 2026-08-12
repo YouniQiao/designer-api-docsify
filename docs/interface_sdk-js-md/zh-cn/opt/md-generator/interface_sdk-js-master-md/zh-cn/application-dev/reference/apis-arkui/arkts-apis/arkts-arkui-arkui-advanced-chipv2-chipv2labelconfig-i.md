@@ -22,7 +22,7 @@ ChipV2激活时的文字颜色。
 
 值为非法值时，按默认值处理。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 26.0.0
 
@@ -48,7 +48,7 @@ fontColor?: ColorMetrics
 
 值为非法值时，按默认值处理。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 26.0.0
 
@@ -102,7 +102,7 @@ size为ChipV2Size.SMALL时，默认值：\$r('sys.float.chip_small_font_size')�
 
 值为undefined时，按默认值处理。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.0.0
 

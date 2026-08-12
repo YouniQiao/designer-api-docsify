@@ -24,7 +24,7 @@ font?: Font
 
 从API version 12开始，底部页签内容左右排布时默认字体大小为12.0fp。
 
-**类型：** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 10
 
@@ -46,7 +46,7 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 
 设置Label文本自适应高度的方式。默认值是最大行数优先。
 
-**类型：** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-textheightadaptivepolicy-e.md)
+**类型：** TextHeightAdaptivePolicy
 
 **起始版本：** 10
 
@@ -144,7 +144,7 @@ overflow?: TextOverflow
 
 设置label文本超长时的显示方式。默认值是省略号截断。
 
-**类型：** [TextOverflow](../arkts-apis/arkts-arkui-enums-textoverflow-e.md)
+**类型：** TextOverflow
 
 **起始版本：** 10
 
@@ -168,7 +168,7 @@ selectedColor?: ResourceColor
 
 默认值：#FF007DFF
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #FF007DFF
 
@@ -194,7 +194,7 @@ unselectedColor?: ResourceColor
 
 默认值：#99182431
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #99182431
 

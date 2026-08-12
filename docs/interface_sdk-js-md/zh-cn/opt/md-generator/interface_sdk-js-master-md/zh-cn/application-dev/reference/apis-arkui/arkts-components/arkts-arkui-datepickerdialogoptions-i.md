@@ -2,9 +2,9 @@
 
 日期选择器弹窗选项。
 
-继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md)。
+继承自[DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)。
 
-**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
+**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)
 
 **起始版本：** 8
 
@@ -28,7 +28,7 @@ onAccept?: (value: DatePickerResult) => void
 
 **废弃版本：** 10
 
-**替代接口：** datePicker/DatePickerDialogOptions#onDateAccept
+**替代接口：** [onDateAccept](#onDateAccept)
 
 <!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
@@ -72,7 +72,7 @@ onChange?: (value: DatePickerResult) => void
 
 **废弃版本：** 10
 
-**替代接口：** datePicker/DatePickerDialogOptions#onDateChange
+**替代接口：** [onDateChange](datePicker/DatePickerDialogOptions#onDateChange)
 
 <!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
@@ -206,7 +206,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > 保持默认值false。
 > 
 > 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](arkts-arkui-buttontype-e.md#capsule)。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，呈现效果依然是胶囊型按钮[Capsule](ButtonType#Capsule)。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -259,7 +259,7 @@ backgroundBlurStyle?: BlurStyle
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
 
-**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -391,7 +391,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > 保持默认值false。
 > 
 > 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](arkts-arkui-buttontype-e.md#capsule)。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，呈现效果依然是胶囊型按钮[Capsule](ButtonType#Capsule)。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -420,7 +420,7 @@ dateTimeOptions?: DateTimeOptions
 > - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 > 可选值为"numeric"或"2-digit"，传入其他值时按默认值处理。
 
-**类型：** [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-intl-datetimeoptions-i.md)
+**类型：** DateTimeOptions
 
 **默认值：** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
@@ -674,7 +674,7 @@ offset?: Offset
 
 > 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **默认值：** { dx: 0 , dy: 0 } [since 11]
 
@@ -700,7 +700,7 @@ onDateAccept?: Callback<Date>
 > 
 > 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**类型：** Callback&lt;Date&gt;
 
 **起始版本：** 10
 
@@ -724,7 +724,7 @@ onDateChange?: Callback<Date>
 > 
 > 当showTime设置为true时，value中时和分为选择器选择的时和分。否则，value中时和分为系统时间的时和分。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**类型：** Callback&lt;Date&gt;
 
 **起始版本：** 10
 
@@ -778,7 +778,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -833,13 +833,13 @@ systemMaterial?: SystemUiMaterial
 > **说明：**
 > 
 > - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。
-> 不同的材质具有不同的效果。关于ImmersiveMaterial的详细说明，请参考[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)类型定义。
-> - 该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、背景模糊
-> [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle)
-> 、背景模糊效果[backgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)、背景效果
-> [backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect)、边框颜色
-> [borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影
-> [shadow](arkts-arkui-commonmethod-c.md#shadow)，当设置系统材质时，上述接口不生效。
+> 不同的材质具有不同的效果。关于ImmersiveMaterial的详细说明，请参考[SystemUiMaterial](arkts-arkui-systemuimaterial-t.md#SystemUiMaterial)类型定义。
+> - 该接口影响背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、背景模糊
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
+> 、背景模糊效果[backgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md#BackgroundBlurStyleOptions)、背景效果
+> [backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、边框颜色
+> [borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影
+> [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，当设置系统材质时，上述接口不生效。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 

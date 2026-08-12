@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSimpleDateTimeFormatByPattern
@@ -13,7 +13,7 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.
 ```
 
 Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and  
-[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton), see the examples in [SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format).
+[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton), see the examples in [SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format).
 
 **Since:** 20
 
@@ -27,7 +27,7 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pattern | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
 | locale | Intl.Locale | No |
 
 **Return value:**
@@ -40,7 +40,7 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 
 | Error Code ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
 
 
 ## getSimpleDateTimeFormatByPattern
@@ -50,13 +50,13 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.
 ```
 
 Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and  
-[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton), see the examples in [SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format).
+[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton-1), see the examples in [SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format).
 
 **Since:** 18
 
 **Deprecated since:** 20
 
-**Substitutes:** [i18n.getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern)(pattern:
+**Substitutes:** [getSimpleDateTimeFormatByPattern](i18n.getSimpleDateTimeFormatByPattern(pattern:)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -68,7 +68,7 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pattern | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
 | locale | intl.Locale | No |
 
 **Return value:**
@@ -81,4 +81,4 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 
 | Error Code ID |
 | --- |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |

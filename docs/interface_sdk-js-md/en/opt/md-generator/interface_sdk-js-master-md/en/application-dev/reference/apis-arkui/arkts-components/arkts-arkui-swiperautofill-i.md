@@ -18,7 +18,7 @@ Minimum width of the element.
 
 Default value: **0**
 
-**Type:** [VP](../arkts-apis/arkts-arkui-vp-t.md)
+**Type:** VP
 
 **Since:** 10
 

@@ -6,7 +6,7 @@ Basic layout algorithm of the
 > **NOTE：**
 > 
 > This type of variable can be assigned a specific layout algorithm class object, such as an object of the
-> [CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md) or [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md) class.
+> [CustomLayoutAlgorithm](./CustomLayoutAlgorithm) or [RowLayoutAlgorithm](./RowLayoutAlgorithm) class.
 
 **Since:** 24
 

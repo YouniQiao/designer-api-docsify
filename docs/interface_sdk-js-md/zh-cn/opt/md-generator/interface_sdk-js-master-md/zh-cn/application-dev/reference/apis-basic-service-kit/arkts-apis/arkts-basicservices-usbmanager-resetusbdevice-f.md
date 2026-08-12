@@ -22,7 +22,7 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
 
 **返回值：**
 
@@ -34,12 +34,12 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) |
-| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) |
-| [14400013](../../apis-basic-services-kit/errorcode-usb.md#14400013-参数合法性检查失败) |
-| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [14400010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) |
+| [14400008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) |
+| [14400013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400013-参数合法性检查失败) |
+| [14400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
+| [14400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
 
 ## 示例
 

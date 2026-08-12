@@ -12,7 +12,7 @@ Worker线程用于与宿主线程通信的对象。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.workerPort
+**替代接口：** [workerPort](#workerPort)
 
 <!--Device-worker-const parentPort: DedicatedWorkerGlobalScope--><!--Device-worker-const parentPort: DedicatedWorkerGlobalScope-End-->
 

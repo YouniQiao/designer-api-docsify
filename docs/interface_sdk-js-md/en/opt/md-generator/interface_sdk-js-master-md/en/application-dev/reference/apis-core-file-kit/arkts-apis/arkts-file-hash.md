@@ -11,7 +11,7 @@ The **FileHash** module implements hash processing on files.
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## Summary

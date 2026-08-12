@@ -76,7 +76,7 @@ Creator instance key.
 
 **Deprecated since:** 15
 
-**Substitutes:** [NotificationRequest#appInstanceKey](arkts-notification-notificationrequest-notificationrequest-i-sys.md#appinstancekey)
+**Substitutes:** [appInstanceKey](#appInstanceKey)
 
 <!--Device-NotificationRequest-readonly creatorInstanceKey?: number--><!--Device-NotificationRequest-readonly creatorInstanceKey?: number-End-->
 
@@ -151,7 +151,7 @@ groupInfo?: GroupInfo
 
 Custom group notification information. This parameter is left empty by default.
 
-**Type:** [GroupInfo](arkts-notification-notificationmanager-groupinfo-t-sys.md)
+**Type:** [GroupInfo](arkts-notification-notificationrequest-groupinfo-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -292,7 +292,7 @@ unifiedGroupInfo?: UnifiedGroupInfo
 
 Intelligent notification unification information. This parameter is left empty by default.
 
-**Type:** [UnifiedGroupInfo](arkts-notification-notificationmanager-unifiedgroupinfo-t-sys.md)
+**Type:** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **Since:** 12
 

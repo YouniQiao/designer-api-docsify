@@ -7,12 +7,12 @@
 
 ## 核心枚举类型
 
-- **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。  
-- **[ButtonType](../arkts-components/arkts-arkui-buttontype-e.md/arkts-arkui-buttontype-e.md)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。
+- **[SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#SecurityComponentLayoutDirection)：** 安全控件图标和文字排列方向枚举，用于指定横向或纵向布局。  
+- **[ButtonType](@global:ButtonType)：** 安全控件按钮样式枚举，用于指定胶囊、圆形、圆角矩形或普通按钮样式。
 
 ## 核心接口类型
 
-- **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。
+- **[SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md#SecurityComponentMethod)：** 安全控件通用属性方法集合，用于为具体安全控件配置布局、尺寸、文字、图标、颜色、边框和交互属性。
 
 ## 子组件
 

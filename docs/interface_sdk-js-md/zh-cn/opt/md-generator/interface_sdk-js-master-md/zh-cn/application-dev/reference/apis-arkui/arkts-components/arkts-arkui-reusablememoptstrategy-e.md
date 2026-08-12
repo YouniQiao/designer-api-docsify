@@ -37,8 +37,8 @@ ENABLE_AUTO_CACHE_OPTIMIZATION = 1 << 0
 满足以下任一条件时，释放复用池内的所有该类型自定义组件：
 
 - 应用退后台时。  
-- 复用池所在组件不可见时（[visibility](arkts-arkui-commonmethod-c.md#visibility)属性设置为[Visible](../arkts-apis/arkts-arkui-visibility-e.md/arkts-arkui-visibility-e.md)以外的值，或组件面积为0，不考虑遮挡）。  
-- 整机低内存时（[MemoryLevel](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-memorylevel-e.md/arkts-ability-abilityconstant-memorylevel-e.md)达到MEMORY_LEVEL_LOW或  
+- 复用池所在组件不可见时（[visibility](arkts-arkui-commonmethod-c.md#visibility)属性设置为[Visible](Visibility)以外的值，或组件面积为0，不考虑遮挡）。  
+- 整机低内存时（[MemoryLevel](../../apis-ability-kit/arkts-apis/arkts-ability-abilityconstant-memorylevel-e.md#MemoryLevel)达到MEMORY_LEVEL_LOW或  
 MEMORY_LEVEL_CRITICAL）。
 
 当复用池中相同ReuseId的该类型自定义组件数量超过8，且5分钟内不再增加时，保留8个组件，释放其余组件。

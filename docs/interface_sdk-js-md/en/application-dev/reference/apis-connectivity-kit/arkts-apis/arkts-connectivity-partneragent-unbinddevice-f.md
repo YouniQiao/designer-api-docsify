@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## unbindDevice
@@ -30,7 +30,7 @@ Unbinds a partner device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceAddress | [PartnerDeviceAddress](arkts-connectivity-partnerdeviceaddress-t.md) | Yes | The address of partner device. |
+| deviceAddress | PartnerDeviceAddress | Yes | The address of partner device. |
 
 **Return value:**
 
@@ -42,8 +42,8 @@ Unbinds a partner device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [34900001](../errorcode-fusionConnectivity.md#34900001-device-not-registered) | The device is not bound. |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [34900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900001-device-not-registered) | The device is not bound. |
+| [34900099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -58,7 +58,7 @@ Obtains the **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. |
+| LayoutManager | LayoutManager** object. |
 
 ## setStyledString
 
@@ -84,7 +84,7 @@ Binds to or updates the specified styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](../arkts-apis/arkts-arkui-styledstring-mutablestyledstring-c.md/arkts-arkui-styledstring-mutablestyledstring-c.md) of **StyledString** can also serve as the argument. |
+| value | StyledString | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](MutableStyledString) of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -135,5 +135,5 @@ Sets the text selection area, which will be highlighted.
 | --- | --- | --- | --- |
 | selectionStart | number \| undefined | Yes | Start position of the text selection range.&lt;br&gt;Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
 | selectionEnd | number \| undefined | Yes | End position of the text selection range.&lt;br&gt;Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
+| options | SelectionOptions | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
 

@@ -2,7 +2,7 @@
 
 Defines the dialog param with buttons.
 
-**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialog-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialog-alertdialogparam-i.md#AlertDialogParam)
 
 **Since:** 23
 

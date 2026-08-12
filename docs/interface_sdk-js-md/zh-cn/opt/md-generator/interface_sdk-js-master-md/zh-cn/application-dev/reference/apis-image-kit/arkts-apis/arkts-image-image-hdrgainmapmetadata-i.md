@@ -1,6 +1,6 @@
 # HdrGainmapMetadata
 
-Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。
+Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。
 
 **起始版本：** 12
 
@@ -48,7 +48,7 @@ channels: Array<GainmapChannel>
 
 The per-channel metadata.
 
-**类型：** Array&lt;GainmapChannel&gt;
+**类型：** Array&lt;[GainmapChannel](arkts-image-image-gainmapchannel-i.md)&gt;
 
 **起始版本：** 12
 

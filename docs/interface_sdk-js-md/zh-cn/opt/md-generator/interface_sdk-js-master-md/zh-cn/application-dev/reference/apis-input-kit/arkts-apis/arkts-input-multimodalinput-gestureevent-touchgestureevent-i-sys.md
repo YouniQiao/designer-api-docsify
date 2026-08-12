@@ -36,7 +36,7 @@ touches: Touch[]
 
 触屏点信息。
 
-**类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i-sys.md)[]
+**类型：** [Touch](arkts-input-multimodalinput-touchevent-touch-i.md)[]
 
 **起始版本：** 18
 

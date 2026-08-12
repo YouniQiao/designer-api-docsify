@@ -6,7 +6,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.NotifyCharacteristic
+**Substitutes:** [NotifyCharacteristic](ohos.bluetooth.ble/ble.NotifyCharacteristic)
 
 <!--Device-bluetoothManager-interface NotifyCharacteristic--><!--Device-bluetoothManager-interface NotifyCharacteristic-End-->
 
@@ -15,7 +15,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -32,7 +32,7 @@ The UUID of a NotifyCharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.NotifyCharacteristic#characteristicUuid
+**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.NotifyCharacteristic#characteristicUuid)
 
 <!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The value of a NotifyCharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.NotifyCharacteristic#characteristicValue
+**Substitutes:** [characteristicValue](ohos.bluetooth.ble/ble.NotifyCharacteristic#characteristicValue)
 
 <!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -72,7 +72,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.NotifyCharacteristic#confirm
+**Substitutes:** [confirm](ohos.bluetooth.ble/ble.NotifyCharacteristic#confirm)
 
 <!--Device-NotifyCharacteristic-confirm: boolean--><!--Device-NotifyCharacteristic-confirm: boolean-End-->
 
@@ -84,7 +84,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 serviceUuid: string
 ```
 
-The UUID of the {@link GattService} instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#GattService) instance to which the characteristic belongs
 
 **Type:** string
 
@@ -92,7 +92,7 @@ The UUID of the {@link GattService} instance to which the characteristic belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.NotifyCharacteristic#serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.NotifyCharacteristic#serviceUuid)
 
 <!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
 

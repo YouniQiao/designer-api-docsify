@@ -43,7 +43,42 @@ Trigger the event callbacks.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    this.context.eventHub.on('myEvent', this.eventFunc);
+  }
+
+  onDestroy() {
+    try {
+      // Result
+      // eventFunc is called,undefined,undefined
+      this.context.eventHub.emit('myEvent');
+      // Result
+      // eventFunc is called,1,undefined
+      this.context.eventHub.emit('myEvent', 1);
+      // Result
+      // eventFunc is called,1,2
+      this.context.eventHub.emit('myEvent', 1, 2);
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let msg: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, msg: ${msg}`);
+    }
+  }
+
+  eventFunc(argOne: number, argTwo: number) {
+    console.info(`eventFunc is called, ${argOne}, ${argTwo}`);
+  }
+}
+```
 
 ## emit
 
@@ -68,7 +103,7 @@ Trigger the event callbacks.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Indicates the event. |
-| args | (Object\|null\|undefined)[] | Yes | Indicates the callback arguments. |
+| args | (Object \| null \| undefined)[] | Yes | Indicates the callback arguments. |
 
 ## off
 
@@ -104,7 +139,38 @@ Unsubscribes from an event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    try {
+      this.context.eventHub.on('myEvent', this.eventFunc1);
+      this.context.eventHub.off('myEvent', this.eventFunc1); // Unsubscribe from the myEvent event with the callback eventFunc1.
+      this.context.eventHub.on('myEvent', this.eventFunc1);
+      this.context.eventHub.on('myEvent', this.eventFunc2);
+      this.context.eventHub.off('myEvent'); // Unsubscribe from the myEvent event with all the callbacks (eventFunc1 and eventFunc2).
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let msg: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, msg: ${msg}`);
+    }
+  }
+
+  eventFunc1() {
+    console.info('eventFunc1 is called');
+  }
+
+  eventFunc2() {
+    console.info('eventFunc2 is called');
+  }
+}
+```
 
 ## on
 
@@ -142,5 +208,5 @@ Subscribes to an event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

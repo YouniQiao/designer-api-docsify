@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## execTool
@@ -31,9 +31,9 @@ Execute a CLI command
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| toolName | string | Yes |
+| [toolName](arkts-ability-climanager-clisessioninfo-i-sys.md) | string | Yes |
 | subCommand | string | Yes |
-| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
 | challenge | string | Yes |
 | execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | No |
 
@@ -41,7 +41,7 @@ Execute a CLI command
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;CliSessionInfo&gt; |
+| Promise&lt;[CliSessionInfo](arkts-ability-climanager-clisessioninfo-i-sys.md)&gt; |
 
 **Error codes:**
 
@@ -49,6 +49,6 @@ Execute a CLI command
 | --- |
 | 35600031 |
 | 35600030 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 35600050 |

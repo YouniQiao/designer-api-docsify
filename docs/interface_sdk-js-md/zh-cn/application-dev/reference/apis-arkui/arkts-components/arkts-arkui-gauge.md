@@ -43,7 +43,7 @@ Gauge(options: GaugeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [GaugeOptions](../arkts-apis/arkts-arkui-gauge-gaugeoptions-i.md) | 是 | 数据量规图表组件参数。 |
+| options | [GaugeOptions](arkts-arkui-gaugeoptions-i.md) | 是 | 数据量规图表组件参数。 |
 
 ## 汇总
 

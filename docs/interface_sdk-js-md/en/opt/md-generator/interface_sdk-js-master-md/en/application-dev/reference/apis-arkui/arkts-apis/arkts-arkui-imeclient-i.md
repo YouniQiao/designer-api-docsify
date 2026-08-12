@@ -30,7 +30,7 @@ Sets the extension configuration of an input method.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [InputMethodExtraConfig](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Yes |
+| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Yes |
 
 ## nodeId
 

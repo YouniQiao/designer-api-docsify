@@ -13,7 +13,7 @@ Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

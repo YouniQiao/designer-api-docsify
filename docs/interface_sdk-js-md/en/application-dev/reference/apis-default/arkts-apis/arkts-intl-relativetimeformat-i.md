@@ -24,7 +24,7 @@ It is the caller's responsibility to handle cut-off logic such as deciding betwe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes |  |
-| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
+| unit | RelativeTimeFormatUnit | Yes |  |
 
 **Return value:**
 
@@ -49,13 +49,13 @@ Returns an array of objects representing the relative time format in parts that 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes |  |
-| unit | [RelativeTimeFormatUnit](arkts-intl-relativetimeformatunit-t.md) | Yes |  |
+| unit | RelativeTimeFormatUnit | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RelativeTimeFormatPart](arkts-intl-relativetimeformatpart-t.md)[] |  |
+| RelativeTimeFormatPart[] |  |
 
 ## resolvedOptions
 
@@ -75,5 +75,5 @@ Provides access to the locale and options computed during initialization of this
 
 | Type | Description |
 | --- | --- |
-| [ResolvedRelativeTimeFormatOptions](arkts-intl-resolvedrelativetimeformatoptions-i.md) |  |
+| ResolvedRelativeTimeFormatOptions |  |
 

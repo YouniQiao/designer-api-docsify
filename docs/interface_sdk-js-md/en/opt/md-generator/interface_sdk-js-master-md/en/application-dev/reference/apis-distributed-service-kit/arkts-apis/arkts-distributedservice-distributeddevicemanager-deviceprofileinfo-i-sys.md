@@ -13,7 +13,7 @@ Defines the device profile information.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## bleMac
@@ -369,7 +369,7 @@ services?: Array<ServiceProfileInfo>
 
 Service list. This parameter is left unspecified by default.
 
-**Type:** Array&lt;ServiceProfileInfo&gt;
+**Type:** Array&lt;[ServiceProfileInfo](arkts-distributedservice-distributeddevicemanager-serviceprofileinfo-i-sys.md)&gt;
 
 **Since:** 15
 

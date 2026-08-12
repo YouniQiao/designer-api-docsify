@@ -19,11 +19,11 @@ Defines the types of persistent collection data supported by **globalConnect** u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;S&gt; |
-| Map&lt;string |
-| number, S&gt; |
-| Set&lt;S&gt; |
-| collections.Array&lt;S&gt; |
-| collections.Map&lt;string |
-| number, S&gt; |
-| collections.Set&lt;S&gt; |
+| Array & lt;S & gt; |
+| Map & lt;string |
+| number, S & gt; |
+| Set & lt;S & gt; |
+| collections.Array & lt;S & gt; |
+| collections.Map & lt;string |
+| number, S & gt; |
+| collections.Set & lt;S & gt; |

@@ -14,7 +14,7 @@ Obtains the notification slots of a specified application.This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlotsByBundle
+**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,8 +28,8 @@ Obtains the notification slots of a specified application.This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getSlotsByBundle
@@ -46,7 +46,7 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlotsByBundle
+**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -60,11 +60,11 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Promise used to return the result. |
 

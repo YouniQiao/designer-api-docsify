@@ -20,7 +20,7 @@ Create ASR processing controller on one audio capturer.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i-sys.md) | 是 |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 |
 
 **返回值：**
 
@@ -32,10 +32,10 @@ Create ASR processing controller on one audio capturer.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 

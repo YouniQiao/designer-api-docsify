@@ -36,7 +36,7 @@ Constructor used to create a swipe gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SwipeGestureHandlerOptions](arkts-arkui-gesture-swipegesturehandleroptions-i.md) | No | Parameters of the swipe gesture handler. |
+| options | [SwipeGestureHandlerOptions](arkts-arkui-swipegesturehandleroptions-i.md) | No | Parameters of the swipe gesture handler. |
 
 ## onAction
 
@@ -62,7 +62,7 @@ Sets the callback for successful swipe gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked upon successful swipe gesture recognition. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful swipe gesture recognition. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## download
@@ -18,7 +18,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context:
+**Substitutes:** [downloadFile](request.downloadFile(context:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -33,13 +33,13 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -69,7 +69,7 @@ Downloads a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context:
+**Substitutes:** [downloadFile](request.downloadFile(context:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -89,13 +89,13 @@ Downloads a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DownloadTask&gt; |
+| Promise&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

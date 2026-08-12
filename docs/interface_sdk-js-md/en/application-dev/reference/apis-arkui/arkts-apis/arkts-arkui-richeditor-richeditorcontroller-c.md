@@ -2,7 +2,7 @@
 
 Provides Controller for RichEditor.
 
-**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)
+**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#RichEditorBaseController)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Add a builder span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | Indicates the custom builder node |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the custom builder node |
 | options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | No | span option. |
 
 **Return value:**
@@ -65,7 +65,7 @@ Add a image span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr | Yes | image value. |
+| value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | image value. |
 | options | [RichEditorImageSpanOptions](arkts-arkui-richeditor-richeditorimagespanoptions-i.md) | No | image span info. |
 
 **Return value:**
@@ -96,7 +96,7 @@ Add a symbol span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](arkts-arkui-resource-t.md) | Yes | symbol span value |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | symbol span value |
 | options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md) | No | symbol span option. |
 
 **Return value:**
@@ -128,7 +128,7 @@ Add a text span.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | text value. |
-| options | [RichEditorTextSpanOptions](../arkts-components/arkts-arkui-richeditortextspanoptions-i.md) | No | span info. |
+| options | [RichEditorTextSpanOptions](arkts-arkui-richeditor-richeditortextspanoptions-i.md) | No | span info. |
 
 **Return value:**
 
@@ -158,7 +158,7 @@ Delete span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | No | range for deleting. |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | No | range for deleting. |
 
 ## fromStyledString
 
@@ -182,19 +182,19 @@ Convert StyledString to spans in rich editor.return a empty Array&lt;RichEditorS
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](arkts-arkui-styledstring-c.md) | Yes | StyledString. |
+| value | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | StyledString. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorSpan&gt; | return convert value |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | return convert value |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
 ## getParagraphs
 
@@ -218,13 +218,13 @@ Get span content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | No | range for getting span info. |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | No | range for getting span info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorParagraphResult&gt; |  |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditor-richeditorparagraphresult-i.md)&gt; |  |
 
 ## getSelection
 
@@ -248,7 +248,7 @@ Called when the content is selected.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorSelection](../arkts-components/arkts-arkui-richeditorselection-i.md) |  |
+| [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md) |  |
 
 ## getSpans
 
@@ -272,13 +272,13 @@ Get span content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | No | range for getting span info. |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | No | range for getting span info. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorImageSpanResult \| RichEditorTextSpanResult&gt; |  |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md)&gt; |  |
 
 ## toStyledString
 
@@ -302,19 +302,19 @@ Convert spans to StyledString in rich editor.return a empty StyledString if conv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) | Yes | range of spans in rich editor |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | Yes | range of spans in rich editor |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c.md) |  |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -363,5 +363,5 @@ Modify span style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorUpdateTextSpanStyleOptions](../arkts-components/arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| RichEditorUpdateImageSpanStyleOptions \| RichEditorUpdateSymbolSpanStyleOptions | Yes |  |
+| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditor-richeditorupdatetextspanstyleoptions-i.md) \| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditor-richeditorupdateimagespanstyleoptions-i.md) \| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditor-richeditorupdatesymbolspanstyleoptions-i.md) | Yes |  |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createModuleContext
@@ -42,7 +42,7 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes |
+| context | [Context](arkts-ability-context-c.md) | Yes |
 | bundleName | string | Yes |
 | moduleName | string | Yes |
 
@@ -50,15 +50,15 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

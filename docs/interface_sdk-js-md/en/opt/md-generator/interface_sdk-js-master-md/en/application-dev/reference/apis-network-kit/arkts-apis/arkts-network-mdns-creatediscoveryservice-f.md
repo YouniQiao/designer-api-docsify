@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## createDiscoveryService
@@ -39,7 +39,7 @@ Create an mDNS based discovery service with context and serviceType.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

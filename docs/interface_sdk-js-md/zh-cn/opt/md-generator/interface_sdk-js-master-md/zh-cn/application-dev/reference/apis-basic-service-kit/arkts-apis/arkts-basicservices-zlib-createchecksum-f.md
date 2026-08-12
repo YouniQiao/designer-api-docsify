@@ -20,7 +20,7 @@ function createChecksum(): Promise<Checksum>
 
 | 类型 |
 | --- |
-| Promise&lt;Checksum&gt; |
+| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; |
 
 ## 示例
 

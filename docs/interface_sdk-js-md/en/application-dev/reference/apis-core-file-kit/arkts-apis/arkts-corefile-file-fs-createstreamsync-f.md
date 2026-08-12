@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## createStreamSync
@@ -13,7 +13,7 @@ declare function createStreamSync(path: string, mode: string): Stream
 ```
 
 Creates a stream based on a file path. This API returns the result synchronously. To close the stream, use  
-**close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
+**close()** of [Stream](arkts-corefile-file-fs-stream-i.md#Stream).
 
 **Since:** 9
 

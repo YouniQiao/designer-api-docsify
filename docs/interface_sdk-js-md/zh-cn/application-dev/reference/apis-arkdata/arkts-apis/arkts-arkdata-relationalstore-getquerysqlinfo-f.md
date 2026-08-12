@@ -20,7 +20,7 @@ function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):Sql
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 | 与指定字段匹配的谓词。 |
+| predicates | RdbPredicates | 是 | 与指定字段匹配的谓词。 |
 | columns | Array&lt;string&gt; | 否 | 要查询的列；如果不指定此参数，则查询所有列。 |
 
 **返回值：**
@@ -33,7 +33,7 @@ function getQuerySqlInfo(predicates: RdbPredicates, columns?: Array<string>):Sql
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## 示例
 

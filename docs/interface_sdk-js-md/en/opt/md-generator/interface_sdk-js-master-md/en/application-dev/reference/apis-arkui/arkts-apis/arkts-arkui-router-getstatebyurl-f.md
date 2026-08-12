@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getStateByUrl
@@ -18,14 +18,14 @@ Obtains the status information about a page by its URL.
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#getStateByUrl](arkts-arkui-arkui-uicontext-router-c.md#getstatebyurl)
+**Substitutes:** [getStateByUrl](arkts-arkui-arkui-uicontext-router-c.md#getStateByUrl)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,7 +45,7 @@ Obtains the status information about a page by its URL.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;RouterState&gt; |
+| Array & lt;RouterState & gt; |
 
 ## Examples
 

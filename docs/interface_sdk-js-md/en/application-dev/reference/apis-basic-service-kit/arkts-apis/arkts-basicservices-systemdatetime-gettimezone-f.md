@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -26,7 +26,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-date-time.md#supported-system-time-zones) . |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the system time zone. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-date-time.md#supported-system-time-zones) . |
 
 ## Examples
 

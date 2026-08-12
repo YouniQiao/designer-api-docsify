@@ -9,7 +9,7 @@ export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): P
 开发者可以调用该接口将当前进程放入[备选主控进程](../../../application-models/ability-terminology.md#candidatemasterprocess备选主控进程)链表。使用Promise异步回调。当[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)销毁后，再次启动配置了isolationProcess为true的UIAbility/UIExtensionAbility组件时，系统会根据是否存在备选主控进程执行相应操作。
 
 - 如果存在备选主控进程，系统会将备选主控进程链表首节点的进程设置为主控进程，触发  
-[onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequest)回调。  
+[onNewProcessRequest](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onNewProcessRequest)回调。  
 - 如果不存在备选主控进程，系统会根据组件类型执行相应的操作。  
  - 对于UIAbility组件，系统将创建新的空进程作为主控进程。  
  - 对于UIExtensionAbility组件，系统会优先复用已有的UIExtensionAbility进程作为新的主控进程，无可用进程时则创建新的空进程作为主控进程。  
@@ -45,14 +45,14 @@ export function promoteCurrentToCandidateMasterProcess(insertToHead: boolean): P
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000115](../errorcode-ability.md#16000115-当前进程不支持设置为备选主控进程) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [16000115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000115-当前进程不支持设置为备选主控进程) |
 
 ## 示例
 

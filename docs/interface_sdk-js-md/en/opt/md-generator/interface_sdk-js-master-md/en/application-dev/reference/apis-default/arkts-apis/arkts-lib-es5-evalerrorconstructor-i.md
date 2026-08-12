@@ -16,7 +16,7 @@
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [EvalError](../../apis-arkts/arkts-apis/arkts-arkts-errors-evalerror-c.md) |
+| [EvalError](arkts-lib-es5-evalerror-i.md) |
 
 ## [[Construct]]
 
@@ -34,7 +34,7 @@ new(message?: string): EvalError
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [EvalError](../../apis-arkts/arkts-apis/arkts-arkts-errors-evalerror-c.md) |
+| [EvalError](arkts-lib-es5-evalerror-i.md) |
 
 ## prototype
 
@@ -42,4 +42,4 @@ new(message?: string): EvalError
 readonly prototype: EvalError
 ```
 
-**Type:** EvalError
+**Type:** [EvalError](arkts-lib-es5-evalerror-i.md)

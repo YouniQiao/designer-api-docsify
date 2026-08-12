@@ -6,7 +6,7 @@
 function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary>
 ```
 
-��ȡӦ���Դ����ݣ�ʹ��Promise�����첽�ص���
+获取应用显存数据，使用Promise进行异步回调。
 
 **起始版本：** 21
 
@@ -22,19 +22,19 @@ function getGraphicsMemorySummary(interval?: int): Promise<GraphicsMemorySummary
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| interval | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | �Դ����ݻ���ֵ��Чʱ�䣬��λΪ�롣Ĭ��ֵ��300��ȡֵ��ΧΪ[2-3600]��������ֵ����ȡֵ��Χʱ����ʹ��Ĭ��ֵ�� ���Դ����ݻ���ֵ����ʱ�䳬����ֵʱ����ȡ�����Դ����ݲ����»���ֵ������ֱ�ӻ�ȡ����ֵ�� ȡֵ��ΧΪȫ�������� |
+| interval | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 显存数据缓存值有效时间，单位为秒。默认值：300。取值范围为[2-3600]。若传入值超出取值范围时，将使用默认值。 当显存数据缓存值存在时间超过该值时，获取最新显存数据并更新缓存值；否则，直接获取缓存值。 取值范围为全体整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GraphicsMemorySummary&gt; | promise���󣬷���Ӧ���Դ����ݡ� |
+| Promise&lt;[GraphicsMemorySummary](arkts-performanceanalysis-hidebug-graphicsmemorysummary-i.md)&gt; | promise对象，返回应用显存数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
+| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
 
 ## 示例
 

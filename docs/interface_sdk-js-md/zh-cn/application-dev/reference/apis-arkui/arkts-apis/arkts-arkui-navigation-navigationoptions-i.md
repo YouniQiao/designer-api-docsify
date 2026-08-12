@@ -42,7 +42,7 @@ launchMode?: LaunchMode
 
 路由栈的操作模式。默认值： LaunchMode.STANDARD。
 
-**类型：** [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md)
+**类型：** [LaunchMode](arkts-arkui-navigation-launchmode-e.md)
 
 **起始版本：** 23
 

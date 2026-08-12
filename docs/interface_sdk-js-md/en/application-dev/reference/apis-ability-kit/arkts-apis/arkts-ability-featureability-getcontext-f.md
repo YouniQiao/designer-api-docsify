@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## getContext
@@ -28,7 +28,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Application context. |
+| Context | Application context. |
 
 ## Examples
 

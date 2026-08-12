@@ -6,7 +6,7 @@ AbilityManager模块提供对Ability相关信息和状态信息进行获取、�
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.abilityManager/abilityManager
+**替代接口：** [abilityManager/abilityManager](ohos.app.ability.abilityManager/abilityManager)
 
 <!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
 

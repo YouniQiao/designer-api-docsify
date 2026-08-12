@@ -12,7 +12,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setportroles)
+**替代接口：** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setPortRoles)
 
 <!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>--><!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>-End-->
 
@@ -24,7 +24,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| portId | number | 是 |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
 | powerRole | [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md) | 是 |
 | dataRole | [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md) | 是 |
 
@@ -32,7 +32,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 

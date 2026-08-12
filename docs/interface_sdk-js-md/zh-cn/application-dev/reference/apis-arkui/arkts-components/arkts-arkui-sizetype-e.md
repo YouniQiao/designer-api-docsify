@@ -12,7 +12,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption
+**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-unnamed-declare enum SizeType--><!--Device-unnamed-declare enum SizeType-End-->
 
@@ -32,7 +32,7 @@ Auto = 0
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption
+**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-SizeType-Auto = 0--><!--Device-SizeType-Auto = 0-End-->
 
@@ -52,7 +52,7 @@ XS
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption
+**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-SizeType-XS--><!--Device-SizeType-XS-End-->
 
@@ -72,7 +72,7 @@ SM
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption
+**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-SizeType-SM--><!--Device-SizeType-SM-End-->
 
@@ -92,7 +92,7 @@ MD
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption
+**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-SizeType-MD--><!--Device-SizeType-MD-End-->
 
@@ -112,7 +112,7 @@ LG
 
 **废弃版本：** 9
 
-**替代接口：** grid_col/GridColColumnOption
+**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
 
 <!--Device-SizeType-LG--><!--Device-SizeType-LG-End-->
 

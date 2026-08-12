@@ -36,7 +36,7 @@ authType: AuthType
 
 身份验证凭据类型。
 
-**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**类型：** AuthType
 
 **起始版本：** 8
 
@@ -54,7 +54,7 @@ keys: Array<GetPropertyType>
 
 指示要获取的属性类型数组。
 
-**类型：** Array&lt;GetPropertyType&gt;
+**类型：** Array&lt;[GetPropertyType](arkts-basicservices-osaccount-getpropertytype-e-sys.md)&gt;
 
 **起始版本：** 8
 

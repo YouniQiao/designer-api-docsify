@@ -12,7 +12,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)(context:
+**Substitutes:** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -24,7 +24,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | Yes |
 | wantAgent | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
@@ -118,7 +118,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)(context:
+**Substitutes:** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -130,7 +130,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | Yes |
 | wantAgent | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes |
 
@@ -138,7 +138,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

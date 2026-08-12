@@ -6,7 +6,7 @@ Enumerates the **DefaultChangeUri** subtypes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.DefaultChangeUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md)
+**Substitutes:** [DefaultChangeUri](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#DefaultChangeUri)
 
 <!--Device-userFileManager-enum DefaultChangeUri--><!--Device-userFileManager-enum DefaultChangeUri-End-->
 
@@ -27,7 +27,7 @@ Default **PhotoAsset** URI. The **PhotoAsset** change notifications are received
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.DefaultChangeUri.DEFAULT_PHOTO_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#default_photo_uri)
+**Substitutes:** [DEFAULT_PHOTO_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#DEFAULT_PHOTO_URI)
 
 <!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI--><!--Device-DefaultChangeUri-DEFAULT_PHOTO_URI-End-->
 
@@ -47,7 +47,7 @@ Default album URI. Album change notifications are received based on this paramet
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.DefaultChangeUri.DEFAULT_ALBUM_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#default_album_uri)
+**Substitutes:** [DEFAULT_ALBUM_URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-defaultchangeuri-e.md#DEFAULT_ALBUM_URI)
 
 <!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI--><!--Device-DefaultChangeUri-DEFAULT_ALBUM_URI-End-->
 

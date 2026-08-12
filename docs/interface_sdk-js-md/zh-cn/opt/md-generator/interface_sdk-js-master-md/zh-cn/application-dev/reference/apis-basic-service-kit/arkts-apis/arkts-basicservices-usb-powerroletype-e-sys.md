@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md)
+**替代接口：** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType)
 
 <!--Device-usb-export enum PowerRoleType--><!--Device-usb-export enum PowerRoleType-End-->
 
@@ -26,7 +26,7 @@ NONE = 0
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PowerRoleType.NONE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#none)
+**替代接口：** [NONE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#NONE)
 
 <!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
@@ -46,7 +46,7 @@ SOURCE = 1
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PowerRoleType.SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#source)
+**替代接口：** [SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#SOURCE)
 
 <!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
 
@@ -66,7 +66,7 @@ SINK = 2
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PowerRoleType.SINK](arkts-basicservices-usbmanager-powerroletype-e-sys.md#sink)
+**替代接口：** [SINK](arkts-basicservices-usbmanager-powerroletype-e-sys.md#SINK)
 
 <!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 

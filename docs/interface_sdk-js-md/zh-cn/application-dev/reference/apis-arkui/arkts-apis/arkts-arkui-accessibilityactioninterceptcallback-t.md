@@ -26,5 +26,5 @@ Defines the callback type used in accessibility action intercept.The value of ac
 
 | 类型 | 说明 |
 | --- | --- |
-| [AccessibilityActionInterceptResult](../arkts-components/arkts-arkui-accessibilityactioninterceptresult-e.md) | the result of continuing to execute the action or interrupting it or bubbling up |
+| [AccessibilityActionInterceptResult](arkts-arkui-common-accessibilityactioninterceptresult-e.md) | the result of continuing to execute the action or interrupting it or bubbling up |
 

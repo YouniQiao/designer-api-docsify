@@ -50,7 +50,7 @@ Sets the attribute modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;ContainerSpanAttribute&gt; \| undefined | Yes | . |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; \| undefined | Yes | . |
 
 **Return value:**
 

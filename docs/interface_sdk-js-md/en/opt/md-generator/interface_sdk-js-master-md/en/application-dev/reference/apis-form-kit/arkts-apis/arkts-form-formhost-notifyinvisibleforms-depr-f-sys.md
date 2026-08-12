@@ -12,7 +12,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyinvisibleforms)
+**Substitutes:** [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyInvisibleForms)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -26,7 +26,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 
@@ -42,7 +42,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-depr-f-sys.md#notifyinvisibleforms)
+**Substitutes:** [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyInvisibleForms)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -56,10 +56,10 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

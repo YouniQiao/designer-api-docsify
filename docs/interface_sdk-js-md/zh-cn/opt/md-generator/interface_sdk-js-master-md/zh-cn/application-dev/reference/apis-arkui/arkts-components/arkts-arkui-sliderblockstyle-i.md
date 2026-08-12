@@ -38,7 +38,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 
 设置滑块使用的自定义形状。
 
-**类型：** [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute
+**类型：** [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md)
 
 **起始版本：** 10
 

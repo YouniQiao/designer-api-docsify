@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getUpdateSqlInfo
@@ -24,7 +24,7 @@ Obtains the SQL statement used to update data. This API returns the result synch
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | Yes |
+| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes |
 | values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes |
 | conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No |
 
@@ -38,7 +38,7 @@ Obtains the SQL statement used to update data. This API returns the result synch
 
 | Error Code ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 ## Examples
 

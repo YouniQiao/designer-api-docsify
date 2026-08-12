@@ -2,7 +2,7 @@
 
 定义懒式自定义布局算法。
 
-**继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md)
+**继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md#LazyLayoutAlgorithm)
 
 **起始版本：** 26.0.0
 

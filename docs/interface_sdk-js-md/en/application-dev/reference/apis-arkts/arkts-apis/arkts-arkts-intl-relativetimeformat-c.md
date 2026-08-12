@@ -33,7 +33,7 @@ Creates a new RelativeTimeFormat.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No | the locales. |
-| options | [RelativeTimeFormatOptions](arkts-arkts-intl-relativetimeformatoptions-i.md) | No | the options. |
+| options | RelativeTimeFormatOptions | No | the options. |
 
 ## format
 
@@ -58,7 +58,7 @@ Formats a relative time.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | the value. |
-| unit | [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md) | Yes | the unit. |
+| unit | RelativeTimeFormatUnit | Yes | the unit. |
 
 **Return value:**
 
@@ -89,13 +89,13 @@ Formats a relative time to parts.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | the value. |
-| unit | [RelativeTimeFormatUnit](../../apis-default/arkts-apis/arkts-intl-relativetimeformatunit-t.md) | Yes | the unit. |
+| unit | RelativeTimeFormatUnit | Yes | the unit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RelativeTimeFormatPart](../../apis-default/arkts-apis/arkts-intl-relativetimeformatpart-t.md)[] | formatted parts. |
+| RelativeTimeFormatPart[] | formatted parts. |
 
 ## resolvedOptions
 
@@ -119,7 +119,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| [ResolvedRelativeTimeFormatOptions](../../apis-default/arkts-apis/arkts-intl-resolvedrelativetimeformatoptions-i.md) | the resolved options. |
+| ResolvedRelativeTimeFormatOptions | the resolved options. |
 
 ## supportedLocalesOf
 
@@ -144,7 +144,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | Yes | the locales. |
-| options | [RelativeTimeFormatOptions](arkts-arkts-intl-relativetimeformatoptions-i.md) | No | the options. |
+| options | RelativeTimeFormatOptions | No | the options. |
 
 **Return value:**
 

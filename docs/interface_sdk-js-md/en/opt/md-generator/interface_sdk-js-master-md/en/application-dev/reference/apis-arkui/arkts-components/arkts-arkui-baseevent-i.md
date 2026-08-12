@@ -34,7 +34,7 @@ Obtains the pressed status of modifier keys. For details about the error message
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes |
+| keys | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ Obtains the pressed status of modifier keys. For details about the error message
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## axisHorizontal
 
@@ -216,7 +216,7 @@ source: SourceType
 
 Type of the event input device.
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** [SourceType](arkts-arkui-sourcetype-e.md)
 
 **Since:** 8
 
@@ -256,7 +256,7 @@ target: EventTarget
 
 Object that triggers the gesture event.
 
-**Type:** [EventTarget](../../apis-arkts/arkts-apis/arkts-arkts-worker-eventtarget-i.md)
+**Type:** [EventTarget](arkts-arkui-eventtarget-i.md)
 
 **Since:** 8
 

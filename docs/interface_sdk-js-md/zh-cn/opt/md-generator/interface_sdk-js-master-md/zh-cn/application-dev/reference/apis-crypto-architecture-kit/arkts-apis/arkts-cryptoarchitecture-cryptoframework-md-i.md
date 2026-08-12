@@ -1,6 +1,6 @@
 # Md
 
-消息摘要接口，定义计算消息摘要的方法。调用前，需通过[createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd)方法创建一个Md实例。
+消息摘要接口，定义计算消息摘要的方法。调用前，需通过[createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createMd)方法创建一个Md实例。
 
 **起始版本：** 9
 
@@ -42,8 +42,8 @@ digest(callback: AsyncCallback<DataBlob>): void
 
 | 错误码ID |
 | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -86,14 +86,14 @@ digest(): Promise<DataBlob>
 
 | 类型 |
 | --- |
-| Promise&lt;DataBlob&gt; |
+| Promise & lt;DataBlob & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -204,7 +204,7 @@ digestSync(): DataBlob
 
 生成消息摘要，通过同步方式返回摘要计算结果。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link digest}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[digest](#digest)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -224,10 +224,10 @@ digestSync(): DataBlob
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
 
 ## 示例
 
@@ -349,7 +349,7 @@ getMdLength(): number
 
 | 错误码ID |
 | --- |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
 
 ## 示例
 
@@ -400,9 +400,9 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## update
 
@@ -439,15 +439,15 @@ update(input: DataBlob): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## updateSync
 
@@ -462,7 +462,7 @@ updateSync(input: DataBlob): void
 > Md算法多次调用updateSync更新的代码示例详见开发指导
 > [分段摘要算法](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#分段摘要算法)。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link update}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[update](update)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -482,9 +482,9 @@ updateSync(input: DataBlob): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## algName
 

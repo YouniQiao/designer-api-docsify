@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## on('error')
@@ -31,7 +31,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. It is fixed at **'error'**. |
-| observer | [ErrorObserver](arkts-ability-errormanager-errorobserver-t.md) | Yes | Error observer instance. |
+| observer | ErrorObserver | Yes | Error observer instance. |
 
 **Return value:**
 
@@ -43,8 +43,8 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
 
 ## Examples
 
@@ -102,13 +102,13 @@ This API can only be used in the main thread. If a thread error occurs, an error
 | --- | --- | --- | --- |
 | type | 'loopObserver' | Yes | Event type. It is fixed at **'loopObserver'**, indicating an observer for the message processing duration of the main thread. |
 | timeout | number | Yes | Event execution threshold, in milliseconds. The value must be greater than **0**.The unit is milliseconds(ms). |
-| observer | [LoopObserver](arkts-ability-loopobserver-i.md) | Yes | Observer to register. |
+| observer | LoopObserver | Yes | Observer to register. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -156,8 +156,8 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 
 ## Examples
 
@@ -212,8 +212,8 @@ Registers a rejected promise observer with any thread in the process. Once regis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 
 ## Examples
 
@@ -253,7 +253,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 > **NOTE：**
 > 
 > If the callback function runs for more than 1 second, the
-> [AppRecovery](arkts-app-ability-apprecovery.md) feature may not work. The execution duration can
+> [AppRecovery](arkts-app-ability-apprecovery.md#appRecovery) feature may not work. The execution duration can
 > be calculated by parsing the time difference between **begin** and **Freeze callback execution completed** in
 > HiLogs. If the execution duration exceeds 1 second, you can optimize the callback logic by using methods such as
 > asynchronous processing, reducing operations that block other tasks, and optimizing the data structures to reduce
@@ -280,7 +280,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -323,8 +323,8 @@ Registers a global error observer via the **errorManager.on** API within any thr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16200001](../errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | If the caller is invalid. |
 
 ## Examples
 

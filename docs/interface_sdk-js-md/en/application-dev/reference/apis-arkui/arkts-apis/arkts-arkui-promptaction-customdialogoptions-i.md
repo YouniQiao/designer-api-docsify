@@ -2,7 +2,7 @@
 
 Dialog's custom content options
 
-**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
+**Inheritance/Implementation:** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Dialog's custom content options
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -26,7 +26,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines the customDialog's background blur Style
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -48,7 +48,7 @@ backgroundColor?: ResourceColor
 
 Defines the custom dialog's background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ borderColor?: ResourceColor | EdgeColors
 
 Defines the custom dialog's border color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**Type:** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md)
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the custom dialog's border style.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ borderWidth?: Dimension | EdgeWidths
 
 Defines the custom dialog's border width.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths
+**Type:** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md)
 
 **Since:** 23
 
@@ -128,7 +128,7 @@ builder: CustomBuilder
 
 Allow developer custom dialog's content.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 23
 
@@ -148,7 +148,7 @@ cornerRadius?: Dimension | BorderRadiuses
 
 Defines the custom dialog's corner radius.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
+**Type:** Dimension \| BorderRadiuses
 
 **Since:** 23
 
@@ -168,7 +168,7 @@ height?: Dimension
 
 Defines the custom dialog's height.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 
@@ -188,7 +188,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the custom dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 23
 
@@ -208,7 +208,7 @@ width?: Dimension
 
 Defines the custom dialog's width.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 

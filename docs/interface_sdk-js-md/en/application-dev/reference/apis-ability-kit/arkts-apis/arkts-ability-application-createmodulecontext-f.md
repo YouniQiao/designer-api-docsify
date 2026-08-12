@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createModuleContext
@@ -13,7 +13,7 @@ export function createModuleContext(context: Context, moduleName: string): Promi
 ```
 
 Creates the context for a module. The  
-[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md/arkts-localization-resourcemanager-configuration-c.md) in the created module context inherits from the input context, making it convenient for you to access  
+[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md#Configuration) in the created module context inherits from the input context, making it convenient for you to access  
 [application resources across HAP/HSP packages](../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources). This API uses a promise to return the result.
 
 > **NOTE：**
@@ -51,7 +51,7 @@ Creates the context for a module. The
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 

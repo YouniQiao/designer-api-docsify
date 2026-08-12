@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createRecord
@@ -39,4 +39,4 @@ Creates a **PasteDataRecord** object of the specified type.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

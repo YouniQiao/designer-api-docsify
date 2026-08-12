@@ -25,8 +25,8 @@ export declare function ListItemGroup(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](../arkts-components/arkts-arkui-listitemgroupoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
+| options | [ListItemGroupOptions](arkts-arkui-listitemgroup-listitemgroupoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ export declare function ListItemGroup(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ListItemGroupAttribute&gt; | 是 | 创建ListItemGroup的样式 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ListItemGroupAttribute](arkts-arkui-listitemgroup-listitemgroupattribute-i.md)&gt; | 是 | 创建ListItemGroup的样式 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 

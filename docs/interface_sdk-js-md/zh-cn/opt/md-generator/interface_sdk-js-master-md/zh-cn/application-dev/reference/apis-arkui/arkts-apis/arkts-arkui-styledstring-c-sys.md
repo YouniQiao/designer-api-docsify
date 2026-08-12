@@ -14,7 +14,7 @@
 static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)。
 
 当属性字符串包含UserDataSpan等自定义样式，需要自定义序列化逻辑时使用此方法；不包含自定义样式时使用基础版marshalling方法即可。
 
@@ -32,7 +32,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | 是 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
 | callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 |
 
 **返回值：**
@@ -63,7 +63,7 @@ static marshalling(styledString: StyledString): ArrayBuffer
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | 是 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 |
 
 **返回值：**
 
@@ -77,7 +77,7 @@ static marshalling(styledString: StyledString): ArrayBuffer
 static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)。
 
 当需要从序列化数据中恢复包含UserDataSpan等自定义样式的属性字符串时使用此方法；恢复不含自定义样式的属性字符串时使用基础版unmarshalling方法即可。
 
@@ -102,14 +102,14 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | 类型 |
 | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [170002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## unmarshalling
 
@@ -141,11 +141,11 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 | 类型 |
 | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [170002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

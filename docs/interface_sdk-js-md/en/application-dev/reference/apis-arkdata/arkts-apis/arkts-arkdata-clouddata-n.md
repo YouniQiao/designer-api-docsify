@@ -15,7 +15,7 @@ Device-cloud synergy enables sync of the structured data (in RDB stores) between
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## Summary

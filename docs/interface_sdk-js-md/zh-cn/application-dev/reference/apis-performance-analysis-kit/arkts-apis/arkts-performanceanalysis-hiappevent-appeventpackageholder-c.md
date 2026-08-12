@@ -16,7 +16,7 @@
 constructor(watcherName: string)
 ```
 
-类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
+类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ constructor(watcherName: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watcherName | string | 是 | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
+| watcherName | string | 是 | 已通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)添加的事件观察者名称。若未通过addWatcher添加，则默认无数据。 |
 
 ## 示例
 
@@ -85,8 +85,8 @@ setRow(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [11104001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 ## 示例
 
@@ -131,8 +131,8 @@ setSize(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [11104001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-非法的事件包大小值) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 ## 示例
 

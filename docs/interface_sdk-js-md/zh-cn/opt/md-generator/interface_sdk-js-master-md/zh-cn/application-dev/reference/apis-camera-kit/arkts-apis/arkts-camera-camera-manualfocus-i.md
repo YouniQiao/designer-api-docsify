@@ -2,7 +2,7 @@
 
 ManualFocus object.
 
-**继承/实现关系：** ManualFocus extends [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md)
+**继承/实现关系：** ManualFocus extends [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md#ManualFocusQuery)
 
 **起始版本：** 24
 
@@ -36,9 +36,9 @@ Gets current focus distance, ranging from 0.0 to 1.0, with 0.0 being shortest di
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setFocusDistance
 
@@ -66,7 +66,7 @@ Sets focus distance. Possible distance values range from 0.0 to 1.0, with 0.0 be
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

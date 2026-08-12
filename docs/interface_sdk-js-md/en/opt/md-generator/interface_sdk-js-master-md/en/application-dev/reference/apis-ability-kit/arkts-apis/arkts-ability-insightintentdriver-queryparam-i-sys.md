@@ -13,7 +13,7 @@ Param when query insight intent entity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName

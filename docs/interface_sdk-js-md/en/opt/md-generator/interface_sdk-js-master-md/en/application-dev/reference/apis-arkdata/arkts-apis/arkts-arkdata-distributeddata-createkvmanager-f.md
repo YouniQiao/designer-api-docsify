@@ -12,7 +12,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore#createKVManager
+**Substitutes:** [createKVManager](ohos.data.distributedKVStore#createKVManager)
 
 <!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void--><!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void-End-->
 
@@ -63,7 +63,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore#createKVManager
+**Substitutes:** [createKVManager](ohos.data.distributedKVStore#createKVManager)
 
 <!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>--><!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>-End-->
 
@@ -79,7 +79,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;KVManager&gt; |
+| Promise & lt;KVManager & gt; |
 
 ## Examples
 

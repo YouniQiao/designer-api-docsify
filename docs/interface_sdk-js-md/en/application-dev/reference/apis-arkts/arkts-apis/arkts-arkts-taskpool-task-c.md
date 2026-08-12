@@ -13,7 +13,7 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addDependency
@@ -38,15 +38,15 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | Task[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200026](../errorcode-utils.md#10200026-task-with-a-cyclic-dependency) | There is a circular dependency. |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
+| [10200026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200026-task-with-a-cyclic-dependency) | There is a circular dependency. |
+| [10200056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
+| [10200052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -110,7 +110,7 @@ A constructor used to create a **Task** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
 ## Examples
 
@@ -154,7 +154,7 @@ A constructor used to create a **Task** instance, with the task name specified.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
 ## Examples
 
@@ -323,7 +323,7 @@ Register a callback function and call it when a task is enqueued.The registratio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
 ## Examples
 
@@ -376,7 +376,7 @@ Register a callback function and call it when a task fails to be executed(Period
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
 ## Examples
 
@@ -435,7 +435,7 @@ Register a callback function and call it when a task is executed successfully.Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
 ## Examples
 
@@ -539,7 +539,7 @@ Register a callback function and call it when the execution of a task starts.The
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) | The executed task does not support the registration of listeners. |
 
 ## Examples
 
@@ -586,15 +586,15 @@ Removes dependent tasks for this task. Before using this method, you need to con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
+| tasks | Task[] | Yes | Array of tasks on which the current task depends. The default value is **undefined**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200027](../errorcode-utils.md#10200027-dependency-does-not-exist) | The dependency does not exist. |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
+| [10200027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200027-dependency-does-not-exist) | The dependency does not exist. |
+| [10200056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) | The task has been executed by the AsyncRunner.<br>**Applicable version:** 18 and later |
+| [10200052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) | The periodic task cannot have a dependency.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -674,10 +674,10 @@ Sends data to the host thread and triggers the registered callback. Before calli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200024](../errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) | The callback is not registered on the host side. |
-| [10200023](../errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) | The function is not called in the concurrent function. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200022](../errorcode-utils.md#10200022-functions-not-called-in-taskpool) | The function is not called in the TaskPool thread. |
+| [10200024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) | The callback is not registered on the host side. |
+| [10200023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) | The function is not called in the concurrent function. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200022-functions-not-called-in-taskpool) | The function is not called in the TaskPool thread. |
 
 ## Examples
 
@@ -770,7 +770,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
+| [10200029](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
 
 ## Examples
 
@@ -936,7 +936,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**Applicable version:** 11 and later |
+| [10200029](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**Applicable version:** 11 and later |
 
 ## Examples
 

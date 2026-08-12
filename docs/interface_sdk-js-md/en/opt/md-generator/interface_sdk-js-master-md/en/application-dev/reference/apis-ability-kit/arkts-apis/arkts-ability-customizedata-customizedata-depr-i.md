@@ -5,13 +5,13 @@ The CustomizeData module provides custom metadata.
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [Metadata](arkts-ability-metadata-i.md) instead.
+> [Metadata](arkts-ability-metadata-i.md#Metadata) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [./../bundleManager/Metadata:Metadata](arkts-ability-metadata-i.md)
+**Substitutes:** [Metadata](arkts-ability-metadata-i.md#Metadata)
 
 <!--Device-unnamed-export interface CustomizeData--><!--Device-unnamed-export interface CustomizeData-End-->
 
@@ -33,7 +33,7 @@ Custom format of the data element. The value is an index to the resource that id
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.Metadata#resource
+**Substitutes:** [resource](ohos.bundle.bundleManager/bundleManager.Metadata#resource)
 
 <!--Device-CustomizeData-extra: string--><!--Device-CustomizeData-extra: string-End-->
 
@@ -55,7 +55,7 @@ Key that identifies a data element.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.Metadata#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.Metadata#name)
 
 <!--Device-CustomizeData-name: string--><!--Device-CustomizeData-name: string-End-->
 
@@ -77,7 +77,7 @@ Value of the data element.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.Metadata#value
+**Substitutes:** [value](ohos.bundle.bundleManager/bundleManager.Metadata#value)
 
 <!--Device-CustomizeData-value: string--><!--Device-CustomizeData-value: string-End-->
 

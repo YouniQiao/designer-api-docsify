@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## setSync
@@ -20,7 +20,7 @@ Sets a value for the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.setSync
+**Substitutes:** [setSync](ohos.systemParameterEnhance.setSync)
 
 <!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
 

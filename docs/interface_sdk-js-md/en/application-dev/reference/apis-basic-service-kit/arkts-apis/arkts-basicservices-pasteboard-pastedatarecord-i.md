@@ -1,6 +1,6 @@
 # PasteDataRecord
 
-Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord.If you need to refresh the attribute value of the PasteDataRecord,please use [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry).
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord.If you need to refresh the attribute value of the PasteDataRecord,please use [addEntry](#addEntry).
 
 **Since:** 7
 
@@ -13,7 +13,7 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addEntry
@@ -23,7 +23,7 @@ addEntry(type: string, value: ValueType): void
 ```
 
 Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the  
-[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API to read the corresponding data.
+[getData](#getData) API to read the corresponding data.
 
 **Since:** 14
 
@@ -38,13 +38,13 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Type of extra data. The value can be a predefined MIME type listed in [Constants](../../../reference/apis-basic-services-kit/js-apis-pasteboard.md#constants), including HTML, Want, plain text, URI, and PixelMap, or a custom type. The value of **mimeType** cannot exceed 1024 bytes. |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Content of extra data. |
+| value | ValueType | Yes | Content of extra data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -69,7 +69,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteDataRecord.toPlainText](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext)()
+**Substitutes:** [toPlainText](#toPlainText)()
 
 <!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void--><!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void-End-->
 
@@ -79,13 +79,13 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: Incorrect parameters types. |
 
 ## Examples
 
@@ -116,7 +116,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteDataRecord.toPlainText](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext)()
+**Substitutes:** [toPlainText](#toPlainText)()
 
 <!--Device-PasteDataRecord-convertToText(): Promise<string>--><!--Device-PasteDataRecord-convertToText(): Promise<string>-End-->
 
@@ -173,7 +173,7 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -230,7 +230,7 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -288,7 +288,7 @@ data: Record<string, ArrayBuffer>
 
 Content of custom data.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ArrayBuffer&gt;
+**Type:** Record&lt;string, ArrayBuffer&gt;
 
 **Since:** 9
 

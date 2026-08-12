@@ -9,7 +9,7 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。
 
 调用installDLPSandbox成功后必须在使用完毕后调用  
-[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox)卸载沙箱。
+[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstallDLPSandbox)卸载沙箱。
 
 DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
 
@@ -36,17 +36,17 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 
 | 类型 |
 | --- |
-| Promise&lt;DLPSandboxInfo&gt; |
+| Promise&lt;[DLPSandboxInfo](arkts-dataprotection-dlppermission-dlpsandboxinfo-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -72,7 +72,7 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。
 
 调用installDLPSandbox成功后必须在使用完毕后调用  
-[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox)卸载沙箱。
+[uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstallDLPSandbox)卸载沙箱。
 
 DLP文件管理应用打开受保护文件前，需要先为目标应用安装DLP沙箱。
 
@@ -94,17 +94,17 @@ DLP文件管理应用打开受保护文件前，需要先为目标应用安装DL
 | access | [DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md) | 是 |
 | userId | number | 是 |
 | uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DLPSandboxInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPSandboxInfo](arkts-dataprotection-dlppermission-dlpsandboxinfo-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

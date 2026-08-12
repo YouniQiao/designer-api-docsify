@@ -21,7 +21,7 @@ function once(event: InnerEvent, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -61,7 +61,7 @@ function once(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -97,7 +97,7 @@ function once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## triggerAsync
@@ -31,8 +31,8 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the WantAgent. |
-| triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i-sys.md) | Yes | Indicates the information required for triggering a WantAgent. |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | Indicates current context. |
+| triggerInfo | TriggerInfo | Yes | Indicates the information required for triggering a WantAgent. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Indicates current context. |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ Asynchronously triggers a predefined operation encration encapsulated in a Wanta
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000020](../errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) | The context is not ability context. |
-| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
-| [16000153](../errorcode-ability.md#16000153-wantagent-object-is-canceled) | The WantAgent has been canceled. |
+| [16000020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) | The context is not ability context. |
+| [16000151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not system-app, can not use system-api. |
+| [16000153](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000153-wantagent-object-is-canceled) | The WantAgent has been canceled. |
 
 ## Examples
 

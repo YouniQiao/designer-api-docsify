@@ -11,7 +11,7 @@ Describes the parameters for starting and updating the floating ball.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -73,7 +73,7 @@ The color of the floating ball content, in hexadecimal format without opacity(e.
 icon?: image.PixelMap
 ```
 
-Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md#getpixelbytesnumber)). The recommended size is 128 px * 128 px. Actual display may vary based on the device capability and floating ball UI style.
+Icon of the floating ball. The total number of bytes of the icon pixels cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)). The recommended size is 128 px * 128 px. Actual display may vary based on the device capability and floating ball UI style.
 
 **Type:** image.PixelMap
 

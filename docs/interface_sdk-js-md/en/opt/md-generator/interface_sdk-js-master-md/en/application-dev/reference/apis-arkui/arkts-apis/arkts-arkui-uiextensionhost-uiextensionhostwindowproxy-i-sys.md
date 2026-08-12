@@ -13,7 +13,7 @@ Transition Controller
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from 'kits/@kit.ArkUI';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## createSubWindowWithOptions
@@ -39,22 +39,22 @@ Creates a subwindow for this **UIExtensionHostWindowProxy** instance. This API u
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | name | string | Yes |
-| subWindowOptions | window.SubWindowOptions | Yes |
+| [subWindowOptions](arkts-arkui-window-extensionwindowconfig-i-sys.md) | window.SubWindowOptions | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;window.Window&gt; |
+| Promise & lt;window.Window & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 1300035 |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -134,15 +134,15 @@ Create subwindow.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;window.Window&gt; |
+| Promise & lt;window.Window & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 1300035 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -225,7 +225,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -256,8 +256,8 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 > **NOTE：**
 > 
 > - A non-secure window refers to any window that may obstruct the
-> [EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i) or
-> [UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i), such as global floating windows
+> [EmbeddedComponent](./@internal/component/ets/embedded_component) or
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows
 > , host subwindows, and dialog box windows created by the host application (excluding windows of these types
 > created by system applications).
 > 
@@ -291,16 +291,16 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -367,15 +367,15 @@ Sets whether to enable privacy protection for the UIExtension component during n
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -426,8 +426,8 @@ Unsubscribes from events of system avoidance area changes.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -473,8 +473,8 @@ Unsubscribes from size change events of the component (**EmbeddedComponent** or 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -520,8 +520,8 @@ Subscribes to events of system avoidance area changes.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -569,8 +569,8 @@ Subscribes to size change events of the component (**EmbeddedComponent** or **UI
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -622,15 +622,15 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300008](../errorcode-window.md#1300008-display-device-exception) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 
@@ -670,7 +670,7 @@ properties: UIExtensionHostWindowProxyProperties
 Information about the host application window and the **UIExtensionComponent**.
 
 Note: Due to architecture restrictions, avoid obtaining the value in  
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate). Instead, when possible, obtain the value after receiving the  
+[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate). Instead, when possible, obtain the value after receiving the  
 [on('windowSizeChange')](@ohos.uiExtensionHost:uiExtensionHost.UIExtensionHostWindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))callback.
 
 **Type:** [UIExtensionHostWindowProxyProperties](arkts-arkui-uiextensionhost-uiextensionhostwindowproxyproperties-i-sys.md)

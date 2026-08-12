@@ -13,7 +13,7 @@ Array of tab bar container configurations.
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -39,8 +39,8 @@ A constructor used to create a **TabBarOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes | Image for the tab. |
-| text | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Text of the tab. |
-| unselectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is not selected. &lt;br&gt;Default value: **#99182431 |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | Color of the tab when it is selected. &lt;br&gt;Default value: **#FF007DFF |
+| icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab. |
+| text | ResourceStr | Yes | Text of the tab. |
+| unselectedColor | ResourceColor | No | Color of the tab when it is not selected. &lt;br&gt;Default value: **#99182431 |
+| selectedColor | ResourceColor | No | Color of the tab when it is selected. &lt;br&gt;Default value: **#FF007DFF |
 

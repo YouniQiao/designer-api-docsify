@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
+import { pointer } from '@kit.InputKit';
 ```
 
 ## getPointerStyle
@@ -26,14 +26,14 @@ Obtains the mouse pointer style type of a specified window. This API can obtain 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. &lt;br&gt;If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. &lt;br&gt;If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle), this API can obtain the mouse pointer style properly. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PointerStyle&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the mouse pointer style type. Otherwise, **err** is an error object. In specific scenarios (obtaining the style on a window with a custom pointer style), **DEVELOPER_DEFINED_ICON** is returned. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. &lt;br&gt;If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. &lt;br&gt;If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setPointerStyle), this API can obtain the mouse pointer style properly. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PointerStyle&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the mouse pointer style type. Otherwise, **err** is an error object. In specific scenarios (obtaining the style on a window with a custom pointer style), **DEVELOPER_DEFINED_ICON** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -94,7 +94,7 @@ Obtains the mouse pointer style type. This API can obtain only the mouse pointer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. &lt;br&gt;If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. &lt;br&gt;If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle), this API can obtain the mouse pointer style properly. |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. &lt;br&gt;If the window ID is valid and the corresponding window exists, the mouse pointer style of the window is returned. &lt;br&gt;If the window ID is valid but the window does not exist, the global mouse pointer style is returned by default. &lt;br&gt;If the mouse pointer style is set for a non-existent window through [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setPointerStyle), this API can obtain the mouse pointer style properly. |
 
 **Return value:**
 
@@ -106,7 +106,7 @@ Obtains the mouse pointer style type. This API can obtain only the mouse pointer
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

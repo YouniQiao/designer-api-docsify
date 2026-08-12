@@ -2,7 +2,7 @@
 
 可扩展的ListItem组件。
 
-**继承/实现关系：** ExtendableListItem implements [ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md)
+**继承/实现关系：** ExtendableListItem implements [ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md#ListItemAttribute)
 
 **起始版本：** 26.0.0
 
@@ -39,8 +39,8 @@ static $_instantiate<T extends ExtendableListItem>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| value | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| value | [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -76,9 +76,9 @@ static _instantiateImpl<T extends ExtendableListItem>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setListItemOptions
 
@@ -102,7 +102,7 @@ public setListItemOptions(value?: ListItemOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | 否 |  |
+| value | [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | 否 |  |
 
 **返回值：**
 

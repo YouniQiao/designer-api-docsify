@@ -22,25 +22,25 @@ function setSimLabelIndex(simId: number, simLabelIndex: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| simId | number | 是 |
-| simLabelIndex | number | 是 |
+| [simId](arkts-telephony-sim-iccaccountinfo-i.md) | number | 是 |
+| [simLabelIndex](arkts-telephony-sim-iccaccountinfo-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

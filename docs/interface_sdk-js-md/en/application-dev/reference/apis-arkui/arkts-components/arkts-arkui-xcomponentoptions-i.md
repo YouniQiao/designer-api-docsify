@@ -18,7 +18,7 @@ controller: XComponentController
 
 Controller bound to the component, which can be used to invoke methods of the component. This parameter is effective only when **type** is **SURFACE** or **TEXTURE**.
 
-**Type:** [XComponentController](../arkts-apis/arkts-arkui-xcomponent-xcomponentcontroller-c.md)
+**Type:** [XComponentController](arkts-arkui-xcomponentcontroller-c.md)
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ imageAIOptions?: ImageAIOptions
 
 AI analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
+**Type:** ImageAIOptions
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ type: XComponentType
 
 Type of the component.
 
-**Type:** [XComponentType](../arkts-apis/arkts-arkui-xcomponenttype-e.md)
+**Type:** XComponentType
 
 **Since:** 12
 

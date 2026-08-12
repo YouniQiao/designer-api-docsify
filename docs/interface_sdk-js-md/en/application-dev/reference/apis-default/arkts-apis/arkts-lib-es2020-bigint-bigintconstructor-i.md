@@ -78,7 +78,7 @@ Interprets the low bits of a BigInt as an unsigned integer.All higher bits are d
 readonly prototype: BigInt
 ```
 
-**Type:** [BigInt](../../apis-arkts/arkts-apis/arkts-arkts-bigint-c.md)
+**Type:** [BigInt](arkts-lib-es2020-bigint-bigint-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

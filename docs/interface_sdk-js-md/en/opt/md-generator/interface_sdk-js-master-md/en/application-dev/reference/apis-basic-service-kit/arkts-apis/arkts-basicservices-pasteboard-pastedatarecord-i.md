@@ -1,6 +1,6 @@
 # PasteDataRecord
 
-Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord.If you need to refresh the attribute value of the PasteDataRecord,please use [addEntry](arkts-basicservices-pasteboard-pastedatarecord-i.md#addentry).
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord.If you need to refresh the attribute value of the PasteDataRecord,please use [addEntry](#addEntry).
 
 **Since:** 7
 
@@ -11,7 +11,7 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addEntry
@@ -21,7 +21,7 @@ addEntry(type: string, value: ValueType): void
 ```
 
 Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the  
-[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata) API to read the corresponding data.
+[getData](#getData) API to read the corresponding data.
 
 **Since:** 14
 
@@ -40,7 +40,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -67,7 +67,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteDataRecord.toPlainText](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext)()
+**Substitutes:** [toPlainText](#toPlainText)()
 
 <!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void--><!--Device-PasteDataRecord-convertToText(callback: AsyncCallback<string>): void-End-->
 
@@ -83,7 +83,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -112,7 +112,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteDataRecord.toPlainText](arkts-basicservices-pasteboard-pastedatarecord-i.md#toplaintext)()
+**Substitutes:** [toPlainText](#toPlainText)()
 
 <!--Device-PasteDataRecord-convertToText(): Promise<string>--><!--Device-PasteDataRecord-convertToText(): Promise<string>-End-->
 
@@ -122,7 +122,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -161,13 +161,13 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ValueType&gt; |
+| Promise & lt;ValueType & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -210,19 +210,19 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;string&gt; | Yes |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

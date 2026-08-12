@@ -66,7 +66,7 @@ position?: MenuGridPosition
 
 The position of grid.
 
-**Type:** [MenuGridPosition](../arkts-apis/arkts-arkui-common-menugridposition-e.md)
+**Type:** [MenuGridPosition](arkts-arkui-menugridposition-e.md)
 
 **Default:** MenuGridPosition.TOP
 

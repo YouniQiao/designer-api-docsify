@@ -36,7 +36,7 @@ String.raw is usually used as a tag function of a Tagged Template String. When c
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| template | { raw: readonly string[] \| [ArrayLike&lt;string&gt;}](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| template | { raw: readonly string[] \| [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;string&gt;} | Yes |
 | substitutions | any[] | Yes |
 
 **Return value:**

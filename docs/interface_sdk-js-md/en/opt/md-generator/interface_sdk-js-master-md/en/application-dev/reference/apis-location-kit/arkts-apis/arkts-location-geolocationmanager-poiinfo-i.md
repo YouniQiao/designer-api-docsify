@@ -11,7 +11,7 @@ Describes the POI information struct.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## poiArray
@@ -22,7 +22,7 @@ poiArray: Array<Poi>
 
 Indicates POI information list.
 
-**Type:** Array&lt;Poi&gt;
+**Type:** Array&lt;[Poi](arkts-location-geolocationmanager-poi-i.md)&gt;
 
 **Since:** 19
 

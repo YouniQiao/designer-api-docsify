@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-unnamed-declare interface Dirent--><!--Device-unnamed-declare interface Dirent-End-->
 
@@ -28,7 +28,7 @@ isBlockDevice(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isBlockDevice(): boolean--><!--Device-Dirent-isBlockDevice(): boolean-End-->
 
@@ -61,7 +61,7 @@ isCharacterDevice(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isCharacterDevice(): boolean--><!--Device-Dirent-isCharacterDevice(): boolean-End-->
 
@@ -94,7 +94,7 @@ isDirectory(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isDirectory(): boolean--><!--Device-Dirent-isDirectory(): boolean-End-->
 
@@ -127,7 +127,7 @@ isFIFO(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isFIFO(): boolean--><!--Device-Dirent-isFIFO(): boolean-End-->
 
@@ -160,7 +160,7 @@ isFile(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isFile(): boolean--><!--Device-Dirent-isFile(): boolean-End-->
 
@@ -193,7 +193,7 @@ isSocket(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isSocket(): boolean--><!--Device-Dirent-isSocket(): boolean-End-->
 
@@ -226,7 +226,7 @@ isSymbolicLink(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-isSymbolicLink(): boolean--><!--Device-Dirent-isSymbolicLink(): boolean-End-->
 
@@ -261,7 +261,7 @@ readonly name: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dirent-readonly name: string--><!--Device-Dirent-readonly name: string-End-->
 

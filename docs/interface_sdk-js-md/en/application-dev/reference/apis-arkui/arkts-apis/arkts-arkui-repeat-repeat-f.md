@@ -28,7 +28,7 @@ Indicates the type of Repeat.
 
 | Type | Description |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| [RepeatAttribute](arkts-arkui-repeat-repeatattribute-i.md)&lt;T&gt; |  |
 
 
 ## Repeat
@@ -57,11 +57,11 @@ Defines Repeat Component. It requires calling setRepeatOptions at start of compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RepeatAttribute&lt;T&gt;&gt; | Yes | callback to set up Repeat's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RepeatAttribute](arkts-arkui-repeat-repeatattribute-i.md)&lt;T&gt;&gt; | Yes | callback to set up Repeat's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | The attribute of Repeat. |
+| [RepeatAttribute](arkts-arkui-repeat-repeatattribute-i.md)&lt;T&gt; | The attribute of Repeat. |
 

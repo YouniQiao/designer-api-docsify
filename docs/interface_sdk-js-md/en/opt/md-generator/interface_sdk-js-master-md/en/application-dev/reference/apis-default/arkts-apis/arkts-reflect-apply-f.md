@@ -18,7 +18,7 @@ Calls the function with the specified object as the this value and the elements 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| target | (this: T, ...args: A) =&gt; R | Yes |
+| target | (this: T, ...args: A) = & gt; R | Yes |
 | thisArgument | T | Yes |
 | argumentsList | [Readonly](arkts-readonly-t.md)&lt;A&gt; | Yes |
 
@@ -41,7 +41,7 @@ function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any
 | --- | --- | --- |
 | target | Function | Yes |
 | thisArgument | any | Yes |
-| argumentsList | [ArrayLike&lt;any&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| argumentsList | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;any&gt; | Yes |
 
 **Return value:**
 

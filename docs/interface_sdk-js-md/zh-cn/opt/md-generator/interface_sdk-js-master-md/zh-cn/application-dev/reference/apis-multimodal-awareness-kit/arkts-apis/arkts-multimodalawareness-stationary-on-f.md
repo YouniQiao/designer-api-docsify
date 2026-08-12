@@ -21,7 +21,7 @@ function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: numbe
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 |
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 |
 | reportLatencyNs | number | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 是 |
 
 ## 示例
 

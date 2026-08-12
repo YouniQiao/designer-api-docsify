@@ -7,7 +7,7 @@ function isOpenAccessibilitySync(): boolean
 ```
 
 查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用  
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync)。
 
 **起始版本：** 10
 

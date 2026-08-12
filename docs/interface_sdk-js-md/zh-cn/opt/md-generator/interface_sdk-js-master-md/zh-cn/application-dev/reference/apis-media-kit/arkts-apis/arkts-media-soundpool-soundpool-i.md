@@ -14,7 +14,7 @@
 > > - [on('playFinished')](SoundPool.on(type: 'playFinishedWithStreamId', callback: Callback&lt;int&gt;))：监听播放完成。
 > > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback))：监听错误事件。
 > > - [on('errorOccurred')](SoundPool.on(type:'errorOccurred', callback:Callback&lt;ErrorInfo&gt;))：监听错误事件，同时返回
-> [errorInfo](arkts-media-soundpool-errorinfo-i.md)。
+> [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo)。
 > 
 > - SoundPool目前不支持后台播放、设置音频打断等音频焦点策略和跳过音频头尾的静音帧。SoundPool低时延播放可参考
 > [使用SoundPool播放短音频(ArkTS)](../../../media/media/using-soundpool-for-playback.md)。
@@ -36,8 +36,8 @@ load(uri: string, callback: AsyncCallback<number>): void
 通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
 
 该方法不支持加载rawfile目录资源，需要通过  
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)或者  
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load)实现。
+[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者  
+[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3)实现。
 
 > **说明：**
 > 
@@ -62,9 +62,9 @@ load(uri: string, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## load
 
@@ -77,8 +77,8 @@ load(uri: string): Promise<number>
 通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
 
 该方法不支持加载rawfile目录资源，需要通过  
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)或者  
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load)实现。
+[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者  
+[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3)实现。
 
 > **说明：**
 > 
@@ -102,15 +102,15 @@ load(uri: string): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## load
 
@@ -147,9 +147,9 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## load
 
@@ -185,15 +185,15 @@ load(fd: number, offset: number, length: number): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## off('loadComplete')
 
@@ -294,7 +294,7 @@ off(type: 'errorOccurred', callback?:Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'errorOccurred' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 否 |
 
 ## on('loadComplete')
 
@@ -392,7 +392,7 @@ on(type: 'playFinishedWithStreamId', callback: Callback<number>): void
 on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 ```
 
-监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。使用callback异步回调。
+监听[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool)的错误事件，并返回包含错误码、错误发生阶段、资源ID和音频流ID的[ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo)。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -405,7 +405,7 @@ on(type:'errorOccurred', callback:Callback<ErrorInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'errorOccurred' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 |
 
 ## play
 
@@ -426,16 +426,16 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | soundID | number | 是 |
-| params | [PlayParameters](arkts-media-media-playparameters-t.md) | 是 |
+| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## play
 
@@ -462,9 +462,9 @@ play(soundID: number, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## play
 
@@ -485,21 +485,21 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | soundID | number | 是 |
-| params | [PlayParameters](arkts-media-media-playparameters-t.md) | 否 |
+| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## release
 
@@ -525,7 +525,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## release
 
@@ -545,13 +545,13 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setInterruptMode
 
@@ -602,9 +602,9 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setLoop
 
@@ -631,15 +631,15 @@ setLoop(streamID: number, loop: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setPriority
 
@@ -667,9 +667,9 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setPriority
 
@@ -696,15 +696,15 @@ setPriority(streamID: number, priority: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setRate
 
@@ -732,9 +732,9 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setRate
 
@@ -761,15 +761,15 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setVolume
 
@@ -790,17 +790,17 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | streamID | number | 是 |
-| leftVolume | number | 是 |
-| rightVolume | number | 是 |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setVolume
 
@@ -821,22 +821,22 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | streamID | number | 是 |
-| leftVolume | number | 是 |
-| rightVolume | number | 是 |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## stop
 
@@ -863,9 +863,9 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## stop
 
@@ -891,15 +891,15 @@ stop(streamID: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## unload
 
@@ -926,9 +926,9 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## unload
 
@@ -954,12 +954,12 @@ unload(soundID: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |

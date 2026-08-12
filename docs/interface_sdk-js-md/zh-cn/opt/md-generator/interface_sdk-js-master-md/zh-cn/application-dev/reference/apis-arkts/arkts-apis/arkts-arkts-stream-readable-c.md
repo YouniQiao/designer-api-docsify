@@ -147,7 +147,7 @@ readableStream.on("data", () => {
 isPaused(): boolean
 ```
 
-检查可读流是否已暂停。流在调用[pause()](arkts-arkts-stream-readable-c.md#pause)后暂停，在调用[resume()](arkts-arkts-stream-readable-c.md#resume)后从暂停状态恢复。
+检查可读流是否已暂停。流在调用[pause()](#pause)后暂停，在调用[resume()](#resume)后从暂停状态恢复。
 
 **起始版本：** 12
 
@@ -449,7 +449,7 @@ read(size?: number): string | null
 
 | 错误码ID |
 | --- |
-| [10200038](../errorcode-utils.md#10200038-doread接口未实现) |
+| [10200038](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread接口未实现) |
 
 ## 示例
 

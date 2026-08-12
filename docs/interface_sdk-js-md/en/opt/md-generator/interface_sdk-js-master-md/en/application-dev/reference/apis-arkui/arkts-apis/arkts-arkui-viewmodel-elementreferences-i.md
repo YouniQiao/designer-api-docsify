@@ -14,6 +14,6 @@ Element References
 [k: string]: object & ListElement & ImageAnimatorElement
 ```
 
-**Type:** object & ListElement & ImageAnimatorElement
+**Type:** object & [ListElement](arkts-arkui-viewmodel-listelement-i.md) & [ImageAnimatorElement](arkts-arkui-viewmodel-imageanimatorelement-i.md)
 
 <!--Device-ElementReferences-[k: string]: object & ListElement & ImageAnimatorElement--><!--Device-ElementReferences-[k: string]: object & ListElement & ImageAnimatorElement-End-->

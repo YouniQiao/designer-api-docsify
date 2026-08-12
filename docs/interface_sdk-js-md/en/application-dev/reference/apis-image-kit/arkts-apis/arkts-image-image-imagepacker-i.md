@@ -3,10 +3,10 @@
 The **ImagePacker** class provides APIs to compress and encode images.
 
 Before calling any API in ImagePacker, you must use   
-[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker) to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
 
 Images occupy a large amount of memory. When you finish using an ImagePacker instance, call   
-[release](arkts-image-image-imagepacker-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
@@ -21,7 +21,7 @@ Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData
@@ -59,8 +59,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
-| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [7800202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packBinaryImageToTiffFile
 
@@ -104,8 +104,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
-| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [7800202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packToData
 
@@ -129,7 +129,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to compress or re-encode. |
+| source | ImageSource | Yes | Image source to compress or re-encode. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -142,15 +142,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToData
 
@@ -180,7 +180,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
+| source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -193,15 +193,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToDataFromPixelmapSequence
 
@@ -236,8 +236,8 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
 
 ## packToFile
 
@@ -265,24 +265,24 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to encode. |
+| source | ImageSource | Yes | Image source to encode. |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
@@ -310,7 +310,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to encode. |
+| source | ImageSource | Yes | Image source to encode. |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
@@ -324,15 +324,15 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
@@ -366,24 +366,24 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to encode. |
+| source | PixelMap | Yes | PixelMap to encode. |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
@@ -417,7 +417,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to encode. |
+| source | PixelMap | Yes | PixelMap to encode. |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
@@ -431,15 +431,15 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
@@ -481,8 +481,8 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 
 ## packToFileFromPixelmapSequence
 
@@ -524,8 +524,8 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
 
 ## packing
 
@@ -541,7 +541,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -553,9 +553,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to compress or re-encode. |
+| source | ImageSource | Yes | Image source to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
 ## packing
 
@@ -571,7 +571,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -583,7 +583,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Yes | Image source to compress or re-encode. |
+| source | ImageSource | Yes | Image source to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -612,7 +612,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -624,9 +624,9 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
+| source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
 ## packing
 
@@ -648,7 +648,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -660,7 +660,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | PixelMap to compress or re-encode. |
+| source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -702,8 +702,8 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 
 ## release
 
@@ -729,7 +729,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 

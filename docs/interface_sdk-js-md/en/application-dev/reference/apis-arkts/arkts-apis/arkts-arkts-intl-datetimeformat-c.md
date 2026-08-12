@@ -33,7 +33,7 @@ Creates a new DateTimeFormat.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No | the locales. |
-| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | No | the options. |
+| options | DateTimeFormatOptions | No | the options. |
 
 ## format
 
@@ -125,7 +125,7 @@ Formats a date range to parts.
 
 | Type | Description |
 | --- | --- |
-| [DateTimeRangeFormatPart](arkts-arkts-intl-datetimerangeformatpart-i.md)[] | formatted range parts. |
+| DateTimeRangeFormatPart[] | formatted range parts. |
 
 ## formatToParts
 
@@ -155,7 +155,7 @@ Formats a date to parts.
 
 | Type | Description |
 | --- | --- |
-| [DateTimeFormatPart](arkts-arkts-intl-datetimeformatpart-i.md)[] | formatted parts. |
+| DateTimeFormatPart[] | formatted parts. |
 
 ## resolvedOptions
 
@@ -179,7 +179,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| [ResolvedDateTimeFormatOptions](arkts-arkts-intl-resolveddatetimeformatoptions-i.md) | the resolved options. |
+| ResolvedDateTimeFormatOptions | the resolved options. |
 
 ## supportedLocalesOf
 
@@ -205,7 +205,7 @@ Returns supported locales.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| Locale \| ReadonlyArray&lt;string \| Locale&gt; | Yes | the locales. |
-| options | [DateTimeFormatOptions](arkts-arkts-intl-datetimeformatoptions-i.md) | No | the options. |
+| options | DateTimeFormatOptions | No | the options. |
 
 **Return value:**
 

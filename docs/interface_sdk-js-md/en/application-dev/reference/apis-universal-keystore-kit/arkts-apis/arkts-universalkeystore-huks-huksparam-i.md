@@ -13,7 +13,7 @@ Defines the **param** field in the **properties** array of **options** used in t
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## tag

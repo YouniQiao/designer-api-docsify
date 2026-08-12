@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 后续此接口不再新增功能，相关功能在接口[uiExtension](arkts-arkui-uiextension.md)中提供。
+> 后续此接口不再新增功能，相关功能在接口[uiExtension](arkts-arkui-uiextension.md#uiExtension)中提供。
 > 
 > 从API version 11开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 > 

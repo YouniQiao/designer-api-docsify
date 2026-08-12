@@ -1,6 +1,6 @@
 # HttpAuthHandler
 
-Defines the http auth request result, related to {@link onHttpAuthRequest} method.
+Defines the http auth request result, related to [onHttpAuthRequest](arkts-arkweb-web-webattribute-i.md#onHttpAuthRequest) method.
 
 **起始版本：** 23
 

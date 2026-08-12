@@ -13,7 +13,7 @@ A simple API for XML handling
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## characters

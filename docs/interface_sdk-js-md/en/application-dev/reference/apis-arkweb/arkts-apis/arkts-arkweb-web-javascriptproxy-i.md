@@ -36,7 +36,7 @@ controller: WebviewController
 
 Controller.
 
-**Type:** [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md)
+**Type:** [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 23
 

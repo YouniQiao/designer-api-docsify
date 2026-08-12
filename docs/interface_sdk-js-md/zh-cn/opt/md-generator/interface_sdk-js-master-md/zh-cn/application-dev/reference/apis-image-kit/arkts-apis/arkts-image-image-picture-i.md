@@ -1,8 +1,8 @@
 # Picture
 
-Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md#createpicture)创建一个Picture实例。
+Picture类，一些包含特殊信息的图片可以解码为Picture（也可以称为多图对象）。多图对象一般包含主图、辅助图和元数据。其中主图包含图像的大部分信息，主要用于显示图像内容；辅助图用于存储与主图相关但不同的数据，展示图像更丰富的信息；元数据一般用来存储关于图像文件的信息。多图对象类用于读取或写入多图对象。在调用Picture的方法前，需要先通过[image.createPicture](arkts-image-image-createpicture-f.md#createPicture)创建一个Picture实例。
 
-由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当Picture实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 > **说明：**
 > 
@@ -44,7 +44,7 @@ getAuxiliaryPicture(type: AuxiliaryPictureType): AuxiliaryPicture | null
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getGainmapPixelmap
 
@@ -64,7 +64,7 @@ getGainmapPixelmap(): PixelMap | null
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 ## getHdrComposedPixelmap
 
@@ -84,14 +84,14 @@ getHdrComposedPixelmap(): Promise<PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600901](../errorcode-image.md#7600901-未知错误) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600901](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600901-未知错误) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
 
 ## getHdrComposedPixelmapWithOptions
 
@@ -121,13 +121,13 @@ getHdrComposedPixelmapWithOptions(options?: HdrComposeOptions): Promise<PixelMap
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap \| undefined&gt; |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
 
 ## getMainPixelmap
 
@@ -147,7 +147,7 @@ getMainPixelmap(): PixelMap
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 ## getMetadata
 
@@ -173,14 +173,14 @@ getMetadata(metadataType: MetadataType): Promise<Metadata>
 
 | 类型 |
 | --- |
-| Promise&lt;Metadata&gt; |
+| Promise & lt;Metadata & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## hdrComposeToMainPixelmap
 
@@ -204,13 +204,13 @@ hdrComposeToMainPixelmap(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
 
 ## marshalling
 
@@ -236,8 +236,8 @@ marshalling(sequence: rpc.MessageSequence): void
 
 | 错误码ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## release
 
@@ -282,7 +282,7 @@ setAuxiliaryPicture(type: AuxiliaryPictureType, auxiliaryPicture: AuxiliaryPictu
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setMainPixelmap
 
@@ -304,13 +304,13 @@ setMainPixelmap(pixelmap: PixelMap): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| pixelmap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700204](../errorcode-image.md#7700204-无效参数) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) |
 
 ## setMetadata
 
@@ -337,11 +337,11 @@ setMetadata(metadataType: MetadataType, metadata: Metadata): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |

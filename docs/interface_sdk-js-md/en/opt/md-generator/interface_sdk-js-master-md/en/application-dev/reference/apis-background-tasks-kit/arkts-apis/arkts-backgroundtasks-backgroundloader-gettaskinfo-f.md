@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundLoader } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundLoader } from '@kit.BackgroundTasksKit';
 ```
 
 ## getTaskInfo
@@ -34,12 +34,12 @@ Obtains the information of a background load task. This API returns the result v
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;TaskInfo&gt; |
+| Promise & lt;TaskInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) |
-| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) |
+| [9700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |

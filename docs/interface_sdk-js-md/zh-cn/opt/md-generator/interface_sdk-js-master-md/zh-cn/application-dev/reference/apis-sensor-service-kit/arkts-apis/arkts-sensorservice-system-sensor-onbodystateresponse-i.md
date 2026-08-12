@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#WearDetectionResponse
+**替代接口：** [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md#WearDetectionResponse)
 
 <!--Device-unnamed-export interface OnBodyStateResponse--><!--Device-unnamed-export interface OnBodyStateResponse-End-->
 
@@ -26,7 +26,7 @@ value: boolean
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#WearDetectionResponse.value
+**替代接口：** [value](ohos.sensor/sensor#WearDetectionResponse.value)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

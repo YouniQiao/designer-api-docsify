@@ -4,8 +4,8 @@ Defines the distance between the popup and the bottom in different scenario mode
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description|
 | - | - | - |
-| [OFFSET_FOR_BAR](#offset_for_bar) | 0 | Distance from the bottom of the window when there is a menu bar.It sets the dialog box 88 vp away from the bottom of the window.|
-| [OFFSET_FOR_NONE](#offset_for_none) | 1 |
+| [OFFSET_FOR_BAR](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md) | 0 | Distance from the bottom of the window when there is a menu bar.It sets the dialog box 88 vp away from the bottom of the window.|
+| [OFFSET_FOR_NONE](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md) | 1 |
 
 **Since:** 12
 

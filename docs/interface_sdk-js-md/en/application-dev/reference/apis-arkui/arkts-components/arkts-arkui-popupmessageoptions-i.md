@@ -22,7 +22,7 @@ Font settings of the popup message.
 
 1. Setting **family** is not supported.2. The **weight** attribute in **Font** does not support the number type.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
+**Type:** Font
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ textColor?: ResourceColor
 
 Text color of the popup message.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 

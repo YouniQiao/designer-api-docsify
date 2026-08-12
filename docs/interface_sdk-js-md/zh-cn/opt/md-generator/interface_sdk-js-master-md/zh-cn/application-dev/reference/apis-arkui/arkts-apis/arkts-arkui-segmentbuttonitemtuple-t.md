@@ -18,6 +18,6 @@ declare type SegmentButtonItemTuple = ItemRestriction<SegmentButtonTextItem> | I
 
 | 类型 |
 | --- |
-| [ItemRestriction&lt;SegmentButtonTextItem&gt;](arkts-arkui-itemrestriction-t.md) |
-| [ItemRestriction&lt;SegmentButtonIconItem&gt;](arkts-arkui-itemrestriction-t.md) |
-| [ItemRestriction&lt;SegmentButtonIconTextItem&gt;](arkts-arkui-itemrestriction-t.md) |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonTextItem & gt; |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconItem & gt; |
+| [ItemRestriction](arkts-arkui-itemrestriction-t.md) & lt;SegmentButtonIconTextItem & gt; |

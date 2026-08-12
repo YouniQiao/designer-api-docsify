@@ -20,19 +20,19 @@ function getPointerStyleSync(windowId: int): PointerStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于-1的整数，取值为-1时表示全局窗口。&lt;br&gt;窗口ID合法并且对应窗口存在时，返回窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，默认返回全局 鼠标光标样式。&lt;br&gt;如果通过[setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setpointerstylesync)接口为不存在的窗口设置了鼠标光标样式，使用本接口可以正常获取到该光标样式。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于-1的整数，取值为-1时表示全局窗口。&lt;br&gt;窗口ID合法并且对应窗口存在时，返回窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，默认返回全局 鼠标光标样式。&lt;br&gt;如果通过[setPointerStyleSync](arkts-input-pointer-setpointerstylesync-f.md#setPointerStyleSync)接口为不存在的窗口设置了鼠标光标样式，使用本接口可以正常获取到该光标样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 返回鼠标样式类型。 |
+| PointerStyle | 返回鼠标样式类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 

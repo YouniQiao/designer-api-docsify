@@ -28,7 +28,7 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. &lt;br&gt;**fingers**: minimum number of fingers required. The value ranges from 1 to 10.&lt;br&gt;Default value: **1** &lt;br&gt;**direction**: pan direction. The value supports the AND (&) and OR (\|
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. & lt;br & gt;**fingers**: minimum number of fingers required. The value ranges from 1 to 10. & lt;br & gt;Default value: **1** & lt;br & gt;**direction**: pan direction. The value supports the AND ( & ) and OR (\ |
 
 ## getDirection
 
@@ -98,7 +98,7 @@ Sets the pan direction.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND (&) and OR (\|
+| value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND ( & ) and OR (\ |
 
 ## setDistance
 

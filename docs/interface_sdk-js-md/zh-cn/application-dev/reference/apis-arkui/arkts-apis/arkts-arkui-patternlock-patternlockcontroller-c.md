@@ -68,5 +68,5 @@ setChallengeResult(result: PatternLockChallengeResult): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [PatternLockChallengeResult](../arkts-components/arkts-arkui-patternlockchallengeresult-e.md) | 是 | 图案密码状态。包括正确和错误状态。 |
+| result | [PatternLockChallengeResult](arkts-arkui-patternlock-patternlockchallengeresult-e.md) | 是 | 图案密码状态。包括正确和错误状态。 |
 

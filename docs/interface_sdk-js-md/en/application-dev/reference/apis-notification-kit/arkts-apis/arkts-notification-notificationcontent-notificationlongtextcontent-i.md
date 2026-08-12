@@ -15,7 +15,7 @@ Describes the long text notification. This API is inherited from NotificationBas
 > 
 > - The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Inheritance/Implementation:** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**Inheritance/Implementation:** NotificationLongTextContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **Since:** 7
 

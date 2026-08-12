@@ -15,7 +15,7 @@ Defines the options for obtaining a domain access token.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## businessParams
@@ -26,7 +26,7 @@ businessParams: Record<string, Object>
 
 Service parameters customized by the service party based on the request protocol.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ domainAccountInfo: DomainAccountInfo
 
 Domain account information.
 
-**Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md)
+**Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **Since:** 10
 

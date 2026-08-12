@@ -24,13 +24,13 @@ export declare function FlowItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |  |
+| [FlowItemAttribute](arkts-arkui-flowitem-flowitemattribute-i.md) |  |
 
 
 ## FlowItem
@@ -60,12 +60,12 @@ export declare function FlowItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FlowItemAttribute&gt; | 是 | 用于创建FlowItem的样式 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FlowItemAttribute](arkts-arkui-flowitem-flowitemattribute-i.md)&gt; | 是 | 用于创建FlowItem的样式 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) | FlowItem的属性。 |
+| [FlowItemAttribute](arkts-arkui-flowitem-flowitemattribute-i.md) | FlowItem的属性。 |
 

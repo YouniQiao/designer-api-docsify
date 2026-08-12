@@ -15,7 +15,7 @@ Defines the list of onscreen awareness parameters, which is used to obtain onscr
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## parameters
@@ -26,7 +26,7 @@ parameters?: Record<string, Object>
 
 List of awareness parameters. The parameter result is a key-value data object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

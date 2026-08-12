@@ -15,7 +15,7 @@ Obtains NR cell information.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## mcc

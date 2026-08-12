@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## from
@@ -65,7 +65,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | Yes |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -79,7 +79,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -112,7 +112,7 @@ Copies the data of a passed **Buffer** object to create a new **Buffer** object 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| buffer | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
+| [buffer](arkts-buffer.md) | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes |
 
 **Return value:**
 

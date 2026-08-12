@@ -27,7 +27,7 @@ Changes file permissions based on the file descriptor. This API uses a promise t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## fchmod

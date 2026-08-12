@@ -26,5 +26,5 @@ Acquire the current font-scale.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [500001](../errorcode-uiappearance.md#500001-内部错误) | Internal error. |
+| [500001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-uiappearance.md#500001-内部错误) | Internal error. |
 

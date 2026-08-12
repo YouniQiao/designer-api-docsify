@@ -34,7 +34,7 @@ Creates an instance of NavPathInfo.
 | --- | --- | --- | --- |
 | name | string | Yes | The name of NavDestination. |
 | param | Object \| null \| undefined | Yes | The detailed parameter of the NavDestination. |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | No | The callback when next page returns. |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](arkts-arkui-navigation-popinfo-i.md)&gt; | No | The callback when next page returns. |
 | isEntry | boolean | No | Indicates whether it is an entry destination. |
 
 ## isEntry
@@ -105,7 +105,7 @@ set onPop(onPop: Callback<PopInfo> | undefined)
 
 Set the callback when next page returns, the default value is nullptr, undefined means set to default value.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](arkts-arkui-navigation-popinfo-i.md)&gt;
 
 **Since:** 23
 

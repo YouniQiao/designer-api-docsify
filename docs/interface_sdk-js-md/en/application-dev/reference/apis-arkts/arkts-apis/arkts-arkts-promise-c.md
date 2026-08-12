@@ -34,13 +34,13 @@ Waits for all promises to resolve from a FixedArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
+| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Awaited&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;&lt;U&gt;>. |
+| Promise&lt;Array&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;&lt;U&gt;>. |
 
 ## all
 
@@ -64,13 +64,13 @@ Waits for all promises to resolve from an Iterable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
+| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Awaited&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;&lt;U&gt;>. |
+| Promise&lt;Array&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;&lt;U&gt;>. |
 
 ## allSettled
 
@@ -95,13 +95,13 @@ Waits for all promises to settle from a FixedArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
+| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PromiseSettledResult&lt;Awaited&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;&lt;U&gt;>[]. |
+| Promise&lt;[PromiseSettledResult](arkts-arkts-promisesettledresult-t.md)&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;&lt;U&gt;>[]. |
 
 ## allSettled
 
@@ -125,13 +125,13 @@ Waits for all promises to settle from an Iterable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
+| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PromiseSettledResult&lt;Awaited&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;&lt;U&gt;>[]. |
+| Promise&lt;[PromiseSettledResult](arkts-arkts-promisesettledresult-t.md)&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;&lt;U&gt;>[]. |
 
 ## any
 
@@ -155,13 +155,13 @@ Waits for any promise to resolve from a FixedArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
+| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## any
 
@@ -185,13 +185,13 @@ Waits for any promise to resolve from an Iterable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
+| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## catch
 
@@ -221,7 +221,7 @@ Attaches a callback for the rejection of the Promise with no error parameter.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T \| U&gt;&gt; | Promise used to return Awaited&lt;T \| U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;T \| U&gt;&gt; | Promise used to return Awaited&lt;T \| U&gt;. |
 
 ## catch
 
@@ -251,7 +251,7 @@ Attaches a callback for the rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T \| U&gt;&gt; | Promise used to return Awaited&lt;T \| U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;T \| U&gt;&gt; | Promise used to return Awaited&lt;T \| U&gt;. |
 
 ## constructor
 
@@ -306,7 +306,7 @@ Attaches a callback that is invoked when the Promise is settled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; | Promise used to return Awaited&lt;T&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;T&gt;&gt; | Promise used to return Awaited&lt;T&gt;. |
 
 ## race
 
@@ -330,13 +330,13 @@ Waits for the first promise to settle from a FixedArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | FixedArray&lt;PromiseLike&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
+| promises | FixedArray&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U \| undefined&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## race
 
@@ -360,13 +360,13 @@ Waits for the first promise to settle from an Iterable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| promises | Iterable&lt;PromiseLike&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
+| promises | Iterable&lt;[PromiseLike](arkts-arkts-promise-promiselike-i.md)&lt;U&gt; \| U&gt; | Yes | The promises to wait for. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## reject
 
@@ -420,7 +420,7 @@ Creates a rejected Promise with the given error.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## resolve
 
@@ -474,7 +474,7 @@ Creates a resolved Promise with the given value.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## then
 
@@ -504,7 +504,7 @@ Attaches a callback for the resolution of the Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U&gt;&gt; | Promise used to return Awaited&lt;U&gt;. |
 
 ## then
 
@@ -534,7 +534,7 @@ Attaches no callback for the resolution of the Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; | Promise used to return Awaited&lt;T&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;T&gt;&gt; | Promise used to return Awaited&lt;T&gt;. |
 
 ## then
 
@@ -566,5 +566,5 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;U \| E&gt;&gt; | Promise used to return Awaited&lt;U \| E&gt;. |
+| Promise&lt;[Awaited](../../apis-default/arkts-apis/arkts-awaited-t.md)&lt;U \| E&gt;&gt; | Promise used to return Awaited&lt;U \| E&gt;. |
 

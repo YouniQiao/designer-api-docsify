@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## p2pConnect
@@ -18,7 +18,7 @@ Initiates a P2P connection to a device with the specified configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.p2pConnect
+**Substitutes:** [p2pConnect](ohos.wifiManager/wifiManager.p2pConnect)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -30,7 +30,7 @@ Initiates a P2P connection to a device with the specified configuration.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| config | [WifiP2PConfig](arkts-connectivity-wifi-wifip2pconfig-i.md) | Yes |
+| config | [WifiP2PConfig](arkts-connectivity-wifimanager-wifip2pconfig-i.md) | Yes |
 
 **Return value:**
 

@@ -12,7 +12,7 @@ Cancels a notification with the specified ID. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancel
+**Substitutes:** [cancel](ohos.notificationManager/notificationManager#cancel)
 
 <!--Device-notification-function cancel(id: number, callback: AsyncCallback<void>): void--><!--Device-notification-function cancel(id: number, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ Cancels a notification with the specified ID and label. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancel
+**Substitutes:** [cancel](ohos.notificationManager/notificationManager#cancel)
 
 <!--Device-notification-function cancel(id: number, label: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancel(id: number, label: string, callback: AsyncCallback<void>): void-End-->
 
@@ -65,7 +65,7 @@ Cancels a notification with the specified ID and optional label. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancel
+**Substitutes:** [cancel](ohos.notificationManager/notificationManager#cancel)
 
 <!--Device-notification-function cancel(id: number, label?: string): Promise<void>--><!--Device-notification-function cancel(id: number, label?: string): Promise<void>-End-->
 
@@ -82,4 +82,4 @@ Cancels a notification with the specified ID and optional label. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

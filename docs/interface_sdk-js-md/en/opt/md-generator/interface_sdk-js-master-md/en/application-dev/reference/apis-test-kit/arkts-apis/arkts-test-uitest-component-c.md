@@ -11,7 +11,7 @@ Represents a component on the UI and provides APIs for obtaining component attri
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## clearText
@@ -34,14 +34,14 @@ Clears the text information of a component. This API takes effect only for edita
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -76,14 +76,14 @@ Clicks this component. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -121,14 +121,14 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -163,21 +163,21 @@ Drags a component to the target component. This method is valid only for compone
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| target | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | Yes |
+| target | [Component](arkts-test-uitest-component-c.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -217,14 +217,14 @@ Obtains the bounds information of this component. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Rect&gt; |
+| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -259,14 +259,14 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -301,14 +301,14 @@ Obtains the description of this component. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -343,14 +343,14 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -385,14 +385,14 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -427,14 +427,14 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -456,7 +456,7 @@ getOriginalText(): Promise<string>
 ```
 
 Obtains the text information of this component. This API uses a promise to return the result. If the  
-[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#accessibilitylevel)attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](arkts-test-uitest-component-c.md#gettext) cannot.
+[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#getText) cannot.
 
 **Since:** 20
 
@@ -470,14 +470,14 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -502,10 +502,10 @@ Obtains the text information of this component. This API uses a promise to retur
 
 > **NOTE：**
 > 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#accessibilitylevel)
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
 > attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the
 > text information of the component. In this case, you can use
-> [Component.getOriginalText ()](arkts-test-uitest-component-c.md#getoriginaltext) instead.
+> [Component.getOriginalText ()](#getOriginalText) instead.
 
 **Since:** 9
 
@@ -519,14 +519,14 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -561,14 +561,14 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -609,15 +609,15 @@ Clears the original text in a component and inputs the specified text. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -662,16 +662,16 @@ Inputs text to a component in a specified text input mode. This API takes effect
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -706,14 +706,14 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -752,14 +752,14 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -798,14 +798,14 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -844,14 +844,14 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -890,14 +890,14 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -936,14 +936,14 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -982,14 +982,14 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1028,14 +1028,14 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1074,14 +1074,14 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1122,15 +1122,15 @@ Pinches in a component at the specified scale. This method is valid only for com
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1171,15 +1171,15 @@ Pinches out a component at the specified scale. This method is valid only for co
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1220,15 +1220,15 @@ Scrolls on this component to search for the target component. This API is applic
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1274,15 +1274,15 @@ Scrolls on this component to search for the target component. This API is applic
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1323,15 +1323,15 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -1372,15 +1372,15 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 

@@ -13,7 +13,7 @@ Get information about network connections.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## connectionProperties
@@ -42,7 +42,7 @@ netHandle: NetHandle
 
 Defines the handle of the data network.
 
-**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
+**Type:** NetHandle
 
 **Since:** 11
 

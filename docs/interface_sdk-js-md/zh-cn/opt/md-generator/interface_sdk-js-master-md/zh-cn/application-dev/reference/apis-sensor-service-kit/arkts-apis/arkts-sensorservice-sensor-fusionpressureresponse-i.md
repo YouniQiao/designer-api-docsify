@@ -1,8 +1,8 @@
 # FusionPressureResponse
 
-融合压力传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+融合压力传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
 
-**继承/实现关系：** FusionPressureResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**继承/实现关系：** FusionPressureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **起始版本：** 22
 

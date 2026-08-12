@@ -82,7 +82,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -183,7 +183,7 @@ Default value: **Color.Black**
 
 When **borderColor** is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -237,7 +237,7 @@ If the left and right borders are greater than its width, or the top and bottom 
 
 When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -269,7 +269,7 @@ When set to a percentage, the value defines the radius as a percentage of the pa
 
 When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -398,7 +398,7 @@ Overlay effect for the page-level dialog box.
 - Default value: **ImmersiveMode.DEFAULT**  
 - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**Type:** ImmersiveMode
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -450,7 +450,7 @@ Display level of the dialog box.
 - Default value: **LevelMode.OVERLAY**  
 - This parameter takes effect only when **showInSubWindow** is set to **false**.
 
-**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**Type:** LevelMode
 
 **Default:** LevelMode.OVERLAY
 
@@ -477,7 +477,7 @@ Display order of the dialog box.
 - Default value: **LevelOrder.clamp(0)**  
 - Dynamic updating is not supported.
 
-**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**Type:** [LevelOrder](arkts-arkui-levelorder-t.md)
 
 **Default:** The value returns by LevelOrder.clamp(0)
 
@@ -497,7 +497,7 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box. This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+[Unique ID](arkts-arkui-framenode-c.md#getUniqueId) of the node under the display level for the page-level dialog box. This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 Value range: a number no less than 0
 
@@ -571,7 +571,7 @@ Offset of the dialog box based on the **alignment** settings.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 7
 
@@ -593,7 +593,7 @@ Event callback after the dialog box appears.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -617,7 +617,7 @@ Event callback after the dialog box disappears.
 
 The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -641,7 +641,7 @@ Event callback when the dialog box is about to appear.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -665,7 +665,7 @@ Event callback when the dialog box is about to disappear.
 
 The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -689,7 +689,7 @@ Callback for interactive dismissal of the dialog box.
 
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the **Esc** key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**.2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissDialogAction&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 
@@ -712,7 +712,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and   
 **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 
@@ -809,7 +809,7 @@ textStyle?: TextStyle
 
 Text style of the message in the dialog box.
 
-**Type:** [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)
+**Type:** [TextStyle](arkts-arkui-textstyle-i.md)
 
 **Since:** 12
 

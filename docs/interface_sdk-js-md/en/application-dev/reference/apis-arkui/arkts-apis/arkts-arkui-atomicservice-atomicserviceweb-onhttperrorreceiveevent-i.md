@@ -13,7 +13,7 @@ Represents the callback invoked when an HTTP error occurs during web page resour
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from 'kits/@kit.ArkUI';
+import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from '@kit.ArkUI';
 ```
 
 ## request
@@ -24,7 +24,7 @@ request: WebResourceRequest
 
 Web resource request of event.
 
-**Type:** [WebResourceRequest](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
+**Type:** WebResourceRequest
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ response: WebResourceResponse
 
 Web resource response of event.
 
-**Type:** [WebResourceResponse](../../apis-arkweb/arkts-components/arkts-arkweb-webresourceresponse-c.md)
+**Type:** WebResourceResponse
 
 **Since:** 12
 

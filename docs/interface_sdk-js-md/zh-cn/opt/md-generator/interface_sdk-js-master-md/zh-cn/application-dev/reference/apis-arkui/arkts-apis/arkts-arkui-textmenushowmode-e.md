@@ -40,9 +40,9 @@ PREFER_WINDOW = 1
 
 在预览器中不支持将文本选择菜单显示在独立窗口中。
 
-在[UIExtension](arkts-arkui-uiextension.md)中不支持将文本选择菜单显示在独立窗口中。
+在[UIExtension](arkts-arkui-uiextension.md#uiExtension)中不支持将文本选择菜单显示在独立窗口中。
 
-当文本类组件已经显示在子窗类型的[Popup](arkts-arkui-advanced-popup.md)、[Dialog](arkts-arkui-advanced-dialog.md)、  
+当文本类组件已经显示在子窗类型的[Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup)、[Dialog](@ohos.arkui.advanced.Dialog)、  
 [Toast](../../../ui/arkts-create-toast.md)、[Menu](./menu)中时，不支持将其对应的文本选择菜单显示在独立窗口中。
 
 当TextInput、TextArea可支持拉起AutoFill时，不支持将其对应的文本选择菜单显示在独立窗口中。

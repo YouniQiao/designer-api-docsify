@@ -80,7 +80,7 @@ pageSize: Array<PrintPageSize>
 
 表示打印机支持的页面尺寸列表。
 
-**类型：** Array&lt;PrintPageSize&gt;
+**类型：** Array&lt;[PrintPageSize](arkts-basicservices-print-printpagesize-i.md)&gt;
 
 **起始版本：** 24
 
@@ -96,7 +96,7 @@ resolution?: Array<PrintResolution>
 
 表示打印机支持的分辨率列表。
 
-**类型：** Array&lt;PrintResolution&gt;
+**类型：** Array&lt;[PrintResolution](arkts-basicservices-print-printresolution-i.md)&gt;
 
 **起始版本：** 24
 

@@ -4,7 +4,7 @@
 export type PreloadedUIExtensionAbilityDestroyedFn = (preloadId: int) => void
 ```
 
-预加载[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)被销毁时的回调函数类型。
+预加载[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)被销毁时的回调函数类型。
 
 **起始版本：** 23
 

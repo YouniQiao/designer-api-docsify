@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## createKVManager
@@ -28,19 +28,19 @@ Creates a **KVManager** instance for KV store management.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
+| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name (cannot be empty) of the caller and user information. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | KVManager** instance created. |
+| KVManager | KVManager** instance created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 

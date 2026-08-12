@@ -1,8 +1,8 @@
 # AxisEvent
 
-Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
+Describes the axis event object. Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
 
-**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 17
 
@@ -36,7 +36,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
+| Coordinate2D | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## getHorizontalAxisValue
 
@@ -140,7 +140,7 @@ Checks whether this axis event contains the specified axis type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | Yes | Axis type to check for. |
+| axisType | AxisType | Yes | Axis type to check for. |
 
 **Return value:**
 
@@ -156,7 +156,7 @@ action: AxisAction
 
 Action type of the axis event.
 
-**Type:** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
+**Type:** AxisAction
 
 **Since:** 17
 
@@ -231,7 +231,7 @@ Value range: [0, +∞)
 **NOTE：**
 
 This field is used when dispatching events using the  
-[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
+[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000.
 
 Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
@@ -311,7 +311,7 @@ propagation: Callback<void>
 
 Enables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 17
 

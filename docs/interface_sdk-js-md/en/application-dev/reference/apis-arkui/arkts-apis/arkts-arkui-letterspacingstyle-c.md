@@ -34,7 +34,7 @@ A constructor used to create a text letter spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Letter spacing options. This API does not work if **unit** of **LengthMetrics** is percent. |
+| value | LengthMetrics | Yes | Letter spacing options. This API does not work if **unit** of **LengthMetrics** is percent. |
 
 ## letterSpacing
 
@@ -44,7 +44,7 @@ readonly letterSpacing: number
 
 Letter spacing.
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
 **Type:** number
 

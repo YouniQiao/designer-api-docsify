@@ -162,7 +162,7 @@ children: Array<AccessibilityElement>
 
 所有子元素。
 
-**类型：** Array&lt;AccessibilityElement&gt;
+**类型：** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **起始版本：** 9
 
@@ -268,7 +268,7 @@ currentIndex: int
 customComponentType?: string
 ```
 
-自定义组件类型。与元素的[AccessibilityRoleType枚举说明](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityroletype-e.md/arkts-arkui-common-accessibilityroletype-e.md)类型所对应。
+自定义组件类型。与元素的[AccessibilityRoleType枚举说明](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType)类型所对应。
 
 **类型：** string
 
@@ -426,7 +426,7 @@ hotArea: Rect
 
 元素的可触摸区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 12
 
@@ -732,7 +732,7 @@ rect: Rect
 
 元素的面积。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 9
 
@@ -786,7 +786,7 @@ screenRect: Rect
 
 元素的显示区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 9
 

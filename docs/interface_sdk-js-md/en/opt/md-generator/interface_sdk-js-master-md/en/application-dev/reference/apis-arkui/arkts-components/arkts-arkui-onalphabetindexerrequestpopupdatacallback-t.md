@@ -27,4 +27,4 @@ Represents the callback invoked when an index item is selected and
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |

@@ -25,14 +25,14 @@ Defines Flex Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexOptions](../arkts-components/arkts-arkui-flexoptions-i.md) | No | Flex options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| value | [FlexOptions](arkts-arkui-flex-flexoptions-i.md) | No | Flex options. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |  |
+| [FlexAttribute](arkts-arkui-flex-flexattribute-i.md) |  |
 
 
 ## Flex
@@ -62,12 +62,12 @@ Defines Flex Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FlexAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FlexAttribute](arkts-arkui-flex-flexattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |  |
+| [FlexAttribute](arkts-arkui-flex-flexattribute-i.md) |  |
 

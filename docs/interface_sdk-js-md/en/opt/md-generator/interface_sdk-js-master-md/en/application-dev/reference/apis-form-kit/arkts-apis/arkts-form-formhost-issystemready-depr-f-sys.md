@@ -12,7 +12,7 @@ Checks whether the system is ready. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#issystemready)
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#isSystemReady)
 
 <!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void--><!--Device-formHost-function isSystemReady(callback: AsyncCallback<void>): void-End-->
 
@@ -39,7 +39,7 @@ Checks whether the system is ready. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#isSystemReady](arkts-form-formhost-issystemready-depr-f-sys.md#issystemready)
+**Substitutes:** [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#isSystemReady)
 
 <!--Device-formHost-function isSystemReady(): Promise<void>--><!--Device-formHost-function isSystemReady(): Promise<void>-End-->
 
@@ -51,4 +51,4 @@ Checks whether the system is ready. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

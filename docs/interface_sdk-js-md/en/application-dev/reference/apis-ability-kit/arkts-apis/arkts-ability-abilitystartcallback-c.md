@@ -62,7 +62,7 @@ Called when the UIExtensionAbility is terminated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateselfwithresult) is called to terminate the UIExtensionAbility. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Result returned when [terminateSelfWithResult](arkts-ability-uiextensioncontext-c.md#terminateSelfWithResult) is called to terminate the UIExtensionAbility. |
 
 ## completionHandler
 

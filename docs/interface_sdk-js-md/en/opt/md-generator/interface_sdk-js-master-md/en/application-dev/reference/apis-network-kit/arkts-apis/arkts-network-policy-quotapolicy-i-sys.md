@@ -13,7 +13,7 @@ Policies that limit network quota.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## lastLimitRemind
@@ -58,7 +58,7 @@ The time of the last warning reminder. For notifying only, default: REMIND_NEVER
 limitAction: LimitAction
 ```
 
-The action while the used bytes reach the limit, see {@link LimitAction}.
+The action while the used bytes reach the limit, see [LimitAction](arkts-network-policy-limitaction-e-sys.md#LimitAction).
 
 **Type:** [LimitAction](arkts-network-policy-limitaction-e-sys.md)
 

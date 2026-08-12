@@ -11,7 +11,7 @@ Defines parameters when an application obtains the Data from the pasteboard, inc
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## progressListener
@@ -58,7 +58,7 @@ fileConflictOptions?: FileConflictOptions
 
 File conflict options for a paste task. The default value is **OVERWRITE**.
 
-**Type:** [FileConflictOptions](arkts-basicservices-pasteboard-fileconflictoptions-e.md)
+**Type:** FileConflictOptions
 
 **Default:** FileConflictOptions.OVERWRITE
 
@@ -78,7 +78,7 @@ progressIndicator: ProgressIndicator
 
 Progress indicator options. You can choose whether to use the default progress indicator.
 
-**Type:** [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)
+**Type:** ProgressIndicator
 
 **Since:** 15
 
@@ -95,7 +95,7 @@ progressSignal?: ProgressSignal
 ```
 
 Function for canceling the paste task. This parameter is valid only when  
-[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**. This parameter is left empty by default.
+[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**. This parameter is left empty by default.
 
 **Type:** [ProgressSignal](arkts-basicservices-pasteboard-progresssignal-c.md)
 

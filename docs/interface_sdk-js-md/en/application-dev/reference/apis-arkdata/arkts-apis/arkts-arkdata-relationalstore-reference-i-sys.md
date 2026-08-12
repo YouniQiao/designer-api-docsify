@@ -15,7 +15,7 @@ Indicates the reference between tables.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## refFields
@@ -26,7 +26,7 @@ refFields: Record<string, string>
 
 Indicates the reference fields.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 11
 

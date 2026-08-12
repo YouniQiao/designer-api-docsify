@@ -16,7 +16,7 @@ size: Size
 
 区域大小。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 8
 

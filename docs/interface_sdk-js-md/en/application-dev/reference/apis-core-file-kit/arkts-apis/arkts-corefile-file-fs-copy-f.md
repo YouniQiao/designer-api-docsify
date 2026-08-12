@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## copy
@@ -32,7 +32,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | No | Callback invoked to provide the copy progress. If this parameter is not set, the callback will not be invoked. |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ A maximum of 10 cross-device copy tasks are allowed at the same time, and the nu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
@@ -96,13 +96,13 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
@@ -153,14 +153,14 @@ File copy across devices is supported. This API forcibly overwrites the file or 
 | --- | --- | --- | --- |
 | srcUri | string | Yes | URI of the file or directory to copy. |
 | destUri | string | Yes | URI of the destination file or directory. |
-| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | Yes | Callback used to return the copy progress. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | Yes | Callback used to return the copy progress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |

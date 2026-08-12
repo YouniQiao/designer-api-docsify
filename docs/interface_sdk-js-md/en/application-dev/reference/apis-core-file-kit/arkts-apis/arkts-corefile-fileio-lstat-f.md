@@ -14,7 +14,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:lstat](arkts-corefile-fileio-lstat-f.md#lstat)
+**Substitutes:** [lstat](arkts-corefile-file-fs-lstat-f.md#lstat)
 
 <!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
 
@@ -30,7 +30,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise that returns the symbolic link information obtained. For details, see **stat**. |
+| Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Promise that returns the symbolic link information obtained. For details, see **stat**. |
 
 
 ## lstat
@@ -47,7 +47,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:lstat](arkts-corefile-fileio-lstat-f.md#lstat)
+**Substitutes:** [lstat](arkts-corefile-file-fs-lstat-f.md#lstat)
 
 <!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 
@@ -58,5 +58,5 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the target file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | Callback used to return the symbolic link information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes | Callback used to return the symbolic link information obtained. |
 

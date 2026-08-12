@@ -2,7 +2,7 @@
 
 Common class for all integral types
 
-**Inheritance/Implementation:** Integral extends [Numeric](arkts-arkts-numeric-c.md)
+**Inheritance/Implementation:** Integral extends [Numeric](arkts-arkts-numeric-c.md#Numeric)
 
 **Since:** 26.0.0
 

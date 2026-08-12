@@ -18,7 +18,7 @@ geolocation: JsGeolocation
 
 User operation.
 
-**Type:** [JsGeolocation](../arkts-apis/arkts-arkweb-web-jsgeolocation-c.md)
+**Type:** [JsGeolocation](arkts-arkweb-jsgeolocation-c.md)
 
 **Since:** 12
 

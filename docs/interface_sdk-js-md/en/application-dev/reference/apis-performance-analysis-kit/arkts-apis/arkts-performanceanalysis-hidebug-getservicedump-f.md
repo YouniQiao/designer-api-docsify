@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getServiceDump
@@ -36,8 +36,8 @@ Obtains system service information.It need dump permission.This API can be calle
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
-| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Possible causes: 1.The parameter type error. 2.The args parameter is not string array. |
+| [11400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400101-failed-to-obtain-the-system-service) | ServiceId invalid. The system ability does not exist. |
 
 ## Examples
 

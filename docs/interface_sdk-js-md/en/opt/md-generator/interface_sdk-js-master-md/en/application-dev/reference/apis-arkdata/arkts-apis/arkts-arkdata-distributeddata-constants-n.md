@@ -6,7 +6,7 @@ Defines the KV store constants.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants
+**Substitutes:** [Constants](ohos.data.distributedKVStore.Constants)
 
 <!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
 

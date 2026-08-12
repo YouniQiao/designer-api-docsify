@@ -16,7 +16,7 @@ For details, see
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## dataProgressListener
@@ -91,7 +91,7 @@ fileConflictOptions?: FileConflictOptions
 
 Indicates file conflict options when dest path has file with same name.
 
-**Type:** [FileConflictOptions](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-fileconflictoptions-e.md)
+**Type:** FileConflictOptions
 
 **Since:** 15
 
@@ -113,7 +113,7 @@ progressIndicator: ProgressIndicator
 
 Indicates whether to use default system progress indicator.
 
-**Type:** [ProgressIndicator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressindicator-e.md)
+**Type:** ProgressIndicator
 
 **Since:** 15
 

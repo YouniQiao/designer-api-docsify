@@ -24,7 +24,7 @@ export declare function TextInput(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextInputOptions](../arkts-components/arkts-arkui-textinputoptions-i.md) | 否 |  |
+| value | [TextInputOptions](arkts-arkui-textinput-textinputoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function TextInput(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextInputAttribute&gt; | 是 | TextInput属性的实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md)&gt; | 是 | TextInput属性的实例。 |
 
 **返回值：**
 

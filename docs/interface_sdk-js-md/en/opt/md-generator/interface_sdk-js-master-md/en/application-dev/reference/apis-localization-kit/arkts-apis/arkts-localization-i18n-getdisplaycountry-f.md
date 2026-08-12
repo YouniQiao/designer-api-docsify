@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getDisplayCountry
@@ -18,7 +18,7 @@ Obtains the localized name of the specified country/region.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.System.getDisplayCountry](arkts-localization-i18n-system-c.md#getdisplaycountry)
+**Substitutes:** [getDisplayCountry](arkts-localization-i18n-system-c.md#getDisplayCountry)
 
 <!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
 

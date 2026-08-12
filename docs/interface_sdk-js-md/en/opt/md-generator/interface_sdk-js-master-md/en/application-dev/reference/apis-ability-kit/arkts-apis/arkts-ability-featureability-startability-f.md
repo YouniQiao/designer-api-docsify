@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## startAbility
@@ -96,7 +96,7 @@ Starts an ability. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

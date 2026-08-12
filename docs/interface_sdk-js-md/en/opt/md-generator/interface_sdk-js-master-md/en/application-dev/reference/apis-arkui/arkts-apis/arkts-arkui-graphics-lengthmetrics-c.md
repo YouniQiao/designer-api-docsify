@@ -36,7 +36,26 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+
+## Examples
+
+```TypeScript
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MyStateSample {
+  @State lengthMetrics: LengthMetrics = LengthMetrics.resource($r('sys.float.ohos_id_button_min_width')).autoRefresh!(true)
+
+  build() {
+    Column() {
+      Button('Test LengthMetrics')
+        .padding({ top: this.lengthMetrics })
+    }
+  }
+}
+```
 
 ## constructor
 
@@ -91,7 +110,7 @@ Creates a length property in fp.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## lpx
 
@@ -121,7 +140,7 @@ Creates a length property in lpx.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## percent
 
@@ -151,7 +170,7 @@ Creates a length property in percent. The value **1** indicates 100%.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## px
 
@@ -181,7 +200,7 @@ Creates a length property in px.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## resource
 
@@ -211,7 +230,53 @@ Represents the length of a resource of the Resource type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
+
+## Examples
+
+Use LengthMetrics to set the padding and margin attributes of Row.
+
+```TypeScript
+import { LengthMetrics, LengthUnit } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SizeExample {
+  build() {
+    Column({ space: 10 }) {
+      Text('margin and padding:')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      Row() {
+        Row() {
+          Row()
+            .size({ width: '100%', height: '100%' })
+            .backgroundColor('#ffd5d5d5')
+        }
+        .width(80)
+        .height(80)
+        .padding({
+          top: new LengthMetrics(20, LengthUnit.VP),
+          bottom: LengthMetrics.px(15),
+          start: LengthMetrics.vp(10),
+          end: LengthMetrics.fp(20)
+        })
+        .margin({
+          top: LengthMetrics.percent(0.1),
+          bottom: LengthMetrics.lpx(20),
+          start: LengthMetrics.resource($r('app.float.row_margin_start')),
+          end: LengthMetrics.vp(10)
+        })
+        .backgroundColor(Color.White)
+      }
+      .backgroundColor("#ff2787d9")
+    }
+    .width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
 
 ## vp
 
@@ -241,7 +306,7 @@ Creates a length property in vp.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) |
 
 ## unit
 

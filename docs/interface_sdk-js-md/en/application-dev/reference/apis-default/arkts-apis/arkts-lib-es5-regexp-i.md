@@ -49,7 +49,7 @@ Executes a search on a string using a regular expression pattern, and returns an
 
 | Type | Description |
 | --- | --- |
-| [RegExpExecArray](../../apis-arkts/arkts-apis/arkts-arkts-regexp-regexpexecarray-c.md) |  |
+| [RegExpExecArray](arkts-lib-es5-regexpexecarray-i.md) |  |
 
 ## test
 

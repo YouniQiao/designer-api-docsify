@@ -25,13 +25,13 @@ Defines ColumnSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnSplitAttribute](../arkts-components/arkts-arkui-columnsplit-attribute.md) |  |
+| [ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md) |  |
 
 
 ## ColumnSplit
@@ -61,12 +61,12 @@ Defines ColumnSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ColumnSplitAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnSplitAttribute](../arkts-components/arkts-arkui-columnsplit-attribute.md) |  |
+| [ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md) |  |
 

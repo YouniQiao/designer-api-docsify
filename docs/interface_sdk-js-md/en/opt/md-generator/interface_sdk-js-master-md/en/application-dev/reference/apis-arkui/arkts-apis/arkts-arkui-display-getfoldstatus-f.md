@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getFoldStatus
@@ -26,13 +26,13 @@ Obtains the fold status of this foldable device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FoldStatus](arkts-arkui-foldstatus-e.md) |
+| [FoldStatus](arkts-arkui-enums-foldstatus-e.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

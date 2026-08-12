@@ -2,7 +2,7 @@
 
 The definition of the tab page content.
 
-**Inheritance/Implementation:** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
+**Inheritance/Implementation:** MediaTabContent extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
 
 **Since:** 23
 
@@ -13,7 +13,7 @@ The definition of the tab page content.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## compilations

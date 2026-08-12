@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## createHidHostProfile
@@ -30,8 +30,8 @@ create the instance of hid profile.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 

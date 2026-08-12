@@ -29,5 +29,5 @@ export function createRowNode(context: UIContext, options?: FrameNodeOptions): R
 
 | 类型 | 说明 |
 | --- | --- |
-| [Row](arkts-arkui-typenode-row-t.md) | 返回 Row 类型的 FrameNode。 |
+| Row | 返回 Row 类型的 FrameNode。 |
 

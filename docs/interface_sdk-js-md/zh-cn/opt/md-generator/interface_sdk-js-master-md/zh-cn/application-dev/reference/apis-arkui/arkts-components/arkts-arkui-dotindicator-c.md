@@ -1,6 +1,6 @@
 # DotIndicator
 
-构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
+构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md#Indicator)。
 
 **继承/实现关系：** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 
@@ -93,7 +93,7 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | 是 |
+| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)&gt; | 是 |
 
 **返回值：**
 

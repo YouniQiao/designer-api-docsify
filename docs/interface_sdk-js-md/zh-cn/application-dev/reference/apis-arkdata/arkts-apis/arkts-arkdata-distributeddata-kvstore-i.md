@@ -1,7 +1,7 @@
 # KVStore
 
 KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个KVStore实例。
+[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个KVStore实例。
 
 **起始版本：** 7
 
@@ -9,7 +9,7 @@ KVStore数据库实例，提供增加数据、删除数据和订阅数据变更�
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore
+**替代接口：** [SingleKVStore](ohos.data.distributedKVStore.SingleKVStore)
 
 <!--Device-distributedData-interface KVStore--><!--Device-distributedData-interface KVStore-End-->
 
@@ -29,7 +29,7 @@ commit(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#commit
+**替代接口：** [commit](ohos.data.distributedKVStore.SingleKVStore#commit)
 
 <!--Device-KVStore-commit(callback: AsyncCallback<void>): void--><!--Device-KVStore-commit(callback: AsyncCallback<void>): void-End-->
 
@@ -72,7 +72,7 @@ commit(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#commit
+**替代接口：** [commit](ohos.data.distributedKVStore.SingleKVStore#commit)
 
 <!--Device-KVStore-commit(): Promise<void>--><!--Device-KVStore-commit(): Promise<void>-End-->
 
@@ -113,7 +113,7 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#delete
+**替代接口：** [delete](ohos.data.distributedKVStore.SingleKVStore#delete)
 
 <!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void-End-->
 
@@ -123,7 +123,7 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants)。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## 示例
@@ -166,7 +166,7 @@ delete(key: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#delete
+**替代接口：** [delete](ohos.data.distributedKVStore.SingleKVStore#delete)
 
 <!--Device-KVStore-delete(key: string): Promise<void>--><!--Device-KVStore-delete(key: string): Promise<void>-End-->
 
@@ -176,7 +176,7 @@ delete(key: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| key | string | 是 | 要删除数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants)。 |
 
 **返回值：**
 
@@ -220,7 +220,7 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#deleteBatch
+**替代接口：** [deleteBatch](ohos.data.distributedKVStore.SingleKVStore#deleteBatch)
 
 <!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void-End-->
 
@@ -278,7 +278,7 @@ deleteBatch(keys: string[]): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#deleteBatch
+**替代接口：** [deleteBatch](ohos.data.distributedKVStore.SingleKVStore#deleteBatch)
 
 <!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>-End-->
 
@@ -345,7 +345,7 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#enableSync
+**替代接口：** [enableSync](ohos.data.distributedKVStore.SingleKVStore#enableSync)
 
 <!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -389,7 +389,7 @@ enableSync(enabled: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#enableSync
+**替代接口：** [enableSync](ohos.data.distributedKVStore.SingleKVStore#enableSync)
 
 <!--Device-KVStore-enableSync(enabled: boolean): Promise<void>--><!--Device-KVStore-enableSync(enabled: boolean): Promise<void>-End-->
 
@@ -436,7 +436,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -484,7 +484,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -532,7 +532,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#on
+**替代接口：** [on](ohos.data.distributedKVStore.SingleKVStore#on)
 
 <!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -543,7 +543,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 订阅的事件名，固定为'dataChange'，表示数据变更事件。 |
-| type | [SubscribeType](../../apis-notification-kit/arkts-apis/arkts-notification-notificationextensionsubscription-subscribetype-e.md) | 是 | 表示订阅的类型。 |
+| type | SubscribeType | 是 | 表示订阅的类型。 |
 | listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | 是 | 回调函数。 |
 
 ## 示例
@@ -569,7 +569,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#on
+**替代接口：** [on](ohos.data.distributedKVStore.SingleKVStore#on)
 
 <!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -605,7 +605,7 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#put
+**替代接口：** [put](ohos.data.distributedKVStore.SingleKVStore#put)
 
 <!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -615,8 +615,8 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
-| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants)。 |
+| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants)。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## 示例
@@ -652,7 +652,7 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#put
+**替代接口：** [put](ohos.data.distributedKVStore.SingleKVStore#put)
 
 <!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>-End-->
 
@@ -662,8 +662,8 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
-| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants)。 |
+| key | string | 是 | 要添加数据的key，不能为空且长度不大于[MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants)。 |
+| value | Uint8Array \| string \| number \| boolean | 是 | 要添加数据的value，支持Uint8Array、number 、 string 、boolean，Uint8Array、 string 的长度不大于[MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants)。 |
 
 **返回值：**
 
@@ -702,7 +702,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#putBatch
+**替代接口：** [putBatch](ohos.data.distributedKVStore.SingleKVStore#putBatch)
 
 <!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void--><!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void-End-->
 
@@ -712,7 +712,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
+| entries | Entry[] | 是 | 表示要批量插入的键值对。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## 示例
@@ -760,7 +760,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#putBatch
+**替代接口：** [putBatch](ohos.data.distributedKVStore.SingleKVStore#putBatch)
 
 <!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>-End-->
 
@@ -770,7 +770,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| entries | [Entry](arkts-arkdata-distributeddata-entry-i.md)[] | 是 | 表示要批量插入的键值对。 |
+| entries | Entry[] | 是 | 表示要批量插入的键值对。 |
 
 **返回值：**
 
@@ -826,7 +826,7 @@ rollback(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#rollback
+**替代接口：** [rollback](ohos.data.distributedKVStore.SingleKVStore#rollback)
 
 <!--Device-KVStore-rollback(callback: AsyncCallback<void>): void--><!--Device-KVStore-rollback(callback: AsyncCallback<void>): void-End-->
 
@@ -869,7 +869,7 @@ rollback(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#rollback
+**替代接口：** [rollback](ohos.data.distributedKVStore.SingleKVStore#rollback)
 
 <!--Device-KVStore-rollback(): Promise<void>--><!--Device-KVStore-rollback(): Promise<void>-End-->
 
@@ -910,7 +910,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#setSyncRange
+**替代接口：** [setSyncRange](ohos.data.distributedKVStore.SingleKVStore#setSyncRange)
 
 <!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void-End-->
 
@@ -953,7 +953,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#setSyncRange
+**替代接口：** [setSyncRange](ohos.data.distributedKVStore.SingleKVStore#setSyncRange)
 
 <!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>-End-->
 
@@ -1003,7 +1003,7 @@ startTransaction(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#startTransaction
+**替代接口：** [startTransaction](ohos.data.distributedKVStore.SingleKVStore#startTransaction)
 
 <!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void--><!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void-End-->
 
@@ -1066,7 +1066,7 @@ startTransaction(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SingleKVStore#startTransaction
+**替代接口：** [startTransaction](ohos.data.distributedKVStore.SingleKVStore#startTransaction)
 
 <!--Device-KVStore-startTransaction(): Promise<void>--><!--Device-KVStore-startTransaction(): Promise<void>-End-->
 

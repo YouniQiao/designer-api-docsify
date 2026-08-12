@@ -4,7 +4,7 @@
 
 继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
 
-**继承/实现关系：** Region extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**继承/实现关系：** Region extends [lang.ISendable](lang.ISendable)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ size: Size
 
 区域大小。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 12
 

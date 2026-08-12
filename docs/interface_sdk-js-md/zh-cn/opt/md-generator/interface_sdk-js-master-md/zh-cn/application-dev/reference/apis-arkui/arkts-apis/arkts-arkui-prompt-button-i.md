@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.Button
+**替代接口：** [Button](ohos.promptAction/promptAction.Button)
 
 <!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 
@@ -26,7 +26,7 @@ color: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.Button#color
+**替代接口：** [color](ohos.promptAction/promptAction.Button#color)
 
 <!--Device-Button-color: string--><!--Device-Button-color: string-End-->
 
@@ -46,7 +46,7 @@ text: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.Button#text
+**替代接口：** [text](ohos.promptAction/promptAction.Button#text)
 
 <!--Device-Button-text: string--><!--Device-Button-text: string-End-->
 

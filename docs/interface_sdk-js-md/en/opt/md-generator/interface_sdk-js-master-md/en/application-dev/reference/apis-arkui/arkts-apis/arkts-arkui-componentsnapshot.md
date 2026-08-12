@@ -11,11 +11,11 @@ For typical use cases (for example, long screenshots) and best practices of comp
 > 
 > - In scenarios where [XComponent](xcomponent) is used to, for example, display video or camera streams,
 > obtain images through
-> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md/arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface),
+> [createPixelMapFromSurface](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmapfromsurface-f.md#createPixelMapFromSurface),
 > instead of through an API in this module.
 > 
 > - If the content of a component does not fill the entire area allocated for it, any remaining space in the snapshot
-> will be rendered as transparent pixels. In addition, if the component uses [image effects](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) or other
+> will be rendered as transparent pixels. In addition, if the component uses [image effects](common) or other
 > effect-related attributes, the resulting snapshot may not be as expected. To address these potential issues, check
 > whether the component's transparent content area needs to be filled, or use the window screenshot API
 > [snapshot](arkts-arkui-window-window-i.md#snapshot) instead.
@@ -33,7 +33,7 @@ For typical use cases (for example, long screenshots) and best practices of comp
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## Summary

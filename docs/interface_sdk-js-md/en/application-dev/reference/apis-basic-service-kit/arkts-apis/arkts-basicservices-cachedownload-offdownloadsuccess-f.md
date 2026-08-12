@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## offDownloadSuccess
@@ -27,7 +27,7 @@ Unsubscribes from the pre-download completion events. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is left blank, all completion callback functions of the URL are unregistered. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is left blank, all completion callback functions of the URL are unregistered. |
 
 ## Examples
 

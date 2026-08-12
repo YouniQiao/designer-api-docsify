@@ -60,7 +60,7 @@ Replaces text in a string, using this regular expression.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | string | string | Yes |
-| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
 
 **Return value:**
 

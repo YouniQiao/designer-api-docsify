@@ -11,7 +11,7 @@ An image effect class used to add a specified effect to the effect chain through
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -336,7 +336,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 ## Examples
 
@@ -396,7 +396,7 @@ Obtains image.PixelMap of the source image with the linked list effect. The rend
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 ## Examples
 
@@ -440,7 +440,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 **Deprecated since:** 11
 
-**Substitutes:** [effectKit.Filter#getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)
+**Substitutes:** [getEffectPixelMap](#getEffectPixelMap)
 
 <!--Device-Filter-getPixelMap(): image.PixelMap--><!--Device-Filter-getPixelMap(): image.PixelMap-End-->
 
@@ -663,7 +663,7 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| colorMatrix | Array&lt;number&gt; | Yes |
+| colorMatrix | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
@@ -675,7 +675,7 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

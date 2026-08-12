@@ -29,7 +29,7 @@ declare function open(path: string, mode?: number): Promise<File>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;File&gt; | Promise对象。返回File对象。 |
+| Promise&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Promise对象。返回File对象。 |
 
 **错误码：**
 
@@ -87,7 +87,7 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录的应用沙箱路径或URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | 是 | 异步打开文件之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | 是 | 异步打开文件之后的回调。 |
 
 **错误码：**
 
@@ -147,7 +147,7 @@ declare function open(path: string, mode: number, callback: AsyncCallback<File>)
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录的应用沙箱路径或URI。 |
 | mode | number | 是 | 打开文件或目录的[选项](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode)，必须指定如下选项中 的一个，默认以只读方式打开：&lt;br/&gt;- OpenMode.READ_ONLY(0o0)：只读打开。&lt;br/&gt;- OpenMode.WRITE_ONLY(0o1)：只写打开。&lt;br/&gt;- OpenMode.READ_WRITE (0o2)：读写打开。&lt;br/&gt;给定如下功能选项，以按位或的方式追加，默认不给定任何额外选项：&lt;br/&gt;- OpenMode.CREATE(0o100)：若文件不存在，则创建文件。&lt;br/&gt;- OpenMode.TRUNC(0 o1000)：如果文件存在且文件具有写权限，则将其长度裁剪为零。&lt;br/&gt;- OpenMode.APPEND(0o2000)：以追加方式打开，后续写将追加到文件末尾。&lt;br/&gt;- OpenMode.NONBLOCK(0o400 0)：如果path指向FIFO、块特殊文件或字符特殊文件，则本次打开及后续IO进行非阻塞操作。&lt;br/&gt;- OpenMode.DIR(0o200000)：如果path不指向目录，则出错。不允许附加写权限。&lt;br/&gt;- OpenMode.NOFOLLOW(0o400000)：如果path指向符号链接，则出错。&lt;br/&gt;- OpenMode.SYNC(0o4010000)：以同步IO的方式打开文件。&lt;br/&gt;- OpenMode.UNCACHE(0o10000000000)： 读写文件不进行页缓存，从API版本26.0.0开始支持此选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | 是 | 异步打开文件之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | 是 | 异步打开文件之后的回调。 |
 
 **错误码：**
 

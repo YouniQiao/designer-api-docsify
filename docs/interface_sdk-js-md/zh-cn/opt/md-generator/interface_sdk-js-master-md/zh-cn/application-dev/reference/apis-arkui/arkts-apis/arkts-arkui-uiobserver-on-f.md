@@ -189,7 +189,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | --- | --- | --- |
 | type | 'scrollEvent' | 是 |
 | options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 |
 
 
 ## on('scrollEvent')
@@ -215,7 +215,7 @@ Registers a callback function to be called when the scroll event start or stop.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'scrollEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | 是 |
 
 
 ## on('routerPageUpdate')
@@ -241,7 +241,7 @@ export function on(type: 'routerPageUpdate', context: UIAbilityContext | UIConte
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'routerPageUpdate' | 是 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RouterPageInfo&gt; | 是 |
 
 ## 示例
@@ -304,8 +304,8 @@ export function on(type: 'densityUpdate', context: UIContext, callback: Callback
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'densityUpdate' | 是 |
-| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DensityInfo&gt; | 是 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | 是 |
 
 ## 示例
 
@@ -362,7 +362,7 @@ export function on(type: 'willDraw', context: UIContext, callback: Callback<void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'willDraw' | 是 |
-| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
@@ -411,7 +411,7 @@ export function on(type: 'didLayout', context: UIContext, callback: Callback<voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'didLayout' | 是 |
-| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
@@ -461,7 +461,7 @@ export function on(type: 'tabContentUpdate', options: ObserverOptions, callback:
 | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 |
 | options | [ObserverOptions](arkts-arkui-uiobserver-observeroptions-i.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -538,7 +538,7 @@ export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'tabContentUpdate' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -619,8 +619,8 @@ export function on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | 是 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -759,9 +759,9 @@ export function on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | 是 |
-| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 |
+| context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 |
 | observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | 是 |
 
 ## 示例
 

@@ -8,7 +8,7 @@ Describes the criteria for filtering scanning results can be set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanFilter
+**Substitutes:** [ScanFilter](ohos.bluetoothManager/bluetoothManager.ScanFilter)
 
 <!--Device-bluetooth-interface ScanFilter--><!--Device-bluetooth-interface ScanFilter-End-->
 
@@ -17,7 +17,7 @@ Describes the criteria for filtering scanning results can be set.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -36,7 +36,7 @@ The address of a BLE peripheral device
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanFilter.deviceId
+**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.ScanFilter.deviceId)
 
 <!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
 
@@ -58,7 +58,7 @@ The name of a BLE peripheral device
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanFilter.name
+**Substitutes:** [name](ohos.bluetoothManager/bluetoothManager.ScanFilter.name)
 
 <!--Device-ScanFilter-name?: string--><!--Device-ScanFilter-name?: string-End-->
 
@@ -80,7 +80,7 @@ The service UUID of a BLE peripheral device
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanFilter.serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.ScanFilter.serviceUuid)
 
 <!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
 

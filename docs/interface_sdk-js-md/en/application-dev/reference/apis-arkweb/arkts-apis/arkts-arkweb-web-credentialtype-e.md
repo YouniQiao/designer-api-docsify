@@ -1,6 +1,6 @@
 # CredentialType
 
-Enum type supplied to {@link CredentialType} when ClientAuthenticationHandler#confirm being called.
+Enum type supplied to [CredentialType](#CredentialType) when ClientAuthenticationHandler#confirm being called.
 
 **Since:** 23
 

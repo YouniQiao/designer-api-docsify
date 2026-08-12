@@ -24,7 +24,7 @@ Defines TextInput Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextInputOptions](../arkts-components/arkts-arkui-textinputoptions-i.md) | No |  |
+| value | [TextInputOptions](arkts-arkui-textinput-textinputoptions-i.md) | No |  |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines TextInput Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextInputAttribute&gt; | Yes | TextInput attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md)&gt; | Yes | TextInput attribute instance |
 
 **Return value:**
 

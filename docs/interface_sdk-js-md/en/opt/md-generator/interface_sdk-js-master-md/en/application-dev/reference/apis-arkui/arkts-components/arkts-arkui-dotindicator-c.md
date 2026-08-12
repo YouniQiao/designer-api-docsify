@@ -1,6 +1,6 @@
 # DotIndicator
 
-A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
+A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#Indicator).
 
 **Inheritance/Implementation:** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 
@@ -96,7 +96,7 @@ Set indicator icon.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | Yes |
+| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)&gt; | Yes |
 
 **Return value:**
 

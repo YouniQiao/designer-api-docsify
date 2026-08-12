@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## enableGwpAsanGrayscale
@@ -31,7 +31,7 @@ Enable the GWP-ASAN grayscale of your application.
 
 | Error Code ID |
 | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) |
+| [11400114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) |
 
 ## Examples
 

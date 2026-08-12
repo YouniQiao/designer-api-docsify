@@ -24,7 +24,7 @@ export declare function sendTouchEvent(event: TouchObject): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [TouchObject](../arkts-components/arkts-arkui-touchobject-i.md) | 是 | 触摸事件，event参数见[TouchObject](arkts-arkui-common-touchobject-i.md)的介绍。 |
+| event | TouchObject | 是 | 触摸事件，event参数见[TouchObject](TouchObject)的介绍。 |
 
 **返回值：**
 

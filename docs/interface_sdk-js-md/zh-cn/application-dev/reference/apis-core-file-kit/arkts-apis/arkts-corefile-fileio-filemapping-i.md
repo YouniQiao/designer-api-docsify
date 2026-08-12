@@ -1,6 +1,6 @@
 # FileMapping
 
-文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-fileio-mmap-f.md#mmap)或方法[mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapsync)构建一个FileMapping实例。
+文件映射对象，在调用FileMapping的方法前，需要先通过[mmap()](arkts-corefile-fileio-mmap-f.md#mmap)或方法[mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapSync)构建一个FileMapping实例。
 
 **起始版本：** 26.0.0
 
@@ -431,7 +431,7 @@ setLimit(limit: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| limit | int | 是 | 要设置的可读写区域上界值，单位为Byte。 &lt;br&gt;取值需大于等于0，且小于等于当前[capacity](arkts-corefile-fileio-filemapping-i.md#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
+| limit | int | 是 | 要设置的可读写区域上界值，单位为Byte。 &lt;br&gt;取值需大于等于0，且小于等于当前[capacity](#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
 
 **错误码：**
 
@@ -463,7 +463,7 @@ setPosition(position: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | int | 是 | 期望设置的目标位置，单位为Byte。 &lt;br&gt;必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](arkts-corefile-fileio-filemapping-i.md#getlimit)获得可读写上界的limit。 |
+| position | int | 是 | 期望设置的目标位置，单位为Byte。 &lt;br&gt;必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](#getLimit)获得可读写上界的limit。 |
 
 **错误码：**
 

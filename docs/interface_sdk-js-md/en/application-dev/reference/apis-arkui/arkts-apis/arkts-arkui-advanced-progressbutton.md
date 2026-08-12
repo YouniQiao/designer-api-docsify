@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButton } from 'kits/@kit.ArkUI';
+import { ProgressButton } from '@kit.ArkUI';
 ```
 
 ## Summary

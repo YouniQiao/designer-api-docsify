@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## isOperationAllowed
@@ -63,7 +63,7 @@ Checks whether a user is allowed to set wallpapers.Returns true if a user is all
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

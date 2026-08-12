@@ -13,7 +13,7 @@ Describes the data returned by the operation of proactive triggering a WantAgent
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## extraInfo
@@ -24,7 +24,7 @@ extraInfo?: Record<string, Object>
 
 Extra information.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 

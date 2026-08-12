@@ -20,7 +20,7 @@ Defines a callback to intercept the soft keyboard initiated from editable elemen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyboardCallbackInfo | [WebKeyboardCallbackInfo](arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes | Input parameter of the callback used to intercept the soft keyboard initiated from editable elements on a web page, including [WebKeyboardController](../arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web) and editable element attributes. |
+| keyboardCallbackInfo | [WebKeyboardCallbackInfo](arkts-arkweb-webkeyboardcallbackinfo-i.md) | Yes | Input parameter of the callback used to intercept the soft keyboard initiated from editable elements on a web page, including [WebKeyboardController](web) and editable element attributes. |
 
 **Return value:**
 

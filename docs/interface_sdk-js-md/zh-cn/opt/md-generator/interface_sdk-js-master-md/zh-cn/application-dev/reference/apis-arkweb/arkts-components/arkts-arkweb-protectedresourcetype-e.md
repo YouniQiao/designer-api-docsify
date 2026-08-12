@@ -1,6 +1,6 @@
 # ProtectedResourceType
 
-定义可访问的资源类型，与 {@link onPermissionRequest} 方法相关。
+定义可访问的资源类型，与 [onPermissionRequest](onPermissionRequest) 方法相关。
 
 **起始版本：** 9
 

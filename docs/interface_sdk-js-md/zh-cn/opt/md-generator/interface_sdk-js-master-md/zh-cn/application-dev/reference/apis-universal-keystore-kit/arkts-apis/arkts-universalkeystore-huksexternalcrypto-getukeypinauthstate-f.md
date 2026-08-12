@@ -19,27 +19,27 @@ function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryp
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | resourceId | string | 是 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | 否 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksExternalPinAuthState&gt; |
+| Promise&lt;[HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
-| [12000014](../errorcode-huks.md#12000014-内存不足) |
-| [12000012](../errorcode-huks.md#12000012-外部错误) |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
+| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
+| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
+| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
+| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
+| [12000024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) |
 
 ## 示例
 

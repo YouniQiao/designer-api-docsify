@@ -2,7 +2,7 @@
 
 Describes the normal live notification content. This API inherits from NotificationBasicContent.
 
-**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ extensionWantAgent?: WantAgent
 
 Redirection by tapping in the auxiliary area. This parameter is left empty by default.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 20
 
@@ -42,7 +42,7 @@ extraInfo?: Record<string, Object>
 
 Extra information of the live view. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -85,7 +85,7 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 
 Extra image information of the live view. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;image.PixelMap&gt;&gt;
+**Type:** Record&lt;string, Array&lt;image.PixelMap&gt;&gt;
 
 **Since:** 11
 
@@ -105,7 +105,7 @@ status: LiveViewStatus
 
 Notification status.
 
-**Type:** [LiveViewStatus](arkts-notification-notificationmanager-liveviewstatus-t-sys.md)
+**Type:** [LiveViewStatus](arkts-notification-notificationcontent-liveviewstatus-e-sys.md)
 
 **Since:** 11
 

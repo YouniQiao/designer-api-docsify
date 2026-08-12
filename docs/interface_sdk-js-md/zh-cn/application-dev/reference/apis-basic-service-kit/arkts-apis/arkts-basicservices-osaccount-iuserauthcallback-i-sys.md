@@ -107,7 +107,7 @@ onResult: (result: int, extraInfo: AuthResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
-| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 是 |  |
+| extraInfo | AuthResult | 是 |  |
 
 ## 示例
 

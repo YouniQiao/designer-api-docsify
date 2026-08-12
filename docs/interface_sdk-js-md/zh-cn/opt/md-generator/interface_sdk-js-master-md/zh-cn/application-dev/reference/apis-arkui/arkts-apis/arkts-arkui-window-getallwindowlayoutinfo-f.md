@@ -26,16 +26,16 @@ function getAllWindowLayoutInfo(displayId: number): Promise<Array<WindowLayoutIn
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt; |
+| Promise&lt;Array&lt;[WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -63,7 +63,7 @@ try {
 function getAllWindowLayoutInfo(displayId: number, option?: WindowInfoOptions): Promise<Array<WindowLayoutInfo>>
 ```
 
-根据option指定的过滤条件获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。当未传入option或其中的字段都为默认值时，当前接口与[getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo)等价。
+根据option指定的过滤条件获取指定屏幕上可见的窗口布局信息数组，其中返回的每个Rect的宽、高是已经过缩放计算后的值，按当前窗口层级排列，层级最高的对应数组index为0，使用Promise异步回调。当未传入option或其中的字段都为默认值时，当前接口与[getAllWindowLayoutInfo](#getAllWindowLayoutInfo)等价。
 
 **起始版本：** 26.0.0
 
@@ -86,12 +86,12 @@ function getAllWindowLayoutInfo(displayId: number, option?: WindowInfoOptions): 
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;WindowLayoutInfo&gt;&gt; |
+| Promise&lt;Array&lt;[WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |

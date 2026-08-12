@@ -2,7 +2,7 @@
 
 Configures the parameters of a popup. You can use the   
 [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in   
-[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md) object, and then call the attributes of **options** when   
+[UIContext](@ohos.arkui.UIContext) to obtain the [PromptAction](@ohos.arkui.UIContext) object, and then call the attributes of **options** when   
 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18) or   
 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) is called.
 
@@ -455,7 +455,7 @@ levelMode?: LevelMode
 
 Defines the display level of the popup.
 
-**Type:** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**Type:** LevelMode
 
 **Since:** 26.0.0
 
@@ -476,7 +476,7 @@ mask?: boolean | PopupMaskType
 Whether to apply a mask with the specified color to the popup. The value **false** means that no mask is applied,   
 **true** means that a transparent mask is applied, and **PopupMaskType** means that a mask with the specified color is applied. Default value: **true**
 
-**Type:** boolean \| PopupMaskType
+**Type:** boolean \| [PopupMaskType](arkts-arkui-popupmasktype-i.md)
 
 **Since:** 18
 
@@ -504,7 +504,7 @@ Default value: **{x:0, y:0}**
 
 Unit: vp
 
-**Type:** [Position](../arkts-apis/arkts-arkui-display-position-i.md)
+**Type:** Position
 
 **Default:** { x: 0, y: 0 }
 
@@ -532,7 +532,7 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 
 1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
-**Type:** boolean \| Callback&lt;DismissPopupAction&gt;
+**Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **Since:** 18
 
@@ -626,7 +626,7 @@ Default value: **Placement.Bottom**
 popupColor?: ResourceColor
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: [TRANSPARENT](../arkts-apis/arkts-arkui-color-e.md/arkts-arkui-color-e.md) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: [TRANSPARENT](Color) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -676,7 +676,7 @@ Popup shadow.
 
 Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 

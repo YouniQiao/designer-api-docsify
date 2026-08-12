@@ -1,8 +1,8 @@
 # IndicatorComponentAttribute
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性。
+除支持[通用属性](./../../@internal/component/ets/common)外，还支持以下属性。
 
-**继承/实现关系：** IndicatorComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** IndicatorComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -190,7 +190,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indicatorStyle | [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) \| DigitIndicator \| undefined | 是 | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
+| indicatorStyle | [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../arkts-components/arkts-arkui-digitindicator-c.md) \| undefined | 是 | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
 
 **返回值：**
 

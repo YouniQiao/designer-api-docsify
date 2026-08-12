@@ -2,7 +2,7 @@
 
 An array of vertices and their data defining a custom geometric shape.
 
-**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
+**Inheritance/Implementation:** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
 
 **Since:** 18
 
@@ -20,7 +20,7 @@ colors?: Color[]
 
 Vertex color. If colors is not null, colors[N] is for vertices[N].
 
-**Type:** [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md)[]
+**Type:** [Color](arkts-arkgraphics3d-scenetypes-color-i.md)[]
 
 **Since:** 18
 

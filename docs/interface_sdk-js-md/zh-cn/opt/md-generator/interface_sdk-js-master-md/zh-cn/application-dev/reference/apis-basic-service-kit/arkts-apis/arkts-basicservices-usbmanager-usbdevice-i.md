@@ -48,7 +48,7 @@ configs: Array<USBConfiguration>
 
 设备配置描述符信息。
 
-**类型：** Array&lt;USBConfiguration&gt;
+**类型：** Array&lt;[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)&gt;
 
 **起始版本：** 9
 

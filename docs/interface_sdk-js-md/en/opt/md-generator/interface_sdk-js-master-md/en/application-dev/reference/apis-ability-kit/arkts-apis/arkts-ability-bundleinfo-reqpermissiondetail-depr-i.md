@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [ReqPermissionDetail](arkts-ability-bundleinfo-i.md) instead.
+> [ReqPermissionDetail](bundleInfo) instead.
 
 Provides the detailed information of the permissions to request from the system.
 
@@ -11,7 +11,7 @@ Provides the detailed information of the permissions to request from the system.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleInfo](arkts-ability-bundleinfo-i.md)
+**Substitutes:** [bundleInfo](bundleInfo)
 
 <!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
 
@@ -33,7 +33,7 @@ Name of the permission to request.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#name)
 
 <!--Device-ReqPermissionDetail-name: string--><!--Device-ReqPermissionDetail-name: string-End-->
 
@@ -55,7 +55,7 @@ Reason for requesting the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#reason
+**Substitutes:** [reason](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#reason)
 
 <!--Device-ReqPermissionDetail-reason: string--><!--Device-ReqPermissionDetail-reason: string-End-->
 
@@ -69,7 +69,7 @@ usedScene: UsedScene
 
 Application scenario and timing for using the permission.
 
-**Type:** [UsedScene](arkts-ability-bundlemanager-usedscene-t.md)
+**Type:** [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)
 
 **Default:** Indicates the used scene of this required permissions
 
@@ -77,7 +77,7 @@ Application scenario and timing for using the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#usedScene
+**Substitutes:** [usedScene](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#usedScene)
 
 <!--Device-ReqPermissionDetail-usedScene: UsedScene--><!--Device-ReqPermissionDetail-usedScene: UsedScene-End-->
 

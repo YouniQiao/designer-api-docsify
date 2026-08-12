@@ -13,7 +13,7 @@ Options for executing a command.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## background

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## cancelBackgroundRunning
@@ -20,7 +20,7 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
+**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopBackgroundRunning)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -32,7 +32,7 @@ Requests to cancel a continuous task from the system. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is canceled, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -66,7 +66,7 @@ Requests to cancel a continuous task from the system. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)
+**Substitutes:** [stopBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopBackgroundRunning)
 
 **Model restriction:** This API can be used only in the FA model.
 

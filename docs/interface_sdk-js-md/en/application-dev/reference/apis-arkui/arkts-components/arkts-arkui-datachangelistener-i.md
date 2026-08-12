@@ -52,7 +52,7 @@ Invoked when data is added to the position indicated by the specified index.
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd) instead.
+> [onDataAdd](#onDataAdd) instead.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Invoked when data is added to the position indicated by the specified index.
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataAdd](arkts-arkui-datachangelistener-i.md#ondataadd)
+**Substitutes:** [onDataAdd](#onDataAdd)
 
 <!--Device-DataChangeListener-onDataAdded(index: number): void--><!--Device-DataChangeListener-onDataAdded(index: number): void-End-->
 
@@ -107,7 +107,7 @@ Invoked when data in the position indicated by the specified index is changed.
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataChange](arkts-arkui-datachangelistener-i.md#ondatachange) instead.
+> [onDataChange](#onDataChange) instead.
 
 **Since:** 7
 
@@ -115,7 +115,7 @@ Invoked when data in the position indicated by the specified index is changed.
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataChange](arkts-arkui-datachangelistener-i.md#ondatachange)
+**Substitutes:** [onDataChange](#onDataChange)
 
 <!--Device-DataChangeListener-onDataChanged(index: number): void--><!--Device-DataChangeListener-onDataChanged(index: number): void-End-->
 
@@ -167,7 +167,7 @@ Invoked when data is deleted from the position indicated by the specified index.
 > **NOTE：**
 > 
 > This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete) instead.
+> [onDataDelete](#onDataDelete) instead.
 
 **Since:** 7
 
@@ -175,7 +175,7 @@ Invoked when data is deleted from the position indicated by the specified index.
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataDelete](arkts-arkui-datachangelistener-i.md#ondatadelete)
+**Substitutes:** [onDataDelete](#onDataDelete)
 
 <!--Device-DataChangeListener-onDataDeleted(index: number): void--><!--Device-DataChangeListener-onDataDeleted(index: number): void-End-->
 
@@ -228,7 +228,7 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 > **NOTE：**
 > 
 > - This API is supported since API version 7 and deprecated since API version 8. Use
-> [onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove) instead.
+> [onDataMove](#onDataMove) instead.
 > 
 > - The ID must remain unchanged before and after data movement. If the ID changes, APIs for deleting and adding
 > data must be called.
@@ -239,7 +239,7 @@ Invoked when data is moved, that is, when data is swapped between the **from** a
 
 **Deprecated since:** 8
 
-**Substitutes:** [DataChangeListener.onDataMove](arkts-arkui-datachangelistener-i.md#ondatamove)
+**Substitutes:** [onDataMove](#onDataMove)
 
 <!--Device-DataChangeListener-onDataMoved(from: number, to: number): void--><!--Device-DataChangeListener-onDataMoved(from: number, to: number): void-End-->
 

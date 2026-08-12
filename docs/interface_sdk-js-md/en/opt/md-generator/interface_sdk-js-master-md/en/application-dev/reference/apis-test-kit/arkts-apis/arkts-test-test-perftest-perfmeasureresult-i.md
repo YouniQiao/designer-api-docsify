@@ -11,7 +11,7 @@ Represents the measurement result data corresponding to the performance metric.
 ## Modules to Import
 
 ```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
 ```
 
 ## average
@@ -92,7 +92,7 @@ Minimum value of the measurement data of each round (the value **-1** is exclude
 readonly roundValues: Array<number>
 ```
 
-Measurement data value of each round of the tested performance metric. The unit is the same as that of the corresponding {@link PerfMetric}. If data collection fails, the value **-1** is returned.
+Measurement data value of each round of the tested performance metric. The unit is the same as that of the corresponding [PerfMetric](arkts-test-test-perftest-perfmetric-e.md#PerfMetric). If data collection fails, the value **-1** is returned.
 
 **Type:** Array&lt;number&gt;
 

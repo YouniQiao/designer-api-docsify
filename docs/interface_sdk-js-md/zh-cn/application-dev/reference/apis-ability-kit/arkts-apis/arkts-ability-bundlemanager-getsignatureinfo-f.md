@@ -6,7 +6,7 @@
 function getSignatureInfo(uid: int): SignatureInfo
 ```
 
-根据给定的uid获取对应应用的[签名信息](arkts-ability-bundlemanager-signatureinfo-t.md)。
+根据给定的uid获取对应应用的[签名信息](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo)。
 
 **起始版本：** 18
 
@@ -28,14 +28,14 @@ function getSignatureInfo(uid: int): SignatureInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [SignatureInfo](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-signatureinfo-i.md) | 返回SignatureInfo对象。 |
+| SignatureInfo | 返回SignatureInfo对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
 
 ## 示例
 

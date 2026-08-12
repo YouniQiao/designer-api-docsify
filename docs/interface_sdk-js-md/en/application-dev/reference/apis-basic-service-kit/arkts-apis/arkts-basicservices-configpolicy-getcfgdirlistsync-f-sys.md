@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirListSync

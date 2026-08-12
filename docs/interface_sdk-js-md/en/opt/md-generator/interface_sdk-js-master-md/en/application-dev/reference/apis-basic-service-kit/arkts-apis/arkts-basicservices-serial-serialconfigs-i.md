@@ -11,7 +11,7 @@ Serial port communication configuration.
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## baudRate
@@ -42,7 +42,7 @@ dataBits?: DataBits
 
 Data bits.&lt;br&gt;Default value: EIGHT
 
-**Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
+**Type:** DataBits
 
 **Default:** EIGHT
 
@@ -62,7 +62,7 @@ parity?: Parity
 
 Parity bit.&lt;br&gt;Default value: NONE
 
-**Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
+**Type:** Parity
 
 **Default:** NONE
 
@@ -104,7 +104,7 @@ Stop bits.
 
 Default value: ONE
 
-**Type:** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
+**Type:** StopBits
 
 **Default:** ONE
 

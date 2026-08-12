@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## lstat
@@ -32,7 +32,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise used to return the symbolic link information obtained. For details, see **Stat**. |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise used to return the symbolic link information obtained. For details, see **Stat**. |
 
 **Error codes:**
 
@@ -71,7 +71,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of the file.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes | Callback used to return the symbolic link information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the symbolic link information obtained. |
 
 **Error codes:**
 

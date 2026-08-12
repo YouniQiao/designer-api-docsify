@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## on('prepareContinue')
@@ -30,13 +30,13 @@ Registers a callback to obtain the quick start result when an application is lau
 | --- | --- | --- | --- |
 | type | 'prepareContinue' | Yes | The value is fixed at **prepareContinue**. |
 | context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | Yes | Callback used to return the result. If obtaining the quick start result is successful, **err** is undefined, and **ContinueResultInfo** is the obtained quick startup result. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | Yes | Callback used to return the result. If obtaining the quick start result is successful, **err** is undefined, and **ContinueResultInfo** is the obtained quick startup result. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| [16300501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
 
 ## Examples
 

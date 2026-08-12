@@ -37,7 +37,7 @@ The event communication of this module involves three processes: subscription, p
 ## Modules to Import
 
 ```TypeScript
-import { commonEventManager } from 'kits/@kit.BasicServicesKit';
+import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

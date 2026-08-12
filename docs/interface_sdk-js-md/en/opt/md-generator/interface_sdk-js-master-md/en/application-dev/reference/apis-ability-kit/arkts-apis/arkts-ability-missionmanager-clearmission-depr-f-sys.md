@@ -12,7 +12,7 @@ Clears a given mission, regardless of whether it is locked. This API uses an asy
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#clearMission
+**Substitutes:** [clearMission](ohos.app.ability.missionManager/missionManager#clearMission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -61,7 +61,7 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#clearMission
+**Substitutes:** [clearMission](ohos.app.ability.missionManager/missionManager#clearMission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -81,7 +81,7 @@ Clears a given mission, regardless of whether it is locked. This API uses a prom
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

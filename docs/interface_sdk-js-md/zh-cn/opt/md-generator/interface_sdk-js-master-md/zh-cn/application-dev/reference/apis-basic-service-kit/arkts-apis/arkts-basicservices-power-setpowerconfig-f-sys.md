@@ -24,18 +24,18 @@ function setPowerConfig(sceneName: string, value: string): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sceneName | string | 是 |
+| [sceneName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md) | string | 是 |
 | value | string | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4900601](../../apis-basic-services-kit/errorcode-power.md#4900601-写电源配置值失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-接口入参无效) |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) |
+| [4900601](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900601-写电源配置值失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [4900400](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900400-接口入参无效) |
+| [4900101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to {@link onClientAuthenticationRequest} method.
+Defines the client certificate request result, related to [onClientAuthenticationRequest](onClientAuthenticationRequest) method.
 
 **Since:** 9
 
@@ -94,7 +94,7 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## constructor
 

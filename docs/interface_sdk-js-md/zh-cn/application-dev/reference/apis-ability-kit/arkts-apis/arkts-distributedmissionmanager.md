@@ -64,8 +64,8 @@
 | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 注册用于通知迁移结果的回调。 |
 | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 迁移任务所需的参数。 |
 | [ContinueMissionInfo](arkts-ability-distributedmissionmanager-continuemissioninfo-t-sys.md) | 迁移任务所需的参数。 |
-| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | 作为可以  [registerMissionListener](registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback&lt;void&gt;))的入参，表示开始同步后，建立的回调函数。 |
-| [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 可以作为  [registerMissionListener](registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback, callback: AsyncCallback&lt;void&gt;))的入参，表示注册监听时所需参数的枚举。 |
-| [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | 作为  [startSyncRemoteMissions](startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCallback&lt;void&gt;))的入参，表示同步时所需参数的枚举。 |
+| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | 作为可以  [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener)的入参，表示开始同步后，建立的回调函数。 |
+| [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 可以作为  [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener)的入参，表示注册监听时所需参数的枚举。 |
+| [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | 作为  [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startSyncRemoteMissions)的入参，表示同步时所需参数的枚举。 |
 <!--DelEnd-->
 

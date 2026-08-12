@@ -13,7 +13,7 @@ The util module provides common utility functions,such as TextEncoder and TextDe
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## Summary

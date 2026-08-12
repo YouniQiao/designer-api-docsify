@@ -44,7 +44,7 @@ actived?: boolean
 
 **废弃版本：** 11
 
-**替代接口：** ohos.UiTest.WindowFilter#active
+**替代接口：** [active](ohos.UiTest.WindowFilter#active)
 
 <!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 

@@ -15,7 +15,7 @@ Describes the notification statistics of a specified application.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundle
@@ -26,7 +26,7 @@ bundle: BundleOption
 
 Bundle information of the application.
 
-**Type:** [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md)
+**Type:** BundleOption
 
 **Since:** 26.0.0
 

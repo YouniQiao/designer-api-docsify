@@ -13,7 +13,7 @@ Declaration of the title bar style configuration.
 ## Modules to Import
 
 ```TypeScript
-import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -48,7 +48,7 @@ public backgroundBlurStyle?: BlurStyle
 
 Background blur style.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ public safeAreaEdges?: Array<SafeAreaEdge>
 
 Indicates the edges of the safe area.
 
-**Type:** Array&lt;SafeAreaEdge&gt;
+**Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
 **Since:** 26.0.0
 
@@ -128,7 +128,7 @@ public safeAreaTypes?: Array<SafeAreaType>
 
 Indicates the types of the safe area.
 
-**Type:** Array&lt;SafeAreaType&gt;
+**Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # NavPushPathHelper
 
-On the initial launch, the atomic service only downloads and installs the main package and its dependencies.Therefore, if the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) to support dynamic loading of the HSP subpackage before the navigation occurs.
+On the initial launch, the atomic service only downloads and installs the main package and its dependencies.Therefore, if the [NavDestination](./@internal/component/ets/nav_destination) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](./@internal/component/ets/navigation) to support dynamic loading of the HSP subpackage before the navigation occurs.
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ On the initial launch, the atomic service only downloads and installs the main p
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from 'kits/@kit.ArkUI';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -43,7 +43,7 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -65,17 +65,17 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) |
 
 ## pushDestination
 
@@ -84,9 +84,9 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
-Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
+Depending on the [LaunchMode](LaunchMode) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -108,17 +108,17 @@ Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) |
 
 ## pushDestinationByName
 
@@ -127,7 +127,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -150,17 +150,17 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) |
 
 ## pushDestinationByName
 
@@ -170,7 +170,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -187,24 +187,24 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | moduleName | string | Yes |
 | name | string | Yes |
 | param | Object | Yes |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | Yes |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes |
 | animated | boolean | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) |
 
 ## pushPath
 
@@ -213,7 +213,7 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -235,13 +235,13 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
 
 ## pushPath
 
@@ -250,9 +250,9 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
-Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
+Depending on the [LaunchMode](LaunchMode) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -274,13 +274,13 @@ Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
 
 ## pushPathByName
 
@@ -289,7 +289,7 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -312,13 +312,13 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
 
 ## pushPathByName
 
@@ -328,7 +328,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -345,20 +345,20 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | moduleName | string | Yes |
 | name | string | Yes |
 | param | Object | Yes |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PopInfo&gt; | Yes |
+| onPop | Callback&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | Yes |
 | animated | boolean | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
 
 ## replacePath
 
@@ -367,7 +367,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack and pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -389,13 +389,13 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
 
 ## replacePath
 
@@ -405,7 +405,7 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations.
 
-Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
+Depending on the [LaunchMode](LaunchMode) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -427,13 +427,13 @@ Depending on the [LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |
 
 ## replacePathByName
 
@@ -464,10 +464,10 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) |
+| [300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) |

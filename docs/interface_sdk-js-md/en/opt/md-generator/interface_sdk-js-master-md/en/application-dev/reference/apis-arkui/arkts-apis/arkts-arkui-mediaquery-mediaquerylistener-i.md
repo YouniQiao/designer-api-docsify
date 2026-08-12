@@ -2,9 +2,9 @@
 
 Implements the media query listener, including the first query result when the listener is applied for. The specified media query condition, for example, **'(width <= 600vp)'**, is compared system information. If related information is not initialized during the first query, **matches** returns **false**.
 
-Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md).
+Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult).
 
-**Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)
+**Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)
 
 **Since:** 7
 
@@ -15,7 +15,7 @@ Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md).
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## off('change')
@@ -41,7 +41,7 @@ Deregisters a media query listener, so that no callback is triggered when the me
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaQueryResult&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No |
 
 ## Examples
 
@@ -87,7 +87,7 @@ Registers a media query listener. The callback is triggered when the media attri
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'change' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MediaQueryResult&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes |
 
 ## Examples
 

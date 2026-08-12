@@ -2,7 +2,7 @@
 
 Defines the gesture base event.
 
-**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
+**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](BaseEvent)
 
 **Since:** 23
 

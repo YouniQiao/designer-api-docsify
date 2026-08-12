@@ -25,8 +25,8 @@ Defines Checkbox Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](../arkts-components/arkts-arkui-checkboxoptions-i.md) | No | the options of Checkbox. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| options | [CheckboxOptions](arkts-arkui-checkbox-checkboxoptions-i.md) | No | the options of Checkbox. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines Checkbox Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CheckboxAttribute&gt; | Yes | checkbox attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md)&gt; | Yes | checkbox attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

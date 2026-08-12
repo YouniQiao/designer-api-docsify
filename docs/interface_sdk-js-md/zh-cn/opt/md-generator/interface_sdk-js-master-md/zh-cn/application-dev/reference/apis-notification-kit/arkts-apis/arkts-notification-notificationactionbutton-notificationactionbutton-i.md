@@ -1,6 +1,6 @@
 # NotificationActionButton
 
-NotificationActionButton模块定义了通知中显示的操作按钮，用于在[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)中添加交互式操作按钮，让用户通过点击按钮触发WantAgent动作。当开发者需要在通知中提供交互式操作按钮（如"回复"、"标记已读"等）时使用此模块。
+NotificationActionButton模块定义了通知中显示的操作按钮，用于在[NotificationRequest](@link ./notificationRequest::NotificationRequest)中添加交互式操作按钮，让用户通过点击按钮触发WantAgent动作。当开发者需要在通知中提供交互式操作按钮（如"回复"、"标记已读"等）时使用此模块。
 
 **起始版本：** 7
 
@@ -64,7 +64,7 @@ wantAgent: WantAgent
 
 点击按钮时触发的WantAgent，封装了应用的行为意图。用户点击按钮后，系统将按WantAgent指定的方式执行动作（如跳转至指定UIAbility或发送公共事件）。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 7
 

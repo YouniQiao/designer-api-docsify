@@ -1,8 +1,8 @@
 # HTML
 
-Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
+Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text).
 
-**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
+**Inheritance/Implementation:** HTML extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ Represents the HTML data. It is a child class of [Text](arkts-arkdata-unifieddat
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## htmlContent
@@ -64,7 +64,7 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array&lt;UriPermission&gt;
+**Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
 
 **Since:** 26.0.0
 

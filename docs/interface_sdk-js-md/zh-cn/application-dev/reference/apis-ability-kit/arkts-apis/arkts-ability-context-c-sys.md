@@ -2,7 +2,7 @@
 
 Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
 
-**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
+**继承/实现关系：** Context extends [BaseContext](BaseContext)
 
 **起始版本：** 9
 
@@ -23,7 +23,7 @@ createBundleContext(bundleName: string): Context
 > **说明：**
 > 
 > - stage模型多module的情况下可能发生资源id冲突的情况，建议使用
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)替代。
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)替代。
 
 **起始版本：** 9
 
@@ -31,7 +31,7 @@ createBundleContext(bundleName: string): Context
 
 **废弃版本：** 12
 
-**替代接口：** [@ohos.app.ability.application:application.createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createbundlecontext)
+**替代接口：** [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md#createBundleContext)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -53,15 +53,34 @@ createBundleContext(bundleName: string): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 安装包的上下文。 |
+| [Context](arkts-ability-context-c.md) | 安装包的上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let bundleContext: common.Context;
+    try {
+      bundleContext = this.context.createBundleContext('com.example.test');
+    } catch (error) {
+      console.error(`createBundleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## createModuleContext
 
@@ -77,7 +96,7 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 **废弃版本：** 12
 
-**替代接口：** [@ohos.app.ability.application:application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+**替代接口：** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,13 +117,32 @@ createModuleContext(bundleName: string, moduleName: string): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 模块的上下文。 |
+| [Context](arkts-ability-context-c.md) | 模块的上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      moduleContext = this.context.createModuleContext('com.example.test', 'entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## createModuleResourceManager
 
@@ -145,9 +183,29 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { resourceManager } from '@kit.LocalizationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let ModuleResourceManager: resourceManager.ResourceManager;
+    try {
+      ModuleResourceManager = this.context.createModuleResourceManager('com.example.test', 'entry');
+    } catch (error) {
+      console.error(`createModuleResourceManager failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## createSystemHspModuleResourceManager
 
@@ -156,7 +214,7 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 ```
 
 该接口用于OEM厂商预置的[系统级HSP](../../../quick-start/application-package-glossary.md#系统级hsp)创建自己的  
-[ResourceManager](arkts-ability-context-c.md#resourcemanager)。
+[ResourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)。
 
 **起始版本：** 12
 
@@ -187,6 +245,19 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16400001](../errorcode-ability.md#16400001-目标应用类型不是系统级hsp) | The input bundleName is not a system HSP. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16400001-目标应用类型不是系统级hsp) | The input bundleName is not a system HSP. |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    this.context.createSystemHspModuleResourceManager("com.example.myapplication", "library");
+  }
+}
+```
 

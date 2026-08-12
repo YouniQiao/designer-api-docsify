@@ -13,7 +13,7 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## finishLoading
@@ -44,7 +44,7 @@ Notifies the player of the current request status. After pushing all the data fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
+| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
 | state | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Yes | Request status. |
 
 ## respondData
@@ -69,7 +69,7 @@ Sends data to the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
+| uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
 | offset | number | Yes | Offset of the current media data relative to the start of the resource. The value cannot be less than 0. |
 | buffer | ArrayBuffer | Yes | Media data sent to the player.&lt;br&gt;**Note：**: Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
 
@@ -122,7 +122,7 @@ respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string)
 ```
 
 Sends response header information to the player. This API must be called before the first call to   
-[respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata).
+[respondData](#respondData).
 
 **Since:** 18
 
@@ -138,8 +138,8 @@ Sends response header information to the player. This API must be called before 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md). |
-| header | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.&lt;br&gt; - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
+| uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
+| header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.&lt;br&gt; - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
 | redirectUrl | string | No | Redirect URL in the HTTP response. |
 
 ## header
@@ -150,7 +150,7 @@ header?: Record<string, string>
 
 HTTP request header. If the header exists, the application should set the header information in the HTTP request when downloading data.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 18
 

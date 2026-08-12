@@ -18,7 +18,7 @@ builder?: CustomBuilder
 
 Uses the custom builder for drawing, if pixelMap is set, this value is ignored.
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+import { batteryInfo } from '@kit.BasicServicesKit';
 ```
 
 ## getBatteryConfig
@@ -40,8 +40,8 @@ Obtains the battery configuration based on the specified scenario.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [5100101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

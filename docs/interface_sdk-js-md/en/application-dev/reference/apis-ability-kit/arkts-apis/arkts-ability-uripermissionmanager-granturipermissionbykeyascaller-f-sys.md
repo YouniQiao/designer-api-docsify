@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from 'kits/@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermissionByKeyAsCaller
@@ -31,10 +31,10 @@ Grants the URI access permission of the specified application to the target appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique key of the target UDMF data. The key must be created by the application (corresponding to **callerTokenId**) through [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertdata) , and the written data must be the URIs of the authorized files.&lt;br&gt;Currently, only the keys of the [UDMF data channels](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md/arkts-arkdata-unifieddatachannel-intention-e.md) of the **SYSTEM_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see [Sharing Data via Unified Data Channels](../../../database/unified-data-channels.md). |
+| key | string | Yes | Unique key of the target UDMF data. The key must be created by the application (corresponding to **callerTokenId**) through [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) , and the written data must be the URIs of the authorized files.&lt;br&gt;Currently, only the keys of the [UDMF data channels](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md#Intention) of the **SYSTEM_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see [Sharing Data via Unified Data Channels](../../../database/unified-data-channels.md). |
 | flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. The options are as follows:&lt;br&gt;- **FLAG_AUTH_READ_URI_PERMISSION**: read permission.&lt;br&gt;- **FLAG_AUTH_WRITE_URI_PERMISSION**: write permission. |
-| callerTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity of the caller application. You can obtain the value from the **ohos.aafwk.param.callerToken** field in [want](arkts-ability-app-ability-want-want-c.md). |
-| targetTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity of the target application, which can be obtained through [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getapplicationinfo) . |
+| callerTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity of the caller application. You can obtain the value from the **ohos.aafwk.param.callerToken** field in [want](arkts-ability-app-ability-want-want-c.md#Want). |
+| targetTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity of the target application, which can be obtained through [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getApplicationInfo) . |
 
 **Return value:**
 
@@ -46,16 +46,16 @@ Grants the URI access permission of the specified application to the target appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
-| [16000092](../errorcode-ability.md#16000092-no-permission-to-authorize-uri) | No permission to authorize the URI. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16000093](../errorcode-ability.md#16000093-invalid-caller-token-id) | The caller token ID is invalid. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [16000094](../errorcode-ability.md#16000094-invalid-target-token-id) | The target token ID is invalid. |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
-| [16000091](../errorcode-ability.md#16000091-failed-to-obtain-a-file-uri-by-key) | Failed to get the file URI from the key. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) | A sandbox application cannot grant URI permission. |
+| [16000092](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000092-no-permission-to-authorize-uri) | No permission to authorize the URI. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16000093](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000093-invalid-caller-token-id) | The caller token ID is invalid. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [16000094](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000094-invalid-target-token-id) | The target token ID is invalid. |
+| [16000058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) | Invalid URI flag. |
+| [16000091](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000091-failed-to-obtain-a-file-uri-by-key) | Failed to get the file URI from the key. |
 
 ## Examples
 

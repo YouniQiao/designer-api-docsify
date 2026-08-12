@@ -11,7 +11,7 @@ Connection options for the application.
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## needReceiveStream

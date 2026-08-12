@@ -98,7 +98,7 @@ margin?: Margin | Dimension
 
 该分组的外边距，参数为Length类型时，四个方向外边距同时生效。
 
-**类型：** [Margin](arkts-arkui-margin-t.md) \| Dimension
+**类型：** [Margin](arkts-arkui-margin-t.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **默认值：** {top: 0, right: 0, bottom: 0, left: 0}
 

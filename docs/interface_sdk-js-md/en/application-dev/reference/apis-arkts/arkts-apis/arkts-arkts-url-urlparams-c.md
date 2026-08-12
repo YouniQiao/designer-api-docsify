@@ -13,7 +13,7 @@ The URLParams interface defines some practical methods to process URL query stri
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
+import { url } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -38,7 +38,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
+| IterableIterator&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
 
 ## [Symbol.iterator]
 
@@ -62,7 +62,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
+| IterableIterator&lt;[string, string]&gt; | Returns an ES6 iterator. Each item of the iterator is a JavaScript Array. The first item of Array is name, and the second item of Array is value. |
 
 ## Examples
 
@@ -131,7 +131,7 @@ A constructor used to create a URLParams instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | No | Input parameter objects, which include the following: - string[][]: two-dimensional string array. - Record&lt;string, string&gt;: list of objects. - string: string. - URLParams: object. The default value is null. |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No | Input parameter objects, which include the following: - string[][]: two-dimensional string array. - Record&lt;string, string&gt;: list of objects. - string: string. - URLParams: object. The default value is null. |
 
 ## Examples
 
@@ -172,7 +172,7 @@ A parameterized constructor used to create an URLParams instance.As the input pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | [string, string][] \| Record&lt;string, string&gt; \| string \| URLParams | No | init init |
+| init | [string, string][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | No | init init |
 
 ## delete
 
@@ -228,7 +228,7 @@ Obtains an ES6 iterator. Each item of the iterator is a JavaScript array, and th
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, string]&gt; | Returns an iterator for ES6. |
+| IterableIterator&lt;[string, string]&gt; | Returns an iterator for ES6. |
 
 ## Examples
 
@@ -468,7 +468,7 @@ Obtains an ES6 iterator that contains the keys of all the key-value pairs.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
+| IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the names of each name-value pair. |
 
 ## Examples
 
@@ -596,7 +596,7 @@ Obtains an ES6 iterator that contains the values of all the key-value pairs.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
+| IterableIterator&lt;string&gt; | Returns an ES6 Iterator over the values of each name-value pair. |
 
 ## Examples
 

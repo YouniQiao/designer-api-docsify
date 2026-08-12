@@ -17,7 +17,7 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes
 > significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **Since:** 8
 
@@ -100,7 +100,7 @@ Sets the current path to a clipping path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](../arkts-apis/arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
 
 ## clip
 
@@ -126,8 +126,8 @@ Sets a specified path as the clipping path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](../arkts-apis/arkts-arkui-viewmodel-path2d-i.md) | Yes | Path2D** path to clip.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
-| fillRule | [CanvasFillRule](../arkts-apis/arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to clip.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
 
 ## createConicGradient
 
@@ -291,14 +291,14 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) | Yes | Source image. For details, see **ImageBitmap**.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes | Source image. For details, see **ImageBitmap**.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
 | repetition | string \| null | Yes | Repetition mode.&lt;br&gt;**'repeat'**: The image is repeated along both the x-axis and y-axis.&lt;br&gt;**'repeat-x'**: The image is repeated along the x-axis.&lt;br&gt; **'repeat-y'**: The image is repeated along the y-axis.&lt;br&gt;**'no-repeat'**: The image is not repeated.&lt;br&gt;**'clamp'**: Coordinates outside the original bounds are clamped to the edge of the image.&lt;br&gt;**'mirror'**: The image is mirrored with each repetition along the x-axis and y-axis.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CanvasPattern](../arkts-apis/arkts-arkui-canvaspattern-canvaspattern-i.md) | Pattern for image filling based on a specified source image and repetition mode. |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) | Pattern for image filling based on a specified source image and repetition mode. |
 
 ## createRadialGradient
 
@@ -361,7 +361,7 @@ Draws an image on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
 | dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
 
@@ -389,7 +389,7 @@ Draws an image by stretching or compressing it to the specified dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
 | dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
 | dw | number | Yes | Width of the drawing area. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
@@ -429,7 +429,7 @@ Draws a cropped portion of an image by stretching or compressing it to the speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
 | sx | number | Yes | X-coordinate of the top-left corner of the rectangle used to crop the source image.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
 | sy | number | Yes | Y-coordinate of the top-left corner of the rectangle used to crop the source image.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
 | sw | number | Yes | Target width to crop the source image.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
@@ -463,7 +463,7 @@ Fills the current path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](../arkts-apis/arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
 
 ## fill
 
@@ -489,8 +489,8 @@ Fills a specified path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](../arkts-apis/arkts-arkui-viewmodel-path2d-i.md) | Yes | Path2D** path to fill.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
-| fillRule | [CanvasFillRule](../arkts-apis/arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to fill.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
 
 ## fillRect
 
@@ -642,7 +642,7 @@ Obtains the **PixelMap** object created with the pixels within the specified are
 
 | Type | Description |
 | --- | --- |
-| [PixelMap](arkts-arkui-pixelmap-t.md) | PixelMap** object. |
+| PixelMap | PixelMap** object. |
 
 ## getTransform
 
@@ -668,7 +668,7 @@ Obtains the current transformation matrix being applied to the context.
 
 | Type | Description |
 | --- | --- |
-| [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | Current transformation matrix applied to the context. |
+| Matrix2D | Current transformation matrix applied to the context. |
 
 ## measureText
 
@@ -700,7 +700,7 @@ Returns a **TextMetrics** object used to obtain the width of specified text. Not
 
 | Type | Description |
 | --- | --- |
-| [TextMetrics](../arkts-apis/arkts-arkui-canvas-textmetrics-i.md) | TextMetrics** object.&lt;br&gt;If the input value is **undefined** or **null**, the value is calculated based on "undefined" or "null". |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) | TextMetrics** object.&lt;br&gt;If the input value is **undefined** or **null**, the value is calculated based on "undefined" or "null". |
 
 ## putImageData
 
@@ -1000,7 +1000,7 @@ Draws the input **PixelMap** object on the canvas.The example is the same as tha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](arkts-arkui-pixelmap-t.md) | No | PixelMap** object that contains pixel values.&lt;br&gt; **undefined** and **null** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default value: **null |
+| value | PixelMap | No | PixelMap** object that contains pixel values.&lt;br&gt; **undefined** and **null** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default value: **null |
 
 ## setTransform
 
@@ -1069,7 +1069,7 @@ Resets the current transformation to the identity matrix, and then creates a new
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.&lt;br&gt;**undefined** and **null** are treated as invalid values.&lt;br&gt;Default value: **null |
+| transform | Matrix2D | No | Transformation matrix.&lt;br&gt;**undefined** and **null** are treated as invalid values.&lt;br&gt;Default value: **null |
 
 ## stroke
 
@@ -1115,7 +1115,7 @@ Strokes (outlines) a specified path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](../arkts-apis/arkts-arkui-viewmodel-path2d-i.md) | Yes | Specified stroke path object |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Specified stroke path object |
 
 ## strokeRect
 
@@ -1199,7 +1199,7 @@ Displays the specified **ImageBitmap** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitmap | [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) | Yes | ImageBitmap** object to display. |
+| bitmap | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes | ImageBitmap** object to display. |
 
 ## transform
 
@@ -1310,11 +1310,11 @@ direction: CanvasDirection
 
 Sets the text direction. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned.
 
-For details, see {@link CanvasDirection}.
+For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md#CanvasDirection).
 
 Default value: **"inherit"**
 
-**Type:** [CanvasDirection](../arkts-apis/arkts-arkui-canvasdirection-t.md)
+**Type:** [CanvasDirection](arkts-arkui-canvasdirection-t.md)
 
 **Default:** inherit
 
@@ -1340,10 +1340,10 @@ Sets the fill color for rendering. This attribute is write-only. You can set its
 
 - When the type is string, this attribute indicates the color of the fill area. For details about  
  the color format, see the description for the string type in  
- [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ [ResourceColor](ResourceColor).
 
 - When the type is number, this attribute indicates the color of the fill area. Fully transparent  
- colors are not supported. For details about the color format, see the description for the number  type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ colors are not supported. For details about the color format, see the description for the number  type in [ResourceColor](ResourceColor).
 
 - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created  
  via the [createLinearGradient](#createlineargradient) API.
@@ -1355,7 +1355,7 @@ Sets the fill color for rendering. This attribute is write-only. You can set its
 
  Invalid values do not take effect. The effect before the setting is retained.
 
-**Type:** string \| number \| CanvasGradient \| CanvasPattern
+**Type:** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **Default:** #000000 (black)
 
@@ -1454,7 +1454,7 @@ Syntax: ctx.font = 'font-style font-weight font-size font-family'
 
 Starting from API version 20, this API is used to set registered custom fonts (the DevEco Studio Previewer does not support custom fonts). You can register a custom font in either of the following ways:
 
-Register a custom font by calling the asynchronous API this.uiContext.getFont().[registerFont](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md/arkts-arkui-arkui-uicontext-font-c.md#registerfont)of ArkUI. Immediate rendering after calling this API may result in the custom font not taking effect.
+Register a custom font by calling the asynchronous API this.uiContext.getFont().[registerFont](Font#registerFont)of ArkUI. Immediate rendering after calling this API may result in the custom font not taking effect.
 
 Directly call the fontCollection.[loadFontSync](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#loadfontsync)API of the font engine to register the custom font. In this case, the **fontCollection**instance must be **text.FontCollection.getGlobalInstance()** because the component loads fonts from this instance by default. If you use another instance, the custom font may not take effect.
 
@@ -1584,7 +1584,7 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 imageSmoothingQuality: ImageSmoothingQuality
 ```
 
-Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**.This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see{@link ImageSmoothingQuality}. Default value: **"low"**  
+Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**.This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see[ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md#ImageSmoothingQuality). Default value: **"low"**  
 > **NOTE：**
 > 
 > The resources used in this example are not located in the **src** > **main** > **resource** directory. Starting
@@ -1646,7 +1646,7 @@ Default value: **0** (Invalid values are treated as the default value.)
 > 
 > The LengthMetrics type is recommended for better performance.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**Type:** LengthMetrics \| string
 
 **Default:** 0vp
 
@@ -1670,7 +1670,7 @@ lineCap: CanvasLineCap
 
 Sets the line caps. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, undefined will be returned.
 
-**Type:** [CanvasLineCap](../arkts-apis/arkts-arkui-canvaslinecap-t.md)
+**Type:** [CanvasLineCap](arkts-arkui-canvaslinecap-t.md)
 
 **Default:** butt
 
@@ -1722,7 +1722,7 @@ Invalid values **NaN** and **Infinity** are treated as the default value.
 lineJoin: CanvasLineJoin
 ```
 
-Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see {@link CanvasLineJoin}.&lt;br&gt;Available values are as follows:&lt;br&gt;- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width.&lt;br&gt;- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent.&lt;br&gt;- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in  
+Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#CanvasLineJoin).&lt;br&gt;Available values are as follows:&lt;br&gt;- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width.&lt;br&gt;- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent.&lt;br&gt;- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in  
 **miterLimit**.&lt;br&gt;Default value: **'miter'**
 
 **Type:** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
@@ -1843,7 +1843,7 @@ shadowColor: string
 Sets the shadow color. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned.
 
 For details about the color format, see the description for the string type in  
-[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+[ResourceColor](ResourceColor).
 
 Default value: **'#00000000'** (transparent black)
 
@@ -1934,23 +1934,23 @@ Sets the stroke color. This attribute is write-only. You can set its value throu
 
 - When the type is string, this attribute indicates the stroke color. For details about  
  the color format, see the description for the string type in  
- [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ [ResourceColor](ResourceColor).
 
 - When the type is number, this attribute indicates the stroke color. Fully transparent  
  colors are not supported. For details about the color format, see the description for  the number type in  
- [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ [ResourceColor](ResourceColor).
 
 - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is  
  created via the [createLinearGradient](#createlineargradient) API.
 
 - When the type is **CanvasPattern**, this attribute indicates a pattern, which is created  
- via the [createPattern](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#createpattern) API.
+ via the [createPattern](CanvasRenderingContext2D#createPattern) API.
 
  Default value: **'#000000'** (black)
 
  Invalid values do not take effect. The effect before the setting is retained.
 
-**Type:** string \| number \| CanvasGradient \| CanvasPattern
+**Type:** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **Default:** #000000 (black)
 
@@ -1978,7 +1978,7 @@ In the **ltr** layout mode, the value **'start'** equals **'left'**. In the **rt
 
 Default value: **'left'**
 
-**Type:** [CanvasTextAlign](../arkts-apis/arkts-arkui-canvastextalign-t.md)
+**Type:** [CanvasTextAlign](arkts-arkui-canvastextalign-t.md)
 
 **Default:** left
 

@@ -14,7 +14,7 @@ function hasRight(deviceName: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright)
+**替代接口：** [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasRight)
 
 <!--Device-usb-function hasRight(deviceName: string): boolean--><!--Device-usb-function hasRight(deviceName: string): boolean-End-->
 

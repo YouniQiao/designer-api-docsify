@@ -1,7 +1,7 @@
 # SystemSoundPlayer
 
 Implements a system sound player that provides functions for loading, unloading, playing system sounds.Before using these functions, application must call  
-[createSystemSoundPlayer](#systemSoundManager.createSystemSoundPlayer) to create a SystemSoundPlayer instance first.
+[createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createSystemSoundPlayer) to create a SystemSoundPlayer instance first.
 
 **Since:** 23
 
@@ -35,15 +35,27 @@ Loads a system sound.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.load(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
+  console.info('Succeeded in calling the load method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to call the load method. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## play
 
@@ -71,15 +83,27 @@ Plays a system sound.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.play(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
+  console.info('Succeeded in calling the play method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to call the play method. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## release
 
@@ -101,13 +125,25 @@ Releases this system sound player instance.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.release().then(() => {
+  console.info('Succeeded in calling the release method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to call the release method. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## unload
 
@@ -135,11 +171,23 @@ Unloads a system sound that has been loaded before.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemSoundPlayer?.unload(systemSoundManager.SystemSoundType.PHOTO_SHUTTER).then(() => {
+  console.info('Succeeded in calling the unload method.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to call the unload method. Code: ${err.code}, message: ${err.message}`);
+});
+```

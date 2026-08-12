@@ -42,7 +42,7 @@ radius?: Length | Array<RadiusItem>
 
 Anonymous Object Rectification
 
-**类型：** [Length](arkts-arkui-length-t.md) \| Array&lt;RadiusItem&gt;
+**类型：** [Length](arkts-arkui-length-t.md) \| Array&lt;[RadiusItem](arkts-arkui-radiusitem-t.md)&gt;
 
 **起始版本：** 23
 

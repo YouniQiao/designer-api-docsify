@@ -3,15 +3,15 @@
 ###### Child Components
  Not supported
  ###### Attributes
- The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+ The [universal attributes](./@internal/component/ets/common) are not supported.
  ###### Events
- The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+ The [universal events](./@internal/component/ets/common) are not supported.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkUI';
+import { InnerFullScreenLaunchComponent, LaunchController } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -29,7 +29,7 @@ import { InnerFullScreenLaunchComponent, LaunchController } from 'kits/@kit.ArkU
 
 | Name | Description |
 | --- | --- |
-| [InnerFullScreenLaunchComponent](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-innerfullscreenlaunchcomponent-s-sys.md) | **InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.  > **NOTE：** >  > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If it does not inherit from > **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly. |
+| [InnerFullScreenLaunchComponent](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-innerfullscreenlaunchcomponent-s-sys.md) | **InnerFullScreenLaunchComponent** is a component that allows the invoker to choose the timing for launching an atomic service. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.  > **NOTE：** >  > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). If it does not inherit from > **EmbeddableUIAbility**, the system cannot guarantee that the atomic service will function properly. |
 <!--DelEnd-->
 
 <!--Del-->

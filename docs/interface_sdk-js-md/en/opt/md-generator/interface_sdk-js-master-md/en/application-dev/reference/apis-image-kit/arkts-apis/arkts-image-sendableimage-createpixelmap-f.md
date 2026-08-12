@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -31,7 +31,7 @@ Create PixelMap by data buffer.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## Examples
 

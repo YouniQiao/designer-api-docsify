@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## rotate
@@ -18,7 +18,7 @@ Rotates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
+**Substitutes:** [rotate](arkts-arkui-matrix4-matrix4transit-i.md#rotate)
 
 <!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit--><!--Device-matrix4-function rotate(options: RotateOption): Matrix4Transit-End-->
 

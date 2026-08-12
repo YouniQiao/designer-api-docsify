@@ -30,16 +30,16 @@ function getDistributedSessionController(distributedSessionType: DistributedSess
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AVSessionController&gt;&gt; | Promise对象。返回对应类型的会话控制器实例列表，可查看会话ID，并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
+| Promise&lt;Array&lt;[AVSessionController](arkts-avsession-avsession-avsessioncontroller-i.md)&gt;&gt; | Promise对象。返回对应类型的会话控制器实例列表，可查看会话ID，并完成对会话发送命令及事件，获取元数据、播放状态信息等操作。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
+| [6600109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) | The remote connection is not established. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 

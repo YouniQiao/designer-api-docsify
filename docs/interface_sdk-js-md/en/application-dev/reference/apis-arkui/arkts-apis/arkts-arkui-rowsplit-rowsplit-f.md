@@ -25,7 +25,7 @@ Defines RowSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -61,8 +61,8 @@ Defines RowSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RowSplitAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RowSplitAttribute](arkts-arkui-rowsplit-rowsplitattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

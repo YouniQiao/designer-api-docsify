@@ -13,7 +13,7 @@ Indicates the cause of a call disconnection.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## message
@@ -42,7 +42,7 @@ reason: DisconnectedReason
 
 Indicates the reason for ending the call.
 
-**Type:** [DisconnectedReason](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-disconnectedreason-e-sys.md)
+**Type:** DisconnectedReason
 
 **Since:** 9
 

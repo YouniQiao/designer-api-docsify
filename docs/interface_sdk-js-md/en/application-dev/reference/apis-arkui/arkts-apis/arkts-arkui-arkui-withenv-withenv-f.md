@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
+import { WithEnvAttribute, WithEnv } from '@kit.ArkUI';
 ```
 
 ## WithEnv
@@ -30,11 +30,11 @@ Define the WithEnv component that allows setting environment properties for chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | the content of the component |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | the content of the component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) |  |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) |  |
 

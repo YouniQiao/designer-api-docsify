@@ -1,6 +1,6 @@
 # CdsmClient
 
-Manages a CDSM client instance. Before invoking any CDSM client method,you must use {@link createCdsmClient} to create a CDSM client instance.
+Manages a CDSM client instance. Before invoking any CDSM client method,you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createCdsmClient) to create a CDSM client instance.
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ Manages a CDSM client instance. Before invoking any CDSM client method,you must 
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## getCdsmInfo
@@ -48,7 +48,7 @@ Gets the coordinated devices set information.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## offCdsmInfoChange
 
@@ -72,7 +72,7 @@ Unsubscribes from coordinated devices set information change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | No | Callback used to listen for the coordinated devices set information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | No | Callback used to listen for the coordinated devices set information. |
 
 ## onCdsmInfoChange
 
@@ -98,5 +98,5 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CdsmInfo&gt; | Yes | Callback used to listen for the coordinated devices set information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md)&gt; | Yes | Callback used to listen for the coordinated devices set information. |
 

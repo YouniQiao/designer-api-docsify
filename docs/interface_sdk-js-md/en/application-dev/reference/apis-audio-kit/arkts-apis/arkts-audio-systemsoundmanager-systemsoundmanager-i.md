@@ -13,7 +13,7 @@ System sound manager object.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## addCustomizedTone
@@ -39,7 +39,7 @@ Add customized tone into ringtone library.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | Yes | Tone attributes created by {@link createCustomizedToneAttrs}. |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createCustomizedToneAttrs). |
 | externalUri | string | Yes | Tone uri in external storage. |
 
 **Return value:**
@@ -52,14 +52,14 @@ Add customized tone into ringtone library.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
-| [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
+| [20700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
+| [20700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
 
 ## Examples
 
@@ -119,7 +119,7 @@ Add customized tone into ringtone library.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | Yes | Tone attributes created by {@link createCustomizedToneAttrs}. |
+| toneAttr | [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | Yes | Tone attributes created by [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createCustomizedToneAttrs). |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | The offset in the file where the data to be read, in bytes. By default, the offset is zero. |
 | length | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | The length in bytes of the data to be read. By default, the length is the rest of bytes in the file from the offset. |
@@ -134,14 +134,14 @@ Add customized tone into ringtone library.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700006](../errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
-| [20700005](../errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
-| [20700004](../errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone to add is not customized. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700006-insufficient-rom-space) | Insufficient ROM space.<br>**Applicable version:** 20 and later |
+| [20700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700005-file-count-exceeds-the-upper-limit) | The number of files exceeds the limit.<br>**Applicable version:** 20 and later |
+| [20700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700004-data-size-exceeds-the-upper-limit) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**Applicable version:** 20 and later |
 
 ## Examples
 
@@ -210,9 +210,9 @@ Close fd.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -258,15 +258,15 @@ Gets attribute list of alarm tones.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise used to return attribute list of system tone. |
+| Promise&lt;[ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t.md)&gt; | Promise used to return attribute list of system tone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -317,9 +317,9 @@ Gets uri of the current alarm tone.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -358,20 +358,20 @@ Gets the ringtone attribute which is in use.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return the ringtone attribute in system. |
+| Promise&lt;[ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md)&gt; | Promise used to return the ringtone attribute in system. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -414,15 +414,15 @@ Gets attributes of the default alarm tone.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return attributes of the default alarm tone. |
+| Promise&lt;[ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md)&gt; | Promise used to return attributes of the default alarm tone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -462,21 +462,21 @@ Gets attributes of the default ringtone.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return attributes of the default ringtone. |
+| Promise&lt;[ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md)&gt; | Promise used to return attributes of the default ringtone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -523,15 +523,15 @@ Gets attributes of the default system tone.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrs&gt; | Promise used to return attributes of the default system tone. |
+| Promise&lt;[ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md)&gt; | Promise used to return attributes of the default system tone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -578,17 +578,17 @@ Get attributes of haptics which is synchronized with one tone. If no haptics is 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneHapticsAttrs&gt; | Promise used to return ToneHapticsAttrs. |
+| Promise&lt;[ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md)&gt; | Promise used to return ToneHapticsAttrs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not used for tones. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not used for tones. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -614,7 +614,7 @@ systemSoundManagerInstance.getHapticsAttrsSyncedWithTone(context, toneUri).then(
 getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result.Before calling this interface, ensure that the incoming hapticUri actually exists in the system.Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.After obtaining the instance through this interface, actively call {@link RingtonePlayer#release} method of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result.Before calling this interface, ensure that the incoming hapticUri actually exists in the system.Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.After obtaining the instance through this interface, actively call [release](RingtonePlayer#release) method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
@@ -643,9 +643,9 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## getMockHapticRingtonePlayer
 
@@ -653,7 +653,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result.Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system.Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.After obtaining the instance through this interface, actively call {@link RingtonePlayer#release} method of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result.Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system.Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file.After obtaining the instance through this interface, actively call [release](RingtonePlayer#release) method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
@@ -670,7 +670,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 | ringtoneUri | string | Yes | Ringtone uri to get. |
 
 **Return value:**
@@ -683,9 +683,9 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the {@link SystemSoundManager#addCustomizedTone}. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addCustomizedTone). |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## getRingtoneAttrList
 
@@ -708,21 +708,21 @@ Gets attribute list of ringtones.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise used to return attribute list of ringtone. |
+| Promise&lt;[ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t.md)&gt; | Promise used to return attribute list of ringtone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -763,7 +763,7 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -775,8 +775,8 @@ Gets the ringtone player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -819,7 +819,7 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -831,7 +831,7 @@ Gets the ringtone player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## getRingtoneUri
 
@@ -854,7 +854,7 @@ Gets the ringtone uri.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -866,9 +866,9 @@ Gets the ringtone uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -902,7 +902,7 @@ Gets the ringtone player.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.SystemSoundManager#getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)
+**Substitutes:** [getRingtonePlayer](#getRingtonePlayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCallback<RingtonePlayer>): void-End-->
 
@@ -913,8 +913,8 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
+| type | RingtoneType | Yes | Ringtone type to get. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RingtonePlayer&gt; | Yes | Callback used to return a ringtone player instance. |
 
 ## Examples
 
@@ -952,7 +952,7 @@ Gets the ringtone player.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.SystemSoundManager#getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)
+**Substitutes:** [getRingtonePlayer](#getRingtonePlayer)
 
 <!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>--><!--Device-SystemSoundManager-getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtonePlayer>-End-->
 
@@ -963,7 +963,7 @@ Gets the ringtone player.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -1005,7 +1005,7 @@ Gets the ringtone uri.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.SystemSoundManager#getRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneuri)
+**Substitutes:** [getRingtoneUri](#getRingtoneUri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallback<string>): void-End-->
 
@@ -1016,8 +1016,8 @@ Gets the ringtone uri.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
+| type | RingtoneType | Yes | Ringtone type to get. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the ringtone uri maintained in system. |
 
 ## Examples
 
@@ -1053,7 +1053,7 @@ Gets the ringtone uri.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.SystemSoundManager#getRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneuri)
+**Substitutes:** [getRingtoneUri](#getRingtoneUri)
 
 <!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>--><!--Device-SystemSoundManager-getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>-End-->
 
@@ -1064,7 +1064,7 @@ Gets the ringtone uri.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to get. |
+| type | RingtoneType | Yes | Ringtone type to get. |
 
 **Return value:**
 
@@ -1117,15 +1117,15 @@ Gets attribute list of alarm tones.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneAttrsArray&gt; | Promise used to return attribute list of system tone. |
+| Promise&lt;[ToneAttrsArray](arkts-audio-systemsoundmanager-toneattrsarray-t.md)&gt; | Promise used to return attribute list of system tone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1178,8 +1178,8 @@ Gets the system tone player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1234,7 +1234,7 @@ Gets the system tone player.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## getSystemToneUri
 
@@ -1269,9 +1269,9 @@ Gets the system tone uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1318,16 +1318,16 @@ Get haptics list.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneHapticsAttrsArray&gt; | Promise used to return ToneHapticsAttrsArray. |
+| Promise&lt;[ToneHapticsAttrsArray](arkts-audio-systemsoundmanager-tonehapticsattrsarray-t.md)&gt; | Promise used to return ToneHapticsAttrsArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1373,16 +1373,16 @@ Get haptics settings.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ToneHapticsSettings&gt; | Promise used to return results of this call. |
+| Promise&lt;[ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md)&gt; | Promise used to return results of this call. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1441,9 +1441,9 @@ Open alarm tone file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
 ## Examples
@@ -1503,11 +1503,11 @@ Open haptics.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not one for haptics. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not one for haptics. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1565,8 +1565,8 @@ Open tone list in batch.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Calleris not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Calleris not a system application. |
+| [20700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
 
 ## Examples
 
@@ -1620,11 +1620,11 @@ Remove customized tone in ringtone library.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone of this uri is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation is not allowed, e.g. ringtone of this uri is not customized. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1678,9 +1678,9 @@ Remove customized tone list in batch.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [20700007](../errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Prameter is invalid, e.g. the length of uriList is too long. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [20700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700007-invalid-parameter) | Parameter is invalid, e.g. the length of uriList is too long. |
 
 ## Examples
 
@@ -1732,9 +1732,9 @@ Sets uri of the current alarm tone.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
 ## Examples
@@ -1777,7 +1777,7 @@ Sets the ringtone uri to system.
 | --- | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to set. |
+| type | RingtoneType | Yes | Ringtone type to set. |
 
 **Return value:**
 
@@ -1789,9 +1789,9 @@ Sets the ringtone uri to system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -1826,7 +1826,7 @@ Sets the ringtone uri to system.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.SystemSoundManager#setRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#setringtoneuri)
+**Substitutes:** [setRingtoneUri](#setRingtoneUri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback: AsyncCallback<void>): void-End-->
 
@@ -1838,8 +1838,8 @@ Sets the ringtone uri to system.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
+| type | RingtoneType | Yes | Ringtone type to set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the set uri result. |
 
 ## Examples
 
@@ -1876,7 +1876,7 @@ Sets the ringtone uri to system.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.SystemSoundManager#setRingtoneUri](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#setringtoneuri)
+**Substitutes:** [setRingtoneUri](#setRingtoneUri)
 
 <!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>--><!--Device-SystemSoundManager-setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise<void>-End-->
 
@@ -1888,7 +1888,7 @@ Sets the ringtone uri to system.
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Current application context. |
 | uri | string | Yes | Ringtone uri to set. |
-| type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e.md) | Yes | Ringtone type to set. |
+| type | RingtoneType | Yes | Ringtone type to set. |
 
 **Return value:**
 
@@ -1949,9 +1949,9 @@ Sets the system tone uri to system.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 
@@ -2006,11 +2006,11 @@ Set haptics settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not valid. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. For example, the input URI is not valid. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 

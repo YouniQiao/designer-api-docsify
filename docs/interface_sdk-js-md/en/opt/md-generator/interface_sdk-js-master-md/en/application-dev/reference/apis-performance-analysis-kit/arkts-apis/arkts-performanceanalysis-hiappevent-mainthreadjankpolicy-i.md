@@ -11,7 +11,7 @@ Defines the configuration policy for the main thread jank event.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## autoStopSampling

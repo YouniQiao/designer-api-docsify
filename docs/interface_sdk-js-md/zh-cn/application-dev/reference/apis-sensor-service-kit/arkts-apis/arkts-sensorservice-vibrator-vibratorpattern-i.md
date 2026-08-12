@@ -1,8 +1,8 @@
 # VibratorPattern
 
 马达振动序列，每个events代表一个振动事件。通过[VibratorPatternBuilder.build](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#build)方法生成，作为  
-[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)的pattern参数传入  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)接口触发振动。
+[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)的pattern参数传入  
+[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)接口触发振动。
 
 **起始版本：** 18
 
@@ -18,9 +18,9 @@
 events: Array<VibratorEvent>
 ```
 
-振动事件数组。由[VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md)的addContinuousEvent和addTransientEvent方法添加后通过build方法生成。同一VibratorPattern中多个VibratorEvent的time值不能重叠。
+振动事件数组。由[VibratorPatternBuilder](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#VibratorPatternBuilder)的addContinuousEvent和addTransientEvent方法添加后通过build方法生成。同一VibratorPattern中多个VibratorEvent的time值不能重叠。
 
-**类型：** Array&lt;VibratorEvent&gt;
+**类型：** Array&lt;[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md)&gt;
 
 **起始版本：** 18
 

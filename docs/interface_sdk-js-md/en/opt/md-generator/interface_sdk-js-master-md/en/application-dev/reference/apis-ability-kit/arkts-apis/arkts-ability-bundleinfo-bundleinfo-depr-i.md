@@ -3,13 +3,13 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager-BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md) instead.
+> [bundleManager-BundleInfo](#BundleInfo) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleInfo:BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)
+**Substitutes:** [BundleInfo](#BundleInfo)
 
 <!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
@@ -24,7 +24,7 @@ readonly abilityInfos: Array<AbilityInfo>
 Ability configuration information.
 
 The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)&gt;
 
@@ -34,7 +34,7 @@ The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#abilitiesInfo
+**Substitutes:** [abilitiesInfo](arkts-ability-hapmoduleinfo-i.md#abilitiesInfo)
 
 <!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>--><!--Device-BundleInfo-readonly abilityInfos: Array<AbilityInfo>-End-->
 
@@ -56,7 +56,7 @@ ID of the application to which the bundle belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.SignatureInfo#appId
+**Substitutes:** [appId](ohos.bundle.bundleManager/bundleManager.SignatureInfo#appId)
 
 <!--Device-BundleInfo-readonly appId: string--><!--Device-BundleInfo-readonly appId: string-End-->
 
@@ -78,7 +78,7 @@ Application configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#appInfo
+**Substitutes:** [appInfo](ohos.bundle.bundleManager/bundleManager.BundleInfo#appInfo)
 
 <!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
 
@@ -180,7 +180,7 @@ Module configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#hapModulesInfo
+**Substitutes:** [hapModulesInfo](arkts-ability-bundleinfo-i.md#hapModulesInfo)
 
 <!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>--><!--Device-BundleInfo-readonly hapModuleInfos: Array<HapModuleInfo>-End-->
 
@@ -202,7 +202,7 @@ Time when the HAP file was installed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#installTime
+**Substitutes:** [installTime](ohos.bundle.bundleManager/bundleManager.BundleInfo#installTime)
 
 <!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
 
@@ -264,7 +264,7 @@ Earliest version compatible with the bundle in the distributed scenario.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#minCompatibleVersionCode
+**Substitutes:** [minCompatibleVersionCode](ohos.bundle.bundleManager/bundleManager.BundleInfo#minCompatibleVersionCode)
 
 <!--Device-BundleInfo-readonly minCompatibleVersionCode: number--><!--Device-BundleInfo-readonly minCompatibleVersionCode: number-End-->
 
@@ -286,7 +286,7 @@ Bundle name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.BundleInfo#name)
 
 <!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
 
@@ -301,9 +301,9 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 Detailed information of the permissions to request from the system.
 
 The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2).
 
-**Type:** Array&lt;ReqPermissionDetail&gt;
+**Type:** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
 **Default:** Indicates the required permissions details defined in file config.json
 
@@ -311,7 +311,7 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#reqPermissionDetails
+**Substitutes:** [reqPermissionDetails](ohos.bundle.bundleManager/bundleManager.BundleInfo#reqPermissionDetails)
 
 <!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>--><!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>-End-->
 
@@ -333,7 +333,7 @@ Permission grant state. The value **0** means that the request is successful, an
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#permissionGrantStates
+**Substitutes:** [permissionGrantStates](arkts-ability-bundleinfo-i.md#permissionGrantStates)
 
 <!--Device-BundleInfo-readonly reqPermissionStates: Array<number>--><!--Device-BundleInfo-readonly reqPermissionStates: Array<number>-End-->
 
@@ -348,7 +348,7 @@ readonly reqPermissions: Array<string>
 Permissions to request from the system for running the application.
 
 The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2).
 
 **Type:** Array&lt;string&gt;
 
@@ -358,7 +358,7 @@ The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#permissions
+**Substitutes:** [permissions](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#permissions)
 
 <!--Device-BundleInfo-readonly reqPermissions: Array<string>--><!--Device-BundleInfo-readonly reqPermissions: Array<string>-End-->
 
@@ -380,7 +380,7 @@ Latest SDK version required for running the bundle.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#targetVersion
+**Substitutes:** [targetVersion](ohos.bundle.bundleManager/bundleManager.BundleInfo#targetVersion)
 
 <!--Device-BundleInfo-readonly targetVersion: number--><!--Device-BundleInfo-readonly targetVersion: number-End-->
 
@@ -402,7 +402,7 @@ Bundle type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#bundleType
+**Substitutes:** [bundleType](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#bundleType)
 
 <!--Device-BundleInfo-readonly type: string--><!--Device-BundleInfo-readonly type: string-End-->
 
@@ -424,7 +424,7 @@ UID of the application to which the bundle belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#uid
+**Substitutes:** [uid](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#uid)
 
 <!--Device-BundleInfo-readonly uid: number--><!--Device-BundleInfo-readonly uid: number-End-->
 
@@ -446,7 +446,7 @@ Time when the HAP file was updated.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#updateTime
+**Substitutes:** [updateTime](ohos.bundle.bundleManager/bundleManager.BundleInfo#updateTime)
 
 <!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
 
@@ -468,7 +468,7 @@ Vendor of the bundle.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#vendor
+**Substitutes:** [vendor](ohos.bundle.bundleManager/bundleManager.BundleInfo#vendor)
 
 <!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
 
@@ -490,7 +490,7 @@ Version number of the bundle.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#versionCode
+**Substitutes:** [versionCode](ohos.bundle.bundleManager/bundleManager.BundleInfo#versionCode)
 
 <!--Device-BundleInfo-readonly versionCode: number--><!--Device-BundleInfo-readonly versionCode: number-End-->
 
@@ -512,7 +512,7 @@ Version description of the bundle.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#versionName
+**Substitutes:** [versionName](ohos.bundle.bundleManager/bundleManager.BundleInfo#versionName)
 
 <!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
 

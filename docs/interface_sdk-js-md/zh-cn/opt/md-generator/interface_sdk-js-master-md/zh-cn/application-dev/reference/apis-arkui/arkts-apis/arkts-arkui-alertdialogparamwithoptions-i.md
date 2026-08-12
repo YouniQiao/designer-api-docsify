@@ -1,8 +1,8 @@
 # AlertDialogParamWithOptions
 
-继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
+继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)。
 
-**继承/实现关系：** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
+**继承/实现关系：** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
 **起始版本：** 10
 
@@ -40,7 +40,7 @@ buttons: Array<AlertDialogButtonOptions>
 
 弹窗容器中的多个按钮。
 
-**类型：** Array&lt;AlertDialogButtonOptions&gt;
+**类型：** Array&lt;[AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md)&gt;
 
 **起始版本：** 10
 

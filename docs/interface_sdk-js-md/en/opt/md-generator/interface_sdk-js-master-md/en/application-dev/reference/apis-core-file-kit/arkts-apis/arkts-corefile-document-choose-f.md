@@ -26,7 +26,7 @@ Chooses files of the specified types. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 
 ## choose

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isSupportTemplate
@@ -12,7 +12,7 @@ import { notificationManager } from 'kits/@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-在使用[通知模板](arkts-notification-notificationmanager-notificationtemplate-t.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -31,10 +31,10 @@ function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -59,7 +59,7 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-在使用[通知模板](arkts-notification-notificationmanager-notificationtemplate-t.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -77,16 +77,16 @@ function isSupportTemplate(templateName: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

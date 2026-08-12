@@ -29,3 +29,53 @@ Generates an **edgeWidths** object with the specified edge width for all edges.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, edgeWidths } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0xffd5d5d5;
+renderNode.borderWidth = edgeWidths(8);
+renderNode.borderColor = {
+  left: 0xff519db4,
+  top: 0xff519db4,
+  right: 0xff519db4,
+  bottom: 0xff519db4
+};
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }.margin(30)
+  }
+}
+```

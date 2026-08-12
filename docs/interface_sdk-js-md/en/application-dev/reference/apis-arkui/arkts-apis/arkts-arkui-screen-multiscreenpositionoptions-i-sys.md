@@ -15,7 +15,7 @@ Describes the screen position information.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## id

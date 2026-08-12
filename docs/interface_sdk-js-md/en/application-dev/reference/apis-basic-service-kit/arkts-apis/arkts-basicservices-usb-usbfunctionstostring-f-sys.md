@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## usbFunctionsToString
@@ -20,7 +20,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbfunctionstostring)
+**Substitutes:** [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbFunctionsToString)
 
 <!--Device-usb-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usb-function usbFunctionsToString(funcs: FunctionType): string-End-->
 
@@ -32,7 +32,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | Yes | USB function list in numeric mask format. |
+| funcs | FunctionType | Yes | USB function list in numeric mask format. |
 
 **Return value:**
 

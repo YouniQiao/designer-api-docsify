@@ -11,7 +11,7 @@ XMPMetadata instance.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## enumerateTags
@@ -38,7 +38,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (path: string, tag: XMPTag) =&gt; boolean | Yes |
+| callback | (path: string, tag: XMPTag) = & gt; boolean | Yes |
 | rootPath | string | No |
 | options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | No |
 
@@ -46,7 +46,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## getBlob
 
@@ -68,14 +68,14 @@ Obtains the XMP metadata as a blob.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## getTag
 
@@ -103,13 +103,13 @@ Get a single XMP tag from specified path.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;XMPTag \| null&gt; |
+| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## getTags
 
@@ -138,13 +138,13 @@ Get all XMP tags from specified path.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;string, XMPTag&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## registerXMPNamespace
 
@@ -166,19 +166,19 @@ Register a new namespace according to the xml namespace and prefix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xmpNamespace | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | Yes |
+| [xmpNamespace](arkts-image-image-xmptag-i.md) | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## removeTag
 
@@ -206,13 +206,13 @@ Remove the XMP tag from specified path.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## setBlob
 
@@ -240,13 +240,13 @@ Set a blob into the XMP metadata.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## setValue
 
@@ -276,10 +276,10 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |

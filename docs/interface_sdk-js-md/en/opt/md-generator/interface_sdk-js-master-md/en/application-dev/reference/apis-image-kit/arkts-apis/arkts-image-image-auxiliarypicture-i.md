@@ -1,14 +1,14 @@
 # AuxiliaryPicture
 
 The **AuxiliaryPicture** class is used to read or write auxiliary picture data of an image and obtain auxiliary picture information of an image. The supported types of auxiliary pictures can be found in   
-[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md).
+[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md#AuxiliaryPictureType).
 
 Before calling any API in AuxiliaryPicture, you must create an AuxiliaryPicture instance using   
-[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture) or   
-[getAuxiliaryPicture](arkts-image-image-picture-i.md#getauxiliarypicture) in Picture.
+[image.createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createAuxiliaryPicture) or   
+[getAuxiliaryPicture](arkts-image-image-picture-i.md#getAuxiliaryPicture) in Picture.
 
 Images occupy a large amount of memory. When you finish using an AuxiliaryPicture instance, call   
-[release](arkts-image-image-auxiliarypicture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 13
 
@@ -19,7 +19,7 @@ Images occupy a large amount of memory. When you finish using an AuxiliaryPictur
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getAuxiliaryPictureInfo
@@ -66,14 +66,14 @@ Obtains the metadata of this auxiliary picture. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Metadata&gt; |
+| Promise & lt;Metadata & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## getType
 
@@ -113,7 +113,7 @@ Reads pixels of this auxiliary picture and writes the data to an ArrayBuffer. Th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## release
 
@@ -157,7 +157,7 @@ Sets the auxiliary picture information.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setMetadata
 
@@ -184,14 +184,14 @@ Sets the metadata for this auxiliary picture. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## writePixelsFromBuffer
 
@@ -217,10 +217,10 @@ Reads pixels from an ArrayBuffer and writes the data to this AuxiliaryPicture ob
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

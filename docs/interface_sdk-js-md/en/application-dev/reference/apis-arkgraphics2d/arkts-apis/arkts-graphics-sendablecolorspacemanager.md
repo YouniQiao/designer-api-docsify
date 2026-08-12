@@ -13,7 +13,7 @@ This module provides APIs for creating and managing sendable color space objects
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

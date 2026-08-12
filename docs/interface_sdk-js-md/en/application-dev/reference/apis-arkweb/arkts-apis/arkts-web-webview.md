@@ -13,7 +13,7 @@ This module provides the capability to manage web modules.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## Summary
@@ -35,7 +35,7 @@ import { webview } from 'kits/@kit.ArkWeb';
 | [JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md) | The message for indicating the of result of JavaScript code execution. |
 | [MediaSourceInfo](arkts-arkweb-webview-mediasourceinfo-c.md) | Implements a **MediaSourceInfo** object to provide the information about the media source.  > **NOTE：** >  > - The sample effect is subject to the actual device. |
 | [NativeMediaPlayerSurfaceInfo](arkts-arkweb-webview-nativemediaplayersurfaceinfo-c.md) | Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12).  > **NOTE：** >  > - The sample effect is subject to the actual device. |
-| [PdfData](arkts-arkweb-webview-pdfdata-c.md) | Defines the callback of createPdf, related to {@link createPDF} method. |
+| [PdfData](arkts-arkweb-webview-pdfdata-c.md) | Defines the callback of createPdf, related to [createPDF](createPDF) method. |
 | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | Defines the PrefetchOptions class. |
 | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | The ProxyConfig used by applyProxyOverride. |
 | [ProxyController](arkts-arkweb-webview-proxycontroller-c.md) | This class is used for set proxy for ArkWeb. |
@@ -60,13 +60,13 @@ import { webview } from 'kits/@kit.ArkWeb';
 
 | Name | Description |
 | --- | --- |
-| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) | Provides back and forward history list information method. related to {@link HistoryItem}. |
+| [BackForwardList](arkts-arkweb-webview-backforwardlist-i.md) | Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem). |
 | [BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md) | Defines the frame interpolation information.  Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. |
 | [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md) | Defines the blankless information. |
 | [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) | Defines the blankless loading parameter.  Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. |
 | [CacheOptions](arkts-arkweb-webview-cacheoptions-i.md) | Options of generating code cache |
 | [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | Provides information for history item in BackForwardList. |
-| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Provides element information of the click area. related to {@link getLastHitTest} method. |
+| [HitTestValue](arkts-arkweb-webview-hittestvalue-i.md) | Provides element information of the click area. related to [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) method. |
 | [MediaInfo](arkts-arkweb-webview-mediainfo-i.md) | Represents a **MediaInfo** object used as a parameter of the  [CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page. |
 | [NativeMediaPlayerBridge](arkts-arkweb-webview-nativemediaplayerbridge-i.md) | Implements a **CreateNativeMediaPlayerCallback** object to control the player created by the application for taking over the web page media playback. This object is a return value type of the  [CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)callback.  > **NOTE：** >  > - The sample effect is subject to the actual device. |
 | [NativeMediaPlayerHandler](arkts-arkweb-webview-nativemediaplayerhandler-i.md) | Implements a **NativeMediaPlayerHandler** object used as a parameter of the  [CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)callback. The application uses this object to report the player status to the ArkWeb engine.  > **NOTE：** >  > - The sample effect is subject to the actual device. |
@@ -74,11 +74,11 @@ import { webview } from 'kits/@kit.ArkWeb';
 | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Defines the configuration of creating pdf, related to {@Link createPdf} method. |
 | [RectEvent](arkts-arkweb-webview-rectevent-i.md) | Defines a rectangle. |
 | [RequestInfo](arkts-arkweb-webview-requestinfo-i.md) | Defines the Web's request info. |
-| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | Defines the scroll offset of the webpage in view port, the unit is virtual pixel.Related to {@link getScrollOffset} method. |
+| [ScrollOffset](arkts-arkweb-webview-scrolloffset-i.md) | Defines the scroll offset of the webpage in view port, the unit is virtual pixel.Related to [getScrollOffset](arkts-arkweb-webview-webviewcontroller-c.md#getScrollOffset) method. |
 | [SecurityParams](arkts-arkweb-webview-securityparams-i.md) | Defines the parameters for enableAdvancedSecurityMode. |
 | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | Defines the snapshot info. |
 | [SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md) | Represents a full drawing result. |
-| [WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md) | Defines the configuration of web custom scheme, related to {@link customizeSchemes} method. |
+| [WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md) | Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-arkweb-webview-webviewcontroller-c.md#customizeSchemes) method. |
 | [WebHeader](arkts-arkweb-webview-webheader-i.md) | Defines the Web's request/response header. |
 | [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) | Defines the Web's HTTPCookie.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The maximum length allowed for each attribute value in a cookie string is 1024.&lt;/p&gt; |
 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) | Define html web message port. |
@@ -90,34 +90,34 @@ import { webview } from 'kits/@kit.ArkWeb';
 | --- | --- |
 | [ArkWebEngineVersion](arkts-arkweb-webview-arkwebengineversion-e.md) | For details about the ArkWeb kernel version, see  [Adaptation Guide for the M114 Kernel on OpenHarmony 6.0](https://gitcode.com/openharmony-tpc/chromium_src/blob/132_trunk/web/ReleaseNote/CompatibleWithLegacyWebEngine.md) |
 | [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md) | Enumerates the frame interpolation states.  &lt;strong&gt;ArkWeb Dual Web Engine Versioning Convention&lt;/strong&gt;:&lt;p&gt;See [ArkWeb Dual Web Engine Versioning Convention] for switching between Legacy and Evergreen Web Engine.  Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. |
-| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) | Enum type supplied to {@link getAttachState} for indicating the attach state of controller. |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Enum type supplied to {@link runJavaScriptExt} for indicating the result of JavaScript code execution. |
+| [ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md) | Enum type supplied to [getAttachState](arkts-arkweb-webview-webviewcontroller-c.md#getAttachState) for indicating the attach state of controller. |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Enum type supplied to [runJavaScriptExt](arkts-arkweb-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution. |
 | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Enumerates the error types of the player. |
 | [MediaPlaybackState](arkts-arkweb-webview-mediaplaybackstate-e.md) | Enumerates the playback states on the current web page. |
 | [MediaType](arkts-arkweb-webview-mediatype-e.md) | Enumerates the media types. |
 | [NetworkState](arkts-arkweb-webview-networkstate-e.md) | Enumerates the network statuses of the player. |
-| [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) | Enum type supplied to {@link OfflineResourceMap} for indicating the type of resource. |
+| [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) | Enum type supplied to [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md#OfflineResourceMap) for indicating the type of resource. |
 | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Enumerates the playback statuses of the player, which is an input parameter of the  [handleStatusChanged](../../../reference/apis-arkweb/arkts-apis-webview-NativeMediaPlayerHandler.md#handlestatuschanged12)API. |
 | [Preload](arkts-arkweb-webview-preload-e.md) | Enumerates how the player preloads media data. |
 | [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component,the **Web** kernel releases the cache based on the memory pressure level. |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | Enum type supplied to {@link insertProxyRule} for indicating the scheme filter for proxy. |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | Enum type supplied to [insertProxyRule](arkts-arkweb-webview-proxyconfig-c.md#insertProxyRule) for indicating the scheme filter for proxy. |
 | [ReadyState](arkts-arkweb-webview-readystate-e.md) | Enumerates the cache states of the player. |
 | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) | Defines the render process mode. |
-| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Enum type supplied to {@link setScrollable} for indicating the type of scroll. |
-| [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | Enum type supplied to {@link setScrollbarMode} for indicating the web component scrollbar mode. |
+| [ScrollType](arkts-arkweb-webview-scrolltype-e.md) | Enum type supplied to [setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setScrollable) for indicating the type of scroll. |
+| [ScrollbarMode](arkts-arkweb-webview-scrollbarmode-e.md) | Enum type supplied to [setScrollbarMode](arkts-arkweb-webview-webviewcontroller-c.md#setScrollbarMode) for indicating the web component scrollbar mode. |
 | [SecureDnsMode](arkts-arkweb-webview-securednsmode-e.md) | Defines the mode for using HttpDns. |
 | [SecurityLevel](arkts-arkweb-webview-securitylevel-e.md) | Defines the security level for the page. |
 | [SiteIsolationMode](arkts-arkweb-webview-siteisolationmode-e.md) | Indicates the site isolation mode of the application, default value depends on different devices type. |
 | [SourceType](arkts-arkweb-webview-sourcetype-e.md) | Enumerates the media source types. |
 | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Enumerates the suspension types of the player. |
 | [UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md) | The form factors for User-Agent metadata. |
-| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | Enumerates the error codes of blankless. For details, see {@link setBlanklessLoadingWithKey} or {@link BlanklessInfo}. |
-| [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Enum type supplied to {@link SetWebDestroyMode} for indicating the web component destroy mode. |
+| [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md) | Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) or [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo). |
+| [WebDestroyMode](arkts-arkweb-webview-webdestroymode-e.md) | Enum type supplied to [SetWebDestroyMode](SetWebDestroyMode) for indicating the web component destroy mode. |
 | [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Defines the error code for download. |
 | [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Defines the state for download. |
-| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Enum type supplied to {@link getHitTest} for indicating the cursor node HitTest. |
+| [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md) | Enum type supplied to [getHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getHitTest) for indicating the cursor node HitTest. |
 | [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md) | Indicates whether to restrict cookies so that only requests sent back to the same site that created them can carry them. |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Enum type supplied to {@link onMessageEventExt} for indicating the type of web message. |
+| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Enum type supplied to [onMessageEventExt](onMessageEventExt) for indicating the type of web message. |
 | [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Defines the resource type of request. |
 | [WebSoftKeyboardBehaviorMode](arkts-arkweb-webview-websoftkeyboardbehaviormode-e.md) | Indicates the keyboard behavior mode of the web component, default value is DEFAULT. |
 
@@ -131,6 +131,6 @@ import { webview } from 'kits/@kit.ArkWeb';
 | [ResumePlayerFn](arkts-arkweb-webview-resumeplayerfn-t.md) | The function of reusme media play. |
 | [SuspendPlayerFn](arkts-arkweb-webview-suspendplayerfn-t.md) | The function of suspend media play. |
 | [UpdateRectFn](arkts-arkweb-webview-updaterectfn-t.md) | The function of the rect of video tag has changed. |
-| [WebMessage](arkts-arkweb-webview-webmessage-t.md) | WebMessage type supplied to {@link onMessageEventExt} for indicating the type of web message. |
+| [WebMessage](arkts-arkweb-webview-webmessage-t.md) | WebMessage type supplied to [onMessageEventExt](onMessageEventExt) for indicating the type of web message. |
 | [ZeroParamFn](arkts-arkweb-webview-zeroparamfn-t.md) | The function with zero parameter. |
 

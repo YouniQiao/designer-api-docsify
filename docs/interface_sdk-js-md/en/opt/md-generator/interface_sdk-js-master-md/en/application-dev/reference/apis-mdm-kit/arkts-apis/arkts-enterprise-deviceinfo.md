@@ -23,7 +23,7 @@ This module provides APIs for enterprise device information management, includin
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from 'kits/@kit.MDMKit';
+import { deviceInfo } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -24,7 +24,7 @@ function getAttachedMechDevices(): MechInfo[]
 
 | 错误码ID |
 | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
 
 ## 示例
 

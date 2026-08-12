@@ -1,8 +1,8 @@
 # SheetOptions
 
-Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md).
+Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions).
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ blurSnapshot?: BlurSnapshotOptions
 
 Options for blur snapshot optimization of the sheet.When this property is set, blur optimization is enabled and the sheet background will be rendered using a blur snapshot.This property cannot be dynamically switched after the sheet is presented.
 
-**Type:** [BlurSnapshotOptions](../arkts-apis/arkts-arkui-common-blursnapshotoptions-i-sys.md)
+**Type:** [BlurSnapshotOptions](arkts-arkui-blursnapshotoptions-i-sys.md)
 
 **Default:** undefined
 
@@ -66,11 +66,11 @@ Edge light animation mode of the sheet.Default value: EdgeLightMode.EDGELIGHT_DI
 offset?: Position
 ```
 
-Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents** property of [SheetOptions](arkts-arkui-sheetoptions-i.md) is not supported. This property has no effect when the y-axis value is set to a negative number.
+Offset of the sheet. Bottom spacing, which is effective only when the sheet is a bottom sheet. The **detents** property of [SheetOptions](arkts-arkui-sheetoptions-i.md#SheetOptions) is not supported. This property has no effect when the y-axis value is set to a negative number.
 
 Default value: 0 vp for both the x-axis and y-axis
 
-**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**Type:** Position
 
 **Since:** 14
 

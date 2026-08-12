@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## updateApn
@@ -31,16 +31,16 @@ Updates the APN. This API is suitable for enterprise mobile network configuratio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| apnInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | APN information to be updated. After the setting, the system uses the updated parameters to modify the corresponding APN configuration, affecting the network connection mode and data transmission path. &lt;br&gt;- **apnName**: APN identifier, which is optional. &lt;br&gt;- **mcc**: 3-digit mobile country code (MCC), which is optional. &lt;br&gt;- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional. &lt;br&gt;- **APN**: access point name, which is optional. &lt;br&gt;- **type**: APN service type, which is optional. &lt;br&gt;- **user**: user name for APN authentication, which is optional. &lt;br&gt;- **password**: password for APN authentication, which is optional. &lt;br&gt;- **proxy**: address of the proxy server for a common data connection, which is optional. &lt;br&gt;- **mmsproxy**: dedicated proxy address of the MMS service, which is optional. &lt;br&gt;- **authType**: authentication protocol type of the APN, which is optional. |
-| apnId | string | Yes | APN ID to be updated. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryapn). |
+| apnInfo | Record&lt;string, string&gt; | Yes | APN information to be updated. After the setting, the system uses the updated parameters to modify the corresponding APN configuration, affecting the network connection mode and data transmission path. &lt;br&gt;- **apnName**: APN identifier, which is optional. &lt;br&gt;- **mcc**: 3-digit mobile country code (MCC), which is optional. &lt;br&gt;- **mnc**: 2-digit or 3-digit mobile network code (MNC), which is optional. &lt;br&gt;- **APN**: access point name, which is optional. &lt;br&gt;- **type**: APN service type, which is optional. &lt;br&gt;- **user**: user name for APN authentication, which is optional. &lt;br&gt;- **password**: password for APN authentication, which is optional. &lt;br&gt;- **proxy**: address of the proxy server for a common data connection, which is optional. &lt;br&gt;- **mmsproxy**: dedicated proxy address of the MMS service, which is optional. &lt;br&gt;- **authType**: authentication protocol type of the APN, which is optional. |
+| apnId | string | Yes | APN ID to be updated. You can obatin the device APN information via [networkManager.queryApn](arkts-mdm-networkmanager-queryapn-f.md#queryApn). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

@@ -6,7 +6,7 @@
 function getController(): InputMethodController
 ```
 
-获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。
+获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md#InputMethodController)。
 
 **含义/功能**：获取当前应用的输入法客户端控制器实例，用于后续与输入法进行交互（绑定、显示/隐藏键盘、同步编辑框状态等）。
 
@@ -30,7 +30,7 @@ function getController(): InputMethodController
 
 | 错误码ID |
 | --- |
-| [12800006](../errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
+| [12800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-输入法控制器异常) |
 
 ## 示例
 

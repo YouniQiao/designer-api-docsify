@@ -22,7 +22,7 @@ Describes a region, which is used to describe the region where the shape can be 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -61,7 +61,7 @@ Copies a **Region** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region to be copied. |
+| region | Region | Yes | Region to be copied. |
 
 ## constructor
 
@@ -114,7 +114,7 @@ Obtains a new path that is the boundary of the existing region.
 
 | Type | Description |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | Path of the boundary of the existing region. |
+| Path | Path of the boundary of the existing region. |
 
 ## getBoundaryPath
 
@@ -136,7 +136,7 @@ Gets the boundary of the region, which represents by a path.Gets the bounds of t
 
 | Type | Description |
 | --- | --- |
-| [Path](arkts-arkgraphics2d-drawing-path-c.md) | Returns Path object. |
+| Path | Returns Path object. |
 
 ## getBounds
 
@@ -246,7 +246,7 @@ Checks whether another region is equal to this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| other | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -293,7 +293,7 @@ Checks whether a point is contained in this region.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isRect
 
@@ -339,7 +339,7 @@ Checks whether another region is contained in this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| other | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -351,7 +351,7 @@ Checks whether another region is contained in this region.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
@@ -402,7 +402,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| region | Region | Yes | Region** object. |
 | regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Yes | Operation mode of the region. |
 
 **Return value:**
@@ -415,7 +415,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickContains
 
@@ -497,7 +497,7 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickRejectRegion
 
@@ -519,7 +519,7 @@ Checks whether the existing region does not intersect with another region. Actua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| region | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -563,8 +563,8 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes | Path** object. |
-| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region** object. |
+| path | Path | Yes | Path** object. |
+| clip | Region | Yes | Region** object. |
 
 **Return value:**
 
@@ -576,7 +576,7 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRect
 
@@ -619,7 +619,7 @@ Sets a rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRegion
 
@@ -641,5 +641,5 @@ Sets the existing region to another region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes | Region to be set. |
+| region | Region | Yes | Region to be set. |
 

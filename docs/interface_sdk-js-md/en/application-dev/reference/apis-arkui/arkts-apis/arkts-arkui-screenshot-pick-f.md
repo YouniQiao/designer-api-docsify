@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## pick
@@ -28,14 +28,14 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PickInfo&gt; | Promise used to return the PickInfo object. |
+| Promise&lt;[PickInfo](arkts-arkui-screenshot-pickinfo-i.md)&gt; | Promise used to return the PickInfo object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported on this device. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 

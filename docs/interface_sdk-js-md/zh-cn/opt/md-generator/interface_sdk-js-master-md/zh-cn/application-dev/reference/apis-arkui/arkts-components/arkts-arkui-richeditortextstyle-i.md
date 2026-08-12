@@ -44,7 +44,7 @@ fontColor?: ResourceColor
 
 文本颜色。
 
-默认值：\$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle优先级高于fontColor。
+默认值：\$r('sys.color.font_primary')。当[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md#RichEditorParagraphStyle)同时设置时，shaderStyle优先级高于fontColor。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -64,7 +64,7 @@ fontColor?: ResourceColor
 fontFamily?: ResourceStr
 ```
 
-设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md/arkts-font.md)。默认字体:'HarmonyOS Sans'。
+设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md#font)。默认字体:'HarmonyOS Sans'。
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -142,7 +142,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 10
 
@@ -301,7 +301,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | number
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md/arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md#LengthUnit)，当前设置不生效，作为0处理。
 
 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
 
@@ -311,9 +311,9 @@ strokeWidth?: LengthMetrics | number
 
 取值范围：(-∞, +∞)
 
-与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md)同时设置时，shaderStyle不生效。
+与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md#RichEditorParagraphStyle)同时设置时，shaderStyle不生效。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
+**类型：** LengthMetrics \| number
 
 **起始版本：** 23
 
@@ -365,7 +365,7 @@ textShadow?: ShadowOptions | Array<ShadowOptions>
 
 仅支持设置阴影模糊半径、颜色和偏移量，不支持智能取色。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt;
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 11
 

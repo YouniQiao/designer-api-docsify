@@ -17,8 +17,8 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > 
 > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**
 > and do not affect paths defined in
-> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
-> or [Path2D](arkts-arkui-path2d-c.md):
+> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D)
+> or [Path2D](arkts-arkui-path2d-c.md#Path2D):
 > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
 > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
 > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
@@ -26,7 +26,7 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU
 > causes significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 **Since:** 8
 
@@ -84,7 +84,7 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No |
 
 ## getContext2DFromDrawingContext
 
@@ -130,7 +130,7 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 | Error Code ID |
 | --- |
-| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) |
+| [103702](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) |
 
 ## off('onAttach')
 
@@ -155,13 +155,13 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'onAttach' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | Callback & lt;void & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('onDetach')
 
@@ -186,13 +186,13 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'onDetach' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | Callback & lt;void & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('onAttach')
 
@@ -208,7 +208,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 > at a time.&lt;br&gt;
 > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the
 > **onAttach** callback is triggered, indicating that the
-> [canvas](arkts-arkui-canvasrenderingcontext2d-c.md#canvas)
+> [canvas](#canvas)
 > object is accessible.&lt;br&gt;
 > Avoid performing drawing operations in the **onAttach** callback. Make sure the
 > **Canvas** component has completed its
@@ -234,13 +234,13 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'onAttach' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | Callback & lt;void & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('onDetach')
 
@@ -275,13 +275,13 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'onDetach' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | Callback & lt;void & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## startImageAnalyzer
 
@@ -319,15 +319,15 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
+| [110001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
+| [110003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
+| [110002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
 
 ## stopImageAnalyzer
 
@@ -394,7 +394,7 @@ FrameNode instance of the **Canvas** component associated with **CanvasRendering
 
 Default value: **null**
 
-**Type:** [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md)
+**Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
 **Since:** 13
 

@@ -38,7 +38,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 
 The Image Layout Style.
 
-**Type:** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
+**Type:** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
 
 **Since:** 23
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-unnamed-export interface CipherRsaOptions--><!--Device-unnamed-export interface CipherRsaOptions-End-->
 
@@ -24,7 +24,7 @@ complete: () => void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-complete: () => void--><!--Device-CipherRsaOptions-complete: () => void-End-->
 
@@ -42,7 +42,7 @@ fail: (data: string, code: number) => void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-fail: (data: string, code: number) => void--><!--Device-CipherRsaOptions-fail: (data: string, code: number) => void-End-->
 
@@ -67,7 +67,7 @@ success: (data: CipherResponse) => void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-success: (data: CipherResponse) => void--><!--Device-CipherRsaOptions-success: (data: CipherResponse) => void-End-->
 
@@ -95,7 +95,7 @@ action: string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-action: string--><!--Device-CipherRsaOptions-action: string-End-->
 
@@ -115,7 +115,7 @@ key: string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-key: string--><!--Device-CipherRsaOptions-key: string-End-->
 
@@ -135,7 +135,7 @@ text: string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-text: string--><!--Device-CipherRsaOptions-text: string-End-->
 
@@ -155,7 +155,7 @@ RSA算法的填充项，默认为RSA/None/OAEPWithSHA256AndMGF1Padding。
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherRsaOptions-transformation?: string--><!--Device-CipherRsaOptions-transformation?: string-End-->
 

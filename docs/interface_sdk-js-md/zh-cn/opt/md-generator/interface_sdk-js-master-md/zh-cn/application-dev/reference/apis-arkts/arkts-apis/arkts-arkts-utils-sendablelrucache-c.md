@@ -96,7 +96,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[K, V]&gt; |
+| IterableIterator & lt;[K, V] & gt; |
 
 ## get
 

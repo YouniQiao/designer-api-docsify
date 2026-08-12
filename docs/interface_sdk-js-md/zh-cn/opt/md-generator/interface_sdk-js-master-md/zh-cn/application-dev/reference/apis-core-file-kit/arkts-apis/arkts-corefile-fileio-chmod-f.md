@@ -27,7 +27,7 @@ declare function chmod(path: string, mode: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## chmod

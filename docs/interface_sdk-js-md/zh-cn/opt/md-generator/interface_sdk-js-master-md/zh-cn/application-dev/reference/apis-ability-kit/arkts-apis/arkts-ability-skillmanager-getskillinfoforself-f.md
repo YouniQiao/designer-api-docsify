@@ -23,18 +23,18 @@ function getSkillInfoForSelf(moduleName: string, skillName: string, flags: numbe
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | moduleName | string | 是 |
-| skillName | string | 是 |
+| [skillName](arkts-ability-skillinfo-i.md) | string | 是 |
 | flags | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;SkillInfo&gt; |
+| Promise & lt;SkillInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700093](../errorcode-bundle.md#17700093-指定的skillname不存在) |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700093](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700093-指定的skillname不存在) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |

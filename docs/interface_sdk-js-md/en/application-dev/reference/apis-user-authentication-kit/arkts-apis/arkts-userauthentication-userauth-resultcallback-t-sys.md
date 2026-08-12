@@ -23,5 +23,5 @@ Defines the callback for returning remote authentication results. This type is u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | Yes | Challenge value. It is a one-time random number used to prevent replay attacks, which is consistent with the challenge value passed during authentication initiation. |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | User authentication result, including the authentication result code and authentication token. |
+| result | UserAuthResult | Yes | User authentication result, including the authentication result code and authentication token. |
 

@@ -86,7 +86,7 @@ onStateChange?: (state: SwipeActionState) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [SwipeActionState](../arkts-components/arkts-arkui-swipeactionstate-e.md) | 是 |  |
+| state | [SwipeActionState](arkts-arkui-listitem-swipeactionstate-e.md) | 是 |  |
 
 ## actionAreaDistance
 
@@ -118,7 +118,7 @@ builder?: CustomBuilder
 
 当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 

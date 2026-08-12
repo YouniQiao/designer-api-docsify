@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## getSysResourceManager
@@ -32,7 +32,7 @@ Obtains a system resource management object for accessing preset system resource
 
 | Error Code ID |
 | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) |
+| [9001009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) |
 
 ## Examples
 

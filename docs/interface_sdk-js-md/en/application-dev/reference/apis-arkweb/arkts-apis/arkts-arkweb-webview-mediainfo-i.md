@@ -14,7 +14,7 @@ Represents a **MediaInfo** object used as a parameter of the
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## attributes
@@ -25,7 +25,7 @@ attributes: Record<string, string>
 
 Attributes in **&lt;video&gt;** or **&lt;audio&gt;**.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 23
 
@@ -99,7 +99,7 @@ headers: Record<string, string>
 
 HTTP headers that need to be included in the player's request for media resources.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 23
 
@@ -135,7 +135,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**Type:** [MediaType](arkts-arkweb-webview-mediatype-e.md)
+**Type:** MediaType
 
 **Since:** 23
 

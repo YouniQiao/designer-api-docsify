@@ -46,7 +46,7 @@ isNpuAvailable: boolean
 modelInfo?: CloudModelInfo
 ```
 
-云侧模型类型和版本信息，在使用文本向量模型时配置，通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel)接口获取支持的模型信息，默认值为空。
+云侧模型类型和版本信息，在使用文本向量模型时配置，通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getSupportedCloudModel)接口获取支持的模型信息，默认值为空。
 
 **类型：** [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)
 

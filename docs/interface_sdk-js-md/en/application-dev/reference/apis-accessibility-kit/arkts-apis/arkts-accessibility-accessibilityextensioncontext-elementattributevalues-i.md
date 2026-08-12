@@ -175,7 +175,7 @@ children: Array<AccessibilityElement>
 
 All child elements.
 
-**Type:** Array&lt;AccessibilityElement&gt;
+**Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **Since:** 9
 
@@ -288,7 +288,7 @@ customComponentType?: string
 ```
 
 Custom component type. It corresponds to   
-[AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityroletype-e.md/arkts-arkui-common-accessibilityroletype-e.md) of the element.
+[AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType) of the element.
 
 **Type:** string
 
@@ -481,7 +481,7 @@ hotArea: Rect
 
 Touchable area of an element.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 12
 
@@ -812,7 +812,7 @@ rect: Rect
 
 Area of the element.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 9
 
@@ -866,7 +866,7 @@ screenRect: Rect
 
 Display area of the element.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **Since:** 9
 

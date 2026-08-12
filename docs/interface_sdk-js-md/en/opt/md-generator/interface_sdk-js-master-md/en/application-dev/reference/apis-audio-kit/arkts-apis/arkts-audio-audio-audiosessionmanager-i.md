@@ -3,7 +3,7 @@
 This interface implements audio session management.
 
 Before calling any API in AudioSessionManager, you must use  
-[getSessionManager](arkts-audio-audio-audiomanager-i.md#getsessionmanager) to obtain an AudioSessionManager instance.
+[getSessionManager](arkts-audio-audio-audiomanager-i.md#getSessionManager) to obtain an AudioSessionManager instance.
 
 > **NOTE：**
 > 
@@ -18,7 +18,7 @@ Before calling any API in AudioSessionManager, you must use
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## activateAudioSession
@@ -47,15 +47,15 @@ Activates an audio session. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## clearSelectedMediaInputDevice
 
@@ -64,7 +64,7 @@ clearSelectedMediaInputDevice(): Promise<void>
 ```
 
 Clears the media input device set by calling  
-[selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice). This API uses a promise to return the result.
+[selectMediaInputDevice](#selectMediaInputDevice). This API uses a promise to return the result.
 
 **Since:** 21
 
@@ -76,13 +76,13 @@ Clears the media input device set by calling
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## deactivateAudioSession
 
@@ -104,13 +104,13 @@ Deactivates this audio session. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## enableMuteSuggestionWhenMixWithOthers
 
@@ -123,10 +123,10 @@ Enables mute suggestion notifications for mixed playback.
 Typically, when the audio mixing mode is used, if two applications plays audio at the same time, their audio streams are mixed. In certain scenarios (such as games or broadcasts), applications can mute their own audio to provide a better user experience.
 
 If this feature is enabled, mute and unmute suggestions will be sent through the  
-[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
+[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md#AudioSessionStateChangedEvent) callback after the audio session state change event is subscribed to. Receiving the muted suggestion indicates that another application starts to play audio, and the played audio and the audio of this application cannot be mixed.
 
 This feature can be used only by audio sessions for which  
-[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) has been set and the  
+[AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) has been set and the  
 **CONCURRENCY_MIX_WITH_OTHERS** mode has been activated. This feature takes effect only once when the audio session is activated. You need to enable it again before each activation of the audio session.
 
 For details, see  
@@ -150,8 +150,8 @@ For details, see
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## getAvailableDevices
 
@@ -183,8 +183,8 @@ Obtains the available audio devices.
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## getBluetoothAndNearlinkPreferredRecordCategory
 
@@ -193,7 +193,7 @@ getBluetoothAndNearlinkPreferredRecordCategory(): BluetoothAndNearlinkPreferredR
 ```
 
 Obtains the preferred device category for recording with Bluetooth or NearLink, which is set by calling  
-[setBluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-audiosessionmanager-i.md#setbluetoothandnearlinkpreferredrecordcategory).
+[setBluetoothAndNearlinkPreferredRecordCategory](#setBluetoothAndNearlinkPreferredRecordCategory).
 
 **Since:** 21
 
@@ -211,7 +211,7 @@ Obtains the preferred device category for recording with Bluetooth or NearLink, 
 
 | Error Code ID |
 | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## getDefaultOutputDevice
 
@@ -220,7 +220,7 @@ getDefaultOutputDevice(): DeviceType
 ```
 
 Obtains the default audio output device set by calling  
-[setDefaultOutputDevice](arkts-audio-audio-audiosessionmanager-i.md#setdefaultoutputdevice).
+[setDefaultOutputDevice](#setDefaultOutputDevice).
 
 **Since:** 20
 
@@ -232,14 +232,14 @@ Obtains the default audio output device set by calling
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) |
+| [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getSelectedMediaInputDevice
 
@@ -248,7 +248,7 @@ getSelectedMediaInputDevice(): AudioDeviceDescriptor
 ```
 
 Obtains the media input device set by calling  
-[selectMediaInputDevice](arkts-audio-audio-audiosessionmanager-i.md#selectmediainputdevice). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
+[selectMediaInputDevice](#selectMediaInputDevice). If no device has been specified, the device with **deviceType** set to **INVALID** is returned.
 
 **Since:** 21
 
@@ -266,7 +266,7 @@ Obtains the media input device set by calling
 
 | Error Code ID |
 | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## isAudioSessionActivated
 
@@ -334,14 +334,14 @@ Unsubscribes from the audio session deactivation event. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioSessionDeactivated' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionDeactivatedEvent&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## off('audioSessionStateChanged')
 
@@ -362,14 +362,14 @@ Unsubscribes from the audio session state change event. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioSessionStateChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionStateChangedEvent&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## off('currentOutputDeviceChanged')
 
@@ -390,14 +390,14 @@ Unsubscribes from the current output device change event. This API uses an async
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'currentOutputDeviceChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentOutputDeviceChangedEvent&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## off('availableDeviceChange')
 
@@ -418,13 +418,13 @@ Unsubscribes from the event indicating that the connection status of an availabl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## off('currentInputDeviceChanged')
 
@@ -445,13 +445,13 @@ Unsubscribes from the current input device change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentInputDeviceChangedEvent&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## on('audioSessionDeactivated')
 
@@ -474,14 +474,14 @@ Subscribes to the audio session deactivation event, which is triggered when an a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioSessionDeactivated' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionDeactivatedEvent&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionDeactivatedEvent](arkts-audio-audio-audiosessiondeactivatedevent-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('audioSessionStateChanged')
 
@@ -502,15 +502,15 @@ Subscribes to the audio session state change event, which is triggered when the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioSessionStateChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioSessionStateChangedEvent&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## on('currentOutputDeviceChanged')
 
@@ -531,15 +531,15 @@ Subscribes to the current output device change event, which is triggered when th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'currentOutputDeviceChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentOutputDeviceChangedEvent&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## on('availableDeviceChange')
 
@@ -561,14 +561,14 @@ Subscribes to the event indicating that the connection status of an available au
 | --- | --- | --- |
 | type | 'availableDeviceChange' | Yes |
 | deviceUsage | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeviceChangeAction&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## on('currentInputDeviceChanged')
 
@@ -589,14 +589,14 @@ Subscribes to the current input device change event, which is triggered when the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'currentInputDeviceChanged' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CurrentInputDeviceChangedEvent&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## selectMediaInputDevice
 
@@ -609,9 +609,9 @@ Selects a media input device. This API uses a promise to return the result.
 > **NOTE：**
 > 
 > - This API is not suitable for VoIP call recording; that is, it does not apply to scenarios where
-> [SourceType](arkts-audio-audio-sourcetype-e.md) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
+> [SourceType](arkts-audio-audio-sourcetype-e.md#SourceType) is **SOURCE_TYPE_VOICE_COMMUNICATION**.
 > 
-> - Before calling this API, call [getAvailableDevices](arkts-audio-audio-audiosessionmanager-i.md#getavailabledevices) to
+> - Before calling this API, call [getAvailableDevices](#getAvailableDevices) to
 > query the list of available input devices and select an input device from the list.
 > 
 > - If there are recording streams of other applications with higher priorities in the system, the actual input
@@ -637,14 +637,14 @@ Selects a media input device. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## setAudioSessionBehavior
 
@@ -657,7 +657,7 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 > **NOTE：**
 > 
 > If this API is called while an audio session is active, you must call the
-> [activateAudioSession](arkts-audio-audio-audiosessionmanager-i.md#activateaudiosession) API again
+> [activateAudioSession](#activateAudioSession) API again
 > for the settings to take effect.
 
 **Since:** 24
@@ -678,8 +678,8 @@ Sets audio session behavior parameters. (Multiple flags can be combined.)
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setAudioSessionScene
 
@@ -705,9 +705,9 @@ Sets an audio session scene.
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## setBluetoothAndNearlinkPreferredRecordCategory
 
@@ -745,14 +745,14 @@ Sets the preferred device category for recording with Bluetooth or NearLink. Thi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## setCapturerMuteHint
 
@@ -780,13 +780,13 @@ Set mute hint for all capturer streams in the current audio session. It dose not
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
 
 ## setDefaultOutputDevice
 
@@ -799,10 +799,10 @@ Sets the default audio output device. This API uses a promise to return the resu
 > **NOTE：**
 > 
 > - This API applies to the following scenario: When
-> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md) is set to **VoIP**, the setting takes
+> [AudioSessionScene](arkts-audio-audio-audiosessionscene-e.md#AudioSessionScene) is set to **VoIP**, the setting takes
 > effect immediately after the AudioSession is activated. For non-VoIP scenarios, the setting does not take
 > effect upon AudioSession activation. Instead, the setting applies when
-> [StreamUsage](arkts-audio-audio-streamusage-e.md) for playback is voice message, VoIP voice call,
+> [StreamUsage](arkts-audio-audio-streamusage-e.md#StreamUsage) for playback is voice message, VoIP voice call,
 > or VoIP video call. Supported devices include the earpiece, speaker, and system default device.
 > 
 > - This API can be called at any time after an AudioSessionManager instance is created. The system records the
@@ -821,21 +821,21 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes |
+| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800102](../errorcode-audio.md#6800102-memory-allocation-failure) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800102-memory-allocation-failure) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## setMediaOutputDevice
 
@@ -857,17 +857,17 @@ Set the audio output device to the built-in speaker, when other audio peripheral
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| deviceType | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | Yes |
+| deviceType | [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |

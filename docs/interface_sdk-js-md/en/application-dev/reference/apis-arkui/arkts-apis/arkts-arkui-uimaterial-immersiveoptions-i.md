@@ -13,7 +13,7 @@ Immersive material parameters.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## applyShadow
@@ -24,7 +24,7 @@ applyShadow?: boolean
 
 Whether to add a shadow effect for a material.
 
-If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](arkts-arkui-common-commonmethod-i.md#shadow) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
+If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
 
 Note: This parameter takes effect only for the display effect of devices with all levels of computing power.
 
@@ -57,16 +57,16 @@ Whether the subtree of the node of the material object automatically adapts the 
 **true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.
 
 The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include   
-[fontColor](arkts-arkui-text-textattribute-i.md#fontcolor) of the **Text** component,   
-[fontColor](arkts-arkui-button-buttonattribute-i.md#fontcolor) of the **Button** component,   
-[fontColor](arkts-arkui-symbolglyph-symbolglyphattribute-i.md#fontcolor) of the **SymbolGlyph** component,   
-[fillColor](arkts-arkui-image-imageattribute-i.md#fillcolor) of the **Image** component, icon colors in   
-[placeholderColor](arkts-arkui-search-searchattribute-i.md#placeholdercolor), [fontColor](arkts-arkui-search-searchattribute-i.md#fontcolor), and   
-[searchIcon](arkts-arkui-search-searchattribute-i.md#searchicon) of the **Search** component, icon colors in   
-[cancelButton](arkts-arkui-search-searchattribute-i.md#cancelbutton), caret colors in   
-[caretStyle](arkts-arkui-search-searchattribute-i.md#caretstyle), and text and icon colors in   
-[tabBar](arkts-arkui-tabcontent-tabcontentattribute-i.md#tabbar) of the   
-**TabContent** component when the [BottomTabBarStyle](arkts-arkui-tabcontent-bottomtabbarstyle-c.md) style is used.
+[fontColor](TextAttribute#fontColor) of the **Text** component,   
+[fontColor](ButtonAttribute#fontColor) of the **Button** component,   
+[fontColor](SymbolGlyphAttribute#fontColor(value: Array&lt;ResourceColor&gt;)) of the **SymbolGlyph** component,   
+[fillColor](ImageAttribute#fillColor(value: ResourceColor)) of the **Image** component, icon colors in   
+[placeholderColor](SearchAttribute#placeholderColor), [fontColor](SearchAttribute#fontColor), and   
+[searchIcon](SearchAttribute#searchIcon) of the **Search** component, icon colors in   
+[cancelButton](SearchAttribute#cancelButton), caret colors in   
+[caretStyle](SearchAttribute#caretStyle), and text and icon colors in   
+[tabBar](TabContentAttribute#tabBar(options: string | Resource | CustomBuilder | TabBarOptions)) of the   
+**TabContent** component when the [BottomTabBarStyle](BottomTabBarStyle) style is used.
 
 Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
 
@@ -148,7 +148,7 @@ Note: This parameter takes effect only for the display effect of devices with hi
 
 Default value: **Color.Transparent**
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 

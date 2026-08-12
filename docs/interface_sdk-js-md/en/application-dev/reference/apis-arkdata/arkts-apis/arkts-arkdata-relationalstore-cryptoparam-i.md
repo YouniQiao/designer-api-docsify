@@ -13,7 +13,7 @@ Represents the configuration of database encryption parameters. This configurati
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## cryptoPageSize

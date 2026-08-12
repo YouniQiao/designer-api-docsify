@@ -22,5 +22,5 @@ declare type OnTimePickerChangeCallback = (result: TimePickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [TimePickerResult](../arkts-apis/arkts-arkui-timepicker-timepickerresult-i.md) | 是 | 选中的时间结果，hour取值0-23，与展示制式无关。 |
+| result | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | 是 | 选中的时间结果，hour取值0-23，与展示制式无关。 |
 

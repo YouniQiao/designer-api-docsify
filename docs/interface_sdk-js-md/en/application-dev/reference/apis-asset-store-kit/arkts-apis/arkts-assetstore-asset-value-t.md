@@ -4,7 +4,7 @@
 declare type Value = boolean | number | Uint8Array
 ```
 
-Represents the value of each attribute in [AssetMap](arkts-assetstore-asset-assetmap-t.md).
+Represents the value of each attribute in [AssetMap](arkts-assetstore-asset-assetmap-t.md#AssetMap).
 
 **Since:** 11
 

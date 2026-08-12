@@ -13,7 +13,7 @@ Describes the rectangular area of the window, in vp.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## height

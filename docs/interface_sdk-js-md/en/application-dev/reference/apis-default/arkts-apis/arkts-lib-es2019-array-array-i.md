@@ -28,7 +28,7 @@ Returns a new array with all sub-array elements concatenated into it recursively
 
 | Type | Description |
 | --- | --- |
-| FlatArray&lt;A, D&gt;[] |  |
+| [FlatArray](arkts-flatarray-t.md)&lt;A, D&gt;[] |  |
 
 ## flatMap
 

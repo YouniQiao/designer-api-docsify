@@ -20,7 +20,7 @@ function promisify(original: (err: Object, value: Object) => void): Function
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | 是 |
+| original | (err: Object, value: Object) = & gt; void | 是 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## createEffect

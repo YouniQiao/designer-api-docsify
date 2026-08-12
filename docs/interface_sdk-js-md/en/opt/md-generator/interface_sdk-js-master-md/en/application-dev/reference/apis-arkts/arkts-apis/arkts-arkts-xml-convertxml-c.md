@@ -11,7 +11,7 @@ ConvertXML representation refers to extensible markup language.
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import { convertxml } from '@kit.ArkTS';
 ```
 
 ## convert
@@ -26,7 +26,7 @@ Converts an XML text to a JavaScript object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [xml.ConvertXML#fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)
+**Substitutes:** [fastConvertToJSObject](#fastConvertToJSObject)
 
 <!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object--><!--Device-ConvertXML-convert(xml: string, options?: ConvertOptions): Object-End-->
 
@@ -36,7 +36,7 @@ Converts an XML text to a JavaScript object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xml | string | Yes |
+| [xml](arkts-convertxml.md) | string | Yes |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
@@ -88,7 +88,7 @@ Converts an XML text to an object of the object type.
 
 **Deprecated since:** 14
 
-**Substitutes:** [xml.ConvertXML#fastConvertToJSObject](arkts-arkts-xml-convertxml-c.md#fastconverttojsobject)
+**Substitutes:** [fastConvertToJSObject](#fastConvertToJSObject)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,7 +100,7 @@ Converts an XML text to an object of the object type.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xml | string | Yes |
+| [xml](arkts-convertxml.md) | string | Yes |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
@@ -113,7 +113,7 @@ Converts an XML text to an object of the object type.
 
 | Error Code ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 
@@ -178,7 +178,7 @@ Converts an XML text to an object of the object type.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xml | string | Yes |
+| [xml](arkts-convertxml.md) | string | Yes |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
@@ -191,7 +191,7 @@ Converts an XML text to an object of the object type.
 
 | Error Code ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 
@@ -249,7 +249,7 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xml | string | Yes |
+| [xml](arkts-convertxml.md) | string | Yes |
 | options | [ConvertOptions](arkts-arkts-xml-convertoptions-i.md) | No |
 
 **Return value:**
@@ -262,7 +262,7 @@ Convert XML text to JavaScript objects, this method supports parsing large XML t
 
 | Error Code ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 

@@ -36,7 +36,7 @@ Gets the Boids simulation world instance associated with the specified scene.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scene | [Scene](arkts-arkgraphics3d-scene-c-sys.md) | Yes | Object of the target scene. |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | Yes | Object of the target scene. |
 
 **Return value:**
 

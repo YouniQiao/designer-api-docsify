@@ -17,7 +17,7 @@ function updateConnectStatus(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+**替代接口：** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,7 +63,7 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+**替代接口：** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,7 +83,7 @@ function updateConnectStatus(token: number, deviceId: string, status: DeviceConn
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

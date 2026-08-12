@@ -48,7 +48,7 @@ direction?: Direction
 
 值为undefined时，按默认值处理。
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 26.0.0
 

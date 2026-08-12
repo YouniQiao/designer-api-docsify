@@ -30,7 +30,7 @@ function getOAID(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
+| [17300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-系统内部错误) |
 
 ## 示例
 
@@ -72,13 +72,13 @@ function getOAID(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
+| [17300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-系统内部错误) |
 
 ## 示例
 

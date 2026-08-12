@@ -15,7 +15,7 @@ Describes the structure of the data required for locating.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## bluetoothData
@@ -112,7 +112,7 @@ wifiData?: WifiScanInfo
 
 WiFi scan info.
 
-**Type:** [WifiScanInfo](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifi-wifiscaninfo-i.md)
+**Type:** WifiScanInfo
 
 **Since:** 10
 

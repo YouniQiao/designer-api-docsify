@@ -29,7 +29,7 @@ Return to Obtain GestureGroup.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mode | [GestureMode](arkts-arkui-gesturemode-e.md) | Yes |
-| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md)[] | Yes |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | Yes |
 
 **Return value:**
 
@@ -57,7 +57,7 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 

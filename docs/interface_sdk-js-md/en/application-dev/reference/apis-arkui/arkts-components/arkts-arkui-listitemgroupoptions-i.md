@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 Footer of the list item group.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ footerComponent?: ComponentContent
 
 Footer of the list item group, in the type of ComponentContent.This parameter takes precedence over the footer parameter. This means that, if both footer and footerComponent are set, the value of footerComponent is used.To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 13
 
@@ -60,7 +60,7 @@ footerStyle?: ListItemGroupHeaderFooterStyle
 
 Footer style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the footer component is displayed in floating mode during scrolling.
 
-**Type:** [ListItemGroupHeaderFooterStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
+**Type:** [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md)
 
 **Default:** ListItemGroupHeaderFooterStyle.NONE
 
@@ -84,7 +84,7 @@ header?: CustomBuilder
 
 Header of the list item group.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ headerComponent?: ComponentContent
 
 Header of the list item group, in the type of ComponentContent.This parameter takes precedence over the header parameter. This means that, if both header and headerComponent are set, the value of headerComponent is used.To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 13
 
@@ -126,7 +126,7 @@ headerStyle?: ListItemGroupHeaderFooterStyle
 
 Header style of ListItemGroup.If this parameter is set to ListItemGroupHeaderFooterStyle.FLOATING, the header component is displayed in floating mode during scrolling.
 
-**Type:** [ListItemGroupHeaderFooterStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupheaderfooterstyle-e.md)
+**Type:** [ListItemGroupHeaderFooterStyle](arkts-arkui-listitemgroupheaderfooterstyle-e.md)
 
 **Default:** ListItemGroupHeaderFooterStyle.NONE
 
@@ -172,7 +172,7 @@ spaceWidth?: Dimension
 
 Spacing between list items.This parameter only affects the spacing between list items,but not spacing between the header and list items or between the footer and list items.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used.If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence.When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 26.0.0
 
@@ -194,7 +194,7 @@ style?: ListItemGroupStyle
 
 Style of the list item.
 
-**Type:** [ListItemGroupStyle](../arkts-apis/arkts-arkui-listitemgroup-listitemgroupstyle-e.md)
+**Type:** [ListItemGroupStyle](arkts-arkui-listitemgroupstyle-e.md)
 
 **Since:** 10
 

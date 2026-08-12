@@ -18,7 +18,7 @@ backgroundBlurStyle?: BlurStyle
 
 Set menu mask background blur Style.
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 

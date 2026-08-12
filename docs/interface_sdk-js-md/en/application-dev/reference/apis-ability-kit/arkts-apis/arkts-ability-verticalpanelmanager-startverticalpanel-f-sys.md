@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## startVerticalPanel
@@ -36,7 +36,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Indicates the want parameter. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Indicates the want parameter. |
 | panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
 | panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 
@@ -50,9 +50,9 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16000135](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 
@@ -164,7 +164,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.UIAbilityContext | Yes | Indicates the ui ability context of the application. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Indicates the want parameter. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
 | panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes | Indicates the panel config. |
 | panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes | indicates the panelStartCallback. |
 
@@ -178,7 +178,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16000135](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000135-uiability-main-window-does-not-exist) | The main window of this ability of this context does not exits. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service or system server handle failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

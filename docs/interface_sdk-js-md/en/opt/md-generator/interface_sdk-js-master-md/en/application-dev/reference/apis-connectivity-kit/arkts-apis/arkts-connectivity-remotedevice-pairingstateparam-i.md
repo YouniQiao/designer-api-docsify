@@ -11,7 +11,7 @@ Describes the pairing state parameters.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -40,7 +40,7 @@ preState: PairingState
 
 Indicates the previous pairing state.
 
-**Type:** [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md)
+**Type:** PairingState
 
 **Since:** 26.0.0
 
@@ -94,7 +94,7 @@ state: PairingState
 
 Indicates the current pairing state.
 
-**Type:** [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md)
+**Type:** PairingState
 
 **Since:** 26.0.0
 

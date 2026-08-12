@@ -23,7 +23,7 @@ buttonType?: ButtonType
 
 设置粘贴控件的按钮形状。Capsule。默认值：ButtonType。
 
-**类型：** [ButtonType](arkts-arkui-buttontype-e.md)
+**类型：** ButtonType
 
 **起始版本：** 10
 

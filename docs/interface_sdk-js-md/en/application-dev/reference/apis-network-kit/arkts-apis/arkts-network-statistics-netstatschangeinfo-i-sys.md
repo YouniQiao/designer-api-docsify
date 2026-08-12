@@ -15,7 +15,7 @@ Used to monitor and manage the status and usage of network interfaces.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## iface

@@ -11,7 +11,7 @@ P2P group information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## clientDevices
@@ -22,7 +22,7 @@ clientDevices: WifiP2pDevice[]
 
 Client list
 
-**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)[]
+**Type:** WifiP2pDevice[]
 
 **Since:** 9
 
@@ -134,7 +134,7 @@ ownerInfo: WifiP2pDevice
 
 Group owner information
 
-**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)
+**Type:** WifiP2pDevice
 
 **Since:** 9
 

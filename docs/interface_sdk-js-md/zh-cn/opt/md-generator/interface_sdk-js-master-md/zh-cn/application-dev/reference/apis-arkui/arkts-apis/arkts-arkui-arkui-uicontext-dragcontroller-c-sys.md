@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 以下API需先使用UIContext中的[getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取DragController实例，再通过此实例调用对应方法。
+> 以下API需先使用UIContext中的[getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController)方法获取DragController实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 

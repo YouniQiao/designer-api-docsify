@@ -11,7 +11,7 @@ Provides APIs to encode strings into byte arrays. Multiple encoding formats are 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -110,7 +110,7 @@ Encodes the input content in to a Uint8Array object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.encodeInto
+**Substitutes:** [encodeInto](#encodeInto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -186,7 +186,7 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.TextEncoder.encodeIntoUint8Array](arkts-arkts-util-textencoder-c.md#encodeintouint8array)
+**Substitutes:** [encodeIntoUint8Array](#encodeIntoUint8Array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 

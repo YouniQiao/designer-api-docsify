@@ -38,7 +38,7 @@ mode?: NavDestinationMode
 
 Navigation content mode.Default value: NavDestinationMode.STANDARD.
 
-**Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**Type:** [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
 
 **Since:** 23
 

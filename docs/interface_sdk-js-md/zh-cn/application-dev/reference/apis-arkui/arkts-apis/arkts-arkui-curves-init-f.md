@@ -10,7 +10,7 @@ function init(curve?: Curve): string
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves.initCurve](arkts-arkui-curves-initcurve-f.md#initCurve)替代。
 
 **起始版本：** 7
 
@@ -18,7 +18,7 @@ function init(curve?: Curve): string
 
 **废弃版本：** 9
 
-**替代接口：** [curves.initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)
+**替代接口：** [initCurve](arkts-arkui-curves-initcurve-f.md#initCurve)
 
 <!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 
@@ -28,7 +28,7 @@ function init(curve?: Curve): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | [Curve](arkts-arkui-curve-e.md) | 否 | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
+| curve | Curve | 否 | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
 
 **返回值：**
 

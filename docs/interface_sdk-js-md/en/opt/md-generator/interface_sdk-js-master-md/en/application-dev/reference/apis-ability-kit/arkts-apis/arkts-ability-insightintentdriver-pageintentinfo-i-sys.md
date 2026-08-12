@@ -15,7 +15,7 @@ Describes the parameters supported by the
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## navDestinationName
@@ -45,7 +45,7 @@ Name of the
 readonly navigationId: string
 ```
 
-ID of the [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) component bound to the intent.
+ID of the [Navigation](@internal/component/ets/navigation) component bound to the intent.
 
 **Type:** string
 

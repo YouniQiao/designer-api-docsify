@@ -25,4 +25,4 @@ type QueryPlaylistEvent = (pageIndex: number, sort: Sort) => Promise<PageMediaEn
 
 | 类型 |
 | --- |
-| Promise&lt;PageMediaEntity&gt; |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |

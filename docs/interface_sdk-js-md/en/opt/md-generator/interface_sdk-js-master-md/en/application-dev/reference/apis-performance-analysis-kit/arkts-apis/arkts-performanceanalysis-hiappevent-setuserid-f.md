@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setUserId
@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function setUserId(name: string, value: string): void
 ```
 
-Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured.
+Sets a user ID, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#Processor) is configured.
 
 **Since:** 11
 
@@ -33,7 +33,7 @@ Sets a user ID, which is used for association when a [Processor](arkts-performan
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## isDistributedEnabledBySlot
@@ -30,7 +30,7 @@ Queries whether notifications of a specified slot can be sent to devices of a sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slot | [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md) | Yes | Types of the notification slot. |
+| slot | SlotType | Yes | Types of the notification slot. |
 | deviceType | string | Yes | Device type.&lt;br&gt;Since API version 18, the following device types are supported:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt;- **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;Since API version 20, the following device types are supported:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt;- **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;- **current**: current device&lt;br&gt;- **2in1**: PC&lt; br&gt;- **tablet**: tablet |
 
 **Return value:**
@@ -43,9 +43,9 @@ Queries whether notifications of a specified slot can be sent to devices of a sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
 ## Examples
 

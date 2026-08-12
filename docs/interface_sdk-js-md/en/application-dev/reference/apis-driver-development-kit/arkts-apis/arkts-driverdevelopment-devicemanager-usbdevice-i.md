@@ -1,8 +1,8 @@
 # USBDevice
 
-USB device information, which is inherited from [Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices).
+USB device information, which is inherited from [Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices).
 
-**Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md)
+**Inheritance/Implementation:** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md#Device)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ USB device information, which is inherited from [Device](arkts-driverdevelopment
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## productId

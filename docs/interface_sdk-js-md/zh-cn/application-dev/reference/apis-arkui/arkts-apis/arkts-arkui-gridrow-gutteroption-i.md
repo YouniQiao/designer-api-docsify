@@ -18,7 +18,7 @@ x?: Length | GridRowSizeOption
 
 栅格子组件水平方向间距。
 
-**类型：** [Length](arkts-arkui-length-t.md) \| GridRowSizeOption
+**类型：** [Length](arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ y?: Length | GridRowSizeOption
 
 栅格子组件竖直方向间距。
 
-**类型：** [Length](arkts-arkui-length-t.md) \| GridRowSizeOption
+**类型：** [Length](arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md)
 
 **起始版本：** 23
 

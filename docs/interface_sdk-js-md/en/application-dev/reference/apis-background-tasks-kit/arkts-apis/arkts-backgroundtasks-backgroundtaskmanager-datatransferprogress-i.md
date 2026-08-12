@@ -13,7 +13,7 @@ Information about continuousTask notification progress.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## continuousTaskId
@@ -44,7 +44,7 @@ progressInfo: ProgressInfo
 
 Notify progress data.
 
-**Type:** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
+**Type:** ProgressInfo
 
 **Since:** 26.1.0
 
@@ -64,7 +64,7 @@ wantAgent?: WantAgent
 
 Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 26.1.0
 

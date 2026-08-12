@@ -15,7 +15,7 @@ Describes the information about a shared media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey
@@ -306,7 +306,7 @@ dynamicRangeType: DynamicRangeType
 
 Dynamic range type of the media asset.
 
-**Type:** [DynamicRangeType](arkts-medialibrary-photoaccesshelper-dynamicrangetype-e.md)
+**Type:** DynamicRangeType
 
 **Since:** 13
 
@@ -426,7 +426,7 @@ mediaType: PhotoType
 
 Media type of the media asset.
 
-**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
+**Type:** PhotoType
 
 **Since:** 13
 
@@ -446,7 +446,7 @@ movingPhotoEffectMode: MovingPhotoEffectMode
 
 Effect of the moving photo.
 
-**Type:** [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md)
+**Type:** MovingPhotoEffectMode
 
 **Since:** 13
 
@@ -506,7 +506,7 @@ position: PositionType
 
 Location of the media asset.
 
-**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
+**Type:** PositionType
 
 **Since:** 13
 
@@ -546,7 +546,7 @@ subtype: PhotoSubtype
 
 Subtype of the media asset.
 
-**Type:** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md)
+**Type:** PhotoSubtype
 
 **Since:** 13
 
@@ -626,7 +626,7 @@ thumbnailVisible: ThumbnailVisibility
 
 Whether the thumbnail of the media asset is visible.
 
-**Type:** [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)
+**Type:** ThumbnailVisibility
 
 **Since:** 14
 

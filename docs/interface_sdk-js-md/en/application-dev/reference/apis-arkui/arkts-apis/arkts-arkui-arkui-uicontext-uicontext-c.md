@@ -13,7 +13,7 @@ class UIContext
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## addLocalInputEventMonitor
@@ -55,13 +55,13 @@ Usage Examples:```typescript// Monitor a single event type const monitor1 = uiCo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventMask | int | Yes | Event type mask, specifying the types of events to monitor through bitwise operations. |
-| listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | Yes | Event listener callback function. |
+| listener | InputEventListener | Yes | Event listener callback function. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
+| InputEventMonitor | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
 
 ## animateTo
 
@@ -85,7 +85,7 @@ Defining animation function
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | parameters for animation. |
+| value | AnimateParam | Yes | parameters for animation. |
 | event | () =&gt; void | Yes | the closure base on which, the system will create animation automatically |
 
 ## animateToImmediately
@@ -110,8 +110,8 @@ Define animation functions for immediate distribution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Set animation effect parameters. |
-| processor | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | Specify the closure function that displays dynamic effects, and the system will automatically insert transition animations for state changes caused by the closure function. |
+| param | AnimateParam | Yes | Set animation effect parameters. |
+| processor | VoidCallback | Yes | Specify the closure function that displays dynamic effects, and the system will automatically insert transition animations for state changes caused by the closure function. |
 
 ## bindTabsToNestedScrollable
 
@@ -135,9 +135,9 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
-| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the parent scrollable container component. |
-| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the child scrollable container component. |
+| tabsController | TabsController | Yes | The controller of the tabs. |
+| parentScroller | Scroller | Yes | The controller of the parent scrollable container component. |
+| childScroller | Scroller | Yes | The controller of the child scrollable container component. |
 
 ## bindTabsToScrollable
 
@@ -161,8 +161,8 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the scrollable container component. |
+| tabsController | TabsController | Yes | The controller of the tabs. |
+| scroller | Scroller | Yes | The controller of the scrollable container component. |
 
 ## closeBindSheet
 
@@ -198,9 +198,9 @@ Close the BindSheet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
+| [120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## constructor
 
@@ -242,7 +242,7 @@ Create an animator object for custom animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | Yes | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
 
 **Return value:**
 
@@ -254,7 +254,7 @@ Create an animator object for custom animation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
@@ -291,8 +291,8 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. @static |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. @static |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -335,7 +335,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | node | int \| string | Yes | The uniqueId or inspector key of the target FrameNode. |
-| event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | Yes | The keyboard event. |
+| event | KeyEvent | Yes | The keyboard event. |
 
 **Return value:**
 
@@ -366,7 +366,7 @@ Whether to enable or disable event passthrough.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean \| undefined | Yes | enable or disable event passthrough. The default value is false. |
-| eventType | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | Yes | the type of raw input event. |
+| eventType | RawInputEventType | Yes | the type of raw input event. |
 
 ## enableSwipeBack
 
@@ -468,7 +468,7 @@ Get AtomicServiceBar.
 
 | Type | Description |
 | --- | --- |
-| [Nullable](arkts-arkui-nullable-t.md)&lt;AtomicServiceBar&gt; | The atomic service bar. |
+| Nullable&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -498,7 +498,7 @@ Get the FrameNode attached to current window by id.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The instance of FrameNode. |
+| FrameNode | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -678,7 +678,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
 
 ## getFilteredInspectorTreeById
 
@@ -702,7 +702,7 @@ Obtains the attributes of the specified component and its child components. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | [ID](arkts-arkui-common-commonmethod-i.md#id) of the target component. |
+| id | string | Yes | [ID](CommonMethod#id) of the target component. |
 | depth | int | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
 | filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
 
@@ -716,8 +716,8 @@ Obtains the attributes of the specified component and its child components. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
-| [100024](../errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The parameter depth must be greater than 0. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Unable to obtain current ui context. |
+| [100024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100024-no-common-ancestor-node-between-nodes) | The parameter depth must be greater than 0. |
 
 ## getFocusController
 
@@ -795,7 +795,7 @@ Get FrameNode by id.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The instance of FrameNode. |
+| FrameNode | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -825,7 +825,7 @@ Get FrameNode by uniqueId.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| FrameNode | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -849,7 +849,7 @@ Obtains context of the ability.
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |  |
+| [Context](arkts-arkui-context-t.md) |  |
 
 ## getId
 
@@ -1041,7 +1041,7 @@ get object mediaQuery.
 
 | Type | Description |
 | --- | --- |
-| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) | object MediaQuery. |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) | object MediaQuery. |
 
 ## getNavigationInfoByUniqueId
 
@@ -1173,13 +1173,13 @@ Retrieve the root node of the corresponding page of the UIContext.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | The root node of the corresponding page of the UIContext, or null if no root node exists. |
+| FrameNode | The root node of the corresponding page of the UIContext, or null if no root node exists. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120007](../errorcode-uicontext.md#120007-instance-not-exist) | The UIContext is not available. |
+| [120007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#120007-instance-not-exist) | The UIContext is not available. |
 
 ## getPixelRoundMode
 
@@ -1203,7 +1203,7 @@ Get the pixel round mode of the system.
 
 | Type | Description |
 | --- | --- |
-| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | the mode of pixel round. |
+| PixelRoundMode | the mode of pixel round. |
 
 ## getPromptAction
 
@@ -1275,7 +1275,7 @@ Get current LocalStorage shared from stage.
 
 | Type | Description |
 | --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) |  |
+| LocalStorage |  |
 
 ## getSmartGestureController
 
@@ -1395,7 +1395,7 @@ Get the height breakpoint of current window.
 
 | Type | Description |
 | --- | --- |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | The height breakpoint of current window. |
+| HeightBreakpoint | The height breakpoint of current window. |
 
 ## getWindowId
 
@@ -1467,7 +1467,7 @@ Get the width breakpoint of current window.
 
 | Type | Description |
 | --- | --- |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | The width breakpoint of current window. |
+| WidthBreakpoint | The width breakpoint of current window. |
 
 ## isAvailable
 
@@ -1563,8 +1563,8 @@ Defining keyframe animation function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [KeyframeAnimateParam](../arkts-components/arkts-arkui-keyframeanimateparam-i.md) | Yes | overall animation parameters |
-| keyframes | Array&lt;[KeyframeState](../arkts-components/arkts-arkui-keyframestate-i.md)&gt; | Yes | all keyframe states |
+| param | KeyframeAnimateParam | Yes | overall animation parameters |
+| keyframes | Array&lt;KeyframeState&gt; | Yes | all keyframe states |
 
 ## lpx2px
 
@@ -1620,7 +1620,7 @@ Open the BindSheet.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No | The options of sheet. |
+| sheetOptions | SheetOptions | No | The options of sheet. |
 | targetId | int | No | The uniqueId of the FrameNode to which BindSheet is attached. &lt;br&gt;Value range:(0, +∞) |
 
 **Return value:**
@@ -1633,12 +1633,12 @@ Open the BindSheet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
-| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
-| [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
-| [120006](../errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
+| [120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
+| [120005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
+| [120004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
+| [120006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) | The node of targetId is not a child of the page node or NavDestination node. |
 
 ## postDelayedFrameCallback
 
@@ -1806,7 +1806,7 @@ Removes a local input event monitor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Yes | Monitor identifier object (returned by addLocalInputEventMonitor). |
+| monitor | InputEventMonitor | Yes | Monitor identifier object (returned by addLocalInputEventMonitor). |
 
 ## requireDynamicSyncScene
 
@@ -1836,7 +1836,7 @@ Require DynamicSyncScene by id.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;DynamicSyncScene&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -2036,7 +2036,7 @@ Set the pixel round mode of the system. The default mode is PixelRoundMode.PIXEL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | Yes | The mode of pixel round. |
+| mode | PixelRoundMode | Yes | The mode of pixel round. |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -2068,9 +2068,9 @@ If the upper limit of the cache is set too high, there is a risk of excessive me
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100101](../errorcode-uicontext.md#100101-invalid-negative-parameter-value) | The parameter is less than 0. |
-| [100103](../errorcode-uicontext.md#100103-invalid-thread-context) | The function cannot be called from a non main thread. @static |
-| [100102](../errorcode-uicontext.md#100102-incorrect-parameter-type) | The parameter value cannot be a floating point number. |
+| [100101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100101-invalid-negative-parameter-value) | The parameter is less than 0. |
+| [100103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100103-invalid-thread-context) | The function cannot be called from a non main thread. @static |
+| [100102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100102-incorrect-parameter-type) | The parameter value cannot be a floating point number. |
 
 ## setTextSelectionClearPolicy
 
@@ -2118,7 +2118,7 @@ Thread-safe UI state variables updates interface.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | The callback function to be executed in the UI thread. |
+| callback | VoidCallback | Yes | The callback function to be executed in the UI thread. |
 
 ## showActionSheet
 
@@ -2142,7 +2142,7 @@ actionSheet display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | Yes | Options. |
+| value | ActionSheetOptions | Yes | Options. |
 
 ## showAlertDialog
 
@@ -2167,7 +2167,7 @@ alertDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Options. |
+| options | AlertDialogParamWithConfirm \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Options. |
 
 ## showDatePickerDialog
 
@@ -2191,7 +2191,7 @@ datePickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DatePickerDialogOptions](../arkts-components/arkts-arkui-datepickerdialogoptions-i.md) | Yes | Options. |
+| options | DatePickerDialogOptions | Yes | Options. |
 
 ## showTextPickerDialog
 
@@ -2215,7 +2215,7 @@ textPickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| TextPickerDialogOptionsExt | Yes | Dialog style. |
+| style | TextPickerDialogOptions \| TextPickerDialogOptionsExt | Yes | Dialog style. |
 
 ## showTimePickerDialog
 
@@ -2239,7 +2239,7 @@ timePickerDialog display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TimePickerDialogOptions](../arkts-components/arkts-arkui-timepickerdialogoptions-i.md) | Yes | Options. |
+| options | TimePickerDialogOptions | Yes | Options. |
 
 ## unbindTabsFromNestedScrollable
 
@@ -2264,9 +2264,9 @@ Unbind tabs from nested scrollable container components.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
-| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the parent scrollable container component. |
-| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the child scrollable container component. |
+| tabsController | TabsController | Yes | The controller of the tabs. |
+| parentScroller | Scroller | Yes | The controller of the parent scrollable container component. |
+| childScroller | Scroller | Yes | The controller of the child scrollable container component. |
 
 ## unbindTabsFromScrollable
 
@@ -2290,8 +2290,8 @@ Unbind tabs from scrollable container component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | Yes | The controller of the tabs. |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | Yes | The controller of the scrollable container component. |
+| tabsController | TabsController | Yes | The controller of the tabs. |
+| scroller | Scroller | Yes | The controller of the scrollable container component. |
 
 ## updateBindSheet
 
@@ -2317,7 +2317,7 @@ Update the BindSheet with sheetOptions.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes | The update options of sheet. |
+| sheetOptions | SheetOptions | Yes | The update options of sheet. |
 | partialUpdate | boolean | No | If true, only the specified properties in the sheetOptions are updated, otherwise the rest of the properties are overwritten with the default values. Default value is false. |
 
 **Return value:**
@@ -2330,9 +2330,9 @@ Update the BindSheet with sheetOptions.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
+| [120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## vp2px
 

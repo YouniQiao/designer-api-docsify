@@ -20,7 +20,7 @@ Called when the route jumps.
 
 **Deprecated since:** 13
 
-**Substitutes:** <!--SUBSTITUTE_API-->NavPathInfo<!--/SUBSTITUTE_API-->
+**Substitutes:** [NavPathInfo](NavPathInfo)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +48,7 @@ Called when using the navigator.
 
 **Deprecated since:** 13
 
-**Substitutes:** <!--SUBSTITUTE_API-->NavigationAttribute<!--/SUBSTITUTE_API-->
+**Substitutes:** [NavigationAttribute](NavigationAttribute)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

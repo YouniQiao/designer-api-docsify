@@ -20,7 +20,7 @@ Lattice object. which is used to divide an image by lattice.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createImageLattice
@@ -42,13 +42,13 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | Yes |
-| yDivs | Array&lt;number&gt; | Yes |
+| xDivs | Array & lt;number & gt; | Yes |
+| yDivs | Array & lt;number & gt; | Yes |
 | fXCount | number | Yes |
 | fYCount | number | Yes |
 | fBounds | common2D.Rect \| null | No |
-| fRectTypes | Array&lt;RectType&gt; \| null | No |
-| fColors | Array&lt;common2D.Color&gt; \| null | No |
+| fRectTypes | Array & lt;RectType & gt; \ | null | No |
+| fColors | Array & lt;common2D.Color & gt; \ | null | No |
 
 **Return value:**
 
@@ -60,7 +60,7 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createImageLattice
 
@@ -81,13 +81,13 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | Yes |
-| yDivs | Array&lt;number&gt; | Yes |
+| xDivs | Array & lt;number & gt; | Yes |
+| yDivs | Array & lt;number & gt; | Yes |
 | fXCount | number | Yes |
 | fYCount | number | Yes |
 | fBounds | common2D.Rect \| null | No |
-| fRectTypes | Array&lt;RectType&gt; \| null | No |
-| fColors | Array&lt;number&gt; \| null | No |
+| fRectTypes | Array & lt;RectType & gt; \ | null | No |
+| fColors | Array & lt;number & gt; \ | null | No |
 
 **Return value:**
 
@@ -99,4 +99,4 @@ Divides the image into lattices. The lattices on both even columns and even rows
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

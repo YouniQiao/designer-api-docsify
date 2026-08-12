@@ -1,8 +1,8 @@
 # USBDeviceInfo（系统接口）
 
-USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)。
+USB设备详细信息，继承自[DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo)。
 
-**继承/实现关系：** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md)
+**继承/实现关系：** USBDeviceInfo extends [DeviceInfo](arkts-driverdevelopment-devicemanager-deviceinfo-i-sys.md#DeviceInfo)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ interfaceDescList: Array<Readonly<USBInterfaceDesc>>
 
 USB设备接口描述符列表。
 
-**类型：** Array&lt;Readonly&lt;USBInterfaceDesc&gt;&gt;
+**类型：** Array&lt;Readonly&lt;[USBInterfaceDesc](arkts-driverdevelopment-devicemanager-usbinterfacedesc-i-sys.md)&gt;&gt;
 
 **起始版本：** 12
 

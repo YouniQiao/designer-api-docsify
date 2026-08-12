@@ -60,7 +60,7 @@ get canvas(): DrawingCanvas | undefined
 
 Get canvas of the DrawingRenderingContext.
 
-**Type:** [DrawingCanvas](../arkts-components/arkts-arkui-drawingcanvas-t.md)
+**Type:** DrawingCanvas
 
 **Since:** 23
 

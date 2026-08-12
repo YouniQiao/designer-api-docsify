@@ -12,7 +12,7 @@ declare function close(fd: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:close](arkts-corefile-fileio-close-f.md#close)
+**替代接口：** [close](arkts-corefile-file-fs-close-f.md#close)
 
 <!--Device-unnamed-declare function close(fd: number): Promise<void>--><!--Device-unnamed-declare function close(fd: number): Promise<void>-End-->
 
@@ -28,7 +28,7 @@ declare function close(fd: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## close
@@ -43,7 +43,7 @@ declare function close(fd: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:close](arkts-corefile-fileio-close-f.md#close)
+**替代接口：** [close](arkts-corefile-file-fs-close-f.md#close)
 
 <!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function close(fd: number, callback: AsyncCallback<void>): void-End-->
 

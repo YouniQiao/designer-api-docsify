@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## installFont
@@ -34,17 +34,17 @@ Installs a font file from a specified path into the system font library. This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [31100106](../errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) |
-| [31100104](../errorcode-font-manager.md#31100104-font-file-already-installed) |
-| [31100105](../errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [31100102](../errorcode-font-manager.md#31100102-failed-to-install-font-file) |
-| [31100103](../errorcode-font-manager.md#31100103-failed-to-copy-font-file) |
-| [31100101](../errorcode-font-manager.md#31100101-font-file-not-exist) |
+| [31100106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100106-font-file-installation-failed-due-to-other-errors) |
+| [31100104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100104-font-file-already-installed) |
+| [31100105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100105-number-of-installed-font-files-reaching-the-maximum) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31100102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100102-failed-to-install-font-file) |
+| [31100103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100103-failed-to-copy-font-file) |
+| [31100101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100101-font-file-not-exist) |

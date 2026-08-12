@@ -20,10 +20,10 @@ Get want parameters callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formInfo | Array&lt;formInfo.FormInfo&gt; | Yes |
+| [formInfo](arkts-app-form-forminfo.md) | Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Record&lt;string, Object&gt;&gt; |
+| Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; |

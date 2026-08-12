@@ -11,14 +11,14 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -60,13 +60,13 @@ function vibrate(duration: number): Promise<void>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)替代。
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -84,7 +84,7 @@ function vibrate(duration: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -111,13 +111,13 @@ function vibrate(effectId: EffectId): Promise<void>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)替代。
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -135,7 +135,7 @@ function vibrate(effectId: EffectId): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -162,14 +162,14 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 

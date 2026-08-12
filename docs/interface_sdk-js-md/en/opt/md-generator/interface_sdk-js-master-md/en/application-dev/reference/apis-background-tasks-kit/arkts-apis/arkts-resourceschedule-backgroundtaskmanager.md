@@ -13,7 +13,7 @@ The **backgroundTaskManager** module provides APIs to request background tasks. 
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

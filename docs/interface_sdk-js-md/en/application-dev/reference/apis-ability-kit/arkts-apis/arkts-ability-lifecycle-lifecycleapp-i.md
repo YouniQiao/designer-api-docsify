@@ -196,7 +196,7 @@ Called to notify the local device when a running ability on the remote device is
 onRestoreAbilityState?(inState: PacMap): void
 ```
 
-This method is called if an ability was destroyed at a certain time due to resource reclaim or was unexpectedly destroyed and the {@link #onSaveAbilityState(PacMap)} method was called to save its user data and states. Generally, this method is called after the {@link #onStart(Want)} method.
+This method is called if an ability was destroyed at a certain time due to resource reclaim or was unexpectedly destroyed and the [onSaveAbilityState](#onSaveAbilityState) method was called to save its user data and states. Generally, this method is called after the [onStart](#onStart(Want)) method.
 
 **Since:** 7
 

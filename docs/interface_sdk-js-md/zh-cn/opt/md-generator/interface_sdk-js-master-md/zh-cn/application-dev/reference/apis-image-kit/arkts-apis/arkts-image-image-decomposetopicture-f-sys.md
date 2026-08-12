@@ -22,24 +22,24 @@ function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOption
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| hdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 | options | [HdrDecomposeOptions](arkts-image-image-hdrdecomposeoptions-i-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Picture \| undefined&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600208](../errorcode-image.md#7600208-hdr图片分解失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600208](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600208-hdr图片分解失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## 示例
 

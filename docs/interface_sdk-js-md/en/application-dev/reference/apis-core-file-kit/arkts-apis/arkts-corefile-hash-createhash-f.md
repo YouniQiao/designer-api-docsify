@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hash } from 'kits/@kit.CoreFileKit';
+import { hash } from '@kit.CoreFileKit';
 ```
 
 ## createHash
@@ -39,7 +39,7 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900042 | Unknown error |
 
 ## Examples

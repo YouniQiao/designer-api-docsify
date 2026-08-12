@@ -18,7 +18,7 @@ bias?: Bias
 
 设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**类型：** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
+**类型：** Bias
 
 **默认值：** {horizontal:0.5,vertical:0.5}
 
@@ -44,7 +44,7 @@ bottom?: VerticalAlignParam
 
 设置底部对齐的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
 
-**类型：** [VerticalAlignParam](../arkts-apis/arkts-arkui-common-verticalalignparam-i.md)
+**类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -66,7 +66,7 @@ center?: VerticalAlignParam
 
 设置纵向居中对齐方式的参数。&lt;br/&gt;API version 23，之前入参类型为{ anchor: string, align: VerticalAlign }
 
-**类型：** [VerticalAlignParam](../arkts-apis/arkts-arkui-common-verticalalignparam-i.md)
+**类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -88,7 +88,7 @@ left?: HorizontalAlignParam
 
 设置左对齐参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
 
-**类型：** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
+**类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -110,7 +110,7 @@ middle?: HorizontalAlignParam
 
 设置横向居中对齐方式的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign }
 
-**类型：** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
+**类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -132,7 +132,7 @@ right?: HorizontalAlignParam
 
 设置右对齐参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: HorizontalAlign}
 
-**类型：** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
+**类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
 
@@ -154,7 +154,7 @@ top?: VerticalAlignParam
 
 设置顶部对齐的参数。&lt;br/&gt;API version 23之前，入参类型为{ anchor: string, align: VerticalAlign}
 
-**类型：** [VerticalAlignParam](../arkts-apis/arkts-arkui-common-verticalalignparam-i.md)
+**类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
 

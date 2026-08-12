@@ -14,7 +14,7 @@ function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder)
+**替代接口：** [cancelReminder](reminderAgentManager.cancelReminder)
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelReminder(reminderId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -53,7 +53,7 @@ function cancelReminder(reminderId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.cancelReminder](arkts-backgroundtasks-reminderagentmanager-cancelreminder-f.md#cancelreminder)
+**替代接口：** [cancelReminder](reminderAgentManager.cancelReminder)
 
 <!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>--><!--Device-reminderAgent-function cancelReminder(reminderId: number): Promise<void>-End-->
 

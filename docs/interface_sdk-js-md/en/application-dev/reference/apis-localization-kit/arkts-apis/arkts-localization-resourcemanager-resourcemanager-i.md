@@ -15,7 +15,7 @@ Provides the capability of accessing application resources and system resources.
 > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
 > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
 > in different HAPs or HSPs, you first need to use
-> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md/arkts-ability-application-createmodulecontext-f.md#createmodulecontext) to create the context
+> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext) to create the context
 > of the corresponding module and then call the API with **resName** or **resId** specified. For more information,
 > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 > 
@@ -35,7 +35,7 @@ Provides the capability of accessing application resources and system resources.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource
@@ -70,8 +70,8 @@ Loads the specified overlay resource during application runtime to implement the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
 ## Examples
 
@@ -123,8 +123,8 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -188,8 +188,8 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -242,8 +242,8 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -283,7 +283,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)(path:
+**Substitutes:** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -294,7 +294,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | AsyncCallback&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -324,7 +324,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)(path:
+**Substitutes:** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -392,10 +392,10 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -445,7 +445,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getBoolean](arkts-localization-resourcemanager-resourcemanager-i.md#getboolean)(resId:
+**Substitutes:** [getBoolean](resourceManager.ResourceManager.getBoolean(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -459,7 +459,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -471,10 +471,10 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -544,10 +544,10 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -618,10 +618,10 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getColor
 
@@ -663,10 +663,10 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -715,7 +715,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getColor](arkts-localization-resourcemanager-resourcemanager-i.md#getcolor)(resId:
+**Substitutes:** [getColor](resourceManager.ResourceManager.getColor(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -729,17 +729,17 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | callback | _AsyncCallback&lt;number&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -788,7 +788,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getColor](arkts-localization-resourcemanager-resourcemanager-i.md#getcolor)(resId:
+**Substitutes:** [getColor](resourceManager.ResourceManager.getColor(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -802,7 +802,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -814,10 +814,10 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -887,10 +887,10 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -965,10 +965,10 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1043,10 +1043,10 @@ Obtains a color value based on the specified resource name. This API returns the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1122,10 +1122,10 @@ Obtains a color value based on the specified resource ID. This API returns the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1175,7 +1175,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getColorSync](arkts-localization-resourcemanager-resourcemanager-i.md#getcolorsync)(resId:
+**Substitutes:** [getColorSync](resourceManager.ResourceManager.getColorSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1189,7 +1189,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -1201,10 +1201,10 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1358,7 +1358,7 @@ Obtains the device configuration. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | Device configuration. |
+| Configuration | Device configuration. |
 
 ## Examples
 
@@ -1496,7 +1496,7 @@ Obtains the device capability. This API returns the result synchronously.
 
 | Type | Description |
 | --- | --- |
-| [DeviceCapability](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-partneragent-devicecapability-i.md) | Device capability. |
+| DeviceCapability | Device capability. |
 
 ## Examples
 
@@ -1550,9 +1550,9 @@ Obtains an float number based on the specified resource ID. This API returns the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getDoubleByName
 
@@ -1588,9 +1588,9 @@ Obtains an float number based on the specified resource name. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getDoublePluralStringByNameSync
 
@@ -1636,10 +1636,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## Examples
 
@@ -1727,10 +1727,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## getDoublePluralStringValueSync
 
@@ -1776,10 +1776,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1870,10 +1870,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getDoublePluralStringValueSync
 
@@ -1894,7 +1894,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getDoublePluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getdoublepluralstringvaluesync)(resId:
+**Substitutes:** [getDoublePluralStringValueSync](resourceManager.ResourceManager.getDoublePluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1908,7 +1908,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value (a floating point number), used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`. &lt;br&gt;**NOTE：**&lt;br&gt;- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. &lt;br&gt;- In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
@@ -1922,10 +1922,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -2002,7 +2002,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | type | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
@@ -2015,9 +2015,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -2070,7 +2070,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getDrawableDescriptor](arkts-localization-resourcemanager-resourcemanager-i.md#getdrawabledescriptor)(resId:
+**Substitutes:** [getDrawableDescriptor](resourceManager.ResourceManager.getDrawableDescriptor(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2084,8 +2084,8 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | type | number | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
@@ -2098,9 +2098,9 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -2166,7 +2166,7 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | type | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
@@ -2179,9 +2179,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -2254,9 +2254,9 @@ Obtains an integer number based on the specified resource ID. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getIntByName
 
@@ -2292,9 +2292,9 @@ Obtains an integer number based on the specified resource name. This API returns
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getIntPluralStringByNameSync
 
@@ -2340,10 +2340,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## Examples
 
@@ -2434,10 +2434,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## getIntPluralStringValueSync
 
@@ -2483,10 +2483,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -2574,10 +2574,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getIntPluralStringValueSync
 
@@ -2598,7 +2598,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2612,7 +2612,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Integer number used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`. &lt;br&gt;**NOTE：**&lt;br&gt;- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. &lt;br&gt;- In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
@@ -2626,10 +2626,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -2711,7 +2711,7 @@ Obtains the language list of an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## Examples
 
@@ -2763,7 +2763,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 <!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -2774,7 +2774,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
+| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 ## Examples
 
@@ -2804,7 +2804,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 <!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
 
@@ -2850,7 +2850,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -2861,7 +2861,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
+| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 ## Examples
 
@@ -2891,7 +2891,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
 
@@ -2952,9 +2952,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3011,16 +3011,16 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3082,9 +3082,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3139,7 +3139,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3151,9 +3151,9 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3208,7 +3208,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3220,9 +3220,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3282,9 +3282,9 @@ Obtains the content of the media file corresponding to the specified resource na
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3341,16 +3341,16 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3412,9 +3412,9 @@ Obtains the content of the media file corresponding to the specified resource na
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3469,7 +3469,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3481,9 +3481,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3538,7 +3538,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3550,9 +3550,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3597,7 +3597,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3611,16 +3611,16 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3662,7 +3662,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3676,17 +3676,17 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3728,7 +3728,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3742,7 +3742,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -3754,9 +3754,9 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3796,7 +3796,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3810,8 +3810,8 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3823,9 +3823,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3886,9 +3886,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3946,16 +3946,16 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4023,9 +4023,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4080,7 +4080,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4092,9 +4092,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4134,7 +4134,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4148,16 +4148,16 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4199,7 +4199,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4213,17 +4213,17 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4265,7 +4265,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4279,7 +4279,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -4291,9 +4291,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4333,7 +4333,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4347,8 +4347,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4360,9 +4360,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4423,9 +4423,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4482,16 +4482,16 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4559,9 +4559,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4616,7 +4616,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4628,9 +4628,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4685,7 +4685,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4697,9 +4697,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4744,7 +4744,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64Sync](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64sync)(resId:
+**Substitutes:** [getMediaContentBase64Sync](resourceManager.ResourceManager.getMediaContentBase64Sync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4758,8 +4758,8 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4771,9 +4771,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4832,7 +4832,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4844,9 +4844,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4891,7 +4891,7 @@ Obtains the media file content for the default or specified screen density based
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentSync](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentsync)(resId:
+**Substitutes:** [getMediaContentSync](resourceManager.ResourceManager.getMediaContentSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4905,8 +4905,8 @@ Obtains the media file content for the default or specified screen density based
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
-| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md). |
+| resource | Resource | Yes | Resource object. |
+| density | number | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4918,9 +4918,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4984,10 +4984,10 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5063,7 +5063,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getNumber](arkts-localization-resourcemanager-resourcemanager-i.md#getnumber)(resId:
+**Substitutes:** [getNumber](resourceManager.ResourceManager.getNumber(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5077,7 +5077,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -5089,10 +5089,10 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5163,10 +5163,10 @@ Obtains an integer or float number based on the specified resource name. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5236,7 +5236,7 @@ getOverrideConfiguration(): Configuration
 
 Obtains the configuration of differentiated resources. This API returns the result synchronously.
 
-For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager) API, this API returns the same configuration information.
+For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getOverrideResourceManager) API, this API returns the same configuration information.
 
 **Since:** 12
 
@@ -5252,7 +5252,7 @@ For both the common resource management object and the differentiated resource m
 
 | Type | Description |
 | --- | --- |
-| [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | Configuration of differentiated resources. |
+| Configuration | Configuration of differentiated resources. |
 
 ## Examples
 
@@ -5301,7 +5301,7 @@ The resource configuration (including the language, color mode, resolution, and 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | No | Resource configuration. &lt;br&gt;After obtaining the configuration of differentiated resources through [getOverrideConfiguration](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. &lt;br&gt;If no configuration is specified, the current system configuration is used. |
+| configuration | Configuration | No | Resource configuration. &lt;br&gt;After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getOverrideConfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. &lt;br&gt;If no configuration is specified, the current system configuration is used. |
 
 **Return value:**
 
@@ -5313,7 +5313,7 @@ The resource configuration (including the language, color mode, resolution, and 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## Examples
 
@@ -5357,7 +5357,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getPluralStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getpluralstringvalue)(resId:
+**Substitutes:** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -5369,7 +5369,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
+| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
 ## Examples
 
@@ -5406,7 +5406,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getPluralStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getpluralstringvalue)(resId:
+**Substitutes:** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -5458,7 +5458,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringByNameSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringbynamesync)(resName:
+**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5478,10 +5478,10 @@ Obtains the plural string based on the specified resource name and the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5540,7 +5540,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringByNameSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringbynamesync)(resName:
+**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5565,10 +5565,10 @@ Obtains the plural string based on the specified resource name and the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5627,7 +5627,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringByNameSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringbynamesync)(resName:
+**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5652,10 +5652,10 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5715,7 +5715,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5729,7 +5729,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained singular/plural string. |
 
@@ -5737,10 +5737,10 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5806,7 +5806,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5820,7 +5820,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
@@ -5833,10 +5833,10 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5901,7 +5901,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5921,10 +5921,10 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5984,7 +5984,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6009,10 +6009,10 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -6071,7 +6071,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6096,10 +6096,10 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -6159,7 +6159,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6173,7 +6173,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | num | number | Yes | Quantity value, used to obtain the corresponding string representation based on the current language's [plural rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). |
 
 **Return value:**
@@ -6186,10 +6186,10 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -6246,8 +6246,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)
+> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
+> [closeRawFd](#closeRawFd)
 > to close the fd after use.
 
 **Since:** 9
@@ -6271,8 +6271,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6313,8 +6313,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)
+> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
+> [closeRawFd](#closeRawFd)
 > to close the fd after use.
 
 **Since:** 9
@@ -6343,8 +6343,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6383,8 +6383,8 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)
+> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
+> [closeRawFd](#closeRawFd)
 > to close the fd after use.
 
 **Since:** 10
@@ -6407,14 +6407,14 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | Type | Description |
 | --- | --- |
-| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) | fd of the HAP where the rawfile is located. |
+| RawFileDescriptor | fd of the HAP where the rawfile is located. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6450,7 +6450,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFileContent](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfilecontent)(path:
+**Substitutes:** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
 
 <!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -6461,7 +6461,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
+| callback | AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the rawfile content. |
 
 ## Examples
 
@@ -6493,7 +6493,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFileContent](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfilecontent)(path:
+**Substitutes:** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -6554,8 +6554,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6617,8 +6617,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6678,8 +6678,8 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6715,7 +6715,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)(path:
+**Substitutes:** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -6726,7 +6726,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | rawfile path relative to the **resources/rawfile** directory, such as **test.txt** or **subdir/test.txt**. The path must not start with a slash (/). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
+| callback | AsyncCallback&lt;RawFileDescriptor&gt; | Yes | Callback used to return the obtained fd. |
 
 ## Examples
 
@@ -6760,7 +6760,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)(path:
+**Substitutes:** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -6828,8 +6828,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6892,8 +6892,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6956,8 +6956,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -7024,7 +7024,7 @@ Obtains the resource name corresponding to the specified resource ID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 
 ## getString
 
@@ -7040,7 +7040,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 <!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -7051,7 +7051,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the obtained string. |
+| callback | AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 ## Examples
 
@@ -7081,7 +7081,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 <!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
 
@@ -7127,7 +7127,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 <!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -7138,7 +7138,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resId | number | Yes | Resource ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
+| callback | AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 ## Examples
 
@@ -7168,7 +7168,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 <!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
 
@@ -7229,10 +7229,10 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7306,10 +7306,10 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7382,10 +7382,10 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7439,7 +7439,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7453,17 +7453,17 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7516,7 +7516,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7530,7 +7530,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -7542,10 +7542,10 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7619,10 +7619,10 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7702,10 +7702,10 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7784,10 +7784,10 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7841,7 +7841,7 @@ Obtains a string array based on the specified resource object. This API returns 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvaluesync)(resId:
+**Substitutes:** [getStringArrayValueSync](resourceManager.ResourceManager.getStringArrayValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7855,7 +7855,7 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -7867,10 +7867,10 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7939,10 +7939,10 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8011,10 +8011,10 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8081,10 +8081,10 @@ Obtains the string corresponding to the specified resource name. This API return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8155,11 +8155,11 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## Examples
 
@@ -8230,10 +8230,10 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## getStringSync
 
@@ -8269,10 +8269,10 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8343,11 +8343,11 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8418,10 +8418,10 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getStringSync
 
@@ -8437,7 +8437,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringSync](arkts-localization-resourcemanager-resourcemanager-i.md#getstringsync)(resId:
+**Substitutes:** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8451,7 +8451,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -8463,10 +8463,10 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8516,7 +8516,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringSync](arkts-localization-resourcemanager-resourcemanager-i.md#getstringsync)(resId:
+**Substitutes:** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8530,7 +8530,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | args | Array&lt;string \| number&gt; | Yes | Parameters for the formatted string resource. Supported parameter types include `%d`, `%f`, `%s`, `%%`, `%number\\$d`, `%number\\$f`, and `%number\\$s`. &lt;br&gt;**NOTE：**&lt;br&gt;- `%%` is escaped as `%`. For example, `%%d` is formatted as `%d`. &lt;br&gt;- In `%number\\$d`, `number` indicates the parameter index, starting from `1`. For example, `%1\\$d` uses `args[0]` for formatting, `%2\\$d` uses `args[1]`, and so on. |
 
 **Return value:**
@@ -8543,11 +8543,11 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8597,7 +8597,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8611,17 +8611,17 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8670,7 +8670,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8684,7 +8684,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -8696,10 +8696,10 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8757,10 +8757,10 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getStringValue
 
@@ -8802,10 +8802,10 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8878,10 +8878,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8919,7 +8919,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getSymbol](arkts-localization-resourcemanager-resourcemanager-i.md#getsymbol)(resId:
+**Substitutes:** [getSymbol](resourceManager.ResourceManager.getSymbol(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8933,7 +8933,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resource | [Resource](arkts-localization-resource-resource-i.md) | Yes | Resource object. |
+| resource | Resource | Yes | Resource object. |
 
 **Return value:**
 
@@ -8945,10 +8945,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -9012,10 +9012,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -9073,8 +9073,8 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -9167,8 +9167,8 @@ Removes the specified overlay resource during application runtime and restores t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
 ## Examples
 
@@ -9200,7 +9200,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 Updates the configuration of a differentiated resource management object.
 
 This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via   
-[getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager).
+[getOverrideResourceManager](#getOverrideResourceManager).
 
 **Since:** 12
 
@@ -9216,13 +9216,13 @@ This API updates the configuration of the differentiated resource management obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| configuration | [Configuration](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideconfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
+| configuration | Configuration | Yes | Configuration of differentiated resources. After obtaining the configuration of differentiated resources through [getOverrideConfiguration](#getOverrideConfiguration), modify the configuration items as required, and then pass these items as input parameters to the API. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## Examples
 

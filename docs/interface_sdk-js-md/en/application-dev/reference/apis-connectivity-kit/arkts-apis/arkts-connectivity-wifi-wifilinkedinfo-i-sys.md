@@ -8,7 +8,7 @@ Wi-Fi connection information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo
+**Substitutes:** [WifiLinkedInfo](ohos.wifiManager/wifiManager.WifiLinkedInfo)
 
 <!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 
@@ -17,7 +17,7 @@ Wi-Fi connection information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## chload
@@ -36,7 +36,7 @@ The load value of this Wi-Fi connection. A greater value indicates a higher load
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.chload
+**Substitutes:** [chload](ohos.wifiManager/wifiManager.WifiLinkedInfo.chload)
 
 <!--Device-WifiLinkedInfo-chload: number--><!--Device-WifiLinkedInfo-chload: number-End-->
 
@@ -60,7 +60,7 @@ The ID(uniquely identifies) of a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.networkId
+**Substitutes:** [networkId](ohos.wifiManager/wifiManager.WifiLinkedInfo.networkId)
 
 <!--Device-WifiLinkedInfo-networkId: number--><!--Device-WifiLinkedInfo-networkId: number-End-->
 
@@ -84,7 +84,7 @@ The signal-to-noise ratio (SNR) of this Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.snr
+**Substitutes:** [snr](ohos.wifiManager/wifiManager.WifiLinkedInfo.snr)
 
 <!--Device-WifiLinkedInfo-snr: number--><!--Device-WifiLinkedInfo-snr: number-End-->
 
@@ -100,7 +100,7 @@ suppState: SuppState
 
 The state of the supplicant of this Wi-Fi connection.
 
-**Type:** [SuppState](arkts-connectivity-wifi-suppstate-e-sys.md)
+**Type:** SuppState
 
 **Since:** 6
 
@@ -108,7 +108,7 @@ The state of the supplicant of this Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.suppState
+**Substitutes:** [suppState](ohos.wifiManager/wifiManager.WifiLinkedInfo.suppState)
 
 <!--Device-WifiLinkedInfo-suppState: SuppState--><!--Device-WifiLinkedInfo-suppState: SuppState-End-->
 

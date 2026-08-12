@@ -16,7 +16,7 @@
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 7
 
@@ -45,7 +45,7 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 ```
 
 Sets the parameters for the rotation gesture. Compared with  
-[RotationGesture](arkts-arkui-rotationgestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+[RotationGesture](RotationGestureInterface(value?: { fingers?: number; angle?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
@@ -89,7 +89,7 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -104,7 +104,7 @@ onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
 Triggered when a tap cancellation event is received after the rotation gesture is recognized. Compared with   
-[onActionCancel](arkts-arkui-rotationgestureinterface-i.md#onactioncancel), this callback returns gesture event information.
+[onActionCancel](RotationGestureInterface.onActionCancel(event: () => void)), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -120,7 +120,7 @@ Triggered when a tap cancellation event is received after the rotation gesture i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -148,7 +148,7 @@ Triggered when the last finger used for the rotation gesture is lifted.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -176,7 +176,7 @@ Triggered when the rotation gesture is recognized successfully.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -204,7 +204,7 @@ Triggered during the movement of the rotation gesture.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 

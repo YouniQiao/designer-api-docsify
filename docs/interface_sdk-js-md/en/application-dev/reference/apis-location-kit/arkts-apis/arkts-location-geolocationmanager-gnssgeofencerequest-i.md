@@ -13,7 +13,7 @@ Configuring parameters in GNSS geofence requests.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## fenceExtensionAbilityName
@@ -42,7 +42,7 @@ geofence: Geofence
 
 Circular fence information.
 
-**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
+**Type:** Geofence
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ geofenceTransitionCallback: AsyncCallback<GeofenceTransition>
 
 Indicates the callback for reporting the geofence transition status.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeofenceTransition&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ monitorTransitionEvents: Array<GeofenceTransitionEvent>
 
 Indicates geofence transition status monitored.
 
-**Type:** Array&lt;GeofenceTransitionEvent&gt;
+**Type:** Array&lt;[GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)&gt;
 
 **Since:** 12
 

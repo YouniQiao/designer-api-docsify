@@ -33,7 +33,7 @@ Image path for the unselected star. You can use the default system image or a cu
 Resource configuration is supported since API version 20. For details, see   
 [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Image path for the selected star. You can use the default system image or a cust
 Resource configuration is supported since API version 20. For details, see   
 [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 
@@ -83,7 +83,7 @@ Image path for the partially selected star. You can use the default system image
 Resource configuration is supported since API version 20. For details, see   
 [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## createPanel
@@ -12,10 +12,10 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 ```
 
-Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) to destroy the panel and release resources. This API uses a promise to return the result.
+Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroyPanel) to destroy the panel and release resources. This API uses a promise to return the result.
 
-Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) and one   
-[MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) can be created for one word selection application.
+Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md#PanelType) and one   
+[MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md#PanelType) can be created for one word selection application.
 
 **Since:** 24
 
@@ -44,8 +44,8 @@ Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltyp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
-| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
 
 ## Examples
 

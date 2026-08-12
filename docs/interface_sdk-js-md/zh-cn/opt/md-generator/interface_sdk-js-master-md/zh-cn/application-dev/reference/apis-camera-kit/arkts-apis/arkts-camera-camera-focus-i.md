@@ -1,10 +1,10 @@
 # Focus
 
-Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。
+Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)。
 
 对焦类，对设备对焦操作。
 
-**继承/实现关系：** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
+**继承/实现关系：** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
 
 **起始版本：** 11
 
@@ -38,7 +38,7 @@ getFocalLength(): number
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getFocusMode
 
@@ -66,7 +66,7 @@ getFocusMode(): FocusMode
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getFocusPoint
 
@@ -94,7 +94,7 @@ getFocusPoint(): Point
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## lockFocusTracking
 
@@ -124,8 +124,8 @@ lockFocusTracking(focusPoint: Point): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## setFocusMode
 
@@ -135,7 +135,7 @@ setFocusMode(afMode: FocusMode): void
 
 设置对焦模式。
 
-进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)。
+进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported)。
 
 **起始版本：** 11
 
@@ -155,7 +155,7 @@ setFocusMode(afMode: FocusMode): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## setFocusPoint
 
@@ -185,7 +185,7 @@ setFocusPoint(point: Point): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## unlockFocusTracking
 
@@ -209,5 +209,5 @@ unlockFocusTracking(): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |

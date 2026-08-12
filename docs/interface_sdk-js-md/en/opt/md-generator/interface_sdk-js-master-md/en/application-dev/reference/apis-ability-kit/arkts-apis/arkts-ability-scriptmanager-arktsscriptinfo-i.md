@@ -11,7 +11,7 @@ arkTS script info.
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from 'kits/@kit.AbilityKit';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## context

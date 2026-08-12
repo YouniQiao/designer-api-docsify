@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithDirectory
@@ -32,10 +32,10 @@ Create a MediaSource object from the given directory.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;MediaSource \| undefined&gt; |
+| Promise&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5411007](../errorcode-media.md#5411007-no-resource-available) |
+| [5411007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411007-no-resource-available) |

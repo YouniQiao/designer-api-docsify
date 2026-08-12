@@ -62,7 +62,7 @@ Register data change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](../arkts-components/arkts-arkui-datachangelistener-i.md) | Yes |  |
+| listener | [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md) | Yes |  |
 
 ## totalCount
 
@@ -110,5 +110,5 @@ Unregister data change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](../arkts-components/arkts-arkui-datachangelistener-i.md) | Yes |  |
+| listener | [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md) | Yes |  |
 

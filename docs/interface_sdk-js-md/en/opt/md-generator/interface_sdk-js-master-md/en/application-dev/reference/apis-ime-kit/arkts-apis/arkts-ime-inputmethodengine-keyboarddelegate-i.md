@@ -1,7 +1,7 @@
 # KeyboardDelegate
 
 In the following API examples, you must first use   
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -12,7 +12,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('keyDown' | 'keyUp')
@@ -34,7 +34,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes |
-| callback | (event: KeyEvent) =&gt; boolean | No |
+| callback | (event: KeyEvent) = & gt; boolean | No |
 
 ## Examples
 
@@ -68,7 +68,7 @@ Disables listening for a physical keyboard event. This API uses an asynchronous 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes |
-| callback | (event: KeyEvent) =&gt; boolean | No |
+| callback | (event: KeyEvent) = & gt; boolean | No |
 
 ## Examples
 
@@ -102,7 +102,7 @@ Disables listening for a keyboard event. This API uses an asynchronous callback 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyEvent' | Yes |
-| callback | (event: InputKeyEvent) =&gt; boolean | No |
+| callback | (event: InputKeyEvent) = & gt; boolean | No |
 
 ## Examples
 
@@ -135,7 +135,7 @@ Disables listening for cursor context changes. This API uses an asynchronous cal
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'cursorContextChange' | Yes |
-| callback | (x: number, y: number, height: number) =&gt; void | No |
+| callback | (x: number, y: number, height: number) = & gt; void | No |
 
 ## Examples
 
@@ -167,7 +167,7 @@ Disables listening for the text selection change event. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'selectionChange' | Yes |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | No |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | No |
 
 ## Examples
 
@@ -197,7 +197,7 @@ Disables listening for the text change event. This API uses an asynchronous call
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'textChange' | Yes |
-| callback | (text: string) =&gt; void | No |
+| callback | (text: string) = & gt; void | No |
 
 ## Examples
 
@@ -226,7 +226,7 @@ Disables listening for the edit box attribute change event. This API uses an asy
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'editorAttributeChanged' | Yes |
-| callback | (attr: EditorAttribute) =&gt; void | No |
+| callback | (attr: EditorAttribute) = & gt; void | No |
 
 ## Examples
 
@@ -253,7 +253,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes |
-| callback | (event: KeyEvent) =&gt; boolean | Yes |
+| callback | (event: KeyEvent) = & gt; boolean | Yes |
 
 ## Examples
 
@@ -289,7 +289,7 @@ Enables listening for a physical keyboard event. This API uses an asynchronous c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyDown' \| 'keyUp' | Yes |
-| callback | (event: KeyEvent) =&gt; boolean | Yes |
+| callback | (event: KeyEvent) = & gt; boolean | Yes |
 
 ## Examples
 
@@ -325,7 +325,7 @@ Enables listening for a keyboard event. This API uses an asynchronous callback t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keyEvent' | Yes |
-| callback | (event: InputKeyEvent) =&gt; boolean | Yes |
+| callback | (event: InputKeyEvent) = & gt; boolean | Yes |
 
 ## Examples
 
@@ -360,7 +360,7 @@ Enables listening for the cursor change event. This API uses an asynchronous cal
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'cursorContextChange' | Yes |
-| callback | (x: number, y: number, height: number) =&gt; void | Yes |
+| callback | (x: number, y: number, height: number) = & gt; void | Yes |
 
 ## Examples
 
@@ -394,7 +394,7 @@ Enables listening for the text selection change event. This API uses an asynchro
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'selectionChange' | Yes |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | Yes |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) = & gt; void | Yes |
 
 ## Examples
 
@@ -427,7 +427,7 @@ Enables listening for the text change event. This API uses an asynchronous callb
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'textChange' | Yes |
-| callback | (text: string) =&gt; void | Yes |
+| callback | (text: string) = & gt; void | Yes |
 
 ## Examples
 
@@ -456,7 +456,7 @@ Enables listening for the edit box attribute change event. This API uses an asyn
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'editorAttributeChanged' | Yes |
-| callback | (attr: EditorAttribute) =&gt; void | Yes |
+| callback | (attr: EditorAttribute) = & gt; void | Yes |
 
 ## Examples
 

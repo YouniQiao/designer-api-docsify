@@ -2,7 +2,7 @@
 
 类ScrollActionProposal。默认滚动方向为向前。
 
-**继承/实现关系：** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**继承/实现关系：** ScrollActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **起始版本：** 26.0.0
 
@@ -34,7 +34,7 @@ ScrollActionProposal构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 是 | 响应滚动动作的节点。 |
+| node | FrameNode | 是 | 响应滚动动作的节点。 |
 | distance | double | 是 | 滚动或滑动的距离。 |
 
 ## distance

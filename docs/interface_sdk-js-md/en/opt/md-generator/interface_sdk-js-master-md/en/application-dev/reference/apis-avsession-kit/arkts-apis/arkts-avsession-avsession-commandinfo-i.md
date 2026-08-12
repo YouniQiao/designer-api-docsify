@@ -11,7 +11,7 @@ The definition of command information to be sent to the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## callerBundleName

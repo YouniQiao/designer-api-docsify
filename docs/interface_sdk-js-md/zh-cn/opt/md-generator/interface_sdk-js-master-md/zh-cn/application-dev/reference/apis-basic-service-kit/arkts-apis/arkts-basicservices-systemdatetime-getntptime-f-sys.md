@@ -26,8 +26,8 @@ function getNtpTime(): number
 
 | 错误码ID |
 | --- |
-| [13000002](../../apis-basic-services-kit/errorcode-time.md#13000002-未更新ntp时间) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [13000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000002-未更新ntp时间) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

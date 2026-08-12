@@ -6,7 +6,7 @@ Provides interfaces for initiating location requests, ending the location servic
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager
+**Substitutes:** [geoLocationManager](arkts-geolocationmanager.md#geoLocationManager)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@ Provides interfaces for initiating location requests, ending the location servic
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## Summary

@@ -98,7 +98,7 @@ Get the rotation options result of the Surface created by XComponent.
 
 | Type | Description |
 | --- | --- |
-| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;SurfaceRotationOptions&gt; | The surface rotation options result. |
+| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;[SurfaceRotationOptions](arkts-arkui-xcomponent-surfacerotationoptions-i.md)&gt; | The surface rotation options result. |
 
 ## lockCanvas
 
@@ -122,7 +122,7 @@ Get a Canvas for drawing into the surface created by XComponent.
 
 | Type | Description |
 | --- | --- |
-| [DrawingCanvas](../arkts-components/arkts-arkui-drawingcanvas-t.md) | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
+| DrawingCanvas | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
 
 ## onSurfaceChanged
 
@@ -291,7 +291,7 @@ Start image analyzer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
+| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
 
 **Return value:**
 
@@ -303,9 +303,9 @@ Start image analyzer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 
@@ -347,5 +347,5 @@ Posts the new contents of the Canvas to the surface created by XComponent and re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | [DrawingCanvas](../arkts-components/arkts-arkui-drawingcanvas-t.md) | Yes | The canvas previously obtained from lockCanvas. |
+| canvas | DrawingCanvas | Yes | The canvas previously obtained from lockCanvas. |
 

@@ -12,7 +12,7 @@ Triggers a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#trigger
+**Substitutes:** [trigger](ohos.app.ability.wantAgent/wantAgent#trigger)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -24,7 +24,7 @@ Triggers a WantAgent.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes |
 | triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | No |
 

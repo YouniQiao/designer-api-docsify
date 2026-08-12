@@ -26,18 +26,18 @@ function unregisterTypeDescriptors(typeIds: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| typeIds | Array&lt;string&gt; | 是 |
+| typeIds | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [20400004](../errorcode-udmf.md#20400004-标准化数据类型id列表错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [20400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-udmf.md#20400004-标准化数据类型id列表错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

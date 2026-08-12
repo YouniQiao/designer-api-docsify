@@ -290,13 +290,13 @@ constructor(uri: string)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| uri | string | 是 |
+| [uri](arkts-uri.md) | string | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-参数解析错误) |
 
 ## 示例
 
@@ -330,8 +330,8 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [scheme](#scheme) | string | 是 |
-| [ssp](#ssp) | string | 是 |
-| [fragment](#fragment) | string | 是 |
+| [ssp](arkts-arkts-uri-uri-c.md) | string | 是 |
+| [fragment](arkts-arkts-uri-uri-c.md) | string | 是 |
 
 **返回值：**
 
@@ -358,7 +358,7 @@ equals(other: URI): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.uri.URI.equalsTo
+**替代接口：** [equalsTo](#equalsTo)
 
 <!--Device-URI-equals(other: URI): boolean--><!--Device-URI-equals(other: URI): boolean-End-->
 

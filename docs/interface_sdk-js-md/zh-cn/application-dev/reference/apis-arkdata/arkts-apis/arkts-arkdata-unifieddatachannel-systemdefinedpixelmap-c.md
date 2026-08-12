@@ -1,9 +1,9 @@
 # SystemDefinedPixelMap
 
-与系统侧定义的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)数据类型对应的图片数据类型，是  
-[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)的子类，仅保存PixelMap的二进制数据。
+与系统侧定义的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)数据类型对应的图片数据类型，是  
+[SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#SystemDefinedRecord)的子类，仅保存PixelMap的二进制数据。
 
-**继承/实现关系：** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md)
+**继承/实现关系：** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#SystemDefinedRecord)
 
 **起始版本：** 10
 

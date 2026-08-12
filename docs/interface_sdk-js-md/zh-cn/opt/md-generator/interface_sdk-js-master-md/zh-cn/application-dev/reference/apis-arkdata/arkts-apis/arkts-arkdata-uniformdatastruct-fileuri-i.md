@@ -69,7 +69,7 @@ readonly uniformDataType: 'general.file-uri'
 ```
 
 统一数据类型标识为文件地址类型数据，固定为“general.file-uri”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
 
 **类型：** 'general.file-uri'
 
@@ -88,7 +88,7 @@ uriAuthorizationPolicies?: Array<number>
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权）。只针对单个record使用，优先级最高，具体策略见  
-[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md#UriPermission)。
 
 **类型：** Array&lt;number&gt;
 

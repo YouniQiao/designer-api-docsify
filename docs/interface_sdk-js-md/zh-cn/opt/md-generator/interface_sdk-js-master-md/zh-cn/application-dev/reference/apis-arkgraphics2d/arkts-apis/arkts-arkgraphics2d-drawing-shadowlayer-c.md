@@ -34,7 +34,7 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blurRadius | number | 是 |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
 | x | number | 是 |
 | y | number | 是 |
 | color | common2D.Color | 是 |
@@ -49,7 +49,7 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color): 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## create
 
@@ -69,7 +69,7 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blurRadius | number | 是 |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
 | x | number | 是 |
 | y | number | 是 |
 | color | common2D.Color \| number | 是 |
@@ -84,4 +84,4 @@ static create(blurRadius: number, x: number, y: number, color: common2D.Color | 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

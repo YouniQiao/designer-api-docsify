@@ -18,7 +18,7 @@ flag?: PanelFlag
 
 面板的状态类型。
 
-**类型：** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
+**类型：** PanelFlag
 
 **默认值：** FLG_FIXED
 
@@ -38,7 +38,7 @@ type: PanelType
 
 面板的类型。
 
-**类型：** [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
+**类型：** PanelType
 
 **起始版本：** 10
 

@@ -38,7 +38,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines the border radius of selected items.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ endMargin?: LengthMetrics
 
 The endMargin of Divider.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ startMargin?: LengthMetrics
 
 The startMargin of Divider.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ strokeWidth?: LengthMetrics
 
 The width of Divider stroke.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 23
 

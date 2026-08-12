@@ -28,7 +28,7 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 

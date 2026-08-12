@@ -34,5 +34,5 @@ Creates a linear gradient color object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorStops | [ColorStop](../arkts-apis/arkts-arkui-datapanel-colorstop-i.md)[] | Yes | Gradient colors and color stops. |
+| colorStops | [ColorStop](arkts-arkui-colorstop-i.md)[] | Yes | Gradient colors and color stops. |
 

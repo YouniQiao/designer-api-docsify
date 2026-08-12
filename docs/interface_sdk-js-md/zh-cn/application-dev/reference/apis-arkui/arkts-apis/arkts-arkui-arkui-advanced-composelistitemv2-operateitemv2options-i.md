@@ -98,7 +98,7 @@ image?: ResourceStr
 
 设置图片。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -178,7 +178,7 @@ text?: ResourceStr
 
 设置文本。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

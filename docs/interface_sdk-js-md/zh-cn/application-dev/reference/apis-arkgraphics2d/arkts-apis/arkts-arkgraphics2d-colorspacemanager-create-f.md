@@ -20,20 +20,20 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpaceName | [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 是 | 标准色域类型枚举值。 &lt;br&gt;UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
+| colorSpaceName | ColorSpace | 是 | 标准色域类型枚举值。 &lt;br&gt;UNKNOWN与CUSTOM不可用于直接创建色域对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 返回当前创建的色域对象实例。 |
+| ColorSpaceManager | 返回当前创建的色域对象实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
 
 ## 示例
 
@@ -74,14 +74,14 @@ function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManage
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | 返回当前创建的色域对象实例。 &lt;br&gt;色域类型定义为[ColorSpace]{ |
+| ColorSpaceManager | 返回当前创建的色域对象实例。 &lt;br&gt;色域类型定义为[ColorSpace]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal. |
 
 ## 示例
 

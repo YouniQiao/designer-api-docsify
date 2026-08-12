@@ -11,7 +11,7 @@ Declare custom parameters used for volume panel.
 ## Modules to Import
 
 ```TypeScript
-import { AVVolumePanelParameter, AVVolumePanel } from 'kits/@kit.AudioKit';
+import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
 ```
 
 ## position
@@ -22,7 +22,7 @@ position?: Position
 
 Sets the position of volume panel.
 
-**Type:** [Position](../../apis-arkui/arkts-apis/arkts-arkui-display-position-i.md)
+**Type:** Position
 
 **Since:** 12
 

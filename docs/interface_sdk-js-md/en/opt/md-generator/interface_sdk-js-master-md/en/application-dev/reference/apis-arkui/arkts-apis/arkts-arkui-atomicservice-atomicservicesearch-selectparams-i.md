@@ -11,7 +11,7 @@ Provides optional attributes for the selection area.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## onSelect
@@ -56,7 +56,7 @@ divider?: Optional<DividerOptions> | null
 
 Sets the divider of select.
 
-**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;DividerOptions&gt; \| null
+**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md)&gt; \| null
 
 **Since:** 18
 
@@ -74,7 +74,7 @@ font?: Font
 
 Sets the text properties of the select button itself.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -128,7 +128,7 @@ menuBackgroundBlurStyle?: BlurStyle
 
 Set menu background blur Style.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 18
 
@@ -164,7 +164,7 @@ menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 
 Register a ContentModifier for each menu item.
 
-**Type:** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;MenuItemConfiguration&gt;
+**Type:** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](../arkts-components/arkts-arkui-menuitemconfiguration-i.md)&gt;
 
 **Since:** 18
 
@@ -200,7 +200,7 @@ optionFont?: Font
 
 Sets the text style for select items.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -254,7 +254,7 @@ optionWidth?: Dimension | OptionWidthMode
 
 Set the width of each option and set whether the option width fit the trigger.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| OptionWidthMode
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md)
 
 **Since:** 18
 
@@ -272,7 +272,7 @@ options?: Array<SelectOption>
 
 SubOption array of the select.
 
-**Type:** Array&lt;SelectOption&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **Since:** 18
 
@@ -344,7 +344,7 @@ selectedOptionFont?: Font
 
 Sets the text style of the selected items in the select.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 

@@ -18,7 +18,7 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| values | collections.Array&lt;ValueType&gt; | 是 |
+| values | collections.Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
@@ -30,7 +30,7 @@ function fromSendableValues(values: collections.Array<ValueType>): NonSendableVa
 
 | 错误码ID |
 | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
 
 ## 示例
 

@@ -18,7 +18,7 @@ newState: MicrophoneCaptureState
 
 the new microphone capture state.
 
-**Type:** [MicrophoneCaptureState](../arkts-components/arkts-arkweb-microphonecapturestate-e.md)
+**Type:** [MicrophoneCaptureState](arkts-arkweb-web-microphonecapturestate-e.md)
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ originalState: MicrophoneCaptureState
 
 The original microphone capture state.
 
-**Type:** [MicrophoneCaptureState](../arkts-components/arkts-arkweb-microphonecapturestate-e.md)
+**Type:** [MicrophoneCaptureState](arkts-arkweb-web-microphonecapturestate-e.md)
 
 **Since:** 23
 

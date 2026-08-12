@@ -16,7 +16,7 @@ Before calling any of the following APIs, you must use
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## getPiPSettingSwitch
@@ -47,8 +47,8 @@ Obtains the status of the auto-start PiP switch in Settings. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## Examples
 
@@ -89,14 +89,14 @@ Obtains the PIP window information. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PiPWindowInfo&gt; | Promise used to return the information about the current PIP window. |
+| Promise&lt;[PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md)&gt; | Promise used to return the information about the current PIP window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## isPiPActive
 
@@ -126,7 +126,7 @@ Check whether the PiP window is active. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## Examples
 
@@ -182,7 +182,7 @@ off(type: 'controlPanelActionEvent'): void
 ```
 
 Unsubscribes from PiP action events. The  
-**[off('controlEvent')](PiPWindow.PiPController.off(type: 'controlEvent', callback?: Callback&lt;ControlEventParam&gt;))**API is preferred.
+**[off('controlEvent')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)**API is preferred.
 
 **Since:** 11
 
@@ -229,7 +229,7 @@ Unsubscribes from PiP action events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Describes the action event callback of the PiP controller. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## Examples
 
@@ -263,14 +263,14 @@ Unsubscribes from the PiP window size change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the size of the current PiP window. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## Examples
 
@@ -318,7 +318,7 @@ Unsubscribes from PiP window active status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). If no value is passed in, all subscriptions to the specified event are canceled. |
 
 ## Examples
 
@@ -349,14 +349,14 @@ Unregister picture-in-picture active status change listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Used to handle {'activeStatusChange'} command. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function offActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 
 ## offControlEvent
 
@@ -378,7 +378,7 @@ Unregister picture-in-picture control event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No | Used to handle {'controlEvent'} command. If not provided, all callbacks for the given event type will be removed. |
 
 ## offControlPanelActionEvent
 
@@ -416,13 +416,13 @@ Unregister picture-in-picture window size change event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No | Callback used to return the picture-in-picture window size. If not provided, all callbacks for the given event type will be removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## offStateChange
 
@@ -463,7 +463,7 @@ Subscribes to PiP state events. To avoid potential memory leaks, you are advised
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
-| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:&lt;br&gt;- **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md), indicating the new PiP state. &lt;br&gt;- **reason**: a string indicating the reason for the state change. &lt;br&gt;Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**, which can be ignored.&lt;br&gt;Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason** indicates the reason for switching the current lifecycle. The options are as follows: &lt;br&gt;**"requestStart"**: An application calls the **startPip** API. &lt;br&gt;**"autoStart"**: The application is automatically started in PiP mode when it is switched to the background. &lt;br&gt;**"requestDelete"**: The application calls the **stopPip** API. &lt;br&gt;**"panelActionDelete"**: The user taps the close button in the PiP window. &lt;br&gt;**"dragDelete"**: The user drags the PiP window to delete. &lt;br&gt;**"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window. &lt;br&gt;**"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
+| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:&lt;br&gt;- **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md#PiPState), indicating the new PiP state. &lt;br&gt;- **reason**: a string indicating the reason for the state change. &lt;br&gt;Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**, which can be ignored.&lt;br&gt;Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason** indicates the reason for switching the current lifecycle. The options are as follows: &lt;br&gt;**"requestStart"**: An application calls the **startPip** API. &lt;br&gt;**"autoStart"**: The application is automatically started in PiP mode when it is switched to the background. &lt;br&gt;**"requestDelete"**: The application calls the **stopPip** API. &lt;br&gt;**"panelActionDelete"**: The user taps the close button in the PiP window. &lt;br&gt;**"dragDelete"**: The user drags the PiP window to delete. &lt;br&gt;**"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window. &lt;br&gt;**"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
 
 ## Examples
 
@@ -576,7 +576,7 @@ Subscribes to PiP action events. To avoid potential memory leaks, you are advise
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'controlEvent' | Yes | Event type. The value is fixed at **'controlEvent'**, indicating the action event of the PiP controller. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | Yes | Action event callback of the PiP controller. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Action event callback of the PiP controller. |
 
 ## Examples
 
@@ -632,15 +632,15 @@ Subscribes to PiP window size change events. To avoid potential memory leaks, yo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pipWindowSizeChange' | Yes | Event type. The value is fixed at **'pipWindowSizeChange'**, indicating that the PiP window size changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | Yes | Callback used to return the size of the current PiP window. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the size of the current PiP window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Callback is already registered. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Callback is already registered. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## Examples
 
@@ -677,7 +677,7 @@ Subscribes to PiP window active status change events. To avoid potential memory 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'activeStatusChange' | Yes | Event type. The value is fixed at **'activeStatusChange'**, indicating that the PiP window active status changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | PiP window active status. **true** is returned if the PiP window is visible, and **false** is returned if the PiP window is invisible (hidden in the sidebar). |
 
 ## Examples
 
@@ -708,14 +708,14 @@ Register picture-in-picture active status change listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Used to handle {'activeStatusChange'} command. True indicates that the pip is onscreen, and vice verse. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function onActiveStatusChange(callback) can not work correctly due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 
 ## onControlEvent
 
@@ -737,7 +737,7 @@ Register picture-in-picture control event listener.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | Yes | Used to handle {'controlEvent'} command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes | Used to handle {'controlEvent'} command. |
 
 ## onControlPanelActionEvent
 
@@ -781,14 +781,14 @@ Register picture-in-picture window size change event listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | Yes | Callback used to return the picture-in-picture window size. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes | Callback used to return the picture-in-picture window size. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: &lt;br&gt;The PiP controller has been destroyed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: &lt;br&gt;The PiP controller has been destroyed. |
 
 ## onStateChange
 
@@ -875,7 +875,7 @@ Sets the enabled status for a component displayed on the PiP controller.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
 
 ## Examples
 
@@ -913,11 +913,11 @@ Starts a PiP window. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
-| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
-| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300034](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
+| [1300015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
+| [1300013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
+| [1300012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
 
 ## Examples
 
@@ -959,9 +959,9 @@ Stops a PiP window. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300011](../errorcode-window.md#1300011-failure-in-destroying-a-pip-window) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
-| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
-| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
+| [1300011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300011-failure-in-destroying-a-pip-window) | Failed to destroy the PiP window. Possible cause: Internal error, the window type is not a PiP window. |
+| [1300015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
+| [1300012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible cause: The PiP window is not created or has been destroyed. |
 
 ## Examples
 
@@ -1008,9 +1008,9 @@ Updates the PiP node content. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 
 ## Examples
 
@@ -1062,7 +1062,7 @@ Updates the media content size when the media content changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
 
 ## Examples
 
@@ -1101,7 +1101,7 @@ Updates the PiP controller status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: The PiPController is not created or destroyed. |
 
 ## Examples
 

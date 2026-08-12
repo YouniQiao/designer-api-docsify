@@ -8,7 +8,7 @@ function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, cal
 
 Create pixelmap by data buffer.
 
-Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixels} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
 
 **起始版本：** 10
 
@@ -58,7 +58,7 @@ function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Pr
 
 Create pixelmap by data buffer.
 
-Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixels} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
 
 **起始版本：** 10
 

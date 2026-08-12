@@ -1,6 +1,6 @@
 # UserAuthResult
 
-用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)的onResult回调获取此结果。
+用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#IAuthCallback)的onResult回调获取此结果。
 
 **起始版本：** 10
 
@@ -14,7 +14,7 @@
 authType?: UserAuthType
 ```
 
-认证通过时，返回实际使用的认证类型。当[AuthParam](arkts-userauthentication-userauth-authparam-i.md)的authType指定了多种认证类型时，此字段标识用户实际选择并完成认证的类型。
+认证通过时，返回实际使用的认证类型。当[AuthParam](arkts-userauthentication-userauth-authparam-i.md#AuthParam)的authType指定了多种认证类型时，此字段标识用户实际选择并完成认证的类型。
 
 **类型：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
@@ -59,7 +59,7 @@ result: number
 - NOT_ENROLLED(12500010)：未注册凭据。  
 - PIN_EXPIRED(12500013)：锁屏密码过期。
 
-完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)。
+完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode)。
 
 **类型：** number
 

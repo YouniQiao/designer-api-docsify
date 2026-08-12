@@ -1,7 +1,7 @@
 # @ohos.bundle.launcherBundleManager
 
 The module providers APIs for launcher applications (applications with icons on the home screen) to obtain the  
-[launcher ability information](arkts-ability-launcherabilityinfo-i.md).
+[launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo).
 
 **Since:** 9
 
@@ -14,7 +14,7 @@ The module providers APIs for launcher applications (applications with icons on 
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from 'kits/@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -23,24 +23,24 @@ import { launcherBundleManager } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID. |
+| [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) based on the given bundle name and user ID. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) of all applications based on the given user ID. This API uses an asynchronous callback to return the result. |
-| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo-1) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) of all applications based on the given user ID. This API uses a promise to return the result. |
-| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID. This API uses an asynchronous callback to return the result. |
-| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID. This API uses a promise to return the result. |
-| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex). This API uses an asynchronous callback to return the result.  No permission is required for obtaining the caller's own information. |
-| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo-1) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex). This API uses a promise to return the result.  No permission is required for obtaining the caller's own information. |
-| [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the index of an application clone.  No permission is required for obtaining the caller's own information. |
-| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex).  No permission is required for obtaining the caller's own information. |
-| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync-1) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex).  No permission is required for obtaining the caller's own information. |
-| [startShortcut](arkts-ability-launcherbundlemanager-startshortcut-f-sys.md#startshortcut) | Starts an ability based on the specified [shortcut information](arkts-ability-shortcutinfo-i.md). This API uses a promise to return the result. |
-| [startShortcutWithReason](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md#startshortcutwithreason) | Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.  The launched ability can obtain the launch reason through the **launchReasonMessage** field of  [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md) and handle service logic accordingly. |
+| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) of all applications based on the given user ID. This API uses an asynchronous callback to return the result. |
+| [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo-1) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) of all applications based on the given user ID. This API uses a promise to return the result. |
+| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) based on the given bundle name and user ID. This API uses an asynchronous callback to return the result. |
+| [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo-1) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) based on the given bundle name and user ID. This API uses a promise to return the result. |
+| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo) | Obtains the [shortcut information](./bundleManager/ShortcutInfo) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getShortcutInfoByAppIndex). This API uses an asynchronous callback to return the result.  No permission is required for obtaining the caller's own information. |
+| [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo-1) | Obtains the [shortcut information](./bundleManager/ShortcutInfo) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getShortcutInfoByAppIndex). This API uses a promise to return the result.  No permission is required for obtaining the caller's own information. |
+| [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex) | Obtains the [shortcut information](./bundleManager/ShortcutInfo) of the current user based on the index of an application clone.  No permission is required for obtaining the caller's own information. |
+| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync) | Obtains the [shortcut information](./bundleManager/ShortcutInfo) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getShortcutInfoByAppIndex).  No permission is required for obtaining the caller's own information. |
+| [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync-1) | Obtains the [shortcut information](./bundleManager/ShortcutInfo) of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use  [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getShortcutInfoByAppIndex).  No permission is required for obtaining the caller's own information. |
+| [startShortcut](arkts-ability-launcherbundlemanager-startshortcut-f-sys.md#startshortcut) | Starts an ability based on the specified [shortcut information](./bundleManager/ShortcutInfo). This API uses a promise to return the result. |
+| [startShortcutWithReason](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md#startshortcutwithreason) | Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.  The launched ability can obtain the launch reason through the **launchReasonMessage** field of  [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam) and handle service logic accordingly. |
 <!--DelEnd-->
 
 ### Types

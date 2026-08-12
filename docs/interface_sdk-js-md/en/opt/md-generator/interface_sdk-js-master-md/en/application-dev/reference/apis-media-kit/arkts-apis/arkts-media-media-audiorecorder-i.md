@@ -1,12 +1,12 @@
 # AudioRecorder
 
-AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) to create an AudioRecorder instance.
+AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createAudioRecorder) to create an AudioRecorder instance.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media](arkts-multimedia-media.md)
+**Substitutes:** [media](arkts-multimedia-media.md#media)
 
 <!--Device-media-interface AudioRecorder--><!--Device-media-interface AudioRecorder-End-->
 
@@ -15,7 +15,7 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
@@ -30,7 +30,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -41,7 +41,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -55,7 +55,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -66,7 +66,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -80,7 +80,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -91,7 +91,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -105,7 +105,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -116,7 +116,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -130,7 +130,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -141,7 +141,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -155,7 +155,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -166,7 +166,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset')
 
@@ -180,7 +180,7 @@ Subscribes to the audio recording events.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -191,7 +191,7 @@ Subscribes to the audio recording events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('error')
 
@@ -205,7 +205,7 @@ Subscribes to audio recording error events. After an error event is reported, yo
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVRecorder.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -230,7 +230,7 @@ Pauses audio recording. This API can be called only after the **'start'** event 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.pause](arkts-media-media-avrecorder-i.md#pause)(callback:
+**Substitutes:** [pause](@ohos.multimedia.media:media.AVRecorder.pause(callback:)
 
 <!--Device-AudioRecorder-pause(): void--><!--Device-AudioRecorder-pause(): void-End-->
 
@@ -248,7 +248,7 @@ Prepares for recording.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.prepare](arkts-media-media-avrecorder-i.md#prepare)(config:
+**Substitutes:** [prepare](@ohos.multimedia.media:media.AVRecorder.prepare(config:)
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -266,7 +266,7 @@ Prepares for recording.
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## release
 
@@ -280,7 +280,7 @@ Releases the audio recording resources.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.release](arkts-media-media-avrecorder-i.md#release)(callback:
+**Substitutes:** [release](@ohos.multimedia.media:media.AVRecorder.release(callback:)
 
 <!--Device-AudioRecorder-release(): void--><!--Device-AudioRecorder-release(): void-End-->
 
@@ -300,7 +300,7 @@ Before resetting audio recording, you must call **stop()** to stop recording. Af
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.reset](arkts-media-media-avrecorder-i.md#reset)(callback:
+**Substitutes:** [reset](@ohos.multimedia.media:media.AVRecorder.reset(callback:)
 
 <!--Device-AudioRecorder-reset(): void--><!--Device-AudioRecorder-reset(): void-End-->
 
@@ -318,7 +318,7 @@ Resumes audio recording. This API can be called only after the **'pause'** event
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.resume](arkts-media-media-avrecorder-i.md#resume)(callback:
+**Substitutes:** [resume](@ohos.multimedia.media:media.AVRecorder.resume(callback:)
 
 <!--Device-AudioRecorder-resume(): void--><!--Device-AudioRecorder-resume(): void-End-->
 
@@ -336,7 +336,7 @@ Starts audio recording. This API can be called only after the **'prepare'** even
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.start](arkts-media-media-avrecorder-i.md#start)(callback:
+**Substitutes:** [start](@ohos.multimedia.media:media.AVRecorder.start(callback:)
 
 <!--Device-AudioRecorder-start(): void--><!--Device-AudioRecorder-start(): void-End-->
 
@@ -354,7 +354,7 @@ Stops audio recording.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVRecorder.stop](arkts-media-media-avrecorder-i.md#stop)(callback:
+**Substitutes:** [stop](@ohos.multimedia.media:media.AVRecorder.stop(callback:)
 
 <!--Device-AudioRecorder-stop(): void--><!--Device-AudioRecorder-stop(): void-End-->
 

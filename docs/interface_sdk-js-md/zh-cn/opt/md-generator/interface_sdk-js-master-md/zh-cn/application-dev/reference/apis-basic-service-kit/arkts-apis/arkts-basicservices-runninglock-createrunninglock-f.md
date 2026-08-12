@@ -12,7 +12,7 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.create](arkts-basicservices-runninglock-create-f.md#create)
+**替代接口：** [create](arkts-basicservices-runninglock-create-f.md#create)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -26,7 +26,7 @@ function createRunningLock(name: string, type: RunningLockType, callback: AsyncC
 | --- | --- | --- |
 | name | string | 是 |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;RunningLock&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | 是 |
 
 ## 示例
 
@@ -53,7 +53,7 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.create](arkts-basicservices-runninglock-create-f.md#create)
+**替代接口：** [create](arkts-basicservices-runninglock-create-f.md#create)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -72,7 +72,7 @@ function createRunningLock(name: string, type: RunningLockType): Promise<Running
 
 | 类型 |
 | --- |
-| Promise&lt;RunningLock&gt; |
+| Promise&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; |
 
 ## 示例
 

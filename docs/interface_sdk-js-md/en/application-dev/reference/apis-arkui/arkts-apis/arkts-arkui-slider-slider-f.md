@@ -25,14 +25,14 @@ Defines Slider Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md) | No | The options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| options | [SliderOptions](arkts-arkui-slider-slideroptions-i.md) | No | The options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |  |
+| [SliderAttribute](arkts-arkui-slider-sliderattribute-i.md) |  |
 
 
 ## Slider
@@ -62,12 +62,12 @@ Defines Slider Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SliderAttribute&gt; | Yes | slider attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SliderAttribute](arkts-arkui-slider-sliderattribute-i.md)&gt; | Yes | slider attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |  |
+| [SliderAttribute](arkts-arkui-slider-sliderattribute-i.md) |  |
 

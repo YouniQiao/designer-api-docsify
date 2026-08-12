@@ -12,7 +12,7 @@ Provides callbacks to return the authentication result. This API defines the aut
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## onResult
@@ -35,4 +35,4 @@ Called to return the authentication result. If the authentication is successful,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes |
+| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes |

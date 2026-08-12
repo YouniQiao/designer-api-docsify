@@ -34,11 +34,11 @@ Initialize TextArea FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAreaOptions](../arkts-components/arkts-arkui-textareaoptions-i.md) | No |  |
+| value | TextAreaOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) |  |
+| TextAreaAttribute |  |
 

@@ -13,7 +13,7 @@ Defines an MMS message delivery indication.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## date
@@ -78,7 +78,7 @@ to: Array<MmsAddress>
 
 Indicates the destination address for the MMS message delivery indication.
 
-**Type:** Array&lt;MmsAddress&gt;
+**Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
 **Since:** 8
 

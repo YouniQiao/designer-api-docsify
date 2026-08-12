@@ -32,14 +32,14 @@ getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Pa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 属性字符串值。 |
-| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | 否 | 布局选项。 |
+| styledString | StyledString | 是 | 属性字符串值。 |
+| options | [TextLayoutOptions](arkts-arkui-textcommon-textlayoutoptions-i.md) | 否 | 布局选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | paragraph result |
+| Array&lt;Paragraph&gt; | paragraph result |
 
 ## measureText
 
@@ -99,5 +99,5 @@ measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | width and height for text to display |
+| [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | width and height for text to display |
 

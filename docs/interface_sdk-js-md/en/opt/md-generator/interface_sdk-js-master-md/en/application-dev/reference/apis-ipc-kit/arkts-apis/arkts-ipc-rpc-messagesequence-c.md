@@ -12,7 +12,7 @@ Provides APIs for reading and writing data in specific format. During RPC or IPC
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeFileDescriptor
@@ -39,7 +39,7 @@ Closes a file descriptor. This API is a static method.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -172,8 +172,8 @@ Duplicates a file descriptor. This API is a static method.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900013](../errorcode-rpc.md#1900013-failed-to-invoke-dup) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900013-failed-to-invoke-dup) |
 
 ## Examples
 
@@ -494,8 +494,8 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -547,7 +547,7 @@ Reads the anonymous shared object from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -613,7 +613,7 @@ Reads the Boolean value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -658,8 +658,8 @@ Reads the Boolean array from this **MessageSequence** object and writes it to th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -705,7 +705,7 @@ Reads the Boolean array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -750,7 +750,7 @@ Reads the byte value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -795,8 +795,8 @@ Reads the byte array from this **MessageSequence** object and writes it to the c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -844,7 +844,7 @@ Reads the byte array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -891,7 +891,7 @@ Reads the character from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -936,8 +936,8 @@ Reads the character array from this **MessageSequence** object and writes it to 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -983,7 +983,7 @@ Reads the character array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1028,7 +1028,7 @@ Reads the double value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1073,8 +1073,8 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1120,7 +1120,7 @@ Reads the double array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1159,7 +1159,7 @@ Reads the exception information from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1263,7 +1263,7 @@ Reads the file descriptor from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1311,7 +1311,7 @@ Reads the double value from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1356,8 +1356,8 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1403,7 +1403,7 @@ Reads the double array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1450,7 +1450,7 @@ Reads the integer from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1496,8 +1496,8 @@ Reads the integer array from this **MessageSequence** object and writes it to th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1543,7 +1543,7 @@ Reads the integer array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1588,7 +1588,7 @@ Reads the interface token from this **MessageSequence** object. The interface to
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1633,7 +1633,7 @@ Reads the long integer from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1678,8 +1678,8 @@ Reads the long array from this **MessageSequence** object and writes it to the c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1725,7 +1725,7 @@ Reads the long integer array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1770,9 +1770,9 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 
 | Error Code ID |
 | --- |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js-callback-execution-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1837,9 +1837,9 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js-callback-execution-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1895,7 +1895,7 @@ Reads raw data from this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size:
+**Substitutes:** [readRawDataBuffer](readRawDataBuffer(size:)
 
 <!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
@@ -1917,8 +1917,8 @@ Reads raw data from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -1971,8 +1971,8 @@ Reads raw data from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2024,8 +2024,8 @@ Reads the remote object from **MessageSequence**. You can use this API to deseri
 
 | Error Code ID |
 | --- |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2082,8 +2082,8 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2141,7 +2141,7 @@ Reads the **IRemoteObject** array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2197,7 +2197,7 @@ Reads the short integer from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2242,8 +2242,8 @@ Reads the short array from this **MessageSequence** object and writes it to the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2289,7 +2289,7 @@ Reads the short array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2336,7 +2336,7 @@ Reads the string from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2382,8 +2382,8 @@ Reads the string array from this **MessageSequence** object and writes it to the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2429,7 +2429,7 @@ Reads the string array from this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2505,8 +2505,8 @@ Moves the read pointer to the specified position.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) |
 
 ## Examples
 
@@ -2555,8 +2555,8 @@ Moves the write pointer to the specified position.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2603,9 +2603,9 @@ Sets the storage capacity of this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
-| [1900011](../errorcode-rpc.md#1900011-memory-allocation-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [1900011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900011-memory-allocation-failed) |
 
 ## Examples
 
@@ -2648,8 +2648,8 @@ Sets the size of the data contained in this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2694,8 +2694,8 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2744,8 +2744,8 @@ Writes an anonymous shared object to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2801,8 +2801,8 @@ Writes a Boolean value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2845,8 +2845,8 @@ Writes a Boolean array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2889,8 +2889,8 @@ Writes a byte value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2933,8 +2933,8 @@ Writes a byte array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -2979,8 +2979,8 @@ Writes a character to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3023,8 +3023,8 @@ Writes a character array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3067,8 +3067,8 @@ Writes a double value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3111,8 +3111,8 @@ Writes a double array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3155,8 +3155,8 @@ Writes a file descriptor to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3202,8 +3202,8 @@ Writes a double value to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3246,8 +3246,8 @@ Writes a double array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3292,8 +3292,8 @@ Writes an integer to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3337,8 +3337,8 @@ Writes an integer array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3381,8 +3381,8 @@ Writes an interface token to this **MessageSequence** object. The remote object 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3426,8 +3426,8 @@ Writes a long integer to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3470,8 +3470,8 @@ Writes a long array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3508,7 +3508,7 @@ Writes information to this **MessageSequence** object indicating that no excepti
 
 | Error Code ID |
 | --- |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3565,8 +3565,8 @@ Writes a **Parcelable** object to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3629,8 +3629,8 @@ Writes the **Parcelable** array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3691,7 +3691,7 @@ Writes raw data to this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData:
+**Substitutes:** [writeRawDataBuffer](writeRawDataBuffer(rawData:)
 
 <!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
@@ -3708,8 +3708,8 @@ Writes raw data to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3761,8 +3761,8 @@ Writes raw data to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3793,7 +3793,7 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-Serializes the remote object and writes it to the [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) object.
+Serializes the remote object and writes it to the [MessageSequence](#MessageSequence) object.
 
 **Since:** 9
 
@@ -3811,9 +3811,9 @@ Serializes the remote object and writes it to the [MessageSequence](arkts-ipc-rp
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3869,8 +3869,8 @@ Writes an **IRemoteObject** array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3925,8 +3925,8 @@ Writes a short integer to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -3969,8 +3969,8 @@ Writes a short array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -4015,8 +4015,8 @@ Writes a string to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 
@@ -4060,8 +4060,8 @@ Writes a string array to this **MessageSequence** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) |
 
 ## Examples
 

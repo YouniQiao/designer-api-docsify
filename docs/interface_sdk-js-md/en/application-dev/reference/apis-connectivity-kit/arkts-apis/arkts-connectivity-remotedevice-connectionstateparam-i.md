@@ -13,7 +13,7 @@ Describes the connection state parameters.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -64,7 +64,7 @@ preState: ConnectionState
 
 Indicates the previous connection state.
 
-**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
+**Type:** ConnectionState
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ state: ConnectionState
 
 Indicates the current connection state.
 
-**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
+**Type:** ConnectionState
 
 **Since:** 26.0.0
 

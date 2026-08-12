@@ -2,7 +2,7 @@
 
 Worker线程用于与宿主线程通信的类。其中postMessage接口用于向宿主线程发送消息，close接口用于销毁Worker线程。ThreadWorkerGlobalScope类继承GlobalScope9+。
 
-**继承/实现关系：** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
+**继承/实现关系：** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
 
 **起始版本：** 9
 
@@ -30,10 +30,10 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| instanceName | string | 是 |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | 是 |
 | methodName | string | 是 |
 | timeout | number | 是 |
-| args | Object[] | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | 是 |
 
 **返回值：**
 
@@ -45,11 +45,11 @@ Worker线程调用宿主线程上注册的对象的指定方法，此调用对Wo
 
 | 错误码ID |
 | --- |
-| [10200019](../errorcode-utils.md#10200019-调用未注册对象的方法错误) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200021](../errorcode-utils.md#10200021-全局调用等待超时错误) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
-| [10200020](../errorcode-utils.md#10200020-调用注册对象上的方法类型错误) |
+| [10200019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200019-调用未注册对象的方法错误) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200021-全局调用等待超时错误) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200020-调用注册对象上的方法类型错误) |
 
 ## 示例
 
@@ -118,7 +118,7 @@ close(): void
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -167,8 +167,8 @@ onmessage?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## onmessageerror
 
@@ -197,8 +197,8 @@ onmessageerror?: (this: ThreadWorkerGlobalScope, ev: MessageEvents) => void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## postMessage
 
@@ -227,8 +227,8 @@ Worker线程通过转移对象所有权的方式向宿主线程发送消息。
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -281,8 +281,8 @@ Worker线程通过转移对象所有权或拷贝数据的方式向宿主线程�
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -338,15 +338,15 @@ Worker线程通过转移对象所有权的方式向宿主线程发送插队消�
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | Object | 是 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 是 |
+| priority | [Priority](arkts-arkts-worker-priority-e.md) | 是 |
 | transfer | ArrayBuffer[] | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -457,8 +457,8 @@ Worker线程向宿主线程发送消息，消息中的Sendable对象通过引用
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 

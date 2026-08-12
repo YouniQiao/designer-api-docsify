@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## getSystemConfig
@@ -18,7 +18,7 @@ Obtains the system configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [process.ProcessManager.getSystemConfig](arkts-arkts-process-processmanager-c.md#getsystemconfig)
+**Substitutes:** [getSystemConfig](arkts-arkts-process-processmanager-c.md#getSystemConfig)
 
 <!--Device-process-function getSystemConfig(name: number): number--><!--Device-process-function getSystemConfig(name: number): number-End-->
 

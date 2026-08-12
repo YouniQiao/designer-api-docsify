@@ -13,7 +13,7 @@ Describes the direction in which the cursor moves when the text is selected.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## direction
@@ -24,7 +24,7 @@ direction: Direction
 
 Direction in which the cursor moves when the text is selected.
 
-**Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
+**Type:** Direction
 
 **Since:** 10
 

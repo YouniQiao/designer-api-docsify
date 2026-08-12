@@ -40,7 +40,7 @@ indicatorBuilder?: CustomBuilder
 
 配置单选框的选中样式为自定义组件。自定义组件与Radio组件以中心点对齐显示。indicatorBuilder设置为undefined时，按照RadioIndicatorType.TICK进行显示。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** CustomBuilder
 
 **起始版本：** 12
 

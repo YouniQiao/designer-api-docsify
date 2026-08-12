@@ -447,7 +447,7 @@ Whether to avoid the soft keyboard. By default, the popup does not avoid the sof
 
 Default value: **KeyboardAvoidMode.NONE**
 
-**Type:** [KeyboardAvoidMode](../arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**Type:** [KeyboardAvoidMode](arkts-arkui-keyboardavoidmode-e.md)
 
 **Default:** KeyboardAvoidMode.NONE
 
@@ -469,7 +469,7 @@ levelMode?: LevelMode
 
 Defines the display level of the popup.
 
-**Type:** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**Type:** LevelMode
 
 **Since:** 26.0.0
 
@@ -561,7 +561,7 @@ Unit: vp
 
 Percentage values are not supported.
 
-**Type:** [Position](../arkts-apis/arkts-arkui-display-position-i.md)
+**Type:** Position
 
 **Default:** { x: 0, y: 0 } [since 11]
 
@@ -589,7 +589,7 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 
 No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.
 
-**Type:** boolean \| Callback&lt;DismissPopupAction&gt;
+**Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **Since:** 12
 
@@ -696,7 +696,7 @@ This parameter is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [PopupOptions#placement](arkts-arkui-popupoptions-i.md#placement)
+**Substitutes:** [placement](#placement)
 
 <!--Device-PopupOptions-placementOnTop?: boolean--><!--Device-PopupOptions-placementOnTop?: boolean-End-->
 
@@ -710,9 +710,9 @@ popupColor?: Color | string | Resource | number
 
 Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**.
 
-Default value: [TRANSPARENT](../arkts-apis/arkts-arkui-color-e.md/arkts-arkui-color-e.md) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
+Default value: [TRANSPARENT](Color) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)
 
-**Type:** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| string \| Resource \| number
+**Type:** Color \| string \| Resource \| number
 
 **Since:** 11
 
@@ -908,7 +908,7 @@ Popup shadow.
 
 Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 

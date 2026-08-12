@@ -24,7 +24,7 @@ selectedColor?: ResourceColor
 
 仅对svg图源生效，设置后会替换svg图片的填充颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #FF007DFF
 
@@ -54,7 +54,7 @@ unselectedColor?: ResourceColor
 
 仅对svg图源生效，设置后会替换svg图片的填充颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #33182431
 

@@ -42,7 +42,7 @@ gradientMode?: KeyboardGradientMode
 
 Used to set keyboard gradient mode.
 
-**Type:** [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md)
+**Type:** [KeyboardGradientMode](arkts-arkui-textcommon-keyboardgradientmode-e-sys.md)
 
 **Since:** 24
 

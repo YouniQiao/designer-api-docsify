@@ -40,7 +40,7 @@ status: USBPortStatus
 
 USB端口角色。
 
-**类型：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
+**类型：** USBPortStatus
 
 **起始版本：** 9
 
@@ -60,7 +60,7 @@ supportedModes: PortModeType
 
 USB端口所支持的模式的数字组合掩码。
 
-**类型：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
+**类型：** PortModeType
 
 **起始版本：** 9
 

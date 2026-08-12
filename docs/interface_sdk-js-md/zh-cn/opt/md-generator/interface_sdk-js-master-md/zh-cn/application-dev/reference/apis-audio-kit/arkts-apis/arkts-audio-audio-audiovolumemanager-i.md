@@ -2,7 +2,7 @@
 
 音量管理。
 
-在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。
+在使用AudioVolumeManager的接口之前，需先通过[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getVolumeManager)获取AudioVolumeManager实例。
 
 > **说明：**
 > 
@@ -34,7 +34,7 @@ getAppVolumePercentage(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getMaxVolumeByStream
 
@@ -68,7 +68,7 @@ getMaxVolumeByStream(streamUsage: StreamUsage): number
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getMinVolumeByStream
 
@@ -102,7 +102,7 @@ getMinVolumeByStream(streamUsage: StreamUsage): number
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getVolumeByStream
 
@@ -136,7 +136,7 @@ getVolumeByStream(streamUsage: StreamUsage): number
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getVolumeGroupManager
 
@@ -157,7 +157,7 @@ getVolumeGroupManager(groupId: number, callback: AsyncCallback<AudioVolumeGroupM
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | groupId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioVolumeGroupManager&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; | 是 |
 
 ## getVolumeGroupManager
 
@@ -183,7 +183,7 @@ getVolumeGroupManager(groupId: number): Promise<AudioVolumeGroupManager>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioVolumeGroupManager&gt; |
+| Promise&lt;[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)&gt; |
 
 ## getVolumeGroupManagerSync
 
@@ -217,8 +217,8 @@ getVolumeGroupManagerSync(groupId: number): AudioVolumeGroupManager
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getVolumeInUnitOfDbByStream
 
@@ -239,7 +239,7 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 |
-| volumeLevel | number | 是 |
+| [volumeLevel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md) | number | 是 |
 | device | [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md) | 是 |
 
 **返回值：**
@@ -252,7 +252,7 @@ getVolumeInUnitOfDbByStream(streamUsage: StreamUsage, volumeLevel: number, devic
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## isSystemMutedForStream
 
@@ -284,7 +284,7 @@ isSystemMutedForStream(streamUsage: StreamUsage): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('volumeChange')
 
@@ -298,7 +298,7 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 
 **废弃版本：** 20
 
-**替代接口：** ohos.multimedia.audio.AudioVolumeManager#event:streamVolumeChange
+**替代接口：** [streamVolumeChange](ohos.multimedia.audio.AudioVolumeManager#event:streamVolumeChange)
 
 <!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void-End-->
 
@@ -309,14 +309,14 @@ off(type: 'volumeChange', callback?: Callback<VolumeEvent>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'volumeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('appVolumeChange')
 
@@ -337,13 +337,13 @@ off(type: 'appVolumeChange', callback?: Callback<VolumeEvent>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'appVolumeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('streamVolumeChange')
 
@@ -364,7 +364,7 @@ off(type: 'streamVolumeChange', callback?: Callback<StreamVolumeEvent>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'streamVolumeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StreamVolumeEvent&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 否 |
 
 ## on('volumeChange')
 
@@ -378,7 +378,7 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 
 **废弃版本：** 20
 
-**替代接口：** ohos.multimedia.audio.AudioVolumeManager#event:streamVolumeChange
+**替代接口：** [streamVolumeChange](ohos.multimedia.audio.AudioVolumeManager#event:streamVolumeChange)
 
 <!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioVolumeManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
 
@@ -389,14 +389,14 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'volumeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('appVolumeChange')
 
@@ -417,13 +417,13 @@ on(type: 'appVolumeChange', callback: Callback<VolumeEvent>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'appVolumeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('streamVolumeChange')
 
@@ -445,13 +445,13 @@ on(type: 'streamVolumeChange', streamUsage: StreamUsage, callback: Callback<Stre
 | --- | --- | --- |
 | type | 'streamVolumeChange' | 是 |
 | streamUsage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StreamVolumeEvent&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setAppVolumePercentage
 
@@ -479,11 +479,11 @@ setAppVolumePercentage(volume: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |

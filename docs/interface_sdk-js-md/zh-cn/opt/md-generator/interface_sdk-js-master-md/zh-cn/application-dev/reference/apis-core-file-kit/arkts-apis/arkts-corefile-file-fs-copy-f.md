@@ -24,19 +24,19 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 | --- | --- | --- |
 | srcUri | string | 是 |
 | destUri | string | 是 |
-| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | 否 |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900038 |
 | 13900034 |
 | 13900044 |
@@ -94,7 +94,7 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900038 |
 | 13900034 |
 | 13900041 |
@@ -145,14 +145,14 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 | --- | --- | --- |
 | srcUri | string | 是 |
 | destUri | string | 是 |
-| options | [CopyOptions](../../apis-arkui/arkts-apis/arkts-arkui-copyoptions-e.md) | 是 |
+| options | [CopyOptions](arkts-corefile-file-fs-copyoptions-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900038 |
 | 13900034 |
 | 13900041 |

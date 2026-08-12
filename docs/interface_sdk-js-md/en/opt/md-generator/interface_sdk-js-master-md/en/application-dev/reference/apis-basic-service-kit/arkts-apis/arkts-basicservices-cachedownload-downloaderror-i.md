@@ -11,7 +11,7 @@ Describes the error message returned when a pre-download error occurs.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## errorCode
@@ -22,7 +22,7 @@ readonly errorCode: ErrorCode
 
 Specific error type returned by the pre-download error callback.
 
-**Type:** [ErrorCode](arkts-basicservices-cachedownload-errorcode-e.md)
+**Type:** ErrorCode
 
 **Since:** 23
 

@@ -7,7 +7,7 @@ Except the first paragraph, all paragraphs are formed using the escape character
 The style of a paragraph is the one (if any) set for the first element or the paragraph style of the bound component.
 
 Before API version 26.0.0, if the first placeholder in a paragraph of the styled string is a  
-[CustomSpan](arkts-arkui-customspan-c.md) or [ImageAttachment](arkts-arkui-imageattachment-c.md), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect.
+[CustomSpan](arkts-arkui-customspan-c.md#CustomSpan) or [ImageAttachment](arkts-arkui-imageattachment-c.md#ImageAttachment), the paragraph style set for that paragraph does not take effect. From API version 26.0.0, the paragraph style takes effect.
 
 **Since:** 12
 
@@ -41,7 +41,7 @@ A constructor used to create a text paragraph style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-styledstring-paragraphstyleinterface-i.md) | No | Paragraph style options. |
+| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | No | Paragraph style options. |
 
 ## leadingMargin
 
@@ -75,7 +75,7 @@ readonly leadingMarginSpan?: LeadingMarginSpan
 
 Custom indentation information for text paragraphs in the styled string.
 
-**Type:** [LeadingMarginSpan](arkts-arkui-styledstring-leadingmarginspan-c.md)
+**Type:** [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md)
 
 **Since:** 22
 
@@ -119,7 +119,7 @@ readonly overflow?: TextOverflow
 
 Display mode when the text is too long in the text paragraph.
 
-**Type:** [TextOverflow](arkts-arkui-enums-textoverflow-e.md)
+**Type:** TextOverflow
 
 **Since:** 12
 
@@ -167,7 +167,7 @@ Text shader effect.
 
 **Since**: 26.0.0.
 
-**Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**Type:** ShaderStyle
 
 **Since:** 26.0.0
 
@@ -211,7 +211,7 @@ readonly textAlign?: TextAlign
 
 Horizontal alignment mode of the text paragraph.
 
-**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 12
 
@@ -233,7 +233,7 @@ readonly textDirection?: TextDirection
 
 Text direction.
 
-**Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**Type:** TextDirection
 
 **Since:** 23
 
@@ -280,10 +280,10 @@ readonly textVerticalAlign?: TextVerticalAlign
 Vertical alignment mode of the text paragraph.
 
 The effect of this attribute is noticeable only when the same font size is used in a paragraph and  
-[lineHeight](arkts-arkui-text-textattribute-i.md#lineheight) is set, or when different font sizes are used in a paragraph and the font sizes are mixed. The **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-c.md) takes effect only when the value of  
-[TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md) is set to **TextVerticalAlign.BASELINE**. In other vertical alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
+[lineHeight](TextAttribute#lineHeight) is set, or when different font sizes are used in a paragraph and the font sizes are mixed. The **SuperscriptStyle** in [TextStyle](arkts-arkui-textstyle-c.md#TextStyle) takes effect only when the value of  
+[TextVerticalAlign](TextVerticalAlign) is set to **TextVerticalAlign.BASELINE**. In other vertical alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
-**Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
+**Type:** TextVerticalAlign
 
 **Since:** 20
 
@@ -305,7 +305,7 @@ readonly wordBreak?: WordBreak
 
 Word break rule of the text paragraph.
 
-**Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 12
 

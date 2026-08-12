@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## openCustomDialog
@@ -32,7 +32,7 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#openCustomDialog
+**Substitutes:** [openCustomDialog](ohos.arkui.UIContext.PromptAction#openCustomDialog)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,8 +58,8 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

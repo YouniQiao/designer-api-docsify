@@ -2,7 +2,7 @@
 
 The tap action triggers this method invocation.
 
-**Inheritance/Implementation:** ClickEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md#BaseEvent)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ Prevent the default function.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
+| [100017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
 
 ## displayX
 

@@ -15,7 +15,7 @@ Defines the request for obtaining property information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## accountId
@@ -46,7 +46,7 @@ authType: AuthType
 
 Authentication credential type.
 
-**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**Type:** AuthType
 
 **Since:** 8
 
@@ -66,7 +66,7 @@ keys: Array<GetPropertyType>
 
 An array of the types of the properties to obtain.
 
-**Type:** Array&lt;GetPropertyType&gt;
+**Type:** Array&lt;[GetPropertyType](arkts-basicservices-osaccount-getpropertytype-e-sys.md)&gt;
 
 **Since:** 8
 

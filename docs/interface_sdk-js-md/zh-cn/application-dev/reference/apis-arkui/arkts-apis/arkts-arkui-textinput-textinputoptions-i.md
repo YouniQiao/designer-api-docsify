@@ -18,7 +18,7 @@ controller?: TextInputController
 
 设置TextInput控制器。
 
-**类型：** [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md)
+**类型：** [TextInputController](arkts-arkui-textinput-textinputcontroller-c.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<strin
 
 输入框文本内容。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Bindable&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| Bindable&lt;Resource&gt; \| Bindable&lt;string&gt;
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](arkts-arkui-resource-t.md)&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt;
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromSurface
@@ -31,15 +31,15 @@ Creates a PixelMap object from surface id.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980178](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-failure-in-obtaining-image-data) |
 
 ## Examples
 

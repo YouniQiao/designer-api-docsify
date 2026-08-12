@@ -2,7 +2,7 @@
 
 Canvas渲染器，用于绘制形状、文本、图片等对象。
 
-**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md#CanvasPath)
 
 **起始版本：** 23
 
@@ -136,7 +136,7 @@ createConicGradient(startAngle: double, x: double, y: double): CanvasGradient
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | 新的CanvasGradient对象，用于在canvas上创建渐变效果。 |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) | 新的CanvasGradient对象，用于在canvas上创建渐变效果。 |
 
 ## createImageData
 
@@ -167,7 +167,7 @@ createImageData(sw: double, sh: double): ImageData
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) | 新的ImageData对象。 |
 
 ## createImageData
 
@@ -191,13 +191,13 @@ createImageData(imageData: ImageData): ImageData
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 现有的ImageData对象。异常值undefined和null按width和height为0的ImageData处理。 |
+| imageData | [ImageData](arkts-arkui-canvas-imagedata-c.md) | 是 | 现有的ImageData对象。异常值undefined和null按width和height为0的ImageData处理。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) | 新的ImageData对象。 |
 
 ## createLinearGradient
 
@@ -230,7 +230,7 @@ createLinearGradient(x0: double, y0: double, x1: double, y1: double): CanvasGrad
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | 新的CanvasGradient对象，用于在canvas上创建渐变效果。 |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) | 新的CanvasGradient对象，用于在canvas上创建渐变效果。 |
 
 ## createPattern
 
@@ -261,7 +261,7 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) | 通过指定图像和重复方式创建图片填充的模板对象。 |
+| [CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md) | 通过指定图像和重复方式创建图片填充的模板对象。 |
 
 ## createRadialGradient
 
@@ -296,7 +296,7 @@ createRadialGradient(x0: double, y0: double, r0: double, x1: double, y1: double,
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasGradient](arkts-arkui-canvasgradient-c.md) | 新的CanvasGradient对象，用于在canvas上创建渐变效果。 |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) | 新的CanvasGradient对象，用于在canvas上创建渐变效果。 |
 
 ## drawImage
 
@@ -320,7 +320,7 @@ drawImage(image: ImageBitmap | PixelMap, dx: double, dy: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | 是 | 图片资源。异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片资源。异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | double | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
 | dy | double | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
 
@@ -346,7 +346,7 @@ drawImage(image: ImageBitmap | PixelMap, dx: double, dy: double, dw: double, dh:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | 是 | 图片资源。异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片资源。异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | double | 是 | 绘制区域左上角在x轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
 | dy | double | 是 | 绘制区域左上角在y轴的位置。异常值undefined或null按0处理，NaN和Infinity按无效值处理， 不进行绘制。默认单位：vp |
 | dw | double | 是 | 绘制区域的宽度。当绘制区域的宽度和裁剪图像的宽度不一致时， 将图像宽度拉伸或压缩为绘制区域的宽度。负数、异常值undefined或null按0处理， NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
@@ -375,7 +375,7 @@ drawImage(image: ImageBitmap | PixelMap, sx: double, sy: double, sw: double, sh:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | 是 | 图片资源。异常值undefined或null按无效值处理，不进行绘制。 |
+| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片资源。异常值undefined或null按无效值处理，不进行绘制。 |
 | sx | double | 是 | 裁切源图像时距离源图像左上角的x坐标值。异常值undefined或null按0处理， NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | sy | double | 是 | 裁切源图像时距离源图像左上角的y坐标值。异常值undefined或null按0处理， NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
 | sw | double | 是 | 裁切源图像时需要裁切的宽度。负数、异常值undefined或null按0处理， NaN和Infinity按无效值处理，不进行绘制。默认单位：vp |
@@ -519,7 +519,7 @@ getImageData(sx: double, sy: double, sw: double, sh: double): ImageData
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageData](arkts-arkui-imagedata-c.md) | 新的ImageData对象。 |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) | 新的ImageData对象。 |
 
 ## getLineDash
 
@@ -630,7 +630,7 @@ measureText(text: string): TextMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextMetrics](arkts-arkui-textmetrics-i.md) | 文本的尺寸信息。 |
+| [TextMetrics](arkts-arkui-canvas-textmetrics-i.md) | 文本的尺寸信息。 |
 
 ## putImageData
 
@@ -654,7 +654,7 @@ putImageData(imageData: ImageData, dx: double | string, dy: double | string): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 包含像素值的ImageData对象。 异常值undefined或null按无效值处理，不进行绘制。 |
+| imageData | [ImageData](arkts-arkui-canvas-imagedata-c.md) | 是 | 包含像素值的ImageData对象。 异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | double \| string | 是 | 填充区域在x轴方向的偏移量。 异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 | dy | double \| string | 是 | 填充区域在y轴方向的偏移量。 异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 
@@ -681,7 +681,7 @@ putImageData(imageData: ImageData, dx: double | string, dy: double | string, dir
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | 是 | 包含像素值的ImageData对象。 异常值undefined或null按无效值处理，不进行绘制。 |
+| imageData | [ImageData](arkts-arkui-canvas-imagedata-c.md) | 是 | 包含像素值的ImageData对象。 异常值undefined或null按无效值处理，不进行绘制。 |
 | dx | double \| string | 是 | 填充区域在x轴方向的偏移量。 异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 | dy | double \| string | 是 | 填充区域在y轴方向的偏移量。 异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |
 | dirtyX | double \| string | 是 | 源图像数据矩形裁切范围左上角距离源图像左上角的x轴偏移量。 异常值undefined、null、NaN和Infinity按0处理。默认单位：vp |

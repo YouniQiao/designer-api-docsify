@@ -13,7 +13,7 @@ Indicates the permission status.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## grantFlags
@@ -59,7 +59,7 @@ grantStatus: GrantStatus
 
 Permission authorization status.
 
-**Type:** [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)
+**Type:** GrantStatus
 
 **Since:** 26.0.0
 

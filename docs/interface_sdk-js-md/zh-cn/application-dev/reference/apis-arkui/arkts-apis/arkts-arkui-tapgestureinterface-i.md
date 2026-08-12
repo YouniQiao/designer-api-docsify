@@ -22,9 +22,9 @@
 (value?: TapGestureParameters): TapGestureInterface
 ```
 
-创建点击手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
+创建点击手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface)。
 
-触发点击手势事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-common-sourcetool-e.md)值为Unknown，事件的[SourceType](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-sourcetype-e.md/arkts-input-multimodalinput-touchevent-sourcetype-e.md)值为KEY或JOYSTICK。
+触发点击手势事件的设备类型为键盘或手柄时，事件的[SourceTool](SourceTool)值为Unknown，事件的[SourceType](SourceType)值为KEY或JOYSTICK。
 
 **起始版本：** 7
 
@@ -40,7 +40,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TapGestureParameters](arkts-arkui-gesture-tapgestureparameters-i.md) | 否 | 点击手势的相关参数。<br>**起始版本：** 12 |
+| value | [TapGestureParameters](arkts-arkui-tapgestureparameters-i.md) | 否 | 点击手势的相关参数。<br>**起始版本：** 12 |
 
 **返回值：**
 

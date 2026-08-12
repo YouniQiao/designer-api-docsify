@@ -40,7 +40,7 @@ Executes a provided function once per each key/value pair in the Map, in inserti
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: V, key: K, map: Map&lt;K, V&gt;) =&gt; void | Yes |
+| callbackfn | (value: V, key: K, map: Map & lt;K, V & gt;) = & gt; void | Yes |
 | thisArg | any | No |
 
 ## get

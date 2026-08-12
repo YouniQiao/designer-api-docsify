@@ -22,11 +22,11 @@ Sets the callback with return value for the ui extension to receive data from an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Indicates the receive data callback to set. |
+| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the receive data callback to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Returns the custom data. |
+| Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Returns the custom data. |
 

@@ -16,7 +16,7 @@ filter?: Filter
 
 文件过滤配置项。 可选，设置过滤条件。
 
-**类型：** [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md)
+**类型：** [Filter](arkts-corefile-file-fs-filter-i.md)
 
 **起始版本：** 11
 

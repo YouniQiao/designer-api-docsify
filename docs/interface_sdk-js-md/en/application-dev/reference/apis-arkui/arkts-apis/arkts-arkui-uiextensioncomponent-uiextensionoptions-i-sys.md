@@ -20,7 +20,7 @@ areaChangePlaceholder?: Record<string, ComponentContentBase>
 
 Set Areachange placeholder.If the Areachange placeholder ComponentContentBase is set, the placeholder node is displayed until the UIExtensionComponent size change is complete.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContentBase&gt;
+**Type:** Record&lt;string, [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)&gt;
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ windowModeFollowStrategy?: WindowModeFollowStrategy
 
 Set UIExtensionComponent Content Window Mode Follow Strategy.
 
-**Type:** [WindowModeFollowStrategy](../arkts-components/arkts-arkui-windowmodefollowstrategy-e-sys.md)
+**Type:** [WindowModeFollowStrategy](arkts-arkui-uiextensioncomponent-windowmodefollowstrategy-e-sys.md)
 
 **Default:** WindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 

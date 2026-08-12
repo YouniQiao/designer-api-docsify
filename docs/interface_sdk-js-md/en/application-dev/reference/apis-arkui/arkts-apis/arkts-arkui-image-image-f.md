@@ -25,14 +25,14 @@ Defines the Image component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | image resource type. |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No | Options for AI analyzer. |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | The attribute of the Image. |
 
 
 ## Image
@@ -61,15 +61,15 @@ Defines the Image component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | image resource type. |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No | Options for AI analyzer. |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
 | reloadKey | string | No | Options for image reload. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | The attribute of the Image. |
 
 
 ## Image
@@ -97,14 +97,14 @@ Defines the Image component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes | image resource type. |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
 | reloadKey | string | No | Options for image reload. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | The attribute of the Image. |
 
 
 ## Image
@@ -131,11 +131,11 @@ Defines the Image component. It requires call setImageOptions at start of the co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAttribute&gt; | Yes | the callback to set up component's attribute. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageAttribute](arkts-arkui-image-imageattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | The attribute of the Image. |
+| [ImageAttribute](arkts-arkui-image-imageattribute-i.md) | The attribute of the Image. |
 

@@ -28,5 +28,5 @@ Create a FrameNode of SymbolGlyph type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | Return SymbolGlyph type FrameNode. |
+| SymbolGlyph | Return SymbolGlyph type FrameNode. |
 

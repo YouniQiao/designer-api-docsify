@@ -13,7 +13,7 @@ Profile state change parameters.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from 'kits/@kit.ConnectivityKit';
+import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
 ## cause
@@ -84,7 +84,7 @@ state: ProfileConnectionState
 
 Profile state value
 
-**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
+**Type:** ProfileConnectionState
 
 **Since:** 10
 

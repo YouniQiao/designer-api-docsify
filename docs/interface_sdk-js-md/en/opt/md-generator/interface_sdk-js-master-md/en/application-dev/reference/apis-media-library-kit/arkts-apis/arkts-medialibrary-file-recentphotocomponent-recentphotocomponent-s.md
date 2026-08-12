@@ -15,7 +15,7 @@ Allows an application to access the latest image or video file in the public dir
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from 'kits/@kit.MediaLibraryKit';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from '@kit.MediaLibraryKit';
 ```
 
 ## onRecentPhotoCheckInfo
@@ -74,7 +74,7 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** [RecentPhotoOptions](arkts-medialibrary-photoaccesshelper-recentphotooptions-c.md)
+**Type:** [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 12
 

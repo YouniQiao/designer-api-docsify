@@ -20,7 +20,7 @@ Creates a WeakRef instance for the given target object.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| WeakRef&lt;T&gt; |
+| [WeakRef](arkts-lib-es2021-weakref-weakref-i.md)&lt;T&gt; |
 
 ## prototype
 
@@ -28,4 +28,4 @@ Creates a WeakRef instance for the given target object.
 readonly prototype: WeakRef<any>
 ```
 
-**Type:** WeakRef&lt;any&gt;
+**Type:** [WeakRef](arkts-lib-es2021-weakref-weakref-i.md)&lt;any&gt;

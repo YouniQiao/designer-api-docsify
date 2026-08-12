@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getHotspotConfig
@@ -18,7 +18,7 @@ Obtains the Wi-Fi hotspot configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getHotspotConfig
+**Substitutes:** [getHotspotConfig](ohos.wifiManager/wifiManager.getHotspotConfig)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.GET_WIFI_CONFIG
 

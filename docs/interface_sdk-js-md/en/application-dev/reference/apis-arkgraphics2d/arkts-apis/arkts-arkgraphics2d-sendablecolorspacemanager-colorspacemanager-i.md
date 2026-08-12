@@ -4,7 +4,7 @@ Implements management of color space objects. ColorSpaceManager is a core class 
 
 Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager.
 
-**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md)
+**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md#ISendable)
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ Before calling any of the following APIs, you must use [create()](arkts-arkgraph
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -46,7 +46,7 @@ Obtains the color space type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
 
 ## Examples
 
@@ -80,7 +80,7 @@ Obtains the gamma of the color space.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
 
 ## Examples
 
@@ -114,7 +114,7 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 12 - 22 |
 
 ## Examples
 

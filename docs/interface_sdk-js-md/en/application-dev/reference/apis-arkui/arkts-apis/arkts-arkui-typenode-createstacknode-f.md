@@ -29,5 +29,5 @@ Create a FrameNode of Stack type.On API 26.0.0 and above, It can also create a F
 
 | Type | Description |
 | --- | --- |
-| [Stack](arkts-arkui-typenode-stack-t.md) | Return Stack type FrameNode. |
+| Stack | Return Stack type FrameNode. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## concat
@@ -26,7 +26,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| list | Buffer[] \| Uint8Array[] | Yes |
+| list | [Buffer](arkts-arkts-buffer-buffer-c.md)[] \| Uint8Array[] | Yes |
 | totalLength | number | No |
 
 **Return value:**
@@ -39,7 +39,7 @@ Concatenates an array of **Buffer** objects of the specified length into a new o
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 

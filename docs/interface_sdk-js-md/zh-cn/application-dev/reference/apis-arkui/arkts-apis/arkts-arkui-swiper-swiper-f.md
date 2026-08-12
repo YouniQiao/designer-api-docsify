@@ -26,7 +26,7 @@ export declare function Swiper(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | controller | [SwiperController](arkts-arkui-swiper-swipercontroller-c.md) | 否 | 给组件绑定一个控制器，用来控制组件翻页或者预加载指定子节点。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ export declare function Swiper(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SwiperAttribute&gt; | 是 | swiper属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 内容区。 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SwiperAttribute](arkts-arkui-swiper-swiperattribute-i.md)&gt; | 是 | swiper属性实例 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 内容区。 |
 
 **返回值：**
 

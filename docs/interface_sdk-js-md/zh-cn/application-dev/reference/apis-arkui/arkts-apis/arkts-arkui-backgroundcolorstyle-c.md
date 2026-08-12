@@ -34,7 +34,7 @@ constructor(textBackgroundStyle: TextBackgroundStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textBackgroundStyle | [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md) | 是 | 文本背景色设置项。 |
+| textBackgroundStyle | TextBackgroundStyle | 是 | 文本背景色设置项。 |
 
 ## textBackgroundStyle
 
@@ -54,7 +54,7 @@ radius: 0
 
 }
 
-**类型：** [TextBackgroundStyle](arkts-arkui-span-textbackgroundstyle-i.md)
+**类型：** TextBackgroundStyle
 
 **起始版本：** 14
 

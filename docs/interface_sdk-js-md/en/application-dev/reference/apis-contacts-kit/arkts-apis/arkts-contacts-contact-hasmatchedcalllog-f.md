@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## hasMatchedCallLog
@@ -32,7 +32,7 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | phoneNumber | string | Yes | Phone number of the contacts. |
 | minDuration | int | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
 
@@ -46,9 +46,9 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 
 ## hasMatchedCallLog
@@ -77,7 +77,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | phoneNumber | string | Yes | Phone number of the contacts. |
 | minDuration | int | Yes | Minimum call duration, in seconds. The value must be greater than 0. |
 | withinTime | int | Yes | Period of time that the start time and end time of calls should be within, in seconds. This period starts from the current time. A maximum of six hours can be set. If the query duration exceeds six hours, the query duration is six hours by default. |
@@ -92,7 +92,7 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
 

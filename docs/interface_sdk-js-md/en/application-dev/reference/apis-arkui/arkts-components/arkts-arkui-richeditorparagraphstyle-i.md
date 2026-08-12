@@ -19,7 +19,7 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the   
 **Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| LeadingMarginPlaceholder
+**Type:** Dimension \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 11
 
@@ -45,7 +45,7 @@ Default value: **LineBreakStrategy.GREEDY**
 
 This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
 
-**Type:** [LineBreakStrategy](../arkts-apis/arkts-arkui-enums-linebreakstrategy-e.md)
+**Type:** LineBreakStrategy
 
 **Since:** 12
 
@@ -93,7 +93,7 @@ shaderStyle?: ShaderStyle
 
 Set shader style.
 
-**Type:** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
+**Type:** ShaderStyle
 
 **Since:** 26.0.0
 
@@ -117,7 +117,7 @@ Horizontal alignment mode of the text.
 
 Default value: **TextAlign.START**
 
-**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 11
 
@@ -141,7 +141,7 @@ Sets the text direction.
 
 Default value: TextDirection.DEFAULT
 
-**Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**Type:** TextDirection
 
 **Since:** 23
 
@@ -165,7 +165,7 @@ Vertical alignment of text paragraphs.
 
 Default value: **TextVerticalAlign.BASELINE**.
 
-**Type:** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
+**Type:** TextVerticalAlign
 
 **Since:** 20
 
@@ -189,7 +189,7 @@ Word break rule.
 
 Default value: **WordBreak.BREAK_WORD**
 
-**Type:** [WordBreak](../arkts-apis/arkts-arkui-enums-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 12
 

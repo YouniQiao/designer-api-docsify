@@ -25,21 +25,21 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | host | [SharedHost](arkts-basicservices-print-sharedhost-i.md) | 是 |
-| username | string | 是 |
+| [username](../../apis-arkts/arkts-apis/arkts-arkts-url-url-c.md) | string | 是 |
 | password | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PrinterInformation[]&gt; |
+| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 | 13100014 |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13100013 |
 | 13100012 |

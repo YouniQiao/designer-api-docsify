@@ -6,7 +6,7 @@
 function parseUUID(uuid: string): Uint8Array
 ```
 
-将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generaterandombinaryuuid)生成的UUID，符合RFC 4122版本规范。
+将generateRandomUUID生成的string类型UUID转换为[generateRandomBinaryUUID](arkts-arkts-util-generaterandombinaryuuid-f.md#generateRandomBinaryUUID)生成的UUID，符合RFC 4122版本规范。
 
 **起始版本：** 9
 
@@ -32,7 +32,7 @@ function parseUUID(uuid: string): Uint8Array
 
 | 错误码ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-参数解析错误) |
 
 ## 示例
 

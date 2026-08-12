@@ -13,7 +13,7 @@ Defines the detailed permission usage information.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## activeStatus

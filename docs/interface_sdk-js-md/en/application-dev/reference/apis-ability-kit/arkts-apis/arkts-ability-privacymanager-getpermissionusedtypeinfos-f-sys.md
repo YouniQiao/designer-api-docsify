@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## getPermissionUsedTypeInfos
@@ -32,25 +32,25 @@ Obtains information about how a sensitive permission is used by an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenId | ArkTS-Dyn: number \| null  <br>ArkTS-Sta：int \| null | No | Application identity identifier for accessing sensitive permissions. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo. Pass a specific tokenId when querying the access type information of sensitive permissions for a particular app; 0 or null indicates querying the access type information of sensitive permissions for all apps. Starting from API version 20, the null type is newly supported. &lt;br&gt;Default value: 0. |
+| tokenId | ArkTS-Dyn: number \| null  <br>ArkTS-Sta：int \| null | No | Application identity identifier for accessing sensitive permissions. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field of ApplicationInfo. Pass a specific tokenId when querying the access type information of sensitive permissions for a particular app; 0 or null indicates querying the access type information of sensitive permissions for all apps. Starting from API version 20, the null type is newly supported. &lt;br&gt;Default value: 0. |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | No | Name of the sensitive permission being accessed. Pass a specific permission name when querying the access type information of a particular sensitive permission; empty indicates querying the access type information of all sensitive permissions. Passing an invalid value returns error code 12100001. &lt;br&gt;Value constraint: The permission name length cannot exceed 256 characters. Default value: Empty string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;PermissionUsedTypeInfo&gt;&gt; | Promise used to return the list of permission access type information. |
+| Promise&lt;Array&lt;[PermissionUsedTypeInfo](arkts-ability-privacymanager-permissionusedtypeinfo-i-sys.md)&gt;&gt; | Promise used to return the list of permission access type information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. PermissionName exceeds 256 characters. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) | The input tokenId does not exist. |
-| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The input permissionName does not exist. |
+| [12100009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. PermissionName exceeds 256 characters. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) | The input tokenId does not exist. |
+| [12100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) | The input permissionName does not exist. |
 
 ## Examples
 

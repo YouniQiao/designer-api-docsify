@@ -12,7 +12,7 @@ Updates the configuration. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager#updateConfiguration
+**Substitutes:** [updateConfiguration](ohos.app.ability.abilityManager/abilityManager#updateConfiguration)
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -42,7 +42,7 @@ Updates the configuration. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager#updateConfiguration
+**Substitutes:** [updateConfiguration](ohos.app.ability.abilityManager/abilityManager#updateConfiguration)
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -62,4 +62,4 @@ Updates the configuration. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

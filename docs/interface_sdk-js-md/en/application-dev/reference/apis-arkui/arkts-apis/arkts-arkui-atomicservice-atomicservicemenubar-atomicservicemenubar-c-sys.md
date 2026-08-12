@@ -15,7 +15,7 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -44,7 +44,7 @@ A constructor used to create an **AtomicServiceMenuBar** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes | Context information of the current atomic service. |
+| uiContext | UIContext | Yes | Context information of the current atomic service. |
 
 ## setVisible
 

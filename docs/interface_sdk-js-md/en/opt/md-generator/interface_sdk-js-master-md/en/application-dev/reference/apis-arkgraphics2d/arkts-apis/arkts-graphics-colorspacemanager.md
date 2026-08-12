@@ -11,7 +11,7 @@ This module provides basic capabilities for managing abstract color space object
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

@@ -23,22 +23,22 @@ function getWallpaperByState(wallpaperType: WallpaperType, foldState: FoldState,
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
-| foldState | [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | 是 |
-| rotateState | [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | 是 |
+| [foldState](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md) | [FoldState](arkts-basicservices-wallpaper-foldstate-e-sys.md) | 是 |
+| [rotateState](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md) | [RotateState](arkts-basicservices-wallpaper-rotatestate-e-sys.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

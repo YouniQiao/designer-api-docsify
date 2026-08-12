@@ -32,7 +32,7 @@ mouseEvent?: MouseEvent
 
 Information about clicking or touching and holding using the mouse or touchpad.
 
-**Type:** [MouseEvent](../../apis-arkui/arkts-components/arkts-arkui-mouseevent-i.md)
+**Type:** MouseEvent
 
 **Since:** 20
 

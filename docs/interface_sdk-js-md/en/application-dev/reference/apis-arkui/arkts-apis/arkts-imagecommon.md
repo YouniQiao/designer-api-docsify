@@ -12,7 +12,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | Image AI analysis options.  > **Description:** >  > The types parameter in this feature has higher priority than the types parameter in > [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md). When both are set, > the value set in this feature takes precedence. >  > This feature depends on device capability and needs to be used with > the [enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer) interface > of the corresponding component (for example, [Image component](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)). |
+| [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | Image AI analysis options.  > **Description:** >  > The types parameter in this feature has higher priority than the types parameter in > [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md#ImageAnalyzerConfig). When both are set, > the value set in this feature takes precedence. >  > This feature depends on device capability and needs to be used with > the [enableAnalyzer](ImageAttribute.enableAnalyzer) interface > of the corresponding component (for example, [Image component](./image)). |
 | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Image AI analysis configuration item. |
 
 ### Enums

@@ -11,7 +11,7 @@ Process data as blob type
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## arrayBuffer
@@ -32,9 +32,9 @@ Puts the **Blob** data into an **ArrayBuffer** object. This API uses a promise t
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## Examples
 
@@ -68,9 +68,9 @@ A constructor used to create a **Blob** object.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob[]](arkts-arkts-buffer-blob-c.md) | Yes |
+| sources | string[] \| ArrayBuffer[] \| TypedArray[] \| DataView[] \| [Blob](arkts-arkts-buffer-blob-c.md)[] | Yes |
 | options | Object | No |
 
 ## Examples
@@ -106,7 +106,7 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | start | number | No |
 | end | number | No |
@@ -114,7 +114,7 @@ Creates and returns a **Blob** object that contains specified data from this **B
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](arkts-arkts-util-type-e.md) |
 | --- |
 | [Blob](arkts-arkts-buffer-blob-c.md) |
 
@@ -147,9 +147,9 @@ Decodes data using UTF-8 and returns a string. This API uses a promise to return
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 

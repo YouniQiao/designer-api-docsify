@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.reminderAgentManager:reminderAgentManager.MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
+**替代接口：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#MaxScreenWantAgent)
 
 <!--Device-reminderAgent-interface MaxScreenWantAgent--><!--Device-reminderAgent-interface MaxScreenWantAgent-End-->
 
@@ -26,7 +26,7 @@ abilityName: string
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.MaxScreenWantAgent.abilityName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#abilityname)
+**替代接口：** [abilityName](reminderAgentManager.MaxScreenWantAgent.abilityName)
 
 <!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
@@ -46,7 +46,7 @@ pkgName: string
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.MaxScreenWantAgent.pkgName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#pkgname)
+**替代接口：** [pkgName](reminderAgentManager.MaxScreenWantAgent.pkgName)
 
 <!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 

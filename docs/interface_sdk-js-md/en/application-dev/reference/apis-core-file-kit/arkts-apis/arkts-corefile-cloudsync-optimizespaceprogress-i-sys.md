@@ -15,7 +15,7 @@ Represents the space optimization states and optimization progress.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## progress

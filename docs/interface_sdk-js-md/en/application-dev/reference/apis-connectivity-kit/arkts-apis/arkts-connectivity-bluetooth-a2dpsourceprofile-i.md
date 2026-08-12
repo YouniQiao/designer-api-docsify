@@ -2,7 +2,7 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md#BaseProfile)
 
 **Since:** 7
 
@@ -10,7 +10,7 @@ Manager a2dp source profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile
+**Substitutes:** [A2dpSourceProfile](ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile)
 
 <!--Device-bluetooth-interface A2dpSourceProfile extends BaseProfile--><!--Device-bluetooth-interface A2dpSourceProfile extends BaseProfile-End-->
 
@@ -19,7 +19,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -36,7 +36,7 @@ Connect to device with a2dp.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile#connect
+**Substitutes:** [connect](ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile#connect)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -70,7 +70,7 @@ Disconnect to device with a2dp.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile#disconnect
+**Substitutes:** [disconnect](ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile#disconnect)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -104,7 +104,7 @@ Obtains the playing state of device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile#getPlayingState
+**Substitutes:** [getPlayingState](ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile#getPlayingState)
 
 <!--Device-A2dpSourceProfile-getPlayingState(device: string): PlayingState--><!--Device-A2dpSourceProfile-getPlayingState(device: string): PlayingState-End-->
 
@@ -120,7 +120,7 @@ Obtains the playing state of device.
 
 | Type | Description |
 | --- | --- |
-| [PlayingState](arkts-connectivity-a2dp-playingstate-e.md) | Returns { |
+| PlayingState | Returns { |
 
 ## off('connectionStateChange')
 
@@ -136,7 +136,7 @@ Unsubscribe the event reported when the profile connection state changes .
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile.off#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile.off#event:connectionStateChange)
 
 <!--Device-A2dpSourceProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void--><!--Device-A2dpSourceProfile-off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void-End-->
 
@@ -147,7 +147,7 @@ Unsubscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | No | Callback used to listen for event. |
 
 ## on('connectionStateChange')
 
@@ -163,7 +163,7 @@ Subscribe the event reported when the profile connection state changes .
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile.on#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetoothManager/bluetoothManager.A2dpSourceProfile.on#event:connectionStateChange)
 
 <!--Device-A2dpSourceProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void--><!--Device-A2dpSourceProfile-on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void-End-->
 
@@ -174,5 +174,5 @@ Subscribe the event reported when the profile connection state changes .
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionStateChange' | Yes | Type of the profile connection state changes event to listen for . |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StateChangeParam&gt; | Yes | Callback used to listen for event. |
 

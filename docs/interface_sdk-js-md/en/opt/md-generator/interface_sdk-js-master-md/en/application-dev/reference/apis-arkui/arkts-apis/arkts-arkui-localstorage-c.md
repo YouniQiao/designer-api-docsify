@@ -21,7 +21,7 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 
 **Deprecated since:** 10
 
-**Substitutes:** [LocalStorage#getShared](arkts-arkui-localstorage-c.md#getshared)
+**Substitutes:** [getShared](#getShared)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +37,12 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 | --- |
 | [LocalStorage](arkts-arkui-localstorage-c.md) |
 
+## Examples
+
+```TypeScript
+let storage: LocalStorage = LocalStorage.GetShared();
+```
+
 ## clear
 
 ```TypeScript
@@ -46,7 +52,7 @@ clear(): boolean
 Deletes all properties from [LocalStorage](../../../ui/state-management/arkts-localstorage.md). The deletion is only successful if none of the properties in LocalStorage have any subscribers. If there are subscribers, this API does not take effect and **false** is returned. If there are no subscribers, the deletion is successful and  
 **true** is returned.
 
-For details about the subscriber, see [delete](arkts-arkui-localstorage-c.md#delete).
+For details about the subscriber, see [delete](#delete).
 
 **Since:** 9
 
@@ -63,6 +69,14 @@ For details about the subscriber, see [delete](arkts-arkui-localstorage-c.md#del
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: boolean = storage.clear(); // true: There are no subscribers.
+```
 
 ## constructor
 
@@ -88,6 +102,13 @@ Creates a [LocalStorage](../../../ui/state-management/arkts-localstorage.md) ins
 | --- | --- | --- |
 | initializingProperties | Object | No |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+```
+
 ## delete
 
 ```TypeScript
@@ -103,15 +124,15 @@ The property subscribers include the following:
 [\@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink) or  
 [\@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)
 
-2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)returned by [link](arkts-arkui-localstorage-c.md#link), [prop](arkts-arkui-localstorage-c.md#prop),  
-[setAndLink](arkts-arkui-localstorage-c.md#setandlink), or [setAndProp](arkts-arkui-localstorage-c.md#setandprop)
+2. Instances of [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty)returned by [link](#link), [prop](#prop),  
+[setAndLink](#setAndLink), or [setAndProp](#setAndProp)
 
 To delete these subscribers:
 
 1. Remove the custom component containing \@LocalStorageLink or \@LocalStorageProp.For details, see  
 [Custom Component Deletion](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#custom-component-deletion).
 
-2. Call the [aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted) API on instances of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**, or **setAndProp**.
+2. Call the [aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#aboutToBeDeleted) API on instances of **SubscribedAbstractProperty** returned by **link**, **prop**, **setAndLink**, or **setAndProp**.
 
 **Since:** 9
 
@@ -134,6 +155,18 @@ To delete these subscribers:
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+storage.link<number>('PropA');
+let res: boolean = storage.delete('PropA'); // false: PropA still has subscribers.
+let res1: boolean = storage.delete('PropB'); // false: PropB does not exist in LocalStorage.
+storage.setOrCreate('PropB', 48);
+let res2: boolean = storage.delete('PropB'); // true: PropB is successfully deleted from LocalStorage.
+```
 
 ## get
 
@@ -166,6 +199,14 @@ Obtains the value of the property corresponding to **propName** from
 | --- |
 | T |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let value: number = storage.get('PropA') as number; // 47
+```
+
 ## getShared
 
 ```TypeScript
@@ -177,14 +218,14 @@ Obtains the [LocalStorage](../../../ui/state-management/arkts-localstorage.md) i
 > **NOTE：**
 
 > Since API version 12, you can use the
-> [getSharedLocalStorage](getSharedLocalStorage)
-> API in [UIContext](arkts-arkui-uicontext.md) to specify the UI execution context.
+> [getSharedLocalStorage](@link getSharedLocalStorage)
+> API in [UIContext](@ohos.arkui.UIContext) to specify the UI execution context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#getSharedLocalStorage
+**Substitutes:** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -233,6 +274,14 @@ Checks whether the property corresponding to **propName** exists in
 | --- |
 | boolean |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+storage.has('PropA'); // true
+```
+
 ## keys
 
 ```TypeScript
@@ -255,7 +304,15 @@ Obtains all property names in [LocalStorage](../../../ui/state-management/arkts-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;string&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;string&gt; |
+
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let keys: IterableIterator<string> = storage.keys();
+```
 
 ## link
 
@@ -292,6 +349,16 @@ If the given property does not exist in LocalStorage, **undefined** is returned.
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let linkToPropA1: SubscribedAbstractProperty<number> = storage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = storage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // Two-way synchronization: linkToPropA1.get() == linkToPropA2.get() == 48
+```
+
 ## prop
 
 ```TypeScript
@@ -324,6 +391,16 @@ Establishes a one-way data binding with the property corresponding to **propName
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let prop1: SubscribedAbstractProperty<number> = storage.prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = storage.prop('PropA');
+prop1.set(1); // One-way synchronization: prop1.get() returns 1, while prop2.get() returns 47.
+```
+
 ## ref
 
 ```TypeScript
@@ -333,7 +410,7 @@ public ref<T>(propName: string): AbstractProperty<T> | undefined
 Returns a reference to the property corresponding to **propName** in  
 [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the provided **propName** does not exist,this API returns **undefined**.
 
-This API is similar to [link](arkts-arkui-localstorage-c.md#link) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
+This API is similar to [link](#link) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md#AbstractProperty) type.
 
 **Since:** 12
 
@@ -396,13 +473,22 @@ Sets the value of the property corresponding to **propName** in
 | --- |
 | boolean |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: boolean = storage.set('PropA', 47); // true
+let res1: boolean = storage.set('PropB', 47); // false
+```
+
 ## setAndLink
 
 ```TypeScript
 setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-Similar to the [link](arkts-arkui-localstorage-c.md#link) API, establishes a two-way data binding with the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property exists in LocalStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in LocalStorage using **defaultValue** and returns its two-way bound data.
+Similar to the [link](#link) API, establishes a two-way data binding with the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property exists in LocalStorage, this API returns the two-way bound data for the property. If the given property does not exist, this API creates and initializes the property in LocalStorage using **defaultValue** and returns its two-way bound data.
 
 > **NOTE：**
 
@@ -436,13 +522,22 @@ Similar to the [link](arkts-arkui-localstorage-c.md#link) API, establishes a two
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let link1: SubscribedAbstractProperty<number> = storage.setAndLink('PropB', 49); // Create PropB with the default value 49.
+let link2: SubscribedAbstractProperty<number> = storage.setAndLink('PropA', 50); // PropA already exists with the value 47.
+```
+
 ## setAndProp
 
 ```TypeScript
 setAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 ```
 
-Similar to the [prop](arkts-arkui-localstorage-c.md#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property exists in LocalStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in LocalStorage using **defaultValue** and returns its one-way bound data.
+Similar to the [prop](#prop) API, establishes a one-way data binding with the property corresponding to **propName** in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property exists in LocalStorage, this API returns the one-way bound data for the property. If the given property does not exist, this API creates and initializes the property in LocalStorage using **defaultValue** and returns its one-way bound data.
 
 > **NOTE：**
 
@@ -476,6 +571,14 @@ Similar to the [prop](arkts-arkui-localstorage-c.md#prop) API, establishes a one
 | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let prop: SubscribedAbstractProperty<number> = storage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
+
 ## setAndRef
 
 ```TypeScript
@@ -484,7 +587,7 @@ public setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 
 Similar to the [ref](arkts-arkui-appstorage-c.md#ref) API, returns a reference to the property corresponding to **propName**in [LocalStorage](../../../ui/state-management/arkts-localstorage.md). If the given property does not exist, this API creates and initializes the property in LocalStorage using **defaultValue** and returns its reference.
 
-This API is similar to [setAndLink](arkts-arkui-localstorage-c.md#setandlink) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md) type.
+This API is similar to [setAndLink](#setAndLink) but does not require manually releasing the returned variable of the [AbstractProperty](arkts-arkui-abstractproperty-i.md#AbstractProperty) type.
 
 > **NOTE：**
 
@@ -559,6 +662,16 @@ If the property does not exist, this API creates it with the value of **newValue
 | --- |
 | boolean |
 
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: boolean = storage.setOrCreate('PropA', 121); // true
+let res1: boolean = storage.setOrCreate('PropB', 111); // true
+let res2: boolean = storage.setOrCreate('PropB', null); // true (returns true since API version 12, and returns false in API version 11 and earlier)
+```
+
 ## size
 
 ```TypeScript
@@ -582,3 +695,11 @@ Obtains the number of properties in [LocalStorage](../../../ui/state-management/
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
+
+## Examples
+
+```TypeScript
+let initialData: Record<string, number> = { 'PropA': 47 };
+let storage: LocalStorage = new LocalStorage(initialData);
+let res: number = storage.size(); // 1
+```

@@ -15,7 +15,7 @@ forceDistributed?: boolean
 ```
 
 通知是否强制进行全场景跨设备协同显示，默认为false。具体请参考  
-[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#forcedistributed)
+[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md#forceDistributed)
 
 - 设置为true时：通知将在所有协同设备上显示。  
 - 设置为false时：通知将按照协同管控名单显示。
@@ -41,7 +41,7 @@ notDistributed?: boolean
 ```
 
 通知是否不进行全场景跨设备协同显示，默认为false。具体请参考  
-[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#notdistributed)
+[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md#notDistributed)
 
 - 设置为true时：通知仅在本设备上显示。  
 - 设置为false时：通知将在所有协同设备上显示。

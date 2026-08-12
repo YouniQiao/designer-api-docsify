@@ -11,7 +11,7 @@ Class to be override for external crypto extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
 ```
 
 ## onAuthUkeyPin
@@ -34,13 +34,13 @@ Callback to be called to verify PIN of the provider handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | handle | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | Yes |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onClearUkeyPinAuthState
 
@@ -62,13 +62,13 @@ Callback to clear the PIN auth state of the provider handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | handle | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | Yes |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onCloseResource
 
@@ -90,13 +90,13 @@ Callback to be called to close the resource handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | handle | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | Yes |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onEnumCertificates
 
@@ -117,13 +117,13 @@ Callback to list all certificates of the provider.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | No |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onExportCertificate
 
@@ -145,13 +145,13 @@ Callback to export certificates specified by the resource id.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resourceId | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | No |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onExportKeyItem
 
@@ -180,7 +180,7 @@ Callback to export the public key specified by the resource handle.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onFinishSession
 
@@ -208,7 +208,7 @@ Callback to do the finish operation.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onGenerateKeyItem
 
@@ -237,7 +237,7 @@ Callback to generate a key pair specified by the resource handle.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onGetProperty
 
@@ -260,13 +260,13 @@ Callback to be called to do general get operations of the provider.
 | --- | --- | --- |
 | handle | string | Yes |
 | propertyId | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | Yes |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onGetResourceId
 
@@ -294,7 +294,7 @@ Callback to get the resource ID of the crypto extension.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onGetUkeyPinAuthState
 
@@ -316,13 +316,13 @@ Callback to get the PIN auth state of the provider handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | handle | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | Yes |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onImportCertificate
 
@@ -347,13 +347,13 @@ Callback to import a certificate specified by the resource handle.
 | --- | --- | --- |
 | handle | string | Yes |
 | params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
-| certInfo | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | Yes |
+| [certInfo](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-cmresult-i.md) | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onImportWrappedKeyItem
 
@@ -379,13 +379,13 @@ Callback to import the wrapped key pair specified by the resource handle.
 | handle | string | Yes |
 | wrappingHandle | string | Yes |
 | params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
-| wrappedKey | Uint8Array | Yes |
+| [wrappedKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-kemencapresult-i.md) | Uint8Array | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onInitSession
 
@@ -413,7 +413,7 @@ Callback to do the initialize operation.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onOpenResource
 
@@ -435,13 +435,13 @@ Callback to be called to open the resource handle before crypto operations.NOTE:
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resourceId | string | Yes |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | Yes |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onSetProperty
 
@@ -472,7 +472,7 @@ Callback to perform set operations of the provider.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## onUpdateSession
 
@@ -500,4 +500,4 @@ Callback to do update operation.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |

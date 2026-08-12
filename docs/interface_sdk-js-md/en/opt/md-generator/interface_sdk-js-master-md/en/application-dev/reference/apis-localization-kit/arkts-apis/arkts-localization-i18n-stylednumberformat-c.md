@@ -11,7 +11,7 @@ Provide a number formatting interface which could format number to StyleString.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -85,7 +85,7 @@ Creates a **NumberFormat** object for rich text display.
 
 **Deprecated since:** 20
 
-**Substitutes:** [i18n.StyledNumberFormat.constructor](arkts-localization-i18n-stylednumberformat-c.md#constructor)(numberFormat:
+**Substitutes:** [constructor](i18n.StyledNumberFormat.constructor(numberFormat:)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

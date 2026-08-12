@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## create
@@ -20,7 +20,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**Substitutes:** [createWindow](window.createWindow(config:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,7 +34,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 | --- | --- | --- |
 | id | string | Yes |
 | type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -68,7 +68,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**Substitutes:** [createWindow](window.createWindow(config:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -87,7 +87,7 @@ The child window created uses an [immersive layout](../../../windowmanager/windo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Window&gt; |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
 ## Examples
 
@@ -117,7 +117,7 @@ Creates a system window. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**Substitutes:** [createWindow](window.createWindow(config:)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>-End-->
 
@@ -127,7 +127,7 @@ Creates a system window. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
+| [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
 | id | string | Yes |
 | type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes |
 
@@ -135,7 +135,7 @@ Creates a system window. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Window&gt; |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
 ## Examples
 
@@ -165,7 +165,7 @@ Creates a system window. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**Substitutes:** [createWindow](window.createWindow(config:)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void-End-->
 
@@ -175,10 +175,10 @@ Creates a system window. This API uses an asynchronous callback to return the re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
+| [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes |
 | id | string | Yes |
 | type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Yes |
 
 ## Examples
 

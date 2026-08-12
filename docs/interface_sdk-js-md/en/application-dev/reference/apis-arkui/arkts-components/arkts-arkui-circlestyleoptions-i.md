@@ -20,7 +20,7 @@ Color of the background circle.
 
 Default value: **'#33182431'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Radius of the background circle.
 
 Default value: 1.833 times (that is, 11/6) of the value of [circleRadius](PatternLockAttribute#circleRadius)
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 

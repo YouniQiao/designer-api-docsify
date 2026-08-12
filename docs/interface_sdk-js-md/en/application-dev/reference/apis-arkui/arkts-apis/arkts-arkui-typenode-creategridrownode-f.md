@@ -28,5 +28,5 @@ Create a FrameNode of GridRow type.
 
 | Type | Description |
 | --- | --- |
-| [GridRow](arkts-arkui-typenode-gridrow-t.md) | Return GridRow type FrameNode. |
+| GridRow | Return GridRow type FrameNode. |
 

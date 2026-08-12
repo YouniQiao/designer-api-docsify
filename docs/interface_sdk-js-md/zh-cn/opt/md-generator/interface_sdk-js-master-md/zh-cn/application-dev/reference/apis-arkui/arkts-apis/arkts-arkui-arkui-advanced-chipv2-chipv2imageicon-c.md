@@ -2,9 +2,9 @@
 
 ChipV2ImageIcon定义图标图片的基类。
 
-继承自[ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)。
+继承自[ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md#ChipV2Icon)。
 
-**继承/实现关系：** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
+**继承/实现关系：** ChipV2ImageIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md#ChipV2Icon)
 
 **起始版本：** 26.0.0
 
@@ -52,7 +52,7 @@ ChipV2激活时图标填充颜色。
 
 仅在图片格式为SVG时，activatedFillColor属性才生效。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ public fillColor?: ColorMetrics
 
 仅在图片格式为SVG时，fillColor属性才生效。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 26.0.0
 
@@ -131,7 +131,7 @@ sys.float.chip_normal_icon_size')}。
 
 值为undefined时，按默认值处理。
 
-**类型：** [SizeT](../arkts-components/arkts-arkui-sizet-t.md)&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
+**类型：** SizeT&lt;LengthMetrics&gt;
 
 **起始版本：** 26.0.0
 

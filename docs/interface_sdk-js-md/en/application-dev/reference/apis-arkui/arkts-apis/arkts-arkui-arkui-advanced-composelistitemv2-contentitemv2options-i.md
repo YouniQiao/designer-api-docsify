@@ -13,7 +13,7 @@ Declare interface ContentItemV2Options
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from '@kit.ArkUI';
 ```
 
 ## description
@@ -24,7 +24,7 @@ description?: ResourceStr
 
 Sets the description.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ icon?: ResourceStr
 
 Sets the icon.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ primaryText?: ResourceStr
 
 Sets the primaryText.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ secondaryText?: ResourceStr
 
 Sets the secondaryText.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

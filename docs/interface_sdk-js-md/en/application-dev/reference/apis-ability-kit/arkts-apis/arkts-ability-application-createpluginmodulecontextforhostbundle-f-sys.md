@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createPluginModuleContextForHostBundle
@@ -33,7 +33,7 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | Application context. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Application context. |
 | pluginBundleName | string | Yes | Bundle name of the plugin. |
 | pluginModuleName | string | Yes | Module name of the plugin. |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is installed. |
@@ -42,14 +42,14 @@ Creates the context for a plugin based on a given context, plugin bundle name, p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; | Promise used to return the context created, in which the **processName** and **config** properties are the same as those of the input context. |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; | Promise used to return the context created, in which the **processName** and **config** properties are the same as those of the input context. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

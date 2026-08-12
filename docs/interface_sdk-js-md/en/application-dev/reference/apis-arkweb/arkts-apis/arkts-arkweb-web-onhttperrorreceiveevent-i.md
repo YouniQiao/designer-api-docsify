@@ -36,7 +36,7 @@ response: WebResourceResponse
 
 Web resource response of event.
 
-**Type:** [WebResourceResponse](../arkts-components/arkts-arkweb-webresourceresponse-c.md)
+**Type:** [WebResourceResponse](arkts-arkweb-web-webresourceresponse-c.md)
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ Represents statistics about SQL statements executed by the database.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## executeTime
@@ -52,7 +52,7 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 sql: Array<string>
 ```
 
-SQL statements executed. If the value of [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert) is too large, multiple SQL statements may be executed.
+SQL statements executed. If the value of [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert) is too large, multiple SQL statements may be executed.
 
 **Type:** Array&lt;string&gt;
 

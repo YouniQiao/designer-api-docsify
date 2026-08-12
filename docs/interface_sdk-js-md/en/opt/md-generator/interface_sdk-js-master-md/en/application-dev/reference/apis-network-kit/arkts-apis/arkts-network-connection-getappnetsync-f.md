@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getAppNetSync
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function getAppNetSync(): NetHandle
 ```
 
-Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
+Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
 
 **Since:** 10
 
@@ -30,8 +30,8 @@ Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 | Error Code ID |
 | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 

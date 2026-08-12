@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## removeFirewallRule
@@ -16,10 +16,10 @@ Removes a firewall rule. This API is suitable for enterprise network security po
 
 In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
 
-[LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
+[LogType](arkts-mdm-networkmanager-logtype-e.md#LogType) is supported since API version 23.
 
-If there is no rule with [Action](arkts-mdm-networkmanager-action-e.md) being **ALLOW** after the rule is removed, the  
-**DENY** rules that are added by default with [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md#addfirewallrule) will be removed.
+If there is no rule with [Action](arkts-mdm-networkmanager-action-e.md#Action) being **ALLOW** after the rule is removed, the  
+**DENY** rules that are added by default with [addFirewallRule](arkts-mdm-networkmanager-addfirewallrule-f.md#addFirewallRule) will be removed.
 
 **Since:** 12
 
@@ -42,10 +42,10 @@ If there is no rule with [Action](arkts-mdm-networkmanager-action-e.md) being **
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

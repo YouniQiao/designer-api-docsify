@@ -12,7 +12,7 @@ Unsubscribes from common events. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.commonEventManager:commonEventManager.unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe)
+**Substitutes:** [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe)
 
 <!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
 

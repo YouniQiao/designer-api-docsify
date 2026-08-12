@@ -1,8 +1,8 @@
 # PhotoOutput
 
-拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
-**继承/实现关系：** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**继承/实现关系：** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **起始版本：** 10
 
@@ -17,7 +17,7 @@ burstCapture(setting: PhotoCaptureSetting): Promise<void>
 ```
 
 Starts the burst mode, in which users can capture a series of photos in quick succession. This API is generally used in photo mode. After the burst mode starts, the bottom layer continues displaying photos. You can call  
-[confirmCapture](arkts-camera-camera-photooutput-i-sys.md#confirmcapture) to cancel the burst mode. This API uses a promise to return the result.
+[confirmCapture](#confirmCapture) to cancel the burst mode. This API uses a promise to return the result.
 
 **起始版本：** 12
 
@@ -37,16 +37,16 @@ Starts the burst mode, in which users can capture a series of photos in quick su
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -80,7 +80,7 @@ confirmCapture(): void
 ```
 
 Confirms photo capture. This API is generally used in night photo mode when users need to stop the exposure countdown and take a photo in advance.This API is used to end the burst mode, which is started by calling  
-[burstCapture](arkts-camera-camera-photooutput-i-sys.md#burstcapture).
+[burstCapture](#burstCapture).
 
 **起始版本：** 11
 
@@ -94,9 +94,9 @@ Confirms photo capture. This API is generally used in night photo mode when user
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -139,10 +139,10 @@ Enables deferred delivery of a certain type.
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -178,9 +178,9 @@ Enable auto cloud image enhancement
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableAutoHighQualityPhoto
 
@@ -189,7 +189,7 @@ enableAutoHighQualityPhoto(enabled: boolean): void
 ```
 
 Enables automatic high quality for photos. Before using this API, call  
-[isAutoHighQualityPhotoSupported](arkts-camera-camera-photooutput-i-sys.md#isautohighqualityphotosupported) to check whether automatic high quality is supported.
+[isAutoHighQualityPhotoSupported](#isAutoHighQualityPhotoSupported) to check whether automatic high quality is supported.
 
 **起始版本：** 13
 
@@ -209,10 +209,10 @@ Enables automatic high quality for photos. Before using this API, call
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -250,10 +250,10 @@ Enable depth data delivery.
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableOffline
 
@@ -275,9 +275,9 @@ Enable offline processing.
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableOriginalImageGeneration
 
@@ -307,8 +307,8 @@ Enable original image generation.
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableQuickThumbnail
 
@@ -316,9 +316,9 @@ Enable original image generation.
 enableQuickThumbnail(enabled: boolean): void
 ```
 
-Enables or disables the quick thumbnail feature.This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addoutput) and  
-[addInput](arkts-camera-camera-session-i.md#addinput) and before  
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig).
+Enables or disables the quick thumbnail feature.This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addOutput) and  
+[addInput](arkts-camera-camera-session-i.md#addInput) and before  
+[commitConfig](arkts-camera-camera-session-i.md#commitConfig).
 
 **起始版本：** 10
 
@@ -338,10 +338,10 @@ Enables or disables the quick thumbnail feature.This API takes effect after [add
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -404,10 +404,10 @@ Enable raw image image delivery.
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isAutoCloudImageEnhancementSupported
 
@@ -435,8 +435,8 @@ Confirm if the auto cloud image enhancement is supported.
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isAutoHighQualityPhotoSupported
 
@@ -464,9 +464,9 @@ Checks whether automatic high quality is supported for photos.
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -510,10 +510,10 @@ Checks whether deferred delivery of a certain type is enabled.
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -557,10 +557,10 @@ Checks whether deferred delivery of a certain type is supported.
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -598,9 +598,9 @@ Check if the depth data delivery is supported.
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isOfflineSupported
 
@@ -628,8 +628,8 @@ Confirm if offline processing is supported.
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isOriginalImageGenerationSupported
 
@@ -659,8 +659,8 @@ Confirm if original image generation supported.
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isQuickThumbnailSupported
 
@@ -668,9 +668,9 @@ Confirm if original image generation supported.
 isQuickThumbnailSupported(): boolean
 ```
 
-Checks whether the quick thumbnail feature is supported.This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addoutput) and  
-[addInput](arkts-camera-camera-session-i.md#addinput) and before  
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig).
+Checks whether the quick thumbnail feature is supported.This API takes effect after [addOutput](arkts-camera-camera-session-i.md#addOutput) and  
+[addInput](arkts-camera-camera-session-i.md#addInput) and before  
+[commitConfig](arkts-camera-camera-session-i.md#commitConfig).
 
 **起始版本：** 10
 
@@ -690,8 +690,8 @@ Checks whether the quick thumbnail feature is supported.This API takes effect af
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -754,9 +754,9 @@ Confirm if the raw image delivery is supported
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## off('deferredPhotoProxyAvailable')
 
@@ -779,13 +779,13 @@ Unsubscribes from events indicating available thumbnail proxies.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredPhotoProxy&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -866,7 +866,7 @@ Unsubscribes offline Delivery finished events.This method is valid only after en
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## on('deferredPhotoProxyAvailable')
 
@@ -889,13 +889,13 @@ Subscribes to events indicating available thumbnail proxies. This API uses an as
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'deferredPhotoProxyAvailable' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeferredPhotoProxy&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DeferredPhotoProxy](arkts-camera-camera-deferredphotoproxy-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1015,7 +1015,7 @@ Subscribes offline Delivery finished events.This method is valid only after enab
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setEditData
 
@@ -1045,5 +1045,5 @@ Set edit data.
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

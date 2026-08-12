@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getDate
@@ -18,7 +18,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate)
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -68,7 +68,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
+**Substitutes:** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getDate)
 
 <!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
 
@@ -78,7 +78,7 @@ Obtains the current system date. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Date&gt; |
+| Promise & lt;Date & gt; |
 
 **Error codes:**
 

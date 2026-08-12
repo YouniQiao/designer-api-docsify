@@ -21,4 +21,4 @@ Callback function when the shortcut key registered by the system application mee
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes |
-| keyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
+| [keyEvent](arkts-input-inputeventclient-keyeventdata-i.md) | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |

@@ -28,10 +28,10 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 | 类型 |
 | --- |
-| Array&lt;colorSpaceManager.ColorSpace&gt; |
+| Array & lt;colorSpaceManager.ColorSpace & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |

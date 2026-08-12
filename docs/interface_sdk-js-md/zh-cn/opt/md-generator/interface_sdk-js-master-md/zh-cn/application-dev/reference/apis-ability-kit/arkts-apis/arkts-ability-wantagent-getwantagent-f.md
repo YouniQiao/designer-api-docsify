@@ -21,15 +21,15 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [WantAgentInfo](arkts-ability-wantagent-wantagentinfo-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000007](../errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-服务未响应) |
+| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
 
 ## 示例
 
@@ -112,15 +112,15 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | 类型 |
 | --- |
-| Promise&lt;WantAgent&gt; |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000007](../errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-服务未响应) |
+| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
 
 ## 示例
 

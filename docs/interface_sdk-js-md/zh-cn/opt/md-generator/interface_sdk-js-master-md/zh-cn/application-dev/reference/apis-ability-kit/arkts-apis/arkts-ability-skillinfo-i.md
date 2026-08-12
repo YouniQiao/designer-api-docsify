@@ -176,7 +176,7 @@ readonly skillType: SkillType
 
 Skill类型。
 
-**类型：** [SkillType](arkts-ability-skillmanager-skilltype-t.md)
+**类型：** [SkillType](arkts-ability-skillinfo-skilltype-e.md)
 
 **起始版本：** 26.0.0
 

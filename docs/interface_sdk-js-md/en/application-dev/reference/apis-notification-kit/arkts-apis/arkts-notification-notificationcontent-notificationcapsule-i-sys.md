@@ -22,7 +22,7 @@ capsuleButtons?: Array<NotificationIconButton>
 
 Buttons of the notification capsule of an instant task. A maximum of two buttons are supported. This parameter is left empty by default.
 
-**Type:** Array&lt;NotificationIconButton&gt;
+**Type:** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
 **Since:** 18
 

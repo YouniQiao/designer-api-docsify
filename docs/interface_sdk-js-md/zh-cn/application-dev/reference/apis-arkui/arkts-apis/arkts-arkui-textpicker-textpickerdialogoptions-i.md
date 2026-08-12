@@ -1,10 +1,10 @@
 # TextPickerDialogOptions
 
-文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)。
+文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md#TextPickerOptions)。
 
 默认值： { color: \$r('sys.color.comp_background_tertiary'), borderRadius: \$r('sys.float.corner_radius_level12') }
 
-**继承/实现关系：** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)
+**继承/实现关系：** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md#TextPickerOptions)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ onAccept?: (value: TextPickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextPickerResult](../arkts-components/arkts-arkui-textpickerresult-i.md) | 是 |  |
+| value | [TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md) | 是 |  |
 
 ## onCancel
 
@@ -80,7 +80,7 @@ onChange?: (value: TextPickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextPickerResult](../arkts-components/arkts-arkui-textpickerresult-i.md) | 是 |  |
+| value | [TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md) | 是 |  |
 
 ## onDidAppear
 
@@ -218,7 +218,7 @@ alignment?: DialogAlignment
 
 默认值：DialogAlignment.Default
 
-**类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**类型：** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **默认值：** DialogAlignment.Default
 
@@ -415,9 +415,9 @@ defaultTextStyle?: TextPickerTextStyle
 
 设置关闭滑动过程中文本样式变化动效时的各个选项的文本样式，仅当disableTextStyleAnimation为true时生效。
 
-默认值：与[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件默认值相同。
+默认值：与[Text](./text)组件默认值相同。
 
-**类型：** [TextPickerTextStyle](../arkts-components/arkts-arkui-textpickertextstyle-i.md)
+**类型：** [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
 
 **起始版本：** 23
 
@@ -444,7 +444,7 @@ disableTextStyleAnimation?: boolean
 
 **说明：**
 
-设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle，则显示为[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件默认样式。
+设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle，则显示为[Text](./text)组件默认样式。
 
 **类型：** boolean
 
@@ -598,7 +598,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **默认值：** { dx: 0 , dy: 0 }
 
@@ -624,7 +624,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **起始版本：** 23
 
@@ -644,7 +644,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 滑动弹窗中的选择器的选择列停止时，触发该回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **起始版本：** 23
 
@@ -688,7 +688,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 23
 

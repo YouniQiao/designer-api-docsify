@@ -80,7 +80,7 @@ Binds a navigation controller to the **Navigation** component, suitable for page
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | Navigation controller object. |
+| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Navigation controller object. |
 
 ## Navigation
 
@@ -108,8 +108,8 @@ Binds a routing stack to the **Navigation** component and specifies a **NavDesti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Yes | Information about the routing stack. |
-| homeDestination | [HomePathInfo](../arkts-apis/arkts-arkui-navigation-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
+| pathInfos | [NavPathStack](arkts-arkui-navpathstack-c.md) | Yes | Information about the routing stack. |
+| homeDestination | [HomePathInfo](arkts-arkui-homepathinfo-i.md) | Yes | Home page **NavDestination** information. |
 
 ## Summary
 

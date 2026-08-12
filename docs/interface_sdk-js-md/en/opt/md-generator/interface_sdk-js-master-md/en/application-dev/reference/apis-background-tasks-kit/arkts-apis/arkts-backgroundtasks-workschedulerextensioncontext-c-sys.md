@@ -1,12 +1,12 @@
 # WorkSchedulerExtensionContext
 
 The **WorkSchedulerExtensionContext** module, inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md), provides a context environment for the   
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), provides a context environment for the   
 **WorkSchedulerExtensionAbility**.
 
 This module provides APIs for accessing the resources of a **WorkSchedulerExtensionAbility**.
 
-**Inheritance/Implementation:** WorkSchedulerExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** WorkSchedulerExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 10
 
@@ -42,26 +42,55 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
+| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want : Want = {
+  bundleName: 'com.example.workscheduler',
+  abilityName: 'ServiceExtAbility'
+}
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStart(workInfo: workScheduler.WorkInfo) {
+    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
+      // Start the corresponding service.
+      this.context.startServiceExtensionAbility(want).then(() => {
+        console.info('succeeded in starting ServiceExtensionAbility.');
+      }).catch ((err: BusinessError) => {
+        console.error('failed to start ServiceExtensionAbility.');
+      });
+  }
+
+  onWorkStop(workInfo: workScheduler.WorkInfo) {
+    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
+  }
+}
+```
 
 ## stopServiceExtensionAbility
 
@@ -91,20 +120,49 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { WorkSchedulerExtensionAbility, workScheduler } from '@kit.BackgroundTasksKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want : Want = {
+  bundleName: 'com.example.workscheduler',
+  abilityName: 'ServiceExtAbility'
+}
+
+export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
+  onWorkStart(workInfo: workScheduler.WorkInfo) {
+    console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
+  }
+
+  onWorkStop(workInfo: workScheduler.WorkInfo) {
+    console.info(`onWorkStop, workInfo is ${JSON.stringify(workInfo)}`);
+      // Stop the corresponding service.
+      this.context.stopServiceExtensionAbility(want).then(() => {
+        console.info('succeeded in stopping ServiceExtensionAbility.');
+      }).catch ((err: BusinessError) => {
+        console.error('failed to stop ServiceExtensionAbility.');
+      });
+  }
+}
+```

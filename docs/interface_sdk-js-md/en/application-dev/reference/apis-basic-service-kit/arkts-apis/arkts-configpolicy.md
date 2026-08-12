@@ -15,7 +15,7 @@ The **configPolicy** module provides APIs for obtaining the corresponding direct
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

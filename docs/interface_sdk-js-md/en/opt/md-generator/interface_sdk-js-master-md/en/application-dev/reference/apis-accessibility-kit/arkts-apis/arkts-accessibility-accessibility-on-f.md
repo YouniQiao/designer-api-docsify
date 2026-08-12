@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## on('accessibilityStateChange')
@@ -13,7 +13,7 @@ function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use   
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
 
 > **NOTE：**
 > 
@@ -21,7 +21,7 @@ Subscribes to the state changes of the accessibility application. This API uses 
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('accessibilityStateChange')](accessibility.off(type: 'accessibilityStateChange', callback?: Callback&lt;boolean&gt;))
+> [accessibility.off('accessibilityStateChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
@@ -45,7 +45,7 @@ Subscribes to the state changes of the accessibility application. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -68,7 +68,7 @@ function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use   
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
 
 > **NOTE：**
 > 
@@ -76,7 +76,7 @@ Subscribes to the state changes in touch guide mode. This API uses an asynchrono
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('touchGuideStateChange')](accessibility.off(type: 'touchGuideStateChange', callback?: Callback&lt;boolean&gt;))
+> [accessibility.off('touchGuideStateChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
@@ -100,7 +100,7 @@ Subscribes to the state changes in touch guide mode. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -130,7 +130,7 @@ Subscribes to the state changes of the screen reader. This API uses an asynchron
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('screenReaderStateChange')](accessibility.off(type: 'screenReaderStateChange', callback?: Callback&lt;boolean&gt;))
+> [accessibility.off('screenReaderStateChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 18
@@ -154,7 +154,7 @@ Subscribes to the state changes of the screen reader. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -181,7 +181,7 @@ Subscribes to the single- or double-touch event changes in touch guide mode. Thi
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('touchModeChange')](accessibility.off(type: 'touchModeChange', callback?: Callback&lt;string&gt;))
+> [accessibility.off('touchModeChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 20
@@ -205,7 +205,7 @@ Subscribes to the single- or double-touch event changes in touch guide mode. Thi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

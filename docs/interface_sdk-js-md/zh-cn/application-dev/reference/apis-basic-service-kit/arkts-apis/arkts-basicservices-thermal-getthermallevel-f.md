@@ -14,7 +14,7 @@ function getThermalLevel(): ThermalLevel
 
 **废弃版本：** 9
 
-**替代接口：** [thermal.getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel)
+**替代接口：** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getLevel)
 
 <!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
 

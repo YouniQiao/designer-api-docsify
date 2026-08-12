@@ -24,7 +24,7 @@ A linear data structure that is implemented on arrays and can be passed between 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -47,13 +47,13 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;T&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## at
 
@@ -87,8 +87,8 @@ Returns the element at a given index in this ArkTS array.
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## concat
 
@@ -110,20 +110,20 @@ Concatenates this ArkTS array with one or more arrays.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | [ConcatArray](arkts-arkts-collections-concatarray-i.md)&lt;T&gt;[] | Yes |
+| items | ConcatArray & lt;T & gt;[] | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## constructor
 
@@ -145,7 +145,7 @@ A constructor used to create an empty ArkTS array.
 
 | Error Code ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -174,7 +174,7 @@ A constructor used to create an ArkTS array with the given elements.
 
 | Error Code ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -202,7 +202,7 @@ A constructor used to create an ArkTS array with the given elements.
 
 | Error Code ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## copyWithin
 
@@ -232,14 +232,14 @@ Copies elements within a given range from this ArkTS array to another position i
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## create
 
@@ -268,13 +268,13 @@ Creates an ArkTS array of a fixed length, with each element set to a given initi
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## entries
 
@@ -296,14 +296,14 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[number, T]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, T]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## every
 
@@ -325,7 +325,7 @@ Checks whether all elements in this ArkTS array meet a given condition.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes |
 
 **Return value:**
 
@@ -337,8 +337,8 @@ Checks whether all elements in this ArkTS array meet a given condition.
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## extendTo
 
@@ -367,8 +367,8 @@ Extends this array to a given length by adding elements with the specified initi
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## fill
 
@@ -398,14 +398,14 @@ Fills elements in the specified range of this ArkTS array with a given value.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## filter
 
@@ -427,20 +427,20 @@ Returns a new array containing all elements that pass a test provided by a callb
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: Array&lt;T&gt;) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## find
 
@@ -462,7 +462,7 @@ Returns the value of the first element that passes a test provided by a callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, obj: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
@@ -474,8 +474,8 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## findIndex
 
@@ -497,7 +497,7 @@ Returns the index of the first element that passes a test provided by a callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, obj: Array & lt;T & gt;) = & gt; boolean | Yes |
 
 **Return value:**
 
@@ -509,8 +509,8 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## forEach
 
@@ -532,14 +532,14 @@ Calls a callback function for each element in this ArkTS Array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; void | Yes |
+| callbackFn | (value: T, index: number, array: Array & lt;T & gt;) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## from
 
@@ -561,19 +561,19 @@ Creates an ArkTS array from an array-like object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;T&gt;](arkts-arkts-arraylike-i.md) | Yes |
+| arrayLike | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## from
 
@@ -595,19 +595,19 @@ Creates an ArkTS array from an iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | Yes |
+| iterable | Iterable & lt;T & gt; | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## from
 
@@ -629,14 +629,14 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;T&gt; \](arkts-arkts-arraylike-i.md) | Iterable&lt;T&gt; | Yes |
+| arrayLike | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;T&gt; \| Iterable & lt;T & gt; | Yes |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -658,14 +658,14 @@ Creates an ArkTS array from an array-like object, and uses a custom function to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;U&gt; \](arkts-arkts-arraylike-i.md) | Iterable&lt;U&gt; | Yes |
+| arrayLike | [ArrayLike](../../apis-default/arkts-apis/arkts-lib-es5-arraylike-i.md)&lt;U&gt; \| Iterable & lt;U & gt; | Yes |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## includes
 
@@ -700,8 +700,8 @@ Checks whether this ArkTS array contains an element and returns a Boolean value.
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## indexOf
 
@@ -736,8 +736,8 @@ Returns the index of the first occurrence of a value in this ArkTS Array. If the
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## isArray
 
@@ -799,8 +799,8 @@ Concatenates all elements in this ArkTS array into a string, with a given separa
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## keys
 
@@ -822,14 +822,14 @@ Returns an iterator object that contains the index of each element in this ArkTS
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;number&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## lastIndexOf
 
@@ -864,8 +864,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS ar
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## map
 
@@ -887,20 +887,20 @@ Calls a callback function for each element in this ArkTS Array and returns a new
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; U | Yes |
+| callbackFn | (value: T, index: number, array: Array & lt;T & gt;) = & gt; U | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;U&gt; |
+| Array & lt;U & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## of
 
@@ -928,7 +928,7 @@ Creates an ArkTS array with a variable number of parameters.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## pop
 
@@ -956,8 +956,8 @@ Removes the last element from this ArkTS array and returns that element. If the 
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## push
 
@@ -991,8 +991,8 @@ Adds elements to the end of this ArkTS array and returns the new length of the a
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduce
 
@@ -1014,7 +1014,7 @@ Calls a callback function for each element in this ArkTS array, uses the previou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; T | Yes |
+| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array & lt;T & gt;) = & gt; T | Yes |
 
 **Return value:**
 
@@ -1026,8 +1026,8 @@ Calls a callback function for each element in this ArkTS array, uses the previou
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduce
 
@@ -1052,7 +1052,7 @@ Similar to the previous API, this API takes an initial value as the second param
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; U | Yes |
+| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array & lt;T & gt;) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -1065,8 +1065,8 @@ Similar to the previous API, this API takes an initial value as the second param
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduceRight
 
@@ -1075,7 +1075,7 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 ```
 
 This API is similar to the  
-[reduceRight](arkts-arkts-collections-array-c.md#reduceright) API, but it takes an initial value as the second parameter to initialize the accumulator before the array traversal starts from right to left.
+[reduceRight](#reduceRight) API, but it takes an initial value as the second parameter to initialize the accumulator before the array traversal starts from right to left.
 
 **Since:** 18
 
@@ -1102,8 +1102,8 @@ This API is similar to the
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reduceRight
 
@@ -1137,8 +1137,8 @@ Goes through each element in this ArkTS array from right to left, uses a callbac
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## reverse
 
@@ -1160,14 +1160,14 @@ Reverses elements in this ArkTS array and returns a reference to the same array.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## shift
 
@@ -1195,8 +1195,8 @@ Removes the first element from this ArkTS array and returns that element. If the
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## shrinkTo
 
@@ -1224,8 +1224,8 @@ Shrinks this ArkTS array to a given length.
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## slice
 
@@ -1254,14 +1254,14 @@ Selects a range of elements in this ArkTS array to create an array.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## some
 
@@ -1283,7 +1283,7 @@ Checks whether this ArkTS array contains an element that meets certain condition
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | Yes |
 
 **Return value:**
 
@@ -1295,8 +1295,8 @@ Checks whether this ArkTS array contains an element that meets certain condition
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## sort
 
@@ -1318,20 +1318,20 @@ Sorts elements in this ArkTS array and returns a new array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| compareFn | (a: T, b: T) =&gt; number | No |
+| compareFn | (a: T, b: T) = & gt; number | No |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## splice
 
@@ -1359,14 +1359,14 @@ Removes elements from a specified position (start) and all elements after the sp
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## splice
 
@@ -1396,14 +1396,14 @@ Removes elements from a specified position in an array, and inserts new elements
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## toLocaleString
 
@@ -1431,8 +1431,8 @@ Generates a string that matches the cultural conversions of the current system l
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## toString
 
@@ -1460,8 +1460,8 @@ Converts an ArkTS array into a string.
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## unshift
 
@@ -1495,8 +1495,8 @@ Adds elements to the beginning of this ArkTS array and returns the new length of
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## values
 
@@ -1518,14 +1518,14 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;T&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## [index: number]
 

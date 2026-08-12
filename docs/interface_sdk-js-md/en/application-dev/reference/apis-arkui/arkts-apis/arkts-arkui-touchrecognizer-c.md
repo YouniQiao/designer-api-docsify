@@ -80,7 +80,7 @@ Returns whether the node bound to the current touch gesture recognizer is a desc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
+| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getUniqueId) API. |
 
 **Return value:**
 

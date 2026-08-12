@@ -50,6 +50,53 @@ Sets a round mask.
 | --- | --- | --- |
 | circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setCircleShape({ centerY: uiContext.vp2px(75), centerX: uiContext.vp2px(75), radius: uiContext.vp2px(75) });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## setCommandPath
 
 ```TypeScript
@@ -74,6 +121,54 @@ Sets the command for drawing a path.
 | --- | --- | --- |
 | path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+const mask = new ShapeMask();
+mask.setCommandPath({ commands: "M100 0 L0 100 L50 200 L150 200 L200 100 Z" });
+mask.fillColor = 0X55FF0000;
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeMask = mask;
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## setOvalShape
 
 ```TypeScript
@@ -96,7 +191,49 @@ Sets an oval mask.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| oval | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes |
+| oval | [Rect](arkts-arkui-rect-t.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setOvalShape({ left: 0, right: uiContext.vp2px(150), top: 0, bottom: uiContext.vp2px(100) });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setRectShape
 
@@ -120,7 +257,59 @@ Sets a rectangle mask.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes |
+| rect | [Rect](arkts-arkui-rect-t.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setRectShape({
+      left: 0,
+      right: uiContext.vp2px(150),
+      top: 0,
+      bottom: uiContext.vp2px(150)
+    });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setRoundRectShape
 
@@ -144,7 +333,58 @@ Sets the mask in the shape of a rectangle with rounded corners.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | Yes |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask,RoundRect} from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    const roundRect: RoundRect = {
+      rect: { left: 0, top: 0, right: uiContext.vp2px(150), bottom: uiContext.vp2px(150) },
+      corners: {
+        topLeft: { x: 32, y: 32 },
+        topRight: { x: 32, y: 32 },
+        bottomLeft: { x: 32, y: 32 },
+        bottomRight: { x: 32, y: 32 }
+      }
+    }
+    mask.setRoundRectShape(roundRect);
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## fillColor
 
@@ -154,7 +394,7 @@ fillColor: number
 
 Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**.
 
-A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode**using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md) API to generate the final color.
+A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode**using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
 
 **Type:** number
 
@@ -178,7 +418,7 @@ strokeColor: number
 
 Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**.
 
-A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode**using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md) API to generate the final color.
+A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode**using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
 
 **Type:** number
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMap
@@ -14,7 +14,7 @@ function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, cal
 
 Create pixelmap by data buffer.
 
-Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixels} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
 
 **Since:** 10
 
@@ -62,7 +62,7 @@ function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Pr
 
 Create pixelmap by data buffer.
 
-Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixels} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
 
 **Since:** 10
 
@@ -81,7 +81,7 @@ Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## Examples
 

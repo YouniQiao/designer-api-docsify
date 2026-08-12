@@ -20,7 +20,7 @@ Color mode for components in the **WithTheme** scope.
 
 Default value: **ThemeColorMode.SYSTEM**
 
-**Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
+**Type:** ThemeColorMode
 
 **Since:** 12
 
@@ -45,7 +45,7 @@ Default theme for components in the **WithTheme** scope.
 Default value: **undefined**. The default style follows the  
 [default token style](../../../ui/theme_skinning.md#system-default-token-color-values).
 
-**Type:** [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
+**Type:** [CustomTheme](arkts-arkui-customtheme-t.md)
 
 **Since:** 12
 

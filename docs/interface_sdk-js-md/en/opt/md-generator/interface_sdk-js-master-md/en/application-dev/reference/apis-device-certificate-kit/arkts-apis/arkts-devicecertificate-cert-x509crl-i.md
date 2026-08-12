@@ -11,7 +11,7 @@ Provides APIs for X.509 CRL operations.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## getEncoded
@@ -34,16 +34,16 @@ Obtains the serialized X.509 CRL data. This API uses an asynchronous callback to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EncodingBlob&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getEncoded
 
@@ -65,16 +65,16 @@ Obtains the serialized X.509 CRL data. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;EncodingBlob&gt; |
+| Promise&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getExtensions
 
@@ -96,15 +96,15 @@ Obtains the CRL extensions data in DER format.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getExtensionsObject
 
@@ -132,9 +132,9 @@ Obtains the CRL extension object.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerName
 
@@ -160,15 +160,15 @@ Obtains the issuer of the X.509 CRL.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerName
 
@@ -190,7 +190,7 @@ Obtains the issuer name of an X.509 CRL based on the encoding type.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes |
+| [encodingType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md) | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes |
 
 **Return value:**
 
@@ -202,10 +202,10 @@ Obtains the issuer name of an X.509 CRL based on the encoding type.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getIssuerX500DistinguishedName
 
@@ -233,9 +233,9 @@ Obtains the distinguished name (DN) of the X.509 CRL issuer.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getLastUpdate
 
@@ -263,9 +263,9 @@ Obtains the last update date of this X.509 CRL.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getNextUpdate
 
@@ -293,9 +293,9 @@ Obtains the next update date of this CRL.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getRevokedCert
 
@@ -329,9 +329,9 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getRevokedCertWithCert
 
@@ -353,7 +353,7 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes |
+| [cert](arkts-security-cert.md) | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes |
 
 **Return value:**
 
@@ -365,9 +365,9 @@ Obtains the revoked certificate entry from the X.509 CRL based on the specified 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getRevokedCerts
 
@@ -389,15 +389,15 @@ Obtains all the revoked certificate entries from the X.509 CRL. This API uses an
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;X509CRLEntry&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getRevokedCerts
 
@@ -419,15 +419,15 @@ Obtains all the revoked certificate entries from the X.509 CRL. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;X509CRLEntry&gt;&gt; |
+| Promise&lt;Array&lt;[X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignature
 
@@ -449,15 +449,15 @@ Obtains the signature data of the X.509 CRL.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignatureAlgName
 
@@ -485,9 +485,9 @@ Obtains the signing algorithm of the X.509 CRL.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignatureAlgOid
 
@@ -515,9 +515,9 @@ Obtains the OID of the X.509 CRL signing algorithm. OIDs are allocated by the In
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getSignatureAlgParams
 
@@ -539,16 +539,16 @@ Obtains the parameters of the X.509 CRL signing algorithm.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getTBSInfo
 
@@ -570,15 +570,15 @@ Obtains the DER-encoded CRL information, that is, **tbsCertList** from this CRL.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DataBlob](arkts-devicecertificate-cert-datablob-i.md) |
+| [DataBlob](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-datablob-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getType
 
@@ -650,9 +650,9 @@ Obtains the hash value of the data in DER format.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## isRevoked
 
@@ -674,7 +674,7 @@ Checks whether an X.509 certificate is revoked.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cert | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes |
+| [cert](arkts-security-cert.md) | [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md) | Yes |
 
 **Return value:**
 
@@ -686,7 +686,7 @@ Checks whether an X.509 certificate is revoked.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## match
 
@@ -720,9 +720,9 @@ Checks whether this CRL matches the specified parameters.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## toString
 
@@ -750,9 +750,9 @@ Converts the object data into a string.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## toString
 
@@ -774,7 +774,7 @@ Converts this object into a string in the specified encoding format.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| encodingType | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes |
+| [encodingType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiostreaminfo-i.md) | [EncodingType](arkts-devicecertificate-cert-encodingtype-e.md) | Yes |
 
 **Return value:**
 
@@ -786,10 +786,10 @@ Converts this object into a string in the specified encoding format.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## verify
 
@@ -818,8 +818,8 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## verify
 
@@ -847,11 +847,11 @@ Verifies the signature of the X.509 CRL. The RSA algorithm is supported. This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |

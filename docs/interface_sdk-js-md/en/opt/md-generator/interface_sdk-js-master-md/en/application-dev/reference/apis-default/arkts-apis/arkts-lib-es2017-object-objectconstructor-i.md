@@ -14,7 +14,7 @@ Returns an array of key/values of the enumerable properties of an object
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| o | { [s: string]: T } \| [ArrayLike&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| o | { [s: string]: T } \| [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Returns an object containing all own property descriptors of an object
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| {[P in keyof T]: TypedPropertyDescriptor&lt;T[P]&gt;} & { [x: string]: PropertyDescriptor } |
+| {[P in keyof T]: TypedPropertyDescriptor & lt;T[P] & gt;} & { [x: string]: PropertyDescriptor } |
 
 ## values
 
@@ -80,7 +80,7 @@ Returns an array of values of the enumerable properties of an object
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| o | { [s: string]: T } \| [ArrayLike&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| o | { [s: string]: T } \| [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 

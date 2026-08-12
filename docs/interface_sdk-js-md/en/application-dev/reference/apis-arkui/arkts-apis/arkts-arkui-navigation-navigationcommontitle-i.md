@@ -18,7 +18,7 @@ main: string | Resource | undefined
 
 Sets the main title, default value is "", undefined means set to default value.
 
-**Type:** string \| Resource \| undefined
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ sub: string | Resource | undefined
 
 Sets the sub title, default value is "", undefined means set to default value.
 
-**Type:** string \| Resource \| undefined
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 
 **Since:** 23
 

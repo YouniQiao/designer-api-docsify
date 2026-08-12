@@ -2,7 +2,7 @@
 
 Represents an error that occurs during runtime.
 
-**Inheritance/Implementation:** RuntimeError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** RuntimeError extends [Error](Error)
 
 **Since:** 26.0.0
 

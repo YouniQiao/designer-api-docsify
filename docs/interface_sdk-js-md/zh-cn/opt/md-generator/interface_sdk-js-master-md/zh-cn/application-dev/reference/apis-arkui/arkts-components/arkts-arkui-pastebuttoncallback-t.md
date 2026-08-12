@@ -22,4 +22,4 @@ type PasteButtonCallback = (event: ClickEvent, result: PasteButtonOnClickResult,
 | --- | --- | --- |
 | event | [ClickEvent](arkts-arkui-clickevent-i.md) | 是 |
 | result | [PasteButtonOnClickResult](arkts-arkui-pastebuttononclickresult-e.md) | 是 |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | 否 |
+| error | BusinessError & lt;void & gt; | 否 |

@@ -1,6 +1,6 @@
 # FileMapping
 
-Defines a file mapping object. Before calling the **FileMapping** method,construct a **FileMapping** instance using [mmap()](arkts-corefile-fileio-mmap-f.md#mmap) or [mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapsync).
+Defines a file mapping object. Before calling the **FileMapping** method,construct a **FileMapping** instance using [mmap()](arkts-corefile-fileio-mmap-f.md#mmap) or [mmapSync()](arkts-corefile-fileio-mmapsync-f.md#mmapSync).
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ Defines a file mapping object. Before calling the **FileMapping** method,constru
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## capacity
@@ -440,7 +440,7 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | int | Yes | Upper bound of the readable and writable area to set, in bytes. &lt;br&gt;The value is greater than or equal to 0 and less than or equal to the value of [capacity](arkts-corefile-fileio-filemapping-i.md#capacity). If the value of **limit** is smaller than that of **position** in the file mapping area, the value of **position** is automatically adjusted to that of **limit**. |
+| limit | int | Yes | Upper bound of the readable and writable area to set, in bytes. &lt;br&gt;The value is greater than or equal to 0 and less than or equal to the value of [capacity](#capacity). If the value of **limit** is smaller than that of **position** in the file mapping area, the value of **position** is automatically adjusted to that of **limit**. |
 
 **Error codes:**
 
@@ -472,7 +472,7 @@ Sets the current location of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Target position to set, in bytes. &lt;br&gt;The value must be a non-negative number and cannot be greater than the upper bound (**limit**) of the readable and writable area. You can obtain the value of **limit** by calling [getLimit()](arkts-corefile-fileio-filemapping-i.md#getlimit). |
+| position | int | Yes | Target position to set, in bytes. &lt;br&gt;The value must be a non-negative number and cannot be greater than the upper bound (**limit**) of the readable and writable area. You can obtain the value of **limit** by calling [getLimit()](#getLimit). |
 
 **Error codes:**
 

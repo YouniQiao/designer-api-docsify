@@ -12,7 +12,7 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishasuser)(event:
+**替代接口：** [publishAsUser](@ohos.commonEventManager:commonEventManager.publishAsUser(event:)
 
 <!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publishAsUser(event: string, userId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -67,7 +67,7 @@ function publishAsUser(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.publishAsUser](arkts-basicservices-commoneventmanager-publishasuser-f-sys.md#publishasuser)(
+**替代接口：** [publishAsUser](@ohos.commonEventManager:commonEventManager.publishAsUser()
 
 <!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEvent-function publishAsUser(    event: string,    userId: number,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 

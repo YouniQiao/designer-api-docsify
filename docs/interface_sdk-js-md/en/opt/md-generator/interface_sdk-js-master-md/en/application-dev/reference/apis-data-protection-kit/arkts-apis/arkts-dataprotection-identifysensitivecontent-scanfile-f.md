@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## scanFile
@@ -27,24 +27,24 @@ Identifies sensitive content in a specified file based on the configured policy 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | filePath | string | Yes |
-| identifyPolicies | Array&lt;Policy&gt; | Yes |
+| identifyPolicies | Array & lt;Policy & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;MatchResult&gt;&gt; |
+| Promise&lt;Array&lt;[MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19110003](../errorcode-dlp.md#19110003-file-not-supported) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19110002](../errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) |
-| [19110001](../errorcode-dlp.md#19110001-invalid-parameter) |
-| [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [19110003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110003-file-not-supported) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19110002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) |
+| [19110001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110001-invalid-parameter) |
+| [19110004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110004-system-function-abnormal) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

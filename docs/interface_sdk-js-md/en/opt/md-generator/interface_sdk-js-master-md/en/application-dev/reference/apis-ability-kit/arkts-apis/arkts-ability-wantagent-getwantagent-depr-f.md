@@ -12,7 +12,7 @@ Obtains a WantAgent object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#getWantAgent
+**Substitutes:** [getWantAgent](ohos.app.ability.wantAgent/wantAgent#getWantAgent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -25,7 +25,7 @@ Obtains a WantAgent object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Yes |
 
 ## Examples
 
@@ -83,7 +83,7 @@ Obtains a WantAgent object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#getWantAgent
+**Substitutes:** [getWantAgent](ohos.app.ability.wantAgent/wantAgent#getWantAgent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -101,7 +101,7 @@ Obtains a WantAgent object.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WantAgent&gt; |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; |
 
 ## Examples
 

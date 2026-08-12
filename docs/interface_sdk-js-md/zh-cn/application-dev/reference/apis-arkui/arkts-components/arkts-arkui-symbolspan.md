@@ -39,7 +39,7 @@ SymbolSpan(value: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | SymbolSpan组件的资源引用，如 \$r('sys.symbol.ohos_wifi')。仅支持系统预置的symbol资源，引用非symbol资源将显示异常。 |
+| value | Resource | 是 | SymbolSpan组件的资源引用，如 \$r('sys.symbol.ohos_wifi')。仅支持系统预置的symbol资源，引用非symbol资源将显示异常。 |
 
 ## 汇总
 

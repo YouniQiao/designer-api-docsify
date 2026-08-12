@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## readLines
@@ -27,13 +27,13 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | Options for reading the text. The options are as follows: &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. &lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows: &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. &lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ReaderIterator&gt; | Promise used to return the **ReaderIterator** object. |
+| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise used to return the **ReaderIterator** object. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | Yes | Callback used to return a **ReaderIterator** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return a **ReaderIterator** object. |
 
 **Error codes:**
 
@@ -116,8 +116,8 @@ Reads a file text line by line. Read options can be configured. Only the files i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes | Read options. The options are as follows: &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. &lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | Yes | Callback used to return a **ReaderIterator** object. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | Yes | Read options. The options are as follows: &lt;br&gt;- **encoding** (string): format of the data to be encoded. &lt;br&gt;It is valid only when the data is of the string type. &lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return a **ReaderIterator** object. |
 
 **Error codes:**
 

@@ -36,5 +36,5 @@ Adds the matrix transformation effect to the current template.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | transformation matrix |
+| transform | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | No | transformation matrix |
 

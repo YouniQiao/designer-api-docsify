@@ -22,7 +22,7 @@ direction : Axis
 
 非法值：按默认值处理。
 
-**类型：** [Axis](../arkts-apis/arkts-arkui-enums-axis-e.md)
+**类型：** Axis
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ start: 0
 
 非法值：按默认值处理。
 
-**类型：** [GuideLinePosition](../arkts-apis/arkts-arkui-relativecontainer-guidelineposition-i.md)
+**类型：** [GuideLinePosition](arkts-arkui-guidelineposition-i.md)
 
 **起始版本：** 12
 

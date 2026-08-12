@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityRunningInfos
@@ -40,7 +40,7 @@ Obtains the UIAbility running information. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

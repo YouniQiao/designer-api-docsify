@@ -1,7 +1,7 @@
 # InputMethodAbility
 
 In the following API examples, you must first use   
-[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
+[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility) to obtain an **InputMethodAbility** instance, and then call the APIs using the obtained instance.
 
 **Since:** 9
 
@@ -14,7 +14,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## createPanel
@@ -24,19 +24,19 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 Creates an input method panel. This API can be called only by the input method application in the   
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses an asynchronous callback to return the result.
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility) class. This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one
-> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method.
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel and one
+> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel can be created for a single input method.
 
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such
 > as
-> [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-createwindow-f.md/arkts-arkui-window-createwindow-f.md#createwindow)
+> [window.createWindow](../../apis-arkui/arkts-apis/arkts-arkui-window-createwindow-f.md#createWindow)
 > , [bindContextMenu](CommonMethod&lt;T&gt;.bindContextMenu),
-> and [CustomDialog](../../apis-arkui/arkts-components/arkts-arkui-custom_dialog_controller-i). You are advised to adopt
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md/arkts-arkui-advanced-dialog.md) or
+> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt
+> alternative solutions to sub-windows, such as using a [dialog box](@ohos.arkui.advanced.Dialog) or
 > [bindMenu](CommonMethod&lt;T&gt;.bindMenu), or set
 > **showInSubwindow** to **false**.
 
@@ -53,15 +53,15 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
+| info | PanelInfo | Yes | Information about the input method panel. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Panel&gt; | Yes | Callback used to return the result. If the operation is successful, the created input method panel is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
 
 ## Examples
 
@@ -92,19 +92,19 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 Creates an input method panel. This API can be called only by the input method application in the   
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md) class. This API uses a promise to return the result.
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility) class. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panel and one
-> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md) panel can be created for a single input method.
+> Only one [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel and one
+> [STATUS_BAR](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panel can be created for a single input method.
 
 > The input method panel does not support subwindows. For example, subwindows cannot be created using APIs such
 > as
 > [window.createWindow](../../../windowmanager/application-window-fa.md#setting-the-child-window-of-an-application)
 > , [bindContextMenu](CommonMethod&lt;T&gt;.bindContextMenu),
-> and [CustomDialog](../../apis-arkui/arkts-components/arkts-arkui-custom_dialog_controller-i). You are advised to adopt
-> alternative solutions to sub-windows, such as using a [dialog box](../../apis-arkui/arkts-apis/arkts-arkui-advanced-dialog.md/arkts-arkui-advanced-dialog.md) or
+> and [CustomDialog](./@internal/component/ets/custom_dialog_controller). You are advised to adopt
+> alternative solutions to sub-windows, such as using a [dialog box](@ohos.arkui.advanced.Dialog) or
 > [bindMenu](CommonMethod&lt;T&gt;.bindMenu), or set
 > **showInSubwindow** to **false**.
 
@@ -121,7 +121,7 @@ Creates an input method panel. This API can be called only by the input method a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Current context of the input method. |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes | Information about the input method panel. |
+| info | PanelInfo | Yes | Information about the input method panel. |
 
 **Return value:**
 
@@ -133,8 +133,8 @@ Creates an input method panel. This API can be called only by the input method a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
 
 ## Examples
 
@@ -176,14 +176,14 @@ Destroys the specified input method panel. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | Input method panel to destroy. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| panel | Panel | Yes | Input method panel to destroy. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -239,7 +239,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | Yes | Input method panel to destroy. |
+| panel | Panel | Yes | Input method panel to destroy. |
 
 **Return value:**
 
@@ -251,7 +251,7 @@ Destroys the specified input method panel. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -311,7 +311,7 @@ Obtains the current security mode of the input method.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) | not an input method application. |
 
 ## Examples
 
@@ -531,7 +531,7 @@ Disables listening for the security mode changes of the input method. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
 
@@ -566,13 +566,13 @@ Disables listening for the private data event of the input method. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
 ## Examples
 
@@ -608,7 +608,7 @@ Disables listening for changes of the screen ID of the window associated with th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
 
@@ -639,7 +639,7 @@ Unsubscribes from the event of discarding candidate words and sends the event to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. &lt;br&gt; - **'discardTypingText'**: indicates unsubscribing from the event of discarding candidate words and sending the event to the input method. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
 
@@ -669,7 +669,7 @@ Unsubscribe 'callingDisplayDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | optional, the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | optional, the callback called when calling display id changed. |
 
 ## offDiscardTypingText
 
@@ -691,7 +691,7 @@ Unsubscribe 'discardTypingText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the edit box requests to discard typing text. |
 
 ## offInputStart
 
@@ -735,7 +735,7 @@ Unsubscribe 'inputStop'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
 
 ## offKeyboardHide
 
@@ -757,7 +757,7 @@ Unsubscribe 'keyboardHide'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when hiding keyboard. |
 
 ## offKeyboardShow
 
@@ -779,7 +779,7 @@ Unsubscribe 'keyboardShow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when showing keyboard. |
 
 ## offPrivateCommand
 
@@ -801,13 +801,13 @@ Unsubscribe 'privateCommand'. This function can only be called by default input 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | No | optional, the callback called when receiving private command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
 ## offSecurityModeChange
 
@@ -829,7 +829,7 @@ Unsubscribe 'securityModeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | No | optional, the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | No | optional, the callback called when the security mode changes. |
 
 ## offSetCallingWindow
 
@@ -851,7 +851,7 @@ Unsubscribe 'setCallingWindow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
 
 ## offSetSubtype
 
@@ -873,7 +873,7 @@ Unsubscribe 'setSubtype'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | optional, the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | No | optional, the callback called when the system notify to switch subtype. |
 
 ## on('inputStart')
 
@@ -1093,7 +1093,7 @@ Enables listening for the security mode changes of the input method. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | Yes | Event type, which is **'securityModeChange'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | Yes | Callback used to return the current security mode. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | Callback used to return the current security mode. |
 
 ## Examples
 
@@ -1125,13 +1125,13 @@ Enables listening for the private data event of the input method. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'privateCommand' | Yes | Event type, which is **'privateCommand'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | Callback used to return the private data sent to the input method application. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
 ## Examples
 
@@ -1166,13 +1166,13 @@ Enables listening for changes of the screen ID of the window associated with the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'callingDisplayDidChange' | Yes | Event type, which is **'callingDisplayDidChange'**. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Callback used to return the screen ID of the window corresponding to the edit box. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
 
 ## Examples
 
@@ -1204,7 +1204,7 @@ Subscribes to the event of discarding candidate words and sends the event to the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discardTypingText' | Yes | Event type, which is **'discardTypingText'**. &lt;br&gt; - **'discardTypingText'** : indicates subscribing to the event of discarding candidate words and sending the event to the input method. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1234,13 +1234,13 @@ Subscribe 'callingDisplayDidChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when calling display id changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when calling display id changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
 
 ## onDiscardTypingText
 
@@ -1262,7 +1262,7 @@ Subscribe 'discardTypingText' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the edit box requests to discard typing text. |
 
 ## onInputStart
 
@@ -1306,7 +1306,7 @@ Subscribe 'inputStop'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the system needs input method application to terminate itself. |
 
 ## onKeyboardHide
 
@@ -1328,7 +1328,7 @@ Subscribe 'keyboardHide'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when hiding keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when hiding keyboard. |
 
 ## onKeyboardShow
 
@@ -1350,7 +1350,7 @@ Subscribe 'keyboardShow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when showing keyboard. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when showing keyboard. |
 
 ## onPrivateCommand
 
@@ -1372,13 +1372,13 @@ Subscribe 'privateCommand'. This function can only be called by default input me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, CommandDataType&gt;&gt; | Yes | the callback called when receiving private command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) | not the preconfigured default input method. |
 
 ## onSecurityModeChange
 
@@ -1400,7 +1400,7 @@ Subscribe 'securityModeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | Yes | the callback called when the security mode changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | Yes | the callback called when the security mode changes. |
 
 ## onSetCallingWindow
 
@@ -1422,7 +1422,7 @@ Subscribe 'setCallingWindow'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | the callback called when the edit box sets calling window id. |
 
 ## onSetSubtype
 
@@ -1444,5 +1444,5 @@ Subscribe 'setSubtype'.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | the callback called when the system notify to switch subtype. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt; | Yes | the callback called when the system notify to switch subtype. |
 

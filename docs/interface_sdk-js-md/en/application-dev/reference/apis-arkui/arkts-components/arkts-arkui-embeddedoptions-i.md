@@ -18,7 +18,7 @@ areaChangePlaceholder?: Record<string, ComponentContent>
 
 Set Areachange placeholder.If the Areachange placeholder ComponentContent is set, the placeholder node is displayed until the EmbeddedComponent size change is complete.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
+**Type:** Record&lt;string, ComponentContent&gt;
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 
 Set EmbeddedComponent Content Dpi Follow Strategy.
 
-**Type:** [EmbeddedDpiFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddeddpifollowstrategy-e.md)
+**Type:** [EmbeddedDpiFollowStrategy](arkts-arkui-embeddeddpifollowstrategy-e.md)
 
 **Default:** EmbeddedDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
@@ -64,7 +64,7 @@ placeholder?: ComponentContent
 
 Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ windowModeFollowStrategy?: EmbeddedWindowModeFollowStrategy
 
 Set EmbeddedComponent Content Window Mode Follow Strategy.
 
-**Type:** [EmbeddedWindowModeFollowStrategy](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedwindowmodefollowstrategy-e.md)
+**Type:** [EmbeddedWindowModeFollowStrategy](arkts-arkui-embeddedwindowmodefollowstrategy-e.md)
 
 **Default:** EmbeddedWindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 

@@ -66,7 +66,7 @@ type: DataOperationType.DELETE
 
 Type of data deletion.
 
-**Type:** DataOperationType.DELETE
+**Type:** [DataOperationType.DELETE](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
 

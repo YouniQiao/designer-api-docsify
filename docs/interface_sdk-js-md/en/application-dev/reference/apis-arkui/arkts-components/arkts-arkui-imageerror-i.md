@@ -3,7 +3,7 @@
 Describes the object returned by the image loading error callback.
 
 This event is not triggered if the parameter type of the component is  
-[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor).
 
 **Since:** 9
 
@@ -98,7 +98,7 @@ Error information returned when an error occurs during image loading, where **co
 
 Default value: **{ code : -1, message : "" }**
 
-**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
+**Type:** [BusinessError](arkts-arkui-businesserror-t.md)&lt;void&gt;
 
 **Since:** 20
 

@@ -13,7 +13,7 @@ Describes the options for image encoding.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## backgroundColor
@@ -43,7 +43,7 @@ bufferSize?: int
 ```
 
 Size of the buffer for receiving the encoded data, in bytes. If this parameter is not set, the default value 25 MB is used. If the size of an image exceeds 25 MB, you must specify the size. The value of **bufferSize** must be greater than the size of the encoded image. The use of   
-[packToFile](arkts-image-image-imagepacker-i.md#packtofile)is not restricted by this parameter.
+[packToFile](arkts-image-image-imagepacker-i.md#packToFile)is not restricted by this parameter.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

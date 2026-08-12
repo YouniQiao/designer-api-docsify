@@ -1,7 +1,7 @@
 # Task
 
 Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through   
-[request.agent.create](arkts-basicservices-agent-create-f.md#create) or from a callback through   
+[request.agent.create](arkts-basicservices-agent-create-f.md#create-1) or from a callback through   
 [request.agent.create](arkts-basicservices-agent-create-f.md#create).
 
 > **NOTE：**
@@ -18,7 +18,7 @@ Implements an upload or download task. Before using this API, you must obtain a 
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## off
@@ -48,14 +48,14 @@ Unsubscribes from task progress events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'progress' | Yes |
-| callback | (progress: Progress) =&gt; void | No |
+| callback | (progress: Progress) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
 
 ## off
 
@@ -84,14 +84,14 @@ Unsubscribes from task completion events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'completed' | Yes |
-| callback | (progress: Progress) =&gt; void | No |
+| callback | (progress: Progress) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
 
 ## off
 
@@ -120,14 +120,14 @@ Unsubscribes from task failure events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'failed' | Yes |
-| callback | (progress: Progress) =&gt; void | No |
+| callback | (progress: Progress) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
 
 ## off
 
@@ -154,13 +154,13 @@ Unsubscribes from the foreground task pause event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'pause' | Yes |
-| callback | (progress: Progress) =&gt; void | No |
+| callback | (progress: Progress) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off
 
@@ -187,13 +187,13 @@ Unsubscribes from foreground task resume events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'resume' | Yes |
-| callback | (progress: Progress) =&gt; void | No |
+| callback | (progress: Progress) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off
 
@@ -220,13 +220,13 @@ Unsubscribes from the task removal event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'remove' | Yes |
-| callback | (progress: Progress) =&gt; void | No |
+| callback | (progress: Progress) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off
 
@@ -261,7 +261,7 @@ Unsubscribes from task response headers.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off
 
@@ -288,13 +288,13 @@ Unsubscribes from task failure events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'faultOccur' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | No |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off
 
@@ -321,13 +321,13 @@ Unsubscribes from task waiting events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'wait' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | No |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on
 
@@ -356,14 +356,14 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'progress' | Yes |
-| callback | (progress: Progress) =&gt; void | Yes |
+| callback | (progress: Progress) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
 
 ## on
 
@@ -392,14 +392,14 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'completed' | Yes |
-| callback | (progress: Progress) =&gt; void | Yes |
+| callback | (progress: Progress) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
 
 ## on
 
@@ -408,7 +408,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
 Subscribes to task failure events. This API uses an asynchronous callback to return the result. You can call   
-[request.agent.show](arkts-basicservices-agent-show-f.md#show) to view the error cause.
+[request.agent.show](arkts-basicservices-agent-show-f.md#show-1) to view the error cause.
 
 > **NOTE：**
 > 
@@ -429,14 +429,14 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'failed' | Yes |
-| callback | (progress: Progress) =&gt; void | Yes |
+| callback | (progress: Progress) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
 
 ## on
 
@@ -463,13 +463,13 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'pause' | Yes |
-| callback | (progress: Progress) =&gt; void | Yes |
+| callback | (progress: Progress) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on
 
@@ -496,13 +496,13 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'resume' | Yes |
-| callback | (progress: Progress) =&gt; void | Yes |
+| callback | (progress: Progress) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on
 
@@ -529,13 +529,13 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'remove' | Yes |
-| callback | (progress: Progress) =&gt; void | Yes |
+| callback | (progress: Progress) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on
 
@@ -570,7 +570,7 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on
 
@@ -597,13 +597,13 @@ Subscribes to task failure events. This API uses a callback to return the result
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'faultOccur' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on
 
@@ -630,13 +630,13 @@ Subscribes to task wait events. This API uses a callback to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | 'wait' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## pause
 
@@ -645,7 +645,7 @@ pause(callback: AsyncCallback<void>): void
 ```
 
 Pauses a task that is waiting, running, or retrying. A paused task can be resumed by   
-[resume](arkts-basicservices-agent-task-i.md#resume). This API uses an asynchronous callback to return the result.
+[resume](#resume). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -663,9 +663,9 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | Error Code ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## pause
 
@@ -674,7 +674,7 @@ pause(): Promise<void>
 ```
 
 Pauses a task that is waiting, running, or retrying. A paused task can be resumed by   
-[resume](arkts-basicservices-agent-task-i.md#resume). This API uses a promise to return the result.
+[resume](#resume). This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -686,15 +686,15 @@ Pauses a task that is waiting, running, or retrying. A paused task can be resume
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## resume
 
@@ -722,10 +722,10 @@ Resumes a paused task. This API uses an asynchronous callback to return the resu
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## resume
 
@@ -747,16 +747,16 @@ Resumes a paused task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## setMaxSpeed
 
@@ -782,14 +782,14 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## start
 
@@ -829,9 +829,9 @@ Tasks in the following states can be started:
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## start
 
@@ -865,15 +865,15 @@ Tasks in the following states can be started:
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## stop
 
@@ -882,7 +882,7 @@ stop(callback: AsyncCallback<void>): void
 ```
 
 Stops a task that is running, waiting, or retrying. A paused task can be resumed by   
-[start](arkts-basicservices-agent-task-i.md#start). This API uses an asynchronous callback to return the result.
+[start](#start). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -902,8 +902,8 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | Error Code ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## stop
 
@@ -912,7 +912,7 @@ stop(): Promise<void>
 ```
 
 Stops a task that is running, waiting, or retrying. A paused task can be resumed by   
-[start](arkts-basicservices-agent-task-i.md#start). This API uses a promise to return the result.
+[start](#start). This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -926,14 +926,14 @@ Stops a task that is running, waiting, or retrying. A paused task can be resumed
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 ## config
 
@@ -943,7 +943,7 @@ config: Config
 
 Task configuration.
 
-**Type:** [Config](arkts-basicservices-agent-config-i.md)
+**Type:** Config
 
 **Since:** 10
 

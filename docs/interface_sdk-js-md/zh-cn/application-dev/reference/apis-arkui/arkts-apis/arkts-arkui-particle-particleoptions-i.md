@@ -172,7 +172,7 @@ speed表示速度大小。angle表示速度的方向（单位为角度），以�
 
 默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
 
-**类型：** [VelocityOptions](../arkts-components/arkts-arkui-velocityoptions-i.md)
+**类型：** [VelocityOptions](arkts-arkui-particle-velocityoptions-i.md)
 
 **默认值：** {speed:[0,0];angle:[0,0]}
 

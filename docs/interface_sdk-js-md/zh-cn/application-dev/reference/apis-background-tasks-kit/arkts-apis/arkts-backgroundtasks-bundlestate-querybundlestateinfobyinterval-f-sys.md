@@ -31,10 +31,10 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStateInfo&gt;&gt; | 是 | the callback of usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | 是 | the callback of usage information about each bundle. |
 
 ## 示例
 
@@ -86,7 +86,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | IntervalType | 是 | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | 是 | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 | end | number | 是 | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 
@@ -94,7 +94,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStateInfo&gt;&gt; | the usage information about each bundle. |
+| Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | the usage information about each bundle. |
 
 ## 示例
 

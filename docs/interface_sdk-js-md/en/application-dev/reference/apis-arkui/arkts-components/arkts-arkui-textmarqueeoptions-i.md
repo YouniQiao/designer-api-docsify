@@ -150,7 +150,7 @@ This attribute takes effect when the marquee is in the playing state and the tex
 
 Default value: **MarqueeUpdatePolicy.DEFAULT**
 
-**Type:** [MarqueeUpdatePolicy](../arkts-apis/arkts-arkui-text-marqueeupdatepolicy-e.md)
+**Type:** [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md)
 
 **Since:** 23
 
@@ -174,7 +174,7 @@ Spacing between two marquee rounds. If the unit of **LengthMetrics** is **PERCEN
 
 Default value: **48.0vp**
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 23
 

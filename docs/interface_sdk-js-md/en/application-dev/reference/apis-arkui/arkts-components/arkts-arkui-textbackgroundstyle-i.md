@@ -18,7 +18,7 @@ color?: ResourceColor
 
 Text background color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ radius?: Dimension | BorderRadiuses
 
 Rounded corner radius of the text background.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
+**Type:** Dimension \| BorderRadiuses
 
 **Since:** 11
 

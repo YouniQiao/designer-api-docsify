@@ -6,9 +6,9 @@ Information about the custom font to register.
 > 
 > Directly using **font** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> [Font](arkts-arkui-uicontext.md) object associated with the current UI context by using the
+> [Font](@ohos.arkui.UIContext) object associated with the current UI context by using the
 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](arkts-arkui-uicontext.md).
+> [UIContext](@ohos.arkui.UIContext).
 
 **Since:** 9
 
@@ -19,7 +19,7 @@ Information about the custom font to register.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## familyName

@@ -13,7 +13,7 @@ The url module provides APIs for parsing URL strings and constructing URL instan
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
+import { url } from '@kit.ArkTS';
 ```
 
 ## Summary

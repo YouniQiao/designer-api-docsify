@@ -21,5 +21,5 @@ Defines a swiper callback when onGestureSwipe.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | The index value of the swiper page before gesture swipe. The value range is all integers The value should be an integer. |
-| extraInfo | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | The extra callback info. |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiper-swiperanimationevent-i.md) | Yes | The extra callback info. |
 

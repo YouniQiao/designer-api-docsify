@@ -20,7 +20,7 @@ centerPointOffset: Point
 
 Offset of PiP.
 
-**类型：** [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md)
+**类型：** Point
 
 **起始版本：** 20
 

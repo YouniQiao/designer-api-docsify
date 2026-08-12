@@ -74,7 +74,7 @@ onItemClicked?: Callback<number>
 
 当分段按钮选项被点击时，触发的回调函数接收被点击的选项下标作为参数。若不传入此参数，则点击时不触发回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** Callback&lt;number&gt;
 
 **起始版本：** 13
 

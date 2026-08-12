@@ -13,7 +13,7 @@ The serverCert field of the server certificate, which includes two attributes:Fi
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## certPath

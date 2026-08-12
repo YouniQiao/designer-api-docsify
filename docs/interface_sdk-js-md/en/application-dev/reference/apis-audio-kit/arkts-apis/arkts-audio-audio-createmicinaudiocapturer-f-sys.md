@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createMicInAudioCapturer
@@ -12,7 +12,7 @@ import { audio } from 'kits/@kit.AudioKit';
 function createMicInAudioCapturer(config: AudioCapturerMicInConfig): Promise<AudioCapturer | null>
 ```
 
-Obtains a special {@link #AudioCapturer} instance. This method uses a promise to return the capturer instance.This capture can be used to record both Mic-In audio data and echo reference signal, for application to process algorithm.Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to configuration set by application.Capturer is also not allowed to be created when application is in background.
+Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance.This capture can be used to record both Mic-In audio data and echo reference signal, for application to process algorithm.Mic-In audio data and echo reference signal will be put in one buffer or multiple buffers according to configuration set by application.Capturer is also not allowed to be created when application is in background.
 
 **Since:** 23
 
@@ -32,23 +32,23 @@ Obtains a special {@link #AudioCapturer} instance. This method uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md) | Yes | Capturer configuration, see {@link #AudioCapturerMicInConfig} for details. |
+| config | [AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md) | Yes | Capturer configuration, see [AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md#AudioCapturerMicInConfig) for details. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioCapturer \| null&gt; | Promise used to return the audio capturer instance, or null if any error occurs. |
+| Promise&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Promise used to return the audio capturer instance, or null if any error occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, including background recording. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system process crash. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems: &lt;br&gt; 1. Source type is unsupported for this capturer, only {@link #SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT} is supported currently. &lt;br&gt; 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
+| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied, including background recording. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system process crash. |
+| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems: &lt;br&gt; 1. Source type is unsupported for this capturer, only [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT) is supported currently. &lt;br&gt; 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
 
 ## Examples
 

@@ -11,7 +11,7 @@ Defines parameters related to drag-and-drop animation effects.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## curve
@@ -24,7 +24,7 @@ Animation curve.
 
 Default value: **Curve.EaseInOut**
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| ICurve
+**Type:** Curve \| ICurve
 
 **Since:** 11
 

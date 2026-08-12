@@ -168,7 +168,7 @@ Create a CustomEnv variable instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | custom component owner. |
-| envKey | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | Yes | custom env key. |
+| envKey | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | Yes | custom env key. |
 | varName | string | Yes | variable name that is decorated by @CustomEnv. |
 | localInitValue | T | Yes | custom env variable initValue. |
 | customEnvOptions | [CustomEnvOptions](arkts-arkui-decorator-customenvoptions-i.md)&lt;T&gt; | No | additional options for makeCustomEnv. |
@@ -202,7 +202,7 @@ Create a Env variable instance.On API 26.0.0 and above, it can also support Syst
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | Yes | custom component owner |
-| envValue | string \| SystemEnvKey&lt;T&gt; | Yes | system environment key<br>**Since:** 26.0.0 |
+| envValue | string \| [SystemEnvKey](arkts-arkui-decorator-systemenvkey-c.md)&lt;T&gt; | Yes | system environment key<br>**Since:** 26.0.0 |
 | varName | string | Yes | variable name that is decorated by @Env |
 | envOptions | [EnvOptions](arkts-arkui-decorator-envoptions-i.md)&lt;T&gt; | No | additional options for makeEnv |
 
@@ -402,7 +402,7 @@ Create a monitored variable instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | Array&lt;IMonitorPathInfo&gt; | Yes | monitor path to its accessor |
+| pathInfos | Array&lt;[IMonitorPathInfo](arkts-arkui-decorator-imonitorpathinfo-i.md)&gt; | Yes | monitor path to its accessor |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | callback when then monitor triggers |
 | owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | No | owner of this monitor |
 
@@ -434,7 +434,7 @@ Create a monitored variable instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathInfos | Array&lt;IMonitorPathInfo&gt; | Yes | monitor path to its accessor |
+| pathInfos | Array&lt;[IMonitorPathInfo](arkts-arkui-decorator-imonitorpathinfo-i.md)&gt; | Yes | monitor path to its accessor |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | callback when the monitor triggers |
 | options | [MakeMonitorOptions](arkts-arkui-decorator-makemonitoroptions-i.md) | No | options of this monitor |
 

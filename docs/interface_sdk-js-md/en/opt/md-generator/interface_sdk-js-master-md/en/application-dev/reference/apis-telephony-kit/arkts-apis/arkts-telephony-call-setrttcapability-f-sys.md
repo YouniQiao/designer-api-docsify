@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## setRttCapability
@@ -35,7 +35,7 @@ Set rtt capability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -45,5 +45,5 @@ Set rtt capability.
 | 8400002 |
 | 8400003 |
 | 8400999 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

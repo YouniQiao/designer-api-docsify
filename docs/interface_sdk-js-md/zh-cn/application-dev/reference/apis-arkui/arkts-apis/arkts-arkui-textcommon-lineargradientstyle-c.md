@@ -1,8 +1,8 @@
 # LinearGradientStyle
 
-显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)。
+显示为线性渐变。LinearGradientStyle继承自[ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)。
 
-**继承/实现关系：** LinearGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
+**继承/实现关系：** LinearGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)
 
 **起始版本：** 24
 

@@ -64,7 +64,7 @@ Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
 
 Default value: **ImageFit.Cover**
 
-**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
+**Type:** ImageFit
 
 **Since:** 15
 
@@ -86,7 +86,7 @@ resourceValue: Optional<ResourceStr>
 
 Image data source.
 
-**Type:** [Optional](arkts-arkui-optional-t.md)&lt;ResourceStr&gt;
+**Type:** Optional&lt;ResourceStr&gt;
 
 **Since:** 15
 
@@ -108,7 +108,7 @@ size?: SizeOptions
 
 Image size.
 
-**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**Type:** SizeOptions
 
 **Since:** 15
 
@@ -185,7 +185,7 @@ Alignment mode of the image with the text.
 
 Default value: **ImageSpanAlignment.BOTTOM**
 
-**Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
+**Type:** ImageSpanAlignment
 
 **Since:** 15
 

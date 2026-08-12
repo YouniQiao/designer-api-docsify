@@ -46,7 +46,7 @@ Obtains the pressed status of modifier keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## stopPropagation
 
@@ -96,7 +96,7 @@ Intention corresponding to the key.
 
 Default value: **IntentionCode.INTENTION_UNKNOWN**.
 
-**Type:** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
+**Type:** [IntentionCode](arkts-arkui-intentioncode-t.md)
 
 **Default:** IntentionCode.INTENTION_UNKNOWN
 
@@ -185,7 +185,7 @@ keyCode: number
 ```
 
 Key value. For details about the key values provided by the key-based input devices, see  
-[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md).
+[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode).
 
 **Type:** number
 
@@ -207,7 +207,7 @@ keySource: KeySource
 
 Type of the input device that triggers the key event.
 
-**Type:** [KeySource](../arkts-apis/arkts-arkui-keysource-e.md)
+**Type:** KeySource
 
 **Since:** 7
 
@@ -287,7 +287,7 @@ type: KeyType
 
 Key type.
 
-**Type:** [KeyType](../arkts-apis/arkts-arkui-keytype-e.md)
+**Type:** KeyType
 
 **Since:** 7
 

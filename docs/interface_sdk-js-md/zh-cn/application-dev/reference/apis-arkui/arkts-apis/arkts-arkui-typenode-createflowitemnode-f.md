@@ -29,5 +29,5 @@ export function createFlowItemNode(context: UIContext, options?: FrameNodeOption
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | 返回 FlowItem 类型的 FrameNode |
+| FlowItem | 返回 FlowItem 类型的 FrameNode |
 

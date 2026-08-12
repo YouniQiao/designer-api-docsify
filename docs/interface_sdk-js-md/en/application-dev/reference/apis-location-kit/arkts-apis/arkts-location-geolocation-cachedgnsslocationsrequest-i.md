@@ -8,7 +8,7 @@ Parameters for requesting to report cache location information
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest
+**Substitutes:** [CachedGnssLocationsRequest](ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -19,7 +19,7 @@ Parameters for requesting to report cache location information
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## reportingPeriodSec
@@ -36,7 +36,7 @@ reportingPeriodSec: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest#reportingPeriodSec
+**Substitutes:** [reportingPeriodSec](ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest#reportingPeriodSec)
 
 <!--Device-CachedGnssLocationsRequest-reportingPeriodSec: number--><!--Device-CachedGnssLocationsRequest-reportingPeriodSec: number-End-->
 
@@ -56,7 +56,7 @@ wakeUpCacheQueueFull: boolean
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest#wakeUpCacheQueueFull
+**Substitutes:** [wakeUpCacheQueueFull](ohos.geoLocationManager/geoLocationManager.CachedGnssLocationsRequest#wakeUpCacheQueueFull)
 
 <!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean--><!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean-End-->
 

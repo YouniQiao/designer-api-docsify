@@ -13,7 +13,7 @@ The TextEncoder interface represents a text encoder.The encoder takes the byte s
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

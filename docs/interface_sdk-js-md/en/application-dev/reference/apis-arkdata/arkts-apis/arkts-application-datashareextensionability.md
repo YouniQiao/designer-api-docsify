@@ -6,7 +6,7 @@ The **DataShareExtensionAbility** module provides data share services based on t
 ## Modules to Import
 
 ```TypeScript
-import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
+import { DataShareExtensionAbility } from '@kit.ArkData';
 ```
 
 ## Summary

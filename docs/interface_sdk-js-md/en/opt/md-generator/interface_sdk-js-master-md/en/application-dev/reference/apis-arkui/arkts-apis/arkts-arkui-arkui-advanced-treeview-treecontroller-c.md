@@ -11,7 +11,7 @@ Implements a **TreeController** object, which can be bound to a tree view compon
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from 'kits/@kit.ArkUI';
+import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
 ```
 
 ## addNode

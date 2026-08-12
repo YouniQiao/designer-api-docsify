@@ -13,7 +13,7 @@ Provides methods for setting the display effect, including the font size, screen
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -15,7 +15,7 @@ The UploadProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## error
@@ -26,7 +26,7 @@ error: ErrorType
 
 The error type of upload.
 
-**Type:** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
+**Type:** ErrorType
 
 **Since:** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppConnect
@@ -18,7 +18,7 @@ Connects to a remote device over the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppConnect
+**Substitutes:** [sppConnect](ohos.bluetoothManager/bluetoothManager.sppConnect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

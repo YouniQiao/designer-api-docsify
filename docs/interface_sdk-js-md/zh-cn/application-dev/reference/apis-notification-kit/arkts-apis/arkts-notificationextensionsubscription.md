@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## 汇总
@@ -35,7 +35,7 @@ import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAllSubscriptionBundles](arkts-notification-notificationextensionsubscription-getallsubscriptionbundles-f-sys.md#getallsubscriptionbundles) | 获取所有具有ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了  [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)的应用列表。使用Promise异步回调。 |
+| [getAllSubscriptionBundles](arkts-notification-notificationextensionsubscription-getallsubscriptionbundles-f-sys.md#getallsubscriptionbundles) | 获取所有具有ohos.permission.SUBSCRIBE_NOTIFICATION权限并且实现了  [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility)的应用列表。使用Promise异步回调。 |
 | [getUserGrantedEnabledBundles](arkts-notification-notificationextensionsubscription-getusergrantedenabledbundles-f-sys.md#getusergrantedenabledbundles) | 获取指定应用中“已获取的本机通知”通知开关开启的应用列表。使用Promise异步回调。 |
 | [getUserGrantedState](arkts-notification-notificationextensionsubscription-getusergrantedstate-f-sys.md#getusergrantedstate) | 查询指定应用的“允许获取本机通知”的开关状态。使用Promise异步回调。 |
 | [setUserGrantedBundleState](arkts-notification-notificationextensionsubscription-setusergrantedbundlestate-f-sys.md#setusergrantedbundlestate) | 设置指定应用中“已获取的本机通知”的应用通知开关状态。使用Promise异步回调。 |
@@ -55,6 +55,6 @@ import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
 | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | 指定应用的包信息。 |
 | [GrantedBundleInfo](arkts-notification-notificationextensionsubscription-grantedbundleinfo-t.md) | 授权应用的包信息。 |
 | [NotificationExtensionSubscriptionInfo](arkts-notification-notificationextensionsubscription-notificationextensionsubscriptioninfo-t.md) | 用于描述通知扩展订阅的信息。 |
-| [NotificationInfo](arkts-notification-notificationextensionsubscription-notificationinfo-t.md) | 通知订阅扩展能力中  [onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onreceivemessage)回调的通知信息。 |
+| [NotificationInfo](arkts-notification-notificationextensionsubscription-notificationinfo-t.md) | 通知订阅扩展能力中  [onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onReceiveMessage)回调的通知信息。 |
 | [UserGrantSetting](arkts-notification-notificationextensionsubscription-usergrantsetting-t.md) | 用户授权的设置信息。 |
 

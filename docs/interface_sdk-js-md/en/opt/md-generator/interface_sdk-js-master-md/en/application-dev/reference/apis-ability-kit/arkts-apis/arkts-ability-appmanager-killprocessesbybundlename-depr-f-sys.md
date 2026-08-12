@@ -12,7 +12,7 @@ Kill processes by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#killProcessesByBundleName
+**Substitutes:** [killProcessesByBundleName](ohos.app.ability.appManager/appManager#killProcessesByBundleName)
 
 **Required permissions:** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -32,7 +32,7 @@ Kill processes by bundle name
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Kill processes by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#killProcessesByBundleName
+**Substitutes:** [killProcessesByBundleName](ohos.app.ability.appManager/appManager#killProcessesByBundleName)
 
 **Required permissions:** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 

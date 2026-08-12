@@ -28,10 +28,10 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| targetClass | Object | 是 |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | 是 |
 | methodName | string | 是 |
-| isStatic | boolean | 是 |
-| after | Function | 是 |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | 是 |
+| [after](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Function | 是 |
 
 ## 示例
 
@@ -109,9 +109,9 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| targetClass | Object | 是 |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | 是 |
 | methodName | string | 是 |
-| isStatic | boolean | 是 |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | 是 |
 | before | Function | 是 |
 
 ## 示例
@@ -199,9 +199,9 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| targetClass | Object | 是 |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | 是 |
 | methodName | string | 是 |
-| isStatic | boolean | 是 |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | 是 |
 | instead | Function | 是 |
 
 ## 示例

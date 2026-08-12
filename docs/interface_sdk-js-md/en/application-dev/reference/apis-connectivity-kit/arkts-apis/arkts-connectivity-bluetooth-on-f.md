@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## on('bluetoothDeviceFind')
@@ -20,7 +20,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:bluetoothDeviceFind
+**Substitutes:** [bluetoothDeviceFind](ohos.bluetoothManager/bluetoothManager.on#event:bluetoothDeviceFind)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -33,7 +33,7 @@ Subscribe the event reported when a remote Bluetooth device is discovered.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bluetoothDeviceFind' | Yes | Type of the discovering event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to listen for the discovering event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to listen for the discovering event. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:bondStateChange
+**Substitutes:** [bondStateChange](ohos.bluetoothManager/bluetoothManager.on#event:bondStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -72,7 +72,7 @@ Subscribe the event reported when a remote Bluetooth device is bonded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bondStateChange' | Yes | Type of the bond state event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, {@link BondStateParam}. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BondStateParam&gt; | Yes | Callback used to listen for the bond state event, [BondStateParam](arkts-connectivity-bluetooth-bondstateparam-i.md#BondStateParam). |
 
 ## Examples
 
@@ -98,7 +98,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:pinRequired
+**Substitutes:** [pinRequired](ohos.bluetoothManager/bluetoothManager.on#event:pinRequired)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -111,7 +111,7 @@ Subscribe the event of a pairing request from a remote Bluetooth device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'pinRequired' | Yes | Type of the pairing request event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PinRequiredParam&gt; | Yes | Callback used to listen for the pairing request event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PinRequiredParam&gt; | Yes | Callback used to listen for the pairing request event. |
 
 ## Examples
 
@@ -137,7 +137,7 @@ Subscribe the event reported when the Bluetooth state changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:stateChange
+**Substitutes:** [stateChange](ohos.bluetoothManager/bluetoothManager.on#event:stateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -150,7 +150,7 @@ Subscribe the event reported when the Bluetooth state changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Type of the Bluetooth state changes event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BluetoothState&gt; | Yes | Callback used to listen for the Bluetooth state event. |
 
 ## Examples
 
@@ -176,7 +176,7 @@ Subscribe the event reported when data is read from the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.on#event:sppRead
+**Substitutes:** [sppRead](ohos.bluetoothManager/bluetoothManager.on#event:sppRead)
 
 <!--Device-bluetooth-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void--><!--Device-bluetooth-function on(type: 'sppRead', clientSocket: number, callback: Callback<ArrayBuffer>): void-End-->
 
@@ -188,7 +188,7 @@ Subscribe the event reported when data is read from the socket.
 | --- | --- | --- | --- |
 | type | 'sppRead' | Yes | Type of the spp read event to listen for. |
 | clientSocket | number | Yes | Client socket ID, which is obtained by sppAccept or sppConnect. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to listen for the spp read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to listen for the spp read event. |
 
 ## Examples
 

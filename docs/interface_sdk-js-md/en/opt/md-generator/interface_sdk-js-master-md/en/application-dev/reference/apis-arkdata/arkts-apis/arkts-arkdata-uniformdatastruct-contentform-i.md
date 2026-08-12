@@ -11,7 +11,7 @@ Represents data of the content widget type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## appIcon

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## getSystemResourceManager
@@ -26,7 +26,7 @@ Obtains a system resource management object for accessing preset system resource
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager)
+**Substitutes:** [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getSysResourceManager)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +44,7 @@ Obtains a system resource management object for accessing preset system resource
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
+| [9001009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) | Failed to access the system resource. which is not mapped to application sandbox, This error code will be thrown. |
 
 ## Examples
 

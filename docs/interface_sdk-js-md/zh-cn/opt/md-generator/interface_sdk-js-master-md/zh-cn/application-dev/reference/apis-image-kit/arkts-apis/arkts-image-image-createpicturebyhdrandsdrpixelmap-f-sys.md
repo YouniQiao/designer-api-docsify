@@ -20,20 +20,20 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
-| sdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| hdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| sdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
 
 ## 示例
 
@@ -97,22 +97,22 @@ function createPictureByHdrAndSdrPixelMap(hdrPixelMap: PixelMap, sdrPixelMap: Pi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
-| sdrPixelMap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| hdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| sdrPixelMap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 | params | [GainmapParams](arkts-image-image-gainmapparams-i-sys.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
 
 ## 示例
 

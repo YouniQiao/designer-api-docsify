@@ -26,5 +26,5 @@ The settings change event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | (SettingItem) returned through promise |
+| Promise&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)&gt; | (SettingItem) returned through promise |
 

@@ -13,7 +13,7 @@ Provides methods related to cellular data services.
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## Summary

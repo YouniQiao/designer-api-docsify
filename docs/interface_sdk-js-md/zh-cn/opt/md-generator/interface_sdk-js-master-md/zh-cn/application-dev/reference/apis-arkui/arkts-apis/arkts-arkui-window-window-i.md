@@ -3,9 +3,9 @@
 当前窗口实例，窗口管理器管理的基本单元。
 
 下列API示例中都需先使用  
-[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、  
-[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、  
-[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
+[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getLastWindow)、  
+[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)、  
+[findWindow()](arkts-arkui-window-findwindow-f.md#findWindow)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **起始版本：** 6
 
@@ -33,16 +33,16 @@ clearWindowMask(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## clientToGlobalDisplay
 
@@ -77,10 +77,10 @@ clientToGlobalDisplay(winX: number, winY: number): Position
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## convertOrientationAndRotation
 
@@ -91,8 +91,8 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 提供窗口方向、屏幕方向和屏幕角度互相转换的能力。
 
 窗口方向指窗口所在屏幕的方向，以窗口模块对横竖屏的定义方式表示，窗口的方向分别用0、1、2和3表示竖屏、反向横屏、反向竖屏和横屏四个方向，其对横竖屏的定义与  
-[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)和枚举类  
-[Orientation](arkts-arkui-window-orientation-e.md)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。
+[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo)和枚举类  
+[Orientation](arkts-arkui-window-orientation-e.md#Orientation)中对横竖屏的定义一致，如Orientation设置为LANDSCAPE时，窗口方向为横屏。
 
 > **说明：**
 > 
@@ -131,9 +131,9 @@ convertOrientationAndRotation(from: RotationInfoType, to: RotationInfoType, valu
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## createSubWindowWithOptions
 
@@ -170,11 +170,11 @@ createSubWindowWithOptions(name: string, options: SubWindowOptions): Promise<Win
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## destroy
 
@@ -187,13 +187,13 @@ destroy(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [destroyWindow()](arkts-arkui-window-window-i.md#destroywindow)替代。
+> [destroyWindow()](#destroyWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.destroyWindow](arkts-arkui-window-window-i.md#destroywindow)(callback:
+**替代接口：** [destroyWindow](window.Window.destroyWindow(callback:)
 
 <!--Device-Window-destroy(callback: AsyncCallback<void>): void--><!--Device-Window-destroy(callback: AsyncCallback<void>): void-End-->
 
@@ -215,13 +215,13 @@ destroy(): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[destroyWindow()](arkts-arkui-window-window-i.md#destroywindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[destroyWindow()](#destroyWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.destroyWindow](arkts-arkui-window-window-i.md#destroywindow)()
+**替代接口：** [destroyWindow](#destroyWindow)()
 
 <!--Device-Window-destroy(): Promise<void>--><!--Device-Window-destroy(): Promise<void>-End-->
 
@@ -231,7 +231,7 @@ destroy(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## destroyWindow
 
@@ -259,8 +259,8 @@ destroyWindow(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## destroyWindow
 
@@ -282,14 +282,14 @@ destroyWindow(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## disableLandscapeMultiWindow
 
@@ -313,14 +313,14 @@ disableLandscapeMultiWindow(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## enableDrag
 
@@ -348,17 +348,17 @@ enableDrag(enable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableLandscapeMultiWindow
 
@@ -382,14 +382,14 @@ enableLandscapeMultiWindow(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getAvoidArea
 
@@ -402,25 +402,25 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 主窗口/子窗口：
 
 - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
-仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
-- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+- 仅在调用[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
 为空。
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getWindowAvoidArea)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.getWindowAvoidArea](arkts-arkui-window-window-i.md#getwindowavoidarea)
+**替代接口：** [getWindowAvoidArea](#getWindowAvoidArea)
 
 <!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void--><!--Device-Window-getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void-End-->
 
@@ -431,7 +431,7 @@ getAvoidArea(type: AvoidAreaType, callback: AsyncCallback<AvoidArea>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AvoidArea&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 |
 
 ## getAvoidArea
 
@@ -444,25 +444,25 @@ getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 主窗口/子窗口：
 
 - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下，  
-仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
-- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+仅存在固定态软键盘（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+- 仅在调用[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
 为空。
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getWindowAvoidArea()](#getWindowAvoidArea)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.getWindowAvoidArea](arkts-arkui-window-window-i.md#getwindowavoidarea)
+**替代接口：** [getWindowAvoidArea](#getWindowAvoidArea)
 
 <!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>--><!--Device-Window-getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>-End-->
 
@@ -478,7 +478,7 @@ getAvoidArea(type: AvoidAreaType): Promise<AvoidArea>
 
 | 类型 |
 | --- |
-| Promise&lt;AvoidArea&gt; |
+| Promise&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; |
 
 ## getColorSpace
 
@@ -490,13 +490,13 @@ getColorSpace(): Promise<ColorSpace>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](arkts-arkui-window-window-i.md#getwindowcolorspace)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](#getWindowColorSpace)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.getWindowColorSpace](arkts-arkui-window-window-i.md#getwindowcolorspace)
+**替代接口：** [getWindowColorSpace](#getWindowColorSpace)
 
 <!--Device-Window-getColorSpace(): Promise<ColorSpace>--><!--Device-Window-getColorSpace(): Promise<ColorSpace>-End-->
 
@@ -506,7 +506,7 @@ getColorSpace(): Promise<ColorSpace>
 
 | 类型 |
 | --- |
-| Promise&lt;ColorSpace&gt; |
+| Promise & lt;ColorSpace & gt; |
 
 ## getColorSpace
 
@@ -518,13 +518,13 @@ getColorSpace(callback: AsyncCallback<ColorSpace>): void
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](arkts-arkui-window-window-i.md#getwindowcolorspace)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[getWindowColorSpace()](#getWindowColorSpace)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.getWindowColorSpace](arkts-arkui-window-window-i.md#getwindowcolorspace)
+**替代接口：** [getWindowColorSpace](#getWindowColorSpace)
 
 <!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void--><!--Device-Window-getColorSpace(callback: AsyncCallback<ColorSpace>): void-End-->
 
@@ -562,10 +562,10 @@ getDecorButtonStyle(): DecorButtonStyle
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## getGlobalRect
 
@@ -595,9 +595,9 @@ getGlobalRect(): Rect
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getImmersiveModeEnabledState
 
@@ -609,8 +609,8 @@ getImmersiveModeEnabledState(): boolean
 
 仅支持主窗和子窗调用。
 
-返回值与[setImmersiveModeEnabledState()](arkts-arkui-window-window-i.md#setimmersivemodeenabledstate)以及  
-[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)设置结果一致，若未调用上述两个接口则默认返回false。
+返回值与[setImmersiveModeEnabledState()](#setImmersiveModeEnabledState)以及  
+[setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)设置结果一致，若未调用上述两个接口则默认返回false。
 
 **起始版本：** 12
 
@@ -630,8 +630,8 @@ getImmersiveModeEnabledState(): boolean
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## getParentWindow
 
@@ -659,10 +659,10 @@ getParentWindow(): Window
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
 
 ## getPreferredOrientation
 
@@ -690,7 +690,7 @@ getPreferredOrientation(): Orientation
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getProperties
 
@@ -702,13 +702,13 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](#getWindowProperties)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)
+**替代接口：** [getWindowProperties](#getWindowProperties)
 
 <!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void--><!--Device-Window-getProperties(callback: AsyncCallback<WindowProperties>): void-End-->
 
@@ -718,7 +718,7 @@ getProperties(callback: AsyncCallback<WindowProperties>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowProperties&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; | 是 |
 
 ## getProperties
 
@@ -730,13 +730,13 @@ getProperties(): Promise<WindowProperties>
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[getWindowProperties()](#getWindowProperties)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)
+**替代接口：** [getWindowProperties](#getWindowProperties)
 
 <!--Device-Window-getProperties(): Promise<WindowProperties>--><!--Device-Window-getProperties(): Promise<WindowProperties>-End-->
 
@@ -746,7 +746,7 @@ getProperties(): Promise<WindowProperties>
 
 | 类型 |
 | --- |
-| Promise&lt;WindowProperties&gt; |
+| Promise&lt;[WindowProperties](arkts-arkui-window-windowproperties-i.md)&gt; |
 
 ## getStatusBarProperty
 
@@ -776,8 +776,8 @@ getStatusBarProperty(): StatusBarProperty
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## getSubWindowZLevel
 
@@ -805,9 +805,9 @@ getSubWindowZLevel(): number
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## getTitleButtonRect
 
@@ -835,8 +835,8 @@ getTitleButtonRect(): TitleButtonRect
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getUIContext
 
@@ -866,7 +866,7 @@ getUIContext() : UIContext
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowAvoidArea
 
@@ -879,19 +879,19 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 主窗口/子窗口：
 
 - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
-[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在固定态软键盘（  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
-- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#WindowStatusType)）下，仅存在固定态软键盘（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。
+- 仅在调用[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled)方法使能后，才能通过此接口获取避让区域，否则获取的避让区域为空。
 
 该接口一般适用于两种场景：
 
-- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)方法中，获取应用启动时的初始布局避让区域时可  
+- 在[onWindowStageCreate()](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)方法中，获取应用启动时的初始布局避让区域时可  
 调用该接口。  
 - 当应用内子窗需要临时显示，对显示内容做布局避让时可调用该接口。
 
@@ -919,8 +919,8 @@ getWindowAvoidArea(type: AvoidAreaType): AvoidArea
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowAvoidAreaIgnoringVisibility
 
@@ -933,14 +933,14 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 主窗口/子窗口：
 
 - 主窗口在非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
-[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下，仅存在系统栏（  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#WindowStatusType)）下，仅存在系统栏（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下，仅当窗口的位置和大小与主窗口一致时，才能通过此接口获取计算后的避让区域，否则获取的避让区域为空。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
+- 仅在调用[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled)方法使能后，才能通过此接口获取计算后的避让区域，否则获取的避让区域  
 为空。
 
 **起始版本：** 22
@@ -965,10 +965,10 @@ getWindowAvoidAreaIgnoringVisibility(type: AvoidAreaType): AvoidArea
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
 
 ## getWindowColorSpace
 
@@ -996,7 +996,7 @@ getWindowColorSpace(): ColorSpace
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowCornerRadius
 
@@ -1004,7 +1004,7 @@ getWindowColorSpace(): ColorSpace
 getWindowCornerRadius(): number
 ```
 
-该接口用于获取子窗或悬浮窗的圆角半径值，在未调用[setWindowCornerRadius()](arkts-arkui-window-window-i.md#setwindowcornerradius)接口设置窗口圆角半径值时，调用此接口可获取窗口默认圆角半径值。
+该接口用于获取子窗或悬浮窗的圆角半径值，在未调用[setWindowCornerRadius()](#setWindowCornerRadius)接口设置窗口圆角半径值时，调用此接口可获取窗口默认圆角半径值。
 
 **起始版本：** 17
 
@@ -1024,9 +1024,9 @@ getWindowCornerRadius(): number
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## getWindowDecorHeight
 
@@ -1035,9 +1035,9 @@ getWindowDecorHeight(): number
 ```
 
 对存在标题栏和三键区的窗口形态生效，用于获取窗口的标题栏高度。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
-由于系统像素转换可能存在精度误差，调用[setWindowDecorHeight()](arkts-arkui-window-window-i.md#setwindowdecorheight)设置的值与获取的值可能存在1vp的差异。
+由于系统像素转换可能存在精度误差，调用[setWindowDecorHeight()](#setWindowDecorHeight)设置的值与获取的值可能存在1vp的差异。
 
 **起始版本：** 11
 
@@ -1057,8 +1057,8 @@ getWindowDecorHeight(): number
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowDecorVisible
 
@@ -1067,7 +1067,7 @@ getWindowDecorVisible(): boolean
 ```
 
 查询窗口标题栏是否可见。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 18
 
@@ -1087,8 +1087,8 @@ getWindowDecorVisible(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowDensityInfo
 
@@ -1116,8 +1116,8 @@ getWindowDensityInfo(): WindowDensityInfo
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowLimits
 
@@ -1145,8 +1145,8 @@ getWindowLimits(): WindowLimits
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowLimitsVP
 
@@ -1174,8 +1174,8 @@ getWindowLimitsVP(): WindowLimits
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowProperties
 
@@ -1203,7 +1203,7 @@ getWindowProperties(): WindowProperties
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowStateSnapshot
 
@@ -1227,15 +1227,15 @@ getWindowStateSnapshot(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowStatus
 
@@ -1271,8 +1271,8 @@ getWindowStatus(): WindowStatusType
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## getWindowSystemBarProperties
 
@@ -1300,9 +1300,9 @@ getWindowSystemBarProperties(): SystemBarProperties
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## getWindowTransitionAnimation
 
@@ -1340,11 +1340,11 @@ getWindowTransitionAnimation(transitionType: WindowTransitionType): TransitionAn
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## globalDisplayToClient
 
@@ -1379,10 +1379,10 @@ globalDisplayToClient(globalDisplayX: number, globalDisplayY: number): Position
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## isFloatNavigationAvoidAreaEnabled
 
@@ -1412,7 +1412,7 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isFocused
 
@@ -1420,7 +1420,7 @@ isFloatNavigationAvoidAreaEnabled(): boolean
 isFocused(): boolean
 ```
 
-判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。
+判断当前窗口是否已获焦。为获取准确的获焦状态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md#WindowEventType)生命周期处于WINDOW_ACTIVE之后调用。
 
 可使用[on('windowEvent')](window.Window.on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;))监听对应状态变更，再执行对应具体业务。
 
@@ -1442,7 +1442,7 @@ isFocused(): boolean
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isGestureBackEnabled
 
@@ -1470,9 +1470,9 @@ isGestureBackEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## isImmersiveLayout
 
@@ -1498,8 +1498,8 @@ isImmersiveLayout(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isInFreeWindowMode
 
@@ -1527,8 +1527,8 @@ isInFreeWindowMode(): boolean
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isReceiveDragEventEnabled
 
@@ -1536,7 +1536,7 @@ isInFreeWindowMode(): boolean
 isReceiveDragEventEnabled(): boolean
 ```
 
-获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md/arkts-arkui-dragevent-i.md)的状态。
+获取当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md#DragEvent)的状态。
 
 **起始版本：** 23
 
@@ -1556,9 +1556,9 @@ isReceiveDragEventEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isSeparationTouchEnabled
 
@@ -1586,9 +1586,9 @@ isSeparationTouchEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isShowing
 
@@ -1600,13 +1600,13 @@ isShowing(callback: AsyncCallback<boolean>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](arkts-arkui-window-window-i.md#iswindowshowing)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](#isWindowShowing)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.isWindowShowing](arkts-arkui-window-window-i.md#iswindowshowing)
+**替代接口：** [isWindowShowing](#isWindowShowing)
 
 <!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void--><!--Device-Window-isShowing(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1628,13 +1628,13 @@ isShowing(): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](arkts-arkui-window-window-i.md#iswindowshowing)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[isWindowShowing()](#isWindowShowing)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.isWindowShowing](arkts-arkui-window-window-i.md#iswindowshowing)
+**替代接口：** [isWindowShowing](#isWindowShowing)
 
 <!--Device-Window-isShowing(): Promise<boolean>--><!--Device-Window-isShowing(): Promise<boolean>-End-->
 
@@ -1644,7 +1644,7 @@ isShowing(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## isSupportWideGamut
 
@@ -1657,13 +1657,13 @@ isSupportWideGamut(): Promise<boolean>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [isWindowSupportWideGamut()](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)替代。
+> [isWindowSupportWideGamut()](#isWindowSupportWideGamut)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.isWindowSupportWideGamut](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)()
+**替代接口：** [isWindowSupportWideGamut](#isWindowSupportWideGamut)()
 
 <!--Device-Window-isSupportWideGamut(): Promise<boolean>--><!--Device-Window-isSupportWideGamut(): Promise<boolean>-End-->
 
@@ -1673,7 +1673,7 @@ isSupportWideGamut(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## isSupportWideGamut
 
@@ -1686,13 +1686,13 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [isWindowSupportWideGamut()](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)替代。
+> [isWindowSupportWideGamut()](#isWindowSupportWideGamut)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.isWindowSupportWideGamut](arkts-arkui-window-window-i.md#iswindowsupportwidegamut)(callback:
+**替代接口：** [isWindowSupportWideGamut](window.Window.isWindowSupportWideGamut(callback:)
 
 <!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1710,7 +1710,7 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 isSystemAvoidAreaEnabled(): boolean
 ```
 
-获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-window-avoidarea-i.md)。
+获取悬浮窗、模态窗或WindowType为系统类型的窗口是否可以获取窗口内容的避让区[AvoidArea](arkts-arkui-window-avoidarea-i.md#AvoidArea)。
 
 **起始版本：** 18
 
@@ -1730,10 +1730,10 @@ isSystemAvoidAreaEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## isWindowHighlighted
 
@@ -1741,7 +1741,7 @@ isSystemAvoidAreaEnabled(): boolean
 isWindowHighlighted(): boolean
 ```
 
-获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md)生命周期处于WINDOW_ACTIVE之后调用。
+获取当前窗口是否为激活态。为准确获取激活态，需要在[WindowEventType](arkts-arkui-window-windoweventtype-e.md#WindowEventType)生命周期处于WINDOW_ACTIVE之后调用。
 
 可使用  
 [on('windowHighlightChange')](window.Window.on(type: 'windowHighlightChange', callback: Callback&lt;boolean&gt;))监听对应状态变更，再执行对应具体业务。
@@ -1764,8 +1764,8 @@ isWindowHighlighted(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isWindowShowing
 
@@ -1793,7 +1793,7 @@ isWindowShowing(): boolean
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isWindowSupportWideGamut
 
@@ -1815,13 +1815,13 @@ isWindowSupportWideGamut(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## isWindowSupportWideGamut
 
@@ -1849,7 +1849,7 @@ isWindowSupportWideGamut(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## keepKeyboardOnFocus
 
@@ -1877,10 +1877,10 @@ keepKeyboardOnFocus(keepKeyboardFlag: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## loadContent
 
@@ -1916,9 +1916,9 @@ loadContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>):
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## loadContent
 
@@ -1953,15 +1953,15 @@ loadContent(path: string, storage: LocalStorage): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## loadContent
 
@@ -1978,13 +1978,13 @@ loadContent(path: string, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)替代。
+> [setUIContent()](#setUIContent)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setUIContent](arkts-arkui-window-window-i.md#setuicontent)(path:
+**替代接口：** [setUIContent](window.Window.setUIContent(path:)
 
 <!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Window-loadContent(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2011,13 +2011,13 @@ loadContent(path: string): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[setUIContent()](#setUIContent-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setUIContent](arkts-arkui-window-window-i.md#setuicontent)(path:
+**替代接口：** [setUIContent](window.Window.setUIContent(path:)
 
 <!--Device-Window-loadContent(path: string): Promise<void>--><!--Device-Window-loadContent(path: string): Promise<void>-End-->
 
@@ -2033,7 +2033,7 @@ loadContent(path: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## loadContentByName
 
@@ -2069,9 +2069,9 @@ loadContentByName(name: string, storage: LocalStorage, callback: AsyncCallback<v
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## loadContentByName
 
@@ -2106,9 +2106,9 @@ loadContentByName(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## loadContentByName
 
@@ -2143,15 +2143,15 @@ loadContentByName(name: string, storage?: LocalStorage): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## maximize
 
@@ -2179,17 +2179,17 @@ maximize(presentation?: MaximizePresentation): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300005](../errorcode-window.md#1300005-windowstage异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300005-windowstage异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## maximize
 
@@ -2217,16 +2217,16 @@ maximize(presentation?: MaximizePresentation, acrossDisplay?: boolean): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## maximizeWithOptions
 
@@ -2254,17 +2254,17 @@ maximizeWithOptions(maximizeOptions?: MaximizeOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## minimize
 
@@ -2274,9 +2274,9 @@ minimize(callback: AsyncCallback<void>): void
 
 此接口根据调用对象不同，实现不同的功能：
 
-- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](arkts-arkui-window-window-i.md#restore)进行还原。  
+- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](#restore)进行还原。  
 - 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
+[showWindow()](#showWindow)进行还原。
 
 该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用callback异步回调。
 
@@ -2298,9 +2298,9 @@ minimize(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## minimize
 
@@ -2310,9 +2310,9 @@ minimize(): Promise<void>
 
 此接口根据调用对象不同，实现不同的功能：
 
-- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](arkts-arkui-window-window-i.md#restore)进行还原。  
+- 当调用对象为主窗口时，实现最小化功能，可在Dock栏中还原，2in1 设备上可以使用[restore()](#restore)进行还原。  
 - 当调用对象为子窗口或全局悬浮窗时，实现隐藏功能，不可在Dock栏中还原，可以使用  
-[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行还原。
+[showWindow()](#showWindow)进行还原。
 
 该接口仅支持主窗口、子窗口或全局悬浮窗，其它窗口调用返回1300002错误码，使用Promise异步回调。
 
@@ -2328,15 +2328,15 @@ minimize(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## moveTo
 
@@ -2350,13 +2350,13 @@ moveTo(x: number, y: number): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[moveWindowTo()](#moveWindowTo)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.moveWindowTo](arkts-arkui-window-window-i.md#movewindowto)(x:
+**替代接口：** [moveWindowTo](window.Window.moveWindowTo(x:)
 
 <!--Device-Window-moveTo(x: number, y: number): Promise<void>--><!--Device-Window-moveTo(x: number, y: number): Promise<void>-End-->
 
@@ -2373,7 +2373,7 @@ moveTo(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## moveTo
 
@@ -2388,13 +2388,13 @@ moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)替代。
+> [moveWindowTo()](#moveWindowTo)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.moveWindowTo](arkts-arkui-window-window-i.md#movewindowto)(x:
+**替代接口：** [moveWindowTo](window.Window.moveWindowTo(x:)
 
 <!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void--><!--Device-Window-moveTo(x: number, y: number, callback: AsyncCallback<void>): void-End-->
 
@@ -2415,17 +2415,17 @@ moveWindowTo(x: number, y: number): Promise<void>
 ```
 
 移动窗口位置，使用Promise异步回调。调用成功即返回，但返回后无法立即获取最终生效结果。如需立即获取，请使用  
-[moveWindowToAsync()](arkts-arkui-window-window-i.md#movewindowtoasync)。
+[moveWindowToAsync()](#moveWindowToAsync)。
 
 > **说明：**
 > 
 > - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过
-> [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）外的其他窗口模式下使用。
+> [getWindowStatus()](#getWindowStatus)获取）外的其他窗口模式下使用。
 > 
 > - 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口相对于屏幕左上顶点移动；在非自由窗口状态下，窗口相对于父窗口左上顶点移动。
 > 
 > - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用
-> [moveWindowToGlobal()](arkts-arkui-window-window-i.md#movewindowtoglobal)
+> [moveWindowToGlobal()](#moveWindowToGlobal-1)
 > 。
 > 
 > - 该方法对非自由窗口状态下的主窗口无效。
@@ -2451,15 +2451,15 @@ moveWindowTo(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## moveWindowTo
 
@@ -2468,17 +2468,17 @@ moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
 移动窗口位置，使用callback异步回调。调用成功即返回，但返回后无法立即获取最终生效结果。如需立即获取，请使用  
-[moveWindowToAsync()](arkts-arkui-window-window-i.md#movewindowtoasync)。
+[moveWindowToAsync()](#moveWindowToAsync)。
 
 > **说明：**
 > 
 > - 不建议在除自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，WindowStatusType可通过
-> [getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）外的其他窗口模式下使用。
+> [getWindowStatus()](#getWindowStatus)获取）外的其他窗口模式下使用。
 > 
 > - 在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，窗口相对于屏幕左上顶点移动；在非自由窗口状态下，窗口相对于父窗口左上顶点移动。
 > 
 > - 若需在非自由窗口状态下实现相对于屏幕左上顶点的移动，请使用
-> [moveWindowToGlobal()](arkts-arkui-window-window-i.md#movewindowtoglobal)
+> [moveWindowToGlobal()](#moveWindowToGlobal-1)
 > 。
 > 
 > - 该方法对非自由窗口状态下的主窗口无效。
@@ -2505,9 +2505,9 @@ moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## moveWindowToAsync
 
@@ -2515,10 +2515,10 @@ moveWindowTo(x: number, y: number, callback: AsyncCallback<void>): void
 moveWindowToAsync(x: number, y: number): Promise<void>
 ```
 
-移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
+移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](#getWindowProperties)（见示例）立即获取最终生效结果。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
 
 在自由悬浮窗口模式下，不同类型窗口的移动行为如下：
 
@@ -2551,16 +2551,16 @@ moveWindowToAsync(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## moveWindowToAsync
 
@@ -2569,10 +2569,10 @@ moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): 
 ```
 
 移动窗口位置，支持配置moveConfiguration参数指定窗口移动的目标屏幕ID，使用Promise异步回调。调用生效后返回，回调中可使用  
-[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
+[getWindowProperties()](#getWindowProperties)（见示例）立即获取最终生效结果。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
 
 在自由悬浮窗口模式下，不同类型窗口的移动行为如下：
 
@@ -2606,16 +2606,16 @@ moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## moveWindowToGlobal
 
@@ -2623,10 +2623,10 @@ moveWindowToAsync(x: number, y: number, moveConfiguration?: MoveConfiguration): 
 moveWindowToGlobal(x: number, y: number): Promise<void>
 ```
 
-基于屏幕坐标移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
+基于屏幕坐标移动窗口位置，使用Promise异步回调。调用生效后返回，回调中可使用[getWindowProperties()](#getWindowProperties)（见示例）立即获取最终生效结果。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
 
 > **说明：**
 > 
@@ -2653,16 +2653,16 @@ moveWindowToGlobal(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## moveWindowToGlobal
 
@@ -2671,10 +2671,10 @@ moveWindowToGlobal(x: number, y: number, moveConfiguration?: MoveConfiguration):
 ```
 
 基于屏幕坐标移动窗口位置，支持配置moveConfiguration参数指定窗口移动的目标屏幕ID，使用Promise异步回调。调用生效后返回，回调中可使用  
-[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
+[getWindowProperties()](#getWindowProperties)（见示例）立即获取最终生效结果。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
 
 > **说明：**
 > 
@@ -2702,16 +2702,16 @@ moveWindowToGlobal(x: number, y: number, moveConfiguration?: MoveConfiguration):
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## moveWindowToGlobalDisplay
 
@@ -2722,7 +2722,7 @@ moveWindowToGlobalDisplay(x: number, y: number): Promise<void>
 基于[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)移动窗口位置，使用Promise异步回调。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回错误码1300010错误码。
 
 > **说明：**
 > 
@@ -2749,17 +2749,17 @@ moveWindowToGlobalDisplay(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## off('rotationChange')
 
@@ -2783,15 +2783,15 @@ off(type: 'rotationChange',
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'rotationChange' | 是 |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | 否 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off
 
@@ -2814,15 +2814,15 @@ off(eventType: 'uiExtensionSecureLimitChange', callback?: Callback<boolean>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventType | 'uiExtensionSecureLimitChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('frameMetricsMeasured')
 
@@ -2831,7 +2831,7 @@ off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 ```
 
 关闭窗口帧率指标变化事件的监听。该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 22
 
@@ -2844,14 +2844,14 @@ off(type: 'frameMetricsMeasured', callback?: Callback<FrameMetrics>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameMetricsMeasured' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FrameMetrics&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('occlusionStateChanged')
 
@@ -2872,15 +2872,15 @@ off(type: 'occlusionStateChanged', callback?: Callback<OcclusionState>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'occlusionStateChanged' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OcclusionState&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('windowSizeChange')
 
@@ -2903,13 +2903,13 @@ off(type: 'windowSizeChange', callback?: Callback<Size>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowSizeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Size&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('systemAvoidAreaChange')
 
@@ -2922,14 +2922,14 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [off('avoidAreaChange')](window.Window.off(type: 'avoidAreaChange', callback?: Callback&lt;AvoidAreaOptions&gt;))
+> [off('avoidAreaChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** window.Window.off(type:
+**替代接口：** [off](window.Window.off(type:)
 
 <!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void--><!--Device-Window-off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void-End-->
 
@@ -2940,7 +2940,7 @@ off(type: 'systemAvoidAreaChange', callback?: Callback<AvoidArea>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'systemAvoidAreaChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidArea&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 否 |
 
 ## off('avoidAreaChange')
 
@@ -2963,13 +2963,13 @@ off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaOptions>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaOptions&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('keyboardHeightChange')
 
@@ -2978,7 +2978,7 @@ off(type: 'keyboardHeightChange', callback?: Callback<number>): void
 ```
 
 关闭固定态软键盘高度变化的监听，使应用程序不再接收键盘高度变化的通知。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见  
-[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 7
 
@@ -2993,13 +2993,13 @@ off(type: 'keyboardHeightChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardHeightChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('keyboardWillShow')
 
@@ -3008,7 +3008,7 @@ off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 ```
 
 关闭固定态软键盘即将开始显示的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见  
-[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 20
 
@@ -3023,14 +3023,14 @@ off(type: 'keyboardWillShow', callback?: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardWillShow' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('keyboardDidShow')
 
@@ -3039,7 +3039,7 @@ off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 ```
 
 关闭固定态软键盘显示动画完成的监听。改变输入法窗口为固定态或者悬浮态方法详细介绍请参见  
-[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 18
 
@@ -3054,14 +3054,14 @@ off(type: 'keyboardDidShow', callback?: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardDidShow' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('keyboardWillHide')
 
@@ -3070,7 +3070,7 @@ off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 ```
 
 关闭固定态软键盘即将开始隐藏的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见  
-[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 20
 
@@ -3085,14 +3085,14 @@ off(type: 'keyboardWillHide', callback?: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardWillHide' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('keyboardDidHide')
 
@@ -3101,7 +3101,7 @@ off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 ```
 
 关闭固定态软键盘隐藏动画完成的监听。改变输入法窗口为固定态切换至悬浮态方法详细介绍请参见  
-[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 18
 
@@ -3116,14 +3116,14 @@ off(type: 'keyboardDidHide', callback?: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardDidHide' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('touchOutside')
 
@@ -3146,13 +3146,13 @@ off(type: 'touchOutside', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'touchOutside' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('displayIdChange')
 
@@ -3175,15 +3175,15 @@ off(type: 'displayIdChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'displayIdChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('windowVisibilityChange')
 
@@ -3206,16 +3206,16 @@ off(type: 'windowVisibilityChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowVisibilityChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('systemDensityChange')
 
@@ -3240,15 +3240,15 @@ off(type: 'systemDensityChange', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'systemDensityChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('noInteractionDetected')
 
@@ -3271,16 +3271,16 @@ off(type: 'noInteractionDetected', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'noInteractionDetected' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('screenshot')
 
@@ -3303,13 +3303,13 @@ off(type: 'screenshot', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'screenshot' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('screenshotAppEvent')
 
@@ -3330,14 +3330,14 @@ off(type: 'screenshotAppEvent', callback?: Callback<ScreenshotEventType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'screenshotAppEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScreenshotEventType&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('dialogTargetTouch')
 
@@ -3360,13 +3360,13 @@ off(type: 'dialogTargetTouch', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'dialogTargetTouch' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('windowEvent')
 
@@ -3389,13 +3389,13 @@ off(type: 'windowEvent', callback?: Callback<WindowEventType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowEventType&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowEventType](arkts-arkui-window-windoweventtype-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('windowStatusChange')
 
@@ -3418,14 +3418,14 @@ off(type: 'windowStatusChange', callback?: Callback<WindowStatusType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowStatusChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## off('windowStatusDidChange')
 
@@ -3446,14 +3446,14 @@ off(type: 'windowStatusDidChange', callback?: Callback<WindowStatusType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowStatusDidChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('subWindowClose')
 
@@ -3476,16 +3476,16 @@ off(type: 'subWindowClose', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'subWindowClose' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## off('windowWillClose')
 
@@ -3508,16 +3508,16 @@ off(type: 'windowWillClose', callback?: Callback<void, Promise<boolean>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowWillClose' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## off('windowHighlightChange')
 
@@ -3540,16 +3540,16 @@ off(type: 'windowHighlightChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowHighlightChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('windowTitleButtonRectChange')
 
@@ -3558,7 +3558,7 @@ off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): 
 ```
 
 关闭窗口标题栏上的最小化、最大化、关闭按钮矩形区域变化的监听，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 11
 
@@ -3573,15 +3573,15 @@ off(type: 'windowTitleButtonRectChange', callback?: Callback<TitleButtonRect>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowTitleButtonRectChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TitleButtonRect&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('windowRectChange')
 
@@ -3604,16 +3604,16 @@ off(type: 'windowRectChange', callback?: Callback<RectChangeOptions>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowRectChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('rectChangeInGlobalDisplay')
 
@@ -3634,15 +3634,15 @@ off(type: 'rectChangeInGlobalDisplay', callback?: Callback<RectChangeOptions>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'rectChangeInGlobalDisplay' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## off('freeWindowModeChange')
 
@@ -3665,14 +3665,14 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'freeWindowModeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('rotationChange')
 
@@ -3680,12 +3680,12 @@ off(type: 'freeWindowModeChange', callback?: Callback<boolean>): void
 on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, RotationChangeResult | void>): void
 ```
 
-开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)中窗口旋转事件类型为窗口即将旋转时，必须返回  
-[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)。窗口旋转事件类型为窗口旋转结束时返回  
-[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)不生效。
+开启窗口旋转变化的监听。[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo)中窗口旋转事件类型为窗口即将旋转时，必须返回  
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult)。窗口旋转事件类型为窗口旋转结束时返回  
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult)不生效。
 
 该函数只允许在主线程注册。同一个窗口多次注册同类型回调函数，只生效最新注册的同类型回调函数返回值。系统提供了超时保护机制，若20ms内窗口未返回  
-[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md)，系统不处理该返回值。
+[RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult)，系统不处理该返回值。
 
 **起始版本：** 19
 
@@ -3700,15 +3700,15 @@ on(type: 'rotationChange', callback: RotationChangeCallback<RotationChangeInfo, 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'rotationChange' | 是 |
-| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;RotationChangeInfo, RotationChangeResult \| void&gt; | 是 |
+| callback | [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md)&lt;[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md), [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \| void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on
 
@@ -3731,15 +3731,15 @@ on(eventType: 'uiExtensionSecureLimitChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventType | 'uiExtensionSecureLimitChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('frameMetricsMeasured')
 
@@ -3748,7 +3748,7 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 ```
 
 开启窗口帧率指标变化事件的监听。该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 应用注册帧率变化监听后，只有当客户端UI内容发生重绘时（如页面切换、和可响应组件交互、设置背景色和透明度等），才会触发注册的回调。但当同时使用该接口和  
 [postFrameCallback](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#postframecallback12)、  
@@ -3766,14 +3766,14 @@ on(type: 'frameMetricsMeasured', callback: Callback<FrameMetrics>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameMetricsMeasured' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FrameMetrics&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[FrameMetrics](arkts-arkui-window-framemetrics-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('occlusionStateChanged')
 
@@ -3783,8 +3783,8 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 
 开启窗口可见性状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
-[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setWindowShadowEnabled)和  
+[setWindowShadowRadius](#setWindowShadowRadius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
@@ -3799,15 +3799,15 @@ on(type: 'occlusionStateChanged', callback: Callback<OcclusionState>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'occlusionStateChanged' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;OcclusionState&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[OcclusionState](arkts-arkui-window-occlusionstate-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('windowSizeChange')
 
@@ -3830,13 +3830,13 @@ on(type: 'windowSizeChange', callback: Callback<Size>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowSizeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Size&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('systemAvoidAreaChange')
 
@@ -3856,7 +3856,7 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 
 **废弃版本：** 9
 
-**替代接口：** window.Window.on(type:
+**替代接口：** [on](window.Window.on(type:)
 
 <!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void--><!--Device-Window-on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void-End-->
 
@@ -3867,7 +3867,7 @@ on(type: 'systemAvoidAreaChange', callback: Callback<AvoidArea>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'systemAvoidAreaChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidArea&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidArea](arkts-arkui-window-avoidarea-i.md)&gt; | 是 |
 
 ## on('avoidAreaChange')
 
@@ -3880,15 +3880,15 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 主窗口/子窗口：
 
 - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态的自由悬浮窗口模式（即窗口模式为  
-[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md)）下触发回调时，仅存在固定态软键盘（  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD）类型的避让区域。  
-- 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM）类型的避让区域。  
+[window.WindowStatusType.FLOATING](arkts-arkui-window-windowstatustype-e.md#WindowStatusType)）下触发回调时，仅存在固定态软键盘（  
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD）类型的避让区域。  
+- 主窗口在非自由窗口状态的自由悬浮窗口模式下触发回调时，仅存在系统栏（[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM）类型的避让区域。  
 - 主窗口在其余场景下触发回调时，仅当在非自由悬浮窗口模式下或设备类型为Phone和Tablet，才能返回计算后的避让区域，否则直接返回空的避让区域。  
 - 子窗口在非自由窗口状态或非自由悬浮窗口模式下触发回调时，仅当子窗口的位置和大小与主窗口一致时，才能返回计算后的子窗口避让区域，否则直接返回空的避让区域。
 
 全局悬浮窗、模态窗或系统窗口：
 
-- 仅在调用[setSystemAvoidAreaEnabled](arkts-arkui-window-window-i.md#setsystemavoidareaenabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
+- 仅在调用[setSystemAvoidAreaEnabled](#setSystemAvoidAreaEnabled)方法使能后，触发回调时才能返回计算后的避让区域，否则直接返回空的避  
 让区域。
 
 &lt;!--RP7--&gt;常见的触发避让区回调的场景如下：应用窗口在全屏模式、悬浮模式、分屏模式之间的切换；应用窗口旋转；可折叠设备在屏幕折叠状态发生变化；应用窗口在多设备之间的流转。&lt;!--RP7End--&gt;
@@ -3906,13 +3906,13 @@ on(type: 'avoidAreaChange', callback: Callback<AvoidAreaOptions>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'avoidAreaChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AvoidAreaOptions&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[AvoidAreaOptions](arkts-arkui-window-avoidareaoptions-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('keyboardHeightChange')
 
@@ -3921,7 +3921,7 @@ on(type: 'keyboardHeightChange', callback: Callback<number>): void
 ```
 
 开启固定态软键盘高度变化的监听。当软键盘从本窗口唤出且与窗口有重叠区域时，通知键盘高度变化。从API version 10开始，有关将软键盘设置为固定态或悬浮态的方法，请参见  
-[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 7
 
@@ -3936,13 +3936,13 @@ on(type: 'keyboardHeightChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardHeightChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('keyboardWillShow')
 
@@ -3952,7 +3952,7 @@ on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 
 开启固定态软键盘即将开始显示的监听。此监听在固定态软键盘即将开始显示或软键盘由悬浮态切换为固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 20
 
@@ -3967,14 +3967,14 @@ on(type: 'keyboardWillShow', callback: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardWillShow' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('keyboardDidShow')
 
@@ -3984,7 +3984,7 @@ on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 
 开启固定态软键盘显示动画完成的监听。此监听在固定态软键盘显示动画完成或软键盘由悬浮态切换至固定态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 18
 
@@ -3999,14 +3999,14 @@ on(type: 'keyboardDidShow', callback: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardDidShow' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('keyboardWillHide')
 
@@ -4016,7 +4016,7 @@ on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 
 开启固定态软键盘即将开始隐藏的监听。此监听在固定态软键盘即将开始隐藏或软键盘由固定态切换为悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 20
 
@@ -4031,14 +4031,14 @@ on(type: 'keyboardWillHide', callback: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardWillHide' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('keyboardDidHide')
 
@@ -4048,7 +4048,7 @@ on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 
 开启固定态软键盘隐藏动画完成的监听。此监听在固定态软键盘隐藏动画完成或软键盘由固定态切换至悬浮态时触发，此监听仅对当前拉起或隐藏固定态软键盘的应用窗口生效。对于虚拟屏上应用拉起输入法键盘到主屏上，输入法键盘显隐通知只会给主屏上获焦窗口，而不是虚拟屏上应用窗口。
 
-改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md/arkts-ime-inputmethodengine-panel-i.md#changeflag)。
+改变软键盘为固定态或者悬浮态方法详细介绍请参见[输入法服务](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-panel-i.md#changeFlag)。
 
 **起始版本：** 18
 
@@ -4063,14 +4063,14 @@ on(type: 'keyboardDidHide', callback: Callback<KeyboardInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardDidHide' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyboardInfo&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[KeyboardInfo](arkts-arkui-window-keyboardinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('touchOutside')
 
@@ -4093,13 +4093,13 @@ on(type: 'touchOutside', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'touchOutside' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('displayIdChange')
 
@@ -4122,15 +4122,15 @@ on(type: 'displayIdChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'displayIdChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('windowVisibilityChange')
 
@@ -4140,8 +4140,8 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 
 开启本窗口可见状态变化事件的监听。本接口返回的可见性与肉眼所见的可见性可能存在区别，如以下场景：
 
-- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](arkts-arkui-window-window-i.md#setwindowshadowenabled)和  
-[setWindowShadowRadius](arkts-arkui-window-window-i.md#setwindowshadowradius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
+- 非主窗口的阴影区域（可分别通过[setWindowShadowEnabled](#setWindowShadowEnabled)和  
+[setWindowShadowRadius](#setWindowShadowRadius)设置是否显示阴影以及对应的阴影半径）被挡住也算遮挡，此时肉眼所见虽是完全可见，但实际返回的是部分可见。  
 - 上层窗口带有透明效果时（包括完全不透明之外的所有透明程度）不会遮挡下层窗口，此时下层窗口是可见的。  
 - 大多数处于动画效果下的窗口也不会遮挡住下层窗口，比如在手机设备上拖动悬浮窗时返回的下层窗口依然是可见的。
 
@@ -4158,16 +4158,16 @@ on(type: 'windowVisibilityChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowVisibilityChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('systemDensityChange')
 
@@ -4192,15 +4192,15 @@ on(type: 'systemDensityChange', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'systemDensityChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;number&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('noInteractionDetected')
 
@@ -4224,16 +4224,16 @@ on(type: 'noInteractionDetected', timeout: number, callback: Callback<void>): vo
 | --- | --- | --- |
 | type | 'noInteractionDetected' | 是 |
 | timeout | number | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('screenshot')
 
@@ -4256,13 +4256,13 @@ on(type: 'screenshot', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'screenshot' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('screenshotAppEvent')
 
@@ -4283,14 +4283,14 @@ on(type: 'screenshotAppEvent', callback: Callback<ScreenshotEventType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'screenshotAppEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScreenshotEventType&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[ScreenshotEventType](arkts-arkui-window-screenshoteventtype-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('dialogTargetTouch')
 
@@ -4313,13 +4313,13 @@ on(type: 'dialogTargetTouch', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'dialogTargetTouch' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('windowEvent')
 
@@ -4342,13 +4342,13 @@ on(type: 'windowEvent', callback: Callback<WindowEventType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowEventType&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowEventType](arkts-arkui-window-windoweventtype-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('windowStatusChange')
 
@@ -4383,14 +4383,14 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowStatusChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## on('windowStatusDidChange')
 
@@ -4398,7 +4398,7 @@ on(type: 'windowStatusChange', callback: Callback<WindowStatusType>): void
 on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 ```
 
-开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md)属性已经完成更新）。
+开启窗口模式变化的监听，当窗口windowStatus发生变化后进行通知（此时窗口[Rect](arkts-arkui-window-rect-i.md#Rect)属性已经完成更新）。
 
 **起始版本：** 20
 
@@ -4411,14 +4411,14 @@ on(type: 'windowStatusDidChange', callback: Callback<WindowStatusType>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowStatusDidChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('subWindowClose')
 
@@ -4450,16 +4450,16 @@ on(type: 'subWindowClose', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'subWindowClose' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## on('windowWillClose')
 
@@ -4486,16 +4486,16 @@ on(type: 'windowWillClose', callback: Callback<void, Promise<boolean>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowWillClose' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;void, Promise&lt;boolean&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## on('windowHighlightChange')
 
@@ -4518,16 +4518,16 @@ on(type: 'windowHighlightChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowHighlightChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('windowTitleButtonRectChange')
 
@@ -4536,7 +4536,7 @@ on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): vo
 ```
 
 开启窗口标题栏上的最小化、最大化、关闭按钮矩形区域变化的监听，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 11
 
@@ -4551,15 +4551,15 @@ on(type: 'windowTitleButtonRectChange', callback: Callback<TitleButtonRect>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowTitleButtonRectChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TitleButtonRect&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[TitleButtonRect](arkts-arkui-window-titlebuttonrect-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('windowRectChange')
 
@@ -4582,16 +4582,16 @@ on(type: 'windowRectChange', callback: Callback<RectChangeOptions>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'windowRectChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('rectChangeInGlobalDisplay')
 
@@ -4612,15 +4612,15 @@ on(type: 'rectChangeInGlobalDisplay', callback: Callback<RectChangeOptions>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'rectChangeInGlobalDisplay' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;RectChangeOptions&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## on('freeWindowModeChange')
 
@@ -4643,14 +4643,14 @@ on(type: 'freeWindowModeChange', callback: Callback<boolean>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'freeWindowModeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## raiseToAppTop
 
@@ -4660,7 +4660,7 @@ raiseToAppTop(): Promise<void>
 
 应用子窗口调用，提升应用子窗口到顶层，只在当前应用同一个父窗口下的相同类型子窗范围内生效，对于自定义了zLevel属性的子窗口，只在当前应用同一个父窗口下相同zLevel值的子窗范围内生效。使用Promise异步回调。
 
-使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
+使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](#showWindow)并执行完毕。
 
 **起始版本：** 14
 
@@ -4672,16 +4672,16 @@ raiseToAppTop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
 
 ## recover
 
@@ -4703,15 +4703,15 @@ recover(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300001](../errorcode-window.md#1300001-重复操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) |
 
 ## recover
 
@@ -4733,23 +4733,23 @@ Restores the main window from full-screen, maximized, or split-screen mode to a 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| snapshotAnimationConfig | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | 是 |
+| [snapshotAnimationConfig](arkts-arkui-window-maximizeoptions-i.md) | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300001](../errorcode-window.md#1300001-重复操作) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
 
 ## resetAspectRatio
 
@@ -4779,8 +4779,8 @@ resetAspectRatio(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## resetAspectRatio
 
@@ -4804,14 +4804,14 @@ resetAspectRatio(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## resetSize
 
@@ -4824,7 +4824,7 @@ resetSize(width: number, height: number): Promise<void>
 应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
 
 应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
+[getWindowLimits](#getWindowLimits)接口进行查询。
 
 系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
 
@@ -4838,13 +4838,13 @@ resetSize(width: number, height: number): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[resize()](arkts-arkui-window-window-i.md#resize)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[resize()](#resize)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.resize](arkts-arkui-window-window-i.md#resize)(width:
+**替代接口：** [resize](window.Window.resize(width:)
 
 <!--Device-Window-resetSize(width: number, height: number): Promise<void>--><!--Device-Window-resetSize(width: number, height: number): Promise<void>-End-->
 
@@ -4861,7 +4861,7 @@ resetSize(width: number, height: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## resetSize
 
@@ -4874,7 +4874,7 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 应用主窗口与子窗口存在大小限制，默认宽度范围：[320, 1920]，默认高度范围：[240, 1920]，单位为vp。
 
 应用主窗口与子窗口的最小宽度与最小高度可由产品端进行配置，配置后的最小宽度与最小高度以产品段配置值为准，具体尺寸限制范围可以通过  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
+[getWindowLimits](#getWindowLimits)接口进行查询。
 
 系统窗口存在大小限制，宽度范围：(0, 1920]，高度范围：(0, 1920]，单位为vp。
 
@@ -4889,13 +4889,13 @@ resetSize(width: number, height: number, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [resize()](arkts-arkui-window-window-i.md#resize)替代。
+> [resize()](#resize)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.resize](arkts-arkui-window-window-i.md#resize)(width:
+**替代接口：** [resize](window.Window.resize(width:)
 
 <!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void--><!--Device-Window-resetSize(width: number, height: number, callback: AsyncCallback<void>): void-End-->
 
@@ -4917,10 +4917,10 @@ resize(width: number, height: number): Promise<void>
 
 基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
 
-调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-window-i.md#resizeasync)。
+调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeAsync)。
 
-窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
+窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)，具体尺寸限制范围可以通过  
+[getWindowLimits](#getWindowLimits)接口进行查询。
 
 调用该接口设置的宽度与高度受到此限制约束，规则：
 
@@ -4929,7 +4929,7 @@ resize(width: number, height: number): Promise<void>
 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
 
 > **说明：**
 > 
@@ -4954,15 +4954,15 @@ resize(width: number, height: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## resize
 
@@ -4972,10 +4972,10 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 
 基于窗口左上角顶点改变当前窗口大小，使用callback异步回调。
 
-调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](arkts-arkui-window-window-i.md#resizeasync)。
+调用成功即返回，该接口返回后无法立即获取最终生效结果，如需立即获取，建议使用接口[resizeAsync()](#resizeAsync)。
 
-窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
+窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)，具体尺寸限制范围可以通过  
+[getWindowLimits](#getWindowLimits)接口进行查询。
 
 调用该接口设置的宽度与高度受到此限制约束，规则：
 
@@ -4984,7 +4984,7 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，在其他窗口模式下调用返回1300002错误码。
 
 > **说明：**
 > 
@@ -5010,9 +5010,9 @@ resize(width: number, height: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## resizeAsync
 
@@ -5022,10 +5022,10 @@ resizeAsync(width: number, height: number): Promise<void>
 
 基于窗口左上角顶点改变当前窗口大小，使用Promise异步回调。
 
-调用生效后返回，回调中可使用[getWindowProperties()](arkts-arkui-window-window-i.md#getwindowproperties)（见示例）立即获取最终生效结果。
+调用生效后返回，回调中可使用[getWindowProperties()](#getWindowProperties)（见示例）立即获取最终生效结果。
 
-窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md)，具体尺寸限制范围可以通过  
-[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)接口进行查询。
+窗口存在大小限制[WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)，具体尺寸限制范围可以通过  
+[getWindowLimits](#getWindowLimits)接口进行查询。
 
 调用该接口设置的宽度与高度受到此限制约束，规则：
 
@@ -5034,7 +5034,7 @@ resizeAsync(width: number, height: number): Promise<void>
 若所设置的窗口宽/高尺寸大于窗口最大宽/高限制值，则窗口最大宽/高限制值生效。
 
 该接口仅在窗口为自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING，窗口模式可通过  
-[getWindowStatus()](arkts-arkui-window-window-i.md#getwindowstatus)获取）时调用生效，否则抛出错误码1300010。
+[getWindowStatus()](#getWindowStatus)获取）时调用生效，否则抛出错误码1300010。
 
 > **说明：**
 > 
@@ -5059,17 +5059,17 @@ resizeAsync(width: number, height: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300010](../errorcode-window.md#1300010-当前窗口模式不支持该操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300010-当前窗口模式不支持该操作) |
 
 ## restore
 
@@ -5091,16 +5091,16 @@ restore(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## restoreMainWindow
 
@@ -5108,8 +5108,8 @@ restore(): Promise<void>
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md)的窗口，并且需在窗口触发过  
-[DOWN](arkts-arkui-touchtype-e.md)事件后才能调用。使用Promise异步回调。
+将当前窗口的主窗口恢复到前台显示，如果主窗口已处于前台，则会抬升主窗层级。此接口仅适用于类型为[TYPE_FLOAT](arkts-arkui-window-windowtype-e.md#WindowType)的窗口，并且需在窗口触发过  
+[DOWN](arkts-arkui-touchtype-e.md#TouchType)事件后才能调用。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -5123,23 +5123,23 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| wantParameters | Record&lt;string, Object&gt; | 否 |
+| [wantParameters](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationparameters-i.md) | Record & lt;string, Object & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300007](../errorcode-window.md#1300007-windowextension拉起应用失败) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300007-windowextension拉起应用失败) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setAspectRatio
 
@@ -5151,13 +5151,13 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> - 通过其他接口如[resize](arkts-arkui-window-window-i.md#resize)、
-> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)设置窗口大小时，不受ratio约束。
+> - 通过其他接口如[resize](#resize)、
+> [resizeAsync](#resizeAsync)设置窗口大小时，不受ratio约束。
 > 
 > - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。此比例参数将持久化保存，关闭应用或重启设备后，切换到自由悬浮窗口模式时，设置的比例仍然生效。
 > 
 > - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用
-> [setContentAspectRatio](arkts-arkui-window-window-i.md#setcontentaspectratio)。
+> [setContentAspectRatio](#setContentAspectRatio)。
 
 **起始版本：** 10
 
@@ -5171,16 +5171,16 @@ setAspectRatio(ratio: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ratio | number | 是 |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setAspectRatio
 
@@ -5192,13 +5192,13 @@ setAspectRatio(ratio: number): Promise<void>
 
 > **说明：**
 > 
-> - 通过其他接口如[resize](arkts-arkui-window-window-i.md#resize)、
-> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)设置窗口大小时，不受ratio约束。
+> - 通过其他接口如[resize](#resize)、
+> [resizeAsync](#resizeAsync)设置窗口大小时，不受ratio约束。
 > 
 > - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。此比例参数将持久化保存，关闭应用或重启设备后，切换到自由悬浮窗口模式时，设置的比例仍然生效。
 > 
 > - 当同一应用的某个主窗口调用此接口设置宽高比生效后，后续打开的主窗口均会沿用该宽高比。若需为单个主窗口单独设置宽高比，请使用
-> [setContentAspectRatio](arkts-arkui-window-window-i.md#setcontentaspectratio)。
+> [setContentAspectRatio](#setContentAspectRatio)。
 
 **起始版本：** 10
 
@@ -5212,21 +5212,21 @@ setAspectRatio(ratio: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ratio | number | 是 |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setBackgroundColor
 
@@ -5235,18 +5235,18 @@ setBackgroundColor(color: string): Promise<void>
 ```
 
 设置窗口的背景色，使用Promise异步回调。Stage模型下，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)替代。
+> [setWindowBackgroundColor()](#setWindowBackgroundColor)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)
+**替代接口：** [setWindowBackgroundColor](#setWindowBackgroundColor)
 
 <!--Device-Window-setBackgroundColor(color: string): Promise<void>--><!--Device-Window-setBackgroundColor(color: string): Promise<void>-End-->
 
@@ -5262,7 +5262,7 @@ setBackgroundColor(color: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setBackgroundColor
 
@@ -5271,18 +5271,18 @@ setBackgroundColor(color: string, callback: AsyncCallback<void>): void
 ```
 
 设置窗口的背景色，使用callback异步回调。Stage模型下，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)替代。
+> [setWindowBackgroundColor()](#setWindowBackgroundColor)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowBackgroundColor](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)
+**替代接口：** [setWindowBackgroundColor](#setWindowBackgroundColor)
 
 <!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void--><!--Device-Window-setBackgroundColor(color: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5308,13 +5308,13 @@ setBrightness(brightness: number): Promise<void>
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness)替代。
+> [setWindowBrightness()](#setWindowBrightness)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowBrightness](arkts-arkui-window-window-i.md#setwindowbrightness)(brightness:
+**替代接口：** [setWindowBrightness](window.Window.setWindowBrightness(brightness:)
 
 <!--Device-Window-setBrightness(brightness: number): Promise<void>--><!--Device-Window-setBrightness(brightness: number): Promise<void>-End-->
 
@@ -5330,7 +5330,7 @@ setBrightness(brightness: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setBrightness
 
@@ -5345,14 +5345,14 @@ setBrightness(brightness: number, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness)
+> [setWindowBrightness()](#setWindowBrightness)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowBrightness](arkts-arkui-window-window-i.md#setwindowbrightness)(brightness:
+**替代接口：** [setWindowBrightness](window.Window.setWindowBrightness(brightness:)
 
 <!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void--><!--Device-Window-setBrightness(brightness: number, callback: AsyncCallback<void>): void-End-->
 
@@ -5376,13 +5376,13 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [setWindowColorSpace()](arkts-arkui-window-window-i.md#setwindowcolorspace)替代。
+> [setWindowColorSpace()](#setWindowColorSpace)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)(colorSpace:ColorSpace)
+**替代接口：** [setWindowColorSpace](#setWindowColorSpace)(colorSpace:ColorSpace)
 
 <!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>--><!--Device-Window-setColorSpace(colorSpace: ColorSpace): Promise<void>-End-->
 
@@ -5398,7 +5398,7 @@ setColorSpace(colorSpace: ColorSpace): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setColorSpace
 
@@ -5411,14 +5411,14 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [setWindowColorSpace()](arkts-arkui-window-window-i.md#setwindowcolorspace)
+> [setWindowColorSpace()](#setWindowColorSpace)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowColorSpace](arkts-arkui-window-window-i.md#setwindowcolorspace)(colorSpace:ColorSpace,
+**替代接口：** [setWindowColorSpace](window.Window.setWindowColorSpace(colorSpace:ColorSpace,)
 
 <!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void-End-->
 
@@ -5443,10 +5443,10 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 > 
 > - 根据相同的ratio参数调整窗口宽高时，窗口宽高会跟随窗口边框装饰尺寸或可见性变化而调整。
 > 
-> - 通过[setWindowDecorVisible](arkts-arkui-window-window-i.md#setwindowdecorvisible)将窗口标题栏设置为不可见时，窗口内容区域将占据原本标题栏的高度空间。
+> - 通过[setWindowDecorVisible](#setWindowDecorVisible)将窗口标题栏设置为不可见时，窗口内容区域将占据原本标题栏的高度空间。
 > 
-> - 通过其他接口如[resize](arkts-arkui-window-window-i.md#resize)、
-> [resizeAsync](arkts-arkui-window-window-i.md#resizeasync)设置窗口大小时，不受ratio约束。
+> - 通过其他接口如[resize](#resize)、
+> [resizeAsync](#resizeAsync)设置窗口大小时，不受ratio约束。
 > 
 > - 仅主窗可设置，且仅在自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）下生效。
 
@@ -5460,25 +5460,25 @@ setContentAspectRatio(ratio: number, isPersistent?: boolean, needUpdateRect?: bo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ratio | number | 是 |
-| isPersistent | boolean | 否 |
+| [ratio](arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
+| [isPersistent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-efficiencyresourcesinfo-i-sys.md) | boolean | 否 |
 | needUpdateRect | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setDecorButtonStyle
 
@@ -5487,7 +5487,7 @@ setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 ```
 
 设置装饰栏按钮样式，仅对主窗和子窗生效。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 14
 
@@ -5507,10 +5507,10 @@ setDecorButtonStyle(dectorStyle: DecorButtonStyle): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setDialogBackGestureEnabled
 
@@ -5538,17 +5538,17 @@ setDialogBackGestureEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setDimBehind
 
@@ -5570,7 +5570,7 @@ setDimBehind(dimBehindValue: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dimBehindValue | number | 是 |
+| [dimBehindValue](arkts-arkui-window-windowproperties-i.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## setDimBehind
@@ -5593,13 +5593,13 @@ setDimBehind(dimBehindValue: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dimBehindValue | number | 是 |
+| [dimBehindValue](arkts-arkui-window-windowproperties-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setDragKeyFramePolicy
 
@@ -5627,17 +5627,17 @@ setDragKeyFramePolicy(keyFramePolicy: KeyFramePolicy): Promise<KeyFramePolicy>
 
 | 类型 |
 | --- |
-| Promise&lt;KeyFramePolicy&gt; |
+| Promise&lt;[KeyFramePolicy](arkts-arkui-window-keyframepolicy-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setExclusivelyHighlighted
 
@@ -5667,17 +5667,17 @@ setExclusivelyHighlighted(exclusivelyHighlighted: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setFloatNavigationAvoidAreaEnabled
 
@@ -5687,8 +5687,8 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 设置当前窗口是否支持获取三键导航类型的避让区域。未调用此接口设置前，系统默认不支持获取三键导航类型的避让区域。使用Promise异步回调。
 
-调用该接口使能后才可以通过[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)获取到  
-[TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md)避让类型对应的避让区域或通过  
+调用该接口使能后才可以通过[getWindowAvoidArea()](#getWindowAvoidArea)获取到  
+[TYPE_FLOAT_NAVIGATION](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)避让类型对应的避让区域或通过  
 [on('avoidAreaChange')](window.Window.on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;))监听TYPE_FLOAT_NAVIGATION避让类型对应的避让区域的变化。
 
 **起始版本：** 26.0.0
@@ -5711,15 +5711,15 @@ setFloatNavigationAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setFocusable
 
@@ -5732,13 +5732,13 @@ setFocusable(isFocusable: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)替代。
+> [setWindowFocusable()](#setWindowFocusable)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowFocusable](arkts-arkui-window-window-i.md#setwindowfocusable)(isFocusable:
+**替代接口：** [setWindowFocusable](window.Window.setWindowFocusable(isFocusable:)
 
 <!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>--><!--Device-Window-setFocusable(isFocusable: boolean): Promise<void>-End-->
 
@@ -5754,7 +5754,7 @@ setFocusable(isFocusable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setFocusable
 
@@ -5767,14 +5767,14 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)
+> [setWindowFocusable()](#setWindowFocusable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowFocusable](arkts-arkui-window-window-i.md#setwindowfocusable)(isFocusable:
+**替代接口：** [setWindowFocusable](window.Window.setWindowFocusable(isFocusable:)
 
 <!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -5796,7 +5796,7 @@ setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 设置子窗口在其父窗口处于拖拽移动或拖拽缩放过程时，该子窗口是否支持跨多个屏幕同时显示。使用Promise异步回调。
 
 通过监听父窗口大小位置变化，对子窗口调用  
-[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)等接口实现子窗口跟随父窗口布局时，此时子窗口默认不支持跨多个屏幕同时显示。
+[moveWindowTo()](#moveWindowTo)等接口实现子窗口跟随父窗口布局时，此时子窗口默认不支持跨多个屏幕同时显示。
 
 对子窗口调用此接口后可以使能子窗口在跟随父窗口布局过程中跨多个屏幕同时显示。
 
@@ -5818,17 +5818,17 @@ setFollowParentMultiScreenPolicy(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setFollowParentWindowLayoutEnabled
 
@@ -5847,7 +5847,7 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 4、当子窗或模态窗口不再使用该功能后，不保证子窗或模态窗口的布局信息（position和size）为确定的值，需要应用重新进行设置。
 
 该接口调用生效后，  
-[setRelativePositionToParentWindowEnabled()](arkts-arkui-window-window-i.md#setrelativepositiontoparentwindowenabled)接口调用不生效。
+[setRelativePositionToParentWindowEnabled()](#setRelativePositionToParentWindowEnabled)接口调用不生效。
 
 **起始版本：** 17
 
@@ -5869,17 +5869,17 @@ setFollowParentWindowLayoutEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setFullScreen
 
@@ -5896,15 +5896,15 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
-> 和[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代实现全
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
+> 和[setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)替代实现全
 > 屏。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**替代接口：** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -5914,7 +5914,7 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isFullScreen | boolean | 是 |
+| [isFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## setFullScreen
@@ -5932,15 +5932,15 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
-> 和[setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代实现全
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
+> 和[setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)替代实现全
 > 屏。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**替代接口：** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
 
@@ -5950,13 +5950,13 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isFullScreen | boolean | 是 |
+| [isFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setGestureBackEnabled
 
@@ -5988,17 +5988,17 @@ setGestureBackEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setImmersiveModeEnabledState
 
@@ -6026,10 +6026,10 @@ setImmersiveModeEnabledState(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setKeepScreenOn
 
@@ -6042,13 +6042,13 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowKeepScreenOn()](arkts-arkui-window-window-i.md#setwindowkeepscreenon)替代。
+> [setWindowKeepScreenOn()](#setWindowKeepScreenOn)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowKeepScreenOn](arkts-arkui-window-window-i.md#setwindowkeepscreenon)(isKeepScreenOn:
+**替代接口：** [setWindowKeepScreenOn](window.Window.setWindowKeepScreenOn(isKeepScreenOn:)
 
 <!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
@@ -6058,13 +6058,13 @@ setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | 是 |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setKeepScreenOn
 
@@ -6077,14 +6077,14 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowKeepScreenOn()](arkts-arkui-window-window-i.md#setwindowkeepscreenon)
+> [setWindowKeepScreenOn()](#setWindowKeepScreenOn)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowKeepScreenOn](arkts-arkui-window-window-i.md#setwindowkeepscreenon)(isKeepScreenOn:
+**替代接口：** [setWindowKeepScreenOn](window.Window.setWindowKeepScreenOn(isKeepScreenOn:)
 
 <!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6094,7 +6094,7 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | 是 |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## setLayoutFullScreen
@@ -6112,13 +6112,13 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代。
+> [setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**替代接口：** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6128,7 +6128,7 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## setLayoutFullScreen
@@ -6146,13 +6146,13 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代。
+> [setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**替代接口：** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
 
@@ -6162,13 +6162,13 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setOutsideTouchable
 
@@ -6202,7 +6202,7 @@ setOutsideTouchable(touchable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setOutsideTouchable
 
@@ -6263,17 +6263,17 @@ setParentWindow(windowId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
 
 ## setPreferredOrientation
 
@@ -6301,14 +6301,14 @@ setPreferredOrientation(orientation: Orientation): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setPreferredOrientation
 
@@ -6338,8 +6338,8 @@ setPreferredOrientation(orientation: Orientation, callback: AsyncCallback<void>)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setPreferredOrientationWithResult
 
@@ -6348,7 +6348,7 @@ setPreferredOrientationWithResult(orientation: Orientation): Promise<Orientation
 ```
 
 设置主窗口的显示方向属性，通过Promise异步返回显示方向的执行结果。非主窗口调用后不生效，OrientationResult返回window.  
-[OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md).ORIENTATION_IGNORED。
+[OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md#OrientationExecutionResult).ORIENTATION_IGNORED。
 
 **起始版本：** 26.0.0
 
@@ -6370,15 +6370,15 @@ setPreferredOrientationWithResult(orientation: Orientation): Promise<Orientation
 
 | 类型 |
 | --- |
-| Promise&lt;OrientationResult&gt; |
+| Promise&lt;[OrientationResult](arkts-arkui-window-orientationresult-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setPrivacyMode
 
@@ -6391,13 +6391,13 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode)替代。
+> [setWindowPrivacyMode()](#setWindowPrivacyMode)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)(isPrivacyMode:
+**替代接口：** [setWindowPrivacyMode](window.Window.setWindowPrivacyMode(isPrivacyMode:)
 
 <!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean): Promise<void>-End-->
 
@@ -6407,13 +6407,13 @@ setPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isPrivacyMode | boolean | 是 |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setPrivacyMode
 
@@ -6426,14 +6426,14 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode)
+> [setWindowPrivacyMode()](#setWindowPrivacyMode)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)(isPrivacyMode:
+**替代接口：** [setWindowPrivacyMode](window.Window.setWindowPrivacyMode(isPrivacyMode:)
 
 <!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -6443,7 +6443,7 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isPrivacyMode | boolean | 是 |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## setRaiseByClickEnabled
@@ -6456,7 +6456,7 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 
 通常来说，点击一个子窗口，会将该子窗口显示抬升到应用内同一个父窗口下同类型子窗口的最上方，如果设置为false，那么点击子窗口的时候，不会将该子窗口进行抬升，而是保持不变。
 
-使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)并执行完毕。
+使用该接口需要先创建子窗口，并确保该子窗口调用[showWindow()](#showWindow)并执行完毕。
 
 **起始版本：** 14
 
@@ -6474,18 +6474,18 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
 
 ## setReceiveDragEventEnabled
 
@@ -6493,7 +6493,7 @@ setRaiseByClickEnabled(enable: boolean): Promise<void>
 setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 ```
 
-设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md/arkts-arkui-dragevent-i.md)，使用Promise异步回调。
+设置当前窗口是否能接收[拖拽事件](../arkts-components/arkts-arkui-dragevent-i.md#DragEvent)，使用Promise异步回调。
 
 默认场景下为true，能够接收拖拽事件。
 
@@ -6517,15 +6517,15 @@ setReceiveDragEventEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setRelativePositionToParentWindowEnabled
 
@@ -6538,9 +6538,9 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
 
 该相对位置通过一级子窗与主窗之间锚点的偏移量表示，子窗和主窗使用的窗口锚点相同。
 
-1. 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。2. 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，除非传入false再次调用该接口，否则效果将持续。3. 当子窗调用该接口后，再调用[moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto)、[maximize()](arkts-arkui-window-window-i.md#maximize)修改窗口位置或大小的接口将不生效。
+1. 只支持一级子窗调用该接口，子窗需处于自由悬浮窗口模式（即窗口模式为window.WindowStatusType.FLOATING）。2. 当子窗调用该接口后，立即使其显示位置跟随主窗并保持相对位置不变，除非传入false再次调用该接口，否则效果将持续。3. 当子窗调用该接口后，再调用[moveWindowTo()](#moveWindowTo)、[maximize()](#maximize)修改窗口位置或大小的接口将不生效。
 
-该接口调用生效后，[setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)接口调用不生效。
+该接口调用生效后，[setFollowParentWindowLayoutEnabled()](#setFollowParentWindowLayoutEnabled)接口调用不生效。
 
 **起始版本：** 20
 
@@ -6561,16 +6561,16 @@ setRelativePositionToParentWindowEnabled(enabled: boolean, anchor?: WindowAnchor
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setResizeByDragEnabled
 
@@ -6599,10 +6599,10 @@ setResizeByDragEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setResizeByDragEnabled
 
@@ -6630,16 +6630,16 @@ setResizeByDragEnabled(enable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setSeparationTouchEnabled
 
@@ -6676,15 +6676,15 @@ setSeparationTouchEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setSpecificSystemBarEnabled
 
@@ -6716,15 +6716,15 @@ setSpecificSystemBarEnabled(name: SpecificSystemBar, enable: boolean, enableAnim
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setStatusBarColor
 
@@ -6748,21 +6748,21 @@ setStatusBarColor(color: ColorMetrics): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | 是 |
+| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setSubWindowModal
 
@@ -6794,17 +6794,17 @@ setSubWindowModal(isModal: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setSubWindowModal
 
@@ -6819,7 +6819,7 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 当子窗口模态类型为模应用子窗时，其父级窗口与该应用其他实例的窗口不能响应用户操作，直到子窗口关闭或者子窗口的模态类型被禁用。
 
 此接口仅支持设置子窗口模态类型，当需要禁用子窗口模态属性时，建议使用  
-[setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-window-window-i.md#setsubwindowmodal)。
+[setSubWindowModal&lt;sup&gt;12+&lt;/sup&gt;](#setSubWindowModal)。
 
 子窗口之外的窗口调用该接口时，会报错。
 
@@ -6836,23 +6836,23 @@ setSubWindowModal(isModal: boolean, modalityType: ModalityType): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | isModal | boolean | 是 |
-| modalityType | [ModalityType](arkts-arkui-window-modalitytype-e.md) | 是 |
+| [modalityType](arkts-arkui-window-subwindowoptions-i.md) | [ModalityType](arkts-arkui-window-modalitytype-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setSubWindowZLevel
 
@@ -6862,7 +6862,7 @@ setSubWindowZLevel(zLevel: number): Promise<void>
 
 设置当前子窗口层级级别，设置了模态属性的子窗不支持。使用Promise异步回调。
 
-通过该接口改变子窗口的显示层级时，不会发生焦点切换。推荐使用[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus)进行焦点切换。
+通过该接口改变子窗口的显示层级时，不会发生焦点切换。推荐使用[shiftAppWindowFocus()](arkts-arkui-window-shiftappwindowfocus-f.md#shiftAppWindowFocus)进行焦点切换。
 
 **起始版本：** 18
 
@@ -6876,24 +6876,24 @@ setSubWindowZLevel(zLevel: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| zLevel | number | 是 |
+| [zLevel](arkts-arkui-window-subwindowoptions-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
 
 ## setSystemAvoidAreaEnabled
 
@@ -6901,7 +6901,7 @@ setSubWindowZLevel(zLevel: number): Promise<void>
 setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 ```
 
-创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](arkts-arkui-window-window-i.md#getwindowavoidarea)获取窗口避让区信息或通过  
+创建全局悬浮窗、模态窗或WindowType窗口类型为系统窗口时，调用该接口使能后才可以通过[getWindowAvoidArea()](#getWindowAvoidArea)获取窗口避让区信息或通过  
 [on('avoidAreaChange')](window.Window.on(type: 'avoidAreaChange', callback: Callback&lt;AvoidAreaOptions&gt;))监听窗口避让区变化。
 
 **起始版本：** 18
@@ -6922,16 +6922,16 @@ setSystemAvoidAreaEnabled(enabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setSystemBarEnable
 
@@ -6948,14 +6948,14 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**替代接口：** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
 
@@ -6965,7 +6965,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 |
+| names | Array & lt;'status' \ | 'navigation' & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## setSystemBarEnable
@@ -6983,14 +6983,14 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**替代接口：** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>-End-->
 
@@ -7000,13 +7000,13 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 |
+| names | Array & lt;'status' \ | 'navigation' & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setSystemBarProperties
 
@@ -7021,14 +7021,14 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarProperties()](arkts-arkui-window-window-i.md#setwindowsystembarproperties)
+> [setWindowSystemBarProperties()](#setWindowSystemBarProperties-1)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowSystemBarProperties](arkts-arkui-window-window-i.md#setwindowsystembarproperties)(systemBarProperties:
+**替代接口：** [setWindowSystemBarProperties](window.Window.setWindowSystemBarProperties(systemBarProperties:)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
 
@@ -7054,14 +7054,14 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 > **说明：**
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarProperties()](arkts-arkui-window-window-i.md#setwindowsystembarproperties)
+> [setWindowSystemBarProperties()](#setWindowSystemBarProperties-1)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowSystemBarProperties](arkts-arkui-window-window-i.md#setwindowsystembarproperties)(systemBarProperties:
+**替代接口：** [setWindowSystemBarProperties](window.Window.setWindowSystemBarProperties(systemBarProperties:)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
 
@@ -7077,7 +7077,7 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setTitleAndDockHoverShown
 
@@ -7106,15 +7106,15 @@ setTitleAndDockHoverShown(isTitleHoverShown?: boolean, isDockHoverShown?: boolea
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setTouchable
 
@@ -7127,13 +7127,13 @@ setTouchable(isTouchable: boolean): Promise<void>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowTouchable()](arkts-arkui-window-window-i.md#setwindowtouchable)替代。
+> [setWindowTouchable()](#setWindowTouchable)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowTouchable](arkts-arkui-window-window-i.md#setwindowtouchable)(isTouchable:
+**替代接口：** [setWindowTouchable](window.Window.setWindowTouchable(isTouchable:)
 
 <!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>--><!--Device-Window-setTouchable(isTouchable: boolean): Promise<void>-End-->
 
@@ -7149,7 +7149,7 @@ setTouchable(isTouchable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setTouchable
 
@@ -7162,14 +7162,14 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowTouchable()](arkts-arkui-window-window-i.md#setwindowtouchable)
+> [setWindowTouchable()](#setWindowTouchable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.setWindowTouchable](arkts-arkui-window-window-i.md#setwindowtouchable)(isTouchable:
+**替代接口：** [setWindowTouchable](window.Window.setWindowTouchable(isTouchable:)
 
 <!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -7205,23 +7205,23 @@ setTouchableAreas(rects: Array<Rect>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| rects | Array&lt;Rect&gt; | 是 |
+| rects | Array & lt;Rect & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setUIContent
 
@@ -7250,9 +7250,9 @@ setUIContent(path: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setUIContent
 
@@ -7280,15 +7280,15 @@ setUIContent(path: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowBackgroundColor
 
@@ -7301,7 +7301,7 @@ setWindowBackgroundColor(color: string | ColorMetrics): void
 未调用该接口时，窗口在浅色模式默认背景色为`'#FFF0F0F0'`，在深色模式默认背景色为`'#FF1A1A1A'`。
 
 Stage模型下，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 9
 
@@ -7321,7 +7321,7 @@ Stage模型下，该接口需要在
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowBrightness
 
@@ -7359,15 +7359,15 @@ setWindowBrightness(brightness: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowBrightness
 
@@ -7406,9 +7406,9 @@ setWindowBrightness(brightness: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowColorSpace
 
@@ -7436,14 +7436,14 @@ setWindowColorSpace(colorSpace:ColorSpace): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowColorSpace
 
@@ -7472,8 +7472,8 @@ setWindowColorSpace(colorSpace:ColorSpace, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowContainerColor
 
@@ -7482,10 +7482,10 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 ```
 
 设置主窗口容器在焦点态和非焦点态时的背景色。在Stage模型下，该接口需在调用  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)后使用。
 
 窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和  
-[setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
+[setWindowBackgroundColor()](#setWindowBackgroundColor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **起始版本：** 20
 
@@ -7506,10 +7506,10 @@ setWindowContainerColor(activeColor: string, inactiveColor: string): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## setWindowContainerModalColor
 
@@ -7518,10 +7518,10 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 ```
 
 设置主窗口容器在焦点态和非焦点态时的背景色。该接口需在调用  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)后使用。
 
 窗口容器背景色覆盖整个窗口区域，包括标题栏和内容区域。内容区域背景色默认跟随系统深浅色，当同时使用该接口和  
-[setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setwindowbackgroundcolor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
+[setWindowBackgroundColor()](#setWindowBackgroundColor)设置背景色时，内容区域显示窗口背景色，标题栏显示窗口容器背景色。
 
 **起始版本：** 26.0.0
 
@@ -7543,11 +7543,11 @@ setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setWindowCornerRadius
 
@@ -7559,7 +7559,7 @@ setWindowCornerRadius(cornerRadius: number): Promise<void>
 
 圆角半径值过大将会导致三键（最大化、最小化、关闭按钮）位置被裁切，且会导致热区不易识别，请根据窗口大小设置合适的圆角半径值。
 
-在调用此接口之前调用[getWindowCornerRadius()](arkts-arkui-window-window-i.md#getwindowcornerradius)接口可以获得窗口默认圆角半径值。
+在调用此接口之前调用[getWindowCornerRadius()](#getWindowCornerRadius)接口可以获得窗口默认圆角半径值。
 
 **起始版本：** 17
 
@@ -7579,17 +7579,17 @@ setWindowCornerRadius(cornerRadius: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowDecorHeight
 
@@ -7598,11 +7598,11 @@ setWindowDecorHeight(height: number): void
 ```
 
 设置窗口的标题栏高度，对存在标题栏和三键区的窗口形态生效。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 当主窗口进入全屏沉浸状态时，此时鼠标Hover到窗口标题栏热区时，会显示悬浮标题栏，悬浮标题栏高度固定为37vp。
 
-由于系统像素转换可能存在精度误差，设置后调用[getWindowDecorHeight()](arkts-arkui-window-window-i.md#getwindowdecorheight)获取的值可能与设置的值存在1vp的差异。
+由于系统像素转换可能存在精度误差，设置后调用[getWindowDecorHeight()](#getWindowDecorHeight)获取的值可能与设置的值存在1vp的差异。
 
 **起始版本：** 11
 
@@ -7622,9 +7622,9 @@ setWindowDecorHeight(height: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowDecorVisible
 
@@ -7633,10 +7633,10 @@ setWindowDecorVisible(isVisible: boolean): void
 ```
 
 设置窗口标题栏是否可见，对存在标题栏和三键区的窗口形态生效。Stage模型下，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 设置窗口标题栏不可见后，当主窗口进入全屏沉浸状态时，此时鼠标Hover到上方窗口标题栏热区上会显示悬浮标题栏。若想禁用悬浮标题栏显示，请使用  
-[setTitleAndDockHoverShown()](arkts-arkui-window-window-i.md#settitleanddockhovershown)接口。
+[setTitleAndDockHoverShown()](#setTitleAndDockHoverShown)接口。
 
 **起始版本：** 11
 
@@ -7656,10 +7656,10 @@ setWindowDecorVisible(isVisible: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowDelayRaiseOnDrag
 
@@ -7691,8 +7691,8 @@ setWindowDelayRaiseOnDrag(isEnabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowFocusable
 
@@ -7702,7 +7702,7 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 
 设置窗口是否具有获得焦点的能力，使用Promise异步回调。
 
-从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen)接口创建虚拟屏，并设置supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
+从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createVirtualScreen)接口创建虚拟屏，并设置supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **起始版本：** 9
 
@@ -7722,15 +7722,15 @@ setWindowFocusable(isFocusable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowFocusable
 
@@ -7740,7 +7740,7 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 
 设置窗口是否具有获得焦点的能力，使用callback异步回调。
 
-从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createvirtualscreen)接口创建虚拟屏，并设置supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
+从API version 22开始，调用[createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md#createVirtualScreen)接口创建虚拟屏，并设置supportsFocus配置项为false时，位于该虚拟屏的窗口无法调用该接口修改窗口的可获焦能力，如果调用，会抛出1300002错误码。
 
 **起始版本：** 9
 
@@ -7761,9 +7761,9 @@ setWindowFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowGrayScale
 
@@ -7772,7 +7772,7 @@ setWindowGrayScale(grayScale: number): Promise<void>
 ```
 
 设置窗口灰阶，使用Promise异步回调。该接口需要在调用  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)使窗口加载页面内容后调用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)使窗口加载页面内容后调用。
 
 **起始版本：** 12
 
@@ -7792,16 +7792,16 @@ setWindowGrayScale(grayScale: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowKeepScreenOn
 
@@ -7825,21 +7825,21 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | 是 |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowKeepScreenOn
 
@@ -7863,16 +7863,16 @@ setWindowKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | 是 |
+| [isKeepScreenOn](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowLayoutFullScreen
 
@@ -7889,13 +7889,13 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowLayoutFullScreen()](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)替代。
+> [setWindowLayoutFullScreen()](#setWindowLayoutFullScreen-1)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [window.Window.setWindowLayoutFullScreen](arkts-arkui-window-window-i.md#setwindowlayoutfullscreen)(isLayoutFullScreen:
+**替代接口：** [setWindowLayoutFullScreen](window.Window.setWindowLayoutFullScreen(isLayoutFullScreen:)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -7907,16 +7907,16 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowLayoutFullScreen
 
@@ -7942,21 +7942,21 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isLayoutFullScreen | boolean | 是 |
+| [isLayoutFullScreen](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowLimits
 
@@ -7968,19 +7968,19 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 
 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。
 
-未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)或  
-[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)可获取系统限制。
+未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](#getWindowLimits)或  
+[getWindowLimitsVP](#getWindowLimitsVP)可获取系统限制。
 
 > **说明：**
 > 
 > - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为
-> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动
-> 改变窗口大小（如调用[resize()](arkts-arkui-window-window-i.md#resize)）；系统调节窗
+> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)约束。触发场景包括：应用主动
+> 改变窗口大小（如调用[resize()](#resize)）；系统调节窗
 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
 > 
 > - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受
-> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受
-> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)约束，其他类型窗口仍受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)约束。
 
 **起始版本：** 11
 
@@ -8000,17 +8000,17 @@ setWindowLimits(windowLimits: WindowLimits): Promise<WindowLimits>
 
 | 类型 |
 | --- |
-| Promise&lt;WindowLimits&gt; |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowLimits
 
@@ -8022,19 +8022,19 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 
 默认存在一个系统尺寸限制，系统尺寸限制由产品配置决定，不可修改。
 
-未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)或  
-[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)可获取系统限制。
+未调用setWindowLimits配置过WindowLimits时，使用[getWindowLimits](#getWindowLimits)或  
+[getWindowLimitsVP](#getWindowLimitsVP)可获取系统限制。
 
 > **说明：**
 > 
 > - [自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，处于自由悬浮窗口模式（即窗口模式为
-> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。触发场景包括：应用主动
-> 改变窗口大小（如调用[resize()](arkts-arkui-window-window-i.md#resize)）；系统调节窗
+> window.WindowStatusType.FLOATING）的窗口在尺寸变化时受[WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)约束。触发场景包括：应用主动
+> 改变窗口大小（如调用[resize()](#resize)）；系统调节窗
 > 口大小（如分辨率变化、显示大小缩放系数变化）；用户拖拽缩放窗口。
 > 
 > - 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，主窗口尺寸不受
-> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束，其他类型窗口仍受
-> [WindowLimits](arkts-arkui-window-windowlimits-i.md)约束。
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)约束，其他类型窗口仍受
+> [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits)约束。
 
 **起始版本：** 15
 
@@ -8055,17 +8055,17 @@ setWindowLimits(windowLimits: WindowLimits, isForcible: boolean): Promise<Window
 
 | 类型 |
 | --- |
-| Promise&lt;WindowLimits&gt; |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowMask
 
@@ -8091,23 +8091,23 @@ setWindowMask(windowMask: Array<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowMask | Array&lt;Array&lt;number&gt;&gt; | 是 |
+| windowMask | Array & lt;Array & lt;number & gt; & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowMaskWithAlpha
 
@@ -8131,23 +8131,23 @@ setWindowMaskWithAlpha(windowMask: Uint8Array, maskWidth: number, maskHeight: nu
 | --- | --- | --- |
 | windowMask | Uint8Array | 是 |
 | maskWidth | number | 是 |
-| maskHeight | number | 是 |
+| [maskHeight](../arkts-components/arkts-arkui-floatingtabbarstyle-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowPrivacyMode
 
@@ -8177,20 +8177,20 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isPrivacyMode | boolean | 是 |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## setWindowPrivacyMode
 
@@ -8220,15 +8220,15 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isPrivacyMode | boolean | 是 |
+| [isPrivacyMode](arkts-arkui-window-windowproperties-i.md) | boolean | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## setWindowShadowEnabled
 
@@ -8256,17 +8256,17 @@ setWindowShadowEnabled(enable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## setWindowShadowRadius
 
@@ -8294,10 +8294,10 @@ setWindowShadowRadius(radius: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowSystemBarEnable
 
@@ -8314,14 +8314,14 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarEnable()](arkts-arkui-window-window-i.md#setwindowsystembarenable)
+> [setWindowSystemBarEnable()](#setWindowSystemBarEnable)
 > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [window.Window.setWindowSystemBarEnable](arkts-arkui-window-window-i.md#setwindowsystembarenable)(names:
+**替代接口：** [setWindowSystemBarEnable](window.Window.setWindowSystemBarEnable(names:)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8333,16 +8333,16 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 |
+| names | Array & lt;'status' \ | 'navigation' & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowSystemBarEnable
 
@@ -8366,21 +8366,21 @@ setWindowSystemBarEnable(names: Array<'status'|'navigation'>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | 是 |
+| names | Array & lt;'status' \ | 'navigation' & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowSystemBarProperties
 
@@ -8395,14 +8395,14 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarProperties()](arkts-arkui-window-window-i.md#setwindowsystembarproperties)
+> [setWindowSystemBarProperties()](#setWindowSystemBarProperties-1)
 > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [window.Window.setWindowSystemBarProperties](arkts-arkui-window-window-i.md#setwindowsystembarproperties)(systemBarProperties:
+**替代接口：** [setWindowSystemBarProperties](window.Window.setWindowSystemBarProperties(systemBarProperties:)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -8421,10 +8421,10 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowSystemBarProperties
 
@@ -8454,15 +8454,15 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowTitle
 
@@ -8471,7 +8471,7 @@ setWindowTitle(titleName: string): Promise<void>
 ```
 
 设置窗口标题，使用Promise异步回调。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 15
 
@@ -8485,21 +8485,21 @@ setWindowTitle(titleName: string): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| titleName | string | 是 |
+| [titleName](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-qrcodeinfo-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowTitleButtonVisible
 
@@ -8529,10 +8529,10 @@ setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVi
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowTitleMoveEnabled
 
@@ -8540,8 +8540,8 @@ setWindowTitleButtonVisible(isMaximizeButtonVisible: boolean, isMinimizeButtonVi
 setWindowTitleMoveEnabled(enabled: boolean): void
 ```
 
-禁止/使能主窗或子窗标题栏默认移动窗口和双击最大化的功能，当禁用标题栏默认移动窗口和双击最大化的功能时，可使用[startMoving()](arkts-arkui-window-window-i.md#startmoving)在应用热区中发起拖拽移动，使用[maximize()](arkts-arkui-window-window-i.md#maximize)实现最大化功能。如果使用Stage模型，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+禁止/使能主窗或子窗标题栏默认移动窗口和双击最大化的功能，当禁用标题栏默认移动窗口和双击最大化的功能时，可使用[startMoving()](#startMoving)在应用热区中发起拖拽移动，使用[maximize()](#maximize)实现最大化功能。如果使用Stage模型，该接口需要在  
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 14
 
@@ -8561,10 +8561,10 @@ setWindowTitleMoveEnabled(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## setWindowTopmost
 
@@ -8596,17 +8596,17 @@ setWindowTopmost(isWindowTopmost: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## setWindowTouchable
 
@@ -8636,15 +8636,15 @@ setWindowTouchable(isTouchable: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowTouchable
 
@@ -8675,9 +8675,9 @@ setWindowTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## setWindowTransitionAnimation
 
@@ -8710,17 +8710,17 @@ setWindowTransitionAnimation(transitionType: WindowTransitionType, animation: Tr
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## show
 
@@ -8733,13 +8733,13 @@ show(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [showWindow()](arkts-arkui-window-window-i.md#showwindow)替代。
+> [showWindow()](#showWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.showWindow](arkts-arkui-window-window-i.md#showwindow)(callback:
+**替代接口：** [showWindow](window.Window.showWindow(callback:)
 
 <!--Device-Window-show(callback: AsyncCallback<void>): void--><!--Device-Window-show(callback: AsyncCallback<void>): void-End-->
 
@@ -8761,13 +8761,13 @@ show(): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[showWindow()](arkts-arkui-window-window-i.md#showwindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[showWindow()](#showWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.Window.showWindow](arkts-arkui-window-window-i.md#showwindow)()
+**替代接口：** [showWindow](#showWindow)()
 
 <!--Device-Window-show(): Promise<void>--><!--Device-Window-show(): Promise<void>-End-->
 
@@ -8777,7 +8777,7 @@ show(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## showWindow
 
@@ -8790,7 +8790,7 @@ showWindow(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 调用该接口前，建议先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> [setUIContent](#setUIContent-1)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 9
@@ -8811,7 +8811,7 @@ showWindow(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## showWindow
 
@@ -8824,7 +8824,7 @@ showWindow(): Promise<void>
 > **说明：**
 > 
 > 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> [setUIContent](#setUIContent-1)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 9
@@ -8839,13 +8839,13 @@ showWindow(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## showWindow
 
@@ -8860,7 +8860,7 @@ showWindow(options: ShowWindowOptions): Promise<void>
 > **说明：**
 > 
 > 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> [setUIContent](#setUIContent-1)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 20
@@ -8881,16 +8881,16 @@ showWindow(options: ShowWindowOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## snapshot
 
@@ -8899,7 +8899,7 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
 获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
+[setWindowPrivacyMode](#setWindowPrivacyMode)接口设置），截图结果为白屏。
 
 **起始版本：** 9
 
@@ -8919,7 +8919,7 @@ snapshot(callback: AsyncCallback<image.PixelMap>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## snapshot
 
@@ -8928,7 +8928,7 @@ snapshot(): Promise<image.PixelMap>
 ```
 
 获取当前窗口截图。若当前窗口设置为隐私模式（可通过  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
+[setWindowPrivacyMode](#setWindowPrivacyMode)接口设置），截图结果为白屏。
 
 **起始版本：** 9
 
@@ -8942,13 +8942,13 @@ snapshot(): Promise<image.PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## snapshotIgnorePrivacy
 
@@ -8957,7 +8957,7 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
 获取当前窗口截图。即使当前窗口设置为隐私模式（可通过  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），仍可调用本接口返回当前窗口截图。
+[setWindowPrivacyMode](#setWindowPrivacyMode)接口设置），仍可调用本接口返回当前窗口截图。
 
 **起始版本：** 18
 
@@ -8971,14 +8971,14 @@ snapshotIgnorePrivacy(): Promise<image.PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
 
 ## snapshotSync
 
@@ -8987,10 +8987,10 @@ snapshotSync(): image.PixelMap
 ```
 
 获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
+[setWindowPrivacyMode](#setWindowPrivacyMode)接口设置），截图结果为白屏。
 
 Stage模型下，该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](#loadContent)或[setUIContent()](#setUIContent)调用生效后使用。
 
 **起始版本：** 20
 
@@ -9008,9 +9008,9 @@ Stage模型下，该接口需要在
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300018](../errorcode-window.md#1300018-api调用超时) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300018-api调用超时) |
 
 ## startMoving
 
@@ -9024,7 +9024,7 @@ startMoving(): Promise<void>
 
 仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标或触摸点移动。
 
-在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
+在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md#TouchType)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 14
 
@@ -9038,17 +9038,17 @@ startMoving(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300001](../errorcode-window.md#1300001-重复操作) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## startMoving
 
@@ -9062,7 +9062,7 @@ startMoving(offsetX: number, offsetY: number): Promise<void>
 
 仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)事件（其中，事件类型必须为TouchType.Down）的回调方法中调用此接口才会有移动效果，成功调用此接口后，窗口将跟随鼠标移动。
 
-在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
+在点击拖拽场景下，若不期望在按下时触发拖拽事件，则可以在事件类型为[TouchType.Move](arkts-arkui-touchtype-e.md#TouchType)（需要保证当前行为已经触发TouchType.Down事件）时调用此接口，触发移动效果。
 
 **起始版本：** 15
 
@@ -9083,18 +9083,18 @@ startMoving(offsetX: number, offsetY: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300001](../errorcode-window.md#1300001-重复操作) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
 
 ## stopMoving
 
@@ -9116,13 +9116,13 @@ stopMoving(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |

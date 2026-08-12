@@ -8,7 +8,7 @@ Describes the widget state information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo#FormStateInfo
+**Substitutes:** [FormStateInfo](ohos.app.form.formInfo/formInfo#FormStateInfo)
 
 <!--Device-formInfo-interface FormStateInfo--><!--Device-formInfo-interface FormStateInfo-End-->
 
@@ -22,7 +22,7 @@ formState: FormState
 
 Widget state.
 
-**Type:** [FormState](arkts-form-forminfo-formstate-e.md)
+**Type:** FormState
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ Widget state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormStateInfo#formState
+**Substitutes:** [formState](ohos.app.form.formInfo/formInfo.FormStateInfo#formState)
 
 <!--Device-FormStateInfo-formState: FormState--><!--Device-FormStateInfo-formState: FormState-End-->
 
@@ -52,7 +52,7 @@ Want text.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormStateInfo#want
+**Substitutes:** [want](ohos.app.form.formInfo/formInfo.FormStateInfo#want)
 
 <!--Device-FormStateInfo-want: Want--><!--Device-FormStateInfo-want: Want-End-->
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## cancelAll
@@ -22,6 +22,12 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[publish](notificationManager.publish(request: NotificationRequest, callback: AsyncCallback<void>):void) 发布通知。
+
+[cancel](notificationManager.cancel(id: int, label: string, callback: AsyncCallback<void>): void) 取消已发布的通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 |
@@ -32,10 +38,10 @@ function cancelAll(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -70,19 +76,25 @@ function cancelAll(): Promise<void>
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[publish](notificationManager.publish(request: NotificationRequest):Promise<void>) 发布通知。
+
+[cancel](notificationManager.cancel(id:int, label?: string): Promise<void>) 根据指定的通知ID取消已发布的通知。
+
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

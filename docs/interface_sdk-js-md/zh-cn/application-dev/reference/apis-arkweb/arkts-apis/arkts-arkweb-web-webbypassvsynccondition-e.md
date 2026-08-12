@@ -1,6 +1,6 @@
 # WebBypassVsyncCondition
 
-Enum type supplied to {@link bypassVsyncCondition} for setting the bypass vsync condition.
+Enum type supplied to [bypassVsyncCondition](arkts-arkweb-web-webattribute-i.md#bypassVsyncCondition) for setting the bypass vsync condition.
 
 **起始版本：** 23
 

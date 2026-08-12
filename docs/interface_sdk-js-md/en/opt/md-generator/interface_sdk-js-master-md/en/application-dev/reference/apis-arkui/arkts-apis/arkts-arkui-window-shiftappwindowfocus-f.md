@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## shiftAppWindowFocus
@@ -15,13 +15,13 @@ function shiftAppWindowFocus(sourceWindowId: number, targetWindowId: number): Pr
 Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.
 
 Ensure that the target window can gain focus (configurable by calling  
-[setWindowFocusable()](arkts-arkui-window-window-i.md#setwindowfocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+[setWindowFocusable()](arkts-arkui-window-window-i.md#setWindowFocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
 
 > **NOTE：**
 > 
 > Before calling **shiftAppWindowFocus()**, ensure that the target window has called
-> [loadContent()](arkts-arkui-window-window-i.md#loadcontent)
-> or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)
+> [loadContent()](arkts-arkui-window-window-i.md#loadContent)
+> or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent)
 > and these operations have been effective. Otherwise, an invisible window may gain focus, causing function
 > exceptions or affecting user experience.
 
@@ -44,17 +44,17 @@ Ensure that the target window can gain focus (configurable by calling
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
 
 ## Examples
 

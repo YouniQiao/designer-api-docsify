@@ -8,7 +8,7 @@ Describes the Gatt descriptor.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLEDescriptor
+**Substitutes:** [BLEDescriptor](ohos.bluetooth.ble/ble.BLEDescriptor)
 
 <!--Device-bluetoothManager-interface BLEDescriptor--><!--Device-bluetoothManager-interface BLEDescriptor-End-->
 
@@ -17,7 +17,7 @@ Describes the Gatt descriptor.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -26,7 +26,7 @@ import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
 characteristicUuid: string
 ```
 
-The UUID of the {@link BLECharacteristic} instance to which the descriptor belongs
+The UUID of the [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#BLECharacteristic) instance to which the descriptor belongs
 
 **Type:** string
 
@@ -36,7 +36,7 @@ The UUID of the {@link BLECharacteristic} instance to which the descriptor belon
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLEDescriptor#characteristicUuid
+**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.BLEDescriptor#characteristicUuid)
 
 <!--Device-BLEDescriptor-characteristicUuid: string--><!--Device-BLEDescriptor-characteristicUuid: string-End-->
 
@@ -58,7 +58,7 @@ The UUID of the BLEDescriptor instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLEDescriptor#descriptorUuid
+**Substitutes:** [descriptorUuid](ohos.bluetooth.ble/ble.BLEDescriptor#descriptorUuid)
 
 <!--Device-BLEDescriptor-descriptorUuid: string--><!--Device-BLEDescriptor-descriptorUuid: string-End-->
 
@@ -80,7 +80,7 @@ The value of the BLEDescriptor instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLEDescriptor#descriptorValue
+**Substitutes:** [descriptorValue](ohos.bluetooth.ble/ble.BLEDescriptor#descriptorValue)
 
 <!--Device-BLEDescriptor-descriptorValue: ArrayBuffer--><!--Device-BLEDescriptor-descriptorValue: ArrayBuffer-End-->
 
@@ -92,7 +92,7 @@ The value of the BLEDescriptor instance
 serviceUuid: string
 ```
 
-The UUID of the {@link GattService} instance to which the descriptor belongs
+The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#GattService) instance to which the descriptor belongs
 
 **Type:** string
 
@@ -102,7 +102,7 @@ The UUID of the {@link GattService} instance to which the descriptor belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLEDescriptor#serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.BLEDescriptor#serviceUuid)
 
 <!--Device-BLEDescriptor-serviceUuid: string--><!--Device-BLEDescriptor-serviceUuid: string-End-->
 

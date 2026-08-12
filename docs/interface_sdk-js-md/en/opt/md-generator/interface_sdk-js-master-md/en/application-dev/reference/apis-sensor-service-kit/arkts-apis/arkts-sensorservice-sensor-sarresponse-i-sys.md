@@ -1,8 +1,8 @@
 # SarResponse (System API)
 
-Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** SarResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** SarResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ Describes the SAR sensor data. It extends from [Response](arkts-sensorservice-se
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## absorptionRatio

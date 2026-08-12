@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## setUserGrantedState
@@ -30,7 +30,7 @@ Sets the enabling state of the **Allow access to notifications on this device** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetBundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md). Otherwise, error code 1600022 is returned. |
+| targetBundle | BundleOption | Yes | Information about the target application. The application must have requested the ohos.permission.SUBSCRIBE_NOTIFICATION permission and implemented [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility). Otherwise, error code 1600022 is returned. |
 | enabled | boolean | Yes | Whether to enable the device notification access. The value **true** indicates that this functionality is enabled, and **false** indicates the opposite. |
 
 **Return value:**
@@ -43,11 +43,11 @@ Sets the enabling state of the **Allow access to notifications on this device** 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
-| [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
 
 ## Examples
 

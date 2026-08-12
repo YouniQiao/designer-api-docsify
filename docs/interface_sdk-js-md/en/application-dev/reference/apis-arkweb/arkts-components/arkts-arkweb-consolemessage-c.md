@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to {@link onConsole} method.
+Encompassed message information as parameters to [onConsole](onConsole) method.
 
 **Since:** 8
 
@@ -24,7 +24,7 @@ Constructor.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.web.ConsoleMessage#constructor
+**Substitutes:** [constructor](ohos.web.ConsoleMessage#constructor)
 
 <!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)--><!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)-End-->
 
@@ -37,7 +37,7 @@ Constructor.
 | message | string | Yes | The console message. |
 | sourceId | string | Yes | The Web source file's path and name. |
 | lineNumber | number | Yes | The line number of the console message. |
-| messageLevel | [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | Yes | The console log level. |
+| messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | Yes | The console log level. |
 
 ## constructor
 
@@ -127,7 +127,7 @@ Gets the message level of a console message.
 
 | Type | Description |
 | --- | --- |
-| [MessageLevel](../arkts-apis/arkts-arkweb-web-messagelevel-e.md) | Return the message level of a console message, which can be { |
+| [MessageLevel](arkts-arkweb-messagelevel-e.md) | Return the message level of a console message, which can be { |
 
 ## getSource
 

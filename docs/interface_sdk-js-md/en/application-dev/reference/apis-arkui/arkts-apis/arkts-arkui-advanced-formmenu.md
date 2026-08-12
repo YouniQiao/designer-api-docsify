@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AddFormMenuItem, AddFormOptions, FormMenuItemStyle } from 'kits/@kit.ArkUI';
+import { AddFormMenuItem, AddFormOptions, FormMenuItemStyle } from '@kit.ArkUI';
 ```
 
 ## Summary

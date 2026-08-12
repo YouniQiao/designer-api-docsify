@@ -4,7 +4,7 @@ BasicPrefetcher是IPrefetcher的基础实现。它提供了一种智能数据预
 
 BasicPrefetcher对象不支持使用JSON序列化。
 
-**继承/实现关系：** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md)
+**继承/实现关系：** BasicPrefetcher implements [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md#IPrefetcher)
 
 **起始版本：** 12
 

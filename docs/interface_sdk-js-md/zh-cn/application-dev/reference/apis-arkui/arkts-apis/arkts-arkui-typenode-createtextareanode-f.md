@@ -29,5 +29,5 @@ export function createTextAreaNode(context: UIContext, options?: FrameNodeOption
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextArea](arkts-arkui-typenode-textarea-t.md) | 返回 TextArea 类型的 FrameNode |
+| TextArea | 返回 TextArea 类型的 FrameNode |
 

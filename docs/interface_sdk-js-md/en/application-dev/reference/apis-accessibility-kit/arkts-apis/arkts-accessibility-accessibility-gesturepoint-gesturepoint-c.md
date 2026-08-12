@@ -13,7 +13,7 @@ The **GesturePoint** module provides APIs for creating gesture touch point infor
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from 'kits/@kit.AccessibilityKit';
+import { GesturePoint } from '@kit.AccessibilityKit';
 ```
 
 ## constructor

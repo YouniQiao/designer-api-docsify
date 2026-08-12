@@ -13,7 +13,7 @@ Describes the text embedding functions of the multi-modal embedding model.Chines
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding
@@ -54,9 +54,9 @@ Obtains the embedding vector of the given text.The model can process up to 512 c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -112,9 +112,9 @@ Obtains the embedding vector of a given batch of text.The model can process up t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -158,8 +158,8 @@ Loads this text embedding model. If the loading fails, an error code is returned
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -201,8 +201,8 @@ Releases this text embedding model. If the releasing fails, an error code is ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 

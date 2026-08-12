@@ -1,7 +1,7 @@
 # USBEndpoint
 
 Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  
-[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md).
+[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface).
 
 > **NOTE：**
 > 
@@ -18,7 +18,7 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## address
@@ -61,7 +61,7 @@ direction: USBRequestDirection
 
 Endpoint direction.
 
-**Type:** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
+**Type:** USBRequestDirection
 
 **Since:** 9
 
@@ -139,7 +139,7 @@ Endpoint number.
 type: number
 ```
 
-Endpoint type. For details, see [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md).
+Endpoint type. For details, see [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md#UsbEndpointTransferType).
 
 **Type:** number
 

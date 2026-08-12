@@ -126,7 +126,7 @@ getType(): GestureControl.GestureType
 
 | 类型 |
 | --- |
-| GestureControl.GestureType |
+| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) |
 
 ## isBuiltIn
 
@@ -258,8 +258,8 @@ isValid(): boolean
 preventBegin(): void
 ```
 
-在手指全部抬起前阻止手势识别器参与当前手势识别。如果系统已确定该手势识别器的结果（无论成功与否），调用此接口将无效。此方法与GestureRecognizer.[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)(isEnabled: boolean)不同，  
-[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)并不会阻止手势识别器对象参与手势识别过程，而只会影响手势对应的回调函数是否执行。
+在手指全部抬起前阻止手势识别器参与当前手势识别。如果系统已确定该手势识别器的结果（无论成功与否），调用此接口将无效。此方法与GestureRecognizer.[setEnabled](#setEnabled)(isEnabled: boolean)不同，  
+[setEnabled](#setEnabled)并不会阻止手势识别器对象参与手势识别过程，而只会影响手势对应的回调函数是否执行。
 
 **起始版本：** 20
 

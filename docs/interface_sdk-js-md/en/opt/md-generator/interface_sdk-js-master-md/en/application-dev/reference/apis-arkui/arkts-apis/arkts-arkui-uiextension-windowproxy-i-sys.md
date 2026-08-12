@@ -11,7 +11,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'kits/@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows
@@ -25,8 +25,8 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 > **NOTE：**
 > 
 > - A non-secure window refers to any window that may obstruct the
-> [EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i) or
-> [UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i), such as global floating windows
+> [EmbeddedComponent](./@internal/component/ets/embedded_component) or
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows
 > , host subwindows, and dialog box windows created by the host application (excluding windows of these types
 > created by system applications).
 > 
@@ -59,16 +59,16 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -134,15 +134,15 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300008](../errorcode-window.md#1300008-display-device-exception) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 

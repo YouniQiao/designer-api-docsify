@@ -11,7 +11,7 @@ Describes decoding-related options, which include **fatal** and **ignoreBOM**.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## fatal

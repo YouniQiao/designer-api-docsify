@@ -18,7 +18,7 @@ memoryOptimizationStrategy?: ReusableMemOptStrategy
 
 Memory optimization strategy for CustomComponent reuse
 
-**Type:** [ReusableMemOptStrategy](../arkts-apis/arkts-arkui-customcomponent-reusablememoptstrategy-e.md)
+**Type:** [ReusableMemOptStrategy](arkts-arkui-reusablememoptstrategy-e.md)
 
 **Default:** ReusableMemOptStrategy.DEFAULT
 

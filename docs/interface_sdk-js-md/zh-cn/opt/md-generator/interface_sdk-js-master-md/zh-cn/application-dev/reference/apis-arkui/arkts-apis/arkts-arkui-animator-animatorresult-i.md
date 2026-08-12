@@ -15,7 +15,7 @@ cancel(): void
 ```
 
 取消动画，会触发[onCancel](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。此接口和  
-[finish](arkts-arkui-animator-animatorresult-i.md#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
+[finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
 
 **起始版本：** 6
 
@@ -103,7 +103,7 @@ onFrame: (progress: number) => void
 
 接收到帧时回调。
 
-progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)定义的[begin, end]，默认取值范围为[0, 1]。
+progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions)定义的[begin, end]，默认取值范围为[0, 1]。
 
 **起始版本：** 12
 
@@ -153,7 +153,7 @@ oncancel: () => void
 
 **废弃版本：** 12
 
-**替代接口：** ohos.animator.onCancel
+**替代接口：** [onCancel](ohos.animator.onCancel)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -175,7 +175,7 @@ onfinish: () => void
 
 **废弃版本：** 12
 
-**替代接口：** ohos.animator.onFinish
+**替代接口：** [onFinish](ohos.animator.onFinish)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -197,7 +197,7 @@ onframe: (progress: number) => void
 
 **废弃版本：** 12
 
-**替代接口：** ohos.animator.onFrame
+**替代接口：** [onFrame](ohos.animator.onFrame)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -225,7 +225,7 @@ onrepeat: () => void
 
 **废弃版本：** 12
 
-**替代接口：** ohos.animator.onRepeat
+**替代接口：** [onRepeat](ohos.animator.onRepeat)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -309,8 +309,8 @@ reset(options: AnimatorOptions): void
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -357,8 +357,8 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-重置当前animator动画参数。与[reset](arkts-arkui-animator-animatorresult-i.md#reset)相比，新增对  
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
+重置当前animator动画参数。与[reset](#reset)相比，新增对  
+[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
 
 **起始版本：** 18
 
@@ -380,8 +380,8 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -503,13 +503,13 @@ update(options: AnimatorOptions): void
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃。建议使用[reset](arkts-arkui-animator-animatorresult-i.md#reset)替代。
+> 从API version 6开始支持，从API version 9开始废弃。建议使用[reset](#reset)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [AnimatorResult.reset](arkts-arkui-animator-animatorresult-i.md#reset)(options:
+**替代接口：** [reset](AnimatorResult.reset(options:)
 
 <!--Device-AnimatorResult-update(options: AnimatorOptions): void--><!--Device-AnimatorResult-update(options: AnimatorOptions): void-End-->
 

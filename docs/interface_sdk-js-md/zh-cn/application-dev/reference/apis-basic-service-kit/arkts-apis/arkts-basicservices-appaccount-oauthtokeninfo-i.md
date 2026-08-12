@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃。建议使用[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#AuthTokenInfo)替代。
 
 **起始版本：** 8
 
@@ -12,7 +12,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
+**替代接口：** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#AuthTokenInfo)
 
 <!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
 
@@ -34,7 +34,7 @@ authType: string
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.AuthTokenInfo.authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authtype)
+**替代接口：** [authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authType)
 
 <!--Device-OAuthTokenInfo-authType: string--><!--Device-OAuthTokenInfo-authType: string-End-->
 
@@ -56,7 +56,7 @@ token: string
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.AuthTokenInfo.token](arkts-basicservices-appaccount-authtokeninfo-i.md#token)
+**替代接口：** [token](arkts-basicservices-appaccount-authtokeninfo-i.md#token)
 
 <!--Device-OAuthTokenInfo-token: string--><!--Device-OAuthTokenInfo-token: string-End-->
 

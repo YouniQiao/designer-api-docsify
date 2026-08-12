@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromPixelsSync
@@ -32,7 +32,7 @@ The following pixel formats are not supported for PixelMap creation:RGBA_1010102
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pixels | ArrayBuffer | Yes |
+| [pixels](arkts-image-image-positionarea-i.md) | ArrayBuffer | Yes |
 | param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes |
 
 **Return value:**
@@ -45,10 +45,10 @@ The following pixel formats are not supported for PixelMap creation:RGBA_1010102
 
 | Error Code ID |
 | --- |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600207](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-unsupported-data-format) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

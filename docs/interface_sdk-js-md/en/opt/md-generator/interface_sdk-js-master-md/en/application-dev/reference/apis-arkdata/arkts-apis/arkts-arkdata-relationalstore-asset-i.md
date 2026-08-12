@@ -11,7 +11,7 @@ Represents the asset (such as a document, image, or video).
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## createTime
@@ -104,7 +104,7 @@ Asset status.
 
 Default value: **ASSET_NORMAL**.
 
-**Type:** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
+**Type:** AssetStatus
 
 **Since:** 10
 

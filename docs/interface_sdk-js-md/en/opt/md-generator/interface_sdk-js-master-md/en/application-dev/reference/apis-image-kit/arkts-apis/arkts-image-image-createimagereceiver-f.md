@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -13,14 +13,14 @@ function createImageReceiver(width: number, height: number, format: number, capa
 ```
 
 Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
+[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
 [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver)(size:
+**Substitutes:** [createImageReceiver](image.createImageReceiver(size:)
 
 <!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver--><!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver-End-->
 
@@ -55,7 +55,7 @@ function createImageReceiver(size: Size, format: ImageFormat, capacity: number):
 ```
 
 Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md/arkts-camera-camera-cameramanager-i.md#createpreviewoutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
+[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
 [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
@@ -82,7 +82,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -127,7 +127,7 @@ Creates an ImageReceiver instance.
 
 | Error Code ID |
 | --- |
-| [7900201](../errorcode-image.md#7900201-invalid-parameter) |
+| [7900201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7900201-invalid-parameter) |
 
 ## Examples
 

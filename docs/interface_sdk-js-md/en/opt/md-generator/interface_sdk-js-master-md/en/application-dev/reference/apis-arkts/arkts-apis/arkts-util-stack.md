@@ -2,7 +2,7 @@
 
 Stack is implemented based on the array data structure. It follows the principle Last Out First In (LOFI) and
  supports data insertion and removal at one end.
- Unlike [Queue](arkts-util-queue.md), which is implemented based on the queue data structure and supports insertion
+ Unlike [Queue](arkts-arkts-util-queue-queue-c.md#Queue), which is implemented based on the queue data structure and supports insertion
  at one end and removal at the other end, Stack supports insertion and removal at the same end.
  **Recommended use case**: Use Stack in LOFI scenarios.
  This topic uses the following to identify the use of generics:
@@ -16,7 +16,7 @@ Stack is implemented based on the array data structure. It follows the principle
 ## Modules to Import
 
 ```TypeScript
-import { Stack } from 'kits/@kit.ArkTS';
+import { Stack } from '@kit.ArkTS';
 ```
 
 ## Summary

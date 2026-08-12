@@ -30,13 +30,13 @@ function createImageReceiver(size: image.Size, format: image.ImageFormat, capaci
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | 如果操作成功，则返回ImageReceiver实例。 |
+| ImageReceiver | 如果操作成功，则返回ImageReceiver实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. |
 
 ## 示例
 

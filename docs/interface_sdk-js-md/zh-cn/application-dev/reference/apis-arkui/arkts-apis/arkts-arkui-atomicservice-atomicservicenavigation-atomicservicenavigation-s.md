@@ -1,7 +1,7 @@
 # AtomicServiceNavigation
 
 作为Page页面的根容器使用，其内部默认包含了标题栏、内容区。其中，内容区在首页默认显示导航内容，在非首页显示  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)的子组件，首页和非首页通过路由进行切换。
+[NavDestination](./@internal/component/ets/nav_destination)的子组件，首页和非首页通过路由进行切换。
 
 > **说明：**
 > 
@@ -89,7 +89,7 @@ menus?: CustomBuilder | Array<NavigationMenuItem>
 
 宽屏场景下用户自定义插入的布局样式。默认值为空，不显示任何样式。屏幕宽度低于600vp为非宽屏场景，大于等于600vp为宽屏场景。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;NavigationMenuItem&gt;
+**类型：** CustomBuilder \| Array&lt;NavigationMenuItem&gt;
 
 **起始版本：** 18
 
@@ -111,7 +111,7 @@ minContentWidth?: Dimension
 
 设置导航栏内容区最小宽度（双栏模式下生效）。默认值为360vp。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 12
 
@@ -133,7 +133,7 @@ mode?: NavigationMode
 
 设置导航栏的显示模式。默认值为Auto。支持Stack、Split与Auto模式。
 
-**类型：** [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md)
+**类型：** NavigationMode
 
 **起始版本：** 12
 
@@ -175,7 +175,7 @@ navBarWidth?: Length
 
 设置导航栏宽度。默认值为240vp。仅在Navigation组件分栏时生效。
 
-**类型：** [Length](arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 12
 
@@ -222,7 +222,7 @@ navPathStack?: NavPathStack
 
 路由栈信息。默认值为new NavPathStack()。
 
-**类型：** [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
+**类型：** NavPathStack
 
 **起始版本：** 12
 
@@ -330,7 +330,7 @@ title?: ResourceStr
 
 设置页面标题。默认值为空字符串。当titleOptions的titleBarType字段设置为TitleBarType.ROUND_ICON或者TitleBarType.SQUARED_ICON，且设置了titleIcon时，title标题内容将不会显示。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 

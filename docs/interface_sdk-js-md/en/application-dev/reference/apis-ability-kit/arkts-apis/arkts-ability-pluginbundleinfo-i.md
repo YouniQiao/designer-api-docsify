@@ -108,7 +108,7 @@ readonly pluginModuleInfos: Array<PluginModuleInfo>
 
 Module information of the plugin.
 
-**Type:** Array&lt;PluginModuleInfo&gt;
+**Type:** Array&lt;[PluginModuleInfo](arkts-ability-pluginbundleinfo-pluginmoduleinfo-i.md)&gt;
 
 **Since:** 26.0.0
 

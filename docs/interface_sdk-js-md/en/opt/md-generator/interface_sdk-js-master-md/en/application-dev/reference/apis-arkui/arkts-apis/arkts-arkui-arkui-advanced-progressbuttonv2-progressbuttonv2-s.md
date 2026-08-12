@@ -13,7 +13,7 @@ Declare Component ProgressButtonV2
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from 'kits/@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@kit.ArkUI';
 ```
 
 ## onClicked
@@ -132,7 +132,7 @@ progressButtonRadius?: LengthMetrics
 
 Set border rounded corner radius of progress.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 18
 
@@ -154,7 +154,7 @@ progressButtonWidth?: LengthMetrics
 
 Sets the ProgressButtonV2 progressButtonWidth.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 18
 

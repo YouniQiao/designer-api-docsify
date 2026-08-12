@@ -6,7 +6,7 @@ Describes the advertising data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.AdvertiseData
+**Substitutes:** [AdvertiseData](ohos.bluetoothManager/bluetoothManager.AdvertiseData)
 
 <!--Device-bluetooth-interface AdvertiseData--><!--Device-bluetooth-interface AdvertiseData-End-->
 
@@ -15,7 +15,7 @@ Describes the advertising data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## manufactureData
@@ -32,7 +32,7 @@ The specified manufacturer data list to this advertisement
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.AdvertiseData.manufactureData
+**Substitutes:** [manufactureData](ohos.bluetoothManager/bluetoothManager.AdvertiseData.manufactureData)
 
 <!--Device-AdvertiseData-manufactureData: Array<ManufactureData>--><!--Device-AdvertiseData-manufactureData: Array<ManufactureData>-End-->
 
@@ -52,7 +52,7 @@ The specified service data list to this advertisement
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.AdvertiseData.serviceData
+**Substitutes:** [serviceData](ohos.bluetoothManager/bluetoothManager.AdvertiseData.serviceData)
 
 <!--Device-AdvertiseData-serviceData: Array<ServiceData>--><!--Device-AdvertiseData-serviceData: Array<ServiceData>-End-->
 
@@ -72,7 +72,7 @@ The specified service UUID list to this advertisement
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.AdvertiseData.serviceUuids
+**Substitutes:** [serviceUuids](ohos.bluetoothManager/bluetoothManager.AdvertiseData.serviceUuids)
 
 <!--Device-AdvertiseData-serviceUuids: Array<string>--><!--Device-AdvertiseData-serviceUuids: Array<string>-End-->
 

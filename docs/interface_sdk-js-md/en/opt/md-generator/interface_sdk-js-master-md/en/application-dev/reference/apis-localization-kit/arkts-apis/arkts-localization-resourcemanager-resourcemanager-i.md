@@ -15,7 +15,7 @@ Provides the capability of accessing application resources and system resources.
 > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
 > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
 > in different HAPs or HSPs, you first need to use
-> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md/arkts-ability-application-createmodulecontext-f.md#createmodulecontext) to create the context
+> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext) to create the context
 > of the corresponding module and then call the API with **resName** or **resId** specified. For more information,
 > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 > 
@@ -33,7 +33,7 @@ Provides the capability of accessing application resources and system resources.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## addResource
@@ -66,8 +66,8 @@ Loads the specified overlay resource during application runtime to implement the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-invalid-overlay-path) |
 
 ## Examples
 
@@ -111,14 +111,14 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | _AsyncCallback&lt;void&gt; | Yes |
+| callback | _AsyncCallback & lt;void & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -174,14 +174,14 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -232,8 +232,8 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -271,7 +271,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)(path:
+**Substitutes:** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -282,7 +282,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+| callback | AsyncCallback & lt;void & gt; | Yes |
 
 ## Examples
 
@@ -310,7 +310,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)(path:
+**Substitutes:** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -326,7 +326,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -370,10 +370,10 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -421,7 +421,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getBoolean](arkts-localization-resourcemanager-resourcemanager-i.md#getboolean)(resId:
+**Substitutes:** [getBoolean](resourceManager.ResourceManager.getBoolean(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -447,10 +447,10 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -518,10 +518,10 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -578,16 +578,16 @@ Obtains the color value corresponding to the specified resource ID. This API use
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | _AsyncCallback&lt;number&gt; | Yes |
+| callback | _AsyncCallback & lt;number & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## getColor
 
@@ -615,16 +615,16 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -671,7 +671,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getColor](arkts-localization-resourcemanager-resourcemanager-i.md#getcolor)(resId:
+**Substitutes:** [getColor](resourceManager.ResourceManager.getColor(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -686,16 +686,16 @@ Obtains the color value corresponding to the specified resource object. This API
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
-| callback | _AsyncCallback&lt;number&gt; | Yes |
+| callback | _AsyncCallback & lt;number & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -742,7 +742,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getColor](arkts-localization-resourcemanager-resourcemanager-i.md#getcolor)(resId:
+**Substitutes:** [getColor](resourceManager.ResourceManager.getColor(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -762,16 +762,16 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -827,16 +827,16 @@ Obtains the color value corresponding to the specified resource name. This API u
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resName | string | Yes |
-| callback | _AsyncCallback&lt;number&gt; | Yes |
+| callback | _AsyncCallback & lt;number & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -897,16 +897,16 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -973,10 +973,10 @@ Obtains a color value based on the specified resource name. This API returns the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -1044,10 +1044,10 @@ Obtains a color value based on the specified resource ID. This API returns the r
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -1095,7 +1095,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getColorSync](arkts-localization-resourcemanager-resourcemanager-i.md#getcolorsync)(resId:
+**Substitutes:** [getColorSync](resourceManager.ResourceManager.getColorSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1121,10 +1121,10 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -1180,7 +1180,7 @@ Obtains the configuration of a device. This API uses an asynchronous callback to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | _AsyncCallback&lt;Configuration&gt; | Yes |
+| callback | _AsyncCallback & lt;Configuration & gt; | Yes |
 
 ## Examples
 
@@ -1227,7 +1227,7 @@ Obtains the configuration of a device. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Configuration&gt; |
+| Promise & lt;Configuration & gt; |
 
 ## Examples
 
@@ -1312,7 +1312,7 @@ Obtains the device capabilities of a device. This API uses an asynchronous callb
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | _AsyncCallback&lt;DeviceCapability&gt; | Yes |
+| callback | _AsyncCallback & lt;DeviceCapability & gt; | Yes |
 
 ## Examples
 
@@ -1359,7 +1359,7 @@ Obtains the device capabilities of a device. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DeviceCapability&gt; |
+| Promise & lt;DeviceCapability & gt; |
 
 ## Examples
 
@@ -1454,7 +1454,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- |
 | resName | string | Yes |
 | num | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -1466,10 +1466,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID |
 | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) |
 
 ## Examples
 
@@ -1546,7 +1546,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- |
 | resId | number | Yes |
 | num | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -1558,10 +1558,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -1625,7 +1625,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getDoublePluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getdoublepluralstringvaluesync)(resId:
+**Substitutes:** [getDoublePluralStringValueSync](resourceManager.ResourceManager.getDoublePluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1641,7 +1641,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
 | num | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -1653,10 +1653,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -1738,9 +1738,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -1791,7 +1791,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getDrawableDescriptor](arkts-localization-resourcemanager-resourcemanager-i.md#getdrawabledescriptor)(resId:
+**Substitutes:** [getDrawableDescriptor](resourceManager.ResourceManager.getDrawableDescriptor(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1819,9 +1819,9 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -1892,9 +1892,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -1963,7 +1963,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- |
 | resName | string | Yes |
 | num | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -1975,10 +1975,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID |
 | --- |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) |
 
 ## Examples
 
@@ -2055,7 +2055,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- |
 | resId | number | Yes |
 | num | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -2067,10 +2067,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -2134,7 +2134,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2150,7 +2150,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
 | num | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -2162,10 +2162,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -2239,13 +2239,13 @@ Obtains the language list of an application.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -2295,7 +2295,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 <!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -2306,7 +2306,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes |
+| callback | AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 ## Examples
 
@@ -2334,7 +2334,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 <!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
 
@@ -2350,7 +2350,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## Examples
 
@@ -2378,7 +2378,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -2389,7 +2389,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| callback | AsyncCallback & lt;string & gt; | Yes |
 
 ## Examples
 
@@ -2417,7 +2417,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
 
@@ -2433,7 +2433,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -2470,15 +2470,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resName | string | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2528,15 +2528,15 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | --- | --- | --- |
 | resName | string | Yes |
 | density | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2590,15 +2590,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2651,15 +2651,15 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2718,9 +2718,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2772,15 +2772,15 @@ Obtains the content of the media file corresponding to the specified resource na
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resName | string | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2830,15 +2830,15 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- |
 | resName | string | Yes |
 | density | number | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2892,15 +2892,15 @@ Obtains the content of the media file corresponding to the specified resource na
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -2953,15 +2953,15 @@ Obtains the media file content for the specified screen density based on the spe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -3020,9 +3020,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
 
 ## Examples
 
@@ -3065,7 +3065,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3080,15 +3080,15 @@ Obtains the content of the media file corresponding to the specified resource ob
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3128,7 +3128,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3144,15 +3144,15 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
 | density | number | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3192,7 +3192,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3212,15 +3212,15 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3258,7 +3258,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContent](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)(resId:
+**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3279,15 +3279,15 @@ Obtains the media file content for the specified screen density based on the spe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3334,15 +3334,15 @@ Obtains the content of the media file corresponding to the specified resource ID
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3393,15 +3393,15 @@ Obtains the media file content for the specified screen density based on the spe
 | --- | --- | --- |
 | resId | number | Yes |
 | density | number | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3455,15 +3455,15 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3516,15 +3516,15 @@ Obtains the media file content for the specified screen density based on the spe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3562,7 +3562,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3577,15 +3577,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3625,7 +3625,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3641,15 +3641,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
 | density | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3689,7 +3689,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3709,15 +3709,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3755,7 +3755,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64)(resId:
+**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3776,15 +3776,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3831,15 +3831,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3889,15 +3889,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 | --- | --- | --- |
 | resId | number | Yes |
 | density | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -3951,15 +3951,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -4012,15 +4012,15 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -4079,9 +4079,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -4124,7 +4124,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentBase64Sync](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentbase64sync)(resId:
+**Substitutes:** [getMediaContentBase64Sync](resourceManager.ResourceManager.getMediaContentBase64Sync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4151,9 +4151,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -4216,9 +4216,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -4261,7 +4261,7 @@ Obtains the media file content for the default or specified screen density based
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getMediaContentSync](arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontentsync)(resId:
+**Substitutes:** [getMediaContentSync](resourceManager.ResourceManager.getMediaContentSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4288,9 +4288,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
 
 ## Examples
 
@@ -4352,10 +4352,10 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -4429,7 +4429,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getNumber](arkts-localization-resourcemanager-resourcemanager-i.md#getnumber)(resId:
+**Substitutes:** [getNumber](resourceManager.ResourceManager.getNumber(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4455,10 +4455,10 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -4527,10 +4527,10 @@ Obtains an integer or float number based on the specified resource name. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -4600,7 +4600,7 @@ getOverrideConfiguration(): Configuration
 
 Obtains the configuration of differentiated resources. This API returns the result synchronously.
 
-For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager) API, this API returns the same configuration information.
+For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getOverrideResourceManager) API, this API returns the same configuration information.
 
 **Since:** 12
 
@@ -4673,7 +4673,7 @@ The resource configuration (including the language, color mode, resolution, and 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -4715,7 +4715,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getPluralStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getpluralstringvalue)(resId:
+**Substitutes:** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -4727,7 +4727,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- |
 | resId | number | Yes |
 | num | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| callback | AsyncCallback & lt;string & gt; | Yes |
 
 ## Examples
 
@@ -4762,7 +4762,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getPluralStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getpluralstringvalue)(resId:
+**Substitutes:** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -4779,7 +4779,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -4812,7 +4812,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringByNameSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringbynamesync)(resName:
+**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4826,16 +4826,16 @@ Obtains the plural string based on the specified resource name and the specified
 | --- | --- | --- |
 | resName | string | Yes |
 | num | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -4892,7 +4892,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringByNameSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringbynamesync)(resName:
+**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4911,16 +4911,16 @@ Obtains the plural string based on the specified resource name and the specified
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -4977,7 +4977,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringByNameSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringbynamesync)(resName:
+**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5002,10 +5002,10 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5063,7 +5063,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5079,16 +5079,16 @@ Obtains the plural string based on the specified resource information and the sp
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
 | num | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5152,7 +5152,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5173,16 +5173,16 @@ Obtains the plural string based on the specified resource information and the sp
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5245,7 +5245,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5259,16 +5259,16 @@ Obtains the plural string based on the specified resource ID and the specified r
 | --- | --- | --- |
 | resId | number | Yes |
 | num | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5326,7 +5326,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5345,16 +5345,16 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5411,7 +5411,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5436,10 +5436,10 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5497,7 +5497,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 **Deprecated since:** 18
 
-**Substitutes:** [resourceManager.ResourceManager.getIntPluralStringValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getintpluralstringvaluesync)(resId:
+**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5524,10 +5524,10 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -5584,8 +5584,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)
+> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
+> [closeRawFd](#closeRawFd)
 > to close the fd after use.
 
 **Since:** 9
@@ -5601,14 +5601,14 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | _AsyncCallback&lt;RawFileDescriptor&gt; | Yes |
+| callback | _AsyncCallback & lt;RawFileDescriptor & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -5649,8 +5649,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)
+> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
+> [closeRawFd](#closeRawFd)
 > to close the fd after use.
 
 **Since:** 9
@@ -5671,14 +5671,14 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RawFileDescriptor&gt; |
+| Promise & lt;RawFileDescriptor & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -5717,8 +5717,8 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 > **NOTE：**
 > 
-> To prevent resource leakage, call [closeRawFdSync](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfdsync) or
-> [closeRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#closerawfd)
+> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
+> [closeRawFd](#closeRawFd)
 > to close the fd after use.
 
 **Since:** 10
@@ -5739,14 +5739,14 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RawFileDescriptor](arkts-localization-resourcemanager-rawfiledescriptor-t.md) |
+| [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -5780,7 +5780,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFileContent](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfilecontent)(path:
+**Substitutes:** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
 
 <!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -5791,7 +5791,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes |
+| callback | AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 ## Examples
 
@@ -5821,7 +5821,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFileContent](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfilecontent)(path:
+**Substitutes:** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -5837,7 +5837,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## Examples
 
@@ -5874,14 +5874,14 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | _AsyncCallback&lt;Uint8Array&gt; | Yes |
+| callback | _AsyncCallback & lt;Uint8Array & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -5935,14 +5935,14 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -6000,8 +6000,8 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -6035,7 +6035,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)(path:
+**Substitutes:** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -6046,7 +6046,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RawFileDescriptor&gt; | Yes |
+| callback | AsyncCallback & lt;RawFileDescriptor & gt; | Yes |
 
 ## Examples
 
@@ -6078,7 +6078,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getRawFd](arkts-localization-resourcemanager-resourcemanager-i.md#getrawfd)(path:
+**Substitutes:** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -6094,7 +6094,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RawFileDescriptor&gt; |
+| Promise & lt;RawFileDescriptor & gt; |
 
 ## Examples
 
@@ -6138,14 +6138,14 @@ Obtains the list of directories and files in the specified subdirectory under **
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes |
+| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -6200,14 +6200,14 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -6262,14 +6262,14 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -6328,7 +6328,7 @@ Obtains the resource name corresponding to the specified resource ID.
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
 
 ## Examples
 
@@ -6376,7 +6376,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 <!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -6387,7 +6387,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
+| callback | AsyncCallback & lt;string & gt; | Yes |
 
 ## Examples
 
@@ -6415,7 +6415,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 <!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
 
@@ -6431,7 +6431,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -6459,7 +6459,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 <!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -6470,7 +6470,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
+| callback | AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes |
 
 ## Examples
 
@@ -6498,7 +6498,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 <!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
 
@@ -6514,7 +6514,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## Examples
 
@@ -6551,16 +6551,16 @@ Obtains the string array corresponding to the specified resource name. This API 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resName | string | Yes |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes |
+| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -6626,16 +6626,16 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -6700,16 +6700,16 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -6761,7 +6761,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6776,16 +6776,16 @@ Obtains the string array corresponding to the specified resource object. This AP
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes |
+| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -6836,7 +6836,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvalue)(resId:
+**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6856,16 +6856,16 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -6925,16 +6925,16 @@ Obtains the string array corresponding to the specified resource ID. This API us
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes |
+| callback | _AsyncCallback & lt;Array & lt;string & gt; & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7000,16 +7000,16 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7074,16 +7074,16 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7135,7 +7135,7 @@ Obtains a string array based on the specified resource object. This API returns 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringArrayValueSync](arkts-localization-resourcemanager-resourcemanager-i.md#getstringarrayvaluesync)(resId:
+**Substitutes:** [getStringArrayValueSync](resourceManager.ResourceManager.getStringArrayValueSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7155,16 +7155,16 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7225,16 +7225,16 @@ Obtains the string corresponding to the specified resource name. This API uses a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resName | string | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7295,16 +7295,16 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7369,10 +7369,10 @@ Obtains the string corresponding to the specified resource name. This API return
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7429,7 +7429,7 @@ Obtains the string corresponding to the specified resource name, and replaces th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resName | string | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -7441,11 +7441,11 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
-| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) |
 
 ## Examples
 
@@ -7513,10 +7513,10 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7573,7 +7573,7 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -7585,11 +7585,11 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7637,7 +7637,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringSync](arkts-localization-resourcemanager-resourcemanager-i.md#getstringsync)(resId:
+**Substitutes:** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7663,10 +7663,10 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7714,7 +7714,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringSync](arkts-localization-resourcemanager-resourcemanager-i.md#getstringsync)(resId:
+**Substitutes:** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7729,7 +7729,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
-| args | Array&lt;string \| number&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string \ | number & gt; | Yes |
 
 **Return value:**
 
@@ -7741,11 +7741,11 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7793,7 +7793,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7808,16 +7808,16 @@ Obtains the string corresponding to the specified resource object. This API uses
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resource | [Resource](arkts-localization-resource-resource-i.md) | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7864,7 +7864,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getStringValue](arkts-localization-resourcemanager-resourcemanager-i.md#getstringvalue)(resId:
+**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7884,16 +7884,16 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -7937,16 +7937,16 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | resId | number | Yes |
-| callback | _AsyncCallback&lt;string&gt; | Yes |
+| callback | _AsyncCallback & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## getStringValue
 
@@ -7974,16 +7974,16 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -8048,10 +8048,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -8087,7 +8087,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Deprecated since:** 20
 
-**Substitutes:** [resourceManager.ResourceManager.getSymbol](arkts-localization-resourcemanager-resourcemanager-i.md#getsymbol)(resId:
+**Substitutes:** [getSymbol](resourceManager.ResourceManager.getSymbol(resId:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8113,10 +8113,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID |
 | --- |
-| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [9001001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -8172,10 +8172,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) |
-| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
-| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) |
+| [9001004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) |
+| [9001006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) |
 
 ## Examples
 
@@ -8231,8 +8231,8 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) |
 
 ## Examples
 
@@ -8321,8 +8321,8 @@ Removes the specified overlay resource during application runtime and restores t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [9001010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-invalid-overlay-path) |
 
 ## Examples
 
@@ -8354,7 +8354,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 Updates the configuration of a differentiated resource management object.
 
 This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via   
-[getOverrideResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md#getoverrideresourcemanager).
+[getOverrideResourceManager](#getOverrideResourceManager).
 
 **Since:** 12
 
@@ -8374,7 +8374,7 @@ This API updates the configuration of the differentiated resource management obj
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

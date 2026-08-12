@@ -8,7 +8,7 @@ Describes a **FormBindingData** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formBindingData:formBindingData#FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
+**Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#FormBindingData)
 
 <!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->
 
@@ -30,7 +30,7 @@ Data to be displayed on the JS widget. The value can be an object containing mul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formBindingData:formBindingData#FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
+**Substitutes:** [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md#FormBindingData)
 
 <!--Device-FormBindingData-data: Object--><!--Device-FormBindingData-data: Object-End-->
 

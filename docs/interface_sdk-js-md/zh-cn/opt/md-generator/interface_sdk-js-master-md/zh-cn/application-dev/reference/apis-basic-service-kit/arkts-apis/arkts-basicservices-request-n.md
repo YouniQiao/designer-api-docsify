@@ -42,7 +42,7 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 | [File](arkts-basicservices-request-file-i.md) |
 | [RequestData](arkts-basicservices-request-requestdata-i.md) |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))和  [off('complete' \| 'fail')](request.UploadTask.off(type: 'complete' \|
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback & lt;Array<[TaskState](arkts-basicservices-request-taskstate-i.md)> & gt; & lt;TaskState & gt;>))和  [off('complete' \ |
 | [UploadTask](arkts-basicservices-request-uploadtask-i.md) |
 
 ### 常量

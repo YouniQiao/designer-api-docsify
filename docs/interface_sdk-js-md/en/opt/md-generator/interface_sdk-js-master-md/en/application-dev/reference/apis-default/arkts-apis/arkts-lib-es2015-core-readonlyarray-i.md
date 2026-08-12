@@ -14,7 +14,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (this: void, value: T, index: number, obj: readonly T[]) =&gt; value is S | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (this: void, value: T, index: number, obj: readonly T[]) = & gt; value is S | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -33,7 +33,7 @@ find(predicate: (value: T, index: number, obj: readonly T[]) => unknown, thisArg
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, obj: readonly T[]) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, obj: readonly T[]) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -56,7 +56,7 @@ Returns the index of the first element in the array where predicate is true, and
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, obj: readonly T[]) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, obj: readonly T[]) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**

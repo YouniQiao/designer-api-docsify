@@ -34,14 +34,14 @@ static collapse(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | 是 | ListItem节点对象。 |
+| node | FrameNode | 是 | ListItem节点对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
+| [106203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
 
 ## expand
 
@@ -71,13 +71,13 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md) | 是 | ListItem节点对象。 |
-| direction | [ListItemSwipeActionDirection](../arkts-apis/arkts-arkui-listitem-listitemswipeactiondirection-e.md) | 是 | ListItem划出菜单的展开方向。 |
+| node | FrameNode | 是 | ListItem节点对象。 |
+| direction | [ListItemSwipeActionDirection](arkts-arkui-listitemswipeactiondirection-e.md) | 是 | ListItem划出菜单的展开方向。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) | The component type of the node is incorrect. |
+| [106203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#106203-传入的节点未挂载到组件树上) | The node not mounted to component tree. |
 

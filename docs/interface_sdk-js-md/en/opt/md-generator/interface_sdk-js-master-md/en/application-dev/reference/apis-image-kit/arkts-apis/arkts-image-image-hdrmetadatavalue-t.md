@@ -5,7 +5,7 @@ type HdrMetadataValue = HdrMetadataType | HdrStaticMetadata | ArrayBuffer | HdrG
 ```
 
 Describes the HDR metadata values used by a PixelMap, which corresponds to the values available for   
-[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md).
+[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey).
 
 **Since:** 12
 

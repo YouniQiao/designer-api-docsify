@@ -320,7 +320,7 @@ off(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -346,7 +346,7 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 [on](emitter.Emitter#on&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))或  
 [once](emitter.Emitter#once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>))接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
 
-使用该接口取消事件订阅后，已通过[emit](arkts-basicservices-emitter-emitter-c.md#emit)接口发布但尚未被执行的事件将被取消。
+使用该接口取消事件订阅后，已通过[emit](emitter.Emitter#emit&lt;T&gt;(eventId: string, data?: GenericEventData&lt;T&gt;))接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 22
 
@@ -361,7 +361,7 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 |
 
 ## 示例
 
@@ -412,7 +412,7 @@ on(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -449,7 +449,7 @@ on<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 |
 
 ## 示例
 
@@ -500,7 +500,7 @@ once(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -537,7 +537,7 @@ once<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | eventId | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 |
 
 ## 示例
 

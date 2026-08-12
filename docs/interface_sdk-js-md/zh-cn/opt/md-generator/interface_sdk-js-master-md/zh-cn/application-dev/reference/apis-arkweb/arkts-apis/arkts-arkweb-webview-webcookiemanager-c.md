@@ -28,13 +28,13 @@ static clearAllCookies(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clearAllCookies
 
@@ -62,7 +62,7 @@ static clearAllCookies(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clearAllCookiesSync
 
@@ -106,13 +106,13 @@ static clearSessionCookie(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clearSessionCookie
 
@@ -140,7 +140,7 @@ static clearSessionCookie(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clearSessionCookieSync
 
@@ -185,15 +185,15 @@ static configCookie(url: string, value: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## configCookie
 
@@ -222,15 +222,15 @@ static configCookie(url: string, value: string, incognito: boolean, includeHttpO
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## configCookie
 
@@ -260,9 +260,9 @@ static configCookie(url: string, value: string, callback: AsyncCallback<void>): 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## configCookieSync
 
@@ -310,9 +310,9 @@ static configCookieSync(url: string, value: string, incognito?: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## configCookieSync
 
@@ -357,9 +357,9 @@ static configCookieSync(url: string, value: string, incognito: boolean, includeH
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## deleteEntireCookie
 
@@ -373,7 +373,7 @@ static deleteEntireCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.web.webview.WebCookieManager#clearAllCookiesSync
+**替代接口：** [clearAllCookiesSync](#clearAllCookiesSync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -391,7 +391,7 @@ static deleteSessionCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.web.webview.WebCookieManager#clearSessionCookieSync
+**替代接口：** [clearSessionCookieSync](#clearSessionCookieSync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -449,7 +449,7 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;WebHttpCookie&gt;&gt; |
+| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; |
 
 ## fetchCookie
 
@@ -477,14 +477,14 @@ static fetchCookie(url: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## fetchCookie
 
@@ -511,14 +511,14 @@ static fetchCookie(url: string, incognito: boolean): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## fetchCookie
 
@@ -547,8 +547,8 @@ static fetchCookie(url: string, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## fetchCookieSync
 
@@ -591,8 +591,8 @@ static fetchCookieSync(url: string, incognito?: boolean): string
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## getCookie
 
@@ -606,7 +606,7 @@ static getCookie(url: string): string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.web.webview.WebCookieManager#fetchCookieSync
+**替代接口：** [fetchCookieSync](#fetchCookieSync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -628,8 +628,8 @@ static getCookie(url: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## isCookieAllowed
 
@@ -701,7 +701,7 @@ static putAcceptCookieEnabled(accept: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -729,7 +729,7 @@ static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## saveCookieAsync
 
@@ -751,13 +751,13 @@ static saveCookieAsync(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## saveCookieAsync
 
@@ -785,7 +785,7 @@ static saveCookieAsync(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## saveCookieSync
 
@@ -820,7 +820,7 @@ static setCookie(url: string, value: string): void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.web.webview.WebCookieManager#configCookieSync
+**替代接口：** [configCookieSync](#configCookieSync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 
@@ -837,9 +837,9 @@ static setCookie(url: string, value: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## setLazyInitializeWebEngine
 

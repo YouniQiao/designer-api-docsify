@@ -11,7 +11,7 @@ Manages and record MediaKeySessions. Before calling an MediaKeySystem method, we
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## clearOfflineMediaKeys
@@ -40,9 +40,9 @@ Remove media keys corresponding to the mediaKeyId.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## createMediaKeySession
 
@@ -76,10 +76,10 @@ Create a MediaKeySession instance with level.
 
 | Error Code ID |
 | --- |
-| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## createMediaKeySession
 
@@ -107,9 +107,9 @@ Create a MediaKeySession instance.
 
 | Error Code ID |
 | --- |
-| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## destroy
 
@@ -131,8 +131,8 @@ Release the resource before the MediaKeySystem gonna be unused.
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## generateKeySystemRequest
 
@@ -154,14 +154,14 @@ Generate a media key system provision request.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ProvisionRequest&gt; |
+| Promise&lt;[ProvisionRequest](arkts-drm-drm-provisionrequest-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getCertificateStatus
 
@@ -189,8 +189,8 @@ Get certificate status of the MediaKeySystem.
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getConfigurationByteArray
 
@@ -212,7 +212,7 @@ Get the specified configuration.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| configName | string | Yes |
+| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
 
 **Return value:**
 
@@ -224,9 +224,9 @@ Get the specified configuration.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getConfigurationString
 
@@ -248,7 +248,7 @@ Get the specified configuration.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| configName | string | Yes |
+| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
 
 **Return value:**
 
@@ -260,9 +260,9 @@ Get the specified configuration.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getMaxContentProtectionLevel
 
@@ -290,8 +290,8 @@ Get max content protection level the device supports.
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getOfflineMediaKeyIds
 
@@ -319,8 +319,8 @@ Get the list of offline MediaKeyIds.
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getOfflineMediaKeyStatus
 
@@ -354,9 +354,9 @@ Get offline media key status corresponding to the mediaKeyId.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## getStatistics
 
@@ -384,8 +384,8 @@ Get performance statistics information.That includes currentSessionNum, version,
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## off('keySystemRequired')
 
@@ -408,14 +408,14 @@ Unregister keySystemRequired events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keySystemRequired' | Yes |
-| callback | (eventInfo: EventInfo) =&gt; void | No |
+| callback | (eventInfo: EventInfo) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## on('keySystemRequired')
 
@@ -438,14 +438,14 @@ Register keySystemRequired events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'keySystemRequired' | Yes |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## processKeySystemResponse
 
@@ -473,15 +473,15 @@ Process the response corresponding the key system request obtained by the applic
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## setConfigurationByteArray
 
@@ -503,16 +503,16 @@ Set the specified configuration.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| configName | string | Yes |
+| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
 | value | Uint8Array | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## setConfigurationString
 
@@ -534,13 +534,13 @@ Set the specified configuration.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| configName | string | Yes |
+| [configName](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
 | value | string | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |

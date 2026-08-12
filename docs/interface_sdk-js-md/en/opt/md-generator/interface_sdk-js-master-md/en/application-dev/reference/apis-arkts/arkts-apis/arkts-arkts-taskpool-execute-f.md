@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## execute
@@ -27,22 +27,22 @@ Places a function to be executed in the internal queue of the task pool. The fun
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | func | Function | Yes |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;unknown&gt; |
-| Promise&lt;Object&gt; |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -79,21 +79,21 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | Yes |
-| args | A | Yes |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -155,18 +155,18 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;unknown&gt; |
-| Promise&lt;Object&gt; |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -219,16 +219,16 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -281,14 +281,14 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Object[]&gt; |
+| Promise & lt;Object[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 10200059 |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -347,17 +347,17 @@ Execute a concurrent task with Configs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Object&gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 10200058 |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 
 ## execute
@@ -387,17 +387,17 @@ Execute a concurrent generics task with Configs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 10200058 |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 
 ## execute
@@ -427,12 +427,12 @@ Execute a concurrent task group with Configs.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Object[]&gt; |
+| Promise & lt;Object[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 10200059 |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 | 10200070 |

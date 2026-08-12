@@ -20,7 +20,7 @@ Defines whether an icon is hidden.
 
 Anonymous Object Rectification.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Defines whether an icon is shown.
 
 Anonymous Object Rectification.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ Defines whether an icon is switching.
 
 Anonymous Object Rectification.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

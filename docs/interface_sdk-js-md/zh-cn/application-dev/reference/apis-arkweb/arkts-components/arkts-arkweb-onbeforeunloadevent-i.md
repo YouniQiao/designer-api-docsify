@@ -56,7 +56,7 @@ result: JsResult
 
 通知Web组件用户操作行为。
 
-**类型：** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
+**类型：** [JsResult](arkts-arkweb-jsresult-c.md)
 
 **起始版本：** 12
 

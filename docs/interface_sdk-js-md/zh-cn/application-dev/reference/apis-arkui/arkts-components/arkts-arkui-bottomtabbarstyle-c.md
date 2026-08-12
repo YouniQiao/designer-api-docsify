@@ -32,8 +32,8 @@ BottomTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
-| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 9 - 11 |
+| text | ResourceStr | 是 | 页签内的文字内容。 |
 
 ## iconStyle
 
@@ -59,7 +59,7 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TabBarIconStyle](../arkts-apis/arkts-arkui-tabcontent-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式，用于设置图标的选中态和未选中态颜色。 |
+| style | [TabBarIconStyle](arkts-arkui-tabbariconstyle-i.md) | 是 | 底部页签的label图标的样式，用于设置图标的选中态和未选中态颜色。 |
 
 **返回值：**
 
@@ -155,7 +155,7 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LayoutMode](../arkts-apis/arkts-arkui-tabcontent-layoutmode-e.md) | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。&lt;br/&gt;默认值：LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。&lt;br/&gt;默认值：LayoutMode.VERTICAL |
 
 **返回值：**
 
@@ -187,8 +187,8 @@ BottomTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
-| text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
+| icon | ResourceStr \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | 是 | 页签内的图片内容。当图标资源加载失败或不存在时，显示灰色图块。如果icon采用svg格式图源，需删除其内置的宽高属性。 否则，icon大小将使用svg图源内置的宽高属性值。<br>**起始版本：** 10 - 11 |
+| text | ResourceStr | 是 | 页签内的文字内容。 |
 
 **返回值：**
 
@@ -284,7 +284,7 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [VerticalAlign](../arkts-apis/arkts-arkui-enums-verticalalign-e.md) | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。&lt;br/&gt;默认值：VerticalAlign.Center |
+| value | VerticalAlign | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。&lt;br/&gt;默认值：VerticalAlign.Center |
 
 **返回值：**
 

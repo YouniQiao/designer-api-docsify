@@ -11,7 +11,7 @@ TIFF metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## artist
@@ -184,7 +184,7 @@ readonly orientation?: Orientation
 
 Indicates image orientation for correct display rotation/flip.
 
-**Type:** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
+**Type:** Orientation
 
 **Since:** 26.0.0
 

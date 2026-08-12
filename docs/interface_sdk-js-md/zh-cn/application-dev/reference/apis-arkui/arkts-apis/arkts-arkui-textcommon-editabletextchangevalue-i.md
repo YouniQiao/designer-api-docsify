@@ -38,7 +38,7 @@ options?: TextChangeOptions
 
 变化的文本内容信息。
 
-**类型：** [TextChangeOptions](arkts-arkui-textchangeoptions-i.md)
+**类型：** [TextChangeOptions](arkts-arkui-textcommon-textchangeoptions-i.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ previewText?: PreviewText
 
 预上屏的内容信息。
 
-**类型：** [PreviewText](arkts-arkui-previewtext-i.md)
+**类型：** [PreviewText](arkts-arkui-textcommon-previewtext-i.md)
 
 **起始版本：** 23
 

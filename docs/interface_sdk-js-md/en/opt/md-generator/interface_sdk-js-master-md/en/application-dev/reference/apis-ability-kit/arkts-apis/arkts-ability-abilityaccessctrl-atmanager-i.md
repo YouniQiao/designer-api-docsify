@@ -1,6 +1,6 @@
 # AtManager
 
-Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager).
+Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager).
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ Program access control management class, providing capabilities such as permissi
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## checkAccessToken
@@ -43,14 +43,14 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;GrantStatus&gt; |
+| Promise & lt;GrantStatus & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 
@@ -82,7 +82,7 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 Verifies whether an app has been granted the specified permission, and synchronously returns the authorization status of the permission. The developer can decide accordingly whether to directly execute subsequent service processes, continue to initiate a permission request, or guide the user to go to the settings page to modify the authorization status.
 
-Compared with [checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken), this API returns the authorization status synchronously, making it suitable for permission verification scenarios that do not require asynchronous processing.
+Compared with [checkAccessToken](#checkAccessToken), this API returns the authorization status synchronously, making it suitable for permission verification scenarios that do not require asynchronous processing.
 
 Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources such as the camera, microphone, or location.
 
@@ -105,14 +105,14 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 
@@ -139,7 +139,7 @@ getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 ```
 
 Queries the permission status of the current app and returns the result synchronously. After the call is successful, the status of the current permission is returned. Unlike  
-[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken), this API does not require passing in the app identity and is only used to query the permission status of the current app itself.
+[checkAccessToken](#checkAccessToken), this API does not require passing in the app identity and is only used to query the permission status of the current app itself.
 
 Applicable to scenarios such as before determining whether to request a permission, confirming the authorization result after a permission request, or re-querying after monitoring a permission status change.
 
@@ -167,8 +167,8 @@ Applicable to scenarios such as before determining whether to request a permissi
 
 | Error Code ID |
 | --- |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -220,15 +220,15 @@ This API is usually used in conjunction with [on](abilityAccessCtrl.AtManager.on
 | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -259,7 +259,7 @@ on(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app,using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior.When monitoring is no longer needed, call [off](abilityAccessCtrl.AtManager.off) to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app,using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior.When monitoring is no longer needed, call [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off) to unsubscribe.
 
 - When this subscription API is called for multiple times, if the subscribed permission lists are the same but  
 the callbacks are different, the subscription is successful.  
@@ -272,7 +272,7 @@ There are two possible scenarios when the permission status changes from "author
 - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time  
 authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
 
-This API is usually used in conjunction with [off](abilityAccessCtrl.AtManager.off).When monitoring is no longer needed, call off to unsubscribe.
+This API is usually used in conjunction with [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off).When monitoring is no longer needed, call off to unsubscribe.
 
 **Since:** 18
 
@@ -288,17 +288,17 @@ This API is usually used in conjunction with [off](abilityAccessCtrl.AtManager.o
 | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100005](../errorcode-access-token.md#12100005-listener-overflows) |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
+| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100005-listener-overflows) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -328,8 +328,8 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result.
+Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) to bring up the permission settings page. After the call is successful, the permission settings page will be opened. After the user operates on the page, the user's selection result on the settings page will be returned. This API uses a promise to return the result.
 
 Applicable to scenarios where  
 [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings-manual-authorization)type permissions cannot be applied for through the normal authorization dialog box and the user must be guided to enter system settings to complete authorization. manual_settings type permissions are permissions that can only be manually enabled by the user in system settings and cannot be directly applied for through the normal authorization dialog box.
@@ -346,22 +346,22 @@ Applicable to scenarios where
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| context | [Context](arkts-ability-context-t.md) | Yes |
 | permission | [Permissions](arkts-ability-permissions-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SelectedResult&gt; |
+| Promise&lt;[SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
-| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
+| [12100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-unexpected-permission) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 
@@ -415,23 +415,23 @@ When an app needs to use functions such as the camera, microphone, or location t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| context | [Context](arkts-ability-context-t.md) | Yes |
 | type | [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
-| [12100013](../errorcode-access-token.md#12100013-global-switch-enabled) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
+| [12100013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100013-global-switch-enabled) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## requestPermissionOnSetting
 
@@ -439,13 +439,13 @@ When an app needs to use functions such as the camera, microphone, or location t
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses.This API uses a promise to return the result.
+Used by [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) to bring up the permission settings dialog box for a second time, and returns an array of authorization statuses.This API uses a promise to return the result.
 
 Applicable to scenarios where the user has already denied the permission grant in the first dialog box and needs to continue applying for the permission through the settings page.
 
 Before calling this API, the app needs to call  
-[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser) first.If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box.
+[requestPermissionsFromUser](#requestPermissionsFromUser) first.If the user has already authorized in the first dialog box, calling this API will not bring up the authorization dialog box.
 
 &lt;!--RP4--&gt;
 
@@ -467,25 +467,25 @@ Before calling this API, the app needs to call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| context | [Context](arkts-ability-context-t.md) | Yes |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;GrantStatus&gt;&gt; |
+| Promise & lt;Array & lt;GrantStatus & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
-| [12100010](../errorcode-access-token.md#12100010-pending-request) |
-| [12100011](../errorcode-access-token.md#12100011-all-requested-permissions-granted) |
-| [12100012](../errorcode-access-token.md#12100012-not-all-permissions-are-rejected-by-the-user) |
-| [12100014](../errorcode-access-token.md#12100014-unexpected-permission) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
+| [12100010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100010-pending-request) |
+| [12100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100011-all-requested-permissions-granted) |
+| [12100012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100012-not-all-permissions-are-rejected-by-the-user) |
+| [12100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-unexpected-permission) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## requestPermissionsFromUser
 
@@ -493,13 +493,13 @@ Before calling this API, the app needs to call
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt; to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result.
+Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)&lt;!--RP1End--&gt; to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses an asynchronous callback to return the result.
 
 Applicable to scenarios where an app proactively applies for  
 [user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant-user-authorization)permissions from the user before accessing protected resources for the first time.
 
 If the user denies authorization, the authorization dialog box cannot be brought up again through this API.The developer can guide the user to go to the system settings interface for manual authorization, or call  
-[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting) to bring up the permission settings dialog box to guide the user to complete authorization.
+[requestPermissionOnSetting](#requestPermissionOnSetting) to bring up the permission settings dialog box to guide the user to complete authorization.
 
 &lt;!--RP3--&gt;
 
@@ -521,17 +521,17 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| context | [Context](arkts-ability-context-t.md) | Yes |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
-| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | Yes |
+| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 
@@ -565,12 +565,12 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt; to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses a promise to return the result.
+Used by &lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)&lt;!--RP1End--&gt; to bring up a dialog box to request [user authorization](../../../security/AccessToken/request-user-authorization.md), and returns the authorization result of the permissions requested this time. This API uses a promise to return the result.
 
 Applicable to scenarios where an app proactively applies for user_grant permissions from the user before accessing protected resources for the first time.
 
 If the user denies authorization, the authorization dialog box cannot be brought up again through this API.The developer can guide the user to go to the system settings interface for manual authorization, or call  
-[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting) to bring up the permission settings dialog box to guide the user to complete authorization.
+[requestPermissionOnSetting](#requestPermissionOnSetting) to bring up the permission settings dialog box to guide the user to complete authorization.
 
 **Since:** 9
 
@@ -586,22 +586,22 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| context | [Context](arkts-ability-context-t.md) | Yes |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PermissionRequestResult&gt; |
+| Promise&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100009](../errorcode-access-token.md#12100009-internal-service-error) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-internal-service-error) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 
@@ -638,7 +638,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources.
 
 > **NOTE：**
-> You are advised to use [checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken).
+> You are advised to use [checkAccessToken](#checkAccessToken).
 
 **Since:** 9
 
@@ -657,7 +657,7 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;GrantStatus&gt; |
+| Promise & lt;GrantStatus & gt; |
 
 ## Examples
 
@@ -691,13 +691,13 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 > **NOTE：**
 > This API is supported since API version 8 and deprecated since API version 9. It is recommended to use
-> [checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken) instead.
+> [checkAccessToken](#checkAccessToken) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.abilityAccessCtrl.AtManager#checkAccessToken
+**Substitutes:** [checkAccessToken](#checkAccessToken)
 
 <!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>--><!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>-End-->
 
@@ -714,7 +714,7 @@ Verifies whether an app has been granted the specified permission. After the cal
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;GrantStatus&gt; |
+| Promise & lt;GrantStatus & gt; |
 
 ## Examples
 
@@ -748,7 +748,7 @@ Verifies whether an app has been granted the specified permission, and synchrono
 
 Applicable to scenarios where a pre-permission check is performed before an app accesses protected resources such as the camera, microphone, or location.
 
-It is recommended to use [checkAccessTokenSync](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstokensync) instead.
+It is recommended to use [checkAccessTokenSync](#checkAccessTokenSync) instead.
 
 **Since:** 9
 
@@ -767,14 +767,14 @@ It is recommended to use [checkAccessTokenSync](arkts-ability-abilityaccessctrl-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) |
+| [GrantStatus](arkts-ability-bundle-grantstatus-e.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
 
 ## Examples
 

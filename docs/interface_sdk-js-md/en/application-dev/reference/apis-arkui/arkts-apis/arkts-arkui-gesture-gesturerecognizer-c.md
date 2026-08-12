@@ -32,7 +32,7 @@ Returns the event target information of the component.
 
 | Type | Description |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | the event target information of the component. |
+| [EventTargetInfo](arkts-arkui-gesture-eventtargetinfo-c.md) | the event target information of the component. |
 
 ## getFingerCount
 
@@ -80,7 +80,7 @@ Returns the gesture recognizer's state.
 
 | Type | Description |
 | --- | --- |
-| [GestureRecognizerState](arkts-arkui-gesturerecognizerstate-e.md) | the gesture recognizer's state |
+| [GestureRecognizerState](arkts-arkui-gesture-gesturerecognizerstate-e.md) | the gesture recognizer's state |
 
 ## getTag
 
@@ -128,7 +128,7 @@ Returns the gesture's type.
 
 | Type | Description |
 | --- | --- |
-| GestureControl.GestureType | the gesture's type |
+| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | the gesture's type |
 
 ## isBuiltIn
 

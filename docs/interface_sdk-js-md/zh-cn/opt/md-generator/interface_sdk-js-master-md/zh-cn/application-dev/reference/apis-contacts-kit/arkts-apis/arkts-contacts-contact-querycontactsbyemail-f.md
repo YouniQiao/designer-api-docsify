@@ -7,13 +7,13 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 ```
 
 根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByEmail](arkts-contacts-contact-querycontactsbyemail-f.md#querycontactsbyemail)(context:
+**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -26,7 +26,7 @@ function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Conta
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | email | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -51,7 +51,7 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 ```
 
 根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -67,14 +67,14 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | email | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -104,13 +104,13 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 ```
 
 根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByEmail](arkts-contacts-contact-querycontactsbyemail-f.md#querycontactsbyemail)(context:
+**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -124,7 +124,7 @@ function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCall
 | --- | --- | --- |
 | email | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -154,7 +154,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 ```
 
 根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -171,14 +171,14 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | email | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -212,13 +212,13 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 ```
 
 根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByEmail](arkts-contacts-contact-querycontactsbyemail-f.md#querycontactsbyemail)(context:
+**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -232,7 +232,7 @@ function queryContactsByEmail(email: string, attrs: ContactAttributes, callback:
 | --- | --- | --- |
 | email | string | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -260,7 +260,7 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 ```
 
 根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -277,14 +277,14 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | email | string | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -316,13 +316,13 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 ```
 
 根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByEmail](arkts-contacts-contact-querycontactsbyemail-f.md#querycontactsbyemail)(context:
+**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -337,7 +337,7 @@ function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttri
 | email | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -368,7 +368,7 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 ```
 
 根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -386,14 +386,14 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 | email | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -429,13 +429,13 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 ```
 
 根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByEmail](arkts-contacts-contact-querycontactsbyemail-f.md#querycontactsbyemail)(context:
+**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -455,7 +455,7 @@ function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAtt
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 ## 示例
 
@@ -482,7 +482,7 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 ```
 
 根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
 
@@ -505,14 +505,14 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ A constructor used to create a **HierarchicalSymbolEffect** instance, which come
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md) | No | Effect fill style.&lt;br&gt;Default value: **EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](arkts-arkui-effectfillstyle-e.md) | No | Effect fill style.&lt;br&gt;Default value: **EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 
@@ -50,7 +50,7 @@ Effect fill style.
 
 Default value: **EffectFillStyle.CUMULATIVE**
 
-**Type:** [EffectFillStyle](../arkts-apis/arkts-arkui-symbolglyph-effectfillstyle-e.md)
+**Type:** [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
 
 **Since:** 12
 

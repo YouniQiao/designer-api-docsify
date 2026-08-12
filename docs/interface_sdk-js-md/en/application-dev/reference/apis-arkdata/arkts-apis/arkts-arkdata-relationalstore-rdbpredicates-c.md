@@ -14,7 +14,7 @@ Defines the predicates for an RDB store. This class determines whether the condi
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -37,7 +37,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## beginWrap
 
@@ -59,7 +59,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## beginsWith
 
@@ -88,13 +88,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## between
 
@@ -117,20 +117,20 @@ Creates an **RdbPredicates** object to search for the records that are within th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
+| low | ValueType | Yes | Minimum value of the range to set. |
+| high | ValueType | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## constructor
 
@@ -158,7 +158,7 @@ Defines a constructor used to create an **RdbPredicates** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## contains
 
@@ -187,13 +187,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## distinct
 
@@ -215,7 +215,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object that can filter out duplicate records. |
+| RdbPredicates | RdbPredicates** object that can filter out duplicate records. |
 
 ## endWrap
 
@@ -237,7 +237,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## endsWith
 
@@ -266,13 +266,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## equalTo
 
@@ -295,19 +295,19 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## glob
 
@@ -336,13 +336,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## greaterThan
 
@@ -365,19 +365,19 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -400,19 +400,19 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## groupBy
 
@@ -440,13 +440,13 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Predicates that group rows with the same value. |
+| RdbPredicates | Predicates that group rows with the same value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## having
 
@@ -468,20 +468,20 @@ Filters for group data that meets the conditions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| conditions | string | Yes | Condition used to filter the data obtained using [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby). This parameter cannot be empty and must be used with [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby). |
+| conditions | string | Yes | Condition used to filter the data obtained using [groupBy](#groupBy). This parameter cannot be empty and must be used with [groupBy](#groupBy). |
 | args | Array&lt;ValueType&gt; | No | Parameters used in **conditions**, which replace the placeholder in the conditional statement. If this parameter is not specified, the default value is an empty array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range; &lt;br&gt;2. Missing GROUP BY clause. |
+| [14800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range; &lt;br&gt;2. Missing GROUP BY clause. |
 
 ## in
 
@@ -516,13 +516,13 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## inAllDevices
 
@@ -544,7 +544,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## inDevices
 
@@ -557,7 +557,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 > **NOTE：**
 > 
 > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
-> {@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync}.
+> [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync).
 > When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,
 > data will be synced to all devices on the network by default.
 
@@ -579,13 +579,13 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## inValues
 
@@ -608,19 +608,19 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Indicates the column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with {@link RdbPredicates}. |
+| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with [RdbPredicates](#RdbPredicates). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | The SQL statement with the specified { |
+| RdbPredicates | The SQL statement with the specified { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## indexedBy
 
@@ -648,13 +648,13 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isNotNull
 
@@ -682,13 +682,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## isNull
 
@@ -716,13 +716,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## lessThan
 
@@ -745,19 +745,19 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -780,19 +780,19 @@ Creates an **RdbPredicates** object to search for the records that are less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## like
 
@@ -821,13 +821,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## limitAs
 
@@ -861,13 +861,13 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Predicates that specify the maximum number of records. |
+| RdbPredicates | Predicates that specify the maximum number of records. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notBetween
 
@@ -890,20 +890,20 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
+| low | ValueType | Yes | Minimum value of the range to set. |
+| high | ValueType | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notContains
 
@@ -932,13 +932,13 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notEqualTo
 
@@ -961,19 +961,19 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notIn
 
@@ -1002,13 +1002,13 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## notInValues
 
@@ -1031,19 +1031,19 @@ Configure RdbPredicates to match the specified field whose data type is ValueTyp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Indicates the column name in the database table. |
-| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with {@link RdbPredicates}. |
+| value | Array&lt;ValueType&gt; | Yes | Indicates the values to match with [RdbPredicates](#RdbPredicates). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | The SQL statement with the specified { |
+| RdbPredicates | The SQL statement with the specified { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## notLike
 
@@ -1072,13 +1072,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offsetAs
 
@@ -1112,13 +1112,13 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Predicates that specify the start position of the returned result. |
+| RdbPredicates | Predicates that specify the start position of the returned result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## or
 
@@ -1140,7 +1140,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## orderByAsc
 
@@ -1168,13 +1168,13 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## orderByDesc
 
@@ -1202,11 +1202,11 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

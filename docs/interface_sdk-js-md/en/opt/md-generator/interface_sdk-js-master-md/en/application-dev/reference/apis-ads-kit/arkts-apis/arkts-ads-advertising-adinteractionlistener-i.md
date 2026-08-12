@@ -11,7 +11,7 @@ Defines the ad status change callback.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## onStatusChanged

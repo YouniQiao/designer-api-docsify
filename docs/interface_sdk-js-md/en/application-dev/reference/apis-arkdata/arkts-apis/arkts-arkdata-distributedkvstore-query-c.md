@@ -13,7 +13,7 @@ Provides methods to create a **Query** object, which defines different data quer
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -38,7 +38,7 @@ Creates a **Query** object with the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 ## Examples
 
@@ -81,7 +81,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 ## Examples
 
@@ -131,9 +131,9 @@ Creates a **Query** object with the device ID as the key prefix.
 > **NOTE：**
 > 
 > **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 > .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
 **Since:** 9
 
@@ -155,13 +155,13 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -202,7 +202,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 ## Examples
 
@@ -239,7 +239,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -266,13 +266,13 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## getSqlLike
 
@@ -330,7 +330,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -357,13 +357,13 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -381,7 +381,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -408,13 +408,13 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inNumber
 
@@ -432,7 +432,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -459,13 +459,13 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inString
 
@@ -477,7 +477,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -504,13 +504,13 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -540,7 +540,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -566,13 +566,13 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -602,7 +602,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -628,13 +628,13 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -670,7 +670,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -697,13 +697,13 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -721,7 +721,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -748,13 +748,13 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## like
 
@@ -766,7 +766,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -793,13 +793,13 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -854,13 +854,13 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -899,7 +899,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -926,13 +926,13 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInNumber
 
@@ -950,7 +950,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -977,13 +977,13 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInString
 
@@ -995,7 +995,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1022,13 +1022,13 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1070,7 +1070,7 @@ Creates a **Query** object with the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 ## Examples
 
@@ -1101,7 +1101,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1127,13 +1127,13 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1164,7 +1164,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1190,13 +1190,13 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1245,13 +1245,13 @@ Creates a **Query** object with a specified key prefix.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -1294,7 +1294,7 @@ Resets the **Query** object.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object reset. |
+| Query | Query** object reset. |
 
 ## Examples
 
@@ -1343,13 +1343,13 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -1380,7 +1380,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1407,13 +1407,13 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Type | Description |
 | --- | --- |
-| [Query](arkts-arkdata-distributeddata-query-c.md) | Query** object created. |
+| Query | Query** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 

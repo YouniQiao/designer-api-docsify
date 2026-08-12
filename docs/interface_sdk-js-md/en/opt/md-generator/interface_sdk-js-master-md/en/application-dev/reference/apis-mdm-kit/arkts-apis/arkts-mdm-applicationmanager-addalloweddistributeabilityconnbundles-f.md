@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedDistributeAbilityConnBundles
@@ -13,17 +13,17 @@ function addAllowedDistributeAbilityConnBundles(admin: Want, appIdentifiers: Arr
 ```
 
 Adds the cross-device application trustlist for a specific distributed service for a specified user. Applications in the trustlist can use the specific distributed service to transfer data across devices without being subject to the restrictions imposed by  
-[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).
+[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount).
 
 Currently, the following distributed service type is supported:  
-[collaboration service](arkts-mdm-applicationmanager-servicetype-e.md).
+[collaboration service](arkts-mdm-applicationmanager-servicetype-e.md#ServiceType).
 
 > **NOTE：**
 > 
 > 1. Before calling this API to set the application list allowed to use a specific distributed service, you must
 > have already disabled one-way data transmission between devices (which is used for transferring data to other
 > devices) via
-> [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount).
+> [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount).
 > Otherwise, error code 9201043 is thrown.
 
 > 2. When one-way data transmission between devices is re-enabled, the application list allowed to use the specific
@@ -44,19 +44,19 @@ Currently, the following distributed service type is supported:
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| appIdentifiers | Array&lt;string&gt; | Yes |
-| serviceType | [ServiceType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-servicetype-e.md) | Yes |
+| appIdentifiers | Array & lt;string & gt; | Yes |
+| serviceType | [ServiceType](../../apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager-servicetype-e.md) | Yes |
 | accountId | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9201043](../errorcode-enterpriseDeviceManager.md#9201043-prerequisites-for-calling-the-api-not-met) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9201043](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201043-prerequisites-for-calling-the-api-not-met) |
 
 ## Examples
 

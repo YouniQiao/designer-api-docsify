@@ -13,7 +13,7 @@ The XmlPullParser interface is used to parse the existing xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -66,7 +66,7 @@ Starts parsing the XML file.
 
 **Deprecated since:** 14
 
-**Substitutes:** ohos.xml.XmlPullParser.parseXml
+**Substitutes:** [parseXml](#parseXml)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,7 +78,7 @@ Starts parsing the XML file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
+| option | ParseOptions | Yes | Parse options for XmlPullParser, the interface including two Boolean variables and three callback functions. |
 
 ## Examples
 
@@ -134,5 +134,5 @@ Parses XML information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | Yes | XML parsing options. |
+| option | ParseOptions | Yes | XML parsing options. |
 

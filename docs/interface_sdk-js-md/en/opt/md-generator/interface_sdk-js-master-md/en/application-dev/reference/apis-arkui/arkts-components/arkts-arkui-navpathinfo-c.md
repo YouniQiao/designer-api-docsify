@@ -28,11 +28,11 @@ Creates a **NavPathInfo** object.
 
 **Parameters:**
 
-| [Name](#name) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [name](#name) | string | Yes |
 | [param](#param) | unknown | Yes |
-| [onPop](#onpop) | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | No |
+| [onPop](#onpop) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No |
 | [isEntry](#isentry) | boolean | No |
 
 ## isEntry
@@ -95,7 +95,7 @@ Name of the navigation destination page. The name matches the name in the follow
 navDestinationId?: string
 ```
 
-Unique ID of the navigation destination page. This ID is system-generated and globally unique. It can be obtained using the [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack) API and should not be manually reassigned.
+Unique ID of the navigation destination page. This ID is system-generated and globally unique. It can be obtained using the [getPathStack](arkts-arkui-navpathstack-c.md#getPathStack) API and should not be manually reassigned.
 
 **Type:** string
 
@@ -115,14 +115,14 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 onPop?: import('../api/@ohos.base').Callback<PopInfo>
 ```
 
-Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop),  
-[popToName](arkts-arkui-navpathstack-c.md#poptoname), or  
-[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in  
-[pop](arkts-arkui-navpathstack-c.md#pop),  
-[popToName](arkts-arkui-navpathstack-c.md#poptoname), or  
-[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex).
+Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop-1),  
+[popToName](arkts-arkui-navpathstack-c.md#popToName-1), or  
+[popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1) is called on the navigation destination page. It is triggered only when the **result** parameter is set in  
+[pop](arkts-arkui-navpathstack-c.md#pop-1),  
+[popToName](arkts-arkui-navpathstack-c.md#popToName-1), or  
+[popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1).
 
-**Type:** import('../api/@ohos.base').Callback&lt;PopInfo&gt;
+**Type:** import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt;
 
 **Since:** 11
 

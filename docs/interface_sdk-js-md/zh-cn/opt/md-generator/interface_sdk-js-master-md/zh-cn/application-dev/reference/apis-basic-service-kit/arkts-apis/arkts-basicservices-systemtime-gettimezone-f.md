@@ -12,7 +12,7 @@ function getTimezone(callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)(callback:
+**替代接口：** [getTimezone](@ohos.systemDateTime:systemDateTime.getTimezone(callback:)
 
 <!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 
@@ -62,7 +62,7 @@ function getTimezone(): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)()
+**替代接口：** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone)()
 
 <!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
 
@@ -72,7 +72,7 @@ function getTimezone(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 

@@ -14,7 +14,7 @@ Enumerates the camera scene modes.
 NORMAL_PHOTO = 1
 ```
 
-Normal photo mode. For details, see [PhotoSession](arkts-camera-camera-photosession-i.md).
+Normal photo mode. For details, see [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession).
 
 **Since:** 11
 
@@ -30,7 +30,7 @@ Normal photo mode. For details, see [PhotoSession](arkts-camera-camera-photosess
 NORMAL_VIDEO = 2
 ```
 
-Normal record mode. For details, see [VideoSession](arkts-camera-camera-videosession-i.md).
+Normal record mode. For details, see [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession).
 
 **Since:** 11
 
@@ -46,7 +46,7 @@ Normal record mode. For details, see [VideoSession](arkts-camera-camera-videoses
 SECURE_PHOTO = 12
 ```
 
-Secure mode. For details, see [SecureSession](arkts-camera-camera-securesession-i.md).
+Secure mode. For details, see [SecureSession](arkts-camera-camera-securesession-i.md#SecureSession).
 
 **Since:** 12
 

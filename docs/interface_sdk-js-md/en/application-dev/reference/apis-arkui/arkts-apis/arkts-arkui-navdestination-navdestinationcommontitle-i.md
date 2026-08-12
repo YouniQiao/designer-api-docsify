@@ -18,7 +18,7 @@ main: string | Resource
 
 Sets the main title.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ sub: string | Resource
 
 Sets the sub title.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

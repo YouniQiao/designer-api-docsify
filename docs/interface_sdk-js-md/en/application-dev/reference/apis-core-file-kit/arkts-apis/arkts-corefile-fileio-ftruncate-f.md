@@ -14,7 +14,7 @@ Truncates a file based on the file descriptor. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>--><!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -59,7 +59,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to truncate. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
 
 ## ftruncate
@@ -76,7 +76,7 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void-End-->
 
@@ -88,5 +88,5 @@ Truncates a file based on the file descriptor. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to truncate. |
 | len | number | Yes | File length after truncation, in bytes. The default value is **0**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback that returns no value. |
 

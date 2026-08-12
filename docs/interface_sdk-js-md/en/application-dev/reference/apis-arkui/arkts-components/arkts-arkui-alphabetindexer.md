@@ -30,7 +30,7 @@ Creates an **AlphabetIndexer** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AlphabetIndexerOptions](../arkts-apis/arkts-arkui-alphabetindexer-alphabetindexeroptions-i.md) | Yes | Options of the **AlphabetIndexer** component. |
+| options | [AlphabetIndexerOptions](arkts-arkui-alphabetindexeroptions-i.md) | Yes | Options of the **AlphabetIndexer** component. |
 
 ## Summary
 

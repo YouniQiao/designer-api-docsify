@@ -15,7 +15,7 @@ Provides the capability of simulating mouse operations. The simulated mouse oper
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## beginAxis
@@ -61,9 +61,9 @@ Starts an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The axis event is in progress. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## endAxis
 
@@ -101,9 +101,9 @@ Ends an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## moveTo
 
@@ -149,9 +149,9 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## pressButton
 
@@ -189,9 +189,9 @@ Presses a mouse button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The mouse button is already pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The mouse button is already pressed. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## releaseButton
 
@@ -229,9 +229,9 @@ Release a mouse button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The mouse button is not pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The mouse button is not pressed. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## updateAxis
 
@@ -276,7 +276,7 @@ Updates an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

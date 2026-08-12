@@ -25,8 +25,8 @@ Defines GridItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | No | options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| value | [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md) | No | options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines GridItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridItemAttribute&gt; | Yes | The style to create a GridItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md)&gt; | Yes | The style to create a GridItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 

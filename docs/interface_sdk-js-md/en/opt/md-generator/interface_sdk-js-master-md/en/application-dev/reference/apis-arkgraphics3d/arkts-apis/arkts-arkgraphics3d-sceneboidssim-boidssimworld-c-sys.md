@@ -38,6 +38,32 @@ Adds a flock behavior component at the specified node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 | param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { BoidsSimParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function manageBoidsSimComponent(world: BoidsSimWorld, node: Node): void {
+  // Add flock behavior component
+  let boidsParams: BoidsSimParameters = {
+    boundaryMinPos: { x: -10.0, y: -10.0, z: -10.0 },
+    boundaryMaxPos: { x: 10.0, y: 10.0, z: 10.0 },
+    separationWeight: 4.0,
+    separationDistance: 0.5,
+  };
+  world.addBoidsSimComponent(node, boidsParams);
+
+  // Update flock behavior component
+  world.setBoidsSimComponent(node, boidsParams);
+
+  // Get flock behavior parameters
+  let params: BoidsSimParameters | null = world.getBoidsSimComponent(node);
+
+  // Remove flock behavior component
+  world.removeBoidsSimComponent(node);
+}
+```
+
 ## addBoidsSimGravityComponent
 
 ```TypeScript
@@ -63,6 +89,27 @@ Adds an attraction field component at the specified node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 | param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { BoidsSimGravityParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function manageBoidsSimGravityComponent(world: BoidsSimWorld, fieldNode: Node): void {
+  // Add attraction field component
+  let gravityParams: BoidsSimGravityParameters = { accelerationMag: 4.0, radius: 10.0 };
+  world.addBoidsSimGravityComponent(fieldNode, gravityParams);
+
+  // Update attraction field component
+  world.setBoidsSimGravityComponent(fieldNode, gravityParams);
+
+  // Get attraction field parameters
+  let grav: BoidsSimGravityParameters | null = world.getBoidsSimGravityComponent(fieldNode);
+
+  // Remove attraction field component
+  world.removeBoidsSimGravityComponent(fieldNode);
+}
+```
+
 ## addBoidsSimRepulsionComponent
 
 ```TypeScript
@@ -87,6 +134,27 @@ Adds a repulsion field component at the specified node.
 | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 | param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { BoidsSimRepulsionParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function manageBoidsSimRepulsionComponent(world: BoidsSimWorld, fieldNode: Node): void {
+  // Add repulsion field component
+  let repulsionParams: BoidsSimRepulsionParameters = { accelerationMag: 4.0, radius: 10.0 };
+  world.addBoidsSimRepulsionComponent(fieldNode, repulsionParams);
+
+  // Update repulsion field component
+  world.setBoidsSimRepulsionComponent(fieldNode, repulsionParams);
+
+  // Get repulsion field parameters
+  let repl: BoidsSimRepulsionParameters | null = world.getBoidsSimRepulsionComponent(fieldNode);
+
+  // Remove repulsion field component
+  world.removeBoidsSimRepulsionComponent(fieldNode);
+}
+```
 
 ## getBoidsSimComponent
 
@@ -118,6 +186,19 @@ Gets the flock behavior parameters on the specified node.
 | --- |
 | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) |
 
+## Examples
+
+```TypeScript
+import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function queryBoidsSimComponent(world: BoidsSimWorld, node: Node): void {
+  let params: BoidsSimParameters | null = world.getBoidsSimComponent(node);
+  if (params) {
+    let maxVel: number = params.maxVelocityMag;
+  }
+}
+```
+
 ## getBoidsSimGravityComponent
 
 ```TypeScript
@@ -147,6 +228,19 @@ Gets the attraction field parameters on the specified node.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) |
+
+## Examples
+
+```TypeScript
+import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function queryBoidsSimGravityComponent(world: BoidsSimWorld, node: Node): void {
+  let params: BoidsSimGravityParameters | null = world.getBoidsSimGravityComponent(node);
+  if (params) {
+    let accel: number = params.accelerationMag;
+  }
+}
+```
 
 ## getBoidsSimRepulsionComponent
 
@@ -178,6 +272,19 @@ Gets the repulsion field parameters on the specified node.
 | --- |
 | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) |
 
+## Examples
+
+```TypeScript
+import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function queryBoidsSimRepulsionComponent(world: BoidsSimWorld, node: Node): void {
+  let params: BoidsSimRepulsionParameters | null = world.getBoidsSimRepulsionComponent(node);
+  if (params) {
+    let accel: number = params.accelerationMag;
+  }
+}
+```
+
 ## pause
 
 ```TypeScript
@@ -196,6 +303,16 @@ Pauses the Boids simulation.
 
 **System API:** This is a system API.
 
+## Examples
+
+```TypeScript
+import { BoidsSimWorld } from '@kit.ArkGraphics3D';
+
+function pauseBoidsSim(world: BoidsSimWorld): void {
+  world.pause();
+}
+```
+
 ## play
 
 ```TypeScript
@@ -213,6 +330,16 @@ Starts or resumes the Boids simulation.
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
+
+## Examples
+
+```TypeScript
+import { BoidsSimWorld } from '@kit.ArkGraphics3D';
+
+function controlBoidsSimLifecycle(world: BoidsSimWorld): void {
+  world.play();
+}
+```
 
 ## removeBoidsSimComponent
 
@@ -238,6 +365,16 @@ Removes the flock behavior component from the specified node.
 | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function removeBoidsSimComponent(world: BoidsSimWorld, node: Node): void {
+  world.removeBoidsSimComponent(node);
+}
+```
+
 ## removeBoidsSimGravityComponent
 
 ```TypeScript
@@ -262,6 +399,16 @@ Removes the attraction field component on the specified node.
 | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function removeBoidsSimGravityComponent(world: BoidsSimWorld, node: Node): void {
+  world.removeBoidsSimGravityComponent(node);
+}
+```
+
 ## removeBoidsSimRepulsionComponent
 
 ```TypeScript
@@ -285,6 +432,16 @@ Removes the repulsion field component from the specified node.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function removeBoidsSimRepulsionComponent(world: BoidsSimWorld, node: Node): void {
+  world.removeBoidsSimRepulsionComponent(node);
+}
+```
 
 ## setBoidsSimComponent
 
@@ -311,6 +468,22 @@ Updates the flock behavior component on the specified node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 | param | [BoidsSimParameters](arkts-arkgraphics3d-sceneboidssim-boidssimparameters-i-sys.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { BoidsSimParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function updateBoidsSimComponent(world: BoidsSimWorld, node: Node): void {
+  let newParams: BoidsSimParameters = {
+    boundaryMinPos: { x: -20.0, y: -20.0, z: -20.0 },
+    boundaryMaxPos: { x: 20.0, y: 20.0, z: 20.0 },
+    separationWeight: 5.0,
+    separationDistance: 1.0,
+  };
+  world.setBoidsSimComponent(node, newParams);
+}
+```
+
 ## setBoidsSimGravityComponent
 
 ```TypeScript
@@ -335,6 +508,17 @@ Updates the attraction field component on the specified node.
 | --- | --- | --- |
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 | param | [BoidsSimGravityParameters](arkts-arkgraphics3d-sceneboidssim-boidssimgravityparameters-i-sys.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { BoidsSimGravityParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function updateBoidsSimGravityComponent(world: BoidsSimWorld, node: Node): void {
+  let newParams: BoidsSimGravityParameters = { accelerationMag: 8.0, radius: 15.0 };
+  world.setBoidsSimGravityComponent(node, newParams);
+}
+```
 
 ## setBoidsSimRepulsionComponent
 
@@ -361,6 +545,17 @@ Updates the repulsion field component on the specified node.
 | node | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) | Yes |
 | param | [BoidsSimRepulsionParameters](arkts-arkgraphics3d-sceneboidssim-boidssimrepulsionparameters-i-sys.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { BoidsSimRepulsionParameters, BoidsSimWorld, Node } from '@kit.ArkGraphics3D';
+
+function updateBoidsSimRepulsionComponent(world: BoidsSimWorld, node: Node): void {
+  let newParams: BoidsSimRepulsionParameters = { accelerationMag: 8.0, radius: 15.0 };
+  world.setBoidsSimRepulsionComponent(node, newParams);
+}
+```
+
 ## stop
 
 ```TypeScript
@@ -378,6 +573,16 @@ Stops the Boids simulation and resets the state.
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
 **System API:** This is a system API.
+
+## Examples
+
+```TypeScript
+import { BoidsSimWorld } from '@kit.ArkGraphics3D';
+
+function stopBoidsSim(world: BoidsSimWorld): void {
+  world.stop();
+}
+```
 
 ## isPlaying
 

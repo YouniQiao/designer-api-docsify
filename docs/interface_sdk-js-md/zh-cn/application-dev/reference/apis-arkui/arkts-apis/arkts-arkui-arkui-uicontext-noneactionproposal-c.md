@@ -2,7 +2,7 @@
 
 类NoneActionProposal。
 
-**继承/实现关系：** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
+**继承/实现关系：** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
 
 **起始版本：** 26.0.0
 

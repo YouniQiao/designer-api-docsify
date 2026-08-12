@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled
@@ -36,7 +36,7 @@ When enabled, the system will create a snapshot of the application process at an
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enableFlag | boolean | Yes |
+| [enableFlag](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hitracechain-enableflag-f.md) | boolean | Yes |
 
 **Error codes:**
 

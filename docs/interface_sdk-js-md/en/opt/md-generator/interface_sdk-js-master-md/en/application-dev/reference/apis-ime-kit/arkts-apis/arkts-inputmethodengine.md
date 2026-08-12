@@ -11,7 +11,7 @@ The **inputMethodEngine** module is oriented to input method applications (inclu
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## Summary

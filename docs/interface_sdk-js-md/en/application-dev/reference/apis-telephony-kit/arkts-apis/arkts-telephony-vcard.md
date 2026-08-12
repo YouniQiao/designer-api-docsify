@@ -13,7 +13,7 @@ Provides applications with APIs for obtaining vcard.
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from 'kits/@kit.TelephonyKit';
+import { vcard } from '@kit.TelephonyKit';
 ```
 
 ## Summary

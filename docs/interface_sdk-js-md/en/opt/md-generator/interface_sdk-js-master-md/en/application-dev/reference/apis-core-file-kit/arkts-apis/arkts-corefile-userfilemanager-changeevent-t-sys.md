@@ -16,7 +16,7 @@ Enumerates the type of changes to observe.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md/arkts-medialibrary-photoaccesshelper-changedata-i.md)
+**Substitutes:** [ChangeData](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-changedata-i.md#ChangeData)
 
 <!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'--><!--Device-userFileManager-type ChangeEvent =    'deviceChange'    | 'albumChange'    | 'imageChange'    | 'audioChange'    | 'videoChange'    | 'remoteFileChange'-End-->
 

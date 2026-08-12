@@ -8,8 +8,8 @@ function removePreferencesFromCache(context: Context, name: string, callback: As
 
 从缓存中移除指定的Preferences实例，通过name进行参数设置，使用callback异步回调。
 
-应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
+[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
 
 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
 
@@ -35,8 +35,8 @@ function removePreferencesFromCache(context: Context, name: string, callback: As
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -86,8 +86,8 @@ function removePreferencesFromCache(context: Context, options: Options, callback
 
 从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用callback异步回调。
 
-应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
+[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
 
 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
 
@@ -113,11 +113,11 @@ function removePreferencesFromCache(context: Context, options: Options, callback
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
-| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [15501001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-上下文环境非stage模型) |
+| [15501002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -169,8 +169,8 @@ function removePreferencesFromCache(context: Context, name: string): Promise<voi
 
 从缓存中移除指定的Preferences实例，通过name进行参数设置，使用Promise异步回调。
 
-应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
+[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
 
 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
 
@@ -195,14 +195,14 @@ function removePreferencesFromCache(context: Context, name: string): Promise<voi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -250,8 +250,8 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用Promise异步回调。
 
-应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
+[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
 
 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
 
@@ -276,17 +276,17 @@ function removePreferencesFromCache(context: Context, options: Options): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
-| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [15501001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-上下文环境非stage模型) |
+| [15501002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 

@@ -24,7 +24,7 @@ export declare function SymbolSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Resource](arkts-arkui-resource-t.md) | 是 | 符号图标资源。 |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 符号图标资源。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function SymbolSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolSpanAttribute&gt; | 是 | SymbolSpan属性的实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md)&gt; | 是 | SymbolSpan属性的实例。 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createUriRecord
@@ -20,7 +20,7 @@ Creates a **PasteDataRecord** object of the URI type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType:
+**Substitutes:** [createRecord](pasteboard.createRecord(mimeType:)
 
 <!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord--><!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord-End-->
 

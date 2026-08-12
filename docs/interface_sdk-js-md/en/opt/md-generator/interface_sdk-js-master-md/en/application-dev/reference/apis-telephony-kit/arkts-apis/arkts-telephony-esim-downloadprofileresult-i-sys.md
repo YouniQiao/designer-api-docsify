@@ -13,7 +13,7 @@ Result of the given downloadable Profile.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## cardId
@@ -42,7 +42,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
+**Type:** ResultCode
 
 **Since:** 18
 

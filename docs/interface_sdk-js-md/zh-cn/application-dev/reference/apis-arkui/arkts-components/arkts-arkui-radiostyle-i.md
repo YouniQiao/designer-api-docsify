@@ -20,7 +20,7 @@ checkedBackgroundColor?: ResourceColor
 
 默认值：`\$r('sys.color.ohos_id_color_text_primary_activated')`
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #007DFF
 
@@ -46,7 +46,7 @@ indicatorColor?: ResourceColor
 
 默认值：`\$r('sys.color.ohos_id_color_foreground_contrary')`
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #FFFFFF
 
@@ -72,7 +72,7 @@ uncheckedBorderColor?: ResourceColor
 
 默认值：`\$r('sys.color.ohos_id_color_switch_outline_off')`
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #182431
 

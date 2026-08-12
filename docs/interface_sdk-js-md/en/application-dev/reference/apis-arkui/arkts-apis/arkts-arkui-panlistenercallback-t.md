@@ -20,7 +20,7 @@ Defines the callback type used in UIObserver watch pan event.The value of event 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | Yes | the information of pan event |
-| current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | Yes | the information of panRecognizer |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No | the information of frameNode |
+| event | GestureEvent | Yes | the information of pan event |
+| current | GestureRecognizer | Yes | the information of panRecognizer |
+| node | FrameNode | No | the information of frameNode |
 

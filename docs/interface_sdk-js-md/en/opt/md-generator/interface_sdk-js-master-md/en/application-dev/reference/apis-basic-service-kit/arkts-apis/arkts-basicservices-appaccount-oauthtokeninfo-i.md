@@ -5,13 +5,13 @@ Defines authorization token information.
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md) instead.
+> [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#AuthTokenInfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
+**Substitutes:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md#AuthTokenInfo)
 
 <!--Device-appAccount-interface OAuthTokenInfo--><!--Device-appAccount-interface OAuthTokenInfo-End-->
 
@@ -20,7 +20,7 @@ Defines authorization token information.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## authType
@@ -37,7 +37,7 @@ Authentication type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AuthTokenInfo.authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authtype)
+**Substitutes:** [authType](arkts-basicservices-appaccount-authtokeninfo-i.md#authType)
 
 <!--Device-OAuthTokenInfo-authType: string--><!--Device-OAuthTokenInfo-authType: string-End-->
 
@@ -57,7 +57,7 @@ Value of the authorization token.
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AuthTokenInfo.token](arkts-basicservices-appaccount-authtokeninfo-i.md#token)
+**Substitutes:** [token](arkts-basicservices-appaccount-authtokeninfo-i.md#token)
 
 <!--Device-OAuthTokenInfo-token: string--><!--Device-OAuthTokenInfo-token: string-End-->
 

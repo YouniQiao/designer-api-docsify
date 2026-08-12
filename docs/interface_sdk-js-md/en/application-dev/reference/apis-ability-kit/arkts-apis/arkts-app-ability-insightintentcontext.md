@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentContext } from 'kits/@kit.AbilityKit';
+import { InsightIntentContext } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -12,5 +12,5 @@ import { InsightIntentContext } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md) | The module provides the context for intent execution. It is used as a property in both the  [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md) and  [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md), offering essential capabilities for intent implementation, for example, starting  [UIAbility components](arkts-app-ability-uiability.md) within the same application. |
+| [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md) | The module provides the context for intent execution. It is used as a property in both the  [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor) and  [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor), offering essential capabilities for intent implementation, for example, starting  [UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) within the same application. |
 

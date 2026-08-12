@@ -11,7 +11,7 @@ Indicates the options of the editable title bar.
 ## Modules to Import
 
 ```TypeScript
-import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from 'kits/@kit.ArkUI';
+import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -24,7 +24,7 @@ Background blur style of the title bar.
 
 Default value: **BlurStyle.NONE**
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Edges for expanding the safe area.
 
 Default value: **[SafeAreaEdge.TOP]**
 
-**Type:** Array&lt;SafeAreaEdge&gt;
+**Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ Types of the expanded safe areas.
 
 Default value: **[SafeAreaType.SYSTEM]**
 
-**Type:** Array&lt;SafeAreaType&gt;
+**Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 
 **Since:** 12
 

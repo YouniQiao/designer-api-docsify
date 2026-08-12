@@ -11,7 +11,7 @@ The message received or sent from web message port.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArray
@@ -34,13 +34,13 @@ Get the array value of the web message.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string \| number \| boolean&gt; |
+| Array & lt;string \ | number \| boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getArrayBuffer
 
@@ -68,7 +68,7 @@ Get the array buffer value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getBoolean
 
@@ -96,7 +96,7 @@ Get the boolean value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getError
 
@@ -124,7 +124,7 @@ Get the error value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getNumber
 
@@ -152,7 +152,7 @@ Get the number value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getString
 
@@ -180,7 +180,7 @@ Get the string value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getType
 
@@ -224,14 +224,14 @@ Set the array value of the web message.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| message | Array&lt;string \| number \| boolean&gt; | Yes |
+| message | Array & lt;string \ | number \| boolean & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setArrayBuffer
 
@@ -259,8 +259,8 @@ Set the array buffer value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setBoolean
 
@@ -288,8 +288,8 @@ Set the boolean value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setError
 
@@ -317,8 +317,8 @@ Set the error value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setNumber
 
@@ -346,8 +346,8 @@ Set the number value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setString
 
@@ -375,8 +375,8 @@ Set the string value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setType
 
@@ -404,5 +404,5 @@ Set the type of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |

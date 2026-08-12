@@ -15,7 +15,7 @@ Describes the cloud pair device.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## trustedPairedDevices
@@ -26,7 +26,7 @@ trustedPairedDevices: Array<TrustedPairedDevice>
 
 The list of cloud pair devices.
 
-**Type:** Array&lt;TrustedPairedDevice&gt;
+**Type:** Array&lt;[TrustedPairedDevice](arkts-connectivity-connection-trustedpaireddevice-i-sys.md)&gt;
 
 **Since:** 15
 

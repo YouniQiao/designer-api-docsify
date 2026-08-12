@@ -14,7 +14,7 @@ Creates a directory. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:mkdirSync](arkts-corefile-fileio-mkdirsync-f.md#mkdirsync)
+**Substitutes:** [mkdirSync](arkts-corefile-file-fs-mkdirsync-f.md#mkdirSync)
 
 <!--Device-unnamed-declare function mkdirSync(path: string, mode?: number): void--><!--Device-unnamed-declare function mkdirSync(path: string, mode?: number): void-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -18,7 +18,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 12
 
-**Substitutes:** [systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemDateTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -35,7 +35,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -69,7 +69,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 12
 
-**Substitutes:** [systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemDateTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
 
@@ -85,7 +85,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -119,7 +119,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Deprecated since:** 12
 
-**Substitutes:** [systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemDateTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
 
@@ -135,13 +135,13 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

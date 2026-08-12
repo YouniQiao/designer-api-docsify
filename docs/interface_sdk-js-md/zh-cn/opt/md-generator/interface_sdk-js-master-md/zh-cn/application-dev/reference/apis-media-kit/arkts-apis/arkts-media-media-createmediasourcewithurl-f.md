@@ -21,7 +21,7 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | url | string | 是 |
-| headers | Record&lt;string, string&gt; | 否 |
+| headers | Record & lt;string, string & gt; | 否 |
 
 **返回值：**
 
@@ -33,5 +33,5 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |

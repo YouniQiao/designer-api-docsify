@@ -18,7 +18,7 @@ error?: ResourceStr | PixelMap
 
 加载失败的占位图。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ placeholder?: ResourceStr | PixelMap
 
 加载过程中的占位图。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **起始版本：** 23
 

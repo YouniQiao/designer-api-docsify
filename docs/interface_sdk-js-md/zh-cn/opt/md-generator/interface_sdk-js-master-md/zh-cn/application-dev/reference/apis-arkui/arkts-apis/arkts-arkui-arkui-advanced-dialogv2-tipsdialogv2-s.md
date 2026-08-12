@@ -114,7 +114,7 @@ imageBorderColor?: ColorMetrics
 
 默认值：Color.Black
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -138,7 +138,7 @@ imageBorderWidth?: LengthMetrics
 
 默认无描边效果。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 18
 

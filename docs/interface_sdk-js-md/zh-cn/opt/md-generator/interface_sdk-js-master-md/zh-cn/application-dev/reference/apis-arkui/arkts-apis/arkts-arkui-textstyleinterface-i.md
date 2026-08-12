@@ -36,7 +36,7 @@ fontColor?: ResourceColor
 fontConfigs?: FontConfigs
 ```
 
-字体配置。默认值继承[FontConfigs](arkts-arkui-fontconfigs-i.md)。
+字体配置。默认值继承[FontConfigs](arkts-arkui-fontconfigs-i.md#FontConfigs)。
 
 **类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
 
@@ -86,7 +86,7 @@ fontSize?: LengthMetrics
 
 单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 12
 
@@ -224,7 +224,7 @@ strokeWidth?: LengthMetrics
 
 默认值为0。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 20
 

@@ -24,7 +24,7 @@ overflow: TextOverflow
 
 默认值：TextOverflow.Clip
 
-**类型：** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
+**类型：** TextOverflow
 
 **默认值：** TextOverflow.Clip [since 18]
 

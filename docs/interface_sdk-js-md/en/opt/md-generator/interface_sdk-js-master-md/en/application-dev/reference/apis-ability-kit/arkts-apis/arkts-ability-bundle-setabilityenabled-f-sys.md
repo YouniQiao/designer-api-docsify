@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## setAbilityEnabled
@@ -18,7 +18,7 @@ Sets whether to enable an ability. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -49,7 +49,7 @@ Sets whether to enable an ability. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -70,4 +70,4 @@ Sets whether to enable an ability. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## callbackWrapper
@@ -45,7 +45,7 @@ Calls back an asynchronous function. In the callback, the first parameter indica
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| (err: Object, value: Object) =&gt; void |
+| (err: Object, value: Object) = & gt; void |
 
 ## Examples
 

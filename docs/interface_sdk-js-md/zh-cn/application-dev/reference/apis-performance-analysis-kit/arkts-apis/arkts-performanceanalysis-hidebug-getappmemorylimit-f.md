@@ -6,7 +6,7 @@
 function getAppMemoryLimit(): MemoryLimit
 ```
 
-��ȡӦ�ó�����̵��ڴ����ơ�
+获取应用程序进程的内存限制。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function getAppMemoryLimit(): MemoryLimit
 
 | 类型 | 说明 |
 | --- | --- |
-| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | Ӧ�ó�������ڴ����ơ� |
+| [MemoryLimit](arkts-performanceanalysis-hidebug-memorylimit-i.md) | 应用程序进程内存限制。 |
 
 ## 示例
 

@@ -20,7 +20,7 @@ borderRadius?: Dimension | BorderRadiuses
 
 参数为Dimension类型时，不支持以Percentage形式设置
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 11
 
@@ -44,7 +44,7 @@ margin?: Dimension | Margin
 
 参数为Dimension类型时，四个方向外边距同时生效。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Margin
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [Margin](../arkts-apis/arkts-arkui-margin-t.md)
 
 **起始版本：** 11
 

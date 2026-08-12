@@ -22,6 +22,6 @@ Represents the callback invoked when the Enter key on the soft keyboard is press
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKeyType | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | Yes | Type of the Enter key.<br>If the type is **EnterKeyType.NEW_LINE**, **onSubmit** is not triggered. |
-| event | [SubmitEvent](arkts-arkui-submitevent-i.md) | No | Submit event. |
+| enterKeyType | EnterKeyType | Yes | Type of the Enter key.<br>If the type is **EnterKeyType.NEW_LINE**, **onSubmit** is not triggered. |
+| event | SubmitEvent | No | Submit event. |
 

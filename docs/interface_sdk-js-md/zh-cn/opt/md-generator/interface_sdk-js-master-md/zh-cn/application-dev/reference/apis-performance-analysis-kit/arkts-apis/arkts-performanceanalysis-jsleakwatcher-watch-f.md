@@ -6,7 +6,7 @@
 function watch(obj: object, msg: string): void
 ```
 
-ע������й©�Ķ���
+注册待检测泄漏的对象。
 
 **起始版本：** 12
 

@@ -18,7 +18,7 @@ index: MoveIndex
 
 Index of moved data.
 
-**Type:** [MoveIndex](../arkts-components/arkts-arkui-moveindex-i.md)
+**Type:** [MoveIndex](arkts-arkui-lazyforeach-moveindex-i.md)
 
 **Since:** 23
 

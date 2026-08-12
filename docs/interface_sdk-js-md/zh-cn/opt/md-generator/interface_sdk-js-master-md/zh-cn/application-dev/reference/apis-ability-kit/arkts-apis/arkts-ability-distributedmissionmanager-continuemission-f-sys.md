@@ -32,15 +32,15 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 错误码ID |
 | --- |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
-| [16300502](../errorcode-DistributedSchedule.md#16300502-获取指定的missionid的missioninfo失败) |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
+| [16300504](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16300505](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
+| [16300506](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16300501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
+| [16300502](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300502-获取指定的missionid的missioninfo失败) |
+| [16300503](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
 
 ## 示例
 
@@ -107,21 +107,21 @@ function continueMission(parameter: ContinueDeviceInfo, options: ContinueCallbac
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
-| [16300502](../errorcode-DistributedSchedule.md#16300502-获取指定的missionid的missioninfo失败) |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
+| [16300504](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16300505](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
+| [16300506](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16300501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
+| [16300502](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300502-获取指定的missionid的missioninfo失败) |
+| [16300503](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
 
 ## 示例
 
@@ -185,15 +185,15 @@ function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
-| [16300507](../errorcode-DistributedSchedule.md#16300507-获取指定的bundlename的missioninfo失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
+| [16300504](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16300505](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
+| [16300506](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
+| [16300507](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300507-获取指定的bundlename的missioninfo失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16300501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
+| [16300503](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
 
 ## 示例
 
@@ -252,21 +252,21 @@ function continueMission(parameter: ContinueMissionInfo): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16300504](../errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16300505](../errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
-| [16300506](../errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
-| [16300507](../errorcode-DistributedSchedule.md#16300507-获取指定的bundlename的missioninfo失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
-| [16300503](../errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
+| [16300504](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300504-远端未安装应用但支持免安装需使用免安装标识重试) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16300505](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300505-操作设备必须是迁移的应用所在的设备或需迁移到的目标设备) |
+| [16300506](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300506-本地迁移任务已在进行中) |
+| [16300507](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300507-获取指定的bundlename的missioninfo失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16300501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
+| [16300503](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300503-远端未安装应用且不支持免安装) |
 
 ## 示例
 

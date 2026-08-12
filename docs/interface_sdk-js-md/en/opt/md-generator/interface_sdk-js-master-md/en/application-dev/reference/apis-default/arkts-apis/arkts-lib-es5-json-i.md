@@ -15,7 +15,7 @@ Converts a JavaScript Object Notation (JSON) string into an object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | text | string | Yes |
-| reviver | (this: any, key: string, value: any) =&gt; any | No |
+| reviver | (this: any, key: string, value: any) = & gt; any | No |
 
 **Return value:**
 
@@ -38,7 +38,7 @@ Converts a JavaScript value to a JavaScript Object Notation (JSON) string.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | any | Yes |
-| replacer | (this: any, key: string, value: any) =&gt; any | No |
+| replacer | (this: any, key: string, value: any) = & gt; any | No |
 | space | string \| number | No |
 
 **Return value:**

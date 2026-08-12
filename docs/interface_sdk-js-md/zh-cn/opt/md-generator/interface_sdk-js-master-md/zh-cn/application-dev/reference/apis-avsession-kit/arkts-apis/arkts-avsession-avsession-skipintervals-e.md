@@ -4,9 +4,9 @@
 
 | 名称 | 值 | 说明 |
 | ---------------------- | -- | ----------------------- |
-| [SECONDS_10](#seconds_10) | 10 | 时间为10秒。 |
-| [SECONDS_15](#seconds_15) | 15 | 时间为15秒。 |
-| [SECONDS_30](#seconds_30) | 30 |
+| [SECONDS_10](arkts-avsession-avsession-skipintervals-e.md) | 10 | 时间为10秒。 |
+| [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md) | 15 | 时间为15秒。 |
+| [SECONDS_30](arkts-avsession-avsession-skipintervals-e.md) | 30 |
 
 **起始版本：** 11
 

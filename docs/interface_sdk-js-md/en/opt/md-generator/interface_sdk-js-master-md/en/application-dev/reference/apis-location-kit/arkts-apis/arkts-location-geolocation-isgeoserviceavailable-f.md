@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## isGeoServiceAvailable
@@ -18,7 +18,7 @@ Obtain geocode service status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.isGeocoderAvailable
+**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isGeocoderAvailable)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -59,7 +59,7 @@ Obtain geocode service status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.isGeocoderAvailable
+**Substitutes:** [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isGeocoderAvailable)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -71,7 +71,7 @@ Obtain geocode service status
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

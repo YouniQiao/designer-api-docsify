@@ -178,7 +178,7 @@ type: PluralRuleType
 
 Type option.
 
-**Type:** [PluralRuleType](arkts-arkts-intl-pluralruletype-t.md)
+**Type:** PluralRuleType
 
 **Since:** 26.0.0
 

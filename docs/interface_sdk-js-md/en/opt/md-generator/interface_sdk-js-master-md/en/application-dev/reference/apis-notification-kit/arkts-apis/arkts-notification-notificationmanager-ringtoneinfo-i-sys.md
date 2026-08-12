@@ -13,7 +13,7 @@ Describes the custom ringtone information.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## ringtoneFileName
@@ -60,7 +60,7 @@ ringtoneType: RingtoneType
 
 Type of the ringtone.
 
-**Type:** [RingtoneType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-ringtonetype-e.md)
+**Type:** RingtoneType
 
 **Since:** 21
 

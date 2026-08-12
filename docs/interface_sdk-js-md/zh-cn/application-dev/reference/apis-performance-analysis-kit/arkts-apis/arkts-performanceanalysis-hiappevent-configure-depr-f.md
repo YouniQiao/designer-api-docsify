@@ -14,7 +14,7 @@ function configure(config: ConfigOption): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#configure
+**替代接口：** [configure](ohos.hiviewdfx.hiAppEvent/hiAppEvent#configure)
 
 <!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
 
@@ -24,7 +24,7 @@ function configure(config: ConfigOption): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 是 | 应用事件打点配置项对象。 |
+| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
 
 **返回值：**
 

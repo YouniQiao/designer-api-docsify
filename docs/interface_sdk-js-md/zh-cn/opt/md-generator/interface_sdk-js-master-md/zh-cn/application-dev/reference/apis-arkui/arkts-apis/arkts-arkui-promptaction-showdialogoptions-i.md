@@ -36,7 +36,7 @@ backgroundBlurStyle?: BlurStyle
 
 对话框背板模糊材质。&lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。&lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -182,7 +182,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内对话框蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -328,7 +328,7 @@ offset?: Offset
 
 对话框相对alignment所在位置的偏移量。&lt;br/&gt;默认值：{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 10
 
@@ -348,7 +348,7 @@ onDidAppear?: Callback<void>
 
 对话框弹出后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.在onDidAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。&lt;br /&gt;3.快速点击弹出，关闭对话框时，onWillDisappear在onDidAppear前生效。&lt;br/&gt;4.对话框入场动效未完成时彻底关闭对话框，动效打断，onDidAppear不会触发。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -368,7 +368,7 @@ onDidDisappear?: Callback<void>
 
 对话框消失后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -388,7 +388,7 @@ onWillAppear?: Callback<void>
 
 对话框显示动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.在onWillAppear内设置改变对话框显示效果的回调事件，二次弹出生效。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -408,7 +408,7 @@ onWillDisappear?: Callback<void>
 
 对话框退出动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -428,7 +428,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 设置对话框背板的阴影。&lt;br /&gt; 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 

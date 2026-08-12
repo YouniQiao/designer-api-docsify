@@ -1,6 +1,6 @@
 # NativeXComponentParameters
 
-定义native xcomponent参数。使用此类构造参数创建的XComponent可以将其对应的[FrameNode](../arkts-apis/arkts-arkui-framenode-c.md/arkts-arkui-framenode-c.md)对象传递到Native侧，从而能够使用NDK接口进行surface生命周期相关设置和[组件事件监听](../../../ui/ndk-listen-to-component-events.md)。
+定义native xcomponent参数。使用此类构造参数创建的XComponent可以将其对应的[FrameNode](../../../arkui/FrameNode)对象传递到Native侧，从而能够使用NDK接口进行surface生命周期相关设置和[组件事件监听](../../../ui/ndk-listen-to-component-events.md)。
 
 **起始版本：** 19
 

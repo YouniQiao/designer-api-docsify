@@ -27,7 +27,7 @@ buttonType?: ButtonType
 
 设置保存控件的背景样式。默认值：ButtonType.Capsule。
 
-**类型：** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
+**类型：** ButtonType
 
 **起始版本：** 10
 

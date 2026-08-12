@@ -13,7 +13,7 @@ Represents information about the system update packages.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## authInfo

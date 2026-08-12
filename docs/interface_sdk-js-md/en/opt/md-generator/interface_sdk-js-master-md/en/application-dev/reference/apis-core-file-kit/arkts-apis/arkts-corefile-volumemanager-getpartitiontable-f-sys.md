@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## getPartitionTable
@@ -36,7 +36,7 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PartitionTableInfo&gt; |
+| Promise&lt;[PartitionTableInfo](arkts-corefile-volumemanager-partitiontableinfo-i-sys.md)&gt; |
 
 **Error codes:**
 
@@ -44,7 +44,7 @@ Obtains partition table information based on the disk ID. This API uses a promis
 | --- |
 | 13600010 |
 | 13600008 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600021 |
 | 13600001 |

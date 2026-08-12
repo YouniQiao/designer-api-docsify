@@ -1,7 +1,7 @@
 # RatingConfiguration
 
 You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
 
 **Inheritance/Implementation:** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
@@ -117,7 +117,7 @@ triggerChange: Callback<number>
 
 Callback triggered when the rating value changes.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**Type:** Callback&lt;number&gt;
 
 **Since:** 12
 

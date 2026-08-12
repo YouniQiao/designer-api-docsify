@@ -1,8 +1,8 @@
 # AccelerometerResponse
 
-Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the acceleration sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -13,7 +13,7 @@ Describes the acceleration sensor data. It extends from [Response](arkts-sensors
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## x

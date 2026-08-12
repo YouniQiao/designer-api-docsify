@@ -1,10 +1,10 @@
 # ControlCenter
 
-**ControlCenter** inherits from [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md).
+**ControlCenter** inherits from [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#ControlCenterQuery).
 
 It is used to enable the camera controller.
 
-**Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)
+**Inheritance/Implementation:** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#ControlCenterQuery)
 
 **Since:** 20
 
@@ -17,7 +17,7 @@ It is used to enable the camera controller.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableControlCenter
@@ -48,5 +48,5 @@ Enables the camera controller.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

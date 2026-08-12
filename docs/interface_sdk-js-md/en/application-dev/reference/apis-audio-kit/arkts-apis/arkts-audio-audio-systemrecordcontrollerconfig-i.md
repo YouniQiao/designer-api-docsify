@@ -13,7 +13,7 @@ Defines the configuration for the system recording controller panel.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## sourceType
@@ -22,9 +22,9 @@ import { audio } from 'kits/@kit.AudioKit';
 sourceType: SourceType
 ```
 
-The system uses this to determine the recording scenario of the application according to the SourceType that the application expects to use for streaming, and provides users with the ability to select matching noise reduction modes. The supported source types include{@link SourceType#SOURCE_TYPE_MIC}, {@link SourceType#SOURCE_TYPE_CAMCORDER}, and{@link SourceType#SOURCE_TYPE_LIVE}.
+The system uses this to determine the recording scenario of the application according to the SourceType that the application expects to use for streaming, and provides users with the ability to select matching noise reduction modes. The supported source types include[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_MIC), [SOURCE_TYPE_CAMCORDER](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_CAMCORDER), and[SOURCE_TYPE_LIVE](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_LIVE).
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** SourceType
 
 **Since:** 26.0.0
 

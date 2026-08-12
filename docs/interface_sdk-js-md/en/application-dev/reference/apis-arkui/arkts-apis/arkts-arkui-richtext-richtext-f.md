@@ -25,8 +25,8 @@ Defines RichText Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | Yes | . |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | . |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

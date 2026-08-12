@@ -2,7 +2,7 @@
 
 Define configuration of the system VPN network.
 
-**Inheritance/Implementation:** SysVpnConfig extends [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md)
+**Inheritance/Implementation:** SysVpnConfig extends [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#VpnConfig)
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ Define configuration of the system VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## forwardingRoutes

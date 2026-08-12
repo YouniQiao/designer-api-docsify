@@ -1,6 +1,6 @@
 # HitTestValue
 
-Provides element information of the click area. related to {@link getLastHitTest} method.
+Provides element information of the click area. related to [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) method.
 
 **起始版本：** 23
 

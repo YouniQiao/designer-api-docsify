@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceConfigs
@@ -22,7 +22,7 @@ Obtains the list of all existing Wi-Fi configurations.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getDeviceConfigs
+**Substitutes:** [getDeviceConfigs](ohos.wifiManager/wifiManager.getDeviceConfigs)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.GET_WIFI_CONFIG
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## hasRecoverCacheInGeneratorDialog
@@ -28,7 +28,7 @@ Check whether cache files that can be restored exist in GeneratorDialog.The pers
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c-sys.md) | Yes |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 
 **Return value:**
 

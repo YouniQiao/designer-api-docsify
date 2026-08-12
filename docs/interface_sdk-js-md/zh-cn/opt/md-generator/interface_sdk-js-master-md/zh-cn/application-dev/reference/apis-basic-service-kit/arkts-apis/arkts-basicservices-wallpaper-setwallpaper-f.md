@@ -97,7 +97,7 @@ function setWallpaper(source: string | image.PixelMap, wallpaperType: WallpaperT
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

@@ -34,5 +34,5 @@ Initialize LoadingProgress FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
+| LoadingProgressAttribute |  |
 

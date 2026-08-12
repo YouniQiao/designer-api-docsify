@@ -18,7 +18,7 @@ index: MoveIndex
 
 移动位置。取值范围是[0, 数据源长度-1]。
 
-**类型：** [MoveIndex](../arkts-components/arkts-arkui-moveindex-i.md)
+**类型：** [MoveIndex](arkts-arkui-lazyforeach-moveindex-i.md)
 
 **起始版本：** 23
 

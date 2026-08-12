@@ -13,7 +13,7 @@ Declaration of the composable title bar. Composable title bar represents a commo
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from 'kits/@kit.ArkUI';
+import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from '@kit.ArkUI';
 ```
 
 ## item
@@ -46,7 +46,7 @@ menuItems?: Array<ComposeTitleBarV2MenuItem>
 
 Menu items on the right side.
 
-**Type:** Array&lt;ComposeTitleBarV2MenuItem&gt;
+**Type:** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **Since:** 26.0.0
 

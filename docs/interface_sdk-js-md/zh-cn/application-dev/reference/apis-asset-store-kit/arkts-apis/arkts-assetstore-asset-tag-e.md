@@ -1,6 +1,6 @@
 # Tag
 
-枚举，关键资产支持的属性名称类型，用作[AssetMap](arkts-assetstore-asset-assetmap-t.md)的键。
+枚举，关键资产支持的属性名称类型，用作[AssetMap](arkts-assetstore-asset-assetmap-t.md#AssetMap)的键。
 
 > **说明：**
 > 

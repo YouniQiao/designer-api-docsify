@@ -11,7 +11,7 @@ Provides methods to query of obtain interface descriptors, add or delete death n
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## addDeathRecipient
@@ -26,7 +26,7 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient:
+**Substitutes:** [registerDeathRecipient](registerDeathRecipient(recipient:)
 
 <!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -69,7 +69,7 @@ Obtains the interface descriptor (which is a string) of this object.
 
 | Error Code ID |
 | --- |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
 
 ## getInterfaceDescriptor
 
@@ -83,7 +83,7 @@ Obtains the interface descriptor (which is a string) of this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+**Substitutes:** [getDescriptor](getDescriptor())
 
 <!--Device-IRemoteObject-getInterfaceDescriptor(): string--><!--Device-IRemoteObject-getInterfaceDescriptor(): string-End-->
 
@@ -125,7 +125,7 @@ Obtains the string of the interface descriptor.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isObjectDead
 
@@ -159,7 +159,7 @@ Obtains the string of the interface descriptor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor:
+**Substitutes:** [getLocalInterface](getLocalInterface(descriptor:)
 
 <!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -202,9 +202,9 @@ Registers a callback for receiving death notifications of the remote object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900005-ipc-object-permission-error) |
 
 ## removeDeathRecipient
 
@@ -218,7 +218,7 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient:
+**Substitutes:** [unregisterDeathRecipient](unregisterDeathRecipient(recipient:)
 
 <!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -269,13 +269,13 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RequestResult&gt; |
+| Promise & lt;RequestResult & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sendMessageRequest
 
@@ -312,7 +312,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## sendRequest
 
@@ -327,7 +327,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**Substitutes:** [sendMessageRequest](sendMessageRequest(code:)
 
 <!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -365,7 +365,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**Substitutes:** [sendMessageRequest](sendMessageRequest(code:)
 
 <!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -384,7 +384,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SendRequestResult&gt; |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; |
 
 ## sendRequest
 
@@ -404,7 +404,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**Substitutes:** [sendMessageRequest](sendMessageRequest(code:)
 
 <!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -418,7 +418,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes |
 
 ## unregisterDeathRecipient
 
@@ -445,6 +445,6 @@ Unregisters from the callback used to receive death notifications of the remote 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900005-ipc-object-permission-error) |

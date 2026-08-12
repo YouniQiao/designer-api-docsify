@@ -57,7 +57,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 Title for sharing in an atomic service.
 
 You can set the sharing title using this field in the  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare) callback.
 
 **Since:** 10
 
@@ -78,7 +78,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 Content abstract for sharing in an atomic service.
 
 You can set the sharing abstract using this field in the  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare) callback.
 
 **Since:** 10
 
@@ -99,7 +99,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 URL link for sharing in an atomic service.
 
 You can set the URL link using this field in the  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare) callback.
 
 **Since:** 10
 
@@ -153,7 +153,7 @@ Whether the source application exits during cross-device migration. The default 
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md).The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md).
+Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility).The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md#ShowMode).
 
 **Since:** 12
 
@@ -171,8 +171,8 @@ Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableui
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath). This field must be used in conjunction with file URI  
-[read/write flag](arkts-ability-wantconstant-flags-e.md).
+List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath). This field must be used in conjunction with file URI  
+[read/write flag](arkts-ability-wantconstant-flags-e.md#Flags).
 
 **Since:** 12
 
@@ -211,8 +211,8 @@ CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 Request code
 
 that uniquely identifies the caller of  
-[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult) or  
-[openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to  start an ability, the target ability returns the result to the caller based on the request code.
+[startAbilityForResult](./application/UIAbilityContext:UIAbilityContext.startabilityforresult) or  
+[openLink](arkts-ability-uiabilitycontext-c.md#openLink). When either of the APIs is called to  start an ability, the target ability returns the result to the caller based on the request code.
 
 **Since:** 12
 
@@ -472,10 +472,10 @@ The caller must be a system application and must request the ohos.permission.SET
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md/arkts-data-unifieddatachannel.md).This field can only be set by system applications, but third-party applications can read it.
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md#unifiedDataChannel).This field can only be set by system applications, but third-party applications can read it.
 
-If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or  
-[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
+If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#Flags) or  
+[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#Flags)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 
 **Since:** 20
 

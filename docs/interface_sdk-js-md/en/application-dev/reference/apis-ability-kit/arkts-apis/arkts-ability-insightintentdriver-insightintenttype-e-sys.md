@@ -1,8 +1,8 @@
 # InsightIntentType (System API)
 
 Enumerates the intent types defined by the intent decorator. You can obtain the intent type from  
-[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) returned by calling APIs such as  
-[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo).
+[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md#LinkIntentInfo) returned by calling APIs such as  
+[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getAllInsightIntentInfo).
 
 **Since:** 20
 

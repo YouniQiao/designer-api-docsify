@@ -11,7 +11,7 @@ System material options.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## type
@@ -24,7 +24,7 @@ Material type.
 
 Default value: **MaterialType.NONE**.
 
-**Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
+**Type:** MaterialType
 
 **Default:** uiMaterial.MaterialType.NONE
 

@@ -22,7 +22,7 @@ offDayMarkColor?: ResourceColor
 
 Style of day color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ workDayMarkColor?: ResourceColor
 
 Style of day color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 

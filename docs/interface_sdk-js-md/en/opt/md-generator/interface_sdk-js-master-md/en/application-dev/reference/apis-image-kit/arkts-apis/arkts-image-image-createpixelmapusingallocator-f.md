@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapUsingAllocator
@@ -33,15 +33,15 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

@@ -1,9 +1,9 @@
 # FormEditExtensionAbility
 
 The **FormEditExtensionAbility** module, inherited from   
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), provides the widget editing function.
+[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), provides the widget editing function.
 
-**Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
+**Inheritance/Implementation:** FormEditExtensionAbility extends [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)
 
 **Since:** 18
 
@@ -16,7 +16,7 @@ The **FormEditExtensionAbility** module, inherited from
 ## Modules to Import
 
 ```TypeScript
-import { FormEditExtensionAbility } from 'kits/@kit.FormKit';
+import { FormEditExtensionAbility } from '@kit.FormKit';
 ```
 
 ## context

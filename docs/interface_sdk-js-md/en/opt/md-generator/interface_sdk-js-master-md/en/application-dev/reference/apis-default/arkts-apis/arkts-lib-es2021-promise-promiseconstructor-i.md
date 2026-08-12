@@ -24,7 +24,7 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T[number]&gt;&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T[number]&gt;&gt; |
 
 ## any
 
@@ -40,10 +40,10 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| values | Iterable&lt;T \| [PromiseLike&lt;T&gt;&gt;](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | Yes |
+| values | Iterable & lt;T \ | [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt; |

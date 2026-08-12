@@ -36,8 +36,8 @@ Collapses the swipe action menu for the specified list item.
 
 | Error Code ID |
 | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [106203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) |
 
 ## expand
 
@@ -68,5 +68,5 @@ Expands the swipe action menu for the specified list item.
 
 | Error Code ID |
 | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) |
-| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) |
+| [106203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) |

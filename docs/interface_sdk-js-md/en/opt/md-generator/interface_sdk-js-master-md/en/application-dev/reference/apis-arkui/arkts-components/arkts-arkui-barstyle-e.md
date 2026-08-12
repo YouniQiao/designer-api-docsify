@@ -52,7 +52,7 @@ SAFE_AREA_PADDING = 2
 ```
 
 In this mode, the title bar or toolbar is configured to respect the  
-[component-level safe area](arkts-arkui-commonmethod-c.md#safeareapadding).
+[component-level safe area](arkts-arkui-commonmethod-c.md#safeAreaPadding).
 
 **Since:** 14
 

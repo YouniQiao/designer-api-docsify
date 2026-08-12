@@ -73,8 +73,8 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200068](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 ## 示例
 
@@ -122,7 +122,7 @@ function from(buffer: FastBuffer | Uint8Array): FastBuffer
 
 | 错误码ID |
 | --- |
-| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
+| [10200068](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 ## 示例
 

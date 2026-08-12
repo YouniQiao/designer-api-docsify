@@ -13,7 +13,7 @@ Indicates the options for initiating a call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## accountId

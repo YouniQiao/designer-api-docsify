@@ -13,7 +13,7 @@ Window animation target.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## abilityName
@@ -78,7 +78,7 @@ readonly windowBounds: RRect
 
 /* The window bounds of the window animation target.
 
-**Type:** [RRect](../arkts-components/arkts-arkui-rrect-i-sys.md)
+**Type:** RRect
 
 **Since:** 9
 

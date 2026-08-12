@@ -36,9 +36,9 @@ getAcbState(): AcbState
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getConnectionState
 
@@ -68,9 +68,9 @@ getConnectionState(): ConnectionState
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getDeviceClass
 
@@ -100,9 +100,9 @@ getDeviceClass(): DeviceClass
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getDeviceInformation
 
@@ -132,9 +132,9 @@ getDeviceInformation(): DeviceInformation
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getDeviceName
 
@@ -164,9 +164,9 @@ getDeviceName(): string
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getPairingState
 
@@ -196,9 +196,9 @@ getPairingState(): PairingState
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## startPairing
 
@@ -222,12 +222,12 @@ startPairing(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |

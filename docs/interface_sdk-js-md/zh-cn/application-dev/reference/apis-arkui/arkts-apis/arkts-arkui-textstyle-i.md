@@ -20,7 +20,7 @@ wordBreak?: WordBreak
 
 默认值：WordBreak.BREAK_ALL
 
-**类型：** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
+**类型：** WordBreak
 
 **起始版本：** 12
 

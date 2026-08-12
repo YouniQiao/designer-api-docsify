@@ -30,7 +30,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 功能键列表。支持功能键 'Ctrl'\| 'Alt' \|
+| keys | Array & lt;string & gt; | 是 | 功能键列表。支持功能键 'Ctrl'\| 'Alt' \|
 
 **返回值：**
 
@@ -42,7 +42,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## stopPropagation
 
@@ -168,7 +168,7 @@ ScrollLock是否锁定（true: 锁定；false: 解锁）。
 keyCode: number
 ```
 
-按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。
+按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode)。
 
 **类型：** number
 

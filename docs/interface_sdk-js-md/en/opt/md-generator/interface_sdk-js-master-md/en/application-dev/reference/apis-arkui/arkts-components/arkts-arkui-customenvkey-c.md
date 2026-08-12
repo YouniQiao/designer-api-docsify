@@ -46,7 +46,7 @@ create CustomEnvKey
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [CustomEnvKey](arkts-arkui-customenvkey-c.md)&lt;T&gt; |
 

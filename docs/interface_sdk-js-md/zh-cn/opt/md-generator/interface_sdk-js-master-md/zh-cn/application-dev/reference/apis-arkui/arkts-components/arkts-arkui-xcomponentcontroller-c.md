@@ -24,6 +24,12 @@ constructor()
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## 示例
+
+```TypeScript
+xComponentController: XComponentController = new XComponentController();
+```
+
 ## getXComponentContext
 
 ```TypeScript
@@ -67,6 +73,31 @@ getXComponentSurfaceId(): string
 | 类型 |
 | --- |
 | string |
+
+## 示例
+
+```TypeScript
+// xxx.ets
+
+@Entry
+  @Component
+  struct Index {
+    myXComponentController: XComponentController = new XComponentController();
+
+    build() {
+      Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+        XComponent({
+          type: XComponentType.SURFACE,
+          controller: this.myXComponentController
+        })
+          .onLoad(() => {
+            let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
+            console.info("XComponent SurfaceId: " + surfaceId);
+          })
+      }
+    }
+  }
+```
 
 ## getXComponentSurfaceRect
 
@@ -114,7 +145,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 
 | 类型 |
 | --- |
-| Required&lt;SurfaceRotationOptions&gt; |
+| Required&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; |
 
 ## lockCanvas
 
@@ -122,7 +153,7 @@ getXComponentSurfaceRotation(): Required<SurfaceRotationOptions>
 lockCanvas(): DrawingCanvas | null
 ```
 
-获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md/arkts-arkgraphics2d-drawing-canvas-c.md)。
+获取用于在XComponent创建的surface上绘制的Canvas。有关绘制方法的详细信息，请参见[Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#Canvas)。
 
 **起始版本：** 20
 
@@ -312,7 +343,7 @@ setXComponentSurfaceSize(value: {
 
 **废弃版本：** 12
 
-**替代接口：** [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)
+**替代接口：** [setXComponentSurfaceRect](#setXComponentSurfaceRect)
 
 <!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void-End-->
 
@@ -362,15 +393,15 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) |
+| [110001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) |
+| [110003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) |
+| [110002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) |
 
 ## stopImageAnalyzer
 

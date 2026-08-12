@@ -34,5 +34,5 @@ abstract initialize(): FlowItemAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |  |
+| FlowItemAttribute |  |
 

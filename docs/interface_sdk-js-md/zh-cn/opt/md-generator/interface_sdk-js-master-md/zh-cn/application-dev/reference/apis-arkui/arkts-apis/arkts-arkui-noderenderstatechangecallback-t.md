@@ -21,4 +21,4 @@ export declare type NodeRenderStateChangeCallback = (state: NodeRenderState, nod
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | 是 |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 否 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 否 |

@@ -13,7 +13,7 @@ Describes the value and reason returned upon a window rectangle (position and si
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## reason
@@ -24,7 +24,7 @@ reason: RectChangeReason
 
 Reason for the window rectangle change.
 
-**Type:** [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md)
+**Type:** RectChangeReason
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ rect: Rect
 
 New value of the window rectangle.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 12
 

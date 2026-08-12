@@ -11,7 +11,7 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addDependency
@@ -32,17 +32,17 @@ Adds dependent tasks for this task. Before using this API, you must create a **T
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | Yes |
+| tasks | [Task[]](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200026](../errorcode-utils.md#10200026-task-with-a-cyclic-dependency) |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) |
+| [10200026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200026-task-with-a-cyclic-dependency) |
+| [10200056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) |
+| [10200052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) |
 
 ## Examples
 
@@ -95,16 +95,16 @@ A constructor used to create a **Task** instance.
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | func | Function | Yes |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
 
 ## Examples
 
@@ -136,17 +136,17 @@ A constructor used to create a **Task** instance, with the task name specified.
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [name](#name) | string | Yes |
 | func | Function | Yes |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
 
 ## Examples
 
@@ -301,7 +301,7 @@ Register a callback function and call it when a task is enqueued.The registratio
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | Yes |
 
@@ -309,7 +309,7 @@ Register a callback function and call it when a task is enqueued.The registratio
 
 | Error Code ID |
 | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
+| [10200034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
 ## Examples
 
@@ -352,7 +352,7 @@ Register a callback function and call it when a task fails to be executed(Period
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [CallbackFunctionWithError](arkts-arkts-taskpool-callbackfunctionwitherror-t.md) | Yes |
 
@@ -360,7 +360,7 @@ Register a callback function and call it when a task fails to be executed(Period
 
 | Error Code ID |
 | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
+| [10200034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
 ## Examples
 
@@ -409,7 +409,7 @@ Register a callback function and call it when a task is executed successfully.Th
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | Yes |
 
@@ -417,7 +417,7 @@ Register a callback function and call it when a task is executed successfully.Th
 
 | Error Code ID |
 | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
+| [10200034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
 ## Examples
 
@@ -460,7 +460,7 @@ Registers a callback for a task to receive and process data from the worker thre
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | Function | No |
 
@@ -509,7 +509,7 @@ Register a callback function and call it when the execution of a task starts.The
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [CallbackFunction](arkts-arkts-taskpool-callbackfunction-t.md) | Yes |
 
@@ -517,7 +517,7 @@ Register a callback function and call it when the execution of a task starts.The
 
 | Error Code ID |
 | --- |
-| [10200034](../errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
+| [10200034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-no-callback-function-is-registered-for-a-listening-task) |
 
 ## Examples
 
@@ -560,17 +560,17 @@ Removes dependent tasks for this task. Before using this method, you need to con
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | Yes |
+| tasks | [Task[]](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200027](../errorcode-utils.md#10200027-dependency-does-not-exist) |
-| [10200056](../errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) |
-| [10200052](../errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) |
+| [10200027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200027-dependency-does-not-exist) |
+| [10200056](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-asynchronous-queue-task-cannot-have-dependencies) |
+| [10200052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-periodic-task-cannot-have-dependencies) |
 
 ## Examples
 
@@ -640,18 +640,18 @@ Sends data to the host thread and triggers the registered callback. Before calli
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200024](../errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) |
-| [10200023](../errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200022](../errorcode-utils.md#10200022-functions-not-called-in-taskpool) |
+| [10200024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200024-functions-not-registered-in-the-host-thread) |
+| [10200023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200023-functions-not-called-in-concurrent-functions) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200022-functions-not-called-in-taskpool) |
 
 ## Examples
 
@@ -734,7 +734,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | cloneList | Object[] \| ArrayBuffer[] | Yes |
 
@@ -742,7 +742,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 | Error Code ID |
 | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) |
+| [10200029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) |
 
 ## Examples
 
@@ -898,7 +898,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | transfer | ArrayBuffer[] | No |
 
@@ -906,7 +906,7 @@ Sets the task transfer list. Before using this API, you must create a **Task** i
 
 | Error Code ID |
 | --- |
-| [10200029](../errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) |
+| [10200029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-arraybuffer-cannot-be-set-as-both-transferlist-and-clonelist) |
 
 ## Examples
 

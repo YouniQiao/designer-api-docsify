@@ -21,7 +21,7 @@ The **file.recent** module provides APIs for managing the list of recently acces
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## Summary

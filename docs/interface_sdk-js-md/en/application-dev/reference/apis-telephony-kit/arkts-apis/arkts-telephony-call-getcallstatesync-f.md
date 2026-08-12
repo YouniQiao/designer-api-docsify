@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## getCallStateSync
@@ -28,7 +28,7 @@ If an incoming call is ringing or waiting, the system returns {@code CallState#C
 
 | Type | Description |
 | --- | --- |
-| [CallState](arkts-telephony-call-callstate-e.md) | Returns the call state. |
+| CallState | Returns the call state. |
 
 ## Examples
 

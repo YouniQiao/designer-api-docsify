@@ -2,7 +2,7 @@
 
 上传任务的任务信息，是  
 [on('complete' | 'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))和  
-[off('complete' | 'fail')](request.UploadTask.off(type: 'complete' | 'fail', callback?: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))接口的回调参数。
+[off('complete' | 'fail')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)接口的回调参数。
 
 **起始版本：** 9
 
@@ -51,7 +51,7 @@ responseCode: number
 上传任务返回码。返回0表示上传任务成功，返回其它值表示上传任务失败，具体请参见message参数中的上传任务结果描述信息。
 
 此处推荐使用  
-[request.agent.create](arkts-basicservices-agent-create-f.md#create)创建上传任务，并获取标准错误码处理异常分支。
+[request.agent.create](arkts-basicservices-agent-create-f.md#create-1)创建上传任务，并获取标准错误码处理异常分支。
 
 **类型：** number
 

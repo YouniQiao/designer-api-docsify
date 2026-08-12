@@ -22,4 +22,4 @@ function setCursor(value: PointerStyle): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [PointerStyle](../arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 |
+| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | 是 |

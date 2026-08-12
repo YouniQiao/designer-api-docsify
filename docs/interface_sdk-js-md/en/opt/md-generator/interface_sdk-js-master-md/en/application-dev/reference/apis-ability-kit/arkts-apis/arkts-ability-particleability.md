@@ -13,7 +13,7 @@ The particleAbility module provides APIs for operating a DataAbility and Service
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

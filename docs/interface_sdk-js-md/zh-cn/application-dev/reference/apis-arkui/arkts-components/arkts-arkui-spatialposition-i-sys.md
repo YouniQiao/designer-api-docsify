@@ -20,7 +20,7 @@ leftBottom: DepthVector3
 
 三维空间中的左下角角位置。
 
-**类型：** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**类型：** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -44,7 +44,7 @@ leftTop: DepthVector3
 
 三维空间中的左上角位置。
 
-**类型：** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**类型：** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -68,7 +68,7 @@ rightBottom: DepthVector3
 
 三维空间中的右下角位置。
 
-**类型：** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**类型：** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -92,7 +92,7 @@ rightTop: DepthVector3
 
 3D空间中的右上角位置。
 
-**类型：** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**类型：** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **起始版本：** 26.0.0
 

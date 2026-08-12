@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getInsertSqlInfo
@@ -27,8 +27,8 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the database table to which data is to be written. |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes | Field information and corresponding values of the data to be written to the database. |
-| conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | No | Resolution used to resolve the conflict. &lt;br&gt;Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
+| values | ValuesBucket | Yes | Field information and corresponding values of the data to be written to the database. |
+| conflict | ConflictResolution | No | Resolution used to resolve the conflict. &lt;br&gt;Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
 **Return value:**
 
@@ -40,7 +40,7 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## Examples
 

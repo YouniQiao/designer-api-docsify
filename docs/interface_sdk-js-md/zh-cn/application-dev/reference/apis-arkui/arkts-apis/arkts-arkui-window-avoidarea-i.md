@@ -3,7 +3,7 @@
 窗口内容的避让区域。
 
 窗口内容做[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)适配时，需要按照  
-[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)对应的AvoidArea做窗口内容避让。
+[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)对应的AvoidArea做窗口内容避让。
 
 在避让区域内，应用窗口内容被遮挡且无法响应用户点击事件。
 
@@ -29,7 +29,7 @@ bottomRect: Rect
 
 中心位于窗口的两条对角线的底部的矩形区。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 7
 
@@ -49,7 +49,7 @@ leftRect: Rect
 
 中心位于窗口的两条对角线的左侧的矩形区。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 7
 
@@ -69,7 +69,7 @@ rightRect: Rect
 
 中心位于窗口的两条对角线的右侧的矩形区。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 7
 
@@ -89,7 +89,7 @@ topRect: Rect
 
 中心位于窗口的两条对角线的顶部的矩形区。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 7
 

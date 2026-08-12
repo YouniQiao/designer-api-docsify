@@ -12,7 +12,7 @@ Removes a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir)
+**Substitutes:** [rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir)
 
 <!--Device-unnamed-declare function rmdir(path: string): Promise<void>--><!--Device-unnamed-declare function rmdir(path: string): Promise<void>-End-->
 
@@ -28,7 +28,7 @@ Removes a directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## rmdir
@@ -43,7 +43,7 @@ Removes a directory. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:rmdir](arkts-corefile-fileio-rmdir-f.md#rmdir)
+**Substitutes:** [rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir)
 
 <!--Device-unnamed-declare function rmdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rmdir(path: string, callback: AsyncCallback<void>): void-End-->
 

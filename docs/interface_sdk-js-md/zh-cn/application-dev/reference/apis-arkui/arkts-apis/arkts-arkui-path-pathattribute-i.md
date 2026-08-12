@@ -2,7 +2,7 @@
 
 路径绘制组件属性，用于设置路径的相关属性。
 
-**继承/实现关系：** PathAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**继承/实现关系：** PathAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -96,7 +96,7 @@ Set Path options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | 否 | Path constructor options |
+| options | [PathOptions](arkts-arkui-path-pathoptions-i.md) | 否 | Path constructor options |
 
 **返回值：**
 

@@ -85,7 +85,7 @@ Creates an object that has the specified prototype, and that optionally contains
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | o | object \| null | Yes |
-| properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |
+| properties | [PropertyDescriptorMap](arkts-lib-es5-propertydescriptormap-i.md) & [ThisType](arkts-lib-es5-thistype-i.md)&lt;any&gt; | Yes |
 
 **Return value:**
 
@@ -108,7 +108,7 @@ Adds one or more properties to an object, and/or modifies attributes of existing
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | o | T | Yes |
-| properties | PropertyDescriptorMap & ThisType&lt;any&gt; | Yes |
+| properties | [PropertyDescriptorMap](arkts-lib-es5-propertydescriptormap-i.md) & [ThisType](arkts-lib-es5-thistype-i.md)&lt;any&gt; | Yes |
 
 **Return value:**
 
@@ -131,8 +131,8 @@ Adds a property to an object, or modifies attributes of an existing property.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | o | T | Yes |
-| p | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
-| attributes | [PropertyDescriptor](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-propertydescriptor-i.md) & ThisType&lt;any&gt; | Yes |
+| p | [PropertyKey](arkts-propertykey-t.md) | Yes |
+| attributes | [PropertyDescriptor](arkts-lib-es5-propertydescriptor-i.md) & [ThisType](arkts-lib-es5-thistype-i.md)&lt;any&gt; | Yes |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Prevents the modification of existing property attributes and values, and preven
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| f | T | Yes |
+| [f](../../apis-arkts/arkts-apis/arkts-arkts-float-c.md) | T | Yes |
 
 **Return value:**
 
@@ -221,13 +221,13 @@ Gets the own property descriptor of the specified object.An own property descrip
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | o | any | Yes |
-| p | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
+| p | [PropertyKey](arkts-propertykey-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PropertyDescriptor](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-propertydescriptor-i.md) |
+| [PropertyDescriptor](arkts-lib-es5-propertydescriptor-i.md) |
 
 ## getOwnPropertyNames
 

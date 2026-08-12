@@ -24,15 +24,15 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | accountId | number | 是 |
-| protocols | Array&lt;Protocol&gt; | 是 |
+| protocols | Array & lt;Protocol & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 
@@ -73,7 +73,7 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 > 1. 当传入SPP协议时，policy参数只能传入TransferPolicy.RECEIVE_SEND，否则会返回错误码9200012。
 > 
 > 2. 本接口与
-> [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-removedisallowedbluetoothprotocols-f.md#removedisallowedbluetoothprotocols)接口为重
+> [removeDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#removeDisallowedBluetoothProtocols)接口为重
 > 载接口。本接口增加了policy参数，用于按传输策略移除禁用配置。若同一协议通过两个接口分别配置了不同策略的禁用，调用本接口仅移除对应策略的禁用配置，其他策略的禁用配置仍生效。
 
 **起始版本：** 26.0.0
@@ -92,17 +92,17 @@ function removeDisallowedBluetoothProtocols(admin: Want, accountId: number, prot
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | accountId | number | 是 |
-| protocols | Array&lt;Protocol&gt; | 是 |
+| protocols | Array & lt;Protocol & gt; | 是 |
 | policy | [TransferPolicy](arkts-mdm-bluetoothmanager-transferpolicy-e.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

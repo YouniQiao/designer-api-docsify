@@ -46,7 +46,7 @@ Gets request headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the request headers |
+| Array&lt;[Header](arkts-arkweb-web-header-i.md)&gt; | Return the request headers |
 
 ## getRequestMethod
 

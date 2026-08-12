@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption
+**替代接口：** [ConfigOption](ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption)
 
 <!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
 
@@ -26,7 +26,7 @@ disable?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#disable
+**替代接口：** [disable](ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#disable)
 
 <!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
 
@@ -46,7 +46,7 @@ maxStorage?: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#maxStorage
+**替代接口：** [maxStorage](ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#maxStorage)
 
 <!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
 

@@ -11,7 +11,7 @@ Describes the SSAP service.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## properties

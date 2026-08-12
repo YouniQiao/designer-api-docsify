@@ -13,13 +13,13 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，参数id传入null或undefined时，可能会导致callback无法得到执行，建议使用
-> [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -33,7 +33,7 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 | --- | --- | --- |
 | id | string | 是 |
 | type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -65,13 +65,13 @@ function create(id: string, type: WindowType): Promise<Window>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow-1)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -90,7 +90,7 @@ function create(id: string, type: WindowType): Promise<Window>
 
 | 类型 |
 | --- |
-| Promise&lt;Window&gt; |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
 ## 示例
 
@@ -118,13 +118,13 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>-End-->
 
@@ -134,7 +134,7 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 | id | string | 是 |
 | type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 |
 
@@ -142,7 +142,7 @@ function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 
 | 类型 |
 | --- |
-| Promise&lt;Window&gt; |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
 ## 示例
 
@@ -171,13 +171,13 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)替代。
+> [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [window.createWindow](arkts-arkui-window-createwindow-f.md#createwindow)(config:
+**替代接口：** [createWindow](window.createWindow(config:)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void-End-->
 
@@ -187,10 +187,10 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 | id | string | 是 |
 | type | [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
 
 ## 示例
 

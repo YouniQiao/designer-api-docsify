@@ -13,7 +13,7 @@ Provide a DateTime formatting interface which could format DateTime to StyleStri
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -39,7 +39,7 @@ A constructor used to create a StyledDateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| SimpleDateTimeFormat | Yes | Indicates the date and time format object that used to format date. |
+| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Indicates the date and time format object that used to format date. |
 | options | [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No | Indicates the options used to format the date. |
 
 ## format
@@ -70,5 +70,5 @@ Formats a date as a rich text object.
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | Rich text object after formatting. |
 

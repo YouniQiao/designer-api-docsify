@@ -1,11 +1,11 @@
 # VibratorPatternBuilder
 
 提供添加长振、短振事件和生成VibratorPattern对象的方法。使用流程：先通过  
-[addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addcontinuousevent)或  
-[addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)添加振动事件，再通过  
-[build](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#build)方法生成VibratorPattern对象，最后将该对象作为  
-[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)的pattern参数传入  
-[vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)接口触发振动。当开发者需要通过灵活组合振动事件（长振和短振）构建自定义振动序列时使用此接口。适用于需要动态排列振动事件的交互反馈场景（如表情包拟真效果、游戏场景反馈），相比VibrateFromFile以文件描述符方式传递振动事件，VibratorPatternBuilder以振动事件数组形式传递，支持更灵活的振动事件排列组合。
+[addContinuousEvent](#addContinuousEvent)或  
+[addTransientEvent](#addTransientEvent)添加振动事件，再通过  
+[build](#build)方法生成VibratorPattern对象，最后将该对象作为  
+[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)的pattern参数传入  
+[vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)接口触发振动。当开发者需要通过灵活组合振动事件（长振和短振）构建自定义振动序列时使用此接口。适用于需要动态排列振动事件的交互反馈场景（如表情包拟真效果、游戏场景反馈），相比VibrateFromFile以文件描述符方式传递振动事件，VibratorPatternBuilder以振动事件数组形式传递，支持更灵活的振动事件排列组合。
 
 **起始版本：** 18
 
@@ -55,7 +55,7 @@ addContinuousEvent(time: int, duration: int, options?: ContinuousParam): Vibrato
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -143,8 +143,8 @@ ArkTS-Sta:
 addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder
 ```
 
-添加短振事件的方法, 添加后使用[build](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#build)方法生成  
-[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)对象。适用于点击、按键等短促振动反馈场景，返回VibratorPatternBuilder对象，支持链式调用继续添加振动事件。
+添加短振事件的方法, 添加后使用[build](#build)方法生成  
+[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md#VibratorPattern)对象。适用于点击、按键等短促振动反馈场景，返回VibratorPatternBuilder对象，支持链式调用继续添加振动事件。
 
 **起始版本：** 18
 
@@ -171,7 +171,7 @@ addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -225,11 +225,11 @@ try {
 build(): VibratorPattern
 ```
 
-构造组合短事件或长事件的振动序列的方法。适用于需要将自定义振动事件组合为振动序列后，通过[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)触发马达振动的场景。需先通过  
-[addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addcontinuousevent)或  
-[addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)添加振动事件后，再调用本方法生成VibratorPattern对象。返回VibratorPattern对象，包含振动序列的起始时间和振动事件数组。该对象可作为VibrateFromPattern的pattern参数传入  
-[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)接口触发振动。需先通过[addContinuousEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addcontinuousevent)或  
-[addTransientEvent](arkts-sensorservice-vibrator-vibratorpatternbuilder-c.md#addtransientevent)添加至少一个振动事件后调用本方法，否则生成的VibratorPattern为空序列。
+构造组合短事件或长事件的振动序列的方法。适用于需要将自定义振动事件组合为振动序列后，通过[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)触发马达振动的场景。需先通过  
+[addContinuousEvent](#addContinuousEvent)或  
+[addTransientEvent](#addTransientEvent)添加振动事件后，再调用本方法生成VibratorPattern对象。返回VibratorPattern对象，包含振动序列的起始时间和振动事件数组。该对象可作为VibrateFromPattern的pattern参数传入  
+[startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)接口触发振动。需先通过[addContinuousEvent](#addContinuousEvent)或  
+[addTransientEvent](#addTransientEvent)添加至少一个振动事件后调用本方法，否则生成的VibratorPattern为空序列。
 
 **起始版本：** 18
 

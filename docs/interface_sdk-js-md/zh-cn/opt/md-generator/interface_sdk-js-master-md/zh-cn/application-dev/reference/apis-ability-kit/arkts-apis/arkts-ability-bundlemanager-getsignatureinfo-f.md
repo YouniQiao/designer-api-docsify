@@ -6,7 +6,7 @@
 function getSignatureInfo(uid: number): SignatureInfo
 ```
 
-根据给定的uid获取对应应用的[签名信息](arkts-ability-bundlemanager-signatureinfo-t.md)。
+根据给定的uid获取对应应用的[签名信息](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo)。
 
 **起始版本：** 18
 
@@ -32,8 +32,8 @@ function getSignatureInfo(uid: number): SignatureInfo
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-指定的uid无效) |
 
 ## 示例
 

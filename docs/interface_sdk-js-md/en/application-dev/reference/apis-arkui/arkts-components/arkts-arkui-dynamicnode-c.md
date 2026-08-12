@@ -34,7 +34,7 @@ Invoked when data is moved during drag and drop sorting.This callback is only ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OnMoveHandler&gt; | Yes |  |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -66,7 +66,7 @@ Set the move action.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OnMoveHandler&gt; | Yes |  |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnMoveHandler](arkts-arkui-onmovehandler-t.md)&gt; | Yes |  |
 | eventHandler | [ItemDragEventHandler](arkts-arkui-itemdrageventhandler-i.md) | Yes |  |
 
 **Return value:**

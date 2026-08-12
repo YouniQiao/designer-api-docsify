@@ -18,7 +18,7 @@ types: ImageAnalyzerType[]
 
 Image AI analysis type.
 
-**Type:** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
+**Type:** [ImageAnalyzerType](arkts-arkui-imagecommon-imageanalyzertype-e.md)[]
 
 **Since:** 23
 

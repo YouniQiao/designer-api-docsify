@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createHtmlData
@@ -18,7 +18,7 @@ Creates a **PasteData** object of the HTML type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)(mimeType:
+**Substitutes:** [createData](pasteboard.createData(mimeType:)
 
 <!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData--><!--Device-pasteboard-function createHtmlData(htmlText: string): PasteData-End-->
 
@@ -28,7 +28,7 @@ Creates a **PasteData** object of the HTML type.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| htmlText | string | Yes |
+| [htmlText](arkts-basicservices-pasteboard-pastedatarecord-i.md) | string | Yes |
 
 **Return value:**
 

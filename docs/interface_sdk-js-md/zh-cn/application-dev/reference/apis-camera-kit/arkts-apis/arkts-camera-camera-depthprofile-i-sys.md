@@ -1,6 +1,6 @@
 # DepthProfile（系统接口）
 
-Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md).
+Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md#Profile).
 
 **起始版本：** 13
 
@@ -40,7 +40,7 @@ readonly format: CameraFormat
 
 Camera output format.
 
-**类型：** [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md)
+**类型：** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
 **起始版本：** 13
 
@@ -60,7 +60,7 @@ readonly size: Size
 
 Depth data resolution.
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 13
 

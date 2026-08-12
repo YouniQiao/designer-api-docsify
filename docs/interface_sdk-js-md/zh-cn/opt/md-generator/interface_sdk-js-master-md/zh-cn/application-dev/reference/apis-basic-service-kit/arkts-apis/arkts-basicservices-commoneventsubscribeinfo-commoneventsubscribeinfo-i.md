@@ -72,7 +72,7 @@ publisherBundleName?: string
 publisherDeviceId?: string
 ```
 
-表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。通过[@ohos.deviceInfo](arkts-deviceinfo.md)获取udid，作为发布者的设备ID。预留能力，暂不支持。
+表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。通过[@ohos.deviceInfo](arkts-deviceinfo.md#deviceInfo)获取udid，作为发布者的设备ID。预留能力，暂不支持。
 
 **类型：** string
 
@@ -109,7 +109,7 @@ userId?: number
 ```
 
 表示用户ID，用于限制订阅者只接收指定用户ID相关的公共事件。此参数是可选的，默认值为当前用户的ID。如果指定了此参数，则该值必须是系统中现有的用户ID。通过  
-[getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取系统用户ID，作为发布者的用户ID。
+[getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId)获取系统用户ID，作为发布者的用户ID。
 
 **类型：** number
 

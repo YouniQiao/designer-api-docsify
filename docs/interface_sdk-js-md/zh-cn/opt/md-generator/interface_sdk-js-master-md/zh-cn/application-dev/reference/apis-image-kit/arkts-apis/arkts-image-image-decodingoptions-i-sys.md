@@ -16,7 +16,7 @@ resolutionQuality?: ResolutionQuality
 
 画质效果等级。
 
-**类型：** [ResolutionQuality](../../apis-arkui/arkts-components/arkts-arkui-resolutionquality-t-sys.md)
+**类型：** ResolutionQuality
 
 **起始版本：** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## connectNative
@@ -42,7 +42,7 @@ Connects the current ability to the specified web native message extension abili
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 

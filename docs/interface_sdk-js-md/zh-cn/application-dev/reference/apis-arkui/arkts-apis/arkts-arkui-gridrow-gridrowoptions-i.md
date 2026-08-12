@@ -38,7 +38,7 @@ columns?: int | GridRowColumnOption
 
 设置布局列数。
 
-**类型：** int \| GridRowColumnOption
+**类型：** int \| [GridRowColumnOption](arkts-arkui-gridrow-gridrowcolumnoption-i.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ gutter?: Length | GutterOption
 
 栅格布局间距。
 
-**类型：** [Length](arkts-arkui-length-t.md) \| GutterOption
+**类型：** [Length](arkts-arkui-length-t.md) \| [GutterOption](arkts-arkui-gridrow-gutteroption-i.md)
 
 **起始版本：** 23
 

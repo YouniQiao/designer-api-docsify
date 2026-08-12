@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.ConnectivityKit';
+import { socket } from '@kit.ConnectivityKit';
 ```
 
 ## getMaxTransmitDataSize
@@ -26,7 +26,7 @@ Obtain the maximum data size that can be transmitted through this socket channel
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the client socket ID, returned by {@link sppAccept} or {@link sppConnect}. |
+| clientSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-socket-sppconnect-f.md#sppConnect). |
 
 **Return value:**
 

@@ -58,7 +58,7 @@ targetAbilityInfos: Array<DialogAbilityInfo>
 
 表示目标组件信息列表。
 
-**类型：** Array&lt;DialogAbilityInfo&gt;
+**类型：** Array&lt;[DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)&gt;
 
 **起始版本：** 11
 

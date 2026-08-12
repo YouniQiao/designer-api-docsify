@@ -44,7 +44,7 @@ Gets request headers.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Header&gt; |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; |
 
 ## getRequestMethod
 

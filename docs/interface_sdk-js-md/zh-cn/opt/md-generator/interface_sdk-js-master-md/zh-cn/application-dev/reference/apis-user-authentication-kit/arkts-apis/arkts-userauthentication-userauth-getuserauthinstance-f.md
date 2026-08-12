@@ -6,7 +6,7 @@
 function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): UserAuthInstance
 ```
 
-获取[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象，执行用户身份认证，并支持使用统一用户身份认证控件。该接口用于创建一个用户认证实例，配置认证参数和界面参数后，可通过返回的实例对象启动认证、订阅认证结果等。
+获取[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#UserAuthInstance)对象，执行用户身份认证，并支持使用统一用户身份认证控件。该接口用于创建一个用户认证实例，配置认证参数和界面参数后，可通过返回的实例对象启动认证、订阅认证结果等。
 
 > **说明：**
 > 
@@ -24,8 +24,8 @@ function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): Us
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | 是 |
-| widgetParam | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | 是 |
+| [authParam](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | 是 |
+| [widgetParam](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) | 是 |
 
 **返回值：**
 
@@ -37,10 +37,10 @@ function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): Us
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-认证信任等级不支持) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 

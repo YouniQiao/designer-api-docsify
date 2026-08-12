@@ -20,13 +20,13 @@ function isSeniorModeEnabled(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
+| [9300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
 
 ## 示例
 

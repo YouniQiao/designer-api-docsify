@@ -8,7 +8,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult
+**替代接口：** [PhotoSelectResult](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult)
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 
@@ -30,7 +30,7 @@ isOriginalPhoto: boolean
 
 **废弃版本：** 18
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#isOriginalPhoto
+**替代接口：** [isOriginalPhoto](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#isOriginalPhoto)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -55,7 +55,7 @@ photoUris: Array<string>
 
 **废弃版本：** 18
 
-**替代接口：** @ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#photoUris
+**替代接口：** [photoUris](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#photoUris)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

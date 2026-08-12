@@ -13,7 +13,7 @@ Declare ProgressButtonV2 Color.
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from 'kits/@kit.ArkUI';
+import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -48,7 +48,7 @@ backgroundColor?: ColorMetrics
 
 Set background color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -68,7 +68,7 @@ borderColor?: ColorMetrics
 
 Set border color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -88,7 +88,7 @@ progressColor?: ColorMetrics
 
 Set progress color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -108,7 +108,7 @@ textColor?: ColorMetrics
 
 Set text color of the ProgressButtonV2.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 

@@ -2,7 +2,7 @@
 
 Defines the Extendable Button.
 
-**继承/实现关系：** ExtendableButton implements [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md/arkts-arkui-button-attribute.md)
+**继承/实现关系：** ExtendableButton implements [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md#ButtonAttribute)
 
 **起始版本：** 26.0.0
 
@@ -41,8 +41,8 @@ Constructor of Extendable Button.
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
 | label | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |  |
-| options | [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 否 | Button Component Options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | subcomponent trailing closure |
+| options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 否 | Button Component Options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | subcomponent trailing closure |
 
 **返回值：**
 
@@ -77,8 +77,8 @@ Constructor of Extendable Button.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| options | [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -114,9 +114,9 @@ Entry of Extendable Button.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setButtonOptions
 
@@ -144,7 +144,7 @@ Set the Button Options.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | label | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 |  |
-| options | [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 否 |  |
+| options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -174,7 +174,7 @@ Set the Button Options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 否 |  |
+| options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 否 |  |
 
 **返回值：**
 

@@ -18,7 +18,7 @@ main: string | Resource
 
 设置主标题。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ sub: string | Resource
 
 设置副标题。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

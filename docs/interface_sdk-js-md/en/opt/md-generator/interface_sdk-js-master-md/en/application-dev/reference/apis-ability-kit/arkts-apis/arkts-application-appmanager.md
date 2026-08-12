@@ -6,7 +6,7 @@ The appManager module provides APIs for application management. For example, you
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager
+**Substitutes:** [appManager/appManager](ohos.app.ability.appManager/appManager)
 
 <!--Device-unnamed-declare namespace appManager--><!--Device-unnamed-declare namespace appManager-End-->
 

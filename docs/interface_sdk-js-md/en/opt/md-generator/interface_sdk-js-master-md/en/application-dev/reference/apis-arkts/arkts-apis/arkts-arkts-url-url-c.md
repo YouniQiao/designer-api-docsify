@@ -11,7 +11,7 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
+import { url } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -26,7 +26,7 @@ URL constructor, which is used to instantiate a URL object.url: Absolute or rela
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.url.URL.parseURL
+**Substitutes:** [parseURL](#parseURL)
 
 <!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
@@ -36,7 +36,7 @@ URL constructor, which is used to instantiate a URL object.url: Absolute or rela
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| url | string | Yes |
+| [url](arkts-url.md) | string | Yes |
 | base | string \| [URL](arkts-arkts-url-url-c.md) | No |
 
 ## constructor
@@ -75,7 +75,7 @@ Parses a URL.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| url | string | Yes |
+| [url](arkts-url.md) | string | Yes |
 | base | string \| [URL](arkts-arkts-url-url-c.md) | No |
 
 **Return value:**
@@ -88,7 +88,7 @@ Parses a URL.
 
 | Error Code ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 
@@ -377,7 +377,7 @@ Gets the URLSearchParams object that represents the URL query parameter.This pro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.url.URL.params
+**Substitutes:** [params](ohos.url.URL.params)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

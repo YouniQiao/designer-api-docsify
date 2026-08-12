@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## isDesktopLyricSupported
@@ -26,13 +26,13 @@ Whether desktop lyric feature is supported.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## Examples
 

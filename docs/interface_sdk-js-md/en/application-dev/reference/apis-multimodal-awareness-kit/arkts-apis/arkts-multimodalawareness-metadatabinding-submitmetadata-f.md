@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## submitMetadata
@@ -34,7 +34,7 @@ Transfers the metadata to be encoded to the MSDP. The MSDP determines whether to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 
 ## Examples
 

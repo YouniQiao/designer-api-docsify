@@ -19,7 +19,7 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 表示校验X.509证书链。使用Callback异步回调。
 
 &lt;br&gt;由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的  
-[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见  
+[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkValidityWithDate)方法进行检查。详见  
 [证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications)。
 
 **起始版本：** 9
@@ -43,16 +43,16 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | 证书签名验证错误。 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | 证书的密钥用途不含证书签名。 |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | 证书的密钥用途不含数字签名。 |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | 证书过期。 |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | 无法获取证书的颁发者。 |
+| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19030002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030002-证书签名验证错误) | 证书签名验证错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19030003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
+| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19030006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | 证书的密钥用途不含证书签名。 |
+| [19030007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | 证书的密钥用途不含数字签名。 |
+| [19030004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-证书过期) | 证书过期。 |
+| [19030005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-无法获取证书的颁发者) | 无法获取证书的颁发者。 |
 
 ## 示例
 
@@ -156,7 +156,7 @@ validate(certChain: CertChainData): Promise<void>
 表示校验X.509证书链。使用Promise方式返回结果。
 
 &lt;br&gt;由于端侧系统时间不可信，证书链校验不包含对证书有效时间的校验。如果需要检查证书的时间有效性，可使用X.509证书的  
-[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkvaliditywithdate)方法进行检查。详见  
+[checkValidityWithDate](arkts-devicecertificate-cert-x509cert-i.md#checkValidityWithDate)方法进行检查。详见  
 [证书规格](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications)。
 
 **起始版本：** 9
@@ -185,16 +185,16 @@ validate(certChain: CertChainData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | 证书签名验证错误。 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | 证书的密钥用途不含证书签名。 |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | 证书的密钥用途不含数字签名。 |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | 证书过期。 |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | 无法获取证书的颁发者。 |
+| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19030002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030002-证书签名验证错误) | 证书签名验证错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19030003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
+| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19030006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | 证书的密钥用途不含证书签名。 |
+| [19030007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | 证书的密钥用途不含数字签名。 |
+| [19030004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-证书过期) | 证书过期。 |
+| [19030005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-无法获取证书的颁发者) | 无法获取证书的颁发者。 |
 
 ## 示例
 
@@ -411,38 +411,38 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CertValidationResult&gt; | Promise对象，返回验证结果。 |
+| Promise&lt;[CertValidationResult](arkts-devicecertificate-cert-certvalidationresult-i.md)&gt; | Promise对象，返回验证结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030002](../errorcode-cert.md#19030002-证书签名验证错误) | 证书签名验证错误。 |
-| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
-| [19030006](../errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | 证书的密钥用途不含证书签名。 |
-| [19030007](../errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | 证书的密钥用途不含数字签名。 |
-| [19030004](../errorcode-cert.md#19030004-证书过期) | 证书过期。 |
-| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) | 无法获取证书的颁发者。 |
-| [19030010](../errorcode-cert.md#19030010-证书已被吊销) | 证书已被吊销。 |
-| [19030011](../errorcode-cert.md#19030011-未知的关键扩展) | 未知的关键扩展。 |
-| [19030009](../errorcode-cert.md#19030009-证书不受信任) | 证书不受信任。 |
-| [19030014](../errorcode-cert.md#19030014-密钥用途不匹配) | 证书密钥用途不匹配。 |
-| [19030015](../errorcode-cert.md#19030015-无法获取证书吊销列表) | 无法获取证书吊销列表。 |
-| [19030012](../errorcode-cert.md#19030012-主机名不匹配) | 证书主机名不匹配。 |
-| [19030013](../errorcode-cert.md#19030013-邮箱地址不匹配) | 证书邮箱地址不匹配。 |
-| [19030018](../errorcode-cert.md#19030018-证书吊销列表签名验证失败) | 证书吊销列表签名验证失败。 |
-| [19030019](../errorcode-cert.md#19030019-无法获取证书吊销列表颁发者) | 无法获取证书吊销列表颁发者。 |
-| [19030016](../errorcode-cert.md#19030016-证书吊销列表尚未生效) | 证书吊销列表尚未生效。 |
-| [19030017](../errorcode-cert.md#19030017-证书吊销列表已过期) | 证书吊销列表已过期。 |
-| [19030022](../errorcode-cert.md#19030022-ocsp签名验证失败) | OCSP签名验证失败。 |
-| [19030023](../errorcode-cert.md#19030023-ocsp证书状态未知) | OCSP证书状态未知。 |
-| [19030020](../errorcode-cert.md#19030020-无法获取在线证书状态协议ocsp响应) | 无法获取在线证书状态协议（OCSP）响应。 |
-| [19030021](../errorcode-cert.md#19030021-无效的ocsp响应) | OCSP响应无效。 |
-| [19030024](../errorcode-cert.md#19030024-网络连接超时) | 网络连接超时。 |
+| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。 |
+| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030002-证书签名验证错误) | 证书签名验证错误。 |
+| [19030003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
+| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19030006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030006-证书的密钥用途不含证书签名) | 证书的密钥用途不含证书签名。 |
+| [19030007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030007-证书的密钥用途不含数字签名) | 证书的密钥用途不含数字签名。 |
+| [19030004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-证书过期) | 证书过期。 |
+| [19030005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-无法获取证书的颁发者) | 无法获取证书的颁发者。 |
+| [19030010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030010-证书已被吊销) | 证书已被吊销。 |
+| [19030011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030011-未知的关键扩展) | 未知的关键扩展。 |
+| [19030009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030009-证书不受信任) | 证书不受信任。 |
+| [19030014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030014-密钥用途不匹配) | 证书密钥用途不匹配。 |
+| [19030015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030015-无法获取证书吊销列表) | 无法获取证书吊销列表。 |
+| [19030012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030012-主机名不匹配) | 证书主机名不匹配。 |
+| [19030013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030013-邮箱地址不匹配) | 证书邮箱地址不匹配。 |
+| [19030018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030018-证书吊销列表签名验证失败) | 证书吊销列表签名验证失败。 |
+| [19030019](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030019-无法获取证书吊销列表颁发者) | 无法获取证书吊销列表颁发者。 |
+| [19030016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030016-证书吊销列表尚未生效) | 证书吊销列表尚未生效。 |
+| [19030017](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030017-证书吊销列表已过期) | 证书吊销列表已过期。 |
+| [19030022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030022-ocsp签名验证失败) | OCSP签名验证失败。 |
+| [19030023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030023-ocsp证书状态未知) | OCSP证书状态未知。 |
+| [19030020](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030020-无法获取在线证书状态协议ocsp响应) | 无法获取在线证书状态协议（OCSP）响应。 |
+| [19030021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030021-无效的ocsp响应) | OCSP响应无效。 |
+| [19030024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030024-网络连接超时) | 网络连接超时。 |
 
 ## 示例
 

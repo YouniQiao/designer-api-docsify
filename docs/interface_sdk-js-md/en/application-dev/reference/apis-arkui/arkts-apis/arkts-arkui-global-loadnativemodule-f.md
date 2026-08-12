@@ -46,6 +46,6 @@ The **loadNativeModule** API is used to synchronously and dynamically load a nat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
-| [10200301](../../apis-arkts/errorcode-utils.md#10200301-failed-to-load-the-native-module) | Loading native module failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [10200301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200301-failed-to-load-the-native-module) | Loading native module failed. |
 

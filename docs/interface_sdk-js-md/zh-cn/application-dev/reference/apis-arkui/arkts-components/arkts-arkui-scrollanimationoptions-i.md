@@ -44,7 +44,7 @@ curve?: Curve | ICurve
 
 滚动曲线。
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| ICurve
+**类型：** Curve \| ICurve
 
 **默认值：** Curve.Ease
 

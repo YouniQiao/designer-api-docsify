@@ -2,7 +2,7 @@
 
 The definition of compilation.
 
-**Inheritance/Implementation:** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
+**Inheritance/Implementation:** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ The definition of compilation.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## hasMoreData

@@ -6,7 +6,7 @@ Provides APIs for obtaining locale information.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
+**Substitutes:** [Locale]]([Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale))
 
 <!--Device-intl-export class Locale--><!--Device-intl-export class Locale-End-->
 
@@ -15,7 +15,7 @@ Provides APIs for obtaining locale information.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ Creates a **Locale** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
+**Substitutes:** [constructor]]([Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -63,7 +63,7 @@ Creates a **Locale** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
+**Substitutes:** [constructor]]([Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +78,7 @@ Creates a **Locale** object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | locale | string | Yes |
-| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | No |
+| options | [LocaleOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-localeoptions-i.md) | No |
 
 ## Examples
 
@@ -102,7 +102,7 @@ Maximizes locale information by supplementing the missing script and country/reg
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.Locale.maximize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize)
+**Substitutes:** [maximize]]([Intl.Locale.maximize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -148,7 +148,7 @@ Minimizes locale information by removing the script and country/region informati
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.Locale.minimize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize)
+**Substitutes:** [minimize]]([Intl.Locale.minimize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -194,7 +194,7 @@ Obtains the string that represents a **Locale** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.Locale.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString)
+**Substitutes:** [toString]]([Intl.Locale.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -234,7 +234,7 @@ Locale information, which consists of the language, script, and country/region, 
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.baseName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName)
+**Substitutes:** [baseName]]([Intl.LocaleOptions.baseName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -262,7 +262,7 @@ Calendar for the locale. The value can be:The value can be any of the following:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
+**Substitutes:** [calendar]]([Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -289,7 +289,7 @@ Whether case is taken into account for the locale's collation rules. The value c
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst)
+**Substitutes:** [caseFirst]]([Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -329,7 +329,7 @@ Collation rules for the locale. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
+**Substitutes:** [collation]]([Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -353,7 +353,7 @@ Time system for the locale. The value can be:"h11", "h12", "h23", or "h24".For d
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
+**Substitutes:** [hourCycle]]([Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -377,7 +377,7 @@ Language associated with the locale, for example, **zh**. The value complies wit
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language)
+**Substitutes:** [language]]([Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -408,7 +408,7 @@ Numbering system for the locale. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem)
+**Substitutes:** [numberingSystem]]([Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -432,7 +432,7 @@ Whether to use special sorting rules for digits. The value **true** means to use
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric)
+**Substitutes:** [numeric]]([Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -456,7 +456,7 @@ Country/region associated with the locale, for example, **CN**. The value compli
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region)
+**Substitutes:** [region]]([Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -480,7 +480,7 @@ Script type of the language, for example, **Hans**. The value complies with the 
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.script](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script)
+**Substitutes:** [script]]([Intl.LocaleOptions.script](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

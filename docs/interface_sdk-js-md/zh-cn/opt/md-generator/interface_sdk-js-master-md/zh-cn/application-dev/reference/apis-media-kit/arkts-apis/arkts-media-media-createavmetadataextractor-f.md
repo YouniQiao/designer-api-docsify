@@ -18,13 +18,13 @@ function createAVMetadataExtractor(): Promise<AVMetadataExtractor>
 
 | 类型 |
 | --- |
-| Promise&lt;AVMetadataExtractor&gt; |
+| Promise&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 
@@ -63,13 +63,13 @@ function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadataExtractor&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 

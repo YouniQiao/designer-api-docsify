@@ -2,7 +2,7 @@
 
 定义 ReactiveComponentContent
 
-**继承/实现关系：** ReactiveComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
+**继承/实现关系：** ReactiveComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md#ComponentContentBase)
 
 **起始版本：** 26.0.0
 
@@ -35,7 +35,7 @@ constructor(uiContext: UIContext, builder: CustomBuilder, options?: BuildOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 用于创建 ReactiveComponentContent 的 UIContext对象 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 | 将被调用来构建 ReactiveComponentContent 的builder。 |
+| builder | CustomBuilder | 是 | 将被调用来构建 ReactiveComponentContent 的builder。 |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 否 | 构建时要使用的选项。 |
 
 ## dispose

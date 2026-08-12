@@ -1,9 +1,9 @@
 # FontCollection
 
-Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance (  
-[getGlobalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getglobalinstance)) and local instances (  
-[getLocalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getlocalinstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through  
-[loadFontSync](arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) or [loadFont](arkts-arkgraphics2d-text-fontcollection-c.md#loadfont).
+Represents a font collection, which manages the font resources required for text typesetting. FontCollection provides font matching and glyph lookup capabilities for [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and serves as a fundamental component of the text typesetting pipeline. It provides a global instance (  
+[getGlobalInstance](#getGlobalInstance)) and local instances (  
+[getLocalInstance](#getLocalInstance)). Fonts loaded by the global instance are shared within the app, making it suitable for common app scenarios. Local instances are independent of each other, and fonts loaded by a local instance take effect only for that instance without affecting others, making them recommended for widget scenarios. Custom fonts can be loaded through  
+[loadFontSync](#loadFontSync) or [loadFont](#loadFont).
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Represents a font collection, which manages the font resources required for text
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## clearCaches
@@ -135,7 +135,7 @@ let fontCollection = text.FontCollection.getLocalInstance();
 loadFont(name: string, path: string | Resource): Promise<void>
 ```
 
-Loads the custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies**in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF and OTF.
+Loads the custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies**in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF and OTF.
 
 **Since:** 18
 
@@ -158,13 +158,13 @@ Loads the custom font. This API uses a promise to return the result. In this API
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -200,7 +200,7 @@ loadFontSync(name: string, path: string | Resource): void
 ```
 
 Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in  
-**[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF and OTF.
+**[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF and OTF.
 
 **Since:** 12
 
@@ -262,7 +262,7 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): vo
 ```
 
 Loads a custom font. This API returns the result synchronously. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies** in  
-**[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF, OTF, and TTC.
+**[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF, OTF, and TTC.
 
 **Since:** 23
 
@@ -286,14 +286,14 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 
 | Error Code ID |
 | --- |
-| [25900008](../errorcode-drawing.md#25900008-file-damaged) |
-| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) |
-| [25900002](../errorcode-drawing.md#25900002-file-not-found) |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
-| [25900007](../errorcode-drawing.md#25900007-empty-file) |
-| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) |
-| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) |
-| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) |
+| [25900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900008-file-damaged) |
+| [25900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900003-failed-to-open-the-file) |
+| [25900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900002-file-not-found) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900007-empty-file) |
+| [25900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900006-failed-to-read-the-file) |
+| [25900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) |
+| [25900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900004-failed-to-locate-the-file) |
 
 ## Examples
 
@@ -339,7 +339,7 @@ struct Index {
 loadFontWithCheck(name: string, path: string | Resource, index?: number): Promise<void>
 ```
 
-Loads a custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies**in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)**. The supported font file formats are TTF, OTF, and TTC.
+Loads a custom font. This API uses a promise to return the result. In this API, **name** specifies the alias of the font, and the custom font effect can be displayed only when the value of **name** is set in **fontFamilies**in **[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)**. The supported font file formats are TTF, OTF, and TTC.
 
 **Since:** 23
 
@@ -363,20 +363,20 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [25900008](../errorcode-drawing.md#25900008-file-damaged) |
-| [25900003](../errorcode-drawing.md#25900003-failed-to-open-the-file) |
-| [25900002](../errorcode-drawing.md#25900002-file-not-found) |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
-| [25900007](../errorcode-drawing.md#25900007-empty-file) |
-| [25900006](../errorcode-drawing.md#25900006-failed-to-read-the-file) |
-| [25900005](../errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) |
-| [25900004](../errorcode-drawing.md#25900004-failed-to-locate-the-file) |
+| [25900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900008-file-damaged) |
+| [25900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900003-failed-to-open-the-file) |
+| [25900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900002-file-not-found) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900007-empty-file) |
+| [25900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900006-failed-to-read-the-file) |
+| [25900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900005-failed-to-obtain-the-file-size) |
+| [25900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900004-failed-to-locate-the-file) |
 
 ## Examples
 
@@ -502,7 +502,7 @@ missing glyphs).
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

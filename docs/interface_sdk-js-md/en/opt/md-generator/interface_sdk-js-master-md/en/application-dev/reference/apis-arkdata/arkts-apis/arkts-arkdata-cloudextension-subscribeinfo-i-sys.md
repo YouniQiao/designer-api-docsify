@@ -13,7 +13,7 @@ Represents the subscription information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## expirationTime
@@ -42,7 +42,7 @@ subscribe: Record<string, Array<SubscribeId>>
 
 Subscription information.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;SubscribeId&gt;&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;[SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md)&gt;&gt;
 
 **Since:** 11
 

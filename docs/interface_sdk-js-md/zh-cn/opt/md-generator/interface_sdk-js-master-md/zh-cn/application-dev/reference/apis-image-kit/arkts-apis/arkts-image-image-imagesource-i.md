@@ -2,11 +2,11 @@
 
 ImageSource类，用于获取图片相关信息。
 
-在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
+在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)构建一个ImageSource实例。
 
 ImageSource的所有方法均不支持并发调用。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -34,14 +34,14 @@ createImageRawData(): Promise<ImageRawData>
 
 | 类型 |
 | --- |
-| Promise&lt;ImageRawData&gt; |
+| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
 
 ## createPicture
 
@@ -71,15 +71,15 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 
 | 类型 |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) |
 
 ## createPictureAtIndex
 
@@ -113,17 +113,17 @@ createPictureAtIndex(index: number): Promise<Picture>
 
 | 类型 |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) |
 
 ## createPixelMap
 
@@ -133,7 +133,7 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 通过图片解码参数创建PixelMap对象。使用Promise异步回调。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -164,7 +164,7 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## createPixelMap
 
@@ -174,7 +174,7 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 通过默认参数创建PixelMap对象。使用callback异步回调。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -209,7 +209,7 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 
 通过图片解码参数创建PixelMap对象。使用callback异步回调。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -274,25 +274,25 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; |
+| Promise & lt;Array & lt;PixelMap & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-共享内存数据异常) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) |
+| [62980109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-裁剪错误) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980174](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-dma内存数据异常) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
 
 ## createPixelMapList
 
@@ -330,19 +330,19 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 | 错误码ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-共享内存数据异常) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) |
+| [62980109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-裁剪错误) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980174](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-dma内存数据异常) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
 
 ## createPixelMapList
 
@@ -381,19 +381,19 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 
 | 错误码ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-共享内存数据异常) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) |
+| [62980109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-裁剪错误) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980174](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-dma内存数据异常) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
 
 ## createPixelMapSync
 
@@ -407,7 +407,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createPixelMapUsingAllocatorSync)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -431,7 +431,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 ## createPixelMapUsingAllocator
 
@@ -467,20 +467,20 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
+| [7700302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-内存分配失败) |
+| [7700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-不支持的内存分配类型) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -516,20 +516,20 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
+| [7700302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-内存分配失败) |
+| [7700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-不支持的内存分配类型) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) |
 
 ## createThumbnail
 
@@ -569,18 +569,18 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap \| undefined&gt; |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700305](../errorcode-image.md#7700305-缩略图生成失败) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700204](../errorcode-image.md#7700204-无效参数) |
-| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-缩略图生成失败) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) |
+| [7700303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据) |
 
 ## createThumbnailSync
 
@@ -588,7 +588,7 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 ```
 
-通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md)对象。
+通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md#PixelMap)对象。
 
 当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。
 
@@ -621,18 +621,18 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700103](../errorcode-image.md#7700103-图片太大) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700305](../errorcode-image.md#7700305-缩略图生成失败) |
-| [7700301](../errorcode-image.md#7700301-解码失败) |
-| [7700204](../errorcode-image.md#7700204-无效参数) |
-| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-缩略图生成失败) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) |
+| [7700303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据) |
 
 ## getDelayTimeList
 
@@ -652,20 +652,20 @@ getDelayTimeList(): Promise<Array<number>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980149](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-图片参数无效) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) |
 
 ## getDelayTimeList
 
@@ -691,14 +691,14 @@ getDelayTimeList(callback: AsyncCallback<Array<number>>): void
 
 | 错误码ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980149](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-图片参数无效) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) |
 
 ## getDisposalTypeList
 
@@ -718,16 +718,16 @@ getDisposalTypeList(): Promise<Array<number>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
+| [62980149](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-图片参数无效) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
 
 ## getFrameCount
 
@@ -747,21 +747,21 @@ getFrameCount(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-图片格式不匹配) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
 
 ## getFrameCount
 
@@ -787,15 +787,15 @@ getFrameCount(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-图片格式不匹配) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
 
 ## getImageInfo
 
@@ -820,7 +820,7 @@ getImageInfo(index: number, callback: AsyncCallback<ImageInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | index | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
 ## getImageInfo
 
@@ -844,7 +844,7 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
 ## getImageInfo
 
@@ -874,7 +874,7 @@ getImageInfo(index?: number): Promise<ImageInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;ImageInfo&gt; |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
 ## getImageInfoSync
 
@@ -927,23 +927,23 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | 是 |
+| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; |
+| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980116](../errorcode-image.md#62980116-解码失败) |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) |
 
 ## getImageProperty
 
@@ -972,24 +972,24 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-图片格式不匹配) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980135](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) |
+| [62980123](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) |
 
 ## getImageProperty
 
@@ -1004,14 +1004,14 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 11废弃，建议使用
-> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> [getImageProperty](#getImageProperty)代
 > 替。
 
 **起始版本：** 7
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**替代接口：** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1028,7 +1028,7 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getImageProperty
 
@@ -1043,14 +1043,14 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 11废弃，建议使用
-> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> [getImageProperty](#getImageProperty)代
 > 替。
 
 **起始版本：** 7
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**替代接口：** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1076,14 +1076,14 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 11废弃，建议使用
-> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> [getImageProperty](#getImageProperty)代
 > 替。
 
 **起始版本：** 7
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**替代接口：** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1136,9 +1136,9 @@ getImagePropertySync(key: PropertyKey): string
 
 | 错误码ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) |
 
 ## modifyImageProperties
 
@@ -1167,22 +1167,22 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| records | Record&lt;PropertyKey, string \| null&gt; | 是 |
+| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980146](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-图片属性值写入文件失败) |
+| [62980135](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) |
+| [62980123](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1194,11 +1194,11 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 > **说明：**
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例。
 > 
 > - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> [modifyImageProperties](#modifyImageProperties)
 > 更高效。
 > 
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
@@ -1215,21 +1215,21 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700304](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-图片信息写入文件失败) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) |
 
 ## modifyImageProperty
 
@@ -1265,17 +1265,17 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) |
-| [62980133](../errorcode-image.md#62980133-图片属性赋值超出范围) |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980146](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-图片属性值写入文件失败) |
+| [62980133](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980133-图片属性赋值超出范围) |
+| [62980135](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) |
+| [62980123](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) |
 
 ## modifyImageProperty
 
@@ -1293,7 +1293,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 > ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
 > - 从API version 9开始支持，从API version 11废弃，建议使用
-> [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)代替。
+> [modifyImageProperty](#modifyImageProperty)代替。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1301,7 +1301,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(key:
+**替代接口：** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1318,7 +1318,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## modifyImageProperty
 
@@ -1336,7 +1336,7 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 > ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
 > - 从API version 9开始支持，从API version 11废弃，建议使用
-> [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)代替。
+> [modifyImageProperty](#modifyImageProperty)代替。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1344,7 +1344,7 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(key:
+**替代接口：** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1370,7 +1370,7 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 
 > **说明：**
 > 
-> 读取DNG格式图片时，该接口对部分propertyKeys有特殊处理。以下字段的字符串取值请参考[PropertyKey](arkts-image-image-propertykey-e.md)中的值：
+> 读取DNG格式图片时，该接口对部分propertyKeys有特殊处理。以下字段的字符串取值请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)中的值：
 > 
 > - NewSubfileType、ImageWidth、ImageLength、DefaultCropSize、Orientation、Compression、PhotometricInterpretation、
 > PlanarConfiguration、RowsPerStrip、StripOffsets、StripByteCounts、SamplesPerPixel、BitsPerSample、YCbCrCoefficients、
@@ -1388,22 +1388,22 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 > 
 > - ISOSpeedRatings字段：当该标签值为0或65535时，会优先使用推荐曝光指数，若不存在则依次使用标准输出灵敏度、ISO速度、曝光指数。
 > 
-> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。
+> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md#DngPropertyKey)。
 > 
-> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。
 > 
 > - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
 > [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
 > 
-> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。
 
 **起始版本：** 23
 
@@ -1424,15 +1424,15 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 
 | 类型 |
 | --- |
-| Promise&lt;ImageMetadata&gt; |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700204](../errorcode-image.md#7700204-无效参数) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) |
 
 ## readImageMetadataByType
 
@@ -1452,22 +1452,22 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 > 
 > - 当传入的MetadataType与图片格式无法匹配时，返回错误码7700102。
 > 
-> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。
+> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md#DngPropertyKey)。
 > 
-> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。
 > 
 > - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
 > [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
 > 
-> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。
 
 **起始版本：** 24
 
@@ -1488,15 +1488,15 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;ImageMetadata&gt; |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700204](../errorcode-image.md#7700204-无效参数) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) |
 
 ## release
 
@@ -1544,7 +1544,7 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## updateData
 
@@ -1573,7 +1573,7 @@ updateData(buf: ArrayBuffer, isFinished: boolean, offset: number, length: number
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## updateData
 
@@ -1615,11 +1615,11 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 > **说明：**
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例。
 > 
 > - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> [modifyImageProperties](#modifyImageProperties)
 > 更高效。
 > 
 > - 支持修改JPEG、PNG和HEIF文件类型的图片属性，图片需要包含Exif信息。修改属性前，先通过supportedFormats属性查询设备是否支持HEIF格式的Exif读写。
@@ -1647,15 +1647,15 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) |
-| [7700204](../errorcode-image.md#7700204-无效参数) |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) |
 
 ## supportedFormats
 
@@ -1667,7 +1667,7 @@ readonly supportedFormats: Array<string>
 
 包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/sup&gt;。从API版本26.0.0开始，增加支持AVIF、AVIS格式。
 
-部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats)接口，动态查询当前设备上的解码能力。
+部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getImageSourceSupportedFormats)接口，动态查询当前设备上的解码能力。
 
 **类型：** Array&lt;string&gt;
 

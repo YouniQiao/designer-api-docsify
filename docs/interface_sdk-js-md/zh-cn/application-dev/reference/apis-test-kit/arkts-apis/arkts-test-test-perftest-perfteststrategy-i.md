@@ -23,7 +23,7 @@ actionCode: Callback<Callback<boolean>>
 
 测试代码段。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Callback&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 20
 
@@ -83,7 +83,7 @@ metrics: Array<PerfMetric>
 
 被测性能指标列表，列表为空则不采集任何性能指标数据。
 
-**类型：** Array&lt;PerfMetric&gt;
+**类型：** Array&lt;[PerfMetric](arkts-test-test-perftest-perfmetric-e.md)&gt;
 
 **起始版本：** 20
 
@@ -103,7 +103,7 @@ resetCode?: Callback<Callback<boolean>>
 
 测试结束环境重置代码段。默认为空，框架运行时不执行此代码段。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Callback&lt;boolean&gt;&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
 **起始版本：** 20
 

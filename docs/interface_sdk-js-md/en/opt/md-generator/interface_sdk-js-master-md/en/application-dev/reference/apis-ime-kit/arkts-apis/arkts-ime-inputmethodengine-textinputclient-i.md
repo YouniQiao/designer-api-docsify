@@ -7,7 +7,7 @@ In the following API examples, you must first use
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient](arkts-ime-inputmethodengine-inputclient-i.md)
+**Substitutes:** [InputClient](arkts-ime-inputmethodengine-inputclient-i.md#InputClient)
 
 <!--Device-inputMethodEngine-interface TextInputClient--><!--Device-inputMethodEngine-interface TextInputClient-End-->
 
@@ -16,7 +16,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -31,7 +31,7 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length:
+**Substitutes:** [deleteBackward](inputMethodEngine.InputClient.deleteBackward(length:)
 
 <!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -75,7 +75,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length:
+**Substitutes:** [deleteBackward](inputMethodEngine.InputClient.deleteBackward(length:)
 
 <!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>-End-->
 
@@ -91,7 +91,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -122,7 +122,7 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length:
+**Substitutes:** [deleteForward](inputMethodEngine.InputClient.deleteForward(length:)
 
 <!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -166,7 +166,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length:
+**Substitutes:** [deleteForward](inputMethodEngine.InputClient.deleteForward(length:)
 
 <!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>-End-->
 
@@ -182,7 +182,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -213,7 +213,7 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length:
+**Substitutes:** [getBackward](inputMethodEngine.InputClient.getBackward(length:)
 
 <!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -253,7 +253,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length:
+**Substitutes:** [getBackward](inputMethodEngine.InputClient.getBackward(length:)
 
 <!--Device-TextInputClient-getBackward(length: number): Promise<string>--><!--Device-TextInputClient-getBackward(length: number): Promise<string>-End-->
 
@@ -269,7 +269,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -296,7 +296,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)(callback:
+**Substitutes:** [getEditorAttribute](inputMethodEngine.InputClient.getEditorAttribute(callback:)
 
 <!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
 
@@ -306,7 +306,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -337,7 +337,7 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)(callback:
+**Substitutes:** [getEditorAttribute](inputMethodEngine.InputClient.getEditorAttribute(callback:)
 
 <!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
@@ -347,7 +347,7 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;EditorAttribute&gt; |
+| Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; |
 
 ## Examples
 
@@ -374,7 +374,7 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length:
+**Substitutes:** [getForward](inputMethodEngine.InputClient.getForward(length:)
 
 <!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -414,7 +414,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length:
+**Substitutes:** [getForward](inputMethodEngine.InputClient.getForward(length:)
 
 <!--Device-TextInputClient-getForward(length: number): Promise<string>--><!--Device-TextInputClient-getForward(length: number): Promise<string>-End-->
 
@@ -430,7 +430,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -457,7 +457,7 @@ Inserts text. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text:
+**Substitutes:** [insertText](inputMethodEngine.InputClient.insertText(text:)
 
 <!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -500,7 +500,7 @@ Inserts text. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text:
+**Substitutes:** [insertText](inputMethodEngine.InputClient.insertText(text:)
 
 <!--Device-TextInputClient-insertText(text: string): Promise<boolean>--><!--Device-TextInputClient-insertText(text: string): Promise<boolean>-End-->
 
@@ -516,7 +516,7 @@ Inserts text. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -546,7 +546,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action:
+**Substitutes:** [sendKeyFunction](inputMethodEngine.InputClient.sendKeyFunction(action:)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -590,7 +590,7 @@ Sends the function key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action:
+**Substitutes:** [sendKeyFunction](inputMethodEngine.InputClient.sendKeyFunction(action:)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>--><!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>-End-->
 
@@ -606,7 +606,7 @@ Sends the function key. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

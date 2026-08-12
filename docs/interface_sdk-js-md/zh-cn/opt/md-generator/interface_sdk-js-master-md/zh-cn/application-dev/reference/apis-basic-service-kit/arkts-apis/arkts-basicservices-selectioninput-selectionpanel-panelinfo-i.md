@@ -32,7 +32,7 @@ height: number
 panelType: PanelType
 ```
 
-划词面板类型枚举，有两种面板可供选择，详见[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)。
+划词面板类型枚举，有两种面板可供选择，详见[PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md#PanelType)。
 
 **类型：** [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 

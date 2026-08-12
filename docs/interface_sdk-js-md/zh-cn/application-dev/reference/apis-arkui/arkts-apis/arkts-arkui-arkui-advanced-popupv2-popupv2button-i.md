@@ -20,7 +20,7 @@ action?: VoidCallback
 
 默认不执行任何操作。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 26.0.0
 
@@ -60,7 +60,7 @@ text: ResourceStr
 
 设置按钮内容。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

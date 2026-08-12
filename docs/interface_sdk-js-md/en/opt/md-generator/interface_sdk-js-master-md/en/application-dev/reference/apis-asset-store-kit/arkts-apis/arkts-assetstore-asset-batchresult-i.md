@@ -1,6 +1,6 @@
 # BatchResult
 
-Result object containing batch operation,including {@link batchAdd},{@link batchUpdate},{@link batchRemove}.
+Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd),[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate),[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchRemove).
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Result object containing batch operation,including {@link batchAdd},{@link batch
 ## Modules to Import
 
 ```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## failedCount
@@ -36,9 +36,9 @@ Failed count of the batch operation, 0 means all success.
 failedErrorInfos: Array<BatchErrInfo>
 ```
 
-An array of error details for assets that failed in the batch operation,including {@link BatchResult#failedCount} items, which is an empty array if all succeed.
+An array of error details for assets that failed in the batch operation,including [failedCount](#failedCount) items, which is an empty array if all succeed.
 
-**Type:** Array&lt;BatchErrInfo&gt;
+**Type:** Array&lt;[BatchErrInfo](arkts-assetstore-asset-batcherrinfo-i.md)&gt;
 
 **Since:** 26.0.0
 

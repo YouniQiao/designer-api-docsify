@@ -24,7 +24,7 @@ export declare function ContainerSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -60,8 +60,8 @@ export declare function ContainerSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContainerSpanAttribute&gt; | 是 | containerspan属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; | 是 | containerspan属性实例。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
 
 **返回值：**
 

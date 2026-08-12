@@ -31,5 +31,5 @@ export function interpolatingSpring(velocity: double, mass: double, stiffness: d
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-icurve-t.md) | 曲线对象。 &lt;br&gt;**说明:** 弹性动画曲线为物理曲线，[animation]{ |
+| ICurve | 曲线对象。 &lt;br&gt;**说明:** 弹性动画曲线为物理曲线，[animation]{ |
 

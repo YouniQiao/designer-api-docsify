@@ -13,7 +13,7 @@ Defines the contact filter criteria. Multiple filter criteria are ORed. If the p
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## dataItem
@@ -44,7 +44,7 @@ focusModeList?: Array<FilterOptions>
 
 Focus mode list.
 
-**Type:** Array&lt;FilterOptions&gt;
+**Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
 
@@ -64,7 +64,7 @@ id?: Array<FilterOptions>
 
 Contact ID.
 
-**Type:** Array&lt;FilterOptions&gt;
+**Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
 
@@ -84,7 +84,7 @@ name?: Array<FilterOptions>
 
 Contact name.
 
-**Type:** Array&lt;FilterOptions&gt;
+**Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
 

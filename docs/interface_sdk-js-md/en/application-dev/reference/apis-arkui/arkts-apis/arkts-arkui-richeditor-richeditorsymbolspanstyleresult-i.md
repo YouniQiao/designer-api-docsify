@@ -58,7 +58,7 @@ fontSize: double | string | Resource
 
 The font size.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ fontWeight: int | FontWeight | string
 
 The font weight.
 
-**Type:** int \| FontWeight \| string
+**Type:** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **Since:** 23
 

@@ -2,10 +2,10 @@
 
 提供音频返听的相关接口。
 
-在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback)获取AudioLoopback实例。
+在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback)获取AudioLoopback实例。
 
 当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与  
-[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。
+[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType)相匹配。
 
 输入\输出设备由系统自动选择。如果当前输入\输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入\输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。
 
@@ -45,14 +45,14 @@ enable(enable: boolean): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## getEqualizerPreset
 
@@ -134,7 +134,7 @@ getStatus(): Promise<AudioLoopbackStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioLoopbackStatus&gt; |
+| Promise&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; |
 
 ## getSupportedDevicePairs
 
@@ -156,7 +156,7 @@ getSupportedDevicePairs(): Array<AudioDevicePair>
 
 | 类型 |
 | --- |
-| Array&lt;AudioDevicePair&gt; |
+| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; |
 
 ## getVolume
 
@@ -199,13 +199,13 @@ off(type: 'statusChange', callback?: Callback<AudioLoopbackStatus>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('statusChange')
 
@@ -226,13 +226,13 @@ on(type: 'statusChange', callback: Callback<AudioLoopbackStatus>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setEqualizerPreset
 
@@ -252,7 +252,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 是 |
+| [preset](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-avscreencapturerecordconfig-i.md) | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | 是 |
 
 **返回值：**
 
@@ -264,7 +264,7 @@ setEqualizerPreset(preset: AudioLoopbackEqualizerPreset): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setReverbPreset
 
@@ -284,7 +284,7 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| preset | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 是 |
+| [preset](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-avscreencapturerecordconfig-i.md) | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | 是 |
 
 **返回值：**
 
@@ -296,7 +296,7 @@ setReverbPreset(preset: AudioLoopbackReverbPreset): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setVolume
 
@@ -322,10 +322,10 @@ setVolume(volume: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |

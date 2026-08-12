@@ -11,7 +11,7 @@ Describes group configuration options for download tasks.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## gauge
@@ -43,7 +43,7 @@ notification: Notification
 
 Custom settings for the notification bar. The default value is **{}**.
 
-**Type:** [Notification](arkts-basicservices-agent-notification-i.md)
+**Type:** Notification
 
 **Since:** 15
 

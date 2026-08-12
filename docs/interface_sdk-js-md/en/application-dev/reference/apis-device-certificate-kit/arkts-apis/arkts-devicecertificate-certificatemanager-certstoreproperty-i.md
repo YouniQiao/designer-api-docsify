@@ -13,7 +13,7 @@ Represents the storage information about a certificate, including the certificat
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## certAlg
@@ -60,7 +60,7 @@ certType: CertType
 
 Type of the certificate.
 
-**Type:** [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md)
+**Type:** CertType
 
 **Since:** 18
 

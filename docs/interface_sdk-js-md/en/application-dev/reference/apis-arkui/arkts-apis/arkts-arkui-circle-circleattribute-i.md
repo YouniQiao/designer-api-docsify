@@ -2,7 +2,7 @@
 
 Circle drawing component attribute functions.
 
-**Inheritance/Implementation:** CircleAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** CircleAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;CircleAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CircleAttribute](arkts-arkui-circle-circleattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Sets the color of the fill area.An invalid value is handled as the default value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColorMetrics \| undefined | Yes | Color of the fill area. Default value: Color.Black. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](arkts-arkui-colormetrics-t.md) \| undefined | Yes | Color of the fill area. Default value: Color.Black. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Set Circle options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CircleOptions](../arkts-components/arkts-arkui-circleoptions-i.md) | No | Circle constructor options. |
+| options | [CircleOptions](arkts-arkui-circle-circleoptions-i.md) | No | Circle constructor options. |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Sets the stroke color.If this attribute is not set, the component does not have 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColorMetrics \| undefined | Yes | Stroke color. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](arkts-arkui-colormetrics-t.md) \| undefined | Yes | Stroke color. |
 
 **Return value:**
 

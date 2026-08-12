@@ -13,7 +13,7 @@ Enumerates key event handling policies. When a key event occurs, only the keys f
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## keyCode
@@ -24,7 +24,7 @@ keyCode: KeyCode
 
 Key code.
 
-**Type:** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
+**Type:** KeyCode
 
 **Since:** 23
 

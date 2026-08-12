@@ -11,7 +11,7 @@ Defines the vibration sequence.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## events
@@ -22,7 +22,7 @@ events: Array<VibratorEvent>
 
 Vibration event array, which is the **VibratorPattern** object returned by **build() **.
 
-**Type:** Array&lt;VibratorEvent&gt;
+**Type:** Array&lt;[VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md)&gt;
 
 **Since:** 18
 

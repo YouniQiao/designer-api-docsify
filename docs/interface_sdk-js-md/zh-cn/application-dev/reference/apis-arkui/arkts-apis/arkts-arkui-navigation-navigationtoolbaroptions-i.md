@@ -100,7 +100,7 @@ barStyle?: BarStyle
 
 设置工具栏布局方式。默认值： BarStyle.STANDARD。
 
-**类型：** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
+**类型：** [BarStyle](arkts-arkui-navigation-barstyle-e.md)
 
 **默认值：** BarStyle.STANDARD
 

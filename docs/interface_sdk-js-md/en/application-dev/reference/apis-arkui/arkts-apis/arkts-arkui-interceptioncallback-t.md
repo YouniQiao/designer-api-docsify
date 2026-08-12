@@ -20,9 +20,9 @@ navigation interception callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Indicates the info of NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
-| to | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) \| NavBar | Yes | Indicates the info of NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| from | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Indicates the info of NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| to | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Indicates the info of NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
 | pathStack | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | Yes | The NavPathStack of current Navigation. |
-| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | Indicates the type of navigation operation. |
+| operation | [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md) | Yes | Indicates the type of navigation operation. |
 | isAnimated | boolean | Yes | Indicates whether the transition is animated. |
 

@@ -28,7 +28,7 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8Array
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | [ArrayLike&lt;number&gt; \](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; \| [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
 
 **Return value:**
 
@@ -46,7 +46,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Array
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -70,7 +70,7 @@ Creates an array from an array-like or iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;number&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |
 
 **Return value:**
 
@@ -92,8 +92,8 @@ Creates an array from an array-like or iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayLike | [ArrayLike&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
-| mapfn | (v: T, k: number) =&gt; number | Yes |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
+| mapfn | (v: T, k: number) = & gt; number | Yes |
 | thisArg | any | No |
 
 **Return value:**

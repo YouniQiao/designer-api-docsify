@@ -16,7 +16,7 @@ localeMatcher?: RelativeTimeFormatLocaleMatcher
 
 The locale matching algorithm to use. For information about this option, see [Intl page](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
 
-**Type:** [RelativeTimeFormatLocaleMatcher](../../apis-arkts/arkts-apis/arkts-arkts-intl-relativetimeformatlocalematcher-t.md)
+**Type:** RelativeTimeFormatLocaleMatcher
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -30,7 +30,7 @@ numeric?: RelativeTimeFormatNumeric
 
 The format of output message.
 
-**Type:** [RelativeTimeFormatNumeric](arkts-intl-relativetimeformatnumeric-t.md)
+**Type:** RelativeTimeFormatNumeric
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -44,7 +44,7 @@ style?: RelativeTimeFormatStyle
 
 The length of the internationalized message.
 
-**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)
+**Type:** RelativeTimeFormatStyle
 
 **ArkTS mode:** ArkTS-Dyn only
 

@@ -13,7 +13,7 @@ Defines the reminder information.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## reminderId
@@ -42,7 +42,7 @@ reminderReq: ReminderRequest
 
 Request used for publishing the reminder.
 
-**Type:** [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
+**Type:** ReminderRequest
 
 **Since:** 12
 

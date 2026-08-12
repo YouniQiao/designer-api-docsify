@@ -11,7 +11,7 @@ Firewall policy.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## inAction

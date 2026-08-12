@@ -8,7 +8,7 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent
+**Substitutes:** [wantAgent/wantAgent](ohos.app.ability.wantAgent/wantAgent)
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 
@@ -37,8 +37,8 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the {@link Want} of an {@link WantAgent}. |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-1) | Obtains the {@link Want} of an {@link WantAgent}. |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant) | Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent). |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant-1) | Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent). |
 <!--DelEnd-->
 
 ### Interfaces

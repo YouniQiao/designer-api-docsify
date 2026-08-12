@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## removeUntrustedConfig
@@ -20,7 +20,7 @@ Removes a specified untrusted hotspot configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.removeCandidateConfig
+**Substitutes:** [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removeCandidateConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
@@ -38,7 +38,7 @@ Removes a specified untrusted hotspot configuration.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -88,7 +88,7 @@ Removes a specified untrusted hotspot configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.removeCandidateConfig
+**Substitutes:** [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removeCandidateConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 

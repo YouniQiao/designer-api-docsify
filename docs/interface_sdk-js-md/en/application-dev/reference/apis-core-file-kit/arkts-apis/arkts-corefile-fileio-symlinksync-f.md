@@ -14,7 +14,7 @@ Creates a symbolic link based on the file path. This API returns the result sync
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:symlinkSync](arkts-corefile-fileio-symlinksync-f.md#symlinksync)
+**Substitutes:** [symlinkSync](arkts-corefile-file-fs-symlinksync-f.md#symlinkSync)
 
 <!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void--><!--Device-unnamed-declare function symlinkSync(target: string, srcPath: string): void-End-->
 

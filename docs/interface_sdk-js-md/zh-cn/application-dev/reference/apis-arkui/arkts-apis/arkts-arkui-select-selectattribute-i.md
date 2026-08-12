@@ -1,8 +1,8 @@
 # SelectAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** SelectAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** SelectAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ default arrowModifier(modifier: SymbolGlyphModifier | undefined): this
 default arrowPosition(value: ArrowPosition | undefined): this
 ```
 
-设置下拉菜单项的文本与箭头之间的对齐方式。与[arrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md/arkts-arkui-arrowposition-e.md)相比，position参数新增了对undefined类型的支持。
+设置下拉菜单项的文本与箭头之间的对齐方式。与[arrowPosition](arkts-arkui-select-arrowposition-e.md#ArrowPosition)相比，position参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -95,7 +95,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SelectAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | Select组件的属 性修改器。&lt;br/&gt;当modifier的值为undefined时，不使用属性修改器。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SelectAttribute](arkts-arkui-select-selectattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | Select组件的属 性修改器。&lt;br/&gt;当modifier的值为undefined时，不使用属性修改器。 |
 
 **返回值：**
 
@@ -125,7 +125,7 @@ default avoidance(mode: AvoidanceMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [AvoidanceMode](../arkts-components/arkts-arkui-avoidancemode-e.md) \| undefined | 是 | 设置下拉菜单的避让模式。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：AvoidanceMode.COVER_TARGET |
+| mode | [AvoidanceMode](arkts-arkui-select-avoidancemode-e.md) \| undefined | 是 | 设置下拉菜单的避让模式。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：AvoidanceMode.COVER_TARGET |
 
 **返回值：**
 
@@ -185,7 +185,7 @@ default divider(options: DividerOptions | null | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DividerOptions](../arkts-components/arkts-arkui-divideroptions-i.md) \| null \| undefined | 是 | 1.设置DividerOptions，则按设置的样式显示分割线。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; strokeWidth: '1px' , &lt;br/&gt;color: '#33182431'&lt;br/&gt;}&lt;br/&gt;2.设置为null时，不显示分割线。&lt;br/&gt;3.取值为undefined时，按默认值处理。 &lt;br/&gt; 4 .strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。&lt;br/&gt;5.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。 startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。 |
+| options | [DividerOptions](arkts-arkui-textpicker-divideroptions-i.md) \| null \| undefined | 是 | 1.设置DividerOptions，则按设置的样式显示分割线。&lt;br/&gt;默认值：&lt;br/&gt;{&lt;br/&gt; strokeWidth: '1px' , &lt;br/&gt;color: '#33182431'&lt;br/&gt;}&lt;br/&gt;2.设置为null时，不显示分割线。&lt;br/&gt;3.取值为undefined时，按默认值处理。 &lt;br/&gt; 4 .strokeWidth设置过宽时，会覆盖文字。分割线会从每一个Item底部开始，同时向上向下画分割线。&lt;br/&gt;5.startMargin和endMargin的默认值与不设置divider属性时的分割线样式保持一致。 startMargin和endMargin的和与optionWidth的值相等时，不显示分割线。 startMargin和endMargin的和超过optionWidth的值时，按照默认样式显示分割线。 |
 
 **返回值：**
 
@@ -229,7 +229,7 @@ default dividerStyle(style: DividerStyleOptions | undefined): this
 default font(value: Font | undefined): this
 ```
 
-设置下拉按钮本身的文本样式。当size为0时，文本不显示，当size为负值时，文本的size按照默认值显示。与[font](arkts-arkui-select-selectattribute-i.md#font)相比，value参数新增了对undefined类型的支持。
+设置下拉按钮本身的文本样式。当size为0时，文本不显示，当size为负值时，文本的size按照默认值显示。与[font](#font)相比，value参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -259,7 +259,7 @@ default font(value: Font | undefined): this
 default fontColor(value: ResourceColor | undefined): this
 ```
 
-设置下拉按钮本身的文本颜色。与[fontColor](arkts-arkui-select-selectattribute-i.md#fontcolor)相比，value参数新增了对undefined类型的支持。
+设置下拉按钮本身的文本颜色。与[fontColor](#fontColor)相比，value参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -335,8 +335,8 @@ default menuAlign(alignType: MenuAlignType | undefined, offset?: Offset | undefi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignType | [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md) \| undefined | 是 | 对齐方式类型。&lt;br/&gt;当alignType的值为undefined时，默认值：MenuAlignType.START |
-| offset | [Offset](arkts-arkui-units-offset-i.md) \| undefined | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。&lt;br/&gt; 默认值：{dx: 0, dy: 0} |
+| alignType | [MenuAlignType](arkts-arkui-select-menualigntype-e.md) \| undefined | 是 | 对齐方式类型。&lt;br/&gt;当alignType的值为undefined时，默认值：MenuAlignType.START |
+| offset | Offset \| undefined | 否 | 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。&lt;br/&gt; 默认值：{dx: 0, dy: 0} |
 
 **返回值：**
 
@@ -487,7 +487,7 @@ default menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;MenuItemConfiguration&gt; \| undefined | 是 | 在Select组件上，定制下拉菜单项内容区的方法。&lt;br/&gt;modifier：内 容修改器，开发者需要自定义class实现ContentModifier接口。&lt;br/&gt;当modifier的值为undefined时，不使用内容修改器。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[MenuItemConfiguration](arkts-arkui-select-menuitemconfiguration-i.md)&gt; \| undefined | 是 | 在Select组件上，定制下拉菜单项内容区的方法。&lt;br/&gt;modifier：内 容修改器，开发者需要自定义class实现ContentModifier接口。&lt;br/&gt;当modifier的值为undefined时，不使用内容修改器。 |
 
 **返回值：**
 
@@ -623,7 +623,7 @@ default onSelect(callback: OnSelectCallback | undefined): this
 default optionBgColor(value: ResourceColor | undefined): this
 ```
 
-设置下拉菜单项的背景色。与[optionBgColor](arkts-arkui-select-selectattribute-i.md#optionbgcolor)相比，value参数新增了对undefined类型的支持。
+设置下拉菜单项的背景色。与[optionBgColor](#optionBgColor)相比，value参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -655,7 +655,7 @@ default optionFont(value: Font | undefined): this
 
 设置下拉菜单项的文本样式。当size为0的时候，文本不显示，当size为负值的时候，文本的size按照默认值显示。
 
-与[optionFont](arkts-arkui-select-selectattribute-i.md#optionfont)相比，value参数新增了对undefined类型的支持。
+与[optionFont](#optionFont)相比，value参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -685,7 +685,7 @@ default optionFont(value: Font | undefined): this
 default optionFontColor(value: ResourceColor | undefined): this
 ```
 
-设置下拉菜单项的文本颜色。与[optionFontColor](arkts-arkui-select-selectattribute-i.md#optionfontcolor)相比，resColor参数新增了对undefined类型的支持。
+设置下拉菜单项的文本颜色。与[optionFontColor](#optionFontColor)相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -752,7 +752,7 @@ default optionTextModifier(modifier: TextModifier | undefined): this
 
 定制Select下拉菜单未选中项文本样式的方法，在应用optionTextModifier之后，下拉菜单未选中项的文本样式将完全由开发者自定义。
 
-如果[optionFont](arkts-arkui-select-selectattribute-i.md#optionfont)与optionTextModifier的Font属性同时设置，则优先使用[optionFont](arkts-arkui-select-selectattribute-i.md#optionfont)设置下拉菜单未选中项的文本样式；[optionFont](arkts-arkui-select-selectattribute-i.md#optionfont)中缺省的属性将设置为对应的默认值。
+如果[optionFont](#optionFont)与optionTextModifier的Font属性同时设置，则优先使用[optionFont](#optionFont)设置下拉菜单未选中项的文本样式；[optionFont](#optionFont)中缺省的属性将设置为对应的默认值。
 
 **起始版本：** 23
 
@@ -801,7 +801,7 @@ default optionWidth(value: Dimension | OptionWidthMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| OptionWidthMode \| undefined | 是 | 下拉菜单项的宽度。&lt;br/&gt;当width的值为undefined时，属性无效，菜单项宽度设为默认值，即2栅 格。 |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| [OptionWidthMode](arkts-arkui-optionwidthmode-e.md) \| undefined | 是 | 下拉菜单项的宽度。&lt;br/&gt;当width的值为undefined时，属性无效，菜单项宽度设为默认值，即2栅 格。 |
 
 **返回值：**
 
@@ -833,7 +833,7 @@ default selected(numCount: int | Resource | undefined | Bindable<int> | Bindable
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| numCount | int \| Resource \| undefined \| Bindable&lt;int&gt; \| Bindable&lt;Resource&gt; | 是 | 下拉菜单初始选项的索引。&lt;br/&gt;当numCount的 值为undefined时，选中第一项。 |
+| numCount | int \| [Resource](arkts-arkui-resource-t.md) \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](arkts-arkui-resource-t.md)&gt; | 是 | 下拉菜单初始选项的索引。&lt;br/&gt;当numCount的 值为undefined时，选中第一项。 |
 
 **返回值：**
 
@@ -847,7 +847,7 @@ default selected(numCount: int | Resource | undefined | Bindable<int> | Bindable
 default selectedOptionBgColor(value: ResourceColor | undefined): this
 ```
 
-设置下拉菜单选中项的背景色。与[selectedOptionBgColor](arkts-arkui-select-selectattribute-i.md#selectedoptionbgcolor)相比，resColor参数新增了对undefined类型的支持。
+设置下拉菜单选中项的背景色。与[selectedOptionBgColor](#selectedOptionBgColor)相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -877,7 +877,7 @@ default selectedOptionBgColor(value: ResourceColor | undefined): this
 default selectedOptionFont(value: Font | undefined): this
 ```
 
-设置下拉菜单选中项的文本样式。当size为0的时候，文本不显示，当size为负值的时候，文本的size按照默认值显示。与[selectedOptionFont](arkts-arkui-select-selectattribute-i.md#selectedoptionfont)相比，value参数新增了对undefined类型的支持。
+设置下拉菜单选中项的文本样式。当size为0的时候，文本不显示，当size为负值的时候，文本的size按照默认值显示。与[selectedOptionFont](#selectedOptionFont)相比，value参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -907,7 +907,7 @@ default selectedOptionFont(value: Font | undefined): this
 default selectedOptionFontColor(value: ResourceColor | undefined): this
 ```
 
-设置下拉菜单选中项的文本颜色。与[selectedOptionFontColor](arkts-arkui-select-selectattribute-i.md#selectedoptionfontcolor)相比，resColor参数新增了对undefined类型的支持。
+设置下拉菜单选中项的文本颜色。与[selectedOptionFontColor](#selectedOptionFontColor)相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -939,9 +939,9 @@ default selectedOptionTextModifier(modifier: TextModifier | undefined): this
 
 定制Select下拉菜单选中项文本样式的方法，在应用selectedOptionTextModifier之后，下拉菜单选中项的文本样式将完全由开发者自定义。
 
-如果[selectedOptionFont](arkts-arkui-select-selectattribute-i.md#selectedoptionfont)与selectedOptionTextModifier的Font属性同时设置，则优先使用  
-[selectedOptionFont](arkts-arkui-select-selectattribute-i.md#selectedoptionfont)设置下拉菜单选中项的文本样式；若未设置[selectedOptionFont](arkts-arkui-select-selectattribute-i.md#selectedoptionfont)，则优先使用[optionFont](arkts-arkui-select-selectattribute-i.md#optionfont)设置下拉菜单选中项的文本样式。其中[selectedOptionFont](arkts-arkui-select-selectattribute-i.md#selectedoptionfont)或者  
-[optionFont](arkts-arkui-select-selectattribute-i.md#optionfont)缺省的属性将设置为对应的默认值。
+如果[selectedOptionFont](#selectedOptionFont)与selectedOptionTextModifier的Font属性同时设置，则优先使用  
+[selectedOptionFont](#selectedOptionFont)设置下拉菜单选中项的文本样式；若未设置[selectedOptionFont](#selectedOptionFont)，则优先使用[optionFont](#optionFont)设置下拉菜单选中项的文本样式。其中[selectedOptionFont](#selectedOptionFont)或者  
+[optionFont](#optionFont)缺省的属性将设置为对应的默认值。
 
 **起始版本：** 23
 
@@ -1107,7 +1107,7 @@ default value(resStr: ResourceStr | undefined | Bindable<string> | Bindable<Reso
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resStr | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined \| Bindable&lt;string&gt; \| Bindable&lt;Resource&gt; | 是 | 下拉按钮本身的文本内容。&lt;br/&gt;当resStr的值为 undefined时维持上次取值。 |
+| resStr | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](arkts-arkui-resource-t.md)&gt; | 是 | 下拉按钮本身的文本内容。&lt;br/&gt;当resStr的值为 undefined时维持上次取值。 |
 
 **返回值：**
 

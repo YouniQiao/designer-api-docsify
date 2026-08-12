@@ -13,7 +13,7 @@ Provides callbacks for IDM.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo

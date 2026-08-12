@@ -13,7 +13,7 @@ Optional configuration for startMovingWithOptions.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## avoidRect
@@ -24,7 +24,7 @@ avoidRect?: Rect
 
 The avoidance rect of window during drag-moving.If unspecified, the system defaults to the following avoidance behavior:Free window state:1.Main windows, subWindows and dialog windows can be dragged beyond the screen bounds and will spring back on release.2.Other windows can be dragged beyond the screen bounds without springing back.Non-free window state:1.System windows can be dragged beyond the main window bounds and the screen bounds without springing back.2.When the main window is fullscreen,subWindows and dialog windows can be dragged beyond it without springing back.3.When the main window is not fullscreen,subWindows and dialog windows can be dragged beyond it and will spring back on release.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 26.0.0
 

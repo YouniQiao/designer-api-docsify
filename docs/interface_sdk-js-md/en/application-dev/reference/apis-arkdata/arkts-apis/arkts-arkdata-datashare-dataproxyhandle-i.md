@@ -1,7 +1,7 @@
 # DataProxyHandle
 
 Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using  
-[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle).
+[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle).
 
 **Since:** 20
 
@@ -14,7 +14,7 @@ Defines the data proxy handle, which can be used to access or manage shared conf
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## delete
@@ -46,14 +46,14 @@ Deletes the specified shared configuration items based on URIs. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyResult[]&gt; | Promise used to return the result array of the batch operations. |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -100,14 +100,14 @@ Deletes all the data published by the publisher.Only the data publisher can dele
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyResult[]&gt; | Promise used to return the operation result. |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise used to return the operation result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## get
 
@@ -138,14 +138,14 @@ Obtains a specified shared configuration item based on the URI. This API uses a 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyGetResult[]&gt; | Promise used to return the result array of the batch operations. |
+| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -171,7 +171,7 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 ```
 
 Obtains all multi-value data under a specified URI. Only the publisher and the applications in the  
-[allowList](arkts-arkdata-datashare-proxydata-i.md#allowlist) can obtain the data. This API uses a promise to return the result.
+[allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) can obtain the data. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -201,9 +201,9 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## off
 
@@ -235,7 +235,7 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. |
 | uris | string[] | Yes | Array of URIs to be unsubscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
 
 **Return value:**
 
@@ -247,8 +247,8 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -301,7 +301,7 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | Yes | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataProxyChangeInfo[]&gt; | No | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
 
 **Return value:**
 
@@ -313,8 +313,8 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## on
 
@@ -329,8 +329,8 @@ on(
 
 Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI, and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently.
 
-When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish) or  
-[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete) API to publish or delete a configuration, a notification is automatically triggered.
+When the publisher calls the [publish](#publish) or  
+[delete](#delete) API to publish or delete a configuration, a notification is automatically triggered.
 
 **Since:** 20
 
@@ -349,7 +349,7 @@ When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. This event is triggered when the publisher modifies the configuration. |
 | uris | string[] | Yes | Array of URIs to be subscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
 
 **Return value:**
 
@@ -361,8 +361,8 @@ When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -415,7 +415,7 @@ Registers observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | Yes | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DataProxyChangeInfo[]&gt; | Yes | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
 
 **Return value:**
 
@@ -427,8 +427,8 @@ Registers observers to observe proxy data change specified by the given URIs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## publish
 
@@ -452,21 +452,21 @@ Publishes shared configuration items. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [ProxyData](arkts-arkdata-datashare-proxydata-i.md)[] | Yes | Array of shared configuration items to be created or updated, with a maximum of 32 items. |
+| data | ProxyData[] | Yes | Array of shared configuration items to be created or updated, with a maximum of 32 items. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DataProxyResult[]&gt; | Promise used to return the result array of the batch operations. |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; | Promise used to return the result array of the batch operations. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -536,9 +536,9 @@ Puts a value into the published data. This operation can be performed only on mu
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## removeValue
 
@@ -583,7 +583,7 @@ Removes the value corresponding to the key. This operation can be performed only
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 

@@ -2,7 +2,7 @@
 
 The accessibility hover action triggers this method invocation.
 
-**Inheritance/Implementation:** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** AccessibilityHoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ type: AccessibilityHoverType
 
 Type of the accessibility hover event.
 
-**Type:** [AccessibilityHoverType](../arkts-apis/arkts-arkui-accessibilityhovertype-e.md)
+**Type:** AccessibilityHoverType
 
 **Since:** 12
 

@@ -13,7 +13,7 @@ Describes the camera's concurrency information.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## device
@@ -44,7 +44,7 @@ readonly modes: Array<SceneMode>
 
 Scene mode.
 
-**Type:** Array&lt;SceneMode&gt;
+**Type:** Array&lt;[SceneMode](arkts-camera-camera-scenemode-e.md)&gt;
 
 **Since:** 18
 
@@ -64,7 +64,7 @@ readonly outputCapabilities: Array<CameraOutputCapability>
 
 Output capabilities of the camera.
 
-**Type:** Array&lt;CameraOutputCapability&gt;
+**Type:** Array&lt;[CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md)&gt;
 
 **Since:** 18
 

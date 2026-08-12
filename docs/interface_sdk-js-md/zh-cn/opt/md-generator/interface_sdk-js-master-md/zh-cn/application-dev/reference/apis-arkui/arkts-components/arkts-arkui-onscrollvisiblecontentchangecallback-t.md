@@ -12,7 +12,7 @@ start和end的index同时返回0，代表List内只有一个子组件。
 
 > **说明：**
 > 
-> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 14开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 12
 

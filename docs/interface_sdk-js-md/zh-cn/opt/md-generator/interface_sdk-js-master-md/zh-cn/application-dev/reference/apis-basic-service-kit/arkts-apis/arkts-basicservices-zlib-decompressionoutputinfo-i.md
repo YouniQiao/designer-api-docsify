@@ -50,7 +50,7 @@ sourceLength: number
 status: ReturnStatus
 ```
 
-参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md)。
+参考[ReturnStatus枚举定义](arkts-basicservices-zlib-returnstatus-e.md#ReturnStatus)。
 
 **类型：** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 

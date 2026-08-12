@@ -18,7 +18,7 @@ radius: VP
 
 Particle radius.
 
-**Type:** [VP](../arkts-apis/arkts-arkui-vp-t.md)
+**Type:** VP
 
 **Since:** 10
 

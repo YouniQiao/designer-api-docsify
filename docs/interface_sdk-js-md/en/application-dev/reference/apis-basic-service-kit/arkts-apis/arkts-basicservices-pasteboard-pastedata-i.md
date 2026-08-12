@@ -1,10 +1,10 @@
 # PasteData
 
 Implements a **PasteData** object. PasteData contains one or more data records (  
-[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)) and property description objects (  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)).Before calling any API in **PasteData**, you must use **  
-[createData()](arkts-basicservices-pasteboard-createdata-f.md#createdata)** or **  
-[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)** to create a  
+[PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md#PasteDataRecord)) and property description objects (  
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty)).Before calling any API in **PasteData**, you must use **  
+[createData()](arkts-basicservices-pasteboard-createdata-f.md#createData)** or **  
+[getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getData)** to create a  
 **PasteData** object.
 
 **Since:** 6
@@ -18,7 +18,7 @@ Implements a **PasteData** object. PasteData contains one or more data records (
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## addHtmlRecord
@@ -28,7 +28,7 @@ addHtmlRecord(htmlText: string): void
 ```
 
 Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeT
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.addRecord](arkts-basicservices-pasteboard-pastedata-i.md#addrecord)(mimeType:
+**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
 
 <!--Device-PasteData-addHtmlRecord(htmlText: string): void--><!--Device-PasteData-addHtmlRecord(htmlText: string): void-End-->
 
@@ -63,7 +63,7 @@ addRecord(record: PasteDataRecord): void
 ```
 
 Adds a data record to the PasteData, and adds its type to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -99,7 +99,7 @@ addRecord(mimeType: string, value: ValueType): void
 ```
 
 Adds a data record to the PasteData, and adds its type to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 9
 
@@ -116,14 +116,14 @@ Adds a data record to the PasteData, and adds its type to **mimeTypes** in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mimeType | string | Yes | MIME type of PasteData. The length cannot exceed 1024 bytes. |
-| value | [ValueType](arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Data content. |
+| value | ValueType | Yes | Data content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
-| [12900002](../../apis-basic-services-kit/errorcode-pasteboard.md#12900002-maximum-number-of-records-reached) | The number of records exceeds the upper limit.<br>**Applicable version:** 9 and later |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types; 3. Parameter verification failed. |
+| [12900002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900002-maximum-number-of-records-reached) | The number of records exceeds the upper limit.<br>**Applicable version:** 9 and later |
 
 ## Examples
 
@@ -140,7 +140,7 @@ addTextRecord(text: string): void
 ```
 
 Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -148,7 +148,7 @@ Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to *
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.addRecord](arkts-basicservices-pasteboard-pastedata-i.md#addrecord)(mimeType:
+**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
 
 <!--Device-PasteData-addTextRecord(text: string): void--><!--Device-PasteData-addTextRecord(text: string): void-End-->
 
@@ -174,7 +174,7 @@ addUriRecord(uri: string): void
 ```
 
 Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -182,7 +182,7 @@ Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeType
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.addRecord](arkts-basicservices-pasteboard-pastedata-i.md#addrecord)(mimeType:
+**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
 
 <!--Device-PasteData-addUriRecord(uri: string): void--><!--Device-PasteData-addUriRecord(uri: string): void-End-->
 
@@ -208,7 +208,7 @@ addWantRecord(want: Want): void
 ```
 
 Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTypes** in  
-[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md). The parameters cannot be empty. Otherwise, the operation  fails.
+[PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty). The parameters cannot be empty. Otherwise, the operation  fails.
 
 **Since:** 7
 
@@ -216,7 +216,7 @@ Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTy
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.addRecord](arkts-basicservices-pasteboard-pastedata-i.md#addrecord)(mimeType:
+**Substitutes:** [addRecord](pasteboard.PasteData.addRecord(mimeType:)
 
 <!--Device-PasteData-addWantRecord(want: Want): void--><!--Device-PasteData-addWantRecord(want: Want): void-End-->
 
@@ -247,7 +247,7 @@ pasteData.addWantRecord(object);
 getMimeTypes(): Array<string>
 ```
 
-Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) of the PasteData.
+Obtains types of [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) of the PasteData.
 
 **Since:** 7
 
@@ -567,8 +567,8 @@ Obtains the record with a specific index in PasteData.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
 
 ## Examples
 
@@ -591,7 +591,7 @@ Obtains the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.getRecord](arkts-basicservices-pasteboard-pastedata-i.md#getrecord)(index:
+**Substitutes:** [getRecord](pasteboard.PasteData.getRecord(index:)
 
 <!--Device-PasteData-getRecordAt(index: number): PasteDataRecord--><!--Device-PasteData-getRecordAt(index: number): PasteDataRecord-End-->
 
@@ -613,7 +613,7 @@ Obtains the record with a specific index in PasteData.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -704,7 +704,7 @@ Checks whether the PasteData contains data of the specified type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.hasType](arkts-basicservices-pasteboard-pastedata-i.md#hastype)(mimeType:
+**Substitutes:** [hasType](pasteboard.PasteData.hasType(mimeType:)
 
 <!--Device-PasteData-hasMimeType(mimeType: string): boolean--><!--Device-PasteData-hasMimeType(mimeType: string): boolean-End-->
 
@@ -726,7 +726,7 @@ Checks whether the PasteData contains data of the specified type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -769,7 +769,7 @@ Checks whether the PasteData contains data of the specified MIME type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -878,8 +878,8 @@ Removes the record with a specific index in PasteData.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
 
 ## Examples
 
@@ -902,7 +902,7 @@ Removes the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.removeRecord](arkts-basicservices-pasteboard-pastedata-i.md#removerecord)(index:
+**Substitutes:** [removeRecord](pasteboard.PasteData.removeRecord(index:)
 
 <!--Device-PasteData-removeRecordAt(index: number): boolean--><!--Device-PasteData-removeRecordAt(index: number): boolean-End-->
 
@@ -924,7 +924,7 @@ Removes the record with a specific index in PasteData.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 
@@ -968,8 +968,8 @@ Replaces the record with a specific index in PasteData.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900001-index-out-of-range) | The index is out of the record. |
 
 ## Examples
 
@@ -993,7 +993,7 @@ Replaces the record with a specific index in PasteData.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.PasteData.replaceRecord](arkts-basicservices-pasteboard-pastedata-i.md#replacerecord)(index:
+**Substitutes:** [replaceRecord](pasteboard.PasteData.replaceRecord(index:)
 
 <!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean--><!--Device-PasteData-replaceRecordAt(index: number, record: PasteDataRecord): boolean-End-->
 
@@ -1026,7 +1026,7 @@ let isReplace: boolean = pasteData.replaceRecordAt(0, record);
 setProperty(property: PasteDataProperty): void
 ```
 
-Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md) object.
+Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md#PasteDataProperty) object.
 
 **Since:** 9
 
@@ -1048,7 +1048,7 @@ Sets a [PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## Examples
 

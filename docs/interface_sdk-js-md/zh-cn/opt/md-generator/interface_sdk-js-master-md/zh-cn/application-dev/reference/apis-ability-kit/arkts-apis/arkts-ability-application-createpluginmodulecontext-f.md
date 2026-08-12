@@ -21,7 +21,7 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 |
-| pluginBundleName | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
 | pluginModuleName | string | 是 |
 
 **返回值：**

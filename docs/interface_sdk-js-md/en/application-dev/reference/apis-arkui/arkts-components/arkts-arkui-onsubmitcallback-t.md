@@ -22,6 +22,6 @@ Defines the callback for submission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | Yes | Type of the Enter key. |
+| enterKey | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes | Type of the Enter key. |
 | event | [SubmitEvent](arkts-arkui-submitevent-i.md) | Yes | Submit event. It can be used to control whether to dismiss the keyboard. |
 

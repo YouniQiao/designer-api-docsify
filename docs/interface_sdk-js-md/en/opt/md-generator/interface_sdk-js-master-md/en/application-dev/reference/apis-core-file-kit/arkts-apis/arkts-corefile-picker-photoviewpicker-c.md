@@ -1,13 +1,13 @@
 # PhotoViewPicker
 
 Provides APIs for selecting and saving images or videos. You are advised to use  
-[PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md/arkts-file-photoaccesshelper.md) to select a file.Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
+[PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoAccessHelper) to select a file.Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
+**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#PhotoViewPicker)
 
 <!--Device-picker-class PhotoViewPicker--><!--Device-picker-class PhotoViewPicker-End-->
 
@@ -16,7 +16,7 @@ Provides APIs for selecting and saving images or videos. You are advised to use
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -31,7 +31,7 @@ A constructor used to create a PhotoViewPicker instance. This constructor is not
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
+**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#PhotoViewPicker)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -51,13 +51,13 @@ let photoPicker = new picker.PhotoViewPicker(); // Construction without paramete
 constructor(context: Context)
 ```
 
-A constructor used to create a PhotoViewPicker instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](@ohos.arkui.UIContext.UIContext#getHostContext).
+A constructor used to create a PhotoViewPicker instance. This constructor is recommended. For details about how to obtain the context, see [getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext).
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md)
+**Substitutes:** [PhotoViewPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#PhotoViewPicker)
 
 <!--Device-PhotoViewPicker-constructor(context: Context)--><!--Device-PhotoViewPicker-constructor(context: Context)-End-->
 
@@ -109,7 +109,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** SaveButton
+**Substitutes:** [SaveButton](SaveButton)
 
 <!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>--><!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>-End-->
 
@@ -125,7 +125,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## Examples
 
@@ -162,7 +162,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** SaveButton
+**Substitutes:** [SaveButton](SaveButton)
 
 <!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -212,7 +212,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** SaveButton
+**Substitutes:** [SaveButton](SaveButton)
 
 <!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -259,7 +259,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option?:
+**Substitutes:** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option?:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -277,7 +277,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PhotoSelectResult&gt; |
+| Promise & lt;PhotoSelectResult & gt; |
 
 ## Examples
 
@@ -315,7 +315,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option:
+**Substitutes:** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -368,7 +368,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback:
+**Substitutes:** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(callback:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

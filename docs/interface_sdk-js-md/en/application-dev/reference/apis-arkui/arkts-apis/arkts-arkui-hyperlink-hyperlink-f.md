@@ -25,15 +25,15 @@ Defines Hyperlink Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string \| Resource \| undefined | Yes | The link address of component. The default value is an empty string. Passing `undefined` resets it to the default value. |
-| content | string \| Resource | No | The title of the component. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | The node of component. |
+| address | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | The link address of component. The default value is an empty string. Passing `undefined` resets it to the default value. |
+| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | No | The title of the component. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | The node of component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HyperlinkAttribute](../arkts-components/arkts-arkui-hyperlink-attribute.md) |  |
+| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
 
 
 ## Hyperlink
@@ -63,12 +63,12 @@ Defines Hyperlink Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;HyperlinkAttribute&gt; | Yes | Hyperlink attribute instance. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md)&gt; | Yes | Hyperlink attribute instance. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [HyperlinkAttribute](../arkts-components/arkts-arkui-hyperlink-attribute.md) |  |
+| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
 

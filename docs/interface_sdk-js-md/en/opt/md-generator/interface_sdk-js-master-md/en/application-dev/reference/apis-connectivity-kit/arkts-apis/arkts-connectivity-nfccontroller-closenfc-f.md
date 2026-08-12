@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## closeNfc
@@ -18,7 +18,7 @@ Disables NFC.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.controller/nfcController#disableNfc
+**Substitutes:** [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disableNfc)
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 

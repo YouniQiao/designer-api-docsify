@@ -13,7 +13,7 @@ As a USB data transfer interface, it is required for a client to initiate a tran
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## buffer
@@ -42,7 +42,7 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 Information returned by the callback.
 
-**Type:** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;SubmitTransferCallback&gt;
+**Type:** [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
 **Since:** 18
 
@@ -59,9 +59,9 @@ devPipe: USBDevicePipe
 ```
 
 USB device pipe, which is used to determine the bus number and device address. You need to call  
-[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)to obtain its value.
+[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)to obtain its value.
 
-**Type:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
+**Type:** USBDevicePipe
 
 **Since:** 18
 

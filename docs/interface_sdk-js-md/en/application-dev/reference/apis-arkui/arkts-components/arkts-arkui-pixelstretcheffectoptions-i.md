@@ -18,7 +18,7 @@ bottom?: Length
 
 Length by which a pixel is stretched towards the right edge of the image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0
 
@@ -42,7 +42,7 @@ left?: Length
 
 Length by which a pixel is stretched towards the left edge of the image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0
 
@@ -66,7 +66,7 @@ right?: Length
 
 Length by which a pixel is stretched towards the right edge of the image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0
 
@@ -90,7 +90,7 @@ top?: Length
 
 Length by which a pixel is stretched towards the top edge of the image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0
 

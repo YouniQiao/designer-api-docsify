@@ -1,8 +1,8 @@
 # HoverEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
 
-**Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** HoverEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 10
 

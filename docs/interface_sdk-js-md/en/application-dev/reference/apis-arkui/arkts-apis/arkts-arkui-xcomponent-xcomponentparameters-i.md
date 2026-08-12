@@ -58,7 +58,7 @@ nativeXComponentHandler: Callback<NativeXComponentPointer>
 
 The callback to handle NativeXComponent Pointer.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NativeXComponentPointer&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[NativeXComponentPointer](arkts-arkui-nativexcomponentpointer-t.md)&gt;
 
 **Since:** 23
 

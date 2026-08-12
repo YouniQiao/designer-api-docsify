@@ -11,7 +11,7 @@ Represents a custom policy.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## enterprise

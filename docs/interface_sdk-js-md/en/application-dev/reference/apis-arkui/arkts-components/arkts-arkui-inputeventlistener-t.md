@@ -16,9 +16,9 @@ Input event listener callback type.
 > this parameter.
 > 
 > - The current callback parameter **event** only encapsulates the following raw input event types:
-> [MouseEvent](arkts-arkui-mouseevent-i.md), [TouchEvent](arkts-arkui-touchevent-i.md), [KeyEvent](arkts-arkui-keyevent-i.md). Developers can obtain
-> the corresponding event objects using [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asmouseevent),
-> [asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#astouchevent), and [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#askeyevent).
+> [MouseEvent](arkts-arkui-mouseevent-i.md#MouseEvent), [TouchEvent](arkts-arkui-touchevent-i.md#TouchEvent), [KeyEvent](arkts-arkui-keyevent-i.md#KeyEvent). Developers can obtain
+> the corresponding event objects using [asMouseEvent](arkts-arkui-rawinputeventwrapper-c.md#asMouseEvent),
+> [asTouchEvent](arkts-arkui-rawinputeventwrapper-c.md#asTouchEvent), and [asKeyEvent](arkts-arkui-rawinputeventwrapper-c.md#asKeyEvent).
 > 
 > - Do not perform time-consuming operations (such as complex calculations or network requests) in the callback, as
 > this may cause application lag.

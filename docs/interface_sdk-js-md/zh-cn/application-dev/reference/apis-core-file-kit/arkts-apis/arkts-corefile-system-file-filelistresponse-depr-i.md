@@ -20,7 +20,7 @@ fileList: Array<FileResponse>
 
 获取的文件列表，其中每个文件的信息的格式为：{uri:'file1',lastModifiedTime:1589965924479,length:10240,type:?'file'}
 
-**类型：** Array&lt;FileResponse&gt;
+**类型：** Array&lt;[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)&gt;
 
 **起始版本：** 3
 

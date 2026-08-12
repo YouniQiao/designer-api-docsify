@@ -2,7 +2,7 @@
 
 Defines the AlertDialog with confirm button.
 
-**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialog-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialog-alertdialogparam-i.md#AlertDialogParam)
 
 **Since:** 23
 

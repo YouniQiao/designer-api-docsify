@@ -1,9 +1,9 @@
 # PhotoOutput
 
 PhotoOutput implements output information used in a photo session. It inherits from   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
 
-**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**Inheritance/Implementation:** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **Since:** 10
 
@@ -14,7 +14,7 @@ PhotoOutput implements output information used in a photo session. It inherits f
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## capture
@@ -43,8 +43,8 @@ Captures a photo with the default photo capture parameters. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## capture
 
@@ -66,14 +66,14 @@ Captures a photo with the default photo capture parameters. This API uses a prom
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## capture
 
@@ -102,9 +102,9 @@ Captures a photo with the specified photo capture parameters. This API uses an a
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## capture
 
@@ -132,15 +132,15 @@ Captures a photo with the specified photo capture parameters. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400104](../errorcode-camera.md#7400104-session-not-running) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-session-not-running) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## enableAutoExtendedGainmapDelivery
 
@@ -170,9 +170,9 @@ Enables or disables automatic extended gain map delivery.
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## enableMirror
 
@@ -183,7 +183,7 @@ enableMirror(enabled: boolean): void
 Enables or disables dynamic photo capture.
 
 Before calling this API, check whether moving photo capture is supported by calling   
-[isMovingPhotoSupported](arkts-camera-camera-photooutput-i.md#ismovingphotosupported) and whether mirroring is supported by calling [isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported).
+[isMovingPhotoSupported](#isMovingPhotoSupported) and whether mirroring is supported by calling [isMirrorSupported](#isMirrorSupported).
 
 **Since:** 13
 
@@ -203,9 +203,9 @@ Before calling this API, check whether moving photo capture is supported by call
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## enableMovingPhoto
 
@@ -235,9 +235,9 @@ Enables or disables the feature of taking moving photos.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getActiveProfile
 
@@ -265,7 +265,7 @@ Obtains the profile that takes effect currently.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getPhotoRotation
 
@@ -306,8 +306,8 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getSupportedMovingPhotoVideoCodecTypes
 
@@ -329,13 +329,13 @@ Obtains the supported video codec types of moving photos.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;VideoCodecType&gt; |
+| Array&lt;[VideoCodecType](arkts-camera-camera-videocodectype-e.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## isAutoExtendedGainmapDeliverySupported
 
@@ -409,7 +409,7 @@ Checks whether taking moving photos is supported.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -443,7 +443,7 @@ Checks whether the specified photo quality prioritization strategy is supported.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## off('photoAvailable')
 
@@ -466,7 +466,7 @@ Unsubscribes from the events of returning available photos.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'photoAvailable' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | No |
 
 ## off('photoAssetAvailable')
 
@@ -507,7 +507,7 @@ Unsubscribes from capture start events.
 
 **Deprecated since:** 11
 
-**Substitutes:** camera.PhotoOutput.off(type:
+**Substitutes:** [off](camera.PhotoOutput.off(type:)
 
 <!--Device-PhotoOutput-off(type: 'captureStart', callback?: AsyncCallback<number>): void--><!--Device-PhotoOutput-off(type: 'captureStart', callback?: AsyncCallback<number>): void-End-->
 
@@ -541,7 +541,7 @@ Unsubscribes from capture start events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'captureStartWithInfo' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | No |
 
 ## off('frameShutter')
 
@@ -564,7 +564,7 @@ Unsubscribes from frame shutter events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameShutter' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | No |
 
 ## off('frameShutterEnd')
 
@@ -587,7 +587,7 @@ Unsubscribes from frame shutter end events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameShutterEnd' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | No |
 
 ## off('captureEnd')
 
@@ -610,7 +610,7 @@ Unsubscribes from capture end events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'captureEnd' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | No |
 
 ## off('captureReady')
 
@@ -703,7 +703,7 @@ Unsubscribes from the events of returning full-quality images and uncompressed i
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CapturePhoto&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | No |
 
 ## on('photoAvailable')
 
@@ -730,7 +730,7 @@ Subscribes to the events of returning available photos. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'photoAvailable' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | Yes |
 
 ## on('photoAssetAvailable')
 
@@ -775,7 +775,7 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 
 **Deprecated since:** 11
 
-**Substitutes:** camera.PhotoOutput.on(type:
+**Substitutes:** [on](camera.PhotoOutput.on(type:)
 
 <!--Device-PhotoOutput-on(type: 'captureStart', callback: AsyncCallback<number>): void--><!--Device-PhotoOutput-on(type: 'captureStart', callback: AsyncCallback<number>): void-End-->
 
@@ -795,7 +795,7 @@ on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): voi
 ```
 
 Subscribes to capture start events. This API uses an asynchronous callback to return the   
-[capture start ID](arkts-camera-camera-capturestartinfo-i.md).
+[capture start ID](arkts-camera-camera-capturestartinfo-i.md#CaptureStartInfo).
 
 > **NOTE：**
 > 
@@ -814,7 +814,7 @@ Subscribes to capture start events. This API uses an asynchronous callback to re
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'captureStartWithInfo' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | Yes |
 
 ## on('frameShutter')
 
@@ -837,7 +837,7 @@ Subscribes to frame shutter events. This API uses an asynchronous callback to re
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameShutter' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | Yes |
 
 ## on('frameShutterEnd')
 
@@ -864,7 +864,7 @@ Subscribes to frame shutter end events. This API uses an asynchronous callback t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameShutterEnd' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | Yes |
 
 ## on('captureEnd')
 
@@ -891,7 +891,7 @@ Subscribes to capture end events. This API uses an asynchronous callback to retu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'captureEnd' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | Yes |
 
 ## on('captureReady')
 
@@ -1004,7 +1004,7 @@ Subscribes to the events of returning full-quality images and uncompressed image
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CapturePhoto&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | Yes |
 
 ## setMovingPhotoVideoCodecType
 
@@ -1032,7 +1032,7 @@ Sets a video codec type for moving photos.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## setPhotoQualityPrioritization
 
@@ -1043,7 +1043,7 @@ setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization)
 Sets the photo quality prioritization strategy.
 
 Before setting the strategy, you can call   
-[isPhotoQualityPrioritizationSupported](arkts-camera-camera-photooutput-i.md#isphotoqualityprioritizationsupported) to check whether the device supports the specified photo quality prioritization strategy.
+[isPhotoQualityPrioritizationSupported](#isPhotoQualityPrioritizationSupported) to check whether the device supports the specified photo quality prioritization strategy.
 
 **Since:** 21
 
@@ -1063,5 +1063,5 @@ Before setting the strategy, you can call
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |

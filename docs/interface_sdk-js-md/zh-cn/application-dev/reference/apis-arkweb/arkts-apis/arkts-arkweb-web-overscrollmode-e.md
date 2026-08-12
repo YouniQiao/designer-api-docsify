@@ -1,6 +1,6 @@
 # OverScrollMode
 
-Enum type supplied to {@link overScrollMode} for setting the web overScroll mode.
+Enum type supplied to [overScrollMode](arkts-arkweb-web-webattribute-i.md#overScrollMode) for setting the web overScroll mode.
 
 **起始版本：** 23
 

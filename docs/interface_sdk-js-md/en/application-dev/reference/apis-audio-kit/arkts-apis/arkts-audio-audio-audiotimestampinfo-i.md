@@ -13,7 +13,7 @@ Describes the information about the audio stream timestamp and the current data 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## framePos

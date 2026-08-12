@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## getDevice
@@ -17,13 +17,13 @@ Obtains the information about the input device with the specified ID. This API u
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) instead.
+> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimodalInput.inputDevice#getDeviceInfo
+**Substitutes:** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
 
 <!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
 
@@ -34,7 +34,7 @@ Obtains the information about the input device with the specified ID. This API u
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceId | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InputDeviceData&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -75,13 +75,13 @@ Obtains the information about the input device with the specified ID. This API u
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo) instead.
+> [inputDevice.getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getDeviceInfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimodalInput.inputDevice#getDeviceInfo
+**Substitutes:** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
 
 <!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
 
@@ -97,7 +97,7 @@ Obtains the information about the input device with the specified ID. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;InputDeviceData&gt; |
+| Promise&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; |
 
 ## Examples
 

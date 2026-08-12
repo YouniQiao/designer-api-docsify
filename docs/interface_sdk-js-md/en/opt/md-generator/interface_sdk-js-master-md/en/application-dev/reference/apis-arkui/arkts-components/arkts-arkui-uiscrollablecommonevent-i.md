@@ -2,7 +2,7 @@
 
 Defines a UIScrollableCommonEvent which is used to set event to target component.
 
-**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
+**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md#UICommonEvent)
 
 **Since:** 19
 
@@ -32,7 +32,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnReachStart
 
@@ -56,7 +56,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnScrollFrameBegin
 
@@ -104,7 +104,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnScrollStop
 
@@ -128,4 +128,4 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |

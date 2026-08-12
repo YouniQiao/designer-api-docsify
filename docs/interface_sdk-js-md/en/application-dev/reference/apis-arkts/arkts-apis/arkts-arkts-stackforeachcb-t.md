@@ -24,5 +24,5 @@ The type of Stack callback function.
 | --- | --- | --- | --- |
 | value | T | Yes | The value of current element |
 | index | int | Yes | The key of current element The value should be an integer. |
-| stack | [Stack](../../apis-arkui/arkts-apis/arkts-arkui-typenode-stack-t.md)&lt;T&gt; | Yes | The Stack instance being traversed |
+| stack | [Stack](arkts-arkts-util-stack-stack-c.md)&lt;T&gt; | Yes | The Stack instance being traversed |
 

@@ -14,7 +14,7 @@ It consists of the fields in **Type** in the following table.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#UserAuthResult)
 
 <!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo--><!--Device-userAuth-type EventInfo = AuthResultInfo | TipInfo-End-->
 

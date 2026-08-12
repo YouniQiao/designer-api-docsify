@@ -13,7 +13,7 @@ Describe the contents of the battery information.
 ## Modules to Import
 
 ```TypeScript
-import { bas } from 'kits/@kit.ConnectivityKit';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## batteryLevel
@@ -44,7 +44,7 @@ deviceId: BluetoothAddress
 
 Identify of the discovery device.
 
-**Type:** [BluetoothAddress](arkts-connectivity-common-bluetoothaddress-i.md)
+**Type:** BluetoothAddress
 
 **Since:** 26.0.0
 

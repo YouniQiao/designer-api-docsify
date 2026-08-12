@@ -1,8 +1,8 @@
 # SelectAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** SelectAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** SelectAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 

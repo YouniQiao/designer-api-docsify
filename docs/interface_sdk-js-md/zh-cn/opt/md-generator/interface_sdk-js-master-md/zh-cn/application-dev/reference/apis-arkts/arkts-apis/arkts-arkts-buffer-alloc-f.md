@@ -21,7 +21,7 @@ function alloc(size: number, fill?: string | Buffer | number | number | number, 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | size | number | 是 |
-| fill | string \| Buffer \| number \| number \| number | 否 |
+| fill | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| number \| number \| number | 否 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
 **返回值：**

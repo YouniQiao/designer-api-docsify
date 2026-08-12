@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## openSubscriptionSettingsWithResult
@@ -34,16 +34,16 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;UserGrantSetting&gt; |
+| Promise & lt;UserGrantSetting & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
-| [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
+| [1600023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) |
 
 ## Examples
 

@@ -1,7 +1,7 @@
 # LastExitReason
 
 Enumerates the reasons for the last exit of the ability. You can use it together with the value of  
-**launchParam.lastExitReason** in [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
+**launchParam.lastExitReason** in [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
 
 **Since:** 9
 
@@ -39,7 +39,7 @@ The ability does not respond.
 
 **Deprecated since:** 10
 
-**Substitutes:** [AbilityConstant.LastExitReason.APP_FREEZE](arkts-ability-abilityconstant-lastexitreason-e.md#app_freeze)
+**Substitutes:** [APP_FREEZE](#APP_FREEZE)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,7 +148,7 @@ RESOURCE_CONTROL = 7
 ```
 
 The ability exits due to improper use of system resources. The specific error cause can be obtained through  
-[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md). The possible causes are as follows:
+[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam). The possible causes are as follows:
 
 - **CPU Highload**: The CPU load is high.  
 - **CPU_EXT Highload**: A fast CPU load detection is carried out.  

@@ -24,8 +24,8 @@ function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusDa
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserStatusData&gt; | 是 |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md)[] | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | 是 |
+| deviceInfo | [DeviceInfo[]](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | 否 |
 
 **返回值：**
 
@@ -37,7 +37,7 @@ function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusDa
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [33900001](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) |
-| [33900002](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900002-订阅失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [33900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) |
+| [33900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-userStatus.md#33900002-订阅失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

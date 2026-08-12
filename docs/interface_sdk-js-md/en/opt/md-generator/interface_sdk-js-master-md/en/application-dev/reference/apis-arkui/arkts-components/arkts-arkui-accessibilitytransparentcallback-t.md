@@ -20,4 +20,4 @@ Defines the callback type used in accessibility hover transparent event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes |
+| event | [TouchEvent](arkts-arkui-touchevent-i.md) | Yes |

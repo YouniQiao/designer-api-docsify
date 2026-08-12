@@ -21,7 +21,7 @@ function getColors(wallpaperType: WallpaperType, callback: AsyncCallback<Array<R
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;RgbaColor&gt;&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -64,7 +64,7 @@ function getColors(wallpaperType: WallpaperType): Promise<Array<RgbaColor>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;RgbaColor&gt;&gt; |
+| Promise&lt;Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;&gt; |
 
 ## 示例
 

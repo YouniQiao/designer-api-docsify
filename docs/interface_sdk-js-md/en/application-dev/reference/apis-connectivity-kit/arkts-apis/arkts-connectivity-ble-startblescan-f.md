@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## startBLEScan
@@ -20,7 +20,7 @@ Starts scanning for specified BLE devices with filters.On API 10 and above, the 
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble#startBLEScan
+**Substitutes:** [startBLEScan](ohos.bluetooth.ble/ble#startBLEScan)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -35,15 +35,15 @@ Starts scanning for specified BLE devices with filters.On API 10 and above, the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. {@link ScanOptions#interval} set to 0, {@link ScanOptions#dutyMode} set to {@link SCAN_MODE_LOW_POWER} and {@link ScanOptions#matchMode} set to {@link MATCH_MODE_AGGRESSIVE}. |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-bluetoothmanager-scanoptions-i.md#interval) set to 0, [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutyMode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-bluetoothmanager-scanduty-e.md#SCAN_MODE_LOW_POWER) and [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchMode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-bluetoothmanager-matchmode-e.md#MATCH_MODE_AGGRESSIVE). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

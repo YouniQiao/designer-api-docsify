@@ -24,13 +24,13 @@ Defines ContainerSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerSpanAttribute](../arkts-components/arkts-arkui-containerspan-attribute.md) |  |
+| [ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md) |  |
 
 
 ## ContainerSpan
@@ -60,12 +60,12 @@ Defines ContainerSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContainerSpanAttribute&gt; | Yes | containerspan attribute instance. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; | Yes | containerspan attribute instance. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerSpanAttribute](../arkts-components/arkts-arkui-containerspan-attribute.md) |  |
+| [ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md) |  |
 

@@ -2,7 +2,7 @@
 
 Define the text extended editing controller.
 
-**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md)
+**Inheritance/Implementation:** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md#TextBaseController)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ Get PreviewText.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | Return the PreviewText. |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | Return the PreviewText. |
 
 ## isEditing
 

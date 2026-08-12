@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getAppNet
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function getAppNet(callback: AsyncCallback<NetHandle>): void
 ```
 
-Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
+Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
 
 **Since:** 9
 
@@ -26,15 +26,15 @@ Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetHandle&gt; | Yes | Returns the {@link NetHandle} bound to the process; returns {@code null} if no {@link NetHandle} is bound to the process.For details, see {@link NetHandle}. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetHandle&gt; | Yes | Returns the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to the process; returns {@code null} if no [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) is bound to the process.For details, see [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 ## Examples
 
@@ -58,7 +58,7 @@ connection.getAppNet((error: BusinessError, data: connection.NetHandle) => {
 function getAppNet(): Promise<NetHandle>
 ```
 
-Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
+Obtains the [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) bound to a process using [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).
 
 **Since:** 9
 
@@ -78,8 +78,8 @@ Obtains the {@link NetHandle} bound to a process using {@link setAppNet}.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # ScrollbarMode
 
-Enum type supplied to {@link setScrollbarMode} for indicating the web component scrollbar mode.
+Enum type supplied to [setScrollbarMode](arkts-arkweb-webview-webviewcontroller-c.md#setScrollbarMode) for indicating the web component scrollbar mode.
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # USBConfig
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md) can contain multiple **USBConfig**instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md#USBDevice) can contain multiple **USBConfig**instances.
 
 **Since:** 8
 
@@ -8,7 +8,7 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdev
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
+**Substitutes:** [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)
 
 <!--Device-usb-interface USBConfig--><!--Device-usb-interface USBConfig-End-->
 
@@ -17,7 +17,7 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdev
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## attributes
@@ -36,7 +36,7 @@ Configuration attributes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
+**Substitutes:** [attributes](arkts-basicservices-usbmanager-usbconfiguration-i.md#attributes)
 
 <!--Device-USBConfig-attributes: number--><!--Device-USBConfig-attributes: number-End-->
 
@@ -58,7 +58,7 @@ Unique ID of the USB configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
+**Substitutes:** [id](arkts-basicservices-usbmanager-usbconfiguration-i.md#id)
 
 <!--Device-USBConfig-id: number--><!--Device-USBConfig-id: number-End-->
 
@@ -80,7 +80,7 @@ Supported interface attributes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
+**Substitutes:** [interfaces](arkts-basicservices-usbmanager-usbconfiguration-i.md#interfaces)
 
 <!--Device-USBConfig-interfaces: Array<USBInterface>--><!--Device-USBConfig-interfaces: Array<USBInterface>-End-->
 
@@ -102,7 +102,7 @@ Support for remote wakeup.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isremotewakeup)
+**Substitutes:** [isRemoteWakeup](arkts-basicservices-usbmanager-usbconfiguration-i.md#isRemoteWakeup)
 
 <!--Device-USBConfig-isRemoteWakeup: boolean--><!--Device-USBConfig-isRemoteWakeup: boolean-End-->
 
@@ -124,7 +124,7 @@ Support for independent power supplies.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isselfpowered)
+**Substitutes:** [isSelfPowered](arkts-basicservices-usbmanager-usbconfiguration-i.md#isSelfPowered)
 
 <!--Device-USBConfig-isSelfPowered: boolean--><!--Device-USBConfig-isSelfPowered: boolean-End-->
 
@@ -146,7 +146,7 @@ Maximum power consumption, in mA.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxpower)
+**Substitutes:** [maxPower](arkts-basicservices-usbmanager-usbconfiguration-i.md#maxPower)
 
 <!--Device-USBConfig-maxPower: number--><!--Device-USBConfig-maxPower: number-End-->
 
@@ -168,7 +168,7 @@ Configuration name, which can be left empty.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBConfiguration.name](arkts-basicservices-usbmanager-usbconfiguration-i.md#name)
+**Substitutes:** [name](arkts-basicservices-usbmanager-usbconfiguration-i.md#name)
 
 <!--Device-USBConfig-name: string--><!--Device-USBConfig-name: string-End-->
 

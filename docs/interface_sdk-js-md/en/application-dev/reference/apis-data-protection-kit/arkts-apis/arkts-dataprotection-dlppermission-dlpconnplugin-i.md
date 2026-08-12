@@ -4,8 +4,8 @@ Registers the callback capability with the system ability (SA). This API is used
 
 > **NOTE：**
 > 
-> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
-> [connectServer](arkts-dataprotection-dlppermission-dlpconnplugin-i.md#connectserver) is called by the SA and the parameters are
+> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerPlugin) requires identical parameters to this API.
+> [connectServer](#connectServer) is called by the SA and the parameters are
 > returned through the callback.
 
 **Since:** 21
@@ -19,7 +19,7 @@ Registers the callback capability with the system ability (SA). This API is used
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -54,13 +54,13 @@ This API can be used in enterprise account authentication and cloud permission v
 | --- | --- | --- | --- |
 | requestId | string | Yes | ID of the request transferred by the SA. No value range restriction is specified. |
 | requestData | string | Yes | Data transferred by the SA. No value range restriction is specified. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | API transferred by the SA, which is used for callback. No value range restriction is specified. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | API transferred by the SA, which is used for callback. No value range restriction is specified. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

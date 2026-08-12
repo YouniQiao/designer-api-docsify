@@ -13,7 +13,7 @@ HiRetrieval functionality config.
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## deviceModel

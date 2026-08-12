@@ -46,7 +46,7 @@ indicatorBuilder?: CustomBuilder
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ indicatorType?: RadioIndicatorType
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [RadioIndicatorType](../arkts-components/arkts-arkui-radioindicatortype-e.md)
+**类型：** [RadioIndicatorType](arkts-arkui-radio-radioindicatortype-e.md)
 
 **起始版本：** 23
 

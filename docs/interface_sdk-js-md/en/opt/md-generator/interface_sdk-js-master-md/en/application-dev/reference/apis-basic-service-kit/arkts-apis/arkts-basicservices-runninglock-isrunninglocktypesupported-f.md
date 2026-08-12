@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## isRunningLockTypeSupported
@@ -12,13 +12,13 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified type of {@link RunningLock} is supported. This API uses an asynchronous callback to return the result.
+Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
+**Substitutes:** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -50,13 +50,13 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (
 function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 ```
 
-Checks whether a specified type of {@link RunningLock} is supported. This API uses a promise to return the result.
+Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses a promise to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
+**Substitutes:** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>-End-->
 
@@ -72,7 +72,7 @@ Checks whether a specified type of {@link RunningLock} is supported. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

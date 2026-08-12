@@ -40,7 +40,7 @@ location?: Location
 
 地理位置信息。
 
-**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
+**类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
 **起始版本：** 9
 

@@ -6,7 +6,7 @@
 function containsCheckRule(rule: bigint) : boolean
 ```
 
-��ǰ�����ӵĹ������Ƿ������ĳһ���ض��Ĺ����������Ĺ��򼶱�Ϊ�̼߳�������ڵ�ǰ�߳��н��в�ѯ��
+当前已添加的规则集中是否包含了某一个特定的规则。如果传入的规则级别为线程级别，则仅在当前线程中进行查询。
 
 **起始版本：** 9
 
@@ -20,19 +20,19 @@ function containsCheckRule(rule: bigint) : boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rule | bigint | 是 | ��Ҫ��ѯ�Ĺ��� |
+| rule | bigint | 是 | 需要查询的规则。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | ��ѯ�����true ��ʾ���������ӣ�false ��ʾ����δ���ӡ� |
+| boolean | 查询结果。true 表示规则已添加；false 表示规则未添加。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | the parameter check failed, only one bigint type parameter is needed |
 
 ## 示例
 

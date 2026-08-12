@@ -14,7 +14,7 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -45,7 +45,7 @@ function getBundleInstaller(): Promise<BundleInstaller>
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 

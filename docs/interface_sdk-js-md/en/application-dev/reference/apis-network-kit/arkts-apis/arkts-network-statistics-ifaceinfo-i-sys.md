@@ -15,7 +15,7 @@ Parameters for obtaining detailed information on network interface traffic usage
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## endTime

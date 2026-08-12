@@ -21,22 +21,22 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | func | Function | 是 |
-| args | Object[] | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;unknown&gt; |
-| Promise&lt;Object&gt; |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-worker初始化失败) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -73,21 +73,21 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 |
-| args | A | 是 |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -154,18 +154,18 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 类型 |
 | --- |
-| Promise&lt;unknown&gt; |
-| Promise&lt;Object&gt; |
+| Promise & lt;unknown & gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-worker初始化失败) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -218,16 +218,16 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 | 类型 |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -280,14 +280,14 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 | 类型 |
 | --- |
-| Promise&lt;Object[]&gt; |
+| Promise & lt;Object[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200059](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200059-任务组不能重复执行) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -370,17 +370,17 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 类型 |
 | --- |
-| Promise&lt;Object&gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200058-任务执行超时) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -460,17 +460,17 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 | 类型 |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200058-任务执行超时) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -532,15 +532,15 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 | 类型 |
 | --- |
-| Promise&lt;Object[]&gt; |
+| Promise & lt;Object[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200070](../errorcode-utils.md#10200070-任务组执行超时) |
+| [10200059](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200059-任务组不能重复执行) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200070](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200070-任务组执行超时) |
 
 ## 示例
 

@@ -1,8 +1,8 @@
 # LightResponse
 
-Describes the ambient light sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the ambient light sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** LightResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** LightResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -13,7 +13,7 @@ Describes the ambient light sensor data. It extends from [Response](arkts-sensor
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## colorTemperature

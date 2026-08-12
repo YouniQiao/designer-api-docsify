@@ -56,7 +56,7 @@ setBackgroundColor(color: Nullable< Color | int | string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| int \| string&gt; | 是 | the color to set, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-enums-color-e.md) \| int \| string&gt; | 是 | the color to set, undefined indicates using default. |
 
 ## setIconColor
 
@@ -80,7 +80,7 @@ setIconColor(color: Nullable< Color | int | string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-color-e.md) \| int \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;[Color](arkts-arkui-enums-color-e.md) \| int \| string&gt; | 是 | the color to set to icon, undefined indicates using default. |
 
 ## setTitleContent
 
@@ -128,7 +128,7 @@ setTitleFontStyle(font: FontStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| font | [FontStyle](arkts-arkui-fontstyle-e.md) | 是 | the font style of the bar's title. |
+| font | [FontStyle](arkts-arkui-enums-fontstyle-e.md) | 是 | the font style of the bar's title. |
 
 ## setVisible
 

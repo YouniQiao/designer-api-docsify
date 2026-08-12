@@ -4,9 +4,9 @@ Toggle的样式。
 
 > **说明：**
 > 
-> Toggle的样式继承对应组件样式的默认值，且不支持设置。例如，如果ToggleType为Button，则该组件样式继承[ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md)的默认值。由于Button.type从API
+> Toggle的样式继承对应组件样式的默认值，且不支持设置。例如，如果ToggleType为Button，则该组件样式继承[ButtonType](ButtonType)的默认值。由于Button.type从API
 > version 18开始，默认类型从胶囊型变更为圆角矩形，胶囊型按钮不支持设置
-> [borderRadius](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderradius)，此时使用
+> [borderRadius](CommonMethod#borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses))，此时使用
 > Toggle组件设置borderRadius也不生效。
 
 **起始版本：** 8
@@ -29,7 +29,7 @@ Checkbox
 
 API version 11开始，Checkbox默认样式由圆角方形变为圆形。
 
-[通用属性margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)的默认值为：
+[通用属性margin](CommonMethod#margin)的默认值为：
 
 {
 
@@ -69,7 +69,7 @@ Switch
 
 **说明：**
 
-[通用属性margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)默认值为：
+[通用属性margin](CommonMethod#margin)默认值为：
 
 {
 

@@ -26,7 +26,7 @@ getFailedFiles(): Array<FailedFileInfo>
 
 | 类型 |
 | --- |
-| Array&lt;FailedFileInfo&gt; |
+| Array&lt;[FailedFileInfo](arkts-corefile-cloudsync-failedfileinfo-i.md)&gt; |
 
 **错误码：**
 
@@ -84,7 +84,7 @@ getSuccessfulFiles(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **错误码：**
 
@@ -178,7 +178,7 @@ state: State
 
 批量缓存任务的执行状态。
 
-**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 20
 

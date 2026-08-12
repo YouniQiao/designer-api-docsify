@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## trailOptimizedInterpolatingSpring
@@ -41,5 +41,5 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | Curve. &lt;br&gt;Note: The spring animation curve is physics-based. Its duration depends on the **interpolatingSpring** parameters, rather than the **duration** parameter in [animation]{ |
+| ICurve | Curve. &lt;br&gt;Note: The spring animation curve is physics-based. Its duration depends on the **interpolatingSpring** parameters, rather than the **duration** parameter in [animation]{ |
 

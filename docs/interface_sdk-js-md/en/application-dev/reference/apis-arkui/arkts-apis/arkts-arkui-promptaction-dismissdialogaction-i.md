@@ -13,7 +13,7 @@ Provides information about the action to dismiss the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## dismiss
@@ -24,7 +24,7 @@ dismiss: Callback<void>
 
 Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **Since:** 12
 
@@ -46,7 +46,7 @@ reason: DismissReason
 
 Reason why the dialog box cannot be dismissed. You must specify whether to close the dialog box for each of the listed actions.
 
-**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**Type:** DismissReason
 
 **Since:** 12
 

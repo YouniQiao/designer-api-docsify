@@ -41,7 +41,42 @@ emit(event: string, ...args: Object[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    this.context.eventHub.on('myEvent', this.eventFunc);
+  }
+
+  onDestroy() {
+    try {
+      // 结果：
+      // eventFunc is called,undefined,undefined
+      this.context.eventHub.emit('myEvent');
+      // 结果：
+      // eventFunc is called,1,undefined
+      this.context.eventHub.emit('myEvent', 1);
+      // 结果：
+      // eventFunc is called,1,2
+      this.context.eventHub.emit('myEvent', 1, 2);
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let message: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, message: ${message}`);
+    }
+  }
+
+  eventFunc(argOne: number, argTwo: number) {
+    console.info(`eventFunc is called, ${argOne}, ${argTwo}`);
+  }
+}
+```
 
 ## emit
 
@@ -66,7 +101,46 @@ emit(event: string, ...args: (Object|null|undefined)[]): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件名称。 |
-| args | (Object\|null\|undefined)[] | 是 | 可变参数，事件触发时，传递给回调函数的参数。 |
+| args | (Object \| null \| undefined)[] | 是 | 可变参数，事件触发时，传递给回调函数的参数。 |
+
+## 示例
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    this.context.eventHub.on('myEvent', this.eventFunc);
+  }
+
+  onDestroy() {
+    try {
+      // 结果：
+      // eventFunc is called,undefined,undefined
+      this.context.eventHub.emit('myEvent');
+      // 结果：
+      // eventFunc is called,1,undefined
+      this.context.eventHub.emit('myEvent', 1);
+      // 结果：
+      // eventFunc is called,1,2
+      this.context.eventHub.emit('myEvent', 1, 2);
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let message: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, message: ${message}`);
+    }
+    return undefined;
+  }
+
+  eventFunc(argOne: number, argTwo: number) {
+    console.info(`eventFunc is called, ${argOne}, ${argTwo}`);
+  }
+}
+```
 
 ## off
 
@@ -102,7 +176,38 @@ off(event: string, callback?: Function): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    try {
+      this.context.eventHub.on('myEvent', this.eventFunc1);
+      this.context.eventHub.off('myEvent', this.eventFunc1); // 取消eventFunc1对myEvent事件的订阅
+      this.context.eventHub.on('myEvent', this.eventFunc1);
+      this.context.eventHub.on('myEvent', this.eventFunc2);
+      this.context.eventHub.off('myEvent'); // 取消eventFunc1和eventFunc2对myEvent事件的订阅
+    } catch (e) {
+      let code: number = (e as BusinessError).code;
+      let message: string = (e as BusinessError).message;
+      console.error(`EventHub emit error, code: ${code}, message: ${message}`);
+    }
+  }
+
+  eventFunc1() {
+    console.info('eventFunc1 is called');
+  }
+
+  eventFunc2() {
+    console.info('eventFunc2 is called');
+  }
+}
+```
 
 ## on
 
@@ -139,5 +244,5 @@ on(event: string, callback: Function): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

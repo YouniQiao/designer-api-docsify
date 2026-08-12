@@ -13,7 +13,7 @@ Defines the content and events for selection.
 ## Modules to Import
 
 ```TypeScript
-import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2OperationItemType, SubHeaderV2OperationType, SubHeaderV2Title, SubHeaderV2OperationItem } from 'kits/@kit.ArkUI';
+import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2OperationItemType, SubHeaderV2OperationType, SubHeaderV2Title, SubHeaderV2OperationItem } from '@kit.ArkUI';
 ```
 
 ## constructor

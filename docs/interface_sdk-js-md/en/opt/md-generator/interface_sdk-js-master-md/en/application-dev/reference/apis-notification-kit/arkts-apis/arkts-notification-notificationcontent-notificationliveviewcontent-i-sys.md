@@ -2,7 +2,7 @@
 
 Describes the normal live notification content. This API inherits from NotificationBasicContent.
 
-**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ extensionWantAgent?: WantAgent
 
 Redirection by tapping in the auxiliary area. This parameter is left empty by default.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 20
 
@@ -95,7 +95,7 @@ status: LiveViewStatus
 
 Notification status.
 
-**Type:** [LiveViewStatus](arkts-notification-notificationmanager-liveviewstatus-t-sys.md)
+**Type:** [LiveViewStatus](arkts-notification-notificationcontent-liveviewstatus-e-sys.md)
 
 **Since:** 11
 

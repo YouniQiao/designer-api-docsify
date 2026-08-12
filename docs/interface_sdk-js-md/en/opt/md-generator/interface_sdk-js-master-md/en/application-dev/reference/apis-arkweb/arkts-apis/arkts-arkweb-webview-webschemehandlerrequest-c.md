@@ -11,7 +11,7 @@ Defines the Web resource request used for scheme handler.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getFrameUrl
@@ -54,7 +54,7 @@ Gets request headers.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;WebHeader&gt; |
+| Array & lt;WebHeader & gt; |
 
 ## getHttpBodyStream
 

@@ -38,7 +38,7 @@ localizedDirection: LocalizedBarrierDirection
 
 Specifies the localized barrier direction of barrier
 
-**Type:** [LocalizedBarrierDirection](../arkts-components/arkts-arkui-localizedbarrierdirection-e.md)
+**Type:** [LocalizedBarrierDirection](arkts-arkui-relativecontainer-localizedbarrierdirection-e.md)
 
 **Since:** 23
 

@@ -14,7 +14,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)(context:
+**替代接口：** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -26,8 +26,8 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用运行的上下文。&lt;br&gt;FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
-| bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | 是 | 向系统申请的后台模式。 |
+| context | Context | 是 | 应用运行的上下文。&lt;br&gt;FA模型的应用Context定义见[Context](./app/context)。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 |
+| bgMode | BackgroundMode | 是 | 向系统申请的后台模式。 |
 | wantAgent | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 通知参数，用于指定长时任务通知点击后跳转的界面。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，申请长时任务成功时，err为undefined，否则为错误对象。 |
 
@@ -122,7 +122,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)(context:
+**替代接口：** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -134,8 +134,8 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用运行的上下文。&lt;br&gt;FA模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
-| bgMode | [BackgroundMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md) | 是 | 向系统申请的后台模式。 |
+| context | Context | 是 | 应用运行的上下文。&lt;br&gt;FA模型的应用Context定义见[Context](./app/context)。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 |
+| bgMode | BackgroundMode | 是 | 向系统申请的后台模式。 |
 | wantAgent | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | 是 | 通知参数，用于指定长时任务通知点击跳转的界面。 |
 
 **返回值：**

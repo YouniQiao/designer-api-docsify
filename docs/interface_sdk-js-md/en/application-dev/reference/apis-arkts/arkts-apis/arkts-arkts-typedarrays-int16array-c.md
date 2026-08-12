@@ -62,7 +62,7 @@ Iterable interface implementation.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;double&gt; | iterator over all elements |
+| IterableIterator&lt;double&gt; | iterator over all elements |
 
 ## $_set
 
@@ -479,7 +479,7 @@ Creates an Int16Array with respect to buf.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buf | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
+| buf | ArrayLike&lt;double&gt; \| ArrayBuffer | Yes | data initializer |
 
 ## copyWithin
 
@@ -565,7 +565,7 @@ Returns an array of key, value pairs for every entry in the Int16Array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, double]&gt; | key, value pairs for every entry in the array |
+| IterableIterator&lt;[int, double]&gt; | key, value pairs for every entry in the array |
 
 ## every
 
@@ -1037,7 +1037,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; | Yes | An array-like or iterable object to convert to an array. |
+| arrayLike | ArrayLike&lt;double&gt; | Yes | An array-like or iterable object to convert to an array. |
 
 **Return value:**
 
@@ -1067,7 +1067,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | An array-like or iterable object to convert to an array. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | An array-like or iterable object to convert to an array. |
 | mapfn | (v: T, k: double) =&gt; double | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
@@ -1343,7 +1343,7 @@ Returns a list of indices in the Int16Array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | iterator over indices. |
+| IterableIterator&lt;int&gt; | iterator over indices. |
 
 ## lastIndexOf
 
@@ -1982,7 +1982,7 @@ Copies elements from an ArrayLike object to the Int16Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
+| array | ArrayLike&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
 | offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. |
 
 ## slice
@@ -2310,7 +2310,7 @@ Returns array values iterator
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;double&gt; | an iterator |
+| IterableIterator&lt;double&gt; | an iterator |
 
 ## with
 

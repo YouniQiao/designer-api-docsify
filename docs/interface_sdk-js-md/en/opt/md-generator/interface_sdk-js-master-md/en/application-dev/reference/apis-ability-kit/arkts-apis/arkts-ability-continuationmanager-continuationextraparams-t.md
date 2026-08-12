@@ -10,7 +10,7 @@ Defines the extra parameters required by the device selection module in the cont
 
 **Deprecated since:** 22
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)
+**Substitutes:** [DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)
 
 **Model restriction:** This API can be used only in the stage model.
 

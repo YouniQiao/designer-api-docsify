@@ -66,7 +66,7 @@ static of(id: ResourceStr): TextMenuItemId
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 菜单项标识，用于创建TextMenuItemId对象以识别菜单选项。 |
+| id | ResourceStr | 是 | 菜单项标识，用于创建TextMenuItemId对象以识别菜单选项。 |
 
 **返回值：**
 
@@ -344,7 +344,7 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持[Search](arkts-arkui-search-search-f.md#search)、[TextInput](./text_input)、  
+自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持[Search](./search)、[TextInput](./text_input)、  
 [TextArea](./text_area)或[RichEditor](./rich_editor)。
 
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
@@ -411,7 +411,7 @@ static readonly email: TextMenuItemId
 static readonly passwordVault: TextMenuItemId
 ```
 
-密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持[Search](arkts-arkui-search-search-f.md#search)、[TextInput](./text_input)、  
+密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持[Search](./search)、[TextInput](./text_input)、  
 [TextArea](./text_area)或[RichEditor](./rich_editor)。
 
 **类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)

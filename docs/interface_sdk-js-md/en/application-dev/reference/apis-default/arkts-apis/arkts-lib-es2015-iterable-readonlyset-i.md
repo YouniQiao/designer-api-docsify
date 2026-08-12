@@ -18,7 +18,7 @@ Iterates over values in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
 
 ## entries
 
@@ -36,7 +36,7 @@ Returns an iterable of [v,v] pairs for every value `v` in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;[T, T]&gt; |  |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |  |
 
 ## keys
 
@@ -54,7 +54,7 @@ Despite its name, returns an iterable of the values in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
 
 ## values
 
@@ -72,5 +72,5 @@ Returns an iterable of values in the set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
 

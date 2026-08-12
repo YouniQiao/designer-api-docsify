@@ -16,7 +16,7 @@
 onStatus(networkId: string, status: number): void
 ```
 
-事件回调类。参数由[connectDfs](arkts-corefile-file-fs-connectdfs-f.md#connectdfs)传入。
+事件回调类。参数由[connectDfs](arkts-corefile-file-fs-connectdfs-f.md#connectDfs)传入。
 
 **起始版本：** 12
 

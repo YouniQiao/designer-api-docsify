@@ -7,8 +7,8 @@ Describes the badge style. It includes the font color, font size, badge color, b
 > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
 > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
 > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
-> recommended that you use the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component with its
-> [outline](arkts-arkui-common-commonmethod-i.md#outline) attribute instead of the **Badge** component.
+> recommended that you use the [Text](text) component with its
+> [outline](CommonMethod#outline(value: OutlineOptions)) attribute instead of the **Badge** component.
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ badgeSize?: double | ResourceStr
 
 Size of a badge.Default value: 16vp.
 
-**Type:** double \| ResourceStr
+**Type:** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -156,7 +156,7 @@ fontSize?: double | ResourceStr
 
 Text size.Default value: 10vp.
 
-**Type:** double \| ResourceStr
+**Type:** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ fontWeight?: int | FontWeight | ResourceStr
 
 Define the font weight of the badge.Default value: FontWeight.Normal.&lt;br&gt;Value range of the number type: [100, 900], with an interval of 100. A larger value indicates a thicker font.If the number type is out of the value range, the default value 400 is used. The value of the string type must be a string of values of the number type, for example, 400. The values of bold, bolter, lighter, regular, and medium correspond to the corresponding enumerated values in FontWeight, respectively.
 
-**Type:** int \| FontWeight \| ResourceStr
+**Type:** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

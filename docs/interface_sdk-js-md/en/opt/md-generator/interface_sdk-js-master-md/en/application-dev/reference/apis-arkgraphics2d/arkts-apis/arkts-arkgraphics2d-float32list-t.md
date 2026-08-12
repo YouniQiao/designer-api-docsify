@@ -17,4 +17,4 @@ WebGL 1.0
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Float32Array |
-| [GLfloat[]](arkts-arkgraphics2d-glfloat-t.md) |
+| [GLfloat](arkts-arkgraphics2d-glfloat-t.md)[] |

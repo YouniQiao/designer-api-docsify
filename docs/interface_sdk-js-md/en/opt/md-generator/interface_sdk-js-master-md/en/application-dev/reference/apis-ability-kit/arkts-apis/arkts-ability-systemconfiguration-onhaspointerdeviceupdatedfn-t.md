@@ -20,4 +20,4 @@ Defines an OnHasPointerDeviceUpdatedFn function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| hasPointerDevice | boolean | Yes |
+| [hasPointerDevice](arkts-ability-app-ability-configuration-configuration-i.md) | boolean | Yes |

@@ -25,4 +25,4 @@ type ExecuteActionEvent = (actionType: string, params: string) => Promise<string
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |

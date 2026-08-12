@@ -12,7 +12,7 @@ function queryKey(id: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryKey](arkts-contacts-contact-querykey-f.md#querykey)(context:
+**替代接口：** [queryKey](contact.queryKey(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -71,8 +71,8 @@ function queryKey(context: Context, id: number, callback: AsyncCallback<string>)
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -107,7 +107,7 @@ function queryKey(id: number, holder: Holder, callback: AsyncCallback<string>): 
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryKey](arkts-contacts-contact-querykey-f.md#querykey)(context:
+**替代接口：** [queryKey](contact.queryKey(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -172,8 +172,8 @@ function queryKey(context: Context, id: number, holder: Holder, callback: AsyncC
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -212,7 +212,7 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryKey](arkts-contacts-contact-querykey-f.md#querykey)(context:
+**替代接口：** [queryKey](contact.queryKey(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -231,7 +231,7 @@ function queryKey(id: number, holder?: Holder): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 
@@ -277,14 +277,14 @@ function queryKey(context: Context, id: number, holder?: Holder): Promise<string
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

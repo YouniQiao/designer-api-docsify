@@ -2,7 +2,7 @@
 
 Represents an error that occurs when an internal error has occurred
 
-**Inheritance/Implementation:** InternalError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** InternalError extends [Error](Error)
 
 **Since:** 26.0.0
 

@@ -11,7 +11,7 @@ Represents data of the home screen icon type defined by the system.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## abilityName
@@ -147,7 +147,7 @@ readonly uniformDataType: 'openharmony.app-item'
 ```
 
 Uniform data type, which has a fixed value of **openharmony.app-item**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'openharmony.app-item'
 

@@ -22,7 +22,7 @@ Default value: **DragPreviewMode.AUTO**
 
 If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **DragPreviewMode.AUTO** takes precedence and the other values are ignored.
 
-**Type:** [DragPreviewMode](../arkts-apis/arkts-arkui-common-dragpreviewmode-e.md) \| Array&lt;DragPreviewMode&gt;
+**Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **Since:** 11
 
@@ -75,7 +75,7 @@ Transition effect between the floating image and drag preview.
 
 Default value: **DraggingSizeChangeEffect.DEFAULT**.
 
-**Type:** [DraggingSizeChangeEffect](../arkts-apis/arkts-arkui-common-draggingsizechangeeffect-e.md)
+**Type:** [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md)
 
 **Since:** 19
 

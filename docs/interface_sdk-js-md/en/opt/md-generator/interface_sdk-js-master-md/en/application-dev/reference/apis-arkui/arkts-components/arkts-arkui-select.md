@@ -26,7 +26,7 @@ Select(options: Array<SelectOption>)
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | Yes |
+| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | Yes |
 
 ## Summary
 

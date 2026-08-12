@@ -24,7 +24,7 @@ Default value: 'sys.color.comp_background_tertiary'
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** 'sys.color.comp_background_tertiary'
 
@@ -54,9 +54,9 @@ is less than 0, the default value is used. If the value is greater than the maxi
 
 NOTE
 
-1. This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md/arkts-arkui-graphics-lengthmetrics-c.md): Sets the size and unit of the four corner radii in a unified manner.3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md/arkts-arkui-borderradiuses-t.md): Sets the size (unit: vp) of the four corner radii individually.4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-units-localizedborderradiuses-i.md/arkts-arkui-units-localizedborderradiuses-i.md): Sets the size and unit of the four corner radii individually.
+1. This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): Sets the size and unit of the four corner radii in a unified manner.3. [BorderRadiuses](BorderRadiuses): Sets the size (unit: vp) of the four corner radii individually.4. [LocalizedBorderRadiuses](LocalizedBorderRadiuses): Sets the size and unit of the four corner radii individually.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** { value:12, unit:LengthUnit.vp }
 
@@ -86,7 +86,7 @@ Default value: 'sys.color.comp_divider'
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** $r('sys.color.comp_divider')
 
@@ -121,7 +121,7 @@ Value range: The sum of **startMargin** and **endMargin** must not exceed the wi
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 0
 
@@ -156,7 +156,7 @@ NOTE
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 0
 
@@ -190,7 +190,7 @@ NOTE
 
 1. This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.2. If this parameter is set in **LengthMetrics.resource** mode, the value of a non-length attribute will be treated as 0 vp.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 2.0px
 
@@ -218,7 +218,7 @@ Default value: PickerIndicatorType.BACKGROUND
 
 If the value of **type** is a decimal number, the integer after rounding down is used. If the value of **type** is not within the value range of **PickerIndicatorType**, the default value is used.
 
-**Type:** [PickerIndicatorType](../arkts-apis/arkts-arkui-uipickercomponent-pickerindicatortype-e.md)
+**Type:** [PickerIndicatorType](arkts-arkui-pickerindicatortype-e.md)
 
 **Default:** PickerIndicatorType.BACKGROUND
 

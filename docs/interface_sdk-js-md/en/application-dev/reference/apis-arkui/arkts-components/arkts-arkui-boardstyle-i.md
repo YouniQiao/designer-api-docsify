@@ -24,7 +24,7 @@ Unit: vp
 
 Value range: [0, +∞)
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 8.0vp [since 11]
 

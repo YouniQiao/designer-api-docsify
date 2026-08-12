@@ -1,6 +1,6 @@
 # FileSelectorResult
 
-定义文件选择器结果，与 {@link onFileSelectorShow} 方法相关联。
+定义文件选择器结果，与 [onFileSelectorShow](onFileSelectorShow) 方法相关联。
 
 **起始版本：** 9
 
@@ -44,4 +44,4 @@ handleFileList(fileList: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fileList | Array&lt;string&gt; | 是 |
+| [fileList](../../apis-core-file-kit/arkts-apis/arkts-corefile-system-file-filelistresponse-depr-i.md) | Array & lt;string & gt; | 是 |

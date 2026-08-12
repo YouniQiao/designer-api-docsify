@@ -15,7 +15,7 @@ Configuration stream result for AI-generated text tasks.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## content
@@ -48,7 +48,7 @@ partialFail?: BusinessError
 
 Information of the partial error corresponding to AI-generated text task, available in partial error result.
 
-**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)
 
 **Since:** 23
 

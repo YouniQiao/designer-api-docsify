@@ -6,7 +6,7 @@ Describes the Gatt characteristic.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLECharacteristic
+**Substitutes:** [BLECharacteristic](ohos.bluetooth.ble/ble.BLECharacteristic)
 
 <!--Device-bluetoothManager-interface BLECharacteristic--><!--Device-bluetoothManager-interface BLECharacteristic-End-->
 
@@ -15,7 +15,7 @@ Describes the Gatt characteristic.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -32,7 +32,7 @@ The UUID of a BLECharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLECharacteristic#characteristicUuid
+**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.BLECharacteristic#characteristicUuid)
 
 <!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The value of a BLECharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLECharacteristic#characteristicValue
+**Substitutes:** [characteristicValue](ohos.bluetooth.ble/ble.BLECharacteristic#characteristicValue)
 
 <!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -64,7 +64,7 @@ The value of a BLECharacteristic instance
 descriptors: Array<BLEDescriptor>
 ```
 
-The list of {@link BLEDescriptor} contained in the characteristic
+The list of [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.md#BLEDescriptor) contained in the characteristic
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
@@ -72,7 +72,7 @@ The list of {@link BLEDescriptor} contained in the characteristic
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLECharacteristic#descriptors
+**Substitutes:** [descriptors](ohos.bluetooth.ble/ble.BLECharacteristic#descriptors)
 
 <!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>--><!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>-End-->
 
@@ -84,7 +84,7 @@ The list of {@link BLEDescriptor} contained in the characteristic
 serviceUuid: string
 ```
 
-The UUID of the {@link GattService} instance to which the characteristic belongs
+The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#GattService) instance to which the characteristic belongs
 
 **Type:** string
 
@@ -92,7 +92,7 @@ The UUID of the {@link GattService} instance to which the characteristic belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.BLECharacteristic#serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.BLECharacteristic#serviceUuid)
 
 <!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
 

@@ -18,7 +18,7 @@ builder: CustomBuilder
 
 设置标题栏内容。
 
-**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
+**类型：** CustomBuilder
 
 **起始版本：** 9
 
@@ -40,7 +40,7 @@ height: TitleHeight | Length
 
 取值范围：[0, +∞)。
 
-**类型：** [TitleHeight](../arkts-apis/arkts-arkui-enums-titleheight-e.md) \| Length
+**类型：** TitleHeight \| Length
 
 **起始版本：** 9
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getInstalledBundleList
@@ -30,7 +30,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Information contained in the returned BundleInfo. For details, see {@link BundleFlag}. |
+| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag). |
 
 **Return value:**
 
@@ -42,5 +42,5 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

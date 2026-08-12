@@ -13,7 +13,7 @@ Intercepted record page information.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## data
@@ -24,7 +24,7 @@ data: Array<InterceptedRecord>
 
 Page data: all records displayed on this page.
 
-**Type:** Array&lt;InterceptedRecord&gt;
+**Type:** Array&lt;[InterceptedRecord](arkts-network-netfirewall-interceptedrecord-i-sys.md)&gt;
 
 **Since:** 14
 

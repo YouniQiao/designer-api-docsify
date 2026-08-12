@@ -21,6 +21,6 @@ Callback function on starting an application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | Window target of the starting application. |
+| startingWindowTarget | WindowAnimationTarget | Yes | Window target of the starting application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 

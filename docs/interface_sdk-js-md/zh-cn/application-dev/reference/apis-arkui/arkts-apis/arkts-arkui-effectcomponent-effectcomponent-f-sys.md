@@ -27,14 +27,14 @@ Defines EffectComponent Component
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [EffectComponentOptions](../arkts-components/arkts-arkui-effectcomponentoptions-i-sys.md) | 否 | The options to create an EffectComponent. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of EffectComponent |
+| options | [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | 否 | The options to create an EffectComponent. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of EffectComponent |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [EffectComponentAttribute](../arkts-components/arkts-arkui-effectcomponent-attribute.md) |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
 
 
 ## EffectComponent
@@ -66,12 +66,12 @@ Defines EffectComponent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EffectComponentAttribute&gt; | 是 | EffectComponent attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md)&gt; | 是 | EffectComponent attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [EffectComponentAttribute](../arkts-components/arkts-arkui-effectcomponent-attribute.md) |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
 

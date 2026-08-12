@@ -14,7 +14,7 @@ function isLocalContact(id: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 10
 
-**替代接口：** [contact.isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact)(context:
+**替代接口：** [isLocalContact](contact.isLocalContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -68,7 +68,7 @@ function isLocalContact(context: Context, id: number, callback: AsyncCallback<bo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性，一个联系人对应一个id。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。成功返回布尔值，true代表联系人id在本地电话簿中，false则代表联系人id不在本地电话簿中；失败返回具体的错误码信息。 |
 
@@ -76,8 +76,8 @@ function isLocalContact(context: Context, id: number, callback: AsyncCallback<bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -114,7 +114,7 @@ function isLocalContact(id: number): Promise<boolean>
 
 **废弃版本：** 10
 
-**替代接口：** [contact.isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact)(context:
+**替代接口：** [isLocalContact](contact.isLocalContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -169,7 +169,7 @@ function isLocalContact(context: Context, id: number): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | id | number | 是 | 联系人对象的id属性，一个联系人对应一个id。 |
 
 **返回值：**
@@ -182,8 +182,8 @@ function isLocalContact(context: Context, id: number): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 Component content cover options
 
-**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ modalTransition?: ModalTransition
 
 Defines transition type
 
-**Type:** [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md)
+**Type:** [ModalTransition](arkts-arkui-common-modaltransition-e.md)
 
 **Default:** ModalTransition.Default
 

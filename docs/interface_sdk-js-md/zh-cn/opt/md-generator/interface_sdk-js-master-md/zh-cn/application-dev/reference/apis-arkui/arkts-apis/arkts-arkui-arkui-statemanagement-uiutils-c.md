@@ -40,9 +40,9 @@ static addMonitor(target: object, path: string | string[], monitorCallback: Moni
 
 | 错误码ID |
 | --- |
-| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) |
-| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) |
-| [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) |
+| [130001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) |
+| [130000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) |
+| [130002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) |
 
 ## applySync
 
@@ -80,7 +80,7 @@ static applySync<T>(task: TaskCallback): T
 
 | 错误码ID |
 | --- |
-| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
+| [140001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
 
 ## 示例
 
@@ -275,7 +275,7 @@ export struct School {
 static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
 ```
 
-删除通过[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor)给状态管理V2的状态变量添加的监听方法，详见  
+删除通过[addMonitor](#addMonitor)给状态管理V2的状态变量添加的监听方法，详见  
 [addMonitor/clearMonitor](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md)。
 
 **起始版本：** 20
@@ -300,9 +300,9 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 
 | 错误码ID |
 | --- |
-| [130001](../errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) |
-| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) |
-| [130002](../errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) |
+| [130001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-addmonitorclearmonitor非法路径) |
+| [130000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) |
+| [130002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-addmonitorclearmonitor非法回调方法) |
 
 ## enableV2Compatibility
 
@@ -398,8 +398,8 @@ static flushUIUpdates(): void
 
 | 错误码ID |
 | --- |
-| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) |
-| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
+| [140002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) |
+| [140001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
 
 ## 示例
 
@@ -470,8 +470,8 @@ static flushUpdates(): void
 
 | 错误码ID |
 | --- |
-| [140002](../errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) |
-| [140001](../errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
+| [140002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-flushupdatesflushuiupdates非法调用) |
+| [140001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-applysyncflushupdatesflushuiupdates非法调用) |
 
 ## 示例
 
@@ -524,7 +524,7 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅  
+返回给定@Component(V1)或@ComponentV2的[CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#CustomComponentContext)。使用它来访问组件的复用池。有关复用池的详细信息，请参阅  
 [全局复用池：集中化的组件回收与复用](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
@@ -615,7 +615,7 @@ struct Index {
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-getLifecycle用于获取[自定义组件的生命周期](arkts-arkui-statemanagement.md)实例。
+getLifecycle用于获取[自定义组件的生命周期](@ohos.arkui.StateManagement)实例。
 
 **起始版本：** 23
 
@@ -814,7 +814,7 @@ static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): Mut
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | 是 |
-| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | 是 |
+| [setter](../../apis-ability-kit/arkts-apis/arkts-ability-appmanager-keepalivebundleinfo-i-sys.md) | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | 是 |
 
 **返回值：**
 
@@ -938,7 +938,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 将不可观察的对象包装成状态管理V1可观察的对象，其能力等同于@Observed，可初始化@ObjectLink。
 
-该接口可搭配[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)应用于状态管理V1和V2混用场景，详见  
+该接口可搭配[enableV2Compatibility](#enableV2Compatibility)应用于状态管理V1和V2混用场景，详见  
 [状态管理V1和V2混用指导（API version 19及之后）](../../../ui/state-management/arkts-v1-v2-mixusage.md)。
 
 **起始版本：** 19

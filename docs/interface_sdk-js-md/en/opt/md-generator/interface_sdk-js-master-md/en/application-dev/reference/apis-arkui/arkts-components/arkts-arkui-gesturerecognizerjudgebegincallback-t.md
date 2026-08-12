@@ -23,8 +23,8 @@ Represents a custom gesture recognizer judgment callback type.
 | --- | --- | --- |
 | event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | Yes |
 | current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | Yes |
-| recognizers | Array&lt;GestureRecognizer&gt; | Yes |
-| touchRecognizers | Array&lt;TouchRecognizer&gt; | No |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | No |
 
 **Return value:**
 

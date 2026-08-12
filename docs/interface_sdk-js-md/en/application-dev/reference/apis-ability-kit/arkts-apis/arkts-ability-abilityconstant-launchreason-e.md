@@ -1,7 +1,7 @@
 # LaunchReason
 
 Enumerates the ability launch reasons. You can use it together with the value of **launchParam.launchReason** in  
-[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) of the UIAbility to complete different operations.
+[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ START_ABILITY = 1
 ```
 
 The ability is started by calling  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startability).
+[startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).
 
 **Since:** 9
 
@@ -59,7 +59,7 @@ CALL = 2
 ```
 
 The ability is started by calling  
-[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startabilitybycall).
+[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall).
 
 **Since:** 9
 

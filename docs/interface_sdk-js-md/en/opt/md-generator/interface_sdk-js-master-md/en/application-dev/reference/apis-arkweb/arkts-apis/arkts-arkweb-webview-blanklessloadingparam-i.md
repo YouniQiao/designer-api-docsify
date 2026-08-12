@@ -13,7 +13,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## callback
@@ -26,7 +26,7 @@ Callback for the blankless frame interpolation, which is used to return the blan
 
 Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BlanklessFrameInterpolationInfo&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **Since:** 23
 

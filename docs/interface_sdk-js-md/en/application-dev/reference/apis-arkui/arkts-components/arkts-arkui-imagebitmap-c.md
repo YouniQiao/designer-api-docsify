@@ -85,7 +85,7 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | string | Yes | Image source. Local images are supported.&lt;br&gt; 1. The string format is used to load local images, for example, **ImageBitmap("common/images/example.jpg")**. For entry and feature modules, the start point of the image path for loading is the **ets** folder of the module. For HAR and shared modules, the start point is the **ets** folder of the entry or feature module into which they are built.&lt;br&gt; For modules whose **type** is **"har"** or **"shared"**, you are advised to use [ImageSource](../../../media/image/image-decoding.md) to decode resource images into a unified **PixelMap** object for loading and use.&lt;br&gt; 2. Supported image formats: BMP, JPG, PNG, SVG, and WEBP.&lt;br&gt; **NOTE：**&lt;br&gt; - ArkTS widgets do not support the strings with the **http://**, **datashare://**, or **file://data/storage**. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).&lt;br&gt; If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; If the value is **undefined**, **NaN**, or **Infinity**, the default value will be used. |
 
 ## constructor
 
@@ -109,7 +109,7 @@ Creates an **ImageBitmap** object using a **PixelMap** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image data source, which supports **PixelMap** objects. |
+| data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
 
 ## constructor
 
@@ -135,8 +135,8 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [PixelMap](arkts-arkui-pixelmap-t.md) | Yes | Image data source, which supports **PixelMap** objects. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). |
+| data | PixelMap | Yes | Image data source, which supports **PixelMap** objects. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **ImageBitmap** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D). |
 
 ## constructor
 
@@ -162,8 +162,8 @@ Transfer a Resource object to construct an ImageBitmap object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Resource object |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
+| data | Resource | Yes | Resource object |
+| unit | LengthMetricsUnit | No | the unit mode |
 
 ## height
 

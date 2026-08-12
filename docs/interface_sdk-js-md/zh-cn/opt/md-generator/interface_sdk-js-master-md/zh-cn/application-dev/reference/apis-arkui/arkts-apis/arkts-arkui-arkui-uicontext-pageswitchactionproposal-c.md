@@ -1,9 +1,9 @@
 # PageSwitchActionProposal
 
-智慧手势翻页动作处理，默认方向为向前翻页，包括向右和向下。当通过[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registermonitor)接口动态自定义智慧手势行为时，设置返回值  
-[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)的selectedProposal为该类型对象，会触发目标组件的翻页操作。
+智慧手势翻页动作处理，默认方向为向前翻页，包括向右和向下。当通过[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor)接口动态自定义智慧手势行为时，设置返回值  
+[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)的selectedProposal为该类型对象，会触发目标组件的翻页操作。
 
-**继承/实现关系：** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**继承/实现关系：** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **起始版本：** 26.0.0
 
@@ -33,8 +33,8 @@ constructor(node: FrameNode, pageCount: number)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 是 |
-| [pageCount](#pagecount) | number | 是 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
+| [pageCount](arkts-arkui-arkui-uicontext-pageswitchactionproposal-c.md) | number | 是 |
 
 ## pageCount
 

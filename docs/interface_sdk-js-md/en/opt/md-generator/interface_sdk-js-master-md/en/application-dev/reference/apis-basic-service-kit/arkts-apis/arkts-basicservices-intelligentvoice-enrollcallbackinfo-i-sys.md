@@ -13,7 +13,7 @@ Describes enroll callback information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from 'kits/@kit.BasicServicesKit';
+import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
 ## context

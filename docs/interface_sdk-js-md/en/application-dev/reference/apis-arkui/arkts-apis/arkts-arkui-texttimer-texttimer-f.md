@@ -24,7 +24,7 @@ Defines the TextTimer component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextTimerOptions](../arkts-components/arkts-arkui-texttimeroptions-i.md) | No | text timer options. |
+| options | [TextTimerOptions](arkts-arkui-texttimer-texttimeroptions-i.md) | No | text timer options. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines TextTimer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextTimerAttribute&gt; | Yes | TextTimer attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextTimerAttribute](arkts-arkui-texttimer-texttimerattribute-i.md)&gt; | Yes | TextTimer attribute instance |
 
 **Return value:**
 

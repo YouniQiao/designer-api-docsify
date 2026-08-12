@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getAuthLockState
@@ -34,17 +34,17 @@ Queries the lockout state of the specified authentication type. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AuthLockState&gt; |
+| Promise&lt;[AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [12500008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500008-parameter-verification-failed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

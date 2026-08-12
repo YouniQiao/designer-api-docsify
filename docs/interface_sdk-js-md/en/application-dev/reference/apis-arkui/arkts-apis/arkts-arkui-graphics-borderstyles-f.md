@@ -22,11 +22,11 @@ Obtain an object with all edges are set to the same style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | [BorderStyle](arkts-arkui-borderstyle-e.md) | Yes | The edge style will be set. |
+| all | BorderStyle | Yes | The edge style will be set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;[BorderStyle](arkts-arkui-borderstyle-e.md)&gt; | The object with all edges are set to the same style. |
+| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;BorderStyle&gt; | The object with all edges are set to the same style. |
 

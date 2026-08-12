@@ -5,7 +5,7 @@ declare type ContentDidScrollCallback = (selectedIndex: number, index: number, p
 ```
 
 Triggered during the swipe action of the **Swiper** component. For details about the parameters, see  
-[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md).
+[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md#SwiperContentTransitionProxy).
 
 **Since:** 12
 

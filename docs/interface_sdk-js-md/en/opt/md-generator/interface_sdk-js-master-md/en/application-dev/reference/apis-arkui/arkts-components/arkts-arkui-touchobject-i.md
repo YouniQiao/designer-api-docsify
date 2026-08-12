@@ -28,7 +28,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) |
 
@@ -249,7 +249,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [TouchObject#windowX](arkts-arkui-touchobject-i.md#windowx)
+**Substitutes:** [windowX](#windowX)
 
 <!--Device-TouchObject-screenX: number--><!--Device-TouchObject-screenX: number-End-->
 
@@ -274,7 +274,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [TouchObject#windowY](arkts-arkui-touchobject-i.md#windowy)
+**Substitutes:** [windowY](#windowY)
 
 <!--Device-TouchObject-screenY: number--><!--Device-TouchObject-screenY: number-End-->
 

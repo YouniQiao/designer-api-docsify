@@ -34,7 +34,7 @@ getConfigInRouteMap(): RouteMapConfig | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RouteMapConfig](../arkts-apis/arkts-arkui-navdestination-routemapconfig-i.md) | Routing configuration of the current page. &lt;br&gt; **undefined** is returned when the page is not configured through the route table. |
+| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) | Routing configuration of the current page. &lt;br&gt; **undefined** is returned when the page is not configured through the route table. |
 
 ## mode
 
@@ -46,7 +46,7 @@ mode?: NavDestinationMode
 
 从API version 22开始，该接口支持在原子化服务中使用。
 
-**类型：** [NavDestinationMode](../arkts-apis/arkts-arkui-navdestination-navdestinationmode-e.md)
+**类型：** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
 
 **起始版本：** 22
 
@@ -90,7 +90,7 @@ pathInfo: NavPathInfo
 
 跳转NavDestination时指定的参数。
 
-**类型：** [NavPathInfo](../arkts-apis/arkts-arkui-navigation-navpathinfo-c.md)
+**类型：** NavPathInfo
 
 **起始版本：** 11
 
@@ -112,7 +112,7 @@ pathStack: NavPathStack
 
 当前NavDestination所处的导航控制器。
 
-**类型：** [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md)
+**类型：** NavPathStack
 
 **起始版本：** 11
 

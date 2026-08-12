@@ -18,7 +18,7 @@ request: WebResourceRequest
 
 The information of request.
 
-**类型：** [WebResourceRequest](../arkts-components/arkts-arkweb-webresourcerequest-c.md)
+**类型：** [WebResourceRequest](arkts-arkweb-web-webresourcerequest-c.md)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ response: WebResourceResponse
 
 Web resource response of event.
 
-**类型：** [WebResourceResponse](../arkts-components/arkts-arkweb-webresourceresponse-c.md)
+**类型：** [WebResourceResponse](arkts-arkweb-web-webresourceresponse-c.md)
 
 **起始版本：** 23
 

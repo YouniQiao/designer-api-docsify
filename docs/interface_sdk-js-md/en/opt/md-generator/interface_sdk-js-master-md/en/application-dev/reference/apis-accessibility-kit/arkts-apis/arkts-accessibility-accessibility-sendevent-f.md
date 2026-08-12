@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## sendEvent
@@ -18,7 +18,7 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessibility.sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)(event:
+**Substitutes:** [sendAccessibilityEvent](accessibility.sendAccessibilityEvent(event:)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -65,7 +65,7 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessibility.sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)(event:
+**Substitutes:** [sendAccessibilityEvent](accessibility.sendAccessibilityEvent(event:)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>-End-->
 
@@ -81,7 +81,7 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

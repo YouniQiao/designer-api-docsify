@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## offCommunicationStateChange
@@ -35,4 +35,4 @@ Unsubscribes from the callback for listening to the 5A state.
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |

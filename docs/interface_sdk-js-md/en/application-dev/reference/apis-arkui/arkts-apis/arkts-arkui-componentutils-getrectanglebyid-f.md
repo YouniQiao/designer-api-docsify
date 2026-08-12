@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## getRectangleById
@@ -17,11 +17,11 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 > **NOTE：**
 > 
 > - Since API version 10, you can use the
-> [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentutils) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentUtils](arkts-arkui-uicontext.md) object
+> [getComponentUtils](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentUtils) API in
+> [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentUtils](@ohos.arkui.UIContext) object
 > associated with the current UI context. This API provides access to component coordinates and size information
 > after the target component completes layout. It is recommended that you invoke this API within
-> [layout completion callbacks](arkts-arkui-inspector.md). Note that dynamically created components
+> [layout completion callbacks](arkts-arkui-inspector.md#inspector). Note that dynamically created components
 > must be mounted to the component tree before this API can obtain their information, as unmounted components are
 > not measured or laid out by the UI framework. Always ensure that component mounting precedes information
 > retrieval attempts.
@@ -32,7 +32,7 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentUtils#getRectangleById
+**Substitutes:** [getRectangleById](ohos.arkui.UIContext.ComponentUtils#getRectangleById)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +58,7 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | UI execution context not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | UI execution context not found. |
 
 ## Examples
 

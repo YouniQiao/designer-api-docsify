@@ -1,9 +1,9 @@
 # Duplex
 
-A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written.The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md) and supports all the APIs in  
+A stream that is both readable and writable. A duplex stream allows data to be transmitted in two directions, that is, data can be read and written.The **Duplex** class inherits from [Readable](arkts-arkts-stream-readableoptions-i.md#ReadableOptions) and supports all the APIs in  
 **Readable**.
 
-**Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md)
+**Inheritance/Implementation:** Duplex extends [Readable](arkts-arkts-stream-readable-c.md#Readable)
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ A stream that is both readable and writable. A duplex stream allows data to be t
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -201,7 +201,7 @@ Ends the writing process in a duplex stream. If the value of **writableCorked** 
 
 | Error Code ID |
 | --- |
-| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) |
+| [10200039](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200039-dotransform-is-not-implemented) |
 
 ## Examples
 
@@ -357,9 +357,9 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 | Error Code ID |
 | --- |
-| [10200039](../errorcode-utils.md#10200039-dotransform-is-not-implemented) |
-| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) |
-| [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) |
+| [10200039](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200039-dotransform-is-not-implemented) |
+| [10200037](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200037-callback-is-invoked-multiple-times) |
+| [10200036](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) |
 
 ## Examples
 

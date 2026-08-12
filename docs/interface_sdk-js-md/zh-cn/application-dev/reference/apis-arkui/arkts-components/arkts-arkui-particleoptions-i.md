@@ -24,7 +24,7 @@ speed表示加速度大小，angle表示加速度方向（单位为角度）。
 
 默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
 
-**类型：** [AccelerationOptions](../arkts-apis/arkts-arkui-particle-accelerationoptions-i.md)&lt;ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER&gt;
+**类型：** [AccelerationOptions](arkts-arkui-accelerationoptions-i.md)&lt;ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER&gt;
 
 **默认值：** {speed:{range:[0,0]};angle:{range:[0,0]}}
 
@@ -52,7 +52,7 @@ color?: ParticleColorPropertyOptions<COLOR_UPDATER>
 
 默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
 
-**类型：** [ParticleColorPropertyOptions](../arkts-apis/arkts-arkui-particle-particlecolorpropertyoptions-i.md)&lt;COLOR_UPDATER&gt;
+**类型：** [ParticleColorPropertyOptions](arkts-arkui-particlecolorpropertyoptions-i.md)&lt;COLOR_UPDATER&gt;
 
 **默认值：** {range:['#FFFFFF','#FFFFFF']}
 
@@ -76,7 +76,7 @@ emitter: EmitterOptions<PARTICLE>
 
 粒子发射器配置。
 
-**类型：** [EmitterOptions](../arkts-apis/arkts-arkui-particle-emitteroptions-i.md)&lt;PARTICLE&gt;
+**类型：** [EmitterOptions](arkts-arkui-emitteroptions-i.md)&lt;PARTICLE&gt;
 
 **起始版本：** 10
 
@@ -100,7 +100,7 @@ opacity?: ParticlePropertyOptions<number, OPACITY_UPDATER>
 
 默认值：{ range:[1.0,1.0] }
 
-**类型：** [ParticlePropertyOptions](../arkts-apis/arkts-arkui-particle-particlepropertyoptions-i.md)&lt;number, OPACITY_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, OPACITY_UPDATER&gt;
 
 **默认值：** {range:[1.0,1.0]}
 
@@ -126,7 +126,7 @@ scale?: ParticlePropertyOptions<number, SCALE_UPDATER>
 
 默认值：{ range:[1.0,1.0] }
 
-**类型：** [ParticlePropertyOptions](../arkts-apis/arkts-arkui-particle-particlepropertyoptions-i.md)&lt;number, SCALE_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, SCALE_UPDATER&gt;
 
 **默认值：** {range:[1.0,1.0]}
 
@@ -154,7 +154,7 @@ spin?: ParticlePropertyOptions<number, SPIN_UPDATER>
 
 方向：正数表示顺时针旋转，负数表示逆时针旋转。
 
-**类型：** [ParticlePropertyOptions](../arkts-apis/arkts-arkui-particle-particlepropertyoptions-i.md)&lt;number, SPIN_UPDATER&gt;
+**类型：** [ParticlePropertyOptions](arkts-arkui-particlepropertyoptions-i.md)&lt;number, SPIN_UPDATER&gt;
 
 **默认值：** {range:[0,0]}
 

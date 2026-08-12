@@ -3,8 +3,8 @@
 Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.
 
 Before calling any of the following APIs, you must use  
-[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset) in the  
-[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **LineTypeset** object.
+[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset) in the  
+[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **LineTypeset** object.
 
 **Since:** 18
 
@@ -17,7 +17,7 @@ Before calling any of the following APIs, you must use
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createLine
@@ -49,7 +49,7 @@ Generates a text line object based on the specified layout range.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | startIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position for layout calculation. The value is an integer in the range [0, total number of text characters). |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](arkts-arkgraphics2d-text-linetypeset-c.md#getlinebreak) to obtain the number of characters that can fit in the layout. |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of characters from the specified start position. The value is an integer in the range [0, total number of text characters). The sum of **startIndex** and **count** cannot be greater than the total number of text characters. If **count** is **0**, the layout range is [startIndex, position of the last character in the text]. You can use [getLineBreak](#getLineBreak) to obtain the number of characters that can fit in the layout. |
 
 **Return value:**
 
@@ -61,7 +61,7 @@ Generates a text line object based on the specified layout range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -113,7 +113,7 @@ Obtains the number of characters that can fit in the layout from the specified p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

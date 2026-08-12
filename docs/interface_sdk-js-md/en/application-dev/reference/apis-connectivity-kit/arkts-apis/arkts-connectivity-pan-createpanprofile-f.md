@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pan } from 'kits/@kit.ConnectivityKit';
+import { pan } from '@kit.ConnectivityKit';
 ```
 
 ## createPanProfile
@@ -28,14 +28,14 @@ create the instance of pan profile.
 
 | Type | Description |
 | --- | --- |
-| [PanProfile](arkts-connectivity-bluetoothmanager-panprofile-i.md) | Returns the instance of pan profile. |
+| PanProfile | Returns the instance of pan profile. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## Examples
 

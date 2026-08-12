@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## createWriteStream
@@ -27,13 +27,13 @@ Creates a writeable stream. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file. |
-| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | No | The options are as follows: &lt;br&gt;- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position. &lt;br&gt;- **mode** (number): [OpenMode](arkts-corefile-fileio-openmode-n.md#openmode) for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
+| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | No | The options are as follows: &lt;br&gt;- **start** (number): start position to write the data, in bytes. This parameter is optional. By default, data is written from the current position. &lt;br&gt;- **mode** (number): [OpenMode](arkts-corefile-fileio-openmode-n.md#OpenMode) for creating the writeable stream. This parameter is optional. The default value is the write-only mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ Creates a writeable stream. This API returns the result synchronously.
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

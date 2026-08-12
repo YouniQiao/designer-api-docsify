@@ -13,7 +13,7 @@ Subscriber of the system live view notification.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## onResponse
@@ -37,4 +37,4 @@ Callback when the button is touched.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | notificationId | number | Yes |
-| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-components/arkts-arkui-buttonoptions-i.md) | Yes |
+| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes |

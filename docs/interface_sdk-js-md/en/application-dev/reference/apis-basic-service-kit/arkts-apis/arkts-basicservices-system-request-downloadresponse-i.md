@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface DownloadResponse--><!--Device-unnamed-export interface DownloadResponse-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## token
@@ -34,7 +34,7 @@ Download token, which is used to obtain the download status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.tid
+**Substitutes:** [tid](ohos.request.agent.Task.tid)
 
 <!--Device-DownloadResponse-token: string--><!--Device-DownloadResponse-token: string-End-->
 

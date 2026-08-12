@@ -4,8 +4,8 @@
 
 | 名称 | 值 | 说明 |
 | - | - | - |
-| [OFFSET_FOR_BAR](#offset_for_bar) | 0 | 存在菜单栏情况下与窗口底部的距离。设置后弹框距离底部88vp。 |
-| [OFFSET_FOR_NONE](#offset_for_none) | 1 |
+| [OFFSET_FOR_BAR](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md) | 0 | 存在菜单栏情况下与窗口底部的距离。设置后弹框距离底部88vp。 |
+| [OFFSET_FOR_NONE](arkts-arkui-atomicservice-interstitialdialogaction-bottomoffset-e.md) | 1 |
 
 **起始版本：** 12
 

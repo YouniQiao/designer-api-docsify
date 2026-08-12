@@ -2,7 +2,7 @@
 
 圆形绘制组件属性。
 
-**继承/实现关系：** CircleAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**继承/实现关系：** CircleAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<CircleAttribute> | Attribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;CircleAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CircleAttribute](arkts-arkui-circle-circleattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -64,7 +64,7 @@ default fill(value: ResourceColor | ColorMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColorMetrics \| undefined | 是 | 填充区域颜色。&lt;br/&gt;默认值：[Color](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#color).Black &lt;br/&gt;异常值undefined、null、NaN和Infinity按照默认值处理。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](arkts-arkui-colormetrics-t.md) \| undefined | 是 | 填充区域颜色。&lt;br/&gt;默认值：[Color](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#color).Black &lt;br/&gt;异常值undefined、null、NaN和Infinity按照默认值处理。 |
 
 **返回值：**
 
@@ -94,7 +94,7 @@ default setCircleOptions(options?: CircleOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CircleOptions](../arkts-components/arkts-arkui-circleoptions-i.md) | 否 | Circle构造参数。 |
+| options | [CircleOptions](arkts-arkui-circle-circleoptions-i.md) | 否 | Circle构造参数。 |
 
 **返回值：**
 
@@ -124,7 +124,7 @@ default stroke(value: ResourceColor | ColorMetrics| undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColorMetrics \| undefined | 是 | 边框颜色。&lt;br/&gt;默认值：[Color](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#color).Transparent&lt;br/&gt;异常值undefined和null按照默认值处理， NaN和Infinity按照[Color](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#color).Black处理。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](arkts-arkui-colormetrics-t.md) \| undefined | 是 | 边框颜色。&lt;br/&gt;默认值：[Color](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#color).Transparent&lt;br/&gt;异常值undefined和null按照默认值处理， NaN和Infinity按照[Color](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#color).Black处理。 |
 
 **返回值：**
 

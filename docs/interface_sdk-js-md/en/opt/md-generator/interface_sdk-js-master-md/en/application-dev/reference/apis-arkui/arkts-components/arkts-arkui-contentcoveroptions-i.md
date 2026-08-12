@@ -1,10 +1,10 @@
 # ContentCoverOptions
 
-Inherited from [BindOptions](arkts-arkui-bindoptions-i.md).
+Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions).
 
 Provides content options of the modal.
 
-**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **Since:** 10
 
@@ -75,7 +75,7 @@ Callback invoked to prevent a user attempt to dismiss the modal.
 After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the  
 **reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissContentCoverAction&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md)&gt;
 
 **Since:** 12
 

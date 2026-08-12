@@ -1,6 +1,6 @@
 # ScrollDirectionalLockType
 
-Enum defining the scope of directional lock behavior in the WebView, used with {@link enableScrollDirectionalLock}.
+Enum defining the scope of directional lock behavior in the WebView, used with [enableScrollDirectionalLock](arkts-arkweb-web-webattribute-i.md#enableScrollDirectionalLock).
 
 **Since:** 26.0.0
 

@@ -1,7 +1,7 @@
 # AudioHapticPlayer
 
 Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use   
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createplayer) to create an AudioHapticPlayer instance.
+[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
 
 **Since:** 11
 
@@ -12,7 +12,7 @@ Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, y
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## isMuted
@@ -45,7 +45,7 @@ Checks whether an audio-haptic type is muted.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -298,13 +298,13 @@ Releases this audio-haptic player. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -346,13 +346,13 @@ Sets this audio-haptic player to play in a loop. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## Examples
 
@@ -394,15 +394,15 @@ Sets the volume for this audio-haptic player. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -434,15 +434,15 @@ Starts playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -474,14 +474,14 @@ Stops playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 

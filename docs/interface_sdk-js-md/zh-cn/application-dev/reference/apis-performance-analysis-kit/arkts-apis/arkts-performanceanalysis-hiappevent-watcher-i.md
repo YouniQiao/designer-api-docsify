@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 不建议在回调函数中执行[removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher)的操作，watcher一旦被移除，则其原有的订阅回调功能也会随之失效，可能会造成某些事件发生后无订阅回调情况。
+> 不建议在回调函数中执行[removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removeWatcher)的操作，watcher一旦被移除，则其原有的订阅回调功能也会随之失效，可能会造成某些事件发生后无订阅回调情况。
 
 **起始版本：** 9
 
@@ -41,7 +41,7 @@ appEventGroups：回调事件集合。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domain | string | 是 |  |
-| appEventGroups | Array&lt;AppEventGroup&gt; | 是 |  |
+| appEventGroups | Array&lt;[AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md)&gt; | 是 |  |
 
 ## onTrigger
 

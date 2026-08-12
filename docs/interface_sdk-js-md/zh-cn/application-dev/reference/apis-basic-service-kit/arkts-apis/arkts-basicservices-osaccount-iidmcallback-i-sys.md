@@ -107,7 +107,7 @@ onResult: (result: int, extraInfo: RequestResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
-| extraInfo | [RequestResult](arkts-basicservices-osaccount-requestresult-i-sys.md) | 是 |  |
+| extraInfo | RequestResult | 是 |  |
 
 ## 示例
 

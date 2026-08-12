@@ -20,7 +20,7 @@ Implements a path operation iterator. You can read path operation instructions b
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -81,7 +81,7 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | Yes |
+| points | Array & lt;common2D.Point & gt; | Yes |
 | offset | number | No |
 
 **Return value:**
@@ -94,7 +94,7 @@ Retrieves the next operation in this path and moves the iterator to that operati
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## peek
 

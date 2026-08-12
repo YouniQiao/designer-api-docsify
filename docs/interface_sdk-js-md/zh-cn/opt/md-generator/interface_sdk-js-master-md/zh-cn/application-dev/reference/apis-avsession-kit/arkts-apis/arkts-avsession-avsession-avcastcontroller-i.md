@@ -1,6 +1,6 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
+在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getAVCastController)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
 
 > **说明：**
 > 
@@ -30,13 +30,13 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getAVPlaybackState
 
@@ -58,13 +58,13 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 类型 |
 | --- |
-| Promise&lt;AVPlaybackState&gt; |
+| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getCurrentItem
 
@@ -84,13 +84,13 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVQueueItem&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getCurrentItem
 
@@ -112,13 +112,13 @@ getCurrentItem(): Promise<AVQueueItem>
 
 | 类型 |
 | --- |
-| Promise&lt;AVQueueItem&gt; |
+| Promise&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getRecommendedResolutionLevel
 
@@ -146,13 +146,13 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 | 类型 |
 | --- |
-| Promise&lt;ResolutionLevel&gt; |
+| Promise&lt;[ResolutionLevel](arkts-avsession-avsession-resolutionlevel-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getSupportedDecoders
 
@@ -174,13 +174,13 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;DecoderType&gt;&gt; |
+| Promise&lt;Array&lt;[DecoderType](arkts-avsession-avsession-decodertype-e.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getSupportedHdrCapabilities
 
@@ -202,13 +202,13 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; |
+| Promise & lt;Array & lt;hdrCapability.HDRFormat & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getSupportedPlaySpeeds
 
@@ -230,13 +230,13 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getValidCommands
 
@@ -256,13 +256,13 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getValidCommands
 
@@ -282,13 +282,13 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AVCastControlCommandType&gt;&gt; |
+| Promise&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('playbackStateChange')
 
@@ -311,14 +311,14 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |
-| callback | (state: AVPlaybackState) =&gt; void | 否 |
+| callback | (state: AVPlaybackState) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('mediaItemChange')
 
@@ -346,8 +346,8 @@ off(type: 'mediaItemChange'): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('playNext')
 
@@ -375,8 +375,8 @@ off(type: 'playNext'): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('playPrevious')
 
@@ -404,8 +404,8 @@ off(type: 'playPrevious'): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('requestPlay')
 
@@ -426,14 +426,14 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'requestPlay' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('endOfStream')
 
@@ -460,8 +460,8 @@ off(type: 'endOfStream', callback?: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('seekDone')
 
@@ -489,8 +489,8 @@ off(type: 'seekDone'): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('validCommandChange')
 
@@ -511,15 +511,15 @@ off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandTy
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'validCommandChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('videoSizeChange')
 
@@ -545,8 +545,8 @@ off(type: 'videoSizeChange'): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## 示例
 
@@ -580,14 +580,14 @@ off(type: 'error'): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## off('castControlGenericError')
 
@@ -616,7 +616,7 @@ off(type: 'castControlGenericError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('castControlIoError')
 
@@ -645,7 +645,7 @@ off(type: 'castControlIoError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('castControlParsingError')
 
@@ -674,7 +674,7 @@ off(type: 'castControlParsingError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('castControlDecodingError')
 
@@ -703,7 +703,7 @@ off(type: 'castControlDecodingError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('castControlAudioRendererError')
 
@@ -732,7 +732,7 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('castControlDrmError')
 
@@ -761,7 +761,7 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('keyRequest')
 
@@ -790,8 +790,8 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('customDataChange')
 
@@ -820,7 +820,7 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('playbackStateChange')
 
@@ -845,15 +845,15 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | 是 |
-| callback | (state: AVPlaybackState) =&gt; void | 是 |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 |
+| callback | (state: AVPlaybackState) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('mediaItemChange')
 
@@ -878,14 +878,14 @@ on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'mediaItemChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('playNext')
 
@@ -916,8 +916,8 @@ on(type: 'playNext', callback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('playPrevious')
 
@@ -948,8 +948,8 @@ on(type: 'playPrevious', callback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('requestPlay')
 
@@ -972,14 +972,14 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'requestPlay' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('endOfStream')
 
@@ -1008,8 +1008,8 @@ on(type: 'endOfStream', callback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('seekDone')
 
@@ -1040,8 +1040,8 @@ on(type: 'seekDone', callback: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('validCommandChange')
 
@@ -1064,15 +1064,15 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'validCommandChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('videoSizeChange')
 
@@ -1095,14 +1095,14 @@ on(type: 'videoSizeChange', callback: (width: number, height: number) => void): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'videoSizeChange' | 是 |
-| callback | (width: number, height: number) =&gt; void | 是 |
+| callback | (width: number, height: number) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## 示例
 
@@ -1142,14 +1142,14 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## on('castControlGenericError')
 
@@ -1180,21 +1180,21 @@ on(type: 'castControlGenericError', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) |
-| [6611104](../errorcode-avsession.md#6611104-不支持当前播放速度) |
-| [6611105](../errorcode-avsession.md#6611105-设备吊销) |
-| [6611106](../errorcode-avsession.md#6611106-传入非法参数) |
-| [6611107](../errorcode-avsession.md#6611107-内存分配失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6611004](../errorcode-avsession.md#6611004-运行时检查失败) |
-| [6611100](../errorcode-avsession.md#6611100-跨设备数据传输被锁定) |
-| [6611101](../errorcode-avsession.md#6611101-不支持当前进度条模式) |
-| [6611102](../errorcode-avsession.md#6611102-非法seek目标) |
-| [6611103](../errorcode-avsession.md#6611103-不支持当前播放模式) |
-| [6611000](../errorcode-avsession.md#6611000-投播控制器出现未知错误) |
-| [6611001](../errorcode-avsession.md#6611001-远端设备出现未知错误) |
-| [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) |
-| [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) |
+| [6611108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611108-不允许进行当前操作) |
+| [6611104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611104-不支持当前播放速度) |
+| [6611105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611105-设备吊销) |
+| [6611106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611106-传入非法参数) |
+| [6611107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611107-内存分配失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6611004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611004-运行时检查失败) |
+| [6611100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611100-跨设备数据传输被锁定) |
+| [6611101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611101-不支持当前进度条模式) |
+| [6611102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611102-非法seek目标) |
+| [6611103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611103-不支持当前播放模式) |
+| [6611000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611000-投播控制器出现未知错误) |
+| [6611001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611001-远端设备出现未知错误) |
+| [6611002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) |
+| [6611003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611003-投播控制器加载超时) |
 
 ## on('castControlIoError')
 
@@ -1225,24 +1225,24 @@ on(type: 'castControlIoError', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [6612004](../errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) |
-| [6612100](../errorcode-avsession.md#6612100-缺少可播放的媒体资源) |
-| [6612005](../errorcode-avsession.md#6612005-文件不存在) |
-| [6612101](../errorcode-avsession.md#6612101-媒体资源无法被读取) |
-| [6612006](../errorcode-avsession.md#6612006-缺少执行io操作的权限) |
-| [6612102](../errorcode-avsession.md#6612102-资源正在使用) |
-| [6612007](../errorcode-avsession.md#6612007-网络安全配置不允许此操作) |
-| [6612103](../errorcode-avsession.md#6612103-内容使用有效期已过) |
-| [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) |
-| [6612001](../errorcode-avsession.md#6612001-网络连接失败) |
-| [6612002](../errorcode-avsession.md#6612002-网络超时) |
-| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) |
-| [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) |
-| [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) |
-| [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) |
-| [6612106](../errorcode-avsession.md#6612106-资源使用频繁) |
-| [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [6612004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) |
+| [6612100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612100-缺少可播放的媒体资源) |
+| [6612005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612005-文件不存在) |
+| [6612101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612101-媒体资源无法被读取) |
+| [6612006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612006-缺少执行io操作的权限) |
+| [6612102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612102-资源正在使用) |
+| [6612007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612007-网络安全配置不允许此操作) |
+| [6612103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612103-内容使用有效期已过) |
+| [6612000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612000-未知的输入输出错误) |
+| [6612001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612001-网络连接失败) |
+| [6612002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612002-网络超时) |
+| [6612003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612003-无效contenttypehttp头) |
+| [6612008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612008-读取数据超出数据范围) |
+| [6612104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612104-不允许使用请求的内容) |
+| [6612105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612105-无法验证允许使用的内容) |
+| [6612106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612106-资源使用频繁) |
+| [6612107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612107-本端向远端发送资源包失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('castControlParsingError')
 
@@ -1273,12 +1273,12 @@ on(type: 'castControlParsingError', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) |
-| [6613000](../errorcode-avsession.md#6613000-未知解析错误) |
-| [6613001](../errorcode-avsession.md#6613001-非法类型) |
-| [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) |
-| [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6613004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613004-媒体清单中不支持此功能) |
+| [6613000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613000-未知解析错误) |
+| [6613001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613001-非法类型) |
+| [6613002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613002-相关媒体清单的解析错误) |
+| [6613003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613003-不支持该媒体格式) |
 
 ## on('castControlDecodingError')
 
@@ -1309,13 +1309,13 @@ on(type: 'castControlDecodingError', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) |
-| [6614000](../errorcode-avsession.md#6614000-未知的解码错误) |
-| [6614001](../errorcode-avsession.md#6614001-解码器初始化失败) |
-| [6614002](../errorcode-avsession.md#6614002-解码器查询失败) |
-| [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) |
+| [6614004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6614005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614005-解码不支持的内容格式) |
+| [6614000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614000-未知的解码错误) |
+| [6614001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614001-解码器初始化失败) |
+| [6614002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614002-解码器查询失败) |
+| [6614003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614003-解码媒体样本时失败) |
 
 ## on('castControlAudioRendererError')
 
@@ -1346,10 +1346,10 @@ on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) |
-| [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) |
-| [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6615000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615000-音频渲染器相关的未知错误) |
+| [6615001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615001-音频渲染器初始化异常) |
+| [6615002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615002-音频渲染器写数据异常) |
 
 ## on('castControlDrmError')
 
@@ -1380,17 +1380,17 @@ on(type: 'castControlDrmError', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [6616004](../errorcode-avsession.md#6616004-许可证获取失败) |
-| [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6616005](../errorcode-avsession.md#6616005-许可证策略不允许的操作) |
-| [6616006](../errorcode-avsession.md#6616006-drm系统错误) |
-| [6616007](../errorcode-avsession.md#6616007-设备已吊销drm权限) |
-| [6616000](../errorcode-avsession.md#6616000-drm相关的未知错误) |
-| [6616001](../errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) |
-| [6616002](../errorcode-avsession.md#6616002-调配设备时出现故障) |
-| [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) |
-| [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) |
+| [6616004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616004-许可证获取失败) |
+| [6616100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616100-drm进程密钥响应错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6616005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616005-许可证策略不允许的操作) |
+| [6616006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616006-drm系统错误) |
+| [6616007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616007-设备已吊销drm权限) |
+| [6616000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616000-drm相关的未知错误) |
+| [6616001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) |
+| [6616002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616002-调配设备时出现故障) |
+| [6616003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) |
+| [6616008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) |
 
 ## on('keyRequest')
 
@@ -1421,8 +1421,8 @@ on(type: 'keyRequest', callback: KeyRequestCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('customDataChange')
 
@@ -1451,7 +1451,7 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## prepare
 
@@ -1478,9 +1478,9 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## prepare
 
@@ -1508,15 +1508,15 @@ prepare(item: AVQueueItem): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## processMediaKeyResponse
 
@@ -1545,14 +1545,14 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## release
 
@@ -1578,7 +1578,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## release
 
@@ -1600,13 +1600,13 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## sendControlCommand
 
@@ -1633,10 +1633,10 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
 
 ## sendControlCommand
 
@@ -1664,16 +1664,16 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
 
 ## sendCustomData
 
@@ -1695,19 +1695,19 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |
+| data | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## start
 
@@ -1720,7 +1720,7 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 在音视频投播场景下，当应用程序顺序调用
-> [prepare](arkts-avsession-avsession-avcastcontroller-i.md#prepare)和start接口，且
+> [prepare](#prepare)和start接口，且
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
 **起始版本：** 10
@@ -1740,9 +1740,9 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## start
 
@@ -1755,7 +1755,7 @@ start(item: AVQueueItem): Promise<void>
 > **说明：**
 > 
 > 在音视频投播场景下，当应用程序顺序调用
-> [prepare](arkts-avsession-avsession-avcastcontroller-i.md#prepare)和start接口，且
+> [prepare](#prepare)和start接口，且
 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
 **起始版本：** 10
@@ -1776,15 +1776,15 @@ start(item: AVQueueItem): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## update
 
@@ -1812,11 +1812,11 @@ update(item: AVQueueItem): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |

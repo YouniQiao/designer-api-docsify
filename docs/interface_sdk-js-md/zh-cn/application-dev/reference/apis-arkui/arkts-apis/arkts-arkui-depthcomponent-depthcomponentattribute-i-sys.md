@@ -1,8 +1,8 @@
 # DepthComponentAttribute（系统接口）
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性：
+除支持[通用属性](../../@internal/component/ets/common)外，还支持以下属性：
 
-**继承/实现关系：** DepthComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** DepthComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 26.0.0
 
@@ -80,8 +80,8 @@ default depthMap(depthMap: ResourceStr | PixelMap, callback?: DepthMapCallback):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | 是 | 深度图资源或PixelMap对象，引用方式与静态背景图一致。仅背景为静态图时需要设置深度图。深度图需要与背景图的分辨率保持一致。 |
-| callback | [DepthMapCallback](../arkts-components/arkts-arkui-depthmapcallback-t-sys.md) | 否 | 深度图加载完成时的回调函数。加载成功时error.code为0，加载失败时error中包含错误码和错误信息。 |
+| depthMap | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 深度图资源或PixelMap对象，引用方式与静态背景图一致。仅背景为静态图时需要设置深度图。深度图需要与背景图的分辨率保持一致。 |
+| callback | [DepthMapCallback](arkts-arkui-depthmapcallback-t-sys.md) | 否 | 深度图加载完成时的回调函数。加载成功时error.code为0，加载失败时error中包含错误码和错误信息。 |
 
 **返回值：**
 
@@ -113,7 +113,7 @@ default light(light: DepthLightParams): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| light | [DepthLightParams](../arkts-components/arkts-arkui-depthlightparams-i-sys.md) | 是 | 光照参数，包含方向、颜色和强度。 |
+| light | [DepthLightParams](arkts-arkui-depthcomponent-depthlightparams-i-sys.md) | 是 | 光照参数，包含方向、颜色和强度。 |
 
 **返回值：**
 
@@ -145,7 +145,7 @@ default onComplete(callback: DepthComponentCompleteCallback): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [DepthComponentCompleteCallback](../arkts-components/arkts-arkui-depthcomponentcompletecallback-t-sys.md) | 是 | 背景资源加载成功的回调函数。 |
+| callback | [DepthComponentCompleteCallback](arkts-arkui-depthcomponentcompletecallback-t-sys.md) | 是 | 背景资源加载成功的回调函数。 |
 
 **返回值：**
 
@@ -209,7 +209,7 @@ Set DepthComponent options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| background | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | 是 | Background resource (required). |
+| background | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | Background resource (required). |
 | options | [DepthComponentOptions](arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | 否 | DepthComponent options. |
 
 **返回值：**

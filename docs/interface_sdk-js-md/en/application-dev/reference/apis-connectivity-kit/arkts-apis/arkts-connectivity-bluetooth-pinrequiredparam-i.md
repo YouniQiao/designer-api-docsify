@@ -8,7 +8,7 @@ Describes the bond key param.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.PinRequiredParam
+**Substitutes:** [PinRequiredParam](ohos.bluetoothManager/bluetoothManager.PinRequiredParam)
 
 <!--Device-bluetooth-interface PinRequiredParam--><!--Device-bluetooth-interface PinRequiredParam-End-->
 
@@ -17,7 +17,7 @@ Describes the bond key param.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -36,7 +36,7 @@ ID of the device to pair.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.PinRequiredParam.deviceId
+**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.PinRequiredParam.deviceId)
 
 <!--Device-PinRequiredParam-deviceId: string--><!--Device-PinRequiredParam-deviceId: string-End-->
 
@@ -58,7 +58,7 @@ Key for the device pairing.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.PinRequiredParam.pinCode
+**Substitutes:** [pinCode](ohos.bluetoothManager/bluetoothManager.PinRequiredParam.pinCode)
 
 <!--Device-PinRequiredParam-pinCode: string--><!--Device-PinRequiredParam-pinCode: string-End-->
 

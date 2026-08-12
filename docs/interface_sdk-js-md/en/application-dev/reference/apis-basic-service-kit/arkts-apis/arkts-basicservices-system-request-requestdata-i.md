@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.RequestData](arkts-basicservices-request-requestdata-i.md)
+**Substitutes:** [RequestData](arkts-basicservices-request-requestdata-i.md#RequestData)
 
 <!--Device-unnamed-export interface RequestData--><!--Device-unnamed-export interface RequestData-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## name
@@ -34,7 +34,7 @@ Name of the form element.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.FormItem.name
+**Substitutes:** [name](ohos.request.agent.FormItem.name)
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
@@ -56,7 +56,7 @@ Value of the form element.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.FormItem.value
+**Substitutes:** [value](ohos.request.agent.FormItem.value)
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 

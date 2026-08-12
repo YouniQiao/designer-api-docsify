@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface UploadRequestOptions--><!--Device-unnamed-export interface UploadRequestOptions-End-->
 
@@ -22,7 +22,7 @@ Called when the execution is completed.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.on
+**替代接口：** [on](ohos.request.agent.Task.on)
 
 <!--Device-UploadRequestOptions-complete?: () => void--><!--Device-UploadRequestOptions-complete?: () => void-End-->
 
@@ -40,7 +40,7 @@ Called when uploading fails.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.on
+**替代接口：** [on](ohos.request.agent.Task.on)
 
 <!--Device-UploadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-UploadRequestOptions-fail?: (data: any, code: number) => void-End-->
 
@@ -65,7 +65,7 @@ Called when the files are uploaded successfully.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.on
+**替代接口：** [on](ohos.request.agent.Task.on)
 
 <!--Device-UploadRequestOptions-success?: (data: UploadResponse) => void--><!--Device-UploadRequestOptions-success?: (data: UploadResponse) => void-End-->
 
@@ -85,13 +85,13 @@ data?: Array<RequestData>
 
 Form data in the request body.
 
-**类型：** Array&lt;RequestData&gt;
+**类型：** Array&lt;[RequestData](arkts-basicservices-system-request-requestdata-i.md)&gt;
 
 **起始版本：** 3
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.data
+**替代接口：** [data](ohos.request.agent.Config.data)
 
 <!--Device-UploadRequestOptions-data?: Array<RequestData>--><!--Device-UploadRequestOptions-data?: Array<RequestData>-End-->
 
@@ -105,13 +105,13 @@ files: Array<RequestFile>
 
 List of files to upload, which is submitted through multipart/form-data.
 
-**类型：** Array&lt;RequestFile&gt;
+**类型：** Array&lt;[RequestFile](arkts-basicservices-system-request-requestfile-i.md)&gt;
 
 **起始版本：** 3
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.data
+**替代接口：** [data](ohos.request.agent.Config.data)
 
 <!--Device-UploadRequestOptions-files: Array<RequestFile>--><!--Device-UploadRequestOptions-files: Array<RequestFile>-End-->
 
@@ -131,7 +131,7 @@ Request header.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.headers
+**替代接口：** [headers](ohos.request.agent.Config.headers)
 
 <!--Device-UploadRequestOptions-header?: Object--><!--Device-UploadRequestOptions-header?: Object-End-->
 
@@ -151,7 +151,7 @@ Request methods available: POST and PUT. The default value is POST.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.method
+**替代接口：** [method](ohos.request.agent.Config.method)
 
 <!--Device-UploadRequestOptions-method?: string--><!--Device-UploadRequestOptions-method?: string-End-->
 
@@ -171,7 +171,7 @@ Resource URL.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.url
+**替代接口：** [url](ohos.request.agent.Config.url)
 
 <!--Device-UploadRequestOptions-url: string--><!--Device-UploadRequestOptions-url: string-End-->
 

@@ -41,8 +41,8 @@ CERT_REVOCATION_CRL_CHECK = 1
 
 启用CRL检查。使用证书吊销列表检查证书状态。
 
-&lt;br&gt;首先使用[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的crls参数，未匹配到CRL且  
-[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的allowDownloadCrl参数设置为true时则尝试使用证书的CDP扩展下载CRL。
+&lt;br&gt;首先使用[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md#X509CertRevokedParams)的crls参数，未匹配到CRL且  
+[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md#X509CertRevokedParams)的allowDownloadCrl参数设置为true时则尝试使用证书的CDP扩展下载CRL。
 
 **起始版本：** 26.0.0
 
@@ -64,8 +64,8 @@ CERT_REVOCATION_OCSP_CHECK = 2
 
 启用OCSP检查。使用在线证书状态协议检查证书状态。
 
-&lt;br&gt;首先使用[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的ocspResponses参数，未匹配到响应且  
-[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md)的allowOcspCheckOnline参数设置为true则尝试从证书AIA扩展获取OCSP URL并发送请求获取响应。
+&lt;br&gt;首先使用[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md#X509CertRevokedParams)的ocspResponses参数，未匹配到响应且  
+[X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md#X509CertRevokedParams)的allowOcspCheckOnline参数设置为true则尝试从证书AIA扩展获取OCSP URL并发送请求获取响应。
 
 > **说明：**
 > 

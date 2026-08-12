@@ -12,7 +12,7 @@ Provides APIs for setting different **DataSharePredicates** objects. This type i
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from 'kits/@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## and
@@ -482,7 +482,7 @@ Currently, only RDB store supports this predicate.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
@@ -559,7 +559,7 @@ Currently, only the KVDB supports this **DataSharePredicates** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes |
+| keys | Array & lt;string & gt; | Yes |
 
 **Return value:**
 

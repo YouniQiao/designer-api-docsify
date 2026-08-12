@@ -1,10 +1,10 @@
 # PixelMap
 
 The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
-[Bytes per pixel](arkts-image-image-pixelmapformat-e.md).Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
+[Bytes per pixel](arkts-image-image-pixelmapformat-e.md#PixelMapFormat).Since API version 11, PixelMap supports cross-thread calls through [Worker](@ohos.worker). If a PixelMap object is invoked by another thread through [Worker](@ohos.worker), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
+[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md#image) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md#image) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -15,7 +15,7 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace
@@ -43,10 +43,10 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
-| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
+| [62980108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-image-color-conversion-error) |
 
 ## applyColorSpace
 
@@ -72,16 +72,16 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
-| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
+| [62980108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-image-color-conversion-error) |
 
 ## applyCrop
 
@@ -107,24 +107,24 @@ Crops the PixelMap.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
-| [7600204](../errorcode-image.md#7600204-invalid-region) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) |
 
 ## applyCropSync
 
@@ -150,18 +150,18 @@ Crops the PixelMap.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
-| [7600204](../errorcode-image.md#7600204-invalid-region) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) |
 
 ## applyFlip
 
@@ -194,18 +194,18 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyFlipSync
 
@@ -238,12 +238,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyRotate
 
@@ -277,18 +277,18 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyRotateSync
 
@@ -322,12 +322,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyScale
 
@@ -361,18 +361,18 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyScaleSync
 
@@ -406,12 +406,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyTranslate
 
@@ -444,18 +444,18 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## applyTranslateSync
 
@@ -488,12 +488,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## clone
 
@@ -513,17 +513,17 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [501](../errorcode-image.md#501-api-call-failed) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
-| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-memory-allocation-error-for-images) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
 
 ## cloneSync
 
@@ -549,11 +549,11 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [501](../errorcode-image.md#501-api-call-failed) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
-| [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-memory-allocation-error-for-images) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
 
 ## convertPixelFormat
 
@@ -579,17 +579,17 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980274](../errorcode-image.md#62980274-failed-to-convert-images) |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
-| [62980276](../errorcode-image.md#62980276-unsupported-image-conversion-target-type) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980274](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980274-failed-to-convert-images) |
+| [62980178](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980276](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980276-unsupported-image-conversion-target-type) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
 
 ## createAlphaPixelmap
 
@@ -599,7 +599,7 @@ createAlphaPixelmap(): Promise<PixelMap>
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -615,7 +615,7 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## createAlphaPixelmap
 
@@ -625,7 +625,7 @@ createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
 
-Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -641,7 +641,7 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes |
 
 ## createAlphaPixelmapSync
 
@@ -651,7 +651,7 @@ createAlphaPixelmapSync(): PixelMap
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractAlphaPixelMapSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -671,8 +671,8 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSy
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## createCroppedAndScaledPixelMap
 
@@ -692,7 +692,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 | x | number | Yes |
 | y | number | Yes |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No |
@@ -701,16 +701,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600205](../errorcode-image.md#7600205-unsupported-format) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
-| [7600204](../errorcode-image.md#7600204-invalid-region) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600205](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) |
 
 ## createCroppedAndScaledPixelMapSync
 
@@ -730,7 +730,7 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 | x | number | Yes |
 | y | number | Yes |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | No |
@@ -745,10 +745,10 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | Error Code ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600205](../errorcode-image.md#7600205-unsupported-format) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
-| [7600204](../errorcode-image.md#7600204-invalid-region) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600205](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-invalid-region) |
 
 ## createScaledPixelMap
 
@@ -776,14 +776,14 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## createScaledPixelMapSync
 
@@ -817,8 +817,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## crop
 
@@ -828,7 +828,7 @@ crop(region: Region, callback: AsyncCallback<void>): void
 
 Crops this image based on a given size. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -844,7 +844,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## crop
@@ -855,7 +855,7 @@ crop(region: Region): Promise<void>
 
 Crops a PixelMap based on a given size. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -871,13 +871,13 @@ Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## cropSync
 
@@ -887,7 +887,7 @@ cropSync(region: Region): void
 
 Crops this image based on a given size. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -901,14 +901,14 @@ Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | Yes |
+| region | [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## extractAlphaPixelMap
 
@@ -934,17 +934,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600306](../errorcode-image.md#7600306-data-conversion-failed) |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600306](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-data-conversion-failed) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
 
 ## extractAlphaPixelMapSync
 
@@ -976,11 +976,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | Error Code ID |
 | --- |
-| [7600306](../errorcode-image.md#7600306-data-conversion-failed) |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600306](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-data-conversion-failed) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
 
 ## flip
 
@@ -990,7 +990,7 @@ flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): voi
 
 Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1018,7 +1018,7 @@ flip(horizontal: boolean, vertical: boolean): Promise<void>
 
 Flips a PixelMap based on a given angle. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1041,7 +1041,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## flipSync
 
@@ -1051,7 +1051,7 @@ flipSync(horizontal: boolean, vertical: boolean): void
 
 Flips this image horizontally or vertically, or both. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1072,8 +1072,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## getBytesNumberPerRow
 
@@ -1123,9 +1123,9 @@ Obtains the color space of this image.
 
 | Error Code ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
 
 ## getDensity
 
@@ -1173,7 +1173,7 @@ Obtains the image information of a PixelMap. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ImageInfo&gt; |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
 ## getImageInfo
 
@@ -1197,7 +1197,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes |
 
 ## getImageInfoSync
 
@@ -1227,7 +1227,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## getMetadata
 
@@ -1259,10 +1259,10 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
-| [62980302](../errorcode-image.md#62980302-memory-copy-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-memory-copy-failed) |
 
 ## getPixelBytesNumber
 
@@ -1312,7 +1312,7 @@ Obtains the unique ID of this PixelMap.
 
 | Error Code ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
 
 ## isReleased
 
@@ -1363,8 +1363,8 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | Error Code ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
 
 ## opacity
 
@@ -1374,7 +1374,7 @@ opacity(rate: number, callback: AsyncCallback<void>): void
 
 Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1401,7 +1401,7 @@ opacity(rate: number): Promise<void>
 
 Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1423,7 +1423,7 @@ Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead fo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## opacitySync
 
@@ -1433,7 +1433,7 @@ opacitySync(rate: number): void
 
 Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacitySync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1453,8 +1453,8 @@ Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instea
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## readAllPixelsToBuffer
 
@@ -1480,23 +1480,23 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## readAllPixelsToBufferSync
 
@@ -1522,17 +1522,17 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## readPixels
 
@@ -1540,10 +1540,10 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1565,7 +1565,7 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} inst
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## readPixels
 
@@ -1573,10 +1573,10 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} inst
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1601,10 +1601,10 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} inst
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readPixelsToAreaSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1624,8 +1624,8 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## readPixelsToArea
 
@@ -1657,17 +1657,17 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## readPixelsToAreaSync
 
@@ -1699,11 +1699,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## readPixelsToBuffer
 
@@ -1713,7 +1713,7 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1729,13 +1729,13 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer}
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## readPixelsToBuffer
 
@@ -1745,7 +1745,7 @@ readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -1761,7 +1761,7 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer}
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## readPixelsToBufferSync
@@ -1772,7 +1772,7 @@ readPixelsToBufferSync(dst: ArrayBuffer): void
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readAllPixelsToBufferSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1788,14 +1788,14 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferS
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## release
 
@@ -1853,7 +1853,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## rotate
 
@@ -1863,7 +1863,7 @@ rotate(angle: number, callback: AsyncCallback<void>): void
 
 Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1890,7 +1890,7 @@ rotate(angle: number): Promise<void>
 
 Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1912,7 +1912,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead f
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## rotateSync
 
@@ -1922,7 +1922,7 @@ rotateSync(angle: number): void
 
 Rotates this image based on a given angle. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotateSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -1942,8 +1942,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} inste
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## scale
 
@@ -1953,7 +1953,7 @@ scale(x: number, y: number, callback: AsyncCallback<void>): void
 
 Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -1981,7 +1981,7 @@ scale(x: number, y: number): Promise<void>
 
 Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2004,7 +2004,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyScale} instead fo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## scale
 
@@ -2014,7 +2014,7 @@ scale(x: number, y: number, level: AntiAliasingLevel): Promise<void>
 
 Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2038,14 +2038,14 @@ Starting from API 26.0.0, it is recommended to use {@link applyScale} instead fo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## scaleSync
 
@@ -2055,7 +2055,7 @@ scaleSync(x: number, y: number): void
 
 Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2076,8 +2076,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## scaleSync
 
@@ -2087,7 +2087,7 @@ scaleSync(x: number, y: number, level: AntiAliasingLevel): void
 
 Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2109,8 +2109,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## setColorSpace
 
@@ -2138,8 +2138,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | Error Code ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
 
 ## setMemoryNameSync
 
@@ -2165,9 +2165,9 @@ Sets a memory name for this PixelMap.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
-| [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [62980286](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) |
 
 ## setMetadata
 
@@ -2194,16 +2194,16 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
-| [62980302](../errorcode-image.md#62980302-memory-copy-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-memory-copy-failed) |
 
 ## setOpacity
 
@@ -2235,18 +2235,18 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600207](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-unsupported-data-format) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## setOpacitySync
 
@@ -2278,12 +2278,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600207](../errorcode-image.md#7600207-unsupported-data-format) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600207](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-unsupported-data-format) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## setTransferDetached
 
@@ -2303,13 +2303,13 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| detached | boolean | Yes |
+| [detached](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-c.md) | boolean | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## toSdr
 
@@ -2329,13 +2329,13 @@ Convert pixelmap to standard dynamic range.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
 
 ## translate
 
@@ -2345,7 +2345,7 @@ translate(x: number, y: number, callback: AsyncCallback<void>): void
 
 Translates this image based on given coordinates. This API uses an asynchronous callback to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2373,7 +2373,7 @@ translate(x: number, y: number): Promise<void>
 
 Translates a PixelMap based on given coordinates. This API uses a promise to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
 **Since:** 9
 
@@ -2396,7 +2396,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instea
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## translateSync
 
@@ -2406,7 +2406,7 @@ translateSync(x: number, y: number): void
 
 Translates this image based on given coordinates. This API returns the result synchronously.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTranslateSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2427,8 +2427,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} in
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## unmarshalling
 
@@ -2436,7 +2436,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} in
 unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 ```
 
-Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createpixelmapfromparcel).
+Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel).
 
 **Since:** 10
 
@@ -2454,15 +2454,15 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
 
 ## writeAllPixelsFromBuffer
 
@@ -2494,18 +2494,18 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2537,12 +2537,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## writeBufferToPixels
 
@@ -2552,7 +2552,7 @@ writeBufferToPixels(src: ArrayBuffer): Promise<void>
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2574,7 +2574,7 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## writeBufferToPixels
 
@@ -2584,7 +2584,7 @@ writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2611,7 +2611,7 @@ writeBufferToPixelsSync(src: ArrayBuffer): void
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBufferSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeAllPixelsFromBufferSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2631,8 +2631,8 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## writePixels
 
@@ -2640,10 +2640,10 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2665,7 +2665,7 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## writePixels
 
@@ -2673,10 +2673,10 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} i
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
 **Since:** 7
 
@@ -2725,18 +2725,18 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## writePixelsFromAreaSync
 
@@ -2768,12 +2768,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | Error Code ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
-| [7600105](../errorcode-image.md#7600105-pixelmap-object-has-been-released) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap-has-been-passed-to-another-thread) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap-object-has-been-released) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
 
 ## writePixelsSync
 
@@ -2781,10 +2781,10 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writePixelsFromAreaSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -2806,8 +2806,8 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSyn
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## isEditable
 

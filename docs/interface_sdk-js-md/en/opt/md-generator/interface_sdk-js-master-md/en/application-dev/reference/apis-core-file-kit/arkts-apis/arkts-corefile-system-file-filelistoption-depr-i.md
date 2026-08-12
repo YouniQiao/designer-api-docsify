@@ -60,7 +60,7 @@ Callback invoked when the API call fails.
 success?: (data: FileListResponse) => void
 ```
 
-Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md).
+Callback invoked when the API call is successful. **data** is [FileListResponse](arkts-corefile-system-file-filelistresponse-depr-i.md#FileListResponse).
 
 **Since:** 3
 

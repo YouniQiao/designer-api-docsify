@@ -12,7 +12,7 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent#getWantAgent
+**替代接口：** [getWantAgent](ohos.app.ability.wantAgent/wantAgent#getWantAgent)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -25,7 +25,7 @@ function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WantAgent&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | 是 |
 
 ## 示例
 
@@ -83,7 +83,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent#getWantAgent
+**替代接口：** [getWantAgent](ohos.app.ability.wantAgent/wantAgent#getWantAgent)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -101,7 +101,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | 类型 |
 | --- |
-| Promise&lt;WantAgent&gt; |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; |
 
 ## 示例
 

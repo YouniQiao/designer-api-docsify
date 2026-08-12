@@ -18,7 +18,7 @@ color: ResourceColor
 
 Color of the text decoration.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ style?: TextDecorationStyle
 
 Style of the text decoration.
 
-**Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ type: TextDecorationType
 
 Type of the text decoration.
 
-**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

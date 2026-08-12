@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getPermissionDef
@@ -18,7 +18,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -48,7 +48,7 @@ Obtains the permission details by permission name. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -68,4 +68,4 @@ Obtains the permission details by permission name. This API uses a promise to re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PermissionDef&gt; |
+| Promise & lt;PermissionDef & gt; |

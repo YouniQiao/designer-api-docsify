@@ -13,7 +13,7 @@ Describes the event received by the application when the audio stream volume is 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## previousVolume

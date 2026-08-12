@@ -1,7 +1,7 @@
 # Panel
 
 In the following API examples, you must first use   
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -14,7 +14,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -49,15 +49,15 @@ Adjusts the panel rectangle. After the API is called, the adjust request is subm
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -98,9 +98,9 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. This API is compatible with
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect). If the
+> [adjustPanelRect](#adjustPanelRect). If the
 > input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) is called by
+> [adjustPanelRect](#adjustPanelRect) is called by
 > default.
 > 
 > This API returns the result synchronously. The return only indicates that the system receives the setting
@@ -122,16 +122,16 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -171,7 +171,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
+Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panels.
 
 **Since:** 10
 
@@ -185,13 +185,13 @@ Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md))
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -232,8 +232,8 @@ Obtains the window ID. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -267,7 +267,7 @@ Obtains the immersive mode of the input method application.
 
 | Type | Description |
 | --- | --- |
-| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | Immersive mode. |
+| ImmersiveMode | Immersive mode. |
 
 ## Examples
 
@@ -295,21 +295,21 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | Display ID of the screen where the input method keyboard is located. It can be obtained by calling [getDisplayId](arkts-ime-inputmethodengine-panel-i.md#getdisplayid). |
+| displayId | number | Yes | Display ID of the screen where the input method keyboard is located. It can be obtained by calling [getDisplayId](#getDisplayId). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemPanelInsets&gt; | Promise used to return the offset area between the input method keyboard and the system panel. |
+| Promise&lt;[SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md)&gt; | Promise used to return the offset area between the input method keyboard and the system panel. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
-| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -362,15 +362,15 @@ Get the current insets of the system panel of a specified display.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemPanelInsets \| null&gt; | the promise returned by the function. |
+| Promise&lt;[SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md) \| null&gt; | the promise returned by the function. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
-| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## hide
 
@@ -392,7 +392,7 @@ Hides this panel. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -454,7 +454,7 @@ ArkTS-Sta:
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) state.
 
 **Since:** 10
 
@@ -470,13 +470,13 @@ Moves this input method panel to the specified position. This API uses an asynch
 | --- | --- | --- | --- |
 | x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
 | y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -504,7 +504,7 @@ ArkTS-Sta:
 moveTo(x: int, y: int): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) state.
 
 **Since:** 10
 
@@ -531,7 +531,7 @@ Moves this input method panel to the specified position. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -572,7 +572,7 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -607,7 +607,7 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -631,11 +631,11 @@ Disables listening for the panel size change. This API uses an asynchronous call
 > the actual panel size to refresh the panel layout.
 > 
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md/arkts-arkui-window-size-i.md) type.
+> parameters of the [window.Size](window.Size) type.
 > 
 > - Since API version 15, after the
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to
+> [adjustPanelRect](#adjustPanelRect-1) API
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to
 > the callback function of this API.
 
 **Since:** 12
@@ -651,7 +651,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
+| callback | SizeChangeCallback | No | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 ## Examples
 
@@ -683,7 +683,7 @@ Unregisters panel hide event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback to Unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback to Unregister. |
 
 ## offShow
 
@@ -705,7 +705,7 @@ Unregisters panel show event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
 
 ## offSizeChange
 
@@ -729,7 +729,7 @@ Unsubscribe 'sizeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | No | optional, the callback called when the panel size changes. |
+| callback | SizeChangeCallback | No | optional, the callback called when the panel size changes. |
 
 ## on('show')
 
@@ -809,11 +809,11 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 > the actual panel size to refresh the panel layout.
 > 
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md/arkts-arkui-window-size-i.md) type.
+> parameters of the [window.Size](window.Size) type.
 > 
 > - Since API version 15, after the
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to
+> [adjustPanelRect](#adjustPanelRect-1) API
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to
 > the callback function of this API.
 
 **Since:** 12
@@ -829,7 +829,7 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'sizeChange' | Yes | Event type, which is **'sizeChange'**. |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
+| callback | SizeChangeCallback | Yes | Callback used to return the size of the soft keyboard panel, including the width and height.<br>**Since:** 15 |
 
 ## Examples
 
@@ -868,7 +868,7 @@ Registers panel hide event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
 
 ## onShow
 
@@ -892,7 +892,7 @@ Registers panel show event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
 
 ## onSizeChange
 
@@ -916,7 +916,7 @@ Subscribe 'sizeChange' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](../../apis-arkui/arkts-components/arkts-arkui-sizechangecallback-t.md) | Yes | the callback called when the panel size changes. |
+| callback | SizeChangeCallback | Yes | the callback called when the panel size changes. |
 
 ## resize
 
@@ -955,13 +955,13 @@ Resizes this input method panel. This API uses an asynchronous callback to retur
 | --- | --- | --- | --- |
 | width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
 | height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1025,7 +1025,7 @@ Resizes this input method panel. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1048,16 +1048,16 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 Sets the immersive effect of the input method application.
 
 - Gradient mode and fluid light mode can be used only when the   
-[immersive mode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode) is enabled.  
+[immersive mode](#setImmersiveMode) is enabled.  
 - The fluid light mode can be used only when the gradient mode is enabled.  
 - If the gradient mode is disabled, the gradient height must be 0 px.  
 - Only system applications can set the fluid light mode.  
 - The current API can be called only after any of the following APIs is called:  
- - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (available   
+ - [adjustPanelRect](#adjustPanelRect) (available   
 since API version 12)  
- - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (  
+ - [adjustPanelRect](#adjustPanelRect-1) (  
 available since API version 15)  
- - [resize](arkts-ime-inputmethodengine-panel-i.md#resize) (  
+ - [resize](#resize) (  
 available since API version 10)
 
 **Since:** 20
@@ -1078,11 +1078,11 @@ available since API version 10)
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
-| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
+| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [12800021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
+| [12800020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1115,15 +1115,15 @@ Sets the immersive mode of the input method application. You can only set the im
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | Yes | Immersive mode. |
+| mode | ImmersiveMode | Yes | Immersive mode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1171,7 +1171,7 @@ Sets to keep the screen always on. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1213,8 +1213,8 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
 
 ## Examples
 
@@ -1292,13 +1292,13 @@ Loads content from a page to this input method panel. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1346,7 +1346,7 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1381,14 +1381,14 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page linked to LocalStorage. |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1427,7 +1427,7 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| storage | [LocalStorage](../../apis-arkui/arkts-apis/arkts-arkui-localstorage-c.md) | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
+| storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
 
 **Return value:**
 
@@ -1439,7 +1439,7 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1475,7 +1475,7 @@ Shows this input method panel. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1545,10 +1545,10 @@ Sends a command to start moving the window. The window can be moved only when th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported.<br>**Applicable version:** 18 and later |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported.<br>**Applicable version:** 18 and later |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1586,7 +1586,7 @@ Update the panel rectangle. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Return value:**
@@ -1599,7 +1599,7 @@ Update the panel rectangle. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRect
 
@@ -1612,9 +1612,9 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. This API is compatible with
-> [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect).
+> [updatePanelRect](#updatePanelRect).
 > If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect)
+> [updatePanelRect](#updatePanelRect)
 > is called by default.
 > 
 > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
@@ -1635,7 +1635,7 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Return value:**
@@ -1648,8 +1648,8 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRectSync
 
@@ -1681,14 +1681,14 @@ Update the panel rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Yes | Landscape rectangle and portrait rectangle of the target panel. For the panel of the fixed state, the height cannot exceed 70% of the screen height, and the width cannot exceed the screen width. For the panel of the floating state, the height cannot exceed the screen height, and the width cannot exceed the screen width. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRectSync
 
@@ -1701,9 +1701,9 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. This API is compatible with
-> [updatePanelRectSync](arkts-ime-inputmethodengine-panel-i.md#updatepanelrectsync).
+> [updatePanelRectSync](#updatePanelRectSync).
 > If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRectSync](arkts-ime-inputmethodengine-panel-i.md#updatepanelrectsync)
+> [updatePanelRectSync](#updatePanelRectSync)
 > is called by default.
 > 
 > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
@@ -1724,15 +1724,15 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| flag | [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
+| flag | PanelFlag | Yes | Type of the state of the target panel. It can be **FLG_FIXED** or **FLG_FLOATING**. |
 | rect | [EnhancedPanelRect](arkts-ime-inputmethodengine-enhancedpanelrect-i.md) | Yes | The target panel rectangle, avoid area, and touch area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updateRegion
 
@@ -1768,9 +1768,9 @@ Updates the hot zone on the input method panel in the current state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 

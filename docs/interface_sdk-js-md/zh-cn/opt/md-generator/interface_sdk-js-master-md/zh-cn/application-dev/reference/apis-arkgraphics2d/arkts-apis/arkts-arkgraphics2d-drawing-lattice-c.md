@@ -1,7 +1,7 @@
 # Lattice
 
 矩形网格对象。该对象用于将图像按照矩形网格进行划分，支持固定指定网格区域、缩放其余网格实现局部拉伸、自定义网格绘制类型、网格颜色填充以及指定绘制边界矩形等能力。创建Lattice对象后，需配合  
-[Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagelattice)方法使用以实现图像的局部拉伸绘制。
+[Canvas.drawImageLattice](arkts-arkgraphics2d-drawing-canvas-c.md#drawImageLattice)方法使用以实现图像的局部拉伸绘制。
 
 > **说明：**
 > 
@@ -36,13 +36,13 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | 是 |
-| yDivs | Array&lt;number&gt; | 是 |
+| xDivs | Array & lt;number & gt; | 是 |
+| yDivs | Array & lt;number & gt; | 是 |
 | fXCount | number | 是 |
 | fYCount | number | 是 |
 | fBounds | common2D.Rect \| null | 否 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 |
-| fColors | Array&lt;common2D.Color&gt; \| null | 否 |
+| fRectTypes | Array & lt;RectType & gt; \ | null | 否 |
+| fColors | Array & lt;common2D.Color & gt; \ | null | 否 |
 
 **返回值：**
 
@@ -54,7 +54,7 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createImageLattice
 
@@ -75,13 +75,13 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| xDivs | Array&lt;number&gt; | 是 |
-| yDivs | Array&lt;number&gt; | 是 |
+| xDivs | Array & lt;number & gt; | 是 |
+| yDivs | Array & lt;number & gt; | 是 |
 | fXCount | number | 是 |
 | fYCount | number | 是 |
 | fBounds | common2D.Rect \| null | 否 |
-| fRectTypes | Array&lt;RectType&gt; \| null | 否 |
-| fColors | Array&lt;number&gt; \| null | 否 |
+| fRectTypes | Array & lt;RectType & gt; \ | null | 否 |
+| fColors | Array & lt;number & gt; \ | null | 否 |
 
 **返回值：**
 
@@ -93,4 +93,4 @@ static createImageLattice(xDivs: Array<number>, yDivs: Array<number>, fXCount: n
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

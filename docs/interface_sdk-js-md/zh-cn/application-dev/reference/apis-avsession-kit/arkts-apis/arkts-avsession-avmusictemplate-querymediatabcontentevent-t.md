@@ -26,5 +26,5 @@ type QueryMediaTabContentEvent = (tabId: string) => Promise<MediaTabContent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | Promise对象，返回媒体标签页内容。 |
+| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; | Promise对象，返回媒体标签页内容。 |
 

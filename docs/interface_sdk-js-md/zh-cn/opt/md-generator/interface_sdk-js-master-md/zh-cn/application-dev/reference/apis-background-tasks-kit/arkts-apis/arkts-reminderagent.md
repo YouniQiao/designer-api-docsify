@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.reminderAgentManager:reminderAgentManager](arkts-reminderagentmanager.md)
+**替代接口：** [reminderAgentManager](arkts-reminderagentmanager.md#reminderAgentManager)
 
 <!--Device-unnamed-declare namespace reminderAgent--><!--Device-unnamed-declare namespace reminderAgent-End-->
 

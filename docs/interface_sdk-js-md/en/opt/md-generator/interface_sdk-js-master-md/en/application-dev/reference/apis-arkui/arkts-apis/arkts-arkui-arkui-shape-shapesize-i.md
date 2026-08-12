@@ -11,7 +11,7 @@ Describes the size of a shape.
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## height
@@ -23,7 +23,7 @@ height?: number | string
 Height of the shape.
 
 When the parameter type is number, the valid value range is   
-[0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
+[0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md#Length) type specification.
 
 Unit: vp.
 
@@ -52,7 +52,7 @@ width?: number | string
 Width of the shape.
 
 When the parameter type is number, the valid value range is   
-[0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
+[0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md#Length) type specification.
 
 Unit: vp.
 

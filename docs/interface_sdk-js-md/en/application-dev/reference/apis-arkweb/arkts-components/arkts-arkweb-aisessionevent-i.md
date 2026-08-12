@@ -72,7 +72,7 @@ aiSessionType: AISessionType
 
 The type of AI session.
 
-**Type:** [AISessionType](../arkts-apis/arkts-arkweb-web-aisessiontype-e.md)
+**Type:** [AISessionType](arkts-arkweb-aisessiontype-e.md)
 
 **Since:** 26.0.0
 

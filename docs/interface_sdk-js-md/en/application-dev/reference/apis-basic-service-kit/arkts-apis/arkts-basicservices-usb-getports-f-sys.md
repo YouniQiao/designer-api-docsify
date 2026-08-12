@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## getPorts
@@ -20,7 +20,7 @@ Obtains the list of all physical USB ports.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports)
+**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getPorts)
 
 <!--Device-usb-function getPorts(): Array<USBPort>--><!--Device-usb-function getPorts(): Array<USBPort>-End-->
 

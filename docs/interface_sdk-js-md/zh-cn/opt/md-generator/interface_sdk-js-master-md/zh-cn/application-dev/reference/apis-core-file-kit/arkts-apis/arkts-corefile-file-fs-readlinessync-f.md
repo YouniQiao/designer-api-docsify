@@ -19,7 +19,7 @@ declare function readLinesSync(filePath: string, options?: Options): ReaderItera
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | filePath | string | 是 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 否 |
 
 **返回值：**
 

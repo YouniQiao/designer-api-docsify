@@ -4,7 +4,7 @@
 
 除通用属性外，还支持以下属性。
 
-从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持[通用事件](./common)。
 
 **继承/实现关系：** XComponentAttribute extends [CommonMethod<XComponentAttribute>](CommonMethod<XComponentAttribute>)
 
@@ -22,7 +22,7 @@ enableAnalyzer(enable: boolean)
 
 设置是否启用AI图像分析器，支持主体识别、文字识别和查找对象。
 
-要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer)一起使用。
+要使设置生效，此属性必须与XComponentController的[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startImageAnalyzer)和[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopImageAnalyzer)一起使用。
 
 此特性不能与[overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay)属性同时使用。如果两者都设置，overlay中的CustomBuilder属性将不生效。此特性还依赖于设备能力。
 

@@ -15,7 +15,7 @@ Rotation angle limits relative to the reference point.
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## negativePitchMax

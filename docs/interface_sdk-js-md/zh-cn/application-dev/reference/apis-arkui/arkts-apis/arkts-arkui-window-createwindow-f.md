@@ -11,7 +11,7 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是  
 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
 
-自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
+自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
 
 **起始版本：** 9
 
@@ -30,22 +30,22 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-arkui-window-configuration-i.md) | 是 | 创建窗口时的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 | 回调函数。返回当前创建的窗口对象。 |
+| config | Configuration | 是 | 创建窗口时的参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的窗口对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
-| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
-| [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
+| [1300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| [1300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
+| [1300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [1300009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
+| [1300008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
 
 ## 示例
 
@@ -126,7 +126,7 @@ function createWindow(config: Configuration): Promise<Window>
 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是  
 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
 
-自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
+自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
 
 **起始版本：** 9
 
@@ -145,27 +145,27 @@ function createWindow(config: Configuration): Promise<Window>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [Configuration](arkts-arkui-window-configuration-i.md) | 是 | 创建窗口时的参数。 |
+| config | Configuration | 是 | 创建窗口时的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Window&gt; | Promise对象。返回当前创建的窗口对象。 |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; | Promise对象。返回当前创建的窗口对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
-| [1300001](../errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [1300009](../errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
-| [1300008](../errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.createWindow cannot work correctly due to limited device capabilities.<br>**适用版本：** 12+ |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Invalid parent window type, parent window cannot be a subWindow.<br>**适用版本：** 12+ |
+| [1300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| [1300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
+| [1300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window type in the configuration is invalid.<br>**适用版本：** 12+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [1300009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) | The parent window is invalid. |
+| [1300008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) | The display device is abnormal.<br>**适用版本：** 9 - 16 |
 
 ## 示例
 

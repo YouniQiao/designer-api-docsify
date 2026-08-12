@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## printf
@@ -18,7 +18,7 @@ Formats a string by replacing the placeholders in it.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.format](arkts-arkts-util-format-f.md#format)
+**Substitutes:** [format](arkts-arkts-util-format-f.md#format)
 
 <!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
 
@@ -29,7 +29,7 @@ Formats a string by replacing the placeholders in it.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | format | string | Yes |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 

@@ -33,8 +33,8 @@ exitCurrentInputType(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -68,14 +68,14 @@ exitCurrentInputType(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -113,7 +113,7 @@ hide(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## 示例
 
@@ -147,13 +147,13 @@ hide(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## 示例
 
@@ -179,7 +179,7 @@ hideKeyboard(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.KeyboardController.hide](arkts-ime-inputmethodengine-keyboardcontroller-i.md#hide)(callback:
+**替代接口：** [hide](inputMethodEngine.KeyboardController.hide(callback:)
 
 <!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void-End-->
 
@@ -217,7 +217,7 @@ hideKeyboard(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.KeyboardController.hide](arkts-ime-inputmethodengine-keyboardcontroller-i.md#hide)()
+**替代接口：** [hide](#hide)()
 
 <!--Device-KeyboardController-hideKeyboard(): Promise<void>--><!--Device-KeyboardController-hideKeyboard(): Promise<void>-End-->
 
@@ -227,7 +227,7 @@ hideKeyboard(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

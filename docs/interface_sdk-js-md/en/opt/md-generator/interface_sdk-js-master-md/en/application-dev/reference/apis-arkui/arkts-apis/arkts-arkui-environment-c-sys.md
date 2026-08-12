@@ -8,10 +8,10 @@ For details about how to use environment parameters, see
 | key | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Description |
 | -------------------- | --------------- | ------------------------------------------------------------ |
 | accessibilityEnabled | string | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.|
-| colorMode | [ColorMode](#ColorMode) | Color mode. The options are as follows:&lt;br&gt;- **ColorMode.LIGHT**: light mode.&lt;br&gt;- **ColorMode.DARK**: dark mode.|
+| colorMode | [ColorMode](@link #ColorMode) | Color mode. The options are as follows: & lt;br & gt;- **ColorMode.LIGHT**: light mode. & lt;br & gt;- **ColorMode.DARK**: dark mode. |
 | fontScale | number | Font scale. |
-| fontWeightScale | number | Font weight ratio. |
-| layoutDirection | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | Layout direction. The options are as follows:&lt;br&gt;- **LayoutDirection.LTR**: from left to right.&lt;br&gt;- **LayoutDirection.RTL**: from right to left.&lt;br&gt;- **Auto**: follows the system settings.|
+| [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | Font weight ratio. |
+| layoutDirection | [LayoutDirection](@link LayoutDirection) | Layout direction. The options are as follows: & lt;br & gt;- **LayoutDirection.LTR**: from left to right. & lt;br & gt;- **LayoutDirection.RTL**: from right to left. & lt;br & gt;- **Auto**: follows the system settings. |
 | languageCode | string | Current system language, which is in lowercase letters, for example, **zh**.
 
 **Since:** 7

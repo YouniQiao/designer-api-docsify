@@ -2,7 +2,7 @@
 
 Represents the error that is thrown when there is store access error
 
-**Inheritance/Implementation:** InvalidStoreAccessError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** InvalidStoreAccessError extends [Error](Error)
 
 **Since:** 26.0.0
 

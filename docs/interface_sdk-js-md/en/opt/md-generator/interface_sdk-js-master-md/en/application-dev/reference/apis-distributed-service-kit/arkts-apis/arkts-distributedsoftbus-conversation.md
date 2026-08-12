@@ -19,7 +19,7 @@ The DSoftBus module **conversation** provides APIs for cross-device interaction 
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

@@ -36,7 +36,7 @@ mouseEvent?: MouseEvent
 
 鼠标/触摸板点击/长按信息。
 
-**类型：** [MouseEvent](../../apis-arkui/arkts-components/arkts-arkui-mouseevent-i.md)
+**类型：** MouseEvent
 
 **起始版本：** 20
 
@@ -54,7 +54,7 @@ result?: EventResult
 
 通知Web组件鼠标事件的消费结果。
 
-**类型：** [EventResult](../arkts-apis/arkts-arkweb-web-eventresult-c.md)
+**类型：** [EventResult](arkts-arkweb-eventresult-c.md)
 
 **起始版本：** 20
 

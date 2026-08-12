@@ -11,7 +11,7 @@ Describes the information about the window layout.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## windowAlpha
@@ -42,7 +42,7 @@ windowRect: Rect
 
 Window rectangle, that is, the position and size of the window on the display.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 15
 

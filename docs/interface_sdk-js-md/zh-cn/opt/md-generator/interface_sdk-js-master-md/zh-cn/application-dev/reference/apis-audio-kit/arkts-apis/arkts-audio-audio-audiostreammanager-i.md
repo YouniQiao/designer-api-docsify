@@ -2,7 +2,7 @@
 
 音频流管理。
 
-在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getstreammanager)获取AudioStreamManager实例。
+在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager)获取AudioStreamManager实例。
 
 > **说明：**
 > 
@@ -33,14 +33,14 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioEffectInfoArray&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getAudioEffectInfoArray
 
@@ -66,14 +66,14 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioEffectInfoArray&gt; |
+| Promise&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getAudioEffectInfoArraySync
 
@@ -105,8 +105,8 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -130,7 +130,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -154,7 +154,7 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioCapturerChangeInfoArray&gt; |
+| Promise&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; |
 
 ## getCurrentAudioCapturerInfoArraySync
 
@@ -202,7 +202,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererChangeInfoArray&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -226,7 +226,7 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioRendererChangeInfoArray&gt; |
+| Promise&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; |
 
 ## getCurrentAudioRendererInfoArraySync
 
@@ -282,7 +282,7 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## isActive
 
@@ -296,7 +296,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 20
 
-**替代接口：** ohos.multimedia.audio.AudioStreamManager#isStreamActive
+**替代接口：** [isStreamActive](#isStreamActive)
 
 <!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -321,7 +321,7 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 **废弃版本：** 20
 
-**替代接口：** ohos.multimedia.audio.AudioStreamManager#isStreamActive
+**替代接口：** [isStreamActive](#isStreamActive)
 
 <!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioStreamManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
 
@@ -337,7 +337,7 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## isActiveSync
 
@@ -351,7 +351,7 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 **废弃版本：** 20
 
-**替代接口：** ohos.multimedia.audio.AudioStreamManager#isStreamActive
+**替代接口：** [isStreamActive](#isStreamActive)
 
 <!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean--><!--Device-AudioStreamManager-isActiveSync(volumeType: AudioVolumeType): boolean-End-->
 
@@ -373,8 +373,8 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## isAudioLoopbackSupported
 
@@ -406,7 +406,7 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## isDirectPlaybackSupported
 
@@ -525,7 +525,7 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## isMultichannelPlaybackSupported
 
@@ -615,7 +615,7 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## isStreamActive
 
@@ -647,7 +647,7 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('audioRendererChange')
 
@@ -672,13 +672,13 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioRendererChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRendererChangeInfoArray&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('audioCapturerChange')
 
@@ -703,13 +703,13 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('audioRendererChange')
 
@@ -734,14 +734,14 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioRendererChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRendererChangeInfoArray&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('audioCapturerChange')
 
@@ -766,11 +766,11 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioCapturerChangeInfoArray&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |

@@ -1,6 +1,6 @@
 # CaptionsManager
 
-字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager)获取 CaptionsManager实例。
+字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getCaptionsManager)获取 CaptionsManager实例。
 
 **起始版本：** 8
 
@@ -35,7 +35,7 @@ off(type: 'enableChange', callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -88,13 +88,13 @@ off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'styleChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -139,7 +139,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 
 > - 调用此方法后，务必在对象生命周期结束前使用
-> [off('enableChange')](accessibility.CaptionsManager.off(type: 'enableChange', callback?: Callback&lt;boolean&gt;))
+> [off('enableChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 8
@@ -161,7 +161,7 @@ on(type: 'enableChange', callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -201,7 +201,7 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 > - 注册监听的callback参数应使用具名函数而非匿名函数，否则每次调用时会创建一个新的底层对象，引起内存泄漏问题。
 > 
 > - 调用此方法后，务必在对象生命周期结束前使用
-> [off('styleChange')](accessibility.CaptionsManager.off(type: 'styleChange', callback?: Callback&lt;CaptionsStyle&gt;))
+> [off('styleChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > 取消监听，否则可能会导致崩溃。
 
 **起始版本：** 8
@@ -217,13 +217,13 @@ on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'styleChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

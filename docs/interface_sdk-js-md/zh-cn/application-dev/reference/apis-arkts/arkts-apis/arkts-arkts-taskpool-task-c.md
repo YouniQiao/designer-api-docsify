@@ -32,15 +32,15 @@ addDependency(...tasks: Task[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
+| tasks | Task[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200026](../errorcode-utils.md#10200026-当前任务存在循环依赖) | There is a circular dependency. |
-| [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
-| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200026-当前任务存在循环依赖) | There is a circular dependency. |
+| [10200056](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
+| [10200052](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -104,7 +104,7 @@ Task的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -148,7 +148,7 @@ Task的构造函数用于创建任务，并可指定任务名称。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -325,7 +325,7 @@ onEnqueued(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -378,7 +378,7 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -435,7 +435,7 @@ onExecutionSucceeded(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -470,7 +470,7 @@ onReceiveData(callback?: Function): void
 
 > **说明：**
 > 
-> 该方法与[sendData](arkts-arkts-taskpool-task-c.md#senddata)配对使用。
+> 该方法与[sendData](#sendData)配对使用。
 > 
 > 不支持为同一任务定义多种回调函数。如果多次赋值，只有最后一次赋值的回调函数会生效。
 
@@ -545,7 +545,7 @@ onStartExecution(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -592,15 +592,15 @@ removeDependency(...tasks: Task[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tasks | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md)[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
+| tasks | Task[] | 是 | 被依赖的任务数组。默认值为**undefined**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200027](../errorcode-utils.md#10200027-依赖关系不存在) | The dependency does not exist. |
-| [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
-| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200027](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200027-依赖关系不存在) | The dependency does not exist. |
+| [10200056](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
+| [10200052](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -678,10 +678,10 @@ static sendData(...args: Object[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200024](../errorcode-utils.md#10200024-未在宿主线程中注册的函数) | The callback is not registered on the host side. |
-| [10200023](../errorcode-utils.md#10200023-未在并发函数中调用的函数) | The function is not called in the concurrent function. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200022](../errorcode-utils.md#10200022-未在任务池中调用的函数) | The function is not called in the TaskPool thread. |
+| [10200024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200024-未在宿主线程中注册的函数) | The callback is not registered on the host side. |
+| [10200023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200023-未在并发函数中调用的函数) | The function is not called in the concurrent function. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200022-未在任务池中调用的函数) | The function is not called in the TaskPool thread. |
 
 ## 示例
 
@@ -750,7 +750,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 > **说明：**
 > 
-> - 此接口与[setTransferList](arkts-arkts-taskpool-task-c.md#settransferlist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
+> - 此接口与[setTransferList](#setTransferList)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
 > 
 > 该接口需搭配
 > [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
@@ -775,7 +775,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
+| [10200029](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
 
 ## 示例
 
@@ -916,7 +916,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 > **说明：**
 > 
-> - 此接口与[setCloneList](arkts-arkts-taskpool-task-c.md#setclonelist)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
+> - 此接口与[setCloneList](#setCloneList)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
 > 
 > 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程，
 > 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
@@ -941,7 +941,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
+| [10200029](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
 
 ## 示例
 

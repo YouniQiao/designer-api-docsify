@@ -61,7 +61,7 @@ fail?: (data: string, code: number) => void
 success?: (data: BatteryResponse) => void
 ```
 
-接口调用成功的回调函数，data为{@link BatteryResponse}类型的返回值。
+接口调用成功的回调函数，data为[BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md#BatteryResponse)类型的返回值。
 
 **起始版本：** 3
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageCreator
@@ -19,7 +19,7 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)(size:
+**Substitutes:** [createImageCreator](image.createImageCreator(size:)
 
 <!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
@@ -80,7 +80,7 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

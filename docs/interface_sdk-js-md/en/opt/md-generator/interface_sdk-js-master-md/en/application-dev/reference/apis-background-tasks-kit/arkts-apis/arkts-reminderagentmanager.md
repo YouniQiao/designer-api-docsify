@@ -11,7 +11,7 @@ The **reminderAgentManager** module provides APIs related to agent-powered remin
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

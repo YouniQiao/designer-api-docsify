@@ -13,7 +13,7 @@ Provides the information about the custom page transition animation.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## timeout
@@ -23,8 +23,8 @@ timeout?: number
 ```
 
 Timeout for the custom page transition animation. The timeout timer starts when the default animation (page scrolling) reaches the point where the first frame is moved out of the viewport. If you do not call the  
-[finishTransition](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md#finishtransition) API of  
-[SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md) before the timer expires, the component considers that the custom animation of the page ends and immediately removes the page node from the render tree.The unit is ms. The default value is **0**.
+[finishTransition](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md#finishTransition) API of  
+[SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md#SwiperContentTransitionProxy) before the timer expires, the component considers that the custom animation of the page ends and immediately removes the page node from the render tree.The unit is ms. The default value is **0**.
 
 **Type:** number
 
@@ -48,7 +48,7 @@ transition: Callback<SwiperContentTransitionProxy>
 
 Content of the custom page transition animation.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;SwiperContentTransitionProxy&gt;
+**Type:** Callback&lt;[SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md)&gt;
 
 **Since:** 18
 

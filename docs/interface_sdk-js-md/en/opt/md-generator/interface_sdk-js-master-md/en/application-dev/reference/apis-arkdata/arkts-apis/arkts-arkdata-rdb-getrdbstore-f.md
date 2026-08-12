@@ -12,7 +12,7 @@ Obtains an RDB store. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore)
+**Substitutes:** [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getRdbStore)
 
 <!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void--><!--Device-rdb-function getRdbStore(context: Context, config: StoreConfig, version: number, callback: AsyncCallback<RdbStore>): void-End-->
 
@@ -22,7 +22,7 @@ Obtains an RDB store. This API uses an asynchronous callback to return the resul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes |
 | version | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RdbStore&gt; | Yes |
@@ -48,7 +48,7 @@ Obtains an RDB store. This API uses a promise to return the result. You can set 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | config | [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md) | Yes |
 | version | number | Yes |
 
@@ -56,4 +56,4 @@ Obtains an RDB store. This API uses a promise to return the result. You can set 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RdbStore&gt; |
+| Promise & lt;RdbStore & gt; |

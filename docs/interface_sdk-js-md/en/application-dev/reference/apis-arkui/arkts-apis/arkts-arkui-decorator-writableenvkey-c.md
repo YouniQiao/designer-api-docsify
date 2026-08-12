@@ -18,7 +18,7 @@ static readonly DIRECTION: WritableSystemEnvKey<Direction>
 
 Defines the system environment key direction.
 
-**Type:** [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;[Direction](arkts-arkui-enums-direction-e.md)&gt;
+**Type:** [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md)&lt;[Direction](arkts-arkui-enums-direction-e.md)&gt;
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ static readonly FONT_SCALE: WritableSystemEnvKey<double>
 
 Defines the system environment key fontScale.
 
-**Type:** [WritableSystemEnvKey](../arkts-components/arkts-arkui-writablesystemenvkey-c.md)&lt;double&gt;
+**Type:** [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md)&lt;double&gt;
 
 **Since:** 26.0.0
 

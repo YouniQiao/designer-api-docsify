@@ -142,7 +142,7 @@ dayColor?: ResourceColor
 
 Text color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -286,7 +286,7 @@ lunarColor?: ResourceColor
 
 lunar Text color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -382,7 +382,7 @@ markLunarColor?: ResourceColor
 
 lunar Work and rest text color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 

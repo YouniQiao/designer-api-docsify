@@ -16,7 +16,7 @@ axis?: Axis
 
 Defines the lazy layout axis.
 
-**Type:** [Axis](arkts-arkui-axis-e.md)
+**Type:** Axis
 
 **Default:** Axis.Vertical
 

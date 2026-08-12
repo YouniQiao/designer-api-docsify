@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## get
@@ -12,12 +12,12 @@ import { componentSnapshot } from 'kits/@kit.ArkUI';
 function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
+> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
 > object associated with the current UI context.
 > 
 > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
@@ -29,7 +29,7 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentSnapshot#get
+**Substitutes:** [get](ohos.arkui.UIContext.ComponentSnapshot#get)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,16 +43,16 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) of the target component. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
+| id | string | Yes | [ID](common) of the target component. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. |
 | options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -104,12 +104,12 @@ struct SnapshotExample {
 function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md). This API uses a promise to return the result.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
+> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
 > object associated with the current UI context.
 > 
 > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
@@ -121,7 +121,7 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentSnapshot#get
+**Substitutes:** [get](ohos.arkui.UIContext.ComponentSnapshot#get)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,7 +135,7 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | [ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) of the target component. |
+| id | string | Yes | [ID](common) of the target component. |
 | options | [SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) | No | Custom settings of the snapshot.<br>**Since:** 12 |
 
 **Return value:**
@@ -148,8 +148,8 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Invalid ID. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

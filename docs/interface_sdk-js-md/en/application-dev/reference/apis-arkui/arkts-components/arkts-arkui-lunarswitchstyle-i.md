@@ -20,7 +20,7 @@ Background color of the switch when it is on.
 
 Default value: **\$r('sys.color.ohos_id_color_text_primary_actived')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** $r('sys.color.ohos_id_color_text_primary_actived')
 
@@ -46,7 +46,7 @@ Color of the icon inside the switch.
 
 Default value: **Color.White**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.White
 
@@ -72,7 +72,7 @@ Border color of the switch when it is off.
 
 Default value: **\$r('sys.color.ohos_id_color_switch_outline_off')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** $r('sys.color.ohos_id_color_switch_outline_off')
 

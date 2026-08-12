@@ -36,7 +36,7 @@ error: SslError
 
 Error codes.
 
-**类型：** [SslError](../arkts-components/arkts-arkweb-sslerror-e.md)
+**类型：** [SslError](arkts-arkweb-web-sslerror-e.md)
 
 **起始版本：** 23
 
@@ -54,7 +54,7 @@ handler: SslErrorHandler
 
 Notifies the user of the operation behavior of the web component.
 
-**类型：** [SslErrorHandler](../arkts-components/arkts-arkweb-sslerrorhandler-c.md)
+**类型：** [SslErrorHandler](arkts-arkweb-web-sslerrorhandler-c.md)
 
 **起始版本：** 23
 

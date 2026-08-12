@@ -2,7 +2,7 @@
 
 The &lt;menu&gt; component provides menus as temporary pop-up windows to display operations that can be performed by users.
 
-**Inheritance/Implementation:** MenuElement extends [Element](arkts-arkui-viewmodel-element-i.md)
+**Inheritance/Implementation:** MenuElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
 
 **Since:** 4
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## zipFile
@@ -18,7 +18,7 @@ Zips a file. The execution result is returned after the compression is complete.
 
 **Deprecated since:** 9
 
-**Substitutes:** [zlib.compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile)(inFile:
+**Substitutes:** [compressFile](zlib.compressFile(inFile:)
 
 <!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -36,7 +36,7 @@ Zips a file. The execution result is returned after the compression is complete.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

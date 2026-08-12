@@ -18,7 +18,7 @@ allowedAccounts?: Array<AppAccountInfo>
 
 允许的账号数组，默认为空。
 
-**类型：** Array&lt;AppAccountInfo&gt;
+**类型：** Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;
 
 **起始版本：** 9
 

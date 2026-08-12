@@ -27,12 +27,12 @@ Defines FormComponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formInfo | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i-sys.md) | Yes | The formInfo |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| formInfo | [FormInfo](arkts-arkui-formcomponent-forminfo-i-sys.md) | Yes | The formInfo |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FormComponentAttribute](../arkts-components/arkts-arkui-formcomponent-attribute.md) |  |
+| [FormComponentAttribute](arkts-arkui-formcomponent-formcomponentattribute-i-sys.md) |  |
 

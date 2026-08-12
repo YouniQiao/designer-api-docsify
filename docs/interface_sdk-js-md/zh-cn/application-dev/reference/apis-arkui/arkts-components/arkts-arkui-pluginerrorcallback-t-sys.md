@@ -22,5 +22,5 @@ declare type PluginErrorCallback = (info: PluginErrorData) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [PluginErrorData](../arkts-apis/arkts-arkui-plugincomponent-pluginerrordata-i-sys.md) | 是 | 插件错误数据 |
+| info | [PluginErrorData](arkts-arkui-pluginerrordata-i-sys.md) | 是 | 插件错误数据 |
 

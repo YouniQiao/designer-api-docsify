@@ -13,7 +13,7 @@ Defines the information about the redirected-to ability.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -42,7 +42,7 @@ parameters?: Record<string, Object>
 
 Parameters to be transferred to the target.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 12
 

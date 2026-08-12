@@ -13,7 +13,7 @@ Defines the printer capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## colorMode
@@ -96,7 +96,7 @@ pageSize: Array<PrintPageSize>
 
 List of page sizes supported by the printer.
 
-**Type:** Array&lt;PrintPageSize&gt;
+**Type:** Array&lt;[PrintPageSize](arkts-basicservices-print-printpagesize-i.md)&gt;
 
 **Since:** 24
 
@@ -114,7 +114,7 @@ resolution?: Array<PrintResolution>
 
 List of resolutions supported by the printer.
 
-**Type:** Array&lt;PrintResolution&gt;
+**Type:** Array&lt;[PrintResolution](arkts-basicservices-print-printresolution-i.md)&gt;
 
 **Since:** 24
 

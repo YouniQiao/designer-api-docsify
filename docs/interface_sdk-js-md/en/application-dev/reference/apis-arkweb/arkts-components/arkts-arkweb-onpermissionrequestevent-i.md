@@ -18,7 +18,7 @@ request: PermissionRequest
 
 User operation.
 
-**Type:** [PermissionRequest](../arkts-apis/arkts-arkweb-web-permissionrequest-c.md)
+**Type:** [PermissionRequest](arkts-arkweb-permissionrequest-c.md)
 
 **Since:** 12
 

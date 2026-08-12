@@ -33,9 +33,9 @@ function compressFile(inFile: string, outFile: string, options: Options, callbac
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 
@@ -99,15 +99,15 @@ function compressFile(inFile: string, outFile: string, options: Options): Promis
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 

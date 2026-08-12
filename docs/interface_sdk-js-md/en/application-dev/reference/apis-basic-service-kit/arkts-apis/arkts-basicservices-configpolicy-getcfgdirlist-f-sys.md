@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { configPolicy } from 'kits/@kit.BasicServicesKit';
+import { configPolicy } from '@kit.BasicServicesKit';
 ```
 
 ## getCfgDirList
@@ -28,13 +28,13 @@ Obtains a list of configuration level directories, in ascending order of priorit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the list of configuration level directories is successfully obtained, &lt;strong&gt;err&lt;/strong&gt; is &lt;strong&gt;undefined&lt;/strong&gt;, and &lt;strong&gt;data&lt;/strong&gt; is the obtained list. Otherwise, &lt;strong&gt;err&lt;/strong&gt; is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the list of configuration level directories is successfully obtained, &lt;strong&gt;err&lt;/strong&gt; is &lt;strong&gt;undefined&lt;/strong&gt;, and &lt;strong&gt;data&lt;/strong&gt; is the obtained list. Otherwise, &lt;strong&gt;err&lt;/strong&gt; is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 
 ## getCfgDirList

@@ -8,7 +8,7 @@ WantAgent模块提供了创建WantAgent实例、获取实例的用户ID、获取
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent
+**替代接口：** [wantAgent/wantAgent](ohos.app.ability.wantAgent/wantAgent)
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 

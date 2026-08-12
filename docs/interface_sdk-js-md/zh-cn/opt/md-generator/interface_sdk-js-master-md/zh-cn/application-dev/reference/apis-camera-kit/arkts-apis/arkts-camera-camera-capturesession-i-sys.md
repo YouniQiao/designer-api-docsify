@@ -1,6 +1,6 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相机功能(录像，拍照)。
 
 > **说明：**
 > 
@@ -10,7 +10,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [camera.VideoSession](arkts-camera-camera-videosession-i.md)
+**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -28,7 +28,7 @@ Obtains the level of the beauty type in use.
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Beauty.getBeauty](arkts-camera-camera-beauty-i-sys.md#getbeauty)
+**替代接口：** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getBeauty)
 
 <!--Device-CaptureSession-getBeauty(type: BeautyType): number--><!--Device-CaptureSession-getBeauty(type: BeautyType): number-End-->
 
@@ -52,7 +52,7 @@ Obtains the level of the beauty type in use.
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## 示例
 
@@ -83,15 +83,15 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 | Input Parameter | Example Return Value | Return Value Description |
 | ----------------| ---- | ---------|
 | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |
-| SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |
-| FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |
-| SKIN_TONE | [-1, 16242611] |
+| [SKIN_SMOOTH](arkts-camera-camera-beautytype-e-sys.md) | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |
+| [FACE_SLENDER](arkts-camera-camera-beautytype-e-sys.md) | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |
+| [SKIN_TONE](arkts-camera-camera-beautytype-e-sys.md) | [-1, 16242611] |
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [camera.BeautyQuery.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange)
+**替代接口：** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange)
 
 <!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>--><!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>-End-->
 
@@ -109,13 +109,13 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## 示例
 
@@ -142,7 +142,7 @@ Obtains the supported beauty types.
 
 **废弃版本：** 11
 
-**替代接口：** [camera.BeautyQuery.getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes)
+**替代接口：** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes)
 
 <!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>-End-->
 
@@ -154,13 +154,13 @@ Obtains the supported beauty types.
 
 | 类型 |
 | --- |
-| Array&lt;BeautyType&gt; |
+| Array&lt;[BeautyType](arkts-camera-camera-beautytype-e-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## 示例
 
@@ -178,14 +178,14 @@ setBeauty(type: BeautyType, value: number): void
 ```
 
 Sets a beauty type and its level. Beauty mode is turned off only when all the  
-[beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through  
-[getSupportedBeautyTypes](arkts-camera-camera-capturesession-i-sys.md#getsupportedbeautytypes) are disabled.
+[beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType) obtained through  
+[getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
 
 **起始版本：** 10
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Beauty.setBeauty](arkts-camera-camera-beauty-i-sys.md#setbeauty)
+**替代接口：** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setBeauty)
 
 <!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void--><!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void-End-->
 
@@ -204,7 +204,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## 示例
 

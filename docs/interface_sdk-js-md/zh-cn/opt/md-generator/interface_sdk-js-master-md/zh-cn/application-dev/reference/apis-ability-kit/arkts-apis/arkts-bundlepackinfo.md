@@ -1,7 +1,7 @@
 # BundlePackInfo
 
 The module provides information in the **pack.info** file. The information can be obtained using
- [freeInstall.getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo)
+ [freeInstall.getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo)
  .
  > **NOTE**
  >

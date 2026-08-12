@@ -23,7 +23,7 @@ export declare function LoadingProgress(
 
 | 类型 | 说明 |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
+| [LoadingProgressAttribute](arkts-arkui-loadingprogress-loadingprogressattribute-i.md) |  |
 
 
 ## LoadingProgress
@@ -52,11 +52,11 @@ export declare function LoadingProgress(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LoadingProgressAttribute&gt; | 是 | LoadingProgress属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LoadingProgressAttribute](arkts-arkui-loadingprogress-loadingprogressattribute-i.md)&gt; | 是 | LoadingProgress属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
+| [LoadingProgressAttribute](arkts-arkui-loadingprogress-loadingprogressattribute-i.md) |  |
 

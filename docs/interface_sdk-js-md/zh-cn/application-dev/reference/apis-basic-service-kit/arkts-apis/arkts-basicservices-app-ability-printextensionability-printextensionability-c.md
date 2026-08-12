@@ -38,7 +38,7 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
 
 ## onConnectPrinter
 
@@ -258,7 +258,7 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application |
 
 ## 示例
 
@@ -315,7 +315,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
 
 ## onStartDiscoverPrinter
 
@@ -323,7 +323,7 @@ public onRequestPrinterCapability(printerId: int): print.PrinterCapability
 onStartDiscoverPrinter(): void
 ```
 
-开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) 将发现的打印机信息上报给系统。
+开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addPrinterToDiscovery) 将发现的打印机信息上报给系统。
 
 **起始版本：** 14
 
@@ -376,7 +376,7 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 23 |
 
 ## onStopDiscoverPrinter
 

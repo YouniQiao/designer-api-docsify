@@ -13,7 +13,7 @@ Describes the internal information about a task pool.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## taskInfos
@@ -24,7 +24,7 @@ taskInfos: TaskInfo[]
 
 Internal information about the tasks. You are advised not to change the value.
 
-**Type:** [TaskInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md)[]
+**Type:** TaskInfo[]
 
 **Since:** 10
 

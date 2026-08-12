@@ -2,7 +2,7 @@
 
 Defines the Extendable Button.
 
-**Inheritance/Implementation:** ExtendableButton implements [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md/arkts-arkui-button-attribute.md)
+**Inheritance/Implementation:** ExtendableButton implements [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md#ButtonAttribute)
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Constructor of Extendable Button.
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
 | label | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |  |
 | options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | No | Button Component Options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | subcomponent trailing closure |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | subcomponent trailing closure |
 
 **Return value:**
 
@@ -78,7 +78,7 @@ Constructor of Extendable Button.
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
 | options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -114,9 +114,9 @@ Entry of Extendable Button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setButtonOptions
 

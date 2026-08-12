@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getAddressesFromLocation
@@ -20,7 +20,7 @@ Obtain address info from location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation
+**Substitutes:** [getAddressesFromLocation](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +32,8 @@ Obtain address info from location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | Yes | Indicates the reverse geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
+| request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the address info. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Obtain address info from location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation
+**Substitutes:** [getAddressesFromLocation](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +77,7 @@ Obtain address info from location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [ReverseGeoCodeRequest](arkts-location-geolocation-reversegeocoderequest-i.md) | Yes | Indicates the reverse geocode query parameters. |
+| request | ReverseGeoCodeRequest | Yes | Indicates the reverse geocode query parameters. |
 
 **Return value:**
 

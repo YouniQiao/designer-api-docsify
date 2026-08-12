@@ -35,16 +35,16 @@ addCert(cert: X509Cert): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
+| [cert](arkts-security-cert.md) | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -131,16 +131,16 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -245,19 +245,19 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cert | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
-| keyInfo | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 |
+| [cert](arkts-security-cert.md) | [X509Cert](arkts-devicecertificate-cert-x509cert-i.md) | 是 |
+| [keyInfo](arkts-devicecertificate-cert-cmsenvelopeddecryptionconfig-i.md) | [PrivateKeyInfo](arkts-devicecertificate-cert-privatekeyinfo-i.md) | 是 |
 | config | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
-| [19030008](../errorcode-cert.md#19030008-私钥密码错误) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030008-私钥密码错误) |
 
 ## 示例
 
@@ -372,16 +372,16 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array \| string&gt; |
+| Promise & lt;Uint8Array \ | string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -515,10 +515,10 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -638,15 +638,15 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -767,16 +767,16 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| algorithm | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cert-cmsrecipientencryptionalgorithm-e.md) | 是 |
+| [algorithm](arkts-devicecertificate-cert-certchainvalidator-i.md) | [CmsRecipientEncryptionAlgorithm](arkts-devicecertificate-cert-cmsrecipientencryptionalgorithm-e.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 

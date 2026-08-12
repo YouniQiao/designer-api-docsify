@@ -13,7 +13,7 @@ Provides preferred playback settings for player.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## enableSuperResolution
@@ -22,7 +22,7 @@ import { media } from 'kits/@kit.MediaKit';
 enableSuperResolution?: boolean
 ```
 
-Enable super-resolution feature. default is false.Must enable super-resolution feature before calling {@link #setSuperResolution} and {@link #setVideoWindowSize}.
+Enable super-resolution feature. default is false.Must enable super-resolution feature before calling [setSuperResolution](arkts-media-media-avplayer-i.md#setSuperResolution) and [setVideoWindowSize](arkts-media-media-avplayer-i.md#setVideoWindowSize).
 
 **Type:** boolean
 
@@ -64,7 +64,7 @@ mutedMediaType?: MediaType
 
 mute the specified media stream when playing.
 
-**Type:** [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md)
+**Type:** MediaType
 
 **Since:** 12
 

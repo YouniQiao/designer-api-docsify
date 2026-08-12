@@ -11,7 +11,7 @@ Declare CustomDialog SelectDialog
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from 'kits/@kit.ArkUI';
+import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
 ```
 
 ## confirm
@@ -22,7 +22,7 @@ confirm?: ButtonOptions
 
 Sets the SelectDialog confirm button.
 
-**Type:** [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md)
+**Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **Since:** 18
 
@@ -82,7 +82,7 @@ radioContent: Array<SheetInfo>
 
 Sets the SelectDialog sheets.
 
-**Type:** Array&lt;SheetInfo&gt;
+**Type:** Array&lt;[SheetInfo](arkts-arkui-sheetinfo-i.md)&gt;
 
 **Since:** 18
 
@@ -122,7 +122,7 @@ theme?: Theme | CustomTheme
 
 Custom Theme.
 
-**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| CustomTheme
+**Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **Since:** 12
 

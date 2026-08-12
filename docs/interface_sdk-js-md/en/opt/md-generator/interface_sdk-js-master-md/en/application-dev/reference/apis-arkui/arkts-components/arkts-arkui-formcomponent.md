@@ -22,7 +22,7 @@ Set a new value of form info.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i.md) | Yes |
+| value | [FormInfo](arkts-arkui-forminfo-i-sys.md) | Yes |
 
 ## Summary
 

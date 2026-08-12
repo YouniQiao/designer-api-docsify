@@ -12,7 +12,7 @@ If the values of **start** and **end** are both **0**, the **List** component co
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 14.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 14.
 
 **Since:** 12
 

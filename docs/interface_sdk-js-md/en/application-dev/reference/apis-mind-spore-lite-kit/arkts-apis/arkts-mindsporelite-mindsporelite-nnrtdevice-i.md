@@ -13,7 +13,7 @@ Provides the NNRT device info
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## deviceID
@@ -84,7 +84,7 @@ priority?: Priority
 
 NNRT device priority.
 
-**Type:** [Priority](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-priority-e.md)
+**Type:** Priority
 
 **Since:** 12
 

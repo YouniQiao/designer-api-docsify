@@ -20,11 +20,11 @@ function getSerialPortList(): Promise<SerialPort[]>
 
 | 类型 |
 | --- |
-| Promise&lt;SerialPort[]&gt; |
+| Promise & lt;SerialPort[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |
+| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#203-企业管理策略禁止使用此系统功能) |

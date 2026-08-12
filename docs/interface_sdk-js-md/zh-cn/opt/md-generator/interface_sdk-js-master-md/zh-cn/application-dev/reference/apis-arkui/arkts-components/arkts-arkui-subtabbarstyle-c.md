@@ -150,8 +150,8 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-设置选中子页签的下划线风格。与[indicator](arkts-arkui-subtabbarstyle-c.md#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照  
-[ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md/arkts-arkui-imagefit-e.md)。子页签的下划线风格仅在水平模式下有效。
+设置选中子页签的下划线风格。与[indicator](#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照  
+[ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md#ImageFit)。子页签的下划线风格仅在水平模式下有效。
 
 **起始版本：** 22
 

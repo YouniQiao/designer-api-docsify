@@ -24,7 +24,7 @@ Shows a text picker in the given settings.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#showTextPickerDialog
+**Substitutes:** [showTextPickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showTextPickerDialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,5 +36,5 @@ Shows a text picker in the given settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextPickerDialogOptions](../arkts-apis/arkts-arkui-textpicker-textpickerdialogoptions-i.md) | No | Parameters of the text picker dialog box. |
+| options | [TextPickerDialogOptions](arkts-arkui-textpickerdialogoptions-i.md) | No | Parameters of the text picker dialog box. |
 

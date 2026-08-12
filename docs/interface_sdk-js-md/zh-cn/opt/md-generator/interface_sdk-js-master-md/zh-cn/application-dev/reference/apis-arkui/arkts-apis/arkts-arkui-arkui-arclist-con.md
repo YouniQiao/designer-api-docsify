@@ -14,7 +14,7 @@ export declare const ArcList: ArcListInterface
 
 ### 子组件
 
-仅支持[ArcListItem](arkts-arkui-arclist.md)子组件。
+仅支持[ArcListItem](#ArcList)子组件。
 
 > **说明：**
 > 
@@ -32,7 +32,7 @@ export declare const ArcList: ArcListInterface
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和
 > [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)发生变化以后，会更新子组件索引值。
 > 
-> - ArcList子组件[visibility](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#visibility)属性设置为Hidden或None依然会计算索引值。
+> - ArcList子组件[visibility](CommonMethod#visibility)属性设置为Hidden或None依然会计算索引值。
 
 **起始版本：** 18
 
@@ -64,16 +64,16 @@ export declare const ArcListInstance: ArcListAttribute
 export declare const ArcListItem: ArcListItemInterface
 ```
 
-用于展示弧形列表的子组件，必须配合[ArcList](arkts-arkui-arclist.md)使用。
+用于展示弧形列表的子组件，必须配合[ArcList](#ArcList)使用。
 
 > **说明：**
 > 
-> - 该组件的父组件只能是[ArcList](arkts-arkui-arclist.md)。
+> - 该组件的父组件只能是[ArcList](#ArcList)。
 > 
 > - 当ArcListItem配合[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)使用时，其子组件在
 > ArcListItem创建时创建；配合[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)或
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)使用时，或直接作为
-> [ArcList](arkts-arkui-arclist.md)组件的子组件使用时，其子组件在ArcListItem布局时创建。
+> [ArcList](#ArcList)组件的子组件使用时，其子组件在ArcListItem布局时创建。
 > 
 > - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
 

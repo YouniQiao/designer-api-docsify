@@ -107,7 +107,7 @@ Called when a process is created.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes |
 
 ## onProcessDied
 
@@ -127,7 +127,7 @@ Called when a process is destroyed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes |
 
 ## onProcessStateChanged
 
@@ -147,4 +147,4 @@ Called when the process state is changed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | Yes |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | Yes |

@@ -14,7 +14,7 @@ Describes the unique information of the
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## entities
@@ -65,7 +65,7 @@ readonly inputParams?: Array<Record<string, Object>>
 
 Data format of intent parameters, which is used to define the input data format during intent calls.
 
-**Type:** Array&lt;Record&lt;string, Object&gt;&gt;
+**Type:** Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 23
 
@@ -85,7 +85,7 @@ readonly outputParams?: Array<Record<string, Object>>
 
 Data format for the results returned by intent calls. It defines how the data should be structured.
 
-**Type:** Array&lt;Record&lt;string, Object&gt;&gt;
+**Type:** Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 23
 

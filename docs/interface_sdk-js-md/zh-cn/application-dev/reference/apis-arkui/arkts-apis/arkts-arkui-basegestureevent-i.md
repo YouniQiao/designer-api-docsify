@@ -1,8 +1,8 @@
 # BaseGestureEvent
 
-基础手势事件类型。继承自[BaseEvent](arkts-arkui-common-baseevent-i.md)。
+基础手势事件类型。继承自[BaseEvent](BaseEvent)。
 
-**继承/实现关系：** BaseGestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
+**继承/实现关系：** BaseGestureEvent extends [BaseEvent](BaseEvent)
 
 **起始版本：** 11
 
@@ -24,7 +24,7 @@ fingerInfos?: FingerInfo[]
 
 fingerInfos只会记录参与触摸的有效手指信息，先按下但未参与当前手势触发的手指在fingerInfos中不会显示。默认值为空数组[]，返回空数组时，表示当前无有效触点信息。
 
-**类型：** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
+**类型：** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **起始版本：** 20
 
@@ -46,7 +46,7 @@ fingerList: FingerInfo[]
 
 触发事件的所有手指信息。
 
-**类型：** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
+**类型：** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **起始版本：** 11
 

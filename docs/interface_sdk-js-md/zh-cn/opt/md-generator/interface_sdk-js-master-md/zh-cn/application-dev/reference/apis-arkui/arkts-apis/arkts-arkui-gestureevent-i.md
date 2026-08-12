@@ -1,8 +1,8 @@
 # GestureEvent
 
-定义手势的事件信息。继承自[BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)。
+定义手势的事件信息。继承自[BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md#BaseEvent)。
 
-**继承/实现关系：** GestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**继承/实现关系：** GestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md#BaseEvent)
 
 **起始版本：** 7
 
@@ -246,7 +246,7 @@ tapLocation?: EventLocationInfo
 velocity: number
 ```
 
-用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
+用于[PanGesture](arkts-arkui-gesture-con.md#PanGesture)手势中，获取当前手势的主方向速度。为xy轴方向速度的平方和的算术平方根。单位为vp/s。
 
 取值范围：[0, +∞)
 
@@ -268,7 +268,7 @@ velocity: number
 velocityX: number
 ```
 
-用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
+用于[PanGesture](arkts-arkui-gesture-con.md#PanGesture)手势中，获取当前手势的x轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从左往右为正，反之为负。单位为vp/s。
 
 取值范围：(-∞, +∞)
 
@@ -290,7 +290,7 @@ velocityX: number
 velocityY: number
 ```
 
-用于[PanGesture](arkts-arkui-gesture-con.md#pangesture)手势中，获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
+用于[PanGesture](arkts-arkui-gesture-con.md#PanGesture)手势中，获取当前手势的y轴方向速度。坐标轴原点为屏幕左上角，分正负方向速度，从上往下为正，反之为负。单位为vp/s。
 
 取值范围：(-∞, +∞)
 

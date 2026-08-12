@@ -84,7 +84,7 @@ iconColor?: ResourceColor
 
 图标颜色。设置认证图标的颜色，支持颜色值、资源引用等多种格式。默认使用系统激活色，开发者可根据应用主题自定义颜色，如使用Color.Blue或\$r('app.color.primary')。
 
-**类型：** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** $r('sys.color.ohos_id_color_activated')
 
@@ -106,7 +106,7 @@ iconHeight?: Dimension
 
 图标高度。设置认证图标的高度，宽高比为1:1。不支持百分比字符串。建议根据界面布局选择合适的大小。
 
-**类型：** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 64fp
 

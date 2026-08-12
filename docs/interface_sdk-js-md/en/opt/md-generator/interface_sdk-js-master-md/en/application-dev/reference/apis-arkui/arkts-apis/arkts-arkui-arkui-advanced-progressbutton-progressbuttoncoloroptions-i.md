@@ -11,7 +11,7 @@ Declare Color options of the ProgressButton.
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButton } from 'kits/@kit.ArkUI';
+import { ProgressButton } from '@kit.ArkUI';
 ```
 
 ## backgroundColor

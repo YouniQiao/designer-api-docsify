@@ -14,7 +14,7 @@
 commands: string
 ```
 
-路径绘制的指令字符串。像素单位的转换方法请参考[像素单位](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+路径绘制的指令字符串。像素单位的转换方法请参考[像素单位](../@internal/component/ets/common)。
 
 单位：px
 

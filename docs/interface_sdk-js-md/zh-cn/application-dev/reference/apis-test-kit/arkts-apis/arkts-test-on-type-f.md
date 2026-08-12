@@ -50,7 +50,7 @@ Specifies the type of the target Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | tp | string | 是 | The type value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | the {@link MatchPattern} of the text value,Set it default {@link MatchPattern.EQUALS} if null or undefined. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) of the text value,Set it default [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) if null or undefined. |
 
 **返回值：**
 

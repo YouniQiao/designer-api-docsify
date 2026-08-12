@@ -13,7 +13,7 @@ Before calling the following APIs, you must use [floatView.create()](arkts-arkui
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## getWindowProperties
@@ -42,8 +42,8 @@ Obtains the properties of the float view.
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
 
 ## Examples
 
@@ -77,13 +77,13 @@ Unregisters the callback for listening to limit changes of the float view.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -120,13 +120,13 @@ Unregisters the callback for listening to changes in the rectangular area of the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -163,13 +163,13 @@ Unregisters the callback for listening to float view state changes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -206,14 +206,14 @@ Registers a callback for listening to limit changes of the float view. When the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewLimits&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewLimits](arkts-arkui-floatview-floatviewlimits-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
 
 ## Examples
 
@@ -250,14 +250,14 @@ Registers a callback for listening to changes in the rectangular area (position 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewRectChangeInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewRectChangeInfo](arkts-arkui-floatview-floatviewrectchangeinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
 
 ## Examples
 
@@ -294,14 +294,14 @@ Registers a callback for listening to float view state changes. To prevent memor
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatViewStateChangeInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatViewStateChangeInfo](arkts-arkui-floatview-floatviewstatechangeinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
 
 ## Examples
 
@@ -338,22 +338,22 @@ Restores the main window of the float view to display in the foreground. If this
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| wantParameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No |
+| [wantParameters](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationparameters-i.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300032](../errorcode-window.md#1300032-failed-to-restore-the-main-window) |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300032](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300032-failed-to-restore-the-main-window) |
+| [1300031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
 
 ## Examples
 
@@ -406,14 +406,14 @@ After the float view is created and before this API is called, the float view is
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 
@@ -460,14 +460,14 @@ Loads the content of a page, with its path specified in the current project, for
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 
@@ -515,14 +515,14 @@ Sets the UI content of a [named route](../../../ui/arkts-routing.md#named-route)
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 
@@ -579,7 +579,7 @@ setWindowSize(size: window.Size): Promise<void>
 ```
 
 Sets the size of the float view. You are advised to call the  
-[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the  
+[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API to obtain the recommended width and height ranges and aspect ratio range, and then call this API based on the recommended values. The actual window size change can be listened to through the  
 [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
@@ -600,15 +600,15 @@ Sets the size of the float view. You are advised to call the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 
@@ -641,7 +641,7 @@ start(): Promise<void>
 
 Starts the float view. The return value of this API does not indicate that the start process is complete. You need to use the  
 [onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))API to listen for the **STARTED** callback to determine whether the start is successful. You are advised to call  
-**start ()** after calling [setUIContext()](arkts-arkui-floatview-floatviewcontroller-i.md#setuicontext). This API uses a promise to return the result.
+**start ()** after calling [setUIContext()](#setUIContext). This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -657,19 +657,19 @@ Starts the float view. The return value of this API does not indicate that the s
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
-| [1300033](../errorcode-window.md#1300033-failed-to-start-the-float-view) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
+| [1300033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300033-failed-to-start-the-float-view) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [1300031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
+| [1300030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
 
 ## Examples
 
@@ -710,16 +710,16 @@ Stops the float view. The return value of this API does not indicate that the st
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
-| [1300030](../errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
+| [1300030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300030-repeated-operations-on-the-float-view) |
 
 ## Examples
 
@@ -746,7 +746,7 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
 Switches the template of the flow view and changes the window size. You are advised to call the  
-[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the  
+[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits) API to obtain the recommended width and height ranges and aspect ratio range of the target template, and then call this API based on the recommended values. The actual window size change can be listened to through the  
 [onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
@@ -767,15 +767,15 @@ Switches the template of the flow view and changes the window size. You are advi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 

@@ -6,7 +6,7 @@
 function bindDriverWithDeviceId(deviceId: number, onDisconnect: AsyncCallback<number>): Promise<RemoteDeviceDriver>
 ```
 
-根据queryDevices()返回的设备信息绑定设备。使用Promise异步回调。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获取设备信息列表。
+根据queryDevices()返回的设备信息绑定设备。使用Promise异步回调。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获取设备信息列表。
 
 **起始版本：** 19
 
@@ -27,15 +27,15 @@ function bindDriverWithDeviceId(deviceId: number, onDisconnect: AsyncCallback<nu
 
 | 类型 |
 | --- |
-| Promise&lt;RemoteDeviceDriver&gt; |
+| Promise&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) |
-| [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-驱动服务端不允许驱动客户端绑定) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [26300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) |
+| [26300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-驱动服务端不允许驱动客户端绑定) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

@@ -42,8 +42,8 @@ Checks whether a scene feature is supported.
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

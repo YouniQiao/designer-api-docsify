@@ -1,6 +1,6 @@
 # ScryptSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is a parameter for scrypt key derivation function (KDF).
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for scrypt key derivation function (KDF).
 
 > **NOTE：**
 > 
@@ -8,7 +8,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 > key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8
 > format. Otherwise, the key derived may be different from the one expected.
 
-**Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
+**Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec)
 
 **Since:** 18
 
@@ -21,7 +21,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## keySize

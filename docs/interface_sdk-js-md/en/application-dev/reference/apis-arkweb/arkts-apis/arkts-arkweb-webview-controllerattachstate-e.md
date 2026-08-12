@@ -1,6 +1,6 @@
 # ControllerAttachState
 
-Enum type supplied to {@link getAttachState} for indicating the attach state of controller.
+Enum type supplied to [getAttachState](arkts-arkweb-webview-webviewcontroller-c.md#getAttachState) for indicating the attach state of controller.
 
 **Since:** 23
 

@@ -28,13 +28,13 @@ LightWeightSet可用于存储一系列值，存储元素中value唯一。
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -104,7 +104,7 @@ add(obj: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -147,7 +147,7 @@ addAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -183,7 +183,7 @@ clear(): void
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -217,7 +217,7 @@ LightWeightSet的构造函数。
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -246,13 +246,13 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[T, T]&gt; |
+| IterableIterator & lt;[T, T] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -315,7 +315,7 @@ equal(obj: Object): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -349,14 +349,14 @@ forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisA
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: LightWeightSet&lt;T&gt;) =&gt; void | 是 |
+| callbackFn | (value?: T, key?: T, set?: LightWeightSet & lt;T & gt;) = & gt; void | 是 |
 | thisArg | Object | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -415,7 +415,7 @@ getIndexOf(key: T): number
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -460,7 +460,7 @@ getValueAt(index: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -505,7 +505,7 @@ has(key: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -549,7 +549,7 @@ hasAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -590,8 +590,8 @@ increaseCapacityTo(minimumCapacity: number): void
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -627,7 +627,7 @@ isEmpty(): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -670,7 +670,7 @@ remove(key: T): T
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -715,7 +715,7 @@ removeAt(index: number): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -748,13 +748,13 @@ toArray(): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -821,13 +821,13 @@ values(): IterableIterator<T>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 

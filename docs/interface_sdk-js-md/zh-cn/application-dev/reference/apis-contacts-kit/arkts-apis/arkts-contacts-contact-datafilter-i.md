@@ -38,7 +38,7 @@ options: Array<FilterOptions>
 
 联系人过滤参数，数组中多个FilterOptions之间是“或”的关系，数组的最大长度为3。
 
-**类型：** Array&lt;FilterOptions&gt;
+**类型：** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **起始版本：** 15
 

@@ -62,7 +62,7 @@ export declare function ForEach(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ForEachAttribute&gt; | 是 | 用于设置ForEach属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ForEachAttribute](arkts-arkui-foreach-foreachattribute-i.md)&gt; | 是 | 用于设置ForEach属性的回调。 |
 
 **返回值：**
 

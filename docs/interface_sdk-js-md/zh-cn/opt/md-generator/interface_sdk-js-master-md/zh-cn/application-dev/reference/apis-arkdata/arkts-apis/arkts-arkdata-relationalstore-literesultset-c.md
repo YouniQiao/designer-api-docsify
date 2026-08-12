@@ -4,8 +4,8 @@
 
 LiteResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
 
-下列API示例中，都需先使用[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount)、  
-[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount)等query类方法中任一方法获取到LiteResultSet实例，再通过此实例调用对应方法。
+下列API示例中，都需先使用[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#queryWithoutRowCount)、  
+[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querySqlWithoutRowCount)等query类方法中任一方法获取到LiteResultSet实例，再通过此实例调用对应方法。
 
 > **说明：**
 > 
@@ -39,7 +39,7 @@ close(): void
 getAsset(columnIndex: number): Asset
 ```
 
-以[Asset](arkts-arkdata-relationalstore-asset-i.md)形式获取当前行中指定列的值。
+以[Asset](arkts-arkdata-relationalstore-asset-i.md#Asset)形式获取当前行中指定列的值。
 
 如果当前列的数据类型为Asset类型，会以Asset类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Asset类型，则返回14800041。
 
@@ -55,7 +55,7 @@ getAsset(columnIndex: number): Asset
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -67,10 +67,10 @@ getAsset(columnIndex: number): Asset
 
 | 错误码ID |
 | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-类型转换失败) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## getAssets
 
@@ -78,7 +78,7 @@ getAsset(columnIndex: number): Asset
 getAssets(columnIndex: number): Assets
 ```
 
-以[Assets](arkts-arkdata-relationalstore-assets-t.md)形式获取当前行中指定列的值。
+以[Assets](arkts-arkdata-relationalstore-assets-t.md#Assets)形式获取当前行中指定列的值。
 
 如果当前列的数据类型为Assets类型，会以Assets类型返回指定值；如果当前列中的值为null时，会返回null；如果当前列的数据类型非Assets类型，则返回14800041。
 
@@ -94,7 +94,7 @@ getAssets(columnIndex: number): Assets
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -106,10 +106,10 @@ getAssets(columnIndex: number): Assets
 
 | 错误码ID |
 | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-类型转换失败) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## getBlob
 
@@ -135,7 +135,7 @@ getBlob(columnIndex: number): Uint8Array
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -147,10 +147,10 @@ getBlob(columnIndex: number): Uint8Array
 
 | 错误码ID |
 | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-类型转换失败) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## getColumnIndex
 
@@ -184,14 +184,14 @@ getColumnIndex(columnName: string): number
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getColumnName
 
@@ -213,7 +213,7 @@ getColumnName(columnIndex: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -225,15 +225,15 @@ getColumnName(columnIndex: number): string
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getColumnNames
 
@@ -257,20 +257,20 @@ getColumnNames(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getColumnType
 
@@ -298,22 +298,22 @@ getColumnType(columnIdentifier: number | string): Promise<ColumnType>
 
 | 类型 |
 | --- |
-| Promise&lt;ColumnType&gt; |
+| Promise&lt;[ColumnType](arkts-arkdata-relationalstore-columntype-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getColumnTypeSync
 
@@ -347,16 +347,16 @@ getColumnTypeSync(columnIdentifier: number | string): ColumnType
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getCurrentRowData
 
@@ -384,15 +384,15 @@ getCurrentRowData(): RowData
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getDouble
 
@@ -418,7 +418,7 @@ getDouble(columnIndex: number): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -430,10 +430,10 @@ getDouble(columnIndex: number): number
 
 | 错误码ID |
 | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-类型转换失败) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## getLong
 
@@ -446,9 +446,9 @@ getLong(columnIndex: number): number
 如果当前列的数据类型为INTEGER、DOUBLE、TEXT会转成Long类型返回指定值，非数字的TEXT、BLOB类型会返回0。如果该列内容为空时，会返回0。
 
 如果当前列的数据类型为INTEGER，值大于Number.MAX_SAFE_INTEGER 或小于Number.MIN_SAFE_INTEGER时，如果不希望丢失精度，建议使用  
-[getString](arkts-arkdata-relationalstore-literesultset-c.md#getstring)接口获取。
+[getString](#getString)接口获取。
 
-如果当前列的数据类型为DOUBLE时，如果不希望丢失精度，建议使用[getDouble](arkts-arkdata-relationalstore-literesultset-c.md#getdouble)接口获取。
+如果当前列的数据类型为DOUBLE时，如果不希望丢失精度，建议使用[getDouble](#getDouble)接口获取。
 
 如果当前列的数据类型为ASSET、ASSETS、FLOATVECTOR、BIGINT类型，会返回14800041。
 
@@ -464,7 +464,7 @@ getLong(columnIndex: number): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -476,10 +476,10 @@ getLong(columnIndex: number): number
 
 | 错误码ID |
 | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-类型转换失败) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## getRow
 
@@ -507,15 +507,15 @@ getRow(): ValuesBucket
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getRows
 
@@ -523,7 +523,7 @@ getRow(): ValuesBucket
 getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 ```
 
-从结果集中获取指定数量的数据，使用Promise异步回调。禁止与[LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)的其他接口并发调用，否则获取的数据可能非预期。
+从结果集中获取指定数量的数据，使用Promise异步回调。禁止与[LiteResultSet](#LiteResultSet)的其他接口并发调用，否则获取的数据可能非预期。
 
 **起始版本：** 23
 
@@ -544,22 +544,22 @@ getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;ValuesBucket&gt;&gt; |
+| Promise & lt;Array & lt;ValuesBucket & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getRowsData
 
@@ -567,7 +567,7 @@ getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 getRowsData(maxCount: number, position?: number): Promise<RowsData>
 ```
 
-从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)的其他接口并发调用，否则获取的数据可能非预期。
+从指定位置position开始，最多获取maxCount行数据。使用Promise异步回调。禁止与[LiteResultSet](#LiteResultSet)的其他接口并发调用，否则获取的数据可能非预期。
 
 **起始版本：** 23
 
@@ -588,22 +588,22 @@ getRowsData(maxCount: number, position?: number): Promise<RowsData>
 
 | 类型 |
 | --- |
-| Promise&lt;RowsData&gt; |
+| Promise&lt;[RowsData](arkts-arkdata-relationalstore-rowsdata-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## getString
 
@@ -615,7 +615,7 @@ getString(columnIndex: number): string
 
 如果当前列中的值为INTEGER、DOUBLE、TEXT、BLOB类型，会以字符串形式返回指定值；如果该列内容为空，则会返回空字符串""。
 
-如果当前列中的值为DOUBLE类型，可能存在精度的丢失，建议使用[getDouble](arkts-arkdata-relationalstore-literesultset-c.md#getdouble)接口获取。
+如果当前列中的值为DOUBLE类型，可能存在精度的丢失，建议使用[getDouble](#getDouble)接口获取。
 
 如果当前列的数据类型为ASSET、ASSETS、FLOATVECTOR、BIGINT类型，会返回14800041。
 
@@ -631,7 +631,7 @@ getString(columnIndex: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -643,10 +643,10 @@ getString(columnIndex: number): string
 
 | 错误码ID |
 | --- |
-| [14800041](../errorcode-data-rdb.md#14800041-类型转换失败) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-类型转换失败) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## getValue
 
@@ -657,7 +657,7 @@ getValue(columnIndex: number): ValueType
 获取当前行中指定列的值。
 
 如果值类型为INTEGER，值大于Number.MAX_SAFE_INTEGER或小于Number.MIN_SAFE_INTEGER时，如果不希望丢失精度，建议使用  
-[getString](arkts-arkdata-relationalstore-literesultset-c.md#getstring)接口获取。
+[getString](#getString)接口获取。
 
 **起始版本：** 23
 
@@ -671,7 +671,7 @@ getValue(columnIndex: number): ValueType
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -683,9 +683,9 @@ getValue(columnIndex: number): ValueType
 
 | 错误码ID |
 | --- |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## goToNextRow
 
@@ -713,16 +713,16 @@ goToNextRow(): boolean
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
 
 ## isColumnNull
 
@@ -744,7 +744,7 @@ isColumnNull(columnIndex: number): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| columnIndex | number | 是 |
+| [columnIndex](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -756,13 +756,13 @@ isColumnNull(columnIndex: number): boolean
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800019](../errorcode-data-rdb.md#14800019-sql必须是查询语句) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800013](../errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
-| [14800012](../errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [14800030](../errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql必须是查询语句) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-列号越界或列类型与当前调用接口不兼容) |
+| [14800012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-结果集为空或指定位置不合法) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite无法打开数据库文件) |

@@ -18,7 +18,7 @@ want: Want
 
 .abc file information to load.
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-arkui-want-t-sys.md)
 
 **Since:** 12
 

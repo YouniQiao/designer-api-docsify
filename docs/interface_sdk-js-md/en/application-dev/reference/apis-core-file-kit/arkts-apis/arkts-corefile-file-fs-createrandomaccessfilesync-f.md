@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## createRandomAccessFileSync
@@ -27,15 +27,15 @@ Creates a **RandomAccessFile** instance based on a file path or file object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| File | Yes | Application sandbox path of the file or an opened file object. |
+| file | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
 | mode | number | No | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. &lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.&lt;br&gt;- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.&lt;br&gt;- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0.&lt;br&gt;- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. &lt;br&gt;- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.&lt;br&gt;- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.&lt;br&gt;- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
-| options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.&lt;br&gt;This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-file-fs-randomaccessfile-i.md#getreadstream) and [getwritestream](arkts-corefile-file-fs-randomaccessfile-i.md#getwritestream) .<br>**Since:** 12 |
+| options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.&lt;br&gt;This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-file-fs-randomaccessfile-i.md#getReadStream) and [getwritestream](arkts-corefile-file-fs-randomaccessfile-i.md#getWriteStream) .<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RandomAccessFile](arkts-corefile-fileio-randomaccessfile-i.md) | RandomAccessFile** instance created. |
+| [RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md) | RandomAccessFile** instance created. |
 
 **Error codes:**
 

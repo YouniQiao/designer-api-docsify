@@ -52,7 +52,7 @@ touchEvent?: TouchEvent
 
 手指触摸动作信息。
 
-**类型：** [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md)
+**类型：** TouchEvent
 
 **起始版本：** 11
 

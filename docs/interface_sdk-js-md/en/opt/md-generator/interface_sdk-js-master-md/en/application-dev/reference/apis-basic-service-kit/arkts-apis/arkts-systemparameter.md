@@ -8,7 +8,7 @@ For details about the system parameter design principles and definitions, see
 > **NOTE：**
 > 
 > - The APIs of this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md) instead.
+> [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md#systemParameterEnhance) instead.
 > 
 > - The APIs provided by this module are system APIs.
 > 
@@ -19,7 +19,7 @@ For details about the system parameter design principles and definitions, see
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemParameterEnhance:systemParameterEnhance](arkts-systemparameterenhance.md)
+**Substitutes:** [systemParameterEnhance](arkts-systemparameterenhance.md#systemParameterEnhance)
 
 <!--Device-unnamed-declare namespace systemParameter--><!--Device-unnamed-declare namespace systemParameter-End-->
 
@@ -30,7 +30,7 @@ For details about the system parameter design principles and definitions, see
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

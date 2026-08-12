@@ -66,7 +66,7 @@ getReadStream(): ReadStream
 | 错误码ID |
 | --- |
 | 13900020 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900012 |
 | 13900008 |
 | 13900042 |
@@ -107,7 +107,7 @@ getWriteStream(): WriteStream
 | 错误码ID |
 | --- |
 | 13900020 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900012 |
 | 13900008 |
 | 13900042 |
@@ -151,7 +151,7 @@ read(
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -445,7 +445,7 @@ write(
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 

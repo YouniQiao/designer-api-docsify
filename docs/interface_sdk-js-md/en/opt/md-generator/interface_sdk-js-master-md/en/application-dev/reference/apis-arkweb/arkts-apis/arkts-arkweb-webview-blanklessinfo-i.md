@@ -11,7 +11,7 @@ Describes the prediction information about blankless loading, including the firs
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## errCode
@@ -21,7 +21,7 @@ errCode: WebBlanklessErrorCode
 ```
 
 Error code of blankless loading. For details, see  
-[WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md).
+[WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#WebBlanklessErrorCode).
 
 **Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 

@@ -34,7 +34,7 @@ Track index. The corresponding key value type is number.
 MD_KEY_TRACK_TYPE = 'track_type'
 ```
 
-Track type. The corresponding key value type is number. For details, see [MediaType](arkts-media-media-mediatype-e.md).
+Track type. The corresponding key value type is number. For details, see [MediaType](arkts-media-media-mediatype-e.md#MediaType).
 
 **Since:** 8
 

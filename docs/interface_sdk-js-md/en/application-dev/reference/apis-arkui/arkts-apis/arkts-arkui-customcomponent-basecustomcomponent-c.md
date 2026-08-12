@@ -2,7 +2,7 @@
 
 Definition of base custom component, which is base class of custom component.
 
-**Inheritance/Implementation:** BaseCustomComponent extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md) and implements [CommonAttribute](arkts-arkui-commonattribute-t.md)
+**Inheritance/Implementation:** BaseCustomComponent extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md#ExtendableComponent) and implements [CommonAttribute](CommonAttribute)
 
 **Since:** 23
 

@@ -28,5 +28,5 @@ export function getListItemGroupAttribute(node: FrameNode): ListItemGroupAttribu
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ListItemGroupAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

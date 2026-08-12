@@ -74,7 +74,7 @@ SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2--><!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2-End-->
 
@@ -86,8 +86,8 @@ SOURCE_TYPE_PLAYBACK_CAPTURE = 2
 SOURCE_TYPE_VOICE_COMMUNICATION = 7
 ```
 
-语音通话场景的音频源（单独启动录制不会开启3A算法，需同时使用[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md)或  
-[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md)类型的AudioRender起播才会触发开启3A算法）。
+语音通话场景的音频源（单独启动录制不会开启3A算法，需同时使用[STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#StreamUsage)或  
+[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md#StreamUsage)类型的AudioRender起播才会触发开启3A算法）。
 
 **起始版本：** 8
 

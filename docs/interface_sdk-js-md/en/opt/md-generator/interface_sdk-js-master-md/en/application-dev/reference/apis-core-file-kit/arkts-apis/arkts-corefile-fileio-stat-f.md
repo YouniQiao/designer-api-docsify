@@ -12,7 +12,7 @@ Obtains file information. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:stat](arkts-corefile-fileio-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-unnamed-declare function stat(path: string): Promise<Stat>--><!--Device-unnamed-declare function stat(path: string): Promise<Stat>-End-->
 
@@ -28,7 +28,7 @@ Obtains file information. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Stat&gt; |
+| Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; |
 
 
 ## stat
@@ -43,7 +43,7 @@ Obtains file information. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:stat](arkts-corefile-fileio-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-unnamed-declare function stat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function stat(path: string, callback: AsyncCallback<Stat>): void-End-->
 
@@ -54,4 +54,4 @@ Obtains file information. This API uses an asynchronous callback to return the r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | Yes |

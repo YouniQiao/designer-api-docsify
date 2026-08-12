@@ -1,6 +1,6 @@
 # WebDestroyMode
 
-Enum type supplied to {@link SetWebDestroyMode} for indicating the web component destroy mode.
+Enum type supplied to [SetWebDestroyMode](SetWebDestroyMode) for indicating the web component destroy mode.
 
 **起始版本：** 23
 

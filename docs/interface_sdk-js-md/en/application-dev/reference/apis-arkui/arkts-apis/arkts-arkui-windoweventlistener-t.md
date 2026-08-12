@@ -21,5 +21,5 @@ Callback function for window event
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The id of the window which triggers the event |
-| event | window.WindowEventType | Yes | Window callback event type |
+| event | [window.WindowEventType](arkts-arkui-window-windoweventtype-e.md) | Yes | Window callback event type |
 

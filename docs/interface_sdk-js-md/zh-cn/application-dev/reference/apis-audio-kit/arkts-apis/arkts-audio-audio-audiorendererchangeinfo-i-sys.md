@@ -36,7 +36,7 @@ Uid for audio renderer client application.
 readonly rendererState: AudioState
 ```
 
-**类型：** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
+**类型：** AudioState
 
 **起始版本：** 9
 

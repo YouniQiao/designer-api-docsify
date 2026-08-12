@@ -13,7 +13,7 @@ Defines the network packet filtering rule to add.
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action
@@ -24,7 +24,7 @@ action: Action
 
 Action to take, that is, receive or discard the data packets.
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 10
 
@@ -84,7 +84,7 @@ direction: Direction
 
 Direction chains to which the rule applies.
 
-**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
+**Type:** Direction
 
 **Since:** 10
 
@@ -124,7 +124,7 @@ protocol?: Protocol
 
 Network protocol.
 
-**Type:** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
+**Type:** Protocol
 
 **Since:** 10
 

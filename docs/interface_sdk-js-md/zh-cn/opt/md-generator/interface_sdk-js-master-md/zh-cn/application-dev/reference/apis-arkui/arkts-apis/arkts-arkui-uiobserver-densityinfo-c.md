@@ -16,7 +16,7 @@ context: UIContext
 
 屏幕像素密度变化时页面对应的上下文信息。
 
-**类型：** [UIContext](../arkts-components/arkts-arkui-uicontext-t.md)
+**类型：** UIContext
 
 **起始版本：** 12
 

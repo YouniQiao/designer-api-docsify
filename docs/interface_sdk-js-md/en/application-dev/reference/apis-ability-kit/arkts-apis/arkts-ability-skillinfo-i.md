@@ -194,7 +194,7 @@ readonly skillType: SkillType
 
 Indicates the type of the skill.
 
-**Type:** [SkillType](arkts-ability-skillmanager-skilltype-t.md)
+**Type:** [SkillType](arkts-ability-skillinfo-skilltype-e.md)
 
 **Since:** 26.0.0
 

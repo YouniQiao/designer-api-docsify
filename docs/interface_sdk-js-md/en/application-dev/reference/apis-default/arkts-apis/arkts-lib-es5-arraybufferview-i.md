@@ -10,7 +10,7 @@ buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md)
+**Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

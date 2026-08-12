@@ -2,7 +2,7 @@
 
 A control class that encapsulates APIs for input method management, which can only be invoked after an   
 **InputMethodController** instance is obtained via   
-[getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller).
+[getController](arkts-ime-inputmethod-getcontroller-f.md#getController).
 
 **Since:** 6
 
@@ -13,7 +13,7 @@ A control class that encapsulates APIs for input method management, which can on
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## attach
@@ -34,7 +34,7 @@ Attach application to the input method service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| showKeyboard | boolean | Yes |
+| [showKeyboard](arkts-ime-inputmethod-attachoptions-i.md) | boolean | Yes |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -42,9 +42,9 @@ Attach application to the input method service.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -83,22 +83,22 @@ Attach application to the input method service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| showKeyboard | boolean | Yes |
+| [showKeyboard](arkts-ime-inputmethod-attachoptions-i.md) | boolean | Yes |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -135,7 +135,7 @@ Attach application to the input method service.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| showKeyboard | boolean | Yes |
+| [showKeyboard](arkts-ime-inputmethod-attachoptions-i.md) | boolean | Yes |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes |
 | requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes |
 
@@ -143,15 +143,15 @@ Attach application to the input method service.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -192,7 +192,7 @@ Attach application to the input method service with UI context.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-components/arkts-arkui-uicontext-t.md) | Yes |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes |
 | attachOptions | [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) | No |
 
@@ -200,14 +200,14 @@ Attach application to the input method service with UI context.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -256,10 +256,10 @@ Notify the input method the selected text and the selection range of the current
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -301,16 +301,16 @@ Notify the input method the selected text and the selection range of the current
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -348,8 +348,8 @@ Detach the applications from the input method manager service.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -383,14 +383,14 @@ Detach the applications from the input method manager service.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -422,15 +422,15 @@ Discard the typing text
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
 
 ## Examples
 
@@ -470,9 +470,9 @@ Hide soft keyboard.This API can be called only by system applications.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -508,15 +508,15 @@ Hide soft keyboard.This API can be called only by system applications.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -554,9 +554,9 @@ Hide the text input and stop typing.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -590,15 +590,15 @@ Hide the text input and stop typing.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -701,7 +701,7 @@ Unregister the callback of insertText.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'insertText' | Yes |
-| callback | (text: string) =&gt; void | No |
+| callback | (text: string) = & gt; void | No |
 
 ## Examples
 
@@ -736,7 +736,7 @@ Unregister the callback of deleteLeft.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'deleteLeft' | Yes |
-| callback | (length: number) =&gt; void | No |
+| callback | (length: number) = & gt; void | No |
 
 ## Examples
 
@@ -771,7 +771,7 @@ Unregister the callback of deleteRight.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'deleteRight' | Yes |
-| callback | (length: number) =&gt; void | No |
+| callback | (length: number) = & gt; void | No |
 
 ## Examples
 
@@ -805,7 +805,7 @@ Unregister the callback of sendKeyboardStatus.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | No |
+| callback | (keyboardStatus: KeyboardStatus) = & gt; void | No |
 
 ## Examples
 
@@ -840,7 +840,7 @@ Unregister the callback of sendFunctionKey.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes |
-| callback | (functionKey: FunctionKey) =&gt; void | No |
+| callback | (functionKey: FunctionKey) = & gt; void | No |
 
 ## Examples
 
@@ -875,7 +875,7 @@ Unregister the callback of moveCursor.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'moveCursor' | Yes |
-| callback | (direction: Direction) =&gt; void | No |
+| callback | (direction: Direction) = & gt; void | No |
 
 ## Examples
 
@@ -910,7 +910,7 @@ Unregister the callback of handleExtendAction.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'handleExtendAction' | Yes |
-| callback | (action: ExtendAction) =&gt; void | No |
+| callback | (action: ExtendAction) = & gt; void | No |
 
 ## Examples
 
@@ -945,7 +945,7 @@ Unregister the callback of getLeftTextOfCursor event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes |
-| callback | (length: number) =&gt; string | No |
+| callback | (length: number) = & gt; string | No |
 
 ## Examples
 
@@ -980,7 +980,7 @@ Unregister the callback of getRightTextOfCursor event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes |
-| callback | (length: number) =&gt; string | No |
+| callback | (length: number) = & gt; string | No |
 
 ## Examples
 
@@ -1015,7 +1015,7 @@ Unregister the callback of getTextIndexAtCursor.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes |
-| callback | () =&gt; number | No |
+| callback | () = & gt; number | No |
 
 ## Examples
 
@@ -1147,7 +1147,7 @@ Register a callback and when IME sends select event with range of selection,the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1182,7 +1182,7 @@ Register a callback and when IME sends select event witch movement of cursor,the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1211,14 +1211,14 @@ Register a callback and when IME sends insert text event, the callback will be i
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'insertText' | Yes |
-| callback | (text: string) =&gt; void | Yes |
+| callback | (text: string) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1260,14 +1260,14 @@ Register a callback and when IME sends delete left event with length,the callbac
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'deleteLeft' | Yes |
-| callback | (length: number) =&gt; void | Yes |
+| callback | (length: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1296,14 +1296,14 @@ Register a callback and when IME sends delete right event with length,the callba
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'deleteRight' | Yes |
-| callback | (length: number) =&gt; void | Yes |
+| callback | (length: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1332,14 +1332,14 @@ Register a callback and when IME sends keyboard status, the callback will be inv
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'sendKeyboardStatus' | Yes |
-| callback | (keyboardStatus: KeyboardStatus) =&gt; void | Yes |
+| callback | (keyboardStatus: KeyboardStatus) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1368,14 +1368,14 @@ Register a callback and when IME sends functionKey, the callback will be invoked
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'sendFunctionKey' | Yes |
-| callback | (functionKey: FunctionKey) =&gt; void | Yes |
+| callback | (functionKey: FunctionKey) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1404,14 +1404,14 @@ Register a callback and when IME sends move cursor, the callback will be invoked
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'moveCursor' | Yes |
-| callback | (direction: Direction) =&gt; void | Yes |
+| callback | (direction: Direction) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1440,14 +1440,14 @@ Register a callback and when IME sends extend action code, the callback will be 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'handleExtendAction' | Yes |
-| callback | (action: ExtendAction) =&gt; void | Yes |
+| callback | (action: ExtendAction) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1476,14 +1476,14 @@ Register a callback and when input method ability gets left text of cursor, the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'getLeftTextOfCursor' | Yes |
-| callback | (length: number) =&gt; string | Yes |
+| callback | (length: number) = & gt; string | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1514,14 +1514,14 @@ Register a callback and when input method ability gets right text of cursor, the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'getRightTextOfCursor' | Yes |
-| callback | (length: number) =&gt; string | Yes |
+| callback | (length: number) = & gt; string | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1552,14 +1552,14 @@ Register a callback and when input method ability gets the text index at cursor,
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'getTextIndexAtCursor' | Yes |
-| callback | () =&gt; number | Yes |
+| callback | () = & gt; number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
 
 ## Examples
 
@@ -1596,7 +1596,7 @@ on(type: 'setPreviewText', callback: SetPreviewTextCallback): void
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1647,7 +1647,7 @@ on(type: 'finishTextPreview', callback: Callback<void>): void
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1698,7 +1698,7 @@ Start receiving message from input method.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1737,25 +1737,25 @@ Send message to input method.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| msgId | string | Yes |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
 | msgParam | ArrayBuffer | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
-| [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
+| [12800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) |
 
 ## Examples
 
@@ -1796,10 +1796,10 @@ Inform the system of the window ID of the application currently bound to the inp
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -1840,16 +1840,16 @@ Inform the system of the window ID of the application currently bound to the inp
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -1890,9 +1890,9 @@ Show soft keyboard.This API can be called only by system applications.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -1928,15 +1928,15 @@ Show soft keyboard.This API can be called only by system applications.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -1974,9 +1974,9 @@ Show the text input and start typing.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2010,15 +2010,15 @@ Show the text input and start typing.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2056,15 +2056,15 @@ Show the text input and start typing.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2092,7 +2092,7 @@ Stop input
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethod.InputMethodController#stopInputSession](arkts-ime-inputmethod-inputmethodcontroller-i.md#stopinputsession)
+**Substitutes:** [stopInputSession](#stopInputSession)
 
 <!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodController-stopInput(callback: AsyncCallback<boolean>): void-End-->
 
@@ -2134,7 +2134,7 @@ Stop input
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethod.InputMethodController#stopInputSession](arkts-ime-inputmethod-inputmethodcontroller-i.md#stopinputsession)
+**Substitutes:** [stopInputSession](#stopInputSession)
 
 <!--Device-InputMethodController-stopInput(): Promise<boolean>--><!--Device-InputMethodController-stopInput(): Promise<boolean>-End-->
 
@@ -2144,7 +2144,7 @@ Stop input
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -2186,8 +2186,8 @@ Stop input session
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2225,14 +2225,14 @@ Stop input session
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2275,10 +2275,10 @@ Update InputAttribute information of input text.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2319,16 +2319,16 @@ Update InputAttribute information of input text.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2361,17 +2361,17 @@ Update Cursor and notify the input method that the current application cursor ha
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes |
+| [cursorInfo](arkts-ime-inputmethod-textconfig-i.md) | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -2411,22 +2411,22 @@ Update Cursor and notify the input method that the current application cursor ha
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cursorInfo | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes |
+| [cursorInfo](arkts-ime-inputmethod-textconfig-i.md) | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 

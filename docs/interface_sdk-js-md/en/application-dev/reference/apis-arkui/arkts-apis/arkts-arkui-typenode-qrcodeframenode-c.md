@@ -40,5 +40,5 @@ Initialize QRCode FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
+| QRCodeAttribute |  |
 

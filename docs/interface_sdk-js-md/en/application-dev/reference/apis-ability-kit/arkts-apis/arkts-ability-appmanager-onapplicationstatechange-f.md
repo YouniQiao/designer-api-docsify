@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## onApplicationStateChange
@@ -28,7 +28,7 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| observer | ApplicationStateObserver | Yes | The application state observer. |
 
 **Return value:**
 
@@ -40,8 +40,8 @@ Register application state observer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## onApplicationStateChange
@@ -66,7 +66,7 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| observer | ApplicationStateObserver | Yes | The application state observer. |
 | bundleNameList | Array&lt;string&gt; | Yes | The list of bundleName. The max length is 128. |
 
 **Return value:**
@@ -79,6 +79,6 @@ Register application state observer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

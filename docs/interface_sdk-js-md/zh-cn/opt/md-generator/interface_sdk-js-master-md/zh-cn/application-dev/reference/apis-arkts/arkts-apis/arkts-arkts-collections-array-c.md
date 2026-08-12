@@ -43,13 +43,13 @@
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## at
 
@@ -83,8 +83,8 @@ at(index: number): T | undefined
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## concat
 
@@ -112,14 +112,14 @@ concat(...items: ConcatArray<T>[]): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## constructor
 
@@ -141,7 +141,7 @@ constructor()
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -170,7 +170,7 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -198,7 +198,7 @@ ArkTS Array的构造函数，通过开发者提供的元素进行初始化。
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## copyWithin
 
@@ -228,14 +228,14 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## create
 
@@ -264,13 +264,13 @@ static create<T>(arrayLength: number, initialValue: T): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## entries
 
@@ -292,14 +292,14 @@ entries(): IterableIterator<[number, T]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[number, T]&gt; |
+| IterableIterator & lt;[number, T] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## every
 
@@ -321,7 +321,7 @@ every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -333,8 +333,8 @@ every(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## extendTo
 
@@ -363,8 +363,8 @@ extendTo(arrayLength: number, initialValue: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## fill
 
@@ -394,14 +394,14 @@ fill(value: T, start?: number, end?: number): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## filter
 
@@ -423,20 +423,20 @@ filter(predicate: (value: T, index: number, array: Array<T>) => boolean): Array<
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: Array&lt;T&gt;) =&gt; boolean | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## find
 
@@ -458,7 +458,7 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, obj: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
@@ -470,8 +470,8 @@ find(predicate: (value: T, index: number, obj: Array<T>) => boolean): T | undefi
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## findIndex
 
@@ -493,7 +493,7 @@ findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): numbe
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| predicate | (value: T, index: number, obj: Array&lt;T&gt;) =&gt; boolean | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, obj: Array & lt;T & gt;) = & gt; boolean | 是 |
 
 **返回值：**
 
@@ -505,8 +505,8 @@ findIndex(predicate: (value: T, index: number, obj: Array<T>) => boolean): numbe
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## forEach
 
@@ -528,14 +528,14 @@ forEach(callbackFn: (value: T, index: number, array: Array<T>) => void): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; void | 是 |
+| callbackFn | (value: T, index: number, array: Array & lt;T & gt;) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## from
 
@@ -557,19 +557,19 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 |
+| arrayLike | ArrayLike & lt;T & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## from
 
@@ -591,19 +591,19 @@ static from<T>(iterable: Iterable<T>): Array<T>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; | 是 |
+| iterable | Iterable & lt;T & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## from
 
@@ -625,14 +625,14 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 |
+| arrayLike | ArrayLike & lt;T & gt; \ | Iterable & lt;T & gt; | 是 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## from
 
@@ -654,14 +654,14 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | 是 |
+| arrayLike | ArrayLike & lt;U & gt; \ | Iterable & lt;U & gt; | 是 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## includes
 
@@ -696,8 +696,8 @@ includes(searchElement: T, fromIndex?: number): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## indexOf
 
@@ -732,8 +732,8 @@ indexOf(searchElement: T, fromIndex?: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## isArray
 
@@ -795,8 +795,8 @@ join(separator?: string): string
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## keys
 
@@ -818,14 +818,14 @@ keys(): IterableIterator<number>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;number&gt; |
+| IterableIterator & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## lastIndexOf
 
@@ -860,8 +860,8 @@ lastIndexOf(searchElement: T, fromIndex?: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## map
 
@@ -883,20 +883,20 @@ map<U>(callbackFn: (value: T, index: number, array: Array<T>) => U): Array<U>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value: T, index: number, array: Array&lt;T&gt;) =&gt; U | 是 |
+| callbackFn | (value: T, index: number, array: Array & lt;T & gt;) = & gt; U | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;U&gt; |
+| Array & lt;U & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## of
 
@@ -924,7 +924,7 @@ static of<T>(...items: T[]): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## pop
 
@@ -952,8 +952,8 @@ pop(): T | undefined
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## push
 
@@ -987,8 +987,8 @@ push(...items: T[]): number
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduce
 
@@ -1010,7 +1010,7 @@ reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; T | 是 |
+| callbackFn | (previousValue: T, currentValue: T, currentIndex: number, array: Array & lt;T & gt;) = & gt; T | 是 |
 
 **返回值：**
 
@@ -1022,8 +1022,8 @@ reduce(callbackFn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduce
 
@@ -1048,7 +1048,7 @@ reduce<U>(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array&lt;T&gt;) =&gt; U | 是 |
+| callbackFn | (previousValue: U, currentValue: T, currentIndex: number, array: Array & lt;T & gt;) = & gt; U | 是 |
 | initialValue | U | 是 |
 
 **返回值：**
@@ -1061,8 +1061,8 @@ reduce<U>(
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduceRight
 
@@ -1071,7 +1071,7 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 ```
 
 此API与  
-[reduceRight](arkts-arkts-collections-array-c.md#reduceright)方法类似，但它接受一个初始值作为第二个参数，用于在Array从右到左顺序遍历开始前初始化累加器。
+[reduceRight](#reduceRight)方法类似，但它接受一个初始值作为第二个参数，用于在Array从右到左顺序遍历开始前初始化累加器。
 
 **起始版本：** 18
 
@@ -1098,8 +1098,8 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduceRight
 
@@ -1133,8 +1133,8 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reverse
 
@@ -1156,14 +1156,14 @@ reverse(): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## shift
 
@@ -1191,8 +1191,8 @@ shift(): T | undefined
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## shrinkTo
 
@@ -1220,8 +1220,8 @@ shrinkTo(arrayLength: number): void
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## slice
 
@@ -1250,14 +1250,14 @@ slice(start?: number, end?: number): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## some
 
@@ -1279,7 +1279,7 @@ some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| predicate | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | 是 |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | [ArrayPredicateFn](arkts-arkts-collections-arraypredicatefn-t.md)&lt;T, Array&lt;T&gt;&gt; | 是 |
 
 **返回值：**
 
@@ -1291,8 +1291,8 @@ some(predicate: ArrayPredicateFn<T, Array<T>>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## sort
 
@@ -1314,20 +1314,20 @@ sort(compareFn?: (a: T, b: T) => number): Array<T>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| compareFn | (a: T, b: T) =&gt; number | 否 |
+| compareFn | (a: T, b: T) = & gt; number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## splice
 
@@ -1355,14 +1355,14 @@ splice(start: number): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## splice
 
@@ -1392,14 +1392,14 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## toLocaleString
 
@@ -1428,8 +1428,8 @@ toLocaleString(): string
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## toString
 
@@ -1457,8 +1457,8 @@ toString(): string
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## unshift
 
@@ -1492,8 +1492,8 @@ unshift(...items: T[]): number
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## values
 
@@ -1515,14 +1515,14 @@ values(): IterableIterator<T>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## [index: number]
 

@@ -36,7 +36,7 @@ Constructor used to create a long press gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
 
 ## onAction
 
@@ -62,7 +62,7 @@ Sets the callback for successful long press gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked upon successful long press gesture recognition. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful long press gesture recognition. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the long press gesture is cancelled. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the long press gesture is cancelled. |
 
 **Return value:**
 
@@ -109,7 +109,7 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
 Sets the callback for long press gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](arkts-arkui-longpressgesturehandler-c.md#onactioncancel), this API returns gesture event information.
+[onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -127,7 +127,7 @@ Sets the callback for long press gesture cancellation. This callback is triggere
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when the long press gesture is cancelled. This callback returns gesture event information. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the long press gesture is cancelled. This callback returns gesture event information. |
 
 **Return value:**
 
@@ -159,7 +159,7 @@ Sets the callback for long press gesture recognition completion. This callback i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when long press gesture recognition completes. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when long press gesture recognition completes. |
 
 **Return value:**
 

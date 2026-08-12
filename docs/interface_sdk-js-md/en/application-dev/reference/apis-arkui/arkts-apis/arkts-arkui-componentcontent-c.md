@@ -2,7 +2,7 @@
 
 Defines ComponentContent.
 
-**Inheritance/Implementation:** ComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
+**Inheritance/Implementation:** ComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md#ComponentContentBase)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ComponentContent |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | Yes | Defines the builder that will be called to build ComponentContent. |
+| builder | WrappedBuilder&lt;CustomBuilder&gt; | Yes | Defines the builder that will be called to build ComponentContent. |
 
 ## constructor
 
@@ -60,7 +60,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ComponentContent |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; | Yes | Defines the builder that will be called to build ComponentContent. |
+| builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | Yes | Defines the builder that will be called to build ComponentContent. |
 | args | T | Yes | Parameters used to update the ComponentContent. |
 
 ## constructor
@@ -86,7 +86,7 @@ Constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the ComponentContent |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; | Yes | Defines the builder that will be called to build ComponentContent. ComponentContent. |
+| builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | Yes | Defines the builder that will be called to build ComponentContent. ComponentContent. |
 | args | T | Yes | Parameters used to update the ComponentContent. |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Defines the options that will be used when building. |
 

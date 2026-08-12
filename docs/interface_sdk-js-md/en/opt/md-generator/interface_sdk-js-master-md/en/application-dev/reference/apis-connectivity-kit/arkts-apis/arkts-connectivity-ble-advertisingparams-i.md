@@ -11,7 +11,7 @@ Describes the advertising parameters.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## advertisingData
@@ -22,7 +22,7 @@ advertisingData: AdvertiseData
 
 Indicates the advertising data.
 
-**Type:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
+**Type:** AdvertiseData
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ advertisingResponse?: AdvertiseData
 
 Indicates the advertising response.
 
-**Type:** [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md)
+**Type:** AdvertiseData
 
 **Since:** 11
 
@@ -58,7 +58,7 @@ advertisingSettings: AdvertiseSetting
 
 Indicates the advertising settings.
 
-**Type:** [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md)
+**Type:** AdvertiseSetting
 
 **Since:** 11
 

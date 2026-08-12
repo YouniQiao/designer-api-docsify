@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## resetProcessPriority
@@ -30,7 +30,7 @@ Unsuppresses the child process. In this case, the child process follows the sche
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

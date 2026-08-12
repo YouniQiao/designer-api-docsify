@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## createZip
@@ -26,7 +26,7 @@ Creates this **Zip** instance. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Zip&gt; |
+| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; |
 
 ## Examples
 

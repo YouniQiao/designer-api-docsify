@@ -34,11 +34,11 @@ Initialize Checkbox FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](../arkts-components/arkts-arkui-checkboxoptions-i.md) | No |  |
+| options | CheckboxOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |  |
+| CheckboxAttribute |  |
 

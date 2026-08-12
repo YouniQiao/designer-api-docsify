@@ -8,7 +8,7 @@ P2P linked information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pLinkedInfo
+**Substitutes:** [WifiP2pLinkedInfo](ohos.wifiManager/wifiManager.WifiP2pLinkedInfo)
 
 <!--Device-wifi-interface WifiP2pLinkedInfo--><!--Device-wifi-interface WifiP2pLinkedInfo-End-->
 
@@ -17,7 +17,7 @@ P2P linked information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## connectState
@@ -28,7 +28,7 @@ connectState: P2pConnectState
 
 Connection status
 
-**Type:** [P2pConnectState](arkts-connectivity-wifi-p2pconnectstate-e.md)
+**Type:** P2pConnectState
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Connection status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pLinkedInfo.connectState
+**Substitutes:** [connectState](ohos.wifiManager/wifiManager.WifiP2pLinkedInfo.connectState)
 
 <!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState--><!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState-End-->
 
@@ -58,7 +58,7 @@ Group owner address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pLinkedInfo.groupOwnerAddr
+**Substitutes:** [groupOwnerAddr](ohos.wifiManager/wifiManager.WifiP2pLinkedInfo.groupOwnerAddr)
 
 <!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string--><!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string-End-->
 
@@ -80,7 +80,7 @@ Indicates whether it is group owner
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pLinkedInfo.isGroupOwner
+**Substitutes:** [isGroupOwner](ohos.wifiManager/wifiManager.WifiP2pLinkedInfo.isGroupOwner)
 
 <!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean--><!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean-End-->
 

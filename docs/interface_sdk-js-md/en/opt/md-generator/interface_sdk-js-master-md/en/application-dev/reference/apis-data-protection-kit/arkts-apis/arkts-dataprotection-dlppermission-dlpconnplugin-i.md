@@ -4,8 +4,8 @@ Registers the callback capability with the system ability (SA). This API is used
 
 > **NOTE：**
 > 
-> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin) requires identical parameters to this API.
-> [connectServer](arkts-dataprotection-dlppermission-dlpconnplugin-i.md#connectserver) is called by the SA and the parameters are
+> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerPlugin) requires identical parameters to this API.
+> [connectServer](#connectServer) is called by the SA and the parameters are
 > returned through the callback.
 
 **Since:** 21
@@ -17,7 +17,7 @@ Registers the callback capability with the system ability (SA). This API is used
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## connectServer
@@ -56,9 +56,9 @@ This API can be used in enterprise account authentication and cloud permission v
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

@@ -146,7 +146,7 @@ Button文本内容。
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

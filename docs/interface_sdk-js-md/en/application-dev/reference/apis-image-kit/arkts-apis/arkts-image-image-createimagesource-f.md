@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -37,7 +37,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -76,7 +76,7 @@ Creates an ImageSource instance based on the URI.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -113,7 +113,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -154,7 +154,7 @@ Creates an ImageSource instance based on the URI.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -188,7 +188,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -230,7 +230,7 @@ Creates an ImageSource instance based on the file descriptor.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -267,7 +267,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -311,7 +311,7 @@ Creates an ImageSource instance based on the file descriptor.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -321,7 +321,7 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
 Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync-1).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
@@ -346,7 +346,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -384,7 +384,7 @@ Creates an ImageSource instance based on the buffer.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -394,7 +394,7 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 ```
 
 Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createpixelmapsync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync-1).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
@@ -420,7 +420,7 @@ Creates an ImageSource instance based on buffers. The data passed by **buf** mus
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -460,7 +460,7 @@ Creates an ImageSource instance based on the buffer.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createImageSource
@@ -493,7 +493,7 @@ Creates an ImageSource instance based on the raw file descriptor of an image res
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -542,5 +542,5 @@ Creates an ImageSource instance based on the raw file descriptor.
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

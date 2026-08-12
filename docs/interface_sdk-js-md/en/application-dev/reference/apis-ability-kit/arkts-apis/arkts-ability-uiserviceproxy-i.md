@@ -43,14 +43,101 @@ Sends data to the UIServiceExtensionAbility server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+
+## Examples
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[Extension] ';
+
+@Entry
+@Component
+struct UIServiceExtensionAbility {
+  comProxy: common.UIServiceProxy | null = null;
+  dataCallBack: common.UIServiceExtensionConnectCallback = {
+    onData: (data: Record<string, Object>) => {
+      console.info(`${TAG} dataCallBack received data: ${JSON.stringify(data)}.`);
+    },
+    onDisconnect: () => {
+      console.info(`${TAG} dataCallBack onDisconnect.`);
+      this.comProxy = null;
+    }
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        // Create a button for connecting to the UIServiceExtensionAbility.
+        Button('connectUIServiceExtensionAbility', { type: ButtonType.Capsule, stateEffect: true })
+          .margin({
+            top: 5,
+            left: 10,
+            right: 10,
+            bottom: 5
+          })
+          .alignRules({
+            center: { anchor: '__container__', align: VerticalAlign.Center },
+            middle: { anchor: '__container__', align: HorizontalAlign.Center }
+          })
+          .onClick(() => {
+            this.myConnectUIServiceExtensionAbility()
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+
+  // Customize a function for connecting to the UIServiceExtensionAbility.
+  myConnectUIServiceExtensionAbility() {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    let startWant: Want = {
+      deviceId: '',
+      bundleName: 'com.acts.myapplication',
+      abilityName: 'UiServiceExtensionAbility'
+    };
+
+    try {
+      // Connect to the UIServiceExtensionAbility.
+      context.connectUIServiceExtensionAbility(startWant, this.dataCallBack)
+        .then((proxy: common.UIServiceProxy) => {
+          console.info(TAG + `try to connectUIServiceExtensionAbility ${proxy}}`);
+          this.comProxy = proxy;
+          let formData: Record<string, string> = {
+            'PATH': '/tmp/aaa.jpg'
+          };
+          try {
+            console.info(`${TAG} sendData.`);
+            // Send data to the UIServiceExtensionAbility.
+            this.comProxy.sendData(formData);
+          } catch (err) {
+            let code = (err as BusinessError).code;
+            let message = (err as BusinessError).message;
+            console.error(`${TAG} sendData failed, code is ${code}, message is ${message}.`);
+          }
+        }).catch((err: Error) => {
+        let code = (err as BusinessError).code;
+        let message = (err as BusinessError).message;
+        console.error(`${TAG} connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`${TAG} connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+    }
+  }
+}
+```
 
 ## sendData
 
@@ -79,11 +166,11 @@ Sends data to the UIServiceExtensionAbility server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
+| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data to be sent to the UIServiceExtensionAbility server. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible cause: Connect to stub failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible cause: Connect to stub failed. |
 

@@ -15,7 +15,7 @@ Defines a response that returns the charging status and remaining power of the d
 ## Modules to Import
 
 ```TypeScript
-import { GetStatusOptions, BatteryResponse } from 'kits/@kit.BasicServicesKit';
+import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
 ```
 
 ## charging
@@ -37,7 +37,7 @@ Note: This API is no longer maintained since API version 6 except for lite weara
 
 **Deprecated since:** 6
 
-**Substitutes:** [@ohos.batteryInfo:batteryInfo.chargingStatus](arkts-basicservices-batteryinfo-con.md#chargingstatus)
+**Substitutes:** [chargingStatus](arkts-basicservices-batteryinfo-chargingstatus-f.md#chargingStatus)
 
 <!--Device-BatteryResponse-charging: boolean--><!--Device-BatteryResponse-charging: boolean-End-->
 
@@ -62,7 +62,7 @@ Note: This API is no longer maintained since API version 6 except for lite weara
 
 **Deprecated since:** 6
 
-**Substitutes:** [@ohos.batteryInfo:batteryInfo.batterySOC](arkts-basicservices-batteryinfo-con.md#batterysoc)
+**Substitutes:** [batterySOC](arkts-basicservices-batteryinfo-batterysoc-f.md#batterySOC)
 
 <!--Device-BatteryResponse-level: number--><!--Device-BatteryResponse-level: number-End-->
 

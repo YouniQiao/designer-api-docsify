@@ -72,7 +72,7 @@ particle: EmitterParticleOptions<PARTICLE>
 
 -config类型和type值有关联：
 
-1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md) 。
+1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#PointParticleParameters) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#ImageParticleParameters) 。
 
 -count表示发射的粒子总数，count取值>=-1，当count为-1表示粒子总数无限大。
 
@@ -82,7 +82,7 @@ particle: EmitterParticleOptions<PARTICLE>
 
 lifetimeRange表示粒子生命周期取值范围，设置lifetimeRange后粒子的生命周期为[lifetime-lifetimeRange, lifetime+lifetimeRange]中间的一个随机整数。lifetimeRange默认值为0，取值范围为[0, +∞）。设置为负值时取默认值。
 
-**类型：** [EmitterParticleOptions](../arkts-apis/arkts-arkui-particle-emitterparticleoptions-i.md)&lt;PARTICLE&gt;
+**类型：** [EmitterParticleOptions](arkts-arkui-emitterparticleoptions-i.md)&lt;PARTICLE&gt;
 
 **起始版本：** 10
 
@@ -106,7 +106,7 @@ position?: ParticleTuple<Dimension, Dimension>
 
 默认值：`[0.0, 0.0]`
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
 
 **默认值：** [0,0]
 
@@ -158,7 +158,7 @@ size?: ParticleTuple<Dimension, Dimension>
 
 默认值：`['100%','100%']`(即发射窗口占满Particle组件)
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
 
 **默认值：** ['100%','100%']
 

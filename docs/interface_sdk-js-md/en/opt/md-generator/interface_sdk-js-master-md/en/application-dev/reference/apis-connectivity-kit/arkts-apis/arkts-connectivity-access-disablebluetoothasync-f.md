@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
+import { access } from '@kit.ConnectivityKit';
 ```
 
 ## disableBluetoothAsync
@@ -28,16 +28,16 @@ Asynchronous interface for disables Bluetooth on a device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900013 |
 | 2900014 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 

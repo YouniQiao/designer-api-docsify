@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## createService
@@ -24,13 +24,13 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SEService&gt; |
+| Promise&lt;[SEService](arkts-connectivity-omapi-seservice-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## Examples
 

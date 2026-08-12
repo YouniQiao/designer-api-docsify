@@ -13,7 +13,7 @@ Defines a content form card.
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard, FormType } from 'kits/@kit.ArkData';
+import { ContentFormCard, FormType } from '@kit.ArkData';
 ```
 
 ## contentFormData
@@ -62,7 +62,7 @@ formType: FormType
 
 Type of the form card.
 
-**Type:** [FormType](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formtype-e.md)
+**Type:** [FormType](arkts-arkdata-data-udmfcomponents-formtype-e.md)
 
 **Since:** 20
 

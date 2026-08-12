@@ -20,7 +20,7 @@ Defines a color filter.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendModeColorFilter
@@ -44,19 +44,19 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -79,19 +79,19 @@ Creates a ColorFilter object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color | Yes | Color in ARGB format. The value of each color channel is an integer ranging from 0 to 255. |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -114,19 +114,19 @@ Creates a **ColorFilter** object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color \| number | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlendModeColorFilter
 
@@ -149,19 +149,19 @@ Creates a ColorFilter object with a given color and blend mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | color | common2D.Color \| int | Yes | Color, represented by an unsigned integer in hexadecimal ARGB format. |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeColorFilter
 
@@ -183,20 +183,20 @@ Creates a **ColorFilter** object by combining another two color filters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
-| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
+| outer | ColorFilter | Yes | Color filter that takes effect later in the new filter. |
+| inner | ColorFilter | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createComposeColorFilter
 
@@ -218,20 +218,20 @@ Creates a ColorFilter object by combining another two color filters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| outer | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect later in the new filter. |
-| inner | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter that takes effect first in the new filter. |
+| outer | ColorFilter | Yes | Color filter that takes effect later in the new filter. |
+| inner | ColorFilter | Yes | Color filter that takes effect first in the new filter. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createLightingColorFilter
 
@@ -260,7 +260,7 @@ Creates a lighting color filter. It multiplies the RGB channel values by one col
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | ColorFilter** object created. |
+| ColorFilter | ColorFilter** object created. |
 
 ## createLightingColorFilter
 
@@ -289,7 +289,7 @@ Makes a color filter with the given mutColor and addColor.
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 
 ## createLinearToSRGBGamma
 
@@ -311,7 +311,7 @@ Creates a **ColorFilter** object that applies the sRGB gamma curve to the RGB ch
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 ## createLinearToSRGBGamma
 
@@ -333,7 +333,7 @@ Creates a ColorFilter object that applies the sRGB gamma curve to the RGB channe
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 
 ## createLumaColorFilter
 
@@ -355,7 +355,7 @@ Creates a **ColorFilter** object that multiplies the luma into the alpha channel
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 ## createLumaColorFilter
 
@@ -377,7 +377,7 @@ Creates a ColorFilter object that multiplies the luma into the alpha channel and
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter. |
+| ColorFilter | Colorfilter. |
 
 ## createMatrixColorFilter
 
@@ -405,13 +405,13 @@ Creates a color filter object with a 4*5 color matrix.
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createMatrixColorFilter
 
@@ -439,13 +439,13 @@ Creates a color filter object with a 4*5 color matrix.
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSRGBGammaToLinear
 
@@ -467,7 +467,7 @@ Creates a **ColorFilter** object that applies the RGB channels to the sRGB gamma
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Color filter. |
+| ColorFilter | Color filter. |
 
 ## createSRGBGammaToLinear
 
@@ -489,5 +489,5 @@ Creates a ColorFilter object that applies the RGB channels to the sRGB gamma cur
 
 | Type | Description |
 | --- | --- |
-| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Colorfilter object. |
+| ColorFilter | Colorfilter object. |
 

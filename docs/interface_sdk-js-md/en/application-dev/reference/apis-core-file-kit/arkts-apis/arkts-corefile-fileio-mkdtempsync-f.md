@@ -14,7 +14,7 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:mkdtempSync](arkts-corefile-fileio-mkdtempsync-f.md#mkdtempsync)
+**Substitutes:** [mkdtempSync](arkts-corefile-file-fs-mkdtempsync-f.md#mkdtempSync)
 
 <!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
 

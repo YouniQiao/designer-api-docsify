@@ -11,7 +11,7 @@ Enumerates the callbacks used for the request for loading multiple ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## onAdLoadFailure
@@ -73,7 +73,7 @@ Called when a request for loading multiple ads is successful.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| adsMap | Map&lt;string, Array&lt;Advertisement&gt;&gt; | Yes |
+| adsMap | Map & lt;string, Array & lt;Advertisement & gt; & gt; | Yes |
 
 ## Examples
 

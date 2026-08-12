@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md)回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的参数。应用通过该对象，将播放器的状态通知给 ArkWeb 内核。
 
 > **说明：**
 > 
@@ -95,7 +95,7 @@ handleError(error: MediaError, errorMessage: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | 是 |
-| errorMessage | string | 是 |
+| [errorMessage](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-errormessage-i-sys.md) | string | 是 |
 
 ## handleFullscreenChanged
 

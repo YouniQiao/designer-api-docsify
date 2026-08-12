@@ -4,9 +4,9 @@ The relational database (RDB) manages data based on relational models. With the 
 
 This module provides the following RDB-related functions:
 
-- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md): provides APIs for creating predicates. The predicates represent the   
+- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md#RdbPredicates): provides APIs for creating predicates. The predicates represent the   
 properties, characteristics, or relationships between data entities in an RDB store and are used to define data operation conditions.  
-- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md): provides APIs for managing data in an RDB store.
+- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md#RdbStore): provides APIs for managing data in an RDB store.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ properties, characteristics, or relationships between data entities in an RDB st
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore](arkts-data-relationalstore.md)
+**Substitutes:** [relationalStore](arkts-data-relationalstore.md#relationalStore)
 
 <!--Device-unnamed-declare namespace rdb--><!--Device-unnamed-declare namespace rdb-End-->
 
@@ -41,7 +41,7 @@ properties, characteristics, or relationships between data entities in an RDB st
 
 | Name | Description |
 | --- | --- |
-| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store.  Before using the APIs of this class, use  [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)to initialize the database table structure and related data. |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | Provides APIs for managing data in an RDB store.  Before using the APIs of this class, use  [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executeSql)to initialize the database table structure and related data. |
 | [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | Defines the RDB store configuration. |
 
 ### Enums

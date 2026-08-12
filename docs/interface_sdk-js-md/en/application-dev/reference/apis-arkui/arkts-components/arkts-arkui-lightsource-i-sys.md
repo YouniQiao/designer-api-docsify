@@ -22,7 +22,7 @@ Light source color.
 
 Default value: **Color.White**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ positionX: Dimension
 
 X-coordinate of the light source relative to the current component.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 11
 
@@ -88,7 +88,7 @@ positionY: Dimension
 
 Y-coordinate of the light source relative to the current component.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 11
 
@@ -110,7 +110,7 @@ positionZ: Dimension
 
 Height of the light source. The higher the light source, the broader the light distribution.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 11
 

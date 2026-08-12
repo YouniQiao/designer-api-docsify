@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getPacFileUrl
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function getPacFileUrl(): string
 ```
 
-Obtain the URL {@link pacFileUrl} of the current PAC script.
+Obtain the URL [pacFileUrl](pacFileUrl) of the current PAC script.
 
 **Since:** 20
 
@@ -32,7 +32,7 @@ Obtain the URL {@link pacFileUrl} of the current PAC script.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

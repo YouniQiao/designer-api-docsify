@@ -13,7 +13,7 @@ Define the data structure for PixelMap animations.
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## getStatus
@@ -38,7 +38,7 @@ Get animtion status of the current component.
 
 | Type | Description |
 | --- | --- |
-| [AnimationStatus](arkts-arkui-animationstatus-e.md) | Return the status of animation. |
+| AnimationStatus | Return the status of animation. |
 
 ## pause
 

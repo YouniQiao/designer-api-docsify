@@ -13,7 +13,7 @@ Defines the arc button options.
 ## Modules to Import
 
 ```TypeScript
-import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
 ## backgroundBlurStyle
@@ -24,7 +24,7 @@ backgroundBlurStyle?: BlurStyle
 
 Describe the blurred background style of the arc-shaped button.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.NONE
 
@@ -44,7 +44,7 @@ backgroundColor?: ColorMetrics
 
 Describes the arc button background color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Default:** Color.Black
 
@@ -64,7 +64,7 @@ fontColor?: ColorMetrics
 
 Describes the arc button text color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Default:** Color.White
 
@@ -102,7 +102,7 @@ fontMargin?: LocalizedMargin
 
 Describes the arc button text margin.
 
-**Type:** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
+**Type:** LocalizedMargin
 
 **Default:** { start: 24.0_vp, top: 10.0_vp, end: 24.0_vp, bottom: 16.0_vp }
 
@@ -122,7 +122,7 @@ fontSize?: LengthMetrics
 
 Describes the arc button text size.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 19.0_fp
 
@@ -142,7 +142,7 @@ fontStyle?: FontStyle
 
 Describes the arc button text style.
 
-**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
+**Type:** FontStyle
 
 **Default:** FontStyle.Normal
 
@@ -162,7 +162,7 @@ label?: ResourceStr
 
 Describes the arc button displays text.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 
@@ -180,7 +180,7 @@ onClick?: Callback<ClickEvent>
 
 Describes the arc button click event.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
 
 **Since:** 23
 
@@ -198,7 +198,7 @@ onTouch?: Callback<TouchEvent>
 
 Describes the arc button touch event.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
 
 **Since:** 23
 
@@ -236,7 +236,7 @@ pressedFontColor?: ColorMetrics
 
 Describes the arc button pressed text color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Default:** Color.White
 
@@ -276,7 +276,7 @@ shadowColor?: ColorMetrics
 
 Describes the arc button shadow color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Default:** Color.Black
 

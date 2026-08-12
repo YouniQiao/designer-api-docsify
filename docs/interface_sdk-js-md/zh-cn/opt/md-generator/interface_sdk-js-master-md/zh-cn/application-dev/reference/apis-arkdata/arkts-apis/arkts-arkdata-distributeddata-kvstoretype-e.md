@@ -6,7 +6,7 @@ KVStore数据库类型枚举。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVStoreType
+**替代接口：** [KVStoreType](ohos.data.distributedKVStore.KVStoreType)
 
 <!--Device-distributedData-enum KVStoreType--><!--Device-distributedData-enum KVStoreType-End-->
 
@@ -26,7 +26,7 @@ DEVICE_COLLABORATION = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVStoreType#DEVICE_COLLABORATION
+**替代接口：** [DEVICE_COLLABORATION](ohos.data.distributedKVStore.KVStoreType#DEVICE_COLLABORATION)
 
 <!--Device-KVStoreType-DEVICE_COLLABORATION = 0--><!--Device-KVStoreType-DEVICE_COLLABORATION = 0-End-->
 
@@ -46,7 +46,7 @@ SINGLE_VERSION = 1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVStoreType#SINGLE_VERSION
+**替代接口：** [SINGLE_VERSION](ohos.data.distributedKVStore.KVStoreType#SINGLE_VERSION)
 
 <!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## isCleartextPermittedByHostName
@@ -38,7 +38,7 @@ Checks whether the Cleartext traffic for a specified hostname is permitted.To in
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

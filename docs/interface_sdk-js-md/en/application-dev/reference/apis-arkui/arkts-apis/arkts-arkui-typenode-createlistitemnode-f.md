@@ -29,5 +29,5 @@ Create a FrameNode of ListItem type.On API 26.0.0 and above, It can also create 
 
 | Type | Description |
 | --- | --- |
-| [ListItem](arkts-arkui-typenode-listitem-t.md) | Return ListItem type FrameNode. |
+| ListItem | Return ListItem type FrameNode. |
 

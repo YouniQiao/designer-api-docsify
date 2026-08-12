@@ -1,6 +1,6 @@
 # RequestData
 
-[UploadConfig](arkts-basicservices-request-uploadconfig-i.md)中的表单数据。
+[UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)中的表单数据。
 
 **起始版本：** 6
 

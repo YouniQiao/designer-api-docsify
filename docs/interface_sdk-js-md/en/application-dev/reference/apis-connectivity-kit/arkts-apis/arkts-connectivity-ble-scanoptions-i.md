@@ -13,7 +13,7 @@ Describes the parameters for scan.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## dutyMode
@@ -24,7 +24,7 @@ dutyMode?: ScanDuty
 
 Bluetooth LE scan mode
 
-**Type:** [ScanDuty](arkts-connectivity-ble-scanduty-e.md)
+**Type:** ScanDuty
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ matchMode?: MatchMode
 
 Match mode for Bluetooth LE scan filters hardware match
 
-**Type:** [MatchMode](arkts-connectivity-ble-matchmode-e.md)
+**Type:** MatchMode
 
 **Since:** 10
 

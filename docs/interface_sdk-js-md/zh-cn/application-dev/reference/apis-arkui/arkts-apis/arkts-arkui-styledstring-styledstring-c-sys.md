@@ -17,7 +17,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
         ArrayBuffer | undefined
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](styledstringmarshallingvalue)。
 
 **起始版本：** 23
 
@@ -35,8 +35,8 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c-sys.md) | 是 | 属性字符串参数。 |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 如何序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)的回调。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串参数。 |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 如何序列化[StyledStringMarshallingValue](styledstringmarshallingvalue)的回调。 |
 
 **返回值：**
 
@@ -68,7 +68,7 @@ static marshalling(styledString: StyledString): ArrayBuffer | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c-sys.md) | 是 | 属性字符串参数。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串参数。 |
 
 **返回值：**
 
@@ -83,7 +83,7 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
         Promise<StyledString | undefined>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](styledstringmarshallingvalue)。
 
 **起始版本：** 23
 
@@ -108,14 +108,14 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c-sys.md) \| undefined&gt; |  |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -147,12 +147,12 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString | undefined>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c-sys.md) \| undefined&gt; |  |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

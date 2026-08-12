@@ -13,7 +13,7 @@ Represents combination key options.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey

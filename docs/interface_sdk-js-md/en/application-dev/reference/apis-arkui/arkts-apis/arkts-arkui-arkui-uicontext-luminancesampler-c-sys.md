@@ -4,7 +4,7 @@ Sets the background luminance color picking parameters, registers the luminance 
 
 > **NOTE：**
 > 
-> In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in
+> In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getLuminanceSampler) in
 > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
 **Since:** 23
@@ -20,7 +20,7 @@ Sets the background luminance color picking parameters, registers the luminance 
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## offBackgroundLuminanceChange
@@ -47,7 +47,7 @@ Unregisters the callback for listening to color picking. If no callback is speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. |
+| samplingCallback | [Callback](arkts-arkui-callback-t.md)&lt;number&gt; | No | Callback to unregister. |
 
 ## onBackgroundLuminanceChange
 
@@ -57,7 +57,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 Registers the callback for listening to color picking.
 
-The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#setbackgroundluminancesamplingconfigs) API:  
+The background luminance is divided into three ranges based on the luminance threshold and dark threshold set by the [setBackgroundLuminanceSamplingConfigs](#setBackgroundLuminanceSamplingConfigs) API:  
 [0, Dark threshold], (Dark threshold, Luminance threshold], and (Luminance threshold, 255]. The callback is triggered when the background luminance range changes (or the listener callback is registered for the first time)and the interval between the current color picking and the last color picking reaches the specified interval, and the current background luminance is returned.
 
 **Since:** 23
@@ -76,7 +76,7 @@ The background luminance is divided into three ranges based on the luminance thr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.&lt;br&gt;Note: [offBackgroundLuminanceChange](LuminanceSampler#off) cannot be called in the listening callback. |
+| samplingCallback | [Callback](arkts-arkui-callback-t.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.&lt;br&gt;Note: [offBackgroundLuminanceChange](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off) cannot be called in the listening callback. |
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -108,5 +108,5 @@ Sets the color picking parameters. If the luminance threshold is not within the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. &lt;br&gt; 1. Incorrect parameter values. &lt;br&gt; 2. Incorrect parameters types. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. &lt;br&gt; 1. Incorrect parameter values. &lt;br&gt; 2. Incorrect parameters types. |
 

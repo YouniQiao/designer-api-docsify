@@ -32,7 +32,7 @@ export declare function PluginComponent(
 
 | 类型 | 说明 |
 | --- | --- |
-| [PluginComponentAttribute](../arkts-components/arkts-arkui-plugincomponent-attribute.md) |  |
+| [PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md) |  |
 
 
 ## PluginComponent
@@ -63,11 +63,11 @@ export declare function PluginComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PluginComponentAttribute&gt; | 是 | 用于设置plugincomponent属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md)&gt; | 是 | 用于设置plugincomponent属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PluginComponentAttribute](../arkts-components/arkts-arkui-plugincomponent-attribute.md) | PluginComponent的属性。 |
+| [PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md) | PluginComponent的属性。 |
 

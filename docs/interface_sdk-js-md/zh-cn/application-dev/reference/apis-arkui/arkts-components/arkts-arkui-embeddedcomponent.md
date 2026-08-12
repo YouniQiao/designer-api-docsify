@@ -49,7 +49,7 @@ EmbeddedComponent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | loader | import('../api/@ohos.app.ability.Want').default | 是 | 表示要加载的EmbeddedUIExtensionAbility。 |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 | 提供方的类型。 |
+| type | EmbeddedType | 是 | 提供方的类型。 |
 
 ## EmbeddedComponent
 
@@ -80,8 +80,8 @@ EmbeddedComponent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | loader | import('../api/@ohos.app.ability.Want').default | 是 | 要加载的EmbeddedUIExtensionAbility。 |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | 是 | 提供方的类型。 |
-| options | [EmbeddedOptions](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | 否 | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。 |
+| type | EmbeddedType | 是 | 提供方的类型。 |
+| options | [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | 否 | 嵌入式组件的可选配置项，用于设置占位符、DPI跟随策略、窗口模式跟随策略等。 |
 
 ## 汇总
 

@@ -1,6 +1,6 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相机功能(录像，拍照)。
 
 > **说明：**
 > 
@@ -12,7 +12,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [camera.VideoSession](arkts-camera-camera-videosession-i.md)
+**替代接口：** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -24,7 +24,7 @@
 addInput(cameraInput: CameraInput): void
 ```
 
-把[CameraInput](arkts-camera-camera-camerainput-i.md)加入到会话。
+把[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)加入到会话。
 
 > **说明：**
 > 
@@ -36,7 +36,7 @@ addInput(cameraInput: CameraInput): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.addInput](arkts-camera-camera-session-i.md#addinput)
+**替代接口：** [addInput](arkts-camera-camera-session-i.md#addInput)
 
 <!--Device-CaptureSession-addInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-addInput(cameraInput: CameraInput): void-End-->
 
@@ -52,8 +52,8 @@ addInput(cameraInput: CameraInput): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 
 ## addOutput
 
@@ -61,7 +61,7 @@ addInput(cameraInput: CameraInput): void
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-把[CameraOutput](arkts-camera-camera-cameraoutput-i.md)加入到会话。
+把[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)加入到会话。
 
 > **说明：**
 > 
@@ -73,7 +73,7 @@ addOutput(cameraOutput: CameraOutput): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.addOutput](arkts-camera-camera-session-i.md#addoutput)
+**替代接口：** [addOutput](arkts-camera-camera-session-i.md#addOutput)
 
 <!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void-End-->
 
@@ -89,8 +89,8 @@ addOutput(cameraOutput: CameraOutput): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 
 ## beginConfig
 
@@ -110,7 +110,7 @@ beginConfig(): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.beginConfig](arkts-camera-camera-session-i.md#beginconfig)
+**替代接口：** [beginConfig](arkts-camera-camera-session-i.md#beginConfig)
 
 <!--Device-CaptureSession-beginConfig(): void--><!--Device-CaptureSession-beginConfig(): void-End-->
 
@@ -120,7 +120,7 @@ beginConfig(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400105](../errorcode-camera.md#7400105-会话配置被锁定) | Session config locked. |
+| [7400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400105-会话配置被锁定) | Session config locked. |
 
 ## commitConfig
 
@@ -140,7 +140,7 @@ commitConfig(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)(callback:
+**替代接口：** [commitConfig](camera.Session.commitConfig(callback:)
 
 <!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void-End-->
 
@@ -150,14 +150,14 @@ commitConfig(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当提交配置信息成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## commitConfig
 
@@ -177,7 +177,7 @@ commitConfig(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)()
+**替代接口：** [commitConfig](arkts-camera-camera-session-i.md#commitConfig)()
 
 <!--Device-CaptureSession-commitConfig(): Promise<void>--><!--Device-CaptureSession-commitConfig(): Promise<void>-End-->
 
@@ -193,8 +193,8 @@ commitConfig(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getActiveVideoStabilizationMode
 
@@ -214,7 +214,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Stabilization.getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getactivevideostabilizationmode)
+**替代接口：** [getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getActiveVideoStabilizationMode)
 
 <!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode--><!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode-End-->
 
@@ -230,7 +230,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getExposureBiasRange
 
@@ -250,7 +250,7 @@ getExposureBiasRange(): Array<number>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposureQuery.getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)
+**替代接口：** [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange)
 
 <!--Device-CaptureSession-getExposureBiasRange(): Array<number>--><!--Device-CaptureSession-getExposureBiasRange(): Array<number>-End-->
 
@@ -266,7 +266,7 @@ getExposureBiasRange(): Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getExposureMode
 
@@ -286,7 +286,7 @@ getExposureMode(): ExposureMode
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposure.getExposureMode](arkts-camera-camera-autoexposure-i.md#getexposuremode)
+**替代接口：** [getExposureMode](arkts-camera-camera-autoexposure-i.md#getExposureMode)
 
 <!--Device-CaptureSession-getExposureMode(): ExposureMode--><!--Device-CaptureSession-getExposureMode(): ExposureMode-End-->
 
@@ -302,7 +302,7 @@ getExposureMode(): ExposureMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getExposureValue
 
@@ -322,7 +322,7 @@ getExposureValue(): number
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposure.getExposureValue](arkts-camera-camera-autoexposure-i.md#getexposurevalue)
+**替代接口：** [getExposureValue](arkts-camera-camera-autoexposure-i.md#getExposureValue)
 
 <!--Device-CaptureSession-getExposureValue(): number--><!--Device-CaptureSession-getExposureValue(): number-End-->
 
@@ -338,7 +338,7 @@ getExposureValue(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFlashMode
 
@@ -358,7 +358,7 @@ getFlashMode(): FlashMode
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Flash.getFlashMode](arkts-camera-camera-flash-i.md#getflashmode)
+**替代接口：** [getFlashMode](arkts-camera-camera-flash-i.md#getFlashMode)
 
 <!--Device-CaptureSession-getFlashMode(): FlashMode--><!--Device-CaptureSession-getFlashMode(): FlashMode-End-->
 
@@ -374,7 +374,7 @@ getFlashMode(): FlashMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocalLength
 
@@ -394,7 +394,7 @@ getFocalLength(): number
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Focus.getFocalLength](arkts-camera-camera-focus-i.md#getfocallength)
+**替代接口：** [getFocalLength](arkts-camera-camera-focus-i.md#getFocalLength)
 
 <!--Device-CaptureSession-getFocalLength(): number--><!--Device-CaptureSession-getFocalLength(): number-End-->
 
@@ -410,7 +410,7 @@ getFocalLength(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocusMode
 
@@ -430,7 +430,7 @@ getFocusMode(): FocusMode
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Focus.getFocusMode](arkts-camera-camera-focus-i.md#getfocusmode)
+**替代接口：** [getFocusMode](arkts-camera-camera-focus-i.md#getFocusMode)
 
 <!--Device-CaptureSession-getFocusMode(): FocusMode--><!--Device-CaptureSession-getFocusMode(): FocusMode-End-->
 
@@ -440,13 +440,13 @@ getFocusMode(): FocusMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| FocusMode | 获取当前设备的焦距模式。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocusPoint
 
@@ -466,7 +466,7 @@ getFocusPoint(): Point
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Focus.getFocusPoint](arkts-camera-camera-focus-i.md#getfocuspoint)
+**替代接口：** [getFocusPoint](arkts-camera-camera-focus-i.md#getFocusPoint)
 
 <!--Device-CaptureSession-getFocusPoint(): Point--><!--Device-CaptureSession-getFocusPoint(): Point-End-->
 
@@ -476,13 +476,13 @@ getFocusPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| Point | 用于获取当前焦点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getMeteringPoint
 
@@ -502,7 +502,7 @@ getMeteringPoint(): Point
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposure.getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getmeteringpoint)
+**替代接口：** [getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getMeteringPoint)
 
 <!--Device-CaptureSession-getMeteringPoint(): Point--><!--Device-CaptureSession-getMeteringPoint(): Point-End-->
 
@@ -512,13 +512,13 @@ getMeteringPoint(): Point
 
 | 类型 | 说明 |
 | --- | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| Point | 获取当前曝光点。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getZoomRatio
 
@@ -538,7 +538,7 @@ getZoomRatio(): number
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Zoom.getZoomRatio](arkts-camera-camera-zoom-i.md#getzoomratio)
+**替代接口：** [getZoomRatio](arkts-camera-camera-zoom-i.md#getZoomRatio)
 
 <!--Device-CaptureSession-getZoomRatio(): number--><!--Device-CaptureSession-getZoomRatio(): number-End-->
 
@@ -554,7 +554,7 @@ getZoomRatio(): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getZoomRatioRange
 
@@ -574,7 +574,7 @@ getZoomRatioRange(): Array<number>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.ZoomQuery.getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)
+**替代接口：** [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange)
 
 <!--Device-CaptureSession-getZoomRatioRange(): Array<number>--><!--Device-CaptureSession-getZoomRatioRange(): Array<number>-End-->
 
@@ -590,7 +590,7 @@ getZoomRatioRange(): Array<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## hasFlash
 
@@ -610,7 +610,7 @@ hasFlash(): boolean
 
 **废弃版本：** 11
 
-**替代接口：** [camera.FlashQuery.hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)
+**替代接口：** [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash)
 
 <!--Device-CaptureSession-hasFlash(): boolean--><!--Device-CaptureSession-hasFlash(): boolean-End-->
 
@@ -626,7 +626,7 @@ hasFlash(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## isExposureModeSupported
 
@@ -646,7 +646,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposureQuery.isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isexposuremodesupported)
+**替代接口：** [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported)
 
 <!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean--><!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean-End-->
 
@@ -668,7 +668,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## isFlashModeSupported
 
@@ -688,7 +688,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 **废弃版本：** 11
 
-**替代接口：** [camera.FlashQuery.isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)
+**替代接口：** [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported)
 
 <!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean--><!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean-End-->
 
@@ -710,7 +710,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## isFocusModeSupported
 
@@ -730,7 +730,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 **废弃版本：** 11
 
-**替代接口：** [camera.FocusQuery.isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)
+**替代接口：** [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported)
 
 <!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean--><!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean-End-->
 
@@ -740,7 +740,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | 是 | 指定的焦距模式。 |
+| afMode | FocusMode | 是 | 指定的焦距模式。 |
 
 **返回值：**
 
@@ -752,7 +752,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## isVideoStabilizationModeSupported
 
@@ -772,7 +772,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 **废弃版本：** 11
 
-**替代接口：** [camera.StabilizationQuery.isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)
+**替代接口：** [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isVideoStabilizationModeSupported)
 
 <!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
 
@@ -794,7 +794,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## off('focusStateChange')
 
@@ -814,7 +814,7 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 **废弃版本：** 11
 
-**替代接口：** camera.VideoSession.off(type:
+**替代接口：** [off](camera.VideoSession.off(type:)
 
 <!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -825,7 +825,7 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## off('error')
 
@@ -845,7 +845,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 **废弃版本：** 11
 
-**替代接口：** camera.VideoSession.off(type:
+**替代接口：** [off](camera.VideoSession.off(type:)
 
 <!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -878,7 +878,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 **废弃版本：** 11
 
-**替代接口：** camera.VideoSession.on(type:
+**替代接口：** [on](camera.VideoSession.on(type:)
 
 <!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -889,7 +889,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'focusStateChange' | 是 | 监听事件，固定为'focusStateChange'，session 创建成功可监听。仅当自动对焦模式时,且相机对焦状态发生改变时可触发该事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 | 回调函数，用于获取当前对焦状态。 |
 
 ## on('error')
 
@@ -911,7 +911,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 **废弃版本：** 11
 
-**替代接口：** camera.VideoSession.on(type:
+**替代接口：** [on](camera.VideoSession.on(type:)
 
 <!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -921,8 +921,8 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](arkts-camera-camera-capturesession-i.md#beginconfig)， [commitConfig](arkts-camera-camera-capturesession-i.md#commitconfig)，[addInput](arkts-camera-camera-capturesession-i.md#addinput)等接 口发生错误时返回错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| type | 'error' | 是 | 监听事件，固定为'error'，session创建成功之后可监听该接口。session调用相关接口出现错误时会触发该事件，比如调用 [beginConfig](#beginConfig)， [commitConfig](#commitConfig)，[addInput](#addInput)等接 口发生错误时返回错误信息。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 ## release
 
@@ -942,7 +942,7 @@ release(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.release](arkts-camera-camera-session-i.md#release)(callback:
+**替代接口：** [release](camera.Session.release(callback:)
 
 <!--Device-CaptureSession-release(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-release(callback: AsyncCallback<void>): void-End-->
 
@@ -952,13 +952,13 @@ release(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放会话资源成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## release
 
@@ -978,7 +978,7 @@ release(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.release](arkts-camera-camera-session-i.md#release)()
+**替代接口：** [release](arkts-camera-camera-session-i.md#release)()
 
 <!--Device-CaptureSession-release(): Promise<void>--><!--Device-CaptureSession-release(): Promise<void>-End-->
 
@@ -994,7 +994,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## removeInput
 
@@ -1002,7 +1002,7 @@ release(): Promise<void>
 removeInput(cameraInput: CameraInput): void
 ```
 
-移除[CameraInput](arkts-camera-camera-camerainput-i.md)。
+移除[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)。
 
 > **说明：**
 > 
@@ -1014,7 +1014,7 @@ removeInput(cameraInput: CameraInput): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.removeInput](arkts-camera-camera-session-i.md#removeinput)
+**替代接口：** [removeInput](arkts-camera-camera-session-i.md#removeInput)
 
 <!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void-End-->
 
@@ -1030,8 +1030,8 @@ removeInput(cameraInput: CameraInput): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 
 ## removeOutput
 
@@ -1039,7 +1039,7 @@ removeInput(cameraInput: CameraInput): void
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+从会话中移除[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
 > **说明：**
 > 
@@ -1051,7 +1051,7 @@ removeOutput(cameraOutput: CameraOutput): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.removeOutput](arkts-camera-camera-session-i.md#removeoutput)
+**替代接口：** [removeOutput](arkts-camera-camera-session-i.md#removeOutput)
 
 <!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void-End-->
 
@@ -1067,8 +1067,8 @@ removeOutput(cameraOutput: CameraOutput): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
 
 ## setExposureBias
 
@@ -1078,7 +1078,7 @@ setExposureBias(exposureBias: number): void
 
 设置曝光补偿，曝光补偿值（EV）。
 
-进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange)查询支持的范围。
+进行设置之前，建议先通过方法[getExposureBiasRange](#getExposureBiasRange)查询支持的范围。
 
 > **说明：**
 > 
@@ -1090,7 +1090,7 @@ setExposureBias(exposureBias: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposure.setExposureBias](arkts-camera-camera-autoexposure-i.md#setexposurebias)
+**替代接口：** [setExposureBias](arkts-camera-camera-autoexposure-i.md#setExposureBias)
 
 <!--Device-CaptureSession-setExposureBias(exposureBias: number): void--><!--Device-CaptureSession-setExposureBias(exposureBias: number): void-End-->
 
@@ -1100,13 +1100,13 @@ setExposureBias(exposureBias: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
+| exposureBias | number | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。接口调用失败会返回相应错误码，错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。传参为null或者undefined，作为0处理，曝光补偿设置0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setExposureMode
 
@@ -1115,7 +1115,7 @@ setExposureMode(aeMode: ExposureMode): void
 ```
 
 设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法  
-[isExposureModeSupported](arkts-camera-camera-capturesession-i.md#isexposuremodesupported)。
+[isExposureModeSupported](#isExposureModeSupported)。
 
 > **说明：**
 > 
@@ -1127,7 +1127,7 @@ setExposureMode(aeMode: ExposureMode): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposure.setExposureMode](arkts-camera-camera-autoexposure-i.md#setexposuremode)
+**替代接口：** [setExposureMode](arkts-camera-camera-autoexposure-i.md#setExposureMode)
 
 <!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void--><!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void-End-->
 
@@ -1143,7 +1143,7 @@ setExposureMode(aeMode: ExposureMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setFlashMode
 
@@ -1155,7 +1155,7 @@ setFlashMode(flashMode: FlashMode): void
 
 进行设置之前，需要先检查：
 
-1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-capturesession-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-capturesession-i.md#isflashmodesupported)。
+1. 设备是否支持闪光灯，可使用方法[hasFlash](#hasFlash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](#isFlashModeSupported)。
 
 > **说明：**
 > 
@@ -1167,7 +1167,7 @@ setFlashMode(flashMode: FlashMode): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Flash.setFlashMode](arkts-camera-camera-flash-i.md#setflashmode)
+**替代接口：** [setFlashMode](arkts-camera-camera-flash-i.md#setFlashMode)
 
 <!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void--><!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void-End-->
 
@@ -1183,7 +1183,7 @@ setFlashMode(flashMode: FlashMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setFocusMode
 
@@ -1193,7 +1193,7 @@ setFocusMode(afMode: FocusMode): void
 
 设置对焦模式。
 
-进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported)。
+进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](#isFocusModeSupported)。
 
 > **说明：**
 > 
@@ -1205,7 +1205,7 @@ setFocusMode(afMode: FocusMode): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Focus.setFocusMode](arkts-camera-camera-focus-i.md#setfocusmode)
+**替代接口：** [setFocusMode](arkts-camera-camera-focus-i.md#setFocusMode)
 
 <!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void--><!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void-End-->
 
@@ -1215,13 +1215,13 @@ setFocusMode(afMode: FocusMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | 是 | 指定的焦距模式。 |
+| afMode | FocusMode | 是 | 指定的焦距模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setFocusPoint
 
@@ -1243,7 +1243,7 @@ setFocusPoint(point: Point): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint)
+**替代接口：** [setFocusPoint](arkts-camera-camera-focus-i.md#setFocusPoint)
 
 <!--Device-CaptureSession-setFocusPoint(point: Point): void--><!--Device-CaptureSession-setFocusPoint(point: Point): void-End-->
 
@@ -1253,13 +1253,13 @@ setFocusPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 是 | 焦点。x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | Point | 是 | 焦点。x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setMeteringPoint
 
@@ -1281,7 +1281,7 @@ setMeteringPoint(point: Point): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint)
+**替代接口：** [setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setMeteringPoint)
 
 <!--Device-CaptureSession-setMeteringPoint(point: Point): void--><!--Device-CaptureSession-setMeteringPoint(point: Point): void-End-->
 
@@ -1291,13 +1291,13 @@ setMeteringPoint(point: Point): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | 是 | 曝光点，x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
+| point | Point | 是 | 曝光点，x,y设置范围应在[0,1]之内，超过范围，如果小于0设置0，大于1设置1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setVideoStabilizationMode
 
@@ -1306,7 +1306,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
 设置视频防抖模式。需要先检查设备是否支持对应的防抖模式，可以通过  
-[isVideoStabilizationModeSupported](arkts-camera-camera-capturesession-i.md#isvideostabilizationmodesupported)方法判断所设置的模式是否支持。
+[isVideoStabilizationModeSupported](#isVideoStabilizationModeSupported)方法判断所设置的模式是否支持。
 
 > **说明：**
 > 
@@ -1318,7 +1318,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Stabilization.setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setvideostabilizationmode)
+**替代接口：** [setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setVideoStabilizationMode)
 
 <!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void--><!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void-End-->
 
@@ -1334,7 +1334,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setZoomRatio
 
@@ -1354,7 +1354,7 @@ setZoomRatio(zoomRatio: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Zoom.setZoomRatio](arkts-camera-camera-zoom-i.md#setzoomratio)
+**替代接口：** [setZoomRatio](arkts-camera-camera-zoom-i.md#setZoomRatio)
 
 <!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void--><!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void-End-->
 
@@ -1364,13 +1364,13 @@ setZoomRatio(zoomRatio: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| zoomRatio | number | 是 | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。传参为null或者undefined，作为0处理，变焦设置最小值。 |
+| zoomRatio | number | 是 | 可变焦距比，通过[getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange)获取支持的变焦范围，如果设置 超过支持范围的值，则只保留精度范围内数值。传参为null或者undefined，作为0处理，变焦设置最小值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## start
 
@@ -1390,7 +1390,7 @@ start(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.start](arkts-camera-camera-session-i.md#start)(callback:
+**替代接口：** [start](camera.Session.start(callback:)
 
 <!--Device-CaptureSession-start(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-start(callback: AsyncCallback<void>): void-End-->
 
@@ -1400,14 +1400,14 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## start
 
@@ -1427,7 +1427,7 @@ start(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.start](arkts-camera-camera-session-i.md#start)()
+**替代接口：** [start](arkts-camera-camera-session-i.md#start)()
 
 <!--Device-CaptureSession-start(): Promise<void>--><!--Device-CaptureSession-start(): Promise<void>-End-->
 
@@ -1443,8 +1443,8 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## stop
 
@@ -1464,7 +1464,7 @@ stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)(callback:
+**替代接口：** [stop](camera.Session.stop(callback:)
 
 <!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -1474,13 +1474,13 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止会话工作成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## stop
 
@@ -1500,7 +1500,7 @@ stop(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)()
+**替代接口：** [stop](arkts-camera-camera-session-i.md#stop)()
 
 <!--Device-CaptureSession-stop(): Promise<void>--><!--Device-CaptureSession-stop(): Promise<void>-End-->
 
@@ -1516,5 +1516,5 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 

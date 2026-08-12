@@ -67,8 +67,8 @@ Sets the asymmetric transition effect.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| appear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
-| disappear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
+| [appear](../arkts-apis/arkts-arkui-common-asymmetrictransitionoption-i.md) | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
+| [disappear](../arkts-apis/arkts-arkui-common-asymmetrictransitionoption-i.md) | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes |
 
 **Return value:**
 
@@ -354,7 +354,7 @@ static readonly SLIDE: TransitionEffect<
 Applies a transition effect of sliding in from the start edge when the component appears and sliding out from the end edge when the component disappears. This means sliding in from the left edge and sliding out from the right edge for left-to-right scripts, and sliding in from the right edge and sliding out from the left edge for right-to-left scripts. This is equivalent to   
 **TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move(TransitionEdge.END))**.
 
-**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", TransitionEdge&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", [TransitionEdge](arkts-arkui-transitionedge-e.md)&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
 
 **Since:** 10
 

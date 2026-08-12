@@ -1,7 +1,7 @@
 # OverlayModuleInfo
 
 OverlayModuleInfo信息，可以通过  
-[overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo)接口获取当前应用中具有overlay特征模块的OverlayModuleInfo信息。
+[overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getOverlayModuleInfo-1)接口获取当前应用中具有overlay特征模块的OverlayModuleInfo信息。
 
 **起始版本：** 10
 
@@ -72,7 +72,7 @@ readonly state: int
 ```
 
 overlay特征module的  
-[禁用使能状态](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled)。0代表禁用状态，1代表使能状态。
+[禁用使能状态](arkts-ability-overlay-setoverlayenabled-f.md#setOverlayEnabled-1)。0代表禁用状态，1代表使能状态。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

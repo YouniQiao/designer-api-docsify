@@ -27,7 +27,7 @@ declare function open(path: string, mode?: number): Promise<File>
 
 | 类型 |
 | --- |
-| Promise&lt;File&gt; |
+| Promise&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; |
 
 **错误码：**
 
@@ -83,7 +83,7 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | 是 |
 
 **错误码：**
 
@@ -141,7 +141,7 @@ declare function open(path: string, mode: number, callback: AsyncCallback<File>)
 | --- | --- | --- |
 | path | string | 是 |
 | mode | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | 是 |
 
 **错误码：**
 

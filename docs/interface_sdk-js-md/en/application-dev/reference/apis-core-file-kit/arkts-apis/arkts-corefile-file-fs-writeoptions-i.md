@@ -1,8 +1,8 @@
 # WriteOptions
 
-Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md).
+Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md#Options).
 
-**Inheritance/Implementation:** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md)
+**Inheritance/Implementation:** WriteOptions extends [Options](arkts-corefile-file-fs-options-i.md#Options)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Defines the options used in **write()**. It inherits from [Options](arkts-corefi
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## length

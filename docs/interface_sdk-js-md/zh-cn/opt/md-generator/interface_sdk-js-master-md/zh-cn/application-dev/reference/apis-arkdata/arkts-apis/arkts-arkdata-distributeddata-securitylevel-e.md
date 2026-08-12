@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SecurityLevel
+**替代接口：** [SecurityLevel](ohos.data.distributedKVStore.SecurityLevel)
 
 <!--Device-distributedData-enum SecurityLevel--><!--Device-distributedData-enum SecurityLevel-End-->
 
@@ -56,7 +56,7 @@ S1 = 2
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SecurityLevel#S1
+**替代接口：** [S1](ohos.data.distributedKVStore.SecurityLevel#S1)
 
 <!--Device-SecurityLevel-S1 = 2--><!--Device-SecurityLevel-S1 = 2-End-->
 
@@ -74,7 +74,7 @@ S2 = 3
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SecurityLevel#S2
+**替代接口：** [S2](ohos.data.distributedKVStore.SecurityLevel#S2)
 
 <!--Device-SecurityLevel-S2 = 3--><!--Device-SecurityLevel-S2 = 3-End-->
 
@@ -92,7 +92,7 @@ S3 = 5
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SecurityLevel#S3
+**替代接口：** [S3](ohos.data.distributedKVStore.SecurityLevel#S3)
 
 <!--Device-SecurityLevel-S3 = 5--><!--Device-SecurityLevel-S3 = 5-End-->
 
@@ -110,7 +110,7 @@ S4 = 6
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.SecurityLevel#S4
+**替代接口：** [S4](ohos.data.distributedKVStore.SecurityLevel#S4)
 
 <!--Device-SecurityLevel-S4 = 6--><!--Device-SecurityLevel-S4 = 6-End-->
 

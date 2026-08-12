@@ -13,7 +13,7 @@ Describes the parameters required for obtaining the connection status.
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address

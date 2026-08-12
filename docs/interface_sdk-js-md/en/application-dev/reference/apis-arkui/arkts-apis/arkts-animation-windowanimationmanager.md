@@ -15,7 +15,7 @@ Window animation manager.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from 'kits/@kit.ArkUI';
+import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
 ## Summary

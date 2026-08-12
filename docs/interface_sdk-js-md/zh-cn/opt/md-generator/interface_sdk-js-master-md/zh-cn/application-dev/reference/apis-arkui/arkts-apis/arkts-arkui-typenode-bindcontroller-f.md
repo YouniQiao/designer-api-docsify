@@ -6,7 +6,7 @@
 export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void
 ```
 
-将文本控制器[TextController](../arkts-components/arkts-arkui-textcontroller-c.md/arkts-arkui-textcontroller-c.md)绑定到[Text](arkts-arkui-typenode-text-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。
+将文本控制器[TextController](../arkts-components/arkts-arkui-textcontroller-c.md#TextController)绑定到[Text](arkts-arkui-typenode-text-t.md#Text)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
 
@@ -24,14 +24,61 @@ export function bindController(node: FrameNode, controller: TextController, node
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [TextController](../arkts-components/arkts-arkui-textcontroller-c.md) | 是 |
-| nodeType | 'Text' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Text' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  // 设置TextController，可以在外部获取
+  controller: TextController = new TextController()
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建Text
+    let text = typeNode.createNode(uiContext, 'Text');
+    text.initialize('Hello').fontColor(Color.Blue).fontSize(14);
+    typeNode.getAttribute(text, 'Text')?.fontWeight(FontWeight.Bold)
+    // 绑定TextController
+    typeNode.bindController(text, this.controller, 'Text');
+    col.appendChild(text);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  @State line: number = 0
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Text bindController Sample')
+      NodeContainer(this.myNodeController)
+      Text(`Text的行数, ${this.line}`)
+      Button(`点击获取行数`)
+        .onClick(() => {
+          this.line = this.myNodeController.controller.getLayoutManager().getLineCount()
+        })
+    }
+  }
+}
+```
 
 
 ## bindController
@@ -40,7 +87,7 @@ export function bindController(node: FrameNode, controller: TextController, node
 export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void
 ```
 
-将控制器[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md/arkts-arkui-swipercontroller-c.md)绑定到[Swiper](arkts-arkui-typenode-swiper-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。
+将控制器[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md#SwiperController)绑定到[Swiper](arkts-arkui-typenode-swiper-t.md#Swiper)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
 
@@ -58,14 +105,18 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | 是 |
-| nodeType | 'Swiper' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Swiper' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+请参考[createNode('Swiper')12+示例](#createnodeswiper12)。
 
 
 ## bindController
@@ -74,7 +125,7 @@ export function bindController(node: FrameNode, controller: SwiperController, no
 function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void
 ```
 
-将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md)绑定到[Scroll](arkts-arkui-typenode-scroll-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller)绑定到[Scroll](arkts-arkui-typenode-scroll-t.md#Scroll)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
 
 **起始版本：** 15
 
@@ -92,14 +143,20 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
-| nodeType | 'Scroll' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+
+## 示例
+
+```TypeScript
+typeNode.bindController(node, scroller, 'Scroll');
+```
 
 
 ## bindController
@@ -108,7 +165,7 @@ function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void
 ```
 
-将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md)绑定到[List](arkts-arkui-typenode-list-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller)绑定到[List](arkts-arkui-typenode-list-t.md#List)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
 
 **起始版本：** 20
 
@@ -126,14 +183,20 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
-| nodeType | 'List' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+```TypeScript
+typeNode.bindController(node, scroller, 'List');
+```
 
 
 ## bindController
@@ -142,7 +205,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-将输入框控制器[TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md/arkts-arkui-textinputcontroller-c.md)绑定到[TextInput](arkts-arkui-typenode-textinput-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
+将输入框控制器[TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md#TextInputController)绑定到[TextInput](arkts-arkui-typenode-textinput-t.md#TextInput)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
 
 **起始版本：** 20
 
@@ -160,14 +223,54 @@ export function bindController(node: FrameNode, controller: TextInputController,
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [TextInputController](../arkts-components/arkts-arkui-textinputcontroller-c.md) | 是 |
-| nodeType | 'TextInput' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextInput' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建、初始化TextInput，默认获焦
+    let textInput = typeNode.createNode(uiContext, 'TextInput');
+    textInput.initialize({ text: 'TextInput' })
+      .defaultFocus(true)
+    col.appendChild(textInput);
+    // 绑定TextInputController，设置光标位置
+    let controller: TextInputController = new TextInputController();
+    typeNode.bindController(textInput, controller, 'TextInput');
+    controller.caretPosition(3);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextInput bindController sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## bindController
@@ -176,7 +279,7 @@ export function bindController(node: FrameNode, controller: TextInputController,
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void
 ```
 
-将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md)绑定到[WaterFlow](arkts-arkui-typenode-waterflow-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller)绑定到[WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
 
 **起始版本：** 20
 
@@ -194,14 +297,20 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
-| nodeType | 'WaterFlow' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+```TypeScript
+typeNode.bindController(node, scroller, 'WaterFlow');
+```
 
 
 ## bindController
@@ -210,7 +319,7 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-将输入框控制器[TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md/arkts-arkui-textareacontroller-c.md)绑定到[TextArea](arkts-arkui-typenode-textarea-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
+将输入框控制器[TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md#TextAreaController)绑定到[TextArea](arkts-arkui-typenode-textarea-t.md#TextArea)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API版本26.0.0开始，该接口支持声明式方式创建的节点，API版本26.0.0以下版本不支持。
 
 **起始版本：** 20
 
@@ -228,14 +337,54 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [TextAreaController](../arkts-components/arkts-arkui-textareacontroller-c.md) | 是 |
-| nodeType | 'TextArea' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextArea' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建、初始化TextArea，默认获焦
+    let textArea = typeNode.createNode(uiContext, 'TextArea');
+    textArea.initialize({ text: 'TextArea' })
+      .defaultFocus(true)
+    col.appendChild(textArea);
+    // 绑定TextAreaController，设置光标位置
+    let controller: TextAreaController = new TextAreaController()
+    typeNode.bindController(textArea, controller, 'TextArea');
+    controller.caretPosition(3);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextArea bindController sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## bindController
@@ -244,7 +393,7 @@ export function bindController(node: FrameNode, controller: TextAreaController, 
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void
 ```
 
-将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md)绑定到[Grid](arkts-arkui-typenode-grid-t.md)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
+将滚动控制器[Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller)绑定到[Grid](arkts-arkui-typenode-grid-t.md#Grid)节点。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则抛出异常。从API version 26.0.0开始，该接口支持声明式方式创建的节点，API version 26.0.0以下版本不支持。
 
 **起始版本：** 20
 
@@ -262,11 +411,17 @@ export function bindController(node: FrameNode, controller: Scroller, nodeType: 
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
 | controller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 |
-| nodeType | 'Grid' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100021](../errorcode-node.md#100021-framenode节点不可修改) |
-| [100023](../errorcode-node.md#100023-参数错误) |
+| [100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode节点不可修改) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+
+## 示例
+
+```TypeScript
+typeNode.bindController(node, scroller, 'Grid');
+```

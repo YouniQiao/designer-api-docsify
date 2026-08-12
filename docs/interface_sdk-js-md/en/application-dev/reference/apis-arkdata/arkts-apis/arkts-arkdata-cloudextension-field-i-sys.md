@@ -15,7 +15,7 @@ Represents a field in the database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## alias
@@ -104,9 +104,9 @@ Whether the current column is the primary key.The value true means the current c
 type: FieldType
 ```
 
-Type of the field. For details, see {@link FieldType}.
+Type of the field. For details, see [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md#FieldType).
 
-**Type:** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
+**Type:** FieldType
 
 **Since:** 11
 

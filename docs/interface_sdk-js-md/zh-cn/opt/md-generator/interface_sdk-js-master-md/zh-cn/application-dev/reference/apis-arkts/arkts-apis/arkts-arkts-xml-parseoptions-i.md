@@ -76,7 +76,7 @@ tagValueCallbackFunction?: (name: string, value: string) => boolean
 tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
 ```
 
-解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md)属性，默认值undefined，表示不解析。
+解析元素事件类型([EventType](arkts-arkts-xml-eventtype-e.md#EventType))和[ParseInfo](arkts-arkts-xml-parseinfo-i.md#ParseInfo)属性，默认值undefined，表示不解析。
 
 **起始版本：** 8
 

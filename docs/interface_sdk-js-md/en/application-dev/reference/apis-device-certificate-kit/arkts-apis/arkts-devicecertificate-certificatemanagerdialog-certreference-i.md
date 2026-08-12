@@ -13,7 +13,7 @@ Represents the reference information of the credential.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certType

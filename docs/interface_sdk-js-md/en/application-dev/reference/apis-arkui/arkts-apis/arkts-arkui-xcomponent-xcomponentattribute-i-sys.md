@@ -2,7 +2,7 @@
 
 Defines the XComponent attribute.
 
-**Inheritance/Implementation:** XComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** XComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 

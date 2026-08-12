@@ -2,7 +2,7 @@
 
 RichEditor组件控制器基类。
 
-**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](arkts-arkui-textcommon-texteditcontrollerex-i.md)
+**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](TextEditControllerEx)
 
 **起始版本：** 23
 
@@ -122,7 +122,7 @@ getLayoutManager(): LayoutManager | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | 布局管理器对象。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
 
 ## getPreviewText
 
@@ -146,7 +146,7 @@ getPreviewText(): PreviewText | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | 预上屏信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
 
 ## getTypingStyle
 
@@ -170,7 +170,7 @@ getTypingStyle(): RichEditorTextStyle | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) | 用户预设样式。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) | 用户预设样式。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
 
 ## isEditing
 
@@ -216,7 +216,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | 否 | 可视范围。 如果参数无效，该方法将不产生效果。 |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 否 | 可视范围。 如果参数无效，该方法将不产生效果。 |
 
 ## setCaretOffset
 
@@ -286,7 +286,7 @@ selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选
 | --- | --- | --- | --- |
 | selectionStart | int | 是 | 选中开始位置。 |
 | selectionEnd | int | 是 | 选中结束位置。 |
-| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。&lt;br/&gt;缺省时，按照 [SelectionOptions](arkts-arkui-common-selectionoptions-i.md)中的默认值处理。 |
+| options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。&lt;br/&gt;缺省时，按照 [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md#SelectionOptions)中的默认值处理。 |
 
 ## setStyledPlaceholder
 
@@ -310,7 +310,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](arkts-arkui-richeditor-richeditorattribute-i.md#placeholder)属 性设置的提示文本。&lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-styledstring-gesturestyle-c.md)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-styledstring-urlstyle-c.md)样式的超链接跳转能力。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](arkts-arkui-richeditor-richeditorattribute-i.md#placeholder)属 性设置的提示文本。&lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-gesturestyle-c.md#GestureStyle)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-urlstyle-c.md#UrlStyle)样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 
@@ -358,7 +358,7 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) | 是 | 预设样式。 |
+| value | [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) | 是 | 预设样式。 |
 
 ## stopEditing
 

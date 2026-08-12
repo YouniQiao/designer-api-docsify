@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## getAllLauncherAbilityInfos
@@ -17,7 +17,7 @@ Obtains the information about all launcher abilities. This API uses an asynchron
 > **NOTE：**
 > 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getAllLauncherAbilityInfo)
 > instead.
 
 **Since:** 8
@@ -26,7 +26,7 @@ Obtains the information about all launcher abilities. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)(userId:
+**Substitutes:** [getAllLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo(userId:)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,7 +41,7 @@ Obtains the information about all launcher abilities. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the launcher ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[LauncherAbilityInfo](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the launcher ability information. |
 
 
 ## getAllLauncherAbilityInfos
@@ -55,7 +55,7 @@ Obtains the information about all launcher abilities. This API uses a promise to
 > **NOTE：**
 > 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getAllLauncherAbilityInfo)
 > instead.
 
 **Since:** 8
@@ -64,7 +64,7 @@ Obtains the information about all launcher abilities. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)(userId:
+**Substitutes:** [getAllLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo(userId:)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

@@ -16,8 +16,8 @@ DriverExtensionAbility模块提供驱动相关扩展能力，提供驱动创建�
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitystage-abilitystage-c.md/arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)之后回调。返回一个  
-[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md/arkts-ipc-rpc-remoteobject-c.md)对象，用于客户端和服务端进行通信。
+Extension生命周期回调，会在[onCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate)之后回调。返回一个  
+[RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md#RemoteObject)对象，用于客户端和服务端进行通信。
 
 **起始版本：** 10
 

@@ -20,7 +20,7 @@ declare function statSync(file: string | number): Stat
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
 
 **返回值：**
 

@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## controller
@@ -26,7 +26,7 @@ controller?: SearchController
 
 Set the Search component controller.
 
-**Type:** [SearchController](../arkts-components/arkts-arkui-searchcontroller-c.md)
+**Type:** SearchController
 
 **Since:** 18
 
@@ -66,7 +66,7 @@ placeholder?: ResourceStr
 
 Indicates default prompt text displayed in the search box.The default value is Search, which supports globalization.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 
@@ -132,7 +132,7 @@ value?: ResourceStr
 
 Sets the search text content that is currently displayed.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 

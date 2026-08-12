@@ -34,7 +34,7 @@ onWillChange?: Callback<StyledStringChangeValue, boolean>
 
 Callback invoked when text is about to change.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StyledStringChangeValue, boolean&gt;
+**Type:** Callback&lt;[StyledStringChangeValue](arkts-arkui-styledstringchangevalue-i.md), boolean&gt;
 
 **Since:** 12
 

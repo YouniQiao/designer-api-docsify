@@ -21,7 +21,7 @@ function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | 配置渲染器。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer&gt; | 是 | 回调函数。当获取音频渲染器成功，err为undefined，data为获取到的音频渲染器对象；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | 是 | 回调函数。当获取音频渲染器成功，err为undefined，data为获取到的音频渲染器对象；否则为错误对象。 |
 
 ## 示例
 
@@ -64,7 +64,7 @@ audio.createAudioRenderer(audioRendererOptions,(err, data) => {
 function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer | null>): void
 ```
 
-Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
+Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer) instance.This method uses a promise to return the renderer instance.
 
 The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document [Low-Power Rules in Music Playback Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-music-playback-scenarios).And for navigation situation, you can follow [Low-Power Rules in Navigation and Positioning Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-navigation-scenarios).
 
@@ -85,7 +85,7 @@ If you want to use AudioRenderer api to implement a music playback application, 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 | Renderer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer \| null&gt; | 是 | Callback used to return the audio renderer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md) \| null&gt; | 是 | Callback used to return the audio renderer instance, or null when an error happens. |
 
 
 ## createAudioRenderer
@@ -114,7 +114,7 @@ function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRender
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioRenderer&gt; | Promise对象，返回音频渲染器对象。 |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Promise对象，返回音频渲染器对象。 |
 
 ## 示例
 
@@ -156,7 +156,7 @@ audio.createAudioRenderer(audioRendererOptions).then((data) => {
 function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer | null>
 ```
 
-Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
+Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer) instance.This method uses a promise to return the renderer instance.
 
 The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document [Low-Power Rules in Music Playback Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-music-playback-scenarios).And for navigation situation, you can follow [Low-Power Rules in Navigation and Positioning Scenarios](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-navigation-scenarios).
 
@@ -182,5 +182,5 @@ If you want to use AudioRenderer api to implement a music playback application, 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AudioRenderer \| null&gt; | Promise used to return the audio renderer instance, or null when an error happens. |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md) \| null&gt; | Promise used to return the audio renderer instance, or null when an error happens. |
 

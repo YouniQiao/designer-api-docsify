@@ -1,12 +1,12 @@
 # HapModuleInfo
 
 The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through  
-[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo).
+[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getBundleInfo-2).
 
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md) instead.
+> [bundleManager-HapModuleInfo](#HapModuleInfo) instead.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ The HapModuleInfo module provides information about an HAP module. Unless otherw
 
 **Deprecated since:** 9
 
-**Substitutes:** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)
+**Substitutes:** [HapModuleInfo](#HapModuleInfo)
 
 <!--Device-unnamed-export interface HapModuleInfo--><!--Device-unnamed-export interface HapModuleInfo-End-->
 
@@ -38,7 +38,7 @@ Ability information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#abilitiesInfo
+**Substitutes:** [abilitiesInfo](arkts-ability-hapmoduleinfo-i.md#abilitiesInfo)
 
 <!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>--><!--Device-HapModuleInfo-readonly abilityInfo: Array<AbilityInfo>-End-->
 
@@ -84,7 +84,7 @@ Module description.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#description
+**Substitutes:** [description](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#description)
 
 <!--Device-HapModuleInfo-readonly description: string--><!--Device-HapModuleInfo-readonly description: string-End-->
 
@@ -108,7 +108,7 @@ Module description ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#descriptionId
+**Substitutes:** [descriptionId](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#descriptionId)
 
 <!--Device-HapModuleInfo-readonly descriptionId: number--><!--Device-HapModuleInfo-readonly descriptionId: number-End-->
 
@@ -132,7 +132,7 @@ Device types supported by the module.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#deviceTypes
+**Substitutes:** [deviceTypes](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#deviceTypes)
 
 <!--Device-HapModuleInfo-readonly deviceTypes: Array<string>--><!--Device-HapModuleInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -156,7 +156,7 @@ Module icon.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#icon
+**Substitutes:** [icon](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#icon)
 
 <!--Device-HapModuleInfo-readonly icon: string--><!--Device-HapModuleInfo-readonly icon: string-End-->
 
@@ -180,7 +180,7 @@ Module icon ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#iconId
+**Substitutes:** [iconId](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#iconId)
 
 <!--Device-HapModuleInfo-readonly iconId: number--><!--Device-HapModuleInfo-readonly iconId: number-End-->
 
@@ -204,7 +204,7 @@ Whether installation-free is supported. **true** if supported, **false** otherwi
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#installationFree
+**Substitutes:** [installationFree](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#installationFree)
 
 <!--Device-HapModuleInfo-readonly installationFree: boolean--><!--Device-HapModuleInfo-readonly installationFree: boolean-End-->
 
@@ -228,7 +228,7 @@ Module label.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#label
+**Substitutes:** [label](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#label)
 
 <!--Device-HapModuleInfo-readonly label: string--><!--Device-HapModuleInfo-readonly label: string-End-->
 
@@ -252,7 +252,7 @@ Module label ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#labelId
+**Substitutes:** [labelId](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#labelId)
 
 <!--Device-HapModuleInfo-readonly labelId: number--><!--Device-HapModuleInfo-readonly labelId: number-End-->
 
@@ -298,7 +298,7 @@ Module name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name)
 
 <!--Device-HapModuleInfo-readonly moduleName: string--><!--Device-HapModuleInfo-readonly moduleName: string-End-->
 
@@ -322,7 +322,7 @@ Module name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name)
 
 <!--Device-HapModuleInfo-readonly name: string--><!--Device-HapModuleInfo-readonly name: string-End-->
 

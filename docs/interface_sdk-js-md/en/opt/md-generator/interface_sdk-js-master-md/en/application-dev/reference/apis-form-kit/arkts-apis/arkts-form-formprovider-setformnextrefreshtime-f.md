@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## setFormNextRefreshTime
@@ -34,14 +34,14 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 | Error Code ID |
 | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501002](../errorcode-form.md#16501002-too-many-widgets) |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16501002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501002-too-many-widgets) |
+| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
+| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 
@@ -91,20 +91,20 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501002](../errorcode-form.md#16501002-too-many-widgets) |
-| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16501002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501002-too-many-widgets) |
+| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
+| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

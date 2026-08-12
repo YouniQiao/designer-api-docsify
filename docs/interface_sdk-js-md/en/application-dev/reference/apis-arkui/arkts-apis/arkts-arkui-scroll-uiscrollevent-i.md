@@ -2,7 +2,7 @@
 
 Defines a UIScrollableCommonEvent which is used to set different common event to target component.
 
-**Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIScrollEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Set or reset the callback which is triggered when the Scroll did scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ScrollOnScrollCallback](../arkts-components/arkts-arkui-scrollonscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Scroll did scroll. Passing undefined will unregister the callback. |
+| callback | [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md) \| undefined | Yes | callback function, triggered when the Scroll did scroll. Passing undefined will unregister the callback. |
 
 ## setOnWillScroll
 

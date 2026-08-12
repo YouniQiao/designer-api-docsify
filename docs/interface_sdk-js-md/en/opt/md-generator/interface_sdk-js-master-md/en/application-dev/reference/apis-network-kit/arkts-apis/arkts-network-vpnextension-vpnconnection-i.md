@@ -11,7 +11,7 @@ Defines a VPN connection.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## create
@@ -38,18 +38,18 @@ Create a VPN network using the VpnConfig.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) |
-| [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) |
-| [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) |
+| [2200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2203001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) |
+| [2203002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#2203002-vpn-already-exists) |
 
 ## Examples
 
@@ -148,15 +148,15 @@ Destroy the VPN network.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) |
 
 ## Examples
 
@@ -203,14 +203,14 @@ Destroy the VPN network.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) |
-| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) |
+| [19900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900002-system-internal-error) |
+| [19900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900001-invalid-parameter) |
 
 ## Examples
 
@@ -251,14 +251,14 @@ generate vpn id.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19900002](../errorcode-net-vpn.md#19900002-system-internal-error) |
-| [19900001](../errorcode-net-vpn.md#19900001-invalid-parameter) |
+| [19900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900002-system-internal-error) |
+| [19900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#19900001-invalid-parameter) |
 
 ## Examples
 
@@ -304,17 +304,17 @@ Protect a socket from VPN connections. After protecting, data sent through this 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2200001](../errorcode-net-sharing.md#2200001-invalid-parameter-value) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2200003](../errorcode-net-sharing.md#2200003-system-internal-error) |
-| [2200002](../errorcode-net-sharing.md#2200002-service-connection-failure) |
-| [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) |
+| [2200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200001-invalid-parameter-value) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) |
+| [2200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) |
+| [2203004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-vpn.md#2203004-invalid-descriptor) |
 
 ## Examples
 
@@ -366,7 +366,7 @@ Protect all socket of the VPN process. After executing this function,all sockets
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

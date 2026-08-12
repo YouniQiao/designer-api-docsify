@@ -15,7 +15,7 @@ Represents the access records of a permission.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## accessCount
@@ -48,7 +48,7 @@ Access record collection, effective only when flag is FLAG_PERMISSION_USAGE_DETA
 
 Default value: Query the last 10 successful access records.
 
-**Type:** Array&lt;UsedRecordDetail&gt;
+**Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
 **Since:** 9
 
@@ -192,7 +192,7 @@ Rejection record collection, effective only when flag is FLAG_PERMISSION_USAGE_D
 
 Default value: Query the last 10 failed or rejected records.
 
-**Type:** Array&lt;UsedRecordDetail&gt;
+**Type:** Array&lt;[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md)&gt;
 
 **Since:** 9
 

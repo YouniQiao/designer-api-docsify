@@ -1,7 +1,7 @@
 # MediaSource
 
 媒体数据信息。来源于  
-[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl)。
+[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl)。
 
 > **说明：**
 > 

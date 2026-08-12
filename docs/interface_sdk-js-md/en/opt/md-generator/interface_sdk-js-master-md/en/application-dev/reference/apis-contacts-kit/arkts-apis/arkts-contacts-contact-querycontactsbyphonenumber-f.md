@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryContactsByPhoneNumber
@@ -13,13 +13,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback
 ```
 
 Queries a contact based on the specified phone number. This API uses an asynchronous callback to return the result.The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -32,7 +32,7 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | phoneNumber | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -58,7 +58,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callb
 ```
 
 Queries a contact based on the specified phone number. This API uses an asynchronous callback to return the result.The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
 
@@ -72,16 +72,16 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -111,13 +111,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callbac
 ```
 
 Queries a contact based on the specified phone number and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -131,7 +131,7 @@ Queries a contact based on the specified phone number and holder. This API uses 
 | --- | --- | --- |
 | phoneNumber | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -161,7 +161,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 ```
 
 Queries a contact based on the specified phone number and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
 
@@ -175,17 +175,17 @@ Queries a contact based on the specified phone number and holder. This API uses 
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -219,13 +219,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttribute
 ```
 
 Queries a contact based on the specified phone number and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers**attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -239,7 +239,7 @@ Queries a contact based on the specified phone number and attributes. This API u
 | --- | --- | --- |
 | phoneNumber | string | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -266,7 +266,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs
 ```
 
 Queries a contact based on the specified phone number and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers**attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
 
@@ -280,17 +280,17 @@ Queries a contact based on the specified phone number and attributes. This API u
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -323,13 +323,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: 
 
 Queries a contact based on the specified phone number, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and  
 **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -344,7 +344,7 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 | phoneNumber | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -377,7 +377,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 
 Queries a contact based on the specified phone number, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and  
 **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
 
@@ -391,18 +391,18 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -438,13 +438,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?
 ```
 
 Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -464,7 +464,7 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 ## Examples
 
@@ -491,7 +491,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 ```
 
 Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
 
@@ -505,7 +505,7 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | phoneNumber | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | No |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No |
@@ -514,14 +514,14 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

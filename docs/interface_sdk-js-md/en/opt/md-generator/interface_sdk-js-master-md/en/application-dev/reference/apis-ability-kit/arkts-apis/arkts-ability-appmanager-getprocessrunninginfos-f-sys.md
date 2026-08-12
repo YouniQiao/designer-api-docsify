@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getProcessRunningInfos
@@ -18,7 +18,7 @@ Obtains information about the running processes of the current application. This
 
 **Deprecated since:** 10
 
-**Substitutes:** [appManager#getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
@@ -33,13 +33,13 @@ Obtains information about the running processes of the current application. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; |
+| Promise & lt;Array & lt;ProcessInformation & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 
 
 ## getProcessRunningInfos
@@ -54,7 +54,7 @@ Obtains information about the running processes of the current application. This
 
 **Deprecated since:** 10
 
-**Substitutes:** [appManager#getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.GET_RUNNING_INFO
@@ -75,5 +75,5 @@ Obtains information about the running processes of the current application. This
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |

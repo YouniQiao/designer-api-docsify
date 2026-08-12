@@ -2,7 +2,7 @@
 
 Defines Polyline attribute
 
-**Inheritance/Implementation:** PolylineAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** PolylineAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;PolylineAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Called when the polyline is set to pass through the coordinate point list.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ShapePoint&gt; \| undefined | Yes |  |
+| value | Array&lt;[ShapePoint](arkts-arkui-shapepoint-t.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Set Polyline options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](../arkts-components/arkts-arkui-polylineoptions-i.md) | No | Polyline constructor options. |
+| options | [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | No | Polyline constructor options. |
 
 **Return value:**
 

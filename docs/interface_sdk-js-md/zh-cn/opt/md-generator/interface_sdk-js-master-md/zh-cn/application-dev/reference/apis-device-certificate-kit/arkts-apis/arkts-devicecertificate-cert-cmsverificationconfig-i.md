@@ -54,7 +54,7 @@ signerCerts?: Array<X509Cert>
 
 签名者证书。
 
-**类型：** Array&lt;X509Cert&gt;
+**类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **起始版本：** 22
 
@@ -76,7 +76,7 @@ trustCerts: Array<X509Cert>
 > 
 > 需要配置所有签名者的信任证书。
 
-**类型：** Array&lt;X509Cert&gt;
+**类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **起始版本：** 22
 

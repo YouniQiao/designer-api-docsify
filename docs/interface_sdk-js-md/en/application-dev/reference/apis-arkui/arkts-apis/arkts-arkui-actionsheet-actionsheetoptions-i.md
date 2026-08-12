@@ -18,7 +18,7 @@ alignment?: DialogAlignment
 
 Alignment mode of the dialog box in the vertical direction.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If showInSubWindow is set to true in UIExtension, the dialog box is aligned with the host window based on UIExtension.&lt;/p&gt;
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Default:** DialogAlignment.Bottom
 
@@ -146,7 +146,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Border color of the dialog box.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;When borderColor is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings.&lt;/p&gt;
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Default:** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -168,7 +168,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Default:** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -190,7 +190,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the dialog box.You can set the width for all four sides or set separate widths for individual sides.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Default:** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -232,7 +232,7 @@ confirm?: ActionSheetButtonOptions
 
 Information about the confirm button. When the dialog box has focus and focus has not been shifted using the Tab key, the button responds to the Enter key by default, and multiple dialog boxes can gain focus consecutively to respond automatically. The default response to the Enter key does not work when defaultFocus is set to true.
 
-**Type:** [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
+**Type:** [ActionSheetButtonOptions](arkts-arkui-actionsheet-actionsheetbuttonoptions-i.md)
 
 **Since:** 23
 
@@ -252,7 +252,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 Corner radius of the background. You can set the radius for each of the four corners individually.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -470,7 +470,7 @@ message: string | Resource
 
 Content of the dialog box.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -490,7 +490,7 @@ offset?: ActionSheetOffset
 
 Offset of the dialog box relative to the alignment position.&lt;br&gt;When alignment is set to Top, TopStart, or TopEnd: {dx: 0,dy: "40vp"}&lt;br&gt;When alignment is set to any other value: {dx: 0,dy: "-40vp"}
 
-**Type:** [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
+**Type:** [ActionSheetOffset](arkts-arkui-actionsheet-actionsheetoffset-i.md)
 
 **Since:** 23
 
@@ -590,7 +590,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback for interactive closure of the dialog box.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:1. If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The reason parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value CLOSE_BUTTON.2. In the onWillDismiss callback, another onWillDismiss callback is not allowed.&lt;/p&gt;
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;DismissDialogAction&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-actionsheet-dismissdialogaction-i.md)&gt;
 
 **Since:** 23
 
@@ -610,7 +610,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Default:** - Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
@@ -632,7 +632,7 @@ sheets: Array<SheetInfo>
 
 Options in the dialog box. Each option supports the image, text, and callback.
 
-**Type:** Array&lt;SheetInfo&gt;
+**Type:** Array&lt;[SheetInfo](arkts-arkui-actionsheet-sheetinfo-i.md)&gt;
 
 **Since:** 23
 
@@ -716,7 +716,7 @@ title: string | Resource
 
 Title of the dialog box.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

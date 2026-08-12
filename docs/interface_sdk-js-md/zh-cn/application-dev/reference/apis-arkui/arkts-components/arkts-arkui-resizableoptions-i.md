@@ -22,13 +22,13 @@ lattice?: DrawingLattice
 
 **说明：**
 
-通过@ohos.graphics.drawing的[createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md/arkts-arkgraphics2d-drawing-lattice-c.md#createimagelattice)接口创建Lattice类型作为入参。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格图像是固定的，不会被拉伸。其他位置的网格图像会根据slice进行拉伸。
+通过@ohos.graphics.drawing的[createImageLattice](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-lattice-c.md#createImageLattice)接口创建Lattice类型作为入参。将图像划分为矩形网格，同时处于偶数列和偶数行上的网格图像是固定的，不会被拉伸。其他位置的网格图像会根据slice进行拉伸。
 
-该参数对[backgroundImageResizable](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundimageresizable)接口不生效。
+该参数对[backgroundImageResizable](CommonMethod#backgroundImageResizable)接口不生效。
 
 传入数字时默认单位为px。
 
-**类型：** [DrawingLattice](../arkts-apis/arkts-arkui-drawinglattice-t.md)
+**类型：** [DrawingLattice](arkts-arkui-drawinglattice-t.md)
 
 **起始版本：** 12
 

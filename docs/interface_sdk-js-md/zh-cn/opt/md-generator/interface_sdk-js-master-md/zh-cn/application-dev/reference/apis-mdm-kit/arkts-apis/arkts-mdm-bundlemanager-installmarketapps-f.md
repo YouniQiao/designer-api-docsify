@@ -11,7 +11,7 @@ function installMarketApps(admin: Want, bundleNames: Array<string>): void
 > **说明：**
 > 
 > 本接口调用成功后会在桌面上生成应用下载任务，此任务与从应用市场下载所创建任务一致。下载安装结束后，安装结果会通过回调
-> [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)
+> [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult)
 > 返回。
 
 **起始版本：** 22
@@ -29,17 +29,17 @@ function installMarketApps(admin: Want, bundleNames: Array<string>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-| bundleNames | Array&lt;string&gt; | 是 |
+| bundleNames | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [9201002](../errorcode-enterpriseDeviceManager.md#9201002-企业应用安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [9201002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201002-企业应用安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

@@ -12,7 +12,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setcurrentfunctions)
+**替代接口：** [setCurrentFunctions](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md#setCurrentFunctions)
 
 <!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>--><!--Device-usb-function setCurrentFunctions(funcs: FunctionType): Promise<boolean>-End-->
 
@@ -30,7 +30,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 

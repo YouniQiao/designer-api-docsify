@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getTagInfo
@@ -12,7 +12,7 @@ import { tag } from 'kits/@kit.ConnectivityKit';
 function getTagInfo(want: Want): TagInfo
 ```
 
-Parse a {@link TagInfo} object from Want.
+Parse a [TagInfo](arkts-connectivity-tag-taginfo-i.md#TagInfo) object from Want.
 
 **Since:** 12
 
@@ -38,5 +38,5 @@ Parse a {@link TagInfo} object from Want.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |

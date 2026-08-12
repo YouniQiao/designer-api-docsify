@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EnvironmentCallback } from 'kits/@kit.AbilityKit';
+import { EnvironmentCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

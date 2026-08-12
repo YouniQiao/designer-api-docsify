@@ -14,11 +14,11 @@ Attaches callbacks for the resolution and/or rejection of the Promise.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| onfulfilled | ((value: T) =&gt; TResult1 \| [PromiseLike&lt;TResult1&gt;) \](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | undefined \| null | No |
-| onrejected | ((reason: any) =&gt; TResult2 \| [PromiseLike&lt;TResult2&gt;) \](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | undefined \| null | No |
+| onfulfilled | ((value: T) = & gt; TResult1 \ | [PromiseLike](arkts-lib-es5-promiselike-i.md) & lt;TResult1 & gt;) \ | undefined \| null | No |
+| onrejected | ((reason: any) = & gt; TResult2 \ | [PromiseLike](arkts-lib-es5-promiselike-i.md) & lt;TResult2 & gt;) \ | undefined \| null | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PromiseLike&lt;TResult1 \](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | TResult2&gt; |
+| [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;TResult1 \| TResult2 & gt; |

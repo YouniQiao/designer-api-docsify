@@ -2,9 +2,9 @@
 
 文本扩展编辑控制器。
 
-继承自[TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md)。
+继承自[TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md#TextBaseController)。
 
-**继承/实现关系：** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md)
+**继承/实现关系：** TextEditControllerEx extends [TextBaseController](arkts-arkui-textcommon-textbasecontroller-i.md#TextBaseController)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ getPreviewText(): PreviewText | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | 预上屏信息。 |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | 预上屏信息。 |
 
 ## isEditing
 

@@ -124,7 +124,7 @@ Compressed texture image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
-| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Compressed image data |
+| data | ArrayBufferView | Yes | Compressed image data |
 
 ## compressedTexSubImage2D
 
@@ -164,7 +164,7 @@ Compressed texture sub image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Width |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Format |
-| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Compressed image data |
+| data | ArrayBufferView | Yes | Compressed image data |
 
 ## readPixels
 
@@ -202,7 +202,7 @@ Reads pixels from the framebuffer
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Pixel buffer |
+| pixels | ArrayBufferView \| null | Yes | Pixel buffer |
 
 ## texImage2D
 
@@ -244,7 +244,7 @@ Sets texture image 2D from pixels
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Border |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | ArrayBufferView \| null | Yes | Pixel data |
 
 ## texImage2D
 
@@ -322,7 +322,7 @@ Sets texture sub image 2D from pixels
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel format |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | ArrayBufferView \| null | Yes | Pixel data |
 
 ## texSubImage2D
 

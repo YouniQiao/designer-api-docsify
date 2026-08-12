@@ -28,15 +28,15 @@ Gets the supported physical apertures.Move to ApertureQuery interface from Apert
 
 | 类型 |
 | --- |
-| Array&lt;PhysicalAperture&gt; |
+| Array&lt;[PhysicalAperture](arkts-camera-camera-physicalaperture-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSupportedVirtualApertures
 
@@ -56,14 +56,14 @@ Obtains the supported virtual apertures.
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

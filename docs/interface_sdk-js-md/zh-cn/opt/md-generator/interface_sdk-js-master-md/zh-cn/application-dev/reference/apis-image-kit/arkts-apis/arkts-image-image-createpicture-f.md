@@ -20,7 +20,7 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| mainPixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| mainPixelmap | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 
 **返回值：**
 
@@ -32,7 +32,7 @@ function createPicture(mainPixelmap : PixelMap): Picture
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

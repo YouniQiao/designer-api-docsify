@@ -6,7 +6,7 @@ Represents the authentication result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md)
+**Substitutes:** [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md#UserAuthResult)
 
 <!--Device-userAuth-interface AuthResultInfo--><!--Device-userAuth-interface AuthResultInfo-End-->
 
@@ -15,7 +15,7 @@ Represents the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## lockoutDuration
@@ -32,7 +32,7 @@ Lock duration of the authentication operation, in ms.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.AuthLockState.lockoutDuration](arkts-userauthentication-userauth-authlockstate-i.md#lockoutduration)
+**Substitutes:** [lockoutDuration](arkts-userauthentication-userauth-authlockstate-i.md#lockoutDuration)
 
 <!--Device-AuthResultInfo-lockoutDuration?: number--><!--Device-AuthResultInfo-lockoutDuration?: number-End-->
 
@@ -52,7 +52,7 @@ Number of remaining authentication attempts.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.AuthLockState.remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingauthattempts)
+**Substitutes:** [remainingAuthAttempts](arkts-userauthentication-userauth-authlockstate-i.md#remainingAuthAttempts)
 
 <!--Device-AuthResultInfo-remainAttempts?: number--><!--Device-AuthResultInfo-remainAttempts?: number-End-->
 
@@ -72,7 +72,7 @@ Authentication result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.UserAuthResult.result](arkts-userauthentication-userauth-userauthresult-i.md#result)
+**Substitutes:** [result](arkts-userauthentication-userauth-userauthresult-i.md#result)
 
 <!--Device-AuthResultInfo-result: number--><!--Device-AuthResultInfo-result: number-End-->
 
@@ -92,7 +92,7 @@ Token that has passed the user identity authentication.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.UserAuthResult.token](arkts-userauthentication-userauth-userauthresult-i.md#token)
+**Substitutes:** [token](arkts-userauthentication-userauth-userauthresult-i.md#token)
 
 <!--Device-AuthResultInfo-token?: Uint8Array--><!--Device-AuthResultInfo-token?: Uint8Array-End-->
 

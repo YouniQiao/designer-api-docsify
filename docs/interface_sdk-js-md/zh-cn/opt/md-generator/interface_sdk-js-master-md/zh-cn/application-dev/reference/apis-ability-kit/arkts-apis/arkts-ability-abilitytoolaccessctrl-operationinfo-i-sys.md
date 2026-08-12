@@ -36,7 +36,7 @@ operationType: OperationType
 
 操作类型。
 
-**类型：** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
+**类型：** OperationType
 
 **起始版本：** 26.0.0
 

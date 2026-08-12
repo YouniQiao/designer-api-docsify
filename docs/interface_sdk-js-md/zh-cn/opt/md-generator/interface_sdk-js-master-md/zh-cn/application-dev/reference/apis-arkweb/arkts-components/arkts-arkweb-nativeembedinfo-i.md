@@ -70,7 +70,7 @@ position?: Position
 
 同层标签相对于Web组件左上角为坐标原点的位置信息，此处区别于标准Position，单位为px。
 
-**类型：** [Position](../../apis-arkui/arkts-apis/arkts-arkui-display-position-i.md)
+**类型：** Position
 
 **起始版本：** 12
 

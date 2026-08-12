@@ -12,7 +12,7 @@ function createWantData(want: Want): PasteData
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)(mimeType:
+**替代接口：** [createData](pasteboard.createData(mimeType:)
 
 <!--Device-pasteboard-function createWantData(want: Want): PasteData--><!--Device-pasteboard-function createWantData(want: Want): PasteData-End-->
 

@@ -1,12 +1,12 @@
 # ApplicationContext
 
-ApplicationContext inherits from [Context](arkts-ability-context-t.md) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
+ApplicationContext inherits from [Context](./../app/context) and provides application-level management capabilities, such as application lifecycle listening, process management, and application environment setting.
 
 > **NOTE：**
 > 
 > The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** ApplicationContext extends [Context](arkts-ability-context-t.md)
+**Inheritance/Implementation:** ApplicationContext extends [Context](Context)
 
 **Since:** 9
 
@@ -44,14 +44,27 @@ Clears up all data in the application file path and revokes the permissions that
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.clearUpApplicationData();
+  }
+}
+```
 
 ## clearUpApplicationData
 
@@ -89,9 +102,26 @@ Clears up all data in the application file path and revokes the permissions that
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.clearUpApplicationData(error => {
+      if (error) {
+        console.error(`clearUpApplicationData fail, error: ${JSON.stringify(error)}`);
+      }
+    });
+  }
+}
+```
 
 ## disableDelayedProcessExit
 
@@ -101,7 +131,7 @@ disableDelayedProcessExit(): Promise<void>
 
 Disables delayed process exit for the current process.
 
-&lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;:&lt;br&gt;This API can be called only by the main thread.&lt;br&gt;Calling this API cancels the effect of {@link enableDelayedProcessExit}.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;:&lt;br&gt;This API can be called only by the main thread.&lt;br&gt;Calling this API cancels the effect of [enableDelayedProcessExit](#enableDelayedProcessExit).&lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -115,15 +145,15 @@ Disables delayed process exit for the current process.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 16000150 |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 
 ## enableDelayedProcessExit
 
@@ -145,15 +175,15 @@ Enable delayed exit for the current process.&lt;p&gt;**NOTE：**:&lt;br&gt;It ca
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 16000150 |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 
 ## getAllRunningInstanceKeys
 
@@ -175,15 +205,35 @@ Obtains the unique instance IDs of all multi-instances of this application. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.getAllRunningInstanceKeys();
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getAllRunningInstanceKeys fail, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## getAllWindowStages
 
@@ -209,7 +259,33 @@ This API is used to manage multiple windows in an application that contains seve
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;window.WindowStage&gt;&gt; |
+| Promise & lt;Array & lt;window.WindowStage & gt; & gt; |
+
+## Examples
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.getAllWindowStages().then((data: window.WindowStage[]) => {
+        let windowStage: window.WindowStage[] = data;
+        console.info(`WindowStages size ${windowStage.length}`);
+      }).catch((error: BusinessError) => {
+        console.error(`getAllWindowStages error, code: ${error.code}, error msg: ${error.message}`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getAllWindowStages fail, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## getCurrentAppCloneIndex
 
@@ -239,8 +315,25 @@ Obtains the index of the current application clone.
 
 | Error Code ID |
 | --- |
-| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      let appCloneIndex = applicationContext.getCurrentAppCloneIndex();
+    } catch (error) {
+      console.error(`getCurrentAppCloneIndex fail, error: ${JSON.stringify(error)}`);
+    }
+  }
+}
+```
 
 ## getCurrentInstanceKey
 
@@ -270,8 +363,30 @@ This API can be properly called only on 2-in-1 devices. If it is called on other
 
 | Error Code ID |
 | --- |
-| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    let applicationContext = this.context.getApplicationContext();
+    let currentInstanceKey = '';
+    try {
+      currentInstanceKey = applicationContext.getCurrentInstanceKey();
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getCurrentInstanceKey fail, code: ${code}, msg: ${message}`);
+    }
+    console.info(`currentInstanceKey: ${currentInstanceKey}`);
+  }
+}
+```
 
 ## getRunningProcessInformation
 
@@ -301,9 +416,27 @@ Obtains the information about running processes. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.getRunningProcessInformation().then((data) => {
+      console.info(`The process running information is: ${JSON.stringify(data)}`);
+    }).catch((error: BusinessError) => {
+      console.error(`error code: ${error.code}, error msg: ${error.message}`);
+    });
+  }
+}
+```
 
 ## getRunningProcessInformation
 
@@ -333,9 +466,28 @@ Obtains the information about running processes. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.getRunningProcessInformation((err, data) => {
+      if (err) {
+        console.error(`getRunningProcessInformation failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`The process running information is: ${JSON.stringify(data)}`);
+      }
+    })
+  }
+}
+```
 
 ## getUIAbilityByInstanceId
 
@@ -371,9 +523,9 @@ Get the UIAbility instance by the instance Id.
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## killAllProcesses
 
@@ -386,7 +538,7 @@ Kills all processes of this application. The application will not execute the no
 > **NOTE：**
 > 
 > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
-> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf).
 
 **Since:** 9
 
@@ -402,14 +554,27 @@ Kills all processes of this application. The application will not execute the no
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.killAllProcesses();
+  }
+}
+```
 
 ## killAllProcesses
 
@@ -422,7 +587,7 @@ Kills all processes of this application. The application will not execute the no
 > **NOTE：**
 > 
 > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
-> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf).
 
 **Since:** 14
 
@@ -444,14 +609,29 @@ Kills all processes of this application. The application will not execute the no
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+let isClearPageStack = false;
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.killAllProcesses(isClearPageStack);
+  }
+}
+```
 
 ## killAllProcesses
 
@@ -464,7 +644,7 @@ Kills all processes of this application. The application will not execute the no
 > **NOTE：**
 > 
 > This API is used to forcibly exit an application in abnormal scenarios. To exit an application properly, call
-> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself).
+> [terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf).
 
 **Since:** 9
 
@@ -486,8 +666,25 @@ Kills all processes of this application. The application will not execute the no
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.killAllProcesses(error => {
+      if (error) {
+        console.error(`killAllProcesses fail, error: ${JSON.stringify(error)}`);
+      }
+    });
+  }
+}
+```
 
 ## off('abilityLifecycle')
 
@@ -519,7 +716,34 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class EntryAbility extends UIAbility {
+  onDestroy() {
+    let applicationContext = this.context.getApplicationContext();
+    console.info(`stage applicationContext: ${applicationContext}`);
+    try {
+      applicationContext.off('abilityLifecycle', lifecycleId, (error, data) => {
+        if (error) {
+          console.error(`unregisterAbilityLifecycleCallback fail, err: ${JSON.stringify(error)}`);
+        } else {
+          console.info(`unregisterAbilityLifecycleCallback success, data: ${JSON.stringify(data)}`);
+        }
+      });
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error code: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('abilityLifecycle')
 
@@ -550,13 +774,34 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    let applicationContext = this.context.getApplicationContext();
+    console.info(`stage applicationContext: ${applicationContext}`);
+    try {
+      applicationContext.off('abilityLifecycle', lifecycleId);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('environment')
 
@@ -588,7 +833,33 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class EntryAbility extends UIAbility {
+  onDestroy() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.off('environment', callbackId, (error, data) => {
+        if (error) {
+          console.error(`unregisterEnvironmentCallback fail, err: ${JSON.stringify(error)}`);
+        } else {
+          console.info(`unregisterEnvironmentCallback success, data: ${JSON.stringify(data)}`);
+        }
+      });
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('environment')
 
@@ -619,13 +890,33 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.off('environment', callbackId);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('applicationStateChange')
 
@@ -656,7 +947,38 @@ Unregisters the listener for application process state changes. This API uses an
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+Assume that [ApplicationContext.on('applicationStateChange')](#applicationcontextonapplicationstatechange10) is used to register a callback named applicationStateChangeCallback. The following example shows how to unregister the corresponding listener.
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+  onApplicationForeground() {
+    console.info('applicationStateChangeCallback onApplicationForeground');
+  },
+  onApplicationBackground() {
+    console.info('applicationStateChangeCallback onApplicationBackground');
+  }
+};
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // In this example, the callback field is set to applicationStateChangeCallback.
+      // If no value is passed in, all the listeners for the corresponding event are unregistered.
+      applicationContext.off('applicationStateChange', applicationStateChangeCallback);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## offSystemConfigurationUpdated
 
@@ -719,7 +1041,64 @@ Registers a listener for the lifecycle of a UIAbility within the application. Th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let AbilityLifecycleCallback: AbilityLifecycleCallback = {
+      onAbilityCreate(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
+      },
+      onWindowStageCreate(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
+      },
+      onWindowStageActive(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
+      },
+      onWindowStageInactive(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
+      },
+      onWindowStageDestroy(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
+      },
+      onAbilityDestroy(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
+      },
+      onAbilityForeground(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
+      },
+      onAbilityBackground(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
+      },
+      onAbilityContinue(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
+      }
+    }
+    // 1. Obtain applicationContext through the context property.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2. Register a listener for application lifecycle changes through applicationContext.
+      lifecycleId = applicationContext.on('abilityLifecycle', AbilityLifecycleCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
+  }
+}
+```
 
 ## on('environment')
 
@@ -731,18 +1110,18 @@ Registers a listener for system environment changes. This API uses an asynchrono
 
 > **NOTE：**
 > 
-> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) to
+> - You can also use [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate) to
 > listen for system environment changes. Unlike
-> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate) of **Ability**, this
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate) of **Ability**, this
 > API offers greater flexibility. It can be used both within application components and pages. However, the
 > environment variables that can be subscribed to are different from those of
-> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate). For example, this
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate). For example, this
 > API cannot be used to subscribe to direction, screen density, and display ID changes. For details, see the
 > description of each environment variable in
-> [Configuration](arkts-ability-app-ability-configuration-configuration-i.md).
+> [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration).
 > 
 > - There are certain restrictions when this API is triggered. For example, if you set the application language by
-> calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the system does not trigger the
+> calling [setLanguage](#setLanguage), the system does not trigger the
 > callback for the current API even if the system language changes. For details, see
 > [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
@@ -773,7 +1152,39 @@ Registers a listener for system environment changes. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility, EnvironmentCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate')
+    let environmentCallback: EnvironmentCallback = {
+      onConfigurationUpdated(config) {
+        console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
+      },
+      onMemoryLevel(level) {
+        console.info(`onMemoryLevel level: ${level}`);
+      }
+    };
+    // 1. Obtain an applicationContext object.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2. Register a listener for system environment changes through applicationContext.
+      callbackId = applicationContext.on('environment', environmentCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
+  }
+}
+```
 
 ## on('applicationStateChange')
 
@@ -804,7 +1215,38 @@ Registers a listener for application process state changes. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+      onApplicationForeground() {
+        console.info('applicationStateChangeCallback onApplicationForeground');
+      },
+      onApplicationBackground() {
+        console.info('applicationStateChangeCallback onApplicationBackground');
+      }
+    }
+
+    // 1. Obtain an applicationContext object.
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2. Register a listener for application process state changes through applicationContext.
+      applicationContext.on('applicationStateChange', applicationStateChangeCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info('Register applicationStateChangeCallback');
+  }
+}
+```
 
 ## onSystemConfigurationUpdated
 
@@ -846,12 +1288,12 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 > application is not triggered.
 > 
 > If an atomic service calls this API,
-> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice)
-> , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a
+> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartSelfAtomicService)
+> , or [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp) within 3 seconds after a
 > successful call to this API, the system returns error code 16000064.
 > 
 > If an application calls this API or
-> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp) within 3 seconds after a
+> [UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp) within 3 seconds after a
 > successful call to this API, the system returns error code 16000064.
 
 **Since:** 12
@@ -874,11 +1316,55 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000064-frequent-application-restart) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000063-invalid-ability-during-application-restart) |
+
+## Examples
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { common, Want } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'restartApp';
+  private context = this.getUIContext().getHostContext()?.getApplicationContext() as common.ApplicationContext;
+
+  build() {
+    RelativeContainer() {
+      Text(this.message)
+        .id('HelloWorld')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        })
+        .onClick(() => {
+          let want: Want = {
+            bundleName: 'com.example.myapplication',
+            abilityName: 'EntryAbility'
+          };
+          if (this.context) {
+            try {
+              this.context.restartApp(want);
+            } catch (err) {
+              hilog.error(0x0000, 'testTag', `restart failed: ${err.code}, ${err.message}`);
+            }
+          } else {
+            hilog.error(0x0000, 'testTag', "%{public}s", 'AppContext is null');
+          }
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
 
 ## setColorMode
 
@@ -893,7 +1379,7 @@ Sets the dark/light color mode for the application. This API can be called only 
 > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
 > been loaded (using the
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
 
 **Since:** 11
 
@@ -915,8 +1401,30 @@ Sets the dark/light color mode for the application. This API can be called only 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility, ConfigurationConstant } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info("Ability onWindowStageCreate");
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+      let applicationContext = this.context.getApplicationContext();
+      applicationContext.setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+    });
+  }
+}
+```
 
 ## setFont
 
@@ -931,7 +1439,7 @@ Sets the font for this application. This API can be called only on the main thre
 > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
 > been loaded (using the
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
 
 **Since:** 12
 
@@ -951,8 +1459,42 @@ Sets the font for this application. This API can be called only on the main thre
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  aboutToAppear() {
+    this.getUIContext().getFont().registerFont({
+      familyName: 'fontName',
+      familySrc: $rawfile('font/medium.ttf')  // 'font/medium.ttf' is used only as an example. Replace it with the actual font resource file.
+    });
+
+    this.context.getApplicationContext().setFont('fontName');
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(50)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## setFontSizeScale
 
@@ -976,7 +1518,26 @@ Sets the scale ratio for the font size of this application. This API can be call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fontSizeScale | number | Yes |
+| [fontSizeScale](arkts-ability-app-ability-configuration-configuration-i.md) | number | Yes |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        return;
+      }
+      let applicationContext = this.context.getApplicationContext();
+      applicationContext.setFontSizeScale(2);
+    });
+  }
+}
+```
 
 ## setLanguage
 
@@ -991,7 +1552,7 @@ Sets the language for the application. This API can be called only on the main t
 > Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
 > been loaded (using the
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
 
 **Since:** 11
 
@@ -1013,7 +1574,29 @@ Sets the language for the application. This API can be called only on the main t
 
 | Error Code ID |
 | --- |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info("Ability onWindowStageCreate");
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+    });
+    let applicationContext = this.context.getApplicationContext();
+    applicationContext.setLanguage('zh-cn');
+  }
+}
+```
 
 ## setSupportedProcessCache
 
@@ -1034,7 +1617,7 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 > 
 > - To ensure that this API is effective before the process exits, it should be called as soon as possible. You are
 > advised to call this API within the **onCreate()** callback of the
-> [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md).
+> [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage).
 > 
 > - If this API is called multiple times within the same process, the outcome of the final call is used. In cases
 > where there are multiple AbilityStage instances, to achieve the desired result, this API must be called and
@@ -1058,10 +1641,30 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+
+## Examples
+
+```TypeScript
+import { AbilityStage, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      applicationContext.setSupportedProcessCache(true);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`setSupportedProcessCache fail, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## startSelfUIAbility
 
@@ -1089,21 +1692,21 @@ Starts a UIAbility of the current application during the delayed-exit window.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
 | 16000161 |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000130](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
 | 16000162 |
-| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
-| [16000125](../errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) |
-| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
-| [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
+| [16000124](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
+| [16000125](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000125-starting-a-plugin-is-not-supported) |
+| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
+| [16000123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000123-implicit-startup-is-not-supported) |

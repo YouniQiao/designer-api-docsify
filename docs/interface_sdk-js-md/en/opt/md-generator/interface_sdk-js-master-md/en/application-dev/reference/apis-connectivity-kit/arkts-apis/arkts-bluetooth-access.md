@@ -11,7 +11,7 @@ Provides methods for enabling/disabling bluetooth or monitoring bluetooth state.
 ## Modules to Import
 
 ```TypeScript
-import { access } from 'kits/@kit.ConnectivityKit';
+import { access } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

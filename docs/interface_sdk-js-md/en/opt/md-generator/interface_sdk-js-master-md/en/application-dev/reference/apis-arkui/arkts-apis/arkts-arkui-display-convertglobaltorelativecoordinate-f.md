@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## convertGlobalToRelativeCoordinate
@@ -39,8 +39,8 @@ Converts global coordinates (based on the top-left corner of the primary screen)
 
 | Error Code ID |
 | --- |
-| [1400004](../errorcode-display.md#1400004-parameter-error) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

@@ -29,5 +29,5 @@ export function createColumnNode(context: UIContext, options?: FrameNodeOptions)
 
 | 类型 | 说明 |
 | --- | --- |
-| [Column](arkts-arkui-typenode-column-t.md) | 返回Column类型的FrameNode。 |
+| Column | 返回Column类型的FrameNode。 |
 

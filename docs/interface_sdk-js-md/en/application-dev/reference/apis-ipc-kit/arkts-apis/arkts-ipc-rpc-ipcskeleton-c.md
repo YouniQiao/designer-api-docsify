@@ -13,7 +13,7 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## flushCmdBuffer
@@ -42,7 +42,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
 ## Examples
 
@@ -85,7 +85,7 @@ Flushes all suspended commands from the specified **RemoteProxy** to the corresp
 
 **Deprecated since:** 9
 
-**Substitutes:** static
+**Substitutes:** [static](static)
 
 <!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
 
@@ -505,7 +505,7 @@ Restores the UID and PID of the remote user. This API is a static method. It is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## Examples
 
@@ -543,7 +543,7 @@ Sets the UID and PID of the remote user. This API is a static method. It is usua
 
 **Deprecated since:** 9
 
-**Substitutes:** static
+**Substitutes:** [static](static)
 
 <!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
 

@@ -17,7 +17,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#remove
+**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -31,8 +31,8 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
-| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -49,7 +49,7 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#remove
+**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -63,15 +63,15 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
-| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | Yes |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## remove
@@ -86,7 +86,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#remove
+**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -117,7 +117,7 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#remove
+**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -138,4 +138,4 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

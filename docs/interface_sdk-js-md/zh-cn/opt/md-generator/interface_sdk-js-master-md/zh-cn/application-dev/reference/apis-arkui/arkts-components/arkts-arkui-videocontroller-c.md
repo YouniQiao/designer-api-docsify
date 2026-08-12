@@ -151,7 +151,7 @@ setCurrentTime(value: number, seekMode: SeekMode)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | number | 是 |
-| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-seekmode-e.md) | 是 |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 是 |
 
 ## start
 

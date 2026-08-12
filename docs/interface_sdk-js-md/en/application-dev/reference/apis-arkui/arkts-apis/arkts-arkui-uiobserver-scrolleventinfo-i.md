@@ -13,7 +13,7 @@ ScrollEvent info.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## axis
@@ -24,7 +24,7 @@ axis?: Axis
 
 Scroll axis.
 
-**Type:** [Axis](arkts-arkui-axis-e.md)
+**Type:** Axis
 
 **Since:** 26.0.0
 

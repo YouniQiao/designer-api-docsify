@@ -13,7 +13,7 @@ Provides information about window size layout breakpoint changes.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint
@@ -24,7 +24,7 @@ readonly heightBreakpoint: HeightBreakpoint
 
 Layout breakpoint for window height.
 
-**Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
+**Type:** HeightBreakpoint
 
 **Since:** 22
 
@@ -46,7 +46,7 @@ readonly widthBreakpoint: WidthBreakpoint
 
 Layout breakpoint for window width.
 
-**Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
+**Type:** WidthBreakpoint
 
 **Since:** 22
 

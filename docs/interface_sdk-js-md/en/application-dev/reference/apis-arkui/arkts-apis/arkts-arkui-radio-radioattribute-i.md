@@ -2,7 +2,7 @@
 
 Defines the Radio component attributes.
 
-**Inheritance/Implementation:** RadioAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** RadioAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of radio.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RadioAttribute](arkts-arkui-radio-radioattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of radio. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RadioAttribute](arkts-arkui-radio-radioattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of radio. |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Called when the radio box is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isChecked | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes |  |
+| isChecked | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | Yes |  |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Set the Configuration of radio.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;RadioConfiguration&gt; \| undefined | Yes | The contentModifier of radio. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radio-radioconfiguration-i.md)&gt; \| undefined | Yes | The contentModifier of radio. |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Called when the radio box selection status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnRadioChangeCallback](../arkts-components/arkts-arkui-onradiochangecallback-t.md) \| undefined | Yes |  |
+| callback | [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Set the radio style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RadioStyle](../arkts-components/arkts-arkui-radiostyle-i.md) \| undefined | No | the radio style. |
+| value | [RadioStyle](arkts-arkui-radio-radiostyle-i.md) \| undefined | No | the radio style. |
 
 **Return value:**
 

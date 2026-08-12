@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from 'kits/@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## setPowerModel
@@ -18,7 +18,7 @@ Set the current Wi-Fi power mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManagerExt/wifiManagerExt.setPowerMode
+**Substitutes:** [setPowerMode](ohos.wifiManagerExt/wifiManagerExt.setPowerMode)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT_EXT
 

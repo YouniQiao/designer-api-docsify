@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## onSelectionComplete
@@ -30,13 +30,13 @@ Registers a callback to listen for the word selection completion event. This API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | Yes | Callback used to return the word selection information. This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or pressing and sliding the left mouse button) and then presses **Ctrl**. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | Yes | Callback used to return the word selection information. This callback is triggered only when the user selects text using the mouse or touchpad (by double-clicking, triple-clicking, or pressing and sliding the left mouse button) and then presses **Ctrl**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
+| [33600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) | The application calling the API does not match the application selected in the system settings. |
 
 ## Examples
 

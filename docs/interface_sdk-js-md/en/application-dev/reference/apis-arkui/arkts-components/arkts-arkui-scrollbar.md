@@ -68,7 +68,7 @@ Creates a scroll bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollBarOptions](../arkts-apis/arkts-arkui-scrollbar-scrollbaroptions-i.md) | Yes | Parameters of the **ScrollBar** component. |
+| value | [ScrollBarOptions](arkts-arkui-scrollbaroptions-i.md) | Yes | Parameters of the **ScrollBar** component. |
 
 ## Summary
 

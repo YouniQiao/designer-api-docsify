@@ -9,7 +9,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient](arkts-ime-inputmethodengine-inputclient-i.md)
+**替代接口：** [InputClient](arkts-ime-inputmethodengine-inputclient-i.md#InputClient)
 
 <!--Device-inputMethodEngine-interface TextInputClient--><!--Device-inputMethodEngine-interface TextInputClient-End-->
 
@@ -33,7 +33,7 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length:
+**替代接口：** [deleteBackward](inputMethodEngine.InputClient.deleteBackward(length:)
 
 <!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -79,7 +79,7 @@ deleteBackward(length: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length:
+**替代接口：** [deleteBackward](inputMethodEngine.InputClient.deleteBackward(length:)
 
 <!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>-End-->
 
@@ -132,7 +132,7 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length:
+**替代接口：** [deleteForward](inputMethodEngine.InputClient.deleteForward(length:)
 
 <!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -178,7 +178,7 @@ deleteForward(length: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length:
+**替代接口：** [deleteForward](inputMethodEngine.InputClient.deleteForward(length:)
 
 <!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>-End-->
 
@@ -227,7 +227,7 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length:
+**替代接口：** [getBackward](inputMethodEngine.InputClient.getBackward(length:)
 
 <!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -269,7 +269,7 @@ getBackward(length: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length:
+**替代接口：** [getBackward](inputMethodEngine.InputClient.getBackward(length:)
 
 <!--Device-TextInputClient-getBackward(length: number): Promise<string>--><!--Device-TextInputClient-getBackward(length: number): Promise<string>-End-->
 
@@ -318,7 +318,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)(callback:
+**替代接口：** [getEditorAttribute](inputMethodEngine.InputClient.getEditorAttribute(callback:)
 
 <!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
 
@@ -328,7 +328,7 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute&gt; | 是 | 回调函数。当编辑框的属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数。当编辑框的属性值获取成功，err为undefined，data为编辑框属性值；否则为错误对象。 |
 
 ## 示例
 
@@ -361,7 +361,7 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)(callback:
+**替代接口：** [getEditorAttribute](inputMethodEngine.InputClient.getEditorAttribute(callback:)
 
 <!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
@@ -371,7 +371,7 @@ getEditorAttribute(): Promise<EditorAttribute>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;EditorAttribute&gt; | Promise对象，返回编辑框属性值。 |
+| Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Promise对象，返回编辑框属性值。 |
 
 ## 示例
 
@@ -404,7 +404,7 @@ getForward(length: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length:
+**替代接口：** [getForward](inputMethodEngine.InputClient.getForward(length:)
 
 <!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -446,7 +446,7 @@ getForward(length: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length:
+**替代接口：** [getForward](inputMethodEngine.InputClient.getForward(length:)
 
 <!--Device-TextInputClient-getForward(length: number): Promise<string>--><!--Device-TextInputClient-getForward(length: number): Promise<string>-End-->
 
@@ -495,7 +495,7 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text:
+**替代接口：** [insertText](inputMethodEngine.InputClient.insertText(text:)
 
 <!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -540,7 +540,7 @@ insertText(text: string): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text:
+**替代接口：** [insertText](inputMethodEngine.InputClient.insertText(text:)
 
 <!--Device-TextInputClient-insertText(text: string): Promise<boolean>--><!--Device-TextInputClient-insertText(text: string): Promise<boolean>-End-->
 
@@ -588,7 +588,7 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action:
+**替代接口：** [sendKeyFunction](inputMethodEngine.InputClient.sendKeyFunction(action:)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -634,7 +634,7 @@ sendKeyFunction(action: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethodEngine.InputClient.sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action:
+**替代接口：** [sendKeyFunction](inputMethodEngine.InputClient.sendKeyFunction(action:)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>--><!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>-End-->
 

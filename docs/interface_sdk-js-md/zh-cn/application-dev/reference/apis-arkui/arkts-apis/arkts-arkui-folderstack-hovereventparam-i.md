@@ -78,7 +78,7 @@ windowStatusType: WindowStatusType
 
 窗口模式枚举。
 
-**类型：** [WindowStatusType](../arkts-components/arkts-arkui-windowstatustype-t.md)
+**类型：** [WindowStatusType](arkts-arkui-windowstatustype-t.md)
 
 **起始版本：** 23
 

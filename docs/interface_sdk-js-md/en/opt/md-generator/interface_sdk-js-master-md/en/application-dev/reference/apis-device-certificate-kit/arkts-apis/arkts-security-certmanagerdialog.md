@@ -13,7 +13,7 @@ The **certificateManagerDialog** module provides APIs for opening the certificat
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## Summary

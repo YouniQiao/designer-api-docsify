@@ -18,7 +18,7 @@ annulusRegion?: ParticleAnnulusRegion
 
 the description of the annulus region. This parameter is valid only for emitter whose shape is annulus.
 
-**Type:** [ParticleAnnulusRegion](../arkts-components/arkts-arkui-particleannulusregion-i.md)
+**Type:** [ParticleAnnulusRegion](arkts-arkui-particle-particleannulusregion-i.md)
 
 **Default:** {innerRadius:LengthMetrics.vp(0),outerRadius:LengthMetrics.vp(0)}
 
@@ -62,7 +62,7 @@ particle: EmitterParticleOptions
 
 Set particle config.
 
-**Type:** [EmitterParticleOptions](../arkts-components/arkts-arkui-emitterparticleoptions-i.md)
+**Type:** [EmitterParticleOptions](arkts-arkui-particle-emitterparticleoptions-i.md)
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ shape?: ParticleEmitterShape
 
 Shape of emitter.
 
-**Type:** [ParticleEmitterShape](../arkts-components/arkts-arkui-particleemittershape-e.md)
+**Type:** [ParticleEmitterShape](arkts-arkui-particle-particleemittershape-e.md)
 
 **Default:** ParticleEmitterShape.RECTANGLE
 

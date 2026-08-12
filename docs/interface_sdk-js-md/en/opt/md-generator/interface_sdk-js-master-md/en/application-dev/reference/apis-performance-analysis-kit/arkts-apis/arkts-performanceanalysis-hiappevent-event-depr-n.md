@@ -12,7 +12,7 @@ Provides constants that define the names of all predefined events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event
+**Substitutes:** [Event](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event)
 
 <!--Device-hiAppEvent-namespace Event--><!--Device-hiAppEvent-namespace Event-End-->
 

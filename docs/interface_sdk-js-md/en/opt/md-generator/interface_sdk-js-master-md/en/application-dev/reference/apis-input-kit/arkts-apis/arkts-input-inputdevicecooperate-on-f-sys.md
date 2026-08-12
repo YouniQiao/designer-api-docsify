@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## on('cooperation')
@@ -18,7 +18,7 @@ Registers a listener for screen hopping state changes. This API uses an asynchro
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate#on
+**Substitutes:** [on](ohos.cooperate/cooperate#on)
 
 <!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void--><!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void-End-->
 
@@ -37,8 +37,8 @@ Registers a listener for screen hopping state changes. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

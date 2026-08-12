@@ -1,8 +1,8 @@
 # DataPanelShadowOptions
 
-DataPanelShadowOptions继承自[MultiShadowOptions](arkts-arkui-common-multishadowoptions-i.md)，具有MultiShadowOptions的全部属性。
+DataPanelShadowOptions继承自[MultiShadowOptions](MultiShadowOptions)，具有MultiShadowOptions的全部属性。
 
-**继承/实现关系：** DataPanelShadowOptions extends [MultiShadowOptions](arkts-arkui-common-multishadowoptions-i.md)
+**继承/实现关系：** DataPanelShadowOptions extends [MultiShadowOptions](MultiShadowOptions)
 
 **起始版本：** 23
 
@@ -21,7 +21,7 @@ colors?: Array<ResourceColor | LinearGradient>
 各数据段投影的颜色。默认值：与valueColors值相同  
 **说明：**若设置的投影颜色的个数少于数据段个数时，则显示的投影颜色的个数和设置的投影颜色个数一致。
 
-**类型：** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient&gt;
+**类型：** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md)&gt;
 
 **默认值：** Consistent with valueColors
 

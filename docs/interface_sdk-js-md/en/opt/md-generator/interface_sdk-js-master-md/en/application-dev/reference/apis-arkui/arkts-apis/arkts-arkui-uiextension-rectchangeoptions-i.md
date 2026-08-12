@@ -12,7 +12,7 @@ Provides the values and reasons returned when the rectangle (position and size) 
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'kits/@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## reason
@@ -23,7 +23,7 @@ reason: RectChangeReason
 
 Reason for the rectangle change.
 
-**Type:** [RectChangeReason](arkts-arkui-window-rectchangereason-e.md)
+**Type:** RectChangeReason
 
 **Since:** 14
 

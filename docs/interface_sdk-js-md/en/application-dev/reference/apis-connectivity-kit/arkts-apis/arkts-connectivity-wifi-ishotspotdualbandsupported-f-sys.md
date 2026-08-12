@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## isHotspotDualBandSupported
@@ -20,7 +20,7 @@ Checks whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.isHotspotDualBandSupported
+**Substitutes:** [isHotspotDualBandSupported](ohos.wifiManager/wifiManager.isHotspotDualBandSupported)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.MANAGE_WIFI_HOTSPOT
 

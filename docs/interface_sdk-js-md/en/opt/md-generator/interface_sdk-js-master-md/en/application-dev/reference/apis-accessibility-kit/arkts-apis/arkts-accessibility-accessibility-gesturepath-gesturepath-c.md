@@ -11,7 +11,7 @@ The **GesturePath** module provides APIs for creating gesture path information r
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from 'kits/@kit.AccessibilityKit';
+import { GesturePath } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -34,7 +34,7 @@ Defines a constructor used to create a **GesturePath** instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [durationTime](#durationtime) | number | Yes |
+| [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | Yes |
 
 ## Examples
 

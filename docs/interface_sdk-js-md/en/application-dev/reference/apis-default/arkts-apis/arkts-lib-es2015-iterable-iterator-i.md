@@ -20,7 +20,7 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iteratorresult-c.md)&lt;T, TReturn&gt; |  |
+| [IteratorResult](arkts-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
 
 ## return
 
@@ -40,7 +40,7 @@ return?(value?: TReturn): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iteratorresult-c.md)&lt;T, TReturn&gt; |  |
+| [IteratorResult](arkts-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
 
 ## throw
 
@@ -60,5 +60,5 @@ throw?(e?: any): IteratorResult<T, TReturn>
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iteratorresult-c.md)&lt;T, TReturn&gt; |  |
+| [IteratorResult](arkts-iteratorresult-t.md)&lt;T, TReturn&gt; |  |
 

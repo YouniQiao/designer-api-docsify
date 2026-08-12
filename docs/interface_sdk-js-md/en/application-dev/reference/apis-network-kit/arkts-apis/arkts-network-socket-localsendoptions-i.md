@@ -13,7 +13,7 @@ Defines the parameters for sending data over the LocalSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## data

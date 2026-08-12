@@ -2,9 +2,9 @@
 
 Defines the progress bar style options.
 
-Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
-**Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 8
 

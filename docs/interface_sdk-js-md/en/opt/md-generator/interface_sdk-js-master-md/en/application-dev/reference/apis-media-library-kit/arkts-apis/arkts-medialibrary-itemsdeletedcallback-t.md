@@ -18,4 +18,4 @@ Called when the selected items are deleted.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| baseItemInfos | Array&lt;BaseItemInfo&gt; | Yes |
+| baseItemInfos | Array&lt;[BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)&gt; | Yes |

@@ -23,14 +23,14 @@ function off(type: 'scanDeviceAdd', callback?: Callback<ScannerDevice>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'scanDeviceAdd' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -69,14 +69,14 @@ function off(type: 'scanDeviceDel', callback?: Callback<ScannerDevice>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'scanDeviceDel' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;ScannerDevice&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ScannerDevice](arkts-basicservices-scan-scannerdevice-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

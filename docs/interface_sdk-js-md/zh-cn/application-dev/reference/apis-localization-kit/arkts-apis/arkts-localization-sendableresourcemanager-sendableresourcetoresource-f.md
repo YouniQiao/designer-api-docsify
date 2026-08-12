@@ -22,19 +22,19 @@ export function sendableResourceToResource(resource: SendableResource): Resource
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | 是 | SendableResource对象。 |
+| resource | SendableResource | 是 | SendableResource对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Resource](arkts-localization-resource-resource-i.md) | 转换后的Resource对象。 |
+| Resource | 转换后的Resource对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## 示例
 

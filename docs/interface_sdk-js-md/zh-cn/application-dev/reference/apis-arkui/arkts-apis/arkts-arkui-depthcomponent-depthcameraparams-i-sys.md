@@ -20,7 +20,7 @@ cameraBufferCrop?: CameraBufferCrop
 
 相机移轴裁剪参数。未设置时默认使用组件布局尺寸作为默认图像基准大小，裁剪偏移量为(0, 0)，缩放比例为1.0。
 
-**类型：** [CameraBufferCrop](../arkts-components/arkts-arkui-camerabuffercrop-i-sys.md)
+**类型：** [CameraBufferCrop](arkts-arkui-depthcomponent-camerabuffercrop-i-sys.md)
 
 **起始版本：** 26.0.0
 

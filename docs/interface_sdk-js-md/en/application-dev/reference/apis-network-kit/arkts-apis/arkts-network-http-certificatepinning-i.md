@@ -13,7 +13,7 @@ Certificate pinning option.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## hashAlgorithm

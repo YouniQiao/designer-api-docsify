@@ -2,7 +2,7 @@
 
 Defines user gesture data.
 
-**Inheritance/Implementation:** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md)
+**Inheritance/Implementation:** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData)
 
 **Since:** 26.0.0
 
@@ -17,7 +17,7 @@ Defines user gesture data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## directionAngle

@@ -34,7 +34,7 @@ Initialize Button FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| ButtonAttribute |  |
 
 ## initialize
 
@@ -58,13 +58,13 @@ Initialize Button FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md) | Yes |  |
+| value | ButtonOptions | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| ButtonAttribute |  |
 
 ## initialize
 
@@ -88,12 +88,12 @@ Initialize Button FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| label | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes |  |
-| options | [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md) | No |  |
+| label | ResourceStr | Yes |  |
+| options | ButtonOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| ButtonAttribute |  |
 

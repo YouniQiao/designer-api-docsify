@@ -1,7 +1,7 @@
 # VersionDownloadProgress
 
-历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
-[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion)方法时，回调函数的入参类型。
+历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion)的  
+[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadHistoryVersion)方法时，回调函数的入参类型。
 
 **起始版本：** 20
 
@@ -49,7 +49,7 @@ state: State
 
 所选版本云文件的下载状态。
 
-**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 20
 

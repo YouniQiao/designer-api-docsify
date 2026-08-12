@@ -13,7 +13,7 @@ A class that provides VM maintenance and test capabilities for developers.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## enableLocalHandleDetection
@@ -56,7 +56,7 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HeapMemoryInfo[]&gt; | Returns a promise containing all the heap memory information from ArkTS-VMs' local heap and the shared heap. |
+| Promise&lt;[HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md)[]&gt; | Returns a promise containing all the heap memory information from ArkTS-VMs' local heap and the shared heap. |
 
 ## offVMHeapMemoryPressure
 
@@ -100,7 +100,7 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | This callback is triggered if the memory reaches the threshold after a GC. The string parameter indicates the type of memory pressure event: "LocalHeapMemPressure", "SharedHeapMemPressure", or "ProcessHeapMemPressure". |
 | heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | Yes | Indicates the percentage threshold of the heap memory to trigger the callback after a GC. The value range is [70, 95]. |
 
 **Return value:**

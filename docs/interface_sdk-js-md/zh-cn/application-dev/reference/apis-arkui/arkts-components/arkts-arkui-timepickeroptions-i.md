@@ -69,7 +69,7 @@ format?: TimePickerFormat
 
 默认值：TimePickerFormat.HOUR_MINUTE
 
-**类型：** [TimePickerFormat](../arkts-apis/arkts-arkui-timepicker-timepickerformat-e.md)
+**类型：** [TimePickerFormat](arkts-arkui-timepickerformat-e.md)
 
 **默认值：** HOUR_MINUTE
 

@@ -18,7 +18,7 @@ style?: GridItemStyle
 
 设置GridItem样式。
 
-**类型：** [GridItemStyle](../arkts-components/arkts-arkui-griditemstyle-e.md)
+**类型：** [GridItemStyle](arkts-arkui-griditem-griditemstyle-e.md)
 
 **起始版本：** 23
 

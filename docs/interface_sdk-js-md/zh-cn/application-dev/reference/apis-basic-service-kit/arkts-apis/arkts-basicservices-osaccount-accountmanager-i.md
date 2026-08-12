@@ -36,8 +36,8 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -109,7 +109,7 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -187,11 +187,11 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -257,11 +257,11 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -321,11 +321,11 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -392,11 +392,11 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId or constraint. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -447,8 +447,8 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -520,7 +520,7 @@ checkOsAccountTestable(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -574,7 +574,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 11开始废弃。建议使用
-> [isOsAccountUnlocked](arkts-basicservices-osaccount-accountmanager-i.md#isosaccountunlocked)替代。
+> [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
 
 **起始版本：** 9
 
@@ -582,7 +582,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 11
 
-**替代接口：** [osAccount.AccountManager.isOsAccountUnlocked](arkts-basicservices-osaccount-accountmanager-i.md#isosaccountunlocked)()
+**替代接口：** [isOsAccountUnlocked](#isOsAccountUnlocked)()
 
 <!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountVerified(callback: AsyncCallback<boolean>): void-End-->
 
@@ -598,7 +598,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -631,7 +631,7 @@ checkOsAccountVerified(): Promise<boolean>
 > **说明：**
 > 
 > 从API version 9开始支持，从API version 11开始废弃。建议使用
-> [isOsAccountUnlocked](arkts-basicservices-osaccount-accountmanager-i.md#isosaccountunlocked)替代。
+> [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
 
 **起始版本：** 9
 
@@ -639,7 +639,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 **废弃版本：** 11
 
-**替代接口：** [osAccount.AccountManager.isOsAccountUnlocked](arkts-basicservices-osaccount-accountmanager-i.md#isosaccountunlocked)()
+**替代接口：** [isOsAccountUnlocked](#isOsAccountUnlocked)()
 
 <!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountVerified(): Promise<boolean>-End-->
 
@@ -655,7 +655,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -710,11 +710,11 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -778,11 +778,11 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -836,8 +836,8 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -921,7 +921,7 @@ getActivatedOsAccountLocalIds(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -975,7 +975,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountCount](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount)替代。
+> [getOsAccountCount](#getOsAccountCount)替代。
 
 **起始版本：** 7
 
@@ -983,7 +983,7 @@ getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountCount](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount)(callback:
+**替代接口：** [getOsAccountCount](osAccount.AccountManager.getOsAccountCount(callback:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1023,7 +1023,7 @@ getCreatedOsAccountsCount(): Promise<number>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountCount](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount)替代。
+> [getOsAccountCount](#getOsAccountCount)替代。
 
 **起始版本：** 7
 
@@ -1031,7 +1031,7 @@ getCreatedOsAccountsCount(): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountCount](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount)()
+**替代接口：** [getOsAccountCount](#getOsAccountCount)()
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1088,14 +1088,14 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1147,14 +1147,14 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1185,7 +1185,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](arkts-basicservices-osaccount-accountmanager-i.md#querydistributedvirtualdeviceid)
+> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)
 > 替代。
 
 **起始版本：** 7
@@ -1194,7 +1194,7 @@ getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.queryDistributedVirtualDeviceId](arkts-basicservices-osaccount-accountmanager-i.md#querydistributedvirtualdeviceid)(callback:
+**替代接口：** [queryDistributedVirtualDeviceId](osAccount.AccountManager.queryDistributedVirtualDeviceId(callback:)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1234,7 +1234,7 @@ getDistributedVirtualDeviceId(): Promise<string>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](arkts-basicservices-osaccount-accountmanager-i.md#querydistributedvirtualdeviceid)替代。
+> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)替代。
 
 **起始版本：** 7
 
@@ -1242,7 +1242,7 @@ getDistributedVirtualDeviceId(): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.queryDistributedVirtualDeviceId](arkts-basicservices-osaccount-accountmanager-i.md#querydistributedvirtualdeviceid)()
+**替代接口：** [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)()
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1301,7 +1301,7 @@ getForegroundOsAccountLocalId(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1362,7 +1362,7 @@ getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountConstraints](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountconstraints)(localId:
+**替代接口：** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1414,7 +1414,7 @@ getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountConstraints](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountconstraints)(localId:
+**替代接口：** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1486,11 +1486,11 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1556,11 +1556,11 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1618,9 +1618,9 @@ getOsAccountCount(callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1700,8 +1700,8 @@ getOsAccountCount(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1771,16 +1771,16 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainAccountInfo&gt; | Promise对象。返回与指定系统账号关联的域账号信息。 |
+| Promise&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | Promise对象。返回与指定系统账号关联的域账号信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1831,15 +1831,15 @@ getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DomainAccountInfo \| null&gt; | Promise对象。返回与指定系统账号关联的域账号信息。 |
+| Promise&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) \| null&gt; | Promise对象。返回与指定系统账号关联的域账号信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | OS account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1894,8 +1894,8 @@ getOsAccountLocalId(callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1973,7 +1973,7 @@ getOsAccountLocalId(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2027,7 +2027,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforserialnumber)
+> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)
 > 替代。
 
 **起始版本：** 8
@@ -2036,7 +2036,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalIdForSerialNumber](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforserialnumber)(serialNumber:
+**替代接口：** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2078,7 +2078,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforserialnumber)
+> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber-1)
 > 替代。
 
 **起始版本：** 8
@@ -2087,7 +2087,7 @@ getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalIdForSerialNumber](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforserialnumber)(serialNumber:
+**替代接口：** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
@@ -2156,10 +2156,10 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2247,10 +2247,10 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainInfo. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2328,10 +2328,10 @@ getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2418,10 +2418,10 @@ getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The account indicated by serialNumber does not exist. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid serialNumber. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2500,9 +2500,9 @@ getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2588,9 +2588,9 @@ getOsAccountLocalIdForUid(uid: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -2674,8 +2674,8 @@ getOsAccountLocalIdForUidSync(uid: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
 ## 示例
 
@@ -2721,7 +2721,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidfordomain)
+> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)
 > 替代。
 
 **起始版本：** 8
@@ -2730,7 +2730,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalIdForDomain](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidfordomain)(domainInfo:
+**替代接口：** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2772,7 +2772,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidfordomain)
+> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain-1)
 > 替代。
 
 **起始版本：** 8
@@ -2781,7 +2781,7 @@ getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalIdForDomain](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidfordomain)(domainInfo:
+**替代接口：** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2826,7 +2826,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)替代。
+> [getOsAccountLocalId](#getOsAccountLocalId)替代。
 
 **起始版本：** 7
 
@@ -2834,7 +2834,7 @@ getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)(callback:
+**替代接口：** [getOsAccountLocalId](osAccount.AccountManager.getOsAccountLocalId(callback:)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
 
@@ -2872,7 +2872,7 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)替代。
+> [getOsAccountLocalId](#getOsAccountLocalId)替代。
 
 **起始版本：** 7
 
@@ -2880,7 +2880,7 @@ getOsAccountLocalIdFromProcess(): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)()
+**替代接口：** [getOsAccountLocalId](#getOsAccountLocalId)()
 
 <!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(): Promise<number>-End-->
 
@@ -2916,7 +2916,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforuid)
+> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)
 > 替代。
 
 **起始版本：** 7
@@ -2925,7 +2925,7 @@ getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalIdForUid](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforuid)(uid:
+**替代接口：** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2967,7 +2967,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforuid)替代。
+> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid-1)替代。
 
 **起始版本：** 7
 
@@ -2975,7 +2975,7 @@ getOsAccountLocalIdFromUid(uid: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountLocalIdForUid](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalidforuid)(uid:
+**替代接口：** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
@@ -3045,8 +3045,8 @@ getOsAccountLocalIds(): Promise<int[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3113,7 +3113,7 @@ getOsAccountName(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3198,10 +3198,10 @@ getOsAccountNameByLocalId(localId: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted Account. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) | Restricted Account. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3241,14 +3241,14 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountType&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3314,13 +3314,13 @@ getOsAccountType(): Promise<OsAccountType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise对象，返回当前进程所属的系统账号的账号类型。 |
+| Promise&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Promise对象，返回当前进程所属的系统账号的账号类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3374,7 +3374,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountType](arkts-basicservices-osaccount-accountmanager-i.md#getosaccounttype)替代。
+> [getOsAccountType](#getOsAccountType)替代。
 
 **起始版本：** 7
 
@@ -3382,7 +3382,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountType](arkts-basicservices-osaccount-accountmanager-i.md#getosaccounttype)(callback:
+**替代接口：** [getOsAccountType](osAccount.AccountManager.getOsAccountType(callback:)
 
 <!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -3392,7 +3392,7 @@ getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountType&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号的账号类型；否则为错误对象。 |
 
 ## 示例
 
@@ -3419,7 +3419,7 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](arkts-basicservices-osaccount-accountmanager-i.md#getosaccounttype)
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getOsAccountType)
 > 替代。
 
 **起始版本：** 7
@@ -3428,7 +3428,7 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getOsAccountType](arkts-basicservices-osaccount-accountmanager-i.md#getosaccounttype)()
+**替代接口：** [getOsAccountType](#getOsAccountType)()
 
 <!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountTypeFromProcess(): Promise<OsAccountType>-End-->
 
@@ -3438,7 +3438,7 @@ getOsAccountTypeFromProcess(): Promise<OsAccountType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountType&gt; | Promise对象，返回当前进程所属的系统账号的账号类型。 |
+| Promise&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Promise对象，返回当前进程所属的系统账号的账号类型。 |
 
 ## 示例
 
@@ -3464,7 +3464,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getserialnumberforosaccountlocalid)
+> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)
 > 替代。
 
 **起始版本：** 8
@@ -3473,7 +3473,7 @@ getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<numbe
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getSerialNumberForOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getserialnumberforosaccountlocalid)(localId:
+**替代接口：** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -3516,7 +3516,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getserialnumberforosaccountlocalid)
+> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId-1)
 > 替代。
 
 **起始版本：** 8
@@ -3525,7 +3525,7 @@ getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getSerialNumberForOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getserialnumberforosaccountlocalid)(localId:
+**替代接口：** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
@@ -3593,10 +3593,10 @@ getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3683,10 +3683,10 @@ getSerialNumberForOsAccountLocalId(localId: int): Promise<long>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -3743,7 +3743,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](arkts-basicservices-osaccount-accountmanager-i.md#checkmultiosaccountenabled)
+> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)
 > 替代。
 
 **起始版本：** 7
@@ -3752,7 +3752,7 @@ isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkMultiOsAccountEnabled](arkts-basicservices-osaccount-accountmanager-i.md#checkmultiosaccountenabled)(callback:
+**替代接口：** [checkMultiOsAccountEnabled](osAccount.AccountManager.checkMultiOsAccountEnabled(callback:)
 
 <!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -3790,7 +3790,7 @@ isMultiOsAccountEnable(): Promise<boolean>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](arkts-basicservices-osaccount-accountmanager-i.md#checkmultiosaccountenabled)替代。
+> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)替代。
 
 **起始版本：** 7
 
@@ -3798,7 +3798,7 @@ isMultiOsAccountEnable(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkMultiOsAccountEnabled](arkts-basicservices-osaccount-accountmanager-i.md#checkmultiosaccountenabled)()
+**替代接口：** [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)()
 
 <!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>--><!--Device-AccountManager-isMultiOsAccountEnable(): Promise<boolean>-End-->
 
@@ -3841,7 +3841,7 @@ isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountActivated](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountactivated)(localId:
+**替代接口：** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3893,7 +3893,7 @@ isOsAccountActived(localId: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountActivated](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountactivated)(localId:
+**替代接口：** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3948,7 +3948,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountConstraintEnabled](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountconstraintenabled)(localId:
+**替代接口：** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4002,7 +4002,7 @@ isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolea
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountConstraintEnabled](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountconstraintenabled)(localId:
+**替代接口：** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4073,8 +4073,8 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -4145,7 +4145,7 @@ isOsAccountUnlocked(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -4199,7 +4199,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountVerified](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountverified)
+> [checkOsAccountVerified](#checkOsAccountVerified)
 > 替代。
 
 **起始版本：** 7
@@ -4208,7 +4208,7 @@ isOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountVerified](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountverified)(callback:
+**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(callback:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -4255,7 +4255,7 @@ isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountVerified](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountverified)(localId:
+**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -4305,7 +4305,7 @@ isOsAccountVerified(localId?: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountVerified](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccountverified)(localId:
+**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -4349,7 +4349,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccounttestable)
+> [checkOsAccountTestable](#checkOsAccountTestable)
 > 替代。
 
 **起始版本：** 7
@@ -4358,7 +4358,7 @@ isTestOsAccount(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountTestable](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccounttestable)(callback:
+**替代接口：** [checkOsAccountTestable](osAccount.AccountManager.checkOsAccountTestable(callback:)
 
 <!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
 
@@ -4396,7 +4396,7 @@ isTestOsAccount(): Promise<boolean>
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccounttestable)替代。
+> [checkOsAccountTestable](#checkOsAccountTestable)替代。
 
 **起始版本：** 7
 
@@ -4404,7 +4404,7 @@ isTestOsAccount(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.checkOsAccountTestable](arkts-basicservices-osaccount-accountmanager-i.md#checkosaccounttestable)()
+**替代接口：** [checkOsAccountTestable](#checkOsAccountTestable)()
 
 <!--Device-AccountManager-isTestOsAccount(): Promise<boolean>--><!--Device-AccountManager-isTestOsAccount(): Promise<boolean>-End-->
 
@@ -4440,7 +4440,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](arkts-basicservices-osaccount-accountmanager-i.md#getactivatedosaccountlocalids)
+> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)
 > 替代。
 
 **起始版本：** 8
@@ -4449,7 +4449,7 @@ queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getActivatedOsAccountLocalIds](arkts-basicservices-osaccount-accountmanager-i.md#getactivatedosaccountlocalids)(callback:
+**替代接口：** [getActivatedOsAccountLocalIds](osAccount.AccountManager.getActivatedOsAccountLocalIds(callback:)
 
 <!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -4490,7 +4490,7 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](arkts-basicservices-osaccount-accountmanager-i.md#getactivatedosaccountlocalids)替代。
+> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)替代。
 
 **起始版本：** 8
 
@@ -4498,7 +4498,7 @@ queryActivatedOsAccountIds(): Promise<Array<number>>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getActivatedOsAccountLocalIds](arkts-basicservices-osaccount-accountmanager-i.md#getactivatedosaccountlocalids)()
+**替代接口：** [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)()
 
 <!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>--><!--Device-AccountManager-queryActivatedOsAccountIds(): Promise<Array<number>>-End-->
 
@@ -4541,7 +4541,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getCurrentOsAccount](arkts-basicservices-osaccount-accountmanager-i.md#getcurrentosaccount)(callback:
+**替代接口：** [getCurrentOsAccount](osAccount.AccountManager.getCurrentOsAccount(callback:)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4553,7 +4553,7 @@ queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;OsAccountInfo&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | 是 | 回调函数。如果查询成功，err为null，data为当前进程所属的系统账号信息；否则为错误对象。 |
 
 ## 示例
 
@@ -4588,7 +4588,7 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 **废弃版本：** 9
 
-**替代接口：** [osAccount.AccountManager.getCurrentOsAccount](arkts-basicservices-osaccount-accountmanager-i.md#getcurrentosaccount)()
+**替代接口：** [getCurrentOsAccount](#getCurrentOsAccount)()
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -4600,7 +4600,7 @@ queryCurrentOsAccount(): Promise<OsAccountInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OsAccountInfo&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
+| Promise&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Promise对象，返回当前进程所属的系统账号信息。 |
 
 ## 示例
 
@@ -4643,9 +4643,9 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -4719,8 +4719,8 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 

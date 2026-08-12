@@ -18,7 +18,7 @@ customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode
 
 已移出组件树的缓存自定义节点的冻结模式。默认值：LazyForEachCustomComponentFreezeMode.AUTO。
 
-**类型：** [LazyForEachCustomComponentFreezeMode](../arkts-components/arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)
+**类型：** [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeach-lazyforeachcustomcomponentfreezemode-e.md)
 
 **默认值：** LazyForEachCustomComponentFreezeMode.AUTO
 
@@ -40,7 +40,7 @@ memoryOptimizationStrategy?: LazyForEachMemOptStrategy
 
 LazyForEach的内存优化策略。该参数在创建LazyForEach时设定，不支持动态修改。默认值：[DEFAULT]。
 
-**类型：** [LazyForEachMemOptStrategy](../arkts-components/arkts-arkui-lazyforeachmemoptstrategy-e.md)
+**类型：** [LazyForEachMemOptStrategy](arkts-arkui-lazyforeach-lazyforeachmemoptstrategy-e.md)
 
 **起始版本：** 26.0.0
 
@@ -60,7 +60,7 @@ releaseStrategy?: LazyForEachReleaseStrategy
 
 LazyForEach缓存节点的资源释放策略。默认值：LazyForEachReleaseStrategy.BATCH。&lt;br&gt;默认值:默认值：LazyForEachReleaseStrategy.BATCH。
 
-**类型：** [LazyForEachReleaseStrategy](../arkts-components/arkts-arkui-lazyforeachreleasestrategy-e.md)
+**类型：** [LazyForEachReleaseStrategy](arkts-arkui-lazyforeach-lazyforeachreleasestrategy-e.md)
 
 **默认值：** LazyForEachReleaseStrategy.BATCH
 

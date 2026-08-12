@@ -2,7 +2,7 @@
 
 Effect resource.
 
-**Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **Since:** 21
 
@@ -38,6 +38,26 @@ Get the value of a specific effect property.
 | --- |
 | Object |
 
+## Examples
+
+```TypeScript
+import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
+
+function getEffectProperty() {
+  let scene: Promise<Scene> = Scene.load();
+  scene.then(async (result: Scene | undefined) => {
+    if (!result) {
+      return;
+    }
+    let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+    // Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for example, 'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'.
+    let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
+    let effect: Effect = await sceneFactory.createEffect(params);
+    effect.getPropertyValue('exposure');
+  });
+}
+```
+
 ## setPropertyValue
 
 ```TypeScript
@@ -66,6 +86,26 @@ Set the value of a specific effect property
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
+
+function setEffectProperty() {
+  let scene: Promise<Scene> = Scene.load();
+  scene.then(async (result: Scene | undefined) => {
+    if (!result) {
+      return;
+    }
+    let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+    // Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for example, 'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'.
+    let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
+    let effect: Effect = await sceneFactory.createEffect(params);
+    effect.setPropertyValue('exposure', 1);
+  });
+}
+```
 
 ## effectId
 

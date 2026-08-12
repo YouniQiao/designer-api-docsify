@@ -11,7 +11,7 @@ The AbilityManager module provides APIs for obtaining, adding, and updating abil
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

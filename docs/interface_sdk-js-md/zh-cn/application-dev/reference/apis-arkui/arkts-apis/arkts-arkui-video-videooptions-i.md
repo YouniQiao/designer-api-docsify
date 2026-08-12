@@ -38,7 +38,7 @@ currentProgressRate?: double | string | PlaybackSpeed
 
 视频播放倍速。number格式取值仅支持：0.75，1.0，1.25，1.75，2.0。从API version 22开始，新增支持取值0.5，1.5，3，0.25和0.125。从API版本26.0.0开始，支持取值范围：[0.125, 8]。string格式支持number格式取值的字符串形式："0.75"，"1.0"，"1.25"，"1.75"，"2.0"。从API version 22开始，新增支持取值"0.5"，"1.5"，"3"，"0.25"和"0.125"。除此之外的取值，比如"abc"或"1.5+1.5"会按照异常值处理。默认值：1.0 | PlaybackSpeed.Speed_Forward_1_00_X，异常值：按默认值处理。
 
-**类型：** double \| string \| PlaybackSpeed
+**类型：** double \| string \| [PlaybackSpeed](arkts-arkui-video-playbackspeed-e.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ imageAIOptions?: ImageAIOptions
 
 设置图像AI分析选项，可配置分析类型或绑定一个分析控制器。
 
-**类型：** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
+**类型：** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
 
 **起始版本：** 23
 
@@ -98,7 +98,7 @@ previewUri?: string | PixelMap | Resource
 
 视频未播放时的预览图片路径，默认不显示图片。string格式可用于加载本地图片和网络图片。支持网络图片地址。支持相对路径引用本地图片。当使用相对路径引用本地图片时，不支持跨包/跨模块调用。支持file://路径前缀的字符串，即应用沙箱URI：file://\&lt;bundleName&gt;/\&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。Resource格式可以跨包/跨模块访问资源文件。支持rawfile文件下的资源。支持通过\$r引用系统资源或者应用资源中的图片。默认值：空字符串，异常值：按默认值处理。
 
-**类型：** string \| PixelMap \| Resource
+**类型：** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -118,7 +118,7 @@ src?: string | Resource
 
 视频的数据源，支持本地视频和网络视频。Resource格式可以跨包/跨模块访问资源文件，常用于访问本地视频。仅支持rawfile文件下的资源。string格式可用于加载网络视频和本地视频，常用于加载网络视频。支持网络视频地址。支持file://路径前缀的字符串，即应用沙箱URI：file://\&lt;bundleName&gt;/\&lt;sandboxPath&gt;。用于读取应用沙箱路径内的资源。需要保证目录包路径下的文件有可读权限。默认值：空字符串，异常值：按默认值处理。视频支持的格式是：mp4、mkv、TS。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

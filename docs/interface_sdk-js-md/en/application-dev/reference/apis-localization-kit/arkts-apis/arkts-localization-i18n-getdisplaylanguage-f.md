@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getDisplayLanguage
@@ -20,7 +20,7 @@ Obtains the localized script for the specified language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.System.getDisplayLanguage](arkts-localization-i18n-system-c.md#getdisplaylanguage)
+**Substitutes:** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getDisplayLanguage)
 
 <!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 

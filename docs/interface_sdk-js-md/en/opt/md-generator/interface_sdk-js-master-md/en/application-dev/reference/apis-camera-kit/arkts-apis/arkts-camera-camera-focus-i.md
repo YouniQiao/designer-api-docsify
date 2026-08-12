@@ -1,10 +1,10 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery).
 
 It provides APIs related to focus operations.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
 
 **Since:** 11
 
@@ -15,7 +15,7 @@ It provides APIs related to focus operations.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFocalLength
@@ -44,7 +44,7 @@ Obtains the focal length in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getFocusMode
 
@@ -72,7 +72,7 @@ Obtains the focus mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getFocusPoint
 
@@ -94,13 +94,13 @@ Obtains the focal point in use.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) |
+| [Point](arkts-camera-camera-point-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## lockFocusTracking
 
@@ -124,14 +124,14 @@ Lock focus tracking.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| focusPoint | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
+| focusPoint | [Point](arkts-camera-camera-point-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## setFocusMode
 
@@ -141,7 +141,7 @@ setFocusMode(afMode: FocusMode): void
 
 Sets a focus mode.
 
-Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported) to check whether the focus mode is supported.
+Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported) to check whether the focus mode is supported.
 
 **Since:** 11
 
@@ -161,7 +161,7 @@ Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setFocusPoint
 
@@ -185,13 +185,13 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## unlockFocusTracking
 
@@ -215,5 +215,5 @@ Unlock focus tracking.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |

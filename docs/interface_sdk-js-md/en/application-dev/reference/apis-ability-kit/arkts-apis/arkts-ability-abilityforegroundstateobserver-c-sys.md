@@ -36,3 +36,23 @@ Called when the ability is switched between foreground and background.
 | --- | --- | --- | --- |
 | abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | Yes | Ability state data. |
 
+## Examples
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: abilityManager.AbilityForegroundStateObserver = {
+  onAbilityStateChanged(abilityStateData) {
+    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  },
+};
+try {
+  abilityManager.on('abilityForegroundState', observer);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error code: ${code}, error msg: ${message}`);
+}
+```
+

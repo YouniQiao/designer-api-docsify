@@ -32,7 +32,7 @@ Queries usage information about each bundle within a specified period at a speci
 | byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | 是 |
 | begin | number | 是 |
 | end | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStateInfo&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -90,7 +90,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;BundleStateInfo&gt;&gt; |
+| Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; |
 
 ## 示例
 

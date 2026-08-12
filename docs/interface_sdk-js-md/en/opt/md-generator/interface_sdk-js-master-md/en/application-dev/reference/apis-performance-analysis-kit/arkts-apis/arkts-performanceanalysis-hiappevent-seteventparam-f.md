@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setEventParam
@@ -26,7 +26,7 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| params | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ParamType&gt; | Yes |
+| params | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes |
 | domain | string | Yes |
 | name | string | No |
 
@@ -34,19 +34,19 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) |
-| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
-| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
-| [11101007](../errorcode-hiappevent.md#11101007-invalid-number-of-custom-event-parameters) |
-| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
+| [11101001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-invalid-event-domain-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [11101002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-invalid-event-name) |
+| [11101005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-invalid-event-parameter-name) |
+| [11101004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) |
+| [11101007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101007-invalid-number-of-custom-event-parameters) |
+| [11100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-application-event-logging-disabled) |
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # ScrollType
 
-Scroll滚动类型，用于[setScrollable](setScrollable)。
+Scroll滚动类型，用于[setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setScrollable)。
 
 **起始版本：** 12
 

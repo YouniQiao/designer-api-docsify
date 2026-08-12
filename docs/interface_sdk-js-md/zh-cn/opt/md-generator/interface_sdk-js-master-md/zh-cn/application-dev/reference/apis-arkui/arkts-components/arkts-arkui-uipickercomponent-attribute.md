@@ -1,8 +1,8 @@
 # UIPickerComponent属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](./common)外，还支持以下属性：
 
-除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件：
+除支持[通用事件](./common)外，还支持以下事件：
 
 **继承/实现关系：** UIPickerComponentAttribute extends [CommonMethod<UIPickerComponentAttribute>](CommonMethod<UIPickerComponentAttribute>)
 
@@ -43,7 +43,7 @@ displayedItemCount(count: Optional<number>)
 ```
 
 设置UIPickerComponent容器可见选项的数量。未通过该接口设置时，可见选项的数量为7行。需要节省空间时减少可见项数量，需要提供更多预览信息时增加可见项数量。此属性与[itemHeight](UIPickerComponentAttribute#itemHeight)共同影响组件的显示效果，建议结合组件  
-[height](arkts-arkui-commonmethod-c.md#height)属性进行调整以保证完整显示。
+[height](CommonMethod#height(value: Length))属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
 
@@ -97,7 +97,7 @@ itemHeight(height: Optional<LengthMetrics>)
 
 设置UIPickerComponent容器每个选项的高度。未通过该接口设置时，每个选项的高度为40vp。选项内容较多或需要更大字体显示时可增大高度以避免内容裁剪，选项内容简洁或需要紧凑显示时可减小高度。此属性与  
 [displayedItemCount](UIPickerComponentAttribute#displayedItemCount)共同影响组件的显示效果，建议结合组件  
-[height](arkts-arkui-commonmethod-c.md#height)属性进行调整以保证完整显示。
+[height](CommonMethod#height(value: Length))属性进行调整以保证完整显示。
 
 **起始版本：** 26.0.0
 
@@ -144,7 +144,7 @@ onChange(callback: Optional<OnUIPickerComponentCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnUIPickerComponentCallback&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
 
 ## onScrollStop
 
@@ -181,7 +181,7 @@ onScrollStop(callback: Optional<OnUIPickerComponentCallback>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnUIPickerComponentCallback&gt; | 是 |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | 是 |
 
 ## selectionIndicator
 
@@ -205,4 +205,4 @@ selectionIndicator(style: Optional<PickerIndicatorStyle>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerIndicatorStyle&gt; | 是 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | 是 |

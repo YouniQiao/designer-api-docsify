@@ -11,7 +11,7 @@ Defines the result of the operation for subscribing to or unsubscribing from the
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## key

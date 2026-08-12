@@ -16,4 +16,4 @@ Listener used to observe the copy progress.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| progress | [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Yes |
+| progress | [Progress](arkts-corefile-file-fs-progress-i.md) | Yes |

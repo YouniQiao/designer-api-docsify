@@ -20,7 +20,7 @@ Font color.
 
 Default value: theme color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -40,9 +40,9 @@ Default value: theme color.
 fontConfigs?: FontConfigs
 ```
 
-Font configuration. The default value is inherited from [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md).
+Font configuration. The default value is inherited from [FontConfigs](FontConfigs).
 
-**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**Type:** FontConfigs
 
 **Since:** 24
 
@@ -66,7 +66,7 @@ Font family.
 
 Default value: theme font.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -92,9 +92,9 @@ Default value: 16 fp.
 
 If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead.
 
-Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [fp](common)
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 
@@ -118,7 +118,7 @@ Font style.
 
 Default value: **FontStyle.Normal**.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ Text stroke color.
 
 Default value: text color. If invalid values are provided, the text color is used.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 20
 
@@ -222,7 +222,7 @@ Default value: **StrokeJoinStyle.MITER_JOIN**.
 
 **Since**: 26.0.0.
 
-**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
+**Type:** StrokeJoinStyle
 
 **Since:** 26.0.0
 
@@ -248,7 +248,7 @@ If the value is less than 0, the text is solid. If the value is greater than 0, 
 
 Default value: **0**.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 20
 
@@ -272,7 +272,7 @@ Superscript or subscript for the text.
 
 Default value: **SuperscriptStyle.NORMAL**.
 
-**Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
+**Type:** SuperscriptStyle
 
 **Since:** 20
 

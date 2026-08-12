@@ -32,8 +32,8 @@ function createPictureFromParcel(sequence: rpc.MessageSequence): Picture
 
 | 错误码ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

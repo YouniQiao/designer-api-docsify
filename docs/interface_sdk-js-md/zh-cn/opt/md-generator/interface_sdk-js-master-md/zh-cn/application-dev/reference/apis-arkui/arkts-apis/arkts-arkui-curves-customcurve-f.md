@@ -22,13 +22,13 @@ function customCurve(interpolate: (fraction: number) => number): ICurve
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| interpolate | (fraction: number) =&gt; number | 是 |
+| interpolate | (fraction: number) = & gt; number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| [ICurve](arkts-arkui-icurve-t.md) |
 
 ## 示例
 

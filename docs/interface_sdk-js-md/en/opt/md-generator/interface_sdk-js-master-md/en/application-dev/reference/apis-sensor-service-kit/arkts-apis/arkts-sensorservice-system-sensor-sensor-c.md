@@ -4,7 +4,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor
+**Substitutes:** [sensor/sensor](ohos.sensor/sensor)
 
 <!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
 
@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## getOnBodyState
@@ -28,7 +28,7 @@ Obtains the wearing state of a wearable device.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#WEAR_DETECTION
+**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -60,7 +60,7 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -94,7 +94,7 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -126,7 +126,7 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#ORIENTATION
+**Substitutes:** [ORIENTATION](ohos.sensor/sensor.SensorId#ORIENTATION)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -160,7 +160,7 @@ If this API is called multiple times for the same application, the last call tak
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -194,7 +194,7 @@ If this API is called multiple times for the same application, the last call tak
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -228,7 +228,7 @@ Subscribes to data changes of the heart rate sensor. If this API is called multi
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -262,7 +262,7 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#AMBIENT_LIGHT
+**Substitutes:** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_LIGHT)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -294,7 +294,7 @@ Subscribes to wearing status changes of a wearable device. If this API is called
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -326,7 +326,7 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#PROXIMITY
+**Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -358,7 +358,7 @@ Subscribes to data changes of the step counter sensor. If this API is called mul
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.on(type:
+**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -392,7 +392,7 @@ Unsubscribes from data changes of the acceleration sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -420,7 +420,7 @@ Unsubscribes from data changes of the barometer sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -446,7 +446,7 @@ Unsubscribes from data changes of the compass sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -472,7 +472,7 @@ Unsubscribes from data changes of the device orientation sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -498,7 +498,7 @@ Unsubscribes from data changes of the gyroscope sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -526,7 +526,7 @@ Unsubscribes from data changes of the heart rate sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -554,7 +554,7 @@ Unsubscribes from data changes of the ambient light sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -580,7 +580,7 @@ Unsubscribes from wearing status changes of a wearable device.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -606,7 +606,7 @@ Unsubscribes from data changes of the proximity sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#PROXIMITY
+**Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -632,7 +632,7 @@ Unsubscribes from data changes of the step counter sensor.
 
 **Deprecated since:** 8
 
-**Substitutes:** @ohos.sensor:sensor.off(type:
+**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 

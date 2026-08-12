@@ -22,7 +22,7 @@ showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.PromptAction#showDialog
+**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,8 +41,8 @@ showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -327,7 +327,7 @@ showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.PromptAction#showDialog
+**替代接口：** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -345,14 +345,14 @@ showDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中的
 
 | 类型 |
 | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; |
+| Promise & lt;ShowDialogSuccessResponse & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

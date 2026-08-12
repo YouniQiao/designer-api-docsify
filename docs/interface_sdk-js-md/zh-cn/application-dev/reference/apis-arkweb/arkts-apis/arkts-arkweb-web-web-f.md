@@ -26,11 +26,11 @@ Defines Web Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [WebOptions](arkts-arkweb-web-weboptions-i.md) | 是 | . |
-| content_ | [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebAttribute](../arkts-components/arkts-arkweb-web-attribute.md) |  |
+| [WebAttribute](arkts-arkweb-web-webattribute-i.md) |  |
 

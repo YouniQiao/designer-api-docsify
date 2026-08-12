@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## startAbilityForResult
@@ -15,11 +15,11 @@ function startAbilityForResult(parameter: StartAbilityParameter, callback: Async
 Starts an ability. This API uses an asynchronous callback to return the result. The following situations may be possible for a started ability:
 
 - Normally, you can call  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability. The result is returned to the caller.  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateSelfWithResult)to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  
 **-1**, is returned to the caller.  
 - If different applications call this API to start an ability that uses the singleton mode and then call  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateSelfWithResult)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which  
 **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**
@@ -82,11 +82,11 @@ function startAbilityForResult(parameter: StartAbilityParameter): Promise<Abilit
 Starts an ability. This API uses a promise to return the result. The following situations may be possible for a started ability:
 
 - Normally, you can call  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability. The result is returned to the caller.  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateSelfWithResult)to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an exception message, in which **resultCode** is  
 **-1**, is returned to the caller.  
 - If different applications call this API to start an ability that uses the singleton mode and then call  
-[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which  
+[terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateSelfWithResult)to terminate the ability, the normal result is returned to the last caller, and an exception message, in which  
 **resultCode** is **-1**, is returned to others.
 
 > **NOTE：**

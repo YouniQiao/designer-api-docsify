@@ -13,7 +13,7 @@ MacroQuery provides the API to check the support for macro photography.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## isMacroSupported
@@ -23,7 +23,7 @@ isMacroSupported(): boolean
 ```
 
 Checks whether macro photography is supported in the current state. This API must be called after   
-[commitConfig](arkts-camera-camera-session-i.md#commitconfig).
+[commitConfig](arkts-camera-camera-session-i.md#commitConfig).
 
 **Since:** 19
 
@@ -45,5 +45,5 @@ Checks whether macro photography is supported in the current state. This API mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 18 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 18 |
 

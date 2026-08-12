@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## getUserDesktopDir
@@ -33,8 +33,8 @@ Obtains the sandbox path of the pre-authorized **Desktop** directory.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 13900042 |
 
 ## Examples

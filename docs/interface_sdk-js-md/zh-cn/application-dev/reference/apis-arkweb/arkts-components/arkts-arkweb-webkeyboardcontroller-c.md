@@ -1,6 +1,6 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the {@link onInterceptKeyboardAttach} event.
+Define the controller to interact with a custom keyboard, related to the [onInterceptKeyboardAttach](onInterceptKeyboardAttach) event.
 
 **起始版本：** 12
 
@@ -130,5 +130,5 @@ Send the function of the key.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | number | 是 | action indicates the "enter" key related to the {@link inputMethodEngine} |
+| key | number | 是 | action indicates the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md#inputMethodEngine) |
 

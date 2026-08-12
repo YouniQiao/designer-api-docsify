@@ -22,5 +22,5 @@ Defines the callback type used in accessibility hover transparent event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes | The value of event contains information about original accessibility hover event. |
+| event | [TouchEvent](arkts-arkui-touchevent-i.md) | Yes | The value of event contains information about original accessibility hover event. |
 

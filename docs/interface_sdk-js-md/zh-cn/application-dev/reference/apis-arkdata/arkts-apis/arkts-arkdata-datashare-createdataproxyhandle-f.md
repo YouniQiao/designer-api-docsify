@@ -22,13 +22,13 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;DataProxyHandle&gt; | Promise对象。返回DataProxyHandle实例。 |
+| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; | Promise对象。返回DataProxyHandle实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## 示例
 

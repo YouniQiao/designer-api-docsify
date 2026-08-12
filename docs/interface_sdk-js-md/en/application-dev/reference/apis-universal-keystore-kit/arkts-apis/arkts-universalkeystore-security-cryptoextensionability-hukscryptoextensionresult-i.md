@@ -13,7 +13,7 @@ Represents the operation result of crypto extension.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from 'kits/@kit.UniversalKeystoreKit';
+import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
 ```
 
 ## authState
@@ -42,7 +42,7 @@ certs?: Array<HuksCryptoExtensionCertInfo>
 
 The cert array.
 
-**Type:** Array&lt;HuksCryptoExtensionCertInfo&gt;
+**Type:** Array&lt;[HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md)&gt;
 
 **Since:** 22
 

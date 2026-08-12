@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statfs } from 'kits/@kit.CoreFileKit';
+import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## getFreeSizeSync

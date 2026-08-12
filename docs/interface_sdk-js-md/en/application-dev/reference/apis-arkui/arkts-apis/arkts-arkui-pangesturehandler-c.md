@@ -62,13 +62,13 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the pan gesture is cancelled. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the pan gesture is cancelled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionCancel
 
@@ -77,7 +77,7 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
 Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](arkts-arkui-pangesturehandler-c.md#onactioncancel), this API returns gesture event information.
+[onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
 
@@ -95,13 +95,13 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when the pan gesture is cancelled. Gesture event information is returned. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when the pan gesture is cancelled. Gesture event information is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionEnd
 
@@ -127,13 +127,13 @@ Sets the callback for pan gesture recognition completion. This callback is trigg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked when pan gesture recognition completes. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked when pan gesture recognition completes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionStart
 
@@ -159,13 +159,13 @@ Sets the callback for successful pan gesture recognition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked upon successful pan gesture recognition. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked upon successful pan gesture recognition. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Pan gesture handler object. |
 
 ## onActionUpdate
 
@@ -191,11 +191,11 @@ Sets the callback for pan gesture movement updates. The callback is triggered wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback invoked during pan gesture movement.&lt;br&gt;If **fingerList** contains multiple fingers, this callback updates the location information of only one finger each time. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback invoked during pan gesture movement.&lt;br&gt;If **fingerList** contains multiple fingers, this callback updates the location information of only one finger each time. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PanGestureHandler](arkts-arkui-gesture-pangesturehandler-c.md) | Pan gesture handler object. |
+| [PanGestureHandler](arkts-arkui-pangesturehandler-c.md) | Pan gesture handler object. |
 

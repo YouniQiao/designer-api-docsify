@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## onAdvertisingStateChange
@@ -34,4 +34,4 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |

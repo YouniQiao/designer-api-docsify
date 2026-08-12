@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.hiTraceMeter
+**替代接口：** [hiTraceMeter](arkts-hitracemeter.md#hiTraceMeter)
 
 <!--Device-unnamed-declare namespace bytrace--><!--Device-unnamed-declare namespace bytrace-End-->
 

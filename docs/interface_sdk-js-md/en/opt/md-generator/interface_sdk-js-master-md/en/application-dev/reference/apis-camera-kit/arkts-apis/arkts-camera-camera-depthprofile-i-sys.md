@@ -1,6 +1,6 @@
 # DepthProfile (System API)
 
-Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md).
+Describes the profile of depth data. It inherits from [Profile](arkts-camera-camera-profile-i.md#Profile).
 
 **Since:** 13
 
@@ -13,7 +13,7 @@ Describes the profile of depth data. It inherits from [Profile](arkts-camera-cam
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## dataAccuracy
@@ -42,7 +42,7 @@ readonly format: CameraFormat
 
 Camera output format.
 
-**Type:** [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md)
+**Type:** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
 **Since:** 13
 
@@ -60,7 +60,7 @@ readonly size: Size
 
 Depth data resolution.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 13
 

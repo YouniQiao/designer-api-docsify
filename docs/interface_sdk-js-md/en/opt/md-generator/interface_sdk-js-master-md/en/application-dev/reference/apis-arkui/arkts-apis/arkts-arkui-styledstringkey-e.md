@@ -14,7 +14,7 @@ Sets the style for a range styled string.
 FONT = 0
 ```
 
-Font style key, applicable to [TextStyle](arkts-arkui-textstyle-c.md).
+Font style key, applicable to [TextStyle](arkts-arkui-textstyle-c.md#TextStyle).
 
 **Since:** 12
 
@@ -32,7 +32,7 @@ Font style key, applicable to [TextStyle](arkts-arkui-textstyle-c.md).
 DECORATION = 1
 ```
 
-Text decorative line style key, applicable to [DecorationStyle](arkts-arkui-decorationstyle-c.md).
+Text decorative line style key, applicable to [DecorationStyle](arkts-arkui-decorationstyle-c.md#DecorationStyle).
 
 **Since:** 12
 
@@ -50,7 +50,7 @@ Text decorative line style key, applicable to [DecorationStyle](arkts-arkui-deco
 BASELINE_OFFSET = 2
 ```
 
-Text baseline offset style key, applicable to [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md).
+Text baseline offset style key, applicable to [BaselineOffsetStyle](arkts-arkui-baselineoffsetstyle-c.md#BaselineOffsetStyle).
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Text baseline offset style key, applicable to [BaselineOffsetStyle](arkts-arkui-
 LETTER_SPACING = 3
 ```
 
-Text letter spacing style key, applicable to [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md).
+Text letter spacing style key, applicable to [LetterSpacingStyle](arkts-arkui-letterspacingstyle-c.md#LetterSpacingStyle).
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ Text letter spacing style key, applicable to [LetterSpacingStyle](arkts-arkui-le
 TEXT_SHADOW = 4
 ```
 
-Text shadow style key, applicable to [TextShadowStyle](arkts-arkui-textshadowstyle-c.md).
+Text shadow style key, applicable to [TextShadowStyle](arkts-arkui-textshadowstyle-c.md#TextShadowStyle).
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ Text shadow style key, applicable to [TextShadowStyle](arkts-arkui-textshadowsty
 LINE_HEIGHT = 5
 ```
 
-Text line height style key, applicable to [LineHeightStyle](arkts-arkui-lineheightstyle-c.md).
+Text line height style key, applicable to [LineHeightStyle](arkts-arkui-lineheightstyle-c.md#LineHeightStyle).
 
 **Since:** 12
 
@@ -122,7 +122,7 @@ Text line height style key, applicable to [LineHeightStyle](arkts-arkui-lineheig
 BACKGROUND_COLOR = 6
 ```
 
-Text background color style key, applicable to [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md).
+Text background color style key, applicable to [BackgroundColorStyle](arkts-arkui-backgroundcolorstyle-c.md#BackgroundColorStyle).
 
 **Since:** 14
 
@@ -140,7 +140,7 @@ Text background color style key, applicable to [BackgroundColorStyle](arkts-arku
 URL = 7
 ```
 
-Hyperlink style key, applicable to [UrlStyle](arkts-arkui-urlstyle-c.md).
+Hyperlink style key, applicable to [UrlStyle](arkts-arkui-urlstyle-c.md#UrlStyle).
 
 **Since:** 14
 
@@ -158,7 +158,7 @@ Hyperlink style key, applicable to [UrlStyle](arkts-arkui-urlstyle-c.md).
 LINE_SPACING = 8
 ```
 
-Text line spacing style key, applicable to [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md).
+Text line spacing style key, applicable to [LineSpacingStyle](arkts-arkui-linespacingstyle-c.md#LineSpacingStyle).
 
 **Since**: 26.0.0
 
@@ -178,7 +178,7 @@ Text line spacing style key, applicable to [LineSpacingStyle](arkts-arkui-linesp
 GESTURE = 100
 ```
 
-Gesture key, applicable to [GestureStyle](arkts-arkui-gesturestyle-c.md).
+Gesture key, applicable to [GestureStyle](arkts-arkui-gesturestyle-c.md#GestureStyle).
 
 **Since:** 12
 
@@ -196,7 +196,7 @@ Gesture key, applicable to [GestureStyle](arkts-arkui-gesturestyle-c.md).
 PARAGRAPH_STYLE = 200
 ```
 
-Paragraph style key, applicable to [ParagraphStyle](arkts-arkui-paragraphstyle-c.md).
+Paragraph style key, applicable to [ParagraphStyle](arkts-arkui-paragraphstyle-c.md#ParagraphStyle).
 
 **Since:** 12
 
@@ -214,7 +214,7 @@ Paragraph style key, applicable to [ParagraphStyle](arkts-arkui-paragraphstyle-c
 IMAGE = 300
 ```
 
-Image key, applicable to [ImageAttachment](arkts-arkui-imageattachment-c.md).
+Image key, applicable to [ImageAttachment](arkts-arkui-imageattachment-c.md#ImageAttachment).
 
 **Since:** 12
 
@@ -232,7 +232,7 @@ Image key, applicable to [ImageAttachment](arkts-arkui-imageattachment-c.md).
 CUSTOM_SPAN = 400
 ```
 
-Custom span key, applicable to [CustomSpan](arkts-arkui-customspan-c.md).
+Custom span key, applicable to [CustomSpan](arkts-arkui-customspan-c.md#CustomSpan).
 
 **Since:** 12
 
@@ -250,7 +250,7 @@ Custom span key, applicable to [CustomSpan](arkts-arkui-customspan-c.md).
 USER_DATA = 500
 ```
 
-User data span key, applicable to [UserDataSpan](arkts-arkui-userdataspan-c.md).
+User data span key, applicable to [UserDataSpan](arkts-arkui-userdataspan-c.md#UserDataSpan).
 
 **Since:** 12
 

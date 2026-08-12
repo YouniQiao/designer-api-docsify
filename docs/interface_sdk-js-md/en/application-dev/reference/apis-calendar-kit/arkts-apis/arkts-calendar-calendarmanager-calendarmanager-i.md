@@ -1,7 +1,7 @@
 # CalendarManager
 
 Before calling any of the following APIs to manage the calendar, you must use   
-[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) to obtain a **CalendarManager** object first.
+[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager) to obtain a **CalendarManager** object first.
 
 **Since:** 10
 
@@ -14,7 +14,7 @@ Before calling any of the following APIs to manage the calendar, you must use
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## createCalendar
@@ -53,10 +53,10 @@ Creates a Calendar object based on the calendar account information.This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -103,16 +103,16 @@ Creates a Calendar object based on the calendar account information.This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the created Calendar object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -163,7 +163,7 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
+| calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
 
 **Return value:**
 
@@ -175,10 +175,10 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -231,17 +231,17 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| calendar | [Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md) | Yes | Calendar object to delete. The default account cannot be deleted. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
+| calendar | Calendar | Yes | Calendar object to delete. The default account cannot be deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Asynchronous callback that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -299,7 +299,7 @@ Events created using this API can be obtained and modified by the system calenda
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event** object. |
+| event | Event | Yes | Event** object. |
 
 **Return value:**
 
@@ -357,10 +357,10 @@ Obtains the created and default Calendar objects of the current application.This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -403,16 +403,16 @@ Obtains the created and default Calendar objects of the current application.This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar[]&gt; | Yes | Callback used to return an array of the obtained Calendar objects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -471,11 +471,11 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [23900003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -519,17 +519,17 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | calendarAccount | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Yes | Calendar account information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [23900003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-specified-account-not-found) | The specified account was not found.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -583,16 +583,16 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Calendar&gt; | Yes | Callback used to return the obtained Calendar object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -22,4 +22,4 @@ An object representing the relative time format in parts that can be used for cu
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | {               type: "literal"               value: string           } |
-| {               type: Exclude&lt;NumberFormatPartTypes, "literal"&gt;               value: string               unit: RelativeTimeFormatUnitSingular           } |
+| {               type: Exclude & lt;NumberFormatPartTypes, "literal" & gt;               value: string               unit: RelativeTimeFormatUnitSingular           } |

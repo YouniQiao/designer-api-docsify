@@ -65,7 +65,7 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [bottom](#bottom) | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
+| [bottom](#bottom) | LengthMetrics \| [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
 | ignoreSize | boolean | Yes |
 
 **Return value:**
@@ -228,7 +228,7 @@ Sets the position of the navigation indicator relative to the right edge of the 
 start(value: LengthMetrics): T
 ```
 
-Sets the distance between the navigation indicator and the right edge (in [RTL](../arkts-apis/arkts-arkui-layoutdirection-e.md/arkts-arkui-layoutdirection-e.md) scripts) or the left edge (in [LTR](../arkts-apis/arkts-arkui-layoutdirection-e.md/arkts-arkui-layoutdirection-e.md) scripts) of the **Swiper** component.
+Sets the distance between the navigation indicator and the right edge (in [RTL](../arkts-apis/arkts-arkui-layoutdirection-e.md#LayoutDirection) scripts) or the left edge (in [LTR](../arkts-apis/arkts-arkui-layoutdirection-e.md#LayoutDirection) scripts) of the **Swiper** component.
 
 **Since:** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## startBackgroundRunning
@@ -20,7 +20,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)
+**Substitutes:** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -36,7 +36,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | id | number | Yes | Notification ID of the continuous task. |
 | request | [NotificationRequest](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md) | Yes | Notification parameter, which is used to display information in the notification bar. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is requested, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the continuous task is requested, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -97,7 +97,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)
+**Substitutes:** [startBackgroundRunning](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

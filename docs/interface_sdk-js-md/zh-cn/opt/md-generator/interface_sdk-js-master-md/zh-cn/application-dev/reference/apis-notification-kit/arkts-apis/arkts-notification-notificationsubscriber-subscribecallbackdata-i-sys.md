@@ -16,7 +16,7 @@
 readonly notificationClassification?: NotificationClassification
 ```
 
-通知分类信息。仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)中的enableClassification为true时存在。
+通知分类信息。仅在[NotificationSubscribeInfo](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md#NotificationSubscribeInfo)中的enableClassification为true时存在。
 
 **类型：** [NotificationClassification](arkts-notification-notificationsubscriber-notificationclassification-i-sys.md)
 
@@ -56,7 +56,7 @@ readonly request: NotificationRequest
 
 通知内容。
 
-**类型：** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)
+**类型：** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)
 
 **起始版本：** 7
 
@@ -128,7 +128,7 @@ voiceContent?: VoiceContent
 
 通知语音播报内容。
 
-**类型：** [VoiceContent](arkts-notification-notificationsubscribe-voicecontent-t-sys.md)
+**类型：** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
 **起始版本：** 26.0.0
 

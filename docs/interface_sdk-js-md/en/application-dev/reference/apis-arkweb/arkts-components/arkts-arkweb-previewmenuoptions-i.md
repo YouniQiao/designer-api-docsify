@@ -20,7 +20,7 @@ Vibration effect when the menu is displayed. The **ohos.permission.VIBRATE** per
 
 Default value: **HapticFeedbackMode.DISABLED**, indicating no vibration when the menu is displayed.
 
-**Type:** [HapticFeedbackMode](../../apis-arkui/arkts-components/arkts-arkui-hapticfeedbackmode-e.md)
+**Type:** HapticFeedbackMode
 
 **Default:** HapticFeedbackMode.DISABLED
 

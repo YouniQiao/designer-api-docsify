@@ -1,6 +1,6 @@
 # TextSpanType
 
-Provides the [span](../arkts-apis/arkts-arkui-span-span-f.md/arkts-arkui-span-span-f.md#span) type information.
+Provides the [span](./span) type information.
 
 > **NOTE：**
 > 

@@ -24,7 +24,7 @@ a: ParticleTuple<number, number>
 
 Difference value for the alpha (transparency) channel.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ b: ParticleTuple<number, number>
 
 Difference value for the blue color channel.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -68,7 +68,7 @@ g: ParticleTuple<number, number>
 
 Difference value for the green color channel.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ r: ParticleTuple<number, number>
 
 Difference value for the red color channel.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 

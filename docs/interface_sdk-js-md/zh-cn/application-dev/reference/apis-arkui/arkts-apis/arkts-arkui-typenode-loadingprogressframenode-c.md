@@ -34,5 +34,5 @@ abstract initialize(): LoadingProgressAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |  |
+| LoadingProgressAttribute |  |
 

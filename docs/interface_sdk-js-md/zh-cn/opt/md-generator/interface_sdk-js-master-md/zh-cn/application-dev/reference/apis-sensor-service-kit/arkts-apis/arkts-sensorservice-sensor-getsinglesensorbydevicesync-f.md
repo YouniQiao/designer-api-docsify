@@ -25,7 +25,7 @@ function getSingleSensorByDeviceSync(type: SensorId, deviceId?: number): Array<S
 
 | 类型 |
 | --- |
-| Array&lt;Sensor&gt; |
+| Array & lt;Sensor & gt; |
 
 ## 示例
 

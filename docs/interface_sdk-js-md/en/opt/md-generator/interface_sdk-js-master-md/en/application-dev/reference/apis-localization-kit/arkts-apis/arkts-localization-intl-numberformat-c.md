@@ -11,7 +11,7 @@ Provides the API for formatting number strings.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -59,7 +59,7 @@ Creates a **NumberFormat** object based on the specified locale and options.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes |
+| locale | string \| Array & lt;string & gt; | Yes |
 | options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | No |
 
 ## Examples

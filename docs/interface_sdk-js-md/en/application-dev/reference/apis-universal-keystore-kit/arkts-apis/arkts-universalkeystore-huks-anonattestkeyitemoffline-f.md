@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## anonAttestKeyItemOffline
@@ -45,21 +45,21 @@ Obtains an anonymous key certificate in offline mode. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksReturnResult&gt; | Promise that returns the operation result. When the call is successful, the **certChains** member of **HuksReturnResult** is the obtained certificate chain. |
+| Promise&lt;[HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)&gt; | Promise that returns the operation result. When the call is successful, the **certChains** member of **HuksReturnResult** is the obtained certificate chain. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The API is not supported. |
-| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) | The encryption engine is faulty. |
-| [12000005](../errorcode-huks.md#12000005-ipc-error) | The IPC communication failed. |
-| [12000004](../errorcode-huks.md#12000004-file-error) | The file operation failed. |
-| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | The parameter is incorrect. Possible causes: 1. A mandatory parameter is left empty. 2. The parameter type is incorrect. 3. The parameter verification failed. 4. The group ID specified by the access group tag is invalid. |
-| [12000001](../errorcode-huks.md#12000001-feature-not-supported) | The algorithm mode is not supported. |
-| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | The memory is insufficient. |
-| [12000012](../errorcode-huks.md#12000012-external-error) | The device environment or input parameter is abnormal. |
-| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The API is not supported. |
+| [12000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) | The encryption engine is faulty. |
+| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) | The IPC communication failed. |
+| [12000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) | The file operation failed. |
+| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) | The parameter is incorrect. Possible causes: 1. A mandatory parameter is left empty. 2. The parameter type is incorrect. 3. The parameter verification failed. 4. The group ID specified by the access group tag is invalid. |
+| [12000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) | The algorithm mode is not supported. |
+| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) | The memory is insufficient. |
+| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) | The device environment or input parameter is abnormal. |
+| [12000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) | The queried entity does not exist. |
 | 12000027 | The network is unavailable. Check network connections. |
-| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) | The operation times out. This may be caused by network jitter. You can try again later. |
+| [12000024](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-device-or-resource-busy) | The operation times out. This may be caused by network jitter. You can try again later. |
 

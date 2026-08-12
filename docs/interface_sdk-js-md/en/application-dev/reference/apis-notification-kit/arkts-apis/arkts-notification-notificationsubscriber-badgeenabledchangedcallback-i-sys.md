@@ -32,5 +32,5 @@ Callback used to return the listened badge enabling state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscribe-enablednotificationcallbackdata-t-sys.md) | Yes | Callback used to return the listened badge enabling state. |
+| data | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | Yes | Callback used to return the listened badge enabling state. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from 'kits/@kit.AdsKit';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## resetOAID
@@ -26,9 +26,9 @@ Resets the OAID.
 
 | Error Code ID |
 | --- |
-| [17300002](../errorcode-oaid.md#17300002-not-in-the-trust-list) |
-| [17300001](../errorcode-oaid.md#17300001-system-internal-error) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300002-not-in-the-trust-list) |
+| [17300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-system-internal-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

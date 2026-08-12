@@ -86,7 +86,7 @@ Creator instance key.
 
 **Deprecated since:** 15
 
-**Substitutes:** [NotificationRequest#appInstanceKey](arkts-notification-notificationrequest-notificationrequest-i-sys.md#appinstancekey)
+**Substitutes:** [appInstanceKey](#appInstanceKey)
 
 <!--Device-NotificationRequest-readonly creatorInstanceKey?: number--><!--Device-NotificationRequest-readonly creatorInstanceKey?: number-End-->
 
@@ -122,7 +122,7 @@ extendInfo?: Record<string, Object>
 
 Extended parameters customized for the system applications to publish notifications.This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -322,7 +322,7 @@ unifiedGroupInfo?: UnifiedGroupInfo
 
 Intelligent notification unification information. This parameter is left empty by default.
 
-**Type:** [UnifiedGroupInfo](arkts-notification-notificationmanager-unifiedgroupinfo-t-sys.md)
+**Type:** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **Since:** 12
 

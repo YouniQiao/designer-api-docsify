@@ -13,7 +13,7 @@ Provides manages model function. Including get inputs, predict ,resize.
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## exportModel
@@ -234,7 +234,7 @@ Infer model
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes | indicates the MSTensor array of the inputs. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MSTensor[]&gt; | Yes | the callback of MSTensor array. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes | the callback of MSTensor array. |
 
 ## Examples
 
@@ -295,7 +295,7 @@ Infer model
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MSTensor[]&gt; | the promise returned by the function. |
+| Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | the promise returned by the function. |
 
 ## Examples
 

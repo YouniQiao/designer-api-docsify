@@ -6,13 +6,13 @@
 function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 ```
 
-Ϊ��ǰ�߳�ת���������ԭʼ�ѿ��գ������ɵ�rawheap��ʽ�ļ���ʹ��Promise�첽�ص���ɡ����ļ���ͨ��rawheap-translator����ת��Ϊheapsnapshot��ʽ�ļ����н�����
+为当前线程转储虚拟机的原始堆快照，并生成的rawheap格式文件，使用Promise异步回调完成。该文件可通过rawheap-translator工具转化为heapsnapshot格式文件进行解析。
 
-> **ע��**
+> **注意**
 > 
-> ϵͳͨ���ýӿ�ת����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����
+> 系统通过该接口转存快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。
 > 
-> �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
+> 建议在开发者模式下调用该接口，可免除调用配额限制，当设置的开发者选项开关打开并重启设备后即可生效。
 
 **起始版本：** 18
 
@@ -32,20 +32,20 @@ function dumpJsRawHeapData(needGC?: boolean): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-配额超限) |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
+| [11400109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) |
+| [11400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) |
+| [11400111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
+| [11400110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) |
+| [11400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) |
+| [11400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-接口调用配额已超出) |
+| [11400113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
+| [11400112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
 
 ## 示例
 
@@ -66,13 +66,13 @@ hidebug.dumpJsRawHeapData().then((filePath: string) => {
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 ```
 
-Ϊ��ǰ�߳�ת���������ԭʼ�ѿ��գ���֧�����nodeId���档���ɵ��ļ�Ϊrawheap��ʽ��ʹ��Promise�첽�ص���ɡ����ļ���ͨ��rawheap-translator����ת��Ϊheapsnapshot��ʽ�ļ����н�����
+为当前线程转储虚拟机的原始堆快照，并支持清除nodeId缓存。生成的文件为rawheap格式，使用Promise异步回调完成。该文件可通过rawheap-translator工具转化为heapsnapshot格式文件进行解析。
 
-> **ע��**
+> **注意**
 > 
-> ϵͳͨ���ýӿ�ת����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����
+> 系统通过该接口转存快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。
 > 
-> �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
+> 建议在开发者模式下调用该接口，可免除调用配额限制，当设置的开发者选项开关打开并重启设备后即可生效。
 
 **起始版本：** 24
 
@@ -95,20 +95,20 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-配额超限) |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
+| [11400109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) |
+| [11400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) |
+| [11400111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
+| [11400110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) |
+| [11400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) |
+| [11400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-接口调用配额已超出) |
+| [11400113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
+| [11400112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
 
 ## 示例
 
@@ -130,13 +130,13 @@ hidebug.dumpJsRawHeapData(true, true).then((filePath: string) => {
 function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boolean): Promise<Array<string>>
 ```
 
-Ϊ��ǰ�̻߳����������������������ԭʼ�ѿ��գ���֧�����nodeId���棬���ɵ��ļ�Ϊrawheap��ʽ��ʹ��Promise�첽�ص����ļ���ͨ��rawheap-translator����ת��Ϊheapsnapshot��ʽ�ļ����н�����
+为当前线程或其所属进程生成虚拟机的原始堆快照，并支持清除nodeId缓存，生成的文件为rawheap格式。使用Promise异步回调。文件可通过rawheap-translator工具转换为heapsnapshot格式文件进行解析。
 
-> **ע��**
+> **注意**
 > 
-> ϵͳͨ���ýӿ�ת�����ջ����Ĵ�����Դ������ϸ������˵���Ƶ�ʺʹ��������������ɵ��ļ���������ɾ����
+> 系统通过该接口转储快照会消耗大量资源，因此严格限制了调用频率和次数。处理完生成的文件后，请立即删除。
 > 
-> �����ڿ�����ģʽ�µ��øýӿڣ����������������ƣ������õĿ�����ѡ��ش򿪲������豸�󼴿���Ч��
+> 建议在开发者模式下调用该接口，可免除调用配额限制，当设置的开发者选项开关打开并重启设备后即可生效。
 
 **起始版本：** 26.0.0
 
@@ -160,20 +160,20 @@ function dumpJsRawHeapData(needGC: boolean, needClean: boolean, processDump: boo
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-配额超限) |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
+| [11400109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-等待dump子进程超时) |
+| [11400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-等待dump子进程结束失败) |
+| [11400111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-napi接口调用失败) |
+| [11400110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-磁盘空间不足) |
+| [11400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-dump子进程fork失败) |
+| [11400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-接口调用配额已超出) |
+| [11400113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-创建dump文件失败) |
+| [11400112](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-重复dump采集) |
 
 ## 示例
 

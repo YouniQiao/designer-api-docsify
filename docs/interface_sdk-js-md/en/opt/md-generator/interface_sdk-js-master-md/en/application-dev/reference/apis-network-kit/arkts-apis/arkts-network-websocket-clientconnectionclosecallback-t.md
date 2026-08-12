@@ -16,5 +16,5 @@ Callback function when a client connection is closed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| clientConnection | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes |
+| [clientConnection](arkts-network-websocket-websocketmessage-i.md) | [WebSocketConnection](arkts-network-websocket-websocketconnection-i.md) | Yes |
 | closeReason | [CloseResult](arkts-network-websocket-closeresult-i.md) | Yes |

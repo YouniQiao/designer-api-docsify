@@ -27,13 +27,13 @@ Defines Button Component.
 | --- | --- | --- | --- |
 | label | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | the label of Button. |
 | options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | No | the options of Button. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) |  |
 
 
 ## Button
@@ -62,13 +62,13 @@ Defines Button Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | No | the options of Button. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) |  |
 
 
 ## Button
@@ -98,12 +98,12 @@ Defines Button Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ButtonAttribute&gt; | Yes | button attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ButtonAttribute](arkts-arkui-button-buttonattribute-i.md)&gt; | Yes | button attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) |  |
 

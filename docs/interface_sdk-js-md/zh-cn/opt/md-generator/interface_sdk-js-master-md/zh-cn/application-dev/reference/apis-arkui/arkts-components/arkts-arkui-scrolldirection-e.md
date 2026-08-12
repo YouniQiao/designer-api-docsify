@@ -64,7 +64,7 @@ Free
 
 **废弃版本：** 9
 
-**替代接口：** [ScrollDirection#FREE](arkts-arkui-scrolldirection-e.md#free)
+**替代接口：** [FREE](#FREE)
 
 <!--Device-ScrollDirection-Free--><!--Device-ScrollDirection-Free-End-->
 

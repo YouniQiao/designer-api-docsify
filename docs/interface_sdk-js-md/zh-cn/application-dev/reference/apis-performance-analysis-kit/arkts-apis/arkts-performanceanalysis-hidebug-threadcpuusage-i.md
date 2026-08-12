@@ -1,6 +1,6 @@
 # ThreadCpuUsage
 
-�̵߳�CPUʹ�������
+线程的CPU使用情况。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 cpuUsage: double
 ```
 
-�߳�CPUʹ���ʡ�
+线程CPU使用率。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -34,7 +34,7 @@ cpuUsage: double
 threadId: long
 ```
 
-�̺߳š�
+线程号。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

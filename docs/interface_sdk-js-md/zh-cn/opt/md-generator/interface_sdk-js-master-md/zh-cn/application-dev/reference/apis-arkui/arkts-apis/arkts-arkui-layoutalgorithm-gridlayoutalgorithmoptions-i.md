@@ -50,7 +50,7 @@ columnsTemplate?: string | ItemFillPolicy
 
 装饰器类型：@Trace
 
-**类型：** string \| ItemFillPolicy
+**类型：** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 

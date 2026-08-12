@@ -58,7 +58,7 @@ direction: TextDirection
 
 The direction of text.
 
-**Type:** [TextDirection](arkts-arkui-textdirection-e.md)
+**Type:** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **Since:** 24
 

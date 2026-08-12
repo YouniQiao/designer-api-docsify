@@ -13,7 +13,7 @@ Defines the RDB store configuration.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## autoCleanDeviceDirtyData

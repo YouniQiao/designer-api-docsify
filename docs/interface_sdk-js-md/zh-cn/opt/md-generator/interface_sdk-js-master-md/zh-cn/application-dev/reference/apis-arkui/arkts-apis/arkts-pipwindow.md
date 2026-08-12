@@ -8,7 +8,7 @@
 &gt; >开始，支持在Phone、PC/2in1、Tablet设备使用画中画功能，其他设备不可用。
 > 
 > - 针对系统能力SystemCapability.Window.SessionManager，请先使用
-> [canIUse()](arkts-arkui-global-caniuse-f.md#caniuse)接口判断当前设备是否支持此syscap及对应接口。
+> [canIUse()](arkts-arkui-global-caniuse-f.md#canIUse)接口判断当前设备是否支持此syscap及对应接口。
 
 **起始版本：** 11
 

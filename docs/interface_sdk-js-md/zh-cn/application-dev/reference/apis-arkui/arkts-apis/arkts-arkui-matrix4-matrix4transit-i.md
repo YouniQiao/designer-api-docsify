@@ -32,13 +32,13 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 是 | 待叠加的矩阵对象。 |
+| options | Matrix4Transit | 是 | 待叠加的矩阵对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 矩阵叠加后的对象。 |
+| Matrix4Transit | 矩阵叠加后的对象。 |
 
 ## copy
 
@@ -62,7 +62,7 @@ Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的拷贝对象。 |
+| Matrix4Transit | 当前矩阵的拷贝对象。 |
 
 ## invert
 
@@ -86,7 +86,7 @@ Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效�
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵的逆矩阵对象。 |
+| Matrix4Transit | 当前矩阵的逆矩阵对象。 |
 
 ## rotate
 
@@ -116,7 +116,7 @@ Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 旋转效果后的矩阵对象。 |
+| Matrix4Transit | 旋转效果后的矩阵对象。 |
 
 ## scale
 
@@ -146,7 +146,7 @@ Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 缩放效果后的矩阵对象。 |
+| Matrix4Transit | 缩放效果后的矩阵对象。 |
 
 ## setPolyToPoly
 
@@ -176,7 +176,7 @@ setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 当前矩阵变换后的对象。 |
+| Matrix4Transit | 当前矩阵变换后的对象。 |
 
 ## skew
 
@@ -207,7 +207,7 @@ Matrix的倾斜函数，可以为当前矩阵增加x轴/y轴倾斜效果。会�
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 倾斜效果后的矩阵对象。 |
+| Matrix4Transit | 倾斜效果后的矩阵对象。 |
 
 ## transformPoint
 
@@ -273,5 +273,5 @@ Matrix的平移函数，可以为当前矩阵增加x轴/y轴/z轴平移效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 平移效果后的矩阵对象。 |
+| Matrix4Transit | 平移效果后的矩阵对象。 |
 

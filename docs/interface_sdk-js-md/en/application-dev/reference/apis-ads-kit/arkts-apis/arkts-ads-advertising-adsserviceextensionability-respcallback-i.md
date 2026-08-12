@@ -13,7 +13,7 @@ Ad request callback.
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from 'kits/@kit.AdsKit';
+import { RespCallback } from '@kit.AdsKit';
 ```
 
 ## [[Call]]

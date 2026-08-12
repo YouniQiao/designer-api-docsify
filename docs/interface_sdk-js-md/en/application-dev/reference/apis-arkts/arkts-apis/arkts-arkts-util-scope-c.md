@@ -8,7 +8,7 @@ The Scope interface is used to describe the valid range of a field.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.ScopeHelper](arkts-arkts-util-scopehelper-c.md)
+**Substitutes:** [ScopeHelper](arkts-arkts-util-scopehelper-c.md#ScopeHelper)
 
 <!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 
@@ -17,7 +17,7 @@ The Scope interface is used to describe the valid range of a field.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## clamp
@@ -34,7 +34,7 @@ Limits a value to this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.ScopeHelper.clamp](arkts-arkts-util-scopehelper-c.md#clamp)
+**Substitutes:** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
 
 <!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
@@ -98,7 +98,7 @@ A constructor used to create a **Scope** object with the specified upper and low
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ScopeHelper.constructor
+**Substitutes:** [constructor](ohos.util.ScopeHelper.constructor)
 
 <!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
@@ -155,7 +155,7 @@ Checks whether a value is within this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
@@ -219,7 +219,7 @@ Checks whether a range is within this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
 
@@ -285,7 +285,7 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ScopeHelper.expand
+**Substitutes:** [expand](ohos.util.ScopeHelper.expand)
 
 <!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
@@ -351,7 +351,7 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ScopeHelper.expand
+**Substitutes:** [expand](ohos.util.ScopeHelper.expand)
 
 <!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
 
@@ -417,7 +417,7 @@ Obtains the union set of this **Scope** and the given value.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ScopeHelper.expand
+**Substitutes:** [expand](ohos.util.ScopeHelper.expand)
 
 <!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
 
@@ -481,7 +481,7 @@ Obtains the lower limit of this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.ScopeHelper.getLower](arkts-arkts-util-scopehelper-c.md#getlower)
+**Substitutes:** [getLower](arkts-arkts-util-scopehelper-c.md#getLower)
 
 <!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
 
@@ -538,7 +538,7 @@ Obtains the upper limit of this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.ScopeHelper.getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
+**Substitutes:** [getUpper](arkts-arkts-util-scopehelper-c.md#getUpper)
 
 <!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
 
@@ -595,7 +595,7 @@ Obtains the intersection of this **Scope** and the given **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ScopeHelper.intersect
+**Substitutes:** [intersect](ohos.util.ScopeHelper.intersect)
 
 <!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
@@ -661,7 +661,7 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.ScopeHelper.intersect
+**Substitutes:** [intersect](ohos.util.ScopeHelper.intersect)
 
 <!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
@@ -727,7 +727,7 @@ Obtains a string representation that contains this **Scope**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.toString](arkts-arkts-util-lrucache-c.md#tostring)
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#toString)
 
 <!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 

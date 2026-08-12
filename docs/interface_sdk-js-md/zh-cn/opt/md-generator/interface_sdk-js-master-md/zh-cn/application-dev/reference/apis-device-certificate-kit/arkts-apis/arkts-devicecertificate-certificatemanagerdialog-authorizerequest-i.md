@@ -34,7 +34,7 @@ certTypes: Array<CertificateType>
 
 表示证书类型的列表。
 
-**类型：** Array&lt;CertificateType&gt;
+**类型：** Array&lt;[CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)&gt;
 
 **起始版本：** 22
 

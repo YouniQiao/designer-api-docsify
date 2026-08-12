@@ -56,7 +56,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：**
 
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](arkts-arkui-commonmethod-c.md#onappear)生命周期中去控制。
+> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](CommonMethod#onAppear)生命周期中去控制。
 > 
 > - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
 > 
@@ -77,19 +77,19 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indices | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | [Optional](arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setTabBarOpacity
 
@@ -153,4 +153,4 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 |
+| translate | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | 是 |

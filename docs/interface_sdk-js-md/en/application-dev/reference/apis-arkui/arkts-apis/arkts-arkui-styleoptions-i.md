@@ -66,7 +66,7 @@ styledKey: StyledStringKey
 
 Style key.
 
-**Type:** [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)
+**Type:** [StyledStringKey](arkts-arkui-styledstringkey-e.md)
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # RatingConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md)。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration)。
 
 **继承/实现关系：** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
@@ -114,7 +114,7 @@ triggerChange: Callback<number>
 
 触发评分变化的回调，参数为新的评分值。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** Callback&lt;number&gt;
 
 **起始版本：** 12
 

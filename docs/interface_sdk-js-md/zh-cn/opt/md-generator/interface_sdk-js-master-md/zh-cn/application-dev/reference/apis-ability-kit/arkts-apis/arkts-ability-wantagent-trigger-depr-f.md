@@ -12,7 +12,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent#trigger
+**替代接口：** [trigger](ohos.app.ability.wantAgent/wantAgent#trigger)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -24,7 +24,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 |
 | triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | 否 |
 

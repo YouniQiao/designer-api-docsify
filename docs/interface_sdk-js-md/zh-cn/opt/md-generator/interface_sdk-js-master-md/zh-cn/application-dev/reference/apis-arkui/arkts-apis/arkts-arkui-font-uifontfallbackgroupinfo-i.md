@@ -16,7 +16,7 @@ fallback: Array<UIFontFallbackInfo>
 
 表示以下列表为该字体集的备用字体，如果fontSetName为""，表示可以作为所有字体集的备用字体。
 
-**类型：** Array&lt;UIFontFallbackInfo&gt;
+**类型：** Array&lt;[UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md)&gt;
 
 **起始版本：** 11
 

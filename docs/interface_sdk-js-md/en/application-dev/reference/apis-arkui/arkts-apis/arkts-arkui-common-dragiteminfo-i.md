@@ -18,7 +18,7 @@ builder?: CustomBuilder
 
 Uses the custom builder for drawing, if pixelMap is set, this value is ignored.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ pixelMap?: PixelMap
 
 Uses the pixelMap object for drawing.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 23
 

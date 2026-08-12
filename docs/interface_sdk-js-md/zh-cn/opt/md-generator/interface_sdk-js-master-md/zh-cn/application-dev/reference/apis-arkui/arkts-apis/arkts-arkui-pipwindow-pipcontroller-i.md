@@ -30,14 +30,14 @@ getPiPSettingSwitch(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) |
 
 ## 示例
 
@@ -78,14 +78,14 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;PiPWindowInfo&gt; |
+| Promise&lt;[PiPWindowInfo](arkts-arkui-pipwindow-pipwindowinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) |
 
 ## 示例
 
@@ -126,13 +126,13 @@ isPiPActive(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
+| [1300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) |
 
 ## 示例
 
@@ -189,7 +189,7 @@ off(type: 'controlPanelActionEvent'): void
 ```
 
 关闭画中画控制面板控件动作事件的监听。推荐使用  
-[off('controlEvent')](PiPWindow.PiPController.off(type: 'controlEvent', callback?: Callback&lt;ControlEventParam&gt;))来关闭画中画控制面板控件动作事件的监听。
+[off('controlEvent')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)来关闭画中画控制面板控件动作事件的监听。
 
 **起始版本：** 11
 
@@ -233,7 +233,7 @@ off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'controlEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 否 |
 
 ## 示例
 
@@ -266,13 +266,13 @@ off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 
@@ -351,7 +351,7 @@ on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'stateChange' | 是 |
-| callback | (state: PiPState, reason: string) =&gt; void | 是 |
+| callback | (state: PiPState, reason: string) = & gt; void | 是 |
 
 ## 示例
 
@@ -462,7 +462,7 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'controlEvent' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControlEventParam&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -517,14 +517,14 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'pipWindowSizeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PiPWindowSize&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) |
 
 ## 示例
 
@@ -654,17 +654,17 @@ startPiP(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
-| [1300013](../errorcode-window.md#1300013-创建画中画窗口失败) |
-| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) |
+| [1300034](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) |
+| [1300015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300015-重复操作画中画) |
+| [1300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) |
+| [1300013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300013-创建画中画窗口失败) |
+| [1300012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300012-画中画窗口状态异常) |
 
 ## 示例
 
@@ -698,15 +698,15 @@ stopPiP(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300011](../errorcode-window.md#1300011-销毁画中画窗口失败) |
-| [1300015](../errorcode-window.md#1300015-重复操作画中画) |
-| [1300012](../errorcode-window.md#1300012-画中画窗口状态异常) |
+| [1300011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300011-销毁画中画窗口失败) |
+| [1300015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300015-重复操作画中画) |
+| [1300012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300012-画中画窗口状态异常) |
 
 ## 示例
 
@@ -745,14 +745,14 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1300014](../errorcode-window.md#1300014-画中画内部错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1300014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300014-画中画内部错误) |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 HierarchicalSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
+**继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md#SymbolEffect)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ HierarchicalSymbolEffect的构造函数，层级动效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](../arkts-components/arkts-arkui-effectfillstyle-e.md) | 否 | 动效模式。&lt;br/&gt;默认值：EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md) | 否 | 动效模式。&lt;br/&gt;默认值：EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 
@@ -46,7 +46,7 @@ fillStyle?: EffectFillStyle
 
 默认值：EffectFillStyle.CUMULATIVE
 
-**类型：** [EffectFillStyle](../arkts-components/arkts-arkui-effectfillstyle-e.md)
+**类型：** [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md)
 
 **起始版本：** 23
 

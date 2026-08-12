@@ -11,7 +11,7 @@ Provides encoding and decoding for Base64 and Base64URL. The Base64 encoding tab
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -57,7 +57,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## decodeSync
 
@@ -115,7 +115,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## encodeSync
 
@@ -173,7 +173,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## encodeToStringSync
 

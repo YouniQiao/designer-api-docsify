@@ -11,7 +11,7 @@ Defines the button attributes and events.
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## action

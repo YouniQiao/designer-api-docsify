@@ -46,7 +46,7 @@ selected: int | Bindable<int>
 
 该属性支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 
-**类型：** int \| Bindable&lt;int&gt;
+**类型：** int \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt;
 
 **起始版本：** 23
 

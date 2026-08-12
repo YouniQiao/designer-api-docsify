@@ -38,7 +38,7 @@ wantAgent?: WantAgent
 
 点击按钮跳转的ability信息。
 
-**类型：** [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
+**类型：** WantAgent
 
 **起始版本：** 10
 

@@ -171,7 +171,7 @@ tokenId?: int
 ```
 
 目标应用的身份标识。目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的  
- [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync)。
+ [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId)字段获取。 该参数必须为大于0的整数，传入0时返回错误码12100001。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync)。
 
 默认值：0，查询所有应用。
 

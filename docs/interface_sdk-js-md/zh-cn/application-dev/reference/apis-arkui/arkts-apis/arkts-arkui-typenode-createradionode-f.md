@@ -29,5 +29,5 @@ export function createRadioNode(context: UIContext, options?: FrameNodeOptions):
 
 | 类型 | 说明 |
 | --- | --- |
-| [Radio](arkts-arkui-typenode-radio-t.md) | 返回 Radio 类型的 FrameNode |
+| Radio | 返回 Radio 类型的 FrameNode |
 

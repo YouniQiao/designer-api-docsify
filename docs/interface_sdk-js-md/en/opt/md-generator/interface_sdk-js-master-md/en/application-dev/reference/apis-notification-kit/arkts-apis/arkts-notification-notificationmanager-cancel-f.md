@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## cancel
@@ -24,6 +24,14 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[publish](notificationManager.publish(request: NotificationRequest,callback: AsyncCallback<void>): void) publishes a notification.
+
+[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) cancels all notifications of this application.
+
+[cancelGroup](notificationManager.cancelGroup(groupName: string,callback: AsyncCallback<void,void>): void) cancels notifications
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -35,11 +43,11 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 
@@ -76,6 +84,14 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[publish](notificationManager.publish(request: NotificationRequest,callback: AsyncCallback<void>): void) publishes a notification.
+
+[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) cancels all notifications of this application.
+
+[cancelGroup](notificationManager.cancelGroup(groupName: string,callback: AsyncCallback<void,void>): void) cancels
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -88,11 +104,11 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 
@@ -127,6 +143,14 @@ After cancellation, the corresponding notification will be removed from the noti
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[publish](notificationManager.publish(request: NotificationRequest, callback: AsyncCallback<void>): void) publishes a notification.
+
+[cancelAll](notificationManager.cancelAll(): Promise<void>) cancels all notifications of this application.
+
+[cancelGroup](notificationManager.cancelGroup(groupName: string): Promise<void>) cancels notifications
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -138,17 +162,17 @@ After cancellation, the corresponding notification will be removed from the noti
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 

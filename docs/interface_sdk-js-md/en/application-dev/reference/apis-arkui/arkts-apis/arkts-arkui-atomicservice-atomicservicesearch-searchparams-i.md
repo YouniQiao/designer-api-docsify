@@ -13,7 +13,7 @@ Provides optional attributes for the search area.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## onChange
@@ -99,7 +99,7 @@ Style of the cancel button on the right. Default value:
 
 When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displayed in a default style.
 
-**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
+**Type:** IconOptions
 
 **Since:** 18
 
@@ -119,7 +119,7 @@ caretStyle?: CaretStyle
 
 Pointer style. Default value: **{width: '1.5vp', color: '#007DFF'}**.
 
-**Type:** [CaretStyle](arkts-arkui-caretstyle-i.md)
+**Type:** CaretStyle
 
 **Since:** 18
 
@@ -139,7 +139,7 @@ componentBackgroundColor?: ResourceColor
 
 Background color of a component. Default value: **\$r('sys.color.ohos_id_color_text_field_sub_bg')**.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -159,7 +159,7 @@ copyOptions?: CopyOptions
 
 Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**.
 
-**Type:** [CopyOptions](arkts-arkui-copyoptions-e.md)
+**Type:** CopyOptions
 
 **Since:** 18
 
@@ -180,7 +180,7 @@ decoration?: TextDecorationOptions
 Text decorative line options. Default value:  
 **{type: TextDecorationType.None, color: Color.Black, style: TextDecorationStyle.SOLID}**.
 
-**Type:** [TextDecorationOptions](arkts-arkui-common-textdecorationoptions-i.md)
+**Type:** TextDecorationOptions
 
 **Since:** 18
 
@@ -200,7 +200,7 @@ editMenuOptions?: EditMenuOptions
 
 Extended options of the custom context menu on selection, including the text content, icon, and callback. Default value: **undefined**.
 
-**Type:** [EditMenuOptions](arkts-arkui-editmenuoptions-i.md)
+**Type:** EditMenuOptions
 
 **Since:** 18
 
@@ -282,7 +282,7 @@ enterKeyType?: EnterKeyType
 
 Type of the Enter key. Default value: **EnterKeyType.Search**.
 
-**Type:** [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md)
+**Type:** EnterKeyType
 
 **Since:** 18
 
@@ -302,7 +302,7 @@ fontColor?: ResourceColor
 
 Font color of the input text. Default value: **\$r('sys.color.ohos_id_color_text_secondary')**.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -330,7 +330,7 @@ There can be multiple **&lt;feature-tag-value&gt;** values, which are separated 
 
 For example, the input format for monospaced digits is "ss01" on. Default value: **undefined**.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 
@@ -475,7 +475,7 @@ onCopy?: Callback<string>
 
 Callback triggered when a copy operation is performed. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 18
 
@@ -495,7 +495,7 @@ onCut?: Callback<string>
 
 Callback triggered when a cut operation is performed. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 18
 
@@ -515,7 +515,7 @@ onDidDelete?: Callback<DeleteValue>
 
 Callback triggered when text is deleted. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DeleteValue&gt;
+**Type:** Callback&lt;DeleteValue&gt;
 
 **Since:** 18
 
@@ -535,7 +535,7 @@ onDidInsert?: Callback<InsertValue>
 
 Callback triggered when text is inserted. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;InsertValue&gt;
+**Type:** Callback&lt;InsertValue&gt;
 
 **Since:** 18
 
@@ -556,7 +556,7 @@ onEditChange?: Callback<boolean>
 Callback triggered when the input status changes. If a cursor is displayed, that is, the value of **isEditing** is  
 **true**, the text box is in the editing state. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
 
@@ -576,7 +576,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 Callback triggered when users click the search icon or the search button, or touch the search button on a soft keyboard. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; \| SearchSubmitCallback
+**Type:** Callback&lt;string&gt; \| SearchSubmitCallback
 
 **Since:** 18
 
@@ -596,7 +596,7 @@ onWillDelete?: Callback<DeleteValue, boolean>
 
 Callback triggered when text is about to be deleted. **true**: Delete the text. **false**: Do not delete the text.Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DeleteValue, boolean&gt;
+**Type:** Callback&lt;DeleteValue, boolean&gt;
 
 **Since:** 18
 
@@ -617,7 +617,7 @@ onWillInsert?: Callback<InsertValue, boolean>
 Callback triggered when text is about to be inserted. **true**: Insert the input content into the result string.  
 **false**: Do not insert the input content into the result string. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;InsertValue, boolean&gt;
+**Type:** Callback&lt;InsertValue, boolean&gt;
 
 **Since:** 18
 
@@ -637,7 +637,7 @@ placeholderColor?: ResourceColor
 
 Placeholder text color. Default value: **\$r('sys.color.ohos_id_color_text_secondary')**.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -658,7 +658,7 @@ placeholderFont?: Font
 Placeholder text style, including the font size, font weight, font family, and font style. Default value:  
 **{size: \$r('sys_float.ohos_id_text_size_body1')}**.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -678,7 +678,7 @@ pressedBackgroundColor?: ResourceColor
 
 Background color of the pressed component. Default value: **\$r('sys.color.ohos_id_color_click_effect')**.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -726,7 +726,7 @@ Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
 
 Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
-**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier
+**Type:** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 
@@ -746,7 +746,7 @@ searchKey?: ResourceStr
 
 Search key used to find a unique **search** component. Default value: **undefined**.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 
@@ -766,7 +766,7 @@ selectedBackgroundColor?: ResourceColor
 
 Background color of the selected text. By default, a 20% opacity is applied.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -786,7 +786,7 @@ textAlign?: TextAlign
 
 Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 
-**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 18
 
@@ -807,7 +807,7 @@ textFont?: Font
 Style of the text entered in the search box, including the font size, font width, font family, and font style.Currently, only the default font family is supported. Default value:  
 **{size: \$r('sys_float.ohos_id_text_size_body1')}**.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -827,7 +827,7 @@ textIndent?: Dimension
 
 Indent of the first line text. Default value: **0**.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 18
 
@@ -847,7 +847,7 @@ type?: SearchType
 
 Text box type. Default value: **SearchType.Normal**.
 
-**Type:** [SearchType](arkts-arkui-search-searchtype-e.md)
+**Type:** SearchType
 
 **Since:** 18
 

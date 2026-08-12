@@ -4,7 +4,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.vibrator/vibrator
+**Substitutes:** [vibrator/vibrator](ohos.vibrator/vibrator)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## vibrate
@@ -29,13 +29,13 @@ Triggers device vibration.
 > **NOTE：**
 > 
 > Except for lite wearables. You are advised to use
-> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) since API version 8.
+> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) since API version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [@ohos.vibrator:vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**Substitutes:** [startVibration](@ohos.vibrator:vibrator.startVibration(effect:)
 
 **Required permissions:** ohos.permission.VIBRATE
 

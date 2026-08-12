@@ -31,7 +31,11 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 | Type | Description |
 | --- | --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
+| UIScrollEvent | UIScrollEvent** object for the **Scroll** node, or **undefined** if it fails to be obtained. |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 
 
 ## getEvent
@@ -65,7 +69,11 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 | Type | Description |
 | --- | --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
+| UIListEvent | UIListEvent** object for the **List** node, or **undefined** if it fails to be obtained. |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 
 
 ## getEvent
@@ -74,7 +82,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
+Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
 
@@ -99,7 +107,11 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 | Type | Description |
 | --- | --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
+| UIWaterFlowEvent | UIWaterFlowEvent** object for the **WaterFlow** node, or **undefined** if it fails to be obtained. |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 
 
 ## getEvent
@@ -133,5 +145,9 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 | Type | Description |
 | --- | --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
+| UIGridEvent | UIGridEvent** object for the **Grid** node, or **undefined** if it fails to be obtained. |
+
+## Examples
+
+See [Scroll Event Example](#scroll-event-example).
 

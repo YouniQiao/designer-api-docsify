@@ -1,9 +1,9 @@
 # @ohos.app.ability.abilityDelegatorRegistry
 
-AbilityDelegatorRegistry是自动化测试框架使用指南模块，该模块用于获取[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md)和[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)对象，其中  
-[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md)对象提供添加用于监视指定ability的生命周期状态更改的  
-[AbilityMonitor](../../apis-ability-kit/arkts-apis/arkts-ability-abilitymonitor-i.md/arkts-ability-abilitymonitor-i.md)对象的能力，  
-[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)对象提供获取当前测试参数的能力。
+AbilityDelegatorRegistry是自动化测试框架使用指南模块，该模块用于获取[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator)和[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#AbilityDelegatorArgs)对象，其中  
+[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator)对象提供添加用于监视指定ability的生命周期状态更改的  
+[AbilityMonitor](../../apis-ability-kit/arkts-apis/arkts-ability-abilitymonitor-i.md#AbilityMonitor)对象的能力，  
+[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#AbilityDelegatorArgs)对象提供获取当前测试参数的能力。
 
 > **说明：**
 > 
@@ -23,14 +23,14 @@ AbilityDelegatorRegistry是自动化测试框架使用指南模块，该模块�
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator) | 获取应用程序的[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md)对象，该对象能够使用调度测试框架的相关功能。 |
-| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md#getarguments) | 获取单元测试参数[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)对象。 |
+| [getAbilityDelegator](arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getabilitydelegator) | 获取应用程序的[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator)对象，该对象能够使用调度测试框架的相关功能。 |
+| [getArguments](arkts-test-abilitydelegatorregistry-getarguments-f.md#getarguments) | 获取单元测试参数[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#AbilityDelegatorArgs)对象。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md) | Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md)的  [getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md#getabilitystate)方法返回不同ability生命周期。 |
+| [AbilityLifecycleState](arkts-test-abilitydelegatorregistry-abilitylifecyclestate-e.md) | Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator)的  [getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#getAbilityState)方法返回不同ability生命周期。 |
 
 ### 类型
 

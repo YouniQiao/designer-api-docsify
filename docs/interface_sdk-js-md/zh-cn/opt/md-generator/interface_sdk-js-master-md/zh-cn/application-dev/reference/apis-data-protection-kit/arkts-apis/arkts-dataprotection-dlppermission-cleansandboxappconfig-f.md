@@ -20,16 +20,16 @@ function cleanSandboxAppConfig(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19100018](../errorcode-dlp.md#19100018-应用未授权) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100007](../errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [19100018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-应用未授权) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
+| [19100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100007-dlp沙箱应用不允许调用此接口) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

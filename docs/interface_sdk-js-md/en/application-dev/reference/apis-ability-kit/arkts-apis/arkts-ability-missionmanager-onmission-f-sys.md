@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { missionManager } from 'kits/@kit.AbilityKit';
+import { missionManager } from '@kit.AbilityKit';
 ```
 
 ## onMission
@@ -30,7 +30,7 @@ Register the missionListener to ams.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | Yes | Indicates the MissionListener to be registered. |
+| listener | MissionListener | Yes | Indicates the MissionListener to be registered. |
 
 **Return value:**
 
@@ -42,6 +42,6 @@ Register the missionListener to ams.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

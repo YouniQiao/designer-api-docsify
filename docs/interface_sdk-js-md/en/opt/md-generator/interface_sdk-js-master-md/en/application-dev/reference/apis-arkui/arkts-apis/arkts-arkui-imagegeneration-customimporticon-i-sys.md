@@ -13,7 +13,7 @@ Customize the import icon, which is used to add images and text from the applica
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## callback
@@ -42,7 +42,7 @@ image: image.PixelMap | ResourceStr
 
 Icon image information.
 
-**Type:** image.PixelMap \| ResourceStr
+**Type:** image.PixelMap \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.0.0
 

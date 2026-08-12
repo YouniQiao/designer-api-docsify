@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 以下API需先使用UIContext中的[getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller)方法获取SmartGestureController实例，
+> 以下API需先使用UIContext中的[getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getSmartGestureController)方法获取SmartGestureController实例，
 > 再通过该实例调用对应方法。
 
 **起始版本：** 26.0.0
@@ -61,7 +61,7 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 > 
 > - 该接口仅影响智慧手势的敲一敲和划一划手势，不影响翻腕手势。
 > 
-> - 关闭后，组件侧[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#smartgestureshortcut)配置仍会保留，但不会响应智慧手势的敲一敲和划一划手势。
+> - 关闭后，组件侧[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)配置仍会保留，但不会响应智慧手势的敲一敲和划一划手势。
 
 **起始版本：** 26.0.0
 
@@ -93,12 +93,12 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 > 
 > - 用户可通过该回调自定义决策本次智慧手势的行为。
 > 
-> - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md).
+> - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution).
 > isConsumed为true时，后续监听回调不再执行。
 > 
 > - 当用户重复注册相同回调时，只会保存首次注册的回调，重复注册不生效。
 > 
-> - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)实例，否则本次改写不生效。
+> - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)实例，否则本次改写不生效。
 
 **起始版本：** 26.0.0
 
@@ -114,7 +114,7 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | 是 |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 |
 
 ## requestSelected
 
@@ -127,9 +127,9 @@ requestSelected(id: string): void
 > **说明：**
 > 
 > - 仅当目标组件满足以下全部条件时，请求才会生效：组件可以响应智慧手势，且组件在屏幕内可见，且组件绑定了
-> [onClick](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#onclick)或绑定了单击手势[TapGesture](arkts-arkui-gesture-con.md#tapgesture)。
+> [onClick](CommonMethod#onClick(event: Callback&lt;ClickEvent&gt;, distanceThreshold: number))或绑定了单击手势[TapGesture](arkts-arkui-gesture-con.md#TapGesture)。
 > 
-> - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#smartgestureshortcut)中的enabled决定。
+> - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)中的enabled决定。
 
 **起始版本：** 26.0.0
 
@@ -169,4 +169,4 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | 是 |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | 是 |

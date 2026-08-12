@@ -2,7 +2,7 @@
 
 按键事件。
 
-**继承/实现关系：** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
+**继承/实现关系：** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ action: Action
 
 按键事件类型。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** [Action](arkts-input-multimodalinput-keyevent-action-e.md)
 
 **起始版本：** 9
 

@@ -158,7 +158,7 @@ runMetrics: Map<int, RunMetrics>
 
 文本索引范围与关联的字体度量信息之间的映射。
 
-**类型：** ArkTS-Dyn: Map&lt;number, RunMetrics&gt;  <br>ArkTS-Sta：Map&lt;int, RunMetrics&gt;
+**类型：** ArkTS-Dyn: Map&lt;number, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;  <br>ArkTS-Sta：Map&lt;int, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;
 
 **起始版本：** 12
 

@@ -16,7 +16,7 @@
 filter(name: string): boolean
 ```
 
-用于[listFileExt](arkts-corefile-fileio-listfileext-f.md#listfileext)或[listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listfileextsync)接口的文件过滤，判断指定文件名是否应包含在返回的文件列表中。
+用于[listFileExt](arkts-corefile-fileio-listfileext-f.md#listFileExt)或[listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listFileExtSync)接口的文件过滤，判断指定文件名是否应包含在返回的文件列表中。
 
 > **说明：**
 > 

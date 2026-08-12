@@ -20,5 +20,5 @@ Defines a callback invoked when the largest content paint occurs on the web page
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| largestContentfulPaint | [LargestContentfulPaint](../arkts-apis/arkts-arkweb-web-largestcontentfulpaint-i.md) | Yes | Information about the largest content paint. |
+| largestContentfulPaint | [LargestContentfulPaint](arkts-arkweb-largestcontentfulpaint-i.md) | Yes | Information about the largest content paint. |
 

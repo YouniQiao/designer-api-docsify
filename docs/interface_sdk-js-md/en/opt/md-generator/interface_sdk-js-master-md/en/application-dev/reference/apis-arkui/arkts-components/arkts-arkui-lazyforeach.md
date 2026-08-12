@@ -33,8 +33,8 @@ LazyForEach(
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | Yes |
-| itemGenerator | (item: any, index: number) =&gt; void | Yes |
-| keyGenerator | (item: any, index: number) =&gt; string | No |
+| itemGenerator | (item: any, index: number) = & gt; void | Yes |
+| keyGenerator | (item: any, index: number) = & gt; string | No |
 
 ## LazyForEach
 
@@ -64,8 +64,8 @@ Enter the value to obtain the LazyForEach.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | Yes |
-| itemGenerator | (item: any, index: number) =&gt; void | Yes |
-| keyGenerator | (item: any, index: number) =&gt; string | No |
+| itemGenerator | (item: any, index: number) = & gt; void | Yes |
+| keyGenerator | (item: any, index: number) = & gt; string | No |
 | options | [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | No |
 
 ## Summary

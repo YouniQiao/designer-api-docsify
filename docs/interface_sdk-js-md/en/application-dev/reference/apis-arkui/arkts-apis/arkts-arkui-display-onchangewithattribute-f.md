@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## onChangeWithAttribute
@@ -28,15 +28,15 @@ Subscribes to changes of specified attributes of a display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in [Display](arkts-arkui-display-display-i.md) are supported. |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
+| displayAttributeOption | Array&lt;string&gt; | Yes | Attribute names. Only attributes contained in [Display](arkts-arkui-display-display-i.md#Display) are supported. |
+| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | Callback used to return the ID of the display, which is an integer. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function onChangeWithAttribute can not work correctly due to limited device capabilities. |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. Possible causes: Internal IPC error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function onChangeWithAttribute can not work correctly due to limited device capabilities. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. Possible causes: Internal IPC error. |
 
 ## Examples
 

@@ -11,7 +11,7 @@ Describes the window information.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## abilityName
@@ -72,7 +72,7 @@ globalDisplayRect?: Rect
 
 Window size in the global coordinate system. In extended screen scenarios, the top-left corner of the primary screen is used as the coordinate origin. In virtual screen scenarios, the top-left corner of the virtual screen is used as the coordinate origin. The default value is [0, 0, 0, 0].
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 20
 
@@ -88,7 +88,7 @@ globalRect?: Rect
 
 Indicates the actual display size and position of the window.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ Indicates the actual display size and position of the window.
 isFocused?: boolean
 ```
 
-Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-window-i.md#isfocused) API.
+Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-window-i.md#isFocused) API.
 
 **Type:** boolean
 
@@ -122,7 +122,7 @@ rect: Rect
 
 Window size.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 18
 
@@ -154,7 +154,7 @@ windowStatusType: WindowStatusType
 
 Window mode.
 
-**Type:** [WindowStatusType](../arkts-components/arkts-arkui-windowstatustype-t.md)
+**Type:** WindowStatusType
 
 **Since:** 18
 

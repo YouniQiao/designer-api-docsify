@@ -13,7 +13,7 @@ Defines the intent information, which is the specific parameter configuration of
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -355,7 +355,7 @@ Intent information for specific intent decorators.
 For intents developed using a configuration file, the return value of this field is  
 [EntryIntentInfo](#entryintentinfo20) by default.
 
-**Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| PageIntentInfo \| FunctionIntentInfo \| FormIntentInfo \| EntryIntentInfo
+**Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 
 **Since:** 20
 

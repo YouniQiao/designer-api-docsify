@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## isImmersiveMaterialSupported
@@ -12,8 +12,8 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 export function isImmersiveMaterialSupported(): boolean
 ```
 
-Check whether [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) is supported on the current device.If it is true, the ImmersiveMaterial object can be used in the  
-[systemMaterial](arkts-arkui-common-commonmethod-i.md#systemmaterial) attribute.If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect.It is defined by the device and cannot be modified.
+Check whether [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) is supported on the current device.If it is true, the ImmersiveMaterial object can be used in the  
+[systemMaterial](CommonMethod#systemMaterial(material: SystemUiMaterial | undefined)) attribute.If it is false, setting the ImmersiveMaterial object in the systemMaterial attribute will not take effect.It is defined by the device and cannot be modified.
 
 **Since:** 26.0.0
 

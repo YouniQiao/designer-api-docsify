@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## pushNamedRoute
@@ -18,14 +18,14 @@ Navigates to a page using the named route. This API uses a promise to return the
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,10 +46,10 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## Examples
 
@@ -99,14 +99,14 @@ Navigates to a page using the named route. This API uses a promise to return the
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,16 +126,16 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## Examples
 
@@ -187,14 +187,14 @@ Navigates to a page using the named route. This API uses a promise to return the
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -216,10 +216,10 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## Examples
 
@@ -269,14 +269,14 @@ Navigates to a page using the named route. This API uses a promise to return the
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -297,16 +297,16 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## Examples
 

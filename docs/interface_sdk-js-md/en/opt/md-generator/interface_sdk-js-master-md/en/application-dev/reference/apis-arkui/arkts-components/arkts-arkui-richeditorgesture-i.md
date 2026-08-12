@@ -14,13 +14,13 @@ User gesture event.
 onClick?: Callback<ClickEvent>
 ```
 
-Triggered when [ClickEvent](arkts-arkui-clickevent-i.md) occurs.
+Triggered when [ClickEvent](arkts-arkui-clickevent-i.md#ClickEvent) occurs.
 
 It is executed on completion of a single click.
 
 On a double-click, the first click triggers the callback event.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
+**Type:** Callback&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt;
 
 **Since:** 11
 
@@ -42,7 +42,7 @@ Triggered when the user performs a long press.
 
 It is executed on completion of a long press.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt;
+**Type:** Callback&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
 
 **Since:** 11
 

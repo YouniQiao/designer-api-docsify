@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## byteLength
@@ -28,8 +28,8 @@ Returns the byte length of a string when encoded using `encoding`.This is not th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format of the string. The default value is 'utf8'. |
+| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | Yes | Target string. |
+| encoding | BufferEncoding | No | Encoding format of the string. The default value is 'utf8'. |
 
 **Return value:**
 

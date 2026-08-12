@@ -13,7 +13,7 @@ Defines the window size layout breakpoint information.This interface provides th
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint
@@ -24,7 +24,7 @@ readonly heightBreakpoint: HeightBreakpoint
 
 The height breakpoint classification of the current window.This value indicates which height category the window currently falls into based on the configured height breakpoint thresholds and aspect ratio.
 
-**Type:** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
+**Type:** HeightBreakpoint
 
 **Since:** 24
 
@@ -44,7 +44,7 @@ readonly widthBreakpoint: WidthBreakpoint
 
 The width breakpoint classification of the current window.This value indicates which width category the window currently falls into based on the configured width breakpoint thresholds.
 
-**Type:** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
+**Type:** WidthBreakpoint
 
 **Since:** 24
 

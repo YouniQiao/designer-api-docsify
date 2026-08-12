@@ -107,7 +107,7 @@ static globalConnect<T extends object>(params: ConnectOptions<T>): T | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-ability-connectoptions-t.md)&lt;T&gt; | 是 | application-level storage parameters. |
+| params | [ConnectOptions](arkts-arkui-persistencev2-connectoptions-i.md)&lt;T&gt; | 是 | application-level storage parameters. |
 
 **返回值：**
 

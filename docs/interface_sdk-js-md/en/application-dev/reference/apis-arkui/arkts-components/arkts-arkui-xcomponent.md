@@ -24,7 +24,7 @@ Constructor parameters
 
 **Deprecated since:** 12
 
-**Substitutes:** <!--SUBSTITUTE_API-->(value:<!--/SUBSTITUTE_API-->
+**Substitutes:** [(value:]((value:)
 
 <!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
 
@@ -115,7 +115,7 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [NativeXComponentParameters](../arkts-apis/arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**. |
+| params | [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**. |
 
 ## Summary
 

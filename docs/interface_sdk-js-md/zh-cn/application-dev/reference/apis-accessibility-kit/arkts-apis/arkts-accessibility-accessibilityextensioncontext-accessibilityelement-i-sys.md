@@ -1,7 +1,7 @@
 # AccessibilityElement
 
 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。
+[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
 
 **起始版本：** 9
 
@@ -39,9 +39,54 @@ enableScreenCurtain(isEnable: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
+
+## 示例
+
+```TypeScript
+import {
+  AccessibilityElement,
+  AccessibilityEvent, 
+  AccessibilityExtensionContext
+} from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class AccessibilityManager {
+  private static instance: AccessibilityManager;
+  context?: AccessibilityExtensionContext;
+
+  static getInstance(): AccessibilityManager {
+    if (!AccessibilityManager.instance) {
+      AccessibilityManager.instance = new AccessibilityManager();
+    }
+    return AccessibilityManager.instance;
+  }
+
+  onStart(context: AccessibilityExtensionContext) {
+    this.context = context;
+  }
+
+  onStop() {
+    this.context = undefined;
+  }
+
+  onEvent(accessibilityEvent: AccessibilityEvent): void {
+    if (!this.context) {
+      console.error('context is not available!');
+      return;
+    }
+    this.context.getRootInActiveWindow().then((rootElement: AccessibilityElement) => {
+      console.info(`succeeded in getting root element of the window, ${JSON.stringify(rootElement)}`);
+      rootElement.enableScreenCurtain(true);
+      console.info(`Succeeded in enabling screen curtain`);
+    }).catch((err: BusinessError) => {
+      console.error(`Failed to enable screen curtain. Code: ${err.code}, message: ${err.message}`);
+    });
+  }
+}
+```
 
 ## executeAction
 
@@ -68,7 +113,7 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | 是 | 无障碍节点可执行的操作。 |
-| parameters | [Parameter](arkts-accessibility-parameter-t-sys.md) | 否 | 执行操作时设置的参数值，默认为空。 |
+| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 否 | 执行操作时设置的参数值，默认为空。 |
 
 **返回值：**
 
@@ -80,9 +125,65 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+无参数Action。
+
+```TypeScript
+// 无参数Action示例：
+import { AccessibilityAction } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+// Action描述中无明确要求的，均为无参数Action。
+rootElement.executeAction(AccessibilityAction.CLICK).then(() => {
+  console.info(`succeeded in performing action CLICK`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action CLICK. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
+有参数Action（setSelection）。
+
+```TypeScript
+// 有参数Action示例：
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// selectTextBegin：表示选择起始位置。
+// selectTextEnd：表示选择结束位置。
+// selectTextInForWard：true表示为前光标，false表示为后光标。
+let parameter : Parameter = { selectTextBegin: '0', selectTextEnd: '8', selectTextInForWard: true };
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+// setSelection示例代码。
+rootElement.executeAction(AccessibilityAction.SET_SELECTION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_SELECTION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_SELECTION. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
+
+有参数Action（setCursorPosition）。
+
+```TypeScript
+// 有参数Action示例：
+import { AccessibilityAction, Parameter } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// offset：表示光标的设置位置。
+let parameter : Parameter = { offset: '1' };
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+// setCursorPosition示例代码。
+rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).then(() => {
+  console.info(`succeeded in performing action SET_CURSOR_POSITION`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action SET_CURSOR_POSITION. Code: ${err?.code}, message: ${err?.message}`);
+});
+```
 
 ## findElement
 
@@ -113,13 +214,30 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回满足指定查询关键字的所有节点元素。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise对象，返回满足指定查询关键字的所有节点元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// condition的内容需要与目标组件accessibilityTextHint属性的type字段值保持一致。
+let condition = 'location'; 
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+rootElement.findElement('textType', condition).then((data: AccessibilityElement[]) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -150,13 +268,30 @@ findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回满足指定查询条件的节点元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回满足指定查询条件的节点元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// elementId为10。
+let condition = 10;
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+rootElement.findElement('elementId', condition).then((data: AccessibilityElement) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByContent
 
@@ -188,15 +323,44 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回包含指定内容的元素列表。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise对象，返回包含指定内容的元素列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+
+## 示例
+
+```TypeScript
+// Page.ets
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: number = 10;
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
+    root.findElementByContent('connect').then((elements: AccessibilityElement[]) => {
+        console.info('findElementByContent size=' + elements.length);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find element by content. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByElementId
 
@@ -226,13 +390,29 @@ Find elements that match the condition.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; |  |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// elementId为10。
+let condition = 10;
+
+// rootElement是AccessibilityElement的实例。
+rootElement.findElement('elementId', condition).then((data: AccessibilityElement) => {
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## findElementByFocusDirection
 
@@ -264,15 +444,47 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回指定焦点方向的元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回指定焦点方向的元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+
+## 示例
+
+```TypeScript
+// Page.ets
+// 点击TextInput使其成为无障碍焦点元素，向上方向的下一个焦点元素是Text#connect。
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementByFocusDirection('up').then((element: AccessibilityElement) => {
+        console.info('findElementByFocusDirection UP componentId: ' + element.componentId);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find element by focus direction. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementById
 
@@ -310,15 +522,47 @@ findElementById(condition: long): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回指定 ID 的元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回指定 ID 的元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+
+## 示例
+
+```TypeScript
+// Page.ets
+// 点击TextInput使其成为无障碍焦点元素。
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementById(0).then((element: AccessibilityElement) => {
+        console.info('findElementById componentId: ' + element.componentId);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find element by id. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementByTextType
 
@@ -348,13 +592,29 @@ Find elements that match the condition.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; |  |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// condition的内容需要与目标组件accessibilityTextHint属性的type字段值保持一致。
+let condition = 'location'; 
+
+// rootElement是AccessibilityElement的实例。
+rootElement.findElement('textType', condition).then((data: AccessibilityElement[]) => {
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## findElementsByAccessibilityHintText
 
@@ -386,15 +646,49 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回包含指定提示文本的元素列表。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise对象，返回包含指定提示文本的元素列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+
+## 示例
+
+```TypeScript
+// Page.ets
+  build() {
+    Text('Connect')
+        .id('connect')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+
+    TextInput({ placeholder: 'please input...' })
+        .id('text_input')
+        .fontSize($r('app.float.page_text_font_size'))
+        .accessibilityTextHint('location')
+// ...
+
+// AccessibilityExtAbility.ets
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let windowId: number = 10;
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
+    root.findElementsByAccessibilityHintText('location').then((elements: AccessibilityElement[]) => {
+        console.info('findElementsByAccessibilityHintText size=' + elements.length);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find elements by accessibility hint text. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElementsByCondition
 
@@ -427,14 +721,32 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FocusMoveResult&gt; | Promise对象，返回查询结果对象。 |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise对象，返回查询结果对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement, FocusMoveResult } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) => {
+    focus.findElementsByCondition('bypassSelf', 'forward').then((res: FocusMoveResult) => {
+        console.info('findElementsByCondition result: ' + res.result);
+    }).catch((err: BusinessError) => {
+        console.error(`Failed to find elements by condition. Code: ${err.code}, message: ${err.message}`);
+    });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getChildren
 
@@ -460,14 +772,33 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt;&gt; | Promise对象，返回当前元素的子元素列表。 |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise对象，返回当前元素的子元素列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
+  console.info(`element childrenIds: ${element.childrenIds}`);
+  element.getChildren().then((children: AccessibilityElement[]) => {
+    console.info(`children element's size: ${children.length}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get children. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getCursorPosition
 
@@ -499,6 +830,38 @@ getCursorPosition(callback: AsyncCallback<int>): void
 | --- | --- | --- | --- |
 | callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，表示文本组件中光标位置。 |
 
+## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+rootElement.getCursorPosition((err: BusinessError, data: number) => {
+  if (err && err.code) {
+    console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting cursor position, ${data}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例
+rootElement.getCursorPosition((err: BusinessError | null, data: int | undefined) => {
+  if (err?.code) {
+    console.error(`failed to get cursor position, Code is ${err?.code}, message is ${err?.message}`);
+    return;
+  }
+  console.info(`succeeded in getting cursor position, ${data}`);
+});
+```
+
 ## getCursorPosition
 
 ArkTS-Dyn:
@@ -529,6 +892,34 @@ getCursorPosition(): Promise<int>
 | --- | --- |
 | ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前光标所处位置。 |
 
+## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，需通过AccessibilityExtensionContext.getAccessibilityFocusedElement()或getRootInActiveWindow()获取。
+rootElement.getCursorPosition().then((data: number) => {
+  console.info(`succeeded in getting cursor position, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例
+rootElement.getCursorPosition().then((data: int) => {
+  console.info(`succeeded in getting cursor position, ${data}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to get cursor position, Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getParent
 
 ```TypeScript
@@ -553,14 +944,33 @@ getParent(): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回当前元素的父元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回当前元素的父元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) => {
+  console.info(`element parent id: ${element.parentId}`);
+  element.getParent().then((parent: AccessibilityElement) => {
+    console.info(`parent element's parent id: ${parent.parentId}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get parent. Code: ${err.code}, message: ${err.message}`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getRoot
 
@@ -586,14 +996,32 @@ getRoot(): Promise<AccessibilityElement>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)&gt; | Promise对象，返回活动窗口中的根元素。 |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise对象，返回活动窗口中的根元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// axContext是AccessibilityExtensionContext的实例，需通过AccessibilityExtensionAbility子类实例的context属性获取，详见使用说明。
+let windows: AccessibilityElement[] = axContext.getAccessibilityWindowsSync();
+for (let window of windows) {
+  console.info(`window id: ${window.windowId}`);
+  window.getRoot().then((root: AccessibilityElement) => {
+    console.info(`root element's componentId: ${root.componentId}`);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to get root. Code: ${err.code}, message: ${err.message}`);
+  });
+}
+```
 
 ## accessibilityFocused
 
@@ -1267,7 +1695,7 @@ hotArea?: Rect
 
 元素的可触摸区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 20
 
@@ -1693,7 +2121,7 @@ rect?: Rect
 
 元素的区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 20
 
@@ -1733,7 +2161,7 @@ screenRect?: Rect
 
 元素的显示区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 20
 

@@ -13,7 +13,7 @@ Describes [environment variable](../../../ui/arkts-env-system-property.md) data 
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## cutout
@@ -22,7 +22,7 @@ import { window } from 'kits/@kit.ArkUI';
 cutout: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_CUTOUT** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_CUTOUT** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -40,7 +40,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 keyboard: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_KEYBOARD** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_KEYBOARD** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -58,7 +58,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 navigationIndicator: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_NAVIGATION_INDICATOR**type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_NAVIGATION_INDICATOR**type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -76,7 +76,7 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is *
 statusBar: AvoidArea
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) is **TYPE_SYSTEM** type, in px.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_SYSTEM** type, in px.
 
 **Type:** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 

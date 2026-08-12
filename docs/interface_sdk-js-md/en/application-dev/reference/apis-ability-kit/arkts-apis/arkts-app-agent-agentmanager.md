@@ -17,7 +17,7 @@ The module provides the capability to interact with agents in the system.
 ## Modules to Import
 
 ```TypeScript
-import { agentManager } from 'kits/@kit.AbilityKit';
+import { agentManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -31,7 +31,7 @@ import { agentManager } from 'kits/@kit.AbilityKit';
 | [connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectserviceextensionability) | Connects an AgentExtensionAbility to a ServiceExtensionAbility.If the target service extension ability is visible, you can connect to it.If the target service extension ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to connect to it.If the target service extension ability is on a remote device, you need to apply for permission:ohos.permission.DISTRIBUTED_DATASYNC. |
 | [deleteAgentCard](arkts-ability-agentmanager-deleteagentcard-f-sys.md#deleteagentcard) | Deletes the AgentCard within specified agent id. |
 | [disconnectAgentExtensionAbility](arkts-ability-agentmanager-disconnectagentextensionability-f-sys.md#disconnectagentextensionability) | Disconnects to an AgentExtensionAbility. |
-| [disconnectServiceExtensionAbility](arkts-ability-agentmanager-disconnectserviceextensionability-f-sys.md#disconnectserviceextensionability) | Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to{@link connectServiceExtensionAbility}. |
+| [disconnectServiceExtensionAbility](arkts-ability-agentmanager-disconnectserviceextensionability-f-sys.md#disconnectserviceextensionability) | Disconnects an AgentExtensionAbility from a ServiceExtensionAbility, in contrast to[connectServiceExtensionAbility](arkts-ability-agentmanager-connectserviceextensionability-f-sys.md#connectServiceExtensionAbility). |
 | [getAgentCardByAgentId](arkts-ability-agentmanager-getagentcardbyagentid-f-sys.md#getagentcardbyagentid) | Gets the AgentCard within specified agent id. |
 | [getAgentCardsByBundleName](arkts-ability-agentmanager-getagentcardsbybundlename-f-sys.md#getagentcardsbybundlename) | Gets all AgentCards within specified bundleName. |
 | [getAllAgentCards](arkts-ability-agentmanager-getallagentcards-f-sys.md#getallagentcards) | Gets all AgentCards on the device. |

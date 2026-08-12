@@ -156,7 +156,7 @@ source: SourceType
 
 Event input device.
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** [SourceType](arkts-arkui-common-sourcetype-e.md)
 
 **起始版本：** 23
 
@@ -196,7 +196,7 @@ target: EventTarget
 
 Display area of the element that triggers the gesture event.
 
-**类型：** [EventTarget](../../apis-arkts/arkts-apis/arkts-arkts-worker-eventtarget-i.md)
+**类型：** [EventTarget](arkts-arkui-common-eventtarget-i.md)
 
 **起始版本：** 23
 

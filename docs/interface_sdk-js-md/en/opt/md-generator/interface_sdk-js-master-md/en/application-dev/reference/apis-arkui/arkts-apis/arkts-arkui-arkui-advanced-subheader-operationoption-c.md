@@ -11,7 +11,7 @@ Declare type OperationOption
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from 'kits/@kit.ArkUI';
+import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
 ```
 
 ## action

@@ -18,7 +18,7 @@ x?: Length | GridRowSizeOption
 
 Define x in GutterOption
 
-**Type:** [Length](arkts-arkui-length-t.md) \| GridRowSizeOption
+**Type:** [Length](arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ y?: Length | GridRowSizeOption
 
 Define y in GutterOption
 
-**Type:** [Length](arkts-arkui-length-t.md) \| GridRowSizeOption
+**Type:** [Length](arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrow-gridrowsizeoption-i.md)
 
 **Since:** 23
 

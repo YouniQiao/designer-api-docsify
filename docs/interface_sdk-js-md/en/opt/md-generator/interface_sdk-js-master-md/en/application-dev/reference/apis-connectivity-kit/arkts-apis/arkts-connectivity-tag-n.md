@@ -11,7 +11,7 @@ Provides methods to operate or manage NFC tag.
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

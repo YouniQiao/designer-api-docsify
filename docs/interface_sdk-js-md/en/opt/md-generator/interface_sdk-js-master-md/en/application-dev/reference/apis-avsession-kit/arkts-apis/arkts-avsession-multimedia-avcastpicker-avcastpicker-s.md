@@ -13,7 +13,7 @@ A picker view to show available streaming device list.
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPicker } from 'kits/@kit.AVSessionKit';
+import { AVCastPicker } from '@kit.AVSessionKit';
 ```
 
 ## onStateChange
@@ -46,7 +46,7 @@ activeColor?: Color | number | string
 
 Assigns the color of picker component at active state.
 
-**Type:** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| number \| string
+**Type:** Color \| number \| string
 
 **Since:** 11
 
@@ -106,7 +106,7 @@ normalColor?: Color | number | string
 
 Assigns the color of picker component at normal state .
 
-**Type:** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| number \| string
+**Type:** Color \| number \| string
 
 **Since:** 11
 

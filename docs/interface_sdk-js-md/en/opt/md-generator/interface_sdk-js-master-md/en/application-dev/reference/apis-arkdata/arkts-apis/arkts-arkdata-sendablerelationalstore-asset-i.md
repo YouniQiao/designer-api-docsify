@@ -1,10 +1,10 @@
 # Asset
 
 Represent the asset (such as a document, image, or video). **Asset** inherits from  
-[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md) and is used to implement cross-thread transfer of asset data.The asset data does not support **Datashare** APIs. Use   
-[sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) to create an **Asset**instance.
+[lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md#ISendable) and is used to implement cross-thread transfer of asset data.The asset data does not support **Datashare** APIs. Use   
+[sendableRelationalStore.toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#toSendableAsset) to create an **Asset**instance.
 
-**Inheritance/Implementation:** Asset extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** Asset extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Represent the asset (such as a document, image, or video). **Asset** inherits fr
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## createTime
@@ -105,7 +105,7 @@ status?: number
 ```
 
 Asset status. For details, see  
-[relationalStore.AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md). The default value is  
+[relationalStore.AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md#AssetStatus). The default value is  
 **relationalStore.AssetStatus.ASSET_NORMAL**.
 
 **Type:** number

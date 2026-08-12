@@ -28,7 +28,7 @@ declare function fchown(fd: number, uid: number, gid: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## fchown

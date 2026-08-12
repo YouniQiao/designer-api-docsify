@@ -10,7 +10,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, byteLength?: number): DataView
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |
 | byteOffset | number | No |
 | byteLength | number | No |
 

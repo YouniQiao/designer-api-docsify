@@ -23,5 +23,5 @@ Anonymous Object Rectification.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | string | Yes | The text content of the paste. |
-| event | [PasteEvent](../arkts-components/arkts-arkui-pasteevent-i.md) | Yes | User-defined paste event. |
+| event | [PasteEvent](arkts-arkui-richeditor-pasteevent-i.md) | Yes | User-defined paste event. |
 

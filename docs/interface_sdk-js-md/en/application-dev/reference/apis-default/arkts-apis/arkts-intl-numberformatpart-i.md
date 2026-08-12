@@ -8,7 +8,7 @@
 type: NumberFormatPartTypes
 ```
 
-**Type:** [NumberFormatPartTypes](../../apis-arkts/arkts-apis/arkts-arkts-intl-numberformatparttypes-t.md)
+**Type:** NumberFormatPartTypes
 
 **ArkTS mode:** ArkTS-Dyn only
 

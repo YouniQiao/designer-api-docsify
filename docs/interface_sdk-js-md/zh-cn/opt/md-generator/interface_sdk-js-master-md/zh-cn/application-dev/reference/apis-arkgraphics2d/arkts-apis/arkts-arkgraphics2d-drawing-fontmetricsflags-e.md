@@ -14,7 +14,7 @@
 UNDERLINE_THICKNESS_VALID = 1 << 0
 ```
 
-表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)结构中的underlineThickness（下划线厚度）字段有效。
+表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics)结构中的underlineThickness（下划线厚度）字段有效。
 
 **起始版本：** 12
 
@@ -30,7 +30,7 @@ UNDERLINE_THICKNESS_VALID = 1 << 0
 UNDERLINE_POSITION_VALID = 1 << 1
 ```
 
-表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)结构中的underlinePosition（下划线位置）字段有效。
+表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics)结构中的underlinePosition（下划线位置）字段有效。
 
 **起始版本：** 12
 
@@ -46,7 +46,7 @@ UNDERLINE_POSITION_VALID = 1 << 1
 STRIKETHROUGH_THICKNESS_VALID = 1 << 2
 ```
 
-表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)结构中的strikethroughThickness（删除线厚度）字段有效。
+表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics)结构中的strikethroughThickness（删除线厚度）字段有效。
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ STRIKETHROUGH_THICKNESS_VALID = 1 << 2
 STRIKETHROUGH_POSITION_VALID = 1 << 3
 ```
 
-表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)结构中的strikethroughPosition（删除线位置）字段有效。
+表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics)结构中的strikethroughPosition（删除线位置）字段有效。
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ STRIKETHROUGH_POSITION_VALID = 1 << 3
 BOUNDS_INVALID = 1 << 4
 ```
 
-表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md)结构中的边界度量值（如top、bottom、xMin、xMax）无效。
+表示[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics)结构中的边界度量值（如top、bottom、xMin、xMax）无效。
 
 **起始版本：** 12
 

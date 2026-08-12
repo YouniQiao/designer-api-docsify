@@ -76,9 +76,9 @@ endTime: number
 id?: number
 ```
 
-日程id。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数；当调用[deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent)、  
-[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents)删除日程时，日程id数组，日程id需为整数，传入其他非法入参会报错。
+日程id。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent)、  
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents)创建日程时，不填写此参数；当调用[deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteEvent)、  
+[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteEvents)删除日程时，日程id数组，日程id需为整数，传入其他非法入参会报错。
 
 **类型：** number
 
@@ -118,8 +118,8 @@ identifier?: string
 instanceEndTime?: number
 ```
 
-日程实例结束时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数。
+日程实例结束时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent)、  
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents)创建日程时，不填写此参数。
 
 **类型：** number
 
@@ -139,8 +139,8 @@ instanceEndTime?: number
 instanceStartTime?: number
 ```
 
-日程实例开始时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)、  
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents)创建日程时，不填写此参数。
+日程实例开始时间，需要13位时间戳。当调用[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent)、  
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents)创建日程时，不填写此参数。
 
 **类型：** number
 
@@ -202,7 +202,7 @@ location?: Location
 
 日程地点。不填时，默认为undefined。
 
-**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
+**类型：** Location
 
 **起始版本：** 10
 
@@ -301,7 +301,7 @@ timeZone?: string
 ```
 
 日程时区。日程时区。长度建议为[0,5000]字符，不填或异常值时，默认为当前所在时区，当需要创建与当前不一样的时区时，可填入对应的时区。可通过  
-[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)获取当前系统时区。
+[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone)获取当前系统时区。
 
 **类型：** string
 
@@ -343,7 +343,7 @@ type: EventType
 
 日程类型。
 
-**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
+**类型：** EventType
 
 **起始版本：** 10
 

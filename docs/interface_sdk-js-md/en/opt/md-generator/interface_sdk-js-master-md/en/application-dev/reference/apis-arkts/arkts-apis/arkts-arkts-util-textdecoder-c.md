@@ -11,7 +11,7 @@ Provides APIs to decode byte arrays into strings. It supports multiple formats, 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -51,7 +51,7 @@ A constructor used to create a **TextDecoder** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.TextDecoder.create](arkts-arkts-util-textdecoder-c.md#create)
+**Substitutes:** [create](#create)
 
 <!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
@@ -124,7 +124,7 @@ Decodes the input content into a string.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.TextDecoder.decodeToString](arkts-arkts-util-textdecoder-c.md#decodetostring)
+**Substitutes:** [decodeToString](#decodeToString)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -218,7 +218,7 @@ Decodes the input content into a string. If **input** is an empty array, **undef
 
 **Deprecated since:** 12
 
-**Substitutes:** [util.TextDecoder.decodeToString](arkts-arkts-util-textdecoder-c.md#decodetostring)
+**Substitutes:** [decodeToString](#decodeToString)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

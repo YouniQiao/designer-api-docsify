@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## enableAbilityWithCallback
@@ -16,7 +16,7 @@ function enableAbilityWithCallback(
   ): Promise<void>
 ```
 
-Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md) to be invoked when the state of an auxiliary extension ability changes. This API uses a promise to return the result.
+Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md#ConnectCallback) to be invoked when the state of an auxiliary extension ability changes. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -50,8 +50,8 @@ Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-ac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
-| [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) | Invalid bundle name or ability name. |
+| [9300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300002-target-ability-already-enabled) | Target ability already enabled. |
 

@@ -13,7 +13,7 @@ Implements a serial queue, in which all tasks are executed in sequence.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -38,7 +38,7 @@ A constructor used to create a **SequenceRunner** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 ## Examples
 
@@ -76,7 +76,7 @@ A constructor used to create a **SequenceRunner** instance. This instance repres
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of a serial queue. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
+| priority | Priority | No | Priority of the task. The default value is **taskpool.Priority.MEDIUM**. |
 
 ## Examples
 
@@ -112,7 +112,7 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes | Task to be added to the serial queue. |
+| task | Task | Yes | Task to be added to the serial queue. |
 
 **Return value:**
 
@@ -124,11 +124,11 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 11 - 17 |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200025](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) | dependent task not allowed. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed.<br>**Applicable version:** 11 - 17 |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
 
 ## Examples
 

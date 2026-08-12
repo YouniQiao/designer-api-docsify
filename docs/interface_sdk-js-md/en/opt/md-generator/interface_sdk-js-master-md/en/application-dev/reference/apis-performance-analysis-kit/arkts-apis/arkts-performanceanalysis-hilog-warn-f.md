@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## warn
@@ -29,7 +29,7 @@ Prints WARN logs.
 | domain | number | Yes |
 | tag | string | Yes |
 | format | string | Yes |
-| args | any[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | Yes |
 
 ## Examples
 

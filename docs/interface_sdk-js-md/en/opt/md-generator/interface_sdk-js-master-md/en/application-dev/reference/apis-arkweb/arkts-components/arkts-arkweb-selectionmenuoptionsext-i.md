@@ -36,7 +36,7 @@ onAppear?: Callback<void>
 
 Callback invoked when the custom selection menu appears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 13
 
@@ -52,7 +52,7 @@ onDisappear?: Callback<void>
 
 Callback invoked when the custom selection menu disappears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 13
 
@@ -68,7 +68,7 @@ onMenuHide?: Callback<void>
 
 Callback invoked when the custom context menu on selection is hidden.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 21
 
@@ -84,7 +84,7 @@ onMenuShow?: Callback<void>
 
 Callback invoked when the custom context menu on selection is shown.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 21
 
@@ -116,7 +116,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 Custom preview menu options.
 
-**Type:** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**Type:** [PreviewMenuOptions](arkts-arkweb-previewmenuoptions-i.md)
 
 **Since:** 20
 

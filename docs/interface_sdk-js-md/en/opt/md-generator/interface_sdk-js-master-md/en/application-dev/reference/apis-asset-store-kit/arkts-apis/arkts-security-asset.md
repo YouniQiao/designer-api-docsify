@@ -11,7 +11,7 @@ This module provides the capabilities for life cycle management of sensitive use
 ## Modules to Import
 
 ```TypeScript
-import { asset } from 'kits/@kit.AssetStoreKit';
+import { asset } from '@kit.AssetStoreKit';
 ```
 
 ## Summary

@@ -10,7 +10,7 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 若需使用自定义PIN码弹窗，在注册provider时需要同步注册UIExtensionAbility，注意事项如下：
 
-1. 自定义ability通过UIExtensionAbility扩展实现。2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md/arkts-security-certmanager.md)接口统一拉起。 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
+1. 自定义ability通过UIExtensionAbility扩展实现。2. 注册的UIExtensionAbility可以通过证书管理kit提供的[openUKeyAuthDialog](../../apis-device-certificate-kit/arkts-apis/arkts-security-certmanager.md#certificateManager)接口统一拉起。 3. 系统拉起自定义弹窗时会通过want接口向开发者传递以下参数：  
  - Action：string参数类型，在拉起自定义弹窗时want传输的Action为"UkeyPINAuth"。  
  - appUid：number参数类型，通过want.parameters传输。"appUid"字段为应用id，开发者可以通过该字段完成应用隔离。  
  - keyUri：string参数类型其值为resourceId，通过want.parameters传输，表示Ukey证书的索引。  
@@ -35,7 +35,7 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | providerName | string | 是 | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。&lt;br&gt;最多支持注册10个provider。 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | 是 | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，表示ability的名字，根据业务自己内部定义按 照实际填写。&lt;br&gt;从API版本26.0.0开始，可选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)，以JSON列表的形式传入PIN码认证自定义弹窗 UIExtensionAbility的名字以及包名。 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 是 | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，表示ability的名字，根据业务自己内部定义按 照实际填写。&lt;br&gt;从API版本26.0.0开始，可选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，以JSON列表的形式传入PIN码认证自定义弹窗 UIExtensionAbility的名字以及包名。 |
 
 **返回值：**
 
@@ -47,15 +47,15 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported. |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | an error occurred in the dependent module. |
-| [12000019](../errorcode-huks.md#12000019-同名provider已注册) | the provider is already registered. |
-| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) | the ability name param is missing. |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | check permission failed. |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient. |
-| [12000025](../errorcode-huks.md#12000025-资源超过限制) | the number of providers exceeds the limit. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | api is not supported. |
+| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
+| [12000020](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) | an error occurred in the dependent module. |
+| [12000019](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000019-同名provider已注册) | the provider is already registered. |
+| [12000002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) | the ability name param is missing. |
+| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | check permission failed. |
+| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) | memory is insufficient. |
+| [12000025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000025-资源超过限制) | the number of providers exceeds the limit. |
 
 ## 示例
 

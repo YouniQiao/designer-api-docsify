@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getDeviceMacAddress
@@ -20,7 +20,7 @@ Obtains the MAC address of a Wi-Fi device. Wi-Fi must be enabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getDeviceMacAddress
+**Substitutes:** [getDeviceMacAddress](ohos.wifiManager/wifiManager.getDeviceMacAddress)
 
 **Required permissions:** ohos.permission.GET_WIFI_LOCAL_MAC and ohos.permission.GET_WIFI_INFO
 

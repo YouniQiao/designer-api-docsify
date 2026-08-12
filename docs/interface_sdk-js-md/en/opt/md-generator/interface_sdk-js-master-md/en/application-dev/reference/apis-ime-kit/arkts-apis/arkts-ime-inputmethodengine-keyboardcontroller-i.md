@@ -1,7 +1,7 @@
 # KeyboardController
 
 In the following API examples, you must first use   
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -12,7 +12,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## exitCurrentInputType
@@ -39,8 +39,8 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | Error Code ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -74,14 +74,14 @@ Exits this input type. This API can be called only by the preconfigured default 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -119,7 +119,7 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -153,13 +153,13 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -185,7 +185,7 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.KeyboardController.hide](arkts-ime-inputmethodengine-keyboardcontroller-i.md#hide)(callback:
+**Substitutes:** [hide](inputMethodEngine.KeyboardController.hide(callback:)
 
 <!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void-End-->
 
@@ -223,7 +223,7 @@ Hides the keyboard. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.KeyboardController.hide](arkts-ime-inputmethodengine-keyboardcontroller-i.md#hide)()
+**Substitutes:** [hide](#hide)()
 
 <!--Device-KeyboardController-hideKeyboard(): Promise<void>--><!--Device-KeyboardController-hideKeyboard(): Promise<void>-End-->
 
@@ -233,7 +233,7 @@ Hides the keyboard. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

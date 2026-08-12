@@ -11,7 +11,7 @@ Provide common Bluetooth interfaces and types.
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.ConnectivityKit';
+import { common } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

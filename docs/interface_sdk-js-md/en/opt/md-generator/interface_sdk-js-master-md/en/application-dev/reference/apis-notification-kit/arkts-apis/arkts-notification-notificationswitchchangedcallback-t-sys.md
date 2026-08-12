@@ -5,7 +5,7 @@ export type NotificationSwitchChangedCallback = (callbackData: NotificationSwitc
 ```
 
 Registers the callback for notification switch state changes set by  
-[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setnotificationswitch) API.
+[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setNotificationSwitch) API.
 
 **Since:** 26.0.0
 

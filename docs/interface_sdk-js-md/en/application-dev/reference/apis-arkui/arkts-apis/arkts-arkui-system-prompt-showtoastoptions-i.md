@@ -8,7 +8,7 @@ Defines the options of ShowToast.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.promptAction/promptAction.ShowToastOptions
+**Substitutes:** [ShowToastOptions](ohos.promptAction/promptAction.ShowToastOptions)
 
 <!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the options of ShowToast.
 ## Modules to Import
 
 ```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from 'kits/@kit.ArkUI';
+import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
 ## bottom
@@ -36,7 +36,7 @@ The distance between toast dialog box and the bottom of screen.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.promptAction/promptAction.ShowToastOptions#bottom
+**Substitutes:** [bottom](ohos.promptAction/promptAction.ShowToastOptions#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -58,7 +58,7 @@ Duration of toast dialog box. The default value is 1500.The recommended value ra
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.promptAction/promptAction.ShowToastOptions#duration
+**Substitutes:** [duration](ohos.promptAction/promptAction.ShowToastOptions#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -80,7 +80,7 @@ Text to display.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.promptAction/promptAction.ShowToastOptions#message
+**Substitutes:** [message](ohos.promptAction/promptAction.ShowToastOptions#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

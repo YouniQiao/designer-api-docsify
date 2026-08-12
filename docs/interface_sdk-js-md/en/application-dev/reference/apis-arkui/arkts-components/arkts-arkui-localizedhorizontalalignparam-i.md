@@ -18,7 +18,7 @@ align: HorizontalAlign
 
 Horizontal alignment mode relative to the anchor component.
 
-**Type:** [HorizontalAlign](../arkts-apis/arkts-arkui-horizontalalign-e.md)
+**Type:** HorizontalAlign
 
 **Since:** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfoByInterval
@@ -37,10 +37,10 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStateInfo&gt;&gt; | Yes | the callback of usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes | the callback of usage information about each bundle. |
 
 ## Examples
 
@@ -91,7 +91,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
+| byInterval | IntervalType | Yes | Indicates the interval at which the usage statistics are queried. The value can be { |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 
@@ -99,7 +99,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;BundleStateInfo&gt;&gt; | the usage information about each bundle. |
+| Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | the usage information about each bundle. |
 
 ## Examples
 

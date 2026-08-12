@@ -4,7 +4,7 @@ MakerNoteHuaweiMetadata implements Metadata
 
 Photo metadata from Huawei cameras.
 
-**Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md)
+**Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
@@ -17,7 +17,7 @@ Photo metadata from Huawei cameras.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -26,7 +26,7 @@ import { image } from 'kits/@kit.ImageKit';
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-Clones [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) metadata. This API returns the result asynchronously through a promise.
+Clones [MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata) metadata. This API returns the result asynchronously through a promise.
 
 **Since:** 23
 
@@ -50,7 +50,7 @@ Clones [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-Returns an empty [MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md) instance.
+Returns an empty [MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata) instance.
 
 **Since:** 23
 
@@ -150,7 +150,7 @@ Obtains the property values from image metadata. This API returns the result asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## setBlob
 
@@ -186,7 +186,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -196,7 +196,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
 
-For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md).
+For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
 
 **Since:** 23
 
@@ -212,7 +212,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes | Array containing key-value pairs representing properties and their corresponding values of the **MakerNoteHuaweiMetadata** object to be modified. |
+| records | Record&lt;string, string \| null&gt; | Yes | Array containing key-value pairs representing properties and their corresponding values of the **MakerNoteHuaweiMetadata** object to be modified. |
 
 **Return value:**
 
@@ -224,7 +224,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## burstNumber
 
@@ -354,7 +354,7 @@ focusMode?: FocusMode
 
 Lens focus control policy, which determines how the camera adjusts the focal length.
 
-**Type:** [FocusMode](../../apis-camera-kit/arkts-apis/arkts-camera-camera-focusmode-e.md)
+**Type:** FocusMode
 
 **Since:** 23
 

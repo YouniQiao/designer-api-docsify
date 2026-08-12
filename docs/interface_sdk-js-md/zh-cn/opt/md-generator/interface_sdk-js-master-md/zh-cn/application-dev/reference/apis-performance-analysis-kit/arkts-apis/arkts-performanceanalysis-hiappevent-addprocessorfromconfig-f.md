@@ -21,19 +21,19 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | processorName | string | 是 |
-| configName | string | 否 |
+| [configName](arkts-performanceanalysis-hiappevent-processor-i.md) | string | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) |
+| [11105001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11105001-非法的参数值) |
 
 ## 示例
 

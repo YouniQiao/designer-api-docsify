@@ -4,13 +4,13 @@
 
 > **说明：**
 > 
-> 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-promptaction.md)。
+> 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md#promptAction)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction
+**替代接口：** [promptAction/promptAction](ohos.promptAction/promptAction)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 

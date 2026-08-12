@@ -1,8 +1,8 @@
 # MetallicRoughnessMaterial
 
-Material resource for creating realistic appearances, using the Metallic-Roughness model based on PBR.It simulates the surface lighting and reflection effects of different materials like metal and plastic by adjusting metallicity and roughness parameters. It inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md).
+Material resource for creating realistic appearances, using the Metallic-Roughness model based on PBR.It simulates the surface lighting and reflection effects of different materials like metal and plastic by adjusting metallicity and roughness parameters. It inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material).
 
-**Inheritance/Implementation:** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
+**Inheritance/Implementation:** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)
 
 **Since:** 20
 

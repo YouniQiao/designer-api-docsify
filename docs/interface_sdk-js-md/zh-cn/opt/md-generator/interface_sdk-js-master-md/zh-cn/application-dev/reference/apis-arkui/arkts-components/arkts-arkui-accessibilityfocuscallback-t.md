@@ -22,4 +22,4 @@ Defines the callback type used in accessibility focus. The value of isFocus indi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isFocus | boolean | 是 |
+| [isFocus](../../apis-ability-kit/arkts-apis/arkts-ability-pagenodeinfo-i-sys.md) | boolean | 是 |

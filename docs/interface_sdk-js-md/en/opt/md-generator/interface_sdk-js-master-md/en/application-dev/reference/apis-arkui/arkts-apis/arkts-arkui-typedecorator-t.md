@@ -26,4 +26,4 @@ Defines the attribute decorator, which is used to decorate attributes of the cus
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| PropertyDecorator |
+| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) |

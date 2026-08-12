@@ -98,7 +98,7 @@ Button style.
 
 Default value: **DialogButtonStyle.DEFAULT**
 
-**Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
+**Type:** DialogButtonStyle
 
 **Default:** DialogButtonStyle.DEFAULT
 

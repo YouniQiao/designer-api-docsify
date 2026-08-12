@@ -12,7 +12,7 @@ Sets the next refresh time for a widget. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formProvider:formProvider#setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime)
+**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setFormNextRefreshTime)
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number, callback: AsyncCallback<void>): void-End-->
 
@@ -53,7 +53,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formProvider:formProvider#setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-depr-f.md#setformnextrefreshtime)
+**Substitutes:** [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setFormNextRefreshTime)
 
 <!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number): Promise<void>--><!--Device-formProvider-function setFormNextRefreshTime(formId: string, minute: number): Promise<void>-End-->
 
@@ -70,7 +70,7 @@ Sets the next refresh time for a widget. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

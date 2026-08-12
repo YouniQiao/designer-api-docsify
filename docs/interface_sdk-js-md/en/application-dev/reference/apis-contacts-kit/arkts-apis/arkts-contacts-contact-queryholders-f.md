@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryHolders
@@ -20,7 +20,7 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryHolders](arkts-contacts-contact-queryholders-f.md#queryholders)(context:
+**Substitutes:** [queryHolders](contact.queryHolders(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -32,7 +32,7 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Holder&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Holder](arkts-contacts-contact-holder-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -71,15 +71,15 @@ Queries all applications that have created contacts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Holder&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
+| context | Context | Yes | Indicates the context of application or capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Holder](arkts-contacts-contact-holder-c.md)&gt;&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, an array of the queried applications is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -115,7 +115,7 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryHolders](arkts-contacts-contact-queryholders-f.md#queryholders)(context:
+**Substitutes:** [queryHolders](contact.queryHolders(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -127,7 +127,7 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
+| Promise&lt;Array&lt;[Holder](arkts-contacts-contact-holder-c.md)&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
 
 ## Examples
 
@@ -165,20 +165,20 @@ Queries all applications that have created contacts. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Holder&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
+| Promise&lt;Array&lt;[Holder](arkts-contacts-contact-holder-c.md)&gt;&gt; | Promise used to return the result, which is an array of queried applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

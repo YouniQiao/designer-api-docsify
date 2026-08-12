@@ -8,7 +8,7 @@ Provides callbacks to return the authentication result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthEvent](arkts-userauthentication-userauth-authevent-i.md)
+**Substitutes:** [AuthEvent](arkts-userauthentication-userauth-authevent-i.md#AuthEvent)
 
 <!--Device-userAuth-interface IUserAuthCallback--><!--Device-userAuth-interface IUserAuthCallback-End-->
 
@@ -17,7 +17,7 @@ Provides callbacks to return the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## onAcquireInfo
@@ -38,7 +38,7 @@ Called to acquire authentication tip information. This API is optional.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthEvent.callback](arkts-userauthentication-userauth-authevent-i.md#callback)
+**Substitutes:** [callback](arkts-userauthentication-userauth-authevent-i.md#callback)
 
 <!--Device-IUserAuthCallback-onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void--><!--Device-IUserAuthCallback-onAcquireInfo?: (module: number, acquire: number, extraInfo: any) => void-End-->
 
@@ -93,7 +93,7 @@ onResult: (result: number, extraInfo: AuthResult) => void
 
 Called to return the authentication result.
 
-- **result**: Authentication result. For details, see [ResultCode](arkts-userauthentication-userauth-resultcode-e.md).  
+- **result**: Authentication result. For details, see [ResultCode](arkts-userauthentication-userauth-resultcode-e.md#ResultCode).  
 - **extraInfo**: Extended information, which varies depending on the authentication result. If the authentication  
 is successful, the user authentication token will be returned in **extraInfo**. If the authentication fails, the remaining number of authentication times will be returned in **extraInfo**. If the authentication executor is locked, the freeze time will be returned in **extraInfo**.
 
@@ -103,7 +103,7 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthEvent.callback](arkts-userauthentication-userauth-authevent-i.md#callback)
+**Substitutes:** [callback](arkts-userauthentication-userauth-authevent-i.md#callback)
 
 <!--Device-IUserAuthCallback-onResult: (result: number, extraInfo: AuthResult) => void--><!--Device-IUserAuthCallback-onResult: (result: number, extraInfo: AuthResult) => void-End-->
 
@@ -114,7 +114,7 @@ is successful, the user authentication token will be returned in **extraInfo**. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | number | Yes |  |
-| extraInfo | [AuthResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
+| extraInfo | AuthResult | Yes |  |
 
 ## Examples
 

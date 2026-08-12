@@ -12,7 +12,7 @@ Represents a **WebviewController** object used to control various behaviors of *
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## accessBackward
@@ -41,7 +41,7 @@ Checks whether the web page can go back.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## accessForward
 
@@ -69,7 +69,7 @@ Checks whether the web page can go forward.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## accessStep
 
@@ -103,8 +103,8 @@ Checks whether the web page can go back or forward the given number of steps.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## addIntelligentTrackingPreventionBypassingList
 
@@ -126,14 +126,14 @@ Add bypassing hosts for Intelligent Tracking Prevention.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| hostList | Array&lt;string&gt; | Yes |
+| hostList | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## avoidVisibleViewportBottom
 
@@ -175,8 +175,8 @@ Sets the bottom avoidance height of the visible viewport on the web page.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## backOrForward
 
@@ -204,8 +204,8 @@ Goes forward or back backOrForward in the history of the web page.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## backward
 
@@ -227,7 +227,7 @@ Goes back in the history of the web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearBlanklessLoadingCache
 
@@ -253,13 +253,13 @@ In an applet or web application, when the content changes significantly during p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| keys | Array&lt;string&gt; | No |
+| keys | Array & lt;string & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## clearClientAuthenticationCache
 
@@ -281,7 +281,7 @@ Clears the client authentication certificate cache in the Web.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearHistory
 
@@ -303,7 +303,7 @@ Clears the history in the Web.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearHostIP
 
@@ -331,7 +331,7 @@ Clear the host name IP address.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clearIntelligentTrackingPreventionBypassingList
 
@@ -353,7 +353,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## clearMatches
 
@@ -361,7 +361,7 @@ Clear bypassing hosts for Intelligent Tracking Prevention.
 clearMatches(): void
 ```
 
-Clears the matches found through [searchAllAsync](arkts-arkweb-webview-webviewcontroller-c.md#searchallasync).
+Clears the matches found through [searchAllAsync](#searchAllAsync).
 
 **Since:** 9
 
@@ -375,7 +375,7 @@ Clears the matches found through [searchAllAsync](arkts-arkweb-webview-webviewco
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearPrefetchedResource
 
@@ -384,7 +384,7 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
 Clears the cache of prefetched resources based on the specified cache key list. The cache key in the input parameter must be the prefetched resource cache key specified by  
-[prefetchResource](arkts-arkweb-webview-webviewcontroller-c.md#prefetchresource).
+[prefetchResource](#prefetchResource).
 
 **Since:** 12
 
@@ -398,7 +398,7 @@ Clears the cache of prefetched resources based on the specified cache key list. 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cacheKeyList | Array&lt;string&gt; | Yes |
+| cacheKeyList | Array & lt;string & gt; | Yes |
 
 ## clearServiceWorkerWebSchemeHandler
 
@@ -436,7 +436,7 @@ Clears the ssl cache in the Web.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## clearWebSchemeHandler
 
@@ -458,7 +458,7 @@ Clear all web scheme handlers for related web component.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## closeAllMediaPresentations
 
@@ -480,7 +480,7 @@ Closes all full-screen videos on a web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## closeCamera
 
@@ -502,7 +502,7 @@ Disables the camera capture of the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## constructor
 
@@ -547,14 +547,14 @@ Obtains the data stream of a specified web page using an asynchronous callback.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PdfData&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## createPdf
 
@@ -582,14 +582,14 @@ Obtains the data stream of a specified web page using a promise.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PdfData&gt; |
+| Promise&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## createWebMessagePorts
 
@@ -611,20 +611,20 @@ Create web message ports
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isExtentionType | boolean | No |
+| [isExtentionType](arkts-arkweb-webview-webmessageport-i.md) | boolean | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;WebMessagePort&gt; |
+| Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## createWebPrintDocumentAdapter
 
@@ -644,7 +644,7 @@ Creates a **PrintDocumentAdapter** instance to provide content for printing.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| jobName | string | Yes |
+| [jobName](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-print-printjobdata-i.md) | string | Yes |
 
 **Return value:**
 
@@ -656,8 +656,8 @@ Creates a **PrintDocumentAdapter** instance to provide content for printing.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## customizeSchemes
 
@@ -679,14 +679,14 @@ Grant the Web kernel the permission to initiate cross-domain requests for custom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| schemes | Array&lt;WebCustomScheme&gt; | Yes |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## customizeSchemes
 
@@ -708,15 +708,15 @@ Grant the Web kernel the permission to initiate cross-domain requests for custom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| schemes | Array&lt;WebCustomScheme&gt; | Yes |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | Yes |
 | lazyInitWebEngine | boolean | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100020](../errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-failed-to-register-custom-schemes) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## deleteJavaScriptRegister
 
@@ -744,9 +744,9 @@ Deletes a registered JavaScript object with given name.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100008](../errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100008-deleting-a-javascriptproxy-that-does-not-exist) |
 
 ## enableAdsBlock
 
@@ -774,9 +774,9 @@ Enable the ability to block Ads, disabled by default.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## enableAdvancedSecurityMode
 
@@ -846,9 +846,9 @@ Enable the ability to use Intelligent Tracking Prevention; default is disabled.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## enablePrivateNetworkAccess
 
@@ -896,7 +896,7 @@ Enable the ability to check website security risks.Illegal and fraudulent websit
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## enableWholeWebPageDrawing
 
@@ -940,14 +940,14 @@ Asynchronously executes AI page command operations.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100024](../errorcode-webview.md#17100024-aipagecommand-format-error) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100024-aipagecommand-format-error) |
 
 ## forward
 
@@ -969,7 +969,7 @@ Goes forward in the history of the web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getActiveWebEngineVersion
 
@@ -1039,7 +1039,7 @@ Get back forward stack list from current webview.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getBlanklessInfoWithKey
 
@@ -1048,18 +1048,18 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
 Obtains the prediction information about blankless loading (for details, see  
-[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey)API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
+[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo)) and starts to generate the loading transition frame. The application determines whether to enable blankless loading based on the information. This API must be used together with the [setBlanklessLoadingWithKey](#setBlanklessLoadingWithKey)API before the page loading API is triggered or in **onLoadIntercept**, and after the **WebViewController** is bound to the **Web** component.
 
 > **NOTE：**
 > 
 > - The default size of the persistent cache capacity is 30 MB (about 30 pages). You can set the cache capacity
-> by calling [setBlanklessLoadingCacheCapacity](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity)
+> by calling [setBlanklessLoadingCacheCapacity](#setBlanklessLoadingCacheCapacity)
 > . For details, see the description of this API. When the maximum capacity is exceeded, the cache is updated
 > based on the Least Recently Used (LRU) mechanism. The persistent cache data that has been stored for more than
 > seven days is automatically cleared. After the cache is cleared, the optimization effect appears when the page
 > is loaded for the third time.
 > 
-> - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md))
+> - If the snapshot similarity (**similarity** in [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo))
 > is extremely low, check whether the **key** value is correct.
 > 
 > - After this API is called, page loading snapshot detection and transition frame generation calculation are
@@ -1097,7 +1097,7 @@ Obtains the prediction information about blankless loading (for details, see
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## getCertificate
 
@@ -1119,13 +1119,13 @@ Get certificate for the current website.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; |
+| Promise & lt;Array & lt;cert.X509Cert & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getCertificate
 
@@ -1153,8 +1153,8 @@ Get certificate for the current website.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getCustomUserAgent
 
@@ -1182,7 +1182,7 @@ Get custom user agent.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getDefaultUserAgent
 
@@ -1228,7 +1228,7 @@ Get whether default error page feature is enabled.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getFavicon
 
@@ -1256,7 +1256,7 @@ Gets the favicon of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getHitTest
 
@@ -1270,7 +1270,7 @@ Obtains the element type of the area being clicked.
 
 **Deprecated since:** 18
 
-**Substitutes:** [webview.WebviewController#getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest)
+**Substitutes:** [getLastHitTest](#getLastHitTest)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1288,7 +1288,7 @@ Obtains the element type of the area being clicked.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getHitTestValue
 
@@ -1302,7 +1302,7 @@ Obtains the element information of the area being clicked.
 
 **Deprecated since:** 18
 
-**Substitutes:** [webview.WebviewController#getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest)
+**Substitutes:** [getLastHitTest](#getLastHitTest)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1320,7 +1320,7 @@ Obtains the element information of the area being clicked.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getLastHitTest
 
@@ -1346,7 +1346,7 @@ Obtains the element information of the area being clicked last time.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getLastJavascriptProxyCallingFrameUrl
 
@@ -1374,7 +1374,7 @@ Get the url of the last frame that calls the JavaScriptProxy.This should be call
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getLastPostMessageURL
 
@@ -1402,7 +1402,7 @@ Gets URL of frame that sent the latest postMessage to native application.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getMediaPlaybackState
 
@@ -1430,7 +1430,7 @@ Queries the audio and video playback status of the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getOriginalUrl
 
@@ -1458,7 +1458,7 @@ Gets the original url of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getPageHeight
 
@@ -1487,7 +1487,7 @@ Obtains the height of this web page. For details, see
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getPageOffset
 
@@ -1513,7 +1513,7 @@ Obtains the current scrolling offset of the web page (excluding the over-scrolli
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## getPrintBackground
 
@@ -1541,7 +1541,7 @@ Obtains whether the web page background is printed.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getProgress
 
@@ -1567,7 +1567,7 @@ Gets the loading progress for the current page.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## getRenderProcessMode
 
@@ -1639,7 +1639,7 @@ Obtains whether this web page is scrollable.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSecurityLevel
 
@@ -1667,7 +1667,7 @@ Get the security level of the current page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSiteIsolationMode
 
@@ -1715,7 +1715,7 @@ Get whether default error page feature is enabled for subframes.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getSurfaceId
 
@@ -1770,7 +1770,7 @@ Gets the title of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getUrl
 
@@ -1798,7 +1798,7 @@ Gets the url of current Web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getUserAgent
 
@@ -1826,7 +1826,7 @@ Gets the default user agent.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## getUserAgentClientHintsEnabled
 
@@ -1900,7 +1900,7 @@ Obtains the index value of this Web component, which can be used for **Web** com
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## hasImage
 
@@ -1922,14 +1922,14 @@ Checks whether this page contains images. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## hasImage
 
@@ -1957,8 +1957,8 @@ Checks whether this page contains images. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## initializeWebEngine
 
@@ -2004,15 +2004,15 @@ After **webview.WebviewController.SetRenderProcessMode(webview.RenderProcessMode
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resourceMaps | Array&lt;OfflineResourceMap&gt; | Yes |
+| resourceMaps | Array&lt;[OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## isActiveWebEngineEvergreen
 
@@ -2060,7 +2060,7 @@ Get whether Ads block is enabled.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -2088,7 +2088,7 @@ Get whether Ads block is enabled for current Webpage.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## isAutoPreconnectEnabled
 
@@ -2136,7 +2136,7 @@ Whether the incognito mode is set.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## isIntelligentTrackingPreventionEnabled
 
@@ -2164,8 +2164,8 @@ Get whether Intelligent Tracking Prevention is enabled.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2237,15 +2237,15 @@ If **encoding** is not base64 (including null values), ASCII encoding is used fo
 | mimeType | string | Yes |
 | encoding | string | Yes |
 | baseUrl | string | No |
-| historyUrl | string | No |
+| [historyUrl](arkts-arkweb-webview-historyitem-i.md) | string | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## loadUrl
 
@@ -2268,16 +2268,16 @@ Loads the data or URL.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
-| headers | Array&lt;WebHeader&gt; | No |
+| headers | Array & lt;WebHeader & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## off('controllerAttachStateChange')
 
@@ -2298,7 +2298,7 @@ Unregister the callback for controller attach state change.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'controllerAttachStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControllerAttachState&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | No |
 
 ## on('controllerAttachStateChange')
 
@@ -2319,7 +2319,7 @@ Register the callback for controller attach state change.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'controllerAttachStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControllerAttachState&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | Yes |
 
 ## onActive
 
@@ -2341,7 +2341,7 @@ Called when the Web component enters the active state. The application can inter
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## onCreateNativeMediaPlayer
 
@@ -2388,7 +2388,7 @@ Called when the Web component enters the inactive state. You can implement the b
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pageDown
 
@@ -2416,8 +2416,8 @@ Scrolls the page down by half the viewport or jumps to the bottom of the page.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pageUp
 
@@ -2445,8 +2445,8 @@ Scrolls the page up by half the viewport or jumps to the top of the page.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pauseAllMedia
 
@@ -2468,7 +2468,7 @@ Pauses all audio and video on a web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pauseAllTimers
 
@@ -2490,7 +2490,7 @@ Called when the Web component enters the inactive state. You can implement the b
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## pauseMicrophone
 
@@ -2510,7 +2510,7 @@ Pauses microphone capture on the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## postMessage
 
@@ -2533,15 +2533,15 @@ Post web message port to html
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | name | string | Yes |
-| ports | Array&lt;WebMessagePort&gt; | Yes |
+| ports | Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | Yes |
 | uri | string | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## postUrl
 
@@ -2570,9 +2570,9 @@ Loads the URL use "POST" method with post data.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## precompileJavaScript
 
@@ -2602,14 +2602,14 @@ The API determines whether to update the existing bytecode cache based on the pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## prefetchPage
 
@@ -2633,14 +2633,14 @@ Prefetch the resources required by the page, but will not execute js or render t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | url | string | Yes |
-| additionalHeaders | Array&lt;WebHeader&gt; | No |
+| additionalHeaders | Array & lt;WebHeader & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## prefetchPage
 
@@ -2664,15 +2664,15 @@ Prefetch the resources required by the page, but will not execute js or render t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | url | string | Yes |
-| additionalHeaders | Array&lt;WebHeader&gt; | No |
+| additionalHeaders | Array & lt;WebHeader & gt; | No |
 | prefetchOptions | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## prefetchResource
 
@@ -2682,7 +2682,7 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 ```
 
 Prefetches resource requests based on specified request information and additional HTTP request headers, saves the requests to the memory cache, and specifies the cache key and validity period to accelerate loading.Currently, only POST requests whose Content-Type is application/x-www-form-urlencoded are supported. A maximum of six POST requests can be pre-obtained. To prefetch the seventh post request, call  
-[clearPrefetchedResource](arkts-arkweb-webview-webviewcontroller-c.md#clearprefetchedresource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value **ArkWebPostCacheKey** to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
+[clearPrefetchedResource](#clearPrefetchedResource) to clear the cache of unnecessary post requests. Otherwise, the cache of the earliest prefetched POST request will be automatically cleared. To use the prefetched resource cache, you need to add the key value **ArkWebPostCacheKey** to the header of the POST request. The content of the key value is the cacheKey of the corresponding cache.
 
 Resources in the memory cache are automatically managed by the ArkWeb engine. When the injected resources are excessive and cause significant memory pressure, the engine will automatically release unused resources. It is advisable to avoid injecting a large number of resources into the memory cache.
 
@@ -2699,7 +2699,7 @@ Resources in the memory cache are automatically managed by the ArkWeb engine. Wh
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | request | [RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | Yes |
-| additionalHeaders | Array&lt;WebHeader&gt; | No |
+| additionalHeaders | Array & lt;WebHeader & gt; | No |
 | cacheKey | string | No |
 | cacheValidTime | number | No |
 
@@ -2707,8 +2707,8 @@ Resources in the memory cache are automatically managed by the ArkWeb engine. Wh
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## prepareForPageLoad
 
@@ -2738,8 +2738,8 @@ Preresolve or Preconnect the url. This API can be called before loading the url 
 
 | Error Code ID |
 | --- |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
-| [17100013](../errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100013-invalid-number-of-sockets-during-preconnection) |
 
 ## refresh
 
@@ -2761,7 +2761,7 @@ Refreshes the current URL.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## refresh
 
@@ -2787,7 +2787,7 @@ Refreshes the current URL.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## registerJavaScriptProxy
 
@@ -2812,18 +2812,18 @@ Registers the supplied ArkTs object into this Web component.The object is regist
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| jsObject | object | Yes |
+| [jsObject](arkts-arkweb-web-javascriptproxy-i.md) | object | Yes |
 | name | string | Yes |
-| methodList | Array&lt;string&gt; | Yes |
-| asyncMethodList | Array&lt;string&gt; | No |
+| methodList | Array & lt;string & gt; | Yes |
+| asyncMethodList | Array & lt;string & gt; | No |
 | permission | string | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## removeAllCache
 
@@ -2849,7 +2849,7 @@ Remove resource cache in application. So this method will remove all cache for a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## removeCache
 
@@ -2877,8 +2877,8 @@ Clears the cache in the application. This API will clear the cache for all webvi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## removeIntelligentTrackingPreventionBypassingList
 
@@ -2900,14 +2900,14 @@ Remove bypassing hosts for Intelligent Tracking Prevention.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| hostList | Array&lt;string&gt; | Yes |
+| hostList | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## requestFocus
 
@@ -2929,7 +2929,7 @@ Requests focus for this web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## restoreWebState
 
@@ -2957,8 +2957,8 @@ Restores the page status history from the serialized data of the current WebView
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## resumeAllMedia
 
@@ -2980,7 +2980,7 @@ Resumes the playback of the audio and video that are paused by the pauseAllMedia
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## resumeAllTimers
 
@@ -3002,7 +3002,7 @@ Resume all timers suspended from the pauseAllTimers() interface.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## resumeMicrophone
 
@@ -3024,7 +3024,7 @@ Resumes microphone capture on the current web page. Before using the microphone 
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## runJavaScript
 
@@ -3054,15 +3054,15 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## runJavaScript
 
@@ -3093,9 +3093,9 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## runJavaScriptExt
 
@@ -3123,14 +3123,14 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;JsMessageExt&gt; |
+| Promise&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## runJavaScriptExt
 
@@ -3153,14 +3153,14 @@ Execute JavaScript code in the context of the currently displayed page, and retu
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | script | string \| ArrayBuffer | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;JsMessageExt&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## scrollBy
 
@@ -3190,8 +3190,8 @@ Scrolls the page by the specified amount within a specified period.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## scrollByWithResult
 
@@ -3224,8 +3224,8 @@ Scrolls the page by the specified amount and returns value to indicate whether t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## scrollTo
 
@@ -3255,8 +3255,8 @@ Scrolls the page to the specified absolute position within a specified period.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## searchAllAsync
 
@@ -3285,8 +3285,8 @@ Searches the web page for content that matches the keyword specified by **'searc
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## searchNext
 
@@ -3314,8 +3314,8 @@ Highlights and scrolls to the next match search.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## serializeWebState
 
@@ -3343,7 +3343,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setActiveWebEngineVersion
 
@@ -3420,8 +3420,8 @@ Mutes this web page.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setAutoPreconnect
 
@@ -3467,7 +3467,7 @@ Configure the BackForwardCache.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setBlanklessLoadingCacheCapacity
 
@@ -3499,7 +3499,7 @@ Sets the persistent cache capacity of the blankless loading solution and returns
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## setBlanklessLoadingWithKey
 
@@ -3508,12 +3508,12 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 ```
 
 Sets whether to enable blankless loading. This API must be used together with  
-[getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+[getBlanklessInfoWithKey](#getBlanklessInfoWithKey).
 
 > **NOTE：**
 > 
 > - This API must be called after the page loading API is triggered. Other restrictions are the same as those of
-> [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey).
+> [getBlanklessInfoWithKey](#getBlanklessInfoWithKey).
 > 
 > - The page must be loaded in the component that calls this API.
 > 
@@ -3546,7 +3546,7 @@ Sets whether to enable blankless loading. This API must be used together with
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## setBlanklessLoadingWithParams
 
@@ -3584,7 +3584,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## setConnectionTimeout
 
@@ -3612,7 +3612,7 @@ Set web engine socket connection timeout. Unit: seconds. the default timeout int
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setCustomUserAgent
 
@@ -3640,8 +3640,8 @@ Set custom user agent.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setDownloadDelegate
 
@@ -3669,7 +3669,7 @@ Set delegate for download.Used to notify the progress of the download triggered 
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setErrorPageEnabled
 
@@ -3695,7 +3695,7 @@ Set whether enable the error page. onOverrideErrorPage will be triggered when th
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setErrorPageEnabled
 
@@ -3724,7 +3724,7 @@ Set whether to enable error page. onOverrideErrorPage will be triggered when the
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setHostIP
 
@@ -3754,7 +3754,7 @@ Set IP address for host name.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setHttpDns
 
@@ -3783,7 +3783,7 @@ Set web engine to use HttpDns server to resolve dns.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setNetworkAvailable
 
@@ -3811,8 +3811,8 @@ Put network state for web. Which is used to set window.navigator.onLine property
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setPathAllowingUniversalAccess
 
@@ -3820,13 +3820,13 @@ Put network state for web. Which is used to set window.navigator.onLine property
 setPathAllowingUniversalAccess(pathList: Array<string>): void
 ```
 
-Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list.The behavior of {@link fileAccess} will be overwritten by that of this API.
+Sets a path list. When a file protocol accesses resources in the path list, it can access the local files across domains. In addition, when a path list is set, the file protocol can access only the resources in the path list.The behavior of [fileAccess](fileAccess) will be overwritten by that of this API.
 
 The paths in the list must be any of the following(sub path and module name must be provided):
 
 1. The path of subdirectory of the application file directory, like "/data/storage/el2/base/files/example"or "/data/storage/el2/base/haps/entry/files/example".The application file directory is obtained using Context.filesDir in the Ability Kit.2. The path of application resource directory or its subdirectory, like "/data/storage/el1/bundle/entry/resource/resfile"or "/data/storage/el1/bundle/entry/resource/resfile/example".The application resource directory is obtained from Context.resourceDir in the Ability Kit.
 
-If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the {@link fileAccess}.
+If a path in the list is not of the preceding paths, error code 401 is reported and the path list fails to be set. When the path list is set to empty, the accessible files for the file protocol are subject to the behavior of the [fileAccess](fileAccess).
 
 **Since:** 12
 
@@ -3838,14 +3838,14 @@ If a path in the list is not of the preceding paths, error code 401 is reported 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pathList | Array&lt;string&gt; | Yes |
+| pathList | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setPrintBackground
 
@@ -3874,8 +3874,8 @@ Sets whether to print the background of a web page. If the setting of this API i
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setRenderProcessMode
 
@@ -3903,7 +3903,7 @@ Sets the ArkWeb render subprocess mode.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setScrollable
 
@@ -3932,8 +3932,8 @@ Sets whether this web page is scrollable.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setScrollbarMode
 
@@ -3942,7 +3942,7 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
 Sets the global scrollbar mode in the web page. When this API is not explicitly called,  
-[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md) is used by default,indicating that the scroll bar is not always displayed.
+[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md#ScrollbarMode) is used by default,indicating that the scroll bar is not always displayed.
 
 > **NOTE：**
 > 
@@ -3994,7 +3994,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setSiteIsolationMode
 
@@ -4020,7 +4020,7 @@ Set the site isolation mode.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setSocketIdleTimeout
 
@@ -4068,7 +4068,7 @@ Set the behavior mode of the soft keyboard. If this API is not explicitly called
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setUrlTrustList
 
@@ -4096,8 +4096,8 @@ Set the URL trust list for the ArkWeb.When the URL trust list has been set, only
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setUrlTrustList
 
@@ -4131,8 +4131,8 @@ Example of the urlTrustList:
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## setUserAgentClientHintsEnabled
 
@@ -4175,7 +4175,7 @@ Set the User-Agent to be used for specified hosts, with a maximum of 20,000 host
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | userAgent | string | Yes |
-| hosts | Array&lt;string&gt; | Yes |
+| hosts | Array & lt;string & gt; | Yes |
 
 ## setUserAgentMetadata
 
@@ -4236,7 +4236,7 @@ Sets whether to enable web debugging. By default, web debugging is disabled.For 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setWebDebuggingAccess
 
@@ -4265,7 +4265,7 @@ Enables debugging of web contents.
 
 | Error Code ID |
 | --- |
-| [17100023](../errorcode-webview.md#17100023-port-number-not-allowed) |
+| [17100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100023-port-number-not-allowed) |
 
 ## setWebDestroyMode
 
@@ -4314,8 +4314,8 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## slideScroll
 
@@ -4344,8 +4344,8 @@ Simulates a slide-to-scroll action on the page at the specified velocity.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## startCamera
 
@@ -4368,7 +4368,7 @@ Enables the camera capture of the current web page. Before using the camera, add
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## startDownload
 
@@ -4396,8 +4396,8 @@ Start a download.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## stop
 
@@ -4419,7 +4419,7 @@ Stops the current load.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## stopAllMedia
 
@@ -4441,7 +4441,7 @@ Stops all audio and video on a web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## stopCamera
 
@@ -4463,7 +4463,7 @@ Stops the camera capture of the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## stopMicrophone
 
@@ -4483,7 +4483,7 @@ Stops microphone capture on the current web page.
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## storeWebArchive
 
@@ -4512,15 +4512,15 @@ Stores the current page as a web archive.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## storeWebArchive
 
@@ -4550,9 +4550,9 @@ Stores the current page as a web archive.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
-| [17100003](../errorcode-webview.md#17100003-incorrect-resource-path) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-incorrect-resource-path) |
 
 ## terminateRenderProcess
 
@@ -4578,7 +4578,7 @@ Terminates this render process.Calling this API will destroy the associated rend
 
 | Error Code ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## trimMemoryByPressureLevel
 
@@ -4606,7 +4606,7 @@ Trim memory by different memory pressure level.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## waitForAttached
 
@@ -4632,7 +4632,7 @@ Asynchronously waits for the WebViewController to be attached to the Web compone
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ControllerAttachState&gt; |
+| Promise&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; |
 
 ## warmupServiceWorker
 
@@ -4660,7 +4660,7 @@ Warmup the registered service worker associated the url.
 
 | Error Code ID |
 | --- |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## webPageSnapshot
 
@@ -4690,7 +4690,7 @@ Obtains the full drawing result of the web page.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SnapshotResult&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | Yes |
 
 ## zoom
 
@@ -4713,15 +4713,15 @@ Zooms in or out of this web page. This API is effective only when
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| factor | number | Yes |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## zoomIn
 
@@ -4743,8 +4743,8 @@ Zooms in on this web page by 25%.
 
 | Error Code ID |
 | --- |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
 
 ## zoomOut
 
@@ -4766,5 +4766,5 @@ Zooms out of this web page by 20%.
 
 | Error Code ID |
 | --- |
-| [17100004](../errorcode-webview.md#17100004-function-not-enabled) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |
+| [17100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-function-not-enabled) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) |

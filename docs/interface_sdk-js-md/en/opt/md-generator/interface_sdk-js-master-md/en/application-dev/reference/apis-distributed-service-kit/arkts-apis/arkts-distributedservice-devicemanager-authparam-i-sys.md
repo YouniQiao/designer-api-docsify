@@ -15,7 +15,7 @@ Defines the authentication parameters.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DistributedServiceKit';
+import { deviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## authType

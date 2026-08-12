@@ -58,7 +58,7 @@ buttonType: ButtonType
 
 按钮的类型。
 
-**类型：** [ButtonType](../../apis-arkui/arkts-apis/arkts-arkui-button-buttontype-e.md)
+**类型：** ButtonType
 
 **起始版本：** 23
 

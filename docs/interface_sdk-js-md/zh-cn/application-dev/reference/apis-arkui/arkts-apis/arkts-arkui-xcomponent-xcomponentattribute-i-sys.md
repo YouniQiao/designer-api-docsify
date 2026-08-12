@@ -2,7 +2,7 @@
 
 定义XComponent属性。
 
-**继承/实现关系：** XComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** XComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 

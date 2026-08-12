@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## cancelPairedDevice
@@ -20,7 +20,7 @@ Remove a paired remote device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.cancelPairedDevice
+**Substitutes:** [cancelPairedDevice](ohos.bluetoothManager/bluetoothManager.cancelPairedDevice)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

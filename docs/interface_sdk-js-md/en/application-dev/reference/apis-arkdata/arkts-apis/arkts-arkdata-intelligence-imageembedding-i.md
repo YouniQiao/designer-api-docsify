@@ -13,7 +13,7 @@ Describes the image embedding functions of the multi-modal embedding model.
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getEmbedding
@@ -42,7 +42,7 @@ Obtains the embedding vector of the given image.The model can handle images belo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | The input image of the embedding model. |
+| image | Image | Yes | The input image of the embedding model. |
 
 **Return value:**
 
@@ -54,9 +54,9 @@ Obtains the embedding vector of the given image.The model can handle images belo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -100,8 +100,8 @@ Loads this image embedding model. If the loading fails, an error code is returne
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -143,8 +143,8 @@ Releases this image embedding model. If the releasing fails, an error code is re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-internal-error) | Inner error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-internal-error) | Inner error. |
 
 ## Examples
 

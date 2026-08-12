@@ -54,7 +54,7 @@ readonly slot: NotificationSlot
 
 Notification slot type.
 
-**Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)
+**Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
 **Since:** 7
 

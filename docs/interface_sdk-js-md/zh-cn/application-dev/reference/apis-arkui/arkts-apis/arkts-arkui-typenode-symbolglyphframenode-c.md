@@ -34,11 +34,11 @@ abstract initialize(value?: Resource): SymbolGlyphAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Resource](arkts-arkui-resource-t.md) | 否 |  |
+| value | Resource | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SymbolGlyphAttribute](../arkts-components/arkts-arkui-symbolglyph-attribute.md) |  |
+| SymbolGlyphAttribute |  |
 

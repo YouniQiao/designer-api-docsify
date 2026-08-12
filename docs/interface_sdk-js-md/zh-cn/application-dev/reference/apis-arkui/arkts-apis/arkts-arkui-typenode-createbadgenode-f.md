@@ -28,5 +28,5 @@ Create a FrameNode of Badge type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Badge](arkts-arkui-typenode-badge-t.md) | Return Badge type FrameNode. |
+| Badge | Return Badge type FrameNode. |
 

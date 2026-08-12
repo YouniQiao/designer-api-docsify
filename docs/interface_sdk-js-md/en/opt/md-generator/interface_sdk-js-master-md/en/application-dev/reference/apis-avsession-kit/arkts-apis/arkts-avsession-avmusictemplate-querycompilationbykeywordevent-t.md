@@ -24,4 +24,4 @@ The query compilation by keyword event.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Compilation[]&gt; |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; |

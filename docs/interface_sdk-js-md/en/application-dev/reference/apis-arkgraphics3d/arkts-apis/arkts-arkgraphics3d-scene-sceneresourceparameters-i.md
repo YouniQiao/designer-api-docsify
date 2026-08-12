@@ -36,7 +36,7 @@ uri?: ResourceStr
 
 The resource uri of the scene resource parameters.
 
-**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 

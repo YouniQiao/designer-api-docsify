@@ -14,7 +14,7 @@ declare function access(path: string, mode?: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:access](arkts-corefile-fileio-access-f.md#access)
+**替代接口：** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ declare function access(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:access](arkts-corefile-fileio-access-f.md#access)
+**替代接口：** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -76,7 +76,7 @@ declare function access(path: string, mode: number, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:access](arkts-corefile-fileio-access-f.md#access)
+**替代接口：** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 

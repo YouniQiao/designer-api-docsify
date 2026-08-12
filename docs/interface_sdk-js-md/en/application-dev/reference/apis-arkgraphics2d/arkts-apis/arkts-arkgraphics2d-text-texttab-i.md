@@ -13,7 +13,7 @@ Implements a paragraph-style text tab, which stores the alignment mode and posit
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## alignment
@@ -22,9 +22,9 @@ import { text } from 'kits/@kit.ArkGraphics2D';
 alignment: TextAlign
 ```
 
-Text alignment method after the tab character in a paragraph. It supports the LEFT (left alignment), RIGHT (right alignment), and CENTER (center alignment) alignment methods of [TextAlign](arkts-arkgraphics2d-text-textalign-e.md). Unlisted enum values are treated as left alignment, with left alignment as the default.
+Text alignment method after the tab character in a paragraph. It supports the LEFT (left alignment), RIGHT (right alignment), and CENTER (center alignment) alignment methods of [TextAlign](arkts-arkgraphics2d-text-textalign-e.md#TextAlign). Unlisted enum values are treated as left alignment, with left alignment as the default.
 
-**Type:** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 18
 

@@ -1,6 +1,6 @@
 # Tool
 
-本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md)中定义的数据结构的转换功能。
+本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md#common2D)中定义的数据结构的转换功能。
 
 > **说明：**
 > 
@@ -34,7 +34,7 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
+| [resourceColor](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 |
 
 **返回值：**
 
@@ -46,4 +46,4 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

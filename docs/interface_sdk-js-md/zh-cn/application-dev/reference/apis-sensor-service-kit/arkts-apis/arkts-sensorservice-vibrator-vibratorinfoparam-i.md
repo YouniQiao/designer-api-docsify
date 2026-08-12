@@ -17,7 +17,7 @@ deviceId?: int
 ```
 
 设备的ID。默认值：-1，表示本地设备。使用场景：在多设备场景下需指定远程设备时设置此参数；不填此参数时默认控制本地设备。从API version 19开始，设备ID可通过  
-[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或[on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。
+[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync)或[on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -36,7 +36,7 @@ vibratorId?: int
 ```
 
 马达ID。默认值：0，表示该设备的全部马达。使用场景：在多马达设备上需指定特定马达时设置此参数；不填此参数时默认控制该设备的全部马达。从API version 19开始，马达ID可通过  
-[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或[on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。
+[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync)或[on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

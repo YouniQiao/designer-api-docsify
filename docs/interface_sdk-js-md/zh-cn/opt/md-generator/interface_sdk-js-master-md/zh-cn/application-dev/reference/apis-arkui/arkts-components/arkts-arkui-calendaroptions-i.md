@@ -57,7 +57,7 @@ end?: Date
 > 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
 
 > **说明：** 若start日期晚于end日期，则start日期、end日期都设置无效，选中日期为默认值。
-> 详见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+> 详见[start和end设置规则](#start和end设置规则)。
 
 **类型：** Date
 
@@ -112,7 +112,7 @@ hintRadius?: number | Resource
 selected?: Date
 ```
 
-设置选中项的日期。当需要预设选中日期时传入此参数，不需要预设时使用当前系统日期。选中的日期未设置或日期格式不符合规范则为默认值。选中日期与start、end参数的配合关系见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+设置选中项的日期。当需要预设选中日期时传入此参数，不需要预设时使用当前系统日期。选中的日期未设置或日期格式不符合规范则为默认值。选中日期与start、end参数的配合关系见[start和end设置规则](#start和end设置规则)。
 
 > 默认值：当前系统日期。
 
@@ -145,7 +145,7 @@ start?: Date
 > 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
 
 > **说明：** 若start日期晚于end日期，则start日期、end日期都设置无效，选中日期为默认值。
-> 详见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+> 详见[start和end设置规则](#start和end设置规则)。
 
 **类型：** Date
 

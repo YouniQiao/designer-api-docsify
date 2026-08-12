@@ -7,19 +7,19 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
     floatingBallParams: floatingBall.FloatingBallParams): Promise<void>
 ```
 
-绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和  
-[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。
+绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController)和  
+[闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController)，且均未启动。使用Promise异步回调。
 
 > **说明：**
 > 
 > - 绑定成功后，调用[start()](arkts-arkui-floatview-floatviewcontroller-i.md#start)或
-> [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball)均会同时创
+> [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startFloatingBall)均会同时创
 > 建标准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。但同一时刻仅展示其中一个窗口，展示顺序取决于先调用哪个控制器的启动接口。
 > 
 > - 绑定成功后，用户可通过点击操作在标准悬浮窗窗口与闪控球之间进行切换。
 > 
 > - 绑定成功后，调用任一控制器的停止接口（[stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop)或
-> [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)）会同时销毁标
+> [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopFloatingBall)）会同时销毁标
 > 准悬浮窗窗口和闪控球窗口，并触发对应窗口已注册的状态回调。
 
 **起始版本：** 26.0.0
@@ -44,17 +44,17 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-闪控球参数校验错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [1300025](../errorcode-window.md#1300025-闪控球状态不支持该操作) |
-| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300019-闪控球参数校验错误) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [1300025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300025-闪控球状态不支持该操作) |
+| [1300031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 
 ## 示例
 

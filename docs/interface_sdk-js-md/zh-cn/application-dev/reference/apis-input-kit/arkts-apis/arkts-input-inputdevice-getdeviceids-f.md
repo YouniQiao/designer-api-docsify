@@ -16,7 +16,7 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimodalInput.inputDevice#getDeviceList
+**替代接口：** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList)
 
 <!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void--><!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -72,7 +72,7 @@ function getDeviceIds(): Promise<Array<number>>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimodalInput.inputDevice#getDeviceList
+**替代接口：** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList)
 
 <!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>--><!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>-End-->
 

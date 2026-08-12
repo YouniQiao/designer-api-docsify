@@ -11,7 +11,7 @@ Provides APIs to check different types of built-in objects, such as ArrayBuffer,
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

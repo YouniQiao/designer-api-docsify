@@ -26,13 +26,13 @@ Defines FolderStack Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [FolderStackOptions](arkts-arkui-folderstack-folderstackoptions-i.md) | No | FolderStack options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FolderStackAttribute](../arkts-components/arkts-arkui-folderstack-attribute.md) |  |
+| [FolderStackAttribute](arkts-arkui-folderstack-folderstackattribute-i.md) |  |
 
 
 ## FolderStack
@@ -62,12 +62,12 @@ Defines FolderStack Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;FolderStackAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[FolderStackAttribute](arkts-arkui-folderstack-folderstackattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FolderStackAttribute](../arkts-components/arkts-arkui-folderstack-attribute.md) |  |
+| [FolderStackAttribute](arkts-arkui-folderstack-folderstackattribute-i.md) |  |
 

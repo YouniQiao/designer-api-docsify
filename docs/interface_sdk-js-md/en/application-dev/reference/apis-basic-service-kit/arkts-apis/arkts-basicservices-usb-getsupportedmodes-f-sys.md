@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## getSupportedModes
@@ -20,7 +20,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes)
+**Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes)
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -38,7 +38,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | Type | Description |
 | --- | --- |
-| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | Mask combination for the supported mode list. |
+| PortModeType | Mask combination for the supported mode list. |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## setNetExtAttribute
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function setNetExtAttribute(netHandle: NetHandle, netExtAttribute: string): Promise<void>
 ```
 
-Set the network extended attribute for a {@link NetHandle} object.To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
+Set the network extended attribute for a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object.To invoke this method, you must have the {@code ohos.permission.SET_NET_EXT_ATTRIBUTE} permission.
 
 **Since:** 20
 
@@ -28,7 +28,7 @@ Set the network extended attribute for a {@link NetHandle} object.To invoke this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netHandle | [NetHandle](arkts-network-connection-nethandle-i.md) | Yes | Indicates the network to be set. See {@link NetHandle}. |
+| netHandle | NetHandle | Yes | Indicates the network to be set. See [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle). |
 | netExtAttribute | string | Yes | Indicates the extended attribute of the network. |
 
 **Return value:**
@@ -41,10 +41,10 @@ Set the network extended attribute for a {@link NetHandle} object.To invoke this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

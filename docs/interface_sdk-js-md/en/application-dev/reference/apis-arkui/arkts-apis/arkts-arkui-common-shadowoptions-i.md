@@ -18,7 +18,7 @@ color?: Color | string | Resource | ColoringStrategy
 
 Color of the shadow. Default value: **Black**
 
-**Type:** [Color](arkts-arkui-color-e.md) \| string \| Resource \| ColoringStrategy
+**Type:** [Color](arkts-arkui-color-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [ColoringStrategy](arkts-arkui-coloringstrategy-e.md)
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ offsetX?: double | Resource
 
 Offset of the shadow along the x-axis. Unit is px. Default value is 0.
 
-**Type:** double \| Resource
+**Type:** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ offsetY?: double | Resource
 
 Offset of the shadow along the y-axis. Unit is px. Default value is 0.
 
-**Type:** double \| Resource
+**Type:** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ radius: double | Resource | undefined
 
 Blur radius of the shadow.Default value: 0px.
 
-**Type:** double \| Resource \| undefined
+**Type:** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ type?: ShadowType
 
 Shadow type.&lt;br&gt;Default value: **COLOR**.
 
-**Type:** [ShadowType](../arkts-components/arkts-arkui-shadowtype-e.md)
+**Type:** [ShadowType](arkts-arkui-common-shadowtype-e.md)
 
 **Default:** ShadowType.COLOR
 

@@ -6,7 +6,7 @@ The **userFileManager** module provides user data management capabilities, inclu
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md/arkts-file-photoaccesshelper.md)
+**Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoAccessHelper)
 
 <!--Device-unnamed-declare namespace userFileManager--><!--Device-unnamed-declare namespace userFileManager-End-->
 
@@ -17,7 +17,7 @@ The **userFileManager** module provides user data management capabilities, inclu
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

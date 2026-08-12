@@ -75,7 +75,7 @@ Create an ImageBitmap object based on the transferred image path or PixelMap obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| PixelMap \| string | Yes | image path or PixelMap object or Resource object |
+| src | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| string | Yes | image path or PixelMap object or Resource object |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## height

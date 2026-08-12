@@ -13,7 +13,7 @@ Defines the request for publishing a reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## actionButton
@@ -47,7 +47,7 @@ autoDeletedTime?: long
 Time when the notification is automatically cleared.
 
 The data format is timestamp, in milliseconds. For details, please refer to   
-[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
+[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autoDeletedTime)
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -198,7 +198,7 @@ Information about the ability that is started automatically and displayed in ful
 
 This API is reserved.
 
-**Type:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
+**Type:** MaxScreenWantAgent
 
 **Since:** 9
 
@@ -254,7 +254,7 @@ reminderType: ReminderType
 
 Type of the reminder.
 
-**Type:** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
+**Type:** ReminderType
 
 **Since:** 9
 
@@ -294,8 +294,8 @@ The value ranges from 0 to1800, in seconds. The default value is **1**.
 
 If the value is **0**, the system notification tone is used.
 
-If the value is greater than 0 and [ReminderRequest.customRingUri](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md) is set, the reminder rings on the specified channel   
-[ReminderRequest.ringChannel](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md). Otherwise, the custom notification tone of the agent-powered reminder is used.
+If the value is greater than 0 and [ReminderRequest.customRingUri](#ReminderRequest) is set, the reminder rings on the specified channel   
+[ReminderRequest.ringChannel](#ReminderRequest). Otherwise, the custom notification tone of the agent-powered reminder is used.
 
 The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 
@@ -407,7 +407,7 @@ tapDismissed?: boolean
 ```
 
 Whether the reminder is automatically cleared. The default value is **true**. For details, see   
-[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)
+[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapDismissed)
 
 - **true** (default): The reminder is automatically cleared after the notification or button is tapped.  
 - **false**: The reminder is retained after the notification or button is tapped.
@@ -486,7 +486,7 @@ wantAgent?: WantAgent
 
 Information about the ability that is redirected to when the reminder is clicked.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** WantAgent
 
 **Since:** 9
 

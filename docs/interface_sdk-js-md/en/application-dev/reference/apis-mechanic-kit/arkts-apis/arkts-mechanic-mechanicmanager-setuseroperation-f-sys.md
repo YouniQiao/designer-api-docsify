@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## setUserOperation
@@ -30,7 +30,7 @@ Sets a user operation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| operation | [Operation](../../apis-mdm-kit/arkts-apis/arkts-mdm-devicecontrol-operation-e.md) | Yes | Operation type. |
+| operation | Operation | Yes | Operation type. |
 | mac | string | Yes | MAC address. |
 | params | string | Yes | Operation parameters. |
 
@@ -38,9 +38,9 @@ Sets a user operation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
 
 ## Examples
 

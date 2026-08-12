@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md)替代。
+> - 从API version 8开始，从API version 9开始废弃，建议使用[HuksReturnResult&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksreturnresult-i.md#HuksReturnResult)替代。
 > 
 > - errorCode的具体信息，请参考[HUKS错误码](../../../reference/apis-universal-keystore-kit/errorcode-huks.md)。
 
@@ -14,7 +14,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [huks.HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
+**替代接口：** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md#HuksReturnResult)
 
 <!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
@@ -96,7 +96,7 @@ properties?: Array<HuksParam>
 
 **说明：** 从API version 9开始废弃，无替代接口。
 
-**类型：** Array&lt;HuksParam&gt;
+**类型：** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **起始版本：** 8
 

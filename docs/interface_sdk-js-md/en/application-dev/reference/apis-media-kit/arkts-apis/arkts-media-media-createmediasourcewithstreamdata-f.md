@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithStreamData
@@ -28,7 +28,7 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | Yes | Array of MediaStream objects. The supported streaming media format is HTTP- FLV. |
+| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | Yes | Array of MediaStream objects. The supported streaming media format is HTTP- FLV. |
 
 **Return value:**
 
@@ -67,7 +67,7 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | Yes | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
+| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | Yes | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
 
 **Return value:**
 

@@ -62,7 +62,7 @@ Dimensions of the widget. The 2 x 2, 4 x 4, 4 x 2, and more options are availabl
 
 Default value: **Dimension_2_2**
 
-**Type:** [FormDimension](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formdimension-e.md)
+**Type:** [FormDimension](arkts-arkui-formdimension-e-sys.md)
 
 **Since:** 12
 
@@ -179,7 +179,7 @@ this mode you need to set the widget style based on the best practices.
 
 If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 
-**Type:** [FormRenderingMode](../arkts-apis/arkts-arkui-formcomponent-formrenderingmode-e-sys.md)
+**Type:** [FormRenderingMode](arkts-arkui-formrenderingmode-e-sys.md)
 
 **Since:** 12
 
@@ -199,7 +199,7 @@ shape?: FormShape
 
 The shape of the form.
 
-**Type:** [FormShape](../../apis-form-kit/arkts-apis/arkts-form-forminfo-formshape-e.md)
+**Type:** [FormShape](arkts-arkui-formshape-e-sys.md)
 
 **Since:** 12
 

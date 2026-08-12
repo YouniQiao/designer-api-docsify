@@ -3,7 +3,7 @@
 Enumerates the order of cropping and scaling.
 
 If the **cropAndScaleStrategy** parameter is not specified in   
-[DecodingOptions](arkts-image-image-decodingoptions-i.md) and both **desiredRegion** and   
+[DecodingOptions](arkts-image-image-decodingoptions-i.md#DecodingOptions) and both **desiredRegion** and   
 **desiredSize** are set, the final decoding result may vary slightly due to differences in decoding algorithms used for different image formats.
 
 For example, if the original image size is 200x200, and you specify   

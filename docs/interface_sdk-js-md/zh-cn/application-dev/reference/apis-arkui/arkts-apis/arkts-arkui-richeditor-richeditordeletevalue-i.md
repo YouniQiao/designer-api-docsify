@@ -18,7 +18,7 @@ direction: RichEditorDeleteDirection
 
 删除操作的方向。
 
-**类型：** [RichEditorDeleteDirection](../arkts-components/arkts-arkui-richeditordeletedirection-e.md)
+**类型：** [RichEditorDeleteDirection](arkts-arkui-richeditor-richeditordeletedirection-e.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResul
 
 删除的文本或图片Span的信息。
 
-**类型：** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md)&gt;
 
 **起始版本：** 23
 

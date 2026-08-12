@@ -1,8 +1,8 @@
 # PanGestureHandlerOptions
 
-滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)。
 
-**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
+**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
 
 **起始版本：** 12
 
@@ -44,13 +44,13 @@ distance?: number
 
 **说明：**
 
-[Tabs组件](tabs)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
+[Tabs组件](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
 
 取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
 
 从API version 19开始，手写笔默认值为8，单位为vp。
 
-使用[gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#gesturemodifier)配置该字段时，单位为px。
+使用[gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gestureModifier)配置该字段时，单位为px。
 
 **类型：** number
 
@@ -76,7 +76,7 @@ distanceMap?: Map<SourceTool, number>
 
 取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
 
-**类型：** Map&lt;SourceTool, number&gt;
+**类型：** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt;
 
 **起始版本：** 19
 

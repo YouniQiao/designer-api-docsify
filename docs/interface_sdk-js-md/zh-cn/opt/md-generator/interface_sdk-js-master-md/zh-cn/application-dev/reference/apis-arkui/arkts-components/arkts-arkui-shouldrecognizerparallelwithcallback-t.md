@@ -21,7 +21,7 @@ declare type ShouldRecognizerParallelWithCallback = (current: GestureRecognizer,
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | 是 |
-| others | Array&lt;GestureRecognizer&gt; | 是 |
+| others | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 |
 
 **返回值：**
 

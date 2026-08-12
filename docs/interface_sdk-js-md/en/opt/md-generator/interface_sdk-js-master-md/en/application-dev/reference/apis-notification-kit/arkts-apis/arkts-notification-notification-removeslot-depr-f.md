@@ -12,7 +12,7 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#removeSlot
+**Substitutes:** [removeSlot](ohos.notificationManager/notificationManager#removeSlot)
 
 <!--Device-notification-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#removeSlot
+**Substitutes:** [removeSlot](ohos.notificationManager/notificationManager#removeSlot)
 
 <!--Device-notification-function removeSlot(slotType: SlotType): Promise<void>--><!--Device-notification-function removeSlot(slotType: SlotType): Promise<void>-End-->
 
@@ -54,4 +54,4 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

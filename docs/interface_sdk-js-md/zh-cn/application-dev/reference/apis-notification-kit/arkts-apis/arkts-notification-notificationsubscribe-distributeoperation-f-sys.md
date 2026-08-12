@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## distributeOperation
@@ -31,7 +31,7 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hashcode | string | 是 | 通知唯一ID。 |
-| operationInfo | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | 否 | 跨设备协同操作信息，默认为空。 |
+| operationInfo | OperationInfo | 否 | 跨设备协同操作信息，默认为空。 |
 
 **返回值：**
 
@@ -43,11 +43,11 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600021](../errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
 
 ## 示例
 

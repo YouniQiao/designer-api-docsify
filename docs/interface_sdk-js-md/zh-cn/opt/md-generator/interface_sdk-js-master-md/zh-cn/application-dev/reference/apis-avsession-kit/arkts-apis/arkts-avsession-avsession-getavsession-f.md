@@ -28,14 +28,14 @@ function getAVSession(context: Context): Promise<AVSession>
 
 | 类型 |
 | --- |
-| Promise&lt;AVSession&gt; |
+| Promise&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
 
 ## 示例
 

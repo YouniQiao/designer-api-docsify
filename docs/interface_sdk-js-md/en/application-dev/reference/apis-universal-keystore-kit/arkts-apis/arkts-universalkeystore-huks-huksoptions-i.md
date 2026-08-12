@@ -13,7 +13,7 @@ Defines **options** used in the APIs.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## inData
@@ -44,7 +44,7 @@ properties?: Array<HuksParam>
 
 Tag.
 
-**Type:** Array&lt;HuksParam&gt;
+**Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 8
 

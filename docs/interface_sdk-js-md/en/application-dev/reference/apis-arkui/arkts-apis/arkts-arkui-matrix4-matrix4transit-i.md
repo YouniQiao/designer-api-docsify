@@ -13,7 +13,7 @@ Matrix4Transit.
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## combine
@@ -38,13 +38,13 @@ Matrix superposition function Which can superpose the effects of two matrices to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes |  |
+| options | Matrix4Transit | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## copy
 
@@ -68,7 +68,7 @@ Copy function of Matrix, which can copy a copy of the current matrix object.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## invert
 
@@ -92,7 +92,7 @@ The inverse function of Matrix returns an inverse matrix of the current matrix o
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## rotate
 
@@ -122,7 +122,7 @@ Rotation function of the Matrix.You can add the x-axis, Y-axis, or Z-axis rotati
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## scale
 
@@ -152,7 +152,7 @@ Scaling function of the Matrix Which can add the x-axis, Y-axis, or Z-axis scali
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## setPolyToPoly
 
@@ -182,7 +182,7 @@ Sets matrix to map src to dst.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## skew
 
@@ -213,7 +213,7 @@ Skew function of the Matrix, which can add the x-axis, y-axis skew effect to the
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 
 ## transformPoint
 
@@ -279,5 +279,5 @@ Matrix translation function Which can add the x-axis, Y-axis, or Z-axis translat
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 

@@ -34,7 +34,7 @@ textStyle: TextStyle
 
 字体的样式信息。
 
-**类型：** [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)
+**类型：** TextStyle
 
 **起始版本：** 12
 

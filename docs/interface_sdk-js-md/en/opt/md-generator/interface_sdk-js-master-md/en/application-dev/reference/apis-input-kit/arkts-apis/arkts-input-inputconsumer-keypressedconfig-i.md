@@ -11,7 +11,7 @@ Sets the key event consumption configuration.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## action
@@ -60,15 +60,15 @@ key: number
 Key value.
 
 **Note:** Since API version 26.0.0, the
-[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md) and  
-[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md) keys are supported. The keys are not universal device keys. Before using them, check whether the current device supports the reporting of related key events. For details, see  
+[KEYCODE_FINGERPRINT_SLIDE_UP](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) and  
+[KEYCODE_FINGERPRINT_SLIDE_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) keys are supported. The keys are not universal device keys. Before using them, check whether the current device supports the reporting of related key events. For details, see  
 [Preferential Response of System Function Keys](../../../device/input/keypressed-guidelines.md).
 
-Since API version 21, the [KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md),  
-[KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md), and  
-[KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md) keys are supported.
+Since API version 21, the [KEYCODE_MEDIA_PLAY_PAUSE](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode),  
+[KEYCODE_MEDIA_NEXT](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode), and  
+[KEYCODE_MEDIA_PREVIOUS](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) keys are supported.
 
-In API version 20 or earlier versions, only the [KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md)and [KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md) keys are supported.
+In API version 20 or earlier versions, only the [KEYCODE_VOLUME_UP](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode)and [KEYCODE_VOLUME_DOWN](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode) keys are supported.
 
 **Type:** number
 

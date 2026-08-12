@@ -11,7 +11,7 @@ The clientCert field of the client certificate, which includes 4 attributes:clie
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## certPath
@@ -38,7 +38,7 @@ certType?: CertType
 
 The type of the client certificate.
 
-**Type:** [CertType](arkts-network-http-certtype-e.md)
+**Type:** CertType
 
 **Since:** 12
 

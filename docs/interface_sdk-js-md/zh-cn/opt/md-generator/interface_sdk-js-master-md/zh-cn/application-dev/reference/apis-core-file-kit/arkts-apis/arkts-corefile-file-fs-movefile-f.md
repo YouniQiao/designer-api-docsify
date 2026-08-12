@@ -30,7 +30,7 @@ declare function moveFile(src: string, dest: string, mode?: number): Promise<voi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 

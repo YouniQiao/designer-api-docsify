@@ -1,6 +1,6 @@
 # DataResubmissionHandler
 
-Defines the onDataResubmission callback, related to {@link onDataResubmission} method.
+Defines the onDataResubmission callback, related to [onDataResubmission](onDataResubmission) method.
 
 **起始版本：** 23
 

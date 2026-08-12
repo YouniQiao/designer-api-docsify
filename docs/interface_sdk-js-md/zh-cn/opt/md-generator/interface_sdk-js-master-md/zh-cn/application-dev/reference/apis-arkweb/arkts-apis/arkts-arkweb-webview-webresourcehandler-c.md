@@ -34,8 +34,8 @@ didFail(code: WebNetErrorList): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didFail
 
@@ -62,8 +62,8 @@ Notify that this request should be failed.
 
 | 错误码ID |
 | --- |
-| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [17100101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100101-使用了错误的网络错误码) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didFail
 
@@ -91,7 +91,7 @@ Notify that this request should be failed.
 
 | 错误码ID |
 | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didFinish
 
@@ -113,7 +113,7 @@ didFinish(): void
 
 | 错误码ID |
 | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didReceiveResponse
 
@@ -141,8 +141,8 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |
 
 ## didReceiveResponseBody
 
@@ -170,5 +170,5 @@ didReceiveResponseBody(data: ArrayBuffer): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) |

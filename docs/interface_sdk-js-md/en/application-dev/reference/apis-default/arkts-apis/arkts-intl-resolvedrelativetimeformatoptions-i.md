@@ -14,7 +14,7 @@ An object with properties reflecting the locale and formatting options computed 
 locale: UnicodeBCP47LocaleIdentifier
 ```
 
-**Type:** [UnicodeBCP47LocaleIdentifier](arkts-intl-unicodebcp47localeidentifier-t.md)
+**Type:** UnicodeBCP47LocaleIdentifier
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -34,7 +34,7 @@ numberingSystem: string
 numeric: RelativeTimeFormatNumeric
 ```
 
-**Type:** [RelativeTimeFormatNumeric](arkts-intl-relativetimeformatnumeric-t.md)
+**Type:** RelativeTimeFormatNumeric
 
 **ArkTS mode:** ArkTS-Dyn only
 
@@ -44,7 +44,7 @@ numeric: RelativeTimeFormatNumeric
 style: RelativeTimeFormatStyle
 ```
 
-**Type:** [RelativeTimeFormatStyle](arkts-intl-relativetimeformatstyle-t.md)
+**Type:** RelativeTimeFormatStyle
 
 **ArkTS mode:** ArkTS-Dyn only
 

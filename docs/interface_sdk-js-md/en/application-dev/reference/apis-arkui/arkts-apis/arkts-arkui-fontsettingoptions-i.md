@@ -17,7 +17,7 @@ enableVariableFontWeight?: boolean
 ```
 
 Whether to enable variable font weight adjustment. This parameter serves as the input for the  
-[fontWeight](arkts-arkui-text-textattribute-i.md#fontweight)API. When the **weight** value in **fontWeight** is a non-hundred value within the [100, 900] range,  
+[fontWeight](TextAttribute#fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptions))API. When the **weight** value in **fontWeight** is a non-hundred value within the [100, 900] range,  
 **enableVariableFontWeight** controls whether this **weight** value is applied.
 
 Default value: **false**

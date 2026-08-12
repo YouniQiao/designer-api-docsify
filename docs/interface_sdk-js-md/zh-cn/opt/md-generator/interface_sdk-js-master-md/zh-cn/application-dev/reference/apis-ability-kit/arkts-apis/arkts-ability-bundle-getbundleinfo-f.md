@@ -15,7 +15,7 @@ function getBundleInfo(bundleName: string,
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -67,7 +67,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -115,7 +115,7 @@ function getBundleInfo(bundleName: string, bundleFlags: number, options?: Bundle
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 

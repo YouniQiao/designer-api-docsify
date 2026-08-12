@@ -1,6 +1,6 @@
 # Filter
 
-Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter)创建一个Filter实例。
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createFilter)创建一个Filter实例。
 
 **起始版本：** 12
 
@@ -38,13 +38,13 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了贝塞尔曲线变形效果的Filter。 |
+| Filter | 返回挂载了贝塞尔曲线变形效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -135,7 +135,7 @@ blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回模糊气泡上升滤镜。 |
+| Filter | 返回模糊气泡上升滤镜。 |
 
 ## 示例
 
@@ -227,13 +227,13 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了颜色渐变效果的Filter。 |
+| Filter | 返回挂载了颜色渐变效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -335,13 +335,13 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回了具有内容光照效果的Filter。 |
+| Filter | 返回了具有内容光照效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -458,7 +458,7 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: double, mas
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | direction | common2D.Point3d | 是 | 入射光的方向，通过三维坐标表示光线的入射方向。 |
-| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | 是 | 光照颜色。 |
+| color | Color | 是 | 光照颜色。 |
 | intensity | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 光照强度，取值范围为[0, +∞)，数值越大光源亮度越大。 |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 置换贴图，用于描述二维图像表面的三维细节。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。 当需要增强局部细节和光照反射效果（如浮雕、凹凸纹理）时传入此参数。通过法线或高度图实现，若输入为高度图需与factor参数配合使用。 不设置时默认为空，表现为全局无细节的平面光照效果。 |
 | factor | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 否 | 采样缩放系数。当使用高度图作为mask且需要控制高度缩放时传入此参数。不设置时mask作为法线图采样直接使用； 设置了值时mask作为高度图采样，实际高度值为mask采样值与factor的乘积。 |
@@ -467,13 +467,13 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: double, mas
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了由置换贴图控制的光照效果的Filter。 |
+| Filter | 返回挂载了由置换贴图控制的光照效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -547,13 +547,13 @@ displacementDistort(displacementMap: Mask, factor?: [double, double]): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了扭曲效果的Filter。 |
+| Filter | 返回挂载了扭曲效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -637,13 +637,13 @@ distort(distortionK: double): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了透镜畸变效果的Filter。 |
+| Filter | 返回挂载了透镜畸变效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -700,7 +700,7 @@ edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 指定描边高光透明度，越大描边越明显。取值范围为[0, 1]。 设置为0时无描边；设置小于0的值时，按值为0处理；设置大于1的值时，按值为1处理。 |
-| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | 否 | 指定描边高光颜色，RGB各分量取值范围为[0, +∞)。 当需要自定义描边高光颜色（如强调特定颜色效果）时传入此参数。不设置时， 默认使用组件内容的原始颜色。设置了color参数时，Color中的alpha不发挥作用，仅使用rgb。 |
+| color | Color | 否 | 指定描边高光颜色，RGB各分量取值范围为[0, +∞)。 当需要自定义描边高光颜色（如强调特定颜色效果）时传入此参数。不设置时， 默认使用组件内容的原始颜色。设置了color参数时，Color中的alpha不发挥作用，仅使用rgb。 |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 | 指定描边高光强度遮罩。可通过Mask类的创建方法 （如createRippleMask、createRadialGradientMask等）创建Mask实例。当需要控制描边高光效果的 作用区域（如局部高光而非全局高光）时传入此参数。不设置时，默认组件内容全部有描边高光效果。 |
 | bloom | boolean | 否 | 指定描边是否发光。当需要增强视觉效果时设置为true； 当需要简洁描边效果时设置为false。不设置时默认为true（带发光效果）。 小于16*16的图片默认只有描边效果，无发光效果，此参数失去作用。 |
 
@@ -708,13 +708,13 @@ edgeLight(alpha: double, color?: Color, mask?: Mask, bloom?: boolean): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了描边高光效果的Filter。 |
+| Filter | 返回挂载了描边高光效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -802,13 +802,13 @@ flyInFlyOutEffect(degree: double, flyMode: FlyMode): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了飞入飞出形变效果的Filter。 |
+| Filter | 返回挂载了飞入飞出形变效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -866,7 +866,7 @@ heatDistortion(param: HeatDistortionEffectParam): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回添加了热浪扭曲效果的Filter。 |
+| Filter | 返回添加了热浪扭曲效果的Filter。 |
 
 ## 示例
 
@@ -939,13 +939,13 @@ maskDispersion(dispersionMap: Mask, alpha: double, rFactor?: [double, double], g
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了由置换贴图控制的色散效果的Filter。 |
+| Filter | 返回挂载了由置换贴图控制的色散效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## maskTransition
 
@@ -985,13 +985,13 @@ maskTransition(alphaMask: Mask, factor?: double, inverse?: boolean): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了转场效果的Filter。 |
+| Filter | 返回挂载了转场效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -1067,13 +1067,13 @@ pixelStretch(stretchSizes: Array<double>, tileMode: TileMode): Filter
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | stretchSizes | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 上下左右四个方向边缘像素扩展的百分比比例，取值范围为[-1, 1]。 正值表示向外扩展，上下左右四个方向分别用指定原图比例的边缘像素填充。负值表示内缩，但是最终图像大小不变。 注意四个方向对应的参数需统一为非正值或非负值，否则效果无效。 |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 | 边缘像素扩展的像素填充模式。 |
+| tileMode | TileMode | 是 | 边缘像素扩展的像素填充模式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了边缘像素扩展效果的Filter。 |
+| Filter | 返回挂载了边缘像素扩展效果的Filter。 |
 
 ## 示例
 
@@ -1131,19 +1131,19 @@ radiusGradientBlur(radius: double, gradientParam: LinearGradientBlurOptions): Fi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 模糊半径，单位为px，模糊半径越大越模糊。 取值范围为[0, 128]。模糊半径设置为0时不模糊；模糊半径设置小于0的值时，按值为0处理； 设置大于128的值时，按值为128处理。 |
-| gradientParam | [LinearGradientBlurOptions](../../apis-arkui/arkts-components/arkts-arkui-lineargradientbluroptions-i.md) | 是 | 线性渐变参数，包含两个部分fractionStops和direction。 |
+| gradientParam | LinearGradientBlurOptions | 是 | 线性渐变参数，包含两个部分fractionStops和direction。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了半径线性渐变模糊效果的Filter。 |
+| Filter | 返回挂载了半径线性渐变模糊效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -1232,13 +1232,13 @@ variableRadiusBlur(radius: double, radiusMap: Mask): Filter
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回当前效果的Filter对象。 |
+| Filter | 返回当前效果的Filter对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -1300,13 +1300,13 @@ waterRipple(progress: double, waveCount: int, x: double, y: double, rippleMode: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | 返回挂载了水波纹效果的Filter。 |
+| Filter | 返回挂载了水波纹效果的Filter。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 

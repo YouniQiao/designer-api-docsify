@@ -31,7 +31,7 @@ off(type: 'layout', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'layout' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 ## off('draw')
 
@@ -56,7 +56,7 @@ off(type: 'draw', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'draw' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 ## off('drawChildren')
 
@@ -260,7 +260,7 @@ on(type: 'layout', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'layout' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## on('draw')
 
@@ -285,7 +285,7 @@ on(type: 'draw', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'draw' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## on('drawChildren')
 

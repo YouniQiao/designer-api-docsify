@@ -8,7 +8,7 @@ Enumerates the sticky effects for list items.
 
 **Deprecated since:** 9
 
-**Substitutes:** list/StickyStyle
+**Substitutes:** [list/StickyStyle](list/StickyStyle)
 
 <!--Device-unnamed-declare enum Sticky--><!--Device-unnamed-declare enum Sticky-End-->
 

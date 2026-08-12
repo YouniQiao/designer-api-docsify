@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from 'kits/@kit.InputKit';
+import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## getInfraredFrequencies
@@ -28,14 +28,14 @@ Queries the frequency range of IR signals supported by the device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InfraredFrequency&gt; | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies. &lt;br&gt;Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, are returned. |
+| Array&lt;[InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)&gt; | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies. &lt;br&gt;Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, are returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application.<br>**Applicable version:** 12 - 14 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application.<br>**Applicable version:** 12 - 14 |
 
 ## Examples
 

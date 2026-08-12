@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getActiveNotifications
@@ -22,6 +22,10 @@ This API is used to query the detailed information list of all stored notificati
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int,callback: AsyncCallback<void>): void) sets the notification
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -32,10 +36,10 @@ This API is used to query the detailed information list of all stored notificati
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -69,19 +73,23 @@ This API is used to query the detailed information list of all stored notificati
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int): Promise<void>) sets the notification
+
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;NotificationRequest&gt;&gt; |
+| Promise & lt;Array & lt;NotificationRequest & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

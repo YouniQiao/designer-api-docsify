@@ -14,7 +14,7 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#requestEnableNotification
+**替代接口：** [requestEnableNotification](ohos.notificationManager/notificationManager#requestEnableNotification)
 
 <!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void--><!--Device-notification-function requestEnableNotification(callback: AsyncCallback<void>): void-End-->
 
@@ -41,7 +41,7 @@ function requestEnableNotification(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#requestEnableNotification
+**替代接口：** [requestEnableNotification](ohos.notificationManager/notificationManager#requestEnableNotification)
 
 <!--Device-notification-function requestEnableNotification(): Promise<void>--><!--Device-notification-function requestEnableNotification(): Promise<void>-End-->
 

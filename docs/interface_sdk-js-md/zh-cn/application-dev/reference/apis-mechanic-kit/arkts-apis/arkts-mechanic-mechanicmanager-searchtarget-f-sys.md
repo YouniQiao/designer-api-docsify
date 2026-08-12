@@ -22,24 +22,24 @@ Searching for a specified target.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | Target infomation. |
-| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | 是 | Parameters to use when searching. |
+| target | TargetInfo | 是 | Target infomation. |
+| params | SearchParams | 是 | Parameters to use when searching. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SearchResult&gt; | Promise that return the Search result. |
+| Promise&lt;[SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md)&gt; | Promise that return the Search result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 33300004 | Camera not opened. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) | Device not connected. |
+| [33300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-功能不支持) | Feature not supported. |
 
 ## 示例
 

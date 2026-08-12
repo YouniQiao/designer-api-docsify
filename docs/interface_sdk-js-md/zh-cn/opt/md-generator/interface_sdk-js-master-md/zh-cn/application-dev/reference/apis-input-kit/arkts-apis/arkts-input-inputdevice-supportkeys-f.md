@@ -26,7 +26,7 @@ function supportKeys(deviceId: number, keys: Array<KeyCode>, callback: AsyncCall
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -86,13 +86,13 @@ function supportKeys(deviceId: number, keys: Array<KeyCode>): Promise<Array<bool
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;boolean&gt;&gt; |
+| Promise & lt;Array & lt;boolean & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

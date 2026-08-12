@@ -74,7 +74,7 @@ from: NavContentInfo
 
 From navigation content info.
 
-**Type:** [NavContentInfo](../arkts-components/arkts-arkui-navcontentinfo-i.md)
+**Type:** [NavContentInfo](arkts-arkui-navigation-navcontentinfo-i.md)
 
 **Since:** 23
 
@@ -116,7 +116,7 @@ to: NavContentInfo
 
 To navigation content info.
 
-**Type:** [NavContentInfo](../arkts-components/arkts-arkui-navcontentinfo-i.md)
+**Type:** [NavContentInfo](arkts-arkui-navigation-navcontentinfo-i.md)
 
 **Since:** 23
 

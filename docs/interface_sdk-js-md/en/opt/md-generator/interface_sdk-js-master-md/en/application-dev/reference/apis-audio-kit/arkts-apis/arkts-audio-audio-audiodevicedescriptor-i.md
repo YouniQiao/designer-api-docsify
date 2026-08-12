@@ -11,7 +11,7 @@ Describes an audio device.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## address
@@ -42,7 +42,7 @@ readonly capabilities?: Array<AudioStreamInfo>
 
 Audio stream capabilities supported by the device.
 
-**Type:** Array&lt;AudioStreamInfo&gt;
+**Type:** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
 **Since:** 22
 
@@ -94,7 +94,7 @@ readonly deviceRole: DeviceRole
 
 Device role.
 
-**Type:** [DeviceRole](arkts-audio-audio-devicerole-e.md)
+**Type:** DeviceRole
 
 **Since:** 7
 
@@ -112,7 +112,7 @@ readonly deviceType: DeviceType
 
 Device type.
 
-**Type:** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
+**Type:** DeviceType
 
 **Since:** 7
 
@@ -148,7 +148,7 @@ readonly encodingTypes?: Array<AudioEncodingType>
 
 Supported encoding types.
 
-**Type:** Array&lt;AudioEncodingType&gt;
+**Type:** Array&lt;[AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)&gt;
 
 **Since:** 11
 

@@ -18,7 +18,7 @@ readonly bottom: Rect
 
 瀑布曲面区域的底部矩形区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 9
 
@@ -38,7 +38,7 @@ readonly left: Rect
 
 瀑布曲面区域的左侧矩形区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 9
 
@@ -58,7 +58,7 @@ readonly right: Rect
 
 瀑布曲面区域的右侧矩形区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 9
 
@@ -78,7 +78,7 @@ readonly top: Rect
 
 瀑布曲面区域的顶部矩形区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 9
 

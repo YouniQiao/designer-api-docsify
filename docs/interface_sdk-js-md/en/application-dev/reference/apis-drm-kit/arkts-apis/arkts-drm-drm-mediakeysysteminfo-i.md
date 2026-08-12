@@ -13,7 +13,7 @@ Used to indicate the media key system info of media source.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## pssh

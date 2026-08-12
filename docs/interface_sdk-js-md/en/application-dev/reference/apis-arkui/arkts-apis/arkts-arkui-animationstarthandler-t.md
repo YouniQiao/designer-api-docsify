@@ -22,5 +22,5 @@ Handler of swiper, used in OnAnimationStart.
 | --- | --- | --- | --- |
 | index | int | Yes | The index of the current swiper. |
 | targetIndex | int | Yes | The index of the target swiper. |
-| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | The extra information of the animation. |
+| event | SwiperAnimationEvent | Yes | The extra information of the animation. |
 

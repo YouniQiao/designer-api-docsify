@@ -20,7 +20,7 @@ Implements an image filter.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendImageFilter
@@ -41,7 +41,7 @@ Creates a filter by blending two existing filters in a certain way.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes |
+| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes |
 | background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes |
 | foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes |
 
@@ -55,7 +55,7 @@ Creates a filter by blending two existing filters in a certain way.
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## createBlurImageFilter
 
@@ -91,7 +91,7 @@ Creates an image filter with a given blur effect.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createComposeImageFilter
 
@@ -151,7 +151,7 @@ Creates an image filter object with a given color filter effect.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createFromImage
 

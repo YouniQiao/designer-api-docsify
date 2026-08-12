@@ -20,6 +20,6 @@ type GestureEventListenerCallback = (event: GestureEvent, node?: FrameNode) => v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [GestureEvent](arkts-arkui-gestureevent-i.md) | 是 | the information of GestureEvent |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 否 | the information of frameNode |
+| event | [GestureEvent](arkts-arkui-gesture-gestureevent-i.md) | 是 | the information of GestureEvent |
+| node | FrameNode | 否 | the information of frameNode |
 

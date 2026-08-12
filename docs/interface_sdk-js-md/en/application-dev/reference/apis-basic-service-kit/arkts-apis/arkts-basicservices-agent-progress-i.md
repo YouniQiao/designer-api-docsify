@@ -13,7 +13,7 @@ Describes the data structure of the task progress.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## extras
@@ -104,7 +104,7 @@ readonly state: State
 
 Current task status.
 
-**Type:** [State](arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Since:** 10
 

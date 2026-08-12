@@ -1,6 +1,6 @@
 # TaskGroup
 
-表示任务组，一次执行一组任务，适用于执行一组有关联的任务。如果所有任务正常执行，异步执行完毕后返回所有任务结果的数组，数组中元素的顺序与调用[addTask](arkts-arkts-taskpool-taskgroup-c.md#addtask)添加任务的顺序相同。如果任意任务失败，则会抛出对应异常。如果任务组中存在多个任务失败的情况，则会抛出第一个失败任务的异常。任务组可以多次执行，但执行后不能新增任务。
+表示任务组，一次执行一组任务，适用于执行一组有关联的任务。如果所有任务正常执行，异步执行完毕后返回所有任务结果的数组，数组中元素的顺序与调用[addTask](#addTask-1)添加任务的顺序相同。如果任意任务失败，则会抛出对应异常。如果任务组中存在多个任务失败的情况，则会抛出第一个失败任务的异常。任务组可以多次执行，但执行后不能新增任务。
 
 **起始版本：** 10
 
@@ -29,13 +29,13 @@ addTask(func: Function, ...args: Object[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | func | Function | 是 |
-| args | Object[] | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
 
 ## 示例
 
@@ -76,9 +76,9 @@ addTask(task: Task): void
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
 
 ## 示例
 

@@ -1,8 +1,8 @@
 # AlertDialogParamWithButtons
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam).
 
-**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
 **Since:** 7
 
@@ -22,7 +22,7 @@ Information about the primary button, including the enabling status, default foc
 **defaultFocus** is set to **true**. For details, see   
 [Example 7](../../../reference/apis-arkui/arkui-ts/ts-methods-alert-dialog-box.md#example-7-customizing-the-background-blur-effect).
 
-**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
+**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ secondaryButton: AlertDialogButtonBaseOptions
 
 Information about the secondary button, including the enabling status, default focus, button style, text content, text color, button background color, and click callback.
 
-**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
+**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
 

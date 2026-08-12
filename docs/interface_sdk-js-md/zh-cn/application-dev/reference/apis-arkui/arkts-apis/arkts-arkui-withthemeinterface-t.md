@@ -28,5 +28,5 @@ Define the function of WithThemeInterface.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md) | withThemeAttribute object |
+| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | withThemeAttribute object |
 

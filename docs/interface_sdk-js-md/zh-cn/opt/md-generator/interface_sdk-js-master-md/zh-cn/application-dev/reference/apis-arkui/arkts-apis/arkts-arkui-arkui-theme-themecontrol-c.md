@@ -32,4 +32,4 @@ static setDefaultTheme(theme: CustomTheme): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| theme | [CustomTheme](arkts-arkui-customtheme-t.md) | 是 |
+| theme | [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md) | 是 |

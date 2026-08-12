@@ -13,7 +13,7 @@ Describes the contents of the scan results.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -24,7 +24,7 @@ address?: BluetoothAddress
 
 The address object of a BLE peripheral device, including the address type.
 
-**Type:** [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md)
+**Type:** BluetoothAddress
 
 **Since:** 23
 

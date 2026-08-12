@@ -14,7 +14,7 @@ CompletionHandlerForAbilityStartCallback provides two callback functions, **onRe
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from 'kits/@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## onRequestFailure

@@ -29,5 +29,5 @@ export function createSliderNode(context: UIContext, options?: FrameNodeOptions)
 
 | 类型 | 说明 |
 | --- | --- |
-| [Slider](arkts-arkui-typenode-slider-t.md) | 返回 Slider 类型的 FrameNode |
+| Slider | 返回 Slider 类型的 FrameNode |
 

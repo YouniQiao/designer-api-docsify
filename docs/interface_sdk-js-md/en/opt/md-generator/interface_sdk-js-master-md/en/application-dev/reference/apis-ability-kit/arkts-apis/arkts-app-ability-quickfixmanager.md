@@ -13,7 +13,7 @@ The quickFixManager module provides APIs for quick fix. With quick fix, you can 
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
+import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

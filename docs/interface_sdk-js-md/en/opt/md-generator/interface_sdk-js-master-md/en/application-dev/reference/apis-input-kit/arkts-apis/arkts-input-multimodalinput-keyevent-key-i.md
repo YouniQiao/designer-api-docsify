@@ -11,7 +11,7 @@ Defines a key.
 ## Modules to Import
 
 ```TypeScript
-import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+import { KeyEvent, Action, Key } from '@kit.InputKit';
 ```
 
 ## code

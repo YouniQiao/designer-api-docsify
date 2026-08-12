@@ -8,7 +8,7 @@ Defines the options for fetching file attributes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md)
+**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions)
 
 <!--Device-userFileManager-interface FetchOptions--><!--Device-userFileManager-interface FetchOptions-End-->
 
@@ -19,7 +19,7 @@ Defines the options for fetching file attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## fetchColumns
@@ -29,7 +29,7 @@ fetchColumns: Array<string>
 ```
 
 Options for fetching files based on the attributes in columns. If this parameter is left empty, files are fetched by URI, name, and type (the specific field names vary with the file asset or album object) by default. In addition, an error will be reported if   
-[get](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getphotoassets)is called to obtain other attributes of this object. Example:
+[get](arkts-corefile-userfilemanager-userfilemanager-i-sys.md#getPhotoAssets)is called to obtain other attributes of this object. Example:
 
 fetchColumns: ['uri', 'title']
 
@@ -41,7 +41,7 @@ fetchColumns: ['uri', 'title']
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchOptions.fetchColumns](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchcolumns)
+**Substitutes:** [fetchColumns](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#fetchColumns)
 
 <!--Device-FetchOptions-fetchColumns: Array<string>--><!--Device-FetchOptions-fetchColumns: Array<string>-End-->
 
@@ -65,7 +65,7 @@ Predicates that specify the fetch criteria.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchOptions.predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#predicates)
+**Substitutes:** [predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#predicates)
 
 <!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates--><!--Device-FetchOptions-predicates: dataSharePredicates.DataSharePredicates-End-->
 

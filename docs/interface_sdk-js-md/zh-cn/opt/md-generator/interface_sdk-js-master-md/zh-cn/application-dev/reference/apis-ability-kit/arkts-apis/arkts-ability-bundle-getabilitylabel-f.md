@@ -77,7 +77,7 @@ function getAbilityLabel(bundleName: string, abilityName: string): Promise<strin
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 

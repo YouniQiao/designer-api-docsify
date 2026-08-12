@@ -152,7 +152,7 @@ marqueeUpdatePolicy?: MarqueeUpdatePolicy
 
 默认值：MarqueeUpdatePolicy.DEFAULT
 
-**类型：** [MarqueeUpdatePolicy](../arkts-apis/arkts-arkui-text-marqueeupdatepolicy-e.md)
+**类型：** [MarqueeUpdatePolicy](arkts-arkui-marqueeupdatepolicy-e.md)
 
 **起始版本：** 23
 
@@ -176,7 +176,7 @@ spacing?: LengthMetrics
 
 默认值：48.0vp
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 23
 

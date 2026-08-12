@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## code
@@ -34,7 +34,7 @@ HTTP status code returned by the server.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.HttpResponse.statusCode
+**Substitutes:** [statusCode](ohos.request.agent.HttpResponse.statusCode)
 
 <!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
 
@@ -56,7 +56,7 @@ Content returned by the server. The value type is determined by the type in the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Progress.extras
+**Substitutes:** [extras](ohos.request.agent.Progress.extras)
 
 <!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
 
@@ -78,7 +78,7 @@ Headers returned by the server.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.HttpResponse.headers
+**Substitutes:** [headers](ohos.request.agent.HttpResponse.headers)
 
 <!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
 

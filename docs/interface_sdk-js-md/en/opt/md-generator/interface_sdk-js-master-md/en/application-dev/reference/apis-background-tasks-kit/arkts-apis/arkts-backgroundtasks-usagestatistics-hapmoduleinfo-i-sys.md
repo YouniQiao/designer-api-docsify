@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from 'kits/@kit.BackgroundTasksKit';
+import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityDescriptionId
@@ -166,7 +166,7 @@ formRecords: Array<HapFormInfo>
 
 The form usage record list of current module.
 
-**Type:** Array&lt;HapFormInfo&gt;
+**Type:** Array&lt;[HapFormInfo](arkts-backgroundtasks-usagestatistics-hapforminfo-i-sys.md)&gt;
 
 **Since:** 9
 

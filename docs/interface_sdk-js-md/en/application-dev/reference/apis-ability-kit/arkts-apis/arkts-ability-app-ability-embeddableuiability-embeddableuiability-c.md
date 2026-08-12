@@ -1,10 +1,10 @@
 # EmbeddableUIAbility
 
 EmbeddableUIAbility is an embeddable UIAbility component provided for atomic services. It inherits from  
-[UIAbility](arkts-app-ability-uiability.md).You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI.For details about the inheritance relationship of each ability, see  
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility).You can implement EmbeddableUIAbility to enable atomic services to be launched by other applications either as a standalone window or embedded within the host application's UI.For details about the inheritance relationship of each ability, see  
 [Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).
 
-**Inheritance/Implementation:** EmbeddableUIAbility extends [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)
+**Inheritance/Implementation:** EmbeddableUIAbility extends [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ EmbeddableUIAbility is an embeddable UIAbility component provided for atomic ser
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddableUIAbility } from 'kits/@kit.AbilityKit';
+import { EmbeddableUIAbility } from '@kit.AbilityKit';
 ```
 
 ## context

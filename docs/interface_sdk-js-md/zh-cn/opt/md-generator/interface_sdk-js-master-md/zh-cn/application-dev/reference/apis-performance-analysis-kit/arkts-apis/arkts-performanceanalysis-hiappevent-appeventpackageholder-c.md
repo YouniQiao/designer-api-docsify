@@ -14,7 +14,7 @@
 constructor(watcherName: string)
 ```
 
-类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
+类构造函数，用于创建订阅数据持有者实例。先通过[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)添加事件观察者，再通过观察者名称关联到应用内已添加的观察者对象。
 
 **起始版本：** 9
 
@@ -73,8 +73,8 @@ setRow(size: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11104001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-非法的事件包大小值) |
 
 ## 示例
 
@@ -111,8 +111,8 @@ setSize(size: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11104001](../errorcode-hiappevent.md#11104001-非法的事件包大小值) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11104001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-非法的事件包大小值) |
 
 ## 示例
 

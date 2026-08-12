@@ -6,7 +6,7 @@
 
 **废弃版本：** 22
 
-**替代接口：** Swiper
+**替代接口：** [Swiper](Swiper)
 
 <!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
 
@@ -28,7 +28,7 @@ Normal
 
 **废弃版本：** 22
 
-**替代接口：** Swiper.SwiperAttribute#index
+**替代接口：** [index](Swiper.SwiperAttribute#index)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -52,7 +52,7 @@ Disabled
 
 **废弃版本：** 22
 
-**替代接口：** Swiper.SwiperAttribute#indicatorInteractive
+**替代接口：** [indicatorInteractive](Swiper.SwiperAttribute#indicatorInteractive)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -76,7 +76,7 @@ Waiting
 
 **废弃版本：** 22
 
-**替代接口：** Swiper
+**替代接口：** [Swiper](Swiper)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -100,7 +100,7 @@ Skip
 
 **废弃版本：** 22
 
-**替代接口：** Swiper.SwiperAttribute#index
+**替代接口：** [index](Swiper.SwiperAttribute#index)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

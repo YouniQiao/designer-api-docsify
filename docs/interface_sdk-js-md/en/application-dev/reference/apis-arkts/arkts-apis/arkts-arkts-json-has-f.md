@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## has

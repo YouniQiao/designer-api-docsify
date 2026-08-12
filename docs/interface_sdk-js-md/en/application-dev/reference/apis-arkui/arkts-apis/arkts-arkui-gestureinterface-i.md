@@ -34,7 +34,7 @@ Sets the input types that can trigger the gesture response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes | Input types that can trigger the gesture response. |
+| types | Array&lt;SourceTool&gt; | Yes | Input types that can trigger the gesture response. |
 
 **Return value:**
 

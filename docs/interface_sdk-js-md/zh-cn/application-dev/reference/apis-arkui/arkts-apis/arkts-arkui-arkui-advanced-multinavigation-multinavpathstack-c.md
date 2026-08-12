@@ -1,9 +1,9 @@
 # MultiNavPathStack
 
-当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)的  
+当前，MultiNavigation的路由栈仅支持由使用方自行创建，不支持通过回调方式获取。请勿使用[NavDestination](./@internal/component/ets/nav_destination)的  
 [onReady](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#onready11)等类似事件或接口来获取NavPathStack并进行栈操作，因为这可能会导致不可预知的问题。
 
-**继承/实现关系：** MultiNavPathStack extends [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
+**继承/实现关系：** MultiNavPathStack extends [NavPathStack](NavPathStack)
 
 **起始版本：** 23
 
@@ -23,7 +23,7 @@ clear(animated?: boolean): void
 
 > **说明：**
 > 
-> 当调用[keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](#keepBottomPage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 23
 
@@ -320,7 +320,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 > **说明：**
 > 
-> 当调用[keepBottomPage](arkts-arkui-arkui-advanced-multinavigation-multinavpathstack-c.md#keepbottompage)接口并设置为true时，会保留栈底页面。
+> 当调用[keepBottomPage](#keepBottomPage)接口并设置为true时，会保留栈底页面。
 
 **起始版本：** 23
 
@@ -343,7 +343,7 @@ pop(result?: Object, animated?: boolean): NavPathInfo | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| NavPathInfo | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## popToIndex
 
@@ -481,7 +481,7 @@ pushPath(info: NavPathInfo, animated?: boolean, policy?: SplitPolicy): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | Indicates the NavDestination to be pushed. |
+| info | NavPathInfo | 是 | Indicates the NavDestination to be pushed. |
 | animated | boolean | 否 | Indicates whether the transition is animated. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
@@ -507,8 +507,8 @@ pushPath(info: NavPathInfo, options?: NavigationOptions, policy?: SplitPolicy): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | Indicates the NavDestination to be pushed. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | 否 | Indicates options of stack operation. |
+| info | NavPathInfo | 是 | Indicates the NavDestination to be pushed. |
+| options | NavigationOptions | 否 | Indicates options of stack operation. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
 ## pushPathByName
@@ -563,7 +563,7 @@ pushPathByName(
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。 |
+| onPop | Callback&lt;PopInfo&gt; | 否 | Callback回调，用于页面出栈时触发该回调处理返回结果。 |
 | animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;默认值：true&lt;br/&gt;true：支持转场动画。&lt;br/&gt;false：不支持转场动画。 |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | 否 | 当前入栈页面的策略。默认值：DETAIL_PAGE |
 
@@ -649,7 +649,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | Indicates the new NavDestination in top of the stack. |
+| info | NavPathInfo | 是 | Indicates the new NavDestination in top of the stack. |
 | animated | boolean | 否 | Indicates whether the transition is animated. |
 
 ## replacePath
@@ -674,8 +674,8 @@ replacePath(info: NavPathInfo, options?: NavigationOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | Indicates the new NavDestination in top of the stack. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | 否 | Indicates options of stack operation. |
+| info | NavPathInfo | 是 | Indicates the new NavDestination in top of the stack. |
+| options | NavigationOptions | 否 | Indicates options of stack operation. |
 
 ## replacePathByName
 
@@ -757,7 +757,7 @@ setPlaceholderPage(info: NavPathInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | 是 | 占位页页面信息。 |
+| info | NavPathInfo | 是 | 占位页页面信息。 |
 
 ## size
 

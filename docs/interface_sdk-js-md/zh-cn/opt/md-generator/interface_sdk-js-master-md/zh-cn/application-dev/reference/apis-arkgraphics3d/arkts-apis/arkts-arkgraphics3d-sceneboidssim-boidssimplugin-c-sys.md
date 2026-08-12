@@ -32,10 +32,35 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| scene | [Scene](arkts-arkgraphics3d-scene-c-sys.md) | 是 |
+| scene | [Scene](arkts-arkgraphics3d-scene-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [BoidsSimWorld](arkts-arkgraphics3d-sceneboidssim-boidssimworld-c-sys.md) |
+
+## 示例
+
+```TypeScript
+import { BoidsSimPlugin, BoidsSimWorld, Scene, RenderContext } from '@kit.ArkGraphics3D';
+
+async function initBoidsSim(): Promise<BoidsSimWorld | null> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    return null;
+  }
+  // 群组模拟插件UUID
+  const BOIDS_SIM_PLUGIN_UUID: string = 'a1b2c3d4-e5f6-4a5b-8c9d-0e1f2a3b4c5d';
+  // 加载群组模拟插件
+  const loaded: boolean = await renderContext.loadPlugin(BOIDS_SIM_PLUGIN_UUID);
+  if (!loaded) {
+    return null;
+  }
+  // 创建空场景
+  const scene: Scene = await Scene.load();
+  // 获取群组模拟世界实例
+  const world: BoidsSimWorld | null = BoidsSimPlugin.getDefaultBoidsSimWorld(scene);
+  return world;
+}
+```

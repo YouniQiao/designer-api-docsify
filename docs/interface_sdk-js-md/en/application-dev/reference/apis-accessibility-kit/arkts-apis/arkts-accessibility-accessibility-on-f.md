@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## on('accessibilityStateChange')
@@ -13,7 +13,7 @@ function on(type: 'accessibilityStateChange', callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes of the accessibility application. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use   
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
 
 > **NOTE：**
 > 
@@ -21,7 +21,7 @@ Subscribes to the state changes of the accessibility application. This API uses 
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('accessibilityStateChange')](accessibility.off(type: 'accessibilityStateChange', callback?: Callback&lt;boolean&gt;))
+> [accessibility.off('accessibilityStateChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
@@ -41,13 +41,13 @@ Subscribes to the state changes of the accessibility application. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accessibilityStateChange' | Yes | Event type, which is set to **'accessibilityStateChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabled status of accessibility application changes. The returned result indicates the global enabled status of the accessibility application. The value **true** indicates that the accessibility application is enabled, and **false** indicates that the accessibility application is disabled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the enabled status of accessibility application changes. The returned result indicates the global enabled status of the accessibility application. The value **true** indicates that the accessibility application is enabled, and **false** indicates that the accessibility application is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -70,7 +70,7 @@ function on(type: 'touchGuideStateChange', callback: Callback<boolean>): void
 ```
 
 Subscribes to the state changes in touch guide mode. This API uses an asynchronous callback to return the result. To obtain information about accessibility applications in the system, use   
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
 
 > **NOTE：**
 > 
@@ -78,7 +78,7 @@ Subscribes to the state changes in touch guide mode. This API uses an asynchrono
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('touchGuideStateChange')](accessibility.off(type: 'touchGuideStateChange', callback?: Callback&lt;boolean&gt;))
+> [accessibility.off('touchGuideStateChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 7
@@ -98,13 +98,13 @@ Subscribes to the state changes in touch guide mode. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchGuideStateChange' | Yes | Event type, which is set to **'touchGuideStateChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabling state of touch guide mode changes. The value **true** indicates that the touch guide mode is enabled, and the value **false** indicates that the touch guide mode is disabled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the enabling state of touch guide mode changes. The value **true** indicates that the touch guide mode is enabled, and the value **false** indicates that the touch guide mode is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -134,7 +134,7 @@ Subscribes to the state changes of the screen reader. This API uses an asynchron
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('screenReaderStateChange')](accessibility.off(type: 'screenReaderStateChange', callback?: Callback&lt;boolean&gt;))
+> [accessibility.off('screenReaderStateChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 18
@@ -154,13 +154,13 @@ Subscribes to the state changes of the screen reader. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'screenReaderStateChange' | Yes | Event type, which is set to **'screenReaderStateChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabling state of screen reader changes. The value **true** indicates that the screen reader is enabled, and the value **false** indicates that the screen reader is disabled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the enabling state of screen reader changes. The value **true** indicates that the screen reader is enabled, and the value **false** indicates that the screen reader is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -187,7 +187,7 @@ Subscribes to the single- or double-touch event changes in touch guide mode. Thi
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [accessibility.off('touchModeChange')](accessibility.off(type: 'touchModeChange', callback?: Callback&lt;string&gt;))
+> [accessibility.off('touchModeChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 20
@@ -207,13 +207,13 @@ Subscribes to the single- or double-touch event changes in touch guide mode. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'touchModeChange' | Yes | Event type, which is set to **'touchModeChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback to be invoked when the single- or double-touch event changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback to be invoked when the single- or double-touch event changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## Examples
 

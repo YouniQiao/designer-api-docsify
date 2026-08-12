@@ -18,7 +18,7 @@ The **adminManager** module provides administrator permission management capabil
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from 'kits/@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -62,7 +62,7 @@ import { adminManager } from 'kits/@kit.MDMKit';
 | [startAdminProvision](arkts-mdm-adminmanager-startadminprovision-f.md#startadminprovision) | Enables the device administrator application to open a page for the BYOD administrator to perform activation. |
 | [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent) | Subscribes to system management events. This API uses an asynchronous callback to return the result. |
 | [subscribeManagedEvent](arkts-mdm-adminmanager-subscribemanagedevent-f.md#subscribemanagedevent-1) | Subscribes to system management events. This API uses a promise to return the result. |
-| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync) | Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.  Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md) event. |
+| [subscribeManagedEventSync](arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync) | Subscribes to system management events. After the call is successful, the device administrator application will receive a notification when a subscribed system management event occurs.  Since API version 26.0.0, error code 9200002 is returned when a non-super device administrator application calls this API to subscribe to the [MANAGED_EVENT_POLICIES_CHANGED](arkts-mdm-adminmanager-managedevent-e.md#ManagedEvent) event. |
 | [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent) | Unsubscribes from system management events. This API uses an asynchronous callback to return the result. |
 | [unsubscribeManagedEvent](arkts-mdm-adminmanager-unsubscribemanagedevent-f.md#unsubscribemanagedevent-1) | Unsubscribes from system management events. This API uses a promise to return the result. |
 | [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md#unsubscribemanagedeventsync) | Unsubscribes from system management events. After the API is successfully called, no notifications for the unsubscribed system management events will be received. |

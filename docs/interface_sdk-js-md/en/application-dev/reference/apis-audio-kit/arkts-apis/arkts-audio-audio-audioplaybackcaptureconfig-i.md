@@ -8,7 +8,7 @@ Defines configuration for capturing played audio.
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-audio-interface AudioPlaybackCaptureConfig--><!--Device-audio-interface AudioPlaybackCaptureConfig-End-->
 
@@ -17,7 +17,7 @@ Defines configuration for capturing played audio.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## filterOptions
@@ -36,7 +36,7 @@ Options for filtering the played audio streams to be recorded.
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions--><!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions-End-->
 

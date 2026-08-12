@@ -24,7 +24,7 @@ SceneOptions used by constructor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sceneOptions | [SceneOptions](../arkts-apis/arkts-arkui-component3d-sceneoptions-i.md) | No | The 3D scene controller |
+| sceneOptions | [SceneOptions](arkts-arkui-sceneoptions-i.md) | No | The 3D scene controller |
 
 ## Summary
 

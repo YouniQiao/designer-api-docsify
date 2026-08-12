@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## parsePkcs12
@@ -39,11 +39,11 @@ Parses P12.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
-| [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19030008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030008-incorrect-private-key-password) |
 
 ## Examples
 
@@ -250,17 +250,17 @@ Parses P12. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Pkcs12Data&gt; |
+| Promise&lt;[Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
-| [19030008](../errorcode-cert.md#19030008-incorrect-private-key-password) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19030008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030008-incorrect-private-key-password) |
 
 ## Examples
 

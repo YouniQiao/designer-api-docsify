@@ -14,7 +14,7 @@ function deleteStorage(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.deletePreferences
+**替代接口：** [deletePreferences](ohos.preferences.preferences.deletePreferences)
 
 <!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -40,7 +40,7 @@ function deleteStorage(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.deletePreferences
+**替代接口：** [deletePreferences](ohos.preferences.preferences.deletePreferences)
 
 <!--Device-storage-function deleteStorage(path: string): Promise<void>--><!--Device-storage-function deleteStorage(path: string): Promise<void>-End-->
 

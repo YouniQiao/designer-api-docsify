@@ -11,7 +11,7 @@ Describes the named route options.
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## name

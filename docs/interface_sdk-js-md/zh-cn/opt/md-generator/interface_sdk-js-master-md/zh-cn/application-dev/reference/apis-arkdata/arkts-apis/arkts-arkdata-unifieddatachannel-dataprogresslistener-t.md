@@ -21,4 +21,4 @@ type DataProgressListener = (progressInfo: ProgressInfo, data: UnifiedData | nul
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | progressInfo | [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md) | 是 |
-| data | [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) \| null | 是 |
+| data | UnifiedData \| null | 是 |

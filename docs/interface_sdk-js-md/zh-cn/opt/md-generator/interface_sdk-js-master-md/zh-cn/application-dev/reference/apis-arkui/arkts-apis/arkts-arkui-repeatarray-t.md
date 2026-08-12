@@ -20,6 +20,6 @@ Repeat数据源参数联合类型。
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
-| ReadonlyArray&lt;T&gt; |
-| Readonly&lt;Array&lt;T&gt;&gt; |
+| Array & lt;T & gt; |
+| ReadonlyArray & lt;T & gt; |
+| Readonly & lt;Array & lt;T & gt; & gt; |

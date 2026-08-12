@@ -33,11 +33,11 @@ Add a breakpoint defined by offset and color to the gradient
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | double | Yes | Value between 0 and 1. |
-| color | string \| ColorMetrics | Yes | Set the gradient color. |
+| color | string \| [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes | Set the gradient color. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103701](../errorcode-canvas.md#103701-parameter-error) | The color's ColorSpace is not the same as the last color's. |
+| [103701](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) | The color's ColorSpace is not the same as the last color's. |
 

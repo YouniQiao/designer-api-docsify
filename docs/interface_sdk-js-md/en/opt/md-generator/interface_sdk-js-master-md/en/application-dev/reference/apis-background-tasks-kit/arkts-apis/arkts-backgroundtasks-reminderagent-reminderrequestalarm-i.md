@@ -2,13 +2,13 @@
 
 Defines a reminder for an alarm.
 
-**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
+**Inheritance/Implementation:** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#ReminderRequest)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md)
+**Substitutes:** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#ReminderRequestAlarm)
 
 <!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest-End-->
 
@@ -17,7 +17,7 @@ Defines a reminder for an alarm.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## daysOfWeek
@@ -34,7 +34,7 @@ Days of a week when the reminder repeats. The value ranges from 1 to 7, correspo
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequestAlarm.daysOfWeek](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#daysofweek)
+**Substitutes:** [daysOfWeek](reminderAgentManager.ReminderRequestAlarm.daysOfWeek)
 
 <!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>-End-->
 
@@ -54,7 +54,7 @@ Hour portion of the reminder time.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequestAlarm.hour](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#hour)
+**Substitutes:** [hour](reminderAgentManager.ReminderRequestAlarm.hour)
 
 <!--Device-ReminderRequestAlarm-hour: number--><!--Device-ReminderRequestAlarm-hour: number-End-->
 
@@ -74,7 +74,7 @@ Minute portion of the reminder time.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequestAlarm.minute](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#minute)
+**Substitutes:** [minute](reminderAgentManager.ReminderRequestAlarm.minute)
 
 <!--Device-ReminderRequestAlarm-minute: number--><!--Device-ReminderRequestAlarm-minute: number-End-->
 

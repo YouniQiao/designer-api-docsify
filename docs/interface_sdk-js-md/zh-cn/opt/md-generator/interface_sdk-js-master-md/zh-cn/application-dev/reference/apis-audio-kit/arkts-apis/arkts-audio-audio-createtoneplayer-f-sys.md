@@ -6,7 +6,7 @@
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **起始版本：** 9
 
@@ -21,7 +21,7 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 |
 
 ## 示例
 
@@ -52,7 +52,7 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a {@link TonePlayer} instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses a promise to return the renderer instance.
 
 **起始版本：** 9
 
@@ -72,7 +72,7 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | 类型 |
 | --- |
-| Promise&lt;TonePlayer&gt; |
+| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; |
 
 ## 示例
 

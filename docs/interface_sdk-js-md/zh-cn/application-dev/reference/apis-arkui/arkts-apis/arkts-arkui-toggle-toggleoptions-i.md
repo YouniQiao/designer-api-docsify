@@ -38,7 +38,7 @@ true：打开；false：关闭。
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** boolean \| undefined \| Bindable&lt;boolean&gt;
+**类型：** boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt;
 
 **起始版本：** 23
 

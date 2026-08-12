@@ -12,7 +12,7 @@ Implements a **UIContext** instance.
 > ohos.window; (2) using the built-in method
 > [getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext) of a custom
 > component; (3) using static methods of the UIContext class such as
-> [getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext). In this document, the **UIContext** instance
+> [getCallingScopeUIContext](#getCallingScopeUIContext). In this document, the **UIContext** instance
 > is represented by **uiContext**.
 
 **Since:** 10
@@ -24,7 +24,7 @@ Implements a **UIContext** instance.
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## addLocalInputEventMonitor
@@ -95,7 +95,7 @@ Adds transition animations for state changes in closure code.
 > the component is being destroyed, so animations should not be used.
 > 
 > - When a component appears or disappears, animation effects can be added through
-> [component transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+> [component transition](common).
 > 
 > - For properties that component transitions do not support, refer to
 > [Example 2: Enabling Component Disappearance After Animation Completion](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#example-2-enabling-component-disappearance-after-animation-completion),
@@ -109,7 +109,7 @@ Adds transition animations for state changes in closure code.
 > 
 > - When a UIAbility switches from the foreground to the background, any limited iteration animations that are
 > currently running will end immediately, thereby triggering the
-> [onFinish animation completion callback](../arkts-components/arkts-arkui-animateparam-i.md/arkts-arkui-animateparam-i.md).
+> [onFinish animation completion callback](../arkts-components/arkts-arkui-animateparam-i.md#AnimateParam).
 > 
 > - If transition animations are turned off in Developer options, animations end on the current frame, and the
 > **onFinish** callback is executed immediately. Avoid placing timing-dependent functional logic inside this
@@ -130,7 +130,7 @@ Adds transition animations for state changes in closure code.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 ## animateToImmediately
 
@@ -234,21 +234,21 @@ Closes the sheet corresponding to **bindSheetContent**. This API uses a promise 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bindSheetContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| bindSheetContent | ComponentContent & lt;T & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) |
+| [120001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [120003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) |
 
 ## constructor
 
@@ -307,7 +307,7 @@ Creates an **Animator** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createAnimator
 
@@ -316,8 +316,8 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
 Creates an **AnimatorResult** object for animations. Compared to the previous  
-[createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator) API, this API adds support for the  
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+[createAnimator](#createAnimator) API, this API adds support for the  
+[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
 **Since:** 18
 
@@ -345,7 +345,7 @@ Creates an **AnimatorResult** object for animations. Compared to the previous
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createUIContextWithoutWindow
 
@@ -380,14 +380,14 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## destroyUIContextWithoutWindow
 
@@ -396,7 +396,7 @@ static destroyUIContextWithoutWindow(): void
 ```
 
 Destroys the UI instance created using  
-[createUIContextWithoutWindow](arkts-arkui-arkui-uicontext-uicontext-c.md#createuicontextwithoutwindow).
+[createUIContextWithoutWindow](#createUIContextWithoutWindow).
 
 **Since:** 17
 
@@ -431,7 +431,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | node | number \| string | Yes |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes |
+| event | [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | Yes |
 
 **Return value:**
 
@@ -538,7 +538,7 @@ Obtains all currently valid UIContext instances.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md)[] |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] |
 
 ## getAtomicServiceBar
 
@@ -562,7 +562,7 @@ Get AtomicServiceBar.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Nullable](arkts-arkui-nullable-t.md)&lt;AtomicServiceBar&gt; |
+| [Nullable](arkts-arkui-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; |
 
 ## getAttachedFrameNodeById
 
@@ -592,7 +592,7 @@ Get the FrameNode attached to current window by id.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 ## getCallingScopeUIContext
 
@@ -606,7 +606,7 @@ Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface
 > 
 > The returned UIContext object may point to a destroyed UI instance, which usually occurs when an asynchronous
 > task is dispatched from an instance that has already been destroyed. As such, you are advised to verify its
-> validity via the [isAvailable](arkts-arkui-arkui-uicontext-uicontext-c.md#isavailable) API.
+> validity via the [isAvailable](#isAvailable) API.
 
 **Since:** 22
 
@@ -622,7 +622,7 @@ Obtains the UIContext of this [calling scope](../../../ui/arkts-global-interface
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 ## getComponentSnapshot
 
@@ -790,7 +790,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filters | Array&lt;string&gt; | No |
+| filters | Array & lt;string & gt; | No |
 
 **Return value:**
 
@@ -802,7 +802,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## getFilteredInspectorTreeById
 
@@ -828,7 +828,7 @@ Obtains the attributes of the specified component and its child components. This
 | --- | --- | --- |
 | id | string | Yes |
 | depth | number | Yes |
-| filters | Array&lt;string&gt; | No |
+| filters | Array & lt;string & gt; | No |
 
 **Return value:**
 
@@ -840,7 +840,7 @@ Obtains the attributes of the specified component and its child components. This
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## getFocusController
 
@@ -918,7 +918,7 @@ Get FrameNode by id.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 ## getFrameNodeByUniqueId
 
@@ -950,7 +950,7 @@ Get FrameNode by uniqueId.Obtains the entity node, FrameNode, of a component on 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 ## getHostContext
 
@@ -974,7 +974,7 @@ Obtains the context of this ability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |
+| [Context](arkts-arkui-context-t.md) |
 
 ## getId
 
@@ -1046,7 +1046,7 @@ Obtains the UIContext of the UI instance that most recently switched to the focu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 ## getLastForegroundUIContext
 
@@ -1070,7 +1070,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 ## getMagnifier
 
@@ -1078,7 +1078,7 @@ Obtains the UIContext of the UI instance that most recently switched to the fore
 getMagnifier(): Magnifier
 ```
 
-Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md) object, which can be used to control the display and hiding of a magnifier.
+Obtains a [Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#Magnifier) object, which can be used to control the display and hiding of a magnifier.
 
 **Since:** 22
 
@@ -1166,7 +1166,7 @@ get object mediaQuery.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [MediaQuery](arkts-arkui-system-mediaquery-mediaquery-c.md) |
+| [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) |
 
 ## getNavigationInfoByUniqueId
 
@@ -1296,13 +1296,13 @@ Obtains the root node of the page corresponding to the UIContext.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [120007](../errorcode-uicontext.md#120007-instance-not-exist) |
+| [120007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#120007-instance-not-exist) |
 
 ## getPixelRoundMode
 
@@ -1374,7 +1374,7 @@ Obtains a Router object.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Router](arkts-arkui-system-router-router-c.md) |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) |
 
 ## getSharedLocalStorage
 
@@ -1430,7 +1430,7 @@ Get object smart gesture controller.
 getTextMenuController(): TextMenuController
 ```
 
-Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md) object, which can be used to control the context menu on selection.
+Obtains a [TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#TextMenuController) object, which can be used to control the context menu on selection.
 
 **Since:** 16
 
@@ -1502,7 +1502,7 @@ Obtains the **UIObserver** object.
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-Obtains the height breakpoint value of the window where this instance is located. The specific value is determined based on the window aspect ratio. For details, see [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md).
+Obtains the height breakpoint value of the window where this instance is located. The specific value is determined based on the window aspect ratio. For details, see [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md#HeightBreakpoint).
 
 **Since:** 13
 
@@ -1531,7 +1531,7 @@ Obtains the ID of the window to which the current application instance belongs.
 > **NOTE：**
 > 
 > If the UIContext resides inside a
-> [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that runs in the main
+> [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that runs in the main
 > application process, the top-level window ID of the main application is returned.
 
 **Since:** 23
@@ -1580,7 +1580,7 @@ Obtains the name of the window where this instance is located.
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-Obtains the width breakpoint value of the window where this instance is located. The specific value is determined by the vp value of the window width. For details, see [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md).
+Obtains the width breakpoint value of the window where this instance is located. The specific value is determined by the vp value of the window width. For details, see [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md#WidthBreakpoint).
 
 **Since:** 13
 
@@ -1678,7 +1678,7 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+Generates a key frame animation. For details about how to use this API, see [keyframeAnimateTo](common).
 
 **Since:** 11
 
@@ -1695,7 +1695,7 @@ Generates a key frame animation. For details about how to use this API, see [key
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | param | [KeyframeAnimateParam](../arkts-components/arkts-arkui-keyframeanimateparam-i.md) | Yes |
-| keyframes | Array&lt;KeyframeState&gt; | Yes |
+| keyframes | Array&lt;[KeyframeState](../arkts-components/arkts-arkui-keyframestate-i.md)&gt; | Yes |
 
 ## lpx2px
 
@@ -1740,7 +1740,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 > 1. When calling this API, if no valid value is provided for **targetId**, you won't be able to set
 > **SheetOptions.preferType** to **POPUP** or **SheetOptions.mode** to **EMBEDDED**.
 > 
-> 2. Since [updateBindSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#updatebindsheet) and [closeBindSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#closebindsheet)
+> 2. Since [updateBindSheet](#updateBindSheet) and [closeBindSheet](#closeBindSheet)
 > depend on **bindSheetContent**, you need to maintain the passed **bindSheetContent** yourself.
 > 
 > 3. Setting **SheetOptions.UIContext** is not supported.
@@ -1759,7 +1759,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bindSheetContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| bindSheetContent | ComponentContent & lt;T & gt; | Yes |
 | sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | No |
 | targetId | number | No |
 
@@ -1767,18 +1767,18 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) |
-| [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) |
-| [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) |
-| [120006](../errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) |
+| [120001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [120002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) |
+| [120005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) |
+| [120004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) |
+| [120006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120006-node-specified-by-targetid-is-not-a-child-of-a-page-node-or-navdestination-node) |
 
 ## postDelayedFrameCallback
 
@@ -1977,7 +1977,7 @@ Require DynamicSyncScene by id.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;DynamicSyncScene&gt; |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; |
 
 ## resolveUIContext
 
@@ -2045,7 +2045,7 @@ Run custom functions inside the UIContext scope.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## setCustomKeyboardContinueFeature
 
@@ -2069,7 +2069,7 @@ Set custom keyboard continue feature.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes |
+| [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | Yes |
 
 ## setImageCacheCount
 
@@ -2243,9 +2243,9 @@ If the upper limit of the cache is set too high, there is a risk of excessive me
 
 | Error Code ID |
 | --- |
-| [100101](../errorcode-uicontext.md#100101-invalid-negative-parameter-value) |
-| [100103](../errorcode-uicontext.md#100103-invalid-thread-context) |
-| [100102](../errorcode-uicontext.md#100102-incorrect-parameter-type) |
+| [100101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100101-invalid-negative-parameter-value) |
+| [100103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100103-invalid-thread-context) |
+| [100102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uicontext.md#100102-incorrect-parameter-type) |
 
 ## setTextSelectionClearPolicy
 
@@ -2317,7 +2317,7 @@ Shows an alert dialog box.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| [AlertDialogParamWithOptions](arkts-arkui-alertdialog-alertdialogparamwithoptions-i.md) | Yes |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | Yes |
 
 ## showDatePickerDialog
 
@@ -2389,7 +2389,7 @@ textPickerDialog display.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| [TextPickerDialogOptionsExt](arkts-arkui-textpicker-textpickerdialogoptionsext-i.md) | Yes |
+| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| [TextPickerDialogOptionsExt](../arkts-components/arkts-arkui-textpickerdialogoptionsext-i.md) | Yes |
 
 ## showTimePickerDialog
 
@@ -2492,7 +2492,7 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bindSheetContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| bindSheetContent | ComponentContent & lt;T & gt; | Yes |
 | sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | Yes |
 | partialUpdate | boolean | No |
 
@@ -2500,15 +2500,15 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) |
+| [120001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [120003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) |
 
 ## vp2px
 

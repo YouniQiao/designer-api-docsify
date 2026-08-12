@@ -22,7 +22,7 @@ hidden: string | PixelMap | Resource
 
 设置侧边栏隐藏时控制按钮的图标。
 
-**类型：** string \| PixelMap \| Resource
+**类型：** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ shown: string | PixelMap | Resource
 
 设置侧边栏显示时控制按钮的图标。
 
-**类型：** string \| PixelMap \| Resource
+**类型：** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ switching?: string | PixelMap | Resource
 
 设置侧边栏显示和隐藏状态切换时控制按钮的图标。
 
-**类型：** string \| PixelMap \| Resource
+**类型：** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

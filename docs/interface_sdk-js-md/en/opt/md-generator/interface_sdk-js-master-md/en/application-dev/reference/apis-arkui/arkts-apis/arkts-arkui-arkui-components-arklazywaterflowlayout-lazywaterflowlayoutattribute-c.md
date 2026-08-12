@@ -13,7 +13,7 @@ Defines the lazy waterflow layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsGap
@@ -38,7 +38,7 @@ The spacing between columns.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes |
+| value | LengthMetrics \| undefined | Yes |
 
 **Return value:**
 
@@ -158,7 +158,7 @@ The spacing between rows.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes |
+| value | LengthMetrics \| undefined | Yes |
 
 **Return value:**
 

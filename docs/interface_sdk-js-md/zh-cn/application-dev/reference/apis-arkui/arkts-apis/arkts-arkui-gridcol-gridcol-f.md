@@ -26,7 +26,7 @@ export declare function GridCol(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | 否 | 栅格布局子组件参数。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ Defines GridCol Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridColAttribute&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 

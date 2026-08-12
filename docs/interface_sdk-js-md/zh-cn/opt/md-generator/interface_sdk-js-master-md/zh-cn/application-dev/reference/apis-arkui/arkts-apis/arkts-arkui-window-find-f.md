@@ -10,13 +10,13 @@ function find(id: string, callback: AsyncCallback<Window>): void
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.findWindow](arkts-arkui-window-findwindow-f.md#findwindow)
+**替代接口：** [findWindow](arkts-arkui-window-findwindow-f.md#findWindow)
 
 <!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void--><!--Device-window-function find(id: string, callback: AsyncCallback<Window>): void-End-->
 
@@ -27,7 +27,7 @@ function find(id: string, callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | id | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -57,13 +57,13 @@ function find(id: string): Promise<Window>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findwindow)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[findWindow()](arkts-arkui-window-findwindow-f.md#findWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [window.findWindow](arkts-arkui-window-findwindow-f.md#findwindow)
+**替代接口：** [findWindow](arkts-arkui-window-findwindow-f.md#findWindow)
 
 <!--Device-window-function find(id: string): Promise<Window>--><!--Device-window-function find(id: string): Promise<Window>-End-->
 
@@ -79,7 +79,7 @@ function find(id: string): Promise<Window>
 
 | 类型 |
 | --- |
-| Promise&lt;Window&gt; |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## stopBluetoothDiscovery
@@ -20,7 +20,7 @@ Stops Bluetooth device scanning.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.stopBluetoothDiscovery
+**Substitutes:** [stopBluetoothDiscovery](ohos.bluetoothManager/bluetoothManager.stopBluetoothDiscovery)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

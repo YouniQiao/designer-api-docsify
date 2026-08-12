@@ -13,7 +13,7 @@ Stream from which data can be read. A readable stream is used to read data from 
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -170,7 +170,7 @@ readable.on('data', () => {
 isPaused(): boolean
 ```
 
-Checks whether the readable stream is paused. The stream is paused after [pause()](arkts-arkts-stream-readable-c.md#pause)is called and resumes from the paused state after [resume()](arkts-arkts-stream-readable-c.md#resume) is called.
+Checks whether the readable stream is paused. The stream is paused after [pause()](#pause)is called and resumes from the paused state after [resume()](#resume) is called.
 
 **Since:** 12
 
@@ -229,7 +229,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 ## Examples
 
@@ -304,7 +304,7 @@ Registers an event processing callback to listen for different events on the rea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 ## Examples
 
@@ -536,7 +536,7 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+| [10200038](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
 
 ## Examples
 
@@ -591,7 +591,7 @@ Reads a buffer of a specified size from the buffer. If the available buffer is s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
+| [10200038](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread-is-not-implemented) | The doRead method has not been implemented. |
 
 ## resume
 

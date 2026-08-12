@@ -8,7 +8,7 @@ Defines the option of show dialog.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions
+**Substitutes:** [ShowDialogOptions](ohos.promptAction/promptAction.ShowDialogOptions)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the option of show dialog.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -36,7 +36,7 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions#buttons
+**Substitutes:** [buttons](ohos.promptAction/promptAction.ShowDialogOptions#buttons)
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -58,7 +58,7 @@ Text body.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions#message
+**Substitutes:** [message](ohos.promptAction/promptAction.ShowDialogOptions#message)
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -80,7 +80,7 @@ Title of the text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ShowDialogOptions#title
+**Substitutes:** [title](ohos.promptAction/promptAction.ShowDialogOptions#title)
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

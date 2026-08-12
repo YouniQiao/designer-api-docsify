@@ -2,13 +2,13 @@
 
 段落样式选项。
 
-继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
+继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)。
 
 > **说明：**
 > 
 > 接口作用的范围：设定的区间所覆盖的段落，即区间起始位置和结束位置所在的段落及其之间的所有段落。
 
-**继承/实现关系：** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
+**继承/实现关系：** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)
 
 **起始版本：** 11
 
@@ -26,7 +26,7 @@ style: RichEditorParagraphStyle
 
 段落样式。
 
-**类型：** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**类型：** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **起始版本：** 11
 

@@ -24,7 +24,7 @@ ContentSlot is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [Content](../arkts-components/arkts-arkui-content-t.md) | Yes | Indicates the class object of NodeContent. |
+| content | Content | Yes | Indicates the class object of NodeContent. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines ContentSlot Component.It requires calling setContentSlotOptions at start
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContentSlotAttribute&gt; | Yes | the callback to set up ContentSlot's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ContentSlotAttribute](arkts-arkui-contentslot-contentslotattribute-i.md)&gt; | Yes | the callback to set up ContentSlot's attributes. |
 
 **Return value:**
 

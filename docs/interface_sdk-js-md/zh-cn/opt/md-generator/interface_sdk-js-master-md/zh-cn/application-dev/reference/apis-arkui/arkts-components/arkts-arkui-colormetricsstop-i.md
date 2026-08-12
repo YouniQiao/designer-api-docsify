@@ -16,7 +16,7 @@ color: ColorMetrics
 
 线性渐变颜色断点的颜色值。
 
-**类型：** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 23
 

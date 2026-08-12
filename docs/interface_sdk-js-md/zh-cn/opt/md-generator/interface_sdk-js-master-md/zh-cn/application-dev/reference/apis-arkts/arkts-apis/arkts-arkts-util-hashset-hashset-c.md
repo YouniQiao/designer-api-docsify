@@ -31,13 +31,13 @@ HashSet是一种非线性容器，用于存储不重复的元素集合，支持�
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -108,7 +108,7 @@ add(value: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -140,7 +140,7 @@ clear(): void
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -174,7 +174,7 @@ HashSet的构造函数，用于创建一个空的HashSet实例。
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -205,13 +205,13 @@ entries(): IterableIterator<[T, T]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[T, T]&gt; |
+| IterableIterator & lt;[T, T] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -264,14 +264,14 @@ forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Ob
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value?: T, key?: T, set?: HashSet&lt;T&gt;) =&gt; void | 是 |
+| callbackFn | (value?: T, key?: T, set?: HashSet & lt;T & gt;) = & gt; void | 是 |
 | thisArg | Object | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -330,7 +330,7 @@ has(value: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -368,7 +368,7 @@ isEmpty(): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -411,7 +411,7 @@ remove(value: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -447,13 +447,13 @@ values(): IterableIterator<T>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 

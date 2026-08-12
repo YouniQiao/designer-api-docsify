@@ -13,7 +13,7 @@ Describes the form item of a task.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## name
@@ -44,7 +44,7 @@ value: string | FileSpec | Array<FileSpec>
 
 Form parameter value.
 
-**Type:** string \| FileSpec \| Array&lt;FileSpec&gt;
+**Type:** string \| [FileSpec](arkts-basicservices-agent-filespec-i.md) \| Array&lt;[FileSpec](arkts-basicservices-agent-filespec-i.md)&gt;
 
 **Since:** 10
 

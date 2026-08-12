@@ -20,6 +20,6 @@ Defines the callback type used in UIObserver watch click event.The value of even
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | Yes | the information of ClickEvent |
-| node | [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | No | the information of frameNode |
+| event | ClickEvent | Yes | the information of ClickEvent |
+| node | FrameNode | No | the information of frameNode |
 

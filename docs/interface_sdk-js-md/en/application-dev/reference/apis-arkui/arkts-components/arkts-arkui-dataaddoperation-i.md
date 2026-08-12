@@ -88,7 +88,7 @@ type: DataOperationType.ADD
 
 Type of data addition.
 
-**Type:** DataOperationType.ADD
+**Type:** [DataOperationType.ADD](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
 

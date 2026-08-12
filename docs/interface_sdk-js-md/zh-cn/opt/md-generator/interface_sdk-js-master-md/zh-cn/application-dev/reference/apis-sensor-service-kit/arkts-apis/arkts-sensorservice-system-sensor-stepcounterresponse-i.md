@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#PedometerResponse
+**替代接口：** [PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md#PedometerResponse)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -28,7 +28,7 @@ steps: number
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#PedometerResponse.steps
+**替代接口：** [steps](ohos.sensor/sensor#PedometerResponse.steps)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 

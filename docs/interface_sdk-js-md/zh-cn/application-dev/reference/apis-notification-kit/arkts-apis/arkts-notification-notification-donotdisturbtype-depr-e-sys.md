@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#DoNotDisturbType
+**替代接口：** [DoNotDisturbType](ohos.notificationManager/notificationManager#DoNotDisturbType)
 
 <!--Device-notification-export enum DoNotDisturbType--><!--Device-notification-export enum DoNotDisturbType-End-->
 
@@ -30,7 +30,7 @@ TYPE_NONE = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_NONE
+**替代接口：** [TYPE_NONE](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_NONE)
 
 <!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
@@ -52,7 +52,7 @@ TYPE_ONCE = 1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_ONCE
+**替代接口：** [TYPE_ONCE](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_ONCE)
 
 <!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
@@ -74,7 +74,7 @@ TYPE_DAILY = 2
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_DAILY
+**替代接口：** [TYPE_DAILY](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_DAILY)
 
 <!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
 
@@ -96,7 +96,7 @@ TYPE_CLEARLY = 3
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_CLEARLY
+**替代接口：** [TYPE_CLEARLY](ohos.notificationManager/notificationManager.DoNotDisturbType#TYPE_CLEARLY)
 
 <!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 

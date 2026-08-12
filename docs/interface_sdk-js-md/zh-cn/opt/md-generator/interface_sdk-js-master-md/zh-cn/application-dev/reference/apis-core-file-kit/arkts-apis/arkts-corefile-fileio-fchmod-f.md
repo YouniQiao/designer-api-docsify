@@ -27,7 +27,7 @@ declare function fchmod(fd: number, mode: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## fchmod

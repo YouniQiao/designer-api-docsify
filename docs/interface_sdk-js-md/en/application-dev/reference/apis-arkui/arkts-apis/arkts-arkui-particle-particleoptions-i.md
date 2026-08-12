@@ -40,7 +40,7 @@ color?: ParticleColorPropertyOptions
 
 Particle color.
 
-**Type:** [ParticleColorPropertyOptions](../arkts-components/arkts-arkui-particlecolorpropertyoptions-i.md)
+**Type:** [ParticleColorPropertyOptions](arkts-arkui-particle-particlecolorpropertyoptions-i.md)
 
 **Default:** {range:['#FFFFFF','#FFFFFF']}
 
@@ -62,7 +62,7 @@ emitter: EmitterOptions
 
 Particle emitter.
 
-**Type:** [EmitterOptions](../arkts-components/arkts-arkui-emitteroptions-i.md)
+**Type:** [EmitterOptions](arkts-arkui-particle-emitteroptions-i.md)
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ opacity?: ParticlePropertyOptions
 
 Particle opacity.
 
-**Type:** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**Type:** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **Default:** {range:[1.0,1.0]}
 
@@ -104,7 +104,7 @@ scale?: ParticlePropertyOptions
 
 Particle scale.
 
-**Type:** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**Type:** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **Default:** {range:[1.0,1.0]}
 
@@ -126,7 +126,7 @@ spin?: ParticlePropertyOptions
 
 Particle spin.
 
-**Type:** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**Type:** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **Default:** {range:[0,0]}
 

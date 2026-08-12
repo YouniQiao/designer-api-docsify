@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from '@kit.ArkUI';
 ```
 
 ## Summary

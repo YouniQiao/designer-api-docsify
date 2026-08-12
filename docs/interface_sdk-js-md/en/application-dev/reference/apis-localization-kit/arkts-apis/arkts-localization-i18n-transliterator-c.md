@@ -13,7 +13,7 @@ Provides the API for transliterate text from one format to another.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAvailableIDs

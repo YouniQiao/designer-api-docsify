@@ -71,7 +71,7 @@ arrowHeight?: Dimension
 
 不支持设置百分比。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 8.0_vp. [since 11 - 11] @default 8.0_vp. <p><strong>NOTE</strong>: <br>This parameter cannot be set in percentage. </p>
 
@@ -107,7 +107,7 @@ Popup箭头在气泡处的偏移。
 
 1. 没设置arrowOffset的情况下，气泡箭头与四个角的距离不能小于圆角半径。2. 只有arrowPointPosition不设置或者设置为null、undefined时，arrowOffset属性才生效。3. 不支持设置百分比。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 9
 
@@ -129,7 +129,7 @@ arrowPointPosition?: ArrowPointPosition
 
 默认值：ArrowPointPosition.CENTER
 
-**类型：** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
+**类型：** ArrowPointPosition
 
 **起始版本：** 11
 
@@ -159,7 +159,7 @@ arrowWidth?: Dimension
 
 不支持设置百分比。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 16.0_vp. [since 11 - 11] @default 16.0_vp. <p><strong>NOTE</strong>: <br>This parameter cannot be set in percentage. </p> [since 12]
 
@@ -215,7 +215,7 @@ avoidTarget?: AvoidanceMode
 
 默认值：AvoidanceMode.COVER_TARGET
 
-**类型：** [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
+**类型：** AvoidanceMode
 
 **默认值：** AvoidanceMode.COVER_TARGET
 
@@ -265,7 +265,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 定义Popup的背景模糊样式选项。
 
-**类型：** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**类型：** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -287,7 +287,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 定义Popup的背景效果选项。
 
-**类型：** [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md)
+**类型：** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
 
 **起始版本：** 26.0.0
 
@@ -343,7 +343,7 @@ borderWidth?: Dimension
 
 1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件内描边的情况下，该接口需要和borderLinearGradient配合使用。3. 当设置双描边时，建议内描边宽度不超过10vp。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 20
 
@@ -535,7 +535,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 默认值：KeyboardAvoidMode.NONE
 
-**类型：** [KeyboardAvoidMode](../arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**类型：** [KeyboardAvoidMode](arkts-arkui-keyboardavoidmode-e.md)
 
 **默认值：** KeyboardAvoidMode.NONE
 
@@ -561,7 +561,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**类型：** LevelMode
 
 **起始版本：** 26.0.0
 
@@ -609,7 +609,7 @@ maskColor?: Color | string | Resource | number
 
 从 API version 10 开始废弃，建议使用`mask`替代。
 
-**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| number
+**类型：** Color \| string \| Resource \| number
 
 **起始版本：** 8
 
@@ -617,7 +617,7 @@ maskColor?: Color | string | Resource | number
 
 **废弃版本：** 10
 
-**替代接口：** [CustomPopupOptions#mask](arkts-arkui-custompopupoptions-i.md#mask)
+**替代接口：** [mask](#mask)
 
 <!--Device-CustomPopupOptions-maskColor?: Color | string | Resource | number--><!--Device-CustomPopupOptions-maskColor?: Color | string | Resource | number-End-->
 
@@ -639,7 +639,7 @@ offset?: Position
 
 不支持设置百分比。
 
-**类型：** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**类型：** Position
 
 **默认值：** { x: 0, y: 0 } [since 11]
 
@@ -669,7 +669,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** boolean \| Callback&lt;DismissPopupAction&gt;
+**类型：** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **默认值：** true
 
@@ -727,7 +727,7 @@ outlineWidth?: Dimension
 
 1. 不支持设置百分比，设置百分比时按0处理。2. 在没有设置Popup组件外描边的情况下，该接口需要和outlineLinearGradient配合使用。3. 当设置双描边时，建议外描边宽度不超过10vp。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 20
 
@@ -751,7 +751,7 @@ placement?: Placement
 
 默认值：Placement.Bottom
 
-**类型：** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
+**类型：** Placement
 
 **默认值：** Placement.Bottom
 
@@ -775,9 +775,9 @@ popupColor?: Color | string | Resource | number
 
 API version 10，默认值：'#4d4d4d'
 
-API version 11及以后，默认值：透明色[TRANSPARENT](../arkts-apis/arkts-arkui-enums-color-e.md/arkts-arkui-enums-color-e.md)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
+API version 11及以后，默认值：透明色[TRANSPARENT](Color)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)
 
-**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| number
+**类型：** Color \| string \| Resource \| number
 
 **默认值：** '#4d4d4d' [since 10 - 10] @default TRANSPARENT plus COMPONENT_ULTRA_THICK [since 11]
 
@@ -803,7 +803,7 @@ radius?: Dimension
 
 单位：vp
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 20.0_vp.
 
@@ -829,7 +829,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**类型：** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -883,11 +883,11 @@ systemMaterial?: SystemUiMaterial
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
-[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundColor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#borderColor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderWidth)、阴影  
 [shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
-**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 
@@ -913,7 +913,7 @@ targetSpace?: Length
 
 单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 10
 
@@ -963,7 +963,7 @@ width?: Dimension
 
 单位：vp
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 11
 

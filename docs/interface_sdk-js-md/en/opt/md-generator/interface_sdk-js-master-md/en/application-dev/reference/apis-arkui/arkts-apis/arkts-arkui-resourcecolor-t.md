@@ -21,4 +21,4 @@ Defines the color which can use resource.
 | [Color](arkts-arkui-enums-color-e.md) |
 | number |
 | string |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| [Resource](arkts-arkui-resource-t.md) |

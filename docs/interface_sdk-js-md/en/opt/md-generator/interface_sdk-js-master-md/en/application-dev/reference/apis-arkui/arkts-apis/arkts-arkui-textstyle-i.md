@@ -18,7 +18,7 @@ Word break rule.
 
 Default value: **WordBreak.BREAK_ALL**
 
-**Type:** [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 12
 

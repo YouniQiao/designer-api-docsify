@@ -15,7 +15,7 @@ Indicates the system event type and parameter related to the screenlock manageme
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from 'kits/@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## eventType
@@ -26,7 +26,7 @@ eventType: EventType
 
 Indicates the system event type related to the screenlock management service.
 
-**Type:** [EventType](arkts-basicservices-screenlock-eventtype-t-sys.md)
+**Type:** EventType
 
 **Since:** 9
 

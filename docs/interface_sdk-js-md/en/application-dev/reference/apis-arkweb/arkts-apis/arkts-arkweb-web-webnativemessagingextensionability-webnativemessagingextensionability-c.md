@@ -2,7 +2,7 @@
 
 class of web native messaging extension ability.
 
-**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ class of web native messaging extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'kits/@kit.ArkWeb';
+import { ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## onConnectNative

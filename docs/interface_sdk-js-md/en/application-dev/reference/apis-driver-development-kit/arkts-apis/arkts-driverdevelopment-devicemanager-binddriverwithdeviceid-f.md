@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
+import { deviceManager } from '@kit.DriverDevelopmentKit';
 ```
 
 ## bindDriverWithDeviceId
@@ -12,7 +12,7 @@ import { deviceManager } from 'kits/@kit.DriverDevelopmentKit';
 function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices) to obtain the peripheral device list.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device list.
 
 **Since:** 19
 
@@ -29,21 +29,21 @@ Binds a peripheral device based on the device information returned by **queryDev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| onDisconnect | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RemoteDeviceDriver&gt; | Promise used to return a **RemoteDeviceDriver** object. |
+| Promise&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; | Promise used to return a **RemoteDeviceDriver** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
-| [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-binding-driver-client-to-driver-server-failed) | The driver service does not allow any client to bind. |
-| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [26300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-externaldevicemanager-service-exception) | ExternalDeviceManager service exception. |
+| [26300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-binding-driver-client-to-driver-server-failed) | The driver service does not allow any client to bind. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permission check failed. |
 
 ## Examples
 

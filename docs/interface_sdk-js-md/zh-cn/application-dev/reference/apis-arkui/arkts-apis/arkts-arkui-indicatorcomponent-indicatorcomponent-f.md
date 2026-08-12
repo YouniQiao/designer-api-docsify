@@ -30,7 +30,7 @@ export declare function IndicatorComponent(
 
 | 类型 | 说明 |
 | --- | --- |
-| [IndicatorComponentAttribute](../arkts-components/arkts-arkui-indicatorcomponent-attribute.md) |  |
+| [IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 
 ## IndicatorComponent
@@ -59,11 +59,11 @@ export declare function IndicatorComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IndicatorComponentAttribute&gt; | 是 | indicatorComponent属性实例 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md)&gt; | 是 | indicatorComponent属性实例 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [IndicatorComponentAttribute](../arkts-components/arkts-arkui-indicatorcomponent-attribute.md) |  |
+| [IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 

@@ -11,7 +11,7 @@ Describes the **PluginComponent** template parameters.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## ability

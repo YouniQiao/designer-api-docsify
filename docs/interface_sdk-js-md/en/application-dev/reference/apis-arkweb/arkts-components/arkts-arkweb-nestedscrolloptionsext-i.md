@@ -20,7 +20,7 @@ Nested scrolling options when the component scrolls down.
 
 Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**Type:** NestedScrollMode
 
 **Since:** 14
 
@@ -40,7 +40,7 @@ Nested scrolling options when the component scrolls left.
 
 Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**Type:** NestedScrollMode
 
 **Since:** 14
 
@@ -60,7 +60,7 @@ Nested scrolling options when the component scrolls right.
 
 Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**Type:** NestedScrollMode
 
 **Since:** 14
 
@@ -80,7 +80,7 @@ Nested scrolling options when the component scrolls up.
 
 Default value: **NestedScrollMode.SELF_FIRST**.
 
-**Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**Type:** NestedScrollMode
 
 **Since:** 14
 

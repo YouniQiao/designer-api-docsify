@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createWantRecord
@@ -20,7 +20,7 @@ Creates a **PasteDataRecord** object of the Want type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType:
+**Substitutes:** [createRecord](pasteboard.createRecord(mimeType:)
 
 <!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord--><!--Device-pasteboard-function createWantRecord(want: Want): PasteDataRecord-End-->
 

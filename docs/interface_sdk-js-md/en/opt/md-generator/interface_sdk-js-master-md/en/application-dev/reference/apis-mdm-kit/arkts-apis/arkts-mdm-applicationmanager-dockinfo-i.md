@@ -11,7 +11,7 @@ Describes information about an application in the shortcut bar.
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## abilityName

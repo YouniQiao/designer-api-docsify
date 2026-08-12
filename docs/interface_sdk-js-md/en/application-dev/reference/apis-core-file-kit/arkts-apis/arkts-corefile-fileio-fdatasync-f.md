@@ -14,7 +14,7 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync)
+**Substitutes:** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
 
 <!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>--><!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>-End-->
 
@@ -47,7 +47,7 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync)
+**Substitutes:** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
 
 <!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -58,5 +58,5 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor of the file to synchronize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the file data is synchronized in asynchronous mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the file data is synchronized in asynchronous mode. |
 

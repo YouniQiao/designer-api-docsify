@@ -25,14 +25,14 @@ Defines Select Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | Yes | the options of Select. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| options | Array&lt;[SelectOption](arkts-arkui-select-selectoption-i.md)&gt; | Yes | the options of Select. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md) |  |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) |  |
 
 
 ## Select
@@ -62,12 +62,12 @@ Defines Select Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SelectAttribute&gt; | Yes | select attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SelectAttribute](arkts-arkui-select-selectattribute-i.md)&gt; | Yes | select attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md) |  |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) |  |
 

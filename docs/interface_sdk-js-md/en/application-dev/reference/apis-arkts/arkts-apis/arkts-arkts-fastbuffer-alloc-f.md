@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## alloc
@@ -29,8 +29,8 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | size | number | Yes | The desired size (in bytes) of the new FastBuffer |
-| fill | string \| FastBuffer \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
+| fill | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| number | No | fill [fill=0] A value to pre-fill the new FastBuffer with |
+| encoding | BufferEncoding | No | encoding [encoding='utf8'] If `fill` is a string, this is its encoding |
 
 **Return value:**
 

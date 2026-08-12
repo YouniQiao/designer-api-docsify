@@ -2,7 +2,7 @@
 
 Represents an error that occurs when an input string contains invalid or incorrectly formatted data.
 
-**Inheritance/Implementation:** FormatError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** FormatError extends [Error](Error)
 
 **Since:** 26.0.0
 

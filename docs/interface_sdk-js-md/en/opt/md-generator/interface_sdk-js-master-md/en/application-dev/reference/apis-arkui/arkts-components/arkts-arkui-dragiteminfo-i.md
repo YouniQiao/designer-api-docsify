@@ -18,7 +18,7 @@ Custom component to display during dragging. If **pixelMap** is set, this parame
 
 **NOTE：**
 
-Global builder definition is not supported. If the [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) component is used in the builder, enable synchronous loading whenever possible, that is, set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging.Changes to the builder, if any, apply to the next dragging, but not to the current dragging.
+Global builder definition is not supported. If the [Image](image) component is used in the builder, enable synchronous loading whenever possible, that is, set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging.Changes to the builder, if any, apply to the next dragging, but not to the current dragging.
 
 When passing the builder as a parameter, the format builder: ()=>{this.customBuilder()} is recommended to ensure correctness of this binding. For details, see  
 [Using Functions Decorated with @Builder as CustomBuilder Types](../../../ui/state-management/arkts-builder.md#using-functions-decorated-with-builder-as-custombuilder-types).
@@ -59,7 +59,7 @@ pixelMap?: PixelMap
 
 Image to be displayed during dragging.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** [PixelMap](arkts-arkui-pixelmap-t.md)
 
 **Since:** 8
 

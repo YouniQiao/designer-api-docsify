@@ -35,7 +35,7 @@ Uses new to create the line.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](../arkts-apis/arkts-arkui-line-lineoptions-i.md) | No | Line options |
+| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Line options |
 
 ## Line
 
@@ -61,7 +61,7 @@ Defines the constructor of Line component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LineOptions](../arkts-apis/arkts-arkui-line-lineoptions-i.md) | No | Options of the line.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
+| options | [LineOptions](arkts-arkui-lineoptions-i.md) | No | Options of the line.<br>The **undefined** and **null** values are treated as invalid and will not take effect. |
 
 ## Summary
 

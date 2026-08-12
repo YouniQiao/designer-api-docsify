@@ -12,7 +12,7 @@ function cancel(task: Task): void
 - taskpool.cancel对其之前的taskpool.execute、taskpool.executeDelayed或taskpool.executePeriodically生效。
 
 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;  
-[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
+[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md#TaskResult)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 9
 
@@ -32,9 +32,9 @@ function cancel(task: Task): void
 
 | 错误码ID |
 | --- |
-| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
-| [10200016](../errorcode-utils.md#10200016-取消正在执行的任务错误) |
-| [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
+| [10200015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200015-取消不存在的任务错误) |
+| [10200016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200016-取消正在执行的任务错误) |
+| [10200055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200055-异步任务被取消) |
 
 
 ## cancel
@@ -44,7 +44,7 @@ function cancel(group: TaskGroup): void
 ```
 
 取消任务池中的任务组。如果任务组中的任务未全部执行结束，则整个任务组的执行结果返回undefined。从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;  
-[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
+[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md#TaskResult)&gt;的泛型标记，来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 10
 
@@ -64,7 +64,7 @@ function cancel(group: TaskGroup): void
 
 | 错误码ID |
 | --- |
-| [10200018](../errorcode-utils.md#10200018-取消不存在的任务组错误) |
+| [10200018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200018-取消不存在的任务组错误) |
 
 ## 示例
 
@@ -120,7 +120,7 @@ function cancel(taskId: number): void
 - 在其他线程调用taskpool.cancel时，需注意其行为是异步的，可能导致在cancel调用之后的taskpool.execute或taskpool.executeDelayed的任务被取消。
 
 从API version 20开始，支持在执行cancel操作后，在catch分支里使用BusinessError&lt;  
-[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
+[taskpool.TaskResult](arkts-arkts-taskpool-taskresult-i.md#TaskResult)&gt;的泛型标记。这可以用来获取任务中抛出的异常信息或最终的执行结果。
 
 **起始版本：** 18
 
@@ -140,8 +140,8 @@ function cancel(taskId: number): void
 
 | 错误码ID |
 | --- |
-| [10200015](../errorcode-utils.md#10200015-取消不存在的任务错误) |
-| [10200055](../errorcode-utils.md#10200055-异步任务被取消) |
+| [10200015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200015-取消不存在的任务错误) |
+| [10200055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200055-异步任务被取消) |
 
 ## 示例
 

@@ -21,10 +21,10 @@ type Transformer = (this: ISendable, key: string,
 | --- | --- | --- |
 | this | [ISendable](arkts-arkts-ason-isendable-t.md) | 是 |
 | key | string | 是 |
-| value | [ISendable](arkts-arkts-ason-isendable-t.md) \| undefined \| null | 是 |
+| value | ISendable \| undefined \| null | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [ISendable](arkts-arkts-ason-isendable-t.md) \| undefined \| null |
+| ISendable \| undefined \| null |

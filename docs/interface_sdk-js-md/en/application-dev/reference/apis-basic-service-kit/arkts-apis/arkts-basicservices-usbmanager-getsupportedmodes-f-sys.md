@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## getSupportedModes
@@ -20,7 +20,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Deprecated since:** 12
 
-**Substitutes:** [usbManager.getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md#getportsupportmodes)(portId:
+**Substitutes:** [getPortSupportModes](usbManager.getPortSupportModes(portId:)
 
 <!--Device-usbManager-function getSupportedModes(portId: number): PortModeType--><!--Device-usbManager-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -38,11 +38,11 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | Type | Description |
 | --- | --- |
-| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) | Mask combination for the supported mode list. |
+| PortModeType | Mask combination for the supported mode list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

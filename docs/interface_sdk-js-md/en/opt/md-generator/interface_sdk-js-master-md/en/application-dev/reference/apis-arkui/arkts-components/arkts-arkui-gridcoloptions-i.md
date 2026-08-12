@@ -6,7 +6,7 @@ The values of `span`, `offset`, and `order` attributes are inherited in the sequ
 **lg**, **xl**, and **xxl**. If no value is set for a breakpoint, the value is obtained from the previous breakpoint.
 
 Since API version 20, inheritance of the **span** property follows rules detailed in   
-[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md).
+[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md#GridColColumnOption).
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ The value must be a non-negative integer. Default value: **0**.
 
 Invalid values are treated as the default value.
 
-**Type:** number \| GridColColumnOption
+**Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
 
@@ -56,7 +56,7 @@ If a child component shares an **order** value with another child component or d
 
 If **order** is not set for all child components, those that have **order** set are displayed after those that do not and are sorted in ascending order based on the value.
 
-**Type:** number \| GridColColumnOption
+**Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ The value must be a non-negative integer. Default value: **1**.
 
 Invalid values are treated as the default value.
 
-**Type:** number \| GridColColumnOption
+**Type:** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **Since:** 9
 

@@ -5,7 +5,7 @@
 | 名称 | 值 | 说明 |
 | ----------------------------- | -- | -------------------- |
 | [STANDARD](#standard) | 0 | 标准振动风格。 |
-| [GENTLE](#gentle) | 1 |
+| [GENTLE](arkts-audio-systemsoundmanager-tonehapticsfeature-e.md) | 1 |
 
 **起始版本：** 13
 

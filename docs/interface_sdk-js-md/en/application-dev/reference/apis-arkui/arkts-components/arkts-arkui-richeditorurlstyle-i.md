@@ -20,7 +20,7 @@ URL.
 
 Default value: **undefined**
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 19
 

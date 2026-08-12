@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## rebootDevice
@@ -20,7 +20,7 @@ Restarts the system.
 
 **Deprecated since:** 9
 
-**Substitutes:** [power.reboot](arkts-basicservices-power-reboot-f-sys.md#reboot)
+**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot)
 
 **Required permissions:** ohos.permission.REBOOT
 

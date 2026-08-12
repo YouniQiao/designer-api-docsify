@@ -1,9 +1,9 @@
 # WriteStream
 
-Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createwritestream) to create a  
-**WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md).
+Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createWriteStream) to create a  
+**WriteStream** instance, which is inherited from [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable).
 
-**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)
+**Inheritance/Implementation:** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
 
 **Since:** 23
 
@@ -16,7 +16,7 @@ Defines a writeable stream. You need to use [fileIo.createWriteStream](arkts-cor
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## close
@@ -83,7 +83,7 @@ Adjusts the position of the writeable stream offset pointer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | long | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | = WhenceType.SEEK_SET] - Where to start the offset. &lt;br&gt;The default value is SEEK_SET, which indicates the beginning of the file. |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | = WhenceType.SEEK_SET] - Where to start the offset. &lt;br&gt;The default value is SEEK_SET, which indicates the beginning of the file. |
 
 **Return value:**
 
@@ -96,7 +96,7 @@ Adjusts the position of the writeable stream offset pointer.
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

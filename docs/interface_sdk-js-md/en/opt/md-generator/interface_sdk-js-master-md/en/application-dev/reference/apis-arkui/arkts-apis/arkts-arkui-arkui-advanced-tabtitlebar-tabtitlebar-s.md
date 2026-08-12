@@ -4,8 +4,8 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 
 > **NOTE：**
 > 
-> - If the **TabTitleBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and
-> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically
+> - If the **TabTitleBar** component has [universal attributes](./@internal/component/ets/common) and
+> [universal events](./@internal/component/ets/common) configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
 > rather than the **TabTitleBar** component itself. As a result, the configured universal attributes and universal
 > events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events
@@ -22,7 +22,7 @@ The **TabTitleBar** component is a tab title bar used to switch between tabs pag
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from 'kits/@kit.ArkUI';
+import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## swiperContent
@@ -53,7 +53,7 @@ menuItems?: Array<TabTitleBarMenuItem>
 
 List of menu items on the right of the title bar.
 
-**Type:** Array&lt;TabTitleBarMenuItem&gt;
+**Type:** Array&lt;[TabTitleBarMenuItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
 
@@ -73,7 +73,7 @@ tabItems: Array<TabTitleBarTabItem>
 
 List of tab items on the left of the title bar.
 
-**Type:** Array&lt;TabTitleBarTabItem&gt;
+**Type:** Array&lt;[TabTitleBarTabItem](arkts-arkui-arkui-advanced-tabtitlebar-tabtitlebartabitem-c.md)&gt;
 
 **Since:** 10
 

@@ -14,7 +14,7 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:statSync](arkts-corefile-fileio-statsync-f.md#statsync)
+**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statSync)
 
 <!--Device-unnamed-declare function fstatSync(fd: number): Stat--><!--Device-unnamed-declare function fstatSync(fd: number): Stat-End-->
 
@@ -30,5 +30,5 @@ Obtains file status based on the file descriptor. This API returns the result sy
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-fileio-stat-i.md) | Detailed file status obtained. |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) | Detailed file status obtained. |
 

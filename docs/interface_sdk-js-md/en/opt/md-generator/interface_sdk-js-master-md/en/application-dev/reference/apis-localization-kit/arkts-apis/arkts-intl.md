@@ -11,7 +11,7 @@ The **intl** module provides basic i18n capabilities, such as time and date form
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## Summary

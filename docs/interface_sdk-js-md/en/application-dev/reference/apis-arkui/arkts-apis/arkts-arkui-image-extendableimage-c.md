@@ -2,7 +2,7 @@
 
 Defines the Extendable Image.
 
-**Inheritance/Implementation:** ExtendableImage implements [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md/arkts-arkui-image-attribute.md)
+**Inheritance/Implementation:** ExtendableImage implements [ImageAttribute](arkts-arkui-image-imageattribute-i.md#ImageAttribute)
 
 **Since:** 26.0.0
 
@@ -39,8 +39,8 @@ Constructor of Extendable Image.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No |  |
 
 **Return value:**
 
@@ -76,8 +76,8 @@ Constructor of Extendable Image.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No |  |
 | reloadKey | string | No |  |
 
 **Return value:**
@@ -113,7 +113,7 @@ Constructor of Extendable Image.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes |  |
 | reloadKey | string | No |  |
 
 **Return value:**
@@ -149,7 +149,7 @@ Entry of Extendable Image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
 
 ## setImageOptions
@@ -177,8 +177,8 @@ Set the Image Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No |  |
 
 **Return value:**
 
@@ -212,8 +212,8 @@ Set the Image Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes |  |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes |  |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No |  |
 | reloadKey | string | No |  |
 
 **Return value:**
@@ -247,7 +247,7 @@ Set the Image Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | Yes |  |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | Yes |  |
 | reloadKey | string | No |  |
 
 **Return value:**

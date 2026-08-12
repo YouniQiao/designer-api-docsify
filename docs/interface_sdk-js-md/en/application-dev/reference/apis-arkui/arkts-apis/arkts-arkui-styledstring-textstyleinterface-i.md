@@ -38,7 +38,7 @@ fontConfigs?: FontConfigs
 
 The fontConfigs value of the text.
 
-**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**Type:** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **Since:** 26.0.0
 
@@ -138,7 +138,7 @@ fontWeight?: int | FontWeight | string
 
 The fontWeight value of the font property object.
 
-**Type:** int \| FontWeight \| string
+**Type:** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 The stroke join style of the StyledString.
 
-**Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -218,7 +218,7 @@ superscript?: SuperscriptStyle
 
 The superscript value of the font property object.
 
-**Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
+**Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **Since:** 26.0.0
 

@@ -2,7 +2,7 @@
 
 Defines the Checkbox component attributes.
 
-**Inheritance/Implementation:** CheckboxAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** CheckboxAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Set the attribute modifier of checkbox.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of checkbox. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of checkbox. |
 
 **Return value:**
 
@@ -65,7 +65,7 @@ Set the content modifier of checkbox.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;CheckBoxConfiguration&gt; \| undefined | Yes | The content modifier of checkbox. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkbox-checkboxconfiguration-i.md)&gt; \| undefined | Yes | The content modifier of checkbox. |
 
 **Return value:**
 
@@ -125,7 +125,7 @@ Called when the selection status changes.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnCheckboxChangeCallback](../arkts-components/arkts-arkui-oncheckboxchangecallback-t.md) \| undefined | Yes |  |
+| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ setting whether checkbox is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSelected | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes |  |
+| isSelected | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | Yes |  |
 
 **Return value:**
 
@@ -215,7 +215,7 @@ Set checkbox options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxOptions](../arkts-components/arkts-arkui-checkboxoptions-i.md) | No | checkbox constructor options |
+| options | [CheckboxOptions](arkts-arkui-checkbox-checkboxoptions-i.md) | No | checkbox constructor options |
 
 **Return value:**
 

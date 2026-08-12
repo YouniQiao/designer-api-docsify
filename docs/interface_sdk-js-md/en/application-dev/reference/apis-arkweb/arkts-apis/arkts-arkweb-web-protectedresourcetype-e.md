@@ -1,6 +1,6 @@
 # ProtectedResourceType
 
-Defines the accessible resource type, related to {@link onPermissionRequest} method.
+Defines the accessible resource type, related to [onPermissionRequest](arkts-arkweb-web-webattribute-i.md#onPermissionRequest) method.
 
 **Since:** 23
 

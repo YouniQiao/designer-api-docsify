@@ -14,7 +14,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#getMissionSnapShot
+**Substitutes:** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -30,7 +30,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. It is a null string by default for the local device. |
 | missionId | number | Yes | Mission ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Yes | Callback used to return the snapshot information obtained. |
 
 ## Examples
 
@@ -66,7 +66,7 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#getMissionSnapShot
+**Substitutes:** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

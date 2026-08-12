@@ -40,7 +40,7 @@ target: Array<AccessibilityElement>
 
 Target accessibility nodes.
 
-**Type:** Array&lt;AccessibilityElement&gt;
+**Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **Since:** 23
 

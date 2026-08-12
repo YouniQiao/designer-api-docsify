@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVPlayer
@@ -41,13 +41,13 @@ Creates an AVPlayer instance. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlayer&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVPlayer instance is returned; otherwise, **null** is returned. The instance can be used to play audio and video. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
 ## Examples
 
@@ -88,13 +88,13 @@ The actual number of instances that can be created may be different.It depends o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlayer \| undefined&gt; | Yes | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | Yes | used to return the result. If the operation is successful , an **AVPlayer** instance is returned; otherwise, **undefined** is returned. The instance can be used to play audio and video. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 
 
 ## createAVPlayer
@@ -132,13 +132,13 @@ Creates an AVPlayer instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVPlayer&gt; | Promise used to return the result. If the operation is successful, an AVPlayer instance is returned for audio and video playback. Otherwise, **null** is returned. |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md)&gt; | Promise used to return the result. If the operation is successful, an AVPlayer instance is returned for audio and video playback. Otherwise, **null** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
 ## Examples
 
@@ -181,11 +181,11 @@ The actual number of instances that can be created may be different. It depends 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVPlayer \| undefined&gt; | A Promise instance used to return the result. If the operation is successful, an **AVPlayer** instance is returned; **undefined** is returned otherwise. The instance can be used to play audio and video. |
+| Promise&lt;[AVPlayer](arkts-media-media-avplayer-i.md) \| undefined&gt; | A Promise instance used to return the result. If the operation is successful, an **AVPlayer** instance is returned; **undefined** is returned otherwise. The instance can be used to play audio and video. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 

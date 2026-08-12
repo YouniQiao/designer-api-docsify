@@ -14,7 +14,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 **废弃版本：** 12
 
-**替代接口：** [usbManager.getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md#getstringfromfunctions)(funcs:
+**替代接口：** [getStringFromFunctions](usbManager.getStringFromFunctions(funcs:)
 
 <!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string-End-->
 
@@ -26,7 +26,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| funcs | [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 是 | 功能列表对应的数字掩码。 |
+| funcs | FunctionType | 是 | 功能列表对应的数字掩码。 |
 
 **返回值：**
 
@@ -38,5 +38,5 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

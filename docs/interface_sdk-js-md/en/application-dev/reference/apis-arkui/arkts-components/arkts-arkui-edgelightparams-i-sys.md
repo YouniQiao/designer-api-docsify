@@ -20,7 +20,7 @@ color?: ResourceColor
 
 The color of the light effect.&lt;br&gt;If not specified, the default color is white (#FFFFFF).
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #FFFFFF
 
@@ -66,7 +66,7 @@ length: Length
 
 Projection length of the edge streamer along the flow direction.&lt;br&gt;Negative values are treated as 0.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ position: EdgeLightPosition
 
 The location of the edge light effect.
 
-**Type:** [EdgeLightPosition](../arkts-apis/arkts-arkui-edgelightposition-e-sys.md)
+**Type:** EdgeLightPosition
 
 **Since:** 26.0.0
 
@@ -110,7 +110,7 @@ thickness?: Length
 
 The thickness (width) of the light effect line.&lt;br&gt;Negative values are treated as 0.&lt;br&gt;If not specified, the default value is 0vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0vp
 

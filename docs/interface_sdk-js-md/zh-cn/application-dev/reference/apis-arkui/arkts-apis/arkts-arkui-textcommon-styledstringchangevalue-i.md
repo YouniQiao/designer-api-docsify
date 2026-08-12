@@ -18,7 +18,7 @@ previewText?: StyledString
 
 预览内容属性字符串。&lt;br/&gt; 该属性用于表示语音输入、拍摄输入、输入法预上屏场景下的未提交上屏的临时输入内容。
 
-**类型：** [StyledString](arkts-arkui-styledstring-c.md)
+**类型：** [StyledString](arkts-arkui-styledstring-styledstring-c.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ replacementString: StyledString
 
 用于替换的属性字符串。
 
-**类型：** [StyledString](arkts-arkui-styledstring-c.md)
+**类型：** [StyledString](arkts-arkui-styledstring-styledstring-c.md)
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## push
@@ -20,7 +20,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)(options:
+**Substitutes:** [pushUrl](@ohos.arkui.UIContext:Router#pushUrl(options:)
 
 <!--Device-router-function push(options: RouterOptions): void--><!--Device-router-function push(options: RouterOptions): void-End-->
 
@@ -30,7 +30,7 @@ Navigates to a specified page in the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | Yes | Page routing parameters. |
+| options | RouterOptions | Yes | Page routing parameters. |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getStations
@@ -20,7 +20,7 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getHotspotStations
+**Substitutes:** [getHotspotStations](ohos.wifiManager/wifiManager.getHotspotStations)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -34,7 +34,7 @@ Obtains the list of clients that are connected to a Wi-Fi hotspot.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;StationInfo&gt; |
+| Array & lt;StationInfo & gt; |
 
 ## Examples
 

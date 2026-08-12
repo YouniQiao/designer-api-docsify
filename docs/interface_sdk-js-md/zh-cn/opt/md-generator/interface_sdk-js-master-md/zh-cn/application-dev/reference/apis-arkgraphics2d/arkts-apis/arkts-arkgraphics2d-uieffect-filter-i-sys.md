@@ -1,6 +1,6 @@
 # Filter
 
-Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter)创建一个Filter实例。
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createFilter)创建一个Filter实例。
 
 **起始版本：** 12
 
@@ -28,19 +28,19 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| controlPoints | Array&lt;common2D.Point&gt; | 是 |
+| controlPoints | Array & lt;common2D.Point & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -94,7 +94,7 @@ blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 ## 示例
 
@@ -169,22 +169,22 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| colors | Array&lt;Color&gt; | 是 |
-| positions | Array&lt;common2D.Point&gt; | 是 |
-| strengths | Array&lt;number&gt; | 是 |
+| colors | Array & lt;Color & gt; | 是 |
+| positions | Array & lt;common2D.Point & gt; | 是 |
+| strengths | Array & lt;number & gt; | 是 |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -240,21 +240,21 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | lightPosition | common2D.Point3d | 是 |
-| lightColor | common2D.Color | 是 |
-| lightIntensity | number | 是 |
+| [lightColor](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | common2D.Color | 是 |
+| [lightIntensity](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor-colorresponse-i-sys.md) | number | 是 |
 | displacementMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -320,19 +320,19 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: number, mas
 | color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | 是 |
 | intensity | number | 是 |
 | mask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 |
-| factor | number | 否 |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -393,19 +393,19 @@ displacementDistort(displacementMap: Mask, factor?: [number, number]): Filter
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | displacementMap | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 是 |
-| factor | [number, number] | 否 |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [number, number] | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -456,13 +456,13 @@ distort(distortionK: number): Filter
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -501,13 +501,13 @@ edgeLight(alpha: number, color?: Color, mask?: Mask, bloom?: boolean): Filter
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -561,13 +561,13 @@ flyInFlyOutEffect(degree: number, flyMode: FlyMode): Filter
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -605,7 +605,7 @@ heatDistortion(param: HeatDistortionEffectParam): Filter
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 ## 示例
 
@@ -670,13 +670,13 @@ maskDispersion(dispersionMap: Mask, alpha: number, rFactor?: [number, number], g
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## maskTransition
 
@@ -701,20 +701,20 @@ maskTransition(alphaMask: Mask, factor?: number, inverse?: boolean): Filter
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 是 |
-| factor | number | 否 |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | 否 |
 | inverse | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -782,14 +782,14 @@ pixelStretch(stretchSizes: Array<number>, tileMode: TileMode): Filter
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| stretchSizes | Array&lt;number&gt; | 是 |
+| stretchSizes | Array & lt;number & gt; | 是 |
 | tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 ## 示例
 
@@ -826,13 +826,13 @@ radiusGradientBlur(radius: number, gradientParam: LinearGradientBlurOptions): Fi
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## variableRadiusBlur
 
@@ -861,13 +861,13 @@ variableRadiusBlur(radius: number, radiusMap: Mask): Filter
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -922,13 +922,13 @@ waterRipple(progress: number, waveCount: number, x: number, y: number, rippleMod
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -92,5 +92,5 @@ On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the fo
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the selection.&lt;br&gt;Values less than 0 are treated as **0**. |
 | selectionEnd | number | Yes | End position of the selection.&lt;br&gt;If the value exceeds the text length, the current text length is used instead. |
-| options | [SelectionOptions](arkts-arkui-common-selectionoptions-i.md) | No | Configuration of options. The default value is inherited from [SelectionOptions](arkts-arkui-common-selectionoptions-i.md). |
+| options | SelectionOptions | No | Configuration of options. The default value is inherited from [SelectionOptions](SelectionOptions). |
 

@@ -13,7 +13,7 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.D
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## amPMSymbol

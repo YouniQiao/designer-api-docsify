@@ -18,7 +18,7 @@ subtitle?: ResourceStr
 
 Defines subtitle text
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ title: ResourceStr
 
 Defines title text
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 11
 

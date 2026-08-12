@@ -42,7 +42,7 @@ storage? : LocalStorage
 
 LocalStorage to be passed.
 
-**Type:** [LocalStorage](../arkts-apis/arkts-arkui-localstorage-localstorage-c.md)
+**Type:** LocalStorage
 
 **Since:** 10
 

@@ -1,7 +1,7 @@
 # KVStore
 
 Provides APIs to manage data in a KV store, for example, adding or deleting data and subscribing to data changes or  completion of data sync.Before calling any method in **KVStore**, you must use  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **KVStore** object.
+[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) to obtain a **KVStore** object.
 
 **Since:** 7
 
@@ -9,7 +9,7 @@ Provides APIs to manage data in a KV store, for example, adding or deleting data
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore
+**Substitutes:** [SingleKVStore](ohos.data.distributedKVStore.SingleKVStore)
 
 <!--Device-distributedData-interface KVStore--><!--Device-distributedData-interface KVStore-End-->
 
@@ -29,7 +29,7 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#commit
+**Substitutes:** [commit](ohos.data.distributedKVStore.SingleKVStore#commit)
 
 <!--Device-KVStore-commit(callback: AsyncCallback<void>): void--><!--Device-KVStore-commit(callback: AsyncCallback<void>): void-End-->
 
@@ -39,7 +39,7 @@ Commits the transaction in this KV store. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -72,7 +72,7 @@ Commits the transaction in this KV store. This API uses a promise to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#commit
+**Substitutes:** [commit](ohos.data.distributedKVStore.SingleKVStore#commit)
 
 <!--Device-KVStore-commit(): Promise<void>--><!--Device-KVStore-commit(): Promise<void>-End-->
 
@@ -113,7 +113,7 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#delete
+**Substitutes:** [delete](ohos.data.distributedKVStore.SingleKVStore#delete)
 
 <!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void-End-->
 
@@ -123,8 +123,8 @@ Deletes a KV pair from this KV store. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -166,7 +166,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#delete
+**Substitutes:** [delete](ohos.data.distributedKVStore.SingleKVStore#delete)
 
 <!--Device-KVStore-delete(key: string): Promise<void>--><!--Device-KVStore-delete(key: string): Promise<void>-End-->
 
@@ -176,7 +176,7 @@ Deletes a KV pair from this KV store. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to delete. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
 
 **Return value:**
 
@@ -220,7 +220,7 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#deleteBatch
+**Substitutes:** [deleteBatch](ohos.data.distributedKVStore.SingleKVStore#deleteBatch)
 
 <!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void-End-->
 
@@ -231,7 +231,7 @@ Deletes KV pairs in batches from this KV store. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keys | string[] | Yes | KV pairs to delete in batches. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -278,7 +278,7 @@ Deletes KV pairs in batches from this KV store. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#deleteBatch
+**Substitutes:** [deleteBatch](ohos.data.distributedKVStore.SingleKVStore#deleteBatch)
 
 <!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>-End-->
 
@@ -345,7 +345,7 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#enableSync
+**Substitutes:** [enableSync](ohos.data.distributedKVStore.SingleKVStore#enableSync)
 
 <!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -356,7 +356,7 @@ Sets data sync, which can be enabled or disabled. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | Whether to enable data sync. The value **true** means to enable data sync, and **false** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -389,7 +389,7 @@ Sets data sync, which can be enabled or disabled. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#enableSync
+**Substitutes:** [enableSync](ohos.data.distributedKVStore.SingleKVStore#enableSync)
 
 <!--Device-KVStore-enableSync(enabled: boolean): Promise<void>--><!--Device-KVStore-enableSync(enabled: boolean): Promise<void>-End-->
 
@@ -436,7 +436,7 @@ Unsubscribes from data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -447,7 +447,7 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 ## Examples
 
@@ -484,7 +484,7 @@ Unsubscribes from sync completion events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -495,7 +495,7 @@ Unsubscribes from sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks for data changes will be unregistered. |
 
 ## Examples
 
@@ -532,7 +532,7 @@ Subscribes to data changes of the specified type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#on
+**Substitutes:** [on](ohos.data.distributedKVStore.SingleKVStore#on)
 
 <!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -543,8 +543,8 @@ Subscribes to data changes of the specified type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event type. The value is **dataChange**, which indicates data changes. |
-| type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Type of data change. |
-| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
+| type | SubscribeType | Yes | Type of data change. |
+| listener | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ChangeNotification&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -569,7 +569,7 @@ Subscribes to sync completion events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#on
+**Substitutes:** [on](ohos.data.distributedKVStore.SingleKVStore#on)
 
 <!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -580,7 +580,7 @@ Subscribes to sync completion events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | 'syncComplete' | Yes | Event type. The value is **syncComplete**, which indicates a sync completion event. |
-| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
+| syncCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback used to return a sync completion event. |
 
 ## Examples
 
@@ -605,7 +605,7 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#put
+**Substitutes:** [put](ohos.data.distributedKVStore.SingleKVStore#put)
 
 <!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -615,9 +615,9 @@ Adds a KV pair of the specified type to this KV store. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -652,7 +652,7 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#put
+**Substitutes:** [put](ohos.data.distributedKVStore.SingleKVStore#put)
 
 <!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>-End-->
 
@@ -662,8 +662,8 @@ Adds a KV pair of the specified type to this KV store. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
-| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#constants). |
+| key | string | Yes | Key of the KV pair to add. It cannot be empty, and the length cannot exceed [MAX_KEY_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
+| value | Uint8Array \| string \| number \| boolean | Yes | Value of the KV pair to add. The value type can be Uint8Array, number, string, or boolean. A value of the Uint8Array or string type cannot exceed [MAX_VALUE_LENGTH](arkts-arkdata-distributeddata-constants-n.md#Constants). |
 
 **Return value:**
 
@@ -702,7 +702,7 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#putBatch
+**Substitutes:** [putBatch](ohos.data.distributedKVStore.SingleKVStore#putBatch)
 
 <!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void--><!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void-End-->
 
@@ -712,8 +712,8 @@ Inserts KV pairs in batches to this KV store. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | Yes | KV pairs to insert in batches. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| entries | Entry[] | Yes | KV pairs to insert in batches. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -760,7 +760,7 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#putBatch
+**Substitutes:** [putBatch](ohos.data.distributedKVStore.SingleKVStore#putBatch)
 
 <!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>-End-->
 
@@ -770,7 +770,7 @@ Inserts KV pairs in batches to this KV store. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entries | [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[] | Yes | KV pairs to insert in batches. |
+| entries | Entry[] | Yes | KV pairs to insert in batches. |
 
 **Return value:**
 
@@ -826,7 +826,7 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#rollback
+**Substitutes:** [rollback](ohos.data.distributedKVStore.SingleKVStore#rollback)
 
 <!--Device-KVStore-rollback(callback: AsyncCallback<void>): void--><!--Device-KVStore-rollback(callback: AsyncCallback<void>): void-End-->
 
@@ -836,7 +836,7 @@ Rolls back the transaction in this KV store. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -869,7 +869,7 @@ Rolls back the transaction in this KV store. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#rollback
+**Substitutes:** [rollback](ohos.data.distributedKVStore.SingleKVStore#rollback)
 
 <!--Device-KVStore-rollback(): Promise<void>--><!--Device-KVStore-rollback(): Promise<void>-End-->
 
@@ -910,7 +910,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#setSyncRange
+**Substitutes:** [setSyncRange](ohos.data.distributedKVStore.SingleKVStore#setSyncRange)
 
 <!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void-End-->
 
@@ -922,7 +922,7 @@ Sets the data sync range. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | localLabels | string[] | Yes | Sync labels set for the local device. |
 | remoteSupportLabels | string[] | Yes | Sync labels set for remote devices. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -953,7 +953,7 @@ Sets the data sync range. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#setSyncRange
+**Substitutes:** [setSyncRange](ohos.data.distributedKVStore.SingleKVStore#setSyncRange)
 
 <!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>-End-->
 
@@ -1003,7 +1003,7 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#startTransaction
+**Substitutes:** [startTransaction](ohos.data.distributedKVStore.SingleKVStore#startTransaction)
 
 <!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void--><!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void-End-->
 
@@ -1013,7 +1013,7 @@ Starts the transaction in this KV store. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -1066,7 +1066,7 @@ Starts the transaction in this KV store. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SingleKVStore#startTransaction
+**Substitutes:** [startTransaction](ohos.data.distributedKVStore.SingleKVStore#startTransaction)
 
 <!--Device-KVStore-startTransaction(): Promise<void>--><!--Device-KVStore-startTransaction(): Promise<void>-End-->
 

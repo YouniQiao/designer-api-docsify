@@ -11,7 +11,7 @@ Defines a contact.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## INVALID_CONTACT_ID
@@ -58,7 +58,7 @@ emails?: Email[]
 
 List of email addresses of the contact.
 
-**Type:** [Email](arkts-contacts-contact-email-c.md)[]
+**Type:** Email[]
 
 **Since:** 7
 
@@ -76,7 +76,7 @@ events?: Event[]
 
 List of important dates such as birthdays and anniversaries of the contact.
 
-**Type:** [Event](arkts-contacts-contact-event-c.md)[]
+**Type:** Event[]
 
 **Since:** 7
 
@@ -238,7 +238,7 @@ phoneNumbers?: PhoneNumber[]
 
 List of phone numbers of the contact.
 
-**Type:** [PhoneNumber](arkts-contacts-contact-phonenumber-c.md)[]
+**Type:** PhoneNumber[]
 
 **Since:** 7
 
@@ -256,7 +256,7 @@ portrait?: Portrait
 
 Contact portrait.
 
-**Type:** [Portrait](arkts-contacts-contact-portrait-c.md)
+**Type:** Portrait
 
 **Since:** 7
 

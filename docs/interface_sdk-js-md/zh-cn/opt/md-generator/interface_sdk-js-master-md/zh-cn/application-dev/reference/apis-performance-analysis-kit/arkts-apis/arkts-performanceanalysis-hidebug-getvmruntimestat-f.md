@@ -6,7 +6,7 @@
 function getVMRuntimeStat(item: string): number
 ```
 
-���ݲ�����ȡָ����ϵͳGCͳ����Ϣ��
+根据参数获取指定的系统GC统计信息。
 
 **起始版本：** 12
 
@@ -30,7 +30,7 @@ function getVMRuntimeStat(item: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

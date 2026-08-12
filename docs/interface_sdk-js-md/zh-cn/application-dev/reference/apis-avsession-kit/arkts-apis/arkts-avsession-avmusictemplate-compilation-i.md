@@ -1,8 +1,8 @@
 # Compilation
 
-合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
 
-**继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
+**继承/实现关系：** Compilation extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
 
 **起始版本：** 23
 

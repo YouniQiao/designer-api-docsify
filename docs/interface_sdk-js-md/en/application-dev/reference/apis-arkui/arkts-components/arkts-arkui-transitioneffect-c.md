@@ -42,7 +42,7 @@ Animation settings.
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Current animation effect. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Current animation effect. |
 
 ## asymmetric
 
@@ -73,14 +73,14 @@ Sets the asymmetric transition effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appear | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Yes | Transition effect for appearance.&lt;br&gt;If the **asymmetric** function is not used for **TransitionEffect**, the transition effect takes effect for both appearance and disappearance of the component. |
-| disappear | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Yes | Transition effect for disappearance.&lt;br&gt;If the **asymmetric** function is not used for **TransitionEffect**, the transition effect takes effect for both appearance and disappearance of the component. |
+| appear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Transition effect for appearance.&lt;br&gt;If the **asymmetric** function is not used for **TransitionEffect**, the transition effect takes effect for both appearance and disappearance of the component. |
+| disappear | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Transition effect for disappearance.&lt;br&gt;If the **asymmetric** function is not used for **TransitionEffect**, the transition effect takes effect for both appearance and disappearance of the component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"asymmetric"&gt; | Asymmetric transition effect for the current animation. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric"&gt; | Asymmetric transition effect for the current animation. |
 
 ## combine
 
@@ -108,13 +108,13 @@ Combination of transition effects.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionEffect | [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Yes | Combined transition effect. |
+| transitionEffect | [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Yes | Combined transition effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md) | Combined transition effect. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md) | Combined transition effect. |
 
 ## constructor
 
@@ -177,7 +177,7 @@ Sets the slide-in and slide-out effects for component transitions from the scree
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"move"&gt; | Current animation's slide-in and slide-out effects from the screen edges. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"move"&gt; | Current animation's slide-in and slide-out effects from the screen edges. |
 
 ## opacity
 
@@ -211,7 +211,7 @@ Sets the opacity for component transition.
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"opacity"&gt; | Opacity of component transition. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt; | Opacity of component transition. |
 
 ## rotate
 
@@ -245,7 +245,7 @@ Sets the rotation effect for component transitions.
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"rotate"&gt; | Rotation effect for the current animation. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"rotate"&gt; | Rotation effect for the current animation. |
 
 ## scale
 
@@ -279,7 +279,7 @@ Sets the scaling effect for component transitions.
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"scale"&gt; | Scaling effect for component transitions. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"scale"&gt; | Scaling effect for component transitions. |
 
 ## translate
 
@@ -307,13 +307,13 @@ Sets the translation effect for component transitions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes | Translation effect for component transitions, specifying the start point of insertion and the end point of deletion.&lt;br&gt;-**x**: distance to translate along the x-axis.&lt;br&gt;-**y**: distance to translate along the y-axis.&lt;br&gt;-**z**: distance to translate along the z-axis. |
+| options | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation effect for component transitions, specifying the start point of insertion and the end point of deletion.&lt;br&gt;-**x**: distance to translate along the x-axis.&lt;br&gt;-**y**: distance to translate along the y-axis.&lt;br&gt;-**z**: distance to translate along the z-axis. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"translate"&gt; | Translation effect for the current animation. |
+| [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"translate"&gt; | Translation effect for the current animation. |
 
 ## IDENTITY
 
@@ -323,7 +323,7 @@ static readonly IDENTITY: TransitionEffect<"identity">
 
 Disables the transition effect.
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"identity"&gt;
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"identity"&gt;
 
 **Since:** 10
 
@@ -347,7 +347,7 @@ static readonly OPACITY: TransitionEffect<"opacity">
 
 Applies a transition effect with the opacity changing from 0 to 1 when the component appears and from 1 to 0 when the component disappears. This is equivalent to **TransitionEffect.opacity(0)**.
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"opacity"&gt;
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"opacity"&gt;
 
 **Since:** 10
 
@@ -378,7 +378,7 @@ static readonly SLIDE: TransitionEffect<
 Applies a transition effect of sliding in from the start edge when the component appears and sliding out from the end edge when the component disappears. This means sliding in from the left edge and sliding out from the right edge for left-to-right scripts, and sliding in from the right edge and sliding out from the left edge for right-to-left scripts. This is equivalent to   
 **TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move(TransitionEdge.END))**.
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", TransitionEdge&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", [TransitionEdge](arkts-arkui-transitionedge-e.md)&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
 
 **Since:** 10
 
@@ -402,7 +402,7 @@ static readonly SLIDE_SWITCH: TransitionEffect<"slideSwitch">
 
 Applies a transition effect of sliding in from the right with first scaling down and then scaling up when the component appears and sliding out from the left with first scaling down and then scaling up when the component disappears. This transition effect comes with its own animation parameters, which can also be overridden. The default animation duration is 600 milliseconds, with a specified animation curve of cubicBezierCurve(0.24, 0.0, 0.50, 1.0) and a minimum scale factor of 0.8.
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)&lt;"slideSwitch"&gt;
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"slideSwitch"&gt;
 
 **Since:** 10
 

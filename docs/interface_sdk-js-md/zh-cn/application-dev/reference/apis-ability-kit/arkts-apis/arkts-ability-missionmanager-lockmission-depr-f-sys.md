@@ -14,7 +14,7 @@ function lockMission(missionId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#lockMission
+**替代接口：** [lockMission](ohos.app.ability.missionManager/missionManager#lockMission)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -68,7 +68,7 @@ function lockMission(missionId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#lockMission
+**替代接口：** [lockMission](ohos.app.ability.missionManager/missionManager#lockMission)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

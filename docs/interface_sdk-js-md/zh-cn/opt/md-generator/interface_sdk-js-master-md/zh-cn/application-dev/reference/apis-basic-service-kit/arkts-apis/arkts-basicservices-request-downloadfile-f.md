@@ -28,17 +28,17 @@ function downloadFile(context: BaseContext, config: DownloadConfig, callback: As
 | --- | --- | --- |
 | context | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;DownloadTask&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) |
-| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [13400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) |
+| [13400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## 示例
 
@@ -98,17 +98,17 @@ function downloadFile(context: BaseContext, config: DownloadConfig): Promise<Dow
 
 | 类型 |
 | --- |
-| Promise&lt;DownloadTask&gt; |
+| Promise&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) |
-| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [13400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400001-文件操作异常) |
+| [13400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## 示例
 

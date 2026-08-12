@@ -18,7 +18,7 @@ placement?: ToolBarItemPlacement
 
 设置工具栏项的放置位置。默认值: ToolBarItemPlacement.TOP_BAR_LEADING
 
-**类型：** [ToolBarItemPlacement](../arkts-components/arkts-arkui-toolbaritemplacement-e.md)
+**类型：** [ToolBarItemPlacement](arkts-arkui-toolbar-toolbaritemplacement-e.md)
 
 **起始版本：** 23
 

@@ -206,7 +206,7 @@ static setKeepScreenOn(options?: SetKeepScreenOnOptions): void
 
 **废弃版本：** 7
 
-**替代接口：** @ohos.window:Window.setWindowKeepScreenOn
+**替代接口：** [setWindowKeepScreenOn](@ohos.window:Window.setWindowKeepScreenOn)
 
 <!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void--><!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void-End-->
 
@@ -388,7 +388,7 @@ static setValue(options?: SetBrightnessOptions): void
 
 **废弃版本：** 7
 
-**替代接口：** [@ohos.brightness:brightness.setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue)
+**替代接口：** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setValue)
 
 <!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void--><!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void-End-->
 

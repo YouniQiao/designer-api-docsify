@@ -76,7 +76,7 @@ fileConflictOptions?: FileConflictOptions
 
 定义文件拷贝冲突时的选项，默认为OVERWRITE。
 
-**类型：** [FileConflictOptions](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-fileconflictoptions-e.md)
+**类型：** FileConflictOptions
 
 **起始版本：** 15
 
@@ -96,7 +96,7 @@ progressIndicator: ProgressIndicator
 
 定义进度条指示选项，可选择是否采用系统默认进度显示。
 
-**类型：** [ProgressIndicator](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressindicator-e.md)
+**类型：** ProgressIndicator
 
 **起始版本：** 15
 

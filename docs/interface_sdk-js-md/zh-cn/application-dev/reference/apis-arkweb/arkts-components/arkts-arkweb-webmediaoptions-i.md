@@ -38,7 +38,7 @@ audioSessionType?: AudioSessionType
 
 音频会话的类型
 
-**类型：** [AudioSessionType](../arkts-apis/arkts-arkweb-web-audiosessiontype-e.md)
+**类型：** [AudioSessionType](arkts-arkweb-audiosessiontype-e.md)
 
 **起始版本：** 20
 

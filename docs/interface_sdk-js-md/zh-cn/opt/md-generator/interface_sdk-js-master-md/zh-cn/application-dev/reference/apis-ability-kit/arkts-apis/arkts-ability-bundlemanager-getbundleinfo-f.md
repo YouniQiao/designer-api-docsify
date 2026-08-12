@@ -30,10 +30,10 @@ function getBundleInfo(bundleName: string, bundleFlags: number, callback: AsyncC
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-指定应用被禁用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -68,7 +68,7 @@ try {
 function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-根据给定的bundleName、bundleFlags和userId获取[BundleInfo](arkts-bundleinfo.md)。使用callback异步回调。
+根据给定的bundleName、bundleFlags和userId获取[BundleInfo](bundleManager/BundleInfo)。使用callback异步回调。
 
 获取调用方自身信息时不需要权限。
 
@@ -93,11 +93,11 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId: number, 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-指定应用被禁用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -182,17 +182,17 @@ function getBundleInfo(bundleName: string, bundleFlags: number, userId?: number)
 
 | 类型 |
 | --- |
-| Promise&lt;BundleInfo&gt; |
+| Promise & lt;BundleInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-指定应用被禁用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

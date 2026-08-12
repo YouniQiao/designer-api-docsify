@@ -13,7 +13,7 @@ Describes an **Event** object, including the event title, start time, and end ti
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## attendee
@@ -83,9 +83,9 @@ id?: number
 ```
 
 Event ID. This parameter does not need to be set in   
-[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent) or   
-[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents).This is an auto-increment field of the database, which has no default value.When [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteevent) or   
-[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteevents) is called to delete an event, the value must be an integer. If an invalid value is passed, an error will be reported. When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
+[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent) or   
+[addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents).This is an auto-increment field of the database, which has no default value.When [deleteEvent()](arkts-calendar-calendarmanager-calendar-i.md#deleteEvent) or   
+[deleteEvents()](arkts-calendar-calendarmanager-calendar-i.md#deleteEvents) is called to delete an event, the value must be an integer. If an invalid value is passed, an error will be reported. When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
 
 **Type:** number
 
@@ -126,7 +126,7 @@ instanceEndTime?: number
 ```
 
 End time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when  
-[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) is called to create an event or  
+[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents) is called to create an event or  
 [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;)is called to query an event.
 
 **Type:** number
@@ -148,7 +148,7 @@ instanceStartTime?: number
 ```
 
 Start time of an event instance, which must be a 13-digit timestamp. The default value is undefined. This parameter is not required when  
-[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addevent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addevents) is called to create an event or  
+[addEvent()](arkts-calendar-calendarmanager-calendar-i.md#addEvent)or [addEvents()](arkts-calendar-calendarmanager-calendar-i.md#addEvents) is called to create an event or  
 [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;)is called to query an event.
 
 **Type:** number
@@ -211,7 +211,7 @@ location?: Location
 
 Event location. If this parameter is not set, the default null value is used.
 
-**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**Type:** Location
 
 **Since:** 10
 
@@ -310,7 +310,7 @@ timeZone?: string
 ```
 
 Time zone of the event, with a maximum of 5,000 characters. If this parameter is not specified or set to an invalid value, the current time zone is used by default. If a different time zone is required, enter the corresponding time zone. You can call   
-[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md/arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)to obtain the current system time zone.
+[systemDateTime.getTimezone()](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone)to obtain the current system time zone.
 
 **Type:** string
 
@@ -352,7 +352,7 @@ type: EventType
 
 Event type.When [getEvents()](calendarManager.Calendar.getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise&lt;Event[]&gt;) is called to query events, this field is queried by default.
 
-**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**Type:** EventType
 
 **Since:** 10
 

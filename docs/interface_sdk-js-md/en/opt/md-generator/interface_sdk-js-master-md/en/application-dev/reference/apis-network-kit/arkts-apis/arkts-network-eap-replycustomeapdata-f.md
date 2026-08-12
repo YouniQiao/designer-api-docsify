@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## replyCustomEapData
@@ -33,8 +33,8 @@ send Customized eap packets to system
 
 | Error Code ID |
 | --- |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
-| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) |
-| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) |
+| [33200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [33200099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200099-internal-program-error) |
+| [33200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200004-invalid-eap-result-value) |
+| [33200005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200005-invalid-data-length) |

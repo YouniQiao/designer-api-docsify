@@ -6,7 +6,7 @@ Performs date and time formatting.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+**Substitutes:** [DateTimeFormat]]([Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat))
 
 <!--Device-intl-export class DateTimeFormat--><!--Device-intl-export class DateTimeFormat-End-->
 
@@ -15,7 +15,7 @@ Performs date and time formatting.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ Creates a **DateTimeOptions** object for the specified locale.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
+**Substitutes:** [constructor]]([Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,7 +61,7 @@ Creates a **DateTimeOptions** object for the specified locale.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat)
+**Substitutes:** [constructor]]([Intl.DateTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,7 +75,7 @@ Creates a **DateTimeOptions** object for the specified locale.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes |
+| locale | string \| Array & lt;string & gt; | Yes |
 | options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | No |
 
 ## Examples
@@ -102,7 +102,7 @@ Formats the date and time.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format)
+**Substitutes:** [format]]([Intl.DateTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -151,7 +151,7 @@ Formats date and time ranges.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormat.formatRange](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange)
+**Substitutes:** [formatRange]]([Intl.DateTimeFormat.formatRange](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -198,7 +198,7 @@ Obtains the options for creating a **DateTimeOptions** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+**Substitutes:** [resolvedOptions]]([Intl.DateTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -20,7 +20,7 @@ color?: ResourceColor
 
 默认值：跟随主题。默认主题时，浅色模式显示白色，深色模式显示黑色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 23
 

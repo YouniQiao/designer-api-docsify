@@ -20,7 +20,7 @@ main: string | Resource | undefined
 
 取值为undefined时，不显示主标题。
 
-**类型：** string \| Resource \| undefined
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ sub: string | Resource | undefined
 
 取值为undefined时，不显示副标题。
 
-**类型：** string \| Resource \| undefined
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined
 
 **起始版本：** 23
 

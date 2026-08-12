@@ -49,16 +49,16 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| spanType | [Optional](arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 | 选择菜单的类型。默认值为 TextSpanType.TEXT |
-| content | [Optional](arkts-arkui-optional-t.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 | 指示选择菜单的内容 |
-| responseType | [Optional](arkts-arkui-optional-t.md)&lt;[TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md)&gt; | 是 | 选择菜单响应类型。默认值为 TextResponseType.LONG_press |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;SelectionContainerMenuOptions&gt; | 否 | 指示选择菜单的选项 |
+| spanType | Optional&lt;TextSpanType&gt; | 是 | 选择菜单的类型。默认值为 TextSpanType.TEXT |
+| content | Optional&lt;CustomBuilder&gt; | 是 | 指示选择菜单的内容 |
+| responseType | Optional&lt;TextResponseType&gt; | 是 | 选择菜单响应类型。默认值为 TextResponseType.LONG_press |
+| options | Optional&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 | 指示选择菜单的选项 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | 返回SelectionContainerAttribute的实例。 |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | 返回SelectionContainerAttribute的实例。 |
 
 ## caretColor
 
@@ -72,7 +72,7 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中文本手柄颜色。
 > 
-> - 在跨节点场景中Text子组件[caretColor](arkts-arkui-text-textattribute-i.md#caretcolor)设置无效，始终使用SelectionContainer的配置。
+> - 在跨节点场景中Text子组件[caretColor](TextAttribute#caretColor)设置无效，始终使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -90,13 +90,13 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | 是 | 手柄颜色。 |
+| color | Optional&lt;ResourceColor&gt; | 是 | 手柄颜色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## copyOption
 
@@ -108,7 +108,7 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 > **说明：**
 > 
-> Text子组件已显式设置[copyOption](arkts-arkui-text-textattribute-i.md#copyoption)时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
+> Text子组件已显式设置[copyOption](TextAttribute#copyOption)时，优先使用Text子组件的配置；未设置时，使用SelectionContainer的配置。
 
 **起始版本：** 26.0.0
 
@@ -126,13 +126,13 @@ copyOption(value: Optional<CopyOptions>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Optional](arkts-arkui-optional-t.md)&lt;[CopyOptions](arkts-arkui-copyoptions-e.md)&gt; | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
+| value | Optional&lt;CopyOptions&gt; | 是 | 复制粘贴配置项，用于设置文本的可复制范围。具体说明请参考CopyOptions枚举。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## editMenuOptions
 
@@ -144,7 +144,7 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 > **说明：**
 > 
-> 当同时为当前场景设置了[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#bindselectionmenu)和editMenuOptions时，优先使用
+> 当同时为当前场景设置了[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindSelectionMenu)和editMenuOptions时，优先使用
 > bindSelectionMenu，editMenuOptions不生效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩
 > 展项，触发条件不变。建议根据自定义程度需求选择。
 
@@ -164,13 +164,13 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [Optional](arkts-arkui-optional-t.md)&lt;SelectionContainerEditMenuOptions&gt; | 是 | 自定义编辑菜单配置。 |
+| editMenu | Optional&lt;[SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | 是 | 自定义编辑菜单配置。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## enableHapticFeedback
 
@@ -198,13 +198,13 @@ enableHapticFeedback(isEnabled: Optional<boolean>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启触控反馈。 &lt;br&gt;true表示开启触控反馈，false表示不开启触控反馈。 |
+| isEnabled | Optional&lt;boolean&gt; | 是 | 是否开启触控反馈。 &lt;br&gt;true表示开启触控反馈，false表示不开启触控反馈。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onCopy
 
@@ -216,9 +216,9 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#textjoinstyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textJoinStyle)配置决定。
 > 
-> - 仅当容器级[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onwillcopy)返回true时，该回调才会触发。
+> - 仅当容器级[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onWillCopy)返回true时，该回调才会触发。
 
 **起始版本：** 26.0.0
 
@@ -236,13 +236,13 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;string&gt;&gt; | 是 | 复制回调。 |
+| callback | Optional&lt;Callback&lt;string&gt;&gt; | 是 | 复制回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onTextSelectionChange
 
@@ -276,13 +276,13 @@ SelectionContainer中选中文本发生变化时触发该回调。使用callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;Array&lt;string&gt;&gt;&gt; | 是 | 选中文本变化回调。 |
+| callback | Optional&lt;Callback&lt;Array&lt;string&gt;&gt;&gt; | 是 | 选中文本变化回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onWillCopy
 
@@ -294,9 +294,9 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#textjoinstyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#textJoinStyle)配置决定。
 > 
-> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#oncopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
+> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onCopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
 
 **起始版本：** 26.0.0
 
@@ -314,13 +314,13 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;Callback&lt;string, boolean&gt;&gt; | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
+| callback | Optional&lt;Callback&lt;string, boolean&gt;&gt; | 是 | 复制前检查回调，返回true表示允许复制，返回false表示不允许复制。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## selectedBackgroundColor
 
@@ -334,7 +334,7 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 > 
 > - 该属性在跨节点场景中用于各Text子组件选中区域的高亮颜色。
 > 
-> - Text子组件已显式设置[selectedBackgroundColor](arkts-arkui-text-textattribute-i.md#selectedbackgroundcolor)时，优先使用Text子组件的配置；未设置时，使用
+> - Text子组件已显式设置[selectedBackgroundColor](TextAttribute#selectedBackgroundColor)时，优先使用Text子组件的配置；未设置时，使用
 > SelectionContainer的配置。
 
 **起始版本：** 26.0.0
@@ -353,13 +353,13 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | 是 | 选中文本底板颜色。 |
+| color | Optional&lt;ResourceColor&gt; | 是 | 选中文本底板颜色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## textJoinStyle
 
@@ -371,9 +371,9 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 > **说明：**
 > 
-> - 该配置会影响[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onwillcopy)、
-> [onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#oncopy)、
-> [bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#bindselectionmenu)相关回调中返回的文本内容。
+> - 该配置会影响[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onWillCopy)、
+> [onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#onCopy)、
+> [bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md#bindSelectionMenu)相关回调中返回的文本内容。
 > 
 > - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置
 > 为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
@@ -394,11 +394,11 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;SelectionContainerTextJoinStyle&gt; | 是 | 聚合文本拼接方式。 |
+| style | Optional&lt;[SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | 是 | 聚合文本拼接方式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
 

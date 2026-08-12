@@ -80,7 +80,7 @@ barWidth?: FloatingTabBarWidth
 
 The bar width of the tab width at different breakpoints.
 
-**Type:** [FloatingTabBarWidth](../arkts-components/arkts-arkui-floatingtabbarwidth-i.md)
+**Type:** [FloatingTabBarWidth](arkts-arkui-tabs-floatingtabbarwidth-i.md)
 
 **Since:** 26.0.0
 

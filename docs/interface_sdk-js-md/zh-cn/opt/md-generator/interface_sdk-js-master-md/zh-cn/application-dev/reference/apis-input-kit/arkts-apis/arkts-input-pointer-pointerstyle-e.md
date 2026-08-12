@@ -753,7 +753,7 @@ DEVELOPER_DEFINED_ICON = -100
 ```
 
 自定义光标，开发者可使用  
-[setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setcustomcursor)设置自定义光标，不支持使用[setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setpointerstyle)直接设置。
+[setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setCustomCursor-1)设置自定义光标，不支持使用[setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setPointerStyle-1)直接设置。
 
 **起始版本：** 22
 

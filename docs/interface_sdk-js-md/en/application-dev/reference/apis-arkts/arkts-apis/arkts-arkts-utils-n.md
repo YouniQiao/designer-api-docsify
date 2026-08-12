@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## Summary

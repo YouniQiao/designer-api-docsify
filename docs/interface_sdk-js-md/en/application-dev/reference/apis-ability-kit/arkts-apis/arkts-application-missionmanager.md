@@ -8,7 +8,7 @@ The missionManager module provides APIs to lock, unlock, and clear missions, and
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager
+**Substitutes:** [missionManager/missionManager](ohos.app.ability.missionManager/missionManager)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

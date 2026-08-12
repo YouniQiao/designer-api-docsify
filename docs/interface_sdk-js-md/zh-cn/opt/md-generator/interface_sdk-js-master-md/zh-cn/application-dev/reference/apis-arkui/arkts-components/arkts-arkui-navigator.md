@@ -20,7 +20,7 @@ Navigator(value?: { target: string; type?: NavigationType })
 
 **废弃版本：** 13
 
-**替代接口：** <!--SUBSTITUTE_API-->NavPathInfo<!--/SUBSTITUTE_API-->
+**替代接口：** [NavPathInfo](arkts-arkui-navpathinfo-c.md#NavPathInfo)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -48,7 +48,7 @@ NavigationAttribute为Navigation组件的属性。
 
 **废弃版本：** 13
 
-**替代接口：** <!--SUBSTITUTE_API-->NavigationAttribute<!--/SUBSTITUTE_API-->
+**替代接口：** [NavigationAttribute](arkts-arkui-navigation-attribute.md#NavigationAttribute)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

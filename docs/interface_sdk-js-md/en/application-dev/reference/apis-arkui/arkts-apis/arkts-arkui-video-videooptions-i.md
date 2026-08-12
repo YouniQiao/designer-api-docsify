@@ -18,7 +18,7 @@ controller?: VideoController
 
 controller of video.
 
-**Type:** [VideoController](../arkts-components/arkts-arkui-videocontroller-c.md)
+**Type:** [VideoController](arkts-arkui-video-videocontroller-c.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ controllerAsync?: VideoControllerAsync
 
 controllerAsync of video.
 
-**Type:** [VideoControllerAsync](../arkts-components/arkts-arkui-videocontrollerasync-c.md)
+**Type:** [VideoControllerAsync](arkts-arkui-video-videocontrollerasync-c.md)
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ currentProgressRate?: double | string | PlaybackSpeed
 
 playback rate of video.
 
-**Type:** double \| string \| PlaybackSpeed
+**Type:** double \| string \| [PlaybackSpeed](arkts-arkui-video-playbackspeed-e.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ imageAIOptions?: ImageAIOptions
 
 image ai options of video.
 
-**Type:** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
+**Type:** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ posterOptions?: PosterOptions
 
 poster options of video.
 
-**Type:** [PosterOptions](../arkts-components/arkts-arkui-posteroptions-i.md)
+**Type:** [PosterOptions](arkts-arkui-video-posteroptions-i.md)
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ previewUri?: string | PixelMap | Resource
 
 preview uri of video.
 
-**Type:** string \| PixelMap \| Resource
+**Type:** string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -138,7 +138,7 @@ src?: string | Resource
 
 src of video.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

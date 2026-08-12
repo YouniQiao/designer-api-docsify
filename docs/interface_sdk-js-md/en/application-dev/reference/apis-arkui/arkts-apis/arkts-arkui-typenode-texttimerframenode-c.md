@@ -34,11 +34,11 @@ Initialize TextTimer FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextTimerOptions](../arkts-components/arkts-arkui-texttimeroptions-i.md) | No |  |
+| options | TextTimerOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextTimerAttribute](../arkts-components/arkts-arkui-texttimer-attribute.md) |  |
+| TextTimerAttribute |  |
 

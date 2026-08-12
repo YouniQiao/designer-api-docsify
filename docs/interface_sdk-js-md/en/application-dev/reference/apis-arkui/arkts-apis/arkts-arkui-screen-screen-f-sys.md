@@ -28,11 +28,11 @@ Defines Screen Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | screenId | long | Yes | screenId |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScreenAttribute](../arkts-components/arkts-arkui-screen-attribute.md) |  |
+| [ScreenAttribute](arkts-arkui-screen-screenattribute-i-sys.md) |  |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from 'kits/@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## requestAutoSave
@@ -37,8 +37,8 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Get instance id failed; &lt;br&gt;2. Parse instance id failed; 3. The second parameter is not of type callback. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Get instance id failed; &lt;br&gt;2. Parse instance id failed; 3. The second parameter is not of type callback. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -149,12 +149,12 @@ Trigger an auto save request.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Indicates the ui context where the save operation will be performed. |
-| request | [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) | Yes | Indicates the struct of automatic save request. |
+| request | SaveRequest | Yes | Indicates the struct of automatic save request. |
 | callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No | Indicates the callback that used to receive the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 

@@ -15,7 +15,7 @@ Defines the lazy column layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
 ## alignItems
@@ -42,7 +42,7 @@ Sets the horizontal alignment of the row content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. &lt;br&gt;Default value HorizontalAlign.Center. |
+| value | [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. &lt;br&gt;Default value HorizontalAlign.Center. |
 
 **Return value:**
 
@@ -74,7 +74,7 @@ Sets the footer of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function &lt;br&gt;Passing undefined will remove the footer. |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function &lt;br&gt;Passing undefined will remove the footer. |
 
 **Return value:**
 
@@ -106,7 +106,7 @@ Sets the header of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function &lt;br&gt;Passing undefined will remove the header. |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function &lt;br&gt;Passing undefined will remove the header. |
 
 **Return value:**
 
@@ -138,7 +138,7 @@ Triggered when the index of child components in the visible area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 
@@ -202,7 +202,7 @@ Sets sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
+| sticky | [StickyStyle](arkts-arkui-list-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 

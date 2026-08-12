@@ -2,7 +2,7 @@
 
 Parameters of the date picker dialog box.
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md#DatePickerOptions)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ alignment?: DialogAlignment
 
 Alignment mode of the dialog box in the vertical direction.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Default:** DialogAlignment.Default
 
@@ -194,7 +194,7 @@ Whether to display a leading zero for the hours and minutes.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Currently only the configuration of the hour and minute parameters is supported.&lt;/p&gt;
 
-**Type:** [DateTimeOptions](../arkts-components/arkts-arkui-datetimeoptions-t.md)
+**Type:** DateTimeOptions
 
 **Default:** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
@@ -348,7 +348,7 @@ lunarSwitchStyle?: LunarSwitchStyle
 
 Style of the lunar calendar switch.
 
-**Type:** [LunarSwitchStyle](../arkts-components/arkts-arkui-lunarswitchstyle-i.md)
+**Type:** [LunarSwitchStyle](arkts-arkui-datepicker-lunarswitchstyle-i.md)
 
 **Default:** { selectedColor: $r('sys.color.ohos_id_color_text_primary_actived'), <br>unselectedColor: $r('sys.color.ohos_id_color_switch_outline_off'), strokeColor: Color.White }.
 
@@ -392,7 +392,7 @@ offset?: Offset
 
 Offset of the dialog box based on the alignment settings.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Default:** { dx: 0 , dy: 0 }
 
@@ -588,7 +588,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # Vector
 
-Vector是一种线性数据结构，底层基于数组实现，解决了需要动态扩容、高效随机访问的数据存储问题。当Vector的内存用尽时，会自动分配更大的连续内存区，将原先的元素复制到新的内存区，并释放旧的内存区。使用Vector能够高效快速地访问元素，其2倍扩容策略减少了频繁的内存重分配，同时丰富的操作接口提供了更灵活的数据管理能力。Vector和[ArrayList](arkts-util-arraylist.md)相似，都是基于数组实现，但Vector提供了更多操作数组的接口。它们都可以动态调整容量，但Vector每次扩容增加1倍，ArrayList只扩容0.5倍。  
+Vector是一种线性数据结构，底层基于数组实现，解决了需要动态扩容、高效随机访问的数据存储问题。当Vector的内存用尽时，会自动分配更大的连续内存区，将原先的元素复制到新的内存区，并释放旧的内存区。使用Vector能够高效快速地访问元素，其2倍扩容策略减少了频繁的内存重分配，同时丰富的操作接口提供了更灵活的数据管理能力。Vector和[ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList)相似，都是基于数组实现，但Vector提供了更多操作数组的接口。它们都可以动态调整容量，但Vector每次扩容增加1倍，ArrayList只扩容0.5倍。  
 **推荐使用场景：** 当需要频繁按索引随机访问元素且数据量较大时，推荐使用Vector来存取数据。文档中使用了泛型，涉及以下泛型标记符：
 
 - T：Type，类
@@ -8,13 +8,13 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 > **说明：**
 > 
 > - 此模块提供的接口从API version 9开始废弃。建议使用
-> [@ohos.util.ArrayList](arkts-util-arraylist.md)。
+> [@ohos.util.ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ArrayList
+**替代接口：** [ArrayList](arkts-arkts-util-arraylist-arraylist-c.md#ArrayList)
 
 <!--Device-unnamed-declare class Vector<T>--><!--Device-unnamed-declare class Vector<T>-End-->
 
@@ -40,7 +40,7 @@ Vector是一种线性数据结构，底层基于数组实现，解决了需要�
 
 | 类型 |
 | --- |
-| IterableIterator&lt;T&gt; |
+| IterableIterator & lt;T & gt; |
 
 ## 示例
 
@@ -218,7 +218,7 @@ convertToArray(): Array<T>
 
 | 类型 |
 | --- |
-| Array&lt;T&gt; |
+| Array & lt;T & gt; |
 
 ## 示例
 
@@ -251,7 +251,7 @@ copyToArray(array: Array<T>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| array | Array&lt;T&gt; | 是 |
+| array | Array & lt;T & gt; | 是 |
 
 ## forEach
 
@@ -273,7 +273,7 @@ forEach(callbackFn: (value: T, index?: number, vector?: Vector<T>) => void, this
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; void | 是 |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; void | 是 |
 | thisArg | Object | 否 |
 
 ## 示例
@@ -875,7 +875,7 @@ replaceAllElements(callbackFn: (value: T, index?: number, vector?: Vector<T>) =>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value: T, index?: number, vector?: Vector&lt;T&gt;) =&gt; T | 是 |
+| callbackFn | (value: T, index?: number, vector?: Vector & lt;T & gt;) = & gt; T | 是 |
 | thisArg | Object | 否 |
 
 ## 示例
@@ -977,7 +977,7 @@ sort(comparator?: (firstValue: T, secondValue: T) => number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| comparator | (firstValue: T, secondValue: T) =&gt; number | 否 |
+| comparator | (firstValue: T, secondValue: T) = & gt; number | 否 |
 
 ## 示例
 

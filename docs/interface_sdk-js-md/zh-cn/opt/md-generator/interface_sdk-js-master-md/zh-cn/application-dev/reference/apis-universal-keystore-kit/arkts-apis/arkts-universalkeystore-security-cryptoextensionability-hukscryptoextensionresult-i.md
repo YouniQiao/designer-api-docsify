@@ -32,7 +32,7 @@ certs?: Array<HuksCryptoExtensionCertInfo>
 
 /**证书。
 
-**类型：** Array&lt;HuksCryptoExtensionCertInfo&gt;
+**类型：** Array&lt;[HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md)&gt;
 
 **起始版本：** 22
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from 'kits/@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## getAdmins
@@ -32,7 +32,7 @@ Queries all device administrator applications of the current user. This API uses
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

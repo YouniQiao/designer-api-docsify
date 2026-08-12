@@ -8,7 +8,7 @@ Circular fence information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Geofence
+**Substitutes:** [Geofence](ohos.geoLocationManager/geoLocationManager.Geofence)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -19,7 +19,7 @@ Circular fence information.
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## expiration
@@ -36,7 +36,7 @@ expiration: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Geofence#expiration
+**Substitutes:** [expiration](ohos.geoLocationManager/geoLocationManager.Geofence#expiration)
 
 <!--Device-Geofence-expiration: number--><!--Device-Geofence-expiration: number-End-->
 
@@ -56,7 +56,7 @@ latitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Geofence#latitude
+**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.Geofence#latitude)
 
 <!--Device-Geofence-latitude: number--><!--Device-Geofence-latitude: number-End-->
 
@@ -76,7 +76,7 @@ longitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Geofence#longitude
+**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.Geofence#longitude)
 
 <!--Device-Geofence-longitude: number--><!--Device-Geofence-longitude: number-End-->
 
@@ -96,7 +96,7 @@ radius: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Geofence#radius
+**Substitutes:** [radius](ohos.geoLocationManager/geoLocationManager.Geofence#radius)
 
 <!--Device-Geofence-radius: number--><!--Device-Geofence-radius: number-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## isAppUid
@@ -18,7 +18,7 @@ Checks whether a UID belongs to this application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [process.ProcessManager.isAppUid](arkts-arkts-process-processmanager-c.md#isappuid)
+**Substitutes:** [isAppUid](arkts-arkts-process-processmanager-c.md#isAppUid)
 
 <!--Device-process-function isAppUid(v: number): boolean--><!--Device-process-function isAppUid(v: number): boolean-End-->
 

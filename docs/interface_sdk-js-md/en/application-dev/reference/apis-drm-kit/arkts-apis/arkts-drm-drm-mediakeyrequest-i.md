@@ -13,7 +13,7 @@ Provides the drm media key request definitions.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## data

@@ -2,10 +2,10 @@
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorder](arkts-media-media-n.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVRecorder](arkts-media-media-n.md#media)替代。
 
 音频录制管理类，用于录制音频媒体。在调用AudioRecorder的方法前，需要先通过  
-[createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) 构建一个AudioRecorder实例。
+[createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md#createAudioRecorder) 构建一个AudioRecorder实例。
 
 **起始版本：** 6
 
@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media](arkts-media-media-n.md)
+**替代接口：** [media](arkts-media-media-n.md#media)
 
 <!--Device-unnamed-interface AudioRecorder--><!--Device-unnamed-interface AudioRecorder-End-->
 
@@ -38,7 +38,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -70,7 +70,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -102,7 +102,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -134,7 +134,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -166,7 +166,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -198,7 +198,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -230,7 +230,7 @@ on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset'
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void--><!--Device-AudioRecorder-on(type: 'prepare' | 'start' | 'pause' | 'resume' | 'stop' | 'release' | 'reset', callback: () => void): void-End-->
 
@@ -262,7 +262,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVRecorder.on(type:)
 
 <!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -293,7 +293,7 @@ pause(): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.pause(callback:
+**替代接口：** [pause](@ohos.multimedia.media:media.AVRecorder.pause(callback:)
 
 <!--Device-AudioRecorder-pause(): void--><!--Device-AudioRecorder-pause(): void-End-->
 
@@ -318,7 +318,7 @@ prepare(config: AudioRecorderConfig): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.prepare(config:
+**替代接口：** [prepare](@ohos.multimedia.media:media.AVRecorder.prepare(config:)
 
 **需要权限：** ohos.permission.MICROPHONE
 
@@ -336,7 +336,7 @@ prepare(config: AudioRecorderConfig): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12+ |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied.<br>**适用版本：** 12+ |
 
 ## release
 
@@ -356,7 +356,7 @@ release(): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.release(callback:
+**替代接口：** [release](@ohos.multimedia.media:media.AVRecorder.release(callback:)
 
 <!--Device-AudioRecorder-release(): void--><!--Device-AudioRecorder-release(): void-End-->
 
@@ -382,7 +382,7 @@ reset(): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.reset(callback:
+**替代接口：** [reset](@ohos.multimedia.media:media.AVRecorder.reset(callback:)
 
 <!--Device-AudioRecorder-reset(): void--><!--Device-AudioRecorder-reset(): void-End-->
 
@@ -406,7 +406,7 @@ resume(): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.resume(callback:
+**替代接口：** [resume](@ohos.multimedia.media:media.AVRecorder.resume(callback:)
 
 <!--Device-AudioRecorder-resume(): void--><!--Device-AudioRecorder-resume(): void-End-->
 
@@ -430,7 +430,7 @@ start(): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.start(callback:
+**替代接口：** [start](@ohos.multimedia.media:media.AVRecorder.start(callback:)
 
 <!--Device-AudioRecorder-start(): void--><!--Device-AudioRecorder-start(): void-End-->
 
@@ -454,7 +454,7 @@ stop(): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVRecorder.stop(callback:
+**替代接口：** [stop](@ohos.multimedia.media:media.AVRecorder.stop(callback:)
 
 <!--Device-AudioRecorder-stop(): void--><!--Device-AudioRecorder-stop(): void-End-->
 

@@ -18,7 +18,7 @@ largeBarWidth?: Length
 
 The bar width of the large devices. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ mediumBarWidth?: Length
 
 The bar width of the medium devices. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ smallBarWidth?: Length
 
 The bar width of the small devices. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 

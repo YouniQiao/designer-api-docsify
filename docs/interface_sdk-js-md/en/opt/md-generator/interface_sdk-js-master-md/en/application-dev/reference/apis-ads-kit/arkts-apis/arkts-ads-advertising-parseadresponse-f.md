@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## parseAdResponse
@@ -33,10 +33,10 @@ Parses and processes the body of an ad response(this API is only open to some pr
 
 | Error Code ID |
 | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../errorcode-ads.md#801-ad-request-failure) |
-| [21800005](../errorcode-ads.md#21800005-ad-data-parsing-failure) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [21800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800005-ad-data-parsing-failure) |
+| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
 
 ## Examples
 

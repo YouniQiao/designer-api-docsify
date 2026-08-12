@@ -24,6 +24,12 @@ A constructor used to create a **XComponentController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Examples
+
+```TypeScript
+xcomponentController: XComponentController = new XComponentController();
+```
+
 ## getXComponentContext
 
 ```TypeScript
@@ -68,6 +74,30 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
+
+## Examples
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  myXComponentController: XComponentController = new XComponentController();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.myXComponentController
+      })
+        .onLoad(() => {
+          let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
+          console.info("XComponent SurfaceId: " + surfaceId);
+        })
+    }
+  }
+}
+```
 
 ## getXComponentSurfaceRect
 
@@ -115,7 +145,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;SurfaceRotationOptions&gt; |
+| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; |
 
 ## lockCanvas
 
@@ -123,7 +153,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 lockCanvas(): DrawingCanvas | null
 ```
 
-Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md/arkts-arkgraphics2d-drawing-canvas-c.md).
+Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#Canvas).
 
 **Since:** 20
 
@@ -312,7 +342,7 @@ Unit: px.
 
 **Deprecated since:** 12
 
-**Substitutes:** [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)
+**Substitutes:** [setXComponentSurfaceRect](#setXComponentSurfaceRect)
 
 <!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void-End-->
 
@@ -363,15 +393,15 @@ If this API is repeatedly called before the execution is complete, an error call
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
+| [110001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
+| [110003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
+| [110002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
 
 ## stopImageAnalyzer
 

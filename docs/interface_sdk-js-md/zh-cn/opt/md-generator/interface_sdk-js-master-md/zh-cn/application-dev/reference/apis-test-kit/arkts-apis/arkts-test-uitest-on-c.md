@@ -8,7 +8,7 @@ On提供的API能力具有以下几个特点：
 
 2、控件属性支持多种匹配模式。
 
-3、支持控件绝对定位，相对定位，可通过[ON.isBefore](arkts-test-uitest-on-c.md#isbefore)和[ON.isAfter](arkts-test-uitest-on-c.md#isafter)等API限定邻近控件特征进行辅助定位。
+3、支持控件绝对定位，相对定位，可通过[ON.isBefore](#isBefore)和[ON.isAfter](#isAfter)等API限定邻近控件特征进行辅助定位。
 
 On类提供的所有API均为同步接口，建议使用者通过静态构造器ON来链式创建On对象。
 
@@ -24,7 +24,7 @@ On类提供的所有API均为同步接口，建议使用者通过静态构造器
 afterComponent(com: Component): On
 ```
 
-要求目标组件位于由给定{@link Component}指定的另一个组件之后对象，用于相对于组件定位。
+要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md#Component)指定的另一个组件之后对象，用于相对于组件定位。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ afterComponent(com: Component): On
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | 是 |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 |
 
 **返回值：**
 
@@ -50,7 +50,7 @@ afterComponent(com: Component): On
 
 | 错误码ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -71,7 +71,7 @@ async function demo() {
 beforeComponent(com: Component): On
 ```
 
-要求目标组件位于由给定{@link Component}指定的另一个组件之前对象，用于相对于组件定位。
+要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md#Component)指定的另一个组件之前对象，用于相对于组件定位。
 
 **起始版本：** 26.0.0
 
@@ -85,7 +85,7 @@ beforeComponent(com: Component): On
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | 是 |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 |
 
 **返回值：**
 
@@ -97,7 +97,7 @@ beforeComponent(com: Component): On
 
 | 错误码ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -144,7 +144,7 @@ belongingDisplay(displayId: number): On
 
 | 错误码ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -187,7 +187,7 @@ checkable(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -230,7 +230,7 @@ checked(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -273,7 +273,7 @@ clickable(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -305,7 +305,7 @@ description(val: string, pattern?: MatchPattern): On
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | val | string | 是 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
@@ -317,7 +317,7 @@ description(val: string, pattern?: MatchPattern): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -360,7 +360,7 @@ enabled(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -403,7 +403,7 @@ focused(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -435,7 +435,7 @@ hint(val: string, pattern?: MatchPattern): On
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | val | string | 是 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
@@ -447,7 +447,7 @@ hint(val: string, pattern?: MatchPattern): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -490,7 +490,7 @@ id(id: string): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -522,7 +522,7 @@ id(id: string, pattern: MatchPattern): On
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [id](#id) | string | 是 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
 
 **返回值：**
 
@@ -534,7 +534,7 @@ id(id: string, pattern: MatchPattern): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -577,7 +577,7 @@ inWindow(bundleName: string): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -620,7 +620,7 @@ isAfter(on: On): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -664,7 +664,7 @@ isBefore(on: On): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -708,7 +708,7 @@ longClickable(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -731,7 +731,7 @@ originalText(text: string, pattern?: MatchPattern): On
 > 
 > 如果控件的无障碍属性
 > [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
-> 设置为'no'或'no-hide-descendants'，可以使用本接口指定目标控件的文本属性用于查找控件，使用[On.text()](arkts-test-uitest-on-c.md#text)接口不生效。
+> 设置为'no'或'no-hide-descendants'，可以使用本接口指定目标控件的文本属性用于查找控件，使用[On.text()](#text)接口不生效。
 
 **起始版本：** 20
 
@@ -746,7 +746,7 @@ originalText(text: string, pattern?: MatchPattern): On
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [text](#text) | string | 是 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
@@ -758,7 +758,7 @@ originalText(text: string, pattern?: MatchPattern): On
 
 | 错误码ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 
@@ -801,7 +801,7 @@ scrollable(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -844,7 +844,7 @@ selected(b?: boolean): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -867,7 +867,7 @@ text(txt: string, pattern?: MatchPattern): On
 > 
 > 如果控件的无障碍属性
 > [accessibilityLevel](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-accessibility.md#accessibilitylevel)
-> 设置为'no'或'no-hide-descendants'，无法使用本接口指定目标控件的文本属性用于查找控件，可以使用[On.originalText()](arkts-test-uitest-on-c.md#originaltext)接口实现。
+> 设置为'no'或'no-hide-descendants'，无法使用本接口指定目标控件的文本属性用于查找控件，可以使用[On.originalText()](#originalText)接口实现。
 
 **起始版本：** 9
 
@@ -882,7 +882,7 @@ text(txt: string, pattern?: MatchPattern): On
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | txt | string | 是 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 |
 
 **返回值：**
 
@@ -894,7 +894,7 @@ text(txt: string, pattern?: MatchPattern): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -937,7 +937,7 @@ type(tp: string): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -969,7 +969,7 @@ type(tp: string, pattern: MatchPattern): On
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | tp | string | 是 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 是 |
 
 **返回值：**
 
@@ -981,7 +981,7 @@ type(tp: string, pattern: MatchPattern): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1024,7 +1024,7 @@ within(on: On): On
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1042,7 +1042,7 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // 查找Scroller里面�
 withinComponent(com: Component): On
 ```
 
-要求目标组件位于由给定{@link Component}指定的另一个组件的内部对象，用于相对于组件定位。
+要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md#Component)指定的另一个组件的内部对象，用于相对于组件定位。
 
 **起始版本：** 26.0.0
 
@@ -1056,7 +1056,7 @@ withinComponent(com: Component): On
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | 是 |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 |
 
 **返回值：**
 
@@ -1068,7 +1068,7 @@ withinComponent(com: Component): On
 
 | 错误码ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) |
 
 ## 示例
 

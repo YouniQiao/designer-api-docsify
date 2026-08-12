@@ -86,7 +86,7 @@ statusList: Array<PermissionDecisionStatus>
 
 权限决策状态列表。
 
-**类型：** Array&lt;PermissionDecisionStatus&gt;
+**类型：** Array&lt;[PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md)&gt;
 
 **起始版本：** 26.0.0
 

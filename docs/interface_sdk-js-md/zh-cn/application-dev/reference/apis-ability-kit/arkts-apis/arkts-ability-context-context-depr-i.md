@@ -2,7 +2,7 @@
 
 Context模块提供了Ability或Application的上下文的基础能力，包括允许访问特定于应用程序的资源、请求和验证权限等。
 
-**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
+**继承/实现关系：** Context extends [BaseContext](BaseContext)
 
 **起始版本：** 6
 
@@ -178,7 +178,7 @@ getApplicationContext(): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 返回应用上下文信息。 |
+| [Context](arkts-ability-context-context-depr-i.md) | 返回应用上下文信息。 |
 
 ## getApplicationInfo
 
@@ -931,8 +931,8 @@ requestPermissionsFromUser(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissions | Array&lt;string&gt; | 是 | 指示要请求的权限列表。此参数不能为null。 |
-| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)的请求代码。 |
-| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | 是 | 回调函数，返回授权结果信息。 |
+| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md#PermissionRequestResult)的请求代码。 |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | 是 | 回调函数，返回授权结果信息。 |
 
 ## requestPermissionsFromUser
 
@@ -957,13 +957,13 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | permissions | Array&lt;string&gt; | 是 | 指示要请求的权限列表。此参数不能为null。 |
-| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)的请求代码。 |
+| requestCode | number | 是 | 指示要传递给[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md#PermissionRequestResult)的请求代码。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PermissionRequestResult&gt; | Promise对象，返回授权结果信息。 |
+| Promise&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | Promise对象，返回授权结果信息。 |
 
 ## setDisplayOrientation
 
@@ -1034,7 +1034,7 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.window:window.WindowStage.setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
+**替代接口：** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1063,7 +1063,7 @@ setShowOnLockScreen(show: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.window:window.WindowStage.setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
+**替代接口：** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1097,7 +1097,7 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.window:window.setWakeUpScreen
+**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1126,7 +1126,7 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.window:window.setWakeUpScreen
+**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

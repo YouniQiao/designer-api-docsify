@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## write
@@ -32,21 +32,21 @@ Writes event information to the event file. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 11200002 |
-| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
+| [11200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200003-environment-error) |
+| [11200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
 | 11200001 |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
-| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
-| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
-| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
+| [11200054](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
+| [11200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
+| [11200052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
+| [11200053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
 
 ## Examples
 
@@ -110,15 +110,15 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 11200002 |
-| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) |
-| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
+| [11200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200003-environment-error) |
+| [11200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
 | 11200001 |
-| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
-| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
-| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
-| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
+| [11200054](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
+| [11200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
+| [11200052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
+| [11200053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
 
 ## Examples
 

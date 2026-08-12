@@ -2,9 +2,9 @@
 
 Defines the configuration options of the time picker dialog box.
 
-Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md).
+Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions).
 
-**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
+**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)
 
 **Since:** 8
 
@@ -22,7 +22,7 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation mode for the dialog.
 
-**Type:** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
+**Type:** DistortionMode
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -46,7 +46,7 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edge light animation mode for the dialog.
 
-**Type:** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
+**Type:** EdgeLightMode
 
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 

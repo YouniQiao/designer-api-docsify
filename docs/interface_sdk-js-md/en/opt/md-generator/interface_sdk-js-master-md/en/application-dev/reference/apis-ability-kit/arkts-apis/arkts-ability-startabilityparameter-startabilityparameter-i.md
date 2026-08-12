@@ -1,7 +1,7 @@
 # StartAbilityParameter
 
 The module defines the parameters for starting an ability. The parameters can be used as input parameters in  
-[startAbility](arkts-ability-featureability-startability-f.md#startability)to start the specified ability.
+[startAbility](arkts-ability-featureability-startability-f.md#startAbility)to start the specified ability.
 
 **Since:** 6
 

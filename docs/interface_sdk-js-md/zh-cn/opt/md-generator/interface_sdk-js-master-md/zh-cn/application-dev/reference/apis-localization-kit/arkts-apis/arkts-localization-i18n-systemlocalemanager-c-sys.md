@@ -30,7 +30,7 @@ constructor()
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -60,22 +60,22 @@ getLanguageInfoArray(languages: Array<string>, options?: SortOptions): Array<Loc
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| languages | Array&lt;string&gt; | 是 |
+| [languages](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontdescriptor-i.md) | Array & lt;string & gt; | 是 |
 | options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;LocaleItem&gt; |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -116,22 +116,22 @@ getRegionInfoArray(regions: Array<string>, options?: SortOptions): Array<LocaleI
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| regions | Array&lt;string&gt; | 是 |
+| regions | Array & lt;string & gt; | 是 |
 | options | [SortOptions](arkts-localization-i18n-sortoptions-i-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;LocaleItem&gt; |
+| Array&lt;[LocaleItem](arkts-localization-i18n-localeitem-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [890001](../errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -172,13 +172,13 @@ static getTimeZoneCityItemArray(): Array<TimeZoneCityItem>
 
 | 类型 |
 | --- |
-| Array&lt;TimeZoneCityItem&gt; |
+| Array&lt;[TimeZoneCityItem](arkts-localization-i18n-timezonecityitem-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

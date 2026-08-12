@@ -76,7 +76,7 @@ mimeType?: string
 
 **废弃版本：** 18
 
-**替代接口：** [request.agent.FileSpec.contentType](arkts-basicservices-agent-filespec-i.md#contenttype)
+**替代接口：** [contentType](#contentType)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

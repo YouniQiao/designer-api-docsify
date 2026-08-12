@@ -25,8 +25,8 @@ function byteLength(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| string | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 编码格式（string参数为string类型时才有意义）。默认值：'utf8'。 |
+| string | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
+| encoding | BufferEncoding | 否 | 编码格式（string参数为string类型时才有意义）。默认值：'utf8'。 |
 
 **返回值：**
 
@@ -70,8 +70,8 @@ function byteLength(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| doc | string \| Buffer \| TypedArray \| DataView \| ArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 | 编码格式。默认值：'utf8'。 |
+| doc | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| TypedArray \| DataView \| ArrayBuffer | 是 | 要计算字节长度的字符串或其他数据对象。 |
+| encoding | BufferEncoding | 否 | 编码格式。默认值：'utf8'。 |
 
 **返回值：**
 

@@ -18,7 +18,7 @@ gesture?: RichEditorGesture
 
 行为触发回调。省略时，仅使用系统默认行为。
 
-**类型：** [RichEditorGesture](../arkts-components/arkts-arkui-richeditorgesture-i.md)
+**类型：** [RichEditorGesture](arkts-arkui-richeditor-richeditorgesture-i.md)
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ style?: RichEditorTextStyle
 
 文本Span样式信息。
 
-**类型：** [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md)
+**类型：** [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md)
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## getDeviceIds
@@ -17,13 +17,13 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) instead.
+> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimodalInput.inputDevice#getDeviceList
+**Substitutes:** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList)
 
 <!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void--><!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -74,13 +74,13 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getdevicelist) instead.
+> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimodalInput.inputDevice#getDeviceList
+**Substitutes:** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md#getDeviceList)
 
 <!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>--><!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>-End-->
 
@@ -90,7 +90,7 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 ## Examples
 

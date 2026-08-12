@@ -11,14 +11,14 @@ abort终止密钥操作。使用callback异步回调。
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.abortSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-abortsession-f.md#abortsession)
+> [huks.abortSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-abortsession-f.md#abortSession)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [huks.abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession)(handle:
+**替代接口：** [abortSession](huks.abortSession(handle:)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function abort(handle: number, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -30,7 +30,7 @@ abort终止密钥操作。使用callback异步回调。
 | --- | --- | --- |
 | handle | number | 是 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -138,13 +138,13 @@ abort终止密钥操作。使用Promise异步回调。
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.abortSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-abortsession-f.md#abortsession)替代。
+> [huks.abortSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-abortsession-f.md#abortSession-1)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [huks.abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession)(handle:
+**替代接口：** [abortSession](huks.abortSession(handle:)
 
 <!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function abort(handle: number, options: HuksOptions): Promise<HuksResult>-End-->
 
@@ -161,7 +161,7 @@ abort终止密钥操作。使用Promise异步回调。
 
 | 类型 |
 | --- |
-| Promise&lt;HuksResult&gt; |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |
 
 ## 示例
 

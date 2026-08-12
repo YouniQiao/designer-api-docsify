@@ -13,7 +13,7 @@ The **notificationSubscribe** module provides APIs for notification subscription
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## Summary

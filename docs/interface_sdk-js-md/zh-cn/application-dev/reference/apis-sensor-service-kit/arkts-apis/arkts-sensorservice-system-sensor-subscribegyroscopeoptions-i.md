@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#GYROSCOPE
+**替代接口：** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -30,7 +30,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -61,7 +61,7 @@ success: (data: GyroscopeResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -75,7 +75,7 @@ success: (data: GyroscopeResponse) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [GyroscopeResponse](arkts-sensorservice-sensor-gyroscoperesponse-i.md) | 是 |  |
+| data | [GyroscopeResponse](arkts-sensorservice-system-sensor-gyroscoperesponse-i.md) | 是 |  |
 
 ## interval
 
@@ -103,7 +103,7 @@ interval: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#Options.interval
+**替代接口：** [interval](ohos.sensor/sensor#Options.interval)
 
 **需要权限：** ohos.permission.GYROSCOPE
 

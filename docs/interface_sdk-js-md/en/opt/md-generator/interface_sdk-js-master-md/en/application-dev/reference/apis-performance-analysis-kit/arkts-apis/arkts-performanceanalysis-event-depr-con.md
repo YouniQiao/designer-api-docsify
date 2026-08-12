@@ -12,7 +12,7 @@ Distributed service event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event#DISTRIBUTED_SERVICE_START
+**Substitutes:** [DISTRIBUTED_SERVICE_START](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event#DISTRIBUTED_SERVICE_START)
 
 <!--Device-Event-const DISTRIBUTED_SERVICE_START: string--><!--Device-Event-const DISTRIBUTED_SERVICE_START: string-End-->
 
@@ -30,7 +30,7 @@ User login event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event#USER_LOGIN
+**Substitutes:** [USER_LOGIN](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event#USER_LOGIN)
 
 <!--Device-Event-const USER_LOGIN: string--><!--Device-Event-const USER_LOGIN: string-End-->
 
@@ -48,7 +48,7 @@ User logout event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event#USER_LOGOUT
+**Substitutes:** [USER_LOGOUT](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event#USER_LOGOUT)
 
 <!--Device-Event-const USER_LOGOUT: string--><!--Device-Event-const USER_LOGOUT: string-End-->
 

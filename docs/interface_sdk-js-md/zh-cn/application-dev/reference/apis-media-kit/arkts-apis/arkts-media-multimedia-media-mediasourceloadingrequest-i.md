@@ -120,7 +120,7 @@ respondHeader(uuid: long, header?: Record<string, string>, redirectUrl?: string)
 ```
 
 用于应用程序向播放器发送响应头信息，应在第一次调用  
-[respondData](media.MediaSourceLoadingRequest.respondData(uuid: number, offset: number, buffer: ArrayBuffer))方法之前调用。
+[respondData](#respondData)方法之前调用。
 
 **起始版本：** 18
 

@@ -18,13 +18,13 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; |
+| Promise&lt;Array&lt;[HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

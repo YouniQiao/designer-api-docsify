@@ -13,7 +13,7 @@ Describes the image decoding options.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## desiredAuxiliaryPictures
@@ -26,7 +26,7 @@ Auxiliary picture type. If no auxiliary picture type is specified or an empty ar
 
 To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
 
-**Type:** Array&lt;AuxiliaryPictureType&gt;
+**Type:** Array&lt;[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)&gt;
 
 **Since:** 13
 
@@ -44,7 +44,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Desired Pixel format, RGBA_8888\BGRA_8888\RGB_565\NV12\NV21 are supported.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 24
 
@@ -64,7 +64,7 @@ desiredSizeForMainPixelMap?: Size
 
 Desired size of the main pixel map. The value (0, 0) indicates that the pixels are decoded based on the original image size.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 24
 

@@ -20,7 +20,7 @@ Implements the shader effect. After a shader effect is set for a pen or brush, t
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createColorShader
@@ -53,7 +53,7 @@ Creates a **ShaderEffect** object with a single color.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createComposeShader
 
@@ -76,7 +76,7 @@ Creates a shader by blending two existing shaders in a certain way.
 | --- | --- | --- |
 | dstShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes |
 | srcShaderEffect | [ShaderEffect](arkts-arkgraphics2d-drawing-shadereffect-c.md) | Yes |
-| blendMode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | Yes |
+| blendMode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ Creates a shader by blending two existing shaders in a certain way.
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## createConicalGradient
 
@@ -114,10 +114,10 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 | startRadius | number | Yes |
 | endPt | common2D.Point | Yes |
 | endRadius | number | Yes |
-| colors | Array&lt;number&gt; | Yes |
+| colors | Array & lt;number & gt; | Yes |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| pos | Array&lt;number&gt; \| null | No |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| pos | Array & lt;number & gt; \ | null | No |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
 
 **Return value:**
 
@@ -129,7 +129,7 @@ Creates a **ShaderEffect** object that generates a conical gradient between two 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createImageShader
 
@@ -154,7 +154,7 @@ Creates a shader based on an image. You are advised not to use the function for 
 | tileX | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
 | tileY | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
 | samplingOptions | [SamplingOptions](arkts-arkgraphics2d-drawing-samplingoptions-c.md) | Yes |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
 
 **Return value:**
 
@@ -166,7 +166,7 @@ Creates a shader based on an image. You are advised not to use the function for 
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## createLinearGradient
 
@@ -189,10 +189,10 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 | --- | --- | --- |
 | startPt | common2D.Point | Yes |
 | endPt | common2D.Point | Yes |
-| colors | Array&lt;number&gt; | Yes |
+| colors | Array & lt;number & gt; | Yes |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| pos | Array&lt;number&gt; \| null | No |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| pos | Array & lt;number & gt; \ | null | No |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
 
 **Return value:**
 
@@ -204,7 +204,7 @@ Creates a **ShaderEffect** object that generates a linear gradient between two p
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createRadialGradient
 
@@ -227,10 +227,10 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 | --- | --- | --- |
 | centerPt | common2D.Point | Yes |
 | radius | number | Yes |
-| colors | Array&lt;number&gt; | Yes |
+| colors | Array & lt;number & gt; | Yes |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
-| pos | Array&lt;number&gt; \| null | No |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| pos | Array & lt;number & gt; \ | null | No |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
 
 **Return value:**
 
@@ -242,7 +242,7 @@ Creates a **ShaderEffect** object that generates a radial gradient based on the 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createSweepGradient
 
@@ -265,12 +265,12 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | centerPt | common2D.Point | Yes |
-| colors | Array&lt;number&gt; | Yes |
+| colors | Array & lt;number & gt; | Yes |
 | mode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes |
 | startAngle | number | Yes |
 | endAngle | number | Yes |
-| pos | Array&lt;number&gt; \| null | No |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
+| pos | Array & lt;number & gt; \ | null | No |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) \| null | No |
 
 **Return value:**
 
@@ -282,4 +282,4 @@ Creates a **ShaderEffect** object that generates a color sweep gradient around a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

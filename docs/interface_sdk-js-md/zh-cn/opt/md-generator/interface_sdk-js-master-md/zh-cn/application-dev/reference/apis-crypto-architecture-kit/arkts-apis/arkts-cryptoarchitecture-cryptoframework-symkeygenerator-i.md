@@ -1,7 +1,7 @@
 # SymKeyGenerator
 
 对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过  
-[createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator)方法创建一个SymKeyGenerator实例。
+[createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator)方法创建一个SymKeyGenerator实例。
 
 **起始版本：** 9
 
@@ -41,15 +41,15 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | key | [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -102,15 +102,15 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 类型 |
 | --- |
-| Promise&lt;SymKey&gt; |
+| Promise&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -153,7 +153,7 @@ convertKeySync(key: DataBlob): SymKey
 > （如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围
 > 内的任意二进制密钥数据。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link convertKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[convertKey](convertKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -179,9 +179,9 @@ convertKeySync(key: DataBlob): SymKey
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -216,7 +216,7 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 > 
 > 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥
 > 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过
-> [convertKey](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md#convertkey)
+> [convertKey](#convertKey)
 > 方式生成对称密钥数据。
 
 **起始版本：** 9
@@ -233,14 +233,14 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SymKey&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-无效的函数调用) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -277,14 +277,14 @@ generateSymKey(): Promise<SymKey>
 
 | 类型 |
 | --- |
-| Promise&lt;SymKey&gt; |
+| Promise&lt;[SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-无效的函数调用) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -317,9 +317,9 @@ generateSymKeySync(): SymKey
 > 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。
 
 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过  
-[convertKeySync](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md#convertkeysync)方式生成对称密钥数据。
+[convertKeySync](#convertKeySync)方式生成对称密钥数据。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，{@link generateSymKey}。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[generateSymKey](#generateSymKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 12
 
@@ -339,8 +339,8 @@ generateSymKeySync(): SymKey
 
 | 错误码ID |
 | --- |
-| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
-| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-无效的函数调用) |
+| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 

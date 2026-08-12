@@ -44,7 +44,7 @@ options: Array<ResourceStr>
 
 **说明：**文本超长显示省略号。
 
-**类型：** Array&lt;ResourceStr&gt;
+**类型：** Array&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **起始版本：** 10
 

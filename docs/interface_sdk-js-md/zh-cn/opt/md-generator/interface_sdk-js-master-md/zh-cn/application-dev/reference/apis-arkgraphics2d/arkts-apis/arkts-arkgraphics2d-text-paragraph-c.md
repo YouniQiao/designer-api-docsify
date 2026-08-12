@@ -2,7 +2,7 @@
 
 保存文本内容及样式的载体，支持排版与绘制操作。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -46,8 +46,8 @@ forceReuseRasterResult(isForce: boolean): void
 
 设置是否强制复用光栅化结果。不调用此接口时，系统默认允许更新光栅化结果。
 
-适用于文本内容未发生变化但需要多次调用[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
-[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint)绘制时生效。
+适用于文本内容未发生变化但需要多次调用[paint](#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
+[paint](#paint)绘制时生效。
 
 **起始版本：** 26.0.0
 
@@ -132,7 +132,7 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| lineNumber | number | 是 |
+| [lineNumber](arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
 | includeSpaces | boolean | 是 |
 
 **返回值：**
@@ -211,7 +211,7 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## 示例
 
@@ -278,13 +278,13 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 | 类型 |
 | --- |
-| Array&lt;Range&gt; |
+| Array & lt;Range & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## 示例
 
@@ -385,13 +385,13 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 | 类型 |
 | --- |
-| Array&lt;Range&gt; |
+| Array & lt;Range & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## 示例
 
@@ -566,7 +566,7 @@ getLineMetrics(): Array<LineMetrics>
 
 | 类型 |
 | --- |
-| Array&lt;LineMetrics&gt; |
+| Array & lt;LineMetrics & gt; |
 
 ## 示例
 
@@ -594,7 +594,7 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| lineNumber | number | 是 |
+| [lineNumber](arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
 
 **返回值：**
 
@@ -933,7 +933,7 @@ getRectsForPlaceholders(): Array<TextBox>
 
 | 类型 |
 | --- |
-| Array&lt;TextBox&gt; |
+| Array & lt;TextBox & gt; |
 
 ## 示例
 
@@ -969,7 +969,7 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 | 类型 |
 | --- |
-| Array&lt;TextBox&gt; |
+| Array & lt;TextBox & gt; |
 
 ## 示例
 
@@ -1057,7 +1057,7 @@ getTextLines(): Array<TextLine>
 
 | 类型 |
 | --- |
-| Array&lt;TextLine&gt; |
+| Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; |
 
 ## 示例
 
@@ -1071,8 +1071,8 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（  
-[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)）替换而未显示的文本。
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)的maxLines属性）截断或省略号模式（  
+[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)）替换而未显示的文本。
 
 **说明：**
 
@@ -1101,7 +1101,7 @@ getVisibleTextRanges(): Array<Range>
 
 | 类型 |
 | --- |
-| Array&lt;Range&gt; |
+| Array & lt;Range & gt; |
 
 ## 示例
 
@@ -1169,13 +1169,13 @@ layout(width: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1325,7 +1325,7 @@ for (let i = 0; i < result.fitStrRange.length; ++i) {
 paint(canvas: drawing.Canvas, x: number, y: number): void
 ```
 
-在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout)接口进行排版，否则无法正确显示文本内容。
+在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()](#layout)接口进行排版，否则无法正确显示文本内容。
 
 **起始版本：** 12
 
@@ -1359,7 +1359,7 @@ paragraph.paint(canvas, 0, 0);
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset: number): void
 ```
 
-在画布上沿路径绘制文本。调用前必须先调用[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout)接口进行排版，否则无法正确显示文本内容。
+在画布上沿路径绘制文本。调用前必须先调用[layout()](#layout)接口进行排版，否则无法正确显示文本内容。
 
 **起始版本：** 12
 

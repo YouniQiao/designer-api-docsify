@@ -12,7 +12,7 @@ Sets whether this device supports distributed notifications.This API uses an asy
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#setDistributedEnable
+**Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setDistributedEnable)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Sets whether this device supports distributed notifications. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#setDistributedEnable
+**Substitutes:** [setDistributedEnable](arkts-notification-notificationmanager-setdistributedenable-f-sys.md#setDistributedEnable)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -62,4 +62,4 @@ Sets whether this device supports distributed notifications. This API uses a pro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

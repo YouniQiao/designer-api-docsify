@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## getVibratorInfoSync
@@ -32,7 +32,7 @@ Queries the vibrator list of one or all devices.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;VibratorInfo&gt; | Vibrator information. |
+| Array&lt;[VibratorInfo](arkts-sensorservice-vibrator-vibratorinfo-i.md)&gt; | Vibrator information. |
 
 ## Examples
 

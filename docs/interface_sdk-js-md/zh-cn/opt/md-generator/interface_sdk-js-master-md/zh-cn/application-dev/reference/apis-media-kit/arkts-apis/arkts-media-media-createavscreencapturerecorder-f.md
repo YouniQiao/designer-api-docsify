@@ -18,13 +18,13 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 | 类型 |
 | --- |
-| Promise&lt;AVScreenCaptureRecorder&gt; |
+| Promise&lt;[AVScreenCaptureRecorder](arkts-media-multimedia-media-avscreencapturerecorder-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 

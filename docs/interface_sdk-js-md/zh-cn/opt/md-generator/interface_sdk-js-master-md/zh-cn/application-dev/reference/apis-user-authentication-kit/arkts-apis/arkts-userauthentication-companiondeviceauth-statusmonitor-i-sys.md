@@ -1,6 +1,6 @@
 # StatusMonitor（系统接口）
 
-状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor)获取此对象。
+状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor)获取此对象。
 
 **起始版本：** 23
 
@@ -38,13 +38,13 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 | 类型 |
 | --- |
-| Promise&lt;TemplateStatus[]&gt; |
+| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
 
 ## 示例
 
@@ -92,7 +92,7 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
 
 ## 示例
 
@@ -143,7 +143,7 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
 
 ## 示例
 
@@ -203,7 +203,7 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
 
 ## 示例
 
@@ -256,7 +256,7 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
 
 ## 示例
 
@@ -309,8 +309,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
-| [32600002](../errorcode-useriam.md#32600002-模板未找到) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-模板未找到) |
 
 ## 示例
 
@@ -371,7 +371,7 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
 
 ## 示例
 

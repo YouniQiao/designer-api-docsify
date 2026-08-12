@@ -11,7 +11,7 @@ Declare type SymbolOptions
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from 'kits/@kit.ArkUI';
+import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
 ```
 
 ## effectStrategy
@@ -20,7 +20,7 @@ import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions
 effectStrategy?: SymbolEffectStrategy
 ```
 
-Effect strategy of the [symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+Effect strategy of the [symbol glyph](./@internal/component/ets/symbolglyph).
 
 Default value: **SymbolEffectStrategy.NONE**.
 
@@ -46,11 +46,11 @@ For the resources referenced in **\$r('sys.symbol.ohos_*')**, only **ohos_wifi**
 fontColor?: Array<ResourceColor>
 ```
 
-Color of the [symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+Color of the [symbol glyph](./@internal/component/ets/symbolglyph).
 
 Default value: depending on the rendering strategy
 
-**Type:** Array&lt;ResourceColor&gt;
+**Type:** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt;
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Default value: depending on the rendering strategy
 fontSize?: number | string | Resource
 ```
 
-Size of the [symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+Size of the [symbol glyph](./@internal/component/ets/symbolglyph).
 
 For the number type, the value must be greater than or equal to 0.
 
@@ -94,7 +94,7 @@ Default value: system default value
 fontWeight?: number | FontWeight | string
 ```
 
-Weight of the [symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+Weight of the [symbol glyph](./@internal/component/ets/symbolglyph).
 
 For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**.
 
@@ -122,7 +122,7 @@ Default value: **FontWeight.Normal**.
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-Rendering strategy of the [symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+Rendering strategy of the [symbol glyph](./@internal/component/ets/symbolglyph).
 
 Default value: **SymbolRenderingStrategy.SINGLE**.
 

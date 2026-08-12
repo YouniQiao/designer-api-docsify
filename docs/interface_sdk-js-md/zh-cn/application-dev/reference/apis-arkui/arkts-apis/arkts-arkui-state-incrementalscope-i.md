@@ -63,13 +63,13 @@ Internal value updated after the computation.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| newValue | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 否 | new value |
+| newValue | Value | 否 | new value |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | return the Value from cached |
+| Value | return the Value from cached |
 
 ## cached
 
@@ -79,7 +79,7 @@ get cached(): Value
 
 State variable cache, internal value if it is already computed
 
-**类型：** [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)
+**类型：** Value
 
 **起始版本：** 23
 

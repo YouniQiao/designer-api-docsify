@@ -12,7 +12,7 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
+**替代接口：** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleteRdbStore)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -39,7 +39,7 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
+**替代接口：** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleteRdbStore)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 
@@ -56,4 +56,4 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

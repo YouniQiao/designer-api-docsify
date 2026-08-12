@@ -13,7 +13,7 @@ Defines an MMS notification indication.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## contentClass

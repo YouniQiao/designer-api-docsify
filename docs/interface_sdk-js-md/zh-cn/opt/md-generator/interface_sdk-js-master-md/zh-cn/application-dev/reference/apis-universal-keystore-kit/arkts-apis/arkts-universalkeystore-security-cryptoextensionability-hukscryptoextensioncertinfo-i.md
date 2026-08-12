@@ -1,6 +1,6 @@
 # HuksCryptoExtensionCertInfo
 
-[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md)中的certs数组中的元素。
+[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresultcode-e.md#HuksCryptoExtensionResultCode)中的certs数组中的元素。
 
 **起始版本：** 22
 

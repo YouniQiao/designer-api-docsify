@@ -1,6 +1,6 @@
 # DataAbilityHelper
 
-可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper)接口获取DataAbilityHelper对象。
+可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper)接口获取DataAbilityHelper对象。
 
 **起始版本：** 7
 
@@ -29,8 +29,30 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | 是 |
+| valuesBuckets | Array & lt;rdb.ValuesBucket & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array({'name': 'roe11', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe12', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe13', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket);
+DAHelper.batchInsert('dataability:///com.example.DataAbility', cars, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`batchInsert fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`batchInsert success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## batchInsert
 
@@ -53,13 +75,31 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | 是 |
+| valuesBuckets | Array & lt;rdb.ValuesBucket & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array({'name': 'roe11', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe12', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket,
+                     {'name': 'roe13', 'age': 21, 'salary': 20.5, 'blobType': 'u8',} as rdb.ValuesBucket);
+DAHelper.batchInsert('dataability:///com.example.DataAbility', cars).then((data) => {
+    console.info(`batchInsert data: ${JSON.stringify(data)}`);
+});
+```
 
 ## call
 
@@ -85,7 +125,26 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 | method | string | 是 |
 | arg | string | 是 |
 | extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PacMap&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.call('dataability:///com.example.jsapidemo.UserDataAbility',
+    'method', 'arg', {'key1':'value1'}, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`call fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`call success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## call
 
@@ -116,7 +175,25 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 
 | 类型 |
 | --- |
-| Promise&lt;PacMap&gt; |
+| Promise&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import { BusinessError } from '@ohos.base';
+
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.call('dataability:///com.example.jsapidemo.UserDataAbility',
+    'method', 'arg', {'key1':'value1'}).then((data) => {
+    console.info(`call success, data: ${data}`);
+}).catch((error: BusinessError) => {
+    console.error(`call failed, error: ${error}`);
+});
+```
 
 ## delete
 
@@ -141,6 +218,26 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 | uri | string | 是 |
 | predicates | dataAbility.DataAbilityPredicates | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.delete('dataability:///com.example.DataAbility', da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`delete fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`delete success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## delete
 
@@ -169,7 +266,23 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.delete('dataability:///com.example.DataAbility', da).then((data) => {
+    console.info(`delete data: ${JSON.stringify(data)}`);
+});
+```
 
 ## delete
 
@@ -194,6 +307,24 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.delete('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`delete fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`delete success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
+
 ## denormalizeUri
 
 ```TypeScript
@@ -216,6 +347,24 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 | --- | --- | --- |
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.denormalizeUri('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`denormalizeUri fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`denormalizeUri success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## denormalizeUri
 
@@ -243,7 +392,21 @@ denormalizeUri(uri: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.denormalizeUri('dataability:///com.example.DataAbility').then((data) => {
+    console.info(`denormalizeUri data: ${JSON.stringify(data)}`);
+});
+```
 
 ## executeBatch
 
@@ -272,6 +435,26 @@ executeBatch(
 | uri | string | 是 |
 | operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+// 根据DataAbilityOperation列表选择要对数据库做的操作
+let op: Array<ability.DataAbilityOperation> = new Array();
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.executeBatch('dataability:///com.example.jsapidemo.UserDataAbility', op, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`executeBatch fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`executeBatch success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## executeBatch
 
@@ -302,6 +485,25 @@ executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Arra
 | --- |
 | Promise&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; |
 
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import { BusinessError } from '@ohos.base';
+
+// 根据DataAbilityOperation列表选择要对数据库做的操作
+let op: Array<ability.DataAbilityOperation> = new Array();
+let dataAbilityHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.jsapidemo.UserDataAbility'
+);
+dataAbilityHelper.executeBatch('dataability:///com.example.jsapidemo.UserDataAbility', op).then((data) => {
+    console.info(`executeBatch success, data: ${data}`);
+}).catch((error: BusinessError) => {
+    console.error(`executeBatch failed, error: ${error}`);
+});
+```
+
 ## getFileTypes
 
 ```TypeScript
@@ -325,6 +527,24 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 | uri | string | 是 |
 | mimeTypeFilter | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getFileTypes( 'dataability:///com.example.DataAbility', 'image/*', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`getFileTypes fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`getFileTypes success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## getFileTypes
 
@@ -353,7 +573,21 @@ getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getFileTypes('dataability:///com.example.DataAbility', 'image/*').then((data) => {
+    console.info(`getFileTypes data: ${JSON.stringify(data)}`);
+});
+```
 
 ## getType
 
@@ -377,6 +611,24 @@ getType(uri: string, callback: AsyncCallback<string>): void
 | --- | --- | --- |
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getType('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`getType fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`getType success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## getType
 
@@ -404,7 +656,21 @@ getType(uri: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.getType('dataability:///com.example.DataAbility').then((data) => {
+    console.info(`getType data: ${JSON.stringify(data)}`);
+});
+```
 
 ## insert
 
@@ -427,7 +693,7 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBucket | rdb.ValuesBucket | 是 |
+| [valuesBucket](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | rdb.ValuesBucket | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 ## insert
@@ -451,13 +717,13 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBucket | rdb.ValuesBucket | 是 |
+| [valuesBucket](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | rdb.ValuesBucket | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## normalizeUri
 
@@ -481,6 +747,24 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 | --- | --- | --- |
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.normalizeUri('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`normalizeUri fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`normalizeUri success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## normalizeUri
 
@@ -508,7 +792,21 @@ normalizeUri(uri: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.normalizeUri('dataability:///com.example.DataAbility').then((data) => {
+    console.info(`normalizeUri data: ${JSON.stringify(data)}`);
+});
+```
 
 ## notifyChange
 
@@ -532,6 +830,24 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 | --- | --- | --- |
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.notifyChange('dataability:///com.example.DataAbility', (error) => {
+    if (error && error.code !== 0) {
+        console.error(`notifyChange fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info('notifyChange success');
+    }
+});
+```
 
 ## notifyChange
 
@@ -559,7 +875,21 @@ notifyChange(uri: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.notifyChange('dataability:///com.example.DataAbility').then(() => {
+    console.info('================>notifyChangeCallback================>');
+});
+```
 
 ## off('dataChange')
 
@@ -585,6 +915,29 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
 
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+function onChangeNotify() {
+    console.info('onChangeNotify call back');
+};
+DAHelper.off(
+    'dataChange',
+    'dataability:///com.example.DataAbility',
+    onChangeNotify
+);
+DAHelper.off(
+    'dataChange',
+    'dataability:///com.example.DataAbility',
+);
+```
+
 ## on('dataChange')
 
 ```TypeScript
@@ -609,6 +962,25 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 | uri | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+function onChangeNotify() {
+    console.info('onChangeNotify call back');
+};
+DAHelper.on(
+    'dataChange',
+    'dataability:///com.example.DataAbility',
+    onChangeNotify
+);
+```
+
 ## openFile
 
 ```TypeScript
@@ -632,6 +1004,25 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 | uri | string | 是 |
 | mode | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let mode = 'rw';
+DAHelper.openFile('dataability:///com.example.DataAbility', mode, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`openFile fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`openFile success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## openFile
 
@@ -660,7 +1051,22 @@ openFile(uri: string, mode: string): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let mode = 'rw';
+DAHelper.openFile('dataability:///com.example.DataAbility', mode).then((data) => {
+    console.info(`openFile data: ${JSON.stringify(data)}`);
+});
+```
 
 ## query
 
@@ -688,9 +1094,30 @@ query(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| columns | Array&lt;string&gt; | 是 |
+| columns | Array & lt;string & gt; | 是 |
 | predicates | dataAbility.DataAbilityPredicates | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars=new Array('value1', 'value2', 'value3', 'value4');
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.query('dataability:///com.example.DataAbility', cars, da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -713,7 +1140,25 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+DAHelper.query('dataability:///com.example.DataAbility', (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -736,8 +1181,27 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| columns | Array&lt;string&gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
+| columns | Array & lt;string & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array('value1', 'value2', 'value3', 'value4');
+DAHelper.query('dataability:///com.example.DataAbility', cars, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -761,7 +1225,27 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 | --- | --- | --- |
 | uri | string | 是 |
 | predicates | dataAbility.DataAbilityPredicates | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.query('dataability:///com.example.DataAbility', da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`query fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`query success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## query
 
@@ -784,14 +1268,31 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| columns | Array & lt;string & gt; | 否 |
 | predicates | dataAbility.DataAbilityPredicates | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ResultSet&gt; |
+| Promise&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+let cars = new Array('value1', 'value2', 'value3', 'value4');
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.query('dataability:///com.example.DataAbility', cars, da).then((data) => {
+    console.info(`query data: ${JSON.stringify(data)}`);
+});
+```
 
 ## update
 
@@ -819,9 +1320,36 @@ update(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBucket | rdb.ValuesBucket | 是 |
+| [valuesBucket](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | rdb.ValuesBucket | 是 |
 | predicates | dataAbility.DataAbilityPredicates | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+const va: rdb.ValuesBucket = {
+    'name': 'roe1',
+    'age': 21,
+    'salary': 20.5,
+    'blobType': 'u8',
+};
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.update('dataability:///com.example.DataAbility', va, da, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`update fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`update success, data: ${JSON.stringify(data)}`);
+    }
+});
+```
 
 ## update
 
@@ -844,14 +1372,37 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBucket | rdb.ValuesBucket | 是 |
+| [valuesBucket](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | rdb.ValuesBucket | 是 |
 | predicates | dataAbility.DataAbilityPredicates | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import ohos_data_ability from '@ohos.data.dataAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+const va: rdb.ValuesBucket = {
+    'name': 'roe1',
+    'age': 21,
+    'salary': 20.5,
+    'blobType': 'u8',
+};
+let da = new ohos_data_ability.DataAbilityPredicates();
+DAHelper.update('dataability:///com.example.DataAbility', va, da).then((data) => {
+    console.info(`update data: ${JSON.stringify(data)}`);
+});
+```
 
 ## update
 
@@ -874,5 +1425,30 @@ predicates筛选条件为空，自定义更新数据库的处理逻辑。使用c
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| valuesBucket | rdb.ValuesBucket | 是 |
+| [valuesBucket](arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | rdb.ValuesBucket | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
+
+## 示例
+
+```TypeScript
+import ability from '@ohos.ability.ability';
+import featureAbility from '@ohos.ability.featureAbility';
+import rdb from '@ohos.data.rdb';
+
+let DAHelper: ability.DataAbilityHelper = featureAbility.acquireDataAbilityHelper(
+    'dataability:///com.example.DataAbility'
+);
+const va: rdb.ValuesBucket = {
+    'name': 'roe1',
+    'age': 21,
+    'salary': 20.5,
+    'blobType': 'u8',
+};
+DAHelper.update('dataability:///com.example.DataAbility', va, (error, data) => {
+    if (error && error.code !== 0) {
+        console.error(`update fail, error: ${JSON.stringify(error)}`);
+    } else {
+        console.info(`update success, data: ${JSON.stringify(data)}`);
+    }
+});
+```

@@ -1,6 +1,6 @@
 # @ohos.arkui.uiMaterial
 
-This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color ([backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor)), border color ([borderColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bordercolor)), border width ([borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderwidth)), and shadow ([shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow)).
+This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color ([backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))), border color ([borderColor](CommonMethod#borderColor)), border width ([borderWidth](CommonMethod#borderWidth)), and shadow ([shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))).
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ This module provides APIs for system materials. Different system materials corre
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -26,13 +26,13 @@ import { uiMaterial } from 'kits/@kit.ArkUI';
 | [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f.md#converttoecsubmaterial) |
 | [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md#getglobalmateriallevel) |
 | [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md#getmaterialinfo) |
-| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md#isimmersivematerialsupported) |
+| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md#isimmersivematerialsupported) | Check whether [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) is supported on the current device.If it is true, the ImmersiveMaterial object can be used in the  [systemMaterial](CommonMethod#systemMaterial(material: SystemUiMaterial \|
 
 ### Classes
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) |
+| [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md#MaterialType).  The performance of an immersive material varies based on device computing power. The high, medium, and low levels of device computing power are determined by device vendors and defined in the system configuration files. On devices with high- and mid-level computing power, the filter and  [shadow](CommonMethod#shadow(value: ShadowOptions \| ShadowStyle)) effects of the material layer are affected.On devices with low-level computing power, the  [background color](CommonMethod#backgroundColor(value: ResourceColor)),  [border color](CommonMethod#borderColor), [border width](CommonMethod#borderWidth), and  [shadow](CommonMethod#shadow(value: ShadowOptions \|
 | [Material](arkts-arkui-uimaterial-material-c.md) |
 
 ### Interfaces

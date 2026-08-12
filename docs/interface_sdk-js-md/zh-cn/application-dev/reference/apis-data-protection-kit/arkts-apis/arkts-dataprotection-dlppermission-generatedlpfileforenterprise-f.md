@@ -31,7 +31,7 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 | plaintextFd | number | 是 | 明文文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1 时，fd的值被截断。 |
 | dlpFd | number | 是 | 加密文件的文件描述符。取值范围为[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]。当fd小于0时，打印错误日志，函数停止运行；当fd大于2&lt;sup&gt;31&lt;/sup&gt;-1时，fd的值 被截断。 |
 | property | [DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md) | 是 | DLP文件通用策略。 |
-| customProperty | [CustomProperty](../../apis-arkui/arkts-apis/arkts-arkui-customproperty-t.md) | 是 | 企业定制策略。 |
+| customProperty | CustomProperty | 是 | 企业定制策略。 |
 
 **返回值：**
 
@@ -43,16 +43,16 @@ function generateDlpFileForEnterprise(plaintextFd: number, dlpFd: number, proper
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) | Credential authentication server error. |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs.<br>**适用版本：** 20+ |
-| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
-| [19100014](../errorcode-dlp.md#19100014-账号未登录) | Account not logged in. |
+| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-凭据认证服务器错误) | Credential authentication server error. |
+| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications use system APIs.<br>**适用版本：** 20+ |
+| [19100009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-操作dlp文件失败) | Failed to operate the DLP file. |
+| [19100014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100014-账号未登录) | Account not logged in. |
 
 ## 示例
 

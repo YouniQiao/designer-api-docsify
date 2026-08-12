@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showToast
@@ -20,7 +20,7 @@ Displays the notification text.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showToast
+**Substitutes:** [showToast](ohos.arkui.UIContext.PromptAction#showToast)
 
 <!--Device-prompt-function showToast(options: ShowToastOptions): void--><!--Device-prompt-function showToast(options: ShowToastOptions): void-End-->
 
@@ -30,7 +30,7 @@ Displays the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-system-prompt-showtoastoptions-i.md) | Yes | Options. |
+| options | ShowToastOptions | Yes | Options. |
 
 ## Examples
 

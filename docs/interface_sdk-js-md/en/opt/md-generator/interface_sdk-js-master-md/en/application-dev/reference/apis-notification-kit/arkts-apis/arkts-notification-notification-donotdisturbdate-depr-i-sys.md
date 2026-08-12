@@ -6,7 +6,7 @@ Defines the DND time.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#DoNotDisturbDate
+**Substitutes:** [DoNotDisturbDate](ohos.notificationManager/notificationManager#DoNotDisturbDate)
 
 <!--Device-notification-export interface DoNotDisturbDate--><!--Device-notification-export interface DoNotDisturbDate-End-->
 
@@ -28,7 +28,7 @@ DND start time.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbDate#begin
+**Substitutes:** [begin](ohos.notificationManager/notificationManager.DoNotDisturbDate#begin)
 
 <!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
 
@@ -50,7 +50,7 @@ DND end time.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbDate#end
+**Substitutes:** [end](ohos.notificationManager/notificationManager.DoNotDisturbDate#end)
 
 <!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
 
@@ -66,13 +66,13 @@ type: DoNotDisturbType
 
 DND time type.
 
-**Type:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
+**Type:** DoNotDisturbType
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.DoNotDisturbDate#type
+**Substitutes:** [type](ohos.notificationManager/notificationManager.DoNotDisturbDate#type)
 
 <!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
 

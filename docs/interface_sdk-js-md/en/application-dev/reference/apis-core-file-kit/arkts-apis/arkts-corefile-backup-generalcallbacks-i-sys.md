@@ -15,7 +15,7 @@ General callbacks for both backup and restore procedure.The backup service will 
 ## Modules to Import
 
 ```TypeScript
-import { backup } from 'kits/@kit.CoreFileKit';
+import { backup } from '@kit.CoreFileKit';
 ```
 
 ## onBackupSizeReport
@@ -62,7 +62,7 @@ Callback called when the backup service tries to send files to the client.The Fi
 | --- | --- |
 | 13900020 | Invalid argument |
 | 13900005 | I/O error |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900011 | Out of memory |
@@ -99,11 +99,11 @@ Callback called when the backup_sa service return result information.The first r
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
 | 13500008 | Untar error |
 | 13900001 | Operation not permitted |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13500006 | Tar error |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
@@ -134,11 +134,11 @@ Callback called when the backup_sa service return result information.The first r
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
 | 13500008 | Untar error |
 | 13900001 | Operation not permitted |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13500006 | Tar error |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
@@ -175,9 +175,9 @@ Callback called when the backup service return result information.The first retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
@@ -207,9 +207,9 @@ Callback called when the backup service return result information.The first retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |
@@ -223,7 +223,7 @@ onAllBundlesEnd: AsyncCallback<undefined>
 
 Callback called when the all the bundles to backup/restore are done or aborted unexpectedly.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;undefined&gt;
 
 **Since:** 10
 
@@ -243,7 +243,7 @@ onBackupServiceDied: Callback<undefined>
 
 Callback called when the backup service dies unexpectedly.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;undefined&gt;
 
 **Since:** 10
 
@@ -263,7 +263,7 @@ onBundleBegin: AsyncCallback<string, void | string>
 
 Callback called when a backup/restore procedure for an bundle is started.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, void \| string&gt;
 
 **Since:** 12
 
@@ -283,7 +283,7 @@ onBundleEnd: AsyncCallback<string, void | string>
 
 Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, void \| string&gt;
 
 **Since:** 12
 
@@ -303,7 +303,7 @@ onFileReady: AsyncCallback<File>
 
 Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;File&gt;
 
 **Since:** 10
 
@@ -323,7 +323,7 @@ onMigrateResult?: AsyncCallback<string, void | string>
 
 Callback called when the migrate result is reported.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string, void \| string&gt;
 
 **Since:** 26.0.0
 

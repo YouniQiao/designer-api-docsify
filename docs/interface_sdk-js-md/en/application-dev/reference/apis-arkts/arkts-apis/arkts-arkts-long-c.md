@@ -2,7 +2,7 @@
 
 Represents boxed long value and related operations.
 
-**Inheritance/Implementation:** Long extends [Integral](arkts-arkts-numeric-integral-c.md) and implements [Comparable<Long>](Comparable<Long>)
+**Inheritance/Implementation:** Long extends [Integral](arkts-arkts-numeric-integral-c.md#Integral) and implements [Comparable<Long>](Comparable<Long>)
 
 **Since:** 24
 
@@ -883,7 +883,7 @@ Converts this object to a string
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | Input parameter error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | Input parameter error. |
 
 ## toString
 

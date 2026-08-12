@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)注册自定义字体。
+> 可以使用[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)注册自定义字体。
 
 **起始版本：** 23
 
@@ -24,7 +24,7 @@ family?: string | Resource
 
 使用多个字体时，请用逗号','分隔，字体的优先级按顺序生效。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 

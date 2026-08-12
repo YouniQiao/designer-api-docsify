@@ -98,7 +98,7 @@ backgroundColor?: ResourceColor
 
 Background color of the sheet.&lt;br&gt;Default value: **Color.White**.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 

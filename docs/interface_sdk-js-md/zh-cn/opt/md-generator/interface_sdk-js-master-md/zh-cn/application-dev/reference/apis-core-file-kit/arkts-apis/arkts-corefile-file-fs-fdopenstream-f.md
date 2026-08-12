@@ -6,7 +6,7 @@
 declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 ```
 
-基于文件描述符打开文件流，使用promise异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
+基于文件描述符打开文件流，使用promise异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md#Stream)中的close()函数关闭文件流。
 
 **起始版本：** 9
 
@@ -27,7 +27,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 | 类型 |
 | --- |
-| Promise&lt;Stream&gt; |
+| Promise&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void
 ```
 
-基于文件描述符打开文件流，使用callback异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md)中的close()函数关闭文件流。
+基于文件描述符打开文件流，使用callback异步回调。需要配合[Stream](arkts-corefile-file-fs-stream-i.md#Stream)中的close()函数关闭文件流。
 
 **起始版本：** 9
 
@@ -84,7 +84,7 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 | --- | --- | --- |
 | fd | number | 是 |
 | mode | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | 是 |
 
 **错误码：**
 

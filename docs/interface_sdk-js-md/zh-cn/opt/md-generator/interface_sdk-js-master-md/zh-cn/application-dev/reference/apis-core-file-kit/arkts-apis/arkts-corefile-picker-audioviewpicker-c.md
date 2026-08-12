@@ -107,7 +107,7 @@ save(option?: AudioSaveOptions): Promise<Array<string>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## 示例
 
@@ -247,7 +247,7 @@ select(option?: AudioSelectOptions): Promise<Array<string>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## 示例
 

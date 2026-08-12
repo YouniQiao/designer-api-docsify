@@ -11,7 +11,7 @@ Provides methods to accessing bluetooth audio related capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from 'kits/@kit.ConnectivityKit';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

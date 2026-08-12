@@ -13,7 +13,7 @@ The ServiceExtensionAbility module provides extended capabilities for background
 ## Modules to Import
 
 ```TypeScript
-import { ServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+import { ServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConfigurationUpdate
@@ -268,13 +268,13 @@ Dumps the client information.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes |
+| params | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## Examples
 

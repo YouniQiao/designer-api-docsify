@@ -13,7 +13,7 @@ Describes the settings for taking an image.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## compressionQuality
@@ -46,7 +46,7 @@ location?: Location
 
 Geolocation information of the image (depending on the device hardware information by default).
 
-**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**Type:** Location
 
 **Since:** 10
 
@@ -65,7 +65,7 @@ mirror?: boolean
 ```
 
 Whether mirror photography is enabled (disabled by default). Before using this enumerated value, call   
-[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported) to check whether mirror photography is supported.  
+[isMirrorSupported](arkts-camera-camera-photooutput-i.md#isMirrorSupported) to check whether mirror photography is supported.  
 **true** if enabled, **false** otherwise.
 
 **Type:** boolean
@@ -88,7 +88,7 @@ quality?: QualityLevel
 
 Image quality (high by default).
 
-**Type:** [QualityLevel](../../apis-image-kit/arkts-apis/arkts-image-videoprocessingengine-qualitylevel-e.md)
+**Type:** QualityLevel
 
 **Since:** 10
 

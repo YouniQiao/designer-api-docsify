@@ -46,7 +46,7 @@ static connect<T extends object>(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 |
-| keyOrDefaultCreator | string \| [StorageDefaultCreator&lt;T&gt;](arkts-arkui-storagedefaultcreator-t.md) | 否 |
+| keyOrDefaultCreator | string \| [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | 否 |
 
 **返回值：**
@@ -81,7 +81,7 @@ static keys(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## remove
 
@@ -109,4 +109,4 @@ static remove<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| keyOrType | string \| [TypeConstructorWithArgs&lt;T&gt;](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md) | 是 |
+| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 |

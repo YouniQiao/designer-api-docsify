@@ -8,7 +8,7 @@ Asynchronous callback interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.base:AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)
+**Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)
 
 <!--Device-resourceManager-export interface AsyncCallback<T>--><!--Device-resourceManager-export interface AsyncCallback<T>-End-->
 
@@ -17,7 +17,7 @@ Asynchronous callback interface.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## [[Call]]
@@ -34,7 +34,7 @@ Defines an asynchronous callback that carries an error parameter and asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.base:AsyncCallback](arkts-localization-resourcemanager-asynccallback-i.md)
+**Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)
 
 <!--Device-AsyncCallback-(err: Error, data: T): void--><!--Device-AsyncCallback-(err: Error, data: T): void-End-->
 

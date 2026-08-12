@@ -12,7 +12,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#removeGroupByBundle
+**替代接口：** [removeGroupByBundle](ohos.notificationManager/notificationManager#removeGroupByBundle)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#removeGroupByBundle
+**替代接口：** [removeGroupByBundle](ohos.notificationManager/notificationManager#removeGroupByBundle)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -64,4 +64,4 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

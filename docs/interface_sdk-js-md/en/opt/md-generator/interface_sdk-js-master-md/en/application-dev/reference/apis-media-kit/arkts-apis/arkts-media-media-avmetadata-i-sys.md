@@ -1,8 +1,8 @@
 # AVMetadata
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of  
-[AVRecorder](#AVRecorder).
+[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of  
+[AVRecorder](arkts-media-media-avrecorder-i.md#AVRecorder).
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## gltf_offset

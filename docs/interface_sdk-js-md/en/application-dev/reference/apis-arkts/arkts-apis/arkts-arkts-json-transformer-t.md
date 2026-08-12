@@ -9,7 +9,7 @@ Defines the type of the conversion result function.
 When used as a parameter of [JSON.parse](arkts-arkts-json-parse-f.md#parse), the function is called by each member of the object,allowing for custom data processing or conversion during parsing.
 
 When used as a parameter of  
-[JSON.stringify](arkts-arkts-json-stringify-f.md#stringify), the function is used to transfer and handle each property during serialization.
+[JSON.stringify](arkts-arkts-json-stringify-f.md#stringify-1), the function is used to transfer and handle each property during serialization.
 
 **Since:** 12
 

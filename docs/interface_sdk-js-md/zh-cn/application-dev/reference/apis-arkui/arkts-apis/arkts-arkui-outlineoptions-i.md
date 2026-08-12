@@ -18,7 +18,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the outline color.
 
-**类型：** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| ResourceColor \| LocalizedEdgeColors
+**类型：** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ radius?: OutlineRadiuses | Dimension
 
 Defines the outline radius.
 
-**类型：** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| Dimension
+**类型：** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 
@@ -90,7 +90,7 @@ width?: EdgeOutlineWidths | Dimension
 
 Defines the outline width.
 
-**类型：** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| Dimension
+**类型：** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **起始版本：** 12
 

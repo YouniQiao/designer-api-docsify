@@ -88,7 +88,7 @@ readonly instanceKey?: number
 
 **废弃版本：** 15
 
-**替代接口：** [BadgeNumberCallbackData#appInstanceKey](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md#appinstancekey)
+**替代接口：** [appInstanceKey](#appInstanceKey)
 
 <!--Device-BadgeNumberCallbackData-readonly instanceKey?: number--><!--Device-BadgeNumberCallbackData-readonly instanceKey?: number-End-->
 

@@ -18,7 +18,7 @@ footer?: ResourceStr | CustomBuilder
 
 未设置时，不显示尾部信息。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ header?: ResourceStr | CustomBuilder
 
 未设置时，不显示标题信息。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getCountryCode
@@ -18,7 +18,7 @@ Obtains the country code of this device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getCountryCode
+**Substitutes:** [getCountryCode](ohos.wifiManager/wifiManager.getCountryCode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

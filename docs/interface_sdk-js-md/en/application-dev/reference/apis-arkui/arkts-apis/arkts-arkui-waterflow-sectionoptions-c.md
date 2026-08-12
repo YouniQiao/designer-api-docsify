@@ -98,7 +98,7 @@ margin?: Margin | Dimension
 
 Padding of the section. A value of the Length type specifies the margin for all the four sides.
 
-**Type:** [Margin](arkts-arkui-margin-t.md) \| Dimension
+**Type:** [Margin](arkts-arkui-margin-t.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Default:** {top: 0, right: 0, bottom: 0, left: 0}
 

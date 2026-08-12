@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## getPixelMap
@@ -33,7 +33,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | the callback of getPixelMap. |
 
 ## Examples
 

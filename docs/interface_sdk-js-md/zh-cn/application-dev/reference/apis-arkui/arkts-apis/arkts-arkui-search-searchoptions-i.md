@@ -22,7 +22,7 @@ controller?: SearchController
 
 设置Search组件控制器。
 
-**类型：** [SearchController](../arkts-components/arkts-arkui-searchcontroller-c.md)
+**类型：** [SearchController](arkts-arkui-search-searchcontroller-c.md)
 
 **起始版本：** 23
 
@@ -94,7 +94,7 @@ value?: string | Bindable<string>
 
 该属性支持Bindable双向绑定变量。
 
-**类型：** string \| Bindable&lt;string&gt;
+**类型：** string \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt;
 
 **起始版本：** 23
 

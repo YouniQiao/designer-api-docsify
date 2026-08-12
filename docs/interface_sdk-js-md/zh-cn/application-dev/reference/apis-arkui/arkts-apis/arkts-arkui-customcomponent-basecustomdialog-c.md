@@ -2,7 +2,7 @@
 
 Definition of base custom dialog class.
 
-**继承/实现关系：** BaseCustomDialog extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md)
+**继承/实现关系：** BaseCustomDialog extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md#ExtendableComponent)
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ static _invokeImpl<S extends BaseCustomDialog<S, S_Options>, S_Options>(
 | --- | --- | --- | --- |
 | factory | () =&gt; S | 是 | 用于创建自定义对话框实例的工厂 |
 | initializers | () =&gt; S_Options | 否 | 自定义对话框中所有字段的初始数据 |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 自定义对话框的尾随闭包 |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 自定义对话框的尾随闭包 |
 
 ## constructor
 
@@ -67,5 +67,5 @@ Constructor to use to create a custom dialog instance.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | useSharedStorage | boolean | 否 | determine whether to use the LocalStorage instance object returned by UIContext.getSharedLocalStorage() interface. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 否 | localStorage instance. |
+| storage | LocalStorage | 否 | localStorage instance. |
 

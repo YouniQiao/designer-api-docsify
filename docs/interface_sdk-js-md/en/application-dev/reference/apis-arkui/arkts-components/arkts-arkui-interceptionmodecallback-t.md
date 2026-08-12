@@ -22,5 +22,5 @@ Implements an interception callback invoked when the display mode of the **Navig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NavigationMode](../arkts-apis/arkts-arkui-navigation-navigationmode-e.md) | Yes | Display mode of the navigation page. |
+| mode | [NavigationMode](arkts-arkui-navigationmode-e.md) | Yes | Display mode of the navigation page. |
 

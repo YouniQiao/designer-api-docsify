@@ -6,7 +6,7 @@ Profile state change parameters.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.baseProfile/baseProfile.StateChangeParam
+**Substitutes:** [StateChangeParam](ohos.bluetooth.baseProfile/baseProfile.StateChangeParam)
 
 <!--Device-bluetoothManager-interface StateChangeParam--><!--Device-bluetoothManager-interface StateChangeParam-End-->
 
@@ -15,7 +15,7 @@ Profile state change parameters.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -32,7 +32,7 @@ The address of device
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.baseProfile/baseProfile.StateChangeParam#deviceId
+**Substitutes:** [deviceId](ohos.bluetooth.baseProfile/baseProfile.StateChangeParam#deviceId)
 
 <!--Device-StateChangeParam-deviceId: string--><!--Device-StateChangeParam-deviceId: string-End-->
 
@@ -46,13 +46,13 @@ state: ProfileConnectionState
 
 Profile state value
 
-**Type:** [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md)
+**Type:** ProfileConnectionState
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.baseProfile/baseProfile.StateChangeParam#state
+**Substitutes:** [state](ohos.bluetooth.baseProfile/baseProfile.StateChangeParam#state)
 
 <!--Device-StateChangeParam-state: ProfileConnectionState--><!--Device-StateChangeParam-state: ProfileConnectionState-End-->
 

@@ -38,7 +38,7 @@ textStyle: TextStyle
 
 字体的样式信息。
 
-**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
+**类型：** TextStyle
 
 **起始版本：** 12
 

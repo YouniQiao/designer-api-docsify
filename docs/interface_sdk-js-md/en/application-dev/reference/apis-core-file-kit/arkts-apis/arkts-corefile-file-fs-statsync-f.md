@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## statSync
@@ -34,7 +34,7 @@ Obtains detailed attribute information of a file or directory. This API returns 
 
 | Type | Description |
 | --- | --- |
-| [Stat](arkts-corefile-fileio-stat-i.md) | Detailed information of a file or directory. |
+| [Stat](arkts-corefile-file-fs-stat-i.md) | Detailed information of a file or directory. |
 
 **Error codes:**
 

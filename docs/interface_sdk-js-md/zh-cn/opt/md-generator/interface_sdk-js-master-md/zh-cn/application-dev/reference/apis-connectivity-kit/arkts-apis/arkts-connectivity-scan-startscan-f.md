@@ -22,23 +22,23 @@ function startScan(filters: ScanFilters[] | null, options?: ScanOptions): Promis
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filters | ScanFilters[] \| null | 是 |
+| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | 是 |
 | options | [ScanOptions](arkts-connectivity-scan-scanoptions-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [36100003](../errorcode-nearlink-service.md#36100003--星闪关闭) |
-| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [36100042](../errorcode-nearlink-service.md#36100042-数组为空) |
-| [36100040](../errorcode-nearlink-service.md#36100040-整数超出范围) |
-| [36100041](../errorcode-nearlink-service.md#36100041-无效地址) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [36100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) |
+| [36100099](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [36100042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100042-数组为空) |
+| [36100040](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100040-整数超出范围) |
+| [36100041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100041-无效地址) |

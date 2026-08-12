@@ -6,4 +6,4 @@
 readonly [Symbol.species]: SetConstructor
 ```
 
-**Type:** SetConstructor
+**Type:** [SetConstructor](arkts-lib-es2015-symbol-wellknown-setconstructor-i.md)

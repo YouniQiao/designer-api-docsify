@@ -18,7 +18,7 @@ placement?: ToolBarItemPlacement
 
 Vertical layout element spacing.
 
-**Type:** [ToolBarItemPlacement](../arkts-components/arkts-arkui-toolbaritemplacement-e.md)
+**Type:** [ToolBarItemPlacement](arkts-arkui-toolbar-toolbaritemplacement-e.md)
 
 **Since:** 23
 

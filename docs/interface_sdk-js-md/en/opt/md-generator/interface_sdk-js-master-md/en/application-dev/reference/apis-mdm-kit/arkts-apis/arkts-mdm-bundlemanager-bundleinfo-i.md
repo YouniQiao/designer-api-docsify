@@ -11,7 +11,7 @@ Describes the application bundle information.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.MDMKit';
+import { bundleManager } from '@kit.MDMKit';
 ```
 
 ## appIndex
@@ -40,7 +40,7 @@ readonly appInfo: ApplicationInfo
 
 Application information.
 
-**Type:** [ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-applicationinfo-t.md)
+**Type:** ApplicationInfo
 
 **Since:** 20
 
@@ -132,7 +132,7 @@ readonly signatureInfo: SignatureInfo
 
 Signature information of the bundle.
 
-**Type:** [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
+**Type:** SignatureInfo
 
 **Since:** 20
 

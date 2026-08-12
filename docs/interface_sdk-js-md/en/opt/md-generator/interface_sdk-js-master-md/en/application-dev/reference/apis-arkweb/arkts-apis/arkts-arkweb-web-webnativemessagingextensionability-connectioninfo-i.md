@@ -11,7 +11,7 @@ Represents the information object of the web native messaging connection.
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'kits/@kit.ArkWeb';
+import { ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## bundleName
@@ -20,7 +20,7 @@ import { ConnectionInfo } from 'kits/@kit.ArkWeb';
 bundleName: string
 ```
 
-Application bundle name of the caller.
+App package name of the caller, used for identity identification and permission verification. It can be used to determine whether to allow the app to establish a connection or perform message interaction.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Application bundle name of the caller.
 connectionId: number
 ```
 
-Connection ID.
+Unique identifier of the connection, used to distinguish and manage different Web native message connections. It can be used to locate a specific connection during logging, status tracking, or resource cleanup.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Connection ID.
 extensionOrigin: string
 ```
 
-Original URL of the caller extension.
+Original URL of the caller extension, used for security control and origin identification. It can be used to determine the legitimacy of the extension or implement domain-based access policies.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Original URL of the caller extension.
 fdRead: number
 ```
 
-Pipe file descriptor used to read data.
+Pipe file descriptor used for reading data. Messages can be read from the Web side through this file descriptor.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ Pipe file descriptor used to read data.
 fdWrite: number
 ```
 
-Pipe file descriptor used to write data.
+Pipe file descriptor used for writing data. Messages can be sent to the Web side through this file descriptor.
 
 **Type:** number
 

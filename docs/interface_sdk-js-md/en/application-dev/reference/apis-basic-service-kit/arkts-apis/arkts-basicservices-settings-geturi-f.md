@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## getURI
@@ -29,7 +29,7 @@ Constructs a URI for a specific name-value pair for monitoring data of the abili
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of the setting to set. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getURI result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;object&gt; | Yes | The callback of getURI result. |
 
 ## Examples
 

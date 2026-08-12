@@ -37,7 +37,7 @@ Unsubscribes from the callback triggered for the asynchronous registration of th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating unsubscription from the callback triggered for asynchronous registration of the extended ability. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UIExtensionProxy&gt; | No | Callback function. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s asynchronous registration. If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**. |
+| callback | Callback&lt;UIExtensionProxy&gt; | No | Callback function. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s asynchronous registration. If this parameter is not empty, it means unsubscribing from callbacks corresponding to **type**. |
 
 ## off('syncReceiverRegister')
 
@@ -64,7 +64,7 @@ Unsubscribes from the callback triggered for the synchronous registration of the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | The value is fixed to **syncReceiverRegister**, indicating unsubscription to the asynchronous registration of the extension ability. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UIExtensionProxy&gt; | No | Callback to unsubscribe from. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s synchronous registration. |
+| callback | Callback&lt;UIExtensionProxy&gt; | No | Callback to unsubscribe from. If this parameter is left empty, it means unsubscribing from all callbacks triggered after **UIExtensionAbility**'s synchronous registration. |
 
 ## on('asyncReceiverRegister')
 
@@ -91,7 +91,7 @@ Subscribes to the callback triggered for asynchronous registration of the starte
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'asyncReceiverRegister' | Yes | The value is fixed to **asyncReceiverRegister**, indicating a subscription to the callback triggered for asynchronous registration of the extended ability. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataCallback](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md#setreceivedatacallback). |
+| callback | Callback&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataCallback](@ohos.app.ability.UIExtensionContentSession:UIExtensionContentSession#setReceiveDataCallback(callback: (data: Record&lt;string, Object&gt;) => void)). |
 
 ## on('syncReceiverRegister')
 
@@ -118,7 +118,7 @@ Subscribes to the callback triggered for synchronous registration of the started
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'syncReceiverRegister' | Yes | The value is fixed to **syncReceiverRegister**, indicating subscription to the asynchronous registration of the extension ability. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataForResultCallback](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md#setreceivedataforresultcallback). |
+| callback | Callback&lt;UIExtensionProxy&gt; | Yes | Callback triggered after the extension ability registers a [setReceiveDataForResultCallback](@ohos.app.ability.UIExtensionContentSession:UIExtensionContentSession#setReceiveDataForResultCallback(callback: (data: Record&lt;string, Object&gt;) => Record&lt;string, Object&gt;)). |
 
 ## send
 
@@ -144,7 +144,7 @@ Asynchronously sends data to the ability started by the component host through t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be asynchronously sent to the started **UIExtensionAbility**. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be asynchronously sent to the started **UIExtensionAbility**. |
 
 ## sendSync
 
@@ -170,18 +170,18 @@ Synchronously sends data to the ability started by the component host through th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be synchronously sent to the started **UIExtensionAbility**. |
+| data | Record&lt;string, Object&gt; | Yes | Data to be synchronously sent to the started **UIExtensionAbility**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Data returned by the extension ability. |
+| Record&lt;string, Object&gt; | Data returned by the extension ability. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to response this request. |
-| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
+| [100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100011-no-synchronous-callback-registered) | No callback has been registered to response this request. |
+| [100012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100012-data-transfer-failure) | Transferring data failed. |
 

@@ -27,7 +27,7 @@ declare function show(uri: string, type: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## show

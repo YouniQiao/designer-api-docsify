@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createModuleContextSync
@@ -13,7 +13,7 @@ export function createModuleContextSync(context: Context, moduleName: string): C
 ```
 
 Creates the context for a module. The  
-[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md/arkts-localization-resourcemanager-configuration-c.md) in the created module context inherits from the input context, making it convenient for you to access  
+[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md#Configuration) in the created module context inherits from the input context, making it convenient for you to access  
 [application resources across HAP/HSP packages](../../../quick-start/resource-categories-and-access.md#cross-haphsp-resources)
 
 > **NOTE：**
@@ -50,4 +50,4 @@ Creates the context for a module. The
 | Error Code ID |
 | --- |
 | 16000021 |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |

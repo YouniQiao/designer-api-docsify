@@ -20,13 +20,13 @@ Register a callback function to be called when a vibrator plugin or unplug event
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VibratorStatusEvent&gt; | 是 | The callback function to be executed when &lt;br&gt; the event is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VibratorStatusEvent](arkts-sensorservice-vibrator-vibratorstatusevent-i.md)&gt; | 是 | The callback function to be executed when &lt;br&gt; the event is triggered. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

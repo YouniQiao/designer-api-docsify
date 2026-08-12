@@ -6,7 +6,7 @@ The enum of profile id.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.ProfileId
+**Substitutes:** [ProfileId](ohos.bluetooth.constant/constant.ProfileId)
 
 <!--Device-bluetoothManager-enum ProfileId--><!--Device-bluetoothManager-enum ProfileId-End-->
 
@@ -24,7 +24,7 @@ A2DP profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.ProfileId#PROFILE_A2DP_SOURCE
+**Substitutes:** [PROFILE_A2DP_SOURCE](ohos.bluetooth.constant/constant.ProfileId#PROFILE_A2DP_SOURCE)
 
 <!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
 
@@ -42,7 +42,7 @@ HFP profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.ProfileId#PROFILE_HANDSFREE_AUDIO_GATEWAY
+**Substitutes:** [PROFILE_HANDSFREE_AUDIO_GATEWAY](arkts-connectivity-constant-profileid-e.md#PROFILE_HANDSFREE_AUDIO_GATEWAY)
 
 <!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
 
@@ -60,7 +60,7 @@ Human Interface Device (HID) profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.ProfileId#PROFILE_HID_HOST
+**Substitutes:** [PROFILE_HID_HOST](ohos.bluetooth.constant/constant.ProfileId#PROFILE_HID_HOST)
 
 <!--Device-ProfileId-PROFILE_HID_HOST = 6--><!--Device-ProfileId-PROFILE_HID_HOST = 6-End-->
 
@@ -78,7 +78,7 @@ PAN profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.ProfileId#PROFILE_PAN_NETWORK
+**Substitutes:** [PROFILE_PAN_NETWORK](ohos.bluetooth.constant/constant.ProfileId#PROFILE_PAN_NETWORK)
 
 <!--Device-ProfileId-PROFILE_PAN_NETWORK = 7--><!--Device-ProfileId-PROFILE_PAN_NETWORK = 7-End-->
 

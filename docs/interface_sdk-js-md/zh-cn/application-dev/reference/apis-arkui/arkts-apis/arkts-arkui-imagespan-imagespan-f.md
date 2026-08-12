@@ -24,7 +24,7 @@ export declare function ImageSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | 是 |  |
+| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 |  |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function ImageSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageSpanAttribute&gt; | 是 | ImageSpan属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md)&gt; | 是 | ImageSpan属性实例。 |
 
 **返回值：**
 

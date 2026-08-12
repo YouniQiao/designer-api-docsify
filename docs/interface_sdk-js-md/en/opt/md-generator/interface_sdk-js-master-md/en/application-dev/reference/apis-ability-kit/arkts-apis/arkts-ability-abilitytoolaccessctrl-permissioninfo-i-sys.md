@@ -18,7 +18,7 @@ authStatusInfo?: AuthStatusInfo
 
 Authorization status information.
 
-**Type:** [AuthStatusInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-authstatusinfo-i-sys.md)
+**Type:** AuthStatusInfo
 
 **Since:** 26.0.0
 

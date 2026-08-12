@@ -12,7 +12,7 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -64,7 +64,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -79,7 +79,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | missionId | number | 是 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 是 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
@@ -117,7 +117,7 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -132,13 +132,13 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | missionId | number | 是 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 UnionEffectContainer属性，支持通用属性，支持宽高设置。
 
-**继承/实现关系：** UnionEffectContainerAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** UnionEffectContainerAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -39,7 +39,7 @@ Sets the attribute modifier for UnionEffectContainer.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;UnionEffectContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[UnionEffectContainerAttribute](arkts-arkui-unioneffectcontainer-unioneffectcontainerattribute-i-sys.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -135,7 +135,7 @@ default unionMode(mode: UnionMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [UnionMode](../arkts-components/arkts-arkui-unionmode-e-sys.md) \| undefined | 是 | 融合效果模式。 |
+| mode | [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md) \| undefined | 是 | 融合效果模式。 |
 
 **返回值：**
 

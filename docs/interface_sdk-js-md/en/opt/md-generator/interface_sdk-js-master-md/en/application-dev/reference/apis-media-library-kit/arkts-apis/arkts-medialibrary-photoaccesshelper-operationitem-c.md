@@ -11,7 +11,7 @@ Describes the settings for filtering media files.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## field
@@ -29,7 +29,7 @@ Currently, only the following key fields are supported: **URI**, **PHOTO_TYPE**,
 
 When   
 [select](arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)is used to set this parameter, an invalid field results in error code 401. When   
-[@ohos.file.PhotoPickerComponent (PhotoPickerComponent)](arkts-file-photopickercomponent.md) is used to set this parameter, an invalid field does not trigger the **onPickerControllerReady** callback.
+[@ohos.file.PhotoPickerComponent (PhotoPickerComponent)](arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md#PhotoPickerComponent) is used to set this parameter, an invalid field does not trigger the **onPickerControllerReady** callback.
 
 This field is not involved in non-conditional predicates such as **and**, **or**, **beginWrap**, and **endWrap**.
 
@@ -53,7 +53,7 @@ operationType: OperationType
 
 Predicates.
 
-**Type:** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
+**Type:** OperationType
 
 **Since:** 22
 
@@ -77,7 +77,7 @@ This field is not involved in non-conditional predicates such as **and**, **or**
 
 The maximum length is 10; if exceeded, only the first 10 values are considered.
 
-**Type:** Array&lt;OperationValueType&gt;
+**Type:** Array&lt;[OperationValueType](arkts-medialibrary-photoaccesshelper-operationvaluetype-t.md)&gt;
 
 **Since:** 22
 

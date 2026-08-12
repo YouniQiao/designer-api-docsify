@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## syncContacts
@@ -34,10 +34,10 @@ A maximum of 400 contacts can be synchronized at a time. The caller must be runn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 | mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | Yes | Indicates the type of contact synchronization mode. |
 | progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | Yes | Indicates the information about the contact synchronization progress. |
-| contacts | Array&lt;Contact&gt; | Yes | Indicates the array of contact information to be synchronized into the database. |
+| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the array of contact information to be synchronized into the database. |
 
 **Return value:**
 
@@ -49,10 +49,10 @@ A maximum of 400 contacts can be synchronized at a time. The caller must be runn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700103](../errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
-| [16700004](../errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) | The number of contacts exceeds the limit. |
-| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| [16700003](../errorcode-contacts.md#16700003-background-service-calling-prohibited) | Background usage is prohibited. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-operation-canceled) | User cancel. |
+| [16700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700004-number-of-contacts-exceeds-the-limit) | The number of contacts exceeds the limit. |
+| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700003-background-service-calling-prohibited) | Background usage is prohibited. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
 

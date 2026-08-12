@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVAdsController
@@ -34,11 +34,11 @@ Create an ad playback controller associated with the player instance.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVAdsController \| undefined&gt; | If success, an Controller is returned. Otherwise returns null. |
+| Promise&lt;[AVAdsController](arkts-media-media-avadscontroller-i.md) \| undefined&gt; | If success, an Controller is returned. Otherwise returns null. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The player object corresponding to player does not exist or is invalid. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | The player object corresponding to player does not exist or is invalid. |
 

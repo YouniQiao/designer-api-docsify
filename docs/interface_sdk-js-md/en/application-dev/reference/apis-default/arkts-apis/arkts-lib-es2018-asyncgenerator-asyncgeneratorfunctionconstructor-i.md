@@ -24,7 +24,7 @@ Creates a new AsyncGenerator function.
 
 | Type | Description |
 | --- | --- |
-| AsyncGeneratorFunction |  |
+| [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |  |
 
 ## [[Construct]]
 
@@ -48,7 +48,7 @@ Creates a new AsyncGenerator function.
 
 | Type | Description |
 | --- | --- |
-| AsyncGeneratorFunction |  |
+| [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |  |
 
 ## length
 
@@ -86,7 +86,7 @@ readonly prototype: AsyncGeneratorFunction
 
 A reference to the prototype.
 
-**Type:** AsyncGeneratorFunction
+**Type:** [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

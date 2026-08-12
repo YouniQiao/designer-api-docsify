@@ -204,7 +204,7 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Padding \| Dimension \| [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes |
+| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 

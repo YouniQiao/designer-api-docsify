@@ -2,9 +2,9 @@
 
 ChipV2CloseIcon用于定义ChipV2组件关闭图标的功能属性类，包括无障碍功能属性。
 
-继承自[ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)。
+继承自[ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md#ChipV2Accessibility)。
 
-**继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md)
+**继承/实现关系：** ChipV2CloseIcon extends [ChipV2Accessibility](arkts-arkui-arkui-advanced-chipv2-chipv2accessibility-c.md#ChipV2Accessibility)
 
 **起始版本：** 26.0.0
 
@@ -56,7 +56,7 @@ size不为ChipV2Size.SMALL时，默认值：`\$r('sys.float.chip_normal_font_siz
 
 值为undefined时，按默认值处理。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.0.0
 

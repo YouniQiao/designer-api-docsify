@@ -30,7 +30,7 @@ constructor(durationTime: number)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [durationTime](#durationtime) | number | 是 |
+| [durationTime](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | number | 是 |
 
 ## 示例
 

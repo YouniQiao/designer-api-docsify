@@ -1,13 +1,13 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and   
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.VideoSession](arkts-camera-camera-videosession-i.md)
+**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -16,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## addInput
@@ -25,13 +25,13 @@ import { camera } from 'kits/@kit.CameraKit';
 addInput(cameraInput: CameraInput): void
 ```
 
-Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this session.
+Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance to this session.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.addInput](arkts-camera-camera-session-i.md#addinput)
+**Substitutes:** [addInput](arkts-camera-camera-session-i.md#addInput)
 
 <!--Device-CaptureSession-addInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-addInput(cameraInput: CameraInput): void-End-->
 
@@ -47,8 +47,8 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this sess
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
 
 ## addOutput
 
@@ -56,13 +56,13 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md) instance to this sess
 addOutput(cameraOutput: CameraOutput): void
 ```
 
-Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this session.
+Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instance to this session.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.addOutput](arkts-camera-camera-session-i.md#addoutput)
+**Substitutes:** [addOutput](arkts-camera-camera-session-i.md#addOutput)
 
 <!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-addOutput(cameraOutput: CameraOutput): void-End-->
 
@@ -78,8 +78,8 @@ Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance to this se
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
 
 ## beginConfig
 
@@ -93,7 +93,7 @@ Starts configuration for the session.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.beginConfig](arkts-camera-camera-session-i.md#beginconfig)
+**Substitutes:** [beginConfig](arkts-camera-camera-session-i.md#beginConfig)
 
 <!--Device-CaptureSession-beginConfig(): void--><!--Device-CaptureSession-beginConfig(): void-End-->
 
@@ -103,7 +103,7 @@ Starts configuration for the session.
 
 | Error Code ID |
 | --- |
-| [7400105](../errorcode-camera.md#7400105-session-configuration-locked) |
+| [7400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400105-session-configuration-locked) |
 
 ## commitConfig
 
@@ -117,7 +117,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)(callback:
+**Substitutes:** [commitConfig](camera.Session.commitConfig(callback:)
 
 <!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void-End-->
 
@@ -133,8 +133,8 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## commitConfig
 
@@ -148,7 +148,7 @@ Commits the configuration for this session. This API uses a promise to return th
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)()
+**Substitutes:** [commitConfig](arkts-camera-camera-session-i.md#commitConfig)()
 
 <!--Device-CaptureSession-commitConfig(): Promise<void>--><!--Device-CaptureSession-commitConfig(): Promise<void>-End-->
 
@@ -158,14 +158,14 @@ Commits the configuration for this session. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getActiveVideoStabilizationMode
 
@@ -179,7 +179,7 @@ Obtains the video stabilization mode in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Stabilization.getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getactivevideostabilizationmode)
+**Substitutes:** [getActiveVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#getActiveVideoStabilizationMode)
 
 <!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode--><!--Device-CaptureSession-getActiveVideoStabilizationMode(): VideoStabilizationMode-End-->
 
@@ -195,7 +195,7 @@ Obtains the video stabilization mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getExposureBiasRange
 
@@ -209,7 +209,7 @@ Obtains the exposure compensation values of the camera device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposureQuery.getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)
+**Substitutes:** [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange)
 
 <!--Device-CaptureSession-getExposureBiasRange(): Array<number>--><!--Device-CaptureSession-getExposureBiasRange(): Array<number>-End-->
 
@@ -219,13 +219,13 @@ Obtains the exposure compensation values of the camera device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getExposureMode
 
@@ -239,7 +239,7 @@ Obtains the exposure mode in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposure.getExposureMode](arkts-camera-camera-autoexposure-i.md#getexposuremode)
+**Substitutes:** [getExposureMode](arkts-camera-camera-autoexposure-i.md#getExposureMode)
 
 <!--Device-CaptureSession-getExposureMode(): ExposureMode--><!--Device-CaptureSession-getExposureMode(): ExposureMode-End-->
 
@@ -255,7 +255,7 @@ Obtains the exposure mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getExposureValue
 
@@ -269,7 +269,7 @@ Obtains the exposure value in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposure.getExposureValue](arkts-camera-camera-autoexposure-i.md#getexposurevalue)
+**Substitutes:** [getExposureValue](arkts-camera-camera-autoexposure-i.md#getExposureValue)
 
 <!--Device-CaptureSession-getExposureValue(): number--><!--Device-CaptureSession-getExposureValue(): number-End-->
 
@@ -285,7 +285,7 @@ Obtains the exposure value in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getFlashMode
 
@@ -299,7 +299,7 @@ Obtains the flash mode in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Flash.getFlashMode](arkts-camera-camera-flash-i.md#getflashmode)
+**Substitutes:** [getFlashMode](arkts-camera-camera-flash-i.md#getFlashMode)
 
 <!--Device-CaptureSession-getFlashMode(): FlashMode--><!--Device-CaptureSession-getFlashMode(): FlashMode-End-->
 
@@ -315,7 +315,7 @@ Obtains the flash mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getFocalLength
 
@@ -329,7 +329,7 @@ Obtains the focal length of the camera device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Focus.getFocalLength](arkts-camera-camera-focus-i.md#getfocallength)
+**Substitutes:** [getFocalLength](arkts-camera-camera-focus-i.md#getFocalLength)
 
 <!--Device-CaptureSession-getFocalLength(): number--><!--Device-CaptureSession-getFocalLength(): number-End-->
 
@@ -345,7 +345,7 @@ Obtains the focal length of the camera device.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getFocusMode
 
@@ -359,7 +359,7 @@ Obtains the focus mode in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Focus.getFocusMode](arkts-camera-camera-focus-i.md#getfocusmode)
+**Substitutes:** [getFocusMode](arkts-camera-camera-focus-i.md#getFocusMode)
 
 <!--Device-CaptureSession-getFocusMode(): FocusMode--><!--Device-CaptureSession-getFocusMode(): FocusMode-End-->
 
@@ -375,7 +375,7 @@ Obtains the focus mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getFocusPoint
 
@@ -389,7 +389,7 @@ Obtains the focal point of the camera device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Focus.getFocusPoint](arkts-camera-camera-focus-i.md#getfocuspoint)
+**Substitutes:** [getFocusPoint](arkts-camera-camera-focus-i.md#getFocusPoint)
 
 <!--Device-CaptureSession-getFocusPoint(): Point--><!--Device-CaptureSession-getFocusPoint(): Point-End-->
 
@@ -399,13 +399,13 @@ Obtains the focal point of the camera device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) |
+| [Point](arkts-camera-camera-point-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getMeteringPoint
 
@@ -419,7 +419,7 @@ Obtains the metering point of the camera device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposure.getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getmeteringpoint)
+**Substitutes:** [getMeteringPoint](arkts-camera-camera-autoexposure-i.md#getMeteringPoint)
 
 <!--Device-CaptureSession-getMeteringPoint(): Point--><!--Device-CaptureSession-getMeteringPoint(): Point-End-->
 
@@ -429,13 +429,13 @@ Obtains the metering point of the camera device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) |
+| [Point](arkts-camera-camera-point-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getZoomRatio
 
@@ -449,7 +449,7 @@ Obtains the zoom ratio in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Zoom.getZoomRatio](arkts-camera-camera-zoom-i.md#getzoomratio)
+**Substitutes:** [getZoomRatio](arkts-camera-camera-zoom-i.md#getZoomRatio)
 
 <!--Device-CaptureSession-getZoomRatio(): number--><!--Device-CaptureSession-getZoomRatio(): number-End-->
 
@@ -465,7 +465,7 @@ Obtains the zoom ratio in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## getZoomRatioRange
 
@@ -479,7 +479,7 @@ Obtains the supported zoom ratio range.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.ZoomQuery.getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getzoomratiorange)
+**Substitutes:** [getZoomRatioRange](arkts-camera-camera-zoomquery-i.md#getZoomRatioRange)
 
 <!--Device-CaptureSession-getZoomRatioRange(): Array<number>--><!--Device-CaptureSession-getZoomRatioRange(): Array<number>-End-->
 
@@ -489,13 +489,13 @@ Obtains the supported zoom ratio range.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## hasFlash
 
@@ -509,7 +509,7 @@ Checks whether the camera device has flash.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.FlashQuery.hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)
+**Substitutes:** [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash)
 
 <!--Device-CaptureSession-hasFlash(): boolean--><!--Device-CaptureSession-hasFlash(): boolean-End-->
 
@@ -525,7 +525,7 @@ Checks whether the camera device has flash.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## isExposureModeSupported
 
@@ -539,7 +539,7 @@ Checks whether an exposure mode is supported.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposureQuery.isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isexposuremodesupported)
+**Substitutes:** [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported)
 
 <!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean--><!--Device-CaptureSession-isExposureModeSupported(aeMode: ExposureMode): boolean-End-->
 
@@ -561,7 +561,7 @@ Checks whether an exposure mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## isFlashModeSupported
 
@@ -575,7 +575,7 @@ Checks whether the flash mode is supported.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.FlashQuery.isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)
+**Substitutes:** [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported)
 
 <!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean--><!--Device-CaptureSession-isFlashModeSupported(flashMode: FlashMode): boolean-End-->
 
@@ -597,7 +597,7 @@ Checks whether the flash mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## isFocusModeSupported
 
@@ -611,7 +611,7 @@ Checks whether a focus mode is supported.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.FocusQuery.isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported)
+**Substitutes:** [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported)
 
 <!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean--><!--Device-CaptureSession-isFocusModeSupported(afMode: FocusMode): boolean-End-->
 
@@ -633,7 +633,7 @@ Checks whether a focus mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## isVideoStabilizationModeSupported
 
@@ -647,7 +647,7 @@ Checks whether a video stabilization mode is supported.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.StabilizationQuery.isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isvideostabilizationmodesupported)
+**Substitutes:** [isVideoStabilizationModeSupported](arkts-camera-camera-stabilizationquery-i.md#isVideoStabilizationModeSupported)
 
 <!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean--><!--Device-CaptureSession-isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean-End-->
 
@@ -669,7 +669,7 @@ Checks whether a video stabilization mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## off('focusStateChange')
 
@@ -683,7 +683,7 @@ Unsubscribes from focus state change events.
 
 **Deprecated since:** 11
 
-**Substitutes:** camera.VideoSession.off(type:
+**Substitutes:** [off](camera.VideoSession.off(type:)
 
 <!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -694,7 +694,7 @@ Unsubscribes from focus state change events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'focusStateChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No |
 
 ## off('error')
 
@@ -708,7 +708,7 @@ Unsubscribes from CaptureSession error events. This API uses a callback to retur
 
 **Deprecated since:** 11
 
-**Substitutes:** camera.VideoSession.off(type:
+**Substitutes:** [off](camera.VideoSession.off(type:)
 
 <!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -737,7 +737,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Deprecated since:** 11
 
-**Substitutes:** camera.VideoSession.on(type:
+**Substitutes:** [on](camera.VideoSession.on(type:)
 
 <!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -748,7 +748,7 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'focusStateChange' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FocusState&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes |
 
 ## on('error')
 
@@ -766,7 +766,7 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 
 **Deprecated since:** 11
 
-**Substitutes:** camera.VideoSession.on(type:
+**Substitutes:** [on](camera.VideoSession.on(type:)
 
 <!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -791,7 +791,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.release](arkts-camera-camera-session-i.md#release)(callback:
+**Substitutes:** [release](camera.Session.release(callback:)
 
 <!--Device-CaptureSession-release(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-release(callback: AsyncCallback<void>): void-End-->
 
@@ -807,7 +807,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## release
 
@@ -821,7 +821,7 @@ Releases this session. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.release](arkts-camera-camera-session-i.md#release)()
+**Substitutes:** [release](arkts-camera-camera-session-i.md#release)()
 
 <!--Device-CaptureSession-release(): Promise<void>--><!--Device-CaptureSession-release(): Promise<void>-End-->
 
@@ -831,13 +831,13 @@ Releases this session. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## removeInput
 
@@ -845,13 +845,13 @@ Releases this session. This API uses a promise to return the result.
 removeInput(cameraInput: CameraInput): void
 ```
 
-Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this session.
+Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance from this session.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.removeInput](arkts-camera-camera-session-i.md#removeinput)
+**Substitutes:** [removeInput](arkts-camera-camera-session-i.md#removeInput)
 
 <!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void--><!--Device-CaptureSession-removeInput(cameraInput: CameraInput): void-End-->
 
@@ -867,8 +867,8 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
 
 ## removeOutput
 
@@ -876,13 +876,13 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md) instance from this
 removeOutput(cameraOutput: CameraOutput): void
 ```
 
-Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from this session.
+Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instance from this session.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.removeOutput](arkts-camera-camera-session-i.md#removeoutput)
+**Substitutes:** [removeOutput](arkts-camera-camera-session-i.md#removeOutput)
 
 <!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void--><!--Device-CaptureSession-removeOutput(cameraOutput: CameraOutput): void-End-->
 
@@ -898,8 +898,8 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instance from th
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
 
 ## setExposureBias
 
@@ -910,13 +910,13 @@ setExposureBias(exposureBias: number): void
 Sets an exposure compensation value (EV).
 
 Before the setting, you are advised to use   
-[getExposureBiasRange](arkts-camera-camera-capturesession-i.md#getexposurebiasrange) to obtain the supported values.
+[getExposureBiasRange](#getExposureBiasRange) to obtain the supported values.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposure.setExposureBias](arkts-camera-camera-autoexposure-i.md#setexposurebias)
+**Substitutes:** [setExposureBias](arkts-camera-camera-autoexposure-i.md#setExposureBias)
 
 <!--Device-CaptureSession-setExposureBias(exposureBias: number): void--><!--Device-CaptureSession-setExposureBias(exposureBias: number): void-End-->
 
@@ -932,7 +932,7 @@ Before the setting, you are advised to use
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setExposureMode
 
@@ -941,13 +941,13 @@ setExposureMode(aeMode: ExposureMode): void
 ```
 
 Sets an exposure mode. Before the setting, call   
-[isExposureModeSupported](arkts-camera-camera-capturesession-i.md#isexposuremodesupported) to check whether the target exposure mode is supported.
+[isExposureModeSupported](#isExposureModeSupported) to check whether the target exposure mode is supported.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposure.setExposureMode](arkts-camera-camera-autoexposure-i.md#setexposuremode)
+**Substitutes:** [setExposureMode](arkts-camera-camera-autoexposure-i.md#setExposureMode)
 
 <!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void--><!--Device-CaptureSession-setExposureMode(aeMode: ExposureMode): void-End-->
 
@@ -963,7 +963,7 @@ Sets an exposure mode. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setFlashMode
 
@@ -975,13 +975,13 @@ Sets a flash mode.
 
 Before the setting, do the following checks:
 
-1. Use [hasFlash](arkts-camera-camera-capturesession-i.md#hasflash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-capturesession-i.md#isflashmodesupported) to check whether the camera device supports the flash mode.
+1. Use [hasFlash](#hasFlash) to check whether the camera device has flash.2. Use [isFlashModeSupported](#isFlashModeSupported) to check whether the camera device supports the flash mode.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Flash.setFlashMode](arkts-camera-camera-flash-i.md#setflashmode)
+**Substitutes:** [setFlashMode](arkts-camera-camera-flash-i.md#setFlashMode)
 
 <!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void--><!--Device-CaptureSession-setFlashMode(flashMode: FlashMode): void-End-->
 
@@ -997,7 +997,7 @@ Before the setting, do the following checks:
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setFocusMode
 
@@ -1007,13 +1007,13 @@ setFocusMode(afMode: FocusMode): void
 
 Sets a focus mode.
 
-Before the setting, call [isFocusModeSupported](arkts-camera-camera-capturesession-i.md#isfocusmodesupported) to check whether the focus mode is supported.
+Before the setting, call [isFocusModeSupported](#isFocusModeSupported) to check whether the focus mode is supported.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Focus.setFocusMode](arkts-camera-camera-focus-i.md#setfocusmode)
+**Substitutes:** [setFocusMode](arkts-camera-camera-focus-i.md#setFocusMode)
 
 <!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void--><!--Device-CaptureSession-setFocusMode(afMode: FocusMode): void-End-->
 
@@ -1029,7 +1029,7 @@ Before the setting, call [isFocusModeSupported](arkts-camera-camera-capturesessi
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setFocusPoint
 
@@ -1045,7 +1045,7 @@ The coordinate system is based on the horizontal device direction with the devic
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint)
+**Substitutes:** [setFocusPoint](arkts-camera-camera-focus-i.md#setFocusPoint)
 
 <!--Device-CaptureSession-setFocusPoint(point: Point): void--><!--Device-CaptureSession-setFocusPoint(point: Point): void-End-->
 
@@ -1055,13 +1055,13 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setMeteringPoint
 
@@ -1077,7 +1077,7 @@ The coordinate system is based on the horizontal device direction with the devic
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint)
+**Substitutes:** [setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setMeteringPoint)
 
 <!--Device-CaptureSession-setMeteringPoint(point: Point): void--><!--Device-CaptureSession-setMeteringPoint(point: Point): void-End-->
 
@@ -1087,13 +1087,13 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| point | [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md) | Yes |
+| point | [Point](arkts-camera-camera-point-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setVideoStabilizationMode
 
@@ -1102,13 +1102,13 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
 Sets a video stabilization mode. Before the setting, call   
-[isVideoStabilizationModeSupported](arkts-camera-camera-capturesession-i.md#isvideostabilizationmodesupported) to check whether the target video stabilization mode is supported.
+[isVideoStabilizationModeSupported](#isVideoStabilizationModeSupported) to check whether the target video stabilization mode is supported.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Stabilization.setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setvideostabilizationmode)
+**Substitutes:** [setVideoStabilizationMode](arkts-camera-camera-stabilization-i.md#setVideoStabilizationMode)
 
 <!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void--><!--Device-CaptureSession-setVideoStabilizationMode(mode: VideoStabilizationMode): void-End-->
 
@@ -1124,7 +1124,7 @@ Sets a video stabilization mode. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setZoomRatio
 
@@ -1138,7 +1138,7 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Zoom.setZoomRatio](arkts-camera-camera-zoom-i.md#setzoomratio)
+**Substitutes:** [setZoomRatio](arkts-camera-camera-zoom-i.md#setZoomRatio)
 
 <!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void--><!--Device-CaptureSession-setZoomRatio(zoomRatio: number): void-End-->
 
@@ -1148,13 +1148,13 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| zoomRatio | number | Yes |
+| [zoomRatio](arkts-camera-camera-zoompointinfo-i.md) | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## start
 
@@ -1168,7 +1168,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.start](arkts-camera-camera-session-i.md#start)(callback:
+**Substitutes:** [start](camera.Session.start(callback:)
 
 <!--Device-CaptureSession-start(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-start(callback: AsyncCallback<void>): void-End-->
 
@@ -1184,8 +1184,8 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -1199,7 +1199,7 @@ Starts this session. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.start](arkts-camera-camera-session-i.md#start)()
+**Substitutes:** [start](arkts-camera-camera-session-i.md#start)()
 
 <!--Device-CaptureSession-start(): Promise<void>--><!--Device-CaptureSession-start(): Promise<void>-End-->
 
@@ -1209,14 +1209,14 @@ Starts this session. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## stop
 
@@ -1230,7 +1230,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)(callback:
+**Substitutes:** [stop](camera.Session.stop(callback:)
 
 <!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -1246,7 +1246,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## stop
 
@@ -1260,7 +1260,7 @@ Stops this session. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)()
+**Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)()
 
 <!--Device-CaptureSession-stop(): Promise<void>--><!--Device-CaptureSession-stop(): Promise<void>-End-->
 
@@ -1270,10 +1270,10 @@ Stops this session. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |

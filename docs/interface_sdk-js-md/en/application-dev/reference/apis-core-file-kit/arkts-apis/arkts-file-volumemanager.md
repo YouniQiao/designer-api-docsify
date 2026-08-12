@@ -15,7 +15,7 @@ The **volumeManager** module provides APIs for querying and managing volumes and
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## Summary

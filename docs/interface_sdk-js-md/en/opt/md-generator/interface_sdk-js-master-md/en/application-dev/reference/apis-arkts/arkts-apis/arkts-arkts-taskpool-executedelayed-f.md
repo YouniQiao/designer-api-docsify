@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executeDelayed
@@ -34,17 +34,17 @@ Executes a task after a given delay. In this execution mode, you can set the tas
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Object&gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -96,15 +96,15 @@ Executes the generic task with a delay without verifying the parameter type and 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
 
 ## Examples
 

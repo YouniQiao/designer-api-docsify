@@ -80,7 +80,7 @@ menuType?: MenuType
 
 默认值：MenuType.SELECTION_MENU。
 
-**类型：** [MenuType](../arkts-apis/arkts-arkui-menutype-e.md)
+**类型：** MenuType
 
 **起始版本：** 13
 
@@ -102,7 +102,7 @@ onDisappear?: Callback<void>
 
 自定义选择菜单关闭时回调。若需在菜单关闭时执行自定义逻辑（如恢复界面状态、清理临时数据），可传入此参数；不传入则无额外回调触发。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 10
 

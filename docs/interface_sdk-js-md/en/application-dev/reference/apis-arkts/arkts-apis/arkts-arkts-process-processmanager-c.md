@@ -15,7 +15,7 @@ Construct a **ProcessManager** object.
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit

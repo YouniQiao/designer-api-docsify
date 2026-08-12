@@ -5,15 +5,15 @@ InputMethodSetting提供输入法配置与查询能力，面向前台应用提�
 - **输入法变化订阅**：通过  
 [on('imeChange')](inputMethod.InputMethodSetting.on( type: 'imeChange', callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void ))订阅输入法及子类型变化事件，当用户切换输入法时收到通知。  
 - **输入法列表查询**：通过  
-[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods)查询已激活/未激活输入法列表，通过  
-[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods)查询所有已安装输入法列表，通过  
-[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype)查询指定输入法的子类型列表。  
+[getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getInputMethods)查询已激活/未激活输入法列表，通过  
+[getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getAllInputMethods)查询所有已安装输入法列表，通过  
+[listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listInputMethodSubtype)查询指定输入法的子类型列表。  
 - **面板可见性查询**：通过isPanelShown查询输入法面板是否显示。  
 - **输入法选择对话框**：通过showOptionalInputMethods显示输入法选择对话框（已废弃，建议使用InputMethodListDialog）。
 
-需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取InputMethodSetting实例后使用。
+需通过[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取InputMethodSetting实例后使用。
 
-下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)获取到InputMethodSetting实例后，通过实例调用。
+下列API均需使用[getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)获取到InputMethodSetting实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -45,23 +45,23 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 | --- | --- | --- |
 | bundleName | string | 是 |
 | extensionName | string | 是 |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | 是 |
+| [enabledState](arkts-ime-inputmethod-inputmethodproperty-i.md) | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-输入法未找到) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) |
+| [12800018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800018-输入法未找到) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -119,27 +119,27 @@ enableInputMethod(
 | --- | --- | --- |
 | bundleName | string | 是 |
 | extensionName | string | 是 |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | 是 |
+| [enabledState](arkts-ime-inputmethod-inputmethodproperty-i.md) | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | 是 |
 | userId | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-输入法未找到) |
-| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) |
+| [12800018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800018-输入法未找到) |
+| [12800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 
 ## getAllInputMethodsSync
 
@@ -169,18 +169,18 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 
 | 类型 |
 | --- |
-| Array&lt;InputMethodProperty&gt; |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 
 ## getCursorInfo
 
@@ -216,12 +216,12 @@ getCursorInfo(userId?: number): CursorInfo
 
 | 错误码ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
-| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 
 ## 示例
 
@@ -265,8 +265,8 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -317,12 +317,12 @@ getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSu
 
 | 错误码ID |
 | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 
 ## getInputMethodsSync
 
@@ -353,18 +353,18 @@ getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty
 
 | 类型 |
 | --- |
-| Array&lt;InputMethodProperty&gt; |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
-| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-包管理服务异常) |
+| [12800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 
 ## isPanelShown
 
@@ -398,9 +398,9 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -455,8 +455,8 @@ isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -483,7 +483,7 @@ try {
 off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。
+取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md#Panel)固定态软键盘显示事件。
 
 **起始版本：** 10
 
@@ -498,7 +498,7 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'imeShow' | 是 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | 否 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 |
 
 ## 示例
 
@@ -512,7 +512,7 @@ inputMethod.getSetting().off('imeShow');
 off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。
+取消订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md#Panel)固定态软键盘隐藏事件。
 
 **起始版本：** 10
 
@@ -527,7 +527,7 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'imeHide' | 是 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | 否 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 |
 
 ## 示例
 
@@ -563,7 +563,7 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## on('imeShow')
 
@@ -571,7 +571,7 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘显示事件。使用callback异步回调。
+订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md#Panel)固定态软键盘显示事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -586,13 +586,13 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'imeShow' | 是 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | 是 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -608,7 +608,7 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
 on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
-订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md)固定态软键盘隐藏事件。使用callback异步回调。
+订阅输入法[Panel](arkts-ime-inputmethodengine-panel-i.md#Panel)固定态软键盘隐藏事件。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -623,13 +623,13 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'imeHide' | 是 |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | 是 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -667,4 +667,4 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

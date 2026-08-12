@@ -11,7 +11,7 @@ input method property
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## enabledState
@@ -140,7 +140,7 @@ The id of input method
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethod.InputMethodProperty#id](arkts-ime-inputmethod-inputmethodproperty-i.md#id)
+**Substitutes:** [id](#id)
 
 <!--Device-InputMethodProperty-readonly methodId: string--><!--Device-InputMethodProperty-readonly methodId: string-End-->
 
@@ -176,7 +176,7 @@ The name of input method
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethod.InputMethodProperty#name](arkts-ime-inputmethod-inputmethodproperty-i.md#name)
+**Substitutes:** [name](#name)
 
 <!--Device-InputMethodProperty-readonly packageName: string--><!--Device-InputMethodProperty-readonly packageName: string-End-->
 

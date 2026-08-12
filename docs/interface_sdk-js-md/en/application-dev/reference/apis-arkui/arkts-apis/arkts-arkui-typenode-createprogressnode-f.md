@@ -29,5 +29,5 @@ Create a FrameNode of Progress type.On API 26.0.0 and above, It can also create 
 
 | Type | Description |
 | --- | --- |
-| [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Return Progress type FrameNode. |
+| Progress | Return Progress type FrameNode. |
 

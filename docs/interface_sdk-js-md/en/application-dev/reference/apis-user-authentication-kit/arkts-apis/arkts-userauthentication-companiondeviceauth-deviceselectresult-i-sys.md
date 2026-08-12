@@ -15,7 +15,7 @@ Returns the result of companion device selection. It is used to return the devic
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## deviceKeys

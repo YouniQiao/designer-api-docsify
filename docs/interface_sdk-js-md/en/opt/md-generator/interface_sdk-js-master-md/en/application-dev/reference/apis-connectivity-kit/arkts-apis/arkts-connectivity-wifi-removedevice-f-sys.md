@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## removeDevice
@@ -20,7 +20,7 @@ Deletes a Wi-Fi network with a specified ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.removeDeviceConfig
+**Substitutes:** [removeDeviceConfig](ohos.wifiManager/wifiManager.removeDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

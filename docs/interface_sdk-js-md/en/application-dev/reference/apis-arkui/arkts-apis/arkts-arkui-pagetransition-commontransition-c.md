@@ -92,7 +92,7 @@ Called when the slide in effect of the transition is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SlideEffect](../arkts-components/arkts-arkui-slideeffect-e.md) | Yes |  |
+| value | [SlideEffect](arkts-arkui-pagetransition-slideeffect-e.md) | Yes |  |
 
 **Return value:**
 

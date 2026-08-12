@@ -18,7 +18,7 @@ types: ImageAnalyzerType[]
 
 图像AI分析类型。
 
-**类型：** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
+**类型：** [ImageAnalyzerType](arkts-arkui-imagecommon-imageanalyzertype-e.md)[]
 
 **起始版本：** 23
 

@@ -11,7 +11,7 @@ The correspondence information between IP and MAC address.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## iface
@@ -38,7 +38,7 @@ ipAddress: NetAddress
 
 Link address of the network.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 22
 

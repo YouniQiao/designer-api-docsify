@@ -2,7 +2,7 @@
 
 相机设备输入对象。
 
-会话中[Session](arkts-camera-camera-session-i.md)使用的相机信息。
+会话中[Session](arkts-camera-camera-session-i.md#Session)使用的相机信息。
 
 **起始版本：** 10
 
@@ -36,7 +36,7 @@ close(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## close
 
@@ -58,13 +58,13 @@ close(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getPhysicalCameraOrientation
 
@@ -131,7 +131,7 @@ off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'error' | 是 |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 ## off('cameraOcclusionDetection')
@@ -155,13 +155,13 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## on('error')
 
@@ -188,7 +188,7 @@ on(type: 'error', camera: CameraDevice, callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'error' | 是 |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 ## on('cameraOcclusionDetection')
@@ -216,13 +216,13 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraOcclusionDetectionResult&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## open
 
@@ -250,9 +250,9 @@ open(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [7400107](../errorcode-camera.md#7400107-相机冲突) |
-| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-相机冲突) |
+| [7400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-安全策略无法使用相机) |
 
 ## open
 
@@ -274,16 +274,16 @@ open(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [7400107](../errorcode-camera.md#7400107-相机冲突) |
-| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-相机冲突) |
+| [7400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-安全策略无法使用相机) |
 
 ## open
 
@@ -311,15 +311,15 @@ open(isSecureEnabled: boolean): Promise<bigint>
 
 | 类型 |
 | --- |
-| Promise&lt;bigint&gt; |
+| Promise & lt;bigint & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [7400107](../errorcode-camera.md#7400107-相机冲突) |
-| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-相机冲突) |
+| [7400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-安全策略无法使用相机) |
 
 ## open
 
@@ -347,16 +347,16 @@ open(type: CameraConcurrentType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [7400107](../errorcode-camera.md#7400107-相机冲突) |
-| [7400108](../errorcode-camera.md#7400108-安全策略无法使用相机) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400107-相机冲突) |
+| [7400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400108-安全策略无法使用相机) |
 
 ## usePhysicalCameraOrientation
 
@@ -378,11 +378,11 @@ usePhysicalCameraOrientation(isUsed: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isUsed | boolean | 是 |
+| [isUsed](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-runninglock-runninglock-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |

@@ -20,5 +20,5 @@ Defines a callback invoked when the **viewport-fit** configuration in the web pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| viewportFit | [ViewportFit](../arkts-apis/arkts-arkweb-web-viewportfit-e.md) | Yes | Viewport type for **viewport-fit** in the web page **<meta>** tag. |
+| viewportFit | [ViewportFit](arkts-arkweb-viewportfit-e.md) | Yes | Viewport type for **viewport-fit** in the web page **<meta>** tag. |
 

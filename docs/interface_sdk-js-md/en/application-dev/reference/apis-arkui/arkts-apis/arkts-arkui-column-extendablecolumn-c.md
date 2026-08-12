@@ -2,7 +2,7 @@
 
 Defines the Extendable Column.
 
-**Inheritance/Implementation:** ExtendableColumn implements [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md/arkts-arkui-column-attribute.md)
+**Inheritance/Implementation:** ExtendableColumn implements [ColumnAttribute](arkts-arkui-column-columnattribute-i.md#ColumnAttribute)
 
 **Since:** 26.0.0
 
@@ -39,8 +39,8 @@ Constructor of Extendable Column.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| options | [ColumnOptions](../arkts-components/arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| options | [ColumnOptions](arkts-arkui-column-columnoptions-i.md) \| [ColumnOptionsV2](arkts-arkui-column-columnoptionsv2-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -76,9 +76,9 @@ Entry of Extendable Column.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setColumnOptions
 
@@ -102,7 +102,7 @@ Set the Column Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](../arkts-components/arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | No |  |
+| options | [ColumnOptions](arkts-arkui-column-columnoptions-i.md) \| [ColumnOptionsV2](arkts-arkui-column-columnoptionsv2-i.md) | No |  |
 
 **Return value:**
 

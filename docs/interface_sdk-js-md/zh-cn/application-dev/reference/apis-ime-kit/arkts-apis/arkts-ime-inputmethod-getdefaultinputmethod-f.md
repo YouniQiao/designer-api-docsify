@@ -26,7 +26,7 @@ function getDefaultInputMethod(): InputMethodProperty
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## 示例
 

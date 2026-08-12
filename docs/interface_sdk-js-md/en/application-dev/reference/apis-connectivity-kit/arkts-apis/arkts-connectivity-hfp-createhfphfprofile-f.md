@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from 'kits/@kit.ConnectivityKit';
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## createHfpHfProfile
@@ -34,5 +34,5 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 

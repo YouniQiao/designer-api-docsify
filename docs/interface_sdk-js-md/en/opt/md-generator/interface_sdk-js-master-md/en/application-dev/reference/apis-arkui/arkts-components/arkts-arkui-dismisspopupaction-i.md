@@ -16,7 +16,7 @@ dismiss: Callback<void>
 
 Callback for dismissing the popup. This API is called only when the popup needs to be dismissed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 12
 

@@ -2,7 +2,7 @@
 
 Defines HierarchicalSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
 
 **Since:** 12
 

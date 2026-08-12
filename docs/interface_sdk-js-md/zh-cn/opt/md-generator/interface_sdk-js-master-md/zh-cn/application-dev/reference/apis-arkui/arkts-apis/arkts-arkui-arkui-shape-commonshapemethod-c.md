@@ -64,7 +64,7 @@ offset(offset: Position): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [offset](#offset) | [Position](arkts-arkui-display-position-i.md) | 是 |
+| [offset](#offset) | [Position](arkts-arkui-units-position-i.md) | 是 |
 
 **返回值：**
 
@@ -96,7 +96,7 @@ position(position: Position): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [position](#position) | [Position](arkts-arkui-display-position-i.md) | 是 |
+| [position](#position) | [Position](arkts-arkui-units-position-i.md) | 是 |
 
 **返回值：**
 

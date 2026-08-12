@@ -29,15 +29,15 @@ function getDisallowedBluetoothProtocols(admin: Want, accountId: number): Array<
 
 | 类型 |
 | --- |
-| Array&lt;Protocol&gt; |
+| Array & lt;Protocol & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 
@@ -73,7 +73,7 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 > **说明：**
 > 
-> 1. 本接口与[getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](arkts-mdm-bluetoothmanager-getdisallowedbluetoothprotocols-f.md#getdisallowedbluetoothprotocols)接口为
+> 1. 本接口与[getDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#getDisallowedBluetoothProtocols)接口为
 > 重载接口。本接口增加了policy参数，用于按传输策略查询对应的禁用配置。
 
 **起始版本：** 26.0.0
@@ -98,16 +98,16 @@ function getDisallowedBluetoothProtocols(admin: Want | null, accountId: number, 
 
 | 类型 |
 | --- |
-| Array&lt;Protocol&gt; |
+| Array & lt;Protocol & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

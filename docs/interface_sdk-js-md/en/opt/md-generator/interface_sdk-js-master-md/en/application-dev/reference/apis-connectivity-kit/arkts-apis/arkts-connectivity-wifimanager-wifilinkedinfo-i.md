@@ -11,7 +11,7 @@ Wi-Fi connection information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## band
@@ -72,7 +72,7 @@ connState: ConnState
 
 The state of this Wi-Fi connection.
 
-**Type:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
+**Type:** ConnState
 
 **Since:** 9
 

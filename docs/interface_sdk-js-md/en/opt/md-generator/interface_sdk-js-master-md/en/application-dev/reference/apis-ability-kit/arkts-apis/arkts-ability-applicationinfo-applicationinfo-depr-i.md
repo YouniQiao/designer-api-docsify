@@ -1,18 +1,18 @@
 # ApplicationInfo
 
 The module provides application information. Unless otherwise specified, the information is obtained through  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo).
+[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo-2).
 
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md) instead.
+> [bundleManager-ApplicationInfo](#ApplicationInfo) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [applicationInfo:ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
+**Substitutes:** [ApplicationInfo](#ApplicationInfo)
 
 <!--Device-unnamed-export interface ApplicationInfo--><!--Device-unnamed-export interface ApplicationInfo-End-->
 
@@ -34,7 +34,7 @@ Access token ID of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#accessTokenId
+**Substitutes:** [accessTokenId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#accessTokenId)
 
 <!--Device-ApplicationInfo-readonly accessTokenId: number--><!--Device-ApplicationInfo-readonly accessTokenId: number-End-->
 
@@ -47,7 +47,7 @@ readonly codePath: string
 ```
 
 Installation directory of the application. Do not access resource files using concatenated paths. Use  
-[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md) instead.
+[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager) instead.
 
 **Type:** string
 
@@ -57,7 +57,7 @@ Installation directory of the application. Do not access resource files using co
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#codePath
+**Substitutes:** [codePath](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#codePath)
 
 <!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
 
@@ -79,7 +79,7 @@ Application description.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#description
+**Substitutes:** [description](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#description)
 
 <!--Device-ApplicationInfo-readonly description: string--><!--Device-ApplicationInfo-readonly description: string-End-->
 
@@ -101,7 +101,7 @@ ID of the application description.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#descriptionId
+**Substitutes:** [descriptionId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#descriptionId)
 
 <!--Device-ApplicationInfo-readonly descriptionId: number--><!--Device-ApplicationInfo-readonly descriptionId: number-End-->
 
@@ -123,7 +123,7 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#enabled
+**Substitutes:** [enabled](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#enabled)
 
 <!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
 
@@ -156,7 +156,7 @@ readonly entryDir: string
 ```
 
 Path for storing application files. Do not access resource files using concatenated paths. Use  
-[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md) instead.
+[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager) instead.
 
 **Type:** string
 
@@ -186,7 +186,7 @@ Application icon.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#icon
+**Substitutes:** [icon](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#icon)
 
 <!--Device-ApplicationInfo-readonly icon: string--><!--Device-ApplicationInfo-readonly icon: string-End-->
 
@@ -208,7 +208,7 @@ ID of the application icon.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#iconId
+**Substitutes:** [iconId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#iconId)
 
 <!--Device-ApplicationInfo-readonly iconId: string--><!--Device-ApplicationInfo-readonly iconId: string-End-->
 
@@ -230,7 +230,7 @@ Application label.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#label
+**Substitutes:** [label](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#label)
 
 <!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
 
@@ -252,7 +252,7 @@ ID of the application label.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#labelId
+**Substitutes:** [labelId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#labelId)
 
 <!--Device-ApplicationInfo-readonly labelId: string--><!--Device-ApplicationInfo-readonly labelId: string-End-->
 
@@ -267,7 +267,7 @@ readonly metaData: Map<string, Array<CustomizeData>>
 Custom metadata of the application.
 
 The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo).
+[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo-2).
 
 **Type:** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;&gt;
 
@@ -277,7 +277,7 @@ The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#metadataArray
+**Substitutes:** [metadataArray](arkts-ability-applicationinfo-i.md#metadataArray)
 
 <!--Device-ApplicationInfo-readonly metaData: Map<string, Array<CustomizeData>>--><!--Device-ApplicationInfo-readonly metaData: Map<string, Array<CustomizeData>>-End-->
 
@@ -299,7 +299,7 @@ Application module information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleInfo#hapModulesInfo
+**Substitutes:** [hapModulesInfo](arkts-ability-bundleinfo-i.md#hapModulesInfo)
 
 <!--Device-ApplicationInfo-readonly moduleInfos: Array<ModuleInfo>--><!--Device-ApplicationInfo-readonly moduleInfos: Array<ModuleInfo>-End-->
 
@@ -312,7 +312,7 @@ readonly moduleSourceDirs: Array<string>
 ```
 
 Relative paths for storing application resources. Do not access resource files using concatenated paths. Use  
-[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md) instead.
+[@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager) instead.
 
 **Type:** Array&lt;string&gt;
 
@@ -342,7 +342,7 @@ Application name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#name)
 
 <!--Device-ApplicationInfo-readonly name: string--><!--Device-ApplicationInfo-readonly name: string-End-->
 
@@ -357,7 +357,7 @@ readonly permissions: Array<string>
 Permissions required for accessing the application.
 
 The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo).
+[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo-2).
 
 **Type:** Array&lt;string&gt;
 
@@ -367,7 +367,7 @@ The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#permissions
+**Substitutes:** [permissions](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#permissions)
 
 <!--Device-ApplicationInfo-readonly permissions: Array<string>--><!--Device-ApplicationInfo-readonly permissions: Array<string>-End-->
 
@@ -389,7 +389,7 @@ Process name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#process
+**Substitutes:** [process](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#process)
 
 <!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
 
@@ -411,7 +411,7 @@ Whether the application is removable. **true** if removable, **false** otherwise
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#removable
+**Substitutes:** [removable](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#removable)
 
 <!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
 
@@ -453,7 +453,7 @@ Whether the application is a system application. **true** if yes, **false** othe
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#systemApp
+**Substitutes:** [systemApp](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#systemApp)
 
 <!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
 
@@ -475,7 +475,7 @@ UID of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ApplicationInfo#uid
+**Substitutes:** [uid](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#uid)
 
 <!--Device-ApplicationInfo-readonly uid: number--><!--Device-ApplicationInfo-readonly uid: number-End-->
 

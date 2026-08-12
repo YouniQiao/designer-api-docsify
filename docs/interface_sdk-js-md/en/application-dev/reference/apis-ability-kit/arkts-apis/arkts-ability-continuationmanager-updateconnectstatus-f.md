@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## updateConnectStatus
@@ -25,7 +25,7 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ Instructs the device selection module to update the device connection state. Thi
 | token | number | Yes | Token obtained after the registration of the continuation management service. |
 | deviceId | string | Yes | Device ID. |
 | status | [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md) | Yes | Device connection state. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the state is updated, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -73,7 +73,7 @@ Instructs the device selection module to update the device connection state. Thi
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+**Substitutes:** [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **Model restriction:** This API can be used only in the stage model.
 

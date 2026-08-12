@@ -44,5 +44,5 @@ Provide the ability to obtain the coordinates and size of component drawing area
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | UI execution context not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | UI execution context not found. |
 

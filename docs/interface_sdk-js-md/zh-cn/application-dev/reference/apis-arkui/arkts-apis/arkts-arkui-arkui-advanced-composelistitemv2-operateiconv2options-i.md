@@ -36,7 +36,7 @@ accessibilityDescription?: ResourceStr
 
 图标的无障碍描述。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ accessibilityText?: ResourceStr
 
 图标的无障碍文本属性。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -118,7 +118,7 @@ value?: ResourceStr
 
 文本内容或图标地址。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

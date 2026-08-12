@@ -6,7 +6,7 @@ Defines the type of data to return for a subscription to data changes of the ste
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/SensorId#PEDOMETER
+**Substitutes:** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -17,7 +17,7 @@ Defines the type of data to return for a subscription to data changes of the ste
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -32,7 +32,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -61,7 +61,7 @@ Defines a **StepCounterResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 

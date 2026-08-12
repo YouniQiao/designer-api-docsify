@@ -18,7 +18,7 @@ readonly grantedBundleInfos?: Array<GrantedBundleInfo>
 
 List of apps for which the **Allow access to notifications on this device** switch is toggled on.
 
-**Type:** Array&lt;GrantedBundleInfo&gt;
+**Type:** Array&lt;[GrantedBundleInfo](arkts-notification-notificationcommondef-grantedbundleinfo-i.md)&gt;
 
 **Since:** 26.0.0
 

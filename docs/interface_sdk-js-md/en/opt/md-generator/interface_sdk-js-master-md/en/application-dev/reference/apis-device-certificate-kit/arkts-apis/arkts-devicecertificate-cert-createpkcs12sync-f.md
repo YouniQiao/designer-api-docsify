@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## createPkcs12Sync
@@ -39,10 +39,10 @@ Creates P12. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
-| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 

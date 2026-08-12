@@ -18,7 +18,7 @@ stepsAccessibility?: Map<double, SliderStepItemAccessibility>
 
 Map key value range: [0, INT32_MAX]. When the key value is set to a negative double or a decimal,the setting does not take effect.
 
-**Type:** Map&lt;double, SliderStepItemAccessibility&gt;
+**Type:** Map&lt;double, [SliderStepItemAccessibility](arkts-arkui-slider-sliderstepitemaccessibility-i.md)&gt;
 
 **Since:** 23
 

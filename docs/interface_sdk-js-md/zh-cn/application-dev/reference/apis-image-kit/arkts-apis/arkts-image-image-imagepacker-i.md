@@ -2,11 +2,11 @@
 
 ImagePacker类，用于图片压缩和编码。
 
-在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker)构建一个ImagePacker实例。
+在调用ImagePacker的方法前，需要先通过[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker)构建一个ImagePacker实例。
 
 编码期间，请避免修改或释放作为输入的ImageSource/PixelMap/Picture对象，以免出现crash或其他未定义行为。
 
-由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](arkts-image-image-imagepacker-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的supportedFormats属性查看）。
 
@@ -53,8 +53,8 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
-| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-编码失败) | Encode failed. |
+| [7800202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packBinaryImageToTiffFile
 
@@ -98,8 +98,8 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: Packi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
-| [7800202](../errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-编码失败) | Encode failed. |
+| [7800202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-imagepacker无效参数) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packToData
 
@@ -123,7 +123,7 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
@@ -136,15 +136,15 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | If the parameter is invalid. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToData
 
@@ -172,7 +172,7 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap源。 |
+| source | PixelMap | 是 | 编码的PixelMap源。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
@@ -185,15 +185,15 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | If the parameter is invalid. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToDataFromPixelmapSequence
 
@@ -228,8 +228,8 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Failed to encode image. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-编码失败) | Failed to encode image. |
 
 ## packToFile
 
@@ -257,7 +257,7 @@ packToFile(source: ImageSource, fd: int, options: PackingOption, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码进文件成功，err为undefined，否则为错误对象。 |
@@ -266,15 +266,15 @@ packToFile(source: ImageSource, fd: int, options: PackingOption, callback: Async
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -302,7 +302,7 @@ packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
@@ -316,15 +316,15 @@ packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -356,7 +356,7 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap资源。 |
+| source | PixelMap | 是 | 编码的PixelMap资源。 |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当编码图片进文件成功，err为undefined，否则为错误对象。 |
@@ -365,15 +365,15 @@ packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -405,7 +405,7 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap资源。 |
+| source | PixelMap | 是 | 编码的PixelMap资源。 |
 | fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。取值范围为[0，65535]。 |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
@@ -419,15 +419,15 @@ packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980119](../errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
-| [62980120](../errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
-| [62980252](../errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-图片编码失败) | Failed to encode the image. |
+| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-图片添加像素映射失败) | Add pixelmap out of range. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-编码icc失败) | Failed to encode icc. |
+| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-创建surface失败) | Failed to create surface. |
 
 ## packToFile
 
@@ -469,8 +469,8 @@ packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-编码失败) | Encode failed. |
 
 ## packToFileFromPixelmapSequence
 
@@ -512,8 +512,8 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, optio
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Failed to encode image. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-编码失败) | Failed to encode image. |
 
 ## packing
 
@@ -525,7 +525,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 > **说明：**
 > 
-> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
+> [packToData](#packToData)代替。
 
 **起始版本：** 6
 
@@ -533,7 +533,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 **废弃版本：** 13
 
-**替代接口：** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**替代接口：** [packToData](#packToData)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -545,7 +545,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
@@ -559,7 +559,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 > **说明：**
 > 
-> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
+> [packToData](#packToData)代替。
 
 **起始版本：** 6
 
@@ -567,7 +567,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 **废弃版本：** 13
 
-**替代接口：** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**替代接口：** [packToData](#packToData)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -579,7 +579,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [ImageSource](arkts-image-sendableimage-imagesource-i.md) | 是 | 编码的ImageSource。 |
+| source | ImageSource | 是 | 编码的ImageSource。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
@@ -598,7 +598,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 > **说明：**
 > 
-> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
+> [packToData](#packToData)代替。
 > > **注意：**
 > 
 > 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
@@ -609,7 +609,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 **废弃版本：** 13
 
-**替代接口：** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**替代接口：** [packToData](#packToData)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -621,7 +621,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap资源。 |
+| source | PixelMap | 是 | 编码的PixelMap资源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | 是 | 回调函数，当图片编码成功，err为undefined，data为获取到的压缩或编码数据；否则为错误对象。 |
 
@@ -635,7 +635,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 > **说明：**
 > 
-> [packToData](arkts-image-image-imagepacker-i.md#packtodata)代替。
+> [packToData](#packToData)代替。
 > > **注意：**
 > 
 > 接口如果返回"PixelMap mismatch"，表明参数异常，可能是PixelMap对象被提前释放了。需要调用方排查，在该方法调用结束后再释放PixelMap对象。
@@ -646,7 +646,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 **废弃版本：** 13
 
-**替代接口：** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**替代接口：** [packToData](#packToData)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -658,7 +658,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 | 编码的PixelMap源。 |
+| source | PixelMap | 是 | 编码的PixelMap源。 |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | 是 | 设置编码参数。 |
 
 **返回值：**
@@ -700,8 +700,8 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../errorcode-image.md#7800301-编码失败) | Encode failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-编码失败) | Encode failed. |
 
 ## release
 

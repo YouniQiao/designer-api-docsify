@@ -56,7 +56,7 @@ try {
 beginGroup(): Query
 ```
 
-创建一个带有左括号的查询条件组。必须与[endGroup()](arkts-arkdata-distributedkvstore-query-c.md#endgroup)成对使用，以形成完整的查询条件分组。
+创建一个带有左括号的查询条件组。必须与[endGroup()](#endGroup)成对使用，以形成完整的查询条件分组。
 
 **起始版本：** 9
 
@@ -118,9 +118,9 @@ deviceId(deviceId: string): Query
 
 > **说明：**
 > 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md)中的
+> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的
 > networkId，通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 > 方法得到。
 > 
 > deviceId具体获取方式请参考
@@ -150,7 +150,7 @@ deviceId(deviceId: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -175,7 +175,7 @@ try {
 endGroup(): Query
 ```
 
-创建一个带有右括号的查询条件组。必须与[beginGroup()](arkts-arkdata-distributedkvstore-query-c.md#begingroup)成对使用，以形成完整的查询条件分组。
+创建一个带有右括号的查询条件组。必须与[beginGroup()](#beginGroup)成对使用，以形成完整的查询条件分组。
 
 **起始版本：** 9
 
@@ -221,7 +221,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 > **说明：**
 > 
-> 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -251,7 +251,7 @@ equalTo(field: string, value: number | number | string | boolean): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getSqlLike
 
@@ -302,7 +302,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 > **说明：**
 > 
-> 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -332,7 +332,7 @@ greaterThan(field: string, value: number | number | string | boolean): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## greaterThanOrEqualTo
 
@@ -344,7 +344,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 > **说明：**
 > 
-> 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -374,7 +374,7 @@ greaterThanOrEqualTo(field: string, value: number | number | string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## inNumber
 
@@ -386,7 +386,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 > **说明：**
 > 
-> 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -416,7 +416,7 @@ inNumber(field: string, valueList: number[] | number[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## inString
 
@@ -428,7 +428,7 @@ inString(field: string, valueList: string[]): Query
 
 > **说明：**
 > 
-> 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -458,7 +458,7 @@ inString(field: string, valueList: string[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -488,7 +488,7 @@ isNotNull(field: string): Query
 
 > **说明：**
 > 
-> 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -517,7 +517,7 @@ isNotNull(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -547,7 +547,7 @@ isNull(field: string): Query
 
 > **说明：**
 > 
-> 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -576,7 +576,7 @@ isNull(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -606,7 +606,7 @@ lessThan(field: string, value: number | number | string): Query
 
 > **说明：**
 > 
-> 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -636,7 +636,7 @@ lessThan(field: string, value: number | number | string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## lessThanOrEqualTo
 
@@ -648,7 +648,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 > **说明：**
 > 
-> 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -678,7 +678,7 @@ lessThanOrEqualTo(field: string, value: number | number | string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## like
 
@@ -690,7 +690,7 @@ like(field: string, value: string): Query
 
 > **说明：**
 > 
-> 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -720,7 +720,7 @@ like(field: string, value: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -773,7 +773,7 @@ limit(total: number, offset: number): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -806,7 +806,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 > **说明：**
 > 
-> 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -836,7 +836,7 @@ notEqualTo(field: string, value: number | number | string | boolean): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notInNumber
 
@@ -848,7 +848,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 > **说明：**
 > 
-> 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -878,7 +878,7 @@ notInNumber(field: string, valueList: number[] | number[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## notInString
 
@@ -890,7 +890,7 @@ notInString(field: string, valueList: string[]): Query
 
 > **说明：**
 > 
-> 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -920,7 +920,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -992,7 +992,7 @@ orderByAsc(field: string): Query
 
 > **说明：**
 > 
-> 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -1021,7 +1021,7 @@ orderByAsc(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1052,7 +1052,7 @@ orderByDesc(field: string): Query
 
 > **说明：**
 > 
-> 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -1081,7 +1081,7 @@ orderByDesc(field: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1134,7 +1134,7 @@ prefixKey(prefix: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1229,7 +1229,7 @@ setSuggestIndex(index: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1260,7 +1260,7 @@ unlike(field: string, value: string): Query
 
 > **说明：**
 > 
-> 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md)使用。
+> 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
 > 
 > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
 > 取键值数据库示例。
@@ -1290,7 +1290,7 @@ unlike(field: string, value: string): Query
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

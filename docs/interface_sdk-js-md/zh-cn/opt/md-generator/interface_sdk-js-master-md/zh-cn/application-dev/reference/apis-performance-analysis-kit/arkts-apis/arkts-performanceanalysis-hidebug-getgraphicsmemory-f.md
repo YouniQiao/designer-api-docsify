@@ -6,7 +6,7 @@
 function getGraphicsMemory(): Promise<number>
 ```
 
-��ȡӦ���Դ��ܴ�С��gl + graph����ʹ��Promise�첽�ص���
+获取应用显存总大小（gl + graph），使用Promise异步回调。
 
 **起始版本：** 14
 
@@ -20,13 +20,13 @@ function getGraphicsMemory(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

@@ -58,7 +58,7 @@ emails?: Email[]
 
 联系人的邮箱地址列表。
 
-**类型：** [Email](arkts-contacts-contact-email-c.md)[]
+**类型：** Email[]
 
 **起始版本：** 7
 
@@ -78,7 +78,7 @@ events?: Event[]
 
 联系人的生日、周年纪念等重要日期列表。
 
-**类型：** [Event](arkts-contacts-contact-event-c.md)[]
+**类型：** Event[]
 
 **起始版本：** 7
 
@@ -258,7 +258,7 @@ phoneNumbers?: PhoneNumber[]
 
 联系人的电话号码列表。
 
-**类型：** [PhoneNumber](arkts-contacts-contact-phonenumber-c.md)[]
+**类型：** PhoneNumber[]
 
 **起始版本：** 7
 
@@ -278,7 +278,7 @@ portrait?: Portrait
 
 联系人的头像。
 
-**类型：** [Portrait](arkts-contacts-contact-portrait-c.md)
+**类型：** Portrait
 
 **起始版本：** 7
 

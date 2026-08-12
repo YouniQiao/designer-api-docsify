@@ -72,7 +72,7 @@ operationInfo: OperationInfo[]
 
 操作信息列表。
 
-**类型：** [OperationInfo](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md)[]
+**类型：** OperationInfo[]
 
 **起始版本：** 26.0.0
 

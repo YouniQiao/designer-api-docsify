@@ -26,7 +26,7 @@ Lists the files and directories in the **Recently deleted** list.
 
 | 类型 |
 | --- |
-| Array&lt;FileInfo&gt; |
+| Array & lt;FileInfo & gt; |
 
 **错误码：**
 

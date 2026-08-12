@@ -13,7 +13,7 @@ Defines the decode with stream related options parameters.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## stream

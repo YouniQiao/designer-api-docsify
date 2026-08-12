@@ -59,7 +59,7 @@ Defines PatternLock Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PatternLockAttribute&gt; | Yes | PatternLock attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PatternLockAttribute](arkts-arkui-patternlock-patternlockattribute-i.md)&gt; | Yes | PatternLock attribute instance |
 
 **Return value:**
 

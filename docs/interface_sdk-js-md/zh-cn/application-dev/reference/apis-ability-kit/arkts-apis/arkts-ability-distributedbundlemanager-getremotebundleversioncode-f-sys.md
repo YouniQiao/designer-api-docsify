@@ -26,7 +26,7 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 远程设备ID。可以通过 [getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync) 获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
+| deviceId | string | 是 | 远程设备ID。可以通过 [getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) 获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
 | bundleName | string | 是 | 应用的包名。 |
 
 **返回值：**
@@ -39,12 +39,12 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
 

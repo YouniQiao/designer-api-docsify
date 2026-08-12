@@ -17,7 +17,7 @@ LEFT
 ```
 
 The barrier is on the left side of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md).
+[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
 
@@ -38,7 +38,7 @@ RIGHT
 ```
 
 The barrier is on the right side of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md).
+[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
 
@@ -59,7 +59,7 @@ TOP
 ```
 
 The barrier is at the top of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md).
+[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
 
@@ -80,7 +80,7 @@ BOTTOM
 ```
 
 The barrier is at the bottom of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md).
+[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
 

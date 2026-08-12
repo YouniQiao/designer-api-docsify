@@ -1,7 +1,7 @@
 # KeyboardDelegate
 
 KeyboardDelegate是键盘事件监听代理对象，用于输入法应用监听物理键盘按键事件和编辑框文本/光标/选区变化事件。输入法应用通过  
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取该实例。  
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate)获取该实例。  
 **核心功能概述：**
 
 - **物理键盘按键事件**：通过on('keyDown'|'keyUp')订阅物理按键的按下/抬起事件，通过on('keyEvent')订阅更完整的按键事件（含组合键信息）。callback返回true表示按键事件被消费，返回  
@@ -13,7 +13,7 @@ false表示不消费。
 - 开发物理键盘快捷键处理功能时，订阅on('keyDown'|'keyUp')或on('keyEvent')事件拦截特定按键。  
 - 需要根据编辑框实时状态（光标、选区、文本、属性）调整输入法行为时，订阅对应的on事件。
 
-下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate)获取到KeyboardDelegate实例后，通过实例调用。
+下列API均需使用[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate)获取到KeyboardDelegate实例后，通过实例调用。
 
 **起始版本：** 8
 
@@ -307,7 +307,7 @@ offEditorAttributeChanged(callback?: Callback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | 否 | 所要取消订阅的回调处理函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 否 | 所要取消订阅的回调处理函数。 参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
 
@@ -606,7 +606,7 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | 是 | 设置监听类型，固定取值为'keyEvent'。 |
-| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。&lt;br/&gt;- 入参按键事件信息的数据类型为 [InputKeyEvent](arkts-ime-inputmethodengine-keyevent-i.md)。&lt;br/&gt;- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
+| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。&lt;br/&gt;- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#KeyEvent)。&lt;br/&gt;- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
 
 ## 示例
 
@@ -825,7 +825,7 @@ onEditorAttributeChanged(callback: Callback<EditorAttribute>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EditorAttribute&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | 是 | 回调函数，返回变化的编辑框属性。 |
 
 ## 示例
 

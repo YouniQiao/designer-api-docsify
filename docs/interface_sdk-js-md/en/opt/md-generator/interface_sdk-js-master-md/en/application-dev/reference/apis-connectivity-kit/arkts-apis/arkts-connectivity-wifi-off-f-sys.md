@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## off('streamChange')
@@ -20,7 +20,7 @@ Unsubscribe Wi-Fi stream change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.off#event:streamChange
+**Substitutes:** [streamChange](ohos.wifiManager/wifiManager.off#event:streamChange)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -52,7 +52,7 @@ Unsubscribe Wi-Fi hotspot sta join events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.off#event:hotspotStaJoin
+**Substitutes:** [hotspotStaJoin](ohos.wifiManager/wifiManager.off#event:hotspotStaJoin)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -82,7 +82,7 @@ Unsubscribe Wi-Fi hotspot sta leave events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.off#event:hotspotStaLeave
+**Substitutes:** [hotspotStaLeave](ohos.wifiManager/wifiManager.off#event:hotspotStaLeave)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 

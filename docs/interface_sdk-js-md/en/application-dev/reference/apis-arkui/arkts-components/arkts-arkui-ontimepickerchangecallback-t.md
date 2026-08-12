@@ -22,5 +22,5 @@ Triggered when a time is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [TimePickerResult](../arkts-apis/arkts-arkui-timepicker-timepickerresult-i.md) | Yes | Time in 24-hour format. |
+| result | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | Yes | Time in 24-hour format. |
 

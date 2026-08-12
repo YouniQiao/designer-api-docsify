@@ -6,7 +6,7 @@ Enumerates the album subtypes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
+**Substitutes:** [AlbumSubtype](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#AlbumSubtype)
 
 <!--Device-userFileManager-enum AlbumSubType--><!--Device-userFileManager-enum AlbumSubType-End-->
 
@@ -26,7 +26,7 @@ User album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#user_generic)
+**Substitutes:** [USER_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#USER_GENERIC)
 
 <!--Device-AlbumSubType-USER_GENERIC = 1--><!--Device-AlbumSubType-USER_GENERIC = 1-End-->
 
@@ -46,7 +46,7 @@ Favorites.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#favorite)
+**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#FAVORITE)
 
 <!--Device-AlbumSubType-FAVORITE = 1025--><!--Device-AlbumSubType-FAVORITE = 1025-End-->
 
@@ -66,7 +66,7 @@ Video album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#video)
+**Substitutes:** [VIDEO](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#VIDEO)
 
 <!--Device-AlbumSubType-VIDEO--><!--Device-AlbumSubType-VIDEO-End-->
 
@@ -86,7 +86,7 @@ Hidden album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#hidden)
+**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#HIDDEN)
 
 <!--Device-AlbumSubType-HIDDEN--><!--Device-AlbumSubType-HIDDEN-End-->
 
@@ -106,7 +106,7 @@ Trash.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#trash)
+**Substitutes:** [TRASH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#TRASH)
 
 <!--Device-AlbumSubType-TRASH--><!--Device-AlbumSubType-TRASH-End-->
 
@@ -126,7 +126,7 @@ Album for screenshots and screen recording files.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#screenshot)
+**Substitutes:** [SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#SCREENSHOT)
 
 <!--Device-AlbumSubType-SCREENSHOT--><!--Device-AlbumSubType-SCREENSHOT-End-->
 
@@ -146,7 +146,7 @@ Album for photos and videos taken by the camera.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#camera)
+**Substitutes:** [CAMERA](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md#CAMERA)
 
 <!--Device-AlbumSubType-CAMERA--><!--Device-AlbumSubType-CAMERA-End-->
 
@@ -166,7 +166,7 @@ Any album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubtype.ANY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#any)
+**Substitutes:** [ANY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#ANY)
 
 <!--Device-AlbumSubType-ANY = 2147483647--><!--Device-AlbumSubType-ANY = 2147483647-End-->
 

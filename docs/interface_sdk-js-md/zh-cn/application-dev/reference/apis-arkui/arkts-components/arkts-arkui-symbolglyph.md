@@ -33,7 +33,7 @@ SymbolGlyph(value?: Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
+| value | Resource | 否 | SymbolGlyph组件的资源名，如 \$r('sys.symbol.ohos_wifi')。不传入时不显示图标。 |
 
 ## 汇总
 

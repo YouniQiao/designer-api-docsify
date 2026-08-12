@@ -1,6 +1,6 @@
 # MetadataObject
 
-Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
+Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ Describes the camera metadata, which is the data source of [CameraInput](arkts-c
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## boundingBox
@@ -24,7 +24,7 @@ readonly boundingBox: Rect
 
 Metadata rectangle.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 10
 

@@ -20,5 +20,5 @@ Callback to be invoked when an item in a **PhotoPickerComponent** is clicked.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| itemInfo | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes |
+| [itemInfo](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-onscreen-awarenessitem-i-sys.md) | [ItemInfo](arkts-medialibrary-file-photopickercomponent-iteminfo-c.md) | Yes |
 | clickType | [ClickType](arkts-medialibrary-file-photopickercomponent-clicktype-e.md) | Yes |

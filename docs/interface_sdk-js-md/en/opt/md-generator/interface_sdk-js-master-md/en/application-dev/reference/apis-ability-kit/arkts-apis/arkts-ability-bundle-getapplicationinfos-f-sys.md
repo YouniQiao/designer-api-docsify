@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getApplicationInfos
@@ -18,7 +18,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.bundle.bundleManager#getAllApplicationInfo
+**Substitutes:** [getAllApplicationInfo](ohos.bundle.bundleManager#getAllApplicationInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -66,7 +66,7 @@ Obtains information about installed apps for the user to which the caller belong
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.bundle.bundleManager#getAllApplicationInfo
+**Substitutes:** [getAllApplicationInfo](ohos.bundle.bundleManager#getAllApplicationInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -112,7 +112,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.bundle.bundleManager#getAllApplicationInfo
+**Substitutes:** [getAllApplicationInfo](ohos.bundle.bundleManager#getAllApplicationInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

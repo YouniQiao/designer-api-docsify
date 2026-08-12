@@ -13,7 +13,7 @@ Defines the parameters for sending data over the UDPSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address
@@ -24,7 +24,7 @@ address: NetAddress
 
 Destination address.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 10
 

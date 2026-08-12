@@ -14,7 +14,7 @@ function getAppMemorySize(): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#getAppMemorySize
+**替代接口：** [getAppMemorySize](ohos.app.ability.appManager/appManager#getAppMemorySize)
 
 <!--Device-appManager-function getAppMemorySize(): Promise<number>--><!--Device-appManager-function getAppMemorySize(): Promise<number>-End-->
 
@@ -54,7 +54,7 @@ function getAppMemorySize(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#getAppMemorySize
+**替代接口：** [getAppMemorySize](ohos.app.ability.appManager/appManager#getAppMemorySize)
 
 <!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void--><!--Device-appManager-function getAppMemorySize(callback: AsyncCallback<number>): void-End-->
 

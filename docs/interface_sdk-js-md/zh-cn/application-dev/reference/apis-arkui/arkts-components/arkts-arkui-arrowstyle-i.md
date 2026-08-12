@@ -20,7 +20,7 @@ arrowColor?: ResourceColor
 
 默认值：'#182431'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** #182431
 
@@ -58,7 +58,7 @@ showBackground为true时，arrowSize为backgroundSize的3/4。
 
 不支持设置百分比。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** When isSidebarMiddle is false, the default value is 18vp, Otherwise, the default value is 24vp
 
@@ -90,7 +90,7 @@ backgroundColor?: ResourceColor
 
 默认值：'#19182431'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1 [since 10 - 10] @default When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1 [since 11]
 
@@ -124,7 +124,7 @@ backgroundSize?: Length
 
 不支持设置百分比。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** When isSidebarMiddle is false, the default value is 24vp, Otherwise,the default value is 32vp
 

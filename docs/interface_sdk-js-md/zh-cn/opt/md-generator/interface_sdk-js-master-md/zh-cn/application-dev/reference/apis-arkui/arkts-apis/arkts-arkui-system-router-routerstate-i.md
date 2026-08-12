@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#RouterState
+**替代接口：** [RouterState](ohos.router#RouterState)
 
 <!--Device-unnamed-export interface RouterState--><!--Device-unnamed-export interface RouterState-End-->
 
@@ -26,7 +26,7 @@ index: number
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router.RouterState#index
+**替代接口：** [index](ohos.router.RouterState#index)
 
 <!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
@@ -46,7 +46,7 @@ name: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router.RouterState#name
+**替代接口：** [name](ohos.router.RouterState#name)
 
 <!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
@@ -66,7 +66,7 @@ path: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router.RouterState#path
+**替代接口：** [path](ohos.router.RouterState#path)
 
 <!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
 

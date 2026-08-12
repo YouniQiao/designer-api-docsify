@@ -25,4 +25,4 @@ type LoginEvent = (controlType: LoginType, id?: string) => Promise<QrCodeInfo[]>
 
 | 类型 |
 | --- |
-| Promise&lt;QrCodeInfo[]&gt; |
+| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; |

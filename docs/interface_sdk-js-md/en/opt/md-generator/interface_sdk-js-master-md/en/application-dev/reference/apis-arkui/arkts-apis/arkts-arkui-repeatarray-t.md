@@ -20,6 +20,6 @@ Defines a union type for **Repeat** data source parameters.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;T&gt; |
-| [ReadonlyArray&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-readonlyarray-i.md) |
-| [Readonly&lt;Array&lt;T&gt;&gt;](../../apis-default/arkts-apis/arkts-readonly-t.md) |
+| Array & lt;T & gt; |
+| ReadonlyArray & lt;T & gt; |
+| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md) & lt;Array & lt;T & gt; & gt; |

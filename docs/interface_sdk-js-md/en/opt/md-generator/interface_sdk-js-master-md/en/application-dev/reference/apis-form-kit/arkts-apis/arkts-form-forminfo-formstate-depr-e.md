@@ -6,7 +6,7 @@ Enumerates the widget states.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo#FormState
+**Substitutes:** [FormState](ohos.app.form.formInfo/formInfo#FormState)
 
 <!--Device-formInfo-enum FormState--><!--Device-formInfo-enum FormState-End-->
 
@@ -24,7 +24,7 @@ Unknown state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormState#UNKNOWN
+**Substitutes:** [UNKNOWN](ohos.app.form.formInfo/formInfo.FormState#UNKNOWN)
 
 <!--Device-FormState-UNKNOWN = -1--><!--Device-FormState-UNKNOWN = -1-End-->
 
@@ -42,7 +42,7 @@ Default state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormState#DEFAULT
+**Substitutes:** [DEFAULT](ohos.app.form.formInfo/formInfo.FormState#DEFAULT)
 
 <!--Device-FormState-DEFAULT = 0--><!--Device-FormState-DEFAULT = 0-End-->
 
@@ -60,7 +60,7 @@ Ready state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormState#READY
+**Substitutes:** [READY](ohos.app.form.formInfo/formInfo.FormState#READY)
 
 <!--Device-FormState-READY = 1--><!--Device-FormState-READY = 1-End-->
 

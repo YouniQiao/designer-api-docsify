@@ -11,7 +11,7 @@ Defines the axis range of an input device.
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## axis
@@ -22,7 +22,7 @@ axis: AxisType
 
 Axis type of an input device.
 
-**Type:** [AxisType](../../apis-arkui/arkts-apis/arkts-arkui-axistype-e.md)
+**Type:** AxisType
 
 **Since:** 8
 
@@ -118,7 +118,7 @@ source: SourceType
 
 Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** SourceType
 
 **Since:** 8
 

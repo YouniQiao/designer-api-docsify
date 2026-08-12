@@ -68,7 +68,7 @@ edgeEffect?: ChainEdgeEffect
 
 Edge effect of chain animation.
 
-**Type:** [ChainEdgeEffect](../arkts-components/arkts-arkui-chainedgeeffect-e-sys.md)
+**Type:** [ChainEdgeEffect](arkts-arkui-list-chainedgeeffect-e-sys.md)
 
 **Default:** ChainEdgeEffect.DEFAULT
 

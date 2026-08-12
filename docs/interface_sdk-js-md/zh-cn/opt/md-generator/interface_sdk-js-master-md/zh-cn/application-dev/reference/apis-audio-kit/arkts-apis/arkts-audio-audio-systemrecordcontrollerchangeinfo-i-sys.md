@@ -38,7 +38,7 @@ sourceType?: SourceType
 
 启用录制控制器时由应用程序配置的预期音频源类型。用于匹配对应的录制场景和降噪模式。
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** SourceType
 
 **起始版本：** 26.0.0
 

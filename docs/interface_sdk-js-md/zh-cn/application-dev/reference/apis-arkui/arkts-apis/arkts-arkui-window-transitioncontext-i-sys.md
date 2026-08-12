@@ -18,7 +18,7 @@
 completeTransition(isCompleted: boolean): void
 ```
 
-设置属性转换的最终完成状态。该函数需要在动画函数[animateTo()](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)执行后设置。
+设置属性转换的最终完成状态。该函数需要在动画函数[animateTo()](./@internal/component/ets/common)执行后设置。
 
 **起始版本：** 9
 
@@ -40,8 +40,8 @@ completeTransition(isCompleted: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -82,7 +82,7 @@ toWindow: Window
 
 动画的目标窗口。
 
-**类型：** [Window](arkts-arkui-window-window-i-sys.md)
+**类型：** [Window](arkts-arkui-window-window-i.md)
 
 **起始版本：** 9
 

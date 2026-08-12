@@ -18,7 +18,7 @@ readonly targets: Record<string, double>
 
 Used to store the names and weights of deformation targets.The weight value is usually within the range of [0.0, 1.0].
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, double&gt;
 
 **Since:** 20
 

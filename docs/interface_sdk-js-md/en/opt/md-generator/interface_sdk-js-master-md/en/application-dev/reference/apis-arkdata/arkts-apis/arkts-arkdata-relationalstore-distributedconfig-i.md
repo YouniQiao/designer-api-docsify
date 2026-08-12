@@ -11,7 +11,7 @@ Defines a struct for distributed configuration of a table.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## assetConflictPolicy
@@ -92,7 +92,7 @@ Default value: **false**.
 autoSync: boolean
 ```
 
-Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudsync)API needs to be called to trigger device-cloud sync.
+Whether the table supports automatic device-cloud synchronization. If the value is **true**, the system can automatically trigger device-cloud sync. If the value is **false**, the system cannot automatically trigger device-cloud sync, and the [cloudSync](arkts-arkdata-relationalstore-rdbstore-i.md#cloudSync)API needs to be called to trigger device-cloud sync.
 
 **Type:** boolean
 

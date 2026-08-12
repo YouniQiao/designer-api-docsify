@@ -3,13 +3,13 @@
 ###### Child Components
  Not supported
  ###### Attributes
- The [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+ The [universal attributes](./@internal/component/ets/common) are not supported.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## Summary

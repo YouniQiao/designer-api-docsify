@@ -6,13 +6,13 @@
 function dumpHeapData(filename: string): void
 ```
 
-�����������ת��������`filename.heapsnapshot`�ļ���
+虚拟机堆数据转储，生成`filename.heapsnapshot`文件。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [hidebug.dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata)(filename
+**替代接口：** [dumpJsHeapData](hidebug.dumpJsHeapData(filename)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 

@@ -12,7 +12,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)
+**替代接口：** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md#fdopenStream)
 
 <!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>-End-->
 
@@ -29,7 +29,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 
 | 类型 |
 | --- |
-| Promise&lt;Stream&gt; |
+| Promise&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; |
 
 
 ## fdopenStream
@@ -44,7 +44,7 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)
+**替代接口：** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md#fdopenStream)
 
 <!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
@@ -56,4 +56,4 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 | --- | --- | --- |
 | fd | number | 是 |
 | mode | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | 是 |

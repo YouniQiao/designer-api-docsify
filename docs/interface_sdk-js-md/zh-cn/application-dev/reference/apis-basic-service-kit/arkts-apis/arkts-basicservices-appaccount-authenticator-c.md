@@ -33,7 +33,7 @@ addAccountImplicitly(
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.Authenticator.createAccountImplicitly](arkts-basicservices-appaccount-authenticator-c.md#createaccountimplicitly)(options:
+**替代接口：** [createAccountImplicitly](appAccount.Authenticator.createAccountImplicitly(options:)
 
 <!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -95,7 +95,7 @@ auth(name: string, authType: string, options: Record<string, RecordData>, callba
 | --- | --- | --- | --- |
 | name | string | 是 | 应用账号的名称。最大长度为512个字符。 |
 | authType | string | 是 | 应用账号的鉴权类型。自定义数据，最大长度为1024个字符。 |
-| options | Record&lt;string, RecordData&gt; | 是 | 鉴权所需要的可选项。 |
+| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 鉴权所需要的可选项。 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 | 认证器回调，用于返回鉴权结果。 |
 
 ## authenticate
@@ -122,7 +122,7 @@ authenticate(
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.Authenticator.auth](arkts-basicservices-appaccount-authenticator-c.md#auth)(name:
+**替代接口：** [auth](appAccount.Authenticator.auth(name:)
 
 <!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 

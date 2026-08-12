@@ -8,7 +8,7 @@ Wi-Fi connection information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo
+**Substitutes:** [WifiLinkedInfo](ohos.wifiManager/wifiManager.WifiLinkedInfo)
 
 <!--Device-wifi-interface WifiLinkedInfo--><!--Device-wifi-interface WifiLinkedInfo-End-->
 
@@ -17,7 +17,7 @@ Wi-Fi connection information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## band
@@ -36,7 +36,7 @@ The frequency band of a Wi-Fi access point.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.band
+**Substitutes:** [band](ohos.wifiManager/wifiManager.WifiLinkedInfo.band)
 
 <!--Device-WifiLinkedInfo-band: number--><!--Device-WifiLinkedInfo-band: number-End-->
 
@@ -58,7 +58,7 @@ The BSSID of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.bssid
+**Substitutes:** [bssid](ohos.wifiManager/wifiManager.WifiLinkedInfo.bssid)
 
 <!--Device-WifiLinkedInfo-bssid: string--><!--Device-WifiLinkedInfo-bssid: string-End-->
 
@@ -72,7 +72,7 @@ connState: ConnState
 
 The state of this Wi-Fi connection.
 
-**Type:** [ConnState](arkts-connectivity-wifimanager-connstate-e.md)
+**Type:** ConnState
 
 **Since:** 6
 
@@ -80,7 +80,7 @@ The state of this Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.connState
+**Substitutes:** [connState](ohos.wifiManager/wifiManager.WifiLinkedInfo.connState)
 
 <!--Device-WifiLinkedInfo-connState: ConnState--><!--Device-WifiLinkedInfo-connState: ConnState-End-->
 
@@ -102,7 +102,7 @@ The frequency of a Wi-Fi access point.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.frequency
+**Substitutes:** [frequency](ohos.wifiManager/wifiManager.WifiLinkedInfo.frequency)
 
 <!--Device-WifiLinkedInfo-frequency: number--><!--Device-WifiLinkedInfo-frequency: number-End-->
 
@@ -124,7 +124,7 @@ The IP address of this Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.ipAddress
+**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.WifiLinkedInfo.ipAddress)
 
 <!--Device-WifiLinkedInfo-ipAddress: number--><!--Device-WifiLinkedInfo-ipAddress: number-End-->
 
@@ -146,7 +146,7 @@ Whether the SSID of the access point (AP) of this Wi-Fi connection is hidden.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.isHidden
+**Substitutes:** [isHidden](ohos.wifiManager/wifiManager.WifiLinkedInfo.isHidden)
 
 <!--Device-WifiLinkedInfo-isHidden: boolean--><!--Device-WifiLinkedInfo-isHidden: boolean-End-->
 
@@ -168,7 +168,7 @@ Whether this Wi-Fi connection restricts the data volume.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.isRestricted
+**Substitutes:** [isRestricted](ohos.wifiManager/wifiManager.WifiLinkedInfo.isRestricted)
 
 <!--Device-WifiLinkedInfo-isRestricted: boolean--><!--Device-WifiLinkedInfo-isRestricted: boolean-End-->
 
@@ -190,7 +190,7 @@ The speed of a Wi-Fi access point.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.linkSpeed
+**Substitutes:** [linkSpeed](ohos.wifiManager/wifiManager.WifiLinkedInfo.linkSpeed)
 
 <!--Device-WifiLinkedInfo-linkSpeed: number--><!--Device-WifiLinkedInfo-linkSpeed: number-End-->
 
@@ -212,7 +212,7 @@ The Wi-Fi MAC address of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.macAddress
+**Substitutes:** [macAddress](ohos.wifiManager/wifiManager.WifiLinkedInfo.macAddress)
 
 <!--Device-WifiLinkedInfo-macAddress: string--><!--Device-WifiLinkedInfo-macAddress: string-End-->
 
@@ -234,7 +234,7 @@ The RSSI(dBm) of a Wi-Fi access point.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.rssi
+**Substitutes:** [rssi](ohos.wifiManager/wifiManager.WifiLinkedInfo.rssi)
 
 <!--Device-WifiLinkedInfo-rssi: number--><!--Device-WifiLinkedInfo-rssi: number-End-->
 
@@ -256,7 +256,7 @@ The SSID of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiLinkedInfo.ssid
+**Substitutes:** [ssid](ohos.wifiManager/wifiManager.WifiLinkedInfo.ssid)
 
 <!--Device-WifiLinkedInfo-ssid: string--><!--Device-WifiLinkedInfo-ssid: string-End-->
 

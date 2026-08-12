@@ -50,7 +50,7 @@ Returns the event target information of the component.
 
 | Type | Description |
 | --- | --- |
-| [EventTargetInfo](arkts-arkui-eventtargetinfo-c.md) | the event target information of the component. |
+| [EventTargetInfo](arkts-arkui-gesture-eventtargetinfo-c.md) | the event target information of the component. |
 
 ## isHostBelongsTo
 

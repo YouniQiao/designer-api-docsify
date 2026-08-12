@@ -30,7 +30,7 @@ left?: LengthMetrics
 
 取值范围：[0, +∞)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.0.0
 
@@ -64,7 +64,7 @@ right?: LengthMetrics
 
 取值范围：[0, +∞)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.0.0
 

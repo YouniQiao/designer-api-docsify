@@ -13,7 +13,7 @@ Defines the animation options for drag preview.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## curve
@@ -24,7 +24,7 @@ curve?: Curve | ICurve
 
 Animation curve.
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| ICurve
+**Type:** Curve \| ICurve
 
 **Since:** 23
 

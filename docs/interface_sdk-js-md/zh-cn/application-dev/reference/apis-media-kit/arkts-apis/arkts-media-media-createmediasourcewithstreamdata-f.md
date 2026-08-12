@@ -22,7 +22,7 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | 是 | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
+| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 | 可设置MediaStream数组，支持的流媒体格式：HTTP-FLV。 |
 
 **返回值：**
 
@@ -61,7 +61,7 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | 是 | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
+| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 | Array of MediaStream objects. The supported streaming media format is HTTP-FLV. |
 
 **返回值：**
 

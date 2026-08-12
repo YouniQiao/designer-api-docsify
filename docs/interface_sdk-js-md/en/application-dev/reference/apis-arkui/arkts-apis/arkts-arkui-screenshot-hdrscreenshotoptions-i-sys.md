@@ -15,7 +15,7 @@ Describes the HDR screenshot options.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -24,7 +24,7 @@ import { screenshot } from 'kits/@kit.ArkUI';
 displayId?: long
 ```
 
-ID of the [display](arkts-arkui-display-displaystate-e.md) device on which the screen region is to be captured. The value must be an integer. The default value is **0**.
+ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) device on which the screen region is to be captured. The value must be an integer. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

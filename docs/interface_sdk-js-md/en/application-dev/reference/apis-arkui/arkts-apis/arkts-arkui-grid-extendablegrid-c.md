@@ -2,7 +2,7 @@
 
 Defines the Extendable Grid.
 
-**Inheritance/Implementation:** ExtendableGrid implements [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md/arkts-arkui-grid-attribute.md)
+**Inheritance/Implementation:** ExtendableGrid implements [GridAttribute](arkts-arkui-grid-gridattribute-i.md#GridAttribute)
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Constructor of Extendable Grid.
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No |  |
 | layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -78,9 +78,9 @@ Entry of Extendable Grid.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setGridOptions
 

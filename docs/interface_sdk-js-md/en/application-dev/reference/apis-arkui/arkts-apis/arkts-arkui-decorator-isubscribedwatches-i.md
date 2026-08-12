@@ -2,7 +2,7 @@
 
 Define ISubscribedWatches interface.
 
-**Inheritance/Implementation:** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-arkui-decorator-iwatchsubscriberregister-i.md)
+**Inheritance/Implementation:** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-arkui-decorator-iwatchsubscriberregister-i.md#IWatchSubscriberRegister)
 
 **Since:** 23
 

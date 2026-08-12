@@ -1,7 +1,7 @@
 # FontMetricsFlags
 
 Enumerates the font measurement flags, which is used to specify whether a field in the  
-[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md) struct is valid.
+[FontMetrics](arkts-arkgraphics2d-drawing-fontmetrics-i.md#FontMetrics) struct is valid.
 
 **Since:** 12
 

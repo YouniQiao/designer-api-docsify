@@ -6,7 +6,7 @@
 
 **废弃版本：** 13
 
-**替代接口：** Navigation#NavPathStack
+**替代接口：** [NavPathStack](arkts-arkui-navpathstack-c.md#NavPathStack)
 
 <!--Device-unnamed-declare enum NavRouteMode--><!--Device-unnamed-declare enum NavRouteMode-End-->
 
@@ -24,7 +24,7 @@ PUSH_WITH_RECREATE
 
 **废弃版本：** 13
 
-**替代接口：** Navigation#LaunchMode
+**替代接口：** [LaunchMode](Navigation#LaunchMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,7 +44,7 @@ PUSH
 
 **废弃版本：** 13
 
-**替代接口：** Navigation#LaunchMode
+**替代接口：** [LaunchMode](Navigation#LaunchMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,7 +64,7 @@ REPLACE
 
 **废弃版本：** 13
 
-**替代接口：** Navigation#LaunchMode
+**替代接口：** [LaunchMode](Navigation#LaunchMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

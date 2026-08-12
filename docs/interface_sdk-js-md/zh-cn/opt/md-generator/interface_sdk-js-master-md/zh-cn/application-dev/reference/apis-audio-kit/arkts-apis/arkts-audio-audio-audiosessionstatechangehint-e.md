@@ -2,7 +2,7 @@
 
 枚举用于音频会话状态变更提示。
 
-当用户监听到音频会话状态变化事件（即收到[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md)事件）时，获取相关信息。
+当用户监听到音频会话状态变化事件（即收到[AudioSessionStateChangedEvent](arkts-audio-audio-audiosessionstatechangedevent-i.md#AudioSessionStateChangedEvent)事件）时，获取相关信息。
 
 此类型表示根据焦点策略对音频会话执行的操作，包括暂停、调整音量等。
 
@@ -79,7 +79,7 @@ AUDIO_SESSION_STATE_CHANGE_HINT_DUCK = 4
 提示音频会话躲避开始，降低音量播放。
 
 如果已启用  
-[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers)，此时可以选择执行静音操作。
+[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enableMuteSuggestionWhenMixWithOthers)，此时可以选择执行静音操作。
 
 **起始版本：** 20
 
@@ -96,7 +96,7 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNDUCK = 5
 提示音频会话躲避结束，恢复音量播放。
 
 如果已启用  
-[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enablemutesuggestionwhenmixwithothers)，此时可取消静音。
+[enableMuteSuggestionWhenMixWithOthers](arkts-audio-audio-audiosessionmanager-i.md#enableMuteSuggestionWhenMixWithOthers)，此时可取消静音。
 
 **起始版本：** 20
 
@@ -148,9 +148,9 @@ AUDIO_SESSION_STATE_CHANGE_HINT_MUTE = 8
 
 提示音频会话静音。
 
-该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior)设置参数  
-[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用  
-[setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene)，且音频会话已激活。
+该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setAudioSessionBehavior)设置参数  
+[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags).MUTE_WHEN_INTERRUPTED，并已调用  
+[setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setAudioSessionScene)，且音频会话已激活。
 
 **起始版本：** 24
 
@@ -168,9 +168,9 @@ AUDIO_SESSION_STATE_CHANGE_HINT_UNMUTE = 9
 
 提示音频会话解除静音，恢复播放。
 
-该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionbehavior)设置参数  
-[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md).MUTE_WHEN_INTERRUPTED，并已调用  
-[setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setaudiosessionscene)，且音频会话已激活。
+该提示仅在以下条件满足后才会收到：通过接口[setAudioSessionBehavior](arkts-audio-audio-audiosessionmanager-i.md#setAudioSessionBehavior)设置参数  
+[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags).MUTE_WHEN_INTERRUPTED，并已调用  
+[setAudioSessionScene](arkts-audio-audio-audiosessionmanager-i.md#setAudioSessionScene)，且音频会话已激活。
 
 **起始版本：** 24
 

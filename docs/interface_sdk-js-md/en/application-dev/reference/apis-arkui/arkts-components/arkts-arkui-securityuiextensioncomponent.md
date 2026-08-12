@@ -41,7 +41,7 @@ Creates a **SecurityUIExtensionComponent** component to embed and display the UI
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | import('../api/@ohos.app.ability.Want').default | Yes | Ability information to load. The **UIExtensionAbilit**y to be started is determined by both **bundleName** and **abilityName**. In addition, the **ability.want.params.uiExtensionType** field must be specified in **parameters** to indicate the type of the **UIExtensionAbility**. Currently, only **sysPicker/photoPicker** is supported. |
-| options | [SecurityUIExtensionOptions](../arkts-apis/arkts-arkui-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md) | No | Options used to construct **SecurityUIExtensionComponent**. If this parameter is left empty, the default value is used for each field. |
+| options | [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md) | No | Options used to construct **SecurityUIExtensionComponent**. If this parameter is left empty, the default value is used for each field. |
 
 ## Summary
 

@@ -11,7 +11,7 @@ Provides basic parameters for creating an **ArcList** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## header
@@ -22,7 +22,7 @@ header?: ComponentContent
 
 Header component.
 
-**Type:** [ComponentContent](arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 18
 

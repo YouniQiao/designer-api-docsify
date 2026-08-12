@@ -13,7 +13,7 @@ Represents the configuration of a transaction object.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## transactionType

@@ -11,7 +11,7 @@ Rectangular area of the text, indicating the rectangular space occupied by the t
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## direction
@@ -22,7 +22,7 @@ direction: TextDirection
 
 Text direction.
 
-**Type:** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
+**Type:** TextDirection
 
 **Since:** 12
 

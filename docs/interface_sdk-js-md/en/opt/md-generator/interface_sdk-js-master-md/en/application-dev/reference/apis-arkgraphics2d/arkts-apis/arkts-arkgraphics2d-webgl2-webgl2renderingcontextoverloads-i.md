@@ -83,7 +83,7 @@ Sets buffer data from ArrayBufferView with offset
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | usage | webgl.GLenum | Yes |
 | srcOffset | webgl.GLuint | Yes |
 | length | webgl.GLuint | No |
@@ -140,7 +140,7 @@ Sets buffer sub data with offset
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
 | dstByteOffset | webgl.GLintptr | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 | length | webgl.GLuint | No |
 
@@ -218,7 +218,7 @@ Compressed texture image 2D from ArrayBufferView
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | border | webgl.GLint | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -300,7 +300,7 @@ Compressed texture sub image 2D from ArrayBufferView
 | width | webgl.GLsizei | Yes |
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -338,7 +338,7 @@ Reads pixels from the framebuffer to ArrayBufferView
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| dstData | ArrayBufferView \| null | Yes |
+| dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## readPixels
 
@@ -411,7 +411,7 @@ Reads pixels from the framebuffer to ArrayBufferView with offset
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| dstData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| dstData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | dstOffset | webgl.GLuint | Yes |
 
 ## texImage2D
@@ -452,7 +452,7 @@ Sets texture image 2D from pixels
 | border | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| pixels | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -607,7 +607,7 @@ Sets texture image 2D from ArrayBufferView with offset
 | border | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 
 ## texSubImage2D
@@ -648,7 +648,7 @@ Sets texture sub image 2D from pixels
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| pixels | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texSubImage2D
 
@@ -805,7 +805,7 @@ Sets texture sub image 2D from ArrayBufferView with offset
 | height | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 
 ## uniform1fv

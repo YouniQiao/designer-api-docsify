@@ -72,7 +72,7 @@ Returns the current list of UserAgentBrandVersion which are used to generate the
 
 | 类型 |
 | --- |
-| Array&lt;UserAgentBrandVersion&gt; |
+| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; |
 
 ## getFormFactors
 
@@ -94,7 +94,7 @@ Gets the value for the sec-ch-ua-form-factors.
 
 | 类型 |
 | --- |
-| Array&lt;UserAgentFormFactor&gt; |
+| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; |
 
 ## getFullVersion
 
@@ -296,7 +296,7 @@ Sets User-Agent metadata brands and their versions.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| brandVersionList | Array&lt;UserAgentBrandVersion&gt; | 是 |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | 是 |
 
 ## setFormFactors
 
@@ -320,7 +320,7 @@ Sets User-Agent metadata form factors.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| formFactors | Array&lt;UserAgentFormFactor&gt; | 是 |
+| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | 是 |
 
 ## setFullVersion
 

@@ -63,13 +63,13 @@ Internal value updated after the computation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newValue | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | No | new value |
+| newValue | Value | No | new value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | return the Value from cached |
+| Value | return the Value from cached |
 
 ## cached
 
@@ -79,7 +79,7 @@ get cached(): Value
 
 State variable cache, internal value if it is already computed
 
-**Type:** [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md)
+**Type:** Value
 
 **Since:** 23
 

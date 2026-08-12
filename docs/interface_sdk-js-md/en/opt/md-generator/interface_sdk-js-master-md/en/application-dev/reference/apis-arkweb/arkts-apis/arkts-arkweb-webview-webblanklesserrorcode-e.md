@@ -71,7 +71,7 @@ ERR_KEY_NOT_MATCH = -4
 ```
 
 No key value is matched.  
-[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey)and their key values must be the same. Otherwise, this error code is returned.
+[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getBlanklessInfoWithKey)and their key values must be the same. Otherwise, this error code is returned.
 
 **Since:** 20
 
@@ -86,7 +86,7 @@ ERR_SIGNIFICANT_CHANGE = -5
 ```
 
 The similarity is low, and the system determines that the scene change is too large. As a result, the  
-[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey) API does not enable frame interpolation.
+[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) API does not enable frame interpolation.
 
 **Since:** 20
 
@@ -101,7 +101,7 @@ ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
 The frame interpolation duration set in  
-[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) is out of range.
+[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
 The historical frame expiration time set in  
-[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md) is out of range.
+[BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
 
 **Since:** 23
 

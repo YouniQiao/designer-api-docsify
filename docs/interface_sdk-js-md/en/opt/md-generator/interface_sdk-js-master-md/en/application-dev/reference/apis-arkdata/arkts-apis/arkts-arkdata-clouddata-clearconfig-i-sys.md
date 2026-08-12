@@ -13,7 +13,7 @@ Defines the clearance configuration of a device-cloud synergy database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## dbInfo
@@ -24,7 +24,7 @@ dbInfo: Record<string, DBActionInfo>
 
 Information about the database whose data is to be cleared and the clearance rules. The key is the database name, and the value is the clearance configuration of the database.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, DBActionInfo&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
 
 **Since:** 23
 

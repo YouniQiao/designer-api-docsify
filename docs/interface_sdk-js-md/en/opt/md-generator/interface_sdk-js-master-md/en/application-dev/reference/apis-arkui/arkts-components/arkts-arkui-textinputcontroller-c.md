@@ -1,22 +1,22 @@
 # TextInputController
 
 The controller for the **TextInput** component inherits from  
-[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md). The APIs involved are as follows:&lt;!--Del--&gt; system API  
-[getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext) and other APIs like&lt;!--DelEnd--&gt;  
-[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect),  
-[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount),  
-[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset), [addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext),  
-[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext),  
-[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection),  
-[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext),  
-[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder), and  
-[deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward).
+[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API  
+[getText](TextContentControllerBase#getText) and other APIs like&lt;!--DelEnd--&gt;  
+[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentRect),  
+[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentLineCount),  
+[getCaretOffset](TextContentControllerBase#getCaretOffset), [addText](TextContentControllerBase#addText),  
+[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deleteText),  
+[getSelection](TextContentControllerBase#getSelection),  
+[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearPreviewText),  
+[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder), and  
+[deleteBackward](TextContentControllerBase#deleteBackward).
 
 ## Objects to Import
 
 ```ts controller: TextInputController = new TextInputController();```
 
-**Inheritance/Implementation:** TextInputController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
+**Inheritance/Implementation:** TextInputController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase)
 
 **Since:** 8
 

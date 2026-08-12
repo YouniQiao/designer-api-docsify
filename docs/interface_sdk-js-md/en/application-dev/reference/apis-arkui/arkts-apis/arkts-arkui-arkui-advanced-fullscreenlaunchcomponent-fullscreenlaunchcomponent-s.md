@@ -5,7 +5,7 @@
 > **NOTE：**
 > 
 > To implement an embeddable atomic service within this component, it must inherit from
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). Otherwise, the system
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system
 > cannot guarantee that the atomic service will function properly.
 
 **Since:** 23
@@ -21,7 +21,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## build
@@ -86,7 +86,7 @@ onError?: ErrorCallback
 
 Callback triggered when an error occurs during running of the started ExtensionAbility.It is supported only when the atomic service runs in embedded mode,with the parameter being of type BusinessError.
 
-**Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
+**Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ onReceive?: Callback<Record<string, RecordData>>
 
 Indicates the callback of onReceive.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, RecordData&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 
@@ -122,7 +122,7 @@ onTerminated?: Callback<TerminationInfo>
 
 Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode,with the parameter being of type TerminationInfo.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TerminationInfo](../arkts-components/arkts-arkui-terminationinfo-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt;
 
 **Since:** 23
 

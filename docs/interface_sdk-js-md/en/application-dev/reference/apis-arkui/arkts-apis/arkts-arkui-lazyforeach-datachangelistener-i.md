@@ -147,5 +147,5 @@ Called when multiple data changes occur.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataOperations | Array&lt;DataOperation&gt; | Yes |  |
+| dataOperations | Array&lt;[DataOperation](arkts-arkui-dataoperation-t.md)&gt; | Yes |  |
 

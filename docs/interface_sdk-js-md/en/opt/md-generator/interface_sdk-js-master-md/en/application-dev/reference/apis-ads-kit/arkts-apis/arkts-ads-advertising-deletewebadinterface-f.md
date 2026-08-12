@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## deleteWebAdInterface
@@ -33,8 +33,8 @@ Deletes the ad JavaScript object injected through **registerWebAdInterface**(thi
 
 | Error Code ID |
 | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
 
 ## Examples
 

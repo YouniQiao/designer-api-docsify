@@ -29,7 +29,7 @@ buttonType?: ButtonType
 
 Shape of the **PasteButton** component.Default value: ButtonType.Capsule.
 
-**Type:** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
+**Type:** ButtonType
 
 **Since:** 10
 

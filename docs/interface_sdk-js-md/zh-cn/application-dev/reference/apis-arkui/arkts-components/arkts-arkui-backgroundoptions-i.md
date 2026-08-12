@@ -20,7 +20,7 @@ Set the alignment of the custom background and component.
 
 Anonymous Object Rectification.
 
-**类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
+**类型：** Alignment
 
 **默认值：** Alignment.Center
 
@@ -44,7 +44,7 @@ ignoresLayoutSafeAreaEdges?: Array<LayoutSafeAreaEdge>
 
 The set of edges for which to ignore layout safe area. To respect safe area insets on all edges, explicitly pass empty edge set.
 
-**类型：** Array&lt;LayoutSafeAreaEdge&gt;
+**类型：** Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt;
 
 **默认值：** The default value is LayoutSafeAreaEdge.ALL when background is ResourceColor, otherwise it is an empty array [].
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createAuxiliaryPictureUsingAllocator
@@ -13,7 +13,7 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
     allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture
 ```
 
-Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType {@link IMAGE_ALLOCATOR_TYPE}. By default, the system selects the memory type based on the image type,image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
+Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType [IMAGE_ALLOCATOR_TYPE](IMAGE_ALLOCATOR_TYPE). By default, the system selects the memory type based on the image type,image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
 
 **Since:** 24
 
@@ -29,7 +29,7 @@ Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by th
 | --- | --- | --- |
 | auxiliaryPictureInfo | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | Yes |
 | allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | No |
-| pixels | ArrayBuffer | No |
+| [pixels](arkts-image-image-positionarea-i.md) | ArrayBuffer | No |
 
 **Return value:**
 
@@ -41,9 +41,9 @@ Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by th
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600205](../errorcode-image.md#7600205-unsupported-format) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600205](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

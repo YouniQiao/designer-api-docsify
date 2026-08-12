@@ -11,7 +11,7 @@ Provides time zone management capabilities, such as time zone name translation, 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getAppDefaultTimeZone
@@ -77,7 +77,7 @@ Obtains the list of time zone IDs supported by the system.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## Examples
 
@@ -108,7 +108,7 @@ Obtains the list of time zone city IDs supported by the system.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## Examples
 
@@ -362,8 +362,8 @@ Creates an array of **TimeZone** objects corresponding to the specified location
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -460,7 +460,7 @@ Sets the default time zone for the current app, the value will be used on the ap
 
 | Error Code ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## Examples
 

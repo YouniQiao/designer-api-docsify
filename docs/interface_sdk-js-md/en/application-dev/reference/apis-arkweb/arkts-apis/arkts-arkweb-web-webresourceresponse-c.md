@@ -156,7 +156,7 @@ Gets the response headers.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Header&gt; | Return the response headers. |
+| Array&lt;[Header](arkts-arkweb-web-header-i.md)&gt; | Return the response headers. |
 
 ## getResponseIsReady
 
@@ -266,7 +266,7 @@ Sets the response data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | string \| int \| Resource \| ArrayBuffer | Yes | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
+| data | string \| int \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| ArrayBuffer | Yes | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
 
 ## setResponseEncoding
 
@@ -310,7 +310,7 @@ Sets the response headers.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | Yes | the response headers. |
+| header | Array&lt;[Header](arkts-arkweb-web-header-i.md)&gt; | Yes | the response headers. |
 
 ## setResponseIsReady
 

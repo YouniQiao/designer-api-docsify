@@ -2,7 +2,7 @@
 
 Represents an instance method of a class or interface.
 
-**Inheritance/Implementation:** InstanceMethod extends [Method](Method)
+**Inheritance/Implementation:** InstanceMethod extends [Method](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-method-i-sys.md#Method)
 
 **Since:** 24
 

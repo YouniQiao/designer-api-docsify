@@ -46,7 +46,7 @@ Tabs(options?: TabsOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TabsOptions](../arkts-apis/arkts-arkui-tabs-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
+| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | 否 | Tabs组件参数。 默认值：undefined，不设置参数时使用默认配置。 |
 
 ## 汇总
 

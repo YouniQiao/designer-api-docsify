@@ -1,12 +1,12 @@
 # DistributedObject
 
-表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject)获取DistributedObject对象。
+表示一个分布式数据对象。在使用以下接口前，需调用[createDistributedObject()](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createDistributedObject)获取DistributedObject对象。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 <!--Device-distributedDataObject-interface DistributedObject--><!--Device-distributedDataObject-interface DistributedObject-End-->
 
@@ -24,7 +24,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 
 **废弃版本：** 9
 
-**替代接口：** distributedDataObject.DataObject.off(type:
+**替代接口：** [off](distributedDataObject.DataObject.off(type:)
 
 <!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void-End-->
 
@@ -35,7 +35,7 @@ off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'change' | 是 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 |
+| callback | (sessionId: string, fields: Array & lt;string & gt;) = & gt; void | 否 |
 
 ## 示例
 
@@ -82,7 +82,7 @@ off(
 
 **废弃版本：** 9
 
-**替代接口：** distributedDataObject.DataObject.off(
+**替代接口：** [off](distributedDataObject.DataObject.off()
 
 <!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
@@ -93,7 +93,7 @@ off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'status' | 是 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) = & gt; void | 否 |
 
 ## 示例
 
@@ -132,7 +132,7 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 
 **废弃版本：** 9
 
-**替代接口：** distributedDataObject.DataObject.on(type:
+**替代接口：** [on](distributedDataObject.DataObject.on(type:)
 
 <!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void-End-->
 
@@ -143,7 +143,7 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'change' | 是 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 |
+| callback | (sessionId: string, fields: Array & lt;string & gt;) = & gt; void | 是 |
 
 ## 示例
 
@@ -187,7 +187,7 @@ on(
 
 **废弃版本：** 9
 
-**替代接口：** distributedDataObject.DataObject.on(
+**替代接口：** [on](distributedDataObject.DataObject.on()
 
 <!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
@@ -198,7 +198,7 @@ on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'status' | 是 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) = & gt; void | 是 |
 
 ## 示例
 
@@ -235,7 +235,7 @@ setSessionId(sessionId?: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [distributedDataObject.DataObject.setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setsessionid)(sessionId:
+**替代接口：** [setSessionId](distributedDataObject.DataObject.setSessionId(sessionId:)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 

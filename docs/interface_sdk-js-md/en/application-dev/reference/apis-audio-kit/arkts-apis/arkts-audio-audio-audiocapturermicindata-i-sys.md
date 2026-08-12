@@ -15,7 +15,7 @@ Describes audio capturer data that contains processed audio data and microphone 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## data
@@ -46,7 +46,7 @@ Processed audio data buffer.
 ecData?: ArrayBuffer
 ```
 
-Echo reference audio data buffer.If capturer config does not set ecStreamInfo, this buffer will be null.See {@link #AudioCapturerMicInConfig} for details.
+Echo reference audio data buffer.If capturer config does not set ecStreamInfo, this buffer will be null.See [AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md#AudioCapturerMicInConfig) for details.
 
 **Type:** ArrayBuffer
 

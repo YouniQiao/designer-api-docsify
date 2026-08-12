@@ -1,6 +1,6 @@
 # PermissionRequest
 
-Defines the onPermissionRequest callback, related to {@link onPermissionRequest} method.
+Defines the onPermissionRequest callback, related to [onPermissionRequest](arkts-arkweb-web-webattribute-i.md#onPermissionRequest) method.
 
 **Since:** 23
 

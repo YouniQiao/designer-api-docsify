@@ -24,21 +24,21 @@ function addPrinter(printerName: string, uri: string, ppdName?: string, options?
 | --- | --- | --- |
 | printerName | string | 是 |
 | uri | string | 是 |
-| ppdName | string | 否 |
+| [ppdName](arkts-basicservices-print-ppdinfo-i.md) | string | 否 |
 | options | string | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-打印服务异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [13100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100003-打印服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

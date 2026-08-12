@@ -28,18 +28,18 @@ function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksListAliasesReturnResult&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员 keyAliases为获取的密钥别名集。 |
+| Promise&lt;[HuksListAliasesReturnResult](arkts-universalkeystore-huks-hukslistaliasesreturnresult-i.md)&gt; | Promise对象，返回调用接口的结果。当调用成功时，HuksListAliasesReturnResult的成员 keyAliases为获取的密钥别名集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
-| [12000004](../errorcode-huks.md#12000004-文件错误) | operating file failed |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) | IPC communication failed |
+| [12000004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) | operating file failed |
+| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) | the group id specified by the access group tag is invalid<br>**适用版本：** 23+ |
+| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) | memory is insufficient |
+| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) | Device environment or input parameter abnormal |
 
 ## 示例
 

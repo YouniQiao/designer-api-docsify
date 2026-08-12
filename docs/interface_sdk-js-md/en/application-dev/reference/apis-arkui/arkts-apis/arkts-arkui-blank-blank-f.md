@@ -30,7 +30,7 @@ Defines Blank Component.
 
 | Type | Description |
 | --- | --- |
-| [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md) |  |
+| [BlankAttribute](arkts-arkui-blank-blankattribute-i.md) |  |
 
 
 ## Blank
@@ -59,11 +59,11 @@ Defines Blank Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;BlankAttribute&gt; | Yes | Blank options. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[BlankAttribute](arkts-arkui-blank-blankattribute-i.md)&gt; | Yes | Blank options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md) |  |
+| [BlankAttribute](arkts-arkui-blank-blankattribute-i.md) |  |
 

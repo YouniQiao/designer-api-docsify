@@ -18,7 +18,7 @@ action?: Callback<void>
 
 默认不执行任何操作。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
 

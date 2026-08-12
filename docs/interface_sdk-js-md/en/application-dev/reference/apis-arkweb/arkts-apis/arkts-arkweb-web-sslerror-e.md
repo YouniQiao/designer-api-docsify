@@ -1,6 +1,6 @@
 # SslError
 
-Enum type supplied to {@link error} when onSslErrorEventReceive being called.
+Enum type supplied to [error](error) when onSslErrorEventReceive being called.
 
 **Since:** 23
 

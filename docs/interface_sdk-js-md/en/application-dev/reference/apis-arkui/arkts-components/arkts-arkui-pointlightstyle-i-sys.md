@@ -48,7 +48,7 @@ Whether the current component can be illuminated by the light source and the ill
 
 Default value: **IlluminatedType.NONE**
 
-**Type:** [IlluminatedType](../arkts-apis/arkts-arkui-illuminatedtype-e-sys.md)
+**Type:** IlluminatedType
 
 **Default:** IlluminatedType.NONE
 
@@ -74,7 +74,7 @@ Light source. The light source affects the surrounding components that are marke
 
 Default value: none
 
-**Type:** [LightSource](../arkts-apis/arkts-arkui-common-lightsource-i-sys.md)
+**Type:** [LightSource](arkts-arkui-lightsource-i-sys.md)
 
 **Default:** undefined
 

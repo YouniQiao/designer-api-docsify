@@ -20,4 +20,4 @@ Defines the callback type used in accessibility hover transparent event.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | 是 |
+| event | [TouchEvent](arkts-arkui-touchevent-i.md) | 是 |

@@ -1,10 +1,10 @@
 # Macro
 
-Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。
+Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md#MacroQuery)。
 
 提供使能微距能力的接口。
 
-**继承/实现关系：** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i.md)
+**继承/实现关系：** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i.md#MacroQuery)
 
 **起始版本：** 19
 
@@ -24,7 +24,7 @@ enableMacro(enabled: boolean): void
 
 > **说明：**
 > 
-> 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#ismacrosupported)接口查询当前设备是否支持微距能力。
+> 使用该接口前，需要先通过[isMacroSupported](arkts-camera-camera-macroquery-i.md#isMacroSupported)接口查询当前设备是否支持微距能力。
 
 **起始版本：** 19
 
@@ -46,7 +46,7 @@ enableMacro(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 18 |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11 - 18 |
 

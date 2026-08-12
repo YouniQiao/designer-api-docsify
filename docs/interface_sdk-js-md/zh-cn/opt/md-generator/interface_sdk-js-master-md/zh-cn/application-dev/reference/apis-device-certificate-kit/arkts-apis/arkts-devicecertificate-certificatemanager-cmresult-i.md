@@ -48,7 +48,7 @@ certList?: Array<CertAbstract>
 
 表示证书简要信息的列表。
 
-**类型：** Array&lt;CertAbstract&gt;
+**类型：** Array&lt;[CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md)&gt;
 
 **起始版本：** 11
 
@@ -80,7 +80,7 @@ credentialDetailList?: Array<Credential>
 
 表示凭据详细信息。
 
-**类型：** Array&lt;Credential&gt;
+**类型：** Array&lt;[Credential](arkts-devicecertificate-certificatemanager-credential-i.md)&gt;
 
 **起始版本：** 22
 
@@ -96,7 +96,7 @@ credentialList?: Array<CredentialAbstract>
 
 表示凭据简要信息的列表。
 
-**类型：** Array&lt;CredentialAbstract&gt;
+**类型：** Array&lt;[CredentialAbstract](arkts-devicecertificate-certificatemanager-credentialabstract-i.md)&gt;
 
 **起始版本：** 11
 

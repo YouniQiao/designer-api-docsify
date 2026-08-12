@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## setValue
@@ -18,7 +18,7 @@ Saves a character string name and its value to the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#setValue
+**Substitutes:** [setValue](ohos.settings#setValue)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -50,7 +50,7 @@ Saves a character string name and its value to the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#setValue
+**Substitutes:** [setValue](ohos.settings#setValue)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -72,4 +72,4 @@ Saves a character string name and its value to the database.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |

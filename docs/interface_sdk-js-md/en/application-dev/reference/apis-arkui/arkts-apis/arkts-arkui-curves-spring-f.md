@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## spring
@@ -20,7 +20,7 @@ Constructs a spring curve object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [springCurve](arkts-arkui-curves-springcurve-f.md#springcurve)
+**Substitutes:** [springCurve](arkts-arkui-curves-springcurve-f.md#springCurve)
 
 <!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string--><!--Device-curves-function spring(velocity: number, mass: number, stiffness: number, damping: number): string-End-->
 

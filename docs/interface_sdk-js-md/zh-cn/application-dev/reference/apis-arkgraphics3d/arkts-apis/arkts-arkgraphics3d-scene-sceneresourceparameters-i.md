@@ -36,7 +36,7 @@ uri?: ResourceStr
 
 场景资源参数的资源URI.
 
-**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 

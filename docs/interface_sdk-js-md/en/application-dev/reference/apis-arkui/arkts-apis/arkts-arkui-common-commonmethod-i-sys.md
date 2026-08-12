@@ -34,8 +34,8 @@ Add a blendMode effect to the current component.Cannot be used together with the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-common-blendmode-e.md) \| Blender \| undefined | Yes | When the effect type is BlendMode type, define Different hybrid modes. |
-| type | [BlendApplyType](../arkts-components/arkts-arkui-blendapplytype-e-sys.md) | No | Different blend apply type Default value: BlendApplyType.FAST. |
+| effect | [BlendMode](arkts-arkui-common-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) \| undefined | Yes | When the effect type is BlendMode type, define Different hybrid modes. |
+| type | [BlendApplyType](arkts-arkui-common-blendapplytype-e.md) | No | Different blend apply type Default value: BlendApplyType.FAST. |
 
 **Return value:**
 
@@ -133,7 +133,7 @@ Applies a spatial effect to component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](../arkts-components/arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | Yes | Spatial effect parameters. |
+| params | [SpatialEffectParams](arkts-arkui-common-spatialeffectparams-i-sys.md) \| undefined | Yes | Spatial effect parameters. |
 
 **Return value:**
 
@@ -198,7 +198,7 @@ Specify whether the current component participates in the fusion effect of the a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.&lt;br&gt;The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. &lt;br&gt;Default value: **false**. Undefined means to default value. |
-| options | [GravityCenterOptions](../arkts-components/arkts-arkui-gravitycenteroptions-i-sys.md) | No | Gravitational center parameter. This parameter must be used together with UnionMode.GRAVITY_UNION. |
+| options | [GravityCenterOptions](arkts-arkui-common-gravitycenteroptions-i-sys.md) | No | Gravitational center parameter. This parameter must be used together with UnionMode.GRAVITY_UNION. |
 
 **Return value:**
 

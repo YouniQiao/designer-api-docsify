@@ -16,7 +16,7 @@ error: ErrorType
 
 枚举值，同步失败错误类型。
 
-**类型：** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
+**类型：** ErrorType
 
 **起始版本：** 12
 

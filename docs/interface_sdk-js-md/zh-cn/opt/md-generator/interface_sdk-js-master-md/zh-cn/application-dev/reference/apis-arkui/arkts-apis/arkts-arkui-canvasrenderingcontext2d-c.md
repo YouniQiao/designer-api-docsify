@@ -16,7 +16,7 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 > 
 > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
-**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 **起始版本：** 8
 
@@ -73,7 +73,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 ## getContext2DFromDrawingContext
 
@@ -85,7 +85,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 > **说明：**
 > 
-> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建[Canvas](arkts-arkui-canvasrenderingcontext2d-c.md#canvas)组件，否则会导致应用崩溃。
+> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建[Canvas](./canvas)组件，否则会导致应用崩溃。
 > 
 > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
@@ -116,7 +116,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 | 错误码ID |
 | --- |
-| [103702](../errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) |
+| [103702](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) |
 
 ## off('onAttach')
 
@@ -141,13 +141,13 @@ off(type: 'onAttach', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'onAttach' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | Callback & lt;void & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off('onDetach')
 
@@ -172,13 +172,13 @@ off(type: 'onDetach', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'onDetach' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+| callback | Callback & lt;void & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('onAttach')
 
@@ -215,13 +215,13 @@ on(type: 'onAttach', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'onAttach' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | Callback & lt;void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('onDetach')
 
@@ -254,13 +254,13 @@ on(type: 'onDetach', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'onDetach' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+| callback | Callback & lt;void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## startImageAnalyzer
 
@@ -303,15 +303,15 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) |
+| [110001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) |
+| [110003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) |
+| [110002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) |
 
 ## stopImageAnalyzer
 
@@ -376,7 +376,7 @@ readonly canvas: FrameNode
 
 获取和CanvasRenderingContext2D关联的Canvas组件的FrameNode实例。可用于监听关联Canvas组件的可见状态。&lt;br&gt;默认值：null。
 
-**类型：** [FrameNode](arkts-arkui-framenode-c.md)
+**类型：** [FrameNode](arkts-arkui-framenode-t.md)
 
 **起始版本：** 13
 

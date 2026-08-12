@@ -11,7 +11,7 @@ The module provides the capability to configure [AppStartup](../../../applicatio
 ## Modules to Import
 
 ```TypeScript
-import { StartupConfigEntry } from 'kits/@kit.AbilityKit';
+import { StartupConfigEntry } from '@kit.AbilityKit';
 ```
 
 ## onConfig
@@ -22,7 +22,7 @@ onConfig?(): StartupConfig
 
 Called if the HAP of the AbilityStage has  
 [defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered before  
-[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).
+[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate).
 
 You can set the AppStartup configuration within this callback. For details, see  
 [Setting Startup Parameters](../../../application-models/app-startup.md#setting-startup-parameters).
@@ -79,8 +79,8 @@ onRequestCustomMatchRule(want: Want): string
 ```
 
 Called if the HAP of the AbilityStage has  
-[defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after [StartupConfigEntry.onConfig](arkts-ability-app-appstartup-startupconfigentry-startupconfigentry-c.md#onconfig) but before  
-[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate).
+[defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after [StartupConfigEntry.onConfig](StartupConfigEntry#onConfig?()) but before  
+[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate).
 
 You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in  
 **matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see  

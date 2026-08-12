@@ -21,7 +21,7 @@ Writes data into a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:write](arkts-corefile-fileio-write-f.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): Promise<number>-End-->
 
@@ -39,7 +39,7 @@ Writes data into a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 
 ## write
@@ -54,7 +54,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:write](arkts-corefile-fileio-write-f.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(fd: number, buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
@@ -91,7 +91,7 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:write](arkts-corefile-fileio-write-f.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function write(  fd: number,  buffer: ArrayBuffer | string,  options: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  },  callback: AsyncCallback<number>): void-End-->
 

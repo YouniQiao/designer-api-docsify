@@ -13,7 +13,7 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions](arkts-intl.md#intl.localeoptions)
+**Substitutes:** [LocaleOptions]]([Intl.LocaleOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#options))
 
 <!--Device-intl-export interface LocaleOptions--><!--Device-intl-export interface LocaleOptions-End-->
 
@@ -22,7 +22,7 @@ Options for initializing the **Locale** object. Since API version 9, the **Local
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## calendar
@@ -43,7 +43,7 @@ Calendar parameter. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.calendar](arkts-intl.md#intl.localeoptions.calendar)
+**Substitutes:** [calendar]]([Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#calendar))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,7 +75,7 @@ Whether case is taken into account for the locale's collation rules. The value c
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#casefirst)
+**Substitutes:** [caseFirst]]([Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#casefirst))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -133,7 +133,7 @@ Collation rules for the locale. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.collation](arkts-intl.md#intl.localeoptions.collation)
+**Substitutes:** [collation]]([Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#collation))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -161,7 +161,7 @@ Hour cycle. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#hourcycle)
+**Substitutes:** [hourCycle]]([Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#hourcycle))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -195,7 +195,7 @@ Numbering system. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numberingsystem)
+**Substitutes:** [numberingSystem]]([Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numberingsystem))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -221,7 +221,7 @@ Whether to treat numeric characters as numbers for sorting. The value true means
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numeric)
+**Substitutes:** [numeric]]([Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale#numeric))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

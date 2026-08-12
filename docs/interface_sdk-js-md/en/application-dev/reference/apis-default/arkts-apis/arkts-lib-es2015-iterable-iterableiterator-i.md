@@ -14,5 +14,5 @@
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; |  |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |  |
 

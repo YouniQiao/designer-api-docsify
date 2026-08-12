@@ -32,7 +32,7 @@ published through **emit** but have not been executed are also canceled and no c
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

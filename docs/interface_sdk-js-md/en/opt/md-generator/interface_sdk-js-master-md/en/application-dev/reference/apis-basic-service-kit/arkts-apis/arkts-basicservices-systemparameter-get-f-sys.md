@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## get
@@ -18,7 +18,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.get
+**Substitutes:** [get](ohos.systemParameterEnhance.get)
 
 <!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -63,7 +63,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.get
+**Substitutes:** [get](ohos.systemParameterEnhance.get)
 
 <!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void-End-->
 
@@ -110,7 +110,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.get
+**Substitutes:** [get](ohos.systemParameterEnhance.get)
 
 <!--Device-systemParameter-function get(key: string, def?: string): Promise<string>--><!--Device-systemParameter-function get(key: string, def?: string): Promise<string>-End-->
 
@@ -129,7 +129,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 

@@ -1,7 +1,7 @@
 # EventResult
 
-通知Web组件同层事件消费结果，支持的事件：[触摸事件的类型](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md/arkts-arkui-touchtype-e.md)和[鼠标事件的类型](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md/arkts-arkui-mouseaction-e.md)，鼠标仅支持  
-[左中右按键](../../apis-test-kit/arkts-apis/arkts-test-uitest-mousebutton-e.md/arkts-test-uitest-mousebutton-e.md)。
+通知Web组件同层事件消费结果，支持的事件：[触摸事件的类型](../../apis-arkui/arkts-apis/arkts-arkui-touchtype-e.md#TouchType)和[鼠标事件的类型](../../apis-arkui/arkts-apis/arkts-arkui-mouseaction-e.md#MouseAction)，鼠标仅支持  
+[左中右按键](../../apis-arkui/arkts-apis/arkts-arkui-mousebutton-e.md#MouseButton)。
 
 如果应用不消费该事件，则应设置消费结果为false，事件将会被Web组件消费；反之如果应用消费了该事件，则应将消费结果设置为true，Web组件将不消费该事件。若应用设置消费结果不符合以上使用规格，将产生与开发者预期不匹配的现象。
 

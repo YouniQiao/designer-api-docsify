@@ -17,7 +17,7 @@ INITIALIZED = 0x00
 ```
 
 The task is initialized based on the configuration specified in   
-[Config](arkts-basicservices-agent-config-i.md).
+[Config](arkts-basicservices-agent-config-i.md#Config).
 
 **Since:** 10
 

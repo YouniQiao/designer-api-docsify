@@ -8,13 +8,13 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 释放注册过的通信接口。
 
-需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface)先获取接口，才能使用此方法释放接口。
+需要调用[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface)先获取接口，才能使用此方法释放接口。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface)
+**替代接口：** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseInterface)
 
 <!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
 
@@ -24,7 +24,7 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
 | iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | 是 |
 
 **返回值：**

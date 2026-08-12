@@ -4,8 +4,8 @@
 
 > **说明：**
 > 
-> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerplugin)接口的参数需要继承该接口，
-> [connectServer](arkts-dataprotection-dlppermission-dlpconnplugin-i.md#connectserver)由SA（System Ability）侧调用，通过callback进行回传参数。
+> [registerPlugin](arkts-dataprotection-dlppermission-dlpconnmanager-c.md#registerPlugin)接口的参数需要继承该接口，
+> [connectServer](#connectServer)由SA（System Ability）侧调用，通过callback进行回传参数。
 
 **起始版本：** 21
 
@@ -49,8 +49,8 @@ connectServer(requestId: string, requestData: string, callback: Callback<string>
 
 | 错误码ID |
 | --- |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

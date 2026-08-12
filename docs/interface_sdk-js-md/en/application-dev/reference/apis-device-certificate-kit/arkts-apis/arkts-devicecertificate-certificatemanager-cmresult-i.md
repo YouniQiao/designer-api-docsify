@@ -13,7 +13,7 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## appUidList
@@ -60,7 +60,7 @@ certList?: Array<CertAbstract>
 
 Brief certificate information.
 
-**Type:** Array&lt;CertAbstract&gt;
+**Type:** Array&lt;[CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md)&gt;
 
 **Since:** 11
 
@@ -78,7 +78,7 @@ credential?: Credential
 
 Detailed credential information.
 
-**Type:** [Credential](arkts-devicecertificate-certificatemanager-credential-i.md)
+**Type:** Credential
 
 **Since:** 11
 
@@ -114,7 +114,7 @@ credentialList?: Array<CredentialAbstract>
 
 Brief credential information.
 
-**Type:** Array&lt;CredentialAbstract&gt;
+**Type:** Array&lt;[CredentialAbstract](arkts-devicecertificate-certificatemanager-credentialabstract-i.md)&gt;
 
 **Since:** 11
 

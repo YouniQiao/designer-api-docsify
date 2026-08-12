@@ -2,7 +2,7 @@
 
 The mesh data description resource for the geometry node
 
-**Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**Inheritance/Implementation:** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **Since:** 18
 

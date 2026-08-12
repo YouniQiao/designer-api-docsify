@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location
+**Substitutes:** [Location](ohos.geoLocationManager/geoLocationManager.Location)
 
 <!--Device-unnamed-export interface GeolocationResponse--><!--Device-unnamed-export interface GeolocationResponse-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from 'kits/@kit.LocationKit';
+import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from '@kit.LocationKit';
 ```
 
 ## accuracy
@@ -34,7 +34,7 @@ Location accuracy.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#accuracy
+**Substitutes:** [accuracy](ohos.geoLocationManager/geoLocationManager.Location#accuracy)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -58,7 +58,7 @@ Altitude.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#altitude
+**Substitutes:** [altitude](ohos.geoLocationManager/geoLocationManager.Location#altitude)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -82,7 +82,7 @@ Latitude.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#latitude
+**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.Location#latitude)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -106,7 +106,7 @@ Longitude.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#longitude
+**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.Location#longitude)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -130,7 +130,7 @@ Time when the location is obtained.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.Location#timeStamp
+**Substitutes:** [timeStamp](ohos.geoLocationManager/geoLocationManager.Location#timeStamp)
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## releaseInterface
@@ -15,7 +15,7 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 Releases a USB interface.
 
 Before you do this, ensure that you have claimed the interface by calling  
-[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface).
+[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface).
 
 **Since:** 8
 
@@ -23,7 +23,7 @@ Before you do this, ensure that you have claimed the interface by calling
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface)
+**Substitutes:** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseInterface)
 
 <!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
 
@@ -33,8 +33,8 @@ Before you do this, ensure that you have claimed the interface by calling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | Device pipe, which is used to determine the bus number and device address. |
-| iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes | USB interface, which is used to determine the index of the interface to release. |
+| pipe | USBDevicePipe | Yes | Device pipe, which is used to determine the bus number and device address. |
+| iface | USBInterface | Yes | USB interface, which is used to determine the index of the interface to release. |
 
 **Return value:**
 

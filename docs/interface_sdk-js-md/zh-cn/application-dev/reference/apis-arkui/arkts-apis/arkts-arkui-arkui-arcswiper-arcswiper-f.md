@@ -26,13 +26,13 @@ export declare function ArcSwiper(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | 否 | 给组件绑定一个控制器，用来控制组件翻页。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 可以包含子组件。&lt;br/&gt;**说明：** &lt;br/&gt;1. 子组件类型：系统组件和自定义组件，支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。&lt;br/&gt;2. 不建议在执行翻页动画过程中增加或减少子 组件，会导致未进行动画的子组件提前进入视窗，引起显示异常。 |
+| content_ | CustomBuilder | 否 | 可以包含子组件。&lt;br/&gt;**说明：** &lt;br/&gt;1. 子组件类型：系统组件和自定义组件，支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。&lt;br/&gt;2. 不建议在执行翻页动画过程中增加或减少子 组件，会导致未进行动画的子组件提前进入视窗，引起显示异常。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-i.md) |  |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
 
 
 ## ArcSwiper
@@ -62,12 +62,12 @@ export declare function ArcSwiper(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcSwiperAttribute&gt; | 是 | arcSwiper属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 内容区 |
+| style_ | CustomBuilderT&lt;[ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md)&gt; | 是 | arcSwiper属性实例 |
+| content_ | CustomBuilder | 否 | 内容区 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-i.md) |  |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) |  |
 

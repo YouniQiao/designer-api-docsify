@@ -20,7 +20,7 @@
 
 | Type | Description |
 | --- | --- |
-| [URIError](../../apis-arkts/arkts-apis/arkts-arkts-errors-urierror-c.md) |  |
+| [URIError](arkts-lib-es5-urierror-i.md) |  |
 
 ## [[Construct]]
 
@@ -40,7 +40,7 @@ new(message?: string): URIError
 
 | Type | Description |
 | --- | --- |
-| [URIError](../../apis-arkts/arkts-apis/arkts-arkts-errors-urierror-c.md) |  |
+| [URIError](arkts-lib-es5-urierror-i.md) |  |
 
 ## prototype
 
@@ -48,7 +48,7 @@ new(message?: string): URIError
 readonly prototype: URIError
 ```
 
-**Type:** [URIError](../../apis-arkts/arkts-apis/arkts-arkts-errors-urierror-c.md)
+**Type:** [URIError](arkts-lib-es5-urierror-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

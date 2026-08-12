@@ -13,7 +13,7 @@ Show toast options.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -24,7 +24,7 @@ alignment?: Alignment
 
 Defines the toast alignment of the screen.
 
-**Type:** [Alignment](arkts-arkui-alignment-e.md)
+**Type:** Alignment
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur Style of toast.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ backgroundColor?: ResourceColor
 
 Background color of toast.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -146,7 +146,7 @@ hoverModeArea?: HoverModeAreaType
 
 Defines the toast's display area in hover mode.
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -188,7 +188,7 @@ offset?: Offset
 
 Defines the toast offset.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -208,7 +208,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of toast.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 23
 
@@ -250,7 +250,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for toast. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of toast.
 
-**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 
@@ -270,7 +270,7 @@ textColor?: ResourceColor
 
 Text color of toast.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 

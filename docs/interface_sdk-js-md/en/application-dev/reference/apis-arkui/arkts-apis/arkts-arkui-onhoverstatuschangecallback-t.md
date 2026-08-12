@@ -22,5 +22,5 @@ Anonymous Object Rectification
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [HoverEventParam](../arkts-components/arkts-arkui-hovereventparam-i.md) | Yes | hover event param |
+| param | [HoverEventParam](arkts-arkui-folderstack-hovereventparam-i.md) | Yes | hover event param |
 

@@ -29,5 +29,5 @@ export function createScrollNode(context: UIContext, options?: FrameNodeOptions)
 
 | 类型 | 说明 |
 | --- | --- |
-| [Scroll](arkts-arkui-typenode-scroll-t.md) | 返回 Scroll 类型的 FrameNode |
+| Scroll | 返回 Scroll 类型的 FrameNode |
 

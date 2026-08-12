@@ -7,8 +7,8 @@ Describes the badge style. It includes the font color, font size, badge color, b
 > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
 > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
 > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
-> recommended that you use the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component with its
-> [outline](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#outline) attribute instead of the **Badge** component.
+> recommended that you use the [Text](./text) component with its
+> [outline](CommonMethod#outline(value: OutlineOptions)) attribute instead of the **Badge** component.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ Badge color.
 
 Default value: **Color.Red**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Red
 
@@ -84,7 +84,7 @@ Color of the background border.
 
 Default value: **Color.Red**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Red
 
@@ -116,7 +116,7 @@ Unit: vp
 
 Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 1vp
 
@@ -142,7 +142,7 @@ Font color.
 
 Default value: **Color.White**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.White
 
@@ -262,7 +262,7 @@ Color of the background outer border.
 
 Default value: **Color.White**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.White
 
@@ -292,7 +292,7 @@ Unit: vp
 
 Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 0vp
 

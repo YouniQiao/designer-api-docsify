@@ -32,7 +32,7 @@ Creates a **GridRow** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridRowOptions](../arkts-apis/arkts-arkui-gridrow-gridrowoptions-i.md) | No |  |
+| option | [GridRowOptions](arkts-arkui-gridrowoptions-i.md) | No |  |
 
 ## Summary
 

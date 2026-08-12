@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from 'kits/@kit.ConnectivityKit';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## stopRanging
@@ -30,7 +30,7 @@ Stops ongoing ranging operations.If no target device is specified, stops ranging
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RangingResult&gt; | Yes | Callback used to return the ranging result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[RangingResult](arkts-connectivity-ranging-rangingresult-i.md)&gt; | Yes | Callback used to return the ranging result. |
 | params | [RangingParams](arkts-connectivity-ranging-rangingparams-i.md) | No | Parameters for ranging include deviceId and ranging types. |
 
 **Error codes:**
@@ -38,9 +38,9 @@ Stops ongoing ranging operations.If no target device is specified, stops ranging
 | Error Code ID | Error Message |
 | --- | --- |
 | 34900052 | The specified type of ranging service is not supported. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 34900054 | The parameter value does not meet specifications. |
 | 34900050 | The device has not initiated ranging. |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [34900099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

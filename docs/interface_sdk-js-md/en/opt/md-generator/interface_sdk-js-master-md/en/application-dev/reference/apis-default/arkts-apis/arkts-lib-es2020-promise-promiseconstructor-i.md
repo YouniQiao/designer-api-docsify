@@ -20,7 +20,7 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;{ -readonly [P in keyof T]: PromiseSettledResult&lt;Awaited&lt;T[P]&gt;&gt; }&gt; |
+| Promise&lt;{ -readonly [P in keyof T]: PromiseSettledResult&lt;[Awaited](arkts-awaited-t.md)&lt;T[P]&gt;&gt; }&gt; |
 
 ## allSettled
 
@@ -36,10 +36,10 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| values | Iterable&lt;T \| [PromiseLike&lt;T&gt;&gt;](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | Yes |
+| values | Iterable & lt;T \ | [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PromiseSettledResult&lt;Awaited&lt;T&gt;&gt;[]&gt; |
+| Promise&lt;[PromiseSettledResult](arkts-promisesettledresult-t.md)&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt;[]&gt; |

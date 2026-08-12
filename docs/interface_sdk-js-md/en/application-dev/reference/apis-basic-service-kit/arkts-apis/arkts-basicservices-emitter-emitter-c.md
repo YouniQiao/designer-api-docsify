@@ -14,7 +14,7 @@ This module provides the capabilities of sending and processing inter- or intra-
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## constructor
@@ -186,7 +186,7 @@ After an event is published using this API, the event may not be executed immedi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
@@ -257,7 +257,7 @@ After an event is published using this API, the event may not be executed immedi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
@@ -391,7 +391,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 ## Examples
 
@@ -418,7 +418,7 @@ Unsubscribes from an event of the Emitter instance. This API takes effect only w
 [once](emitter.Emitter#once&lt;T&gt;(eventId: string, callback: Callback&lt;GenericEventData<T>&gt;&lt;T&gt;>)) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
 After this API is used to unsubscribe from an event, the event that has been published through the   
-[emit](arkts-basicservices-emitter-emitter-c.md#emit) API but has not been executed will be unsubscribed.
+[emit](emitter.Emitter#emit&lt;T&gt;(eventId: string, data?: GenericEventData&lt;T&gt;)) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
@@ -435,7 +435,7 @@ After this API is used to unsubscribe from an event, the event that has been pub
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 ## Examples
 
@@ -486,7 +486,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 ## Examples
 
@@ -523,7 +523,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to unregister. |
 
 ## Examples
 
@@ -576,7 +576,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -615,7 +615,7 @@ Subscribes to an event specified by the Emitter instance in persistent manner an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -666,7 +666,7 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be executed when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
 
 ## Examples
 
@@ -703,7 +703,7 @@ Subscribes to an event in persistent manner and executes a callback after the ev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event to subscribe to in persistent manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
 
 ## Examples
 
@@ -756,7 +756,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -795,7 +795,7 @@ Subscribes to an event specified by the Emitter instance in one-shot manner and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -846,7 +846,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be executed when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be executed when the event is received. |
 
 ## Examples
 
@@ -883,7 +883,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event to subscribe to in one-shot manner. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be executed when the event is received. |
 
 ## Examples
 

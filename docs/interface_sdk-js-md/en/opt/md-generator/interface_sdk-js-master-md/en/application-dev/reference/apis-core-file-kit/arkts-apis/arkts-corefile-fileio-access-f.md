@@ -12,7 +12,7 @@ Checks whether this process can access a file. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:access](arkts-corefile-fileio-access-f.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function access(path: string, mode?: number): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ Checks whether this process can access a file. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## access
@@ -44,7 +44,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:access](arkts-corefile-fileio-access-f.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -70,7 +70,7 @@ Checks whether this process can access a file. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:access](arkts-corefile-fileio-access-f.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function access(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 

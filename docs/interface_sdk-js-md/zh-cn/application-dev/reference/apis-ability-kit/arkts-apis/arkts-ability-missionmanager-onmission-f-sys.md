@@ -24,7 +24,7 @@ function onMission(listener: MissionListener): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [MissionListener](arkts-ability-missionmanager-missionlistener-t-sys.md) | 是 | 系统任务监听器。 |
+| listener | MissionListener | 是 | 系统任务监听器。 |
 
 **返回值：**
 
@@ -36,8 +36,8 @@ function onMission(listener: MissionListener): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

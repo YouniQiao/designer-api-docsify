@@ -20,4 +20,4 @@ Matches a string with this regular expression, and returns an iterable of matche
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;RegExpMatchArray&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;RegExpMatchArray&gt; |

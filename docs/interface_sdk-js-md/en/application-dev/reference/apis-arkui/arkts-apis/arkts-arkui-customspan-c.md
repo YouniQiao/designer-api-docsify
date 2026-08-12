@@ -56,8 +56,8 @@ Called to draw a custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Drawing context.&lt;br&gt;**NOTE：**&lt;br&gt;The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
-| drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
+| context | DrawContext | Yes | Drawing context.&lt;br&gt;**NOTE：**&lt;br&gt;The **canvas** method of **DrawContext** obtains the canvas of the **Text** component. As such, the custom span does not extend beyond the area of the **Text** component. |
+| drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Yes | Drawing information of the custom span. |
 
 ## onMeasure
 
@@ -83,7 +83,7 @@ Called to obtain the size of a custom span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-styledstring-customspanmeasureinfo-i.md) | Yes | Font size of the text. |
+| measureInfo | [CustomSpanMeasureInfo](arkts-arkui-customspanmeasureinfo-i.md) | Yes | Font size of the text. |
 
 **Return value:**
 

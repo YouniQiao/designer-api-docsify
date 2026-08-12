@@ -21,13 +21,13 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 否 | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8' 。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReaderIterator&gt; | Promise对象。返回文件读取迭代器。 |
+| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise对象。返回文件读取迭代器。 |
 
 **错误码：**
 
@@ -69,7 +69,7 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | 是 | 逐行读取文件文本内容回调。返回文件读取迭代器。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 逐行读取文件文本内容回调。返回文件读取迭代器。 |
 
 **错误码：**
 
@@ -110,8 +110,8 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | 是 | 逐行读取文件文本内容回调。返回文件读取迭代器。 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 是 | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认'utf-8'，仅支持'utf-8'。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 逐行读取文件文本内容回调。返回文件读取迭代器。 |
 
 **错误码：**
 

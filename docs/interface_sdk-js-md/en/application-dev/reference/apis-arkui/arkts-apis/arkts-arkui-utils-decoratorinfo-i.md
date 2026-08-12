@@ -38,7 +38,7 @@ dependentInfo: ElementInfo[]
 
 Dependent component information including custom component and UI component (Text, Image)for the object data.For the V2 @Monitor or @Computed scenario, will return the id and decorated function name by @Monitor or @Computed.For V2 scenario, if it is not used in the UI, nor on @Monitor or @Computed, return an empty array.For V1 scenario, if it is not used in the UI, will return an empty array.
 
-**Type:** [ElementInfo](arkts-arkui-arkui-statemanagement-elementinfo-i.md)[]
+**Type:** [ElementInfo](arkts-arkui-utils-elementinfo-i.md)[]
 
 **Since:** 24
 

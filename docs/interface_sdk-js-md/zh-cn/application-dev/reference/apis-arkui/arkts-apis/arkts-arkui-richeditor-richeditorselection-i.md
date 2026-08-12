@@ -41,7 +41,7 @@ spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 
 span信息。
 
-**类型：** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md)&gt;
 
 **起始版本：** 23
 

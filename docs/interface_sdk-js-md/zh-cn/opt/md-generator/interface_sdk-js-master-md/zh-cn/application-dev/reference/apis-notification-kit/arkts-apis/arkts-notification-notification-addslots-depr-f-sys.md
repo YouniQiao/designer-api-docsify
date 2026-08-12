@@ -12,7 +12,7 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#addSlots
+**替代接口：** [addSlots](ohos.notificationManager/notificationManager#addSlots)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt; | 是 |
+| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 
@@ -42,7 +42,7 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#addSlots
+**替代接口：** [addSlots](ohos.notificationManager/notificationManager#addSlots)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -56,10 +56,10 @@ function addSlots(slots: Array<NotificationSlot>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt; | 是 |
+| slots | Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

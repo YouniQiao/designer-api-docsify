@@ -2,7 +2,7 @@
 
 Defines the TimePickerDialogOptions for Data Picker Dialog.
 
-**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)
+**Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md#TimePickerOptions)
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Since:** 23
 
@@ -212,7 +212,7 @@ dateTimeOptions?: DateTimeOptions
 
 Set time format
 
-**Type:** [DateTimeOptions](../arkts-components/arkts-arkui-datetimeoptions-t.md)
+**Type:** DateTimeOptions
 
 **Since:** 23
 
@@ -360,7 +360,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -440,7 +440,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 
 This event is triggered when an item enters the selected area in dialog.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TimePickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TimePickerResult](arkts-arkui-timepicker-timepickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -520,7 +520,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 

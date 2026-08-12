@@ -638,7 +638,7 @@ Reserved.
 HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304
 ```
 
-User authentication type. For details, see [HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md). This parameter must be set together with [HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md). You can set a maximum of two user authentication types at a time. For example, if **HuksAuthAccessType** is  
+User authentication type. For details, see [HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md#HuksUserAuthType). This parameter must be set together with [HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md#HuksAuthAccessType). You can set a maximum of two user authentication types at a time. For example, if **HuksAuthAccessType** is  
 **HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL**, you can set two of **HUKS_USER_AUTH_TYPE_FACE**,  
 **HUKS_USER_AUTH_TYPE_FINGERPRINT**, and **HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT**.
 
@@ -688,7 +688,7 @@ Authentication token.
 HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307
 ```
 
-Access control type. For details, see [HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md). This parameter must be set together with [HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md).
+Access control type. For details, see [HuksAuthAccessType](arkts-universalkeystore-huks-huksauthaccesstype-e.md#HuksAuthAccessType). This parameter must be set together with [HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md#HuksUserAuthType).
 
 **Since:** 9
 
@@ -720,7 +720,7 @@ Signature type of the key generated or imported.
 HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309
 ```
 
-Type of the challenge generated for a key. For details, see [HuksChallengeType](arkts-universalkeystore-huks-hukschallengetype-e.md).
+Type of the challenge generated for a key. For details, see [HuksChallengeType](arkts-universalkeystore-huks-hukschallengetype-e.md#HuksChallengeType).
 
 **Since:** 9
 
@@ -737,7 +737,7 @@ HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310
 ```
 
 Position of the 8-byte valid value in a custom challenge. For details, see  
-[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md).
+[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md#HuksChallengePosition).
 
 **Since:** 9
 
@@ -769,7 +769,7 @@ Key authentication purpose.
 HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316
 ```
 
-Key storage security level, which is a value of [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md).
+Key storage security level, which is a value of [HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel).
 
 **Since:** 11
 
@@ -785,7 +785,7 @@ Key storage security level, which is a value of [HuksAuthStorageLevel](arkts-uni
 HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319
 ```
 
-User authentication mode. It is a value of [HuksUserAuthMode](arkts-universalkeystore-huks-huksuserauthmode-e.md).
+User authentication mode. It is a value of [HuksUserAuthMode](arkts-universalkeystore-huks-huksuserauthmode-e.md#HuksUserAuthMode).
 
 **Since:** 12
 

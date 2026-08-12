@@ -38,7 +38,7 @@ STREAM_USAGE_MEDIA = 1
 
 **废弃版本：** 10
 
-**替代接口：** ohos.multimedia.audio.StreamUsage.STREAM_USAGE_MUSIC
+**替代接口：** [STREAM_USAGE_MUSIC](#STREAM_USAGE_MUSIC)
 
 <!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1--><!--Device-StreamUsage-STREAM_USAGE_MEDIA = 1-End-->
 
@@ -138,7 +138,7 @@ STREAM_USAGE_NOTIFICATION_RINGTONE = 6
 
 **废弃版本：** 10
 
-**替代接口：** ohos.multimedia.audio.StreamUsage#STREAM_USAGE_RINGTONE
+**替代接口：** [STREAM_USAGE_RINGTONE](#STREAM_USAGE_RINGTONE)
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION_RINGTONE = 6-End-->
 

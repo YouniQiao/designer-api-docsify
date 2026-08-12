@@ -4,7 +4,7 @@
 type ValuesBucket = collections.Map<string, ValueType>
 ```
 
-Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md) data that can be passed across threads.
+Represents the KV pair of the [ValueType](arkts-arkdata-sendablerelationalstore-valuetype-t.md#ValueType) data that can be passed across threads.
 
 **Since:** 12
 

@@ -18,7 +18,7 @@ align: VerticalAlign
 
 Vertical alignment mode relative to the anchor component.
 
-**Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
+**Type:** VerticalAlign
 
 **Since:** 12
 

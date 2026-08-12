@@ -21,7 +21,7 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
 **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
@@ -56,7 +56,7 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Compared with [LongPressGesture](arkts-arkui-longpressgestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Creates a long press gesture. Compared with [LongPressGesture](LongPressGestureInterface(value?: { fingers?: number; repeat?: boolean; duration?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
 **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
@@ -107,7 +107,7 @@ Registers the callback for successful long press gesture recognition.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -135,7 +135,7 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -165,7 +165,7 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -193,7 +193,7 @@ Registers the callback for long press gesture completion. This callback is trigg
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 

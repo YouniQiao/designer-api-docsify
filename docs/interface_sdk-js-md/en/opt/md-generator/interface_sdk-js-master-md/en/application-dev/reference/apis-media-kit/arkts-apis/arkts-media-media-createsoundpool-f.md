@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createSoundPool
@@ -44,7 +44,7 @@ Creates a SoundPool instance. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 
@@ -102,13 +102,13 @@ Creates a SoundPool instance. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SoundPool&gt; |
+| Promise & lt;SoundPool & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 

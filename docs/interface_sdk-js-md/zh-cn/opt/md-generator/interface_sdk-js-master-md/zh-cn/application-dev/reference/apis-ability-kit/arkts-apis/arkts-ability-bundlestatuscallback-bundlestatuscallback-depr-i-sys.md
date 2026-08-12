@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor/bundleMonitor
+**替代接口：** [bundleMonitor/bundleMonitor](ohos.bundle.bundleMonitor/bundleMonitor)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -35,7 +35,7 @@ add: (bundleName: string, userId: number) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -64,7 +64,7 @@ remove: (bundleName: string, userId: number) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -93,7 +93,7 @@ update: (bundleName: string, userId: number) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**替代接口：** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 

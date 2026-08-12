@@ -61,7 +61,7 @@ static fp(value: double): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics 类的实例。 |
 
 ## lpx
 
@@ -91,7 +91,7 @@ static lpx(value: double): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics 类的实例。 |
 
 ## percent
 
@@ -121,7 +121,7 @@ static percent(value: double): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics 类的实例。 |
 
 ## px
 
@@ -151,7 +151,7 @@ static px(value: double): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics 类的实例。 |
 
 ## resource
 
@@ -181,7 +181,7 @@ static resource(value: Resource): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics 类的实例。 |
 
 ## vp
 
@@ -211,7 +211,7 @@ static vp(value: double): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | LengthMetrics 类的实例。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | LengthMetrics 类的实例。 |
 
 ## unit
 

@@ -20,7 +20,7 @@ declare function mmapSync(file: number | File, mode: MappingMode, offset: number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | number \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 | mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | 是 |
 | offset | number | 是 |
 | size | number | 是 |

@@ -12,7 +12,7 @@ Renames a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:rename](arkts-corefile-fileio-rename-f.md#rename)
+**Substitutes:** [rename](arkts-corefile-file-fs-rename-f.md#rename)
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ Renames a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## rename
@@ -44,7 +44,7 @@ Renames a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:rename](arkts-corefile-fileio-rename-f.md#rename)
+**Substitutes:** [rename](arkts-corefile-file-fs-rename-f.md#rename)
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 

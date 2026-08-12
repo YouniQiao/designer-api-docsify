@@ -18,7 +18,7 @@ PerfTest提供白盒性能测试能力，供开发者在测试场景使用。支
 
 | 名称 | 说明 |
 | --- | --- |
-| [PerfTest](arkts-test-test-perftest-perftest-c.md) | PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过{@link create}创建实例。 |
+| [PerfTest](arkts-test-test-perftest-perftest-c.md) | PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过[create](arkts-test-test-perftest-perftest-c.md#create)创建实例。 |
 
 ### 接口
 

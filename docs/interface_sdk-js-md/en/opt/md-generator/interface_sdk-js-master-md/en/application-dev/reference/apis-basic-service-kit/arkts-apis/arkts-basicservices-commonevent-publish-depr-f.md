@@ -12,7 +12,7 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.commonEventManager:commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)(event:
+**Substitutes:** [publish](@ohos.commonEventManager:commonEventManager.publish(event:)
 
 <!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, callback: AsyncCallback<void>): void-End-->
 
@@ -56,7 +56,7 @@ Publishes a common event with given properties. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.commonEventManager:commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)(event:
+**Substitutes:** [publish](@ohos.commonEventManager:commonEventManager.publish(event:)
 
 <!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void--><!--Device-commonEvent-function publish(event: string, options: CommonEventPublishData, callback: AsyncCallback<void>): void-End-->
 

@@ -20,5 +20,5 @@ type OnFileReadyBatch = (error: BusinessError<void>, files: Array<File>) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | 是 |
-| files | Array&lt;File&gt; | 是 |
+| error | BusinessError & lt;void & gt; | 是 |
+| files | Array & lt;File & gt; | 是 |

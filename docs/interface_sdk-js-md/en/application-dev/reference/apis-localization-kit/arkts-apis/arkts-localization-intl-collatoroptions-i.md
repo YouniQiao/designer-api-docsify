@@ -13,7 +13,7 @@ Defines the options for creating a Collator object.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## caseFirst

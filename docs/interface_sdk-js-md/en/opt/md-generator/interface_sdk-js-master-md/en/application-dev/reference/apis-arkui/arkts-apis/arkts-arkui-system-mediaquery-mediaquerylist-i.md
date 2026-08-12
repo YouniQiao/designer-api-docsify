@@ -11,7 +11,7 @@ Defines the MediaQuery list info.
 ## Modules to Import
 
 ```TypeScript
-import { MediaQueryEvent, MediaQueryList } from 'kits/@kit.ArkUI';
+import { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 ```
 
 ## addListener
@@ -34,7 +34,7 @@ Adds a listening function to MediaQueryList.The listening function must be added
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (event: MediaQueryEvent) =&gt; void | Yes |
+| callback | (event: MediaQueryEvent) = & gt; void | Yes |
 
 ## Examples
 
@@ -92,7 +92,7 @@ Removes a listening function from MediaQueryList.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (event: MediaQueryEvent) =&gt; void | Yes |
+| callback | (event: MediaQueryEvent) = & gt; void | Yes |
 
 ## Examples
 

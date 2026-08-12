@@ -13,7 +13,7 @@ The scene animation form params.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -60,7 +60,7 @@ triggerTypes?: Array<SceneAnimationTriggerType>
 
 The trigger types of the scene animation.
 
-**Type:** Array&lt;SceneAnimationTriggerType&gt;
+**Type:** Array&lt;[SceneAnimationTriggerType](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md)&gt;
 
 **Since:** 26.0.0
 

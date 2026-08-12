@@ -22,4 +22,4 @@ Triggered when the **SaveButton** component is clicked.
 | --- | --- | --- |
 | event | [ClickEvent](arkts-arkui-clickevent-i.md) | Yes |
 | result | [SaveButtonOnClickResult](arkts-arkui-savebuttononclickresult-e.md) | Yes |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | No |
+| error | BusinessError & lt;void & gt; | No |

@@ -34,11 +34,11 @@ Initialize Toggle FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | Yes |  |
+| value | ToggleOptions | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) |  |
+| ToggleAttribute |  |
 

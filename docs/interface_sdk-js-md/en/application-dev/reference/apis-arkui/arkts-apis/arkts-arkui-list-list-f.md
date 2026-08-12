@@ -25,8 +25,8 @@ Defines List Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| options | [ListOptions](arkts-arkui-list-listoptions-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines List Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ListAttribute&gt; | Yes | The style to create a List. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ListAttribute](arkts-arkui-list-listattribute-i.md)&gt; | Yes | The style to create a List. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 

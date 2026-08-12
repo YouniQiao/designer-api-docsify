@@ -36,7 +36,7 @@ error: SslError
 
 Error codes.
 
-**Type:** [SslError](../arkts-components/arkts-arkweb-sslerror-e.md)
+**Type:** [SslError](arkts-arkweb-web-sslerror-e.md)
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ handler: SslErrorHandler
 
 Notifies the user of the operation behavior of the web component.
 
-**Type:** [SslErrorHandler](../arkts-components/arkts-arkweb-sslerrorhandler-c.md)
+**Type:** [SslErrorHandler](arkts-arkweb-web-sslerrorhandler-c.md)
 
 **Since:** 23
 

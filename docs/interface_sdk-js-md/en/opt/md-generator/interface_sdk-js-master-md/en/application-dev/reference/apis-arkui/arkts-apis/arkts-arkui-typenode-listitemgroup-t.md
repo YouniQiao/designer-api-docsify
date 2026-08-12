@@ -4,7 +4,7 @@
 type ListItemGroup = TypedFrameNode<ListItemGroupInterface, ListItemGroupAttribute>
 ```
 
-Represents a FrameNode of the **ListItemGroup** type. Only [ListItem](../../apis-arkui/arkts-components/arkts-arkui-list_item-i)child components can be added.
+Represents a FrameNode of the **ListItemGroup** type. Only [ListItem](../@internal/component/ets/list_item)child components can be added.
 
 **Since:** 12
 

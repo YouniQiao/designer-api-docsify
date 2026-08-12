@@ -62,7 +62,7 @@ readonly fontConfigs?: FontConfigs
 
 Get the fontConfigs of the StyledString.
 
-**Type:** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**Type:** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **Since:** 26.0.0
 
@@ -202,7 +202,7 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 
 Get the stroke join style of the StyledString.
 
-**Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**Type:** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
 
@@ -242,7 +242,7 @@ readonly superscript?: SuperscriptStyle
 
 Get the superscript style of the StyledString.
 
-**Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
+**Type:** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **Since:** 26.0.0
 

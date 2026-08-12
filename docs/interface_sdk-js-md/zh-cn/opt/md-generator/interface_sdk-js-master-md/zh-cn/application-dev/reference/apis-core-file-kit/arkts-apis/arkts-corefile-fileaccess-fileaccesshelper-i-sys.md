@@ -24,7 +24,7 @@ access(sourceFileUri: string) : Promise<boolean>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.access(path:
+**替代接口：** [access](@ohos.file.fs:fileIo.access(path:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -44,7 +44,7 @@ access(sourceFileUri: string) : Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
@@ -124,7 +124,7 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.access(path:
+**替代接口：** [access](@ohos.file.fs:fileIo.access(path:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -221,7 +221,7 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.copy(srcUri:
+**替代接口：** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -243,7 +243,7 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;CopyResult&gt;&gt; |
+| Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; |
 
 ## copy
 
@@ -257,7 +257,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.copy(srcUri:
+**替代接口：** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -273,7 +273,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 | --- | --- | --- |
 | sourceUri | string | 是 |
 | destUri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -322,7 +322,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.copy(srcUri:
+**替代接口：** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -339,7 +339,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 | sourceUri | string | 是 |
 | destUri | string | 是 |
 | force | boolean | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -388,7 +388,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.copyFile(src:
+**替代接口：** [copyFile](@ohos.file.fs:fileIo.copyFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -412,7 +412,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -423,8 +423,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -455,7 +455,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.copyFile(src:
+**替代接口：** [copyFile](@ohos.file.fs:fileIo.copyFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -485,8 +485,8 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -541,7 +541,7 @@ createFile(uri: string, displayName: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.createRandomAccessFile(file:
+**替代接口：** [createRandomAccessFile](@ohos.file.fs:fileIo.createRandomAccessFile(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -562,7 +562,7 @@ createFile(uri: string, displayName: string) : Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -644,7 +644,7 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.createRandomAccessFile(file:
+**替代接口：** [createRandomAccessFile](@ohos.file.fs:fileIo.createRandomAccessFile(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -739,7 +739,7 @@ delete(uri: string) : Promise<number>
 
 **废弃版本：** 23
 
-**替代接口：** [@ohos.file.fs:AtomicFile#delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**替代接口：** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -759,7 +759,7 @@ delete(uri: string) : Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -836,7 +836,7 @@ delete(uri: string, callback: AsyncCallback<number>): void
 
 **废弃版本：** 23
 
-**替代接口：** [@ohos.file.fs:AtomicFile#delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**替代接口：** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -929,7 +929,7 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.stat(file:
+**替代接口：** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -949,7 +949,7 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;FileInfo&gt; |
+| Promise & lt;FileInfo & gt; |
 
 ## 示例
 
@@ -984,7 +984,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.stat(file:
+**替代接口：** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1038,7 +1038,7 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.stat(file:
+**替代接口：** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1058,7 +1058,7 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;FileInfo&gt; |
+| Promise & lt;FileInfo & gt; |
 
 ## 示例
 
@@ -1094,7 +1094,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.stat(file:
+**替代接口：** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1143,7 +1143,7 @@ try {
 getRoots(): Promise<RootIterator>
 ```
 
-以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md)。
+以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用Promise异步回调。该方法返回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo)。
 
 **起始版本：** 9
 
@@ -1161,7 +1161,7 @@ getRoots(): Promise<RootIterator>
 
 | 类型 |
 | --- |
-| Promise&lt;RootIterator&gt; |
+| Promise&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; |
 
 **错误码：**
 
@@ -1240,7 +1240,7 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
 以异步方法获取helper对象连接的文件管理服务类的设备根节点信息。使用callback异步回调。callback带回迭代器对象RootIterator，然后通过[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next)方法返回  
-[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md)。
+[RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo)。
 
 **起始版本：** 9
 
@@ -1258,7 +1258,7 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RootIterator&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
@@ -1343,7 +1343,7 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.mkdir(path:
+**替代接口：** [mkdir](@ohos.file.fs:fileIo.mkdir(path:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1364,7 +1364,7 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -1446,7 +1446,7 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.mkdir(path:
+**替代接口：** [mkdir](@ohos.file.fs:fileIo.mkdir(path:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1541,7 +1541,7 @@ move(sourceFile: string, destFile: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1556,13 +1556,13 @@ move(sourceFile: string, destFile: string) : Promise<string>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sourceFile | string | 是 |
-| destFile | string | 是 |
+| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -1639,7 +1639,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1654,7 +1654,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sourceFile | string | 是 |
-| destFile | string | 是 |
+| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |
 
 **错误码：**
@@ -1734,7 +1734,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1758,7 +1758,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -1769,8 +1769,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1826,7 +1826,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1856,8 +1856,8 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1915,7 +1915,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1939,7 +1939,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;MoveResult&gt;&gt; |
+| Promise&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
@@ -1950,8 +1950,8 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1982,7 +1982,7 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2000,7 +2000,7 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | --- | --- | --- |
 | sourceUri | string | 是 |
 | destUri | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
 
@@ -2011,8 +2011,8 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2078,7 +2078,7 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.moveFile(src:
+**替代接口：** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2097,7 +2097,7 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | sourceUri | string | 是 |
 | destUri | string | 是 |
 | force | boolean | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | 是 |
 
 **错误码：**
 
@@ -2108,8 +2108,8 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2175,7 +2175,7 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.open(path:
+**替代接口：** [open](@ohos.file.fs:fileIo.open(path:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2196,7 +2196,7 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -2271,7 +2271,7 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.open(path:
+**替代接口：** [open](@ohos.file.fs:fileIo.open(path:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2365,7 +2365,7 @@ query(uri: string, metaJson: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.stat(file:
+**替代接口：** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2386,7 +2386,7 @@ query(uri: string, metaJson: string) : Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 
@@ -2422,7 +2422,7 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.stat(file:
+**替代接口：** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2479,7 +2479,7 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.createWatcher
+**替代接口：** [createWatcher](@ohos.file.fs:fileIo.createWatcher)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2495,7 +2495,7 @@ registerObserver(uri: string, notifyForDescendants: boolean, callback: Callback<
 | --- | --- | --- |
 | uri | string | 是 |
 | notifyForDescendants | boolean | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
@@ -2515,7 +2515,7 @@ rename(uri: string, displayName: string) : Promise<string>
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.rename(oldPath:
+**替代接口：** [rename](@ohos.file.fs:fileIo.rename(oldPath:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2536,7 +2536,7 @@ rename(uri: string, displayName: string) : Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
@@ -2612,7 +2612,7 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.rename(oldPath:
+**替代接口：** [rename](@ohos.file.fs:fileIo.rename(oldPath:)
 
 **需要权限：** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2719,7 +2719,7 @@ unregisterObserver(uri: string, callback?: Callback<NotifyMessage>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uri | string | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | 否 |
 
 **错误码：**
 

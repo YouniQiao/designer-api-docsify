@@ -13,7 +13,7 @@ Defines the configuration information about the camera picker.
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## cameraPosition
@@ -43,7 +43,7 @@ saveUri?: string
 ```
 
 URI for saving the configuration information. For details about the default value, see   
-[File URI](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md/arkts-corefile-fileuri-fileuri-c.md#constructor). The **saveUri** parameter is optional. If it is not specified, images and videos are automatically saved to the media library. To prevent them from being saved to the media library, specify a valid file path within your application's sandbox. When you use your own resource path, ensure that the file exists and is writable; otherwise, the save operation fails.
+[File URI](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The **saveUri** parameter is optional. If it is not specified, images and videos are automatically saved to the media library. To prevent them from being saved to the media library, specify a valid file path within your application's sandbox. When you use your own resource path, ensure that the file exists and is writable; otherwise, the save operation fails.
 
 **Type:** string
 

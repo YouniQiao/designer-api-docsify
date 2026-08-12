@@ -21,7 +21,7 @@ This module applies to the following scenarios:
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthIcon } from 'kits/@kit.UserAuthenticationKit';
+import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
 ## build
@@ -90,7 +90,7 @@ iconColor?: ResourceColor
 
 Color of the icon. The default value is **\$r('sys.color.ohos_id_color_activated')**.
 
-**Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** $r('sys.color.ohos_id_color_activated')
 
@@ -112,7 +112,7 @@ iconHeight?: Dimension
 
 Height of the icon. The aspect ratio is 1:1. The default value is **64fp**. Percentage strings are not supported.
 
-**Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 64fp
 

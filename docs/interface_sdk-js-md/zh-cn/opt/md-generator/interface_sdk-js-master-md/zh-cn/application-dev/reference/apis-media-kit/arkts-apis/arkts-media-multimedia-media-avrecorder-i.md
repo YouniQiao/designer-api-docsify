@@ -1,7 +1,7 @@
 # AVRecorder
 
 音视频录制管理类，用于音视频媒体录制。在调用AVRecorder的方法前，需要先调用  
-[createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder)接口构建一个AVRecorder实例。
+[createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder)接口构建一个AVRecorder实例。
 
 音视频录制demo可参考：[音频录制开发指导](../../../media/media/using-avrecorder-for-recording.md)、  
 [视频录制开发指导](../../../media/media/video-recording.md)。
@@ -10,7 +10,7 @@
 > 
 > - 本Interface首批API从API version 9开始支持。
 > 
-> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md/arkts-multimedia-camera.md)。
+> - 相机视频录制功能需配合相机模块使用，相机模块接口的使用详情请参考[相机管理](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md#camera)。
 
 **起始版本：** 9
 
@@ -45,16 +45,16 @@ addWatermark(watermark: image.PixelMap, config: WatermarkConfiguration): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## getAVRecorderConfig
 
@@ -76,15 +76,15 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVRecorderConfig&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getAVRecorderConfig
 
@@ -106,15 +106,15 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 | 类型 |
 | --- |
-| Promise&lt;AVRecorderConfig&gt; |
+| Promise&lt;[AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getAudioCapturerMaxAmplitude
 
@@ -144,8 +144,8 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getAudioCapturerMaxAmplitude
 
@@ -169,14 +169,14 @@ getAudioCapturerMaxAmplitude(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getAvailableEncoder
 
@@ -196,14 +196,14 @@ getAvailableEncoder(callback: AsyncCallback<Array<EncoderInfo>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EncoderInfo&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EncoderInfo](arkts-media-multimedia-media-encoderinfo-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getAvailableEncoder
 
@@ -223,14 +223,14 @@ getAvailableEncoder(): Promise<Array<EncoderInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;EncoderInfo&gt;&gt; |
+| Promise&lt;Array&lt;[EncoderInfo](arkts-media-multimedia-media-encoderinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getCurrentAudioCapturerInfo
 
@@ -258,9 +258,9 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getCurrentAudioCapturerInfo
 
@@ -282,15 +282,15 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;audio.AudioCapturerChangeInfo&gt; |
+| Promise & lt;audio.AudioCapturerChangeInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getInputSurface
 
@@ -322,9 +322,9 @@ getInputSurface(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## getInputSurface
 
@@ -350,15 +350,15 @@ getInputSurface(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## off('stateChange')
 
@@ -475,7 +475,7 @@ on(type: 'audioCapturerChange', callback: Callback<audio.AudioCapturerChangeInfo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on('photoAssetAvailable')
 
@@ -506,8 +506,8 @@ on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## on('stateChange')
 
@@ -536,8 +536,8 @@ on(type: 'stateChange', callback: OnAVRecorderStateChangeHandler): void
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## on('error')
 
@@ -571,16 +571,16 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [5400107](../errorcode-media.md#5400107-音频焦点冲突) |
-| [5400104](../errorcode-media.md#5400104-操作超时) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [5400107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400107-音频焦点冲突) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## pause
 
@@ -609,9 +609,9 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## pause
 
@@ -635,15 +635,15 @@ pause(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## prepare
 
@@ -672,10 +672,10 @@ prepare(config: AVRecorderConfig, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## prepare
 
@@ -707,16 +707,16 @@ prepare(config: AVRecorderConfig): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## release
 
@@ -744,7 +744,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## release
 
@@ -768,13 +768,13 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## reset
 
@@ -804,8 +804,8 @@ reset(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## reset
 
@@ -829,14 +829,14 @@ reset(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## resume
 
@@ -864,9 +864,9 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## resume
 
@@ -890,15 +890,15 @@ resume(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## setMetadata
 
@@ -923,16 +923,16 @@ setMetadata(metadata: Record<string, string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | 是 |
+| metadata | Record & lt;string, string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## setWillMuteWhenInterrupted
 
@@ -958,14 +958,14 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## start
 
@@ -994,9 +994,9 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## start
 
@@ -1021,15 +1021,15 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## stop
 
@@ -1062,9 +1062,9 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## stop
 
@@ -1092,15 +1092,15 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## updateRotation
 
@@ -1129,16 +1129,16 @@ updateRotation(rotation: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../errorcode-media.md#5400103-出现io错误) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
 ## state
 

@@ -22,7 +22,7 @@ Looks up a locale from the given language tags.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locale | Intl.BCP47LanguageTag \| Intl.BCP47LanguageTag[] | Yes | the locale. |
+| locale | [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | Yes | the locale. |
 
 **Return value:**
 

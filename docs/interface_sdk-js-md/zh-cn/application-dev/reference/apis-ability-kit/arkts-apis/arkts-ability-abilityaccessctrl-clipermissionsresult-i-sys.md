@@ -20,7 +20,7 @@ permList: Array<CliCommandPermissionResult>
 
 CLI权限信息的列表。
 
-**类型：** Array&lt;CliCommandPermissionResult&gt;
+**类型：** Array&lt;[CliCommandPermissionResult](arkts-ability-abilityaccessctrl-clicommandpermissionresult-i-sys.md)&gt;
 
 **起始版本：** 26.0.0
 

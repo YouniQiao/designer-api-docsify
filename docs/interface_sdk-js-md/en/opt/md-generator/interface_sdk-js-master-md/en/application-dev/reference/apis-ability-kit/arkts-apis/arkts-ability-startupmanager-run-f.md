@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## run
@@ -17,7 +17,7 @@ Runs startup tasks or loads .so files.
 > **NOTE：**
 > 
 > This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use
-> [startupManager.run](arkts-ability-startupmanager-run-f.md#run)
+> [startupManager.run](#run)
 > .
 
 **Since:** 12
@@ -32,25 +32,25 @@ Runs startup tasks or loads .so files.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes |
+| startupTasks | Array & lt;string & gt; | Yes |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [28800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
+| [28800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800003-error-occurs-during-task-startup) |
+| [28800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [28800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
 
 ## Examples
 
@@ -89,7 +89,7 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 ```
 
 Runs startup tasks or loads .so files. You can specify  
-[AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result.
+[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext) for loading startup tasks. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -103,7 +103,7 @@ Runs startup tasks or loads .so files. You can specify
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| startupTasks | Array&lt;string&gt; | Yes |
+| startupTasks | Array & lt;string & gt; | Yes |
 | context | common.AbilityStageContext | Yes |
 | config | [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | Yes |
 
@@ -111,17 +111,17 @@ Runs startup tasks or loads .so files. You can specify
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [28800004](../errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
-| [28800003](../errorcode-ability.md#28800003-error-occurs-during-task-startup) |
-| [28800002](../errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [28800001](../errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
+| [28800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800004-executing-the-startup-task-times-out) |
+| [28800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800003-error-occurs-during-task-startup) |
+| [28800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800002-circular-dependencies-between-startup-tasks) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [28800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800001-startup-task-or-dependency-not-found) |
 
 ## Examples
 

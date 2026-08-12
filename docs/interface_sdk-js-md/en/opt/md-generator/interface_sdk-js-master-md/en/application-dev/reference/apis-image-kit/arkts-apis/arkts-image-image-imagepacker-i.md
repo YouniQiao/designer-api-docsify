@@ -3,10 +3,10 @@
 The **ImagePacker** class provides APIs to compress and encode images.
 
 Before calling any API in ImagePacker, you must use   
-[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker) to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
 
 Images occupy a large amount of memory. When you finish using an ImagePacker instance, call   
-[release](arkts-image-image-imagepacker-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
@@ -19,7 +19,7 @@ Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## packBinaryImageToTiffData
@@ -49,14 +49,14 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) |
-| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) |
+| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
+| [7800202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) |
 
 ## packBinaryImageToTiffFile
 
@@ -86,14 +86,14 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) |
-| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) |
+| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
+| [7800202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) |
 
 ## packToData
 
@@ -122,21 +122,21 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToData
 
@@ -171,21 +171,21 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToDataFromPixelmapSequence
 
@@ -205,21 +205,21 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pixelmapSequence | Array&lt;PixelMap&gt; | Yes |
+| pixelmapSequence | Array & lt;PixelMap & gt; | Yes |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
 
 ## packToFile
 
@@ -248,15 +248,15 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -284,21 +284,21 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -333,15 +333,15 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -375,21 +375,21 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -417,14 +417,14 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
 
 ## packToFileFromPixelmapSequence
 
@@ -444,7 +444,7 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pixelmapSequence | Array&lt;PixelMap&gt; | Yes |
+| pixelmapSequence | Array & lt;PixelMap & gt; | Yes |
 | fd | number | Yes |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes |
 
@@ -452,14 +452,14 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
 
 ## packing
 
@@ -473,7 +473,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -501,7 +501,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -520,7 +520,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## packing
 
@@ -540,7 +540,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -574,7 +574,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Deprecated since:** 13
 
-**Substitutes:** [image.ImagePacker#packToData](arkts-image-image-imagepacker-i.md#packtodata)
+**Substitutes:** [packToData](#packToData)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -593,7 +593,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## packing
 
@@ -620,14 +620,14 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../errorcode-image.md#7800301-encoding-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
 
 ## release
 
@@ -675,7 +675,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## supportedFormats
 

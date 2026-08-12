@@ -28,11 +28,11 @@ Defines the WindowScene Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | persistentId | int | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WindowSceneAttribute](../arkts-components/arkts-arkui-windowscene-attribute.md) |  |
+| [WindowSceneAttribute](arkts-arkui-windowscene-windowsceneattribute-i-sys.md) |  |
 

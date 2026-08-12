@@ -11,7 +11,7 @@ Defines an HTTP Interceptor chain.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## addChain
@@ -48,7 +48,7 @@ Add an interceptor chain to the HTTP client.
 | --- |
 | 2300802 |
 | 2300801 |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
 
 ## apply
 
@@ -70,7 +70,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| httpRequest | [HttpRequest](arkts-network-connection-httprequest-t.md) | Yes |
+| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | Yes |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 | Error Code ID |
 | --- |
 | 2300801 |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) |
+| [2300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) |
 
 ## getChain
 

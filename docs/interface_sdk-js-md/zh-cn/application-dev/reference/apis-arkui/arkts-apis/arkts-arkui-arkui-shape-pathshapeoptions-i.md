@@ -16,7 +16,7 @@ PathShape的构造函数参数。
 commands?: string
 ```
 
-绘制路径的指令。更多说明请参考[commands](arkts-arkui-path-pathattribute-i.md#commands)支持的绘制命令。
+绘制路径的指令。更多说明请参考[commands](PathAttribute#commands)支持的绘制命令。
 
 **类型：** string
 

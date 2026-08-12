@@ -4,7 +4,7 @@
 export type UIAbilityContext = _UIAbilityContext.default
 ```
 
-[UIAbility](arkts-app-ability-uiability.md)组件上下文，继承自Context。
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)组件上下文，继承自Context。
 
 **起始版本：** 9
 

@@ -24,7 +24,7 @@ JS跨线程通信工具。
 
 | 名称 | 说明 |
 | --- | --- |
-| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) | RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md)，具有ThreadWorker中所有的方法。RestrictedWorker主要用于提供受限的Worker线程运行环境，该线程运行环境中只允许导入Worker模块，不允许导入其他API。 |
+| [RestrictedWorker](arkts-arkts-worker-restrictedworker-c-sys.md) | RestrictedWorker类继承[ThreadWorker](arkts-arkts-worker-threadworker-c.md#ThreadWorker)，具有ThreadWorker中所有的方法。RestrictedWorker主要用于提供受限的Worker线程运行环境，该线程运行环境中只允许导入Worker模块，不允许导入其他API。 |
 <!--DelEnd-->
 
 ### 常量

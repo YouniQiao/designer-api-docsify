@@ -11,7 +11,7 @@ Provides methods for setting the answering mode of incoming and outgoing calls.
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

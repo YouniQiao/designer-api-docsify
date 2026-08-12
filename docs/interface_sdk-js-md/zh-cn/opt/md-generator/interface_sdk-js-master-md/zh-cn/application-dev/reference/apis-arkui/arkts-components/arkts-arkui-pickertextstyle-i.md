@@ -36,7 +36,7 @@ font?: Font
 
 Text style.
 
-**类型：** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 11
 

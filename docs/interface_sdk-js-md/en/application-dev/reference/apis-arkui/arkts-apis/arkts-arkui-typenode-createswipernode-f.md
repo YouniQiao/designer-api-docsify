@@ -29,5 +29,5 @@ Create a FrameNode of Swiper type.On API 26.0.0 and above, It can also create a 
 
 | Type | Description |
 | --- | --- |
-| [Swiper](arkts-arkui-typenode-swiper-t.md) | Return Swiper type FrameNode. |
+| Swiper | Return Swiper type FrameNode. |
 

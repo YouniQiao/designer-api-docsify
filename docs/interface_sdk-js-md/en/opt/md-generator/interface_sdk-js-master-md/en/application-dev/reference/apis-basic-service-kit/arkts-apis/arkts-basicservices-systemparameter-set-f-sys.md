@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## set
@@ -18,7 +18,7 @@ Sets a value for the specified key. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.set
+**Substitutes:** [set](ohos.systemParameterEnhance.set)
 
 <!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -64,7 +64,7 @@ Sets a value for the specified key. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.set
+**Substitutes:** [set](ohos.systemParameterEnhance.set)
 
 <!--Device-systemParameter-function set(key: string, value: string): Promise<void>--><!--Device-systemParameter-function set(key: string, value: string): Promise<void>-End-->
 
@@ -83,7 +83,7 @@ Sets a value for the specified key. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

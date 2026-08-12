@@ -180,7 +180,7 @@ ChipV2激活时的背景颜色。
 
 值为非法值时，背景颜色透明。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 26.0.0
 
@@ -198,9 +198,9 @@ ChipV2激活时的背景颜色。
 public activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件激活状态下的系统材质样式。不同材质具有不同的效果，能够影响组件的背景色[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
-[shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow)效果、材质层滤镜效果  
-[materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#materialfilter)。
+设置组件激活状态下的系统材质样式。不同材质具有不同的效果，能够影响组件的背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、边框颜色[borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影  
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))效果、材质层滤镜效果  
+[materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialFilter)。
 
 默认值：undefined，不应用材质样式。
 
@@ -258,7 +258,7 @@ ChipV2背景颜色。
 
 值为非法值时，背景颜色透明。
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **起始版本：** 26.0.0
 
@@ -276,10 +276,10 @@ ChipV2背景颜色。
 public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
-设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的背景色[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
-[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
-[shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow)效果、材质层滤镜效果  
-[materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#materialfilter)。
+设置组件系统材质样式。不同材质具有不同的效果，能够影响组件的背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、边框颜色  
+[borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影  
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))效果、材质层滤镜效果  
+[materialFilter](../arkts-components/arkts-arkui-commonmethod-c.md#materialFilter)。
 
 默认值：undefined，不应用材质样式。
 
@@ -313,7 +313,7 @@ size为ChipV2Size.SMALL时，borderRadius默认值为：`\$r('sys.float.chip_bor
 
 值为undefined时，按默认值处理。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.0.0
 
@@ -365,7 +365,7 @@ public direction?: Direction
 
 值为undefined时，按默认值处理。
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 26.0.0
 
@@ -422,7 +422,7 @@ public fontSize?: LengthMetrics
 
 值为undefined时，按默认值处理。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.0.0
 
@@ -528,7 +528,7 @@ ChipV2点击事件回调函数。
 
 值为undefined时，按默认值处理。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
 
@@ -614,7 +614,7 @@ SizeT&lt;LengthMetrics&gt;类型参数不支持百分比设置，异常值按默
 
 **说明：**[适老化](../../../ui/arkui-support-for-aging-adaptation.md)在size指定具体宽高时不生效，size设置为{ height: 0, width: 0 }除外。
 
-**类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
+**类型：** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **起始版本：** 26.0.0
 

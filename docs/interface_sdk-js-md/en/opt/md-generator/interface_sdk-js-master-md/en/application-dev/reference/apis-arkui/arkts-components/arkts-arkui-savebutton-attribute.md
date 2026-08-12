@@ -35,7 +35,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-units-borderradiuses-i.md) | Yes |
+| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes |
 
 ## iconSize
 
@@ -59,7 +59,7 @@ Sets the icon size of the **SaveButton** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | Yes |
+| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | Yes |
 
 ## onClick
 
@@ -224,7 +224,7 @@ style icon resource (i.e., **\$r('sys.symbol.xxx')**).
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | Yes |
+| color | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | Yes |
 
 ## symbolRenderingStrategy
 

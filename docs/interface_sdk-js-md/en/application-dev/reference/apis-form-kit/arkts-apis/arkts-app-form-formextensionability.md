@@ -16,7 +16,7 @@ The **FormExtensionAbility** module provides lifecycle callbacks invoked when a 
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## Summary
@@ -39,7 +39,7 @@ import { FormExtensionAbility } from 'kits/@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
-| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) | Called to return a {@link FormState} object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.&lt;/p&gt; |
+| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) | Called to return a [FormState](FormState) object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns [DEFAULT](FormState#DEFAULT) by default.&lt;/p&gt; |
 | [OnStopFn](arkts-form-onstopfn-t.md) | Called when this ability breaks the last link, notifying the provider that the provider process is about to stop. |
 
 <!--Del-->

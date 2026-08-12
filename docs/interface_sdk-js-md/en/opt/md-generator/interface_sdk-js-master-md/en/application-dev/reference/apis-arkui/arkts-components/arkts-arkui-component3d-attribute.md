@@ -161,4 +161,4 @@ Buffer input for shader animation
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| buffer | Array&lt;number&gt; | Yes |
+| buffer | Array & lt;number & gt; | Yes |

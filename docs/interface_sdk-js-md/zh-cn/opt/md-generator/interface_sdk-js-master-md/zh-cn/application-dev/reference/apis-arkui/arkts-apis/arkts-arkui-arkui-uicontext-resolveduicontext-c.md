@@ -6,9 +6,9 @@ ResolvedUIContext实例对象。
 > 
 > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
 > 
-> - ResolvedUIContext继承自[UIContext](arkts-arkui-uicontext.md)，并新增strategy属性用于记录该UIContext实例的解析策略。
+> - ResolvedUIContext继承自[UIContext](@ohos.arkui.UIContext)，并新增strategy属性用于记录该UIContext实例的解析策略。
 
-**继承/实现关系：** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**继承/实现关系：** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)
 
 **起始版本：** 22
 
@@ -22,7 +22,7 @@ ResolvedUIContext实例对象。
 strategy: ResolveStrategy
 ```
 
-[UIContext](arkts-arkui-uicontext.md)的解析策略。
+[UIContext](@ohos.arkui.UIContext)的解析策略。
 
 **类型：** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 

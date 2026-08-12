@@ -50,7 +50,7 @@ CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
 
 表示原子化服务分享的标题。
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的标题。
+在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调中，开发者可通过该字段设置分享的标题。
 
 **起始版本：** 10
 
@@ -68,7 +68,7 @@ SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
 
 表示原子化服务分享的内容摘要。
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的摘要。
+在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调中，开发者可通过该字段设置分享的摘要。
 
 **起始版本：** 10
 
@@ -86,7 +86,7 @@ SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
 
 表示原子化服务分享的URL链接。
 
-在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调中，开发者可通过该字段设置分享的URL链接。
+在跨端分享的[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调中，开发者可通过该字段设置分享的URL链接。
 
 **起始版本：** 10
 
@@ -134,8 +134,8 @@ SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceEx
 SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 ```
 
-表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)的显示模式，值为枚举类型  
-[ShowMode](arkts-ability-wantconstant-showmode-e.md)
+表示[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)的显示模式，值为枚举类型  
+[ShowMode](arkts-ability-wantconstant-showmode-e.md#ShowMode)
 
 **起始版本：** 12
 
@@ -151,7 +151,7 @@ SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
 PARAMS_STREAM = 'ability.params.stream'
 ```
 
-表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) 。该字段需要与文件URI读写[Flags](arkts-ability-wantconstant-flags-e.md)配合使用。
+表示授权给目标方的文件URI列表。对应的value必须是string类型的文件URI数组。文件URI的获取参考[fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) 。该字段需要与文件URI读写[Flags](arkts-ability-wantconstant-flags-e.md#Flags)配合使用。
 
 **起始版本：** 12
 
@@ -185,8 +185,8 @@ CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
 
 表示应用拉起的请求码。
 
-当调用[startAbilityForResult](arkts-ability-uiabilitycontext-c.md#startabilityforresult)或  
-[openLink](arkts-ability-uiabilitycontext-c.md#openlink)拉起目标方Ability时，需要目标方返回结果。为了确保目标方能够将结果准确返回到调用方，系统会自动生成唯一的requestCode，以标识本次调用。
+当调用[startAbilityForResult](./application/UIAbilityContext:UIAbilityContext.startabilityforresult)或  
+[openLink](arkts-ability-uiabilitycontext-c.md#openLink)拉起目标方Ability时，需要目标方返回结果。为了确保目标方能够将结果准确返回到调用方，系统会自动生成唯一的requestCode，以标识本次调用。
 
 **起始版本：** 12
 
@@ -412,9 +412,9 @@ LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'
 ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-表示基于[UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md/arkts-data-unifieddatachannel.md)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
+表示基于[UDMF](../../apis-arkdata/arkts-apis/arkts-data-unifieddatachannel.md#unifiedDataChannel)进行文件分享时使用的唯一标识。该字段只允许系统应用设置，三方应用可以读取。
 
-当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)），且同时存在PARAMS_STREAM字段时，该字段将不生效。
+当Want中存在URI授权Flag字段（即[FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#Flags)或[FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md#Flags)），且同时存在PARAMS_STREAM字段时，该字段将不生效。
 
 **起始版本：** 20
 

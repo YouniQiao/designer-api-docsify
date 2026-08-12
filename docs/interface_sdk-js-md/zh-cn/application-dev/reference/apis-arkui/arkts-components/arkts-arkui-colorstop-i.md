@@ -18,7 +18,7 @@ color: ResourceColor
 
 渐变色断点处的颜色值。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -46,7 +46,7 @@ offset: Length
 
 例如'10vp'转换为10，'10%'转换为0.1。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 10
 

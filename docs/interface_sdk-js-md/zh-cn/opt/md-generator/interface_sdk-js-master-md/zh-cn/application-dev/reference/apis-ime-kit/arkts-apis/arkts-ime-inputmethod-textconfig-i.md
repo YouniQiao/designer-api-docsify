@@ -16,7 +16,7 @@ capitalizeMode?: CapitalizeMode
 
 编辑框设置大小写模式。如果没有设置或设置非法值，默认不进行任何首字母大写处理。
 
-**类型：** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
+**类型：** CapitalizeMode
 
 **默认值：** CapitalizeMode.NONE
 
@@ -82,7 +82,7 @@ selection?: Range
 
 文本选中的范围。
 
-**类型：** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**类型：** Range
 
 **起始版本：** 10
 
@@ -98,7 +98,7 @@ windowId?: number
 
 编辑框所在的窗口Id，该参数应为整数。
 
-推荐使用[getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md/arkts-arkui-window-window-i.md#getwindowproperties)方法获取窗口id属性。
+推荐使用[getWindowProperties](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#getWindowProperties)方法获取窗口id属性。
 
 **类型：** number
 

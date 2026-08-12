@@ -204,7 +204,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Padding \| Dimension \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 |
+| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 |
 
 **返回值：**
 

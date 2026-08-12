@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## showAd
@@ -34,7 +34,7 @@ Shows a full-screen ad.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | Yes | Ad object. |
+| ad | Advertisement | Yes | Ad object. |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | Yes | Ad display parameters. |
 | context | common.UIAbilityContext | No | Context of the UIAbility. If this parameter is not set, the value is obtained from @ohos.app.ability.common.<br>**Since:** 12 |
 
@@ -42,9 +42,9 @@ Shows a full-screen ad.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 

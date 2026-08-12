@@ -72,7 +72,7 @@ paragraphs?: Paragraph[]
 
 获取到的文本段落信息。只有在options.textOnly为true时，才会获取该属性。
 
-**类型：** [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md)[]
+**类型：** Paragraph[]
 
 **起始版本：** 20
 

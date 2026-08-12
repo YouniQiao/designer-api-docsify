@@ -1,6 +1,6 @@
 # WebContextMenuParam
 
-定义上下文菜单参数，关联{@link WebContextMenuParam}方法。
+定义上下文菜单参数，关联[WebContextMenuParam](#WebContextMenuParam)方法。
 
 **起始版本：** 9
 
@@ -80,7 +80,7 @@ getContextMenuMediaType(): ContextMenuDataMediaType
 getEditStateFlags(): number
 ```
 
-返回上下文可编辑状态标记 {@link ContextMenuEditStateFlags}。
+返回上下文可编辑状态标记 [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md#ContextMenuEditStateFlags)。
 
 **起始版本：** 9
 
@@ -120,7 +120,7 @@ getInputFieldType(): ContextMenuInputFieldType
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContextMenuInputFieldType](../arkts-apis/arkts-arkweb-web-contextmenuinputfieldtype-e.md) | 输入框上触发菜单时返回输入框类型。 |
+| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | 输入框上触发菜单时返回输入框类型。 |
 
 ## getLinkUrl
 

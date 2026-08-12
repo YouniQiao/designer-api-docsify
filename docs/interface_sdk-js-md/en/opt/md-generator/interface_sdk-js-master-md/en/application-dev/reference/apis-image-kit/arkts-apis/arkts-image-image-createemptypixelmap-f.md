@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createEmptyPixelMap
@@ -44,9 +44,9 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 | Error Code ID |
 | --- |
-| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

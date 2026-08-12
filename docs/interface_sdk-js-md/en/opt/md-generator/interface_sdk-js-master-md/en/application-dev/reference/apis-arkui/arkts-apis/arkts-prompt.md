@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction
+**Substitutes:** [promptAction/promptAction](ohos.promptAction/promptAction)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## Summary

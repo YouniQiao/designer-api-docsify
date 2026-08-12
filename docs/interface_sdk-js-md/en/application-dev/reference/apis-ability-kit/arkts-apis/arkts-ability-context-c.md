@@ -2,7 +2,7 @@
 
 Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.../../../
 
-**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
+**Inheritance/Implementation:** Context extends [BaseContext](BaseContext)
 
 **Since:** 9
 
@@ -42,7 +42,27 @@ Creates an application context with a specific data encryption level. You can ca
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created based on the data encryption level. |
+| [Context](arkts-ability-context-c.md) | Context created based on the data encryption level. |
+
+## Examples
+
+```TypeScript
+import { common, UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let areaMode: contextConstant.AreaMode = contextConstant.AreaMode.EL2;
+    let areaModeContext: common.Context;
+    try {
+      areaModeContext = this.context.createAreaModeContext(areaMode);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'createAreaModeContext error is:%{public}s', JSON.stringify(error));
+    }
+  }
+}
+```
 
 ## createDisplayContext
 
@@ -57,8 +77,8 @@ createDisplayContext(displayId: long): Context
 ```
 
 Creates an application context based on the specified display ID with screen information (including  
-[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md/arkts-localization-resourcemanager-screendensity-e.md) and  
-[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md/arkts-localization-resourcemanager-direction-e.md)).
+[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity) and  
+[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md#Direction)).
 
 **Since:** 15
 
@@ -82,13 +102,32 @@ Creates an application context based on the specified display ID with screen inf
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context with the specified screen information. |
+| [Context](arkts-ability-context-c.md) | Context with the specified screen information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+## Examples
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let displayContext: common.Context;
+    try {
+      displayContext = this.context.createDisplayContext(0);
+    } catch (error) {
+      hilog.error(0x0000, 'testTag', 'createDisplayContext error is:%{public}s', JSON.stringify(error));
+    }
+  }
+}
+```
 
 ## createModuleContext
 
@@ -104,7 +143,7 @@ Creates the context based on the module name.
 > be obtained. The context of other applications cannot be obtained.
 > 
 > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)
 > instead. Otherwise, resource acquisition may fail.
 > 
 > - Creating a module context involves resource querying and initialization, which can be time-consuming. In
@@ -117,7 +156,7 @@ Creates the context based on the module name.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.app.ability.application:application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+**Substitutes:** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,13 +176,32 @@ Creates the context based on the module name.
 
 | Type | Description |
 | --- | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Context created. |
+| [Context](arkts-ability-context-c.md) | Context created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+## Examples
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      moduleContext = this.context.createModuleContext('entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getApplicationContext
 
@@ -175,7 +233,26 @@ Obtains the application context.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+
+## Examples
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let applicationContext: common.Context;
+    try {
+      applicationContext = this.context.getApplicationContext();
+    } catch (error) {
+      console.error(`getApplicationContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getGroupDir
 
@@ -202,14 +279,36 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.&lt;br&gt;Note: Only the EL2 encryption level is supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.&lt;br&gt;Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## Examples
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let getGroupDirContext: common.Context = this.context;
+
+    getGroupDirContext.getGroupDir("1", (err: BusinessError, data) => {
+      if (err) {
+        console.error(`getGroupDir failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`getGroupDir result is: ${JSON.stringify(data)}`);
+      }
+    });
+  }
+}
+```
 
 ## getGroupDir
 
@@ -247,8 +346,30 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
-| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+## Examples
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = "1";
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info("getGroupDir result:" + data);
+      })
+    } catch (error) {
+      console.error(`getGroupDirContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## isContextOf
 
@@ -311,7 +432,7 @@ area: contextConstant.AreaMode
 ```
 
 Information about file partitions, which are divided according to the encryption level specified by  
-[AreaMode](arkts-ability-contextconstant-areamode-e.md).
+[AreaMode](./../@ohos.app.ability.contextConstant:contextConstant.areaMode).
 
 **Type:** contextConstant.AreaMode
 
@@ -333,7 +454,7 @@ Information about file partitions, which are divided according to the encryption
 bundleCodeDir: string
 ```
 
-Bundle code directory. Do not access resource files using concatenated paths.Use [resource manager APIs](arkts-ability-context-c.md#resourcemanager) instead.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Bundle code directory. Do not access resource files using concatenated paths.Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager) instead.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 

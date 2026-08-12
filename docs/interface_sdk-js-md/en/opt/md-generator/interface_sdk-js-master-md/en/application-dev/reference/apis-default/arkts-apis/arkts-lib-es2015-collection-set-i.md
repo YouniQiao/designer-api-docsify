@@ -64,7 +64,7 @@ Executes a provided function once per each value in the Set object, in insertion
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: T, value2: T, set: Set&lt;T&gt;) =&gt; void | Yes |
+| callbackfn | (value: T, value2: T, set: Set & lt;T & gt;) = & gt; void | Yes |
 | thisArg | any | No |
 
 ## has

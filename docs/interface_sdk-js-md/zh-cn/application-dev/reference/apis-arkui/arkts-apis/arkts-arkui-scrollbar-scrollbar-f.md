@@ -26,13 +26,13 @@ export declare function ScrollBar(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ScrollBarOptions](arkts-arkui-scrollbar-scrollbaroptions-i.md) | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollBarAttribute](../arkts-components/arkts-arkui-scrollbar-attribute.md) |  |
+| [ScrollBarAttribute](arkts-arkui-scrollbar-scrollbarattribute-i.md) |  |
 
 
 ## ScrollBar
@@ -62,12 +62,12 @@ export declare function ScrollBar(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ScrollBarAttribute&gt; | 是 | The style to create a ScrollBar. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ScrollBarAttribute](arkts-arkui-scrollbar-scrollbarattribute-i.md)&gt; | 是 | The style to create a ScrollBar. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollBarAttribute](../arkts-components/arkts-arkui-scrollbar-attribute.md) | ScrollBar的属性。 |
+| [ScrollBarAttribute](arkts-arkui-scrollbar-scrollbarattribute-i.md) | ScrollBar的属性。 |
 

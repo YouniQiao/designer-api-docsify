@@ -20,28 +20,28 @@ function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceId | string | 是 | 资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openauthorizedialog) 获取，其结果中附带资源ID。 |
-| params | Array&lt;HuksExternalCryptoParam&gt; | 否 | 操作的属性。非系统应用传入 [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md)是非法参数。 |
+| resourceId | string | 是 | 资源ID，可通过 [导出证书的接口](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanagerdialog-openauthorizedialog-f.md#openAuthorizeDialog-1) 获取，其结果中附带资源ID。 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 否 | 操作的属性。非系统应用传入 [HUKS_EXT_CRYPTO_TAG_UID](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)是非法参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksExternalPinAuthState&gt; | Promise对象，返回认证结果。 &lt;br&gt;HUKS_EXT_CRYPTO_PIN_NO_AUTH 表示未认证；HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED 表示认证成功；HUKS_EXT_CRYPTO_PIN_LOCKED 表示PIN被锁定。 |
+| Promise&lt;[HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md)&gt; | Promise对象，返回认证结果。 &lt;br&gt;HUKS_EXT_CRYPTO_PIN_NO_AUTH 表示未认证；HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED 表示认证成功；HUKS_EXT_CRYPTO_PIN_LOCKED 表示PIN被锁定。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | api is not supported. |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | the UKey driver operation failed. |
-| [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed. |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid. |
-| [12000014](../errorcode-huks.md#12000014-内存不足) | memory is insufficient. |
-| [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
-| [12000011](../errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist. This may happen because the resource ID has not been opened. |
-| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | api is not supported. |
+| [12000006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) | the UKey driver operation failed. |
+| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
+| [12000020](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) | the provider operation failed. |
+| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) | the input parameter is invalid. |
+| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) | memory is insufficient. |
+| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
+| [12000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) | queried entity does not exist. This may happen because the resource ID has not been opened. |
+| [12000024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) | the provider or UKey is busy. |
 
 ## 示例
 

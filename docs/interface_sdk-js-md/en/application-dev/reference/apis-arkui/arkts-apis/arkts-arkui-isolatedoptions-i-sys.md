@@ -20,7 +20,7 @@ want: Want
 
 .abc file information to load.
 
-**Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
+**Type:** [Want](arkts-arkui-want-t-sys.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ worker: RestrictedWorker
 
 Restricted Worker thread where the .abc file is running.
 
-**Type:** [RestrictedWorker](../../apis-arkts/arkts-apis/arkts-arkts-worker-restrictedworker-c-sys.md)
+**Type:** [RestrictedWorker](arkts-arkui-restrictedworker-t-sys.md)
 
 **Since:** 12
 

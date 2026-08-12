@@ -166,7 +166,7 @@ isAsync(): boolean
 ```
 
 获取  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
+[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
 
 **起始版本：** 9
 
@@ -203,7 +203,7 @@ setAsync(isAsync: boolean): void
 ```
 
 设置  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)调用中确定同步或是异步的标志。
+[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
 
 **起始版本：** 9
 
@@ -217,7 +217,7 @@ setAsync(isAsync: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isAsync](#isasync) | boolean | 是 |
+| [isAsync](arkts-ipc-rpc-messageoption-c.md) | boolean | 是 |
 
 ## 示例
 
@@ -317,7 +317,7 @@ static readonly TF_ACCEPT_FDS: number
 ```
 
 指示  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)接口可以传递文件描述符。
+[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)接口可以传递文件描述符。
 
 **类型：** number
 

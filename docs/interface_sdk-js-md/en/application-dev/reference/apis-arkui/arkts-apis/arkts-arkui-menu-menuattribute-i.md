@@ -2,7 +2,7 @@
 
 Defines the Menu component attribute functions.
 
-**Inheritance/Implementation:** MenuAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** MenuAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Set the attribute modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;MenuAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuAttribute](arkts-arkui-menu-menuattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -269,7 +269,7 @@ Set the expanding mode of sub-menu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](../arkts-components/arkts-arkui-submenuexpandingmode-e.md) \| undefined | Yes |  |
+| mode | [SubMenuExpandingMode](arkts-arkui-menu-submenuexpandingmode-e.md) \| undefined | Yes |  |
 
 **Return value:**
 

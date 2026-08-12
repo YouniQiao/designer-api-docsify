@@ -4,9 +4,9 @@
 
 | 名称 | 值 | 说明 |
 | ---- | -- | ---- |
-| [LATENCY_TYPE_ALL](#latency_type_all) | 0 | 计算包含软件和硬件在内的整体音频处理链路时延。 |
-| [LATENCY_TYPE_SOFTWARE](#latency_type_software) | 1 | 计算软件侧时延，包含软件音效。 |
-| [LATENCY_TYPE_HARDWARE](#latency_type_hardware) | 2 |
+| [LATENCY_TYPE_ALL](arkts-audio-audio-audiolatencytype-e.md) | 0 | 计算包含软件和硬件在内的整体音频处理链路时延。 |
+| [LATENCY_TYPE_SOFTWARE](arkts-audio-audio-audiolatencytype-e.md) | 1 | 计算软件侧时延，包含软件音效。 |
+| [LATENCY_TYPE_HARDWARE](arkts-audio-audio-audiolatencytype-e.md) | 2 |
 
 **起始版本：** 23
 

@@ -1,7 +1,7 @@
 # MediaInfo
 
 Represents a **MediaInfo** object used as a parameter of the  
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The object contains information about media on the web page. The application may create, based on the information, a player that takes over media playback of the web page.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Represents a **MediaInfo** object used as a parameter of the
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## attributes
@@ -127,7 +127,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**Type:** [MediaType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-mediatype-e.md)
+**Type:** MediaType
 
 **Since:** 12
 

@@ -13,7 +13,7 @@ Attach options.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## requestKeyboardReason
@@ -24,7 +24,7 @@ requestKeyboardReason?: RequestKeyboardReason
 
 The reason for request keyboard.
 
-**Type:** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
+**Type:** RequestKeyboardReason
 
 **Default:** RequestKeyboardReason.NONE
 

@@ -13,7 +13,7 @@ Represents optional configuration items for the NumberFormat object.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## decimal
@@ -24,7 +24,7 @@ decimal?: TextStyle
 
 Text style for the decimal point. The default value is the default text style.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ fraction?: TextStyle
 
 Text style for the fraction part. The default value is the default text style.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ integer?: TextStyle
 
 Text style for the integer part. The default value is the default text style.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ unit?: TextStyle
 
 Text style for the unit. The default value is the default text style.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 

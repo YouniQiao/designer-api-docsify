@@ -1,9 +1,9 @@
 # AtomicServiceOptions
 
 **AtomicServiceOptions** is used as an input parameter of  
-[openAtomicService()](arkts-ability-uiabilitycontext-c.md#openatomicservice) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md).
+[openAtomicService()](arkts-ability-uiabilitycontext-c.md#openAtomicService) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions).
 
-**继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
+**继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions)
 
 **起始版本：** 12
 
@@ -63,7 +63,7 @@ flags?: int
 parameters?: Record<string, Object>
 ```
 
-表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md)中parameters字段描述。
+表示额外参数描述。具体描述参考[Want](arkts-ability-app-ability-want-want-c.md#Want)中parameters字段描述。
 
 **类型：** Record&lt;string, Object&gt;
 

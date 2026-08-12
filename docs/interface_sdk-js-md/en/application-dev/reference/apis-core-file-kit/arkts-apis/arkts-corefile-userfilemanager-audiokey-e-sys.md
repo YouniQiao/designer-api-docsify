@@ -8,7 +8,7 @@ Defines the key information about an audio file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-userFileManager-enum AudioKey--><!--Device-userFileManager-enum AudioKey-End-->
 
@@ -30,7 +30,7 @@ URI of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-URI--><!--Device-AudioKey-URI-End-->
 
@@ -52,7 +52,7 @@ File name displayed.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-DISPLAY_NAME--><!--Device-AudioKey-DISPLAY_NAME-End-->
 
@@ -74,7 +74,7 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-DATE_ADDED--><!--Device-AudioKey-DATE_ADDED-End-->
 
@@ -96,7 +96,7 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-DATE_MODIFIED--><!--Device-AudioKey-DATE_MODIFIED-End-->
 
@@ -118,7 +118,7 @@ Title of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-TITLE--><!--Device-AudioKey-TITLE-End-->
 
@@ -140,7 +140,7 @@ Author of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-ARTIST--><!--Device-AudioKey-ARTIST-End-->
 
@@ -162,7 +162,7 @@ Audio album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-AUDIOALBUM--><!--Device-AudioKey-AUDIOALBUM-End-->
 
@@ -184,7 +184,7 @@ Duration, in ms.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-DURATION--><!--Device-AudioKey-DURATION-End-->
 
@@ -206,7 +206,7 @@ Whether the file is added to favorites.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.picker:picker.AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md)
+**Substitutes:** [AudioViewPicker](arkts-corefile-picker-audioviewpicker-c.md#AudioViewPicker)
 
 <!--Device-AudioKey-FAVORITE--><!--Device-AudioKey-FAVORITE-End-->
 

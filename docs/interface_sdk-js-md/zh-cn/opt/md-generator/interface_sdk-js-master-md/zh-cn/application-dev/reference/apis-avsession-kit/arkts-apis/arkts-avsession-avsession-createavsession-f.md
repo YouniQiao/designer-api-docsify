@@ -25,14 +25,14 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | tag | string | 是 |
 | type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVSession&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## 示例
 
@@ -100,14 +100,14 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 
 | 类型 |
 | --- |
-| Promise&lt;AVSession&gt; |
+| Promise&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## 示例
 

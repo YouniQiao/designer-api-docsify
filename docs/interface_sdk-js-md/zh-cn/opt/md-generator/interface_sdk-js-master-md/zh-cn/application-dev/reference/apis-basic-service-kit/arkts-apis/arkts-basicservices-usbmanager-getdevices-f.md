@@ -11,7 +11,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 > **说明：**
 > 
 > 三方应用没有权限获取serial字段读取设备序列号，需要通过
-> [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)申请权限后，自行发起控制传输获取。
+> [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)申请权限后，自行发起控制传输获取。
 
 **起始版本：** 9
 
@@ -23,13 +23,13 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 | 类型 |
 | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; |
+| Array & lt;Readonly & lt;USBDevice & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

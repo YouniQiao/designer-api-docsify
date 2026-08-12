@@ -32,3 +32,24 @@ Called when the first frame of the ability is rendered.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | data | [AbilityFirstFrameStateData](arkts-ability-abilityfirstframestatedata-i-sys.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: appManager.AbilityFirstFrameStateObserver = {
+  onAbilityFirstFrameDrawn(data: appManager.AbilityFirstFrameStateData) {
+    console.info(`onAbilityFirstFrameDrawn success, abilityFirstFrameStateData: ${data}.`);
+  }
+};
+
+try {
+  appManager.on('abilityFirstFrameState', observer);
+} catch (e) {
+  let code = (e as BusinessError).code;
+  let msg = (e as BusinessError).message;
+  console.error(`appmanager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```

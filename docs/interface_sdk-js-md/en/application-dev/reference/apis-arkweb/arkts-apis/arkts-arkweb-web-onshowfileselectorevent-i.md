@@ -18,7 +18,7 @@ fileSelector: FileSelectorParam
 
 Encompassed message information as parameters to fileSelector.
 
-**Type:** [FileSelectorParam](../arkts-components/arkts-arkweb-fileselectorparam-c.md)
+**Type:** [FileSelectorParam](arkts-arkweb-web-fileselectorparam-c.md)
 
 **Since:** 23
 

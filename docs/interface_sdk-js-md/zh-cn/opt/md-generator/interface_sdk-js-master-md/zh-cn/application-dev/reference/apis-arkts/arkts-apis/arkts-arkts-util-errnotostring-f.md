@@ -20,7 +20,7 @@ function errnoToString(errno: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| errno | number | 是 |
+| [errno](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-huksexternalcrypto-huksexternalerrorinfo-i.md) | number | 是 |
 
 **返回值：**
 

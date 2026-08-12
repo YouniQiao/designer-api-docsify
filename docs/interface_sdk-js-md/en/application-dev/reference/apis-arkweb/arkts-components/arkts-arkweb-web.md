@@ -33,7 +33,7 @@ Sets Value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [WebOptions](../arkts-apis/arkts-arkweb-web-weboptions-i.md) | Yes |  |
+| value | [WebOptions](arkts-arkweb-weboptions-i.md) | Yes |  |
 
 ## Summary
 

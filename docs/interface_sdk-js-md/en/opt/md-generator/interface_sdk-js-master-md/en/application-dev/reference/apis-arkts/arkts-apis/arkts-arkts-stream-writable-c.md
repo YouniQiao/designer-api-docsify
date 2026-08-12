@@ -11,7 +11,7 @@ Stream to which data can be written. A writable stream allows data to be written
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -42,7 +42,7 @@ let writableStream = new stream.Writable();
 cork(): boolean
 ```
 
-Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](arkts-arkts-stream-writable-c.md#uncork).
+Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](#uncork).
 
 **Since:** 12
 
@@ -238,7 +238,7 @@ Ends the writing process in a writable stream. If the value of **writableCorked*
 
 | Error Code ID |
 | --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) |
+| [10200035](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200035-dowrite-is-not-implemented) |
 
 ## Examples
 
@@ -410,7 +410,7 @@ console.info("Writable is result", result); // Writable is result true
 uncork(): boolean
 ```
 
-Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](arkts-arkts-stream-writable-c.md#cork).
+Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](#cork).
 
 **Since:** 12
 
@@ -484,9 +484,9 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 | Error Code ID |
 | --- |
-| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) |
-| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) |
-| [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) |
+| [10200035](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200035-dowrite-is-not-implemented) |
+| [10200037](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200037-callback-is-invoked-multiple-times) |
+| [10200036](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) |
 
 ## Examples
 

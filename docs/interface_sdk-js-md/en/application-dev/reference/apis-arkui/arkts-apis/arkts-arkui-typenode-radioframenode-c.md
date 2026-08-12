@@ -34,11 +34,11 @@ Initialize Radio FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RadioOptions](../arkts-components/arkts-arkui-radiooptions-i.md) | Yes |  |
+| value | RadioOptions | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) |  |
+| RadioAttribute |  |
 

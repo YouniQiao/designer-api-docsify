@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemParameter } from 'kits/@kit.BasicServicesKit';
+import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
 ## getSync
@@ -18,7 +18,7 @@ Obtains a value of the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.systemParameterEnhance.getSync
+**Substitutes:** [getSync](ohos.systemParameterEnhance.getSync)
 
 <!--Device-systemParameter-function getSync(key: string, def?: string): string--><!--Device-systemParameter-function getSync(key: string, def?: string): string-End-->
 

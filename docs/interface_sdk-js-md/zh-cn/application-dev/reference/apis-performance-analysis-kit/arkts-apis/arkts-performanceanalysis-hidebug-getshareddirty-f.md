@@ -6,11 +6,11 @@
 function getSharedDirty() : bigint
 ```
 
-��ȡ���̵Ĺ������ڴ��С���ӿ�ʵ�ַ�ʽ����ȡ/proc/{pid}/smaps_rollup�ڵ��е�Shared_Dirtyֵ��
+获取进程的共享脏内存大小。接口实现方式：读取/proc/{pid}/smaps_rollup节点中的Shared_Dirty值。
 
-> **ע��**
+> **注意**
 > 
-> ����/proc/{pid}/smaps_rollup�Ķ�ȡ��ʱ�ϳ������鲻Ҫ�����߳���ʹ�øýӿڣ���ͨ��@ohos.taskpool��@ohos.worker�����첽�߳��Ա���Ӧ�ó��ֿ��١�
+> 由于/proc/{pid}/smaps_rollup的读取耗时较长，建议不要在主线程中使用该接口，可通过@ohos.taskpool或@ohos.worker开启异步线程以避免应用出现卡顿。
 
 **起始版本：** 8
 
@@ -24,7 +24,7 @@ function getSharedDirty() : bigint
 
 | 类型 | 说明 |
 | --- | --- |
-| bigint | ���ؽ��̵Ĺ������ڴ��С����λΪKB�� |
+| bigint | 返回进程的共享脏内存大小，单位为KB。 |
 
 ## 示例
 

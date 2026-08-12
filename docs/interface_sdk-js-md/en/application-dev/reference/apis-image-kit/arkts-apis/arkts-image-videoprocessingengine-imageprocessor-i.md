@@ -13,7 +13,7 @@ Provides the ImageProcessor type, including the processing function.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## enhanceDetail
@@ -47,7 +47,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of width. |
 | height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of height. |
-| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
@@ -59,9 +59,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
+| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The zoom ratio. |
-| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
@@ -119,9 +119,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
+| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 
@@ -168,7 +168,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of width. |
 | height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of height. |
-| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
@@ -180,10 +180,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
+| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
+| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 
@@ -229,7 +229,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
 | scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The zoom ratio. |
-| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No | The quality level. |
+| level | QualityLevel | No | The quality level. |
 
 **Return value:**
 
@@ -241,10 +241,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
+| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
+| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 

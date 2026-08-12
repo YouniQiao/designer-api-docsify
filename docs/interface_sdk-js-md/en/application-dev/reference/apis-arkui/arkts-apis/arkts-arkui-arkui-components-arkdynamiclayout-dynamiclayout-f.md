@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 ```
 
 ## DynamicLayout
@@ -32,11 +32,11 @@ Defines DynamicLayout Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes |  |
+| content_ | CustomBuilder | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |  |
 

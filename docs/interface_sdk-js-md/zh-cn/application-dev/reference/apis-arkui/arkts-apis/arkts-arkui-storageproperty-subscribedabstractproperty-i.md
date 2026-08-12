@@ -1,6 +1,6 @@
 # SubscribedAbstractProperty
 
-继承自[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)。
+继承自[AbstractProperty&lt;T&gt;](arkts-arkui-storageproperty-abstractproperty-i.md#AbstractProperty)。
 
 **继承/实现关系：** SubscribedAbstractProperty extends [AbstractProperty<T>](AbstractProperty<T>)
 

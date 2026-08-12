@@ -78,7 +78,7 @@ resourceValue: Optional<ResourceStr>
 
 设置图片数据源。
 
-**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ResourceStr&gt;
+**类型：** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **起始版本：** 15
 

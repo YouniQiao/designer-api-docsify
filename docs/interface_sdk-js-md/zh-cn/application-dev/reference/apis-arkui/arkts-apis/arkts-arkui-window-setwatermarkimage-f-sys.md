@@ -22,7 +22,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createPixelMap-1) 接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
 
 **返回值：**
@@ -35,9 +35,9 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -113,7 +113,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 ```
 
 设置屏幕水印图片的显示状态，并设定水印的优先级。使用Promise异步回调。当priority等于0时，当前接口与  
-[setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage)等价。
+[setWaterMarkImage](#setWaterMarkImage)等价。
 
 **起始版本：** 26.0.0
 
@@ -131,7 +131,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createPixelMap-1) 接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true表示显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
 | priority | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 水印设置优先级。数值越小表示优先级越高，需大于等于0，小于0时返回1300016错误码。设置水印时，如果传入的优先级比上一次设置的低，则本次设置不会生效。 |
 
@@ -145,9 +145,9 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -237,7 +237,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md/arkts-image-image-createpixelmap-f.md#createpixelmap) 接口获取。 |
+| pixelMap | image.PixelMap | 是 | 水印图片。可通过 [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createPixelMap-1) 接口获取。 |
 | enable | boolean | 是 | 设置是否显示水印图片。true显示水印图片；false表示不显示水印图片。设置显示水印后需主动设置为false才能关闭水印图片显示。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调信息。 |
 
@@ -245,9 +245,9 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 

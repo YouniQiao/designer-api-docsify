@@ -2,7 +2,7 @@
 
 Options for the fixed-style dialog.
 
-**Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
+**Inheritance/Implementation:** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md#DialogBaseOptions)
 
 **Since:** 26.1.0
 
@@ -13,7 +13,7 @@ Options for the fixed-style dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## buttonDirection
@@ -46,7 +46,7 @@ buttons?: Array<DialogButton>
 
 Array of buttons in the dialog box.When provided, the dialog displays as an alert-style dialog with buttons.When used together with sheets, buttons are displayed below the sheet list.
 
-**Type:** Array&lt;DialogButton&gt;
+**Type:** Array&lt;[DialogButton](arkts-arkui-dialog-dialogbutton-i.md)&gt;
 
 **Since:** 26.1.0
 
@@ -106,7 +106,7 @@ sheets?: Array<DialogSheet>
 
 Array of sheet items for action-sheet style.When provided, the dialog displays sheet items for user selection.
 
-**Type:** Array&lt;DialogSheet&gt;
+**Type:** Array&lt;[DialogSheet](arkts-arkui-dialog-dialogsheet-i.md)&gt;
 
 **Since:** 26.1.0
 

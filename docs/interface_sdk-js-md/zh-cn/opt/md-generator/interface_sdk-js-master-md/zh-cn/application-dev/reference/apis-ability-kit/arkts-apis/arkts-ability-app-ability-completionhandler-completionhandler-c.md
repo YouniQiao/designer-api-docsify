@@ -1,8 +1,8 @@
 # CompletionHandler
 
 CompletionHandler提供了  
-[onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess)和  
-[onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure)两个回调函数，分别用来处理拉起应用成功和失败时的结果。
+[onRequestSuccess](#onRequestSuccess)和  
+[onRequestFailure](#onRequestFailure)两个回调函数，分别用来处理拉起应用成功和失败时的结果。
 
 **起始版本：** 20
 

@@ -1,8 +1,8 @@
 # GestureEvent
 
-Defines the gesture event information. Inherits from [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md).
+Defines the gesture event information. Inherits from [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md#BaseEvent).
 
-**Inheritance/Implementation:** GestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** GestureEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 7
 
@@ -247,7 +247,7 @@ Coordinate information of the current tap gesture. For non-tap gestures, the ret
 velocity: number
 ```
 
-Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The value is the arithmetic square root of the sum of squares of the velocity along the x- and y-axis. The unit is vp/s.
+Velocity along the main axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#PanGesture). The value is the arithmetic square root of the sum of squares of the velocity along the x- and y-axis. The unit is vp/s.
 
 Value range: [0, +∞)
 
@@ -269,7 +269,7 @@ Value range: [0, +∞)
 velocityX: number
 ```
 
-Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. The unit is vp/s.
+Velocity along the x-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#PanGesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from left to right, and it is negative if the movement is from right to left. The unit is vp/s.
 
 Value range: (-∞, +∞)
 
@@ -291,7 +291,7 @@ Value range: (-∞, +∞)
 velocityY: number
 ```
 
-Velocity along the y-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#pangesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. The unit is vp/s.
+Velocity along the y-axis. This parameter is used in [PanGesture](arkts-arkui-gesture-con.md#PanGesture). The origin of the coordinate axis is the upper left corner of the screen. The velocity is positive if the movement is from top to bottom, and it is negative if the movement is from bottom to top. The unit is vp/s.
 
 Value range: (-∞, +∞)
 

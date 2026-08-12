@@ -40,7 +40,7 @@ transition: Callback<SwiperContentTransitionProxy>
 
 Called when custom content transition animation start.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;SwiperContentTransitionProxy&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[SwiperContentTransitionProxy](arkts-arkui-swiper-swipercontenttransitionproxy-i.md)&gt;
 
 **Since:** 23
 

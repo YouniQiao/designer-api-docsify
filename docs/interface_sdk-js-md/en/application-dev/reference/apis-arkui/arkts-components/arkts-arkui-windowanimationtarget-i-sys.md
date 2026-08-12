@@ -72,7 +72,7 @@ readonly missionId: number
 readonly windowBounds: RRect
 ```
 
-**Type:** [RRect](../arkts-apis/arkts-arkui-windowanimationmanager-rrect-i-sys.md)
+**Type:** [RRect](arkts-arkui-rrect-i-sys.md)
 
 **Since:** 9
 

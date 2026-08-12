@@ -26,15 +26,15 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 | 类型 |
 | --- |
-| Promise&lt;X509CertChain&gt; |
+| Promise&lt;[X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -148,15 +148,15 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | inStream | [EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;X509CertChain&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -264,7 +264,7 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | 是 |
+| [certs](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md) | Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | 是 |
 
 **返回值：**
 
@@ -276,9 +276,9 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 

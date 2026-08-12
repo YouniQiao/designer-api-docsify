@@ -24,7 +24,7 @@ PageTransitionEnter(value: PageTransitionOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PageTransitionOptions](../arkts-apis/arkts-arkui-pagetransition-pagetransitionoptions-i.md) | 是 | 配置入场动效的参数。 |
+| value | [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md) | 是 | 配置入场动效的参数。 |
 
 ## PageTransitionEnter
 

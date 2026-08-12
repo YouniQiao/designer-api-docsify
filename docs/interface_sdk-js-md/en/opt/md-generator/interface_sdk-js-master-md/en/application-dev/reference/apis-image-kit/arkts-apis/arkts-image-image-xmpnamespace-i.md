@@ -11,7 +11,7 @@ Describes XMP namespace parameters.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## prefix

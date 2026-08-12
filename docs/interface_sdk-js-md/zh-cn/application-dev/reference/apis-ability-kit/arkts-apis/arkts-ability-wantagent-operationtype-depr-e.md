@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent#OperationType
+**替代接口：** [OperationType](ohos.app.ability.wantAgent/wantAgent#OperationType)
 
 <!--Device-wantAgent-export enum OperationType--><!--Device-wantAgent-export enum OperationType-End-->
 
@@ -28,7 +28,7 @@ UNKNOWN_TYPE = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent.OperationType#UNKNOWN_TYPE
+**替代接口：** [UNKNOWN_TYPE](ohos.app.ability.wantAgent/wantAgent.OperationType#UNKNOWN_TYPE)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +50,7 @@ START_ABILITY
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITY
+**替代接口：** [START_ABILITY](ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITY)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +72,7 @@ START_ABILITIES
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITIES
+**替代接口：** [START_ABILITIES](ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITIES)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -94,7 +94,7 @@ START_SERVICE
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent.OperationType#START_SERVICE
+**替代接口：** [START_SERVICE](ohos.app.ability.wantAgent/wantAgent.OperationType#START_SERVICE)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -116,7 +116,7 @@ SEND_COMMON_EVENT
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent.OperationType#SEND_COMMON_EVENT
+**替代接口：** [SEND_COMMON_EVENT](ohos.app.ability.wantAgent/wantAgent.OperationType#SEND_COMMON_EVENT)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

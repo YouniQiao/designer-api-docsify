@@ -68,7 +68,7 @@ enableReverseBypass(reverse: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getBypassRules
 
@@ -90,7 +90,7 @@ getBypassRules(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getProxyRules
 
@@ -112,7 +112,7 @@ getProxyRules(): Array<ProxyRule>
 
 | 类型 |
 | --- |
-| Array&lt;ProxyRule&gt; |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
 
 ## insertBypassRule
 
@@ -140,7 +140,7 @@ insertBypassRule(bypassRule: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## insertDirectRule
 
@@ -168,7 +168,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## insertProxyRule
 
@@ -202,7 +202,7 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isReverseBypassEnabled
 

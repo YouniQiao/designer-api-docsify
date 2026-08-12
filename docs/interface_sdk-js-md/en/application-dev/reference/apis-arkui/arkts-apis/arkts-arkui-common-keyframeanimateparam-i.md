@@ -58,7 +58,7 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 
 Indicates expectedFrameRateRange of keyframe animation.
 
-**Type:** [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md)
+**Type:** [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md)
 
 **Since:** 23
 

@@ -26,15 +26,15 @@ function getTextEmbeddingModel(config: ModelConfig): Promise<TextEmbedding>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TextEmbedding&gt; | Promise对象，返回文本嵌入模型，用于文本向量化。 |
+| Promise&lt;[TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md)&gt; | Promise对象，返回文本嵌入模型，用于文本向量化。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31300000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-服务内部异常) | Inner error. |
 
 ## 示例
 

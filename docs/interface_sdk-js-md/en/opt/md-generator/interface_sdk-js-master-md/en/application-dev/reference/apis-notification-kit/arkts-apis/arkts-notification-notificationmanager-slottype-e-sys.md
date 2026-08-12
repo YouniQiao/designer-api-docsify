@@ -2,7 +2,7 @@
 
 Enumerates the notification slot types.
 
-Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md) values,determining the reminder behavior of the notification.
+Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) values,determining the reminder behavior of the notification.
 
 **Since:** 9
 

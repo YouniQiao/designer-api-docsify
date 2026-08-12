@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createGlobalAudioLoopback
@@ -12,7 +12,7 @@ import { audio } from 'kits/@kit.AudioKit';
 function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolean): Promise<AudioLoopback | null>
 ```
 
-Creates a global audio loopback instance, which provides low-latency in-ear monitor function.Hardware audio loopback can only be created in supported platform, application can use{@link AudioStreamManager#isAudioLoopbackSupported} to check first.There should be only one main instance that own the global loopback in the system, the others are controllers. A controller can manage the global loopback by sending commands to the main instance, and listen status change from it.
+Creates a global audio loopback instance, which provides low-latency in-ear monitor function.Hardware audio loopback can only be created in supported platform, application can use[isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isAudioLoopbackSupported) to check first.There should be only one main instance that own the global loopback in the system, the others are controllers. A controller can manage the global loopback by sending commands to the main instance, and listen status change from it.
 
 **Since:** 26.0.0
 
@@ -35,12 +35,12 @@ Creates a global audio loopback instance, which provides low-latency in-ear moni
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioLoopback \| null&gt; |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |

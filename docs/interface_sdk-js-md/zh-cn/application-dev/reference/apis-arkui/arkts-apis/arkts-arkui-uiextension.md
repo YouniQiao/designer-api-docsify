@@ -1,9 +1,9 @@
 # @ohos.arkui.uiExtension
 
 用于[EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md)（或  
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)）中获取宿主应用的窗口信息或对应的  
-[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)&lt;!--Del--&gt;（或  
-[UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i)）&lt;!--DelEnd--&gt;组件的信息。
+[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)）中获取宿主应用的窗口信息或对应的  
+[EmbeddedComponent](./@internal/component/ets/embedded_component)&lt;!--Del--&gt;（或  
+[UIExtensionComponent](./@internal/component/ets/ui_extension_component)）&lt;!--DelEnd--&gt;组件的信息。
 
 > **说明：**
 > 

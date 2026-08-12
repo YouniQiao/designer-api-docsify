@@ -57,7 +57,7 @@ bundleName: string
 deviceId?: string
 ```
 
-设备标识。获取路径：{@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager#getAvailableDeviceListSync}
+设备标识。获取路径：[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **类型：** string
 
@@ -118,7 +118,7 @@ executeMode: insightIntent.ExecuteMode
 flags?: number
 ```
 
-意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md)。 
+意图调用时，意图调用方给意图执行方授权的uris的[flags](arkts-ability-wantconstant-flags-e.md#Flags)。 
 
 **说明：**
 
@@ -203,7 +203,7 @@ uris?: Array<string>
 ```
 
 意图调用时，意图调用方给意图执行方授权的URI列表。 如果通过  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器定义的意图来实现应用跳转，此字段必选，仅读取数组第一个元素作为[openLink](arkts-ability-uiabilitycontext-c.md#openlink)的URI。
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器定义的意图来实现应用跳转，此字段必选，仅读取数组第一个元素作为[openLink](arkts-ability-uiabilitycontext-c.md#openLink)的URI。
 
 **类型：** Array&lt;string&gt;
 

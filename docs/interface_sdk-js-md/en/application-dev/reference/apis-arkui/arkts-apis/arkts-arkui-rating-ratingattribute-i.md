@@ -2,7 +2,7 @@
 
 Defines the Rating component attributes.
 
-**Inheritance/Implementation:** RatingAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** RatingAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of rating.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;RatingAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of rating. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RatingAttribute](arkts-arkui-rating-ratingattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of rating. |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Set the content modifier of rating.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;RatingConfiguration&gt; \| undefined | Yes | The content modifier of rating. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[RatingConfiguration](arkts-arkui-rating-ratingconfiguration-i.md)&gt; \| undefined | Yes | The content modifier of rating. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Called when the star rating of the operation scoring bar changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnRatingChangeCallback](../arkts-components/arkts-arkui-onratingchangecallback-t.md) \| undefined | Yes |  |
+| callback | [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Called when a picture is set.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StarStyleOptions](../arkts-components/arkts-arkui-starstyleoptions-i.md) \| undefined | Yes | star style options |
+| options | [StarStyleOptions](arkts-arkui-rating-starstyleoptions-i.md) \| undefined | Yes | star style options |
 
 **Return value:**
 

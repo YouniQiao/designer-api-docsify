@@ -1,10 +1,10 @@
 # AlertDialogParamWithConfirm
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam).
 
 Priorities of the **confirm** parameters: **fontColor** and **backgroundColor** > **style** > **defaultFocus**
 
-**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithConfirm extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
 **Since:** 7
 
@@ -23,7 +23,7 @@ confirm?: AlertDialogButtonBaseOptions
 Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the   
 **Enter** key does not work when **defaultFocus** is set to **true**.
 
-**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialog-alertdialogbuttonbaseoptions-i.md)
+**Type:** [AlertDialogButtonBaseOptions](arkts-arkui-alertdialogbuttonbaseoptions-i.md)
 
 **Since:** 7
 

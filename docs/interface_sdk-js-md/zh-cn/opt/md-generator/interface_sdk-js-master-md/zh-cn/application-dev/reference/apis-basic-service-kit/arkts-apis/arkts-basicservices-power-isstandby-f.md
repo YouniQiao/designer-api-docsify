@@ -24,7 +24,7 @@ function isStandby(): boolean
 
 | 错误码ID |
 | --- |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) |
+| [4900101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) |
 
 ## 示例
 

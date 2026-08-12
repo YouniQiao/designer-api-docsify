@@ -28,5 +28,5 @@ Create a FrameNode of Select type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Select](arkts-arkui-typenode-select-t.md) | Return Select type FrameNode. |
+| Select | Return Select type FrameNode. |
 

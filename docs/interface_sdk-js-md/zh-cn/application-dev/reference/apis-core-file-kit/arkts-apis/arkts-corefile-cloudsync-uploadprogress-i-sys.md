@@ -20,7 +20,7 @@ error: ErrorType
 
 上传的错误类型。
 
-**类型：** [ErrorType](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errortype-e.md)
+**类型：** ErrorType
 
 **起始版本：** 26.0.0
 

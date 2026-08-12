@@ -20,7 +20,7 @@ Invoking method close.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ContextMenuController#close
+**Substitutes:** [close](ohos.arkui.UIContext.ContextMenuController#close)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

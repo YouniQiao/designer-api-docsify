@@ -40,7 +40,7 @@ bottom?: VerticalAlignParam
 
 The param of bottom align.
 
-**Type:** [VerticalAlignParam](../arkts-components/arkts-arkui-verticalalignparam-i.md)
+**Type:** [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md)
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ center?: VerticalAlignParam
 
 The param of center align.
 
-**Type:** [VerticalAlignParam](../arkts-components/arkts-arkui-verticalalignparam-i.md)
+**Type:** [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md)
 
 **Since:** 23
 
@@ -140,7 +140,7 @@ top?: VerticalAlignParam
 
 The param of top align.
 
-**Type:** [VerticalAlignParam](../arkts-components/arkts-arkui-verticalalignparam-i.md)
+**Type:** [VerticalAlignParam](arkts-arkui-common-verticalalignparam-i.md)
 
 **Since:** 23
 

@@ -24,12 +24,12 @@ export function createXComponentNodeWithOptions(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 用于创建 FrameNode 的 UI 上下文 |
-| value | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | 是 | XComponent 组件选项 |
+| value | XComponentOptions | 是 | XComponent 组件选项 |
 | options | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | 否 | Options for configuring FrameNode creation.<br>**起始版本：** 24 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | Return XComponent type FrameNode. |
+| XComponent | Return XComponent type FrameNode. |
 

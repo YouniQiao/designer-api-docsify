@@ -50,9 +50,9 @@ is less than 0, the default value is used. If the value is greater than the maxi
 
 NOTE
 
-1. This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md/arkts-arkui-graphics-lengthmetrics-c.md): Sets the size and unit of the four corner radii in a unified manner.3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md/arkts-arkui-borderradiuses-t.md): Sets the size (unit: vp) of the four corner radii individually.4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md/arkts-arkui-localizedborderradiuses-i.md): Sets the size and unit of the four corner radii individually.
+1. This parameter takes effect only when **type** is set to **PickerIndicatorType.BACKGROUND**.2. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): Sets the size and unit of the four corner radii in a unified manner.3. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md#BorderRadiuses): Sets the size (unit: vp) of the four corner radii individually.4. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md#LocalizedBorderRadiuses): Sets the size and unit of the four corner radii individually.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:12, unit:LengthUnit.vp }
 
@@ -113,7 +113,7 @@ Value range: The sum of **startMargin** and **endMargin** must not exceed the wi
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 0
 
@@ -146,7 +146,7 @@ NOTE
 
 This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 0
 
@@ -178,7 +178,7 @@ NOTE
 
 1. This parameter takes effect only when **type** is set to **PickerIndicatorType.DIVIDER**.2. If this parameter is set in **LengthMetrics.resource** mode, the value of a non-length attribute will be treated as 0 vp.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 2.0px
 

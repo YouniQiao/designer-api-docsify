@@ -6,7 +6,7 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.Parcelable](arkts-ipc-rpc-parcelable-i.md)
+**Substitutes:** [Parcelable](arkts-ipc-rpc-parcelable-i.md#Parcelable)
 
 <!--Device-rpc-interface Sequenceable--><!--Device-rpc-interface Sequenceable-End-->
 
@@ -15,7 +15,7 @@ Writes objects of classes to a **MessageParcel** and reads them from the **Messa
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## marshalling
@@ -30,7 +30,7 @@ Marshals the sequenceable object into a **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.Parcelable#marshalling](arkts-ipc-rpc-parcelable-i.md#marshalling)(dataOut:
+**Substitutes:** [marshalling](rpc.Parcelable#marshalling(dataOut:)
 
 <!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean--><!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean-End-->
 
@@ -98,7 +98,7 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.Parcelable#unmarshalling](arkts-ipc-rpc-parcelable-i.md#unmarshalling)(dataIn:
+**Substitutes:** [unmarshalling](rpc.Parcelable#unmarshalling(dataIn:)
 
 <!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean--><!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean-End-->
 

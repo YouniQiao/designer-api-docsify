@@ -58,7 +58,7 @@ backgroundColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置弧形指示器被长按时，弧形指示器的颜色。&lt;br/&gt;取值为undefined时，弧形指示器被长按时，弧形指示器的颜色为'#FF404040' 。 |
+| color | ResourceColor \| undefined | 是 | 设置弧形指示器被长按时，弧形指示器的颜色。&lt;br/&gt;取值为undefined时，弧形指示器被长按时，弧形指示器的颜色为'#FF404040' 。 |
 
 **返回值：**
 
@@ -104,7 +104,7 @@ itemColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置弧形指示器中，未选中导航点的颜色。&lt;br/&gt;取值为undefined时，未选中导航点的颜色为'#A9FFFFFF'。 |
+| color | ResourceColor \| undefined | 是 | 设置弧形指示器中，未选中导航点的颜色。&lt;br/&gt;取值为undefined时，未选中导航点的颜色为'#A9FFFFFF'。 |
 
 **返回值：**
 
@@ -132,7 +132,7 @@ maskColor(color: LinearGradient | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [LinearGradient](../arkts-components/arkts-arkui-lineargradient-i.md) \| undefined | 是 | 设置弧形指示器的遮罩渐变色。&lt;br/&gt;取值为undefined时，弧形指示器的遮罩渐变色起始颜色为'#00000000'，结束颜色为'# FF000000'。 |
+| color | LinearGradient \| undefined | 是 | 设置弧形指示器的遮罩渐变色。&lt;br/&gt;取值为undefined时，弧形指示器的遮罩渐变色起始颜色为'#00000000'，结束颜色为'# FF000000'。 |
 
 **返回值：**
 
@@ -160,7 +160,7 @@ selectedItemColor(color: ResourceColor | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置弧形指示器中，选中导航点的颜色。&lt;br/&gt;取值为undefined时，选中导航点的颜色为'#FF5EA1FF'。 |
+| color | ResourceColor \| undefined | 是 | 设置弧形指示器中，选中导航点的颜色。&lt;br/&gt;取值为undefined时，选中导航点的颜色为'#FF5EA1FF'。 |
 
 **返回值：**
 

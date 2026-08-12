@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Entry
+**替代接口：** [Entry](ohos.data.distributedKVStore.Entry)
 
 <!--Device-distributedData-interface Entry--><!--Device-distributedData-interface Entry-End-->
 
@@ -26,7 +26,7 @@ key: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Entry#key
+**替代接口：** [key](ohos.data.distributedKVStore.Entry#key)
 
 <!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
 
@@ -40,13 +40,13 @@ value: Value
 
 值对象。
 
-**类型：** [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)
+**类型：** Value
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Entry#value
+**替代接口：** [value](ohos.data.distributedKVStore.Entry#value)
 
 <!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
 

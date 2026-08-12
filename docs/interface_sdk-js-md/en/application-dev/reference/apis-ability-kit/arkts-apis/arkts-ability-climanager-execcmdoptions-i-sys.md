@@ -15,7 +15,7 @@ Options for executing a command.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## background
@@ -72,7 +72,7 @@ env?: Record<string, string>
 
 Indicates the environment variables for the command.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 26.0.0
 

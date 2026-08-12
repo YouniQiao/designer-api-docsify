@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## getAbilityIcon
@@ -12,7 +12,7 @@ import { bundle } from 'kits/@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result.
+Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) of the icon corresponding to a given bundle name and ability name. This API uses an asynchronous callback to return the result.
 
 No permission is required for obtaining the caller's own information.
 
@@ -20,7 +20,7 @@ No permission is required for obtaining the caller's own information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -43,7 +43,7 @@ No permission is required for obtaining the caller's own information.
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result.
+Obtains the [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) of the icon corresponding to a given bundle name and ability name. This API uses a promise to return the result.
 
 No permission is required for obtaining the caller's own information.
 
@@ -51,7 +51,7 @@ No permission is required for obtaining the caller's own information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -70,4 +70,4 @@ No permission is required for obtaining the caller's own information.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |

@@ -11,7 +11,7 @@ Position definition of one component on which the menu will bind and popup.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## height

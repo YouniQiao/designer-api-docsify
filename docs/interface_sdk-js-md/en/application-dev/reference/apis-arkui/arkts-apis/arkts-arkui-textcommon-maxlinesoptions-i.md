@@ -18,7 +18,7 @@ overflowMode?: MaxLinesMode
 
 The mode of max lines.
 
-**Type:** [MaxLinesMode](arkts-arkui-maxlinesmode-e.md)
+**Type:** [MaxLinesMode](arkts-arkui-textcommon-maxlinesmode-e.md)
 
 **Since:** 23
 

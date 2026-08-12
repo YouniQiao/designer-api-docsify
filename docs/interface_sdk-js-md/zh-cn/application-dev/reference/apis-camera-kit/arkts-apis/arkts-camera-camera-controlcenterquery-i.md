@@ -32,7 +32,7 @@ getSupportedEffectTypes(): Array<ControlCenterEffectType>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ControlCenterEffectType&gt; | 支持的效果类型。 |
+| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; | 支持的效果类型。 |
 
 ## isControlCenterSupported
 

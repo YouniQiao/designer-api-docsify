@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getSensorListSync
@@ -24,13 +24,13 @@ Obtains information about all sensors on the device. This API returns the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Sensor&gt; |
+| Array & lt;Sensor & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

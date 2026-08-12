@@ -201,7 +201,7 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 > **NOTE：**
 > 
 > **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the
-> first preloading in the [onAppear](arkts-arkui-commonmethod-c.md#onappear) lifecycle of **Swiper**.
+> first preloading in the [onAppear](CommonMethod#onAppear) lifecycle of **Swiper**.
 
 **Since:** 18
 
@@ -225,14 +225,14 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## showNext
 

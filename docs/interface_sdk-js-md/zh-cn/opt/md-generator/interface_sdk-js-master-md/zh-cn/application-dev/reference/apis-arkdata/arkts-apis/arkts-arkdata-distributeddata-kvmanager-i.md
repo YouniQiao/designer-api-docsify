@@ -1,13 +1,13 @@
 # KVManager
 
 数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过  
-[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。
+[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createKVManager)构建一个KVManager实例。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager
+**替代接口：** [KVManager](ohos.data.distributedKVStore.KVManager)
 
 <!--Device-distributedData-interface KVManager--><!--Device-distributedData-interface KVManager-End-->
 
@@ -25,7 +25,7 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCa
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#closeKVStore
+**替代接口：** [closeKVStore](ohos.data.distributedKVStore.KVManager#closeKVStore)
 
 <!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void-End-->
 
@@ -36,7 +36,7 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCa
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -79,7 +79,7 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#closeKVStore
+**替代接口：** [closeKVStore](ohos.data.distributedKVStore.KVManager#closeKVStore)
 
 <!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>-End-->
 
@@ -90,14 +90,14 @@ closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -142,7 +142,7 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#deleteKVStore
+**替代接口：** [deleteKVStore](ohos.data.distributedKVStore.KVManager#deleteKVStore)
 
 <!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -153,7 +153,7 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
@@ -195,7 +195,7 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#deleteKVStore
+**替代接口：** [deleteKVStore](ohos.data.distributedKVStore.KVManager#deleteKVStore)
 
 <!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>-End-->
 
@@ -206,13 +206,13 @@ deleteKVStore(appId: string, storeId: string): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -252,14 +252,14 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
 获取所有通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
-[deleteKVStore](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore)方法删除的KVStore数据库的storeId，使用callback异步回调。
+[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))方法创建的且没有调用  
+[deleteKVStore](#deleteKVStore)方法删除的KVStore数据库的storeId，使用callback异步回调。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#getAllKVStoreId
+**替代接口：** [getAllKVStoreId](ohos.data.distributedKVStore.KVManager#getAllKVStoreId)
 
 <!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void--><!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void-End-->
 
@@ -293,14 +293,14 @@ getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
 获取所有通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
-[deleteKVStore](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore)方法删除的KVStore数据库的storeId，使用Promise异步回调。
+[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))方法创建的且没有调用  
+[deleteKVStore](#deleteKVStore)方法删除的KVStore数据库的storeId，使用Promise异步回调。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#getAllKVStoreId
+**替代接口：** [getAllKVStoreId](ohos.data.distributedKVStore.KVManager#getAllKVStoreId)
 
 <!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>--><!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>-End-->
 
@@ -316,7 +316,7 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 | 类型 |
 | --- |
-| Promise&lt;string[]&gt; |
+| Promise & lt;string[] & gt; |
 
 ## 示例
 
@@ -347,7 +347,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#getKVStore
+**替代接口：** [getKVStore](ohos.data.distributedKVStore.KVManager#getKVStore)
 
 <!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>-End-->
 
@@ -357,14 +357,14 @@ getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## 示例
 
@@ -403,7 +403,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#getKVStore
+**替代接口：** [getKVStore](ohos.data.distributedKVStore.KVManager#getKVStore)
 
 <!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void-End-->
 
@@ -413,7 +413,7 @@ getKVStore<T extends KVStore>(storeId: string, options: Options, callback: Async
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 |
 
@@ -456,7 +456,7 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
 
@@ -496,7 +496,7 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.KVManager#on
+**替代接口：** [on](ohos.data.distributedKVStore.KVManager#on)
 
 <!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 

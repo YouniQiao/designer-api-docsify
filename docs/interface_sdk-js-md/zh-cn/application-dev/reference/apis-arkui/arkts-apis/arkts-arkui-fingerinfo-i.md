@@ -34,7 +34,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| Coordinate2D | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 
@@ -184,7 +184,7 @@ hand?: InteractionHand
 
 表示事件是由左手点击还是右手点击触发。
 
-**类型：** [InteractionHand](arkts-arkui-interactionhand-e.md)
+**类型：** InteractionHand
 
 **起始版本：** 15
 

@@ -385,7 +385,7 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。 in KV pairs. |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise对象，返回以bundleName为键、AppBriefInfo为值的键值对。 in KV pairs. |
 
 ## 示例
 
@@ -489,7 +489,7 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;AppSchema&gt;&gt; | Promise对象，返回数据库的schema信息。 |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise对象，返回数据库的schema信息。 |
 
 ## 示例
 
@@ -589,7 +589,7 @@ getServiceInfo(): Promise<ServiceInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ServiceInfo&gt; | Promise对象，返回获取的服务器信息。 |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise对象，返回获取的服务器信息。 |
 
 ## 示例
 
@@ -702,7 +702,7 @@ subscribe(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;Database&gt;&gt; | 是 | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | 是 | 需要订阅的数据，由应用包名称和数据库信息组成的键值对。 |
 | expirationTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 表示订阅到期时间（ms）。 |
 
 **返回值：**

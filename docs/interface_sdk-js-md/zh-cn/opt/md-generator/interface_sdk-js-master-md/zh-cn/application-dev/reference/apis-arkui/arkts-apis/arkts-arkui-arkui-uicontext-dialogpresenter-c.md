@@ -30,20 +30,20 @@ dismiss(target: number | ComponentContent<Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| target | number \| [ComponentContent&lt;Object&gt;](arkts-arkui-componentcontent-c.md) | 是 |
+| target | number \| ComponentContent & lt;Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## present
 
@@ -73,14 +73,14 @@ present(options?: dialog.DialogStyleOptions): Promise<DialogResult>
 
 | 类型 |
 | --- |
-| Promise&lt;DialogResult&gt; |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
-| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
+| [103306](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
+| [103308](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
 
 ## present
 
@@ -111,23 +111,23 @@ content参数通过联合类型接受CustomBuilder或ComponentContent：
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| CustomBuilderWithId \| [ComponentContent&lt;Object&gt;](arkts-arkui-componentcontent-c.md) | 是 |
+| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent & lt;Object & gt; | 是 |
 | options | dialog.DialogCustomOptions | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;DialogResult&gt; |
+| Promise&lt;[DialogResult](arkts-arkui-arkui-dialog-dialogresult-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
-| [103306](../errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
-| [103308](../errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
+| [103306](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103306-节点挂载失败导致无法打开弹出框) |
+| [103308](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103308-子窗口创建失败导致无法打开弹出框) |
 
 ## update
 
@@ -151,18 +151,18 @@ update(content: ComponentContent<Object>, options?: dialog.DialogBaseOptions): P
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | 是 |
+| content | ComponentContent & lt;Object & gt; | 是 |
 | options | dialog.DialogBaseOptions | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |

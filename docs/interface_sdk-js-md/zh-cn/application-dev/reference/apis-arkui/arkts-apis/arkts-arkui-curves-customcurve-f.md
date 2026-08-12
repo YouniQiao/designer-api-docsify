@@ -28,5 +28,5 @@ export function customCurve(interpolate: (fraction: double) => double): ICurve
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-icurve-t.md) | 曲线的插值对象。 |
+| ICurve | 曲线的插值对象。 |
 

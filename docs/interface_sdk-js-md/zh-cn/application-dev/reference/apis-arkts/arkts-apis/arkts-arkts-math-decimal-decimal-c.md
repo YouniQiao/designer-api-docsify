@@ -56,7 +56,7 @@ static abs(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -68,7 +68,7 @@ static abs(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## acos
 
@@ -98,7 +98,7 @@ acos(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## acos
 
@@ -122,7 +122,7 @@ static acos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -134,8 +134,8 @@ static acos(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## acosh
 
@@ -165,7 +165,7 @@ acosh(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## acosh
 
@@ -189,7 +189,7 @@ static acosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -201,8 +201,8 @@ static acosh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## add
 
@@ -226,7 +226,7 @@ add(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -238,7 +238,7 @@ add(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## add
 
@@ -262,8 +262,8 @@ static add(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -275,7 +275,7 @@ static add(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## asin
 
@@ -305,7 +305,7 @@ asin(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## asin
 
@@ -329,7 +329,7 @@ static asin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -341,8 +341,8 @@ static asin(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## asinh
 
@@ -372,7 +372,7 @@ asinh(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## asinh
 
@@ -396,7 +396,7 @@ static asinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -408,8 +408,8 @@ static asinh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan
 
@@ -439,7 +439,7 @@ atan(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan
 
@@ -463,7 +463,7 @@ static atan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -475,8 +475,8 @@ static atan(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan2
 
@@ -500,8 +500,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} y坐标值，用于计算y/x的反正切值并确定象限。 |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} x坐标值，用于计算y/x的反正切值并确定象限。 |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} y坐标值，用于计算y/x的反正切值并确定象限。 |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} x坐标值，用于计算y/x的反正切值并确定象限。 |
 
 **返回值：**
 
@@ -513,8 +513,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atanh
 
@@ -544,7 +544,7 @@ atanh(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atanh
 
@@ -568,7 +568,7 @@ static atanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -580,8 +580,8 @@ static atanh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## cbrt
 
@@ -629,7 +629,7 @@ static cbrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -641,7 +641,7 @@ static cbrt(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ceil
 
@@ -689,7 +689,7 @@ static ceil(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -701,7 +701,7 @@ static ceil(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## clamp
 
@@ -725,8 +725,8 @@ clamp(min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| min | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| max | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -738,8 +738,8 @@ clamp(min: Value, max: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
 
 ## clamp
 
@@ -763,9 +763,9 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| min | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| max | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -777,8 +777,8 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
 
 ## comparedTo
 
@@ -810,7 +810,7 @@ comparedTo(n: Value): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -822,7 +822,7 @@ comparedTo(n: Value): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## constructor
 
@@ -846,13 +846,13 @@ Decimal的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cos
 
@@ -900,7 +900,7 @@ static cos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -912,7 +912,7 @@ static cos(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cosh
 
@@ -960,7 +960,7 @@ static cosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -972,7 +972,7 @@ static cosh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -1026,7 +1026,7 @@ div(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1038,7 +1038,7 @@ div(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## div
 
@@ -1062,8 +1062,8 @@ static div(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1075,7 +1075,7 @@ static div(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -1099,7 +1099,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1111,7 +1111,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## equals
 
@@ -1135,7 +1135,7 @@ equals(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1147,7 +1147,7 @@ equals(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## exp
 
@@ -1177,7 +1177,7 @@ exp(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## exp
 
@@ -1201,7 +1201,7 @@ static exp(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1213,8 +1213,8 @@ static exp(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## floor
 
@@ -1262,7 +1262,7 @@ static floor(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1274,7 +1274,7 @@ static floor(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1298,7 +1298,7 @@ greaterThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1310,7 +1310,7 @@ greaterThan(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1334,7 +1334,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1346,7 +1346,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## hypot
 
@@ -1370,7 +1370,7 @@ static hypot(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \| Decimal} Decimal |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} Decimal |
 
 **返回值：**
 
@@ -1382,7 +1382,7 @@ static hypot(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1550,7 +1550,7 @@ lessThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1562,7 +1562,7 @@ lessThan(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1586,7 +1586,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1598,7 +1598,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ln
 
@@ -1628,7 +1628,7 @@ ln(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## ln
 
@@ -1652,7 +1652,7 @@ static ln(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1664,8 +1664,8 @@ static ln(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log
 
@@ -1689,7 +1689,7 @@ log(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1701,8 +1701,8 @@ log(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log
 
@@ -1726,8 +1726,8 @@ static log(n: Value, base: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| base | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1739,8 +1739,8 @@ static log(n: Value, base: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log10
 
@@ -1764,7 +1764,7 @@ static log10(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1776,8 +1776,8 @@ static log10(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log2
 
@@ -1801,7 +1801,7 @@ static log2(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1813,8 +1813,8 @@ static log2(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## max
 
@@ -1838,7 +1838,7 @@ static max(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1850,7 +1850,7 @@ static max(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## min
 
@@ -1874,7 +1874,7 @@ static min(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1886,7 +1886,7 @@ static min(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1910,7 +1910,7 @@ mod(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1922,7 +1922,7 @@ mod(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1946,8 +1946,8 @@ static mod(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1959,7 +1959,7 @@ static mod(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1983,7 +1983,7 @@ mul(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -1995,7 +1995,7 @@ mul(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -2019,8 +2019,8 @@ static mul(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2032,7 +2032,7 @@ static mul(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## negate
 
@@ -2080,7 +2080,7 @@ pow(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2092,8 +2092,8 @@ pow(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## pow
 
@@ -2117,8 +2117,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| base | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 幂运算的底数的值。 |
-| exponent | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 幂运算的指数值。 |
+| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 幂运算的底数的值。 |
+| exponent | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 幂运算的指数值。 |
 
 **返回值：**
 
@@ -2130,8 +2130,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## precision
 
@@ -2203,7 +2203,7 @@ precision(includeZeros: boolean | int): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `includeZeros` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `includeZeros` is out of range. |
 
 ## random
 
@@ -2233,7 +2233,7 @@ static random(): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
+| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 
 ## random
 
@@ -2275,8 +2275,8 @@ static random(significantDigits: double): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
 
 ## round
 
@@ -2300,7 +2300,7 @@ static round(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2312,7 +2312,7 @@ static round(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## set
 
@@ -2342,9 +2342,9 @@ static set(config: DecimalConfig): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `DecimalConfig.properties` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `DecimalConfig.properties` is out of range. |
 
 ## sign
 
@@ -2376,7 +2376,7 @@ static sign(n: Value): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2389,7 +2389,7 @@ static sign(n: Value): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sin
 
@@ -2437,7 +2437,7 @@ static sin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -2449,7 +2449,7 @@ static sin(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sinh
 
@@ -2497,7 +2497,7 @@ static sinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2509,7 +2509,7 @@ static sinh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sqrt
 
@@ -2557,7 +2557,7 @@ static sqrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2569,7 +2569,7 @@ static sqrt(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2593,7 +2593,7 @@ sub(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2605,7 +2605,7 @@ sub(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2629,8 +2629,8 @@ static sub(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2642,7 +2642,7 @@ static sub(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sum
 
@@ -2668,7 +2668,7 @@ static sum(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -2680,7 +2680,7 @@ static sum(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tan
 
@@ -2728,7 +2728,7 @@ static tan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -2740,7 +2740,7 @@ static tan(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tanh
 
@@ -2788,7 +2788,7 @@ static tanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} 以弧度为单位的值。 |
 
 **返回值：**
 
@@ -2800,7 +2800,7 @@ static tanh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toBinary
 
@@ -2866,7 +2866,7 @@ toBinary(significantDigits: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toBinary
 
@@ -2909,7 +2909,7 @@ toBinary(significantDigits: double, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2975,7 +2975,7 @@ toDecimalPlaces(decimalPlaces: double): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
 
 ## toDecimalPlaces
 
@@ -3018,7 +3018,7 @@ toDecimalPlaces(decimalPlaces: double, rounding: Rounding): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toExponential
 
@@ -3084,7 +3084,7 @@ toExponential(decimalPlaces: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
 
 ## toExponential
 
@@ -3127,7 +3127,7 @@ toExponential(decimalPlaces: double, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFixed
 
@@ -3193,7 +3193,7 @@ toFixed(decimalPlaces: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces` is out of range. |
 
 ## toFixed
 
@@ -3236,7 +3236,7 @@ toFixed(decimalPlaces: double, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFraction
 
@@ -3284,7 +3284,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxDenominator | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -3296,7 +3296,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toHexadecimal
 
@@ -3362,7 +3362,7 @@ toHexadecimal(significantDigits: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toHexadecimal
 
@@ -3405,7 +3405,7 @@ toHexadecimal(significantDigits: double, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toNearest
 
@@ -3429,7 +3429,7 @@ toNearest(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -3441,7 +3441,7 @@ toNearest(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toNearest
 
@@ -3465,7 +3465,7 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
@@ -3478,8 +3478,8 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `rounding` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `rounding` is out of range. |
 
 ## toNumber
 
@@ -3575,7 +3575,7 @@ toOctal(significantDigits: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toOctal
 
@@ -3618,7 +3618,7 @@ toOctal(significantDigits: double, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toPrecision
 
@@ -3684,7 +3684,7 @@ toPrecision(significantDigits: double): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toPrecision
 
@@ -3727,7 +3727,7 @@ toPrecision(significantDigits: double, rounding: Rounding): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3793,7 +3793,7 @@ toSignificantDigits(significantDigits: double): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits` is out of range. |
 
 ## toSignificantDigits
 
@@ -3836,7 +3836,7 @@ toSignificantDigits(significantDigits: double, rounding: Rounding): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toString
 
@@ -3908,7 +3908,7 @@ static trunc(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \| Decimal} |
 
 **返回值：**
 
@@ -3920,7 +3920,7 @@ static trunc(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## valueOf
 

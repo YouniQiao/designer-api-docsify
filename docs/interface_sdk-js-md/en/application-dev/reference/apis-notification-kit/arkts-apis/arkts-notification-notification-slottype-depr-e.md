@@ -8,7 +8,7 @@ Enumerates the notification slot types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#SlotType
+**Substitutes:** [SlotType](ohos.notificationManager/notificationManager#SlotType)
 
 <!--Device-notification-export enum SlotType--><!--Device-notification-export enum SlotType-End-->
 
@@ -28,7 +28,7 @@ Unknown type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SlotType#UNKNOWN_TYPE
+**Substitutes:** [UNKNOWN_TYPE](ohos.notificationManager/notificationManager.SlotType#UNKNOWN_TYPE)
 
 <!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 
@@ -48,7 +48,7 @@ Notification slot for social communication.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SlotType#SOCIAL_COMMUNICATION
+**Substitutes:** [SOCIAL_COMMUNICATION](ohos.notificationManager/notificationManager.SlotType#SOCIAL_COMMUNICATION)
 
 <!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
@@ -68,7 +68,7 @@ Notification slot for service information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SlotType#SERVICE_INFORMATION
+**Substitutes:** [SERVICE_INFORMATION](ohos.notificationManager/notificationManager.SlotType#SERVICE_INFORMATION)
 
 <!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
@@ -88,7 +88,7 @@ Notification slot for content consultation.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SlotType#CONTENT_INFORMATION
+**Substitutes:** [CONTENT_INFORMATION](ohos.notificationManager/notificationManager.SlotType#CONTENT_INFORMATION)
 
 <!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
@@ -108,7 +108,7 @@ Notification slot for other purposes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SlotType#OTHER_TYPES
+**Substitutes:** [OTHER_TYPES](ohos.notificationManager/notificationManager.SlotType#OTHER_TYPES)
 
 <!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 

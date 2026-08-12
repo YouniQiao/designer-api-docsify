@@ -34,6 +34,6 @@ function createAVMusicTemplate(accessType: AVMusicTemplateType): AVMusicTemplate
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
-| [35000001](../errorcode-avmusictemplate.md#35000001-音频模板创建失败) | Failed to create the AVMusicTemplate. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createAVMusicTemplate can not work correctly due to limited device capabilities. |
+| [35000001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000001-音频模板创建失败) | Failed to create the AVMusicTemplate. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getInputMethodSetting
@@ -18,7 +18,7 @@ Input method setting
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethod#getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)
+**Substitutes:** [getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)
 
 <!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
 

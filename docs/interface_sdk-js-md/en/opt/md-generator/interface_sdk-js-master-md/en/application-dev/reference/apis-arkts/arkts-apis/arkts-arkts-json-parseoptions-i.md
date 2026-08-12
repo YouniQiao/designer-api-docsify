@@ -11,7 +11,7 @@ Describes the parsing options, which can define the mode for processing BigInt.
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from 'kits/@kit.ArkTS';
+import { JSON } from '@kit.ArkTS';
 ```
 
 ## bigIntMode
@@ -22,7 +22,7 @@ bigIntMode: BigIntMode
 
 Mode for processing BigInt.
 
-**Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
+**Type:** BigIntMode
 
 **Since:** 12
 

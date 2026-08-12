@@ -22,7 +22,7 @@ Constructor parameters
 
 **Deprecated since:** 12
 
-**Substitutes:** <!--SUBSTITUTE_API-->(value:<!--/SUBSTITUTE_API-->
+**Substitutes:** [(value:]((value:)
 
 <!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
 

@@ -18,7 +18,7 @@ offsetX?: double | Resource
 
 Offset on the x-axis.Unit: vp.
 
-**类型：** double \| Resource
+**类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **默认值：** 5
 
@@ -40,7 +40,7 @@ offsetY?: double | Resource
 
 Offset on the y-axis.Unit: vp.
 
-**类型：** double \| Resource
+**类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **默认值：** 5
 
@@ -62,7 +62,7 @@ radius?: double | Resource
 
 Shadow blur radius.Unit: vp.&lt;p&gt;**NOTE：**:&lt;br&gt;A value less than or equal to 0 is handled as the default value.&lt;/p&gt;
 
-**类型：** double \| Resource
+**类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **默认值：** 20
 

@@ -13,7 +13,7 @@ Represents the configuration parameters of a serial port.
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## baudRate
@@ -42,7 +42,7 @@ dataBits?: DataBits
 
 Data bits. The default value is **8**.
 
-**Type:** [DataBits](arkts-basicservices-serial-databits-e.md)
+**Type:** DataBits
 
 **Default:** DATABIT_8
 
@@ -62,7 +62,7 @@ parity?: Parity
 
 Parity check. The default value is **None**, indicating that no parity check is performed.
 
-**Type:** [Parity](arkts-basicservices-serialmanager-parity-e.md)
+**Type:** Parity
 
 **Default:** NONE
 
@@ -82,7 +82,7 @@ stopBits?: StopBits
 
 Stop bits. The default value is **1**.
 
-**Type:** [StopBits](arkts-basicservices-serial-stopbits-e.md)
+**Type:** StopBits
 
 **Default:** STOPBIT_1
 

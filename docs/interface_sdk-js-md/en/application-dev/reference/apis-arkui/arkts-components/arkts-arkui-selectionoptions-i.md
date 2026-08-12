@@ -18,7 +18,7 @@ menuPolicy?: MenuPolicy
 
 Menu display policy.Default value: MenuPolicy.DEFAULT.
 
-**Type:** [MenuPolicy](../arkts-apis/arkts-arkui-common-menupolicy-e.md)
+**Type:** [MenuPolicy](arkts-arkui-menupolicy-e.md)
 
 **Since:** 12
 

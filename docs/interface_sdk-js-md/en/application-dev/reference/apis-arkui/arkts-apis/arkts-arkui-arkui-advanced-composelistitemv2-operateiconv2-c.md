@@ -15,7 +15,7 @@ Declare type OperateIconV2
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from 'kits/@kit.ArkUI';
+import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from '@kit.ArkUI';
 ```
 
 ## action
@@ -68,7 +68,7 @@ public accessibilityDescription?: ResourceStr
 
 The accessibilityDescription of the icon.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -110,7 +110,7 @@ public accessibilityText?: ResourceStr
 
 The accessibilityText of the icon.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -150,7 +150,7 @@ public value: ResourceStr
 
 The content of text or the address of icon.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

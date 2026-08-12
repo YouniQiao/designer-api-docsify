@@ -9,8 +9,8 @@ export declare function Navigation(
 ): NavigationAttribute
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  
-[navDestination](NavigationAttribute.navDestination)属性进行页面路由。
+绑定导航控制器到Navigation组件，适用于使用[NavPathStack](arkts-arkui-navigation-navpathstack-c.md#NavPathStack)配合  
+[navDestination](arkts-arkui-navigation-navigationattribute-i.md#navDestination)属性进行页面路由。
 
 **起始版本：** 23
 
@@ -27,13 +27,13 @@ export declare function Navigation(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | 否 | 导航控制器对象。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md) |  |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) |  |
 
 
 ## Navigation
@@ -46,8 +46,8 @@ export declare function Navigation(
 ): NavigationAttribute
 ```
 
-绑定导航控制器到Navigation组件，并设置自定义首页，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  
-[navDestination](NavigationAttribute.navDestination)属性进行页面路由。
+绑定导航控制器到Navigation组件，并设置自定义首页，适用于使用[NavPathStack](arkts-arkui-navigation-navpathstack-c.md#NavPathStack)配合  
+[navDestination](arkts-arkui-navigation-navigationattribute-i.md#navDestination)属性进行页面路由。
 
 **起始版本：** 24
 
@@ -65,13 +65,13 @@ export declare function Navigation(
 | --- | --- | --- | --- |
 | pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | 否 | 导航控制器对象。 |
 | homeDestination | [HomePathInfo](arkts-arkui-navigation-homepathinfo-i.md) | 否 | 自定义首页信息。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md) |  |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) |  |
 
 
 ## Navigation
@@ -83,8 +83,8 @@ export declare function Navigation(
 ): NavigationAttribute
 ```
 
-绑定导航控制器到Navigation组件，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  
-[navDestination](NavigationAttribute.navDestination)属性进行页面路由。
+绑定导航控制器到Navigation组件，适用于使用[NavPathStack](arkts-arkui-navigation-navpathstack-c.md#NavPathStack)配合  
+[navDestination](arkts-arkui-navigation-navigationattribute-i.md#navDestination)属性进行页面路由。
 
 **起始版本：** 26.0.0
 
@@ -102,12 +102,12 @@ export declare function Navigation(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NavigationAttribute&gt; | 是 | 导航控制器对象。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md)&gt; | 是 | 导航控制器对象。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md) | Returns the instance of the NavigationAttribute. |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) | Returns the instance of the NavigationAttribute. |
 

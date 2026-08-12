@@ -14,7 +14,7 @@ function createUriRecord(uri: string): PasteDataRecord
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType:
+**替代接口：** [createRecord](pasteboard.createRecord(mimeType:)
 
 <!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord--><!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord-End-->
 

@@ -18,7 +18,7 @@ icon?: IconOptions
 
 右侧清除按钮图标。
 
-**类型：** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
+**类型：** [IconOptions](arkts-arkui-search-iconoptions-i.md)
 
 **起始版本：** 23
 

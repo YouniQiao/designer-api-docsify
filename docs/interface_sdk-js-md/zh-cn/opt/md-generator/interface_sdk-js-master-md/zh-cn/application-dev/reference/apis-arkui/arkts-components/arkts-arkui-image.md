@@ -80,7 +80,7 @@ Image加载成功且组件不设置宽高时，其显示大小自适应父组件
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| [DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
 
 ## Image
 
@@ -106,7 +106,7 @@ src新增[ImageContent]{@link ImageContent}类型，可指定对应的图形内�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| DrawableDescriptor \| [ImageContent](../arkts-apis/arkts-arkui-image-imagecontent-e.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
 
 ## Image
 
@@ -132,7 +132,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| DrawableDescriptor \| [ImageContent](../arkts-apis/arkts-arkui-image-imagecontent-e.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) \| [ImageContent](arkts-arkui-imagecontent-e.md) | 是 |
 | reloadKey | string | 否 |
 
 ## Image
@@ -157,7 +157,7 @@ Image新增[ImageAIOptions]{@link ImageAIOptions}参数，为组件设置AI分�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| [DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 是 |
 
 ## Image
@@ -183,7 +183,7 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr \| [DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |
+| src | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) | 是 |
 | imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 否 |
 | reloadKey | string | 否 |
 

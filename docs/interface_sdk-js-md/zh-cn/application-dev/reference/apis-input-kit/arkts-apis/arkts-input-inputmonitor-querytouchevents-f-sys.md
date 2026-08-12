@@ -30,14 +30,14 @@ function queryTouchEvents(count: int) : Promise<Array<TouchEvent>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md)&gt;&gt; | Promise对象，返回查询到的触屏输入事件。包含以下有效信息，其余均为无效信息：&lt;br/&gt;- actionTime：触屏输入事件发生的时间，表示系统 启动运行至今逝去的微秒数，单位为微秒（μs）。&lt;br/&gt;- [SourceType]{ |
+| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)&gt;&gt; | Promise对象，返回查询到的触屏输入事件。包含以下有效信息，其余均为无效信息：&lt;br/&gt;- actionTime：触屏输入事件发生的时间，表示系统 启动运行至今逝去的微秒数，单位为微秒（μs）。&lt;br/&gt;- [SourceType]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 

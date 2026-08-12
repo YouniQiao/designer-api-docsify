@@ -13,7 +13,7 @@ Represents a **Schema** instance, which provides the methods for defining the va
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## appendChild
@@ -38,7 +38,7 @@ Appends a child node to this **FieldNode**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes | Child node to append. |
+| child | FieldNode | Yes | Child node to append. |
 
 **Return value:**
 
@@ -50,7 +50,7 @@ Appends a child node to this **FieldNode**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -101,7 +101,7 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Parameter verification failed. |
 
 ## default
 

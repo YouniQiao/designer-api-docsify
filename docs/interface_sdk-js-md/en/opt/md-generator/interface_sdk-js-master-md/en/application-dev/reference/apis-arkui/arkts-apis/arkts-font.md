@@ -6,9 +6,9 @@ The **font** module provides APIs for registering custom fonts.
 > 
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
 > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](arkts-arkui-uicontext.md).
+> [UIContext](@ohos.arkui.UIContext).
 > 
-> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) API of the
+> - You are advised to use the [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync) API of the
 > font engine to register custom fonts.
 
 **Since:** 9
@@ -20,7 +20,7 @@ The **font** module provides APIs for registering custom fonts.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## Summary

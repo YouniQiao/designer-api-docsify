@@ -13,7 +13,7 @@ Defines chipGroupV2.
 ## Modules to Import
 
 ```TypeScript
-import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from 'kits/@kit.ArkUI';
+import { ChipGroupV2ItemConfig, ChipGroupV2ItemStyleConfig, ChipGroupV2SpaceConfig, ChipGroupV2IconGroupSuffix, ChipGroupV2Items, ChipGroupV2Padding, ChipGroupV2Item, ChipGroupV2ItemStyle, ChipGroupV2, ChipGroupV2PaddingConfig, ChipGroupV2IconItemConfig, ChipGroupV2SymbolItemConfig, ChipGroupV2Space } from '@kit.ArkUI';
 ```
 
 ## $items
@@ -24,7 +24,7 @@ $items?: Callback<ChipGroupV2Items>
 
 Two-way binding callback method for ChipV2 item.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ChipGroupV2Items&gt;
+**Type:** Callback&lt;[ChipGroupV2Items](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2items-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ $selectedIndexes?: Callback<Array<number>>
 
 Two-way binding callback method for selected ChipV2 item indexes.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;
+**Type:** Callback&lt;Array&lt;number&gt;&gt;
 
 **Since:** 26.0.0
 
@@ -174,7 +174,7 @@ onChange?: Callback<Array<number>>
 
 Callback method when the chipV2 status changes
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;
+**Type:** Callback&lt;Array&lt;number&gt;&gt;
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ suffix?: Callback<void>
 
 The builder function which will be rendered in the suffix of ChipGroupV2.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 

@@ -18,7 +18,7 @@ appRotation: AppRotation
 
 Current orientation.
 
-**Type:** [AppRotation](../arkts-apis/arkts-arkui-enums-approtation-e.md)
+**Type:** AppRotation
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ foldStatus: FoldStatus
 
 Current fold state of the device.
 
-**Type:** [FoldStatus](../arkts-apis/arkts-arkui-enums-foldstatus-e.md)
+**Type:** FoldStatus
 
 **Since:** 12
 

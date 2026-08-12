@@ -184,7 +184,7 @@ readableStream.push(null);
 endDocument(): void
 ```
 
-当解析器在XML文本结束解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
+当解析器在XML文本结束解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。
 
 > **说明：**
 > 
@@ -208,7 +208,7 @@ endDocument(): void
 endElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined): void
 ```
 
-当解析器遇到XML元素的结束标签时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
+当解析器遇到XML元素的结束标签时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。
 
 **起始版本：** 24
 
@@ -236,7 +236,7 @@ endElement(elementName: string, namespaceURI: string | undefined, qName: string 
 startDocument(): void
 ```
 
-当解析器在XML文本开始解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
+当解析器在XML文本开始解析时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。
 
 **起始版本：** 24
 
@@ -256,7 +256,7 @@ startDocument(): void
 startElement(elementName: string, namespaceURI: string | undefined, qName: string | undefined, attributes: Map<string,string>): void
 ```
 
-当解析器遇到XML元素的开始标签时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](arkts-arkts-xml-xmlsaxhandler-i.md#characters)。
+当解析器遇到XML元素的开始标签时触发的回调函数。该回调函数需要开发者自行实现。具体使用示例可见[characters&lt;sup&gt;24+&lt;/sup&gt;](#characters)。
 
 **起始版本：** 24
 

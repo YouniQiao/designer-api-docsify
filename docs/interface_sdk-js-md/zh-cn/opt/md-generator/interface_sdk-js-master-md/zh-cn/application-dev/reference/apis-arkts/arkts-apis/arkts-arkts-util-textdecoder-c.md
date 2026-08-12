@@ -45,7 +45,7 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **废弃版本：** 9
 
-**替代接口：** [util.TextDecoder.create](arkts-arkts-util-textdecoder-c.md#create)
+**替代接口：** [create](#create)
 
 <!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
@@ -122,7 +122,7 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **废弃版本：** 9
 
-**替代接口：** [util.TextDecoder.decodeToString](arkts-arkts-util-textdecoder-c.md#decodetostring)
+**替代接口：** [decodeToString](#decodeToString)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -236,7 +236,7 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **废弃版本：** 12
 
-**替代接口：** [util.TextDecoder.decodeToString](arkts-arkts-util-textdecoder-c.md#decodetostring)
+**替代接口：** [decodeToString](#decodeToString)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -19,7 +19,7 @@ function on(type: 'BundleStatusChange',
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor#on
+**替代接口：** [on](ohos.bundle.bundleMonitor#on)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -56,7 +56,7 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor#on
+**替代接口：** [on](ohos.bundle.bundleMonitor#on)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -77,4 +77,4 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |

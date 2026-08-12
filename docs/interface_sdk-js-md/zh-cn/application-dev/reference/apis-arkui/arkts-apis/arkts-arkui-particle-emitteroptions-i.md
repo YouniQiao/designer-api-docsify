@@ -20,7 +20,7 @@ annulusRegion?: ParticleAnnulusRegion
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 20开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleAnnulusRegion](../arkts-components/arkts-arkui-particleannulusregion-i.md)
+**类型：** [ParticleAnnulusRegion](arkts-arkui-particle-particleannulusregion-i.md)
 
 **默认值：** {innerRadius:LengthMetrics.vp(0),outerRadius:LengthMetrics.vp(0)}
 
@@ -72,7 +72,7 @@ particle: EmitterParticleOptions
 
 -config类型和type值有关联：
 
-1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](../arkts-components/arkts-arkui-pointparticleparameters-i.md/arkts-arkui-pointparticleparameters-i.md) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](../arkts-components/arkts-arkui-imageparticleparameters-i.md/arkts-arkui-imageparticleparameters-i.md) 。
+1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-particle-pointparticleparameters-i.md#PointParticleParameters) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-particle-imageparticleparameters-i.md#ImageParticleParameters) 。
 
 -count表示发射的粒子总数，count取值>=-1，当count为-1表示粒子总数无限大。
 
@@ -134,7 +134,7 @@ shape?: ParticleEmitterShape
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleEmitterShape](../arkts-components/arkts-arkui-particleemittershape-e.md)
+**类型：** [ParticleEmitterShape](arkts-arkui-particle-particleemittershape-e.md)
 
 **默认值：** ParticleEmitterShape.RECTANGLE
 

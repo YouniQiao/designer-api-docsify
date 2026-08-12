@@ -2,8 +2,8 @@
 
 保存文本内容及样式的载体，可用于计算单行排版信息。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的  
-[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildlinetypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的  
+[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset)接口获取到LineTypeset对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 18
 
@@ -42,7 +42,7 @@ createLine(startIndex: int, count: int): TextLine
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | startIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 开始计算排版的起始位置，整数，取值范围为[0, 文本字符总数)。 |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 从指定起始位置开始进行排版的字符个数，取值为 [0,文本字符总数)的整数，startIndex和count之和不能大于文本字符总数。当count为0时，表示排版区间为[startIndex, 文本的最后一个字符位置]。 可以先使用[getLineBreak](arkts-arkgraphics2d-text-linetypeset-c.md#getlinebreak)获取合理的排版字符总数。 |
+| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 从指定起始位置开始进行排版的字符个数，取值为 [0,文本字符总数)的整数，startIndex和count之和不能大于文本字符总数。当count为0时，表示排版区间为[startIndex, 文本的最后一个字符位置]。 可以先使用[getLineBreak](#getLineBreak)获取合理的排版字符总数。 |
 
 **返回值：**
 
@@ -54,7 +54,7 @@ createLine(startIndex: int, count: int): TextLine
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -106,7 +106,7 @@ getLineBreak(startIndex: int, width: double): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 

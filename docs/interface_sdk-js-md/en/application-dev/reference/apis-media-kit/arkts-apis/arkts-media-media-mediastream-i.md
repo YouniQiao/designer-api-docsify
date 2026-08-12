@@ -13,7 +13,7 @@ Media Stream. AVPlayer use this for mediaData access, current version only suppo
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## bitrate

@@ -22,14 +22,14 @@ function configure(config: ConfigOption): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | 是 | 应用事件打点配置项对象。 |
+| config | ConfigOption | 是 | 应用事件打点配置项对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11103001](../errorcode-hiappevent.md#11103001-非法的最大存储配额值) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11103001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11103001-非法的最大存储配额值) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## 示例
 

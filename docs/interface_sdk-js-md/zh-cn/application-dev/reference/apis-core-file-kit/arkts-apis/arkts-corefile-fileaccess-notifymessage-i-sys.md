@@ -8,7 +8,7 @@
 
 **废弃版本：** 23
 
-**替代接口：** @ohos.file.fs:fileIo.WatchEvent
+**替代接口：** [WatchEvent](@ohos.file.fs:fileIo.WatchEvent)
 
 <!--Device-fileAccess-interface NotifyMessage--><!--Device-fileAccess-interface NotifyMessage-End-->
 
@@ -24,7 +24,7 @@ type: NotifyType
 
 变更的通知类型。
 
-**类型：** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
+**类型：** NotifyType
 
 **起始版本：** 10
 

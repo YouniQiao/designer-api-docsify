@@ -5,13 +5,13 @@
 > **说明：**
 > 
 > 本模块首批接口从API version 8开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.usbManager](arkts-usbmanager.md)。
+> 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.usbManager](arkts-usbmanager.md#usbManager)。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager](arkts-usbmanager.md)
+**替代接口：** [usbManager](arkts-usbmanager.md#usbManager)
 
 <!--Device-unnamed-declare namespace usb--><!--Device-unnamed-declare namespace usb-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getDefaultDisplaySync
@@ -32,7 +32,7 @@ Obtains the **Display** object of the screen where the application is located. I
 
 | Error Code ID |
 | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
 
 ## Examples
 

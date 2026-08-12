@@ -28,5 +28,5 @@ export function getButtonAttribute(node: FrameNode): ButtonAttribute | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ButtonAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

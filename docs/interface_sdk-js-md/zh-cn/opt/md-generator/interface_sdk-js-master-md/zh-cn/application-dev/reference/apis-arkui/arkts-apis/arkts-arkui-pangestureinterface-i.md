@@ -16,7 +16,7 @@
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
+创建滑动手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface)。
 
 **起始版本：** 7
 
@@ -44,7 +44,7 @@
 (options?: PanGestureHandlerOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。与[PanGesture](arkts-arkui-pangestureinterface-i.md) | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
+创建滑动手势对象。与[PanGesture](PanGestureInterface(value?: { fingers?: number; direction?: PanDirection; distance?: number) | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
 
 **起始版本：** 15
 
@@ -88,7 +88,7 @@ onActionCancel(event: () => void): PanGestureInterface
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 
@@ -118,7 +118,7 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureInterface
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | 是 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 
@@ -146,7 +146,7 @@ onActionEnd(event: (event: GestureEvent) => void): PanGestureInterface
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 
@@ -174,7 +174,7 @@ onActionStart(event: (event: GestureEvent) => void): PanGestureInterface
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 
@@ -202,7 +202,7 @@ onActionUpdate(event: (event: GestureEvent) => void): PanGestureInterface
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | 是 |
+| event | (event: GestureEvent) = & gt; void | 是 |
 
 **返回值：**
 

@@ -14,7 +14,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -46,7 +46,7 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

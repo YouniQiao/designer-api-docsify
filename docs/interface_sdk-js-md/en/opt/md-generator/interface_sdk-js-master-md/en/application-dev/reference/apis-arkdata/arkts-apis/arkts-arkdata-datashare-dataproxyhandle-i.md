@@ -1,7 +1,7 @@
 # DataProxyHandle
 
 Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using  
-[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle).
+[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle).
 
 **Since:** 20
 
@@ -12,7 +12,7 @@ Defines the data proxy handle, which can be used to access or manage shared conf
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## delete
@@ -42,14 +42,14 @@ Deletes the specified shared configuration items based on URIs. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DataProxyResult[]&gt; |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -94,14 +94,14 @@ Deletes all the data published by the publisher.Only the data publisher can dele
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DataProxyResult[]&gt; |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -145,14 +145,14 @@ Obtains a specified shared configuration item based on the URI. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DataProxyGetResult[]&gt; |
+| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -178,7 +178,7 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 ```
 
 Obtains all multi-value data under a specified URI. Only the publisher and the applications in the  
-[allowList](arkts-arkdata-datashare-proxydata-i.md#allowlist) can obtain the data. This API uses a promise to return the result.
+[allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) can obtain the data. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -206,9 +206,9 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 | Error Code ID |
 | --- |
 | 15700015 |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -269,7 +269,7 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 | event | 'dataChange' | Yes |
 | uris | string[] | Yes |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | No |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No |
 
 **Return value:**
 
@@ -281,8 +281,8 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 | Error Code ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -320,8 +320,8 @@ on(
 
 Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI, and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently.
 
-When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish) or  
-[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete) API to publish or delete a configuration, a notification is automatically triggered.
+When the publisher calls the [publish](#publish) or  
+[delete](#delete) API to publish or delete a configuration, a notification is automatically triggered.
 
 **Since:** 20
 
@@ -338,7 +338,7 @@ When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i
 | event | 'dataChange' | Yes |
 | uris | string[] | Yes |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes |
 
 **Return value:**
 
@@ -350,8 +350,8 @@ When the publisher calls the [publish](arkts-arkdata-datashare-dataproxyhandle-i
 
 | Error Code ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -396,21 +396,21 @@ Publishes shared configuration items. This API uses a promise to return the resu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [ProxyData](arkts-arkdata-datashare-proxydata-i.md)[] | Yes |
+| data | [ProxyData[]](arkts-arkdata-datashare-proxydata-i.md) | Yes |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DataProxyResult[]&gt; |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -465,16 +465,16 @@ Puts a value into the published data. This operation can be performed only on mu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 15700015 |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 
@@ -535,16 +535,16 @@ Removes the value corresponding to the key. This operation can be performed only
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 15700015 |
-| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
-| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) |
+| [15700011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 

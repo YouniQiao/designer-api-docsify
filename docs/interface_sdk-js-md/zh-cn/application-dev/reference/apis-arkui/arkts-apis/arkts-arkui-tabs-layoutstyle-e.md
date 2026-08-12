@@ -1,6 +1,6 @@
 # LayoutStyle
 
-[Scrollable](TabsAttribute.barMode)模式下不滚动时的页签排布方式枚举。
+[Scrollable](arkts-arkui-tabs-tabsattribute-i.md#barMode)模式下不滚动时的页签排布方式枚举。
 
 **起始版本：** 23
 

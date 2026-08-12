@@ -96,7 +96,7 @@ getIndexList(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 

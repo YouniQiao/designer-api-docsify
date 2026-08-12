@@ -29,5 +29,5 @@ export function createTextInputNode(context: UIContext, options?: FrameNodeOptio
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextInput](arkts-arkui-typenode-textinput-t.md) | 返回 TextInput 类型的 FrameNode |
+| TextInput | 返回 TextInput 类型的 FrameNode |
 

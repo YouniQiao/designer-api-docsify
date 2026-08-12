@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appRecovery } from 'kits/@kit.AbilityKit';
+import { appRecovery } from '@kit.AbilityKit';
 ```
 
 ## restartApp
@@ -14,7 +14,7 @@ function restartApp(): void
 
 Restarts the current process and starts the first ability that is displayed when the application is started. If the state of this ability is saved, the saved state data is passed into the **wantParam** property in the **want** parameter of the **onCreate** lifecycle callback of the ability.
 
-In API version 10, the ability specified by [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setrestartwant) is started. If no ability is specified, the following rules are used:
+In API version 10, the ability specified by [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setRestartWant) is started. If no ability is specified, the following rules are used:
 
 If the ability of the current application running in the foreground supports recovery, that ability is started.
 
@@ -22,7 +22,7 @@ If multiple abilities that support recovery is running in the foreground, only t
 
 If no ability is running in the foreground, none of them is started.
 
-This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md). The interval between two restarts must be greater than one minute. If this API is called repeatedly within one minute, the application exits but does not restart. The behavior of automatic restart is the same as that of proactive restart.
+This API can be used together with the APIs of [errorManager](arkts-app-ability-errormanager.md#errorManager). The interval between two restarts must be greater than one minute. If this API is called repeatedly within one minute, the application exits but does not restart. The behavior of automatic restart is the same as that of proactive restart.
 
 **Since:** 9
 

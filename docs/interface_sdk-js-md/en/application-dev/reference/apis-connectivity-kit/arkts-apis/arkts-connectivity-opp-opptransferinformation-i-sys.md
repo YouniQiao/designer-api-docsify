@@ -15,7 +15,7 @@ Describes the transferred file information.
 ## Modules to Import
 
 ```TypeScript
-import { opp } from 'kits/@kit.ConnectivityKit';
+import { opp } from '@kit.ConnectivityKit';
 ```
 
 ## currentBytes
@@ -180,7 +180,7 @@ status: TransferStatus
 
 File transfer status
 
-**Type:** [TransferStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-call-transferstatus-e.md)
+**Type:** TransferStatus
 
 **Since:** 16
 

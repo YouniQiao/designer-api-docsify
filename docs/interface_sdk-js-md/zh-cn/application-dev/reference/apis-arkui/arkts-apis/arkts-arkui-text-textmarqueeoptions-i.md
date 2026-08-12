@@ -116,7 +116,7 @@ marqueeStartPolicy?: MarqueeStartPolicy
 
 默认值：TV设备上默认值为MarqueeStartPolicy.ON_FOCUS，其他设备默认值为MarqueeStartPolicy.DEFAULT
 
-**类型：** [MarqueeStartPolicy](../arkts-components/arkts-arkui-marqueestartpolicy-e.md)
+**类型：** [MarqueeStartPolicy](arkts-arkui-text-marqueestartpolicy-e.md)
 
 **起始版本：** 23
 

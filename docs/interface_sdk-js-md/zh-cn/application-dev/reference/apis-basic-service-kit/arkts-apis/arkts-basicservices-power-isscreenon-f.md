@@ -14,7 +14,7 @@ function isScreenOn(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [power.isActive](arkts-basicservices-power-isactive-f.md#isactive)
+**替代接口：** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
 
 <!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
@@ -53,7 +53,7 @@ function isScreenOn(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [power.isActive](arkts-basicservices-power-isactive-f.md#isactive)
+**替代接口：** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
 
 <!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 

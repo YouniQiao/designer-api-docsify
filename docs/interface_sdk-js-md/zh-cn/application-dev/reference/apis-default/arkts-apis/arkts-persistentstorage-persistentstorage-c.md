@@ -16,9 +16,9 @@ Defines the PersistentStorage interface.
 static deleteProp(key: string): void
 ```
 
-[persistProp](../../apis-arkui/arkts-apis/arkts-arkui-persistpropsoptions-i.md/arkts-arkui-persistpropsoptions-i.md)的逆向操作。将key对应的属性从PersistentStorage中删除，后续  
+[persistProp](arkts-persistentstorage-persistpropsoptions-i.md#PersistPropsOptions)的逆向操作。将key对应的属性从PersistentStorage中删除，后续  
 [AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)的操作，对  
-[PersistentStorage](../../../ui/state-management-static/arkts-static-persiststorage.md)不会再有影响。该操作会将对应的key从持久化文件中删除，如果希望再次持久化，可以再次调用[persistProp](../../apis-arkui/arkts-apis/arkts-arkui-persistpropsoptions-i.md/arkts-arkui-persistpropsoptions-i.md)接口。
+[PersistentStorage](../../../ui/state-management-static/arkts-static-persiststorage.md)不会再有影响。该操作会将对应的key从持久化文件中删除，如果希望再次持久化，可以再次调用[persistProp](arkts-persistentstorage-persistpropsoptions-i.md#PersistPropsOptions)接口。
 
 **起始版本：** 23
 
@@ -95,9 +95,9 @@ static persistProp<T>(key: string, defaultValue: T, toJson?: ToJSONType<T>, from
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | 属性名。 |
-| defaultValue | T | 是 | 当在[PersistentStorage](../../apis-arkui/arkts-apis/arkts-arkui-persistentstorage-c.md/arkts-arkui-persistentstorage-c.md)和 [AppStorage](../../../reference/apis-arkui/arkui-ts/ts-state-management-Static-copy.md#appstorage)中未查询到key时，使用 defaultValue中。 |
-| toJson | [ToJSONType](arkts-tojsontype-t.md)&lt;T&gt; | 否 | 见[ToJSONType](arkts-tojsontype-t.md)，用于序列化。对于复杂类型（除boolean、int、double、long、string外）， 开发者必须实现该方法才能成功序列化。 |
-| fromJson | [FromJSONType](arkts-fromjsontype-t.md)&lt;T&gt; | 否 | 见[FromJSONType](arkts-fromjsontype-t.md)，用于反序列化。对于复杂类型（除boolean、int、double、long、 string外），开发者必须实现该方法才能成功反序列化。 |
+| defaultValue | T | 是 | 当在[PersistentStorage](#PersistentStorage)和 [AppStorage](../../../reference/apis-arkui/arkui-ts/ts-state-management-Static-copy.md#appstorage)中未查询到key时，使用 defaultValue中。 |
+| toJson | [ToJSONType](arkts-tojsontype-t.md)&lt;T&gt; | 否 | 见[ToJSONType](arkts-tojsontype-t.md#ToJSONType)，用于序列化。对于复杂类型（除boolean、int、double、long、string外）， 开发者必须实现该方法才能成功序列化。 |
+| fromJson | [FromJSONType](arkts-fromjsontype-t.md)&lt;T&gt; | 否 | 见[FromJSONType](arkts-fromjsontype-t.md#FromJSONType)，用于反序列化。对于复杂类型（除boolean、int、double、long、 string外），开发者必须实现该方法才能成功反序列化。 |
 
 **返回值：**
 
@@ -112,7 +112,7 @@ static persistProps(props: PersistPropsOptions<Any>[]): void
 ```
 
 将[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)中key对应的属性持久化到文件中。与  
-[persistProp](../../apis-arkui/arkts-apis/arkts-arkui-persistpropsoptions-i.md/arkts-arkui-persistpropsoptions-i.md)的区别在于可以一次性持久化多个数据，适用场景是：应用启动时调用持久化接口。
+[persistProp](arkts-persistentstorage-persistpropsoptions-i.md#PersistPropsOptions)的区别在于可以一次性持久化多个数据，适用场景是：应用启动时调用持久化接口。
 
 **起始版本：** 23
 

@@ -33,13 +33,13 @@ once(type: 'toastShow', callback: Callback<UIElementInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'toastShow' | 是 | 订阅的事件类型，取值为'toastShow'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | 事件发生时执行的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -86,13 +86,13 @@ once(type: 'dialogShow', callback: Callback<UIElementInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dialogShow' | 是 | 订阅的事件类型，取值为'dialogShow'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | 事件发生时执行的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -138,14 +138,14 @@ once(type: 'windowChange', windowChangeType: WindowChangeType, options: WindowCh
 | type | 'windowChange' | 是 | 订阅的事件类型，支持的事件为'windowChange'。当监听到窗口变化时，触发该事件。 |
 | windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 是 | 窗口变化事件类型。 |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 是 | 窗口变化事件监听的扩展配置，包括监听超时时间和监听窗口对应包名。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | 事件发生时执行的回调函数，返回事件的相关信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数，返回事件的相关信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -196,14 +196,14 @@ once(type: 'componentEventOccur', componentEventType: ComponentEventType, option
 | type | 'componentEventOccur' | 是 | 订阅的事件类型，支持的事件为'componentEventOccur'。当监听到控件操作时，触发该事件。 |
 | componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 是 | 控件操作事件类型。 |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 是 | 控件操作事件监听的扩展配置，包括监听超时时间和监听控件匹配条件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | 事件发生时执行的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | 事件发生时执行的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -256,14 +256,14 @@ Listen on component event once, additional listening options can be set.
 | --- | --- | --- | --- |
 | componentEventType | [ComponentEventType](arkts-test-uitest-componenteventtype-e.md) | 是 | Component event type to be listened on. |
 | options | [ComponentEventOptions](arkts-test-uitest-componenteventoptions-i.md) | 是 | Additional listening options of component event. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 
@@ -314,13 +314,13 @@ Listen for dialog show once
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -360,13 +360,13 @@ Listen for toast show once
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -408,14 +408,14 @@ Listen on window change once, additional listening options can be set.
 | --- | --- | --- | --- |
 | windowChangeType | [WindowChangeType](arkts-test-uitest-windowchangetype-e.md) | 是 | Window change type to be listened on. |
 | options | [WindowChangeOptions](arkts-test-uitest-windowchangeoptions-i.md) | 是 | Additional listening options of window change. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UIElementInfo&gt; | 是 | function, returns the monitored UIElementInfo. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIElementInfo](arkts-test-uitest-uielementinfo-i.md)&gt; | 是 | function, returns the monitored UIElementInfo. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) | This operation is not supported. |
 
 ## 示例
 

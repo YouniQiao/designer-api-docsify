@@ -24,7 +24,7 @@ x?: Length | GridRowSizeOption
 
 单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GridRowSizeOption
+**类型：** Length \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ y?: Length | GridRowSizeOption
 
 单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GridRowSizeOption
+**类型：** Length \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **起始版本：** 9
 

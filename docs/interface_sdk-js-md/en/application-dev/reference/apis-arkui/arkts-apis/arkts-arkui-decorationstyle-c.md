@@ -61,7 +61,7 @@ Constructor of a text decoration line style, including additional configuration 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; type: TextDecorationType.None,&lt;br&gt; color: Color.Black,&lt;br&gt; style: TextDecorationStyle.SOLID, &lt;br&gt; thicknessScale: 1.0 &lt;br&gt;} |
-| options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | No | Additional configuration options for the text decoration line.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; enableMultiType: undefined&lt;br&gt;} |
+| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | No | Additional configuration options for the text decoration line.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; enableMultiType: undefined&lt;br&gt;} |
 
 ## color
 
@@ -71,7 +71,7 @@ readonly color?: ResourceColor
 
 Color of the text decorative line.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -93,7 +93,7 @@ readonly options?: DecorationOptions
 
 Additional configuration options for the text decoration line style.
 
-**Type:** [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md)
+**Type:** [DecorationOptions](arkts-arkui-decorationoptions-i.md)
 
 **Since:** 20
 
@@ -115,7 +115,7 @@ readonly style?: TextDecorationStyle
 
 Style of the text decorative line.
 
-**Type:** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -159,7 +159,7 @@ readonly type: TextDecorationType
 
 Type of the text decorative line.
 
-**Type:** [TextDecorationType](arkts-arkui-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

@@ -13,7 +13,7 @@ Declaration of the editable title bar.
 ## Modules to Import
 
 ```TypeScript
-import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from 'kits/@kit.ArkUI';
+import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
 ```
 
 ## imageItem
@@ -68,7 +68,7 @@ menuItems?: Array<EditableTitleBarMenuItemV2>
 
 Custom menu items array, maximum 2-3 items.
 
-**Type:** Array&lt;EditableTitleBarMenuItemV2&gt;
+**Type:** Array&lt;[EditableTitleBarMenuItemV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -134,7 +134,7 @@ title: ResourceStr | EditableTitleV2
 
 Title configuration, supports string or object form.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| EditableTitleV2
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **Since:** 26.0.0
 

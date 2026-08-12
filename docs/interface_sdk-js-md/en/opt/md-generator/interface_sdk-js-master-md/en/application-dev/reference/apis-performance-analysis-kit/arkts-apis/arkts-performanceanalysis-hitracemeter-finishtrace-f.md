@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## finishTrace
@@ -15,9 +15,9 @@ function finishTrace(name: string, taskId: number): void
 Stops an asynchronous trace.
 
 To stop a trace, the values of name and task ID in **finishTrace** must be the same as those in  
-[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace).
+[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace).
 
-Since API version 19, you are advised to use [finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace), which must be used together with [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace).
+Since API version 19, you are advised to use [finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishAsyncTrace), which must be used together with [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace).
 
 **Since:** 8
 

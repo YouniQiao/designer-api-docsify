@@ -26,21 +26,21 @@ function addPrinterToCups(printerUri: string, printerName: string, printerMake: 
 | --- | --- | --- |
 | printerUri | string | 是 |
 | printerName | string | 是 |
-| printerMake | string | 是 |
+| [printerMake](arkts-basicservices-print-printerinformation-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-打印服务异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [13100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100003-打印服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

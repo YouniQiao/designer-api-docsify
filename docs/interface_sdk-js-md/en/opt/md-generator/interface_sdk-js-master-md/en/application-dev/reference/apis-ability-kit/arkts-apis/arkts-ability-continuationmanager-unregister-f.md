@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## unregister
@@ -18,7 +18,7 @@ Unregisters the continuation management service. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +61,7 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,7 +79,7 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

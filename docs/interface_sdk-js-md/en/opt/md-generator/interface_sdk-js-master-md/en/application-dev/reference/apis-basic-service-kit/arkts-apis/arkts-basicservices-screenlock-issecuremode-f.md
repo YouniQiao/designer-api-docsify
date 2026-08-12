@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screenLock } from 'kits/@kit.BasicServicesKit';
+import { screenLock } from '@kit.BasicServicesKit';
 ```
 
 ## isSecureMode
@@ -63,7 +63,7 @@ Checks whether the screen lock of the current device is secure.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

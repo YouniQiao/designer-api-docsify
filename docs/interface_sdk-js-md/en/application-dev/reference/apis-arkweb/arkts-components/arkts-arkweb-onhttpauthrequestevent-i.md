@@ -18,7 +18,7 @@ handler: HttpAuthHandler
 
 Defines the http auth request result.
 
-**Type:** [HttpAuthHandler](../arkts-apis/arkts-arkweb-web-httpauthhandler-c.md)
+**Type:** [HttpAuthHandler](arkts-arkweb-httpauthhandler-c.md)
 
 **Since:** 12
 

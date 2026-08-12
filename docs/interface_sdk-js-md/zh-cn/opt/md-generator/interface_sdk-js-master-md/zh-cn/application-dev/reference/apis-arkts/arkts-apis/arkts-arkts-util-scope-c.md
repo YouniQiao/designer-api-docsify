@@ -6,7 +6,7 @@ Scope 接口用于描述字段的有效范围。
 
 **废弃版本：** 9
 
-**替代接口：** [util.ScopeHelper](arkts-arkts-util-scopehelper-c.md)
+**替代接口：** [ScopeHelper](arkts-arkts-util-scopehelper-c.md#ScopeHelper)
 
 <!--Device-util-class Scope--><!--Device-util-class Scope-End-->
 
@@ -24,7 +24,7 @@ clamp(value: ScopeType): ScopeType
 
 **废弃版本：** 9
 
-**替代接口：** [util.ScopeHelper.clamp](arkts-arkts-util-scopehelper-c.md#clamp)
+**替代接口：** [clamp](arkts-arkts-util-scopehelper-c.md#clamp)
 
 <!--Device-Scope-clamp(value: ScopeType): ScopeType--><!--Device-Scope-clamp(value: ScopeType): ScopeType-End-->
 
@@ -86,7 +86,7 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ScopeHelper.constructor
+**替代接口：** [constructor](ohos.util.ScopeHelper.constructor)
 
 <!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-Scope-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
 
@@ -141,7 +141,7 @@ contains(value: ScopeType): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.contains](arkts-arkts-util-lrucache-c.md#contains)
+**替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(value: ScopeType): boolean--><!--Device-Scope-contains(value: ScopeType): boolean-End-->
 
@@ -203,7 +203,7 @@ contains(range: Scope): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.contains](arkts-arkts-util-lrucache-c.md#contains)
+**替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-Scope-contains(range: Scope): boolean--><!--Device-Scope-contains(range: Scope): boolean-End-->
 
@@ -267,7 +267,7 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ScopeHelper.expand
+**替代接口：** [expand](ohos.util.ScopeHelper.expand)
 
 <!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-expand(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
@@ -331,7 +331,7 @@ expand(range: Scope): Scope
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ScopeHelper.expand
+**替代接口：** [expand](ohos.util.ScopeHelper.expand)
 
 <!--Device-Scope-expand(range: Scope): Scope--><!--Device-Scope-expand(range: Scope): Scope-End-->
 
@@ -395,7 +395,7 @@ expand(value: ScopeType): Scope
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ScopeHelper.expand
+**替代接口：** [expand](ohos.util.ScopeHelper.expand)
 
 <!--Device-Scope-expand(value: ScopeType): Scope--><!--Device-Scope-expand(value: ScopeType): Scope-End-->
 
@@ -457,7 +457,7 @@ getLower(): ScopeType
 
 **废弃版本：** 9
 
-**替代接口：** [util.ScopeHelper.getLower](arkts-arkts-util-scopehelper-c.md#getlower)
+**替代接口：** [getLower](arkts-arkts-util-scopehelper-c.md#getLower)
 
 <!--Device-Scope-getLower(): ScopeType--><!--Device-Scope-getLower(): ScopeType-End-->
 
@@ -512,7 +512,7 @@ getUpper(): ScopeType
 
 **废弃版本：** 9
 
-**替代接口：** [util.ScopeHelper.getUpper](arkts-arkts-util-scopehelper-c.md#getupper)
+**替代接口：** [getUpper](arkts-arkts-util-scopehelper-c.md#getUpper)
 
 <!--Device-Scope-getUpper(): ScopeType--><!--Device-Scope-getUpper(): ScopeType-End-->
 
@@ -567,7 +567,7 @@ intersect(range: Scope): Scope
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ScopeHelper.intersect
+**替代接口：** [intersect](ohos.util.ScopeHelper.intersect)
 
 <!--Device-Scope-intersect(range: Scope): Scope--><!--Device-Scope-intersect(range: Scope): Scope-End-->
 
@@ -631,7 +631,7 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.ScopeHelper.intersect
+**替代接口：** [intersect](ohos.util.ScopeHelper.intersect)
 
 <!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope--><!--Device-Scope-intersect(lowerObj: ScopeType, upperObj: ScopeType): Scope-End-->
 
@@ -695,7 +695,7 @@ toString(): string
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.toString](arkts-arkts-util-lrucache-c.md#tostring)
+**替代接口：** [toString](arkts-arkts-util-lrucache-c.md#toString)
 
 <!--Device-Scope-toString(): string--><!--Device-Scope-toString(): string-End-->
 

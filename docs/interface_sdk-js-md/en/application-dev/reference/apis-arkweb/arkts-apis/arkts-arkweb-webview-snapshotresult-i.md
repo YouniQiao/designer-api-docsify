@@ -13,7 +13,7 @@ Represents a full drawing result.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## id
@@ -60,7 +60,7 @@ size?: SizeOptions
 
 Actual size drawn on the web page.The value is of the number type, and the unit is vp.
 
-**Type:** [SizeOptions](../../apis-arkui/arkts-apis/arkts-arkui-sizeoptions-i.md)
+**Type:** SizeOptions
 
 **Since:** 23
 

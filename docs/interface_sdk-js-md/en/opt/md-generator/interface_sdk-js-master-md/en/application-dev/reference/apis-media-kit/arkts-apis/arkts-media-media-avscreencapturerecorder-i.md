@@ -1,7 +1,7 @@
 # AVScreenCaptureRecorder
 
 AVScreenCaptureRecorder is a class for screen capture management. It provides APIs for screen capture. Before calling any API in AVScreenCaptureRecorder, you must use   
-[createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder) to create an AVScreenCaptureRecorder instance.
+[createAVScreenCaptureRecorder()](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) to create an AVScreenCaptureRecorder instance.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ AVScreenCaptureRecorder is a class for screen capture management. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -42,16 +42,16 @@ add a watermark for the AVScreenCaptureRecorder. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## excludePickerWindows
 
@@ -71,21 +71,21 @@ Sets the list of windows to be hidden in the picker. The setting takes effect th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| excludedWindows | Array&lt;number&gt; | Yes |
+| excludedWindows | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## init
 
@@ -111,15 +111,15 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## off('stateChange')
 
@@ -140,7 +140,7 @@ Unsubscribes from screen capture state changes. You can specify a callback to ca
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVScreenCaptureStateCode&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | No |
 
 ## off('error')
 
@@ -182,7 +182,7 @@ Subscribes to screen capture state changes. An application can subscribe to only
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVScreenCaptureStateCode&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md)&gt; | Yes |
 
 ## on('error')
 
@@ -209,9 +209,9 @@ Subscribes to AVScreenCaptureRecorder errors. You can handle the errors based on
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## pauseRecording
 
@@ -233,15 +233,15 @@ Pause screen capture. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## presentPicker
 
@@ -268,15 +268,15 @@ Displays the Picker once more after the screen capture starts, allowing for dyna
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -296,14 +296,14 @@ Releases this AVScreenCaptureRecorder instance. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## resumeRecording
 
@@ -325,15 +325,15 @@ Resume screen capture. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setContentAutoRotation
 
@@ -361,14 +361,14 @@ Sets whether the captured screen content automatically rotates to keep the image
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setMicEnabled
 
@@ -394,14 +394,14 @@ Enables or disables the microphone. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setPickerMode
 
@@ -421,21 +421,21 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | Yes |
+| [pickerMode](../../apis-core-file-kit/arkts-apis/arkts-corefile-picker-documentsaveoptions-c.md) | [PickerMode](arkts-media-media-pickermode-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## skipPrivacyMode
 
@@ -457,20 +457,20 @@ For example, if a user enters a password in this application during screen captu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowIDs | Array&lt;number&gt; | Yes |
+| windowIDs | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## startRecording
 
@@ -479,7 +479,7 @@ startRecording(): Promise<void>
 ```
 
 Starts screen recording. Before using this API, you must call   
-[init](arkts-media-media-avscreencapturerecorder-i.md#init). This API uses a promise to return the result.
+[init](#init). This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -491,14 +491,14 @@ Starts screen recording. Before using this API, you must call
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## stopRecording
 
@@ -518,11 +518,11 @@ Stops screen recording. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |

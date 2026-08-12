@@ -78,7 +78,7 @@ readonly uris: Array<SkillUri>
 
 Indicates the uris of the skill
 
-**Type:** Array&lt;SkillUri&gt;
+**Type:** Array&lt;[SkillUri](arkts-ability-skill-skilluri-i.md)&gt;
 
 **Since:** 12
 

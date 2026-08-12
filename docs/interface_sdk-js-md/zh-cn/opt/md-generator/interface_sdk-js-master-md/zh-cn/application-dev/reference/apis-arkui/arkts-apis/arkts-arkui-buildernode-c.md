@@ -10,8 +10,8 @@
 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)/
 > [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)/
 > [ContentSlot](../../../ui/rendering-control/arkts-rendering-control-contentslot.md)…）、
-> [Span](../../apis-arkui/arkts-components/arkts-arkui-span-i)、[ContainerSpan](../../apis-arkui/arkts-components/arkts-arkui-container_span-i)、
-> [SymbolSpan](../../apis-arkui/arkts-components/arkts-arkui-symbol_span-i)或自定义组件，将额外生成一个[FrameNode](arkts-arkui-framenode-c.md)，在节点树中显示为“
+> [Span](../@internal/component/ets/span)、[ContainerSpan](../@internal/component/ets/container_span)、
+> [SymbolSpan](../@internal/component/ets/symbol_span)或自定义组件，将额外生成一个[FrameNode](./FrameNode)，在节点树中显示为“
 > BuilderProxyNode”，这会导致树结构变化，影响事件传递等测试流程。详情参见
 > [BuilderNode内的BuilderProxyNode导致树结构发生变化](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode内的builderproxynode导致树结构发生变化)。
 > 
@@ -30,7 +30,7 @@
 > [@LocalStorageProp](../../../ui/state-management/arkts-localstorage.md#localstorageprop)、
 > [@LocalStorageLink](../../../ui/state-management/arkts-localstorage.md#localstoragelink)。
 > 
-> - 从API version 20开始，通过配置[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)，内部自定义组件的
+> - 从API version 20开始，通过配置[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md#BuildOptions)，内部自定义组件的
 > [@Consume](../../../ui/state-management/arkts-provide-and-consume.md)支持接收所在页面的
 > [@Provide](../../../ui/state-management/arkts-provide-and-consume.md)数据。
 > 
@@ -62,12 +62,12 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 > 
 > - 最外层的@Builder只支持一个入参。
 > 
-> - build的参数是值传递，需要使用[update](arkts-arkui-buildernode-c.md#update)接口进行更新。
+> - build的参数是值传递，需要使用[update](#update)接口进行更新。
 > 
-> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的[FrameNode](arkts-arkui-framenode-c.md)、
-> [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
+> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的[FrameNode](./FrameNode)、
+> [RenderNode](arkts-arkui-rendernode-c.md#RenderNode)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
 > 
-> - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](arkts-arkui-buildernode-c.md#dispose)接口，实现前后端对象的解绑。
+> - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](#dispose)接口，实现前后端对象的解绑。
 
 **起始版本：** 11
 
@@ -95,7 +95,7 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 依照传入的对象创建组件树，并持有组件树的根节点。无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)最多拥有一个根节点。
 
 支持自定义组件。相比  
-[build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](arkts-arkui-buildernode-c.md#build)接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)。
+[build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](#build)接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md#BuildOptions)。
 
 > **说明：**
 > 
@@ -105,12 +105,12 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 > 
 > - 最外层的@Builder只支持一个入参。
 > 
-> - build的参数是值传递，需要使用[update](arkts-arkui-buildernode-c.md#update)接口进行更新。
+> - build的参数是值传递，需要使用[update](#update)接口进行更新。
 > 
-> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的[FrameNode](arkts-arkui-framenode-c.md)、
-> [RenderNode](arkts-arkui-rendernode-c.md)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
+> - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的[FrameNode](./FrameNode)、
+> [RenderNode](arkts-arkui-rendernode-c.md#RenderNode)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。
 > 
-> - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](arkts-arkui-buildernode-c.md#dispose)接口，实现前后端对象的解绑。
+> - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](#dispose)接口，实现前后端对象的解绑。
 
 **起始版本：** 12
 
@@ -129,6 +129,69 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 | builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;Args&gt; | 是 |
 | arg | Object | 是 |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 |
+
+## 示例
+
+```TypeScript
+import { BuilderNode, NodeContent } from '@kit.ArkUI';
+
+// 定义传递参数的接口
+interface ParamsInterface {
+  text: string;
+  func: Function;
+}
+
+@Builder
+function buildTextWithFunc(func: Function) {
+  Text(func())
+    .fontSize(50)
+    .fontWeight(FontWeight.Bold)
+    .margin({ bottom: 36 })
+}
+
+@Builder
+function buildText(params: ParamsInterface) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+    buildTextWithFunc(params.func)
+  }
+}
+
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'HELLO';
+  private content: NodeContent = new NodeContent();
+
+  build() {
+    Row() {
+      Column() {
+        Button('addBuilderNode')
+          .onClick(() => {
+            let buildNode = new BuilderNode<[ParamsInterface]>(this.getUIContext());
+            // 创建节点树
+            buildNode.build(wrapBuilder<[ParamsInterface]>(buildText), {
+              text: this.message, func: () => {
+                return 'FUNCTION';
+              }
+            }, { nestingBuilderSupported: true });
+            this.content.addFrameNode(buildNode.getFrameNode());
+            buildNode.dispose();
+          })
+        ContentSlot(this.content)
+      }
+      .id('column')
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## constructor
 
@@ -186,7 +249,7 @@ dispose(): void
 getFrameNode(): FrameNode | null
 ```
 
-获取BuilderNode中的[FrameNode](arkts-arkui-framenode-c.md)。在BuilderNode执行build操作之后，才会生成FrameNode。
+获取BuilderNode中的[FrameNode](./FrameNode)。在BuilderNode执行build操作之后，才会生成FrameNode。
 
 **起始版本：** 11
 
@@ -233,6 +296,209 @@ inheritFreezeOptions(enabled: boolean): void
 | --- | --- | --- |
 | enabled | boolean | 是 |
 
+## 示例
+
+该示例演示了BuilderNode设置继承状态为true，继承父自定义组件的冻结策略，在处于不活跃状态时冻结，切换为活跃状态时解冻，更新缓存的数据。
+
+```TypeScript
+import { BuilderNode, FrameNode, NodeController } from '@kit.ArkUI';
+
+// 自定义传递参数的类
+class Params {
+  count: number = 0;
+
+  constructor(count: number) {
+    this.count = count;
+  }
+}
+
+@Builder
+// builder组件
+function buildText(params: Params) {
+
+  Column() {
+    TextBuilder({ message: params.count })
+  }
+}
+
+// 继承NodeController实现自定义textNode控制器
+class TextNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private textNode: BuilderNode<[Params]> | null = null;
+  private count: number = 0;
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(context);
+    this.textNode = new BuilderNode(context, { selfIdealSize: { width: 150, height: 150 } });
+    this.textNode.build(wrapBuilder<[Params]>(buildText), new Params(this.count)); // 创建BuilderNode节点
+    this.textNode.inheritFreezeOptions(true); // 设置BuilderNode的冻结继承状态为true
+    if (this.rootNode !== null) {
+      this.rootNode.appendChild(this.textNode.getFrameNode()); // 将BuilderNode上树
+    }
+    return this.rootNode;
+  }
+
+  update(): void {
+    if (this.textNode !== null) {
+      this.count += 1;
+      this.textNode.update(new Params(this.count)); // 更新BuilderNode中的数据，可以触发Log
+    }
+
+  }
+
+  aboutToDisappear() {
+    this.rootNode?.dispose();
+  }
+}
+
+const textNodeController: TextNodeController = new TextNodeController();
+
+@Entry
+@Component
+struct MyNavigationTestStack {
+  @Provide('pageInfo') pageInfo: NavPathStack = new NavPathStack();
+  @State message: number = 0;
+  @State logNumber: number = 0;
+
+  @Builder
+  PageMap(name: string) {
+    if (name === 'pageOne') {
+      PageOneStack({ message: this.message, logNumber: this.logNumber })
+    } else if (name === 'pageTwo') {
+      PageTwoStack({ message: this.message, logNumber: this.logNumber })
+    }
+  }
+
+  build() {
+    Column() {
+      Button('update builderNode') // 点击更新BuilderNode
+        .onClick(() => {
+          textNodeController.update();
+        })
+      Navigation(this.pageInfo) {
+        Column() {
+          Button('Next Page', { stateEffect: true, type: ButtonType.Capsule })
+            .width('80%')
+            .height(40)
+            .margin(20)
+            .onClick(() => {
+              this.pageInfo.pushPath({ name: 'pageOne' }); // 将name指定的NavDestination页面信息入栈
+            })
+        }
+      }.title('NavIndex')
+      .navDestination(this.PageMap)
+      .mode(NavigationMode.Stack)
+    }
+  }
+}
+
+@Component
+struct PageOneStack { // 页面一
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 1;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Button('Next Page', { stateEffect: true, type: ButtonType.Capsule }) // 切换至页面二
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pushPathByName('pageTwo', null);
+          })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // 返回主页面
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageOne')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component
+struct PageTwoStack { // 页面二
+  @Consume('pageInfo') pageInfo: NavPathStack;
+  @State index: number = 2;
+  @Link message: number;
+  @Link logNumber: number;
+
+  build() {
+    NavDestination() {
+      Column() {
+        NavigationContentMsgStack({ message: this.message, index: this.index, logNumber: this.logNumber })
+        Text('BuilderNode处于冻结')
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Button('Back Page', { stateEffect: true, type: ButtonType.Capsule }) // 返回至页面一
+          .width('80%')
+          .height(40)
+          .margin(20)
+          .onClick(() => {
+            this.pageInfo.pop();
+          })
+      }.width('100%').height('100%')
+    }.title('pageTwo')
+    .onBackPressed(() => {
+      this.pageInfo.pop();
+      return true;
+    })
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // 设置冻结策略为不活跃冻结
+struct NavigationContentMsgStack {
+  @Link message: number;
+  @Link index: number;
+  @Link logNumber: number;
+
+  build() {
+    Column() {
+      if (this.index === 1) {
+        NodeContainer(textNodeController)
+      }
+    }
+  }
+}
+
+@Component({ freezeWhenInactive: true })
+  // 设置冻结策略为不活跃冻结
+struct TextBuilder {
+  @Prop @Watch('info') message: number = 0;
+  @State count: number = 0;
+
+  info() {
+    this.count++;
+    console.info(`freeze-test TextBuilder message callback change time ${this.count}`); // 根据message内容变化来打印日志来判断是否冻结
+    console.info(`freeze-test TextBuilder message callback change message ${this.message}`); // 根据message内容变化来打印日志来判断是否冻结
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(`文本更新内容： ${this.message}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+        Text(`文本更新次数： ${this.count}`)
+          .fontWeight(FontWeight.Bold)
+          .margin({ top: 48, bottom: 48 })
+      }
+    }
+  }
+}
+```
+
 ## isDisposed
 
 ```TypeScript
@@ -257,6 +523,120 @@ isDisposed(): boolean
 | --- |
 | boolean |
 
+## 示例
+
+该示例演示了BuilderNode释放节点前后分别使用[isDisposed](#isdisposed20)接口验证节点的状态，释放节点前节点调用isDisposed接口返回false，释放节点后节点调用isDisposed接口返回true。
+
+```TypeScript
+import { FrameNode, NodeController, BuilderNode } from '@kit.ArkUI';
+
+// 自定义组件
+@Component
+struct TestComponent {
+  build() {
+    Column() {
+      Text('This is a BuilderNode.')
+        .fontSize(25)
+        .fontWeight(FontWeight.Bold)
+    }
+    .width('100%')
+    .height(30)
+    .backgroundColor(Color.Gray)
+  }
+
+  aboutToAppear() {
+    console.info('aboutToAppear');
+  }
+
+  aboutToDisappear() {
+    console.info('aboutToDisappear');
+  }
+}
+
+@Builder
+function buildComponent() {
+  TestComponent()
+}
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private builderNode: BuilderNode<[]> | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+    this.builderNode = new BuilderNode(uiContext, { selfIdealSize: { width: 200, height: 100 } });
+    this.builderNode.build(new WrappedBuilder(buildComponent));
+
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.size = { width: 300, height: 300 };
+      rootRenderNode.backgroundColor = 0xffd5d5d5;
+      rootRenderNode.appendChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+
+    return this.rootNode;
+  }
+
+  // 释放当前builderNode
+  dispose() {
+    if (this.builderNode !== null) {
+      this.builderNode.dispose();
+    }
+  }
+
+  // 检验当前builderNode是否已被释放
+  isDisposed(): string {
+    if (this.builderNode !== null) {
+      if (this.builderNode.isDisposed()) {
+        return 'builderNode isDisposed is true';
+      } else {
+        return 'builderNode isDisposed is false';
+      }
+    }
+    return 'builderNode is null';
+  }
+
+  removeBuilderNode() {
+    const rootRenderNode = this.rootNode!.getRenderNode();
+    if (rootRenderNode !== null && this.builderNode !== null && this.builderNode.getFrameNode() !== null) {
+      rootRenderNode.removeChild(this.builderNode!.getFrameNode()!.getRenderNode());
+    }
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State text: string = '';
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 4 }) {
+      NodeContainer(this.myNodeController)
+      Button('BuilderNode dispose')
+        .onClick(() => {
+          this.myNodeController.removeBuilderNode();
+          this.myNodeController.dispose();
+          this.text = '';
+        })
+        .width(200)
+        .height(50)
+      Button('BuilderNode isDisposed')
+        .onClick(() => {
+          this.text = this.myNodeController.isDisposed();
+        })
+        .width(200)
+        .height(50)
+      Text(this.text)
+        .fontSize(25)
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## postInputEvent
 
 ```TypeScript
@@ -274,17 +654,17 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
 > - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看
-> [onTouch](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#ontouch)。
+> [onTouch](CommonMethod#onTouch)。
 > 
-> - 注入事件为轴事件[（AxisEvent）](../arkts-components/arkts-arkui-axisevent-i.md/arkts-arkui-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发
-> [RotationGesture](../../apis-arkui/arkts-apis/arkts-arkui-gesture-i)。
+> - 注入事件为轴事件[（AxisEvent）](../arkts-components/arkts-arkui-axisevent-i.md#AxisEvent)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发
+> [RotationGesture](../@internal/component/ets/gesture)。
 > 
 > - 转发的事件会在被分发到的目标组件所在的子树里做触摸测试（TouchTest），并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。
 > 
-> - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的[TouchType](arkts-arkui-touchtype-e.md)中DOWN和UP字段都要
+> - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的[TouchType](arkts-arkui-touchtype-e.md#TouchType)中DOWN和UP字段都要
 > 有，防止出现未定义行为。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEvent接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -312,6 +692,10 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 | --- |
 | boolean |
 
+## 示例
+
+请参考[示例1（BuilderNode中鼠标事件）](#示例1buildernode中鼠标事件)、[示例2（BuilderNode中触摸事件）](#示例2buildernode中触摸事件)、[示例3（BuilderNode中轴事件）](#示例3buildernode中轴事件)。
+
 ## postInputEventWithStrategy
 
 ```TypeScript
@@ -330,17 +714,17 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > 
 > - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，
 > [SourceType](../../../reference/apis-arkui/arkui-ts/ts-gesture-settings.md#sourcetype枚举说明8)不会发生变化，规格可查看
-> [onTouch](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#ontouch)。
+> [onTouch](CommonMethod#onTouch)。
 > 
-> - 注入事件为轴事件[AxisEvent](../arkts-components/arkts-arkui-axisevent-i.md/arkts-arkui-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势
-> [RotationGesture](../../apis-arkui/arkts-apis/arkts-arkui-gesture-i)。
+> - 注入事件为轴事件[AxisEvent](../arkts-components/arkts-arkui-axisevent-i.md#AxisEvent)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势
+> [RotationGesture](../@internal/component/ets/gesture)。
 > 
 > - 转发的事件会在被分发到的目标组件及其子组件里做事件处理，并触发对应手势。可以通过入参控制当前组件和目标组件手势是否为竞争关系。
 > 
 > - 如果event转化为对应的事件后，该事件为开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的
-> [TouchType](arkts-arkui-touchtype-e.md)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
+> [TouchType](arkts-arkui-touchtype-e.md#TouchType)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于接收事件的目标节点内的局部坐标，postInputEventWithStrategy接口需要提供手势坐标相对于接收事件的目标节点内的窗口坐标。
 > 
@@ -369,6 +753,10 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 | --- |
 | boolean |
 
+## 示例
+
+请参考[示例16（BuilderNode中带竞争策略的鼠标事件）](#示例16buildernode中带竞争策略的鼠标事件)、[示例17（BuilderNode中带竞争策略的触摸事件）](#示例17buildernode中带竞争策略的触摸事件)、[示例18（BuilderNode中带竞争策略的轴事件）](#示例18buildernode中带竞争策略的轴事件)。
+
 ## postTouchEvent
 
 ```TypeScript
@@ -379,7 +767,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。
 
-offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent)获取。offsetB为触点相对于builderNode的偏移量，可以通过  
+offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getPositionToParent)获取。offsetB为触点相对于builderNode的偏移量，可以通过  
 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA与offsetB的和，是传给postTouchEvent的最终结果。
 
 ![postTouchEvent](../../../reference/apis-arkui/figures/postTouchEvent.PNG)
@@ -388,7 +776,7 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 > 
 > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。
 > 
-> - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
+> - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
 > - 同一时间戳，postTouchEvent只能调用一次。
 
@@ -413,6 +801,99 @@ offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中�
 | 类型 |
 | --- |
 | boolean |
+
+## 示例
+
+```TypeScript
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+// 自定义传递参数的类
+class Params {
+  text: string = 'this is a text';
+}
+
+@Builder
+function ButtonBuilder(params: Params) {
+  Column() {
+    Button(`button ` + params.text)
+      .borderWidth(2)
+      .backgroundColor(Color.Orange)
+      .width('100%')
+      .height('100%')
+      .gesture(
+        TapGesture()
+          .onAction((event: GestureEvent) => {
+            console.info('TapGesture');
+          })
+      )
+  }
+  .width(500)
+  .height(300)
+  .backgroundColor(Color.Gray)
+}
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  private rootNode: BuilderNode<[Params]> | null = null;
+  private wrapBuilder: WrappedBuilder<[Params]> = wrapBuilder(ButtonBuilder);
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new BuilderNode(uiContext);
+    this.rootNode.build(this.wrapBuilder, { text: 'this is a string' });
+    return this.rootNode.getFrameNode();
+  }
+
+  // 坐标转换示例
+  postTouchEvent(event: TouchEvent, uiContext: UIContext): boolean {
+    if (this.rootNode == null) {
+      return false;
+    }
+    let node: FrameNode | null = this.rootNode.getFrameNode();
+    let offsetX: number | null | undefined = node?.getPositionToParent().x;
+    let offsetY: number | null | undefined = node?.getPositionToParent().y;
+    
+    let changedTouchLen = event.changedTouches.length;
+    for (let i = 0; i < changedTouchLen; i++) {
+      if (offsetX != null && offsetY != null && offsetX != undefined && offsetY != undefined) {
+        event.changedTouches[i].x = uiContext.vp2px(offsetX + event.changedTouches[i].x);
+        event.changedTouches[i].y = uiContext.vp2px(offsetY + event.changedTouches[i].y);
+      }
+    }
+    // 将事件派发至BuilderNode创建的FrameNode上，result记录派发是否成功
+    let result = this.rootNode.postTouchEvent(event);
+    console.info(`result ${result}`);
+    return result;
+  }
+
+  aboutToDisappear() {
+    this.rootNode?.dispose();
+  }
+}
+
+@Entry
+@Component
+struct MyComponent {
+  private nodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column() {
+      NodeContainer(this.nodeController)
+        .height(300)
+        .width(500)
+
+      Column()
+        .width(500)
+        .height(300)
+        .backgroundColor(Color.Pink)
+        .onTouch((event) => {
+          if (event != undefined) {
+            this.nodeController.postTouchEvent(event, this.getUIContext());
+          }
+        })
+    }
+  }
+}
+```
 
 ## recycle
 
@@ -446,7 +927,7 @@ reuse(param?: Object): void
 
 触发BuilderNode中的自定义组件的复用。组件复用请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。关于BuilderNode的解绑场景请参见[节点解绑](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。从API版本26.0.0开始，BuilderNode中的自定义组件支持V2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
 
-BuilderNode通过reuse和[recycle](arkts-arkui-buildernode-c.md#recycle)完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
+BuilderNode通过reuse和[recycle](#recycle)完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
 
 **起始版本：** 12
@@ -471,7 +952,7 @@ BuilderNode通过reuse和[recycle](arkts-arkui-buildernode-c.md#recycle)完成�
 update(arg: Object): void
 ```
 
-根据提供的参数更新BuilderNode，该参数与[build](arkts-arkui-buildernode-c.md#build)方法调用时传入的参数类型相同。对自定义组件进行update的时候需要在自定义组件中将使用的变量定义为[@Prop](../../../ui/state-management/arkts-prop.md)类型。
+根据提供的参数更新BuilderNode，该参数与[build](#build)方法调用时传入的参数类型相同。对自定义组件进行update的时候需要在自定义组件中将使用的变量定义为[@Prop](../../../ui/state-management/arkts-prop.md)类型。
 
 **起始版本：** 11
 
@@ -489,6 +970,105 @@ update(arg: Object): void
 | --- | --- | --- |
 | arg | Object | 是 |
 
+## 示例
+
+```TypeScript
+import { NodeController, BuilderNode, FrameNode, UIContext } from '@kit.ArkUI';
+
+// 自定义传递参数的类
+class Params {
+  text: string = '';
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+// 自定义组件
+@Component
+struct TextBuilder {
+  @Prop message: string = 'TextBuilder';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .margin({bottom: 36})
+          .backgroundColor(Color.Gray)
+      }
+    }
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+    TextBuilder({message: params.text}) // 自定义组件
+  }
+}
+
+// 继承NodeController实现自定义textNode控制器
+class TextNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+  private textNode: BuilderNode<[Params]> | null = null;
+  private message: string = '';
+
+  constructor(message: string) {
+    super();
+    this.message = message;
+  }
+
+  makeNode(context: UIContext): FrameNode | null {
+    this.textNode = new BuilderNode(context);
+    this.textNode.build(wrapBuilder<[Params]>(buildText), new Params(this.message));
+    return this.textNode.getFrameNode();
+  }
+
+  // 根据传入参数更新BuilderNode
+  update(message: string) {
+    if (this.textNode !== null) {
+      this.textNode.update(new Params(message));
+    }
+  }
+  aboutToDisappear() {
+    this.textNode?.dispose();
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello';
+  private textNodeController: TextNodeController = new TextNodeController(this.message);
+  private count = 0;
+
+  build() {
+    Row() {
+      Column() {
+        NodeContainer(this.textNodeController)
+          .width('100%')
+          .height(200)
+          .backgroundColor('#FFF0F0F0')
+        Button('Update')
+          .onClick(() => {
+            this.count += 1;
+            const message = 'Update ' + this.count.toString();
+            this.textNodeController.update(message);
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```
+
 ## updateConfiguration
 
 ```TypeScript
@@ -496,7 +1076,7 @@ updateConfiguration(): void
 ```
 
 传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见  
-[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md/arkts-ability-app-ability-configuration-configuration-i.md)。
+[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#Configuration)。
 
 > **说明：**
 > 
@@ -511,3 +1091,158 @@ updateConfiguration(): void
 <!--Device-BuilderNode-updateConfiguration(): void--><!--Device-BuilderNode-updateConfiguration(): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 示例
+
+```TypeScript
+import { NodeController, BuilderNode, FrameNode, UIContext, FrameCallback } from '@kit.ArkUI';
+import { AbilityConstant, Configuration, ConfigurationConstant, EnvironmentCallback } from '@kit.AbilityKit';
+
+class Params {
+  text: string = '';
+
+  constructor(text: string) {
+    this.text = text;
+  }
+}
+
+// 自定义组件
+@Component
+struct TextBuilder {
+  // 作为自定义组件中需要更新的属性，数据类型为基础属性，定义为@Prop
+  @Prop message: string = 'TextBuilder';
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(FontWeight.Bold)
+          .margin({ bottom: 36 })
+      }
+    }
+  }
+}
+
+@Builder
+function buildText(params: Params) {
+  Column() {
+    Text(params.text)
+      .fontSize(50)
+      .fontWeight(FontWeight.Bold)
+      .margin({ bottom: 36 })
+    TextBuilder({ message: params.text }) // 自定义组件
+  }.backgroundColor($r('sys.color.ohos_id_color_background'))
+}
+
+// 继承NodeController实现自定义textNode控制器
+class TextNodeController extends NodeController {
+  private textNode: BuilderNode<[Params]> | null = null;
+  private message: string = '';
+
+  constructor(message: string) {
+    super();
+    this.message = message;
+  }
+
+  makeNode(context: UIContext): FrameNode | null {
+    return this.textNode?.getFrameNode() ? this.textNode?.getFrameNode() : null;
+  }
+
+  createNode(context: UIContext) {
+    this.textNode = new BuilderNode(context);
+    this.textNode.build(wrapBuilder<[Params]>(buildText), new Params(this.message));
+    builderNodeMap.push(this.textNode);
+  }
+
+  deleteNode() {
+    let node = builderNodeMap.pop();
+    node?.dispose();
+  }
+
+  update(message: string) {
+    if (this.textNode !== null) {
+      // 调用update进行更新
+      this.textNode.update(new Params(message));
+    }
+  }
+}
+
+// 记录创建的自定义节点对象
+const builderNodeMap: Array<BuilderNode<[Params]>> = new Array();
+
+class MyFrameCallback extends FrameCallback {
+  onFrame() {
+    updateColorMode();
+  }
+}
+
+function updateColorMode() {
+  builderNodeMap.forEach((value, index) => {
+    // 通知BuilderNode环境变量改变，触发深浅色切换
+    value.updateConfiguration();
+  })
+}
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'hello';
+  private textNodeController: TextNodeController = new TextNodeController(this.message);
+  private count = 0;
+
+  aboutToAppear(): void {
+    let environmentCallback: EnvironmentCallback = {
+      onMemoryLevel: (level: AbilityConstant.MemoryLevel): void => {
+        console.info('onMemoryLevel');
+      },
+      onConfigurationUpdated: (config: Configuration): void => {
+        console.info(`onConfigurationUpdated ${JSON.stringify(config)}`);
+        this.getUIContext()?.postFrameCallback(new MyFrameCallback());
+      }
+    };
+    // 注册监听回调
+    this.getUIContext().getHostContext()?.getApplicationContext().on('environment', environmentCallback);
+    // 设置应用深浅色跟随系统
+    this.getUIContext()
+      .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
+    // 创建自定义节点并添加至builderNodeMap
+    this.textNodeController.createNode(this.getUIContext());
+  }
+
+  aboutToDisappear(): void {
+    // 移除map中的引用，并将自定义节点释放
+    this.textNodeController.deleteNode();
+  }
+
+  build() {
+    Row() {
+      Column() {
+        NodeContainer(this.textNodeController)
+          .width('100%')
+          .height(200)
+          .backgroundColor('#FFF0F0F0')
+        Button('Update')
+          .onClick(() => {
+            this.count += 1;
+            const message = 'Update ' + this.count.toString();
+            this.textNodeController.update(message);
+          })
+        Button('切换深色')
+          .onClick(() => {
+            this.getUIContext()
+              .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+          })
+        Button('设置浅色')
+          .onClick(() => {
+            this.getUIContext()
+              .getHostContext()?.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT);
+          })
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .height('100%')
+  }
+}
+```

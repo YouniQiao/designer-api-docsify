@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to {@link onConsole} method.
+Encompassed message information as parameters to [onConsole](onConsole) method.
 
 **起始版本：** 8
 
@@ -24,7 +24,7 @@ Constructor.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.ConsoleMessage#constructor
+**替代接口：** [constructor](ohos.web.ConsoleMessage#constructor)
 
 <!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)--><!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)-End-->
 
@@ -149,7 +149,7 @@ getSource() : ConsoleMessageSource
 
 | 类型 | 说明 |
 | --- | --- |
-| [ConsoleMessageSource](../arkts-apis/arkts-arkweb-web-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
+| [ConsoleMessageSource](arkts-arkweb-consolemessagesource-e.md) | 返回ConsoleMessage的日志来源。 |
 
 ## getSourceId
 

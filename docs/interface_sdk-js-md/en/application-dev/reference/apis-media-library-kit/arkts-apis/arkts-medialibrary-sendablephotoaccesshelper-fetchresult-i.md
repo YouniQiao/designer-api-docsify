@@ -2,7 +2,7 @@
 
 Provides APIs to manage the file retrieval result.
 
-**Inheritance/Implementation:** FetchResult extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** FetchResult extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -269,7 +269,7 @@ getNextObject(): Promise<T>
 
 Obtains the next asset in the result set. This API uses a promise to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md#isafterlast) to check whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 12
 
@@ -345,7 +345,7 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## Examples

@@ -2,7 +2,7 @@
 
 Error thrown when parsing JSON fails.
 
-**Inheritance/Implementation:** JsonParseError extends [SyntaxError](arkts-arkts-errors-syntaxerror-c.md)
+**Inheritance/Implementation:** JsonParseError extends [SyntaxError](SyntaxError)
 
 **Since:** 26.0.0
 

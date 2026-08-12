@@ -1,8 +1,8 @@
 # PopupCommonOptions
 
-配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的  
-[getPromptAction()](@ohos.arkui.UIContext#getPromptAction)方法获取到  
-[PromptAction](@ohos.arkui.UIContext#PromptAction)对象，再通过该对象调用  
+配置弹出气泡的参数。使用[UIContext](@ohos.arkui.UIContext)中的  
+[getPromptAction()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取到  
+[PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#PromptAction)对象，再通过该对象调用  
 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18)和  
 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)时传入的options参数。
 
@@ -442,7 +442,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**类型：** LevelMode
 
 **起始版本：** 26.0.0
 
@@ -462,7 +462,7 @@ mask?: boolean | PopupMaskType
 
 设置气泡是否有遮罩层及遮罩颜色。设置为false时不显示遮罩层，设置为true时显示透明色遮罩层，设置为PopupMaskType时显示指定颜色的遮罩层。默认值：true
 
-**类型：** boolean \| PopupMaskType
+**类型：** boolean \| [PopupMaskType](arkts-arkui-popupmasktype-i.md)
 
 **起始版本：** 18
 
@@ -490,7 +490,7 @@ offset?: Position
 
 单位：vp
 
-**类型：** [Position](../arkts-apis/arkts-arkui-display-position-i.md)
+**类型：** Position
 
 **默认值：** { x: 0, y: 0 }
 
@@ -518,7 +518,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 1. 在onWillDismiss回调中，不能再做onWillDismiss拦截。2. 不支持通过[updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18)进行更新。
 
-**类型：** boolean \| Callback&lt;DismissPopupAction&gt;
+**类型：** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **起始版本：** 18
 
@@ -612,8 +612,8 @@ placement?: Placement
 popupColor?: ResourceColor
 ```
 
-气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](../arkts-apis/arkts-arkui-color-e.md/arkts-arkui-color-e.md)加模糊背景填充效果  
-[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
+气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。默认值：透明色[TRANSPARENT](Color)加模糊背景填充效果  
+[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)。
 
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -657,7 +657,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 The style of popup Shadow.
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -713,8 +713,8 @@ systemMaterial?: SystemUiMaterial
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
-[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundColor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#borderColor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderWidth)、阴影  
 [shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)

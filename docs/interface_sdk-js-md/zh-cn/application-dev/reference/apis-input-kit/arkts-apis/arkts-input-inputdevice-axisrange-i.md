@@ -18,7 +18,7 @@ axis: AxisType
 
 输入设备的轴类型。
 
-**类型：** [AxisType](../../apis-arkui/arkts-apis/arkts-arkui-axistype-e.md)
+**类型：** AxisType
 
 **起始版本：** 8
 
@@ -126,7 +126,7 @@ source: SourceType
 
 输入设备的输入能力。包括键盘、鼠标、触摸屏、轨迹球、触控板、操纵杆等。
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** SourceType
 
 **起始版本：** 8
 

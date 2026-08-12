@@ -35,9 +35,9 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
+| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
 ## 示例
 

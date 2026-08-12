@@ -93,7 +93,7 @@ constructor(locale: string | Array<string>, options?: CollatorOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 |
+| locale | string \| Array & lt;string & gt; | 是 |
 | options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | 否 |
 
 ## 示例

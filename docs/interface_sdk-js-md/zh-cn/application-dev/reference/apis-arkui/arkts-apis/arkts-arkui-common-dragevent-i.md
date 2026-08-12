@@ -57,14 +57,14 @@ Get dragData from DragEvent.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UnifiedData](../arkts-components/arkts-arkui-unifieddata-t.md) | get dragData, undefined will be returned if the internal runtime environment is broken. |
+| [UnifiedData](arkts-arkui-unifieddata-t.md) | get dragData, undefined will be returned if the internal runtime environment is broken. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [190002](../errorcode-uicontext.md#190002-无效的回调函数) | Data error. |
-| [190001](../errorcode-uicontext.md#190001-无效的uicontext对象) | Data not found. |
+| [190002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-获取数据错误) | Data error. |
+| [190001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-数据未找到) | Data not found. |
 
 ## getDisplayId
 
@@ -274,7 +274,7 @@ Get dragEvent result from DragEvent.
 
 | 类型 | 说明 |
 | --- | --- |
-| [DragResult](../arkts-components/arkts-arkui-dragresult-e.md) | dragResult Data. |
+| [DragResult](arkts-arkui-common-dragresult-e.md) | dragResult Data. |
 
 ## getSummary
 
@@ -466,7 +466,7 @@ Set dragData into DragEvent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unifiedData | [UnifiedData](../arkts-components/arkts-arkui-unifieddata-t.md) | 是 | dragData. |
+| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | 是 | dragData. |
 
 ## setDataLoadParams
 
@@ -490,7 +490,7 @@ Use this method to provide a data representation to the system instead of direct
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataLoadParams | [DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | 是 | The data backend representation. |
+| dataLoadParams | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | 是 | The data backend representation. |
 
 ## setResult
 
@@ -514,7 +514,7 @@ Set dragEvent result to DragEvent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dragResult | [DragResult](../arkts-components/arkts-arkui-dragresult-e.md) | 是 | the return of dragEvent. |
+| dragResult | [DragResult](arkts-arkui-common-dragresult-e.md) | 是 | the return of dragEvent. |
 
 ## startDataLoading
 
@@ -538,7 +538,7 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](../arkts-components/arkts-arkui-datasyncoptions-t.md) | 是 | the data sync options. |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | the data sync options. |
 
 **返回值：**
 
@@ -550,8 +550,8 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
-| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. |
+| [190003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -581,7 +581,7 @@ dragBehavior: DragBehavior
 
 If copy is COPY, this DragEvent is a copy event.
 
-**类型：** [DragBehavior](../arkts-components/arkts-arkui-dragbehavior-e.md)
+**类型：** [DragBehavior](arkts-arkui-common-dragbehavior-e.md)
 
 **默认值：** COPY
 

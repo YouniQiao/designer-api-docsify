@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request](arkts-basicservices-request-n.md)
+**Substitutes:** [request](arkts-basicservices-request-n.md#request)
 
 <!--Device-unnamed-export default class Request--><!--Device-unnamed-export default class Request-End-->
 
@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## download
@@ -28,7 +28,7 @@ Downloads a file. This API returns no value.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)(context:
+**Substitutes:** [downloadFile](@ohos.request:request.downloadFile(context:)
 
 <!--Device-Request-static download(options: DownloadRequestOptions): void--><!--Device-Request-static download(options: DownloadRequestOptions): void-End-->
 
@@ -52,7 +52,7 @@ Listens for download task status. This API returns no value.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.show(id:
+**Substitutes:** [show](ohos.request.agent.Task.show(id:)
 
 <!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void--><!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void-End-->
 
@@ -76,7 +76,7 @@ Uploads a file. This API returns no value.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context:
+**Substitutes:** [uploadFile](@ohos.request:request.uploadFile(context:)
 
 <!--Device-Request-static upload(options: UploadRequestOptions): void--><!--Device-Request-static upload(options: UploadRequestOptions): void-End-->
 

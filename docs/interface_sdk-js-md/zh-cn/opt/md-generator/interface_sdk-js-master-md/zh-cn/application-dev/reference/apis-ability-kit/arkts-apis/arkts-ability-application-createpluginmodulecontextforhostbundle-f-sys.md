@@ -25,8 +25,8 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | 是 |
-| pluginBundleName | string | 是 |
+| context | [Context](arkts-ability-context-c.md) | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
 | pluginModuleName | string | 是 |
 | hostBundleName | string | 是 |
 
@@ -34,14 +34,14 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 类型 |
 | --- |
-| Promise&lt;[Context](arkts-ability-context-c-sys.md)&gt; |
+| Promise&lt;[Context](arkts-ability-context-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -13,7 +13,7 @@ Defines the touch event data.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## touchEvent

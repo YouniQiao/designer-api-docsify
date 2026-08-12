@@ -12,7 +12,7 @@ Requests a widget update. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestform)
+**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestForm)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,7 +42,7 @@ Requests a widget update. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#requestForm](arkts-form-formhost-requestform-depr-f-sys.md#requestform)
+**Substitutes:** [requestForm](arkts-form-formhost-requestform-f-sys.md#requestForm)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -62,4 +62,4 @@ Requests a widget update. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

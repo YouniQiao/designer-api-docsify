@@ -23,7 +23,7 @@ Writes data to a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:writeSync](arkts-corefile-fileio-writesync-f.md#writesync)
+**Substitutes:** [writeSync](arkts-corefile-file-fs-writesync-f.md#writeSync)
 
 <!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number--><!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number-End-->
 

@@ -15,7 +15,7 @@ wantAction?:string
 ```
 
 **action** field passed in **want** when **wantAgent** is created. For details, see   
-[action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md).
+[action](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
 
 **Type:** string
 
@@ -34,7 +34,7 @@ wantParameters?:Record<string, Object>
 ```
 
 **parameters** field passed in **want** when **wantAgent** is created. For details, see   
-[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md).
+[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
 
 **Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
 
@@ -53,7 +53,7 @@ wantUri?:string
 ```
 
 **uri** field passed in **want** when **wantAgent** is created. For details, see   
-[uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md/arkts-ability-app-ability-want-want-c.md).
+[uri](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want).
 
 **Type:** string
 

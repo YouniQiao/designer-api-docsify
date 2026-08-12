@@ -2,7 +2,7 @@
 
 Draw context object for the OffscreenCanvas component.
 
-**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](../arkts-components/arkts-arkui-canvasrenderer-c.md/arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md#CanvasRenderer)
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Constructor of the canvas drawing context object, which is used to create a draw
 | --- | --- | --- | --- |
 | width | double | Yes | the width of the OffscreenCanvas |
 | height | double | Yes | the height of the OffscreenCanvas |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see {@link RenderingContextSettings}. |
+| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md#RenderingContextSettings). |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## toDataURL

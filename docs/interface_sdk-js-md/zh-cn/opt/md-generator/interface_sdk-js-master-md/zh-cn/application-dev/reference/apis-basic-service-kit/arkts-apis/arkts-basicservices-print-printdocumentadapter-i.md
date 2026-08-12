@@ -35,8 +35,8 @@ onJobStateChanged(jobId: string, state: PrintDocumentAdapterState): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -90,14 +90,14 @@ onStartLayoutWrite(jobId: string, oldAttrs: PrintAttributes, newAttrs: PrintAttr
 | oldAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
 | newAttrs | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
 | fd | number | 是 |
-| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) =&gt; void | 是 |
+| writeResultCallback | (jobId: string, writeResult: PrintFileCreationState) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

@@ -28,10 +28,10 @@ function getSkillInfosForSelf(flags: number): Promise<Array<SkillInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; |
+| Promise & lt;Array & lt;SkillInfo & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700101](../errorcode-bundle.md#17700101-包管理服务异常) |
+| [17700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700101-包管理服务异常) |

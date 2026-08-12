@@ -12,7 +12,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbfunctionstostring)
+**替代接口：** [usbFunctionsToString](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md#usbFunctionsToString)
 
 <!--Device-usb-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usb-function usbFunctionsToString(funcs: FunctionType): string-End-->
 

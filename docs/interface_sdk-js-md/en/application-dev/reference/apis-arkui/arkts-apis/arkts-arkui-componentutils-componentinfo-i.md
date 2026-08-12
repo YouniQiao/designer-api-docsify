@@ -13,7 +13,7 @@ Component information.
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## localOffset
@@ -24,7 +24,7 @@ localOffset: Offset
 
 Obtain attribute information relative to the local coordinates.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ screenOffset: Offset
 
 Obtain attribute information relative to the screen.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ size: Size
 
 component size.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ windowOffset: Offset
 
 Obtain attribute information relative to the window.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 

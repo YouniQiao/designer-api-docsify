@@ -62,7 +62,7 @@ mode?: DividerMode
 
 The mode of Divider.
 
-**类型：** [DividerMode](arkts-arkui-dividermode-e.md)
+**类型：** DividerMode
 
 **起始版本：** 19
 

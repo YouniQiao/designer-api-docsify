@@ -48,7 +48,7 @@ getHeader(): Array<WebHeader>
 
 | 类型 |
 | --- |
-| Array&lt;WebHeader&gt; |
+| Array & lt;WebHeader & gt; |
 
 ## getHttpBodyStream
 

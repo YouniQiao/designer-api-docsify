@@ -13,7 +13,7 @@ Object that contains the API calling result.
 ## Modules to Import
 
 ```TypeScript
-import { GetStatusOptions, BatteryResponse } from 'kits/@kit.BasicServicesKit';
+import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -61,7 +61,7 @@ Called when an API call has failed. **data** indicates the error information, an
 success?: (data: BatteryResponse) => void
 ```
 
-Called when an API call is successful. **data** is a return value of the {@link BatteryResponse} type.
+Called when an API call is successful. **data** is a return value of the [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md#BatteryResponse) type.
 
 **Since:** 3
 

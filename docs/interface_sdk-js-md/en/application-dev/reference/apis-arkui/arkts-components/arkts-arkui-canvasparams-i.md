@@ -18,7 +18,7 @@ imageAIOptions?: ImageAIOptions
 
 AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
+**Type:** ImageAIOptions
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ unit?: LengthMetricsUnit
 
 Indicates the unit mode employed by Canvas during drawing.&lt;br&gt;It can only be set when creating the **Canvas** component and cannot be modified afterwards.&lt;br&gt;Default value: **LengthMetricsUnit.DEFAULT**
 
-**Type:** [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md)
+**Type:** LengthMetricsUnit
 
 **Since:** 23
 

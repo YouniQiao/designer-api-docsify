@@ -45,7 +45,7 @@ onCancel(event: Callback<void>): GestureGroupHandler
 ```
 
 Sets the cancellation callback for the gesture group handler. The callback is triggered when a sequence gesture (  
-[GestureMode](arkts-arkui-gesturemode-e.md).Sequence) is cancelled.
+[GestureMode](arkts-arkui-gesturemode-e.md#GestureMode).Sequence) is cancelled.
 
 **Since:** 12
 
@@ -63,7 +63,7 @@ Sets the cancellation callback for the gesture group handler. The callback is tr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the gesture group is cancelled. |
+| event | Callback&lt;void&gt; | Yes | Callback invoked when the gesture group is cancelled. |
 
 **Return value:**
 

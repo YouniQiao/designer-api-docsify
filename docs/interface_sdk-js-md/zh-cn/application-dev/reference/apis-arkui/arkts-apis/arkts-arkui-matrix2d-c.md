@@ -62,7 +62,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改， 配置方法同[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。&lt;br&gt;默认值：DEFAULT |
+| unit | LengthMetricsUnit | 是 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改， 配置方法同[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。&lt;br&gt;默认值：DEFAULT |
 
 ## identity
 
@@ -88,7 +88,7 @@ identity(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 单位矩阵。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 单位矩阵。 |
 
 ## invert
 
@@ -114,7 +114,7 @@ invert(): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 逆矩阵结果。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 逆矩阵结果。 |
 
 ## multiply
 
@@ -140,13 +140,13 @@ multiply(other?: Matrix2D): Matrix2D
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 | 目标矩阵。 &lt;br&gt;异常值undefined和null按无效值处理。&lt;br&gt;默认值：null |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 | 目标矩阵。 &lt;br&gt;异常值undefined和null按无效值处理。&lt;br&gt;默认值：null |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 相乘结果矩阵。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 相乘结果矩阵。 |
 
 ## rotate
 
@@ -162,7 +162,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 **废弃版本：** 10
 
-**替代接口：** [rotate](arkts-arkui-matrix2d-c.md#rotate)
+**替代接口：** [rotate](#rotate)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -181,7 +181,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## rotate
 
@@ -217,7 +217,7 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## scale
 
@@ -250,7 +250,7 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |  |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |  |
 
 ## translate
 
@@ -283,7 +283,7 @@ translate(tx?: number, ty?: number): Matrix2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 平移后结果矩阵对象。 |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) | 平移后结果矩阵对象。 |
 
 ## rotateX
 

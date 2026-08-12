@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from 'kits/@kit.ConnectivityKit';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceBatteryInfo
@@ -32,7 +32,7 @@ Get remote device battery information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceId | [BluetoothAddress](arkts-connectivity-ble-bluetoothaddress-t.md) | Yes | Indicates address of peer device. |
+| deviceId | BluetoothAddress | Yes | Indicates address of peer device. |
 
 **Return value:**
 
@@ -44,11 +44,11 @@ Get remote device battery information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Only can be called on phone, tablet, and 2in1 devices. Failed to call the API when the short-range chip is not inserted on 2in1 device. |
 | 2901003 | Connection not established. |
 | 2900004 | Remote device profile not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

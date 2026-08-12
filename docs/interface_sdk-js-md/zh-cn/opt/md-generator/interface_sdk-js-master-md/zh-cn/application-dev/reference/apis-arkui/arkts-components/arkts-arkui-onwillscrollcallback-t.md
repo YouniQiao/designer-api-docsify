@@ -29,4 +29,4 @@ Called before scroll to allow developer to control real offset the Scrollable ca
 
 | 类型 |
 | --- |
-| void \| [ScrollResult](../arkts-apis/arkts-arkui-common-scrollresult-c.md) |
+| void \| [ScrollResult](arkts-arkui-scrollresult-c.md) |

@@ -32,7 +32,7 @@ reference: BreakpointsReference.WindowSize
 
 单位：vp
 
-**类型：** [BreakPoints](../arkts-apis/arkts-arkui-gridrow-breakpoints-i.md)
+**类型：** [BreakPoints](arkts-arkui-breakpoints-i.md)
 
 **起始版本：** 9
 
@@ -61,7 +61,7 @@ columns?: number | GridRowColumnOption
 
 非法值：按默认值处理。
 
-**类型：** number \| GridRowColumnOption
+**类型：** number \| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
 **起始版本：** 9
 
@@ -87,7 +87,7 @@ direction?: GridRowDirection
 
 非法值：按默认值处理。
 
-**类型：** [GridRowDirection](../arkts-apis/arkts-arkui-gridrow-gridrowdirection-e.md)
+**类型：** [GridRowDirection](arkts-arkui-gridrowdirection-e.md)
 
 **起始版本：** 9
 
@@ -115,7 +115,7 @@ gutter?: Length | GutterOption
 
 单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GutterOption
+**类型：** Length \| [GutterOption](arkts-arkui-gutteroption-i.md)
 
 **起始版本：** 9
 

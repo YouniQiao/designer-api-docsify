@@ -5,13 +5,13 @@ Lightweight storage provides applications with data processing capability and al
 > **NOTE：**
 
 > - The APIs of this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.data.preferences](arkts-data-preferences.md).
+> [@ohos.data.preferences](arkts-data-preferences.md#preferences).
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.preferences.preferences
+**Substitutes:** [preferences](ohos.preferences.preferences)
 
 <!--Device-unnamed-declare namespace storage--><!--Device-unnamed-declare namespace storage-End-->
 

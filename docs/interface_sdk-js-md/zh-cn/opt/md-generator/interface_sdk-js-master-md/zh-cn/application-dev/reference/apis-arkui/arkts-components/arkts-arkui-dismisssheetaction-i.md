@@ -16,7 +16,7 @@ dismiss: Callback<void>
 
 半模态页面关闭回调函数。开发者需要退出页面时调用。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 

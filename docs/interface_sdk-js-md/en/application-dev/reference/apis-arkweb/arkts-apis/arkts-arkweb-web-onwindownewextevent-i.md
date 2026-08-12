@@ -18,7 +18,7 @@ handler: ControllerHandler
 
 Lets you set the WebviewController instance for creating a new window.
 
-**Type:** [ControllerHandler](../arkts-components/arkts-arkweb-controllerhandler-c.md)
+**Type:** [ControllerHandler](arkts-arkweb-web-controllerhandler-c.md)
 
 **Since:** 23
 
@@ -72,7 +72,7 @@ navigationPolicy: NavigationPolicy
 
 The navigation policy causing the new web view to be created.
 
-**Type:** [NavigationPolicy](../arkts-components/arkts-arkweb-navigationpolicy-e.md)
+**Type:** [NavigationPolicy](arkts-arkweb-web-navigationpolicy-e.md)
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ windowFeatures: WindowFeatures
 
 Contains the attributes that a webpage requests from its containing web view.
 
-**Type:** [WindowFeatures](../arkts-components/arkts-arkweb-windowfeatures-i.md)
+**Type:** [WindowFeatures](arkts-arkweb-web-windowfeatures-i.md)
 
 **Since:** 23
 

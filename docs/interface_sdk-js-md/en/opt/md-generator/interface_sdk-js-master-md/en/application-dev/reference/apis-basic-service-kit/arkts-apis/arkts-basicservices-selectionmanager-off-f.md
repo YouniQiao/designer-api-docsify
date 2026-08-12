@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## off('selectionCompleted')
@@ -26,7 +26,7 @@ Unsubscribes from the word selection completion event. This API is used together
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'selectionCompleted' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | No |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | No |
 
 ## Examples
 

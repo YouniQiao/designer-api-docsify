@@ -11,7 +11,7 @@ Represents an X.509 trust anchor, which is used to verify the certificate chain.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## CACert
@@ -23,7 +23,7 @@ CACert?: X509Cert
 Trusted CA certificate. If **CACert** is set, only **CACert** is used to validate the certificate chain.  
 **CAPubKey** and **CASubject** are not used.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 11
 

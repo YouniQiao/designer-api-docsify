@@ -11,7 +11,7 @@ Application bundle statistics.
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## abilityInFgTotalTime
@@ -38,7 +38,7 @@ Total duration that the ability runs in the foreground, in milliseconds.
 appIndex: number
 ```
 
-Index of the application clone. The value is an integer greater than or equal to 0.You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity) of @ohos.bundle.bundleManager to obtain the index.
+Index of the application clone. The value is an integer greater than or equal to 0.You can call [getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md#getAppCloneIdentity) of @ohos.bundle.bundleManager to obtain the index.
 
 **Type:** number
 

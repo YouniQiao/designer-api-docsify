@@ -43,7 +43,7 @@ decoration: DecorationStyleResult
 
 文本装饰线样式信息。
 
-**类型：** [DecorationStyleResult](arkts-arkui-decorationstyleresult-i.md)
+**类型：** [DecorationStyleResult](arkts-arkui-textcommon-decorationstyleresult-i.md)
 
 **起始版本：** 23
 
@@ -271,7 +271,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 

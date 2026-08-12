@@ -11,7 +11,7 @@ Describes the frame shutter end information during capture.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## captureId

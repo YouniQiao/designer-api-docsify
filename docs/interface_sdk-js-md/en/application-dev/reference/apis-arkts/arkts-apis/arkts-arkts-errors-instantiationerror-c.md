@@ -2,7 +2,7 @@
 
 Represents an error that occurs when attempting to instantiate abstract class or an interface
 
-**Inheritance/Implementation:** InstantiationError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** InstantiationError extends [Error](Error)
 
 **Since:** 26.0.0
 

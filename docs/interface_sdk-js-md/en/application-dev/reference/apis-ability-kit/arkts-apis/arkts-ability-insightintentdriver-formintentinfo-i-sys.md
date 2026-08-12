@@ -17,7 +17,7 @@ Describes the parameters supported by the
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -48,7 +48,7 @@ Ability name.
 readonly formName: string
 ```
 
-Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md).
+Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#FormExtensionAbility).
 
 **Type:** string
 

@@ -1,6 +1,6 @@
 # StatusMonitor（系统接口）
 
-状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor)获取此对象。
+状态监听器对象。用于监听或获取模板状态、持续认证状态、可添加设备状态等信息。通过[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor)获取此对象。
 
 **起始版本：** 23
 
@@ -42,13 +42,13 @@ getTemplateStatus(): Promise<TemplateStatus[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TemplateStatus[]&gt; | Promise对象，成功时返回当前用户下全部模板的状态列表，每个模板状态包含模板ID、有效性、设备信息等；失败时抛出相应错误码。 |
+| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; | Promise对象，成功时返回当前用户下全部模板的状态列表，每个模板状态包含模板ID、有效性、设备信息等；失败时抛出相应错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -114,7 +114,7 @@ offAvailableDeviceChange(callback?: AvailableDeviceStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -167,7 +167,7 @@ offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -229,7 +229,7 @@ offTemplateChange(callback?: TemplateStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -284,7 +284,7 @@ onAvailableDeviceChange(callback: AvailableDeviceStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 
@@ -339,8 +339,8 @@ onContinuousAuthChange(param: ContinuousAuthParam, callback: ContinuousAuthStatu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
-| [32600002](../errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-模板未找到) | The template is not found. |
 
 ## 示例
 
@@ -403,7 +403,7 @@ onTemplateChange(callback: TemplateStatusCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
+| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) | The system service is not working properly. Please try again later. |
 
 ## 示例
 

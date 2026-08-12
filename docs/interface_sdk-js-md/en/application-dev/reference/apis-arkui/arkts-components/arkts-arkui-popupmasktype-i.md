@@ -18,7 +18,7 @@ color: ResourceColor
 
 Color of the mask.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 

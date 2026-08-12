@@ -13,7 +13,7 @@ Describes the parameters of check notifications.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundleName
@@ -44,7 +44,7 @@ contentType: ContentType
 
 Notification type.
 
-**Type:** [ContentType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-contenttype-e.md)
+**Type:** ContentType
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ slotType: SlotType
 
 Notification slot type.
 
-**Type:** [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md)
+**Type:** SlotType
 
 **Since:** 11
 

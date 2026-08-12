@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 ```
 
 ## LazyDynamicLayout
@@ -28,7 +28,7 @@ Defines LazyDynamicLayout Component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Yes |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Yes |
 
 **Return value:**
 

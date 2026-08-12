@@ -15,7 +15,7 @@ Defines the request for setting property information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## authType
@@ -26,7 +26,7 @@ authType: AuthType
 
 Authentication credential type.
 
-**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**Type:** AuthType
 
 **Since:** 8
 

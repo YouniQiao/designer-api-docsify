@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## getUriFromPath
@@ -40,7 +40,7 @@ Get the uri from the path of file in app sandbox
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## Examples
 

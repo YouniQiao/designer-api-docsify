@@ -2,7 +2,7 @@
 
 Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios.
 
-**Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md)
+**Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md#InteractionUI)
 
 **Since:** 26.1.0
 
@@ -15,7 +15,7 @@ Defines the information of the modal UIExtension to be displayed as the interact
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## abilityName

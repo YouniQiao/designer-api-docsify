@@ -32,13 +32,13 @@ function queryRecommendDriversById(printerId: string): Promise<PpdInfo[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PpdInfo[]&gt; | Promise that resolves with all ppd info of the printer. |
+| Promise&lt;[PpdInfo](arkts-basicservices-print-ppdinfo-i.md)[]&gt; | Promise that resolves with all ppd info of the printer. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [13100005](../../apis-basic-services-kit/errorcode-print.md#13100005-无效的打印机) | Can not find the printer in system. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [13100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100005-无效的打印机) | Can not find the printer in system. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 

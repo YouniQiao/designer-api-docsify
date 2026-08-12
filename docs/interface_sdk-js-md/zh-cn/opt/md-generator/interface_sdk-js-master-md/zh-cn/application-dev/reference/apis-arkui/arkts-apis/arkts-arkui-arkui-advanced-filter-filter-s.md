@@ -6,7 +6,7 @@
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
-> - 如果Filter设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会额外生
+> - 如果Filter设置[通用属性](./@internal/component/ets/common)和[通用事件](./@internal/component/ets/common)，编译工具链会额外生
 > 成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到Filter本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议Filter设置通用属性和通用事件。
 
 **起始版本：** 10
@@ -59,7 +59,7 @@ onFilterChanged: (filterResults: Array<FilterResult>) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filterResults | Array&lt;FilterResult&gt; | 是 |
+| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | 是 |
 
 ## additionFilters
 
@@ -115,7 +115,7 @@ multiFilters: Array<FilterParams>
 
 多条件筛选列表。
 
-**类型：** Array&lt;FilterParams&gt;
+**类型：** Array&lt;[FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
 
 **起始版本：** 10
 

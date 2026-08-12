@@ -1,9 +1,9 @@
 # ParagraphBuilder
 
-Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) and  
-[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) to the constructor, then set the text style through  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle), add text content through  
-[addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext), and finally call [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) object for typesetting and drawing.
+Implements a paragraph builder that uses the builder pattern to construct paragraph objects. Developers initialize ParagraphBuilder by passing [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) and  
+[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection) to the constructor, then set the text style through  
+[pushStyle](#pushStyle), add text content through  
+[addText](#addText), and finally call [build()](#build) to generate a [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) object for typesetting and drawing.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Implements a paragraph builder that uses the builder pattern to construct paragr
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## addPlaceholder
@@ -227,7 +227,7 @@ Builds a paragraph and generates a paragraph object that can be used for subsequ
 
 | Type | Description |
 | --- | --- |
-| [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) | Paragraph** object that can be used for subsequent rendering. |
+| Paragraph | Paragraph** object that can be used for subsequent rendering. |
 
 ## Examples
 
@@ -339,7 +339,7 @@ A constructor used to create a **ParagraphBuilder** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Yes | Paragraph style. |
+| paragraphStyle | ParagraphStyle | Yes | Paragraph style. |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | Yes | Font collection object that provides font resources required for text typesetting, used for glyph matching and text rendering during paragraph construction. |
 
 ## Examples
@@ -384,9 +384,9 @@ Restores the previous text style.
 
 > **NOTE：**
 > 
-> This method must be called after [pushStyle()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle). After it is called,
+> This method must be called after [pushStyle()](#pushStyle). After it is called,
 > subsequently added text will use the text style before the pop operation. If the style stack is empty, the
-> textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) will be used as the default style.
+> textStyle in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) will be used as the default style.
 
 **Since:** 12
 
@@ -461,7 +461,7 @@ Applies a new style to the current text blob.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | Yes | Text style, which describes various visual attributes of text, such as font, font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough), and text shadow. |
+| textStyle | TextStyle | Yes | Text style, which describes various visual attributes of text, such as font, font size, color, font weight, word spacing, line spacing, decoration (such as underline and strikethrough), and text shadow. |
 
 ## Examples
 

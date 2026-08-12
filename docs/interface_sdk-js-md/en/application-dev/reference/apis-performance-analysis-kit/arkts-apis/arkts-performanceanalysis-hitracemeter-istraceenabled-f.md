@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## isTraceEnabled

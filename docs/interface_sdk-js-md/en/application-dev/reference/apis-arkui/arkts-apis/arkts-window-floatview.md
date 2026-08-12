@@ -15,7 +15,7 @@ interaction panel or control UI, facilitating real-time operations and interacti
 
 **Linkage with the floating ball**:
 
-This module can be used together with [@ohos.window.floatingBall](arkts-window-floatingball.md).After the float view controller is bound to the floating ball controller using the  
+This module can be used together with [@ohos.window.floatingBall](arkts-window-floatingball.md#floatingBall).After the float view controller is bound to the floating ball controller using the  
 [floatView.bind](arkts-arkui-floatview-bind-f.md#bind) API, users can tap the floating ball to expand it as a float view, and click the minimize button in the upper left corner of the float view to collapse it back as a floating ball. This allows for seamless switching between the two window forms.
 
 **Comparison between the global floating window and float view**:
@@ -26,7 +26,7 @@ that can remain displayed on the foreground even after the application's main wi
  - The global floating window is managed and its UI is drawn by developers, without a unified UI or animation effect.  
  - The float view is managed by the system and its UI is drawn in a unified manner, offering a more sophisticated and  
 refined animation effect.  
- - The float view can be bound to the [floating ball](arkts-window-floatingball.md) for joint use,  
+ - The float view can be bound to the [floating ball](arkts-window-floatingball.md#floatingBall) for joint use,  
 enabling more complex scenarios.
 
 **Start version**: 26.0.0
@@ -51,7 +51,7 @@ enabling more complex scenarios.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -60,11 +60,11 @@ import { floatView } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [bind](arkts-arkui-floatview-bind-f.md#bind) | Binds the float view and floating ball. You need to create the  [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and  [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) first, and neither of them has been started. This API uses a promise to return the result.  > **NOTE：** >  > - After the binding is successful, calling [start()](arkts-arkui-floatview-floatviewcontroller-i.md#start) or > [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball) will > create both a float view and the floating ball window, and trigger the status callback registered for the > corresponding window. However, only one window is displayed at a time, and the display sequence depends on which > controller's start API is called first. >  > - After the binding is successful, users can switch between the float view and the floating ball window by > clicking. >  > - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop) or > [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)) of > either controller will destroy both the float view and the floating ball window, and trigger the status callback > registered for the corresponding window. |
+| [bind](arkts-arkui-floatview-bind-f.md#bind) | Binds the float view and floating ball. You need to create the  [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and  [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) first, and neither of them has been started. This API uses a promise to return the result.  > **NOTE：** >  > - After the binding is successful, calling [start()](arkts-arkui-floatview-floatviewcontroller-i.md#start) or > [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startFloatingBall) will > create both a float view and the floating ball window, and trigger the status callback registered for the > corresponding window. However, only one window is displayed at a time, and the display sequence depends on which > controller's start API is called first. >  > - After the binding is successful, users can switch between the float view and the floating ball window by > clicking. >  > - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop) or > [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopFloatingBall)) of > either controller will destroy both the float view and the floating ball window, and trigger the status callback > registered for the corresponding window. |
 | [create](arkts-arkui-floatview-create-f.md#create) | Creates a float view controller. This API uses a promise to return the result. |
 | [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) | Obtains the limits of the float view based on the passed template type. The unit is px. |
 | [isFloatViewEnabled](arkts-arkui-floatview-isfloatviewenabled-f.md#isfloatviewenabled) | Checks whether the device supports the float view.  \| Type\| Description\|  \|------------\|------------\|  \| boolean \| Whether the device supports the float view. **true** to support; **false** otherwise.\| |
-| [unbind](arkts-arkui-floatview-unbind-f.md#unbind) | Unbinds the float view and floating ball. The unbinding can be performed only after both the  [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and  [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) are stopped. This API uses a promise to return the result. |
+| [unbind](arkts-arkui-floatview-unbind-f.md#unbind) | Unbinds the float view and floating ball. The unbinding can be performed only after both the  [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and  [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) are stopped. This API uses a promise to return the result. |
 
 ### Interfaces
 

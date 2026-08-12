@@ -30,7 +30,7 @@ declare function moveDir(src: string, dest: string, mode?: number): Promise<void
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
@@ -129,7 +129,7 @@ declare function moveDir(src: string, dest: string, callback: AsyncCallback<void
 | --- | --- | --- |
 | src | string | 是 |
 | dest | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
@@ -210,7 +210,7 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 | src | string | 是 |
 | dest | string | 是 |
 | mode | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;ConflictFiles&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 

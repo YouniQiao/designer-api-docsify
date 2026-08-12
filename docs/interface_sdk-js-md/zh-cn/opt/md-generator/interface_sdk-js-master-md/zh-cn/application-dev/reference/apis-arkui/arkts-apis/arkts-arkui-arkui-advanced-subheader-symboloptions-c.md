@@ -14,7 +14,7 @@ Declare type SymbolOptions
 effectStrategy?: SymbolEffectStrategy
 ```
 
-设置[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)动效策略。
+设置[SymbolGlyph](./@internal/component/ets/symbolglyph)动效策略。
 
 默认值：SymbolEffectStrategy.NONE
 
@@ -40,11 +40,11 @@ effectStrategy?: SymbolEffectStrategy
 fontColor?: Array<ResourceColor>
 ```
 
-设置[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)颜色。
+设置[SymbolGlyph](./@internal/component/ets/symbolglyph)颜色。
 
 默认值：不同渲染策略下默认值不同。
 
-**类型：** Array&lt;ResourceColor&gt;
+**类型：** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt;
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ fontColor?: Array<ResourceColor>
 fontSize?: number | string | Resource
 ```
 
-设置[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)大小。
+设置[SymbolGlyph](./@internal/component/ets/symbolglyph)大小。
 
 number类型取值范围：大于等于0。
 
@@ -88,7 +88,7 @@ number类型取值范围：大于等于0。
 fontWeight?: number | FontWeight | string
 ```
 
-设置[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)粗细。
+设置[SymbolGlyph](./@internal/component/ets/symbolglyph)粗细。
 
 number类型取值[100,900]，取值间隔为100，默认为400，取值越大，字体越粗。
 
@@ -114,7 +114,7 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 renderingStrategy?: SymbolRenderingStrategy
 ```
 
-设置[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)渲染策略。
+设置[SymbolGlyph](./@internal/component/ets/symbolglyph)渲染策略。
 
 默认值：SymbolRenderingStrategy.SINGLE
 

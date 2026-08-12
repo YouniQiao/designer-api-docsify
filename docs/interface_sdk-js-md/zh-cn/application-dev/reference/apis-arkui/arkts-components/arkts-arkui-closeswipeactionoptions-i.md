@@ -1,6 +1,6 @@
 # CloseSwipeActionOptions
 
-收起[EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)状态[ListItem](./list_item)回调事件集合，用于设置收起动画完成后回调事件。
+收起[EXPANDED](SwipeActionState)状态[ListItem](./list_item)回调事件集合，用于设置收起动画完成后回调事件。
 
 **起始版本：** 11
 

@@ -13,7 +13,7 @@ The **audioSourceType** and **videoSourceType** parameters are used to distingui
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## metaSourceTypes
@@ -24,7 +24,7 @@ metaSourceTypes?: Array<MetaSourceType>
 
 Meta source types, details see @MetaSourceType .
 
-**Type:** Array&lt;MetaSourceType&gt;
+**Type:** Array&lt;[MetaSourceType](arkts-media-media-metasourcetype-e-sys.md)&gt;
 
 **Since:** 12
 

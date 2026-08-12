@@ -36,7 +36,7 @@ constructor(options?: LongPressGestureHandlerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | 否 | 长按手势处理器配置参数。 |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 否 | 长按手势处理器配置参数。 |
 
 ## onAction
 
@@ -62,7 +62,7 @@ onAction(event: Callback<GestureEvent>): LongPressGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势处理器识别成功回调。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势处理器识别成功回调。 |
 
 **返回值：**
 
@@ -94,7 +94,7 @@ onActionCancel(event: Callback<void>): LongPressGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 长按手势处理器取消回调。 |
+| event | Callback&lt;void&gt; | 是 | 长按手势处理器取消回调。 |
 
 **返回值：**
 
@@ -109,7 +109,7 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 ```
 
 设置长按手势处理器取消回调。长按手势处理器识别成功后，接收到触摸取消事件时触发回调。与  
-[onActionCancel](arkts-arkui-longpressgesturehandler-c.md#onactioncancel)接口相比，此接口返回手势事件信息。
+[onActionCancel](#onActionCancel)接口相比，此接口返回手势事件信息。
 
 **起始版本：** 18
 
@@ -127,7 +127,7 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势处理器取消回调。该回调会返回手势事件信息。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势处理器取消回调。该回调会返回手势事件信息。 |
 
 **返回值：**
 
@@ -159,7 +159,7 @@ onActionEnd(event: Callback<GestureEvent>): LongPressGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势处理器结束回调。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势处理器结束回调。 |
 
 **返回值：**
 

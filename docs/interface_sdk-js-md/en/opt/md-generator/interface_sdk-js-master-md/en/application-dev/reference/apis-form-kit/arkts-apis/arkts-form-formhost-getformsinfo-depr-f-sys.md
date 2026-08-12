@@ -12,7 +12,7 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo)
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getFormsInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -46,7 +46,7 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo)
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getFormsInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -77,7 +77,7 @@ Obtains the widget information provided by a given application on the device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#getFormsInfo](arkts-form-formhost-getformsinfo-depr-f-sys.md#getformsinfo)
+**Substitutes:** [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getFormsInfo)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -98,4 +98,4 @@ Obtains the widget information provided by a given application on the device. Th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;formInfo.FormInfo&gt;&gt; |
+| Promise & lt;Array & lt;formInfo.FormInfo & gt; & gt; |

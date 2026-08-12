@@ -42,7 +42,7 @@ Badge(value: BadgeParamWithNumber)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](../arkts-apis/arkts-arkui-badge-badgeparamwithnumber-i.md) | 是 | 数字标记组件参数，用于配置根据数字创建的Badge组件，包含消息数、显示位置和样式等属性。 |
+| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | 是 | 数字标记组件参数，用于配置根据数字创建的Badge组件，包含消息数、显示位置和样式等属性。 |
 
 ## Badge
 

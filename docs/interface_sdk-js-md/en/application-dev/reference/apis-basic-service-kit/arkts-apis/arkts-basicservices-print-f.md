@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## print
@@ -12,7 +12,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 ```
 
-Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page,call the [print](arkts-basicservices-print-f.md#print) API and pass in context.
+Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page,call the [print](#print) API and pass in context.
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [print#print](arkts-basicservices-print-f.md#print)
+**Substitutes:** [print](#print)
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -33,14 +33,14 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | files | Array&lt;string&gt; | Yes | List of files to print. Images (in .jpg, .png, .gif, .bmp, or .webp format) and PDF files are supported. You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PrintTask&gt; | Yes | Callback to be invoked when the print job is finished. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -71,7 +71,7 @@ function print(files: Array<string>): Promise<PrintTask>
 ```
 
 Prints files. This API uses a promise to return the result. To start the system print preview page, call the  
-[print](arkts-basicservices-print-f.md#print) API and pass in context.
+[print](#print) API and pass in context.
 
 **Since:** 10
 
@@ -79,7 +79,7 @@ Prints files. This API uses a promise to return the result. To start the system 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [print#print](arkts-basicservices-print-f.md#print)
+**Substitutes:** [print](#print)
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -97,14 +97,14 @@ Prints files. This API uses a promise to return the result. To start the system 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrintTask&gt; | Promise used to return a [PrintTask]{ |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise used to return a [PrintTask]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -150,14 +150,14 @@ Prints files. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | files | Array&lt;string&gt; | Yes | List of files to be printed. Currently, the following file types are supported: " .bm", ".bmp", ".doc", ".docm", ".docx", ".dot", ".dotm", ".dotx", ".gif", ".jfif", ".jpe", ".jpeg", ".jpg", " pdf", ".pot", ".potm", ".potx", ".pps", ".ppsm", ".ppsx", ".ppt", ".pptm", ".pptx", ".png", ".rtf", ".txt", " .webp", ".wps", ".xls", ".xlsb", ".xlsm", ".xlsx", ".xlt", ".xltx", and ".xml". You should save the files to the application sandbox, obtain the sandbox URI through **fileUri.getUriFromPath**, and then pass this URI as a parameter to this API. |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | UIAbilityContext used to start the system print UI. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PrintTask&gt; | Yes | Callback to be invoked when the print job is finished. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Yes | Callback to be invoked when the print job is finished. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -226,14 +226,14 @@ Prints files. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrintTask&gt; | Promise used to return a [PrintTask]{ |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise used to return a [PrintTask]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 
@@ -294,8 +294,8 @@ Prints a file. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobName | string | Yes | Name of the file to print, for example, **test.pdf**. The printer uses the [onStartLayoutWrite](arkts-basicservices-print-printdocumentadapter-i.md#onstartlayoutwrite) API to send the **fd** of the empty PDF file to the API caller. The API caller uses the new print attributes to update the file to print. |
-| printAdapter | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | Yes | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) API instance implemented by a third-party application. |
+| jobName | string | Yes | Name of the file to print, for example, **test.pdf**. The printer uses the [onStartLayoutWrite](arkts-basicservices-print-printdocumentadapter-i.md#onStartLayoutWrite) API to send the **fd** of the empty PDF file to the API caller. The API caller uses the new print attributes to update the file to print. |
+| printAdapter | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | Yes | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md#PrintDocumentAdapter) API instance implemented by a third-party application. |
 | printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | Yes | Print attributes. |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | UIAbilityContext used to start the system print UI. |
 
@@ -303,14 +303,14 @@ Prints a file. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PrintTask&gt; | Promise used to return a [PrintTask]{ |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | Promise used to return a [PrintTask]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 
 ## Examples
 

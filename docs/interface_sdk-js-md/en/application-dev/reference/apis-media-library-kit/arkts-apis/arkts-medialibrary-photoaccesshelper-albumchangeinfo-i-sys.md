@@ -13,7 +13,7 @@ Describes the information about an album.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumOrder
@@ -44,7 +44,7 @@ coverInfo?: PhotoAssetChangeInfo
 
 Information of the album cover asset.
 
-**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i-sys.md)
+**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md)
 
 **Since:** 20
 
@@ -106,7 +106,7 @@ hiddenCoverInfo?: PhotoAssetChangeInfo
 
 Information of the hidden album cover asset.
 
-**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i-sys.md)
+**Type:** [PhotoAssetChangeInfo](arkts-medialibrary-photoaccesshelper-photoassetchangeinfo-i.md)
 
 **Since:** 20
 

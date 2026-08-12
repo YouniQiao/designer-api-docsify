@@ -6,7 +6,7 @@ The enum of major minor class of a bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass
+**Substitutes:** [MajorMinorClass](ohos.bluetoothManager/bluetoothManager.MajorMinorClass)
 
 <!--Device-bluetooth-enum MajorMinorClass--><!--Device-bluetooth-enum MajorMinorClass-End-->
 
@@ -24,7 +24,7 @@ The Minor Device Class field Computer Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_UNCATEGORIZED
+**Substitutes:** [COMPUTER_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100--><!--Device-MajorMinorClass-COMPUTER_UNCATEGORIZED = 0x0100-End-->
 
@@ -42,7 +42,7 @@ Desktop computer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_DESKTOP
+**Substitutes:** [COMPUTER_DESKTOP](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_DESKTOP)
 
 <!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104--><!--Device-MajorMinorClass-COMPUTER_DESKTOP = 0x0104-End-->
 
@@ -60,7 +60,7 @@ Server.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_SERVER
+**Substitutes:** [COMPUTER_SERVER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_SERVER)
 
 <!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108--><!--Device-MajorMinorClass-COMPUTER_SERVER = 0x0108-End-->
 
@@ -78,7 +78,7 @@ Laptop.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_LAPTOP
+**Substitutes:** [COMPUTER_LAPTOP](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_LAPTOP)
 
 <!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C--><!--Device-MajorMinorClass-COMPUTER_LAPTOP = 0x010C-End-->
 
@@ -96,7 +96,7 @@ Hand-held computer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_HANDHELD_PC_PDA
+**Substitutes:** [COMPUTER_HANDHELD_PC_PDA](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_HANDHELD_PC_PDA)
 
 <!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110--><!--Device-MajorMinorClass-COMPUTER_HANDHELD_PC_PDA = 0x0110-End-->
 
@@ -114,7 +114,7 @@ Palmtop computer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_PALM_SIZE_PC_PDA
+**Substitutes:** [COMPUTER_PALM_SIZE_PC_PDA](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_PALM_SIZE_PC_PDA)
 
 <!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114--><!--Device-MajorMinorClass-COMPUTER_PALM_SIZE_PC_PDA = 0x0114-End-->
 
@@ -132,7 +132,7 @@ Wearable computer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_WEARABLE
+**Substitutes:** [COMPUTER_WEARABLE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_WEARABLE)
 
 <!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118--><!--Device-MajorMinorClass-COMPUTER_WEARABLE = 0x0118-End-->
 
@@ -150,7 +150,7 @@ Tablet.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_TABLET
+**Substitutes:** [COMPUTER_TABLET](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.COMPUTER_TABLET)
 
 <!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C--><!--Device-MajorMinorClass-COMPUTER_TABLET = 0x011C-End-->
 
@@ -168,7 +168,7 @@ Phone Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_UNCATEGORIZED
+**Substitutes:** [PHONE_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200--><!--Device-MajorMinorClass-PHONE_UNCATEGORIZED = 0x0200-End-->
 
@@ -186,7 +186,7 @@ Portable phone.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_CELLULAR
+**Substitutes:** [PHONE_CELLULAR](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_CELLULAR)
 
 <!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204--><!--Device-MajorMinorClass-PHONE_CELLULAR = 0x0204-End-->
 
@@ -204,7 +204,7 @@ Cordless phone.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_CORDLESS
+**Substitutes:** [PHONE_CORDLESS](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_CORDLESS)
 
 <!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208--><!--Device-MajorMinorClass-PHONE_CORDLESS = 0x0208-End-->
 
@@ -222,7 +222,7 @@ Smartphone.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_SMART
+**Substitutes:** [PHONE_SMART](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_SMART)
 
 <!--Device-MajorMinorClass-PHONE_SMART = 0x020C--><!--Device-MajorMinorClass-PHONE_SMART = 0x020C-End-->
 
@@ -240,7 +240,7 @@ Modem or gateway phone.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_MODEM_OR_GATEWAY
+**Substitutes:** [PHONE_MODEM_OR_GATEWAY](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_MODEM_OR_GATEWAY)
 
 <!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210--><!--Device-MajorMinorClass-PHONE_MODEM_OR_GATEWAY = 0x0210-End-->
 
@@ -258,7 +258,7 @@ ISDN phone.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_ISDN
+**Substitutes:** [PHONE_ISDN](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PHONE_ISDN)
 
 <!--Device-MajorMinorClass-PHONE_ISDN = 0x0214--><!--Device-MajorMinorClass-PHONE_ISDN = 0x0214-End-->
 
@@ -276,7 +276,7 @@ LAN/Network Access Point Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_FULLY_AVAILABLE
+**Substitutes:** [NETWORK_FULLY_AVAILABLE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_FULLY_AVAILABLE)
 
 <!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300--><!--Device-MajorMinorClass-NETWORK_FULLY_AVAILABLE = 0x0300-End-->
 
@@ -294,7 +294,7 @@ Device used on network 1 to 17.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_1_TO_17_UTILIZED
+**Substitutes:** [NETWORK_1_TO_17_UTILIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_1_TO_17_UTILIZED)
 
 <!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320--><!--Device-MajorMinorClass-NETWORK_1_TO_17_UTILIZED = 0x0320-End-->
 
@@ -312,7 +312,7 @@ Device used on network 17 to 33.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_17_TO_33_UTILIZED
+**Substitutes:** [NETWORK_17_TO_33_UTILIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_17_TO_33_UTILIZED)
 
 <!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340--><!--Device-MajorMinorClass-NETWORK_17_TO_33_UTILIZED = 0x0340-End-->
 
@@ -330,7 +330,7 @@ Device used on network 33 to 50.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_33_TO_50_UTILIZED
+**Substitutes:** [NETWORK_33_TO_50_UTILIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_33_TO_50_UTILIZED)
 
 <!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360--><!--Device-MajorMinorClass-NETWORK_33_TO_50_UTILIZED = 0x0360-End-->
 
@@ -348,7 +348,7 @@ Device used on network 60 to 67.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_60_TO_67_UTILIZED
+**Substitutes:** [NETWORK_60_TO_67_UTILIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_60_TO_67_UTILIZED)
 
 <!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380--><!--Device-MajorMinorClass-NETWORK_60_TO_67_UTILIZED = 0x0380-End-->
 
@@ -366,7 +366,7 @@ Device used on network 67 to 83.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_67_TO_83_UTILIZED
+**Substitutes:** [NETWORK_67_TO_83_UTILIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_67_TO_83_UTILIZED)
 
 <!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0--><!--Device-MajorMinorClass-NETWORK_67_TO_83_UTILIZED = 0x03A0-End-->
 
@@ -384,7 +384,7 @@ Device used on network 83 to 99.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_83_TO_99_UTILIZED
+**Substitutes:** [NETWORK_83_TO_99_UTILIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_83_TO_99_UTILIZED)
 
 <!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0--><!--Device-MajorMinorClass-NETWORK_83_TO_99_UTILIZED = 0x03C0-End-->
 
@@ -402,7 +402,7 @@ Device without network service.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_NO_SERVICE
+**Substitutes:** [NETWORK_NO_SERVICE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.NETWORK_NO_SERVICE)
 
 <!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0--><!--Device-MajorMinorClass-NETWORK_NO_SERVICE = 0x03E0-End-->
 
@@ -420,7 +420,7 @@ Unclassified audio or video device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_UNCATEGORIZED
+**Substitutes:** [AUDIO_VIDEO_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400--><!--Device-MajorMinorClass-AUDIO_VIDEO_UNCATEGORIZED = 0x0400-End-->
 
@@ -438,7 +438,7 @@ Wearable audio or video headset.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_WEARABLE_HEADSET
+**Substitutes:** [AUDIO_VIDEO_WEARABLE_HEADSET](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_WEARABLE_HEADSET)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404--><!--Device-MajorMinorClass-AUDIO_VIDEO_WEARABLE_HEADSET = 0x0404-End-->
 
@@ -456,7 +456,7 @@ Hands-free audio or video device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_HANDSFREE
+**Substitutes:** [AUDIO_VIDEO_HANDSFREE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_HANDSFREE)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408--><!--Device-MajorMinorClass-AUDIO_VIDEO_HANDSFREE = 0x0408-End-->
 
@@ -474,7 +474,7 @@ Audio or video microphone.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_MICROPHONE
+**Substitutes:** [AUDIO_VIDEO_MICROPHONE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_MICROPHONE)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410--><!--Device-MajorMinorClass-AUDIO_VIDEO_MICROPHONE = 0x0410-End-->
 
@@ -492,7 +492,7 @@ Audio or video loudspeaker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_LOUDSPEAKER
+**Substitutes:** [AUDIO_VIDEO_LOUDSPEAKER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_LOUDSPEAKER)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414--><!--Device-MajorMinorClass-AUDIO_VIDEO_LOUDSPEAKER = 0x0414-End-->
 
@@ -510,7 +510,7 @@ Audio or video headphones.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_HEADPHONES
+**Substitutes:** [AUDIO_VIDEO_HEADPHONES](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_HEADPHONES)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418--><!--Device-MajorMinorClass-AUDIO_VIDEO_HEADPHONES = 0x0418-End-->
 
@@ -528,7 +528,7 @@ Portable audio or video device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_PORTABLE_AUDIO
+**Substitutes:** [AUDIO_VIDEO_PORTABLE_AUDIO](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_PORTABLE_AUDIO)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C--><!--Device-MajorMinorClass-AUDIO_VIDEO_PORTABLE_AUDIO = 0x041C-End-->
 
@@ -546,7 +546,7 @@ In-vehicle audio or video device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_CAR_AUDIO
+**Substitutes:** [AUDIO_VIDEO_CAR_AUDIO](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_CAR_AUDIO)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAR_AUDIO = 0x0420-End-->
 
@@ -564,7 +564,7 @@ Audio or video STB device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_SET_TOP_BOX
+**Substitutes:** [AUDIO_VIDEO_SET_TOP_BOX](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_SET_TOP_BOX)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424--><!--Device-MajorMinorClass-AUDIO_VIDEO_SET_TOP_BOX = 0x0424-End-->
 
@@ -582,7 +582,7 @@ High-fidelity speaker device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_HIFI_AUDIO
+**Substitutes:** [AUDIO_VIDEO_HIFI_AUDIO](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_HIFI_AUDIO)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428--><!--Device-MajorMinorClass-AUDIO_VIDEO_HIFI_AUDIO = 0x0428-End-->
 
@@ -600,7 +600,7 @@ Video cassette recording (VCR) device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VCR
+**Substitutes:** [AUDIO_VIDEO_VCR](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VCR)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VCR = 0x042C-End-->
 
@@ -618,7 +618,7 @@ Camera.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_CAMERA
+**Substitutes:** [AUDIO_VIDEO_VIDEO_CAMERA](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_CAMERA)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CAMERA = 0x0430-End-->
 
@@ -636,7 +636,7 @@ Camcorder.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_CAMCORDER
+**Substitutes:** [AUDIO_VIDEO_CAMCORDER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_CAMCORDER)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434--><!--Device-MajorMinorClass-AUDIO_VIDEO_CAMCORDER = 0x0434-End-->
 
@@ -654,7 +654,7 @@ Audio or video monitor.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_MONITOR
+**Substitutes:** [AUDIO_VIDEO_VIDEO_MONITOR](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_MONITOR)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_MONITOR = 0x0438-End-->
 
@@ -672,7 +672,7 @@ Video display or loudspeaker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER
+**Substitutes:** [AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_DISPLAY_AND_LOUDSPEAKER = 0x043C-End-->
 
@@ -690,7 +690,7 @@ Video conferencing device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_CONFERENCING
+**Substitutes:** [AUDIO_VIDEO_VIDEO_CONFERENCING](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_CONFERENCING)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_CONFERENCING = 0x0440-End-->
 
@@ -708,7 +708,7 @@ Audio or video gaming toy.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_GAMING_TOY
+**Substitutes:** [AUDIO_VIDEO_VIDEO_GAMING_TOY](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.AUDIO_VIDEO_VIDEO_GAMING_TOY)
 
 <!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448--><!--Device-MajorMinorClass-AUDIO_VIDEO_VIDEO_GAMING_TOY = 0x0448-End-->
 
@@ -726,7 +726,7 @@ Peripheral Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_NON_KEYBOARD_NON_POINTING
+**Substitutes:** [PERIPHERAL_NON_KEYBOARD_NON_POINTING](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_NON_KEYBOARD_NON_POINTING)
 
 <!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_NON_KEYBOARD_NON_POINTING = 0x0500-End-->
 
@@ -744,7 +744,7 @@ Keyboard device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_KEYBOARD
+**Substitutes:** [PERIPHERAL_KEYBOARD](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_KEYBOARD)
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD = 0x0540-End-->
 
@@ -762,7 +762,7 @@ Pointing peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_POINTING_DEVICE
+**Substitutes:** [PERIPHERAL_POINTING_DEVICE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_POINTING_DEVICE)
 
 <!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580--><!--Device-MajorMinorClass-PERIPHERAL_POINTING_DEVICE = 0x0580-End-->
 
@@ -780,7 +780,7 @@ Keyboard pointing device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_KEYBOARD_POINTING
+**Substitutes:** [PERIPHERAL_KEYBOARD_POINTING](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_KEYBOARD_POINTING)
 
 <!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_KEYBOARD_POINTING = 0x05C0-End-->
 
@@ -798,7 +798,7 @@ Unclassified peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_UNCATEGORIZED
+**Substitutes:** [PERIPHERAL_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500--><!--Device-MajorMinorClass-PERIPHERAL_UNCATEGORIZED = 0x0500-End-->
 
@@ -816,7 +816,7 @@ Peripheral joystick.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_JOYSTICK
+**Substitutes:** [PERIPHERAL_JOYSTICK](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_JOYSTICK)
 
 <!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504--><!--Device-MajorMinorClass-PERIPHERAL_JOYSTICK = 0x0504-End-->
 
@@ -834,7 +834,7 @@ Peripheral game pad.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_GAMEPAD
+**Substitutes:** [PERIPHERAL_GAMEPAD](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_GAMEPAD)
 
 <!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508--><!--Device-MajorMinorClass-PERIPHERAL_GAMEPAD = 0x0508-End-->
 
@@ -852,7 +852,7 @@ Peripheral remote control device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_REMOTE_CONTROL
+**Substitutes:** [PERIPHERAL_REMOTE_CONTROL](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_REMOTE_CONTROL)
 
 <!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0--><!--Device-MajorMinorClass-PERIPHERAL_REMOTE_CONTROL = 0x05C0-End-->
 
@@ -870,7 +870,7 @@ Peripheral sensing device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_SENSING_DEVICE
+**Substitutes:** [PERIPHERAL_SENSING_DEVICE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_SENSING_DEVICE)
 
 <!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510--><!--Device-MajorMinorClass-PERIPHERAL_SENSING_DEVICE = 0x0510-End-->
 
@@ -888,7 +888,7 @@ Peripheral digitizer tablet.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_DIGITIZER_TABLET
+**Substitutes:** [PERIPHERAL_DIGITIZER_TABLET](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_DIGITIZER_TABLET)
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514--><!--Device-MajorMinorClass-PERIPHERAL_DIGITIZER_TABLET = 0x0514-End-->
 
@@ -906,7 +906,7 @@ Peripheral card reader.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_CARD_READER
+**Substitutes:** [PERIPHERAL_CARD_READER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_CARD_READER)
 
 <!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518--><!--Device-MajorMinorClass-PERIPHERAL_CARD_READER = 0x0518-End-->
 
@@ -924,7 +924,7 @@ Peripheral digital pen.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_DIGITAL_PEN
+**Substitutes:** [PERIPHERAL_DIGITAL_PEN](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_DIGITAL_PEN)
 
 <!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C--><!--Device-MajorMinorClass-PERIPHERAL_DIGITAL_PEN = 0x051C-End-->
 
@@ -942,7 +942,7 @@ Peripheral RFID scanner.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_SCANNER_RFID
+**Substitutes:** [PERIPHERAL_SCANNER_RFID](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_SCANNER_RFID)
 
 <!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520--><!--Device-MajorMinorClass-PERIPHERAL_SCANNER_RFID = 0x0520-End-->
 
@@ -960,7 +960,7 @@ Gesture input device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_GESTURAL_INPUT
+**Substitutes:** [PERIPHERAL_GESTURAL_INPUT](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.PERIPHERAL_GESTURAL_INPUT)
 
 <!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522--><!--Device-MajorMinorClass-PERIPHERAL_GESTURAL_INPUT = 0x0522-End-->
 
@@ -978,7 +978,7 @@ Imaging Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_UNCATEGORIZED
+**Substitutes:** [IMAGING_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600--><!--Device-MajorMinorClass-IMAGING_UNCATEGORIZED = 0x0600-End-->
 
@@ -996,7 +996,7 @@ Imaging display device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_DISPLAY
+**Substitutes:** [IMAGING_DISPLAY](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_DISPLAY)
 
 <!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610--><!--Device-MajorMinorClass-IMAGING_DISPLAY = 0x0610-End-->
 
@@ -1014,7 +1014,7 @@ Imaging camera device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_CAMERA
+**Substitutes:** [IMAGING_CAMERA](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_CAMERA)
 
 <!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620--><!--Device-MajorMinorClass-IMAGING_CAMERA = 0x0620-End-->
 
@@ -1032,7 +1032,7 @@ Imaging scanner.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_SCANNER
+**Substitutes:** [IMAGING_SCANNER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_SCANNER)
 
 <!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640--><!--Device-MajorMinorClass-IMAGING_SCANNER = 0x0640-End-->
 
@@ -1050,7 +1050,7 @@ Imaging printer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_PRINTER
+**Substitutes:** [IMAGING_PRINTER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.IMAGING_PRINTER)
 
 <!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680--><!--Device-MajorMinorClass-IMAGING_PRINTER = 0x0680-End-->
 
@@ -1068,7 +1068,7 @@ Wearable Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_UNCATEGORIZED
+**Substitutes:** [WEARABLE_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700--><!--Device-MajorMinorClass-WEARABLE_UNCATEGORIZED = 0x0700-End-->
 
@@ -1086,7 +1086,7 @@ Smart watch.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_WRIST_WATCH
+**Substitutes:** [WEARABLE_WRIST_WATCH](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_WRIST_WATCH)
 
 <!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704--><!--Device-MajorMinorClass-WEARABLE_WRIST_WATCH = 0x0704-End-->
 
@@ -1104,7 +1104,7 @@ Wearable pager.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_PAGER
+**Substitutes:** [WEARABLE_PAGER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_PAGER)
 
 <!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708--><!--Device-MajorMinorClass-WEARABLE_PAGER = 0x0708-End-->
 
@@ -1122,7 +1122,7 @@ Smart jacket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_JACKET
+**Substitutes:** [WEARABLE_JACKET](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_JACKET)
 
 <!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C--><!--Device-MajorMinorClass-WEARABLE_JACKET = 0x070C-End-->
 
@@ -1140,7 +1140,7 @@ Wearable helmet.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_HELMET
+**Substitutes:** [WEARABLE_HELMET](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_HELMET)
 
 <!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710--><!--Device-MajorMinorClass-WEARABLE_HELMET = 0x0710-End-->
 
@@ -1158,7 +1158,7 @@ Wearable glasses.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_GLASSES
+**Substitutes:** [WEARABLE_GLASSES](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.WEARABLE_GLASSES)
 
 <!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714--><!--Device-MajorMinorClass-WEARABLE_GLASSES = 0x0714-End-->
 
@@ -1176,7 +1176,7 @@ Minor Device Class field - Toy Major Class
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_UNCATEGORIZED
+**Substitutes:** [TOY_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800--><!--Device-MajorMinorClass-TOY_UNCATEGORIZED = 0x0800-End-->
 
@@ -1194,7 +1194,7 @@ Toy robot.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_ROBOT
+**Substitutes:** [TOY_ROBOT](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_ROBOT)
 
 <!--Device-MajorMinorClass-TOY_ROBOT = 0x0804--><!--Device-MajorMinorClass-TOY_ROBOT = 0x0804-End-->
 
@@ -1212,7 +1212,7 @@ Toy vehicle.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_VEHICLE
+**Substitutes:** [TOY_VEHICLE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_VEHICLE)
 
 <!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808--><!--Device-MajorMinorClass-TOY_VEHICLE = 0x0808-End-->
 
@@ -1230,7 +1230,7 @@ Humanoid toy doll.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_DOLL_ACTION_FIGURE
+**Substitutes:** [TOY_DOLL_ACTION_FIGURE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_DOLL_ACTION_FIGURE)
 
 <!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C--><!--Device-MajorMinorClass-TOY_DOLL_ACTION_FIGURE = 0x080C-End-->
 
@@ -1248,7 +1248,7 @@ Toy controller.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_CONTROLLER
+**Substitutes:** [TOY_CONTROLLER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_CONTROLLER)
 
 <!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810--><!--Device-MajorMinorClass-TOY_CONTROLLER = 0x0810-End-->
 
@@ -1266,7 +1266,7 @@ Toy gaming device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_GAME
+**Substitutes:** [TOY_GAME](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.TOY_GAME)
 
 <!--Device-MajorMinorClass-TOY_GAME = 0x0814--><!--Device-MajorMinorClass-TOY_GAME = 0x0814-End-->
 
@@ -1284,7 +1284,7 @@ Minor Device Class field - Health
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_UNCATEGORIZED
+**Substitutes:** [HEALTH_UNCATEGORIZED](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_UNCATEGORIZED)
 
 <!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900--><!--Device-MajorMinorClass-HEALTH_UNCATEGORIZED = 0x0900-End-->
 
@@ -1302,7 +1302,7 @@ Blood pressure device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_BLOOD_PRESSURE
+**Substitutes:** [HEALTH_BLOOD_PRESSURE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_BLOOD_PRESSURE)
 
 <!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904--><!--Device-MajorMinorClass-HEALTH_BLOOD_PRESSURE = 0x0904-End-->
 
@@ -1320,7 +1320,7 @@ Thermometer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_THERMOMETER
+**Substitutes:** [HEALTH_THERMOMETER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_THERMOMETER)
 
 <!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908--><!--Device-MajorMinorClass-HEALTH_THERMOMETER = 0x0908-End-->
 
@@ -1338,7 +1338,7 @@ Body scale.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_WEIGHING
+**Substitutes:** [HEALTH_WEIGHING](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_WEIGHING)
 
 <!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C--><!--Device-MajorMinorClass-HEALTH_WEIGHING = 0x090C-End-->
 
@@ -1356,7 +1356,7 @@ Blood glucose monitor.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_GLUCOSE
+**Substitutes:** [HEALTH_GLUCOSE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_GLUCOSE)
 
 <!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910--><!--Device-MajorMinorClass-HEALTH_GLUCOSE = 0x0910-End-->
 
@@ -1374,7 +1374,7 @@ Pulse oximeter.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PULSE_OXIMETER
+**Substitutes:** [HEALTH_PULSE_OXIMETER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PULSE_OXIMETER)
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914--><!--Device-MajorMinorClass-HEALTH_PULSE_OXIMETER = 0x0914-End-->
 
@@ -1392,7 +1392,7 @@ Heart rate monitor.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PULSE_RATE
+**Substitutes:** [HEALTH_PULSE_RATE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PULSE_RATE)
 
 <!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918--><!--Device-MajorMinorClass-HEALTH_PULSE_RATE = 0x0918-End-->
 
@@ -1410,7 +1410,7 @@ Health data display.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_DATA_DISPLAY
+**Substitutes:** [HEALTH_DATA_DISPLAY](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_DATA_DISPLAY)
 
 <!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C--><!--Device-MajorMinorClass-HEALTH_DATA_DISPLAY = 0x091C-End-->
 
@@ -1428,7 +1428,7 @@ Step counter.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_STEP_COUNTER
+**Substitutes:** [HEALTH_STEP_COUNTER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_STEP_COUNTER)
 
 <!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920--><!--Device-MajorMinorClass-HEALTH_STEP_COUNTER = 0x0920-End-->
 
@@ -1446,7 +1446,7 @@ Body composition analyzer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_BODY_COMPOSITION_ANALYZER
+**Substitutes:** [HEALTH_BODY_COMPOSITION_ANALYZER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_BODY_COMPOSITION_ANALYZER)
 
 <!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924--><!--Device-MajorMinorClass-HEALTH_BODY_COMPOSITION_ANALYZER = 0x0924-End-->
 
@@ -1464,7 +1464,7 @@ Hygrometer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PEAK_FLOW_MOITOR
+**Substitutes:** [HEALTH_PEAK_FLOW_MOITOR](#HEALTH_PEAK_FLOW_MOITOR)
 
 <!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MOITOR = 0x0928--><!--Device-MajorMinorClass-HEALTH_PEAK_FLOW_MOITOR = 0x0928-End-->
 
@@ -1482,7 +1482,7 @@ Medication monitor.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_MEDICATION_MONITOR
+**Substitutes:** [HEALTH_MEDICATION_MONITOR](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_MEDICATION_MONITOR)
 
 <!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C--><!--Device-MajorMinorClass-HEALTH_MEDICATION_MONITOR = 0x092C-End-->
 
@@ -1500,7 +1500,7 @@ Prosthetic knee.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_KNEE_PROSTHESIS
+**Substitutes:** [HEALTH_KNEE_PROSTHESIS](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_KNEE_PROSTHESIS)
 
 <!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930--><!--Device-MajorMinorClass-HEALTH_KNEE_PROSTHESIS = 0x0930-End-->
 
@@ -1518,7 +1518,7 @@ Prosthetic ankle.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_ANKLE_PROSTHESIS
+**Substitutes:** [HEALTH_ANKLE_PROSTHESIS](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_ANKLE_PROSTHESIS)
 
 <!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934--><!--Device-MajorMinorClass-HEALTH_ANKLE_PROSTHESIS = 0x0934-End-->
 
@@ -1536,7 +1536,7 @@ Generic health management device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_GENERIC_HEALTH_MANAGER
+**Substitutes:** [HEALTH_GENERIC_HEALTH_MANAGER](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_GENERIC_HEALTH_MANAGER)
 
 <!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938--><!--Device-MajorMinorClass-HEALTH_GENERIC_HEALTH_MANAGER = 0x0938-End-->
 
@@ -1554,7 +1554,7 @@ Personal mobility device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PERSONAL_MOBILITY_DEVICE
+**Substitutes:** [HEALTH_PERSONAL_MOBILITY_DEVICE](ohos.bluetoothManager/bluetoothManager.MajorMinorClass.HEALTH_PERSONAL_MOBILITY_DEVICE)
 
 <!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C--><!--Device-MajorMinorClass-HEALTH_PERSONAL_MOBILITY_DEVICE = 0x093C-End-->
 

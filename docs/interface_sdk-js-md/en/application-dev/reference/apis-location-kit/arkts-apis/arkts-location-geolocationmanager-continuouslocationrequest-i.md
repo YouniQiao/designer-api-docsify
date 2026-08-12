@@ -13,7 +13,7 @@ Configuring parameters in continuous location requests.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## interval
@@ -44,7 +44,7 @@ locationScenario: UserActivityScenario | PowerConsumptionScenario
 
 Location scenario. You can select a user activity scenario or power consumption scenario.
 
-**Type:** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| PowerConsumptionScenario
+**Type:** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
 
 **Since:** 12
 

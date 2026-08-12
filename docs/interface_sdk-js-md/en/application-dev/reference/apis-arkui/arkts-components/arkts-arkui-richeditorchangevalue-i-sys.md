@@ -18,7 +18,7 @@ changeReason?: TextChangeReason
 
 Reason why the component content changes.
 
-**Type:** [TextChangeReason](../arkts-apis/arkts-arkui-textcommon-textchangereason-e-sys.md)
+**Type:** TextChangeReason
 
 **Since:** 20
 

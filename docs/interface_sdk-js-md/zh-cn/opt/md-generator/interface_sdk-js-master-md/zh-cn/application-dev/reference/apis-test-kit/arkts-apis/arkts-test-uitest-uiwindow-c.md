@@ -1,6 +1,6 @@
 # UiWindow
 
-UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过{@link Driver#findWindow}接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
+UiWindow代表了UI界面上的一个窗口，提供窗口属性获取，窗口拖动、调整窗口大小等能力。该类对象可通过[findWindow](arkts-test-uitest-driver-c.md#findWindow)接口获取。该类提供的所有方法都使用Promise方式作为异步方法，需使用await方式调用。
 
 **起始版本：** 9
 
@@ -28,15 +28,15 @@ close(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -71,14 +71,14 @@ focus(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -113,14 +113,14 @@ getBounds(): Promise<Rect>
 
 | 类型 |
 | --- |
-| Promise&lt;Rect&gt; |
+| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -158,14 +158,14 @@ getBundleName(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -203,14 +203,14 @@ getDisplayId(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -245,14 +245,14 @@ getTitle(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -287,14 +287,14 @@ getWindowMode(): Promise<WindowMode>
 
 | 类型 |
 | --- |
-| Promise&lt;WindowMode&gt; |
+| Promise&lt;[WindowMode](arkts-test-uitest-windowmode-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -329,14 +329,14 @@ isActive(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -361,13 +361,13 @@ isActived(): Promise<boolean>
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](arkts-test-uitest-uiwindow-c.md#isactive)替代。
+> 从API version 9开始支持，从API version 11开始废弃，建议使用[isActive&lt;sup&gt;11+&lt;/sup&gt;](#isActive)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [UiWindow#isActive](arkts-test-uitest-uiwindow-c.md#isactive)
+**替代接口：** [isActive](#isActive)
 
 <!--Device-UiWindow-isActived(): Promise<boolean>--><!--Device-UiWindow-isActived(): Promise<boolean>-End-->
 
@@ -377,14 +377,14 @@ isActived(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -419,14 +419,14 @@ isFocused(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -461,15 +461,15 @@ maximize(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -504,15 +504,15 @@ minimize(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -554,16 +554,16 @@ moveTo(x: number, y: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -606,16 +606,16 @@ resize(wide: number, height: number, direction: ResizeDirection): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## resume
 
@@ -637,15 +637,15 @@ resume(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 
@@ -680,15 +680,15 @@ split(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) |
-| [17000005](../errorcode-uitest.md#17000005-操作不支持) |
-| [17000004](../errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-操作不支持) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-目标控件窗口不可见或已销毁) |
 
 ## 示例
 

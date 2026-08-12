@@ -20,7 +20,7 @@ leftBottom: DepthVector3
 
 Left-bottom corner position in 3D space.
 
-**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**Type:** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ leftTop: DepthVector3
 
 Left-top corner position in 3D space.
 
-**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**Type:** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -68,7 +68,7 @@ positionMode?: SpatialPositionMode
 
 Coordinate mode of the corner positions.
 
-**Type:** [SpatialPositionMode](../arkts-apis/arkts-arkui-common-spatialpositionmode-e-sys.md)
+**Type:** [SpatialPositionMode](arkts-arkui-spatialpositionmode-e-sys.md)
 
 **Default:** SpatialPositionMode.WORLD_XYZ
 
@@ -94,7 +94,7 @@ rightBottom: DepthVector3
 
 Right-bottom corner position in 3D space.
 
-**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**Type:** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **Since:** 26.0.0
 
@@ -118,7 +118,7 @@ rightTop: DepthVector3
 
 Right-top corner position in 3D space.
 
-**Type:** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**Type:** [DepthVector3](arkts-arkui-depthvector3-i-sys.md)
 
 **Since:** 26.0.0
 

@@ -15,7 +15,7 @@ ALL_EXPAND = 0
 ```
 
 Counting all child node after expansion. When a lazy loading node (for example,  
-[LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i)) is encountered, the node is expanded and the number of all child nodes is returned.
+[LazyForEach](../@internal/component/ets/lazy_for_each)) is encountered, the node is expanded and the number of all child nodes is returned.
 
 Whether to expand lazy loading nodes: yes
 

@@ -13,7 +13,7 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 ## Modules to Import
 
 ```TypeScript
-import { url } from 'kits/@kit.ArkTS';
+import { url } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ URL constructor, which is used to instantiate a URL object.url: Absolute or rela
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.url.URL.parseURL
+**Substitutes:** [parseURL](#parseURL)
 
 <!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
@@ -90,13 +90,13 @@ Parses a URL.
 
 | Type | Description |
 | --- | --- |
-| [URL](arkts-arkts-url-url-c.md) |  |
+| URL |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) | Invalid url string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) | Invalid url string. |
 
 ## Examples
 
@@ -413,7 +413,7 @@ Gets the URLSearchParams object that represents the URL query parameter.This pro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.url.URL.params
+**Substitutes:** [params](ohos.url.URL.params)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

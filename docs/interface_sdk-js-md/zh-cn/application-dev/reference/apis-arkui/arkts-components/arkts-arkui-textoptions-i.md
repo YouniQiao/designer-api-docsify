@@ -18,7 +18,7 @@ controller: TextController
 
 文本控制器。
 
-**类型：** [TextController](../arkts-apis/arkts-arkui-text-textcontroller-c.md)
+**类型：** [TextController](arkts-arkui-textcontroller-c.md)
 
 **起始版本：** 11
 

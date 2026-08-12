@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget
+**替代接口：** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
 
 <!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 
@@ -28,7 +28,7 @@ addEventListener(type: string, listener: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.addEventListener
+**替代接口：** [addEventListener](ohos.worker.WorkerEventTarget.addEventListener)
 
 <!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
 
@@ -39,7 +39,7 @@ addEventListener(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 监听的事件类型。 |
-| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 | listener 当指定类型的事件发生时调用的回调函数。 |
 
 ## 示例
 
@@ -68,7 +68,7 @@ dispatchEvent(event: Event): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.dispatchEvent
+**替代接口：** [dispatchEvent](ohos.worker.WorkerEventTarget.dispatchEvent)
 
 <!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
 
@@ -78,7 +78,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 | 需要分发的事件。 |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 | 需要分发的事件。 |
 
 **返回值：**
 
@@ -143,7 +143,7 @@ removeAllListener(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.removeAllListener
+**替代接口：** [removeAllListener](ohos.worker.WorkerEventTarget.removeAllListener)
 
 <!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
 
@@ -178,7 +178,7 @@ removeEventListener(type: string, callback?: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.removeEventListener
+**替代接口：** [removeEventListener](ohos.worker.WorkerEventTarget.removeEventListener)
 
 <!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
 
@@ -189,7 +189,7 @@ removeEventListener(type: string, callback?: EventListener): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | string | 是 | 需要移除的事件类型。 |
-| callback | [EventListener](arkts-arkts-process-eventlistener-t.md) | 否 | 要移除的事件监听的回调函数。 |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 | 要移除的事件监听的回调函数。 |
 
 ## 示例
 

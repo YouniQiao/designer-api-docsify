@@ -8,7 +8,7 @@ Defines information about the images or videos selected.
 
 **Deprecated since:** 12
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md)
+**Substitutes:** [PhotoSelectResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#PhotoSelectResult)
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 
@@ -17,7 +17,7 @@ Defines information about the images or videos selected.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## isOriginalPhoto
@@ -36,7 +36,7 @@ Whether the selected image is the original one. The value **true** means the sel
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#isOriginalPhoto](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#isoriginalphoto)
+**Substitutes:** [isOriginalPhoto](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#isOriginalPhoto)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,7 +51,7 @@ photoUris: Array<string>
 ```
 
 URIs of the media files selected. This URI array can be used only by  
-[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets). For details, see  
+[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets). For details, see  
 [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;
@@ -62,7 +62,7 @@ URIs of the media files selected. This URI array can be used only by
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#photoUris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photouris)
+**Substitutes:** [photoUris](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#photoUris)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -11,7 +11,7 @@ Defines a **RunningLock** object.
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## hold
@@ -40,8 +40,8 @@ Holds a running lock.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -133,7 +133,7 @@ Checks whether this running lock is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.RunningLock.isHolding](arkts-basicservices-runninglock-runninglock-c.md#isholding)
+**Substitutes:** [isHolding](#isHolding)
 
 <!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
@@ -170,7 +170,7 @@ Locks and holds a **RunningLock** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.RunningLock.hold](arkts-basicservices-runninglock-runninglock-c.md#hold)
+**Substitutes:** [hold](#hold)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -217,7 +217,7 @@ Releases this running lock.
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -262,7 +262,7 @@ Releases this running lock.
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.RunningLock.unhold](arkts-basicservices-runninglock-runninglock-c.md#unhold)
+**Substitutes:** [unhold](#unhold)
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 

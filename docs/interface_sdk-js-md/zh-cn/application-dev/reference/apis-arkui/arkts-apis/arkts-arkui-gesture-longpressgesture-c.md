@@ -6,7 +6,7 @@
 > 
 > 部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
 
-**继承/实现关系：** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**继承/实现关系：** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **起始版本：** 23
 
@@ -75,7 +75,7 @@ onAction(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势识别成功回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 长按手势识别成功回调函数。 |
 
 **返回值：**
 
@@ -105,7 +105,7 @@ onActionCancel(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势取消回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 长按手势取消回调函数。 |
 
 **返回值：**
 
@@ -135,7 +135,7 @@ onActionEnd(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势结束回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 长按手势结束回调函数。 |
 
 **返回值：**
 

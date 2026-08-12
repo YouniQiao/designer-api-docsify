@@ -13,7 +13,7 @@ Config of editor.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## capitalizeMode
@@ -24,7 +24,7 @@ capitalizeMode?: CapitalizeMode
 
 Indicates the capitalize mode of the edit box.
 
-**Type:** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
+**Type:** CapitalizeMode
 
 **Default:** CapitalizeMode.NONE
 
@@ -98,7 +98,7 @@ selection?: Range
 
 Selection information.
 
-**Type:** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**Type:** Range
 
 **Since:** 10
 

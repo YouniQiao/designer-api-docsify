@@ -18,7 +18,7 @@ readonly depthProfiles: Array<DepthProfile>
 
 Supported depth stream profiles.
 
-**类型：** Array&lt;DepthProfile&gt;
+**类型：** Array&lt;[DepthProfile](arkts-camera-camera-depthprofile-i-sys.md)&gt;
 
 **起始版本：** 13
 

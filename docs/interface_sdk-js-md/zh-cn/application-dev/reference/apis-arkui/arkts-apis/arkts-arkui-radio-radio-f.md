@@ -26,7 +26,7 @@ Defines Radio Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [RadioOptions](arkts-arkui-radio-radiooptions-i.md) | 是 | the options of Radio. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 

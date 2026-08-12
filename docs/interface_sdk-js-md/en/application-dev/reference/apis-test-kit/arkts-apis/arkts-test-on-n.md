@@ -1,6 +1,6 @@
 # ON
 
-The static builder for building {@link On}object conveniently,usage example:ON.text('txt').enabled(true).
+The static builder for building [On](arkts-test-uitest-on-c.md#On)object conveniently,usage example:ON.text('txt').enabled(true).
 
 **Since:** 23
 
@@ -13,7 +13,7 @@ The static builder for building {@link On}object conveniently,usage example:ON.t
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## Summary
@@ -33,17 +33,17 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 | [selected](arkts-test-on-selected-f.md#selected) | Specifies the selected status of the target Component. |
 | [checked](arkts-test-on-checked-f.md#checked) | Specifies the checked status of the target Component. |
 | [checkable](arkts-test-on-checkable-f.md#checkable) | Specifies the checkable status of the target Component. |
-| [isBefore](arkts-test-on-isbefore-f.md#isbefore) | Requires that the target Component which is before another Component that specified by the given {@link On}object,used to locate Component relatively. |
-| [isAfter](arkts-test-on-isafter-f.md#isafter) | Requires that the target Component which is after another Component that specified by the given {@link On}object,used to locate Component relatively. |
-| [within](arkts-test-on-within-f.md#within) | Requires that the target Component which is inside of another Component that specified by the given {@link On}object,used to locate Component relatively. |
+| [isBefore](arkts-test-on-isbefore-f.md#isbefore) | Requires that the target Component which is before another Component that specified by the given [On](arkts-test-uitest-on-c.md#On)object,used to locate Component relatively. |
+| [isAfter](arkts-test-on-isafter-f.md#isafter) | Requires that the target Component which is after another Component that specified by the given [On](arkts-test-uitest-on-c.md#On)object,used to locate Component relatively. |
+| [within](arkts-test-on-within-f.md#within) | Requires that the target Component which is inside of another Component that specified by the given [On](arkts-test-uitest-on-c.md#On)object,used to locate Component relatively. |
 | [inWindow](arkts-test-on-inwindow-f.md#inwindow) | Specifies the bundleName of the application which the window that the target Component is located belongs. |
 | [belongingDisplay](arkts-test-on-belongingdisplay-f.md#belongingdisplay) | Specifies the displayId to which the target Component belongs. |
 | [description](arkts-test-on-description-f.md#description) | Specifies the description for the target Component. |
 | [id](arkts-test-on-id-f.md#id-1) | Specifies the id of the target Component. |
 | [type](arkts-test-on-type-f.md#type-1) | Specifies the type of the target Component. |
 | [hint](arkts-test-on-hint-f.md#hint) | Specifies the hint for the target Component. |
-| [originalText](arkts-test-on-originaltext-f.md#originaltext) | Specifies the original text for the target Component.If the accessibility property  [accessibilityLevel](../../apis-arkui/arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitylevel)of a component is set to 'no' or 'no-hide-descendants',you will not be able to use {@link On.text} to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with {@link On.text} |
-| [beforeComponent](arkts-test-on-beforecomponent-f.md#beforecomponent) | Requires that the target Component which is before another Component that specified by the given {@link Component}object,used to locate Component relatively. |
-| [afterComponent](arkts-test-on-aftercomponent-f.md#aftercomponent) | Requires that the target Component which is after another Component that specified by the given {@link Component}object,used to locate Component relatively. |
-| [withinComponent](arkts-test-on-withincomponent-f.md#withincomponent) | Requires that the target Component which is inside of another Component that specified by the given {@link Component}object,used to locate Component relatively. |
+| [originalText](arkts-test-on-originaltext-f.md#originaltext) | Specifies the original text for the target Component.If the accessibility property  [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)of a component is set to 'no' or 'no-hide-descendants',you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text) |
+| [beforeComponent](arkts-test-on-beforecomponent-f.md#beforecomponent) | Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively. |
+| [afterComponent](arkts-test-on-aftercomponent-f.md#aftercomponent) | Requires that the target Component which is after another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively. |
+| [withinComponent](arkts-test-on-withincomponent-f.md#withincomponent) | Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively. |
 

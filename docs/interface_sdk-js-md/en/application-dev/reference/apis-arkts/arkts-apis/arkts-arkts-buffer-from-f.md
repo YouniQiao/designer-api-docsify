@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## from
@@ -83,7 +83,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 ## Examples
 
@@ -132,7 +132,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 
 ## from
@@ -248,7 +248,7 @@ Creates a **Buffer** object based on a string in the given encoding format.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | string | String | Yes | String. |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format. The default value is **'utf8'**. |
+| encoding | BufferEncoding | No | Encoding format. The default value is **'utf8'**. |
 
 **Return value:**
 

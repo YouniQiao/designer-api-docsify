@@ -72,7 +72,7 @@ Playback capture source type.
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2--><!--Device-SourceType-SOURCE_TYPE_PLAYBACK_CAPTURE = 2-End-->
 
@@ -84,8 +84,8 @@ Playback capture source type.
 SOURCE_TYPE_VOICE_COMMUNICATION = 7
 ```
 
-Voice communication source. (The 3A algorithm is not enabled if recording is started independently. It is enabled when the AudioRenderer of the [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md) or  
-[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md) type is also used to start playback.)
+Voice communication source. (The 3A algorithm is not enabled if recording is started independently. It is enabled when the AudioRenderer of the [STREAM_USAGE_VOICE_COMMUNICATION](arkts-audio-audio-streamusage-e.md#StreamUsage) or  
+[STREAM_USAGE_VIDEO_COMMUNICATION](arkts-audio-audio-streamusage-e.md#StreamUsage) type is also used to start playback.)
 
 **Since:** 8
 

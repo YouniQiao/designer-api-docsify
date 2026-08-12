@@ -15,7 +15,7 @@ Defines the download options, including the **allowNetwork** and **order** field
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## allowNetwork

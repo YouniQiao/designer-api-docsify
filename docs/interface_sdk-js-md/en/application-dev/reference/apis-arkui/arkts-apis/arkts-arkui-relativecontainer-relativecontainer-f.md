@@ -25,13 +25,13 @@ Defines RelativeContainer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |  |
+| [RelativeContainerAttribute](arkts-arkui-relativecontainer-relativecontainerattribute-i.md) |  |
 
 
 ## RelativeContainer
@@ -61,12 +61,12 @@ Defines RelativeContainer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RelativeContainerAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RelativeContainerAttribute](arkts-arkui-relativecontainer-relativecontainerattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |  |
+| [RelativeContainerAttribute](arkts-arkui-relativecontainer-relativecontainerattribute-i.md) |  |
 

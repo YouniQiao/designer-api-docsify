@@ -2,7 +2,7 @@
 
 Defines a reminder for a scheduled timer.
 
-**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
+**Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#ReminderRequest)
 
 **Since:** 7
 
@@ -10,7 +10,7 @@ Defines a reminder for a scheduled timer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md)
+**Substitutes:** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#ReminderRequestTimer)
 
 <!--Device-reminderAgent-interface ReminderRequestTimer extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestTimer extends ReminderRequest-End-->
 
@@ -19,7 +19,7 @@ Defines a reminder for a scheduled timer.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## triggerTimeInSeconds
@@ -38,7 +38,7 @@ Number of seconds in the countdown timer.Unit: s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ReminderRequestTimer.triggerTimeInSeconds](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#triggertimeinseconds)
+**Substitutes:** [triggerTimeInSeconds](reminderAgentManager.ReminderRequestTimer.triggerTimeInSeconds)
 
 <!--Device-ReminderRequestTimer-triggerTimeInSeconds: number--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: number-End-->
 

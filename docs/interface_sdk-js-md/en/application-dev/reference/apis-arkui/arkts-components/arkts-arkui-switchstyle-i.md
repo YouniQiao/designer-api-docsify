@@ -20,7 +20,7 @@ Color of the circular slider when the component is of the **Switch** type.
 
 Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -105,7 +105,7 @@ Background color of the component when it is of the **Switch** type and is disab
 Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when   
 [optimizing color mode switching overhead](../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 

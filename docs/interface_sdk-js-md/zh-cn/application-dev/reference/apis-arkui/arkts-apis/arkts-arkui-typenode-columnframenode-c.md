@@ -34,11 +34,11 @@ abstract initialize(options?: ColumnOptions | ColumnOptionsV2): ColumnAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](../arkts-components/arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | 否 | Column节点的选项。 |
+| options | ColumnOptions \| ColumnOptionsV2 | 否 | Column节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) |  |
+| ColumnAttribute |  |
 

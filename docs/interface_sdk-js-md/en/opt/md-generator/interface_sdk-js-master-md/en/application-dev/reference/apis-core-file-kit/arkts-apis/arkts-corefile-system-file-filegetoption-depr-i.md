@@ -60,7 +60,7 @@ Callback invoked when the API call fails.
 success?: (file: FileResponse) => void
 ```
 
-Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md).
+Callback invoked when the API call is successful. **file** is [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#FileResponse).
 
 **Since:** 3
 
@@ -74,7 +74,7 @@ Callback invoked when the API call is successful. **file** is [FileResponse](ark
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| file | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | Yes |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | Yes |
 
 ## recursive
 

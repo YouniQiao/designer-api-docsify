@@ -2,7 +2,7 @@
 
 Message options for the dialog box, combining message content with text style.
 
-**Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md)
+**Inheritance/Implementation:** DialogMessage extends [DialogTextStyleOptions](arkts-arkui-dialog-dialogtextstyleoptions-i.md#DialogTextStyleOptions)
 
 **Since:** 26.1.0
 
@@ -13,7 +13,7 @@ Message options for the dialog box, combining message content with text style.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## content

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { particleAbility } from 'kits/@kit.AbilityKit';
+import { particleAbility } from '@kit.AbilityKit';
 ```
 
 ## acquireDataAbilityHelper

@@ -18,10 +18,10 @@ Attaches a callback that is invoked when the Promise is settled (fulfilled or re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| onfinally | (() =&gt; void) \| undefined \| null | No |
+| onfinally | (() = & gt; void) \ | undefined \| null | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |

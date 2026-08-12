@@ -1,6 +1,6 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to {@link keyboardAppearance} for setting the web keyboard appearance mode.
+Enum type supplied to [keyboardAppearance](keyboardAppearance) for setting the web keyboard appearance mode.
 
 **Since:** 26.0.0
 

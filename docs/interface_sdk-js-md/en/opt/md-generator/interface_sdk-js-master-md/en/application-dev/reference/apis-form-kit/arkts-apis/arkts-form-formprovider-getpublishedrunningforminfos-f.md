@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedRunningFormInfos
@@ -26,15 +26,15 @@ Obtains information about all widgets that have been added to the home screen. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; |
+| Promise & lt;Array & lt;formInfo.RunningFormInfo & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

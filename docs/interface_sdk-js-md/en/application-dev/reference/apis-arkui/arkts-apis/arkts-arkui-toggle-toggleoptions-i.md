@@ -18,7 +18,7 @@ isOn?: boolean | undefined | Bindable<boolean>
 
 Whether the toggle is on.
 
-**Type:** boolean \| undefined \| Bindable&lt;boolean&gt;
+**Type:** boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt;
 
 **Since:** 23
 

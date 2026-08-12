@@ -12,7 +12,7 @@ declare function truncate(path: string, len?: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function truncate(path: string, len?: number): Promise<void>--><!--Device-unnamed-declare function truncate(path: string, len?: number): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ declare function truncate(path: string, len?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## truncate
@@ -44,7 +44,7 @@ declare function truncate(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function truncate(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function truncate(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -70,7 +70,7 @@ declare function truncate(path: string, len: number, callback: AsyncCallback<voi
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function truncate(path: string, len: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function truncate(path: string, len: number, callback: AsyncCallback<void>): void-End-->
 

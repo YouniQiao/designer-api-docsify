@@ -16,7 +16,7 @@ color: ColorMetrics
 
 Color value of the linear gradient color breakpoint.
 
-**Type:** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 23
 

@@ -28,11 +28,11 @@ Defines a DistortionComponent that provides spatial distortion visual effects.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [DistortionComponentOptions](arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md) | 否 | DistortionComponent Options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of DistortionComponent. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of DistortionComponent. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DistortionComponentAttribute](../arkts-components/arkts-arkui-distortioncomponent-attribute.md) |  |
+| [DistortionComponentAttribute](arkts-arkui-distortioncomponent-distortioncomponentattribute-i.md) |  |
 

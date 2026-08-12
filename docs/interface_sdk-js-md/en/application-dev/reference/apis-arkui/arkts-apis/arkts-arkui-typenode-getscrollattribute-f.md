@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ScrollAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

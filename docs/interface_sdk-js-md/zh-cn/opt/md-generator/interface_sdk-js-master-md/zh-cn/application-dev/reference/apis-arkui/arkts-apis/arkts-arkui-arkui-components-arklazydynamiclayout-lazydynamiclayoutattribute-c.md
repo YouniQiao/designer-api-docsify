@@ -32,7 +32,7 @@ onVisibleIndexesChange(callback: Callback<number[]> | undefined): LazyDynamicLay
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number[]&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-t.md) & lt;number[] & gt; \ | undefined | 是 |
 
 **返回值：**
 

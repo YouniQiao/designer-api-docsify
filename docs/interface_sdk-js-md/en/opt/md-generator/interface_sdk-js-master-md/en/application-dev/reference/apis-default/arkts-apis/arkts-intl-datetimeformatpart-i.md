@@ -6,7 +6,7 @@
 type: DateTimeFormatPartTypes
 ```
 
-**Type:** DateTimeFormatPartTypes
+**Type:** [DateTimeFormatPartTypes](arkts-intl-datetimeformatparttypes-t.md)
 
 ## value
 

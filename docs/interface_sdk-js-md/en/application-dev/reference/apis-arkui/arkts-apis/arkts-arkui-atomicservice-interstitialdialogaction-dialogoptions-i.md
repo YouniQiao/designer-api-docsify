@@ -13,7 +13,7 @@ Defines the attributes specific to the dialog box and custom click actions for t
 ## Modules to Import
 
 ```TypeScript
-import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from 'kits/@kit.ArkUI';
+import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@kit.ArkUI';
 ```
 
 ## backgroundImage
@@ -24,7 +24,7 @@ backgroundImage?: Resource
 
 The background of the dialog.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ foregroundImage?: Resource
 
 The foreground of the dialog.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ onDialogClick?: Callback<void>
 
 The action after clicking dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 12
 
@@ -124,7 +124,7 @@ onDialogClose?: Callback<void>
 
 The action after clicking close button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 12
 
@@ -144,7 +144,7 @@ subtitle?: ResourceStr
 
 The subtitle of the dialog.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -164,7 +164,7 @@ subtitleColor?: ResourceStr | Color
 
 The color of the subtitle.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
+**Type:** ResourceStr \| Color
 
 **Since:** 12
 
@@ -184,7 +184,7 @@ title?: ResourceStr
 
 The title of the dialog.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -204,7 +204,7 @@ titleColor?: ResourceStr | Color
 
 The color of the title.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Color
+**Type:** ResourceStr \| Color
 
 **Since:** 12
 

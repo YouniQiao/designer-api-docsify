@@ -32,5 +32,5 @@ Specifies the displayId to which the target Component belongs.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 

@@ -16,7 +16,7 @@
 
 表示变化方式为曲线变化时，属性变化的配置。数组类型表示当前属性可以设置多段动画，如0ms-3000ms，3000ms-5000ms，5000ms-8000ms分别设置动画。T为number。
 
-**类型：** Array&lt;ParticlePropertyAnimation&lt;T&gt;&gt;
+**类型：** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;T&gt;&gt;
 
 **起始版本：** 10
 

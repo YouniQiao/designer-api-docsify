@@ -11,7 +11,7 @@ ControlCenterQuery is used to check whether the camera controller is supported.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedEffectTypes
@@ -34,7 +34,7 @@ Obtains the effect types supported by the camera controller.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;ControlCenterEffectType&gt; |
+| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; |
 
 ## isControlCenterSupported
 

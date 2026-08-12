@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## dial
@@ -18,7 +18,7 @@ Makes a call.
 
 **Deprecated since:** 9
 
-**Substitutes:** telephony.call#dialCall
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -60,7 +60,7 @@ Makes a call.
 
 **Deprecated since:** 9
 
-**Substitutes:** telephony.call#dialCall
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -79,7 +79,7 @@ Makes a call.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -109,7 +109,7 @@ Makes a call.
 
 **Deprecated since:** 9
 
-**Substitutes:** telephony.call#dialCall
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 

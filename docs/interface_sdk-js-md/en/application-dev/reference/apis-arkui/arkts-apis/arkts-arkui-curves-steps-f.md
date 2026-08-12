@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## steps
@@ -20,7 +20,7 @@ Creates a step curve.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
+**Substitutes:** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepsCurve)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 

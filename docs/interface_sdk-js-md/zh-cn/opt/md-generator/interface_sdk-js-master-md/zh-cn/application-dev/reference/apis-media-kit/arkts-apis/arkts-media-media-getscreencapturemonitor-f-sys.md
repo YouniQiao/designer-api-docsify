@@ -20,14 +20,14 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 类型 |
 | --- |
-| Promise&lt;ScreenCaptureMonitor&gt; |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-multimedia-media-screencapturemonitor-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 Represents error that is thrown when a method has been invoked at an illegal or inappropriate time.
 
-**Inheritance/Implementation:** IllegalStateError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** IllegalStateError extends [Error](Error)
 
 **Since:** 26.0.0
 

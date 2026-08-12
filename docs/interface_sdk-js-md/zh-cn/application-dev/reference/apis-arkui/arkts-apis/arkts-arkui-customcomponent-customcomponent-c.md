@@ -46,7 +46,7 @@ Implementation for creating a custom component
 | factory | () =&gt; S | 是 | factory to create instance of custom component |
 | initializers | () =&gt; S_Options | 否 | initial data for all the fields in custom component |
 | reuseId | string | 否 | reuse id for reusable. Only valid if custom component decorated with @Reusable |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | tail closure for custom component |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | tail closure for custom component |
 
 ## aboutToReuse
 
@@ -95,5 +95,5 @@ Constructor to use to create a customComponent instance.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | useSharedStorage | boolean | 否 | determine whether to use the LocalStorage instance object returned by UIContext.getSharedLocalStorage() interface. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | 否 | localStorage instance. |
+| storage | LocalStorage | 否 | localStorage instance. |
 

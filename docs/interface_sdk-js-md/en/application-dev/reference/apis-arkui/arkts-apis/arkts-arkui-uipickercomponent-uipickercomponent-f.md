@@ -25,8 +25,8 @@ Defines the Picker container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UIPickerComponentOptions](../arkts-components/arkts-arkui-uipickercomponentoptions-i.md) | No | picker options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponent-uipickercomponentoptions-i.md) | No | picker options. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines the UIPickerComponent component. It requires call setUIPickerComponentOp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;UIPickerComponentAttribute&gt; | Yes | the callback to set up component's attribute. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 

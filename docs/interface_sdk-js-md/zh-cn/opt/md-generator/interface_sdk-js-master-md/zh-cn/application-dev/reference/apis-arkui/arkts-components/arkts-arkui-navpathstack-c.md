@@ -10,7 +10,7 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 > 1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
 
 > 例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置
-> [NavigationOption](arkts-arkui-navigationoptions-i.md)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
+> [NavigationOption](arkts-arkui-navigationoptions-i.md#NavigationOptions)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
 > 
 > 2.不建议开发者通过监听页面生命周期的方式管理自己的导航控制器。
 > 
@@ -110,7 +110,7 @@ getAllPathName(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getIndexByName
 
@@ -140,7 +140,7 @@ getIndexByName(name: string): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## getParamByIndex
 
@@ -200,7 +200,7 @@ getParamByName(name: string): Array<unknown>
 
 | 类型 |
 | --- |
-| Array&lt;unknown&gt; |
+| Array & lt;unknown & gt; |
 
 ## getParent
 
@@ -250,7 +250,7 @@ getPathStack(): Array<NavPathInfo>
 
 | 类型 |
 | --- |
-| Array&lt;NavPathInfo&gt; |
+| Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; |
 
 ## moveIndexToTop
 
@@ -552,16 +552,16 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestination
 
@@ -569,7 +569,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
+将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 12
 
@@ -592,16 +592,16 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestinationByName
 
@@ -633,16 +633,16 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushDestinationByName
 
@@ -668,23 +668,23 @@ pushDestinationByName(name: string, param: Object, onPop: import('../api/@ohos.b
 | --- | --- | --- |
 | name | string | 是 |
 | param | Object | 是 |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 是 |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## pushPath
 
@@ -717,7 +717,7 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
+将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 12
 
@@ -786,7 +786,7 @@ pushPathByName(name: string, param: Object, onPop: import('../api/@ohos.base').C
 | --- | --- | --- |
 | name | string | 是 |
 | param | Object | 是 |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 是 |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 ## removeByIndexes
@@ -811,7 +811,7 @@ removeByIndexes(indexes: Array<number>): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indexes | Array&lt;number&gt; | 是 |
+| indexes | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
@@ -857,7 +857,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 
 将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的  
 [onReady](NavDestinationAttribute#onReady)回调中获取，也可以在  
-[NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md/arkts-arkui-uiobserver-navdestinationinfo-i.md)中获取。
+[NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md#NavDestinationInfo)中获取。
 
 **起始版本：** 12
 
@@ -887,7 +887,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
+替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 18
 
@@ -910,16 +910,16 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) |
+| [100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) |
 
 ## replacePath
 
@@ -952,7 +952,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-替换路由栈操作，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md)，来实现不同的行为。
+替换路由栈操作，具体根据options中指定不同的[LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 12
 
@@ -1035,8 +1035,8 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 > 
 > 2. 通过批量入栈功能更新的路由栈，各页面的生命周期事件触发顺序为从栈顶到底部依次触发，这与其它入栈接口从栈底到顶部的触发顺序不同。
 > 
-> 3. 开发者可以通过[NavPathInfo](arkts-arkui-navpathinfo-c.md)中的页面唯一标识符navDestinationId来操作已有页面，该id由系统默认生成且全局唯一（可以通过
-> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack)接口获取，不可主动赋新值）。若该id在当前路由栈中不存在，则表示新增页面，若在当前路由栈中存在，同时对应的name相同，则表示复用已
+> 3. 开发者可以通过[NavPathInfo](arkts-arkui-navpathinfo-c.md#NavPathInfo)中的页面唯一标识符navDestinationId来操作已有页面，该id由系统默认生成且全局唯一（可以通过
+> [getPathStack](#getPathStack)接口获取，不可主动赋新值）。若该id在当前路由栈中不存在，则表示新增页面，若在当前路由栈中存在，同时对应的name相同，则表示复用已
 > 有页面。
 
 **起始版本：** 19
@@ -1053,7 +1053,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | 是 |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | 是 |
 | animated | boolean | 否 |
 
 ## size

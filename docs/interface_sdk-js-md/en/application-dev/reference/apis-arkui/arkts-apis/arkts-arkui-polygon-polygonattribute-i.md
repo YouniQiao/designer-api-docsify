@@ -2,7 +2,7 @@
 
 Provides attribute for Polygon.
 
-**Inheritance/Implementation:** PolygonAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** PolygonAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;PolygonAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Called when the vertex coordinate list of a polygon is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ShapePoint&gt; \| undefined | Yes |  |
+| value | Array&lt;[ShapePoint](arkts-arkui-shapepoint-t.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Set Polygon options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | No | Polygon constructor options. |
+| options | [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | No | Polygon constructor options. |
 
 **Return value:**
 

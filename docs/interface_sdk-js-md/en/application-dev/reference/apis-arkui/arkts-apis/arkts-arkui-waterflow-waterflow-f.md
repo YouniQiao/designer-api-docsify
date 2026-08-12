@@ -25,8 +25,8 @@ Defines WaterFlow Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WaterFlowOptions](../arkts-components/arkts-arkui-waterflowoptions-i.md) | No | options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| options | [WaterFlowOptions](arkts-arkui-waterflow-waterflowoptions-i.md) | No | options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines WaterFlow Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;WaterFlowAttribute&gt; | Yes | The style to create a WaterFlow. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[WaterFlowAttribute](arkts-arkui-waterflow-waterflowattribute-i.md)&gt; | Yes | The style to create a WaterFlow. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 

@@ -7,7 +7,7 @@ CounterV2组件用于精确调节数值，包含列表型、紧凑型、数值�
 
 > **说明：**
 > 
-> - 如果CounterV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会
+> - 如果CounterV2设置[通用属性](./@internal/component/ets/common)和[通用事件](./@internal/component/ets/common)，编译工具链会
 > 额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到CounterV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议为CounterV2设置通用属性
 > 和通用事件。
 > 

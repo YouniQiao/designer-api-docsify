@@ -29,5 +29,5 @@ export function createListNode(context: UIContext, options?: FrameNodeOptions): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md) | 返回 List 类型的 FrameNode。 |
+| List | 返回 List 类型的 FrameNode。 |
 

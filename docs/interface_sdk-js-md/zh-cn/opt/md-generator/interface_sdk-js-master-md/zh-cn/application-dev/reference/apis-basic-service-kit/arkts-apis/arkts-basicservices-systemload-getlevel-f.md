@@ -18,4 +18,4 @@ function getLevel(): Promise<SystemLoadLevel>
 
 | 类型 |
 | --- |
-| Promise&lt;SystemLoadLevel&gt; |
+| Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; |

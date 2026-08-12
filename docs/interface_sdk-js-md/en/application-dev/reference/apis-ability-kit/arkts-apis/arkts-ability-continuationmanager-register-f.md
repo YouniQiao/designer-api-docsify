@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continuationManager } from 'kits/@kit.AbilityKit';
+import { continuationManager } from '@kit.AbilityKit';
 ```
 
 ## register
@@ -20,7 +20,7 @@ Registers the continuation management service and obtains a token. This API does
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ Registers the continuation management service and obtains a token. This API does
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,8 +77,8 @@ Registers the continuation management service and obtains a token. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | Yes | Extra parameters used to filter the list of available devices. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| options | ContinuationExtraParams | Yes | Extra parameters used to filter the list of available devices. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 
@@ -115,7 +115,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,7 +127,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md) | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
+| options | ContinuationExtraParams | No | Extra parameters used to filter the list of available devices. This parameter can be null. |
 
 **Return value:**
 

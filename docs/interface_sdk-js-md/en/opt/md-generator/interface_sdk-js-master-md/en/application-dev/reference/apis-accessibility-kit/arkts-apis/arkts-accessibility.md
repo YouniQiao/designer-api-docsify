@@ -7,7 +7,7 @@ The **Accessibility** module implements the accessibility features, including ob
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## Summary

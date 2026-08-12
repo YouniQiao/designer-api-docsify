@@ -81,5 +81,5 @@ Measure the size of custom span.
 
 | Type | Description |
 | --- | --- |
-| [CustomSpanMetrics](arkts-arkui-customspanmetrics-i.md) | CustomSpan Size |
+| [CustomSpanMetrics](arkts-arkui-styledstring-customspanmetrics-i.md) | CustomSpan Size |
 

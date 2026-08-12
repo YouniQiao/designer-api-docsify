@@ -11,7 +11,7 @@ Provides methods to accessing bluetooth PBAP(Phone Book Access Profile)-related 
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from 'kits/@kit.ConnectivityKit';
+import { pbap } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

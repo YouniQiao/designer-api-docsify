@@ -34,11 +34,11 @@ Initialize Scroll FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | The controller for scroll. |
+| scroller | Scroller | No | The controller for scroll. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) |  |
+| ScrollAttribute |  |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { conversation } from 'kits/@kit.DistributedServiceKit';
+import { conversation } from '@kit.DistributedServiceKit';
 ```
 
 ## postConversationData
@@ -44,21 +44,21 @@ Sends session data to the target device. The target device must be a trusted dev
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [2004004](../../apis-distributedservice-kit/errorcode-conversation.md#2004004-peer-confirmation-timeout) |
-| [2004002](../../apis-distributedservice-kit/errorcode-conversation.md#2004002-failed-to-start-the-peer-ability) |
-| [2004003](../../apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) |
-| [2000001](../../apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) |
-| [2004001](../../apis-distributedservice-kit/errorcode-conversation.md#2004001-peer-device-system-version-outdated) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [2004004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004004-peer-confirmation-timeout) |
+| [2004002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004002-failed-to-start-the-peer-ability) |
+| [2004003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004003-failure-to-send-data) |
+| [2000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2000001-internal-error) |
+| [2004001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-conversation.md#2004001-peer-device-system-version-outdated) |
 
 ## Examples
 

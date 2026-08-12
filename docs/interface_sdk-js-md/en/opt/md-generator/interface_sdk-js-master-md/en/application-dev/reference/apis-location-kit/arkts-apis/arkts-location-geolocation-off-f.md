@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## off('locationChange')
@@ -18,7 +18,7 @@ Unsubscribe location changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:locationChange
+**Substitutes:** [locationChange](ohos.geoLocationManager/geoLocationManager.off#event:locationChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -58,7 +58,7 @@ Unsubscribe location switch changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:locationEnabledChange
+**Substitutes:** [locationEnabledChange](ohos.geoLocationManager/geoLocationManager.off#event:locationEnabledChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -97,7 +97,7 @@ Unsubscribe to cache GNSS locations update messages
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:cachedGnssLocationsChange
+**Substitutes:** [cachedGnssLocationsChange](ohos.geoLocationManager/geoLocationManager.off#event:cachedGnssLocationsChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -137,7 +137,7 @@ Unsubscribe gnss status changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:satelliteStatusChange
+**Substitutes:** [satelliteStatusChange](ohos.geoLocationManager/geoLocationManager.off#event:satelliteStatusChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -176,7 +176,7 @@ Unsubscribe nmea message changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:nmeaMessage
+**Substitutes:** [nmeaMessage](ohos.geoLocationManager/geoLocationManager.off#event:nmeaMessage)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -215,7 +215,7 @@ Remove a geofence and unsubscribe geo fence status changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:gnssFenceStatusChange
+**Substitutes:** [gnssFenceStatusChange](ohos.geoLocationManager/geoLocationManager.off#event:gnssFenceStatusChange)
 
 **Required permissions:** ohos.permission.LOCATION
 

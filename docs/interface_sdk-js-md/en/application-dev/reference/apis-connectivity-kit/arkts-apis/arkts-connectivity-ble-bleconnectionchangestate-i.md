@@ -13,7 +13,7 @@ Describes the Gatt profile connection state.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -90,7 +90,7 @@ state: ProfileConnectionState
 
 Connection state of the Gatt profile
 
-**Type:** [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md)
+**Type:** ProfileConnectionState
 
 **Since:** 10
 

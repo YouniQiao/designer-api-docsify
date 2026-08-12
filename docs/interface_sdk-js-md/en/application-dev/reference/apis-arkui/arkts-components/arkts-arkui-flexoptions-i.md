@@ -19,7 +19,7 @@ alignContent?: FlexAlign
 Alignment mode of multiple lines when there is extra space along the cross axis. This parameter is valid only when  
 **wrap** is set to **Wrap** or **WrapReverse**.If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
 
-**Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
+**Type:** FlexAlign
 
 **Since:** 7
 
@@ -41,7 +41,7 @@ alignItems?: ItemAlign
 
 Alignment mode of the child components in the **Flex** component along the cross axis.If an invalid value is passed, the default value will be used. Default value: **ItemAlign.Start**.
 
-**Type:** [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md)
+**Type:** ItemAlign
 
 **Since:** 7
 
@@ -63,7 +63,7 @@ direction?: FlexDirection
 
 Direction in which child components are arranged in the **Flex** component, that is, the direction of the main axis.If an invalid value is passed, the default value will be used. Default value: **FlexDirection.Row**.
 
-**Type:** [FlexDirection](../arkts-apis/arkts-arkui-flexdirection-e.md)
+**Type:** FlexDirection
 
 **Since:** 7
 
@@ -85,7 +85,7 @@ justifyContent?: FlexAlign
 
 Alignment mode of the child components in the **Flex** component along the main axis.If an invalid value is passed, the default value will be used. Default value: **FlexAlign.Start**.
 
-**Type:** [FlexAlign](../arkts-apis/arkts-arkui-flexalign-e.md)
+**Type:** FlexAlign
 
 **Since:** 7
 
@@ -134,7 +134,7 @@ Whether the **Flex** component has a single line or multiple lines.If an invalid
 > When wrapped onto multiple lines, the child elements on the new line are stacked in the direction based on the
 > cross axis direction. Default value: **FlexWrap.NoWrap**.
 
-**Type:** [FlexWrap](../arkts-apis/arkts-arkui-flexwrap-e.md)
+**Type:** FlexWrap
 
 **Since:** 7
 

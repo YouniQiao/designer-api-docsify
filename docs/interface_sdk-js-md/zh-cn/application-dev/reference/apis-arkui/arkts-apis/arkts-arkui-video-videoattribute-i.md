@@ -2,7 +2,7 @@
 
 用于播放视频文件并控制其播放状态的组件。
 
-**继承/实现关系：** VideoAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** VideoAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) \| undefined | 是 | 设置AI分析识别类型。 取值为undefined时，与不设置表现一致。 |
+| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) \| undefined | 是 | 设置AI分析识别类型。 取值为undefined时，与不设置表现一致。 |
 
 **返回值：**
 
@@ -64,7 +64,7 @@ default attributeModifier(modifier: AttributeModifier<VideoAttribute> | Attribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 动态设置Video组件的属性。 取值为undefined时，按当前组件的属性方法默认值处理。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | 动态设置Video组件的属性。 取值为undefined时，按当前组件的属性方法默认值处理。 |
 
 **返回值：**
 
@@ -304,7 +304,7 @@ default onError(event: VoidCallback | ErrorCallback | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| ErrorCallback \| undefined | 是 | 视频播放失败时的回调函数。其中ErrorCallback类型入参的回调函数用于接收异常信息， 回调返回的错误码详细介绍请参见Video组件错误码和Media错误码。 取值为undefined时，不使用回调函数。 |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) \| undefined | 是 | 视频播放失败时的回调函数。其中ErrorCallback类型入参的回调函数用于接收异常信息， 回调返回的错误码详细介绍请参见Video组件错误码和Media错误码。 取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 
@@ -364,7 +364,7 @@ default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;FullscreenInfo&gt; \| undefined | 是 | 在全屏播放与非全屏播放状态之间切换时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md)&gt; \| undefined | 是 | 在全屏播放与非全屏播放状态之间切换时的回调函数。 取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 
@@ -424,7 +424,7 @@ default onPrepared(callback: Callback<PreparedInfo> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PreparedInfo&gt; \| undefined | 是 | 视频准备完成时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PreparedInfo](arkts-arkui-video-preparedinfo-i.md)&gt; \| undefined | 是 | 视频准备完成时的回调函数。 取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 
@@ -454,7 +454,7 @@ default onSeeked(callback: Callback<PlaybackInfo> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | 是 | 操作进度条完成后的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)&gt; \| undefined | 是 | 操作进度条完成后的回调函数。 取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 
@@ -484,7 +484,7 @@ default onSeeking(callback: Callback<PlaybackInfo> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | 是 | 操作进度条过程时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)&gt; \| undefined | 是 | 操作进度条过程时的回调函数。 取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 
@@ -574,7 +574,7 @@ default onUpdate(callback: Callback<PlaybackInfo> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | 是 | 播放进度变化时的回调函数。 取值为undefined时，不使用回调函数。 |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)&gt; \| undefined | 是 | 播放进度变化时的回调函数。 取值为undefined时，不使用回调函数。 |
 
 **返回值：**
 

@@ -13,7 +13,7 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## off('discoveryStart')
@@ -39,7 +39,7 @@ Cancels listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ Cancels listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## off('serviceFound')
 
@@ -115,7 +115,7 @@ Cancels listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -169,7 +169,7 @@ Cancels listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -220,7 +220,7 @@ Enables listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -267,7 +267,7 @@ Enables listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DiscoveryEventInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -314,7 +314,7 @@ Enables listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
@@ -364,7 +364,7 @@ Enables listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LocalServiceInfo&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 

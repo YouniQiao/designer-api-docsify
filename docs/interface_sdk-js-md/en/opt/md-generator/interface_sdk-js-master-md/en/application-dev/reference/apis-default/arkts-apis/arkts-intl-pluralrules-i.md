@@ -10,7 +10,7 @@ resolvedOptions(): ResolvedPluralRulesOptions
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ResolvedPluralRulesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvedpluralrulesoptions-i.md) |
+| [ResolvedPluralRulesOptions](arkts-intl-resolvedpluralrulesoptions-i.md) |
 
 ## select
 
@@ -28,4 +28,4 @@ select(n: number): LDMLPluralRule
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LDMLPluralRule](../../apis-arkts/arkts-apis/arkts-arkts-intl-ldmlpluralrule-t.md) |
+| [LDMLPluralRule](arkts-intl-ldmlpluralrule-t.md) |

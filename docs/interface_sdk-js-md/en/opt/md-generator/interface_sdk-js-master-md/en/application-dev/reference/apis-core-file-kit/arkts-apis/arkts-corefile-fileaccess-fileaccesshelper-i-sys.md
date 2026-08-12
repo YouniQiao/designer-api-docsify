@@ -15,7 +15,7 @@ Provides a **FileAccessHelper** object.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## access
@@ -30,7 +30,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.access(path:
+**Substitutes:** [access](@ohos.file.fs:fileIo.access(path:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -50,7 +50,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.access(path:
+**Substitutes:** [access](@ohos.file.fs:fileIo.access(path:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -227,7 +227,7 @@ Copies a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.copy(srcUri:
+**Substitutes:** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -249,7 +249,7 @@ Copies a file or directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;CopyResult&gt;&gt; |
+| Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; |
 
 ## copy
 
@@ -263,7 +263,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.copy(srcUri:
+**Substitutes:** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -279,7 +279,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | --- | --- | --- |
 | sourceUri | string | Yes |
 | destUri | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -328,7 +328,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.copy(srcUri:
+**Substitutes:** [copy](@ohos.file.fs:fileIo.copy(srcUri:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -345,7 +345,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 | sourceUri | string | Yes |
 | destUri | string | Yes |
 | force | boolean | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;CopyResult&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -394,7 +394,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.copyFile(src:
+**Substitutes:** [copyFile](@ohos.file.fs:fileIo.copyFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -418,7 +418,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
@@ -429,8 +429,8 @@ Copies a file with an alternative file name. This API uses a promise to return t
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -486,7 +486,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.copyFile(src:
+**Substitutes:** [copyFile](@ohos.file.fs:fileIo.copyFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -516,8 +516,8 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -572,7 +572,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.createRandomAccessFile(file:
+**Substitutes:** [createRandomAccessFile](@ohos.file.fs:fileIo.createRandomAccessFile(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -593,7 +593,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
@@ -675,7 +675,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.createRandomAccessFile(file:
+**Substitutes:** [createRandomAccessFile](@ohos.file.fs:fileIo.createRandomAccessFile(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -770,7 +770,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:AtomicFile#delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -790,7 +790,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -867,7 +867,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:AtomicFile#delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
+**Substitutes:** [delete](arkts-corefile-file-fs-atomicfile-c.md#delete)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -960,7 +960,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.stat(file:
+**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -980,7 +980,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;FileInfo&gt; |
+| Promise & lt;FileInfo & gt; |
 
 ## Examples
 
@@ -1015,7 +1015,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.stat(file:
+**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1069,7 +1069,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.stat(file:
+**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1089,7 +1089,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;FileInfo&gt; |
+| Promise & lt;FileInfo & gt; |
 
 ## Examples
 
@@ -1125,7 +1125,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.stat(file:
+**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1175,7 +1175,7 @@ getRoots(): Promise<RootIterator>
 ```
 
 Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses a promise to return a **RootIterator** object. You can use   
-[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
+[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo).
 
 **Since:** 9
 
@@ -1193,7 +1193,7 @@ Obtains information about the device root nodes of the file management services 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;RootIterator&gt; |
+| Promise&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; |
 
 **Error codes:**
 
@@ -1272,7 +1272,7 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 ```
 
 Obtains information about the device root nodes of the file management services associated with the **Helper** object. This API uses an asynchronous callback to return a **RootIterator** object. You can use   
-[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md).
+[next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next) to return [RootInfo](arkts-corefile-fileaccess-rootinfo-i-sys.md#RootInfo).
 
 **Since:** 9
 
@@ -1290,7 +1290,7 @@ Obtains information about the device root nodes of the file management services 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RootIterator&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RootIterator](arkts-corefile-fileaccess-rootiterator-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
@@ -1375,7 +1375,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.mkdir(path:
+**Substitutes:** [mkdir](@ohos.file.fs:fileIo.mkdir(path:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1396,7 +1396,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
@@ -1478,7 +1478,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.mkdir(path:
+**Substitutes:** [mkdir](@ohos.file.fs:fileIo.mkdir(path:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1573,7 +1573,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1588,13 +1588,13 @@ Moves a file or directory. This API uses a promise to return the result. Current
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | sourceFile | string | Yes |
-| destFile | string | Yes |
+| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
@@ -1671,7 +1671,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1686,7 +1686,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | sourceFile | string | Yes |
-| destFile | string | Yes |
+| [destFile](arkts-corefile-file-fs-conflictfiles-i.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |
 
 **Error codes:**
@@ -1766,7 +1766,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1790,7 +1790,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
@@ -1801,8 +1801,8 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1858,7 +1858,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1888,8 +1888,8 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -1947,7 +1947,7 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -1971,7 +1971,7 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;MoveResult&gt;&gt; |
+| Promise&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; |
 
 **Error codes:**
 
@@ -1982,8 +1982,8 @@ Moves a file or directory. This API uses a promise to return the result.You can 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2014,7 +2014,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2032,7 +2032,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | --- | --- | --- |
 | sourceUri | string | Yes |
 | destUri | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
@@ -2043,8 +2043,8 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2110,7 +2110,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.moveFile(src:
+**Substitutes:** [moveFile](@ohos.file.fs:fileIo.moveFile(src:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2129,7 +2129,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | sourceUri | string | Yes |
 | destUri | string | Yes |
 | force | boolean | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MoveResult&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MoveResult](arkts-corefile-fileaccess-moveresult-i-sys.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
@@ -2140,8 +2140,8 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 13900023 |
 | 13900018 |
 | 13900019 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900030 |
 | 13900024 |
 | 13900025 |
@@ -2207,7 +2207,7 @@ Opens a file. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.open(path:
+**Substitutes:** [open](@ohos.file.fs:fileIo.open(path:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2228,7 +2228,7 @@ Opens a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
@@ -2303,7 +2303,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.open(path:
+**Substitutes:** [open](@ohos.file.fs:fileIo.open(path:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2397,7 +2397,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.stat(file:
+**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2418,7 +2418,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 
@@ -2454,7 +2454,7 @@ Queries the attribute information about a file or directory based on a URI. This
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.stat(file:
+**Substitutes:** [stat](@ohos.file.fs:fileIo.stat(file:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2511,7 +2511,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.createWatcher
+**Substitutes:** [createWatcher](@ohos.file.fs:fileIo.createWatcher)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2527,7 +2527,7 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 | --- | --- | --- |
 | uri | string | Yes |
 | notifyForDescendants | boolean | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
@@ -2547,7 +2547,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.rename(oldPath:
+**Substitutes:** [rename](@ohos.file.fs:fileIo.rename(oldPath:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2568,7 +2568,7 @@ Renames a file or directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
@@ -2644,7 +2644,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.rename(oldPath:
+**Substitutes:** [rename](@ohos.file.fs:fileIo.rename(oldPath:)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -2751,7 +2751,7 @@ Unregisters a callback that is used to listen for the specified URI.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | uri | string | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NotifyMessage&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NotifyMessage](arkts-corefile-fileaccess-notifymessage-i-sys.md)&gt; | No |
 
 **Error codes:**
 

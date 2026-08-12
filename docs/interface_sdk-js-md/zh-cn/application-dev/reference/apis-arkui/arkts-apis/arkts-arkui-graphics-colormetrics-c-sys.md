@@ -34,7 +34,7 @@ static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
+| colorSpace | ColorSpace | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
 | red | double | 是 | 红色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
 | green | double | 是 | 绿色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
 | blue | double | 是 | 蓝色分量值。有效范围：[0, +∞)。 大于1.0的值启用HDR亮度。 |
@@ -44,7 +44,7 @@ static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
 
 ## createHDRColorWithLinearExposure
 
@@ -72,7 +72,7 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | linearExposure | double | 是 | 曝光值中的线性曝光值。 有效范围：[1, +∞)。 值为1.0表示标准曝光。 大于1.0的值会线性增加亮度。 |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
+| colorSpace | ColorSpace | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
 | red | double | 是 | 红色分量值。有效范围：【0,1】。 |
 | green | double | 是 | 绿色分量值。有效范围：【0,1】。 |
 | blue | double | 是 | 蓝色分量值。有效范围：【0,1】。 |
@@ -82,7 +82,7 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
 
 ## createHDRColorWithLogExposure
 
@@ -110,7 +110,7 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | exposure | double | 是 | 对数曝光值，单位为秒。 有效范围：[0, +∞)。 值0.0表示标准曝光。 每增加1.0将使亮度加倍（一次停止）。 |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e-sys.md) | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
+| colorSpace | ColorSpace | 是 | 颜色的颜色空间。 支持SRGB、Display_P3、BT2020颜色空间。 |
 | red | double | 是 | 红色分量值。有效范围：【0,1】。 |
 | green | double | 是 | 绿色分量值。有效范围：【0,1】。 |
 | blue | double | 是 | 蓝色分量值。有效范围：【0,1】。 |
@@ -120,7 +120,7 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
 
 ## getBlueValue
 
@@ -172,7 +172,7 @@ getColorSpace(): ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpace](arkts-arkui-colorspace-e-sys.md) | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
+| ColorSpace | The color space of the ColorMetrics. Possible value: ColorSpace.SRGB, ColorSpace.DISPLAY_P3, ColorSpace.BT2020. |
 
 ## getGreenValue
 

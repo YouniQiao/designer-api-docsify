@@ -1,6 +1,6 @@
 # ScrollResult
 
-[OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md)返回值对象。
+[OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md#OnWillScrollCallback)返回值对象。
 
 **起始版本：** 12
 

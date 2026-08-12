@@ -1,7 +1,7 @@
 # TextStyle
 
 Represents a text style, which controls the visual appearance attributes of text, including font, color, font size,spacing, decoration lines, and shadows. TextStyle is applied to subsequently added text content through the  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
+[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle) method of [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder), and works together with [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle) (which controls paragraph-level attributes). Within the same paragraph, you can call pushStyle multiple times to apply different styles to different text segments.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Represents a text style, which controls the visual appearance attributes of text
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundRect
@@ -165,7 +165,7 @@ ellipsisMode?: EllipsisMode
 
 Ellipsis type. The default value is **END**, indicating that the ellipsis is at the end of a line.
 
-**Type:** [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md)
+**Type:** EllipsisMode
 
 **Since:** 12
 
@@ -267,7 +267,7 @@ fontStyle?: FontStyle
 
 Font style. The default value is **NORMAL**.
 
-**Type:** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 12
 
@@ -287,7 +287,7 @@ fontTypefaces?: Array<drawing.Typeface>
 
 Array of specified typesetting font objects, used to prioritize the specified font objects for text shaping and skip the font matching process. When a font object in the array cannot shape some characters, the unshaped characters will be shaped using the system font. The default value is an empty array, indicating that no font object is specified and the default font matching process is used.
 
-When fontTypefaces is set together with [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).fontFamilies, fontTypefaces takes precedence.
+When fontTypefaces is set together with [TextStyle](#TextStyle).fontFamilies, fontTypefaces takes precedence.
 
 **Type:** Array&lt;drawing.Typeface&gt;
 
@@ -331,7 +331,7 @@ fontWeight?: FontWeight
 
 Font weight. The default value is W400. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, only variable fonts in system fonts support font weight adjustment. Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, variable fonts in both system fonts and third-party registered fonts support font weight adjustment. For non-variable fonts, setting a font weight value less than semi-bold (W600) results in no change in font thickness, while setting a font weight value greater than or equal to semi-bold (W600) may trigger a pseudo-bold effect.
 
-**Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
+**Type:** FontWeight
 
 **Since:** 12
 
@@ -449,7 +449,7 @@ Character spacing, a floating-point value in physical pixels (px) with a default
 lineHeightMaximum?: double
 ```
 
-Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
+Maximum line height, in physical pixels (px). If the line height is scaled, the maximum line height takes effect when [TextStyle](#TextStyle).heightScale is greater than 0. The value is a positive floating point number. The default value is **Number.MAX_VALUE**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -469,7 +469,7 @@ Maximum line height, in physical pixels (px). If the line height is scaled, the 
 lineHeightMinimum?: double
 ```
 
-Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
+Minimum line height, in physical pixels (px). If the line height is scaled, the minimum line height takes effect when [TextStyle](#TextStyle).heightScale is greater than 0. The value is a non-negative floating point number. The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -491,7 +491,7 @@ lineHeightStyle?: LineHeightStyle
 
 Scaling base style of the line height. The default value is **FONT_SIZE**.
 
-**Type:** [LineHeightStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-lineheightstyle-c.md)
+**Type:** LineHeightStyle
 
 **Since:** 21
 
@@ -532,7 +532,7 @@ textShadows?: Array<TextShadow>
 
 Array of text shadows. Pass this parameter when you need to add shadow effects to text.
 
-**Type:** Array&lt;TextShadow&gt;
+**Type:** Array&lt;[TextShadow](arkts-arkgraphics2d-text-textshadow-i.md)&gt;
 
 **Since:** 12
 

@@ -6,7 +6,7 @@ Defines the type of data to return for a subscription to data changes of the hea
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor.SensorId#HEART_RATE
+**Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#HEART_RATE)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -17,7 +17,7 @@ Defines the type of data to return for a subscription to data changes of the hea
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## fail
@@ -32,7 +32,7 @@ Callback invoked when an API call fails.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -61,7 +61,7 @@ Callback invoked when the heart rate sensor data changes. This callback is invok
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#on
+**Substitutes:** [on](ohos.sensor/sensor#on)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -75,4 +75,4 @@ Callback invoked when the heart rate sensor data changes. This callback is invok
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md) | Yes |
+| data | [HeartRateResponse](arkts-sensorservice-system-sensor-heartrateresponse-i.md) | Yes |

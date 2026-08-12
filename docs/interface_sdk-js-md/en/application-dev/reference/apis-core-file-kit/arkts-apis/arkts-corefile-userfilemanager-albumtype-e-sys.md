@@ -8,7 +8,7 @@ Enumerates the album types.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md/arkts-medialibrary-photoaccesshelper-albumtype-e.md)
+**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#AlbumType)
 
 <!--Device-userFileManager-enum AlbumType--><!--Device-userFileManager-enum AlbumType-End-->
 
@@ -30,7 +30,7 @@ User album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumType.USER](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md/arkts-medialibrary-photoaccesshelper-albumtype-e.md#user)
+**Substitutes:** [USER](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#USER)
 
 <!--Device-AlbumType-USER = 0--><!--Device-AlbumType-USER = 0-End-->
 
@@ -52,7 +52,7 @@ System album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumType.SYSTEM](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md/arkts-medialibrary-photoaccesshelper-albumtype-e.md#system)
+**Substitutes:** [SYSTEM](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#SYSTEM)
 
 <!--Device-AlbumType-SYSTEM = 1024--><!--Device-AlbumType-SYSTEM = 1024-End-->
 

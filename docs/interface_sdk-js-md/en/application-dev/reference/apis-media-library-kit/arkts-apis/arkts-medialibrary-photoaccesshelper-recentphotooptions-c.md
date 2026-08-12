@@ -13,7 +13,7 @@ RecentPhotoOptions Object
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## MIMEType
@@ -24,7 +24,7 @@ MIMEType?: photoAccessHelper.PhotoViewMIMETypes
 
 Types of the file displayed. The default value is **PhotoViewMIMETypes.IMAGE_VIDEO_TYPE**.
 
-**Type:** photoAccessHelper.PhotoViewMIMETypes
+**Type:** [photoAccessHelper.PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
 
 **Since:** 20
 
@@ -66,7 +66,7 @@ photoSource?: PhotoSource
 
 Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md)
+**Type:** PhotoSource
 
 **Since:** 20
 

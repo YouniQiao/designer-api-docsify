@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapSync
@@ -14,7 +14,7 @@ function createPixelMapSync(colors: ArrayBuffer, options: InitializationOptions)
 
 Create pixelmap by data buffer.
 
-Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixelsSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createPixelMapFromPixelsSync) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -39,7 +39,7 @@ Starting from API 26.0.0, it is recommended to use {@link createPixelMapFromPixe
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -73,7 +73,7 @@ function createPixelMapSync(options: InitializationOptions): PixelMap
 
 Create an empty pixelmap.
 
-Starting from API 26.0.0, it is recommended to use {@link createEmptyPixelMap} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createEmptyPixelMap) instead for better exception handling capabilities.
 
 **Since:** 12
 
@@ -97,7 +97,7 @@ Starting from API 26.0.0, it is recommended to use {@link createEmptyPixelMap} i
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

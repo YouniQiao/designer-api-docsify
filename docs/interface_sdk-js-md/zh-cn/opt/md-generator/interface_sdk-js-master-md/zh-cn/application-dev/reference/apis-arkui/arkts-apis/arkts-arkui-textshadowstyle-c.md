@@ -32,7 +32,7 @@ ShadowOptions对象中不支持fill字段。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | 是 |
+| value | [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt; | 是 |
 
 ## textShadow
 
@@ -42,7 +42,7 @@ readonly textShadow: Array<ShadowOptions>
 
 获取属性字符串的文本阴影。
 
-**类型：** Array&lt;ShadowOptions&gt;
+**类型：** Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 12
 

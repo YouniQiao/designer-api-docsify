@@ -25,8 +25,8 @@ export declare function Stack(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | 否 | 设置子组件在容器内的对齐方式。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| options | [StackOptions](arkts-arkui-stack-stackoptions-i.md) | 否 | 设置子组件在容器内的对齐方式。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ Defines Stack Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;StackAttribute&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[StackAttribute](arkts-arkui-stack-stackattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 

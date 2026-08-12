@@ -31,7 +31,7 @@ MenuItem(value?: MenuItemOptions | CustomBuilder)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemOptions](../arkts-apis/arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | No | Information about the menu item. |
+| value | [MenuItemOptions](arkts-arkui-menuitemoptions-i.md) \| CustomBuilder | No | Information about the menu item. |
 
 ## Summary
 

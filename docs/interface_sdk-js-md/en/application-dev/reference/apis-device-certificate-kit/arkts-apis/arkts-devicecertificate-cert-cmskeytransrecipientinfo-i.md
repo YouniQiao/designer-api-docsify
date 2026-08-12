@@ -13,7 +13,7 @@ Represents KeyTrans recipient information for CMS enveloped data.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -24,7 +24,7 @@ cert: X509Cert
 
 RSA certificate.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 22
 

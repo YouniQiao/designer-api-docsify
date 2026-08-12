@@ -31,7 +31,7 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DragAndDropInfo&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 |
 
 ## on('statusChange')
 
@@ -56,7 +56,7 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'statusChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DragAndDropInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 |
 
 ## startDrag
 
@@ -80,10 +80,10 @@ startDrag(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |

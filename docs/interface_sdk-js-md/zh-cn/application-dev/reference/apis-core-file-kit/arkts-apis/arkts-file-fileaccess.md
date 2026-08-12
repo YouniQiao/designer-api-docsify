@@ -12,7 +12,7 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 **废弃版本：** 23
 
-**替代接口：** [@ohos.file.fs:fileIo](arkts-corefile-fileio-n.md)
+**替代接口：** [fileIo](arkts-corefile-fileio-n.md#fileIo)
 
 <!--Device-unnamed-declare namespace fileAccess--><!--Device-unnamed-declare namespace fileAccess-End-->
 

@@ -2,7 +2,7 @@
 
 The ringtonePlayer module provides APIs for playing, configuring, and obtaining ringtones.
  This module must work with
- [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md) to manage
+ [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md#systemSoundManager) to manage
  ringtones.
  > **NOTE**
  >
@@ -17,6 +17,6 @@ The ringtonePlayer module provides APIs for playing, configuring, and obtaining 
 | Name | Description |
 | --- | --- |
 | [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | Enumerates the ringtone parameters. |
-| [RingtonePlayer](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md) | Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use  [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneplayer)to obtain a RingtonePlayer instance. |
+| [RingtonePlayer](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md) | Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use  [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getRingtonePlayer-1)to obtain a RingtonePlayer instance. |
 <!--DelEnd-->
 

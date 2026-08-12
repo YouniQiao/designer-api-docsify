@@ -3,7 +3,7 @@
 This interface provides APIs for audio rendering.
 
 Before calling any API in AudioRenderer, you must use  
-[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer)to create an AudioRenderer instance.
+[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer)to create an AudioRenderer instance.
 
 > **NOTE：**
 > 
@@ -18,7 +18,7 @@ Before calling any API in AudioRenderer, you must use
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## getTarget
@@ -27,7 +27,7 @@ import { audio } from 'kits/@kit.AudioKit';
 getTarget(): RenderTarget
 ```
 
-Gets the currently render target of this audio renderer.If the render target has not been changed, the default value {@link RenderTarget#PLAYBACK} will be returned.If the {@link setTarget} has been called before calling this interface, ensure its promise object has been resolved successfully, otherwise, the obtained value may be inaccurate.
+Gets the currently render target of this audio renderer.If the render target has not been changed, the default value [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#PLAYBACK) will be returned.If the [setTarget](#setTarget) has been called before calling this interface, ensure its promise object has been resolved successfully, otherwise, the obtained value may be inaccurate.
 
 **Since:** 22
 
@@ -47,7 +47,7 @@ Gets the currently render target of this audio renderer.If the render target has
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -69,9 +69,9 @@ async function getTarget(){
 setTarget(target: RenderTarget): Promise<void>
 ```
 
-Sets the render target of this audio renderer.This function can only be called when the audio renderer is not in the running or released state.Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not {@link RenderTarget#PLAYBACK}.After changing render target to non-PLAYBACK：
+Sets the render target of this audio renderer.This function can only be called when the audio renderer is not in the running or released state.Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#PLAYBACK).After changing render target to non-PLAYBACK：
 
-1. The audio route and interruption strategy of this renderer will not be affected by {@link AudioSessionManager}.2. The device type of this renderer will be {@link DeviceType#SYSTEM_PRIVATE}.3. Calling {@link start} when the audio scene is not {@link AudioScene#AUDIO_SCENE_VOICE_CHAT} will return error code 6800301.4. Calling {@link getAudioTime} or {@link getAudioTimeSync} will return error code 6800301.5. Calling {@link getAudioTimestampInfo} or {@link getAudioTimestampInfoSync} will return error code 6800301.6. Calling {@link setDefaultOutputDevice} will return error code 6800301.
+1. The audio route and interruption strategy of this renderer will not be affected by [AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md#AudioSessionManager).2. The device type of this renderer will be [SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md#SYSTEM_PRIVATE).3. Calling [start](start) when the audio scene is not [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#AUDIO_SCENE_VOICE_CHAT) will return error code 6800301.4. Calling [getAudioTime](getAudioTime) or [getAudioTimeSync](getAudioTimeSync) will return error code 6800301.5. Calling [getAudioTimestampInfo](getAudioTimestampInfo) or [getAudioTimestampInfoSync](getAudioTimestampInfoSync) will return error code 6800301.6. Calling [setDefaultOutputDevice](setDefaultOutputDevice) will return error code 6800301.
 
 **Since:** 22
 
@@ -93,18 +93,18 @@ Sets the render target of this audio renderer.This function can only be called w
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |
 
 ## Examples
 
@@ -124,9 +124,9 @@ audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE
 setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promise<void>
 ```
 
-Sets the render target of this audio renderer.This function can only be called when the audio renderer is not in the running or released state.Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not {@link RenderTarget#PLAYBACK}.After changing render target to non-PLAYBACK:
+Sets the render target of this audio renderer.This function can only be called when the audio renderer is not in the running or released state.Otherwise, it will return an error. The caller must have the ohos.permission.INJECT_PLAYBACK_TO_AUDIO_CAPTURE permission when target is not [PLAYBACK](arkts-audio-audio-rendertarget-e-sys.md#PLAYBACK).After changing render target to non-PLAYBACK:
 
-1. The audio route and interruption strategy of this renderer will not be affected by{@link AudioSessionManager}.2. The device type of this renderer will be {@link DeviceType#SYSTEM_PRIVATE}.3. Calling {@link start} when the audio scene is not {@link AudioScene#AUDIO_SCENE_VOICE_CHAT} will  return error code 6800301.4. Calling {@link getAudioTime} or {@link getAudioTimeSync} will return error code 6800301.5. Calling {@link getAudioTimestampInfo} or {@link getAudioTimestampInfoSync} will return error code 6800301.6. Calling {@link setDefaultOutputDevice} will return error code 6800301.
+1. The audio route and interruption strategy of this renderer will not be affected by[AudioSessionManager](arkts-audio-audio-audiosessionmanager-i.md#AudioSessionManager).2. The device type of this renderer will be [SYSTEM_PRIVATE](arkts-audio-audio-devicetype-e.md#SYSTEM_PRIVATE).3. Calling [start](start) when the audio scene is not [AUDIO_SCENE_VOICE_CHAT](arkts-audio-audio-audioscene-e.md#AUDIO_SCENE_VOICE_CHAT) will  return error code 6800301.4. Calling [getAudioTime](getAudioTime) or [getAudioTimeSync](getAudioTimeSync) will return error code 6800301.5. Calling [getAudioTimestampInfo](getAudioTimestampInfo) or [getAudioTimestampInfoSync](getAudioTimestampInfoSync) will return error code 6800301.6. Calling [setDefaultOutputDevice](setDefaultOutputDevice) will return error code 6800301.
 
 This API uses a promise to return the result.
 
@@ -153,15 +153,15 @@ This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |

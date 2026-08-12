@@ -13,7 +13,7 @@ Parameter for query entity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## parameters
@@ -24,7 +24,7 @@ parameters?: Record<string, Object>
 
 Indicates the parameters when querying entities by property.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 

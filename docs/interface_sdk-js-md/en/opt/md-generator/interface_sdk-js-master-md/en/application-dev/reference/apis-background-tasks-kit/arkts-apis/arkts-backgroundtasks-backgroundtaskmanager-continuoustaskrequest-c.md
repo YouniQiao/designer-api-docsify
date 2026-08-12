@@ -1,11 +1,11 @@
 # ContinuousTaskRequest
 
 Specifies details of the continuous task being requested or updated. It is typically used as input for the   
-[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning)and   
-[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)APIs. Note that:
+[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-3)and   
+[updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)APIs. Note that:
 
 1. When requesting a continuous task via  
-[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning),notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application,and the **combinedTaskNotification** value is **true** for both tasks.Otherwise, notifications will not be combined.2. Notifications will not be combined if the continuous task has no notification.For details about whether notifications are sent for the continuous task,see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md).3. Notifications cannot be combined if the continuous task includes data transmission.4. Notifications that have been combined cannot be canceled.If notifications have been combined, they cannot be updated to uncombined.5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task.If the update API is called,the redirection will target the UIAbility corresponding to the last updated continuous task.6. When the [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails.7. Continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md) type are supported since API version 22. This task type must be used independently and notifications cannot be combined.Specifically, when you request or update a continuous task,it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type.Otherwise, an error is returned.
+[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-3),notifications will be combined if the main type and subtype of the continuous task to be requested are the same as those of the existing continuous task in the current application,and the **combinedTaskNotification** value is **true** for both tasks.Otherwise, notifications will not be combined.2. Notifications will not be combined if the continuous task has no notification.For details about whether notifications are sent for the continuous task,see [BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode).3. Notifications cannot be combined if the continuous task includes data transmission.4. Notifications that have been combined cannot be canceled.If notifications have been combined, they cannot be updated to uncombined.5. After notifications are combined, tapping the notification will redirect to the UIAbility corresponding to the first requested continuous task.If the update API is called,the redirection will target the UIAbility corresponding to the last updated continuous task.6. When the [updateBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)API is called to update a continuous task, the input **continuousTaskId** must exist. Otherwise, the update fails.7. Continuous tasks of the [MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode) type are supported since API version 22. This task type must be used independently and notifications cannot be combined.Specifically, when you request or update a continuous task,it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type.Otherwise, an error is returned.
 
 **Since:** 21
 
@@ -16,7 +16,7 @@ Specifies details of the continuous task being requested or updated. It is typic
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## checkSpecialScenarioAuth
@@ -41,21 +41,21 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;UserAuthResult&gt; |
+| Promise & lt;UserAuthResult & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
+| [9800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -102,21 +102,21 @@ Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING.No ex
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;UserAuthResult&gt; |
+| Promise & lt;UserAuthResult & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
+| [9800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -148,8 +148,8 @@ isModeSupported(): boolean
 ```
 
 Checks whether **BackgroundTaskMode** specified in   
-[ContinuousTaskRequest](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md) is supported. For details, see   
-[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md).
+[ContinuousTaskRequest](#ContinuousTaskRequest) is supported. For details, see   
+[BackgroundTaskMode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode).
 
 **Since:** 21
 
@@ -171,8 +171,8 @@ Checks whether **BackgroundTaskMode** specified in
 
 | Error Code ID |
 | --- |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -204,7 +204,7 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 ```
 
 Requests user authorization to run tasks continuously in the background. This API uses an asynchronous callback to return the result. If the API call is successful, a banner notification with a sound is sent. This API is applicable only to continuous tasks of the  
-[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md) type.
+[MODE_SPECIAL_SCENARIO_PROCESSING](arkts-backgroundtasks-backgroundtaskmanager-backgroundtaskmode-e.md#BackgroundTaskMode) type.
 
 **Since:** 22
 
@@ -220,16 +220,16 @@ Requests user authorization to run tasks continuously in the background. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
+| [9800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -281,16 +281,16 @@ Requesting MODE_SPECIAL_SCENARIO_PROCESSING authorization from users, a dialog b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;UserAuthResult&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
-| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) |
+| [9800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -375,7 +375,7 @@ combinedTaskNotification?: boolean
 Whether to combine notifications. The value **true** means to combine notifications, and the value **false** (default) means the opposite.
 
 Note: This property does not take effect in   
-[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)API. If notifications need to be combined for an existing task, request the task again and set the value to   
+[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)API. If notifications need to be combined for an existing task, request the task again and set the value to   
 **true**.
 
 **Type:** boolean
@@ -399,10 +399,10 @@ Continuous task ID. The default value is **-1**.
 Note: If **combinedTaskNotification** is set to true, this property is mandatory and the corresponding ID must exist.
 
 Additionally, this property is mandatory (with the corresponding ID required) when used as an input parameter for the   
-[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning)API.
+[updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1)API.
 
 You can call the   
-[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getallcontinuoustasks)API to view information about all continuous tasks.
+[getAllContinuousTasks](arkts-backgroundtasks-backgroundtaskmanager-getallcontinuoustasks-f.md#getAllContinuousTasks-1)API to view information about all continuous tasks.
 
 **Type:** number
 
@@ -422,7 +422,7 @@ progressInfo?: ProgressInfo
 
 Notify progress data.
 
-**Type:** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
+**Type:** ProgressInfo
 
 **Since:** 26.1.0
 
@@ -440,7 +440,7 @@ set wantAgent(value: WantAgent)
 
 Notification parameters, which are used to specify the target page that is redirected to when a continuous task notification is clicked.
 
-**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **Since:** 21
 

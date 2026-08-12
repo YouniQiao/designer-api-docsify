@@ -11,7 +11,7 @@ Describes the information about the context of exiting the PhotoPicker. It can b
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumUri
@@ -104,7 +104,7 @@ recommendationType: number
 ```
 
 Enumerated value of the recommended content set by the user during the last selection. For details, see   
-[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).
+[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#RecommendationType).
 
 If no recommendation was set during the last selection, the default value is **0**.
 
@@ -125,7 +125,7 @@ selectedRecommendationType: number
 ```
 
 Enumerated value of the recommended content selected by the user during the last selection. For details, see   
-[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md).
+[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md#RecommendationType).
 
 If no recommendation was selected during the last selection or **All** was selected, the default value is **0**.
 

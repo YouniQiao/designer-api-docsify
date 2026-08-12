@@ -3,10 +3,10 @@
 Defines application instance data.
 
 It is used as an input parameter in the  
-[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps),  
-[removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeusernonstopapps),  
-[addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps), and  
-[removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps)APIs.
+[addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addUserNonStopApps),  
+[removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeUserNonStopApps),  
+[addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addFreezeExemptedApps), and  
+[removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removeFreezeExemptedApps)APIs.
 
 **Since:** 22
 
@@ -17,7 +17,7 @@ It is used as an input parameter in the
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import { common } from '@kit.MDMKit';
 ```
 
 ## accountId
@@ -27,7 +27,7 @@ accountId: number
 ```
 
 Account ID. The value is an integer greater than or equal to 0.You can obtain the account ID by calling the  
-[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid) API.
+[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) API.
 
 **Type:** number
 
@@ -45,8 +45,8 @@ Account ID. The value is an integer greater than or equal to 0.You can obtain th
 appIdentifier: string
 ```
 
-[Unique identifier](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md/arkts-ability-bundleinfo-signatureinfo-i.md) of an application. You can call the  
-[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md/arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo) API to obtain  
+[Unique identifier](../../apis-ability-kit/arkts-apis/arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo) of an application. You can call the  
+[bundleManager.getBundleInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getbundleinfo-f.md#getBundleInfo) API to obtain  
 **bundleInfo.signatureInfo.appIdentifier**.
 
 **Type:** string
@@ -68,7 +68,7 @@ appIndex: number
 Index of the application clone. The value is an integer greater than or equal to 0.
 
 You can obtain the index by calling the  
-[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md/arkts-ability-bundlemanager-getappcloneidentity-f.md#getappcloneidentity) API.
+[getAppCloneIdentity](../../apis-ability-kit/arkts-apis/arkts-ability-bundlemanager-getappcloneidentity-f.md#getAppCloneIdentity) API.
 
 **Type:** number
 

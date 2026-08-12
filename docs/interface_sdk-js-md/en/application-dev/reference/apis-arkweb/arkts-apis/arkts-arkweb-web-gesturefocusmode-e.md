@@ -1,6 +1,6 @@
 # GestureFocusMode
 
-Enum type supplied to {@link gestureFocusMode} for setting the web gesture focus mode.
+Enum type supplied to [gestureFocusMode](arkts-arkweb-web-webattribute-i.md#gestureFocusMode) for setting the web gesture focus mode.
 
 **Since:** 23
 

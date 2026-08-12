@@ -27,5 +27,5 @@ The custom command event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise used to return OperResult. |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise used to return OperResult. |
 

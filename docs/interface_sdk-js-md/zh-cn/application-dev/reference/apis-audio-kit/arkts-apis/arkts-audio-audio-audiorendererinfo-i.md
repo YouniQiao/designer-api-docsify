@@ -22,7 +22,7 @@ API version 8、9为必填参数，从API version 10开始为可选参数，默�
 
 从API version 8开始支持，从API version 10开始废弃，建议使用usage替代。
 
-**类型：** [ContentType](arkts-audio-audio-contenttype-e.md)
+**类型：** ContentType
 
 **起始版本：** 8
 
@@ -30,7 +30,7 @@ API version 8、9为必填参数，从API version 10开始为可选参数，默�
 
 **废弃版本：** 10
 
-**替代接口：** ohos.multimedia.audio.AudioRendererInfo#usage
+**替代接口：** [usage](ohos.multimedia.audio.AudioRendererInfo#usage)
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 

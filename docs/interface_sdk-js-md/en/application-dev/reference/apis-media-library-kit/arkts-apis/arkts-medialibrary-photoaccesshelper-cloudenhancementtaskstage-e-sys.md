@@ -1,7 +1,7 @@
 # CloudEnhancementTaskStage (System API)
 
 Enumerates the cloud enhancement task states, which are returned by   
-[CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md).
+[CloudEnhancementTaskState](arkts-medialibrary-photoaccesshelper-cloudenhancement-c-sys.md#CloudEnhancement).
 
 **Since:** 13
 

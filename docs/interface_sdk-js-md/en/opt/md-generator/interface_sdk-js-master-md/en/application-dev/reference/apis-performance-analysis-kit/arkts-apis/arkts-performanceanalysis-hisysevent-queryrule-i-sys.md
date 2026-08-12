@@ -13,7 +13,7 @@ Defines event query rules.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## condition

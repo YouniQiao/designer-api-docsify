@@ -31,7 +31,7 @@ export declare function EmbeddedComponent(
 
 | 类型 | 说明 |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) |  |
+| [EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md) |  |
 
 
 ## EmbeddedComponent
@@ -66,7 +66,7 @@ export declare function EmbeddedComponent(
 
 | 类型 | 说明 |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) |  |
+| [EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md) |  |
 
 
 ## EmbeddedComponent
@@ -95,11 +95,11 @@ export declare function EmbeddedComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EmbeddedComponentAttribute&gt; | 是 | 用于设置embeddedcomponent属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md)&gt; | 是 | 用于设置embeddedcomponent属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [EmbeddedComponentAttribute](../arkts-components/arkts-arkui-embeddedcomponent-attribute.md) | EmbeddedComponent的属性。 |
+| [EmbeddedComponentAttribute](arkts-arkui-embeddedcomponent-embeddedcomponentattribute-i.md) | EmbeddedComponent的属性。 |
 

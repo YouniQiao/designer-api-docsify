@@ -36,7 +36,7 @@ The **ShadowOptions** object does not support the **fill** field.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | Yes | Text shadow options. |
+| value | ShadowOptions \| Array&lt;ShadowOptions&gt; | Yes | Text shadow options. |
 
 ## textShadow
 

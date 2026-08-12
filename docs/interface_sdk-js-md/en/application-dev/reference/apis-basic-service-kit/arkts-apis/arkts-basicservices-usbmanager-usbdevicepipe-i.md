@@ -13,7 +13,7 @@ Represents a USB device pipe, which is used to determine a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## busNum

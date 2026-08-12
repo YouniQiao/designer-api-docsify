@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## off('nfcStateChange')
@@ -29,5 +29,5 @@ unregister nfc state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nfcStateChange' | Yes | The type to unregister. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NfcState&gt; | No | Callback used to listen to the nfc state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md)&gt; | No | Callback used to listen to the nfc state changed event. |
 

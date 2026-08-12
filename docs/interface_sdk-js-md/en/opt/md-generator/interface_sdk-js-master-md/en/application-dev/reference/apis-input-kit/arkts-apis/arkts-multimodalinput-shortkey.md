@@ -7,7 +7,7 @@ The **shortKey** module provides APIs to set the delay for starting an ability u
 ## Modules to Import
 
 ```TypeScript
-import { shortKey } from 'kits/@kit.InputKit';
+import { shortKey } from '@kit.InputKit';
 ```
 
 ## Summary

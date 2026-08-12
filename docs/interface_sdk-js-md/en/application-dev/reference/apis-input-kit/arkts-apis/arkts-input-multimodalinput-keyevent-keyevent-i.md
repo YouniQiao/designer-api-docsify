@@ -2,7 +2,7 @@
 
 Key event.
 
-**Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
+**Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Key event.
 ## Modules to Import
 
 ```TypeScript
-import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+import { KeyEvent, Action, Key } from '@kit.InputKit';
 ```
 
 ## action
@@ -26,7 +26,7 @@ action: Action
 
 Key event type.
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** [Action](arkts-input-multimodalinput-keyevent-action-e.md)
 
 **Since:** 9
 

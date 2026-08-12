@@ -8,7 +8,7 @@ Describes the settings for BLE advertising.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.AdvertiseSetting
+**Substitutes:** [AdvertiseSetting](ohos.bluetooth.ble/ble.AdvertiseSetting)
 
 <!--Device-bluetoothManager-interface AdvertiseSetting--><!--Device-bluetoothManager-interface AdvertiseSetting-End-->
 
@@ -17,7 +17,7 @@ Describes the settings for BLE advertising.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## connectable
@@ -36,7 +36,7 @@ Indicates whether the BLE is connectable, default is {@code true}
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.AdvertiseSetting#connectable
+**Substitutes:** [connectable](ohos.bluetooth.ble/ble.AdvertiseSetting#connectable)
 
 <!--Device-AdvertiseSetting-connectable?: boolean--><!--Device-AdvertiseSetting-connectable?: boolean-End-->
 
@@ -58,7 +58,7 @@ Minimum slot value for the advertising interval, which is {@code 32} (20 ms)Maxi
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.AdvertiseSetting#interval
+**Substitutes:** [interval](ohos.bluetooth.ble/ble.AdvertiseSetting#interval)
 
 <!--Device-AdvertiseSetting-interval?: number--><!--Device-AdvertiseSetting-interval?: number-End-->
 
@@ -80,7 +80,7 @@ Minimum transmission power level for advertising, which is {@code -127}Maximum t
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.AdvertiseSetting#txPower
+**Substitutes:** [txPower](ohos.bluetooth.ble/ble.AdvertiseSetting#txPower)
 
 <!--Device-AdvertiseSetting-txPower?: number--><!--Device-AdvertiseSetting-txPower?: number-End-->
 

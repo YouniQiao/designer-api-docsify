@@ -20,7 +20,7 @@ placement?: PopupPlacement
 
 气泡弹窗位置，不设置则不更新。
 
-**类型：** [PopupPlacement](arkts-ability-autofillmanager-popupplacement-t-sys.md)
+**类型：** [PopupPlacement](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)
 
 **起始版本：** 12
 

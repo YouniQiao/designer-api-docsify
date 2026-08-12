@@ -12,7 +12,7 @@ getForegroundApplications.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#getForegroundApplications
+**Substitutes:** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -55,7 +55,7 @@ getForegroundApplications.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#getForegroundApplications
+**Substitutes:** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 

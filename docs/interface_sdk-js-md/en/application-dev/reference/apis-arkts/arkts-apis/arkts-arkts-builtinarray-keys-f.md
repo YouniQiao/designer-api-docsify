@@ -28,7 +28,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -59,7 +59,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -90,7 +90,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -121,7 +121,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -152,7 +152,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -183,7 +183,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -214,7 +214,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## keys
@@ -245,5 +245,5 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 

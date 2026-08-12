@@ -8,7 +8,7 @@ Enumerates the event types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType
+**Substitutes:** [EventType](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType)
 
 <!--Device-hiAppEvent-enum EventType--><!--Device-hiAppEvent-enum EventType-End-->
 
@@ -28,7 +28,7 @@ Fault event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#FAULT
+**Substitutes:** [FAULT](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#FAULT)
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -48,7 +48,7 @@ Statistic event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#STATISTIC
+**Substitutes:** [STATISTIC](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#STATISTIC)
 
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
@@ -68,7 +68,7 @@ Security event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#SECURITY
+**Substitutes:** [SECURITY](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#SECURITY)
 
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
@@ -88,7 +88,7 @@ User behavior event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#BEHAVIOR
+**Substitutes:** [BEHAVIOR](ohos.hiviewdfx.hiAppEvent/hiAppEvent.EventType#BEHAVIOR)
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 

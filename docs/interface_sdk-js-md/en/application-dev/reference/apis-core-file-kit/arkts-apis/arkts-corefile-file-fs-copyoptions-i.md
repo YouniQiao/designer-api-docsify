@@ -13,7 +13,7 @@ Defines the callback for listening for the copy progress.
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## progressListener
@@ -40,7 +40,7 @@ copySignal?: TaskSignal
 
 Signal used to cancel a copy task.
 
-**Type:** [TaskSignal](arkts-corefile-fileio-tasksignal-c.md)
+**Type:** [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md)
 
 **Since:** 12
 

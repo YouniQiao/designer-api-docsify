@@ -6,7 +6,7 @@ Enumerates the widget parameters.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo#FormParam
+**Substitutes:** [FormParam](ohos.app.form.formInfo/formInfo#FormParam)
 
 <!--Device-formInfo-enum FormParam--><!--Device-formInfo-enum FormParam-End-->
 
@@ -26,7 +26,7 @@ This is a system API.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.FormParam#IDENTITY_KEY
+**Substitutes:** [IDENTITY_KEY](ohos.app.form.formInfo/formInfo.FormParam#IDENTITY_KEY)
 
 <!--Device-FormParam-IDENTITY_KEY = 'ohos.extra.param.key.form_identity'--><!--Device-FormParam-IDENTITY_KEY = 'ohos.extra.param.key.form_identity'-End-->
 

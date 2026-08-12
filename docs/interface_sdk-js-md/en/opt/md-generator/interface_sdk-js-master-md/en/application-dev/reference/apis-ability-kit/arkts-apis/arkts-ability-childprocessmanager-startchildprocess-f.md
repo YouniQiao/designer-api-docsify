@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startChildProcess
@@ -17,7 +17,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > **NOTE：**
 > 
 > If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
 > function is done, the child process is automatically destroyed.
 > 
 > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
@@ -35,23 +35,23 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| srcEntry | string | Yes |
+| [srcEntry](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | Yes |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
+| [16000062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) |
 
 ## Examples
 
@@ -99,7 +99,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > **NOTE：**
 > 
 > If the child process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. Once the
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. Once the
 > function is done, the child process is automatically destroyed.
 > 
 > The child process started by calling this API does not support asynchronous ArkTS API calls. It supports only
@@ -117,7 +117,7 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| srcEntry | string | Yes |
+| [srcEntry](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | Yes |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
@@ -125,10 +125,10 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
+| [16000062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) |
 
 ## Examples
 

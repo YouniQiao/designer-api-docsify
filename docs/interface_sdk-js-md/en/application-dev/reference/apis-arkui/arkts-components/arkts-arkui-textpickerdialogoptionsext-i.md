@@ -2,7 +2,7 @@
 
 Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
+**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)
 
 **Since:** 20
 
@@ -120,7 +120,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 Style of accept button.
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 20
 
@@ -142,7 +142,7 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** [DialogAlignment](../arkts-apis/arkts-arkui-alertdialog-dialogalignment-e.md)
+**Type:** DialogAlignment
 
 **Since:** 20
 
@@ -164,7 +164,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines the textPickerDialog's background blur Style
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -188,7 +188,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Defines the textPickerDialog's background blur style with options
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 20
 
@@ -210,7 +210,7 @@ backgroundColor?: ResourceColor
 
 Defines the textPickerDialog's background color
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -234,7 +234,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the textPickerDialog's background effect with options
 
-**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 20
 
@@ -282,7 +282,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 Style of cancel button.
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 20
 
@@ -440,7 +440,7 @@ hoverModeArea?: HoverModeAreaType
 
 Defines the dialog's display area in hover mode.
 
-**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -464,7 +464,7 @@ maskRect?: Rectangle
 
 Mask Region of dialog. The size cannot exceed the main window.
 
-**Type:** [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md)
+**Type:** Rectangle
 
 **Since:** 20
 
@@ -486,7 +486,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 20
 
@@ -508,7 +508,7 @@ onAccept?: Callback<TextPickerResult>
 
 Called when the OK button in the dialog is clicked.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -530,7 +530,7 @@ onChange?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected in dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -552,7 +552,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 This event is triggered when an item enters the selected area in dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -574,7 +574,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected and scrolling has stopped in dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -596,7 +596,7 @@ selectedBackgroundStyle?: PickerBackgroundStyle
 
 Background style of selected items.
 
-**Type:** [PickerBackgroundStyle](../arkts-apis/arkts-arkui-textpicker-pickerbackgroundstyle-i.md)
+**Type:** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
 **Default:** { color: $r('sys.color.comp_background_tertiary'), borderRadius: $r('sys.float.corner_radius_level12') }
 
@@ -642,7 +642,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 20
 
@@ -664,7 +664,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 

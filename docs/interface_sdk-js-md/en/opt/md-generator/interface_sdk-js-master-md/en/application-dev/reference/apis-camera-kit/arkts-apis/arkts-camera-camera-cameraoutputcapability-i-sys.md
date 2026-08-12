@@ -11,7 +11,7 @@ Describes the camera output capability.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## depthProfiles
@@ -22,7 +22,7 @@ readonly depthProfiles: Array<DepthProfile>
 
 Supported depth stream profiles.
 
-**Type:** Array&lt;DepthProfile&gt;
+**Type:** Array&lt;[DepthProfile](arkts-camera-camera-depthprofile-i-sys.md)&gt;
 
 **Since:** 13
 

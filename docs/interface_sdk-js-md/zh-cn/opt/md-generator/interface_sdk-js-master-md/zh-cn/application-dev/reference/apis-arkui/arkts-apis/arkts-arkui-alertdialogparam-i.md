@@ -82,7 +82,7 @@ backgroundBlurStyle?: BlurStyle
 
 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -180,7 +180,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 当borderColor属性类型为LocalizedEdgeColors时，支持随语言习惯改变布局顺序。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
 
@@ -234,7 +234,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 当borderWidth属性类型为LocalizedEdgeWidths时，支持随语言习惯改变布局顺序。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -266,7 +266,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 当cornerRadius属性类型为LocalizedBorderRadiuses时，支持随语言习惯改变布局顺序。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -392,7 +392,7 @@ immersiveMode?: ImmersiveMode
 - 默认值：ImmersiveMode.DEFAULT   
 - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**类型：** ImmersiveMode
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -443,7 +443,7 @@ levelMode?: LevelMode
 - 默认值：LevelMode.OVERLAY。  
 - 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**类型：** LevelMode
 
 **默认值：** LevelMode.OVERLAY
 
@@ -470,7 +470,7 @@ levelOrder?: LevelOrder
 - 默认值：LevelOrder.clamp(0)   
 - 不支持动态刷新顺序。
 
-**类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](arkts-arkui-levelorder-t.md)
 
 **默认值：** The value returns by LevelOrder.clamp(0)
 
@@ -490,7 +490,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)。仅在levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)。仅在levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 取值范围：大于等于0的数字。
 
@@ -564,7 +564,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 7
 
@@ -592,7 +592,7 @@ onDidAppear?: Callback<void>
 
 4.弹窗入场动效未完成时彻底关闭弹窗，动效打断，onDidAppear不会触发。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -616,7 +616,7 @@ onDidDisappear?: Callback<void>
 
 正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -642,7 +642,7 @@ onWillAppear?: Callback<void>
 
 2.在onWillAppear内设置改变弹窗显示效果的回调事件，二次弹出生效。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -666,7 +666,7 @@ onWillDisappear?: Callback<void>
 
 正常时序依次为：onWillAppear >> onDidAppear >> onWillDisappear >> onDidDisappear。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 19
 
@@ -692,7 +692,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 2.在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissDialogAction&gt;
+**类型：** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 12
 
@@ -714,7 +714,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -789,10 +789,10 @@ systemMaterial?: SystemUiMaterial
 - 默认值：[ImmersiveOptions](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersiveoptions)的style为  
 ImmersiveStyle.ULTRA_THICK的  
 [ImmersiveMaterial](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivematerial)对象。设置undefined时与默认值保持一致。  
-- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor)、背景模糊  
-[backgroundBlurStyle](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundblurstyle)、背景效果[backgroundEffect](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundeffect)、边框颜色  
-[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
-[shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
+- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、背景模糊  
+[backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))、背景效果[backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、边框颜色  
+[borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影  
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，不建议与上述接口一起使用。
 
 **类型：** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
 
@@ -814,7 +814,7 @@ textStyle?: TextStyle
 
 设置弹窗message内容的文本样式。
 
-**类型：** [TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md)
+**类型：** [TextStyle](arkts-arkui-textstyle-i.md)
 
 **起始版本：** 12
 

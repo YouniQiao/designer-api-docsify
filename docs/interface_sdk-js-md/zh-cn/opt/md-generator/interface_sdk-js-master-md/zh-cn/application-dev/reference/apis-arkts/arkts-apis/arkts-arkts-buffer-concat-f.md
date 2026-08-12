@@ -20,7 +20,7 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: number): Buffer
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| list | Buffer[] \| Uint8Array[] | 是 |
+| list | [Buffer](arkts-arkts-buffer-buffer-c.md)[] \| Uint8Array[] | 是 |
 | totalLength | number | 否 |
 
 **返回值：**
@@ -33,7 +33,7 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: number): Buffer
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## getEnvironmentVar
@@ -20,7 +20,7 @@ Obtains the value of an environment variable.
 
 **Deprecated since:** 9
 
-**Substitutes:** [process.ProcessManager.getEnvironmentVar](arkts-arkts-process-processmanager-c.md#getenvironmentvar)
+**Substitutes:** [getEnvironmentVar](arkts-arkts-process-processmanager-c.md#getEnvironmentVar)
 
 <!--Device-process-function getEnvironmentVar(name: string): string--><!--Device-process-function getEnvironmentVar(name: string): string-End-->
 

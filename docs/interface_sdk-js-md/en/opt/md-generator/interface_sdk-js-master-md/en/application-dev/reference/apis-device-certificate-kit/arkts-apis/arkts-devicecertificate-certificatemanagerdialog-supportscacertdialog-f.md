@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## supportsCACertDialog
@@ -12,7 +12,7 @@ import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
 function supportsCACertDialog(): boolean
 ```
 
-Check whether the device supports the [openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md#opencertificatedetaildialog), [openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md#openinstallcertificatedialog), and [openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md#openuninstallcertificatedialog) interfaces to open the dialog box for managing CA certificates.
+Check whether the device supports the [openCertificateDetailDialog](arkts-devicecertificate-certificatemanagerdialog-opencertificatedetaildialog-f.md#openCertificateDetailDialog), [openInstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openinstallcertificatedialog-f.md#openInstallCertificateDialog), and [openUninstallCertificateDialog](arkts-devicecertificate-certificatemanagerdialog-openuninstallcertificatedialog-f.md#openUninstallCertificateDialog) interfaces to open the dialog box for managing CA certificates.
 
 **Since:** 26.0.0
 
@@ -32,7 +32,7 @@ Check whether the device supports the [openCertificateDetailDialog](arkts-device
 
 | Error Code ID |
 | --- |
-| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
+| [29700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-internal-error) |
 
 ## Examples
 

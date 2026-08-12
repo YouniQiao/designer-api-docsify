@@ -14,7 +14,7 @@ interface of form lifecycle.
 onAcquireFormState?(want: Want): formInfo.FormState
 ```
 
-Called to return a {@link FormState} object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.&lt;/p&gt;
+Called to return a [FormState](FormState) object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns [DEFAULT](FormState#DEFAULT) by default.&lt;/p&gt;
 
 **Since:** 8
 
@@ -64,7 +64,7 @@ Called when the form provider is notified that a temporary form is successfully 
 onCreate?(want: Want): formBindingData.FormBindingData
 ```
 
-Called to return a {@link formBindingData.FormBindingData} object.
+Called to return a [FormBindingData](formBindingData.FormBindingData) object.
 
 **Since:** 8
 
@@ -173,4 +173,4 @@ Called when the form provider receives form events from the system.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| newStatus | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | Yes |
+| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | Yes |

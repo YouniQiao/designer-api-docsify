@@ -31,7 +31,7 @@
 | [AnimationMode](arkts-arkui-tabs-animationmode-e.md) | 点击[TabBar](../../../reference/apis-arkui/arkui-ts/ts-container-tabcontent.md#tabbar)页签时切换TabContent的动画形式枚举。 |
 | [BarMode](arkts-arkui-tabs-barmode-e.md) | TabBar布局模式枚举。 |
 | [BarPosition](arkts-arkui-tabs-barposition-e.md) | Tabs页签位置枚举。 |
-| [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md) | [Scrollable](TabsAttribute.barMode)模式下不滚动时的页签排布方式枚举。 |
+| [LayoutStyle](arkts-arkui-tabs-layoutstyle-e.md) | [Scrollable](arkts-arkui-tabs-tabsattribute-i.md#barMode)模式下不滚动时的页签排布方式枚举。 |
 | [TabsCacheMode](arkts-arkui-tabs-tabscachemode-e.md) | 子组件的缓存模式。 |
 | [TabsNestedScrollMode](arkts-arkui-tabs-tabsnestedscrollmode-e.md) | Tabs组件和父组件的嵌套滚动模式枚举。 |
 

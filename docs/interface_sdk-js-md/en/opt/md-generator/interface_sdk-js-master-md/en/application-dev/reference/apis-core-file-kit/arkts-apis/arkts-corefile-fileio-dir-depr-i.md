@@ -6,7 +6,7 @@ Manages directories. Before calling a method of the **Dir** class, use the **ope
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
 
@@ -24,7 +24,7 @@ Closes a directory. This API uses a promise to return the result. After a direct
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
 
@@ -34,7 +34,7 @@ Closes a directory. This API uses a promise to return the result. After a direct
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -57,7 +57,7 @@ Closes a directory. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
 
@@ -90,7 +90,7 @@ Closes a directory. After a directory is closed, the file descriptor in **Dir** 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
 
@@ -114,7 +114,7 @@ Reads the next directory entry. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
 
@@ -124,7 +124,7 @@ Reads the next directory entry. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Dirent&gt; |
+| Promise&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; |
 
 ## Examples
 
@@ -149,7 +149,7 @@ Reads the next directory entry. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
 
@@ -159,7 +159,7 @@ Reads the next directory entry. This API uses an asynchronous callback to return
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dirent&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -185,7 +185,7 @@ Reads the next directory entry. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
 

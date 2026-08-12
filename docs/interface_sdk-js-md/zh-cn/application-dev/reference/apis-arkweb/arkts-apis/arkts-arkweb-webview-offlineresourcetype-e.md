@@ -1,6 +1,6 @@
 # OfflineResourceType
 
-Enum type supplied to {@link OfflineResourceMap} for indicating the type of resource.
+Enum type supplied to [OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md#OfflineResourceMap) for indicating the type of resource.
 
 **起始版本：** 23
 

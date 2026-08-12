@@ -4,11 +4,11 @@
 
 详细开发流程请参考：[使用HiTraceMeter跟踪性能（ArkTS）](../../../dfx/hitracemeter-guidelines-arkts.md)。
 
-建议使用API version 19的性能打点接口，后续性能打点接口[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)、  
-[finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace)、[traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)将逐步废弃。
+建议使用API version 19的性能打点接口，后续性能打点接口[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)、  
+[finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace)、[traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue)将逐步废弃。
 
-性能打点接口[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace)、[finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace)、  
-[traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)固定使用COMMERCIAL级别。
+性能打点接口[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)、[finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace)、  
+[traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue)固定使用COMMERCIAL级别。
 
 [用户态trace格式](../../../dfx/hitracemeter-view.md#用户态trace格式说明)使用竖线 `|` 作为分隔符，所以通过性能打点接口传递的字符串类型参数应避免包含该字符，防止trace解析异常。
 

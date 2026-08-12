@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppNativeMemInfoAsync
@@ -27,7 +27,7 @@ Obtains the memory information of application processes by reading the data of t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;NativeMemInfo&gt; | Promise used to return the application process memory information. |
+| Promise&lt;[NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md)&gt; | Promise used to return the application process memory information. |
 
 ## Examples
 

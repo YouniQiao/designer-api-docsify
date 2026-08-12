@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## removeGroup
@@ -20,7 +20,7 @@ Removes a P2P group.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.removeP2pGroup
+**Substitutes:** [removeP2pGroup](ohos.wifiManager/wifiManager.removeP2pGroup)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

@@ -13,7 +13,7 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## interceptorHandle
@@ -39,13 +39,13 @@ Intercept an HTTP process and do changes as disired.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reqContext | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | Yes | the context of the target HTTP request. |
-| rspContext | [HttpResponse](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-httpresponse-i.md) | Yes | the context of the target HTTP response. |
+| rspContext | HttpResponse | Yes | the context of the target HTTP response. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ChainContinue&gt; | Continue the HTTP process or terminate then return the HTTP response. |
+| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; | Continue the HTTP process or terminate then return the HTTP response. |
 
 ## Examples
 

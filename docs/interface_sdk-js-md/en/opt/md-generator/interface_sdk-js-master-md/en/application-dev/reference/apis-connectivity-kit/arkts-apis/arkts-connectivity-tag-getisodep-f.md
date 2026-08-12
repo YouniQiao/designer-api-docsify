@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getIsoDep
@@ -12,7 +12,7 @@ import { tag } from 'kits/@kit.ConnectivityKit';
 function getIsoDep(tagInfo: TagInfo): IsoDepTag
 ```
 
-Obtains an {@link IsoDepTag} object based on the tag information.During tag reading, if the tag supports the IsoDep technology, an {@link IsoDepTag} object will be created based on the tag information.
+Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object based on the tag information.During tag reading, if the tag supports the IsoDep technology, an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object will be created based on the tag information.
 
 **Since:** 12
 
@@ -32,12 +32,12 @@ Obtains an {@link IsoDepTag} object based on the tag information.During tag read
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md) |
+| [IsoDepTag](arkts-connectivity-nfctech-isodeptag-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |

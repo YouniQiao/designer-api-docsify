@@ -166,7 +166,7 @@ size?: SizeT<number>
 
 width和height的取值范围：[0, +∞)。
 
-**类型：** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**类型：** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **默认值：** {width:0,height:0}
 

@@ -2,7 +2,7 @@
 
 ###### 子组件
  可以包含子组件。
- 从API version 10开始，推荐使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)进行页面路由。
+ 从API version 10开始，推荐使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md#NavPathStack)进行页面路由。
 
 
 ## 汇总

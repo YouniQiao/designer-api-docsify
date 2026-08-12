@@ -30,7 +30,7 @@ Releases output resources. This API uses a promise to return the result.Model co
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## main
 

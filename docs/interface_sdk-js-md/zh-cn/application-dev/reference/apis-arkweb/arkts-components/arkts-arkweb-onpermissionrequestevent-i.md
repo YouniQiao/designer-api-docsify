@@ -18,7 +18,7 @@ request: PermissionRequest
 
 Defines the js geolocation request.
 
-**类型：** [PermissionRequest](../arkts-apis/arkts-arkweb-web-permissionrequest-c.md)
+**类型：** [PermissionRequest](arkts-arkweb-permissionrequest-c.md)
 
 **起始版本：** 12
 

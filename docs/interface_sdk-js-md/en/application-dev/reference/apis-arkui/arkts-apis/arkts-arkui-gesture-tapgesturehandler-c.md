@@ -2,7 +2,7 @@
 
 Defines the TapGesture handler.
 
-**Inheritance/Implementation:** TapGestureHandler extends [GestureHandler](arkts-arkui-gesturehandler-c.md)
+**Inheritance/Implementation:** TapGestureHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#GestureHandler)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Constructor parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TapGestureHandlerOptions](arkts-arkui-tapgesturehandleroptions-i.md) | No |  |
+| options | [TapGestureHandlerOptions](arkts-arkui-gesture-tapgesturehandleroptions-i.md) | No |  |
 
 ## onAction
 
@@ -58,7 +58,7 @@ Tap gesture recognition success callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 

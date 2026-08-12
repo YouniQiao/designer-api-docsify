@@ -34,12 +34,12 @@ Initialize Grid FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | The controller for grid. |
-| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | No | Grid layout options. |
+| scroller | Scroller | No | The controller for grid. |
+| layoutOptions | GridLayoutOptions | No | Grid layout options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) |  |
+| GridAttribute |  |
 

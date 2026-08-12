@@ -2,9 +2,9 @@
 
 时间选择器弹窗选项。
 
-继承自[TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)。
+继承自[TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md#TimePickerOptions)。
 
-**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)
+**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md#TimePickerOptions)
 
 **起始版本：** 23
 

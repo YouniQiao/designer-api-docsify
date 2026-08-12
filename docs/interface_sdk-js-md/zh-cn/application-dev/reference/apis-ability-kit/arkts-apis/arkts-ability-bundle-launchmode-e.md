@@ -3,7 +3,7 @@
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)替代。
+> [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType)替代。
 
 Ability组件的启动模式。
 
@@ -13,7 +13,7 @@ Ability组件的启动模式。
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.bundleManager:bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
+**替代接口：** [LaunchType](arkts-ability-bundlemanager-launchtype-e.md#LaunchType)
 
 <!--Device-bundle-export enum LaunchMode--><!--Device-bundle-export enum LaunchMode-End-->
 
@@ -33,7 +33,7 @@ Ability只有一个实例。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.LaunchType#SINGLETON
+**替代接口：** [SINGLETON](ohos.bundle.bundleManager/bundleManager.LaunchType#SINGLETON)
 
 <!--Device-LaunchMode-SINGLETON = 0--><!--Device-LaunchMode-SINGLETON = 0-End-->
 
@@ -53,7 +53,7 @@ Ability有多个实例。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.LaunchType#MULTITON
+**替代接口：** [MULTITON](arkts-ability-bundlemanager-launchtype-e.md#MULTITON)
 
 <!--Device-LaunchMode-STANDARD = 1--><!--Device-LaunchMode-STANDARD = 1-End-->
 

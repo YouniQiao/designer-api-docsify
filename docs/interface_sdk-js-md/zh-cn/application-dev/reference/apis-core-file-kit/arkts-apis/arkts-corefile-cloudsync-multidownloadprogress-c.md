@@ -30,7 +30,7 @@ getFailedFiles(): Array<FailedFileInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;FailedFileInfo&gt; | 返回缓存失败的文件URI列表及其对应的错误类型。 |
+| Array&lt;[FailedFileInfo](arkts-corefile-cloudsync-failedfileinfo-i.md)&gt; | 返回缓存失败的文件URI列表及其对应的错误类型。 |
 
 **错误码：**
 
@@ -252,7 +252,7 @@ state: State
 
 批量缓存任务的执行状态。
 
-**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 20
 

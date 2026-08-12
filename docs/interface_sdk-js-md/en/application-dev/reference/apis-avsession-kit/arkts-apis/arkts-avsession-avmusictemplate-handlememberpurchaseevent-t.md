@@ -26,5 +26,5 @@ The handle member purchase event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DialogInfo&gt; | (DialogInfo) returned through promise |
+| Promise&lt;[DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md)&gt; | (DialogInfo) returned through promise |
 

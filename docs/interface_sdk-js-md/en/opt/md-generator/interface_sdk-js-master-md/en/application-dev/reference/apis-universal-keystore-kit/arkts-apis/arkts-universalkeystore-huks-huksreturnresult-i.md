@@ -11,7 +11,7 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -39,7 +39,7 @@ outData?: Uint8Array
 ```
 
 Challenge obtained after the  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)operation. The default value is **undefined**.
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)operation. The default value is **undefined**.
 
 **Type:** Uint8Array
 
@@ -58,9 +58,9 @@ properties?: Array<HuksParam>
 ```
 
 Challenge obtained after the  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)operation. The default value is **undefined**.
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)operation. The default value is **undefined**.
 
-**Type:** Array&lt;HuksParam&gt;
+**Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 9
 

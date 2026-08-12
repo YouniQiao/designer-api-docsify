@@ -18,7 +18,7 @@ bias?: Bias
 
 Offset of the component under the anchor constraints.&lt;br&gt;The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
-**Type:** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
+**Type:** Bias
 
 **Default:** {horizontal:0.5,vertical:0.5}
 
@@ -42,7 +42,7 @@ bottom?: LocalizedVerticalAlignParam
 
 Bottom alignment in the vertical direction.
 
-**Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
+**Type:** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ center?: LocalizedVerticalAlignParam
 
 Center alignment in the vertical direction.
 
-**Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
+**Type:** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ end?: LocalizedHorizontalAlignParam
 
 Right alignment with left-to-right scripts and left alignment with right-to-left scripts in the horizontal direction.
 
-**Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
+**Type:** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **Since:** 12
 
@@ -108,7 +108,7 @@ middle?: LocalizedHorizontalAlignParam
 
 Center alignment in the horizontal direction.
 
-**Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
+**Type:** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **Since:** 12
 
@@ -130,7 +130,7 @@ start?: LocalizedHorizontalAlignParam
 
 Left alignment with left-to-right scripts and right alignment with right-to-left scripts in the horizontal direction.
 
-**Type:** [LocalizedHorizontalAlignParam](../arkts-apis/arkts-arkui-common-localizedhorizontalalignparam-i.md)
+**Type:** [LocalizedHorizontalAlignParam](arkts-arkui-localizedhorizontalalignparam-i.md)
 
 **Since:** 12
 
@@ -152,7 +152,7 @@ top?: LocalizedVerticalAlignParam
 
 Top alignment in the vertical direction.
 
-**Type:** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
+**Type:** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **Since:** 12
 

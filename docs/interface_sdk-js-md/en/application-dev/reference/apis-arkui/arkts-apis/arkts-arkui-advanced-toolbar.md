@@ -3,13 +3,13 @@
 ###### Child Components
  Not supported
  ###### Events
- The [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) are not supported.
+ The [universal events](./@internal/component/ets/common) are not supported.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } from 'kits/@kit.ArkUI';
+import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
 ```
 
 ## Summary

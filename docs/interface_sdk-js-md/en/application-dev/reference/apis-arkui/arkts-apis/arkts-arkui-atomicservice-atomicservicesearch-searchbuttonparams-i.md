@@ -13,7 +13,7 @@ Sets the search button located next to the search text box.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## options
@@ -24,7 +24,7 @@ options?: SearchButtonOptions
 
 Font of the search text box. Default value: **{fontSize: '16fp',fontColor: '#ff3f97e9'}**
 
-**Type:** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
+**Type:** SearchButtonOptions
 
 **Since:** 18
 
@@ -44,7 +44,7 @@ searchButtonValue: ResourceStr
 
 Text on the search button located next to the search text box.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 

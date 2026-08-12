@@ -5,7 +5,7 @@ type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: l
 ```
 
 This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the   
-[respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata)API of the corresponding MediaSourceLoadingRequest object.
+[respondData](arkts-media-media-mediasourceloadingrequest-i.md#respondData)API of the corresponding MediaSourceLoadingRequest object.
 
 > **NOTE：**
 > 
@@ -27,5 +27,5 @@ This callback function is implemented by applications to handle resource read re
 | --- | --- | --- | --- |
 | uuid | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID for the resource handle. |
 | requestedOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Offset of the current media data relative to the start of the resource. |
-| requestedLength | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Length of the current request. The value **-1** indicates reaching the end of the resource. After pushing the data, call [finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishloading) to notify the player that the push is complete. |
+| requestedLength | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Length of the current request. The value **-1** indicates reaching the end of the resource. After pushing the data, call [finishLoading](arkts-media-media-mediasourceloadingrequest-i.md#finishLoading) to notify the player that the push is complete. |
 

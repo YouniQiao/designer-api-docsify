@@ -21,7 +21,7 @@ A modal dialog box is a system-level dialog box that blocks interactions such as
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## Summary

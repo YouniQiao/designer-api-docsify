@@ -24,7 +24,7 @@ function isHdHapticSupported(): boolean
 
 | 错误码ID |
 | --- |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) |
+| [14600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-操作设备失败) |
 
 ## 示例
 

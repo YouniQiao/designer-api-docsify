@@ -20,7 +20,7 @@ function off(type: 'BundleStatusChange', callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -58,7 +58,7 @@ function off(type: 'BundleStatusChange'): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleMonitor#off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **需要权限：** ohos.permission.LISTEN_BUNDLE_CHANGE
 

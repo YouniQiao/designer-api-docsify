@@ -18,7 +18,7 @@ config: ParticleColorPropertyUpdaterConfigs
 
 Color updater configuration.
 
-**Type:** [ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)
+**Type:** [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md)
 
 **Since:** 23
 

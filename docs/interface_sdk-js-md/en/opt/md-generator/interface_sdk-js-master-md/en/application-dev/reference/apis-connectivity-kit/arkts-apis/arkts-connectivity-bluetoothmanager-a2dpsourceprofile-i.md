@@ -2,13 +2,13 @@
 
 Manager a2dp source profile.
 
-**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md)
+**Inheritance/Implementation:** A2dpSourceProfile extends [BaseProfile](arkts-connectivity-bluetoothmanager-baseprofile-i.md#BaseProfile)
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile
+**Substitutes:** [A2dpSourceProfile](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile)
 
 <!--Device-bluetoothManager-interface A2dpSourceProfile extends BaseProfile--><!--Device-bluetoothManager-interface A2dpSourceProfile extends BaseProfile-End-->
 
@@ -17,7 +17,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## connect
@@ -32,7 +32,7 @@ Connect to device with a2dp.On API 10 and above, the permission required by this
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#connect
+**Substitutes:** [connect](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#connect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -52,10 +52,10 @@ Connect to device with a2dp.On API 10 and above, the permission required by this
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900004 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -72,7 +72,7 @@ Disconnect to device with a2dp.On API 10 and above, the permission required by t
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#disconnect
+**Substitutes:** [disconnect](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#disconnect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -92,10 +92,10 @@ Disconnect to device with a2dp.On API 10 and above, the permission required by t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900004 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -112,7 +112,7 @@ Obtains the playing state of device.On API 10 and above, the permission required
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#getPlayingState
+**Substitutes:** [getPlayingState](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile#getPlayingState)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -137,8 +137,8 @@ Obtains the playing state of device.On API 10 and above, the permission required
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900004 |
 | 2900001 |
 | 2900003 |
@@ -156,7 +156,7 @@ Unsubscribe the event reported when the profile connection state changes.On API 
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile.off#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile.off#event:connectionStateChange)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -176,8 +176,8 @@ Unsubscribe the event reported when the profile connection state changes.On API 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 
 ## on('connectionStateChange')
 
@@ -191,7 +191,7 @@ Subscribe the event reported when the profile connection state changes.On API 10
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile.on#event:connectionStateChange
+**Substitutes:** [connectionStateChange](ohos.bluetooth.a2dp/a2dp.A2dpSourceProfile.on#event:connectionStateChange)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -211,5 +211,5 @@ Subscribe the event reported when the profile connection state changes.On API 10
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |

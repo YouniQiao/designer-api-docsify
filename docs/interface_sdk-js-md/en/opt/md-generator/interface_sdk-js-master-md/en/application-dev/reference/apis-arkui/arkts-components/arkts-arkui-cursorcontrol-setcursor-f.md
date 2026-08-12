@@ -22,4 +22,4 @@ Sets the current mouse cursor style. This API can be used globally in method sta
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [PointerStyle](../arkts-apis/arkts-arkui-pointerstyle-t.md) | Yes |
+| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | Yes |

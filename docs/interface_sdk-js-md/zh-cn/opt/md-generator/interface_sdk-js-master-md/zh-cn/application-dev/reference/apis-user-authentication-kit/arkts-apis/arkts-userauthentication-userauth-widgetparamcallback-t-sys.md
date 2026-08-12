@@ -26,4 +26,4 @@ type WidgetParamCallback = (challenge: Uint8Array) => WidgetParam
 
 | 类型 |
 | --- |
-| [WidgetParam](arkts-userauthentication-userauth-widgetparam-i-sys.md) |
+| [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) |

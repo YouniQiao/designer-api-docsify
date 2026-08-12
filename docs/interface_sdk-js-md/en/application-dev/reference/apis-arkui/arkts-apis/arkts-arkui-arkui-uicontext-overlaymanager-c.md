@@ -13,7 +13,7 @@ class OverlayManager
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## addComponentContent
@@ -38,7 +38,7 @@ Add the ComponentContent to the OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
+| content | ComponentContent&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
 | index | int | No |  |
 
 ## addComponentContentWithOrder
@@ -63,7 +63,7 @@ Add the ComponentContent to the OverlayManager with order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
+| content | ComponentContent&lt;T&gt; | Yes | The content will be added to the OverlayManager. |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
@@ -106,7 +106,7 @@ Hide the ComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be hidden. |
+| content | ComponentContent&lt;T&gt; | Yes | The content will be hidden. |
 
 ## openOrderOverlay
 
@@ -130,7 +130,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | Yes | The content will be added to the OverlayManager. |
+| content | ComponentContent&lt;Object&gt; | Yes | The content will be added to the OverlayManager. |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**
@@ -143,7 +143,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103307](../errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
+| [103307](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-failed-to-open-the-overlay-due-to-a-system-popup-window) | The overlay cannot be opened due to the system pop-up window. |
 
 ## removeComponentContent
 
@@ -167,7 +167,7 @@ Remove the ComponentContent from the OverlayManager.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be removed from the OverlayManager. |
+| content | ComponentContent&lt;T&gt; | Yes | The content will be removed from the OverlayManager. |
 
 ## showAllComponentContents
 
@@ -209,5 +209,5 @@ Show the ComponentContent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes | The content will be shown. |
+| content | ComponentContent&lt;T&gt; | Yes | The content will be shown. |
 

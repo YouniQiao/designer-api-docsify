@@ -17,7 +17,7 @@ Implements a **MediaSourceInfo** object to provide the information about the med
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## format
@@ -64,7 +64,7 @@ type: SourceType
 
 Type of the media source.
 
-**Type:** [SourceType](arkts-arkweb-webview-sourcetype-e.md)
+**Type:** SourceType
 
 **Since:** 23
 

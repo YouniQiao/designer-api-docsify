@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from 'kits/@kit.InputKit';
+import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## hasIrEmitter
@@ -34,8 +34,8 @@ Checks whether the device has an infrared transmitter. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

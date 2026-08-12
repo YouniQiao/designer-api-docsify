@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getSignalLevel
@@ -20,7 +20,7 @@ Calculates the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getSignalLevel
+**Substitutes:** [getSignalLevel](ohos.wifiManager/wifiManager.getSignalLevel)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

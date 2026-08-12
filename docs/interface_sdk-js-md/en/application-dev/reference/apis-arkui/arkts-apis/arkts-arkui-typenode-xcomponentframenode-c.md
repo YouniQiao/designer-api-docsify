@@ -40,7 +40,7 @@ Initialize XComponent FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
+| XComponentAttribute |  |
 
 ## initialize
 
@@ -64,13 +64,13 @@ Initialize XComponent FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | Yes | Indicates the options of the xcomponent. |
+| value | XComponentOptions | Yes | Indicates the options of the xcomponent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
+| XComponentAttribute |  |
 
 ## initialize
 
@@ -94,11 +94,11 @@ Initialize XComponent FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | Indicates the constructor parameters of the xcomponent for native developing. |
+| params | NativeXComponentParameters | Yes | Indicates the constructor parameters of the xcomponent for native developing. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |  |
+| XComponentAttribute |  |
 

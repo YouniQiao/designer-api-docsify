@@ -24,7 +24,7 @@ Default value: **Axis.Vertical**
 
 Invalid values are treated as the default value.
 
-**Type:** [Axis](../arkts-apis/arkts-arkui-enums-axis-e.md)
+**Type:** Axis
 
 **Since:** 12
 
@@ -74,7 +74,7 @@ Default value:```{ start: 0}```
 
 Invalid values are treated as the default value.
 
-**Type:** [GuideLinePosition](../arkts-apis/arkts-arkui-relativecontainer-guidelineposition-i.md)
+**Type:** [GuideLinePosition](arkts-arkui-guidelineposition-i.md)
 
 **Since:** 12
 

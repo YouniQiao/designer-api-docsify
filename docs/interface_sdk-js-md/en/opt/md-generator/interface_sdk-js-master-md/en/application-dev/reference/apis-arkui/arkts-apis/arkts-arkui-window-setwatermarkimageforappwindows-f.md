@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setWatermarkImageForAppWindows
@@ -13,7 +13,7 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 ```
 
 Sets a watermark image for windows in the current application process. This API uses a promise to return the result. This API must be called after  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)takes effect.
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent)takes effect.
 
 **Since:** 21
 
@@ -31,15 +31,15 @@ Sets a watermark image for windows in the current application process. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 

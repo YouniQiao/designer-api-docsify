@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## upload
@@ -18,7 +18,7 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context:
+**Substitutes:** [uploadFile](request.uploadFile(context:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -33,13 +33,13 @@ Uploads a file. This API uses an asynchronous callback to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Yes |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;UploadTask&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -74,7 +74,7 @@ Uploads a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context:
+**Substitutes:** [uploadFile](request.uploadFile(context:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -94,13 +94,13 @@ Uploads a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;UploadTask&gt; |
+| Promise&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

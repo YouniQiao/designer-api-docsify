@@ -15,7 +15,7 @@ Indicates CELL fence information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## cellInfos
@@ -26,7 +26,7 @@ cellInfos: Array<CellInfo>
 
 Indicates CELL information array.
 
-**Type:** Array&lt;CellInfo&gt;
+**Type:** Array&lt;[CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

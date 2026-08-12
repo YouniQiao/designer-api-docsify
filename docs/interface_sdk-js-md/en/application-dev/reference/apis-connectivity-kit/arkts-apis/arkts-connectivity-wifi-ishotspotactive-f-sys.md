@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## isHotspotActive
@@ -20,7 +20,7 @@ Checks whether Wi-Fi hotspot is active on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.isHotspotActive
+**Substitutes:** [isHotspotActive](ohos.wifiManager/wifiManager.isHotspotActive)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

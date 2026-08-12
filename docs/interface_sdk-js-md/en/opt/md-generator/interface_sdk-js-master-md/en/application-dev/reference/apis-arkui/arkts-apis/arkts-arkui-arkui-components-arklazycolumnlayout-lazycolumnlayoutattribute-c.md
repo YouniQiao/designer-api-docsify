@@ -13,7 +13,7 @@ Defines the lazy column layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from 'kits/@kit.ArkUI';
+import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
 ```
 
 ## alignItems
@@ -158,7 +158,7 @@ The spacing between rows.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [space](#space) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes |
+| [space](#space) | LengthMetrics \| undefined | Yes |
 
 **Return value:**
 

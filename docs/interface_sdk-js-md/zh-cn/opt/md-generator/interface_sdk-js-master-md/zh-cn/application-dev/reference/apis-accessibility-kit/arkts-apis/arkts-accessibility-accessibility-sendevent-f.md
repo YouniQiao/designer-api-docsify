@@ -12,7 +12,7 @@ function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [accessibility.sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)(event:
+**替代接口：** [sendAccessibilityEvent](accessibility.sendAccessibilityEvent(event:)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -59,7 +59,7 @@ function sendEvent(event: EventInfo): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [accessibility.sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent)(event:
+**替代接口：** [sendAccessibilityEvent](accessibility.sendAccessibilityEvent(event:)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>-End-->
 
@@ -75,7 +75,7 @@ function sendEvent(event: EventInfo): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

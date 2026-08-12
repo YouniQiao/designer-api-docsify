@@ -2,7 +2,7 @@
 
 首选项实例，提供获取和修改存储数据的接口。
 
-下列接口都需先使用[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)获取到Preferences实例，再通过此实例调用对应接口。
+下列接口都需先使用[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)获取到Preferences实例，再通过此实例调用对应接口。
 
 **起始版本：** 9
 
@@ -16,7 +16,7 @@
 clear(callback: AsyncCallback<void>): void
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用callback异步回调。
+清除缓存的Preferences实例中的所有数据，可通过[flush](#flush)将Preferences实例持久化，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -36,8 +36,8 @@ clear(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -59,7 +59,7 @@ dataPreferences.clear((err: BusinessError) =>{
 clear(): Promise<void>
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+清除缓存的Preferences实例中的所有数据，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -73,13 +73,13 @@ clear(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -100,7 +100,7 @@ promise.then(() => {
 clearSync(): void
 ```
 
-清除缓存的Preferences实例中的所有数据，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+清除缓存的Preferences实例中的所有数据，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
 **起始版本：** 10
 
@@ -122,7 +122,7 @@ dataPreferences.clearSync();
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用callback异步回调。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -143,8 +143,8 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -166,7 +166,7 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 delete(key: string): Promise<void>
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -186,14 +186,14 @@ delete(key: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -214,7 +214,7 @@ deleteStartupPromise.then(() => {
 deleteSync(key: string): void
 ```
 
-从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+从缓存的Preferences实例中删除名为给定Key的存储键值对，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
 **起始版本：** 10
 
@@ -234,8 +234,8 @@ deleteSync(key: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -276,8 +276,8 @@ flush(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -320,13 +320,13 @@ flush(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -365,7 +365,7 @@ flushSync(): void
 
 | 错误码ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -401,8 +401,8 @@ get(key: string, defValue: ValueType, callback: AsyncCallback<ValueType>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -445,14 +445,14 @@ get(key: string, defValue: ValueType): Promise<ValueType>
 
 | 类型 |
 | --- |
-| Promise&lt;ValueType&gt; |
+| Promise & lt;ValueType & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -493,8 +493,8 @@ getAll(callback: AsyncCallback<Object>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -539,13 +539,13 @@ getAll(): Promise<Object>
 
 | 类型 |
 | --- |
-| Promise&lt;Object&gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -595,7 +595,7 @@ getAllSync(): Object
 
 | 错误码ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -646,8 +646,8 @@ getSync(key: string, defValue: ValueType): ValueType
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -682,8 +682,8 @@ has(key: string, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -729,14 +729,14 @@ has(key: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -787,8 +787,8 @@ hasSync(key: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -828,8 +828,8 @@ off(type: 'change', callback?: Callback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -859,7 +859,7 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 取消订阅进程间数据变更。
 
-本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
+本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
 
 **起始版本：** 10
 
@@ -880,8 +880,8 @@ off(type: 'multiProcessChange', callback?: Callback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -924,15 +924,15 @@ off(type: 'dataChange', keys: Array<string>, callback?: Callback<Record<string, 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'dataChange' | 是 |
-| keys | Array&lt;string&gt; | 是 |
+| keys | Array & lt;string & gt; | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -965,7 +965,7 @@ dataPreferences.off('dataChange', keys, observer);
 on(type: 'change', callback: Callback<string>): void
 ```
 
-订阅数据变更，订阅的Key的值发生变更后，并且在执行[flush](arkts-arkdata-preferences-preferences-i.md#flush)方法后，触发callback回调。
+订阅数据变更，订阅的Key的值发生变更后，并且在执行[flush](#flush)方法后，触发callback回调。
 
 > **不同订阅方法的对比：**
 > 
@@ -979,9 +979,9 @@ on(type: 'change', callback: Callback<string>): void
 > dataChange')。
 > > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或
-> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或
+> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 9
 
@@ -1002,8 +1002,8 @@ on(type: 'change', callback: Callback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -1031,17 +1031,17 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
 订阅进程间数据变更，多个进程持有同一个首选项文件时，在任意一个进程（包括本进程）执行  
-[flush](arkts-arkdata-preferences-preferences-i.md#flush)方法，持久化文件发生变更后，触发callback回调。
+[flush](#flush)方法，持久化文件发生变更后，触发callback回调。
 
-本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
+本接口提供给申请了[dataGroupId](arkts-arkdata-preferences-options-i.md#Options)的应用进行使用，未申请的应用不推荐使用（监听不到数据变更），多进程操作可能会损坏持久化文件，导致数据丢失。
 
 > **说明：**
 > 
 > 同一持久化文件在当前进程对多进程数据变更订阅的最大数量为50次，超过最大限制后订阅会失败。建议在触发callback回调后及时取消订阅。
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或
-> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或
+> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 10
 
@@ -1062,9 +1062,9 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
-| [15500019](../errorcode-preferences.md#15500019-获取订阅服务失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [15500019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500019-获取订阅服务失败) |
 
 ## 示例
 
@@ -1091,13 +1091,13 @@ dataPreferences.flush((err: BusinessError) => {
 on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
 ```
 
-精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](arkts-arkdata-preferences-preferences-i.md#flush)方法后，触发callback回调。
+精确订阅数据变更，只有被订阅的Key值发生变更后，在执行[flush](#flush)方法后，触发callback回调。
 
 > **说明：**
 > 
-> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache)或
-> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletepreferences)后，订阅的数据变更会主动取消订阅，在重新
-> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)后需要重新订阅数据变更。
+> 当调用[removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removePreferencesFromCache)或
+> [deletePreferences](arkts-arkdata-preferences-deletepreferences-f.md#deletePreferences)后，订阅的数据变更会主动取消订阅，在重新
+> [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)后需要重新订阅数据变更。
 
 **起始版本：** 12
 
@@ -1112,15 +1112,15 @@ on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, Va
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'dataChange' | 是 |
-| keys | Array&lt;string&gt; | 是 |
+| keys | Array & lt;string & gt; | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, ValueType&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -1152,7 +1152,7 @@ dataPreferences.flush((err: BusinessError) => {
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用callback异步回调。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用callback异步回调。
 
 > **说明：**
 > 
@@ -1180,8 +1180,8 @@ put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -1203,7 +1203,7 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 put(key: string, value: ValueType): Promise<void>
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，使用Promise异步回调。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，使用Promise异步回调。
 
 > **说明：**
 > 
@@ -1230,14 +1230,14 @@ put(key: string, value: ValueType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -1258,7 +1258,7 @@ putStartupPref.then(() => {
 putSync(key: string, value: ValueType): void
 ```
 
-将数据写入缓存的Preferences实例中，可通过[flush](arkts-arkdata-preferences-preferences-i.md#flush)将Preferences实例持久化，此为同步接口。
+将数据写入缓存的Preferences实例中，可通过[flush](#flush)将Preferences实例持久化，此为同步接口。
 
 > **说明：**
 > 
@@ -1285,8 +1285,8 @@ putSync(key: string, value: ValueType): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15500000](../errorcode-preferences.md#15500000-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 

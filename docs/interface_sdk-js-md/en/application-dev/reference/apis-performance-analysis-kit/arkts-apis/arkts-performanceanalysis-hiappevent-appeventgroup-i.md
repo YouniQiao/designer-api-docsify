@@ -1,7 +1,7 @@
 # AppEventGroup
 
 Defines parameters of the event group returned by the subscription. This API can be used to obtain detail information about an event group, which is often used in the **onReceive** callback of  
-[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md).
+[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher).
 
 **Since:** 11
 
@@ -14,7 +14,7 @@ Defines parameters of the event group returned by the subscription. This API can
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## appEventInfos
@@ -25,7 +25,7 @@ appEventInfos: Array<AppEventInfo>
 
 Event object group.
 
-**Type:** Array&lt;AppEventInfo&gt;
+**Type:** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
 **Since:** 11
 

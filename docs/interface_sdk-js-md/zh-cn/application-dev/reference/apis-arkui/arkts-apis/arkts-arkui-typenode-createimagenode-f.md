@@ -29,5 +29,5 @@ export function createImageNode(context: UIContext, options?: FrameNodeOptions):
 
 | 类型 | 说明 |
 | --- | --- |
-| [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | 返回 Image 类型的 FrameNode |
+| Image | 返回 Image 类型的 FrameNode |
 

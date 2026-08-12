@@ -24,7 +24,7 @@ Defines TextArea Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextAreaOptions](../arkts-components/arkts-arkui-textareaoptions-i.md) | No |  |
+| value | [TextAreaOptions](arkts-arkui-textarea-textareaoptions-i.md) | No |  |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines TextArea Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAreaAttribute&gt; | Yes | TextArea attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md)&gt; | Yes | TextArea attribute instance |
 
 **Return value:**
 

@@ -22,13 +22,13 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | 是 |
+| bundleNames | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;LocalFilePresentStatus&gt;&gt; |
+| Promise&lt;Array&lt;[LocalFilePresentStatus](arkts-corefile-cloudsyncmanager-localfilepresentstatus-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
@@ -36,8 +36,8 @@ function getBundlesLocalFilePresentStatus(bundleNames: Array<string>): Promise<A
 | --- |
 | 13900020 |
 | 22400005 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900010 |
 

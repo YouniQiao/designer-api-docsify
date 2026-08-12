@@ -10,7 +10,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -28,7 +28,7 @@ action: (selectedText: {plainText: string}) => void
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -56,7 +56,7 @@ content: ResourceStr
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +78,7 @@ startIcon?: ResourceStr
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -6,7 +6,7 @@ DialogController可作为UIContext弹出自定义弹窗的成员变量，具体�
 [openCustomDialogWithController](arkts-apis-uicontext-promptaction.md#opencustomdialogwithcontroller18)和  
 [presentCustomDialog](arkts-apis-uicontext-promptaction.md#presentcustomdialog18)示例。
 
-**继承/实现关系：** DialogController extends [CommonController](arkts-arkui-promptaction-commoncontroller-c.md)
+**继承/实现关系：** DialogController extends [CommonController](arkts-arkui-promptaction-commoncontroller-c.md#CommonController)
 
 **起始版本：** 18
 

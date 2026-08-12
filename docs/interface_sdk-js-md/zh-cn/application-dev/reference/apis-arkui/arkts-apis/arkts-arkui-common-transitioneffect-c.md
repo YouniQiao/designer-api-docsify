@@ -32,13 +32,13 @@ animation(value: AnimateParam): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 动画参数。&lt;/br&gt;该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。&lt;/br&gt;如果通过combine进行 TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
+| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) | 是 | 动画参数。&lt;/br&gt;该参数只用来指定动画参数，其入参AnimateParam的onFinish回调不生效。&lt;/br&gt;如果通过combine进行 TransitionEffect的组合，前一TransitionEffect的动画参数也可用于后一TransitionEffect。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画效果。 |
 
 ## asymmetric
 
@@ -62,14 +62,14 @@ static asymmetric(appear: TransitionEffect, disappear: TransitionEffect): Transi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appear | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 是 | 指定出现的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
-| disappear | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 是 | 指定消失的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| appear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 是 | 指定出现的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
+| disappear | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 是 | 指定消失的转场效果。&lt;br/&gt;如不通过asymmetric函数构造TransitionEffect，则表明该效果在组件出现和消失时均生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画非对称的转场效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画非对称的转场效果。 |
 
 ## combine
 
@@ -93,13 +93,13 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transitionEffect | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 是 | 被组合的过渡效果。 |
+| transitionEffect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 是 | 被组合的过渡效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 组合过渡效应。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 组合过渡效应。 |
 
 ## constructor
 
@@ -174,7 +174,7 @@ constructor(type: 'move', effect: TransitionEdge)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'move' | 是 | 转场类型。 |
-| effect | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | 是 | 转场参数。 |
+| effect | [TransitionEdge](arkts-arkui-common-transitionedge-e.md) | 是 | 转场参数。 |
 
 ## constructor
 
@@ -224,7 +224,7 @@ constructor(type: 'rotate', effect: RotateOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'rotate' | 是 | 转场类型。 |
-| effect | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | 是 | 转场参数。 |
+| effect | [RotateOptions](arkts-arkui-common-rotateoptions-i.md) | 是 | 转场参数。 |
 
 ## constructor
 
@@ -249,7 +249,7 @@ constructor(type: 'scale', effect: ScaleOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'scale' | 是 | 转场类型。 |
-| effect | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | 是 | 转场参数。 |
+| effect | [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) | 是 | 转场参数。 |
 
 ## constructor
 
@@ -298,13 +298,13 @@ static move(edge: TransitionEdge): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edge | [TransitionEdge](../arkts-components/arkts-arkui-transitionedge-e.md) | 是 | 组件转场时从屏幕边缘滑入和滑出的效果，本质为平移效果，为插入时起点和删除时终点的值。 |
+| edge | [TransitionEdge](arkts-arkui-common-transitionedge-e.md) | 是 | 组件转场时从屏幕边缘滑入和滑出的效果，本质为平移效果，为插入时起点和删除时终点的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画从屏幕边缘滑入和滑出的效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画从屏幕边缘滑入和滑出的效果。 |
 
 ## opacity
 
@@ -334,7 +334,7 @@ static opacity(alpha: double): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画透明度效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画透明度效果。 |
 
 ## rotate
 
@@ -358,13 +358,13 @@ static rotate(options: RotateOptions): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) | 是 | 组件转场时的旋转效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的旋转向量分量。&lt;br/&gt;-y：纵向的旋转向量分量。&lt;br/&gt;-z：竖向的旋转向量分 量。&lt;br/&gt;- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br/&gt;- centerZ指z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。&lt;br/&gt;-perspective指视距，不支持perspective属性做转场动画。 |
+| options | [RotateOptions](arkts-arkui-common-rotateoptions-i.md) | 是 | 组件转场时的旋转效果，为插入时起点和删除时终点的值。&lt;br/&gt;-x：横向的旋转向量分量。&lt;br/&gt;-y：纵向的旋转向量分量。&lt;br/&gt;-z：竖向的旋转向量分 量。&lt;br/&gt;- centerX、centerY指旋转中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为旋转中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br/&gt;- centerZ指z轴锚点，即3D旋转中心点的z轴分量，centerZ默认值是0。&lt;br/&gt;-perspective指视距，不支持perspective属性做转场动画。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画旋转效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画旋转效果。 |
 
 ## scale
 
@@ -388,13 +388,13 @@ static scale(options: ScaleOptions): TransitionEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) | 是 | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5 时，组件入场动画的缩放值将从0.4开始执行。&lt;br/&gt;-x：横向放大倍数（或缩小比例）。&lt;br/&gt;-y：纵向放大倍数（或缩小比例）。&lt;br/&gt;-z：当前为二维显示，该参数无效。&lt;br/&gt;- centerX、 centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br&gt;**说明：** &lt;br&gt;设置centerX、 centerY为非法字符串时（例如，"illegalString"），默认值为"0"。 |
+| options | [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) | 是 | 组件转场时的缩放效果，为插入时起点和删除时终点的值。设置的缩放值在组件当前的scale属性上进行叠加，如组件当前scale值为0.8，当转场缩放值设置为0.5 时，组件入场动画的缩放值将从0.4开始执行。&lt;br/&gt;-x：横向放大倍数（或缩小比例）。&lt;br/&gt;-y：纵向放大倍数（或缩小比例）。&lt;br/&gt;-z：当前为二维显示，该参数无效。&lt;br/&gt;- centerX、 centerY指缩放中心点，centerX和centerY默认值是"50%"，即默认以组件的中心点为缩放中心点。&lt;br/&gt;- 中心点为(0, 0)代表组件的左上角。&lt;br&gt;**说明：** &lt;br&gt;设置centerX、 centerY为非法字符串时（例如，"illegalString"），默认值为"0"。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画缩放效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画缩放效果。 |
 
 ## translate
 
@@ -424,7 +424,7 @@ static translate(options: TranslateOptions): TransitionEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) | 当前动画平移效果。 |
+| [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) | 当前动画平移效果。 |
 
 ## IDENTITY
 

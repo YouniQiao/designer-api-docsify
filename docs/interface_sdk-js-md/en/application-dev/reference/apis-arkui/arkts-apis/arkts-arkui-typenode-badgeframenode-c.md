@@ -34,13 +34,13 @@ Initialize Badge FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](../arkts-components/arkts-arkui-badgeparamwithnumber-i.md) | Yes |  |
+| value | BadgeParamWithNumber | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
+| BadgeAttribute |  |
 
 ## initialize
 
@@ -64,11 +64,11 @@ Initialize Badge FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithString](../arkts-components/arkts-arkui-badgeparamwithstring-i.md) | Yes |  |
+| value | BadgeParamWithString | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
+| BadgeAttribute |  |
 

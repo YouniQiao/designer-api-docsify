@@ -24,5 +24,5 @@ Callback invoked when the depth map resource is loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | Yes |  |
+| error | BusinessError&lt;void&gt; | Yes |  |
 

@@ -32,6 +32,22 @@ Get resource factory.
 | --- | --- |
 | [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md) | RenderResourceFactory instance |
 
+## Examples
+
+```TypeScript
+import { Scene, RenderContext, RenderResourceFactory } from '@kit.ArkGraphics3D';
+
+function getRenderResourceFactory(): void {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    console.error("RenderContext is null");
+    return;
+  }
+  const renderResourceFactory: RenderResourceFactory = renderContext.getRenderResourceFactory();
+  console.info("TEST getRenderResourceFactory");
+}
+```
+
 ## loadPlugin
 
 ```TypeScript
@@ -59,6 +75,21 @@ Loads a plugin by name. The API locates and loads the corresponding plugin resou
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return a Boolean value, indicating whether the plugin is loaded. The value true means that the plugin is loaded, and false means the opposite. |
+
+## Examples
+
+```TypeScript
+import { Scene, RenderContext } from '@kit.ArkGraphics3D';
+
+function loadPlugin(): Promise<boolean> {
+  const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+  if (!renderContext) {
+    console.error("RenderContext is null");
+    return Promise.reject(new Error("RenderContext is null"));
+  }
+  return renderContext.loadPlugin("pluginName");
+}
+```
 
 ## registerResourcePath
 
@@ -88,4 +119,30 @@ Registers the directory path and retrieval name for asset files, such as shaders
 | Type | Description |
 | --- | --- |
 | boolean | Result indicating whether the registration is successful. true if successful, and false otherwise. The possible cause of a registration failure is that the retrieval name has been registered or an input parameter is invalid. |
+
+## Examples
+
+```TypeScript
+import { Scene, RenderContext } from '@kit.ArkGraphics3D';
+
+function registerResourcePath(): void {
+  // Create shader resources. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("shaders/custom_shader/custom_material_sample.shader"))
+    .then(scene => {
+      const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
+      if (!renderContext) {
+        console.error("RenderContext is null");
+        return false;
+      }
+      return renderContext.registerResourcePath("protocol", "OhosRawFile://uri");
+    })
+    .then(result => {
+      if (result) {
+        console.info("resource path registration success");
+      } else {
+        console.error("resource path registration failed");
+      }
+    });
+}
+```
 

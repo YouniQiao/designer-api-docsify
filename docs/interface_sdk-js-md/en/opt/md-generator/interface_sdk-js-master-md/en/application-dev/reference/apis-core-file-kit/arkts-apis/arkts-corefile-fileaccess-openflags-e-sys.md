@@ -6,7 +6,7 @@ Enumerates the file open modes.
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:fileIo.OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#OpenMode)
 
 <!--Device-fileAccess-enum OPENFLAGS--><!--Device-fileAccess-enum OPENFLAGS-End-->
 
@@ -26,7 +26,7 @@ Read mode.
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:fileIo.OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#OpenMode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ Write mode.
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:fileIo.OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#OpenMode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Read/Write mode.
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:fileIo.OpenMode](arkts-corefile-fileio-openmode-n.md#openmode)
+**Substitutes:** [OpenMode](arkts-corefile-fileio-openmode-n.md#OpenMode)
 
 **Model restriction:** This API can be used only in the stage model.
 

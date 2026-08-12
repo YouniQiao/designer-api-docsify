@@ -4,7 +4,7 @@
 export type ErrorCallback<T extends Error = BusinessError> = (err: T) => void
 ```
 
-Defines a common callback that carries an error parameter. The information returned by the callback is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.
+Defines a common callback that carries an error parameter. The information returned by the callback is of the [BusinessError](arkts-basicservices-base-businesserror-c.md#BusinessError) type.
 
 **Since:** 23
 

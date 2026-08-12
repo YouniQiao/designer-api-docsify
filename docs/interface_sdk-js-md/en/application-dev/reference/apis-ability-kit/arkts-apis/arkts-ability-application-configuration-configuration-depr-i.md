@@ -8,7 +8,7 @@ The module defines environment change information. Configuration is an interface
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Configuration/Configuration
+**Substitutes:** [Configuration/Configuration](ohos.app.ability.Configuration/Configuration)
 
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
@@ -30,7 +30,7 @@ Color mode, which can be **COLOR_MODE_LIGHT** or **COLOR_MODE_DARK**. The defaul
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Configuration/Configuration#colorMode
+**Substitutes:** [colorMode](ohos.app.ability.Configuration/Configuration#colorMode)
 
 <!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
@@ -52,7 +52,7 @@ Language of the application, for example, **zh**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.Configuration/Configuration#language
+**Substitutes:** [language](ohos.app.ability.Configuration/Configuration#language)
 
 <!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 

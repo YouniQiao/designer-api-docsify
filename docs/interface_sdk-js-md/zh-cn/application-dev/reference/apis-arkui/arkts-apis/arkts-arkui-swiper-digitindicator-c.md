@@ -2,7 +2,7 @@
 
 Define DigitIndicator, the indicator type is digit.
 
-**继承/实现关系：** DigitIndicator extends [Indicator](../arkts-components/arkts-arkui-indicator-c.md/arkts-arkui-indicator-c.md)
+**继承/实现关系：** DigitIndicator extends [Indicator](arkts-arkui-swiper-indicator-c.md#Indicator)
 
 **起始版本：** 23
 

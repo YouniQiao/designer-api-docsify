@@ -108,7 +108,7 @@ pageSize?: PrintPageSize | PrintPageType
 
 表示待打印文件的纸张类型。
 
-**类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| PrintPageType
+**类型：** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
 **起始版本：** 11
 

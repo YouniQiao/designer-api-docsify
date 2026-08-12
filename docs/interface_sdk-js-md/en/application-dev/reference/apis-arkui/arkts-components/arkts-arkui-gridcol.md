@@ -29,7 +29,7 @@ Creates a **GridCol** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridColOptions](../arkts-apis/arkts-arkui-gridcol-gridcoloptions-i.md) | No |  |
+| option | [GridColOptions](arkts-arkui-gridcoloptions-i.md) | No |  |
 
 ## Summary
 

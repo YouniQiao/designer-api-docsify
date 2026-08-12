@@ -76,7 +76,7 @@ readonly creatorInstanceKey?: number
 
 **废弃版本：** 15
 
-**替代接口：** [NotificationRequest#appInstanceKey](arkts-notification-notificationrequest-notificationrequest-i-sys.md#appinstancekey)
+**替代接口：** [appInstanceKey](#appInstanceKey)
 
 <!--Device-NotificationRequest-readonly creatorInstanceKey?: number--><!--Device-NotificationRequest-readonly creatorInstanceKey?: number-End-->
 
@@ -156,7 +156,7 @@ groupInfo?: GroupInfo
 
 组通知定制信息。默认为空。
 
-**类型：** [GroupInfo](arkts-notification-notificationmanager-groupinfo-t-sys.md)
+**类型：** [GroupInfo](arkts-notification-notificationrequest-groupinfo-i-sys.md)
 
 **起始版本：** 26.0.0
 
@@ -231,7 +231,7 @@ notificationControlFlags?: number
 通知提醒方式管控。默认值为0。
 
 可以通过此接口减少当前通知的提醒方式。与  
-[NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md)的枚举进行按位或运算得到该参数。
+[NotificationControlFlagStatus](arkts-notification-notificationmanager-notificationcontrolflagstatus-e-sys.md#NotificationControlFlagStatus)的枚举进行按位或运算得到该参数。
 
 **类型：** number
 
@@ -305,7 +305,7 @@ unifiedGroupInfo?: UnifiedGroupInfo
 
 消息智能聚合信息字段。默认为空。
 
-**类型：** [UnifiedGroupInfo](arkts-notification-notificationmanager-unifiedgroupinfo-t-sys.md)
+**类型：** [UnifiedGroupInfo](arkts-notification-notificationrequest-unifiedgroupinfo-i-sys.md)
 
 **起始版本：** 12
 

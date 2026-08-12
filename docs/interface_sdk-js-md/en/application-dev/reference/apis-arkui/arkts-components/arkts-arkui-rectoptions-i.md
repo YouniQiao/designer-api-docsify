@@ -25,7 +25,7 @@ height?: Length
 Height.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and  
 **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -47,7 +47,7 @@ radius?: Length | Array<any>
 
 Radius of the rounded corner. You can set separate radii for the four rounded corners. The value must be greater than or equal to 0.This attribute takes precedence over **radiusWidth** and **radiusHeight** when used together.Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| Array&lt;any&gt;
+**Type:** Length \| Array&lt;any&gt;
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ width?: Length
 Width.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and  
 **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 

@@ -1,8 +1,8 @@
 # Hyperlink
 
-Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
+Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text).
 
-**Inheritance/Implementation:** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
+**Inheritance/Implementation:** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ Represents the hyperlink data. It is a child class of [Text](arkts-arkdata-unifi
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## description

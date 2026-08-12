@@ -1,10 +1,10 @@
 # UIWaterFlowEvent
 
 Represents the return value of the  
-[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent) method in  
+[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-2) method in  
 **frameNode**, which can be used to set scroll events for a **WaterFlow** node.
 
-**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#UIScrollableCommonEvent)
 
 **Since:** 19
 

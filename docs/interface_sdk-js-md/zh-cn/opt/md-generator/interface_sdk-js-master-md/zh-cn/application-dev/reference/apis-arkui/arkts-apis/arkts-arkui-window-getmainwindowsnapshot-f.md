@@ -21,22 +21,22 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowId | Array&lt;number&gt; | 是 |
+| windowId | Array & lt;number & gt; | 是 |
 | config | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;image.PixelMap \| undefined&gt;&gt; |
+| Promise & lt;Array & lt;image.PixelMap \ | undefined & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

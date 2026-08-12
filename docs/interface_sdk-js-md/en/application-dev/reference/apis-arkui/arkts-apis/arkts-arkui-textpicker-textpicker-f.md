@@ -57,7 +57,7 @@ Defines the TextPicker component. It requires call setTextPickerOptions at start
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextPickerAttribute&gt; | Yes | the callback to set up component's attribute. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextPickerAttribute](arkts-arkui-textpicker-textpickerattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 

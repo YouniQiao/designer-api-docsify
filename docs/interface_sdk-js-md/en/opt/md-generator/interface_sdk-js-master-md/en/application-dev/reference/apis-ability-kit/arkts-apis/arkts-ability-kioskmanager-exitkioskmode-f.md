@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## exitKioskMode
@@ -32,16 +32,16 @@ Exits kiosk mode. This API uses a promise to return the result.This API takes ef
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000112](../errorcode-ability.md#16000112-no-application-is-in-kiosk-mode) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000110](../errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000112-no-application-is-in-kiosk-mode) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000110-application-is-not-in-the-kiosk-mode-list) |
 
 ## Examples
 

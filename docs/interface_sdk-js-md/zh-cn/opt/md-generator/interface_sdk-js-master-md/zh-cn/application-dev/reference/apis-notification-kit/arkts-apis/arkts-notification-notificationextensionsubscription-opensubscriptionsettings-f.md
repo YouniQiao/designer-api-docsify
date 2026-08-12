@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationExtensionSubscription } from 'kits/@kit.NotificationKit';
+import { notificationExtensionSubscription } from '@kit.NotificationKit';
 ```
 
 ## openSubscriptionSettings
@@ -32,16 +32,16 @@ function openSubscriptionSettings(context: UIAbilityContext): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600018](../errorcode-notification.md#1600018-通知设置页面已经拉起) |
-| [1600023](../errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-通知设置页面已经拉起) |
+| [1600023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-应用未实现notificationsubscriberextensionability) |
 
 ## 示例
 

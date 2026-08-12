@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## addDeviceConfig
@@ -22,7 +22,7 @@ Adds Wi-Fi connection configuration to the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.addDeviceConfig
+**Substitutes:** [addDeviceConfig](ohos.wifiManager/wifiManager.addDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
@@ -36,7 +36,7 @@ Adds Wi-Fi connection configuration to the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Adds Wi-Fi connection configuration to the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.addDeviceConfig
+**Substitutes:** [addDeviceConfig](ohos.wifiManager/wifiManager.addDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
@@ -108,8 +108,8 @@ Adds Wi-Fi connection configuration to the device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [WifiDeviceConfig](arkts-connectivity-wifi-wifideviceconfig-i-sys.md) | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
+| config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes |  |
 
 ## Examples
 

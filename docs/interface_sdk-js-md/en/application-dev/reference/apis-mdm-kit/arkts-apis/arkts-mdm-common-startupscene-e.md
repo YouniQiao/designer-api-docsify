@@ -1,7 +1,7 @@
 # StartupScene
 
 Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first-time startup wizard are complete, the device system calls the  
-[onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted)API to notify the device administrator application.
+[onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onStartupGuideCompleted)API to notify the device administrator application.
 
 **Since:** 24
 

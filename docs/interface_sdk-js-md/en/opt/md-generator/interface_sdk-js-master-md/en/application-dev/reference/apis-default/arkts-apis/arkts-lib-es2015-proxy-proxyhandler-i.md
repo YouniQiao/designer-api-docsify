@@ -229,7 +229,7 @@ A trap for `Reflect.ownKeys()`.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ArrayLike&lt;string \](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | symbol&gt; |
+| [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;string \| symbol & gt; |
 
 ## preventExtensions
 

@@ -11,7 +11,7 @@ The definition of cast command to be sent to the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## command
@@ -20,7 +20,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 command: AVCastControlCommandType
 ```
 
-The command value {@link AVCastControlCommandType}
+The command value [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md#AVCastControlCommandType)
 
 **Type:** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 
@@ -38,9 +38,9 @@ The command value {@link AVCastControlCommandType}
 parameter?: media.PlaybackSpeed | number | string | LoopMode
 ```
 
-Parameter carried in the command.The seek command must carry the number parameter.The setVolume command must carry the number parameter.The toggleFavorite command must carry the {@link AVMediaDescription.assetId} parameter.The setSpeed command must carry the {@link #media.PlaybackSpeed} parameter.The setLoopMode command must carry the {@link LoopMode} parameter.Other commands do not need to carry parameters.
+Parameter carried in the command.The seek command must carry the number parameter.The setVolume command must carry the number parameter.The toggleFavorite command must carry the [assetId](arkts-avsession-avsession-avmediadescription-i.md#assetId) parameter.The setSpeed command must carry the [PlaybackSpeed](#media.PlaybackSpeed) parameter.The setLoopMode command must carry the [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode) parameter.Other commands do not need to carry parameters.
 
-**Type:** media.PlaybackSpeed \| number \| string \| LoopMode
+**Type:** media.PlaybackSpeed \| number \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
 **Since:** 10
 

@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#ORIENTATION
+**替代接口：** [ORIENTATION](ohos.sensor/sensor.SensorId#ORIENTATION)
 
 <!--Device-unnamed-export interface SubscribeDeviceOrientationOptions--><!--Device-unnamed-export interface SubscribeDeviceOrientationOptions-End-->
 
@@ -28,7 +28,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -57,7 +57,7 @@ success: (data: DeviceOrientationResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -97,7 +97,7 @@ interval: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#Options.interval
+**替代接口：** [interval](ohos.sensor/sensor#Options.interval)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

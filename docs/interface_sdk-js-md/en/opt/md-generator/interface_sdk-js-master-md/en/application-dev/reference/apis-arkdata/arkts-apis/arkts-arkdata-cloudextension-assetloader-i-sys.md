@@ -13,7 +13,7 @@ Provides APIs for uploading and downloading assets.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## download
@@ -39,13 +39,13 @@ Downloads assets. This API uses a promise to return the result.
 | table | string | Yes |
 | gid | string | Yes |
 | prefix | string | Yes |
-| assets | Array&lt;CloudAsset&gt; | Yes |
+| assets | Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; |
 
 ## Examples
 
@@ -82,13 +82,13 @@ Uploads assets. This API uses a promise to return the result.
 | --- | --- | --- |
 | table | string | Yes |
 | gid | string | Yes |
-| assets | Array&lt;CloudAsset&gt; | Yes |
+| assets | Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; |
 
 ## Examples
 

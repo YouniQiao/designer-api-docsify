@@ -11,7 +11,7 @@ Describes the properties of a gatt characteristic.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## authenticatedSignedWrite

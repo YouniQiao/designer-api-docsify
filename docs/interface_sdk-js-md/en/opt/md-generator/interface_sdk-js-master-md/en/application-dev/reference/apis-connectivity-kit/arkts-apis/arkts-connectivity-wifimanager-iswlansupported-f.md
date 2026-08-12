@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## isWlanSupported
@@ -32,4 +32,4 @@ Query whether Wi-Fi is available
 
 | Error Code ID |
 | --- |
-| [2401000](../errorcode-wifi.md#2401000-sta-internal-error) |
+| [2401000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2401000-sta-internal-error) |

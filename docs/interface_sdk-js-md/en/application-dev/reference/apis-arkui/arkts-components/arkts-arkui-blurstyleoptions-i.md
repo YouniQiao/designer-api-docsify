@@ -20,7 +20,7 @@ Adaptive color mode.
 
 Default value: **AdaptiveColor.DEFAULT**
 
-**Type:** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
+**Type:** [AdaptiveColor](arkts-arkui-adaptivecolor-e.md)
 
 **Default:** AdaptiveColor.DEFAULT
 

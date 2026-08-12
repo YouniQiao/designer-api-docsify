@@ -32,8 +32,8 @@ ForEach(
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arr | Array&lt;any&gt; | Yes |
-| itemGenerator | (item: any, index: number) =&gt; void | Yes |
-| keyGenerator | (item: any, index: number) =&gt; string | No |
+| arr | Array & lt;any & gt; | Yes |
+| itemGenerator | (item: any, index: number) = & gt; void | Yes |
+| keyGenerator | (item: any, index: number) = & gt; string | No |
 
 ## Summary

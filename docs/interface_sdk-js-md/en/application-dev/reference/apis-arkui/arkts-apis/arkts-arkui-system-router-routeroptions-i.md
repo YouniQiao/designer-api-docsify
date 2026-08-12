@@ -8,7 +8,7 @@ Defines the page routing parameters.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#RouterOptions
+**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-unnamed-export interface RouterOptions--><!--Device-unnamed-export interface RouterOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the page routing parameters.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## params
@@ -37,7 +37,7 @@ Data that needs to be passed to the target page during redirection. The target p
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.RouterOptions#params
+**Substitutes:** [params](ohos.router.RouterOptions#params)
 
 <!--Device-RouterOptions-params?: Object--><!--Device-RouterOptions-params?: Object-End-->
 
@@ -66,7 +66,7 @@ URI of the target page, in either of the following formats:
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.RouterOptions#url
+**Substitutes:** [url](ohos.router.RouterOptions#url)
 
 <!--Device-RouterOptions-uri: string--><!--Device-RouterOptions-uri: string-End-->
 

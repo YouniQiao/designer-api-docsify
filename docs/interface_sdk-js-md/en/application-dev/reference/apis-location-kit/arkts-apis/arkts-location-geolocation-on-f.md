@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## on('locationChange')
@@ -20,7 +20,7 @@ Subscribe location changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:locationChange
+**Substitutes:** [locationChange](ohos.geoLocationManager/geoLocationManager.on#event:locationChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -33,8 +33,8 @@ Subscribe location changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md) | Yes | Indicates the location request parameters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | LocationRequest | Yes | Indicates the location request parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 ## Examples
 
@@ -62,7 +62,7 @@ Subscribe location switch changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:locationEnabledChange
+**Substitutes:** [locationEnabledChange](ohos.geoLocationManager/geoLocationManager.on#event:locationEnabledChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -75,7 +75,7 @@ Subscribe location switch changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'locationServiceState' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location result. |
 
 ## Examples
 
@@ -102,7 +102,7 @@ Subscribe to cache GNSS locations update messages
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:cachedGnssLocationsChange
+**Substitutes:** [cachedGnssLocationsChange](ohos.geoLocationManager/geoLocationManager.on#event:cachedGnssLocationsChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -115,8 +115,8 @@ Subscribe to cache GNSS locations update messages
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cachedGnssLocationsReporting' | Yes | Indicates the location service event to be subscribed to. |
-| request | [CachedGnssLocationsRequest](arkts-location-geolocationmanager-cachedgnsslocationsrequest-i.md) | Yes | Indicates the cached GNSS locations request parameters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
+| request | CachedGnssLocationsRequest | Yes | Indicates the cached GNSS locations request parameters. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;Location&gt;&gt; | Yes | Indicates the callback for reporting the cached GNSS locations. |
 
 ## Examples
 
@@ -144,7 +144,7 @@ Subscribe gnss status changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:satelliteStatusChange
+**Substitutes:** [satelliteStatusChange](ohos.geoLocationManager/geoLocationManager.on#event:satelliteStatusChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -157,7 +157,7 @@ Subscribe gnss status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'gnssStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SatelliteStatusInfo&gt; | Yes | Indicates the callback for reporting the gnss status change. |
 
 ## Examples
 
@@ -184,7 +184,7 @@ Subscribe nmea message changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:nmeaMessage
+**Substitutes:** [nmeaMessage](ohos.geoLocationManager/geoLocationManager.on#event:nmeaMessage)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -197,7 +197,7 @@ Subscribe nmea message changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'nmeaMessageChange' | Yes | Indicates the location service event to be subscribed to. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Indicates the callback for reporting the nmea message. |
 
 ## Examples
 
@@ -224,7 +224,7 @@ Add a geofence and subscribe geo fence status changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:gnssFenceStatusChange
+**Substitutes:** [gnssFenceStatusChange](ohos.geoLocationManager/geoLocationManager.on#event:gnssFenceStatusChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -237,7 +237,7 @@ Add a geofence and subscribe geo fence status changed
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'fenceStatusChange' | Yes | Indicates the location service event to be subscribed to. |
-| request | [GeofenceRequest](arkts-location-geolocationmanager-geofencerequest-i.md) | Yes | Indicates the Geo-fence configuration parameters. |
+| request | GeofenceRequest | Yes | Indicates the Geo-fence configuration parameters. |
 | want | [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md) | Yes | Indicates which ability to start when the geofence event is triggered. |
 
 ## Examples

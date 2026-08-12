@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.InterruptType
+**替代接口：** [InterruptType](arkts-audio-audio-interrupttype-e.md#InterruptType)
 
 <!--Device-audio-enum InterruptActionType--><!--Device-audio-enum InterruptActionType-End-->
 
@@ -24,7 +24,7 @@ TYPE_ACTIVATED = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.InterruptType#INTERRUPT_TYPE_BEGIN
+**替代接口：** [INTERRUPT_TYPE_BEGIN](arkts-audio-audio-interrupttype-e.md#INTERRUPT_TYPE_BEGIN)
 
 <!--Device-InterruptActionType-TYPE_ACTIVATED = 0--><!--Device-InterruptActionType-TYPE_ACTIVATED = 0-End-->
 
@@ -42,7 +42,7 @@ TYPE_INTERRUPT = 1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.InterruptType#INTERRUPT_TYPE_END
+**替代接口：** [INTERRUPT_TYPE_END](arkts-audio-audio-interrupttype-e.md#INTERRUPT_TYPE_END)
 
 <!--Device-InterruptActionType-TYPE_INTERRUPT = 1--><!--Device-InterruptActionType-TYPE_INTERRUPT = 1-End-->
 

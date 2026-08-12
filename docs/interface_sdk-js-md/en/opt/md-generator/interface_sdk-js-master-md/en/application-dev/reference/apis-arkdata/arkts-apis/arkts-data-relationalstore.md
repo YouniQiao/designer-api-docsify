@@ -1,7 +1,7 @@
 # @ohos.data.relationalStore
 
 The relational database (RDB) manages data based on relational models. The **relationalStore** module provides a complete mechanism for managing local databases based on the underlying SQLite. You can use the APIs to perform operations such as adding, deleting, modifying, and querying data, and directly run SQL statements. In addition, you can obtain sendable data using   
-[ResultSet.getSendableRow](arkts-arkdata-relationalstore-resultset-i.md#getsendablerow) and transfer the data across threads.
+[ResultSet.getSendableRow](arkts-arkdata-relationalstore-resultset-i.md#getSendableRow) and transfer the data across threads.
 
 To ensure successful data access, limit the size of a data record to 2 MB. If a data record exceeds 2 MB, it can be inserted successfully but cannot be read.
 
@@ -9,23 +9,23 @@ Querying data from a large amount of data may take time or even cause applicatio
 [Batch Database Operations](../../../arkts-utils/batch-database-operations-guide.md). Moreover, observe the following:
 
 - The number of data records to be queried at a time should not exceed 5000.  
-- Use [TaskPool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md) if there is a large amount of data needs to be queried.  
+- Use [TaskPool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) if there is a large amount of data needs to be queried.  
 - Keep concatenated SQL statements as concise as possible.  
 - Query data in batches.
 
 The **relationalStore** module provides the following functionalities:
 
-- [RdbPredicates](arkts-data-relationalstore.md): provides predicates indicating the nature,   
+- [RdbPredicates](#relationalStore): provides predicates indicating the nature,   
 feature, or relationship of a data entity in an RDB store. It is used to define the operation conditions for an RDB store.  
-- [RdbStore](arkts-data-relationalstore.md): provides APIs for managing data in an RDB store.  
-- [ResultSet](arkts-data-relationalstore.md): provides APIs for accessing the result set obtained   
+- [RdbStore](#relationalStore): provides APIs for managing data in an RDB store.  
+- [ResultSet](#relationalStore): provides APIs for accessing the result set obtained   
 from the RDB store.  
-- [LiteResultSet](arkts-data-relationalstore.md): provides APIs for accessing the result set   
+- [LiteResultSet](#relationalStore): provides APIs for accessing the result set   
 obtained from the RDB store, such as   
-[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querywithoutrowcount) and   
-[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querysqlwithoutrowcount). Unlike   
-[ResultSet](arkts-data-relationalstore.md), **LiteResultSet** does not include the total number of rows in the query result.  
-- [Transaction](arkts-data-relationalstore.md): provides APIs for managing transaction objects.
+[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#queryWithoutRowCount) and   
+[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querySqlWithoutRowCount). Unlike   
+[ResultSet](#relationalStore), **LiteResultSet** does not include the total number of rows in the query result.  
+- [Transaction](#relationalStore): provides APIs for managing transaction objects.
 
 **Since:** 9
 
@@ -36,7 +36,7 @@ obtained from the RDB store, such as
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## Summary
@@ -52,8 +52,8 @@ import { relationalStore } from 'kits/@kit.ArkData';
 | [getDeleteSqlInfo](arkts-arkdata-relationalstore-getdeletesqlinfo-f.md#getdeletesqlinfo) |
 | [getInsertSqlInfo](arkts-arkdata-relationalstore-getinsertsqlinfo-f.md#getinsertsqlinfo) |
 | [getQuerySqlInfo](arkts-arkdata-relationalstore-getquerysqlinfo-f.md#getquerysqlinfo) |
-| [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore) | Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses an asynchronous callback to return the result.  If no database file exists in the corresponding sandbox directory, a database file is created. For details, see  [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md). If a database file exists in the corresponding directory, the existing database file is opened.  When creating a database, you should consider whether to configure the  [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md) parameter. Once the database is created, you are not allowed to change this parameter.  \| Encryption Type When the RDB Store Is Opened \| Encryption Type When the RDB Store Is Created \| Result\|  \| ------- \| -------------------------------- \| ---- \|  \| Non-encryption\| Encryption \| The RDB store is opened in encrypted mode. \|  \| Encryption\| Non-encryption \| The RDB store is opened in non-encrypted mode. \|
-| [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore-1) | Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses a promise to return the result.  If no database file exists in the corresponding sandbox directory, a database file is created. For details, see  [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md). If a database file exists in the corresponding directory, the existing database file is opened.  When creating a database, you should consider whether to configure the  [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md) parameter. Once the database is created, you are not allowed to change this parameter.  \| Encryption Type When the RDB Store Is Opened \| Encryption Type When the RDB Store Is Created \| Result\|  \| ------- \| -------------------------------- \| ---- \|  \| Non-encryption\| Encryption \| The RDB store is opened in encrypted mode. \|  \| Encryption\| Non-encryption \| The RDB store is opened in non-encrypted mode. \|
+| [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore) | Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses an asynchronous callback to return the result.  If no database file exists in the corresponding sandbox directory, a database file is created. For details, see  [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig). If a database file exists in the corresponding directory, the existing database file is opened.  When creating a database, you should consider whether to configure the  [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) parameter. Once the database is created, you are not allowed to change this parameter.  \| Encryption Type When the RDB Store Is Opened \| Encryption Type When the RDB Store Is Created \| Result\|  \| ------- \| -------------------------------- \| ---- \|  \| Non-encryption\| Encryption \| The RDB store is opened in encrypted mode. \|  \| Encryption\| Non-encryption \| The RDB store is opened in non-encrypted mode. \|
+| [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore-1) | Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses a promise to return the result.  If no database file exists in the corresponding sandbox directory, a database file is created. For details, see  [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig). If a database file exists in the corresponding directory, the existing database file is opened.  When creating a database, you should consider whether to configure the  [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) parameter. Once the database is created, you are not allowed to change this parameter.  \| Encryption Type When the RDB Store Is Opened \| Encryption Type When the RDB Store Is Created \| Result\|  \| ------- \| -------------------------------- \| ---- \|  \| Non-encryption\| Encryption \| The RDB store is opened in encrypted mode. \|  \| Encryption\| Non-encryption \| The RDB store is opened in non-encrypted mode. \|
 | [getRdbStoreSync](arkts-arkdata-relationalstore-getrdbstoresync-f.md#getrdbstoresync) |
 | [getUpdateSqlInfo](arkts-arkdata-relationalstore-getupdatesqlinfo-f.md#getupdatesqlinfo) |
 | [isTokenizerSupported](arkts-arkdata-relationalstore-istokenizersupported-f.md#istokenizersupported) |

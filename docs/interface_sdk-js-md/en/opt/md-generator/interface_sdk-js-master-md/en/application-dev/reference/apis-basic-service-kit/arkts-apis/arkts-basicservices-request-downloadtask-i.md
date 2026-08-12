@@ -1,7 +1,7 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) or from a callback through   
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile).
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile-1) or from a callback through   
+[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile).
 
 **Since:** 6
 
@@ -12,7 +12,7 @@ Implements file downloads. Before using any APIs of this class, you must obtain 
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## delete
@@ -46,7 +46,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -100,13 +100,13 @@ Deletes the download task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -163,7 +163,7 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -217,13 +217,13 @@ Obtains the information about this download task. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DownloadInfo&gt; |
+| Promise & lt;DownloadInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -281,7 +281,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -335,13 +335,13 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -387,13 +387,13 @@ Unsubscribes from download progress events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'progress' | Yes |
-| callback | (receivedSize: number, totalSize: number) =&gt; void | No |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -446,13 +446,13 @@ Unsubscribes from download events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -531,13 +531,13 @@ Unsubscribes from download events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -616,13 +616,13 @@ Unsubscribes from download events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -701,13 +701,13 @@ Unsubscribes from download failure events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'fail' | Yes |
-| callback | (err: number) =&gt; void | No |
+| callback | (err: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -765,13 +765,13 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'progress' | Yes |
-| callback | (receivedSize: number, totalSize: number) =&gt; void | Yes |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -816,13 +816,13 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -877,13 +877,13 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -938,13 +938,13 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -999,13 +999,13 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'fail' | Yes |
-| callback | (err: number) =&gt; void | Yes |
+| callback | (err: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1043,7 +1043,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)(callback:
+**Substitutes:** [suspend](request.DownloadTask.suspend(callback:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1061,7 +1061,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1087,7 +1087,7 @@ Pauses this download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)()
+**Substitutes:** [suspend](#suspend)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1099,13 +1099,13 @@ Pauses this download task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1129,7 +1129,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)(callback:
+**Substitutes:** [getTaskInfo](request.DownloadTask.getTaskInfo(callback:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1147,7 +1147,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1173,7 +1173,7 @@ Queries this download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)()
+**Substitutes:** [getTaskInfo](#getTaskInfo)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1185,13 +1185,13 @@ Queries this download task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DownloadInfo&gt; |
+| Promise & lt;DownloadInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1215,7 +1215,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)(callback:
+**Substitutes:** [getTaskMimeType](request.DownloadTask.getTaskMimeType(callback:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1233,7 +1233,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1259,7 +1259,7 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)()
+**Substitutes:** [getTaskMimeType](#getTaskMimeType)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1271,13 +1271,13 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1301,7 +1301,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback:
+**Substitutes:** [delete](request.UploadTask.delete(callback:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1319,7 +1319,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1345,7 +1345,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)()
+**Substitutes:** [delete](arkts-basicservices-request-uploadtask-i.md#delete)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1357,13 +1357,13 @@ Deletes the download task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1406,7 +1406,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1460,13 +1460,13 @@ Restores the download task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1505,7 +1505,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)(callback:
+**Substitutes:** [restore](request.DownloadTask.restore(callback:)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1523,7 +1523,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1549,7 +1549,7 @@ Restores the download task. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)()
+**Substitutes:** [restore](#restore)()
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1561,13 +1561,13 @@ Restores the download task. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1585,7 +1585,7 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore) to restore the download.This API uses an asynchronous callback to return the result.
+Suspends this download task. You can use [restore](#restore) to restore the download.This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
@@ -1610,7 +1610,7 @@ Suspends this download task. You can use [restore](arkts-basicservices-request-d
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1645,7 +1645,7 @@ try {
 suspend(): Promise<boolean>
 ```
 
-Suspends this download task. You can use [restore](arkts-basicservices-request-downloadtask-i.md#restore) to restore the download.This API uses a promise to return the result.
+Suspends this download task. You can use [restore](#restore) to restore the download.This API uses a promise to return the result.
 
 > **NOTE：**
 > 
@@ -1664,13 +1664,13 @@ Suspends this download task. You can use [restore](arkts-basicservices-request-d
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

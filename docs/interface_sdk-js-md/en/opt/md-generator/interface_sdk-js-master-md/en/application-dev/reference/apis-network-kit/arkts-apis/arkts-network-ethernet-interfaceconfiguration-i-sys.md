@@ -13,7 +13,7 @@ Defines the network configuration for the Ethernet connection.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'kits/@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## dnsServers
@@ -60,7 +60,7 @@ httpProxy?: HttpProxy
 
 Indicates the HttpProxy settings, no proxy is to be used as default.
 
-**Type:** [HttpProxy](arkts-network-ethernet-httpproxy-t.md)
+**Type:** HttpProxy
 
 **Since:** 10
 

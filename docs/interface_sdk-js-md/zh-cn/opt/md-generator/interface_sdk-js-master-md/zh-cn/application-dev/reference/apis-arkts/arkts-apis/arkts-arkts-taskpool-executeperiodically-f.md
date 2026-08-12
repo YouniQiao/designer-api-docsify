@@ -34,11 +34,11 @@ function executePeriodically(period: number, task: Task, priority?: Priority): v
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) |
-| [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-延时时间小于零) |
+| [10200050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200050-并发任务已执行无法周期执行) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -110,11 +110,11 @@ function executePeriodically<A extends Array<Object>, R>(period: number, task: G
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) |
-| [10200050](../errorcode-utils.md#10200050-并发任务已执行无法周期执行) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-延时时间小于零) |
+| [10200050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200050-并发任务已执行无法周期执行) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 

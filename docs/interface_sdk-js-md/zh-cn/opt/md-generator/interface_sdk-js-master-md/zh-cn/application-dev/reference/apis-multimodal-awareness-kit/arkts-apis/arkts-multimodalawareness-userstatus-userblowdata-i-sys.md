@@ -2,7 +2,7 @@
 
 用户吹气数据。
 
-**继承/实现关系：** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
+**继承/实现关系：** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
 
 **起始版本：** 26.0.0
 

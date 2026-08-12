@@ -96,7 +96,7 @@ status?: ToolbarItemStatus
 
 The state of navigation toolbar item.Default value: ToolbarItemStatus.NORMAL.
 
-**Type:** [ToolbarItemStatus](../arkts-components/arkts-arkui-toolbaritemstatus-e.md)
+**Type:** [ToolbarItemStatus](arkts-arkui-navigation-toolbaritemstatus-e.md)
 
 **Since:** 23
 

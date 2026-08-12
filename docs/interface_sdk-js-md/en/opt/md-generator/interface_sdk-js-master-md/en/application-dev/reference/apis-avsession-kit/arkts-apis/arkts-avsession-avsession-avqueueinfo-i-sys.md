@@ -13,7 +13,7 @@ The play list information definition.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## avQueueId
@@ -40,7 +40,7 @@ The id of play list
 avQueueImage: image.PixelMap | string
 ```
 
-The artwork of play list, can be a {@link PixelMap} or a URI formatted string,
+The artwork of play list, can be a [PixelMap](PixelMap) or a URI formatted string,
 
 **Type:** image.PixelMap \| string
 

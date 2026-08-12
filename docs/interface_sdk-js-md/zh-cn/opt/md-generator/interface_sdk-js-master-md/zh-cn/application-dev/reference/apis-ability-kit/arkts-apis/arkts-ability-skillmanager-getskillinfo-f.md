@@ -27,7 +27,7 @@ function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
 | --- | --- | --- |
 | bundleName | string | 是 |
 | moduleName | string | 是 |
-| skillName | string | 是 |
+| [skillName](arkts-ability-skillinfo-i.md) | string | 是 |
 | flags | number | 是 |
 | userId | number | 否 |
 
@@ -35,14 +35,14 @@ function getSkillInfo(bundleName: string, moduleName: string, skillName: string,
 
 | 类型 |
 | --- |
-| Promise&lt;SkillInfo&gt; |
+| Promise & lt;SkillInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700093](../errorcode-bundle.md#17700093-指定的skillname不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700093](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700093-指定的skillname不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |

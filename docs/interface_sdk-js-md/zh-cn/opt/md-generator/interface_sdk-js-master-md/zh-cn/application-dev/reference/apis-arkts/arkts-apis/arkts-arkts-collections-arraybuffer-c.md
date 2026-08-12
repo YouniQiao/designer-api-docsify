@@ -1,13 +1,13 @@
 # ArrayBuffer
 
-ArkTS TypedArray（[Int8Array](arkts-collections.md)、  
-[Uint8Array](arkts-collections.md)、  
-[Int16Array](arkts-collections.md)、  
-[Uint16Array](arkts-collections.md)、  
-[Int32Array](arkts-collections.md)、  
-[Uint32Array](arkts-collections.md)、  
-[Uint8ClampedArray](arkts-collections.md)、  
-[Float32Array](arkts-collections.md)）的底层数据结构。
+ArkTS TypedArray（[Int8Array](./arkts/@arkts.collections:collections)、  
+[Uint8Array](./arkts/@arkts.collections:collections)、  
+[Int16Array](./arkts/@arkts.collections:collections)、  
+[Uint16Array](./arkts/@arkts.collections:collections)、  
+[Int32Array](./arkts/@arkts.collections:collections)、  
+[Uint32Array](./arkts/@arkts.collections:collections)、  
+[Uint8ClampedArray](./arkts/@arkts.collections:collections)、  
+[Float32Array](./arkts/@arkts.collections:collections)）的底层数据结构。
 
 > **说明：**
 > 
@@ -48,7 +48,7 @@ constructor(byteLength: number)
 
 | 错误码ID |
 | --- |
-| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## slice
 
@@ -83,8 +83,8 @@ slice(begin: number, end?: number): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## byteLength
 

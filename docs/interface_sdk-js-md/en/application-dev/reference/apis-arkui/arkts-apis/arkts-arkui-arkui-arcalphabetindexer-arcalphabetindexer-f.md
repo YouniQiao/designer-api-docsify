@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## ArcAlphabetIndexer
@@ -36,7 +36,7 @@ Defines ArcAlphabetIndexer Component.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) | The attribute of the ArcAlphabetIndexer. |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) | The attribute of the ArcAlphabetIndexer. |
 
 
 ## ArcAlphabetIndexer
@@ -65,11 +65,11 @@ Defines ArcAlphabetIndexer Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcAlphabetIndexerAttribute&gt; | Yes | arcAlphabetIndexer attribute instance |
+| style_ | CustomBuilderT&lt;[ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md)&gt; | Yes | arcAlphabetIndexer attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
 

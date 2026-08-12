@@ -13,7 +13,7 @@ Represents the authorization request information of the credentials.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
 ## certPurpose
@@ -44,7 +44,7 @@ certTypes: Array<CertificateType>
 
 List of certificate types.
 
-**Type:** Array&lt;CertificateType&gt;
+**Type:** Array&lt;[CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)&gt;
 
 **Since:** 22
 

@@ -27,14 +27,14 @@ function pick(context: Context, mediaTypes: Array<PickerMediaType>, pickerProfil
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文。 |
-| mediaTypes | Array&lt;PickerMediaType&gt; | 是 | 媒体类型。 |
+| mediaTypes | Array&lt;[PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md)&gt; | 是 | 媒体类型。 |
 | pickerProfile | [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | 是 | pickerProfile对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PickerResult&gt; | Promise对象，返回相机选择器的处理结果[PickerResult]{ |
+| Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; | Promise对象，返回相机选择器的处理结果[PickerResult]{ |
 
 ## 示例
 

@@ -33,9 +33,9 @@ Dynamically add monitor for state variable change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valueCallback | [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md) \| MonitorValueCallback[] | Yes | monitored change for state variable. |
+| valueCallback | [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md) \| [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md)[] | Yes | monitored change for state variable. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | the function triggered when state variable changes. |
-| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | the monitor configuration. |
+| options | [MonitorOptions](arkts-arkui-utils-monitoroptions-i.md) | No | the monitor configuration. |
 
 **Return value:**
 
@@ -47,7 +47,7 @@ Dynamically add monitor for state variable change.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | options.owner is not ComponentV2 struct. |
+| [130000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | options.owner is not ComponentV2 struct. |
 
 ## addMonitor
 
@@ -72,7 +72,7 @@ Dynamically add monitor for state variable change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| valueInfo | [MonitorValueInfo](arkts-arkui-utils-monitorvalueinfo-i.md) \| MonitorValueInfo[] | Yes | monitored change for state variable. |
+| valueInfo | [MonitorValueInfo](arkts-arkui-utils-monitorvalueinfo-i.md) \| [MonitorValueInfo](arkts-arkui-utils-monitorvalueinfo-i.md)[] | Yes | monitored change for state variable. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | the function triggered when state variable changes. |
 | options | [MonitorBaseOptions](arkts-arkui-utils-monitorbaseoptions-i.md) | No | the monitor configuration. |
 
@@ -86,7 +86,7 @@ Dynamically add monitor for state variable change.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | options.owner is not ComponentV2 struct. |
+| [130000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | options.owner is not ComponentV2 struct. |
 
 ## canBeObserved
 
@@ -116,7 +116,7 @@ Determine whether the data object is observable and return the observation resul
 
 | Type | Description |
 | --- | --- |
-| [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) | return result of whether a class is observable. |
+| [ObservedResult](arkts-arkui-utils-observedresult-i.md) | return result of whether a class is observable. |
 
 ## clearMonitor
 
@@ -264,7 +264,7 @@ Supports simple getters for read-only data.Intended for primitive value paramete
 
 | Type | Description |
 | --- | --- |
-| [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; | read-only data binding value |
+| [Binding](arkts-arkui-utils-binding-c.md)&lt;T&gt; | read-only data binding value |
 
 ## makeBinding
 

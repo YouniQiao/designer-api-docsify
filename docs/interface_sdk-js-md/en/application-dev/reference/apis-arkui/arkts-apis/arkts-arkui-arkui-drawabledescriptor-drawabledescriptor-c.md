@@ -13,7 +13,7 @@ Use the DrawableDescriptor class to get drawable image.
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from 'kits/@kit.ArkUI';
+import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
 ```
 
 ## getPixelMap
@@ -104,13 +104,13 @@ Asynchronously loads image and returns loading result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DrawableDescriptorLoadedResult&gt; | The image loading result. |
+| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | The image loading result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
+| [111001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
 
 ## loadSync
 
@@ -140,7 +140,7 @@ Synchronously loads the image and returns the loading result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
+| [111001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111001-failed-to-load-resources) | resource loading failed. |
 
 ## release
 

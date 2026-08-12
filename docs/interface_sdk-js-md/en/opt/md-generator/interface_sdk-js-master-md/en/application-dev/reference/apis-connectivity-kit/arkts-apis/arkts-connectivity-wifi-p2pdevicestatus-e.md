@@ -6,7 +6,7 @@ P2P device status.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pDeviceStatus
+**Substitutes:** [P2pDeviceStatus](ohos.wifiManager/wifiManager.P2pDeviceStatus)
 
 <!--Device-wifi-enum P2pDeviceStatus--><!--Device-wifi-enum P2pDeviceStatus-End-->
 
@@ -24,7 +24,7 @@ Indicate p2p device is connected.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pDeviceStatus.CONNECTED
+**Substitutes:** [CONNECTED](ohos.wifiManager/wifiManager.P2pDeviceStatus.CONNECTED)
 
 <!--Device-P2pDeviceStatus-CONNECTED = 0--><!--Device-P2pDeviceStatus-CONNECTED = 0-End-->
 
@@ -42,7 +42,7 @@ Indicate p2p device is invited.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pDeviceStatus.INVITED
+**Substitutes:** [INVITED](ohos.wifiManager/wifiManager.P2pDeviceStatus.INVITED)
 
 <!--Device-P2pDeviceStatus-INVITED = 1--><!--Device-P2pDeviceStatus-INVITED = 1-End-->
 
@@ -60,7 +60,7 @@ Indicate p2p device is failed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pDeviceStatus.FAILED
+**Substitutes:** [FAILED](ohos.wifiManager/wifiManager.P2pDeviceStatus.FAILED)
 
 <!--Device-P2pDeviceStatus-FAILED = 2--><!--Device-P2pDeviceStatus-FAILED = 2-End-->
 
@@ -78,7 +78,7 @@ Indicate p2p device is available.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pDeviceStatus.AVAILABLE
+**Substitutes:** [AVAILABLE](ohos.wifiManager/wifiManager.P2pDeviceStatus.AVAILABLE)
 
 <!--Device-P2pDeviceStatus-AVAILABLE = 3--><!--Device-P2pDeviceStatus-AVAILABLE = 3-End-->
 
@@ -96,7 +96,7 @@ Indicate p2p device is unavailable.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pDeviceStatus.UNAVAILABLE
+**Substitutes:** [UNAVAILABLE](ohos.wifiManager/wifiManager.P2pDeviceStatus.UNAVAILABLE)
 
 <!--Device-P2pDeviceStatus-UNAVAILABLE = 4--><!--Device-P2pDeviceStatus-UNAVAILABLE = 4-End-->
 

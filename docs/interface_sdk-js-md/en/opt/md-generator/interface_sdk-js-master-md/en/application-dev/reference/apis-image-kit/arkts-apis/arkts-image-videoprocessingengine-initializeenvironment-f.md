@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## initializeEnvironment
@@ -26,16 +26,16 @@ Initialize global environment for image processing.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
-| [29200002](../errorcode-videoprocessingengine.md#29200002-initialization-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
+| [29200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200002-initialization-failure) |
 
 ## Examples
 

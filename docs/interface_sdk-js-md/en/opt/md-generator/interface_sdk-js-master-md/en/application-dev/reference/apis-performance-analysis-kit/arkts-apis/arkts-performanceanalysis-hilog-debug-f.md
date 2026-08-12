@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from 'kits/@kit.PerformanceAnalysisKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## debug
@@ -31,7 +31,7 @@ DEBUG logs are not recorded in official versions by default. They are available 
 | domain | number | Yes |
 | tag | string | Yes |
 | format | string | Yes |
-| args | any[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | Yes |
 
 ## Examples
 

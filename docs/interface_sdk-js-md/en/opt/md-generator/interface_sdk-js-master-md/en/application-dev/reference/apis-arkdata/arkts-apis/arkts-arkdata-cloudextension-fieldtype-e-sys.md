@@ -112,7 +112,7 @@ BLOB, which can hold a binary file.
 ASSET = 6
 ```
 
-Asset. For details, see {@link relationalStore.Asset}.
+Asset. For details, see [Asset](relationalStore.Asset).
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ Asset. For details, see {@link relationalStore.Asset}.
 ASSETS = 7
 ```
 
-Assets. For details, see {@link relationalStore.Assets}.
+Assets. For details, see [Assets](relationalStore.Assets).
 
 **Since:** 11
 

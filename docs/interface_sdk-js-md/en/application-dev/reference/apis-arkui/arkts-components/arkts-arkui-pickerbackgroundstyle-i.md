@@ -22,9 +22,9 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 
 **NOTE：**
 
-1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md/arkts-arkui-graphics-lengthmetrics-c.md): uniform radius with a customizable unit2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-units-localizedborderradiuses-i.md/arkts-arkui-units-localizedborderradiuses-i.md): per-corner radius values with individual units
+1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): uniform radius with a customizable unit2. [BorderRadiuses](BorderRadiuses): per-corner radius values (vp units only)3. [LocalizedBorderRadiuses](LocalizedBorderRadiuses): per-corner radius values with individual units
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** { value:24, unit:LengthUnit.VP }
 
@@ -50,7 +50,7 @@ Background color of the selected item.
 
 Default value: 'sys.color.comp_background_tertiary'
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** 'sys.color.comp_background_tertiary'
 

@@ -1,7 +1,7 @@
 # AVMetadataExtractor
 
 AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use   
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)to create an AVMetadataExtractor instance.
+[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor)to create an AVMetadataExtractor instance.
 
 For details about the demo of obtaining audio or video metadata and video thumbnails, see   
 [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
@@ -15,7 +15,7 @@ For details about the demo of obtaining audio or video metadata and video thumbn
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## cancelAllFetchFrames
@@ -58,8 +58,8 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## fetchAlbumCover
 
@@ -79,14 +79,14 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## fetchFrameByTime
 
@@ -114,16 +114,16 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -155,17 +155,17 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; |
+| Promise & lt;image.PixelMap \ | undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## fetchFramesByTimes
 
@@ -206,12 +206,12 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## fetchFramesByTimesWithTimeout
 
@@ -256,12 +256,12 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## fetchMetadata
 
@@ -287,9 +287,9 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## fetchMetadata
 
@@ -309,15 +309,15 @@ Obtains the media metadata. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVMetadata&gt; |
+| Promise & lt;AVMetadata & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## fetchMetadataWithTimeout
 
@@ -345,17 +345,17 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVMetadata \| undefined&gt; |
+| Promise & lt;AVMetadata \ | undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## release
 
@@ -381,7 +381,7 @@ Releases this AVMetadataExtractor instance. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## release
 
@@ -401,13 +401,13 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setUrlSource
 
@@ -416,8 +416,8 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
 Sets the data source for a network on-demand resource. Only network metadata (  
-[fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata)) and thumbnails (  
-[fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime)) can be obtained. The media resource URL must be set before the retrieval.
+[fetchMetadata](#fetchMetadata)) and thumbnails (  
+[fetchFrameByTime](#fetchFrameByTime)) can be obtained. The media resource URL must be set before the retrieval.
 
 **Since:** 20
 

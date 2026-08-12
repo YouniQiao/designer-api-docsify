@@ -32,7 +32,7 @@ static flushCmdBuffer(object: IRemoteObject): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -73,7 +73,7 @@ static flushCommands(object: IRemoteObject): number
 
 **废弃版本：** 9
 
-**替代接口：** static
+**替代接口：** [static](static)
 
 <!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number--><!--Device-IPCSkeleton-static flushCommands(object: IRemoteObject): number-End-->
 
@@ -164,8 +164,8 @@ class Stub extends rpc.RemoteObject {
 static getCallingPid(): number
 ```
 
-静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（  
-[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的PID。
+静态方法，获取调用者的PID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md#RemoteObject)对象在IPC上下文环境（  
+[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onRemoteMessageRequest)）中调用，不在则返回本进程的PID。
 
 **起始版本：** 7
 
@@ -245,8 +245,8 @@ class Stub extends rpc.RemoteObject {
 static getCallingUid(): number
 ```
 
-静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md)对象在IPC上下文环境（  
-[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中调用，不在则返回本进程的UID。
+静态方法，获取调用者的UID。此方法由[RemoteObject](arkts-ipc-rpc-remoteobject-c.md#RemoteObject)对象在IPC上下文环境（  
+[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onRemoteMessageRequest)）中调用，不在则返回本进程的UID。
 
 **起始版本：** 7
 
@@ -441,7 +441,7 @@ static restoreCallingIdentity(identity: string): void
 ```
 
 静态方法，将UID和PID恢复为远程用户的UID和PID。它通常在使用resetCallingIdentity后调用，需要resetCallingIdentity返回的远程用户的UID和PID。该接口仅支持在IPC上下文（  
-[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onremotemessagerequest)）中使用，否则直接返回。
+[onRemoteMessageRequest](arkts-ipc-rpc-remoteobject-c.md#onRemoteMessageRequest)）中使用，否则直接返回。
 
 **起始版本：** 9
 
@@ -459,7 +459,7 @@ static restoreCallingIdentity(identity: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -494,7 +494,7 @@ static setCallingIdentity(identity: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** static
+**替代接口：** [static](static)
 
 <!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean--><!--Device-IPCSkeleton-static setCallingIdentity(identity: string): boolean-End-->
 

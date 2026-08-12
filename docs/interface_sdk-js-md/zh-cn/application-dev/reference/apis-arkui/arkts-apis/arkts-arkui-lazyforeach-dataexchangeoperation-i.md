@@ -18,7 +18,7 @@ index: ExchangeIndex
 
 交换位置。取值范围是[0, 数据源长度-1]。
 
-**类型：** [ExchangeIndex](../arkts-components/arkts-arkui-exchangeindex-i.md)
+**类型：** [ExchangeIndex](arkts-arkui-lazyforeach-exchangeindex-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ key?: ExchangeKey
 
 分配新的键值，默认使用原键值。
 
-**类型：** [ExchangeKey](../arkts-components/arkts-arkui-exchangekey-i.md)
+**类型：** [ExchangeKey](arkts-arkui-lazyforeach-exchangekey-i.md)
 
 **起始版本：** 23
 

@@ -8,7 +8,7 @@ The **usbManager** module provides APIs for USB management.
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 > 
 > The global restriction policy is provided by **restrictions**. To disable USB globally, see
-> [@ohos.enterprise.restrictions (restriction policy)](arkts-enterprise-restrictions.md).
+> [@ohos.enterprise.restrictions (restriction policy)](arkts-enterprise-restrictions.md#restrictions).
 
 **Since:** 12
 
@@ -19,7 +19,7 @@ The **usbManager** module provides APIs for USB management.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.MDMKit';
+import { usbManager } from '@kit.MDMKit';
 ```
 
 ## Summary

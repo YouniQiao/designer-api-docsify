@@ -18,7 +18,7 @@ result: PdfLoadResult
 
 The PDF page loading result.
 
-**Type:** [PdfLoadResult](../arkts-apis/arkts-arkweb-web-pdfloadresult-e.md)
+**Type:** [PdfLoadResult](arkts-arkweb-pdfloadresult-e.md)
 
 **Since:** 20
 

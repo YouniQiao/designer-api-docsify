@@ -12,7 +12,7 @@ export function getDisplayLanguage(language: string, locale: string, sentenceCas
 
 **废弃版本：** 9
 
-**替代接口：** [i18n.System.getDisplayLanguage](arkts-localization-i18n-system-c.md#getdisplaylanguage)
+**替代接口：** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getDisplayLanguage)
 
 <!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 

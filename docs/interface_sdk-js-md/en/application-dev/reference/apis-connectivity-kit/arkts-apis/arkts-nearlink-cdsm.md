@@ -15,7 +15,7 @@ Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -30,7 +30,7 @@ import { cdsm } from 'kits/@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Manages a CDSM client instance. Before invoking any CDSM client method,you must use {@link createCdsmClient} to create a CDSM client instance. |
+| [CdsmClient](arkts-connectivity-cdsm-cdsmclient-i.md) | Manages a CDSM client instance. Before invoking any CDSM client method,you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createCdsmClient) to create a CDSM client instance. |
 | [CdsmInfo](arkts-connectivity-cdsm-cdsminfo-i.md) | Describes the coordinated devices set information. |
 | [CdsmMemberInfo](arkts-connectivity-cdsm-cdsmmemberinfo-i.md) | Describes the member information of coordinated devices set. |
 

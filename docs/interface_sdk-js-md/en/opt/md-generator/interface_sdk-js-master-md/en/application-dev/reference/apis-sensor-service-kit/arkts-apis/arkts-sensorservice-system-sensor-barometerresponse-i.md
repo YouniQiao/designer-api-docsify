@@ -6,7 +6,7 @@ Defines a **BarometerResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#BarometerResponse
+**Substitutes:** [BarometerResponse](ohos.sensor/sensor#BarometerResponse)
 
 <!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
@@ -15,7 +15,7 @@ Defines a **BarometerResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## pressure
@@ -32,7 +32,7 @@ Pressure, in pascal.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#BarometerResponse.pressure
+**Substitutes:** [pressure](ohos.sensor/sensor#BarometerResponse.pressure)
 
 **Model restriction:** This API can be used only in the FA model.
 

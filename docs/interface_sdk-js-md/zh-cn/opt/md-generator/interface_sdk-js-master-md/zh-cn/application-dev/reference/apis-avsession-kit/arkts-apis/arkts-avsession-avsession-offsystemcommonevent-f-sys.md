@@ -28,5 +28,5 @@ function offSystemCommonEvent(callback?: EventProcess): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

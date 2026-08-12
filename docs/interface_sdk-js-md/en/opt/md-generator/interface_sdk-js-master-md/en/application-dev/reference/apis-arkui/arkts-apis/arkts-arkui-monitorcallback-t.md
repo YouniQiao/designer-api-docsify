@@ -4,7 +4,7 @@
 export declare type MonitorCallback = (monitorValue: IMonitor) => void
 ```
 
-Listener callback function of the [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md/arkts-arkui-imonitor-i.md) type.
+Listener callback function of the [IMonitor](../arkts-components/arkts-arkui-imonitor-i.md#IMonitor) type.
 
 **Since:** 20
 

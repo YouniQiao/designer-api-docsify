@@ -24,4 +24,4 @@ Self defined remote validation.This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| boolean \| Promise&lt;boolean&gt; |
+| boolean \| Promise & lt;boolean & gt; |

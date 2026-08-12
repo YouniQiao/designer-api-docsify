@@ -6,7 +6,7 @@ Enumerates data role types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md)
+**Substitutes:** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DataRoleType)
 
 <!--Device-usb-export enum DataRoleType--><!--Device-usb-export enum DataRoleType-End-->
 
@@ -26,7 +26,7 @@ None
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.DataRoleType.NONE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#none)
+**Substitutes:** [NONE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#NONE)
 
 <!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
@@ -46,7 +46,7 @@ USB host.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.DataRoleType.HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#host)
+**Substitutes:** [HOST](arkts-basicservices-usbmanager-dataroletype-e-sys.md#HOST)
 
 <!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
@@ -66,7 +66,7 @@ USB device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.DataRoleType.DEVICE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#device)
+**Substitutes:** [DEVICE](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DEVICE)
 
 <!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 

@@ -13,7 +13,7 @@ Provides APIs for interacting with the sharedCenter service.You need to inherit 
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## changeConfirmation
@@ -50,7 +50,7 @@ Changes the confirmation state of a share invitation. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;void&gt;&gt; |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 ## Examples
 
@@ -102,13 +102,13 @@ Changes the privilege (operation permissions) on the shared data.This API uses a
 | userId | number | Yes |
 | bundleName | string | Yes |
 | sharingResource | string | Yes |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 ## Examples
 
@@ -176,7 +176,7 @@ Confirms the invitation for a share. This API uses a promise to return the resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;string&gt;&gt; |
+| Promise & lt;Result & lt;string & gt; & gt; |
 
 ## Examples
 
@@ -229,7 +229,7 @@ Exits a device-cloud share. This API uses a promise to return the result.The app
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;void&gt;&gt; |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 ## Examples
 
@@ -285,7 +285,7 @@ Queries the participants of a share. This API uses a promise to return the resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;cloudData.sharing.Participant & gt; & gt; & gt; |
 
 ## Examples
 
@@ -371,7 +371,7 @@ Queries the participants of a share based on the invitation code.This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;cloudData.sharing.Participant & gt; & gt; & gt; |
 
 ## Examples
 
@@ -453,13 +453,13 @@ Shares data. This API uses a promise to return the result.The application that i
 | userId | number | Yes |
 | bundleName | string | Yes |
 | sharingResource | string | Yes |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 ## Examples
 
@@ -521,13 +521,13 @@ Unshares data. This API uses a promise to return the result.The application, sha
 | userId | number | Yes |
 | bundleName | string | Yes |
 | sharingResource | string | Yes |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | Yes |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 ## Examples
 

@@ -1,11 +1,11 @@
 # NumericTextTransition
 
 Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the  
-[copyOption](arkts-arkui-text-textattribute-i.md#copyoption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string.
+[copyOption](TextAttribute#copyOption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string.
 
-**NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md).
+**NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition).
 
-**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md)
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)
 
 **Since:** 20
 
@@ -39,7 +39,7 @@ A constructor used to create a **NumericTextTransition** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md). |
+| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | Options of the numeric flip animation. The default value is inherited from [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md#NumericTextTransitionOptions). |
 
 ## enableBlur
 
@@ -79,7 +79,7 @@ Direction of the flip animation.
 
 Default value: **FlipDirection.DOWN**
 
-**Type:** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
+**Type:** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **Since:** 20
 

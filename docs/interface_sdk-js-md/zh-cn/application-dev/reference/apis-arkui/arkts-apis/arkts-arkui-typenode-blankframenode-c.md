@@ -40,5 +40,5 @@ abstract initialize(min?: double | string): BlankAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md) |  |
+| BlankAttribute |  |
 

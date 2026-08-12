@@ -18,7 +18,7 @@ pixelMap: PixelMap
 
 图片内容。
 
-**类型：** [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md)
+**类型：** PixelMap
 
 **起始版本：** 11
 

@@ -26,7 +26,7 @@ export declare function If(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | condition | boolean | 是 | 'If'分支对应的条件 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 | 'If'分支需要运行的代码 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 'If'分支需要运行的代码 |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ export declare function If(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IfAttribute&gt; | 是 | 回调来设置If的属性 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 | 分支的逻辑代码。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[IfAttribute](arkts-arkui-if-ifattribute-i.md)&gt; | 是 | 回调来设置If的属性 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 是 | 分支的逻辑代码。 |
 
 **返回值：**
 

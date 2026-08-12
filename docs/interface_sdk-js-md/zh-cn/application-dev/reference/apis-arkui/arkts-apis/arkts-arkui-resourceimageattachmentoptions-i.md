@@ -40,7 +40,7 @@ layoutStyle?: ImageAttachmentLayoutStyle
 
 设置图片布局。
 
-**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-styledstring-imageattachmentlayoutstyle-i.md)
+**类型：** [ImageAttachmentLayoutStyle](arkts-arkui-imageattachmentlayoutstyle-i.md)
 
 **起始版本：** 15
 
@@ -64,7 +64,7 @@ objectFit?: ImageFit
 
 默认值：ImageFit.Cover。
 
-**类型：** [ImageFit](arkts-arkui-imagefit-e.md)
+**类型：** ImageFit
 
 **起始版本：** 15
 
@@ -86,7 +86,7 @@ resourceValue: Optional<ResourceStr>
 
 设置图片数据源。
 
-**类型：** [Optional](arkts-arkui-optional-t.md)&lt;ResourceStr&gt;
+**类型：** Optional&lt;ResourceStr&gt;
 
 **起始版本：** 15
 
@@ -110,7 +110,7 @@ size?: SizeOptions
 
 size的默认值与objectFit的值有关，不同的objectFit的值对应size的默认值不同。
 
-**类型：** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**类型：** SizeOptions
 
 **起始版本：** 15
 
@@ -186,7 +186,7 @@ verticalAlign?: ImageSpanAlignment
 
 默认值：ImageSpanAlignment.BOTTOM。
 
-**类型：** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
+**类型：** ImageSpanAlignment
 
 **起始版本：** 15
 

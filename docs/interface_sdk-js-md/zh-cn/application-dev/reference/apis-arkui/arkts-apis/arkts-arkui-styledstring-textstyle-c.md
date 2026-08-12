@@ -64,7 +64,7 @@ readonly fontConfigs?: FontConfigs
 
 默认返回undefined，表示未设置fontConfigs。
 
-**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **起始版本：** 26.0.0
 
@@ -214,7 +214,7 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 
 默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -258,7 +258,7 @@ readonly superscript?: SuperscriptStyle
 
 默认值：SuperscriptStyle.NORMAL。
 
-**类型：** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
+**类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **起始版本：** 26.0.0
 

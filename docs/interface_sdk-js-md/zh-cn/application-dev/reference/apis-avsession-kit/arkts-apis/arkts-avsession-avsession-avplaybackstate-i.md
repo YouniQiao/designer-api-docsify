@@ -216,7 +216,7 @@ state?: PlaybackState
 
 播放状态。
 
-**类型：** [PlaybackState](arkts-avsession-avmusictemplate-playbackstate-e.md)
+**类型：** PlaybackState
 
 **起始版本：** 10
 

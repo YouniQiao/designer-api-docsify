@@ -20,6 +20,6 @@ callback of the listened enter key event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enterKey | [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md) | Yes | the enter key type of soft keyboard. |
-| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | Yes | Provides the method of keeping RichEditor editable state when submitted. |
+| enterKey | [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md) | Yes | the enter key type of soft keyboard. |
+| event | [SubmitEvent](arkts-arkui-textinput-submitevent-i.md) | Yes | Provides the method of keeping RichEditor editable state when submitted. |
 

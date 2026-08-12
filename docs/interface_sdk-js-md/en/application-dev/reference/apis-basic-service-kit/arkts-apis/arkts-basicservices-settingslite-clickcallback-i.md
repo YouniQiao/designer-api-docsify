@@ -13,7 +13,7 @@ Defines a callback used to return whether the application started by double-pres
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from 'kits/@kit.BasicServicesKit';
+import { settingsLite } from '@kit.BasicServicesKit';
 ```
 
 ## onResult

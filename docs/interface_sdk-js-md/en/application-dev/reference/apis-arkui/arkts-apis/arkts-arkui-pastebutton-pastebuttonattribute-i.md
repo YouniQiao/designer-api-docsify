@@ -2,7 +2,7 @@
 
 Declare interfaces for the attributes of the paste button.
 
-**Inheritance/Implementation:** PasteButtonAttribute extends [SecurityComponentMethod](arkts-arkui-securitycomponent-securitycomponentmethod-i.md)
+**Inheritance/Implementation:** PasteButtonAttribute extends [SecurityComponentMethod](SecurityComponentMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Called when the paste button is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PasteButtonCallback](../arkts-components/arkts-arkui-pastebuttoncallback-t.md) \| undefined | Yes |  |
+| event | [PasteButtonCallback](arkts-arkui-pastebuttoncallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 

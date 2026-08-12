@@ -2,7 +2,7 @@
 
 Define configuration of the ipsec VPN network.
 
-**Inheritance/Implementation:** IpsecVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)
+**Inheritance/Implementation:** IpsecVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Define configuration of the ipsec VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig

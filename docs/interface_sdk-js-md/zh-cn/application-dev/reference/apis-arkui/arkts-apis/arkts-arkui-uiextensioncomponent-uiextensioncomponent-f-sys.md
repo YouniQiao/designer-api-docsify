@@ -33,7 +33,7 @@ export declare function UIExtensionComponent(
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIExtensionComponentAttribute](../arkts-components/arkts-arkui-uiextensioncomponent-attribute.md) |  |
+| [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-uiextensioncomponentattribute-i-sys.md) |  |
 
 
 ## UIExtensionComponent
@@ -64,11 +64,11 @@ export declare function UIExtensionComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;UIExtensionComponentAttribute&gt; | 是 | 用于设置uiextensioncomponent属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-uiextensioncomponentattribute-i-sys.md)&gt; | 是 | 用于设置uiextensioncomponent属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIExtensionComponentAttribute](../arkts-components/arkts-arkui-uiextensioncomponent-attribute.md) | UIExtensionComponent的属性。 |
+| [UIExtensionComponentAttribute](arkts-arkui-uiextensioncomponent-uiextensioncomponentattribute-i-sys.md) | UIExtensionComponent的属性。 |
 

@@ -11,7 +11,7 @@ Provides configuration options for download and cache, including HTTP options, t
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## caPath
@@ -88,7 +88,7 @@ sslType?: SslType
 
 Secure communication protocol, such as TSL or TLCP. TLS is used by default. Currently, TLS and TLCP do not support two-way authentication.
 
-**Type:** [SslType](arkts-basicservices-cachedownload-ssltype-e.md)
+**Type:** SslType
 
 **Since:** 21
 

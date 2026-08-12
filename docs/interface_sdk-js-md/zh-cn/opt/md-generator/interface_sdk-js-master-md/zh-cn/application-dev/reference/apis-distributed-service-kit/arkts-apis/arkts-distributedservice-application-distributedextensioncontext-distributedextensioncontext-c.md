@@ -2,7 +2,7 @@
 
 用于分布式扩展功能的实现。
 
-**继承/实现关系：** DistributedExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**继承/实现关系：** DistributedExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **起始版本：** 20
 
@@ -18,7 +18,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 连接到远程服务扩展能力。
 
-此方法连接到远程设备上的服务扩展能力。必须实现{@link ConnectOptions}接口才能获取目标的代理连接时的服务扩展。
+此方法连接到远程设备上的服务扩展能力。必须实现[ConnectOptions](ConnectOptions)接口才能获取目标的代理连接时的服务扩展。
 
 **起始版本：** 20
 
@@ -45,19 +45,19 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 | 错误码ID |
 | --- |
-| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16000012](../../apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## disconnectServiceExtensionAbility
 
@@ -85,12 +85,12 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16000003](../../apis-ability-kit/errorcode-ability.md#16000003-指定的id不存在) |
-| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-指定的id不存在) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |

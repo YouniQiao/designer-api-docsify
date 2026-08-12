@@ -18,7 +18,7 @@ function fromSendableAsset(asset: Asset): NonSendableAsset
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| asset | [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 是 |
+| [asset](../../apis-asset-store-kit/arkts-apis/arkts-security-asset.md) | [Asset](arkts-arkdata-sendablerelationalstore-asset-i.md) | 是 |
 
 **返回值：**
 
@@ -30,8 +30,8 @@ function fromSendableAsset(asset: Asset): NonSendableAsset
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
 
 ## 示例
 

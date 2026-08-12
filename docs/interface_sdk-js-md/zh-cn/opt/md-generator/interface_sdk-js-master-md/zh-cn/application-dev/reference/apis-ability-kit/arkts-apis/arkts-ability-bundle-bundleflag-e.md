@@ -3,7 +3,7 @@
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)替代。
+> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)替代。
 
 包信息标志，指示需要获取的包信息的内容。
 
@@ -15,7 +15,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.bundleManager:bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
+**替代接口：** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)
 
 <!--Device-bundle-enum BundleFlag--><!--Device-bundle-enum BundleFlag-End-->
 
@@ -33,7 +33,7 @@ GET_BUNDLE_DEFAULT = 0x00000000
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.BundleFlag#GET_BUNDLE_INFO_DEFAULT
+**替代接口：** [GET_BUNDLE_INFO_DEFAULT](arkts-ability-bundlemanager-bundleflag-e.md#GET_BUNDLE_INFO_DEFAULT)
 
 <!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000--><!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000-End-->
 
@@ -51,7 +51,7 @@ GET_BUNDLE_WITH_ABILITIES = 0x00000001
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.BundleFlag#GET_BUNDLE_INFO_WITH_ABILITY
+**替代接口：** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#GET_BUNDLE_INFO_WITH_ABILITY)
 
 <!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001-End-->
 
@@ -69,7 +69,7 @@ GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_PERMISSION
+**替代接口：** [GET_ABILITY_INFO_WITH_PERMISSION](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_PERMISSION)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002-End-->
 
@@ -87,7 +87,7 @@ GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_APPLICATION
+**替代接口：** [GET_ABILITY_INFO_WITH_APPLICATION](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_APPLICATION)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004-End-->
 
@@ -121,7 +121,7 @@ GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.BundleFlag#GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION
+**替代接口：** [GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION](arkts-ability-bundlemanager-bundleflag-e.md#GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION)
 
 <!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
@@ -155,7 +155,7 @@ GET_ABILITY_INFO_WITH_METADATA = 0x00000020
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_METADATA
+**替代接口：** [GET_ABILITY_INFO_WITH_METADATA](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_METADATA)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020-End-->
 
@@ -189,7 +189,7 @@ GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_ONLY_SYSTEM_APP
+**替代接口：** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e.md#GET_ABILITY_INFO_ONLY_SYSTEM_APP)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080--><!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080-End-->
 
@@ -207,7 +207,7 @@ GET_ABILITY_INFO_WITH_DISABLE = 0x00000100
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_DISABLE
+**替代接口：** [GET_ABILITY_INFO_WITH_DISABLE](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_DISABLE)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100-End-->
 

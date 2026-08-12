@@ -165,7 +165,7 @@ context: AccessibilityExtensionContext
 
 表示辅助扩展能力上下文。
 
-**类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
+**类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **起始版本：** 9
 

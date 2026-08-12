@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publish
@@ -22,6 +22,14 @@ After a notification is published, it will be displayed as a notification widget
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[isNotificationEnabled](notificationManager.isNotificationEnabled(callback: AsyncCallback<boolean>): void) checks whether
+
+[cancel](notificationManager.cancel(id: int,label: string,callback: AsyncCallback<void>): void) cancels a published
+
+[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) cancels all
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -33,21 +41,21 @@ After a notification is published, it will be displayed as a notification widget
 
 | Error Code ID |
 | --- |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [1600029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
+| [1600016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600016-updated-notification-version-outdated) |
+| [1600020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600009-notification-sending-limit-reached) |
+| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
+| [1600014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600014-no-related-permission) |
+| [1600015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-notification-disabled) |
+| [1600005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600005-notification-slot-disabled) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 
@@ -94,6 +102,14 @@ After a notification is published, it will be displayed as a notification card i
 
 **System capability:** SystemCapability.Notification.Notification
 
+**See also:**
+
+[isNotificationEnabled](notificationManager.isNotificationEnabled(): Promise<boolean>) checks whether
+
+[cancel](notificationManager.cancel(id: int,label?: string): Promise<void>) cancels a published
+
+[cancelAll](notificationManager.cancelAll(): Promise<void>) cancels all notifications of
+
 **Parameters:**
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
@@ -104,27 +120,27 @@ After a notification is published, it will be displayed as a notification card i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
-| [1600029](../errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
-| [1600016](../errorcode-notification.md#1600016-updated-notification-version-outdated) |
-| [1600020](../errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) |
-| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
-| [1600014](../errorcode-notification.md#1600014-no-related-permission) |
-| [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600004](../errorcode-notification.md#1600004-notification-disabled) |
-| [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-failed-to-connect-to-the-server) |
+| [1600029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600029-failed-to-find-the-extensionability-for-the-custom-extension-area-of-the-live-view-widget) |
+| [1600016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600016-updated-notification-version-outdated) |
+| [1600020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600020-applications-in-the-permission-control-list-are-not-allowed-to-publish-notifications) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1600009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600009-notification-sending-limit-reached) |
+| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
+| [1600014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600014-no-related-permission) |
+| [1600015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-notification-disabled) |
+| [1600005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600005-notification-slot-disabled) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 

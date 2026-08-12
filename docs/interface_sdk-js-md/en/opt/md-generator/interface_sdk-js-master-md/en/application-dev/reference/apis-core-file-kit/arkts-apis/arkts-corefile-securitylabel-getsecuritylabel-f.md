@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from 'kits/@kit.CoreFileKit';
+import { securityLabel } from '@kit.CoreFileKit';
 ```
 
 ## getSecurityLabel
@@ -30,7 +30,7 @@ Obtains the data security level of a file or directory. If no data security leve
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 

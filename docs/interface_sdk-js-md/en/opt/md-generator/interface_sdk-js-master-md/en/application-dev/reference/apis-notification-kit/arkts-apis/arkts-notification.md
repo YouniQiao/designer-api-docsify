@@ -6,7 +6,7 @@ The **Notification** module provides notification management capabilities, cover
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.notificationManager:notificationManager](arkts-notificationmanager.md)
+**Substitutes:** [notificationManager](arkts-notificationmanager.md#notificationManager)
 
 <!--Device-unnamed-declare namespace notification--><!--Device-unnamed-declare namespace notification-End-->
 

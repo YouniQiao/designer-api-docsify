@@ -38,7 +38,7 @@ Component type.
 
 **Deprecated since:** 12
 
-**Substitutes:** Column
+**Substitutes:** [Column](arkts-arkui-flexdirection-e.md#Column)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ Node type.
 
 **Deprecated since:** 20
 
-**Substitutes:** ContentSlot
+**Substitutes:** [ContentSlot](ContentSlot)
 
 **Model restriction:** This API can be used only in the stage model.
 

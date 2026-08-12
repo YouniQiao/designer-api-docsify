@@ -34,11 +34,11 @@ Initialize CheckboxGroup FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CheckboxGroupOptions](../arkts-components/arkts-arkui-checkboxgroupoptions-i.md) | No |  |
+| options | CheckboxGroupOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CheckboxGroupAttribute](../arkts-components/arkts-arkui-checkboxgroup-attribute.md) |  |
+| CheckboxGroupAttribute |  |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## begin
@@ -31,6 +31,6 @@ Begin monitoring an application scene.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scene | string | Yes | Indicates the scene name. |
-| startInputType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | Yes | Indicates the scene input event type. |
+| startInputType | ActionType | Yes | Indicates the scene input event type. |
 | note | string | No | Indicates the app expected info delivered. |
 

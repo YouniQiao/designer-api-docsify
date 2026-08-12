@@ -4,7 +4,7 @@
 type Assets = collections.Array<Asset>
 ```
 
-Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md), which allows assets to be passed across threads.
+Represent an array of [Assets](arkts-arkdata-sendablerelationalstore-asset-i.md#Asset), which allows assets to be passed across threads.
 
 **Since:** 12
 

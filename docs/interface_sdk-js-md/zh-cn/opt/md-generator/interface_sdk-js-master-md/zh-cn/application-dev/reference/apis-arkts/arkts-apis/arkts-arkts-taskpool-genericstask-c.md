@@ -3,7 +3,7 @@
 表示泛型任务。**GenericsTask**继承自  
 [Task](arkts-arkts-taskpool-execute-f.md#execute)。相比创建Task，创建GenericsTask可以在编译阶段校验并发函数的传参和返回值类型。其余行为与Task相同。
 
-**继承/实现关系：** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md)
+**继承/实现关系：** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md#Task)
 
 **起始版本：** 13
 
@@ -31,14 +31,14 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**对象。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 |
-| args | A | 是 |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
 
 ## 示例
 
@@ -87,14 +87,14 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**实例，并可�
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| func | (...args: A) =&gt; R \| Promise&lt;R&gt; | 是 |
-| args | A | 是 |
+| func | (...args: A) = & gt; R \ | Promise & lt;R & gt; | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | A | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
 
 ## 示例
 

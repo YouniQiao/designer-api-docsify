@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcBTag
@@ -12,13 +12,13 @@ import { tag } from 'kits/@kit.ConnectivityKit';
 function getNfcBTag(tagInfo: TagInfo): NfcBTag
 ```
 
-Obtains an {@link NfcBTag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-B technology, an {@link NfcBTag} object will be created based on the tag information.
+Obtains an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#NfcBTag) object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-B technology, an [NfcBTag](arkts-connectivity-tag-nfcbtag-t.md#NfcBTag) object will be created based on the tag information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.tag/tag#getNfcB
+**Substitutes:** [getNfcB](arkts-connectivity-tag-getnfcb-f.md#getNfcB)
 
 <!--Device-tag-function getNfcBTag(tagInfo: TagInfo): NfcBTag--><!--Device-tag-function getNfcBTag(tagInfo: TagInfo): NfcBTag-End-->
 

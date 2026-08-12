@@ -29,8 +29,8 @@ function deleteWebAdInterface(controller: web_webview.WebviewController, needRef
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter. Possible causes: Mandatory parameters are left unspecified. |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 ## 示例
 

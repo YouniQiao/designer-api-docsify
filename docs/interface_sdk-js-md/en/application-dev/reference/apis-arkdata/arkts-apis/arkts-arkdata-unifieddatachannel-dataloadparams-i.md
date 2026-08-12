@@ -15,7 +15,7 @@ If both **loadHandler** and **delayedDataLoadHandler** are passed, **delayedData
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## delayedDataLoadHandler

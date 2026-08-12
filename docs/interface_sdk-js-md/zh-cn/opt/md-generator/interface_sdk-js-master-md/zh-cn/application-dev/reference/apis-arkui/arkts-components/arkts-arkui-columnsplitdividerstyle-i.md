@@ -6,7 +6,7 @@
 > 
 > 与[RowSplit](./row_split)相同，ColumnSplit的分割线可调整上下两侧子组件的高度，子组件的高度调整范围受其最大最小高度限制。
 > 
-> 支持[clip](arkts-arkui-commonmethod-c.md#clip)、[margin](arkts-arkui-commonmethod-c.md#margin)等通用属性，未设置clip属性时，其默认值为true。
+> 支持[clip](CommonMethod#clip(value: boolean))、[margin](CommonMethod#margin)等通用属性，未设置clip属性时，其默认值为true。
 
 **起始版本：** 10
 

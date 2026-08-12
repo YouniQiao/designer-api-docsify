@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -42,7 +42,7 @@ backgroundBlurStyle?: BlurStyle
 Background blur style of the toast.&lt;br&gt;Default value: **BlurStyle.COMPONENT_ULTRA_THICK**&lt;br&gt;  
 **NOTE：**&lt;br&gt;Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set  to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce  the expected visual effect.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 12
 
@@ -183,7 +183,7 @@ offset?: Offset
 Offset in the specified alignment mode.&lt;br&gt;Default value: **{ dx: 0, dy: 0 }**, indicating no offset&lt;br&gt;  
 **NOTE：**&lt;br&gt;Only values in units of px are supported. Values in other units must be converted to units of px before being passed in. For example, to set a value in vp, convert it to px first and then pass the converted value.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 12
 
@@ -203,7 +203,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the toast background.&lt;br&gt;Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 

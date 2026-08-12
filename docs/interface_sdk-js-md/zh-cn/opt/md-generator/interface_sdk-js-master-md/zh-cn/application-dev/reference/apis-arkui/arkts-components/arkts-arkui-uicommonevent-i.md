@@ -14,7 +14,7 @@
 setOnAppear(callback: Callback<void> | undefined): void
 ```
 
-设置[onAppear](arkts-arkui-commonmethod-c.md#onappear)挂载显示事件的回调。
+设置[onAppear](arkts-arkui-commonmethod-c.md#onAppear)挂载显示事件的回调。
 
 **起始版本：** 12
 
@@ -30,7 +30,7 @@ setOnAppear(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnBlur
 
@@ -38,7 +38,7 @@ setOnAppear(callback: Callback<void> | undefined): void
 setOnBlur(callback: Callback<void> | undefined): void
 ```
 
-设置[onBlur](arkts-arkui-commonmethod-c.md#onblur)失焦事件的回调。
+设置[onBlur](arkts-arkui-commonmethod-c.md#onBlur)失焦事件的回调。
 
 **起始版本：** 12
 
@@ -54,7 +54,7 @@ setOnBlur(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnClick
 
@@ -62,7 +62,7 @@ setOnBlur(callback: Callback<void> | undefined): void
 setOnClick(callback: Callback<ClickEvent> | undefined): void
 ```
 
-设置[点击事件](arkts-arkui-commonmethod-c.md#onclick)的回调。
+设置[点击事件](CommonMethod#onClick(event: (event: ClickEvent) => void))的回调。
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ setOnClick(callback: Callback<ClickEvent> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt; \| undefined | 是 |
 
 ## setOnDisappear
 
@@ -86,7 +86,7 @@ setOnClick(callback: Callback<ClickEvent> | undefined): void
 setOnDisappear(callback: Callback<void> | undefined): void
 ```
 
-设置[onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear)卸载消失事件的回调。
+设置[onDisAppear](arkts-arkui-commonmethod-c.md#onDisAppear)卸载消失事件的回调。
 
 **起始版本：** 12
 
@@ -102,7 +102,7 @@ setOnDisappear(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnFocus
 
@@ -110,7 +110,7 @@ setOnDisappear(callback: Callback<void> | undefined): void
 setOnFocus(callback: Callback<void> | undefined): void
 ```
 
-设置[onFocus](arkts-arkui-commonmethod-c.md#onfocus)获焦事件的回调。
+设置[onFocus](arkts-arkui-commonmethod-c.md#onFocus)获焦事件的回调。
 
 **起始版本：** 12
 
@@ -126,7 +126,7 @@ setOnFocus(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnHover
 
@@ -134,7 +134,7 @@ setOnFocus(callback: Callback<void> | undefined): void
 setOnHover(callback: HoverCallback | undefined): void
 ```
 
-设置[onHover](arkts-arkui-commonmethod-c.md#onhover)悬浮事件的回调。
+设置[onHover](arkts-arkui-commonmethod-c.md#onHover)悬浮事件的回调。
 
 **起始版本：** 12
 
@@ -158,7 +158,7 @@ setOnHover(callback: HoverCallback | undefined): void
 setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 ```
 
-设置[按键事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)的回调。
+设置[按键事件](common)的回调。
 
 **起始版本：** 12
 
@@ -174,7 +174,7 @@ setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyEvent&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md)&gt; \| undefined | 是 |
 
 ## setOnMouse
 
@@ -182,7 +182,7 @@ setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 setOnMouse(callback: Callback<MouseEvent> | undefined): void
 ```
 
-设置[onMouse](arkts-arkui-commonmethod-c.md#onmouse)鼠标事件的回调。
+设置[onMouse](arkts-arkui-commonmethod-c.md#onMouse)鼠标事件的回调。
 
 **起始版本：** 12
 
@@ -198,7 +198,7 @@ setOnMouse(callback: Callback<MouseEvent> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MouseEvent&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[MouseEvent](arkts-arkui-mouseevent-i.md)&gt; \| undefined | 是 |
 
 ## setOnSizeChange
 
@@ -206,7 +206,7 @@ setOnMouse(callback: Callback<MouseEvent> | undefined): void
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-设置[onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange)组件区域变化事件的回调。
+设置[onSizeChange](arkts-arkui-commonmethod-c.md#onSizeChange)组件区域变化事件的回调。
 
 **起始版本：** 12
 
@@ -230,7 +230,7 @@ setOnSizeChange(callback: SizeChangeCallback | undefined): void
 setOnTouch(callback: Callback<TouchEvent> | undefined): void
 ```
 
-设置[触摸事件](arkts-arkui-commonmethod-c.md#ontouch)的回调。
+设置[触摸事件](CommonMethod#onTouch(event: (event: TouchEvent) => void))的回调。
 
 **起始版本：** 12
 
@@ -246,7 +246,7 @@ setOnTouch(callback: Callback<TouchEvent> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md)&gt; \| undefined | 是 |
 
 ## setOnVisibleAreaApproximateChange
 
@@ -255,7 +255,7 @@ setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: Visib
 ```
 
 设置限制回调间隔的  
-[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)可见区域变化事件的回调。
+[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange)可见区域变化事件的回调。
 
 **起始版本：** 12
 

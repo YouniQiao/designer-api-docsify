@@ -11,7 +11,7 @@ Defines information about the images or videos selected.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## contextRecoveryInfo
@@ -61,7 +61,7 @@ Array of moving photo badge states for the media files selected from Gallery.
 
 If **isMovingPhotoBadgeShown** is set to **true**, this array contains the moving photo badge states. Otherwise, it is empty.
 
-**Type:** Array&lt;MovingPhotoBadgeStateType&gt;
+**Type:** Array&lt;[MovingPhotoBadgeStateType](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md)&gt;
 
 **Since:** 22
 
@@ -80,7 +80,7 @@ photoUris: Array<string>
 URIs of the media files selected.
 
 This URI array can be used only by calling the   
-[photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)API through temporary authorization. For details, see   
+[photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)API through temporary authorization. For details, see   
 [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
 **Type:** Array&lt;string&gt;

@@ -53,7 +53,7 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | 是 |
+| locale | string \| Array & lt;string & gt; | 是 |
 | options | [NumberOptions](arkts-localization-intl-numberoptions-i.md) | 否 |
 
 ## 示例

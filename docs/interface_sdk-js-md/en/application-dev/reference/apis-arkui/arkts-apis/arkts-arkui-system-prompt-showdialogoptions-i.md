@@ -13,7 +13,7 @@ Defines the option of show dialog.
 ## Modules to Import
 
 ```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from 'kits/@kit.ArkUI';
+import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -87,7 +87,7 @@ Called when the dialog box is displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md) | Yes |  |
+| data | [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | Yes |  |
 
 ## buttons
 

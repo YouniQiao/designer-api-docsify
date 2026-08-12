@@ -6,7 +6,7 @@
 function postQuery(handle: AssetMap): Promise<void>
 ```
 
-查询的后置处理，用于需要用户认证的关键资产（与[asset.preQuery](arkts-assetstore-asset-prequery-f.md#prequery)函数成对出现）。使用Promise异步回调。
+查询的后置处理，用于需要用户认证的关键资产（与[asset.preQuery](arkts-assetstore-asset-prequery-f.md#preQuery)函数成对出现）。使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -26,19 +26,19 @@ function postQuery(handle: AssetMap): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
-| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
-| [24000010](../errorcode-asset.md#24000010-进程通信错误) |
-| [24000011](../errorcode-asset.md#24000011-包管理服务异常) |
-| [24000006](../errorcode-asset.md#24000006-系统内存不足) |
-| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [24000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000012-账号系统服务异常) |
+| [24000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000013-访问控制服务异常) |
+| [24000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000010-进程通信错误) |
+| [24000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000011-包管理服务异常) |
+| [24000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000006-系统内存不足) |
+| [24000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000001-关键资产服务不可用) |
 
 ## 示例
 

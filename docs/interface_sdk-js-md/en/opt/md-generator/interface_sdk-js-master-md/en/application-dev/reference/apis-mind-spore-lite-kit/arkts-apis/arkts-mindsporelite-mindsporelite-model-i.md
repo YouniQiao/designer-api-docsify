@@ -11,7 +11,7 @@ Provides manages model function. Including get inputs, predict ,resize.
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## exportModel
@@ -241,8 +241,8 @@ Infer model
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MSTensor[]&gt; | Yes |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; | Yes |
 
 ## Examples
 
@@ -311,13 +311,13 @@ Infer model
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;MSTensor[]&gt; |
+| Promise&lt;[MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[]&gt; |
 
 ## Examples
 
@@ -388,8 +388,8 @@ resize model input
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
-| dims | Array&lt;Array&lt;number&gt;&gt; | Yes |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
+| dims | Array & lt;Array & lt;number & gt; & gt; | Yes |
 
 **Return value:**
 
@@ -439,7 +439,7 @@ Train model by step
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inputs | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
+| [inputs](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-shader-i.md) | [MSTensor](arkts-mindsporelite-mindsporelite-mstensor-i.md)[] | Yes |
 
 **Return value:**
 

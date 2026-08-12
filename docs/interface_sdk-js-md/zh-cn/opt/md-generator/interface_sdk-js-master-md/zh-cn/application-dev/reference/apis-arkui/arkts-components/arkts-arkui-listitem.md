@@ -57,7 +57,7 @@ ListItem(value?: string)
 
 **废弃版本：** 10
 
-**替代接口：** <!--SUBSTITUTE_API-->listItem/ListItemInterface<!--/SUBSTITUTE_API-->
+**替代接口：** [listItem/ListItemInterface](listItem/ListItemInterface)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 

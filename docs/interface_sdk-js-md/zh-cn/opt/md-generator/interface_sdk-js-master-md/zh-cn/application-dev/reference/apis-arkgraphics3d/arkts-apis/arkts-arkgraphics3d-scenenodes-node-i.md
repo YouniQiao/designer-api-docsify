@@ -2,7 +2,7 @@
 
 定义Node接口.
 
-**继承/实现关系：** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**继承/实现关系：** Node extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **起始版本：** 12
 
@@ -36,13 +36,56 @@ getNodeByPath(path: string): Node | null
 | --- |
 | [Node](arkts-arkgraphics3d-scenenodes-node-i.md) |
 
+## 示例
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+function getNode(): void {
+  // 加载场景资源，支持.gltf和.glb格式，路径和文件名可根据项目实际资源自定义
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result && result.root) {
+      // 查找节点
+      let geo : Node | null = result.root.getNodeByPath("scene/node");
+    }
+  });
+}
+```
+
+调用getNodeByPath时需传入节点路径参数path。可通过遍历节点树并打印各节点的属性获取可用的path值，示例如下：
+
+```TypeScript
+import { Scene, Node } from '@kit.ArkGraphics3D';
+
+// 打印给定节点的树状结构，每行表示一个节点的路径。
+function printNodeTreeInRelativePath(node: Node | null): void {
+  if (!node) {
+    return;
+  }
+  let basePath: string = node.path + node.name + '/';
+  let printRelative = (n: Node | null): void => {
+    if (!n) {
+      return;
+    }
+    console.info(n.path.substring(basePath.length + 1) + n.name);
+    for (let i = 0; i < n.children.count(); i++) {
+      printRelative(n.children.get(i));
+    }
+  }
+  for (let i = 0; i < node.children.count(); i++) {
+    printRelative(node.children.get(i));
+  }
+}
+```
+
 ## children
 
 ```TypeScript
 readonly children: Container<Node>
 ```
 
-节点的子节点，不存在则为空值。为只读属性，表示不能替换整个children容器，但可以通过容器方法操作子节点（如[append](arkts-arkgraphics3d-scenenodes-container-i.md#append)、[insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertafter)、  
+节点的子节点，不存在则为空值。为只读属性，表示不能替换整个children容器，但可以通过容器方法操作子节点（如[append](arkts-arkgraphics3d-scenenodes-container-i.md#append)、[insertAfter](arkts-arkgraphics3d-scenenodes-container-i.md#insertAfter)、  
 [remove](arkts-arkgraphics3d-scenenodes-container-i.md#remove)或[clear](arkts-arkgraphics3d-scenenodes-container-i.md#clear)）。如果append或insertAfter的节点已存在于容器中，容器会先移除该节点再插入，因此数量不会增加，看似“无效”；添加新节点才会真正增加子节点数量。
 
 **类型：** [Container](arkts-arkgraphics3d-scenenodes-container-i.md)&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt;

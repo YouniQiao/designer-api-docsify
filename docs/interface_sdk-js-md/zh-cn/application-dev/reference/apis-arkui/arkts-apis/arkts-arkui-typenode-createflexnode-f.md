@@ -29,5 +29,5 @@ export function createFlexNode(context: UIContext, options?: FrameNodeOptions): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Flex](arkts-arkui-typenode-flex-t.md) | 返回 Flex 类型的 FrameNode |
+| Flex | 返回 Flex 类型的 FrameNode |
 

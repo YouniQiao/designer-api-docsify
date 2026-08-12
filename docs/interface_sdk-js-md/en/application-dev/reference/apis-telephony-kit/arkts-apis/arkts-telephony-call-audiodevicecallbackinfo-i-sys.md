@@ -15,7 +15,7 @@ Indicates the information of the audio device.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## audioDeviceList
@@ -26,7 +26,7 @@ audioDeviceList: Array<AudioDevice>
 
 Indicates the list of support audio device.
 
-**Type:** Array&lt;AudioDevice&gt;
+**Type:** Array&lt;[AudioDevice](arkts-telephony-call-audiodevice-i-sys.md)&gt;
 
 **Since:** 10
 

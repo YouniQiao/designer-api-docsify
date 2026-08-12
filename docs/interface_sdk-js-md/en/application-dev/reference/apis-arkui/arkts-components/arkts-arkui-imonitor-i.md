@@ -44,6 +44,53 @@ Return the pair of the value before the most recent change and current value for
 | --- | --- |
 | [IMonitorValue](arkts-arkui-imonitorvalue-i.md)&lt;T&gt; |  |
 
+## Examples
+
+```TypeScript
+@ObservedV2
+class Info {
+  @Trace name: string = 'Tom';
+  @Trace age: number = 25;
+  @Trace height: number = 175;
+
+  //Listen for one variable.
+  @Monitor('name')
+  onNameChange(monitor: IMonitor) {
+    // If no path is specified for value, the first path in the dirty array is used by default.
+    console.info(`path: ${monitor.value()?.path} change from ${monitor.value()?.before} to ${monitor.value()?.now}`);
+  }
+
+  // Listen for multiple variables.
+  @Monitor('age','height')
+  onRecordChange(monitor: IMonitor) {
+    // If a path is specified for value, the change information for the specified path is returned.
+    monitor.dirty.forEach((path: string) => {
+      console.info(`path: ${path} change from ${monitor.value(path)?.before} to ${monitor.value(path)?.now}`);
+    })
+  }
+}
+
+@Entry
+@ComponentV2
+struct Index {
+  @Local info: Info = new Info();
+
+  build() {
+    Column() {
+      Text(`info.name: ${this.info.name}`)
+        .onClick(() => {
+          this.info.name = 'Bob'; // Output log: path: name change from Tom to Bob
+        })
+      Text(`info.age: ${this.info.age}, info.height: ${this.info.height}`)
+        .onClick(() => {
+          this.info.age++; // Output log: path: age change from 25 to 26
+          this.info.height++; // Output log: path: height change from 175 to 176
+        })
+    }
+  }
+}
+```
+
 ## dirty
 
 ```TypeScript

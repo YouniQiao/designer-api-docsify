@@ -18,7 +18,7 @@ componentHeight: number
 
 Height of the component.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **Type:** number
 
@@ -42,7 +42,7 @@ componentWidth: number
 
 Width of the component.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **Type:** number
 
@@ -66,7 +66,7 @@ contentHeight: number
 
 Actual rendered height of the image.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **NOTE：**
 
@@ -94,7 +94,7 @@ contentOffsetX: number
 
 Offset of the rendered content relative to the component on the x-axis.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **NOTE：**
 
@@ -122,7 +122,7 @@ contentOffsetY: number
 
 Offset of the rendered content relative to the component on the y-axis
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **NOTE：**
 
@@ -150,7 +150,7 @@ contentWidth: number
 
 Actual rendered width of the image.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **NOTE：**
 
@@ -178,7 +178,7 @@ height: number
 
 Height of the image.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **Type:** number
 
@@ -228,7 +228,7 @@ width: number
 
 Width of the image.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **Type:** number
 

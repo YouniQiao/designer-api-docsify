@@ -31,8 +31,8 @@ function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 目标屏幕的ID，用于指定要迁移到的屏幕。该参数应为非负整数，可通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.displayId获取；也可通过获取 [Display](arkts-arkui-display-displaystate-e.md)对象的 [id](../../../reference/apis-arkui/js-apis-display.md#属性)属性获取此参数。 |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标主窗口的ID，用于指定要迁移的窗口。该参数应为大于0的整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md)后，再通过properties.id获取。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 目标屏幕的ID，用于指定要迁移到的屏幕。该参数应为非负整数，可通过 [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md#WindowProperties)后，再通过properties.displayId获取；也可通过获取 [Display](arkts-arkui-display-displaystate-e.md#DisplayState)对象的 [id](../../../reference/apis-arkui/js-apis-display.md#属性)属性获取此参数。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标主窗口的ID，用于指定要迁移的窗口。该参数应为大于0的整数，通过 [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接口获取到 [properties](arkts-arkui-window-windowproperties-i.md#WindowProperties)后，再通过properties.id获取。 |
 | userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 |  |
 
 **返回值：**
@@ -45,11 +45,11 @@ function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not found or has been destroyed. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. The userId is not exist. |
-| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window is not a main window. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [1300008](../errorcode-window.md#1300008-显示设备异常) | Invalid display. Possible cause: 1. DisplayId is a negative number or not exists. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not found or has been destroyed. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. The userId is not exist. |
+| [1300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: The window is not a main window. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) | Invalid display. Possible cause: 1. DisplayId is a negative number or not exists. |
 

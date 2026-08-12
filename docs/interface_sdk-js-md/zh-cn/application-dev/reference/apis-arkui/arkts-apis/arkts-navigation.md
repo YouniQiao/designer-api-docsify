@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Navigation](arkts-arkui-navigation-navigation-f.md#navigation) | 绑定导航控制器到Navigation组件，适用于使用[NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md)配合  [navDestination](NavigationAttribute.navDestination)属性进行页面路由。 |
+| [Navigation](arkts-arkui-navigation-navigation-f.md#navigation) | 绑定导航控制器到Navigation组件，适用于使用[NavPathStack](arkts-arkui-navigation-navpathstack-c.md#NavPathStack)配合  [navDestination](arkts-arkui-navigation-navigationattribute-i.md#navDestination)属性进行页面路由。 |
 
 ### 类
 
@@ -23,7 +23,7 @@
 | [MoreButtonOptions](arkts-arkui-navigation-morebuttonoptions-i.md) | 更多图标的菜单选项。 |
 | [NavContentInfo](arkts-arkui-navigation-navcontentinfo-i.md) | 跳转Destination信息。 |
 | [NavigationAnimatedTransition](arkts-arkui-navigation-navigationanimatedtransition-i.md) | 自定义转场动画协议，开发者需实现该协议来定义Navigation路由跳转的跳转动画。 |
-| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) | 除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性： |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) | 除支持[通用属性](./../../@internal/component/ets/common)外，还支持以下属性： |
 | [NavigationCommonTitle](arkts-arkui-navigation-navigationcommontitle-i.md) | Navigation通用标题。 |
 | [NavigationCustomTitle](arkts-arkui-navigation-navigationcustomtitle-i.md) | Navigation自定义标题。 |
 | [NavigationDividerStyle](arkts-arkui-navigation-navigationdividerstyle-i.md) | Navigation分割线颜色及上下边距。 |

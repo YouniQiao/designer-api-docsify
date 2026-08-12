@@ -1,7 +1,7 @@
 # Panel
 
 In the following API examples, you must first use   
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## adjustPanelRect
@@ -52,8 +52,8 @@ Adjusts the panel rectangle. After the API is called, the adjust request is subm
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -96,9 +96,9 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. This API is compatible with
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect). If the
+> [adjustPanelRect](#adjustPanelRect). If the
 > input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) is called by
+> [adjustPanelRect](#adjustPanelRect) is called by
 > default.
 > 
 > This API returns the result synchronously. The return only indicates that the system receives the setting
@@ -125,9 +125,9 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -168,7 +168,7 @@ panel.adjustPanelRect(panelFlag, panelRect);
 changeFlag(flag: PanelFlag): void
 ```
 
-Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md) panels.
+Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panels.
 
 **Since:** 10
 
@@ -186,7 +186,7 @@ Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md))
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -213,14 +213,14 @@ Obtains the window ID. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -252,7 +252,7 @@ Obtains the immersive mode of the input method application.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) |
+| [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) |
 
 ## Examples
 
@@ -284,15 +284,15 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SystemPanelInsets&gt; |
+| Promise&lt;[SystemPanelInsets](arkts-ime-inputmethodengine-systempanelinsets-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [12800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800022-invalid-displayid) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -369,7 +369,7 @@ Hides this panel. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -389,7 +389,7 @@ panel.hide().then(() => {
 moveTo(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) state.
 
 **Since:** 10
 
@@ -409,7 +409,7 @@ Moves this input method panel to the specified position. This API uses an asynch
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -431,7 +431,7 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md) state.
+Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) state.
 
 **Since:** 10
 
@@ -450,13 +450,13 @@ Moves this input method panel to the specified position. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -489,13 +489,13 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'show' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -522,13 +522,13 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'hide' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -552,11 +552,11 @@ Disables listening for the panel size change. This API uses an asynchronous call
 > the actual panel size to refresh the panel layout.
 > 
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md/arkts-arkui-window-size-i.md) type.
+> parameters of the [window.Size](window.Size) type.
 > 
 > - Since API version 15, after the
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to
+> [adjustPanelRect](#adjustPanelRect-1) API
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to
 > the callback function of this API.
 
 **Since:** 12
@@ -601,7 +601,7 @@ Enables listening for the show event of this panel. This API uses an asynchronou
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'show' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## Examples
 
@@ -630,7 +630,7 @@ Enables listening for the hide event of this panel. This API uses an asynchronou
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'hide' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## Examples
 
@@ -656,11 +656,11 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 > the actual panel size to refresh the panel layout.
 > 
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md/arkts-arkui-window-size-i.md) type.
+> parameters of the [window.Size](window.Size) type.
 > 
 > - Since API version 15, after the
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to
+> [adjustPanelRect](#adjustPanelRect-1) API
+> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to
 > the callback function of this API.
 
 **Since:** 12
@@ -726,7 +726,7 @@ Resizes this input method panel. This API uses an asynchronous callback to retur
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -776,13 +776,13 @@ Resizes this input method panel. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -805,16 +805,16 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 Sets the immersive effect of the input method application.
 
 - Gradient mode and fluid light mode can be used only when the   
-[immersive mode](arkts-ime-inputmethodengine-panel-i.md#setimmersivemode) is enabled.  
+[immersive mode](#setImmersiveMode) is enabled.  
 - The fluid light mode can be used only when the gradient mode is enabled.  
 - If the gradient mode is disabled, the gradient height must be 0 px.  
 - Only system applications can set the fluid light mode.  
 - The current API can be called only after any of the following APIs is called:  
- - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (available   
+ - [adjustPanelRect](#adjustPanelRect) (available   
 since API version 12)  
- - [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect) (  
+ - [adjustPanelRect](#adjustPanelRect-1) (  
 available since API version 15)  
- - [resize](arkts-ime-inputmethodengine-panel-i.md#resize) (  
+ - [resize](#resize) (  
 available since API version 10)
 
 **Since:** 20
@@ -833,11 +833,11 @@ available since API version 10)
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
-| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) |
+| [12800020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -868,15 +868,15 @@ Sets the immersive mode of the input method application. You can only set the im
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md) | Yes |
+| mode | [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -910,19 +910,19 @@ Sets to keep the screen always on. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isKeepScreenOn | boolean | Yes |
+| [isKeepScreenOn](../../apis-arkui/arkts-apis/arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -956,14 +956,14 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| isPrivacyMode | boolean | Yes |
+| [isPrivacyMode](../../apis-arkui/arkts-apis/arkts-arkui-window-windowproperties-i.md) | boolean | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -997,7 +997,7 @@ Sets the color of the function buttons and their background color on the current
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1043,7 +1043,7 @@ Loads content from a page to this input method panel. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1083,13 +1083,13 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1129,7 +1129,7 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1172,13 +1172,13 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1246,7 +1246,7 @@ Shows this input method panel. This API uses a promise to return the result. It 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1278,10 +1278,10 @@ Sends a command to start moving the window. The window can be moved only when th
 
 | Error Code ID |
 | --- |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 
@@ -1324,13 +1324,13 @@ Update the panel rectangle. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## updatePanelRect
 
@@ -1343,9 +1343,9 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. This API is compatible with
-> [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect).
+> [updatePanelRect](#updatePanelRect).
 > If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRect](arkts-ime-inputmethodengine-panel-i.md#updatepanelrect)
+> [updatePanelRect](#updatePanelRect)
 > is called by default.
 > 
 > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
@@ -1371,14 +1371,14 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## updatePanelRectSync
 
@@ -1415,7 +1415,7 @@ Update the panel rectangle.
 
 | Error Code ID |
 | --- |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## updatePanelRectSync
 
@@ -1428,9 +1428,9 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. This API is compatible with
-> [updatePanelRectSync](arkts-ime-inputmethodengine-panel-i.md#updatepanelrectsync).
+> [updatePanelRectSync](#updatePanelRectSync).
 > If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRectSync](arkts-ime-inputmethodengine-panel-i.md#updatepanelrectsync)
+> [updatePanelRectSync](#updatePanelRectSync)
 > is called by default.
 > 
 > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
@@ -1456,8 +1456,8 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 
 | Error Code ID |
 | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## updateRegion
 
@@ -1485,15 +1485,15 @@ Updates the hot zone on the input method panel in the current state.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | Yes |
+| inputRegion | Array & lt;window.Rect & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 

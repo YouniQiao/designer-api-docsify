@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAlternateIcons
@@ -26,7 +26,7 @@ Queries the alternate icon information configured in the alternateIcons in the a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AlternateIconInfo&gt;&gt; |
+| Promise & lt;Array & lt;AlternateIconInfo & gt; & gt; |
 
 **Error codes:**
 

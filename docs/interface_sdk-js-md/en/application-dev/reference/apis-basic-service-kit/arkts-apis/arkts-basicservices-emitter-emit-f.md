@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## emit
@@ -33,7 +33,7 @@ After an event is published using this API, the event may not be executed immedi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-emitter-eventpriority-e.md) specifies the emit priority of the event. |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to emit, where [EventPriority](arkts-basicservices-emitter-eventpriority-e.md#EventPriority) specifies the emit priority of the event. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
@@ -296,7 +296,7 @@ After an event is published using this API, the event may not be executed immedi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
@@ -340,7 +340,7 @@ Emits an event of a specified priority.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 
 ## Examples
 
@@ -374,7 +374,7 @@ Emits an event of a specified priority.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 | data | [EventData](arkts-basicservices-emitter-eventdata-i.md) | Yes | Data passed in the event. |
 
 ## Examples
@@ -425,7 +425,7 @@ After an event is published using this API, the event may not be executed immedi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | No | Data carried by the event. This parameter is left empty by default. |
 
 ## Examples
@@ -499,6 +499,6 @@ Emits an event of a specified priority.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | ID of the event to emit. The value cannot be an empty string and exceed 10240 bytes. |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | Yes | Event emit priority. |
+| options | Options | Yes | Event emit priority. |
 | data | [GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt; | Yes | Data passed in the event. |
 

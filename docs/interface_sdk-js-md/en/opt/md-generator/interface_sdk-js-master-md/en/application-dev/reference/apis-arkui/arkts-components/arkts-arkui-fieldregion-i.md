@@ -60,7 +60,7 @@ size?: SizeT<number>
 
 The size of the field. The unit of value is vp.
 
-**Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**Type:** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **Default:** {width:0,height:0}
 

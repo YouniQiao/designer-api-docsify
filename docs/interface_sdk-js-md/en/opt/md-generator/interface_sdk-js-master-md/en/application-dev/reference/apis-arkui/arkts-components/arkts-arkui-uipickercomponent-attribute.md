@@ -1,8 +1,8 @@
 # UIPickerComponent properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](common), the following events are supported.
 
 **Inheritance/Implementation:** UIPickerComponentAttribute extends [CommonMethod<UIPickerComponentAttribute>](CommonMethod<UIPickerComponentAttribute>)
 
@@ -152,7 +152,7 @@ NOTE
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnUIPickerComponentCallback&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes |
 
 ## onScrollStop
 
@@ -178,7 +178,7 @@ If callback is set to undefined, the callback is not used.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Optional](arkts-arkui-optional-t.md)&lt;OnUIPickerComponentCallback&gt; | Yes |
+| callback | [Optional](arkts-arkui-optional-t.md)&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes |
 
 ## selectionIndicator
 
@@ -204,4 +204,4 @@ Default value: { type: PickerIndicatorType.BACKGROUND, borderRadius: { value:12,
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;PickerIndicatorStyle&gt; | Yes |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | Yes |

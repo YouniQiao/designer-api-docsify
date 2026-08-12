@@ -94,7 +94,7 @@ style?: DialogButtonStyle
 
 默认值：DialogButtonStyle.DEFAULT
 
-**类型：** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
+**类型：** DialogButtonStyle
 
 **默认值：** DialogButtonStyle.DEFAULT
 

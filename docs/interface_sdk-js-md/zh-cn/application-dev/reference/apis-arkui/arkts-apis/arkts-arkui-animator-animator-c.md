@@ -16,7 +16,7 @@
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-为自定义动画创建Animator对象。This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use {@link ohos.arkui.UIContext.UIContext#createAnimator}.
+为自定义动画创建Animator对象。This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use [createAnimator](ohos.arkui.UIContext.UIContext#createAnimator).
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | 是 | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | Options. |
 
 **返回值：**
 
@@ -44,5 +44,5 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
 

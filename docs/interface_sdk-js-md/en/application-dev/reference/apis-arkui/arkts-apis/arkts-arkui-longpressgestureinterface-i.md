@@ -23,7 +23,7 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
 **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
@@ -60,7 +60,7 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-Creates a long press gesture. Compared with [LongPressGesture](arkts-arkui-longpressgestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Creates a long press gesture. Compared with [LongPressGesture](LongPressGestureInterface(value?: { fingers?: number; repeat?: boolean; duration?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 In components that support drag actions by default, such as **Text**, **TextInput**, **TextArea**, **HyperLink**,  
 **Image**, and **RichEditor**, the long press gesture may conflict with the drag action. If this occurs, the event priority is determined as follows:
@@ -85,7 +85,7 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | No | Parameters of the long press gesture handler. |
 
 **Return value:**
 
@@ -177,7 +177,7 @@ Registers the callback for long press gesture cancellation. This callback is tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback for long press gesture cancellation. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for long press gesture cancellation. |
 
 **Return value:**
 

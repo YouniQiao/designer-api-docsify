@@ -24,7 +24,7 @@ Defines the Progress component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | Yes | progress options. |
+| options | [ProgressOptions](arkts-arkui-progress-progressoptions-i.md) | Yes | progress options. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines Progress Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ProgressAttribute&gt; | Yes | Progress attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ProgressAttribute](arkts-arkui-progress-progressattribute-i.md)&gt; | Yes | Progress attribute instance |
 
 **Return value:**
 

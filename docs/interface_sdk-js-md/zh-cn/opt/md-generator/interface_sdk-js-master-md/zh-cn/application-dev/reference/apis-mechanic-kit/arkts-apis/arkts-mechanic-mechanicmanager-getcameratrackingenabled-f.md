@@ -24,8 +24,8 @@ function getCameraTrackingEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
+| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) |
 
 ## 示例
 

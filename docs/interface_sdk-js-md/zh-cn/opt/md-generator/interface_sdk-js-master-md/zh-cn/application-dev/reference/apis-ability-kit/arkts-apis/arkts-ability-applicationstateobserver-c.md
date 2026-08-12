@@ -107,7 +107,7 @@ onProcessCreated(processData: ProcessData): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | 是 |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 |
 
 ## onProcessDied
 
@@ -127,7 +127,7 @@ onProcessDied(processData: ProcessData): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | 是 |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 |
 
 ## onProcessStateChanged
 
@@ -147,4 +147,4 @@ onProcessStateChanged(processData: ProcessData): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| processData | [ProcessData](arkts-ability-processdata-c.md) | 是 |
+| processData | [ProcessData](arkts-ability-processdata-t.md) | 是 |

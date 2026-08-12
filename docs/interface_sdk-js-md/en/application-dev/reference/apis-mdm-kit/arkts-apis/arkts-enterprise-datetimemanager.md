@@ -7,7 +7,7 @@ The **dateTimeManager** module provides APIs for system time management.
 > The APIs of this module are available only to
 > [MDM applications](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application), and can be
 > called only after the device administrator application is activated via
-> [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableadmin).
+> [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableAdmin).
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ The **dateTimeManager** module provides APIs for system time management.
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from 'kits/@kit.MDMKit';
+import { dateTimeManager } from '@kit.MDMKit';
 ```
 
 ## Summary

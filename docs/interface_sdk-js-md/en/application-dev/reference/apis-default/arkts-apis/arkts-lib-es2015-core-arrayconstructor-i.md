@@ -18,7 +18,7 @@ Creates an array from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes |  |
+| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ Creates an array from an iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes |  |
+| arrayLike | ArrayLike&lt;T&gt; | Yes |  |
 | mapfn | (v: T, k: number) =&gt; U | Yes |  |
 | thisArg | any | No |  |
 

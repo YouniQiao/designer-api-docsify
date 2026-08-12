@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## openInputMethodSettings
@@ -32,7 +32,7 @@ Open the input method settings page.
 
 | Error Code ID |
 | --- |
-| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) |
+| [16900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## executeDrag
@@ -17,15 +17,15 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 > **NOTE：**
 > 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
+> [UIContext](@ohos.arkui.UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object
 > associated with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.DragController#executeDrag
+**Substitutes:** [executeDrag](ohos.arkui.UIContext.DragController#executeDrag)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,16 +39,16 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | Yes |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DragEventParam&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -142,15 +142,15 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 > **NOTE：**
 > 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
+> [UIContext](@ohos.arkui.UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object
 > associated with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.DragController#executeDrag
+**Substitutes:** [executeDrag](ohos.arkui.UIContext.DragController#executeDrag)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,22 +164,22 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) | Yes |
+| custom | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md) | Yes |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string |
-| Promise&lt;DragEventParam&gt; |
+| Promise & lt;{ event: DragEvent, extraParams: string |
+| Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

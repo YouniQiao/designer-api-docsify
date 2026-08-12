@@ -36,7 +36,7 @@ Constructs a **ProgressMask** object.
 | --- | --- | --- | --- |
 | value | number | Yes | Current value of the progress mask.&lt;br&gt; Value range: [0.0, +∞) |
 | total | number | Yes | Maximum value of the progress mask.&lt;br&gt; Value range: [0.0, +∞) |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
+| color | ResourceColor | Yes | Color of the progress mask. |
 
 ## enableBreathingAnimation
 
@@ -88,7 +88,7 @@ Updates the color of the progress mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the progress mask. |
+| value | ResourceColor | Yes | Color of the progress mask. |
 
 ## updateProgress
 

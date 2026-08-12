@@ -123,7 +123,7 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 
 | 类型 |
 | --- |
-| Promise&lt;HeapMemoryInfo[]&gt; |
+| Promise&lt;[HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md)[]&gt; |
 
 ## 示例
 

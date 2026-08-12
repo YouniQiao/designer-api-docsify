@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [userAuth.AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
+**替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
 
 <!--Device-userAuth-interface Authenticator--><!--Device-userAuth-interface Authenticator-End-->
 
@@ -24,7 +24,7 @@ execute(type: AuthType, level: SecureLevel, callback: AsyncCallback<number>): vo
 
 **废弃版本：** 8
 
-**替代接口：** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -67,7 +67,7 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 
 **废弃版本：** 8
 
-**替代接口：** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -86,7 +86,7 @@ execute(type: AuthType, level: SecureLevel): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

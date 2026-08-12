@@ -25,7 +25,7 @@ DEBUG级别的日志在正式发布版本中默认不被打印，只有在调试
 | domain | number | 是 |
 | tag | string | 是 |
 | format | string | 是 |
-| args | any[] | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any[] | 是 |
 
 ## 示例
 

@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/SensorId#PEDOMETER
+**替代接口：** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -30,7 +30,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -61,7 +61,7 @@ success: (data: StepCounterResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 

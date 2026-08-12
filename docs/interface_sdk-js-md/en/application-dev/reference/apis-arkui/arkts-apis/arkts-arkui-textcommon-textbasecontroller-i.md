@@ -50,7 +50,7 @@ Get LayoutManager.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Return the LayoutManager. |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | Return the LayoutManager. |
 
 ## setSelection
 

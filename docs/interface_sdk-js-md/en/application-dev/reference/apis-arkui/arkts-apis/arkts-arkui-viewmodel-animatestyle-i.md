@@ -198,7 +198,7 @@ transform: "none" | TransformObject
 
 Transformation type applied to an element.
 
-**Type:** "none" \| TransformObject
+**Type:** "none" \| [TransformObject](arkts-arkui-viewmodel-transformobject-i.md)
 
 **Since:** 4
 

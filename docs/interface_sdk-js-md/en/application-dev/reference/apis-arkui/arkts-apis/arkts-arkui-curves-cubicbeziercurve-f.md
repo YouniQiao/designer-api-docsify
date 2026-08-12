@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## cubicBezierCurve
@@ -37,5 +37,5 @@ Creates a cubic Bezier curve. The curve values must be between 0 and 1.
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation curve. |
+| ICurve | Interpolation curve. |
 

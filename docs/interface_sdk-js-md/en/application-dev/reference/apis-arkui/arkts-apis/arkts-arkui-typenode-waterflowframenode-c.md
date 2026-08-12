@@ -34,11 +34,11 @@ Initialize WaterFlow FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WaterFlowOptions](../arkts-components/arkts-arkui-waterflowoptions-i.md) | No | WaterFlow options. |
+| options | WaterFlowOptions | No | WaterFlow options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |  |
+| WaterFlowAttribute |  |
 

@@ -2,7 +2,7 @@
 
 Describes the size of an image.It inherits from [lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
-**Inheritance/Implementation:** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** Size extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Describes the size of an image.It inherits from [lang.ISendable](../../../arkts-
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## height

@@ -18,7 +18,7 @@ rangeBefore: TextRange
 
 Start and end indexes of the content to be replaced.
 
-**Type:** [TextRange](../arkts-apis/arkts-arkui-textrange-i.md)
+**Type:** TextRange
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ replacedImageSpans: Array<RichEditorImageSpanResult>
 
 Information about the image span after the change.
 
-**Type:** Array&lt;RichEditorImageSpanResult&gt;
+**Type:** Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ replacedSpans: Array<RichEditorTextSpanResult>
 
 Information about the text span after the change.
 
-**Type:** Array&lt;RichEditorTextSpanResult&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt;
 
 **Since:** 12
 
@@ -84,7 +84,7 @@ replacedSymbolSpans: Array<RichEditorTextSpanResult>
 
 Information about the symbol span after the change.
 
-**Type:** Array&lt;RichEditorTextSpanResult&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt;
 
 **Since:** 12
 

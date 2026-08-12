@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoStartupManager } from 'kits/@kit.AbilityKit';
+import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
 ## isAutoStartupSupported

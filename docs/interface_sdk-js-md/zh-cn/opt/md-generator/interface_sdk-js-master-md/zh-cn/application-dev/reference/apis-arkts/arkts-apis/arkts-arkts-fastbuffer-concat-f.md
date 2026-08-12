@@ -24,7 +24,7 @@ function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| list | FastBuffer[] \| Uint8Array[] | 是 |
+| list | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md)[] \| Uint8Array[] | 是 |
 | totalLength | number | 否 |
 
 **返回值：**
@@ -37,7 +37,7 @@ function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBu
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 Defines the Picker component attributes.
 
-**Inheritance/Implementation:** UIPickerComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** UIPickerComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Sets the height of each item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | Yes | Height of each item. |
+| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | Height of each item. |
 
 **Return value:**
 
@@ -274,7 +274,7 @@ Sets the UI picker component options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [UIPickerComponentOptions](../arkts-components/arkts-arkui-uipickercomponentoptions-i.md) | No | picker options. |
+| options | [UIPickerComponentOptions](arkts-arkui-uipickercomponent-uipickercomponentoptions-i.md) | No | picker options. |
 
 **Return value:**
 

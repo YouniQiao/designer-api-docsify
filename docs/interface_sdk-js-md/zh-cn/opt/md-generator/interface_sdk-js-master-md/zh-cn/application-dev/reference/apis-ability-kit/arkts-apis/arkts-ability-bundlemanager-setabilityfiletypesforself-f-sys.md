@@ -24,17 +24,17 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 | --- | --- | --- |
 | moduleName | string | 是 |
 | abilityName | string | 是 |
-| fileTypes | Array&lt;string&gt; | 是 |
+| fileTypes | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700351](../errorcode-bundle.md#17700351-无效的文件类型) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [17700351](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700351-无效的文件类型) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 ## 示例
 

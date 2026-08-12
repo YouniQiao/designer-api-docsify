@@ -84,7 +84,7 @@ bundleName?: string
 collectStrategy?: int
 ```
 
-页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md) 的按位或运算组合。
+页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md#CollectStrategy) 的按位或运算组合。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -130,7 +130,7 @@ entityInfo?: EntityInfo[]
 
 实体信息。
 
-**类型：** [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md)[]
+**类型：** EntityInfo[]
 
 **起始版本：** 23
 

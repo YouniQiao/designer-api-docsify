@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## off('BundleStatusChange')
@@ -24,7 +24,7 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -60,7 +60,7 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -80,4 +80,4 @@ Unregisters the callback that receives bundle status changes. This API uses an a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |

@@ -16,7 +16,7 @@ Adds a property to an object, or modifies attributes of an existing property.
 | --- | --- | --- |
 | target | object | Yes |
 | propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |
-| attributes | [PropertyDescriptor](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-propertydescriptor-i.md) & ThisType&lt;any&gt; | Yes |
+| attributes | PropertyDescriptor & [ThisType](arkts-lib-es5-thistype-i.md)&lt;any&gt; | Yes |
 
 **Return value:**
 

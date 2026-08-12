@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## off('printerStateChange')
@@ -31,15 +31,15 @@ Unregisters the listener for printer state change events. This API uses a callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'printerStateChange' | Yes | Listening type. The value is fixed at **'printerStateChange'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -77,15 +77,15 @@ Unregisters the listener for print job state change events. This API uses a call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'jobStateChange' | Yes | Listening type. The value is fixed at **'jobStateChange'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 
@@ -123,15 +123,15 @@ Unregisters the listener for printer extension information change events. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'extInfoChange' | Yes | Listening type. The value is fixed at **'extInfoChange'**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
 ## Examples
 

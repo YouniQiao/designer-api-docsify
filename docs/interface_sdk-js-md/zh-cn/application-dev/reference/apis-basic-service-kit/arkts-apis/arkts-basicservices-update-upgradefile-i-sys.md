@@ -40,7 +40,7 @@ fileType: ComponentType
 
 文件类型，用于指定升级包类型。设置为OTA表示OTA升级包，系统将根据OTA类型执行固件升级流程，包括完整性校验和系统分区写入等操作。
 
-**类型：** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
+**类型：** ComponentType
 
 **起始版本：** 9
 

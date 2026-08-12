@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## toSendableValues
@@ -38,7 +38,7 @@ Converts the array data that cannot be passed across threads into the data that 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Inner error. |
+| [14800000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
 
 ## Examples
 

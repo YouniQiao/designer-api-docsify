@@ -9,7 +9,7 @@ UIContext实例对象。
 > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的
 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定
 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext
-> 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getcallingscopeuicontext)获取UIContext实例。本文中
+> 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](#getCallingScopeUIContext)获取UIContext实例。本文中
 > UIContext对象以uiContext表示。
 
 **起始版本：** 10
@@ -83,16 +83,16 @@ animateTo(value: AnimateParam, event: () => void): void
 > - 执行[aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear)
 > 时，组件即将销毁，不能在aboutToDisappear里面做动画。
 > 
-> - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)添加动画效果。
+> - 在组件出现和消失时，可以通过[组件内转场](common)添加动画效果。
 > 
-> - 组件内转场不支持的属性，可以参考[显式动画](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中的
+> - 组件内转场不支持的属性，可以参考[显式动画](common)中的
 > [示例2](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#示例2动画执行结束后组件消失)，使用animateTo实现动画执行结束后组件消失的效
 > 果。
 > 
 > - 某些场景下，在[状态管理V2](../../../ui/state-management/arkts-state-management-overview.md#状态管理v2)中使用animateTo动画，会产生异常效果，
 > 具体可参考：[在状态管理V2中使用animateTo动画效果异常](../../../ui/state-management/arkts-new-local.md#在状态管理v2中使用animateto动画效果异常)。
 > 
-> - UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，从而触发动画播放完成回调[onFinish](../arkts-components/arkts-arkui-animateparam-i.md/arkts-arkui-animateparam-i.md)。
+> - UIAbility从前台切换至后台时会立即结束仍在步进中的有限循环动画，从而触发动画播放完成回调[onFinish](../arkts-components/arkts-arkui-animateparam-i.md#AnimateParam)。
 > 
 > - 在设置的开发者选项中关闭过渡动画，动画会当帧结束，onFinish动画播放完成回调会立即执行，请避免在回调中加入时序相关的功能逻辑。
 
@@ -111,7 +111,7 @@ animateTo(value: AnimateParam, event: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 ## animateToImmediately
 
@@ -215,21 +215,21 @@ closeBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>): Promise
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bindSheetContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 |
+| bindSheetContent | ComponentContent & lt;T & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) |
+| [120001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [120003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) |
 
 ## constructor
 
@@ -287,7 +287,7 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createAnimator
 
@@ -295,8 +295,8 @@ createAnimator(options: AnimatorOptions): AnimatorResult
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)相比，新增对  
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[createAnimator](#createAnimator)相比，新增对  
+[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
 
 **起始版本：** 18
 
@@ -324,7 +324,7 @@ createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createUIContextWithoutWindow
 
@@ -358,14 +358,14 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 
 | 类型 |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## destroyUIContextWithoutWindow
 
@@ -373,7 +373,7 @@ static createUIContextWithoutWindow(context: common.UIAbilityContext | common.Ex
 static destroyUIContextWithoutWindow(): void
 ```
 
-销毁[createUIContextWithoutWindow](arkts-arkui-arkui-uicontext-uicontext-c.md#createuicontextwithoutwindow)创建的UI实例。
+销毁[createUIContextWithoutWindow](#createUIContextWithoutWindow)创建的UI实例。
 
 **起始版本：** 17
 
@@ -408,7 +408,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | number \| string | 是 |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| event | [KeyEvent](arkts-arkui-common-keyevent-i.md) | 是 |
 
 **返回值：**
 
@@ -473,7 +473,7 @@ fp2px(value: number): number
 
 转换公式为：px值 = fp值 × 像素密度 × 字体缩放比例
 
-像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。
 
 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。
 
@@ -525,7 +525,7 @@ static getAllUIContexts(): UIContext[]
 
 | 类型 |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md)[] |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] |
 
 ## getAtomicServiceBar
 
@@ -549,7 +549,7 @@ Get AtomicServiceBar.
 
 | 类型 |
 | --- |
-| [Nullable](arkts-arkui-nullable-t.md)&lt;AtomicServiceBar&gt; |
+| [Nullable](arkts-arkui-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; |
 
 ## getAttachedFrameNodeById
 
@@ -579,7 +579,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 类型 |
 | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 ## getCallingScopeUIContext
 
@@ -591,7 +591,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 > **说明：**
 > 
-> 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](arkts-arkui-arkui-uicontext-uicontext-c.md#isavailable)接口判断其有效性。
+> 返回的UIContext对象可能指向一个已销毁的UI实例，通常在由已销毁的实例抛出异步任务时出现。建议通过[isAvailable](#isAvailable)接口判断其有效性。
 
 **起始版本：** 22
 
@@ -607,7 +607,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 ## getComponentSnapshot
 
@@ -775,7 +775,7 @@ get the filtered attributes of the component tree.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filters | Array&lt;string&gt; | 否 |
+| filters | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
@@ -787,7 +787,7 @@ get the filtered attributes of the component tree.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getFilteredInspectorTreeById
 
@@ -812,8 +812,8 @@ get the filtered attributes of the component tree with the specified id and dept
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | id | string | 是 |
-| depth | number | 是 |
-| filters | Array&lt;string&gt; | 否 |
+| [depth](../../apis-ability-kit/arkts-apis/arkts-ability-pagenodeinfo-i-sys.md) | number | 是 |
+| filters | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
@@ -825,7 +825,7 @@ get the filtered attributes of the component tree with the specified id and dept
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getFocusController
 
@@ -903,7 +903,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 类型 |
 | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 ## getFrameNodeByUniqueId
 
@@ -938,7 +938,7 @@ getFrameNodeByUniqueId(id: number): FrameNode | null
 
 | 类型 |
 | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 ## getHostContext
 
@@ -962,7 +962,7 @@ getHostContext(): Context | undefined
 
 | 类型 |
 | --- |
-| [Context](../arkts-components/arkts-arkui-context-t.md) |
+| [Context](arkts-arkui-context-t.md) |
 
 ## getId
 
@@ -1034,7 +1034,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 ## getLastForegroundUIContext
 
@@ -1058,7 +1058,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 |
 | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) |
 
 ## getMagnifier
 
@@ -1066,7 +1066,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 getMagnifier(): Magnifier
 ```
 
-获取[Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md)对象，可控制放大镜显示和隐藏。
+获取[Magnifier](arkts-arkui-arkui-uicontext-magnifier-c.md#Magnifier)对象，可控制放大镜显示和隐藏。
 
 **起始版本：** 22
 
@@ -1284,13 +1284,13 @@ getPageRootNode(): FrameNode | null
 
 | 类型 |
 | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) |
+| [FrameNode](arkts-arkui-framenode-c.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [120007](../errorcode-uicontext.md#120007-实例不存在) |
+| [120007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#120007-实例不存在) |
 
 ## getPixelRoundMode
 
@@ -1362,7 +1362,7 @@ Obtains a Router object.
 
 | 类型 |
 | --- |
-| [Router](arkts-arkui-system-router-router-c.md) |
+| [Router](arkts-arkui-arkui-uicontext-router-c.md) |
 
 ## getSharedLocalStorage
 
@@ -1418,7 +1418,7 @@ getSmartGestureController(): SmartGestureController
 getTextMenuController(): TextMenuController
 ```
 
-获取[TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md)对象，可通过该对象控制文本选择菜单。
+获取[TextMenuController](arkts-arkui-arkui-uicontext-textmenucontroller-c.md#TextMenuController)对象，可通过该对象控制文本选择菜单。
 
 **起始版本：** 16
 
@@ -1490,7 +1490,7 @@ getUIObserver(): UIObserver
 getWindowHeightBreakpoint(): HeightBreakpoint
 ```
 
-获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)。
+获取当前实例所在窗口的高度断点。具体枚举值根据窗口高宽比确定，详见 [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md#HeightBreakpoint)。
 
 **起始版本：** 13
 
@@ -1518,7 +1518,7 @@ getWindowId(): number | undefined
 
 > **说明：**
 > 
-> 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)内，则返回主应用程
+> 若UIContext位于主应用程序进程中的[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)内，则返回主应用程
 > 序的顶层窗口ID。
 
 **起始版本：** 23
@@ -1567,7 +1567,7 @@ getWindowName(): string | undefined
 getWindowWidthBreakpoint(): WidthBreakpoint
 ```
 
-获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)。
+获取当前实例所在窗口的宽度断点枚举值。具体枚举值根据窗口宽度vp值确定，详见 [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md#WidthBreakpoint)。
 
 **起始版本：** 13
 
@@ -1665,7 +1665,7 @@ Checks whether current font scale follows the system.
 keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>): void
 ```
 
-产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+产生关键帧动画。该接口的使用说明请参考[keyframeAnimateTo](common)。
 
 **起始版本：** 11
 
@@ -1682,7 +1682,7 @@ keyframeAnimateTo(param: KeyframeAnimateParam, keyframes: Array<KeyframeState>):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | param | [KeyframeAnimateParam](../arkts-components/arkts-arkui-keyframeanimateparam-i.md) | 是 |
-| keyframes | Array&lt;KeyframeState&gt; | 是 |
+| keyframes | Array&lt;[KeyframeState](../arkts-components/arkts-arkui-keyframestate-i.md)&gt; | 是 |
 
 ## lpx2px
 
@@ -1732,7 +1732,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 > 
 > 1. 使用该接口时，若未传入有效的targetId，则不支持设置SheetOptions.preferType为POPUP模式、不支持设置SheetOptions.mode为EMBEDDED模式。
 > 
-> 2. 由于[updateBindSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#updatebindsheet)和[closeBindSheet](arkts-arkui-arkui-uicontext-uicontext-c.md#closebindsheet)依赖
+> 2. 由于[updateBindSheet](#updateBindSheet)和[closeBindSheet](#closeBindSheet)依赖
 > bindSheetContent去更新或者关闭指定的半模态页面，开发者需自行维护传入的bindSheetContent。
 > 
 > 3. 不支持设置SheetOptions.UIContext。
@@ -1751,7 +1751,7 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bindSheetContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 |
+| bindSheetContent | ComponentContent & lt;T & gt; | 是 |
 | sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 |
 | targetId | number | 否 |
 
@@ -1759,18 +1759,18 @@ openBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOpti
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [120002](../errorcode-bindSheet.md#120002-内容节点对应半模态页面已存在) |
-| [120005](../errorcode-bindSheet.md#120005-指定的targetid对应的节点未挂载在组件树上) |
-| [120004](../errorcode-bindSheet.md#120004-指定的targetid不存在) |
-| [120006](../errorcode-bindSheet.md#120006-指定的targetid对应的节点并不是page节点或navdestination节点的子节点) |
+| [120001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [120002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120002-内容节点对应半模态页面已存在) |
+| [120005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120005-指定的targetid对应的节点未挂载在组件树上) |
+| [120004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120004-指定的targetid不存在) |
+| [120006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120006-指定的targetid对应的节点并不是page节点或navdestination节点的子节点) |
 
 ## postDelayedFrameCallback
 
@@ -1831,7 +1831,7 @@ px2fp(value: number): number
 
 转换公式为：fp值 = px值 ÷ 像素密度 ÷ 字体缩放比例
 
-像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。
 
 字体缩放比例：系统设置的字体缩放系数，对应 [Configuration.fontScale](../../../reference/apis-arkui/arkui-ts/ts-types.md#configuration)。
 
@@ -1907,7 +1907,7 @@ px2vp(value: number): number
 
 转换公式为：vp值 = px值 ÷ 像素密度
 
-像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。
 
 > **说明：**
 > 
@@ -1915,7 +1915,7 @@ px2vp(value: number): number
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后
 > 调用此接口，否则无法返回准确结果。
 > 
-> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
+> 2. UI实例未创建时，[像素单位](common)中的px2vp接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12
@@ -1995,7 +1995,7 @@ requireDynamicSyncScene(id: string): Array<DynamicSyncScene>
 
 | 类型 |
 | --- |
-| Array&lt;DynamicSyncScene&gt; |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; |
 
 ## resolveUIContext
 
@@ -2061,7 +2061,7 @@ runScopedTask(callback: () => void): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## setCustomKeyboardContinueFeature
 
@@ -2085,7 +2085,7 @@ setCustomKeyboardContinueFeature(feature: CustomKeyboardContinueFeature): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| feature | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 |
+| [feature](../../apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md) | [CustomKeyboardContinueFeature](arkts-arkui-arkui-uicontext-customkeyboardcontinuefeature-e.md) | 是 |
 
 ## setImageCacheCount
 
@@ -2253,9 +2253,9 @@ static setResourceManagerCacheMaxCountForHSP(count: number): void
 
 | 错误码ID |
 | --- |
-| [100101](../errorcode-uicontext.md#100101-小于0的非法值) |
-| [100103](../errorcode-uicontext.md#100103-调用线程错误) |
-| [100102](../errorcode-uicontext.md#100102-参数类型错误) |
+| [100101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#100101-小于0的非法值) |
+| [100103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#100103-调用线程错误) |
+| [100102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#100102-参数类型错误) |
 
 ## setTextSelectionClearPolicy
 
@@ -2327,7 +2327,7 @@ alertDialog display.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| [AlertDialogParamWithOptions](arkts-arkui-alertdialog-alertdialogparamwithoptions-i.md) | 是 |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | 是 |
 
 ## showDatePickerDialog
 
@@ -2502,7 +2502,7 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bindSheetContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 |
+| bindSheetContent | ComponentContent & lt;T & gt; | 是 |
 | sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 |
 | partialUpdate | boolean | 否 |
 
@@ -2510,15 +2510,15 @@ updateBindSheet<T extends Object>(bindSheetContent: ComponentContent<T>, sheetOp
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) |
+| [120001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [120003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) |
 
 ## vp2px
 
@@ -2530,7 +2530,7 @@ vp2px(value: number): number
 
 转换公式为：px值 = vp值 × 像素密度
 
-像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md).density。
+像素密度：当前窗口生效的像素密度值，即虚拟屏幕的密度[VirtualScreenConfig](arkts-arkui-display-virtualscreenconfig-i.md#VirtualScreenConfig).density。
 
 > **说明：**
 > 
@@ -2538,7 +2538,7 @@ vp2px(value: number): number
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)之后调用，确保UIContext初始化完成后
 > 调用此接口，否则无法返回准确结果。
 > 
-> 2. UI实例未创建时，[像素单位](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
+> 2. UI实例未创建时，[像素单位](common)中的vp2px接口使用默认屏幕的虚拟像素比进行转换。在该场景下，开发者使用UIContext接口替换时，可参考
 > [像素单位转换接口替换为UIContext接口](../../../ui/arkts-global-interface.md#像素单位转换接口替换为uicontext接口)。
 
 **起始版本：** 12

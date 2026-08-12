@@ -13,7 +13,7 @@ Describes SSAP connection state.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -44,7 +44,7 @@ state: ConnectionState
 
 Connection state.
 
-**Type:** [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md)
+**Type:** ConnectionState
 
 **Since:** 26.0.0
 

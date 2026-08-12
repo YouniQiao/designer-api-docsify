@@ -100,7 +100,7 @@ value: PixelMap
 
 设置图片数据源。
 
-**类型：** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**类型：** PixelMap
 
 **起始版本：** 12
 

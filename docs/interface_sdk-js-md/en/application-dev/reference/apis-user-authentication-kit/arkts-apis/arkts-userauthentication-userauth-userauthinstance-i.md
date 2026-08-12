@@ -3,7 +3,7 @@
 Provides APIs for user authentication. The user authentication widget is supported. This API provides complete user authentication capabilities, including subscribing to authentication results and intermediate states, and starting and canceling authentication. The unified authentication widget provides users with a standardized authentication UI and consistent authentication experience.
 
 Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInstance** instance by using  
-[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance).
+[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance).
 
 > **NOTE：**
 
@@ -21,7 +21,7 @@ Before using the APIs of **UserAuthInstance**, you must obtain a **UserAuthInsta
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -52,9 +52,9 @@ Cancels this authentication. This API is commonly used in the following scenario
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -109,7 +109,7 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 > **NOTE：**
 
-> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 10
@@ -133,8 +133,8 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -190,7 +190,7 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 > **NOTE：**
 
-> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 20
@@ -207,14 +207,14 @@ Unsubscribes from the authentication tip information. This API is commonly used 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from the event triggered by [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) after the [start()](arkts-userauthentication-userauth-userauthinstance-i.md#start) call and the initiation of authentication. |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This API unsubscribes from the event triggered by [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) after the [start()](#start) call and the initiation of authentication. |
 | callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | No | Callback used to return the intermediate authentication status. If this parameter is not passed, the value passed when the [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback)) API is called is used by default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -268,7 +268,7 @@ Unsubscribes from the event for intermediate authentication status.
 
 > **NOTE：**
 
-> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 **Since:** 23
@@ -289,7 +289,7 @@ Unsubscribes from the event for intermediate authentication status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## offResult
 
@@ -301,7 +301,7 @@ Unsubscribes from the user authentication result.
 
 > **NOTE：**
 
-> The [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md) instance used to invoke this API must be the one used
+> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used
 > to subscribe to the event.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event.&lt;/p&gt;
@@ -324,8 +324,8 @@ Unsubscribes from the user authentication result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## on('result')
 
@@ -339,7 +339,7 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 > **NOTE：**
 
 > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
-> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam) is
 > configured) and receives the authentication result, and if other windows need to be displayed, the application
 > needs to obtain the flag message released by the component pop-up window and subscribe to the component release
 > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
@@ -359,15 +359,15 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'result' | Yes | Event type used to return the authentication result. It is triggered when [start()](arkts-userauthentication-userauth-userauthinstance-i.md#start) is called, identity authentication is initiated, and the authentication interaction is completed. |
+| type | 'result' | Yes | Event type used to return the authentication result. It is triggered when [start()](#start) is called, identity authentication is initiated, and the authentication interaction is completed. |
 | callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | Yes | Callback used to return the user authentication result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## on('authTip')
 
@@ -380,7 +380,7 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 > **NOTE：**
 
 > On PCs/2-in-1 devices, if an application initiates authentication in an application modal dialog (that is, a
-> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md) is
+> valid **uiContext** is passed when the user API parameter [widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam) is
 > configured) and receives the authentication result, and if other windows need to be displayed, the application
 > needs to obtain the flag message released by the component pop-up window and subscribe to the component release
 > message (**authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED**) through the
@@ -400,14 +400,14 @@ Subscribes to authentication tip information. This API is used to obtain the wid
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when [start()](arkts-userauthentication-userauth-userauthinstance-i.md#start) is called and authentication is initiated. |
+| type | 'authTip' | Yes | Event type. The supported event is **'authTip'**. This event is triggered when [start()](#start) is called and authentication is initiated. |
 | callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | Yes | Callback used to return the intermediate authentication status. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 
@@ -480,7 +480,7 @@ Turn on authentication tip event listening.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## onResult
 
@@ -488,7 +488,7 @@ Turn on authentication tip event listening.
 onResult(callback: IAuthCallback): void
 ```
 
-Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication component disappears, the authentication failure attempts are not returned through this API. To perceive each authentication failure, use the [on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on) API for subscription.
+Subscribes to the user authentication result. This API is used to obtain the final identity authentication result after the user completes identity authentication interaction with the authentication component. Before the authentication component disappears, the authentication failure attempts are not returned through this API. To perceive each authentication failure, use the [on('authTip')](#on-1) API for subscription.
 
 **Since:** 23
 
@@ -508,8 +508,8 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## start
 
@@ -542,19 +542,19 @@ Starts authentication. This API is commonly used in the following service scenar
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
-| [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
-| [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |
-| [12500009](../errorcode-useriam.md#12500009-authentication-locked) | Authentication is locked out. |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) | Authentication service is busy.<br>**Applicable version:** 10 - 19 |
-| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) | Authentication timeout.<br>**Applicable version:** 10 - 19 |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) | Authentication canceled. |
-| [12500001](../errorcode-useriam.md#12500001-authentication-failed) | Authentication failed.<br>**Applicable version:** 10 - 19 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [12500013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
+| [12500010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
+| [12500011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |
+| [12500009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-authentication-locked) | Authentication is locked out. |
+| [12500006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+| [12500007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-authentication-service-is-busy) | Authentication service is busy.<br>**Applicable version:** 10 - 19 |
+| [12500004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-authentication-timed-out) | Authentication timeout.<br>**Applicable version:** 10 - 19 |
+| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-authentication-canceled) | Authentication canceled. |
+| [12500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-authentication-failed) | Authentication failed.<br>**Applicable version:** 10 - 19 |
 
 ## Examples
 

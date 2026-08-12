@@ -13,7 +13,7 @@ The **process** module provides process management APIs, for example, APIs for o
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## Summary

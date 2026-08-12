@@ -24,7 +24,7 @@ Called when a scrollable container is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md) | No |  |
+| scroller | [Scroller](arkts-arkui-scroller-c.md) | No |  |
 
 ## Summary
 

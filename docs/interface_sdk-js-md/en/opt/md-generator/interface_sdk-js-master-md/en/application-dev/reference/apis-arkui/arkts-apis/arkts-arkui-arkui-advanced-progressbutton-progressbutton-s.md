@@ -13,7 +13,7 @@ Declare Component ProgressButton
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButton } from 'kits/@kit.ArkUI';
+import { ProgressButton } from '@kit.ArkUI';
 ```
 
 ## clickCallback
@@ -130,7 +130,7 @@ progressButtonRadius?: LengthMetrics
 
 Set border rounded corner radius of progress.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 18
 

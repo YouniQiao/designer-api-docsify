@@ -1,8 +1,8 @@
 # PlainText
 
-Represents the plain text data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md).
+Represents the plain text data. It is a child class of [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text).
 
-**Inheritance/Implementation:** PlainText extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
+**Inheritance/Implementation:** PlainText extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ Represents the plain text data. It is a child class of [Text](arkts-arkdata-unif
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## abstract

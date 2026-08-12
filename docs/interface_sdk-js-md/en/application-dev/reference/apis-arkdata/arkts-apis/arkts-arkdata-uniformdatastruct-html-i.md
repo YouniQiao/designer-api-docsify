@@ -13,7 +13,7 @@ Represents data of the HTML type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -34,7 +34,7 @@ Object of the dictionary type used to describe the attributes of the HTML conten
 
 By default, it is an empty dictionary object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 
@@ -93,7 +93,7 @@ readonly uniformDataType: 'general.html'
 ```
 
 Uniform data type, which has a fixed value of **general.html**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'general.html'
 

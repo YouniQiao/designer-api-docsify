@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcState
@@ -12,7 +12,7 @@ import { nfcController } from 'kits/@kit.ConnectivityKit';
 function getNfcState(): NfcState
 ```
 
-Obtains the NFC status.&lt;p&gt;The NFC status can be any of the following: &lt;ul&gt;&lt;li&gt;{@link #STATE_OFF}: Indicates that NFC is disabled. &lt;li&gt;{@link #STATE_TURNING_ON}: Indicates that NFC is being enabled.&lt;li&gt;{@link #STATE_ON}: Indicates that NFC is enabled. &lt;li&gt;{@link #STATE_TURNING_OFF}: Indicates that NFC is being disabled.&lt;/ul&gt;
+Obtains the NFC status.&lt;p&gt;The NFC status can be any of the following: &lt;ul&gt;&lt;li&gt;[STATE_OFF](#STATE_OFF): Indicates that NFC is disabled. &lt;li&gt;[STATE_TURNING_ON](#STATE_TURNING_ON): Indicates that NFC is being enabled.&lt;li&gt;[STATE_ON](#STATE_ON): Indicates that NFC is enabled. &lt;li&gt;[STATE_TURNING_OFF](#STATE_TURNING_OFF): Indicates that NFC is being disabled.&lt;/ul&gt;
 
 **Since:** 12
 

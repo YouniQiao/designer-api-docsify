@@ -22,7 +22,7 @@ Defines the ImageAnimator component.
 
 | Type | Description |
 | --- | --- |
-| [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md) | The attribute of the ImageAnimator. |
+| [ImageAnimatorAttribute](arkts-arkui-imageanimator-imageanimatorattribute-i.md) | The attribute of the ImageAnimator. |
 
 
 ## ImageAnimator
@@ -49,11 +49,11 @@ Defines the ImageAnimator component. It requires call setImageAnimatorOptions at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAnimatorAttribute&gt; | Yes | the callback to set up component's attribute. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageAnimatorAttribute](arkts-arkui-imageanimator-imageanimatorattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAnimatorAttribute](../arkts-components/arkts-arkui-imageanimator-attribute.md) | The attribute of the ImageAnimator. |
+| [ImageAnimatorAttribute](arkts-arkui-imageanimator-imageanimatorattribute-i.md) | The attribute of the ImageAnimator. |
 

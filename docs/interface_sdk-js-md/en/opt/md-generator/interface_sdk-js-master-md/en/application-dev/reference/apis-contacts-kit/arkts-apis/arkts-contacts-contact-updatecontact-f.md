@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## updateContact
@@ -18,7 +18,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.updateContact](arkts-contacts-contact-updatecontact-f.md#updatecontact)(context:
+**Substitutes:** [updateContact](contact.updateContact(context:)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -30,7 +30,7 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## Examples
@@ -82,16 +82,16 @@ Updates a contact. This API uses an asynchronous callback to return the result.
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -138,7 +138,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.updateContact](arkts-contacts-contact-updatecontact-f.md#updatecontact)(context:
+**Substitutes:** [updateContact](contact.updateContact(context:)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -150,7 +150,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -204,8 +204,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -213,8 +213,8 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -262,7 +262,7 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.updateContact](arkts-contacts-contact-updatecontact-f.md#updatecontact)(context:
+**Substitutes:** [updateContact](contact.updateContact(context:)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -274,14 +274,14 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -328,22 +328,22 @@ Updates a contact. (The contact attribute list can be imported.) This API uses a
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
-| contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
+| [contact](arkts-contact.md) | [Contact](arkts-contacts-contact-contact-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

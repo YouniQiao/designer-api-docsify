@@ -11,7 +11,7 @@ Represents a download task, You can use this object to operate the corresponding
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## cancel
@@ -62,7 +62,7 @@ Deserialize web download from typed array.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## getCurrentSpeed
 
@@ -392,7 +392,7 @@ Pause the web download.
 
 | Error Code ID |
 | --- |
-| [17100019](../errorcode-webview.md#17100019-download-not-started-yet) |
+| [17100019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100019-download-not-started-yet) |
 
 ## resume
 
@@ -414,7 +414,7 @@ Resume the web download.Use WebDownloadManager.resumeDownload to resume deserial
 
 | Error Code ID |
 | --- |
-| [17100016](../errorcode-webview.md#17100016-download-task-not-paused) |
+| [17100016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100016-download-task-not-paused) |
 
 ## serialize
 
@@ -464,4 +464,4 @@ Start the web download.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

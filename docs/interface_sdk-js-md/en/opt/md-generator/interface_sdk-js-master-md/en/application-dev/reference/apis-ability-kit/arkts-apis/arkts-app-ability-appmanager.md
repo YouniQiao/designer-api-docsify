@@ -11,7 +11,7 @@ The appManager module implements application management. You can use the APIs of
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

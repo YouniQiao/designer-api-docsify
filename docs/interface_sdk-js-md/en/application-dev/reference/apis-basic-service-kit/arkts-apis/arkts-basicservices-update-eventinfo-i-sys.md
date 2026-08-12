@@ -18,7 +18,7 @@ Use scenarios: After an event listener is registered by calling **on**, the call
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## eventId

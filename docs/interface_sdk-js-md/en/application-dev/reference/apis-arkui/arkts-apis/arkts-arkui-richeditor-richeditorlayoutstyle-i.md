@@ -38,7 +38,7 @@ margin?: Dimension | Margin
 
 Outer Margin.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| Margin
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [Margin](arkts-arkui-margin-t.md)
 
 **Since:** 23
 

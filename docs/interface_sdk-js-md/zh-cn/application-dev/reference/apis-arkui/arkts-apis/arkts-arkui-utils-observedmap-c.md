@@ -3,7 +3,7 @@
 继承自Map&lt;K, V&gt;，为可观察API操作的Map对象。详见  
 [ObservedArray/ObservedMap/ObservedSet/ObservedDate：具有观察能力的Built-in类型](../../../ui/state-management-static/arkts-static-new-observed-built-in-types.md)。
 
-**继承/实现关系：** ObservedMap extends [Map<K, V>](../../apis-arkts/arkts-apis/arkts-arkts-collections-map-c.md/arkts-arkts-collections-map-c.md#set)
+**继承/实现关系：** ObservedMap extends [Map<K, V>](Map<K, V>)
 
 **起始版本：** 26.0.0
 

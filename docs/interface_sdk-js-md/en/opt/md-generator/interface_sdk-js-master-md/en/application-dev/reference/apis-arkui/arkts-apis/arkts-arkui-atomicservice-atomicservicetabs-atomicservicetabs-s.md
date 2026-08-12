@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## onContentWillChange
@@ -138,7 +138,7 @@ onChange?: Callback<number>
 
 onChange callback of tabs when tabs changed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**Type:** Callback&lt;number&gt;
 
 **Since:** 12
 
@@ -156,7 +156,7 @@ onTabBarClick?: Callback<number>
 
 onTabBarClick callback of tabs when tabbar is clicked.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**Type:** Callback&lt;number&gt;
 
 **Since:** 12
 

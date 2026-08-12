@@ -34,7 +34,7 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 
 | 错误码ID |
 | --- |
-| [17100018](../errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) |
+| [17100018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100018-没有设置一个委托类来接收下载状态) |
 
 ## setDownloadDelegate
 

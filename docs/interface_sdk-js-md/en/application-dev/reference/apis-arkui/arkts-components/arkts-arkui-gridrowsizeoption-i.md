@@ -18,7 +18,7 @@ lg?: Length
 
 Gutter size for large device width.Unit: vp. Default value: **0vp**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ md?: Length
 
 Gutter size for medium device width.Unit: vp. Default value: **0vp**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 9
 
@@ -62,7 +62,7 @@ sm?: Length
 
 Gutter size for small device width.Unit: vp. Default value: **0vp**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 9
 
@@ -84,7 +84,7 @@ xl?: Length
 
 Gutter size for extra large device width.Unit: vp. Default value: **0vp**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 9
 
@@ -106,7 +106,7 @@ xs?: Length
 
 Gutter size for minimum device width.Unit: vp. Default value: **0vp**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 9
 
@@ -128,7 +128,7 @@ xxl?: Length
 
 Gutter size for extra extra large device width.Unit: vp. Default value: **0vp**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 9
 

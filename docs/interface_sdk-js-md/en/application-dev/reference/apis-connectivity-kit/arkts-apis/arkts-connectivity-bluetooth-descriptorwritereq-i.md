@@ -8,7 +8,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest
+**Substitutes:** [DescriptorWriteRequest](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest)
 
 <!--Device-bluetooth-interface DescriptorWriteReq--><!--Device-bluetooth-interface DescriptorWriteReq-End-->
 
@@ -17,7 +17,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -36,7 +36,7 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.characteristicUuid
+**Substitutes:** [characteristicUuid](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.characteristicUuid)
 
 <!--Device-DescriptorWriteReq-characteristicUuid: string--><!--Device-DescriptorWriteReq-characteristicUuid: string-End-->
 
@@ -58,7 +58,7 @@ The UUID of a DescriptorWriteReq instance
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.descriptorUuid
+**Substitutes:** [descriptorUuid](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.descriptorUuid)
 
 <!--Device-DescriptorWriteReq-descriptorUuid: string--><!--Device-DescriptorWriteReq-descriptorUuid: string-End-->
 
@@ -80,7 +80,7 @@ Indicates the address of the client that initiates the write request
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.deviceId
+**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.deviceId)
 
 <!--Device-DescriptorWriteReq-deviceId: string--><!--Device-DescriptorWriteReq-deviceId: string-End-->
 
@@ -102,7 +102,7 @@ Whether this request should be pending for later operation
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.isPrep
+**Substitutes:** [isPrep](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.isPrep)
 
 <!--Device-DescriptorWriteReq-isPrep: boolean--><!--Device-DescriptorWriteReq-isPrep: boolean-End-->
 
@@ -124,7 +124,7 @@ Whether the remote client need a response
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.needRsp
+**Substitutes:** [needRsp](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.needRsp)
 
 <!--Device-DescriptorWriteReq-needRsp: boolean--><!--Device-DescriptorWriteReq-needRsp: boolean-End-->
 
@@ -146,7 +146,7 @@ Indicates the byte offset of the start position for writing characteristic value
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.offset
+**Substitutes:** [offset](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.offset)
 
 <!--Device-DescriptorWriteReq-offset: number--><!--Device-DescriptorWriteReq-offset: number-End-->
 
@@ -168,7 +168,7 @@ The UUID of the service to which the descriptor belongs
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.serviceUuid)
 
 <!--Device-DescriptorWriteReq-serviceUuid: string--><!--Device-DescriptorWriteReq-serviceUuid: string-End-->
 
@@ -190,7 +190,7 @@ The Id of the write request
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.transId
+**Substitutes:** [transId](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.transId)
 
 <!--Device-DescriptorWriteReq-transId: number--><!--Device-DescriptorWriteReq-transId: number-End-->
 
@@ -212,7 +212,7 @@ Indicates the value to be written
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.value
+**Substitutes:** [value](ohos.bluetoothManager/bluetoothManager.DescriptorWriteRequest.value)
 
 <!--Device-DescriptorWriteReq-value: ArrayBuffer--><!--Device-DescriptorWriteReq-value: ArrayBuffer-End-->
 

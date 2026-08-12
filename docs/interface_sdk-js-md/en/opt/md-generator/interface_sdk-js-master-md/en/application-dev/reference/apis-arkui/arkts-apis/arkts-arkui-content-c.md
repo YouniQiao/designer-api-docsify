@@ -1,6 +1,6 @@
 # Content
 
-Defines the base class for {@link ComponentContent} and {@link NodeContent}.
+Defines the base class for [ComponentContent](ComponentContent) and [NodeContent](arkts-arkui-nodecontent-c.md#NodeContent).
 
 **Since:** 12
 

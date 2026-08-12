@@ -2,7 +2,7 @@
 
 Can be implemented by any type that represents a numeric value
 
-**Inheritance/Implementation:** Numeric extends [Object](arkts-arkts-object-c.md)
+**Inheritance/Implementation:** Numeric extends [Object](Object)
 
 **Since:** 26.0.0
 

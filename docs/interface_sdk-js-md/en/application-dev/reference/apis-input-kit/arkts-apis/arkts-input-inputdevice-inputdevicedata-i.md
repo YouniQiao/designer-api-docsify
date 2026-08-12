@@ -13,7 +13,7 @@ Provides information about an input device.
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from 'kits/@kit.InputKit';
+import { inputDevice } from '@kit.InputKit';
 ```
 
 ## axisRanges
@@ -24,7 +24,7 @@ axisRanges: Array<AxisRange>
 
 Axis information of the input device.
 
-**Type:** Array&lt;AxisRange&gt;
+**Type:** Array&lt;[AxisRange](arkts-input-inputdevice-axisrange-i.md)&gt;
 
 **Since:** 8
 

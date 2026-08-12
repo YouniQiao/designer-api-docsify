@@ -13,7 +13,7 @@ An arbitrary-precision Decimal type
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from 'kits/@kit.ArkTS';
+import { Decimal } from '@kit.ArkTS';
 ```
 
 ## abs
@@ -62,7 +62,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -74,7 +74,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## acos
 
@@ -104,7 +104,7 @@ Return a new Decimal whose value is the arccosine (inverse cosine) in radians of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acos
 
@@ -128,7 +128,7 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -140,8 +140,8 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -171,7 +171,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## acosh
 
@@ -195,7 +195,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -207,8 +207,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## add
 
@@ -232,7 +232,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -244,7 +244,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## add
 
@@ -268,8 +268,8 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -281,7 +281,7 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## asin
 
@@ -311,7 +311,7 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asin
 
@@ -335,7 +335,7 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -347,8 +347,8 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -378,7 +378,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## asinh
 
@@ -402,7 +402,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -414,8 +414,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -445,7 +445,7 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan
 
@@ -469,7 +469,7 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -481,8 +481,8 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan2
 
@@ -506,8 +506,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The y-coordinate. |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The x-coordinate. |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The y-coordinate. |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The x-coordinate. |
 
 **Return value:**
 
@@ -519,8 +519,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -550,7 +550,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atanh
 
@@ -574,7 +574,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -586,8 +586,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## cbrt
 
@@ -635,7 +635,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -647,7 +647,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ceil
 
@@ -695,7 +695,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -707,7 +707,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## clamp
 
@@ -731,8 +731,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| min | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| max | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -744,8 +744,8 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## clamp
 
@@ -769,9 +769,9 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| min | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| max | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| min | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| max | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -783,8 +783,8 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## comparedTo
 
@@ -816,7 +816,7 @@ Return1 if the value of this Decimal is greater than the value of `n`,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -828,7 +828,7 @@ Return1 if the value of this Decimal is greater than the value of `n`,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## constructor
 
@@ -852,13 +852,13 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cos
 
@@ -906,7 +906,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -918,7 +918,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## cosh
 
@@ -966,7 +966,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -978,7 +978,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -1032,7 +1032,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1044,7 +1044,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## div
 
@@ -1068,8 +1068,8 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1081,7 +1081,7 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -1105,7 +1105,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1117,7 +1117,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## equals
 
@@ -1141,7 +1141,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1153,7 +1153,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## exp
 
@@ -1183,7 +1183,7 @@ Return a new Decimal whose value is the natural exponential of the value of this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## exp
 
@@ -1207,7 +1207,7 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1219,8 +1219,8 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## floor
 
@@ -1268,7 +1268,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1280,7 +1280,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1304,7 +1304,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1316,7 +1316,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1340,7 +1340,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1352,7 +1352,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## hypot
 
@@ -1376,7 +1376,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md)[] | Yes | {double \| string \| Decimal} Decimal |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} Decimal |
 
 **Return value:**
 
@@ -1388,7 +1388,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1556,7 +1556,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1568,7 +1568,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1592,7 +1592,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1604,7 +1604,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## ln
 
@@ -1634,7 +1634,7 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## ln
 
@@ -1658,7 +1658,7 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1670,8 +1670,8 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1695,7 +1695,7 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1707,8 +1707,8 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log
 
@@ -1732,8 +1732,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| base | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1745,8 +1745,8 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log10
 
@@ -1770,7 +1770,7 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1782,8 +1782,8 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log2
 
@@ -1807,7 +1807,7 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1819,8 +1819,8 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## max
 
@@ -1844,7 +1844,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md)[] | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1856,7 +1856,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## min
 
@@ -1880,7 +1880,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md)[] | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1892,7 +1892,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1916,7 +1916,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1928,7 +1928,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mod
 
@@ -1952,8 +1952,8 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -1965,7 +1965,7 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -1989,7 +1989,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2001,7 +2001,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## mul
 
@@ -2025,8 +2025,8 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2038,7 +2038,7 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## negate
 
@@ -2086,7 +2086,7 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2098,8 +2098,8 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## pow
 
@@ -2123,8 +2123,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| base | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The base. |
-| exponent | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} The exponent. |
+| base | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The base. |
+| exponent | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} The exponent. |
 
 **Return value:**
 
@@ -2136,8 +2136,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## precision
 
@@ -2209,7 +2209,7 @@ Return the number of significant digits of the value of this Decimal, whether to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
 
 ## random
 
@@ -2239,7 +2239,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## random
 
@@ -2281,8 +2281,8 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
 
 ## round
 
@@ -2306,7 +2306,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2318,7 +2318,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## set
 
@@ -2348,9 +2348,9 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
 
 ## sign
 
@@ -2384,7 +2384,7 @@ NaN otherwise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2397,7 +2397,7 @@ NaN otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sin
 
@@ -2445,7 +2445,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2457,7 +2457,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sinh
 
@@ -2505,7 +2505,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2517,7 +2517,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sqrt
 
@@ -2565,7 +2565,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2577,7 +2577,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2601,7 +2601,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2613,7 +2613,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sub
 
@@ -2637,8 +2637,8 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
-| y | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| x | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
+| y | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2650,7 +2650,7 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## sum
 
@@ -2676,7 +2676,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md)[] | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md)[] | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -2688,7 +2688,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tan
 
@@ -2736,7 +2736,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2748,7 +2748,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## tanh
 
@@ -2796,7 +2796,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} A value in radians. |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} A value in radians. |
 
 **Return value:**
 
@@ -2808,7 +2808,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toBinary
 
@@ -2874,7 +2874,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toBinary
 
@@ -2917,7 +2917,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toDecimalPlaces
 
@@ -2983,7 +2983,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toDecimalPlaces
 
@@ -3026,7 +3026,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toExponential
 
@@ -3092,7 +3092,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toExponential
 
@@ -3135,7 +3135,7 @@ Return a string representing the value of this Decimal in exponential notation r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFixed
 
@@ -3202,7 +3202,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
 ## toFixed
 
@@ -3245,7 +3245,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces \| rounding` is out of range. |
 
 ## toFraction
 
@@ -3293,7 +3293,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDenominator | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| maxDenominator | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -3305,7 +3305,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toHexadecimal
 
@@ -3371,7 +3371,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toHexadecimal
 
@@ -3414,7 +3414,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toNearest
 
@@ -3438,7 +3438,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -3450,7 +3450,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## toNearest
 
@@ -3474,7 +3474,7 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | Yes | Rounding mode. Integer, 0 to 8 inclusive. |
 
 **Return value:**
@@ -3487,8 +3487,8 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
 
 ## toNumber
 
@@ -3584,7 +3584,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toOctal
 
@@ -3627,7 +3627,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toPrecision
 
@@ -3693,7 +3693,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toPrecision
 
@@ -3736,7 +3736,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toSignificantDigits
 
@@ -3802,7 +3802,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
 ## toSignificantDigits
 
@@ -3845,7 +3845,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits \| rounding` is out of range. |
 
 ## toString
 
@@ -3917,7 +3917,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Yes | {double \| string \| Decimal} |
+| n | [Value](arkts-arkts-value-t.md) | Yes | {double \| string \| Decimal} |
 
 **Return value:**
 
@@ -3929,7 +3929,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## valueOf
 

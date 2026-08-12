@@ -1,6 +1,6 @@
 # PathEffect
 
-路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上，从而在绘制路径时改变路径的渲染样式。
+路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setPathEffect)将其应用到画笔上，从而在绘制路径时改变路径的渲染样式。
 
 > **说明：**
 > 
@@ -108,7 +108,7 @@ static createCornerPathEffect(radius: number): PathEffect
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createCornerPathEffect
 
@@ -142,7 +142,7 @@ static createCornerPathEffect(radius: double): PathEffect | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDashPathEffect
 
@@ -151,7 +151,7 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 ```
 
 创建将路径变为虚线的路径效果对象，通过指定ON/OFF长度数组生成规则间距的虚线。当需要自定义形状作为虚线段填充时，可使用  
-[createPathDashEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createpathdasheffect)。
+[createPathDashEffect](#createPathDashEffect)。
 
 **起始版本：** 12
 
@@ -178,7 +178,7 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDashPathEffect
 
@@ -187,7 +187,7 @@ static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect
 ```
 
 创建将路径变为虚线的路径效果对象，通过指定ON/OFF长度数组生成规则间距的虚线。当需要自定义形状作为虚线段填充时，可使用  
-[createPathDashEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createpathdasheffect)。
+[createPathDashEffect](#createPathDashEffect)。
 
 **起始版本：** 23
 
@@ -214,7 +214,7 @@ static createDashPathEffect(intervals: Array<double>, phase: double): PathEffect
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createDiscretePathEffect
 
@@ -283,7 +283,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 ```
 
 创建一个虚线路径效果对象，通过路径描述的形状生成。与  
-[createDashPathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createdashpatheffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
+[createDashPathEffect](#createDashPathEffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
 
 **起始版本：** 18
 
@@ -297,7 +297,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
+| path | Path | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
 | advance | number | 是 | 虚线段的步长，取值范围>0，否则会抛错误码。单位为物理像素px。 |
 | phase | number | 是 | 表示虚线段内图形在虚线步长范围内的偏移量，该参数为浮点数，效果为先对偏移量取绝对值，然后对步长取模。单位为物理像素px。 |
 | style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
@@ -312,7 +312,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createPathDashEffect
 
@@ -322,7 +322,7 @@ static createPathDashEffect(path: Path, advance: double, phase: double,
 ```
 
 创建一个虚线路径效果对象，通过路径描述的形状生成。与  
-[createDashPathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createdashpatheffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
+[createDashPathEffect](#createDashPathEffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
 
 **起始版本：** 23
 
@@ -336,7 +336,7 @@ static createPathDashEffect(path: Path, advance: double, phase: double,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
+| path | Path | 是 | 通过该路径生成一个图形，用来填充每个虚线段。 |
 | advance | double | 是 | 虚线段的步长，取值范围>0，否则会抛错误码。单位为物理像素px。 |
 | phase | double | 是 | 表示虚线段内图形在虚线步长范围内的偏移量，该参数为浮点数，效果为先对偏移量取绝对值，然后对步长取模。单位为物理像素px。 |
 | style | [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 是 | 指定虚线效果的样式，决定虚线段图形在路径上的变换方式。 |
@@ -351,7 +351,7 @@ static createPathDashEffect(path: Path, advance: double, phase: double,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createSumPathEffect
 
@@ -360,7 +360,7 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 ```
 
 创建一个叠加的路径效果。与  
-[createComposePathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createcomposepatheffect)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
+[createComposePathEffect](#createComposePathEffect-1)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
 
 **起始版本：** 18
 
@@ -390,7 +390,7 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 ```
 
 创建一个叠加的路径效果。与  
-[createComposePathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createcomposepatheffect)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
+[createComposePathEffect](#createComposePathEffect-1)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
 
 **起始版本：** 23
 

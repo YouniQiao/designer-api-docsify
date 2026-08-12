@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## startDiscoverDevices
@@ -20,7 +20,7 @@ Discover Wi-Fi P2P devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.startDiscoverP2pDevices
+**Substitutes:** [startDiscoverP2pDevices](ohos.wifiManager/wifiManager.startDiscoverP2pDevices)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 

@@ -28,17 +28,17 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 | 类型 |
 | --- |
-| Promise&lt;AuthLockState&gt; |
+| Promise&lt;[AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) |
-| [12500008](../errorcode-useriam.md#12500008-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) |
+| [12500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500008-参数校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 

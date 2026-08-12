@@ -8,7 +8,7 @@ Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或�
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:Watcher](arkts-corefile-fileio-watcher-depr-i.md)
+**替代接口：** [Watcher](arkts-corefile-file-fs-watcher-i.md#Watcher)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
@@ -28,7 +28,7 @@ stop(): Promise<void>
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:Watcher.stop](arkts-corefile-fileio-watcher-depr-i.md#stop)
+**替代接口：** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
 
 <!--Device-Watcher-stop(): Promise<void>--><!--Device-Watcher-stop(): Promise<void>-End-->
 
@@ -66,7 +66,7 @@ stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:Watcher.stop](arkts-corefile-fileio-watcher-depr-i.md#stop)
+**替代接口：** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
 
 <!--Device-Watcher-stop(callback: AsyncCallback<void>): void--><!--Device-Watcher-stop(callback: AsyncCallback<void>): void-End-->
 

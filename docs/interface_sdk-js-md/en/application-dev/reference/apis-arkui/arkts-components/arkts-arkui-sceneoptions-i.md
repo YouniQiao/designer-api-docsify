@@ -40,7 +40,7 @@ scene?: ResourceStr | Scene
 
 ResourceStr type for 3D rendering, Scene type for 3d scene controlling
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| Scene
+**Type:** ResourceStr \| [Scene](arkts-arkui-scene-t.md)
 
 **Since:** 12
 

@@ -13,7 +13,7 @@ Describes the auxiliary picture information.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## auxiliaryPictureType
@@ -60,7 +60,7 @@ pixelFormat: PixelMapFormat
 
 Pixel format.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 13
 
@@ -96,7 +96,7 @@ size: Size
 
 Image size.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 13
 

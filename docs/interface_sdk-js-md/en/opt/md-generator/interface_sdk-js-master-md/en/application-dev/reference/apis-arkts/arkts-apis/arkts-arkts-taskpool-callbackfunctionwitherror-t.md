@@ -18,4 +18,4 @@ Describes a callback function with an error message.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| e | Error | Yes |
+| [e](arkts-arkts-math-decimal-decimal-c.md) | Error | Yes |

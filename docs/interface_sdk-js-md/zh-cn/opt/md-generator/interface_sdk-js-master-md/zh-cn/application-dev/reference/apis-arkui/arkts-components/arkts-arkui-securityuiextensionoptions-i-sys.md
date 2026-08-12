@@ -66,7 +66,7 @@ placeholder?: ComponentContent
 
 设置占位符，在SecurityUIExtensionComponent与UIExtensionAbility建立连接前显示。未设置时不显示占位符。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 26.0.0
 

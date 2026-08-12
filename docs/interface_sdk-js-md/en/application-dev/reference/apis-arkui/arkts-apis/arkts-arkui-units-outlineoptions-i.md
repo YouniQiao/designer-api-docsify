@@ -18,7 +18,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the outline color.
 
-**Type:** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| ResourceColor \| LocalizedEdgeColors
+**Type:** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-units-localizededgecolors-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ radius?: OutlineRadiuses | Dimension
 
 Defines the outline radius.
 
-**Type:** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| Dimension
+**Type:** [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ style?: EdgeOutlineStyles | OutlineStyle
 
 Defines the outline style.
 
-**Type:** [EdgeOutlineStyles](arkts-arkui-units-edgeoutlinestyles-i.md) \| OutlineStyle
+**Type:** [EdgeOutlineStyles](arkts-arkui-units-edgeoutlinestyles-i.md) \| [OutlineStyle](../arkts-components/arkts-arkui-outlinestyle-e.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ width?: EdgeOutlineWidths | Dimension
 
 Defines the outline width.
 
-**Type:** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| Dimension
+**Type:** [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 23
 

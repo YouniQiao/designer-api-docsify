@@ -18,9 +18,9 @@ Radius of the image border corners.
 
 Default value: **0**.
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 12
 
@@ -42,9 +42,9 @@ Image margin.
 
 Default value: **0**.
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Margin
+**Type:** LengthMetrics \| [Margin](arkts-arkui-margin-t.md)
 
 **Since:** 12
 
@@ -66,9 +66,9 @@ Image padding.
 
 Default value: **0**.
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
+**Type:** LengthMetrics \| Padding
 
 **Since:** 12
 

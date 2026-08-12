@@ -6,7 +6,7 @@
 | ----------------------------- | -- | -------------------- |
 | [NONE](#none) | 0 | 无振动模式。 |
 | [SYNC](#sync) | 1 | 与铃音同步模式。 |
-| [NON_SYNC](#non_sync) | 2 |
+| [NON_SYNC](arkts-audio-systemsoundmanager-tonehapticsmode-e.md) | 2 |
 
 **起始版本：** 14
 

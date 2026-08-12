@@ -18,7 +18,7 @@ type: ChangeType
 
 通知变更的类型。
 
-**类型：** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
+**类型：** ChangeType
 
 **起始版本：** 12
 

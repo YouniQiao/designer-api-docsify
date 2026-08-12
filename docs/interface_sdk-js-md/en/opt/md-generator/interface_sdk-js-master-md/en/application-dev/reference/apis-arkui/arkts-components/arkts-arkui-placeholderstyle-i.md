@@ -18,7 +18,7 @@ Style of the placeholder text.
 
 The default value follows the theme.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 12
 

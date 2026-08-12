@@ -2,13 +2,13 @@
 
 ###### Child Components
  Supported
- Since API version 10, you are advised to use [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) for page routing.
+ Since API version 10, you are advised to use [NavPathStack](NavPathStack) for page routing.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -17,7 +17,7 @@ import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, Sid
 
 | Name | Description |
 | --- | --- |
-| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of  [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)) and non-home page content through routing. |
+| [AtomicServiceNavigation](arkts-arkui-atomicservice-atomicservicenavigation-atomicservicenavigation-s.md) | **AtomicServiceNavigation** is a component that serves as the root container of a page. By default, it includes a title bar, content area, and toolbar. The content area switches between the home page content (child components of  [NavDestination](./@internal/component/ets/nav_destination)) and non-home page content through routing. |
 
 ### Interfaces
 

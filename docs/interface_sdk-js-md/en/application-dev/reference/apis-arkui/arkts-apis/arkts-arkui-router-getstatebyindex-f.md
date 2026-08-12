@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getStateByIndex
@@ -18,7 +18,7 @@ Obtains the status information about a page by its index.
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 12
@@ -27,7 +27,7 @@ Obtains the status information about a page by its index.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getstatebyindex)
+**Substitutes:** [getStateByIndex](arkts-arkui-arkui-uicontext-router-c.md#getStateByIndex)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,7 +47,7 @@ Obtains the status information about a page by its index.
 
 | Type | Description |
 | --- | --- |
-| [RouterState](arkts-arkui-router-routerstate-i.md) | State information about the target page; **undefined** if the specified index does not exist. |
+| RouterState | State information about the target page; **undefined** if the specified index does not exist. |
 
 ## Examples
 

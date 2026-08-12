@@ -2,7 +2,7 @@
 
 用于设置滚动事件回调。
 
-**继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
+**继承/实现关系：** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md#UICommonEvent)
 
 **起始版本：** 19
 
@@ -34,7 +34,7 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnReachStart
 
@@ -60,7 +60,7 @@ setOnReachStart(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnScrollFrameBegin
 
@@ -112,7 +112,7 @@ setOnScrollStart(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |
 
 ## setOnScrollStop
 
@@ -138,4 +138,4 @@ setOnScrollStop(callback: Callback<void> | undefined): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | 是 |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | 是 |

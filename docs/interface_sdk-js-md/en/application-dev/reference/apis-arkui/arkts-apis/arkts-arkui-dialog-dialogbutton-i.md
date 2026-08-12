@@ -13,7 +13,7 @@ Button configuration for fixed-style dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## action
@@ -44,7 +44,7 @@ backgroundColor?: ResourceColor
 
 Background color of the button.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 26.1.0
 
@@ -114,7 +114,7 @@ fontColor?: ResourceColor
 
 Text color of the button.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 26.1.0
 
@@ -158,7 +158,7 @@ style?: DialogButtonStyle
 
 Style of the button.
 
-**Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
+**Type:** DialogButtonStyle
 
 **Default:** DialogButtonStyle.DEFAULT
 
@@ -182,7 +182,7 @@ value: ResourceStr
 
 Text content of the button.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.1.0
 

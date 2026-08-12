@@ -1,8 +1,8 @@
 # HallResponse
 
-Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the Hall effect sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** HallResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -15,7 +15,7 @@ Describes the Hall effect sensor data. It extends from [Response](arkts-sensorse
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## status

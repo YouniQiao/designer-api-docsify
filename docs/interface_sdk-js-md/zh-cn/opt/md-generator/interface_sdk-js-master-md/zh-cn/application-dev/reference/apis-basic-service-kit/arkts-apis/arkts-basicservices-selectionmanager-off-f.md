@@ -20,7 +20,7 @@ function off(type: 'selectionCompleted', callback?: Callback<SelectionInfo>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'selectionCompleted' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | 否 |
 
 ## 示例
 

@@ -11,7 +11,7 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)
+> [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile)
 > 替代。
 > 
 > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回-1错误码。
@@ -22,7 +22,7 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 
 **废弃版本：** 9
 
-**替代接口：** [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)(inFile:
+**替代接口：** [decompressFile](zlib.decompressFile(inFile:)
 
 <!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -32,9 +32,9 @@ function unzipFile(inFile: string, outFile: string, options: Options): Promise<v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inFile | string | 是 | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)， [Stage模型](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
+| inFile | string | 是 | 指定的待解压缩文件的文件路径，路径必须为沙箱路径，沙箱路径可以通过context获取，可参考[FA模型](./app/context)， [Stage模型](./app/context)。如果待解压的.zip文件中包含中文的文件名或目录名，需使用UTF8进行编码，避免解压时文件名或目录名出现中文乱码。 |
 | outFile | string | 是 | 指定的解压文件路径。 |
-| options | [Options](arkts-basicservices-zlib-options-i.md) | 是 | 解压的可选参数。 |
+| options | Options | 是 | 解压的可选参数。 |
 
 **返回值：**
 

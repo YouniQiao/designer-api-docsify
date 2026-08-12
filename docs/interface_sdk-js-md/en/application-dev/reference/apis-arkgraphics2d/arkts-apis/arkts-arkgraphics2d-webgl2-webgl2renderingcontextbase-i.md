@@ -469,7 +469,7 @@ Compressed texture image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes | Height |
 | depth | webgl.GLsizei | Yes | Depth |
 | border | webgl.GLint | Yes | Border |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
@@ -563,7 +563,7 @@ Compressed texture sub image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes | Height |
 | depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | Format |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
@@ -1221,7 +1221,7 @@ Gets buffer sub data
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Buffer target |
 | srcByteOffset | webgl.GLintptr | Yes | Source byte offset |
-| dstBuffer | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Destination buffer |
+| dstBuffer | ArrayBufferView | Yes | Destination buffer |
 | dstOffset | webgl.GLuint | No | Destination offset |
 | length | webgl.GLuint | No | Length |
 
@@ -2023,7 +2023,7 @@ Sets texture image 3D from ArrayBufferView
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | Format |
 | type | webgl.GLenum | Yes | Type |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Source data |
+| srcData | ArrayBufferView \| null | Yes | Source data |
 
 ## texImage3D
 
@@ -2068,7 +2068,7 @@ Sets texture image 3D from ArrayBufferView with offset
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | Format |
 | type | webgl.GLenum | Yes | Type |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 
 ## texStorage2D
@@ -2278,7 +2278,7 @@ Sets texture sub image 3D from ArrayBufferView
 | depth | webgl.GLsizei | Yes | Depth |
 | format | webgl.GLenum | Yes | Format |
 | type | webgl.GLenum | Yes | Type |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Source data |
+| srcData | ArrayBufferView \| null | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 
 ## transformFeedbackVaryings

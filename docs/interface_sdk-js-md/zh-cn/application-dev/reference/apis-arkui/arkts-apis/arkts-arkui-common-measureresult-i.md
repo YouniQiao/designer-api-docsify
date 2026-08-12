@@ -2,7 +2,7 @@
 
 Provides the measurement result of the component.
 
-**继承/实现关系：** MeasureResult extends [SizeResult](../arkts-components/arkts-arkui-sizeresult-i.md/arkts-arkui-sizeresult-i.md)
+**继承/实现关系：** MeasureResult extends [SizeResult](arkts-arkui-common-sizeresult-i.md#SizeResult)
 
 **起始版本：** 23
 

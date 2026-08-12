@@ -36,7 +36,7 @@ transientTasks: DelaySuspendInfo[]
 
 当前已申请的所有短时任务信息。
 
-**类型：** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)[]
+**类型：** DelaySuspendInfo[]
 
 **起始版本：** 20
 

@@ -8,7 +8,7 @@ Enumerates USB port mode types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
+**Substitutes:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#PortModeType)
 
 <!--Device-usb-export enum PortModeType--><!--Device-usb-export enum PortModeType-End-->
 
@@ -30,7 +30,7 @@ None
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PortModeType.NONE](arkts-basicservices-usbmanager-portmodetype-e-sys.md#none)
+**Substitutes:** [NONE](arkts-basicservices-usbmanager-portmodetype-e-sys.md#NONE)
 
 <!--Device-PortModeType-NONE = 0--><!--Device-PortModeType-NONE = 0-End-->
 
@@ -52,7 +52,7 @@ Upstream facing port, which functions as the sink of power supply.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PortModeType.UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#ufp)
+**Substitutes:** [UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#UFP)
 
 <!--Device-PortModeType-UFP = 1--><!--Device-PortModeType-UFP = 1-End-->
 
@@ -74,7 +74,7 @@ Downstream facing port, which functions as the source of power supply.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PortModeType.DFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#dfp)
+**Substitutes:** [DFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#DFP)
 
 <!--Device-PortModeType-DFP = 2--><!--Device-PortModeType-DFP = 2-End-->
 
@@ -96,7 +96,7 @@ Dynamic reconfiguration port (DRP), which can function as the DFP (host) or UFP 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PortModeType.DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#drp)
+**Substitutes:** [DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#DRP)
 
 <!--Device-PortModeType-DRP = 3--><!--Device-PortModeType-DRP = 3-End-->
 
@@ -118,7 +118,7 @@ Not supported currently.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PortModeType.NUM_MODES](arkts-basicservices-usbmanager-portmodetype-e-sys.md#num_modes)
+**Substitutes:** [NUM_MODES](arkts-basicservices-usbmanager-portmodetype-e-sys.md#NUM_MODES)
 
 <!--Device-PortModeType-NUM_MODES = 4--><!--Device-PortModeType-NUM_MODES = 4-End-->
 

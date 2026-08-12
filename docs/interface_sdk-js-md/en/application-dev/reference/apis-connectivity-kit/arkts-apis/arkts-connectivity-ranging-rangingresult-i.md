@@ -13,7 +13,7 @@ Describes the contents of the ranging results.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from 'kits/@kit.ConnectivityKit';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## angle

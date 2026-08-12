@@ -13,7 +13,7 @@ This module provides system applications with the capabilities to install and un
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary

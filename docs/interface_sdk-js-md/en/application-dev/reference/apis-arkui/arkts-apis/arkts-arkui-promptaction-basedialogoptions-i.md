@@ -13,7 +13,7 @@ Dialog base options
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -24,7 +24,7 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** DialogAlignment
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Defines the customDialog's background blur style with options
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the customDialog's background effect with options
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ dialogTransition?: TransitionEffect
 
 Dialog transition parameters of opening/closing custom dialog.
 
-**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**Type:** TransitionEffect
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ displayModeInSubWindow?: DialogDisplayMode
 
 Defines the dialog display mode when show in subwindow.
 
-**Type:** [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md)
+**Type:** DialogDisplayMode
 
 **Default:** DialogDisplayMode.SCREEN_BASED
 
@@ -192,7 +192,7 @@ hoverModeArea?: HoverModeAreaType
 
 Defines the dialog's display area in hover mode.
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -258,7 +258,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 Defines the distance between the customDialog and system keyboard.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 23
 
@@ -278,7 +278,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 Defines the customDialog's keyboard avoid mode
 
-**Type:** [KeyboardAvoidMode](../arkts-components/arkts-arkui-keyboardavoidmode-e.md)
+**Type:** KeyboardAvoidMode
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
@@ -364,7 +364,7 @@ maskColor?: ResourceColor
 
 Defines custom dialog maskColor
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -384,7 +384,7 @@ maskRect?: Rectangle
 
 Mask Region of dialog. The size can't exceed the main window.
 
-**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**Type:** Rectangle
 
 **Since:** 23
 
@@ -404,7 +404,7 @@ maskTransition?: TransitionEffect
 
 Mask transition parameters of opening/closing custom dialog.
 
-**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**Type:** TransitionEffect
 
 **Since:** 23
 
@@ -424,7 +424,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -444,7 +444,7 @@ onDidAppear?: VoidCallback
 
 Callback function when the dialog appears.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -464,7 +464,7 @@ onDidDisappear?: VoidCallback
 
 Callback function when the dialog disappears.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -484,7 +484,7 @@ onWillAppear?: VoidCallback
 
 Callback function before the dialog openAnimation starts.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -504,7 +504,7 @@ onWillDisappear?: VoidCallback
 
 Callback function before the dialog closeAnimation starts.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -524,7 +524,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback function when the CustomDialog interactive dismiss.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **Since:** 23
 
@@ -588,7 +588,7 @@ transition?: TransitionEffect
 
 Transition parameters of opening/closing custom dialog.
 
-**Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**Type:** TransitionEffect
 
 **Since:** 23
 

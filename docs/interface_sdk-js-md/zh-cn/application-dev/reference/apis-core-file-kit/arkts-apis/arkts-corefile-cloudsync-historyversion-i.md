@@ -1,7 +1,7 @@
 # HistoryVersion
 
-端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md)的  
-[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#gethistoryversionlist)方法时，历史版本列表中的属性。
+端云文件历史版本信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion)的  
+[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#getHistoryVersionList)方法时，历史版本列表中的属性。
 
 **起始版本：** 20
 

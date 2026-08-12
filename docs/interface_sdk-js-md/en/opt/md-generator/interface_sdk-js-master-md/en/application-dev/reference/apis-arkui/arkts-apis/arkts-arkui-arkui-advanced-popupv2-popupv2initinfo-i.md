@@ -11,7 +11,7 @@ Defines the popup init info.
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -40,7 +40,7 @@ direction?: Direction
 
 Indicates the attribute of the current popup direction.
 
-**Type:** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**Type:** Direction
 
 **Since:** 26.0.0
 
@@ -148,7 +148,7 @@ onClose?: Callback<void>
 
 The close button callback of Popup.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 

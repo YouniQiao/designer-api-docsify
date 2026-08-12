@@ -4,7 +4,7 @@
 export declare type OnUIPickerComponentCallback = (selectedIndex: int) => void
 ```
 
-定义[onChange](onChange)和[onScrollStop](onScrollStop)事件的回调类型。
+定义[onChange](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md#onChange)和[onScrollStop](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md#onScrollStop)事件的回调类型。
 
 **起始版本：** 23
 

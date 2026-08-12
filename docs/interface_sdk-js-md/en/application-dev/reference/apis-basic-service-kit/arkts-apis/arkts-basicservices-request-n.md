@@ -16,7 +16,7 @@ The **request** module provides applications with basic upload, download, and ba
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -45,13 +45,13 @@ import { request } from 'kits/@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Defines the download task configuration. |
-| [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md) | Defines the download task information, which is the callback parameter of the  [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo) API. |
-| [DownloadTask](arkts-basicservices-request-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) or from a callback through  [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile). |
-| [File](arkts-basicservices-request-file-i.md) | Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
-| [RequestData](arkts-basicservices-request-requestdata-i.md) | Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md). |
+| [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md) | Defines the download task information, which is the callback parameter of the  [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo) API. |
+| [DownloadTask](arkts-basicservices-request-downloadtask-i.md) | Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile-1) or from a callback through  [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile). |
+| [File](arkts-basicservices-request-file-i.md) | Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig). |
+| [RequestData](arkts-basicservices-request-requestdata-i.md) | Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig). |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | Describes the configuration of an upload task. |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))and  [off('complete' \| 'fail')](request.UploadTask.off(type: 'complete' \| 'fail', callback?: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))APIs. |
-| [UploadTask](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) or from a callback through  [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile). |
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))and  [off('complete' \| 'fail')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)APIs. |
+| [UploadTask](arkts-basicservices-request-uploadtask-i.md) | Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile-1) or from a callback through  [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile). |
 
 ### Types
 

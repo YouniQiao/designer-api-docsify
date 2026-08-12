@@ -12,7 +12,7 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 
 **废弃版本：** 12
 
-**替代接口：** [systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemDateTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -29,7 +29,7 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -63,7 +63,7 @@ function getRealTime(callback: AsyncCallback<number>): void
 
 **废弃版本：** 12
 
-**替代接口：** [systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemDateTime-function getRealTime(callback: AsyncCallback<number>): void--><!--Device-systemDateTime-function getRealTime(callback: AsyncCallback<number>): void-End-->
 
@@ -79,7 +79,7 @@ function getRealTime(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -113,7 +113,7 @@ function getRealTime(isNano?: boolean): Promise<number>
 
 **废弃版本：** 12
 
-**替代接口：** [systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemDateTime-function getRealTime(isNano?: boolean): Promise<number>--><!--Device-systemDateTime-function getRealTime(isNano?: boolean): Promise<number>-End-->
 
@@ -129,13 +129,13 @@ function getRealTime(isNano?: boolean): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

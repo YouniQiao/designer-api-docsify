@@ -26,5 +26,5 @@ type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SettingItem&gt; | Promise对象，返回变更过的设置项。 |
+| Promise&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)&gt; | Promise对象，返回变更过的设置项。 |
 

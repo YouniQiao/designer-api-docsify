@@ -12,7 +12,7 @@ Checks whether this device supports distributed notifications. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isDistributedEnabled
+**Substitutes:** [isDistributedEnabled](ohos.notificationManager/notificationManager#isDistributedEnabled)
 
 <!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void--><!--Device-notification-function isDistributedEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -37,7 +37,7 @@ Checks whether this device supports distributed notifications. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isDistributedEnabled
+**Substitutes:** [isDistributedEnabled](ohos.notificationManager/notificationManager#isDistributedEnabled)
 
 <!--Device-notification-function isDistributedEnabled(): Promise<boolean>--><!--Device-notification-function isDistributedEnabled(): Promise<boolean>-End-->
 
@@ -47,4 +47,4 @@ Checks whether this device supports distributed notifications. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |

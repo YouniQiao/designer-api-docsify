@@ -38,7 +38,7 @@ imageAIOptions?: ImageAIOptions
 
 Image ai options.
 
-**Type:** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
+**Type:** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
 
 **Since:** 23
 

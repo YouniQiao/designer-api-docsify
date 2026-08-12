@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## createCustomizedToneAttrs
@@ -32,7 +32,7 @@ Create customized tone attributes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
 ## Examples
 

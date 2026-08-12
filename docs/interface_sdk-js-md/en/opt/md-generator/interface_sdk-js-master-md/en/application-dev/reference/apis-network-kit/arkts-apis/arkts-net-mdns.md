@@ -11,7 +11,7 @@ Provides interfaces to discover DNS based services on a local network over Multi
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## Summary

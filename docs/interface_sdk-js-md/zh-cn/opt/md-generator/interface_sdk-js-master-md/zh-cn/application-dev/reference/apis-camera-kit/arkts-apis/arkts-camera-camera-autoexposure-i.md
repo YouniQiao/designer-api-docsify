@@ -1,10 +1,10 @@
 # AutoExposure
 
-AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)。
+AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery)。
 
 自动曝光类，对设备自动曝光（AE）操作。
 
-**继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md)
+**继承/实现关系：** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery)
 
 **起始版本：** 11
 
@@ -38,9 +38,9 @@ getExposureMeteringMode(): ExposureMeteringMode
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getExposureMode
 
@@ -52,7 +52,7 @@ getExposureMode(): ExposureMode
 
 > **说明：**
 > 
-> 若未通过[setExposureMode](arkts-camera-camera-autoexposure-i.md#setexposuremode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
+> 若未通过[setExposureMode](#setExposureMode)接口进行设置，直接调用该接口查询当前曝光模式，会返回无效值。
 
 **起始版本：** 11
 
@@ -72,7 +72,7 @@ getExposureMode(): ExposureMode
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getExposureValue
 
@@ -100,7 +100,7 @@ getExposureValue(): number
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## getMeteringPoint
 
@@ -128,7 +128,7 @@ getMeteringPoint(): Point
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## offExposureStateChange
 
@@ -152,7 +152,7 @@ offExposureStateChange(callback?: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExposureState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 否 |
 
 ## onExposureStateChange
 
@@ -176,7 +176,7 @@ onExposureStateChange(callback: Callback<ExposureState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ExposureState&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | 是 |
 
 ## setExposureBias
 
@@ -186,7 +186,7 @@ setExposureBias(exposureBias: number): void
 
 设置曝光补偿，曝光补偿值（EV）。
 
-进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getexposurebiasrange)查询支持的范围。
+进行设置之前，建议先通过方法[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange)查询支持的范围。
 
 **起始版本：** 11
 
@@ -206,8 +206,8 @@ setExposureBias(exposureBias: number): void
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## setExposureMeteringMode
 
@@ -235,10 +235,10 @@ setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setExposureMode
 
@@ -247,7 +247,7 @@ setExposureMode(aeMode: ExposureMode): void
 ```
 
 设置曝光模式。进行设置之前，需要先检查设备是否支持指定的曝光模式，可使用方法  
-[isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isexposuremodesupported)。
+[isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported)。
 
 **起始版本：** 11
 
@@ -267,8 +267,8 @@ setExposureMode(aeMode: ExposureMode): void
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## setMeteringPoint
 
@@ -298,4 +298,4 @@ setMeteringPoint(point: Point): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |

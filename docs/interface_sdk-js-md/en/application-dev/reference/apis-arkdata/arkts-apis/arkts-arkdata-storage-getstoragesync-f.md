@@ -14,7 +14,7 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.preferences.preferences.getPreferences
+**Substitutes:** [getPreferences](ohos.preferences.preferences.getPreferences)
 
 <!--Device-storage-function getStorageSync(path: string): Storage--><!--Device-storage-function getStorageSync(path: string): Storage-End-->
 
@@ -28,5 +28,5 @@ Reads the specified file and loads its data to the **Storage** instance for data
 
 | Type | Description |
 | --- | --- |
-| [Storage](arkts-arkdata-system-storage-storage-c.md) | Storage** instance used for data storage operations. |
+| Storage | Storage** instance used for data storage operations. |
 

@@ -25,7 +25,7 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示统一资源标识符URI，取值与 [module.json5配置文件中skills下的uris字段](../../../quick-start/module-configuration-file.md#skills标签)相对应。 |
-| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e.md)，指示需要获取的 Ability组件信息的内容。 |
+| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示[Ability组件信息标志](arkts-ability-bundlemanager-abilityflag-e.md#AbilityFlag)，指示需要获取的 Ability组件信息的内容。 |
 
 **返回值：**
 
@@ -37,8 +37,8 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The ability is not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) | The ability is not found. |
 
 ## 示例
 

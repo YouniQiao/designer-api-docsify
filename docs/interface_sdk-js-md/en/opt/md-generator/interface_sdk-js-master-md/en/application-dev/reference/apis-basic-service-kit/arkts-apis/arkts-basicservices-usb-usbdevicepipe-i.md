@@ -6,7 +6,7 @@ Represents a USB device pipe, which is used to determine a USB device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
+**Substitutes:** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe)
 
 <!--Device-usb-interface USBDevicePipe--><!--Device-usb-interface USBDevicePipe-End-->
 
@@ -15,7 +15,7 @@ Represents a USB device pipe, which is used to determine a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## busNum
@@ -32,7 +32,7 @@ Bus address.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevicePipe.busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busnum)
+**Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevicepipe-i.md#busNum)
 
 <!--Device-USBDevicePipe-busNum: number--><!--Device-USBDevicePipe-busNum: number-End-->
 
@@ -52,7 +52,7 @@ Device address.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevicePipe.devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devaddress)
+**Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevicepipe-i.md#devAddress)
 
 <!--Device-USBDevicePipe-devAddress: number--><!--Device-USBDevicePipe-devAddress: number-End-->
 

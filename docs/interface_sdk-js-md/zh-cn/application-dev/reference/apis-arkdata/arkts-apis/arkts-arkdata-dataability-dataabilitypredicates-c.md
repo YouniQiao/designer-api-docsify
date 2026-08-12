@@ -46,7 +46,7 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#endwrap)一起使用。
+在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](#endWrap)一起使用。
 
 **起始版本：** 7
 
@@ -131,8 +131,8 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
@@ -215,7 +215,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 endWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#beginwrap)一起使用。
+在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](#beginWrap)一起使用。
 
 **起始版本：** 7
 
@@ -302,7 +302,7 @@ equalTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -378,7 +378,7 @@ greaterThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -413,7 +413,7 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -658,7 +658,7 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -693,7 +693,7 @@ lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -799,8 +799,8 @@ notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicate
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最小值。 |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示与谓词匹配的最大值。 |
+| low | ValueType | 是 | 指示与谓词匹配的最小值。 |
+| high | ValueType | 是 | 指示与谓词匹配的最大值。 |
 
 **返回值：**
 
@@ -837,7 +837,7 @@ notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | 是 | 指示要与谓词匹配的值。 |
+| value | ValueType | 是 | 指示要与谓词匹配的值。 |
 
 **返回值：**
 
@@ -892,8 +892,8 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-设置谓词查询结果的起始位置。需要同步调用[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
-[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口需传入参数-1。
+设置谓词查询结果的起始位置。需要同步调用[limitAs](#limitAs)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
+[limitAs](#limitAs)接口需传入参数-1。
 
 **起始版本：** 7
 

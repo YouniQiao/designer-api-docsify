@@ -1,7 +1,7 @@
 # Tool
 
 A utility class that provides only static methods to convert data structs defined in other modules and  
-[common2D](arkts-graphics-common2d.md).
+[common2D](arkts-graphics-common2d.md#common2D).
 
 > **NOTE：**
 > 
@@ -23,7 +23,7 @@ A utility class that provides only static methods to convert data structs define
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## makeColorFromResourceColor
@@ -46,7 +46,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md) supports only the construction method **\\$r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
+| resourceColor | ResourceColor | Yes | Color value of the **ResourceColor** type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md#Resource) supports only the construction method **\\$r('belonging.type.name')**. Ensure that the resource has been defined in the **main/resources/base/element** directory. (The types **color**, **string**, and **integer** are available for the belonging **app**, whereas only the type **color** is available for the belonging **sys**.) |
 
 **Return value:**
 
@@ -58,7 +58,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeColorFromResourceColor
 
@@ -80,7 +80,7 @@ Converts a color value of the ResourceColor type to a common2D.Color object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color value of the ResourceColor type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of Resource supports only the construction method \\$r('belonging.type.name'). Ensure that the resource has been defined in the main/resources/base/element directory. (The types color, string, and integer are available for the belonging app, whereas only the type color is available for the belonging sys.) |
+| resourceColor | ResourceColor | Yes | Color value of the ResourceColor type. (All four types of inputs are supported. The following provides 13 example inputs.) The fourth type of Resource supports only the construction method \\$r('belonging.type.name'). Ensure that the resource has been defined in the main/resources/base/element directory. (The types color, string, and integer are available for the belonging app, whereas only the type color is available for the belonging sys.) |
 
 **Return value:**
 
@@ -92,5 +92,5 @@ Converts a color value of the ResourceColor type to a common2D.Color object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

@@ -59,7 +59,7 @@ Defines Video Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;VideoAttribute&gt; | 是 | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
 
 **返回值：**
 

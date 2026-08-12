@@ -11,7 +11,7 @@ Represents the information about the web native message connection.
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## bundleName
@@ -38,7 +38,7 @@ Bundle name of the web native message extension application.
 connectionId: number
 ```
 
-Connection ID.The value range is all integers.
+Unique identifier of the Web native message extension connection, returned by connectNative() and used to identify and manage the connection.
 
 **Type:** number
 
@@ -74,7 +74,7 @@ Source URL of the browser extension.
 extensionPid: number
 ```
 
-Process ID of the web native message extension.The value range is all integers.
+Process ID of the web native message extension.
 
 **Type:** number
 

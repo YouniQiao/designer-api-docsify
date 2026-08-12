@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| SwiperAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

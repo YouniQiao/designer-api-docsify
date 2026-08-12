@@ -12,7 +12,7 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.statvfs:statfs.getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes)
+**Substitutes:** [getFreeBytes](@ohos.file.statvfs:statfs.getFreeBytes)
 
 <!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -54,7 +54,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.statvfs:statfs.getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes)
+**Substitutes:** [getFreeBytes](@ohos.file.statvfs:statfs.getFreeBytes)
 
 <!--Device-Statfs-function getFreeBytes(path: string): Promise<number>--><!--Device-Statfs-function getFreeBytes(path: string): Promise<number>-End-->
 
@@ -70,7 +70,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

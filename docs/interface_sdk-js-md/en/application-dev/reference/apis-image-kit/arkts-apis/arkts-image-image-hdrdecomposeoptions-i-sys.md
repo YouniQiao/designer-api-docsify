@@ -15,7 +15,7 @@ Describes the options for decomposing an HDR Pixelmap to a Picture containing an
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## desiredPixelFormat
@@ -26,7 +26,7 @@ desiredPixelFormat?: PixelMapFormat
 
 Indicates the pixel format of the decomposed SDR Pixelmap and the gainmap. The formats of RGBA_8888\NV12\NV21 are supported.Default value: RGBA_8888.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e-sys.md)
+**Type:** PixelMapFormat
 
 **Since:** 26.0.0
 

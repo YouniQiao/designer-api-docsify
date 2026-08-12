@@ -198,7 +198,7 @@ OnTouchEvent Method. Executed when associated NodeContainer is touched.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | Yes | The TouchEvent when associated NodeContainer is touched. |
+| event | TouchEvent | Yes | The TouchEvent when associated NodeContainer is touched. |
 
 ## onUnbind
 

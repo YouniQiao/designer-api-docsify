@@ -13,7 +13,7 @@ Describes the member information of coordinated devices set.
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from 'kits/@kit.ConnectivityKit';
+import { cdsm } from '@kit.ConnectivityKit';
 ```
 
 ## address

@@ -22,7 +22,7 @@ Send touch event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchObject](arkts-arkui-common-touchobject-i.md) | Yes | TouchObject to be sent. |
+| event | TouchObject | Yes | TouchObject to be sent. |
 
 **Return value:**
 

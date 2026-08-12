@@ -2,7 +2,7 @@
 
 Defines the numeric text content transition class.
 
-**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-textcommon-contenttransition-c.md)
+**Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-textcommon-contenttransition-c.md#ContentTransition)
 
 **Since:** 24
 
@@ -34,7 +34,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NumericTextTransitionOptions](arkts-arkui-numerictexttransitionoptions-i.md) | No | The options of numeric text transition. |
+| options | [NumericTextTransitionOptions](arkts-arkui-textcommon-numerictexttransitionoptions-i.md) | No | The options of numeric text transition. |
 
 ## enableBlur
 

@@ -34,8 +34,8 @@ A constructor used to create a styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| ImageAttachment \| CustomSpan | Yes | Text of the styled string.&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.&lt;br&gt;To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle). |
-| styles | Array&lt;StyleOptions&gt; | No | Initialization options of the styled string.&lt;br&gt;**NOTE：**&lt;br&gt;If **start** is set to an invalid value, it uses the default value **0**.&lt;br&gt;If the **length** value is invalid, **length** will default to the actual length of the styled string starting from the start position.&lt;br&gt;If **StyledStringKey** does not match **StyledStringValue**, **styles** has no effect. |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | Yes | Text of the styled string.&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is of the ImageAttachment or CustomSpan type, the **styles** parameter has no effect.&lt;br&gt;To set **styles**, use methods such as [setStyle](arkts-arkui-mutablestyledstring-c.md#setStyle). |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | No | Initialization options of the styled string.&lt;br&gt;**NOTE：**&lt;br&gt;If **start** is set to an invalid value, it uses the default value **0**.&lt;br&gt;If the **length** value is invalid, **length** will default to the actual length of the styled string starting from the start position.&lt;br&gt;If **StyledStringKey** does not match **StyledStringValue**, **styles** has no effect. |
 
 ## equals
 
@@ -127,8 +127,8 @@ For details about how to use this API, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
 ## getString
 
@@ -184,19 +184,19 @@ This API returns only styles explicitly set by the developer.
 | --- | --- | --- | --- |
 | start | number | Yes | Subscript that corresponds to the target range in the styled string. |
 | length | number | Yes | Length of the target range in the styled string. |
-| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | No | Style key of the styled string. |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | No | Style key of the styled string. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SpanStyle&gt; | Array of styles. &lt;br&gt;**NOTE：**&lt;br&gt;If no style is set for the specified range in the styled string, an empty array is returned. &lt;br&gt;If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed as **undefined**, an exception is thrown. &lt;br&gt;If **styledKey** is set to an invalid value or **undefined**, an exception is thrown. &lt;br&gt;If **styledKey** is a **CustomSpan** object, the style returned is the one passed to create the object. That is, modifying the style object also affects the actual display effect. |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; | Array of styles. &lt;br&gt;**NOTE：**&lt;br&gt;If no style is set for the specified range in the styled string, an empty array is returned. &lt;br&gt;If the values of **start** and **length** are out of the acceptable range or if any mandatory parameter is passed as **undefined**, an exception is thrown. &lt;br&gt;If **styledKey** is set to an invalid value or **undefined**, an exception is thrown. &lt;br&gt;If **styledKey** is a **CustomSpan** object, the style returned is the one passed to create the object. That is, modifying the style object also affects the actual display effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -235,7 +235,7 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## toHtml
 
@@ -243,7 +243,7 @@ Obtains a substring of this styled string. The specified range must not exceed t
 static toHtml(styledString: StyledString): string
 ```
 
-Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md), include: **StyledStringKey.FONT**,  
+Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey), include: **StyledStringKey.FONT**,  
 **StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**,  
 **StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**.
 
@@ -278,7 +278,7 @@ For details about how to use this API, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## length
 

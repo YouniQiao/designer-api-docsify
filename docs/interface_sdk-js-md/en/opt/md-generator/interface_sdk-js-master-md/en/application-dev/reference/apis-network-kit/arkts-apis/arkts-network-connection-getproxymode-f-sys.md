@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getProxyMode
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function getProxyMode(): Promise<ProxyMode>
 ```
 
-Obtain the proxy mode {@link ProxyMode}.
+Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#ProxyMode).
 
 **Since:** 20
 
@@ -28,14 +28,14 @@ Obtain the proxy mode {@link ProxyMode}.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ProxyMode&gt; |
+| Promise&lt;[ProxyMode](arkts-network-connection-proxymode-e-sys.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

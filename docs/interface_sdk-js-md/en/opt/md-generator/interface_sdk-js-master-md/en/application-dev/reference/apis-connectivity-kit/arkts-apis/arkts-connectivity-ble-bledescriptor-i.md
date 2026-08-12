@@ -11,7 +11,7 @@ Describes the Gatt descriptor.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -20,7 +20,7 @@ import { ble } from 'kits/@kit.ConnectivityKit';
 characteristicUuid: string
 ```
 
-The UUID of the {@link BLECharacteristic} instance to which the descriptor belongs
+The UUID of the [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#BLECharacteristic) instance to which the descriptor belongs
 
 **Type:** string
 
@@ -120,7 +120,7 @@ The permissions of a BLEDescriptor instance. The default value is Readable and W
 serviceUuid: string
 ```
 
-The UUID of the {@link GattService} instance to which the descriptor belongs
+The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#GattService) instance to which the descriptor belongs
 
 **Type:** string
 

@@ -16,7 +16,7 @@
 LEFT = 0
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最左侧。
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle)的最左侧。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ LEFT = 0
 RIGHT = 1
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最右侧。
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle)的最右侧。
 
 **起始版本：** 12
 
@@ -56,7 +56,7 @@ RIGHT = 1
 TOP = 2
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最上方。
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle)的最上方。
 
 **起始版本：** 12
 
@@ -76,7 +76,7 @@ TOP = 2
 BOTTOM = 3
 ```
 
-屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md)的最下方。
+屏障在其所有[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle)的最下方。
 
 **起始版本：** 12
 

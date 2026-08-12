@@ -32,7 +32,7 @@ curve?: Curve | string | ICurve
 
 默认值：Curve.Linear
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
+**类型：** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.Linear
 
@@ -110,7 +110,7 @@ motionPath?: MotionPathOptions
 
 运动路径信息。
 
-**类型：** [MotionPathOptions](../arkts-apis/arkts-arkui-common-motionpathoptions-i.md)
+**类型：** [MotionPathOptions](arkts-arkui-motionpathoptions-i.md)
 
 **起始版本：** 7
 
@@ -132,7 +132,7 @@ type?: SharedTransitionEffectType
 
 默认值：SharedTransitionEffectType.Exchange
 
-**类型：** [SharedTransitionEffectType](../arkts-apis/arkts-arkui-sharedtransitioneffecttype-e.md)
+**类型：** SharedTransitionEffectType
 
 **默认值：** SharedTransitionEffectType.Exchange
 

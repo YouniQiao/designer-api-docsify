@@ -20,7 +20,7 @@ preventDefault?: Callback<void>
 
 省略时，执行系统默认剪切行为。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 12
 

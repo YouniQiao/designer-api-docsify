@@ -34,7 +34,7 @@ state: AcbState
 
 ACB连接状态
 
-**类型：** [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md)
+**类型：** AcbState
 
 **起始版本：** 26.0.0
 

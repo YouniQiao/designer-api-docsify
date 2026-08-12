@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createHdrBrightnessBlender
@@ -40,7 +40,7 @@ Creates an HdrBrightnessBlender instance for adding an HDR-enabled brightness ef
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

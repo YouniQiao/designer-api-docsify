@@ -110,7 +110,7 @@ worker: Worker
 
 Worker for running the .abc file.
 
-**Type:** [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-worker-c.md)
+**Type:** [Worker](arkts-arkui-worker-t-sys.md)
 
 **Since:** 26.0.0
 

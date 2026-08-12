@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 Footer of the WaterFlow component.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ sections?: WaterFlowSections
 
 Water flow item sections. Different sections can have different numbers of columns.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;.&lt;br&gt;1. When &lt;em&gt;sections&lt;/em&gt; is used, the &lt;em&gt;columnsTemplate&lt;/em&gt;and &lt;em&gt;rowsTemplate&lt;/em&gt; attributes are ignored.&lt;br&gt;2. When &lt;em&gt;sections&lt;/em&gt; is used, the footer cannot be set separately.The last section can function as the footer.&lt;/p&gt;
 
-**Type:** [WaterFlowSections](../arkts-components/arkts-arkui-waterflowsections-c.md)
+**Type:** [WaterFlowSections](arkts-arkui-waterflow-waterflowsections-c.md)
 
 **Since:** 23
 

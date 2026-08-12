@@ -56,7 +56,7 @@ result: JsResult
 
 Handle the user's JavaScript result.
 
-**Type:** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
+**Type:** [JsResult](arkts-arkweb-jsresult-c.md)
 
 **Since:** 12
 

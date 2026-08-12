@@ -78,7 +78,7 @@ resourceValue: Optional<ResourceStr>
 
 Image data source.
 
-**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ResourceStr&gt;
+**Type:** [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **Since:** 15
 

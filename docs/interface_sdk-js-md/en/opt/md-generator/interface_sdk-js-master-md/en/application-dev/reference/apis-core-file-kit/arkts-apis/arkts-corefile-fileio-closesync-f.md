@@ -12,7 +12,7 @@ Closes a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:closeSync](arkts-corefile-fileio-closesync-f.md#closesync)
+**Substitutes:** [closeSync](arkts-corefile-file-fs-closesync-f.md#closeSync)
 
 <!--Device-unnamed-declare function closeSync(fd: number): void--><!--Device-unnamed-declare function closeSync(fd: number): void-End-->
 

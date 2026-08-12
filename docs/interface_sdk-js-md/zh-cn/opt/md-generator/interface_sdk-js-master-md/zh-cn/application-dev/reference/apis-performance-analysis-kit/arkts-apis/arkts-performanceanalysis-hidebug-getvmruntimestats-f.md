@@ -6,7 +6,7 @@
 function getVMRuntimeStats(): GcStats
 ```
 
-��ȡϵͳGCͳ����Ϣ��
+获取系统GC统计信息。
 
 **起始版本：** 12
 

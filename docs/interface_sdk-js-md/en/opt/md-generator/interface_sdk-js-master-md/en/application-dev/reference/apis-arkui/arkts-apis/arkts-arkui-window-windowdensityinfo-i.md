@@ -11,7 +11,7 @@ Describes the information about the display density of the screen where the wind
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## customDensity

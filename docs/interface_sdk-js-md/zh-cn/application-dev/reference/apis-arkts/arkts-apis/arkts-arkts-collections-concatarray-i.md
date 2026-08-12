@@ -9,7 +9,7 @@
 
 - T：Type，支持[Sendable支持的数据类型](../../../arkts-utils/arkts-sendable.md#sendable支持的数据类型)。
 
-**继承/实现关系：** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md)
+**继承/实现关系：** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md#ISendable)
 
 **起始版本：** 12
 

@@ -1,7 +1,7 @@
 # SliderConfiguration
 
 You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
 
 **Inheritance/Implementation:** SliderConfiguration extends [CommonConfiguration<SliderConfiguration>](CommonConfiguration<SliderConfiguration>)
 

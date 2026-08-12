@@ -4,7 +4,7 @@
 
 |名称|类型|只读|描述|
 | --- | ------ | ------ | ---------- |
-| OS | string |是|
+| [OS](arkts-performanceanalysis-domain-con.md) | string |是|
 
 **起始版本：** 11
 

@@ -4,7 +4,7 @@
 export type Rect = _Rect
 ```
 
-Defines a rectangle. For details, see [Rect](arkts-accessibility-rect-t.md).
+Defines a rectangle. For details, see [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#Rect).
 
 **Since:** 10
 

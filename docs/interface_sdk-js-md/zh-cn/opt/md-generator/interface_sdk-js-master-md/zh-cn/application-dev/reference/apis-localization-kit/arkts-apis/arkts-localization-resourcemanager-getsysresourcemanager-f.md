@@ -26,7 +26,7 @@ export function getSysResourceManager(): ResourceManager
 
 | 错误码ID |
 | --- |
-| [9001009](../errorcode-resource-manager.md#9001009-获取系统资源管理对象失败) |
+| [9001009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001009-获取系统资源管理对象失败) |
 
 ## 示例
 

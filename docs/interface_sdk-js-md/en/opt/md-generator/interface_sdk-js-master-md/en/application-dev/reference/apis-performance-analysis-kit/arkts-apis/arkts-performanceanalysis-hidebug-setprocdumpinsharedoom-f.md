@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setProcDumpInSharedOOM
@@ -20,7 +20,7 @@ Changes the dump heap snapshot from the thread-level to the process-level.
 > occur.
 > 
 > This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result
-> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata).
+> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpJsRawHeapData).
 > 
 > This API can be called multiple times in the application lifecycle, but only the last call takes effect.
 

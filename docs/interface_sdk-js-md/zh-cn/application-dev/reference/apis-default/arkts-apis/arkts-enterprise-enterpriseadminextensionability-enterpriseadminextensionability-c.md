@@ -29,7 +29,7 @@ onAccountAdded(accountId: number): void
 ```
 
 系统账号新增事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_ACCOUNT_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号新增事件，系统账号新增事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_ACCOUNT_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号新增事件，系统账号新增事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 18
 
@@ -81,7 +81,7 @@ onAccountRemoved(accountId: number): void
 ```
 
 系统账号删除事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_ACCOUNT_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号删除事件，系统账号删除事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_ACCOUNT_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号删除事件，系统账号删除事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 18
 
@@ -133,7 +133,7 @@ onAccountSwitched(accountId: number): void
 ```
 
 系统账号切换事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_ACCOUNT_SWITCHED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号切换事件，系统账号切换事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_ACCOUNT_SWITCHED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统账号切换事件，系统账号切换事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 18
 
@@ -252,7 +252,7 @@ onAdminPolicyChanged(event: common.PolicyChangedEvent): void
 ```
 
 策略变更事件回调。超级设备管理应用可以通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_POLICIES_CHANGED事件后可接收此回调。企业设备管理场景下，当任意MDM应用调用  
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_POLICIES_CHANGED事件后可接收此回调。企业设备管理场景下，当任意MDM应用调用  
 [策略变更上报列表](../../../mdm/mdm-kit-appendix.md#策略变更上报列表)中的接口时，系统会通知当前用户下的超级设备管理应用。
 
 **起始版本：** 26.0.0
@@ -306,7 +306,7 @@ onAppStart(bundleName: string): void
 ```
 
 应用启动事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_APP_START事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用启动事件，端侧应用启动事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_APP_START事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用启动事件，端侧应用启动事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
@@ -358,7 +358,7 @@ onAppStop(bundleName: string): void
 ```
 
 应用停止事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_APP_STOP事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用停止事件，端侧应用停止事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_APP_STOP事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用停止事件，端侧应用停止事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
@@ -410,7 +410,7 @@ onBundleAdded(bundleName: string): void
 ```
 
 应用安装事件回调，回调中包含应用包名。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
@@ -462,7 +462,7 @@ onBundleAdded(bundleName: string, accountId: number): void
 ```
 
 应用安装事件回调，回调中包含应用包名和账号ID。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_BUNDLE_ADDED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用安装事件，端侧应用安装事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 14
 
@@ -516,7 +516,7 @@ onBundleRemoved(bundleName: string): void
 ```
 
 应用卸载事件回调，回调中包含应用包名。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
@@ -568,7 +568,7 @@ onBundleRemoved(bundleName: string, accountId: number): void
 ```
 
 应用卸载事件回调，回调中包含应用包名和账号ID。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_BUNDLE_REMOVED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅应用卸载事件，端侧应用卸载事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 14
 
@@ -622,7 +622,7 @@ onBundleUpdated(bundleName: string, accountId: number): void
 ```
 
 应用更新事件回调，回调中包含应用包名和用户ID。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_BUNDLE_UPDATED事件才能收到此回调。企业设备管理场景下，设备管理应用可订阅所有用户下的应用更新事件，应用更新事件触发时会通知当前用户下的设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知主用户下的企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_BUNDLE_UPDATED事件才能收到此回调。企业设备管理场景下，设备管理应用可订阅所有用户下的应用更新事件，应用更新事件触发时会通知当前用户下的设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知主用户下的企业管理员。
 
 **起始版本：** 26.0.0
 
@@ -745,7 +745,7 @@ onDeviceBootCompleted(): void
 ```
 
 设备开机完成事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_BOOT_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅设备启动完成事件，端侧系统在设备开机完成后会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_BOOT_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅设备启动完成事件，端侧系统在设备开机完成后会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 24
 
@@ -790,18 +790,18 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onKeyEvent(keyEvent: systemManager.KeyEvent): void
 ```
 
-[按键事件](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)回调。MDM应用需要通过  
-[systemManager.addKeyEventPolicies](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-addkeyeventpolicies-f.md/arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies)接口下发按键事件处理策略，当系统按键事件触发时，如果事件与已下发的策略匹配，则触发该回调。回调信息[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)中包含当前发生的按键事件信息。
+[按键事件](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)回调。MDM应用需要通过  
+[systemManager.addKeyEventPolicies](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addKeyEventPolicies)接口下发按键事件处理策略，当系统按键事件触发时，如果事件与已下发的策略匹配，则触发该回调。回调信息[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)中包含当前发生的按键事件信息。
 
-单按键事件响应。设备单按键被触发时，[onKeyEvent](arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)会在按下和抬起时触发两次回调事件，可由  
-[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)中keyAction属性进行判断。  
-[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)中keyItems属性在单按键事件中可忽略。
+单按键事件响应。设备单按键被触发时，[onKeyEvent](#onKeyEvent)会在按下和抬起时触发两次回调事件，可由  
+[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)中keyAction属性进行判断。  
+[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)中keyItems属性在单按键事件中可忽略。
 
 组合按键事件响应。组合按键仅支持物理按键：电源键、音量加键、音量减键进行组合。用户按下组合键时，后按下按键的事件回调将通过  
-[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)中的keyItems属性携带当前所有已按下的按键信息。其他与单按键事件响应逻辑一致。
+[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)中的keyItems属性携带当前所有已按下的按键信息。其他与单按键事件响应逻辑一致。
 
-长按事件响应。当单个按键或组合按键被长时间按下时，[onKeyEvent](arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)会以50ms的间隔（具体间隔时间可能因系统状态及性能而稍有延长）被连续触发，其中每次回调事件[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)的actionTime属性均与按键首次按下事件回调的  
-[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md/arkts-mdm-systemmanager-keyevent-i.md)的actionTime属性相同。其他情况下的响应逻辑与单个按键和组合按键一致。
+长按事件响应。当单个按键或组合按键被长时间按下时，[onKeyEvent](#onKeyEvent)会以50ms的间隔（具体间隔时间可能因系统状态及性能而稍有延长）被连续触发，其中每次回调事件[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)的actionTime属性均与按键首次按下事件回调的  
+[keyEvent](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-keyevent-i.md#KeyEvent)的actionTime属性相同。其他情况下的响应逻辑与单个按键和组合按键一致。
 
 **起始版本：** 23
 
@@ -1000,12 +1000,12 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onLogCollected(result: common.Result): void
 ```
 
-通过[systemManager.startCollectLog](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-startcollectlog-f.md/arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog)接口成功创建日志收集任务后，当日志收集完成时，将触发该回调。回调中包含日志收集结果。
+通过[systemManager.startCollectLog](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog)接口成功创建日志收集任务后，当日志收集完成时，将触发该回调。回调中包含日志收集结果。
 
 > **说明：**
 > 
 > 日志收集成功时，必须在应用的EnterpriseAdminExtensionAbility中访问沙箱目录（/data/edm/log）获取日志，获取日志方式参考下列示例代码。应用取走日志后，建议调用
-> [systemManager.finishLogCollected](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-finishlogcollected-f.md/arkts-mdm-systemmanager-finishlogcollected-f.md#finishlogcollected)删除已收集到的日
+> [systemManager.finishLogCollected](../../apis-mdm-kit/arkts-apis/arkts-mdm-systemmanager-finishlogcollected-f.md#finishLogCollected)删除已收集到的日
 > 志。
 
 **起始版本：** 23
@@ -1072,7 +1072,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 onMarketAppInstallResult(bundleName: string, result: common.InstallationResult): void
 ```
 
-安装应用市场应用接口[bundleManager.installMarketApps](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installmarketapps-f.md/arkts-mdm-bundlemanager-installmarketapps-f.md#installmarketapps)安装结果回调，回调中包含应用包名和安装结果。
+安装应用市场应用接口[bundleManager.installMarketApps](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installmarketapps-f.md#installMarketApps)安装结果回调，回调中包含应用包名和安装结果。
 
 **起始版本：** 22
 
@@ -1140,7 +1140,7 @@ onStartupGuideCompleted(scene: common.StartupScene): void
 ```
 
 开机向导完成事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_STARTUP_GUIDE_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅开机向导完成事件，端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_STARTUP_GUIDE_COMPLETED事件才能收到此回调。企业设备管理场景下，设备管理应用订阅开机向导完成事件，端侧系统在首次切换子用户完成（仅限PC）、OTA升级完成、首次开机完成开机向导时会通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 24
 
@@ -1198,7 +1198,7 @@ onSystemUpdate(systemUpdateInfo: systemManager.SystemUpdateInfo): void
 ```
 
 系统更新事件回调。通过接口  
-[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribemanagedeventsync)注册MANAGED_EVENT_SYSTEM_UPDATE事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统更新事件，端侧系统更新事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
+[adminManager.subscribeManagedEventSync](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-subscribemanagedeventsync-f.md#subscribeManagedEventSync)注册MANAGED_EVENT_SYSTEM_UPDATE事件才能收到此回调。企业设备管理场景下，设备管理应用订阅系统更新事件，端侧系统更新事件通知设备管理应用，设备管理应用可以在此回调函数中进行事件上报，通知企业管理员。
 
 **起始版本：** 12
 
@@ -1249,7 +1249,7 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 context: EnterpriseAdminExtensionContext
 ```
 
-EnterpriseAdminExtensionAbility的上下文。继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)。
+EnterpriseAdminExtensionAbility的上下文。继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext)。
 
 **类型：** [EnterpriseAdminExtensionContext](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterpriseadminextensioncontext-c.md)
 

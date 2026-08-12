@@ -24,13 +24,13 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AbilityRunningInfo&gt;&gt; |
+| Promise & lt;Array & lt;AbilityRunningInfo & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 

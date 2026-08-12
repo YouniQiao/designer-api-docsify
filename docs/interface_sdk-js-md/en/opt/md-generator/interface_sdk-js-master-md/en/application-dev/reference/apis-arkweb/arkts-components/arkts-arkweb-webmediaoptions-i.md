@@ -38,7 +38,7 @@ audioSessionType?: AudioSessionType
 ```
 
 Web audio type in the application. The default value is  
-[STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md/arkts-audio-audio-streamusage-e.md). This parameter changes the mapping between the component audio type and the system audio type, which affects the ArkWeb audio focus policy.
+[STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage). This parameter changes the mapping between the component audio type and the system audio type, which affects the ArkWeb audio focus policy.
 
 **Type:** [AudioSessionType](arkts-arkweb-audiosessiontype-e.md)
 

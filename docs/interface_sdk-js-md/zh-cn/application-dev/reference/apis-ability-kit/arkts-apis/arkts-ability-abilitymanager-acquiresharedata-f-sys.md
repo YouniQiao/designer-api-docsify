@@ -7,7 +7,7 @@ function acquireShareData(missionId: int, callback: AsyncCallback<Record<string,
 ```
 
 系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用callback异步回调。
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调并返回分享数据。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -30,9 +30,9 @@ function acquireShareData(missionId: int, callback: AsyncCallback<Record<string,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 
 ## acquireShareData
@@ -58,14 +58,14 @@ function acquireShareData(missionId: int, callback: AsyncCallback<Record<string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | int | 是 | 目标应用的missionId，最大为231-1。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, RecordData&gt;&gt; | 是 | 以回调方式返回接口运行结果及分享得到的数据，可进行错误处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt; | 是 | 以回调方式返回接口运行结果及分享得到的数据，可进行错误处理或其他自定义处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system service failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Connect to system service failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 
 ## acquireShareData
@@ -75,7 +75,7 @@ function acquireShareData(missionId: int): Promise<Record<string, Object>>
 ```
 
 系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用Promise异步回调。
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调并返回分享数据。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -104,9 +104,9 @@ function acquireShareData(missionId: int): Promise<Record<string, Object>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 
 ## acquireShareData
@@ -137,12 +137,12 @@ function acquireShareData(missionId: int): Promise<Record<string, RecordData>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;string, RecordData&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt; | The promise returned by the function. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 

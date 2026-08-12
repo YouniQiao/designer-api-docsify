@@ -4,7 +4,7 @@ HeifsMetadata implements Metadata
 
 HEIF image sequence metadata.
 
-**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
+**Inheritance/Implementation:** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ HEIF image sequence metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## clone
@@ -46,7 +46,7 @@ Clones the HEIFS metadata. This API returns the result asynchronously through a 
 static createInstance(): HeifsMetadata
 ```
 
-Creates an empty [HeifsMetadata](arkts-image-image-heifsmetadata-c.md) instance.
+Creates an empty [HeifsMetadata](#HeifsMetadata) instance.
 
 **Since:** 23
 
@@ -71,7 +71,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 Obtains all properties and their values from the image metadata. This API returns the result asynchronously through a promise.
 
 For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
 
@@ -85,7 +85,7 @@ For details about the properties, see
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 ## getBlob
 
@@ -107,7 +107,7 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## getProperties
 
@@ -129,19 +129,19 @@ Obtains the property values of image metadata. This API returns the result async
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| key | Array&lt;string&gt; | Yes |
+| key | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## setBlob
 
@@ -169,13 +169,13 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
 
 ## setProperties
 
@@ -186,7 +186,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
 
 For details about the properties, see   
-[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md).
+[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey).
 
 **Since:** 23
 
@@ -200,19 +200,19 @@ For details about the properties, see
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) |
 
 ## heifsCanvasHeight
 

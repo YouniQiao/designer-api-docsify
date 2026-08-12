@@ -7,8 +7,8 @@ export type QueryParamObject = Record<string, QueryParamValue | QueryParamValue[
 A key-value object used to construct URL query parameters automatically.
 
 Each property name is treated as a query parameter key.Each property value may be either:  
-- a single {@link QueryParamValue}, or  
-- an array of {@link QueryParamValue}, which is expanded into repeated  
+- a single [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), or  
+- an array of [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), which is expanded into repeated  
 parameters with the same key.
 
 Serialization rules:  
@@ -24,7 +24,7 @@ Order semantics:
 of key-value pairs.  
 - Multiple values for the same key are supported through arrays.  
 - However, callers must not rely on preserving an exact original pair order  
-such as `a=1&b=2&a=3`. If strict ordering or repeated-key ordering is required, use a pre-encoded query string instead of {@link QueryParamObject}.
+such as `a=1&b=2&a=3`. If strict ordering or repeated-key ordering is required, use a pre-encoded query string instead of [QueryParamObject](#QueryParamObject).
 
 Usage notes:  
 - Provide raw, unencoded keys and values. Do not pre-encode them.  

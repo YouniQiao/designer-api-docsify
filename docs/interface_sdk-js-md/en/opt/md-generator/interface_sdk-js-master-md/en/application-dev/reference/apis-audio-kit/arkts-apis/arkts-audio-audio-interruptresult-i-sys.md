@@ -13,7 +13,7 @@ Describes audio interrupt operation results.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## interruptNode

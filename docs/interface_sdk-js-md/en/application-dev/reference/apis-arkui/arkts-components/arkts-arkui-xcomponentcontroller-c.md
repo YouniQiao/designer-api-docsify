@@ -28,6 +28,12 @@ A constructor used to create a **XComponentController** object.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Examples
+
+```TypeScript
+xcomponentController: XComponentController = new XComponentController();
+```
+
 ## getXComponentContext
 
 ```TypeScript
@@ -77,6 +83,30 @@ Obtains the ID of the surface held by the **XComponent**. This API works only wh
 | --- | --- |
 | string | ID of the surface held by the **XComponent**. |
 
+## Examples
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct Index {
+  myXComponentController: XComponentController = new XComponentController();
+
+  build() {
+    Flex({ direction: FlexDirection.Column, alignItems: ItemAlign.Center, justifyContent: FlexAlign.Center }) {
+      XComponent({
+        type: XComponentType.SURFACE,
+        controller: this.myXComponentController
+      })
+        .onLoad(() => {
+          let surfaceId: string = this.myXComponentController.getXComponentSurfaceId();
+          console.info("XComponent SurfaceId: " + surfaceId);
+        })
+    }
+  }
+}
+```
+
 ## getXComponentSurfaceRect
 
 ```TypeScript
@@ -101,7 +131,7 @@ Obtains the display area for the surface held by the **XComponent**, including t
 
 | Type | Description |
 | --- | --- |
-| [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | Rectangle of the surface held by the **XComponent**. |
+| [SurfaceRect](arkts-arkui-surfacerect-i.md) | Rectangle of the surface held by the **XComponent**. |
 
 ## getXComponentSurfaceRotation
 
@@ -127,7 +157,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 | Type | Description |
 | --- | --- |
-| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;SurfaceRotationOptions&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
+| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; | Whether the orientation of the surface held by the current **XComponent** is locked when the screen rotates. |
 
 ## lockCanvas
 
@@ -135,7 +165,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 lockCanvas(): DrawingCanvas | null
 ```
 
-Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md/arkts-arkgraphics2d-drawing-canvas-c.md).
+Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#Canvas).
 
 **Since:** 20
 
@@ -153,7 +183,7 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 
 | Type | Description |
 | --- | --- |
-| [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
+| DrawingCanvas | Returns a Canvas for drawing into the surface created by XComponent. Returns null if the surface is not available. |
 
 ## onSurfaceChanged
 
@@ -181,7 +211,7 @@ Triggered when the surface held by the **XComponent** has its size changed (incl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | surfaceId | string | Yes | ID of the surface held by the **XComponent**. |
-| rect | [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | Yes | Area for displaying the surface held by the **XComponent**. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | Area for displaying the surface held by the **XComponent**. |
 
 ## onSurfaceCreated
 
@@ -266,7 +296,7 @@ Sets the options of the surface created by the **XComponent**, which determine w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [SurfaceConfig](../arkts-apis/arkts-arkui-xcomponent-surfaceconfig-i.md) | Yes | surface config |
+| config | [SurfaceConfig](arkts-arkui-surfaceconfig-i.md) | Yes | surface config |
 
 ## setXComponentSurfaceRect
 
@@ -292,7 +322,7 @@ Sets the display area for the surface held by the **XComponent**, including the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [SurfaceRect](../arkts-apis/arkts-arkui-xcomponent-surfacerect-i.md) | Yes | Rectangle of the surface held by the **XComponent**. |
+| rect | [SurfaceRect](arkts-arkui-surfacerect-i.md) | Yes | Rectangle of the surface held by the **XComponent**. |
 
 ## setXComponentSurfaceRotation
 
@@ -318,7 +348,7 @@ Sets whether to lock the orientation of the surface held by this **XComponent** 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rotationOptions | [SurfaceRotationOptions](../arkts-apis/arkts-arkui-xcomponent-surfacerotationoptions-i.md) | Yes | Whether to lock the orientation of the surface held by the current **XComponent** when the screen rotates. |
+| rotationOptions | [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md) | Yes | Whether to lock the orientation of the surface held by the current **XComponent** when the screen rotates. |
 
 ## setXComponentSurfaceSize
 
@@ -340,7 +370,7 @@ Unit: px.
 
 **Deprecated since:** 12
 
-**Substitutes:** [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect)
+**Substitutes:** [setXComponentSurfaceRect](#setXComponentSurfaceRect)
 
 <!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void--><!--Device-XComponentController-setXComponentSurfaceSize(value: {    surfaceWidth: number;    surfaceHeight: number;  }): void-End-->
 
@@ -387,7 +417,7 @@ If this API is repeatedly called before the execution is complete, an error call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI image analyzer. |
+| config | ImageAnalyzerConfig | Yes | Settings of the AI image analyzer. |
 
 **Return value:**
 
@@ -399,9 +429,9 @@ If this API is repeatedly called before the execution is complete, an error call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 
@@ -454,5 +484,5 @@ Submits the drawn content from a canvas object to the display area of the **XCom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| canvas | [DrawingCanvas](arkts-arkui-drawingcanvas-t.md) | Yes | The canvas previously obtained from lockCanvas. |
+| canvas | DrawingCanvas | Yes | The canvas previously obtained from lockCanvas. |
 

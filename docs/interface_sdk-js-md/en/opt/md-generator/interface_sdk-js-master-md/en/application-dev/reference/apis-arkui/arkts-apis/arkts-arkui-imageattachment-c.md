@@ -39,7 +39,7 @@ constructor(attachment: Optional<AttachmentType>)
 ```
 
 A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and  
-[ResourceStr](arkts-arkui-resourcestr-t.md) types.
+[ResourceStr](arkts-arkui-resourcestr-t.md#ResourceStr) types.
 
 **Since:** 15
 
@@ -55,7 +55,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| attachment | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;AttachmentType&gt; | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes |
 
 ## colorFilter
 
@@ -196,7 +196,7 @@ readonly value: PixelMap
 
 Image data source of the styled string.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** PixelMap
 
 **Since:** 12
 

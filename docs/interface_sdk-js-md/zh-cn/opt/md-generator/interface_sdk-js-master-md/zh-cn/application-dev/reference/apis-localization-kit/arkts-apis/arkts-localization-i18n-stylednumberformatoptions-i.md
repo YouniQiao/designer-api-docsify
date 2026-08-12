@@ -16,7 +16,7 @@ decimal?: TextStyle
 
 指定小数点的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**类型：** TextStyle
 
 **起始版本：** 18
 
@@ -34,7 +34,7 @@ fraction?: TextStyle
 
 指定小数部分的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**类型：** TextStyle
 
 **起始版本：** 18
 
@@ -52,7 +52,7 @@ integer?: TextStyle
 
 指定整数部分的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**类型：** TextStyle
 
 **起始版本：** 18
 
@@ -70,7 +70,7 @@ unit?: TextStyle
 
 指定单位部分的文本样式。默认值：StyledString默认的文本样式。
 
-**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**类型：** TextStyle
 
 **起始版本：** 18
 

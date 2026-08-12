@@ -15,7 +15,7 @@ Defines the options for domain account authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## serverParams
@@ -26,7 +26,7 @@ serverParams?: Record<string, Object>
 
 Configuration parameters of the domain account authentication server. which is **undefined** by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 24
 

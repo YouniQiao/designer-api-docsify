@@ -2,7 +2,7 @@
 
 Represents an error that occurs when provided collection index is out of range
 
-**Inheritance/Implementation:** RangeError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** RangeError extends [Error](Error)
 
 **Since:** 26.0.0
 

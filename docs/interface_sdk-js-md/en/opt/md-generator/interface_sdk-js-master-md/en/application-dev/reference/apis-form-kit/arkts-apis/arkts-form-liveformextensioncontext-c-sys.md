@@ -1,10 +1,10 @@
 # LiveFormExtensionContext
 
 **LiveFormExtensionContext**, inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md), is the context of   
-[LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md).
+[ExtensionContext](./application/ExtensionContext:ExtensionContext), is the context of   
+[LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
 
-**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 20
 
@@ -18,7 +18,7 @@
 public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): number
 ```
 
-Connect a service extension ability.The destination of the connection must be a service extension.You must implement the {@link ConnectOptions} interface to obtain the proxy of the target service extension when the Service extension is connected.
+Connect a service extension ability.The destination of the connection must be a service extension.You must implement the [ConnectOptions](ConnectOptions) interface to obtain the proxy of the target service extension when the Service extension is connected.
 
 **Since:** 21
 
@@ -47,10 +47,10 @@ Connect a service extension ability.The destination of the connection must be a 
 
 | Error Code ID |
 | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16501011](../errorcode-form.md#16501011-api-not-supported) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16501011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## disconnectServiceExtensionAbility
 
@@ -58,7 +58,7 @@ Connect a service extension ability.The destination of the connection must be a 
 public disconnectServiceExtensionAbility(connectionId: number): Promise<void>
 ```
 
-Disconnect an ability to a service extension, in contrast to {@link connectServiceExtensionAbility}.
+Disconnect an ability to a service extension, in contrast to [connectServiceExtensionAbility](#connectServiceExtensionAbility).
 
 **Since:** 21
 
@@ -80,12 +80,12 @@ Disconnect an ability to a service extension, in contrast to {@link connectServi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16501011](../errorcode-form.md#16501011-api-not-supported) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16501011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

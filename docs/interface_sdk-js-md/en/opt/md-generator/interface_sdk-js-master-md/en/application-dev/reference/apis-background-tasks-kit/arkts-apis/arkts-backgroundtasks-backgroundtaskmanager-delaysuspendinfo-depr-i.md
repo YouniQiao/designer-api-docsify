@@ -6,7 +6,7 @@ Provides the information about the suspension delay.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-depr-i.md)
+**Substitutes:** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md#DelaySuspendInfo)
 
 <!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
 
@@ -28,7 +28,7 @@ The default duration is 180000 when the battery level is higher than or equal to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo
+**Substitutes:** [DelaySuspendInfo](ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo)
 
 <!--Device-DelaySuspendInfo-actualDelayTime: number--><!--Device-DelaySuspendInfo-actualDelayTime: number-End-->
 
@@ -48,7 +48,7 @@ ID of the suspension delay request.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo
+**Substitutes:** [DelaySuspendInfo](ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo)
 
 <!--Device-DelaySuspendInfo-requestId: number--><!--Device-DelaySuspendInfo-requestId: number-End-->
 

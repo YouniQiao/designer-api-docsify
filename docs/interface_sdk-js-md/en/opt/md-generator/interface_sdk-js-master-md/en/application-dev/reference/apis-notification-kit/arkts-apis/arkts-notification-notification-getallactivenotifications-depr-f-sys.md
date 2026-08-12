@@ -12,7 +12,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getAllActiveNotifications
+**Substitutes:** [getAllActiveNotifications](ohos.notificationManager/notificationManager#getAllActiveNotifications)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | Yes |
 
 
 ## getAllActiveNotifications
@@ -41,7 +41,7 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getAllActiveNotifications
+**Substitutes:** [getAllActiveNotifications](ohos.notificationManager/notificationManager#getAllActiveNotifications)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -55,4 +55,4 @@ Obtains all active notifications. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)&gt;&gt; |
+| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; |

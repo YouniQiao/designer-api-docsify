@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryMyCard
@@ -20,7 +20,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard)(context:
+**Substitutes:** [queryMyCard](contact.queryMyCard(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -32,7 +32,7 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -71,15 +71,15 @@ Queries my card. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| context | Context | Yes | Indicates the context of application or capability. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -115,7 +115,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard)(context:
+**Substitutes:** [queryMyCard](contact.queryMyCard(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -128,7 +128,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -169,16 +169,16 @@ Queries my card. (The contact attribute list can be imported.) This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, information about my card is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -216,7 +216,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryMyCard](arkts-contacts-contact-querymycard-f.md#querymycard)(context:
+**Substitutes:** [queryMyCard](contact.queryMyCard(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -234,7 +234,7 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Contact&gt; | Promise used to return the result, which is a contact in my card. |
+| Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Promise used to return the result, which is a contact in my card. |
 
 ## Examples
 
@@ -274,21 +274,21 @@ Queries my card. (The contact attribute list can be imported.) This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of application or capability. |
+| context | Context | Yes | Indicates the context of application or capability. |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No | List of contact attributes. If this parameter is empty, all attribute fields ( including the name, phone number, and email address) of the contact are queried. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Contact&gt; | Promise used to return the result, which is a contact in my card. |
+| Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Promise used to return the result, which is a contact in my card. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

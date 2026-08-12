@@ -2,7 +2,7 @@
 
 Defines the CheckboxGroup component attributes.
 
-**Inheritance/Implementation:** CheckboxGroupAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** CheckboxGroupAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Set the attribute modifier of checkbox group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of checkbox group. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of checkbox group. |
 
 **Return value:**
 
@@ -95,7 +95,7 @@ Set the content modifier of checkboxgroup.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;CheckBoxGroupConfiguration&gt; \| undefined | Yes | The content modifier of checkboxgroup. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-checkboxgroupconfiguration-i.md)&gt; \| undefined | Yes | The content modifier of checkboxgroup. |
 
 **Return value:**
 
@@ -185,7 +185,7 @@ setting whether all checkbox is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAllSelected | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes |  |
+| isAllSelected | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | Yes |  |
 
 **Return value:**
 

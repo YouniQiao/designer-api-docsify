@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## exitMasterProcessRole
@@ -34,9 +34,9 @@ Relinquishes the [master-process](../../../application-models/ability-terminolog
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000118](../errorcode-ability.md#16000118-process-is-not-the-master-process) | Not a master process. |
-| [16000119](../errorcode-ability.md#16000119-pending-request-exists) | Cannot exit because there is an unfinished request. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [16000118](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000118-process-is-not-the-master-process) | Not a master process. |
+| [16000119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000119-pending-request-exists) | Cannot exit because there is an unfinished request. |
 
 ## Examples
 

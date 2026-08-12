@@ -2,7 +2,7 @@
 
 Defines the moving photo view attribute functions.
 
-**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod](../../apis-arkui/arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 26.0.0
 
@@ -155,7 +155,7 @@ Called when determining the zoom type of the view.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](../../apis-arkui/arkts-apis/arkts-arkui-imagefit-e.md) | Yes |  |
+| value | ImageFit | Yes |  |
 
 **Return value:**
 

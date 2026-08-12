@@ -2,12 +2,12 @@
 
 应用可以使用faultLogger接口查询系统侧缓存的当前应用的故障日志。接口以应用包名和系统分配的UID作为唯一键值。
 
-系统侧保存的应用故障日志数量受系统日志的压力限制，推荐使用[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅APP_CRASH及APP_FREEZE等故障事件。
+系统侧保存的应用故障日志数量受系统日志的压力限制，推荐使用[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiAppEvent)订阅APP_CRASH及APP_FREEZE等故障事件。
 
 > **说明：**
 > 
 > 本模块接口从API version 18开始废弃使用, 该接口不再维护。后续版本推荐使用
-> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md)订阅APP_CRASH，APP_FREEZE事件。
+> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiAppEvent)订阅APP_CRASH，APP_FREEZE事件。
 > 
 > 查阅[从Faultlogger接口迁移崩溃事件](../../../dfx/hiappevent-watcher-crash-events-arkts.md#从faultlogger接口迁移崩溃事件)，
 > 了解使用hiAppEvent订阅APP_CRASH的具体信息。
@@ -19,7 +19,7 @@
 
 **废弃版本：** 18
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent
+**替代接口：** [hiAppEvent](ohos.hiviewdfx.hiAppEvent)
 
 <!--Device-unnamed-declare namespace FaultLogger--><!--Device-unnamed-declare namespace FaultLogger-End-->
 

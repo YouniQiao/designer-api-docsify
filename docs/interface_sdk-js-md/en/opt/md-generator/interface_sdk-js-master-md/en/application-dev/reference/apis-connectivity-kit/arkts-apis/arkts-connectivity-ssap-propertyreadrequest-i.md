@@ -11,7 +11,7 @@ Describes the parameters of the SSAP client's property read request.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -74,7 +74,7 @@ The request ID.
 serviceUuid: string
 ```
 
-The UUID of the {@link Service} instance which the property belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
+The UUID of the [Service](arkts-connectivity-ssap-service-i.md#Service) instance which the property belongs to.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 

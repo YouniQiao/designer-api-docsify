@@ -86,7 +86,7 @@ selected?: Date | Bindable<Date>
 
 从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。
 
-**类型：** Date \| Bindable&lt;Date&gt;
+**类型：** Date \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;Date&gt;
 
 **起始版本：** 23
 

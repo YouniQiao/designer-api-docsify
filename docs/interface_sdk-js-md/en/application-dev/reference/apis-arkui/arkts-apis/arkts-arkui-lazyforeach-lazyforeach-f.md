@@ -33,7 +33,7 @@ Enter the value to obtain the LazyForEach.
 
 | Type | Description |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach attribute |
+| [LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md) | LazyForEach attribute |
 
 
 ## LazyForEach
@@ -71,7 +71,7 @@ Enter the value to obtain the LazyForEach.
 
 | Type | Description |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach attribute |
+| [LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md) | LazyForEach attribute |
 
 
 ## LazyForEach
@@ -100,11 +100,11 @@ Defines LazyForEach Component. It requires calling setLazyForEachOptions at star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyForEachAttribute&gt; | Yes | callback to set up LazyForEach's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md)&gt; | Yes | callback to set up LazyForEach's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | The attribute of LazyForEach. |
+| [LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md) | The attribute of LazyForEach. |
 

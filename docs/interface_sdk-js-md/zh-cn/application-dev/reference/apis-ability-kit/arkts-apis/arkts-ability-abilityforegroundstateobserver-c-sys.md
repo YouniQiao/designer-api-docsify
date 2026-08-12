@@ -36,3 +36,48 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 | --- | --- | --- | --- |
 | abilityStateData | [AbilityStateData](arkts-ability-abilitystatedata-c.md) | 是 | Ability状态信息。 |
 
+## 示例
+
+ArkTS-Dyn示例：
+
+```TypeScript
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: abilityManager.AbilityForegroundStateObserver = {
+  onAbilityStateChanged(abilityStateData) {
+    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  },
+};
+try {
+  abilityManager.on('abilityForegroundState', observer);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error code: ${code}, error msg: ${message}`);
+}
+```
+
+ArkTS-Sta示例：
+
+```TypeScript
+'use static'
+import { abilityManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class ObserverCustom implements abilityManager.AbilityForegroundStateObserver {
+  onAbilityStateChanged(abilityStateData: abilityManager.AbilityStateData) {
+    console.info(`onAbilityStateChanged: ${JSON.stringify(abilityStateData)}`);
+  }
+}
+;
+try {
+  let observer = new ObserverCustom();
+  abilityManager.onAbilityForegroundState(observer);
+} catch (paramError) {
+  let code = (paramError as BusinessError).code;
+  let message = (paramError as BusinessError).message;
+  console.error(`error code: ${code}, error msg: ${message}`);
+}
+```
+

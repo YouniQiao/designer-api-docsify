@@ -19,7 +19,7 @@ declare function createRandomAccessFile(file: string | File, mode?: number,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 | mode | number | 否 |
 | options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | 否 |
 
@@ -27,7 +27,7 @@ declare function createRandomAccessFile(file: string | File, mode?: number,
 
 | 类型 |
 | --- |
-| Promise&lt;RandomAccessFile&gt; |
+| Promise&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; |
 
 **错误码：**
 
@@ -80,8 +80,8 @@ declare function createRandomAccessFile(file: string | File, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RandomAccessFile&gt; | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | 是 |
 
 **错误码：**
 
@@ -133,9 +133,9 @@ declare function createRandomAccessFile(file: string | File, mode: number, callb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 | mode | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RandomAccessFile&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RandomAccessFile](arkts-corefile-file-fs-randomaccessfile-i.md)&gt; | 是 |
 
 **错误码：**
 

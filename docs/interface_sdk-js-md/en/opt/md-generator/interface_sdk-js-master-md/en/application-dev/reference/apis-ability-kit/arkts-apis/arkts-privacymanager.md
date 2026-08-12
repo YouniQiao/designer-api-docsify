@@ -1,48 +1,48 @@
 # @ohos.privacyManager(Privacy Management)
 
 ###### Core Enum Types
- - **[PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md):** Enum for querying permission usage records,
+ - **[PermissionUsageFlag](arkts-ability-privacymanager-permissionusageflag-e-sys.md#PermissionUsageFlag):** Enum for querying permission usage records,
  used to specify querying summary data or detailed data.
- - **[PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md):** Enum for permission usage status change
+ - **[PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md#PermissionActiveStatus):** Enum for permission usage status change
  types, used to indicate unused, foreground use, or background use status.
- - **[PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md):** Enum for sensitive permission usage types, used
+ - **[PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md#PermissionUsedType):** Enum for sensitive permission usage types, used
  to indicate the use of sensitive permissions through normal authorization, Picker, or security components.
  ###### Core Interface Types
- - **[PermissionUsedRequest](arkts-ability-privacymanager-permissionusedrequest-i-sys.md):** Permission usage record query request
+ - **[PermissionUsedRequest](arkts-ability-privacymanager-permissionusedrequest-i-sys.md#PermissionUsedRequest):** Permission usage record query request
  object, used to specify the query application, permission, time range, and query method.
- - **[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md):** Permission usage record query response
+ - **[PermissionUsedResponse](arkts-ability-privacymanager-permissionusedresponse-i-sys.md#PermissionUsedResponse):** Permission usage record query response
  object, used to return the query time range and a collection of application-level records.
- - **[BundleUsedRecord](arkts-ability-privacymanager-bundleusedrecord-i-sys.md):** Application or device-level permission usage record
+ - **[BundleUsedRecord](arkts-ability-privacymanager-bundleusedrecord-i-sys.md#BundleUsedRecord):** Application or device-level permission usage record
  object, used to return the permission access records of a specific application or remote device.
- - **[PermissionUsedRecord](arkts-ability-privacymanager-permissionusedrecord-i-sys.md):** Access record object for a single
+ - **[PermissionUsedRecord](arkts-ability-privacymanager-permissionusedrecord-i-sys.md#PermissionUsedRecord):** Access record object for a single
  permission, used to return the number of accesses, number of denials, last access time, and detailed records.
- - **[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md):** Single access record detail object, used to return
+ - **[UsedRecordDetail](arkts-ability-privacymanager-usedrecorddetail-i-sys.md#UsedRecordDetail):** Single access record detail object, used to return
  information such as access status, timestamp, access duration, and usage type.
- - **[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md):** Permission usage status change event
+ - **[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md#ActiveChangeResponse):** Permission usage status change event
  object, to return details of permission active status changes.
- - **[PermissionUsedTypeInfo](arkts-ability-privacymanager-permissionusedtypeinfo-i-sys.md):** Permission usage type information
+ - **[PermissionUsedTypeInfo](arkts-ability-privacymanager-permissionusedtypeinfo-i-sys.md#PermissionUsedTypeInfo):** Permission usage type information
  object, used to return the usage type when an application accesses a sensitive permission.
- - **[AddPermissionUsedRecordOptions](arkts-ability-privacymanager-addpermissionusedrecordoptions-i-sys.md):** Optional parameter
+ - **[AddPermissionUsedRecordOptions](arkts-ability-privacymanager-addpermissionusedrecordoptions-i-sys.md#AddPermissionUsedRecordOptions):** Optional parameter
  object for adding a permission usage record, used to specify the sensitive permission usage type and extension
  identity.
- - **[PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md):** Optional parameter object for
+ - **[PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md#PermissionUsingOptions):** Optional parameter object for
  permission usage, used to specify the extension identity.
  ###### Core Function Types
- - **[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addpermissionusedrecord):** Adds a permission usage record.
- - **[getPermissionUsedRecord](arkts-ability-privacymanager-getpermissionusedrecord-f-sys.md#getpermissionusedrecord):** Queries permission usage records.
- - **[setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus):** Sets the
+ - **[addPermissionUsedRecord](arkts-ability-privacymanager-addpermissionusedrecord-f-sys.md#addPermissionUsedRecord):** Adds a permission usage record.
+ - **[getPermissionUsedRecord](arkts-ability-privacymanager-getpermissionusedrecord-f-sys.md#getPermissionUsedRecord):** Queries permission usage records.
+ - **[setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setPermissionUsedRecordToggleStatus):** Sets the
  permission usage record toggle status.
- - **[getPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md#getpermissionusedrecordtogglestatus):** Queries the
+ - **[getPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-getpermissionusedrecordtogglestatus-f-sys.md#getPermissionUsedRecordToggleStatus):** Queries the
  permission usage record toggle status.
- - **[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission):** Marks the start of using a sensitive
+ - **[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission):** Marks the start of using a sensitive
  permission.
- - **[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission):** Marks the stop of using a sensitive
+ - **[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission):** Marks the stop of using a sensitive
  permission.
- - **[checkPermissionInUse](arkts-ability-privacymanager-checkpermissioninuse-f-sys.md#checkpermissioninuse):** Checks whether a specified permission is
+ - **[checkPermissionInUse](arkts-ability-privacymanager-checkpermissioninuse-f-sys.md#checkPermissionInUse):** Checks whether a specified permission is
  currently being used.
  - **[on](privacyManager.on):** Subscribes to permission usage status change events.
- - **[off](privacyManager.off):** Unsubscribes from permission usage status change events.
- - **[getPermissionUsedTypeInfos](arkts-ability-privacymanager-getpermissionusedtypeinfos-f-sys.md#getpermissionusedtypeinfos):** Queries sensitive permission
+ - **[off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off):** Unsubscribes from permission usage status change events.
+ - **[getPermissionUsedTypeInfos](arkts-ability-privacymanager-getpermissionusedtypeinfos-f-sys.md#getPermissionUsedTypeInfos):** Queries sensitive permission
  access type information.
  ###### Core Class
  - **privacyManager:** Provides the core class for privacy management.
@@ -58,7 +58,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

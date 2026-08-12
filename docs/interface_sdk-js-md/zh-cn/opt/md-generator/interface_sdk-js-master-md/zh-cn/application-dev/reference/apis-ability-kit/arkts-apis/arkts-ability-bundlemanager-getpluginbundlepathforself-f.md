@@ -18,7 +18,7 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pluginBundleName | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
 
 **返回值：**
 
@@ -30,7 +30,7 @@ function getPluginBundlePathForSelf(pluginBundleName: string): string
 
 | 错误码ID |
 | --- |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

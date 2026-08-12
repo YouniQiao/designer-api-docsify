@@ -26,7 +26,7 @@ declare function choose(types?: string[]): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 
 ## choose

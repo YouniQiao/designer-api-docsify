@@ -3,7 +3,7 @@
 List is implemented based on the singly linked list. Each node has a reference pointing to the next element. Elements
  must be traversed from the beginning, making querying inefficient. However, insertion and deletion operations are
  highly efficient. List allows null elements.
- Unlike [LinkedList](arkts-util-linkedlist.md), which is a doubly linked list, List is a singly linked list that
+ Unlike [LinkedList](arkts-arkts-util-linkedlist-linkedlist-c.md#LinkedList), which is a doubly linked list, List is a singly linked list that
  does not support insertion or removal at both ends.
  > **NOTE**
  >
@@ -22,7 +22,7 @@ List is implemented based on the singly linked list. Each node has a reference p
 ## Modules to Import
 
 ```TypeScript
-import { List } from 'kits/@kit.ArkTS';
+import { List } from '@kit.ArkTS';
 ```
 
 ## Summary

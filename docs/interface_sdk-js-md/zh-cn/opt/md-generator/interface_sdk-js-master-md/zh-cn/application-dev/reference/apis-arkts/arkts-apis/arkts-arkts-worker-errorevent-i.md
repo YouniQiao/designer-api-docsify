@@ -2,7 +2,7 @@
 
 错误事件类用于表示Worker执行过程中出现异常的详细信息，ErrorEvent类继承Event。
 
-**继承/实现关系：** ErrorEvent extends [Event](arkts-arkts-worker-event-i.md)
+**继承/实现关系：** ErrorEvent extends [Event](arkts-arkts-worker-event-i.md#Event)
 
 **起始版本：** 7
 

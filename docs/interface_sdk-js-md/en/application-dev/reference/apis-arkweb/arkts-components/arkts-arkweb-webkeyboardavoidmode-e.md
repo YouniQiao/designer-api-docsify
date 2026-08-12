@@ -71,7 +71,7 @@ RETURN_TO_UICONTEXT = 3
 ```
 
 The soft keyboard avoidance behavior of the **Web** component follows the  
-[KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) set by UIcontext. The **Web** component does not process the avoidance behavior of the component.
+[KeyboardAvoidMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md#KeyboardAvoidMode) set by UIcontext. The **Web** component does not process the avoidance behavior of the component.
 
 **Since:** 22
 

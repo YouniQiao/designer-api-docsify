@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## createServer
@@ -40,10 +40,10 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Error Code ID |
 | --- |
-| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [32390206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [32390203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

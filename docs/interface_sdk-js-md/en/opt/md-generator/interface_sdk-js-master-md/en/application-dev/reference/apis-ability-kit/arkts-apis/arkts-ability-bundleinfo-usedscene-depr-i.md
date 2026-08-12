@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md) instead.
+> [UsedScene](#UsedScene) instead.
 
 Describes the application scenario and timing for using the permission.
 
@@ -11,7 +11,7 @@ Describes the application scenario and timing for using the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleInfo:UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)
+**Substitutes:** [UsedScene](#UsedScene)
 
 <!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
@@ -33,7 +33,7 @@ Abilities that use the permission.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.UsedScene#abilities
+**Substitutes:** [abilities](ohos.bundle.bundleManager/bundleManager.UsedScene#abilities)
 
 <!--Device-UsedScene-abilities: Array<string>--><!--Device-UsedScene-abilities: Array<string>-End-->
 
@@ -55,7 +55,7 @@ Time when the permission is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.UsedScene#when
+**Substitutes:** [when](ohos.bundle.bundleManager/bundleManager.UsedScene#when)
 
 <!--Device-UsedScene-when: string--><!--Device-UsedScene-when: string-End-->
 

@@ -29,18 +29,18 @@ function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRe
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [29700006](../errorcode-certManagerDialog.md#29700006-入参校验失败) |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
-| [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) |
-| [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [29700006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700006-入参校验失败) |
+| [29700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-内部错误) |
+| [29700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-证书安装失败错误) |
+| [29700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700002-操作取消) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

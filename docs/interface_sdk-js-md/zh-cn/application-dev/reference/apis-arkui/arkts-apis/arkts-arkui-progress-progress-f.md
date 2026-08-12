@@ -24,7 +24,7 @@ export declare function Progress(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | 是 | 按进度条类型不同，设置不同属性的进度条组件参数。 |
+| options | [ProgressOptions](arkts-arkui-progress-progressoptions-i.md) | 是 | 按进度条类型不同，设置不同属性的进度条组件参数。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function Progress(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ProgressAttribute&gt; | 是 | Progress属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ProgressAttribute](arkts-arkui-progress-progressattribute-i.md)&gt; | 是 | Progress属性实例。 |
 
 **返回值：**
 

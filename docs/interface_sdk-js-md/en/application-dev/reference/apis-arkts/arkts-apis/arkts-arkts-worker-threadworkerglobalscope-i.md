@@ -2,7 +2,7 @@
 
 Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+.
 
-**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
+**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Implements communication between the Worker thread and the host thread. The post
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## callGlobalCallObjectMethod
@@ -55,11 +55,11 @@ Calls a method of an object registered with the host thread. This API is called 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-| [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
+| [10200019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) | The globalCallObject is not registered. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) | The global call exceeds the timeout. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) | The method to be called is not callable or is an async method or a generator. |
 
 ## Examples
 
@@ -132,7 +132,7 @@ Terminates the Worker thread to stop it from receiving messages.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -183,8 +183,8 @@ Called when the Worker thread receives a message sent by the host thread through
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## onmessageerror
 
@@ -215,8 +215,8 @@ Called when the Worker thread receives a message that cannot be deserialized. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## postMessage
 
@@ -247,8 +247,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -303,8 +303,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -354,15 +354,15 @@ Sends a message from the Worker thread to the main thread by transferring object
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | message | Object | Yes | Data to be sent to the main thread. The data object must be sequenceable or sendable. For details about the supported sequenceable types, see Sequenceable Data Types. For details about the supported sendable types, see Sendable Data Types. |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | Yes | Priority of the Worker EventHandler. |
+| priority | [Priority](arkts-arkts-worker-priority-e.md) | Yes | Priority of the Worker EventHandler. |
 | transfer | ArrayBuffer[] | No | ArrayBuffer instance holding an array of objects for which the ownership is transferred to the main thread. After the transfer, the objects are available only in the main thread. The array cannot be null. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## postMessageWithSharedSendable
 
@@ -393,8 +393,8 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 

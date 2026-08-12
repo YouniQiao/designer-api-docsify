@@ -1,10 +1,10 @@
 # File
 
-File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如  
-[Image](arkts-arkdata-unifieddatachannel-image-c.md)、[Video](arkts-arkdata-unifieddatachannel-video-c.md)、  
-[Folder](arkts-arkdata-unifieddatachannel-folder-c.md)等具体子类。
+File类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)的子类，也是文件类型数据的基类，用于描述文件类型数据，推荐开发者优先使用File的子类描述数据，如  
+[Image](arkts-arkdata-unifieddatachannel-image-c.md#Image)、[Video](arkts-arkdata-unifieddatachannel-video-c.md#Video)、  
+[Folder](arkts-arkdata-unifieddatachannel-folder-c.md#Folder)等具体子类。
 
-**继承/实现关系：** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
+**继承/实现关系：** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)
 
 **起始版本：** 10
 
@@ -75,9 +75,9 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 ```
 
 用于拖拽场景的URI授权策略。默认值为READ+WRITE+PERSIST（读+写+持久化授权），只针对单个record使用，优先级最高，具体策略见  
-[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)。
+[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md#UriPermission)。
 
-**类型：** Array&lt;UriPermission&gt;
+**类型：** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
 
 **起始版本：** 26.0.0
 

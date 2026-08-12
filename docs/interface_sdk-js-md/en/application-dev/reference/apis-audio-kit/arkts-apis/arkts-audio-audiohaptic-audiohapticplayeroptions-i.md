@@ -13,7 +13,7 @@ Describes the options for the audio-haptic player.
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from 'kits/@kit.AudioKit';
+import { audioHaptic } from '@kit.AudioKit';
 ```
 
 ## muteAudio

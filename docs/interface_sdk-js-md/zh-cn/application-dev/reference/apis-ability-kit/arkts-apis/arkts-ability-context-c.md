@@ -2,7 +2,7 @@
 
 Context是Stage模型的上下文基类，主要用于访问特定应用程序的资源，以及执行应用级操作的回调。
 
-**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
+**继承/实现关系：** Context extends [BaseContext](BaseContext)
 
 **起始版本：** 9
 
@@ -42,7 +42,30 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 指定数据加密等级的上下文。 |
+| [Context](arkts-ability-context-c.md) | 指定数据加密等级的上下文。 |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let areaMode: contextConstant.AreaMode = contextConstant.AreaMode.EL2;
+    let areaModeContext: common.Context;
+    try {
+      // 创建特定数据加密级别的应用上下文
+      areaModeContext = this.context.createAreaModeContext(areaMode);
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+    hilog.error(0x0000, 'testTag', 'Failed to create area mode context. Code: %{public}d, message: %{public}s', err.code, err.message);
+    }
+  }
+}
+```
 
 ## createDisplayContext
 
@@ -56,8 +79,8 @@ ArkTS-Sta:
 createDisplayContext(displayId: long): Context
 ```
 
-根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md/arkts-localization-resourcemanager-screendensity-e.md)和屏幕方向  
-[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md/arkts-localization-resourcemanager-direction-e.md)）的应用上下文。
+根据指定的物理屏幕ID创建带有屏幕信息（包括屏幕密度[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity)和屏幕方向  
+[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md#Direction)）的应用上下文。
 
 **起始版本：** 15
 
@@ -81,13 +104,35 @@ createDisplayContext(displayId: long): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 带有指定物理屏幕信息的上下文。 |
+| [Context](arkts-ability-context-c.md) | 带有指定物理屏幕信息的上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    let displayContext: common.Context;
+    try {
+      // displayId通过display.getDefaultDisplay()等接口获取，详见屏幕管理开发指导
+      displayContext = this.context.createDisplayContext(0);
+    } catch (error) {
+      const err: BusinessError = error as BusinessError;
+      hilog.error(0x0000, 'testTag', 'Failed to create display context. Code: %{public}d, message: %{public}s', err.code, err.message);
+    }
+  }
+}
+```
 
 ## createModuleContext
 
@@ -108,7 +153,7 @@ createModuleContext(moduleName: string): Context
 
 **废弃版本：** 12
 
-**替代接口：** [@ohos.app.ability.application:application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext)
+**替代接口：** [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,13 +173,33 @@ createModuleContext(moduleName: string): Context
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 模块的上下文。 |
+| [Context](arkts-ability-context-c.md) | 模块的上下文。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let moduleContext: common.Context;
+    try {
+      // 根据模块名创建上下文
+      moduleContext = this.context.createModuleContext('entry');
+    } catch (error) {
+      console.error(`createModuleContext failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getApplicationContext
 
@@ -166,7 +231,27 @@ getApplicationContext(): ApplicationContext
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let applicationContext: common.Context;
+    try {
+      // 获取当前应用上下文
+      applicationContext = this.context.getApplicationContext();
+    } catch (error) {
+      console.error(`Failed to get application context. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## getGroupDir
 
@@ -199,8 +284,31 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let getGroupDirContext: common.Context = this.context;
+
+    // 通过Group ID获取共享目录（callback方式）
+    getGroupDirContext.getGroupDir("1", (err: BusinessError<void> | null, data: String | undefined) => {
+      if (err) {
+        console.error(`getGroupDir failed, err: ${JSON.stringify(err)}`);
+      } else {
+        console.info(`getGroupDir result is: ${JSON.stringify(data)}`);
+      }
+    });
+  }
+}
+```
 
 ## getGroupDir
 
@@ -238,8 +346,31 @@ getGroupDir(dataGroupID: string): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+
+## 示例
+
+```TypeScript
+import { common, UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let groupId = '1';
+    let getGroupDirContext: common.Context = this.context;
+    try {
+      // 通过Group ID获取共享目录（Promise方式）
+      getGroupDirContext.getGroupDir(groupId).then(data => {
+        console.info('getGroupDir result:' + data);
+      })
+    } catch (error) {
+      console.error(`Failed to get group directory. Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## isContextOf
 
@@ -273,6 +404,22 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 | --- | --- |
 | boolean | 是否为指定类型的上下文。返回true表示Context类型为指定类型，返回false表示Context类型匹配失败。 |
 
+## 示例
+
+```TypeScript
+import { UIAbility, contextConstant } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    hilog.info(0x0000, 'testTag', `%{public}s`, 'Ability onCreate');
+    // 判断当前Context是否为指定的ContextType类型
+    let result = this.context.isContextOf(contextConstant.ContextType.UIABILITY_CONTEXT);
+    hilog.info(0x0000, 'testTag', `match contextType result is:%{public}s`, JSON.stringify(result));
+  }
+}
+```
+
 ## applicationInfo
 
 ```TypeScript
@@ -301,7 +448,7 @@ applicationInfo: ApplicationInfo
 area: contextConstant.AreaMode
 ```
 
-文件分区信息，按加密等级[AreaMode](arkts-ability-contextconstant-areamode-e.md)进行分区。
+文件分区信息，按加密等级[AreaMode](./../@ohos.app.ability.contextConstant:contextConstant.areaMode)进行分区。
 
 **类型：** contextConstant.AreaMode
 
@@ -323,7 +470,7 @@ area: contextConstant.AreaMode
 bundleCodeDir: string
 ```
 
-安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](arkts-ability-context-c.md#resourcemanager)访问资源，详情参考  
+安装包目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)访问资源，详情参考  
 [应用沙箱目录](../../../file-management/app-sandbox-directory.md)。
 
 **类型：** string

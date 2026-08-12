@@ -91,7 +91,7 @@ If no value is passed in, the current emitter position is retained. Two valid va
 
 Value range of **x** and **y**: (-∞, +∞).
 
-**Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
+**Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -115,7 +115,7 @@ Size of the emit window. Only the number type is supported.
 
 If no value is passed in, the current emitter window size is retained. Two valid values greater than 0 must be passed in; if either is an invalid value, **size** will not take effect.
 
-**Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**Type:** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **Since:** 12
 

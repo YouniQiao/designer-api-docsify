@@ -1,8 +1,8 @@
 # AlertDialogParamWithOptions
 
-Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md).
+Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam).
 
-**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
+**Inheritance/Implementation:** AlertDialogParamWithOptions extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
 **Since:** 10
 
@@ -20,7 +20,7 @@ buttonDirection?: DialogButtonDirection
 
 Button layout direction. The default value is **DialogButtonDirection.AUTO**. You are advised to use the auto mode for more than three buttons. (Vertical layout is used for more than two buttons, typically accommodating more buttons.) In non-auto mode, more than three buttons may not be completely displayed, and the buttons that exceed the display range will be truncated.
 
-**Type:** [DialogButtonDirection](arkts-arkui-alertdialog-dialogbuttondirection-e.md)
+**Type:** [DialogButtonDirection](arkts-arkui-dialogbuttondirection-e.md)
 
 **Default:** DialogButtonDirection.AUTO
 
@@ -44,7 +44,7 @@ buttons: Array<AlertDialogButtonOptions>
 
 Buttons in the dialog box.
 
-**Type:** Array&lt;AlertDialogButtonOptions&gt;
+**Type:** Array&lt;[AlertDialogButtonOptions](arkts-arkui-alertdialogbuttonoptions-i.md)&gt;
 
 **Since:** 10
 

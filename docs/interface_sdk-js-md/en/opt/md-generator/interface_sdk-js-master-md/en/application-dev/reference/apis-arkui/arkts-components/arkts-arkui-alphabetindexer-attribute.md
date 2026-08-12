@@ -1,14 +1,14 @@
 # AlphabetIndexer properties/events
 
-When the [width](arkts-arkui-commonmethod-c.md#width) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+When the [width](CommonMethod#width(value: Length)) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
-The default value of the [padding](arkts-arkui-commonmethod-c.md#padding) attribute is 4 vp.
+The default value of the [padding](CommonMethod#padding) attribute is 4 vp.
 
 The [maxFontScale](TextAttribute#maxFontScale) and [minFontScale](TextAttribute#minFontScale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](common), the following events are supported.
 
 **Inheritance/Implementation:** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
 
@@ -55,7 +55,7 @@ When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 
 
 > **NOTE：**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
 
 **Since:** 11
 
@@ -139,7 +139,7 @@ Sets the text style for unselected items.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| value | [Font](#font) | Yes |
 
 ## itemBorderRadius
 
@@ -267,7 +267,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 **Deprecated since:** 8
 
-**Substitutes:** onSelect
+**Substitutes:** [onSelect](onSelect)
 
 <!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute-End-->
 
@@ -277,7 +277,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (index: number) =&gt; void | Yes |
+| callback | (index: number) = & gt; void | Yes |
 
 ## popupBackground
 
@@ -378,7 +378,7 @@ Sets the text style for the primary index item in the pop-up window.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| value | [Font](#font) | Yes |
 
 ## popupItemBackgroundColor
 
@@ -450,7 +450,7 @@ Sets the text style for the secondary index item in the pop-up window.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| value | [Font](#font) | Yes |
 
 ## popupPosition
 
@@ -635,7 +635,7 @@ Sets the text style for the selected item.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| value | [Font](#font) | Yes |
 
 ## usingPopup
 

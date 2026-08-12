@@ -14,7 +14,7 @@ compile(pattern: string, flags?: string): this
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pattern | string | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
 | flags | string | No |
 
 **Return value:**
@@ -43,7 +43,7 @@ Executes a search on a string using a regular expression pattern, and returns an
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RegExpExecArray](../../apis-arkts/arkts-apis/arkts-arkts-regexp-regexpexecarray-c.md) |
+| [RegExpExecArray](arkts-lib-es5-regexpexecarray-i.md) |
 
 ## test
 

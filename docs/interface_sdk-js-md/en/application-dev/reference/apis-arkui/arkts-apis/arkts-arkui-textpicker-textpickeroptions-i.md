@@ -20,7 +20,7 @@ Width of each column in the picker.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the text length exceeds the column width, the text will be truncated.&lt;/p&gt;
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)[]
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)[]
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 Data selection range of the picker.Support the display of pictures, text and pictures plus text, or multi column plain text.
 
-**Type:** string[] \| string[][] \| Resource \| TextPickerRangeContent[] \| TextCascadePickerRangeContent[]
+**Type:** string[] \| string[][] \| [Resource](arkts-arkui-resource-t.md) \| [TextPickerRangeContent](arkts-arkui-textpicker-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 23
 
@@ -60,7 +60,7 @@ selected?: int | int[] | Bindable<int> | Bindable<int[]>
 
 Current selected subscript.
 
-**Type:** int \| int[] \| Bindable&lt;int&gt; \| Bindable&lt;int[]&gt;
+**Type:** int \| int[] \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int[]&gt;
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ value?: BindableResourceStr | BindableResourceStrArray
 
 Value of the current selection.Only valid when only text is displayed.
 
-**Type:** [BindableResourceStr](arkts-arkui-bindableresourcestr-t.md) \| BindableResourceStrArray
+**Type:** [BindableResourceStr](arkts-arkui-bindableresourcestr-t.md) \| [BindableResourceStrArray](arkts-arkui-bindableresourcestrarray-t.md)
 
 **Since:** 23
 

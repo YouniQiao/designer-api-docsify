@@ -7,13 +7,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback
 ```
 
 根据电话号码查询联系人。使用callback异步回调。该接口仅返回联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**替代接口：** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -26,7 +26,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | phoneNumber | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -52,7 +52,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callb
 ```
 
 根据电话号码查询联系人。使用callback异步回调。该接口仅返回联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 10
 
@@ -68,14 +68,14 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callb
 | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | phoneNumber | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -105,13 +105,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callbac
 ```
 
 根据电话号码和holder查询联系人，使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**替代接口：** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -125,7 +125,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callbac
 | --- | --- | --- |
 | phoneNumber | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -155,7 +155,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 ```
 
 根据电话号码和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 10
 
@@ -172,14 +172,14 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | phoneNumber | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -213,13 +213,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttribute
 ```
 
 根据电话号码和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**替代接口：** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -233,7 +233,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttribute
 | --- | --- | --- |
 | phoneNumber | string | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -260,7 +260,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs
 ```
 
 根据电话号码和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 10
 
@@ -277,14 +277,14 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | phoneNumber | string | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -316,13 +316,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: 
 ```
 
 根据电话号码、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**替代接口：** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -337,7 +337,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: 
 | phoneNumber | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 ## 示例
 
@@ -369,7 +369,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 ```
 
 根据电话号码、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 10
 
@@ -387,14 +387,14 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 | phoneNumber | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -430,13 +430,13 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?
 ```
 
 根据电话号码、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContactsByPhoneNumber](arkts-contacts-contact-querycontactsbyphonenumber-f.md#querycontactsbyphonenumber)(context:
+**替代接口：** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -456,7 +456,7 @@ function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 ## 示例
 
@@ -483,7 +483,7 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 ```
 
 根据电话号码、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、phoneNumbers属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
+[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。应用在后台调用此接口获取联系人信息必须要申请对应的长时任务。
 
 **起始版本：** 10
 
@@ -506,14 +506,14 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

@@ -18,7 +18,7 @@ static readonly DIRECTION: WritableSystemEnvKey<Direction>
 
 Defines the system environment key direction.
 
-**Type:** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;[Direction](../arkts-apis/arkts-arkui-direction-e.md)&gt;
+**Type:** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;Direction&gt;
 
 **Since:** 26.0.0
 

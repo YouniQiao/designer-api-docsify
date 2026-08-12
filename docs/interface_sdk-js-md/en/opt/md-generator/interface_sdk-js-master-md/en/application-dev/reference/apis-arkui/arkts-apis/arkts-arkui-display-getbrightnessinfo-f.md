@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getBrightnessInfo
@@ -13,7 +13,7 @@ function getBrightnessInfo(displayId: number): BrightnessInfo
 ```
 
 Obtains the screen brightness information of a display. If the screen does not support HDR, the  
-**currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
+**currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo)object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value.
 
 **Since:** 22
 
@@ -39,9 +39,9 @@ Obtains the screen brightness information of a display. If the screen does not s
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1400004](../errorcode-display.md#1400004-parameter-error) |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [1400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

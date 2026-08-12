@@ -33,7 +33,7 @@ function createData(mimeType: string, value: ValueType): PasteData
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 
 ## createData
@@ -42,7 +42,7 @@ function createData(mimeType: string, value: ValueType): PasteData
 function createData(data: Record<string, ValueType>): PasteData
 ```
 
-构建一个包含多个类型数据的剪贴板内容对象，支持一次创建多个MIME类型的数据条目。调用此方法后，系统将解析Record中的多个key-value对，创建多个PasteDataRecord条目，首个MIME类型作为默认类型。非默认类型数据需通过[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)接口读取。应用需要将多种不同类型的数据(如文本、URI、HTML等)同时复制到剪贴板时，可使用此接口一次性构建包含多个MIME类型数据的剪贴板内容对象。
+构建一个包含多个类型数据的剪贴板内容对象，支持一次创建多个MIME类型的数据条目。调用此方法后，系统将解析Record中的多个key-value对，创建多个PasteDataRecord条目，首个MIME类型作为默认类型。非默认类型数据需通过[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getData)接口读取。应用需要将多种不同类型的数据(如文本、URI、HTML等)同时复制到剪贴板时，可使用此接口一次性构建包含多个MIME类型数据的剪贴板内容对象。
 
 **起始版本：** 14
 
@@ -54,7 +54,7 @@ function createData(data: Record<string, ValueType>): PasteData
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, ValueType&gt; | 是 |
+| data | Record & lt;string, ValueType & gt; | 是 |
 
 **返回值：**
 
@@ -66,4 +66,4 @@ function createData(data: Record<string, ValueType>): PasteData
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

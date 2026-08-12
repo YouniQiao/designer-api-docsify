@@ -8,7 +8,7 @@ The **Notification** module provides notification management capabilities, cover
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.notificationManager:notificationManager](arkts-notificationmanager.md)
+**Substitutes:** [notificationManager](arkts-notificationmanager.md#notificationManager)
 
 <!--Device-unnamed-declare namespace notification--><!--Device-unnamed-declare namespace notification-End-->
 
@@ -39,8 +39,8 @@ The **Notification** module provides notification management capabilities, cover
 | [getSlots](arkts-notification-notification-getslots-depr-f.md#getslots-1) | Obtains all notification slots of this application. This API uses a promise to return the result. |
 | [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled) | Checks whether this device supports distributed notifications. This API uses an asynchronous callback to return the result. |
 | [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md#isdistributedenabled-1) | Checks whether this device supports distributed notifications. This API uses a promise to return the result. |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using  [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification.This API uses an asynchronous callback to return the result. |
-| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate-1) | Checks whether a specified template is supported before using  [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md) to publish a notification.This API uses a promise to return the result. |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate) | Checks whether a specified template is supported before using  [NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.This API uses an asynchronous callback to return the result. |
+| [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md#issupporttemplate-1) | Checks whether a specified template is supported before using  [NotificationTemplate](@link ./notification/notificationTemplate:NotificationTemplate) to publish a notification.This API uses a promise to return the result. |
 | [publish](arkts-notification-notification-publish-depr-f.md#publish) | Publishes a notification. This API uses an asynchronous callback to return the result. |
 | [publish](arkts-notification-notification-publish-depr-f.md#publish-1) | Publishes a notification. This API uses a promise to return the result. |
 | [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md#removeallslots) | Removes all notification slots. This API uses an asynchronous callback to return the result. |

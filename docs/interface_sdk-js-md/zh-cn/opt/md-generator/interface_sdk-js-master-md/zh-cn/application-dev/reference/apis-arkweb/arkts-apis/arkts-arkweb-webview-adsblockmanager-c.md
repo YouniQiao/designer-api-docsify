@@ -35,14 +35,14 @@ static addAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainSuffixes | Array&lt;string&gt; | 是 |
+| domainSuffixes | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## addAdsBlockDisallowedList
 
@@ -71,14 +71,14 @@ static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainSuffixes | Array&lt;string&gt; | 是 |
+| domainSuffixes | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## clearAdsBlockAllowedList
 
@@ -100,7 +100,7 @@ clear Ads Block Allowed list.
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## clearAdsBlockDisallowedList
 
@@ -122,7 +122,7 @@ clear Ads Block Disallowed list.
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## removeAdsBlockAllowedList
 
@@ -144,14 +144,14 @@ static removeAdsBlockAllowedList(domainSuffixes: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainSuffixes | Array&lt;string&gt; | 是 |
+| domainSuffixes | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## removeAdsBlockDisallowedList
 
@@ -173,14 +173,14 @@ static removeAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| domainSuffixes | Array&lt;string&gt; | 是 |
+| domainSuffixes | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## setAdsBlockRules
 
@@ -213,5 +213,5 @@ static setAdsBlockRules(rulesFile: string, replace: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |

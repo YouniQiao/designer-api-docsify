@@ -38,7 +38,7 @@ Component type.
 
 **废弃版本：** 12
 
-**替代接口：** Column
+**替代接口：** [Column](arkts-arkui-flexdirection-e.md#Column)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,7 +78,7 @@ Node type.
 
 **废弃版本：** 20
 
-**替代接口：** ContentSlot
+**替代接口：** [ContentSlot](ContentSlot)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

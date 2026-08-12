@@ -34,7 +34,7 @@ accessBackward(): boolean
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## accessForward
 
@@ -62,7 +62,7 @@ accessForward(): boolean
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## accessStep
 
@@ -96,8 +96,8 @@ accessStep(step: number): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## addIntelligentTrackingPreventionBypassingList
 
@@ -119,14 +119,14 @@ static addIntelligentTrackingPreventionBypassingList(hostList: Array<string>): v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hostList | Array&lt;string&gt; | 是 |
+| hostList | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## avoidVisibleViewportBottom
 
@@ -163,8 +163,8 @@ avoidVisibleViewportBottom(avoidHeight: number): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## backOrForward
 
@@ -194,8 +194,8 @@ backOrForward(step: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## backward
 
@@ -203,7 +203,7 @@ backOrForward(step: number): void
 backward(): void
 ```
 
-按照历史栈，后退一个页面。一般结合[accessBackward](arkts-arkweb-webview-webviewcontroller-c.md#accessbackward)一起使用。
+按照历史栈，后退一个页面。一般结合[accessBackward](#accessBackward)一起使用。
 
 **起始版本：** 9
 
@@ -217,7 +217,7 @@ backward(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## clearBlanklessLoadingCache
 
@@ -241,13 +241,13 @@ static clearBlanklessLoadingCache(keys?: Array<string>) : void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| keys | Array&lt;string&gt; | 否 |
+| keys | Array & lt;string & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## clearClientAuthenticationCache
 
@@ -269,7 +269,7 @@ clearClientAuthenticationCache(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## clearHistory
 
@@ -291,7 +291,7 @@ clearHistory(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## clearHostIP
 
@@ -319,7 +319,7 @@ static clearHostIP(hostName: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clearIntelligentTrackingPreventionBypassingList
 
@@ -341,7 +341,7 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## clearMatches
 
@@ -349,7 +349,7 @@ static clearIntelligentTrackingPreventionBypassingList(): void
 clearMatches(): void
 ```
 
-清除所有通过[searchAllAsync](arkts-arkweb-webview-webviewcontroller-c.md#searchallasync)匹配到的高亮字符查找结果。
+清除所有通过[searchAllAsync](#searchAllAsync)匹配到的高亮字符查找结果。
 
 **起始版本：** 9
 
@@ -363,7 +363,7 @@ clearMatches(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## clearPrefetchedResource
 
@@ -371,7 +371,7 @@ clearMatches(): void
 static clearPrefetchedResource(cacheKeyList: Array<string>): void
 ```
 
-根据指定的缓存key列表清除对应的预获取资源缓存。入参中的缓存key必须是[prefetchResource](arkts-arkweb-webview-webviewcontroller-c.md#prefetchresource)指定预获取到的资源缓存key。
+根据指定的缓存key列表清除对应的预获取资源缓存。入参中的缓存key必须是[prefetchResource](#prefetchResource)指定预获取到的资源缓存key。
 
 **起始版本：** 12
 
@@ -385,7 +385,7 @@ static clearPrefetchedResource(cacheKeyList: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cacheKeyList | Array&lt;string&gt; | 是 |
+| cacheKeyList | Array & lt;string & gt; | 是 |
 
 ## clearServiceWorkerWebSchemeHandler
 
@@ -423,7 +423,7 @@ clearSslCache(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## clearWebSchemeHandler
 
@@ -445,7 +445,7 @@ Clear all web scheme handlers for related web component.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## closeAllMediaPresentations
 
@@ -467,7 +467,7 @@ closeAllMediaPresentations(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## closeCamera
 
@@ -489,7 +489,7 @@ closeCamera(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## constructor
 
@@ -534,14 +534,14 @@ Rendering current Web page into Pdf data, return the result in async mode.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | configuration | [PdfConfiguration](arkts-arkweb-webview-pdfconfiguration-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PdfData&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## createPdf
 
@@ -569,14 +569,14 @@ Rendering current Web page into Pdf data, return the result in promise mode.
 
 | 类型 |
 | --- |
-| Promise&lt;PdfData&gt; |
+| Promise&lt;[PdfData](arkts-arkweb-webview-pdfdata-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## createWebMessagePorts
 
@@ -598,20 +598,20 @@ createWebMessagePorts(isExtentionType?: boolean): Array<WebMessagePort>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isExtentionType | boolean | 否 |
+| [isExtentionType](arkts-arkweb-webview-webmessageport-i.md) | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;WebMessagePort&gt; |
+| Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## createWebPrintDocumentAdapter
 
@@ -631,7 +631,7 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| jobName | string | 是 |
+| [jobName](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-print-printjobdata-i.md) | string | 是 |
 
 **返回值：**
 
@@ -643,8 +643,8 @@ Creates a PrintDocumentAdapter instance to provide content for printing.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## customizeSchemes
 
@@ -666,14 +666,14 @@ static customizeSchemes(schemes: Array<WebCustomScheme>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| schemes | Array&lt;WebCustomScheme&gt; | 是 |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [17100020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-注册自定义协议失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## customizeSchemes
 
@@ -695,15 +695,15 @@ static customizeSchemes(schemes: Array<WebCustomScheme>, lazyInitWebEngine: bool
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| schemes | Array&lt;WebCustomScheme&gt; | 是 |
+| schemes | Array&lt;[WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md)&gt; | 是 |
 | lazyInitWebEngine | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100020](../errorcode-webview.md#17100020-注册自定义协议失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [17100020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100020-注册自定义协议失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## deleteJavaScriptRegister
 
@@ -731,9 +731,9 @@ deleteJavaScriptRegister(name: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100008](../errorcode-webview.md#17100008-删除不存在的javascriptproxy) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100008-删除不存在的javascriptproxy) |
 
 ## enableAdsBlock
 
@@ -761,9 +761,9 @@ enableAdsBlock(enable: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## enableAdvancedSecurityMode
 
@@ -833,9 +833,9 @@ enableIntelligentTrackingPrevention(enable: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## enablePrivateNetworkAccess
 
@@ -883,7 +883,7 @@ enableSafeBrowsing(enable: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## enableWholeWebPageDrawing
 
@@ -921,7 +921,7 @@ forward(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getActiveWebEngineVersion
 
@@ -994,7 +994,7 @@ getBackForwardEntries(): BackForwardList
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getBlanklessInfoWithKey
 
@@ -1002,15 +1002,15 @@ getBackForwardEntries(): BackForwardList
 getBlanklessInfoWithKey(key: string) : BlanklessInfo
 ```
 
-获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。必须与[setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingwithkey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。
+获取页面首屏加载预测信息（详细说明见[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo)），并开始本次加载过渡帧生成，应用根据此信息确定是否需要启用无白屏加载。必须与[setBlanklessLoadingWithKey](#setBlanklessLoadingWithKey)接口配套使用，并且必须在触发加载页面的接口之前或在`onLoadIntercept`中调用。需在`WebViewController`与Web组件绑定后才能使用。
 
 > **说明：**
 > 
 > - 持久缓存容量：默认大小为30MB（约30页），可以通过接口
-> [setBlanklessLoadingCacheCapacity](arkts-arkweb-webview-webviewcontroller-c.md#setblanklessloadingcachecapacity)设置缓存容量，具体见该
+> [setBlanklessLoadingCacheCapacity](#setBlanklessLoadingCacheCapacity)设置缓存容量，具体见该
 > 接口说明。超过容量时根据LRU（Least Recently Used，淘汰不常用缓存的策略）机制更新缓存。自动清理超过7天的持久缓存数据，缓存清除后第三次加载页面开始有优化效果。
 > 
-> - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md)中的similarity）极低，请确认key值是否传递正确。
+> - 如果发现快照相似度（即[BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo)中的similarity）极低，请确认key值是否传递正确。
 > 
 > - 调用本接口后，将启用页面加载快照检测及生成过渡帧计算，会产生一定的资源开销。
 > 
@@ -1042,7 +1042,7 @@ getBlanklessInfoWithKey(key: string) : BlanklessInfo
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## getCertificate
 
@@ -1064,13 +1064,13 @@ getCertificate(): Promise<Array<cert.X509Cert>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;cert.X509Cert&gt;&gt; |
+| Promise & lt;Array & lt;cert.X509Cert & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getCertificate
 
@@ -1098,8 +1098,8 @@ getCertificate(callback: AsyncCallback<Array<cert.X509Cert>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getCustomUserAgent
 
@@ -1127,7 +1127,7 @@ getCustomUserAgent(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getDefaultUserAgent
 
@@ -1173,7 +1173,7 @@ Get whether default error page feature is enabled.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getFavicon
 
@@ -1201,7 +1201,7 @@ getFavicon(): image.PixelMap
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getHitTest
 
@@ -1213,13 +1213,13 @@ getHitTest(): WebHitTestType
 
 > **说明：**
 > 
-> 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest)替代。
+> 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](#getLastHitTest)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [webview.WebviewController#getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest)
+**替代接口：** [getLastHitTest](#getLastHitTest)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1237,7 +1237,7 @@ getHitTest(): WebHitTestType
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getHitTestValue
 
@@ -1249,13 +1249,13 @@ getHitTestValue(): HitTestValue
 
 > **说明：**
 > 
-> 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest)替代。
+> 从API version11开始支持，从API version 18开始废弃。建议使用[getLastHitTest](#getLastHitTest)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [webview.WebviewController#getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getlasthittest)
+**替代接口：** [getLastHitTest](#getLastHitTest)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1273,7 +1273,7 @@ getHitTestValue(): HitTestValue
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getLastHitTest
 
@@ -1299,7 +1299,7 @@ getLastHitTest(): HitTestValue
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getLastJavascriptProxyCallingFrameUrl
 
@@ -1327,7 +1327,7 @@ getLastJavascriptProxyCallingFrameUrl(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getLastPostMessageURL
 
@@ -1355,7 +1355,7 @@ getLastPostMessageURL(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getMediaPlaybackState
 
@@ -1383,7 +1383,7 @@ getMediaPlaybackState(): MediaPlaybackState
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getOriginalUrl
 
@@ -1411,7 +1411,7 @@ getOriginalUrl(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getPageHeight
 
@@ -1439,7 +1439,7 @@ getPageHeight(): number
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getPageOffset
 
@@ -1465,7 +1465,7 @@ getPageOffset(): ScrollOffset
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## getPrintBackground
 
@@ -1493,7 +1493,7 @@ Get whether print web page background.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getProgress
 
@@ -1519,7 +1519,7 @@ Gets the loading progress for the current page.
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## getRenderProcessMode
 
@@ -1591,7 +1591,7 @@ getScrollable(): boolean
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getSecurityLevel
 
@@ -1619,7 +1619,7 @@ getSecurityLevel(): SecurityLevel
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getSiteIsolationMode
 
@@ -1693,7 +1693,7 @@ getTitle(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getUrl
 
@@ -1721,7 +1721,7 @@ getUrl(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getUserAgent
 
@@ -1749,7 +1749,7 @@ getUserAgent(): string
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## getUserAgentClientHintsEnabled
 
@@ -1823,7 +1823,7 @@ Gets the index value of the current Web component for the management of multiple
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## hasImage
 
@@ -1845,14 +1845,14 @@ hasImage(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## hasImage
 
@@ -1880,8 +1880,8 @@ hasImage(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## initializeWebEngine
 
@@ -1917,15 +1917,15 @@ injectOfflineResources(resourceMaps: Array<OfflineResourceMap>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resourceMaps | Array&lt;OfflineResourceMap&gt; | 是 |
+| resourceMaps | Array&lt;[OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## isActiveWebEngineEvergreen
 
@@ -1973,7 +1973,7 @@ isAdsBlockEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## isAdsBlockEnabledForCurPage
 
@@ -2001,7 +2001,7 @@ isAdsBlockEnabledForCurPage(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## isAutoPreconnectEnabled
 
@@ -2049,7 +2049,7 @@ isIncognitoMode(): boolean
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## isIntelligentTrackingPreventionEnabled
 
@@ -2077,8 +2077,8 @@ isIntelligentTrackingPreventionEnabled(): boolean
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## isPrivateNetworkAccessEnabled
 
@@ -2150,15 +2150,15 @@ encoding如果为非base64（包括空值），则假定数据对安全URL字符
 | mimeType | string | 是 |
 | encoding | string | 是 |
 | baseUrl | string | 否 |
-| historyUrl | string | 否 |
+| [historyUrl](arkts-arkweb-webview-historyitem-i.md) | string | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## loadUrl
 
@@ -2181,16 +2181,16 @@ loadUrl(url: string | Resource, headers?: Array<WebHeader>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | url | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
-| headers | Array&lt;WebHeader&gt; | 否 |
+| headers | Array & lt;WebHeader & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
-| [17100003](../errorcode-webview.md#17100003-resource路径错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) |
 
 ## off('controllerAttachStateChange')
 
@@ -2211,7 +2211,7 @@ off(type: 'controllerAttachStateChange', callback?: Callback<ControllerAttachSta
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControllerAttachState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 否 |
 
 ## on('controllerAttachStateChange')
 
@@ -2232,7 +2232,7 @@ on(type: 'controllerAttachStateChange', callback: Callback<ControllerAttachState
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'controllerAttachStateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ControllerAttachState&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; | 是 |
 
 ## onActive
 
@@ -2254,7 +2254,7 @@ Let the Web active.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## onCreateNativeMediaPlayer
 
@@ -2301,7 +2301,7 @@ Let the Web inactive.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## pageDown
 
@@ -2329,8 +2329,8 @@ pageDown(bottom: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## pageUp
 
@@ -2358,8 +2358,8 @@ pageUp(top: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## pauseAllMedia
 
@@ -2381,7 +2381,7 @@ pauseAllMedia(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## pauseAllTimers
 
@@ -2403,7 +2403,7 @@ static pauseAllTimers(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## pauseMicrophone
 
@@ -2423,7 +2423,7 @@ pauseMicrophone(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## postMessage
 
@@ -2446,15 +2446,15 @@ postMessage(name: string, ports: Array<WebMessagePort>, uri: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| ports | Array&lt;WebMessagePort&gt; | 是 |
+| ports | Array&lt;[WebMessagePort](arkts-arkweb-webview-webmessageport-i.md)&gt; | 是 |
 | uri | string | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## postUrl
 
@@ -2483,9 +2483,9 @@ postUrl(url: string, postData: ArrayBuffer): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## precompileJavaScript
 
@@ -2513,14 +2513,14 @@ precompileJavaScript(url: string, script: string | Uint8Array, cacheOptions: Cac
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## prefetchPage
 
@@ -2555,14 +2555,14 @@ prefetchPage(url: string, additionalHeaders?: Array<WebHeader>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | url | string | 是 |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 |
+| additionalHeaders | Array & lt;WebHeader & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## prefetchPage
 
@@ -2590,15 +2590,15 @@ Prefetch the resources required by the page, but will not execute js or render t
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | url | string | 是 |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 |
+| additionalHeaders | Array & lt;WebHeader & gt; | 否 |
 | prefetchOptions | [PrefetchOptions](arkts-arkweb-webview-prefetchoptions-c.md) | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## prefetchResource
 
@@ -2608,7 +2608,7 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 ```
 
 根据指定的请求信息和附加的HTTP请求头去预获取资源请求，存入内存缓存，并指定其缓存key和有效期，以加快加载速度。目前仅支持Content-Type为application/x-www-form-urlencoded的POST请求。最多可以预获取6个POST请求。如果要预获取第7个，请通过  
-[clearPrefetchedResource](arkts-arkweb-webview-webviewcontroller-c.md#clearprefetchedresource)清除不需要的POST请求缓存，否则会自动清除最早预获取的POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。
+[clearPrefetchedResource](#clearPrefetchedResource)清除不需要的POST请求缓存，否则会自动清除最早预获取的POST缓存。如果要使用预获取的资源缓存，开发者需要在正式发起的POST请求的请求头中增加键值“ArkWebPostCacheKey”，其内容为对应缓存的cacheKey。
 
 内存缓存中的资源由内核自动管理，当注入的资源过多导致内存压力过大，内核自动释放未使用的资源，应避免注入大量资源到内存缓存中。
 
@@ -2625,7 +2625,7 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | request | [RequestInfo](../../apis-ability-kit/arkts-apis/arkts-ability-dialogrequest-requestinfo-i.md) | 是 |
-| additionalHeaders | Array&lt;WebHeader&gt; | 否 |
+| additionalHeaders | Array & lt;WebHeader & gt; | 否 |
 | cacheKey | string | 否 |
 | cacheValidTime | number | 否 |
 
@@ -2633,8 +2633,8 @@ static prefetchResource(request: RequestInfo, additionalHeaders?: Array<WebHeade
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## prepareForPageLoad
 
@@ -2664,8 +2664,8 @@ static prepareForPageLoad(url: string, preconnectable: boolean, numSockets: numb
 
 | 错误码ID |
 | --- |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
-| [17100013](../errorcode-webview.md#17100013-预连接时输入socket数目无效) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
+| [17100013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100013-预连接时输入socket数目无效) |
 
 ## refresh
 
@@ -2687,7 +2687,7 @@ refresh(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## refresh
 
@@ -2713,7 +2713,7 @@ refresh(ignoreCache: boolean): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## registerJavaScriptProxy
 
@@ -2736,18 +2736,18 @@ Registers the JavaScript object and method list.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| jsObject | object | 是 |
+| [jsObject](arkts-arkweb-web-javascriptproxy-i.md) | object | 是 |
 | name | string | 是 |
-| methodList | Array&lt;string&gt; | 是 |
-| asyncMethodList | Array&lt;string&gt; | 否 |
+| methodList | Array & lt;string & gt; | 是 |
+| asyncMethodList | Array & lt;string & gt; | 否 |
 | permission | string | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## removeAllCache
 
@@ -2773,7 +2773,7 @@ static removeAllCache(clearRom: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## removeCache
 
@@ -2801,8 +2801,8 @@ removeCache(clearRom: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## removeIntelligentTrackingPreventionBypassingList
 
@@ -2824,14 +2824,14 @@ static removeIntelligentTrackingPreventionBypassingList(hostList: Array<string>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hostList | Array&lt;string&gt; | 是 |
+| hostList | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## requestFocus
 
@@ -2853,7 +2853,7 @@ requestFocus(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## restoreWebState
 
@@ -2881,8 +2881,8 @@ restoreWebState(state: Uint8Array) : void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## resumeAllMedia
 
@@ -2904,7 +2904,7 @@ resumeAllMedia(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## resumeAllTimers
 
@@ -2926,7 +2926,7 @@ static resumeAllTimers(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## resumeMicrophone
 
@@ -2947,7 +2947,7 @@ resumeMicrophone(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## runJavaScript
 
@@ -2981,15 +2981,15 @@ runJavaScript(script: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100003](../errorcode-webview.md#17100003-resource路径错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) |
 
 ## runJavaScript
 
@@ -3024,9 +3024,9 @@ runJavaScript(script: string, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100003](../errorcode-webview.md#17100003-resource路径错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) |
 
 ## runJavaScriptExt
 
@@ -3054,14 +3054,14 @@ runJavaScriptExt(script: string | ArrayBuffer): Promise<JsMessageExt>
 
 | 类型 |
 | --- |
-| Promise&lt;JsMessageExt&gt; |
+| Promise&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## runJavaScriptExt
 
@@ -3084,14 +3084,14 @@ runJavaScriptExt(script: string | ArrayBuffer, callback: AsyncCallback<JsMessage
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | script | string \| ArrayBuffer | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;JsMessageExt&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[JsMessageExt](arkts-arkweb-webview-jsmessageext-c.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## scrollBy
 
@@ -3121,8 +3121,8 @@ scrollBy(deltaX: number, deltaY: number, duration?: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## scrollByWithResult
 
@@ -3155,8 +3155,8 @@ scrollByWithResult(deltaX: number, deltaY: number): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## scrollTo
 
@@ -3188,8 +3188,8 @@ Scrolls the page to the specified absolute position within a specified period.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## searchAllAsync
 
@@ -3218,8 +3218,8 @@ searchAllAsync(searchString: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## searchNext
 
@@ -3247,8 +3247,8 @@ searchNext(forward: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## serializeWebState
 
@@ -3276,7 +3276,7 @@ Serialize the access stack of the web, that is, the history of access.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setActiveWebEngineVersion
 
@@ -3352,8 +3352,8 @@ setAudioMuted(mute: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setAutoPreconnect
 
@@ -3399,7 +3399,7 @@ setBackForwardCacheOptions(options: BackForwardCacheOptions): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setBlanklessLoadingCacheCapacity
 
@@ -3431,7 +3431,7 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## setBlanklessLoadingWithKey
 
@@ -3439,11 +3439,11 @@ static setBlanklessLoadingCacheCapacity(capacity: number) : number
 setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCode
 ```
 
-设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey)接口配套使用。
+设置无白屏加载是否启用，本接口必须与[getBlanklessInfoWithKey](#getBlanklessInfoWithKey)接口配套使用。
 
 > **说明：**
 > 
-> - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getblanklessinfowithkey)。
+> - 需在触发页面加载的接口之后调用，其他约束同[getBlanklessInfoWithKey](#getBlanklessInfoWithKey)。
 > 
 > - 页面加载必须在调用本接口的组件中进行。
 > 
@@ -3475,7 +3475,7 @@ setBlanklessLoadingWithKey(key: string, is_start: boolean) : WebBlanklessErrorCo
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## setBlanklessLoadingWithParams
 
@@ -3513,7 +3513,7 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## setConnectionTimeout
 
@@ -3541,7 +3541,7 @@ static setConnectionTimeout(timeout: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setCustomUserAgent
 
@@ -3569,8 +3569,8 @@ setCustomUserAgent(userAgent: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setDownloadDelegate
 
@@ -3598,7 +3598,7 @@ setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setErrorPageEnabled
 
@@ -3624,7 +3624,7 @@ setErrorPageEnabled(enable: boolean): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setHostIP
 
@@ -3654,7 +3654,7 @@ static setHostIP(hostName: string, address: string, aliveTime: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setHttpDns
 
@@ -3683,7 +3683,7 @@ static setHttpDns(secureDnsMode: SecureDnsMode, secureDnsConfig: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setNetworkAvailable
 
@@ -3711,8 +3711,8 @@ setNetworkAvailable(enable: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setPathAllowingUniversalAccess
 
@@ -3763,14 +3763,14 @@ setPathAllowingUniversalAccess放开目录的跨域访问限制是一个高风�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pathList | Array&lt;string&gt; | 是 |
+| pathList | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setPrintBackground
 
@@ -3798,8 +3798,8 @@ Set whether print web page background.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setRenderProcessMode
 
@@ -3827,7 +3827,7 @@ Set render process mode of the ArkWeb.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setScrollable
 
@@ -3856,8 +3856,8 @@ setScrollable(enable: boolean, type?: ScrollType): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setScrollbarMode
 
@@ -3866,7 +3866,7 @@ static setScrollbarMode(scrollbarMode: ScrollbarMode): void
 ```
 
 在Web页面场景，设置全局滚动条模式。不显式调用时，默认为  
-[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md)（非常驻滚动条）。
+[ScrollbarMode.OVERLAY_LAYOUT_SCROLLBAR](arkts-arkweb-webview-scrollbarmode-e.md#ScrollbarMode)（非常驻滚动条）。
 
 > **说明：**
 > 
@@ -3916,7 +3916,7 @@ Set web scheme handler for specific scheme. This is used for service worker.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setSiteIsolationMode
 
@@ -3942,7 +3942,7 @@ Set the site isolation mode.
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setSocketIdleTimeout
 
@@ -3988,7 +3988,7 @@ Set the WebSoftKeyboardBehaviorMode to decide whether the keyboard will be shown
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setUrlTrustList
 
@@ -4016,8 +4016,8 @@ Set the URL trust list for the ArkWeb.When the URL trust list has been set, only
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setUrlTrustList
 
@@ -4051,8 +4051,8 @@ Example of the urlTrustList:
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## setUserAgentClientHintsEnabled
 
@@ -4095,7 +4095,7 @@ static setUserAgentForHosts(userAgent: string, hosts : Array<string>) : void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | userAgent | string | 是 |
-| hosts | Array&lt;string&gt; | 是 |
+| hosts | Array & lt;string & gt; | 是 |
 
 ## setUserAgentMetadata
 
@@ -4148,7 +4148,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setWebDebuggingAccess
 
@@ -4182,7 +4182,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 
 | 错误码ID |
 | --- |
-| [17100023](../errorcode-webview.md#17100023-使用了不被允许的端口号) |
+| [17100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100023-使用了不被允许的端口号) |
 
 ## setWebDestroyMode
 
@@ -4231,8 +4231,8 @@ Set web scheme handler for specific scheme. This is only used for related web co
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## slideScroll
 
@@ -4261,8 +4261,8 @@ slideScroll(vx: number, vy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## startCamera
 
@@ -4285,7 +4285,7 @@ startCamera(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## startDownload
 
@@ -4313,8 +4313,8 @@ startDownload(url: string): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## stop
 
@@ -4336,7 +4336,7 @@ stop(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## stopAllMedia
 
@@ -4358,7 +4358,7 @@ stopAllMedia(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## stopCamera
 
@@ -4380,7 +4380,7 @@ stopCamera(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## stopMicrophone
 
@@ -4400,7 +4400,7 @@ stopMicrophone(): void
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## storeWebArchive
 
@@ -4429,15 +4429,15 @@ storeWebArchive(baseName: string, autoName: boolean): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100003](../errorcode-webview.md#17100003-resource路径错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) |
 
 ## storeWebArchive
 
@@ -4467,9 +4467,9 @@ storeWebArchive(baseName: string, autoName: boolean, callback: AsyncCallback<str
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
-| [17100003](../errorcode-webview.md#17100003-resource路径错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100003-resource路径错误) |
 
 ## terminateRenderProcess
 
@@ -4495,7 +4495,7 @@ Destroy the rendering process.Calling this interface will actively destroy the a
 
 | 错误码ID |
 | --- |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## trimMemoryByPressureLevel
 
@@ -4523,7 +4523,7 @@ static trimMemoryByPressureLevel(level: PressureLevel): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## waitForAttached
 
@@ -4549,7 +4549,7 @@ Wait for the controller to attach a web component until timeout.
 
 | 类型 |
 | --- |
-| Promise&lt;ControllerAttachState&gt; |
+| Promise&lt;[ControllerAttachState](arkts-arkweb-webview-controllerattachstate-e.md)&gt; |
 
 ## warmupServiceWorker
 
@@ -4577,7 +4577,7 @@ static warmupServiceWorker(url: string): void
 
 | 错误码ID |
 | --- |
-| [17100002](../errorcode-webview.md#17100002-url格式错误) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) |
 
 ## webPageSnapshot
 
@@ -4608,7 +4608,7 @@ webPageSnapshot(info: SnapshotInfo, callback: AsyncCallback<SnapshotResult>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [SnapshotInfo](arkts-arkweb-webview-snapshotinfo-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SnapshotResult&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md)&gt; | 是 |
 
 ## zoom
 
@@ -4630,15 +4630,15 @@ zoom(factor: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| factor | number | 是 |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100004](../errorcode-webview.md#17100004-功能开关未打开) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-功能开关未打开) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## zoomIn
 
@@ -4660,8 +4660,8 @@ zoomIn(): void
 
 | 错误码ID |
 | --- |
-| [17100004](../errorcode-webview.md#17100004-功能开关未打开) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-功能开关未打开) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
 
 ## zoomOut
 
@@ -4683,5 +4683,5 @@ zoomOut(): void
 
 | 错误码ID |
 | --- |
-| [17100004](../errorcode-webview.md#17100004-功能开关未打开) |
-| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |
+| [17100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100004-功能开关未打开) |
+| [17100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) |

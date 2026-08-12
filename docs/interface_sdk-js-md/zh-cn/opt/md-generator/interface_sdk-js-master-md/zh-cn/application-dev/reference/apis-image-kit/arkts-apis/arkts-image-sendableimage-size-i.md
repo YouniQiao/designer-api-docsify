@@ -4,7 +4,7 @@
 
 继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
 
-**继承/实现关系：** Size extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**继承/实现关系：** Size extends [lang.ISendable](lang.ISendable)
 
 **起始版本：** 12
 

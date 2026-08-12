@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## appUsagePriorityGroup

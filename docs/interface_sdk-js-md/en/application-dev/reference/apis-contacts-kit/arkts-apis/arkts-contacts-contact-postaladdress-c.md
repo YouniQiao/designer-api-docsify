@@ -13,7 +13,7 @@ Defines a contact's postal address.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## ADDR_HOME

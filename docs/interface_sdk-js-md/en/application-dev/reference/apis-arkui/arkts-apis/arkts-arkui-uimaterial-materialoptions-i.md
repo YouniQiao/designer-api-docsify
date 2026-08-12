@@ -13,7 +13,7 @@ Define the interface containing various material parameters.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## type
@@ -24,7 +24,7 @@ type?: MaterialType
 
 The type of the material.
 
-**Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
+**Type:** MaterialType
 
 **Default:** uiMaterial.MaterialType.NONE
 

@@ -12,7 +12,7 @@ Obtains the notification slots of a specified application.This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlotsByBundle
+**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,8 +26,8 @@ Obtains the notification slots of a specified application.This API uses an async
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Yes |
 
 
 ## getSlotsByBundle
@@ -42,7 +42,7 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlotsByBundle
+**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -56,10 +56,10 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md)&gt;&gt; |
+| Promise&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; |

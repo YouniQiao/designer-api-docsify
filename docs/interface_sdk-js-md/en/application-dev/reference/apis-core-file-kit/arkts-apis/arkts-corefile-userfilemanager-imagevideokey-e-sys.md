@@ -8,7 +8,7 @@ Defines the key information about an image or video file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md)
+**Substitutes:** [PhotoKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys)
 
 <!--Device-userFileManager-enum ImageVideoKey--><!--Device-userFileManager-enum ImageVideoKey-End-->
 
@@ -30,7 +30,7 @@ URI of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#uri)
+**Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#URI)
 
 <!--Device-ImageVideoKey-URI--><!--Device-ImageVideoKey-URI-End-->
 
@@ -52,7 +52,7 @@ Type of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#photo_type)
+**Substitutes:** [PHOTO_TYPE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#PHOTO_TYPE)
 
 <!--Device-ImageVideoKey-FILE_TYPE--><!--Device-ImageVideoKey-FILE_TYPE-End-->
 
@@ -74,7 +74,7 @@ File name displayed.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.DISPLAY_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#display_name)
+**Substitutes:** [DISPLAY_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DISPLAY_NAME)
 
 <!--Device-ImageVideoKey-DISPLAY_NAME--><!--Device-ImageVideoKey-DISPLAY_NAME-End-->
 
@@ -96,7 +96,7 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_added)
+**Substitutes:** [DATE_ADDED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DATE_ADDED)
 
 <!--Device-ImageVideoKey-DATE_ADDED--><!--Device-ImageVideoKey-DATE_ADDED-End-->
 
@@ -118,7 +118,7 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys#DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_modified)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DATE_MODIFIED)
 
 <!--Device-ImageVideoKey-DATE_MODIFIED--><!--Device-ImageVideoKey-DATE_MODIFIED-End-->
 
@@ -140,7 +140,7 @@ Title of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.TITLE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#title)
+**Substitutes:** [TITLE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#TITLE)
 
 <!--Device-ImageVideoKey-TITLE--><!--Device-ImageVideoKey-TITLE-End-->
 
@@ -162,7 +162,7 @@ Duration, in ms.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.DURATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#duration)
+**Substitutes:** [DURATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DURATION)
 
 <!--Device-ImageVideoKey-DURATION--><!--Device-ImageVideoKey-DURATION-End-->
 
@@ -184,7 +184,7 @@ Image width, in pixels.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.WIDTH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#width)
+**Substitutes:** [WIDTH](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#WIDTH)
 
 <!--Device-ImageVideoKey-WIDTH--><!--Device-ImageVideoKey-WIDTH-End-->
 
@@ -206,7 +206,7 @@ Image height, in pixels.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.HEIGHT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#height)
+**Substitutes:** [HEIGHT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#HEIGHT)
 
 <!--Device-ImageVideoKey-HEIGHT--><!--Device-ImageVideoKey-HEIGHT-End-->
 
@@ -228,7 +228,7 @@ Date when the file (photo) was taken. The value is the number of seconds elapsed
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#date_taken)
+**Substitutes:** [DATE_TAKEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#DATE_TAKEN)
 
 <!--Device-ImageVideoKey-DATE_TAKEN--><!--Device-ImageVideoKey-DATE_TAKEN-End-->
 
@@ -250,7 +250,7 @@ Orientation of the image file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.ORIENTATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#orientation)
+**Substitutes:** [ORIENTATION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#ORIENTATION)
 
 <!--Device-ImageVideoKey-ORIENTATION--><!--Device-ImageVideoKey-ORIENTATION-End-->
 
@@ -272,7 +272,7 @@ Whether the file is added to favorites.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#favorite)
+**Substitutes:** [FAVORITE](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#FAVORITE)
 
 <!--Device-ImageVideoKey-FAVORITE--><!--Device-ImageVideoKey-FAVORITE-End-->
 
@@ -294,7 +294,7 @@ File location type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md/arkts-medialibrary-photoaccesshelper-photokeys-e.md#position)
+**Substitutes:** [POSITION](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e.md#POSITION)
 
 <!--Device-ImageVideoKey-POSITION--><!--Device-ImageVideoKey-POSITION-End-->
 
@@ -316,7 +316,7 @@ Date when the file was deleted. The value is the number of seconds elapsed since
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#date_trashed)
+**Substitutes:** [DATE_TRASHED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#DATE_TRASHED)
 
 <!--Device-ImageVideoKey-DATE_TRASHED--><!--Device-ImageVideoKey-DATE_TRASHED-End-->
 
@@ -338,7 +338,7 @@ Whether the file is hidden.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#hidden)
+**Substitutes:** [HIDDEN](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#HIDDEN)
 
 <!--Device-ImageVideoKey-HIDDEN--><!--Device-ImageVideoKey-HIDDEN-End-->
 
@@ -360,7 +360,7 @@ User comment information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#user_comment)
+**Substitutes:** [USER_COMMENT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#USER_COMMENT)
 
 <!--Device-ImageVideoKey-USER_COMMENT--><!--Device-ImageVideoKey-USER_COMMENT-End-->
 
@@ -384,7 +384,7 @@ This parameter is available only for the system camera, and the key value is def
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoKeys.CAMERA_SHOT_KEY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#camera_shot_key)
+**Substitutes:** [CAMERA_SHOT_KEY](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photokeys-e-sys.md#CAMERA_SHOT_KEY)
 
 <!--Device-ImageVideoKey-CAMERA_SHOT_KEY--><!--Device-ImageVideoKey-CAMERA_SHOT_KEY-End-->
 

@@ -1,8 +1,8 @@
 # SwipeGestureHandlerOptions
 
-快滑手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+快滑手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)。
 
-**继承/实现关系：** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
+**继承/实现关系：** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
 
 **起始版本：** 12
 
@@ -22,7 +22,7 @@ direction?: SwipeDirection
 
 默认值：SwipeDirection.All
 
-**类型：** [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md)
+**类型：** [SwipeDirection](arkts-arkui-swipedirection-e.md)
 
 **起始版本：** 12
 

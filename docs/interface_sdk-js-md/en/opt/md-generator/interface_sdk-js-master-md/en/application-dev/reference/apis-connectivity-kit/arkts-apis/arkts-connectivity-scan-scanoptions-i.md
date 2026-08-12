@@ -11,7 +11,7 @@ Describes the parameters for scan.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## duration
@@ -40,7 +40,7 @@ scanMode?: ScanMode
 
 Indicates the scan mode.If the "scanMode" is not set, the default value is "SCAN_MODE_LOW_POWER".Default value: SCAN_MODE_LOW_POWER.
 
-**Type:** [ScanMode](arkts-connectivity-connection-scanmode-e.md)
+**Type:** ScanMode
 
 **Since:** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## setDevicePairingConfirmation
@@ -18,7 +18,7 @@ Sets the confirmation of pairing with a certain device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.setDevicePairingConfirmation
+**Substitutes:** [setDevicePairingConfirmation](ohos.bluetoothManager/bluetoothManager.setDevicePairingConfirmation)
 
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH
 

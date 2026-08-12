@@ -1,12 +1,12 @@
 # InputMethodEngine
 
-下列API均需使用[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine)获取到InputMethodEngine实例后，通过实例调用。
+下列API均需使用[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getInputMethodEngine)获取到InputMethodEngine实例后，通过实例调用。
 
 **起始版本：** 8
 
 **废弃版本：** 23
 
-**替代接口：** [inputMethodEngine.InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)
+**替代接口：** [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#InputMethodAbility)
 
 <!--Device-inputMethodEngine-interface InputMethodEngine--><!--Device-inputMethodEngine-interface InputMethodEngine-End-->
 
@@ -27,7 +27,7 @@ off(
 
 **废弃版本：** 23
 
-**替代接口：** inputMethodEngine.InputMethodAbility.off(type:
+**替代接口：** [off](inputMethodEngine.InputMethodAbility.off(type:)
 
 <!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -38,7 +38,7 @@ off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'inputStart' | 是 |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | 否 |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | 否 |
 
 ## 示例
 
@@ -62,7 +62,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** inputMethodEngine.InputMethodAbility.off(type:
+**替代接口：** [off](inputMethodEngine.InputMethodAbility.off(type:)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -73,7 +73,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 ## 示例
 
@@ -94,7 +94,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** inputMethodEngine.InputMethodAbility.off(type:
+**替代接口：** [off](inputMethodEngine.InputMethodAbility.off(type:)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -105,7 +105,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 ## 示例
 
@@ -129,7 +129,7 @@ on(
 
 **废弃版本：** 23
 
-**替代接口：** inputMethodEngine.InputMethodAbility.on(type:
+**替代接口：** [on](inputMethodEngine.InputMethodAbility.on(type:)
 
 <!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -140,7 +140,7 @@ on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'inputStart' | 是 |
-| callback | (kbController: KeyboardController, textInputClient: TextInputClient) =&gt; void | 是 |
+| callback | (kbController: KeyboardController, textInputClient: TextInputClient) = & gt; void | 是 |
 
 ## 示例
 
@@ -164,7 +164,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** inputMethodEngine.InputMethodAbility.on(type:
+**替代接口：** [on](inputMethodEngine.InputMethodAbility.on(type:)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -175,7 +175,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## 示例
 
@@ -200,7 +200,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 **废弃版本：** 23
 
-**替代接口：** inputMethodEngine.InputMethodAbility.on(type:
+**替代接口：** [on](inputMethodEngine.InputMethodAbility.on(type:)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -211,7 +211,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## 示例
 

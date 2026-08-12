@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## migrateData
@@ -28,28 +28,28 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sourcePaths | Array&lt;string&gt; | Yes |
+| sourcePaths | Array & lt;string & gt; | Yes |
 | destinationPath | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17700086](../errorcode-bundle.md#17700086-system-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) |
-| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) |
-| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) |
-| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) |
-| [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) |
-| [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) |
+| [17700086](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700086-system-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700084](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) |
+| [17700085](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) |
+| [17700082](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700082-user-authentication-failed) |
+| [17700083](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700083-user-authentication-times-out) |
+| [17700080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700080-invalid-source-paths) |
+| [17700081](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700081-invalid-destination-path) |
 
 ## Examples
 

@@ -11,7 +11,7 @@ Configuring parameters in location requests.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## distanceInterval
@@ -58,7 +58,7 @@ priority?: LocationRequestPriority
 
 Priority of the location request.
 
-**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
+**Type:** LocationRequestPriority
 
 **Since:** 9
 
@@ -76,7 +76,7 @@ scenario?: LocationRequestScenario
 
 User scenario of the location request.
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 9
 

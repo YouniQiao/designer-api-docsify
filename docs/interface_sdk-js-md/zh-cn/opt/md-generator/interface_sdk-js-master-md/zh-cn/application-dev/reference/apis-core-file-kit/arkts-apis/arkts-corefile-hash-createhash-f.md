@@ -18,7 +18,7 @@ function createHash(algorithm: string): HashStream
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| algorithm | string | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 
 **返回值：**
 
@@ -31,7 +31,7 @@ function createHash(algorithm: string): HashStream
 | 错误码ID |
 | --- |
 | 13900020 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900042 |
 
 ## 示例

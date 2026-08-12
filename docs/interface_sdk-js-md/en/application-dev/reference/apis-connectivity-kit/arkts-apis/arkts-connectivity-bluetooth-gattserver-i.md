@@ -1,6 +1,6 @@
 # GattServer
 
-Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an GattServer instance.
+Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md#createGattServer) to create an GattServer instance.
 
 **Since:** 7
 
@@ -8,7 +8,7 @@ Manages GATT server. Before calling an Gatt server method, you must use {@link c
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer
+**Substitutes:** [GattServer](ohos.bluetoothManager/bluetoothManager.GattServer)
 
 <!--Device-bluetooth-interface GattServer--><!--Device-bluetooth-interface GattServer-End-->
 
@@ -17,7 +17,7 @@ Manages GATT server. Before calling an Gatt server method, you must use {@link c
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## addService
@@ -34,7 +34,7 @@ Adds a specified service to be hosted.The added service and its characteristics 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#addService
+**Substitutes:** [addService](ohos.bluetoothManager/bluetoothManager.GattServer#addService)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -46,7 +46,7 @@ Adds a specified service to be hosted.The added service and its characteristics 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| service | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | Yes | Indicates the service to add. |
+| service | GattService | Yes | Indicates the service to add. |
 
 **Return value:**
 
@@ -104,7 +104,7 @@ Closes this {@code GattServer} object and unregisters its callbacks.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#close
+**Substitutes:** [close](ohos.bluetoothManager/bluetoothManager.GattServer#close)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -135,7 +135,7 @@ This method should be called for every BLE peripheral device that has requested 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#notifyCharacteristicChanged
+**Substitutes:** [notifyCharacteristicChanged](ohos.bluetoothManager/bluetoothManager.GattServer#notifyCharacteristicChanged)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -148,7 +148,7 @@ This method should be called for every BLE peripheral device that has requested 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Indicates the address of the BLE peripheral device to receive the notification. |
-| notifyCharacteristic | [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md) | Yes | Indicates the local characteristic that has changed. |
+| notifyCharacteristic | NotifyCharacteristic | Yes | Indicates the local characteristic that has changed. |
 
 **Return value:**
 
@@ -191,7 +191,7 @@ Unsubscribe characteristic read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.off#event:characteristicRead
+**Substitutes:** [characteristicRead](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:characteristicRead)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -204,7 +204,7 @@ Unsubscribe characteristic read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadReq&gt; | No | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | No | Callback used to listen for the characteristic read event. |
 
 ## Examples
 
@@ -227,7 +227,7 @@ Unsubscribe characteristic write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.off#event:characteristicWrite
+**Substitutes:** [characteristicWrite](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:characteristicWrite)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -240,7 +240,7 @@ Unsubscribe characteristic write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteReq&gt; | No | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | No | Callback used to listen for the characteristic write event. |
 
 ## Examples
 
@@ -263,7 +263,7 @@ Unsubscribe descriptor read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.off#event:descriptorRead
+**Substitutes:** [descriptorRead](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:descriptorRead)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -276,7 +276,7 @@ Unsubscribe descriptor read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadReq&gt; | No | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No | Callback used to listen for the descriptor read event. |
 
 ## Examples
 
@@ -299,7 +299,7 @@ Unsubscribe descriptor write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.off#event:descriptorWrite
+**Substitutes:** [descriptorWrite](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:descriptorWrite)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -312,7 +312,7 @@ Unsubscribe descriptor write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteReq&gt; | No | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No | Callback used to listen for the descriptor write event. |
 
 ## Examples
 
@@ -335,7 +335,7 @@ Unsubscribe server connection state changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.off#event:connectStateChange
+**Substitutes:** [connectStateChange](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:connectStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -348,7 +348,7 @@ Unsubscribe server connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 ## Examples
 
@@ -371,7 +371,7 @@ Subscribe characteristic read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.on#event:characteristicRead
+**Substitutes:** [characteristicRead](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:characteristicRead)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -384,7 +384,7 @@ Subscribe characteristic read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicRead' | Yes | Type of the characteristic read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicReadReq&gt; | Yes | Callback used to listen for the characteristic read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicReadReq](arkts-connectivity-bluetooth-characteristicreadreq-i.md)&gt; | Yes | Callback used to listen for the characteristic read event. |
 
 ## Examples
 
@@ -427,7 +427,7 @@ Subscribe characteristic write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.on#event:characteristicWrite
+**Substitutes:** [characteristicWrite](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:characteristicWrite)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -440,7 +440,7 @@ Subscribe characteristic write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'characteristicWrite' | Yes | Type of the characteristic write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CharacteristicWriteReq&gt; | Yes | Callback used to listen for the characteristic write event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CharacteristicWriteReq](arkts-connectivity-bluetooth-characteristicwritereq-i.md)&gt; | Yes | Callback used to listen for the characteristic write event. |
 
 ## Examples
 
@@ -486,7 +486,7 @@ Subscribe descriptor read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.on#event:descriptorRead
+**Substitutes:** [descriptorRead](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:descriptorRead)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -499,7 +499,7 @@ Subscribe descriptor read event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorRead' | Yes | Type of the descriptor read event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorReadReq&gt; | Yes | Callback used to listen for the descriptor read event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | Yes | Callback used to listen for the descriptor read event. |
 
 ## Examples
 
@@ -542,7 +542,7 @@ Subscribe descriptor write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.on#event:descriptorWrite
+**Substitutes:** [descriptorWrite](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:descriptorWrite)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -555,7 +555,7 @@ Subscribe descriptor write event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'descriptorWrite' | Yes | Type of the descriptor write event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DescriptorWriteReq&gt; | Yes | Callback used to listen for the descriptor write event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | Yes | Callback used to listen for the descriptor write event. |
 
 ## Examples
 
@@ -600,7 +600,7 @@ Subscribe server connection state changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer.on#event:connectStateChange
+**Substitutes:** [connectStateChange](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:connectStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -613,7 +613,7 @@ Subscribe server connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 ## Examples
 
@@ -641,7 +641,7 @@ Removes a specified service from the list of GATT services provided by this devi
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#removeService
+**Substitutes:** [removeService](ohos.bluetoothManager/bluetoothManager.GattServer#removeService)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -682,7 +682,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#sendResponse
+**Substitutes:** [sendResponse](ohos.bluetoothManager/bluetoothManager.GattServer#sendResponse)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -694,7 +694,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverResponse | [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md) | Yes | Indicates the response parameters {@link ServerResponse}. |
+| serverResponse | ServerResponse | Yes | Indicates the response parameters [ServerResponse](arkts-connectivity-bluetooth-serverresponse-i.md#ServerResponse). |
 
 **Return value:**
 
@@ -740,7 +740,7 @@ Starts BLE advertising.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#startAdvertising
+**Substitutes:** [startAdvertising](ohos.bluetoothManager/bluetoothManager.GattServer#startAdvertising)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -752,9 +752,9 @@ Starts BLE advertising.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
-| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes | Indicates the advertising data. |
-| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No | Indicates the scan response associated with the advertising data. |
+| setting | AdvertiseSetting | Yes | Indicates the settings for BLE advertising. If you need to use the default value, set this parameter to {@code null}. |
+| advData | AdvertiseData | Yes | Indicates the advertising data. |
+| advResponse | AdvertiseData | No | Indicates the scan response associated with the advertising data. |
 
 ## Examples
 
@@ -817,7 +817,7 @@ Stops BLE advertising.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattServer#stopAdvertising
+**Substitutes:** [stopAdvertising](ohos.bluetoothManager/bluetoothManager.GattServer#stopAdvertising)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

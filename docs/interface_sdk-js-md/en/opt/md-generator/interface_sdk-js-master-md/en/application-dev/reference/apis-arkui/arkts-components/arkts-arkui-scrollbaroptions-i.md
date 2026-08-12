@@ -15,7 +15,7 @@ Parameters of the **ScrollBar** component.
 > 
 > - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts
 > **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the
-> [opacity](arkts-arkui-commonmethod-c.md#opacity) attribute for the **ScrollBar**
+> [opacity](CommonMethod#opacity(opacity: Optional&lt;number | Resource&gt;)) attribute for the **ScrollBar**
 > component does not take effect.
 
 **Since:** 8

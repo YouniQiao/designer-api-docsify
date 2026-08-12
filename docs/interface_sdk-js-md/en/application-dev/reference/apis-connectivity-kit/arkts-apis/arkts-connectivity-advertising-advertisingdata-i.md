@@ -13,7 +13,7 @@ Describes the advertising data.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.ConnectivityKit';
+import { advertising } from '@kit.ConnectivityKit';
 ```
 
 ## includeDeviceName
@@ -64,7 +64,7 @@ serviceData?: ServiceData[]
 
 The specified service data.
 
-**Type:** [ServiceData](arkts-connectivity-advertising-servicedata-i.md)[]
+**Type:** ServiceData[]
 
 **Since:** 26.0.0
 

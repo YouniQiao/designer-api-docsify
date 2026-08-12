@@ -52,7 +52,7 @@ Continuous auto focus. The focal point cannot be set.
 FOCUS_MODE_AUTO = 2
 ```
 
-Auto focus. The focal point can be set by calling [Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setfocuspoint), and auto focus is performed once based on the focal point.
+Auto focus. The focal point can be set by calling [Focus.setFocusPoint](arkts-camera-camera-focus-i.md#setFocusPoint), and auto focus is performed once based on the focal point.
 
 **Since:** 10
 

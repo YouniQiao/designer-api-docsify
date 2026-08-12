@@ -13,7 +13,7 @@ Defines a struct for shared configurations.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## allowList
@@ -43,7 +43,7 @@ List of applications that can subscribe to and read shared configurations. If th
 isMultiValues?: boolean
 ```
 
-Indicates whether the shared configuration is multi-value type. The default value is false, indicating that the shared configuration is not multi-value type. If the value is true, it indicates that the data being published is multi-value type, and the [value](arkts-arkdata-datashare-proxydata-i.md#value) parameter will be ignored.Default value: false.
+Indicates whether the shared configuration is multi-value type. The default value is false, indicating that the shared configuration is not multi-value type. If the value is true, it indicates that the data being published is multi-value type, and the [value](#value) parameter will be ignored.Default value: false.
 
 **Type:** boolean
 
@@ -104,7 +104,7 @@ Unique ID of a shared configuration, fixed at the format of **"datashareproxy://
 value?: ValueType
 ```
 
-Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated.In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400bytes by setting the maxValueLength parameter in [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md).
+Value of a shared configuration. If not specified, the value is an empty string. The value is a string with a maximum of 4,096 bytes. If this parameter is not set when the shared configuration is published for the first time, the value will be an empty string by default. If this parameter is not set when a shared configuration is updated, the value of the shared configuration will not be updated.In versions earlier than API version 26.0.0, the maximum length of a string is 4096 bytes. In API version 26.0.0and later versions, the maximum length of a string is 4096 bytes by default, and can be extended to 102,400bytes by setting the maxValueLength parameter in [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md#DataProxyConfig).
 
 **Type:** [ValueType](arkts-arkdata-valuetype-t.md)
 
@@ -124,9 +124,9 @@ Value of a shared configuration. If not specified, the value is an empty string.
 values?: Record<int, ValueType>
 ```
 
-Values of the multi-value type. The first parameter in the **Record** is the key specified by the user, which must be unique. The second parameter is the value corresponding to the key. A maximum of 10 values can be added to a single URI for an application. Each value can contain a maximum of 4096 bytes. At the same time, the total length of all values is limited by the [maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength) parameter value.This parameter is valid only when [isMultiValues](arkts-arkdata-datashare-proxydata-i.md#ismultivalues) is set to true.
+Values of the multi-value type. The first parameter in the **Record** is the key specified by the user, which must be unique. The second parameter is the value corresponding to the key. A maximum of 10 values can be added to a single URI for an application. Each value can contain a maximum of 4096 bytes. At the same time, the total length of all values is limited by the [maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxValueLength) parameter value.This parameter is valid only when [isMultiValues](#isMultiValues) is set to true.
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
+**Type:** ArkTS-Dyn: Record&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 
 **Since:** 26.0.0
 

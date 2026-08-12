@@ -13,7 +13,7 @@ This class is used to enable back forward cache supported features.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## constructor

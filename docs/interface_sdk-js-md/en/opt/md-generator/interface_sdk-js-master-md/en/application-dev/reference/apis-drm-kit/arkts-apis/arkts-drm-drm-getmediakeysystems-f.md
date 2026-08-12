@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## getMediaKeySystems
@@ -32,8 +32,8 @@ Get all media key systems supported.
 
 | Error Code ID |
 | --- |
-| [24700201](../errorcode-drm.md#24700201-service-exception) |
-| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
+| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
 
 ## Examples
 

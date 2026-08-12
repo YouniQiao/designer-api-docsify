@@ -25,12 +25,12 @@ Defines MenuItem Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | 否 | the options of MenuItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | the options of MenuItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MenuItemAttribute](../arkts-components/arkts-arkui-menuitem-attribute.md) |  |
+| [MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md) |  |
 

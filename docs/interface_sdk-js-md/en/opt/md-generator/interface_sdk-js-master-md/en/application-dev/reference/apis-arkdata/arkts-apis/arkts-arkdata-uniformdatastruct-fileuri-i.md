@@ -11,7 +11,7 @@ Represents data of the file URI type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -75,7 +75,7 @@ readonly uniformDataType: 'general.file-uri'
 ```
 
 Uniform data type, which has a fixed value of **general.file-uri**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'general.file-uri'
 

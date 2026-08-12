@@ -4,7 +4,7 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 
 > **NOTE：**
 > 
-> You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher) in the callback. Once a watcher is
+> You are not advised to call [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removeWatcher) in the callback. Once a watcher is
 > removed, the subscription callback of the watcher becomes invalid, and the callback may not be triggered when an
 > event occurs.
 
@@ -19,7 +19,7 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onReceive
@@ -50,7 +50,7 @@ appEventGroups: event group.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domain | string | Yes |  |
-| appEventGroups | Array&lt;AppEventGroup&gt; | Yes |  |
+| appEventGroups | Array&lt;[AppEventGroup](arkts-performanceanalysis-hiappevent-appeventgroup-i.md)&gt; | Yes |  |
 
 ## onTrigger
 

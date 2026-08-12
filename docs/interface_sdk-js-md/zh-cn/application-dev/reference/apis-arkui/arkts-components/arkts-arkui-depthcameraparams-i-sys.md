@@ -44,7 +44,7 @@ position: DepthVector3
 
 相机在三维空间中的位置。无单位，其值表示3D空间中的坐标。
 
-**类型：** [DepthVector3](../arkts-apis/arkts-arkui-common-depthvector3-i-sys.md)
+**类型：** DepthVector3
 
 **起始版本：** 26.0.0
 
@@ -68,7 +68,7 @@ quaternion: DepthVector4
 
 相机旋转四元数，按(x, y, z, w)表示。无单位。
 
-**类型：** [DepthVector4](../arkts-apis/arkts-arkui-common-depthvector4-i-sys.md)
+**类型：** DepthVector4
 
 **起始版本：** 26.0.0
 

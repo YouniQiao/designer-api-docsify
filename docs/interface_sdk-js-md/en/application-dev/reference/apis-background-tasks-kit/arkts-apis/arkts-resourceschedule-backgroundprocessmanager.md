@@ -14,7 +14,7 @@ The **backgroundProcessManager** module provides APIs for background child proce
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

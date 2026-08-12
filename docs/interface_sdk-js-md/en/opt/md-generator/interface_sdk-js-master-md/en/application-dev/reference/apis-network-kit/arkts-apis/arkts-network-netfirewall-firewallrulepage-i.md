@@ -11,7 +11,7 @@ Rule page information.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## data
@@ -22,7 +22,7 @@ data: Array<NetFirewallRule>
 
 Page data: all records displayed on this page.
 
-**Type:** Array&lt;NetFirewallRule&gt;
+**Type:** Array&lt;[NetFirewallRule](arkts-network-netfirewall-netfirewallrule-i.md)&gt;
 
 **Since:** 15
 

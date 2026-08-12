@@ -1,8 +1,8 @@
 # DownloadTask
 
 下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取，callback形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取。
+[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile-1)获取，callback形式通过  
+[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)获取。
 
 **起始版本：** 6
 
@@ -44,7 +44,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -134,7 +134,7 @@ delete(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -218,7 +218,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -308,7 +308,7 @@ getTaskInfo(): Promise<DownloadInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -394,7 +394,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -484,7 +484,7 @@ getTaskMimeType(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -565,7 +565,7 @@ off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -626,7 +626,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -713,7 +713,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -800,7 +800,7 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -887,7 +887,7 @@ off(type: 'fail', callback?: (err: int) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1300,7 +1300,7 @@ on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1353,7 +1353,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1416,7 +1416,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1479,7 +1479,7 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1542,7 +1542,7 @@ on(type: 'fail', callback: (err: int) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1839,7 +1839,7 @@ pause(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [suspend](arkts-basicservices-request-downloadtask-i.md#suspend)替代。
+> [suspend](#suspend)替代。
 
 **起始版本：** 7
 
@@ -1847,7 +1847,7 @@ pause(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)(callback:
+**替代接口：** [suspend](request.DownloadTask.suspend(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1865,7 +1865,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -1889,7 +1889,7 @@ pause(): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](arkts-basicservices-request-downloadtask-i.md#suspend)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
 
 **起始版本：** 7
 
@@ -1897,7 +1897,7 @@ pause(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)()
+**替代接口：** [suspend](#suspend)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1915,7 +1915,7 @@ pause(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -1938,7 +1938,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)替代。
+> [getTaskInfo](#getTaskInfo)替代。
 
 **起始版本：** 7
 
@@ -1946,7 +1946,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)(callback:
+**替代接口：** [getTaskInfo](request.DownloadTask.getTaskInfo(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1964,7 +1964,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -1988,7 +1988,7 @@ query(): Promise<DownloadInfo>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)替代。
+> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#getTaskInfo)替代。
 
 **起始版本：** 7
 
@@ -1996,7 +1996,7 @@ query(): Promise<DownloadInfo>
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)()
+**替代接口：** [getTaskInfo](#getTaskInfo)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2014,7 +2014,7 @@ query(): Promise<DownloadInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2037,7 +2037,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)替代。
+> [getTaskMimeType](#getTaskMimeType)替代。
 
 **起始版本：** 7
 
@@ -2045,7 +2045,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)(callback:
+**替代接口：** [getTaskMimeType](request.DownloadTask.getTaskMimeType(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2063,7 +2063,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2087,7 +2087,7 @@ queryMimeType(): Promise<string>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#getTaskMimeType)替代。
 
 **起始版本：** 7
 
@@ -2095,7 +2095,7 @@ queryMimeType(): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)()
+**替代接口：** [getTaskMimeType](#getTaskMimeType)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2113,7 +2113,7 @@ queryMimeType(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2144,7 +2144,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback:
+**替代接口：** [delete](request.UploadTask.delete(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2162,7 +2162,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2194,7 +2194,7 @@ remove(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)()
+**替代接口：** [delete](arkts-basicservices-request-uploadtask-i.md#delete)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2212,7 +2212,7 @@ remove(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2256,7 +2256,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2346,7 +2346,7 @@ restore(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2411,7 +2411,7 @@ resume(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [restore](arkts-basicservices-request-downloadtask-i.md#restore)替代。
+> [restore](#restore)替代。
 
 **起始版本：** 7
 
@@ -2419,7 +2419,7 @@ resume(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)(callback:
+**替代接口：** [restore](request.DownloadTask.restore(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2437,7 +2437,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2461,7 +2461,7 @@ resume(): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](arkts-basicservices-request-downloadtask-i.md#restore)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
 
 **起始版本：** 7
 
@@ -2469,7 +2469,7 @@ resume(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)()
+**替代接口：** [restore](#restore)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -2487,7 +2487,7 @@ resume(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2505,7 +2505,7 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](arkts-basicservices-request-downloadtask-i.md#restore)恢复，使用callback异步回调。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。
 
 > **说明：**
 > 
@@ -2531,7 +2531,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -2595,7 +2595,7 @@ try {
 suspend(): Promise<boolean>
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](arkts-basicservices-request-downloadtask-i.md#restore)恢复，使用Promise异步回调。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。
 
 > **说明：**
 > 
@@ -2621,7 +2621,7 @@ suspend(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 

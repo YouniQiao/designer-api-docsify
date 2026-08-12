@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { data } from 'kits/@kit.TelephonyKit';
+import { data } from '@kit.TelephonyKit';
 ```
 
 ## showSystemApnSettings
@@ -32,4 +32,4 @@ Open the system APN selection menu, which is presented in a semi-modal form and 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

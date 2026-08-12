@@ -18,7 +18,7 @@ direction?: ScrollBarDirection
 
 Sets the direction of scroll bar.
 
-**Type:** [ScrollBarDirection](../arkts-components/arkts-arkui-scrollbardirection-e.md)
+**Type:** [ScrollBarDirection](arkts-arkui-scrollbar-scrollbardirection-e.md)
 
 **Since:** 23
 

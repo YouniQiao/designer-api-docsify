@@ -18,8 +18,8 @@ AUTO = 0
 
 Use EXIF metadata for display orientation, with support for rotation and mirroring.
 
-Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) and  
-[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md) types do not contain header information. When this API is called,the image display effect remains unchanged.
+Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) and  
+[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md#DrawableDescriptor) types do not contain header information. When this API is called,the image display effect remains unchanged.
 
 ![imageRotateOrientation_0](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_0.png)
 

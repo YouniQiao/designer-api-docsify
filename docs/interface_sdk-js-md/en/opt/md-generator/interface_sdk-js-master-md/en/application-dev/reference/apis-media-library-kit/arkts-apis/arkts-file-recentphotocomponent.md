@@ -9,13 +9,13 @@ The RecentPhotoComponent embedded in the UI of an application allows the applica
  >
  > - This component does not support [same-layer rendering](../../../web/web-same-layer.md).
  ###### Properties
- The [universal properties](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported.
+ The [universal properties](common) are supported.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from 'kits/@kit.MediaLibraryKit';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from '@kit.MediaLibraryKit';
 ```
 
 ## Summary

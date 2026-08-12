@@ -1,9 +1,9 @@
 # PanGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md). This object can be passed as the **event** parameter of   
-[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin).
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of   
+[onGestureJudgeBegin](CommonMethod#onGestureJudgeBegin).
 
-**Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
+**Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
 
 **Since:** 11
 

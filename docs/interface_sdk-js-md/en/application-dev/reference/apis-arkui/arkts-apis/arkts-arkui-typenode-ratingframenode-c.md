@@ -34,11 +34,11 @@ Initialize Rating FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RatingOptions](../arkts-components/arkts-arkui-ratingoptions-i.md) | No |  |
+| options | RatingOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md) |  |
+| RatingAttribute |  |
 

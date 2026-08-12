@@ -48,7 +48,7 @@ pointRadius?: double | Resource
 
 默认算法：（组件高度（单位：vp） / 2） - （2vp * 组件高度（单位：vp） / 20vp）。
 
-**类型：** double \| Resource
+**类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -76,7 +76,7 @@ trackBorderRadius?: double | Resource
 
 默认算法：组件高度（单位：vp） / 2。
 
-**类型：** double \| Resource
+**类型：** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

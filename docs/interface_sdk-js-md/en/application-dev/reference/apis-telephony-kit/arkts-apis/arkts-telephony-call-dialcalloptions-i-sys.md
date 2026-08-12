@@ -15,7 +15,7 @@ Indicates the options for initiating a call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## accountId
@@ -86,7 +86,7 @@ extraParams?: Record<string, Object>
 
 Indicates the extra call parameters.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 14
 

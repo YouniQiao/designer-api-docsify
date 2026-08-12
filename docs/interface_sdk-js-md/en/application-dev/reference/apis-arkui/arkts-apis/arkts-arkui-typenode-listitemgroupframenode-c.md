@@ -34,11 +34,11 @@ Initialize ListItemGroup FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](../arkts-components/arkts-arkui-listitemgroupoptions-i.md) | No | list item group options. |
+| options | ListItemGroupOptions | No | list item group options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |  |
+| ListItemGroupAttribute |  |
 

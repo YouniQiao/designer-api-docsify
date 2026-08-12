@@ -51,7 +51,7 @@ Construct the UIExtensionComponent.&lt;br/&gt;Called when the UIExtensionCompone
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | import('../api/@ohos.app.ability.Want').default | Yes | Ability to start. |
-| options | [UIExtensionOptions](../arkts-apis/arkts-arkui-uiextensioncomponent-uiextensionoptions-i-sys.md) | No | Construction parameters. |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | No | Construction parameters. |
 
 ## Summary
 

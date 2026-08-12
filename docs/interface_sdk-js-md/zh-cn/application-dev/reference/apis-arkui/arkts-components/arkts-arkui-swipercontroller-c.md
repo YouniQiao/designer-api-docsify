@@ -163,7 +163,7 @@ finishAnimation(callback?: VoidCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | 否 | 动画结束的回调。<br>**起始版本：** 18 |
+| callback | VoidCallback | 否 | 动画结束的回调。<br>**起始版本：** 18 |
 
 ## isFakeDragging
 
@@ -208,7 +208,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：**
 
-> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的[onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear)生命周期中去控制。
+> Swiper的preloadItems需要在Swiper创建之后去调用，首次预加载推荐在Swiper的[onAppear](CommonMethod#onAppear)生命周期中去控制。
 
 **起始版本：** 18
 
@@ -228,7 +228,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。 |
+| indices | Optional&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。 |
 
 **返回值：**
 
@@ -240,8 +240,8 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
 
 ## showNext
 

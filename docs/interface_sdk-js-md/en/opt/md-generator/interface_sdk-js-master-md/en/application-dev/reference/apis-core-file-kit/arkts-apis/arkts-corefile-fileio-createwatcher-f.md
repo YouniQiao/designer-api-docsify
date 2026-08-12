@@ -12,7 +12,7 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:createWatcher](arkts-corefile-fileio-createwatcher-f.md#createwatcher)
+**Substitutes:** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md#createWatcher)
 
 <!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher--><!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher-End-->
 
@@ -30,4 +30,4 @@ Listens for file or directory changes. This API uses an asynchronous callback to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Watcher](arkts-corefile-file-fs-watcher-i.md) |
+| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) |

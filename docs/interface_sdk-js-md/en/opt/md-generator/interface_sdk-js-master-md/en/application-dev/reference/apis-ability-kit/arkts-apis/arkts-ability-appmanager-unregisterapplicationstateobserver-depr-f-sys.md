@@ -12,7 +12,7 @@ Unregister application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -60,7 +60,7 @@ Unregister application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -80,7 +80,7 @@ Unregister application state observer.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

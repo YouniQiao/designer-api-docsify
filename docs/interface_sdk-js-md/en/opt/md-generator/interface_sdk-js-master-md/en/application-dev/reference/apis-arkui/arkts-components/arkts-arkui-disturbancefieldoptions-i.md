@@ -166,7 +166,7 @@ Default value: {width:0, height:0}.
 
 Value range of **width** and **height**: [0, +∞).
 
-**Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**Type:** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **Default:** {width:0,height:0}
 

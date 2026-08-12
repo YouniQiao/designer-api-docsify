@@ -54,7 +54,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): BigUint64Arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |  |
+| buffer | ArrayBufferLike | Yes |  |
 | byteOffset | number | No |  |
 | length | number | No |  |
 
@@ -80,7 +80,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;bigint&gt; | Yes |  |
+| arrayLike | ArrayLike&lt;bigint&gt; | Yes |  |
 
 **Return value:**
 
@@ -100,7 +100,7 @@ from<U>(arrayLike: ArrayLike<U>, mapfn: (v: U, k: number) => bigint, thisArg?: a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;U&gt; | Yes |  |
+| arrayLike | ArrayLike&lt;U&gt; | Yes |  |
 | mapfn | (v: U, k: number) =&gt; bigint | Yes |  |
 | thisArg | any | No |  |
 

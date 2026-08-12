@@ -1,10 +1,10 @@
 # @ohos.bundle.bundleManager
 
 The module provides APIs for obtaining application information, including  
-[bundle information](arkts-bundleinfo.md),  
-[application information](arkts-applicationinfo.md),  
-[ability information](arkts-abilityinfo.md) (information about a UIAbility), and  
-[ExtensionAbility information](arkts-ability-extensionabilityinfo-i.md).
+[bundle information](bundleManager/BundleInfo),  
+[application information](bundleManager/ApplicationInfo),  
+[ability information](bundleManager/AbilityInfo) (information about a UIAbility), and  
+[ExtensionAbility information](arkts-ability-extensionabilityinfo-i.md#ExtensionAbilityInfo).
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ The module provides APIs for obtaining application information, including
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

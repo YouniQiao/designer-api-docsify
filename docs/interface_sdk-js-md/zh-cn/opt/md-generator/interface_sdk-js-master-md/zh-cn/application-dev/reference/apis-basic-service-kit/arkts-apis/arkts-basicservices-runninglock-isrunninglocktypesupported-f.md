@@ -12,7 +12,7 @@ function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallba
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
+**替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -50,7 +50,7 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
+**替代接口：** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>-End-->
 
@@ -66,7 +66,7 @@ function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 

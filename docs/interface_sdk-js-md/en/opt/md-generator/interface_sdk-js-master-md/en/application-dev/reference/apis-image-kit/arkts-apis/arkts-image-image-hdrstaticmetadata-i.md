@@ -1,7 +1,7 @@
 # HdrStaticMetadata
 
 Describes the static metadata keys, that is, the values available for **HDR_STATIC_METADATA** in   
-[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md).
+[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey).
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Describes the static metadata keys, that is, the values available for **HDR_STAT
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## displayPrimariesX

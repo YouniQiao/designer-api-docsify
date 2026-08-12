@@ -28,7 +28,7 @@ function springMotion(response?: number, dampingFraction?: number, overlapDurati
 
 | 类型 |
 | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| [ICurve](arkts-arkui-icurve-t.md) |
 
 ## 示例
 

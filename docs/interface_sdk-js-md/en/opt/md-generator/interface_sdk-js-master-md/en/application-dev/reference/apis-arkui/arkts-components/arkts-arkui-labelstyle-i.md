@@ -22,7 +22,7 @@ When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sa
 
 The default font size of the bottom tab page is 12.0 fp since API version 12.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 10
 
@@ -64,7 +64,7 @@ Maximum font size of the label text. It cannot be set in percentage. For the set
 
 Value range: [minFontSize, +∞)
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 0.0fp [since 11]
 
@@ -110,7 +110,7 @@ Minimum font size of the label text. It cannot be set in percentage. For the set
 
 Value range: (0, +∞)
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 0.0fp [since 11]
 

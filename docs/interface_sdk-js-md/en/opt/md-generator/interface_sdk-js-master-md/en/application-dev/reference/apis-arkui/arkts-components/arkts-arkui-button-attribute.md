@@ -1,8 +1,8 @@
 # Button properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported.
+The [universal events](common) are supported.
 
 **Inheritance/Implementation:** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -19,12 +19,12 @@ buttonStyle(value: ButtonStyleMode)
 ```
 
 Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes |
 
@@ -64,9 +64,9 @@ Creates a content modifier.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | Yes |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | Yes |
 
 ## controlSize
 
@@ -78,7 +78,7 @@ Sets the size for the button.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
 
 **Since:** 11
 
@@ -94,7 +94,7 @@ Sets the size for the button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes |
 
@@ -118,7 +118,7 @@ Sets the font color for the button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes |
 
@@ -142,7 +142,7 @@ Sets the font family.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
@@ -166,7 +166,7 @@ Sets the font size for the button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes |
 
@@ -190,9 +190,9 @@ Sets the font style for the button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes |
+| value | [FontStyle](#fontstyle) | Yes |
 
 ## fontWeight
 
@@ -214,7 +214,7 @@ Sets the font weight for the button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | number \| FontWeight \| string | Yes |
 
@@ -238,7 +238,7 @@ Sets the label style for the button.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [LabelStyle](arkts-arkui-labelstyle-i.md) | Yes |
 
@@ -262,7 +262,7 @@ Sets the maximum font scale factor for text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
@@ -286,7 +286,7 @@ Sets the minimum font scale factor for text.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | scale | number \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |
 
@@ -297,7 +297,7 @@ role(value: ButtonRole)
 ```
 
 Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
@@ -314,7 +314,7 @@ Sets the role of the button. The system automatically adjusts the button backgro
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes |
 
@@ -338,7 +338,7 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | boolean | Yes |
 
@@ -362,6 +362,6 @@ Sets the button type.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [ButtonType](arkts-arkui-buttontype-e.md) | Yes |

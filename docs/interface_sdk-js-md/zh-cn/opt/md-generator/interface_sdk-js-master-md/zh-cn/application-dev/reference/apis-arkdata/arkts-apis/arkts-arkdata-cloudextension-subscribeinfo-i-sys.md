@@ -36,7 +36,7 @@ subscribe: Record<string, Array<SubscribeId>>
 
 订阅信息。
 
-**类型：** Record&lt;string, Array&lt;SubscribeId&gt;&gt;
+**类型：** Record&lt;string, Array&lt;[SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md)&gt;&gt;
 
 **起始版本：** 11
 

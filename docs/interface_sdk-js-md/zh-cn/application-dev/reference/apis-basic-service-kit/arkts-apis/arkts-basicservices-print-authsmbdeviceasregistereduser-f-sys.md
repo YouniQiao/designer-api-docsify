@@ -34,15 +34,15 @@ function authSmbDeviceAsRegisteredUser(host: SharedHost, username: string, passw
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrinterInformation[]&gt; | Promise that resolves with the list of available printers. |
+| Promise&lt;[PrinterInformation](arkts-basicservices-print-printerinformation-i.md)[]&gt; | Promise that resolves with the list of available printers. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
 | 13100014 | Invalid login account or password. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application. |
 | 13100013 | SMB connection failed (network error, host unreachable, or port blocked). |
 | 13100012 | SMB account is locked due to multiple failed login attempts. |
 

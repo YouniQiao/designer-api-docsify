@@ -13,7 +13,7 @@ Represents the update result information.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## errorInfo
@@ -24,7 +24,7 @@ errorInfo: ErrorInfo
 
 Error information.
 
-**Type:** [ErrorInfo](arkts-mdm-systemmanager-errorinfo-i.md)
+**Type:** ErrorInfo
 
 **Since:** 12
 

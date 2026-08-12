@@ -38,9 +38,9 @@ function createAVMusicTemplateController(sessionId: string): AVMusicTemplateCont
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
-| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
-| [35000002](../errorcode-avmusictemplate.md#35000002-音频模板控制器创建失败) | Failed to create the AVMusicTemplate controller. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.function createAVMusicTemplateController can not work correctly due to limited device capabilities. |
+| [35000005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) | AVMusicTemplate does not exist. |
+| [35000002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000002-音频模板控制器创建失败) | Failed to create the AVMusicTemplate controller. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verify failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 

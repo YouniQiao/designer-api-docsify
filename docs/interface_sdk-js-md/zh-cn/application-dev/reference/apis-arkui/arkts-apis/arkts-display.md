@@ -25,7 +25,7 @@
 | [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md#getalldisplayphysicalresolution) | 获取当前设备支持的所有显示模式及其对应的物理屏幕分辨率信息对象。使用Promise异步回调。 |
 | [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays) | 获取当前所有的Display对象，使用callback异步回调。 |
 | [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) | 获取当前所有的Display对象，使用Promise异步回调。 |
-| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md#getbrightnessinfo) | 获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
+| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md#getbrightnessinfo) | 获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md#getcurrentfoldcreaseregion) | 在当前显示模式下获取折叠折痕区域。 |
 | [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay) | 获取当前默认的Display对象，使用callback异步回调。 |
 | [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay-1) | 获取当前默认的Display对象，使用Promise异步回调。 |
@@ -61,7 +61,7 @@
 | [on](arkts-arkui-display-on-f.md#on-5) | 开启折叠设备折叠角度变化的监听。如果是双折轴设备，则有两个角度值；在充电口朝下的状态下，从右到左分别是折轴一和折轴二。 |
 | [on](arkts-arkui-display-on-f.md#on-6) | 开启设备的屏幕显示信息是否被获取的监听。 |
 | [on](arkts-arkui-display-on-f.md#on-7) | 开启折叠设备屏幕显示模式变化的监听。  本接口监听设备屏幕显示模式的变化，如果要监听设备物理折叠状态的变化，需要使用  [display.on('foldStatusChange')](display.on(type: 'foldStatusChange', callback: Callback&lt;FoldStatus&gt;))接口。  两者存在差异，时序上物理折叠状态变化在前，底层会根据物理折叠状态匹配屏幕显示模式状态。 |
-| [on](arkts-arkui-display-on-f.md#on-8) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
+| [on](arkts-arkui-display-on-f.md#on-8) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [onAdd](arkts-arkui-display-onadd-f.md#onadd) | Register the callback for display add events. |
 | [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md#onbrightnessinfochange) | Register the callback for brightness info changes. |
 | [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md#oncapturestatuschange) | Register the callback for device capture, casting, or recording status changes. |
@@ -98,7 +98,7 @@
 | --- | --- |
 | [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | 屏幕亮度信息。此类型中的信息均来自底层屏幕信息数据。 |
 | [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) | 挖孔屏、刘海屏、瀑布屏等不可用屏幕区域信息。 |
-| [Display](arkts-arkui-display-display-i.md) | 屏幕实例。描述Display对象的属性和方法。  下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays)、  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)中的任一方法获取到Display实例，再通过此实例调用对应方法。 |
+| [Display](arkts-arkui-display-display-i.md) | 屏幕实例。描述Display对象的属性和方法。  下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)、  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)中的任一方法获取到Display实例，再通过此实例调用对应方法。 |
 | [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) | 设备的显示模式以及对应的物理屏幕分辨率信息。 |
 | [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | 折叠折痕区域。 |
 | [Position](arkts-arkui-display-position-i.md) | 坐标位置：在全局坐标系中，以主屏左上角为原点。在相对坐标系中，以指定屏幕左上角为原点。 |
@@ -113,7 +113,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i-sys.md) | 屏幕实例。描述Display对象的属性和方法。  下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays)、  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)中的任一方法获取到Display实例，再通过此实例调用对应方法。 |
+| [Display](arkts-arkui-display-display-i-sys.md) | 屏幕实例。描述Display对象的属性和方法。  下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)、  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)中的任一方法获取到Display实例，再通过此实例调用对应方法。 |
 <!--DelEnd-->
 
 ### 枚举

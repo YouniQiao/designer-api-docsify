@@ -13,7 +13,7 @@ Describes the bundle information of an application that enables cross-device col
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundleName

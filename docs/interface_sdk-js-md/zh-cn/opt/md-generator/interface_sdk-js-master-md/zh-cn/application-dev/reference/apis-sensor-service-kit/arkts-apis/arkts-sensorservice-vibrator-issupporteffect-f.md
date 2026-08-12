@@ -7,7 +7,7 @@ function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): vo
 ```
 
 查询当前设备是否支持传入的预置振动效果effectId。使用callback异步回调。当开发者需要在触发预置振动前确认当前设备是否支持指定的振动效果时使用此接口。由于不同设备可能预置不同的振动效果，建议在使用  
-[vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)的VibratePreset类型前先调用此接口查询，避免在不支持的设备上触发振动效果不佳。调用成功后，通过callback返回boolean结果：返回true表示设备支持该effectId，可直接用于startVibration；返回false表示不支持，此时使用该effectId触发振动可能效果不佳或无法振动。
+[vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)的VibratePreset类型前先调用此接口查询，避免在不支持的设备上触发振动效果不佳。调用成功后，通过callback返回boolean结果：返回true表示设备支持该effectId，可直接用于startVibration；返回false表示不支持，此时使用该effectId触发振动可能效果不佳或无法振动。
 
 **起始版本：** 10
 
@@ -26,8 +26,8 @@ function isSupportEffect(effectId: string, callback: AsyncCallback<boolean>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -97,14 +97,14 @@ function isSupportEffect(effectId: string): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

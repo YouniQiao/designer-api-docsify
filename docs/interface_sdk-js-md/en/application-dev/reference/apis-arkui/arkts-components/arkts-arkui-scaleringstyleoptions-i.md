@@ -2,9 +2,9 @@
 
 Options of the ring style with scales.
 
-Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
-**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** ScaleRingStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 10
 
@@ -50,7 +50,7 @@ Scale width of the ring-style progress indicator. Percentage values are not supp
 
 Default value: **2.0vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 
@@ -74,7 +74,7 @@ Stroke width of the progress indicator. Percentage values are not supported.
 
 Default value: **4.0vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 

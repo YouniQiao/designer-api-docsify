@@ -34,7 +34,7 @@ Vector4中四个值分别控制：x是左边，y是右边，z是上边，w是下
 
 x、y、z、w 各值建议设置范围：[-1, 1]
 
-**类型：** [Vector4](../arkts-apis/arkts-arkui-graphics-vector4-i.md)
+**类型：** [Vector4](arkts-arkui-vector4-t-sys.md)
 
 **默认值：** [0, 0, 0, 0]
 
@@ -58,7 +58,7 @@ bottomLeft: Vector2
 
 默认值：[0, 1]
 
-**类型：** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**类型：** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **默认值：** [0, 0]
 
@@ -82,7 +82,7 @@ bottomRight: Vector2
 
 默认值：[1, 1]
 
-**类型：** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**类型：** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **默认值：** [0, 0]
 
@@ -106,7 +106,7 @@ topLeft: Vector2
 
 默认值：[0, 0]
 
-**类型：** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**类型：** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **默认值：** [0, 0]
 
@@ -130,7 +130,7 @@ topRight: Vector2
 
 默认值：[1, 0]
 
-**类型：** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**类型：** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **默认值：** [0, 0]
 

@@ -19,11 +19,11 @@ globalConnect的入参泛型，用于定义globalConnect支持的持久化集合
 
 | 类型 |
 | --- |
-| Array&lt;S&gt; |
-| Map&lt;string |
-| number, S&gt; |
-| Set&lt;S&gt; |
-| collections.Array&lt;S&gt; |
-| collections.Map&lt;string |
-| number, S&gt; |
-| collections.Set&lt;S&gt; |
+| Array & lt;S & gt; |
+| Map & lt;string |
+| number, S & gt; |
+| Set & lt;S & gt; |
+| collections.Array & lt;S & gt; |
+| collections.Map & lt;string |
+| number, S & gt; |
+| collections.Set & lt;S & gt; |

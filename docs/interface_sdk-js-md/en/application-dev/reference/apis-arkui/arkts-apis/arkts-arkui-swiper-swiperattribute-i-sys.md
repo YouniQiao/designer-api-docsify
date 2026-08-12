@@ -2,7 +2,7 @@
 
 Defines the swiper attribute functions.
 
-**Inheritance/Implementation:** SwiperAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** SwiperAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ Defines the task configs interface
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## priority
@@ -22,7 +22,7 @@ priority?: Priority
 
 The priority of the task. The default value is taskpool.Priority.MEDIUM.
 
-**Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
+**Type:** Priority
 
 **Since:** 24
 

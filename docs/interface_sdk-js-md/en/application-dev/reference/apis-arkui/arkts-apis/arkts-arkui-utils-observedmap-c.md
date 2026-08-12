@@ -2,7 +2,7 @@
 
 Observable Map base class.
 
-**Inheritance/Implementation:** ObservedMap extends [Map<K, V>](../../apis-arkts/arkts-apis/arkts-arkts-collections-map-c.md/arkts-arkts-collections-map-c.md#set)
+**Inheritance/Implementation:** ObservedMap extends [Map<K, V>](Map<K, V>)
 
 **Since:** 26.0.0
 

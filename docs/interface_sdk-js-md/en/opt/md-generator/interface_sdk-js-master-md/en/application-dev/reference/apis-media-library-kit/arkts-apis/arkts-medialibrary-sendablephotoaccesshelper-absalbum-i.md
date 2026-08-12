@@ -2,7 +2,7 @@
 
 Defines the abstract interface of albums.
 
-**Inheritance/Implementation:** AbsAlbum extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** AbsAlbum extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Defines the abstract interface of albums.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getAssets
@@ -42,14 +42,14 @@ Obtains media assets. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; |
+| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## albumName
@@ -76,7 +76,7 @@ readonly albumSubtype: AlbumSubtype
 
 Album subtype
 
-**Type:** [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md)
+**Type:** AlbumSubtype
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ readonly albumType: AlbumType
 
 Album type
 
-**Type:** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
+**Type:** AlbumType
 
 **Since:** 12
 

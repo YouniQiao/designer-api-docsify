@@ -6,7 +6,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-audio-interface AudioPlaybackCaptureConfig--><!--Device-audio-interface AudioPlaybackCaptureConfig-End-->
 
@@ -26,7 +26,7 @@ filterOptions: CaptureFilterOptions
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions--><!--Device-AudioPlaybackCaptureConfig-filterOptions: CaptureFilterOptions-End-->
 

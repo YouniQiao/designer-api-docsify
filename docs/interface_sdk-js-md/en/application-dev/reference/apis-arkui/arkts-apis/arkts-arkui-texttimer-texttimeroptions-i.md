@@ -18,7 +18,7 @@ controller?: TextTimerController
 
 TextTimer controller.
 
-**Type:** [TextTimerController](../arkts-components/arkts-arkui-texttimercontroller-c.md)
+**Type:** [TextTimerController](arkts-arkui-texttimer-texttimercontroller-c.md)
 
 **Since:** 23
 

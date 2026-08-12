@@ -1,6 +1,6 @@
 # Filter
 
-图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
+图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createEffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](#getEffectPixelMap)获取处理后的图像。
 
 **起始版本：** 9
 
@@ -14,7 +14,7 @@
 blur(radius: number): Filter
 ```
 
-将模糊效果添加到效果链表中，返回链表的实例。着色器平铺模式使用DECAL，如需指定平铺模式，可使用[blur](arkts-arkgraphics2d-effectkit-filter-i.md#blur)接口。常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
+将模糊效果添加到效果链表中，返回链表的实例。着色器平铺模式使用DECAL，如需指定平铺模式，可使用[blur](#blur-1)接口。常用于实现背景虚化效果、隐私信息遮挡、毛玻璃背景效果、弹窗背景模糊等场景。
 
 > **说明：**
 > 
@@ -307,13 +307,13 @@ struct Index {
 getEffectPixelMap(): Promise<image.PixelMap>
 ```
 
-获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。如需指定渲染模式，可使用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)接口。常用于图片处理后需要保存或显示结果的场景。
+获取已添加链表效果的源图像的image.PixelMap，默认使用CPU渲染，使用Promise异步回调。如需指定渲染模式，可使用[getEffectPixelMap](#getEffectPixelMap-1)接口。常用于图片处理后需要保存或显示结果的场景。
 
 > **说明：**
 > 
 > 该方法默认使用CPU渲染，着色器平铺模式仅支持DECAL，其他模式（CLAMP、REPEAT、MIRROR）暂不支持。
-如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md)和  
-[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)。
+如需使用GPU渲染或了解渲染模式对TileMode的影响，请参见[TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md#TileMode)和  
+[getEffectPixelMap](#getEffectPixelMap-1)。
 
 **起始版本：** 11
 
@@ -329,7 +329,7 @@ getEffectPixelMap(): Promise<image.PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 ## 示例
 
@@ -389,7 +389,7 @@ getEffectPixelMap(useCpuRender : boolean): Promise<image.PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 ## 示例
 
@@ -427,13 +427,13 @@ getPixelMap(): image.PixelMap
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 11开始废弃，建议使用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)替代。
+> 从API version 9开始支持，从API version 11开始废弃，建议使用[getEffectPixelMap](#getEffectPixelMap)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [effectKit.Filter#getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)
+**替代接口：** [getEffectPixelMap](#getEffectPixelMap)
 
 <!--Device-Filter-getPixelMap(): image.PixelMap--><!--Device-Filter-getPixelMap(): image.PixelMap-End-->
 
@@ -656,7 +656,7 @@ setColorMatrix(colorMatrix: Array<number>): Filter
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| colorMatrix | Array&lt;number&gt; | 是 |
+| colorMatrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
@@ -668,7 +668,7 @@ setColorMatrix(colorMatrix: Array<number>): Filter
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

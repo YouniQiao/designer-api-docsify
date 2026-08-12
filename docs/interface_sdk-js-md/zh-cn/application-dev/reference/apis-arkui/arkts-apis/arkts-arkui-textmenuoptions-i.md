@@ -20,7 +20,7 @@ showMode?: TextMenuShowMode
 
 默认值：TextMenuShowMode.DEFAULT
 
-**类型：** [TextMenuShowMode](arkts-arkui-textcommon-textmenushowmode-e.md)
+**类型：** [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md)
 
 **起始版本：** 16
 

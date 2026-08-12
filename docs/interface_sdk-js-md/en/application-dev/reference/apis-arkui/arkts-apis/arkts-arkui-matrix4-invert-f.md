@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## invert
@@ -20,7 +20,7 @@ Inverts this matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
+**Substitutes:** [invert](arkts-arkui-matrix4-matrix4transit-i.md#invert)
 
 <!--Device-matrix4-function invert(): Matrix4Transit--><!--Device-matrix4-function invert(): Matrix4Transit-End-->
 
@@ -30,5 +30,5 @@ Inverts this matrix object.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Inverse matrix object of the current matrix. |
+| Matrix4Transit | Inverse matrix object of the current matrix. |
 

@@ -14,7 +14,7 @@ Register application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#on
+**Substitutes:** [on](ohos.app.ability.appManager/appManager#on)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -28,7 +28,7 @@ Register application state observer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | The application state observer. |
+| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-i.md) | Yes | The application state observer. |
 
 **Return value:**
 

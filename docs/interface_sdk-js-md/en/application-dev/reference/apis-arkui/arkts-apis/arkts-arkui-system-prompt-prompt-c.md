@@ -13,7 +13,7 @@ Defines the prompt interface.
 ## Modules to Import
 
 ```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from 'kits/@kit.ArkUI';
+import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -62,7 +62,7 @@ Displays the dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | Yes | Options. |
+| options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | Yes | Options. |
 
 ## showToast
 

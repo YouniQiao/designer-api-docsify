@@ -6,7 +6,7 @@ Enumerates the color modes supported by the widget.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo#ColorMode
+**Substitutes:** [ColorMode](ohos.app.form.formInfo/formInfo#ColorMode)
 
 <!--Device-formInfo-enum ColorMode--><!--Device-formInfo-enum ColorMode-End-->
 
@@ -24,7 +24,7 @@ Auto mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.ColorMode#MODE_AUTO
+**Substitutes:** [MODE_AUTO](ohos.app.form.formInfo/formInfo.ColorMode#MODE_AUTO)
 
 <!--Device-ColorMode-MODE_AUTO = -1--><!--Device-ColorMode-MODE_AUTO = -1-End-->
 
@@ -42,7 +42,7 @@ Dark mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.ColorMode#MODE_DARK
+**Substitutes:** [MODE_DARK](ohos.app.form.formInfo/formInfo.ColorMode#MODE_DARK)
 
 <!--Device-ColorMode-MODE_DARK = 0--><!--Device-ColorMode-MODE_DARK = 0-End-->
 
@@ -60,7 +60,7 @@ Light mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo.ColorMode#MODE_LIGHT
+**Substitutes:** [MODE_LIGHT](ohos.app.form.formInfo/formInfo.ColorMode#MODE_LIGHT)
 
 <!--Device-ColorMode-MODE_LIGHT = 1--><!--Device-ColorMode-MODE_LIGHT = 1-End-->
 

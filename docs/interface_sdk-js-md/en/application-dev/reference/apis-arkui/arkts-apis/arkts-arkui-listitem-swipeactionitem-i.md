@@ -86,7 +86,7 @@ Called when component swipe action state changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [SwipeActionState](../arkts-components/arkts-arkui-swipeactionstate-e.md) | Yes |  |
+| state | [SwipeActionState](arkts-arkui-listitem-swipeactionstate-e.md) | Yes |  |
 
 ## actionAreaDistance
 
@@ -118,7 +118,7 @@ builder?: CustomBuilder
 
 An action item that appears when a list item slides right (when list direction is Vertical) or slides down (when list direction Horizontal).
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 

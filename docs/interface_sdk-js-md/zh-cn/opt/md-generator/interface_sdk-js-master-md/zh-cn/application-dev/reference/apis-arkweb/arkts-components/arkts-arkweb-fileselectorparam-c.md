@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-封装消息信息，作为 {@link onFileSelectorShow} 方法的入参。
+封装消息信息，作为 [onFileSelectorShow](onFileSelectorShow) 方法的入参。
 
 **起始版本：** 9
 
@@ -44,7 +44,7 @@ getAcceptType(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getAcceptableFileTypes
 
@@ -64,7 +64,7 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 
 | 类型 |
 | --- |
-| Array&lt;Array&lt;AcceptableFileType&gt;&gt; |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; |
 
 ## getDefaultPath
 
@@ -104,7 +104,7 @@ getDescriptions(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getMimeTypes
 
@@ -124,7 +124,7 @@ getMimeTypes(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getMode
 

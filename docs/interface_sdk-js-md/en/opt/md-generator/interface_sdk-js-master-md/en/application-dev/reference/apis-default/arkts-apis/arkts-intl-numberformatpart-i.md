@@ -6,7 +6,7 @@
 type: NumberFormatPartTypes
 ```
 
-**Type:** NumberFormatPartTypes
+**Type:** [NumberFormatPartTypes](arkts-intl-numberformatparttypes-t.md)
 
 ## value
 

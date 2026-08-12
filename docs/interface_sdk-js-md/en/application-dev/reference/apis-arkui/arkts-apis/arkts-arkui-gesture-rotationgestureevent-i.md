@@ -2,7 +2,7 @@
 
 Defines event info for rotation gesture.
 
-**Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
+**Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#BaseGestureEvent)
 
 **Since:** 23
 

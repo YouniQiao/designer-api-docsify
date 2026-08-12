@@ -29,17 +29,17 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) |
-| [17700024](../errorcode-bundle.md#17700024-没有相应的配置文件) |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-指定的ability被禁用) |
+| [17700024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700024-没有相应的配置文件) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 ## 示例
 

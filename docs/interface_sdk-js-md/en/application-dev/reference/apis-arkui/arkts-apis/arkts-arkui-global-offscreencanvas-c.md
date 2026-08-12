@@ -68,7 +68,7 @@ Gets the context object for off-screen drawing.
 
 | Type | Description |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-viewmodel-offscreencanvasrenderingcontext2d-i.md) | a render canvas for the offScreen Canvas object. |
+| OffscreenCanvasRenderingContext2D | a render canvas for the offScreen Canvas object. |
 
 ## toDataURL
 
@@ -127,7 +127,7 @@ Converts the draw content in the current off-screen draw object to a Bitmap obje
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | Returns An ImageBitmap object. |
+| [ImageBitmap](arkts-arkui-global-imagebitmap-c.md) | Returns An ImageBitmap object. |
 
 ## height
 

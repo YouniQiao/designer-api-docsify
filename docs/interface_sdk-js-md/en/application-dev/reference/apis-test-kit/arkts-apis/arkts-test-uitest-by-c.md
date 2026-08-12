@@ -4,7 +4,7 @@ The UiTest framework provides a wide range of UI component feature description A
 
 The APIs provided by the **By** class exhibit the following features:
 
-1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter) can be used to specify the features of adjacent components to assist positioning.
+1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isBefore) and [By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isAfter) can be used to specify the features of adjacent components to assist positioning.
 
 All APIs provided in the **By** class are synchronous. You are advised to use the static constructor **BY** to create a **By** object in chain mode.
 
@@ -14,7 +14,7 @@ All APIs provided in the **By** class are synchronous. You are advised to use th
 
 **Deprecated since:** 9
 
-**Substitutes:** [On](arkts-test-uitest-on-c.md)
+**Substitutes:** [On](arkts-test-uitest-on-c.md#On)
 
 <!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
@@ -23,7 +23,7 @@ All APIs provided in the **By** class are synchronous. You are advised to use th
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## clickable
@@ -40,7 +40,7 @@ Specifies the clickable attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#clickable](arkts-test-uitest-on-c.md#clickable)
+**Substitutes:** [clickable](arkts-test-uitest-on-c.md#clickable)
 
 <!--Device-By-clickable(b?: boolean): By--><!--Device-By-clickable(b?: boolean): By-End-->
 
@@ -81,7 +81,7 @@ Specifies the enabled attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#enabled](arkts-test-uitest-on-c.md#enabled)
+**Substitutes:** [enabled](arkts-test-uitest-on-c.md#enabled)
 
 <!--Device-By-enabled(b?: boolean): By--><!--Device-By-enabled(b?: boolean): By-End-->
 
@@ -122,7 +122,7 @@ Specifies the focused attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#focused](arkts-test-uitest-on-c.md#focused)
+**Substitutes:** [focused](arkts-test-uitest-on-c.md#focused)
 
 <!--Device-By-focused(b?: boolean): By--><!--Device-By-focused(b?: boolean): By-End-->
 
@@ -163,7 +163,7 @@ Specifies the ID attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#id](arkts-test-uitest-on-c.md#id)(id:
+**Substitutes:** [id](On#id(id:)
 
 <!--Device-By-id(id: number): By--><!--Device-By-id(id: number): By-End-->
 
@@ -204,7 +204,7 @@ Specifies that the target component is located after the given attribute compone
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#isAfter](arkts-test-uitest-on-c.md#isafter)(on:
+**Substitutes:** [isAfter](On#isAfter(on:)
 
 <!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
 
@@ -246,7 +246,7 @@ Specifies that the target component is located before the given attribute compon
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#isBefore](arkts-test-uitest-on-c.md#isbefore)(on:
+**Substitutes:** [isBefore](On#isBefore(on:)
 
 <!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
 
@@ -288,7 +288,7 @@ Specifies the key attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#id](arkts-test-uitest-on-c.md#id)(id:
+**Substitutes:** [id](On#id(id:)
 
 <!--Device-By-key(key: string): By--><!--Device-By-key(key: string): By-End-->
 
@@ -329,7 +329,7 @@ Specifies the scrollable attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#scrollable](arkts-test-uitest-on-c.md#scrollable)
+**Substitutes:** [scrollable](arkts-test-uitest-on-c.md#scrollable)
 
 <!--Device-By-scrollable(b?: boolean): By--><!--Device-By-scrollable(b?: boolean): By-End-->
 
@@ -370,7 +370,7 @@ Specifies the selected status of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#selected](arkts-test-uitest-on-c.md#selected)
+**Substitutes:** [selected](arkts-test-uitest-on-c.md#selected)
 
 <!--Device-By-selected(b?: boolean): By--><!--Device-By-selected(b?: boolean): By-End-->
 
@@ -411,7 +411,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#text](arkts-test-uitest-on-c.md#text)
+**Substitutes:** [text](arkts-test-uitest-on-c.md#text)
 
 <!--Device-By-text(txt: string, pattern?: MatchPattern): By--><!--Device-By-text(txt: string, pattern?: MatchPattern): By-End-->
 
@@ -422,7 +422,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern {@link MatchPattern}. &lt;br&gt;Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). &lt;br&gt;Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
 
 **Return value:**
 
@@ -453,7 +453,7 @@ Specifies the type attribute of the target component.
 
 **Deprecated since:** 9
 
-**Substitutes:** [On#type](arkts-test-uitest-on-c.md#type)(tp:
+**Substitutes:** [type](On#type(tp:)
 
 <!--Device-By-type(tp: string): By--><!--Device-By-type(tp: string): By-End-->
 

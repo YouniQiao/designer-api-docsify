@@ -1,8 +1,8 @@
 # ProximityResponse
 
-接近光传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+接近光传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
 
-**继承/实现关系：** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**继承/实现关系：** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **起始版本：** 8
 

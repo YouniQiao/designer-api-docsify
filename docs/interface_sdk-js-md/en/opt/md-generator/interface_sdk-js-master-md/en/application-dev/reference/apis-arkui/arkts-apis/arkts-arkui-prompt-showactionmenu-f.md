@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -18,7 +18,7 @@ Displays the menu.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showActionMenu
+**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void-End-->
 
@@ -69,7 +69,7 @@ Displays the menu.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showActionMenu
+**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>-End-->
 
@@ -85,7 +85,7 @@ Displays the menu.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ActionMenuSuccessResponse&gt; |
+| Promise & lt;ActionMenuSuccessResponse & gt; |
 
 ## Examples
 

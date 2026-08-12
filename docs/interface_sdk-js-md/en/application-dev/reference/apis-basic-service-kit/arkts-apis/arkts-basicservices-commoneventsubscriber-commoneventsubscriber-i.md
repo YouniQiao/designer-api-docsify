@@ -17,7 +17,7 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
 Aborts an ordered common event. This API is used with   
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
+[finishCommonEvent](#finishCommonEvent). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -37,7 +37,47 @@ Aborts an ordered common event. This API is used with
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.abortCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in aborting common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.abortCommonEvent((err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in aborting common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## abortCommonEvent
 
@@ -46,7 +86,7 @@ abortCommonEvent(): Promise<void>
 ```
 
 Aborts an ordered common event. This API is used with  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
+[finishCommonEvent](#finishCommonEvent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -62,6 +102,40 @@ Aborts an ordered common event. This API is used with
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.abortCommonEvent().then(() => {
+  console.info(`Succeeded in aborting common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.abortCommonEvent().then(() => {
+  console.info(`Succeeded in aborting common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to abort common event. Code is ${error.code}, message is ${error.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## abortCommonEventSync
 
 ```TypeScript
@@ -69,7 +143,7 @@ abortCommonEventSync(): void
 ```
 
 Aborts an ordered common event when used with  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
+[finishCommonEvent](#finishCommonEvent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -79,6 +153,31 @@ Aborts an ordered common event when used with
 
 **System capability:** SystemCapability.Notification.CommonEvent
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.abortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.abortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## clearAbortCommonEvent
 
 ```TypeScript
@@ -86,7 +185,7 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
 Clears the abort state of an ordered common event. Use this API together with   
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
+[finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -106,7 +205,47 @@ Clears the abort state of an ordered common event. Use this API together with
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.clearAbortCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in clearing abort common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.clearAbortCommonEvent((err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in clearing abort common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## clearAbortCommonEvent
 
@@ -115,7 +254,7 @@ clearAbortCommonEvent(): Promise<void>
 ```
 
 Clears the abort state of this ordered common event. Use this API together with   
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
+[finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -131,6 +270,40 @@ Clears the abort state of this ordered common event. Use this API together with
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.clearAbortCommonEvent().then(() => {
+  console.info(`Succeeded in clearing abort common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.clearAbortCommonEvent().then(() => {
+  console.info(`Succeeded in clearing abort common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to clear abort common event. Code is ${error.code}, message is ${error.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## clearAbortCommonEventSync
 
 ```TypeScript
@@ -138,7 +311,7 @@ clearAbortCommonEventSync(): void
 ```
 
 Clears the abort state of an ordered common event when used with  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
+[finishCommonEvent](#finishCommonEvent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
@@ -147,6 +320,31 @@ Clears the abort state of an ordered common event when used with
 <!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.clearAbortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.clearAbortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
 
 ## finishCommonEvent
 
@@ -174,7 +372,33 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.finishCommonEvent((err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## finishCommonEvent
 
@@ -197,6 +421,29 @@ Finishes this ordered common event. This API uses a promise to return the result
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to finish common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -224,7 +471,33 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getAbortCommonEvent((err: BusinessError, abortEvent: boolean) => {
+  if (err) {
+    console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  } 
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getAbortCommonEvent((err: BusinessError | null, abortEvent: boolean | undefined | null) => {
+  if (err) {
+    console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  } 
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -248,6 +521,29 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get abort common event. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getAbortCommonEventSync
 
 ```TypeScript
@@ -269,6 +565,13 @@ Checks whether an ordered common event is aborted. This API returns the result s
 | Type | Description |
 | --- | --- |
 | boolean | The value **true** indicates that the ordered common event is in the abort state; the value **false** indicates otherwise. |
+
+## Examples
+
+```TypeScript
+let abortEvent: boolean = subscriber.getAbortCommonEventSync();
+console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+```
 
 ## getCode
 
@@ -304,7 +607,33 @@ Obtains the result code of an ordered common event. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getCode((err: BusinessError, code: number) => {
+  if (err) {
+    console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getCode((err: BusinessError | null, code: int | undefined | null) => {
+  if (err) {
+    console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+});
+```
 
 ## getCode
 
@@ -336,6 +665,29 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 | --- | --- |
 | ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result code. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getCode().then((code: int) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get code. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getCodeSync
 
 ArkTS-Dyn:
@@ -366,6 +718,22 @@ Obtains the result code of an ordered common event. This API returns the result 
 | --- | --- |
 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Code delivered by the ordered common event. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+let code: number = subscriber.getCodeSync();
+console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+let code: int = subscriber.getCodeSync();
+console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+```
+
 ## getData
 
 ```TypeScript
@@ -394,7 +762,35 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+// Obtain the result data (string type) of an ordered common event.
+subscriber.getData((err: BusinessError, data: string) => {
+  if (err) {
+    console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+// Obtain the result data (string type) of an ordered common event.
+subscriber.getData((err: BusinessError | null, data: string | undefined | null) => {
+  if (err) {
+    console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+});
+```
 
 ## getData
 
@@ -420,6 +816,29 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the result data (string type) of an ordered common event. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to get data. Code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## getDataSync
 
 ```TypeScript
@@ -443,6 +862,13 @@ Obtains the data of an ordered common event. This API returns the result synchro
 | Type | Description |
 | --- | --- |
 | string | Data delivered by the ordered common event. |
+
+## Examples
+
+```TypeScript
+let data: string = subscriber.getDataSync();
+console.info(`Succeeded in getting data, data is ${data}`);
+```
 
 ## getSubscribeInfo
 
@@ -472,7 +898,33 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  if (err) {
+    console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getSubscribeInfo((err: BusinessError | null, subscribeInfo: commonEventManager.CommonEventSubscribeInfo | undefined | null) => {
+  if (err) {
+    console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+});
+```
 
 ## getSubscribeInfo
 
@@ -500,7 +952,7 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getSubscribeInfo
 
@@ -525,6 +977,28 @@ Obtains the subscriber information. This API uses a promise to return the result
 | Type | Description |
 | --- | --- |
 | Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; | Promise used to return the result. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo | null) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError): void => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getSubscribeInfo
 
@@ -571,6 +1045,22 @@ Obtains the subscriber information. This API returns the result synchronously.
 | Type | Description |
 | --- | --- |
 | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) | Subscriber information. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+let subscribeInfo1: commonEventManager.CommonEventSubscribeInfo = subscriber.getSubscribeInfoSync();
+console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo1)}`);
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+let getSubscribeInfo = subscriber.getSubscribeInfoSync();
+console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(getSubscribeInfo)}`);
+```
 
 ## getSubscribeInfoSync
 
@@ -620,7 +1110,33 @@ Checks whether the current common event is an ordered common event. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.isOrderedCommonEvent((err: BusinessError, isOrdered: boolean) => {
+  if (err) {
+    console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.isOrderedCommonEvent((err: BusinessError | null, isOrdered: boolean | undefined | null) => {
+  if (err) {
+    console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+});
+```
 
 ## isOrderedCommonEvent
 
@@ -644,6 +1160,29 @@ Checks whether the current common event is an ordered common event. This API use
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isOrderedCommonEvent failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## isOrderedCommonEventSync
 
 ```TypeScript
@@ -665,6 +1204,13 @@ Checks whether a common event is an ordered one. This API returns the result syn
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the common event is an ordered one; returns **false** if the common event is an unordered one. |
+
+## Examples
+
+```TypeScript
+let isOrdered: boolean = subscriber.isOrderedCommonEventSync();
+console.info(`isOrderedCommonEventSync ${JSON.stringify(isOrdered)}`);
+```
 
 ## isStickyCommonEvent
 
@@ -692,7 +1238,33 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.isStickyCommonEvent((err: BusinessError, isSticky: boolean) => {
+  if (err) {
+    console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.isStickyCommonEvent((err: BusinessError | null, isSticky: boolean | undefined | null) => {
+  if (err) {
+    console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+});
+```
 
 ## isStickyCommonEvent
 
@@ -716,6 +1288,29 @@ Checks whether the current common event is a sticky common event. This API uses 
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the common event is a sticky one; returns **false** otherwise. |
 
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`isStickyCommonEvent failed, code is ${error.code}, message is ${error.message}`);
+});
+```
+
 ## isStickyCommonEventSync
 
 ```TypeScript
@@ -737,6 +1332,13 @@ Checks whether the current common event is a sticky common event. This API retur
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the common event is a sticky one; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+let isSticky: boolean = subscriber.isStickyCommonEventSync();
+console.info(`isStickyCommonEventSync ${JSON.stringify(isSticky)}`);
+```
 
 ## setCode
 
@@ -773,7 +1375,33 @@ Sets the code of an ordered common event. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setCode(1, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code.`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setCode(1, (err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code.`);
+});
+```
 
 ## setCode
 
@@ -815,7 +1443,30 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: Error): void  => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set code. Code is ${error.code}, message is ${error.message}`);
+});
+```
 
 ## setCodeAndData
 
@@ -853,7 +1504,33 @@ Sets the result code and data of an ordered common event. This API uses an async
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code and data.`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code and data.`);
+});
+```
 
 ## setCodeAndData
 
@@ -896,7 +1573,30 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set code and data. Code is ${error.code}, message is ${error.message}`);
+});
+```
 
 ## setCodeAndDataSync
 
@@ -933,7 +1633,18 @@ Sets the code and data of an ordered common event. This API returns the result s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+try {
+  subscriber.setCodeAndDataSync(1, 'publish_data_changed');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setCodeSync
 
@@ -969,7 +1680,18 @@ Sets the result code of an ordered common event. This API returns the result syn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+try {
+  subscriber.setCodeSync(1);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setData
 
@@ -1000,7 +1722,33 @@ Sets the data of an ordered common event. This API uses an asynchronous callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setData('publish_data_changed', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting data.`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setData('publish_data_changed', (err: BusinessError | null) => {
+  if (err) {
+    console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting data.`);
+});
+```
 
 ## setData
 
@@ -1036,7 +1784,30 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+ArkTS-Dyn example:
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+ArkTS-Sta example:
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: Error): void => {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set data. Code is ${error.code}, message is ${error.message}`);
+});
+```
 
 ## setDataSync
 
@@ -1066,5 +1837,16 @@ Sets the result data of an ordered common event. This API returns the result syn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+try {
+  subscriber.setDataSync('publish_data_changed');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+}
+```
 

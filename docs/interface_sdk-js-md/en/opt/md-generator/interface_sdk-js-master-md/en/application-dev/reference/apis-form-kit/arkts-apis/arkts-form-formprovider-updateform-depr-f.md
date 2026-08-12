@@ -16,7 +16,7 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formProvider:formProvider#updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform)
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateForm)
 
 <!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void--><!--Device-formProvider-function updateForm(    formId: string,    formBindingData: formBindingData.FormBindingData,    callback: AsyncCallback<void>  ): void-End-->
 
@@ -27,7 +27,7 @@ Updates a widget. This API uses an asynchronous callback to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | formId | string | Yes |
-| formBindingData | formBindingData.FormBindingData | Yes |
+| [formBindingData](arkts-application-formbindingdata.md) | formBindingData.FormBindingData | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## Examples
@@ -63,7 +63,7 @@ Updates a widget. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formProvider:formProvider#updateForm](arkts-form-formprovider-updateform-depr-f.md#updateform)
+**Substitutes:** [updateForm](arkts-form-formprovider-updateform-f.md#updateForm)
 
 <!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>--><!--Device-formProvider-function updateForm(formId: string, formBindingData: formBindingData.FormBindingData): Promise<void>-End-->
 
@@ -74,13 +74,13 @@ Updates a widget. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | formId | string | Yes |
-| formBindingData | formBindingData.FormBindingData | Yes |
+| [formBindingData](arkts-application-formbindingdata.md) | formBindingData.FormBindingData | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
 
 Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
-[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object.
+[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **Paragraph** object.
 
 **Since:** 12
 
@@ -16,7 +16,7 @@ Before calling any of the following APIs, you must use [build()](arkts-arkgraphi
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -58,7 +58,7 @@ forceReuseRasterResult(isForce: boolean): void
 Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
 
 This API is suitable for scenarios where the text content remains unchanged but  
-[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](arkts-arkgraphics2d-text-paragraph-c.md#paint) is called for drawing.
+[paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
 
 **Since:** 26.0.0
 
@@ -106,14 +106,14 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Line number of the text range, starting from 0. This API can only be used to obtain the bounds of existing lines. That is, the line number must start from 0, and the maximum line index is the number of text lines – 1. The number of text lines can be obtained via the [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount) API. |
+| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Line number of the text range, starting from 0. This API can only be used to obtain the bounds of existing lines. That is, the line number must start from 0, and the maximum line index is the number of text lines – 1. The number of text lines can be obtained via the [getLineCount](#getLineCount) API. |
 | includeSpaces | boolean | Yes | Whether spaces are included. The value **true** means that spaces are contained, and **false** means the opposite. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
+| Range | Text range obtained. If the line index is invalid, **start** and **end** are both **0**. |
 
 ## Examples
 
@@ -195,13 +195,13 @@ Obtains the character position information closest to the given coordinates.
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | Character position. |
+| PositionWithAffinity | Character position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getCharacterRangeForGlyphRange
 
@@ -227,7 +227,7 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| glyphRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Glyph range. |
+| glyphRange | Range | Yes | Glyph range. |
 | encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned character range indicates the byte range. For UTF-16 encoding, the returned character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
@@ -240,7 +240,7 @@ Obtains the character range corresponding to the specified glyph range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getGlyphPositionAtCoordinate
 
@@ -277,7 +277,7 @@ Obtains the position of a glyph closest to the given coordinates.
 
 | Type | Description |
 | --- | --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | Position of the glyph. |
+| PositionWithAffinity | Position of the glyph. |
 
 ## Examples
 
@@ -309,7 +309,7 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characterRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Character range. |
+| characterRange | Range | Yes | Character range. |
 | encoding | drawing.TextEncoding | Yes | Text encoding type. Currently, only UTF-8 and UTF-16 encoding types are supported. For UTF-8 encoding, the returned actual character range indicates the byte range. For UTF-16 encoding, the returned actual character range indicates the UTF-16 encoding unit range. |
 
 **Return value:**
@@ -322,7 +322,7 @@ Obtains the glyph range corresponding to the specified character range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## getHeight
 
@@ -460,7 +460,7 @@ Obtains the height of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the text line, which is an integer ranging from 0 to [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)-1. |
+| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the text line, which is an integer ranging from 0 to [getLineCount](#getLineCount)-1. |
 
 **Return value:**
 
@@ -532,13 +532,13 @@ Obtains the line measurement information of a line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of the line for which metric information is to be queried. Line numbers start from 0, and the maximum line index is the number of text lines minus 1. The number of text lines can be obtained through the [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount) API. |
+| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of the line for which metric information is to be queried. Line numbers start from 0, and the maximum line index is the number of text lines minus 1. The number of text lines can be obtained through the [getLineCount](#getLineCount) API. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LineMetrics](../../apis-arkui/arkts-apis/arkts-arkui-linemetrics-t.md) | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
+| LineMetrics | LineMetrics** object containing the measurement information if the specified line number is valid and the measurement information exists. If the line number is invalid or the measurement information cannot be obtained, **undefined** is returned. |
 
 ## Examples
 
@@ -574,7 +574,7 @@ Obtains the width of a given line.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Text line index, which is an integer ranging from 0 to [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)-1. |
+| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Text line index, which is an integer ranging from 0 to [getLineCount](#getLineCount)-1. |
 
 **Return value:**
 
@@ -792,7 +792,7 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | Style configuration of the paragraph. &lt;br&gt;The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` properties return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the pure black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
+| ParagraphStyle | Style configuration of the paragraph. &lt;br&gt;The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` properties return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the pure black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
 
 ## getProcessState
 
@@ -872,9 +872,9 @@ Obtains the rectangles occupied by the characters in the range of the text under
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes | Range of the text. |
-| widthStyle | [RectWidthStyle](../../apis-arkui/arkts-apis/arkts-arkui-rectwidthstyle-t.md) | Yes | Width of the rectangle. |
-| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes | Height of the rectangle. |
+| range | Range | Yes | Range of the text. |
+| widthStyle | RectWidthStyle | Yes | Width of the rectangle. |
+| heightStyle | RectHeightStyle | Yes | Height of the rectangle. |
 
 **Return value:**
 
@@ -937,7 +937,7 @@ Obtains all the text lines.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextLine&gt; | Array of text lines. |
+| Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; | Array of text lines. |
 
 ## Examples
 
@@ -951,7 +951,7 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)).
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)).
 
 **NOTE：**
 
@@ -1019,7 +1019,7 @@ Obtains the range of the word where the glyph with a given offset is located.
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the word. |
+| Range | Range of the word. |
 
 ## Examples
 
@@ -1067,7 +1067,7 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -1222,7 +1222,7 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
 Draws text on the canvas with (x, y) as the upper-left corner. You must call  
-[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+[layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
 **Since:** 12
 
@@ -1264,7 +1264,7 @@ ArkTS-Sta:
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void
 ```
 
-Draws text along a path on the canvas. You must call [layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+Draws text along a path on the canvas. You must call [layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
 **Since:** 12
 

@@ -80,9 +80,9 @@ flipBitByIndex(index: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | flipBitByIndex方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | index的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | flipBitByIndex方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | index的值超出范围。 |
 
 ## flipBitsByRange
 
@@ -111,9 +111,9 @@ flipBitsByRange(fromIndex: int, toIndex: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | flipBitsByRange方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | flipBitsByRange方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## getBitCountByRange
 
@@ -149,9 +149,9 @@ getBitCountByRange(element: int, fromIndex: int, toIndex: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getBitCountByRange方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getBitCountByRange方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## getBitsByRange
 
@@ -186,9 +186,9 @@ getBitsByRange(fromIndex: int, toIndex: int): BitVector
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getBitsByRange方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getBitsByRange方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## getIndexOf
 
@@ -224,9 +224,9 @@ getIndexOf(element: int, fromIndex: int, toIndex: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getIndexOf方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getIndexOf方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## getLastIndexOf
 
@@ -262,9 +262,9 @@ getLastIndexOf(element: int, fromIndex: int, toIndex: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getLastIndexOf方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | getLastIndexOf方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## has
 
@@ -300,9 +300,9 @@ has(element: int, fromIndex: int, toIndex: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | has方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | has方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## pop
 
@@ -358,8 +358,8 @@ push(element: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | push方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | push方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
 
 ## resize
 
@@ -387,8 +387,8 @@ resize(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | resize方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | resize方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
 
 ## setAllBits
 
@@ -416,8 +416,8 @@ setAllBits(element: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | setAllBits方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | setAllBits方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
 
 ## setBitsByRange
 
@@ -447,9 +447,9 @@ setBitsByRange(element: int, fromIndex: int, toIndex: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | setBitsByRange方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | setBitsByRange方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | fromIndex或toIndex的值超出范围。 |
 
 ## values
 
@@ -477,8 +477,8 @@ values(): IterableIterator<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | values方法无法被绑定。 |
-| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | values方法无法被绑定。 |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | 并发修改错误。 |
 
 ## [index: int]
 

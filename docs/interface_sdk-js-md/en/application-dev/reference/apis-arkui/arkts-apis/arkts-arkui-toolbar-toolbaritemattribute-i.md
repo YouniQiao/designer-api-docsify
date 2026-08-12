@@ -81,7 +81,7 @@ Sets toolbar item options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | No | column options |
+| options | [ToolBarItemOptions](arkts-arkui-toolbar-toolbaritemoptions-i.md) | No | column options |
 
 **Return value:**
 

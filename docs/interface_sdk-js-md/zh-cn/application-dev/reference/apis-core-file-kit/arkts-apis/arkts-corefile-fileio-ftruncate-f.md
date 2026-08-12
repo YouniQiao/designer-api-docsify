@@ -14,7 +14,7 @@ declare function ftruncate(fd: number, len?: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>--><!--Device-unnamed-declare function ftruncate(fd: number, len?: number): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ declare function ftruncate(fd: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -76,7 +76,7 @@ declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**替代接口：** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function ftruncate(fd: number, len: number, callback: AsyncCallback<void>): void-End-->
 

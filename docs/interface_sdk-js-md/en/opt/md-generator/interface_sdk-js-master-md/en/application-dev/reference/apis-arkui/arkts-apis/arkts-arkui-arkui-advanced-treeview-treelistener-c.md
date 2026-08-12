@@ -11,7 +11,7 @@ Listener of the tree view component. You can bind it to the **TreeView** compone
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from 'kits/@kit.ArkUI';
+import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
 ```
 
 ## off
@@ -37,7 +37,7 @@ Registers a one-off listener.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes |
-| callback | (callbackParam: CallbackParam) =&gt; void | No |
+| callback | (callbackParam: CallbackParam) = & gt; void | No |
 
 ## on
 
@@ -62,7 +62,7 @@ Declare class TreeListener
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes |
-| callback | (callbackParam: CallbackParam) =&gt; void | Yes |
+| callback | (callbackParam: CallbackParam) = & gt; void | Yes |
 
 ## once
 
@@ -87,4 +87,4 @@ Declare class TreeListener
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | [TreeListenType](arkts-arkui-arkui-advanced-treeview-treelistentype-e.md) | Yes |
-| callback | (callbackParam: CallbackParam) =&gt; void | Yes |
+| callback | (callbackParam: CallbackParam) = & gt; void | Yes |

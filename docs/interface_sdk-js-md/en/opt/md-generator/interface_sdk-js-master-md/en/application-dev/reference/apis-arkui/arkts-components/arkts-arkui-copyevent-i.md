@@ -16,7 +16,7 @@ preventDefault?: Callback<void>
 
 Prevents the default cut event.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 12
 

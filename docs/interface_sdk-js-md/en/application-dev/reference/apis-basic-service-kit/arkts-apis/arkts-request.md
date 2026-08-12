@@ -7,7 +7,7 @@ The **request** module provides applications with basic upload, download, and ba
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

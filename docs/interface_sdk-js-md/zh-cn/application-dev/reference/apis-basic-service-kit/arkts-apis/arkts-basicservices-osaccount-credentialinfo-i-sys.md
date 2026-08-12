@@ -80,7 +80,7 @@ credType: AuthType
 
 指示凭据类型。
 
-**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**类型：** AuthType
 
 **起始版本：** 8
 

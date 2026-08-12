@@ -2,7 +2,7 @@
 
 Represents boxed double value and related operations
 
-**Inheritance/Implementation:** Double extends [Floating](arkts-arkts-numeric-floating-c.md) and implements [Comparable<Double>](Comparable<Double>)
+**Inheritance/Implementation:** Double extends [Floating](arkts-arkts-numeric-floating-c.md#Floating) and implements [Comparable<Double>](Comparable<Double>)
 
 **Since:** 24
 
@@ -58,7 +58,7 @@ Creates a new instance of a Double
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Double \| BigInt \| undefined \| null | Yes | The value to be converted to a number. Can be a string, number, or BigInt (optional). |
+| value | string \| [Double](arkts-arkts-double-c.md) \| BigInt \| undefined \| null | Yes | The value to be converted to a number. Can be a string, number, or BigInt (optional). |
 
 **Return value:**
 
@@ -281,7 +281,7 @@ Constructs a new Double instance from BigInt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BigInt](arkts-arkts-bigint-c.md) | Yes |  |
+| value | BigInt | Yes |  |
 
 ## constructor
 

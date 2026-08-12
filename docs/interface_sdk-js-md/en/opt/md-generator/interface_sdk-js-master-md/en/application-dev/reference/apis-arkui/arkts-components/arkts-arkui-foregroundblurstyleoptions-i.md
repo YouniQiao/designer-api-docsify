@@ -1,8 +1,8 @@
 # ForegroundBlurStyleOptions
 
-Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md) to define the foreground blur options.
+Inherits from [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions) to define the foreground blur options.
 
-**Inheritance/Implementation:** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
+**Inheritance/Implementation:** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)
 
 **Since:** 10
 

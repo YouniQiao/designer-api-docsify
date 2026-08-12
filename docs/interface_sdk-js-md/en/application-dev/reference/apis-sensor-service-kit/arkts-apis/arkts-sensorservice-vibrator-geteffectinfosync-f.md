@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## getEffectInfoSync
@@ -39,7 +39,7 @@ Obtains the preset vibration effect based on the device ID and vibrator ID to de
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
 ## Examples
 

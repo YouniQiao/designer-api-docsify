@@ -11,7 +11,7 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## addAfter
@@ -34,10 +34,10 @@ Inserts a function after a method of a class object. The final return value is t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| targetClass | Object | Yes |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | Yes |
 | methodName | string | Yes |
-| isStatic | boolean | Yes |
-| after | Function | Yes |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | Yes |
+| [after](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Function | Yes |
 
 ## Examples
 
@@ -115,9 +115,9 @@ Inserts a function before a method of a class object. The inserted function is e
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| targetClass | Object | Yes |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | Yes |
 | methodName | string | Yes |
-| isStatic | boolean | Yes |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | Yes |
 | before | Function | Yes |
 
 ## Examples
@@ -205,9 +205,9 @@ Replaces a method of a class object with another function. After the replacement
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| targetClass | Object | Yes |
+| [targetClass](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md) | Object | Yes |
 | methodName | string | Yes |
-| isStatic | boolean | Yes |
+| [isStatic](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutinfo-shortcutinfo-depr-i.md) | boolean | Yes |
 | instead | Function | Yes |
 
 ## Examples

@@ -106,7 +106,7 @@ Application-level storage path, sharing a storage path for all modules under the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-common-connectoptions-t.md)&lt;T&gt; | Yes | application-level storage parameters. |
+| params | [ConnectOptions](arkts-arkui-persistencev2-connectoptions-i.md)&lt;T&gt; | Yes | application-level storage parameters. |
 
 **Return value:**
 
@@ -184,7 +184,7 @@ Removes data with the given key or given class type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOrType | string \| Class | Yes | key or class type to remove |
+| keyOrType | string \| [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | Yes | key or class type to remove |
 
 ## save
 
@@ -208,5 +208,5 @@ Used to manually persist data changes to disk.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOrType | string \| Class | Yes | key or class type that needs to be persisted. |
+| keyOrType | string \| [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | Yes | key or class type that needs to be persisted. |
 

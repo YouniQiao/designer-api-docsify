@@ -20,5 +20,5 @@ Callback function for transition controller
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | window.TransitionContext | 是 | The transition context |
+| context | [window.TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | 是 | The transition context |
 

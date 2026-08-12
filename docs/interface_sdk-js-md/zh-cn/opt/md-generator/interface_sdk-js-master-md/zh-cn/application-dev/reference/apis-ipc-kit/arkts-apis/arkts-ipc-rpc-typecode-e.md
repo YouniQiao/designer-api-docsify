@@ -1,7 +1,7 @@
 # TypeCode
 
-从API version 12起，IPC新增[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writearraybuffer)和  
-[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer)方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据的读写。类型码对应数值及含义如下。
+从API version 12起，IPC新增[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer)和  
+[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer)方法传递ArrayBuffer数据，传递数据时通过具体类型值来分辨业务是以哪一种TypedArray去进行数据的读写。类型码对应数值及含义如下。
 
 **起始版本：** 12
 

@@ -2,7 +2,7 @@
 
 Defines SwipeGesture.
 
-**Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**Inheritance/Implementation:** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **Since:** 23
 
@@ -65,7 +65,7 @@ Slide gesture recognition success callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 

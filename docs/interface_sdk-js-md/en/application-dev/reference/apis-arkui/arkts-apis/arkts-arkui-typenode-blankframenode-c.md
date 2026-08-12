@@ -40,5 +40,5 @@ Initialize Blank FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [BlankAttribute](../arkts-components/arkts-arkui-blank-attribute.md) |  |
+| BlankAttribute |  |
 

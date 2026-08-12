@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FailureCode } from 'kits/@kit.AbilityKit';
+import { FailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -12,7 +12,7 @@ import { FailureCode } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService provides two callback functions,  [onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess) and [onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure),to handle the results of successful and failed atomic service launch requests, respectively. |
+| [CompletionHandlerForAtomicService](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md) | CompletionHandlerForAtomicService provides two callback functions,  [onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestSuccess) and [onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestFailure),to handle the results of successful and failed atomic service launch requests, respectively. |
 
 ### Enums
 

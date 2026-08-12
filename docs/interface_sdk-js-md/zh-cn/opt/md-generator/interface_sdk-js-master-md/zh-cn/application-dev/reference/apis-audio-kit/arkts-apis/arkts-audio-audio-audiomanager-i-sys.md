@@ -2,7 +2,7 @@
 
 音频音量和设备管理。
 
-在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager)获取AudioManager实例。
+在使用AudioManager的接口之前，需先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager)获取AudioManager实例。
 
 **起始版本：** 7
 
@@ -32,14 +32,14 @@ user disable the safe media volume state.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -79,7 +79,7 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getEffectManager
 
@@ -87,7 +87,7 @@ getCollaborativeManager(): AudioCollaborativeManager
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an {@link AudioEffectManager} instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager) instance.
 
 **起始版本：** 18
 
@@ -107,7 +107,7 @@ Obtains an {@link AudioEffectManager} instance.
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -138,21 +138,21 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mainKey | string | 是 |
-| subKeys | Array&lt;string&gt; | 否 |
+| subKeys | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string&gt;&gt; |
+| Promise & lt;Record & lt;string, string & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -189,13 +189,13 @@ getRecordingManager(): AudioRecordingManager
 
 | 类型 |
 | --- |
-| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i-sys.md) |
+| [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## on('volumeChange')
 
@@ -209,7 +209,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.AudioVolumeManager#event:volumeChange
+**替代接口：** [volumeChange](ohos.multimedia.audio.AudioVolumeManager#event:volumeChange)
 
 <!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
 
@@ -222,7 +222,7 @@ Listens for system volume change events. This method uses a callback to get volu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'volumeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;VolumeEvent&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -246,7 +246,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.AudioVolumeGroupManager#event:ringerModeChange
+**替代接口：** [ringerModeChange](ohos.multimedia.audio.AudioVolumeGroupManager#event:ringerModeChange)
 
 <!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
 
@@ -259,7 +259,7 @@ Listens for ringer mode change events. This method uses a callback to get ringer
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'ringerModeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioRingMode&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 |
 
 ## 示例
 
@@ -332,7 +332,7 @@ Sets the audio scene mode to change audio strategies. This method uses a promise
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -369,22 +369,22 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mainKey | string | 是 |
-| kvpairs | Record&lt;string, string&gt; | 是 |
+| kvpairs | Record & lt;string, string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

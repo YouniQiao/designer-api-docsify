@@ -152,7 +152,7 @@ Gets the response headers.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Header&gt; |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; |
 
 ## getResponseIsReady
 
@@ -304,7 +304,7 @@ Sets the response headers.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| header | Array&lt;Header&gt; | Yes |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | Yes |
 
 ## setResponseIsReady
 

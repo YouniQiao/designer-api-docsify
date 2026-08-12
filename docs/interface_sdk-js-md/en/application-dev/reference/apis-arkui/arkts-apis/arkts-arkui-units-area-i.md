@@ -18,7 +18,7 @@ globalPosition: Position
 
 Defines the global position.
 
-**Type:** [Position](arkts-arkui-display-position-i.md)
+**Type:** [Position](arkts-arkui-units-position-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ position: Position
 
 Defines the local position.
 
-**Type:** [Position](arkts-arkui-display-position-i.md)
+**Type:** [Position](arkts-arkui-units-position-i.md)
 
 **Since:** 23
 

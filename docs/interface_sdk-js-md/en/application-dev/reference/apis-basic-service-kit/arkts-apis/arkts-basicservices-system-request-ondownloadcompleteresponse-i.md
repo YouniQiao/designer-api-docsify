@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-unnamed-export interface OnDownloadCompleteResponse--><!--Device-unnamed-export interface OnDownloadCompleteResponse-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## uri
@@ -34,7 +34,7 @@ URI of the download file.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.config.saveas
+**Substitutes:** [saveas](ohos.request.agent.Task.config.saveas)
 
 <!--Device-OnDownloadCompleteResponse-uri: string--><!--Device-OnDownloadCompleteResponse-uri: string-End-->
 

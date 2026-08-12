@@ -1,6 +1,6 @@
 # NetStatsInfoSequenceItem (System API)
 
-Parameters for an {@link NetStatsInfo} with start time and end time.
+Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) with start time and end time.
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Parameters for an {@link NetStatsInfo} with start time and end time.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## endTime

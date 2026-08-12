@@ -26,5 +26,5 @@ The query member purchase event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MemberPurchaseInfo[]&gt; | (MemberPurchaseInfo[]) returned through promise |
+| Promise&lt;[MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md)[]&gt; | (MemberPurchaseInfo[]) returned through promise |
 

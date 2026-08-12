@@ -1,8 +1,8 @@
 # AnimatedDrawableDescriptor
 
-使用[Image](../../apis-arkui/arkts-components/arkts-arkui-image-i)组件播放PixelMap数组或动图资源时传入AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)。
+使用[Image](./@internal/component/ets/image)组件播放PixelMap数组或动图资源时传入AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)。
 
-**继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **起始版本：** 12
 
@@ -32,7 +32,7 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pixelMaps | Array&lt;image.PixelMap&gt; | 是 |
+| pixelMaps | Array & lt;image.PixelMap & gt; | 是 |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | 否 |
 
 ## constructor
@@ -57,7 +57,7 @@ AnimatedDrawableDescriptor的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array&lt;image.PixelMap&gt; | 是 |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| Array & lt;image.PixelMap & gt; | 是 |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | 否 |
 
 ## 示例

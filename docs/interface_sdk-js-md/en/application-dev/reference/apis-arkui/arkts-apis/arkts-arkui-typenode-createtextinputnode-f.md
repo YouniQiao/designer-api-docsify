@@ -29,5 +29,5 @@ Create a FrameNode of TextInput type.On API 26.0.0 and above, It can also create
 
 | Type | Description |
 | --- | --- |
-| [TextInput](arkts-arkui-typenode-textinput-t.md) | Return TextInput type FrameNode. |
+| TextInput | Return TextInput type FrameNode. |
 

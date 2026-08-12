@@ -1,7 +1,7 @@
 # @ohos.security.cert
 
 证书算法库框架提供证书相关接口。其中，依赖加解密算法库框架的基础算法能力的部分，详细接口说明可参考  
-[cryptoFramework API参考](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md/arkts-security-cryptoframework.md)。
+[cryptoFramework API参考](../../apis-crypto-architecture-kit/arkts-apis/arkts-security-cryptoframework.md#cryptoFramework)。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@
 | [createCmsParser](arkts-devicecertificate-cert-createcmsparser-f.md#createcmsparser) | 表示创建CmsParser对象。 |
 | [createPkcs12](arkts-devicecertificate-cert-createpkcs12-f.md#createpkcs12) | 表示创建P12。使用Promise方式返回结果。 |
 | [createPkcs12Sync](arkts-devicecertificate-cert-createpkcs12sync-f.md#createpkcs12sync) | 表示创建P12，同步返回结果。 |
-| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-cert-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore) | 表示从P12中读取ca证书来构造[TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)对象数组。使用Promise方式返回结果。 |
+| [createTrustAnchorsWithKeyStore](arkts-devicecertificate-cert-createtrustanchorswithkeystore-f.md#createtrustanchorswithkeystore) | 表示从P12中读取ca证书来构造[TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md#X509TrustAnchor)对象数组。使用Promise方式返回结果。 |
 | [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createx500distinguishedname) | 表示使用字符串格式的名称创建X500DistinguishedName对象。使用Promise方式返回结果。 |
 | [createX500DistinguishedName](arkts-devicecertificate-cert-createx500distinguishedname-f.md#createx500distinguishedname-1) | 表示使用DER格式的名称创建X500DistinguishedName对象。使用Promise方式返回结果。 |
 | [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl) | 表示创建X.509证书吊销列表对象。使用Callback异步回调。 |

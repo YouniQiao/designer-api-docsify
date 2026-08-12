@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getAuthenticator
@@ -18,7 +18,7 @@ Obtains an **Authenticator** instance for user authentication.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance)
 
 <!--Device-userAuth-function getAuthenticator(): Authenticator--><!--Device-userAuth-function getAuthenticator(): Authenticator-End-->
 

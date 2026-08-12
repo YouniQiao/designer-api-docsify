@@ -26,9 +26,9 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean, callback: Asyn
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
 ## 示例
 
@@ -80,15 +80,15 @@ function setOverlayEnabled(moduleName:string, isEnabled: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
 ## 示例
 

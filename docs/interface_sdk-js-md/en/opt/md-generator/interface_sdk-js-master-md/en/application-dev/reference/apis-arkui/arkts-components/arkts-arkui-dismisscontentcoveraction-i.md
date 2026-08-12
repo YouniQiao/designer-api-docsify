@@ -16,7 +16,7 @@ dismiss: Callback<void>
 
 Callback invoked when the modal is dismissed. Call this API when you need to exit the page.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 12
 

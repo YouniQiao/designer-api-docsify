@@ -22,7 +22,7 @@ repeat?: ImageRepeat
 
 设置背景图片的重复样式。默认值为ImageRepeat.NoRepeat。
 
-**类型：** [ImageRepeat](../arkts-apis/arkts-arkui-imagerepeat-e.md)
+**类型：** ImageRepeat
 
 **起始版本：** 18
 

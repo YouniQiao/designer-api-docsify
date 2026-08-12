@@ -8,10 +8,10 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 | key | 类型 | 说明 |
 | -------------------- | --------------- | ------------------------------------------------------------ |
 | accessibilityEnabled | string | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 |
-| colorMode | [ColorMode](arkts-arkui-colormode-e.md) | 深浅色模式，可选值为：&lt;br&gt;- **ColorMode.LIGHT：浅色模式**；&lt;br&gt;- **ColorMode.DARK**：深色模式。 |
+| colorMode | [ColorMode](@link ColorMode) | 深浅色模式，可选值为： & lt;br & gt;- **ColorMode.LIGHT：浅色模式**； & lt;br & gt;- **ColorMode.DARK**：深色模式。 |
 | fontScale | number | 字体大小比例。 |
-| fontWeightScale | number | 字重比例。 |
-| layoutDirection | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | 布局方向类型，可选值为：&lt;br&gt;- **LayoutDirection.LTR**：从左到右；&lt;br&gt;- **LayoutDirection.RTL**：从右到左；&lt;br&gt;- **LayoutDirection.Auto**：跟随系统。 |
+| [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | 字重比例。 |
+| layoutDirection | [LayoutDirection](@link LayoutDirection) | 布局方向类型，可选值为： & lt;br & gt;- **LayoutDirection.LTR**：从左到右； & lt;br & gt;- **LayoutDirection.RTL**：从右到左； & lt;br & gt;- **LayoutDirection.Auto**：跟随系统。 |
 | languageCode | string |
 
 **起始版本：** 7

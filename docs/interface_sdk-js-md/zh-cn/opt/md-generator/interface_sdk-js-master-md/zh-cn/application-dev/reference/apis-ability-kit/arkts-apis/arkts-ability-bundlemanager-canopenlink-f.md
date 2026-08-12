@@ -32,9 +32,9 @@ function canOpenLink(link: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700056](../errorcode-bundle.md#17700056-指定link的scheme未在queryschemes字段下配置) |
-| [17700055](../errorcode-bundle.md#17700055-指定的link无效) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700056](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700056-指定link的scheme未在queryschemes字段下配置) |
+| [17700055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700055-指定的link无效) |
 
 ## 示例
 

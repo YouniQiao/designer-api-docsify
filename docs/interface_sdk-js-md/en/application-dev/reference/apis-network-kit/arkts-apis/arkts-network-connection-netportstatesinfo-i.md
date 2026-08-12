@@ -13,7 +13,7 @@ Defines port states of system network.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## tcpPortStatesInfo
@@ -24,7 +24,7 @@ tcpPortStatesInfo?: Array<TcpNetPortStatesInfo>
 
 Port information of the TCP network.
 
-**Type:** Array&lt;TcpNetPortStatesInfo&gt;
+**Type:** Array&lt;[TcpNetPortStatesInfo](arkts-network-connection-tcpnetportstatesinfo-i.md)&gt;
 
 **Since:** 24
 
@@ -44,7 +44,7 @@ udpPortStatesInfo?: Array<UdpNetPortStatesInfo>
 
 Port information of the UDP network.
 
-**Type:** Array&lt;UdpNetPortStatesInfo&gt;
+**Type:** Array&lt;[UdpNetPortStatesInfo](arkts-network-connection-udpnetportstatesinfo-i.md)&gt;
 
 **Since:** 24
 

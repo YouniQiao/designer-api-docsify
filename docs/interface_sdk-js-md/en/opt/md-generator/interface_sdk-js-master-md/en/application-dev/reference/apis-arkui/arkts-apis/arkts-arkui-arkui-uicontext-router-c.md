@@ -17,7 +17,7 @@ Provides APIs to access pages through URLs. You can use the APIs to navigate to 
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## back
@@ -101,7 +101,7 @@ Obtains the number of pages in the current stack.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.arkui.UIContext.Router#getStackSize
+**Substitutes:** [getStackSize](#getStackSize)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -247,7 +247,7 @@ Obtains the status information about a page by its URL.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;router.RouterState&gt; |
+| Array & lt;router.RouterState & gt; |
 
 ## hideAlertBeforeBackPage
 
@@ -296,10 +296,10 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## pushNamedRoute
 
@@ -329,16 +329,16 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## pushNamedRoute
 
@@ -347,7 +347,7 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 ```
 
 Navigates to a page using the named route. This API uses an asynchronous callback to return the result. Compared with  
-[pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute),this API supports the **mode** parameter, which enables you to set the routing mode.
+[pushNamedRoute](#pushNamedRoute),this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -371,10 +371,10 @@ Navigates to a page using the named route. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## pushNamedRoute
 
@@ -383,7 +383,7 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Pro
 ```
 
 Navigates to a page using the named route. This API uses a promise to return the result. Compared with  
-[pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute), this API supports the **mode**parameter, which enables you to set the routing mode.
+[pushNamedRoute](#pushNamedRoute-1), this API supports the **mode**parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -406,16 +406,16 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## pushUrl
 
@@ -446,10 +446,10 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## pushUrl
 
@@ -479,16 +479,16 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## pushUrl
 
@@ -496,7 +496,7 @@ Navigates to a specified page in the application. This API uses a promise to ret
 pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a specified page in the application. This API uses an asynchronous callback to return the result.Compared with [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+Navigates to a specified page in the application. This API uses an asynchronous callback to return the result.Compared with [pushUrl](#pushUrl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -520,10 +520,10 @@ Navigates to a specified page in the application. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## pushUrl
 
@@ -532,7 +532,7 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
 Navigates to a specified page in the application. This API uses a promise to return the result. Compared with  
-[pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+[pushUrl](#pushUrl-1), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -555,16 +555,16 @@ Navigates to a specified page in the application. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
-| [100002](../errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) |
+| [100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) |
 
 ## replaceNamedRoute
 
@@ -595,9 +595,9 @@ Replaces the current page with another one using the named route and destroys th
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## replaceNamedRoute
 
@@ -627,15 +627,15 @@ Replaces the current page with another one using the named route and destroys th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## replaceNamedRoute
 
@@ -644,7 +644,7 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 ```
 
 Replaces the current page with another one using the named route and destroys the current page. This API uses an asynchronous callback to return the result. Compared with  
-[replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute),this API supports the **mode** parameter, which enables you to set the routing mode.
+[replaceNamedRoute](#replaceNamedRoute),this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -668,9 +668,9 @@ Replaces the current page with another one using the named route and destroys th
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## replaceNamedRoute
 
@@ -679,7 +679,7 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): 
 ```
 
 Replaces the current page with another one using the named route and destroys the current page. This API uses a promise to return the result. Compared with  
-[replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute), this API supports the  
+[replaceNamedRoute](#replaceNamedRoute-1), this API supports the  
 **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
@@ -703,15 +703,15 @@ Replaces the current page with another one using the named route and destroys th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## replaceUrl
 
@@ -742,9 +742,9 @@ Replaces the current page with another one in the application and destroys the c
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## replaceUrl
 
@@ -774,15 +774,15 @@ Replaces the current page with another one in the application and destroys the c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## replaceUrl
 
@@ -791,7 +791,7 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 ```
 
 Replaces the current page with another one in the application and destroys the current page. This API uses an asynchronous callback to return the result. Compared with  
-[replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl), this API supports the **mode** parameter, which enables you to set the routing mode.
+[replaceUrl](#replaceUrl), this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -815,9 +815,9 @@ Replaces the current page with another one in the application and destroys the c
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## replaceUrl
 
@@ -825,7 +825,7 @@ Replaces the current page with another one in the application and destroys the c
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-Replaces the current page with another one in the application and destroys the current page. This API uses a promise to return the result. Compared with [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl),this API supports the **mode** parameter, which enables you to set the routing mode.
+Replaces the current page with another one in the application and destroys the current page. This API uses a promise to return the result. Compared with [replaceUrl](#replaceUrl-1),this API supports the **mode** parameter, which enables you to set the routing mode.
 
 **Since:** 10
 
@@ -848,15 +848,15 @@ Replaces the current page with another one in the application and destroys the c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [200002](../errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) |
 
 ## showAlertBeforeBackPage
 
@@ -886,5 +886,5 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

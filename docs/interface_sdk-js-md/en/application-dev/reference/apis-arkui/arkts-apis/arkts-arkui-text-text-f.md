@@ -27,14 +27,14 @@ Defines Text Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAttribute&gt; | Yes | Text attribute instance. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | content. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAttribute](arkts-arkui-text-textattribute-i.md)&gt; | Yes | Text attribute instance. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | content. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) |  |
+| [TextAttribute](arkts-arkui-text-textattribute-i.md) |  |
 
 
 ## Text
@@ -62,13 +62,13 @@ Defines Text Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | No |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content | string \| [Resource](arkts-arkui-resource-t.md) | No |  |
+| value | [TextOptions](arkts-arkui-text-textoptions-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) |  |
+| [TextAttribute](arkts-arkui-text-textattribute-i.md) |  |
 

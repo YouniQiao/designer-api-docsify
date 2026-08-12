@@ -12,7 +12,7 @@ Checks whether two WantAgent objects are equal.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#equal
+**Substitutes:** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -24,8 +24,8 @@ Checks whether two WantAgent objects are equal.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
-| otherAgent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes |
+| otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 ## Examples
@@ -97,7 +97,7 @@ Checks whether two WantAgent objects are equal.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#equal
+**Substitutes:** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -109,14 +109,14 @@ Checks whether two WantAgent objects are equal.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
-| otherAgent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Yes |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes |
+| otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

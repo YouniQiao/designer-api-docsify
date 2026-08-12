@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## getProfileConnectionState
@@ -30,22 +30,22 @@ Get the profile connection state of the current device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, {@link ProfileConnectionState}. Without profileId, if any profile is connected, {@link ProfileConnectionState#STATE_CONNECTED} is returned. Otherwise, {@link ProfileConnectionState#STATE_DISCONNECTED} is returned. |
+| profileId | ProfileId | No | Indicate the profile id. This is an optional parameter. With profileId, returns the current connection state of this profile, [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md#ProfileConnectionState). Without profileId, if any profile is connected, [STATE_CONNECTED](ProfileConnectionState#STATE_CONNECTED) is returned. Otherwise, [STATE_DISCONNECTED](ProfileConnectionState#STATE_DISCONNECTED) is returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Returns the connection state. |
+| ProfileConnectionState | Returns the connection state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

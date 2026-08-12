@@ -14,7 +14,7 @@ function getCurrentFunctions(): FunctionType
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getcurrentfunctions)
+**替代接口：** [getCurrentFunctions](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md#getCurrentFunctions)
 
 <!--Device-usb-function getCurrentFunctions(): FunctionType--><!--Device-usb-function getCurrentFunctions(): FunctionType-End-->
 
@@ -26,7 +26,7 @@ function getCurrentFunctions(): FunctionType
 
 | 类型 | 说明 |
 | --- | --- |
-| [FunctionType](arkts-basicservices-usb-functiontype-e-sys.md) | 当前的USB功能列表的数字组合掩码。 |
+| FunctionType | 当前的USB功能列表的数字组合掩码。 |
 
 ## 示例
 

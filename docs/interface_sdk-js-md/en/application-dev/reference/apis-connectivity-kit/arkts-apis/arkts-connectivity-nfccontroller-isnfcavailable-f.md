@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## isNfcAvailable
@@ -20,7 +20,7 @@ Checks whether a device supports NFC.
 
 **Deprecated since:** 9
 
-**Substitutes:** global#canIUse("SystemCapability.Communication.NFC.Core")
+**Substitutes:** [canIUse](global#canIUse("SystemCapability.Communication.NFC.Core"))
 
 <!--Device-nfcController-function isNfcAvailable(): boolean--><!--Device-nfcController-function isNfcAvailable(): boolean-End-->
 

@@ -3,13 +3,13 @@
 媒体服务错误类型枚举。
 
 > **说明：**
-> > 从API version 8开始支持，从API version 11开始废弃，建议使用[AVErrorCode](arkts-media-media-averrorcode-e.md)替代。
+> > 从API version 8开始支持，从API version 11开始废弃，建议使用[AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 11
 
-**替代接口：** [media.AVErrorCode](arkts-media-media-averrorcode-e.md)
+**替代接口：** [AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)
 
 <!--Device-unnamed-enum MediaErrorCode--><!--Device-unnamed-enum MediaErrorCode-End-->
 
@@ -27,7 +27,7 @@ MSERR_OK = 0
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_OK
+**替代接口：** [AVERR_OK](arkts-media-media-averrorcode-e.md#AVERR_OK)
 
 <!--Device-MediaErrorCode-MSERR_OK = 0--><!--Device-MediaErrorCode-MSERR_OK = 0-End-->
 
@@ -45,7 +45,7 @@ MSERR_NO_MEMORY = 1
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_NO_MEMORY
+**替代接口：** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#AVERR_NO_MEMORY)
 
 <!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1--><!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1-End-->
 
@@ -63,7 +63,7 @@ MSERR_OPERATION_NOT_PERMIT = 2
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_OPERATE_NOT_PERMIT
+**替代接口：** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#AVERR_OPERATE_NOT_PERMIT)
 
 <!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2--><!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2-End-->
 
@@ -81,7 +81,7 @@ MSERR_INVALID_VAL = 3
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_INVALID_PARAMETER
+**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3--><!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3-End-->
 
@@ -99,7 +99,7 @@ MSERR_IO = 4
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_IO
+**替代接口：** [AVERR_IO](arkts-media-media-averrorcode-e.md#AVERR_IO)
 
 <!--Device-MediaErrorCode-MSERR_IO = 4--><!--Device-MediaErrorCode-MSERR_IO = 4-End-->
 
@@ -117,7 +117,7 @@ MSERR_TIMEOUT = 5
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_TIMEOUT
+**替代接口：** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#AVERR_TIMEOUT)
 
 <!--Device-MediaErrorCode-MSERR_TIMEOUT = 5--><!--Device-MediaErrorCode-MSERR_TIMEOUT = 5-End-->
 
@@ -135,7 +135,7 @@ MSERR_UNKNOWN = 6
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_INVALID_PARAMETER
+**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
 
 <!--Device-MediaErrorCode-MSERR_UNKNOWN = 6--><!--Device-MediaErrorCode-MSERR_UNKNOWN = 6-End-->
 
@@ -153,7 +153,7 @@ MSERR_SERVICE_DIED = 7
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_SERVICE_DIED
+**替代接口：** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#AVERR_SERVICE_DIED)
 
 <!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7--><!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7-End-->
 
@@ -171,7 +171,7 @@ MSERR_INVALID_STATE = 8
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_INVALID_PARAMETER
+**替代接口：** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8--><!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8-End-->
 
@@ -189,7 +189,7 @@ MSERR_UNSUPPORTED = 9
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.media/media.AVErrorCode#AVERR_UNSUPPORT_CAPABILITY
+**替代接口：** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#AVERR_UNSUPPORT_CAPABILITY)
 
 <!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9--><!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9-End-->
 

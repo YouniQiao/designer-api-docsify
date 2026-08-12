@@ -1,8 +1,8 @@
 # Folder
 
-文件夹类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述文件夹。
+文件夹类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md#File)的子类，用于描述文件夹。
 
-**继承/实现关系：** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
+**继承/实现关系：** Folder extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
 
 **起始版本：** 10
 

@@ -34,7 +34,7 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: number
 ```
 
-Only {@link DeviceType.SPEAKER} with networkId, {@link DeviceType.REMOTE_CAST}or {@link DeviceType.REMOTE_DAUDIO} has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#SPEAKER) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#REMOTE_CAST)or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#REMOTE_DAUDIO) has dmDeviceType which indicated deviceTypeId.
 
 **类型：** number
 

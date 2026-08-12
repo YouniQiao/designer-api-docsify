@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getBtConnectionState
@@ -20,7 +20,7 @@ Get the local device connection state to any profile of any remote device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getBtConnectionState
+**Substitutes:** [getBtConnectionState](ohos.bluetoothManager/bluetoothManager.getBtConnectionState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -32,7 +32,7 @@ Get the local device connection state to any profile of any remote device.
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | One of { |
+| ProfileConnectionState | One of { |
 
 ## Examples
 

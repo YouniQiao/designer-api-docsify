@@ -6,7 +6,7 @@
 function getGraphicsMemory(): Promise<int>
 ```
 
-��ȡӦ���Դ��ܴ�С��gl + graph����ʹ��Promise�첽�ص���
+获取应用显存总大小（gl + graph），使用Promise异步回调。
 
 **起始版本：** 14
 
@@ -22,13 +22,13 @@ function getGraphicsMemory(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | promise���󣬷���Ӧ���Դ��ܴ�С����λΪKB�� |
+| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | promise对象，返回应用显存总大小，单位为KB。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
+| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) | Failed to get the application memory due to a remote exception. |
 
 ## 示例
 

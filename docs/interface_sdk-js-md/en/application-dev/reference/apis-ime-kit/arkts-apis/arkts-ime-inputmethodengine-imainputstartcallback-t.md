@@ -20,6 +20,6 @@ The callback of 'inputStart' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| kbController | [KeyboardController](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyboardcontroller-i.md) | Yes | keyboard controller. |
+| kbController | KeyboardController | Yes | keyboard controller. |
 | inputClient | [InputClient](arkts-ime-inputmethodengine-inputclient-i.md) | Yes | input client. |
 

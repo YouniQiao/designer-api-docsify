@@ -11,7 +11,7 @@ Defines the image recommendation options. The image recommendation feature depen
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## defaultRecommendationType
@@ -27,7 +27,7 @@ If the tag exists, the tag page is displayed by default.
 
 If the tag does not exist, the All tag page is displayed by default.
 
-**Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e-sys.md)
+**Type:** [RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)
 
 **Since:** 24
 
@@ -47,7 +47,7 @@ recommendationTypeList?: Array<RecommendationType>
 
 List of recommendation types. If images of multiple categories need to be recommended based on the enumerated value, set this parameter.
 
-**Type:** Array&lt;RecommendationType&gt;
+**Type:** Array&lt;[RecommendationType](arkts-medialibrary-photoaccesshelper-recommendationtype-e.md)&gt;
 
 **Since:** 23
 

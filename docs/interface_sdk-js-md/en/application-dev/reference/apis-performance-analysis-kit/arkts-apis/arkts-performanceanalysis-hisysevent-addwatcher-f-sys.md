@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## addWatcher
@@ -30,17 +30,17 @@ Adds a watcher for event subscription.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| watcher | [Watcher](../../apis-core-file-kit/arkts-apis/arkts-corefile-watcher-t.md) | Yes | Watcher for event subscription. |
+| watcher | Watcher | Yes | Watcher for event subscription. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
-| [11200102](../errorcode-hisysevent-sys.md#11200102-number-of-event-watcher-rules-exceeding-the-limit) | The number of watch rules exceeds the limit. |
-| [11200101](../errorcode-hisysevent-sys.md#11200101-number-of-event-watchers-exceeding-the-limit) | The number of watchers exceeds the limit. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. An attempt was made to read system event forbidden by permission: ohos.permission.READ_DFX_SYSEVENT. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API is not allowed called by Non-system application. |
+| [11200102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200102-number-of-event-watcher-rules-exceeding-the-limit) | The number of watch rules exceeds the limit. |
+| [11200101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200101-number-of-event-watchers-exceeding-the-limit) | The number of watchers exceeds the limit. |
 
 ## Examples
 

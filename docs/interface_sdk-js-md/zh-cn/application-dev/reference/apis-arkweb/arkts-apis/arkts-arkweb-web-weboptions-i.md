@@ -18,7 +18,7 @@ controller: WebviewController
 
 Sets the controller of the Web.
 
-**类型：** [WebviewController](../arkts-components/arkts-arkweb-webviewcontroller-t.md)
+**类型：** [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **起始版本：** 23
 
@@ -72,7 +72,7 @@ renderMode?: RenderMode
 
 Rendering mode.RenderMode.ASYNC_RENDER (default, cannot be dynamically adjusted): The Web component is rendered asynchronously.RenderMode.SYNC_RENDER: The Web component is rendered synchronously within the current execution context.
 
-**类型：** [RenderMode](../arkts-components/arkts-arkweb-rendermode-e.md)
+**类型：** [RenderMode](arkts-arkweb-web-rendermode-e.md)
 
 **起始版本：** 23
 
@@ -106,9 +106,9 @@ A token indicating that the current Web component specifies a shared rendering p
 src: string | Resource
 ```
 
-Web resource address. If accessing local resource files, please use \$rawfile or resource protocol.If you load a local resource file that applies the sandbox path outside the package (files support html and txt types),please use the file:// sandbox file path.Src cannot dynamically change the address through state variables (for example: @State).If you need to change it, please reload it through {@link loadUrl}.
+Web resource address. If accessing local resource files, please use \$rawfile or resource protocol.If you load a local resource file that applies the sandbox path outside the package (files support html and txt types),please use the file:// sandbox file path.Src cannot dynamically change the address through state variables (for example: @State).If you need to change it, please reload it through [loadUrl](loadUrl).
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

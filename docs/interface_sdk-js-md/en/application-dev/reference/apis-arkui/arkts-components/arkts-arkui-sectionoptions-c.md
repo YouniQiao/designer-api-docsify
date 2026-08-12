@@ -42,7 +42,7 @@ columnsGap?: Dimension
 
 Column gap of the section. If this parameter is not set, the [columnsGap](WaterFlowAttribute#columnsGap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 12
 
@@ -121,7 +121,7 @@ Unit: vp
 
 When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
-**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| Dimension
+**Type:** Margin \| Dimension
 
 **Default:** {top: 0, right: 0, bottom: 0, left: 0}
 
@@ -146,7 +146,7 @@ rowsGap?: Dimension
 Row gap of the section. If this parameter is not set, the [rowsGap](WaterFlowAttribute#rowsGap) of the  
 **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 12
 

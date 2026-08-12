@@ -16,7 +16,7 @@ new <T extends object = object>(values?: readonly T[] | null): WeakSet<T>
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| WeakSet&lt;T&gt; |
+| WeakSet & lt;T & gt; |
 
 ## prototype
 

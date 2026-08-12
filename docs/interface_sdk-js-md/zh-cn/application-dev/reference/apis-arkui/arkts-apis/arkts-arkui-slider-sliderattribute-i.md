@@ -1,8 +1,8 @@
 # SliderAttribute
 
-支持除触摸热区以外的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+支持除触摸热区以外的[通用属性](common)。
 
-**继承/实现关系：** SliderAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** SliderAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<SliderAttribute> | Attribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SliderAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 在Slider组件的 属性修改器。&lt;br/&gt;当modifier的值为undefined时，不使用属性修改器。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SliderAttribute](arkts-arkui-slider-sliderattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | 在Slider组件的 属性修改器。&lt;br/&gt;当modifier的值为undefined时，不使用属性修改器。 |
 
 **返回值：**
 
@@ -142,7 +142,7 @@ default blockColor(value: ResourceColor | LinearGradient | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient \| undefined | 是 | 滑块的颜色。 取值为undefined时，按默认值处理。&lt;br/&gt;默认值： `\\$r('sys.color.ohos_id_color_foreground_contrary')` |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md) \| undefined | 是 | 滑块的颜色。 取值为undefined时，按默认值处理。&lt;br/&gt;默认值： `\\$r('sys.color.ohos_id_color_foreground_contrary')` |
 
 **返回值：**
 
@@ -178,7 +178,7 @@ default blockSize(value: SizeOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) \| undefined | 是 | 滑块大小。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：当参数style的值设置为 [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).OutSet时为{width: 18, height: 18}，当参数style的值设置为 [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).InSet时为{width: 12, height: 12}，当参数style的值设置为 [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).NONE时，此字段不生效。&lt;br/&gt;当设置的blockSize的宽高值不相等时，取较小值的尺寸，当设置的宽高值中有一个或两个都小于等于0的时候，取默认 值。 |
+| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) \| undefined | 是 | 滑块大小。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：当参数style的值设置为 [SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).OutSet时为{width: 18, height: 18}，当参数style的值设置为 [SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).InSet时为{width: 12, height: 12}，当参数style的值设置为 [SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).NONE时，此字段不生效。&lt;br/&gt;当设置的blockSize的宽高值不相等时，取较小值的尺寸，当设置的宽高值中有一个或两个都小于等于0的时候，取默认 值。 |
 
 **返回值：**
 
@@ -208,7 +208,7 @@ default blockStyle(value: SliderBlockStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SliderBlockStyle](../arkts-components/arkts-arkui-sliderblockstyle-i.md) \| undefined | 是 | 滑块形状参数。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：SliderBlockType.DEFAULT，滑块形状 为圆形。 |
+| value | [SliderBlockStyle](arkts-arkui-slider-sliderblockstyle-i.md) \| undefined | 是 | 滑块形状参数。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：SliderBlockType.DEFAULT，滑块形状 为圆形。 |
 
 **返回值：**
 
@@ -238,7 +238,7 @@ default contentModifier(modifier: ContentModifier<SliderConfiguration> | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;SliderConfiguration&gt; \| undefined | 是 | 在Slider组件上，定制内容区的方法。&lt;br/&gt;ContentModifier：内 容修改器，开发者需要自定义class实现ContentModifier接口。取值为undefined时，则不使用内容修改器。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-slider-sliderconfiguration-i.md)&gt; \| undefined | 是 | 在Slider组件上，定制内容区的方法。&lt;br/&gt;ContentModifier：内 容修改器，开发者需要自定义class实现ContentModifier接口。取值为undefined时，则不使用内容修改器。 |
 
 **返回值：**
 
@@ -256,7 +256,7 @@ default digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 > **说明：**
 > 
-> 该接口不支持在[attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 该接口不支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 23
 
@@ -334,7 +334,7 @@ default minResponsiveDistance(value: double | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double \| undefined | 是 | 设置滑动响应的最小距离，滑动超过此距离后滑块才开始滑动。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：0&lt;br/&gt;**说明：** &lt;br /&gt;单位与[SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md/arkts-arkui-slideroptions-i.md)中的属性min以及属性max一致。&lt;br/&gt;当value小于0、大于max-min或非法值时，取默认值。 |
+| value | double \| undefined | 是 | 设置滑动响应的最小距离，滑动超过此距离后滑块才开始滑动。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：0&lt;br/&gt;**说明：** &lt;br /&gt;单位与[SliderOptions](arkts-arkui-slider-slideroptions-i.md#SliderOptions)中的属性min以及属性max一致。&lt;br/&gt;当value小于0、大于max-min或非法值时，取默认值。 |
 
 **返回值：**
 
@@ -399,7 +399,7 @@ default prefix<T extends Object>(content: ComponentContent<T> | undefined, optio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| undefined | 是 | 自定义组件内容，用于定义滑块前缀的可视化内容，该内容会显示在滑块的起始位置。取值为undefined时，则不使用前缀。 |
-| options | [SliderPrefixOptions](../arkts-components/arkts-arkui-sliderprefixoptions-i.md) \| undefined | 否 | 滑块前缀的配置选项，用于设置与无障碍功能相关的属性。取值为undefined时，则不使用前缀。 &lt;br/&gt;默认值： null |
+| options | [SliderPrefixOptions](arkts-arkui-slider-sliderprefixoptions-i.md) \| undefined | 否 | 滑块前缀的配置选项，用于设置与无障碍功能相关的属性。取值为undefined时，则不使用前缀。 &lt;br/&gt;默认值： null |
 
 **返回值：**
 
@@ -443,7 +443,7 @@ default selectedBorderRadius(value: Dimension | undefined): this
 default selectedColor(selectedColor: ResourceColor | LinearGradient | undefined): this
 ```
 
-设置滑轨的已滑动部分颜色。与[selectedColor](arkts-arkui-slider-sliderattribute-i.md#selectedcolor)相比，新增了LinearGradient类型的支持。
+设置滑轨的已滑动部分颜色。与[selectedColor](#selectedColor)相比，新增了LinearGradient类型的支持。
 
 从API version 18开始支持利用LinearGradient设置滑轨的已滑动部分的渐变色。
 
@@ -461,7 +461,7 @@ default selectedColor(selectedColor: ResourceColor | LinearGradient | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient \| undefined | 是 | 滑轨的已滑动部分颜色。 取值为undefined时，按默认值处理。&lt;br/&gt; **说明：** &lt;br/&gt;设置渐变色时，若颜色断点颜色值为非法值或者渐变色断点为空时，渐变色不起效果。 &lt;br/&gt;默认值：`\\$r('sys.color.ohos_id_color_emphasize')` |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md) \| undefined | 是 | 滑轨的已滑动部分颜色。 取值为undefined时，按默认值处理。&lt;br/&gt; **说明：** &lt;br/&gt;设置渐变色时，若颜色断点颜色值为非法值或者渐变色断点为空时，渐变色不起效果。 &lt;br/&gt;默认值：`\\$r('sys.color.ohos_id_color_emphasize')` |
 
 **返回值：**
 
@@ -681,7 +681,7 @@ default stepSize(value: Length | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | 是 | 刻度大小（直径）。取值为undefined时，按默认值处理。 &lt;br/&gt;默认值：'4vp'&lt;br/&gt;取值范围： [0, [trackThickness](arkts-arkui-slider-sliderattribute-i.md#trackthickness)) |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | 是 | 刻度大小（直径）。取值为undefined时，按默认值处理。 &lt;br/&gt;默认值：'4vp'&lt;br/&gt;取值范围： [0, [trackThickness](#trackThickness)) |
 
 **返回值：**
 
@@ -774,7 +774,7 @@ default trackColor(value: ResourceColor | LinearGradient | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient \| undefined | 是 | 滑轨的背景颜色。取值为undefined时，按默认值处理。&lt;br/&gt;默认值： `\\$r('sys.color.ohos_id_color_component_normal')`&lt;br/&gt;**说明：** &lt;br/&gt;1. 设置渐变色时，如果颜色断点颜色值为非法值或渐变色断点为空，渐变色将不起效果。&lt; br/&gt;2. 该接口中的LinearGradient类型不支持在原子化服务中使用。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md) \| undefined | 是 | 滑轨的背景颜色。取值为undefined时，按默认值处理。&lt;br/&gt;默认值： `\\$r('sys.color.ohos_id_color_component_normal')`&lt;br/&gt;**说明：** &lt;br/&gt;1. 设置渐变色时，如果颜色断点颜色值为非法值或渐变色断点为空，渐变色将不起效果。&lt; br/&gt;2. 该接口中的LinearGradient类型不支持在原子化服务中使用。 |
 
 **返回值：**
 
@@ -820,14 +820,14 @@ default trackThickness(value: Length | undefined): this
 
 设置滑轨的粗细。设置小于等于0的值时，取默认值。
 
-为保证滑块和滑轨的[SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md)样式，[blockSize](arkts-arkui-slider-sliderattribute-i.md#blocksize)跟随trackThickness同比例增减。
+为保证滑块和滑轨的[SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle)样式，[blockSize](#blockSize)跟随trackThickness同比例增减。
 
-当style为[SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).OutSet时，trackThickness ：[blockSize](arkts-arkui-slider-sliderattribute-i.md#blocksize) = 1 ：4，当style为  
-[SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).InSet时，trackThickness ：[blockSize](arkts-arkui-slider-sliderattribute-i.md#blocksize) = 5 ：3。
+当style为[SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).OutSet时，trackThickness ：[blockSize](#blockSize) = 1 ：4，当style为  
+[SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).InSet时，trackThickness ：[blockSize](#blockSize) = 5 ：3。
 
-trackThickness或[blockSize](arkts-arkui-slider-sliderattribute-i.md#blocksize)的大小超过Slider组件的宽度或高度时，取默认值。
+trackThickness或[blockSize](#blockSize)的大小超过Slider组件的宽度或高度时，取默认值。
 
-当[SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md)设置为OutSet时，尽管trackThickness的大小没超过Slider组件的宽度或高度，但是[blockSize](arkts-arkui-slider-sliderattribute-i.md#blocksize)超过了，取默认值。
+当[SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle)设置为OutSet时，尽管trackThickness的大小没超过Slider组件的宽度或高度，但是[blockSize](#blockSize)超过了，取默认值。
 
 **起始版本：** 23
 
@@ -843,7 +843,7 @@ trackThickness或[blockSize](arkts-arkui-slider-sliderattribute-i.md#blocksize)�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| undefined | 是 | 滑轨的粗细。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：当参数style的值设置 [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).OutSet 时为 4.0vp，[SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md/arkts-arkui-sliderstyle-e.md).InSet时为20.0vp。 |
+| value | [Length](arkts-arkui-length-t.md) \| undefined | 是 | 滑轨的粗细。取值为undefined时，按默认值处理。&lt;br/&gt;默认值：当参数style的值设置 [SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).OutSet 时为 4.0vp，[SliderStyle](arkts-arkui-slider-sliderstyle-e.md#SliderStyle).InSet时为20.0vp。 |
 
 **返回值：**
 

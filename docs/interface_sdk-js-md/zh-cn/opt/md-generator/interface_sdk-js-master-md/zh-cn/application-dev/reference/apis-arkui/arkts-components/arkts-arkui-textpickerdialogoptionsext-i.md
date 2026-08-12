@@ -1,8 +1,8 @@
 # TextPickerDialogOptionsExt
 
-文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpickeroptions-i.md)。
+文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)。
 
-**继承/实现关系：** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
+**继承/实现关系：** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)
 
 **起始版本：** 20
 
@@ -144,7 +144,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > 保持默认值false。
 > 
 > 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](arkts-arkui-buttontype-e.md#capsule)。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，呈现效果依然是胶囊型按钮[Capsule](ButtonType#Capsule)。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -195,7 +195,7 @@ backgroundBlurStyle?: BlurStyle
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，
 > 否则显示的颜色将不符合预期效果。
 
-**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -327,7 +327,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > 保持默认值false。
 > 
 > 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](arkts-arkui-buttontype-e.md#capsule)。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，呈现效果依然是胶囊型按钮[Capsule](ButtonType#Capsule)。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -375,7 +375,7 @@ defaultTextStyle?: TextPickerTextStyle
 
 设置关闭滑动过程中文本样式变化动效时的各个选项的文本样式，仅当disableTextStyleAnimation为true时生效。
 
-默认值：与[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件默认值相同。
+默认值：与[Text](./text)组件默认值相同。
 
 **类型：** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
@@ -405,7 +405,7 @@ disableTextStyleAnimation?: boolean
 > **说明：**
 > 
 > 设置为true时，滑动过程中无字号、字重、字体颜色等变化动效，且文本均显示为defaultTextStyle属性设置的样式。如未设置defaultTextStyle，
-> 则显示为[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件默认样式。
+> 则显示为[Text](./text)组件默认样式。
 
 **类型：** boolean
 
@@ -569,7 +569,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 20
 
@@ -589,7 +589,7 @@ onAccept?: Callback<TextPickerResult>
 
 点击弹窗中的“确定”按钮时触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -611,7 +611,7 @@ onChange?: Callback<TextPickerResult>
 
 回调会在滑动动画结束后触发，如果需要快速获取索引值变化，建议使用onEnterSelectedArea接口。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -636,7 +636,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 > 在多列联动场景中，不建议使用该回调，由于该回调标识的是滑动过程中选项进入分割线区域内的节点，而跟随变化的选项并不涉及滑动，因此，
 > 回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -656,7 +656,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 滑动弹窗中的选择器的选择列停止时，触发该回调，用于监听物理滑动停止事件。两者触发时机略有不同，onChange侧重于选项选中状态，onScrollStop侧重于滑动动作结束。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**类型：** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **起始版本：** 20
 
@@ -740,7 +740,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 20
 
@@ -764,12 +764,12 @@ systemMaterial?: SystemUiMaterial
 > 
 > - 默认值为ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象，设置undefined时与默认值保持一致。
 > 不同的材质具有不同的效果。
-> - 该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、背景模糊
+> - 该接口影响背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、背景模糊
 > [backgroundBlurStyle]
-> {@link CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions)}
-> 、背景效果[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect)、边框颜色
-> [borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影
-> [shadow](arkts-arkui-commonmethod-c.md#shadow)，当设置系统材质时，上述接口不生效。
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
+> 、背景效果[backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、边框颜色
+> [borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影
+> [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，当设置系统材质时，上述接口不生效。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 

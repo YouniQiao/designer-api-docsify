@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## createAVSession
@@ -26,17 +26,17 @@ Create an AVSession instance. An ability can only create one AVSession
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | The context of application |
+| context | Context | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
-| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session {@link AVSessionType} |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVSession&gt; | Yes | async callback for AVSession. |
+| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#AVSessionType) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | Yes | async callback for AVSession. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## Examples
 
@@ -97,22 +97,22 @@ Create an AVSession instance. An ability can only create one AVSession
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | The context of application |
+| context | Context | Yes | The context of application |
 | tag | string | Yes | A user-defined name for this session |
-| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session {@link AVSessionType} |
+| type | [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md) | Yes | The type of session [AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#AVSessionType) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVSession&gt; | Promise for AVSession |
+| Promise&lt;[AVSession](arkts-avsession-avsession-avsession-i.md)&gt; | Promise for AVSession |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
 ## Examples
 

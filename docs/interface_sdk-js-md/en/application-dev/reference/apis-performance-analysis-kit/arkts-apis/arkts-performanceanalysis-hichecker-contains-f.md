@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## contains
@@ -20,7 +20,7 @@ Checks whether the specified rule exists in the collection of added rules. If th
 
 **Deprecated since:** 9
 
-**Substitutes:** [hichecker.containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule)
+**Substitutes:** [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containsCheckRule)
 
 <!--Device-hichecker-function contains(rule: bigint): boolean--><!--Device-hichecker-function contains(rule: bigint): boolean-End-->
 

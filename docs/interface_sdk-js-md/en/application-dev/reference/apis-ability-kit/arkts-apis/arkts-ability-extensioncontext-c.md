@@ -1,11 +1,11 @@
 # ExtensionContext
 
 ExtensionContext provides the context environment for an  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md). It inherits from  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It inherits from  
 [Context](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context).This module provides APIs for accessing resources of a specific  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility).
 
-**Inheritance/Implementation:** ExtensionContext extends [Context](arkts-ability-context-t.md)
+**Inheritance/Implementation:** ExtensionContext extends [Context](Context)
 
 **Since:** 9
 

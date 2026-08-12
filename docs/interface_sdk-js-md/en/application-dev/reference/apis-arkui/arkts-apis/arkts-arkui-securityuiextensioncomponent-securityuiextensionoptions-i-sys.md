@@ -20,7 +20,7 @@ dpiFollowStrategy?: SecurityDpiFollowStrategy
 
 Set SecurityUIExtensionComponent Content Dpi Follow Strategy.
 
-**Type:** [SecurityDpiFollowStrategy](../arkts-components/arkts-arkui-securitydpifollowstrategy-e-sys.md)
+**Type:** [SecurityDpiFollowStrategy](arkts-arkui-securityuiextensioncomponent-securitydpifollowstrategy-e-sys.md)
 
 **Default:** SecurityDpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 

@@ -13,7 +13,7 @@ VisualEffect class, used to apply background color blending, border lighting, co
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundColorBlender
@@ -46,7 +46,7 @@ A blender for changing the background color of the component. Currently, only th
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the background color change effect attached. |
+| VisualEffect | Returns the VisualEffect with the background color change effect attached. |
 
 ## Examples
 
@@ -96,13 +96,13 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the border lighting effect attached. |
+| VisualEffect | Returns the VisualEffect with the border lighting effect attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -185,13 +185,13 @@ Adds a color gradient effect to the component.
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the color gradient effect attached. |
+| VisualEffect | Returns the VisualEffect with the color gradient effect attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -257,13 +257,13 @@ NOTE1. This visual effect supports drawing outside the bounds of the control, bu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-apis/arkts-arkui-distortioncomponent-distortionparam-i-sys.md) | Yes | The parameters of the nonlinear deformation effect. |
+| distortionParam | DistortionParam | Yes | The parameters of the nonlinear deformation effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the nonlinear deformation effect attached. |
+| VisualEffect | Returns the VisualEffect with the nonlinear deformation effect attached. |
 
 ## liquidMaterial
 
@@ -297,13 +297,13 @@ Adds a material effect to the component. The material effect simulates the optic
 
 | Type | Description |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | Returns the VisualEffect with the material effect attached. |
+| VisualEffect | Returns the VisualEffect with the material effect attached. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

@@ -28,13 +28,13 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | handle | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 是 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -75,13 +75,13 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | handle | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 是 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -120,13 +120,13 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | handle | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 是 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -165,13 +165,13 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 否 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -212,13 +212,13 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | resourceId | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 否 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -267,7 +267,7 @@ onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<Huk
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -323,7 +323,7 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -371,7 +371,7 @@ onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<Hu
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -430,13 +430,13 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 | --- | --- | --- |
 | handle | string | 是 |
 | propertyId | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 是 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -484,7 +484,7 @@ onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtension
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -524,13 +524,13 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | handle | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 是 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -574,13 +574,13 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
 | --- | --- | --- |
 | handle | string | 是 |
 | params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
-| certInfo | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | 是 |
+| [certInfo](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-cmresult-i.md) | [HuksCryptoExtensionCertInfo](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensioncertinfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -625,13 +625,13 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
 | handle | string | 是 |
 | wrappingHandle | string | 是 |
 | params | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
-| wrappedKey | Uint8Array | 是 |
+| [wrappedKey](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-kemencapresult-i.md) | Uint8Array | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -694,7 +694,7 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -734,13 +734,13 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | resourceId | string | 是 |
-| params | Array&lt;huksExternalCrypto.HuksExternalCryptoParam&gt; \| [HuksCryptoExtensionParam[]](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md) | 是 |
+| params | Array & lt;huksExternalCrypto.HuksExternalCryptoParam & gt; \ | [HuksCryptoExtensionParam](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionparam-i.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -790,7 +790,7 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 
@@ -836,7 +836,7 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 
 | 类型 |
 | --- |
-| Promise&lt;HuksCryptoExtensionResult&gt; |
+| Promise&lt;[HuksCryptoExtensionResult](arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md)&gt; |
 
 ## 示例
 

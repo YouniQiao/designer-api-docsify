@@ -15,7 +15,7 @@ Parameters of the **ScrollBar** component.
 > 
 > - The visibility of the **ScrollBar** component is set through **BarState**. The component automatically adjusts
 > **opacity** based on the **BarState** setting to control its visibility. Therefore, setting the
-> [opacity](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#opacity) attribute for the **ScrollBar**
+> [opacity](CommonMethod#opacity(opacity: Optional&lt;number | Resource&gt;)) attribute for the **ScrollBar**
 > component does not take effect.
 
 **Since:** 8
@@ -54,7 +54,7 @@ scroller: Scroller
 
 Scroller, which can be bound to scrollable components for scrolling control.
 
-**Type:** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**Type:** Scroller
 
 **Since:** 8
 
@@ -74,7 +74,7 @@ state?: BarState
 
 Scrollbar state.&lt;br&gt;Default value: **BarState.Auto**
 
-**Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
+**Type:** BarState
 
 **Since:** 8
 

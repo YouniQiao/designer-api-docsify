@@ -14,7 +14,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event
+**替代接口：** [Event](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Event)
 
 <!--Device-hiAppEvent-namespace Event--><!--Device-hiAppEvent-namespace Event-End-->
 

@@ -46,7 +46,7 @@ countText(text: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createPathForGlyph
 
@@ -96,13 +96,13 @@ enableEmbolden(isEmbolden: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isEmbolden](#isembolden) | boolean | 是 |
+| [isEmbolden](arkts-arkgraphics2d-drawing-font-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## enableLinearMetrics
 
@@ -124,13 +124,13 @@ enableLinearMetrics(isLinearMetrics: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isLinearMetrics](#islinearmetrics) | boolean | 是 |
+| [isLinearMetrics](arkts-arkgraphics2d-drawing-font-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## enableSubpixel
 
@@ -152,13 +152,13 @@ enableSubpixel(isSubpixel: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isSubpixel](#issubpixel) | boolean | 是 |
+| [isSubpixel](arkts-arkgraphics2d-drawing-font-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getBounds
 
@@ -180,13 +180,13 @@ getBounds(glyphs: Array<number>): Array<common2D.Rect>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| glyphs | Array&lt;number&gt; | 是 |
+| glyphs | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;common2D.Rect&gt; |
+| Array & lt;common2D.Rect & gt; |
 
 ## getEdging
 
@@ -355,7 +355,7 @@ getTextPath(text: string, byteLength: number, x: number, y: number): Path
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getTextPathWithFallback
 
@@ -430,19 +430,19 @@ getWidths(glyphs: Array<number>): Array<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| glyphs | Array&lt;number&gt; | 是 |
+| glyphs | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isBaselineSnap
 
@@ -630,7 +630,7 @@ measureSingleCharacter(text: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## measureSingleCharacterWithFeatures
 
@@ -653,7 +653,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | text | string | 是 |
-| features | Array&lt;FontFeature&gt; | 是 |
+| features | Array & lt;FontFeature & gt; | 是 |
 
 **返回值：**
 
@@ -665,7 +665,7 @@ measureSingleCharacterWithFeatures(text: string, features: Array<FontFeature>): 
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## measureText
 
@@ -693,7 +693,7 @@ measureText(text: string, encoding: TextEncoding): number
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | text | string | 是 |
-| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 是 |
+| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | 是 |
 
 **返回值：**
 
@@ -705,7 +705,7 @@ measureText(text: string, encoding: TextEncoding): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setBaselineSnap
 
@@ -727,13 +727,13 @@ setBaselineSnap(isBaselineSnap: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isBaselineSnap](#isbaselinesnap) | boolean | 是 |
+| [isBaselineSnap](arkts-arkgraphics2d-drawing-font-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setEdging
 
@@ -761,7 +761,7 @@ setEdging(edging: FontEdging): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setEmbeddedBitmaps
 
@@ -783,13 +783,13 @@ setEmbeddedBitmaps(isEmbeddedBitmaps: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isEmbeddedBitmaps](#isembeddedbitmaps) | boolean | 是 |
+| [isEmbeddedBitmaps](arkts-arkgraphics2d-drawing-font-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setForceAutoHinting
 
@@ -811,13 +811,13 @@ setForceAutoHinting(isForceAutoHinting: boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isForceAutoHinting](#isforceautohinting) | boolean | 是 |
+| [isForceAutoHinting](arkts-arkgraphics2d-drawing-font-c.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setHinting
 
@@ -845,7 +845,7 @@ setHinting(hinting: FontHinting): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setScaleX
 
@@ -873,7 +873,7 @@ setScaleX(scaleX: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setSize
 
@@ -901,7 +901,7 @@ setSize(textSize: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setSkewX
 
@@ -929,7 +929,7 @@ setSkewX(skewX: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setThemeFontFollowed
 
@@ -957,7 +957,7 @@ setThemeFontFollowed(followed: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setTypeface
 
@@ -985,7 +985,7 @@ setTypeface(typeface: Typeface): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## textToGlyphs
 
@@ -1014,10 +1014,10 @@ textToGlyphs(text: string, glyphCount?: number): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## ArcSwiper
@@ -32,7 +32,7 @@ Defines ArcSwiper Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No | ArcSwiper constructor options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
@@ -68,8 +68,8 @@ Defines ArcSwiper Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcSwiperAttribute&gt; | Yes | arcSwiper attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | CustomBuilderT&lt;[ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-i.md)&gt; | Yes | arcSwiper attribute instance |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 

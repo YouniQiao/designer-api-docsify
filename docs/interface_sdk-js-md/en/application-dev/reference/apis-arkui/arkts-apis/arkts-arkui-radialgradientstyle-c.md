@@ -1,8 +1,8 @@
 # RadialGradientStyle
 
-Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
+Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle).
 
-**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle)
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ A constructor used to create a **RadialGradientOptions** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) | Yes | Options for displaying a radial gradient. |
+| options | RadialGradientOptions | Yes | Options for displaying a radial gradient. |
 
 ## options
 
@@ -46,7 +46,7 @@ options: RadialGradientOptions
 
 Options for displaying a radial gradient.
 
-**Type:** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
+**Type:** RadialGradientOptions
 
 **Since:** 20
 

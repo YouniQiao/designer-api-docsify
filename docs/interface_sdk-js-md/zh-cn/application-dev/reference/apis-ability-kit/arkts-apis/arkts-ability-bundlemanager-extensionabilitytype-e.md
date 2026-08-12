@@ -38,7 +38,7 @@ FORM = 0
 WORK_SCHEDULER = 1
 ```
 
-[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-workschedulerextensionability.md/arkts-workschedulerextensionability.md)：延时任务扩展能力，允许应用在系统闲时执行实时性不高的任务。
+[WorkSchedulerExtensionAbility](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-workschedulerextensionability-c.md#WorkSchedulerExtensionAbility)：延时任务扩展能力，允许应用在系统闲时执行实时性不高的任务。
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ WORK_SCHEDULER = 1
 INPUT_METHOD = 2
 ```
 
-[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md/arkts-ime-inputmethodextensionability-c.md)：输入法扩展能力，用于开发输入法应用。
+[InputMethodExtensionAbility](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)：输入法扩展能力，用于开发输入法应用。
 
 **起始版本：** 9
 
@@ -70,7 +70,7 @@ INPUT_METHOD = 2
 SERVICE = 3
 ```
 
-[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md)：后台服务扩展能力，提供后台运行并对外提供相应能力。
+[ServiceExtensionAbility](arkts-ability-app-ability-serviceextensionability-serviceextensionability-c-sys.md#ServiceExtensionAbility)：后台服务扩展能力，提供后台运行并对外提供相应能力。
 
 **起始版本：** 9
 
@@ -102,7 +102,7 @@ AccessibilityExtensionAbility：无障碍服务扩展能力，支持访问与操
 DATA_SHARE = 5
 ```
 
-[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-application-datashareextensionability.md/arkts-application-datashareextensionability.md)：数据共享扩展能力，用于对外提供数据读写服务。
+[DataShareExtensionAbility](../../apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md#DataShareExtensionAbility)：数据共享扩展能力，用于对外提供数据读写服务。
 
 **起始版本：** 9
 
@@ -134,7 +134,7 @@ FileShareExtensionAbility：文件共享扩展能力，用于应用间的文件�
 STATIC_SUBSCRIBER = 7
 ```
 
-[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)：静态广播扩展能力，用于处理静态事件，比如开机事件。
+[StaticSubscriberExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md#StaticSubscriberExtensionAbility)：静态广播扩展能力，用于处理静态事件，比如开机事件。
 
 **起始版本：** 9
 
@@ -166,7 +166,7 @@ WallpaperExtensionAbility：壁纸扩展能力，用于实现桌面壁纸。预�
 BACKUP = 9
 ```
 
-[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-application-backupextensionability.md/arkts-application-backupextensionability.md)：数据备份扩展能力，提供应用数据的备份恢复能力。
+[BackupExtensionAbility](../../apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability-backupextensionability-c.md#BackupExtensionAbility)：数据备份扩展能力，提供应用数据的备份恢复能力。
 
 **起始版本：** 9
 
@@ -182,7 +182,7 @@ BACKUP = 9
 WINDOW = 10
 ```
 
-[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-application-windowextensionability.md/arkts-application-windowextensionability.md)：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
+[WindowExtensionAbility](../../apis-arkui/arkts-apis/arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility)：界面组合扩展能力，允许系统应用进行跨应用的界面拉起和嵌入。
 
 **起始版本：** 9
 
@@ -198,7 +198,7 @@ WINDOW = 10
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)：企业设备管理扩展能力，提供企业管理时处理管理事件的能力。
+[EnterpriseAdminExtensionAbility](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility)：企业设备管理扩展能力，提供企业管理时处理管理事件的能力。
 
 **起始版本：** 9
 
@@ -262,7 +262,7 @@ PrintExtensionAbility：文件打印扩展能力，提供应用打印照片、�
 SHARE = 16
 ```
 
-[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md)：提供分享业务能力，为开发者提供基于UIExtension的分享业务模板。
+[ShareExtensionAbility](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility)：提供分享业务能力，为开发者提供基于UIExtension的分享业务模板。
 
 **起始版本：** 10
 
@@ -294,7 +294,7 @@ PushExtensionAbility：推送扩展能力，提供推送场景化消息能力。
 DRIVER = 18
 ```
 
-[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-app-ability-driverextensionability.md/arkts-app-ability-driverextensionability.md)：驱动扩展能力，提供外设驱动扩展能力。应用配置了driver类型的ExtensionAbility后会被视为驱动应用，驱动应用在安装、卸载和恢复时不会区分用户，且创建新用户时也会安装设备上已有的驱动应用。例如，创建子用户时会默认安装主用户已有的驱动应用，在子用户上卸载驱动应用时，主用户上对应的驱动应用也会同时被卸载。
+[DriverExtensionAbility](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-app-ability-driverextensionability-driverextensionability-c.md#DriverExtensionAbility)：驱动扩展能力，提供外设驱动扩展能力。应用配置了driver类型的ExtensionAbility后会被视为驱动应用，驱动应用在安装、卸载和恢复时不会区分用户，且创建新用户时也会安装设备上已有的驱动应用。例如，创建子用户时会默认安装主用户已有的驱动应用，在子用户上卸载驱动应用时，主用户上对应的驱动应用也会同时被卸载。
 
 **起始版本：** 10
 
@@ -310,7 +310,7 @@ DRIVER = 18
 ACTION = 19
 ```
 
-[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md)：自定义服务扩展能力，为开发者提供基于UIExtension的自定义操作业务模板。
+[ActionExtensionAbility](arkts-ability-app-ability-actionextensionability-actionextensionability-c.md#ActionExtensionAbility)：自定义服务扩展能力，为开发者提供基于UIExtension的自定义操作业务模板。
 
 **起始版本：** 10
 
@@ -342,7 +342,7 @@ AdsServiceExtensionAbility：广告服务扩展能力，对外提供后台自定
 EMBEDDED_UI = 21
 ```
 
-[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md)：嵌入式UI扩展能力，提供跨进程界面嵌入的能力。
+[EmbeddedUIExtensionAbility](arkts-ability-app-ability-embeddeduiextensionability-embeddeduiextensionability-c.md#EmbeddedUIExtensionAbility)：嵌入式UI扩展能力，提供跨进程界面嵌入的能力。
 
 **起始版本：** 12
 
@@ -438,7 +438,7 @@ FORM_EDIT = 27
 DISTRIBUTED = 28
 ```
 
-[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)：提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
+[DistributedExtensionAbility](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md#DistributedExtensionAbility)：提供分布式相关扩展能力，提供分布式创建、销毁、连接的生命周期回调。
 
 **起始版本：** 20
 
@@ -454,7 +454,7 @@ DISTRIBUTED = 28
 APP_SERVICE = 29
 ```
 
-[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md)：为企业普通应用提供后台服务能力。
+[AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility)：为企业普通应用提供后台服务能力。
 
 **起始版本：** 20
 
@@ -488,7 +488,7 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)：为开发者提供划词弹窗能力的ExtensionAbility。
+[SelectionExtensionAbility](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md#SelectionExtensionAbility)：为开发者提供划词弹窗能力的ExtensionAbility。
 
 **模型约束**：此接口仅可在Stage模型下使用。
 
@@ -508,7 +508,7 @@ SELECTION = 31
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-web-webnativemessagingextensionability.md/arkts-web-webnativemessagingextensionability.md)：为开发者提供Web原生消息通信能力的ExtensionAbility。
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)：为开发者提供Web原生消息通信能力的ExtensionAbility。
 
 **起始版本：** 21
 
@@ -524,7 +524,7 @@ WEB_NATIVE_MESSAGING = 32
 FAULT_LOG = 33
 ```
 
-[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md)：提供故障延迟通知的能力。
+[FaultLogExtensionAbility](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility)：提供故障延迟通知的能力。
 
 **起始版本：** 21
 
@@ -540,7 +540,7 @@ FAULT_LOG = 33
 NOTIFICATION_SUBSCRIBER = 34
 ```
 
-[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)：提供通知订阅的相关功能。
+[NotificationSubscriberExtensionAbility](../../apis-notification-kit/arkts-apis/arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#NotificationSubscriberExtensionAbility)：提供通知订阅的相关功能。
 
 **起始版本：** 22
 
@@ -651,7 +651,7 @@ UNSPECIFIED = 255
 ```
 
 不指定类型&lt;!--Del--&gt;，配合  
-[queryExtensionAbilityInfo接口](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo)可以查询所有类型的ExtensionAbility&lt;!--DelEnd--&gt;。
+[queryExtensionAbilityInfo接口](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo)可以查询所有类型的ExtensionAbility&lt;!--DelEnd--&gt;。
 
 **起始版本：** 9
 

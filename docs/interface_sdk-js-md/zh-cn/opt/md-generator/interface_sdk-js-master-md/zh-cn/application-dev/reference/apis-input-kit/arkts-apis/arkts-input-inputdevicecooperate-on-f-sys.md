@@ -18,7 +18,7 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#on
+**替代接口：** [on](ohos.cooperate/cooperate#on)
 
 <!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void--><!--Device-inputDeviceCooperate-function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: string, eventMsg: EventMsg }>): void-End-->
 
@@ -37,8 +37,8 @@ function on(type: 'cooperation', callback: AsyncCallback<{ deviceDescriptor: str
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

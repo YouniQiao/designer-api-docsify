@@ -44,7 +44,7 @@ TextPicker(options?: TextPickerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextPickerOptions](../arkts-apis/arkts-arkui-textpicker-textpickeroptions-i.md) | 否 | 配置文本选择器的参数。当需要自定义选择器的数据源、选中项、列宽等配置时传入此参数。参数缺省时 组件无法显示。 |
+| options | [TextPickerOptions](arkts-arkui-textpickeroptions-i.md) | 否 | 配置文本选择器的参数。当需要自定义选择器的数据源、选中项、列宽等配置时传入此参数。参数缺省时 组件无法显示。 |
 
 ## 汇总
 

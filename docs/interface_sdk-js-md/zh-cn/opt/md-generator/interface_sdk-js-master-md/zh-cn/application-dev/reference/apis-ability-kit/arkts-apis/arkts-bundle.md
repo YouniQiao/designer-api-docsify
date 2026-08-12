@@ -1,17 +1,17 @@
 # @ohos.bundle
 
-本模块提供应用信息查询能力，支持[包信息](arkts-ability-bundleinfo-i.md)、[应用信息](arkts-ability-applicationinfo-i.md)、  
-[Ability组件信息](arkts-ability-abilityinfo-i.md)等信息的查询，以及应用禁用状态的查询、设置等。
+本模块提供应用信息查询能力，支持[包信息](./bundle/bundleInfo)、[应用信息](arkts-ability-applicationinfo-applicationinfo-depr-i.md#ApplicationInfo)、  
+[Ability组件信息](arkts-ability-abilityinfo-abilityinfo-depr-i.md#AbilityInfo)等信息的查询，以及应用禁用状态的查询、设置等。
 
 > **说明：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md)替代。
+> 从API version 9开始，该模块不再维护，建议使用[@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md#bundleManager)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.bundleManager:bundleManager](arkts-bundle-bundlemanager.md)
+**替代接口：** [bundleManager](arkts-bundle-bundlemanager.md#bundleManager)
 
 <!--Device-unnamed-declare namespace bundle--><!--Device-unnamed-declare namespace bundle-End-->
 

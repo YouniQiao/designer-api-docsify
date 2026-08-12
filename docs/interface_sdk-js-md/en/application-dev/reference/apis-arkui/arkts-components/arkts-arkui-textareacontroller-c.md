@@ -1,22 +1,22 @@
 # TextAreaController
 
 The controller for the **TextArea** component inherits from  
-[TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md). The APIs involved are as follows:&lt;!--Del--&gt; system API  
-[getText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c-sys.md/arkts-arkui-common-textcontentcontrollerbase-c-sys.md#gettext) and other APIs like&lt;!--DelEnd--&gt;  
-[getTextContentRect](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentrect),  
-[getTextContentLineCount](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentlinecount),  
-[getCaretOffset](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getcaretoffset), [addText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#addtext),  
-[deleteText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletetext),  
-[getSelection](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getselection),  
-[clearPreviewText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#clearpreviewtext),  
-[setStyledPlaceholder](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#setstyledplaceholder), and  
-[deleteBackward](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletebackward).
+[TextContentControllerBase](TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API  
+[getText](TextContentControllerBase#getText) and other APIs like&lt;!--DelEnd--&gt;  
+[getTextContentRect](TextContentControllerBase#getTextContentRect),  
+[getTextContentLineCount](TextContentControllerBase#getTextContentLineCount),  
+[getCaretOffset](TextContentControllerBase#getCaretOffset), [addText](TextContentControllerBase#addText),  
+[deleteText](TextContentControllerBase#deleteText),  
+[getSelection](TextContentControllerBase#getSelection),  
+[clearPreviewText](TextContentControllerBase#clearPreviewText),  
+[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder), and  
+[deleteBackward](TextContentControllerBase#deleteBackward).
 
 ## Objects to Import
 
 ```ts controller: TextAreaController = new TextAreaController();```
 
-**Inheritance/Implementation:** TextAreaController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)
+**Inheritance/Implementation:** TextAreaController extends [TextContentControllerBase](TextContentControllerBase)
 
 **Since:** 8
 
@@ -95,7 +95,7 @@ Sets the text selection range and highlights the selected text when the componen
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.&lt;br&gt;Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length.&lt;br&gt; |
 | selectionEnd | number | Yes | End position of the text selection range.&lt;br&gt;Values less than 0 are treated as **0**. Values greater than the maximum text length are treated as the maximum text length.&lt;br&gt; |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT**&lt;br&gt;<br>**Since:** 12 |
+| options | SelectionOptions | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT**&lt;br&gt;<br>**Since:** 12 |
 
 ## stopEditing
 

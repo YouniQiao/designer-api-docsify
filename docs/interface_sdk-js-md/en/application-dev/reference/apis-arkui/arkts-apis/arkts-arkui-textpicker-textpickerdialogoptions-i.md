@@ -2,7 +2,7 @@
 
 Defines the TextPickerDialogOptions for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)
+**Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md#TextPickerOptions)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextPickerResult](../arkts-components/arkts-arkui-textpickerresult-i.md) | Yes |  |
+| value | [TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md) | Yes |  |
 
 ## onCancel
 
@@ -76,7 +76,7 @@ Callback invoked when the text picker in the dialog box snaps to the selected it
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextPickerResult](../arkts-components/arkts-arkui-textpickerresult-i.md) | Yes |  |
+| value | [TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md) | Yes |  |
 
 ## onDidAppear
 
@@ -188,7 +188,7 @@ alignment?: DialogAlignment
 
 Alignment mode of the dialog box in the vertical direction.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Default:** DialogAlignment.Default
 
@@ -362,7 +362,7 @@ Style of the text items when the text style change animation during the scrollin
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It is effective only when disableTextStyleAnimation is true.&lt;/p&gt;
 
-**Type:** [TextPickerTextStyle](../arkts-components/arkts-arkui-textpickertextstyle-i.md)
+**Type:** [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
 
 **Since:** 23
 
@@ -514,7 +514,7 @@ offset?: Offset
 
 Offset of the dialog box based on the alignment settings.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Default:** { dx: 0 , dy: 0 }
 
@@ -538,7 +538,7 @@ Represents the callback triggered during the scrolling of the text picker when a
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In scenarios where the picker contains linked columns,&lt;br&gt;the use of this callback is not recommended.&lt;br&gt;The reason is that it identifies nodes where items enter the divider area during scrolling.&lt;br&gt;However, items that change in response to the scrolling do not themselves scroll. As a result,&lt;br&gt;he callback's return values will only reflect changes for the currently scrolling column,&lt;br&gt;while other non-scrolling columns will remain unchanged.&lt;/p&gt;
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -558,7 +558,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 Callback invoked when the scrolling in the text picker of the dialog box stops.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -598,7 +598,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 

@@ -18,7 +18,7 @@ handler: ScreenCaptureHandler
 
 通知Web组件用户操作行为。
 
-**类型：** [ScreenCaptureHandler](../arkts-apis/arkts-arkweb-web-screencapturehandler-c.md)
+**类型：** [ScreenCaptureHandler](arkts-arkweb-screencapturehandler-c.md)
 
 **起始版本：** 12
 

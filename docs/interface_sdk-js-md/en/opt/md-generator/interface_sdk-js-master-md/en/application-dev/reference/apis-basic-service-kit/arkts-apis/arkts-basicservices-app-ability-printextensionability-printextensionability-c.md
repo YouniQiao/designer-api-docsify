@@ -11,7 +11,7 @@ class of print extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onCancelPrintJob
@@ -40,7 +40,7 @@ Called once to remove the print job has been started.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onConnectPrinter
 
@@ -208,7 +208,7 @@ Called once to request preview and send result to Print SA.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -257,7 +257,7 @@ Called once to request the printer's capabilities.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onStartDiscoverPrinter
 
@@ -314,7 +314,7 @@ Called once to start print job.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onStopDiscoverPrinter
 

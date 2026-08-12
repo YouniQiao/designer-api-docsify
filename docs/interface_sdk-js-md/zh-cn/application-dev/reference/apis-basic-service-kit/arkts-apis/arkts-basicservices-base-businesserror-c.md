@@ -2,7 +2,7 @@
 
 错误参数。
 
-**继承/实现关系：** BusinessError extends [Error](Error)
+**继承/实现关系：** BusinessError extends [Error](../../apis-arkweb/arkts-components/arkts-arkweb-messagelevel-e.md#Error)
 
 **起始版本：** 23
 

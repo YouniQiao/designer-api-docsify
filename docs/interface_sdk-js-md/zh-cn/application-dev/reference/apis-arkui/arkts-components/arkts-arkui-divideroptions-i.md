@@ -20,7 +20,7 @@ color?: ResourceColor
 
 > 默认值：'#33000000'
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** '#33000000'
 
@@ -52,7 +52,7 @@ endMargin?: Dimension
 
 > **说明：** 当startMargin + endMargin超过组件宽度时，会被置0。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 0
 
@@ -84,7 +84,7 @@ startMargin?: Dimension
 
 > **说明：**当startMargin + endMargin超过组件宽度时，会被置0。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 0
 
@@ -114,7 +114,7 @@ strokeWidth?: Dimension
 
 > 取值范围：[0, +∞)，strokeWidth小于0取默认值，最大不得超过列高的一半。不支持“百分比”类型。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 2.0px
 

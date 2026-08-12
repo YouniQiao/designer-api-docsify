@@ -21,7 +21,7 @@ Specifies the description for the target Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | val | string | 是 | the description value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | the {@link MatchPattern} of description value,set it default {@link MatchPattern.EQUALS} if null or undefined. |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) of description value,set it default [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) if null or undefined. |
 
 **返回值：**
 

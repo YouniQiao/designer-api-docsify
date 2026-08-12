@@ -21,6 +21,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md) | 不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。 |
+| [MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md) | 不支持[通用属性](common)。 |
 | [MenuItemGroupOptions](arkts-arkui-menuitemgroup-menuitemgroupoptions-i.md) |  |
 

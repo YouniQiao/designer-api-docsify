@@ -13,7 +13,7 @@ Class BaseGestureHandlingProposal.
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## action
@@ -24,7 +24,7 @@ action: SmartGestureAction
 
 The smart gesture action to be performed. Defines the specific operation triggered by the gesture.
 
-**Type:** [SmartGestureAction](arkts-arkui-smartgestureaction-e.md)
+**Type:** SmartGestureAction
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ operateIntention: OperateIntention
 
 The underlying user operation intention. Represents the fundamental user interaction goal.
 
-**Type:** [OperateIntention](arkts-arkui-operateintention-e.md)
+**Type:** OperateIntention
 
 **Since:** 26.0.0
 

@@ -38,7 +38,7 @@ details: Record<string, TableDetails>
 
 键表示表名，值表示该表的端云同步过程统计信息。
 
-**类型：** Record&lt;string, TableDetails&gt;
+**类型：** Record&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 
 **起始版本：** 10
 
@@ -76,7 +76,7 @@ schedule: Progress
 
 表示端云同步过程。
 
-**类型：** [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md)
+**类型：** Progress
 
 **起始版本：** 10
 

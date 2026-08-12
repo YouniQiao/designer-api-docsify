@@ -1,7 +1,7 @@
 # DataProxyHandle
 
 数据代理操作句柄的实例，可使用此实例访问或管理共享配置信息。在调用DataProxyHandle提供的方法前，需要先通过  
-[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle)构建一个实例。
+[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle)构建一个实例。
 
 **起始版本：** 20
 
@@ -36,14 +36,14 @@ delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 类型 |
 | --- |
-| Promise&lt;DataProxyResult[]&gt; |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -88,14 +88,14 @@ deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 类型 |
 | --- |
-| Promise&lt;DataProxyResult[]&gt; |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -139,14 +139,14 @@ get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 
 | 类型 |
 | --- |
-| Promise&lt;DataProxyGetResult[]&gt; |
+| Promise&lt;[DataProxyGetResult](arkts-arkdata-datashare-dataproxygetresult-i.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -171,7 +171,7 @@ dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResu
 getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 ```
 
-获取指定 URI 下的所有多值类型数据。只有发布者和位于 [allowList](arkts-arkdata-datashare-proxydata-i.md#allowlist) 中的应用程序才能获取此数据。该 API 使用 Promise异步回调。
+获取指定 URI 下的所有多值类型数据。只有发布者和位于 [allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) 中的应用程序才能获取此数据。该 API 使用 Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -198,10 +198,10 @@ getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 
 | 错误码ID |
 | --- |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700015-访问uri权限错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri不存在) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -262,7 +262,7 @@ off(
 | event | 'dataChange' | 是 |
 | uris | string[] | 是 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 否 |
 
 **返回值：**
 
@@ -274,8 +274,8 @@ off(
 
 | 错误码ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -313,9 +313,9 @@ on(
 
 订阅指定URI对应共享配置变更事件。若订阅者已注册变更通知，当配置发布方修改配置时，订阅者将会接收到callback通知，通知携带数据变更类型、变化的URI、变更的共享配置内容。使用callback异步回调。该功能不允许跨用户订阅通知，不允许订阅未发布的配置。订阅成功后若权限被收回，则后续不再通知订阅者。
 
-触发通知：配置发布方调用[publish](arkts-arkdata-datashare-dataproxyhandle-i.md#publish)、  
-[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete)、  
-[delete](arkts-arkdata-datashare-dataproxyhandle-i.md#delete)接口发布、删除指定配置或者删除所有配置时会自动触发通知。
+触发通知：配置发布方调用[publish](#publish)、  
+[delete](#delete)、  
+[delete](#delete)接口发布、删除指定配置或者删除所有配置时会自动触发通知。
 
 **起始版本：** 20
 
@@ -332,7 +332,7 @@ on(
 | event | 'dataChange' | 是 |
 | uris | string[] | 是 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DataProxyChangeInfo[]&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | 是 |
 
 **返回值：**
 
@@ -344,8 +344,8 @@ on(
 
 | 错误码ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -397,14 +397,14 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 | 类型 |
 | --- |
-| Promise&lt;DataProxyResult[]&gt; |
+| Promise&lt;[DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[]&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -459,16 +459,16 @@ putValue(uri: string, key: number, value: ValueType, config: DataProxyConfig): P
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700015-访问uri权限错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri不存在) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 
@@ -529,16 +529,16 @@ removeValue(uri: string, key: number, config: DataProxyConfig): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700015](../errorcode-datashare.md#15700015-访问uri权限错误) |
-| [15700014](../errorcode-datashare.md#15700014-配置共享参数错误) |
-| [15700011](../errorcode-datashare.md#15700011-uri不存在) |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700015-访问uri权限错误) |
+| [15700014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-配置共享参数错误) |
+| [15700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri不存在) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 

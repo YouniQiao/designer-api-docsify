@@ -42,7 +42,7 @@ offset?: OverlayOffset
 
 Defines offset type.
 
-**类型：** [OverlayOffset](../arkts-components/arkts-arkui-overlayoffset-i.md)
+**类型：** [OverlayOffset](arkts-arkui-common-overlayoffset-i.md)
 
 **默认值：** - the overlay is in the upper left corner of the component.
 

@@ -2,7 +2,7 @@
 
 Defines the attribute functions of Slider.
 
-**Inheritance/Implementation:** SliderAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** SliderAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SliderAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SliderAttribute](arkts-arkui-slider-sliderattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Set the color of the slider bar, supporting gradient colors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient \| undefined | Yes | the color of the slider bar. Undefined indicates using the default color. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md) \| undefined | Yes | the color of the slider bar. Undefined indicates using the default color. |
 
 **Return value:**
 
@@ -184,7 +184,7 @@ Sets the style of the slider in the block direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SliderBlockStyle](../arkts-components/arkts-arkui-sliderblockstyle-i.md) \| undefined | Yes | Style of the slider in the block direction. &lt;br&gt;Default value is SliderBlockType.DEFAULT, indicating the round slider. |
+| value | [SliderBlockStyle](arkts-arkui-slider-sliderblockstyle-i.md) \| undefined | Yes | Style of the slider in the block direction. &lt;br&gt;Default value is SliderBlockType.DEFAULT, indicating the round slider. |
 
 **Return value:**
 
@@ -214,7 +214,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;SliderConfiguration&gt; \| undefined | Yes | Content modifier to apply to the slider. modifier: content modifier. You need a custom class to implement the ContentModifier API. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[SliderConfiguration](arkts-arkui-slider-sliderconfiguration-i.md)&gt; \| undefined | Yes | Content modifier to apply to the slider. modifier: content modifier. You need a custom class to implement the ContentModifier API. |
 
 **Return value:**
 
@@ -365,7 +365,7 @@ Set the prefix part of the slider.The prefix is the content that appears before 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; \| undefined | Yes | Custom components that will be displayed as the prefix. This can be any valid custom UI component structure. Undefined indicates that no prefix is set. |
-| options | [SliderPrefixOptions](../arkts-components/arkts-arkui-sliderprefixoptions-i.md) \| undefined | No | Optional options for customizing the prefix. These options can include accessibility settings. |
+| options | [SliderPrefixOptions](arkts-arkui-slider-sliderprefixoptions-i.md) \| undefined | No | Optional options for customizing the prefix. These options can include accessibility settings. |
 
 **Return value:**
 
@@ -425,7 +425,7 @@ Called when the slider of the slider bar is set to slide over the area color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient \| undefined | Yes |  |
+| selectedColor | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -455,7 +455,7 @@ Set slider options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md) | No | slider constructor options |
+| options | [SliderOptions](arkts-arkui-slider-slideroptions-i.md) | No | slider constructor options |
 
 **Return value:**
 
@@ -516,7 +516,7 @@ Set whether to display step size, and support setting accessibility text configu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | boolean \| undefined | Yes | Default value is false, undefined means set to default value. |
-| options | [SliderShowStepOptions](../arkts-components/arkts-arkui-slidershowstepoptions-i.md) \| undefined | No | Set the accessibility text on slider points. undefined means set to default value. |
+| options | [SliderShowStepOptions](arkts-arkui-slider-slidershowstepoptions-i.md) \| undefined | No | Set the accessibility text on slider points. undefined means set to default value. |
 
 **Return value:**
 
@@ -758,7 +758,7 @@ Called when the track color of the slider is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient \| undefined | Yes |  |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

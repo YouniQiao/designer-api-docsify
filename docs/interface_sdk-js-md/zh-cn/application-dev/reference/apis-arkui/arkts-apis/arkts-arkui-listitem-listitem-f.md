@@ -25,8 +25,8 @@ export declare function ListItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| value | [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ export declare function ListItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ListItemAttribute&gt; | 是 | The style to create a ListItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md)&gt; | 是 | The style to create a ListItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 

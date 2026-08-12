@@ -34,11 +34,11 @@ abstract initialize(options?: StackOptions): StackAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | 否 | Stack节点的选项。 |
+| options | StackOptions | 否 | Stack节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |  |
+| StackAttribute |  |
 

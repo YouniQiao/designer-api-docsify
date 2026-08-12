@@ -16,7 +16,7 @@ startOptions?: StartOptions
 
 触发启动Ability的wantAgent时，由该属性指定启动参数。
 
-**类型：** [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md)
+**类型：** [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 
 **起始版本：** 12
 

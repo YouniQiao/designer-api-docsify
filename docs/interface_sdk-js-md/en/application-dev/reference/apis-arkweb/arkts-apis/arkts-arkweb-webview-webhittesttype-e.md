@@ -1,6 +1,6 @@
 # WebHitTestType
 
-Enum type supplied to {@link getHitTest} for indicating the cursor node HitTest.
+Enum type supplied to [getHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getHitTest) for indicating the cursor node HitTest.
 
 **Since:** 23
 

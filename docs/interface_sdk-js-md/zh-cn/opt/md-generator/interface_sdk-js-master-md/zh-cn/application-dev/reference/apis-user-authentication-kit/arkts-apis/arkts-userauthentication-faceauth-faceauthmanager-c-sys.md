@@ -41,8 +41,8 @@ setSurfaceId(surfaceId: string): void
 ```
 
 用于在录入人脸时设置人脸预览界面的Surface ID。该接口需要配合  
-[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential)使用，通过  
-[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid)组件的Surface来显示人脸预览画面。
+[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addCredential)使用，通过  
+[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getXComponentSurfaceId)组件的Surface来显示人脸预览画面。
 
 **起始版本：** 9
 
@@ -64,9 +64,9 @@ setSurfaceId(surfaceId: string): void
 
 | 错误码ID |
 | --- |
-| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12700001-人脸服务不可用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

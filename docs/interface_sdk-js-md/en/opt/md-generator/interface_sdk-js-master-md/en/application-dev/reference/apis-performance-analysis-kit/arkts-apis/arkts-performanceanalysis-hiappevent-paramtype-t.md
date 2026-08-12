@@ -21,4 +21,4 @@ Enumerates the types of custom event parameter values.
 | double |
 | string |
 | boolean |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |

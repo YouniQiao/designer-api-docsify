@@ -36,6 +36,14 @@ Reads data of the referenced property from [AppStorage](../../../ui/state-manage
 | --- | --- |
 | T | Data of the referenced property in AppStorage or LocalStorage. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.get(); //  ref1.get()=47
+```
+
 ## info
 
 ```TypeScript
@@ -61,6 +69,14 @@ Reads the property name of the referenced property from
 | Type | Description |
 | --- | --- |
 | string | Property name of the referenced property in AppStorage or LocalStorage. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.info(); //  ref1.info()='PropA'
+```
 
 ## set
 
@@ -91,4 +107,23 @@ Updates the data of the referenced property in [AppStorage](../../../ui/state-ma
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | newValue | T | Yes | New data to update. The value can be **null** or **undefined**. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+ref1?.set(1); //  ref1.get()=1
+let a: Map<string, number> = new Map([['1', 0]]);
+let ref2 = AppStorage.setAndRef('MapA', a);
+ref2.set(a);
+let b: Set<string> = new Set('1');
+let ref3 = AppStorage.setAndRef('SetB', b);
+ref3.set(b);
+let c: Date = new Date('2024');
+let ref4 = AppStorage.setAndRef('DateC', c);
+ref4.set(c);
+ref2.set(null);
+ref3.set(undefined);
+```
 

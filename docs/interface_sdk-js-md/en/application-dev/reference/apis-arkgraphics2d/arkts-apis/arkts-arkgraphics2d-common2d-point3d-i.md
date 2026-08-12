@@ -1,8 +1,8 @@
 # Point3d
 
-Describes a 3D coordinate point. It inherits from [Point](arkts-arkgraphics2d-common2d-point-i.md).
+Describes a 3D coordinate point. It inherits from [Point](arkts-arkgraphics2d-common2d-point-i.md#Point).
 
-**Inheritance/Implementation:** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md)
+**Inheritance/Implementation:** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md#Point)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Describes a 3D coordinate point. It inherits from [Point](arkts-arkgraphics2d-co
 ## Modules to Import
 
 ```TypeScript
-import { common2D } from 'kits/@kit.ArkGraphics2D';
+import { common2D } from '@kit.ArkGraphics2D';
 ```
 
 ## z

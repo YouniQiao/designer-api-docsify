@@ -26,7 +26,7 @@ height?: Length
 
 默认单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 7
 
@@ -52,7 +52,7 @@ width?: Length
 
 默认单位：vp
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 7
 

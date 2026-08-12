@@ -54,13 +54,13 @@ Obtains the content size.
 
 | Type | Description |
 | --- | --- |
-| [SizeResult](arkts-arkui-sizeresult-i.md) | Total size of the scrollable component's content, including the content width and height. &lt;br&gt;Unit: vp |
+| SizeResult | Total size of the scrollable component's content, including the content width and height. &lt;br&gt;Unit: vp |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## currentOffset
 
@@ -118,8 +118,8 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getFrameNode
 
@@ -145,7 +145,7 @@ Obtains the FrameNode corresponding to this scroller.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
+| FrameNode | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
 
 ## getItemIndex
 
@@ -186,8 +186,8 @@ Obtains the index of a child component based on coordinates.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRect
 
@@ -221,14 +221,14 @@ Obtains the size and position of a child component relative to its container.
 
 | Type | Description |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | Size and position of the child component relative to the component.&lt;br&gt;Unit: vp |
+| RectResult | Size and position of the child component relative to the component.&lt;br&gt;Unit: vp |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## isAtEnd
 
@@ -308,8 +308,8 @@ Scrolls by the specified amount.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Amount to scroll by in the horizontal direction. The percentage format is not supported. |
-| dy | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Amount to scroll by in the vertical direction. The percentage format is not supported. |
+| dx | Length | Yes | Amount to scroll by in the horizontal direction. The percentage format is not supported. |
+| dy | Length | Yes | Amount to scroll by in the vertical direction. The percentage format is not supported. |
 
 ## scrollEdge
 
@@ -333,7 +333,7 @@ Scrolls to the edge of the container, regardless of the scroll axis direction.By
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. &lt;br&gt;&lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 11. |
+| value | Edge | Yes | Edge position to scroll to. &lt;br&gt;&lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 11. |
 | options | [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position. &lt;br&gt;&lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
 
 ## scrollPage
@@ -374,7 +374,7 @@ Scrolls to the next or previous page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Scroller#scrollPage](arkts-arkui-scroller-c.md#scrollpage)
+**Substitutes:** [scrollPage](#scrollPage)
 
 <!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })--><!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })-End-->
 
@@ -410,7 +410,7 @@ Scrolls to the specified position.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScrollOptions](../arkts-apis/arkts-arkui-viewmodel-scrolloptions-i.md) | Yes | Parameters for scrolling to the specified position.<br>**Since:** 18 |
+| options | [ScrollOptions](arkts-arkui-scrolloptions-i.md) | Yes | Parameters for scrolling to the specified position.<br>**Since:** 18 |
 
 ## scrollToIndex
 
@@ -439,5 +439,5 @@ Scrolls to a specified index, with support for setting an extra offset for the s
 | value | number | Yes | Index of the item to be scrolled to in the container. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
 | smooth | boolean | No | Whether to enable the smooth animation for scrolling to the item with the specified index. The value &lt;em&gt;true&lt;/em&gt; means to enable that the smooth animation, and &lt;em&gt;false&lt;/em&gt; means the opposite.&lt;br&gt; Default value: &lt;em&gt;false&lt;/em&gt;<br>**Since:** 12 |
 | align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container. &lt;br&gt; Default value when the container is &lt;em&gt;List&lt;/em&gt;: &lt;em&gt;ScrollAlign.START&lt;/em&gt; &lt;br&gt; Default value when the container is &lt;em&gt;Grid&lt;/em&gt;: &lt;em&gt;ScrollAlign.AUTO&lt;/em&gt; &lt;br&gt; Default value when the container is &lt;em&gt;WaterFlow&lt;/em&gt;: &lt;em&gt;ScrollAlign.START&lt;/em&gt; &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;This parameter is only available for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components.<br>**Since:** 12 |
-| options | [ScrollToIndexOptions](../arkts-apis/arkts-arkui-scroll-scrolltoindexoptions-i.md) | No | Options for scrolling to a specified index, for example, an extra offset for the scroll.&lt;br&gt;Default value: &lt;em&gt;0&lt;/em&gt;, in vp<br>**Since:** 12 |
+| options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | No | Options for scrolling to a specified index, for example, an extra offset for the scroll.&lt;br&gt;Default value: &lt;em&gt;0&lt;/em&gt;, in vp<br>**Since:** 12 |
 

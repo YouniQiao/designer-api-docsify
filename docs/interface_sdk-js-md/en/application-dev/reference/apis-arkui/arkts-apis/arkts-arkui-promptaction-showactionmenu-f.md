@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## showActionMenu
@@ -28,7 +28,7 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showActionMenu
+**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,15 +40,15 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Action menu options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
+| options | ActionMenuOptions | Yes | Action menu options. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ActionMenuSuccessResponse&gt; | Yes | Callback used to return the result. On success, **err** is **undefined** and **data** contains the action menu response. On failure, **err** provides error details. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -179,7 +179,7 @@ API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptActio
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showActionMenu
+**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -191,7 +191,7 @@ API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptActio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ActionMenuOptions](arkts-arkui-prompt-actionmenuoptions-i.md) | Yes | Promise that returns the action menu response. |
+| options | ActionMenuOptions | Yes | Promise that returns the action menu response. |
 
 **Return value:**
 
@@ -203,8 +203,8 @@ API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptActio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

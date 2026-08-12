@@ -34,11 +34,11 @@ Initialize TextInput FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [TextInputOptions](../arkts-components/arkts-arkui-textinputoptions-i.md) | No |  |
+| value | TextInputOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) |  |
+| TextInputAttribute |  |
 

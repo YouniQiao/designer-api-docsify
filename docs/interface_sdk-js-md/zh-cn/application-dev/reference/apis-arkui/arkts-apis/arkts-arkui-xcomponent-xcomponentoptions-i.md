@@ -18,7 +18,7 @@ controller: XComponentController
 
 给组件绑定一个控制器，通过控制器调用组件方法，仅类型为SURFACE或TEXTURE时有效。未设置时不绑定控制器。
 
-**类型：** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
+**类型：** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ imageAIOptions?: ImageAIOptions
 
 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器，仅类型为SURFACE或TEXTURE时有效。未设置时不配置AI分析选项，可通过enableAnalyzer属性单独启用AI分析。
 
-**类型：** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
+**类型：** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
 
 **起始版本：** 23
 

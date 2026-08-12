@@ -13,7 +13,7 @@ Describes the scanned Wi-Fi information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## band
@@ -174,7 +174,7 @@ infoElems: Array<WifiInfoElem>
 
 Information elements.
 
-**Type:** Array&lt;WifiInfoElem&gt;
+**Type:** Array&lt;[WifiInfoElem](arkts-connectivity-wifimanager-wifiinfoelem-i.md)&gt;
 
 **Since:** 9
 
@@ -230,7 +230,7 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
+**Type:** WifiSecurityType
 
 **Since:** 12
 

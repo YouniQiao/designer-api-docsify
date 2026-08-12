@@ -2,7 +2,7 @@
 
 Base shape class
 
-**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Base shape class
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## height
@@ -40,7 +40,7 @@ Sets the height of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Length](arkts-arkui-length-t.md) | Yes |  |
+| height | Length | Yes |  |
 
 **Return value:**
 
@@ -70,7 +70,7 @@ Sets the size of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | Yes |  |
+| size | SizeOptions | Yes |  |
 
 **Return value:**
 
@@ -100,7 +100,7 @@ Sets the width of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Length](arkts-arkui-length-t.md) | Yes |  |
+| width | Length | Yes |  |
 
 **Return value:**
 

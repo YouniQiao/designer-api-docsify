@@ -24,7 +24,7 @@ The typical process of this module is as follows: Inherit the base class, overri
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onReceiveEvent

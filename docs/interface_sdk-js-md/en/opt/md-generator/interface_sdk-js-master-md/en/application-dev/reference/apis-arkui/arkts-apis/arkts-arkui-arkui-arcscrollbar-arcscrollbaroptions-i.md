@@ -16,7 +16,7 @@ Represents the parameters used to construct an **ArcScrollBar** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
+import { ArcScrollBarAttribute, ArcScrollBar } from '@kit.ArkUI';
 ```
 
 ## scroller

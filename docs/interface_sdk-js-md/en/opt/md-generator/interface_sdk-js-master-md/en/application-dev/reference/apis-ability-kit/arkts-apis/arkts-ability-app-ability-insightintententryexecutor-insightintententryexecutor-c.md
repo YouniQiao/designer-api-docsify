@@ -11,7 +11,7 @@ The class of insight intent entry executor.
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from 'kits/@kit.AbilityKit';
+import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecute
@@ -36,7 +36,7 @@ Called when insight intent execute.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;insightIntent.IntentResult&lt;T&gt;&gt; |
+| Promise & lt;insightIntent.IntentResult & lt;T & gt; & gt; |
 
 ## context
 

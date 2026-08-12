@@ -18,7 +18,7 @@ objectFit?: ImageFit
 
 图片显示模式。
 
-**类型：** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
+**类型：** ImageFit
 
 **默认值：** ImageFit.Cover
 
@@ -44,7 +44,7 @@ size: ParticleTuple<Dimension, Dimension>
 
 默认值：[0, 0]
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
 
 **起始版本：** 10
 
@@ -70,7 +70,7 @@ src: ResourceStr
 
 src未发生变化时，会优先使用缓存的资源，无法动态切换资源。如需动态切换资源建议切换为不同的src。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 

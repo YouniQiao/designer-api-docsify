@@ -6,7 +6,7 @@
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer>): void
 ```
 
-Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **起始版本：** 9
 
@@ -23,7 +23,7 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer&gt; | 是 | Callback used to return the tonePlayer instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | Callback used to return the tonePlayer instance. |
 
 ## 示例
 
@@ -54,7 +54,7 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<TonePlayer | null>): void
 ```
 
-Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses an asynchronous callback to return the renderer instance.
 
 **起始版本：** 23
 
@@ -71,13 +71,13 @@ Obtains a {@link TonePlayer} instance. This method uses an asynchronous callback
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | Tone playing attribute. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TonePlayer \| null&gt; | 是 | Callback used to return the tonePlayer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | 是 | Callback used to return the tonePlayer instance, or null when an error happens. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -108,7 +108,7 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 ```
 
-Obtains a {@link TonePlayer} instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses a promise to return the renderer instance.
 
 **起始版本：** 9
 
@@ -130,7 +130,7 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TonePlayer&gt; | Promise used to return the tonePlayer instance. |
+| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Promise used to return the tonePlayer instance. |
 
 ## 示例
 
@@ -154,7 +154,7 @@ async function createTonePlayerBefore(){
 function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer | null>
 ```
 
-Obtains a {@link TonePlayer} instance. This method uses a promise to return the renderer instance.
+Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md#TonePlayer) instance. This method uses a promise to return the renderer instance.
 
 **起始版本：** 23
 
@@ -176,13 +176,13 @@ Obtains a {@link TonePlayer} instance. This method uses a promise to return the 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;TonePlayer \| null&gt; | Promise used to return the tonePlayer instance, or null when an error happens. |
+| Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) \| null&gt; | Promise used to return the tonePlayer instance, or null when an error happens. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 

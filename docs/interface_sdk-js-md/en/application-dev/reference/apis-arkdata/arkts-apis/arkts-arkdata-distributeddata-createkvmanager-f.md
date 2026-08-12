@@ -14,7 +14,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore#createKVManager
+**Substitutes:** [createKVManager](ohos.data.distributedKVStore#createKVManager)
 
 <!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void--><!--Device-distributedData-function createKVManager(config: KVManagerConfig, callback: AsyncCallback<KVManager>): void-End-->
 
@@ -24,8 +24,8 @@ Creates a **KVManager** instance to manage KV stores. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
+| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;KVManager&gt; | Yes | Callback used to return the **KVManager** instance created. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore#createKVManager
+**Substitutes:** [createKVManager](ohos.data.distributedKVStore#createKVManager)
 
 <!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>--><!--Device-distributedData-function createKVManager(config: KVManagerConfig): Promise<KVManager>-End-->
 
@@ -77,7 +77,7 @@ Creates a **KVManager** instance to manage KV stores. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [KVManagerConfig](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md) | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
+| config | KVManagerConfig | Yes | Configuration of the **KVManager** instance, including the bundle name and user information of the caller. |
 
 **Return value:**
 

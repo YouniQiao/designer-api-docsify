@@ -1,7 +1,7 @@
 # AVImageGenerator
 
 AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video. Before calling any API in AVImageGenerator, you must use   
-[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator)to create an AVImageGenerator instance.
+[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator)to create an AVImageGenerator instance.
 
 For details about the demo for obtaining video thumbnails, see   
 [Obtaining Video Thumbnails](../../../media/media/avimagegenerator.md).
@@ -15,7 +15,7 @@ For details about the demo for obtaining video thumbnails, see
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## fetchFrameByTime
@@ -46,8 +46,8 @@ Obtains a video thumbnail. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## fetchFrameByTime
 
@@ -75,14 +75,14 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## fetchScaledFrameByTime
 
@@ -111,14 +111,14 @@ Fetches a scaled thumbnail from the video at a particular timestamp. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## release
 
@@ -144,7 +144,7 @@ Releases this AVImageGenerator instance. This API uses an asynchronous callback 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## release
 
@@ -164,13 +164,13 @@ Releases this AVImageGenerator instance. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## fdSrc
 

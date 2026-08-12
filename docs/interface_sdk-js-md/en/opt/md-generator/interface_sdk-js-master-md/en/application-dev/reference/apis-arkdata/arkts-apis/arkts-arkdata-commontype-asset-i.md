@@ -11,7 +11,7 @@ Represents asset (such as a file, image, or video) information.
 ## Modules to Import
 
 ```TypeScript
-import { commonType } from 'kits/@kit.ArkData';
+import { commonType } from '@kit.ArkData';
 ```
 
 ## createTime
@@ -102,7 +102,7 @@ status?: AssetStatus
 
 Asset status. The default value is ASSET_NORMAL.
 
-**Type:** [AssetStatus](arkts-arkdata-relationalstore-assetstatus-e.md)
+**Type:** AssetStatus
 
 **Since:** 11
 

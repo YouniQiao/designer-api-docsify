@@ -18,7 +18,7 @@ Curve type of the animation.
 
 Default value: Curve.EaseInOut](ts-appendix-enums.md#curve)
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md)
+**Type:** Curve
 
 **Since:** 15
 
@@ -83,7 +83,7 @@ event: Callback<void>
 Closure function specifying the transition animation. The system generates the corresponding transition animation based on the modifications to the component's UI state within the closure. For details, see **event** in  
 [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto).
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 15
 
@@ -103,7 +103,7 @@ onTransitionEnd?: Callback<void>
 
 Callback triggered when the transition animation ends.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 15
 

@@ -12,7 +12,7 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#publish
+**Substitutes:** [publish](ohos.notificationManager/notificationManager#publish)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ Publishes a notification to a specified user. This API uses an asynchronous call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Yes |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes |
 | userId | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -43,7 +43,7 @@ Publishes a notification to a specified user. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#publish
+**Substitutes:** [publish](ohos.notificationManager/notificationManager#publish)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -57,11 +57,11 @@ Publishes a notification to a specified user. This API uses a promise to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | Yes |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | Yes |
 | userId | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

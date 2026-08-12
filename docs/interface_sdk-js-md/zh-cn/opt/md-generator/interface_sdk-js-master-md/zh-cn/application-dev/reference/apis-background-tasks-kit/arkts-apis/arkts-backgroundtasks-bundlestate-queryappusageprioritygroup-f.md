@@ -62,7 +62,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

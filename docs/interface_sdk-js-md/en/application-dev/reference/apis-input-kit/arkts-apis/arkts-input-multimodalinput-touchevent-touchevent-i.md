@@ -2,7 +2,7 @@
 
 Defines a touch event.
 
-**Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
+**Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Defines a touch event.
 ## Modules to Import
 
 ```TypeScript
-import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from 'kits/@kit.InputKit';
+import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@kit.InputKit';
 ```
 
 ## action
@@ -26,7 +26,7 @@ action: Action
 
 Event type.
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** [Action](arkts-input-multimodalinput-touchevent-action-e.md)
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ sourceType: SourceType
 
 Device type of the touch source.
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** [SourceType](arkts-input-multimodalinput-touchevent-sourcetype-e.md)
 
 **Since:** 9
 

@@ -12,7 +12,7 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync)
+**Substitutes:** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
 
 <!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>--><!--Device-unnamed-declare function fdatasync(fd: number): Promise<void>-End-->
 
@@ -28,7 +28,7 @@ Synchronizes the data of a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## fdatasync
@@ -43,7 +43,7 @@ Synchronizes the data of a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdatasync](arkts-corefile-fileio-fdatasync-f.md#fdatasync)
+**Substitutes:** [fdatasync](arkts-corefile-file-fs-fdatasync-f.md#fdatasync)
 
 <!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fdatasync(fd: number, callback: AsyncCallback<void>): void-End-->
 

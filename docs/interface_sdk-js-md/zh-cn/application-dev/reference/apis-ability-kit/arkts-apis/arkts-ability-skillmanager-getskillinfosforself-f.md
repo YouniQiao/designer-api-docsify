@@ -36,5 +36,5 @@ function getSkillInfosForSelf(flags: int): Promise<Array<SkillInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700101](../errorcode-bundle.md#17700101-包管理服务异常) | Bundle manager service is exception. Possible causes: 1. Failed to connect to the system service. 2. IPC data transmission failed. 3. Failed to obtain the object constructor. |
+| [17700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700101-包管理服务异常) | Bundle manager service is exception. Possible causes: 1. Failed to connect to the system service. 2. IPC data transmission failed. 3. Failed to obtain the object constructor. |
 

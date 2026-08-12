@@ -32,13 +32,13 @@ getColorSpaceName(): ColorSpace
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) | 返回色域类型枚举值。 |
+| ColorSpace | 返回色域类型枚举值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
 
 ## 示例
 
@@ -84,7 +84,7 @@ getGamma(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
 
 ## 示例
 
@@ -130,7 +130,7 @@ getWhitePoint(): Array<double>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
+| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) | The parameter value is abnormal.<br>**适用版本：** 9 - 22 |
 
 ## 示例
 

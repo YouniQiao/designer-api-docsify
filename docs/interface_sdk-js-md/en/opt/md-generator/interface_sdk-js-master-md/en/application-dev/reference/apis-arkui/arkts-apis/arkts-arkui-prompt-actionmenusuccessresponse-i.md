@@ -6,7 +6,7 @@ Defines the response of ShowActionMenu.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ActionMenuSuccessResponse
+**Substitutes:** [ActionMenuSuccessResponse](ohos.promptAction/promptAction.ActionMenuSuccessResponse)
 
 <!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
 
@@ -15,7 +15,7 @@ Defines the response of ShowActionMenu.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## index
@@ -32,7 +32,7 @@ Defines the index of data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ActionMenuSuccessResponse#index
+**Substitutes:** [index](ohos.promptAction/promptAction.ActionMenuSuccessResponse#index)
 
 <!--Device-ActionMenuSuccessResponse-index: number--><!--Device-ActionMenuSuccessResponse-index: number-End-->
 

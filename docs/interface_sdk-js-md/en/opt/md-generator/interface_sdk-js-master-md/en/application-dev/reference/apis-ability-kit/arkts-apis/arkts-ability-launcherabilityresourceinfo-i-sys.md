@@ -1,7 +1,7 @@
 # LauncherAbilityResourceInfo (System API)
 
 The module provides resource information of the entry ability of an application, such as the icon and label. The information can be obtained by calling  
-[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo).
+[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo).
 
 > **NOTE：**
 > 
@@ -77,7 +77,7 @@ readonly drawableDescriptor: DrawableDescriptor
 
 **drawableDescriptor** object of the application icon.
 
-**Type:** [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md)
+**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 12
 

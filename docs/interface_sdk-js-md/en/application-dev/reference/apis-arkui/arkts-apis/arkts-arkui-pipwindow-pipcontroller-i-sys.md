@@ -16,7 +16,7 @@ Before calling any of the following APIs, you must use
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## isPiPSupported
@@ -47,6 +47,6 @@ Returns a Boolean value that indicates whether picture-in-picture is supported
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [1300014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) | PiP internal error. |
 

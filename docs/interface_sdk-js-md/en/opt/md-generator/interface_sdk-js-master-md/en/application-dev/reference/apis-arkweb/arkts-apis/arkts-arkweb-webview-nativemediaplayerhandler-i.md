@@ -1,7 +1,7 @@
 # NativeMediaPlayerHandler
 
 Implements a **NativeMediaPlayerHandler** object used as a parameter of the  
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md) callback. The application uses this object to report the player status to the ArkWeb engine.
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The application uses this object to report the player status to the ArkWeb engine.
 
 > **NOTE：**
 > 
@@ -16,7 +16,7 @@ Implements a **NativeMediaPlayerHandler** object used as a parameter of the
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## handleBufferedEndTimeChanged
@@ -100,7 +100,7 @@ Called to notify the ArkWeb engine that an error occurs with the player.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Yes |
-| errorMessage | string | Yes |
+| [errorMessage](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-errormessage-i-sys.md) | string | Yes |
 
 ## handleFullscreenChanged
 

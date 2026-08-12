@@ -1,6 +1,6 @@
 # PersistPropsOptions
 
-指定持久化属性及其默认值的键值对对象，作为[persistProps](../../apis-arkui/arkts-apis/arkts-arkui-persistpropsoptions-i.md/arkts-arkui-persistpropsoptions-i.md)参数传入。
+指定持久化属性及其默认值的键值对对象，作为[persistProps](#PersistPropsOptions)参数传入。
 
 **起始版本：** 23
 
@@ -16,7 +16,7 @@
 fromJson?: FromJSONType<T>
 ```
 
-默认值为undefined。见[FromJsonType](arkts-fromjsontype-t.md)，用于反序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功反序列化。
+默认值为undefined。见[FromJsonType](arkts-fromjsontype-t.md#FromJSONType)，用于反序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功反序列化。
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ fromJson?: FromJSONType<T>
 toJson?: ToJSONType<T>
 ```
 
-默认值为undefined。见[ToJsonType](arkts-tojsontype-t.md)，用于序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功序列化。
+默认值为undefined。见[ToJsonType](arkts-tojsontype-t.md#ToJSONType)，用于序列化。对于复杂类型（除boolean、int、double、long、string外），开发者必须实现该方法才能成功序列化。
 
 **起始版本：** 23
 
@@ -52,7 +52,7 @@ toJson?: ToJSONType<T>
 defaultValue: T
 ```
 
-当在[PersistentStorage](../../apis-arkui/arkts-apis/arkts-arkui-persistentstorage-c.md/arkts-arkui-persistentstorage-c.md)和  
+当在[PersistentStorage](arkts-persistentstorage-persistentstorage-c.md#PersistentStorage)和  
 [AppStorage](../../../reference/apis-arkui/arkui-ts/ts-state-management-Static-copy.md#appstorage)中未查询到key时，使用defaultValue中。
 
 **类型：** T

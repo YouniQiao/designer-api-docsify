@@ -5,8 +5,8 @@ Enumerates the memory pressure levels. When an application clears the cache occu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description|
 | ------------------------------- | - | ---------- |
-| [MEMORY_PRESSURE_LEVEL_MODERATE](#memory_pressure_level_moderate) | 1 | Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.|
-| [MEMORY_PRESSURE_LEVEL_CRITICAL](#memory_pressure_level_critical) | 2 |
+| [MEMORY_PRESSURE_LEVEL_MODERATE](arkts-arkweb-webview-pressurelevel-e.md) | 1 | Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.|
+| [MEMORY_PRESSURE_LEVEL_CRITICAL](arkts-arkweb-webview-pressurelevel-e.md) | 2 |
 
 **Since:** 14
 

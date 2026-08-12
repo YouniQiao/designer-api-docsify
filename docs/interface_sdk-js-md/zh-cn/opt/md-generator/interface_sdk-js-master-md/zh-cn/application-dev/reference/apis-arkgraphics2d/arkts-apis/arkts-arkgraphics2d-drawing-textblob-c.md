@@ -67,7 +67,7 @@ static makeFromPosText(text: string, len: number, points: common2D.Point[], font
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## makeFromRunBuffer
 
@@ -87,9 +87,9 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | 是 |
+| pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | 是 |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
-| [bounds](#bounds) | common2D.Rect | 否 |
+| [bounds](arkts-arkgraphics2d-drawing-textblob-c.md) | common2D.Rect | 否 |
 
 **返回值：**
 
@@ -101,7 +101,7 @@ static makeFromRunBuffer(pos: Array<TextBlobRunBuffer>, font: Font, bounds?: com
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## makeFromString
 
@@ -123,7 +123,7 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 | --- | --- | --- |
 | text | string | 是 |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
-| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | 否 |
+| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | 否 |
 
 **返回值：**
 
@@ -135,7 +135,7 @@ static makeFromString(text: string, font: Font, encoding?: TextEncoding): TextBl
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## uniqueID
 

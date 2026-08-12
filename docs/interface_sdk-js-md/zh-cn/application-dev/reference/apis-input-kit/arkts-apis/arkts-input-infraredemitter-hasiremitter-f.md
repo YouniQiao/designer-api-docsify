@@ -28,8 +28,8 @@ function hasIrEmitter(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

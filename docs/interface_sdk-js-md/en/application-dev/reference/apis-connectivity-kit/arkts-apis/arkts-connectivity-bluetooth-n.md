@@ -8,7 +8,7 @@ Provides methods to operate or manage Bluetooth.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager
+**Substitutes:** [bluetoothManager](ohos.bluetoothManager)
 
 <!--Device-unnamed-declare namespace bluetooth--><!--Device-unnamed-declare namespace bluetooth-End-->
 
@@ -17,7 +17,7 @@ Provides methods to operate or manage Bluetooth.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -81,8 +81,8 @@ import { bluetooth } from 'kits/@kit.ConnectivityKit';
 | [BaseProfile](arkts-connectivity-bluetooth-baseprofile-i.md) | Base interface of profile. |
 | [A2dpSourceProfile](arkts-connectivity-bluetooth-a2dpsourceprofile-i.md) | Manager a2dp source profile. |
 | [HandsFreeAudioGatewayProfile](arkts-connectivity-bluetooth-handsfreeaudiogatewayprofile-i.md) | Manager handsfree AG profile. |
-| [GattServer](arkts-connectivity-bluetooth-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use {@link createGattServer} to create an GattServer instance. |
-| [GattClientDevice](arkts-connectivity-bluetooth-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance. |
+| [GattServer](arkts-connectivity-bluetooth-gattserver-i.md) | Manages GATT server. Before calling an Gatt server method, you must use [createGattServer](arkts-connectivity-ble-creategattserver-f.md#createGattServer) to create an GattServer instance. |
+| [GattClientDevice](arkts-connectivity-bluetooth-gattclientdevice-i.md) | Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance. |
 | [GattService](arkts-connectivity-bluetooth-gattservice-i.md) | Describes the Gatt service. |
 | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Describes the Gatt characteristic. |
 | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Describes the Gatt descriptor. |

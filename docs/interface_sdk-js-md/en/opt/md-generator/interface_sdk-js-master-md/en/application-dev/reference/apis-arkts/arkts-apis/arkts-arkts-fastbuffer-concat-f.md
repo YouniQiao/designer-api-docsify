@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## concat
@@ -26,7 +26,7 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| list | FastBuffer[] \| Uint8Array[] | Yes |
+| list | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md)[] \| Uint8Array[] | Yes |
 | totalLength | number | No |
 
 **Return value:**
@@ -39,7 +39,7 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 

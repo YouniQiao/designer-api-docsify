@@ -12,7 +12,7 @@ The **inputMethodList** module is oriented to system applications and input meth
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ```
 
 ## Summary

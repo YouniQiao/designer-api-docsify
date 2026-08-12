@@ -22,7 +22,7 @@ decoratorName: string
 
 当对象属性使用[@Trace](../../../ui/state-management-static/arkts-static-new-observedV2-and-trace.md)时，值为：`@Trace`。
 
-当对象经过[makeObserved](arkts-arkui-arkui-withenv-withenvattribute-i.md#env)转换时，值为：`MakeObserved`。
+当对象经过[makeObserved](UIUtils.makeObserved&lt;T extends object | null | undefined&gt;(source: T))转换时，值为：`MakeObserved`。
 
 当对象为被V1装饰器装饰的built-in类型时，值为对象关联的装饰器名称。
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## pick
@@ -35,14 +35,14 @@ Starts the camera picker and enters the corresponding mode based on the media ty
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. |
-| mediaTypes | Array&lt;PickerMediaType&gt; | Yes | Media type. |
+| mediaTypes | Array&lt;[PickerMediaType](arkts-camera-camerapicker-pickermediatype-e.md)&gt; | Yes | Media type. |
 | pickerProfile | [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | Yes | Profile of the camera picker. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PickerResult&gt; | Promise used to return the processing result ( [PickerResult]{ |
+| Promise&lt;[PickerResult](arkts-camera-camerapicker-pickerresult-c.md)&gt; | Promise used to return the processing result ( [PickerResult]{ |
 
 ## Examples
 

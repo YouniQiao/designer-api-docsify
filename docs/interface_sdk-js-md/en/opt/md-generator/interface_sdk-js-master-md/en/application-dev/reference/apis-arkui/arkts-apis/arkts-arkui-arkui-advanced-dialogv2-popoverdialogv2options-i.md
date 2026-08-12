@@ -2,7 +2,7 @@
 
 Defines PopoverDialogV2 Options
 
-**Inheritance/Implementation:** PopoverDialogV2Options extends [CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md/arkts-arkui-custompopupoptions-i.md)
+**Inheritance/Implementation:** PopoverDialogV2Options extends [CustomPopupOptions](../arkts-components/arkts-arkui-custompopupoptions-i.md#CustomPopupOptions)
 
 **Since:** 18
 
@@ -17,5 +17,5 @@ Defines PopoverDialogV2 Options
 ## Modules to Import
 
 ```TypeScript
-import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from 'kits/@kit.ArkUI';
+import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from '@kit.ArkUI';
 ```

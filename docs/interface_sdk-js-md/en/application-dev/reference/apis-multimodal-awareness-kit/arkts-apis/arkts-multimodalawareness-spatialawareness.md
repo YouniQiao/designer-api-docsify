@@ -17,7 +17,7 @@ This module provides the capability to subscribe to report the distance measurem
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from 'kits/@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

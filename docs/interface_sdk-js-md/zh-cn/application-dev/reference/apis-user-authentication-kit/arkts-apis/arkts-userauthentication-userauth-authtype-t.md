@@ -12,7 +12,7 @@ type AuthType = 'ALL' | 'FACE_ONLY'
 
 **废弃版本：** 8
 
-**替代接口：** [userAuth.UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
+**替代接口：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md#UserAuthType)
 
 <!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'--><!--Device-userAuth-type AuthType = 'ALL' | 'FACE_ONLY'-End-->
 

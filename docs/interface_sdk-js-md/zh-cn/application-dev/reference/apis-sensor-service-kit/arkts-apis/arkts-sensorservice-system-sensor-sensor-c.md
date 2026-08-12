@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor
+**替代接口：** [sensor/sensor](ohos.sensor/sensor)
 
 <!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
 
@@ -26,7 +26,7 @@ static getOnBodyState(options: GetOnBodyStateOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#WEAR_DETECTION
+**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -60,7 +60,7 @@ static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -96,7 +96,7 @@ static subscribeBarometer(options: SubscribeBarometerOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -130,7 +130,7 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#ORIENTATION
+**替代接口：** [ORIENTATION](ohos.sensor/sensor.SensorId#ORIENTATION)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -166,7 +166,7 @@ static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): v
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -202,7 +202,7 @@ static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -238,7 +238,7 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -274,7 +274,7 @@ static subscribeLight(options: SubscribeLightOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#AMBIENT_LIGHT
+**替代接口：** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_LIGHT)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -308,7 +308,7 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -342,7 +342,7 @@ static subscribeProximity(options: SubscribeProximityOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#PROXIMITY
+**替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -376,7 +376,7 @@ static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.on(type:
+**替代接口：** [on](@ohos.sensor:sensor.on(type:)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -412,7 +412,7 @@ static unsubscribeAccelerometer(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -442,7 +442,7 @@ static unsubscribeBarometer(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -470,7 +470,7 @@ static unsubscribeCompass(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -498,7 +498,7 @@ static unsubscribeDeviceOrientation(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -526,7 +526,7 @@ static unsubscribeGyroscope(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -556,7 +556,7 @@ static unsubscribeHeartRate(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -586,7 +586,7 @@ static unsubscribeLight(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -614,7 +614,7 @@ static unsubscribeOnBodyState(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -642,7 +642,7 @@ static unsubscribeProximity(): void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#PROXIMITY
+**替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -670,7 +670,7 @@ static unsubscribeStepCounter(): void
 
 **废弃版本：** 8
 
-**替代接口：** @ohos.sensor:sensor.off(type:
+**替代接口：** [off](@ohos.sensor:sensor.off(type:)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 

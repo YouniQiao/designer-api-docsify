@@ -9,8 +9,8 @@ ComposeTitleBarV2组件是一种标题栏，支持设置标题、头像（可选
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
-> - 如果ComposeTitleBarV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和
-> [通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
+> - 如果ComposeTitleBarV2设置[通用属性](./@internal/component/ets/common)和
+> [通用事件](./@internal/component/ets/common)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
 > ComposeTitleBarV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议ComposeTitleBarV2设置通用属性和通用事件。
 
 **起始版本：** 26.0.0
@@ -73,7 +73,7 @@ menuItems?: Array<ComposeTitleBarV2MenuItem>
 
 右侧菜单项列表。
 
-**类型：** Array&lt;ComposeTitleBarV2MenuItem&gt;
+**类型：** Array&lt;[ComposeTitleBarV2MenuItem](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitem-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -95,7 +95,7 @@ subtitle?: ResourceStr
 
 副标题。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -117,7 +117,7 @@ title: ResourceStr
 
 标题。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

@@ -58,7 +58,7 @@ hintRadius?: double | Resource
 
 Specifies the radius of the background of the day in calendar.
 
-**Type:** double \| Resource
+**Type:** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

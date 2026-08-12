@@ -1,8 +1,8 @@
 # TextPickerTextStyle
 
-Defines the text style options for the text picker. Inherits from [PickerTextStyle](../arkts-apis/arkts-arkui-common-pickertextstyle-i.md/arkts-arkui-common-pickertextstyle-i.md).
+Defines the text style options for the text picker. Inherits from [PickerTextStyle](PickerTextStyle).
 
-**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](../arkts-apis/arkts-arkui-common-pickertextstyle-i.md/arkts-arkui-common-pickertextstyle-i.md)
+**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](PickerTextStyle)
 
 **Since:** 15
 
@@ -18,7 +18,7 @@ Defines the text style options for the text picker. Inherits from [PickerTextSty
 maxFontSize?: number | string | Resource
 ```
 
-Maximum font size for the text. For details, see [maxFontSize](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontsize).
+Maximum font size for the text. For details, see [maxFontSize](TextAttribute#maxFontSize).
 
 **Type:** number \| string \| Resource
 
@@ -42,7 +42,7 @@ minFontSize?: number | string | Resource
 
 Minimum font size for the text. Used with **maxFontSize** to enable font scaling. When both **minFontSize** and  
 **maxFontSize** are set, the **size** property in **font** is ignored. By default, the maximum number of lines is1, with the **MIN_FONT_SIZE_FIRST** adaptation strategy. For details, see  
-[minFontSize](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#minfontsize).
+[minFontSize](TextAttribute#minFontSize).
 
 **Type:** number \| string \| Resource
 
@@ -65,9 +65,9 @@ overflow?: TextOverflow
 ```
 
 Text overflow behavior. This property has no effect when set to **MARQUEE**. For details, see  
-[textOverflow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textoverflow).
+[textOverflow](TextAttribute#textOverflow).
 
-**Type:** [TextOverflow](../arkts-apis/arkts-arkui-enums-textoverflow-e.md)
+**Type:** TextOverflow
 
 **Since:** 15
 

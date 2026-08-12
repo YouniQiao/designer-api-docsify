@@ -13,7 +13,7 @@ Provide common Bluetooth interfaces and types.
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.ConnectivityKit';
+import { common } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -29,5 +29,5 @@ import { common } from 'kits/@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [BluetoothAddressType](arkts-connectivity-common-bluetoothaddresstype-e.md) | Enum for the type of Bluetooth address. |
-| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address.The enum is used only when the {@link BluetoothAddress#addressType} is {@link BluetoothAddressType#REAL}. |
+| [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md) | Enum for the type of Bluetooth raw address.The enum is used only when the [addressType](arkts-connectivity-common-bluetoothaddress-i.md#addressType) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#REAL). |
 

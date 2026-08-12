@@ -2,7 +2,7 @@
 
 Declare Navigation view properties.
 
-**Inheritance/Implementation:** NavigationAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** NavigationAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of navigation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;NavigationAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of navigation. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of navigation. |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Sets the back button icon and accessibility broadcast content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| SymbolGlyphModifier \| undefined | Yes | Indicates icon of back button |
+| icon | string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) \| undefined | Yes | Indicates icon of back button |
 | accessibilityText | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined | No | Indicates content needs to broadcast. |
 
 **Return value:**
@@ -95,7 +95,7 @@ Sets Navigation configuration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [NavigationConfiguration](../arkts-components/arkts-arkui-navigationconfiguration-i.md) \| undefined | Yes | Navigation configuration options. |
+| config | [NavigationConfiguration](arkts-arkui-navigation-navigationconfiguration-i.md) \| undefined | Yes | Navigation configuration options. |
 
 **Return value:**
 
@@ -518,8 +518,8 @@ Navigation title bar's menus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;NavigationMenuItem&gt; \| CustomBuilder \| undefined | Yes |  |
-| options | [NavigationMenuOptions](../arkts-components/arkts-arkui-navigationmenuoptions-i.md) \| undefined | No | Indicates the options of menu. |
+| items | Array&lt;[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes |  |
+| options | [NavigationMenuOptions](arkts-arkui-navigation-navigationmenuoptions-i.md) \| undefined | No | Indicates the options of menu. |
 
 **Return value:**
 
@@ -639,7 +639,7 @@ Sets the width of navigation bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Bindable&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | Yes |  |
+| value | [Length](arkts-arkui-length-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -915,7 +915,7 @@ Set placeholder in split mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| placeholder | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; \| undefined | Yes | Set placeholder in split mode. |
+| placeholder | ComponentContent&lt;Object&gt; \| undefined | Yes | Set placeholder in split mode. |
 
 **Return value:**
 
@@ -945,7 +945,7 @@ Set the style of system bar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [SystemBarStyle](../arkts-components/arkts-arkui-systembarstyle-t.md) \| undefined | Yes | The properties of system bar |
+| style | [SystemBarStyle](arkts-arkui-systembarstyle-t.md) \| undefined | Yes | The properties of system bar |
 
 **Return value:**
 
@@ -975,7 +975,7 @@ Navigation title
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder \| NavigationCommonTitle \| NavigationCustomTitle \| undefined | Yes |  |
+| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigation-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigation-navigationcustomtitle-i.md) \| undefined | Yes |  |
 | options | [NavigationTitleOptions](arkts-arkui-navigation-navigationtitleoptions-i.md) \| undefined | No | Indicates the options of titlebar. |
 
 **Return value:**
@@ -1036,7 +1036,7 @@ Configure toolbar with default style parameter or custom parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;ToolbarItem&gt; \| CustomBuilder \| undefined | Yes | Toolbar configuration parameters. |
+| value | Array&lt;[ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | Toolbar configuration parameters. |
 | options | [NavigationToolbarOptions](arkts-arkui-navigation-navigationtoolbaroptions-i.md) \| undefined | No | Indicates the options of toolbar. |
 
 **Return value:**

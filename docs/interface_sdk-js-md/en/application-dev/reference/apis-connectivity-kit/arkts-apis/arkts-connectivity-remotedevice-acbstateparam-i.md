@@ -13,7 +13,7 @@ ACB connection status parameter.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -44,7 +44,7 @@ state: AcbState
 
 ACB connection status.
 
-**Type:** [AcbState](arkts-connectivity-remotedevice-acbstate-t.md)
+**Type:** AcbState
 
 **Since:** 26.0.0
 

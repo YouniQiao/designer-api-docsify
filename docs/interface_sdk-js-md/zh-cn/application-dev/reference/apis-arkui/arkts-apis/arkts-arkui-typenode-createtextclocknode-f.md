@@ -28,5 +28,5 @@ Create a FrameNode of TextClock type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextClock](arkts-arkui-typenode-textclock-t.md) | Return TextClock type FrameNode. |
+| TextClock | Return TextClock type FrameNode. |
 

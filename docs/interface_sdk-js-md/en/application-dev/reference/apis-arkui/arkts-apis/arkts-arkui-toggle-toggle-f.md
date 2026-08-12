@@ -26,7 +26,7 @@ Defines Toggle Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ToggleOptions](arkts-arkui-toggle-toggleoptions-i.md) | Yes | the options of Toggle. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines Toggle Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ToggleAttribute&gt; | Yes | toggle attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ToggleAttribute](arkts-arkui-toggle-toggleattribute-i.md)&gt; | Yes | toggle attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

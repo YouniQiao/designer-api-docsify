@@ -1,7 +1,7 @@
 # InputEventInterceptResult
 
 Input event interception result interface, used by the listener callback  
-[InputEventListener](arkts-arkui-inputeventlistener-t.md) to return the interception decision.
+[InputEventListener](arkts-arkui-inputeventlistener-t.md#InputEventListener) to return the interception decision.
 
 **Since:** 26.0.0
 

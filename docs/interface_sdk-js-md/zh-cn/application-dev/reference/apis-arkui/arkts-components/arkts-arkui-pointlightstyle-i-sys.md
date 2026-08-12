@@ -48,7 +48,7 @@ illuminated?: IlluminatedType
 
 默认值：IlluminatedType.NONE
 
-**类型：** [IlluminatedType](../arkts-apis/arkts-arkui-illuminatedtype-e-sys.md)
+**类型：** IlluminatedType
 
 **默认值：** IlluminatedType.NONE
 
@@ -74,7 +74,7 @@ lightSource?: LightSource
 
 默认值：无光源
 
-**类型：** [LightSource](../arkts-apis/arkts-arkui-common-lightsource-i-sys.md)
+**类型：** [LightSource](arkts-arkui-lightsource-i-sys.md)
 
 **默认值：** undefined
 

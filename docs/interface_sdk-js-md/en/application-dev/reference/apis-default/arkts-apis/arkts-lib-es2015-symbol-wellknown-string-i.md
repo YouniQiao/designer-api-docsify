@@ -24,7 +24,7 @@ Matches a string or an object that supports being matched against, and returns a
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](../../apis-arkts/arkts-apis/arkts-arkts-regexp-regexpmatcharray-c.md) |  |
+| RegExpMatchArray |  |
 
 ## replace
 

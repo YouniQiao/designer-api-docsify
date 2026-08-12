@@ -13,7 +13,7 @@ The **metadataBinding** module provides metadata binding–specific functions su
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

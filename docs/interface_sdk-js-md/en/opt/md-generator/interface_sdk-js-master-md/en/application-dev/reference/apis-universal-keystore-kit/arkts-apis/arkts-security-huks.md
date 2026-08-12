@@ -13,7 +13,7 @@ The keys managed by OpenHarmony Universal KeyStore (HUKS) can be imported by app
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## Summary

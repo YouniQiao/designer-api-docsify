@@ -36,7 +36,7 @@ constructor(path: string)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## delete
 
@@ -191,7 +191,7 @@ getBaseFile(): File
 
 | 类型 |
 | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) |
+| [File](arkts-corefile-file-fs-file-i.md) |
 
 **错误码：**
 

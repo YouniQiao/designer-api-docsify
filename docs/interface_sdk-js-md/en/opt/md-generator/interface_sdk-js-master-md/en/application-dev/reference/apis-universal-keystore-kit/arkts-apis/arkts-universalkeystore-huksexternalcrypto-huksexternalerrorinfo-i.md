@@ -11,7 +11,7 @@ Defines detailed error information.
 ## Modules to Import
 
 ```TypeScript
-import { huksExternalCrypto } from 'kits/@kit.UniversalKeystoreKit';
+import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 ```
 
 ## errno

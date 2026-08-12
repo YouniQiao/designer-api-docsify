@@ -11,7 +11,7 @@ Provides the configuration information of an upload or download task.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## action
@@ -25,7 +25,7 @@ Task action.
 - **UPLOAD**: Upload tasks.  
 - **DOWNLOAD**: Download tasks.
 
-**Type:** [Action](arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 10
 
@@ -66,9 +66,9 @@ data?: string | Array<FormItem>
 - For the download task, the value is a string, typically in JSON format (an object will be converted to a JSON  
 string); the default value is null.  
 - For the upload task, the value is Array&lt;  
-[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
+[FormItem](arkts-basicservices-agent-formitem-i.md#FormItem)&gt;. Since API version 15, a maximum of 100 files can be uploaded in a single task. This parameter is left empty by default.
 
-**Type:** string \| Array&lt;FormItem&gt;
+**Type:** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **Since:** 10
 
@@ -305,7 +305,7 @@ network?: Network
 
 Network used for the task. The default value is **ANY** (Wi-Fi or cellular).
 
-**Type:** [Network](arkts-basicservices-agent-network-e.md)
+**Type:** Network
 
 **Default:** Network.ANY
 
@@ -325,7 +325,7 @@ notification?: Notification
 
 Custom settings for the notification bar. The default value is **{}**.
 
-**Type:** [Notification](arkts-basicservices-agent-notification-i.md)
+**Type:** Notification
 
 **Since:** 15
 
@@ -518,10 +518,10 @@ timeout?: Timeout
 ```
 
 Custom timeout interval. The default connection timeout interval is 60 seconds, and the default total timeout interval is 604800 seconds (one week). If retry is set to **true**, the   
-[timeout](arkts-basicservices-agent-timeout-i.md) event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal   
-[timeout](arkts-basicservices-agent-timeout-i.md) condition has been triggered but the   
-[timeout](arkts-basicservices-agent-timeout-i.md) event is not observable. Set **retry** to **false** to explicitly observe the   
-[timeout](arkts-basicservices-agent-timeout-i.md) event.
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout) event triggers immediate retry, which will obscure the timeout event itself. As a result, the internal   
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout) condition has been triggered but the   
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout) event is not observable. Set **retry** to **false** to explicitly observe the   
+[timeout](arkts-basicservices-agent-timeout-i.md#Timeout) event.
 
 **Type:** [Timeout](arkts-basicservices-agent-timeout-i.md)
 

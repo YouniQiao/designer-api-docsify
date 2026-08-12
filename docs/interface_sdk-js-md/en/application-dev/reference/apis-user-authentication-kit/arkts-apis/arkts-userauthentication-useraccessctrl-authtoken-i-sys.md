@@ -15,7 +15,7 @@ Defines the authentication token data. It indicates the parsed **AuthToken** dat
 ## Modules to Import
 
 ```TypeScript
-import { userAccessCtrl } from 'kits/@kit.UserAuthenticationKit';
+import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 ```
 
 ## authTrustLevel

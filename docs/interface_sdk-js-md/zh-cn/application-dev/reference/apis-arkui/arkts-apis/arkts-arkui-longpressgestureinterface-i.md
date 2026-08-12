@@ -22,7 +22,7 @@
 (value?: { fingers?: number; repeat?: boolean; duration?: number }): LongPressGestureInterface
 ```
 
-创建长按手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
+创建长按手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface)。
 
 当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
 
@@ -58,7 +58,7 @@
 (options?: LongPressGestureHandlerOptions): LongPressGestureInterface
 ```
 
-创建长按手势对象。与[LongPressGesture](arkts-arkui-longpressgestureinterface-i.md))}相比，options参数新增了对isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
+创建长按手势对象。与[LongPressGesture](LongPressGestureInterface(value?: { fingers?: number; repeat?: boolean; duration?: number))}相比，options参数新增了对isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
 
 当组件默认支持可拖拽时，如Text、TextInput、TextArea、HyperLink、Image和RichEditor等组件。长按手势与拖拽会出现冲突，事件优先级如下：
 
@@ -82,7 +82,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LongPressGestureHandlerOptions](arkts-arkui-gesture-longpressgesturehandleroptions-i.md) | 否 | 长按手势处理器配置参数。 |
+| options | [LongPressGestureHandlerOptions](arkts-arkui-longpressgesturehandleroptions-i.md) | 否 | 长按手势处理器配置参数。 |
 
 **返回值：**
 
@@ -174,7 +174,7 @@ onActionCancel(event: Callback<GestureEvent>): LongPressGestureInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 长按手势取消回调函数。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 长按手势取消回调函数。 |
 
 **返回值：**
 

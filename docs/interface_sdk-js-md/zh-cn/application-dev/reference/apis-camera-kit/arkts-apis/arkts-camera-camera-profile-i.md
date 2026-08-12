@@ -40,7 +40,7 @@ readonly size: Size
 
 设置的是相机的分辨率宽度和高度，而非实际输出图像的宽度和高度。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 10
 

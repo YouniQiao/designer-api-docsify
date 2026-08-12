@@ -25,24 +25,24 @@ function allocResourceAndShare(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | predicates | relationalStore.RdbPredicates | 是 |
-| participants | Array&lt;Participant&gt; | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 |
+| columns | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;relationalStore.ResultSet&gt; |
+| Promise & lt;relationalStore.ResultSet & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -112,18 +112,18 @@ function allocResourceAndShare(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | predicates | relationalStore.RdbPredicates | 是 |
-| participants | Array&lt;Participant&gt; | 是 |
+| participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -196,19 +196,19 @@ function allocResourceAndShare(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | predicates | relationalStore.RdbPredicates | 是 |
-| participants | Array&lt;Participant&gt; | 是 |
-| columns | Array&lt;string&gt; | 是 |
+| participants | Array&lt;[Participant](arkts-arkdata-sharing-participant-i-sys.md)&gt; | 是 |
+| columns | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;relationalStore.ResultSet&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { browser } from 'kits/@kit.MDMKit';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## getPolicies
@@ -18,7 +18,7 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [browser.getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
+**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getPoliciesSync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,9 +38,9 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 
 ## Examples
 
@@ -77,7 +77,7 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [browser.getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getpoliciessync)
+**Substitutes:** [getPoliciesSync](arkts-mdm-browser-getpoliciessync-f.md#getPoliciesSync)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,15 +96,15 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
 
 ## Examples
 

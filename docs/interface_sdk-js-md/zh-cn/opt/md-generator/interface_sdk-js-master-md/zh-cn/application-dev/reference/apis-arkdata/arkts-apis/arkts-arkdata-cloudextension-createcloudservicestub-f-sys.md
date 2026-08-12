@@ -26,7 +26,7 @@ function createCloudServiceStub(instance: CloudService): Promise<rpc.RemoteObjec
 
 | 类型 |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## 示例
 

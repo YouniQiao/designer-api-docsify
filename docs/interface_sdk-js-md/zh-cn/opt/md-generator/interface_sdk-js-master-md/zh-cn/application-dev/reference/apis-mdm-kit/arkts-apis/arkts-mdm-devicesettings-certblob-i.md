@@ -6,7 +6,7 @@
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [@ohos.enterprise.securityManager:securityManager.CertBlob](arkts-mdm-securitymanager-certblob-i.md)
+**替代接口：** [CertBlob](arkts-mdm-securitymanager-certblob-i.md#CertBlob)
 
 <!--Device-deviceSettings-export interface CertBlob--><!--Device-deviceSettings-export interface CertBlob-End-->
 
@@ -26,7 +26,7 @@ alias: string
 
 **废弃版本：** 26.0.0
 
-**替代接口：** @ohos.enterprise.securityManager:securityManager.alias
+**替代接口：** [alias](@ohos.enterprise.securityManager:securityManager.alias)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +48,7 @@ inData: Uint8Array
 
 **废弃版本：** 26.0.0
 
-**替代接口：** @ohos.enterprise.securityManager:securityManager.inData
+**替代接口：** [inData](@ohos.enterprise.securityManager:securityManager.inData)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

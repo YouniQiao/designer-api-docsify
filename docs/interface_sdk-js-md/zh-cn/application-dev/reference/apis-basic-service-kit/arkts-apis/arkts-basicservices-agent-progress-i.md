@@ -98,7 +98,7 @@ readonly state: State
 
 任务当前的状态。
 
-**类型：** [State](arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 10
 

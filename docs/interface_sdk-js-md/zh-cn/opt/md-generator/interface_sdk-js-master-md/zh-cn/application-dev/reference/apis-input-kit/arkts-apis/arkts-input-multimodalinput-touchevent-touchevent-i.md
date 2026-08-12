@@ -2,7 +2,7 @@
 
 触屏输入事件。
 
-**继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
+**继承/实现关系：** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
 **起始版本：** 9
 
@@ -18,7 +18,7 @@ action: Action
 
 触屏输入事件类型。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** [Action](arkts-input-multimodalinput-touchevent-action-e.md)
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ sourceType: SourceType
 
 触屏来源的设备类型。
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** [SourceType](arkts-input-multimodalinput-touchevent-sourcetype-e.md)
 
 **起始版本：** 9
 

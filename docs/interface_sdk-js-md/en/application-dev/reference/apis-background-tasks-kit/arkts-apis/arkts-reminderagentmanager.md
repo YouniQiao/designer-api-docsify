@@ -13,7 +13,7 @@ The **reminderAgentManager** module provides APIs related to agent-powered remin
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary
@@ -35,8 +35,8 @@ import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
 | [getExcludeDates](arkts-backgroundtasks-reminderagentmanager-getexcludedates-f.md#getexcludedates) | Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result. |
 | [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses an asynchronous callback to return the result. |
 | [getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders-1) | Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result. |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) | Publishes a reminder. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. > |
-| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1) | Publishes a reminder. This API uses a promise to return the result.  > **NOTE：** >  > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification) > permission is obtained. > |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder) | Publishes a reminder. This API uses an asynchronous callback to return the result.  > **NOTE：** >  > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > permission is obtained. > |
+| [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishreminder-1) | Publishes a reminder. This API uses a promise to return the result.  > **NOTE：** >  > This API can be called only after the > [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestEnableNotification) > permission is obtained. > |
 | [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot) | Removes a specified notification slot. This API uses an asynchronous callback to return the result. |
 | [removeNotificationSlot](arkts-backgroundtasks-reminderagentmanager-removenotificationslot-f.md#removenotificationslot-1) | Removes a specified notification slot. This API uses a promise to return the result. |
 | [subscribeReminderState](arkts-backgroundtasks-reminderagentmanager-subscribereminderstate-f.md#subscribereminderstate) | Subscribes to agent-powered reminder state changes. This API uses a promise to return the result. |

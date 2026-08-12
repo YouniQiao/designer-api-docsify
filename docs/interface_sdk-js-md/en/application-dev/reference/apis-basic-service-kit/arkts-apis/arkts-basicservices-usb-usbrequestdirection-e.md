@@ -8,7 +8,7 @@ Enumerates request directions.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md)
+**Substitutes:** [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md#USBRequestDirection)
 
 <!--Device-usb-export enum USBRequestDirection--><!--Device-usb-export enum USBRequestDirection-End-->
 
@@ -28,7 +28,7 @@ Request for writing data from the host to the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestDirection.USB_REQUEST_DIR_TO_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#usb_request_dir_to_device)
+**Substitutes:** [USB_REQUEST_DIR_TO_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#USB_REQUEST_DIR_TO_DEVICE)
 
 <!--Device-USBRequestDirection-USB_REQUEST_DIR_TO_DEVICE = 0--><!--Device-USBRequestDirection-USB_REQUEST_DIR_TO_DEVICE = 0-End-->
 
@@ -48,7 +48,7 @@ Request for reading data from the device to the host.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBRequestDirection.USB_REQUEST_DIR_FROM_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#usb_request_dir_from_device)
+**Substitutes:** [USB_REQUEST_DIR_FROM_DEVICE](arkts-basicservices-usbmanager-usbrequestdirection-e.md#USB_REQUEST_DIR_FROM_DEVICE)
 
 <!--Device-USBRequestDirection-USB_REQUEST_DIR_FROM_DEVICE = 0x80--><!--Device-USBRequestDirection-USB_REQUEST_DIR_FROM_DEVICE = 0x80-End-->
 

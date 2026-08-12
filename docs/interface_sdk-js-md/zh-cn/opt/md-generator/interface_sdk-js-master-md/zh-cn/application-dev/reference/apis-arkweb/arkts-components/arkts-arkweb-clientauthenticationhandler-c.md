@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to {@link onClientAuthenticationRequest} method.
+Defines the client certificate request result, related to [onClientAuthenticationRequest](onClientAuthenticationRequest) method.
 
 **起始版本：** 9
 
@@ -94,7 +94,7 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## constructor
 

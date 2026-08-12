@@ -26,7 +26,7 @@ Defines the Gauge component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [GaugeOptions](arkts-arkui-gauge-gaugeoptions-i.md) | Yes | gauge options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines Gauge Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GaugeAttribute&gt; | Yes | Gauge attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GaugeAttribute](arkts-arkui-gauge-gaugeattribute-i.md)&gt; | Yes | Gauge attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 

@@ -5,7 +5,7 @@ Since API version 9, the UiTest framework provides a wide range of UI component 
 
 The APIs provided by the **On** class exhibit the following features:
 
-1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](arkts-test-uitest-on-c.md#isbefore) and [ON.isAfter](arkts-test-uitest-on-c.md#isafter) can be used to specify  the features of adjacent components to assist positioning.
+1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isBefore) and [ON.isAfter](#isAfter) can be used to specify  the features of adjacent components to assist positioning.
 
 All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
 
@@ -18,7 +18,7 @@ All APIs provided in the **On** class are synchronous. You are advised to use th
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## afterComponent
@@ -27,7 +27,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 afterComponent(com: Component): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given {@link Component}object,used to locate Component relatively.
+Requires that the target Component which is after another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
@@ -39,13 +39,13 @@ Requires that the target Component which is after another Component that specifi
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | Yes |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -53,7 +53,7 @@ Requires that the target Component which is after another Component that specifi
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -74,7 +74,7 @@ async function demo() {
 beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given {@link Component}object,used to locate Component relatively.
+Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
@@ -86,13 +86,13 @@ Requires that the target Component which is before another Component that specif
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | Yes |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -100,7 +100,7 @@ Requires that the target Component which is before another Component that specif
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -133,13 +133,13 @@ Specifies the display to which the target component belongs.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | displayId | number | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -147,7 +147,7 @@ Specifies the display to which the target component belongs.
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -176,13 +176,13 @@ Specifies the checkable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -190,7 +190,7 @@ Specifies the checkable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -219,13 +219,13 @@ Specifies the checked attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -233,7 +233,7 @@ Specifies the checked attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -262,13 +262,13 @@ Specifies the clickable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -276,7 +276,7 @@ Specifies the clickable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -305,14 +305,14 @@ Specifies the description of the target component. Multiple match patterns are s
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | val | string | Yes |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -320,7 +320,7 @@ Specifies the description of the target component. Multiple match patterns are s
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -349,13 +349,13 @@ Specifies the enabled attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -363,7 +363,7 @@ Specifies the enabled attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -392,13 +392,13 @@ Specifies the focused attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -406,7 +406,7 @@ Specifies the focused attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -435,14 +435,14 @@ Specifies the hint text attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | val | string | Yes |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -450,7 +450,7 @@ Specifies the hint text attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -479,13 +479,13 @@ Specifies the ID attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [id](#id) | string | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -493,7 +493,7 @@ Specifies the ID attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -522,14 +522,14 @@ Specifies the **id** attribute and match pattern of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [id](#id) | string | Yes |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -537,7 +537,7 @@ Specifies the **id** attribute and match pattern of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -566,13 +566,13 @@ Specifies that the target component is located within the given application wind
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | bundleName | string | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -580,7 +580,7 @@ Specifies that the target component is located within the given application wind
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -609,13 +609,13 @@ Specifies that the target component is located after the given attribute compone
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -623,7 +623,7 @@ Specifies that the target component is located after the given attribute compone
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -653,13 +653,13 @@ Specifies that the target component is located before the given attribute compon
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -667,7 +667,7 @@ Specifies that the target component is located before the given attribute compon
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -697,13 +697,13 @@ Specifies the long-clickable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -711,7 +711,7 @@ Specifies the long-clickable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -732,9 +732,9 @@ Specifies the text content and text matching pattern of the component.
 
 > **NOTE：**
 > 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#accessibilitylevel)
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
 > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
-> the target component for searching for the component. In this case, the [On.text()](arkts-test-uitest-on-c.md#text) API does not
+> the target component for searching for the component. In this case, the [On.text()](#text) API does not
 > take effect.
 
 **Since:** 20
@@ -747,14 +747,14 @@ Specifies the text content and text matching pattern of the component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [text](#text) | string | Yes |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -762,7 +762,7 @@ Specifies the text content and text matching pattern of the component.
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -791,13 +791,13 @@ Specifies the scrollable attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -805,7 +805,7 @@ Specifies the scrollable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -834,13 +834,13 @@ Specifies the selected attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | b | boolean | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -848,7 +848,7 @@ Specifies the selected attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -869,10 +869,10 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 > **NOTE：**
 > 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#accessibilitylevel)
+> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
 > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
 > of the target component for searching for the component. In this case, you can use the
-> [On.originalText()](arkts-test-uitest-on-c.md#originaltext) API.
+> [On.originalText()](#originalText) API.
 
 **Since:** 9
 
@@ -884,14 +884,14 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | txt | string | Yes |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -899,7 +899,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -928,13 +928,13 @@ Specifies the type attribute of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | tp | string | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -942,7 +942,7 @@ Specifies the type attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -971,14 +971,14 @@ Specifies the **type** attribute and match pattern of the target component.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | tp | string | Yes |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -986,7 +986,7 @@ Specifies the **type** attribute and match pattern of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1015,13 +1015,13 @@ Specifies that the target component is located within the given attribute compon
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -1029,7 +1029,7 @@ Specifies that the target component is located within the given attribute compon
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1047,7 +1047,7 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child 
 withinComponent(com: Component): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given {@link Component}object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
@@ -1059,13 +1059,13 @@ Requires that the target Component which is inside of another Component that spe
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| com | [Component](../../apis-image-kit/arkts-apis/arkts-image-image-component-i.md) | Yes |
+| com | [Component](arkts-test-uitest-component-c.md) | Yes |
 
 **Return value:**
 
-| [Type](#type) |
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [On](arkts-test-uitest-on-c.md) |
 
@@ -1073,7 +1073,7 @@ Requires that the target Component which is inside of another Component that spe
 
 | Error Code ID |
 | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 

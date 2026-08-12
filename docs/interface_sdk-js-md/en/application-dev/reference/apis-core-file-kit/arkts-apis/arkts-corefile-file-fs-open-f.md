@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## open
@@ -35,7 +35,7 @@ Opens a file or directory. This API uses a promise to return the result. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;File&gt; | Promise used to return the **File** object. |
+| Promise&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Promise used to return the **File** object. |
 
 **Error codes:**
 
@@ -93,7 +93,7 @@ Opens a file or directory. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of a file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -153,7 +153,7 @@ This API supports the use of a URI.
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of a file or directory. |
 | mode | number | Yes | [Mode](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.&lt;br&gt;- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.&lt;br&gt;- **OpenMode.TRUNC(0o1000)**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **OpenMode.APPEND(0o2000)**: Open the file in append mode. New data will be added to the end of the file.&lt;br&gt;- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.&lt;br&gt;- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.&lt;br&gt;- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **OpenMode.SYNC(0o4010000)**: Open the file in synchronous I/O mode.&lt;br&gt;- **OpenMode.UNCACHE(0o10000000000)**: Open the file in uncache I/O mode, This option is supported starting from API version 26.0.0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

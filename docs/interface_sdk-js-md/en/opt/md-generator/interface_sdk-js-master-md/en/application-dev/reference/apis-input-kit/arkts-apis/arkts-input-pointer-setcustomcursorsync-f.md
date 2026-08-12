@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from 'kits/@kit.InputKit';
+import { pointer } from '@kit.InputKit';
 ```
 
 ## setCustomCursorSync
@@ -13,7 +13,7 @@ function setCustomCursorSync(windowId: number, pixelMap: image.PixelMap, focusX?
 ```
 
 Sets a custom pointer style for a specified window synchronously. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setcustomcursor).
+[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor).
 
 **Since:** 11
 
@@ -27,14 +27,14 @@ Sets a custom pointer style for a specified window synchronously. This API can s
 | --- | --- | --- |
 | windowId | number | Yes |
 | pixelMap | image.PixelMap | Yes |
-| focusX | number | No |
-| focusY | number | No |
+| [focusX](arkts-input-pointer-customcursor-i.md) | number | No |
+| [focusY](arkts-input-pointer-customcursor-i.md) | number | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

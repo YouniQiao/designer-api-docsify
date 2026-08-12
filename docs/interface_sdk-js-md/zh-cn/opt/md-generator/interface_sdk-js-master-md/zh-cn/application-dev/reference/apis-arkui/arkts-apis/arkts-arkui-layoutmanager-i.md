@@ -30,7 +30,7 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 > **说明：**
 > 
 > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
-> [getGlyphPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getglyphpositionatcoordinate)方法。
+> [getGlyphPositionAtCoordinate](#getGlyphPositionAtCoordinate)方法。
 > 
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
@@ -82,7 +82,7 @@ getCharacterPositionAtCoordinate(
 | --- | --- | --- |
 | x | number | 是 |
 | y | number | 是 |
-| encoding | [TextEncoding](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-textencoding-e.md) | 否 |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 |
 
 **返回值：**
 
@@ -103,7 +103,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 > 文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。
 > 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
 
-| 文本 | 世 | 界 | H | e | l | l | o |
+| 文本 | 世 | 界 | H | [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | o |
 |---|---|---|---|---|---|---|---|
 | 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] |
 | 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] |
@@ -130,7 +130,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 类型 |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getCharacterRangeForGlyphRange
 
@@ -155,13 +155,13 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | glyphRange | [TextRange](arkts-arkui-textrange-i.md) | 是 |
-| encoding | [TextEncoding](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-textencoding-e.md) | 否 |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getGlyphPositionAtCoordinate
 
@@ -174,7 +174,7 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 > **说明：**
 > 
 > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
-> [getCharacterPositionAtCoordinate](arkts-arkui-layoutmanager-i.md#getcharacterpositionatcoordinate)方法。
+> [getCharacterPositionAtCoordinate](#getCharacterPositionAtCoordinate)方法。
 > 
 > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
@@ -214,7 +214,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 > 文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。
 > 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
 
-| 文本 | 世 | 界 | H | e | l | l | o |
+| 文本 | 世 | 界 | H | [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | o |
 |---|---|---|---|---|---|---|---|
 | 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] |
 | 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] |
@@ -241,7 +241,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 类型 |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getGlyphRangeForCharacterRange
 
@@ -266,13 +266,13 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | charRange | [TextRange](arkts-arkui-textrange-i.md) | 是 |
-| encoding | [TextEncoding](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-textencoding-e.md) | 否 |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getLineCount
 
@@ -328,7 +328,7 @@ getLineMetrics(lineNumber: number): LineMetrics
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| lineNumber | number | 是 |
+| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
 
 **返回值：**
 
@@ -363,11 +363,11 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | range | [TextRange](arkts-arkui-textrange-i.md) | 是 |
-| widthStyle | [RectWidthStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 |
-| heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | 是 |
+| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;TextBox&gt; |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; |

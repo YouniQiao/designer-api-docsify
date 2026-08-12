@@ -18,7 +18,7 @@
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)，设置旋转手势事件。
+继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface)，设置旋转手势事件。
 
 **起始版本：** 7
 
@@ -48,7 +48,7 @@
 (options?: RotationGestureHandlerOptions): RotationGestureInterface
 ```
 
-设置旋转手势事件。与[RotationGesture](arkts-arkui-rotationgestureinterface-i.md))}相比，options参数新增了isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
+设置旋转手势事件。与[RotationGesture](RotationGestureInterface(value?: { fingers?: number; angle?: number))}相比，options参数新增了isFingerCountLimited参数，表示是否检查触摸屏幕的手指数量。
 
 **起始版本：** 15
 
@@ -66,7 +66,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RotationGestureHandlerOptions](arkts-arkui-gesture-rotationgesturehandleroptions-i.md) | 否 | 旋转手势处理器配置参数。 |
+| options | [RotationGestureHandlerOptions](arkts-arkui-rotationgesturehandleroptions-i.md) | 否 | 旋转手势处理器配置参数。 |
 
 **返回值：**
 
@@ -110,7 +110,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。该回
 onActionCancel(event: Callback<GestureEvent>): RotationGestureInterface
 ```
 
-Rotation手势识别成功，接收到触摸取消事件触发的回调。与[onActionCancel](arkts-arkui-rotationgestureinterface-i.md#onactioncancel)相比，该回调返回手势事件信息。
+Rotation手势识别成功，接收到触摸取消事件触发的回调。与[onActionCancel](RotationGestureInterface.onActionCancel(event: () => void))相比，该回调返回手势事件信息。
 
 **起始版本：** 18
 
@@ -128,7 +128,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与[on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

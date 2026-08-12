@@ -6,7 +6,7 @@ Defines a button displayed in the reminder notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md)
+**Substitutes:** [ActionButton](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#ActionButton)
 
 <!--Device-reminderAgent-interface ActionButton--><!--Device-reminderAgent-interface ActionButton-End-->
 
@@ -15,7 +15,7 @@ Defines a button displayed in the reminder notification.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## title
@@ -32,7 +32,7 @@ Text on the button.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ActionButton.title](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#title)
+**Substitutes:** [title](reminderAgentManager.ActionButton.title)
 
 <!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
 
@@ -46,13 +46,13 @@ type: ActionButtonType
 
 Button type.
 
-**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
+**Type:** ActionButtonType
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.ActionButton.type](arkts-backgroundtasks-reminderagentmanager-actionbutton-i.md#type)
+**Substitutes:** [type](reminderAgentManager.ActionButton.type)
 
 <!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 

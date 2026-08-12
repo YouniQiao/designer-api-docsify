@@ -6,7 +6,7 @@ ConfigurationConstant模块提供配置信息枚举值定义的能力。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.ConfigurationConstant/ConfigurationConstant
+**替代接口：** [ConfigurationConstant/ConfigurationConstant](ohos.app.ability.ConfigurationConstant/ConfigurationConstant)
 
 <!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
 

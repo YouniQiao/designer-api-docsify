@@ -11,7 +11,7 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)
+> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)
 > 替代。
 
 **起始版本：** 8
@@ -20,7 +20,7 @@ function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Arr
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)(rotationMatrix:
+**替代接口：** [getOrientation](sensor.getOrientation(rotationMatrix:)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -63,7 +63,7 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)替代。
+> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)替代。
 
 **起始版本：** 8
 
@@ -71,7 +71,7 @@ function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getorientation)(rotationMatrix:
+**替代接口：** [getOrientation](sensor.getOrientation(rotationMatrix:)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>-End-->
 

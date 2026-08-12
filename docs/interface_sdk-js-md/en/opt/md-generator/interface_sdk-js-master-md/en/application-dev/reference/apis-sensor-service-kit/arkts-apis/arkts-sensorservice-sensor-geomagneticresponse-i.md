@@ -11,7 +11,7 @@ Describes a geomagnetic response object.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## deflectionAngle

@@ -1,8 +1,8 @@
 # Material
 
-Material resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md).
+Material resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource).
 
-**Inheritance/Implementation:** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**Inheritance/Implementation:** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ readonly materialType: MaterialType
 
 Material type.
 
-**Type:** [MaterialType](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialtype-e.md)
+**Type:** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
 **Since:** 12
 

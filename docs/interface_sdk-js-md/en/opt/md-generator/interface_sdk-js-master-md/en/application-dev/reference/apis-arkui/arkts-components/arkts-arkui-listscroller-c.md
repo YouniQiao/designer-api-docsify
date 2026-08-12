@@ -4,10 +4,10 @@ Implements the scroll controller of the **List** component. A **List** component
 
 > **NOTE：**
 > 
-> **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md) and has all methods of
-> [Scroller](arkts-arkui-scroller-c.md).
+> **ListScroller** inherits from [Scroller](arkts-arkui-scroller-c.md#Scroller) and has all methods of
+> [Scroller](arkts-arkui-scroller-c.md#Scroller).
 
-**Inheritance/Implementation:** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
+**Inheritance/Implementation:** ListScroller extends [Scroller](arkts-arkui-scroller-c.md#Scroller)
 
 **Since:** 11
 
@@ -21,7 +21,7 @@ Implements the scroll controller of the **List** component. A **List** component
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the [list items](list_item) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md) state and sets callback events.
+Collapses the [list items](list_item) in the [EXPANDED](arkts-arkui-swipeactionstate-e.md#SwipeActionState) state and sets callback events.
 
 **Since:** 11
 
@@ -43,8 +43,8 @@ Collapses the [list items](list_item) in the [EXPANDED](arkts-arkui-swipeactions
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## getItemRectInGroup
 
@@ -91,8 +91,8 @@ Obtains the size of a [list item](list_item) in a [list item group](list_item_gr
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## getVisibleListContentInfo
 
@@ -129,8 +129,8 @@ Obtains the index information of the child component at the specified coordinate
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## scrollToItemInGroup
 
@@ -156,12 +156,12 @@ Scrolls to the specified list item in the specified list item group.
 | --- | --- | --- |
 | index | number | Yes |
 | indexInGroup | number | Yes |
-| smooth | boolean | No |
+| [smooth](../arkts-apis/arkts-arkui-viewmodel-scrollparam-i.md) | boolean | No |
 | align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |

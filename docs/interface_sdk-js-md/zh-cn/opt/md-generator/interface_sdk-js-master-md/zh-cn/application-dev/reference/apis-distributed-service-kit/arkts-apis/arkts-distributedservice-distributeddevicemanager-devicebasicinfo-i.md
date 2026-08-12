@@ -46,7 +46,7 @@ deviceName: string
 deviceType: string
 ```
 
-[设备类型](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype)。
+[设备类型](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceType)。
 
 **类型：** string
 

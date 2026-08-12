@@ -16,7 +16,7 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 **废弃版本：** 10
 
-**替代接口：** [matrix4.Matrix4Transit.combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
+**替代接口：** [combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
 
 <!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit--><!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit-End-->
 
@@ -26,11 +26,11 @@ Matrix的叠加函数，可以将两个矩阵的效果叠加起来生成一个�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 是 | 待叠加的矩阵对象。 |
+| options | Matrix4Transit | 是 | 待叠加的矩阵对象。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 叠加后的矩阵对象。 |
+| Matrix4Transit | 叠加后的矩阵对象。 |
 

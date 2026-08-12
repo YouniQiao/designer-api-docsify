@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from 'kits/@kit.BasicServicesKit';
+import { deviceInfo } from '@kit.BasicServicesKit';
 ```
 
 ## apiAvailable

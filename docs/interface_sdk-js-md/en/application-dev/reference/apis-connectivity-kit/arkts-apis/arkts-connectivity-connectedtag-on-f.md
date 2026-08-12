@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## on('notify')
@@ -29,5 +29,5 @@ Subscribes NFC RF status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'notify' | Yes | The callback type. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | The callback function to be registered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | The callback function to be registered. |
 

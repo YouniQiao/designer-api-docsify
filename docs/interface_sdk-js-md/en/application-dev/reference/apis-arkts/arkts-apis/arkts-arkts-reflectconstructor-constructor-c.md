@@ -2,7 +2,7 @@
 
 Represents a class constructor.
 
-**Inheritance/Implementation:** Constructor extends [Method](Method)
+**Inheritance/Implementation:** Constructor extends [Method](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-method-i-sys.md#Method)
 
 **Since:** 24
 

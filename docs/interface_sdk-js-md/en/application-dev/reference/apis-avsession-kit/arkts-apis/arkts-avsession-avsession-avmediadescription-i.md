@@ -13,7 +13,7 @@ The description of the media for an item in the playlist of the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## albumCoverUri
@@ -336,7 +336,7 @@ The lyric uri of the media.
 mediaImage?: image.PixelMap | string
 ```
 
-The image of this media asset displayed in the media center.It can be a {@link PixelMap} or a URI formatted string,
+The image of this media asset displayed in the media center.It can be a [PixelMap](PixelMap) or a URI formatted string,
 
 **Type:** image.PixelMap \| string
 

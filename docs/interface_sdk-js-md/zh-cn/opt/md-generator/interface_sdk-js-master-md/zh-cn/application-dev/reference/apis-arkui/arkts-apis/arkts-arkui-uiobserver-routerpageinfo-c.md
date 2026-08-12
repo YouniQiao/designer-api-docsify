@@ -116,7 +116,7 @@ size?: Size
 
 routerPage页面的大小，单位是vp。
 
-**类型：** [Size](arkts-arkui-size-i.md)
+**类型：** Size
 
 **起始版本：** 23
 

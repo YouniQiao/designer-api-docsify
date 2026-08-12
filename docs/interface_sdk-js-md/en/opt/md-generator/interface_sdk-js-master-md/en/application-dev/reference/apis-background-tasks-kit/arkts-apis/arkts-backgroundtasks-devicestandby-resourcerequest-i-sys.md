@@ -13,7 +13,7 @@ The request of standby resources.
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## duration

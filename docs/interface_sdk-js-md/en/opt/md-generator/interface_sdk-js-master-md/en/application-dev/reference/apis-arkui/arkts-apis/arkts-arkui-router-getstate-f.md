@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getState
@@ -18,14 +18,14 @@ Obtains state information about the page at the top of the navigation stack.
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#getState](arkts-arkui-arkui-uicontext-router-c.md#getstate)
+**Substitutes:** [getState](arkts-arkui-arkui-uicontext-router-c.md#getState)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,7 +37,7 @@ Obtains state information about the page at the top of the navigation stack.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RouterState](arkts-arkui-system-router-routerstate-i.md) |
+| [RouterState](arkts-arkui-router-routerstate-i.md) |
 
 ## Examples
 

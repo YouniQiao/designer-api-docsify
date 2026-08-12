@@ -20,7 +20,7 @@ Drag preview color for selected text
 
 The default value follows the theme. When the default theme is applied, the drag preview is white in light mode and black in dark mode.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 

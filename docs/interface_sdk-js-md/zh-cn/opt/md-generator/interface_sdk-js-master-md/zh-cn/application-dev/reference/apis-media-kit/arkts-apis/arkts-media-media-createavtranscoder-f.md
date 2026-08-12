@@ -24,13 +24,13 @@ function createAVTranscoder(): Promise<AVTranscoder>
 
 | 类型 |
 | --- |
-| Promise&lt;AVTranscoder&gt; |
+| Promise&lt;[AVTranscoder](arkts-media-multimedia-media-avtranscoder-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 

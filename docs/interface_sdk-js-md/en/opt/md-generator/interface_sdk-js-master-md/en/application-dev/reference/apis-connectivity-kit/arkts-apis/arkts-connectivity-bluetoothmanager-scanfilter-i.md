@@ -6,7 +6,7 @@ Describes the criteria for filtering scanning results can be set.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter
+**Substitutes:** [ScanFilter](ohos.bluetooth.ble/ble.ScanFilter)
 
 <!--Device-bluetoothManager-interface ScanFilter--><!--Device-bluetoothManager-interface ScanFilter-End-->
 
@@ -15,7 +15,7 @@ Describes the criteria for filtering scanning results can be set.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -32,7 +32,7 @@ The address of a BLE peripheral device
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#deviceId
+**Substitutes:** [deviceId](ohos.bluetooth.ble/ble.ScanFilter#deviceId)
 
 <!--Device-ScanFilter-deviceId?: string--><!--Device-ScanFilter-deviceId?: string-End-->
 
@@ -52,7 +52,7 @@ Manufacture data.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#manufactureData
+**Substitutes:** [manufactureData](ohos.bluetooth.ble/ble.ScanFilter#manufactureData)
 
 <!--Device-ScanFilter-manufactureData?: ArrayBuffer--><!--Device-ScanFilter-manufactureData?: ArrayBuffer-End-->
 
@@ -72,7 +72,7 @@ Manufacture data mask.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#manufactureDataMask
+**Substitutes:** [manufactureDataMask](ohos.bluetooth.ble/ble.ScanFilter#manufactureDataMask)
 
 <!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer--><!--Device-ScanFilter-manufactureDataMask?: ArrayBuffer-End-->
 
@@ -92,7 +92,7 @@ Manufacture id.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#manufactureId
+**Substitutes:** [manufactureId](ohos.bluetooth.ble/ble.ScanFilter#manufactureId)
 
 <!--Device-ScanFilter-manufactureId?: number--><!--Device-ScanFilter-manufactureId?: number-End-->
 
@@ -112,7 +112,7 @@ The name of a BLE peripheral device
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#name
+**Substitutes:** [name](ohos.bluetooth.ble/ble.ScanFilter#name)
 
 <!--Device-ScanFilter-name?: string--><!--Device-ScanFilter-name?: string-End-->
 
@@ -132,7 +132,7 @@ Service data.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#serviceData
+**Substitutes:** [serviceData](ohos.bluetooth.ble/ble.ScanFilter#serviceData)
 
 <!--Device-ScanFilter-serviceData?: ArrayBuffer--><!--Device-ScanFilter-serviceData?: ArrayBuffer-End-->
 
@@ -152,7 +152,7 @@ Service data mask.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#serviceDataMask
+**Substitutes:** [serviceDataMask](ohos.bluetooth.ble/ble.ScanFilter#serviceDataMask)
 
 <!--Device-ScanFilter-serviceDataMask?: ArrayBuffer--><!--Device-ScanFilter-serviceDataMask?: ArrayBuffer-End-->
 
@@ -172,7 +172,7 @@ Service solicitation UUID.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#serviceSolicitationUuid
+**Substitutes:** [serviceSolicitationUuid](ohos.bluetooth.ble/ble.ScanFilter#serviceSolicitationUuid)
 
 <!--Device-ScanFilter-serviceSolicitationUuid?: string--><!--Device-ScanFilter-serviceSolicitationUuid?: string-End-->
 
@@ -192,7 +192,7 @@ Service solicitation UUID mask.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#serviceSolicitationUuidMask
+**Substitutes:** [serviceSolicitationUuidMask](ohos.bluetooth.ble/ble.ScanFilter#serviceSolicitationUuidMask)
 
 <!--Device-ScanFilter-serviceSolicitationUuidMask?: string--><!--Device-ScanFilter-serviceSolicitationUuidMask?: string-End-->
 
@@ -212,7 +212,7 @@ The service UUID of a BLE peripheral device
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.ScanFilter#serviceUuid)
 
 <!--Device-ScanFilter-serviceUuid?: string--><!--Device-ScanFilter-serviceUuid?: string-End-->
 
@@ -232,7 +232,7 @@ Service UUID mask.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanFilter#serviceUuidMask
+**Substitutes:** [serviceUuidMask](ohos.bluetooth.ble/ble.ScanFilter#serviceUuidMask)
 
 <!--Device-ScanFilter-serviceUuidMask?: string--><!--Device-ScanFilter-serviceUuidMask?: string-End-->
 

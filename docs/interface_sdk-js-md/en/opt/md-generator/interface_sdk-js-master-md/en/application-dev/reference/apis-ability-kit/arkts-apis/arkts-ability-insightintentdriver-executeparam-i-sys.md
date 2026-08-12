@@ -13,7 +13,7 @@ Defines the parameter used to execute an intent call.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from 'kits/@kit.AbilityKit';
+import { insightIntentDriver } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -63,7 +63,7 @@ Name of the bundle to which the ability to be called belongs.
 deviceId?: string
 ```
 
-Indicates the device identifier. Obtained from {@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager#getAvailableDeviceListSync}
+Indicates the device identifier. Obtained from [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **Type:** string
 
@@ -125,7 +125,7 @@ Intent execution mode. If an intent defined by the
 flags?: number
 ```
 
-[Flags](arkts-ability-wantconstant-flags-e.md) of the URIs authorized by the intent caller to the intent executor during the call.
+[Flags](arkts-ability-wantconstant-flags-e.md#Flags) of the URIs authorized by the intent caller to the intent executor during the call.
 
 **NOTE：**
 
@@ -210,7 +210,7 @@ uris?: Array<string>
 ```
 
 List of URIs authorized by the intent caller to the intent executor during the call. If an intent defined by the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this field is mandatory. Only the first element in the array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openlink).
+[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this field is mandatory. Only the first element in the array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openLink).
 
 **Type:** Array&lt;string&gt;
 

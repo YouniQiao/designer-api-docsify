@@ -13,7 +13,7 @@ Provides session information, including the requester information, target abilit
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from 'kits/@kit.AbilityKit';
+import { dialogSession } from '@kit.AbilityKit';
 ```
 
 ## callerAbilityInfo
@@ -64,7 +64,7 @@ targetAbilityInfos: Array<DialogAbilityInfo>
 
 List of target ability information.
 
-**Type:** Array&lt;DialogAbilityInfo&gt;
+**Type:** Array&lt;[DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)&gt;
 
 **Since:** 11
 

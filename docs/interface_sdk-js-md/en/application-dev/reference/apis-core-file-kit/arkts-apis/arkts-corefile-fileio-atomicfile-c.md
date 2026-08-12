@@ -13,7 +13,7 @@ AtomicFile is a class used to perform atomic read and write operations on files.
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -42,7 +42,7 @@ The AtomicFile constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -134,7 +134,7 @@ Obtains the file object through the AtomicFile object. The FD needs to be closed
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
+| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
 
 **Error codes:**
 
@@ -165,7 +165,7 @@ Creates a ReadStream instance.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream instance obtained. |
 
 **Error codes:**
 
@@ -225,7 +225,7 @@ Starts to write new file data in the WriteStream object returned. If the file do
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | Returns the file write stream. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | Returns the file write stream. |
 
 **Error codes:**
 

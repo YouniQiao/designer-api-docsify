@@ -3,5 +3,5 @@
 ## Modules to Import
 
 ```TypeScript
-import { StackLayoutAlgorithm, CustomLayoutAlgorithm, LayoutAlgorithm, RowLayoutAlgorithm, ColumnLayoutAlgorithm, GridLayoutAlgorithm } from 'kits/@kit.ArkUI';
+import { StackLayoutAlgorithm, CustomLayoutAlgorithm, LayoutAlgorithm, RowLayoutAlgorithm, ColumnLayoutAlgorithm, GridLayoutAlgorithm } from '@kit.ArkUI';
 ```

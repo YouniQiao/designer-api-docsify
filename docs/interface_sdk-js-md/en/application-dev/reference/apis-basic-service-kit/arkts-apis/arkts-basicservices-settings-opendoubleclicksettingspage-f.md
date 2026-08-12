@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## openDoubleClickSettingsPage
@@ -34,6 +34,6 @@ function openDoubleClickSettingsPage(context: Context): void
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16900020](../../apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) | 1. The setting page cannot be opened through redirection. 2. Internal error |
-| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | 1. The parameter is incorrect. 2. The parameter is not transferred or the transferred parameter is invalid. |
+| [16900020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) | 1. The setting page cannot be opened through redirection. 2. Internal error |
+| [16900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | 1. The parameter is incorrect. 2. The parameter is not transferred or the transferred parameter is invalid. |
 

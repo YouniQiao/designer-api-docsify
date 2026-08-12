@@ -24,11 +24,11 @@ Configures menu item information.
 **Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**  
 | API| Default Menu Position|  
 |------|-------------|  
-| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
-| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
-| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |  
-| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |  
-| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
+| [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft |  
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft |  
+| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) | Placement.Top |  
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu-1) | Placement.BottomLeft |  
+| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse) | Placement.Top |
 
 **Since:** 10
 
@@ -132,7 +132,7 @@ Default value: **{ x: undefined, y: undefined }**. Percentage values are not sup
 
 1. Offsets do not apply during menu preview state.2. The preset value of **placement** does not take effect.3. The **offset** parameter is added to determine the exact display position of the menu.4. When both horizontal and vertical offsets are set to negative values, the menu is reset to **Placement.BottomLeft** for display.5. If the horizontal or vertical offset is **undefined** or **null**, the effect is the same as that of not setting **anchorPosition**. In this case, the preset value of **placement** can take effect.
 
-**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**Type:** Position
 
 **Default:** { x: 0, y: 0 }
 
@@ -174,7 +174,7 @@ Table 2 describes the relationship between the final position of the arrow and t
 
 This API is supported in **bindContextMenu** since API version 10 and **bindMenu** since API version 12.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0vp
 
@@ -202,7 +202,7 @@ Available layout area of the preview image. The percentage of the preview image 
 
 If this parameter is not set or is set to **undefined**, the percentage is calculated based on the window size. If this parameter is set to **AvailableLayoutArea.SAFE_AREA**, the available layout area of the preview image is the window size minus the safe margins on all sides.
 
-**Type:** [AvailableLayoutArea](../arkts-apis/arkts-arkui-common-availablelayoutarea-e.md)
+**Type:** [AvailableLayoutArea](arkts-arkui-availablelayoutarea-e.md)
 
 **Since:** 20
 
@@ -250,7 +250,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Background blur style.
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 18
 
@@ -274,7 +274,7 @@ Background color of the menu.
 
 Default value: **Color.Transparent**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -330,7 +330,7 @@ When the Length type is used: Invalid input values will trigger a fallback to th
 
 When the BorderRadiuses or LocalizedBorderRadiuses type is used: Invalid input values will result in the menu having no rounded corners by default.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** Length \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -474,7 +474,7 @@ This parameter takes effect only when the user enables the haptic feedback funct
 
 ![menuEnableHapticFeedback](../../../reference/apis-arkui/arkui-ts/figures/menuEnableHapticFeedback.png)
 
-**Type:** [HapticFeedbackMode](../arkts-apis/arkts-arkui-common-hapticfeedbackmode-e.md)
+**Type:** [HapticFeedbackMode](arkts-arkui-hapticfeedbackmode-e.md)
 
 **Default:** HapticFeedbackMode.DISABLED
 
@@ -502,7 +502,7 @@ Whether the menu avoids the soft keyboard.
 
 If this parameter is not set or is set to **undefined**, the value **MenuKeyboardAvoidMode.NONE** will be used.
 
-**Type:** [MenuKeyboardAvoidMode](../arkts-apis/arkts-arkui-common-menukeyboardavoidmode-e.md)
+**Type:** [MenuKeyboardAvoidMode](arkts-arkui-menukeyboardavoidmode-e.md)
 
 **Default:** MenuKeyboardAvoidMode.NONE
 
@@ -542,7 +542,7 @@ If the sum of vertical margins exceeds the maximum layout width, **margin.top** 
 
 The default margin values are 16 vp for the left and right, 16 vp for top, and 4 vp for bottom.
 
-**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
+**Type:** Margin
 
 **Default:** 12vp for left and right, 16vp for top and bottom
 
@@ -574,7 +574,7 @@ Default value: If a preview image is displayed for a menu, a mask is displayed b
 
 This API does not take effect when the device is configured not to display the menu mask. For example, this API does not take effect on 2-in-1 devices.
 
-**Type:** boolean \| MenuMaskType
+**Type:** boolean \| [MenuMaskType](arkts-arkui-menumasktype-i.md)
 
 **Default:** true when preview is enabled, or is false
 
@@ -598,7 +598,7 @@ maxHeight?: LengthMetrics
 
 Defines the max height of menu.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 26.0.0
 
@@ -624,7 +624,7 @@ Minimum distance for the menu to avoid the soft keyboard.
 
 If this parameter is not set, or set to a negative value or **undefined**, the value will be treated as 8 vp. This API is valid only when **keyboardAvoidMode** is set to avoid the soft keyboard.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 23
 
@@ -650,7 +650,7 @@ Modal mode of a menu.
 
 Default value: **ModalMode.AUTO**
 
-**Type:** [ModalMode](../arkts-apis/arkts-arkui-common-modalmode-e.md)
+**Type:** [ModalMode](arkts-arkui-modalmode-e.md)
 
 **Default:** ModalMode.AUTO
 
@@ -686,7 +686,7 @@ If this parameter is not set, or set to an abnormal value or **undefined**, the 
 
 If the display position of the menu is adjusted (different from the main direction of the initial **placement** value), the offset value is invalid.
 
-**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**Type:** Position
 
 **Default:** - [since 10 - 10] @default {x:0,y:0} - Percentage values are not supported. [since 11]
 
@@ -714,7 +714,7 @@ Callback invoked after the menu appears.
 
 1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**.3. If the menu is closed before the menu entrance animation is complete, this callback is not triggered.4. **onAppear** and **onDidAppear** are invoked at the same time, but **onDidAppear** takes effect after **onAppear**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
 
@@ -740,7 +740,7 @@ Callback invoked after the menu disappears.
 
 1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. **onDisappear** and **onDidDisappear** are triggered at the same time, but **onDidDisappear** takes effect after **onDisappear**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
 
@@ -766,7 +766,7 @@ Callback triggered when the menu is about to appear.
 
 1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. **aboutToAppear** is invoked during initialization; **onWillAppear** is invoked before the animation starts but after **aboutToAppear**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
 
@@ -792,7 +792,7 @@ Callback triggered when the menu is about to disappear.
 
 1. The normal sequence is **aboutToAppear** > **onWillAppear** > **onAppear** > **onDidAppear** > **aboutToDisappear** > **onWillDisappear** > **onDisappear** > **onDidDisappear**.2. If rapid clicks are triggered to display and then dismiss the menu, there may be cases where **onWillDisappear** is invoked before **onDidAppear**.3. **aboutToDisappear** and **onWillDisappear** are invoked at the same time, but **onWillDisappear** takes effect after **aboutToDisappear**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 20
 
@@ -818,7 +818,7 @@ Outline color of the menu border.
 
 Default value: **'#19ffffff'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md)
 
 **Default:** '#19ffffff'
 
@@ -848,7 +848,7 @@ Default value: **0vp**
 
 Percentage values are not supported. **outlineWidth** is mandatory for customizing an outline effect.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**Type:** Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)
 
 **Default:** 0vp - Percentage values are not supported.
 
@@ -874,9 +874,9 @@ Preferred position of the context menu. If the set position is insufficient for 
 
 **NOTE：**
 
-1. When this parameter is used as the input parameter of [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu), its default value is **Placement.BottomLeft**.2. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) or [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse), the menu is displayed at the click position.3. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu), its default value is **Placement.BottomLeft**.4. If the value of **placement** is **undefined**, **null**, or empty, the default value is used.
+1. When this parameter is used as the input parameter of [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu), its default value is **Placement.BottomLeft**.2. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) or [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse), the menu is displayed at the click position.3. When this parameter is used as the input parameter of [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu-1), its default value is **Placement.BottomLeft**.4. If the value of **placement** is **undefined**, **null**, or empty, the default value is used.
 
-**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
+**Type:** Placement
 
 **Default:** - [since 10 - 10] @default Placement.BottomLeft [since 11]
 
@@ -899,7 +899,7 @@ preview?: MenuPreviewMode | CustomBuilder
 ```
 
 Preview displayed when the context menu is triggered by a long-press or by calling   
-[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu).It can be a screenshot of the target component or custom content.
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu-1).It can be a screenshot of the target component or custom content.
 
 Default value: **MenuPreviewMode.NONE**, indicating no preview.
 
@@ -910,7 +910,7 @@ Default value: **MenuPreviewMode.NONE**, indicating no preview.
 - If **preview** is set to **MenuPreviewMode.IMAGE** or **CustomBuilder**, no arrow will be displayed even when   
 **enableArrow** is **true**.
 
-**Type:** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| CustomBuilder
+**Type:** [MenuPreviewMode](arkts-arkui-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Default:** MenuPreviewMode.NONE
 
@@ -972,7 +972,7 @@ If the sum of the two corner radii in the horizontal direction exceeds the width
 
 A larger corner radius results in a faster animation change for the corners.
 
-**Type:** [BorderRadiusType](../arkts-apis/arkts-arkui-borderradiustype-t.md)
+**Type:** [BorderRadiusType](arkts-arkui-borderradiustype-t.md)
 
 **Default:** 16vp
 
@@ -1005,7 +1005,7 @@ This parameter applies to the scenarios where the layout space is insufficient. 
 
 The maximum width and height of the preview image do not exceed the maximum available layout area of the preview image (the window size minus the safe margins on all sides).
 
-**Type:** [PreviewScaleMode](../arkts-apis/arkts-arkui-common-previewscalemode-e.md)
+**Type:** [PreviewScaleMode](arkts-arkui-previewscalemode-e.md)
 
 **Default:** PreviewScaleMode.AUTO
 
@@ -1029,7 +1029,7 @@ scrollBar?: BarState
 
 Defines the scroll bar state of menu.
 
-**Type:** [BarState](../arkts-apis/arkts-arkui-barstate-e.md)
+**Type:** BarState
 
 **Default:** BarState.Auto
 
@@ -1053,7 +1053,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for menu. The material effect behaves differently on devices with different level of computing powers. On devices with lower computing power, it affects attributes such as the backgroundColor, borderWidth, borderColor, shadow. On devices with higher computing power, it adds a filter effect at the system material layer, which can produce an effect similar to glass.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -1075,7 +1075,7 @@ targetSpace?: LengthMetrics
 
 Sets the space between the menu and target.When both targetSpace and offset are set, they take effect additively. It is recommended to use targetSpace to set the space between the menu and target, and use offset for additional offset.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 26.0.0
 
@@ -1101,11 +1101,11 @@ Transition effect for the entrance and exit of the menu.
 
 During the exit animation of the menu, if there is a switch between landscape and portrait modes, the menu will make way. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the pop-up process, but not during the execution of the exit animation.
 
-For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md).
+For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect).
 
 The menu animation uses a spring curve. Due to the rebound and oscillation of the spring curve during the exit of the animation, there is a prolonged tail effect, which prevents the menu from responding to other events after it disappears.
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
 

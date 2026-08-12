@@ -3,7 +3,7 @@
 空间音频管理。
 
 在使用AudioSpatializationManager的接口之前，需先通过  
-[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。
+[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getSpatializationManager)获取AudioSpatializationManager实例。
 
 > **说明：**
 > 
@@ -60,7 +60,7 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('spatializationEnabledChangeForCurrentDevice')
 
@@ -87,4 +87,4 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |

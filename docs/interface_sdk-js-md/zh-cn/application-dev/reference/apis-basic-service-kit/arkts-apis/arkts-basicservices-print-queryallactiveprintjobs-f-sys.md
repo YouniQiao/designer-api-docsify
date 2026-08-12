@@ -24,12 +24,12 @@ function queryAllActivePrintJobs(): Promise<PrintJob[]>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PrintJob[]&gt; | Promise used to return a list of all active print jobs. |
+| Promise&lt;[PrintJob](arkts-basicservices-print-printjob-i.md)[]&gt; | Promise used to return a list of all active print jobs. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application |
 

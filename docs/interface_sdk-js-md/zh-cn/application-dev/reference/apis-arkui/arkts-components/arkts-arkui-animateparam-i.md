@@ -75,19 +75,19 @@ curve?: Curve | string | ICurve
 "steps(number,step-position)"：阶梯曲线，number必须设置，为正整数，step-position参数可选，支持设置start或end，默认值为end。例如"steps(3,start)"。
 
 "interpolating-spring(velocity,mass,stiffness,damping)"：具体参数含义参考插值弹簧曲线  
-[curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)。
+[curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring)。
 
 "responsive-spring-motion(response,dampingFraction,overlapDuration)"：具体参数含义参考弹性跟手动画曲线  
-[curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)。
+[curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion)。
 
-"spring(velocity,mass,stiffness,damping)"：具体参数含义参考弹簧曲线[curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md/arkts-arkui-curves-springcurve-f.md#springcurve)。
+"spring(velocity,mass,stiffness,damping)"：具体参数含义参考弹簧曲线[curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md#springCurve)。
 
 "spring-motion(response,dampingFraction,overlapDuration)"：具体参数含义参考弹性动画曲线  
-[curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)。
+[curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springMotion)。
 
 默认值：Curve.EaseInOut
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
+**类型：** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.EaseInOut
 
@@ -145,7 +145,7 @@ duration?: number
 
 **说明：**1. API版本26.0.0之前，在ArkTS卡片上最大动画持续时间为1000毫秒，若超出则固定为1000毫秒。从API版本26.0.0开始，在ArkTS卡片上最大动画持续时间调整为2000毫秒。
 
-2. 可以通过在持续时间为0的动画闭包函数中改变属性，以实现停止该属性动画的效果。3. 设置小于0的值时按0处理。4. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。5. curve配置[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)曲线时，duration不生效。
+2. 可以通过在持续时间为0的动画闭包函数中改变属性，以实现停止该属性动画的效果。3. 设置小于0的值时按0处理。4. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。5. curve配置[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springMotion)、[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion)、[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring)曲线时，duration不生效。
 
 **类型：** number
 
@@ -195,7 +195,7 @@ finishCallbackType?: FinishCallbackType
 
 默认值：FinishCallbackType.REMOVED
 
-**类型：** [FinishCallbackType](../arkts-apis/arkts-arkui-common-finishcallbacktype-e.md)
+**类型：** [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md)
 
 **起始版本：** 11
 
@@ -261,7 +261,7 @@ playMode?: PlayMode
 > 
 > - 不推荐使用PlayMode.Reverse，此场景下不仅会导致动画刚开始就跳变到终止状态，也会导致动画最终状态和状态变量的取值不同。
 
-**类型：** [PlayMode](../arkts-apis/arkts-arkui-playmode-e.md)
+**类型：** PlayMode
 
 **默认值：** PlayMode.Normal
 

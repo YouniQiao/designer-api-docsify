@@ -1,7 +1,7 @@
 # KvStoreResultSet
 
 Provides APIs to obtain the KV store result sets, and query and move the data read position.Before calling any method in **KvStoreResultSet**, you must use  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) to obtain a **KVStore** object.
+[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) to obtain a **KVStore** object.
 
 **Since:** 7
 
@@ -9,7 +9,7 @@ Provides APIs to obtain the KV store result sets, and query and move the data re
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet
+**Substitutes:** [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#KVStoreResultSet)
 
 <!--Device-distributedData-interface KvStoreResultSet--><!--Device-distributedData-interface KvStoreResultSet-End-->
 
@@ -29,7 +29,7 @@ Obtains the total number of rows in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#getCount
+**Substitutes:** [getCount](ohos.data.distributedKVStore.KVStoreResultSet#getCount)
 
 <!--Device-KvStoreResultSet-getCount(): number--><!--Device-KvStoreResultSet-getCount(): number-End-->
 
@@ -74,7 +74,7 @@ Obtains the KV pair from the current position.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#getEntry
+**Substitutes:** [getEntry](ohos.data.distributedKVStore.KVStoreResultSet#getEntry)
 
 <!--Device-KvStoreResultSet-getEntry(): Entry--><!--Device-KvStoreResultSet-getEntry(): Entry-End-->
 
@@ -84,7 +84,7 @@ Obtains the KV pair from the current position.
 
 | Type | Description |
 | --- | --- |
-| [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md) | KV pair obtained. |
+| Entry | KV pair obtained. |
 
 ## Examples
 
@@ -119,7 +119,7 @@ Obtains the current data read position (position from which data is read) in the
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#getPosition
+**Substitutes:** [getPosition](ohos.data.distributedKVStore.KVStoreResultSet#getPosition)
 
 <!--Device-KvStoreResultSet-getPosition(): number--><!--Device-KvStoreResultSet-getPosition(): number-End-->
 
@@ -164,7 +164,7 @@ Checks whether the data read position is after the last row.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#isAfterLast
+**Substitutes:** [isAfterLast](ohos.data.distributedKVStore.KVStoreResultSet#isAfterLast)
 
 <!--Device-KvStoreResultSet-isAfterLast(): boolean--><!--Device-KvStoreResultSet-isAfterLast(): boolean-End-->
 
@@ -209,7 +209,7 @@ Checks whether the data read position is before the first row.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#isBeforeFirst
+**Substitutes:** [isBeforeFirst](ohos.data.distributedKVStore.KVStoreResultSet#isBeforeFirst)
 
 <!--Device-KvStoreResultSet-isBeforeFirst(): boolean--><!--Device-KvStoreResultSet-isBeforeFirst(): boolean-End-->
 
@@ -254,7 +254,7 @@ Checks whether the data read position is the first row.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#isFirst
+**Substitutes:** [isFirst](ohos.data.distributedKVStore.KVStoreResultSet#isFirst)
 
 <!--Device-KvStoreResultSet-isFirst(): boolean--><!--Device-KvStoreResultSet-isFirst(): boolean-End-->
 
@@ -299,7 +299,7 @@ Checks whether the data read position is the last row.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#isLast
+**Substitutes:** [isLast](ohos.data.distributedKVStore.KVStoreResultSet#isLast)
 
 <!--Device-KvStoreResultSet-isLast(): boolean--><!--Device-KvStoreResultSet-isLast(): boolean-End-->
 
@@ -344,7 +344,7 @@ Moves the data read position with the specified offset from the current position
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#move
+**Substitutes:** [move](ohos.data.distributedKVStore.KVStoreResultSet#move)
 
 <!--Device-KvStoreResultSet-move(offset: number): boolean--><!--Device-KvStoreResultSet-move(offset: number): boolean-End-->
 
@@ -395,7 +395,7 @@ Moves the data read position to the first row. If the result set is empty, **fal
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#moveToFirst
+**Substitutes:** [moveToFirst](ohos.data.distributedKVStore.KVStoreResultSet#moveToFirst)
 
 <!--Device-KvStoreResultSet-moveToFirst(): boolean--><!--Device-KvStoreResultSet-moveToFirst(): boolean-End-->
 
@@ -440,7 +440,7 @@ Moves the data read position to the last row. If the result set is empty, **fals
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#moveToLast
+**Substitutes:** [moveToLast](ohos.data.distributedKVStore.KVStoreResultSet#moveToLast)
 
 <!--Device-KvStoreResultSet-moveToLast(): boolean--><!--Device-KvStoreResultSet-moveToLast(): boolean-End-->
 
@@ -485,7 +485,7 @@ Moves the data read position to the next row. If the result set is empty, **fals
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#moveToNext
+**Substitutes:** [moveToNext](ohos.data.distributedKVStore.KVStoreResultSet#moveToNext)
 
 <!--Device-KvStoreResultSet-moveToNext(): boolean--><!--Device-KvStoreResultSet-moveToNext(): boolean-End-->
 
@@ -530,7 +530,7 @@ Moves the data read position from 0 to an absolute position.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#moveToPosition
+**Substitutes:** [moveToPosition](ohos.data.distributedKVStore.KVStoreResultSet#moveToPosition)
 
 <!--Device-KvStoreResultSet-moveToPosition(position: number): boolean--><!--Device-KvStoreResultSet-moveToPosition(position: number): boolean-End-->
 
@@ -581,7 +581,7 @@ Moves the data read position to the previous row. If the result set is empty, **
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVStoreResultSet#moveToPrevious
+**Substitutes:** [moveToPrevious](ohos.data.distributedKVStore.KVStoreResultSet#moveToPrevious)
 
 <!--Device-KvStoreResultSet-moveToPrevious(): boolean--><!--Device-KvStoreResultSet-moveToPrevious(): boolean-End-->
 

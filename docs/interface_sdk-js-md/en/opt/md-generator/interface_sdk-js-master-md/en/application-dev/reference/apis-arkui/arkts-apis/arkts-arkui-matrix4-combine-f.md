@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## combine
@@ -18,7 +18,7 @@ Combines the effects of two matrices to generate a new matrix object.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
+**Substitutes:** [combine](arkts-arkui-matrix4-matrix4transit-i.md#combine)
 
 <!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit--><!--Device-matrix4-function combine(options: Matrix4Transit): Matrix4Transit-End-->
 

@@ -23,7 +23,7 @@ Represents the callback triggered before each frame scrolling starts.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Amount to scroll by, in vp. |
-| state | [ScrollState](arkts-arkui-scrollstate-e.md) | Yes | Current scroll state. |
+| state | ScrollState | Yes | Current scroll state. |
 
 **Return value:**
 

@@ -13,7 +13,7 @@ AI Image Model Abstract Interface.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## cancelImageGeneration
@@ -62,7 +62,7 @@ Get the types of image styles supported by the AI model.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;ImageStyle&gt; |
+| Array&lt;[ImageStyle](arkts-arkui-imagegeneration-imagestyle-i-sys.md)&gt; |
 
 ## onComplain
 
@@ -115,4 +115,4 @@ Request AI image generation task to get the generated image.
 | --- | --- | --- |
 | sessionId | number | Yes |
 | params | [GenerateImageTaskParams](arkts-arkui-imagegeneration-generateimagetaskparams-i-sys.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GenerateImageTaskPartialResult&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GenerateImageTaskPartialResult](arkts-arkui-imagegeneration-generateimagetaskpartialresult-i-sys.md)&gt; | Yes |

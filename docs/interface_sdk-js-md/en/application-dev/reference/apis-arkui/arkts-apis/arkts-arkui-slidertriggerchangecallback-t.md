@@ -21,5 +21,5 @@ Defines the callback type used in SliderConfiguration.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | Current progress. |
-| mode | [SliderChangeMode](../arkts-components/arkts-arkui-sliderchangemode-e.md) | Yes | State triggered by the event. |
+| mode | [SliderChangeMode](arkts-arkui-slider-sliderchangemode-e.md) | Yes | State triggered by the event. |
 

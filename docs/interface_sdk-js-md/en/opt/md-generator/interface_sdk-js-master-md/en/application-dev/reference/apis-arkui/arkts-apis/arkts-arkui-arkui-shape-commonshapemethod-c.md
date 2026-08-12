@@ -11,7 +11,7 @@ Implements the common shape methods.
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## fill
@@ -70,7 +70,7 @@ Sets the coordinate offset relative to the component's layout position.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [offset](#offset) | [Position](arkts-arkui-display-position-i.md) | Yes |
+| [offset](#offset) | [Position](#position) | Yes |
 
 **Return value:**
 
@@ -102,7 +102,7 @@ Sets the position of the shape.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [position](#position) | [Position](arkts-arkui-display-position-i.md) | Yes |
+| [position](#position) | [Position](#position) | Yes |
 
 **Return value:**
 

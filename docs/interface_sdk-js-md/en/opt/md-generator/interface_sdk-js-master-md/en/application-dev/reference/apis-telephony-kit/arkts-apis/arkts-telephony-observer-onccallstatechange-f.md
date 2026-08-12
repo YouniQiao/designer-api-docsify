@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## onCCallStateChange
@@ -26,18 +26,18 @@ Called when the carrier call state changes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CCallStateInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes |
 | options | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [8800999](../errorcode-telephony.md#8800999-internal-error) |
-| [8800002](../errorcode-telephony.md#8800002-service-connection-error) |
-| [8800003](../errorcode-telephony.md#8800003-system-internal-error) |
-| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8800999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800999-internal-error) |
+| [8800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800002-service-connection-error) |
+| [8800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800003-system-internal-error) |
+| [8800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

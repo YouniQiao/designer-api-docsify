@@ -54,7 +54,7 @@ status: NativeEmbedParamStatus
 
 Status change type of the **param** element.
 
-**Type:** [NativeEmbedParamStatus](../arkts-apis/arkts-arkweb-web-nativeembedparamstatus-e.md)
+**Type:** [NativeEmbedParamStatus](arkts-arkweb-nativeembedparamstatus-e.md)
 
 **Since:** 21
 

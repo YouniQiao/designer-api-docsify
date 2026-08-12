@@ -6,7 +6,7 @@ Describes the system live view notification content, which is used to display re
 > 
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ button?: NotificationButton
 
 Button of the notification. This parameter is left empty by default.
 
-**Type:** [NotificationButton](arkts-notification-notificationmanager-notificationbutton-t.md)
+**Type:** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
 **Since:** 11
 
@@ -54,7 +54,7 @@ progress?: NotificationProgress
 
 Progress of the notification. This parameter is left empty by default.
 
-**Type:** [NotificationProgress](arkts-notification-notificationmanager-notificationprogress-t.md)
+**Type:** [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
 
 **Since:** 11
 

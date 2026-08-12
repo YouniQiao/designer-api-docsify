@@ -40,7 +40,7 @@ selected: int | Bindable<int>
 
 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
-**类型：** int \| Bindable&lt;int&gt;
+**类型：** int \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt;
 
 **起始版本：** 26.0.0
 

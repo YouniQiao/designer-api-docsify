@@ -82,7 +82,7 @@ transition?: TransitionEffect
 
 Defines the transition effect of menu preview opening and closing.
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 23
 

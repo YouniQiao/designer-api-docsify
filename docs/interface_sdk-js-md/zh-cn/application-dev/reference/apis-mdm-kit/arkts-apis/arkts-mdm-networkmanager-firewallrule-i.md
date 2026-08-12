@@ -4,7 +4,7 @@
 
 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md#LogType)。
 
 **起始版本：** 12
 
@@ -24,9 +24,9 @@ action?: Action
 
 添加防火墙过滤规则时必填；
 
-移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
+移除防火墙时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md#Action)规则的链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 12
 
@@ -108,9 +108,9 @@ direction?: Direction
 
 添加防火墙过滤规则时必填；
 
-移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
+移除防火墙时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md#Direction)链，且srcAddr，destAddr，srcPort，destPort，appUid也必须传入空值。
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 12
 
@@ -176,7 +176,7 @@ protocol?: Protocol
 
 网络协议。当值为ALL或者ICMP时，设置srcPort与destPort无效。
 
-**类型：** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
+**类型：** Protocol
 
 **起始版本：** 12
 

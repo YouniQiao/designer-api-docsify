@@ -1,6 +1,6 @@
 # BlurOnKeyboardHideMode
 
-Enum type supplied to {@link blurOnKeyboardHideMode} for setting the web blurOnKeyboardHide mode.
+Enum type supplied to [blurOnKeyboardHideMode](blurOnKeyboardHideMode) for setting the web blurOnKeyboardHide mode.
 
 **起始版本：** 14
 

@@ -10,7 +10,7 @@ The **Sensor** module provides APIs for querying the sensor list, subscribing to
  > - Module maintenance policy:
  > >     - For lite wearables, this module is constantly maintained and available.
  > >     - For other device types, this module is no longer maintained since API version 8, and You are advised to use
- > the new [@ohos.sensor](arkts-sensor.md) module.
+ > the new [@ohos.sensor](arkts-sensor.md#sensor) module.
  > - The initial APIs of this module are supported since API version 3.
  > Newly added APIs will be marked with a superscript to indicate their earliest API version.
  > - This module requires hardware support and can only be debugged on real devices.
@@ -19,7 +19,7 @@ The **Sensor** module provides APIs for querying the sensor list, subscribing to
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## Summary

@@ -4,7 +4,7 @@
 type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>
 ```
 
-[Toggle](../../apis-arkui/arkts-components/arkts-arkui-toggle-i)类型的FrameNode节点类型。
+[Toggle](../@internal/component/ets/toggle)类型的FrameNode节点类型。
 
 **起始版本：** 18
 

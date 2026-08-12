@@ -24,7 +24,7 @@ If this parameter is set to **GridItemStyle.NONE**, no style is applied.
 
 If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
 
-**Type:** [GridItemStyle](../arkts-apis/arkts-arkui-griditem-griditemstyle-e.md)
+**Type:** [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 
 **Since:** 11
 

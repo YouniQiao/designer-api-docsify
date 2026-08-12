@@ -12,7 +12,7 @@ declare function fsync(fd: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:fsync](arkts-corefile-fileio-fsync-f.md#fsync)
+**替代接口：** [fsync](arkts-corefile-file-fs-fsync-f.md#fsync)
 
 <!--Device-unnamed-declare function fsync(fd: number): Promise<void>--><!--Device-unnamed-declare function fsync(fd: number): Promise<void>-End-->
 
@@ -28,7 +28,7 @@ declare function fsync(fd: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## fsync
@@ -43,7 +43,7 @@ declare function fsync(fd: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:fsync](arkts-corefile-fileio-fsync-f.md#fsync)
+**替代接口：** [fsync](arkts-corefile-file-fs-fsync-f.md#fsync)
 
 <!--Device-unnamed-declare function fsync(fd: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function fsync(fd: number, callback: AsyncCallback<void>): void-End-->
 

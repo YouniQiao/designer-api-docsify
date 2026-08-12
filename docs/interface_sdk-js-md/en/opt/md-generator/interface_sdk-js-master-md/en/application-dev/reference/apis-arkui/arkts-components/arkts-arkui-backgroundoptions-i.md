@@ -40,7 +40,7 @@ ignoresLayoutSafeAreaEdges?: Array<LayoutSafeAreaEdge>
 
 The set of edges for which to ignore layout safe area. To respect safe area insets on all edges, explicitly pass empty edge set.
 
-**Type:** Array&lt;LayoutSafeAreaEdge&gt;
+**Type:** Array&lt;[LayoutSafeAreaEdge](arkts-arkui-layoutsafeareaedge-e.md)&gt;
 
 **Default:** The default value is LayoutSafeAreaEdge.ALL when background is ResourceColor, otherwise it is an empty array [].
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## getLevel
@@ -26,5 +26,5 @@ Obtains the system load level. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SystemLoadLevel&gt; | Promise used to return the system load level. |
+| Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; | Promise used to return the system load level. |
 

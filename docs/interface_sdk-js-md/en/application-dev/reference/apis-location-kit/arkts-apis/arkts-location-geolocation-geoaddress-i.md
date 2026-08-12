@@ -8,7 +8,7 @@ Data struct describes geographic locations.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress
+**Substitutes:** [GeoAddress](ohos.geoLocationManager/geoLocationManager.GeoAddress)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -19,7 +19,7 @@ Data struct describes geographic locations.
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## addressUrl
@@ -38,7 +38,7 @@ Indicates website URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#addressUrl
+**Substitutes:** [addressUrl](ohos.geoLocationManager/geoLocationManager.GeoAddress#addressUrl)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -62,7 +62,7 @@ Indicates administrative region name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#administrativeArea
+**Substitutes:** [administrativeArea](ohos.geoLocationManager/geoLocationManager.GeoAddress#administrativeArea)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -86,7 +86,7 @@ Indicates country code.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#countryCode
+**Substitutes:** [countryCode](ohos.geoLocationManager/geoLocationManager.GeoAddress#countryCode)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -110,7 +110,7 @@ Indicates country name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#countryName
+**Substitutes:** [countryName](ohos.geoLocationManager/geoLocationManager.GeoAddress#countryName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -134,7 +134,7 @@ Indicates additional information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#descriptions
+**Substitutes:** [descriptions](ohos.geoLocationManager/geoLocationManager.GeoAddress#descriptions)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -158,7 +158,7 @@ Indicates the amount of additional descriptive information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#descriptionsSize
+**Substitutes:** [descriptionsSize](ohos.geoLocationManager/geoLocationManager.GeoAddress#descriptionsSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -182,7 +182,7 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#latitude
+**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.GeoAddress#latitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -206,7 +206,7 @@ Indicates language used for the location description.zh indicates Chinese, and e
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#locale
+**Substitutes:** [locale](ohos.geoLocationManager/geoLocationManager.GeoAddress#locale)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -230,7 +230,7 @@ Indicates locality information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#locality
+**Substitutes:** [locality](ohos.geoLocationManager/geoLocationManager.GeoAddress#locality)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -254,7 +254,7 @@ Indicates longitude information.A positive value indicates east longitude ,and a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#longitude
+**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.GeoAddress#longitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -278,7 +278,7 @@ Indicates phone number.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#phoneNumber
+**Substitutes:** [phoneNumber](ohos.geoLocationManager/geoLocationManager.GeoAddress#phoneNumber)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -302,7 +302,7 @@ Indicates landmark of the location.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#placeName
+**Substitutes:** [placeName](ohos.geoLocationManager/geoLocationManager.GeoAddress#placeName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -326,7 +326,7 @@ Indicates postal code.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#postalCode
+**Substitutes:** [postalCode](ohos.geoLocationManager/geoLocationManager.GeoAddress#postalCode)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -350,7 +350,7 @@ Indicates house information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#premises
+**Substitutes:** [premises](ohos.geoLocationManager/geoLocationManager.GeoAddress#premises)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -374,7 +374,7 @@ Indicates road name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#roadName
+**Substitutes:** [roadName](ohos.geoLocationManager/geoLocationManager.GeoAddress#roadName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -398,7 +398,7 @@ Indicates sub-administrative region name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#subAdministrativeArea
+**Substitutes:** [subAdministrativeArea](ohos.geoLocationManager/geoLocationManager.GeoAddress#subAdministrativeArea)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -422,7 +422,7 @@ Indicates sub-locality information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#subLocality
+**Substitutes:** [subLocality](ohos.geoLocationManager/geoLocationManager.GeoAddress#subLocality)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -446,7 +446,7 @@ Indicates auxiliary road information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoAddress#subRoadName
+**Substitutes:** [subRoadName](ohos.geoLocationManager/geoLocationManager.GeoAddress#subRoadName)
 
 **Required permissions:** ohos.permission.LOCATION
 

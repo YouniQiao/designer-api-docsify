@@ -28,5 +28,5 @@ export function getWaterFlowEvent(node: FrameNode): UIWaterFlowEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIWaterFlowEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

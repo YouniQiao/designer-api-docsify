@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getInsertSqlInfo
@@ -38,7 +38,7 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 
 | Error Code ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 ## Examples
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## sendCommand
@@ -18,7 +18,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.sendCommand
+**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -61,7 +61,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.sendCommand
+**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -79,7 +79,7 @@ Send extended commands to location subsystem.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

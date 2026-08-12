@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## getPublishedFormInfos
@@ -17,7 +17,7 @@ Obtains the information of all widgets that have been added to the home screen o
 > **NOTE：**
 > 
 > This field is supported since API version 18 and deprecated since API version 20. You are advised to use
-> [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos) instead.
+> [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getPublishedRunningFormInfos) instead.
 
 **Since:** 18
 
@@ -25,7 +25,7 @@ Obtains the information of all widgets that have been added to the home screen o
 
 **Deprecated since:** 20
 
-**Substitutes:** [formProvider.getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getpublishedrunningforminfos)
+**Substitutes:** [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md#getPublishedRunningFormInfos)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -43,9 +43,9 @@ Obtains the information of all widgets that have been added to the home screen o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## Examples
 

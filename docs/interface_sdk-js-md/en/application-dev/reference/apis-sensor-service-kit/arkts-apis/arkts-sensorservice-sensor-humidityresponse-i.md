@@ -1,8 +1,8 @@
 # HumidityResponse
 
-Describes the humidity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the humidity sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** HumidityResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** HumidityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -15,7 +15,7 @@ Describes the humidity sensor data. It extends from [Response](arkts-sensorservi
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## humidity

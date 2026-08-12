@@ -11,7 +11,7 @@ Annotates the minimum available version supported by an API.This annotation capa
 ## Modules to Import
 
 ```TypeScript
-import { SuppressWarnings, Available, SuppressWarningsType } from 'kits/@kit.BasicServicesKit';
+import { SuppressWarnings, Available, SuppressWarningsType } from '@kit.BasicServicesKit';
 ```
 
 ## minApiVersion

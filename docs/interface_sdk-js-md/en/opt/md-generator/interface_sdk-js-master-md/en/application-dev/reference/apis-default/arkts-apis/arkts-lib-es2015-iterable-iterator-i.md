@@ -10,13 +10,13 @@ next(...args: [] | [TNext]): IteratorResult<T, TReturn>
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| args | [] \| [TNext] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [] \| [TNext] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IteratorResult&lt;T, TReturn&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iteratorresult-c.md) |
+| [IteratorResult](arkts-iteratorresult-t.md)&lt;T, TReturn&gt; |
 
 ## return
 
@@ -34,7 +34,7 @@ return?(value?: TReturn): IteratorResult<T, TReturn>
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IteratorResult&lt;T, TReturn&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iteratorresult-c.md) |
+| [IteratorResult](arkts-iteratorresult-t.md)&lt;T, TReturn&gt; |
 
 ## throw
 
@@ -46,10 +46,10 @@ throw?(e?: any): IteratorResult<T, TReturn>
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| e | any | No |
+| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | any | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IteratorResult&lt;T, TReturn&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iteratorresult-c.md) |
+| [IteratorResult](arkts-iteratorresult-t.md)&lt;T, TReturn&gt; |

@@ -25,9 +25,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getsystemsoundmanager)创建实例。 |
-| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 管理铃声属性。在调用ToneAttrs&lt;sup&gt;12+&lt;/sup&gt;的接口前，需要先通过  [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createcustomizedtoneattrs)或  [getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getdefaultringtoneattrs)、  [getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getringtoneattrlist)等方法获取实例。 |
-| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md) | 系统铃音的振动属性。在调用ToneHapticsAttrs&lt;sup&gt;14+&lt;/sup&gt;的接口前，需要先通过  [getToneHapticsList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gettonehapticslist)或  [getHapticsAttrsSyncedWithTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#gethapticsattrssyncedwithtone)方法获取实例。 |
+| [SystemSoundManager](arkts-audio-systemsoundmanager-systemsoundmanager-i.md) | 管理系统声音。在调用SystemSoundManager的接口前，需要先通过[getSystemSoundManager](arkts-audio-systemsoundmanager-getsystemsoundmanager-f.md#getSystemSoundManager)创建实例。 |
+| [ToneAttrs](arkts-audio-systemsoundmanager-toneattrs-i.md) | 管理铃声属性。在调用ToneAttrs&lt;sup&gt;12+&lt;/sup&gt;的接口前，需要先通过  [createCustomizedToneAttrs](arkts-audio-systemsoundmanager-createcustomizedtoneattrs-f.md#createCustomizedToneAttrs)或  [getDefaultRingtoneAttrs](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getDefaultRingtoneAttrs)、  [getRingtoneAttrList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getRingtoneAttrList)等方法获取实例。 |
+| [ToneHapticsAttrs](arkts-audio-systemsoundmanager-tonehapticsattrs-i.md) | 系统铃音的振动属性。在调用ToneHapticsAttrs&lt;sup&gt;14+&lt;/sup&gt;的接口前，需要先通过  [getToneHapticsList](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getToneHapticsList)或  [getHapticsAttrsSyncedWithTone](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getHapticsAttrsSyncedWithTone)方法获取实例。 |
 | [ToneHapticsSettings](arkts-audio-systemsoundmanager-tonehapticssettings-i.md) | 系统铃音的振动设置。 |
 
 ### 枚举

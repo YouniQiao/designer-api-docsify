@@ -3,9 +3,9 @@
 This interface provides APIs for audio monitoring.
 
 Before calling any API in AudioLoopback, you must use  
-[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) to create an AudioLoopback instance.
+[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createAudioLoopback) to create an AudioLoopback instance.
 
-When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in-ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md).
+When audio loopback is enabled, the system creates a low-latency renderer and capturer to implement low-latency in-ear monitoring. The audio captured is routed back to the renderer through an internal path. The renderer follows the audio focus strategy for [STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage), whereas the capturer follows the strategy for [SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md#SourceType).
 
 The system automatically chooses the input and output devices. If these devices do not support low latency, audio loopback does not work. If another audio stream takes over the audio focus or if the input or output device changes to the one that does not support low latency, the system disables audio loopback automatically.
 
@@ -22,7 +22,7 @@ The system automatically chooses the input and output devices. If these devices 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## enable
@@ -31,7 +31,7 @@ import { audio } from 'kits/@kit.AudioKit';
 enable(enable: boolean): Promise<boolean>
 ```
 
-Enable or disable audio loopback.When audio loopback is enabled, the system automatically creates fast playback and recording streams to implement low-latency in-ear monitoring. When audio loopback is disabled, the audio stream is destroyed.If enabling audio loopback fails, you can use {@link AudioLoopback#getStatus} to query the cause. After audio loopback is enabled, you can subscribe to the statusChange event to listen for audio loopback status changes.
+Enable or disable audio loopback.When audio loopback is enabled, the system automatically creates fast playback and recording streams to implement low-latency in-ear monitoring. When audio loopback is disabled, the audio stream is destroyed.If enabling audio loopback fails, you can use [getStatus](#getStatus) to query the cause. After audio loopback is enabled, you can subscribe to the statusChange event to listen for audio loopback status changes.
 
 **Since:** 20
 
@@ -51,14 +51,14 @@ Enable or disable audio loopback.When audio loopback is enabled, the system auto
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getEqualizerPreset
 
@@ -66,7 +66,7 @@ Enable or disable audio loopback.When audio loopback is enabled, the system auto
 getEqualizerPreset(): AudioLoopbackEqualizerPreset
 ```
 
-Gets the current equalizer preset.The default equalizer preset of audio loopback is {@link AudioLoopbackEqualizerPreset#FULL} if users do not modify the preset.
+Gets the current equalizer preset.The default equalizer preset of audio loopback is [FULL](arkts-audio-audio-audioloopbackequalizerpreset-e.md#FULL) if users do not modify the preset.
 
 **Since:** 21
 
@@ -108,7 +108,7 @@ Gets the preferred audio device pair in current device connection situation.
 getReverbPreset(): AudioLoopbackReverbPreset
 ```
 
-Get the current reverberation.The default reverberation preset of audio loopback is {@link AudioLoopbackReverbPreset#THEATER} if users do not modify the preset.
+Get the current reverberation.The default reverberation preset of audio loopback is [THEATER](arkts-audio-audio-audioloopbackreverbpreset-e.md#THEATER) if users do not modify the preset.
 
 **Since:** 21
 
@@ -140,7 +140,7 @@ Obtains the audio loopback status. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AudioLoopbackStatus&gt; |
+| Promise&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; |
 
 ## getSupportedDevicePairs
 
@@ -162,7 +162,7 @@ Gets supported audio device pairs in current device connection situation.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;AudioDevicePair&gt; |
+| Array&lt;[AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md)&gt; |
 
 ## getVolume
 
@@ -205,13 +205,13 @@ Unsubscribes from the audio loopback status event. This API uses an asynchronous
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'statusChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('statusChange')
 
@@ -232,13 +232,13 @@ Subscribes to the audio loopback status change event, which is triggered when th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'statusChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioLoopbackStatus&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioLoopbackStatus](arkts-audio-audio-audioloopbackstatus-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setEqualizerPreset
 
@@ -258,7 +258,7 @@ Sets the equalizer preset of the audio loopback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| preset | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Yes |
+| [preset](../../apis-media-kit/arkts-apis/arkts-media-media-avscreencapturerecordconfig-i.md) | [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Yes |
 
 **Return value:**
 
@@ -270,7 +270,7 @@ Sets the equalizer preset of the audio loopback.
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setReverbPreset
 
@@ -290,7 +290,7 @@ Sets the reverberation of the audio loopback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| preset | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Yes |
+| [preset](../../apis-media-kit/arkts-apis/arkts-media-media-avscreencapturerecordconfig-i.md) | [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Yes |
 
 **Return value:**
 
@@ -302,7 +302,7 @@ Sets the reverberation of the audio loopback.
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setVolume
 
@@ -328,10 +328,10 @@ Sets the volume for audio loopback. This volume does not affect other audio stre
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |

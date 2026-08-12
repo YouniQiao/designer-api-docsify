@@ -9,7 +9,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 > but is unavailable on all other devices.
 > 
 > - For the system capability SystemCapability.Window.SessionManager, use
-> [canIUse()](arkts-arkui-global-caniuse-f.md#caniuse) to check whether the device supports this system
+> [canIUse()](arkts-arkui-global-caniuse-f.md#canIUse) to check whether the device supports this system
 > capability and the corresponding APIs.
 
 **Since:** 11
@@ -21,7 +21,7 @@ The module provides basic APIs for manipulating Picture in Picture (PiP). For ex
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## Summary

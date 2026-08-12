@@ -18,7 +18,7 @@ children?: TextCascadePickerRangeContent[]
 
 联动数据。
 
-**类型：** [TextCascadePickerRangeContent](../arkts-components/arkts-arkui-textcascadepickerrangecontent-i.md)[]
+**类型：** [TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md)[]
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ text: string | Resource
 
 **说明：**当文本长度大于列宽时，文本被截断。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 

@@ -14,7 +14,7 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile)
+**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>-End-->
 
@@ -49,7 +49,7 @@ copyFile.
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile)
+**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void-End-->
 
@@ -83,7 +83,7 @@ declare function copyFile(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:copyFile](arkts-corefile-fileio-copyfile-f.md#copyfile)
+**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
 
 <!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(  src: string | number,  dest: string | number,  mode: number,  callback: AsyncCallback<void>): void-End-->
 

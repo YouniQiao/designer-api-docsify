@@ -2,7 +2,7 @@
 
 滑动手势事件，当滑动的最小距离达到设定的最小值时触发滑动手势事件。
 
-**继承/实现关系：** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**继承/实现关系：** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@
 static $_instantiate(factory: () => PanGesture, value?: PanGestureHandlerOptions | PanGestureOptions): PanGesture
 ```
 
-创建滑动手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+创建滑动手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)。
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ static $_instantiate(factory: () => PanGesture, value?: PanGestureHandlerOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | () =&gt; PanGesture | 是 |  |
-| value | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) \| PanGestureOptions | 否 | 滑动手势处理器配置参数。 |
+| value | [PanGestureHandlerOptions](arkts-arkui-gesture-pangesturehandleroptions-i.md) \| [PanGestureOptions](arkts-arkui-gesture-pangestureoptions-c.md) | 否 | 滑动手势处理器配置参数。 |
 
 **返回值：**
 
@@ -65,7 +65,7 @@ onActionCancel(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 滑动手势取消回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 滑动手势取消回调。 |
 
 **返回值：**
 
@@ -95,7 +95,7 @@ onActionEnd(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 滑动手势结束回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 滑动手势结束回调。 |
 
 **返回值：**
 
@@ -125,7 +125,7 @@ onActionStart(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 滑动手势识别成功回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 滑动手势识别成功回调。 |
 
 **返回值：**
 
@@ -155,7 +155,7 @@ onActionUpdate(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 滑动手势更新回调。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 滑动手势更新回调。 |
 
 **返回值：**
 

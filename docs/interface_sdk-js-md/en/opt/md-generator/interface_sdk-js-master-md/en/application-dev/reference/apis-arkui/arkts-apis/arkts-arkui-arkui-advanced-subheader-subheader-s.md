@@ -6,8 +6,8 @@ The **SubHeader** component is positioned at the top of list items or content se
 > 
 > - This component can be used only in the stage model.
 > 
-> - If the **SubHeader** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and
-> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically
+> - If the **SubHeader** component has [universal attributes](./@internal/component/ets/common) and
+> [universal events](./@internal/component/ets/common) configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
 > rather than the **SubHeader** component itself. As a result, the configured universal attributes and universal
 > events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events
@@ -24,7 +24,7 @@ The **SubHeader** component is positioned at the top of list items or content se
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from 'kits/@kit.ArkUI';
+import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
 ```
 
 ## titleBuilder
@@ -146,7 +146,7 @@ iconSymbolOptions?: SymbolOptions
 ```
 
 Icon symbol options. This parameter is available when **icon** is set to a  
-[symbol glyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+[symbol glyph](./@internal/component/ets/symbolglyph).
 
 Default value: **undefined**, indicating that no icon is displayed.
 
@@ -172,7 +172,7 @@ Items in the operation area (right).
 
 Default value: **undefined**, indicating that the operation area is not displayed.
 
-**Type:** Array&lt;OperationOption&gt;
+**Type:** Array&lt;[OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)&gt;
 
 **Since:** 10
 
@@ -192,11 +192,11 @@ operationSymbolOptions?: Array<SymbolOptions>
 
 Icon symbol options.
 
-This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of [symbol glyphs](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i).
+This parameter is available when **operationType** is set to **OperationType.ICON_GROUP** and **operationItem** is set to an array of [symbol glyphs](./@internal/component/ets/symbolglyph).
 
 Default value: **undefined**, indicating that no symbol icon is set.
 
-**Type:** Array&lt;SymbolOptions&gt;
+**Type:** Array&lt;[SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)&gt;
 
 **Since:** 12
 
@@ -218,7 +218,7 @@ Style of elements in the operation area (right).
 
 Default value: **OperationType.BUTTON**
 
-**Type:** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
+**Type:** [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md)
 
 **Since:** 10
 

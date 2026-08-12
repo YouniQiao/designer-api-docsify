@@ -84,7 +84,7 @@ result?: ArrayBuffer
 serviceUuid: string
 ```
 
-方法所属的{@link Service}实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
+方法所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID长度必须为36，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **类型：** string
 

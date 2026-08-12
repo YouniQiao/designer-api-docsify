@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## showAd
@@ -40,9 +40,9 @@ Shows a full-screen ad.
 
 | Error Code ID |
 | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800004](../errorcode-ads.md#21800004-ad-display-failure) |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800004-ad-display-failure) |
+| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
 
 ## Examples
 

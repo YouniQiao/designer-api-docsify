@@ -18,7 +18,7 @@ font?: Font
 
 设置label文本字体样式。
 
-默认值：默认值参考[Font](arkts-arkui-arkui-uicontext-font-c.md)。
+默认值：默认值参考[Font](Font)。
 
 **类型：** [Font](arkts-arkui-font-i.md)
 
@@ -62,7 +62,7 @@ maxFontSize?: double | ResourceStr
 
 设置label文本最大显示字号。需配合minFontSize以及maxLines或布局大小限制使用。
 
-**类型：** double \| ResourceStr
+**类型：** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -108,7 +108,7 @@ minFontSize?: double | ResourceStr
 
 minFontSize小于或等于0时，自适应字号不生效。
 
-**类型：** double \| ResourceStr
+**类型：** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 

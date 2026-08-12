@@ -2,7 +2,7 @@
 
 Defines PanGesture.
 
-**Inheritance/Implementation:** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**Inheritance/Implementation:** PanGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Set the value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | () =&gt; PanGesture | Yes |  |
-| value | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) \| PanGestureOptions | No |  |
+| value | [PanGestureHandlerOptions](arkts-arkui-gesture-pangesturehandleroptions-i.md) \| [PanGestureOptions](arkts-arkui-gesture-pangestureoptions-c.md) | No |  |
 
 **Return value:**
 
@@ -65,7 +65,7 @@ The Pan gesture is successfully recognized and a callback is triggered when the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -95,7 +95,7 @@ The Pan gesture is successfully recognized. When the finger is lifted, the callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -125,7 +125,7 @@ Pan gesture recognition success callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ Callback when the Pan gesture is moving.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 

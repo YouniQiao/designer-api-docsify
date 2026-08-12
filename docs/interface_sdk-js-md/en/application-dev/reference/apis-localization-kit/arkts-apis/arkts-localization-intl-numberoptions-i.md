@@ -13,7 +13,7 @@ Options for creating the NumberFormat object. Since API version 9, the NumberOpt
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## compactDisplay

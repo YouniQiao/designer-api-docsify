@@ -6,7 +6,7 @@
 function getAppVMObjectUsedSize(): bigint
 ```
 
-��ȡ��ǰ�������ArkTS������ռ�õ��ڴ��С��
+获取当前虚拟机中ArkTS对象所占用的内存大小。
 
 **起始版本：** 21
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#WEAR_DETECTION
+**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
 
 <!--Device-unnamed-export interface GetOnBodyStateOptions--><!--Device-unnamed-export interface GetOnBodyStateOptions-End-->
 
@@ -24,7 +24,7 @@ complete?: () => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#once
+**替代接口：** [once](ohos.sensor/sensor#once)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -44,7 +44,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#once
+**替代接口：** [once](ohos.sensor/sensor#once)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -71,7 +71,7 @@ success: (data: OnBodyStateResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#once
+**替代接口：** [once](ohos.sensor/sensor#once)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

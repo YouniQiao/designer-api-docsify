@@ -57,7 +57,7 @@ Type of the toggle.
 
 Default value: **ToggleType.Switch**
 
-**Type:** [ToggleType](../arkts-apis/arkts-arkui-toggle-toggletype-e.md)
+**Type:** [ToggleType](arkts-arkui-toggletype-e.md)
 
 **Since:** 8
 

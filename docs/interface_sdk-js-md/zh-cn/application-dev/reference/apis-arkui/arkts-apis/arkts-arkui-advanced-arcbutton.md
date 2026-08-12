@@ -6,9 +6,9 @@
  > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
  > - 该组件支持在Phone、PC/2in1、Tablet、TV、Wearable设备上使用。API version 22及以前版本，在Phone、PC/2in1、Tablet、TV上使用会编译告警，但可以正常运行。
  ###### ArcButtonAttribute
- 不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+ 不支持[通用属性](common)
  ###### ArcButtonAttribute
- 通用事件支持[点击事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)和[触摸事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+ 通用事件支持[点击事件](common)和[触摸事件](common)。
 
 
 ## 汇总

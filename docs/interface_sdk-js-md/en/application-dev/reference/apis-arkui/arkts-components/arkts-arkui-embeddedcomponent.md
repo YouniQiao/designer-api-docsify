@@ -46,7 +46,7 @@ Creates a cross-process embedded component to display the UI of the EmbeddedUIEx
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | loader | import('../api/@ohos.app.ability.Want').default | Yes | EmbeddedUIExtensionAbility to load. |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | Type of the provider. |
+| type | EmbeddedType | Yes | Type of the provider. |
 
 ## EmbeddedComponent
 
@@ -77,8 +77,8 @@ Construct the EmbeddedComponent.&lt;br/&gt;Called when the EmbeddedComponent is 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | loader | import('../api/@ohos.app.ability.Want').default | Yes | indicates initialization parameter. |
-| type | [EmbeddedType](../arkts-apis/arkts-arkui-embeddedtype-e.md) | Yes | indicates type of the EmbeddedComponent. |
-| options | [EmbeddedOptions](../arkts-apis/arkts-arkui-embeddedcomponent-embeddedoptions-i.md) | No | construction configuration of EmbeddedComponent. |
+| type | EmbeddedType | Yes | indicates type of the EmbeddedComponent. |
+| options | [EmbeddedOptions](arkts-arkui-embeddedoptions-i.md) | No | construction configuration of EmbeddedComponent. |
 
 ## Summary
 

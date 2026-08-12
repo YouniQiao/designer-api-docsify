@@ -39,7 +39,7 @@ iconResource: IconType
 
 Background image of a button.
 
-**Type:** [IconType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitem-icontype-e.md)
+**Type:** [IconType](arkts-notification-icontype-t-sys.md)
 
 **Since:** 18
 

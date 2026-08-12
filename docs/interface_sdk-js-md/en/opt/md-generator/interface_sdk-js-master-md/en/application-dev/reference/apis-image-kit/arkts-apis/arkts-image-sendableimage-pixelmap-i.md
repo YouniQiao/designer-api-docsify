@@ -2,7 +2,7 @@
 
 Sendable PixelMap instance.
 
-**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md)
+**Inheritance/Implementation:** PixelMap extends [ISendable](arkts-image-sendableimage-isendable-t.md#ISendable)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Sendable PixelMap instance.
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## applyColorSpace
@@ -42,16 +42,16 @@ This method is used to change color space of PixelMap.Pixel data will be changed
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) |
-| [62980108](../errorcode-image.md#62980108-image-color-conversion-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) |
+| [62980108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-image-color-conversion-error) |
 
 ## Examples
 
@@ -91,7 +91,7 @@ Obtains new pixelmap with alpha information. This method uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## Examples
 
@@ -136,8 +136,8 @@ Obtains new pixelmap with alpha information.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -176,7 +176,7 @@ Crop the image. This method uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -224,8 +224,8 @@ Crop the image.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -268,7 +268,7 @@ Image flipping. This method uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -317,8 +317,8 @@ Image flipping.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -390,9 +390,9 @@ Get color space of pixelmap.
 
 | Error Code ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
 
 ## Examples
 
@@ -458,7 +458,7 @@ Obtains pixelmap information about this image. This method uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.ImageInfo&gt; |
+| Promise & lt;image.ImageInfo & gt; |
 
 ## Examples
 
@@ -506,7 +506,7 @@ Get image information from image source.
 
 | Error Code ID |
 | --- |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -577,8 +577,8 @@ Marshalling PixelMap and write into MessageSequence.
 
 | Error Code ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
 
 ## Examples
 
@@ -666,7 +666,7 @@ Set the transparent rate of pixelmap. This method uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -712,8 +712,8 @@ Set the transparent rate of pixelmap.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -754,7 +754,7 @@ Reads image pixelmap data in an area. This method uses a promise to return the d
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -806,8 +806,8 @@ Reads image pixelmap data in an area.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -848,13 +848,13 @@ Reads image pixelmap data and writes the data to an ArrayBuffer. This method use
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -894,14 +894,14 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | ArrayBuffer | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -937,7 +937,7 @@ Releases this PixelMap object. This method uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -982,7 +982,7 @@ Image rotation. This method uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1028,8 +1028,8 @@ Image rotation.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1071,7 +1071,7 @@ Image zoom in width and height. This method uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1120,8 +1120,8 @@ Image zoom in width and height.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1163,8 +1163,8 @@ This method is only used to set the colorspace property of PixelMap,while all pi
 
 | Error Code ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
 
 ## Examples
 
@@ -1208,7 +1208,7 @@ Image position transformation. This method uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1256,8 +1256,8 @@ Image position transformation.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1297,15 +1297,15 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
 
 ## Examples
 
@@ -1393,7 +1393,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object. Thi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1443,8 +1443,8 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 
@@ -1490,7 +1490,7 @@ Writes image pixelmap data to the specified area. This method uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1546,8 +1546,8 @@ Writes image pixelmap data to the specified area.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [501](../errorcode-image.md#501-api-call-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#501-api-call-failed) |
 
 ## Examples
 

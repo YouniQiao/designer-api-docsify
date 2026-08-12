@@ -11,7 +11,7 @@ Transfers USB data packets in an asynchronous manner.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## actualLength
@@ -38,7 +38,7 @@ isoPacketDescs: Array<Readonly<UsbIsoPacketDescriptor>>
 
 Packet information transferred in real time.
 
-**Type:** Array&lt;Readonly&lt;UsbIsoPacketDescriptor&gt;&gt;
+**Type:** Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)&gt;&gt;
 
 **Since:** 18
 

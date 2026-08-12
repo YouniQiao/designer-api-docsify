@@ -11,7 +11,7 @@ Describes the parameters for connection result.
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from 'kits/@kit.ConnectivityKit';
+import { dataTransfer } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -58,7 +58,7 @@ state: ConnectionState
 
 Connection state.
 
-**Type:** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
+**Type:** ConnectionState
 
 **Since:** 26.0.0
 

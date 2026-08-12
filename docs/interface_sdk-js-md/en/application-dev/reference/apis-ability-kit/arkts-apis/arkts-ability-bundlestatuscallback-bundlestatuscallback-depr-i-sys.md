@@ -15,7 +15,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor/bundleMonitor
+**Substitutes:** [bundleMonitor/bundleMonitor](ohos.bundle.bundleMonitor/bundleMonitor)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -39,7 +39,7 @@ Used to obtain information when a bundle is installed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -70,7 +70,7 @@ Used to obtain information when a bundle is uninstalled.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 
@@ -101,7 +101,7 @@ Used to obtain information when a bundle is updated.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 **Required permissions:** ohos.permission.LISTEN_BUNDLE_CHANGE
 

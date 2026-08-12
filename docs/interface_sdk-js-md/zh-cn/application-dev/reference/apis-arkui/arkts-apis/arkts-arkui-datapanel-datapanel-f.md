@@ -59,7 +59,7 @@ export declare function DataPanel(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DataPanelAttribute&gt; | 是 | DataPanel属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DataPanelAttribute](arkts-arkui-datapanel-datapanelattribute-i.md)&gt; | 是 | DataPanel属性实例。 |
 
 **返回值：**
 

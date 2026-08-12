@@ -13,7 +13,7 @@ Provides APIs for creating diverse query conditions.
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from 'kits/@kit.ArkData';
+import { dataAbility } from '@kit.ArkData';
 ```
 
 ## and
@@ -137,8 +137,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value to match. |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value to match. |
+| low | ValueType | Yes | Minimum value to match. |
+| high | ValueType | Yes | Maximum value to match. |
 
 **Return value:**
 
@@ -308,7 +308,7 @@ This API is similar to the SQL equal to (=) operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -384,7 +384,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -419,7 +419,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -665,7 +665,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -700,7 +700,7 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
@@ -806,8 +806,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value to match. |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value to match. |
+| low | ValueType | Yes | Minimum value to match. |
+| high | ValueType | Yes | Maximum value to match. |
 
 **Return value:**
 
@@ -844,7 +844,7 @@ This API is similar to the SQL not equal (!=) operator.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 

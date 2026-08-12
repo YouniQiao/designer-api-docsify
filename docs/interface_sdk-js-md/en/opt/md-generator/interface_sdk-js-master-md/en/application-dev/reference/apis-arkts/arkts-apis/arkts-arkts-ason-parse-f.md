@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## parse
@@ -34,4 +34,4 @@ Converts a JavaScript Object Notation (JSON) string into an ArkTS Value.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [ISendable](arkts-arkts-ason-isendable-t.md) |
+| [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) |

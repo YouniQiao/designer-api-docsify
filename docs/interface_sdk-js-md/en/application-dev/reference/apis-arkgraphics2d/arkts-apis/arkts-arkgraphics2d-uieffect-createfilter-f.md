@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createFilter
@@ -26,7 +26,7 @@ Creates a Filter instance for adding multiple filter effects to a component.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns a Filter instance, which supports adding multiple filter effects. |
+| Filter | Returns a Filter instance, which supports adding multiple filter effects. |
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 Defines style options for progress component.
 
-**Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 23
 

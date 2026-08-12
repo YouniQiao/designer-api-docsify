@@ -2,7 +2,7 @@
 
 Defines the Extendable Stack.
 
-**Inheritance/Implementation:** ExtendableStack implements [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md/arkts-arkui-stack-attribute.md)
+**Inheritance/Implementation:** ExtendableStack implements [StackAttribute](arkts-arkui-stack-stackattribute-i.md#StackAttribute)
 
 **Since:** 26.0.0
 
@@ -39,8 +39,8 @@ Constructor of Extendable Stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| options | [StackOptions](arkts-arkui-stack-stackoptions-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -76,9 +76,9 @@ Entry of Extendable Stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setStackOptions
 
@@ -102,7 +102,7 @@ Set the Stack Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [StackOptions](../arkts-components/arkts-arkui-stackoptions-i.md) | No |  |
+| options | [StackOptions](arkts-arkui-stack-stackoptions-i.md) | No |  |
 
 **Return value:**
 

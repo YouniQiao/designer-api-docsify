@@ -25,7 +25,7 @@
 | [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md#isflagenabled) | 判断HiTraceId是否启用了跟踪标志flag，同步接口。用于在业务逻辑中根据跟踪标志进行不同处理，例如检查是否启用了INCLUDE_ASYNC标志以决定是否等待异步操作完成、检查是否启用了TP_INFO标志以决定是否打印调试信息。 |
 | [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md#isvalid) | 判断HiTraceId是否有效，同步接口。 |
 | [setId](arkts-performanceanalysis-hitracechain-setid-f.md#setid) | 设置跟踪标识，同步接口。用于在需要将外部跟踪标识设置到当前线程的场景，例如从父线程继承跟踪标识、从其他进程接收跟踪标识、从设备间通信获取跟踪标识。  将给定的HiTraceId设置到当前线程TLS中。若给定的HiTraceId无效，则不执行任何操作。 |
-| [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint) | [@ohos.hiTraceMeter (性能打点)](arkts-hitracemeter.md)跟踪信息埋点，同步接口。  本接口与HiTraceMeter模块协同工作，HiTraceChain负责跟踪链的管理，HiTraceMeter负责性能数据的采集和统计。当type为客户端发送CS且服务端接收到SR时，进行同步HiTraceMeter开始打点；当type为服务端发送SS且客户端接收到CR时，进行同步HiTraceMeter结束打点；CS和CR以及SR和SS的信息埋点需配套使用。否则，HiTraceMeter开始与结束打点无法正常匹配；当type为通用类型GENERAL时，不会进行HiTraceMeter打点。 |
+| [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint) | [@ohos.hiTraceMeter (性能打点)](arkts-hitracemeter.md#hiTraceMeter)跟踪信息埋点，同步接口。  本接口与HiTraceMeter模块协同工作，HiTraceChain负责跟踪链的管理，HiTraceMeter负责性能数据的采集和统计。当type为客户端发送CS且服务端接收到SR时，进行同步HiTraceMeter开始打点；当type为服务端发送SS且客户端接收到CR时，进行同步HiTraceMeter结束打点；CS和CR以及SR和SS的信息埋点需配套使用。否则，HiTraceMeter开始与结束打点无法正常匹配；当type为通用类型GENERAL时，不会进行HiTraceMeter打点。 |
 
 ### 接口
 

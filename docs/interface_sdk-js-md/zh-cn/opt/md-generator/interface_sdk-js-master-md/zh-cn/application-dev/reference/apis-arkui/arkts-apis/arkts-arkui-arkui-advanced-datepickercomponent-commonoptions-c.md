@@ -6,7 +6,7 @@ CommonOptions定义日期时间选择器的通用选项。
 > 
 > - Date构造函数参数顺序为：年、月索引（0-11）、日、时、分、秒。注意：年份参数需大于99或小于0以避免1900年代映射。
 > 
-> - Date的使用请参考[TimePickerOptions](../arkts-components/arkts-arkui-timepickeroptions-i.md/arkts-arkui-timepickeroptions-i.md)，需要注意的是，当需要设置1-99的年份日期时，
+> - Date的使用请参考[TimePickerOptions](../arkts-components/arkts-arkui-timepickeroptions-i.md#TimePickerOptions)，需要注意的是，当需要设置1-99的年份日期时，
 > 不可使用new Date(1, 0, 1)写法，因为JavaScript的new Date(year, month, day)构造函数对1-99的年份有特殊处理，会自动加上1900，
 > 即变为1901年，因此此时推荐使用new Date('0001-01-01')写法。
 > 
@@ -15,8 +15,8 @@ CommonOptions定义日期时间选择器的通用选项。
 > 
 > - 参数缺省或者设置为undefined时，均保持默认值。
 > 
-> - 在[DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)中设置start、end、selected时仅日期部分（年月日）设置生效，
-> 在[TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)中设置start、end、selected时仅时间部分（时分秒）设置生效。系统会根据配置的displayMode和对应的
+> - 在[DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md#DateOptions)中设置start、end、selected时仅日期部分（年月日）设置生效，
+> 在[TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md#TimeOptions)中设置start、end、selected时仅时间部分（时分秒）设置生效。系统会根据配置的displayMode和对应的
 > Options类型，自动过滤Date对象的相应部分并应用约束。
 > **说明：**
 > 
@@ -139,7 +139,7 @@ loop?: boolean
 
 > **说明：**
 > 
-> 设置了[start](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)或[end](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)且为有效值的场景下，本参数不生效。
+> 设置了[start](#CommonOptions)或[end](#CommonOptions)且为有效值的场景下，本参数不生效。
 
 **类型：** boolean
 
@@ -163,7 +163,7 @@ onChange?: Callback<DatePickerComponentResult>
 
 选择日期或时间后触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DatePickerComponentResult&gt;
+**类型：** Callback&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -183,7 +183,7 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 选择器项被选中且滚动停止时触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DatePickerComponentResult&gt;
+**类型：** Callback&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **起始版本：** 26.0.0
 

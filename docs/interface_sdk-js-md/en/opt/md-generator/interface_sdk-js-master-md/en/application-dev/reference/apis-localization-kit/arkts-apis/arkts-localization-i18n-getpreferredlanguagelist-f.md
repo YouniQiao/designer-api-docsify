@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getPreferredLanguageList
@@ -18,7 +18,7 @@ Obtains the list of preferred languages.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.System.getPreferredLanguageList](arkts-localization-i18n-system-c.md#getpreferredlanguagelist)
+**Substitutes:** [getPreferredLanguageList](arkts-localization-i18n-system-c.md#getPreferredLanguageList)
 
 <!--Device-i18n-export function getPreferredLanguageList(): Array<string>--><!--Device-i18n-export function getPreferredLanguageList(): Array<string>-End-->
 
@@ -28,4 +28,4 @@ Obtains the list of preferred languages.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |

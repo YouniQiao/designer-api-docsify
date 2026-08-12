@@ -20,7 +20,7 @@ Group name of the check box (that is, the name of the check box group to which t
 
 **NOTE：**
 
-For the settings to take effect, this parameter must be used with the [CheckboxGroup](../arkts-apis/arkts-arkui-checkboxgroup-checkboxgroup-f.md/arkts-arkui-checkboxgroup-checkboxgroup-f.md#checkboxgroup) component.
+For the settings to take effect, this parameter must be used with the [CheckboxGroup](checkboxgroup) component.
 
 **Type:** string
 
@@ -44,7 +44,7 @@ indicatorBuilder?: CustomBuilder
 
 Custom component to indicate that the check box is selected. This custom component is center aligned with the check box. When **indicatorBuilder** is set to **undefined** or **null**, it defaults to the state where it is not set.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 12
 

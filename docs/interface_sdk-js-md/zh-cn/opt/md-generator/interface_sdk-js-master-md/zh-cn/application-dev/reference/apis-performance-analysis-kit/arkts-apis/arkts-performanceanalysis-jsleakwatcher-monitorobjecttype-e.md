@@ -1,6 +1,6 @@
 # MonitorObjectType
 
-��Ҫ��ص������������ö�١�
+需要监控的组件对象类型枚举。
 
 **起始版本：** 24
 
@@ -14,7 +14,7 @@
 ALL = -1
 ```
 
-�������������͡�
+监测所有组件类型。
 
 **起始版本：** 24
 
@@ -28,7 +28,7 @@ ALL = -1
 CUSTOM_COMPONENT = 1 << 0
 ```
 
-����Զ���������͡�
+监测自定义组件类型。
 
 **起始版本：** 24
 
@@ -42,7 +42,7 @@ CUSTOM_COMPONENT = 1 << 0
 WINDOW = 1 << 1
 ```
 
-���Window������͡�
+监测Window组件类型。
 
 **起始版本：** 24
 
@@ -56,7 +56,7 @@ WINDOW = 1 << 1
 NODE_CONTAINER = 1 << 2
 ```
 
-���NodeContainer������͡�
+监测NodeContainer组件类型。
 
 **起始版本：** 24
 
@@ -70,7 +70,7 @@ NODE_CONTAINER = 1 << 2
 X_COMPONENT = 1 << 3
 ```
 
-���XComponent������͡�
+监测XComponent组件类型。
 
 **起始版本：** 24
 
@@ -84,7 +84,7 @@ X_COMPONENT = 1 << 3
 ABILITY = 1 << 4
 ```
 
-���Ability������͡�
+监测Ability组件类型。
 
 **起始版本：** 24
 

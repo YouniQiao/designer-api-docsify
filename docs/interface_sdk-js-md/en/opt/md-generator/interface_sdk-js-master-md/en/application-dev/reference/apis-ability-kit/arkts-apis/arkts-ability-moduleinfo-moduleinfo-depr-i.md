@@ -5,13 +5,13 @@ The ModuleInfo module provides module information of an application.
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-i.md) instead.
+> [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#HapModuleInfo) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
+**Substitutes:** [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#HapModuleInfo)
 
 <!--Device-unnamed-export interface ModuleInfo--><!--Device-unnamed-export interface ModuleInfo-End-->
 
@@ -33,7 +33,7 @@ The module name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name
+**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name)
 
 <!--Device-ModuleInfo-readonly moduleName: string--><!--Device-ModuleInfo-readonly moduleName: string-End-->
 

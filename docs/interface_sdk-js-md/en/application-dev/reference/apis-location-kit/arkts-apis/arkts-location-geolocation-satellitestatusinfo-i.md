@@ -8,7 +8,7 @@ Satellite status information
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo
+**Substitutes:** [SatelliteStatusInfo](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -19,7 +19,7 @@ Satellite status information
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## altitudes
@@ -36,7 +36,7 @@ altitudes: Array<number>
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#altitudes
+**Substitutes:** [altitudes](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#altitudes)
 
 <!--Device-SatelliteStatusInfo-altitudes: Array<number>--><!--Device-SatelliteStatusInfo-altitudes: Array<number>-End-->
 
@@ -56,7 +56,7 @@ azimuths: Array<number>
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#azimuths
+**Substitutes:** [azimuths](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#azimuths)
 
 <!--Device-SatelliteStatusInfo-azimuths: Array<number>--><!--Device-SatelliteStatusInfo-azimuths: Array<number>-End-->
 
@@ -76,7 +76,7 @@ carrierFrequencies: Array<number>
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#carrierFrequencies
+**Substitutes:** [carrierFrequencies](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#carrierFrequencies)
 
 <!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>--><!--Device-SatelliteStatusInfo-carrierFrequencies: Array<number>-End-->
 
@@ -96,7 +96,7 @@ carrierToNoiseDensitys: Array<number>
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#carrierToNoiseDensitys
+**Substitutes:** [carrierToNoiseDensitys](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#carrierToNoiseDensitys)
 
 <!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>--><!--Device-SatelliteStatusInfo-carrierToNoiseDensitys: Array<number>-End-->
 
@@ -116,7 +116,7 @@ satelliteIds: Array<number>
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#satelliteIds
+**Substitutes:** [satelliteIds](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#satelliteIds)
 
 <!--Device-SatelliteStatusInfo-satelliteIds: Array<number>--><!--Device-SatelliteStatusInfo-satelliteIds: Array<number>-End-->
 
@@ -136,7 +136,7 @@ satellitesNumber: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#satellitesNumber
+**Substitutes:** [satellitesNumber](ohos.geoLocationManager/geoLocationManager.SatelliteStatusInfo#satellitesNumber)
 
 <!--Device-SatelliteStatusInfo-satellitesNumber: number--><!--Device-SatelliteStatusInfo-satellitesNumber: number-End-->
 

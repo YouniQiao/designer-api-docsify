@@ -28,5 +28,5 @@ export function getGridItemAttribute(node: FrameNode): GridItemAttribute | undef
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| GridItemAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

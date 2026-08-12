@@ -8,7 +8,7 @@ Describes the contents of the scan results.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanResult
+**Substitutes:** [ScanResult](ohos.bluetooth.ble/ble.ScanResult)
 
 <!--Device-bluetoothManager-interface ScanResult--><!--Device-bluetoothManager-interface ScanResult-End-->
 
@@ -17,7 +17,7 @@ Describes the contents of the scan results.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## data
@@ -36,7 +36,7 @@ The raw data of broadcast packet
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanResult#data
+**Substitutes:** [data](ohos.bluetooth.ble/ble.ScanResult#data)
 
 <!--Device-ScanResult-data: ArrayBuffer--><!--Device-ScanResult-data: ArrayBuffer-End-->
 
@@ -58,7 +58,7 @@ Address of the scanned device
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanResult#deviceId
+**Substitutes:** [deviceId](ohos.bluetooth.ble/ble.ScanResult#deviceId)
 
 <!--Device-ScanResult-deviceId: string--><!--Device-ScanResult-deviceId: string-End-->
 
@@ -80,7 +80,7 @@ RSSI of the remote device
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.ScanResult#rssi
+**Substitutes:** [rssi](ohos.bluetooth.ble/ble.ScanResult#rssi)
 
 <!--Device-ScanResult-rssi: number--><!--Device-ScanResult-rssi: number-End-->
 

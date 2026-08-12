@@ -6,11 +6,11 @@
 function setAppResourceLimit(type: string, value: number, enableDebugLog: boolean): void
 ```
 
-����Ӧ�õ��ļ��������������߳�������JS�ڴ��Native�ڴ���Դ���ơ���ҪӦ�ó������ڹ����ڴ�й©���ϡ�
+设置应用的文件描述符数量、线程数量、JS内存或Native内存资源限制。主要应用场景在于构造内存泄漏故障。
 
-> **ע��**
+> **注意**
 > 
-> �������еĿ�����ѡ����ڿ�����ѡ���б����ҵ�"ϵͳ��Դй©��־"�����ã������豸��ӿ���Ч��
+> 打开设置中的开发者选项后，在开发者选项列表中找到"系统资源泄漏日志"并启用，重启设备后接口生效。
 
 **起始版本：** 12
 
@@ -32,8 +32,8 @@ function setAppResourceLimit(type: string, value: number, enableDebugLog: boolea
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

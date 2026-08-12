@@ -2,7 +2,7 @@
 
 FileUri represents the uri of the file.
 
-**Inheritance/Implementation:** FileUri extends [uri.URI](../../apis-arkts/arkts-apis/arkts-arkts-uri-uri-c.md/arkts-arkts-uri-uri-c.md)
+**Inheritance/Implementation:** FileUri extends [uri.URI](uri.URI)
 
 **Since:** 15
 
@@ -15,7 +15,7 @@ FileUri represents the uri of the file.
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## constructor

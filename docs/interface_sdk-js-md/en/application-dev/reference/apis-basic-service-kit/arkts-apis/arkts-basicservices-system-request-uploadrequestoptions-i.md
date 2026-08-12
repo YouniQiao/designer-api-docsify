@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
-> [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
+> [UploadConfig](arkts-basicservices-agent-config-i.md#Config) instead.
 
 **Since:** 3
 
@@ -11,7 +11,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface UploadRequestOptions--><!--Device-unnamed-export interface UploadRequestOptions-End-->
 
@@ -20,7 +20,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -37,7 +37,7 @@ Called when the execution is completed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-UploadRequestOptions-complete?: () => void--><!--Device-UploadRequestOptions-complete?: () => void-End-->
 
@@ -57,7 +57,7 @@ Called when uploading fails.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-UploadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-UploadRequestOptions-fail?: (data: any, code: number) => void-End-->
 
@@ -84,7 +84,7 @@ Called when the files are uploaded successfully.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-UploadRequestOptions-success?: (data: UploadResponse) => void--><!--Device-UploadRequestOptions-success?: (data: UploadResponse) => void-End-->
 
@@ -104,7 +104,7 @@ data?: Array<RequestData>
 
 Form data in the request body.
 
-**Type:** Array&lt;RequestData&gt;
+**Type:** Array&lt;[RequestData](arkts-basicservices-system-request-requestdata-i.md)&gt;
 
 **Since:** 3
 
@@ -112,7 +112,7 @@ Form data in the request body.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.data
+**Substitutes:** [data](ohos.request.agent.Config.data)
 
 <!--Device-UploadRequestOptions-data?: Array<RequestData>--><!--Device-UploadRequestOptions-data?: Array<RequestData>-End-->
 
@@ -126,7 +126,7 @@ files: Array<RequestFile>
 
 List of files to upload, which is submitted through multipart/form-data.
 
-**Type:** Array&lt;RequestFile&gt;
+**Type:** Array&lt;[RequestFile](arkts-basicservices-system-request-requestfile-i.md)&gt;
 
 **Since:** 3
 
@@ -134,7 +134,7 @@ List of files to upload, which is submitted through multipart/form-data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.data
+**Substitutes:** [data](ohos.request.agent.Config.data)
 
 <!--Device-UploadRequestOptions-files: Array<RequestFile>--><!--Device-UploadRequestOptions-files: Array<RequestFile>-End-->
 
@@ -156,7 +156,7 @@ Request header.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.headers
+**Substitutes:** [headers](ohos.request.agent.Config.headers)
 
 <!--Device-UploadRequestOptions-header?: Object--><!--Device-UploadRequestOptions-header?: Object-End-->
 
@@ -178,7 +178,7 @@ Request methods available: POST and PUT. The default value is POST.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.method
+**Substitutes:** [method](ohos.request.agent.Config.method)
 
 <!--Device-UploadRequestOptions-method?: string--><!--Device-UploadRequestOptions-method?: string-End-->
 
@@ -200,7 +200,7 @@ Resource URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.url
+**Substitutes:** [url](ohos.request.agent.Config.url)
 
 <!--Device-UploadRequestOptions-url: string--><!--Device-UploadRequestOptions-url: string-End-->
 

@@ -23,8 +23,8 @@ function parse(text: string, reviver?: Transformer, options?: ParseOptions): Obj
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 有效的JSON字符串，需符合JSON语法规范。 |
-| reviver | [Transformer](arkts-arkts-ason-transformer-t.md) | 否 | 转换函数，用于修改解析生成的原始值；当需要对解析结果进行自定义转换时使用。默认值是undefined。 |
-| options | [ParseOptions](arkts-arkts-json-parseoptions-i.md) | 否 | 解析的配置选项，用于控制解析生成的类型。默认值是undefined。 |
+| reviver | Transformer | 否 | 转换函数，用于修改解析生成的原始值；当需要对解析结果进行自定义转换时使用。默认值是undefined。 |
+| options | ParseOptions | 否 | 解析的配置选项，用于控制解析生成的类型。默认值是undefined。 |
 
 **返回值：**
 

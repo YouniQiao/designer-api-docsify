@@ -29,5 +29,5 @@ export function createSwiperNode(context: UIContext, options?: FrameNodeOptions)
 
 | 类型 | 说明 |
 | --- | --- |
-| [Swiper](arkts-arkui-typenode-swiper-t.md) | 返回 Swiper 类型的 FrameNode |
+| Swiper | 返回 Swiper 类型的 FrameNode |
 

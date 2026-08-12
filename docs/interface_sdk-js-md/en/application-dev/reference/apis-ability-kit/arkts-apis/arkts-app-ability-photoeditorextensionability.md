@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PhotoEditorExtensionAbility } from 'kits/@kit.AbilityKit';
+import { PhotoEditorExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## Summary

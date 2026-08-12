@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## uninstallFont
@@ -34,14 +34,14 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
-| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
-| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31100107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) |
+| [31100108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-failed-to-delete-font-file) |
+| [31100109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

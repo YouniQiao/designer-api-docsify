@@ -13,7 +13,7 @@ Describes the event indicating that an audio session is deactivated.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## reason

@@ -57,7 +57,7 @@ Defines the DatePicker component. It requires call setDatePickerOptions at start
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DatePickerAttribute&gt; | Yes | the callback to set up component's attribute. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DatePickerAttribute](arkts-arkui-datepicker-datepickerattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 

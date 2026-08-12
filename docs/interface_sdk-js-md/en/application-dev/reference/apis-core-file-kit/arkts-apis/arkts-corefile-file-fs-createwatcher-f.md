@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## createWatcher
@@ -34,7 +34,7 @@ Creates a **Watcher** object to listen for file or directory changes.
 
 | Type | Description |
 | --- | --- |
-| [Watcher](arkts-corefile-watcher-t.md) | Watcher** object created. |
+| [Watcher](arkts-corefile-file-fs-watcher-i.md) | Watcher** object created. |
 
 **Error codes:**
 

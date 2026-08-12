@@ -26,7 +26,7 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| localUserId | number | 是 |
+| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -38,10 +38,10 @@ function getStatusMonitor(localUserId: number): StatusMonitor
 
 | 错误码ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
-| [32600002](../errorcode-useriam.md#32600002-模板未找到) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
+| [32600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-模板未找到) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

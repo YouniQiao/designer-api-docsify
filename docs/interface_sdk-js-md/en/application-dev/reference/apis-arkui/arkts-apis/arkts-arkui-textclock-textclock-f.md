@@ -24,7 +24,7 @@ Defines the TextClock component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | No | text clock options. |
+| options | [TextClockOptions](arkts-arkui-textclock-textclockoptions-i.md) | No | text clock options. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines TextClock Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextClockAttribute&gt; | Yes | TextClock attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextClockAttribute](arkts-arkui-textclock-textclockattribute-i.md)&gt; | Yes | TextClock attribute instance |
 
 **Return value:**
 

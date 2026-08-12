@@ -11,7 +11,7 @@ Defines TLS connection options.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## ALPNProtocols
@@ -38,7 +38,7 @@ address: NetAddress
 
 Gateway address.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 10
 

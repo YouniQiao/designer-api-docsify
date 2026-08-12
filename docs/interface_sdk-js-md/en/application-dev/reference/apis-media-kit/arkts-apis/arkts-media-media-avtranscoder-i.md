@@ -1,6 +1,6 @@
 # AVTranscoder
 
-AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md#createavtranscoder) to create an AVTranscoder instance.
+AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md#createAVTranscoder) to create an AVTranscoder instance.
 
 For details about the AVTranscoder demo, see   
 [Using AVTranscoder for Transcoding](../../../media/media/using-avtranscoder-for-transcodering.md).
@@ -16,7 +16,7 @@ For details about the AVTranscoder demo, see
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -60,10 +60,10 @@ add a watermark for the AVTranscoder. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The parameter check failed, parameter value out of range. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | The parameter check failed, parameter value out of range. |
 
 ## cancel
 
@@ -73,9 +73,9 @@ cancel(): Promise<void>
 
 Cancels video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](arkts-media-media-avtranscoder-i.md#prepare),   
-[start()](arkts-media-media-avtranscoder-i.md#start), [pause()](arkts-media-media-avtranscoder-i.md#pause), or   
-[resume()](arkts-media-media-avtranscoder-i.md#resume) API is called.
+This API can be called only after the [prepare()](#prepare),   
+[start()](#start), [pause()](#pause), or   
+[resume()](#resume) API is called.
 
 **Since:** 12
 
@@ -97,9 +97,9 @@ This API can be called only after the [prepare()](arkts-media-media-avtranscoder
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## off('complete')
 
@@ -124,7 +124,7 @@ Unsubscribes from the event indicating that transcoding is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' | Yes | Event type, which is **'complete'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
 
 ## off('error')
 
@@ -149,7 +149,7 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.&lt;br&gt;This event is triggered when an error occurs during transcoding. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## off('progressUpdate')
 
@@ -174,7 +174,7 @@ Unsubscribes from transcoding progress updates.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current callback mechanism. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current callback mechanism. |
 
 ## offComplete
 
@@ -196,7 +196,7 @@ Unsubscribes from the event indicating that transcoding is complete.This event c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback that has been registered to listen for transcoding completion events. |
 
 ## offError
 
@@ -218,7 +218,7 @@ Unsubscribes from AVTranscoder errors. After the unsubscription, your applicatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback that has been registered to listen for AVTranscoder errors. |
 
 ## offProgressUpdate
 
@@ -240,7 +240,7 @@ Unsubscribes from transcoding progress updates.This event can be triggered by bo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Called that has been registered to listen for progress updates. You are advised to use the default value because only the last registered callback is retained in the current allback mechanism. |
 
 ## on('complete')
 
@@ -251,7 +251,7 @@ on(type:'complete', callback: Callback<void>):void
 Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding progress update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This API uses an asynchronous callback to return the result.
 
 When this event is reported, the current transcoding operation is complete. You need to call   
-[release()](arkts-media-media-avtranscoder-i.md#release) to exit the transcoding.
+[release()](#release) to exit the transcoding.
 
 **Since:** 12
 
@@ -268,7 +268,7 @@ When this event is reported, the current transcoding operation is complete. You 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'complete' | Yes | Event type, which is **'complete'** in this case. This event is triggered by the system during transcoding. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the event callback method. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the event callback method. |
 
 ## on('error')
 
@@ -276,7 +276,7 @@ When this event is reported, the current transcoding operation is complete. You 
 on(type:'error', callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](arkts-media-media-avtranscoder-i.md#release) to exit the transcoding. This API uses an asynchronous callback to return the result.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding. This API uses an asynchronous callback to return the result.
 
 An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
@@ -295,20 +295,20 @@ An application can subscribe to only one AVTranscoder error event. When the appl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type, which is **'error'** in this case.&lt;br&gt;This event is triggered when an error occurs during recording. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
+| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## on('progressUpdate')
 
@@ -333,7 +333,7 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'progressUpdate' | Yes | Event type, which is **'progressUpdate'** in this case. This event is triggered by the system during transcoding. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the progress update event. The **number** parameter in the function indicates the current transcoding progress, in percentage. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the progress update event. The **number** parameter in the function indicates the current transcoding progress, in percentage. |
 
 ## onComplete
 
@@ -343,7 +343,7 @@ onComplete(callback: Callback<void>):void
 
 Subscribes to the event indicating that transcoding is complete.An application can subscribe to only one transcoding completion event.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
-When this event is reported, the current transcoding operation is complete.You need to call [release()](arkts-media-media-avtranscoder-i.md#release) to exit the transcoding.
+When this event is reported, the current transcoding operation is complete.You need to call [release()](#release) to exit the transcoding.
 
 **Since:** 23
 
@@ -357,7 +357,7 @@ When this event is reported, the current transcoding operation is complete.You n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback that has been registered to listen for transcoding completion events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback that has been registered to listen for transcoding completion events. |
 
 ## onError
 
@@ -365,7 +365,7 @@ When this event is reported, the current transcoding operation is complete.You n
 onError(callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](arkts-media-media-avtranscoder-i.md#release)to exit the transcoding.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release)to exit the transcoding.
 
 An application can subscribe to only one AVTranscoder error event.When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
@@ -381,20 +381,20 @@ An application can subscribe to only one AVTranscoder error event.When the appli
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback invoked when the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400103](../errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) | Time out. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. |
+| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Time out. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
 
 ## onProgressUpdate
 
@@ -416,7 +416,7 @@ Subscribes to transcoding progress updates. An application can subscribe to only
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. **progress** is a number that indicates the current transcoding progress, in percentage. |
 
 ## pause
 
@@ -426,8 +426,8 @@ pause(): Promise<void>
 
 Pauses video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [start()](arkts-media-media-avtranscoder-i.md#start) API is called. You can call   
-[resume()](arkts-media-media-avtranscoder-i.md#resume) to resume transcoding.
+This API can be called only after the [start()](#start) API is called. You can call   
+[resume()](#resume) to resume transcoding.
 
 **Since:** 12
 
@@ -449,9 +449,9 @@ This API can be called only after the [start()](arkts-media-media-avtranscoder-i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## prepare
 
@@ -487,11 +487,11 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 and later |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 and later |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
+| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## release
 
@@ -523,8 +523,8 @@ After the resources are released, you can no longer perform any operation on the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## resume
 
@@ -534,7 +534,7 @@ resume(): Promise<void>
 
 Resumes video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [pause()](arkts-media-media-avtranscoder-i.md#pause) API is called.
+This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 12
 
@@ -556,9 +556,9 @@ This API can be called only after the [pause()](arkts-media-media-avtranscoder-i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## start
 
@@ -568,7 +568,7 @@ start(): Promise<void>
 
 Starts video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](arkts-media-media-avtranscoder-i.md#prepare) API is called.
+This API can be called only after the [prepare()](#prepare) API is called.
 
 **Since:** 12
 
@@ -590,9 +590,9 @@ This API can be called only after the [prepare()](arkts-media-media-avtranscoder
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
-| [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
+| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
 ## fdDst
 

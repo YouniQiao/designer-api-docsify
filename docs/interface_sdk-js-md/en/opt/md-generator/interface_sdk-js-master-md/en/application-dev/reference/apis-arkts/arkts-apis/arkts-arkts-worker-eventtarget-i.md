@@ -6,7 +6,7 @@ Specific event features.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventTarget
+**Substitutes:** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
 
 <!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 
@@ -15,7 +15,7 @@ Specific event features.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## addEventListener
@@ -30,7 +30,7 @@ Adds an event listener to the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventTarget.addEventListener
+**Substitutes:** [addEventListener](ohos.worker.WorkerEventTarget.addEventListener)
 
 <!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
 
@@ -41,7 +41,7 @@ Adds an event listener to the worker.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | string | Yes |
-| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | Yes |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes |
 
 ## Examples
 
@@ -68,7 +68,7 @@ Dispatches the event defined for the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventTarget.dispatchEvent
+**Substitutes:** [dispatchEvent](ohos.worker.WorkerEventTarget.dispatchEvent)
 
 <!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
 
@@ -78,7 +78,7 @@ Dispatches the event defined for the worker.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes |
+| event | [Event](arkts-arkts-worker-event-i.md) | Yes |
 
 **Return value:**
 
@@ -141,7 +141,7 @@ Removes all event listeners for the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventTarget.removeAllListener
+**Substitutes:** [removeAllListener](ohos.worker.WorkerEventTarget.removeAllListener)
 
 <!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
 
@@ -174,7 +174,7 @@ Removes an event defined for the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.WorkerEventTarget.removeEventListener
+**Substitutes:** [removeEventListener](ohos.worker.WorkerEventTarget.removeEventListener)
 
 <!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
 
@@ -185,7 +185,7 @@ Removes an event defined for the worker.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | string | Yes |
-| callback | [EventListener](arkts-arkts-process-eventlistener-t.md) | No |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | No |
 
 ## Examples
 

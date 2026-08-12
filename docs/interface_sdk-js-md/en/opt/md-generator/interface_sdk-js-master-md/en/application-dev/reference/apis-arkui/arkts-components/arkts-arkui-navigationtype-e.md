@@ -6,7 +6,7 @@ Navigation type.
 
 **Deprecated since:** 13
 
-**Substitutes:** Navigation
+**Substitutes:** [Navigation](Navigation)
 
 <!--Device-unnamed-declare enum NavigationType--><!--Device-unnamed-declare enum NavigationType-End-->
 
@@ -23,13 +23,13 @@ Navigates to the specified page in the application.
 **NOTE：**
 
 This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[pushPath](arkts-arkui-navpathstack-c.md#pushpath) instead.
+[pushPath](NavPathStack#pushPath(info: NavPathInfo, animated?: boolean)) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack#pushPath](arkts-arkui-navpathstack-c.md#pushpath)
+**Substitutes:** [pushPath](NavPathStack#pushPath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,13 +48,13 @@ Returns to the specified page. If the specified page does not exist in the stack
 **NOTE：**
 
 This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[pop](arkts-arkui-navpathstack-c.md#pop) instead.
+[pop](NavPathStack#pop(animated?: boolean)) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack#pop](arkts-arkui-navpathstack-c.md#pop)
+**Substitutes:** [pop](NavPathStack#pop)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -73,13 +73,13 @@ Replaces the current page with another one in the application and destroys the c
 **NOTE：**
 
 This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[replacePath](arkts-arkui-navpathstack-c.md#replacepath) instead.
+[replacePath](NavPathStack#replacePath(info: NavPathInfo, animated?: boolean)) instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack.replacePath](arkts-arkui-navpathstack-c.md#replacepath)
+**Substitutes:** [replacePath](NavPathStack.replacePath)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

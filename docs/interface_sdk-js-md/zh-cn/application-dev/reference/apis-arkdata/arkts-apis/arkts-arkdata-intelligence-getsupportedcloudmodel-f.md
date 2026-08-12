@@ -22,7 +22,7 @@ function getSupportedCloudModel(): Promise<Array<CloudModelInfo>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | Promise对象，返回支持的云侧模型信息。 |
+| Promise&lt;Array&lt;[CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)&gt;&gt; | Promise对象，返回支持的云侧模型信息。 |
 
 ## 示例
 

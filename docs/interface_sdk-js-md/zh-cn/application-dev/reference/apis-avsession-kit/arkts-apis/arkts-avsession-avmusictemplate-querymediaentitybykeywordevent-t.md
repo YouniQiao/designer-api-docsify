@@ -29,5 +29,5 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | 通过promise返回PageMediaEntity |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | 通过promise返回PageMediaEntity |
 

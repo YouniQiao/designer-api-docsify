@@ -129,7 +129,7 @@ Provide the progress method of video playback with SeekMode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes |  |
-| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | No |  |
+| seekMode | [SeekMode](arkts-arkui-video-seekmode-e.md) | No |  |
 
 ## start
 

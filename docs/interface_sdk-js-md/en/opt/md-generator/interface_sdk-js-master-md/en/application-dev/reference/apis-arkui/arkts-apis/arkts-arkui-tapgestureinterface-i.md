@@ -21,10 +21,10 @@ TapGesture is used to trigger a tap gesture with one, two, or more taps.
 (value?: TapGestureParameters): TapGestureInterface
 ```
 
-Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
-When triggered by keyboard or gamepad input, the gesture event's [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md/arkts-arkui-sourcetool-e.md) is **Unknown**, and   
-[SourceType](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-sourcetype-e.md/arkts-input-multimodalinput-touchevent-sourcetype-e.md) is **KEY** or **JOYSTICK**.
+When triggered by keyboard or gamepad input, the gesture event's [SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md#SourceTool) is **Unknown**, and   
+[SourceType](SourceType) is **KEY** or **JOYSTICK**.
 
 **Since:** 7
 
@@ -66,7 +66,7 @@ Triggered when the tap gesture is recognized.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 

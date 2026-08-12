@@ -110,7 +110,7 @@ Changes sections by removing or replacing an existing section and/or adding a se
 | --- | --- | --- |
 | start | number | Yes |
 | deleteCount | number | No |
-| sections | Array&lt;SectionOptions&gt; | No |
+| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | No |
 
 **Return value:**
 
@@ -171,4 +171,4 @@ Obtains the configuration of all sections in the **WaterFlow** component.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;SectionOptions&gt; |
+| Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; |

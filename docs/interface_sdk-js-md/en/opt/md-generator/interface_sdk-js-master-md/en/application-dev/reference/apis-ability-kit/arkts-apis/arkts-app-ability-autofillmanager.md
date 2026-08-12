@@ -15,7 +15,7 @@ Unlike the system's auto-save feature that triggers during page transitions, thi
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from 'kits/@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

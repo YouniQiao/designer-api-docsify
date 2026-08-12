@@ -8,7 +8,7 @@ Represents the notification message.
 
 **Deprecated since:** 23
 
-**Substitutes:** @ohos.file.fs:fileIo.WatchEvent
+**Substitutes:** [WatchEvent](@ohos.file.fs:fileIo.WatchEvent)
 
 <!--Device-fileAccess-interface NotifyMessage--><!--Device-fileAccess-interface NotifyMessage-End-->
 
@@ -19,7 +19,7 @@ Represents the notification message.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## type
@@ -30,7 +30,7 @@ type: NotifyType
 
 Notification type.
 
-**Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
+**Type:** NotifyType
 
 **Since:** 10
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getAddressesFromLocationName
@@ -18,7 +18,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName
+**Substitutes:** [getAddressesFromLocationName](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -30,7 +30,7 @@ Obtain latitude and longitude info from location address
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes |
+| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes |
 
 ## Examples
@@ -61,7 +61,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName
+**Substitutes:** [getAddressesFromLocationName](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -73,13 +73,13 @@ Obtain latitude and longitude info from location address
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocationmanager-geocoderequest-i.md) | Yes |
+| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;GeoAddress&gt;&gt; |
+| Promise & lt;Array & lt;GeoAddress & gt; & gt; |
 
 ## Examples
 

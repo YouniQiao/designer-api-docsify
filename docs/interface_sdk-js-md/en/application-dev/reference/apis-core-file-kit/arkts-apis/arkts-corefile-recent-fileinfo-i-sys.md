@@ -17,7 +17,7 @@ Represents information about the recent file list.
 ## Modules to Import
 
 ```TypeScript
-import { recent } from 'kits/@kit.CoreFileKit';
+import { recent } from '@kit.CoreFileKit';
 ```
 
 ## ctime
@@ -74,7 +74,7 @@ File name.
 readonly mode: number
 ```
 
-[Permissions on the file](arkts-corefile-file-fs-stat-i.md).
+[Permissions on the file](arkts-corefile-file-fs-stat-i.md#Stat).
 
 **Type:** number
 

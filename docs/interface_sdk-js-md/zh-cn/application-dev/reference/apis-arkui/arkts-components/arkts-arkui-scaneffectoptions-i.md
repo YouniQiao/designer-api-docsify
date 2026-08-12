@@ -16,7 +16,7 @@
 enableScanEffect?: boolean
 ```
 
-扫光效果的开关。仅支持[ProgressType](arkts-arkui-progresstype-e.md)类型为Linear、Ring、Capsule的进度条。
+扫光效果的开关。仅支持[ProgressType](arkts-arkui-progresstype-e.md#ProgressType)类型为Linear、Ring、Capsule的进度条。
 
 true：表示开启扫光效果。
 

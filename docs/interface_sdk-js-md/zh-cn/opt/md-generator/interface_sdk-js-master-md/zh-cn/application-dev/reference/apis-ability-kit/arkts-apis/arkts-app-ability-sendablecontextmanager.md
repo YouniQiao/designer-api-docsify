@@ -1,6 +1,6 @@
 # @ohos.app.ability.sendableContextManager
 
-sendableContextManager模块提供Context与[SendableContext](arkts-ability-sendablecontext-i.md)相互转换的能力。
+sendableContextManager模块提供Context与[SendableContext](arkts-ability-sendablecontext-i.md#SendableContext)相互转换的能力。
 
 **起始版本：** 12
 

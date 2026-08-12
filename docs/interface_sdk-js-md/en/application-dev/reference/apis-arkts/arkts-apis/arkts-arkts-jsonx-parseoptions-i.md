@@ -18,7 +18,7 @@ bigIntMode: BigIntMode
 
 BigInt parsing mode.
 
-**Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
+**Type:** BigIntMode
 
 **Since:** 26.0.0
 

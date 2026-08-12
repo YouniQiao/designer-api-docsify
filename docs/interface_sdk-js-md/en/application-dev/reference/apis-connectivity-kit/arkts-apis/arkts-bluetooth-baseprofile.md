@@ -15,7 +15,7 @@ Provides basic profile methods.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from 'kits/@kit.ConnectivityKit';
+import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

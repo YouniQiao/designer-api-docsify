@@ -16,7 +16,7 @@ Defines the constructor of GridContainer.
 
 **Deprecated since:** 9
 
-**Substitutes:** <!--SUBSTITUTE_API-->grid_col/GridColInterface<!--/SUBSTITUTE_API-->
+**Substitutes:** [grid_col/GridColInterface](grid_col/GridColInterface)
 
 <!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute--><!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute-End-->
 

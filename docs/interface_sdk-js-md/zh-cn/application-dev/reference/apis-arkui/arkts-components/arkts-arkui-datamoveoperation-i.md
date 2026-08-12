@@ -62,7 +62,7 @@ type: DataOperationType.MOVE
 
 数据移动类型。
 
-**类型：** DataOperationType.MOVE
+**类型：** [DataOperationType.MOVE](arkts-arkui-dataoperationtype-e.md)
 
 **起始版本：** 12
 

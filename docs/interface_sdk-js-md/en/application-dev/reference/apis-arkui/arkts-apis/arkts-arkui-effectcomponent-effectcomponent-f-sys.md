@@ -28,13 +28,13 @@ Defines EffectComponent Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | No | The options to create an EffectComponent. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Subcomponents of EffectComponent |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Subcomponents of EffectComponent |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EffectComponentAttribute](../arkts-components/arkts-arkui-effectcomponent-attribute.md) |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
 
 
 ## EffectComponent
@@ -66,12 +66,12 @@ Defines EffectComponent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EffectComponentAttribute&gt; | Yes | EffectComponent attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md)&gt; | Yes | EffectComponent attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EffectComponentAttribute](../arkts-components/arkts-arkui-effectcomponent-attribute.md) |  |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
 

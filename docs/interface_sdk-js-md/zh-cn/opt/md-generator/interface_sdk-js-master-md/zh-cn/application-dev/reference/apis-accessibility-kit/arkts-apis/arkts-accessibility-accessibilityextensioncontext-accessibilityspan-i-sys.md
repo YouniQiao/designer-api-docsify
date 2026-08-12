@@ -1,6 +1,6 @@
 # AccessibilitySpan（系统接口）
 
-辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性spans。
+辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)中的属性spans。
 
 **起始版本：** 20
 

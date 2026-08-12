@@ -13,7 +13,7 @@ Use this module when your wearable application needs to obtain local notificatio
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -36,7 +36,7 @@ Called when notifications are canceled.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| hashCodes | Array&lt;string&gt; | Yes |
+| hashCodes | Array & lt;string & gt; | Yes |
 
 ## Examples
 

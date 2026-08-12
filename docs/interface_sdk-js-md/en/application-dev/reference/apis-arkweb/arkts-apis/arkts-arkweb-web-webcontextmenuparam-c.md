@@ -1,6 +1,6 @@
 # WebContextMenuParam
 
-Defines the context menu param, related to {@link WebContextMenuParam} method.
+Defines the context menu param, related to [WebContextMenuParam](#WebContextMenuParam) method.
 
 **Since:** 23
 
@@ -68,7 +68,7 @@ Returns the type of context node.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuDataMediaType](../arkts-components/arkts-arkweb-contextmenudatamediatype-e.md) | Returns the type of context node. |
+| [ContextMenuDataMediaType](arkts-arkweb-web-contextmenudatamediatype-e.md) | Returns the type of context node. |
 
 ## getEditStateFlags
 
@@ -76,7 +76,7 @@ Returns the type of context node.
 getEditStateFlags(): int
 ```
 
-Returns the context editable flags {@link ContextMenuEditStateFlags}.
+Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-web-contextmenueditstateflags-e.md#ContextMenuEditStateFlags).
 
 **Since:** 23
 
@@ -156,7 +156,7 @@ Returns the type of context node.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuMediaType](../arkts-components/arkts-arkweb-contextmenumediatype-e.md) | Returns the type of context node. |
+| [ContextMenuMediaType](arkts-arkweb-web-contextmenumediatype-e.md) | Returns the type of context node. |
 
 ## getPreviewHeight
 
@@ -244,7 +244,7 @@ Returns the context menu source type.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuSourceType](../arkts-components/arkts-arkweb-contextmenusourcetype-e.md) |  |
+| [ContextMenuSourceType](arkts-arkweb-web-contextmenusourcetype-e.md) |  |
 
 ## getSourceUrl
 

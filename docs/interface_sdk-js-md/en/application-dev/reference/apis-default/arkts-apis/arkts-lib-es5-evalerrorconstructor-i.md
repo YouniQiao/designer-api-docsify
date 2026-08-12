@@ -20,7 +20,7 @@
 
 | Type | Description |
 | --- | --- |
-| [EvalError](../../apis-arkts/arkts-apis/arkts-arkts-errors-evalerror-c.md) |  |
+| [EvalError](arkts-lib-es5-evalerror-i.md) |  |
 
 ## [[Construct]]
 
@@ -40,7 +40,7 @@ new(message?: string): EvalError
 
 | Type | Description |
 | --- | --- |
-| [EvalError](../../apis-arkts/arkts-apis/arkts-arkts-errors-evalerror-c.md) |  |
+| [EvalError](arkts-lib-es5-evalerror-i.md) |  |
 
 ## prototype
 
@@ -48,7 +48,7 @@ new(message?: string): EvalError
 readonly prototype: EvalError
 ```
 
-**Type:** [EvalError](../../apis-arkts/arkts-apis/arkts-arkts-errors-evalerror-c.md)
+**Type:** [EvalError](arkts-lib-es5-evalerror-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

@@ -13,7 +13,7 @@ Interface for defining time base metadata
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## classify
@@ -44,7 +44,7 @@ contents: Record<string, object>
 
 Key-value pair set corresponding to time primitive information
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**Type:** Record&lt;string, object&gt;
 
 **Since:** 26.0.0
 

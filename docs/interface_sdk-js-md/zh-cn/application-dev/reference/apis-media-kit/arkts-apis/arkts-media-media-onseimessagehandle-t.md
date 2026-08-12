@@ -20,6 +20,6 @@ type OnSeiMessageHandle = (messages: Array<SeiMessage>, playbackPosition?: int) 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| messages | Array&lt;SeiMessage&gt; | 是 | SEI信息。 |
+| messages | Array&lt;[SeiMessage](arkts-media-media-seimessage-i.md)&gt; | 是 | SEI信息。 |
 | playbackPosition | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 获取当前播放位置（单位：毫秒）。 |
 

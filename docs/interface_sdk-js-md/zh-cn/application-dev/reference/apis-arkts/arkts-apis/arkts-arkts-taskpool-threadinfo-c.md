@@ -18,7 +18,7 @@ priority?: Priority
 
 当前线程的优先级。返回为空时，代表没有任务执行。 不建议修改此值。
 
-**类型：** [Priority](arkts-arkts-taskpool-priority-e.md)
+**类型：** Priority
 
 **起始版本：** 10
 

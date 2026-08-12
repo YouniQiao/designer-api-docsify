@@ -29,7 +29,7 @@
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mode | [GestureMode](arkts-arkui-gesturemode-e.md) | 是 |
-| gesture | [GestureType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-gesturetype-t.md)[] | 是 |
+| gesture | [GestureType](arkts-arkui-gesturetype-t.md)[] | 是 |
 
 **返回值：**
 
@@ -57,7 +57,7 @@ onCancel(event: () => void): GestureGroupInterface
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 

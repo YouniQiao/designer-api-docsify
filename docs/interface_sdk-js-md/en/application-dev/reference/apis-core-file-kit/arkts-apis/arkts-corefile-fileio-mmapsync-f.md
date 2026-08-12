@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## mmapSync
@@ -18,8 +18,8 @@ Creates a file mapping object synchronously based on a file descriptor or file o
 > 
 > 1. Memory mapping can be performed only for regular files. Non-regular files, such as
 > pipeline, socket, and device
-> files, are not supported. You can use [statSync()](arkts-corefile-fileio-statsync-f.md#statsync) to obtain file attributes and then call
-> [Stat.isFile()](arkts-corefile-fileio-stat-i.md#isfile) to check whether the file is a regular file.
+> files, are not supported. You can use [statSync()](arkts-corefile-fileio-statsync-f.md#statSync) to obtain file attributes and then call
+> [Stat.isFile()](arkts-corefile-fileio-stat-i.md#isFile) to check whether the file is a regular file.
 > 
 > 2. If the mapping range exceeds the raw file size and the write permission is granted for the file, the mapping
 > file size will be automatically expanded.
@@ -28,7 +28,7 @@ Creates a file mapping object synchronously based on a file descriptor or file o
 > to the mapped memory
 > are not guaranteed due to differences in the underlying file system. This may cause the application to terminate
 > unexpectedly. You are advised to use other file access APIs such as [read](arkts-corefile-fileio-read-f.md#read),
-> [write](arkts-corefile-fileio-write-f.md#write), or [Stream](arkts-corefile-fileio-stream-i.md) in this scenario.
+> [write](arkts-corefile-fileio-write-f.md#write), or [Stream](arkts-corefile-fileio-stream-i.md#Stream) in this scenario.
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ Creates a file mapping object synchronously based on a file descriptor or file o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | int \| File | Yes | File** object or FD of the file to close. |
+| file | int \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. |
 | mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options: &lt;br&gt;- **MappingMode.READ_ONLY(0)**: read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. &lt;br&gt;- **MappingMode.READ_WRITE(1)**: read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). &lt;br&gt;- **MappingMode.PRIVATE(2)**: private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the raw file. |
 | offset | long | Yes | Start position of the file mapping area, in bytes. |
 | size | int | Yes | Size of the file mapping area, in bytes. The value ranges from 0 to **INT32_MAX**. |
@@ -53,7 +53,7 @@ Creates a file mapping object synchronously based on a file descriptor or file o
 
 | Type | Description |
 | --- | --- |
-| [FileMapping](arkts-corefile-fileio-filemapping-i.md) | File mapping object created. Initial state of the returned object: The value of **position** is **0**, and the values of **limit** and **capacity** are equal to the value of **size**. |
+| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) | File mapping object created. Initial state of the returned object: The value of **position** is **0**, and the values of **limit** and **capacity** are equal to the value of **size**. |
 
 **Error codes:**
 

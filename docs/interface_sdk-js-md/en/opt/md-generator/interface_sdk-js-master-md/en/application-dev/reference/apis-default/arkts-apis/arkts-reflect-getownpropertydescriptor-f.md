@@ -24,4 +24,4 @@ Gets the own property descriptor of the specified object.An own property descrip
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| TypedPropertyDescriptor&lt;P extends keyof T ? T[P] : any&gt; |
+| [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;P extends keyof T ? T[P] : any&gt; |

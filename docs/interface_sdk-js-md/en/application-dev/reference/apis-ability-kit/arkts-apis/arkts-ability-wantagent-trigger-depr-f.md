@@ -14,7 +14,7 @@ Triggers a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#trigger
+**Substitutes:** [trigger](ohos.app.ability.wantAgent/wantAgent#trigger)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -26,9 +26,9 @@ Triggers a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | to trigger. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to trigger. |
 | triggerInfo | [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md) | Yes | parameters. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CompleteData&gt; | No | Indicates the callback method to be called after the {@link WantAgent} is triggered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CompleteData&gt; | No | Indicates the callback method to be called after the [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent) is triggered. |
 
 ## Examples
 

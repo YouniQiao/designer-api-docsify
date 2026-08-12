@@ -18,7 +18,7 @@ dragBackgroundColor? : ColorMetrics
 
 默认值：跟随系统主题拖拽背板色。
 
-**类型：** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c-sys.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 

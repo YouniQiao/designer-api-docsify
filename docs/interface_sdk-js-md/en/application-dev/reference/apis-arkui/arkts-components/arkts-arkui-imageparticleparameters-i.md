@@ -18,7 +18,7 @@ objectFit?: ImageFit
 
 Image display mode.
 
-**Type:** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
+**Type:** ImageFit
 
 **Default:** ImageFit.Cover
 
@@ -42,7 +42,7 @@ size: ParticleTuple<Dimension, Dimension>
 
 Particle image size.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
 
 **Since:** 10
 
@@ -69,7 +69,7 @@ SVG images are not supported.
 
 If the value of src does not change, the cached resource is preferentially used. As a result, resources cannot be dynamically switched. If you want to dynamically switch resources, you are advised to switch to different src values.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 

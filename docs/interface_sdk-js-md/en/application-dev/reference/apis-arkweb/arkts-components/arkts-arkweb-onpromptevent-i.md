@@ -38,7 +38,7 @@ result: JsResult
 
 User operation result that is notified to the **Web** component.
 
-**Type:** [JsResult](../arkts-apis/arkts-arkweb-web-jsresult-c.md)
+**Type:** [JsResult](arkts-arkweb-jsresult-c.md)
 
 **Since:** 12
 

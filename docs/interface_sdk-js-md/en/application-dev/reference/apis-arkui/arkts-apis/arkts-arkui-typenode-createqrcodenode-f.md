@@ -28,5 +28,5 @@ Create a FrameNode of QRCode type.
 
 | Type | Description |
 | --- | --- |
-| [QRCode](arkts-arkui-typenode-qrcode-t.md) | Return QRCode type FrameNode. |
+| QRCode | Return QRCode type FrameNode. |
 

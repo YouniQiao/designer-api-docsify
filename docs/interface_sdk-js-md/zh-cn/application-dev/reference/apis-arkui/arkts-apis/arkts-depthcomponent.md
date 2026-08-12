@@ -3,7 +3,7 @@
 景深组件利用背景与深度图，生成具有景深空间效果的内容。
  > **说明：**
  >
- > - 子组件需要设置[空间效果](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，才能与景深组件的背景产生交互效果。
+ > - 子组件需要设置[空间效果](../../@internal/component/ets/common)，才能与景深组件的背景产生交互效果。
  >
  > - 具备基本的计算机图形学知识有助于更好地使用该组件。
 
@@ -26,7 +26,7 @@
 | [CameraBufferCrop](arkts-arkui-depthcomponent-camerabuffercrop-i-sys.md) | 相机移轴裁剪参数。 |
 | [CropOffset](arkts-arkui-depthcomponent-cropoffset-i-sys.md) | 裁剪偏移量。 |
 | [DepthCameraParams](arkts-arkui-depthcomponent-depthcameraparams-i-sys.md) | 相机参数。 |
-| [DepthComponentAttribute](arkts-arkui-depthcomponent-depthcomponentattribute-i-sys.md) | 除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性： |
+| [DepthComponentAttribute](arkts-arkui-depthcomponent-depthcomponentattribute-i-sys.md) | 除支持[通用属性](../../@internal/component/ets/common)外，还支持以下属性： |
 | [DepthComponentCompleteEvent](arkts-arkui-depthcomponent-depthcomponentcompleteevent-i-sys.md) | 背景资源加载成功的事件信息。 |
 | [DepthComponentErrorEvent](arkts-arkui-depthcomponent-depthcomponenterrorevent-i-sys.md) | 背景资源加载失败的事件信息。 |
 | [DepthComponentOptions](arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | 景深组件配置项。 |

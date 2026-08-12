@@ -13,7 +13,7 @@ The **FormAgent** module provides APIs related to the widget agent. Currently, y
 ## Modules to Import
 
 ```TypeScript
-import { formAgent } from 'kits/@kit.FormKit';
+import { formAgent } from '@kit.FormKit';
 ```
 
 ## Summary

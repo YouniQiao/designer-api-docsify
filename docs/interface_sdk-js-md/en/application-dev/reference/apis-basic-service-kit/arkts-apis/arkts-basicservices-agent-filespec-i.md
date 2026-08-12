@@ -13,7 +13,7 @@ Provides the file information of a table item.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## contentType
@@ -93,7 +93,7 @@ This API is deprecated since API version 18. You are advised to use **contentTyp
 
 **Deprecated since:** 18
 
-**Substitutes:** [request.agent.FileSpec.contentType](arkts-basicservices-agent-filespec-i.md#contenttype)
+**Substitutes:** [contentType](#contentType)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -18,7 +18,7 @@ controller?: TextClockController
 
 TextClock controller.Anonymous Object Rectification.
 
-**类型：** [TextClockController](../arkts-components/arkts-arkui-textclockcontroller-c.md)
+**类型：** [TextClockController](arkts-arkui-textclock-textclockcontroller-c.md)
 
 **起始版本：** 23
 

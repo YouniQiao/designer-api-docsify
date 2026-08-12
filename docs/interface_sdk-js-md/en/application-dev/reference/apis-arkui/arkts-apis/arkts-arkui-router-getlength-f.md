@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getLength
@@ -18,7 +18,7 @@ Obtains the number of pages in the current stack.
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 8
@@ -27,7 +27,7 @@ Obtains the number of pages in the current stack.
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)
+**Substitutes:** [getLength](arkts-arkui-arkui-uicontext-router-c.md#getLength)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

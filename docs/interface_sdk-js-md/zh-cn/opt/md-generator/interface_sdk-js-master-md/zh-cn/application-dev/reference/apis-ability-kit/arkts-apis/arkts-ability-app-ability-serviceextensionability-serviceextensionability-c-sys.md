@@ -262,13 +262,13 @@ onDump(params: Array<string>): Array<string>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| params | Array&lt;string&gt; | 是 |
+| params | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 

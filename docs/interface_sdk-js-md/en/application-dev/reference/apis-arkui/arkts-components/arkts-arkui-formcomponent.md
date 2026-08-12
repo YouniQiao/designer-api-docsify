@@ -24,7 +24,7 @@ Set a new value of form info.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FormInfo](../../apis-form-kit/arkts-apis/arkts-form-forminfo-forminfo-i.md) | Yes | [since 9 - 11] |
+| value | [FormInfo](arkts-arkui-forminfo-i-sys.md) | Yes | [since 9 - 11] |
 
 ## Summary
 

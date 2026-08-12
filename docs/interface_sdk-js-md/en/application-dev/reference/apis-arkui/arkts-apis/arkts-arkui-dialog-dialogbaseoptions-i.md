@@ -13,7 +13,7 @@ Base options shared by all dialog types.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## onDidAppear
@@ -150,7 +150,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the dialog box.&lt;br&gt;Setting this parameter to BlurStyle.NONE disables the background blur.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -174,7 +174,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Background blur style with options.
 
-**Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 26.1.0
 
@@ -196,7 +196,7 @@ backgroundColor?: ResourceColor
 
 Background color of the dialog box.&lt;br&gt;When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -220,7 +220,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Background effect with options.
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 26.1.0
 
@@ -242,7 +242,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Border color of the dialog box.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
 
 **Default:** Color.Black
 
@@ -266,7 +266,7 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 Border radius of the background.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -290,7 +290,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Border style of the dialog box.
 
-**Type:** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
+**Type:** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Default:** BorderStyle.Solid
 
@@ -314,7 +314,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the dialog box.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **Default:** 0
 
@@ -360,7 +360,7 @@ dialogTransition?: TransitionEffect
 
 Dialog transition parameters for opening/closing the dialog content area.
 
-**Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**Type:** TransitionEffect
 
 **Since:** 26.1.0
 
@@ -382,7 +382,7 @@ displayModeInSubWindow?: DialogDisplayMode
 
 Defines the dialog display mode when show in subwindow.
 
-**Type:** [DialogDisplayMode](arkts-arkui-enums-dialogdisplaymode-e.md)
+**Type:** DialogDisplayMode
 
 **Default:** DialogDisplayMode.SCREEN_BASED
 
@@ -454,7 +454,7 @@ height?: Dimension
 
 Height of the dialog box.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 26.1.0
 
@@ -476,7 +476,7 @@ hoverModeArea?: HoverModeAreaType
 
 Display area of the dialog box in hover mode.
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -500,7 +500,7 @@ immersiveMode?: ImmersiveMode
 
 Overlay effect for the page-level dialog box.
 
-**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**Type:** ImmersiveMode
 
 **Default:** ImmersiveMode.DEFAULT
 
@@ -548,7 +548,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 Distance between the dialog and system keyboard.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 26.1.0
 
@@ -570,7 +570,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 Keyboard avoid mode.
 
-**Type:** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**Type:** KeyboardAvoidMode
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
@@ -594,7 +594,7 @@ levelMode?: LevelMode
 
 Display level of the dialog box.
 
-**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**Type:** LevelMode
 
 **Default:** LevelMode.OVERLAY
 
@@ -618,7 +618,7 @@ levelOrder?: LevelOrder
 
 Display order of the dialog.
 
-**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**Type:** LevelOrder
 
 **Default:** The value returned by LevelOrder.clamp(0)
 
@@ -664,7 +664,7 @@ maskColor?: ResourceColor
 
 Mask color of the dialog.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 26.1.0
 
@@ -686,7 +686,7 @@ maskRect?: Rectangle
 
 Mask area of the dialog box. Events outside the mask area are transparently transmitted.
 
-**Type:** [Rectangle](arkts-arkui-common-rectangle-i.md)
+**Type:** Rectangle
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' }
 
@@ -710,7 +710,7 @@ maskTransition?: TransitionEffect
 
 Mask transition parameters for opening/closing the mask.
 
-**Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**Type:** TransitionEffect
 
 **Since:** 26.1.0
 
@@ -732,7 +732,7 @@ offset?: Offset
 
 Offset of the dialog relative to the alignment position.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 26.1.0
 
@@ -754,7 +754,7 @@ onWillDismiss?: Callback<DialogDismissal>
 
 Callback for interactive closure of the dialog box.&lt;br&gt;If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button.The reason parameter in the callback is used to determine whether the dialog can be closed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DialogDismissal&gt;
+**Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **Since:** 26.1.0
 
@@ -776,7 +776,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 26.1.0
 
@@ -822,7 +822,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**Type:** SystemUiMaterial
 
 **Since:** 26.1.0
 
@@ -844,7 +844,7 @@ width?: Dimension
 
 Width of the dialog box.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 26.1.0
 

@@ -13,7 +13,7 @@ The convertxml module provides APIs for converting XML text into JavaScript obje
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from 'kits/@kit.ArkTS';
+import { convertxml } from '@kit.ArkTS';
 ```
 
 ## Summary

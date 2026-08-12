@@ -10,7 +10,7 @@ Defines the WantAgent object.
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.WantAgent
+**Substitutes:** [WantAgent](ohos.app.ability.wantAgent/wantAgent.WantAgent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

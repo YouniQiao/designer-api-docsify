@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from 'kits/@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
 ```
 
 ## getNtpTime
@@ -32,8 +32,8 @@ Obtains the actual time calculated based on the last updated NTP time. This API 
 
 | Error Code ID |
 | --- |
-| [13000002](../../apis-basic-services-kit/errorcode-time.md#13000002-ntp-time-not-updated) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000002-ntp-time-not-updated) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

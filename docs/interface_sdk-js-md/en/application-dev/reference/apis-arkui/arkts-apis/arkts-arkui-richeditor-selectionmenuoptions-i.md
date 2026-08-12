@@ -72,7 +72,7 @@ menuType?: MenuType
 
 Menu type, default value is MenuType.SELECTION_MENU.
 
-**Type:** [MenuType](arkts-arkui-menutype-e.md)
+**Type:** [MenuType](arkts-arkui-textcommon-menutype-e.md)
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 Defines the preview menu options.
 
-**Type:** [PreviewMenuOptions](../arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**Type:** [PreviewMenuOptions](arkts-arkui-richeditor-previewmenuoptions-i.md)
 
 **Since:** 23
 

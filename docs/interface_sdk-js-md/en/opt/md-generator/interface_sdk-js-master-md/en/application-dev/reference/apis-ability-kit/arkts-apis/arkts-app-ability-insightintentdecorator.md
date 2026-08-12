@@ -8,11 +8,11 @@ The InsightIntentDecorator module provides several types of intent decorators fo
  [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)
  : decorates a URI in your application as an intent, enabling AI systems to quickly jump to your application via this
  intent. For details on the parameters supported by this decorator, see
- [LinkIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-linkintentdecoratorinfo-i.md).
+ [LinkIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-linkintentdecoratorinfo-i.md#LinkIntentDecoratorInfo).
  -
  [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)
  : decorates a page in your application as an intent, enabling AI systems to swiftly navigate to that page. For
- details on the parameters supported by this decorator, see [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md).
+ details on the parameters supported by this decorator, see [PageIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-pageintentdecoratorinfo-i.md#PageIntentDecoratorInfo).
  -
  [@InsightIntentFunction](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunction)
  and
@@ -26,27 +26,27 @@ The InsightIntentDecorator module provides several types of intent decorators fo
  -
  [@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)
  : decorates a class that inherits from
- [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md) to
+ [InsightIntentEntryExecutor](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor) to
  implement intent operations and configure the ability on which the intent depends. This helps the AI entry point to
  easily invoke the associated ability and perform the intended action. For details on the parameters supported by this
- decorator, see [EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md).
+ decorator, see [EntryIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-entryintentdecoratorinfo-i.md#EntryIntentDecoratorInfo).
  -
  [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)
- : decorates a [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-app-form-formextensionability.md/arkts-app-form-formextensionability.md) to specify the name of the widget
+ : decorates a [FormExtensionAbility](../../apis-form-kit/arkts-apis/arkts-form-app-form-formextensionability-formextensionability-c.md#FormExtensionAbility) to specify the name of the widget
  bound to the FormExtensionAbility. This enables the AI entry point to add the widget via intent calls. For details on
- the parameters supported by this decorator, see [FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md).
+ the parameters supported by this decorator, see [FormIntentDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-formintentdecoratorinfo-i.md#FormIntentDecoratorInfo).
  -
  [@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)
  : decorates a class that inherits from
- [IntentEntity](arkts-ability-insightintent-intententity-i.md) to define the class as an intent
+ [IntentEntity](arkts-ability-insightintent-intententity-i.md#IntentEntity) to define the class as an intent
  entity, which can pass parameters required for intent calls. For details on the parameters supported by this
- decorator, see [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md).
+ decorator, see [IntentEntityDecoratorInfo](arkts-ability-app-ability-insightintentdecorator-intententitydecoratorinfo-i.md#IntentEntityDecoratorInfo).
 
 
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -83,7 +83,7 @@ Bundle name of the publisher to be subscribed to. This parameter is used to rest
 publisherDeviceId?: string
 ```
 
-Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-deviceinfo.md)to obtain the UDID as the device ID of the publisher. Not supported currently.
+Device ID, which is used to restrict the subscriber to receive only public events published by the specified device. Use [@ohos.deviceInfo](arkts-deviceinfo.md#deviceInfo)to obtain the UDID as the device ID of the publisher. Not supported currently.
 
 **Type:** string
 
@@ -124,7 +124,7 @@ userId?: int
 ```
 
 User ID, which is used to restrict the subscriber to receive only public events related to the specified user ID. If this parameter is not specified, the default value, which is the ID of the current user, will be used. The value must be an existing user ID in the system. Use  
-[getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)to obtain the system user ID and use it as the user ID of the publisher.
+[getOsAccountLocalId](arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId)to obtain the system user ID and use it as the user ID of the publisher.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

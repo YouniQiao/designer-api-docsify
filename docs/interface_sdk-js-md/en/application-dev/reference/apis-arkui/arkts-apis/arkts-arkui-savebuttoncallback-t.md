@@ -22,6 +22,6 @@ Callback function when the save button is clicked.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | Yes | The click event. |
-| result | [SaveButtonOnClickResult](../arkts-components/arkts-arkui-savebuttononclickresult-e.md) | Yes | The result of click event. |
-| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt; | No | The error code and message of click event. |
+| result | [SaveButtonOnClickResult](arkts-arkui-savebutton-savebuttononclickresult-e.md) | Yes | The result of click event. |
+| error | [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt; | No | The error code and message of click event. |
 

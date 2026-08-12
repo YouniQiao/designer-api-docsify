@@ -50,7 +50,7 @@ getLayoutManager(): LayoutManager | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象。 |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | 布局管理器对象。 |
 
 ## setStyledString
 
@@ -74,7 +74,7 @@ setStyledString(value: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [StyledString](arkts-arkui-styledstring-c.md) | 是 |  |
+| value | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 |  |
 
 ## setTextSelection
 
@@ -86,9 +86,9 @@ setTextSelection(selectionStart: int | undefined, selectionEnd: int | undefined,
 
 > **说明：**
 > 
-> 当[copyOption](copyOption)设置为CopyOptions.None时，设置setTextSelection不生效。
+> 当[copyOption](arkts-arkui-text-textattribute-i.md#copyOption)设置为CopyOptions.None时，设置setTextSelection不生效。
 > 
-> 当[textOverflow](arkts-arkui-enums-textoverflow-e.md)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
+> 当[textOverflow](arkts-arkui-text-textattribute-i.md#textOverflow)设置为TextOverflow.MARQUEE时，设置setTextSelection不生效。
 > 
 > 当selectionStart大于等于selectionEnd时不选中。可选范围为[0, textSize]，其中textSize为文本内容最大字符数，入参小于0时处理为0，大于textSize时处理为textSize。
 > 

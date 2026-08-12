@@ -14,7 +14,7 @@ Provides callbacks to return the authentication result. This API defines the aut
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## onResult
@@ -39,7 +39,7 @@ Called to return the authentication result. If the authentication is successful,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes | Authentication result. It contains information such as the authentication result code, authentication token (when the authentication is successful), authentication type, and credential status. The application needs to check the **result.result** field to determine whether the authentication is successful. &lt;br&gt;- If the value of **result.result** is **SUCCESS(12500000)**, the authentication is successful. In this case, you can use **result.token** to perform the subsequent operations. &lt;br&gt;- If the value of **result.result** is another value, the authentication fails. In this case, you need to handle the error based on the specific error code. |
+| result | UserAuthResult | Yes | Authentication result. It contains information such as the authentication result code, authentication token (when the authentication is successful), authentication type, and credential status. The application needs to check the **result.result** field to determine whether the authentication is successful. &lt;br&gt;- If the value of **result.result** is **SUCCESS(12500000)**, the authentication is successful. In this case, you can use **result.token** to perform the subsequent operations. &lt;br&gt;- If the value of **result.result** is another value, the authentication fails. In this case, you need to handle the error based on the specific error code. |
 
 ## onResult
 

@@ -15,7 +15,7 @@ class of window extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionContext } from 'kits/@kit.ArkUI';
+import { WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## onConnect
@@ -120,7 +120,7 @@ Called back when window is created.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [window](../arkts-components/arkts-arkui-window-t.md) | window.Window | Yes |
+| [window](arkts-arkui-window-n.md) | window.Window | Yes |
 
 ## Examples
 

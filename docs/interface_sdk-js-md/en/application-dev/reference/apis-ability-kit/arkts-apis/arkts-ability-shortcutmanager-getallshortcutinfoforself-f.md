@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllShortcutInfoForSelf

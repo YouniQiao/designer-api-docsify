@@ -2,7 +2,7 @@
 
 Defines a UIWaterFlowEvent which is used to set event to target component.
 
-**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ Set or reset the callback which is triggered when the start and end positions of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWaterFlowScrollIndexCallback](../arkts-components/arkts-arkui-onwaterflowscrollindexcallback-t.md) \| undefined | Yes | callback function, triggered when start or end positions of the display change. Passing undefined will unregister the callback. |
+| callback | [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) \| undefined | Yes | callback function, triggered when start or end positions of the display change. Passing undefined will unregister the callback. |
 
 ## setOnWillScroll
 

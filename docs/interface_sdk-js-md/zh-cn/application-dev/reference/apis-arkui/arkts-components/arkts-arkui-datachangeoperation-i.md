@@ -62,7 +62,7 @@ type: DataOperationType.CHANGE
 
 数据改变类型。
 
-**类型：** DataOperationType.CHANGE
+**类型：** [DataOperationType.CHANGE](arkts-arkui-dataoperationtype-e.md)
 
 **起始版本：** 12
 

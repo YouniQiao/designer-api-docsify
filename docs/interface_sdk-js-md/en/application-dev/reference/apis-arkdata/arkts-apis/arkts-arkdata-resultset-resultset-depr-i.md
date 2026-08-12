@@ -9,7 +9,7 @@ A result set is a set of results returned after the relational database (RDB) qu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore](arkts-data-relationalstore.md)
+**Substitutes:** [relationalStore](arkts-data-relationalstore.md#relationalStore)
 
 <!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
 
@@ -29,11 +29,23 @@ Closes this result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.close
+**Substitutes:** [close](ohos.data.relationalStore.ResultSet.close)
 
 <!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## Examples
+
+```TypeScript
+let predicatesClose = new dataRdb.RdbPredicates("EMPLOYEE");
+let promiseClose = rdbStore.query(predicatesClose, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promiseClose.then((resultSet) => {
+  resultSet.close();
+}).catch((err) => {
+  console.log('resultset close failed');
+});
+```
 
 ## getBlob
 
@@ -49,7 +61,7 @@ Obtains the value from the specified column in the current row as a byte array.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.getBlob
+**Substitutes:** [getBlob](ohos.data.relationalStore.ResultSet.getBlob)
 
 <!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array--><!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array-End-->
 
@@ -67,6 +79,12 @@ Obtains the value from the specified column in the current row as a byte array.
 | --- | --- |
 | Uint8Array | Value in the specified column as a byte array. |
 
+## Examples
+
+```TypeScript
+const codes = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
+```
+
 ## getColumnIndex
 
 ```TypeScript
@@ -81,7 +99,7 @@ Obtains the column index based on the column name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.getColumnIndex
+**Substitutes:** [getColumnIndex](ohos.data.relationalStore.ResultSet.getColumnIndex)
 
 <!--Device-ResultSet-getColumnIndex(columnName: string): number--><!--Device-ResultSet-getColumnIndex(columnName: string): number-End-->
 
@@ -99,6 +117,18 @@ Obtains the column index based on the column name.
 | --- | --- |
 | number | Index of the column obtained. |
 
+## Examples
+
+```TypeScript
+const success = resultSet.goToFirstRow();
+if (success) {
+  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+}
+```
+
 ## getColumnName
 
 ```TypeScript
@@ -113,7 +143,7 @@ Obtains the column name based on the column index.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.getColumnName
+**Substitutes:** [getColumnName](ohos.data.relationalStore.ResultSet.getColumnName)
 
 <!--Device-ResultSet-getColumnName(columnIndex: number): string--><!--Device-ResultSet-getColumnName(columnIndex: number): string-End-->
 
@@ -131,6 +161,14 @@ Obtains the column name based on the column index.
 | --- | --- |
 | string | Column name obtained. |
 
+## Examples
+
+```TypeScript
+const id = resultSet.getColumnName(0);
+const name = resultSet.getColumnName(1);
+const age = resultSet.getColumnName(2);
+```
+
 ## getDouble
 
 ```TypeScript
@@ -145,7 +183,7 @@ Obtains the value from the specified column in the current row as a Double.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.getDouble
+**Substitutes:** [getDouble](ohos.data.relationalStore.ResultSet.getDouble)
 
 <!--Device-ResultSet-getDouble(columnIndex: number): number--><!--Device-ResultSet-getDouble(columnIndex: number): number-End-->
 
@@ -163,6 +201,12 @@ Obtains the value from the specified column in the current row as a Double.
 | --- | --- |
 | number | Value in the specified column as a Double. |
 
+## Examples
+
+```TypeScript
+const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+```
+
 ## getLong
 
 ```TypeScript
@@ -177,7 +221,7 @@ Obtains the value from the specified column in the current row as a Long.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.getLong
+**Substitutes:** [getLong](ohos.data.relationalStore.ResultSet.getLong)
 
 <!--Device-ResultSet-getLong(columnIndex: number): number--><!--Device-ResultSet-getLong(columnIndex: number): number-End-->
 
@@ -195,6 +239,12 @@ Obtains the value from the specified column in the current row as a Long.
 | --- | --- |
 | number | Value in the specified column as a Long. &lt;br&gt;The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
 
+## Examples
+
+```TypeScript
+const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+```
+
 ## getString
 
 ```TypeScript
@@ -209,7 +259,7 @@ Obtains the value from the specified column in the current row as a string.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.getString
+**Substitutes:** [getString](ohos.data.relationalStore.ResultSet.getString)
 
 <!--Device-ResultSet-getString(columnIndex: number): string--><!--Device-ResultSet-getString(columnIndex: number): string-End-->
 
@@ -227,6 +277,12 @@ Obtains the value from the specified column in the current row as a string.
 | --- | --- |
 | string | Value in the specified column as a string. |
 
+## Examples
+
+```TypeScript
+const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+```
+
 ## goTo
 
 ```TypeScript
@@ -241,7 +297,7 @@ Moves the result set forward or backward to the specified row with an offset rel
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.goTo
+**Substitutes:** [goTo](ohos.data.relationalStore.ResultSet.goTo)
 
 <!--Device-ResultSet-goTo(offset: number): boolean--><!--Device-ResultSet-goTo(offset: number): boolean-End-->
 
@@ -259,6 +315,19 @@ Moves the result set forward or backward to the specified row with an offset rel
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
+## Examples
+
+```TypeScript
+let predicatesgoto = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoto = rdbStore.query(predicatesgoto, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoto.then((resultSet) => {
+  resultSet.goTo(1);
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
+
 ## goToFirstRow
 
 ```TypeScript
@@ -273,7 +342,7 @@ Moves the cursor to the first row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.goToFirstRow
+**Substitutes:** [goToFirstRow](ohos.data.relationalStore.ResultSet.goToFirstRow)
 
 <!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
 
@@ -284,6 +353,19 @@ Moves the cursor to the first row of the result set.
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+let predicatesgoFirst = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoFirst = rdbStore.query(predicatesgoFirst, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoFirst.then((resultSet) => {
+  resultSet.goToFirstRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToLastRow
 
@@ -299,7 +381,7 @@ Moves the cursor to the last row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.goToLastRow
+**Substitutes:** [goToLastRow](ohos.data.relationalStore.ResultSet.goToLastRow)
 
 <!--Device-ResultSet-goToLastRow(): boolean--><!--Device-ResultSet-goToLastRow(): boolean-End-->
 
@@ -310,6 +392,19 @@ Moves the cursor to the last row of the result set.
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+let predicatesgoLast = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoLast = rdbStore.query(predicatesgoLast, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoLast.then((resultSet) => {
+  resultSet.goToLastRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToNextRow
 
@@ -325,7 +420,7 @@ Moves the cursor to the next row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.goToNextRow
+**Substitutes:** [goToNextRow](ohos.data.relationalStore.ResultSet.goToNextRow)
 
 <!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
 
@@ -336,6 +431,19 @@ Moves the cursor to the next row in the result set.
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+let predicatesgoNext = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoNext = rdbStore.query(predicatesgoNext, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoNext.then((resultSet) => {
+  resultSet.goToNextRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToPreviousRow
 
@@ -351,7 +459,7 @@ Moves the cursor to the previous row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.goToPreviousRow
+**Substitutes:** [goToPreviousRow](ohos.data.relationalStore.ResultSet.goToPreviousRow)
 
 <!--Device-ResultSet-goToPreviousRow(): boolean--><!--Device-ResultSet-goToPreviousRow(): boolean-End-->
 
@@ -362,6 +470,19 @@ Moves the cursor to the previous row in the result set.
 | Type | Description |
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
+
+## Examples
+
+```TypeScript
+let predicatesgoPrev = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoPrev = rdbStore.query(predicatesgoPrev, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoPrev.then((resultSet) => {
+  resultSet.goToPreviousRow();
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
 
 ## goToRow
 
@@ -377,7 +498,7 @@ Moves the cursor to the specified row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.goToRow
+**Substitutes:** [goToRow](ohos.data.relationalStore.ResultSet.goToRow)
 
 <!--Device-ResultSet-goToRow(position: number): boolean--><!--Device-ResultSet-goToRow(position: number): boolean-End-->
 
@@ -395,6 +516,19 @@ Moves the cursor to the specified row in the result set.
 | --- | --- |
 | boolean | Returns **true** if the operation is successful; returns **false** otherwise. |
 
+## Examples
+
+```TypeScript
+let predicatesgotorow = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygotorow = rdbStore.query(predicatesgotorow, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygotorow.then((resultSet) => {
+  resultSet.goToRow(5);
+  resultSet.close();
+}).catch((err) => {
+  console.log('query failed');
+});
+```
+
 ## isColumnNull
 
 ```TypeScript
@@ -409,7 +543,7 @@ Checks whether the value in the specified column of the current row is null.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.isColumnNull
+**Substitutes:** [isColumnNull](ohos.data.relationalStore.ResultSet.isColumnNull)
 
 <!--Device-ResultSet-isColumnNull(columnIndex: number): boolean--><!--Device-ResultSet-isColumnNull(columnIndex: number): boolean-End-->
 
@@ -427,6 +561,12 @@ Checks whether the value in the specified column of the current row is null.
 | --- | --- |
 | boolean | Returns **true** if the value is null; returns **false** otherwise. |
 
+## Examples
+
+```TypeScript
+const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
+```
+
 ## columnCount
 
 ```TypeScript
@@ -443,7 +583,7 @@ Number of columns in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.columnCount
+**Substitutes:** [columnCount](ohos.data.relationalStore.ResultSet.columnCount)
 
 <!--Device-ResultSet-columnCount: number--><!--Device-ResultSet-columnCount: number-End-->
 
@@ -465,7 +605,7 @@ Names of all columns in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.columnNames
+**Substitutes:** [columnNames](ohos.data.relationalStore.ResultSet.columnNames)
 
 <!--Device-ResultSet-columnNames: Array<string>--><!--Device-ResultSet-columnNames: Array<string>-End-->
 
@@ -487,7 +627,7 @@ Whether the cursor is in the first row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.isAtFirstRow
+**Substitutes:** [isAtFirstRow](ohos.data.relationalStore.ResultSet.isAtFirstRow)
 
 <!--Device-ResultSet-isAtFirstRow: boolean--><!--Device-ResultSet-isAtFirstRow: boolean-End-->
 
@@ -509,7 +649,7 @@ Whether the cursor is in the last row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.isAtLastRow
+**Substitutes:** [isAtLastRow](ohos.data.relationalStore.ResultSet.isAtLastRow)
 
 <!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
@@ -531,7 +671,7 @@ Whether the result set is closed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.isClosed
+**Substitutes:** [isClosed](ohos.data.relationalStore.ResultSet.isClosed)
 
 <!--Device-ResultSet-isClosed: boolean--><!--Device-ResultSet-isClosed: boolean-End-->
 
@@ -553,7 +693,7 @@ Whether the cursor is after the last row of the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.isEnded
+**Substitutes:** [isEnded](ohos.data.relationalStore.ResultSet.isEnded)
 
 <!--Device-ResultSet-isEnded: boolean--><!--Device-ResultSet-isEnded: boolean-End-->
 
@@ -575,7 +715,7 @@ Whether the cursor has been moved.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.isStarted
+**Substitutes:** [isStarted](ohos.data.relationalStore.ResultSet.isStarted)
 
 <!--Device-ResultSet-isStarted: boolean--><!--Device-ResultSet-isStarted: boolean-End-->
 
@@ -597,7 +737,7 @@ Number of rows in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.rowCount
+**Substitutes:** [rowCount](ohos.data.relationalStore.ResultSet.rowCount)
 
 <!--Device-ResultSet-rowCount: number--><!--Device-ResultSet-rowCount: number-End-->
 
@@ -619,7 +759,7 @@ Index of the current row in the result set.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.relationalStore.ResultSet.rowIndex
+**Substitutes:** [rowIndex](ohos.data.relationalStore.ResultSet.rowIndex)
 
 <!--Device-ResultSet-rowIndex: number--><!--Device-ResultSet-rowIndex: number-End-->
 

@@ -34,11 +34,11 @@ Initialize GridRow FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GridRowOptions](../arkts-components/arkts-arkui-gridrowoptions-i.md) | No | GridRow options. |
+| options | GridRowOptions | No | GridRow options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridRowAttribute](../arkts-components/arkts-arkui-gridrow-attribute.md) |  |
+| GridRowAttribute |  |
 

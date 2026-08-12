@@ -24,7 +24,7 @@ In the custom preview (**preview** is of the CustomBuilder type) and menu displa
 If the value is less than or equal to **0**, this parameter does not take effect.
 
 This API does not take effect in   
-[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)scenarios.
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu-1)scenarios.
 
 This API does not take effect when **transition** is set.
 
@@ -119,9 +119,9 @@ Transition effect for the entrance and exit of the menu.
 
 If the screen orientation is switched during the exit animation of a menu, the menu will avoid obstacles. Level-2 menus do not inherit custom animations. The level-2 menu can be clicked during the display process, but not during the execution of the exit animation.
 
-For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md).
+For details, see [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect).
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
 

@@ -23,5 +23,5 @@ type ResultCallback = (challenge: Uint8Array, result: UserAuthResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | challenge | Uint8Array | 是 | 挑战值。用于防止重放攻击的一次性随机数，与发起认证时传入的challenge值一致。 |
-| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | 是 | 用户认证结果。包含认证结果码、认证令牌等信息。 |
+| result | UserAuthResult | 是 | 用户认证结果。包含认证结果码、认证令牌等信息。 |
 

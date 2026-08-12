@@ -12,7 +12,7 @@ Clear up application data by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#clearUpApplicationData
+**Substitutes:** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -32,7 +32,7 @@ Clear up application data by bundle name
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Clear up application data by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#clearUpApplicationData
+**Substitutes:** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 

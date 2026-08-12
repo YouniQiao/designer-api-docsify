@@ -13,7 +13,7 @@ Defines the parameters that need to be specified for bundle installation, uninst
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'kits/@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## additionalInfo
@@ -60,7 +60,7 @@ hashParams?: Array<HashParam>
 
 Hash parameters. By default, no value is passed.
 
-**Type:** Array&lt;HashParam&gt;
+**Type:** Array&lt;[HashParam](arkts-ability-installer-hashparam-i-sys.md)&gt;
 
 **Since:** 9
 
@@ -121,13 +121,13 @@ Extended parameters, represented as an array of the Parameters type. The default
 application sandbox to the installation directory using a shared directory. Otherwise, it is copied from the application sandbox to the installation directory using a regular directory.  
 - **ohos.bms.param.enterpriseForAllUser**: If the value is **true**, the enterprise app is installed for all  
 users. This parameter takes effect only for applications whose  
-[distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md)is **enterprise_mdm** or **enterprise_normal**.  
+[distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md#ApplicationInfo)is **enterprise_mdm** or **enterprise_normal**.  
 - **ohos.bms.param.verifyUninstallRule**: If the value is **true**, an uninstallation handling rule is set to  
 block application uninstallation.  
 - **ohos.bms.param.enterpriseManifest**: The value is the sandbox path of the JSON file used to store the  
 application's manifest, including the bundle name. It is used in the scenario of cloning enterprise applications.If this JSON file exists during cloning, the application package from the old device is copied to the new device for installation.  
 - **ohos.bms.param.installBundleName**: The value is the bundle name of the application. It is used in  
-application installation scenarios and supported since API version 23. If this field is passed during installation, the [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md#getbundleinstallstatus)API can be called to obtain the installation status of the application.  
+application installation scenarios and supported since API version 23. If this field is passed during installation, the [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md#getBundleInstallStatus)API can be called to obtain the installation status of the application.  
 - **ohos.bms.param.installAllowDowngrade**: If the value is **true**, the application can be installed in  
 downgrade mode (supported since API version 23). That is, if a higher version of the application is already installed on the device, a lower version can be installed over it. Only third-party applications with the signing certificate distribution type set to **app_gallery** or the signing certificate type set to **debug** support downgrade installation. To use downgrade installation, you must request the ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE permissions.
 
@@ -149,7 +149,7 @@ pgoParams?: Array<PGOParam>
 
 Parameters of the Profile-guided Optimization (PGO) configuration file. The default value is null.
 
-**Type:** Array&lt;PGOParam&gt;
+**Type:** Array&lt;[PGOParam](arkts-ability-installer-pgoparam-i-sys.md)&gt;
 
 **Since:** 11
 
@@ -202,7 +202,7 @@ userId?: number
 ```
 
 User ID. The default value is the user ID of the caller. The value must be greater than or equal to 0. You can call  
-[queryOsAccountLocalIdFromProcess](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)to obtain the user ID of the current process. When a driver application is installed, uninstalled, or restored,this parameter is ignored and the operation is executed for all users.
+[queryOsAccountLocalIdFromProcess](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId)to obtain the user ID of the current process. When a driver application is installed, uninstalled, or restored,this parameter is ignored and the operation is executed for all users.
 
 **Type:** number
 
@@ -226,7 +226,7 @@ Information about the code signature file. The default value is null.
 
 Starting from API version 10, the code signature file of an application is integrated into the installation package, rather than being specified by using this field. This field is deprecated since API version 11.
 
-**Type:** Array&lt;VerifyCodeParam&gt;
+**Type:** Array&lt;[VerifyCodeParam](arkts-ability-installer-verifycodeparam-i-sys.md)&gt;
 
 **Since:** 10
 

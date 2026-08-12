@@ -38,7 +38,7 @@ fractionStops: FractionStop[] | undefined
 
 Percentage of blurring effect. Undefined value means no fractionStops.
 
-**Type:** FractionStop[] \| undefined
+**Type:** [FractionStop](arkts-arkui-fractionstop-t.md)[] \| undefined
 
 **Since:** 23
 

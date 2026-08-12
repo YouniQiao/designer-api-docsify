@@ -11,7 +11,7 @@ Describes the information about a media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumUri
@@ -54,7 +54,7 @@ mediaType: PhotoType
 
 Type of the media asset (image or video).
 
-**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
+**Type:** PhotoType
 
 **Since:** 20
 

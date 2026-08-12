@@ -15,7 +15,7 @@ function getRemoteAbilityInfos(elementNames: Array<ElementName>,
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -47,7 +47,7 @@ function getRemoteAbilityInfos(elementNames: Array<ElementName>): Promise<Array<
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

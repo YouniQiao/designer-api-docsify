@@ -1,11 +1,11 @@
 # VideoPlayer
 
 视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过  
-[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer)构建一个VideoPlayer实例。
+[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createVideoPlayer)构建一个VideoPlayer实例。
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md#media)替代。
 
 **起始版本：** 8
 
@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media](arkts-media-media-n.md)
+**替代接口：** [media](arkts-media-media-n.md#media)
 
 <!--Device-unnamed-interface VideoPlayer--><!--Device-unnamed-interface VideoPlayer-End-->
 
@@ -30,7 +30,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)
 > 替代。
 
 **起始版本：** 8
@@ -39,7 +39,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback:
+**替代接口：** [getTrackDescription](@ohos.multimedia.media:media.AVPlayer.getTrackDescription(callback:)
 
 <!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -49,7 +49,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息 MediaDescription数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息 MediaDescription数组，否则为错误对象。 |
 
 ## getTrackDescription
 
@@ -62,7 +62,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)替代。
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)替代。
 
 **起始版本：** 8
 
@@ -70,7 +70,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
+**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)()
 
 <!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -80,7 +80,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; | Promise对象，返回获取的视频轨道信息MediaDescription数组。 |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | Promise对象，返回获取的视频轨道信息MediaDescription数组。 |
 
 ## on('playbackCompleted')
 
@@ -102,7 +102,7 @@ on(type: 'playbackCompleted', callback: Callback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void-End-->
 
@@ -135,7 +135,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
@@ -168,7 +168,7 @@ on(type: 'startRenderFrame', callback: Callback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void-End-->
 
@@ -201,7 +201,7 @@ on(type: 'videoSizeChanged', callback: (width: number, height: number) => void):
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void--><!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void-End-->
 
@@ -220,7 +220,7 @@ on(type: 'videoSizeChanged', callback: (width: number, height: number) => void):
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md/arkts-audio-audio-interruptevent-i.md)。
+监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent)。
 
 > **说明：**
 > 
@@ -234,7 +234,7 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
@@ -267,7 +267,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -299,7 +299,7 @@ pause(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)(callback:
+**替代接口：** [pause](@ohos.multimedia.media:media.AVPlayer.pause(callback:)
 
 <!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -330,7 +330,7 @@ pause(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)()
+**替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)()
 
 <!--Device-VideoPlayer-pause(): Promise<void>--><!--Device-VideoPlayer-pause(): Promise<void>-End-->
 
@@ -361,7 +361,7 @@ play(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.play](arkts-media-media-avplayer-i.md#play)(callback:
+**替代接口：** [play](@ohos.multimedia.media:media.AVPlayer.play(callback:)
 
 <!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void-End-->
 
@@ -392,7 +392,7 @@ play(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.play](arkts-media-media-avplayer-i.md#play)()
+**替代接口：** [play](arkts-media-media-avplayer-i.md#play)()
 
 <!--Device-VideoPlayer-play(): Promise<void>--><!--Device-VideoPlayer-play(): Promise<void>-End-->
 
@@ -423,7 +423,7 @@ prepare(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)(callback:
+**替代接口：** [prepare](@ohos.multimedia.media:media.AVPlayer.prepare(callback:)
 
 <!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -454,7 +454,7 @@ prepare(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)()
+**替代接口：** [prepare](arkts-media-media-avplayer-i.md#prepare)()
 
 <!--Device-VideoPlayer-prepare(): Promise<void>--><!--Device-VideoPlayer-prepare(): Promise<void>-End-->
 
@@ -485,7 +485,7 @@ release(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.release](arkts-media-media-avplayer-i.md#release)(callback:
+**替代接口：** [release](@ohos.multimedia.media:media.AVPlayer.release(callback:)
 
 <!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -516,7 +516,7 @@ release(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.release](arkts-media-media-avplayer-i.md#release)()
+**替代接口：** [release](arkts-media-media-avplayer-i.md#release)()
 
 <!--Device-VideoPlayer-release(): Promise<void>--><!--Device-VideoPlayer-release(): Promise<void>-End-->
 
@@ -547,7 +547,7 @@ reset(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)(callback:
+**替代接口：** [reset](@ohos.multimedia.media:media.AVPlayer.reset(callback:)
 
 <!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -578,7 +578,7 @@ reset(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)()
+**替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)()
 
 <!--Device-VideoPlayer-reset(): Promise<void>--><!--Device-VideoPlayer-reset(): Promise<void>-End-->
 
@@ -608,7 +608,7 @@ seek(timeMs: number, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void-End-->
 
@@ -639,7 +639,7 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void-End-->
 
@@ -650,7 +650,7 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | [SeekMode](../../apis-arkui/arkts-apis/arkts-arkui-video-seekmode-e.md) | 是 | 跳转模式。 |
+| mode | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 是 | 跳转模式。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
 
 ## seek
@@ -671,7 +671,7 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>--><!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>-End-->
 
@@ -682,7 +682,7 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
-| mode | [SeekMode](../../apis-arkui/arkts-apis/arkts-arkui-video-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
+| mode | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式。 |
 
 **返回值：**
 
@@ -711,7 +711,7 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 <!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -721,7 +721,7 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent](./@internal/component/ets/xcomponent)。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置SurfaceId成功，err为undefined，否则为错误对象。 |
 
 ## setDisplaySurface
@@ -745,7 +745,7 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 <!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>-End-->
 
@@ -755,7 +755,7 @@ setDisplaySurface(surfaceId: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-i)。 |
+| surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考 [XComponent](./@internal/component/ets/xcomponent)。 |
 
 **返回值：**
 
@@ -782,7 +782,7 @@ setSpeed(speed: number, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.setSpeed
+**替代接口：** [setSpeed](@ohos.multimedia.media:media.AVPlayer.setSpeed)
 
 <!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void-End-->
 
@@ -814,7 +814,7 @@ setSpeed(speed: number): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.setSpeed
+**替代接口：** [setSpeed](@ohos.multimedia.media:media.AVPlayer.setSpeed)
 
 <!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>--><!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>-End-->
 
@@ -843,7 +843,7 @@ setVolume(vol: number, callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
+> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setVolume)替代。
 
 **起始版本：** 8
 
@@ -851,7 +851,7 @@ setVolume(vol: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)
+**替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
 
 <!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void-End-->
 
@@ -875,7 +875,7 @@ setVolume(vol: number): Promise<void>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
+> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setVolume)替代。
 
 **起始版本：** 8
 
@@ -883,7 +883,7 @@ setVolume(vol: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)
+**替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
 
 <!--Device-VideoPlayer-setVolume(vol: number): Promise<void>--><!--Device-VideoPlayer-setVolume(vol: number): Promise<void>-End-->
 
@@ -920,7 +920,7 @@ stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)(callback:
+**替代接口：** [stop](@ohos.multimedia.media:media.AVPlayer.stop(callback:)
 
 <!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -951,7 +951,7 @@ stop(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)()
+**替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)()
 
 <!--Device-VideoPlayer-stop(): Promise<void>--><!--Device-VideoPlayer-stop(): Promise<void>-End-->
 
@@ -979,7 +979,7 @@ audioInterruptMode?: audio.InterruptMode
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#audioInterruptMode
+**替代接口：** [audioInterruptMode](ohos.multimedia.media/media.AVPlayer#audioInterruptMode)
 
 <!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
@@ -1001,7 +1001,7 @@ readonly currentTime: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#currentTime
+**替代接口：** [currentTime](ohos.multimedia.media/media.AVPlayer#currentTime)
 
 <!--Device-VideoPlayer-readonly currentTime: number--><!--Device-VideoPlayer-readonly currentTime: number-End-->
 
@@ -1023,7 +1023,7 @@ readonly duration: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#duration
+**替代接口：** [duration](ohos.multimedia.media/media.AVPlayer#duration)
 
 <!--Device-VideoPlayer-readonly duration: number--><!--Device-VideoPlayer-readonly duration: number-End-->
 
@@ -1059,7 +1059,7 @@ fdSrc: AVFileDescriptor
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#fdSrc
+**替代接口：** [fdSrc](ohos.multimedia.media/media.AVPlayer#fdSrc)
 
 <!--Device-VideoPlayer-fdSrc: AVFileDescriptor--><!--Device-VideoPlayer-fdSrc: AVFileDescriptor-End-->
 
@@ -1081,7 +1081,7 @@ readonly height: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#height
+**替代接口：** [height](ohos.multimedia.media/media.AVPlayer#height)
 
 <!--Device-VideoPlayer-readonly height: number--><!--Device-VideoPlayer-readonly height: number-End-->
 
@@ -1103,7 +1103,7 @@ loop: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#loop
+**替代接口：** [loop](ohos.multimedia.media/media.AVPlayer#loop)
 
 <!--Device-VideoPlayer-loop: boolean--><!--Device-VideoPlayer-loop: boolean-End-->
 
@@ -1125,7 +1125,7 @@ readonly state: VideoPlayState
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#state
+**替代接口：** [state](ohos.multimedia.media/media.AVPlayer#state)
 
 <!--Device-VideoPlayer-readonly state: VideoPlayState--><!--Device-VideoPlayer-readonly state: VideoPlayState-End-->
 
@@ -1159,7 +1159,7 @@ url: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#url
+**替代接口：** [url](ohos.multimedia.media/media.AVPlayer#url)
 
 <!--Device-VideoPlayer-url: string--><!--Device-VideoPlayer-url: string-End-->
 
@@ -1181,7 +1181,7 @@ videoScaleType?: VideoScaleType
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#videoScaleType
+**替代接口：** [videoScaleType](#videoScaleType)
 
 <!--Device-VideoPlayer-videoScaleType?: VideoScaleType--><!--Device-VideoPlayer-videoScaleType?: VideoScaleType-End-->
 
@@ -1203,7 +1203,7 @@ readonly width: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#width
+**替代接口：** [width](ohos.multimedia.media/media.AVPlayer#width)
 
 <!--Device-VideoPlayer-readonly width: number--><!--Device-VideoPlayer-readonly width: number-End-->
 

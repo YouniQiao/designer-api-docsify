@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## allocUninitialized

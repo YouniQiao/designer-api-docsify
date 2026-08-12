@@ -8,7 +8,7 @@ Represents a **Schema** instance, which provides the APIs for defining the value
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.FieldNode
+**Substitutes:** [FieldNode](ohos.data.distributedKVStore.FieldNode)
 
 <!--Device-distributedData-class FieldNode--><!--Device-distributedData-class FieldNode-End-->
 
@@ -28,7 +28,7 @@ Appends a child node to this **FieldNode**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.FieldNode#appendChild
+**Substitutes:** [appendChild](ohos.data.distributedKVStore.FieldNode#appendChild)
 
 <!--Device-FieldNode-appendChild(child: FieldNode): boolean--><!--Device-FieldNode-appendChild(child: FieldNode): boolean-End-->
 
@@ -38,7 +38,7 @@ Appends a child node to this **FieldNode**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md) | Yes | Child node to append. |
+| child | FieldNode | Yes | Child node to append. |
 
 **Return value:**
 
@@ -82,7 +82,7 @@ A constructor used to create a **FieldNode** instance with a string field.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.FieldNode#constructor
+**Substitutes:** [constructor](ohos.data.distributedKVStore.FieldNode#constructor)
 
 <!--Device-FieldNode-constructor(name: string)--><!--Device-FieldNode-constructor(name: string)-End-->
 
@@ -110,7 +110,7 @@ Default value of a **FieldNode**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.FieldNode#default
+**Substitutes:** [default](ohos.data.distributedKVStore.FieldNode#default)
 
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
 
@@ -132,7 +132,7 @@ Whether the database field can be null.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.FieldNode#nullable
+**Substitutes:** [nullable](ohos.data.distributedKVStore.FieldNode#nullable)
 
 <!--Device-FieldNode-nullable: boolean--><!--Device-FieldNode-nullable: boolean-End-->
 
@@ -154,7 +154,7 @@ Value of the data type corresponding to the specified node.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.FieldNode#type
+**Substitutes:** [type](ohos.data.distributedKVStore.FieldNode#type)
 
 <!--Device-FieldNode-type: number--><!--Device-FieldNode-type: number-End-->
 

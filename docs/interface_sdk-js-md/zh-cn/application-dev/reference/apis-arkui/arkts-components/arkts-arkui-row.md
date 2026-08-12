@@ -72,7 +72,7 @@ Row(options?: RowOptions | RowOptionsV2)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RowOptions](arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | 否 | 横向布局的配置对象，用于设置子组件间距（单位：vp），其中space属性支持设置number、string或Resource类型的 值。不传入时默认间距为0。 <br>**说明：** 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、 FlexAlign.SpaceEvenly时不生效。 |
+| options | [RowOptions](arkts-arkui-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | 否 | 横向布局的配置对象，用于设置子组件间距（单位：vp），其中space属性支持设置number、string或Resource类型的 值。不传入时默认间距为0。 <br>**说明：** 从API version 9开始，space为负数或者justifyContent设置为FlexAlign.SpaceBetween、FlexAlign.SpaceAround、 FlexAlign.SpaceEvenly时不生效。 |
 
 ## 汇总
 

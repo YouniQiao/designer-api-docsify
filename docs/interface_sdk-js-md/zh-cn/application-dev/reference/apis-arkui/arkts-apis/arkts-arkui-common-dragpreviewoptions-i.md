@@ -18,7 +18,7 @@ mode?: DragPreviewMode | Array<DragPreviewMode>
 
 Drag preview mode.
 
-**类型：** [DragPreviewMode](arkts-arkui-common-dragpreviewmode-e.md) \| Array&lt;DragPreviewMode&gt;
+**类型：** [DragPreviewMode](arkts-arkui-common-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-common-dragpreviewmode-e.md)&gt;
 
 **默认值：** DragPreviewMode.AUTO
 

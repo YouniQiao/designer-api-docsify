@@ -1,9 +1,9 @@
 # UIListEvent
 
 Represents the return value of the  
-[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent) method in **frameNode**,which can be used to set scroll events for a **List** node.
+[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-1) method in **frameNode**,which can be used to set scroll events for a **List** node.
 
-**Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIListEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **Since:** 19
 
@@ -40,7 +40,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | Callback for the **onDidScroll** event. |
+| callback | OnScrollCallback \| undefined | Yes | Callback for the **onDidScroll** event. |
 
 ## setOnScrollIndex
 
@@ -69,7 +69,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnListScrollIndexCallback](../arkts-apis/arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | Yes | Callback for the **onScrollIndex** event. |
+| callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | Yes | Callback for the **onScrollIndex** event. |
 
 ## setOnScrollVisibleContentChange
 
@@ -97,7 +97,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollVisibleContentChangeCallback](../arkts-apis/arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | Yes | Callback for the **onScrollVisibleContentChange** event. |
+| callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | Yes | Callback for the **onScrollVisibleContentChange** event. |
 
 ## setOnWillScroll
 
@@ -126,5 +126,5 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | Callback for the **onWillScroll** event. |
+| callback | OnWillScrollCallback \| undefined | Yes | Callback for the **onWillScroll** event. |
 

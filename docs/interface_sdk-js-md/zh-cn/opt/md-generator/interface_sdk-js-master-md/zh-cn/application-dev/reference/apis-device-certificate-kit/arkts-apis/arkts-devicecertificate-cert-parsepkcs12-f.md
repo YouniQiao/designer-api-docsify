@@ -33,11 +33,11 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
-| [19030008](../errorcode-cert.md#19030008-私钥密码错误) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030008-私钥密码错误) |
 
 ## 示例
 
@@ -244,17 +244,17 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 | 类型 |
 | --- |
-| Promise&lt;Pkcs12Data&gt; |
+| Promise&lt;[Pkcs12Data](arkts-devicecertificate-cert-pkcs12data-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
-| [19030008](../errorcode-cert.md#19030008-私钥密码错误) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030008-私钥密码错误) |
 
 ## 示例
 

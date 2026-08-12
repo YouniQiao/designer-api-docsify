@@ -22,7 +22,7 @@ function createEffect(): VisualEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回VisualEffect实例，支持添加多种VisualEffect效果。 |
+| VisualEffect | 返回VisualEffect实例，支持添加多种VisualEffect效果。 |
 
 ## 示例
 

@@ -16,7 +16,7 @@ Construct the ability component.Called when the ability component is used.
 
 **Deprecated since:** 10
 
-**Substitutes:** <!--SUBSTITUTE_API-->UIExtensionComponentInterface<!--/SUBSTITUTE_API-->
+**Substitutes:** [UIExtensionComponentInterface](UIExtensionComponentInterface)
 
 <!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute--><!--Device-AbilityComponentInterface-(value: { want: import('../api/@ohos.app.ability.Want').default }): AbilityComponentAttribute-End-->
 

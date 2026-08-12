@@ -38,6 +38,27 @@ autoRefresh?(value: boolean): ColorMetrics
 | --- |
 | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
+## 示例
+
+```TypeScript
+import { ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MyStateSample {
+  @State colorMetrics: ColorMetrics = ColorMetrics.resourceColor($r('sys.color.font_primary')).autoRefresh!(true);
+
+  build() {
+    Column() {
+      Text('Test ColorMetrics')
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor(this.colorMetrics)
+  }
+}
+```
+
 ## blendColor
 
 ```TypeScript
@@ -72,7 +93,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## colorWithSpace
 
@@ -80,7 +101,7 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](arkts-arkui-colorspace-e.md)和rgba格式颜色实例化ColorMetrics类。仅red、green、blue属性支持在display-p3色彩空间中设置颜色，alpha属性不受色彩空间影响。
+使用[ColorSpace](ColorSpace)和rgba格式颜色实例化ColorMetrics类。仅red、green、blue属性支持在display-p3色彩空间中设置颜色，alpha属性不受色彩空间影响。
 
 **起始版本：** 20
 
@@ -172,8 +193,8 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 错误码ID |
 | --- |
-| [180003](../errorcode-event.md#180003-该事件不是克隆事件) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [180003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-event.md#180003-该事件不是克隆事件) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## rgba
 

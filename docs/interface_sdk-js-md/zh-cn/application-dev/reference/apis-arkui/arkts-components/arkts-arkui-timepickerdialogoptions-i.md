@@ -2,9 +2,9 @@
 
 时间选择器弹窗选项。
 
-继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
+继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)。
 
-**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
+**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)
 
 **起始版本：** 8
 
@@ -36,7 +36,7 @@ onAccept?: (value: TimePickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TimePickerResult](../arkts-apis/arkts-arkui-timepicker-timepickerresult-i.md) | 是 |  |
+| value | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | 是 |  |
 
 ## onCancel
 
@@ -78,7 +78,7 @@ onChange?: (value: TimePickerResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TimePickerResult](../arkts-apis/arkts-arkui-timepicker-timepickerresult-i.md) | 是 |  |
+| value | [TimePickerResult](arkts-arkui-timepickerresult-i.md) | 是 |  |
 
 ## onDidAppear
 
@@ -194,7 +194,7 @@ acceptButtonStyle?: PickerDialogButtonStyle
 
 设置确认按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
 
-> 默认值：请参考[PickerDialogButtonStyle](../arkts-apis/arkts-arkui-common-pickerdialogbuttonstyle-i.md/arkts-arkui-common-pickerdialogbuttonstyle-i.md)。
+> 默认值：请参考[PickerDialogButtonStyle](PickerDialogButtonStyle)。
 
 > **说明：**
 > 
@@ -202,9 +202,9 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > 保持默认值false。
 > 
 > 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#capsule)。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，呈现效果依然是胶囊型按钮[Capsule](ButtonType#Capsule)。
 
-**类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**类型：** PickerDialogButtonStyle
 
 **起始版本：** 12
 
@@ -228,7 +228,7 @@ alignment?: DialogAlignment
 
 默认值：DialogAlignment.Default
 
-**类型：** [DialogAlignment](../arkts-apis/arkts-arkui-alertdialog-dialogalignment-e.md)
+**类型：** DialogAlignment
 
 **起始版本：** 10
 
@@ -258,7 +258,7 @@ backgroundBlurStyle?: BlurStyle
 > 否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundBlurStyle不生效。
 
-**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -285,10 +285,10 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 > **说明：**
 > 
 > 未设置时沿用
-> [backgroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
 > 的默认效果（BlurStyle.COMPONENT_ULTRA_THICK）。
 
-**类型：** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 19
 
@@ -317,7 +317,7 @@ backgroundColor?: ResourceColor
 > 1. 当设置了backgroundColor为非透明色时，backgroundBlurStyle需要设置为BlurStyle.NONE，否则显示的颜色将不符合预期效果。
 > 2. 从API版本26.0.0开始，设置systemMaterial后，backgroundColor不生效。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** Color.Transparent
 
@@ -344,11 +344,11 @@ backgroundEffect?: BackgroundEffectOptions
 > **说明：**
 > 
 > 未设置时不生效，此时弹窗背景模糊效果由
-> [backgroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
 > 决定；设置后将覆盖backgroundBlurStyle的效果。从API版本26.0.0开始，
 > 设置systemMaterial后backgroundEffect与backgroundBlurStyle均不生效。
 
-**类型：** [BackgroundEffectOptions](../arkts-apis/arkts-arkui-common-backgroundeffectoptions-i.md)
+**类型：** BackgroundEffectOptions
 
 **起始版本：** 19
 
@@ -370,7 +370,7 @@ cancelButtonStyle?: PickerDialogButtonStyle
 
 设置取消按钮显示样式、重要程度、角色、背景色、圆角、文本颜色、字号、字体粗细、字体样式、字体列表、按钮是否默认响应Enter键。
 
-> 默认值：请参考[PickerDialogButtonStyle](../arkts-apis/arkts-arkui-common-pickerdialogbuttonstyle-i.md/arkts-arkui-common-pickerdialogbuttonstyle-i.md)。
+> 默认值：请参考[PickerDialogButtonStyle](PickerDialogButtonStyle)。
 
 > **说明：**
 > 
@@ -378,9 +378,9 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > 保持默认值false。
 > 
 > 2. 按钮高度默认40vp，borderRadius单位为vp。在关怀模式-大字体场景下高度不变，即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#rounded_rectangle)，呈现效果依然是胶囊型按钮[Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md#capsule)。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，呈现效果依然是胶囊型按钮[Capsule](ButtonType#Capsule)。
 
-**类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**类型：** PickerDialogButtonStyle
 
 **起始版本：** 12
 
@@ -409,7 +409,7 @@ dateTimeOptions?: DateTimeOptions
 > 
 > - minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 
-**类型：** [DateTimeOptions](../../apis-default/arkts-apis/arkts-intl-datetimeoptions-i.md)
+**类型：** [DateTimeOptions](arkts-arkui-datetimeoptions-t.md)
 
 **起始版本：** 12
 
@@ -435,7 +435,7 @@ disappearTextStyle?: PickerTextStyle
 
 &lt;br&gt;{&lt;br&gt;color: '#ff182431',&lt;br&gt;font: {&lt;br&gt;size: '14fp',&lt;br&gt;weight: FontWeight.Regular&lt;br&gt;}&lt;br&gt;}
 
-**类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**类型：** PickerTextStyle
 
 **起始版本：** 10
 
@@ -555,7 +555,7 @@ hoverModeArea?: HoverModeAreaType
 
 默认值：HoverModeAreaType.BOTTOM_SCREEN
 
-**类型：** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
+**类型：** HoverModeAreaType
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -581,7 +581,7 @@ maskRect?: Rectangle
 
 默认值：{ x: 0, y: 0, width: '100%', height: '100%' }
 
-**类型：** [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md)
+**类型：** Rectangle
 
 **起始版本：** 10
 
@@ -605,7 +605,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](../arkts-apis/arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 10
 
@@ -632,7 +632,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 > 当enableCascade设置为true时，由于上午/下午列与小时列存在联动关系，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节点，
 > 而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TimePickerResult&gt;
+**类型：** Callback&lt;[TimePickerResult](arkts-arkui-timepickerresult-i.md)&gt;
 
 **起始版本：** 18
 
@@ -664,7 +664,7 @@ selectedTextStyle?: PickerTextStyle
 > &lt;br&gt;}
 > &lt;br&gt;}
 
-**类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**类型：** PickerTextStyle
 
 **起始版本：** 10
 
@@ -692,7 +692,7 @@ shadow?: ShadowOptions | ShadowStyle
 > 
 > 从API版本26.0.0开始，设置systemMaterial后，shadow不生效。
 
-**类型：** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**类型：** ShadowOptions \| ShadowStyle
 
 **起始版本：** 12
 
@@ -716,16 +716,16 @@ systemMaterial?: SystemUiMaterial
 
 > **说明：**
 > 
-> - 默认值：[ImmersiveOptions](ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的
-> [ImmersiveMaterial](ImmersiveMaterial)对象。设置undefined时与默认值保持一致。
-> - 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、
+> - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md#ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的
+> [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial)对象。设置undefined时与默认值保持一致。
+> - 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、
 > 背景模糊
-> [backgroundBlurStyle](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)
-> 、背景效果[backgroundEffect](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色
-> [borderColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影
-> [shadow](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#shadow)，当设置系统材质时，上述接口不生效。
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
+> 、背景效果[backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、边框颜色
+> [borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影
+> [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，当设置系统材质时，上述接口不生效。
 
-**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**类型：** SystemUiMaterial
 
 **起始版本：** 26.0.0
 
@@ -757,7 +757,7 @@ textStyle?: PickerTextStyle
 > &lt;br&gt;}
 > &lt;br&gt;}
 
-**类型：** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**类型：** PickerTextStyle
 
 **起始版本：** 10
 

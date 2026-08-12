@@ -26,13 +26,13 @@ export declare function Shape(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 否 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。异常值undefined和null按照无效值处理，本次设置不生效。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShapeAttribute](../arkts-components/arkts-arkui-shape-attribute.md) | The attribute of the Shape. |
+| [ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md) | The attribute of the Shape. |
 
 
 ## Shape
@@ -62,12 +62,12 @@ Defines Shape Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ShapeAttribute&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ShapeAttribute](../arkts-components/arkts-arkui-shape-attribute.md) |  |
+| [ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md) |  |
 

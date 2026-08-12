@@ -20,7 +20,7 @@ backgroundBlurStyle?: BlurStyle
 
 默认值：BlurStyle.NONE
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.NONE
 
@@ -44,7 +44,7 @@ ArcButtonStyleMode需要设置为CUSTOM。
 
 默认值：Color.Black
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **默认值：** Color.Black
 
@@ -68,7 +68,7 @@ ArcButtonStyleMode需要设置为CUSTOM。
 
 默认值：Color.White
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **默认值：** Color.White
 
@@ -108,7 +108,7 @@ fontMargin?: LocalizedMargin
 
 默认值：{start:24vp, top: 10vp,end: 24vp, bottom:16vp }
 
-**类型：** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
+**类型：** LocalizedMargin
 
 **默认值：** { start: 24.0_vp, top: 10.0_vp, end: 24.0_vp, bottom: 16.0_vp }
 
@@ -130,7 +130,7 @@ fontSize?: LengthMetrics
 
 默认值：19fp
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **默认值：** 19.0_fp
 
@@ -152,7 +152,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal
 
-**类型：** [FontStyle](arkts-arkui-fontstyle-e.md)
+**类型：** FontStyle
 
 **默认值：** FontStyle.Normal
 
@@ -172,7 +172,7 @@ label?: ResourceStr
 
 弧形按钮显示文本。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 23
 
@@ -190,7 +190,7 @@ onClick?: Callback<ClickEvent>
 
 弧形按钮点击动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
 
 **起始版本：** 23
 
@@ -208,7 +208,7 @@ onTouch?: Callback<TouchEvent>
 
 弧形按钮手指触摸动作触发该回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md)&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
 
 **起始版本：** 23
 
@@ -252,7 +252,7 @@ ArcButtonStyleMode需要设置为CUSTOM。
 
 默认值：Color.White
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **默认值：** Color.White
 
@@ -273,9 +273,9 @@ progressConfig?: ArcButtonProgressConfig
 ArcButton进度条参数。不设置该属性时ArcButton组件表现为按钮样式（  
 [示例1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton copy.md#示例1-设置弧形按钮)），设置后表现为进度条样式（  
 [示例2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton copy.md#示例2-设置设备进度条按钮)），进度条样式不受  
-[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)属性设置影响。 
+[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode)属性设置影响。 
 
-默认值：[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) 的各项子属性均取其默认值。
+默认值：[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig) 的各项子属性均取其默认值。
 
 **类型：** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
@@ -299,7 +299,7 @@ shadowColor?: ColorMetrics
 
 默认值：Color.Black
 
-**类型：** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**类型：** ColorMetrics
 
 **默认值：** Color.Black
 
@@ -363,7 +363,7 @@ status?: ArcButtonStatus
 styleMode?: ArcButtonStyleMode
 ```
 
-弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)样式同时使用。
+弧形按钮样式模式。该样式不支持与[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig)样式同时使用。
 
 默认值：ArcButtonStyleMode.EMPHASIZED_LIGHT
 

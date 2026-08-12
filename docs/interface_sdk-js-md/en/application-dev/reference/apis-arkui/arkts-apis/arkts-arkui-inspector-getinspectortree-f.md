@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'kits/@kit.ArkUI';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## getInspectorTree

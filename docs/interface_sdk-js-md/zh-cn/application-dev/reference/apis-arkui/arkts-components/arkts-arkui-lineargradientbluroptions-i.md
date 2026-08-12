@@ -20,7 +20,7 @@ direction: GradientDirection
 
 GradientDirection.Bottom
 
-**类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
+**类型：** GradientDirection
 
 **起始版本：** 12
 

@@ -32,7 +32,7 @@ Set the move action.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [OnMoveHandler](../arkts-components/arkts-arkui-onmovehandler-t.md) \| undefined | Yes |  |
+| handler | [OnMoveHandler](arkts-arkui-onmovehandler-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Set the move action.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [OnMoveHandler](../arkts-components/arkts-arkui-onmovehandler-t.md) \| undefined | Yes |  |
-| eventHandler | [ItemDragEventHandler](../arkts-components/arkts-arkui-itemdrageventhandler-i.md) | Yes |  |
+| handler | [OnMoveHandler](arkts-arkui-onmovehandler-t.md) \| undefined | Yes |  |
+| eventHandler | [ItemDragEventHandler](arkts-arkui-common-itemdrageventhandler-i.md) | Yes |  |
 
 **Return value:**
 

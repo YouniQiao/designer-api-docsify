@@ -20,7 +20,7 @@ text?: ResourceStr
 
 默认值：""
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 20
 

@@ -2,7 +2,7 @@
 
 固定样式对话框的选项。
 
-**继承/实现关系：** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md)
+**继承/实现关系：** DialogStyleOptions extends [DialogBaseOptions](arkts-arkui-dialog-dialogbaseoptions-i.md#DialogBaseOptions)
 
 **起始版本：** 26.1.0
 
@@ -44,7 +44,7 @@ buttons?: Array<DialogButton>
 
 对话框中的按钮数组。提供时，对话框显示为带有按钮的警报样式对话框。与图纸一起使用时，按钮显示在图纸列表下方。
 
-**类型：** Array&lt;DialogButton&gt;
+**类型：** Array&lt;[DialogButton](arkts-arkui-dialog-dialogbutton-i.md)&gt;
 
 **起始版本：** 26.1.0
 
@@ -110,7 +110,7 @@ sheets?: Array<DialogSheet>
 
 action-sheet样式的表单项数组。提供时，对话框将显示供用户选择的工作表项目。
 
-**类型：** Array&lt;DialogSheet&gt;
+**类型：** Array&lt;[DialogSheet](arkts-arkui-dialog-dialogsheet-i.md)&gt;
 
 **起始版本：** 26.1.0
 
@@ -132,7 +132,7 @@ subtitle?: ResourceStr
 
 对话框的副标题。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.1.0
 
@@ -154,7 +154,7 @@ title?: ResourceStr
 
 对话框标题。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.1.0
 

@@ -15,7 +15,7 @@ Parameter list of BrightnessBlender, used to configure various properties of the
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## cubicRate

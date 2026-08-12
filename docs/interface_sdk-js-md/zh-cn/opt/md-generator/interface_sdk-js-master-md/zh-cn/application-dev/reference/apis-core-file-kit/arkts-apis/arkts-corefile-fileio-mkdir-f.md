@@ -12,7 +12,7 @@ declare function mkdir(path: string, mode?: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir)
+**替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-unnamed-declare function mkdir(path: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function mkdir(path: string, mode?: number): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ declare function mkdir(path: string, mode?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## mkdir
@@ -44,7 +44,7 @@ declare function mkdir(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir)
+**替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -70,7 +70,7 @@ declare function mkdir(path: string, mode: number, callback: AsyncCallback<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir)
+**替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-unnamed-declare function mkdir(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 

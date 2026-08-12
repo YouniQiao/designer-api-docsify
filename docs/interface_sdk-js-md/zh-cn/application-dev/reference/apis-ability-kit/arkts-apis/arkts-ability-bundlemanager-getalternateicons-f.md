@@ -28,7 +28,7 @@ function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700311](../errorcode-bundle.md#17700311-查询备用图标失败) | Failed to obtain the alternate icon. |
+| [17700311](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700311-查询备用图标失败) | Failed to obtain the alternate icon. |
 
 ## 示例
 

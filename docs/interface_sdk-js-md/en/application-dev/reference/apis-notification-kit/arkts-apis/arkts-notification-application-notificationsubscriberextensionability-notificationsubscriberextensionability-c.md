@@ -15,7 +15,7 @@ Use this module when your wearable application needs to obtain local notificatio
 ## Modules to Import
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -40,7 +40,7 @@ Called when notifications are canceled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hashCodes | Array&lt;string&gt; | Yes | List of hash codes of the notifications to cancel, obtained through {@link @ohos.application.NotificationSubscriberExtensionAbility: NotificationSubscriberExtensionAbility.onReceiveMessage}. |
+| hashCodes | Array&lt;string&gt; | Yes | List of hash codes of the notifications to cancel, obtained through [onReceiveMessage](@ohos.application.NotificationSubscriberExtensionAbility: NotificationSubscriberExtensionAbility.onReceiveMessage). |
 
 ## Examples
 

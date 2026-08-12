@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getPacUrl
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function getPacUrl(): string
 ```
 
-Obtain the URL {@link pacUrl} of the current PAC script.
+Obtain the URL [pacUrl](pacUrl) of the current PAC script.
 
 **Since:** 15
 
@@ -32,8 +32,8 @@ Obtain the URL {@link pacUrl} of the current PAC script.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
 ## Examples
 

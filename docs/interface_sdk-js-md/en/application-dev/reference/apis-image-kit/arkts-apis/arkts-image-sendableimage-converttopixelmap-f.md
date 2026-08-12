@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## convertToPixelMap
@@ -26,7 +26,7 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelmap | [PixelMap](arkts-image-image-pixelmap-i.md) | Yes | the src pixelmap. |
+| pixelmap | PixelMap | Yes | the src pixelmap. |
 
 **Return value:**
 
@@ -38,8 +38,8 @@ Creates a image PixelMap from sendable image PixelMap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-image-initialization-error) | Failed to initialize the internal object. |
 
 ## Examples
 

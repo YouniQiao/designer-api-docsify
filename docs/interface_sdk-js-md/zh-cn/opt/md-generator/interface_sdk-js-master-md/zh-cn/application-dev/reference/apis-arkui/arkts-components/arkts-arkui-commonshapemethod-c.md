@@ -152,7 +152,7 @@ Sets the gap for the border.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | Array&lt;any&gt; | 是 |
+| value | Array & lt;any & gt; | 是 |
 
 **返回值：**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## bulkTransfer
@@ -19,10 +19,10 @@ function bulkTransfer(
 
 Performs bulk transfer.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list and endpoints, call  
-[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission, call  
-[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) to obtain **devicepipe** as an input parameter, and call  
-[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) to claim the USB interface.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and endpoints, call  
+[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call  
+[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call  
+[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulktransfer)
+**Substitutes:** [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md#bulkTransfer)
 
 <!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>--><!--Device-usb-function bulkTransfer(    pipe: USBDevicePipe,    endpoint: USBEndpoint,    buffer: Uint8Array,    timeout?: number  ): Promise<number>-End-->
 
@@ -40,8 +40,8 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes | USB device pipe, which is used to determine the USB device. |
-| endpoint | [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md) | Yes | USB endpoint, which is used to determine the USB port for data transfer. |
+| pipe | USBDevicePipe | Yes | USB device pipe, which is used to determine the USB device. |
+| endpoint | USBEndpoint | Yes | USB endpoint, which is used to determine the USB port for data transfer. |
 | buffer | Uint8Array | Yes | Buffer for writing or reading data. |
 | timeout | number | No | Timeout duration in ms. This parameter is optional. The default value is **0**, indicating no timeout. |
 

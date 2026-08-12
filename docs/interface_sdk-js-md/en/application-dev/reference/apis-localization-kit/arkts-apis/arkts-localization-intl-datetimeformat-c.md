@@ -13,7 +13,7 @@ Provides the API for formatting date strings.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -53,7 +53,7 @@ Creates a DateTimeOptions object for the specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | Yes | Locale ID or locale ID array. If the input is a locale ID array, the first valid locale ID is used. |
-| options | [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | No | Options for creating the DateTimeOptions object.&lt;br&gt;If no options are set, the default values of year, month, and day are numeric. |
+| options | DateTimeOptions | No | Options for creating the DateTimeOptions object.&lt;br&gt;If no options are set, the default values of year, month, and day are numeric. |
 
 ## format
 
@@ -132,5 +132,5 @@ Obtains the options for creating a DateTimeOptions object.
 
 | Type | Description |
 | --- | --- |
-| [DateTimeOptions](arkts-localization-intl-datetimeoptions-i.md) | Options for the DateTimeOptions object. |
+| DateTimeOptions | Options for the DateTimeOptions object. |
 

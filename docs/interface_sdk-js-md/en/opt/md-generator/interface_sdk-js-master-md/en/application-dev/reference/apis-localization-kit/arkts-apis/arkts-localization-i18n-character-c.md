@@ -6,7 +6,7 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode](arkts-localization-i18n-unicode-c.md)
+**Substitutes:** [Unicode](arkts-localization-i18n-unicode-c.md#Unicode)
 
 <!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
 
@@ -15,7 +15,7 @@ Provides the API for accessing unicode character properties. For example, determ
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getType
@@ -30,7 +30,7 @@ Obtains the type of the input character.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.getType](arkts-localization-i18n-unicode-c.md#gettype)
+**Substitutes:** [getType](arkts-localization-i18n-unicode-c.md#getType)
 
 <!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
 
@@ -60,7 +60,7 @@ Checks whether the input character is a digit.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isDigit](arkts-localization-i18n-unicode-c.md#isdigit)
+**Substitutes:** [isDigit](arkts-localization-i18n-unicode-c.md#isDigit)
 
 <!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
 
@@ -90,7 +90,7 @@ Checks whether the input character is an ideographic character.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isIdeograph](arkts-localization-i18n-unicode-c.md#isideograph)
+**Substitutes:** [isIdeograph](arkts-localization-i18n-unicode-c.md#isIdeograph)
 
 <!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
 
@@ -120,7 +120,7 @@ Checks whether the input character is a letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isLetter](arkts-localization-i18n-unicode-c.md#isletter)
+**Substitutes:** [isLetter](arkts-localization-i18n-unicode-c.md#isLetter)
 
 <!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
 
@@ -150,7 +150,7 @@ Checks whether the input character is a lowercase letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isLowerCase](arkts-localization-i18n-unicode-c.md#islowercase)
+**Substitutes:** [isLowerCase](arkts-localization-i18n-unicode-c.md#isLowerCase)
 
 <!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
 
@@ -180,7 +180,7 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isRTL](arkts-localization-i18n-unicode-c.md#isrtl)
+**Substitutes:** [isRTL](arkts-localization-i18n-unicode-c.md#isRTL)
 
 <!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
 
@@ -210,7 +210,7 @@ Checks whether the input character is a space.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isSpaceChar](arkts-localization-i18n-unicode-c.md#isspacechar)
+**Substitutes:** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isSpaceChar)
 
 <!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
 
@@ -240,7 +240,7 @@ Checks whether the input character is an uppercase letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isUpperCase](arkts-localization-i18n-unicode-c.md#isuppercase)
+**Substitutes:** [isUpperCase](arkts-localization-i18n-unicode-c.md#isUpperCase)
 
 <!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
 
@@ -270,7 +270,7 @@ Checks whether the input character is a whitespace.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.Unicode.isWhitespace](arkts-localization-i18n-unicode-c.md#iswhitespace)
+**Substitutes:** [isWhitespace](arkts-localization-i18n-unicode-c.md#isWhitespace)
 
 <!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
 

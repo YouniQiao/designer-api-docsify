@@ -2,7 +2,7 @@
 
 Defines the Extendable Text.
 
-**Inheritance/Implementation:** ExtendableText implements [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md/arkts-arkui-text-attribute.md)
+**Inheritance/Implementation:** ExtendableText implements [TextAttribute](arkts-arkui-text-textattribute-i.md#TextAttribute)
 
 **Since:** 26.0.0
 
@@ -40,9 +40,9 @@ Constructor of Extendable Text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content | string \| Resource | No |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content | string \| [Resource](arkts-arkui-resource-t.md) | No |  |
+| value | [TextOptions](arkts-arkui-text-textoptions-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -78,9 +78,9 @@ Entry of Extendable Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setTextOptions
 
@@ -107,8 +107,8 @@ Set the Text Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | string \| Resource | No |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | No |  |
+| content | string \| [Resource](arkts-arkui-resource-t.md) | No |  |
+| value | [TextOptions](arkts-arkui-text-textoptions-i.md) | No |  |
 
 **Return value:**
 

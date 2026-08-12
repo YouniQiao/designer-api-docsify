@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface DownloadResponse--><!--Device-unnamed-export interface DownloadResponse-End-->
 
@@ -24,7 +24,7 @@ token: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.tid
+**替代接口：** [tid](ohos.request.agent.Task.tid)
 
 <!--Device-DownloadResponse-token: string--><!--Device-DownloadResponse-token: string-End-->
 

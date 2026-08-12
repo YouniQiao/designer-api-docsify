@@ -13,7 +13,7 @@ Represents the domain account information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## accountName
@@ -42,7 +42,7 @@ additionalInfo?: Record<string, Object>
 
 Additional information about the domain account.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 26.0.0
 

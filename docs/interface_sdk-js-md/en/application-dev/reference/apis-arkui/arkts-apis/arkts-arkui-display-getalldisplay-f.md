@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getAllDisplay
@@ -20,7 +20,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [display.getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays)(callback:
+**Substitutes:** [getAllDisplays](display.getAllDisplays(callback:)
 
 <!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
 
@@ -30,7 +30,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Display&gt;&gt; | Yes | Callback used to return all the Display objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes | Callback used to return all the Display objects. |
 
 ## Examples
 
@@ -62,7 +62,7 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [display.getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays)()
+**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)()
 
 <!--Device-display-function getAllDisplay(): Promise<Array<Display>>--><!--Device-display-function getAllDisplay(): Promise<Array<Display>>-End-->
 
@@ -72,7 +72,7 @@ Obtains all Display objects. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Display&gt;&gt; | Promise used to return all the Display objects. |
+| Promise&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Promise used to return all the Display objects. |
 
 ## Examples
 

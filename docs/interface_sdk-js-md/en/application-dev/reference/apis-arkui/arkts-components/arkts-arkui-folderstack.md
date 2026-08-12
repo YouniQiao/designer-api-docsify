@@ -39,7 +39,7 @@ Defines the constructor of FolderStack component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [FolderStackOptions](../arkts-apis/arkts-arkui-folderstack-folderstackoptions-i.md) | No | Configuration of the **FolderStack** component. |
+| options | [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) | No | Configuration of the **FolderStack** component. |
 
 ## Summary
 

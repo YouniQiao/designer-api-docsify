@@ -42,7 +42,7 @@ Height of the touch target.
 
 Default value: **'100%'**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 8
 
@@ -66,7 +66,7 @@ Width of the touch target.
 
 Default value: **'100%'**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 8
 
@@ -90,7 +90,7 @@ X coordinate of the touch point relative to the upper left corner of the compone
 
 Default value: **0vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 8
 
@@ -114,7 +114,7 @@ Y coordinate of the touch point relative to the upper left corner of the compone
 
 Default value: **0vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 8
 

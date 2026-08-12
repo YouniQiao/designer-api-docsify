@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## getQuerySqlInfo
@@ -26,7 +26,7 @@ Obtains the SQL statement used to query data. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| predicates | [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | Yes | RdbPredicates** object that matches the specified field. |
+| predicates | RdbPredicates | Yes | RdbPredicates** object that matches the specified field. |
 | columns | Array&lt;string&gt; | No | Columns to be queried. If this parameter is not specified, all columns are queried. |
 
 **Return value:**
@@ -39,7 +39,7 @@ Obtains the SQL statement used to query data. This API returns the result synchr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
+| [14800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Parameter is out of valid range. |
 
 ## Examples
 

@@ -13,7 +13,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormState
@@ -68,9 +68,9 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 onAcquireFormState?: OnAcquireFormStateFn
 ```
 
-Called to return a {@link FormState} object.
+Called to return a [FormState](FormState) object.
 
-&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.&lt;/p&gt;
+&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns [DEFAULT](FormState#DEFAULT) by default.&lt;/p&gt;
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ Called to notify the widget provider that a widget is being created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information of the widget. You can set the **parameters** field to one or more values enumerated in [widget parameters](arkts-form-forminfo-formparam-e.md#FormParam), such as widget ID, widget name, and widget style. The information must be managed as persistent data to facilitate subsequent widget update and deletion. |
 
 **Return value:**
 
@@ -203,7 +203,7 @@ Called to notify the widget provider that the widget visibility status is being 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int&gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
+| newStatus | ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, int&gt; | Yes | ID and visibility status of the widget to be changed.<br>**Since:** 11 |
 
 ## Examples
 
@@ -505,7 +505,7 @@ onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
 Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call   
-[updateForm](arkts-form-formprovider-updateform-f.md#updateform) of **formProvider** to update the widget data.
+[updateForm](arkts-form-formprovider-updateform-f.md#updateForm) of **formProvider** to update the widget data.
 
 **Since:** 9
 
@@ -524,7 +524,7 @@ Called to notify the widget provider that a widget is being updated, with update
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | ID of the widget that requests to be updated. |
-| wantParams | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | No | Parameters used for the update. |
+| wantParams | Record&lt;string, Object&gt; | No | Parameters used for the update. |
 
 ## Examples
 
@@ -557,7 +557,7 @@ context: FormExtensionContext
 ```
 
 Context of the FormExtensionAbility. This context is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 This API can be used in atomic services since API version 11.
 

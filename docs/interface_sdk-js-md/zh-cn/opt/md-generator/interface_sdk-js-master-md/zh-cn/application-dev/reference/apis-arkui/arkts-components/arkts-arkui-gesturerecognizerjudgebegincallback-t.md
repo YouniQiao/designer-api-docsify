@@ -22,8 +22,8 @@ declare type GestureRecognizerJudgeBeginCallback = (event: BaseGestureEvent, cur
 | --- | --- | --- |
 | event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | 是 |
 | current | [GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md) | 是 |
-| recognizers | Array&lt;GestureRecognizer&gt; | 是 |
-| touchRecognizers | Array&lt;TouchRecognizer&gt; | 否 |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 |
+| touchRecognizers | Array&lt;[TouchRecognizer](../arkts-apis/arkts-arkui-touchrecognizer-c.md)&gt; | 否 |
 
 **返回值：**
 

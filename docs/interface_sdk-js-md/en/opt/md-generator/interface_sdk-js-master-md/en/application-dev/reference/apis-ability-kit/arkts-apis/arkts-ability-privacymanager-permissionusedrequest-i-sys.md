@@ -13,7 +13,7 @@ Represents the request for querying permission usage records.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## beginTime
@@ -161,7 +161,7 @@ tokenId?: number
 ```
 
 Identity identifier of the target application. It can be obtained through the  
-[accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field of ApplicationInfo.
+[accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field of ApplicationInfo.
 
 Default value: **0**, queries all applications.
 

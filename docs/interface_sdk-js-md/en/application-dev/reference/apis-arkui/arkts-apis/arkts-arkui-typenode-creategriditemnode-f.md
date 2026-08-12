@@ -29,5 +29,5 @@ Create a FrameNode of GridItem type.On API 26.0.0 and above, It can also create 
 
 | Type | Description |
 | --- | --- |
-| [GridItem](arkts-arkui-typenode-griditem-t.md) | Return GridItem type FrameNode. |
+| GridItem | Return GridItem type FrameNode. |
 

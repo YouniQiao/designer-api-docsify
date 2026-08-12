@@ -7,7 +7,7 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 ```
 
 获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setwindowprivacymode)接口设置），截图结果为白屏。
+[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setWindowPrivacyMode)接口设置），截图结果为白屏。
 
 **起始版本：** 12
 
@@ -23,7 +23,7 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口Id。可通过[getWindowProperties](arkts-arkui-window-window-i.md#getwindowproperties) 接口获取到相关窗口属性，其中属性id即对应为窗口ID。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口Id。可通过[getWindowProperties](@link @ohos.window:window.Window.getWindowProperties) 接口获取到相关窗口属性，其中属性id即对应为窗口ID。 |
 
 **返回值：**
 
@@ -35,10 +35,10 @@ function getSnapshot(windowId: int): Promise<image.PixelMap>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Internal task error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: Internal task error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 

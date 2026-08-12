@@ -8,7 +8,7 @@ Enumerates the device states.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
+**Substitutes:** [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#DeviceStateChange)
 
 <!--Device-deviceManager-enum DeviceStateChangeAction--><!--Device-deviceManager-enum DeviceStateChangeAction-End-->
 
@@ -30,7 +30,7 @@ The device is physically online.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceStateChange.UNKNOWN](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unknown)
+**Substitutes:** [UNKNOWN](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#UNKNOWN)
 
 <!--Device-DeviceStateChangeAction-ONLINE = 0--><!--Device-DeviceStateChangeAction-ONLINE = 0-End-->
 
@@ -52,7 +52,7 @@ The information between devices has been synchronized in the Distributed Data Se
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceStateChange.AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#available)
+**Substitutes:** [AVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#AVAILABLE)
 
 <!--Device-DeviceStateChangeAction-READY = 1--><!--Device-DeviceStateChangeAction-READY = 1-End-->
 
@@ -74,7 +74,7 @@ The device is physically offline.
 
 **Deprecated since:** 11
 
-**Substitutes:** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceStateChange.UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#unavailable)
+**Substitutes:** [UNAVAILABLE](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md#UNAVAILABLE)
 
 <!--Device-DeviceStateChangeAction-OFFLINE = 2--><!--Device-DeviceStateChangeAction-OFFLINE = 2-End-->
 

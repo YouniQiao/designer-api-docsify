@@ -2,14 +2,14 @@
 
 Provides APIs for basic image operations, including obtaining image information and reading and writing image data.
 
-An Image instance is returned when [readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readnextimage) and   
-[readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readlatestimage) are called. This class inherits from   
+An Image instance is returned when [readNextImage](arkts-image-sendableimage-imagereceiver-i.md#readNextImage) and   
+[readLatestImage](arkts-image-sendableimage-imagereceiver-i.md#readLatestImage) are called. This class inherits from   
 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable).
 
 Images occupy a large amount of memory. When you finish using an Image instance, call   
 [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**Inheritance/Implementation:** Image extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** Image extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ Images occupy a large amount of memory. When you finish using an Image instance,
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getComponent
@@ -133,7 +133,7 @@ clipRect: Region
 
 Image area to be cropped.
 
-**Type:** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
+**Type:** Region
 
 **Since:** 12
 
@@ -180,7 +180,7 @@ For details about the best practices of camera preview and photo capture, see
 [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and  
 [Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 12
 
@@ -197,7 +197,7 @@ readonly timestamp: number
 ```
 
 Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use   
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)to read the related Exif information.
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)to read the related Exif information.
 
 **Type:** number
 

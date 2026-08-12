@@ -7,7 +7,7 @@
 > 该组件从API version 18开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 
 > 当需要在该组件中实现一个可嵌入式运行的原子化服务时，原子化服务必须继承自
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。若不继承自EmbeddableUIAbility，系统无
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)。若不继承自EmbeddableUIAbility，系统无
 > 法确保原子化服务正常运行。
 
 **起始版本：** 18
@@ -88,7 +88,7 @@ onError?: ErrorCallback
 onReceive?: Callback<Record<string, Object>>
 ```
 
-被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](arkts-window.md)调用相关API时，触发本回调。
+被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](@ohos.window)调用相关API时，触发本回调。
 
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt;
 
@@ -109,8 +109,8 @@ onTerminated?: Callback<TerminationInfo>
 ```
 
 被拉起的嵌入式运行原子化服务通过点击原子化服务退出按钮、手势侧滑、调用  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)或者  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateself)正常退出时，触发本回调。
+[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)或者  
+[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf)正常退出时，触发本回调。
 
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 

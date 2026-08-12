@@ -22,7 +22,7 @@ gutter?: Dimension
 
 单位：vp
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 10
 
@@ -72,7 +72,7 @@ margin?: Dimension
 
 单位：vp
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 10
 

@@ -25,7 +25,7 @@ Default value: **BreakpointsReference.WindowSize**
 
 Invalid values are treated as the default value.
 
-**Type:** [BreakpointsReference](../arkts-apis/arkts-arkui-gridrow-breakpointsreference-e.md)
+**Type:** [BreakpointsReference](arkts-arkui-breakpointsreference-e.md)
 
 **Since:** 9
 

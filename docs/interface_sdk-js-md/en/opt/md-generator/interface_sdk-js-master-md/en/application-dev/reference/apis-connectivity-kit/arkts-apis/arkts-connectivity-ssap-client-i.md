@@ -1,6 +1,6 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method,you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Manages SSAP client. Before calling a SSAP client method,you must use {@link cre
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -38,7 +38,7 @@ Closes the client.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## connect
 
@@ -62,7 +62,7 @@ Connects to the server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -70,7 +70,7 @@ Connects to the server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## disconnect
 
@@ -94,7 +94,7 @@ Disconnects from or stops an ongoing connection to a server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -102,7 +102,7 @@ Disconnects from or stops an ongoing connection to a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getServices
 
@@ -126,7 +126,7 @@ Starts discovering all services on server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Service[]&gt; |
+| Promise&lt;[Service](arkts-connectivity-ssap-service-i.md)[]&gt; |
 
 **Error codes:**
 
@@ -134,7 +134,7 @@ Starts discovering all services on server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## offConnectionStateChange
 
@@ -156,7 +156,7 @@ Unsubscribes from client connection state changed events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | No |
 
 ## offMtuChange
 
@@ -200,7 +200,7 @@ Unsubscribe property value changed event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | No |
 
 ## onConnectionStateChange
 
@@ -224,7 +224,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectionChangeState&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionChangeState](arkts-connectivity-ssap-connectionchangestate-i.md)&gt; | Yes |
 
 ## onMtuChange
 
@@ -272,7 +272,7 @@ This event is accessible only to applications that granted the ohos.permission.N
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Property&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; | Yes |
 
 ## readProperty
 
@@ -302,7 +302,7 @@ Reads the property of a server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Property&gt; |
+| Promise&lt;[Property](arkts-connectivity-ssap-property-i.md)&gt; |
 
 **Error codes:**
 
@@ -310,7 +310,7 @@ Reads the property of a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |
 
@@ -342,7 +342,7 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -350,7 +350,7 @@ Negotiate the MTU size with server.The negotiation result needs to be obtained b
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## setPropertyNotification
 
@@ -381,7 +381,7 @@ Enables or disables notification of a property when value changed.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -389,7 +389,7 @@ Enables or disables notification of a property when value changed.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |
 
@@ -416,13 +416,13 @@ Writes the property of a server.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | property | [Property](arkts-connectivity-ssap-property-i.md) | Yes |
-| writeType | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Yes |
+| [writeType](arkts-connectivity-ssap-propertywriterequest-i.md) | [PropertyWriteType](arkts-connectivity-ssap-propertywritetype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -430,6 +430,6 @@ Writes the property of a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 36100044 |
 | 36100043 |

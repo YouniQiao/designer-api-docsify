@@ -62,7 +62,7 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bottom | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Length \| undefined | Yes | the offset of indicator to the bottom, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
+| bottom | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Length](arkts-arkui-length-t.md) \| undefined | Yes | the offset of indicator to the bottom, default value is adaptive size layout, centered alignment in the spindle direction according to the size of the indicator itself and the size of the swiper, undefined means setting to default value. |
 | ignoreSize | boolean | Yes | ignore the size of the indicator. |
 
 **Return value:**
@@ -117,7 +117,7 @@ DotIndicator class object.
 
 | Type | Description |
 | --- | --- |
-| [DotIndicator](../arkts-components/arkts-arkui-dotindicator-c.md) |  |
+| [DotIndicator](arkts-arkui-swiper-dotindicator-c.md) |  |
 
 ## end
 

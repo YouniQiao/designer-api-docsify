@@ -15,7 +15,7 @@ animate(options: AnimationOptions, handler: () =>void): void
 ```
 
 设置背板蒙版颜色变化动效，在OnDrop和OnDragEnd回调中使用不生效，仅支持通过   
-[getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getdragpreview)方法获取到的对象上使用。
+[getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getDragPreview)方法获取到的对象上使用。
 
 **起始版本：** 11
 
@@ -32,7 +32,7 @@ animate(options: AnimationOptions, handler: () =>void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | 是 |
-| handler | () =&gt;void | 是 |
+| handler | () = & gt;void | 是 |
 
 ## 示例
 
@@ -179,7 +179,7 @@ setForegroundColor(color: ResourceColor): void
 ```
 
 设置背板蒙版颜色，在OnDrop和OnDragEnd回调中使用不生效，仅支持通过   
-[getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getdragpreview)方法获取到的对象上使用。
+[getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getDragPreview)方法获取到的对象上使用。
 
 **起始版本：** 11
 

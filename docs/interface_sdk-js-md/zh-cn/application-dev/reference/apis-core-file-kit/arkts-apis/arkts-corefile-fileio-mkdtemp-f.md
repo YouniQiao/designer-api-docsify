@@ -14,7 +14,7 @@ declare function mkdtemp(prefix: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp)
+**替代接口：** [mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md#mkdtemp)
 
 <!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>--><!--Device-unnamed-declare function mkdtemp(prefix: string): Promise<string>-End-->
 
@@ -47,7 +47,7 @@ declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:mkdtemp](arkts-corefile-fileio-mkdtemp-f.md#mkdtemp)
+**替代接口：** [mkdtemp](arkts-corefile-file-fs-mkdtemp-f.md#mkdtemp)
 
 <!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function mkdtemp(prefix: string, callback: AsyncCallback<string>): void-End-->
 

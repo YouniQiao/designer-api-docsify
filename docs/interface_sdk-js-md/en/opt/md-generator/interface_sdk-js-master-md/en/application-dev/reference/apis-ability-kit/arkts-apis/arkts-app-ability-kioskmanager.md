@@ -15,7 +15,7 @@ Kiosk mode is a dedicated device lockdown mode that ensures the device UI serves
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from 'kits/@kit.AbilityKit';
+import { kioskManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

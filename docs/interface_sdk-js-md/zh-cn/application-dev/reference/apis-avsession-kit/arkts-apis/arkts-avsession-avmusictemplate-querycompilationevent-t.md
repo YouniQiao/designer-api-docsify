@@ -27,5 +27,5 @@ type QueryCompilationEvent = (compilationId: string, pageIndex: int) => Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PageMediaEntity&gt; | Promise对象，返回查询的合集媒体实体对象。 |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; | Promise对象，返回查询的合集媒体实体对象。 |
 

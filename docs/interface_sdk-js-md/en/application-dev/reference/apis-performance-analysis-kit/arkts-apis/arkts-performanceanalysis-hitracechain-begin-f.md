@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## begin
@@ -31,7 +31,7 @@ If the current thread's TLS already contains a valid HiTrace ID, this function d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Traced service name. It is recommended that the length of this parameter be less than or equal to 63 bytes. The excess part will be truncated. |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md). The default value is **0**. |
+| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Trace flag combination. For details, see [HiTraceFlag](arkts-performanceanalysis-hitracechain-hitraceflag-e.md#HiTraceFlag). The default value is **0**. |
 
 **Return value:**
 

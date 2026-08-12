@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppWrite
@@ -20,7 +20,7 @@ Write data through the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppWrite
+**Substitutes:** [sppWrite](ohos.bluetoothManager/bluetoothManager.sppWrite)
 
 <!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean--><!--Device-bluetooth-function sppWrite(clientSocket: number, data: ArrayBuffer): boolean-End-->
 
@@ -30,7 +30,7 @@ Write data through the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clientSocket | number | Yes | Indicates the client socket ID, returned by {@link sppAccept} or {@link sppConnect}. |
+| clientSocket | number | Yes | Indicates the client socket ID, returned by [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppAccept) or [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppConnect). |
 | data | ArrayBuffer | Yes | Indicates the data to write. |
 
 **Return value:**

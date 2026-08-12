@@ -11,7 +11,7 @@ Defines the options for selecting documents.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## themeColor
@@ -21,7 +21,7 @@ themeColor?: CustomColors
 ```
 
 Theme color parameter. By default, it is left empty and follows the color settings of the **FilePicker**. When it is set to specific theme color properties, such as  
-[brand, fontPrimary, compBackgroundEmphasize, and iconFourth](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md/arkts-arkui-arkui-theme-colors-i.md), the launched  
+[brand, fontPrimary, compBackgroundEmphasize, and iconFourth](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md#Colors), the launched  
 **FilePicker** will adapt to the theme color accordingly.This API can be called on smartphones but has no effect on other devices.
 
 **Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)

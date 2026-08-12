@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## searchTarget
@@ -28,24 +28,24 @@ Searching for a specified target.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes | Target infomation. |
-| params | [SearchParams](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicservicesearch-searchparams-i.md) | Yes | Parameters to use when searching. |
+| target | TargetInfo | Yes | Target infomation. |
+| params | SearchParams | Yes | Parameters to use when searching. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SearchResult&gt; | Promise that return the Search result. |
+| Promise&lt;[SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md)&gt; | Promise that return the Search result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 33300004 | Camera not opened. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
-| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [33300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 
 ## Examples
 

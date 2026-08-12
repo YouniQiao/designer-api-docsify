@@ -27,7 +27,7 @@ With **ColoringStrategy**, the average color or primary color can be obtained, a
 
 The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'** string for obtaining the primary color.
 
-**Type:** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| string \| Resource \| ColoringStrategy
+**Type:** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **Since:** 7
 
@@ -83,7 +83,7 @@ Unit: px
 
 **NOTE：**
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetX** is of the Resource type, its value must be of the number type.
 
@@ -113,7 +113,7 @@ Unit: px
 
 **NOTE：**
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetY** is of the Resource type, its value must be of the number type.
 
@@ -145,7 +145,7 @@ Unit: px
 
 A value less than 0 evaluates to the value **0**.
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **radius** is of the Resource type, its value must be of the number type.
 

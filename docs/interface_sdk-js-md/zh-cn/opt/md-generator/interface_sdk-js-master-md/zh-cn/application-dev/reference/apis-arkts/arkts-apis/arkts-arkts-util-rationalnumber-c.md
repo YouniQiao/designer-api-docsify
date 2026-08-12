@@ -48,7 +48,7 @@ compareTo(another: RationalNumber): number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.compare
+**替代接口：** [compare](ohos.util.compare)
 
 <!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
 
@@ -78,7 +78,7 @@ constructor(numerator: number, denominator: number)
 
 **废弃版本：** 9
 
-**替代接口：** [util.RationalNumber.parseRationalNumber](arkts-arkts-util-rationalnumber-c.md#parserationalnumber)
+**替代接口：** [parseRationalNumber](#parseRationalNumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -218,7 +218,7 @@ static getCommonDivisor(number1: number, number2: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.RationalNumber.getCommonFactor](arkts-arkts-util-rationalnumber-c.md#getcommonfactor)
+**替代接口：** [getCommonFactor](#getCommonFactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 

@@ -25,7 +25,7 @@ curve?: Curve | string | ICurve
 
 默认值：Curve.Linear
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
+**类型：** Curve \| string \| ICurve
 
 **默认值：** Curve.Linear
 
@@ -105,7 +105,7 @@ type?: RouteType
 
 默认值：RouteType.None。
 
-**类型：** [RouteType](../arkts-apis/arkts-arkui-pagetransition-routetype-e.md)
+**类型：** [RouteType](arkts-arkui-routetype-e.md)
 
 **起始版本：** 7
 

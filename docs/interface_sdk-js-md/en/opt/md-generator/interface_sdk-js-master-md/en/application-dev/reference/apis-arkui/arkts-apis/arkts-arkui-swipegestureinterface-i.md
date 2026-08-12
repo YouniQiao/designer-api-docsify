@@ -16,7 +16,7 @@
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
 ```
 
-Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 8
 
@@ -44,7 +44,7 @@ Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&
 (options?: SwipeGestureHandlerOptions): SwipeGestureInterface
 ```
 
-Sets the parameters for the swipe gesture. Compared with [SwipeGesture](arkts-arkui-swipegestureinterface-i.md))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Sets the parameters for the swipe gesture. Compared with [SwipeGesture](SwipeGestureInterface(value?: { fingers?: number; direction?: SwipeDirection; speed?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
@@ -88,7 +88,7 @@ Triggered when the swipe gesture is recognized.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 

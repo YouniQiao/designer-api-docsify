@@ -18,7 +18,7 @@ Defines the particle property updater configs.
 
 The property changes with the animation curve. The array type indicates that multiple animation segments can be set for the current property, for example, 0-3000 ms, 3000-5000 ms, and 5000-8000 ms. **T** represents a number.
 
-**Type:** Array&lt;ParticlePropertyAnimation&lt;T&gt;&gt;
+**Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;T&gt;&gt;
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ The target property value is obtained by applying the change difference to the c
 
 For example, if the value range of **opacity** is **[0.0, 1.0]**, then if the target property value is greater than1.0, **1.0** will be used instead.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;T, T&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;T, T&gt;
 
 **Since:** 10
 

@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DeviceResponse, GetDeviceOptions } from 'kits/@kit.BasicServicesKit';
+import { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete

@@ -37,7 +37,7 @@ Constructor.
 
 **Deprecated since:** 13
 
-**Substitutes:** <!--SUBSTITUTE_API-->NavDestinationAttribute<!--/SUBSTITUTE_API-->
+**Substitutes:** [NavDestinationAttribute](NavDestinationAttribute)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -59,7 +59,7 @@ Provides route information so that clicking the **NavRouter** component redirect
 
 **Deprecated since:** 13
 
-**Substitutes:** <!--SUBSTITUTE_API-->Navigation#NavPathInfo<!--/SUBSTITUTE_API-->
+**Substitutes:** [NavPathInfo](Navigation#NavPathInfo)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +73,7 @@ Provides route information so that clicking the **NavRouter** component redirect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RouteInfo](../../apis-network-kit/arkts-apis/arkts-network-vpnextension-routeinfo-t.md) | Yes | Route information. |
+| value | [RouteInfo](arkts-arkui-routeinfo-i.md) | Yes | Route information. |
 
 ## Summary
 

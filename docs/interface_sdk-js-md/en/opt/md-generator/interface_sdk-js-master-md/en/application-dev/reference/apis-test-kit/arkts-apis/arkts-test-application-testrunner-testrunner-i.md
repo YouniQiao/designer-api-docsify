@@ -11,7 +11,7 @@ Base class for the test framework.If you want to implement your own unit test fr
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from 'kits/@kit.TestKit';
+import { TestRunner } from '@kit.TestKit';
 ```
 
 ## onPrepare

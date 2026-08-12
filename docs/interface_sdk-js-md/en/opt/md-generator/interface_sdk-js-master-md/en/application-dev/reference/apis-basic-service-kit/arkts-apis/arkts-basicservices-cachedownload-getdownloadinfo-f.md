@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## getDownloadInfo
@@ -15,7 +15,7 @@ function getDownloadInfo(url: string): DownloadInfo | undefined
 Obtains the download information based on the URL. The download information is stored in the download information list in memory and is cleared when the application exits.
 
 - If the specified URL is found in the download information list, the latest   
-[DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) corresponding to the URL is returned.  
+[DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md#DownloadInfo) corresponding to the URL is returned.  
 - If the specified URL cannot be found in the download information list, **undefined** is returned.  
 - If the download information has already cached in the URL, the new cached information will overwrite the old   
 one.  
@@ -39,10 +39,10 @@ one.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md) |
+| [DownloadInfo](arkts-basicservices-cachedownload-downloadinfo-i.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |

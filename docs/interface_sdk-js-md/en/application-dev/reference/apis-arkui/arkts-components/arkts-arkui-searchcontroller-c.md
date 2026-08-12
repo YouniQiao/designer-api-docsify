@@ -1,22 +1,22 @@
 # SearchController
 
 The controller for the **Search** component inherits from  
-[TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md). The APIs involved are as follows:&lt;!--Del--&gt; system API  
-[getText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c-sys.md/arkts-arkui-common-textcontentcontrollerbase-c-sys.md#gettext) and other APIs like&lt;!--DelEnd--&gt;  
-[getTextContentRect](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentrect),  
-[getTextContentLineCount](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentlinecount),  
-[getCaretOffset](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getcaretoffset), [addText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#addtext),  
-[deleteText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletetext),  
-[getSelection](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getselection),  
-[clearPreviewText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#clearpreviewtext),  
-[setStyledPlaceholder](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#setstyledplaceholder), and  
-[deleteBackward](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletebackward).
+[TextContentControllerBase](TextContentControllerBase). The APIs involved are as follows:&lt;!--Del--&gt; system API  
+[getText](TextContentControllerBase#getText) and other APIs like&lt;!--DelEnd--&gt;  
+[getTextContentRect](TextContentControllerBase#getTextContentRect),  
+[getTextContentLineCount](TextContentControllerBase#getTextContentLineCount),  
+[getCaretOffset](TextContentControllerBase#getCaretOffset), [addText](TextContentControllerBase#addText),  
+[deleteText](TextContentControllerBase#deleteText),  
+[getSelection](TextContentControllerBase#getSelection),  
+[clearPreviewText](TextContentControllerBase#clearPreviewText),  
+[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder), and  
+[deleteBackward](TextContentControllerBase#deleteBackward).
 
 ## Objects to Import
 
 ```ts controller: SearchController = new SearchController();```
 
-**Inheritance/Implementation:** SearchController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)
+**Inheritance/Implementation:** SearchController extends [TextContentControllerBase](TextContentControllerBase)
 
 **Since:** 8
 
@@ -94,7 +94,7 @@ Sets the text selection range and highlights the selected text when the componen
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.&lt;br&gt;A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.&lt;br&gt; |
 | selectionEnd | number | Yes | End position of the text selection range.&lt;br&gt;A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.&lt;br&gt; |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT |
+| options | SelectionOptions | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT |
 
 ## stopEditing
 

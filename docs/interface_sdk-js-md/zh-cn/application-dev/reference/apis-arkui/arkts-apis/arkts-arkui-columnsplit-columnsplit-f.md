@@ -46,13 +46,13 @@ ColumnSplit通过分割线限制子组件的高度。初始化时，分割线位
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 定义子组件的Builder函数。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 定义子组件的Builder函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColumnSplitAttribute](../arkts-components/arkts-arkui-columnsplit-attribute.md) |  |
+| [ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md) |  |
 
 
 ## ColumnSplit
@@ -82,12 +82,12 @@ Defines ColumnSplit Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ColumnSplitAttribute&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColumnSplitAttribute](../arkts-components/arkts-arkui-columnsplit-attribute.md) |  |
+| [ColumnSplitAttribute](arkts-arkui-columnsplit-columnsplitattribute-i.md) |  |
 

@@ -23,7 +23,7 @@ alignContent?: Alignment
 
 Alignment of child components in the container.Default value: Alignment.Center.&lt;br&gt;Invalid values are treated as the default value.
 
-**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
+**Type:** Alignment
 
 **Since:** 7
 

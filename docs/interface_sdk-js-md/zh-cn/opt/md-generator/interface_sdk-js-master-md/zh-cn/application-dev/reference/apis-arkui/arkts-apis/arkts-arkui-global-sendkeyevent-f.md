@@ -20,7 +20,7 @@ Send key event.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| event | [KeyEvent](arkts-arkui-common-keyevent-i.md) | 是 |
 
 **返回值：**
 

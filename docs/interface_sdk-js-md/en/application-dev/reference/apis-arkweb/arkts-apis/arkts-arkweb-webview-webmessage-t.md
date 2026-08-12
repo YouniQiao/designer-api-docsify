@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-WebMessage type supplied to {@link onMessageEventExt} for indicating the type of web message.
+WebMessage type supplied to [onMessageEventExt](onMessageEventExt) for indicating the type of web message.
 
 **Since:** 23
 

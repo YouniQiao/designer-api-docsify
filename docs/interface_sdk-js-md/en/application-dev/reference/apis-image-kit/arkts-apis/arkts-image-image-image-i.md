@@ -3,11 +3,11 @@
 The **Image** class is used to obtain image content.
 
 An Image instance is returned when   
-[readNextImage](arkts-image-image-imagereceiver-i.md#readnextimage) and  
-[readLatestImage](arkts-image-image-imagereceiver-i.md#readlatestimage)are called.
+[readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage) and  
+[readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage)are called.
 
-Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md) by the data source.Images occupy a large amount of memory. When you finish using an Image instance, call   
-[release](arkts-image-image-image-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver) by the data source.Images occupy a large amount of memory. When you finish using an Image instance, call   
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Image properties are initialized only during image creation and cannot be change
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## getBufferData
@@ -72,8 +72,8 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
+| componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Component&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the component buffer obtained; otherwise, **err** is an error object. |
 
 ## getComponent
 
@@ -95,7 +95,7 @@ Obtains the component buffer from the Image instance based on the color componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| componentType | [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md) | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
+| componentType | ComponentType | Yes | Component type. (Currently, only **ComponentType:JPEG** is supported. The actual format is determined by the producer, for example, camera.) |
 
 **Return value:**
 
@@ -137,8 +137,8 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. |
+| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
 
 ## release
 
@@ -166,7 +166,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -204,7 +204,7 @@ clipRect: Region
 
 Image area to be cropped.
 
-**Type:** [Region](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-region-c.md)
+**Type:** Region
 
 **Since:** 9
 
@@ -271,7 +271,7 @@ For details about the best practices of camera preview and photo capture, see
 [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and  
 [Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 9
 
@@ -288,7 +288,7 @@ readonly timestamp: long
 ```
 
 Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use   
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)to read the related Exif information.
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)to read the related Exif information.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

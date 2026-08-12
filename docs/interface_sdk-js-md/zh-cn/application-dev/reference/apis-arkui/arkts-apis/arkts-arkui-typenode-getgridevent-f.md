@@ -28,5 +28,5 @@ Get the event instance of Grid node.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIGridEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

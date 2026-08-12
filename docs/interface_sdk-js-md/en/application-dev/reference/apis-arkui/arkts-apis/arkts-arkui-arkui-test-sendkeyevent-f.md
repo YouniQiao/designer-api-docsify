@@ -22,7 +22,7 @@ Send a mock key event to the current application. This interface is only suitabl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | Yes | KeyEvent to be sent. |
+| event | KeyEvent | Yes | KeyEvent to be sent. |
 
 **Return value:**
 

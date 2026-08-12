@@ -4,11 +4,11 @@ URL是统一资源定位符，本模块提供了常用的工具函数，实现�
 
 模块主要包含以下核心类：
 
-- [URL](arkts-arkts-url-url-c.md)：用于解析和构造完整URL。
+- [URL](arkts-arkts-url-url-c.md#URL)：用于解析和构造完整URL。
 
-- [URLParams](arkts-arkts-url-urlparams-c.md)：用于操作URL查询参数。
+- [URLParams](arkts-arkts-url-urlparams-c.md#URLParams)：用于操作URL查询参数。
 
-- [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)：从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md)替代。
+- [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md#URLSearchParams)：从API version 9开始废弃，建议使用[URLParams](arkts-arkts-url-urlparams-c.md#URLParams)替代。
 
 > **说明：**
 > 

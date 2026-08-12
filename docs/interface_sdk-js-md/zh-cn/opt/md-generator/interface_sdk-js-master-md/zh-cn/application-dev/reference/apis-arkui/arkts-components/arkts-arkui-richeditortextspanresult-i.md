@@ -184,7 +184,7 @@ SymbolSpan资源内容。
 
 默认值：undefined。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**类型：** Resource
 
 **起始版本：** 11
 

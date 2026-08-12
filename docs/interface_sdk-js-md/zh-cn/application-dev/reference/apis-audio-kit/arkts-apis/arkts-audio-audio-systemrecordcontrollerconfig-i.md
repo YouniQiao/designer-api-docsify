@@ -16,9 +16,9 @@
 sourceType: SourceType
 ```
 
-系统使用它来确定应用程序的录制场景，根据应用程序期望用于流式传输的源类型，并为用户提供选择匹配降噪模式的能力。支持的源类型包括{@link SourceType#Source_TYPE_MIC},{@link SourceType#Source_TYPE_CAMCORDER}，以及{@link SourceType#Source_TYPE_LIVE}。
+系统使用它来确定应用程序的录制场景，根据应用程序期望用于流式传输的源类型，并为用户提供选择匹配降噪模式的能力。支持的源类型包括[Source_TYPE_MIC](SourceType#Source_TYPE_MIC),[Source_TYPE_CAMCORDER](SourceType#Source_TYPE_CAMCORDER)，以及[Source_TYPE_LIVE](SourceType#Source_TYPE_LIVE)。
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** SourceType
 
 **起始版本：** 26.0.0
 

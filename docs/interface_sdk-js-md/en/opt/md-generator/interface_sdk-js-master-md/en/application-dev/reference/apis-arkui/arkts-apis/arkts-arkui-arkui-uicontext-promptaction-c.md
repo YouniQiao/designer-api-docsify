@@ -6,7 +6,7 @@ Provides APIs to create and display toasts, dialog boxes, action menus, and cust
 > 
 > - The initial APIs of this class are supported since API version 10.
 > 
-> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction) in
+> - In the following API examples, you must first use [getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) in
 > **UIContext** to obtain a **PromptAction** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
@@ -18,7 +18,7 @@ Provides APIs to create and display toasts, dialog boxes, action menus, and cust
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## closeCustomDialog
@@ -43,21 +43,21 @@ Closes a custom dialog box corresponding to **dialogContent**. This API uses a p
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| dialogContent | ComponentContent & lt;T & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
 
 ## closeCustomDialog
 
@@ -87,8 +87,8 @@ Closes the specified custom dialog box.
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## closeMenu
 
@@ -112,21 +112,21 @@ Closes the menu corresponding to the provided content. This API uses a promise t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| content | ComponentContent & lt;T & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
 
 ## closePopup
 
@@ -150,21 +150,21 @@ Closes the popup corresponding to the provided **content**. This API uses a prom
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| content | ComponentContent & lt;T & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
 
 ## closeToast
 
@@ -194,9 +194,9 @@ Closes the specified toast.
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103401](../errorcode-promptAction.md#103401-toast-not-found) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103401-toast-not-found) |
 
 ## getBottomOrder
 
@@ -270,22 +270,22 @@ Opens a custom dialog box corresponding to **dialogContent**. This API uses a pr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| dialogContent | ComponentContent & lt;T & gt; | Yes |
 | options | promptAction.BaseDialogOptions | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
 
 ## openCustomDialog
 
@@ -295,7 +295,7 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 Creates and displays a custom dialog box. This API uses a promise to return the dialog box ID for use with **closeCustomDialog**.
 
- + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.&lt;br&gt; + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
+ + * @param { promptAction.CustomDialogOptions } options - Content of the custom dialog box.&lt;br&gt; + * Note: If both [isModal](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) + * and [showInSubWindow](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions) in **BaseDialogOptions** are set to **true**, + * only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. + * @returns { Promise&lt;number&gt; } Promise that returns the dialog box ID for use with **closeCustomDialog**.
 
 **Since:** 12
 
@@ -317,14 +317,14 @@ Creates and displays a custom dialog box. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## openCustomDialogWithController
 
@@ -351,7 +351,7 @@ The dialog box displayed through this API has its content fully following style 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| dialogContent | ComponentContent & lt;T & gt; | Yes |
 | controller | promptAction.DialogController | Yes |
 | options | promptAction.BaseDialogOptions | No |
 
@@ -359,15 +359,15 @@ The dialog box displayed through this API has its content fully following style 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
 
 ## openMenu
 
@@ -381,15 +381,15 @@ Opens a menu with the specified content. This API uses a promise to return the r
 > 
 > - If an invalid **target** is provided, the menu will not be displayed.
 > 
-> - You must maintain the provided **content**, on which [updateMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#updatemenu) and
-> [closeMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#closemenu) rely to identify the target menu.
+> - You must maintain the provided **content**, on which [updateMenu](#updateMenu) and
+> [closeMenu](#closeMenu) rely to identify the target menu.
 > 
-> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or
-> [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)
+> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup) or
+> [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)), the [ComponentContent](arkts-arkui-componentcontent-c.md#ComponentContent)
 > constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 > 
-> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#openmenu) has
+> - Nested subwindow dialog boxes are not supported. For example, when [openMenu](#openMenu) has
 > **showInSubWindow** set to **true**, another dialog box with **showInSubWindow=true** cannot be displayed.
 
 **Since:** 18
@@ -406,7 +406,7 @@ Opens a menu with the specified content. This API uses a promise to return the r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| content | ComponentContent & lt;T & gt; | Yes |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes |
 | options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | No |
 
@@ -414,17 +414,17 @@ Opens a menu with the specified content. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
-| [103305](../errorcode-promptAction.md#103305-node-not-mounted) |
-| [103304](../errorcode-promptAction.md#103304-target-id-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
+| [103305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103305-node-not-mounted) |
+| [103304](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103304-target-id-not-found) |
 
 ## openPopup
 
@@ -438,11 +438,11 @@ Creates and displays a popup with the specified content. This API uses a promise
 > 
 > - If an invalid **target** is provided, the popup will not be displayed.
 > 
-> - You must maintain the provided **content**, on which [updatePopup](arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup) and
-> [closePopup](arkts-arkui-arkui-uicontext-promptaction-c.md#closepopup) rely to identify the target popup.
+> - You must maintain the provided **content**, on which [updatePopup](#updatePopup) and
+> [closePopup](#closePopup) rely to identify the target popup.
 > 
-> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-advanced-popup.md) or
-> [Chip](arkts-arkui-advanced-chip.md)), the [ComponentContent](arkts-arkui-componentcontent-c.md)
+> - If your **wrapBuilder** includes other components (such as [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup) or
+> [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)), the [ComponentContent](arkts-arkui-componentcontent-c.md#ComponentContent)
 > constructor must include four parameters, and the **options** parameter must be
 > **{ nestingBuilderSupported: true }**.
 
@@ -460,7 +460,7 @@ Creates and displays a popup with the specified content. This API uses a promise
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| content | ComponentContent & lt;T & gt; | Yes |
 | target | [TargetInfo](arkts-arkui-arkui-uicontext-targetinfo-i.md) | Yes |
 | options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | No |
 
@@ -468,17 +468,17 @@ Creates and displays a popup with the specified content. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103302](../errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
-| [103305](../errorcode-promptAction.md#103305-node-not-mounted) |
-| [103304](../errorcode-promptAction.md#103304-target-id-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) |
+| [103305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103305-node-not-mounted) |
+| [103304](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103304-target-id-not-found) |
 
 ## openToast
 
@@ -508,14 +508,14 @@ Displays a toast. This API uses a promise to return the toast ID for use with **
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## presentCustomDialog
 
@@ -550,14 +550,14 @@ The dialog box ID can be included in the dialog box content for related operatio
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## showActionMenu
 
@@ -571,7 +571,7 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [showActionMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#showactionmenu)
+**Substitutes:** [showActionMenu](#showActionMenu)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -590,8 +590,8 @@ Shows an action menu in the given settings. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## showActionMenu
 
@@ -622,8 +622,8 @@ Creates and displays an action menu. This API uses an asynchronous callback to r
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## showActionMenu
 
@@ -653,14 +653,14 @@ Creates and displays an action menu. This API uses a promise to return the resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;promptAction.ActionMenuSuccessResponse&gt; |
+| Promise & lt;promptAction.ActionMenuSuccessResponse & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## showDialog
 
@@ -691,8 +691,8 @@ Creates and displays a dialog box. This API uses an asynchronous callback to ret
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## showDialog
 
@@ -722,14 +722,14 @@ Creates and displays a dialog box. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;promptAction.ShowDialogSuccessResponse&gt; |
+| Promise & lt;promptAction.ShowDialogSuccessResponse & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## showToast
 
@@ -759,8 +759,8 @@ Creates and displays a toast.
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## updateCustomDialog
 
@@ -784,22 +784,22 @@ Updates a custom dialog box corresponding to **dialogContent**. This API uses a 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dialogContent | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| dialogContent | ComponentContent & lt;T & gt; | Yes |
 | options | promptAction.BaseDialogOptions | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
 
 ## updateMenu
 
@@ -815,7 +815,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 > **transition**, **onAppear**, **aboutToAppear**, **onDisappear**, **aboutToDisappear**, **onWillAppear**,
 > **onDidAppear**, **onWillDisappear**, and **onDidDisappear**.
 > 
-> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md/arkts-arkui-menumasktype-i.md). However, this API does not
+> - The mask style can be updated by configuring [MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md#MenuMaskType). However, this API does not
 > support mask presence toggling (that is, switching the mask from non-existent to existent or vice versa) by
 > setting a boolean value.
 
@@ -833,7 +833,7 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| content | ComponentContent & lt;T & gt; | Yes |
 | options | [MenuOptions](../arkts-components/arkts-arkui-menuoptions-i.md) | Yes |
 | partialUpdate | boolean | No |
 
@@ -841,15 +841,15 @@ Updates the style of the menu corresponding to the provided **content**. This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
 
 ## updatePopup
 
@@ -877,7 +877,7 @@ Updates the style of the popup corresponding to the provided **content**. This A
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | Yes |
+| content | ComponentContent & lt;T & gt; | Yes |
 | options | [PopupCommonOptions](../arkts-components/arkts-arkui-popupcommonoptions-i.md) | Yes |
 | partialUpdate | boolean | No |
 
@@ -885,12 +885,12 @@ Updates the style of the popup corresponding to the provided **content**. This A
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103301](../errorcode-promptAction.md#103301-dialog-content-error) |
-| [103303](../errorcode-promptAction.md#103303-custom-dialog-box-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [103301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) |
+| [103303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) |

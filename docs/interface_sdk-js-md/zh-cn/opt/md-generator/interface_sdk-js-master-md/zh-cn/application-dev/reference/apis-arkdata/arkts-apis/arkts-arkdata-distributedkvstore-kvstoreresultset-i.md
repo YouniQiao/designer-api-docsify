@@ -5,7 +5,7 @@
 KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
 
 在调用KVStoreResultSet的方法前，需要先通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)构建一个SingleKVStore或者DeviceKVStore实例。
+[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个SingleKVStore或者DeviceKVStore实例。
 
 > **说明：**
 > 
@@ -110,8 +110,8 @@ try {
 getPosition(): number
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetofirst)、  
-[moveToLast](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#movetolast)等操作而发生变化。
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](#moveToFirst)、  
+[moveToLast](#moveToLast)等操作而发生变化。
 
 **起始版本：** 9
 
@@ -355,7 +355,7 @@ move(offset: number): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -545,7 +545,7 @@ moveToPosition(position: number): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

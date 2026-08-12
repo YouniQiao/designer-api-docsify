@@ -32,5 +32,5 @@ export declare function RemoteWindow(
 
 | 类型 | 说明 |
 | --- | --- |
-| [RemoteWindowAttribute](../arkts-components/arkts-arkui-remotewindow-attribute.md) |  |
+| [RemoteWindowAttribute](arkts-arkui-remotewindow-remotewindowattribute-i-sys.md) |  |
 

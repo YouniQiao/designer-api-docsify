@@ -18,7 +18,7 @@ direction?: ScrollBarDirection
 
 设置滚动条的方向。
 
-**类型：** [ScrollBarDirection](../arkts-components/arkts-arkui-scrollbardirection-e.md)
+**类型：** [ScrollBarDirection](arkts-arkui-scrollbar-scrollbardirection-e.md)
 
 **起始版本：** 23
 

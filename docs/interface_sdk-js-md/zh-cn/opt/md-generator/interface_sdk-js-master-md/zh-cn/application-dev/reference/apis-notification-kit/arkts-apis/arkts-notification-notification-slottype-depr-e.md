@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#SlotType
+**替代接口：** [SlotType](ohos.notificationManager/notificationManager#SlotType)
 
 <!--Device-notification-export enum SlotType--><!--Device-notification-export enum SlotType-End-->
 
@@ -24,7 +24,7 @@ UNKNOWN_TYPE = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.SlotType#UNKNOWN_TYPE
+**替代接口：** [UNKNOWN_TYPE](ohos.notificationManager/notificationManager.SlotType#UNKNOWN_TYPE)
 
 <!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 
@@ -42,7 +42,7 @@ SOCIAL_COMMUNICATION = 1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.SlotType#SOCIAL_COMMUNICATION
+**替代接口：** [SOCIAL_COMMUNICATION](ohos.notificationManager/notificationManager.SlotType#SOCIAL_COMMUNICATION)
 
 <!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
@@ -60,7 +60,7 @@ SERVICE_INFORMATION = 2
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.SlotType#SERVICE_INFORMATION
+**替代接口：** [SERVICE_INFORMATION](ohos.notificationManager/notificationManager.SlotType#SERVICE_INFORMATION)
 
 <!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
@@ -78,7 +78,7 @@ CONTENT_INFORMATION = 3
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.SlotType#CONTENT_INFORMATION
+**替代接口：** [CONTENT_INFORMATION](ohos.notificationManager/notificationManager.SlotType#CONTENT_INFORMATION)
 
 <!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
@@ -96,7 +96,7 @@ OTHER_TYPES = 0xFFFF
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.SlotType#OTHER_TYPES
+**替代接口：** [OTHER_TYPES](ohos.notificationManager/notificationManager.SlotType#OTHER_TYPES)
 
 <!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 

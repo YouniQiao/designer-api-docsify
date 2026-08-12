@@ -13,7 +13,7 @@ Provides methods to accessing bluetooth MAP(Message Access Profile)-related capa
 ## Modules to Import
 
 ```TypeScript
-import { map } from 'kits/@kit.ConnectivityKit';
+import { map } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

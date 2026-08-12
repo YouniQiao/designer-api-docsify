@@ -60,7 +60,7 @@ Replaces text in a string, using an object that supports replacement within a st
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | searchValue | { [Symbol.replace](string: string, replacer: (substring: string, ...args: any[]) =&gt; string): string; } | Yes |
-| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
 
 **Return value:**
 

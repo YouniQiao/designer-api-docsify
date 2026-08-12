@@ -13,7 +13,7 @@ The **linkEnhance** module delivers highly efficient Bluetooth connectivity and 
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from 'kits/@kit.DistributedServiceKit';
+import { linkEnhance } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

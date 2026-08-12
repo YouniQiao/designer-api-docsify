@@ -31,7 +31,7 @@ function interpolatingSpring(velocity: number, mass: number, stiffness: number, 
 
 | 类型 |
 | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| [ICurve](arkts-arkui-icurve-t.md) |
 
 ## 示例
 

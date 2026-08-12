@@ -16,7 +16,7 @@ code: number
 
 表示传递的公共事件数据，仅当WantAgent实例的  
 [OperationType](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#operationtype)类型是'SEND_COMMON_EVENT'时有效。该字段与发布者使用  
-[commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md/arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，传递  
+[commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，传递  
 [CommonEventPublishData](../../../reference/apis-basic-services-kit/js-apis-inner-commonEvent-commonEventPublishData.md#属性)公共事件数据中的`code`字段含义一致。
 
 **类型：** number

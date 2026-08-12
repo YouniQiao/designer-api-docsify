@@ -33,23 +33,23 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| filePaths | Array&lt;string&gt; | 是 |
+| filePaths | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700301](../errorcode-bundle.md#17700301-扩展资源添加失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700301-扩展资源添加失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -104,19 +104,19 @@ createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): P
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700069](../errorcode-bundle.md#17700069-应用不支持创建分身) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700069](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700069-应用不支持创建分身) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -177,18 +177,18 @@ destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -247,19 +247,19 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -306,7 +306,7 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 
 > **说明：**
 > 
-> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo)中的
 > appDistributionType字段说明。
 
 **起始版本：** 9
@@ -327,7 +327,7 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 |
+| hapFilePaths | Array & lt;string & gt; | 是 |
 | installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -335,34 +335,34 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 
 | 错误码ID |
 | --- |
-| [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
-| [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
-| [17700042](../errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
-| [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
-| [17700041](../errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700039](../errorcode-bundle.md#17700039-不允许安装应用间共享库) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700036](../errorcode-bundle.md#17700036-共享库缺少allowappsharelibrary特权导致安装失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
-| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) |
-| [17700031](../errorcode-bundle.md#17700031-overlay特征校验失败导致hap安装失败) |
-| [17700018](../errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
+| [17700044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
+| [17700042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
+| [17700043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
+| [17700041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-不允许安装应用间共享库) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700036](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700036-共享库缺少allowappsharelibrary特权导致安装失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [17700054](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) |
+| [17700052](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
+| [17700050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700076](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
+| [17700077](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700066](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700066-安装失败native软件包安装失败) |
+| [17700031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700031-overlay特征校验失败导致hap安装失败) |
+| [17700018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
 
 ## 示例
 
@@ -405,7 +405,7 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo)中的
 > appDistributionType字段说明。
 
 **起始版本：** 9
@@ -426,40 +426,40 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 |
+| hapFilePaths | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
-| [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
-| [17700042](../errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
-| [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
-| [17700041](../errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700039](../errorcode-bundle.md#17700039-不允许安装应用间共享库) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700036](../errorcode-bundle.md#17700036-共享库缺少allowappsharelibrary特权导致安装失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
-| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) |
-| [17700031](../errorcode-bundle.md#17700031-overlay特征校验失败导致hap安装失败) |
-| [17700018](../errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
+| [17700044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
+| [17700042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
+| [17700043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
+| [17700041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-不允许安装应用间共享库) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700036](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700036-共享库缺少allowappsharelibrary特权导致安装失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [17700054](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) |
+| [17700052](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
+| [17700050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700076](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
+| [17700077](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [17700066](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700066-安装失败native软件包安装失败) |
+| [17700031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700031-overlay特征校验失败导致hap安装失败) |
+| [17700018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
 
 ## 示例
 
@@ -497,7 +497,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 
 > **说明：**
 > 
-> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md)中的
+> 安装不同分发类型的应用需要申请相应的权限，分发类型可以参考[ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo)中的
 > appDistributionType字段说明。
 
 **起始版本：** 9
@@ -518,47 +518,47 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 |
+| hapFilePaths | Array & lt;string & gt; | 是 |
 | installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
-| [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
-| [17700042](../errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
-| [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
-| [17700041](../errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700039](../errorcode-bundle.md#17700039-不允许安装应用间共享库) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700036](../errorcode-bundle.md#17700036-共享库缺少allowappsharelibrary特权导致安装失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [17700054](../errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700076](../errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
-| [17700077](../errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700066](../errorcode-bundle.md#17700066-安装失败native软件包安装失败) |
-| [17700031](../errorcode-bundle.md#17700031-overlay特征校验失败导致hap安装失败) |
-| [17700018](../errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
+| [17700044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
+| [17700042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
+| [17700043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
+| [17700041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-不允许安装应用间共享库) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700036](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700036-共享库缺少allowappsharelibrary特权导致安装失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [17700054](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700054-权限校验失败导致应用安装失败) |
+| [17700052](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
+| [17700050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700076](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700076-签名证书profile文件中的类型被限制不允许安装到当前设备中导致安装失败) |
+| [17700077](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700077-安装应用失败但安装对应的预置应用成功) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700066](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700066-安装失败native软件包安装失败) |
+| [17700031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700031-overlay特征校验失败导致hap安装失败) |
+| [17700018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
 
 ## 示例
 
@@ -613,37 +613,37 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | hostBundleName | string | 是 |
-| pluginFilePaths | Array&lt;string&gt; | 是 |
+| pluginFilePaths | Array & lt;string & gt; | 是 |
 | pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
-| [17700090](../errorcode-bundle.md#17700090-插件与应用之间-plugindistributionids-校验失败) |
-| [17700091](../errorcode-bundle.md#17700091-插件与主体同包名) |
-| [17700088](../errorcode-bundle.md#17700088-应用缺少安装插件的权限) |
-| [17700089](../errorcode-bundle.md#17700089-插件的-plugindistributionids-解析失败) |
-| [17700087](../errorcode-bundle.md#17700087-当前设备不支持安装插件) |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700090](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700090-插件与应用之间-plugindistributionids-校验失败) |
+| [17700091](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700091-插件与主体同包名) |
+| [17700088](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700088-应用缺少安装插件的权限) |
+| [17700089](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700089-插件的-plugindistributionids-解析失败) |
+| [17700087](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700087-当前设备不支持安装插件) |
+| [17700052](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
 
 ## 示例
 
@@ -684,7 +684,7 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 
 > **说明：**
 > 
-> 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise，enterprise_mdm和
+> 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md#ApplicationInfo)为enterprise，enterprise_mdm和
 > enterprise_normal的应用。
 
 **起始版本：** 12
@@ -708,19 +708,19 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700071](../errorcode-bundle.md#17700071-不允许企业应用安装) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700071](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700071-不允许企业应用安装) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -778,13 +778,13 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -846,12 +846,12 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -908,19 +908,19 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700058](../errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-指定的应用禁止在本设备或指定用户下安装) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -975,23 +975,23 @@ removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| moduleNames | Array&lt;string&gt; | 是 |
+| moduleNames | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700302](../errorcode-bundle.md#17700302-扩展资源删除失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700302-扩展资源删除失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -1047,17 +1047,17 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 
 | 错误码ID |
 | --- |
-| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
-| [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
-| [17700040](../errorcode-bundle.md#17700040-不允许卸载应用间共享库) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
+| [17700045](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
+| [17700040](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700040-不允许卸载应用间共享库) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-预置应用无法卸载) |
+| [17700067](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -1119,15 +1119,15 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
-| [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
-| [17700040](../errorcode-bundle.md#17700040-不允许卸载应用间共享库) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
+| [17700045](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
+| [17700040](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700040-不允许卸载应用间共享库) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-预置应用无法卸载) |
+| [17700067](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -1184,23 +1184,23 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700062](../errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
-| [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
-| [17700040](../errorcode-bundle.md#17700040-不允许卸载应用间共享库) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-应用设置了卸载处置规则不允许直接卸载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
+| [17700045](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
+| [17700040](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700040-不允许卸载应用间共享库) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-预置应用无法卸载) |
+| [17700067](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -1261,12 +1261,12 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700038](../errorcode-bundle.md#17700038-被卸载的shared-library不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) |
-| [17700037](../errorcode-bundle.md#17700037-被卸载的shared-library版本被其他应用依赖) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700038](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700038-被卸载的shared-library不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-预置应用无法卸载) |
+| [17700037](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700037-被卸载的shared-library版本被其他应用依赖) |
 
 ## 示例
 
@@ -1324,18 +1324,18 @@ uninstall(uninstallParam: UninstallParam): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700038](../errorcode-bundle.md#17700038-被卸载的shared-library不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700020](../errorcode-bundle.md#17700020-预置应用无法卸载) |
-| [17700037](../errorcode-bundle.md#17700037-被卸载的shared-library版本被其他应用依赖) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700038](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700038-被卸载的shared-library不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-预置应用无法卸载) |
+| [17700037](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700037-被卸载的shared-library版本被其他应用依赖) |
 
 ## 示例
 
@@ -1389,20 +1389,20 @@ uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | 是 |
+| bundleNames | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1452,24 +1452,24 @@ uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | hostBundleName | string | 是 |
-| pluginBundleName | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
 | pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700092](../errorcode-bundle.md#17700092-插件包名不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700092](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700092-插件包名不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -1529,21 +1529,21 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700060](../errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
-| [17700045](../errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
-| [17700057](../errorcode-bundle.md#17700057-指定的应用不是预置应用) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700067](../errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-指定的应用不允许被卸载) |
+| [17700045](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-企业设备管理不允许卸载该应用) |
+| [17700057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700057-指定的应用不是预置应用) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700067](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-卸载应用失败native软件包卸载失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -1596,7 +1596,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 |
+| hapFilePaths | Array & lt;string & gt; | 是 |
 | installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -1604,27 +1604,27 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 
 | 错误码ID |
 | --- |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700042](../errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
-| [17700041](../errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700039](../errorcode-bundle.md#17700039-不允许安装应用间共享库) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700018](../errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
-| [17700051](../errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
-| [17700049](../errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
+| [17700041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-不允许安装应用间共享库) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
+| [17700050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
+| [17700051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700049](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
 
 ## 示例
 
@@ -1679,33 +1679,33 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 |
+| hapFilePaths | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700042](../errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
-| [17700041](../errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700039](../errorcode-bundle.md#17700039-不允许安装应用间共享库) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700018](../errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
-| [17700051](../errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
-| [17700049](../errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
+| [17700041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-不允许安装应用间共享库) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
+| [17700050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
+| [17700051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700049](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
 
 ## 示例
 
@@ -1755,40 +1755,40 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 |
+| hapFilePaths | Array & lt;string & gt; | 是 |
 | installParam | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700047](../errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700044](../errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700042](../errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700043](../errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
-| [17700041](../errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700039](../errorcode-bundle.md#17700039-不允许安装应用间共享库) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17700018](../errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
-| [17700050](../errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
-| [17700051](../errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
-| [17700049](../errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-要更新的应用版本没有大于当前版本) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700044](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-安装包设置的多进程配置项与系统配置项设置矛盾) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700042](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-数据代理中的uri配置错误) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700043](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-数据代理中的权限配置错误) |
+| [17700041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-企业设备管理不允许安装该应用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700039](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-不允许安装应用间共享库) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17700018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-安装失败依赖的模块不存在) |
+| [17700050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-企业mdm应用普通企业应用不允许安装) |
+| [17700051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700051-应用自升级时调用方的签名证书profile文件中的类型不是企业mdm) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700049](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700049-应用自升级时安装的应用与调用方包名不同) |
 
 ## 示例
 

@@ -34,8 +34,8 @@
 | [queryBundleActiveStates](arkts-backgroundtasks-bundlestate-querybundleactivestates-f-sys.md#querybundleactivestates-1) | Queries state data of all bundles within a specified period identified by the start and end time. |
 | [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval) | Queries usage information about each bundle within a specified period at a specified interval. |
 | [queryBundleStateInfoByInterval](arkts-backgroundtasks-bundlestate-querybundlestateinfobyinterval-f-sys.md#querybundlestateinfobyinterval-1) | Queries usage information about each bundle within a specified period at a specified interval. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos) | Queries usage information about each bundle within a specified period.  This method queries usage information at the {@link #BY_OPTIMIZED} interval by default. |
-| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos-1) | Queries usage information about each bundle within a specified period.  This method queries usage information at the {@link #BY_OPTIMIZED} interval by default. |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos) | Queries usage information about each bundle within a specified period.  This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) interval by default. |
+| [queryBundleStateInfos](arkts-backgroundtasks-bundlestate-querybundlestateinfos-f-sys.md#querybundlestateinfos-1) | Queries usage information about each bundle within a specified period.  This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) interval by default. |
 <!--DelEnd-->
 
 ### 接口

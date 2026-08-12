@@ -20,6 +20,6 @@ Callback used to report page trasition events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [RouteType](../arkts-components/arkts-arkui-routetype-e.md) | Yes | transition route type |
+| type | [RouteType](arkts-arkui-pagetransition-routetype-e.md) | Yes | transition route type |
 | progress | double | Yes | transition progess |
 

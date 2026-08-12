@@ -12,24 +12,24 @@
 
 | Name | Description |
 | --- | --- |
-| [ClientAuthenticationHandler](arkts-arkweb-web-clientauthenticationhandler-c.md) | Defines the client certificate request result, related to {@link onClientAuthenticationRequest} method. |
-| [ConsoleMessage](arkts-arkweb-web-consolemessage-c.md) | Encompassed message information as parameters to {@link onConsole} method. |
-| [ControllerHandler](arkts-arkweb-web-controllerhandler-c.md) | Defines the onWindowNew callback, related to {@link onWindowNew} method. |
-| [DataResubmissionHandler](arkts-arkweb-web-dataresubmissionhandler-c.md) | Defines the onDataResubmission callback, related to {@link onDataResubmission} method. |
+| [ClientAuthenticationHandler](arkts-arkweb-web-clientauthenticationhandler-c.md) | Defines the client certificate request result, related to [onClientAuthenticationRequest](arkts-arkweb-web-webattribute-i.md#onClientAuthenticationRequest) method. |
+| [ConsoleMessage](arkts-arkweb-web-consolemessage-c.md) | Encompassed message information as parameters to [onConsole](arkts-arkweb-web-webattribute-i.md#onConsole) method. |
+| [ControllerHandler](arkts-arkweb-web-controllerhandler-c.md) | Defines the onWindowNew callback, related to [onWindowNew](arkts-arkweb-web-webattribute-i.md#onWindowNew) method. |
+| [DataResubmissionHandler](arkts-arkweb-web-dataresubmissionhandler-c.md) | Defines the onDataResubmission callback, related to [onDataResubmission](onDataResubmission) method. |
 | [EventResult](arkts-arkweb-web-eventresult-c.md) | Represents the event consumption result sent to the Web component.For details about the supported events, see TouchEvent/MouseEvent.If the application does not consume the event, set this parameter to false,and the event will be consumed by the Web component. If the application has consumed the event,set this parameter to true, and the event will not be consumed by the Web component. |
-| [FileSelectorParam](arkts-arkweb-web-fileselectorparam-c.md) | Encompassed message information as parameters to {@link onFileSelectorShow} method. |
-| [FileSelectorResult](arkts-arkweb-web-fileselectorresult-c.md) | Defines the file selector result, related to {@link onFileSelectorShow} method. |
+| [FileSelectorParam](arkts-arkweb-web-fileselectorparam-c.md) | Encompassed message information as parameters to [onFileSelectorShow](onFileSelectorShow) method. |
+| [FileSelectorResult](arkts-arkweb-web-fileselectorresult-c.md) | Defines the file selector result, related to [onFileSelectorShow](onFileSelectorShow) method. |
 | [FullScreenExitHandler](arkts-arkweb-web-fullscreenexithandler-c.md) | Implements the **FullScreenExitHandler** object to notify you that the **Web** component exits full screen mode.For details about the sample code,see [onFullScreenEnter](./arkts-basic-components-web-events.md#onfullscreenenter9).  > **NOTE：** >  > - The sample effect is subject to the actual device. |
-| [HttpAuthHandler](arkts-arkweb-web-httpauthhandler-c.md) | Defines the http auth request result, related to {@link onHttpAuthRequest} method. |
+| [HttpAuthHandler](arkts-arkweb-web-httpauthhandler-c.md) | Defines the http auth request result, related to [onHttpAuthRequest](arkts-arkweb-web-webattribute-i.md#onHttpAuthRequest) method. |
 | [JsGeolocation](arkts-arkweb-web-jsgeolocation-c.md) | Defines the js geolocation request. |
 | [JsResult](arkts-arkweb-web-jsresult-c.md) | Defines the js result. |
-| [PermissionRequest](arkts-arkweb-web-permissionrequest-c.md) | Defines the onPermissionRequest callback, related to {@link onPermissionRequest} method. |
+| [PermissionRequest](arkts-arkweb-web-permissionrequest-c.md) | Defines the onPermissionRequest callback, related to [onPermissionRequest](arkts-arkweb-web-webattribute-i.md#onPermissionRequest) method. |
 | [ScreenCaptureHandler](arkts-arkweb-web-screencapturehandler-c.md) | Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request.For details about the sample code,see [onScreenCaptureRequest](./arkts-basic-components-web-events.md#onscreencapturerequest10).  > **NOTE：** >  > - The initial APIs of this component are supported since API version 8. > Updates will be marked with a superscript to indicate their earliest API version. >  > - The initial APIs of this class are supported since API version 10. >  > - The sample effect is subject to the actual device. |
-| [SslErrorHandler](arkts-arkweb-web-sslerrorhandler-c.md) | Defines the ssl error request result, related to {@link onSslErrorEventReceive} method. |
+| [SslErrorHandler](arkts-arkweb-web-sslerrorhandler-c.md) | Defines the ssl error request result, related to [onSslErrorEventReceive](arkts-arkweb-web-webattribute-i.md#onSslErrorEventReceive) method. |
 | [VerifyPinHandler](arkts-arkweb-web-verifypinhandler-c.md) | Handle the result of PIN verification. |
-| [WebContextMenuParam](arkts-arkweb-web-webcontextmenuparam-c.md) | Defines the context menu param, related to {@link WebContextMenuParam} method. |
-| [WebContextMenuResult](arkts-arkweb-web-webcontextmenuresult-c.md) | Defines the context menu result, related to {@link WebContextMenuResult} method. |
-| [WebKeyboardController](arkts-arkweb-web-webkeyboardcontroller-c.md) | Define the controller to interact with a custom keyboard, related to the {@link onInterceptKeyboardAttach} event. |
+| [WebContextMenuParam](arkts-arkweb-web-webcontextmenuparam-c.md) | Defines the context menu param, related to [WebContextMenuParam](arkts-arkweb-web-webcontextmenuparam-c.md#WebContextMenuParam) method. |
+| [WebContextMenuResult](arkts-arkweb-web-webcontextmenuresult-c.md) | Defines the context menu result, related to [WebContextMenuResult](arkts-arkweb-web-webcontextmenuresult-c.md#WebContextMenuResult) method. |
+| [WebKeyboardController](arkts-arkweb-web-webkeyboardcontroller-c.md) | Define the controller to interact with a custom keyboard, related to the [onInterceptKeyboardAttach](arkts-arkweb-web-webattribute-i.md#onInterceptKeyboardAttach) event. |
 | [WebResourceError](arkts-arkweb-web-webresourceerror-c.md) | Defines the Web resource error. |
 | [WebResourceRequest](arkts-arkweb-web-webresourcerequest-c.md) | Defines the Web resource request. |
 | [WebResourceResponse](arkts-arkweb-web-webresourceresponse-c.md) | Defines the Web resource response. |
@@ -112,7 +112,7 @@
 | [SslErrorEvent](arkts-arkweb-web-sslerrorevent-i.md) | Defines the ssl error event. |
 | [UrlRegexRule](arkts-arkweb-web-urlregexrule-i.md) | Defines the regular expression rule. |
 | [VerifyPinEvent](arkts-arkweb-web-verifypinevent-i.md) | Defines the event for PIN verification. |
-| [WebKeyboardCallbackInfo](arkts-arkweb-web-webkeyboardcallbackinfo-i.md) | Defines the web keyboard callback info related to the {@link onInterceptKeyboardAttach} event. |
+| [WebKeyboardCallbackInfo](arkts-arkweb-web-webkeyboardcallbackinfo-i.md) | Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-arkweb-web-webattribute-i.md#onInterceptKeyboardAttach) event. |
 | [WebKeyboardOptions](arkts-arkweb-web-webkeyboardoptions-i.md) | Defines the web keyboard options when onInterceptKeyboardAttach event return. |
 | [WebMediaOptions](arkts-arkweb-web-webmediaoptions-i.md) | Describes the web media options. |
 | [WebOptions](arkts-arkweb-web-weboptions-i.md) | Defines the Web options. |
@@ -126,47 +126,47 @@
 | [AISessionType](arkts-arkweb-web-aisessiontype-e.md) | Enum representing the supported types of AI sessions. |
 | [AudioSessionType](arkts-arkweb-web-audiosessiontype-e.md) | Enumerates the web audio types in the application. |
 | [BlankScreenDetectionMethod](arkts-arkweb-web-blankscreendetectionmethod-e.md) | The methods can be chosen to detect if current page is blank or nearly blank. |
-| [BlurOnKeyboardHideMode](arkts-arkweb-web-bluronkeyboardhidemode-e.md) | Enum type supplied to {@link blurOnKeyboardHideMode} for setting the web blurOnKeyboardHide mode. |
-| [CacheMode](arkts-arkweb-web-cachemode-e.md) | Enum type supplied to {@link cacheMode} for setting the Web cache mode. |
+| [BlurOnKeyboardHideMode](arkts-arkweb-web-bluronkeyboardhidemode-e.md) | Enum type supplied to [blurOnKeyboardHideMode](arkts-arkweb-web-webattribute-i.md#blurOnKeyboardHideMode) for setting the web blurOnKeyboardHide mode. |
+| [CacheMode](arkts-arkweb-web-cachemode-e.md) | Enum type supplied to [cacheMode](arkts-arkweb-web-webattribute-i.md#cacheMode) for setting the Web cache mode. |
 | [CameraCaptureState](arkts-arkweb-web-cameracapturestate-e.md) | Enumerates the camera capture states. |
 | [ConsoleMessageSource](arkts-arkweb-web-consolemessagesource-e.md) | The source of console message. |
-| [ContextMenuDataMediaType](arkts-arkweb-web-contextmenudatamediatype-e.md) | Defines the context menu media type, related to {@link onContextMenuShow} method. |
-| [ContextMenuEditStateFlags](arkts-arkweb-web-contextmenueditstateflags-e.md) | Defines the context menu supported event bit flags, related to {@link onContextMenuShow} method. |
-| [ContextMenuInputFieldType](arkts-arkweb-web-contextmenuinputfieldtype-e.md) | Defines the context menu input field type, related to {@link onContextMenuShow} method. |
-| [ContextMenuMediaType](arkts-arkweb-web-contextmenumediatype-e.md) | Defines the context menu media type, related to {@link onContextMenuShow} method. |
-| [ContextMenuSourceType](arkts-arkweb-web-contextmenusourcetype-e.md) | Defines the context menu source type, related to {@link onContextMenuShow} method. |
-| [CredentialType](arkts-arkweb-web-credentialtype-e.md) | Enum type supplied to {@link CredentialType} when ClientAuthenticationHandler#confirm being called. |
-| [DetectedBlankScreenReason](arkts-arkweb-web-detectedblankscreenreason-e.md) | Enum type supplied to {@link BlankScreenDetectionEventInfo} when onDetectedBlankScreen being called. |
-| [FileSelectorMode](arkts-arkweb-web-fileselectormode-e.md) | Enum type supplied to {@link FileSelectorParam} when onFileSelectorShow being called. |
-| [GestureFocusMode](arkts-arkweb-web-gesturefocusmode-e.md) | Enum type supplied to {@link gestureFocusMode} for setting the web gesture focus mode. |
-| [MessageLevel](arkts-arkweb-web-messagelevel-e.md) | Enum type supplied to {@link getMessageLevel} for receiving the console log level of JavaScript. |
+| [ContextMenuDataMediaType](arkts-arkweb-web-contextmenudatamediatype-e.md) | Defines the context menu media type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method. |
+| [ContextMenuEditStateFlags](arkts-arkweb-web-contextmenueditstateflags-e.md) | Defines the context menu supported event bit flags, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method. |
+| [ContextMenuInputFieldType](arkts-arkweb-web-contextmenuinputfieldtype-e.md) | Defines the context menu input field type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method. |
+| [ContextMenuMediaType](arkts-arkweb-web-contextmenumediatype-e.md) | Defines the context menu media type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method. |
+| [ContextMenuSourceType](arkts-arkweb-web-contextmenusourcetype-e.md) | Defines the context menu source type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method. |
+| [CredentialType](arkts-arkweb-web-credentialtype-e.md) | Enum type supplied to [CredentialType](arkts-arkweb-web-credentialtype-e.md#CredentialType) when ClientAuthenticationHandler#confirm being called. |
+| [DetectedBlankScreenReason](arkts-arkweb-web-detectedblankscreenreason-e.md) | Enum type supplied to [BlankScreenDetectionEventInfo](arkts-arkweb-web-blankscreendetectioneventinfo-i.md#BlankScreenDetectionEventInfo) when onDetectedBlankScreen being called. |
+| [FileSelectorMode](arkts-arkweb-web-fileselectormode-e.md) | Enum type supplied to [FileSelectorParam](arkts-arkweb-web-fileselectorparam-c.md#FileSelectorParam) when onFileSelectorShow being called. |
+| [GestureFocusMode](arkts-arkweb-web-gesturefocusmode-e.md) | Enum type supplied to [gestureFocusMode](arkts-arkweb-web-webattribute-i.md#gestureFocusMode) for setting the web gesture focus mode. |
+| [MessageLevel](arkts-arkweb-web-messagelevel-e.md) | Enum type supplied to [getMessageLevel](arkts-arkweb-web-consolemessage-c.md#getMessageLevel) for receiving the console log level of JavaScript. |
 | [MicrophoneCaptureState](arkts-arkweb-web-microphonecapturestate-e.md) | Indicates current microphone capture state of current web page. |
 | [MixedMode](arkts-arkweb-web-mixedmode-e.md) | The Web's behavior to load from HTTP or HTTPS. Defaults to MixedMode.None. |
-| [NativeEmbedParamStatus](arkts-arkweb-web-nativeembedparamstatus-e.md) | Enum type supplied to {@link NativeEmbedParamItem} when onNativeEmbedObjectParamChange being called. |
+| [NativeEmbedParamStatus](arkts-arkweb-web-nativeembedparamstatus-e.md) | Enum type supplied to [NativeEmbedParamItem](arkts-arkweb-web-nativeembedparamitem-i.md#NativeEmbedParamItem) when onNativeEmbedObjectParamChange being called. |
 | [NativeEmbedStatus](arkts-arkweb-web-nativeembedstatus-e.md) | Defines the lifecycle of the same-layer tag.When the same-layer tag exists on the loaded page,CREATE is triggered. When the same-layer tag is moved or is enlarged,  **UPDATE **is triggered. When the page exits, DESTROY is triggered. |
 | [NavigationPolicy](arkts-arkweb-web-navigationpolicy-e.md) | Enum type for navigationPolicy in OnWindowNewExtEvent. |
-| [OverScrollMode](arkts-arkweb-web-overscrollmode-e.md) | Enum type supplied to {@link overScrollMode} for setting the web overScroll mode. |
+| [OverScrollMode](arkts-arkweb-web-overscrollmode-e.md) | Enum type supplied to [overScrollMode](arkts-arkweb-web-webattribute-i.md#overScrollMode) for setting the web overScroll mode. |
 | [PdfLoadResult](arkts-arkweb-web-pdfloadresult-e.md) | Enumerates the PDF page loading results. |
-| [PinVerifyResult](arkts-arkweb-web-pinverifyresult-e.md) | Enum type supplied to {@link PinVerifyResult} when VerifyPinHandler#confirm being called. |
-| [ProtectedResourceType](arkts-arkweb-web-protectedresourcetype-e.md) | Defines the accessible resource type, related to {@link onPermissionRequest} method. |
-| [RenderExitReason](arkts-arkweb-web-renderexitreason-e.md) | Enum type supplied to {@link renderExitReason} when onRenderExited being called. |
+| [PinVerifyResult](arkts-arkweb-web-pinverifyresult-e.md) | Enum type supplied to [PinVerifyResult](arkts-arkweb-web-pinverifyresult-e.md#PinVerifyResult) when VerifyPinHandler#confirm being called. |
+| [ProtectedResourceType](arkts-arkweb-web-protectedresourcetype-e.md) | Defines the accessible resource type, related to [onPermissionRequest](arkts-arkweb-web-webattribute-i.md#onPermissionRequest) method. |
+| [RenderExitReason](arkts-arkweb-web-renderexitreason-e.md) | Enum type supplied to [renderExitReason](arkts-arkweb-web-onrenderexitedevent-i.md#renderExitReason) when onRenderExited being called. |
 | [RenderMode](arkts-arkweb-web-rendermode-e.md) | Enumerates the rendering mode of Web components. By default, the asynchronous rendering mode is used.The asynchronous rendering mode is recommended because it has better performance and lower power consumption. |
-| [RenderProcessNotRespondingReason](arkts-arkweb-web-renderprocessnotrespondingreason-e.md) | Enum type supplied to {@link RenderProcessNotRespondingData} when onRenderProcessNotResponding is called. |
-| [ScrollDirectionalLockType](arkts-arkweb-web-scrolldirectionallocktype-e.md) | Enum defining the scope of directional lock behavior in the WebView, used with {@link enableScrollDirectionalLock}. |
-| [ScrollbarLayoutPolicy](arkts-arkweb-web-scrollbarlayoutpolicy-e.md) | Defines the layout policy for scrollbars, used with {@link scrollbarLayoutPolicy}. |
-| [SslError](arkts-arkweb-web-sslerror-e.md) | Enum type supplied to {@link error} when onSslErrorEventReceive being called. |
-| [ThreatType](arkts-arkweb-web-threattype-e.md) | Enum type supplied to {@link threatType} for the website's threat type. |
-| [ViewportFit](arkts-arkweb-web-viewportfit-e.md) | Defines the viewport-fit type, related to {@link ViewportFit}. |
-| [WebBypassVsyncCondition](arkts-arkweb-web-webbypassvsynccondition-e.md) | Enum type supplied to {@link bypassVsyncCondition} for setting the bypass vsync condition. |
+| [RenderProcessNotRespondingReason](arkts-arkweb-web-renderprocessnotrespondingreason-e.md) | Enum type supplied to [RenderProcessNotRespondingData](arkts-arkweb-web-renderprocessnotrespondingdata-i.md#RenderProcessNotRespondingData) when onRenderProcessNotResponding is called. |
+| [ScrollDirectionalLockType](arkts-arkweb-web-scrolldirectionallocktype-e.md) | Enum defining the scope of directional lock behavior in the WebView, used with [enableScrollDirectionalLock](arkts-arkweb-web-webattribute-i.md#enableScrollDirectionalLock). |
+| [ScrollbarLayoutPolicy](arkts-arkweb-web-scrollbarlayoutpolicy-e.md) | Defines the layout policy for scrollbars, used with [scrollbarLayoutPolicy](arkts-arkweb-web-webattribute-i.md#scrollbarLayoutPolicy). |
+| [SslError](arkts-arkweb-web-sslerror-e.md) | Enum type supplied to [error](error) when onSslErrorEventReceive being called. |
+| [ThreatType](arkts-arkweb-web-threattype-e.md) | Enum type supplied to [threatType](threatType) for the website's threat type. |
+| [ViewportFit](arkts-arkweb-web-viewportfit-e.md) | Defines the viewport-fit type, related to [ViewportFit](arkts-arkweb-web-viewportfit-e.md#ViewportFit). |
+| [WebBypassVsyncCondition](arkts-arkweb-web-webbypassvsynccondition-e.md) | Enum type supplied to [bypassVsyncCondition](arkts-arkweb-web-webattribute-i.md#bypassVsyncCondition) for setting the bypass vsync condition. |
 | [WebCaptureMode](arkts-arkweb-web-webcapturemode-e.md) | Enumerates the web screen capture modes. |
-| [WebDarkMode](arkts-arkweb-web-webdarkmode-e.md) | Enum type supplied to {@link darkMode} for setting the web dark mode. |
+| [WebDarkMode](arkts-arkweb-web-webdarkmode-e.md) | Enum type supplied to [darkMode](arkts-arkweb-web-webattribute-i.md#darkMode) for setting the web dark mode. |
 | [WebElementType](arkts-arkweb-web-webelementtype-e.md) | Defines Web Elements type. |
-| [WebKeyboardAppearanceMode](arkts-arkweb-web-webkeyboardappearancemode-e.md) | Enum type supplied to {@link keyboardAppearance} for setting the web keyboard appearance mode. |
-| [WebKeyboardAvoidMode](arkts-arkweb-web-webkeyboardavoidmode-e.md) | Enum type supplied to {@link keyboardAvoidMode} for setting the web keyboard avoid mode. |
-| [WebLayoutMode](arkts-arkweb-web-weblayoutmode-e.md) | Enum type supplied to {@link layoutMode} for setting the web layout mode. |
-| [WebNavigationType](arkts-arkweb-web-webnavigationtype-e.md) | Enum type supplied to {@link navigationType} for the navigation's type. |
+| [WebKeyboardAppearanceMode](arkts-arkweb-web-webkeyboardappearancemode-e.md) | Enum type supplied to [keyboardAppearance](arkts-arkweb-web-webattribute-i.md#keyboardAppearance) for setting the web keyboard appearance mode. |
+| [WebKeyboardAvoidMode](arkts-arkweb-web-webkeyboardavoidmode-e.md) | Enum type supplied to [keyboardAvoidMode](arkts-arkweb-web-webattribute-i.md#keyboardAvoidMode) for setting the web keyboard avoid mode. |
+| [WebLayoutMode](arkts-arkweb-web-weblayoutmode-e.md) | Enum type supplied to [layoutMode](arkts-arkweb-web-webattribute-i.md#layoutMode) for setting the web layout mode. |
+| [WebNavigationType](arkts-arkweb-web-webnavigationtype-e.md) | Enum type supplied to [navigationType](arkts-arkweb-web-loadcommitteddetails-i.md#navigationType) for the navigation's type. |
 | [WebResponseType](arkts-arkweb-web-webresponsetype-e.md) | ResponseType for contextMenu |
-| [WebRotateEffect](arkts-arkweb-web-webrotateeffect-e.md) | Enum type supplied to {@link rotateRenderEffect} for setting the effect of rotation. |
+| [WebRotateEffect](arkts-arkweb-web-webrotateeffect-e.md) | Enum type supplied to [rotateRenderEffect](arkts-arkweb-web-webattribute-i.md#rotateRenderEffect) for setting the effect of rotation. |
 
 ### Types
 

@@ -13,7 +13,7 @@ Describes the parameters used to maintain the relative position between the chil
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## currentLayoutMode
@@ -88,7 +88,7 @@ parentWindowSizeChangeCallback?: Callback<Size>
 
 Callback triggered when the parent window size changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window size changes. By default, this parameter is not passed, and notifications about the parent window size changes cannot be received.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Size&gt;
+**Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt;
 
 **Since:** 24
 
@@ -108,7 +108,7 @@ parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 
 Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and notifications about the parent window mode changes cannot be received.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WindowStatusType&gt;
+**Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt;
 
 **Since:** 24
 

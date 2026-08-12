@@ -14,7 +14,7 @@ Creates a stream based on the file path. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:createStream](arkts-corefile-fileio-createstream-f.md#createstream)
+**Substitutes:** [createStream](arkts-corefile-file-fs-createstream-f.md#createStream)
 
 <!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>--><!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>-End-->
 
@@ -31,7 +31,7 @@ Creates a stream based on the file path. This API uses a promise to return the r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Stream&gt; | Promise that returns the file stream. |
+| Promise&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | Promise that returns the file stream. |
 
 
 ## createStream
@@ -48,7 +48,7 @@ Creates a stream based on the file path. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:createStream](arkts-corefile-fileio-createstream-f.md#createstream)
+**Substitutes:** [createStream](arkts-corefile-file-fs-createstream-f.md#createStream)
 
 <!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
@@ -60,5 +60,5 @@ Creates a stream based on the file path. This API uses an asynchronous callback 
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 | mode | string | Yes | r**: Open a file for reading. The file must exist.&lt;br&gt;- **r+**: Open a file for both reading and writing. The file must exist.&lt;br&gt;- **w**: Open a file for writing. If the file exists, clear its content. If the file does not exist, create a file.&lt;br&gt;- **w+**: Open a file for both reading and writing. If the file exists, clear its content. If the file does not exist, create a file.&lt;br&gt;- **a**: Open a file in append mode for writing at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved).&lt;br&gt;- **a+**: Open a file in append mode for reading or updating at the end of the file. If the file does not exist, create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | Yes | Callback invoked when the stream is opened asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | Yes | Callback invoked when the stream is opened asynchronously. |
 

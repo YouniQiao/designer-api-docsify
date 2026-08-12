@@ -42,7 +42,7 @@ objectFit?: ImageFit
 
 默认值：ImageFit.Cover。
 
-**类型：** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
+**类型：** ImageFit
 
 **起始版本：** 10
 
@@ -88,7 +88,7 @@ verticalAlign?: ImageSpanAlignment
 
 默认值：ImageSpanAlignment.BOTTOM
 
-**类型：** [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md)
+**类型：** ImageSpanAlignment
 
 **起始版本：** 10
 

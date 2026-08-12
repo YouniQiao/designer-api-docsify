@@ -6,10 +6,10 @@ This module is used for offline processing of image.PixelMap to obtain visual ef
 
 This module provides the following classes:
 
-- [Filter](arkts-arkgraphics2d-effectkit-filter-i.md): an effect class used to add a specified effect to the effect chain,  
+- [Filter](arkts-arkgraphics2d-effectkit-filter-i.md#Filter): an effect class used to add a specified effect to the effect chain,  
  enabling combined processing of multiple image effects through chained calls.  
-- [Color](arkts-arkgraphics2d-effectkit-color-i.md): a class used to store the color picked.  
-- [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md): a smart color picker.
+- [Color](arkts-arkgraphics2d-effectkit-color-i.md#Color): a class used to store the color picked.  
+- [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md#ColorPicker): a smart color picker.
 
 **Since:** 9
 
@@ -22,7 +22,7 @@ This module provides the following classes:
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

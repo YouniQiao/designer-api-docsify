@@ -11,7 +11,7 @@ Movement of cursor.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## direction
@@ -22,7 +22,7 @@ direction: Direction
 
 Indicates the direction of cursor movement
 
-**Type:** [Direction](arkts-ime-inputmethod-direction-e.md)
+**Type:** Direction
 
 **Since:** 10
 

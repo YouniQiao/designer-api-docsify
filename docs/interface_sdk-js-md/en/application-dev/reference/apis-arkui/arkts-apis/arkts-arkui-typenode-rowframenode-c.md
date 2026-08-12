@@ -34,11 +34,11 @@ Initialize Row FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | No | Row options. |
+| options | RowOptions \| RowOptionsV2 | No | Row options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |  |
+| RowAttribute |  |
 

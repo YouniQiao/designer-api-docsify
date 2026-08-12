@@ -42,7 +42,7 @@ Default value: **DialogAlignment.Bottom**
 
 If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
-**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
+**Type:** DialogAlignment
 
 **Since:** 8
 
@@ -92,7 +92,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -117,7 +117,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 Options for customizing the background blur style. For details about the default value, see   
 **BackgroundBlurStyleOptions**.
 
-**Type:** [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
@@ -146,7 +146,7 @@ Default value: **Color.Transparent**
 The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the   
 **backgroundBlurStyle** property to **BlurStyle.NONE**.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -171,7 +171,7 @@ backgroundEffect?: BackgroundEffectOptions
 Options for customizing the background effect. For details about the default value, see   
 **BackgroundEffectOptions**.
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 19
 
@@ -201,7 +201,7 @@ Default value: **Color.Black**
 
 When **borderColor** is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
 
 **Default:** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -229,7 +229,7 @@ Default value: **BorderStyle.Solid**
 
 **borderStyle** must be used with **borderWidth** in pairs.
 
-**Type:** [BorderStyle](arkts-arkui-enums-borderstyle-e.md) \| EdgeStyles
+**Type:** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Default:** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -265,7 +265,7 @@ If the left and right borders are greater than its width, or the top and bottom 
 
 When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **Default:** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -322,7 +322,7 @@ When set to a percentage, the value defines the radius as a percentage of the pa
 
 When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can be dynamically adjusted based on the user's language settings.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Default:** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -384,7 +384,7 @@ Height of the dialog box.
 - When this parameter is set to a percentage, the reference height of the dialog box is the height of the window   
 where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** - Default maximum height of the dialog box: 0.9 x (Window height – Safe area) <br>When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
@@ -410,7 +410,7 @@ Display area of the dialog box in hover mode.
 
 Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -439,7 +439,7 @@ Overlay effect for the page-level dialog box.
 - Default value: **ImmersiveMode.DEFAULT**  
 - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
+**Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
 **Default:** ImmersiveMode.DEFAULT - This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
@@ -495,7 +495,7 @@ Display level of the dialog box.
 - Default value: **LevelMode.OVERLAY**  
 - This parameter takes effect only when **showInSubWindow** is set to **false**.
 
-**Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**Type:** [LevelMode](arkts-arkui-levelmode-t.md)
 
 **Default:** LevelMode.OVERLAY - This parameter takes effect only when showInSubWindow is set to false.
 
@@ -524,7 +524,7 @@ Display order of the dialog box.
 - Default value: **LevelOrder.clamp(0)**  
 - Dynamic updating is not supported.
 
-**Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**Type:** LevelOrder
 
 **Default:** The value returns by LevelOrder.clamp(0)
 
@@ -546,7 +546,7 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box.
+[Unique ID](arkts-arkui-framenode-c.md#getUniqueId) of the node under the display level for the page-level dialog box.
 
 Value range: a number no less than 0
 
@@ -582,7 +582,7 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
 **maskRect** does not take effect when **showInSubWindow** is set to **true**.
 
-**Type:** [Rectangle](arkts-arkui-common-rectangle-i.md)
+**Type:** Rectangle
 
 **Default:** - {x:0,y:0, width:'100%', height:'100%'} [since 11]
 
@@ -656,7 +656,7 @@ Event callback after the dialog box appears.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -682,7 +682,7 @@ Event callback after the dialog box disappears.
 
 The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -708,7 +708,7 @@ Event callback when the dialog box is about to appear.
 
 1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -734,7 +734,7 @@ Event callback when the dialog box is about to disappear.
 
 The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
@@ -760,7 +760,7 @@ Callback for interactive closure of the dialog box.
 
 1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DismissDialogAction&gt;
+**Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 
@@ -785,7 +785,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and   
 **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
-**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Default:** - Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
@@ -809,7 +809,7 @@ sheets: Array<SheetInfo>
 
 Options in the dialog box. Each option supports the image, text, and callback.
 
-**Type:** Array&lt;SheetInfo&gt;
+**Type:** Array&lt;[SheetInfo](arkts-arkui-sheetinfo-i.md)&gt;
 
 **Since:** 8
 
@@ -863,7 +863,7 @@ Subtitle of the dialog box.
 
 If the text is too long to display, it is truncated with an ellipsis (...).
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 
@@ -887,7 +887,7 @@ Set system-styled materials for dialog. Different materials have different effec
 
 Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
 
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 
@@ -935,7 +935,7 @@ Transition effect for the entrance and exit of the dialog box.
 
 1. If this parameter is not set, the default effect is used.2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
 
-**Type:** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
+**Type:** TransitionEffect
 
 **Since:** 12
 
@@ -963,7 +963,7 @@ Width of the dialog box.
 - When this parameter is set to a percentage, the reference width of the dialog box is the width of the window   
 where the dialog box is located. You can decrease or increase the width as needed.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** - Default maximum width of the dialog box: 400 vp, When this parameter is set to a percentage, the reference width of the dialog box is the width of the window where the dialog box is located. You can decrease or increase the width as needed.
 

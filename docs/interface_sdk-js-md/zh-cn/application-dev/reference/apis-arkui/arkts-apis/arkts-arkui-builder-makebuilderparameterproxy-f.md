@@ -27,7 +27,7 @@ Make Proxy for Builder parameter.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | instance | T | 是 | Builder parameter instance |
-| propertyGetters | Map&lt;string, BuilderParameterCallback&gt; | 是 | getter callbacks for each property name |
+| propertyGetters | Map&lt;string, [BuilderParameterCallback](arkts-arkui-builderparametercallback-t.md)&gt; | 是 | getter callbacks for each property name |
 | initializer | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;T&gt; | 否 | optional callback to initialize proxied instance |
 
 **返回值：**

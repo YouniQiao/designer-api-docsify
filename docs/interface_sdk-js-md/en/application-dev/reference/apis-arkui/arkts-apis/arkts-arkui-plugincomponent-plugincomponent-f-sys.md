@@ -26,13 +26,13 @@ Defines PluginComponent Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PluginComponentOptions](../arkts-components/arkts-arkui-plugincomponentoptions-i-sys.md) | Yes | The options |
+| options | [PluginComponentOptions](arkts-arkui-plugincomponent-plugincomponentoptions-i-sys.md) | Yes | The options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PluginComponentAttribute](../arkts-components/arkts-arkui-plugincomponent-attribute.md) |  |
+| [PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md) |  |
 
 
 ## PluginComponent
@@ -63,11 +63,11 @@ Defines PluginComponent Component.It requires call setPluginComponentOptions at 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PluginComponentAttribute&gt; | Yes | the callback to set up plugincomponent's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md)&gt; | Yes | the callback to set up plugincomponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PluginComponentAttribute](../arkts-components/arkts-arkui-plugincomponent-attribute.md) | The attribute of the PluginComponent. |
+| [PluginComponentAttribute](arkts-arkui-plugincomponent-plugincomponentattribute-i-sys.md) | The attribute of the PluginComponent. |
 

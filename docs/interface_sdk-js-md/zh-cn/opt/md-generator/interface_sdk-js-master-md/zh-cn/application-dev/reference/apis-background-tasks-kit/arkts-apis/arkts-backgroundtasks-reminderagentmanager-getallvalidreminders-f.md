@@ -18,13 +18,13 @@ function getAllValidReminders(): Promise<Array<ReminderInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;ReminderInfo&gt;&gt; |
+| Promise&lt;Array&lt;[ReminderInfo](arkts-backgroundtasks-reminderagentmanager-reminderinfo-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

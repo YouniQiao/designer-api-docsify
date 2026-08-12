@@ -34,13 +34,13 @@ Sets the background style (board style) of the selected subtab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BoardStyle](../arkts-components/arkts-arkui-boardstyle-i.md) | Yes | background style object for the selected subtab. |
+| value | [BoardStyle](arkts-arkui-tabcontent-boardstyle-i.md) | Yes | background style object for the selected subtab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## constructor
 
@@ -64,7 +64,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| ComponentContentBase | Yes | indicates the content of the sub tab bar |
+| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | indicates the content of the sub tab bar |
 
 ## id
 
@@ -94,7 +94,7 @@ Set an id to the sub tab bar to identify it
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## indicator
 
@@ -124,7 +124,7 @@ Set the style of the indicator when selected
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## indicator
 
@@ -148,13 +148,13 @@ Sets the indicator style of the selected subtab. Use DrawableTabBarIndicator to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SubTabBarIndicatorStyle](arkts-arkui-tabcontent-subtabbarindicatorstyle-i.md) \| DrawableTabBarIndicator | Yes | indicator style object for the selected subtab. |
+| value | [SubTabBarIndicatorStyle](arkts-arkui-tabcontent-subtabbarindicatorstyle-i.md) \| [DrawableTabBarIndicator](arkts-arkui-tabcontent-drawabletabbarindicator-i.md) | Yes | indicator style object for the selected subtab. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## labelStyle
 
@@ -184,7 +184,7 @@ Set the label style of the sub tab bar
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## of
 
@@ -208,13 +208,13 @@ Static constructor used to create a SubTabBarStyle instance. You can set custom 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| ComponentContentBase | Yes | indicates the content of the sub tab bar |
+| content | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | Yes | indicates the content of the sub tab bar |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## padding
 
@@ -240,13 +240,13 @@ Set the padding of the sub tab bar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension | Yes | indicates the padding of the sub tab bar |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) | Yes | indicates the padding of the sub tab bar |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## padding
 
@@ -278,7 +278,7 @@ Set the padding of the sub tab bar
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 
 ## selectedMode
 
@@ -304,11 +304,11 @@ Sets the display mode of the selected subtab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SelectedMode](../arkts-components/arkts-arkui-selectedmode-e.md) | Yes | display mode of the selected subtab. Default value is SelectedMode.INDICATOR. |
+| value | [SelectedMode](arkts-arkui-tabcontent-selectedmode-e.md) | Yes | display mode of the selected subtab. Default value is SelectedMode.INDICATOR. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SubTabBarStyle](../arkts-components/arkts-arkui-subtabbarstyle-c.md) | the style of the sub tab bar |
+| [SubTabBarStyle](arkts-arkui-tabcontent-subtabbarstyle-c.md) | the style of the sub tab bar |
 

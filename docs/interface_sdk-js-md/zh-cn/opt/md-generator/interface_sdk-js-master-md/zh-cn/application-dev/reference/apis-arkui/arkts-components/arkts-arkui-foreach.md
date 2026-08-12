@@ -31,8 +31,8 @@ ForEach(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arr | Array&lt;any&gt; | 是 |
-| itemGenerator | (item: any, index: number) =&gt; void | 是 |
-| keyGenerator | (item: any, index: number) =&gt; string | 否 |
+| arr | Array & lt;any & gt; | 是 |
+| itemGenerator | (item: any, index: number) = & gt; void | 是 |
+| keyGenerator | (item: any, index: number) = & gt; string | 否 |
 
 ## 汇总

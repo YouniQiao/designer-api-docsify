@@ -179,8 +179,8 @@ BLUETOOTH = 9
 ```
 
 设备蓝牙能力。当已经通过  
-[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#adddisallowedbluetoothdevices)接口或者  
-[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addallowedbluetoothdevices)接口设置了蓝牙设备禁用名单或者允许名单，再禁用设备蓝牙能力，会优先生效禁用设备蓝牙能力。直到设备蓝牙能力启用后，禁止或允许名单才会生效。
+[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#addDisallowedBluetoothDevices)接口或者  
+[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addAllowedBluetoothDevices)接口设置了蓝牙设备禁用名单或者允许名单，再禁用设备蓝牙能力，会优先生效禁用设备蓝牙能力。直到设备蓝牙能力启用后，禁止或允许名单才会生效。
 
 **起始版本：** 26.0.0
 
@@ -216,7 +216,7 @@ MODIFY_DATE_TIME = 10
 PRINTER = 11
 ```
 
-设备打印能力。禁用了设备打印能力时，通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口开启某用户的打印能力，该用户下的打印能力仍然被禁用。
+设备打印能力。禁用了设备打印能力时，通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount)接口开启某用户的打印能力，该用户下的打印能力仍然被禁用。
 
 **起始版本：** 26.0.0
 
@@ -270,7 +270,7 @@ MICROPHONE = 13
 FINGERPRINT = 14
 ```
 
-设备指纹认证能力。当已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)设置了某用户禁用设备指纹认证能力时，再启用设备指纹认证能力，会报策略冲突。
+设备指纹认证能力。当已经通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount)设置了某用户禁用设备指纹认证能力时，再启用设备指纹认证能力，会报策略冲突。
 
 **起始版本：** 26.0.0
 
@@ -292,15 +292,15 @@ USB = 15
 
 以下五种情况再禁用设备USB能力，会报策略冲突。
 
-1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。
+1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addAllowedUsbDevices)接口添加了USB设备可用名单。
 
-2）通过[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setusbstoragedeviceaccesspolicy)接口设置了USB存储设备访问策略为只读/禁用。
+2）通过[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setUsbStorageDeviceAccessPolicy)接口设置了USB存储设备访问策略为只读/禁用。
 
-3）通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#adddisallowedusbdevices)接口添加了禁止使用的USB设备类型。
+3）通过[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#addDisallowedUsbDevices)接口添加了禁止使用的USB设备类型。
 
-4）通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)接口禁用了某用户USB存储设备写入能力。
+4）通过[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount)接口禁用了某用户USB存储设备写入能力。
 
-5）禁用USB转串口（[USB_SERIAL](arkts-mdm-restrictions-featurefordevice-e.md)）。
+5）禁用USB转串口（[USB_SERIAL](#FeatureForDevice)）。
 
 **起始版本：** 26.0.0
 
@@ -391,7 +391,7 @@ MTP_CLIENT = 20
 ```
 
 MTP客户端能力（包含读取和写入），当前仅支持PC/2in1设备使用。MTP（MediaTransferProtocol，媒体传输协议），该协议允许用户在移动设备上线性访问媒体文件。当已经通过  
-[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount)设置了某用户禁用MTP客户端写入能力时，再禁用MTP客户端能力，会报策略冲突。
+[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount)设置了某用户禁用MTP客户端写入能力时，再禁用MTP客户端能力，会报策略冲突。
 
 **起始版本：** 26.0.0
 
@@ -464,7 +464,7 @@ BACKUP_AND_RESTORE = 24
 ```
 
 备份和恢复能力，禁用后设备的"设置--系统--备份和恢复"、"设置--云空间"置灰，当前仅支持手机、平板使用。如果要完全禁用设备的备份和恢复能力，建议同时调用  
-[applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#adddisallowedrunningbundlessync)接口禁止具备备份和恢复能力的应用运行，如备份和恢复、手机助手、云空间应用。
+[applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#addDisallowedRunningBundlesSync)接口禁止具备备份和恢复能力的应用运行，如备份和恢复、手机助手、云空间应用。
 
 **起始版本：** 26.0.0
 
@@ -591,7 +591,7 @@ NOTIFICATION = 31
 ```
 
 设备通知能力。禁用后，由系统应用和第三方应用发出的通知将不会显示，而系统服务通知能力不受影响。当此设备已经通过  
-[addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addallowednotificationbundles)设置了应用通知允许名单之后，再禁用设备通知能力，会抛出错误码9200010。
+[addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addAllowedNotificationBundles)设置了应用通知允许名单之后，再禁用设备通知能力，会抛出错误码9200010。
 
 **起始版本：** 26.0.0
 
@@ -775,9 +775,9 @@ USB_SERIAL = 41
 
 设备USB转串口能力。禁用后外接的USB转串口设备无法使用。以下两种情况再禁用设备USB转串口能力，会报策略冲突。
 
-1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addallowedusbdevices)接口添加了USB设备可用名单。
+1）通过[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addAllowedUsbDevices)接口添加了USB设备可用名单。
 
-2）禁用设备USB能力（[USB](arkts-mdm-restrictions-featurefordevice-e.md)）。
+2）禁用设备USB能力（[USB](#FeatureForDevice)）。
 
 **起始版本：** 26.0.0
 

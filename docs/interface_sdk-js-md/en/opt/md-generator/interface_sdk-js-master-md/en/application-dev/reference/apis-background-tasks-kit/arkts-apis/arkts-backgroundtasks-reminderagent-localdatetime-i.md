@@ -6,7 +6,7 @@ Sets the time information for a calendar reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
+**Substitutes:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#LocalDateTime)
 
 <!--Device-reminderAgent-interface LocalDateTime--><!--Device-reminderAgent-interface LocalDateTime-End-->
 
@@ -15,7 +15,7 @@ Sets the time information for a calendar reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## day
@@ -32,7 +32,7 @@ Date.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.LocalDateTime.day](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#day)
+**Substitutes:** [day](reminderAgentManager.LocalDateTime.day)
 
 <!--Device-LocalDateTime-day: number--><!--Device-LocalDateTime-day: number-End-->
 
@@ -52,7 +52,7 @@ Hour.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.LocalDateTime.hour](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#hour)
+**Substitutes:** [hour](reminderAgentManager.LocalDateTime.hour)
 
 <!--Device-LocalDateTime-hour: number--><!--Device-LocalDateTime-hour: number-End-->
 
@@ -72,7 +72,7 @@ Minute.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.LocalDateTime.minute](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#minute)
+**Substitutes:** [minute](reminderAgentManager.LocalDateTime.minute)
 
 <!--Device-LocalDateTime-minute: number--><!--Device-LocalDateTime-minute: number-End-->
 
@@ -92,7 +92,7 @@ Month.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.LocalDateTime.month](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#month)
+**Substitutes:** [month](reminderAgentManager.LocalDateTime.month)
 
 <!--Device-LocalDateTime-month: number--><!--Device-LocalDateTime-month: number-End-->
 
@@ -112,7 +112,7 @@ Second.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.LocalDateTime.second](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#second)
+**Substitutes:** [second](reminderAgentManager.LocalDateTime.second)
 
 <!--Device-LocalDateTime-second?: number--><!--Device-LocalDateTime-second?: number-End-->
 
@@ -132,7 +132,7 @@ Year.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.LocalDateTime.year](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md#year)
+**Substitutes:** [year](reminderAgentManager.LocalDateTime.year)
 
 <!--Device-LocalDateTime-year: number--><!--Device-LocalDateTime-year: number-End-->
 

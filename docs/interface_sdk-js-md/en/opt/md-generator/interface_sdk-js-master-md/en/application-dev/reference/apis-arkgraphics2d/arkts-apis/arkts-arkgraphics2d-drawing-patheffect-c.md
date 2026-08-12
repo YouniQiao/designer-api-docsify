@@ -20,7 +20,7 @@ Implements a path effect.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createComposePathEffect
@@ -80,7 +80,7 @@ Creates a path effect that transforms the sharp angle between line segments into
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createDashPathEffect
 
@@ -100,7 +100,7 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| intervals | Array&lt;number&gt; | Yes |
+| intervals | Array & lt;number & gt; | Yes |
 | phase | number | Yes |
 
 **Return value:**
@@ -113,7 +113,7 @@ Creates a **PathEffect** object that converts a path into a dotted line.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createDiscretePathEffect
 
@@ -134,7 +134,7 @@ Creates an effect that segments the path and scatters the segments in an irregul
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | segLength | number | Yes |
-| dev | number | Yes |
+| [dev](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-depr-i.md) | number | Yes |
 | seedAssist | number | No |
 
 **Return value:**
@@ -176,7 +176,7 @@ Creates a dashed path effect based on the shape described by a path.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## createSumPathEffect
 

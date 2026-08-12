@@ -25,11 +25,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md) | 云侧模型的配置信息，在使用云侧文本向量模型时配置，可通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel)接口获取当前设备支持的云侧模型信息。 |
-| [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) | 描述多模态嵌入模型的图像嵌入函数。  下列接口都需先使用[intelligence.getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getimageembeddingmodel)获取到ImageEmbedding实例，再通过此实例调用对应接口。 |
+| [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md) | 云侧模型的配置信息，在使用云侧文本向量模型时配置，可通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getSupportedCloudModel)接口获取当前设备支持的云侧模型信息。 |
+| [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) | 描述多模态嵌入模型的图像嵌入函数。  下列接口都需先使用[intelligence.getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getImageEmbeddingModel)获取到ImageEmbedding实例，再通过此实例调用对应接口。 |
 | [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | 管理嵌入模型的配置信息。 |
 | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | 管理文本分块的配置信息。 |
-| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | 描述文本嵌入模型的文本嵌入函数。  下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#gettextembeddingmodel)获取到TextEmbedding实例，再通过此实例调用对应接口。 |
+| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | 描述文本嵌入模型的文本嵌入函数。  下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#getTextEmbeddingModel)获取到TextEmbedding实例，再通过此实例调用对应接口。 |
 
 ### 枚举
 

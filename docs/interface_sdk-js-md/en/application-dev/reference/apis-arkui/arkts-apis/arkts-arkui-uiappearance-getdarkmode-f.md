@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## getDarkMode
@@ -32,5 +32,5 @@ Acquire the current dark-mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 

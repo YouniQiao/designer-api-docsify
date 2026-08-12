@@ -8,10 +8,10 @@ For details about how to use environment parameters, see
 | key | Type | Description |  
 | -------------------- | --------------- | ------------------------------------------------------------ |  
 | accessibilityEnabled | string | Whether to enable accessibility. If there is no value of **accessibilityEnabled** in the environment variables, the default value passed through APIs such as **envProp** and **envProps** is added to AppStorage.|  
-| colorMode | [ColorMode](#ColorMode) | Color mode. The options are as follows:&lt;br&gt;- **ColorMode.LIGHT**: light mode.&lt;br&gt;- **ColorMode.DARK**: dark mode.|  
+| colorMode | [ColorMode](@link #ColorMode) | Color mode. The options are as follows:&lt;br&gt;- **ColorMode.LIGHT**: light mode.&lt;br&gt;- **ColorMode.DARK**: dark mode.|  
 | fontScale | number | Font scale. |  
 | fontWeightScale | number | Font weight ratio. |  
-| layoutDirection | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | Layout direction. The options are as follows:&lt;br&gt;- **LayoutDirection.LTR**: from left to right.&lt;br&gt;- **LayoutDirection.RTL**: from right to left.&lt;br&gt;- **Auto**: follows the system settings.|  
+| layoutDirection | [LayoutDirection](@link LayoutDirection) | Layout direction. The options are as follows:&lt;br&gt;- **LayoutDirection.LTR**: from left to right.&lt;br&gt;- **LayoutDirection.RTL**: from right to left.&lt;br&gt;- **Auto**: follows the system settings.|  
 | languageCode | string | Current system language, which is in lowercase letters, for example, **zh**.
 
 **Since:** 7
@@ -40,7 +40,7 @@ It is incorrect to use AppStorage to read environment variables without calling 
 
 **Deprecated since:** 10
 
-**Substitutes:** [Environment#envProp](arkts-arkui-environment-c.md#envprop)
+**Substitutes:** [envProp](#envProp)
 
 <!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean--><!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean-End-->
 
@@ -50,7 +50,7 @@ It is incorrect to use AppStorage to read environment variables without calling 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](arkts-arkui-environment-c.md). |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](@link Environment). |
 | value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
 
 **Return value:**
@@ -58,6 +58,12 @@ It is incorrect to use AppStorage to read environment variables without calling 
 | Type | Description |
 | --- | --- |
 | boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
+
+## Examples
+
+```TypeScript
+Environment.EnvProp('accessibilityEnabled', 'default');
+```
 
 ## EnvProps
 
@@ -70,7 +76,7 @@ static EnvProps(
   ): void
 ```
 
-Works in a way similar to the [EnvProp](arkts-arkui-environment-c.md#envprop) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
+Works in a way similar to the [EnvProp](#EnvProp) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
 
 **Since:** 7
 
@@ -78,7 +84,7 @@ Works in a way similar to the [EnvProp](arkts-arkui-environment-c.md#envprop) AP
 
 **Deprecated since:** 10
 
-**Substitutes:** [Environment#envProps](arkts-arkui-environment-c.md#envprops)
+**Substitutes:** [envProps](#envProps)
 
 <!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
@@ -104,7 +110,7 @@ Returns the property key array of environment variables.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Environment#keys](arkts-arkui-environment-c.md#keys)
+**Substitutes:** [keys](#keys)
 
 <!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
 
@@ -115,6 +121,17 @@ Returns the property key array of environment variables.
 | Type | Description |
 | --- | --- |
 | Array&lt;string&gt; | Property key array of environment variables. |
+
+## Examples
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
 
 ## envProp
 
@@ -142,7 +159,7 @@ It is incorrect to use AppStorage to read environment variables without calling 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](arkts-arkui-environment-c.md). |
+| key | string | Yes | Environment variable name. For details about the value range, see [Built-in Environment Variables](@link Environment). |
 | value | S | Yes | Default value used if the value of the environment variable key is not found in AppStorage. |
 
 **Return value:**
@@ -151,13 +168,17 @@ It is incorrect to use AppStorage to read environment variables without calling 
 | --- | --- |
 | boolean | Returns **false** if the property corresponding to the key exists in AppStorage; creates a property with the key and the default value and returns **true** otherwise. |
 
+## Examples
+
+For details about how to use envProp, see [Accessing Environment Parameters from the UI](../../../ui/state-management/arkts-environment.md#accessing-environment-parameters-from-the-ui).
+
 ## envProps
 
 ```TypeScript
 static envProps(props: EnvPropsOptions[]): void
 ```
 
-Works in a way similar to the [envProp](arkts-arkui-environment-c.md#envprop) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
+Works in a way similar to the [envProp](#envProp) API, with the difference that it allows for initialization of multiple attributes in batches. It is recommended that this API be called during application startup to store system environment variables to [AppStorage](../../../ui/state-management/arkts-appstorage.md) in batches.
 
 **Since:** 10
 
@@ -173,7 +194,16 @@ Works in a way similar to the [envProp](arkts-arkui-environment-c.md#envprop) AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| props | [EnvPropsOptions](arkts-arkui-environment-envpropsoptions-i.md)[] | Yes | Array of key-value pairs consisting of system environment variables and default values. |
+| props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | Yes | Array of key-value pairs consisting of system environment variables and default values. |
+
+## Examples
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
 
 ## keys
 
@@ -198,4 +228,15 @@ Returns the property key array of environment variables.
 | Type | Description |
 | --- | --- |
 | Array&lt;string&gt; | Property key array of environment variables. |
+
+## Examples
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys contains accessibilityEnabled, languageCode, and prop.
+```
 

@@ -11,7 +11,7 @@ Provides information used to obtain a full drawing result.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## id

@@ -1,7 +1,7 @@
 # CalendarManager
 
 Before calling any of the following APIs to manage the calendar, you must use   
-[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) to obtain a **CalendarManager** object first.
+[getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getCalendarManager) to obtain a **CalendarManager** object first.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Before calling any of the following APIs to manage the calendar, you must use
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## createCalendar
@@ -43,16 +43,16 @@ Creates a Calendar object based on the calendar account information.This API use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Calendar&gt; |
+| Promise & lt;Calendar & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -104,10 +104,10 @@ Creates a Calendar object based on the calendar account information.This API use
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -163,16 +163,16 @@ Deletes a specified Calendar object. This API uses a promise to return the resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -235,10 +235,10 @@ Deletes a specified Calendar object. This API uses an asynchronous callback to r
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -304,7 +304,7 @@ Events created using this API can be obtained and modified by the system calenda
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 
@@ -347,16 +347,16 @@ Obtains the created and default Calendar objects of the current application.This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Calendar[]&gt; |
+| Promise & lt;Calendar[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -407,10 +407,10 @@ Obtains the created and default Calendar objects of the current application.This
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -463,17 +463,17 @@ Obtains the default or specified Calendar object. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Calendar&gt; |
+| Promise & lt;Calendar & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-specified-account-not-found) |
 
 ## Examples
 
@@ -522,11 +522,11 @@ Obtains a specified Calendar object. This API uses an asynchronous callback to r
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [23900003](../errorcode-calendarManager.md#23900003-specified-account-not-found) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [23900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900003-specified-account-not-found) |
 
 ## Examples
 
@@ -586,10 +586,10 @@ Obtains the default Calendar object, which is created when the data storage runs
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

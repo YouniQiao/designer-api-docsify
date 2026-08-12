@@ -12,7 +12,7 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent#getWant
+**替代接口：** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
@@ -24,7 +24,7 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 |
 
 
@@ -40,7 +40,7 @@ function getWant(agent: WantAgent): Promise<Want>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantAgent/wantAgent#getWant
+**替代接口：** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
@@ -52,7 +52,7 @@ function getWant(agent: WantAgent): Promise<Want>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| agent | [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | 是 |
+| [agent](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-agent-n.md) | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 |
 
 **返回值：**
 

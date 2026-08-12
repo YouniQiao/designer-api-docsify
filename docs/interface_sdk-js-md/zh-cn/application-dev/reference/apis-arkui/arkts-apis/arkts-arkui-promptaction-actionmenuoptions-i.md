@@ -19,7 +19,7 @@ buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTrip
 
 菜单中菜单项按钮的数组，结构为： {text:'button', color: '#666666'}.支持1-6个按钮。按钮数量大于6个时，仅显示前6个按钮，之后的按钮不显示。
 
-**类型：** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| PromptActionDoubleButtons \| PromptActionTripleButtons \| PromptActionQuadrupleButtons \| PromptActionQuintupleButtons \| PromptActionSextupleButtons
+**类型：** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| [PromptActionDoubleButtons](arkts-arkui-promptaction-promptactiondoublebuttons-t.md) \| [PromptActionTripleButtons](arkts-arkui-promptaction-promptactiontriplebuttons-t.md) \| [PromptActionQuadrupleButtons](arkts-arkui-promptaction-promptactionquadruplebuttons-t.md) \| [PromptActionQuintupleButtons](arkts-arkui-promptaction-promptactionquintuplebuttons-t.md) \| [PromptActionSextupleButtons](arkts-arkui-promptaction-promptactionsextuplebuttons-t.md)
 
 **起始版本：** 23
 
@@ -39,7 +39,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内菜单蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -103,7 +103,7 @@ levelMode?: LevelMode
 levelUniqueId?: int
 ```
 
-设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)获取。取值范围：大于等于0的数字。&lt;br /&gt;**说明：**&lt;br/&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级菜单需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)获取。取值范围：大于等于0的数字。&lt;br /&gt;**说明：**&lt;br/&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** int
 
@@ -125,7 +125,7 @@ onDidAppear?: VoidCallback
 
 菜单弹出后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。&lt;br /&gt;2.快速点击弹出，关闭菜单时，onWillDisappear在onDidAppear前生效。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -145,7 +145,7 @@ onDidDisappear?: VoidCallback
 
 菜单消失后的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -165,7 +165,7 @@ onWillAppear?: VoidCallback
 
 菜单显示动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 
@@ -185,7 +185,7 @@ onWillDisappear?: VoidCallback
 
 菜单退出动效前的事件回调。&lt;br /&gt;**说明：**&lt;br /&gt;1.正常时序依次为：onWillAppear>>onDidAppear>>onWillDisappear>>onDidDisappear。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 23
 

@@ -34,7 +34,7 @@ Bundle names of the applications whose notifications to subscribe to. If this pa
 deviceType?: string
 ```
 
-Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md).
+Device type. If this parameter is not specified, the subscription defaults to notifications from the current device. The value is obtained based on [device information](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo).
 
 **Type:** string
 
@@ -79,11 +79,11 @@ Notification filtering range. The default value is **0**. The options are as fol
 
 - **0**: All notifications are included in the subscription.  
 - **1**: Filter out notifications whose slot type is   
-[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and   
-[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is empty.  
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SlotType) and   
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton) is empty.  
 - **2**: Filter out notifications whose slot type is   
-[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md) and   
-[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md) is not empty.
+[SOCIAL_COMMUNICATION](arkts-notification-notificationmanager-slottype-e.md#SlotType) and   
+[userInput](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton) is not empty.
 
 **Type:** number
 
@@ -184,7 +184,7 @@ voiceContentOptions?: VoiceContentOptions
 
 Configuration options for notification voice broadcast.
 
-**Type:** [VoiceContentOptions](arkts-notification-notificationsubscribe-voicecontentoptions-t-sys.md)
+**Type:** [VoiceContentOptions](arkts-notification-notificationsubscribeinfo-voicecontentoptions-i-sys.md)
 
 **Since:** 26.0.0
 

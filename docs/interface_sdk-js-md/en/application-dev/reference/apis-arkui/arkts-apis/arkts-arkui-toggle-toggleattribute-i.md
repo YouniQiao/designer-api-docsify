@@ -2,7 +2,7 @@
 
 Defines the Toggle component attributes.
 
-**Inheritance/Implementation:** ToggleAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** ToggleAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of toggle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ToggleAttribute](arkts-arkui-toggle-toggleattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of toggle. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ToggleAttribute](arkts-arkui-toggle-toggleattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of toggle. |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Set the content modifier of toggle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;ToggleConfiguration&gt; \| undefined | Yes | The content modifier of toggle. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[ToggleConfiguration](arkts-arkui-toggle-toggleconfiguration-i.md)&gt; \| undefined | Yes | The content modifier of toggle. |
 
 **Return value:**
 
@@ -214,7 +214,7 @@ Set the style of the switch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SwitchStyle](../arkts-components/arkts-arkui-switchstyle-i.md) \| undefined | Yes |  |
+| value | [SwitchStyle](arkts-arkui-toggle-switchstyle-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

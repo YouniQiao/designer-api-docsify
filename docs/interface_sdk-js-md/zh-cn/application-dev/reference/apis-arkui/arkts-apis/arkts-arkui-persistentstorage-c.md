@@ -21,10 +21,10 @@ PersistentStorage提供了UI状态的持久化存储能力，将选定的AppStor
 static DeleteProp(key: string): void
 ```
 
-是[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从  
+是[PersistProp](#PersistProp)的逆向操作。将key对应的属性从  
 [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续  
 [AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
-[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
+[PersistProp](#PersistProp)接口。
 
 **起始版本：** 7
 
@@ -32,7 +32,7 @@ static DeleteProp(key: string): void
 
 **废弃版本：** 10
 
-**替代接口：** [PersistentStorage#deleteProp](arkts-arkui-persistentstorage-c.md#deleteprop)
+**替代接口：** [deleteProp](#deleteProp)
 
 <!--Device-PersistentStorage-static DeleteProp(key: string): void--><!--Device-PersistentStorage-static DeleteProp(key: string): void-End-->
 
@@ -43,6 +43,12 @@ static DeleteProp(key: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | PersistentStorage中的属性名。 |
+
+## 示例
+
+```TypeScript
+PersistentStorage.DeleteProp('highScore');
+```
 
 ## Keys
 
@@ -58,7 +64,7 @@ static Keys(): Array<string>
 
 **废弃版本：** 10
 
-**替代接口：** [PersistentStorage#keys](arkts-arkui-persistentstorage-c.md#keys)
+**替代接口：** [keys](#keys)
 
 <!--Device-PersistentStorage-static Keys(): Array<string>--><!--Device-PersistentStorage-static Keys(): Array<string>-End-->
 
@@ -69,6 +75,12 @@ static Keys(): Array<string>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;string&gt; | 返回所有持久化属性的属性名的数组。 |
+
+## 示例
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.Keys();
+```
 
 ## PersistProp
 
@@ -94,7 +106,7 @@ static PersistProp<T>(key: string, defaultValue: T): void
 
 **废弃版本：** 10
 
-**替代接口：** [PersistentStorage#persistProp](arkts-arkui-persistentstorage-c.md#persistprop)
+**替代接口：** [persistProp](#persistProp)
 
 <!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void-End-->
 
@@ -107,6 +119,12 @@ static PersistProp<T>(key: string, defaultValue: T): void
 | key | string | 是 | 要持久化的属性名。 |
 | defaultValue | T | 是 | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。默认值不允许为null或undefined。 |
 
+## 示例
+
+```TypeScript
+PersistentStorage.PersistProp('highScore', '0');
+```
+
 ## PersistProps
 
 ```TypeScript
@@ -118,7 +136,7 @@ static PersistProps(
   ): void
 ```
 
-行为与[PersistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口应在访问AppStorage之前调用，适合在应用启动时初始化。
+行为与[PersistProp](#PersistProp)类似，不同在于可以一次性持久化多个数据。该接口应在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **起始版本：** 7
 
@@ -126,7 +144,7 @@ static PersistProps(
 
 **废弃版本：** 10
 
-**替代接口：** [PersistentStorage#PersistProps](arkts-arkui-persistentstorage-c.md#persistprops)
+**替代接口：** [PersistProps](#PersistProps)
 
 <!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
@@ -144,10 +162,10 @@ static PersistProps(
 static deleteProp(key: string): void
 ```
 
-是[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)的逆向操作。将key对应的属性从  
+是[persistProp](#persistProp)的逆向操作。将key对应的属性从  
 [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md)中删除，后续  
 [AppStorage](../../../ui/state-management/arkts-appstorage.md)的操作对PersistentStorage不会再有影响。如需再次持久化，可再次调用  
-[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)接口。
+[persistProp](#persistProp)接口。
 
 **起始版本：** 10
 
@@ -164,6 +182,12 @@ static deleteProp(key: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | string | 是 | PersistentStorage中的属性名。 |
+
+## 示例
+
+```TypeScript
+PersistentStorage.deleteProp('highScore');
+```
 
 ## keys
 
@@ -188,6 +212,12 @@ static keys(): Array<string>
 | 类型 | 说明 |
 | --- | --- |
 | Array&lt;string&gt; | 返回所有持久化属性的属性名的数组。 |
+
+## 示例
+
+```TypeScript
+let keys: Array<string> = PersistentStorage.keys();
+```
 
 ## persistProp
 
@@ -224,13 +254,17 @@ static persistProp<T>(key: string, defaultValue: T): void
 | key | string | 是 | 要持久化的属性名。 |
 | defaultValue | T | 是 | 在PersistentStorage和AppStorage中未查询到时，则使用默认值进行初始化。从API version 12开始可以为null或undefined。 |
 
+## 示例
+
+persistProp具体用法详见[从AppStorage中访问PersistentStorage初始化的属性](../../../ui/state-management/arkts-persiststorage.md#从appstorage中访问persistentstorage初始化的属性)。
+
 ## persistProps
 
 ```TypeScript
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-行为与[persistProp](arkts-arkui-persistentstorage-c.md#persistprop)类似，不同在于可以一次性持久化多个数据。该接口通常在访问AppStorage之前调用，适合在应用启动时初始化。
+行为与[persistProp](#persistProp)类似，不同在于可以一次性持久化多个数据。该接口通常在访问AppStorage之前调用，适合在应用启动时初始化。
 
 **起始版本：** 10
 
@@ -246,5 +280,11 @@ static persistProps(props: PersistPropsOptions[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| props | [PersistPropsOptions](../../apis-default/arkts-apis/arkts-persistentstorage-persistpropsoptions-i.md)[] | 是 | 持久化数组，每项包含属性名和默认值。 |
+| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)[] | 是 | 持久化数组，每项包含属性名和默认值。 |
+
+## 示例
+
+```TypeScript
+PersistentStorage.persistProps([{ key: 'highScore', defaultValue: '0' }, { key: 'weightScore', defaultValue: '1' }]);
+```
 

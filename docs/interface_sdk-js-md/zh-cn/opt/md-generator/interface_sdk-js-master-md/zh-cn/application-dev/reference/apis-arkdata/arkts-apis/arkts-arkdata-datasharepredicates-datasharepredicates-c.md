@@ -475,7 +475,7 @@ groupBy(fields: Array<string>): DataSharePredicates
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fields | Array&lt;string&gt; | 是 |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
@@ -552,7 +552,7 @@ inKeys(keys: Array<string>): DataSharePredicates
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 |
+| keys | Array & lt;string & gt; | 是 |
 
 **返回值：**
 

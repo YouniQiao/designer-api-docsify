@@ -17,4 +17,4 @@ type DataObserver = (sessionId: string, fields: Array<string>) => void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sessionId | string | 是 |
-| fields | Array&lt;string&gt; | 是 |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |

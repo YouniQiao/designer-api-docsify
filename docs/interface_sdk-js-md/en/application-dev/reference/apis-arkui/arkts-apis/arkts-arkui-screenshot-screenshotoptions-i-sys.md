@@ -15,7 +15,7 @@ Describes the screenshot options.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## displayId
@@ -24,7 +24,7 @@ import { screenshot } from 'kits/@kit.ArkUI';
 displayId?: long
 ```
 
-ID of the [display](arkts-arkui-display-displaystate-e.md) device on which the screen region is to be captured. The value must be an integer.
+ID of the [display](arkts-arkui-display-displaystate-e.md#DisplayState) device on which the screen region is to be captured. The value must be an integer.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -46,7 +46,7 @@ imageSize?: Size
 
 Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 7
 
@@ -129,7 +129,7 @@ screenRect?: Rect
 
 Region of the screen to capture. If no value is passed, the region of the logical screen associated with the specified display ID is returned.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 7
 

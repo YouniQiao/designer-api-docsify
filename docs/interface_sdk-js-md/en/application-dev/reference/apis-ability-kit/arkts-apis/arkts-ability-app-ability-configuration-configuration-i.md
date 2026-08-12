@@ -13,7 +13,7 @@ The module defines the environment variables for the application runtime, includ
 ## Modules to Import
 
 ```TypeScript
-import { Configuration } from 'kits/@kit.AbilityKit';
+import { Configuration } from '@kit.AbilityKit';
 ```
 
 ## colorMode

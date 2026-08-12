@@ -11,7 +11,7 @@ Defines the counter options.
 ## Modules to Import
 
 ```TypeScript
-import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from 'kits/@kit.ArkUI';
+import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
 ```
 
 ## dateOptions
@@ -42,7 +42,7 @@ direction?: Direction
 
 Indicates the attribute of the current counter direction.
 
-**Type:** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**Type:** Direction
 
 **Since:** 26.0.0
 

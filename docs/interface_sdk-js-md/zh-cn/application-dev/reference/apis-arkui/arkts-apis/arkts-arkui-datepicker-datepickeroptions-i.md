@@ -4,7 +4,7 @@
 
 **说明：**
 
-- Date的使用请参考[TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)。
+- Date的使用请参考[TimePickerOptions](TimePickerOptions)。
 
 - 在DatePicker组件滑动过程中修改DatePickerOptions中的属性，会导致这些属性无法生效。
 
@@ -58,7 +58,7 @@ mode?: DatePickerMode
 
 在[DatePickerDialog](./datePicker.static)中，当[DatePickerDialogOptions](../../../reference/apis-arkui/arkui-ts/ts-methods-datepicker-dialog.md#datepickerdialogoptions)的showTime设置为true时，此参数不生效，默认显示年、月、日三列。
 
-**类型：** [DatePickerMode](../arkts-components/arkts-arkui-datepickermode-e.md)
+**类型：** [DatePickerMode](arkts-arkui-datepicker-datepickermode-e.md)
 
 **默认值：** DatePickerMode.DATE - which means to display three columns: year, month, and day. <br>Decimal values are rounded off.
 
@@ -86,7 +86,7 @@ selected?: Date | Bindable<Date>
 
 从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。
 
-**类型：** Date \| Bindable&lt;Date&gt;
+**类型：** Date \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;Date&gt;
 
 **起始版本：** 23
 

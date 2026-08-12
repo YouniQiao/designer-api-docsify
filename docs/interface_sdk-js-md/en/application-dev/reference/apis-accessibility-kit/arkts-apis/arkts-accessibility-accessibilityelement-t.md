@@ -5,7 +5,7 @@ export type AccessibilityElement = _AccessibilityElement
 ```
 
 Indicates an accessibility element. For details, see   
-[AccessibilityElement](arkts-accessibility-accessibilityelement-t.md).
+[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
 
 **Since:** 10
 

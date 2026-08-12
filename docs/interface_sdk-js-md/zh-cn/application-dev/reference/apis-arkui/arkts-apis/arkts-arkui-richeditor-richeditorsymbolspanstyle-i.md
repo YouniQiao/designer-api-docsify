@@ -64,7 +64,7 @@ SymbolSpan组件大小，默认单位为fp。
 
 默认值：跟随主题。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -90,7 +90,7 @@ string类型仅支持number类型取值的字符串形式，例如“400”，�
 
 默认值：FontWeight.Normal。
 
-**类型：** int \| FontWeight \| string
+**类型：** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **起始版本：** 23
 

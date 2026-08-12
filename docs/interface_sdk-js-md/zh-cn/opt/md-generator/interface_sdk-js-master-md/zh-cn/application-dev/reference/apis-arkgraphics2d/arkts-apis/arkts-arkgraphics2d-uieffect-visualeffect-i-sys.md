@@ -1,6 +1,6 @@
 # VisualEffect
 
-VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect)创建一个VisualEffect实例。
+VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createEffect)创建一个VisualEffect实例。
 
 **起始版本：** 12
 
@@ -72,8 +72,8 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | lightPosition | common2D.Point3d | 是 |
-| lightColor | common2D.Color | 是 |
-| lightIntensity | number | 是 |
+| [lightColor](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | common2D.Color | 是 |
+| [lightIntensity](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor-colorresponse-i-sys.md) | number | 是 |
 | borderWidth | number | 是 |
 
 **返回值：**
@@ -86,7 +86,7 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -152,9 +152,9 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| colors | Array&lt;Color&gt; | 是 |
-| positions | Array&lt;common2D.Point&gt; | 是 |
-| strengths | Array&lt;number&gt; | 是 |
+| colors | Array & lt;Color & gt; | 是 |
+| positions | Array & lt;common2D.Point & gt; | 是 |
+| strengths | Array & lt;number & gt; | 是 |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 否 |
 
 **返回值：**
@@ -167,7 +167,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -304,7 +304,7 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -108,7 +108,7 @@ worker: Worker
 
 用于运行Abc的Worker线程对象，需通过worker.ThreadWorker创建。Worker在独立线程中执行Abc的UI逻辑，与主线程通信。
 
-**类型：** [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-worker-c.md)
+**类型：** [Worker](arkts-arkui-worker-t-sys.md)
 
 **起始版本：** 26.0.0
 

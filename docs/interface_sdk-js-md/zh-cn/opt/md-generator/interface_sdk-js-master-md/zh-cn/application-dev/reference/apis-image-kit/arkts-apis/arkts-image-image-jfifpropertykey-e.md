@@ -14,10 +14,10 @@
 - 2表示每厘米像素数（DPC）。
 
 该值为正整数。 |  
-| [X_DENSITY](#x_density) | 'JfifXDensity' | JFIF图像X方向密度。 |
-| [Y_DENSITY](#y_density) | 'JfifYDensity' | JFIF图像Y方向密度。 |
-| [VERSION](#version) | 'JfifVersion' | JFIF图像版本。 |
-| [IS_PROGRESSIVE](#is_progressive) | 'JfifIsProgressive' |
+| [X_DENSITY](arkts-image-image-jfifpropertykey-e.md) | 'JfifXDensity' | JFIF图像X方向密度。 |
+| [Y_DENSITY](arkts-image-image-jfifpropertykey-e.md) | 'JfifYDensity' | JFIF图像Y方向密度。 |
+| [VERSION](arkts-image-image-jfifpropertykey-e.md) | 'JfifVersion' | JFIF图像版本。 |
+| [IS_PROGRESSIVE](arkts-image-image-jfifpropertykey-e.md) | 'JfifIsProgressive' |
 
 **起始版本：** 26.0.0
 

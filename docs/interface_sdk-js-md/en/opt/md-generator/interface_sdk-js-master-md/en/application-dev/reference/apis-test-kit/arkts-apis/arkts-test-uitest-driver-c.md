@@ -11,7 +11,7 @@ The **Driver** class is the main entrance of the UiTest framework. This class pr
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -40,15 +40,15 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-assertion-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -68,7 +68,7 @@ async function demo() {
 click(x: number, y: number): Promise<void>
 ```
 
-Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use {@link clickAt}. This API uses a promise to return the result.
+Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [clickAt](#clickAt). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -89,14 +89,14 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -138,14 +138,14 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -186,14 +186,14 @@ Click on the specified location on the screen, with optional touch options.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -237,7 +237,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 | Error Code ID |
 | --- |
-| [17000001](../errorcode-uitest.md#17000001-initialization-failure) |
+| [17000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000001-initialization-failure) |
 
 ## Examples
 
@@ -256,7 +256,7 @@ async function demo() {
 createUIEventObserver(): UIEventObserver
 ```
 
-Creates a UI event listener {@link UIEventObserver}.
+Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#UIEventObserver).
 
 **Since:** 10
 
@@ -276,7 +276,7 @@ Creates a UI event listener {@link UIEventObserver}.
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -310,22 +310,22 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| d | number | Yes |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | speed | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -368,14 +368,14 @@ Delays a duration of time. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -395,7 +395,7 @@ async function demo() {
 doubleClick(x: number, y: number): Promise<void>
 ```
 
-Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use {@link doubleClickAt}. This API uses a promise to return the result.
+Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [doubleClickAt](#doubleClickAt). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -416,14 +416,14 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -463,14 +463,14 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -490,7 +490,7 @@ async function demo() {
 drag(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
 ```
 
-Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use {@link dragBetween}. This API uses a promise to return the result.
+Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragBetween). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -514,14 +514,14 @@ Drags from the start coordinate point to the target coordinate point. This metho
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -564,14 +564,14 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -613,14 +613,14 @@ Drag on the screen between the specified points with optional settings.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -667,14 +667,14 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -715,14 +715,14 @@ Searches for the target component based on the specified attributes. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -764,14 +764,14 @@ Searches for all matched components based on the specified attributes and saves 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Component&gt;&gt; |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -813,14 +813,14 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;UiWindow&gt; |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -863,14 +863,14 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -911,14 +911,14 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -960,14 +960,14 @@ Simulates a fling operation on a specified display with the specified direction 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -992,7 +992,7 @@ Obtains the display density of the current device. This API uses a promise to re
 > **NOTE：**
 > 
 > This method can only be used to obtain the display density of the home screen. To obtain the display density
-> of a specified screen, use {@link getDisplayDensity}(displayId: number).
+> of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
 
 **Since:** 9
 
@@ -1006,13 +1006,13 @@ Obtains the display density of the current device. This API uses a promise to re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1052,14 +1052,14 @@ Obtains the density of the specified display of the current device. This API use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1084,7 +1084,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 > **NOTE：**
 > 
 > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation
-> of a specified screen, use {@link getDisplayRotation}(displayId: number).
+> of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
 
 **Since:** 9
 
@@ -1098,13 +1098,13 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DisplayRotation&gt; |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1144,14 +1144,14 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DisplayRotation&gt; |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1176,7 +1176,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 > **NOTE：**
 > 
 > This method can only be used to obtain the display size of the home screen. To obtain the display size of a
-> specified screen, use {@link getDisplaySize}(displayId: number).
+> specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
 
 **Since:** 9
 
@@ -1190,13 +1190,13 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1236,14 +1236,14 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Point&gt; |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1288,15 +1288,15 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -1345,14 +1345,14 @@ Injects a multi-finger operation into a device. This method applies to test scen
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1410,14 +1410,14 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1465,14 +1465,14 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1520,15 +1520,15 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1582,14 +1582,14 @@ Drags from the start point to the end point and checks whether the target compon
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1631,14 +1631,14 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1681,14 +1681,14 @@ Swipes from the start point to the end point and checks whether the target compo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1726,22 +1726,22 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pointers | Array&lt;Point&gt; | Yes |
+| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Yes |
 | times | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -1763,7 +1763,7 @@ async function demo() {
 longClick(x: number, y: number): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use {@link longClickAt}.This API uses a promise to return the result.
+Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt).This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -1784,14 +1784,14 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1832,14 +1832,14 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1880,14 +1880,14 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -1928,21 +1928,21 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes |
-| key1 | number | No |
-| key2 | number | No |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | No |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -1978,21 +1978,21 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes |
-| key1 | number | No |
-| key2 | number | No |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | No |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2034,14 +2034,14 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2084,14 +2084,14 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2134,14 +2134,14 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -2186,21 +2186,21 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes |
-| key1 | number | No |
-| key2 | number | No |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | No |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2237,22 +2237,22 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes |
-| key1 | number | No |
-| key2 | number | No |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | No |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 | duration | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2293,14 +2293,14 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2342,14 +2342,14 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2385,22 +2385,22 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes |
 | down | boolean | Yes |
-| d | number | Yes |
-| key1 | number | No |
-| key2 | number | No |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | No |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2436,23 +2436,23 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes |
 | down | boolean | Yes |
-| d | number | Yes |
-| key1 | number | No |
-| key2 | number | No |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | No |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 | speed | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2492,14 +2492,14 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2539,14 +2539,14 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2587,14 +2587,14 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2637,14 +2637,14 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2669,7 +2669,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 > **NOTE：**
 > 
 > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button
-> on a specified screen, use {@link pressBack}(displayId: number).
+> on a specified screen, use [pressBack](pressBack)(displayId: number).
 
 **Since:** 9
 
@@ -2683,13 +2683,13 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2729,14 +2729,14 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -2770,13 +2770,13 @@ Injects an operation of returning to the home screen on the device. This API use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2816,14 +2816,14 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -2863,14 +2863,14 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2911,14 +2911,14 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -2938,7 +2938,7 @@ async function demo() {
 screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 ```
 
-Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike {@link screenCap}, this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
+Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike [screenCap](screenCap), this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
 
 **Since:** 10
 
@@ -2953,20 +2953,20 @@ Captures the specified area of the current screen and saves the captured screens
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | savePath | string | Yes |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No |
+| rect | [Rect](arkts-test-uitest-rect-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3012,14 +3012,14 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3059,14 +3059,14 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3086,7 +3086,7 @@ async function demo() {
 swipe(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
 ```
 
-Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use {@link swipeBetween}. This API uses a promise to return the result.
+Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [swipeBetween](#swipeBetween). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3110,14 +3110,14 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3161,14 +3161,14 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -3210,14 +3210,14 @@ Swipe on the screen between the specified points with optional touch options.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -3264,15 +3264,15 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -3308,22 +3308,22 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes |
-| d | number | Yes |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
 | speed | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -3358,21 +3358,21 @@ Triggers a combination key event based on the specified key code values. This AP
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | key0 | number | Yes |
-| key1 | number | Yes |
-| key2 | number | No |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | Yes |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3408,22 +3408,22 @@ Triggers a combination key event based on the specified key code values on the s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | key0 | number | Yes |
-| key1 | number | Yes |
-| key2 | number | No |
+| [key1](arkts-test-uitest-keyoptions-i.md) | number | Yes |
+| [key2](arkts-test-uitest-keyoptions-i.md) | number | No |
 | displayId | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3463,14 +3463,14 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3512,14 +3512,14 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3569,15 +3569,15 @@ Supported combinations:
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
 
 ## Examples
 
@@ -3623,14 +3623,14 @@ Searches for the target component based on the attributes within a specified tim
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Component&gt; |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3671,14 +3671,14 @@ Checks whether all components on the current UI are idle. This method is applica
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 
@@ -3712,13 +3712,13 @@ Wakes up the current display. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
 
 ## Examples
 

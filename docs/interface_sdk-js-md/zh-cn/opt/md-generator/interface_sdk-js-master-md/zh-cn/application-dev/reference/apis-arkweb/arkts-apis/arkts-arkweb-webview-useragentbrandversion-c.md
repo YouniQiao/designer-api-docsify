@@ -138,4 +138,4 @@ Sets the major version. Should not be blank.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| majorVersion | string | 是 |
+| [majorVersion](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-deviceinfo-con.md) | string | 是 |

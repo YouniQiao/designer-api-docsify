@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## getScannerParameter
@@ -34,13 +34,13 @@ Obtains scanner parameters. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ScannerParameter[]&gt; | Promise used to return the scanner parameters. |
+| Promise&lt;[ScannerParameter](arkts-basicservices-scan-scannerparameter-i.md)[]&gt; | Promise used to return the scanner parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 Defines event info for pan gesture.
 
-**Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
+**Inheritance/Implementation:** PanGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#BaseGestureEvent)
 
 **Since:** 23
 

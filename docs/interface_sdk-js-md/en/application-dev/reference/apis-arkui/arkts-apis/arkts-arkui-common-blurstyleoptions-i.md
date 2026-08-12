@@ -40,7 +40,7 @@ blurOptions?: BlurOptions
 
 Defines the options of blur
 
-**Type:** [BlurOptions](../arkts-components/arkts-arkui-bluroptions-i.md)
+**Type:** [BlurOptions](arkts-arkui-common-bluroptions-i.md)
 
 **Default:** { grayScale: [0,0] }
 
@@ -62,7 +62,7 @@ colorMode?: ThemeColorMode
 
 Color mode used for the foreground blur.&lt;br&gt;Default value: **ThemeColorMode.SYSTEM**.
 
-**Type:** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
+**Type:** [ThemeColorMode](arkts-arkui-common-themecolormode-e.md)
 
 **Default:** ThemeColorMode.SYSTEM
 

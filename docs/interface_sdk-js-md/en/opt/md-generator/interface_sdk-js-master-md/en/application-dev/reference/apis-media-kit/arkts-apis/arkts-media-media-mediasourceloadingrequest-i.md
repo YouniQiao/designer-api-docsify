@@ -11,7 +11,7 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## finishLoading
@@ -74,7 +74,7 @@ respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: strin
 ```
 
 Sends response header information to the player. This API must be called before the first call to   
-[respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata).
+[respondData](#respondData).
 
 **Since:** 18
 

@@ -18,7 +18,7 @@ error: WebResourceError
 
 The information of error.
 
-**Type:** [WebResourceError](../arkts-components/arkts-arkweb-webresourceerror-c.md)
+**Type:** [WebResourceError](arkts-arkweb-web-webresourceerror-c.md)
 
 **Since:** 23
 

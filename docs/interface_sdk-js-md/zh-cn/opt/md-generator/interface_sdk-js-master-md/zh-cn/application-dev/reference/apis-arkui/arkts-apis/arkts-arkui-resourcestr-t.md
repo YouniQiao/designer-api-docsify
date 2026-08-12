@@ -19,4 +19,4 @@ Defines the string which can use resource.
 | 类型 |
 | --- |
 | string |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| [Resource](arkts-arkui-resource-t.md) |

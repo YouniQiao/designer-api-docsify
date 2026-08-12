@@ -6,7 +6,7 @@ P2P group information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo
+**Substitutes:** [WifiP2pGroupInfo](ohos.wifiManager/wifiManager.WifiP2pGroupInfo)
 
 <!--Device-wifi-interface WifiP2pGroupInfo--><!--Device-wifi-interface WifiP2pGroupInfo-End-->
 
@@ -15,7 +15,7 @@ P2P group information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## clientDevices
@@ -26,13 +26,13 @@ clientDevices: WifiP2pDevice[]
 
 Client list
 
-**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)[]
+**Type:** WifiP2pDevice[]
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.clientDevices
+**Substitutes:** [clientDevices](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.clientDevices)
 
 <!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]--><!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]-End-->
 
@@ -52,7 +52,7 @@ Frequency
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.frequency
+**Substitutes:** [frequency](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.frequency)
 
 <!--Device-WifiP2pGroupInfo-frequency: number--><!--Device-WifiP2pGroupInfo-frequency: number-End-->
 
@@ -72,7 +72,7 @@ Group owner IP address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.goIpAddress
+**Substitutes:** [goIpAddress](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.goIpAddress)
 
 <!--Device-WifiP2pGroupInfo-goIpAddress: string--><!--Device-WifiP2pGroupInfo-goIpAddress: string-End-->
 
@@ -92,7 +92,7 @@ Group name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.groupName
+**Substitutes:** [groupName](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.groupName)
 
 <!--Device-WifiP2pGroupInfo-groupName: string--><!--Device-WifiP2pGroupInfo-groupName: string-End-->
 
@@ -112,7 +112,7 @@ Interface name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.interface
+**Substitutes:** [interface](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.interface)
 
 <!--Device-WifiP2pGroupInfo-interface: string--><!--Device-WifiP2pGroupInfo-interface: string-End-->
 
@@ -132,7 +132,7 @@ Indicates whether it is group owner
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.isP2pGo
+**Substitutes:** [isP2pGo](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.isP2pGo)
 
 <!--Device-WifiP2pGroupInfo-isP2pGo: boolean--><!--Device-WifiP2pGroupInfo-isP2pGo: boolean-End-->
 
@@ -152,7 +152,7 @@ Network ID
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.networkId
+**Substitutes:** [networkId](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.networkId)
 
 <!--Device-WifiP2pGroupInfo-networkId: number--><!--Device-WifiP2pGroupInfo-networkId: number-End-->
 
@@ -166,13 +166,13 @@ ownerInfo: WifiP2pDevice
 
 Group owner information
 
-**Type:** [WifiP2pDevice](arkts-connectivity-wifimanager-wifip2pdevice-i.md)
+**Type:** WifiP2pDevice
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.ownerInfo
+**Substitutes:** [ownerInfo](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.ownerInfo)
 
 <!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice--><!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice-End-->
 
@@ -192,7 +192,7 @@ The group passphrase
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pGroupInfo.passphrase
+**Substitutes:** [passphrase](ohos.wifiManager/wifiManager.WifiP2pGroupInfo.passphrase)
 
 <!--Device-WifiP2pGroupInfo-passphrase: string--><!--Device-WifiP2pGroupInfo-passphrase: string-End-->
 

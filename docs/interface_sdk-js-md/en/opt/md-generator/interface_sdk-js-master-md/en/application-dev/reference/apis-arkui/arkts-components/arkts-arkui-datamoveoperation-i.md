@@ -56,7 +56,7 @@ type: DataOperationType.MOVE
 
 Type of data movement.
 
-**Type:** DataOperationType.MOVE
+**Type:** [DataOperationType.MOVE](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
 

@@ -22,7 +22,7 @@ x轴的平移距离。
 
 默认值：0
 
-类型为string时，形式参考[Length](arkts-arkui-length-t.md)的string类型。
+类型为string时，形式参考[Length](Length)的string类型。
 
 **类型：** double \| string
 
@@ -48,7 +48,7 @@ y轴的平移距离。
 
 默认值：0
 
-类型为string时，形式参考[Length](arkts-arkui-length-t.md)的string类型。
+类型为string时，形式参考[Length](Length)的string类型。
 
 **类型：** double \| string
 
@@ -74,7 +74,7 @@ z轴的平移距离。
 
 默认值：0
 
-类型为string时，形式参考[Length](arkts-arkui-length-t.md)的string类型。
+类型为string时，形式参考[Length](Length)的string类型。
 
 **类型：** double \| string
 

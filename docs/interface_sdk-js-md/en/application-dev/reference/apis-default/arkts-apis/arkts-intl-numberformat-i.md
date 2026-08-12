@@ -34,5 +34,5 @@ resolvedOptions(): ResolvedNumberFormatOptions
 
 | Type | Description |
 | --- | --- |
-| [ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md) |  |
+| ResolvedNumberFormatOptions |  |
 

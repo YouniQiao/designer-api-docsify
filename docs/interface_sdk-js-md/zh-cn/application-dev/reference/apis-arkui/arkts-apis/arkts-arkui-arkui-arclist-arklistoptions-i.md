@@ -54,7 +54,7 @@ scroller?: Scroller
 
 可滚动组件的控制器。与ArcList绑定后，可以通过它控制ArcList的滚动。&lt;br/&gt;不允许和其他滚动类组件绑定同一个滚动控制对象。
 
-**类型：** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
+**类型：** Scroller
 
 **起始版本：** 23
 

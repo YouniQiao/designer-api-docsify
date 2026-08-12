@@ -13,7 +13,7 @@ Partition table information.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## alignSector
@@ -84,7 +84,7 @@ partitions: Array<PartitionInfo>
 
 Array of partition information.
 
-**Type:** Array&lt;PartitionInfo&gt;
+**Type:** Array&lt;[PartitionInfo](arkts-corefile-volumemanager-partitioninfo-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

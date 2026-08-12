@@ -11,7 +11,7 @@ The **Curves** module provides APIs for interpolation calculation to create step
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## Summary

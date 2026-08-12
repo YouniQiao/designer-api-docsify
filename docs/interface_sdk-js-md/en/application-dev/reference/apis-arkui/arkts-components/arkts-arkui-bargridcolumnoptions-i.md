@@ -22,7 +22,7 @@ Default value: **24.0**
 
 Unit: vp
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Default value: **24.0**
 
 Unit: vp
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 10
 

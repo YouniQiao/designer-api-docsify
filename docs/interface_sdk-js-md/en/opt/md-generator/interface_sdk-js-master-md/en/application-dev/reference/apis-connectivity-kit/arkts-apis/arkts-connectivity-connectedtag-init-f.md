@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## init
@@ -18,7 +18,7 @@ Initializes Connected Tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#initialize
+**Substitutes:** [initialize](ohos.connectedTag/connectedTag#initialize)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

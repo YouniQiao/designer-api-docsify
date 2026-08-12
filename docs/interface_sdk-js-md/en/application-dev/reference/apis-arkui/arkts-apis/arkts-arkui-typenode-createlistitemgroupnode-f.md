@@ -29,5 +29,5 @@ Create a FrameNode of ListItemGroup type.On API 26.0.0 and above, It can also cr
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | Return ListItemGroup type FrameNode. |
+| ListItemGroup | Return ListItemGroup type FrameNode. |
 

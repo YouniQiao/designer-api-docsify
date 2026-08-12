@@ -13,7 +13,7 @@ Defines the device information of the Ethernet.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from 'kits/@kit.NetworkKit';
+import { ethernet } from '@kit.NetworkKit';
 ```
 
 ## connectionMode

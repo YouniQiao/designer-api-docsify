@@ -5,8 +5,8 @@ Enumerates the blur types of a mask filter.
 | ------ | - | ------------------ | -------- |
 | [NORMAL](#normal) | 0 | Both the outer edges and the inner solid parts are blurred.|![image_BlueType_Normal.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png)|
 | [SOLID](#solid) | 1 | The inner solid part remains unchanged, while only the outer edges are blurred.|![image_BlueType_Solid.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png)|
-| [OUTER](#outer) | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.|![image_BlueType_Outer.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png)|
-| [INNER](#inner) | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.|
+| [OUTER](arkts-arkgraphics2d-drawing-blurtype-e.md) | 2 | Only the outer edges are blurred, with the inner solid part being fully transparent.|![image_BlueType_Outer.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png)|
+| [INNER](arkts-arkgraphics2d-drawing-blurtype-e.md) | 3 | Only the inner solid part is blurred, while the outer edges remain sharp.|
 
 **Since:** 12
 

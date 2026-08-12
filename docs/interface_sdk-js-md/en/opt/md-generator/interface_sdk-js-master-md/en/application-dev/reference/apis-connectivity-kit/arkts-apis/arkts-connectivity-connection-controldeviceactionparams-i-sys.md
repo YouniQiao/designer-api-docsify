@@ -13,7 +13,7 @@ Describes information about controlling the Bluetooth peripheral.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## controlObject
@@ -64,7 +64,7 @@ type: ControlType
 
 Indicates the control type.
 
-**Type:** [ControlType](../../apis-ability-kit/arkts-apis/arkts-ability-appcontrol-controltype-e-sys.md)
+**Type:** ControlType
 
 **Since:** 15
 

@@ -8,7 +8,7 @@
 
 **废弃版本：** 13
 
-**替代接口：** [Navigation](../arkts-apis/arkts-arkui-navigation-navigation-f.md/arkts-arkui-navigation-navigation-f.md#navigation)
+**替代接口：** [Navigation](Navigation)
 
 <!--Device-unnamed-declare enum NavigationType--><!--Device-unnamed-declare enum NavigationType-End-->
 
@@ -30,7 +30,7 @@ Push
 
 **废弃版本：** 13
 
-**替代接口：** [NavPathStack#pushPath](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#pushpath)
+**替代接口：** [pushPath](NavPathStack#pushPath)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +50,7 @@ Back
 
 **废弃版本：** 13
 
-**替代接口：** [NavPathStack#pop](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#pop)
+**替代接口：** [pop](NavPathStack#pop)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -70,7 +70,7 @@ Replace
 
 **废弃版本：** 13
 
-**替代接口：** [NavPathStack.replacePath](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md/arkts-arkui-navigation-navpathstack-c.md#replacepath)
+**替代接口：** [replacePath](NavPathStack.replacePath)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

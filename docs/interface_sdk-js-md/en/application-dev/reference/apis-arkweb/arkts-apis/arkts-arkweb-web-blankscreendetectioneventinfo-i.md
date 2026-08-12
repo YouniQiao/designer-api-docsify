@@ -18,7 +18,7 @@ blankScreenDetails?: BlankScreenDetails
 
 The details of this detection result.
 
-**Type:** [BlankScreenDetails](../arkts-components/arkts-arkweb-blankscreendetails-i.md)
+**Type:** [BlankScreenDetails](arkts-arkweb-web-blankscreendetails-i.md)
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ blankScreenReason: DetectedBlankScreenReason
 
 The reason why we consider this page is blank.
 
-**Type:** [DetectedBlankScreenReason](../arkts-components/arkts-arkweb-detectedblankscreenreason-e.md)
+**Type:** [DetectedBlankScreenReason](arkts-arkweb-web-detectedblankscreenreason-e.md)
 
 **Since:** 23
 

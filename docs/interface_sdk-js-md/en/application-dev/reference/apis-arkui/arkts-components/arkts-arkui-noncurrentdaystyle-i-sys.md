@@ -22,7 +22,7 @@ nonCurrentMonthDayColor?: ResourceColor
 
 Non-current month day color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ nonCurrentMonthLunarColor?: ResourceColor
 
 Lunar style of non-current month.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -70,7 +70,7 @@ nonCurrentMonthOffDayMarkColor?: ResourceColor
 
 Non-Current Month Off Day Marker Color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 
@@ -94,7 +94,7 @@ nonCurrentMonthWorkDayMarkColor?: ResourceColor
 
 Non-Current Month Workday Marker Color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 7
 

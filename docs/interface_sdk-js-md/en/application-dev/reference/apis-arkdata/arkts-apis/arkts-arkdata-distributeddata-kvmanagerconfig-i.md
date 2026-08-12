@@ -8,7 +8,7 @@ Represents the configuration of a **KVManager** instance, including the bundle n
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManagerConfig
+**Substitutes:** [KVManagerConfig](ohos.data.distributedKVStore.KVManagerConfig)
 
 <!--Device-distributedData-interface KVManagerConfig--><!--Device-distributedData-interface KVManagerConfig-End-->
 
@@ -30,7 +30,7 @@ Bundle name of the caller.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManagerConfig#bundleName
+**Substitutes:** [bundleName](ohos.data.distributedKVStore.KVManagerConfig#bundleName)
 
 <!--Device-KVManagerConfig-bundleName: string--><!--Device-KVManagerConfig-bundleName: string-End-->
 
@@ -44,7 +44,7 @@ userInfo: UserInfo
 
 User information.
 
-**Type:** [UserInfo](arkts-arkdata-distributeddata-userinfo-i.md)
+**Type:** UserInfo
 
 **Since:** 7
 

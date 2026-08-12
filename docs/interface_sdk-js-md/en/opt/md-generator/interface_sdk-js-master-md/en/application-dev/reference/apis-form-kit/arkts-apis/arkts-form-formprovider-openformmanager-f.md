@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## openFormManager
@@ -32,9 +32,9 @@ Opens the Widget Manager page of the current application.
 
 | Error Code ID |
 | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

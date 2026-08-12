@@ -23,16 +23,16 @@ function setUserOperation(operation: Operation, mac: string, params: string): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | operation | [Operation](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-operation-e.md) | 是 |
-| mac | string | 是 |
+| [mac](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md) | string | 是 |
 | params | string | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
 
 ## 示例
 

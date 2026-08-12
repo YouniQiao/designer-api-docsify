@@ -18,7 +18,7 @@
 public addOwningProperty(subscriber: IPropertySubscriber): void
 ```
 
-添加持有的属性。属性不再使用时，应调用[removeOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#removeowningproperty)或[removeOwningPropertyById](arkts-arkui-subscribaleabstract-c-sys.md#removeowningpropertybyid)移除。
+添加持有的属性。属性不再使用时，应调用[removeOwningProperty](#removeOwningProperty)或[removeOwningPropertyById](#removeOwningPropertyById)移除。
 
 **起始版本：** 7
 
@@ -101,7 +101,7 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要删除的订阅者， 需为已通过[addOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#addowningproperty)添加的订阅者。 |
+| property | [IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md) | 是 | 要删除的订阅者， 需为已通过[addOwningProperty](#addOwningProperty)添加的订阅者。 |
 
 ## removeOwningPropertyById
 
@@ -125,7 +125,7 @@ public removeOwningPropertyById(subscriberId: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subscriberId | number | 是 | 要删除的订阅者ID， 需为已通过[addOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#addowningproperty)添加的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
+| subscriberId | number | 是 | 要删除的订阅者ID， 需为已通过[addOwningProperty](#addOwningProperty)添加的订阅者ID， 通过[IPropertySubscriber](arkts-arkui-ipropertysubscriber-i-sys.md#IPropertySubscriber).[id()](arkts-arkui-ipropertysubscriber-i-sys.md#id)方法获取。 |
 
 ## owningProperties_
 

@@ -74,7 +74,7 @@ SLIDE_DOWN = 3
 
 **说明：**
 
-该接口仅支持在[半模态转场](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)中使用。
+该接口仅支持在[半模态转场](../../@internal/component/ets/common)中使用。
 
 **起始版本：** 23
 
@@ -96,7 +96,7 @@ SLIDE = 4
 
 **说明：**
 
-该接口仅支持在[半模态转场](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)中使用。
+该接口仅支持在[半模态转场](../../@internal/component/ets/common)中使用。
 
 **起始版本：** 23
 

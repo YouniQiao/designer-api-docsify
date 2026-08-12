@@ -1,8 +1,8 @@
 # DownloadTask
 
 下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取，callback形式通过  
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取。
+[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile-1)获取，callback形式通过  
+[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)获取。
 
 **起始版本：** 6
 
@@ -40,7 +40,7 @@ delete(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -93,13 +93,13 @@ delete(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -155,7 +155,7 @@ getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -208,13 +208,13 @@ getTaskInfo(): Promise<DownloadInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;DownloadInfo&gt; |
+| Promise & lt;DownloadInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -271,7 +271,7 @@ getTaskMimeType(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -324,13 +324,13 @@ getTaskMimeType(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -376,13 +376,13 @@ off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'progress' | 是 |
-| callback | (receivedSize: number, totalSize: number) =&gt; void | 否 |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -435,13 +435,13 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -520,13 +520,13 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -605,13 +605,13 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -690,13 +690,13 @@ off(type: 'fail', callback?: (err: number) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'fail' | 是 |
-| callback | (err: number) =&gt; void | 否 |
+| callback | (err: number) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -753,13 +753,13 @@ on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'progress' | 是 |
-| callback | (receivedSize: number, totalSize: number) =&gt; void | 是 |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -804,13 +804,13 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -865,13 +865,13 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -926,13 +926,13 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'complete' \| 'pause' \| 'remove' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -987,13 +987,13 @@ on(type: 'fail', callback: (err: number) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'fail' | 是 |
-| callback | (err: number) =&gt; void | 是 |
+| callback | (err: number) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -1030,13 +1030,13 @@ pause(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [suspend](arkts-basicservices-request-downloadtask-i.md#suspend)替代。
+> [suspend](#suspend)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)(callback:
+**替代接口：** [suspend](request.DownloadTask.suspend(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1054,7 +1054,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1078,13 +1078,13 @@ pause(): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](arkts-basicservices-request-downloadtask-i.md#suspend)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[suspend](#suspend)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.suspend](arkts-basicservices-request-downloadtask-i.md#suspend)()
+**替代接口：** [suspend](#suspend)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1096,13 +1096,13 @@ pause(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1125,13 +1125,13 @@ query(callback: AsyncCallback<DownloadInfo>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)替代。
+> [getTaskInfo](#getTaskInfo)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)(callback:
+**替代接口：** [getTaskInfo](request.DownloadTask.getTaskInfo(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1149,7 +1149,7 @@ query(callback: AsyncCallback<DownloadInfo>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1173,13 +1173,13 @@ query(): Promise<DownloadInfo>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)替代。
+> 从API version 7开始支持，从API version 9开始废弃,建议使用[getTaskInfo](#getTaskInfo)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)()
+**替代接口：** [getTaskInfo](#getTaskInfo)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1191,13 +1191,13 @@ query(): Promise<DownloadInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;DownloadInfo&gt; |
+| Promise & lt;DownloadInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1220,13 +1220,13 @@ queryMimeType(callback: AsyncCallback<string>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)替代。
+> [getTaskMimeType](#getTaskMimeType)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)(callback:
+**替代接口：** [getTaskMimeType](request.DownloadTask.getTaskMimeType(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1244,7 +1244,7 @@ queryMimeType(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1268,13 +1268,13 @@ queryMimeType(): Promise<string>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[getTaskMimeType](#getTaskMimeType)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.getTaskMimeType](arkts-basicservices-request-downloadtask-i.md#gettaskmimetype)()
+**替代接口：** [getTaskMimeType](#getTaskMimeType)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1286,13 +1286,13 @@ queryMimeType(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1321,7 +1321,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback:
+**替代接口：** [delete](request.UploadTask.delete(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1339,7 +1339,7 @@ remove(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1369,7 +1369,7 @@ remove(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [request.UploadTask.delete](arkts-basicservices-request-uploadtask-i.md#delete)()
+**替代接口：** [delete](arkts-basicservices-request-uploadtask-i.md#delete)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1381,13 +1381,13 @@ remove(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1429,7 +1429,7 @@ restore(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1482,13 +1482,13 @@ restore(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1526,13 +1526,13 @@ resume(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [restore](arkts-basicservices-request-downloadtask-i.md#restore)替代。
+> [restore](#restore)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)(callback:
+**替代接口：** [restore](request.DownloadTask.restore(callback:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1550,7 +1550,7 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1574,13 +1574,13 @@ resume(): Promise<void>
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](arkts-basicservices-request-downloadtask-i.md#restore)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[restore](#restore)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [request.DownloadTask.restore](arkts-basicservices-request-downloadtask-i.md#restore)()
+**替代接口：** [restore](#restore)()
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -1592,13 +1592,13 @@ resume(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1616,7 +1616,7 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](arkts-basicservices-request-downloadtask-i.md#restore)恢复，使用callback异步回调。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用callback异步回调。
 
 > **说明：**
 > 
@@ -1640,7 +1640,7 @@ suspend(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1675,7 +1675,7 @@ try {
 suspend(): Promise<boolean>
 ```
 
-暂停下载正在运行中的任务，已暂停的任务可被[restore](arkts-basicservices-request-downloadtask-i.md#restore)恢复，使用Promise异步回调。
+暂停下载正在运行中的任务，已暂停的任务可被[restore](#restore)恢复，使用Promise异步回调。
 
 > **说明：**
 > 
@@ -1693,13 +1693,13 @@ suspend(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

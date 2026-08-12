@@ -13,7 +13,7 @@ Provides APIs for facial authentication management. It provides management featu
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { faceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## constructor
@@ -47,8 +47,8 @@ setSurfaceId(surfaceId: string): void
 ```
 
 Sets the surface ID of the face preview page during face enrollment. This API must be used together with  
-[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addcredential) to display the face preview page through the surface of the  
-[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid) component.
+[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addCredential) to display the face preview page through the surface of the  
+[getXComponentSurfaceId](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getXComponentSurfaceId) component.
 
 **Since:** 9
 
@@ -70,9 +70,9 @@ Sets the surface ID of the face preview page during face enrollment. This API mu
 
 | Error Code ID |
 | --- |
-| [12700001](../errorcode-useriam.md#12700001-facial-authentication-service-unavailable) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12700001-facial-authentication-service-unavailable) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -18,7 +18,7 @@ changeReason?: TextChangeReason
 
 The reason for text changes.
 
-**Type:** [TextChangeReason](arkts-arkui-textchangereason-e-sys.md)
+**Type:** [TextChangeReason](arkts-arkui-textcommon-textchangereason-e-sys.md)
 
 **Since:** 24
 

@@ -1,8 +1,8 @@
 # ClickEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
 
-**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** ClickEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ Note: This API is only supported by the following components: **RichEditor** and
 
 | Error Code ID |
 | --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) |
+| [100017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-event.md#100017-component-does-not-support-default-event-prevention) |
 
 ## displayX
 
@@ -193,7 +193,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [ClickEvent#windowX](arkts-arkui-clickevent-i.md#windowx)
+**Substitutes:** [windowX](#windowX)
 
 <!--Device-ClickEvent-screenX: number--><!--Device-ClickEvent-screenX: number-End-->
 
@@ -218,7 +218,7 @@ Note: This API is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [ClickEvent#windowY](arkts-arkui-clickevent-i.md#windowy)
+**Substitutes:** [windowY](#windowY)
 
 <!--Device-ClickEvent-screenY: number--><!--Device-ClickEvent-screenY: number-End-->
 
@@ -275,7 +275,7 @@ x: number
 ```
 
 X coordinate of the click position in the  
-[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. After [distanceThreshold](arkts-arkui-commonmethod-c.md#onclick)is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
+[component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) based on the clicked element. After [distanceThreshold](arkts-arkui-commonmethod-c.md#onClick)is set for **onClick**, the click position is the lift-off point. If the event is triggered by a keyboard or gamepad device, the click position is the center of the clicked element.
 
 Unit: vp
 

@@ -8,7 +8,7 @@ P2P config.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2PConfig
+**Substitutes:** [WifiP2PConfig](ohos.wifiManager/wifiManager.WifiP2PConfig)
 
 <!--Device-wifi-interface WifiP2PConfig--><!--Device-wifi-interface WifiP2PConfig-End-->
 
@@ -17,7 +17,7 @@ P2P config.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -36,7 +36,7 @@ Device mac address s
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2PConfig.deviceAddress
+**Substitutes:** [deviceAddress](ohos.wifiManager/wifiManager.WifiP2PConfig.deviceAddress)
 
 <!--Device-WifiP2PConfig-deviceAddress: string--><!--Device-WifiP2PConfig-deviceAddress: string-End-->
 
@@ -50,7 +50,7 @@ goBand: GroupOwnerBand
 
 Group owner band
 
-**Type:** [GroupOwnerBand](arkts-connectivity-wifi-groupownerband-e.md)
+**Type:** GroupOwnerBand
 
 **Since:** 8
 
@@ -58,7 +58,7 @@ Group owner band
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2PConfig.goBand
+**Substitutes:** [goBand](ohos.wifiManager/wifiManager.WifiP2PConfig.goBand)
 
 <!--Device-WifiP2PConfig-goBand: GroupOwnerBand--><!--Device-WifiP2PConfig-goBand: GroupOwnerBand-End-->
 
@@ -80,7 +80,7 @@ Group name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2PConfig.groupName
+**Substitutes:** [groupName](ohos.wifiManager/wifiManager.WifiP2PConfig.groupName)
 
 <!--Device-WifiP2PConfig-groupName: string--><!--Device-WifiP2PConfig-groupName: string-End-->
 
@@ -103,7 +103,7 @@ Group network ID. When creating a group, -1 indicates creates a temporary group,
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2PConfig.netId
+**Substitutes:** [netId](ohos.wifiManager/wifiManager.WifiP2PConfig.netId)
 
 <!--Device-WifiP2PConfig-netId: number--><!--Device-WifiP2PConfig-netId: number-End-->
 
@@ -125,7 +125,7 @@ The passphrase of this {@code WifiP2pConfig} instance
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2PConfig.passphrase
+**Substitutes:** [passphrase](ohos.wifiManager/wifiManager.WifiP2PConfig.passphrase)
 
 <!--Device-WifiP2PConfig-passphrase: string--><!--Device-WifiP2PConfig-passphrase: string-End-->
 

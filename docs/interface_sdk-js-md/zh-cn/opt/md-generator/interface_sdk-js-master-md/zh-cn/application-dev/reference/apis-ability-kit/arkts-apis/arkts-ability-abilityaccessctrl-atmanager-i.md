@@ -1,6 +1,6 @@
 # AtManager
 
-程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager)获取实例。
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager)获取实例。
 
 **起始版本：** 8
 
@@ -37,14 +37,14 @@ checkAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSta
 
 | 类型 |
 | --- |
-| Promise&lt;GrantStatus&gt; |
+| Promise & lt;GrantStatus & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -76,7 +76,7 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 校验应用是否已被授予指定权限，同步返回该权限的授权状态。开发者可据此决定直接执行后续业务流程，或继续发起权限申请，或引导用户前往设置页修改授权状态。
 
-与[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)相比，本接口同步返回授权状态，适用于无需异步处理的权限校验场景。
+与[checkAccessToken](#checkAccessToken)相比，本接口同步返回授权状态，适用于无需异步处理的权限校验场景。
 
 适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
@@ -105,8 +105,8 @@ checkAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -132,7 +132,7 @@ console.info(`Result: ${data}`);
 getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 ```
 
-查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)不同，本接口无需传入应用身份标识，仅用于查询当前应用自身权限状态。
+查询当前应用的权限状态，同步返回结果。调用成功后，返回当前权限的状态。与[checkAccessToken](#checkAccessToken)不同，本接口无需传入应用身份标识，仅用于查询当前应用自身权限状态。
 
 适用于在判断是否需要请求权限前、权限申请后确认授权结果、或监听到权限状态变化后重新查询等场景。
 
@@ -160,8 +160,8 @@ getSelfPermissionStatus(permissionName: Permissions): PermissionStatus
 
 | 错误码ID |
 | --- |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -212,16 +212,16 @@ off(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 否 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -252,7 +252,7 @@ on(
     ): void
 ```
 
-订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](abilityAccessCtrl.AtManager.off)取消订阅。
+订阅本应用的指定权限列表的权限授权状态变化事件，使用callback异步回调。可在需要根据权限状态实时更新UI或业务逻辑、监听用户授权行为等场景中使用。不再需要监听时，调用[off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)取消订阅。
 
 - 多次调用本订阅接口时，如果订阅的权限列表相同，callback不同，允许订阅成功。  
 - 多次调用本订阅接口时，如果订阅的权限列表间有相同的子集，callback相同时，订阅失败。
@@ -261,7 +261,7 @@ on(
 > 权限状态由“已授权”变更为“未授权”可能存在两种场景：
 > - 用户主动撤销：系统会终止对应应用进程。
 > - 系统主动回收：应用进程不会终止。典型场景如安全控件的单次授权，在授权周期结束后由系统自动回收。
-> 该接口通常与[off](abilityAccessCtrl.AtManager.off)配套使用，当不再需要监听时应调用off取消订阅。
+> 该接口通常与[off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)配套使用，当不再需要监听时应调用off取消订阅。
 
 **起始版本：** 18
 
@@ -276,18 +276,18 @@ on(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'selfPermissionStateChange' | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;PermissionStateChangeInfo&gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100005-监听器数量超过限制) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -317,8 +317,8 @@ try {
 openPermissionOnSetting(context: Context, permission: Permissions): Promise<SelectedResult>
 ```
 
-用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)拉起权限设置页面。调用成功后会打开权限设置页面，用户在页面中操作后，返回用户在设置页面中的选择结果。使用Promise异步回调。
 
 适用于 [manual_settings](../../../security/AccessToken/app-permission-mgmt-overview.md#manual_settings手动设置授权)类型权限无法通过普通授权弹窗申请、必须引导用户进入系统设置完成授权的场景。manual_settings类型权限是指只能由用户在系统设置中手动开启的权限，无法通过普通授权弹窗直接申请。
 
@@ -334,22 +334,22 @@ openPermissionOnSetting(context: Context, permission: Permissions): Promise<Sele
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| context | [Context](arkts-ability-context-t.md) | 是 |
 | permission | Permissions | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;SelectedResult&gt; |
+| Promise&lt;[SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [12100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-非预期的权限) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -403,23 +403,23 @@ requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
+| context | [Context](arkts-ability-context-t.md) | 是 |
 | type | [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [12100013](../errorcode-access-token.md#12100013-全局开关已开启) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [12100013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100013-全局开关已开启) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -447,13 +447,13 @@ atManager.requestGlobalSwitch(context, abilityAccessCtrl.SwitchType.CAMERA).then
 requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>
 ```
 
-用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)/  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异步回调。
+用于[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)/  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)二次拉起权限设置弹窗，返回授权状态数组。使用Promise异步回调。
 
 适用于用户在首次弹窗中已拒绝过该权限授予，需要通过设置页面继续申请权限的场景。
 
 在调用此接口前，应用需要先调用  
-[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)。如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
+[requestPermissionsFromUser](#requestPermissionsFromUser)。如果用户已在首次弹窗中授权，则调用当前接口不会拉起授权弹窗。
 
 &lt;!--RP4--&gt;
 
@@ -475,25 +475,25 @@ requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
+| context | [Context](arkts-ability-context-t.md) | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;GrantStatus&gt;&gt; |
+| Promise & lt;Array & lt;GrantStatus & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [12100010](../errorcode-access-token.md#12100010-存在未被处理的请求) |
-| [12100011](../errorcode-access-token.md#12100011-输入的所有权限均已被授权) |
-| [12100012](../errorcode-access-token.md#12100012-输入的权限中存在未被用户拒绝过的权限) |
-| [12100014](../errorcode-access-token.md#12100014-非预期的权限) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [12100010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100010-存在未被处理的请求) |
+| [12100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100011-输入的所有权限均已被授权) |
+| [12100012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100012-输入的权限中存在未被用户拒绝过的权限) |
+| [12100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-非预期的权限) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -521,14 +521,14 @@ atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void
 ```
 
-用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt;拉起弹窗请求  
+用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)&lt;!--RP1End--&gt;拉起弹窗请求  
 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用callback异步回调。
 
 适用于应用首次访问受保护资源前主动向用户申请  
 [user_grant](../../../security/AccessToken/app-permission-mgmt-overview.md#user_grant用户授权) 权限的场景。
 
 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用  
-[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
+[requestPermissionOnSetting](#requestPermissionOnSetting)拉起权限设置弹窗，引导用户完成授权。
 
 &lt;!--RP3--&gt;
 
@@ -550,17 +550,17 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
-| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | 是 |
+| context | [Context](arkts-ability-context-t.md) | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| requestCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -594,14 +594,14 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&lt;!--RP1End--&gt;拉起弹窗请求  
+用于&lt;!--RP1--&gt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)&lt;!--RP1End--&gt;拉起弹窗请求  
 [用户授权](../../../security/AccessToken/request-user-authorization.md)，返回本次请求权限的授权结果。使用Promise异步回调。
 
 适用于应用首次访问受保护资源前主动向用户申请user_grant权限的场景。
 
 > **说明：**
 > 如果用户拒绝授权，将无法通过此接口再次拉起授权弹窗。开发者可引导用户前往系统设置界面手动授权，或调用
-> [requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissiononsetting)拉起权限设置弹窗，引导用户完成授权。
+> [requestPermissionOnSetting](#requestPermissionOnSetting)拉起权限设置弹窗，引导用户完成授权。
 
 **起始版本：** 9
 
@@ -617,22 +617,22 @@ requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
-| permissionList | Array&lt;Permissions&gt; | 是 |
+| context | [Context](arkts-ability-context-t.md) | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PermissionRequestResult&gt; |
+| Promise&lt;[PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
@@ -688,7 +688,7 @@ verifyAccessToken(tokenID: number, permissionName: Permissions): Promise<GrantSt
 
 | 类型 |
 | --- |
-| Promise&lt;GrantStatus&gt; |
+| Promise & lt;GrantStatus & gt; |
 
 ## 示例
 
@@ -727,7 +727,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.abilityAccessCtrl.AtManager#checkAccessToken
+**替代接口：** [checkAccessToken](#checkAccessToken)
 
 <!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>--><!--Device-AtManager-verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>-End-->
 
@@ -744,7 +744,7 @@ verifyAccessToken(tokenID: number, permissionName: string): Promise<GrantStatus>
 
 | 类型 |
 | --- |
-| Promise&lt;GrantStatus&gt; |
+| Promise & lt;GrantStatus & gt; |
 
 ## 示例
 
@@ -778,7 +778,7 @@ verifyAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 适用于应用访问相机、麦克风、位置等受保护资源前进行前置权限判断的场景。
 
-建议使用[checkAccessTokenSync](arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstokensync)替代。
+建议使用[checkAccessTokenSync](#checkAccessTokenSync)替代。
 
 **起始版本：** 9
 
@@ -803,8 +803,8 @@ verifyAccessTokenSync(tokenID: number, permissionName: Permissions): GrantStatus
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 

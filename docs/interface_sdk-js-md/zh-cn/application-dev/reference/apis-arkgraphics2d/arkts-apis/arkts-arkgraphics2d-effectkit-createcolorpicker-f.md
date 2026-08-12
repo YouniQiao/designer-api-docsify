@@ -30,13 +30,13 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; | Promise对象。返回创建的ColorPicker实例。 |
+| Promise&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | Promise对象。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
 
 ## 示例
 
@@ -96,13 +96,13 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ColorPicker&gt; | Promise对象。返回创建的ColorPicker实例。 |
+| Promise&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | Promise对象。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
 
 ## 示例
 
@@ -156,13 +156,13 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
 
 ## 示例
 
@@ -217,13 +217,13 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
 | region | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ColorPicker&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 输入参数错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
 
 ## 示例
 

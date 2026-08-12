@@ -30,5 +30,5 @@ function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;ImageItem&gt; | 返回位于选定区域内的图像对象。 |
+| Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt; | 返回位于选定区域内的图像对象。 |
 

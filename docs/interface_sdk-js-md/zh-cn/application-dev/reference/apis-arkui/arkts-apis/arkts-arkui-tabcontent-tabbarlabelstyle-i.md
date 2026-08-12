@@ -66,7 +66,7 @@ maxFontSize?: double | ResourceStr
 
 取值范围：[minFontSize, +∞)。
 
-**类型：** double \| ResourceStr
+**类型：** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
@@ -110,7 +110,7 @@ minFontSize?: double | ResourceStr
 
 取值范围：(0, +∞)。
 
-**类型：** double \| ResourceStr
+**类型：** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 

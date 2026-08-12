@@ -1,7 +1,7 @@
 # CustomComponentContext
 
 `CustomComponentContext`类提供对组件级服务的访问，包括复用池。通过  
-[UIUtils.getCustomComponentContext](arkts-arkui-arkui-statemanagement-uiutils-c.md#getcustomcomponentcontext)获取实例。
+[UIUtils.getCustomComponentContext](arkts-arkui-arkui-statemanagement-uiutils-c.md#getCustomComponentContext)获取实例。
 
 **起始版本：** 26.0.0
 

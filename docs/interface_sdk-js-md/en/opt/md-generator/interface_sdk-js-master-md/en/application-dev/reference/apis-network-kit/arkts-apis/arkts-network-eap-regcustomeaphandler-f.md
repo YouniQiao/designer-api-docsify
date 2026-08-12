@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## regCustomEapHandler
@@ -26,21 +26,21 @@ Customize eap packets by callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| netType | number | Yes |
+| [netType](arkts-network-policy-networkmatchrule-i-sys.md) | number | Yes |
 | eapCode | number | Yes |
 | eapType | number | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;EapData&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[EapData](arkts-network-eap-eapdata-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33200008](../errorcode-net-eap.md#33200008-invalid-eaptype-value) |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
-| [33200006](../errorcode-net-eap.md#33200006-invalid-network-type) |
-| [33200007](../errorcode-net-eap.md#33200007-invalid-eapcode-value) |
+| [33200008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200008-invalid-eaptype-value) |
+| [33200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [33200099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200099-internal-program-error) |
+| [33200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200006-invalid-network-type) |
+| [33200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200007-invalid-eapcode-value) |
 
 ## Examples
 

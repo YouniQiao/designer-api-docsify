@@ -12,7 +12,7 @@ Obtains whether an application supports distributed notifications based on the b
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isDistributedEnabledByBundle
+**Substitutes:** [isDistributedEnabledByBundle](ohos.notificationManager/notificationManager#isDistributedEnabledByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ Obtains whether an application supports distributed notifications based on the b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
 
 
@@ -42,7 +42,7 @@ Checks whether a specified application supports distributed notifications.This A
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isDistributedEnabledByBundle
+**Substitutes:** [isDistributedEnabledByBundle](ohos.notificationManager/notificationManager#isDistributedEnabledByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -56,10 +56,10 @@ Checks whether a specified application supports distributed notifications.This A
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |

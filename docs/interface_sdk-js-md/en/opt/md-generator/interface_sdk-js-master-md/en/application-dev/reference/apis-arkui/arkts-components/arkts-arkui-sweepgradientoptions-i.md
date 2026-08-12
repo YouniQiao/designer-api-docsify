@@ -12,8 +12,8 @@ Defines the sweep gradient parameters.
 > 
 > When using the **metricsColors** parameter, take note of the following:
 > 
-> [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md/arkts-arkui-graphics-colormetrics-c.md) represents the fill color, which can be constructed with a specified
-> color gamut attribute using the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md/arkts-arkui-graphics-colormetrics-c.md#colorwithspace) API. **number**
+> [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#ColorMetrics) represents the fill color, which can be constructed with a specified
+> color gamut attribute using the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#colorWithSpace) API. **number**
 > represents the position of the specified color, with a value range of [0, 1.0]. **0** indicates the start of the
 > container where the gradient color is set, and **1.0** indicates the end of the container. To achieve multi-color
 > gradients, the **number** parameters in the array should be set in ascending order. If a later number is less than

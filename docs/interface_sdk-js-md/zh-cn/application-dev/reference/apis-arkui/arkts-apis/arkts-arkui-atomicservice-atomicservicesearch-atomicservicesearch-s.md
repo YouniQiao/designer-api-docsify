@@ -24,7 +24,7 @@ controller?: SearchController
 
 Search组件控制器，用于设置输入光标的位置、退出编辑态等操作。默认值为undefined。
 
-**类型：** [SearchController](../arkts-components/arkts-arkui-searchcontroller-c.md)
+**类型：** SearchController
 
 **起始版本：** 18
 
@@ -64,7 +64,7 @@ placeholder?: ResourceStr
 
 搜索框内默认显示的提示文本。默认值为Search。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 18
 
@@ -130,7 +130,7 @@ value?: ResourceStr
 
 设置当前显示的搜索文本内容。默认值为空字符串。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 18
 

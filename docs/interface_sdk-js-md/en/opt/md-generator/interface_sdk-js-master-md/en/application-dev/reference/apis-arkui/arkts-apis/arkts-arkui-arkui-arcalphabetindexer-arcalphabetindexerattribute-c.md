@@ -1,8 +1,8 @@
 # ArcAlphabetIndexerAttribute
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](common), the following events are supported.
 
 **Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends [CommonMethod<ArcAlphabetIndexerAttribute>](CommonMethod<ArcAlphabetIndexerAttribute>)
 
@@ -15,7 +15,7 @@ In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-ap
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from 'kits/@kit.ArkUI';
+import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 ```
 
 ## autoCollapse
@@ -150,7 +150,7 @@ Triggered when an index item is selected. The return value is the index of the s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnSelectCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -197,7 +197,7 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 > **NOTE：**
 
 > After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying
-> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md#popupbackground).
+> background colors via [popupBackground](#popupBackground).
 
 **Since:** 18
 

@@ -11,7 +11,7 @@ Circular fence information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## coordinateSystemType
@@ -22,7 +22,7 @@ coordinateSystemType?: CoordinateSystemType
 
 Coordinate system type.
 
-**Type:** [CoordinateSystemType](arkts-location-geolocationmanager-coordinatesystemtype-e.md)
+**Type:** CoordinateSystemType
 
 **Since:** 12
 

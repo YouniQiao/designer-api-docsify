@@ -15,7 +15,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 ```
 
 Marshals a styled string by defining a callback to marshal  
-[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
+[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
 
 **Since:** 19
 
@@ -31,7 +31,7 @@ Marshals a styled string by defining a callback to marshal
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
 | callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes |
 
 **Return value:**
@@ -62,7 +62,7 @@ Marshals a styled string.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes |
 
 **Return value:**
 
@@ -77,7 +77,7 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 ```
 
 Unmarshals a styled string by defining a callback to  
-[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
+[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
 
 **Since:** 19
 
@@ -100,14 +100,14 @@ Unmarshals a styled string by defining a callback to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [170002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-styled-string-decoding-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## unmarshalling
 
@@ -137,11 +137,11 @@ Unmarshals a buffer to obtain a styled string.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [170002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-styled-string-decoding-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

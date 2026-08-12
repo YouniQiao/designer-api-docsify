@@ -24,7 +24,7 @@
 | --- | --- |
 | [MenuItemConfiguration](arkts-arkui-select-menuitemconfiguration-i.md) | 菜单项配置接口，用于ContentModifier中。 |
 | [MenuOutlineOptions](arkts-arkui-select-menuoutlineoptions-i.md) | 菜单外描边选项。 |
-| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) | 除支持[通用属性](common)外，还支持以下属性： |
 | [SelectOption](arkts-arkui-select-selectoption-i.md) | 下拉菜单项的信息。 |
 
 <!--Del-->
@@ -32,7 +32,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [SelectAttribute](arkts-arkui-select-selectattribute-i-sys.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i-sys.md) | 除支持[通用属性](common)外，还支持以下属性： |
 <!--DelEnd-->
 
 ### 枚举

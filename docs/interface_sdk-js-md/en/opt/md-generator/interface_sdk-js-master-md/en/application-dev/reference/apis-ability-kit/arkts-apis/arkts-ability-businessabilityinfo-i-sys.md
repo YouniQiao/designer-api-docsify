@@ -18,7 +18,7 @@ readonly applicationInfo: ApplicationInfo
 
 Obtains configuration information about an application
 
-**Type:** [ApplicationInfo](arkts-ability-applicationinfo-i-sys.md)
+**Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
 **Since:** 10
 

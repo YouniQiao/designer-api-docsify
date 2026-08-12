@@ -8,7 +8,7 @@ Provides the information about the target package and ability to start automatic
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.reminderAgentManager:reminderAgentManager.MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
+**Substitutes:** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#MaxScreenWantAgent)
 
 <!--Device-reminderAgent-interface MaxScreenWantAgent--><!--Device-reminderAgent-interface MaxScreenWantAgent-End-->
 
@@ -17,7 +17,7 @@ Provides the information about the target package and ability to start automatic
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -36,7 +36,7 @@ Name of the ability that is automatically started when the reminder arrives and 
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.MaxScreenWantAgent.abilityName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#abilityname)
+**Substitutes:** [abilityName](reminderAgentManager.MaxScreenWantAgent.abilityName)
 
 <!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
@@ -58,7 +58,7 @@ Name of the HAP that is automatically started when the reminder arrives and the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.MaxScreenWantAgent.pkgName](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md#pkgname)
+**Substitutes:** [pkgName](reminderAgentManager.MaxScreenWantAgent.pkgName)
 
 <!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 

@@ -31,7 +31,7 @@ isRefreshed: boolean
 ```
 
 Whether the page is reloaded. The value **true** means that the page is reloaded by invoking the  
-[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md/arkts-arkweb-webview-webviewcontroller-c.md#refresh) API, and **false**means the opposite.
+[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh) API, and **false**means the opposite.
 
 **Type:** boolean
 

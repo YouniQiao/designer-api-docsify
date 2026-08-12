@@ -34,7 +34,7 @@ constructor(value: LengthMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | 是 | 文本基线偏移量设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
+| value | LengthMetrics | 是 | 文本基线偏移量设置项。如果LengthMetrics的unit值是PERCENT，该设置不生效。 |
 
 ## baselineOffset
 

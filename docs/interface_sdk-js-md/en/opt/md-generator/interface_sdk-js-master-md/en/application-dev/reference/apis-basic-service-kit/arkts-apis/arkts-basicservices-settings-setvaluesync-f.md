@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## setValueSync
@@ -18,7 +18,7 @@ Set settingsdata value(synchronous method)
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#setValueSync
+**Substitutes:** [setValueSync](#setValueSync)
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
@@ -138,7 +138,7 @@ Set settingsdata value(synchronous method).
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

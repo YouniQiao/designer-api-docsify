@@ -8,7 +8,7 @@ Identifies the operation for using a WantAgent, such as starting an ability or s
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#OperationType
+**Substitutes:** [OperationType](ohos.app.ability.wantAgent/wantAgent#OperationType)
 
 <!--Device-wantAgent-export enum OperationType--><!--Device-wantAgent-export enum OperationType-End-->
 
@@ -28,7 +28,7 @@ Unknown operation.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.OperationType#UNKNOWN_TYPE
+**Substitutes:** [UNKNOWN_TYPE](ohos.app.ability.wantAgent/wantAgent.OperationType#UNKNOWN_TYPE)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -50,7 +50,7 @@ Starts an ability with a UI.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITY
+**Substitutes:** [START_ABILITY](ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITY)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,7 +72,7 @@ Starts multiple abilities with a UI.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITIES
+**Substitutes:** [START_ABILITIES](ohos.app.ability.wantAgent/wantAgent.OperationType#START_ABILITIES)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +94,7 @@ Starts an ability without a UI.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.OperationType#START_SERVICE
+**Substitutes:** [START_SERVICE](ohos.app.ability.wantAgent/wantAgent.OperationType#START_SERVICE)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,7 +116,7 @@ Sends a common event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.OperationType#SEND_COMMON_EVENT
+**Substitutes:** [SEND_COMMON_EVENT](ohos.app.ability.wantAgent/wantAgent.OperationType#SEND_COMMON_EVENT)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

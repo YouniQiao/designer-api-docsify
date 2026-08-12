@@ -12,7 +12,7 @@ function queryContact(key: string, callback: AsyncCallback<Contact>): void
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**替代接口：** [queryContact](contact.queryContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -25,7 +25,7 @@ function queryContact(key: string, callback: AsyncCallback<Contact>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | key | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 ## 示例
 
@@ -66,14 +66,14 @@ function queryContact(context: Context, key: string, callback: AsyncCallback<Con
 | --- | --- | --- |
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | key | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -108,7 +108,7 @@ function queryContact(key: string, holder: Holder, callback: AsyncCallback<Conta
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**替代接口：** [queryContact](contact.queryContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -122,7 +122,7 @@ function queryContact(key: string, holder: Holder, callback: AsyncCallback<Conta
 | --- | --- | --- |
 | key | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 ## 示例
 
@@ -168,14 +168,14 @@ function queryContact(context: Context, key: string, holder: Holder, callback: A
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | key | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -214,7 +214,7 @@ function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCall
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**替代接口：** [queryContact](contact.queryContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -228,7 +228,7 @@ function queryContact(key: string, attrs: ContactAttributes, callback: AsyncCall
 | --- | --- | --- |
 | key | string | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 ## 示例
 
@@ -272,14 +272,14 @@ function queryContact(context: Context, key: string, attrs: ContactAttributes, c
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | key | string | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -316,7 +316,7 @@ function queryContact(key: string, holder: Holder, attrs: ContactAttributes, cal
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**替代接口：** [queryContact](contact.queryContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -331,7 +331,7 @@ function queryContact(key: string, holder: Holder, attrs: ContactAttributes, cal
 | key | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 ## 示例
 
@@ -380,14 +380,14 @@ function queryContact(context: Context, key: string, holder: Holder, attrs: Cont
 | key | string | 是 |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | 是 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -428,7 +428,7 @@ function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): 
 
 **废弃版本：** 10
 
-**替代接口：** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**替代接口：** [queryContact](contact.queryContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -448,7 +448,7 @@ function queryContact(key: string, holder?: Holder, attrs?: ContactAttributes): 
 
 | 类型 |
 | --- |
-| Promise&lt;Contact&gt; |
+| Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; |
 
 ## 示例
 
@@ -498,14 +498,14 @@ function queryContact(context: Context, key: string, holder?: Holder, attrs?: Co
 
 | 类型 |
 | --- |
-| Promise&lt;Contact&gt; |
+| Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

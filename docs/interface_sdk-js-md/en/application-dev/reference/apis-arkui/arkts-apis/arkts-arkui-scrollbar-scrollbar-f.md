@@ -26,13 +26,13 @@ Defines ScrollBar Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ScrollBarOptions](arkts-arkui-scrollbar-scrollbaroptions-i.md) | Yes | value |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScrollBarAttribute](../arkts-components/arkts-arkui-scrollbar-attribute.md) |  |
+| [ScrollBarAttribute](arkts-arkui-scrollbar-scrollbarattribute-i.md) |  |
 
 
 ## ScrollBar
@@ -62,12 +62,12 @@ Defines ScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ScrollBarAttribute&gt; | Yes | The style to create a ScrollBar. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ScrollBarAttribute](arkts-arkui-scrollbar-scrollbarattribute-i.md)&gt; | Yes | The style to create a ScrollBar. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScrollBarAttribute](../arkts-components/arkts-arkui-scrollbar-attribute.md) | The attribute of the ScrollBar. |
+| [ScrollBarAttribute](arkts-arkui-scrollbar-scrollbarattribute-i.md) | The attribute of the ScrollBar. |
 

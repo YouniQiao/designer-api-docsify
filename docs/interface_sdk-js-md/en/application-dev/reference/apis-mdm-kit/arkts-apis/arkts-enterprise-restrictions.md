@@ -41,7 +41,7 @@ confidentiality
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from 'kits/@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -68,7 +68,7 @@ import { restrictions } from 'kits/@kit.MDMKit';
 | [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled) | Queries whether the printing capability of a device is disabled. This API uses an asynchronous callback to return the result. |
 | [isPrinterDisabled](arkts-mdm-restrictions-isprinterdisabled-f.md#isprinterdisabled-1) | Queries whether the printing capability of a device is disabled. This API uses a promise to return the result. |
 | [removeDisallowedListForAccount](arkts-mdm-restrictions-removedisallowedlistforaccount-f.md#removedisallowedlistforaccount) | Removes the list of applications that are not allowed to use a feature for a specified user. |
-| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | Disallows a feature.  > **NOTE：** >  > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) API. |
+| [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy) | Disallows a feature.  > **NOTE：** >  > This API applies a device-level restriction policy that affects all users of the device. To set a restriction > policy for a specific user, use the > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API. |
 | [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1) | Enables or disables a specified device feature. Once disabled, the feature cannot be used. |
 | [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount) | Disallows a feature for a specified user. |
 | [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setdisallowedpolicyforaccount-1) | Disallows a feature for a specified user. |

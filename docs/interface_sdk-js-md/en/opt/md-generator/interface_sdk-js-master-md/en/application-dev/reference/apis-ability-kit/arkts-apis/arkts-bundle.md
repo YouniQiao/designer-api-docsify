@@ -1,20 +1,20 @@
 # @ohos.bundle
 
 The module provides APIs for obtaining information about an application, including  
-[bundle information](arkts-ability-bundleinfo-i.md),  
-[application information](arkts-ability-applicationinfo-i.md), and  
-[ability information](arkts-ability-abilityinfo-i.md). It also provides APIs to obtain and set the application disabling state.
+[bundle information](./bundle/bundleInfo),  
+[application information](arkts-ability-applicationinfo-applicationinfo-depr-i.md#ApplicationInfo), and  
+[ability information](arkts-ability-abilityinfo-abilityinfo-depr-i.md#AbilityInfo). It also provides APIs to obtain and set the application disabling state.
 
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md) instead.
+> [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md#bundleManager) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.bundleManager:bundleManager](arkts-bundle-bundlemanager.md)
+**Substitutes:** [bundleManager](arkts-bundle-bundlemanager.md#bundleManager)
 
 <!--Device-unnamed-declare namespace bundle--><!--Device-unnamed-declare namespace bundle-End-->
 
@@ -23,7 +23,7 @@ The module provides APIs for obtaining information about an application, includi
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -13,7 +13,7 @@ The description of the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## elementName
@@ -22,7 +22,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 elementName: ElementName
 ```
 
-The elementName of the ability that created this session. See {@link ElementName} in bundle/elementName.d.ts
+The elementName of the ability that created this session. See [ElementName](ElementName) in bundle/elementName.d.ts
 
 **Type:** [ElementName](../../apis-ability-kit/arkts-apis/arkts-ability-elementname-i.md)
 

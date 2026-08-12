@@ -54,7 +54,7 @@ urlRegexRules?: Array<UrlRegexRule>
 
 Set the regular expression rule that allows execution of this JavaScript.
 
-**Type:** Array&lt;UrlRegexRule&gt;
+**Type:** Array&lt;[UrlRegexRule](arkts-arkweb-web-urlregexrule-i.md)&gt;
 
 **Since:** 23
 

@@ -12,7 +12,7 @@ declare function opendirSync(path: string): Dir
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listfilesync)
+**替代接口：** [listFileSync](arkts-corefile-file-fs-listfilesync-f.md#listFileSync)
 
 <!--Device-unnamed-declare function opendirSync(path: string): Dir--><!--Device-unnamed-declare function opendirSync(path: string): Dir-End-->
 

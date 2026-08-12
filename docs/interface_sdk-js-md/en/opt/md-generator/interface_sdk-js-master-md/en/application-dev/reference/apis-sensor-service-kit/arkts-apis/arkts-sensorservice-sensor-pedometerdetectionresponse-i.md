@@ -1,8 +1,8 @@
 # PedometerDetectionResponse
 
-Describes the pedometer detection sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the pedometer detection sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** PedometerDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** PedometerDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -13,7 +13,7 @@ Describes the pedometer detection sensor data. It extends from [Response](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## scalar

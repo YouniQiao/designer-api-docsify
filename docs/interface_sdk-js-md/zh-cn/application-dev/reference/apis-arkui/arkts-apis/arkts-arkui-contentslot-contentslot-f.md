@@ -26,7 +26,7 @@ export declare function ContentSlot(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [Content](../arkts-components/arkts-arkui-content-t.md) | 是 | Content作为ContentSlot的管理器，通过Native侧提供的接口，可以注册并触发ContentSlot的上下树事件回调以及管理ContentSlot的子组件。 |
+| content | Content | 是 | Content作为ContentSlot的管理器，通过Native侧提供的接口，可以注册并触发ContentSlot的上下树事件回调以及管理ContentSlot的子组件。 |
 
 **返回值：**
 
@@ -61,7 +61,7 @@ export declare function ContentSlot(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ContentSlotAttribute&gt; | 是 | 用于设置ContentSlot属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ContentSlotAttribute](arkts-arkui-contentslot-contentslotattribute-i.md)&gt; | 是 | 用于设置ContentSlot属性的回调。 |
 
 **返回值：**
 

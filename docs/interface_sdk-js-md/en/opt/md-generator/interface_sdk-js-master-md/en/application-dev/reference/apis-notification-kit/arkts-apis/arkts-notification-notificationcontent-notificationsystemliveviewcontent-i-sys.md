@@ -6,7 +6,7 @@ Describes the system live view notification content, which is used to display re
 > 
 > The actual display effect depends on the device capabilities and the notification center UI style.
 
-**Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**Inheritance/Implementation:** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **Since:** 11
 
@@ -22,7 +22,7 @@ cardButtons?: Array<NotificationIconButton>
 
 Live view buttons (a maximum of three buttons are supported). This parameter is left empty by default.
 
-**Type:** Array&lt;NotificationIconButton&gt;
+**Type:** Array&lt;[NotificationIconButton](arkts-notification-notificationcontent-notificationiconbutton-i-sys.md)&gt;
 
 **Since:** 18
 
@@ -40,7 +40,7 @@ liveViewType?: LiveViewTypes
 
 Live view types. The default value is **LIVE_VIEW_ACTIVITY**.
 
-**Type:** [LiveViewTypes](arkts-notification-notificationmanager-liveviewtypes-t-sys.md)
+**Type:** [LiveViewTypes](arkts-notification-notificationcontent-liveviewtypes-e-sys.md)
 
 **Since:** 18
 

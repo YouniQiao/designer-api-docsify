@@ -6,7 +6,7 @@
 function getAppVMMemoryInfo(): VMMemoryInfo
 ```
 
-��ȡVM�ڴ������Ϣ��
+获取VM内存相关信息。
 
 **起始版本：** 12
 

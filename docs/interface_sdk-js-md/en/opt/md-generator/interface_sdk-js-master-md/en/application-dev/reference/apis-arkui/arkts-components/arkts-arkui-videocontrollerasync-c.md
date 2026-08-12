@@ -66,7 +66,7 @@ Pauses video playback asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## requestFullscreen
 
@@ -114,7 +114,7 @@ Resets the video controller asynchronously.Restores the controller to its initia
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setCurrentTime
 
@@ -139,7 +139,7 @@ Sets the current playback time with specified seek mode.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | number | Yes |
-| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | No |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | No |
 
 ## start
 
@@ -163,7 +163,7 @@ Starts video playback asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## stop
 
@@ -187,4 +187,4 @@ Stops video playback asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

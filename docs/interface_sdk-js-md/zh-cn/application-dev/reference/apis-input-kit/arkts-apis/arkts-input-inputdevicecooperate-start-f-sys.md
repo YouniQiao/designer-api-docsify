@@ -11,7 +11,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)
+> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)
 > 替代。
 
 **起始版本：** 9
@@ -20,7 +20,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#activateCooperate
+**替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -40,10 +40,10 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [4400002](../errorcode-cooperator.md#4400002-操作输入设备失败) | Screen hop failed. |
-| [4400001](../errorcode-cooperator.md#4400001-目标设备描述符错误) | Incorrect descriptor for the target device. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [4400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400002-操作输入设备失败) | Screen hop failed. |
+| [4400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400001-目标设备描述符错误) | Incorrect descriptor for the target device. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -89,7 +89,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate)
+> [cooperate.activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-1)
 > 替代。
 
 **起始版本：** 9
@@ -98,7 +98,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#activateCooperate
+**替代接口：** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
 
@@ -123,10 +123,10 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [4400002](../errorcode-cooperator.md#4400002-操作输入设备失败) | Screen hop failed. |
-| [4400001](../errorcode-cooperator.md#4400001-目标设备描述符错误) | Incorrect descriptor for the target device. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [4400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400002-操作输入设备失败) | Screen hop failed. |
+| [4400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400001-目标设备描述符错误) | Incorrect descriptor for the target device. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 ## 示例
 

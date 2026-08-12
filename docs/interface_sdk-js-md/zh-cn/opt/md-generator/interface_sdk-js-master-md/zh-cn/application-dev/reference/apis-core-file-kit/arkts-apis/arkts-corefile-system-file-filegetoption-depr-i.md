@@ -55,7 +55,7 @@ fail?: (data: string, code: number) => void
 success?: (file: FileResponse) => void
 ```
 
-接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md)。
+接口调用成功的回调函数。 返回[FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md#FileResponse)。
 
 **起始版本：** 3
 
@@ -69,7 +69,7 @@ success?: (file: FileResponse) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | [FileResponse](arkts-corefile-system-file-fileresponse-depr-i.md) | 是 |
 
 ## recursive
 

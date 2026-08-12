@@ -8,7 +8,7 @@
 
 **废弃版本：** 10
 
-**替代接口：** Measurable/Layoutable
+**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
 
 <!--Device-unnamed-declare interface LayoutBorderInfo--><!--Device-unnamed-declare interface LayoutBorderInfo-End-->
 
@@ -30,7 +30,7 @@ borderWidth: EdgeWidths
 
 **废弃版本：** 10
 
-**替代接口：** getBorderWidth
+**替代接口：** [getBorderWidth](getBorderWidth)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -46,7 +46,7 @@ margin: Margin
 
 子组件外边距信息
 
-**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
+**类型：** Margin
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ margin: Margin
 
 **废弃版本：** 10
 
-**替代接口：** getMargin
+**替代接口：** [getMargin](getMargin)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -78,7 +78,7 @@ padding: Padding
 
 **废弃版本：** 10
 
-**替代接口：** getPadding
+**替代接口：** [getPadding](getPadding)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 

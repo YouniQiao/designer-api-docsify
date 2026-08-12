@@ -6,7 +6,7 @@ Enumerates USB device function types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md)
+**Substitutes:** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#FunctionType)
 
 <!--Device-usb-export enum FunctionType--><!--Device-usb-export enum FunctionType-End-->
 
@@ -26,7 +26,7 @@ No function.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.NONE](arkts-basicservices-usbmanager-functiontype-e-sys.md#none)
+**Substitutes:** [NONE](arkts-basicservices-usbmanager-functiontype-e-sys.md#NONE)
 
 <!--Device-FunctionType-NONE = 0--><!--Device-FunctionType-NONE = 0-End-->
 
@@ -46,7 +46,7 @@ ACM function.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.ACM](arkts-basicservices-usbmanager-functiontype-e-sys.md#acm)
+**Substitutes:** [ACM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ACM)
 
 <!--Device-FunctionType-ACM = 1--><!--Device-FunctionType-ACM = 1-End-->
 
@@ -66,7 +66,7 @@ ECM function.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.ECM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ecm)
+**Substitutes:** [ECM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ECM)
 
 <!--Device-FunctionType-ECM = 2--><!--Device-FunctionType-ECM = 2-End-->
 
@@ -86,7 +86,7 @@ HDC function.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.HDC](arkts-basicservices-usbmanager-functiontype-e-sys.md#hdc)
+**Substitutes:** [HDC](arkts-basicservices-usbmanager-functiontype-e-sys.md#HDC)
 
 <!--Device-FunctionType-HDC = 4--><!--Device-FunctionType-HDC = 4-End-->
 
@@ -106,7 +106,7 @@ Media transmission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.MTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#mtp)
+**Substitutes:** [MTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#MTP)
 
 <!--Device-FunctionType-MTP = 8--><!--Device-FunctionType-MTP = 8-End-->
 
@@ -126,7 +126,7 @@ Image transmission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.PTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#ptp)
+**Substitutes:** [PTP](arkts-basicservices-usbmanager-functiontype-e-sys.md#PTP)
 
 <!--Device-FunctionType-PTP = 16--><!--Device-FunctionType-PTP = 16-End-->
 
@@ -146,7 +146,7 @@ Network sharing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.RNDIS](arkts-basicservices-usbmanager-functiontype-e-sys.md#rndis)
+**Substitutes:** [RNDIS](arkts-basicservices-usbmanager-functiontype-e-sys.md#RNDIS)
 
 <!--Device-FunctionType-RNDIS = 32--><!--Device-FunctionType-RNDIS = 32-End-->
 
@@ -166,7 +166,7 @@ MIDI function.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.MIDI](arkts-basicservices-usbmanager-functiontype-e-sys.md#midi)
+**Substitutes:** [MIDI](arkts-basicservices-usbmanager-functiontype-e-sys.md#MIDI)
 
 <!--Device-FunctionType-MIDI = 64--><!--Device-FunctionType-MIDI = 64-End-->
 
@@ -186,7 +186,7 @@ Audio function.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.AUDIO_SOURCE](arkts-basicservices-usbmanager-functiontype-e-sys.md#audio_source)
+**Substitutes:** [AUDIO_SOURCE](arkts-basicservices-usbmanager-functiontype-e-sys.md#AUDIO_SOURCE)
 
 <!--Device-FunctionType-AUDIO_SOURCE = 128--><!--Device-FunctionType-AUDIO_SOURCE = 128-End-->
 
@@ -206,7 +206,7 @@ NCM transmission.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.FunctionType.NCM](arkts-basicservices-usbmanager-functiontype-e-sys.md#ncm)
+**Substitutes:** [NCM](arkts-basicservices-usbmanager-functiontype-e-sys.md#NCM)
 
 <!--Device-FunctionType-NCM = 256--><!--Device-FunctionType-NCM = 256-End-->
 

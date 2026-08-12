@@ -72,9 +72,9 @@ patterns: Array<Pattern>
 
 **使用后效果：** 设置后，输入法切换列表弹窗中会在默认输入法区域展示该数组中定义的所有模式选项供用户选择。
 
-**说明：** patterns数组中的每个Pattern的icon和selectedIcon均需为有效的[Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)资源引用；建议至少配置2个模式选项以提供有意义的选择功能。
+**说明：** patterns数组中的每个Pattern的icon和selectedIcon均需为有效的[Resource](Resource)资源引用；建议至少配置2个模式选项以提供有意义的选择功能。
 
-**类型：** Array&lt;Pattern&gt;
+**类型：** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
 **起始版本：** 11
 

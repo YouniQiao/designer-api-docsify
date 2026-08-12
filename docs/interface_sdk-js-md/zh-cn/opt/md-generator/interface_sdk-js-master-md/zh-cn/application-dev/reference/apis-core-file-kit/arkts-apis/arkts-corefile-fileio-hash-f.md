@@ -12,7 +12,7 @@ declare function hash(path: string, algorithm: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.hash:hash](arkts-corefile-fileio-hash-f.md#hash)
+**替代接口：** [hash](arkts-file-hash.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
 
@@ -23,13 +23,13 @@ declare function hash(path: string, algorithm: string): Promise<string>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| algorithm | string | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 
 ## hash
@@ -44,7 +44,7 @@ declare function hash(path: string, algorithm: string, callback: AsyncCallback<s
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.hash:hash](arkts-corefile-fileio-hash-f.md#hash)
+**替代接口：** [hash](arkts-file-hash.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 
@@ -55,5 +55,5 @@ declare function hash(path: string, algorithm: string, callback: AsyncCallback<s
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| algorithm | string | 是 |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |

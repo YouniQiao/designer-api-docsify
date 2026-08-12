@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from 'kits/@kit.AbilityKit';
+import { distributedBundle } from '@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfos
@@ -19,7 +19,7 @@ Obtains the information about remote abilities that match the given element name
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -49,7 +49,7 @@ Obtains the information about remote abilities that match the given element name
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

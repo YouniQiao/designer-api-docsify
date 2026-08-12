@@ -1,8 +1,8 @@
 # @ohos.app.ability.abilityDelegatorRegistry
 
 **AbilityDelegatorRegistry**, a module of the automatic test framework, is used to obtain  
-[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md) and  
-[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) objects. **AbilityDelegator**provides APIs for creating [AbilityMonitor](../../apis-ability-kit/arkts-apis/arkts-ability-abilitymonitor-i.md/arkts-ability-abilitymonitor-i.md) objects, which can be used to listen for ability lifecycle changes. **AbilityDelegatorArgs** provides APIs for obtaining test parameters.
+[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator) and  
+[AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#AbilityDelegatorArgs) objects. **AbilityDelegator**provides APIs for creating [AbilityMonitor](../../apis-ability-kit/arkts-apis/arkts-ability-abilitymonitor-i.md#AbilityMonitor) objects, which can be used to listen for ability lifecycle changes. **AbilityDelegatorArgs** provides APIs for obtaining test parameters.
 
 > **NOTE：**
 > 
@@ -17,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
+import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
 ## Summary

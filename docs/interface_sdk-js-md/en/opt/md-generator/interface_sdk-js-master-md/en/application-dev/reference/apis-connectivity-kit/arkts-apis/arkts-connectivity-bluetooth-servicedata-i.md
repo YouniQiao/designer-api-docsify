@@ -6,7 +6,7 @@ Describes the service data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ServiceData
+**Substitutes:** [ServiceData](ohos.bluetoothManager/bluetoothManager.ServiceData)
 
 <!--Device-bluetooth-interface ServiceData--><!--Device-bluetooth-interface ServiceData-End-->
 
@@ -15,7 +15,7 @@ Describes the service data.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## serviceUuid
@@ -32,7 +32,7 @@ Indicates the UUID of the service data to add
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ServiceData.serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.ServiceData.serviceUuid)
 
 <!--Device-ServiceData-serviceUuid: string--><!--Device-ServiceData-serviceUuid: string-End-->
 
@@ -52,7 +52,7 @@ Indicates the service data to add
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ServiceData.serviceValue
+**Substitutes:** [serviceValue](ohos.bluetoothManager/bluetoothManager.ServiceData.serviceValue)
 
 <!--Device-ServiceData-serviceValue: ArrayBuffer--><!--Device-ServiceData-serviceValue: ArrayBuffer-End-->
 

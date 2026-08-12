@@ -2,7 +2,7 @@
 
 Defines ReplaceSymbolEffect class.
 
-**Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md#SymbolEffect)
 
 **Since:** 23
 
@@ -34,8 +34,8 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | No | The scope type of symbol effect. |
-| replaceType | [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md) | No | The replace effect type of symbol effect. |
+| scope | [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md) | No | The scope type of symbol effect. |
+| replaceType | [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md) | No | The replace effect type of symbol effect. |
 
 ## replaceType
 
@@ -45,7 +45,7 @@ replaceType?: ReplaceEffectType
 
 The replace effect type of symbol effect.
 
-**Type:** [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md)
+**Type:** [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
 
 **Since:** 23
 
@@ -65,7 +65,7 @@ scope?: EffectScope
 
 The scope type of symbol effect.
 
-**Type:** [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md)
+**Type:** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 
 **Since:** 23
 

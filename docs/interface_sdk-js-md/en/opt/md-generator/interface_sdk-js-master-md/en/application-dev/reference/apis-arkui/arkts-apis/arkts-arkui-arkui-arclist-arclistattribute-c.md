@@ -1,6 +1,6 @@
 # ArcListAttribute
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
 **Inheritance/Implementation:** ArcListAttribute extends [CommonMethod<ArcListAttribute>](CommonMethod<ArcListAttribute>)
 
@@ -13,7 +13,7 @@ In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkt
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## cachedCount
@@ -93,7 +93,7 @@ Sets the size information of the child components of the **ArcList** component a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ChildrenMainSize&gt; | Yes |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | Yes |
 
 **Return value:**
 
@@ -121,7 +121,7 @@ Sets the sensitivity of the digital crown's event response.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | Yes |
+| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -261,7 +261,7 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnScrollCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -289,7 +289,7 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -318,7 +318,7 @@ Triggered when the list reaches the start position.This event is triggered durin
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -346,7 +346,7 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ArcScrollIndexHandler&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -374,7 +374,7 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -403,7 +403,7 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -431,7 +431,7 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnWillScrollCallback&gt; | Yes |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | Yes |
 
 **Return value:**
 
@@ -459,7 +459,7 @@ Sets the state of the scrollbar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BarState&gt; | Yes |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | Yes |
 
 **Return value:**
 

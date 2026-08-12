@@ -98,7 +98,7 @@ marqueeStartPolicy?: MarqueeStartPolicy
 
 The start policy for marquee.
 
-**Type:** [MarqueeStartPolicy](../arkts-components/arkts-arkui-marqueestartpolicy-e.md)
+**Type:** [MarqueeStartPolicy](arkts-arkui-text-marqueestartpolicy-e.md)
 
 **Since:** 23
 

@@ -13,7 +13,7 @@ Defines information about the host application window and **UIExtensionComponent
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from 'kits/@kit.ArkUI';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## uiExtensionHostWindowProxyRect

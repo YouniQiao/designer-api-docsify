@@ -718,13 +718,13 @@ Creates a deep copy of a size constraint.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* | Returns the pointer to the new size constraint. |
+| [ArkUI_LayoutConstraint*](capi-arkui-nativemodule-arkui-layoutconstraint.md) | Returns the pointer to the new size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_Dispose()
 
@@ -742,7 +742,7 @@ Destroys the pointer to a size constraint.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_GetMaxWidth()
 
@@ -760,7 +760,7 @@ Obtains the maximum width for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -784,7 +784,7 @@ Obtains the minimum width for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -808,7 +808,7 @@ Obtains the maximum height for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -832,7 +832,7 @@ Obtains the minimum height for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -856,7 +856,7 @@ Obtains the width percentage reference for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -880,7 +880,7 @@ Obtains the height percentage reference for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -904,7 +904,7 @@ Sets the maximum width.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinWidth()
@@ -923,7 +923,7 @@ Sets the minimum width.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMaxHeight()
@@ -942,7 +942,7 @@ Sets the maximum height.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinHeight()
@@ -961,7 +961,7 @@ Sets the minimum height.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceWidth()
@@ -980,7 +980,7 @@ Sets the width percentage reference.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the width percentage reference, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceHeight()
@@ -999,7 +999,7 @@ Sets the height percentage reference.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
+| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the height percentage reference, in px. |
 
 ### OH_ArkUI_DrawContext_GetCanvas()
@@ -1018,7 +1018,7 @@ Obtains the pointer to a canvas for drawing, which can be converted into the <b>
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
+| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
 
 **Returns**:
 
@@ -1042,13 +1042,13 @@ Obtains the size of a drawing area.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
+| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_IntSize | Returns the size of the drawing area. |
+| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md) | Returns the size of the drawing area. |
 
 ### OH_ArkUI_SwiperDigitIndicator_SetFontWeight()
 
@@ -1066,8 +1066,8 @@ Sets the font weight of total count in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
+| ArkUI_FontWeight fontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetFontWeight()
 
@@ -1085,13 +1085,13 @@ Gets the font weight of total count in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator* indicator | The pointer to the digital indicator. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
+| ArkUI_FontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
 
 ### OH_ArkUI_SwiperDigitIndicator_SetSelectedFontWeight()
 
@@ -1109,8 +1109,8 @@ Sets the font weight of selected index in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator *indicator | The pointer to the digital indicator. |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md) *indicator | The pointer to the digital indicator. |
+| ArkUI_FontWeight selectedFontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). The default value is <b>ARKUI_FONT_WEIGHT_NORMAL</b>. |
 
 ### OH_ArkUI_SwiperDigitIndicator_GetSelectedFontWeight()
 
@@ -1128,13 +1128,13 @@ Gets the font weight of selected index in the digital indicator.
 
 | Parameter | Description |
 | -- | -- |
-| ArkUI_SwiperDigitIndicator* indicator | The pointer to the digital indicator. |
+| [ArkUI_SwiperDigitIndicator](capi-arkui-nativemodule-arkui-swiperdigitindicator.md)* indicator | The pointer to the digital indicator. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight) | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
+| ArkUI_FontWeight | font weight [ArkUI_FontWeight](capi-text-h.md#arkui_fontweight). |
 
 ### OH_ArkUI_ContentTransitionEffect_Create()
 
@@ -1787,7 +1787,7 @@ Obtains the child node at the specified index in an [ArkUI_ActiveChildrenInfo](c
 
 | Type | Description |
 | -- | -- |
-| ArkUI_NodeHandle | Handle to the child node at the specified index, or nullptr if an error occurs. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Handle to the child node at the specified index, or nullptr if an error occurs. |
 
 ### OH_ArkUI_ActiveChildrenInfo_GetCount()
 
@@ -2369,7 +2369,7 @@ Set custom text menu node of text.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_NodeHandle node | The custom menu node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The custom menu node. |
 
 **Returns**:
 
@@ -2394,7 +2394,7 @@ Get custom text menu node of text.
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_TextSelectionMenuOptions](capi-arkui-nativemodule-arkui-textselectionmenuoptions.md)* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| ArkUI_NodeHandle* node | The custom menu node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The custom menu node. |
 
 **Returns**:
 
@@ -2878,8 +2878,8 @@ Sets the types of the text entity recognition configuration.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
-| [const ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)* types | Pointer to the types of the text entity recognition configuration. The value is an enumerated value of { |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| const ArkUI_TextDataDetectorType* types | Pointer to the types of the text entity recognition configuration. The value is an enumerated value of { |
 | int32_t length | Type quantity. |
 
 **Returns**:
@@ -2904,8 +2904,8 @@ Obtains the types of the text entity recognition configuration.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
-| [ArkUI_TextDataDetectorType](capi-text-h.md#arkui_textdatadetectortype)* buffer | Pointer to the buffer of the type array. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| ArkUI_TextDataDetectorType* buffer | Pointer to the buffer of the type array. |
 | int32_t bufferSize | Maximum number of types that can be written to the buffer reserved for the types. |
 | int32_t* writeLength | Pointer to the number of types that are actually written to the buffer. |
 
@@ -2931,7 +2931,7 @@ Sets the callback for text entity recognition result updates.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)\* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig\* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | void\* userData | Pointer to the user data. |
 | void (\*callback)(const char\* result | detect result update callback. |
 
@@ -2957,7 +2957,7 @@ Sets the color of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | uint32_t color | Color of the recognized content, in 0xARGB format. |
 
 **Returns**:
@@ -2982,7 +2982,7 @@ Obtains the color of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | uint32_t* color | Pointer to the color of the recognized content, in 0xARGB format. |
 
 **Returns**:
@@ -3007,7 +3007,7 @@ Sets the decoration style of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* decoration | Pointer to the decoration style of the recognized content. The value is an enumerated value of[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md). |
 
 **Returns**:
@@ -3032,7 +3032,7 @@ Obtains the decoration style of the recognized content.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | [OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md)* decoration | Pointer to the decoration style of the recognized content. The value is an enumerated value of[OH_ArkUI_DecorationStyleOptions](capi-arkui-nativemodule-oh-arkui-decorationstyleoptions.md). |
 
 **Returns**:
@@ -3057,7 +3057,7 @@ Sets whether to display the preview menu when the recognized content is long-pre
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | bool enablePreviewMenu | Whether to display the preview menu when the recognized content is long-pressed. **truemeans to display the preview menu, and **false** means the opposite. The default value is **false**. |
 
 **Returns**:
@@ -3082,7 +3082,7 @@ Obtains whether the preview menu is displayed when the recognized content is lon
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md)* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
+| OH_ArkUI_TextDataDetectorConfig* config | Pointer to the [OH_ArkUI_TextDataDetectorConfig](capi-arkui-nativemodule-oh-arkui-textdatadetectorconfig.md) object. |
 | bool* enablePreviewMenu | Pointer to the **enablePreviewMenu** parameter indicating whether the preview menu isdisplayed when the recognized content is long-pressed. **true** means that the preview menu is displayed, and false** means the opposite. |
 
 **Returns**:
@@ -3107,7 +3107,7 @@ Set the StyledString of the text.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_ArkUI_TextController](capi-arkui-nativemodule-oh-arkui-textcontroller.md)* controller | the controller of the text. |
+| OH_ArkUI_TextController* controller | the controller of the text. |
 | [ArkUI_StyledString_Descriptor](capi-arkui-nativemodule-arkui-styledstring-descriptor.md)* descriptor | Pointer to an <b>ArkUI_StyledString_Descriptor</b> object, which will be set to Text. |
 
 **Returns**:
@@ -3337,7 +3337,7 @@ Sets the font style for the placeholder text options used when there is no input
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorPlaceholderOptions* options | Pointer to the [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md) object. |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| ArkUI_FontStyle fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
@@ -3362,7 +3362,7 @@ Obtains the font style for the placeholder text options used when there is no in
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorPlaceholderOptions* options | Pointer to the [OH_ArkUI_TextEditorPlaceholderOptions](capi-arkui-nativemodule-oh-arkui-texteditorplaceholderoptions.md) object. |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| ArkUI_FontStyle* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
@@ -3591,7 +3591,7 @@ Obtains the caret-selected rectangle using the styled string controller.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorStyledStringController* controller | Pointer to the [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) object. |
-| ArkUI_Rect* rect | Pointer to the caret-selected rectangle information. The value is an enumerated value of[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
+| [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)* rect | Pointer to the caret-selected rectangle information. The value is an enumerated value of[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
 
 **Returns**:
 
@@ -4215,7 +4215,7 @@ Sets the font style of the text style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorTextStyle* style | Pointer to the text style of the **TextEditor** component. |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle) fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| ArkUI_FontStyle fontStyle | Font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
@@ -4240,7 +4240,7 @@ Obtains the font style of the text style.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorTextStyle* style | Pointer to the text style of the **TextEditor** component. |
-| [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle)* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
+| ArkUI_FontStyle* fontStyle | Pointer to the font style. The value is an enumerated value of [ArkUI_FontStyle](capi-text-h.md#arkui_fontstyle). |
 
 **Returns**:
 
@@ -4878,7 +4878,7 @@ Sets the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorSelectionMenuOptions* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| ArkUI_NodeHandle node | Content node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Content node. |
 
 **Returns**:
 
@@ -4903,7 +4903,7 @@ Obtains the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorSelectionMenuOptions* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| ArkUI_NodeHandle* node | Pointer to the content node. |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | Pointer to the content node. |
 
 **Returns**:
 

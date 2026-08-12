@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getProfileByAbility
@@ -19,7 +19,7 @@ Obtains the JSON string array of the current application's configuration file ba
 > 
 > If the profile uses the resource reference format, the return value retains this format (for example,
 > **\$string:res_id**). You can obtain the referenced resources through related APIs of the
-> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md).
+> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager).
 
 **Since:** 9
 
@@ -42,11 +42,11 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) |
+| [17700024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700024-profile-does-not-exist) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
 ## Examples
 
@@ -87,7 +87,7 @@ Obtains the JSON string array of the current application's configuration file ba
 > 
 > If the profile uses the resource reference format, the return value retains this format (for example,
 > **\$string:res_id**). You can obtain the referenced resources through related APIs of the
-> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md).
+> [resource manager module](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager).
 
 **Since:** 9
 
@@ -109,17 +109,17 @@ Obtains the JSON string array of the current application's configuration file ba
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700029](../errorcode-bundle.md#17700029-disabled-ability) |
-| [17700024](../errorcode-bundle.md#17700024-profile-does-not-exist) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) |
+| [17700024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700024-profile-does-not-exist) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
 ## Examples
 

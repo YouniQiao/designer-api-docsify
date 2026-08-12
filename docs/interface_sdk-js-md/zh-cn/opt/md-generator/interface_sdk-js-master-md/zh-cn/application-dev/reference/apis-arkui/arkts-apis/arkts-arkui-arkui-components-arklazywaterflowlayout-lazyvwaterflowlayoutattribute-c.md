@@ -32,7 +32,7 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayou
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| ItemFillPolicy \| undefined | 是 |
+| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | 是 |
 
 **返回值：**
 

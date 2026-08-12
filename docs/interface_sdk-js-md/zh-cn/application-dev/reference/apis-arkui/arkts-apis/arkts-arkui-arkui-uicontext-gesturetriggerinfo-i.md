@@ -18,7 +18,7 @@ current: GestureRecognizer
 
 手势识别器对象。可从中获取手势的详细信息，但请勿在本地保留此对象，因为当节点释放后该对象可能失效。
 
-**类型：** [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**类型：** [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md)
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ event: GestureEvent
 
 手势事件对象。
 
-**类型：** [GestureEvent](arkts-arkui-gestureevent-i.md)
+**类型：** [GestureEvent](arkts-arkui-gesture-gestureevent-i.md)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ node?: FrameNode
 
 触发手势的节点。默认值为null，表示没有触发手势的节点。
 
-**类型：** [FrameNode](arkts-arkui-framenode-t.md)
+**类型：** FrameNode
 
 **起始版本：** 26.0.0
 

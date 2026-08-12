@@ -1,7 +1,7 @@
 # AVPlayer
 
 AVPlayer is a playback management class. It provides APIs to manage and play media assets. Before calling any API in AVPlayer, you must use   
-[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer) to create an AVPlayer instance.
+[createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer) to create an AVPlayer instance.
 
 When using the AVPlayer instance, you are advised to register the following callbacks to proactively obtain status changes: [on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle)): listens for AVPlayer state changes. [on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback)):listens for error events.
 
@@ -20,7 +20,7 @@ For details about the audio and video playback demo, see
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addPlaybackMediaSource
@@ -52,14 +52,14 @@ Add a new playback source to the player's playlist.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## addSubtitleFromFd
 
@@ -90,14 +90,14 @@ Adds an external subtitle to a video based on the FD. Currently, the external su
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## addSubtitleFromUrl
 
@@ -126,14 +126,14 @@ Adds an external subtitle to a video based on the URL. Currently, the external s
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## advanceToMediaSource
 
@@ -163,14 +163,14 @@ Ends playback of the current mediasource and starts playback of the specified me
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## advanceToNextMediaSource
 
@@ -194,14 +194,14 @@ Ends playback of the current mediasource and starts playback of the next mediaso
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## advanceToPrevMediaSource
 
@@ -225,14 +225,14 @@ Ends playback of the current mediasource and starts playback of the previous med
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## clearPlaybackList
 
@@ -256,13 +256,13 @@ Clears all the items in the player's playlist. Currently playing media will be t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## deselectTrack
 
@@ -290,14 +290,14 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getCurrentMediaSource
 
@@ -327,7 +327,7 @@ Return the current mediasource.
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getCurrentPresentationTimestamp
 
@@ -358,7 +358,7 @@ Obtains the current playback time. This API can be called only when the AVPlayer
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getCurrentTrack
 
@@ -380,22 +380,22 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| trackType | [MediaType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-mediatype-e.md) | Yes |
+| trackType | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getLoadedTimeRanges
 
@@ -423,7 +423,7 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; |
+| Promise & lt;Array & lt;Range & gt; & gt; |
 
 ## getMediaKeySystemInfos
 
@@ -446,7 +446,7 @@ Obtains the media key system information of the media asset that is being played
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;drm.MediaKeySystemInfo&gt; |
+| Array & lt;drm.MediaKeySystemInfo & gt; |
 
 ## getMediaSources
 
@@ -470,13 +470,13 @@ Return the array of mediasources in the playlist.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;MediaSource \| undefined&gt; |
+| Array&lt;[MediaSource](arkts-media-media-mediasource-i.md) \| undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getPlaybackInfo
 
@@ -496,7 +496,7 @@ Obtains the playback information. This API can be called only when the AVPlayer 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PlaybackInfo&gt; |
+| Promise & lt;PlaybackInfo & gt; |
 
 ## getPlaybackPosition
 
@@ -524,7 +524,7 @@ Obtains the current playback position. This API can be called only when the AVPl
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getPlaybackRate
 
@@ -544,7 +544,7 @@ Obtains the playback speed of an AVPlayer. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getPlaybackStatisticMetrics
 
@@ -564,7 +564,7 @@ Obtains the statistic metrics of the current player. This API can be called when
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PlaybackMetrics&gt; |
+| Promise&lt;[PlaybackMetrics](arkts-media-media-playbackmetrics-t.md)&gt; |
 
 ## getSeekableTimeRanges
 
@@ -593,7 +593,7 @@ Obtains the list of seekable time ranges. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; |
+| Promise & lt;Array & lt;Range & gt; & gt; |
 
 ## getSelectedTracks
 
@@ -615,13 +615,13 @@ Obtains the indexes of the selected audio or video tracks. This API can be calle
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getTrackDescription
 
@@ -643,13 +643,13 @@ Obtains the audio and video track information. This API can be called only when 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getTrackDescription
 
@@ -671,13 +671,13 @@ Obtains the audio and video track information. This API can be called only when 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## getTrackSelectionFilter
 
@@ -699,13 +699,13 @@ Obtains the track selection filter configured for the player. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;TrackSelectionFilter&gt; |
+| Promise&lt;[TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## isSeekContinuousSupported
 
@@ -713,8 +713,8 @@ Obtains the track selection filter configured for the player. This API uses a pr
 isSeekContinuousSupported() : boolean
 ```
 
-Checks whether the media source supports [seek](arkts-media-media-avplayer-i.md#seek) in SEEK_CONTINUOUS mode (specified by   
-[SeekMode](arkts-media-media-seekmode-e.md)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
+Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (specified by   
+[SeekMode](arkts-media-media-seekmode-e.md#SeekMode)). The actual value is returned when this API is called in the prepared, playing, paused, or completed state. The value **false** is returned if it is called in other states. For devices that do not support the seek operation in SEEK_CONTINUOUS mode, **false** is returned.
 
 **Since:** 18
 
@@ -759,7 +759,7 @@ Unsubscribes from media key system information changes.
 off(type: 'stateChange', callback?: OnAVPlayerStateChangeHandle): void
 ```
 
-Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md) state changes.
+Unsubscribes from [AVPlayerState](arkts-media-media-avplayerstate-t.md#AVPlayerState) state changes.
 
 **Since:** 9
 
@@ -875,7 +875,7 @@ off(type: 'playbackRateDone', callback?: OnPlaybackRateDone): void
 ```
 
 Unsubscribes from the event indicating that the playback rate set by calling   
-[setPlaybackRate](arkts-media-media-avplayer-i.md#setplaybackrate) is applied.
+[setPlaybackRate](#setPlaybackRate) is applied.
 
 **Since:** 20
 
@@ -1060,7 +1060,7 @@ off(type: 'availableBitrates', callback?: Callback<Array<number>>): void
 ```
 
 Unsubscribes from available bitrates of HLS/DASH streams. This event is reported after   
-[prepare](arkts-media-media-avplayer-i.md#prepare) is called.
+[prepare](#prepare) is called.
 
 **Since:** 9
 
@@ -1127,7 +1127,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('subtitleUpdate')
 
@@ -1150,7 +1150,7 @@ Unsubscribes from subtitle update events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'subtitleUpdate' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SubtitleInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | No |
 
 ## off('trackChange')
 
@@ -1196,7 +1196,7 @@ Unsubscribes from track information update events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'trackInfoUpdate' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | No |
 
 ## off('amplitudeUpdate')
 
@@ -1240,7 +1240,7 @@ Unsubscribes from the events indicating that an SEI message is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'seiMessageReceived' | Yes |
-| payloadTypes | Array&lt;number&gt; | No |
+| payloadTypes | Array & lt;number & gt; | No |
 | callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | No |
 
 ## off('superResolutionChanged')
@@ -1284,7 +1284,7 @@ Unsubscribes from metric events during playback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMetricsEvent&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | No |
 
 ## offPlaybackContentChanged
 
@@ -1332,7 +1332,7 @@ Unregister listener to detect time-based metadata,Currently, only the #EXT-X-DAT
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVTimedMetaData&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No |
 
 ## on('mediaKeySystemInfoUpdate')
 
@@ -1481,7 +1481,7 @@ on(type: 'playbackRateDone', callback: OnPlaybackRateDone): void
 ```
 
 Subscribes to the event indicating that the playback rate set by calling   
-[setPlaybackRate](arkts-media-media-avplayer-i.md#setplaybackrate) is applied.
+[setPlaybackRate](#setPlaybackRate) is applied.
 
 **Since:** 20
 
@@ -1656,7 +1656,7 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 ```
 
 Subscribes to the audio interruption event. When multiple audio and video assets are played at the same time, this event is triggered based on the audio interruption mode   
-[audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md/arkts-audio-audio-interruptmode-e.md). The application needs to perform corresponding processing based on different audio interruption events. For details, see   
+[audio.InterruptMode](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptmode-e.md#InterruptMode). The application needs to perform corresponding processing based on different audio interruption events. For details, see   
 [Handling Audio Interruption Events](../../../media/audio/audio-playback-concurrency.md).
 
 **Since:** 9
@@ -1703,11 +1703,11 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to [AVPlayer](arkts-multimedia-media.md) errors. This event is used only for error prompt and does not require the user to stop playback control. If the   
-[AVPlayerState](arkts-media-media-avplayerstate-t.md) is also switched to error, call   
-[reset()](arkts-media-media-avplayer-i.md#reset) or   
-[release()](arkts-media-media-avplayer-i.md#release) to exit the playback. If the playback remains in the error state after the [reset()](arkts-media-media-avplayer-i.md#reset) method is called, you are advised to directly invoke the   
-[release()](arkts-media-media-avplayer-i.md#release) method to exit the playback operation.
+Subscribes to [AVPlayer](arkts-multimedia-media.md#media) errors. This event is used only for error prompt and does not require the user to stop playback control. If the   
+[AVPlayerState](arkts-media-media-avplayerstate-t.md#AVPlayerState) is also switched to error, call   
+[reset()](#reset) or   
+[release()](#release) to exit the playback. If the playback remains in the error state after the [reset()](#reset) method is called, you are advised to directly invoke the   
+[release()](#release) method to exit the playback operation.
 
 **Since:** 9
 
@@ -1728,28 +1728,28 @@ Subscribes to [AVPlayer](arkts-multimedia-media.md) errors. This event is used o
 
 | Error Code ID |
 | --- |
-| [5410002](../errorcode-media.md#5410002-seek-in-seekcontinuous-mode-is-not-supported) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [5411002](../errorcode-media.md#5411002-network-connection-timeout) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [5411003](../errorcode-media.md#5411003-data-or-link-exception-caused-by-network-exceptions) |
-| [5411001](../errorcode-media.md#5411001-failed-to-parse-or-connect-to-the-server-address) |
-| [5411006](../errorcode-media.md#5411006-client-request-parameter-is-incorrect-or-exceeds-the-processing-capability) |
-| [5411007](../errorcode-media.md#5411007-no-resource-available) |
-| [5411004](../errorcode-media.md#5411004-network-disabled) |
-| [5411005](../errorcode-media.md#5411005-access-denied) |
-| [5411010](../errorcode-media.md#5411010-client-fails-to-verify-the-server-certificate) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5411011](../errorcode-media.md#5411011-unsupported-request-due-to-network-protocol-errors) |
-| [5411008](../errorcode-media.md#5411008-server-fails-to-verify-the-client-certificate) |
-| [5411009](../errorcode-media.md#5411009-ssl-connection-failed) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5410002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5410002-seek-in-seekcontinuous-mode-is-not-supported) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [5411002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411002-network-connection-timeout) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [5411003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411003-data-or-link-exception-caused-by-network-exceptions) |
+| [5411001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411001-failed-to-parse-or-connect-to-the-server-address) |
+| [5411006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411006-client-request-parameter-is-incorrect-or-exceeds-the-processing-capability) |
+| [5411007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411007-no-resource-available) |
+| [5411004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411004-network-disabled) |
+| [5411005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411005-access-denied) |
+| [5411010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411010-client-fails-to-verify-the-server-certificate) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5411011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411011-unsupported-request-due-to-network-protocol-errors) |
+| [5411008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411008-server-fails-to-verify-the-client-certificate) |
+| [5411009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411009-ssl-connection-failed) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## on('audioOutputDeviceChangeWithInfo')
 
@@ -1781,7 +1781,7 @@ When subscribing to this event, you are advised to implement the player behavior
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('subtitleUpdate')
 
@@ -1804,7 +1804,7 @@ Subscribes to subtitle update events. When external subtitles exist, the system 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'subtitleUpdate' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SubtitleInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SubtitleInfo](arkts-media-media-subtitleinfo-i.md)&gt; | Yes |
 
 ## on('trackChange')
 
@@ -1850,7 +1850,7 @@ Subscribes to track information update events. When the track information is upd
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'trackInfoUpdate' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes |
 
 ## on('amplitudeUpdate')
 
@@ -1894,7 +1894,7 @@ Subscribes to events indicating that a Supplemental Enhancement Information (SEI
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'seiMessageReceived' | Yes |
-| payloadTypes | Array&lt;number&gt; | Yes |
+| payloadTypes | Array & lt;number & gt; | Yes |
 | callback | [OnSeiMessageHandle](arkts-media-media-onseimessagehandle-t.md) | Yes |
 
 ## on('superResolutionChanged')
@@ -1938,7 +1938,7 @@ Subscribes to metric events during playback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMetricsEvent&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMetricsEvent](arkts-media-media-avmetricsevent-i.md)&gt;&gt; | Yes |
 
 ## onPlaybackContentChanged
 
@@ -1986,7 +1986,7 @@ Register listener to detect time-based metadata,Currently, only the #EXT-X-DATER
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVTimedMetaData&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | Yes |
 
 ## pause
 
@@ -2014,7 +2014,7 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## pause
 
@@ -2036,13 +2036,13 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## play
 
@@ -2070,7 +2070,7 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## play
 
@@ -2092,13 +2092,13 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## prepare
 
@@ -2127,8 +2127,8 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## prepare
 
@@ -2154,14 +2154,14 @@ If your application frequently switches between short videos, you can create mul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
 
 ## release
 
@@ -2189,7 +2189,7 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## release
 
@@ -2211,13 +2211,13 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## removePlaybackMediaSource
 
@@ -2247,14 +2247,14 @@ Removes the specified playback media source from the player's playlist.If the id
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## reset
 
@@ -2282,7 +2282,7 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## reset
 
@@ -2304,13 +2304,13 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## seek
 
@@ -2362,7 +2362,7 @@ Seeks to the default access point of the playback source. For live streams, the 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## selectTrack
 
@@ -2393,14 +2393,14 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setBitrate
 
@@ -2452,7 +2452,7 @@ Sets the decryption configuration. When receiving an
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setLoudnessGain
 
@@ -2468,9 +2468,9 @@ Sets the loudness gain of the AVPlayer. After this API is called, the loudness g
 > 
 > - Before calling this API, ensure that the audio rendering information has been set in
 > **AVPlayer.audioRendererInfo** and the **usage** parameter in **audioRendererInfo** has been set to
-> [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md/arkts-audio-audio-streamusage-e.md),
-> [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md/arkts-audio-audio-streamusage-e.md), or
-> [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md/arkts-audio-audio-streamusage-e.md).
+> [STREAM_USAGE_MUSIC](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage),
+> [STREAM_USAGE_MOVIE](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage), or
+> [STREAM_USAGE_AUDIOBOOK](../../apis-audio-kit/arkts-apis/arkts-audio-audio-streamusage-e.md#StreamUsage).
 
 **Since:** 21
 
@@ -2488,7 +2488,7 @@ Sets the loudness gain of the AVPlayer. After this API is called, the loudness g
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setMediaMuted
 
@@ -2512,21 +2512,21 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mediaType | [MediaType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-mediatype-e.md) | Yes |
+| mediaType | [MediaType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediatype-e.md) | Yes |
 | muted | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setMediaSource
 
@@ -2555,14 +2555,14 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setPlaybackRange
 
@@ -2571,7 +2571,7 @@ setPlaybackRange(startTimeMs: number, endTimeMs: number, mode?: SeekMode) : Prom
 ```
 
 Sets the playback range and seeks to the start position of the range based on the specified   
-[SeekMode](arkts-media-media-seekmode-e.md). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
+[SeekMode](arkts-media-media-seekmode-e.md#SeekMode). After the setting, only the content in the specified range of the audio or video file is played. This API uses a promise to return the result. It can be used in the initialized, prepared, paused, stopped, or completed state.
 
 **Since:** 18
 
@@ -2593,14 +2593,14 @@ Sets the playback range and seeks to the start position of the range based on th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setPlaybackRate
 
@@ -2633,8 +2633,8 @@ Sets the playback rate. This API can be called only when the AVPlayer is in the 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## setPlaybackStrategy
 
@@ -2662,14 +2662,14 @@ Sets a playback strategy. This API can be called only when the AVPlayer is in th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setSpeed
 
@@ -2706,7 +2706,7 @@ setSuperResolution(enabled: boolean) : Promise<void>
 
 Enables or disables super resolution. This API can be called when the AVPlayer is in the initialized, prepared, playing, paused, completed, or stopped state. This API uses a promise to return the result.
 
-Before calling [prepare()](arkts-media-media-avplayer-i.md#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
+Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy).
 
 **Since:** 18
 
@@ -2726,15 +2726,15 @@ Before calling [prepare()](arkts-media-media-avplayer-i.md#prepare), enable supe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) |
+| [5410003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5410003-super-resolution-is-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5410004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5410004-super-resolution-is-not-enabled) |
 
 ## setTrackSelectionFilter
 
@@ -2762,13 +2762,13 @@ Sets a track selection filter for the player. The player will use this filter to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## setVideoWindowSize
 
@@ -2780,7 +2780,7 @@ Sets the resolution of the output video after super resolution. This API can be 
 
 The input parameter values must be in the range of 320 × 320 to 1920 × 1080 (in px).
 
-Before calling [prepare()](arkts-media-media-avplayer-i.md#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md).
+Before calling [prepare()](#prepare), enable super resolution by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy).
 
 **Since:** 18
 
@@ -2801,16 +2801,16 @@ Before calling [prepare()](arkts-media-media-avplayer-i.md#prepare), enable supe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5410003](../errorcode-media.md#5410003-super-resolution-is-not-supported) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5410004](../errorcode-media.md#5410004-super-resolution-is-not-enabled) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5410003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5410003-super-resolution-is-not-supported) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5410004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5410004-super-resolution-is-not-enabled) |
 
 ## setVolume
 
@@ -2861,7 +2861,7 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## stop
 
@@ -2883,13 +2883,13 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## audioEffectMode
 
@@ -2921,7 +2921,7 @@ Audio interruption mode. The default value is **SHARE_MODE**. It is a dynamic pr
 and can be set only when the AVPlayer is in the prepared, playing, paused, or completed state.
 
 To take effect, this property must be set before   
-[play()](arkts-media-media-avplayer-i.md#play) is called for the first time.
+[play()](#play) is called for the first time.
 
 **Type:** audio.InterruptMode
 
@@ -2942,12 +2942,12 @@ audioRendererInfo?: audio.AudioRendererInfo
 Audio renderer information. If the media source contains videos, the default value of **usage** is   
 **STREAM_USAGE_MOVIE**. Otherwise, the default value of **usage** is **STREAM_USAGE_MUSIC**. The default value of  
 **rendererFlags** is 0. If the default value of **usage** does not meet the requirements, configure   
-[audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md/arkts-audio-audio-audiorendererinfo-i.md).
+[audio.AudioRendererInfo](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererinfo-i.md#AudioRendererInfo).
 
 This parameter can be set only when the AVPlayer is in the initialized state.
 
 To take effect, this property must be set before   
-[prepare()](arkts-media-media-avplayer-i.md#prepare) is called for the first time.
+[prepare()](#prepare) is called for the first time.
 
 **Type:** audio.AudioRendererInfo
 
@@ -3147,7 +3147,7 @@ Set the loop mode when playing the media source playlist.&lt;br&gt;Default value
 privacyType?: audio.AudioPrivacyType
 ```
 
-Audio privacy configuration. For more information, see {@link #audio.AudioPrivacyType}.Default value: PRIVACY_TYPE_PUBLIC.
+Audio privacy configuration. For more information, see [AudioPrivacyType](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioprivacytype-e.md#AudioPrivacyType).Default value: PRIVACY_TYPE_PUBLIC.
 
 **Type:** audio.AudioPrivacyType
 
@@ -3191,7 +3191,7 @@ It can be updated when the AVPlayer is in the prepared, playing, paused, complet
 
 **Use scenario**: It is used to render the window for video playback (not involved in audio-only playback scenarios).
 
-[Create a surface ID through XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md/arkts-arkui-xcomponentcontroller-c.md#getxcomponentsurfaceid).
+[Create a surface ID through XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponentcontroller-c.md#getXComponentSurfaceId).
 
 **Type:** string
 

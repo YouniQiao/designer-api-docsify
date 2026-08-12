@@ -29,7 +29,7 @@ backgroundUri: ResourceStr
 从API version 20开始，该接口支持设置Resource资源。参考  
 [示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 7
 
@@ -54,7 +54,7 @@ foregroundUri: ResourceStr
 从API version 20开始，该接口支持设置Resource资源。参考  
 [示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 7
 
@@ -79,7 +79,7 @@ secondaryUri?: ResourceStr
 从API version 20开始，该接口支持设置Resource资源。参考  
 [示例3（通过Resource资源设置评分的样式）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#示例3通过resource资源设置评分的样式)代码。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 7
 

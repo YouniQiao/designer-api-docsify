@@ -35,11 +35,11 @@ abstract initialize(content?: string | Resource, value?: TextOptions): TextAttri
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | string \| Resource | 否 |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | 否 |  |
+| value | TextOptions | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) |  |
+| TextAttribute |  |
 

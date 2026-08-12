@@ -2,7 +2,7 @@
 
 Focus axis event object description.
 
-**继承/实现关系：** FocusAxisEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**继承/实现关系：** FocusAxisEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md#BaseEvent)
 
 **起始版本：** 23
 

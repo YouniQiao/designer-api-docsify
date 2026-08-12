@@ -4,13 +4,13 @@
 
 > **说明：**
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md)替代。
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md#SensorId)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md)
+**替代接口：** [SensorId](arkts-sensorservice-sensor-sensorid-e.md#SensorId)
 
 <!--Device-sensor-enum SensorType--><!--Device-sensor-enum SensorType-End-->
 
@@ -28,7 +28,7 @@ SENSOR_TYPE_ID_ACCELEROMETER = 1
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#accelerometer)
+**替代接口：** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER = 1--><!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER = 1-End-->
 
@@ -46,7 +46,7 @@ SENSOR_TYPE_ID_GYROSCOPE = 2
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
+**替代接口：** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE = 2--><!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE = 2-End-->
 
@@ -64,7 +64,7 @@ SENSOR_TYPE_ID_AMBIENT_LIGHT = 5
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#ambient_light)
+**替代接口：** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_LIGHT)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_LIGHT = 5--><!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_LIGHT = 5-End-->
 
@@ -82,7 +82,7 @@ SENSOR_TYPE_ID_MAGNETIC_FIELD = 6
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#magnetic_field)
+**替代接口：** [MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#MAGNETIC_FIELD)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD = 6--><!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD = 6-End-->
 
@@ -100,7 +100,7 @@ SENSOR_TYPE_ID_BAROMETER = 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#barometer)
+**替代接口：** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#BAROMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_BAROMETER = 8--><!--Device-SensorType-SENSOR_TYPE_ID_BAROMETER = 8-End-->
 
@@ -118,7 +118,7 @@ SENSOR_TYPE_ID_HALL = 10
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#HALL](arkts-sensorservice-sensor-sensorid-e.md#hall)
+**替代接口：** [HALL](arkts-sensorservice-sensor-sensorid-e.md#HALL)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HALL = 10--><!--Device-SensorType-SENSOR_TYPE_ID_HALL = 10-End-->
 
@@ -136,7 +136,7 @@ SENSOR_TYPE_ID_PROXIMITY = 12
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
+**替代接口：** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PROXIMITY = 12--><!--Device-SensorType-SENSOR_TYPE_ID_PROXIMITY = 12-End-->
 
@@ -154,7 +154,7 @@ SENSOR_TYPE_ID_HUMIDITY = 13
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#humidity)
+**替代接口：** [HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#HUMIDITY)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HUMIDITY = 13--><!--Device-SensorType-SENSOR_TYPE_ID_HUMIDITY = 13-End-->
 
@@ -172,7 +172,7 @@ SENSOR_TYPE_ID_ORIENTATION = 256
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
+**替代接口：** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#ORIENTATION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ORIENTATION = 256--><!--Device-SensorType-SENSOR_TYPE_ID_ORIENTATION = 256-End-->
 
@@ -190,7 +190,7 @@ SENSOR_TYPE_ID_GRAVITY = 257
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#gravity)
+**替代接口：** [GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#GRAVITY)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GRAVITY = 257--><!--Device-SensorType-SENSOR_TYPE_ID_GRAVITY = 257-End-->
 
@@ -208,7 +208,7 @@ SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#LINEAR_ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#linear_accelerometer)
+**替代接口：** [LINEAR_ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#LINEAR_ACCELEROMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258--><!--Device-SensorType-SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258-End-->
 
@@ -226,7 +226,7 @@ SENSOR_TYPE_ID_ROTATION_VECTOR = 259
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#rotation_vector)
+**替代接口：** [ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#ROTATION_VECTOR)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ROTATION_VECTOR = 259--><!--Device-SensorType-SENSOR_TYPE_ID_ROTATION_VECTOR = 259-End-->
 
@@ -244,7 +244,7 @@ SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensorid-e.md#ambient_temperature)
+**替代接口：** [AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_TEMPERATURE)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260--><!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260-End-->
 
@@ -262,7 +262,7 @@ SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#magnetic_field_uncalibrated)
+**替代接口：** [MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#MAGNETIC_FIELD_UNCALIBRATED)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
@@ -280,7 +280,7 @@ SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#gyroscope_uncalibrated)
+**替代接口：** [GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE_UNCALIBRATED)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263-End-->
 
@@ -298,7 +298,7 @@ SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#significant_motion)
+**替代接口：** [SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#SIGNIFICANT_MOTION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264--><!--Device-SensorType-SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264-End-->
 
@@ -316,7 +316,7 @@ SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#pedometer_detection)
+**替代接口：** [PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER_DETECTION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265--><!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265-End-->
 
@@ -334,7 +334,7 @@ SENSOR_TYPE_ID_PEDOMETER = 266
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#pedometer)
+**替代接口：** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER = 266--><!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER = 266-End-->
 
@@ -352,7 +352,7 @@ SENSOR_TYPE_ID_HEART_RATE = 278
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heart_rate)
+**替代接口：** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#HEART_RATE)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HEART_RATE = 278--><!--Device-SensorType-SENSOR_TYPE_ID_HEART_RATE = 278-End-->
 
@@ -370,7 +370,7 @@ SENSOR_TYPE_ID_WEAR_DETECTION = 280
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
+**替代接口：** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_WEAR_DETECTION = 280--><!--Device-SensorType-SENSOR_TYPE_ID_WEAR_DETECTION = 280-End-->
 
@@ -388,7 +388,7 @@ SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.SensorId#ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#accelerometer_uncalibrated)
+**替代接口：** [ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER_UNCALIBRATED)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281-End-->
 

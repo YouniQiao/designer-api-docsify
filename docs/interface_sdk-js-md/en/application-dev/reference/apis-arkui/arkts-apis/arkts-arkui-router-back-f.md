@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## back
@@ -18,7 +18,7 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 8
@@ -27,7 +27,7 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#back](arkts-arkui-arkui-uicontext-router-c.md#back)(options?:
+**Substitutes:** [back](@ohos.arkui.UIContext:Router#back(options?:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,7 +39,7 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | No | Description of the target page. The **url** parameter indicates the URL of the page to return to. If the specified page does not exist in the navigation stack, no action is taken. If no URL is set, the application returns to the previous page, and the page is not rebuilt. Pages are only reclaimed after being popped from the navigation stack. Setting **url** to the special value **"/"** has no effect. If the named route is used, the provided URL must be the name of the named route. |
+| options | RouterOptions | No | Description of the target page. The **url** parameter indicates the URL of the page to return to. If the specified page does not exist in the navigation stack, no action is taken. If no URL is set, the application returns to the previous page, and the page is not rebuilt. Pages are only reclaimed after being popped from the navigation stack. Setting **url** to the special value **"/"** has no effect. If the named route is used, the provided URL must be the name of the named route. |
 
 ## Examples
 
@@ -60,7 +60,7 @@ Returns to the specified page, which deletes all pages between the current page 
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 12
@@ -69,7 +69,7 @@ Returns to the specified page, which deletes all pages between the current page 
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#back](arkts-arkui-arkui-uicontext-router-c.md#back)(index:
+**Substitutes:** [back](@ohos.arkui.UIContext:Router#back(index:)
 
 **Model restriction:** This API can be used only in the stage model.
 

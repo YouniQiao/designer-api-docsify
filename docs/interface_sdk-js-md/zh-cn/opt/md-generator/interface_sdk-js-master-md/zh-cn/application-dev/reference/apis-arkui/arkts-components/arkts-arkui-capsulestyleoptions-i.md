@@ -2,9 +2,9 @@
 
 胶囊样式选项。
 
-继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
+继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)。
 
-**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**继承/实现关系：** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **起始版本：** 10
 
@@ -50,7 +50,7 @@ Capsule进度条圆角半径（不支持百分比设置）。
 
 设置非法数值时，按照默认值处理。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **默认值：** min(width, height) / 2
 
@@ -126,9 +126,9 @@ font?: Font
 
 文本大小（不支持百分比设置）：12fp 
 
-其他文本参数跟随[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件的主题值。
+其他文本参数跟随[Text](./text)组件的主题值。
 
-**类型：** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 10
 

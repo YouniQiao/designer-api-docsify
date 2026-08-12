@@ -13,7 +13,7 @@ As an input parameter when connecting a web native messaging extension, it is us
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from 'kits/@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 ```
 
 ## onConnect

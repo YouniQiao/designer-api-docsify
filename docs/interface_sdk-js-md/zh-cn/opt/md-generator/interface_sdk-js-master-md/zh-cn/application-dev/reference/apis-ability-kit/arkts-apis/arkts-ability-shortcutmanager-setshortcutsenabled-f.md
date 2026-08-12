@@ -20,24 +20,24 @@ function setShortcutsEnabled(shortcutsInfo: Array<ShortcutInfo>, isEnabled: bool
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| shortcutsInfo | Array&lt;ShortcutInfo&gt; | 是 |
+| shortcutsInfo | Array & lt;ShortcutInfo & gt; | 是 |
 | isEnabled | boolean | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [17700070](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-指定的快捷方式id不合法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

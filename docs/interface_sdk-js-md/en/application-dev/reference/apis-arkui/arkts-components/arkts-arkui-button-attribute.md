@@ -1,8 +1,8 @@
 # Button properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-The [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported.
+The [universal events](common) are supported.
 
 **Inheritance/Implementation:** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -21,12 +21,12 @@ buttonStyle(value: ButtonStyleMode)
 ```
 
 Sets the style and primacy for the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
 
 **Since:** 11
 
@@ -46,7 +46,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md) | Yes | Style and primacy of the button&lt;br&gt;Default value: **ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button&lt;br&gt;Default value: **ButtonStyleMode.EMPHASIZED |
 
 ## contentModifier
 
@@ -72,7 +72,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | Yes | Content modifier to apply to the button.&lt;br&gt; **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | ContentModifier&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | Yes | Content modifier to apply to the button.&lt;br&gt; **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## controlSize
 
@@ -84,7 +84,7 @@ Sets the size for the button.
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
 
 **Since:** 11
 
@@ -104,7 +104,7 @@ Sets the size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md) | Yes | Size of the button.&lt;br&gt;Default value: **ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the button.&lt;br&gt;Default value: **ControlSize.NORMAL |
 
 ## fontColor
 
@@ -130,7 +130,7 @@ Sets the font color for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the button.&lt;br&gt;Default value: **\\$r('sys.color.font_on_primary')**, which means white |
+| value | ResourceColor | Yes | Font color of the button.&lt;br&gt;Default value: **\\$r('sys.color.font_on_primary')**, which means white |
 
 ## fontFamily
 
@@ -156,7 +156,7 @@ Sets the font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md/arkts-font.md) are supported. |
+| value | string \| Resource | Yes | Font family. The 'HarmonyOS Sans' font and [registered custom fonts](../arkts-apis/arkts-font.md#font) are supported. |
 
 ## fontSize
 
@@ -182,7 +182,7 @@ Sets the font size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Font size of the button.&lt;br&gt;Default value:&lt;br&gt;**\\$r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**&lt;br&gt;**\\$r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**&lt;br&gt;Note: For the string type, percentage values are not supported. |
+| value | Length | Yes | Font size of the button.&lt;br&gt;Default value:&lt;br&gt;**\\$r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**&lt;br&gt;**\\$r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**&lt;br&gt;Note: For the string type, percentage values are not supported. |
 
 ## fontStyle
 
@@ -208,7 +208,7 @@ Sets the font style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md) | Yes | Font style of the button.&lt;br&gt;Default value: **FontStyle.Normal |
+| value | FontStyle | Yes | Font style of the button.&lt;br&gt;Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -321,7 +321,7 @@ role(value: ButtonRole)
 ```
 
 Sets the role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 **Since:** 12
@@ -394,5 +394,5 @@ Sets the button type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md) | Yes | Button type.&lt;br&gt;API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
+| value | [ButtonType](arkts-arkui-buttontype-e.md) | Yes | Button type.&lt;br&gt;API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
 

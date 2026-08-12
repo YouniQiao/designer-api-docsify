@@ -13,7 +13,7 @@ Defines an inward swipe event.
 ## Modules to Import
 
 ```TypeScript
-import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from 'kits/@kit.InputKit';
+import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
 ```
 
 ## type
@@ -24,7 +24,7 @@ type: ActionType
 
 Type of the inward swipe event. The value is fixed at **SwipeInward**.
 
-**Type:** [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md)
+**Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **Since:** 12
 

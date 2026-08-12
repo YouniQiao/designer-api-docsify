@@ -26,19 +26,19 @@ function registerTypeDescriptors(typeDescriptors: Array<TypeDescriptor>): Promis
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| typeDescriptors | Array&lt;TypeDescriptor&gt; | 是 |
+| typeDescriptors | Array&lt;[TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [20400003](../errorcode-udmf.md#20400003-标准化数据类型描述符内容错误) |
-| [20400002](../errorcode-udmf.md#20400002-标准化数据类型描述符格式错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [20400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-udmf.md#20400003-标准化数据类型描述符内容错误) |
+| [20400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-udmf.md#20400002-标准化数据类型描述符格式错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## getKeyboardDelegate
@@ -12,7 +12,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 function getKeyboardDelegate(): KeyboardDelegate
 ```
 
-Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md) instance for the input method.
+Obtains a [KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md#KeyboardDelegate) instance for the input method.
 
 The input method can use the obtained instance to subscribe to a physical keyboard event, text selection change event, and more.
 

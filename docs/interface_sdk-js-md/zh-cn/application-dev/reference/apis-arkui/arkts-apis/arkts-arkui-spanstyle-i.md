@@ -64,7 +64,7 @@ styledKey: StyledStringKey
 
 样式类型的枚举值。
 
-**类型：** [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md)
+**类型：** [StyledStringKey](arkts-arkui-styledstringkey-e.md)
 
 **起始版本：** 12
 

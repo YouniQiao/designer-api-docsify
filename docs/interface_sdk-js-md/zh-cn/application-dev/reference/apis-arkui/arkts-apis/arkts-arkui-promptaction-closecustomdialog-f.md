@@ -26,7 +26,7 @@ closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中�
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.PromptAction#closeCustomDialog
+**替代接口：** [closeCustomDialog](ohos.arkui.UIContext.PromptAction#closeCustomDialog)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +46,6 @@ closeCustomDialog需先通过[UIContext](arkts-apis-uicontext-uicontext.md)中�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

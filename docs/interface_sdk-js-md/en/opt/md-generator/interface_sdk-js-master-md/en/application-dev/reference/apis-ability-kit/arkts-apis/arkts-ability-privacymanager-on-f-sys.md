@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## on('activeStateChange')
@@ -14,9 +14,9 @@ function on(type: 'activeStateChange',
     callback: Callback<ActiveChangeResponse>): void
 ```
 
-Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission) and  
-[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an  
-[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result.
+Subscribes to permission usage status change events for a specified permission list. Permission usage status changes are triggered by calls to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission) and  
+[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission). After a successful subscription, when the permission usage status changes, the callback function is triggered, returning an  
+[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md#ActiveChangeResponse) object containing details of the permission usage status change. This API uses an asynchronous callback to return the result.
 
 Multiple callback functions are allowed to be subscribed for the same permissionList.
 
@@ -24,7 +24,7 @@ Multiple callback functions are allowed to be subscribed for the same permission
 > It is not allowed to subscribe the same callback function using two permissionLists that have an intersection.
 > That is, if two permissionLists contain the same permission name, the same callback function cannot be used for
 subscription.  
-> This API is typically used in conjunction with [off](privacyManager.off).
+> This API is typically used in conjunction with [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off).
 > When listening is no longer needed, off should be called to unsubscribe.
 
 **Since:** 9
@@ -43,20 +43,20 @@ subscription.
 | --- | --- | --- |
 | type | 'activeStateChange' | Yes |
 | permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActiveChangeResponse&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActiveChangeResponse](arkts-ability-privacymanager-activechangeresponse-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100005](../errorcode-access-token.md#12100005-listener-overflows) |
-| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100005-listener-overflows) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 

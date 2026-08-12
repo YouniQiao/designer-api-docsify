@@ -1,6 +1,6 @@
 # WebKeyboardAppearanceMode
 
-Enum type supplied to {@link keyboardAppearance} for setting the web keyboard appearance mode.
+Enum type supplied to [keyboardAppearance](arkts-arkweb-web-webattribute-i.md#keyboardAppearance) for setting the web keyboard appearance mode.
 
 **起始版本：** 26.0.0
 

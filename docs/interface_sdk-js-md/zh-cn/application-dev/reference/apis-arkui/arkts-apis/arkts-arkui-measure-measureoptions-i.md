@@ -44,7 +44,7 @@ constraintWidth?: double | string | Resource
 
 默认单位为vp，不支持设置百分比字符串。若不设置，则文本SizeOptions宽度为单行布局所占最大宽度值，若设置则为设置值。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ fontFamily?: string | Resource
 
 设置被计算文本字体列表。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -92,7 +92,7 @@ fontSize?: double | string | Resource
 
 从API version 12开始，fontSize为number类型时，使用fp单位。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -116,7 +116,7 @@ fontStyle?: int | FontStyle
 
 int类型取值范围为[0,1]，取值间隔为1，依次对应FontStyle中的枚举值。
 
-**类型：** int \| FontStyle
+**类型：** int \| [FontStyle](arkts-arkui-enums-fontstyle-e.md)
 
 **起始版本：** 23
 
@@ -138,7 +138,7 @@ fontWeight?: int | string | FontWeight
 
 默认值：FontWeight.Normal
 
-**类型：** int \| string \| FontWeight
+**类型：** int \| string \| [FontWeight](arkts-arkui-enums-fontweight-e.md)
 
 **起始版本：** 23
 
@@ -180,7 +180,7 @@ lineHeight?: double | string | Resource
 
 设置被计算文本行高。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -226,7 +226,7 @@ overflow?: int | TextOverflow
 
 int类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
 
-**类型：** int \| TextOverflow
+**类型：** int \| [TextOverflow](arkts-arkui-enums-textoverflow-e.md)
 
 **起始版本：** 23
 
@@ -250,7 +250,7 @@ textAlign?: int | TextAlign
 
 int类型取值范围为[0,3]，取值间隔为1，依次对应TextAlign中的枚举值。
 
-**类型：** int \| TextAlign
+**类型：** int \| [TextAlign](arkts-arkui-enums-textalign-e.md)
 
 **起始版本：** 23
 
@@ -274,7 +274,7 @@ textCase?: int | TextCase
 
 int类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
 
-**类型：** int \| TextCase
+**类型：** int \| [TextCase](arkts-arkui-enums-textcase-e.md)
 
 **起始版本：** 23
 
@@ -294,7 +294,7 @@ textContent: string | Resource
 
 设置被计算文本内容。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -340,7 +340,7 @@ wordBreak?: WordBreak
 
 WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
 
-**类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
+**类型：** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
 
 **起始版本：** 23
 

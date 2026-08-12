@@ -1,6 +1,6 @@
 # ThreadCpuUsage
 
-�̵߳�CPUʹ�������
+线程的CPU使用情况。
 
 **起始版本：** 12
 
@@ -14,7 +14,7 @@
 cpuUsage: number
 ```
 
-�߳�CPUʹ���ʡ�
+线程CPU使用率。
 
 **类型：** number
 
@@ -30,7 +30,7 @@ cpuUsage: number
 threadId: number
 ```
 
-�̺߳š�
+线程号。
 
 **类型：** number
 

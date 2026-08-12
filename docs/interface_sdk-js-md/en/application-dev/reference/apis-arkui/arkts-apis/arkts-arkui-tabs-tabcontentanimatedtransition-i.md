@@ -40,7 +40,7 @@ transition: Callback<TabContentTransitionProxy>
 
 Called when custom content transition animation start.Anonymous Object Rectification
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TabContentTransitionProxy&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TabContentTransitionProxy](arkts-arkui-tabs-tabcontenttransitionproxy-i.md)&gt;
 
 **Since:** 23
 

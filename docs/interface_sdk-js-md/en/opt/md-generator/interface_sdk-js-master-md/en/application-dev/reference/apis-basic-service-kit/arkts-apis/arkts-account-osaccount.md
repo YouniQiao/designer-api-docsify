@@ -11,7 +11,7 @@ The **osAccount** module provides basic capabilities for managing system (OS) ac
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

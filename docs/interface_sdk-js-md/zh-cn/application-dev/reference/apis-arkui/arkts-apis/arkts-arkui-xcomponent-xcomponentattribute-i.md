@@ -2,7 +2,7 @@
 
 定义XComponent属性。
 
-**继承/实现关系：** XComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** XComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<XComponentAttribute> | Att
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | XComponent组件的属性修改器。取值为undefined时，不使用attributeModifier。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | XComponent组件的属性修改器。取值为undefined时，不使用attributeModifier。 |
 
 **返回值：**
 
@@ -247,7 +247,7 @@ setXComponentOptions(params: XComponentParameters | XComponentOptions | NativeXC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| XComponentOptions \| NativeXComponentParameters | 是 | 用于创建XComponent的选项。 |
+| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md) \| [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | 是 | 用于创建XComponent的选项。 |
 
 **返回值：**
 

@@ -64,7 +64,7 @@ Constructor used to create a **SubTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
+| content | ResourceStr | Yes | Text for the tab. |
 
 ## constructor
 
@@ -90,7 +90,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | ResourceStr \| ComponentContent | Yes | Content on the tab.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 ## id
 
@@ -98,7 +98,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 id(value: string): SubTabBarStyle
 ```
 
-Sets the [ID](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#id) of the subtab.
+Sets the [ID](CommonMethod#id) of the subtab.
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ Sets the [ID](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | [ID](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#id) of the subtab. |
+| value | string | Yes | [ID](CommonMethod#id) of the subtab. |
 
 **Return value:**
 
@@ -163,7 +163,7 @@ indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
 Sets the indicator style of the selected subtab. Compared with  
-[indicator](arkts-arkui-subtabbarstyle-c.md#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md). It takes effect only in the horizontal layout.
+[indicator](#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](ImageFit). It takes effect only in the horizontal layout.
 
 **Since:** 22
 
@@ -181,7 +181,7 @@ Sets the indicator style of the selected subtab. Compared with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| DrawableTabBarIndicator | Yes | Yes |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Yes | Yes |
 
 **Return value:**
 
@@ -245,7 +245,7 @@ Static constructor used to create a **SubTabBarStyle** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text for the tab. |
+| content | ResourceStr | Yes | Text for the tab. |
 
 **Return value:**
 
@@ -278,7 +278,7 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | ResourceStr \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 **Return value:**
 
@@ -342,7 +342,7 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-units-localizedpadding-i.md) | Yes | Padding of the subtab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt;Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**&lt;br&gt; **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | LocalizedPadding | Yes | Padding of the subtab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt;Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**&lt;br&gt; **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **Return value:**
 

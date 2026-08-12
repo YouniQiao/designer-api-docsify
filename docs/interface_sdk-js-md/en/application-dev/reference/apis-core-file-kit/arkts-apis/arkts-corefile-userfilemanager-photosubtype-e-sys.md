@@ -1,6 +1,6 @@
 # PhotoSubType (System API)
 
-Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) types.
+Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#FileAsset) types.
 
 **Since:** 10
 
@@ -8,7 +8,7 @@ Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md) ty
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md/arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
+**Substitutes:** [PhotoSubType](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType)
 
 <!--Device-userFileManager-enum PhotoSubType--><!--Device-userFileManager-enum PhotoSubType-End-->
 
@@ -30,7 +30,7 @@ Default (photo) type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.DEFAULT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md/arkts-medialibrary-photoaccesshelper-photosubtype-e.md#default)
+**Substitutes:** [DEFAULT](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.DEFAULT)
 
 <!--Device-PhotoSubType-DEFAULT--><!--Device-PhotoSubType-DEFAULT-End-->
 
@@ -52,7 +52,7 @@ Screenshots and screen recording files.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.SCREENSHOT](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photosubtype-e.md/arkts-medialibrary-photoaccesshelper-photosubtype-e.md#screenshot)
+**Substitutes:** [SCREENSHOT](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.SCREENSHOT)
 
 <!--Device-PhotoSubType-SCREENSHOT--><!--Device-PhotoSubType-SCREENSHOT-End-->
 
@@ -74,7 +74,7 @@ Photos and videos taken by a camera.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubType.SOURCE_GENERIC](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md/arkts-medialibrary-photoaccesshelper-albumsubtype-e.md#source_generic)
+**Substitutes:** [SOURCE_GENERIC](@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubType.SOURCE_GENERIC)
 
 <!--Device-PhotoSubType-CAMERA--><!--Device-PhotoSubType-CAMERA-End-->
 

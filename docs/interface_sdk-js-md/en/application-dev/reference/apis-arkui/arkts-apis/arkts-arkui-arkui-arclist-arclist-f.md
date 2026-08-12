@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## ArcList
@@ -30,13 +30,13 @@ Defines ArcList Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ArkListOptions](arkts-arkui-arkui-arclist-arklistoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 
 ## ArcList
@@ -66,12 +66,12 @@ Defines ArcList Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcListAttribute&gt; | Yes | The style to create an ArcList. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | CustomBuilderT&lt;[ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md)&gt; | Yes | The style to create an ArcList. |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) | The attribute of the ArcList. |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) | The attribute of the ArcList. |
 

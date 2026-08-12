@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## openCustomDialog
@@ -30,7 +30,7 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#openCustomDialog
+**Substitutes:** [openCustomDialog](ohos.arkui.UIContext.PromptAction#openCustomDialog)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,14 +50,14 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

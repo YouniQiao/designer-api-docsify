@@ -32,5 +32,5 @@ Parse a UUID from the string standard representation as described in the RFC 412
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid uuid string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-参数解析错误) | Invalid uuid string. |
 

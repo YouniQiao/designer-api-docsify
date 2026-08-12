@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## setShortcutVisibleForSelf
@@ -31,13 +31,13 @@ Sets whether to display the specified shortcut for the current application. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) |
+| [17700070](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-invalid-shortcut-id) |
 
 ## Examples
 

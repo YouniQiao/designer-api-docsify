@@ -18,7 +18,7 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | 是 |
 | config | [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md) | 是 |
 
 **返回值：**
@@ -31,8 +31,8 @@ function setConfiguration(pipe: USBDevicePipe, config: USBConfiguration): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

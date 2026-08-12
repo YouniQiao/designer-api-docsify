@@ -18,7 +18,7 @@ accessibilitySpanOptions?: AccessibilitySpanOptions
 
 Set accessibility options for builder span.
 
-**Type:** [AccessibilitySpanOptions](arkts-arkui-accessibilityspanoptions-i.md)
+**Type:** [AccessibilitySpanOptions](arkts-arkui-textcommon-accessibilityspanoptions-i.md)
 
 **Since:** 23
 

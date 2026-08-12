@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryAppUsagePriorityGroup
@@ -68,7 +68,7 @@ The priority defined in a priority group restricts the resource usage of an appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

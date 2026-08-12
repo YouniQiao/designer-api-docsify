@@ -84,7 +84,7 @@ batchUpdate?(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| operations | Record&lt;string, Array&lt;UpdateOperation&gt;&gt; | 是 |
+| operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | 是 |
 
 ## 示例
@@ -397,7 +397,7 @@ query?(
 | --- | --- | --- |
 | uri | string | 是 |
 | predicates | dataSharePredicates.DataSharePredicates | 是 |
-| columns | Array&lt;string&gt; | 是 |
+| columns | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | 是 |
 
 ## 示例

@@ -26,14 +26,14 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 | 类型 |
 | --- |
-| Array&lt;Readonly&lt;Device&gt;&gt; |
+| Array & lt;Readonly & lt;Device & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [22900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
 
 ## 示例
 

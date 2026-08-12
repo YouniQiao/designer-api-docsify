@@ -2,7 +2,7 @@
 
 Represents an error that occurs when an operation could not be performed, typically (but not exclusively)when a value is not of the expected type
 
-**Inheritance/Implementation:** TypeError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** TypeError extends [Error](Error)
 
 **Since:** 26.0.0
 

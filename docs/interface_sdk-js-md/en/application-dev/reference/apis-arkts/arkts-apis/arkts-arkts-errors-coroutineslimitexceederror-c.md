@@ -2,7 +2,7 @@
 
 Represents error that is thrown when coroutines limit is reached
 
-**Inheritance/Implementation:** CoroutinesLimitExceedError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** CoroutinesLimitExceedError extends [Error](Error)
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.ability.featureAbility.FeatureAbility
+**Substitutes:** [FeatureAbility](#FeatureAbility)
 
 <!--Device-unnamed-export declare class FeatureAbility--><!--Device-unnamed-export declare class FeatureAbility-End-->
 

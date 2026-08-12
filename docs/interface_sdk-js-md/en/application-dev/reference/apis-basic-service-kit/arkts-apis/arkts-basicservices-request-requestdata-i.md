@@ -1,6 +1,6 @@
 # RequestData
 
-Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md).
+Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig).
 
 **Since:** 6
 
@@ -13,7 +13,7 @@ Describes the form data in [UploadConfig](arkts-basicservices-request-uploadconf
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## name

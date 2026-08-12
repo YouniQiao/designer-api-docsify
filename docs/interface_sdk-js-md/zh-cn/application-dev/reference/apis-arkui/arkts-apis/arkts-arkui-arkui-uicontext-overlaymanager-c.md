@@ -4,7 +4,7 @@
 > **说明：**
 > 
 > - 本Class首批接口从API version 12开始支持。
-> - 以下API需先使用UIContext中的[getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getoverlaymanager)方法获取到
+> - 以下API需先使用UIContext中的[getOverlayManager()](arkts-arkui-arkui-uicontext-uicontext-c.md#getOverlayManager)方法获取到
 > OverlayManager对象，再通过该对象调用对应方法。
 > 
 > - OverlayManager上节点的层级在Page页面层级之上，在Dialog、Popup、Menu、BindSheet、BindContentCover和Toast等之下。
@@ -43,7 +43,7 @@ addComponentContent<T>(content: ComponentContent<T>, index?: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中，按层级堆叠。 |
+| content | ComponentContent&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中，按层级堆叠。 |
 | index | int | 否 |  |
 
 ## addComponentContentWithOrder
@@ -68,7 +68,7 @@ addComponentContentWithOrder<T>(content: ComponentContent<T>, levelOrder?: Level
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中位置，按层级堆叠。 |
+| content | ComponentContent&lt;T&gt; | 是 | 在OverlayManager的指定节点上添加此content。 &lt;br&gt;**说明：** &lt;br/&gt; 新增的节点默认处于页面居中位置，按层级堆叠。 |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |  |
 
 ## hideAllComponentContents
@@ -111,7 +111,7 @@ hideComponentContent<T>(content: ComponentContent<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager上隐藏此content。 |
+| content | ComponentContent&lt;T&gt; | 是 | 在OverlayManager上隐藏此content。 |
 
 ## openOrderOverlay
 
@@ -135,7 +135,7 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;Object&gt; | 是 | 该内容将被添加到OverlayManager中。 |
+| content | ComponentContent&lt;Object&gt; | 是 | 该内容将被添加到OverlayManager中。 |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 | Options for the overlay. |
 
 **返回值：**
@@ -148,7 +148,7 @@ openOrderOverlay(content: ComponentContent<Object>, options?: OrderOverlayOption
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) | The overlay cannot be opened due to the system pop-up window. |
+| [103307](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) | The overlay cannot be opened due to the system pop-up window. |
 
 ## removeComponentContent
 
@@ -172,7 +172,7 @@ removeComponentContent<T>(content: ComponentContent<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager上删除此content。 |
+| content | ComponentContent&lt;T&gt; | 是 | 在OverlayManager上删除此content。 |
 
 ## showAllComponentContents
 
@@ -214,5 +214,5 @@ showComponentContent<T>(content: ComponentContent<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 在OverlayManager上显示此content。 |
+| content | ComponentContent&lt;T&gt; | 是 | 在OverlayManager上显示此content。 |
 

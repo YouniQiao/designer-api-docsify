@@ -19,7 +19,7 @@ Provides page information, which includes:
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## itemInfo
@@ -30,7 +30,7 @@ itemInfo: Record<string, Object>
 
 Entity information of the awareness result, including the content, links, screenshots, and other entity information.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 23
 

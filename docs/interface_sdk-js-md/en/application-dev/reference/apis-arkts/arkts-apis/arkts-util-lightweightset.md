@@ -4,7 +4,7 @@ LightWeightSet stores a set of values, each of which must be unique.
  LightWeightSet is based on generics and uses a lightweight structure. Its default initial capacity is 8, and it has
  the capacity doubled in each expansion.
  The values in such a set are searched using hash values, which are stored in an array.
- Compared with [HashSet](arkts-util-hashset.md), which can also store values, LightWeightSet occupies less memory.
+ Compared with [HashSet](arkts-arkts-util-hashset-hashset-c.md#HashSet), which can also store values, LightWeightSet occupies less memory.
  **Recommended use case**: Use LightWeightSet when you need a set that has only unique elements or need to deduplicate
  a set.
  This topic uses the following to identify the use of generics:
@@ -18,7 +18,7 @@ LightWeightSet stores a set of values, each of which must be unique.
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from 'kits/@kit.ArkTS';
+import { LightWeightSet } from '@kit.ArkTS';
 ```
 
 ## Summary

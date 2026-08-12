@@ -38,13 +38,13 @@ delete(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 表名。 |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise对象，返回被删除的数据和删除结果。 |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回被删除的数据和删除结果。 |
 
 ## 示例
 
@@ -340,14 +340,14 @@ insert(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 表名。 |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 | 表示要插入的数据。 |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示要插入的数据。 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise对象，返回插入的数据和插入结果。 |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回插入的数据和插入结果。 |
 
 ## 示例
 
@@ -545,7 +545,7 @@ query(table: string, fields: Array<string>, queryCount: int, queryCursor: string
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Result&lt;CloudData&gt;&gt; | Promise对象，返回被查询的数据和查询结果。 |
+| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise对象，返回被查询的数据和查询结果。 |
 
 ## 示例
 
@@ -742,14 +742,14 @@ update(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | table | string | 是 | 表名。 |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 | 表示要更新的数据。 |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示要更新的数据。 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 | 表示当前数据的扩展信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise对象，返回更新的数据和更新结果。 |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise对象，返回更新的数据和更新结果。 |
 
 ## 示例
 

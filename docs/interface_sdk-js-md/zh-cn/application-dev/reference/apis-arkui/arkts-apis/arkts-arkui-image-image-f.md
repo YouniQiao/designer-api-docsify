@@ -25,8 +25,8 @@ Defines the Image component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 | image resource type. |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 | Options for AI analyzer. |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 | image resource type. |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 | Options for AI analyzer. |
 
 **返回值：**
 
@@ -61,8 +61,8 @@ export declare function Image(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 | 图片资源类型。 |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 | AI分析器的参数。 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 | 图片资源类型。 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 | AI分析器的参数。 |
 | reloadKey | string | 否 | 用于图像重新加载的选项。 |
 
 **返回值：**
@@ -97,7 +97,7 @@ export declare function Image(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr \| DrawableDescriptor \| ImageContent \| undefined | 是 | 图片资源类型。 |
+| src | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-arkui-image-imagecontent-e.md) \| undefined | 是 | 图片资源类型。 |
 | reloadKey | string | 否 | 用于图像重新加载的选项。 |
 
 **返回值：**
@@ -131,7 +131,7 @@ export declare function Image(style: CustomBuilderT<ImageAttribute>): ImageAttri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageAttribute&gt; | 是 | 设置组件属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageAttribute](arkts-arkui-image-imageattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 

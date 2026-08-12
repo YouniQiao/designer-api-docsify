@@ -28,7 +28,7 @@ getSupportedEffectTypes(): Array<ControlCenterEffectType>
 
 | 类型 |
 | --- |
-| Array&lt;ControlCenterEffectType&gt; |
+| Array&lt;[ControlCenterEffectType](arkts-camera-camera-controlcentereffecttype-e.md)&gt; |
 
 ## isControlCenterSupported
 

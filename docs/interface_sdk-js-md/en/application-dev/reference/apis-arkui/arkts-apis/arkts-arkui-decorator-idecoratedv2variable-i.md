@@ -2,7 +2,7 @@
 
 Define V2 decorated variable interface.
 
-**Inheritance/Implementation:** IDecoratedV2Variable extends [IDecoratedVariable](arkts-arkui-decorator-idecoratedvariable-i.md)
+**Inheritance/Implementation:** IDecoratedV2Variable extends [IDecoratedVariable](arkts-arkui-decorator-idecoratedvariable-i.md#IDecoratedVariable)
 
 **Since:** 23
 

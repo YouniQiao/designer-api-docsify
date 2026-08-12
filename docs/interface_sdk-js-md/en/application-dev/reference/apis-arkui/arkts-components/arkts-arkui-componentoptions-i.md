@@ -68,7 +68,7 @@ reusePool?: ReusePoolOwnership
 
 the reuse type of a custom component.
 
-**Type:** [ReusePoolOwnership](../arkts-apis/arkts-arkui-customcomponent-reusepoolownership-e.md)
+**Type:** [ReusePoolOwnership](arkts-arkui-reusepoolownership-t.md)
 
 **Default:** perInstance
 

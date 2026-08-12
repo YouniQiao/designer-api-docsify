@@ -11,7 +11,7 @@ UI font configuration of the system.
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## fallback
@@ -22,7 +22,7 @@ fallback: Array<UIFontFallbackInfo>
 
 Fallback fonts for the font family. If **fontSetName** is **""**, it indicates that the fonts can be used as fallback fonts for all font families.
 
-**Type:** Array&lt;UIFontFallbackInfo&gt;
+**Type:** Array&lt;[UIFontFallbackInfo](arkts-arkui-font-uifontfallbackinfo-i.md)&gt;
 
 **Since:** 11
 

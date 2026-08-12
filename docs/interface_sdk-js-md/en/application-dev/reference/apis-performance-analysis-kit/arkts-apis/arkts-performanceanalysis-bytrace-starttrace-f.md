@@ -21,7 +21,7 @@ Marks the start of a timeslice trace task.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.hiTraceMeter.startTrace
+**Substitutes:** [startTrace](ohos.hiTraceMeter.startTrace)
 
 <!--Device-bytrace-function startTrace(name: string, taskId: number, expectedTime?: number): void--><!--Device-bytrace-function startTrace(name: string, taskId: number, expectedTime?: number): void-End-->
 

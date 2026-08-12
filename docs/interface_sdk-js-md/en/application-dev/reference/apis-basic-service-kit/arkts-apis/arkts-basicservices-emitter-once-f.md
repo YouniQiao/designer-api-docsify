@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from 'kits/@kit.BasicServicesKit';
+import { emitter } from '@kit.BasicServicesKit';
 ```
 
 ## once
@@ -28,8 +28,8 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to subscribe to in one-shot manner. The [EventPriority](arkts-basicservices-emitter-eventpriority-e.md) parameter is not required and does not take effect. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| event | [InnerEvent](arkts-basicservices-emitter-innerevent-i.md) | Yes | Event to subscribe to in one-shot manner. The [EventPriority](arkts-basicservices-emitter-eventpriority-e.md#EventPriority) parameter is not required and does not take effect. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -89,7 +89,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 
@@ -127,7 +127,7 @@ Subscribes to an event in one-shot manner and unsubscribes from it after the eve
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | Yes | Callback to be invoked when the event is received. |
 
 ## Examples
 

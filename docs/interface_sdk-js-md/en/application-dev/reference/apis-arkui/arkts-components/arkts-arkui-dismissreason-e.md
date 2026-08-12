@@ -80,7 +80,7 @@ Swiping down.
 
 **NOTE：**
 
-This API is effective only in [sheet transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+This API is effective only in [sheet transition](common).
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ Swiping left or right on the screen. By default, swiping right dismisses the pop
 
 **NOTE：**
 
-This API is effective only in [sheet transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+This API is effective only in [sheet transition](common).
 
 **Since:** 20
 

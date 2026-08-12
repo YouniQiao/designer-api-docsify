@@ -164,7 +164,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines popup background blur Style
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -226,7 +226,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 The LinearGradient of popup's innerline.
 
-**类型：** [PopupBorderLinearGradient](../arkts-components/arkts-arkui-popupborderlineargradient-i.md)
+**类型：** [PopupBorderLinearGradient](arkts-arkui-common-popupborderlineargradient-i.md)
 
 **起始版本：** 23
 
@@ -266,7 +266,7 @@ colorMode?: AnchoredColorMode
 
 Define the popup theme color mode.
 
-**类型：** [AnchoredColorMode](../arkts-components/arkts-arkui-anchoredcolormode-e.md)
+**类型：** [AnchoredColorMode](arkts-arkui-common-anchoredcolormode-e.md)
 
 **默认值：** AnchoredColorMode.FOLLOW_TARGET
 
@@ -396,7 +396,7 @@ mask?: boolean | PopupMaskType
 
 The mask to block gesture events of popup.When mask is set false, gesture events are not blocked.When mask is set true, gesture events are blocked and mask color is transparent.
 
-**类型：** boolean \| PopupMaskType
+**类型：** boolean \| [PopupMaskType](arkts-arkui-common-popupmasktype-i.md)
 
 **起始版本：** 23
 
@@ -516,7 +516,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 Callback function when the popup interactive dismiss.Use boolean to respond all interactive dismiss event. Use Callback to customize which event should be responded.
 
-**类型：** boolean \| Callback&lt;DismissPopupAction&gt;
+**类型：** boolean \| [Callback](arkts-arkui-callback-t.md)&lt;[DismissPopupAction](arkts-arkui-common-dismisspopupaction-i.md)&gt;
 
 **起始版本：** 23
 
@@ -536,7 +536,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 The LinearGradient of popup's outline.
 
-**类型：** [PopupBorderLinearGradient](../arkts-components/arkts-arkui-popupborderlineargradient-i.md)
+**类型：** [PopupBorderLinearGradient](arkts-arkui-common-popupborderlineargradient-i.md)
 
 **起始版本：** 23
 
@@ -640,7 +640,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 The style of popup Shadow.
 
-**类型：** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-common-shadowstyle-e.md)
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -722,7 +722,7 @@ transition?: TransitionEffect
 
 Defines the transition effect of popup opening and closing
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 23
 

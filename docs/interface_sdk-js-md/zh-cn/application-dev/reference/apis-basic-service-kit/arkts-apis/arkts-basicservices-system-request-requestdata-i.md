@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.request:request.RequestData](arkts-basicservices-request-requestdata-i.md)
+**替代接口：** [RequestData](arkts-basicservices-request-requestdata-i.md#RequestData)
 
 <!--Device-unnamed-export interface RequestData--><!--Device-unnamed-export interface RequestData-End-->
 
@@ -28,7 +28,7 @@ name: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.FormItem.name
+**替代接口：** [name](ohos.request.agent.FormItem.name)
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
@@ -50,7 +50,7 @@ value: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.FormItem.value
+**替代接口：** [value](ohos.request.agent.FormItem.value)
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 

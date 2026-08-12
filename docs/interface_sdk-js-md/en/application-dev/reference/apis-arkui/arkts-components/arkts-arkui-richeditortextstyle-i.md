@@ -26,7 +26,7 @@ Default value of **style**: **TextDecorationStyle.SOLID**
 
 Default value of **thicknessScale**: **1.0**
 
-**Type:** [DecorationStyleInterface](../arkts-apis/arkts-arkui-decorationstyleinterface-i.md)
+**Type:** DecorationStyleInterface
 
 **Since:** 10
 
@@ -48,7 +48,7 @@ fontColor?: ResourceColor
 
 Font color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ fontFamily?: ResourceStr
 
 Font family.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 
@@ -114,7 +114,7 @@ fontSize?: Length | number
 
 Font size. The default unit is fp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| number
+**Type:** Length \| number
 
 **Since:** 10
 
@@ -136,7 +136,7 @@ fontStyle?: FontStyle
 
 Font style.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 10
 
@@ -254,7 +254,7 @@ Default value: Follow the font color.
 
 Sets the font color for abnormal values.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -276,7 +276,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 The stroke join style of the text.
 
-**Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
+**Type:** StrokeJoinStyle
 
 **Since:** 26.0.0
 
@@ -296,7 +296,7 @@ The stroke join style of the text.
 strokeWidth?: LengthMetrics | number
 ```
 
-Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md/arkts-arkui-graphics-lengthunit-e.md), the current setting does not take effect and is processed as 0.
+Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md#LengthUnit), the current setting does not take effect and is processed as 0.
 
 If the value is less than 0, the value is an entity word. If the value is greater than 0, the value is an outline word. If the value is equal to 0, there is no stroke effect.
 
@@ -306,7 +306,7 @@ Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics,
 
 Value range: (-∞, +∞)
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
+**Type:** LengthMetrics \| number
 
 **Since:** 23
 
@@ -338,7 +338,7 @@ radius: 0
 
 }
 
-**Type:** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
+**Type:** TextBackgroundStyle
 
 **Since:** 18
 
@@ -364,7 +364,7 @@ Text shadow. It supports input parameters in an array to implement multiple text
 
 Only the shadow blur radius, color, and offset can be set. Smart color picking is not supported.
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt;
+**Type:** ShadowOptions \| Array&lt;ShadowOptions&gt;
 
 **Since:** 11
 

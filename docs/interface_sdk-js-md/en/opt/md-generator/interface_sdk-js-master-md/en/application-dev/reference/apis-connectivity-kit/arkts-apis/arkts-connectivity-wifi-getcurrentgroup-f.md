@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getCurrentGroup
@@ -18,7 +18,7 @@ Obtains information about the current group.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getCurrentGroup
+**Substitutes:** [getCurrentGroup](ohos.wifiManager/wifiManager.getCurrentGroup)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -30,7 +30,7 @@ Obtains information about the current group.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WifiP2pGroupInfo&gt; |
+| Promise & lt;WifiP2pGroupInfo & gt; |
 
 
 ## getCurrentGroup
@@ -45,7 +45,7 @@ Obtains information about the current group.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getCurrentGroup
+**Substitutes:** [getCurrentGroup](ohos.wifiManager/wifiManager.getCurrentGroup)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 

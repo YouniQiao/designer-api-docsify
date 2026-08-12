@@ -13,7 +13,7 @@ Provides methods to accessing bluetooth OPP(OBEX OBJECT PUSH Profile)-related ca
 ## Modules to Import
 
 ```TypeScript
-import { opp } from 'kits/@kit.ConnectivityKit';
+import { opp } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

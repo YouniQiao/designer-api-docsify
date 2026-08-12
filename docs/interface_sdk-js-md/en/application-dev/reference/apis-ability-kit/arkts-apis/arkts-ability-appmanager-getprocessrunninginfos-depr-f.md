@@ -9,7 +9,7 @@ function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 Obtains information about the running processes. This API uses a promise to return the result.
 
 > This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 > instead.
 
 **Since:** 8
@@ -18,7 +18,7 @@ Obtains information about the running processes. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#getRunningProcessInformation
+**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager/appManager#getRunningProcessInformation)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -55,7 +55,7 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo
 Obtains information about the running processes. This API uses an asynchronous callback to return the result.
 
 > This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 > instead.
 
 **Since:** 8
@@ -64,7 +64,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#getRunningProcessInformation
+**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager/appManager#getRunningProcessInformation)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -76,7 +76,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)&gt;&gt; | Yes | Callback used to return the information about the running processes. |
 
 ## Examples
 

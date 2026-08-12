@@ -15,7 +15,7 @@ Before calling any APIs in ImageReceiver, you must create an ImageReceiver insta
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## getReceivingSurfaceId
@@ -82,7 +82,7 @@ Listens for image arrival events. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imageArrival' | Yes | Type of event to listen for. The value is fixed at **'imageArrival'**, which is triggered when an image is received. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked for the event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked for the event. |
 
 ## Examples
 
@@ -113,7 +113,7 @@ Reads the latest image from the ImageReceiver instance. This API uses a promise 
 > **NOTE：**
 > 
 > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
-> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#ImageSource) object returned by this API is no longer needed,
 > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
 > the release.
 
@@ -163,7 +163,7 @@ Reads the next image from the ImageReceiver instance. This API uses a promise to
 > **NOTE：**
 > 
 > This API can be called to receive data only after the [on](sendableImage.ImageReceiver.on) callback is
-> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md) object returned by this API is no longer needed,
+> triggered. When the [Image](arkts-image-sendableimage-imagesource-i.md#ImageSource) object returned by this API is no longer needed,
 > call [release](arkts-image-sendableimage-pixelmap-i.md#release) to release the object. New data can be received only after
 > the release.
 

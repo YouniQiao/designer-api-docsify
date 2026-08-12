@@ -6,8 +6,8 @@ This component is applicable in productivity applications, such as side navigati
 
 > **NOTE：**
 > 
-> - If the **TreeView** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and
-> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically
+> - If the **TreeView** component has [universal attributes](./@internal/component/ets/common) and
+> [universal events](./@internal/component/ets/common) configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
 > rather than the **TreeView** component itself. As a result, the configured universal attributes and universal
 > events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events
@@ -24,7 +24,7 @@ This component is applicable in productivity applications, such as side navigati
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from 'kits/@kit.ArkUI';
+import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
 ```
 
 ## treeController

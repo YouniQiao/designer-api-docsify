@@ -17,7 +17,7 @@ Defines the transition effect by setting parameters in the struct.
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)
 
 <!--Device-unnamed-declare interface TransitionOptions--><!--Device-unnamed-declare interface TransitionOptions-End-->
 
@@ -44,7 +44,7 @@ If the value specified is less than 0, the value **0** is used. If the value spe
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#opacity](arkts-arkui-transitioneffect-c.md#opacity)
+**Substitutes:** [opacity](arkts-arkui-transitioneffect-c.md#opacity)
 
 <!--Device-TransitionOptions-opacity?: number--><!--Device-TransitionOptions-opacity?: number-End-->
 
@@ -71,7 +71,7 @@ point of the page.
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#rotate](arkts-arkui-transitioneffect-c.md#rotate)
+**Substitutes:** [rotate](arkts-arkui-transitioneffect-c.md#rotate)
 
 <!--Device-TransitionOptions-rotate?: RotateOptions--><!--Device-TransitionOptions-rotate?: RotateOptions-End-->
 
@@ -103,7 +103,7 @@ If **centerX** or **centerY** is set to an invalid string (for example, **"illeg
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#scale](arkts-arkui-transitioneffect-c.md#scale)
+**Substitutes:** [scale](arkts-arkui-transitioneffect-c.md#scale)
 
 <!--Device-TransitionOptions-scale?: ScaleOptions--><!--Device-TransitionOptions-scale?: ScaleOptions-End-->
 
@@ -129,7 +129,7 @@ Translation of the component during transition, which is the value of the start 
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect#translate](arkts-arkui-transitioneffect-c.md#translate)
+**Substitutes:** [translate](arkts-arkui-transitioneffect-c.md#translate)
 
 <!--Device-TransitionOptions-translate?: TranslateOptions--><!--Device-TransitionOptions-translate?: TranslateOptions-End-->
 
@@ -155,7 +155,7 @@ If **type** is not specified, the default value **TransitionType.All** is used, 
 
 **Deprecated since:** 10
 
-**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
+**Substitutes:** [TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)
 
 <!--Device-TransitionOptions-type?: TransitionType--><!--Device-TransitionOptions-type?: TransitionType-End-->
 

@@ -11,7 +11,7 @@ The **contact** module provides contact management functions, such as adding, de
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## Summary

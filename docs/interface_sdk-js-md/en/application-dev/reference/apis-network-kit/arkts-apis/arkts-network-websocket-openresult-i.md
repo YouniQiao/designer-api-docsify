@@ -13,7 +13,7 @@ The result for connect status a WebSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## message

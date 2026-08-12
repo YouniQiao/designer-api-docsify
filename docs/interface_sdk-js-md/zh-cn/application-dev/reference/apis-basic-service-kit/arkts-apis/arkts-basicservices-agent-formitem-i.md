@@ -38,7 +38,7 @@ value: string | FileSpec | Array<FileSpec>
 
 表单参数值。
 
-**类型：** string \| FileSpec \| Array&lt;FileSpec&gt;
+**类型：** string \| [FileSpec](arkts-basicservices-agent-filespec-i.md) \| Array&lt;[FileSpec](arkts-basicservices-agent-filespec-i.md)&gt;
 
 **起始版本：** 10
 

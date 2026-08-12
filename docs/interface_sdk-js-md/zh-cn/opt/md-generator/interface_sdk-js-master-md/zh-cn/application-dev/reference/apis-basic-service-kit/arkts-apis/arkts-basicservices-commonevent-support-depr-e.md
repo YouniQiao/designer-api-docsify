@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support](arkts-basicservices-commoneventmanager-support-e.md)
+**替代接口：** [Support](arkts-basicservices-commoneventmanager-support-e.md#Support)
 
 <!--Device-commonEvent-export enum Support--><!--Device-commonEvent-export enum Support-End-->
 
@@ -26,7 +26,7 @@ COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#common_event_boot_completed)
+**替代接口：** [COMMON_EVENT_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BOOT_COMPLETED)
 
 <!--Device-Support-COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'--><!--Device-Support-COMMON_EVENT_BOOT_COMPLETED = 'usual.event.BOOT_COMPLETED'-End-->
 
@@ -44,7 +44,7 @@ COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_LOCKED_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#common_event_locked_boot_completed)
+**替代接口：** [COMMON_EVENT_LOCKED_BOOT_COMPLETED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_LOCKED_BOOT_COMPLETED)
 
 <!--Device-Support-COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'--><!--Device-Support-COMMON_EVENT_LOCKED_BOOT_COMPLETED = 'usual.event.LOCKED_BOOT_COMPLETED'-End-->
 
@@ -62,7 +62,7 @@ COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_SHUTDOWN](arkts-basicservices-commoneventmanager-support-e.md#common_event_shutdown)
+**替代接口：** [COMMON_EVENT_SHUTDOWN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SHUTDOWN)
 
 <!--Device-Support-COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'--><!--Device-Support-COMMON_EVENT_SHUTDOWN = 'usual.event.SHUTDOWN'-End-->
 
@@ -80,7 +80,7 @@ COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BATTERY_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_battery_changed)
+**替代接口：** [COMMON_EVENT_BATTERY_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BATTERY_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'--><!--Device-Support-COMMON_EVENT_BATTERY_CHANGED = 'usual.event.BATTERY_CHANGED'-End-->
 
@@ -98,7 +98,7 @@ COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BATTERY_LOW](arkts-basicservices-commoneventmanager-support-e.md#common_event_battery_low)
+**替代接口：** [COMMON_EVENT_BATTERY_LOW](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BATTERY_LOW)
 
 <!--Device-Support-COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'--><!--Device-Support-COMMON_EVENT_BATTERY_LOW = 'usual.event.BATTERY_LOW'-End-->
 
@@ -116,7 +116,7 @@ COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BATTERY_OKAY](arkts-basicservices-commoneventmanager-support-e.md#common_event_battery_okay)
+**替代接口：** [COMMON_EVENT_BATTERY_OKAY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BATTERY_OKAY)
 
 <!--Device-Support-COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'--><!--Device-Support-COMMON_EVENT_BATTERY_OKAY = 'usual.event.BATTERY_OKAY'-End-->
 
@@ -134,7 +134,7 @@ COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_POWER_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_power_connected)
+**替代接口：** [COMMON_EVENT_POWER_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_POWER_CONNECTED)
 
 <!--Device-Support-COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'--><!--Device-Support-COMMON_EVENT_POWER_CONNECTED = 'usual.event.POWER_CONNECTED'-End-->
 
@@ -152,7 +152,7 @@ COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_POWER_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_power_disconnected)
+**替代接口：** [COMMON_EVENT_POWER_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_POWER_DISCONNECTED)
 
 <!--Device-Support-COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_POWER_DISCONNECTED = 'usual.event.POWER_DISCONNECTED'-End-->
 
@@ -170,7 +170,7 @@ COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_SCREEN_OFF](arkts-basicservices-commoneventmanager-support-e.md#common_event_screen_off)
+**替代接口：** [COMMON_EVENT_SCREEN_OFF](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SCREEN_OFF)
 
 <!--Device-Support-COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'--><!--Device-Support-COMMON_EVENT_SCREEN_OFF = 'usual.event.SCREEN_OFF'-End-->
 
@@ -188,7 +188,7 @@ COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_SCREEN_ON](arkts-basicservices-commoneventmanager-support-e.md#common_event_screen_on)
+**替代接口：** [COMMON_EVENT_SCREEN_ON](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SCREEN_ON)
 
 <!--Device-Support-COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'--><!--Device-Support-COMMON_EVENT_SCREEN_ON = 'usual.event.SCREEN_ON'-End-->
 
@@ -206,7 +206,7 @@ COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_THERMAL_LEVEL_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_thermal_level_changed)
+**替代接口：** [COMMON_EVENT_THERMAL_LEVEL_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_THERMAL_LEVEL_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'--><!--Device-Support-COMMON_EVENT_THERMAL_LEVEL_CHANGED = 'usual.event.THERMAL_LEVEL_CHANGED'-End-->
 
@@ -224,7 +224,7 @@ COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_PRESENT](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_present)
+**替代接口：** [COMMON_EVENT_USER_PRESENT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_PRESENT)
 
 <!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'--><!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'-End-->
 
@@ -242,7 +242,7 @@ COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_TIME_TICK](arkts-basicservices-commoneventmanager-support-e.md#common_event_time_tick)
+**替代接口：** [COMMON_EVENT_TIME_TICK](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_TIME_TICK)
 
 <!--Device-Support-COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'--><!--Device-Support-COMMON_EVENT_TIME_TICK = 'usual.event.TIME_TICK'-End-->
 
@@ -260,7 +260,7 @@ COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_TIME_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_time_changed)
+**替代接口：** [COMMON_EVENT_TIME_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_TIME_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'--><!--Device-Support-COMMON_EVENT_TIME_CHANGED = 'usual.event.TIME_CHANGED'-End-->
 
@@ -278,7 +278,7 @@ COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_date_changed)
+**替代接口：** [COMMON_EVENT_DATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'--><!--Device-Support-COMMON_EVENT_DATE_CHANGED = 'usual.event.DATE_CHANGED'-End-->
 
@@ -296,7 +296,7 @@ COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_TIMEZONE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_timezone_changed)
+**替代接口：** [COMMON_EVENT_TIMEZONE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_TIMEZONE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'--><!--Device-Support-COMMON_EVENT_TIMEZONE_CHANGED = 'usual.event.TIMEZONE_CHANGED'-End-->
 
@@ -314,7 +314,7 @@ COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_CLOSE_SYSTEM_DIALOGS](arkts-basicservices-commoneventmanager-support-e.md#common_event_close_system_dialogs)
+**替代接口：** [COMMON_EVENT_CLOSE_SYSTEM_DIALOGS](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_CLOSE_SYSTEM_DIALOGS)
 
 <!--Device-Support-COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'--><!--Device-Support-COMMON_EVENT_CLOSE_SYSTEM_DIALOGS = 'usual.event.CLOSE_SYSTEM_DIALOGS'-End-->
 
@@ -332,7 +332,7 @@ COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_ADDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_added)
+**替代接口：** [COMMON_EVENT_PACKAGE_ADDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_ADDED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'--><!--Device-Support-COMMON_EVENT_PACKAGE_ADDED = 'usual.event.PACKAGE_ADDED'-End-->
 
@@ -350,7 +350,7 @@ COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_replaced)
+**替代接口：** [COMMON_EVENT_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_REPLACED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'--><!--Device-Support-COMMON_EVENT_PACKAGE_REPLACED = 'usual.event.PACKAGE_REPLACED'-End-->
 
@@ -368,7 +368,7 @@ COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_MY_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#common_event_my_package_replaced)
+**替代接口：** [COMMON_EVENT_MY_PACKAGE_REPLACED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MY_PACKAGE_REPLACED)
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_REPLACED = 'usual.event.MY_PACKAGE_REPLACED'-End-->
 
@@ -386,7 +386,7 @@ COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_removed)
+**替代接口：** [COMMON_EVENT_PACKAGE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'--><!--Device-Support-COMMON_EVENT_PACKAGE_REMOVED = 'usual.event.PACKAGE_REMOVED'-End-->
 
@@ -404,7 +404,7 @@ COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BUNDLE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bundle_removed)
+**替代接口：** [COMMON_EVENT_BUNDLE_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BUNDLE_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'--><!--Device-Support-COMMON_EVENT_BUNDLE_REMOVED = 'usual.event.BUNDLE_REMOVED'-End-->
 
@@ -422,7 +422,7 @@ COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_FULLY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_fully_removed)
+**替代接口：** [COMMON_EVENT_PACKAGE_FULLY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_FULLY_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'--><!--Device-Support-COMMON_EVENT_PACKAGE_FULLY_REMOVED = 'usual.event.PACKAGE_FULLY_REMOVED'-End-->
 
@@ -440,7 +440,7 @@ COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_changed)
+**替代接口：** [COMMON_EVENT_PACKAGE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'--><!--Device-Support-COMMON_EVENT_PACKAGE_CHANGED = 'usual.event.PACKAGE_CHANGED'-End-->
 
@@ -458,7 +458,7 @@ COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_RESTARTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_restarted)
+**替代接口：** [COMMON_EVENT_PACKAGE_RESTARTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_RESTARTED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'--><!--Device-Support-COMMON_EVENT_PACKAGE_RESTARTED = 'usual.event.PACKAGE_RESTARTED'-End-->
 
@@ -476,7 +476,7 @@ COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_DATA_CLEARED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_data_cleared)
+**替代接口：** [COMMON_EVENT_PACKAGE_DATA_CLEARED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_DATA_CLEARED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'--><!--Device-Support-COMMON_EVENT_PACKAGE_DATA_CLEARED = 'usual.event.PACKAGE_DATA_CLEARED'-End-->
 
@@ -494,7 +494,7 @@ COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGES_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_packages_suspended)
+**替代接口：** [COMMON_EVENT_PACKAGES_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGES_SUSPENDED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'--><!--Device-Support-COMMON_EVENT_PACKAGES_SUSPENDED = 'usual.event.PACKAGES_SUSPENDED'-End-->
 
@@ -512,7 +512,7 @@ COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGES_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_packages_unsuspended)
+**替代接口：** [COMMON_EVENT_PACKAGES_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGES_UNSUSPENDED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'--><!--Device-Support-COMMON_EVENT_PACKAGES_UNSUSPENDED = 'usual.event.PACKAGES_UNSUSPENDED'-End-->
 
@@ -530,7 +530,7 @@ COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_MY_PACKAGE_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_my_package_suspended)
+**替代接口：** [COMMON_EVENT_MY_PACKAGE_SUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MY_PACKAGE_SUSPENDED)
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_SUSPENDED = 'usual.event.MY_PACKAGE_SUSPENDED'-End-->
 
@@ -548,7 +548,7 @@ COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_MY_PACKAGE_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_my_package_unsuspended)
+**替代接口：** [COMMON_EVENT_MY_PACKAGE_UNSUSPENDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MY_PACKAGE_UNSUSPENDED)
 
 <!--Device-Support-COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'--><!--Device-Support-COMMON_EVENT_MY_PACKAGE_UNSUSPENDED = 'usual.event.MY_PACKAGE_UNSUSPENDED'-End-->
 
@@ -566,7 +566,7 @@ COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_UID_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_uid_removed)
+**替代接口：** [COMMON_EVENT_UID_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_UID_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'--><!--Device-Support-COMMON_EVENT_UID_REMOVED = 'usual.event.UID_REMOVED'-End-->
 
@@ -584,7 +584,7 @@ COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_FIRST_LAUNCH](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_first_launch)
+**替代接口：** [COMMON_EVENT_PACKAGE_FIRST_LAUNCH](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_FIRST_LAUNCH)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'--><!--Device-Support-COMMON_EVENT_PACKAGE_FIRST_LAUNCH = 'usual.event.PACKAGE_FIRST_LAUNCH'-End-->
 
@@ -602,7 +602,7 @@ COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATIO
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_needs_verification)
+**替代接口：** [COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'--><!--Device-Support-COMMON_EVENT_PACKAGE_NEEDS_VERIFICATION = 'usual.event.PACKAGE_NEEDS_VERIFICATION'-End-->
 
@@ -620,7 +620,7 @@ COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_PACKAGE_VERIFIED](arkts-basicservices-commoneventmanager-support-e.md#common_event_package_verified)
+**替代接口：** [COMMON_EVENT_PACKAGE_VERIFIED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_PACKAGE_VERIFIED)
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'--><!--Device-Support-COMMON_EVENT_PACKAGE_VERIFIED = 'usual.event.PACKAGE_VERIFIED'-End-->
 
@@ -638,7 +638,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATION
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_external_applications_available)
+**替代接口：** [COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE)
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_AVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_AVAILABLE'-End-->
 
@@ -656,7 +656,7 @@ COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATI
 
 **废弃版本：** 9
 
-**替代接口：** ohos.commonEventManage/commonEventManager.Support#COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE
+**替代接口：** [COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE](ohos.commonEventManage/commonEventManager.Support#COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE)
 
 <!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'--><!--Device-Support-COMMON_EVENT_EXTERNAL_APPLICATIONS_UNAVAILABLE = 'usual.event.EXTERNAL_APPLICATIONS_UNAVAILABLE'-End-->
 
@@ -674,7 +674,7 @@ COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_CONFIGURATION_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_configuration_changed)
+**替代接口：** [COMMON_EVENT_CONFIGURATION_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_CONFIGURATION_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'--><!--Device-Support-COMMON_EVENT_CONFIGURATION_CHANGED = 'usual.event.CONFIGURATION_CHANGED'-End-->
 
@@ -692,7 +692,7 @@ COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_LOCALE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_locale_changed)
+**替代接口：** [COMMON_EVENT_LOCALE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_LOCALE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'--><!--Device-Support-COMMON_EVENT_LOCALE_CHANGED = 'usual.event.LOCALE_CHANGED'-End-->
 
@@ -710,7 +710,7 @@ COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_MANAGE_PACKAGE_STORAGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_manage_package_storage)
+**替代接口：** [COMMON_EVENT_MANAGE_PACKAGE_STORAGE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_MANAGE_PACKAGE_STORAGE)
 
 <!--Device-Support-COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'--><!--Device-Support-COMMON_EVENT_MANAGE_PACKAGE_STORAGE = 'usual.event.MANAGE_PACKAGE_STORAGE'-End-->
 
@@ -728,7 +728,7 @@ COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DRIVE_MODE](arkts-basicservices-commoneventmanager-support-e.md#common_event_drive_mode)
+**替代接口：** [COMMON_EVENT_DRIVE_MODE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DRIVE_MODE)
 
 <!--Device-Support-COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'--><!--Device-Support-COMMON_EVENT_DRIVE_MODE = 'common.event.DRIVE_MODE'-End-->
 
@@ -746,7 +746,7 @@ COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_HOME_MODE](arkts-basicservices-commoneventmanager-support-e.md#common_event_home_mode)
+**替代接口：** [COMMON_EVENT_HOME_MODE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_HOME_MODE)
 
 <!--Device-Support-COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'--><!--Device-Support-COMMON_EVENT_HOME_MODE = 'common.event.HOME_MODE'-End-->
 
@@ -764,7 +764,7 @@ COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_OFFICE_MODE](arkts-basicservices-commoneventmanager-support-e.md#common_event_office_mode)
+**替代接口：** [COMMON_EVENT_OFFICE_MODE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_OFFICE_MODE)
 
 <!--Device-Support-COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'--><!--Device-Support-COMMON_EVENT_OFFICE_MODE = 'common.event.OFFICE_MODE'-End-->
 
@@ -782,7 +782,7 @@ COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_STARTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_started)
+**替代接口：** [COMMON_EVENT_USER_STARTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STARTED)
 
 <!--Device-Support-COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'--><!--Device-Support-COMMON_EVENT_USER_STARTED = 'usual.event.USER_STARTED'-End-->
 
@@ -800,7 +800,7 @@ COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_BACKGROUND](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_background)
+**替代接口：** [COMMON_EVENT_USER_BACKGROUND](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_BACKGROUND)
 
 <!--Device-Support-COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'--><!--Device-Support-COMMON_EVENT_USER_BACKGROUND = 'usual.event.USER_BACKGROUND'-End-->
 
@@ -818,7 +818,7 @@ COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_FOREGROUND](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_foreground)
+**替代接口：** [COMMON_EVENT_USER_FOREGROUND](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_FOREGROUND)
 
 <!--Device-Support-COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'--><!--Device-Support-COMMON_EVENT_USER_FOREGROUND = 'usual.event.USER_FOREGROUND'-End-->
 
@@ -838,7 +838,7 @@ COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_SWITCHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_switched)
+**替代接口：** [COMMON_EVENT_USER_SWITCHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_SWITCHED)
 
 <!--Device-Support-COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'--><!--Device-Support-COMMON_EVENT_USER_SWITCHED = 'usual.event.USER_SWITCHED'-End-->
 
@@ -858,7 +858,7 @@ COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_STARTING](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_starting)
+**替代接口：** [COMMON_EVENT_USER_STARTING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STARTING)
 
 <!--Device-Support-COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'--><!--Device-Support-COMMON_EVENT_USER_STARTING = 'usual.event.USER_STARTING'-End-->
 
@@ -876,7 +876,7 @@ COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_unlocked)
+**替代接口：** [COMMON_EVENT_USER_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_UNLOCKED)
 
 <!--Device-Support-COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'--><!--Device-Support-COMMON_EVENT_USER_UNLOCKED = 'usual.event.USER_UNLOCKED'-End-->
 
@@ -896,7 +896,7 @@ COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_STOPPING](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_stopping)
+**替代接口：** [COMMON_EVENT_USER_STOPPING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STOPPING)
 
 <!--Device-Support-COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'--><!--Device-Support-COMMON_EVENT_USER_STOPPING = 'usual.event.USER_STOPPING'-End-->
 
@@ -914,7 +914,7 @@ COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_STOPPED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_stopped)
+**替代接口：** [COMMON_EVENT_USER_STOPPED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_STOPPED)
 
 <!--Device-Support-COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'--><!--Device-Support-COMMON_EVENT_USER_STOPPED = 'usual.event.USER_STOPPED'-End-->
 
@@ -932,7 +932,7 @@ COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN](arkts-basicservices-commoneventmanager-support-e.md#common_event_distributed_account_login)
+**替代接口：** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN)
 
 <!--Device-Support-COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'--><!--Device-Support-COMMON_EVENT_HWID_LOGIN = 'common.event.HWID_LOGIN'-End-->
 
@@ -950,7 +950,7 @@ COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT](arkts-basicservices-commoneventmanager-support-e.md#common_event_distributed_account_logout)
+**替代接口：** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT)
 
 <!--Device-Support-COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'--><!--Device-Support-COMMON_EVENT_HWID_LOGOUT = 'common.event.HWID_LOGOUT'-End-->
 
@@ -968,7 +968,7 @@ COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID](arkts-basicservices-commoneventmanager-support-e.md#common_event_distributed_account_token_invalid)
+**替代接口：** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID)
 
 <!--Device-Support-COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'--><!--Device-Support-COMMON_EVENT_HWID_TOKEN_INVALID = 'common.event.HWID_TOKEN_INVALID'-End-->
 
@@ -986,7 +986,7 @@ COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF](arkts-basicservices-commoneventmanager-support-e.md#common_event_distributed_account_logoff)
+**替代接口：** [COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF)
 
 <!--Device-Support-COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'--><!--Device-Support-COMMON_EVENT_HWID_LOGOFF = 'common.event.HWID_LOGOFF'-End-->
 
@@ -1004,7 +1004,7 @@ COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_POWER_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_power_state)
+**替代接口：** [COMMON_EVENT_WIFI_POWER_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_POWER_STATE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_POWER_STATE = 'usual.event.wifi.POWER_STATE'-End-->
 
@@ -1024,7 +1024,7 @@ COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_SCAN_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_scan_finished)
+**替代接口：** [COMMON_EVENT_WIFI_SCAN_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_SCAN_FINISHED)
 
 <!--Device-Support-COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'--><!--Device-Support-COMMON_EVENT_WIFI_SCAN_FINISHED = 'usual.event.wifi.SCAN_FINISHED'-End-->
 
@@ -1044,7 +1044,7 @@ COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_RSSI_VALUE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_rssi_value)
+**替代接口：** [COMMON_EVENT_WIFI_RSSI_VALUE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_RSSI_VALUE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'--><!--Device-Support-COMMON_EVENT_WIFI_RSSI_VALUE = 'usual.event.wifi.RSSI_VALUE'-End-->
 
@@ -1062,7 +1062,7 @@ COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_conn_state)
+**替代接口：** [COMMON_EVENT_WIFI_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_CONN_STATE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_CONN_STATE = 'usual.event.wifi.CONN_STATE'-End-->
 
@@ -1080,7 +1080,7 @@ COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_HOTSPOT_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_hotspot_state)
+**替代接口：** [COMMON_EVENT_WIFI_HOTSPOT_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_HOTSPOT_STATE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'--><!--Device-Support-COMMON_EVENT_WIFI_HOTSPOT_STATE = 'usual.event.wifi.HOTSPOT_STATE'-End-->
 
@@ -1100,7 +1100,7 @@ COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_AP_STA_JOIN](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_ap_sta_join)
+**替代接口：** [COMMON_EVENT_WIFI_AP_STA_JOIN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_AP_STA_JOIN)
 
 <!--Device-Support-COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'--><!--Device-Support-COMMON_EVENT_WIFI_AP_STA_JOIN = 'usual.event.wifi.WIFI_HS_STA_JOIN'-End-->
 
@@ -1120,7 +1120,7 @@ COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_AP_STA_LEAVE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_ap_sta_leave)
+**替代接口：** [COMMON_EVENT_WIFI_AP_STA_LEAVE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_AP_STA_LEAVE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'--><!--Device-Support-COMMON_EVENT_WIFI_AP_STA_LEAVE = 'usual.event.wifi.WIFI_HS_STA_LEAVE'-End-->
 
@@ -1138,7 +1138,7 @@ COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_mplink_state_change)
+**替代接口：** [COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_MPLINK_STATE_CHANGE = 'usual.event.wifi.mplink.STATE_CHANGE'-End-->
 
@@ -1158,7 +1158,7 @@ COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_P2P_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_conn_state)
+**替代接口：** [COMMON_EVENT_WIFI_P2P_CONN_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_CONN_STATE)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_CONN_STATE = 'usual.event.wifi.p2p.CONN_STATE_CHANGE'-End-->
 
@@ -1178,7 +1178,7 @@ COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_P2P_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_state_changed)
+**替代接口：** [COMMON_EVENT_WIFI_P2P_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_STATE_CHANGED = 'usual.event.wifi.p2p.STATE_CHANGE'-End-->
 
@@ -1198,7 +1198,7 @@ COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_peers_state_changed)
+**替代接口：** [COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_STATE_CHANGED = 'usual.event.wifi.p2p.DEVICES_CHANGE'-End-->
 
@@ -1218,7 +1218,7 @@ COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_peers_discovery_state_changed)
+**替代接口：** [COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_PEERS_DISCOVERY_STATE_CHANGED = 'usual.event.wifi.p2p.PEER_DISCOVERY_STATE_CHANGE'-End-->
 
@@ -1238,7 +1238,7 @@ COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRE
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_current_device_state_changed)
+**替代接口：** [COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_CURRENT_DEVICE_STATE_CHANGED = 'usual.event.wifi.p2p.CURRENT_DEVICE_CHANGE'-End-->
 
@@ -1258,7 +1258,7 @@ COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CH
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_wifi_p2p_group_state_changed)
+**替代接口：** [COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_WIFI_P2P_GROUP_STATE_CHANGED = 'usual.event.wifi.p2p.GROUP_STATE_CHANGED'-End-->
 
@@ -1278,7 +1278,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetoot
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfree_ag_connect_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'-End-->
 
@@ -1298,7 +1298,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetoo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfree_ag_current_device_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.handsfree.ag.CURRENT_DEVICE_UPDATE'-End-->
 
@@ -1318,7 +1318,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfree_ag_audio_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfree.ag.AUDIO_STATE_UPDATE'-End-->
 
@@ -1338,7 +1338,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_connect_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'-End-->
 
@@ -1358,7 +1358,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_current_device_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CURRENT_DEVICE_UPDATE = 'usual.event.bluetooth.a2dpsource.CURRENT_DEVICE_UPDATE'-End-->
 
@@ -1378,7 +1378,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_playing_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.PLAYING_STATE_UPDATE'-End-->
 
@@ -1398,7 +1398,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.blue
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_avrcp_connect_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'-End-->
 
@@ -1418,7 +1418,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_codec_value_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE = 'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'-End-->
 
@@ -1438,7 +1438,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotede
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_discovered)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotedevice.DISCOVERED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_DISCOVERED = 'usual.event.bluetooth.remotedevice.DISCOVERED'-End-->
 
@@ -1458,7 +1458,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_class_value_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CLASS_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.CLASS_VALUE_UPDATE'-End-->
 
@@ -1478,7 +1478,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remot
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_acl_connected)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remotedevice.ACL_CONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED = 'usual.event.bluetooth.remotedevice.ACL_CONNECTED'-End-->
 
@@ -1498,7 +1498,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.re
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_acl_disconnected)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED = 'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'-End-->
 
@@ -1518,7 +1518,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remoted
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_name_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remotedevice.NAME_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_NAME_UPDATE = 'usual.event.bluetooth.remotedevice.NAME_UPDATE'-End-->
 
@@ -1538,7 +1538,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotede
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_pair_state)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotedevice.PAIR_STATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE = 'usual.event.bluetooth.remotedevice.PAIR_STATE'-End-->
 
@@ -1558,7 +1558,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetoot
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_battery_value_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_BATTERY_VALUE_UPDATE = 'usual.event.bluetooth.remotedevice.BATTERY_VALUE_UPDATE'-End-->
 
@@ -1576,7 +1576,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotede
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_sdp_result)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotedevice.SDP_RESULT'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_SDP_RESULT = 'usual.event.bluetooth.remotedevice.SDP_RESULT'-End-->
 
@@ -1596,7 +1596,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotede
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_uuid_value)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotedevice.UUID_VALUE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_UUID_VALUE = 'usual.event.bluetooth.remotedevice.UUID_VALUE'-End-->
 
@@ -1616,7 +1616,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remoted
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_pairing_req)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remotedevice.PAIRING_REQ'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_REQ = 'usual.event.bluetooth.remotedevice.PAIRING_REQ'-End-->
 
@@ -1634,7 +1634,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_pairing_cancel)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remotedevice.PAIRING_CANCEL'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIRING_CANCEL = 'usual.event.bluetooth.remotedevice.PAIRING_CANCEL'-End-->
 
@@ -1652,7 +1652,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remoted
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_connect_req)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remotedevice.CONNECT_REQ'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REQ = 'usual.event.bluetooth.remotedevice.CONNECT_REQ'-End-->
 
@@ -1670,7 +1670,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remot
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_connect_reply)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remotedevice.CONNECT_REPLY'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_REPLY = 'usual.event.bluetooth.remotedevice.CONNECT_REPLY'-End-->
 
@@ -1688,7 +1688,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_connect_cancel)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_CONNECT_CANCEL = 'usual.event.bluetooth.remotedevice.CONNECT_CANCEL'-End-->
 
@@ -1706,7 +1706,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetoo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfreeunit_connect_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.CONNECT_STATE_UPDATE'-End-->
 
@@ -1724,7 +1724,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfreeunit_audio_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AUDIO_STATE_UPDATE'-End-->
 
@@ -1742,7 +1742,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.ha
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfreeunit_ag_common_event)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_COMMON_EVENT = 'usual.event.bluetooth.handsfreeunit.AG_COMMON_EVENT'-End-->
 
@@ -1760,7 +1760,7 @@ COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetoo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfreeunit_ag_call_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREEUNIT_AG_CALL_STATE_UPDATE = 'usual.event.bluetooth.handsfreeunit.AG_CALL_STATE_UPDATE'-End-->
 
@@ -1780,7 +1780,7 @@ COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPD
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_STATE_UPDATE = 'usual.event.bluetooth.host.STATE_UPDATE'-End-->
 
@@ -1798,7 +1798,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_D
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_req_discoverable)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_DISCOVERABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISCOVERABLE = 'usual.event.bluetooth.host.REQ_DISCOVERABLE'-End-->
 
@@ -1818,7 +1818,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_req_enable)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_ENABLE = 'usual.event.bluetooth.host.REQ_ENABLE'-End-->
 
@@ -1838,7 +1838,7 @@ COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABL
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_req_disable)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABLE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_REQ_DISABLE = 'usual.event.bluetooth.host.REQ_DISABLE'-End-->
 
@@ -1858,7 +1858,7 @@ COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_scan_mode_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_MODE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_SCAN_MODE_UPDATE = 'usual.event.bluetooth.host.SCAN_MODE_UPDATE'-End-->
 
@@ -1878,7 +1878,7 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISC
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_discovery_started)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISCOVERY_STARTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_STARTED = 'usual.event.bluetooth.host.DISCOVERY_STARTED'-End-->
 
@@ -1898,7 +1898,7 @@ COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DIS
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_discovery_finished)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DISCOVERY_FINISHED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_DISCOVERY_FINISHED = 'usual.event.bluetooth.host.DISCOVERY_FINISHED'-End-->
 
@@ -1918,7 +1918,7 @@ COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDAT
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_host_name_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HOST_NAME_UPDATE = 'usual.event.bluetooth.host.NAME_UPDATE'-End-->
 
@@ -1938,7 +1938,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsink_connect_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_CONNECT_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.CONNECT_STATE_UPDATE'-End-->
 
@@ -1958,7 +1958,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsink_playing_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_PLAYING_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.PLAYING_STATE_UPDATE'-End-->
 
@@ -1978,7 +1978,7 @@ COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dp
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsink_audio_state_update)
+**替代接口：** [COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSINK_AUDIO_STATE_UPDATE = 'usual.event.bluetooth.a2dpsink.AUDIO_STATE_UPDATE'-End-->
 
@@ -1996,7 +1996,7 @@ COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_nfc_action_adapter_state_changed)
+**替代接口：** [COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_ADAPTER_STATE_CHANGED = 'usual.event.nfc.action.ADAPTER_STATE_CHANGED'-End-->
 
@@ -2016,7 +2016,7 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_nfc_action_rf_field_on_detected)
+**替代接口：** [COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED)
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_ON_DETECTED = 'usual.event.nfc.action.RF_FIELD_ON_DETECTED'-End-->
 
@@ -2036,7 +2036,7 @@ COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_nfc_action_rf_field_off_detected)
+**替代接口：** [COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED)
 
 <!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'--><!--Device-Support-COMMON_EVENT_NFC_ACTION_RF_FIELD_OFF_DETECTED = 'usual.event.nfc.action.RF_FIELD_OFF_DETECTED'-End-->
 
@@ -2054,7 +2054,7 @@ COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISCHARGING](arkts-basicservices-commoneventmanager-support-e.md#common_event_discharging)
+**替代接口：** [COMMON_EVENT_DISCHARGING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISCHARGING)
 
 <!--Device-Support-COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'--><!--Device-Support-COMMON_EVENT_DISCHARGING = 'usual.event.DISCHARGING'-End-->
 
@@ -2072,7 +2072,7 @@ COMMON_EVENT_CHARGING = 'usual.event.CHARGING'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_CHARGING](arkts-basicservices-commoneventmanager-support-e.md#common_event_charging)
+**替代接口：** [COMMON_EVENT_CHARGING](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_CHARGING)
 
 <!--Device-Support-COMMON_EVENT_CHARGING = 'usual.event.CHARGING'--><!--Device-Support-COMMON_EVENT_CHARGING = 'usual.event.CHARGING'-End-->
 
@@ -2090,7 +2090,7 @@ COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_device_idle_mode_changed)
+**替代接口：** [COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_DEVICE_IDLE_MODE_CHANGED = 'usual.event.DEVICE_IDLE_MODE_CHANGED'-End-->
 
@@ -2108,7 +2108,7 @@ COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_POWER_SAVE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_power_save_mode_changed)
+**替代接口：** [COMMON_EVENT_POWER_SAVE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_POWER_SAVE_MODE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'--><!--Device-Support-COMMON_EVENT_POWER_SAVE_MODE_CHANGED = 'usual.event.POWER_SAVE_MODE_CHANGED'-End-->
 
@@ -2128,7 +2128,7 @@ COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_ADDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_added)
+**替代接口：** [COMMON_EVENT_USER_ADDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_ADDED)
 
 <!--Device-Support-COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'--><!--Device-Support-COMMON_EVENT_USER_ADDED = 'usual.event.USER_ADDED'-End-->
 
@@ -2148,7 +2148,7 @@ COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USER_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_user_removed)
+**替代接口：** [COMMON_EVENT_USER_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USER_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'--><!--Device-Support-COMMON_EVENT_USER_REMOVED = 'usual.event.USER_REMOVED'-End-->
 
@@ -2168,7 +2168,7 @@ COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_ABILITY_ADDED](arkts-basicservices-commoneventmanager-support-e.md#common_event_ability_added)
+**替代接口：** [COMMON_EVENT_ABILITY_ADDED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ABILITY_ADDED)
 
 <!--Device-Support-COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'--><!--Device-Support-COMMON_EVENT_ABILITY_ADDED = 'common.event.ABILITY_ADDED'-End-->
 
@@ -2188,7 +2188,7 @@ COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_ABILITY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_ability_removed)
+**替代接口：** [COMMON_EVENT_ABILITY_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ABILITY_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'--><!--Device-Support-COMMON_EVENT_ABILITY_REMOVED = 'common.event.ABILITY_REMOVED'-End-->
 
@@ -2208,7 +2208,7 @@ COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_ABILITY_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#common_event_ability_updated)
+**替代接口：** [COMMON_EVENT_ABILITY_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ABILITY_UPDATED)
 
 <!--Device-Support-COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'--><!--Device-Support-COMMON_EVENT_ABILITY_UPDATED = 'common.event.ABILITY_UPDATED'-End-->
 
@@ -2226,7 +2226,7 @@ COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHAN
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_LOCATION_MODE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_location_mode_state_changed)
+**替代接口：** [COMMON_EVENT_LOCATION_MODE_STATE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_LOCATION_MODE_STATE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_LOCATION_MODE_STATE_CHANGED = 'usual.event.location.MODE_STATE_CHANGED'-End-->
 
@@ -2244,7 +2244,7 @@ COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_SLEEP](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_sleep)
+**替代接口：** [COMMON_EVENT_IVI_SLEEP](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_SLEEP)
 
 <!--Device-Support-COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'--><!--Device-Support-COMMON_EVENT_IVI_SLEEP = 'common.event.IVI_SLEEP'-End-->
 
@@ -2262,7 +2262,7 @@ COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_PAUSE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_pause)
+**替代接口：** [COMMON_EVENT_IVI_PAUSE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_PAUSE)
 
 <!--Device-Support-COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'--><!--Device-Support-COMMON_EVENT_IVI_PAUSE = 'common.event.IVI_PAUSE'-End-->
 
@@ -2280,7 +2280,7 @@ COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_STANDBY](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_standby)
+**替代接口：** [COMMON_EVENT_IVI_STANDBY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_STANDBY)
 
 <!--Device-Support-COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'--><!--Device-Support-COMMON_EVENT_IVI_STANDBY = 'common.event.IVI_STANDBY'-End-->
 
@@ -2298,7 +2298,7 @@ COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_LASTMODE_SAVE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_lastmode_save)
+**替代接口：** [COMMON_EVENT_IVI_LASTMODE_SAVE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_LASTMODE_SAVE)
 
 <!--Device-Support-COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'--><!--Device-Support-COMMON_EVENT_IVI_LASTMODE_SAVE = 'common.event.IVI_LASTMODE_SAVE'-End-->
 
@@ -2316,7 +2316,7 @@ COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_VOLTAGE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_voltage_abnormal)
+**替代接口：** [COMMON_EVENT_IVI_VOLTAGE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_VOLTAGE_ABNORMAL)
 
 <!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'--><!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_ABNORMAL = 'common.event.IVI_VOLTAGE_ABNORMAL'-End-->
 
@@ -2334,7 +2334,7 @@ COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_HIGH_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_high_temperature)
+**替代接口：** [COMMON_EVENT_IVI_HIGH_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_HIGH_TEMPERATURE)
 
 <!--Device-Support-COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'--><!--Device-Support-COMMON_EVENT_IVI_HIGH_TEMPERATURE = 'common.event.IVI_HIGH_TEMPERATURE'-End-->
 
@@ -2352,7 +2352,7 @@ COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_EXTREME_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_extreme_temperature)
+**替代接口：** [COMMON_EVENT_IVI_EXTREME_TEMPERATURE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_EXTREME_TEMPERATURE)
 
 <!--Device-Support-COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'--><!--Device-Support-COMMON_EVENT_IVI_EXTREME_TEMPERATURE = 'common.event.IVI_EXTREME_TEMPERATURE'-End-->
 
@@ -2370,7 +2370,7 @@ COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_temperature_abnormal)
+**替代接口：** [COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL)
 
 <!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'--><!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_ABNORMAL = 'common.event.IVI_TEMPERATURE_ABNORMAL'-End-->
 
@@ -2388,7 +2388,7 @@ COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_VOLTAGE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_voltage_recovery)
+**替代接口：** [COMMON_EVENT_IVI_VOLTAGE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_VOLTAGE_RECOVERY)
 
 <!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'--><!--Device-Support-COMMON_EVENT_IVI_VOLTAGE_RECOVERY = 'common.event.IVI_VOLTAGE_RECOVERY'-End-->
 
@@ -2406,7 +2406,7 @@ COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_TEMPERATURE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_temperature_recovery)
+**替代接口：** [COMMON_EVENT_IVI_TEMPERATURE_RECOVERY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_TEMPERATURE_RECOVERY)
 
 <!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'--><!--Device-Support-COMMON_EVENT_IVI_TEMPERATURE_RECOVERY = 'common.event.IVI_TEMPERATURE_RECOVERY'-End-->
 
@@ -2424,7 +2424,7 @@ COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_IVI_ACTIVE](arkts-basicservices-commoneventmanager-support-e.md#common_event_ivi_active)
+**替代接口：** [COMMON_EVENT_IVI_ACTIVE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_IVI_ACTIVE)
 
 <!--Device-Support-COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'--><!--Device-Support-COMMON_EVENT_IVI_ACTIVE = 'common.event.IVI_ACTIVE'-End-->
 
@@ -2442,7 +2442,7 @@ COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_A
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USB_DEVICE_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_usb_device_attached)
+**替代接口：** [COMMON_EVENT_USB_DEVICE_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_DEVICE_ATTACHED)
 
 <!--Device-Support-COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'--><!--Device-Support-COMMON_EVENT_USB_DEVICE_ATTACHED = 'usual.event.hardware.usb.action.USB_DEVICE_ATTACHED'-End-->
 
@@ -2460,7 +2460,7 @@ COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_D
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USB_DEVICE_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_usb_device_detached)
+**替代接口：** [COMMON_EVENT_USB_DEVICE_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_DEVICE_DETACHED)
 
 <!--Device-Support-COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'--><!--Device-Support-COMMON_EVENT_USB_DEVICE_DETACHED = 'usual.event.hardware.usb.action.USB_DEVICE_DETACHED'-End-->
 
@@ -2478,7 +2478,7 @@ COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCES
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USB_ACCESSORY_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_usb_accessory_attached)
+**替代接口：** [COMMON_EVENT_USB_ACCESSORY_ATTACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_ACCESSORY_ATTACHED)
 
 <!--Device-Support-COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'--><!--Device-Support-COMMON_EVENT_USB_ACCESSORY_ATTACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_ATTACHED'-End-->
 
@@ -2496,7 +2496,7 @@ COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCES
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_USB_ACCESSORY_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#common_event_usb_accessory_detached)
+**替代接口：** [COMMON_EVENT_USB_ACCESSORY_DETACHED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_USB_ACCESSORY_DETACHED)
 
 <!--Device-Support-COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'--><!--Device-Support-COMMON_EVENT_USB_ACCESSORY_DETACHED = 'usual.event.hardware.usb.action.USB_ACCESSORY_DETACHED'-End-->
 
@@ -2516,7 +2516,7 @@ COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISK_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_removed)
+**替代接口：** [COMMON_EVENT_DISK_REMOVED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_REMOVED)
 
 <!--Device-Support-COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'--><!--Device-Support-COMMON_EVENT_DISK_REMOVED = 'usual.event.data.DISK_REMOVED'-End-->
 
@@ -2536,7 +2536,7 @@ COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISK_UNMOUNTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_unmounted)
+**替代接口：** [COMMON_EVENT_DISK_UNMOUNTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_UNMOUNTED)
 
 <!--Device-Support-COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'--><!--Device-Support-COMMON_EVENT_DISK_UNMOUNTED = 'usual.event.data.DISK_UNMOUNTED'-End-->
 
@@ -2556,7 +2556,7 @@ COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISK_MOUNTED](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_mounted)
+**替代接口：** [COMMON_EVENT_DISK_MOUNTED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_MOUNTED)
 
 <!--Device-Support-COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'--><!--Device-Support-COMMON_EVENT_DISK_MOUNTED = 'usual.event.data.DISK_MOUNTED'-End-->
 
@@ -2576,7 +2576,7 @@ COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISK_BAD_REMOVAL](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_bad_removal)
+**替代接口：** [COMMON_EVENT_DISK_BAD_REMOVAL](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_BAD_REMOVAL)
 
 <!--Device-Support-COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'--><!--Device-Support-COMMON_EVENT_DISK_BAD_REMOVAL = 'usual.event.data.DISK_BAD_REMOVAL'-End-->
 
@@ -2596,7 +2596,7 @@ COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISK_UNMOUNTABLE](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_unmountable)
+**替代接口：** [COMMON_EVENT_DISK_UNMOUNTABLE](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_UNMOUNTABLE)
 
 <!--Device-Support-COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'--><!--Device-Support-COMMON_EVENT_DISK_UNMOUNTABLE = 'usual.event.data.DISK_UNMOUNTABLE'-End-->
 
@@ -2616,7 +2616,7 @@ COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_DISK_EJECT](arkts-basicservices-commoneventmanager-support-e.md#common_event_disk_eject)
+**替代接口：** [COMMON_EVENT_DISK_EJECT](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_DISK_EJECT)
 
 <!--Device-Support-COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'--><!--Device-Support-COMMON_EVENT_DISK_EJECT = 'usual.event.data.DISK_EJECT'-End-->
 
@@ -2636,7 +2636,7 @@ COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDAT
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#common_event_visible_accounts_updated)
+**替代接口：** [COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED)
 
 <!--Device-Support-COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'--><!--Device-Support-COMMON_EVENT_VISIBLE_ACCOUNTS_UPDATED = 'usual.event.data.VISIBLE_ACCOUNTS_UPDATED'-End-->
 
@@ -2656,7 +2656,7 @@ COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_ACCOUNT_DELETED](arkts-basicservices-commoneventmanager-support-e.md#common_event_account_deleted)
+**替代接口：** [COMMON_EVENT_ACCOUNT_DELETED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_ACCOUNT_DELETED)
 
 <!--Device-Support-COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'--><!--Device-Support-COMMON_EVENT_ACCOUNT_DELETED = 'usual.event.data.ACCOUNT_DELETED'-End-->
 
@@ -2676,7 +2676,7 @@ COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_FOUNDATION_READY](arkts-basicservices-commoneventmanager-support-e.md#common_event_foundation_ready)
+**替代接口：** [COMMON_EVENT_FOUNDATION_READY](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_FOUNDATION_READY)
 
 <!--Device-Support-COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'--><!--Device-Support-COMMON_EVENT_FOUNDATION_READY = 'common.event.FOUNDATION_READY'-End-->
 
@@ -2694,7 +2694,7 @@ COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_AIRPLANE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#common_event_airplane_mode_changed)
+**替代接口：** [COMMON_EVENT_AIRPLANE_MODE_CHANGED](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_AIRPLANE_MODE_CHANGED)
 
 <!--Device-Support-COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'--><!--Device-Support-COMMON_EVENT_AIRPLANE_MODE_CHANGED = 'usual.event.AIRPLANE_MODE'-End-->
 
@@ -2712,7 +2712,7 @@ COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.Support#COMMON_EVENT_SPLIT_SCREEN](arkts-basicservices-commoneventmanager-support-e.md#common_event_split_screen)
+**替代接口：** [COMMON_EVENT_SPLIT_SCREEN](arkts-basicservices-commoneventmanager-support-e.md#COMMON_EVENT_SPLIT_SCREEN)
 
 <!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'--><!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'-End-->
 

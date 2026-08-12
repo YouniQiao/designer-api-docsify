@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemCapability } from 'kits/@kit.BasicServicesKit';
+import { systemCapability } from '@kit.BasicServicesKit';
 ```
 
 ## querySystemCapabilities
@@ -64,7 +64,7 @@ Get System Capability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## Examples
 

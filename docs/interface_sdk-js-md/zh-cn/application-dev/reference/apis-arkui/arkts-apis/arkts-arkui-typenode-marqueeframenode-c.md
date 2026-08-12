@@ -34,11 +34,11 @@ abstract initialize(value: MarqueeOptions): MarqueeAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [MarqueeOptions](../arkts-components/arkts-arkui-marqueeoptions-i.md) | 是 |  |
+| value | MarqueeOptions | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) |  |
+| MarqueeAttribute |  |
 

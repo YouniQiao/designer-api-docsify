@@ -29,5 +29,5 @@ Create a FrameNode of TextArea type.On API 26.0.0 and above, It can also create 
 
 | Type | Description |
 | --- | --- |
-| [TextArea](arkts-arkui-typenode-textarea-t.md) | Return TextArea type FrameNode. |
+| TextArea | Return TextArea type FrameNode. |
 

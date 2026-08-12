@@ -29,7 +29,7 @@ function cubicBezierCurve(x1: number, y1: number, x2: number, y2: number): ICurv
 
 | 类型 |
 | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| [ICurve](arkts-arkui-icurve-t.md) |
 
 ## 示例
 

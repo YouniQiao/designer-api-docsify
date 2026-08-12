@@ -1,7 +1,7 @@
 # Task
 
 上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过  
-[request.agent.create](arkts-basicservices-agent-create-f.md#create)获取，callback形式通过  
+[request.agent.create](arkts-basicservices-agent-create-f.md#create-1)获取，callback形式通过  
 [request.agent.create](arkts-basicservices-agent-create-f.md#create)获取。
 
 > **说明：**
@@ -39,14 +39,14 @@ off(event: 'progress', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'progress' | 是 |
-| callback | (progress: Progress) =&gt; void | 否 |
+| callback | (progress: Progress) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
 
 ## off
 
@@ -73,14 +73,14 @@ off(event: 'completed', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'completed' | 是 |
-| callback | (progress: Progress) =&gt; void | 否 |
+| callback | (progress: Progress) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
 
 ## off
 
@@ -107,14 +107,14 @@ off(event: 'failed', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'failed' | 是 |
-| callback | (progress: Progress) =&gt; void | 否 |
+| callback | (progress: Progress) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
 
 ## off
 
@@ -139,13 +139,13 @@ off(event: 'pause', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'pause' | 是 |
-| callback | (progress: Progress) =&gt; void | 否 |
+| callback | (progress: Progress) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off
 
@@ -170,13 +170,13 @@ off(event: 'resume', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'resume' | 是 |
-| callback | (progress: Progress) =&gt; void | 否 |
+| callback | (progress: Progress) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off
 
@@ -201,13 +201,13 @@ off(event: 'remove', callback?: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'remove' | 是 |
-| callback | (progress: Progress) =&gt; void | 否 |
+| callback | (progress: Progress) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off
 
@@ -234,13 +234,13 @@ off(event: 'response', callback?: Callback<HttpResponse>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'response' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off
 
@@ -265,13 +265,13 @@ off(event: 'faultOccur', callback?: Callback<Faults>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'faultOccur' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## off
 
@@ -296,13 +296,13 @@ off(event: 'wait', callback?: Callback<WaitingReason>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'wait' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on
 
@@ -329,14 +329,14 @@ on(event: 'progress', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'progress' | 是 |
-| callback | (progress: Progress) =&gt; void | 是 |
+| callback | (progress: Progress) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
 
 ## on
 
@@ -363,14 +363,14 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'completed' | 是 |
-| callback | (progress: Progress) =&gt; void | 是 |
+| callback | (progress: Progress) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
 
 ## on
 
@@ -379,7 +379,7 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
 订阅任务失败事件，使用callback异步回调。可通过调用  
-[request.agent.show](arkts-basicservices-agent-show-f.md#show)查看错误原因。
+[request.agent.show](arkts-basicservices-agent-show-f.md#show-1)查看错误原因。
 
 > **说明：**
 > 
@@ -398,14 +398,14 @@ on(event: 'failed', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'failed' | 是 |
-| callback | (progress: Progress) =&gt; void | 是 |
+| callback | (progress: Progress) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
 
 ## on
 
@@ -430,13 +430,13 @@ on(event: 'pause', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'pause' | 是 |
-| callback | (progress: Progress) =&gt; void | 是 |
+| callback | (progress: Progress) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on
 
@@ -461,13 +461,13 @@ on(event: 'resume', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'resume' | 是 |
-| callback | (progress: Progress) =&gt; void | 是 |
+| callback | (progress: Progress) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on
 
@@ -492,13 +492,13 @@ on(event: 'remove', callback: (progress: Progress) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'remove' | 是 |
-| callback | (progress: Progress) =&gt; void | 是 |
+| callback | (progress: Progress) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on
 
@@ -525,13 +525,13 @@ on(event: 'response', callback: Callback<HttpResponse>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'response' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[HttpResponse](arkts-basicservices-agent-httpresponse-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on
 
@@ -556,13 +556,13 @@ on(event: 'faultOccur', callback: Callback<Faults>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'faultOccur' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Faults&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## on
 
@@ -587,13 +587,13 @@ on(event: 'wait', callback: Callback<WaitingReason>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'wait' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;WaitingReason&gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## pause
 
@@ -602,7 +602,7 @@ pause(callback: AsyncCallback<void>): void
 ```
 
 暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被  
-[resume](arkts-basicservices-agent-task-i.md#resume)恢复。使用callback异步回调。
+[resume](#resume)恢复。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -620,9 +620,9 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## pause
 
@@ -631,7 +631,7 @@ pause(): Promise<void>
 ```
 
 暂停任务，可以暂停正在等待/正在运行/正在重试的任务，已暂停的任务可被  
-[resume](arkts-basicservices-agent-task-i.md#resume)恢复。使用Promise异步回调。
+[resume](#resume)恢复。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -643,15 +643,15 @@ pause(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## resume
 
@@ -679,10 +679,10 @@ resume(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## resume
 
@@ -704,16 +704,16 @@ resume(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## setMaxSpeed
 
@@ -739,14 +739,14 @@ setMaxSpeed(speed: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## start
 
@@ -784,9 +784,9 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## start
 
@@ -818,15 +818,15 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## stop
 
@@ -835,7 +835,7 @@ stop(callback: AsyncCallback<void>): void
 ```
 
 停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被  
-[start](arkts-basicservices-agent-task-i.md#start)恢复。使用callback异步回调。
+[start](#start)恢复。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -855,8 +855,8 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## stop
 
@@ -865,7 +865,7 @@ stop(): Promise<void>
 ```
 
 停止任务，可以停止正在运行/正在等待/正在重试的任务，已停止的任务可被  
-[start](arkts-basicservices-agent-task-i.md#start)恢复。使用Promise异步回调。
+[start](#start)恢复。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -879,14 +879,14 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 ## config
 
@@ -896,7 +896,7 @@ config: Config
 
 任务的配置信息。
 
-**类型：** [Config](arkts-basicservices-agent-config-i.md)
+**类型：** Config
 
 **起始版本：** 10
 

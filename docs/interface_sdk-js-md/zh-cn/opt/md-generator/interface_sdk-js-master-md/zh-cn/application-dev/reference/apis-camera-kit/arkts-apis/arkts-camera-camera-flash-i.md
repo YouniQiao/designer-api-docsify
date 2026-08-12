@@ -1,10 +1,10 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)。
 
 闪光灯类，对设备闪光灯操作。
 
-**继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
+**继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)
 
 **起始版本：** 11
 
@@ -38,7 +38,7 @@ getFlashMode(): FlashMode
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## offFlashStateChange
 
@@ -62,7 +62,7 @@ offFlashStateChange(callback?: Callback<FlashState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | 否 |
 
 ## onFlashStateChange
 
@@ -86,7 +86,7 @@ onFlashStateChange(callback: Callback<FlashState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | 是 |
 
 ## setFlashMode
 
@@ -98,7 +98,7 @@ setFlashMode(flashMode: FlashMode): void
 
 进行设置之前，需要先检查：
 
-1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)。
+1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported)。
 
 **起始版本：** 11
 
@@ -118,4 +118,4 @@ setFlashMode(flashMode: FlashMode): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |

@@ -11,7 +11,7 @@ Describes the color components of an image.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## byteBuffer
@@ -38,7 +38,7 @@ readonly componentType: ComponentType
 
 Color component type.
 
-**Type:** [ComponentType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-componenttype-e-sys.md)
+**Type:** ComponentType
 
 **Since:** 9
 

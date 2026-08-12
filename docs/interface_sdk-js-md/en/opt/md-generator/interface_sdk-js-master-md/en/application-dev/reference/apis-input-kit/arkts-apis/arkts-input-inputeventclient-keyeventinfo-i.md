@@ -11,7 +11,7 @@ Defines the key event information injected by the user.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## KeyEvent
@@ -22,7 +22,7 @@ KeyEvent: KeyEvent
 
 Key injection description.
 
-**Type:** [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md)
+**Type:** KeyEvent
 
 **Since:** 23
 

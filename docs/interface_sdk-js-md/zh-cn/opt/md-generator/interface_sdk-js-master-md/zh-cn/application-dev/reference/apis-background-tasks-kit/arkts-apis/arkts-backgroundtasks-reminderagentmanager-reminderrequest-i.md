@@ -37,7 +37,7 @@ autoDeletedTime?: number
 自动清除的时间。
 
 数据格式：时间戳，单位：ms，具体请参考  
-[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#autodeletedtime)
+[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autoDeletedTime)
 
 **类型：** number
 
@@ -171,7 +171,7 @@ maxScreenWantAgent?: MaxScreenWantAgent
 
 说明：该接口为预留接口，暂不支持使用。
 
-**类型：** [MaxScreenWantAgent](arkts-backgroundtasks-reminderagentmanager-maxscreenwantagent-i.md)
+**类型：** MaxScreenWantAgent
 
 **起始版本：** 9
 
@@ -221,7 +221,7 @@ reminderType: ReminderType
 
 指明代理提醒类型。
 
-**类型：** [ReminderType](arkts-backgroundtasks-reminderagent-remindertype-e.md)
+**类型：** ReminderType
 
 **起始版本：** 9
 
@@ -257,8 +257,8 @@ ringDuration?: number
 
 值为0时：跟随系统设置中的通知铃声。 
 
-值大于0时：如果设置了[ReminderRequest.customRingUri](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)，则在指定的通道  
-[ReminderRequest.ringChannel](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)上响铃。否则使用代理提醒默认的自定义提示音。
+值大于0时：如果设置了[ReminderRequest.customRingUri](#ReminderRequest)，则在指定的通道  
+[ReminderRequest.ringChannel](#ReminderRequest)上响铃。否则使用代理提醒默认的自定义提示音。
 
 响铃同时会触发振动，从API版本26.0.0开始，支持长振动，振动时长与响铃时长一致。API版本26.0.0之前版本，响铃时会快速振动一次。
 
@@ -357,7 +357,7 @@ tapDismissed?: boolean
 ```
 
 通知是否自动清除，默认值为true，具体请参考  
-[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md/arkts-notification-notificationrequest-notificationrequest-i.md#tapdismissed)
+[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapDismissed)
 
 - true：点击通知消息或通知按钮后，自动删除当前通知。  
 - false：点击通知消息或通知按钮后，保留当前通知。
@@ -428,7 +428,7 @@ wantAgent?: WantAgent
 
 点击通知后需要跳转的目标ability信息。
 
-**类型：** [WantAgent](arkts-backgroundtasks-reminderagent-wantagent-i.md)
+**类型：** WantAgent
 
 **起始版本：** 9
 

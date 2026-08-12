@@ -2,7 +2,7 @@
 
 The context of an ability or an application. It allows access to application-specific resources.Can only be obtained through the ability.
 
-**Inheritance/Implementation:** BackupExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** BackupExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ The context of an ability or an application. It allows access to application-spe
 ## Modules to Import
 
 ```TypeScript
-import { BackupExtensionContext } from 'kits/@kit.CoreFileKit';
+import { BackupExtensionContext } from '@kit.CoreFileKit';
 ```
 
 ## backupDir

@@ -18,7 +18,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the border color.
 
-**类型：** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| ResourceColor \| LocalizedEdgeColors
+**类型：** [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the gap of dash when BorderStyle is dashed.
 
-**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LengthMetrics \| LocalizedEdgeWidths
+**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the length of dash when BorderStyle is dashed.
 
-**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LengthMetrics \| LocalizedEdgeWidths
+**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 
@@ -84,7 +84,7 @@ radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 
 Defines the border radius.
 
-**类型：** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| Length \| LocalizedBorderRadiuses
+**类型：** BorderRadiuses \| [Length](arkts-arkui-length-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **起始版本：** 12
 
@@ -128,7 +128,7 @@ width?: EdgeWidths | Length | LocalizedEdgeWidths
 
 Defines the border width.
 
-**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| Length \| LocalizedEdgeWidths
+**类型：** [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **起始版本：** 12
 

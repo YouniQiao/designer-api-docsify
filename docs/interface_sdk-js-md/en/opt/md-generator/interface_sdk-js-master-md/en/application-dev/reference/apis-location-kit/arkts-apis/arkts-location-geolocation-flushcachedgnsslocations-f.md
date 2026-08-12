@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## flushCachedGnssLocations
@@ -18,7 +18,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.flushCachedGnssLocations
+**Substitutes:** [flushCachedGnssLocations](ohos.geoLocationManager/geoLocationManager.flushCachedGnssLocations)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -59,7 +59,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.flushCachedGnssLocations
+**Substitutes:** [flushCachedGnssLocations](ohos.geoLocationManager/geoLocationManager.flushCachedGnssLocations)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -71,7 +71,7 @@ All prepared GNSS locations are returned to the application through the callback
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

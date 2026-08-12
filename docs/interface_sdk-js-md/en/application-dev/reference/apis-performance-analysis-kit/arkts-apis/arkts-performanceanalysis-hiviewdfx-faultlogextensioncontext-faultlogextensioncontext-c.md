@@ -1,17 +1,17 @@
 # FaultLogExtensionContext
 
 FaultLogExtensionContext is the context of  
-[FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md) and inherits from  
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
+[FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility) and inherits from  
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 This module provides APIs for accessing resources of a specific  
-[FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md). An ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext.
+[FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility). An ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext.
 
 > **NOTE：**
 > 
 > - The APIs of this module can be used only in the stage model.
 
-**Inheritance/Implementation:** FaultLogExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** FaultLogExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 21
 
@@ -26,6 +26,6 @@ This module provides APIs for accessing resources of a specific
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionContext } from 'kits/@kit.PerformanceAnalysisKit';
+import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 ```
 

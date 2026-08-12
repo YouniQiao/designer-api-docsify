@@ -14,7 +14,7 @@
 accessibilitySpanOptions?: AccessibilitySpanOptions
 ```
 
-无障碍朗读功能属性。缺省时，取[AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md/arkts-arkui-accessibilityspanoptions-i.md)的默认值。
+无障碍朗读功能属性。缺省时，取[AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md#AccessibilitySpanOptions)的默认值。
 
 **类型：** [AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md)
 

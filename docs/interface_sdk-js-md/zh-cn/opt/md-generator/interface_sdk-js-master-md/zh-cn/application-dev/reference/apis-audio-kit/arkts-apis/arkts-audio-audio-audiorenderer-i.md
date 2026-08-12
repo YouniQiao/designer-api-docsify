@@ -2,7 +2,7 @@
 
 提供音频渲染的相关接口。
 
-在使用AudioRenderer的接口之前，需先通过[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer)获取AudioRenderer实例。
+在使用AudioRenderer的接口之前，需先通过[createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createAudioRenderer)获取AudioRenderer实例。
 
 > **说明：**
 > 
@@ -52,7 +52,7 @@ drain(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## flush
 
@@ -60,7 +60,7 @@ drain(): Promise<void>
 flush(): Promise<void>
 ```
 
-清空缓冲区（[AudioState](arkts-audio-audio-audiostate-e.md)为STATE_RUNNING、STATE_PAUSED、STATE_STOPPED状态下可用）。使用Promise异步回调。
+清空缓冲区（[AudioState](arkts-audio-audio-audiostate-e.md#AudioState)为STATE_RUNNING、STATE_PAUSED、STATE_STOPPED状态下可用）。使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -72,13 +72,13 @@ flush(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
 
 ## getAudioEffectMode
 
@@ -98,7 +98,7 @@ getAudioEffectMode(callback: AsyncCallback<AudioEffectMode>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioEffectMode&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; | 是 |
 
 ## getAudioEffectMode
 
@@ -118,7 +118,7 @@ getAudioEffectMode(): Promise<AudioEffectMode>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioEffectMode&gt; |
+| Promise&lt;[AudioEffectMode](arkts-audio-audio-audioeffectmode-e.md)&gt; |
 
 ## getAudioStreamId
 
@@ -158,7 +158,7 @@ getAudioStreamId(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getAudioStreamIdSync
 
@@ -218,7 +218,7 @@ getAudioTime(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getAudioTimeSync
 
@@ -264,13 +264,13 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioTimestampInfo&gt; |
+| Promise&lt;[AudioTimestampInfo](arkts-audio-audio-audiotimestampinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
 
 ## getAudioTimestampInfoSync
 
@@ -296,7 +296,7 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
 
 ## getBufferSize
 
@@ -336,7 +336,7 @@ getBufferSize(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getBufferSizeSync
 
@@ -376,7 +376,7 @@ getCurrentOutputDevices(callback: AsyncCallback<AudioDeviceDescriptors>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioDeviceDescriptors&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 |
 
 ## getCurrentOutputDevices
 
@@ -396,7 +396,7 @@ getCurrentOutputDevices(): Promise<AudioDeviceDescriptors>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioDeviceDescriptors&gt; |
+| Promise&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; |
 
 ## getCurrentOutputDevicesSync
 
@@ -432,8 +432,8 @@ getLatency(type: AudioLatencyType): number
 > 
 > - 由于时延未计入实时缓冲区，建议仅在音频播放开始时获取，避免频繁调用，否则可能因路由切换而阻塞该接口调用。
 > 
-> - 音频输出到硬件后的音画同步建议使用[getAudioTimestampInfo](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfo)或
-> [getAudioTimestampInfoSync](arkts-audio-audio-audiorenderer-i.md#getaudiotimestampinfosync)完成。
+> - 音频输出到硬件后的音画同步建议使用[getAudioTimestampInfo](#getAudioTimestampInfo)或
+> [getAudioTimestampInfoSync](#getAudioTimestampInfoSync)完成。
 
 **起始版本：** 23
 
@@ -459,9 +459,9 @@ getLatency(type: AudioLatencyType): number
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## getLoudnessGain
 
@@ -521,7 +521,7 @@ getMaxStreamVolume(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getMaxStreamVolumeSync
 
@@ -581,7 +581,7 @@ getMinStreamVolume(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getMinStreamVolumeSync
 
@@ -615,7 +615,7 @@ getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#getSpeed
+**替代接口：** [getSpeed](#getSpeed)
 
 <!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void--><!--Device-AudioRenderer-getRenderRate(callback: AsyncCallback<AudioRendererRate>): void-End-->
 
@@ -625,7 +625,7 @@ getRenderRate(callback: AsyncCallback<AudioRendererRate>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererRate&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; | 是 |
 
 ## getRenderRate
 
@@ -639,7 +639,7 @@ getRenderRate(): Promise<AudioRendererRate>
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#getSpeed
+**替代接口：** [getSpeed](#getSpeed)
 
 <!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>--><!--Device-AudioRenderer-getRenderRate(): Promise<AudioRendererRate>-End-->
 
@@ -649,7 +649,7 @@ getRenderRate(): Promise<AudioRendererRate>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioRendererRate&gt; |
+| Promise&lt;[AudioRendererRate](arkts-audio-audio-audiorendererrate-e.md)&gt; |
 
 ## getRenderRateSync
 
@@ -663,7 +663,7 @@ getRenderRateSync(): AudioRendererRate
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#getSpeed
+**替代接口：** [getSpeed](#getSpeed)
 
 <!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate--><!--Device-AudioRenderer-getRenderRateSync(): AudioRendererRate-End-->
 
@@ -693,7 +693,7 @@ getRendererInfo(callback: AsyncCallback<AudioRendererInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRendererInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 |
 
 ## getRendererInfo
 
@@ -713,7 +713,7 @@ getRendererInfo(): Promise<AudioRendererInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioRendererInfo&gt; |
+| Promise&lt;[AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; |
 
 ## getRendererInfoSync
 
@@ -793,7 +793,7 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioStreamInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; | 是 |
 
 ## getStreamInfo
 
@@ -813,7 +813,7 @@ getStreamInfo(): Promise<AudioStreamInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;AudioStreamInfo&gt; |
+| Promise&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt; |
 
 ## getStreamInfoSync
 
@@ -873,7 +873,7 @@ getUnderflowCount(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## getUnderflowCountSync
 
@@ -934,13 +934,13 @@ off(type: 'audioInterrupt', callback?: Callback<InterruptEvent>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioInterrupt' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptEvent&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('markReach')
 
@@ -1009,7 +1009,7 @@ off(type: 'stateChange', callback?: Callback<AudioState>): void
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('outputDeviceChange')
 
@@ -1030,14 +1030,14 @@ off(type: 'outputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('outputDeviceChangeWithInfo')
 
@@ -1058,14 +1058,14 @@ off(type: 'outputDeviceChangeWithInfo', callback?: Callback<AudioStreamDeviceCha
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'outputDeviceChangeWithInfo' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioStreamDeviceChangeInfo&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## off('writeData')
 
@@ -1092,8 +1092,8 @@ off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('audioInterrupt')
 
@@ -1105,7 +1105,7 @@ on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
 
 AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。
 
-调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
+调用此方法后，如果AudioRenderer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
 
 **起始版本：** 9
 
@@ -1118,14 +1118,14 @@ AudioRenderer对象在start事件时获取焦点，在pause、stop等事件时�
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioInterrupt' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InterruptEvent&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('markReach')
 
@@ -1148,7 +1148,7 @@ on(type: 'markReach', frame: number, callback: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'markReach' | 是 |
-| frame | number | 是 |
+| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
 ## on('periodReach')
@@ -1172,7 +1172,7 @@ on(type: 'periodReach', frame: number, callback: Callback<number>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'periodReach' | 是 |
-| frame | number | 是 |
+| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
 
 ## on('stateChange')
@@ -1215,14 +1215,14 @@ on(type: 'outputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioDeviceDescriptors&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('outputDeviceChangeWithInfo')
 
@@ -1243,14 +1243,14 @@ on(type: 'outputDeviceChangeWithInfo', callback: Callback<AudioStreamDeviceChang
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'outputDeviceChangeWithInfo' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioStreamDeviceChangeInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## on('writeData')
 
@@ -1283,8 +1283,8 @@ on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## pause
 
@@ -1324,7 +1324,7 @@ pause(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## release
 
@@ -1364,7 +1364,7 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setAudioEffectMode
 
@@ -1391,8 +1391,8 @@ setAudioEffectMode(mode: AudioEffectMode, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setAudioEffectMode
 
@@ -1418,14 +1418,14 @@ setAudioEffectMode(mode: AudioEffectMode): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setChannelBlendMode
 
@@ -1451,9 +1451,9 @@ setChannelBlendMode(mode: ChannelBlendMode): void
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setDefaultOutputDevice
 
@@ -1465,7 +1465,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 > **说明：**
 > 
-> - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认设备。
+> - 本接口仅适用于[StreamUsage](arkts-audio-audio-streamusage-e.md#StreamUsage)为语音消息、VoIP语音通话或者VoIP视频通话的场景，支持听筒、扬声器和系统默认设备。
 > 
 > - 本接口允许在AudioRenderer创建后随时调用，系统会记录应用设置的默认本机内置发声设备。应用启动播放时，若外接设备如蓝牙耳机或有线耳机已接入，系统优先从外接设备发声；否则，系统遵循应用设置的默认本机内置发声设
 > 备。
@@ -1486,15 +1486,15 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setIndependentAudioSessionStrategy
 
@@ -1506,7 +1506,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 > **说明：**
 > 
-> 当音频渲染器在运行状态时调用此接口后，必须重新调用接口[start](arkts-audio-audio-audiorenderer-i.md#start)使其生效。
+> 当音频渲染器在运行状态时调用此接口后，必须重新调用接口[start](#start)使其生效。
 
 **起始版本：** 24
 
@@ -1527,8 +1527,8 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 | 错误码ID |
 | --- |
-| [6800103](../errorcode-audio.md#6800103-状态不支持) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setInterruptMode
 
@@ -1575,7 +1575,7 @@ setInterruptMode(mode: InterruptMode): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setInterruptModeSync
 
@@ -1601,8 +1601,8 @@ setInterruptModeSync(mode: InterruptMode): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setLoudnessGain
 
@@ -1614,8 +1614,8 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 > **说明：**
 > 
-> - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)、[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md)或
-> [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md)的音频流。
+> - 该接口仅支持类型为[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md#StreamUsage)、[STREAM_USAGE_MOVIE](arkts-audio-audio-streamusage-e.md#StreamUsage)或
+> [STREAM_USAGE_AUDIOBOOK](arkts-audio-audio-streamusage-e.md#StreamUsage)的音频流。
 > 
 > - 该接口不支持高清通路的响度设置。
 > 
@@ -1639,14 +1639,14 @@ setLoudnessGain(loudnessGain: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
 
 ## setRenderRate
 
@@ -1660,7 +1660,7 @@ setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#setSpeed
+**替代接口：** [setSpeed](ohos.multimedia.audio.AudioRenderer#setSpeed)
 
 <!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate, callback: AsyncCallback<void>): void-End-->
 
@@ -1685,7 +1685,7 @@ setRenderRate(rate: AudioRendererRate): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#setSpeed
+**替代接口：** [setSpeed](ohos.multimedia.audio.AudioRenderer#setSpeed)
 
 <!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>--><!--Device-AudioRenderer-setRenderRate(rate: AudioRendererRate): Promise<void>-End-->
 
@@ -1701,7 +1701,7 @@ setRenderRate(rate: AudioRendererRate): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setSilentModeAndMixWithOthers
 
@@ -1749,8 +1749,8 @@ setSpeed(speed: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## setVolume
 
@@ -1797,7 +1797,7 @@ setVolume(volume: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setVolumeWithRamp
 
@@ -1824,8 +1824,8 @@ setVolumeWithRamp(volume: number, duration: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
 
 ## start
 
@@ -1865,7 +1865,7 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## stop
 
@@ -1905,7 +1905,7 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## write
 
@@ -1919,7 +1919,7 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#event:writeData
+**替代接口：** [writeData](ohos.multimedia.audio.AudioRenderer#event:writeData)
 
 <!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-AudioRenderer-write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
@@ -1944,7 +1944,7 @@ write(buffer: ArrayBuffer): Promise<number>
 
 **废弃版本：** 11
 
-**替代接口：** ohos.multimedia.audio.AudioRenderer#event:writeData
+**替代接口：** [writeData](ohos.multimedia.audio.AudioRenderer#event:writeData)
 
 <!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>--><!--Device-AudioRenderer-write(buffer: ArrayBuffer): Promise<number>-End-->
 
@@ -1960,7 +1960,7 @@ write(buffer: ArrayBuffer): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## state
 
@@ -1970,7 +1970,7 @@ readonly state: AudioState
 
 音频渲染器的状态。
 
-**类型：** [AudioState](../../apis-media-kit/arkts-apis/arkts-media-audiostate-t.md)
+**类型：** AudioState
 
 **起始版本：** 8
 

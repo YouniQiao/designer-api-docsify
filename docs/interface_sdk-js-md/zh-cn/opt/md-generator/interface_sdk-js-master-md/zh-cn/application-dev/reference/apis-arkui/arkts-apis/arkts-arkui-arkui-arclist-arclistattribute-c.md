@@ -1,6 +1,6 @@
 # ArcListAttribute
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性（不支持  
+除支持[通用属性](./@internal/component/ets/common)外，还支持以下属性（不支持  
 [滚动组件通用属性](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#属性)）：
 
 **继承/实现关系：** ArcListAttribute extends [CommonMethod<ArcListAttribute>](CommonMethod<ArcListAttribute>)
@@ -89,7 +89,7 @@ childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ChildrenMainSize&gt; | 是 |
+| size | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | 是 |
 
 **返回值：**
 
@@ -117,7 +117,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -257,7 +257,7 @@ onDidScroll(handler: Optional<OnScrollCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnScrollCallback&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -287,7 +287,7 @@ ArcList边缘效果为弹簧效果时，滑动经过末尾位置时触发一次�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -303,7 +303,7 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 列表到达起始位置时触发。
 
-当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
+当ArcList进行初始化时，若[initialIndex](arkts-arkui-arkui-arclist-arklistoptions-i.md#ArkListOptions)设定为0，将触发一次事件。当ArcList滚动至起始位置，亦会触发一次事件。在ArcList的边缘效果设置为弹簧效果时，滑动经过起始位置时会触发一次事件，而在回弹返回起始位置时，将再次触发一次事件。
 
 **起始版本：** 18
 
@@ -317,7 +317,7 @@ onReachStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -347,7 +347,7 @@ ArcList的边缘效果为弹簧效果时，在ArcList滑动到边缘后继续滑
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ArcScrollIndexHandler&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -361,7 +361,7 @@ ArcList的边缘效果为弹簧效果时，在ArcList滑动到边缘后继续滑
 onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
+列表滑动开始时触发。手指拖动列表或列表的滚动条触发的滑动开始时，会触发该事件。使用[Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller)滑动控制器触发的带动画的滑动，动画开始时会触发该事件。
 
 **起始版本：** 18
 
@@ -375,7 +375,7 @@ onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -389,7 +389,7 @@ onScrollStart(handler: Optional<VoidCallback>): ArcListAttribute
 onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 ```
 
-列表滑动停止时触发。手指拖动列表或列表的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](../arkts-components/arkts-arkui-scroller-c.md/arkts-arkui-scroller-c.md)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
+列表滑动停止时触发。手指拖动列表或列表的滚动条触发的滑动，手指离开屏幕后滑动停止时会触发该事件。使用[Scroller](../arkts-components/arkts-arkui-scroller-c.md#Scroller)滑动控制器触发的带动画的滑动，动画停止会触发该事件。
 
 **起始版本：** 18
 
@@ -403,7 +403,7 @@ onScrollStop(handler: Optional<VoidCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;VoidCallback&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -431,7 +431,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;OnWillScrollCallback&gt; | 是 |
+| handler | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -459,7 +459,7 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;BarState&gt; | 是 |
+| status | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | 是 |
 
 **返回值：**
 

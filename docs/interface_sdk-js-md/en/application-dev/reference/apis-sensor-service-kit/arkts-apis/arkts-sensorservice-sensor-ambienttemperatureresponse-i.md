@@ -1,8 +1,8 @@
 # AmbientTemperatureResponse
 
-Describes the ambient temperature sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the ambient temperature sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** AmbientTemperatureResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** AmbientTemperatureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -15,7 +15,7 @@ Describes the ambient temperature sensor data. It extends from [Response](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## temperature

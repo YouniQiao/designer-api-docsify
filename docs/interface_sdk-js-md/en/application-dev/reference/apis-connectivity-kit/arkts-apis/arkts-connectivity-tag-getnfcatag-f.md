@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## getNfcATag
@@ -12,7 +12,7 @@ import { tag } from 'kits/@kit.ConnectivityKit';
 function getNfcATag(tagInfo: TagInfo): NfcATag
 ```
 
-Obtains an {@link NfcATag} object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an {@link NfcATag} object will be created based on the tag information.
+Obtains an [NfcATag](arkts-connectivity-tag-nfcatag-t.md#NfcATag) object based on the tag information.&lt;p&gt;During tag reading, if the tag supports the NFC-A technology, an [NfcATag](arkts-connectivity-tag-nfcatag-t.md#NfcATag) object will be created based on the tag information.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Obtains an {@link NfcATag} object based on the tag information.&lt;p&gt;During t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.tag/tag#getNfcA
+**Substitutes:** [getNfcA](arkts-connectivity-tag-getnfca-f.md#getNfcA)
 
 <!--Device-tag-function getNfcATag(tagInfo: TagInfo): NfcATag--><!--Device-tag-function getNfcATag(tagInfo: TagInfo): NfcATag-End-->
 
@@ -36,5 +36,5 @@ Obtains an {@link NfcATag} object based on the tag information.&lt;p&gt;During t
 
 | Type | Description |
 | --- | --- |
-| [NfcATag](arkts-connectivity-tag-nfcatag-t.md) | The { |
+| NfcATag | The { |
 

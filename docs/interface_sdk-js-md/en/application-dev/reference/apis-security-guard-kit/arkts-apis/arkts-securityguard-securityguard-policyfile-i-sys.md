@@ -15,7 +15,7 @@ Provides policy file information.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from 'kits/@kit.SecurityGuardKit';
+import { securityGuard } from '@kit.SecurityGuardKit';
 ```
 
 ## fd

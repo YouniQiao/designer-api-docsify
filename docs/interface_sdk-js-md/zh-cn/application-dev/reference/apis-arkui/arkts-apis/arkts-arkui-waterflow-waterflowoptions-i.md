@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 瀑布流组件的尾部组件。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -100,7 +100,7 @@ sections?: WaterFlowSections
 
 瀑布流项分组，不同分组可以设置不同的列数。&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;。&lt;br&gt;1. 使用分组时，columnsTemplate和rowsTemplate属性将被忽略。&lt;br&gt;2. 使用分组时不支持单独设置footer，可以使用最后一个分组作为尾部组件。&lt;/p&gt;
 
-**类型：** [WaterFlowSections](../arkts-components/arkts-arkui-waterflowsections-c.md)
+**类型：** [WaterFlowSections](arkts-arkui-waterflow-waterflowsections-c.md)
 
 **起始版本：** 23
 

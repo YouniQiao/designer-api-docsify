@@ -1,8 +1,8 @@
 # VersionDownloadProgress
 
 Represents the download state and progress information of historical version files when the  
-[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadhistoryversion) method of the  
-[FileVersion](arkts-corefile-cloudsync-fileversion-c.md) class is called.
+[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadHistoryVersion) method of the  
+[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion) class is called.
 
 **Since:** 20
 
@@ -13,7 +13,7 @@ Represents the download state and progress information of historical version fil
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## errType
@@ -56,7 +56,7 @@ state: State
 
 Download state of the cloud file of the selected version.
 
-**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Since:** 20
 

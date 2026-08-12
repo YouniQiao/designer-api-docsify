@@ -61,7 +61,7 @@ readonly uniformDataType: 'general.hyperlink'
 ```
 
 统一数据类型标识为超链接类型数据，固定为“general.hyperlink”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
 
 **类型：** 'general.hyperlink'
 

@@ -29,5 +29,5 @@ export function createLoadingProgressNode(context: UIContext, options?: FrameNod
 
 | 类型 | 说明 |
 | --- | --- |
-| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | 返回 LoadingProgress 类型的 FrameNode |
+| LoadingProgress | 返回 LoadingProgress 类型的 FrameNode |
 

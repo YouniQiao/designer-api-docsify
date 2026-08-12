@@ -12,7 +12,7 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getActiveNotificationCount
+**替代接口：** [getActiveNotificationCount](ohos.notificationManager/notificationManager#getActiveNotificationCount)
 
 <!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void--><!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void-End-->
 
@@ -37,7 +37,7 @@ function getActiveNotificationCount(): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getActiveNotificationCount
+**替代接口：** [getActiveNotificationCount](ohos.notificationManager/notificationManager#getActiveNotificationCount)
 
 <!--Device-notification-function getActiveNotificationCount(): Promise<number>--><!--Device-notification-function getActiveNotificationCount(): Promise<number>-End-->
 
@@ -47,4 +47,4 @@ function getActiveNotificationCount(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |

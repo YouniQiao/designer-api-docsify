@@ -16,7 +16,7 @@ function addPermissionUsedRecord(
 
 权限使用记录包括：调用方的应用身份标识、使用的应用权限名称，以及调用方访问本应用成功和失败的次数。
 
-权限使用记录受[setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus)设置的开关状态控制。开关关闭时，调用此接口不会产生权限使用记录。
+权限使用记录受[setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setPermissionUsedRecordToggleStatus)设置的开关状态控制。开关关闭时，调用此接口不会产生权限使用记录。
 
 **起始版本：** 9
 
@@ -42,21 +42,21 @@ function addPermissionUsedRecord(
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -100,7 +100,7 @@ function addPermissionUsedRecord(
 
 权限使用记录包括：调用方的应用身份标识、使用的应用权限名称，以及调用方访问本应用成功和失败的次数。
 
-权限使用记录受[setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus)设置的开关状态控制。开关关闭时，调用此接口不会产生权限使用记录。
+权限使用记录受[setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setPermissionUsedRecordToggleStatus)设置的开关状态控制。开关关闭时，调用此接口不会产生权限使用记录。
 
 **起始版本：** 9
 
@@ -126,15 +126,15 @@ function addPermissionUsedRecord(
 
 | 错误码ID |
 | --- |
-| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 

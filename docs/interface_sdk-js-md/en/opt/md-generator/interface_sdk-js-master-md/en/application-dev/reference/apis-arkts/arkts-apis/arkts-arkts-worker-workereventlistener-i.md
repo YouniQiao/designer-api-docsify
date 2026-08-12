@@ -11,7 +11,7 @@ Implements event listening.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## [[Call]]
@@ -34,14 +34,14 @@ Specifies the callback function to be invoked.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes |
+| event | [Event](arkts-arkts-worker-event-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## Examples
 

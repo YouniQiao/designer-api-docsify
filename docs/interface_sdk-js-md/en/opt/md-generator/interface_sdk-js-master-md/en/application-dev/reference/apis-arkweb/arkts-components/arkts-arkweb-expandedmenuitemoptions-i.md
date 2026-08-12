@@ -6,7 +6,7 @@ Defines the menu item option.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -24,7 +24,7 @@ Selected text.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -52,7 +52,7 @@ Display content.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,7 +74,7 @@ Display icon. The default value is empty, and no icon is displayed.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#EditMenuOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

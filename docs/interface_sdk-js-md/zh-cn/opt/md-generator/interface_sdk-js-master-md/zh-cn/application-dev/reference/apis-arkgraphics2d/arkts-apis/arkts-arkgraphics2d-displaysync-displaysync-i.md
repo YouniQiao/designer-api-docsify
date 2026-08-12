@@ -27,7 +27,7 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frame' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 否 |
 
 ## 示例
 
@@ -63,7 +63,7 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frame' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;IntervalInfo&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IntervalInfo](arkts-arkgraphics2d-displaysync-intervalinfo-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -104,7 +104,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

@@ -93,7 +93,7 @@ icon?: ResourceStr
 - 当取值为字符串类型时，表示图标读取网络资源。  
 - 当取值为[Resource](../../reference/apis-localization-kit/js-apis-resource-manager.md)时，表示图标读取本地资源。
 
-**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 20
 

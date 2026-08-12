@@ -1,11 +1,11 @@
 # MetadataSalientDetectionObject
 
 Salient subject metadata detected by the camera, which is extended from   
-[MetadataObject](arkts-camera-camera-metadataobject-i.md). It serves as the data source of the camera information in   
-[CameraInput](arkts-camera-camera-camerainput-i.md). It is obtained by calling metadataOutput.  
+[MetadataObject](arkts-camera-camera-metadataobject-i.md#MetadataObject). It serves as the data source of the camera information in   
+[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput). It is obtained by calling metadataOutput.  
 [on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>)).
 
-**Inheritance/Implementation:** MetadataSalientDetectionObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
+**Inheritance/Implementation:** MetadataSalientDetectionObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md#MetadataObject)
 
 **Since:** 26.0.0
 
@@ -20,6 +20,6 @@ Salient subject metadata detected by the camera, which is extended from
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 

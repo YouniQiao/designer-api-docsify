@@ -1,6 +1,6 @@
 # GetAuthInfoOptions（系统接口）
 
-表示[查询认证凭据信息](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo)的可选参数集合。
+表示[查询认证凭据信息](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getAuthInfo-3)的可选参数集合。
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ authType?: AuthType
 
 认证类型，默认为undefined。
 
-**类型：** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**类型：** AuthType
 
 **起始版本：** 12
 

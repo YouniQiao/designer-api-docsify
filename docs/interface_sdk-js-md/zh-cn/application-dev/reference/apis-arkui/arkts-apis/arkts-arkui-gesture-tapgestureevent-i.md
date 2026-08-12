@@ -1,8 +1,8 @@
 # TapGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md)。可将该对象作为[onGestureJudgeBegin](arkts-arkui-common-commonmethod-i.md#ongesturejudgebegin)的event参数来传递。
+继承自[BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#BaseGestureEvent)。可将该对象作为[onGestureJudgeBegin](CommonMethod.onGestureJudgeBegin)的event参数来传递。
 
-**继承/实现关系：** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md)
+**继承/实现关系：** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-gesture-basegestureevent-i.md#BaseGestureEvent)
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ tapLocation?: EventLocationInfo
 
 获取点击手势的坐标信息。
 
-**类型：** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
+**类型：** [EventLocationInfo](arkts-arkui-gesture-eventlocationinfo-i.md)
 
 **起始版本：** 23
 

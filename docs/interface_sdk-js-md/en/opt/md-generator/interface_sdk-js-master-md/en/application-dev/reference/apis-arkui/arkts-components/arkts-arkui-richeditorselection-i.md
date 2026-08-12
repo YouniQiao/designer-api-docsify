@@ -36,7 +36,7 @@ spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 
 Span information.
 
-**Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 10
 

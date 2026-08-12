@@ -81,7 +81,7 @@ Direction of the linear gradient. It does not take effect when **angle** is set 
 
 Default value: **GradientDirection.Bottom**.
 
-**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
+**Type:** GradientDirection
 
 **Default:** GradientDirection.Bottom [since 18]
 

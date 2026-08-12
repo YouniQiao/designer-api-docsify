@@ -20,7 +20,7 @@ color?: ResourceColor
 
 默认值：Color.White
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** Color.White
 

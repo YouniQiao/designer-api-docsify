@@ -1,6 +1,6 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method,you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ Manages SSAP client. Before calling a SSAP client method,you must use {@link cre
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## callMethod
@@ -48,7 +48,7 @@ Calls the method of a server.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Method&gt; | Promise used to return the Method result. |
+| Promise&lt;[Method](arkts-connectivity-ssap-method-i-sys.md)&gt; | Promise used to return the Method result. |
 
 **Error codes:**
 
@@ -56,8 +56,8 @@ Calls the method of a server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID. |
 
@@ -85,7 +85,7 @@ Unsubscribes from event notifications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | No | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | No | Callback used to listen for the event notified event. |
 
 ## onEventNotify
 
@@ -113,7 +113,7 @@ This event is accessible only to system applications that granted the ohos.permi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Event&gt; | Yes | Callback used to listen for the event notified event. |
 
 ## readDescriptor
 
@@ -141,7 +141,7 @@ Reads the descriptor of a server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | PropertyDescriptor | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
@@ -155,8 +155,8 @@ Reads the descriptor of a server.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in descriptor. |
 
@@ -202,8 +202,8 @@ Enables or disables indication of a property when value changed.
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
 | 36100030 | The connection is not established. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in property. |
 
@@ -215,8 +215,8 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 Writes the descriptor of a server.
 
-This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or  
-[setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication) instead.
+This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setPropertyNotification) or  
+[setPropertyIndication](#setPropertyIndication) instead.
 
 **Since:** 26.0.0
 
@@ -236,7 +236,7 @@ This method does not support writing client property configuration descriptors. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | Yes | Indicates the descriptor to write. &lt;br&gt;The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
+| descriptor | PropertyDescriptor | Yes | Indicates the descriptor to write. &lt;br&gt;The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
 
 **Return value:**
 
@@ -250,8 +250,8 @@ This method does not support writing client property configuration descriptors. 
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 36100044 | NearLink standard UUID not allowed. |
 | 36100043 | Invalid UUID in descriptor. |
 

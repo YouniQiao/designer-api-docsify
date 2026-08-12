@@ -31,6 +31,32 @@ onException?(errObject: Error): void
 | --- | --- | --- |
 | errObject | Error | 是 |
 
+## 示例
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errorMsg) {
+    console.error('onUnhandledException, errorMsg: ', errorMsg);
+  },
+  onException(errorObj) {
+    console.error('onException, name: ', errorObj.name);
+    console.error('onException, message: ', errorObj.message);
+    if (typeof (errorObj.stack) === 'string') {
+      console.error('onException, stack: ', errorObj.stack);
+    }
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (error) {
+  console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+}
+```
+
 ## onUnhandledException
 
 ```TypeScript
@@ -52,3 +78,22 @@ onUnhandledException(errMsg: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | errMsg | string | 是 |
+
+## 示例
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer: errorManager.ErrorObserver = {
+  onUnhandledException(errorMsg) {
+    console.error('onUnhandledException, errorMsg: ', errorMsg);
+  }
+};
+
+try {
+  errorManager.on('error', observer);
+} catch (error) {
+  console.error(`registerErrorObserver failed, error.code: ${(error as BusinessError).code}, error.message: ${(error as BusinessError).message}`);
+}
+```

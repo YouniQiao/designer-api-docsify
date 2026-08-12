@@ -14,7 +14,7 @@ function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**替代接口：** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -67,7 +67,7 @@ function getCurrentTime(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**替代接口：** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
 
@@ -119,7 +119,7 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**替代接口：** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
 

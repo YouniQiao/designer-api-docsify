@@ -2,7 +2,7 @@
 
 Implements communication between the Worker thread and the host thread. The postMessage API is used to send messages to the host thread, and the close API is used to terminate the Worker thread. The ThreadWorkerGlobalScope class inherits from GlobalScope9+.
 
-**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md)
+**Inheritance/Implementation:** ThreadWorkerGlobalScope extends [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
 
 **Since:** 9
 
@@ -13,7 +13,7 @@ Implements communication between the Worker thread and the host thread. The post
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## callGlobalCallObjectMethod
@@ -36,10 +36,10 @@ Calls a method of an object registered with the host thread. This API is called 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| instanceName | string | Yes |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | Yes |
 | methodName | string | Yes |
 | timeout | number | Yes |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Return value:**
 
@@ -51,11 +51,11 @@ Calls a method of an object registered with the host thread. This API is called 
 
 | Error Code ID |
 | --- |
-| [10200019](../errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200021](../errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
-| [10200020](../errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) |
+| [10200019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200019-failed-to-call-an-api-of-an-unregistered-object) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200021-waiting-for-a-global-call-times-out) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200020-failed-to-call-an-api-of-a-registered-object) |
 
 ## Examples
 
@@ -126,7 +126,7 @@ Terminates the Worker thread to stop it from receiving messages.
 
 | Error Code ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## Examples
 
@@ -175,8 +175,8 @@ Called when the Worker thread receives a message sent by the host thread through
 
 | Error Code ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## onmessageerror
 
@@ -205,8 +205,8 @@ Called when the Worker thread receives a message that cannot be deserialized. Th
 
 | Error Code ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## postMessage
 
@@ -235,8 +235,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## Examples
 
@@ -289,8 +289,8 @@ Sends a message from the Worker thread to the host thread by transferring object
 
 | Error Code ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## Examples
 
@@ -338,15 +338,15 @@ Sends a message from the Worker thread to the main thread by transferring object
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | message | Object | Yes |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | Yes |
+| priority | [Priority](arkts-arkts-worker-priority-e.md) | Yes |
 | transfer | ArrayBuffer[] | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## postMessageWithSharedSendable
 
@@ -375,8 +375,8 @@ Sends a message from the Worker thread to the host thread. In the message, a sen
 
 | Error Code ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
-| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) |
 
 ## Examples
 

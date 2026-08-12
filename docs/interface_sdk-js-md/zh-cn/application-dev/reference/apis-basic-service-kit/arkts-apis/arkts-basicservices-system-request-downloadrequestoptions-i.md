@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface DownloadRequestOptions--><!--Device-unnamed-export interface DownloadRequestOptions-End-->
 
@@ -26,7 +26,7 @@ complete?: () => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.on
+**替代接口：** [on](ohos.request.agent.Task.on)
 
 <!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
 
@@ -46,7 +46,7 @@ Called when downloading fails.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.on
+**替代接口：** [on](ohos.request.agent.Task.on)
 
 <!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
 
@@ -73,7 +73,7 @@ Called when the files are successfully downloaded.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Task.on
+**替代接口：** [on](ohos.request.agent.Task.on)
 
 <!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
 
@@ -101,7 +101,7 @@ Download description.The default value is the file name.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.description
+**替代接口：** [description](ohos.request.agent.Config.description)
 
 <!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
@@ -123,7 +123,7 @@ Name of the file to downloaded.The value is obtained from the current request or
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.saveas
+**替代接口：** [saveas](ohos.request.agent.Config.saveas)
 
 <!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
@@ -145,7 +145,7 @@ Request header.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.headers
+**替代接口：** [headers](ohos.request.agent.Config.headers)
 
 <!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
 
@@ -167,7 +167,7 @@ Resource URL.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Config.url
+**替代接口：** [url](ohos.request.agent.Config.url)
 
 <!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
 

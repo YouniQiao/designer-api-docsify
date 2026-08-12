@@ -29,7 +29,7 @@ Default unit: vp
 
 Invalid values are treated as the default value.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -57,7 +57,7 @@ Default unit: vp
 
 Invalid values are treated as the default value.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -85,7 +85,7 @@ Default unit: vp
 
 Invalid values are treated as the default value.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -113,7 +113,7 @@ Default unit: vp
 
 Invalid values are treated as the default value.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 

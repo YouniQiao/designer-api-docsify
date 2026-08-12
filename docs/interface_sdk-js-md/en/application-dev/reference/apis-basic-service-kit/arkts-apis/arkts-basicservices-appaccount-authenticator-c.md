@@ -13,7 +13,7 @@ Provides APIs to operate the authenticator.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly
@@ -41,7 +41,7 @@ Adds an application account implicitly based on the specified authentication typ
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.Authenticator.createAccountImplicitly](arkts-basicservices-appaccount-authenticator-c.md#createaccountimplicitly)(options:
+**Substitutes:** [createAccountImplicitly](appAccount.Authenticator.createAccountImplicitly(options:)
 
 <!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -78,7 +78,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Options for the authentication. |
+| options | Record&lt;string, Object&gt; | Yes | Options for the authentication. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## auth
@@ -103,7 +103,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| options | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Options for the authentication. |
+| options | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | Yes | Options for the authentication. |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes | Authenticator callback used to return the result. |
 
 ## authenticate
@@ -131,7 +131,7 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.Authenticator.auth](arkts-basicservices-appaccount-authenticator-c.md#auth)(name:
+**Substitutes:** [auth](appAccount.Authenticator.auth(name:)
 
 <!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 

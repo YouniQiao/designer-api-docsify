@@ -41,7 +41,7 @@ spans: Array<RichEditorTextSpanResult | RichEditorImageSpanResult>
 
 The selected text content.
 
-**Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 23
 

@@ -15,7 +15,7 @@ Defines cross-device collaborative operation information.
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## actionName
@@ -25,7 +25,7 @@ actionName?: string
 ```
 
 Operation button displayed in the notification. The value must be the same as that of **title** in   
-[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md).
+[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton).
 
 **Type:** string
 
@@ -91,7 +91,7 @@ userInput?: string
 ```
 
 User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in   
-[NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md).
+[NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#NotificationUserInput).
 
 **Type:** string
 

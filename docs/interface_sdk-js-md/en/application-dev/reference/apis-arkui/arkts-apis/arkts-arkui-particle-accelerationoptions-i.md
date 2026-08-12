@@ -18,7 +18,7 @@ angle?: ParticlePropertyOptions
 
 Angle property options.
 
-**Type:** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**Type:** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ speed?: ParticlePropertyOptions
 
 Speed property options.
 
-**Type:** [ParticlePropertyOptions](../arkts-components/arkts-arkui-particlepropertyoptions-i.md)
+**Type:** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
 **Since:** 23
 

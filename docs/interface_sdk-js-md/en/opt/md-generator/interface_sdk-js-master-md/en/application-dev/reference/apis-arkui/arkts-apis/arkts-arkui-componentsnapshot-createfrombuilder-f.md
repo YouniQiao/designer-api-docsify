@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## createFromBuilder
@@ -17,17 +17,17 @@ Renders a custom component in the application background and outputs its snapsho
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
+> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
 > object associated with the current UI context.
 > 
 > - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
 > has a delay of less than 500 ms.
 > 
 > - Components in the builder do not support the setting of animation-related attributes, such as
-> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+> [transition](common).
 > 
-> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) or [Web](web) component
+> - If a component is on a time-consuming task, for example, an [Image](image) or [Web](web) component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
@@ -35,7 +35,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder
+**Substitutes:** [createFromBuilder](ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,9 +59,9 @@ Renders a custom component in the application background and outputs its snapsho
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
 
 ## Examples
 
@@ -137,17 +137,17 @@ Renders a custom component in the application background and outputs its snapsho
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
+> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
 > object associated with the current UI context.
 > 
 > - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
 > has a delay of less than 500 ms.
 > 
 > - Components in the builder do not support the setting of animation-related attributes, such as
-> [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+> [transition](common).
 > 
-> - If a component is on a time-consuming task, for example, an [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md) or [Web](web) component
+> - If a component is on a time-consuming task, for example, an [Image](image) or [Web](web) component
 > that is loading online images, its loading may be still in progress when this API is called. In this case, the
 > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
@@ -155,7 +155,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder
+**Substitutes:** [createFromBuilder](ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,15 +178,15 @@ Renders a custom component in the application background and outputs its snapsho
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
 
 ## Examples
 

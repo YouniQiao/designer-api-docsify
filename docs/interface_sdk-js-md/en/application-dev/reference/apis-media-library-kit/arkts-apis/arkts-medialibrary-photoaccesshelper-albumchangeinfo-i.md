@@ -13,7 +13,7 @@ Describes the information about an album.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumName
@@ -42,7 +42,7 @@ albumSubtype: AlbumSubtype
 
 Subtype of the album.
 
-**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e.md)
+**Type:** AlbumSubtype
 
 **Since:** 20
 
@@ -60,7 +60,7 @@ albumType: AlbumType
 
 Type of the album.
 
-**Type:** [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e.md)
+**Type:** AlbumType
 
 **Since:** 20
 

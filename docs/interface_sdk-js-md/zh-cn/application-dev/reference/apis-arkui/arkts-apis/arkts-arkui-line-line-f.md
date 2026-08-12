@@ -24,13 +24,13 @@ export declare function Line(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LineOptions](../arkts-components/arkts-arkui-lineoptions-i.md) | 否 | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | 否 | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md) | 直线的属性。 |
+| [LineAttribute](arkts-arkui-line-lineattribute-i.md) | 直线的属性。 |
 
 
 ## Line
@@ -59,11 +59,11 @@ export declare function Line(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LineAttribute&gt; | 是 | 设置组件属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LineAttribute](arkts-arkui-line-lineattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LineAttribute](../arkts-components/arkts-arkui-line-attribute.md) |  |
+| [LineAttribute](arkts-arkui-line-lineattribute-i.md) |  |
 

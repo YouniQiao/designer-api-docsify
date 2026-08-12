@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager](arkts-commoneventmanager.md)
+**替代接口：** [commonEventManager](arkts-commoneventmanager.md#commonEventManager)
 
 <!--Device-unnamed-declare namespace commonEvent--><!--Device-unnamed-declare namespace commonEvent-End-->
 

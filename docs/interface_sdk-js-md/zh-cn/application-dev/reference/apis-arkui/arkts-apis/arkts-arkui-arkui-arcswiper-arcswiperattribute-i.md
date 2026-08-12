@@ -1,8 +1,8 @@
 # ArcSwiperAttribute
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性，不支持[Menu控制](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+除支持[通用属性](./@internal/component/ets/common)外，还支持以下属性，不支持[Menu控制](./@internal/component/ets/common)。
 
-**继承/实现关系：** ArcSwiperAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** ArcSwiperAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 26.0.0
 
@@ -67,7 +67,7 @@ default digitalCrownSensitivity(sensitivity: CrownSensitivity | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) \| undefined | 是 | 旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。&lt;br/&gt;取值为undefined时，旋转表冠的灵敏度为CrownSensitivity.MEDIUM。 |
+| sensitivity | CrownSensitivity \| undefined | 是 | 旋转表冠的灵敏度。设置不同灵敏度级别可调整表冠滚动的响应速度。&lt;br/&gt;取值为undefined时，旋转表冠的灵敏度为CrownSensitivity.MEDIUM。 |
 
 **返回值：**
 
@@ -171,7 +171,7 @@ default duration(duration: int | undefined): this
 default effectMode(edgeEffect: EdgeEffect | undefined): this
 ```
 
-设置边缘滑动效果。未通过该接口设置时，边缘滑动效果默认为EdgeEffect.Spring。通过[ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
+设置边缘滑动效果。未通过该接口设置时，边缘滑动效果默认为EdgeEffect.Spring。通过[ArcSwiperController](./@internal/component/ets/swiper:ArcSwiperController)的showNext、showPrevious、finishAnimation接口控制翻页时，回弹效果不生效。
 
 **起始版本：** 26.0.0
 
@@ -187,7 +187,7 @@ default effectMode(edgeEffect: EdgeEffect | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](arkts-arkui-edgeeffect-e.md) \| undefined | 是 | 边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。&lt;br/&gt;取值为undefined时，边缘滑动效果为EdgeEffect.Spring。 |
+| edgeEffect | EdgeEffect \| undefined | 是 | 边缘滑动效果。通过ArcSwiperController接口控制翻页时，回弹效果不生效。&lt;br/&gt;取值为undefined时，边缘滑动效果为EdgeEffect.Spring。 |
 
 **返回值：**
 
@@ -263,7 +263,7 @@ default onAnimationEnd(handler: AnimationEndHandler | undefined): this
 
 切换动画结束时触发该回调。默认无回调。
 
-当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](arkts-arkui-swiper-swipercontroller-c.md)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
+当ArcSwiper切换动效结束时触发，包括动画过程中手势中断，通过[SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md#SwiperController)调用finishAnimation。参数为动画结束后的index值，多列ArcSwiper时，index为最左侧组件的索引。
 
 **起始版本：** 26.0.0
 

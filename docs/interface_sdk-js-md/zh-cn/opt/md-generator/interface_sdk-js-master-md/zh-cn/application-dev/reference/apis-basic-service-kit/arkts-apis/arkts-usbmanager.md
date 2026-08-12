@@ -4,13 +4,13 @@
 
 > **使用说明**
 > 
-> 凡是参数类型为[usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)的接口,都需要执行如下操作：
+> 凡是参数类型为[usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe)的接口,都需要执行如下操作：
 > **在使用接口前：**
-> 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)获取设备列表。
-> 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)获取请求权限。
-> 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)得到[usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)作为参数。
+> 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)获取设备列表。
+> 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)获取请求权限。
+> 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)得到[usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe)作为参数。
 > **在使用接口后：**
-> 调用[usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closepipe)关闭设备消息控制通道。
+> 调用[usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closePipe)关闭设备消息控制通道。
 
 **起始版本：** 9
 

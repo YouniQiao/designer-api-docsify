@@ -9,14 +9,14 @@ function getProcessRunningInformation(): Promise<Array<ProcessRunningInfo>>
 Obtains information about the running processes. This API uses a promise to return the result.
 
 > This API is deprecated since API version 9. You are advised to use
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [ohos.app.ability.appManager:appManager#getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager:appManager#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -37,7 +37,7 @@ Obtains information about the running processes. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 
 
 ## getProcessRunningInformation
@@ -56,7 +56,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [ohos.app.ability.appManager:appManager#getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+**Substitutes:** [getRunningProcessInformation](ohos.app.ability.appManager:appManager#getRunningProcessInformation)
 
 **Required permissions:** 
 - API version 8 - 10: ohos.permission.GET_RUNNING_INFO
@@ -77,5 +77,5 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |

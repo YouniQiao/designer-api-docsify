@@ -2,7 +2,7 @@
 
 2D path object for path drawing
 
-**Inheritance/Implementation:** Path2D extends [CanvasPath](../arkts-components/arkts-arkui-canvaspath-c.md/arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md#CanvasPath)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Adds a path according to the specified path variable.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | Indicates the path object to be added. |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Indicates the path object to be added. |
 | transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Transformation matrix of the new trail. The default value is null. |
 
 ## constructor
@@ -101,7 +101,7 @@ Create a copy of a path object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | Path object to be copied |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Path object to be copied |
 
 ## constructor
 
@@ -125,7 +125,7 @@ Create a copy of a path object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | Path object to be copied |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Path object to be copied |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Yes | the unit mode |
 
 ## constructor

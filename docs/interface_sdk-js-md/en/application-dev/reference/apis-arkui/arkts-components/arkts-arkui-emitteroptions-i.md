@@ -74,7 +74,7 @@ Particle configuration.
 - **config**: configuration of the particle type.  
 - The value type of **config** is subject to the value of **type**.
 
-1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md).2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md).
+1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#PointParticleParameters).2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#ImageParticleParameters).
 
 - **count**: number of particles. The value is greater than or equal to -1. The value **-1** indicates that the   
 number of particles is infinite.  
@@ -110,7 +110,7 @@ Emitter position (distance from the upper left corner of the component). The fir
 
 Default value: **[0.0, 0.0]**
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
 
 **Default:** [0,0]
 
@@ -162,7 +162,7 @@ Size of the emit window. The first parameter indicates the emitter width, and th
 
 Default value: **['100%','100%']** (that is, the emission window occupies the entire Particle component.)
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
 
 **Default:** ['100%','100%']
 

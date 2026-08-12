@@ -1,6 +1,6 @@
 # ControllerHandler
 
-Defines the onWindowNew callback, related to {@link onWindowNew} method.
+Defines the onWindowNew callback, related to [onWindowNew](onWindowNew) method.
 
 **Since:** 9
 
@@ -50,5 +50,5 @@ Sets a **WebviewController** object. If opening a new window is not needed, set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [WebviewController](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md) | Yes |  |
+| controller | [WebviewController](arkts-arkweb-webviewcontroller-t.md) | Yes |  |
 

@@ -79,7 +79,7 @@ extraInfos?: Record<string, Object>
 Extra information. You are advised to use this property to replace **extraInfo**. When this property is set,  
 **extraInfo** does not take effect.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -109,7 +109,7 @@ This attribute is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 11
 
-**Substitutes:** [WantAgentInfo.actionType](arkts-ability-wantagentinfo-wantagentinfo-i.md#actiontype)
+**Substitutes:** [actionType](#actionType)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -155,7 +155,7 @@ This attribute is supported since API version 7 and deprecated since API version
 
 **Deprecated since:** 11
 
-**Substitutes:** [WantAgentInfo.actionFlags](arkts-ability-wantagentinfo-wantagentinfo-i.md#actionflags)
+**Substitutes:** [actionFlags](#actionFlags)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

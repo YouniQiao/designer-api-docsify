@@ -8,7 +8,7 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver](arkts-test-uitest-driver-c.md)
+**Substitutes:** [Driver](arkts-test-uitest-driver-c.md#Driver)
 
 <!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
 
@@ -17,7 +17,7 @@ The **UiDriver** class is the main entry to the UiTest framework. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -34,7 +34,7 @@ Asserts that a component that matches the given attributes exists on the current
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#assertComponentExist](arkts-test-uitest-driver-c.md#assertcomponentexist)
+**Substitutes:** [assertComponentExist](arkts-test-uitest-driver-c.md#assertComponentExist)
 
 <!--Device-UiDriver-assertComponentExist(by: By): Promise<void>--><!--Device-UiDriver-assertComponentExist(by: By): Promise<void>-End-->
 
@@ -56,9 +56,9 @@ Asserts that a component that matches the given attributes exists on the current
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the input parameters are invalid. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the input parameters are invalid. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -86,7 +86,7 @@ Clicks a specific point of this **UiDriver** object based on the given coordinat
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#click](arkts-test-uitest-component-c.md#click)
+**Substitutes:** [click](arkts-test-uitest-component-c.md#click)
 
 <!--Device-UiDriver-click(x: number, y: number): Promise<void>--><!--Device-UiDriver-click(x: number, y: number): Promise<void>-End-->
 
@@ -136,7 +136,7 @@ Creates a **UiDriver** object and returns the object created. This API is a stat
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#create](arkts-test-uitest-driver-c.md#create)
+**Substitutes:** [create](arkts-test-uitest-driver-c.md#create)
 
 <!--Device-UiDriver-static create(): UiDriver--><!--Device-UiDriver-static create(): UiDriver-End-->
 
@@ -173,7 +173,7 @@ Delays a duration of time. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#delayMs](arkts-test-uitest-driver-c.md#delayms)
+**Substitutes:** [delayMs](arkts-test-uitest-driver-c.md#delayMs)
 
 <!--Device-UiDriver-delayMs(duration: number): Promise<void>--><!--Device-UiDriver-delayMs(duration: number): Promise<void>-End-->
 
@@ -217,7 +217,7 @@ Double-clicks a specific point of this **UiDriver** object based on the given co
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#doubleClick](arkts-test-uitest-component-c.md#doubleclick)
+**Substitutes:** [doubleClick](arkts-test-uitest-component-c.md#doubleClick)
 
 <!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>-End-->
 
@@ -262,7 +262,7 @@ Searches this **UiDriver** object for the target component that matches the give
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#findComponent](arkts-test-uitest-driver-c.md#findcomponent)(on:
+**Substitutes:** [findComponent](Driver#findComponent(on:)
 
 <!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>--><!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>-End-->
 
@@ -278,7 +278,7 @@ Searches this **UiDriver** object for the target component that matches the give
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiComponent&gt; | Promise used to return the component. |
+| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise used to return the component. |
 
 ## Examples
 
@@ -306,7 +306,7 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#findComponents](arkts-test-uitest-driver-c.md#findcomponents)(on:
+**Substitutes:** [findComponents](Driver#findComponents(on:)
 
 <!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>--><!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>-End-->
 
@@ -322,7 +322,7 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UiComponent&gt;&gt; | Promise used to return the list of components. |
+| Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; | Promise used to return the list of components. |
 
 ## Examples
 
@@ -350,7 +350,7 @@ Long-clicks a specific point of this **UiDriver** object based on the given coor
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#longClick](arkts-test-uitest-component-c.md#longclick)
+**Substitutes:** [longClick](arkts-test-uitest-component-c.md#longClick)
 
 <!--Device-UiDriver-longClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-longClick(x: number, y: number): Promise<void>-End-->
 
@@ -395,7 +395,7 @@ Presses the Back button on this **UiDriver** object. This API uses a promise to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#pressBack](arkts-test-uitest-driver-c.md#pressback)()
+**Substitutes:** [pressBack](arkts-test-uitest-driver-c.md#pressBack)()
 
 <!--Device-UiDriver-pressBack(): Promise<void>--><!--Device-UiDriver-pressBack(): Promise<void>-End-->
 
@@ -433,7 +433,7 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#screenCap](arkts-test-uitest-driver-c.md#screencap)(savePath:
+**Substitutes:** [screenCap](Driver#screenCap(savePath:)
 
 <!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>--><!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>-End-->
 
@@ -477,7 +477,7 @@ Swipes on this **UiDriver** object from the start point to the end point based o
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#swipe](arkts-test-uitest-driver-c.md#swipe)
+**Substitutes:** [swipe](arkts-test-uitest-driver-c.md#swipe)
 
 <!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>--><!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>-End-->
 
@@ -524,7 +524,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [Driver#triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode:
+**Substitutes:** [triggerKey](Driver#triggerKey(keyCode:)
 
 <!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>--><!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>-End-->
 
@@ -534,7 +534,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| keyCode | number | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
 
 **Return value:**
 

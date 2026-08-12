@@ -19,7 +19,7 @@ curve?: Curve | string | ICurve
 Animation curve.&lt;br&gt;You are advised to specify the curve using the **Curve** or  
 ** ICurve** type.&lt;br&gt;For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in AnimateParam.&lt;br&gt;Default value: **Curve.Linear**.
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| ICurve
+**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-t.md)
 
 **Default:** 1000
 

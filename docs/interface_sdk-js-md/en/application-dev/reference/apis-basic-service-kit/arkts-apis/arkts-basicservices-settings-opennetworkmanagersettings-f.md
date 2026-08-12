@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## openNetworkManagerSettings
@@ -38,8 +38,8 @@ Open the network manager settings page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) | Parameter error. |
-| [14800010](../../apis-basic-services-kit/errorcode-settings.md#14800010-uiability-required) | Original service error. @atomicservice |
+| [14800000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) | Parameter error. |
+| [14800010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) | Original service error. @atomicservice |
 
 ## Examples
 

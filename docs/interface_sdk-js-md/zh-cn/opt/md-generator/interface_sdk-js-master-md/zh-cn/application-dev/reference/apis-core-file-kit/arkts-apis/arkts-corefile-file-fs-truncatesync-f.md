@@ -20,7 +20,7 @@ declare function truncateSync(file: string | number, len?: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
 | len | number | 否 |
 
 **错误码：**

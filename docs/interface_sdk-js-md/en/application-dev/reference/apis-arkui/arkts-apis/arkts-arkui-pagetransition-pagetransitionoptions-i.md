@@ -18,7 +18,7 @@ curve?: Curve | string | ICurve
 
 PageTransition animation curve.
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| ICurve
+**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](../arkts-components/arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Linear
 
@@ -82,7 +82,7 @@ type?: RouteType
 
 RouteType in which the pageTransition can work.
 
-**Type:** [RouteType](../arkts-components/arkts-arkui-routetype-e.md)
+**Type:** [RouteType](arkts-arkui-pagetransition-routetype-e.md)
 
 **Since:** 23
 

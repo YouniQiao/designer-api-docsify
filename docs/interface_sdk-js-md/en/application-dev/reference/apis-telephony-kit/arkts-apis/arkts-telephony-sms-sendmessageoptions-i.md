@@ -13,7 +13,7 @@ Provides the options (including callbacks) for sending an SMS message.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## content
@@ -42,7 +42,7 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 Indicates the callback invoked after the SMS message is delivered.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;IDeliveryShortMessageCallback&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
 **Since:** 6
 
@@ -96,7 +96,7 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 Indicates the callback invoked after the SMS message is sent.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ISendShortMessageCallback&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
 **Since:** 6
 

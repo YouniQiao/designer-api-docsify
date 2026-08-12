@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from 'kits/@kit.DataProtectionKit';
+import { identifySensitiveContent } from '@kit.DataProtectionKit';
 ```
 
 ## scanFile
@@ -35,18 +35,18 @@ Identifies sensitive content in a specified file based on the configured policy 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;MatchResult&gt;&gt; | Promise used to return the identification result of sensitive content. If the operation is successful, the matching result array is returned. If the operation fails, an error code is returned. |
+| Promise&lt;Array&lt;[MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)&gt;&gt; | Promise used to return the identification result of sensitive content. If the operation is successful, the matching result array is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19110003](../errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [19110002](../errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
-| [19110001](../errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
-| [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
+| [19110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [19110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
+| [19110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
+| [19110004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied. |
 
 ## Examples
 

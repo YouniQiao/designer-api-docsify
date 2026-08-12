@@ -18,7 +18,7 @@ Implements a sound pool that provides APIs for loading, unloading, playing, and 
 > for the event indicating that the playback is finished.
 > > - [on('error')](SoundPool.on(type: 'error', callback: ErrorCallback)): listens for error events.
 > > - [on('errorOccurred')](SoundPool.on(type: 'errorOccurred', callback: Callback&lt;ErrorInfo&gt;)): listens for
-> error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md).
+> error events and returns [errorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo).
 > 
 > - Currently, SoundPool does not support audio focus policies such as background playback and audio interruption, or
 > skipping the silent frames at the beginning and end of an audio file. For details about low-latency playback using
@@ -43,8 +43,8 @@ This API uses an asynchronous callback to obtain the resource ID. The input para
 **fd://**, which is generated based on the file descriptor (FD) obtained.
 
 This API cannot be used to load resources in the **rawfile** directory. Instead, use   
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)or   
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load).
+[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)or   
+[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3).
 
 > **NOTE：**
 > 
@@ -72,9 +72,9 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
@@ -87,8 +87,8 @@ Loads a sound. This API uses a promise to return the result.
 This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
 
 This API cannot be used to load resources in the **rawfile** directory. Instead, use   
-[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](arkts-media-soundpool-soundpool-i.md#load)or   
-[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](arkts-media-soundpool-soundpool-i.md#load).
+[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)or   
+[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load-3).
 
 > **NOTE：**
 > 
@@ -115,15 +115,15 @@ This API cannot be used to load resources in the **rawfile** directory. Instead,
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
@@ -163,9 +163,9 @@ This API uses an asynchronous callback to obtain the resource ID. For the input 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## load
 
@@ -204,15 +204,15 @@ This API uses a promise to obtain the resource ID. For the input parameter, reso
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## off('loadComplete')
 
@@ -313,7 +313,7 @@ Unsubscribes from error events of a SoundPool instance.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'errorOccurred' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | No |
 
 ## on('loadComplete')
 
@@ -413,7 +413,7 @@ on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 ```
 
 Subscribes to error events of a   
-[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
+[SoundPool](../../../reference/apis-media-kit/js-apis-inner-multimedia-soundPool.md#soundpool) instance and returns [ErrorInfo](arkts-media-soundpool-errorinfo-i.md#ErrorInfo) that contains the error code, error stage, resource ID, and audio stream ID. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
 
@@ -426,7 +426,7 @@ Subscribes to error events of a
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'errorOccurred' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ErrorInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | Yes |
 
 ## play
 
@@ -447,16 +447,16 @@ Plays a sound and obtains the stream ID. This API uses an asynchronous callback 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | soundID | number | Yes |
-| params | [PlayParameters](arkts-media-media-playparameters-t.md) | Yes |
+| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## play
 
@@ -483,9 +483,9 @@ Plays a sound using default parameters and obtains the stream ID. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## play
 
@@ -506,21 +506,21 @@ Plays a sound and obtains the stream ID. This API uses a promise to return the r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | soundID | number | Yes |
-| params | [PlayParameters](arkts-media-media-playparameters-t.md) | No |
+| params | [PlayParameters](arkts-media-soundpool-playparameters-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -546,7 +546,7 @@ Releases a **SoundPool** instance. This API uses an asynchronous callback to ret
 
 | Error Code ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -566,13 +566,13 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setInterruptMode
 
@@ -623,9 +623,9 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setLoop
 
@@ -652,15 +652,15 @@ Sets the loop mode. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setPriority
 
@@ -688,9 +688,9 @@ Sets the priority for an audio stream. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setPriority
 
@@ -717,15 +717,15 @@ Sets the priority for an audio stream. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setRate
 
@@ -753,9 +753,9 @@ Sets the playback rate for an audio stream. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setRate
 
@@ -782,15 +782,15 @@ Sets the playback rate for an audio stream. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setVolume
 
@@ -811,17 +811,17 @@ Sets the volume for an audio stream. This API uses an asynchronous callback to r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | streamID | number | Yes |
-| leftVolume | number | Yes |
-| rightVolume | number | Yes |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setVolume
 
@@ -842,22 +842,22 @@ Sets the volume for an audio stream. This API uses a promise to return the resul
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | streamID | number | Yes |
-| leftVolume | number | Yes |
-| rightVolume | number | Yes |
+| [leftVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
+| [rightVolume](arkts-media-soundpool-playparameters-i.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
@@ -884,9 +884,9 @@ Stops audio playback. This API uses an asynchronous callback to return the resul
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
@@ -912,15 +912,15 @@ Stops audio playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## unload
 
@@ -947,9 +947,9 @@ Unloads a sound. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## unload
 
@@ -975,12 +975,12 @@ Unloads a sound. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |

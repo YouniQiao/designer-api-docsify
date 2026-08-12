@@ -13,7 +13,7 @@ Defines the parameters for continuous vibration.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## frequency

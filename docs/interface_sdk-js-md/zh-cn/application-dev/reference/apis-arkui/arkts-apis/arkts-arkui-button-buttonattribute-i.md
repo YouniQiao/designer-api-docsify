@@ -1,8 +1,8 @@
 # ButtonAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** ButtonAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** ButtonAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<ButtonAttribute> | Attribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;ButtonAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | Button组件的属 性修改器。 取值为undefined时，则不使用attributeModifier。&lt;br/&gt;ButtonAttribute：当前组件的[属性](../arkts-components/arkts-arkui-button-attribute.md/arkts-arkui-button-attribute.md)&lt;br/&gt; CommonMethod：[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ButtonAttribute](arkts-arkui-button-buttonattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | Button组件的属 性修改器。 取值为undefined时，则不使用attributeModifier。&lt;br/&gt;ButtonAttribute：当前组件的[属性](#ButtonAttribute)&lt;br/&gt; CommonMethod：[通用属性](common) |
 
 **返回值：**
 
@@ -49,12 +49,12 @@ default buttonStyle(value: ButtonStyleMode | undefined): this
 ```
 
 设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、[fontColor](arkts-arkui-button-buttonattribute-i.md#fontcolor)和  
-[role](arkts-arkui-button-buttonattribute-i.md#role)接口设置，实际显示效果以最后一次设置为准。
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、[fontColor](#fontColor)和  
+[role](role)接口设置，实际显示效果以最后一次设置为准。
 
 > **说明：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 23
 
@@ -100,7 +100,7 @@ default contentModifier(modifier: ContentModifier<ButtonConfiguration> | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; \| undefined | 是 | 在Button组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需要自定义class实 现ContentModifier接口。取值为undefined时，则不使用contentModifier。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-button-buttonconfiguration-i.md)&gt; \| undefined | 是 | 在Button组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需要自定义class实 现ContentModifier接口。取值为undefined时，则不使用contentModifier。 |
 
 **返回值：**
 
@@ -130,7 +130,7 @@ default controlSize(value: ControlSize | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ControlSize](../arkts-components/arkts-arkui-controlsize-e.md) \| undefined | 是 | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL &lt;br/&gt;设置undefined时与默认值保持一致。 |
+| value | [ControlSize](arkts-arkui-button-controlsize-e.md) \| undefined | 是 | Button组件的尺寸。&lt;br/&gt;默认值：ControlSize.NORMAL &lt;br/&gt;设置undefined时与默认值保持一致。 |
 
 **返回值：**
 
@@ -190,7 +190,7 @@ default fontFamily(value: string | Resource | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource \| undefined | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](arkts-font.md)。&lt;br/&gt;设置undefined时与默认值保持一致。 |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](arkts-font.md#font)。&lt;br/&gt;设置undefined时与默认值保持一致。 |
 
 **返回值：**
 
@@ -280,7 +280,7 @@ default fontWeight(value: int | FontWeight | string | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | int \| FontWeight \| string \| undefined | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。&lt;br&gt;默认值：500&lt;br/&gt; string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。&lt;br/ &gt;当值为异常值或非法值时，字体粗细取值为400。&lt;br/&gt;设置undefined时与异常值保持一致。 |
+| value | int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| undefined | 是 | 文本的字体粗细，number类型取值[100, 900]，取值间隔为100，取值越大，字体越粗。&lt;br&gt;默认值：500&lt;br/&gt; string类型仅支持number类型取值的字符串形式，例如'400'，以及'bold'、'bolder'、'lighter'、'regular'、'medium'，分别对应FontWeight中相应的枚举值。&lt;br/ &gt;当值为异常值或非法值时，字体粗细取值为400。&lt;br/&gt;设置undefined时与异常值保持一致。 |
 
 **返回值：**
 
@@ -340,7 +340,7 @@ default maxFontScale(scale: double | Resource | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | double \| Resource \| undefined | 是 | 文本最大的字体缩放倍数。&lt;br/&gt;取值范围： [1, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于1时，按值为1处理，异常值默认不生效。&lt;br/&gt;未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。&lt;br/&gt;设置undefined时不生效。 |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | 文本最大的字体缩放倍数。&lt;br/&gt;取值范围： [1, +∞)&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于1时，按值为1处理，异常值默认不生效。&lt;br/&gt;未设置最大缩放倍数时，圆形按钮最大缩放倍数为1倍，胶囊型按钮、普通按钮、圆角矩形按钮最大缩放倍数跟随系统设置。&lt;br/&gt;设置undefined时不生效。 |
 
 **返回值：**
 
@@ -370,7 +370,7 @@ default minFontScale(scale: double | Resource | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | double \| Resource \| undefined | 是 | 文本最小的字体缩放倍数。&lt;br/&gt;取值范围：[0, 1]&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0时，按值为0处理，设置的值大于1，按值为1处 理，异常值默认不生效。&lt;br/&gt;设置undefined时不生效。 |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | 文本最小的字体缩放倍数。&lt;br/&gt;取值范围：[0, 1]&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0时，按值为0处理，设置的值大于1，按值为1处 理，异常值默认不生效。&lt;br/&gt;设置undefined时不生效。 |
 
 **返回值：**
 
@@ -385,8 +385,8 @@ default role(value: ButtonRole | undefined): this
 ```
 
 设置Button组件的角色。根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、[fontColor](arkts-arkui-button-buttonattribute-i.md#fontcolor)和  
-[buttonStyle](arkts-arkui-button-buttonattribute-i.md#buttonstyle)接口设置，实际显示效果以最后一次设置为准。
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、[fontColor](#fontColor)和  
+[buttonStyle](buttonStyle)接口设置，实际显示效果以最后一次设置为准。
 
 **起始版本：** 23
 
@@ -402,7 +402,7 @@ default role(value: ButtonRole | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ButtonRole](../arkts-components/arkts-arkui-buttonrole-e.md) \| undefined | 是 | 设置Button组件的角色。&lt;br/&gt;默认值：ButtonRole.NORMAL &lt;br/&gt;设置undefined时与默认值保持一致。 |
+| value | [ButtonRole](arkts-arkui-button-buttonrole-e.md) \| undefined | 是 | 设置Button组件的角色。&lt;br/&gt;默认值：ButtonRole.NORMAL &lt;br/&gt;设置undefined时与默认值保持一致。 |
 
 **返回值：**
 

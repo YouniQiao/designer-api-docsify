@@ -82,7 +82,7 @@ stopPropagation: Callback<void>
 
 Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **Since:** 18
 

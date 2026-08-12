@@ -34,11 +34,11 @@ abstract initialize(options?: ListOptions): ListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | 否 | list节点的选项。 |
+| options | ListOptions | 否 | list节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |  |
+| ListAttribute |  |
 

@@ -15,7 +15,7 @@ The definition of nearlinkConstant.
 ## Modules to Import
 
 ```TypeScript
-import { nearlinkConstant } from 'kits/@kit.ConnectivityKit';
+import { nearlinkConstant } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

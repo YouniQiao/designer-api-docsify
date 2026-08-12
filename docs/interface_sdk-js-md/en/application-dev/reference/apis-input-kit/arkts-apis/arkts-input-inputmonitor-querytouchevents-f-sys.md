@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMonitor } from 'kits/@kit.InputKit';
+import { inputMonitor } from '@kit.InputKit';
 ```
 
 ## queryTouchEvents
@@ -36,14 +36,14 @@ Queries recent touchscreen input events. A maximum of 100 events can be queried.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md)&gt;&gt; | Promise used to return the queried touchscreen input events. It contains the following valid information; all other information is invalid:&lt;br/&gt;- **actionTime**: Time when the touchscreen input event occurred, in microseconds (μs) since system startup.&lt;br/&gt;- [SourceType]{ |
+| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)&gt;&gt; | Promise used to return the queried touchscreen input events. It contains the following valid information; all other information is invalid:&lt;br/&gt;- **actionTime**: Time when the touchscreen input event occurred, in microseconds (μs) since system startup.&lt;br/&gt;- [SourceType]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

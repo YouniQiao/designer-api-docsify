@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getStatusMonitor
@@ -30,7 +30,7 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| localUserId | number | Yes |
+| [localUserId](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -42,10 +42,10 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-| [32600002](../errorcode-useriam.md#32600002-template-not-found) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-template-not-found) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

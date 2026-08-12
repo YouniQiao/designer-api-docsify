@@ -36,7 +36,7 @@ constructor(value: number, total: number, color: ResourceColor)
 | --- | --- | --- | --- |
 | value | number | 是 | 进度遮罩的当前值。&lt;br/&gt; 取值范围：[0.0, +∞) |
 | total | number | 是 | 进度遮罩的最大值。&lt;br/&gt; 取值范围：[0.0, +∞) |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 进度遮罩的颜色。 |
+| color | ResourceColor | 是 | 进度遮罩的颜色。 |
 
 ## enableBreathingAnimation
 
@@ -88,7 +88,7 @@ updateColor(value: ResourceColor): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 进度遮罩的颜色。 |
+| value | ResourceColor | 是 | 进度遮罩的颜色。 |
 
 ## updateProgress
 

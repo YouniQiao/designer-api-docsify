@@ -450,7 +450,7 @@ Sets a value or an array of values.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes |  |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |  |
 | offset | number | No |  |
 
 ## slice
@@ -638,7 +638,7 @@ readonly buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md)
+**Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

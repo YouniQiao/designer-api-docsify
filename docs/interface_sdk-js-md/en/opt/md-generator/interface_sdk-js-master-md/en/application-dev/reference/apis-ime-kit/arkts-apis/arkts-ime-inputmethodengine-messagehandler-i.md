@@ -6,14 +6,14 @@ Represents a custom communication object.
 > 
 > You can register this object to receive custom communication data sent by the edit box application attached to
 > the input method application. When the custom communication data is received, the
-> [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) callback in
+> [onMessage](#onMessage-1) callback in
 > this object is triggered.
 > 
 > This object is globally unique. After multiple registrations, only the last registered object is valid and
-> retained, and the [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the
+> retained, and the [onTerminated](#onTerminated) callback of the
 > penultimate registered object is triggered.
 > 
-> If this object is unregistered, its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated)
+> If this object is unregistered, its [onTerminated](#onTerminated)
 > callback will be triggered.
 
 **Since:** 15
@@ -25,7 +25,7 @@ Represents a custom communication object.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## onMessage
@@ -38,7 +38,7 @@ Receives the custom data callback sent by the edit box application attached to t
 
 > **NOTE：**
 > 
-> This callback is triggered when the registered [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md)
+> This callback is triggered when the registered [MessageHandler](#MessageHandler)
 > receives custom communication data sent by the edit box application attached to the input method application.
 > 
 > The **msgId** parameter is mandatory, and the **msgParam** parameter is optional. If only the custom **msgId**
@@ -54,7 +54,7 @@ Receives the custom data callback sent by the edit box application attached to t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| msgId | string | Yes |
+| [msgId](../../apis-network-kit/arkts-apis/arkts-network-eap-eapdata-i.md) | string | Yes |
 | msgParam | ArrayBuffer | No |
 
 ## Examples
@@ -87,13 +87,13 @@ Listens for MessageHandler termination.
 
 > **NOTE：**
 > 
-> When an application registers a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the penultimate registered
-> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered.
+> When an application registers a new [MessageHandler](#MessageHandler) object, the
+> [onTerminated](#onTerminated) callback of the penultimate registered
+> [MessageHandler](#MessageHandler) object is triggered.
 > 
-> When an application unregisters a new [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object, the
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback of the registered
-> [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) object is triggered.
+> When an application unregisters a new [MessageHandler](#MessageHandler) object, the
+> [onTerminated](#onTerminated) callback of the registered
+> [MessageHandler](#MessageHandler) object is triggered.
 
 **Since:** 15
 

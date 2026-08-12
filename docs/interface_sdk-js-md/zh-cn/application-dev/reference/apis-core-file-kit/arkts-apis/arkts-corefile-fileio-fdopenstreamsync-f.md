@@ -14,7 +14,7 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:fdopenStreamSync](arkts-corefile-fileio-fdopenstreamsync-f.md#fdopenstreamsync)
+**替代接口：** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenStreamSync)
 
 <!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
 
@@ -31,5 +31,5 @@ declare function fdopenStreamSync(fd: number, mode: string): Stream
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) | 返回文件流的结果。 |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) | 返回文件流的结果。 |
 

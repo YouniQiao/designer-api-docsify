@@ -8,7 +8,7 @@ P2P device information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pDevice
+**Substitutes:** [WifiP2pDevice](ohos.wifiManager/wifiManager.WifiP2pDevice)
 
 <!--Device-wifi-interface WifiP2pDevice--><!--Device-wifi-interface WifiP2pDevice-End-->
 
@@ -17,7 +17,7 @@ P2P device information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -36,7 +36,7 @@ Device mac address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pDevice.deviceAddress
+**Substitutes:** [deviceAddress](ohos.wifiManager/wifiManager.WifiP2pDevice.deviceAddress)
 
 <!--Device-WifiP2pDevice-deviceAddress: string--><!--Device-WifiP2pDevice-deviceAddress: string-End-->
 
@@ -58,7 +58,7 @@ Device name
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pDevice.deviceName
+**Substitutes:** [deviceName](ohos.wifiManager/wifiManager.WifiP2pDevice.deviceName)
 
 <!--Device-WifiP2pDevice-deviceName: string--><!--Device-WifiP2pDevice-deviceName: string-End-->
 
@@ -72,7 +72,7 @@ deviceStatus: P2pDeviceStatus
 
 Device status
 
-**Type:** [P2pDeviceStatus](arkts-connectivity-wifi-p2pdevicestatus-e.md)
+**Type:** P2pDeviceStatus
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Device status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pDevice.deviceStatus
+**Substitutes:** [deviceStatus](ohos.wifiManager/wifiManager.WifiP2pDevice.deviceStatus)
 
 <!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus--><!--Device-WifiP2pDevice-deviceStatus: P2pDeviceStatus-End-->
 
@@ -102,7 +102,7 @@ Device group capabilities
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pDevice.groupCapabilitys
+**Substitutes:** [groupCapabilitys](#groupCapabilitys)
 
 <!--Device-WifiP2pDevice-groupCapabilitys: number--><!--Device-WifiP2pDevice-groupCapabilitys: number-End-->
 
@@ -124,7 +124,7 @@ Primary device type
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiP2pDevice.primaryDeviceType
+**Substitutes:** [primaryDeviceType](ohos.wifiManager/wifiManager.WifiP2pDevice.primaryDeviceType)
 
 <!--Device-WifiP2pDevice-primaryDeviceType: string--><!--Device-WifiP2pDevice-primaryDeviceType: string-End-->
 

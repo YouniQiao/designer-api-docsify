@@ -21,7 +21,7 @@ declare function writeSync(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:writeSync](arkts-corefile-fileio-writesync-f.md#writesync)
+**替代接口：** [writeSync](arkts-corefile-file-fs-writesync-f.md#writeSync)
 
 <!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number--><!--Device-unnamed-declare function writeSync(  fd: number,  buffer: ArrayBuffer | string,  options?: {    offset?: number;    length?: number;    position?: number;    encoding?: string;  }): number-End-->
 

@@ -1,6 +1,6 @@
 # OffscreenCanvasRenderingContext2D
 
-**继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**继承/实现关系：** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 <!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer--><!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer-End-->
 
@@ -57,7 +57,7 @@ constructor(width: number, height: number, settings?: RenderingContextSettings, 
 | width | number | 是 |
 | height | number | 是 |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 ## toDataURL
 

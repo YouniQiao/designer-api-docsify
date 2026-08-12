@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithStreamData
@@ -26,7 +26,7 @@ Creates a multi-bitrate media source for streaming media. Currently, only the HT
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | Yes |
+| streams | Array&lt;[MediaStream](arkts-media-media-mediastream-i.md)&gt; | Yes |
 
 **Return value:**
 

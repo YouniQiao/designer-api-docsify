@@ -13,7 +13,7 @@ This parameter is used to define the input of each filtering dimension.
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
+import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
 ```
 
 ## name
@@ -24,7 +24,7 @@ name: ResourceStr
 
 filter item name.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 22
 
@@ -46,7 +46,7 @@ options: Array<ResourceStr>
 
 filter options.
 
-**Type:** Array&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
+**Type:** Array&lt;ResourceStr&gt;
 
 **Since:** 22
 

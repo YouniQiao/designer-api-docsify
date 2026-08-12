@@ -34,11 +34,11 @@ abstract initialize(value: ProgressOptions): ProgressAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | 是 |  |
+| value | ProgressOptions | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) |  |
+| ProgressAttribute |  |
 

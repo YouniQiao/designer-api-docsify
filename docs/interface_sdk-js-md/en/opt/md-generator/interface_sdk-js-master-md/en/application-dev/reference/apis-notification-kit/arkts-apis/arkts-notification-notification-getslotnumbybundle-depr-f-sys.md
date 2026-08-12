@@ -12,7 +12,7 @@ Obtains the number of notification slots of a specified application.This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlotNumByBundle
+**Substitutes:** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ Obtains the number of notification slots of a specified application.This API use
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 
@@ -42,7 +42,7 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getSlotNumByBundle
+**Substitutes:** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -56,10 +56,10 @@ Obtains the number of notification slots of a specified application. This API us
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |

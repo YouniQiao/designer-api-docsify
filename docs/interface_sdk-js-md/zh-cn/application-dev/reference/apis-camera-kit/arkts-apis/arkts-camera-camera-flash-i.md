@@ -1,10 +1,10 @@
 # Flash
 
-Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。
+Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)。
 
 闪光灯类，对设备闪光灯操作。
 
-**继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
+**继承/实现关系：** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)
 
 **起始版本：** 11
 
@@ -42,7 +42,7 @@ getFlashMode(): FlashMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## offFlashStateChange
 
@@ -68,7 +68,7 @@ offFlashStateChange(callback?: Callback<FlashState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## onFlashStateChange
 
@@ -94,7 +94,7 @@ onFlashStateChange(callback: Callback<FlashState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | 是 | 回调函数，用于获取闪光灯状态变化信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | 是 | 回调函数，用于获取闪光灯状态变化信息。 |
 
 ## setFlashMode
 
@@ -106,7 +106,7 @@ setFlashMode(flashMode: FlashMode): void
 
 进行设置之前，需要先检查：
 
-1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasflash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported)。
+1. 设备是否支持闪光灯，可使用方法[hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash)。2. 设备是否支持指定的闪光灯模式，可使用方法[isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported)。
 
 **起始版本：** 11
 
@@ -128,5 +128,5 @@ setFlashMode(flashMode: FlashMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

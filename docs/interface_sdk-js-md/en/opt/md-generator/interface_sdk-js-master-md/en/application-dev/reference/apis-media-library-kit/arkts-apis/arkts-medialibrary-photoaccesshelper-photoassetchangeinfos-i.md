@@ -11,7 +11,7 @@ Describes the notification information about the change of a media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## assetChangeDatas
@@ -22,7 +22,7 @@ assetChangeDatas: PhotoAssetChangeData[] | null
 
 Array of changed media assets. If all media assets need to be queried again, **assetChangeDatas** is null.
 
-**Type:** PhotoAssetChangeData[] \| null
+**Type:** [PhotoAssetChangeData](arkts-medialibrary-photoaccesshelper-photoassetchangedata-i.md)[] \| null
 
 **Since:** 20
 

@@ -29,7 +29,7 @@ addAccountImplicitly(
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.Authenticator.createAccountImplicitly](arkts-basicservices-appaccount-authenticator-c.md#createaccountimplicitly)(options:
+**替代接口：** [createAccountImplicitly](appAccount.Authenticator.createAccountImplicitly(options:)
 
 <!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -64,7 +64,7 @@ auth(name: string, authType: string, options: Record<string, Object>, callback: 
 | --- | --- | --- |
 | name | string | 是 |
 | authType | string | 是 |
-| options | Record&lt;string, Object&gt; | 是 |
+| options | Record & lt;string, Object & gt; | 是 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 ## authenticate
@@ -89,7 +89,7 @@ authenticate(
 
 **废弃版本：** 9
 
-**替代接口：** [appAccount.Authenticator.auth](arkts-basicservices-appaccount-authenticator-c.md#auth)(name:
+**替代接口：** [auth](appAccount.Authenticator.auth(name:)
 
 <!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -124,7 +124,7 @@ checkAccountLabels(name: string, labels: Array<string>, callback: AuthCallback):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| labels | Array&lt;string&gt; | 是 |
+| labels | Array & lt;string & gt; | 是 |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
 
 ## 示例

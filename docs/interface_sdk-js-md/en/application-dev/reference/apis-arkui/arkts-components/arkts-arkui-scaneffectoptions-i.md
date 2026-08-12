@@ -17,7 +17,7 @@ enableScanEffect?: boolean
 ```
 
 Whether to enable the scan effect. Only the progress indicator of the  
-[linear, ring, and capsule](arkts-arkui-progresstype-e.md) type is supported.
+[linear, ring, and capsule](arkts-arkui-progresstype-e.md#ProgressType) type is supported.
 
 **true**: The scan effect is enabled.
 

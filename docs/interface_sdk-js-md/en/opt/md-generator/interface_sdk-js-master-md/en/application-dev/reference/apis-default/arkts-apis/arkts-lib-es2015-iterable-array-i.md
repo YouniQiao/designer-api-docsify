@@ -14,7 +14,7 @@ Iterator
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## entries
 
@@ -30,7 +30,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[number, T]&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, T]&gt; |
 
 ## keys
 
@@ -46,7 +46,7 @@ Returns an iterable of keys in the array
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;number&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## values
 
@@ -62,4 +62,4 @@ Returns an iterable of values in the array
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |

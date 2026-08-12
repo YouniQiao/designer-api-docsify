@@ -2,7 +2,7 @@
 
 Represents optional configuration items for the SymbolDateTimeFormat object.Define the symbol element and value that need to be replaced.
 
-**Inheritance/Implementation:** SymbolDateTimeFormatOptions extends [Intl.DateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-datetimeformatoptions-i.md/arkts-arkts-intl-datetimeformatoptions-i.md)
+**Inheritance/Implementation:** SymbolDateTimeFormatOptions extends [Intl.DateTimeFormatOptions](Intl.DateTimeFormatOptions)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Represents optional configuration items for the SymbolDateTimeFormat object.Defi
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## amPMSymbol

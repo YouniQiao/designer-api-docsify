@@ -13,7 +13,7 @@ Describes the screenshot options.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from 'kits/@kit.ArkUI';
+import { screenshot } from '@kit.ArkUI';
 ```
 
 ## pickRect
@@ -24,7 +24,7 @@ pickRect: Rect
 
 Region of the screen to capture.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 12
 

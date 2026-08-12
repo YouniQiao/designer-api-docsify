@@ -2,7 +2,7 @@
 
 Defines the options of backgroundBlurStyle
 
-**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](../arkts-components/arkts-arkui-blurstyleoptions-i.md/arkts-arkui-blurstyleoptions-i.md)
+**Inheritance/Implementation:** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md#BlurStyleOptions)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ policy?: BlurStyleActivePolicy
 
 Defines the policy for activating the blur style.
 
-**Type:** [BlurStyleActivePolicy](../arkts-components/arkts-arkui-blurstyleactivepolicy-e.md)
+**Type:** [BlurStyleActivePolicy](arkts-arkui-common-blurstyleactivepolicy-e.md)
 
 **Default:** BlurStyleActivePolicy.ALWAYS_ACTIVE
 

@@ -14,7 +14,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#setSlotByBundle
+**替代接口：** [setSlotByBundle](ohos.notificationManager/notificationManager#setSlotByBundle)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,8 +28,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | 是 | 通知通道。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 | 通知通道。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定通知通道回调函数。 |
 
 
@@ -47,7 +47,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#setSlotByBundle
+**替代接口：** [setSlotByBundle](ohos.notificationManager/notificationManager#setSlotByBundle)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -61,8 +61,8 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | 是 | 通知通道。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | 是 | 通知通道。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Touch Action Function Parameters
 
-**Inheritance/Implementation:** TouchEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** TouchEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md#BaseEvent)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Obtains all historical points of the current frame.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;HistoricalPoint&gt; | return all historical points. Undefined will be returned if the internal runtime environment is broken. |
+| Array&lt;[HistoricalPoint](arkts-arkui-common-historicalpoint-i.md)&gt; | return all historical points. Undefined will be returned if the internal runtime environment is broken. |
 
 ## preventDefault
 
@@ -58,7 +58,7 @@ Blocks the default event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100017](../errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
+| [100017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
 
 ## stopPropagation
 

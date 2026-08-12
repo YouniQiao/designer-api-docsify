@@ -23,7 +23,7 @@ Create a bindable property instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | T | Yes | indicates the value of a state property. |
-| onChange | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;T&gt; | Yes | indicates the invoked callback when the property is changed. |
+| onChange | [Callback](arkts-arkui-callback-t.md)&lt;T&gt; | Yes | indicates the invoked callback when the property is changed. |
 
 **Return value:**
 

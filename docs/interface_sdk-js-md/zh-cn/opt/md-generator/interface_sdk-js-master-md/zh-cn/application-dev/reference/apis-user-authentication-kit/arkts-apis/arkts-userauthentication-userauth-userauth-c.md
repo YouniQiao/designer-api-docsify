@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [userAuth.AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
+**替代接口：** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
 
 <!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
@@ -29,7 +29,7 @@ auth(
 
 **废弃版本：** 9
 
-**替代接口：** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**替代接口：** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -87,7 +87,7 @@ cancelAuth(contextID: Uint8Array): number
 
 **废弃版本：** 9
 
-**替代接口：** [userAuth.AuthInstance.cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
+**替代接口：** [cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -135,7 +135,7 @@ constructor()
 
 **废弃版本：** 9
 
-**替代接口：** [userAuth.getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**替代接口：** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -161,7 +161,7 @@ getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): numb
 
 **废弃版本：** 9
 
-**替代接口：** [userAuth.getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
+**替代接口：** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getAvailableStatus)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 

@@ -24,7 +24,7 @@ level: ClickEffectLevel
 
 当level为undefined或者null时， ClickEffect采用ClickEffectLevel.LIGHT对应的回弹效果，缩放比参照scale说明。
 
-**类型：** [ClickEffectLevel](../arkts-apis/arkts-arkui-clickeffectlevel-e.md)
+**类型：** ClickEffectLevel
 
 **默认值：** ClickEffectLevel.LIGHT
 

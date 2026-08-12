@@ -18,7 +18,7 @@ export type KeyEventCallback = (event: KeyEvent) => boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-arkui/arkts-apis/arkts-arkui-common-keyevent-i.md) | 是 | 按键事件对象，包含按键码、按键类型、事件时间等按键相关信息。 |
+| event | KeyEvent | 是 | 按键事件对象，包含按键码、按键类型、事件时间等按键相关信息。 |
 
 **返回值：**
 

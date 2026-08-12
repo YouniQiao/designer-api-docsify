@@ -29,13 +29,13 @@ function getScannerCurrentSetting(scannerId: string, optionIndex: int): Promise<
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ScannerOptionValue&gt; | Promise对象，返回扫描仪选项值。 |
+| Promise&lt;[ScannerOptionValue](arkts-basicservices-scan-scanneroptionvalue-i.md)&gt; | Promise对象，返回扫描仪选项值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

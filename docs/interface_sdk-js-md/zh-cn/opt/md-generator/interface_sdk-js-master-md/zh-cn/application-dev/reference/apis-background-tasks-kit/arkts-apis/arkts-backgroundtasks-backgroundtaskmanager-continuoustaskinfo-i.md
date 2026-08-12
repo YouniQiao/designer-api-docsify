@@ -62,7 +62,7 @@ appIndex?: number
 backgroundModes: string[]
 ```
 
-[长时任务类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md)。
+[长时任务类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#BackgroundMode)。
 
 **类型：** string[]
 
@@ -78,7 +78,7 @@ backgroundModes: string[]
 backgroundSubModes: string[]
 ```
 
-[长时任务子类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md)。
+[长时任务子类型](arkts-backgroundtasks-backgroundtaskmanager-backgroundsubmode-e.md#BackgroundSubMode)。
 
 **类型：** string[]
 
@@ -206,7 +206,7 @@ uid: number
 wantAgentAbilityName: string
 ```
 
-[WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](@ohos.app.ability.wantAgent) 配置的ability名称。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 
@@ -222,7 +222,7 @@ wantAgentAbilityName: string
 wantAgentBundleName: string
 ```
 
-[WantAgent](../../apis-ability-kit/arkts-apis/arkts-app-ability-wantagent.md/arkts-app-ability-wantagent.md) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
+[WantAgent](@ohos.app.ability.wantAgent) 配置的包名。WantAgent为通知参数，用于指定点击长时任务通知后跳转的界面，在申请长时任务时作为参数传入。
 
 **类型：** string
 

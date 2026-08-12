@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## createPanel
@@ -12,10 +12,10 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 function createPanel(ctx: Context, info: PanelInfo): Promise<Panel>
 ```
 
-Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) to destroy the panel and release resources. This API uses a promise to return the result.
+Creates a word selection panel, which is used to display the service-related operation UI or text processing result. After the panel is used, call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroyPanel) to destroy the panel and release resources. This API uses a promise to return the result.
 
-Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) and one   
-[MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) can be created for one word selection application.
+Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md#PanelType) and one   
+[MAIN_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md#PanelType) can be created for one word selection application.
 
 **Since:** 24
 
@@ -29,21 +29,21 @@ Only one [MENU_PANEL](arkts-basicservices-selectioninput-selectionpanel-paneltyp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ctx | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
 | info | [PanelInfo](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Panel&gt; |
+| Promise & lt;Panel & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600003](../../apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600003-api-caller-and-word-selection-application-mismatched) |
 
 ## Examples
 

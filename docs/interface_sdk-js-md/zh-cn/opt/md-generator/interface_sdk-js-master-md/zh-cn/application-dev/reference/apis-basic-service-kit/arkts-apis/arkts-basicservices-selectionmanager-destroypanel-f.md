@@ -6,7 +6,7 @@
 function destroyPanel(panel: Panel): Promise<void>
 ```
 
-销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。
+销毁划词面板。与[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)搭配使用，用于销毁由createPanel()创建的面板对象。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -26,13 +26,13 @@ function destroyPanel(panel: Panel): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) |
 
 ## 示例
 

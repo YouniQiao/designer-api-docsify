@@ -2,7 +2,7 @@
 
 类PageSwitchActionProposal。默认的页面切换方向为前进。
 
-**继承/实现关系：** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**继承/实现关系：** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **起始版本：** 26.0.0
 
@@ -34,7 +34,7 @@ PageSwitchActionProposal构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 是 | 响应页面切换动作的节点。 |
+| node | FrameNode | 是 | 响应页面切换动作的节点。 |
 | pageCount | int | 是 | 要切换的页数。 取值限定为整数。 |
 
 ## pageCount

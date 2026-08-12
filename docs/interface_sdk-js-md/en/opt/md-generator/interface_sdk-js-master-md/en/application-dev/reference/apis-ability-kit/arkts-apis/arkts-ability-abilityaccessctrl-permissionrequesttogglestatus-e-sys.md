@@ -17,7 +17,7 @@ CLOSED = 0
 ```
 
 Indicates that the dialog box for the specified permission is disabled. When an app calls APIs such as  
-[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)to request this permission, no permission dialog box will be displayed.
+[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser)to request this permission, no permission dialog box will be displayed.
 
 **Since:** 12
 
@@ -34,7 +34,7 @@ OPEN = 1
 ```
 
 Indicates that the dialog box for the specified permission is enabled. When an app calls APIs such as  
-[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestpermissionsfromuser)to request this permission, a permission dialog box will be displayed normally.
+[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser)to request this permission, a permission dialog box will be displayed normally.
 
 **Since:** 12
 

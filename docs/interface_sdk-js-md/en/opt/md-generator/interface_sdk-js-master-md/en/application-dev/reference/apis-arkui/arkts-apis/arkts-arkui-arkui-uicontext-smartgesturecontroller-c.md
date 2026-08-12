@@ -5,7 +5,7 @@ Provides the capability to enable smart gestures, monitor them, control the sele
 > **NOTE：**
 > 
 > The following APIs must be called using a **SmartGestureController** instance obtained via
-> [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getsmartgesturecontroller) in **UIContext**.
+> [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getSmartGestureController) in **UIContext**.
 
 **Since:** 26.0.0
 
@@ -16,7 +16,7 @@ Provides the capability to enable smart gestures, monitor them, control the sele
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## clearMonitors
@@ -67,7 +67,7 @@ Sets whether to enable the tap and slide operations of smart gestures.
 > 
 > - This API affects only the tap and slide smart gestures, not the wrist-turn gesture.
 > 
-> - When disabled, the [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#smartgestureshortcut)
+> - When disabled, the [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)
 > attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
 
 **Since:** 26.0.0
@@ -103,13 +103,13 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 > 
 > - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the
 > last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is,
-> when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md).isConsumed is **true**,
+> when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution).isConsumed is **true**,
 > subsequent monitoring callbacks will not be executed.
 > 
 > - If the same callback is registered repeatedly, only the first registration takes effect; duplicate
 > registrations are ignored.
 > 
-> - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)
+> - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)
 > instance; otherwise, the modification will not take effect.
 
 **Since:** 26.0.0
@@ -126,7 +126,7 @@ Registers a smart gesture monitoring callback. Before the system processes the c
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | Yes |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes |
 
 ## requestSelected
 
@@ -140,11 +140,11 @@ Requests to set the specified component as the current smart gesture selected no
 > 
 > - The request takes effect only when all the following conditions are met: the target component can respond to
 > smart gestures, the component is visible on the screen, and the component has an
-> [onClick](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#onclick) event bound or a
-> [TapGesture](arkts-arkui-gesture-con.md#tapgesture) gesture bound.
+> [onClick](CommonMethod#onClick(event: Callback&lt;ClickEvent&gt;, distanceThreshold: number)) event bound or a
+> [TapGesture](arkts-arkui-gesture-con.md#TapGesture) gesture bound.
 > 
 > - Whether a component can respond to smart gestures is determined by **enabled** in
-> [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#smartgestureshortcut).
+> [smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut).
 
 **Since:** 26.0.0
 
@@ -184,4 +184,4 @@ Unregisters a smart gesture monitoring callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BaseGestureHandlingProposal, GestureHandlingResolution&gt; | Yes |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes |

@@ -46,7 +46,7 @@ margin?: LengthMetrics | Margin
 
 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Margin
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Margin](arkts-arkui-margin-t.md)
 
 **起始版本：** 23
 
@@ -70,7 +70,7 @@ padding?: LengthMetrics | Padding
 
 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-units-padding-i.md)
 
 **起始版本：** 23
 

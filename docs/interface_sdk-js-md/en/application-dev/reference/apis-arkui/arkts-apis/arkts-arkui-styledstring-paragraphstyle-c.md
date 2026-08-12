@@ -42,7 +42,7 @@ readonly leadingMargin?: double | LeadingMarginPlaceholder
 
 Get the leading margin of the StyledString.
 
-**Type:** double \| LeadingMarginPlaceholder
+**Type:** double \| [LeadingMarginPlaceholder](arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
 
 **Since:** 23
 
@@ -142,7 +142,7 @@ readonly shaderStyle?: ShaderStyle
 
 Get the shader style of the StyledString.
 
-**Type:** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**Type:** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
 **Since:** 26.0.0
 
@@ -202,7 +202,7 @@ readonly textDirection?: TextDirection
 
 Get the text direction of the StyledString.
 
-**Type:** [TextDirection](arkts-arkui-textdirection-e.md)
+**Type:** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **Since:** 23
 
@@ -242,7 +242,7 @@ readonly textVerticalAlign?: TextVerticalAlign
 
 Get the text vertical alignment of the StyledString.
 
-**Type:** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
+**Type:** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
 
 **Since:** 24
 

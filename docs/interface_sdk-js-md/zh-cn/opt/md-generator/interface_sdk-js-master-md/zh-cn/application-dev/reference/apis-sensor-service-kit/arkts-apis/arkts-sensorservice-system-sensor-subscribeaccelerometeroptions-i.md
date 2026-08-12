@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#ACCELEROMETER
+**替代接口：** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -26,7 +26,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -55,7 +55,7 @@ success: (data: AccelerometerResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -69,7 +69,7 @@ success: (data: AccelerometerResponse) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md) | 是 |
+| data | [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md) | 是 |
 
 ## interval
 
@@ -95,7 +95,7 @@ interval: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#Options.interval
+**替代接口：** [interval](ohos.sensor/sensor#Options.interval)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 

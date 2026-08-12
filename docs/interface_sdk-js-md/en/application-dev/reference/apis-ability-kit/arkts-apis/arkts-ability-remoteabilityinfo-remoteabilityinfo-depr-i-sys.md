@@ -5,7 +5,7 @@ The module provides information about a remote ability.
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md) instead.
+> [bundleManager-RemoteAbilityInfo](#RemoteAbilityInfo) instead.
 > 
 > The APIs provided by this module are system APIs.
 
@@ -15,7 +15,7 @@ The module provides information about a remote ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [remoteAbilityInfo:RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)
+**Substitutes:** [RemoteAbilityInfo](#RemoteAbilityInfo)
 
 <!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
@@ -41,7 +41,7 @@ Element name information of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#elementName
+**Substitutes:** [elementName](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#elementName)
 
 <!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
 
@@ -67,7 +67,7 @@ Icon of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#icon
+**Substitutes:** [icon](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#icon)
 
 <!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
 
@@ -93,7 +93,7 @@ Ability name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#label
+**Substitutes:** [label](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#label)
 
 <!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
 

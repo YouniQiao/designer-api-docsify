@@ -1,6 +1,6 @@
 # ScrollbarLayoutPolicy
 
-Defines the layout policy for scrollbars, used with {@link scrollbarLayoutPolicy}.
+Defines the layout policy for scrollbars, used with [scrollbarLayoutPolicy](arkts-arkweb-web-webattribute-i.md#scrollbarLayoutPolicy).
 
 **起始版本：** 26.0.0
 

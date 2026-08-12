@@ -58,7 +58,7 @@ Obtains the content size.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## currentOffset
 
@@ -82,7 +82,7 @@ Obtains the current scrolling offset.
 
 | Type | Description |
 | --- | --- |
-| [OffsetResult](../arkts-components/arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
+| [OffsetResult](arkts-arkui-scroll-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
 
 ## fling
 
@@ -112,8 +112,8 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getFrameNode
 
@@ -137,7 +137,7 @@ Obtains the FrameNode corresponding to this scroller.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](../arkts-components/arkts-arkui-framenode-t.md) | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
+| FrameNode | Returns the FrameNode bound to this scroller. If the scroller is not bound to a component, the return value is undefined. |
 
 ## getItemIndex
 
@@ -176,8 +176,8 @@ Obtains the index of a child component based on coordinates.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRect
 
@@ -215,8 +215,8 @@ Obtains the size and position of a child component relative to its container.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## isAtEnd
 
@@ -266,7 +266,7 @@ Obtains the current scrolling offset.
 
 | Type | Description |
 | --- | --- |
-| [OffsetResult](../arkts-components/arkts-arkui-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
+| [OffsetResult](arkts-arkui-scroll-offsetresult-i.md) | Returns the current scrolling offset. If the scroller not bound to a component, the return value is undefined. |
 
 ## scrollBy
 
@@ -316,7 +316,7 @@ Called when scrolling to the edge of the container.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [Edge](arkts-arkui-edge-e.md) | Yes | Edge type of the container. |
-| options | [ScrollEdgeOptions](../arkts-components/arkts-arkui-scrolledgeoptions-i.md) | No | Options of scrolling to edge. |
+| options | [ScrollEdgeOptions](arkts-arkui-scroll-scrolledgeoptions-i.md) | No | Options of scrolling to edge. |
 
 ## scrollPage
 
@@ -340,7 +340,7 @@ Called when page turning mode is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScrollPageOptions](../arkts-components/arkts-arkui-scrollpageoptions-i.md) | Yes |  |
+| value | [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md) | Yes |  |
 
 ## scrollTo
 
@@ -364,7 +364,7 @@ Called when the setting slides to the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScrollOptions](arkts-arkui-viewmodel-scrolloptions-i.md) | Yes | scroll options |
+| options | [ScrollOptions](arkts-arkui-scroll-scrolloptions-i.md) | Yes | scroll options |
 
 ## scrollToIndex
 
@@ -390,6 +390,6 @@ Scroll to the specified index.
 | --- | --- | --- | --- |
 | value | int | Yes | Index to jump to. &lt;br&gt;The value should be an integer. |
 | smooth | boolean | No | If true, scroll to index item with animation. If false, scroll to index item without animation. |
-| align | [ScrollAlign](../arkts-components/arkts-arkui-scrollalign-e.md) | No | Sets the alignment mode of a specified index. |
+| align | [ScrollAlign](arkts-arkui-scroll-scrollalign-e.md) | No | Sets the alignment mode of a specified index. |
 | options | [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | No | Sets the options of a specified index, such as extra offset. &lt;br&gt;Unit: vp. Default value: 0 (unit:vp). |
 

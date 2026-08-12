@@ -24,13 +24,13 @@ Polygon is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](../arkts-components/arkts-arkui-polygonoptions-i.md) | No | The options to create a Polygon. |
+| options | [PolygonOptions](arkts-arkui-polygon-polygonoptions-i.md) | No | The options to create a Polygon. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) | The attribute of the Polygon. |
+| [PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md) | The attribute of the Polygon. |
 
 
 ## Polygon
@@ -59,11 +59,11 @@ Defines Polygon Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolygonAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PolygonAttribute](../arkts-components/arkts-arkui-polygon-attribute.md) |  |
+| [PolygonAttribute](arkts-arkui-polygon-polygonattribute-i.md) |  |
 

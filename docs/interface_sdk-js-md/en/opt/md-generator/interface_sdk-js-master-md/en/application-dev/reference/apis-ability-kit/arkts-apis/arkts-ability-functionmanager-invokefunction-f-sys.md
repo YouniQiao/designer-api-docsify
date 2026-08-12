@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from 'kits/@kit.AbilityKit';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## invokeFunction
@@ -31,16 +31,16 @@ Invoke a function by functionNamespace and functionName.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| functionNamespace | string | Yes |
+| [functionNamespace](arkts-ability-functioninfo-i-sys.md) | string | Yes |
 | functionName | string | Yes |
-| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
 | options | [InvokeOptions](arkts-ability-functionmanager-invokeoptions-i-sys.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;InvokeResult&gt; |
+| Promise&lt;[InvokeResult](arkts-ability-functionmanager-invokeresult-i-sys.md)&gt; |
 
 **Error codes:**
 
@@ -49,6 +49,6 @@ Invoke a function by functionNamespace and functionName.
 | 35600062 |
 | 35600061 |
 | 35600060 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 35600050 |

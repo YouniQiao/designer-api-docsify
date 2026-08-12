@@ -24,12 +24,12 @@ Create a FrameNode of Toggle type with Toggle options and FrameNode options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode. |
-| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | No | Toggle component options |
+| options | ToggleOptions | No | Toggle component options |
 | frameNodeOptions | [FrameNodeOptions](arkts-arkui-framenode-framenodeoptions-i.md) | No | Options for configuring FrameNode creation.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Toggle](arkts-arkui-typenode-toggle-t.md) | Return Toggle type FrameNode. |
+| Toggle | Return Toggle type FrameNode. |
 

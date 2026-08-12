@@ -34,7 +34,7 @@ Defines 'Else' branch.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 ## ElseIf
 
@@ -62,7 +62,7 @@ Defines 'ElseIf' branch.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | condition | boolean | Yes | condition of the branch. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 **Return value:**
 

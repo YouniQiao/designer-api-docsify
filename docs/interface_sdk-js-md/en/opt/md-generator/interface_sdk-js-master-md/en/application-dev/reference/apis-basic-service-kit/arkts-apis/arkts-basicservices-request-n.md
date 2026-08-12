@@ -14,7 +14,7 @@ The **request** module provides applications with basic upload, download, and ba
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -48,7 +48,7 @@ import { request } from 'kits/@kit.BasicServicesKit';
 | [File](arkts-basicservices-request-file-i.md) |
 | [RequestData](arkts-basicservices-request-requestdata-i.md) |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))and  [off('complete' \| 'fail')](request.UploadTask.off(type: 'complete' \|
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | Upload task information, which is the callback parameter of the  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback & lt;Array<[TaskState](arkts-basicservices-request-taskstate-i.md)> & gt; & lt;TaskState & gt;>))and  [off('complete' \ |
 | [UploadTask](arkts-basicservices-request-uploadtask-i.md) |
 
 ### Constants

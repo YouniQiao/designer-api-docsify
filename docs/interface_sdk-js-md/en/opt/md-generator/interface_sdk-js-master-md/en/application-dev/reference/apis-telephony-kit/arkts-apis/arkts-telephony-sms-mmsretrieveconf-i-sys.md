@@ -13,7 +13,7 @@ Defines the MMS message retrieval configuration.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## cc
@@ -24,7 +24,7 @@ cc?: Array<MmsAddress>
 
 Indicates the carbon copy address for the MMS message retrieval configuration.
 
-**Type:** Array&lt;MmsAddress&gt;
+**Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
 **Since:** 8
 
@@ -222,7 +222,7 @@ to: Array<MmsAddress>
 
 Indicates the destination address for the MMS message retrieval configuration.
 
-**Type:** Array&lt;MmsAddress&gt;
+**Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
 **Since:** 8
 

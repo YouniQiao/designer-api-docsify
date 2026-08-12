@@ -13,14 +13,14 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.updateSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-updatesession-f.md#updatesession)
+> [huks.updateSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-updatesession-f.md#updateSession)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [huks.updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession)(
+**替代接口：** [updateSession](huks.updateSession()
 
 <!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -33,7 +33,7 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 | handle | number | 是 |
 | token | Uint8Array | 否 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 |
 
 
 ## update
@@ -49,14 +49,14 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.updateSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-updatesession-f.md#updatesession)
+> [huks.updateSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-updatesession-f.md#updateSession-2)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [huks.updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession)(handle:
+**替代接口：** [updateSession](huks.updateSession(handle:)
 
 <!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>-End-->
 
@@ -74,4 +74,4 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 
 | 类型 |
 | --- |
-| Promise&lt;HuksResult&gt; |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; |

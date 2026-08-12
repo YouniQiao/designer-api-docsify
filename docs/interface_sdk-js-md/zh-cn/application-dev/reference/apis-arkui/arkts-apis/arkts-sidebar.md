@@ -14,7 +14,7 @@
 | --- | --- |
 | [ButtonIconOptions](arkts-arkui-sidebar-buttoniconoptions-i.md) | 设置侧边栏控制按钮的图标。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
 | [ButtonStyle](arkts-arkui-sidebar-buttonstyle-i.md) | 设置侧边栏控制按钮的样式。 |
-| [SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md) | 除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性： |
+| [SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md) | 除支持[通用属性](./../../@internal/component/ets/common)外，还支持以下属性： |
 
 ### 枚举
 

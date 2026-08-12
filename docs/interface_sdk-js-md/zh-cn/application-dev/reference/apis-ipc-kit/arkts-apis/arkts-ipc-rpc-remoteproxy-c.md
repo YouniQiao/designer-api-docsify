@@ -2,7 +2,7 @@
 
 实现IRemoteObject代理对象。
 
-**继承/实现关系：** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md)
+**继承/实现关系：** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#IRemoteObject)
 
 **起始版本：** 7
 
@@ -26,7 +26,7 @@ addDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.IRemoteObject#registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerdeathrecipient)(recipient:
+**替代接口：** [registerDeathRecipient](rpc.IRemoteObject#registerDeathRecipient(recipient:)
 
 <!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -127,8 +127,8 @@ getDescriptor(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
-| [1900007](../errorcode-rpc.md#1900007-远端对象通信失败) | communication failed. |
+| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [1900007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900007-远端对象通信失败) | communication failed. |
 
 ## 示例
 
@@ -202,7 +202,7 @@ getInterfaceDescriptor(): string
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.IRemoteObject#getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getdescriptor)()
+**替代接口：** [getDescriptor](arkts-ipc-rpc-iremoteobject-c.md#getDescriptor)()
 
 <!--Device-RemoteProxy-getInterfaceDescriptor(): string--><!--Device-RemoteProxy-getInterfaceDescriptor(): string-End-->
 
@@ -297,8 +297,8 @@ getLocalInterface(interfaceDes: string): IRemoteBroker
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | check param failed |
-| [1900006](../errorcode-rpc.md#1900006-ipc对象权限错误) | Operation allowed only for the remote object. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | check param failed |
+| [1900006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900006-ipc对象权限错误) | Operation allowed only for the remote object. |
 
 ## 示例
 
@@ -445,7 +445,7 @@ queryLocalInterface(interface: string): IRemoteBroker
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.IRemoteObject#getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getlocalinterface)(descriptor:
+**替代接口：** [getLocalInterface](rpc.IRemoteObject#getLocalInterface(descriptor:)
 
 <!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker--><!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker-End-->
 
@@ -547,8 +547,8 @@ registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 
 ## 示例
 
@@ -627,7 +627,7 @@ removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.IRemoteObject#unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterdeathrecipient)(recipient:
+**替代接口：** [unregisterDeathRecipient](rpc.IRemoteObject#unregisterDeathRecipient(recipient:)
 
 <!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -754,7 +754,7 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## 示例
 
@@ -856,7 +856,7 @@ sendMessageRequest(
     ): void
 ```
 
-以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将在[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)返回后、服务端处理请求完成时执行回调，回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md)获取服务端返回的数据。
+以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，将在[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)返回后、服务端处理请求完成时执行回调，回调中可读取[RequestResult](arkts-ipc-rpc-requestresult-i.md#RequestResult)获取服务端返回的数据。
 
 **起始版本：** 9
 
@@ -880,7 +880,7 @@ sendMessageRequest(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -896,7 +896,7 @@ sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: Me
 
 **废弃版本：** 8
 
-**替代接口：** [rpc.IRemoteObject#sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**替代接口：** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
 
 <!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -1005,7 +1005,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.IRemoteObject#sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**替代接口：** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
 
 <!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -1024,7 +1024,7 @@ sendRequest(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SendRequestResult&gt; | Promise对象，返回发送请求的响应结果。 |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise对象，返回发送请求的响应结果。 |
 
 ## 示例
 
@@ -1123,7 +1123,7 @@ sendRequest(
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.IRemoteObject#sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendmessagerequest)(code:
+**替代接口：** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
 
 <!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -1137,7 +1137,7 @@ sendRequest(
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SendRequestResult&gt; | 是 | 接收发送结果的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
 
 ## unregisterDeathRecipient
 
@@ -1172,8 +1172,8 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
 
 ## 示例
 

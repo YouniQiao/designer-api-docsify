@@ -8,7 +8,7 @@ Defines the **DisableAlertBeforeBackPage** parameter.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#RouterOptions
+**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-unnamed-export interface DisableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface DisableAlertBeforeBackPageOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the **DisableAlertBeforeBackPage** parameter.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -34,7 +34,7 @@ Called when the dialog box fails to be closed. **errMsg** indicates the returned
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#RouterOptions
+**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-DisableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-DisableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -60,7 +60,7 @@ Called when the dialog box is closed.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#RouterOptions
+**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-DisableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-DisableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -80,7 +80,7 @@ Called when the dialog box is closed. **errMsg** indicates the returned informat
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#RouterOptions
+**Substitutes:** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-DisableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-DisableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 

@@ -78,7 +78,7 @@ primaryColor: ResourceColor
 
 单色渐变色彩值和双色渐变第一色彩值。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -98,7 +98,7 @@ secondaryColor?: ResourceColor
 
 双色渐变色第二色彩值。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 

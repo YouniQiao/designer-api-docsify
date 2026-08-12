@@ -28,5 +28,5 @@ export function getWaterFlowAttribute(node: FrameNode): WaterFlowAttribute | und
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| WaterFlowAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

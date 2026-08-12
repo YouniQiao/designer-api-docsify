@@ -11,7 +11,7 @@ Describes the network registration state.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## cfgTech

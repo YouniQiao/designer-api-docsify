@@ -41,6 +41,92 @@ Called to receive data when a connection to the UIServiceExtensionAbility is est
 | --- | --- | --- |
 | data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
 
+## Examples
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[Extension] ';
+
+@Entry
+@Component
+struct UIServiceExtensionAbility {
+  comProxy: common.UIServiceProxy | null = null;
+  dataCallBack: common.UIServiceExtensionConnectCallback = {
+    onData: (data: Record<string, Object>) => {
+      console.info(`${TAG} dataCallBack received data: ${JSON.stringify(data)}.`);
+    },
+    onDisconnect: () => {
+      console.info(`${TAG} dataCallBack onDisconnect.`);
+      this.comProxy = null;
+    }
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        // Create a button for connecting to the UIServiceExtensionAbility.
+        Button('connectUIServiceExtensionAbility', { type: ButtonType.Capsule, stateEffect: true })
+          .margin({
+            top: 5,
+            left: 10,
+            right: 10,
+            bottom: 5
+          })
+          .alignRules({
+            center: { anchor: '__container__', align: VerticalAlign.Center },
+            middle: { anchor: '__container__', align: HorizontalAlign.Center }
+          })
+          .onClick(() => {
+            this.myConnectUIServiceExtensionAbility()
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+
+  myConnectUIServiceExtensionAbility() {
+    // Obtain the context.
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    let startWant: Want = {
+      deviceId: '',
+      bundleName: 'com.acts.myapplication',
+      abilityName: 'UiServiceExtensionAbility'
+    };
+
+    try {
+      // Connect to the UIServiceExtensionAbility.
+      context.connectUIServiceExtensionAbility(startWant, this.dataCallBack)
+        .then((proxy: common.UIServiceProxy) => {
+          console.info(TAG + `try to connectUIServiceExtensionAbility ${proxy}`);
+          this.comProxy = proxy;
+          let formData: Record<string, string> = {
+            'PATH': '/tmp/aaa.jpg'
+          };
+          try {
+            console.info(`${TAG} sendData.`);
+            this.comProxy.sendData(formData);
+          } catch (err) {
+            let code = (err as BusinessError).code;
+            let message = (err as BusinessError).message;
+            console.error(`${TAG} sendData failed, code is ${code}, message is ${message}.`);
+          }
+        }).catch((err: Error) => {
+        let code = (err as BusinessError).code;
+        let message = (err as BusinessError).message;
+        console.error(`${TAG} connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`${TAG} connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+    }
+  }
+}
+```
+
 ## onDisconnect
 
 ```TypeScript
@@ -63,3 +149,73 @@ Called when the connection to the UIServiceExtensionAbility is interrupted.
 <!--Device-UIServiceExtensionConnectCallback-onDisconnect(): void--><!--Device-UIServiceExtensionConnectCallback-onDisconnect(): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Examples
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[Extension] ';
+
+@Entry
+@Component
+struct UIServiceExtensionAbility {
+  comProxy: common.UIServiceProxy | null = null;
+  // Callback for the connection.
+  dataCallBack: common.UIServiceExtensionConnectCallback = {
+    onData: (data: Record<string, Object>) => {
+      console.info(`${TAG} dataCallBack received data: ${JSON.stringify(data)}.`);
+    },
+    onDisconnect: () => {
+      // Callback for the disconnection.
+      console.info(`${TAG} dataCallBack onDisconnect.`);
+      this.comProxy = null;
+    }
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        // Create a button for disconnecting from the UIServiceExtensionAbility.
+        Button('disConnectUIServiceExtensionAbility', { type: ButtonType.Capsule, stateEffect: true })
+          .margin({
+            top: 5,
+            left: 10,
+            right: 10,
+            bottom: 5
+          })
+          .alignRules({
+            center: { anchor: '__container__', align: VerticalAlign.Center },
+            middle: { anchor: '__container__', align: HorizontalAlign.Center }
+          })
+          .onClick(() => {
+            this.myConnectUIServiceExtensionAbility()
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+
+  myConnectUIServiceExtensionAbility() {
+    // Obtain the context.
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    // Disconnect from the UIServiceExtensionAbility.
+    try {
+      // this.comProxy is saved when the connection is established.
+      context.disconnectUIServiceExtensionAbility(this.comProxy).then(() => {
+        console.info(`${TAG} disconnectUIServiceExtensionAbility success.`);
+      }).catch((err: Error) => {
+        let code = (err as BusinessError).code;
+        let message = (err as BusinessError).message;
+        console.error(`${TAG} disconnectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`${TAG} disconnectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+    }
+  }
+}
+```

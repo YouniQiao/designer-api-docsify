@@ -28,7 +28,7 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T[number]&gt;&gt; |  |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T[number]&gt;&gt; |  |
 
 ## any
 
@@ -52,5 +52,5 @@ The any function returns a promise that is fulfilled by the first given promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; |  |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt; |  |
 

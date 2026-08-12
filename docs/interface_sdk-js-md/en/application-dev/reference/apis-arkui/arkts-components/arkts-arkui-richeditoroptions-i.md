@@ -18,7 +18,7 @@ controller: RichEditorController
 
 Controller for the **RichEditor** component.
 
-**Type:** [RichEditorController](../arkts-apis/arkts-arkui-richeditor-richeditorcontroller-c.md)
+**Type:** [RichEditorController](arkts-arkui-richeditorcontroller-c.md)
 
 **Since:** 10
 

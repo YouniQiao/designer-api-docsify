@@ -15,7 +15,7 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
 Aborts an ordered common event. This API is used with   
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
+[finishCommonEvent](#finishCommonEvent). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -33,7 +33,26 @@ Aborts an ordered common event. This API is used with
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.abortCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in aborting common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## abortCommonEvent
 
@@ -42,7 +61,7 @@ abortCommonEvent(): Promise<void>
 ```
 
 Aborts an ordered common event. This API is used with  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
+[finishCommonEvent](#finishCommonEvent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -54,7 +73,22 @@ Aborts an ordered common event. This API is used with
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.abortCommonEvent().then(() => {
+  console.info(`Succeeded in aborting common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## abortCommonEventSync
 
@@ -63,13 +97,24 @@ abortCommonEventSync(): void
 ```
 
 Aborts an ordered common event when used with  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
+[finishCommonEvent](#finishCommonEvent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
 <!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
+
+## Examples
+
+```TypeScript
+subscriber.abortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## clearAbortCommonEvent
 
@@ -78,7 +123,7 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
 Clears the abort state of an ordered common event. Use this API together with   
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
+[finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -96,7 +141,26 @@ Clears the abort state of an ordered common event. Use this API together with
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.clearAbortCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in clearing abort common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## clearAbortCommonEvent
 
@@ -105,7 +169,7 @@ clearAbortCommonEvent(): Promise<void>
 ```
 
 Clears the abort state of this ordered common event. Use this API together with   
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
+[finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -117,7 +181,22 @@ Clears the abort state of this ordered common event. Use this API together with
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.clearAbortCommonEvent().then(() => {
+  console.info(`Succeeded in clearing abort common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## clearAbortCommonEventSync
 
@@ -126,13 +205,24 @@ clearAbortCommonEventSync(): void
 ```
 
 Clears the abort state of an ordered common event when used with  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
+[finishCommonEvent](#finishCommonEvent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
 
 **Since:** 10
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
 **System capability:** SystemCapability.Notification.CommonEvent
+
+## Examples
+
+```TypeScript
+subscriber.clearAbortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## finishCommonEvent
 
@@ -158,7 +248,19 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## finishCommonEvent
 
@@ -178,7 +280,17 @@ Finishes this ordered common event. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -204,7 +316,19 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.getAbortCommonEvent((err: BusinessError, abortEvent: boolean) => {
+  if (err) {
+    console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  } 
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -224,7 +348,17 @@ Checks whether this ordered common event should be aborted. This API uses a prom
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEventSync
 
@@ -245,6 +379,13 @@ Checks whether an ordered common event is aborted. This API returns the result s
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+let abortEvent: boolean = subscriber.getAbortCommonEventSync();
+console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+```
 
 ## getCode
 
@@ -272,7 +413,19 @@ Obtains the result code of an ordered common event. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.getCode((err: BusinessError, code: number) => {
+  if (err) {
+    console.error(`Failed to get code. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+});
+```
 
 ## getCode
 
@@ -294,7 +447,17 @@ Obtains the result code of an ordered common event. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getCodeSync
 
@@ -317,6 +480,13 @@ Obtains the result code of an ordered common event. This API returns the result 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
+
+## Examples
+
+```TypeScript
+let code: number = subscriber.getCodeSync();
+console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+```
 
 ## getData
 
@@ -344,7 +514,20 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+// Obtain the data callback for ordered common event delivery.
+subscriber.getData((err: BusinessError, data: string) => {
+  if (err) {
+    console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+});
+```
 
 ## getData
 
@@ -366,7 +549,17 @@ Obtains the data of an ordered common event. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getDataSync
 
@@ -389,6 +582,13 @@ Obtains the data of an ordered common event. This API returns the result synchro
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | string |
+
+## Examples
+
+```TypeScript
+let data: string = subscriber.getDataSync();
+console.info(`Succeeded in getting data, data is ${data}`);
+```
 
 ## getSubscribeInfo
 
@@ -416,7 +616,19 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  if (err) {
+    console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+});
+```
 
 ## getSubscribeInfo
 
@@ -440,6 +652,16 @@ Obtains the subscriber information. This API uses a promise to return the result
 | --- |
 | Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getSubscribeInfoSync
 
 ```TypeScript
@@ -461,6 +683,13 @@ Obtains the subscriber information. This API returns the result synchronously.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) |
+
+## Examples
+
+```TypeScript
+let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = subscriber.getSubscribeInfoSync();
+console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+```
 
 ## isOrderedCommonEvent
 
@@ -486,7 +715,19 @@ Checks whether the current common event is an ordered common event. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.isOrderedCommonEvent((err: BusinessError, isOrdered: boolean) => {
+  if (err) {
+    console.error(`Failed to check ordered common event. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+});
+```
 
 ## isOrderedCommonEvent
 
@@ -506,7 +747,17 @@ Checks whether the current common event is an ordered common event. This API use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isOrderedCommonEventSync
 
@@ -527,6 +778,13 @@ Checks whether a common event is an ordered one. This API returns the result syn
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+let isOrdered: boolean = subscriber.isOrderedCommonEventSync();
+console.info(`isOrderedCommonEventSync ${JSON.stringify(isOrdered)}`);
+```
 
 ## isStickyCommonEvent
 
@@ -552,7 +810,19 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.isStickyCommonEvent((err: BusinessError, isSticky: boolean) => {
+  if (err) {
+    console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+});
+```
 
 ## isStickyCommonEvent
 
@@ -572,7 +842,17 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
+
+## Examples
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isStickyCommonEventSync
 
@@ -593,6 +873,13 @@ Checks whether the current common event is a sticky common event. This API retur
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+let isSticky: boolean = subscriber.isStickyCommonEventSync();
+console.info(`isStickyCommonEventSync ${JSON.stringify(isSticky)}`);
+```
 
 ## setCode
 
@@ -621,7 +908,19 @@ Sets the code of an ordered common event. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.setCode(1, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code.`);
+});
+```
 
 ## setCode
 
@@ -649,13 +948,23 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndData
 
@@ -685,7 +994,19 @@ Sets the result code and data of an ordered common event. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code and data.`);
+});
+```
 
 ## setCodeAndData
 
@@ -714,13 +1035,23 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndDataSync
 
@@ -749,7 +1080,18 @@ Sets the code and data of an ordered common event. This API returns the result s
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+try {
+  subscriber.setCodeAndDataSync(1, 'publish_data_changed');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setCodeSync
 
@@ -777,7 +1119,18 @@ Sets the result code of an ordered common event. This API returns the result syn
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+try {
+  subscriber.setCodeSync(1);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setData
 
@@ -806,7 +1159,19 @@ Sets the data of an ordered common event. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.setData('publish_data_changed', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting data.`);
+});
+```
 
 ## setData
 
@@ -834,13 +1199,23 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setDataSync
 
@@ -868,4 +1243,15 @@ Sets the result data of an ordered common event. This API returns the result syn
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+
+## Examples
+
+```TypeScript
+try {
+  subscriber.setDataSync('publish_data_changed');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+}
+```

@@ -2,7 +2,7 @@
 
 Represents optional element for the ResolvedSymbolNumberFormatOptions object.Define the resolved symbol element and value that need to get.
 
-**Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvednumberformatoptions-i.md/arkts-arkts-intl-resolvednumberformatoptions-i.md)
+**Inheritance/Implementation:** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](Intl.ResolvedNumberFormatOptions)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Represents optional element for the ResolvedSymbolNumberFormatOptions object.Def
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## groupingSeparator

@@ -18,10 +18,10 @@ type QueryCustomContentEvent = (queryType: CustomType[]) => Promise<CustomElemen
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| queryType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | 是 |
+| [queryType](../../apis-ability-kit/arkts-apis/arkts-ability-insightintent-queryentityparam-i.md) | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md)[] | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;CustomElement&gt; |
+| Promise&lt;[CustomElement](arkts-avsession-avmusictemplate-customelement-i.md)&gt; |

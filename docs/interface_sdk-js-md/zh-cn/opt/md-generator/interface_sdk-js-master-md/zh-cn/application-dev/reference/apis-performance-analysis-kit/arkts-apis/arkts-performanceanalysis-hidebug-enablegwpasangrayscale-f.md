@@ -6,7 +6,7 @@
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void
 ```
 
-ʹ��GWP-ASan�����ڼ����ڴ�ʹ���еķǷ���Ϊ���ýӿ���Ҫ���ڶ�̬���ò�����GWP-ASan��������Ӧ���Զ����GWP-ASan�����ԡ�������Ӧ��������������Ч��
+使能GWP-ASan，用于检测堆内存使用中的非法行为。该接口主要用于动态配置并启用GWP-ASan，以适配应用自定义的GWP-ASan检测策略。配置在应用重新启动后生效。
 
 **起始版本：** 20
 
@@ -25,7 +25,7 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 | 错误码ID |
 | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) |
+| [11400114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) |
 
 ## 示例
 
@@ -60,7 +60,7 @@ taskpool.execute(enableGwpAsanTask).then(() => {
 function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): void
 ```
 
-ʹ��GWP-ASan�����ڼ����ڴ�ʹ���еķǷ���Ϊ��
+使能GWP-ASan，用于检测堆内存使用中的非法行为。
 
 **起始版本：** 20
 
@@ -79,7 +79,7 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 | 错误码ID |
 | --- |
-| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) |
+| [11400114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-使能gwpasan失败) |
 
 ## 示例
 

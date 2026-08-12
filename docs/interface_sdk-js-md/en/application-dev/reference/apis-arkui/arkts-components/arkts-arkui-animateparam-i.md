@@ -78,20 +78,20 @@ When the type is string, it represents an animation interpolation curve, support
 **"steps(3, start)"**.
 
 **"interpolating-spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see   
-[curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring).
+[curves.interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring).
 
 **"responsive-spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see   
-[curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion).
+[curves.responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion).
 
 **"spring(velocity,mass,stiffness,damping)"**: For details about the parameters, see   
-[curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md/arkts-arkui-curves-springcurve-f.md#springcurve).
+[curves.springCurve](../arkts-apis/arkts-arkui-curves-springcurve-f.md#springCurve).
 
 **"spring-motion(response,dampingFraction,overlapDuration)"**: For details about the parameters, see   
-[curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion).
+[curves.springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springMotion).
 
 Default value: **Curve.EaseInOut**
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
+**Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **Default:** Curve.EaseInOut
 
@@ -149,7 +149,7 @@ Default value: **1000**
 
 Note: 1. Before API 26.0.0, the maximum animation duration for an ArkTS widget is 1,000 ms; values exceeding this limit are clamped to 1,000 ms. Starting from API version 26.0.0, the maximum animation duration for an ArkTS widget is adjusted to 2,000 ms.
 
-2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.3. Values less than 0 are clamped to **0**.4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.5. The **duration** parameter does not take effect when [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring) are configured for **curve**.
+2. To stop the animation of a property, change the property value in an animation closure with a duration of 0.3. Values less than 0 are clamped to **0**.4. Floating-point values are floored to integers. For example, if the value set is 1.2, **1** will be used.5. The **duration** parameter does not take effect when [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springMotion), [responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion), and [interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring) are configured for **curve**.
 
 **Type:** number
 
@@ -199,7 +199,7 @@ Type of the **onFinish** callback.
 
 Default value: **FinishCallbackType.REMOVED**
 
-**Type:** [FinishCallbackType](../arkts-apis/arkts-arkui-common-finishcallbacktype-e.md)
+**Type:** [FinishCallbackType](arkts-arkui-finishcallbacktype-e.md)
 
 **Since:** 11
 
@@ -267,7 +267,7 @@ Default value: **PlayMode.Normal**
 > - **PlayMode.Reverse** is not recommended. Under this setting, the animation jumps to the end state at the
 > beginning, and its final state will be different from the value of the state variable.
 
-**Type:** [PlayMode](../arkts-apis/arkts-arkui-playmode-e.md)
+**Type:** PlayMode
 
 **Default:** PlayMode.Normal
 

@@ -4,9 +4,9 @@
 
 > **说明：**
 > 
-> - 以下API需要配合[UIContext](arkts-arkui-uicontext.md)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postframecallback)和
-> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postdelayedframecallback)使用。开发者需要继承该类并重写
-> [onFrame](arkts-arkui-arkui-uicontext-framecallback-c.md#onframe)或[onIdle](arkts-arkui-arkui-uicontext-framecallback-c.md#onidle)方法，实现具体的业务逻辑。
+> - 以下API需要配合[UIContext](@ohos.arkui.UIContext)中的[postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback)和
+> [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postDelayedFrameCallback)使用。开发者需要继承该类并重写
+> [onFrame](#onFrame)或[onIdle](#onIdle)方法，实现具体的业务逻辑。
 
 **起始版本：** 12
 

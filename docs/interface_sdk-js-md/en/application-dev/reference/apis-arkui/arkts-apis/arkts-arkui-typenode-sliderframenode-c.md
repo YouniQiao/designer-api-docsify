@@ -34,11 +34,11 @@ Initialize Slider FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md) | No |  |
+| options | SliderOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |  |
+| SliderAttribute |  |
 

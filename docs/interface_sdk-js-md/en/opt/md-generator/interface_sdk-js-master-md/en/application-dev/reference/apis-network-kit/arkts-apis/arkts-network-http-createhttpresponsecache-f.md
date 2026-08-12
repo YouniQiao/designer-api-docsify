@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## createHttpResponseCache
@@ -26,7 +26,7 @@ Creates a default {@code HttpResponseCache} object to store the responses of HTT
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| cacheSize | number | No |
+| [cacheSize](../../apis-core-file-kit/arkts-apis/arkts-corefile-storagestatistics-bundlestats-i.md) | number | No |
 
 **Return value:**
 

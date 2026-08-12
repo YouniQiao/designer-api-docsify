@@ -1,6 +1,6 @@
 # RatingConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。
 
 **继承/实现关系：** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
 
@@ -46,7 +46,7 @@ rating: double
 
 取值范围： [0, stars]
 
-小于0取0，大于[stars](arkts-arkui-rating-ratingconfiguration-i.md#stars)取最大值stars。
+小于0取0，大于[stars](stars)取最大值stars。
 
 该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
 

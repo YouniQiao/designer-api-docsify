@@ -2,7 +2,7 @@
 
 Represents error that is thrown when attempting to store an object of different type in array of type-erased objects
 
-**Inheritance/Implementation:** ArrayStoreError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ArrayStoreError extends [Error](Error)
 
 **Since:** 26.0.0
 

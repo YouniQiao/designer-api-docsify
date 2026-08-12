@@ -45,7 +45,7 @@ Creates a badge with the given numerical value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](../arkts-apis/arkts-arkui-badge-badgeparamwithnumber-i.md) | Yes | Options of the numeric badge. |
+| value | [BadgeParamWithNumber](arkts-arkui-badgeparamwithnumber-i.md) | Yes | Options of the numeric badge. |
 
 ## Badge
 

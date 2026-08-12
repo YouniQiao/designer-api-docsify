@@ -24,22 +24,22 @@ Set the senior mode state for app.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| appSeniorModeInfos | Array&lt;AppSeniorModeInfo&gt; | 是 |
+| appSeniorModeInfos | Array&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9300008](../errorcode-accessibility.md#9300008-应用分身索引不合法) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
+| [9300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300008-应用分身索引不合法) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [9300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
 
 ## 示例
 

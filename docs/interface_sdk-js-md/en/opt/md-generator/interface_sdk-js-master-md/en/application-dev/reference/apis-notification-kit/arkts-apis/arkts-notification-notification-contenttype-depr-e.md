@@ -6,7 +6,7 @@ Enumerates the notification content types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.SlotType#ContentType
+**Substitutes:** [ContentType](ohos.notificationManager/notificationManager.SlotType#ContentType)
 
 <!--Device-notification-export enum ContentType--><!--Device-notification-export enum ContentType-End-->
 
@@ -24,7 +24,7 @@ Normal text notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_BASIC_TEXT
+**Substitutes:** [NOTIFICATION_CONTENT_BASIC_TEXT](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_BASIC_TEXT)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
@@ -42,7 +42,7 @@ Long text notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_LONG_TEXT
+**Substitutes:** [NOTIFICATION_CONTENT_LONG_TEXT](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_LONG_TEXT)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
@@ -60,7 +60,7 @@ Picture-attached notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_PICTURE
+**Substitutes:** [NOTIFICATION_CONTENT_PICTURE](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_PICTURE)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
@@ -78,7 +78,7 @@ Conversation notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_CONVERSATION
+**Substitutes:** [NOTIFICATION_CONTENT_CONVERSATION](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_CONVERSATION)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
 
@@ -96,7 +96,7 @@ Multi-line text notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_MULTILINE
+**Substitutes:** [NOTIFICATION_CONTENT_MULTILINE](ohos.notificationManager/notificationManager.ContentType#NOTIFICATION_CONTENT_MULTILINE)
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 

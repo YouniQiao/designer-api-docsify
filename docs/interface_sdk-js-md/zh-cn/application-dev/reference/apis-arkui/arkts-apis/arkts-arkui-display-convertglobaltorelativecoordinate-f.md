@@ -22,7 +22,7 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: long)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-display-position-i.md) | 是 | 需要转化为相对坐标的全局坐标。 |
+| position | Position | 是 | 需要转化为相对坐标的全局坐标。 |
 | displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 否 | 相对坐标系原点所在的屏幕ID，传递该参数表示以指定屏幕左上角为原点转换相对坐标。不指定则不传参，默认转换成全局坐标所在屏幕的相对坐标，若全局坐标不在任何屏幕上，则默认转换 成主屏的相对坐标。 |
 
 **返回值：**
@@ -35,8 +35,8 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: long)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [1400004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 

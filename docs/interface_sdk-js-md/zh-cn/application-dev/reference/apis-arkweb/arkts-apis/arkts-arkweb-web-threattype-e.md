@@ -1,6 +1,6 @@
 # ThreatType
 
-Enum type supplied to {@link threatType} for the website's threat type.
+Enum type supplied to [threatType](threatType) for the website's threat type.
 
 **起始版本：** 23
 

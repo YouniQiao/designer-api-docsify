@@ -16,7 +16,7 @@ readonly photoProfiles: Array<Profile>
 
 支持的拍照配置信息集合。
 
-**类型：** Array&lt;Profile&gt;
+**类型：** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
 **起始版本：** 10
 
@@ -34,7 +34,7 @@ readonly previewProfiles: Array<Profile>
 
 支持的预览配置信息集合。
 
-**类型：** Array&lt;Profile&gt;
+**类型：** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
 **起始版本：** 10
 
@@ -52,7 +52,7 @@ readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
 
 支持的metadata流类型信息集合。
 
-**类型：** Array&lt;MetadataObjectType&gt;
+**类型：** Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt;
 
 **起始版本：** 10
 
@@ -70,7 +70,7 @@ readonly videoProfiles: Array<VideoProfile>
 
 支持的录像配置信息集合。
 
-**类型：** Array&lt;VideoProfile&gt;
+**类型：** Array&lt;[VideoProfile](arkts-camera-camera-videoprofile-i.md)&gt;
 
 **起始版本：** 10
 

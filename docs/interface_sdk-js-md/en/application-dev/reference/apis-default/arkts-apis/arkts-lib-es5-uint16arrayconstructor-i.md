@@ -34,7 +34,7 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint16Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBufferLike | Yes |  |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; \| [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 
 **Return value:**
 
@@ -54,7 +54,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint16Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |  |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 | byteOffset | number | No |  |
 | length | number | No |  |
 
@@ -80,7 +80,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |  |
 
 **Return value:**
 
@@ -104,7 +104,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |  |
 | mapfn | (v: T, k: number) =&gt; number | Yes |  |
 | thisArg | any | No |  |
 

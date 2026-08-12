@@ -26,7 +26,7 @@ Vertical spacing between two adjacent child components.This parameter has no eff
 **FlexAlign.SpaceBetween**, **FlexAlign.SpaceAround**, or **FlexAlign.SpaceEvenly**.Unit: vp, Invalid values are treated as the default value.  
 **NOTE：**The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a Resource type that can be converted to a number. Default value: **0**.
 
-**Type:** [SpaceType](../arkts-apis/arkts-arkui-spacetype-t.md)
+**Type:** [SpaceType](arkts-arkui-spacetype-t.md)
 
 **Since:** 18
 

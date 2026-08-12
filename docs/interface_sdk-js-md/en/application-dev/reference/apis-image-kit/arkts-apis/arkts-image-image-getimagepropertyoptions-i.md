@@ -8,7 +8,7 @@ Describes the image properties.
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md)
+**Substitutes:** [ImagePropertyOptions](arkts-image-image-imagepropertyoptions-i.md#ImagePropertyOptions)
 
 <!--Device-image-interface GetImagePropertyOptions--><!--Device-image-interface GetImagePropertyOptions-End-->
 
@@ -17,7 +17,7 @@ Describes the image properties.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## defaultValue
@@ -36,7 +36,7 @@ Default property value. The default value is null.
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImagePropertyOptions#defaultValue](arkts-image-image-imagepropertyoptions-i.md#defaultvalue)
+**Substitutes:** [defaultValue](arkts-image-image-imagepropertyoptions-i.md#defaultValue)
 
 <!--Device-GetImagePropertyOptions-defaultValue?: string--><!--Device-GetImagePropertyOptions-defaultValue?: string-End-->
 
@@ -58,7 +58,7 @@ Index of the image. The default value is **0**.
 
 **Deprecated since:** 11  
 
-**Substitutes:** [image.ImagePropertyOptions#index](arkts-image-image-imagepropertyoptions-i.md#index)
+**Substitutes:** [index](arkts-image-image-imagepropertyoptions-i.md#index)
 
 <!--Device-GetImagePropertyOptions-index?: number--><!--Device-GetImagePropertyOptions-index?: number-End-->
 

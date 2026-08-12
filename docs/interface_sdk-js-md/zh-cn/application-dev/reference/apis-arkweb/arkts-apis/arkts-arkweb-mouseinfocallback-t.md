@@ -18,5 +18,5 @@ The callback when mouse event is triggered in native embed area
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [NativeEmbedMouseInfo](../arkts-components/arkts-arkweb-nativeembedmouseinfo-i.md) | 是 | callback information of mouse event in native embed area. |
+| event | [NativeEmbedMouseInfo](arkts-arkweb-web-nativeembedmouseinfo-i.md) | 是 | callback information of mouse event in native embed area. |
 

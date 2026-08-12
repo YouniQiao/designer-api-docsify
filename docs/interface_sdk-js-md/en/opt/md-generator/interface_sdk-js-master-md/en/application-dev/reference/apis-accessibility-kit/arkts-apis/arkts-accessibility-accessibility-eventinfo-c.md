@@ -11,7 +11,7 @@ Describes a GUI change event.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## constructor
@@ -34,7 +34,7 @@ Constructor, which is used to construct an EventInfo instance using a JSON objec
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | jsonObject | Object | Yes |
 
@@ -70,7 +70,7 @@ Constructor, which is used to construct an EventInfo instance using independent 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [type](#type) | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |
 | [bundleName](#bundlename) | string | Yes |
@@ -397,7 +397,7 @@ triggerAction: Action
 
 Action that triggers the event (mandatory).
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 7
 
@@ -417,7 +417,7 @@ type: EventType
 
 Accessibility event type (mandatory).
 
-**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**Type:** EventType
 
 **Since:** 7
 

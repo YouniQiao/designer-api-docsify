@@ -58,7 +58,7 @@ id: TextMenuItemId
 
 Distinguish clicked menu content by Id.
 
-**Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**Type:** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 The attribute function of sidebar
 
-**Inheritance/Implementation:** SideBarContainerAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** SideBarContainerAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of sidebar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SideBarContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of sidebar. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of sidebar. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Callback controlButton function when setting the style of button
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyle](../arkts-components/arkts-arkui-buttonstyle-i.md) \| undefined | Yes |  |
+| value | [ButtonStyle](arkts-arkui-sidebar-buttonstyle-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Set divider style for sideBarContainer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DividerStyle](../arkts-components/arkts-arkui-dividerstyle-i.md) \| null \| undefined | Yes | indicates the style of the divider or whether to show the divider. |
+| value | DividerStyle \| null \| undefined | Yes | indicates the style of the divider or whether to show the divider. |
 
 **Return value:**
 
@@ -334,7 +334,7 @@ Callback showControlButton function when setting the status of sidebar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| Bindable&lt;boolean&gt; \| undefined | Yes |  |
+| value | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -394,7 +394,7 @@ Called when determining the location of the sidebar.default value is SideBarPosi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SideBarPosition](../arkts-components/arkts-arkui-sidebarposition-e.md) \| undefined | Yes |  |
+| value | [SideBarPosition](arkts-arkui-sidebar-sidebarposition-e.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -424,7 +424,7 @@ Sets the length of sidebar.default value is 240vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Bindable&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | Yes |  |
+| value | [Length](arkts-arkui-length-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 

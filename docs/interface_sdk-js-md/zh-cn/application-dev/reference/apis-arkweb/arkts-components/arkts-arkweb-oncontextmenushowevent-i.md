@@ -18,7 +18,7 @@ param: WebContextMenuParam
 
 菜单相关参数。
 
-**类型：** [WebContextMenuParam](../arkts-apis/arkts-arkweb-web-webcontextmenuparam-c.md)
+**类型：** [WebContextMenuParam](arkts-arkweb-webcontextmenuparam-c.md)
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ result: WebContextMenuResult
 
 菜单相应事件传入内核。
 
-**类型：** [WebContextMenuResult](../arkts-apis/arkts-arkweb-web-webcontextmenuresult-c.md)
+**类型：** [WebContextMenuResult](arkts-arkweb-webcontextmenuresult-c.md)
 
 **起始版本：** 12
 

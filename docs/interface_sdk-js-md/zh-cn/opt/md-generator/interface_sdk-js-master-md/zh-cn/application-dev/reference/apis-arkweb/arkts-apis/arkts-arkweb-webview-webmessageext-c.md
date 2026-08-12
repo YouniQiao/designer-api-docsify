@@ -28,13 +28,13 @@ getArray(): Array<string | number | boolean>
 
 | 类型 |
 | --- |
-| Array&lt;string \| number \| boolean&gt; |
+| Array & lt;string \ | number \| boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getArrayBuffer
 
@@ -62,7 +62,7 @@ getArrayBuffer(): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getBoolean
 
@@ -90,7 +90,7 @@ getBoolean(): boolean
 
 | 错误码ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getError
 
@@ -118,7 +118,7 @@ getError(): Error
 
 | 错误码ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getNumber
 
@@ -146,7 +146,7 @@ getNumber(): number
 
 | 错误码ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getString
 
@@ -174,7 +174,7 @@ getString(): string
 
 | 错误码ID |
 | --- |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## getType
 
@@ -218,14 +218,14 @@ setArray(message: Array<string | number | boolean>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| message | Array&lt;string \| number \| boolean&gt; | 是 |
+| message | Array & lt;string \ | number \| boolean & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setArrayBuffer
 
@@ -253,8 +253,8 @@ setArrayBuffer(message: ArrayBuffer): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setBoolean
 
@@ -282,8 +282,8 @@ setBoolean(message: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setError
 
@@ -311,8 +311,8 @@ setError(message: Error): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setNumber
 
@@ -340,8 +340,8 @@ setNumber(message: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setString
 
@@ -369,8 +369,8 @@ setString(message: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |
 
 ## setType
 
@@ -398,5 +398,5 @@ setType(type: WebMessageType): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100014](../errorcode-webview.md#17100014-类型和值不匹配) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) |

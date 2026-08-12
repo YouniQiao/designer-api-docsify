@@ -13,7 +13,7 @@ Describe the GET_REPORT data is received from remote host.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## bufferSize
@@ -64,7 +64,7 @@ type: ReportType
 
 reportType of GET_REPORT data.
 
-**Type:** [ReportType](arkts-connectivity-hid-reporttype-e.md)
+**Type:** ReportType
 
 **Since:** 23
 

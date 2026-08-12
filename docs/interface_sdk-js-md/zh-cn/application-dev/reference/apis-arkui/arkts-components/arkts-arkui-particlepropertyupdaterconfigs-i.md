@@ -18,7 +18,7 @@
 
 表示变化方式为曲线变化时，属性变化的配置。数组类型表示当前属性可以设置多段动画，如0ms-3000ms，3000ms-5000ms，5000ms-8000ms分别设置动画。T为number。
 
-**类型：** Array&lt;ParticlePropertyAnimation&lt;T&gt;&gt;
+**类型：** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particlepropertyanimation-i.md)&lt;T&gt;&gt;
 
 **起始版本：** 10
 
@@ -74,7 +74,7 @@ config配置的是变化差值的取值范围，差值的最大最小值没有�
 
 例如：opacity的取值范围[0.0,1.0]则当当前属性值叠加差值超过1.0，则取1.0。
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;T, T&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;T, T&gt;
 
 **起始版本：** 10
 

@@ -6,7 +6,7 @@ Enumerates the flags that specify how the Want will be handled.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantConstant/wantConstant#Flags
+**Substitutes:** [Flags](ohos.app.ability.wantConstant/wantConstant#Flags)
 
 <!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
 

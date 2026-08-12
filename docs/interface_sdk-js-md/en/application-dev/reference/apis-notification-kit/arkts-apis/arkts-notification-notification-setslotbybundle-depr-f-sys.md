@@ -14,7 +14,7 @@ Sets the notification slot for a specified application.This API uses an asynchro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#setSlotByBundle
+**Substitutes:** [setSlotByBundle](ohos.notificationManager/notificationManager#setSlotByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,9 +28,9 @@ Sets the notification slot for a specified application.This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | Notification slot. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setSlotByBundle
@@ -47,7 +47,7 @@ Sets the notification slot for a specified application. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#setSlotByBundle
+**Substitutes:** [setSlotByBundle](ohos.notificationManager/notificationManager#setSlotByBundle)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -61,8 +61,8 @@ Sets the notification slot for a specified application. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
-| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i-sys.md) | Yes | Notification slot. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| slot | [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md) | Yes | Notification slot. |
 
 **Return value:**
 

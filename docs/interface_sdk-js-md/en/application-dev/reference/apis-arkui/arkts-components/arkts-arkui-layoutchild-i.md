@@ -8,7 +8,7 @@ Sub component info passed from framework when layout and measure happens.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 <!--Device-unnamed-declare interface LayoutChild--><!--Device-unnamed-declare interface LayoutChild-End-->
 
@@ -28,7 +28,7 @@ Call this layout method in onLayout callback to assign layout info to sub compon
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -56,7 +56,7 @@ Call this measure method in onMeasure callback to supply sub component size.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -68,7 +68,7 @@ Call this measure method in onMeasure callback to supply sub component size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| childConstraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes |  |
+| childConstraint | ConstraintSizeOptions | Yes |  |
 
 ## borderInfo
 
@@ -86,7 +86,7 @@ Sub component border info.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -102,7 +102,7 @@ constraint: ConstraintSizeOptions
 
 Sub component constraint.
 
-**Type:** [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md)
+**Type:** ConstraintSizeOptions
 
 **Since:** 9
 
@@ -110,7 +110,7 @@ Sub component constraint.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -134,7 +134,7 @@ Sub component id.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -158,7 +158,7 @@ Sub component name.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 
@@ -174,7 +174,7 @@ position: Position
 
 Sub component position.
 
-**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**Type:** Position
 
 **Since:** 9
 
@@ -182,7 +182,7 @@ Sub component position.
 
 **Deprecated since:** 10
 
-**Substitutes:** Measurable/Layoutable
+**Substitutes:** [Measurable/Layoutable](Measurable/Layoutable)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

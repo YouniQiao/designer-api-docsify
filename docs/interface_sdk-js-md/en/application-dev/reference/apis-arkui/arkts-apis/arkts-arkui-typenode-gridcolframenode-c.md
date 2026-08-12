@@ -34,11 +34,11 @@ Initialize GridCol FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [GridColOptions](../arkts-components/arkts-arkui-gridcoloptions-i.md) | No | GridCol options. |
+| options | GridColOptions | No | GridCol options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridColAttribute](../arkts-components/arkts-arkui-gridcol-attribute.md) |  |
+| GridColAttribute |  |
 

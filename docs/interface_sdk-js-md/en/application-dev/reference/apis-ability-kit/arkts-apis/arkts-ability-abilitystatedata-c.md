@@ -2,7 +2,7 @@
 
 The AbilityStateData module defines a struct for ability state information. Once a lifecycle change listener is registered using  
 [on](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver)), you can obtain an instance of this struct from the input parameter of the **onAbilityStateChanged** callback of  
-[ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md).
+[ApplicationStateObserver](ApplicationStateObserver).
 
 **Since:** 14
 
@@ -36,8 +36,8 @@ Ability name.
 abilityType: int
 ```
 
-[Ability type](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-types),which can be [UIAbility](arkts-app-ability-uiability.md) or  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
+[Ability type](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-types),which can be [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) or  
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -170,9 +170,9 @@ state: int
 Ability state.
 
 - [Stage model](../../../application-models/ability-terminology.md#stage-model): For the  
-[UIAbility](arkts-app-ability-uiability.md), see  
-[UIAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability-states). For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md), see  
-[ExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability-states). For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md), see  
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility), see  
+[UIAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiability-states). For the [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility), see  
+[ExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#extensionability-states). For the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), see  
 [UIExtensionAbility States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#uiextensionability-states).  
 - [FA model](../../../application-models/ability-terminology.md#fa-model): For the ability, see  
 [Ability States](../../../reference/apis-ability-kit/js-apis-inner-application-abilityStateData.md#ability-states).

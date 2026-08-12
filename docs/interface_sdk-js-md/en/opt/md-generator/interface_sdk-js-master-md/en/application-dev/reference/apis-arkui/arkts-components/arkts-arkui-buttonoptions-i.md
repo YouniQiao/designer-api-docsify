@@ -15,7 +15,7 @@ buttonStyle?: ButtonStyleMode
 ```
 
 Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 Default value: **ButtonStyleMode.EMPHASIZED**
@@ -73,7 +73,7 @@ role?: ButtonRole
 ```
 
 Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 Default value: **ButtonRole.NORMAL**

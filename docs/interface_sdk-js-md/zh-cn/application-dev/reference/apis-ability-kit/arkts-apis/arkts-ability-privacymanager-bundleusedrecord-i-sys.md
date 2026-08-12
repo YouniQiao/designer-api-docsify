@@ -100,7 +100,7 @@ permissionRecords: Array<PermissionUsedRecord>
 
 当前应用或设备下的权限使用记录集合。每个元素对应一个具体权限，可进一步查看访问次数、拒绝次数、最后访问时间及明细记录。
 
-**类型：** Array&lt;PermissionUsedRecord&gt;
+**类型：** Array&lt;[PermissionUsedRecord](arkts-ability-privacymanager-permissionusedrecord-i-sys.md)&gt;
 
 **起始版本：** 9
 

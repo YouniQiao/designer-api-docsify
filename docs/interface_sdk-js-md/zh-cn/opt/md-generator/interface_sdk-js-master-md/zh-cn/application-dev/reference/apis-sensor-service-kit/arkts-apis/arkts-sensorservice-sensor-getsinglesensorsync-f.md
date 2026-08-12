@@ -30,9 +30,9 @@ function getSingleSensorSync(type: SensorId): Sensor
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
-| [14500102](../errorcode-sensor.md#14500102-设备不支持该传感器) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
+| [14500102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500102-设备不支持该传感器) |
 
 ## 示例
 

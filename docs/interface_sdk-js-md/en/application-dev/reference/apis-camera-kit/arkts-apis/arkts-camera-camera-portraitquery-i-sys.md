@@ -15,7 +15,7 @@ Queries portrait parameters.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getSupportedPortraitEffects
@@ -40,14 +40,14 @@ Obtains the supported portrait effects.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;PortraitEffect&gt; | Array of portrait effects supported. |
+| Array&lt;[PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md)&gt; | Array of portrait effects supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 and later |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 and later |
 
 ## Examples
 

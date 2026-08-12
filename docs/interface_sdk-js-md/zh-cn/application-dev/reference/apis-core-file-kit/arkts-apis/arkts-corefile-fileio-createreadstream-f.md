@@ -27,7 +27,7 @@ function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
@@ -40,7 +40,7 @@ function createReadStream(path: string, options?: ReadStreamOptions): ReadStream
 | 13900030 | File name too long |
 | 13900024 | File too large |
 | 13900004 | Interrupted system call |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

@@ -2,7 +2,7 @@
 
 Defines ScaleSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** ScaleSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
 
 **Since:** 12
 

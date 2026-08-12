@@ -56,7 +56,7 @@ type: DataOperationType.EXCHANGE
 
 Type of data exchange.
 
-**Type:** DataOperationType.EXCHANGE
+**Type:** [DataOperationType.EXCHANGE](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
 

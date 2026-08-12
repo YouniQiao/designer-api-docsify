@@ -2,7 +2,7 @@
 
 Defines the menu options.
 
-**继承/实现关系：** MenuOptions extends [ContextMenuOptions](../arkts-components/arkts-arkui-contextmenuoptions-i.md/arkts-arkui-contextmenuoptions-i.md)
+**继承/实现关系：** MenuOptions extends [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md#ContextMenuOptions)
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## isWifiActive
@@ -18,7 +18,7 @@ Queries the Wi-Fi status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.isWifiActive
+**Substitutes:** [isWifiActive](ohos.wifiManager/wifiManager.isWifiActive)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

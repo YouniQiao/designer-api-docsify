@@ -22,7 +22,7 @@ Default value: **Axis.Vertical**
 
 Invalid values are treated as the default value.
 
-**Type:** [Axis](../arkts-apis/arkts-arkui-axis-e.md)
+**Type:** Axis
 
 **Since:** 12
 

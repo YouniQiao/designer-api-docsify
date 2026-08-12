@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from 'kits/@kit.ArkData';
+import { sendableRelationalStore } from '@kit.ArkData';
 ```
 
 ## fromSendableValuesBucket
@@ -24,7 +24,7 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| valuesBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes |
+| [valuesBucket](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityoperation-dataabilityoperation-i.md) | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | Yes |
 
 **Return value:**
 
@@ -36,8 +36,8 @@ Converts a KV pair that can be passed across threads into the data that cannot b
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-parameter-check-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
 
 ## Examples
 

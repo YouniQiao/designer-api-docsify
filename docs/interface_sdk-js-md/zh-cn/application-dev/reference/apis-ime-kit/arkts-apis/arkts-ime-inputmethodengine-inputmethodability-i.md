@@ -1,9 +1,9 @@
 # InputMethodAbility
 
 InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过  
-[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取该实例。
+[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取该实例。
 
-下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取到InputMethodAbility实例后，通过实例调用。
+下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取到InputMethodAbility实例后，通过实例调用。
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 创建输入法面板，仅支持输入法应用在  
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使用callback异步回调。
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)（输入法扩展能力）类中调用。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -35,15 +35,15 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板信息。 |
+| info | PanelInfo | 是 | 输入法面板信息。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 | 回调函数。当输入法面板创建成功，返回当前创建的输入法面板对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
 
 ## 示例
 
@@ -84,7 +84,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 创建输入法面板，仅支持输入法应用在  
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异步回调。
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)类中调用。使用promise异步回调。
 
 **起始版本：** 10
 
@@ -99,7 +99,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前输入法应用上下文信息。 |
-| info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 | 输入法面板信息。 |
+| info | PanelInfo | 是 | 输入法面板信息。 |
 
 **返回值：**
 
@@ -111,8 +111,8 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
 
 ## 示例
 
@@ -162,14 +162,14 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | 是 | 要销毁的面板对象。 |
+| panel | Panel | 是 | 要销毁的面板对象。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当输入法面板销毁成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -227,7 +227,7 @@ destroyPanel(panel: Panel): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| panel | [Panel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectionmanager-panel-i.md) | 是 | 要销毁的面板对象。 |
+| panel | Panel | 是 | 要销毁的面板对象。 |
 
 **返回值：**
 
@@ -239,7 +239,7 @@ destroyPanel(panel: Panel): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 
@@ -301,7 +301,7 @@ getSecurityMode(): SecurityMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
+| [12800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) | not an input method application. |
 
 ## 示例
 
@@ -521,7 +521,7 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | 是 | 设置监听类型，固定取值为'securityModeChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
 
@@ -562,7 +562,7 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -873,7 +873,7 @@ offPrivateCommand(callback?: Callback<Record<string, CommandDataType>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -911,7 +911,7 @@ offSecurityModeChange(callback?: Callback<SecurityMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
 
@@ -1233,7 +1233,7 @@ on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'securityModeChange' | 是 | 设置监听类型，固定取值为'securityModeChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
 
 ## 示例
 
@@ -1275,7 +1275,7 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -1320,7 +1320,7 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
 
 ## 示例
 
@@ -1392,7 +1392,7 @@ onCallingDisplayDidChange(callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | capability not supported. |
 
 ## 示例
 
@@ -1603,7 +1603,7 @@ onPrivateCommand(callback: Callback<Record<string, CommandDataType>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
+| [12800010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) | not the preconfigured default input method. |
 
 ## 示例
 
@@ -1643,7 +1643,7 @@ onSecurityModeChange(callback: Callback<SecurityMode>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 | 回调函数，返回当前输入法应用的安全模式。 |
 
 ## 示例
 

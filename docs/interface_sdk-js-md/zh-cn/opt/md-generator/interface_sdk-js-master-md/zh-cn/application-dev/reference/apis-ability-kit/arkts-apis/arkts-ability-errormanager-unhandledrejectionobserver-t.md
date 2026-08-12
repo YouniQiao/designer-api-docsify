@@ -19,4 +19,4 @@ export type UnhandledRejectionObserver = (reason: Error | any, promise: Promise<
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | reason | Error \| any | 是 |
-| promise | Promise&lt;any&gt; | 是 |
+| promise | Promise & lt;any & gt; | 是 |

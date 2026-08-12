@@ -121,7 +121,7 @@ onKeyEvent(keyEvent: KeyEvent): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
 
 **返回值：**
 
@@ -155,7 +155,7 @@ context: AccessibilityExtensionContext
 
 表示辅助扩展能力上下文。
 
-**类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md)
+**类型：** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 
 **起始版本：** 9
 

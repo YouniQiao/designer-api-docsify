@@ -6,8 +6,8 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 > 
 > - This component can be used only in the stage model.
 > 
-> - If the **SelectTitleBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and
-> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically
+> - If the **SelectTitleBar** component has [universal attributes](./@internal/component/ets/common) and
+> [universal events](./@internal/component/ets/common) configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
 > rather than the **SelectTitleBar** component itself. As a result, the configured universal attributes and universal
 > events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events
@@ -24,7 +24,7 @@ The **SelectTitleBar** component represents a drop-down menu title bar used for 
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBarMenuItem, SelectTitleBar } from 'kits/@kit.ArkUI';
+import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
 ```
 
 ## badgeValue
@@ -83,7 +83,7 @@ menuItems?: Array<SelectTitleBarMenuItem>
 
 List of menu items on the right side of the title bar. This parameter is passed to add a list of menu items to the right side of the title bar. If this parameter is not specified, the menu area on the right is not displayed.
 
-**Type:** Array&lt;SelectTitleBarMenuItem&gt;
+**Type:** Array&lt;[SelectTitleBarMenuItem](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
 
@@ -123,7 +123,7 @@ options: Array<SelectOption>
 
 Options in the drop-down menu.
 
-**Type:** Array&lt;SelectOption&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **Since:** 10
 

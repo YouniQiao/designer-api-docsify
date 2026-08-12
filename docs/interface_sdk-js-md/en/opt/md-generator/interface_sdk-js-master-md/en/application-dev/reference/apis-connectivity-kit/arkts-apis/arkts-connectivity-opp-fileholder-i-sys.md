@@ -13,7 +13,7 @@ Describes the file info for transfer
 ## Modules to Import
 
 ```TypeScript
-import { opp } from 'kits/@kit.ConnectivityKit';
+import { opp } from '@kit.ConnectivityKit';
 ```
 
 ## fileFd

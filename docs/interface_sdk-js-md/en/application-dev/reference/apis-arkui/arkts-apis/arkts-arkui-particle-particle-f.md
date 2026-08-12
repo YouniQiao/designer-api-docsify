@@ -24,7 +24,7 @@ Defines Particle Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| particles | [Particles](../arkts-components/arkts-arkui-particles-i.md) | Yes | particle constructor options |
+| particles | [Particles](arkts-arkui-particle-particles-i.md) | Yes | particle constructor options |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines Particle
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ParticleAttribute&gt; | Yes | Particle attribute instance |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ParticleAttribute](arkts-arkui-particle-particleattribute-i.md)&gt; | Yes | Particle attribute instance |
 
 **Return value:**
 

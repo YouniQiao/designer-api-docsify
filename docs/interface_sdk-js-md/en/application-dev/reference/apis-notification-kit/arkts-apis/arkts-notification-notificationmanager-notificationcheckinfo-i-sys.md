@@ -15,7 +15,7 @@ Describes the parameters of check notifications.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundleName
@@ -48,7 +48,7 @@ contentType: ContentType
 
 Notification type.
 
-**Type:** [ContentType](../../apis-arkui/arkts-components/arkts-arkui-contenttype-e.md)
+**Type:** ContentType
 
 **Since:** 10
 
@@ -92,7 +92,7 @@ extraInfos?: Record<string, Object>
 
 Extra information about the live view.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 11
 
@@ -158,7 +158,7 @@ slotType: SlotType
 
 Notification slot type.
 
-**Type:** [SlotType](arkts-notification-notificationmanager-slottype-e-sys.md)
+**Type:** SlotType
 
 **Since:** 11
 

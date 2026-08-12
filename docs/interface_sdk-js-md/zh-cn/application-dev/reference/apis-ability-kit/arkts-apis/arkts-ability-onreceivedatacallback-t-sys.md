@@ -22,5 +22,5 @@ export type OnReceiveDataCallback = (data: Record<string, RecordData>) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | Record&lt;string, RecordData&gt; | 是 | 回调函数，返回接收的数据。 |
+| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 | 回调函数，返回接收的数据。 |
 

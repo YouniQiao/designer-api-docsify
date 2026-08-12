@@ -12,7 +12,7 @@ function getMissionInfo(deviceId: string, missionId: number, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#getMissionInfo
+**替代接口：** [getMissionInfo](ohos.app.ability.missionManager/missionManager#getMissionInfo)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -66,7 +66,7 @@ function getMissionInfo(deviceId: string, missionId: number): Promise<MissionInf
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#getMissionInfo
+**替代接口：** [getMissionInfo](ohos.app.ability.missionManager/missionManager#getMissionInfo)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

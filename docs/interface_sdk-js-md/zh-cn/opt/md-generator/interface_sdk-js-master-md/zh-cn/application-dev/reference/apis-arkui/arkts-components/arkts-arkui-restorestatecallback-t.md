@@ -20,4 +20,4 @@ declare type RestoreStateCallback = (savedState: Record<string, Object> | null) 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| savedState | Record&lt;string, Object&gt; \| null | 是 |
+| savedState | Record & lt;string, Object & gt; \ | null | 是 |

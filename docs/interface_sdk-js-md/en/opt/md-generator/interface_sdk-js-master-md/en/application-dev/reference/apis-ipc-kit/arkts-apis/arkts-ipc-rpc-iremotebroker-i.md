@@ -11,7 +11,7 @@ Represents the holder of a remote proxy object. It is used to obtain a proxy obj
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## asObject

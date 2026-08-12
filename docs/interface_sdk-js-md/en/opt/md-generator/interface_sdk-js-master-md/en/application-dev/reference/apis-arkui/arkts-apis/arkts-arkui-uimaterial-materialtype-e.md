@@ -15,8 +15,8 @@ NONE = 0
 ```
 
 No system material effect. The corresponding effects are:   
-[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor) and   
-[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bordercolor) are transparent, [borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderwidth) is 0, and there is no [shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow).
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)) and   
+[borderColor](CommonMethod#borderColor) are transparent, [borderWidth](CommonMethod#borderWidth) is 0, and there is no [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)).
 
 **Since:** 23
 
@@ -36,16 +36,16 @@ SEMI_TRANSPARENT = 1
 
 Semi-transparent system material effect. The corresponding effect is as follows:
 
-[backgroundColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor):  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)):  
 #f2f1f3f5 in light mode and #f2303131 in dark mode.
 
-[borderColor](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bordercolor):   
+[borderColor](CommonMethod#borderColor):   
 [token](../../../ui/theme_skinning.md#system-default-token-color-values) value of   
 **theme.colors.compForegroundPrimary** with 10% transparency. 
 
-[borderWidth](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#borderwidth): 1 vp.
+[borderWidth](CommonMethod#borderWidth): 1 vp.
 
-[shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow): ShadowStyle.OUTER_DEFAULT_SM.
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)): ShadowStyle.OUTER_DEFAULT_SM.
 
 **Since:** 23
 
@@ -64,8 +64,8 @@ IMMERSIVE = 2
 ```
 
 Immersive material type. It is used only by the **type** attribute of the   
-[MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the   
-[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) class.
+[MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md#MaterialInfo) API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the   
+[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) class.
 
 **Since:** 26.0.0
 

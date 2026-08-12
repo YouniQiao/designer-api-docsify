@@ -34,7 +34,7 @@ Create an ImageData object based on the input parameters.
 | --- | --- | --- | --- |
 | width | double | Yes | Width of the image. |
 | height | double | Yes | Height of the image. |
-| data | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | No | Data of the image. If this parameter is not specified, the default value is a black rectangular image. |
+| data | Uint8ClampedArray | No | Data of the image. If this parameter is not specified, the default value is a black rectangular image. |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## data
@@ -45,7 +45,7 @@ get data(): Uint8ClampedArray | undefined
 
 Array containing image pixel data
 
-**Type:** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md)
+**Type:** Uint8ClampedArray
 
 **Since:** 23
 

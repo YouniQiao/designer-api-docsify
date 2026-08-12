@@ -1,13 +1,13 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md),  
-[Uint8Array](arkts-collections.md),  
-[Int16Array](arkts-collections.md),  
-[Uint16Array](arkts-collections.md),  
-[Int32Array](arkts-collections.md),  
-[Uint32Array](arkts-collections.md),  
-[Uint8ClampedArray](arkts-collections.md), and  
-[Float32Array](arkts-collections.md)).
+Underlying data structure of the ArkTS TypedArray ([Int8Array](./arkts/@arkts.collections:collections),  
+[Uint8Array](./arkts/@arkts.collections:collections),  
+[Int16Array](./arkts/@arkts.collections:collections),  
+[Uint16Array](./arkts/@arkts.collections:collections),  
+[Int32Array](./arkts/@arkts.collections:collections),  
+[Uint32Array](./arkts/@arkts.collections:collections),  
+[Uint8ClampedArray](./arkts/@arkts.collections:collections), and  
+[Float32Array](./arkts/@arkts.collections:collections)).
 
 > **NOTE：**
 > 
@@ -27,7 +27,7 @@ Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -58,7 +58,7 @@ A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayBuffer's constructor cannot be directly invoked. |
+| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayBuffer's constructor cannot be directly invoked. |
 
 ## slice
 
@@ -95,8 +95,8 @@ Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## byteLength
 

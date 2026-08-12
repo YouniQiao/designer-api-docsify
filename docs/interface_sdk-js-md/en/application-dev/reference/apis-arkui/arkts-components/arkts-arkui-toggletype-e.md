@@ -22,7 +22,7 @@ Checkbox type.
 
 Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
 
-The default value of the universal attribute [margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin) is as follows:
+The default value of the universal attribute [margin](CommonMethod#margin) is as follows:
 
 {
 
@@ -62,7 +62,7 @@ Switch type.
 
 **NOTE：**
 
-The default value of the universal attribute [margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin) is as follows:
+The default value of the universal attribute [margin](CommonMethod#margin) is as follows:
 
 {
 

@@ -13,7 +13,7 @@ Gzip header information passed to and from zlib routines.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## comment

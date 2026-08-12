@@ -1,8 +1,8 @@
 # BackgroundBlurStyleOptions
 
-继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)。
+继承自[BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)。
 
-**继承/实现关系：** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md)
+**继承/实现关系：** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-blurstyleoptions-i.md#BlurStyleOptions)
 
 **起始版本：** 10
 
@@ -20,7 +20,7 @@ inactiveColor?: ResourceColor
 
 模糊不生效时使用的背景色。该参数需配合policy参数使用。当policy使模糊失效时，控件模糊效果会被移除，如果设置了inactiveColor会使用inactiveColor作为控件背景色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** Color.Transparent
 

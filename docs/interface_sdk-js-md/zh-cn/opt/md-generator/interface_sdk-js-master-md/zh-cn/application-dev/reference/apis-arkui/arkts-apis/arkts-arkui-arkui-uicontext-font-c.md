@@ -4,9 +4,9 @@ Font用于管理自定义字体和系统字体信息，支持注册自定义字�
 
 > **说明：**
 > 
-> - 以下API需先使用UIContext中的[getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfont)方法获取到Font对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。
 > 
-> - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)接口注册自定义字体。
+> - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
 
 **起始版本：** 10
 
@@ -55,7 +55,7 @@ getSystemFontList(): Array<string>
 该接口仅在PC/2in1设备上生效，在其他设备上返回空数组。
 
 > **说明：**
-> 推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype)接口获取系统最新支持的字体列表数据。
+> 推荐使用[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType)接口获取系统最新支持的字体列表数据。
 
 **起始版本：** 10
 
@@ -71,7 +71,7 @@ getSystemFontList(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## registerFont
 

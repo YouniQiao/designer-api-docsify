@@ -12,7 +12,7 @@ Obtains the Context object associated with a component on the page.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#getHostContext
+**Substitutes:** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,10 +26,10 @@ Obtains the Context object associated with a component on the page.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| component | Object | No |
+| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |
+| [Context](arkts-arkui-context-t.md) |

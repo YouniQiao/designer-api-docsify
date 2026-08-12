@@ -18,7 +18,7 @@ index: ExchangeIndex
 
 Index of exchange data.
 
-**Type:** [ExchangeIndex](../arkts-components/arkts-arkui-exchangeindex-i.md)
+**Type:** [ExchangeIndex](arkts-arkui-lazyforeach-exchangeindex-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ key?: ExchangeKey
 
 Key of exchange data.
 
-**Type:** [ExchangeKey](../arkts-components/arkts-arkui-exchangekey-i.md)
+**Type:** [ExchangeKey](arkts-arkui-lazyforeach-exchangekey-i.md)
 
 **Since:** 23
 

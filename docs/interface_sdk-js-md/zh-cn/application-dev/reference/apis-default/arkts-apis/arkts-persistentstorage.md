@@ -12,7 +12,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [PersistPropsOptions](arkts-persistentstorage-persistpropsoptions-i.md) | 指定持久化属性及其默认值的键值对对象，作为[persistProps](../../apis-arkui/arkts-apis/arkts-arkui-persistpropsoptions-i.md/arkts-arkui-persistpropsoptions-i.md)参数传入。 |
+| [PersistPropsOptions](arkts-persistentstorage-persistpropsoptions-i.md) | 指定持久化属性及其默认值的键值对对象，作为[persistProps](arkts-persistentstorage-persistpropsoptions-i.md#PersistPropsOptions)参数传入。 |
 
 ### 类型
 

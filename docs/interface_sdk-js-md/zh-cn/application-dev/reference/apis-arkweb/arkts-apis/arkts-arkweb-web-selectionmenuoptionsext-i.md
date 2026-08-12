@@ -18,7 +18,7 @@ menuType?: MenuType
 
 Menu type, default value is MenuType.SELECTION_MENU.
 
-**类型：** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
+**类型：** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-menutype-e.md)
 
 **起始版本：** 23
 
@@ -108,7 +108,7 @@ preview?: CustomBuilder
 
 The preview content of selection menu.
 
-**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 
@@ -126,7 +126,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 Defines the options of preview menu.
 
-**类型：** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**类型：** [PreviewMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-richeditor-previewmenuoptions-i.md)
 
 **起始版本：** 23
 

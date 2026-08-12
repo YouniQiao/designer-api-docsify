@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-promptaction.md)。
+> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md#promptAction)。
 
 **起始版本：** 3
 
@@ -54,7 +54,7 @@ static showDialog(options: ShowDialogOptions): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 是 |
+| options | [ShowDialogOptions](arkts-arkui-system-prompt-showdialogoptions-i.md) | 是 |
 
 ## showToast
 

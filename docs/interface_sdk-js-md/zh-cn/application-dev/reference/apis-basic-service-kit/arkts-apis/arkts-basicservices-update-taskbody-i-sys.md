@@ -20,7 +20,7 @@ errorMessages: Array<ErrorMessage>
 
 错误信息。
 
-**类型：** Array&lt;ErrorMessage&gt;
+**类型：** Array&lt;[ErrorMessage](arkts-basicservices-update-errormessage-i-sys.md)&gt;
 
 **起始版本：** 9
 
@@ -98,7 +98,7 @@ status: UpgradeStatus
 subStatus: int
 ```
 
-子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)状态码。
+子状态，取值范围参考[UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#UpgradeStatus)状态码。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -120,7 +120,7 @@ versionComponents: Array<VersionComponent>
 
 版本组件。
 
-**类型：** Array&lt;VersionComponent&gt;
+**类型：** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
 **起始版本：** 9
 

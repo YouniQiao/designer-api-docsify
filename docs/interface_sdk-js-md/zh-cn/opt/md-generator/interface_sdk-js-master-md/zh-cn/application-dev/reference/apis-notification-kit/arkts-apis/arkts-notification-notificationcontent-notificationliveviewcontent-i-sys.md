@@ -1,8 +1,8 @@
 # NotificationLiveViewContent（系统接口）
 
-描述普通实况通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)。
+描述普通实况通知。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)。
 
-**继承/实现关系：** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
+**继承/实现关系：** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
 **起始版本：** 11
 
@@ -20,7 +20,7 @@ extensionWantAgent?: WantAgent
 
 点击辅助区的跳转动作。默认为空。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 20
 
@@ -95,7 +95,7 @@ status: LiveViewStatus
 
 通知状态。
 
-**类型：** [LiveViewStatus](arkts-notification-notificationmanager-liveviewstatus-t-sys.md)
+**类型：** [LiveViewStatus](arkts-notification-notificationcontent-liveviewstatus-e-sys.md)
 
 **起始版本：** 11
 

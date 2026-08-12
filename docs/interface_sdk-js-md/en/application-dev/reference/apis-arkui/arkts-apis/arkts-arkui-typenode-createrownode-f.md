@@ -29,5 +29,5 @@ Create a FrameNode of Row type.On API 26.0.0 and above, It can also create a Fra
 
 | Type | Description |
 | --- | --- |
-| [Row](arkts-arkui-typenode-row-t.md) | Return Row type FrameNode. |
+| Row | Return Row type FrameNode. |
 

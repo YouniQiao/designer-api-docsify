@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationSetting
@@ -20,19 +20,25 @@ function getNotificationSetting(): Promise<NotificationSetting>
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[openNotificationSettings](notificationManager.openNotificationSettings(context: UIAbilityContext): Promise<void>) 拉起
+
+[isNotificationEnabled](notificationManager.isNotificationEnabled(): Promise<boolean>) 获取指定应用的通知使能状态。
+
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;NotificationSetting&gt; |
+| Promise&lt;[NotificationSetting](arkts-notification-notificationmanager-notificationsetting-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

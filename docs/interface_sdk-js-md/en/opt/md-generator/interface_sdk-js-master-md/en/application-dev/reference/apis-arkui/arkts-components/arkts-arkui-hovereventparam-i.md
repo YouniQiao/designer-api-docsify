@@ -36,7 +36,7 @@ foldStatus: FoldStatus
 
 Current fold state of the device.
 
-**Type:** [FoldStatus](../arkts-apis/arkts-arkui-foldstatus-e.md)
+**Type:** FoldStatus
 
 **Since:** 12
 

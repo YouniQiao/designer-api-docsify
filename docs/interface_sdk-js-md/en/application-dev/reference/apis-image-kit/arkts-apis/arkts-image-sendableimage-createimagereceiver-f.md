@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createImageReceiver
@@ -37,13 +37,13 @@ Images occupy a large amount of memory. When you finish using an ImageReceiver i
 
 | Type | Description |
 | --- | --- |
-| [ImageReceiver](arkts-image-image-imagereceiver-i.md) | ImageReceiver instance. |
+| ImageReceiver | ImageReceiver instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
 ## Examples
 

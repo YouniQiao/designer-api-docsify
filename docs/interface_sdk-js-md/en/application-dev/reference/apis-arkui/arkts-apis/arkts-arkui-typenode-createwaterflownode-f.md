@@ -29,5 +29,5 @@ Create a FrameNode of WaterFlow type.On API 26.0.0 and above, It can also create
 
 | Type | Description |
 | --- | --- |
-| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | Return WaterFlow type FrameNode. |
+| WaterFlow | Return WaterFlow type FrameNode. |
 

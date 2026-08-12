@@ -37,7 +37,7 @@ init(context: AbilityStageContext): Promise<Object | void>
 
 | 类型 |
 | --- |
-| Promise&lt;Object \| void&gt; |
+| Promise & lt;Object \ | void & gt; |
 
 ## 示例
 

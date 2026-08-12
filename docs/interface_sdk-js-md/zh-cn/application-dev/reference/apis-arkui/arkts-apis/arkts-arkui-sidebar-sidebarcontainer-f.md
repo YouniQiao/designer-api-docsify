@@ -26,13 +26,13 @@ export declare function SideBarContainer(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [SideBarContainerType](arkts-arkui-sidebar-sidebarcontainertype-e.md) | 否 | 设置侧边栏的显示类型。&lt;br/&gt;默认值：SideBarContainerType.Embed |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 可以包含子组件。&lt;br/&gt;**说明：** &lt;br/&gt;1. 子组件类型：系统组件和自定义组件，不支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。&lt;br/&gt;2. 子组件个数：必须且仅包含2个子组件。&lt; br/&gt;3. 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。&lt;br/&gt;4. SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 可以包含子组件。&lt;br/&gt;**说明：** &lt;br/&gt;1. 子组件类型：系统组件和自定义组件，不支持渲染控制类型（ [if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。&lt;br/&gt;2. 子组件个数：必须且仅包含2个子组件。&lt; br/&gt;3. 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。&lt;br/&gt;4. SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SideBarContainerAttribute](../arkts-components/arkts-arkui-sidebarcontainer-attribute.md) |  |
+| [SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md) |  |
 
 
 ## SideBarContainer
@@ -62,12 +62,12 @@ export declare function SideBarContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SideBarContainerAttribute&gt; | 是 | 侧边栏属性实例 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 内容区 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md)&gt; | 是 | 侧边栏属性实例 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 内容区 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SideBarContainerAttribute](../arkts-components/arkts-arkui-sidebarcontainer-attribute.md) |  |
+| [SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md) |  |
 

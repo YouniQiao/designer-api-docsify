@@ -34,7 +34,7 @@ Creates a **Canvas** object for drawing operations using the drawing API. Config
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **DrawingRenderingContext** object. The value cannot be changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md). &lt;br&gt;Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. &lt;br&gt;Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | No | Unit mode of the **DrawingRenderingContext** object. The value cannot be changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D). &lt;br&gt;Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. &lt;br&gt;Default value: **DEFAULT**. |
 
 ## invalidate
 
@@ -86,7 +86,7 @@ get size(): Size
 
 Obtains the size of the **DrawingRenderingContext** object.
 
-**Type:** [Size](../arkts-apis/arkts-arkui-graphics-size-i.md)
+**Type:** [Size](arkts-arkui-size-i.md)
 
 **Since:** 12
 

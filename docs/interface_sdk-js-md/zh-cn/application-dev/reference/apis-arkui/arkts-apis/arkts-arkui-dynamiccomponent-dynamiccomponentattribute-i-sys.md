@@ -2,7 +2,7 @@
 
 定义DynamicComponent的属性方法。
 
-**继承/实现关系：** DynamicComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** DynamicComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 26.0.0
 
@@ -70,7 +70,7 @@ default setDynamicComponentOptions(options: DynamicOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | 是 | 选项。 |
+| options | [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md) | 是 | 选项。 |
 
 **返回值：**
 

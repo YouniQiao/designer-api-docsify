@@ -32,7 +32,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | (path: string, tag: XMPTag) =&gt; boolean | 是 |
+| callback | (path: string, tag: XMPTag) = & gt; boolean | 是 |
 | rootPath | string | 否 |
 | options | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | 否 |
 
@@ -40,7 +40,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## getBlob
 
@@ -62,14 +62,14 @@ Obtains the XMP metadata as a blob.
 
 | 类型 |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## getTag
 
@@ -97,13 +97,13 @@ Get a single XMP tag from specified path.
 
 | 类型 |
 | --- |
-| Promise&lt;XMPTag \| null&gt; |
+| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## getTags
 
@@ -132,13 +132,13 @@ Get all XMP tags from specified path.
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, XMPTag&gt;&gt; |
+| Promise&lt;Record&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## registerXMPNamespace
 
@@ -160,19 +160,19 @@ Register a new namespace according to the xml namespace and prefix.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| xmpNamespace | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | 是 |
+| [xmpNamespace](arkts-image-image-xmptag-i.md) | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## removeTag
 
@@ -200,13 +200,13 @@ Remove the XMP tag from specified path.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setBlob
 
@@ -234,13 +234,13 @@ Set a blob into the XMP metadata.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setValue
 
@@ -270,10 +270,10 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |

@@ -15,7 +15,7 @@ Defines the shared album asset
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumId
@@ -66,7 +66,7 @@ albumSubType: AlbumSubtype
 
 subtype of album asset
 
-**Type:** [AlbumSubtype](arkts-medialibrary-photoaccesshelper-albumsubtype-e-sys.md)
+**Type:** AlbumSubtype
 
 **Since:** 14
 
@@ -86,7 +86,7 @@ albumType: AlbumType
 
 type of album asset
 
-**Type:** [AlbumType](arkts-medialibrary-sendablephotoaccesshelper-albumtype-e-sys.md)
+**Type:** AlbumType
 
 **Since:** 14
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## startArkChildProcess
@@ -18,9 +18,9 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 > 
 > The child process started by calling this API does not inherit the resources of the parent process. If the child
 > process is created successfully, its PID is returned, and its
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart) function is executed. After the
+> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart) function is executed. After the
 > function is done, the child process is not automatically destroyed. Instead, it must be destroyed by calling
-> [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md/arkts-arkts-process-abort-f.md#abort). After the process that calls this API is destroyed, the
+> [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md#abort). After the process that calls this API is destroyed, the
 > created child process is also destroyed.
 
 **Since:** 12
@@ -35,25 +35,25 @@ Starts an [ArkTS child process](../../../application-models/ability-terminology.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| srcEntry | string | Yes |
-| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | Yes |
+| [srcEntry](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | Yes |
 | options | [ChildProcessOptions](arkts-ability-app-ability-childprocessoptions-childprocessoptions-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
-| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
+| [16000062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) |
 
 ## Examples
 

@@ -22,4 +22,4 @@ export declare function Popup(options: PopupOptions): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | [PopupOptions](../arkts-components/arkts-arkui-popupoptions-i.md) | 是 |
+| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | 是 |

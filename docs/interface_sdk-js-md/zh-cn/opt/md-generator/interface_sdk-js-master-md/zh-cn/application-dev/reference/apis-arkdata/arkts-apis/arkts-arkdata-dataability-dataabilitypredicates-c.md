@@ -42,7 +42,7 @@ dataAbilityPredicates.equalTo("NAME", "Lisa")
 beginWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#endwrap)一起使用。
+在谓词中添加左括号。此方法类似于SQL语句的“(”，需要与[endWrap](#endWrap)一起使用。
 
 **起始版本：** 7
 
@@ -201,7 +201,7 @@ dataAbilityPredicates.equalTo("NAME", "Rose").distinct()
 endWrap(): DataAbilityPredicates
 ```
 
-在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](arkts-arkdata-dataability-dataabilitypredicates-c.md#beginwrap)一起使用。
+在谓词中添加右括号。此方法类似于SQL语句的“)”，需要和[beginWrap](#beginWrap)一起使用。
 
 **起始版本：** 7
 
@@ -419,7 +419,7 @@ groupBy(fields: Array<string>): DataAbilityPredicates
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fields | Array&lt;string&gt; | 是 |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
@@ -452,7 +452,7 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | Array&lt;ValueType&gt; | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
@@ -822,7 +822,7 @@ notIn(field: string, value: Array<ValueType>): DataAbilityPredicates
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | field | string | 是 |
-| value | Array&lt;ValueType&gt; | 是 |
+| value | Array & lt;ValueType & gt; | 是 |
 
 **返回值：**
 
@@ -842,8 +842,8 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-设置谓词查询结果的起始位置。需要同步调用[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
-[limitAs](arkts-arkdata-dataability-dataabilitypredicates-c.md#limitas)接口需传入参数-1。
+设置谓词查询结果的起始位置。需要同步调用[limitAs](#limitAs)接口指定查询数量，否则无查询结果。查询指定偏移位置后的所有行时，  
+[limitAs](#limitAs)接口需传入参数-1。
 
 **起始版本：** 7
 

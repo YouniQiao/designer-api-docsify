@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from 'kits/@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermission
@@ -27,7 +27,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 > permissions.
 > 
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
 
 **Since:** 10
@@ -53,14 +53,14 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
 
 ## Examples
 
@@ -105,7 +105,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 > permissions.
 > 
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
 
 **Since:** 10
@@ -130,20 +130,20 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
 
 ## Examples
 
@@ -191,7 +191,7 @@ Grants the URI permission to an application. If the call is successful, the appl
 > application bundle name and index of the cloned application.
 > 
 > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) API. For URIs combined by the application, the
+> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the
 > system cannot guarantee their functions.
 
 **Since:** 14
@@ -217,21 +217,21 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000081](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
 
 ## Examples
 

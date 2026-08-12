@@ -20,7 +20,7 @@ export function getResourceManager(callback: AsyncCallback<ResourceManager>): vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResourceManager&gt; | 是 |
+| callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -71,7 +71,7 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResourceManager&gt; | 是 |
+| callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -123,7 +123,7 @@ export function getResourceManager(): Promise<ResourceManager>
 
 | 类型 |
 | --- |
-| Promise&lt;ResourceManager&gt; |
+| Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; |
 
 ## 示例
 
@@ -175,7 +175,7 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 
 | 类型 |
 | --- |
-| Promise&lt;ResourceManager&gt; |
+| Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; |
 
 ## 示例
 

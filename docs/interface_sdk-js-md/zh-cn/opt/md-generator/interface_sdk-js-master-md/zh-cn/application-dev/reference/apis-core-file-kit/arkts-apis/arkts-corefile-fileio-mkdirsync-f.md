@@ -12,7 +12,7 @@ declare function mkdirSync(path: string, mode?: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:mkdirSync](arkts-corefile-fileio-mkdirsync-f.md#mkdirsync)
+**替代接口：** [mkdirSync](arkts-corefile-file-fs-mkdirsync-f.md#mkdirSync)
 
 <!--Device-unnamed-declare function mkdirSync(path: string, mode?: number): void--><!--Device-unnamed-declare function mkdirSync(path: string, mode?: number): void-End-->
 

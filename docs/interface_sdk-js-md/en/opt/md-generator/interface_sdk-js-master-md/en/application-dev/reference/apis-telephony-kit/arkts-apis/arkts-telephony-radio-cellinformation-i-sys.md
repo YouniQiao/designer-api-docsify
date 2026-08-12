@@ -11,7 +11,7 @@ Obtains current cell information.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## data
@@ -23,7 +23,7 @@ data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInfo
 
 Obtains signal strength under different network formats.
 
-**Type:** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| GsmCellInformation \| LteCellInformation \| NrCellInformation \| TdscdmaCellInformation \| WcdmaCellInformation
+**Type:** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| [GsmCellInformation](arkts-telephony-radio-gsmcellinformation-i-sys.md) \| [LteCellInformation](arkts-telephony-radio-ltecellinformation-i-sys.md) \| [NrCellInformation](arkts-telephony-radio-nrcellinformation-i-sys.md) \| [TdscdmaCellInformation](arkts-telephony-radio-tdscdmacellinformation-i-sys.md) \| [WcdmaCellInformation](arkts-telephony-radio-wcdmacellinformation-i-sys.md)
 
 **Since:** 8
 

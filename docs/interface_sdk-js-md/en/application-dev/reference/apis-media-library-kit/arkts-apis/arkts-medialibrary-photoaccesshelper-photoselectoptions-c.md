@@ -2,7 +2,7 @@
 
 Defines additional options for selecting media assets from Gallery. It inherits from **BaseSelectOptions**. It is used to start the picker of the corresponding user ID space.
 
-**Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)
+**Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## completeButtonText
@@ -69,7 +69,7 @@ isDestroyedWithNavigation?: boolean
 ```
 
 Whether destruction with   
-[Navigation](../../apis-arkui/arkts-apis/arkts-arkui-navigation-navigation-f.md/arkts-arkui-navigation-navigation-f.md#navigation) is supported. **true** if supported, **false** otherwise. The default value is **false**.
+[Navigation](Navigation) is supported. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
@@ -135,9 +135,9 @@ Whether to automatically switch to the full image preview mode after a photo is 
 **true** means to switch, and **false** means the opposite. The default value is **false**.
 
 Note: This parameter takes effect only when   
-[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md) is set to   
+[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md#SingleSelectionMode) is set to   
 **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and   
-[BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md)is set to **true**.
+[BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)is set to **true**.
 
 **Type:** boolean
 
@@ -242,6 +242,28 @@ A maximum of 500 videos can be selected. The default value is **500**.
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## pickerColorMode
+
+```TypeScript
+pickerColorMode?: PickerColorMode
+```
+
+Picker color mode. Dark/light color mode of all content within the Picker.The default value is `PickerColorMode.AUTO`, which follows the system's dark/light color mode.
+
+**Type:** PickerColorMode
+
+**Since:** 26.1.0
+
+**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-PhotoSelectOptions-pickerColorMode?: PickerColorMode--><!--Device-PhotoSelectOptions-pickerColorMode?: PickerColorMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -19,13 +19,13 @@ Shows a time picker dialog box.
 **NOTE：**
 
 - Since API version 10, you can use the  
- [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API  in [UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md), which ensures that the time picker dialog box is shown in the  intended UI instance.
+ [showTimePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showtimepickerdialog) API  in [UIContext](@ohos.arkui.UIContext), which ensures that the time picker dialog box is shown in the  intended UI instance.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#showTimePickerDialog
+**Substitutes:** [showTimePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showTimePickerDialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

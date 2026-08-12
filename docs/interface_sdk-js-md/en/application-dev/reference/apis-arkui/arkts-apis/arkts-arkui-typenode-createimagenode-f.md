@@ -29,5 +29,5 @@ Create a FrameNode of Image type.On API 26.0.0 and above, It can also create a F
 
 | Type | Description |
 | --- | --- |
-| [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Return Image type FrameNode. |
+| Image | Return Image type FrameNode. |
 

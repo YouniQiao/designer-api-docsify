@@ -6,7 +6,7 @@
 function check(): string
 ```
 
-��ȡ��ͨ��jsLeakWatcher.watchע�ᷢ��й©�Ķ����б�������GC��δ�����յĶ���ᱻ���Ϊй©��
+获取已通过jsLeakWatcher.watch注册发生泄漏的对象列表，触发GC后未被回收的对象会被标记为泄漏。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function check(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | ����GC��δ�����յ�й©�����б��� &lt;br&gt;**˵��**��check�ɹ�������JSON��ʽ��й©�����б���checkʧ�ܣ����ؿ��ַ����� |
+| string | 触发GC后未被回收的泄漏对象列表。 &lt;br&gt;**说明：**check成功，返回JSON格式的泄漏对象列表；check失败，返回空字符串。 |
 
 ## 示例
 

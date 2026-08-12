@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAllAppProvisionInfo
@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo>>
 ```
 
-Obtains the [provision](arkts-appprovisioninfo.md) configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
+Obtains the [provision](bundleManager/AppProvisionInfo) configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -34,15 +34,15 @@ Obtains the [provision](arkts-appprovisioninfo.md) configuration file informatio
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppProvisionInfo&gt;&gt; |
+| Promise & lt;Array & lt;AppProvisionInfo & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
 
 ## Examples
 

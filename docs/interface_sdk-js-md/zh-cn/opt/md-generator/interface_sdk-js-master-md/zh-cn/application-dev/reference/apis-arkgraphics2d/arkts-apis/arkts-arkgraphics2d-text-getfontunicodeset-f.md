@@ -29,7 +29,7 @@ function getFontUnicodeSet(path: string | Resource, index: number) : Promise<Arr
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 ## 示例
 

@@ -14,7 +14,7 @@ Checks whether notification is enabled for a specified application.This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isNotificationEnabled
+**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,8 +28,8 @@ Checks whether notification is enabled for a specified application.This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isNotificationEnabled
@@ -46,7 +46,7 @@ Checks whether notification is enabled for a specified application. This API use
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isNotificationEnabled
+**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -60,7 +60,7 @@ Checks whether notification is enabled for a specified application. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Checks whether notification is enabled for this application.This API uses an asy
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isNotificationEnabled
+**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -97,7 +97,7 @@ Checks whether notification is enabled for this application.This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isNotificationEnabled
@@ -114,7 +114,7 @@ Checks whether notification is enabled for this application. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isNotificationEnabled
+**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -145,7 +145,7 @@ Checks whether notification is enabled for a specified user.This API uses an asy
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isNotificationEnabled
+**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -160,7 +160,7 @@ Checks whether notification is enabled for a specified user.This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
 
 ## isNotificationEnabled
@@ -177,7 +177,7 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#isNotificationEnabled
+**Substitutes:** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

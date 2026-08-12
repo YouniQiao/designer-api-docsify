@@ -1,6 +1,6 @@
 # ArcListAttribute
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
 **Inheritance/Implementation:** ArcListAttribute extends [CommonMethod<ArcListAttribute>](CommonMethod<ArcListAttribute>)
 
@@ -15,7 +15,7 @@ In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkt
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## cachedCount
@@ -41,13 +41,13 @@ Sets the number of arc list items to be preloaded (cached). In a lazy loading sc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Number of list items to preload.&lt;br/&gt; Default value: number of nodes visible on the screen, with the maximum value of 16.&lt;br/&gt; Value range: [0, +∞) |
+| count | Optional&lt;number&gt; | Yes | Number of list items to preload.&lt;br/&gt; Default value: number of nodes visible on the screen, with the maximum value of 16.&lt;br/&gt; Value range: [0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## chainAnimation
 
@@ -71,13 +71,13 @@ Sets whether to enable chained animations, which provide a visually connected, o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable chained animations.&lt;br/&gt; **false** (default): Chained animations are disabled. **true**: Chained animations are enabled. |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable chained animations.&lt;br/&gt; **false** (default): Chained animations are disabled. **true**: Chained animations are enabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## childrenMainSize
 
@@ -101,13 +101,13 @@ Sets the size information of the child components of the **ArcList** component a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Optional](arkts-arkui-optional-t.md)&lt;[ChildrenMainSize](../arkts-components/arkts-arkui-childrenmainsize-c.md)&gt; | Yes | Precise size information for all child components along the main axis. This ensures accurate scrolling positions in scenarios where child components have varying sizes, are added or removed, or when APIs like **scrollToIndex** are used. It guarantees that **scrollTo** can accurately navigate to the specified position, **currentOffset** or **offset** can accurately reflect the current scrolling position, and the built-in scrollbar can move smoothly without any jumps or abrupt changes. The **offset** API is added from API version 23.&lt;br/&gt; **NOTE：**&lt;br/&gt;The provided sizes must match the actual sizes of the child components. Any changes to the sizes, or any additions or removals of child components, must be notified to the **ArcList** component through the **ChildrenMainSize** object. |
+| size | Optional&lt;ChildrenMainSize&gt; | Yes | Precise size information for all child components along the main axis. This ensures accurate scrolling positions in scenarios where child components have varying sizes, are added or removed, or when APIs like **scrollToIndex** are used. It guarantees that **scrollTo** can accurately navigate to the specified position, **currentOffset** or **offset** can accurately reflect the current scrolling position, and the built-in scrollbar can move smoothly without any jumps or abrupt changes. The **offset** API is added from API version 23.&lt;br/&gt; **NOTE：**&lt;br/&gt;The provided sizes must match the actual sizes of the child components. Any changes to the sizes, or any additions or removals of child components, must be notified to the **ArcList** component through the **ChildrenMainSize** object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## digitalCrownSensitivity
 
@@ -131,13 +131,13 @@ Sets the sensitivity of the digital crown's event response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](arkts-arkui-crownsensitivity-e.md)&gt; | Yes | Sensitivity of the digital crown's event response.&lt;br/&gt;Default value: **CrownSensitivity.MEDIUM**, indicating moderate response speed. |
+| sensitivity | Optional&lt;CrownSensitivity&gt; | Yes | Sensitivity of the digital crown's event response.&lt;br/&gt;Default value: **CrownSensitivity.MEDIUM**, indicating moderate response speed. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## enableScrollInteraction
 
@@ -161,13 +161,13 @@ Sets whether to enable scroll gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the **Scroller**.&lt;br/&gt;Default value: **true |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable scroll gestures. With the value **true**, scrolling via finger or mouse is enabled. With the value **false**, scrolling via finger or mouse is disabled, but this does not affect the scrolling APIs of the **Scroller**.&lt;br/&gt;Default value: **true |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## fadingEdge
 
@@ -191,13 +191,13 @@ Sets whether to enable the edge fading effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable the edge fading effect.&lt;br/&gt; When **fadingEdge** is set to **true**, it overrides the **.overlay()** attribute of the component.&lt;br/&gt;With **fadingEdge** set to **true**, avoid setting background-related attributes on the component, as this may affect the display of the fading effect.&lt;br/&gt; When **fadingEdge** is set to **true**, the component is clipped to the boundary. If the **clip** attribute of the component is set to **false**, the setting does not take effect.&lt;br/&gt;With the value **true**, the edge fading effect is enabled. With the value **false**, the edge fading effect is disabled.&lt;br/&gt;Default value: **false**. |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable the edge fading effect.&lt;br/&gt; When **fadingEdge** is set to **true**, it overrides the **.overlay()** attribute of the component.&lt;br/&gt;With **fadingEdge** set to **true**, avoid setting background-related attributes on the component, as this may affect the display of the fading effect.&lt;br/&gt; When **fadingEdge** is set to **true**, the component is clipped to the boundary. If the **clip** attribute of the component is set to **false**, the setting does not take effect.&lt;br/&gt;With the value **true**, the edge fading effect is enabled. With the value **false**, the edge fading effect is disabled.&lt;br/&gt;Default value: **false**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## flingSpeedLimit
 
@@ -221,13 +221,13 @@ Sets the maximum initial speed for inertial scrolling after a fling gesture. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Maximum initial speed for inertial scrolling.&lt;br/&gt; Default value: **9000**.&lt;br/&gt;Unit: vp/s.&lt;br/&gt;Value range: (0, +∞) |
+| speed | Optional&lt;number&gt; | Yes | Maximum initial speed for inertial scrolling.&lt;br/&gt; Default value: **9000**.&lt;br/&gt;Unit: vp/s.&lt;br/&gt;Value range: (0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## friction
 
@@ -251,13 +251,13 @@ Sets the friction coefficient. It applies only to gestures in the scrolling area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| friction | [Optional](arkts-arkui-optional-t.md)&lt;number&gt; | Yes | Friction coefficient.&lt;br/&gt; Default value: **0.8**&lt;br/&gt;Value range: (0, +∞) |
+| friction | Optional&lt;number&gt; | Yes | Friction coefficient.&lt;br/&gt; Default value: **0.8**&lt;br/&gt;Value range: (0, +∞) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onDidScroll
 
@@ -281,13 +281,13 @@ Triggered when the list scrolls. The return value is the offset amount by which 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnScrollCallback](../arkts-components/arkts-arkui-onscrollcallback-t.md)&gt; | Yes | Callback triggered when the list scrolls. |
+| handler | Optional&lt;OnScrollCallback&gt; | Yes | Callback triggered when the list scrolls. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onReachEnd
 
@@ -311,13 +311,13 @@ Triggered when the list reaches the end position.If the edge scrolling effect is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | Callback triggered when the list reaches the end position. |
+| handler | Optional&lt;VoidCallback&gt; | Yes | Callback triggered when the list reaches the end position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onReachStart
 
@@ -342,13 +342,13 @@ Triggered when the list reaches the start position.This event is triggered durin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | Callback triggered when the list reaches the start position. |
+| handler | Optional&lt;VoidCallback&gt; | Yes | Callback triggered when the list reaches the start position. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onScrollIndex
 
@@ -372,13 +372,13 @@ Triggered when a child component enters or leaves the visible area of the **ArcL
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;ArcScrollIndexHandler&gt; | Yes | Callback triggered when a child component enters or leaves the visible area of the **ArcList** component. |
+| handler | Optional&lt;[ArcScrollIndexHandler](arkts-arkui-arcscrollindexhandler-t.md)&gt; | Yes | Callback triggered when a child component enters or leaves the visible area of the **ArcList** component. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onScrollStart
 
@@ -402,13 +402,13 @@ Triggered when the list starts scrolling initiated by the user's finger dragging
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | Callback triggered when the list starts scrolling. |
+| handler | Optional&lt;VoidCallback&gt; | Yes | Callback triggered when the list starts scrolling. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onScrollStop
 
@@ -433,13 +433,13 @@ Triggered when the list stops scrolling after the user's finger leaves the scree
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[VoidCallback](arkts-arkui-voidcallback-t.md)&gt; | Yes | Callback triggered when the list stops scrolling. |
+| handler | Optional&lt;VoidCallback&gt; | Yes | Callback triggered when the list stops scrolling. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## onWillScroll
 
@@ -463,13 +463,13 @@ Triggered before each frame during list scrolling. The callback returns the offs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](../arkts-components/arkts-arkui-onwillscrollcallback-t.md)&gt; | Yes | Callback triggered before each frame during list scrolling. |
+| handler | Optional&lt;OnWillScrollCallback&gt; | Yes | Callback triggered before each frame during list scrolling. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## scrollBar
 
@@ -493,13 +493,13 @@ Sets the state of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [Optional](arkts-arkui-optional-t.md)&lt;[BarState](arkts-arkui-barstate-e.md)&gt; | Yes | State of the scrollbar.&lt;br/&gt; Default value: **BarState.Auto |
+| status | Optional&lt;BarState&gt; | Yes | State of the scrollbar.&lt;br/&gt; Default value: **BarState.Auto |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## scrollBarColor
 
@@ -523,13 +523,13 @@ Sets the color of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.&lt;br/&gt; Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.&lt;br/&gt; Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## scrollBarWidth
 
@@ -553,13 +553,13 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.&lt;br/&gt; Default value: **LengthMetrics.vp(24)**.&lt;br/&gt;Minimum value: **LengthMetrics.vp(4)**&lt;br&gt;Unit: vp |
+| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.&lt;br/&gt; Default value: **LengthMetrics.vp(24)**.&lt;br/&gt;Minimum value: **LengthMetrics.vp(4)**&lt;br&gt;Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 
 ## space
 
@@ -583,11 +583,11 @@ Sets the spacing between list items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [Optional](arkts-arkui-optional-t.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.&lt;br/&gt; Default value: **LengthMetrics.vp(0)**.&lt;br/&gt;Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
+| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.&lt;br/&gt; Default value: **LengthMetrics.vp(0)**.&lt;br/&gt;Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-c.md) |  |
+| [ArcListAttribute](arkts-arkui-arkui-arclist-arclistattribute-i.md) |  |
 

@@ -6,7 +6,7 @@ Describes the Gatt service.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattService
+**Substitutes:** [GattService](ohos.bluetoothManager/bluetoothManager.GattService)
 
 <!--Device-bluetooth-interface GattService--><!--Device-bluetooth-interface GattService-End-->
 
@@ -15,7 +15,7 @@ Describes the Gatt service.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## characteristics
@@ -24,7 +24,7 @@ import { bluetooth } from 'kits/@kit.ConnectivityKit';
 characteristics: Array<BLECharacteristic>
 ```
 
-The {@link BLECharacteristic} list belongs to this GattService instance
+The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md#BLECharacteristic) list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 
@@ -32,7 +32,7 @@ The {@link BLECharacteristic} list belongs to this GattService instance
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattService.characteristics
+**Substitutes:** [characteristics](ohos.bluetoothManager/bluetoothManager.GattService.characteristics)
 
 <!--Device-GattService-characteristics: Array<BLECharacteristic>--><!--Device-GattService-characteristics: Array<BLECharacteristic>-End-->
 
@@ -52,7 +52,7 @@ The list of GATT services contained in the service
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattService.includeServices
+**Substitutes:** [includeServices](ohos.bluetoothManager/bluetoothManager.GattService.includeServices)
 
 <!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
@@ -72,7 +72,7 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattService.isPrimary
+**Substitutes:** [isPrimary](ohos.bluetoothManager/bluetoothManager.GattService.isPrimary)
 
 <!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
 
@@ -92,7 +92,7 @@ The UUID of a GattService instance
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattService.serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.GattService.serviceUuid)
 
 <!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
 

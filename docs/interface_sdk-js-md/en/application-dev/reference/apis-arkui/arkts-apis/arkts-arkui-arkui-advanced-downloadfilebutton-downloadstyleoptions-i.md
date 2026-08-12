@@ -13,7 +13,7 @@ Defines the DownloadFileButton style option.
 ## Modules to Import
 
 ```TypeScript
-import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from 'kits/@kit.ArkUI';
+import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from '@kit.ArkUI';
 ```
 
 ## fontColor
@@ -24,7 +24,7 @@ fontColor?: ResourceColor
 
 Font color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ fontSize?: Dimension
 
 Font size.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ fontStyle?: FontStyle
 
 Font Style.
 
-**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ iconColor?: ResourceColor
 
 Icon color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -144,7 +144,7 @@ iconSize?: Dimension
 
 Icon size.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 
@@ -184,7 +184,7 @@ textIconSpace?: Dimension
 
 Text and Icon space.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 23
 

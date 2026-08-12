@@ -13,7 +13,7 @@ Represents the permission dialog information of a single command.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## authResult
@@ -84,7 +84,7 @@ statusList: Array<PermissionDecisionStatus>
 
 List of permission decision statuses.
 
-**Type:** Array&lt;PermissionDecisionStatus&gt;
+**Type:** Array&lt;[PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md)&gt;
 
 **Since:** 26.0.0
 

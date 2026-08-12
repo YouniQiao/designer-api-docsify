@@ -38,7 +38,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 
 Custom shape of the slider.
 
-**Type:** [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute
+**Type:** [CircleAttribute](arkts-arkui-circle-attribute.md) \| [EllipseAttribute](arkts-arkui-ellipse-attribute.md) \| [PathAttribute](arkts-arkui-path-attribute.md) \| [RectAttribute](arkts-arkui-rect-attribute.md)
 
 **Since:** 10
 

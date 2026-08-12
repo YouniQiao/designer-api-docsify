@@ -2,7 +2,7 @@
 
 Defines the configuration options of the calendar picker dialog box.
 
-Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
+Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions).
 
 > **NOTE：**
 > 
@@ -10,7 +10,7 @@ Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md).
 > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
 > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
-**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)
 
 **Since:** 10
 
@@ -151,7 +151,7 @@ Style of the accept button.
 In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to  
 **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
@@ -179,7 +179,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -203,7 +203,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for customizing the background blur style.
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
@@ -232,7 +232,7 @@ Default value: **Color.Transparent**
 When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to  
 **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -256,7 +256,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Options for customizing the background effect.
 
-**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 19
 
@@ -283,7 +283,7 @@ Style of the cancel button.
 In the **acceptButtonStyle** and **cancelButtonStyle** configurations, only one **primary** field can be set to  
 **true** at most. If both the **primary** fields are set to **true**, neither will take effect.
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
@@ -336,7 +336,7 @@ Display area of the dialog box when the device is in semi-folded mode.
 
 Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
-**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -391,7 +391,7 @@ Triggered when the OK button in the dialog box is clicked.
 
 The callback parameter represents the selected date value.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -415,7 +415,7 @@ Triggered when the selection in the picker changes the selected date.
 
 The callback parameter represents the selected date value.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -440,7 +440,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
 **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
 
@@ -462,7 +462,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 

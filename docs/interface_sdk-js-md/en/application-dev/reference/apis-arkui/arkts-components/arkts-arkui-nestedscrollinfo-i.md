@@ -18,7 +18,7 @@ child: Scroller
 
 Controller of the scrollable container nested within the target scrollable container. This scrollable container is a child component of the target scrollable container.
 
-**Type:** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**Type:** Scroller
 
 **Since:** 14
 
@@ -40,7 +40,7 @@ parent: Scroller
 
 Controller of the target scrollable container.
 
-**Type:** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**Type:** Scroller
 
 **Since:** 14
 

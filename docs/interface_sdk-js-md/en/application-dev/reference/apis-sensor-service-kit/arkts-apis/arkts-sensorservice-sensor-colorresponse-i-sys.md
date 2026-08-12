@@ -1,8 +1,8 @@
 # ColorResponse (System API)
 
-Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the color sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** ColorResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** ColorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ Describes the color sensor data. It extends from [Response](arkts-sensorservice-
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## colorTemperature

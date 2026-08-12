@@ -8,7 +8,7 @@ buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** ArrayBufferLike
+**Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
 <!--Device-ArrayBufferView-buffer: ArrayBufferLike--><!--Device-ArrayBufferView-buffer: ArrayBufferLike-End-->
 

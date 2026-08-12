@@ -39,7 +39,7 @@ Creates an **ImageData** object with the specified width, height, and color.If d
 | --- | --- | --- |
 | [width](#width) | number | Yes |
 | [height](#height) | number | Yes |
-| [data](#data) | [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | No |
+| [data](#data) | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | No |
 
 ## constructor
 
@@ -67,8 +67,8 @@ Creates an **ImageData** object with the specified width, height, and color.If d
 | --- | --- | --- |
 | [width](#width) | number | Yes |
 | [height](#height) | number | Yes |
-| [data](#data) | [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md) | No |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
+| [data](#data) | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) | No |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No |
 
 ## data
 
@@ -78,7 +78,7 @@ readonly data: Uint8ClampedArray
 
 A one-dimensional array of color values. The values range from 0 to 255.
 
-**Type:** [Uint8ClampedArray](../../apis-default/arkts-apis/arkts-lib-es5-uint8clampedarray-i.md)
+**Type:** Uint8ClampedArray
 
 **Since:** 8
 
@@ -124,7 +124,7 @@ The unit is px.
 
 > **NOTE：**
 > 
-> The [px2vp](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#px2vp)
+> The [px2vp](UIContext#px2vp)
 > API can be used for unit conversion.
 
 **Type:** number

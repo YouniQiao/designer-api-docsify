@@ -1,6 +1,6 @@
 # FullScreenExitHandler
 
-Define the handler to exit the full screen mode, related to the {@link onFullScreenEnter} event.
+Define the handler to exit the full screen mode, related to the [onFullScreenEnter](arkts-arkweb-web-webattribute-i.md#onFullScreenEnter) event.
 
 **起始版本：** 23
 

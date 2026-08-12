@@ -8,7 +8,7 @@ A utility class used for handling objects that use the DataAbilityHelper scheme.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.dataUriUtils/dataUriUtils
+**Substitutes:** [dataUriUtils/dataUriUtils](ohos.app.ability.dataUriUtils/dataUriUtils)
 
 <!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
 

@@ -80,7 +80,7 @@ Set or reset the callback which will be triggered a click event when clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt; \| undefined | Yes | The callback about the click event. If set undefined will reset the target callback. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[ClickEvent](arkts-arkui-common-clickevent-i.md)&gt; \| undefined | Yes | The callback about the click event. If set undefined will reset the target callback. |
 
 ## setOnDisappear
 
@@ -176,7 +176,7 @@ Set or reset the callback is triggered when component has keyboard input.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent&gt; \| undefined | Yes | The callback will be triggered when has keyboard input. If set undefined will reset the target callback. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[KeyEvent](arkts-arkui-common-keyevent-i.md)&gt; \| undefined | Yes | The callback will be triggered when has keyboard input. If set undefined will reset the target callback. |
 
 ## setOnMouse
 
@@ -200,7 +200,7 @@ Set or reset the callback which is triggered when has a mouse event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;MouseEvent&gt; \| undefined | Yes | The callback will be triggered when has mouse input. If set undefined will reset the target callback. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[MouseEvent](arkts-arkui-common-mouseevent-i.md)&gt; \| undefined | Yes | The callback will be triggered when has mouse input. If set undefined will reset the target callback. |
 
 ## setOnSizeChange
 
@@ -224,7 +224,7 @@ Sets the callback for the onSizeChange event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SizeChangeCallback](../arkts-components/arkts-arkui-sizechangecallback-t.md) \| undefined | Yes | The callback will be triggered when the size of component changed. If set undefined will reset the target callback. |
+| callback | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) \| undefined | Yes | The callback will be triggered when the size of component changed. If set undefined will reset the target callback. |
 
 ## setOnTouch
 
@@ -248,7 +248,7 @@ Set or reset the callback which will be triggered a touch event when touched.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt; \| undefined | Yes | The callback about the touch event. If set undefined will reset the target callback. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[TouchEvent](arkts-arkui-common-touchevent-i.md)&gt; \| undefined | Yes | The callback about the touch event. If set undefined will reset the target callback. |
 
 ## setOnVisibleAreaApproximateChange
 

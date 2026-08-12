@@ -2,7 +2,7 @@
 
 > **说明：**
 > 
-> 当组件同时设置了[rotate](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#rotate)和[scale](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和
+> 当组件同时设置了[rotate](arkts-arkui-common-commonmethod-i.md#rotate)和[scale](arkts-arkui-common-commonmethod-i.md#scale)属性时，centerX和centerY的取值会发生冲突，此时centerX和
 > centerY的值以最后设定的属性的值为准。
 
 **起始版本：** 23

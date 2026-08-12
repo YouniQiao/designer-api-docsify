@@ -11,7 +11,7 @@ Describes the camera profile.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## format
@@ -42,7 +42,7 @@ Resolution.
 
 The size setting corresponds to the camera's resolution width and height, rather than the actual dimensions of the output image.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 10
 

@@ -20,13 +20,13 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 | 类型 |
 | --- |
-| Promise&lt;DataProxyHandle&gt; |
+| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [15700000](../errorcode-datashare.md#15700000-内部错误) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 

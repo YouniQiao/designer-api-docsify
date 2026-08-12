@@ -24,7 +24,7 @@ flag?: PanelFlag
 - 当前仅用于描述软键盘类型的面板的状态。  
 - 不同状态类型下面板的显隐行为不同：`FLAG_FIXED`和`FLAG_FLOATING`由系统控制显隐，`FLAG_CANDIDATE`由开发者自行控制显隐。
 
-**类型：** [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md)
+**类型：** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 
 **默认值：** FLG_FIXED
 
@@ -42,7 +42,7 @@ type: PanelType
 
 输入法面板类型。决定面板是软键盘还是状态栏。不填写时默认为`SOFT_KEYBOARD`(0)。
 
-**类型：** [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
+**类型：** [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md)
 
 **起始版本：** 11
 

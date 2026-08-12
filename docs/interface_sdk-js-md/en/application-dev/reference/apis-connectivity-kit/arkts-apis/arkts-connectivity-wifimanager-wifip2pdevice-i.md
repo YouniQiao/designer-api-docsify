@@ -13,7 +13,7 @@ P2P device information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -78,7 +78,7 @@ deviceStatus: P2pDeviceStatus
 
 Device status
 
-**Type:** [P2pDeviceStatus](arkts-connectivity-wifi-p2pdevicestatus-e.md)
+**Type:** P2pDeviceStatus
 
 **Since:** 9
 

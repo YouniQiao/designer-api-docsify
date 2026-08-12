@@ -29,5 +29,5 @@ Create a FrameNode of Button type.On API 26.0.0 and above, It can also create a 
 
 | Type | Description |
 | --- | --- |
-| [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md) | Return Button type FrameNode. |
+| Button | Return Button type FrameNode. |
 

@@ -2,7 +2,7 @@
 
 A write lock that provides exclusive write access to a shared resource
 
-**Inheritance/Implementation:** WriteLock implements [Lock](arkts-arkts-syncprimitives-lock-i.md)
+**Inheritance/Implementation:** WriteLock implements [Lock](arkts-arkts-syncprimitives-lock-i.md#Lock)
 
 **Since:** 26.0.0
 

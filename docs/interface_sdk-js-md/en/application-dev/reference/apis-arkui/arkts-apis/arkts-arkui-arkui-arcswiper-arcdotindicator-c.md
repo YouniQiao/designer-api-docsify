@@ -13,7 +13,7 @@ Define ArcDotIndicator, the indicator type is arc dot.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## arcDirection
@@ -68,7 +68,7 @@ Set the background color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the background color, default value is { #FF404040 }, undefined means setting to default value. |
+| color | ResourceColor \| undefined | Yes | the background color, default value is { #FF404040 }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -116,7 +116,7 @@ Set the navigation point color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator item color, default value is { #A9FFFFFF }, undefined means setting to default value. |
+| color | ResourceColor \| undefined | Yes | the indicator item color, default value is { #A9FFFFFF }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -146,7 +146,7 @@ Set the gradient color for the mask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [LinearGradient](../arkts-components/arkts-arkui-lineargradient-i.md) \| undefined | Yes | the gradient color, default start color is { #00000000 }, default end color is { #FF000000 }, undefined means setting to default value. |
+| color | LinearGradient \| undefined | Yes | the gradient color, default start color is { #00000000 }, default end color is { #FF000000 }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -176,7 +176,7 @@ Set the selected navigation point color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | Yes | the indicator item when selected, default value is { #FF5EA1FF }, undefined means setting to default value. |
+| color | ResourceColor \| undefined | Yes | the indicator item when selected, default value is { #FF5EA1FF }, undefined means setting to default value. |
 
 **Return value:**
 

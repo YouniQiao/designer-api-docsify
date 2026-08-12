@@ -4,8 +4,8 @@ Enumerates the drawing styles for path effects.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description |
 | ------ | - | ------------------ |
 | [TRANSLATE](#translate) | 0 | Translates only, not rotating with the path.|
-| [ROTATE](#rotate) | 1 | Rotates with the path.|
-| [MORPH](#morph) | 2 |
+| [ROTATE](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 1 | Rotates with the path.|
+| [MORPH](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 2 |
 
 **Since:** 18
 

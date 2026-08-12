@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowDialogSuccessResponse
+**替代接口：** [ShowDialogSuccessResponse](ohos.promptAction/promptAction.ShowDialogSuccessResponse)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
@@ -26,7 +26,7 @@ index: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowDialogSuccessResponse#index
+**替代接口：** [index](ohos.promptAction/promptAction.ShowDialogSuccessResponse#index)
 
 <!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 

@@ -12,7 +12,7 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getAllActiveNotifications
+**替代接口：** [getAllActiveNotifications](ohos.notificationManager/notificationManager#getAllActiveNotifications)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; | 是 |
 
 
 ## getAllActiveNotifications
@@ -41,7 +41,7 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#getAllActiveNotifications
+**替代接口：** [getAllActiveNotifications](ohos.notificationManager/notificationManager#getAllActiveNotifications)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -55,4 +55,4 @@ function getAllActiveNotifications(): Promise<Array<NotificationRequest>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)&gt;&gt; |
+| Promise&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)&gt;&gt; |

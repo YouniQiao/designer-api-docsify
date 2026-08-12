@@ -15,7 +15,7 @@ Defines the credential change information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## accountId
@@ -86,7 +86,7 @@ credentialType: AuthType
 
 Credential type.
 
-**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**Type:** AuthType
 
 **Since:** 23
 

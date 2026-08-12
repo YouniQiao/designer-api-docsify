@@ -2,7 +2,7 @@
 
 Defines a UIScrollableCommonEvent which is used to set event to target component.
 
-**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](../arkts-components/arkts-arkui-uicommonevent-i.md/arkts-arkui-uicommonevent-i.md)
+**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-common-uicommonevent-i.md#UICommonEvent)
 
 **Since:** 26.0.0
 

@@ -12,7 +12,7 @@ Truncates a file based on the file path. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function truncate(path: string, len?: number): Promise<void>--><!--Device-unnamed-declare function truncate(path: string, len?: number): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ Truncates a file based on the file path. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## truncate
@@ -44,7 +44,7 @@ Truncates a file based on the file path. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function truncate(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function truncate(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -70,7 +70,7 @@ Truncates a file based on the file path. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncate](arkts-corefile-fileio-truncate-f.md#truncate)
+**Substitutes:** [truncate](arkts-corefile-file-fs-truncate-f.md#truncate)
 
 <!--Device-unnamed-declare function truncate(path: string, len: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function truncate(path: string, len: number, callback: AsyncCallback<void>): void-End-->
 

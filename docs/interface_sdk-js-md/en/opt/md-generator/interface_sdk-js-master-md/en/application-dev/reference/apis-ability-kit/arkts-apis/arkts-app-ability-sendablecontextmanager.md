@@ -1,7 +1,7 @@
 # @ohos.app.ability.sendableContextManager
 
 The sendableContextManager module provides APIs for converting between Context and  
-[SendableContext](arkts-ability-sendablecontext-i.md) objects.
+[SendableContext](arkts-ability-sendablecontext-i.md#SendableContext) objects.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ The sendableContextManager module provides APIs for converting between Context a
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -12,7 +12,7 @@ Obtains the Context object associated with a component on the page.
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.UIContext#getHostContext
+**替代接口：** [getHostContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,7 +26,7 @@ Obtains the Context object associated with a component on the page.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| component | Object | 否 |
+| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | 否 |
 
 **返回值：**
 

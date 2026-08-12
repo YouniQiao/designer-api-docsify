@@ -6,7 +6,7 @@ Represents a USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)
+**Substitutes:** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md#USBPort)
 
 <!--Device-usb-interface USBPort--><!--Device-usb-interface USBPort-End-->
 
@@ -17,7 +17,7 @@ Represents a USB port.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## id
@@ -34,7 +34,7 @@ Unique identifier of a USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPort.id](arkts-basicservices-usbmanager-usbport-i-sys.md#id)
+**Substitutes:** [id](arkts-basicservices-usbmanager-usbport-i-sys.md#id)
 
 <!--Device-USBPort-id: number--><!--Device-USBPort-id: number-End-->
 
@@ -50,13 +50,13 @@ status: USBPortStatus
 
 USB port role.
 
-**Type:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
+**Type:** USBPortStatus
 
 **Since:** 9
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPort.status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
+**Substitutes:** [status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
 
 <!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
 
@@ -72,13 +72,13 @@ supportedModes: PortModeType
 
 Numeric mask combination for the supported mode list.
 
-**Type:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
+**Type:** PortModeType
 
 **Since:** 9
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPort.supportedModes](arkts-basicservices-usbmanager-usbport-i-sys.md#supportedmodes)
+**Substitutes:** [supportedModes](arkts-basicservices-usbmanager-usbport-i-sys.md#supportedModes)
 
 <!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 

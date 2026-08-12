@@ -2,9 +2,9 @@
 
 用于clipShape和maskShape接口的椭圆形状。
 
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
+继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
 
-**继承/实现关系：** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
+**继承/实现关系：** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
 
 **起始版本：** 23
 

@@ -16,7 +16,7 @@ Defines the mapping between progress indicators and styles.
 
 Progress bar style corresponding to the capsule progress bar.
 
-**Type:** [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) \| ProgressStyleOptions
+**Type:** [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Progress bar style corresponding to the capsule progress bar.
 
 Progress bar style corresponding to a round progress bar.
 
-**Type:** [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) \| ProgressStyleOptions
+**Type:** [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -56,7 +56,7 @@ Progress bar style corresponding to a round progress bar.
 
 Progress bar style corresponding to the linear progress bar.
 
-**Type:** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| ProgressStyleOptions
+**Type:** [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ Progress bar style corresponding to the linear progress bar.
 
 Progress bar style corresponding to the ring unscaled progress bar.
 
-**Type:** [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md) \| ProgressStyleOptions
+**Type:** [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
 
@@ -96,7 +96,7 @@ Progress bar style corresponding to the ring unscaled progress bar.
 
 Progress bar style corresponding to the ring scaled progress bar.
 
-**Type:** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| ProgressStyleOptions
+**Type:** [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md) \| [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
 
 **Since:** 10
 

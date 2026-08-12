@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md)
+**替代接口：** [BundleInstaller](arkts-ability-installer-bundleinstaller-i-sys.md#BundleInstaller)
 
 <!--Device-unnamed-export interface BundleInstaller--><!--Device-unnamed-export interface BundleInstaller-End-->
 
@@ -26,7 +26,7 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.BundleInstaller.install](arkts-ability-installer-bundleinstaller-i-sys.md#install)
+**替代接口：** [install](arkts-ability-installer-bundleinstaller-i-sys.md#install)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -40,9 +40,9 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundleFilePaths | Array&lt;string&gt; | 是 |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | 是 |
+| bundleFilePaths | Array & lt;string & gt; | 是 |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
 
 ## recover
 
@@ -56,7 +56,7 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.BundleInstaller.recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover)
+**替代接口：** [recover](arkts-ability-installer-bundleinstaller-i-sys.md#recover)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -71,8 +71,8 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | 是 |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |
 
 ## uninstall
 
@@ -86,7 +86,7 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.installer:installer.BundleInstaller.uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
+**替代接口：** [uninstall](arkts-ability-installer-bundleinstaller-i-sys.md#uninstall)
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -101,5 +101,5 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| param | [InstallParam](../../apis-mdm-kit/arkts-apis/arkts-mdm-bundlemanager-installparam-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InstallStatus&gt; | 是 |
+| param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 |

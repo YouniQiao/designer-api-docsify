@@ -10,9 +10,9 @@ Defines the pointer style.
 > 
 > Directly using **cursorControl** can lead to the issue of
 > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> [UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md) object using the **getUIContext()** API and then obtain the
+> [UIContext](@ohos.arkui.UIContext) object using the **getUIContext()** API and then obtain the
 > **cursorControl** bound to the instance using the
-> [getCursorController](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller) API.
+> [getCursorController](@ohos.arkui.UIContext:UIContext#getcursorcontroller) API.
 
 **Since:** 11
 

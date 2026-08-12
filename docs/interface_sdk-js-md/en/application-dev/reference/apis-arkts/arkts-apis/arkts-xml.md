@@ -13,7 +13,7 @@ The xml module provides utilities for converting XML text to Javascript object, 
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## Summary

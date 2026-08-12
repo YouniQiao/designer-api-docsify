@@ -21,7 +21,7 @@
 
 | Type | Description |
 | --- | --- |
-| [AggregateError](../../apis-arkts/arkts-apis/arkts-arkts-errors-aggregateerror-c.md) |  |
+| [AggregateError](arkts-lib-es2021-promise-aggregateerror-i.md) |  |
 
 ## [[Construct]]
 
@@ -42,7 +42,7 @@ new(errors: Iterable<any>, message?: string): AggregateError
 
 | Type | Description |
 | --- | --- |
-| [AggregateError](../../apis-arkts/arkts-apis/arkts-arkts-errors-aggregateerror-c.md) |  |
+| [AggregateError](arkts-lib-es2021-promise-aggregateerror-i.md) |  |
 
 ## prototype
 
@@ -50,7 +50,7 @@ new(errors: Iterable<any>, message?: string): AggregateError
 readonly prototype: AggregateError
 ```
 
-**Type:** [AggregateError](../../apis-arkts/arkts-apis/arkts-arkts-errors-aggregateerror-c.md)
+**Type:** [AggregateError](arkts-lib-es2021-promise-aggregateerror-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

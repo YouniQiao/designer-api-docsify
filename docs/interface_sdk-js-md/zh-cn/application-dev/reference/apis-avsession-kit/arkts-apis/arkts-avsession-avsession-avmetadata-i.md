@@ -60,7 +60,7 @@ assetId: string
 
 - 该属性发生变化则其他元数据属性都将被刷新。  
 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
-- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
+- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setAVMetadata-1)方法将失败，返回错误码6600101。
 
 **类型：** string
 
@@ -215,7 +215,7 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md#DisplayTag)。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -297,7 +297,7 @@ fastForwardSkipIntervals?: SkipIntervals
 filter?: int
 ```
 
-当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md)。
+当前会话支持的协议，默认为TYPE_CAST_PLUS_STREAM。具体取值参考[ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType)。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

@@ -32,7 +32,7 @@ Constructor parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanGestureHandlerOptions](arkts-arkui-pangesturehandleroptions-i.md) | No |  |
+| value | [PanGestureHandlerOptions](arkts-arkui-gesture-pangesturehandleroptions-i.md) | No |  |
 
 ## getDirection
 

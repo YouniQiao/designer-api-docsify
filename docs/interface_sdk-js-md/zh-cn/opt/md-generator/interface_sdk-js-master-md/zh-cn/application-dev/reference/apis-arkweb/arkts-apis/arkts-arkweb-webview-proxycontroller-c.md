@@ -14,7 +14,7 @@ This class is used for set proxy for ArkWeb.
 static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChangeCallback): void
 ```
 
-设置应用中所有Web使用的代理配置，与[insertBypassRule](arkts-arkweb-webview-proxyconfig-c.md#insertbypassrule)中插入的bypass规则匹配的URL将不会使用代理，而是直接向URL指定的源地址发起请求。代理设置成功后，不保证网络连接后会立即使用新的代理设置，在加载页面之前请等待监听器触发，这个监听器将在UI线程上被调用。注意：调用 `applyProxyOverride` 会导致忽略任何现有的系统范围设置。
+设置应用中所有Web使用的代理配置，与[insertBypassRule](arkts-arkweb-webview-proxyconfig-c.md#insertBypassRule)中插入的bypass规则匹配的URL将不会使用代理，而是直接向URL指定的源地址发起请求。代理设置成功后，不保证网络连接后会立即使用新的代理设置，在加载页面之前请等待监听器触发，这个监听器将在UI线程上被调用。注意：调用 `applyProxyOverride` 会导致忽略任何现有的系统范围设置。
 
 **起始版本：** 15
 
@@ -35,7 +35,7 @@ static applyProxyOverride(proxyConfig: ProxyConfig, callback: OnProxyConfigChang
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## removeProxyOverride
 
@@ -63,4 +63,4 @@ static removeProxyOverride(callback: OnProxyConfigChangeCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

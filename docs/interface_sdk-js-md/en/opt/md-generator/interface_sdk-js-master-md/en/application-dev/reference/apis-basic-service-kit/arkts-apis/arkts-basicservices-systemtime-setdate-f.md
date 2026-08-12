@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## setDate
@@ -18,7 +18,7 @@ Sets the system date. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate)
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -72,7 +72,7 @@ Sets the system date. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setdate)
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -90,7 +90,7 @@ Sets the system date. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 

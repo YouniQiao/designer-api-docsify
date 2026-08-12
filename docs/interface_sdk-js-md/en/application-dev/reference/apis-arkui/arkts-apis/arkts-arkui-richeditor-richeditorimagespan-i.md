@@ -18,7 +18,7 @@ imageStyle?: RichEditorImageSpanStyle
 
 image style.
 
-**Type:** [RichEditorImageSpanStyle](../arkts-components/arkts-arkui-richeditorimagespanstyle-i.md)
+**Type:** [RichEditorImageSpanStyle](arkts-arkui-richeditor-richeditorimagespanstyle-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ spanPosition: RichEditorSpanPosition
 
 The position of the image span.
 
-**Type:** [RichEditorSpanPosition](../arkts-components/arkts-arkui-richeditorspanposition-i.md)
+**Type:** [RichEditorSpanPosition](arkts-arkui-richeditor-richeditorspanposition-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ value: PixelMap | ResourceStr
 
 The content of the image span.
 
-**Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| ResourceStr
+**Type:** [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

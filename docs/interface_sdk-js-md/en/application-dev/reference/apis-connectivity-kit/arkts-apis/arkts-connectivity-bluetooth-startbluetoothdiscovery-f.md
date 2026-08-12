@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## startBluetoothDiscovery
@@ -20,7 +20,7 @@ Starts scanning Bluetooth devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.startBluetoothDiscovery
+**Substitutes:** [startBluetoothDiscovery](ohos.bluetoothManager/bluetoothManager.startBluetoothDiscovery)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION
 

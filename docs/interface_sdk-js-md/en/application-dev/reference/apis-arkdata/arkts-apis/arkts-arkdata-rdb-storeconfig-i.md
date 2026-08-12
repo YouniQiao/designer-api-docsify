@@ -8,7 +8,7 @@ Defines the RDB store configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md)
+**Substitutes:** [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)
 
 <!--Device-rdb-interface StoreConfig--><!--Device-rdb-interface StoreConfig-End-->
 
@@ -30,7 +30,7 @@ Database file name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.StoreConfig.name](arkts-arkdata-relationalstore-storeconfig-i.md#name)
+**Substitutes:** [name](arkts-arkdata-relationalstore-storeconfig-i.md#name)
 
 <!--Device-StoreConfig-name: string--><!--Device-StoreConfig-name: string-End-->
 

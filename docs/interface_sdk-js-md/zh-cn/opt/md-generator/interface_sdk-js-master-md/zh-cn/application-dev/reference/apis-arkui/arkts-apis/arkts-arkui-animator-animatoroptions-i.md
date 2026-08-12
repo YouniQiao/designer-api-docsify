@@ -154,9 +154,9 @@ fill: "none" | "forwards" | "backwards" | "both"
 
 'forwards'：在动画结束后，目标将保留动画结束时的状态（在最后一个关键帧中定义）。
 
-'backwards'：动画将在[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)中的delay期间应用第一个关键帧中定义的值。当  
-[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)中的direction为'normal'或'alternate'时应用from关键帧中的值，当  
-[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)中的direction为'reverse'或'alternate-reverse'时应用to关键帧中的值。
+'backwards'：动画将在[AnimatorOptions](#AnimatorOptions)中的delay期间应用第一个关键帧中定义的值。当  
+[AnimatorOptions](#AnimatorOptions)中的direction为'normal'或'alternate'时应用from关键帧中的值，当  
+[AnimatorOptions](#AnimatorOptions)中的direction为'reverse'或'alternate-reverse'时应用to关键帧中的值。
 
 'both'：动画将遵循forwards和backwards的规则，从而在两个方向上扩展动画属性。
 

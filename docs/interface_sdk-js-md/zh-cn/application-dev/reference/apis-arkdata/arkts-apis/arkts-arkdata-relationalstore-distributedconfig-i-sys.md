@@ -22,7 +22,7 @@ references?: Array<Reference>
 
 从API version 11开始，支持此可选参数。
 
-**类型：** Array&lt;Reference&gt;
+**类型：** Array&lt;[Reference](arkts-arkdata-relationalstore-reference-i-sys.md)&gt;
 
 **起始版本：** 11
 

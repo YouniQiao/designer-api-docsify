@@ -11,7 +11,7 @@ Defines the data structure of the task information for query. The fields availab
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## action
@@ -25,7 +25,7 @@ Task action.
 - **UPLOAD**: Upload tasks.  
 - **DOWNLOAD**: Download tasks.
 
-**Type:** [Action](arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 10
 
@@ -43,7 +43,7 @@ Unix timestamp when the task is created, in milliseconds. The value is generated
 
 Note: When   
 [request.agent.search](arkts-basicservices-agent-search-f.md#search) is used for query, this value must be within the range of [after,before] for the task ID to be obtained. For details about **before** and **after**, see   
-[Filter](arkts-basicservices-agent-filter-i.md).
+[Filter](arkts-basicservices-agent-filter-i.md#Filter).
 
 **Type:** number
 
@@ -61,10 +61,10 @@ readonly data?: string | Array<FormItem>
 
 Task value.
 
-- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show)  
-and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)to query the value.
+- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show-1)  
+and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch-1)to query the value.
 
-**Type:** string \| Array&lt;FormItem&gt;
+**Type:** string \| Array&lt;[FormItem](arkts-basicservices-agent-formitem-i.md)&gt;
 
 **Since:** 10
 
@@ -217,7 +217,7 @@ readonly progress: Progress
 
 Task progress.
 
-**Type:** [Progress](arkts-basicservices-agent-progress-i.md)
+**Type:** Progress
 
 **Since:** 10
 
@@ -332,8 +332,8 @@ readonly url?: string
 
 Task URL.
 
-- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show)  
-and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch)to query the value.
+- Use [request.agent.show](arkts-basicservices-agent-show-f.md#show-1)  
+and [request.agent.touch](arkts-basicservices-agent-touch-f.md#touch-1)to query the value.
 
 **Type:** string
 

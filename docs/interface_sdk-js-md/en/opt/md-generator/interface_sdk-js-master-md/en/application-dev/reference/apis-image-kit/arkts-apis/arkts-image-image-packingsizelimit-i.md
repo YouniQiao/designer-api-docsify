@@ -11,7 +11,7 @@ Packing image size limit.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## level
@@ -40,7 +40,7 @@ maxSize: Size
 
 Maximum packing size
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 26.0.0
 

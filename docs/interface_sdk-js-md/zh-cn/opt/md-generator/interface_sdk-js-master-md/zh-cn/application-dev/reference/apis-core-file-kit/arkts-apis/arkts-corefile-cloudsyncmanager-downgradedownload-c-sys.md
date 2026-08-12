@@ -42,8 +42,8 @@ constructor(bundleName: string)
 | --- |
 | 13900020 |
 | 22400005 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -81,15 +81,15 @@ getCloudFileInfo(): Promise<CloudFileInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;CloudFileInfo&gt; |
+| Promise&lt;[CloudFileInfo](arkts-corefile-cloudsyncmanager-cloudfileinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 22400005 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900010 |
 
@@ -137,7 +137,7 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
@@ -146,8 +146,8 @@ startDownload(callback: Callback<DownloadProgress>): Promise<void>
 | 13900020 |
 | 22400005 |
 | 22400006 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900010 |
 
@@ -200,7 +200,7 @@ startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | targetUri | string | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TransferProgress&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TransferProgress](arkts-corefile-cloudsyncmanager-transferprogress-i-sys.md)&gt; | 是 |
 
 **错误码：**
 
@@ -210,8 +210,8 @@ startTransfer(targetUri: string, callback: Callback<TransferProgress>): void
 | 22400006 |
 | 13900001 |
 | 13900002 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900010 |
 
 ## 示例
@@ -237,7 +237,7 @@ try {
 stopDownload(): Promise<void>
 ```
 
-停止由[startDownload](arkts-corefile-cloudsyncmanager-downgradedownload-c-sys.md#startdownload)触发的全量下载任务，使用Promise异步回调。
+停止由[startDownload](#startDownload)触发的全量下载任务，使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -253,15 +253,15 @@ stopDownload(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 22400005 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例

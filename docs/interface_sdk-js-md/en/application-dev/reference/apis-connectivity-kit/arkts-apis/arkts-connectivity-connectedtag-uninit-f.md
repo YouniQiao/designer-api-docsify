@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## uninit
@@ -20,7 +20,7 @@ UnInitializes Connected Tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#uninitialize
+**Substitutes:** [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md#uninitialize)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

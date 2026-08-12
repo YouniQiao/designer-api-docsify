@@ -22,7 +22,7 @@ Send a mock touch event to the current application. This interface is only suita
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [TouchObject](../arkts-components/arkts-arkui-touchobject-i.md) | Yes | TouchObject to be sent. |
+| event | TouchObject | Yes | TouchObject to be sent. |
 
 **Return value:**
 

@@ -1,8 +1,8 @@
 # ExtensionAbilityInfo
 
 The module defines the ExtensionAbility information. An application can obtain its own ExtensionAbility information through  
-[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself), with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to  
-[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
+[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf), with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in to  
+[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag).
 
 **Since:** 9
 
@@ -34,12 +34,12 @@ readonly applicationInfo: ApplicationInfo
 
 Application configuration information &lt;!--Del--&gt;. The information can be obtained by passing in  
 **GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION** to the **extensionAbilityFlags** parameter of  
-[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryextensionabilityinfo)&lt;!--DelEnd--&gt;.
+[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo)&lt;!--DelEnd--&gt;.
 
 This field is not returned when the  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself)or  
-[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo)is used to obtain ExtensionAbilityInfo information. You can obtain the related information by obtaining the  
-[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)or  
+[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getBundleInfo)is used to obtain ExtensionAbilityInfo information. You can obtain the related information by obtaining the  
+[bundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo).appInfo object.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -203,7 +203,7 @@ readonly metadata: Array<Metadata>
 ```
 
 Metadata of the ExtensionAbility. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**, **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY**, and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags**parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 

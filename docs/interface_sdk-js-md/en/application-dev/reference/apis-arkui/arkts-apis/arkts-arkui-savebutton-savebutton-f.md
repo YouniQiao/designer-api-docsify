@@ -24,7 +24,7 @@ Set a save button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SaveButtonOptions](../arkts-components/arkts-arkui-savebuttonoptions-i.md) | No | Options of the save button. |
+| options | [SaveButtonOptions](arkts-arkui-savebutton-savebuttonoptions-i.md) | No | Options of the save button. |
 
 **Return value:**
 

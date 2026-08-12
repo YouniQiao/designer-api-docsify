@@ -60,7 +60,7 @@ Time format.
 
 Default value: **TimePickerFormat.HOUR_MINUTE**
 
-**Type:** [TimePickerFormat](../arkts-apis/arkts-arkui-timepicker-timepickerformat-e.md)
+**Type:** [TimePickerFormat](arkts-arkui-timepickerformat-e.md)
 
 **Default:** HOUR_MINUTE
 

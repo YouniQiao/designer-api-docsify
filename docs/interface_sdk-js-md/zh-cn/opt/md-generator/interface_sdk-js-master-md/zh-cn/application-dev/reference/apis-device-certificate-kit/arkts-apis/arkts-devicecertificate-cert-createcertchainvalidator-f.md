@@ -20,7 +20,7 @@ function createCertChainValidator(algorithm: string): CertChainValidator
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| algorithm | string | 是 |
+| [algorithm](arkts-devicecertificate-cert-certchainvalidator-i.md) | string | 是 |
 
 **返回值：**
 
@@ -32,11 +32,11 @@ function createCertChainValidator(algorithm: string): CertChainValidator
 
 | 错误码ID |
 | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [19020001](../errorcode-cert.md#19020001-内存错误) |
-| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
+| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 

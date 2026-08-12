@@ -6,7 +6,7 @@ Defines the option of ShowActionMenu.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ActionMenuOptions
+**Substitutes:** [ActionMenuOptions](ohos.promptAction/promptAction.ActionMenuOptions)
 
 <!--Device-prompt-interface ActionMenuOptions--><!--Device-prompt-interface ActionMenuOptions-End-->
 
@@ -15,7 +15,7 @@ Defines the option of ShowActionMenu.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -32,7 +32,7 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ActionMenuOptions#buttons
+**Substitutes:** [buttons](ohos.promptAction/promptAction.ActionMenuOptions#buttons)
 
 <!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
@@ -52,7 +52,7 @@ Title of the text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.promptAction/promptAction.ActionMenuOptions#title
+**Substitutes:** [title](ohos.promptAction/promptAction.ActionMenuOptions#title)
 
 <!--Device-ActionMenuOptions-title?: string--><!--Device-ActionMenuOptions-title?: string-End-->
 

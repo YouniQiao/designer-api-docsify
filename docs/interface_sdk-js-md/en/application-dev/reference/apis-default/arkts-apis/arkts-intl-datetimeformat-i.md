@@ -34,5 +34,5 @@ resolvedOptions(): ResolvedDateTimeFormatOptions
 
 | Type | Description |
 | --- | --- |
-| [ResolvedDateTimeFormatOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddatetimeformatoptions-i.md) |  |
+| ResolvedDateTimeFormatOptions |  |
 

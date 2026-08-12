@@ -14,7 +14,7 @@ Get inspector node infos.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getInspectorTree](arkts-arkui-global-getinspectortree-f.md#getinspectortree)
+**Substitutes:** [getInspectorTree](getInspectorTree)
 
 <!--Device-unnamed-declare function getInspectorNodes(): object--><!--Device-unnamed-declare function getInspectorNodes(): object-End-->
 

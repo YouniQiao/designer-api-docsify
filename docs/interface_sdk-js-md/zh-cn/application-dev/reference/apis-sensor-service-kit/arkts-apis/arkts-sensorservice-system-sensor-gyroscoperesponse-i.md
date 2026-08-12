@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#GyroscopeResponse
+**替代接口：** [GyroscopeResponse](ohos.sensor/sensor#GyroscopeResponse)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -32,7 +32,7 @@ x轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报�
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#GyroscopeResponse.x
+**替代接口：** [x](ohos.sensor/sensor#GyroscopeResponse.x)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -58,7 +58,7 @@ y轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报�
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#GyroscopeResponse.y
+**替代接口：** [y](ohos.sensor/sensor#GyroscopeResponse.y)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -84,7 +84,7 @@ z轴的旋转角速度。单位：rad/s。取值范围：取值为实际上报�
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#GyroscopeResponse.z
+**替代接口：** [z](ohos.sensor/sensor#GyroscopeResponse.z)
 
 **需要权限：** ohos.permission.GYROSCOPE
 

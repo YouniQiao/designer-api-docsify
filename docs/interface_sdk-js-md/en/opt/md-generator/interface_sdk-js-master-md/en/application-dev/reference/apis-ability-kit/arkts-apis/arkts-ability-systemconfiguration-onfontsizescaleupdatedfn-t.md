@@ -20,4 +20,4 @@ Defines an OnFontSizeScaleUpdatedFn function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fontSizeScale | number | Yes |
+| [fontSizeScale](arkts-ability-app-ability-configuration-configuration-i.md) | number | Yes |

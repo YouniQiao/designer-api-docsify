@@ -13,7 +13,7 @@ Plugin component push parameters.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from 'kits/@kit.ArkUI';
+import { PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
 ## data

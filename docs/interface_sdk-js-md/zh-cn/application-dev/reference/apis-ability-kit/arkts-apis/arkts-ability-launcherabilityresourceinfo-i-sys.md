@@ -1,7 +1,7 @@
 # LauncherAbilityResourceInfo（系统接口）
 
 应用配置的入口图标和名称信息，可以通过  
-[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo)获取。
+[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo)获取。
 
 > **说明：**
 > 
@@ -85,7 +85,7 @@ readonly drawableDescriptor: DrawableDescriptor
 
 应用图标的drawableDescriptor对象。
 
-**类型：** [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md)
+**类型：** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **起始版本：** 12
 

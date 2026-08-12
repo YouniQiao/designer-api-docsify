@@ -11,7 +11,7 @@ function disableAlertBeforeBackPage(): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)替代。
+> [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hideAlertBeforeBackPage)替代。
 
 **起始版本：** 8
 
@@ -19,7 +19,7 @@ function disableAlertBeforeBackPage(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.arkui.UIContext:Router#hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hidealertbeforebackpage)
+**替代接口：** [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hideAlertBeforeBackPage)
 
 <!--Device-router-function disableAlertBeforeBackPage(): void--><!--Device-router-function disableAlertBeforeBackPage(): void-End-->
 

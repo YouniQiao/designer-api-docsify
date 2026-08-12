@@ -15,7 +15,7 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
 将当前组件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。不能与  
-[blendMode](arkts-arkui-commonmethod-c.md#blendmode)接口同时使用。
+[blendMode](arkts-arkui-commonmethod-c.md#blendMode)接口同时使用。
 
 **起始版本：** 13
 
@@ -31,8 +31,8 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](../arkts-apis/arkts-arkui-blender-t-sys.md) | 是 |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | 否 |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | 是 |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | 否 |
 
 **返回值：**
 
@@ -101,7 +101,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-设置当前组件和其子组件是否从祖先组件的节点组中剔除。需搭配祖先组件设置节点组[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup)属性使用，单独使用无效果。
+设置当前组件和其子组件是否从祖先组件的节点组中剔除。需搭配祖先组件设置节点组[renderGroup](arkts-arkui-commonmethod-c.md#renderGroup)属性使用，单独使用无效果。
 
 从节点组剔除后，当前组件和子组件不再影响祖先组件的离屏画布，不会引起节点组的缓存失效，从而达到复用节点组缓存的目的。如果当前组件的显示区域只占节点组绘制内容显示区域的一部分，且当前组件及子组件的显示效果频繁更新，设置excludeFromRenderGroup属性有助于绘制性能优化。
 
@@ -113,7 +113,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 > [translate](arkts-arkui-commonmethod-c.md#translate)或
 > [scale](arkts-arkui-commonmethod-c.md#scale)等属性导致子组件超出当前组件范围，或当前组件上有
 > [shadow](arkts-arkui-commonmethod-c.md#shadow)、
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)等属性导致当前组件的绘制内容超出组件
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelStretchEffect)等属性导致当前组件的绘制内容超出组件
 > 边界时，可能出现显示内容被裁剪的问题。此类场景不应设置excludeFromRenderGroup属性为true。
 
 **起始版本：** 22

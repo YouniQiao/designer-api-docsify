@@ -25,14 +25,14 @@ Defines WithTheme Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | Yes | options of WithTheme. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | the content of the component |
+| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | Yes | options of WithTheme. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | the content of the component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) |  |
+| [WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md) |  |
 
 
 ## WithTheme
@@ -62,12 +62,12 @@ Defines the WithTheme component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;WithThemeAttribute&gt; | Yes | WithTheme attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md)&gt; | Yes | WithTheme attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [WithThemeAttribute](arkts-arkui-withthemeattribute-c.md) | WithThemeAttribute |
+| [WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md) | WithThemeAttribute |
 

@@ -1,7 +1,7 @@
 # @ohos.util.Queue
 
 Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。Queue基于循环队列的数据结构实现。
- Queue和[Deque](arkts-util-deque.md)相比，Queue在尾部增加元素，在头部删除元素；而Deque支持在两端进行增删操作。
+ Queue和[Deque](arkts-arkts-util-deque-deque-c.md#Deque)相比，Queue在尾部增加元素，在头部删除元素；而Deque支持在两端进行增删操作。
  **推荐使用场景：** 一般符合先进先出的场景可以使用Queue。
  文档中使用了泛型，涉及以下泛型类型参数：
  - T：Type，类型

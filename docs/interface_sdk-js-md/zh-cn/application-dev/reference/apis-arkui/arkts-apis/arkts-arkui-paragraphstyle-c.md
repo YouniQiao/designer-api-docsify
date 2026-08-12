@@ -6,7 +6,7 @@
 
 每个段落的段落样式按首个占位设置的段落样式生效，未设置时，段落按被绑定组件的段落样式生效。
 
-在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-customspan-c.md)或[ImageAttachment](arkts-arkui-imageattachment-c.md)时，设置在该段落上的段落样式不生效。从API版本26.0.0开始，设置段落样式生效。
+在API版本26.0.0之前，如果属性字符串段落内首个占位为[CustomSpan](arkts-arkui-customspan-c.md#CustomSpan)或[ImageAttachment](arkts-arkui-imageattachment-c.md#ImageAttachment)时，设置在该段落上的段落样式不生效。从API版本26.0.0开始，设置段落样式生效。
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ constructor(value?: ParagraphStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ParagraphStyleInterface](arkts-arkui-styledstring-paragraphstyleinterface-i.md) | 否 | 段落样式设置项。 &lt;br&gt;默认值：不传入时继承ParagraphStyleInterface各属性的默认值。 |
+| value | [ParagraphStyleInterface](arkts-arkui-paragraphstyleinterface-i.md) | 否 | 段落样式设置项。 &lt;br&gt;默认值：不传入时继承ParagraphStyleInterface各属性的默认值。 |
 
 ## leadingMargin
 
@@ -74,7 +74,7 @@ readonly leadingMarginSpan?: LeadingMarginSpan
 
 获取属性字符串文本段落的自定义缩进信息。
 
-**类型：** [LeadingMarginSpan](arkts-arkui-styledstring-leadingmarginspan-c.md)
+**类型：** [LeadingMarginSpan](arkts-arkui-leadingmarginspan-c.md)
 
 **起始版本：** 22
 
@@ -124,7 +124,7 @@ readonly overflow?: TextOverflow
 
 需配合maxLines使用，单独设置不生效。不支持TextOverflow.MARQUEE。
 
-**类型：** [TextOverflow](arkts-arkui-enums-textoverflow-e.md)
+**类型：** TextOverflow
 
 **起始版本：** 12
 
@@ -170,10 +170,10 @@ readonly shaderStyle?: ShaderStyle
 
 获取文本着色器效果。
 
-**说明：** 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于
-[TextStyleInterface](arkts-arkui-textstyleinterface-i.md)中的fontColor。
+**说明：** 该接口与[TextStyleInterface](arkts-arkui-textstyleinterface-i.md#TextStyleInterface)的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于
+[TextStyleInterface](arkts-arkui-textstyleinterface-i.md#TextStyleInterface)中的fontColor。
 
-**类型：** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**类型：** ShaderStyle
 
 **起始版本：** 26.0.0
 
@@ -227,7 +227,7 @@ readonly textAlign?: TextAlign
 
 **说明：** textAlign只能调整文本整体的布局，不影响字符的显示顺序。
 
-**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **起始版本：** 12
 
@@ -249,7 +249,7 @@ readonly textDirection?: TextDirection
 
 获取文本方向。
 
-**类型：** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**类型：** TextDirection
 
 **起始版本：** 23
 
@@ -293,9 +293,9 @@ readonly textVerticalAlign?: TextVerticalAlign
 
 获取属性字符串文本段落在垂直方向的对齐方式。
 
-一个段落下使用同一字号必须同时设置行高[lineHeight](arkts-arkui-text-textattribute-i.md#lineheight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的排版效果。属性字符串[TextStyle](arkts-arkui-textstyle-c.md)中的SuperscriptStyle上下角标样式仅在[TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)属性值为TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
+一个段落下使用同一字号必须同时设置行高[lineHeight](TextAttribute#lineHeight)或者同一个段落不同字号文本混排时才有效果差异，否则设置了该属性任意枚举值和未设置该属性都是一样的排版效果。属性字符串[TextStyle](arkts-arkui-textstyle-c.md#TextStyle)中的SuperscriptStyle上下角标样式仅在[TextVerticalAlign](TextVerticalAlign)属性值为TextVerticalAlign.BASELINE时生效，其余垂直对齐方式下上下角标文本和普通文本表现一致，无上下角标效果。
 
-**类型：** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
+**类型：** TextVerticalAlign
 
 **起始版本：** 20
 
@@ -317,7 +317,7 @@ readonly wordBreak?: WordBreak
 
 获取属性字符串文本段落的断行规则。
 
-**类型：** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
+**类型：** WordBreak
 
 **起始版本：** 12
 

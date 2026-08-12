@@ -18,7 +18,7 @@ color?: ResourceColor
 
 Icon color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ size?: Length
 
 Icon size. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 
@@ -62,7 +62,7 @@ src?: ResourceStr
 
 Image source of the icon.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 

@@ -16,7 +16,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-checkboxgroupconfiguration-i.md) | CheckboxGroup的内容修饰器配置对象，用于配置CheckboxGroup的内容和样式。 |
-| [CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md) | 除支持[通用属性](common)外，还支持以下属性： |
 | [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | 多选框群组的信息。 |
 | [CheckboxGroupResult](arkts-arkui-checkboxgroup-checkboxgroupresult-i.md) | 多选框群组的名称和状态。 |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## getAbilityLists
@@ -22,7 +22,7 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessibility.getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist)(abilityType:
+**Substitutes:** [getAccessibilityExtensionList](accessibility.getAccessibilityExtensionList(abilityType:)
 
 <!--Device-accessibility-function getAbilityLists(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void--><!--Device-accessibility-function getAbilityLists(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void-End-->
 
@@ -33,8 +33,8 @@ Obtains the accessibility application list. This API uses an asynchronous callba
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; | Yes |
+| [stateType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -67,7 +67,7 @@ Obtains the accessibility application list. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [accessibility.getAccessibilityExtensionList](arkts-accessibility-accessibility-getaccessibilityextensionlist-f.md#getaccessibilityextensionlist)(abilityType:
+**Substitutes:** [getAccessibilityExtensionList](accessibility.getAccessibilityExtensionList(abilityType:)
 
 <!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAbilityLists(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>-End-->
 
@@ -78,13 +78,13 @@ Obtains the accessibility application list. This API uses a promise to return th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | Yes |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes |
+| [stateType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AccessibilityAbilityInfo&gt;&gt; |
+| Promise&lt;Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt;&gt; |
 
 ## Examples
 

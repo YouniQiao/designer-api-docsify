@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) instead.
+> [bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag) instead.
 
 Enumerates the bundle flags, which indicate the type of bundle information to obtain.
 
@@ -17,7 +17,7 @@ Flags can be used together. For example, you can use the combination of **GET_AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.bundleManager:bundleManager.BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
+**Substitutes:** [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)
 
 <!--Device-bundle-enum BundleFlag--><!--Device-bundle-enum BundleFlag-End-->
 
@@ -37,7 +37,7 @@ Obtains the default application information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleFlag#GET_BUNDLE_INFO_DEFAULT
+**Substitutes:** [GET_BUNDLE_INFO_DEFAULT](arkts-ability-bundlemanager-bundleflag-e.md#GET_BUNDLE_INFO_DEFAULT)
 
 <!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000--><!--Device-BundleFlag-GET_BUNDLE_DEFAULT = 0x00000000-End-->
 
@@ -57,7 +57,7 @@ Obtains the bundle information with the ability information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleFlag#GET_BUNDLE_INFO_WITH_ABILITY
+**Substitutes:** [GET_BUNDLE_INFO_WITH_ABILITY](arkts-ability-bundlemanager-bundleflag-e.md#GET_BUNDLE_INFO_WITH_ABILITY)
 
 <!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_WITH_ABILITIES = 0x00000001-End-->
 
@@ -77,7 +77,7 @@ Obtains the ability information with the permission information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_PERMISSION
+**Substitutes:** [GET_ABILITY_INFO_WITH_PERMISSION](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_PERMISSION)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000002-End-->
 
@@ -97,7 +97,7 @@ Obtains the ability information with the application information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_APPLICATION
+**Substitutes:** [GET_ABILITY_INFO_WITH_APPLICATION](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_APPLICATION)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000004-End-->
 
@@ -135,7 +135,7 @@ Obtains the bundle information with the information about the required permissio
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.BundleFlag#GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION
+**Substitutes:** [GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION](arkts-ability-bundlemanager-bundleflag-e.md#GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION)
 
 <!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
@@ -173,7 +173,7 @@ Obtains the ability metadata information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_METADATA
+**Substitutes:** [GET_ABILITY_INFO_WITH_METADATA](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_METADATA)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000020-End-->
 
@@ -211,7 +211,7 @@ Obtains the ability information of system applications.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_ONLY_SYSTEM_APP
+**Substitutes:** [GET_ABILITY_INFO_ONLY_SYSTEM_APP](arkts-ability-bundlemanager-abilityflag-e.md#GET_ABILITY_INFO_ONLY_SYSTEM_APP)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080--><!--Device-BundleFlag-GET_ABILITY_INFO_SYSTEMAPP_ONLY = 0x00000080-End-->
 
@@ -231,7 +231,7 @@ Obtains information about disabled abilities.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_DISABLE
+**Substitutes:** [GET_ABILITY_INFO_WITH_DISABLE](ohos.bundle.bundleManager/bundleManager.AbilityFlag#GET_ABILITY_INFO_WITH_DISABLE)
 
 <!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100--><!--Device-BundleFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000100-End-->
 

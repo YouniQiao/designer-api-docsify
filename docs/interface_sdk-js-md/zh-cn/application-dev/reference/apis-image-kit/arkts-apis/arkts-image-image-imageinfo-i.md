@@ -60,8 +60,8 @@ density: int
 isHdr: boolean
 ```
 
-true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于  
-[PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
+true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md#ImageSource)，代表源图片是否为HDR；对于  
+[PixelMap](arkts-image-image-pixelmap-i.md#PixelMap)，代表解码后的PixelMap是否为HDR。
 
 **类型：** boolean
 
@@ -81,7 +81,7 @@ mimeType: string
 
 图片真实格式（MIME type）。
 
-图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md)的format。
+图片解码和图片编码支持格式的范围不同，请避免直接将解码得到的图片真实格式作为图片编码时[PackingOption](arkts-image-image-packingoption-i.md#PackingOption)的format。
 
 可以使用ImageSource[属性](../../../reference/apis-image-kit/arkts-apis-image-ImageSource.md#属性)中的supportedFormats和ImagePacker[属性](../../../reference/apis-image-kit/arkts-apis-image-ImagePacker.md#属性)中的supportedFormats查看解码和编码支持的格式范围。
 
@@ -125,7 +125,7 @@ size: Size
 
 图片大小。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 6
 

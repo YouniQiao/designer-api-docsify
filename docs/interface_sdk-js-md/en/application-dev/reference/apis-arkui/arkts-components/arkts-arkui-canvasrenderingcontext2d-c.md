@@ -17,8 +17,8 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > 
 > * The following path-related APIs apply only to paths created within **CanvasRenderingContext2D**
 > and do not affect paths defined in
-> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
-> or [Path2D](arkts-arkui-path2d-c.md):
+> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D)
+> or [Path2D](arkts-arkui-path2d-c.md#Path2D):
 > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
 > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
 > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
@@ -26,7 +26,7 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU
 > causes significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 **Since:** 8
 
@@ -61,7 +61,7 @@ Constructs a canvas object, which supports configuration of parameters for the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](../arkts-apis/arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). &lt;br&gt;If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). &lt;br&gt;If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
 
 ## constructor
 
@@ -89,8 +89,8 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](../arkts-apis/arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). &lt;br&gt;If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. &lt;br&gt;Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. &lt;br&gt;Default value: **DEFAULT**. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). &lt;br&gt;If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
+| unit | LengthMetricsUnit | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. &lt;br&gt;Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. &lt;br&gt;Default value: **DEFAULT**. |
 
 ## getContext2DFromDrawingContext
 
@@ -138,7 +138,7 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. |
+| [103702](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. |
 
 ## off('onAttach')
 
@@ -165,13 +165,13 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.&lt;br&gt;If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.&lt;br&gt;If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## off('onDetach')
 
@@ -198,13 +198,13 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.&lt;br&gt;If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.&lt;br&gt;If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('onAttach')
 
@@ -220,7 +220,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 > at a time.&lt;br&gt;
 > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the
 > **onAttach** callback is triggered, indicating that the
-> [canvas](arkts-arkui-canvasrenderingcontext2d-c.md#canvas)
+> [canvas](#canvas)
 > object is accessible.&lt;br&gt;
 > Avoid performing drawing operations in the **onAttach** callback. Make sure the
 > **Canvas** component has completed its
@@ -248,13 +248,13 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('onDetach')
 
@@ -291,13 +291,13 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -331,7 +331,7 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](../arkts-apis/arkts-arkui-imageanalyzerconfig-i.md) | Yes | Settings of the AI analyzer.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| config | ImageAnalyzerConfig | Yes | Settings of the AI analyzer.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
 
 **Return value:**
 
@@ -343,9 +343,9 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is unsupported. |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 
@@ -416,7 +416,7 @@ FrameNode instance of the **Canvas** component associated with **CanvasRendering
 
 Default value: **null**
 
-**Type:** [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md)
+**Type:** [FrameNode](arkts-arkui-framenode-t.md)
 
 **Since:** 13
 

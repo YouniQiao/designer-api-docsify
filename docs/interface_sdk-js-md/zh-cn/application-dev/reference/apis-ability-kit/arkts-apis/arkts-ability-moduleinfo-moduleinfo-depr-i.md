@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)替代。
+> 从API version 9开始，该模块不再维护，建议使用[bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#HapModuleInfo)替代。
 
 **起始版本：** 7
 
@@ -12,7 +12,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [hapModuleInfo:HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
+**替代接口：** [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md#HapModuleInfo)
 
 <!--Device-unnamed-export interface ModuleInfo--><!--Device-unnamed-export interface ModuleInfo-End-->
 
@@ -36,7 +36,7 @@ readonly moduleName: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name
+**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.HapModuleInfo#name)
 
 <!--Device-ModuleInfo-readonly moduleName: string--><!--Device-ModuleInfo-readonly moduleName: string-End-->
 
@@ -48,7 +48,7 @@ readonly moduleName: string
 readonly moduleSourceDir: string
 ```
 
-安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md/arkts-resourcemanager.md)访问资源。
+安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)访问资源。
 
 **类型：** string
 

@@ -18,7 +18,7 @@ color?: ResourceColor | EdgeColors
 
 外描边颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ width?: Dimension | EdgeOutlineWidths
 
 外描边宽度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md)
 
 **起始版本：** 23
 

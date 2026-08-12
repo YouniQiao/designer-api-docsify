@@ -24,13 +24,13 @@ export declare function Rect(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectOptions](../arkts-components/arkts-arkui-rectoptions-i.md) \| RoundedRectOptions | 否 | Rect绘制属性。异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | 否 | Rect绘制属性。异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectAttribute](../arkts-components/arkts-arkui-rect-attribute.md) | The attribute of the Rect |
+| [RectAttribute](arkts-arkui-rect-rectattribute-i.md) | The attribute of the Rect |
 
 
 ## Rect
@@ -59,11 +59,11 @@ Defines Rect Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RectAttribute&gt; | 是 | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectAttribute](../arkts-components/arkts-arkui-rect-attribute.md) |  |
+| [RectAttribute](arkts-arkui-rect-rectattribute-i.md) |  |
 

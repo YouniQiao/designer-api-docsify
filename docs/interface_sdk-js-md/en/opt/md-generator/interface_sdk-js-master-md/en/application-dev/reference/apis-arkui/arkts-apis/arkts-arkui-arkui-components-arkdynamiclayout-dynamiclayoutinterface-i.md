@@ -11,7 +11,7 @@ Defines the dynamic layout container.
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -38,7 +38,7 @@ Defines the dynamic layout container.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | Yes |
 
 **Return value:**
 

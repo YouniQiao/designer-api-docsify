@@ -28,5 +28,5 @@ export function getTextInputAttribute(node: FrameNode): TextInputAttribute | und
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| TextInputAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

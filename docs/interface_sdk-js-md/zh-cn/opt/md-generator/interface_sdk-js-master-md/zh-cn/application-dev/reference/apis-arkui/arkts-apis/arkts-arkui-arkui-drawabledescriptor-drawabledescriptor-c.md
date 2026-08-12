@@ -1,6 +1,6 @@
 # DrawableDescriptor
 
-父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)实例，图片资源加载能力。
+父类对象提供可重写的方法，包含：获取[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)实例，图片资源加载能力。
 
 **起始版本：** 10
 
@@ -36,7 +36,7 @@ getPixelMap(): image.PixelMap
 
 | 错误码ID |
 | --- |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
+| [111002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-资源已释放) |
 
 ## 示例
 
@@ -49,7 +49,7 @@ invalidate(): void
 ```
 
 重新绘制DrawableDescriptor。当前仅支持  
-[PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md)类型，其他DrawableDescriptor子类型触发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
+[PictureDrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#PictureDrawableDescriptor)类型，其他DrawableDescriptor子类型触发后无效果。若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
 
@@ -68,12 +68,12 @@ isReleased(): boolean
 ```
 
 查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用  
-[getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap)、  
-[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、  
-[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、  
-[getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、  
-[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync)、  
-[load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口会抛出111002错误；返回false表示未释放，对象可正常使用。
+[getPixelMap](#getPixelMap)、  
+[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、  
+[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、  
+[getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、  
+[loadSync](#loadSync)、  
+[load](#load)等接口会抛出111002错误；返回false表示未释放，对象可正常使用。
 
 **起始版本：** 26.0.0
 
@@ -111,14 +111,14 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 | 类型 |
 | --- |
-| Promise&lt;DrawableDescriptorLoadedResult&gt; |
+| Promise&lt;[DrawableDescriptorLoadedResult](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
+| [111001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111001-资源加载失败) |
+| [111002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-资源已释放) |
 
 ## 示例
 
@@ -150,8 +150,8 @@ loadSync(): DrawableDescriptorLoadedResult
 
 | 错误码ID |
 | --- |
-| [111001](../errorcode-drawable-descriptor.md#111001-资源加载失败) |
-| [111002](../errorcode-drawable-descriptor.md#111002-资源已释放) |
+| [111001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111001-资源加载失败) |
+| [111002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drawable-descriptor.md#111002-资源已释放) |
 
 ## 示例
 
@@ -164,12 +164,12 @@ release(): void
 ```
 
 释放DrawableDescriptor持有的资源。调用release后，该对象将不可用，再调用  
-[getPixelMap](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getpixelmap)、  
-[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getforeground)、  
-[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getbackground)、  
-[getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getmask)、  
-[loadSync](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadsync)、  
-[load](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口会抛出111002错误。重复调用release不会崩溃。
+[getPixelMap](#getPixelMap)、  
+[getForeground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、  
+[getBackground](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、  
+[getMask](arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、  
+[loadSync](#loadSync)、  
+[load](#load)等接口会抛出111002错误。重复调用release不会崩溃。
 
 **起始版本：** 26.0.0
 

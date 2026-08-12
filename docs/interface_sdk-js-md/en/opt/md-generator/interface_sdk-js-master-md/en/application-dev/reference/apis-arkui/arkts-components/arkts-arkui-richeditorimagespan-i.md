@@ -56,7 +56,7 @@ value: PixelMap | ResourceStr
 
 Image content.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr
+**Type:** PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
 

@@ -22,7 +22,7 @@ The setting significantly affects the front-to-back overlap relationship of the 
 
 You are advised to adjust this setting only when there is an error in the component overlap relationship observed during the shared element transition process.
 
-**Type:** [TransitionHierarchyStrategy](../arkts-apis/arkts-arkui-common-transitionhierarchystrategy-e-sys.md)
+**Type:** [TransitionHierarchyStrategy](arkts-arkui-transitionhierarchystrategy-e-sys.md)
 
 **Default:** TransitionHierarchyStrategy.ADAPTIVE
 

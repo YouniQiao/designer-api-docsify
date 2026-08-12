@@ -6,7 +6,7 @@ The **Router** module provides APIs to access pages through URIs.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#router
+**Substitutes:** [router](arkts-router.md#router)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
@@ -15,7 +15,7 @@ The **Router** module provides APIs to access pages through URIs.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## back
@@ -35,7 +35,7 @@ Returns to the previous or a specified page.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#back
+**Substitutes:** [back](ohos.router.router#back)
 
 <!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
 
@@ -59,7 +59,7 @@ Clears all historical pages in the stack and retains only the current page at th
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#clear
+**Substitutes:** [clear](ohos.router.router#clear)
 
 <!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
@@ -77,7 +77,7 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#hideAlertBeforeBackPage
+**Substitutes:** [hideAlertBeforeBackPage](ohos.router.router#hideAlertBeforeBackPage)
 
 <!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
 
@@ -101,7 +101,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#showAlertBeforeBackPage
+**Substitutes:** [showAlertBeforeBackPage](ohos.router.router#showAlertBeforeBackPage)
 
 <!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
 
@@ -125,7 +125,7 @@ Obtains the number of pages in the current stack.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#getLength
+**Substitutes:** [getLength](ohos.router.router#getLength)
 
 <!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
@@ -149,7 +149,7 @@ Obtains parameter information about the current page.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#getParams
+**Substitutes:** [getParams](ohos.router.router#getParams)
 
 <!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
 
@@ -173,7 +173,7 @@ Obtains state information about the current page.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#getState
+**Substitutes:** [getState](ohos.router.router#getState)
 
 <!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
 
@@ -201,7 +201,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#push
+**Substitutes:** [push](ohos.router.router#push)
 
 <!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
 
@@ -225,7 +225,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.router#replace
+**Substitutes:** [replace](ohos.router.router#replace)
 
 <!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
 

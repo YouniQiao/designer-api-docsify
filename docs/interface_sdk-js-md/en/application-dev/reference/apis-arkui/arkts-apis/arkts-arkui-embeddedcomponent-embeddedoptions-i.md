@@ -18,7 +18,7 @@ areaChangePlaceholder?: Record<string, ComponentContentBase>
 
 Set Areachange placeholder.If the Areachange placeholder is set, the placeholder node is displayed until the EmbeddedComponent size change is complete.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContentBase&gt;
+**Type:** Record&lt;string, [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)&gt;
 
 **Since:** 26.0.0
 

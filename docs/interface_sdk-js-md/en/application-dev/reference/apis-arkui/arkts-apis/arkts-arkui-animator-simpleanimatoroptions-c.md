@@ -13,7 +13,7 @@ Defines the SimpleAnimatorOptions class.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -93,7 +93,7 @@ Set the animation playback mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | [PlayMode](arkts-arkui-playmode-e.md) | Yes | if not set, default is PlayMode.Normal. |
+| direction | PlayMode | Yes | if not set, default is PlayMode.Normal. |
 
 **Return value:**
 
@@ -183,7 +183,7 @@ Set FillMode of animation.FillMode indicates whether to resume to the initial st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillMode | [FillMode](arkts-arkui-fillmode-e.md) | Yes | if not set, default is FillMode.Forwards. |
+| fillMode | FillMode | Yes | if not set, default is FillMode.Forwards. |
 
 **Return value:**
 

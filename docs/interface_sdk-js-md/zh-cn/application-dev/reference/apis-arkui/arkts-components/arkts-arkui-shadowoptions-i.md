@@ -22,13 +22,13 @@ color?: Color | string | Resource | ColoringStrategy
 
 **说明：**
 
-从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、[textShadow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textshadow)中使用。
+从API version 11开始，该接口支持使用ColoringStrategy实现智能取色，智能取色功能不支持在ArkTS卡片、[textShadow](TextAttribute#textShadow)中使用。
 
 当前仅支持平均取色和主色取色，智能取色区域为shadow绘制区域。
 
 支持使用'average'字符串触发智能平均取色模式，支持使用'primary'字符串触发智能主色模式。
 
-**类型：** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| ColoringStrategy
+**类型：** Color \| string \| Resource \| ColoringStrategy
 
 **起始版本：** 11
 
@@ -54,7 +54,7 @@ fill?: boolean
 
 **说明：**
 
-[textShadow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textshadow)中该字段不生效。
+[textShadow](TextAttribute#textShadow)中该字段不生效。
 
 **类型：** boolean
 

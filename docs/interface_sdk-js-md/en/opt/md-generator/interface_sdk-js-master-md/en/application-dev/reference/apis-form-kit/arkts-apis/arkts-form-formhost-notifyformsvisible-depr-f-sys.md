@@ -12,7 +12,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -26,7 +26,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |
 | isVisible | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -43,7 +43,7 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -57,11 +57,11 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |
 | isVisible | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

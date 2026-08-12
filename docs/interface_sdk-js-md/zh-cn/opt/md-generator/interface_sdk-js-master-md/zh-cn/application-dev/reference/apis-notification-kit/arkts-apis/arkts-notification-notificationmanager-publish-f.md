@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## publish
@@ -22,6 +22,14 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[isNotificationEnabled](notificationManager.isNotificationEnabled(callback: AsyncCallback<boolean>): void) 获取指定应用的通知使能状态。
+
+[cancel](notificationManager.cancel(id: int,label: string,callback: AsyncCallback<void>): void) 根据通知ID和标签label取消已发布的通知。
+
+[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) 取消当前应用所有已发布的通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 |
@@ -33,21 +41,21 @@ function publish(request: NotificationRequest, callback: AsyncCallback<void>): v
 
 | 错误码ID |
 | --- |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
-| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
-| [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) |
-| [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-| [1600014](../errorcode-notification.md#1600014-没有相关权限) |
-| [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600004](../errorcode-notification.md#1600004-通知开关关闭) |
-| [1600005](../errorcode-notification.md#1600005-通知渠道关闭) |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
+| [1600029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
+| [1600016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600016-本次更新的通知版本太低) |
+| [1600020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600009-通知发布频度超过限制) |
+| [1600012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-内存空间不足) |
+| [1600014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600014-没有相关权限) |
+| [1600015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600015-当前通知状态不支持重复配置) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-通知开关关闭) |
+| [1600005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600005-通知渠道关闭) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) |
 
 ## 示例
 
@@ -94,6 +102,14 @@ function publish(request: NotificationRequest): Promise<void>
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[isNotificationEnabled](notificationManager.isNotificationEnabled(): Promise<boolean>) 查询当前应用通知授权状态。
+
+[cancel](notificationManager.cancel(id: int,label?: string): Promise<void>) 根据通知ID和标签label取消已发布的通知。
+
+[cancelAll](notificationManager.cancelAll(): Promise<void>) 取消当前应用所有已发布的通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 |
@@ -104,27 +120,27 @@ function publish(request: NotificationRequest): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [2300007](../../apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
-| [1600029](../errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
-| [1600016](../errorcode-notification.md#1600016-本次更新的通知版本太低) |
-| [1600020](../errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600009](../errorcode-notification.md#1600009-通知发布频度超过限制) |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-| [1600014](../errorcode-notification.md#1600014-没有相关权限) |
-| [1600015](../errorcode-notification.md#1600015-当前通知状态不支持重复配置) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
-| [1600004](../errorcode-notification.md#1600004-通知开关关闭) |
-| [1600005](../errorcode-notification.md#1600005-通知渠道关闭) |
-| [1600007](../errorcode-notification.md#1600007-通知不存在) |
+| [2300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300007-无法连接到服务器) |
+| [1600029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600029-系统无法找到实况窗卡片自定义扩展区的extensionability) |
+| [1600016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600016-本次更新的通知版本太低) |
+| [1600020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600020-不允许权限管控名单中的应用发布通知) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600009-通知发布频度超过限制) |
+| [1600012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-内存空间不足) |
+| [1600014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600014-没有相关权限) |
+| [1600015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600015-当前通知状态不支持重复配置) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600004-通知开关关闭) |
+| [1600005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600005-通知渠道关闭) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) |
 
 ## 示例
 

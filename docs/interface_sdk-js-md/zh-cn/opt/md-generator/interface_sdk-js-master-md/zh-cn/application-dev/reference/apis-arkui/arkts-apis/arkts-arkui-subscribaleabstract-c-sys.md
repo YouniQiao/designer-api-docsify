@@ -16,7 +16,7 @@
 public addOwningProperty(subscriber: IPropertySubscriber): void
 ```
 
-添加持有的属性。属性不再使用时，应调用[removeOwningProperty](arkts-arkui-subscribaleabstract-c-sys.md#removeowningproperty)或[removeOwningPropertyById](arkts-arkui-subscribaleabstract-c-sys.md#removeowningpropertybyid)移除。
+添加持有的属性。属性不再使用时，应调用[removeOwningProperty](#removeOwningProperty)或[removeOwningPropertyById](#removeOwningPropertyById)移除。
 
 **起始版本：** 7
 

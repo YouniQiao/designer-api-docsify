@@ -13,7 +13,7 @@ Provides state information about a form.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## formState
@@ -24,7 +24,7 @@ formState: FormState
 
 Obtains the form state.
 
-**Type:** [FormState](arkts-form-forminfo-formstate-e.md)
+**Type:** FormState
 
 **Since:** 9
 

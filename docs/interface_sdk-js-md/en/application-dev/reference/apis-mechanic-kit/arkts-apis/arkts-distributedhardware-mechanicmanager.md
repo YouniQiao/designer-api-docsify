@@ -13,7 +13,7 @@ Provides capabilities for controlling and interacting with mechanical devices co
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from 'kits/@kit.MechanicKit';
+import { mechanicManager } from '@kit.MechanicKit';
 ```
 
 ## Summary

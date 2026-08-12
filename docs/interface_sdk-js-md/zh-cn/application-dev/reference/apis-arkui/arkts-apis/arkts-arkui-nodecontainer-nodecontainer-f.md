@@ -30,7 +30,7 @@ export declare function NodeContainer(
 
 | 类型 | 说明 |
 | --- | --- |
-| [NodeContainerAttribute](../arkts-components/arkts-arkui-nodecontainer-attribute.md) |  |
+| [NodeContainerAttribute](arkts-arkui-nodecontainer-nodecontainerattribute-i.md) |  |
 
 
 ## NodeContainer
@@ -59,11 +59,11 @@ export declare function NodeContainer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NodeContainerAttribute&gt; | 是 | 用于设置NodeContainer属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[NodeContainerAttribute](arkts-arkui-nodecontainer-nodecontainerattribute-i.md)&gt; | 是 | 用于设置NodeContainer属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [NodeContainerAttribute](../arkts-components/arkts-arkui-nodecontainer-attribute.md) | NodeContainer属性实例。 |
+| [NodeContainerAttribute](arkts-arkui-nodecontainer-nodecontainerattribute-i.md) | NodeContainer属性实例。 |
 

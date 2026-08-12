@@ -54,7 +54,7 @@ parse(option: ParseOptions): void
 
 **废弃版本：** 14
 
-**替代接口：** ohos.xml.XmlPullParser.parseXml
+**替代接口：** [parseXml](#parseXml)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -18,7 +18,7 @@ axis: Axis
 
 鼠标轴类型。
 
-**类型：** [Axis](../../apis-arkui/arkts-apis/arkts-arkui-enums-axis-e.md)
+**类型：** [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
 
 **起始版本：** 9
 

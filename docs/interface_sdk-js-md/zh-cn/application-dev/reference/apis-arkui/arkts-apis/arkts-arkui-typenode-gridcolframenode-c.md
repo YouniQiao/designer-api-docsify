@@ -34,11 +34,11 @@ abstract initialize(options?: GridColOptions): GridColAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [GridColOptions](../arkts-components/arkts-arkui-gridcoloptions-i.md) | 否 | GridCol节点的选项。 |
+| options | GridColOptions | 否 | GridCol节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridColAttribute](../arkts-components/arkts-arkui-gridcol-attribute.md) |  |
+| GridColAttribute |  |
 

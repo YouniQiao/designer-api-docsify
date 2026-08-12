@@ -38,7 +38,7 @@ localizedDirection: LocalizedBarrierDirection
 
 指定barrier的方向。垂直方向（TOP，BOTTOM）的barrier仅能作为组件的水平方向锚点，作为垂直方向锚点时值为0。水平方向（START，END）的barrier仅能作为组件的垂直方向锚点，作为水平方向锚点时值为0。
 
-**类型：** [LocalizedBarrierDirection](../arkts-components/arkts-arkui-localizedbarrierdirection-e.md)
+**类型：** [LocalizedBarrierDirection](arkts-arkui-relativecontainer-localizedbarrierdirection-e.md)
 
 **起始版本：** 23
 

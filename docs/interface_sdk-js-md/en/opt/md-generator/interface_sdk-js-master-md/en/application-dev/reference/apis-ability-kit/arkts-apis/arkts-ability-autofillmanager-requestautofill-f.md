@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from 'kits/@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## requestAutoFill
@@ -36,4 +36,4 @@ Trigger an auto fill request.
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |

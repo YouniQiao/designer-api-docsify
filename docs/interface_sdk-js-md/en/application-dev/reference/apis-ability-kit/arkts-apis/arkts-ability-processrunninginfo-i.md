@@ -1,7 +1,7 @@
 # ProcessRunningInfo
 
 The module defines the running information of a process. The information can be obtained through  
-[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md#getprocessrunninginfos) of appManager.
+[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getProcessRunningInfos) of appManager.
 
 **Since:** 8
 
@@ -9,7 +9,7 @@ The module defines the running information of a process. The information can be 
 
 **Deprecated since:** 9
 
-**Substitutes:** ProcessInformation/ProcessInformation
+**Substitutes:** [ProcessInformation/ProcessInformation](ProcessInformation/ProcessInformation)
 
 <!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 
@@ -33,7 +33,7 @@ Names of all running bundles in the process.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation:ProcessInformation.bundleNames](arkts-ability-processinformation-i.md#bundlenames)
+**Substitutes:** [bundleNames](arkts-ability-processinformation-i.md#bundleNames)
 
 <!--Device-ProcessRunningInfo-bundleNames: Array<string>--><!--Device-ProcessRunningInfo-bundleNames: Array<string>-End-->
 
@@ -57,7 +57,7 @@ Process ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation:ProcessInformation.pid](arkts-ability-processinformation-i.md#pid)
+**Substitutes:** [pid](arkts-ability-processinformation-i.md#pid)
 
 <!--Device-ProcessRunningInfo-pid: number--><!--Device-ProcessRunningInfo-pid: number-End-->
 
@@ -81,7 +81,7 @@ Process name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation:ProcessInformation.processName](arkts-ability-processinformation-i.md#processname)
+**Substitutes:** [processName](arkts-ability-processinformation-i.md#processName)
 
 <!--Device-ProcessRunningInfo-processName: string--><!--Device-ProcessRunningInfo-processName: string-End-->
 
@@ -105,7 +105,7 @@ UID of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProcessInformation:ProcessInformation.uid](arkts-ability-processinformation-i.md#uid)
+**Substitutes:** [uid](arkts-ability-processinformation-i.md#uid)
 
 <!--Device-ProcessRunningInfo-uid: number--><!--Device-ProcessRunningInfo-uid: number-End-->
 

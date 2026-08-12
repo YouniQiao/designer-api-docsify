@@ -14,7 +14,7 @@ function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -67,7 +67,7 @@ function getRealTime(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemTime-function getRealTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealTime(callback: AsyncCallback<number>): void-End-->
 
@@ -119,7 +119,7 @@ function getRealTime(isNano?: boolean): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**替代接口：** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemTime-function getRealTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getRealTime(isNano?: boolean): Promise<number>-End-->
 

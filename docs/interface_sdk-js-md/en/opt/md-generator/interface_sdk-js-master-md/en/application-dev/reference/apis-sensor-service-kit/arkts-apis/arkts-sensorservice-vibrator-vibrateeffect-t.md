@@ -5,7 +5,7 @@ type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFrom
 ```
 
 Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling  
-[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration).
+[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1).
 
 **Since:** 9
 

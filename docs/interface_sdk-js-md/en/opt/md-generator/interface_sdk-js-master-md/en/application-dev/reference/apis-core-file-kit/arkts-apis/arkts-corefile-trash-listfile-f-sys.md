@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { trash } from 'kits/@kit.CoreFileKit';
+import { trash } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -32,7 +32,7 @@ Lists the files and directories in the **Recently deleted** list.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;FileInfo&gt; |
+| Array & lt;FileInfo & gt; |
 
 **Error codes:**
 

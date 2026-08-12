@@ -11,7 +11,7 @@ Defines the popup button
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from '@kit.ArkUI';
 ```
 
 ## action
@@ -22,7 +22,7 @@ action?: Callback<void>
 
 Set the button callback.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 

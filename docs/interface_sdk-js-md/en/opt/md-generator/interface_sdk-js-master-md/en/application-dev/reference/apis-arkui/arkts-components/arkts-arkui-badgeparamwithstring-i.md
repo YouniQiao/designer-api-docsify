@@ -1,8 +1,8 @@
 # BadgeParamWithString
 
-Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**.
+Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all attributes of **BadgeParam**.
 
-**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md)
+**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam)
 
 **Since:** 7
 

@@ -18,7 +18,7 @@ data: Uint8ClampedArray
 
 A one-dimensional array of color values. The color values are sorted in the RGBA order and represented by integers from 0 to 255.
 
-**Type:** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md)
+**Type:** Uint8ClampedArray
 
 **Since:** 11
 

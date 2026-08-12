@@ -18,7 +18,7 @@ controller?: TextInputController
 
 Text input controller.
 
-**Type:** [TextInputController](../arkts-apis/arkts-arkui-textinput-textinputcontroller-c.md)
+**Type:** [TextInputController](arkts-arkui-textinputcontroller-c.md)
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ placeholder?: ResourceStr
 
 Text displayed when there is no input.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 
@@ -66,7 +66,7 @@ Since API version 10, this parameter supports two-way binding through
 Since API version 18, this parameter supports two-way binding through  
 [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 

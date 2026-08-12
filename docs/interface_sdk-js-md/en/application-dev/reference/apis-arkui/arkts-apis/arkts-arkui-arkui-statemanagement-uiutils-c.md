@@ -13,7 +13,7 @@ Provides APIs for handling data transformations related to state management.
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## addMonitor
@@ -44,15 +44,15 @@ Dynamically adds a listener to the state variable of state management V2. For de
 | target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. &lt;br&gt;If an unsupported type is provided, a runtime error is thrown. |
 | path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time. &lt;br&gt;Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called. &lt;br&gt;If an unsupported type is provided, a runtime error is thrown. |
-| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md). By default, the asynchronous callback is used. |
+| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md#MonitorOptions). By default, the asynchronous callback is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
-| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
+| [130001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
+| [130000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
+| [130002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
 
@@ -91,7 +91,7 @@ Synchronously updates a specified state variable. This API receives a closure fu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
 ## Examples
 
@@ -290,7 +290,7 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 ```
 
 Deletes the listener added to the state variable of the state management V2 by calling the  
-[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor) API. For details, see  
+[addMonitor](#addMonitor) API. For details, see  
 [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
@@ -317,9 +317,9 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
-| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
+| [130001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
+| [130000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
+| [130002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
 
@@ -421,8 +421,8 @@ Processes all state variable modifications before this API call and synchronizes
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
+| [140001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
 ## Examples
 
@@ -494,8 +494,8 @@ Synchronously updates all state variable modifications before this API call, inc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
+| [140001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
 ## Examples
 
@@ -548,7 +548,7 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) of the given @Component(V1) or @ComponentV2.  
+Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#CustomComponentContext) of the given @Component(V1) or @ComponentV2.  
 **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool,see  
 [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
@@ -574,7 +574,7 @@ Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcompone
 
 | Type | Description |
 | --- | --- |
-| [CustomComponentContext](arkts-arkui-utils-customcomponentcontext-i.md) | Context object of the given component instance. |
+| [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) | Context object of the given component instance. |
 
 ## getLifecycle
 
@@ -582,7 +582,7 @@ Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcompone
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-Obtains the [lifecycle of a custom component](arkts-arkui-decorator-componentinit-i.md).
+Obtains the [lifecycle of a custom component](arkts-arkui-decorator-componentinit-i.md#ComponentInit).
 
 **Since:** 23
 
@@ -606,7 +606,7 @@ Obtains the [lifecycle of a custom component](arkts-arkui-decorator-componentini
 
 | Type | Description |
 | --- | --- |
-| [CustomComponentLifecycle](arkts-arkui-customcomponent-customcomponentlifecycle-i.md) | Lifecycle instance of a custom component obtained. |
+| [CustomComponentLifecycle](arkts-arkui-arkui-statemanagement-customcomponentlifecycle-i.md) | Lifecycle instance of a custom component obtained. |
 
 ## Examples
 
@@ -797,7 +797,7 @@ Creates a mutable two-way data binding instance, which is used to construct the 
 
 | Type | Description |
 | --- | --- |
-| [MutableBinding](arkts-arkui-utils-mutablebinding-c.md)&lt;T&gt; | Returns a two-way data binding instance with a **value** attribute, which allows you to read and modify data. If the value is set, the system checks whether the value type matches the generic type **T**. |
+| [MutableBinding](arkts-arkui-arkui-statemanagement-mutablebinding-c.md)&lt;T&gt; | Returns a two-way data binding instance with a **value** attribute, which allows you to read and modify data. If the value is set, the system checks whether the value type matches the generic type **T**. |
 
 ## Examples
 
@@ -918,7 +918,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @Observed and can be used to initialize @ObjectLink.
 
-This API can be used together with [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility) in scenarios where state management V1 and V2 are used together. For details, see  
+This API can be used together with [enableV2Compatibility](#enableV2Compatibility) in scenarios where state management V1 and V2 are used together. For details, see  
 [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19
@@ -937,7 +937,7 @@ This API can be used together with [enableV2Compatibility](arkts-arkui-arkui-sta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. &lt;br&gt;[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md/arkts-collections.md) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. &lt;br&gt;**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. &lt;br&gt;[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#collections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. &lt;br&gt;**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeObserved) are not supported. |
 
 **Return value:**
 

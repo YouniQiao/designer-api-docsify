@@ -1,6 +1,6 @@
 # OverlayManagerOptions
 
-初始化[OverlayManager](arkts-arkui-uicontext.md)时所用参数。
+初始化[OverlayManager](@ohos.arkui.UIContext)时所用参数。
 
 **起始版本：** 23
 

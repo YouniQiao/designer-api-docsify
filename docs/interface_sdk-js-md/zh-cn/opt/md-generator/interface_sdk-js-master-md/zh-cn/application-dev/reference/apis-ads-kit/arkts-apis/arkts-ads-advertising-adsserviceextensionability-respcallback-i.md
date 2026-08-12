@@ -26,4 +26,4 @@
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | 是 |
+| respData | Map & lt;string, Array & lt;advertising.Advertisement & gt; & gt; | 是 |

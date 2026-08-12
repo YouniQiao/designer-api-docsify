@@ -38,7 +38,7 @@ result?: EventResult
 
 Gesture event consumption result.
 
-**Type:** [EventResult](../arkts-apis/arkts-arkweb-web-eventresult-c.md)
+**Type:** [EventResult](arkts-arkweb-eventresult-c.md)
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ touchEvent?: TouchEvent
 
 Touch action information.
 
-**Type:** [TouchEvent](../../apis-arkui/arkts-components/arkts-arkui-touchevent-i.md)
+**Type:** TouchEvent
 
 **Since:** 11
 

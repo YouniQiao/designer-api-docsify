@@ -1,8 +1,8 @@
 # Run
 
-文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取。
+文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接口获取。
 
-下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns)接口获取Run对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接口获取Run对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ getAdvances(range: Range): Array<common2D.Point>
 
 | 类型 |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## 示例
 
@@ -123,7 +123,7 @@ getGlyphs(): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## 示例
 
@@ -157,7 +157,7 @@ getGlyphs(range: Range): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## 示例
 
@@ -245,7 +245,7 @@ getOffsets(): Array<common2D.Point>
 
 | 类型 |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## 示例
 
@@ -273,7 +273,7 @@ getPositions(): Array<common2D.Point>
 
 | 类型 |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## 示例
 
@@ -307,7 +307,7 @@ getPositions(range: Range): Array<common2D.Point>
 
 | 类型 |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## 示例
 
@@ -363,7 +363,7 @@ getStringIndices(range?: Range): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## 示例
 
@@ -473,7 +473,7 @@ getTextStyle(): TextStyle
 
 | 类型 |
 | --- |
-| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) |
+| [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) |
 
 ## 示例
 

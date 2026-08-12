@@ -12,7 +12,7 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:rename](arkts-corefile-fileio-rename-f.md#rename)
+**替代接口：** [rename](arkts-corefile-file-fs-rename-f.md#rename)
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ declare function rename(oldPath: string, newPath: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## rename
@@ -44,7 +44,7 @@ declare function rename(oldPath: string, newPath: string, callback: AsyncCallbac
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:rename](arkts-corefile-fileio-rename-f.md#rename)
+**替代接口：** [rename](arkts-corefile-file-fs-rename-f.md#rename)
 
 <!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void-End-->
 

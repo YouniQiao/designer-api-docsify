@@ -34,7 +34,7 @@ function dataMigration(callback: DataMigrationCallback): number
 
 | 错误码ID |
 | --- |
-| [31100110](../errorcode-font-manager.md#31100110-系统异常导致接口调用失败) |
-| [31100111](../errorcode-font-manager.md#31100111-迁移任务执行中) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [31100110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100110-系统异常导致接口调用失败) |
+| [31100111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100111-迁移任务执行中) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

@@ -11,7 +11,7 @@ Declare type SelectOption
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from 'kits/@kit.ArkUI';
+import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
 ```
 
 ## onSelect
@@ -98,7 +98,7 @@ options: Array<SelectOption>
 
 Options of an item in the drop-down list box.
 
-**Type:** Array&lt;SelectOption&gt;
+**Type:** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **Since:** 10
 

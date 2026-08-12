@@ -2,7 +2,7 @@
 
 Defines radial gradient class.
 
-**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
+**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)
 
 **Since:** 24
 

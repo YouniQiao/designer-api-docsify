@@ -38,7 +38,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 26.0.0
 
@@ -162,7 +162,7 @@ onClose?: Callback<void>
 
 默认不设置关闭按钮回调函数。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
 

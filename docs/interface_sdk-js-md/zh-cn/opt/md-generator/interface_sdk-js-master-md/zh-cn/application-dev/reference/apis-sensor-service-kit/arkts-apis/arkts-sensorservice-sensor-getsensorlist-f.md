@@ -24,8 +24,8 @@ function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
 
 ## 示例
 
@@ -69,14 +69,14 @@ function getSensorList(): Promise<Array<Sensor>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Sensor&gt;&gt; |
+| Promise & lt;Array & lt;Sensor & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
 
 ## 示例
 

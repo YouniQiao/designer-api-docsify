@@ -23,5 +23,5 @@ Defines the callback used to return the pasted text content.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | string | Yes | Text to be pasted. |
-| event | [PasteEvent](../arkts-apis/arkts-arkui-richeditor-pasteevent-i.md) | Yes | Custom paste event. |
+| event | PasteEvent | Yes | Custom paste event. |
 

@@ -14,7 +14,7 @@ function unlockMission(missionId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#unlockMission
+**替代接口：** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -68,7 +68,7 @@ function unlockMission(missionId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#unlockMission
+**替代接口：** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

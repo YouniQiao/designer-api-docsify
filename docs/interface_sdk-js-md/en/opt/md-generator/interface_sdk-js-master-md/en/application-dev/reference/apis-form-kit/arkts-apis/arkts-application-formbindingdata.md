@@ -7,7 +7,7 @@ The **FormBindingData** module provides APIs for widget data binding. You can us
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formBindingData:formBindingData](arkts-application-formbindingdata.md)
+**Substitutes:** [formBindingData](arkts-app-form-formbindingdata.md#formBindingData)
 
 <!--Device-unnamed-declare namespace formBindingData--><!--Device-unnamed-declare namespace formBindingData-End-->
 

@@ -28,5 +28,5 @@ Create a FrameNode of GridCol type.
 
 | Type | Description |
 | --- | --- |
-| [GridCol](arkts-arkui-typenode-gridcol-t.md) | Return GridCol type FrameNode. |
+| GridCol | Return GridCol type FrameNode. |
 

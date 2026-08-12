@@ -18,7 +18,7 @@ errorInfo: ErrorInfo
 
 系统更新错误信息。
 
-**类型：** [ErrorInfo](../../apis-media-kit/arkts-apis/arkts-media-soundpool-errorinfo-i.md)
+**类型：** ErrorInfo
 
 **起始版本：** 12
 

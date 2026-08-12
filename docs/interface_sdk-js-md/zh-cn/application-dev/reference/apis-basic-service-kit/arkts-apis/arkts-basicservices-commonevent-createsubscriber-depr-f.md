@@ -17,7 +17,7 @@ function createSubscriber(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber)(
+**替代接口：** [createSubscriber](@ohos.commonEventManager:commonEventManager.createSubscriber()
 
 <!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void--><!--Device-commonEvent-function createSubscriber(    subscribeInfo: CommonEventSubscribeInfo,    callback: AsyncCallback<CommonEventSubscriber>  ): void-End-->
 
@@ -72,7 +72,7 @@ function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<Comm
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber)(subscribeInfo:
+**替代接口：** [createSubscriber](@ohos.commonEventManager:commonEventManager.createSubscriber(subscribeInfo:)
 
 <!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>--><!--Device-commonEvent-function createSubscriber(subscribeInfo: CommonEventSubscribeInfo): Promise<CommonEventSubscriber>-End-->
 

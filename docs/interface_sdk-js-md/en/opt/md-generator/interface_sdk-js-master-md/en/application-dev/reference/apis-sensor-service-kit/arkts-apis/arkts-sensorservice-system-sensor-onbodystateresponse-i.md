@@ -6,7 +6,7 @@ Specifies whether the device that houses the sensor is worn.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#WearDetectionResponse
+**Substitutes:** [WearDetectionResponse](arkts-sensorservice-sensor-weardetectionresponse-i.md#WearDetectionResponse)
 
 <!--Device-unnamed-export interface OnBodyStateResponse--><!--Device-unnamed-export interface OnBodyStateResponse-End-->
 
@@ -15,7 +15,7 @@ Specifies whether the device that houses the sensor is worn.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## value
@@ -32,7 +32,7 @@ Boolean value indicating whether the device is worn. The value **true** indicate
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#WearDetectionResponse.value
+**Substitutes:** [value](ohos.sensor/sensor#WearDetectionResponse.value)
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -15,7 +15,7 @@ readonly accessTokenId: number
 ```
 
 应用程序的accessTokenId，应用的身份标识，在程序访问控制校验接口  
-[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md/arkts-ability-abilityaccessctrl-atmanager-i.md#checkaccesstoken)中使用。
+[checkAccessToken](../../apis-ability-kit/arkts-apis/arkts-ability-abilityaccessctrl-atmanager-i.md#checkAccessToken)中使用。
 
 **类型：** number
 
@@ -33,7 +33,7 @@ readonly accessTokenId: number
 readonly appDistributionType: string
 ```
 
-应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)的appProvisionType字段。
+应用程序签名证书的分发类型，详细信息请参考[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo)的appProvisionType字段。
 
 **类型：** string
 
@@ -179,7 +179,7 @@ readonly descriptionResource: Resource
 
 应用程序的描述资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**类型：** Resource
 
 **起始版本：** 20
 
@@ -269,7 +269,7 @@ readonly iconResource: Resource
 
 应用程序的图标资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**类型：** Resource
 
 **起始版本：** 20
 
@@ -347,7 +347,7 @@ readonly labelResource: Resource
 
 应用程序的标签资源信息，包含了该资源的信息的bundleName、moduleName和id。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**类型：** Resource
 
 **起始版本：** 20
 
@@ -417,7 +417,7 @@ readonly process: string
 readonly releaseType: string
 ```
 
-标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)）来判断兼容性。
+标识应用打包时使用的SDK的发布类型。当前SDK的发布类型可能为Canary、Beta、Release，其中Canary和Beta可能通过序号进一步细分，例如Canary1、Canary2、Beta1、Beta2等。开发者可通过对比应用打包依赖的SDK发布类型和OS的发布类型（[deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo)）来判断兼容性。
 
 **类型：** string
 

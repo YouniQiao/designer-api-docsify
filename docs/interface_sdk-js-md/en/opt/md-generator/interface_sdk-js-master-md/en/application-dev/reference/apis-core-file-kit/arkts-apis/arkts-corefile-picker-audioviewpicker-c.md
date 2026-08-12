@@ -11,7 +11,7 @@ Provides APIs for selecting and saving audio clips. Before using the APIs of **A
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -113,7 +113,7 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## Examples
 
@@ -253,7 +253,7 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## Examples
 

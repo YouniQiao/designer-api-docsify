@@ -38,7 +38,7 @@ icon?: PasteIconStyle
 
 Style of the icon to be drawn.
 
-**Type:** [PasteIconStyle](../arkts-components/arkts-arkui-pasteiconstyle-e.md)
+**Type:** [PasteIconStyle](arkts-arkui-pastebutton-pasteiconstyle-e.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ text?: PasteDescription
 
 Text to be displayed on the button.
 
-**Type:** [PasteDescription](../arkts-components/arkts-arkui-pastedescription-e.md)
+**Type:** [PasteDescription](arkts-arkui-pastebutton-pastedescription-e.md)
 
 **Since:** 23
 

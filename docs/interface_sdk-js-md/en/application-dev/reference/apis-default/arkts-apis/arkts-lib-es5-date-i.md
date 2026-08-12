@@ -781,7 +781,7 @@ Converts a date to a string by using the current or specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No |  |
-| options | Intl.DateTimeFormatOptions | No |  |
+| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |  |
 
 **Return value:**
 
@@ -806,7 +806,7 @@ Converts a date and time to a string by using the current or specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No |  |
-| options | Intl.DateTimeFormatOptions | No |  |
+| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |  |
 
 **Return value:**
 
@@ -831,7 +831,7 @@ Converts a time to a string by using the current or specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| string[] | No |  |
-| options | Intl.DateTimeFormatOptions | No |  |
+| options | [Intl.DateTimeFormatOptions](arkts-intl-datetimeformatoptions-i.md) | No |  |
 
 **Return value:**
 

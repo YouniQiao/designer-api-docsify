@@ -6,7 +6,7 @@ The enum of bond state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondState
+**Substitutes:** [BondState](ohos.bluetoothManager/bluetoothManager.BondState)
 
 <!--Device-bluetooth-enum BondState--><!--Device-bluetooth-enum BondState-End-->
 
@@ -24,7 +24,7 @@ Indicate the bond state is invalid
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondState.BOND_STATE_INVALID
+**Substitutes:** [BOND_STATE_INVALID](ohos.bluetoothManager/bluetoothManager.BondState.BOND_STATE_INVALID)
 
 <!--Device-BondState-BOND_STATE_INVALID = 0--><!--Device-BondState-BOND_STATE_INVALID = 0-End-->
 
@@ -42,7 +42,7 @@ Indicate the bond state is bonding
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondState.BOND_STATE_BONDING
+**Substitutes:** [BOND_STATE_BONDING](ohos.bluetoothManager/bluetoothManager.BondState.BOND_STATE_BONDING)
 
 <!--Device-BondState-BOND_STATE_BONDING = 1--><!--Device-BondState-BOND_STATE_BONDING = 1-End-->
 
@@ -60,7 +60,7 @@ Indicate the bond state is bonded
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondState.BOND_STATE_BONDED
+**Substitutes:** [BOND_STATE_BONDED](ohos.bluetoothManager/bluetoothManager.BondState.BOND_STATE_BONDED)
 
 <!--Device-BondState-BOND_STATE_BONDED = 2--><!--Device-BondState-BOND_STATE_BONDED = 2-End-->
 

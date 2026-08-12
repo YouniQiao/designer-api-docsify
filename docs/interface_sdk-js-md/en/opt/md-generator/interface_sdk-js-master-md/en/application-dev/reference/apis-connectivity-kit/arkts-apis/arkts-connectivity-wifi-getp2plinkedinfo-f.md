@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pLinkedInfo
@@ -18,7 +18,7 @@ Obtains information about a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getP2pLinkedInfo
+**Substitutes:** [getP2pLinkedInfo](ohos.wifiManager/wifiManager.getP2pLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -30,7 +30,7 @@ Obtains information about a P2P connection.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WifiP2pLinkedInfo&gt; |
+| Promise & lt;WifiP2pLinkedInfo & gt; |
 
 
 ## getP2pLinkedInfo
@@ -45,7 +45,7 @@ Obtains information about a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getP2pLinkedInfo
+**Substitutes:** [getP2pLinkedInfo](ohos.wifiManager/wifiManager.getP2pLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

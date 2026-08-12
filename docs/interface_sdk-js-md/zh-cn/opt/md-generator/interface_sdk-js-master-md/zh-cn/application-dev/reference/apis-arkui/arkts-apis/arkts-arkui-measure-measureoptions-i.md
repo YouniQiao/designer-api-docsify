@@ -214,7 +214,7 @@ overflow?: number | TextOverflow
 
 number类型取值范围为[0,3]，取值间隔为1，依次对应TextOverflow中的枚举值。
 
-**类型：** number \| TextOverflow
+**类型：** number \| [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **起始版本：** 10
 
@@ -262,7 +262,7 @@ textCase?: number | TextCase
 
 number类型取值范围为[0,2]，取值间隔为1，依次对应TextCase中的枚举值。
 
-**类型：** number \| TextCase
+**类型：** number \| [TextCase](arkts-arkui-textcase-e.md)
 
 **起始版本：** 10
 
@@ -326,7 +326,7 @@ wordBreak?: WordBreak
 
 WordBreak.BREAK_ALL与{overflow: TextOverflow.Ellipsis}，`maxLines`组合使用可实现英文单词按字母截断，超出部分以省略号显示。
 
-**类型：** [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md)
+**类型：** WordBreak
 
 **起始版本：** 11
 

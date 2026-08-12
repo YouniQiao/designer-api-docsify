@@ -363,7 +363,7 @@ services?: Array<ServiceProfileInfo>
 
 服务配置信息列表。默认为空。
 
-**类型：** Array&lt;ServiceProfileInfo&gt;
+**类型：** Array&lt;[ServiceProfileInfo](arkts-distributedservice-distributeddevicemanager-serviceprofileinfo-i-sys.md)&gt;
 
 **起始版本：** 15
 

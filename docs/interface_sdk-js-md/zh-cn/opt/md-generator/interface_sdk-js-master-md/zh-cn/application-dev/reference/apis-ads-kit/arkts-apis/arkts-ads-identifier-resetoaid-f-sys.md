@@ -21,8 +21,8 @@ function resetOAID(): void
 | 错误码ID |
 | --- |
 | 17300002 |
-| [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-系统内部错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -8,7 +8,7 @@ Provides KV store configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options
+**Substitutes:** [Options](ohos.data.distributedKVStore.Options)
 
 <!--Device-distributedData-interface Options--><!--Device-distributedData-interface Options-End-->
 
@@ -32,7 +32,7 @@ ohos.permission.DISTRIBUTED_DATASYNC
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#autoSync
+**Substitutes:** [autoSync](ohos.data.distributedKVStore.Options#autoSync)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -56,7 +56,7 @@ Whether to back up the KV store. The default value is **true**, which means to b
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#backup
+**Substitutes:** [backup](ohos.data.distributedKVStore.Options#backup)
 
 <!--Device-Options-backup?: boolean--><!--Device-Options-backup?: boolean-End-->
 
@@ -78,7 +78,7 @@ Whether to create a KV store if the database file does not exist. The default va
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#createIfMissing
+**Substitutes:** [createIfMissing](ohos.data.distributedKVStore.Options#createIfMissing)
 
 <!--Device-Options-createIfMissing?: boolean--><!--Device-Options-createIfMissing?: boolean-End-->
 
@@ -100,7 +100,7 @@ Whether to encrypt the KV store. The default value is **false**, which means the
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#encrypt
+**Substitutes:** [encrypt](ohos.data.distributedKVStore.Options#encrypt)
 
 <!--Device-Options-encrypt?: boolean--><!--Device-Options-encrypt?: boolean-End-->
 
@@ -114,7 +114,7 @@ kvStoreType?: KVStoreType
 
 Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, which indicates a device KV store.
 
-**Type:** [KVStoreType](arkts-arkdata-distributeddata-kvstoretype-e.md)
+**Type:** KVStoreType
 
 **Since:** 7
 
@@ -122,7 +122,7 @@ Type of the KV store to create. The default value is **DEVICE_COLLABORATION**, w
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#kvStoreType
+**Substitutes:** [kvStoreType](ohos.data.distributedKVStore.Options#kvStoreType)
 
 <!--Device-Options-kvStoreType?: KVStoreType--><!--Device-Options-kvStoreType?: KVStoreType-End-->
 
@@ -136,7 +136,7 @@ schema?: Schema
 
 Schema that defines the values stored in the KV store. The default value is **undefined**, which means no schema is used.
 
-**Type:** [Schema](arkts-arkdata-distributedkvstore-schema-c.md)
+**Type:** Schema
 
 **Since:** 8
 
@@ -144,7 +144,7 @@ Schema that defines the values stored in the KV store. The default value is **un
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#schema
+**Substitutes:** [schema](ohos.data.distributedKVStore.Options#schema)
 
 <!--Device-Options-schema?: Schema--><!--Device-Options-schema?: Schema-End-->
 
@@ -158,7 +158,7 @@ securityLevel?: SecurityLevel
 
 Security level (S1 to S4) of the KV store.
 
-**Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
+**Type:** SecurityLevel
 
 **Since:** 7
 
@@ -166,7 +166,7 @@ Security level (S1 to S4) of the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Options#securityLevel
+**Substitutes:** [securityLevel](ohos.data.distributedKVStore.Options#securityLevel)
 
 <!--Device-Options-securityLevel?: SecurityLevel--><!--Device-Options-securityLevel?: SecurityLevel-End-->
 

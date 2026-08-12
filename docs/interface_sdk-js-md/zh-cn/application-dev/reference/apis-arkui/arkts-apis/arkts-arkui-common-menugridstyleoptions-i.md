@@ -62,7 +62,7 @@ position?: MenuGridPosition
 
 The position of grid.
 
-**类型：** [MenuGridPosition](../arkts-components/arkts-arkui-menugridposition-e.md)
+**类型：** [MenuGridPosition](arkts-arkui-common-menugridposition-e.md)
 
 **默认值：** MenuGridPosition.TOP
 

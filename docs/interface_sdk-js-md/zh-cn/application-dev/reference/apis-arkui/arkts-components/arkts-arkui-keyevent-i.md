@@ -46,7 +46,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## stopPropagation
 
@@ -96,7 +96,7 @@ intentionCode: IntentionCode
 
 默认值：IntentionCode.INTENTION_UNKNOWN。
 
-**类型：** [IntentionCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
+**类型：** [IntentionCode](arkts-arkui-intentioncode-t.md)
 
 **默认值：** IntentionCode.INTENTION_UNKNOWN
 
@@ -184,7 +184,7 @@ ScrollLock是否锁定（true: 锁定；false: 解锁）。
 keyCode: number
 ```
 
-按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。
+按键的键值。按键设备提供的键值请参考[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode)。
 
 **类型：** number
 
@@ -206,7 +206,7 @@ keySource: KeySource
 
 触发当前按键的输入设备类型。
 
-**类型：** [KeySource](../arkts-apis/arkts-arkui-keysource-e.md)
+**类型：** KeySource
 
 **起始版本：** 7
 
@@ -286,7 +286,7 @@ type: KeyType
 
 按键的类型。
 
-**类型：** [KeyType](../arkts-apis/arkts-arkui-keytype-e.md)
+**类型：** KeyType
 
 **起始版本：** 7
 

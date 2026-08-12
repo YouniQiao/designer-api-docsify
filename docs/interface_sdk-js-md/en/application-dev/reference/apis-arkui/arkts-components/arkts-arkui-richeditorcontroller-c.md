@@ -1,18 +1,18 @@
 # RichEditorController
 
 Implements the **RichEditor** component controller. Inherits from   
-[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
+[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController).
 
 > **NOTE：**
 > 
 > When the length of the content exceeds the height of the display area of the component, the insertion interface (
-> such as [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan),
-> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan),
-> [addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan) and
-> [addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan)) is called. The component automatically scrolls the
+> such as [addTextSpan](#addTextSpan),
+> [addImageSpan](#addImageSpan),
+> [addBuilderSpan](#addBuilderSpan) and
+> [addSymbolSpan](#addSymbolSpan)) is called. The component automatically scrolls the
 > content to make the end of the inserted content visible.
 
-**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
+**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)
 
 **Since:** 10
 
@@ -35,7 +35,7 @@ Adds a custom layout (BuilderSpan) to **RichEditor**.
 > - This API adds a builder span to take up space in the layout. It calls the system **measure** method to
 > calculate the actual length, width, and position.
 > 
-> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of the builder
+> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions) to set the index of the builder
 > in the **RichEditor** component (with one character as the unit).
 > 
 > - This builder span is unfocusable, draggable, and equipped with certain universal attributes. It behaves
@@ -45,11 +45,11 @@ Adds a custom layout (BuilderSpan) to **RichEditor**.
 > - Custom menus can be set using [bindSelectionMenu](RichEditorAttribute.bindSelectionMenu).
 > 
 > - The information about the builder span cannot be obtained through
-> [getSpans](arkts-arkui-richeditorcontroller-c.md#getspans), [getSelection](arkts-arkui-richeditorcontroller-c.md#getselection),
+> [getSpans](#getSpans), [getSelection](#getSelection),
 > [onSelect](RichEditorAttribute.onSelect), or [aboutToDelete](RichEditorAttribute.aboutToDelete).
 > 
-> - The builder span cannot be updated using [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) or
-> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle).
+> - The builder span cannot be updated using [updateSpanStyle](#updateSpanStyle) or
+> [updateParagraphStyle](#updateParagraphStyle).
 > 
 > - Copying or pasting the builder span does not take effect.
 > 
@@ -72,7 +72,7 @@ Only the following universal attributes are supported:
 [borderColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor),   
 [borderRadius](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius),   
 [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor),   
-[backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), [opacity](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md),   
+[backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), [opacity](common),   
 [blur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur),   
 [backdropBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur),   
 [shadow](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow),   
@@ -111,8 +111,8 @@ Only the following universal attributes are supported:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Custom component. |
-| options | [RichEditorBuilderSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | No | Builder options. |
+| value | CustomBuilder | Yes | Custom component. |
+| options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) | No | Builder options. |
 
 **Return value:**
 
@@ -146,8 +146,8 @@ This API is a synchronous API. In a weak network environment, directly adding ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| ResourceStr | Yes | Image content. |
-| options | [RichEditorImageSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorimagespanoptions-i.md) | No | Image options. |
+| value | PixelMap \| ResourceStr | Yes | Image content. |
+| options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | No | Image options. |
 
 **Return value:**
 
@@ -181,8 +181,8 @@ Currently, gestures, copying, and dragging are not supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Symbol resource object. |
-| options | [RichEditorSymbolSpanOptions](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md) | No | Symbol options. |
+| value | Resource | Yes | Symbol resource object. |
+| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | No | Symbol options. |
 
 **Return value:**
 
@@ -214,7 +214,7 @@ Adds a text span. If the caret in the component is blinking, the caret position 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | Text content.&lt;br&gt;The Resource type is supported since API version 20.<br>**Since:** 20 |
+| content | ResourceStr | Yes | Text content.&lt;br&gt;The Resource type is supported since API version 20.<br>**Since:** 20 |
 | options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | No | Text options. |
 
 **Return value:**
@@ -273,19 +273,19 @@ Converts a styled string into a span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string before conversion. |
+| value | StyledString | Yes | Styled string before conversion. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorSpan&gt; | Text and image span information. |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | Text and image span information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
 ## getParagraphs
 
@@ -317,7 +317,7 @@ Obtains the paragraph information within a specified range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorParagraphResult&gt; | Information about the selected paragraphs. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; | Information about the selected paragraphs. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSelection
 
@@ -375,7 +375,7 @@ Obtains span information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;RichEditorImageSpanResult \| RichEditorTextSpanResult&gt; | Text and image span information. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Text and image span information. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## toStyledString
 
@@ -407,13 +407,13 @@ Convert the component content within the given range into a styled string. Symbo
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Styled string after conversion. |
+| StyledString | Styled string after conversion. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -439,7 +439,7 @@ Updates the paragraph style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorParagraphStyleOptions](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyleoptions-i.md) | Yes | Information about the paragraph style. |
+| value | [RichEditorParagraphStyleOptions](arkts-arkui-richeditorparagraphstyleoptions-i.md) | Yes | Information about the paragraph style. |
 
 ## updateSpanStyle
 
@@ -469,5 +469,5 @@ Calling this API will not close the custom context menu on selection by default.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| RichEditorUpdateImageSpanStyleOptions \| RichEditorUpdateSymbolSpanStyleOptions | Yes | Style options of the text, image, or symbol span.<br>**Since:** 11 |
+| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) \| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | Yes | Style options of the text, image, or symbol span.<br>**Since:** 11 |
 

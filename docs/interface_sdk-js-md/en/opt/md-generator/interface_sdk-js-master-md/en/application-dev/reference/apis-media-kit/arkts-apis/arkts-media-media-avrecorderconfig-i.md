@@ -13,7 +13,7 @@ The **audioSourceType** and **videoSourceType** parameters are used to distingui
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioSourceType
@@ -59,13 +59,13 @@ location?: Location
 Geographical location of the recorded video. By default, the geographical location information is not recorded.&lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use  
 **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
 
-**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**Type:** Location
 
 **Since:** 9
 
 **Deprecated since:** 12
 
-**Substitutes:** ohos.multimedia.media/media.AVMetadata#location
+**Substitutes:** [location](ohos.multimedia.media/media.AVMetadata#location)
 
 <!--Device-AVRecorderConfig-location?: Location--><!--Device-AVRecorderConfig-location?: Location-End-->
 
@@ -95,7 +95,7 @@ metadata?: AVMetadata
 
 Metadata. For details, see @AVMetadata.
 
-**Type:** [AVMetadata](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-avmetadata-i.md)
+**Type:** AVMetadata
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ Rotation angle of the recorded video, in degrees. The value can be 0 (default), 
 
 **Deprecated since:** 12
 
-**Substitutes:** ohos.multimedia.media/media.AVMetadata#videoOrientation
+**Substitutes:** [videoOrientation](arkts-media-media-avmetadata-i.md#videoOrientation)
 
 <!--Device-AVRecorderConfig-rotation?: number--><!--Device-AVRecorderConfig-rotation?: number-End-->
 

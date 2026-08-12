@@ -7,13 +7,13 @@ The **usb** module provides USB device management functions, including USB devic
 > The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with
 > a superscript to indicate their earliest API version.
 > The APIs provided by this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.usbManager](arkts-usbmanager.md).
+> [@ohos.usbManager](arkts-usbmanager.md#usbManager).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager](arkts-usbmanager.md)
+**Substitutes:** [usbManager](arkts-usbmanager.md#usbManager)
 
 <!--Device-unnamed-declare namespace usb--><!--Device-unnamed-declare namespace usb-End-->
 
@@ -22,7 +22,7 @@ The **usb** module provides USB device management functions, including USB devic
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

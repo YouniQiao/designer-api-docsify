@@ -18,7 +18,7 @@ controller: RichEditorStyledStringController
 
 富文本控制器。
 
-**类型：** [RichEditorStyledStringController](../arkts-apis/arkts-arkui-richeditor-richeditorstyledstringcontroller-c.md)
+**类型：** [RichEditorStyledStringController](arkts-arkui-richeditorstyledstringcontroller-c.md)
 
 **起始版本：** 12
 

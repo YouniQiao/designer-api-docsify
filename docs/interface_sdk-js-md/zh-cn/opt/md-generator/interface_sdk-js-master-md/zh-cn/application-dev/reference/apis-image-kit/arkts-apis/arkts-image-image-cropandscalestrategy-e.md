@@ -2,7 +2,7 @@
 
 表示裁剪与缩放的先后策略的枚举。
 
-如果在配置解码选项[DecodingOptions](arkts-image-image-decodingoptions-i.md)时，未填入参数cropAndScaleStrategy，并且同时设置了参数desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。
+如果在配置解码选项[DecodingOptions](arkts-image-image-decodingoptions-i.md#DecodingOptions)时，未填入参数cropAndScaleStrategy，并且同时设置了参数desiredRegion和desiredSize，由于系统对于不同图片格式采用的解码算法不同，最终解码效果将略有差异。
 
 例如原始图片大小为200x200，传入desiredSize:{width: 150, height: 150}，desiredRegion:{x: 0, y: 0, width: 100, height: 100}，即预期解码原图左上角1/4区域，最终将pixelMap大小缩放至150x150返回。
 

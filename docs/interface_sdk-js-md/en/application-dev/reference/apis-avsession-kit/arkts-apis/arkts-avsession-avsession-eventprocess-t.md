@@ -19,5 +19,5 @@ The general process funcation with an event and arguments.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | request event |
-| args | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | arguments associated with event |
+| args | Record&lt;string, Object&gt; | Yes | arguments associated with event |
 

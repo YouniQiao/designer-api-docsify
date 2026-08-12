@@ -39,7 +39,7 @@ confidentiality
 ## Modules to Import
 
 ```TypeScript
-import { restrictions } from 'kits/@kit.MDMKit';
+import { restrictions } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -28,12 +28,12 @@
 | [Y_RESOLUTION](#y_resolution) | 'TiffYResolution' | 垂直方向分辨率（每分辨率单位的像素数）。 |
 | [X_RESOLUTION](#x_resolution) | 'TiffXResolution' | 水平方向分辨率（每分辨率单位的像素数）。 |
 | [WHITE_POINT](#white_point) | 'TiffWhitePoint' | 用于指定图像的白点（white point）色度坐标，即图像颜色空间中被认为是“白色”的参考点。 |
-| [TILE_LENGTH](#tile_length) | 'TiffTileLength' | 每个图像分块的高度。单位：像素（px）。 |
+| [TILE_LENGTH](arkts-image-image-tiffpropertykey-e.md) | 'TiffTileLength' | 每个图像分块的高度。单位：像素（px）。 |
 | [TRANSFER_FUNCTION](#transfer_function) | 'TiffTransferFunction' | 图像的传递函数，通常用于颜色校正。 |
-| [TILE_WIDTH](#tile_width) | 'TiffTileWidth' | 每个图像分块的宽度。单位：像素（px）。 |
+| [TILE_WIDTH](arkts-image-image-tiffpropertykey-e.md) | 'TiffTileWidth' | 每个图像分块的宽度。单位：像素（px）。 |
 | [MAKE](#make) | 'TiffMake' | 拍摄设备制造商。 |
 | [MODEL](#model) | 'TiffModel' | 拍摄设备型号名称或编号。 |
-| [HOST_COMPUTER](#host_computer) | 'TiffHostComputer' | 用于图像处理的主机或系统。 |
+| [HOST_COMPUTER](arkts-image-image-tiffpropertykey-e.md) | 'TiffHostComputer' | 用于图像处理的主机或系统。 |
 | COMPRESSION | 'TiffCompression' | TIFF图像数据所用的压缩方案。
 
 - 1表示无压缩。  

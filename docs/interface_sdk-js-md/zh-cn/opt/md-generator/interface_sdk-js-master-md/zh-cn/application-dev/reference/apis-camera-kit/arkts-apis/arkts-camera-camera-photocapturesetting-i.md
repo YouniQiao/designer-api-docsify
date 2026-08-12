@@ -38,7 +38,7 @@ location?: Location
 
 图片地理位置信息（默认以设备硬件信息为准）。
 
-**类型：** [Location](arkts-camera-camera-location-i.md)
+**类型：** Location
 
 **起始版本：** 10
 
@@ -54,7 +54,7 @@ location?: Location
 mirror?: boolean
 ```
 
-镜像使能开关（默认关）。使用之前需要使用[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported)进行判断是否支持。true表示使能，false表示不使能。
+镜像使能开关（默认关）。使用之前需要使用[isMirrorSupported](arkts-camera-camera-photooutput-i.md#isMirrorSupported)进行判断是否支持。true表示使能，false表示不使能。
 
 **类型：** boolean
 

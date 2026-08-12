@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## releaseInterface
@@ -15,13 +15,13 @@ function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 Releases a USB interface.
 
 Before you do this, ensure that you have claimed the interface by calling  
-[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface).
+[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseinterface)
+**Substitutes:** [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md#releaseInterface)
 
 <!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number--><!--Device-usb-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number-End-->
 
@@ -31,7 +31,7 @@ Before you do this, ensure that you have claimed the interface by calling
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pipe | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
+| [pipe](../../apis-arkts/arkts-apis/arkts-arkts-stream-readable-c.md) | [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) | Yes |
 | iface | [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Yes |
 
 **Return value:**

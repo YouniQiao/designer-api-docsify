@@ -25,4 +25,4 @@ type QueryCompilationEvent = (compilationId: string, pageIndex: number) => Promi
 
 | 类型 |
 | --- |
-| Promise&lt;PageMediaEntity&gt; |
+| Promise&lt;[PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md)&gt; |

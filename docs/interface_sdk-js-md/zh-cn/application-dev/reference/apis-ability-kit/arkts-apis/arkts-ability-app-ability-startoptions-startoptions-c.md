@@ -1,7 +1,7 @@
 # StartOptions
 
 StartOptions可以作为启动UIAbility接口（例如  
-[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
+[startAbility()](arkts-ability-uiabilitycontext-c.md#startAbility)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
 
 **起始版本：** 9
 
@@ -200,7 +200,7 @@ UIAbility启动后的进程模式。
 
 1.该功能仅在2in1和Tablet设备上生效。
 
-2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)中生效。
 
 3.processMode和startupVisibility必须同时设置。
 
@@ -248,7 +248,7 @@ startWindowBackgroundColor?: string
 
 - 启动其他应用的UIAbility时，该字段不生效。  
 - 该功能仅在2in1和Tablet设备上生效。  
-- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)中生效。
 
 **类型：** string
 
@@ -274,7 +274,7 @@ startWindowIcon?: image.PixelMap
 
 - 启动其他应用的UIAbility时，该字段不生效。  
 - 该功能仅在2in1和Tablet设备上生效。  
-- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。  
+- 仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)中生效。  
 - 图片数据大小限制为600MB。
 
 **类型：** image.PixelMap
@@ -301,7 +301,7 @@ UIAbility启动后的可见性。当用户设置目标UIAbility为不可见时�
 
 1.该功能仅在2in1和Tablet设备上生效。
 
-2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)中生效。
 
 3.processMode和startupVisibility必须同时设置。
 
@@ -380,7 +380,7 @@ windowHeight?: int
 
 窗口的高度，单位为px。
 
-取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
+取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
 
 **约束：**
 
@@ -428,7 +428,7 @@ windowLeft?: int
 windowMode?: int
 ```
 
-启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md)。
+启动UIAbility时的窗口模式，详见[WindowMode](arkts-ability-abilityconstant-windowmode-e.md#WindowMode)。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -474,7 +474,7 @@ windowWidth?: int
 
 窗口的宽度，单位为px。
 
-取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
+取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。
 
 **约束：**
 

@@ -1,6 +1,6 @@
 # DownloadInfo
 
-下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo)接口的回调参数。
+下载任务信息，[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo)接口的回调参数。
 
 **起始版本：** 7
 

@@ -36,7 +36,7 @@ callback: AsyncCallback<SubmitTransferCallback>
 
 传输完成时的回调信息。
 
-**类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;SubmitTransferCallback&gt;
+**类型：** [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)&gt;
 
 **起始版本：** 18
 
@@ -52,9 +52,9 @@ callback: AsyncCallback<SubmitTransferCallback>
 devPipe: USBDevicePipe
 ```
 
-用于确定总线地址和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)获取。
+用于确定总线地址和设备地址，需要调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)获取。
 
-**类型：** [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
+**类型：** USBDevicePipe
 
 **起始版本：** 18
 

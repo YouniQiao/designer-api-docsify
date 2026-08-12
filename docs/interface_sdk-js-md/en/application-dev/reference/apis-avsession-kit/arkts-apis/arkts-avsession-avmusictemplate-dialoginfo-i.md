@@ -13,7 +13,7 @@ The definition of dialog information.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## buttons
@@ -84,7 +84,7 @@ dialogType: DialogType
 
 Type of the dialog.
 
-**Type:** [DialogType](arkts-avsession-avmusictemplate-dialogtype-e.md)
+**Type:** DialogType
 
 **Since:** 23
 

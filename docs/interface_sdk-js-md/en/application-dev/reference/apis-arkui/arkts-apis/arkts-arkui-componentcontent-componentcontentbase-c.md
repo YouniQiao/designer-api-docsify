@@ -2,7 +2,7 @@
 
 Defines the base class for ComponentContent.
 
-**Inheritance/Implementation:** ComponentContentBase extends [Content](arkts-arkui-content-c.md)
+**Inheritance/Implementation:** ComponentContentBase extends [Content](Content)
 
 **Since:** 23
 

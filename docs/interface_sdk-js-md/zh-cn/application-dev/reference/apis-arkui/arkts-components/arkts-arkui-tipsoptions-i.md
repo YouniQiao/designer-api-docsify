@@ -70,7 +70,7 @@ arrowHeight?: Dimension
 
 The height of the arrow.
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 8.0_vp.
 
@@ -96,7 +96,7 @@ arrowPointPosition?: ArrowPointPosition
 
 默认值：ArrowPointPosition.CENTER
 
-**类型：** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
+**类型：** ArrowPointPosition
 
 **起始版本：** 19
 
@@ -118,7 +118,7 @@ arrowWidth?: Dimension
 
 The width of the arrow.
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 16.0_vp.
 
@@ -232,7 +232,7 @@ showAtAnchor?: TipsAnchorType
 
 Tips的跟随类型为TipsAnchorType.CURSOR时，Tips不显示箭头。
 
-**类型：** [TipsAnchorType](../arkts-apis/arkts-arkui-tipsanchortype-e.md)
+**类型：** TipsAnchorType
 
 **起始版本：** 20
 
@@ -258,11 +258,11 @@ systemMaterial?: SystemUiMaterial
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
-[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundColor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#borderColor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderWidth)、阴影  
 [shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
-**类型：** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **起始版本：** 26.0.0
 

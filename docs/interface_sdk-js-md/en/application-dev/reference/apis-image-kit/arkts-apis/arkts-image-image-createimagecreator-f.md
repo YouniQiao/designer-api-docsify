@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageCreator
@@ -21,7 +21,7 @@ Creates an ImageCreator instance by specifying the image width, height, format, 
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)(size:
+**Substitutes:** [createImageCreator](image.createImageCreator(size:)
 
 <!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
@@ -70,7 +70,7 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | Yes | Default size of the image. |
+| size | Size | Yes | Default size of the image. |
 | format | [ImageFormat](arkts-image-image-imageformat-e.md) | Yes | Image format, for example, YCBCR_422_SP or JPEG. |
 | capacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of images that can be accessed at the same time. This parameter is used only as an expected value. The actual capacity is determined by the device hardware. |
 
@@ -84,7 +84,7 @@ Creates an ImageCreator instance by specifying the image size, format, and capac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
 
 ## Examples
 

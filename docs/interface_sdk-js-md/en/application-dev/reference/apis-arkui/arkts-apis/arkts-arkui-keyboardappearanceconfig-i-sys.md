@@ -22,7 +22,7 @@ Keyboard fluid lighting effect.
 
 Default value: **KeyboardFluidLightMode.NONE**
 
-**Type:** [KeyboardFluidLightMode](arkts-arkui-textcommon-keyboardfluidlightmode-e-sys.md)
+**Type:** [KeyboardFluidLightMode](arkts-arkui-keyboardfluidlightmode-e-sys.md)
 
 **Since:** 20
 

@@ -22,17 +22,17 @@ function uninstallLocalPlugin(pluginBundleName: string): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pluginBundleName | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700092](../errorcode-bundle.md#17700092-插件包名不存在) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17700092](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700092-插件包名不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |

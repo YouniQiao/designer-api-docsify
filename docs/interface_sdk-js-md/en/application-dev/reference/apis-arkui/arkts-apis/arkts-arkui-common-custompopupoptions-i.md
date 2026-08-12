@@ -166,7 +166,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the popup.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -208,7 +208,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the popup's background effect with options
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -228,7 +228,7 @@ borderLinearGradient?: PopupBorderLinearGradient
 
 The LinearGradient of popup's innerline.
 
-**Type:** [PopupBorderLinearGradient](../arkts-components/arkts-arkui-popupborderlineargradient-i.md)
+**Type:** [PopupBorderLinearGradient](arkts-arkui-common-popupborderlineargradient-i.md)
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ builder: CustomBuilder
 
 Popup builder.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup attribute is a universal attribute. A custom popup does not support display of another popup.&lt;br&gt;The position attribute cannot be used for the first-layer container in the builder.&lt;br&gt;If the position attribute is used, the popup will not be displayed.&lt;br&gt;If a custom component is used in the builder, the aboutToAppear and aboutToDisappear lifecycle callbacks of the custom component are irrelevant to the visibility of the popup. As such, the lifecycle of the custom component cannot be used to determine whether the popup is displayed or not.&lt;/p&gt;
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -288,7 +288,7 @@ colorMode?: AnchoredColorMode
 
 Define the popup theme color mode.
 
-**Type:** [AnchoredColorMode](../arkts-components/arkts-arkui-anchoredcolormode-e.md)
+**Type:** [AnchoredColorMode](arkts-arkui-common-anchoredcolormode-e.md)
 
 **Default:** AnchoredColorMode.FOLLOW_TARGET
 
@@ -398,7 +398,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 Define the popup avoid keyboard mode.
 
-**Type:** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**Type:** [KeyboardAvoidMode](arkts-arkui-common-keyboardavoidmode-e.md)
 
 **Default:** KeyboardAvoidMode.NONE
 
@@ -440,7 +440,7 @@ mask?: boolean | PopupMaskType
 
 The mask to block gesture events of popup.When mask is set false, gesture events are not blocked.When mask is set true, gesture events are blocked and mask color is transparent.
 
-**Type:** boolean \| PopupMaskType
+**Type:** boolean \| [PopupMaskType](arkts-arkui-common-popupmasktype-i.md)
 
 **Since:** 23
 
@@ -560,7 +560,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 Whether to perform dismissal event interception and interception callback.1. If this parameter is set to false, the system does not respond to the dismissal event initiated by touching the Back button, swiping left or right on the screen, or pressing the Esc key; and the system dismisses the popup only when show is set to false. If this parameter is set to true, the system responds to the dismissal event as expected.2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;No more onWillDismiss callback is allowed in an onWillDismiss callback.&lt;/p&gt;
 
-**Type:** boolean \| Callback&lt;DismissPopupAction&gt;
+**Type:** boolean \| [Callback](arkts-arkui-callback-t.md)&lt;[DismissPopupAction](arkts-arkui-common-dismisspopupaction-i.md)&gt;
 
 **Default:** true
 
@@ -582,7 +582,7 @@ outlineLinearGradient?: PopupBorderLinearGradient
 
 The LinearGradient of popup's outline.
 
-**Type:** [PopupBorderLinearGradient](../arkts-components/arkts-arkui-popupborderlineargradient-i.md)
+**Type:** [PopupBorderLinearGradient](arkts-arkui-common-popupborderlineargradient-i.md)
 
 **Since:** 23
 
@@ -644,7 +644,7 @@ popupColor?: Color | string | Resource | long
 
 Color of the popup. To remove the background blur, set backgroundBlurStyle to BlurStyle.NONE.
 
-**Type:** [Color](arkts-arkui-color-e.md) \| string \| Resource \| long
+**Type:** [Color](arkts-arkui-color-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| long
 
 **Default:** TRANSPARENT plus COMPONENT_ULTRA_THICK
 
@@ -688,7 +688,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Popup shadow.
 
-**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-common-shadowstyle-e.md)
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 

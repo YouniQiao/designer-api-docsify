@@ -2,7 +2,7 @@
 
 The Worker class contains all Worker functions.
 
-**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md)
+**Inheritance/Implementation:** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#EventTarget)
 
 **Since:** 7
 
@@ -10,7 +10,7 @@ The Worker class contains all Worker functions.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker
+**Substitutes:** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#ThreadWorker)
 
 <!--Device-worker-class Worker implements EventTarget--><!--Device-worker-class Worker implements EventTarget-End-->
 
@@ -19,7 +19,7 @@ The Worker class contains all Worker functions.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -36,7 +36,7 @@ Creates a worker instance
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.constructor
+**Substitutes:** [constructor](ohos.worker.ThreadWorker.constructor)
 
 <!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
@@ -75,7 +75,7 @@ Removes an event listener to the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-Worker-off(type: string, listener?: EventListener): void--><!--Device-Worker-off(type: string, listener?: EventListener): void-End-->
 
@@ -113,7 +113,7 @@ Adds an event listener to the worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.on
+**Substitutes:** [on](ohos.worker.ThreadWorker.on)
 
 <!--Device-Worker-on(type: string, listener: EventListener): void--><!--Device-Worker-on(type: string, listener: EventListener): void-End-->
 
@@ -152,7 +152,7 @@ Adds an event listener to the worker and removes the event listener automaticall
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.once
+**Substitutes:** [once](ohos.worker.ThreadWorker.once)
 
 <!--Device-Worker-once(type: string, listener: EventListener): void--><!--Device-Worker-once(type: string, listener: EventListener): void-End-->
 
@@ -191,7 +191,7 @@ The onerror attribute of the worker specifies the event handler to be called whe
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.onerror
+**Substitutes:** [onerror](ohos.worker.ThreadWorker.onerror)
 
 <!--Device-Worker-onerror?: (err: ErrorEvent) => void--><!--Device-Worker-onerror?: (err: ErrorEvent) => void-End-->
 
@@ -217,7 +217,7 @@ Called when the Worker thread exits. The event handler is executed in the host t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.onexit
+**Substitutes:** [onexit](ohos.worker.ThreadWorker.onexit)
 
 <!--Device-Worker-onexit?: (code: number) => void--><!--Device-Worker-onexit?: (code: number) => void-End-->
 
@@ -243,7 +243,7 @@ The onmessage attribute of the worker specifies the event handler to be called t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.onmessage
+**Substitutes:** [onmessage](ohos.worker.ThreadWorker.onmessage)
 
 <!--Device-Worker-onmessage?: (event: MessageEvent) => void--><!--Device-Worker-onmessage?: (event: MessageEvent) => void-End-->
 
@@ -269,7 +269,7 @@ The onmessage attribute of the worker specifies the event handler when the worke
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.onmessageerror
+**Substitutes:** [onmessageerror](ohos.worker.ThreadWorker.onmessageerror)
 
 <!--Device-Worker-onmessageerror?: (event: MessageEvent) => void--><!--Device-Worker-onmessageerror?: (event: MessageEvent) => void-End-->
 
@@ -295,7 +295,7 @@ Sends a message to the worker thread.The data is transferred using the structure
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.postMessage
+**Substitutes:** [postMessage](ohos.worker.ThreadWorker.postMessage)
 
 <!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
 
@@ -334,7 +334,7 @@ Sends a message to the worker thread.The data is transferred using the structure
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.postMessage
+**Substitutes:** [postMessage](ohos.worker.ThreadWorker.postMessage)
 
 <!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
 
@@ -375,7 +375,7 @@ Terminates the worker thread to stop the worker from receiving messages
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorker.terminate
+**Substitutes:** [terminate](ohos.worker.ThreadWorker.terminate)
 
 <!--Device-Worker-terminate(): void--><!--Device-Worker-terminate(): void-End-->
 

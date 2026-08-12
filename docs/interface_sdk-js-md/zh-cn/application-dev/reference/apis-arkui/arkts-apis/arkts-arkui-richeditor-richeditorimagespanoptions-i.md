@@ -36,7 +36,7 @@ gesture?: RichEditorGesture
 
 行为触发回调。省略时，仅使用系统默认行为。
 
-**类型：** [RichEditorGesture](../arkts-components/arkts-arkui-richeditorgesture-i.md)
+**类型：** [RichEditorGesture](arkts-arkui-richeditor-richeditorgesture-i.md)
 
 **起始版本：** 23
 
@@ -56,7 +56,7 @@ imageStyle?: RichEditorImageSpanStyle
 
 图片样式。
 
-**类型：** [RichEditorImageSpanStyle](../arkts-components/arkts-arkui-richeditorimagespanstyle-i.md)
+**类型：** [RichEditorImageSpanStyle](arkts-arkui-richeditor-richeditorimagespanstyle-i.md)
 
 **起始版本：** 23
 

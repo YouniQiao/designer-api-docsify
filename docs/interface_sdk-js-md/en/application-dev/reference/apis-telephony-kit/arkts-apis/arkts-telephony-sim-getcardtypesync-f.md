@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getCardTypeSync
@@ -32,7 +32,7 @@ Obtains the type of the SIM card inserted in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md) | Returns the SIM card type. |
+| CardType | Returns the SIM card type. |
 
 ## Examples
 

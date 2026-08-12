@@ -72,7 +72,7 @@ aiSessionType: AISessionType
 
 AI会话类型。
 
-**类型：** [AISessionType](../arkts-apis/arkts-arkweb-web-aisessiontype-e.md)
+**类型：** [AISessionType](arkts-arkweb-aisessiontype-e.md)
 
 **起始版本：** 26.0.0
 

@@ -38,7 +38,7 @@ icon?: SaveIconStyle
 
 Style of the icon to be drawn.
 
-**Type:** [SaveIconStyle](../arkts-components/arkts-arkui-saveiconstyle-e.md)
+**Type:** [SaveIconStyle](arkts-arkui-savebutton-saveiconstyle-e.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ text?: SaveDescription
 
 Text to be displayed on the button.
 
-**Type:** [SaveDescription](../arkts-components/arkts-arkui-savedescription-e.md)
+**Type:** [SaveDescription](arkts-arkui-savebutton-savedescription-e.md)
 
 **Since:** 23
 

@@ -55,7 +55,7 @@ Create a **Tabs** container.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TabsOptions](../arkts-apis/arkts-arkui-tabs-tabsoptions-i.md) | No | Options of the **Tabs** component. |
+| options | [TabsOptions](arkts-arkui-tabsoptions-i.md) | No | Options of the **Tabs** component. |
 
 ## Summary
 

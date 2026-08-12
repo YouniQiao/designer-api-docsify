@@ -17,7 +17,7 @@ You can call **finishWrite()** or **failWrite()** to write or roll back file con
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -46,7 +46,7 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -212,7 +212,7 @@ The FD needs to be closed by calling **close()**.
 
 | Type | Description |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | File object opened. |
+| [File](arkts-corefile-file-fs-file-i.md) | File object opened. |
 
 **Error codes:**
 
@@ -266,7 +266,7 @@ Creates a **ReadStream** instance.
 
 | Type | Description |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | ReadStream** instance obtained. |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | ReadStream** instance obtained. |
 
 **Error codes:**
 
@@ -390,7 +390,7 @@ Call **finishWrite()** if the write operation is successful; call **failWrite()*
 
 | Type | Description |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | WriteStream** instance obtained. |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | WriteStream** instance obtained. |
 
 **Error codes:**
 

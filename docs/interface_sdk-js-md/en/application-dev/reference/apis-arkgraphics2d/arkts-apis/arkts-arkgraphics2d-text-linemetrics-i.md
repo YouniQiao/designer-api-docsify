@@ -13,7 +13,7 @@ Describes the measurement information of a single line of text in the text layou
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## ascent
@@ -165,7 +165,7 @@ runMetrics: Map<int, RunMetrics>
 
 Mapping between the text index range and the associated font measurement information.
 
-**Type:** ArkTS-Dyn: Map&lt;number, RunMetrics&gt;  <br>ArkTS-Sta：Map&lt;int, RunMetrics&gt;
+**Type:** ArkTS-Dyn: Map&lt;number, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;  <br>ArkTS-Sta：Map&lt;int, [RunMetrics](arkts-arkgraphics2d-text-runmetrics-i.md)&gt;
 
 **Since:** 12
 

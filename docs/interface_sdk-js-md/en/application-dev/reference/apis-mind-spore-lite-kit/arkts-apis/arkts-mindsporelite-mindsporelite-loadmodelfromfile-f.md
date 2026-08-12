@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## loadModelFromFile
@@ -31,13 +31,13 @@ Create a Model instance from file path
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | string | Yes | model indicates model path to be loaded |
-| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | No | context indicates model context information |
+| context | Context | No | context indicates model context information |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Model&gt; | the promise returned by the function. |
+| Promise&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | the promise returned by the function. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Create a Model instance from file path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | string | Yes | model indicates model path to be loaded |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Model&gt; | Yes | the callback of model |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 
@@ -138,8 +138,8 @@ Create a Model instance from file path.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | model | string | Yes | model indicates model path to be loaded |
-| context | [Context](arkts-mindsporelite-mindsporelite-context-i.md) | Yes | context indicates model context information |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Model&gt; | Yes | the callback of model |
+| context | Context | Yes | context indicates model context information |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Model](arkts-mindsporelite-mindsporelite-model-i.md)&gt; | Yes | the callback of model |
 
 **Error codes:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## addPrinter
@@ -30,21 +30,21 @@ Add a printer to system.
 | --- | --- | --- |
 | printerName | string | Yes |
 | uri | string | Yes |
-| ppdName | string | No |
+| [ppdName](arkts-basicservices-print-ppdinfo-i.md) | string | No |
 | options | string | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [13100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

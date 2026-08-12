@@ -25,15 +25,15 @@ export declare function Hyperlink(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | string \| Resource \| undefined | 是 | Hyperlink组件跳转的网页地址。&lt;br/&gt;取值为undefined时，按无跳转链接地址处理。 |
-| content | string \| Resource | 否 | Hyperlink组件中超链接显示文本。&lt;br/&gt;若不传该参数且组件内无子组件时，默认显示address参数值链接地址。&lt;br/&gt; **说明：** &lt;br/&gt;组件内有子组件时，不显示超链接文本。 &lt;br&gt;默认值：''。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | The node of component. |
+| address | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | Hyperlink组件跳转的网页地址。&lt;br/&gt;取值为undefined时，按无跳转链接地址处理。 |
+| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 否 | Hyperlink组件中超链接显示文本。&lt;br/&gt;若不传该参数且组件内无子组件时，默认显示address参数值链接地址。&lt;br/&gt; **说明：** &lt;br/&gt;组件内有子组件时，不显示超链接文本。 &lt;br&gt;默认值：''。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | The node of component. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [HyperlinkAttribute](../arkts-components/arkts-arkui-hyperlink-attribute.md) |  |
+| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
 
 
 ## Hyperlink
@@ -63,12 +63,12 @@ export declare function Hyperlink(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;HyperlinkAttribute&gt; | 是 | Hyperlink属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md)&gt; | 是 | Hyperlink属性实例。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [HyperlinkAttribute](../arkts-components/arkts-arkui-hyperlink-attribute.md) |  |
+| [HyperlinkAttribute](arkts-arkui-hyperlink-hyperlinkattribute-i.md) |  |
 

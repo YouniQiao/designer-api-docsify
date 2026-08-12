@@ -27,5 +27,5 @@ The login event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;QrCodeInfo[]&gt; | (QrCodeInfo[]) returned through promise |
+| Promise&lt;[QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]&gt; | (QrCodeInfo[]) returned through promise |
 

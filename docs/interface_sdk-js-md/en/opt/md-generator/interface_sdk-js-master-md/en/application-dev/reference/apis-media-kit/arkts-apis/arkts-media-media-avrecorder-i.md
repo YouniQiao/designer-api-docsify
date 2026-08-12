@@ -1,7 +1,7 @@
 # AVRecorder
 
 AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use   
-[createAVRecorder()](arkts-media-media-createavrecorder-f.md#createavrecorder) to create an AVRecorder instance.
+[createAVRecorder()](arkts-media-media-createavrecorder-f.md#createAVRecorder) to create an AVRecorder instance.
 
 For details about the audio and video recording demo, see   
 [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and   
@@ -10,7 +10,7 @@ For details about the audio and video recording demo, see
 > **NOTE：**
 > 
 > > To use the camera to record videos, the camera module is required. For details about how to use the APIs
-> provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md/arkts-multimedia-camera.md).
+> provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-multimedia-camera.md#camera).
 
 **Since:** 9
 
@@ -21,7 +21,7 @@ For details about the audio and video recording demo, see
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -51,16 +51,16 @@ add a watermark for the AVRecorder. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## getAVRecorderConfig
 
@@ -71,7 +71,7 @@ getAVRecorderConfig(callback: AsyncCallback<AVRecorderConfig>): void
 Obtains the real-time configuration of this AVRecorder. This API uses an asynchronous callback to return the result.
 
 This API can be called only after   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) is called.
+[prepare()](#prepare) is called.
 
 **Since:** 11
 
@@ -83,15 +83,15 @@ This API can be called only after
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVRecorderConfig&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getAVRecorderConfig
 
@@ -101,7 +101,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result.
 
-This API can be called only after [prepare()](arkts-media-media-avrecorder-i.md#prepare) is called.
+This API can be called only after [prepare()](#prepare-1) is called.
 
 **Since:** 11
 
@@ -113,15 +113,15 @@ This API can be called only after [prepare()](arkts-media-media-avrecorder-i.md#
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVRecorderConfig&gt; |
+| Promise&lt;[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getAudioCapturerMaxAmplitude
 
@@ -132,7 +132,7 @@ getAudioCapturerMaxAmplitude(callback: AsyncCallback<number>): void
 Obtains the maximum amplitude of the current audio capturer. This API uses an asynchronous callback to return the result.
 
 This API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called. If this API is called after [stop()](arkts-media-media-avrecorder-i.md#stop) is successfully called, an error is reported.
+[prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
 
 The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
 
@@ -152,8 +152,8 @@ The return value is the maximum amplitude within the duration from the time the 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getAudioCapturerMaxAmplitude
 
@@ -164,7 +164,7 @@ getAudioCapturerMaxAmplitude(): Promise<number>
 Obtains the maximum amplitude of the current audio capturer. This API uses a promise to return the result.
 
 This API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called. If this API is called after [stop()](arkts-media-media-avrecorder-i.md#stop) is successfully called, an error is reported.
+[prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
 
 The return value is the maximum amplitude within the duration from the time the maximum amplitude is obtained last time to the current time. For example, if you have obtained the maximum amplitude at 1s and you call this API again at 2s, then the return value is the maximum amplitude within the duration from 1s to 2s.
 
@@ -178,14 +178,14 @@ The return value is the maximum amplitude within the duration from the time the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getAvailableEncoder
 
@@ -205,14 +205,14 @@ Obtains available encoders. This API uses an asynchronous callback to return the
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;EncoderInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EncoderInfo](arkts-media-media-encoderinfo-i.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getAvailableEncoder
 
@@ -232,14 +232,14 @@ Obtains available encoders. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;EncoderInfo&gt;&gt; |
+| Promise&lt;Array&lt;[EncoderInfo](arkts-media-media-encoderinfo-i.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getCurrentAudioCapturerInfo
 
@@ -250,7 +250,7 @@ getCurrentAudioCapturerInfo(callback: AsyncCallback<audio.AudioCapturerChangeInf
 Obtains the information about the current audio capturer. This API uses an asynchronous callback to return the result.
 
 This API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called. If this API is called after [stop()](arkts-media-media-avrecorder-i.md#stop) is successfully called, an error is reported.
+[prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
 
 **Since:** 11
 
@@ -268,9 +268,9 @@ This API can be called only after the
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getCurrentAudioCapturerInfo
 
@@ -281,7 +281,7 @@ getCurrentAudioCapturerInfo(): Promise<audio.AudioCapturerChangeInfo>
 Obtains the information about the current audio capturer. This API uses a promise to return the result.
 
 This API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called. If this API is called after [stop()](arkts-media-media-avrecorder-i.md#stop) is successfully called, an error is reported.
+[prepare()](#prepare) API is called. If this API is called after [stop()](#stop) is successfully called, an error is reported.
 
 **Since:** 11
 
@@ -293,15 +293,15 @@ This API can be called only after the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;audio.AudioCapturerChangeInfo&gt; |
+| Promise & lt;audio.AudioCapturerChangeInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getInputSurface
 
@@ -316,7 +316,7 @@ The caller obtains the surface buffer from this surface and fills in the corresp
 Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
 
 This API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called.
+[prepare()](#prepare) API is called.
 
 **Since:** 9
 
@@ -334,9 +334,9 @@ This API can be called only after the
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## getInputSurface
 
@@ -350,7 +350,7 @@ The caller obtains the surface buffer from this surface and fills in the corresp
 
 Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
 
-This API can be called only after the [prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called.
+This API can be called only after the [prepare()](#prepare-1) API is called.
 
 **Since:** 9
 
@@ -362,15 +362,15 @@ This API can be called only after the [prepare()](arkts-media-media-avrecorder-i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## off('stateChange')
 
@@ -487,7 +487,7 @@ When the application initiates multiple subscriptions to this event, the last su
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('photoAssetAvailable')
 
@@ -496,7 +496,7 @@ on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>
 ```
 
 Subscribes to media asset callback events. When   
-[FileGenerationMode](arkts-media-media-filegenerationmode-e.md) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md/arkts-file-photoaccesshelper.md) object is called back to the application after the [stop](arkts-media-media-avrecorder-i.md#stop) operation is complete. This API uses an asynchronous callback to return the result.
+[FileGenerationMode](arkts-media-media-filegenerationmode-e.md#FileGenerationMode) is used during media file creation, the [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoAccessHelper) object is called back to the application after the [stop](#stop) operation is complete. This API uses an asynchronous callback to return the result.
 
 When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
@@ -517,8 +517,8 @@ When the application initiates multiple subscriptions to this event, the last su
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## on('stateChange')
 
@@ -547,8 +547,8 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## on('error')
 
@@ -556,8 +556,8 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-media-avrecorderstate-t.md) is also switched to error, call [reset()](arkts-media-media-avrecorder-i.md#reset) or [release()]  
-[release()](arkts-media-media-avrecorder-i.md#release) to exit the recording. This API uses an asynchronous callback to return the result.
+Subscribes to AVRecorder errors. This event is used only for error prompt and does not require the user to stop recording control. If the [AVRecorderState](arkts-media-media-avrecorderstate-t.md#AVRecorderState) is also switched to error, call [reset()](#reset) or [release()]  
+[release()](#release) to exit the recording. This API uses an asynchronous callback to return the result.
 
 An application can subscribe to only one AVRecorder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
@@ -580,16 +580,16 @@ An application can subscribe to only one AVRecorder error event. When the applic
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [5400107](../errorcode-media.md#5400107-audio-focus-conflict) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [5400107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400107-audio-focus-conflict) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## pause
 
@@ -599,7 +599,7 @@ pause(callback: AsyncCallback<void>): void
 
 Pauses video recording. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [start()](arkts-media-media-avrecorder-i.md#start) API is called. You can call [resume()](arkts-media-media-avrecorder-i.md#resume) to resume recording.
+This API can be called only after the [start()](#start) API is called. You can call [resume()](#resume) to resume recording.
 
 **Since:** 9
 
@@ -617,9 +617,9 @@ This API can be called only after the [start()](arkts-media-media-avrecorder-i.m
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## pause
 
@@ -629,8 +629,8 @@ pause(): Promise<void>
 
 Pauses video recording. This API uses a promise to return the result.
 
-This API can be called only after the [start()](arkts-media-media-avrecorder-i.md#start) API is called. You can call   
-[resume()](arkts-media-media-avrecorder-i.md#resume) to resume recording.
+This API can be called only after the [start()](#start) API is called. You can call   
+[resume()](#resume) to resume recording.
 
 **Since:** 9
 
@@ -644,15 +644,15 @@ This API can be called only after the [start()](arkts-media-media-avrecorder-i.m
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## prepare
 
@@ -681,10 +681,10 @@ Sets audio and video recording parameters. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## prepare
 
@@ -714,16 +714,16 @@ Sets audio and video recording parameters. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -751,7 +751,7 @@ After the resources are released, you can no longer perform any operation on the
 
 | Error Code ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -775,13 +775,13 @@ After the resources are released, you can no longer perform any operation on the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## reset
 
@@ -792,10 +792,10 @@ reset(callback: AsyncCallback<void>): void
 Resets audio and video recording. This API uses an asynchronous callback to return the result.
 
 For audio-only recording, you can call   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) again for re  
+[prepare()](#prepare) again for re  
 -recording. For video-only recording or audio and video recording, you can call   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) and   
-[getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
+[prepare()](#prepare) and   
+[getInputSurface()](#getInputSurface) again for re-recording.
 
 **Since:** 9
 
@@ -813,8 +813,8 @@ For audio-only recording, you can call
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## reset
 
@@ -824,9 +824,9 @@ reset(): Promise<void>
 
 Resets audio and video recording. This API uses a promise to return the result.
 
-For audio-only recording, you can call [prepare()](arkts-media-media-avrecorder-i.md#prepare) again for re-recording. For video-only recording or audio and video recording, you can call   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) and   
-[getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
+For audio-only recording, you can call [prepare()](#prepare-1) again for re-recording. For video-only recording or audio and video recording, you can call   
+[prepare()](#prepare-1) and   
+[getInputSurface()](#getInputSurface) again for re-recording.
 
 **Since:** 9
 
@@ -838,14 +838,14 @@ For audio-only recording, you can call [prepare()](arkts-media-media-avrecorder-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## resume
 
@@ -855,7 +855,7 @@ resume(callback: AsyncCallback<void>): void
 
 Resumes video recording. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [pause()](arkts-media-media-avrecorder-i.md#pause) API is called.
+This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 9
 
@@ -873,9 +873,9 @@ This API can be called only after the [pause()](arkts-media-media-avrecorder-i.m
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## resume
 
@@ -885,7 +885,7 @@ resume(): Promise<void>
 
 Resumes video recording. This API uses a promise to return the result.
 
-This API can be called only after the [pause()](arkts-media-media-avrecorder-i.md#pause) API is called.
+This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 9
 
@@ -899,15 +899,15 @@ This API can be called only after the [pause()](arkts-media-media-avrecorder-i.m
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## setMetadata
 
@@ -935,10 +935,10 @@ This API can be called only after the prepare() event is successfully triggered 
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## setWillMuteWhenInterrupted
 
@@ -964,14 +964,14 @@ Sets whether to mute the current audio recording stream when an audio interrupti
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## start
 
@@ -982,8 +982,8 @@ start(callback: AsyncCallback<void>): void
 Starts video recording. This API uses an asynchronous callback to return the result.
 
 For audio-only recording, this API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called. For video-only recording, this API can be called only after the   
-[getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) API is called.
+[prepare()](#prepare) API is called. For video-only recording, this API can be called only after the   
+[getInputSurface()](#getInputSurface) API is called.
 
 **Since:** 9
 
@@ -1001,9 +1001,9 @@ For audio-only recording, this API can be called only after the
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## start
 
@@ -1014,7 +1014,7 @@ start(): Promise<void>
 Starts video recording. This API uses a promise to return the result.
 
 For audio-only recording, this API can be called only after the   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) API is called.
+[prepare()](#prepare-1) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getInputSurface) API is called.
 
 **Since:** 9
 
@@ -1028,15 +1028,15 @@ For audio-only recording, this API can be called only after the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
@@ -1046,14 +1046,14 @@ stop(callback: AsyncCallback<void>): void
 
 Stops video recording. This API uses an asynchronous callback to return the result.
 
-This API can be called only after the [start()](arkts-media-media-avrecorder-i.md#start) or   
-[pause()](arkts-media-media-avrecorder-i.md#pause) API is called.
+This API can be called only after the [start()](#start) or   
+[pause()](#pause) API is called.
 
 For audio-only recording, you can call   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) again for re  
+[prepare()](#prepare) again for re  
 -recording. For video-only recording or audio and video recording, you can call   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) and   
-[getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
+[prepare()](#prepare) and   
+[getInputSurface()](#getInputSurface) again for re-recording.
 
 **Since:** 9
 
@@ -1071,9 +1071,9 @@ For audio-only recording, you can call
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## stop
 
@@ -1083,12 +1083,12 @@ stop(): Promise<void>
 
 Stops video recording. This API uses a promise to return the result.
 
-This API can be called only after the [start()](arkts-media-media-avrecorder-i.md#start) or   
-[pause()](arkts-media-media-avrecorder-i.md#pause) API is called.
+This API can be called only after the [start()](#start) or   
+[pause()](#pause) API is called.
 
-For audio-only recording, you can call [prepare()](arkts-media-media-avrecorder-i.md#prepare) again for re-recording. For video-only recording or audio and video recording, you can call   
-[prepare()](arkts-media-media-avrecorder-i.md#prepare) and   
-[getInputSurface()](arkts-media-media-avrecorder-i.md#getinputsurface) again for re-recording.
+For audio-only recording, you can call [prepare()](#prepare-1) again for re-recording. For video-only recording or audio and video recording, you can call   
+[prepare()](#prepare-1) and   
+[getInputSurface()](#getInputSurface) again for re-recording.
 
 **Since:** 9
 
@@ -1102,15 +1102,15 @@ For audio-only recording, you can call [prepare()](arkts-media-media-avrecorder-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## updateRotation
 
@@ -1120,7 +1120,7 @@ updateRotation(rotation: number): Promise<void>
 
 Updates the video rotation angle, in degrees. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](arkts-media-media-avrecorder-i.md#prepare) event is triggered and before the [start()](arkts-media-media-avrecorder-i.md#start) API is called.
+This API can be called only after the [prepare()](#prepare-1) event is triggered and before the [start()](#start) API is called.
 
 **Since:** 12
 
@@ -1138,16 +1138,16 @@ This API can be called only after the [prepare()](arkts-media-media-avrecorder-i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## state
 

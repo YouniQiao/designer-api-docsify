@@ -11,7 +11,7 @@ PhotoViewPicker provides APIs for the user to select images and videos. Before u
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## select
@@ -26,7 +26,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -48,14 +48,14 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PhotoSelectResult&gt; |
+| Promise & lt;PhotoSelectResult & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | 13900042 |
 
 ## select
@@ -70,7 +70,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -93,8 +93,8 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 | 13900042 |
 
 ## select
@@ -109,7 +109,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -131,5 +131,5 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900042 |

@@ -36,7 +36,7 @@ Sets the event input sources supported by the gesture handler.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| types | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes | Supported input source types. |
+| types | Array&lt;SourceTool&gt; | Yes | Supported input source types. |
 
 **Return value:**
 

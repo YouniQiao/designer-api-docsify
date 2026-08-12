@@ -13,7 +13,7 @@ Info about the connection from each specific client.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## clientIP

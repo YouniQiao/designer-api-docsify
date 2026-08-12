@@ -20,5 +20,5 @@ type OnViewportFitChangedCallback = (viewportFit: ViewportFit) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| viewportFit | [ViewportFit](../arkts-apis/arkts-arkweb-web-viewportfit-e.md) | 是 | 网页meta中viewport-fit配置的视口类型。 |
+| viewportFit | [ViewportFit](arkts-arkweb-viewportfit-e.md) | 是 | 网页meta中viewport-fit配置的视口类型。 |
 

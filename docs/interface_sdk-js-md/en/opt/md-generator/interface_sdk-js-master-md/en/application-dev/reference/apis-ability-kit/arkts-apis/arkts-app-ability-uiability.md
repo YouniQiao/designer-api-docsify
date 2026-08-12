@@ -1,7 +1,7 @@
 # @ohos.app.ability.UIAbility
 
 UIAbility is an application component that has the UI. It inherits from
- [Ability](arkts-ability-app-ability-ability-ability-c.md) and provides
+ [Ability](arkts-ability-app-ability-ability-ability-c.md#Ability) and provides
  [lifecycle](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#uiability-lifecycle-states)
  callbacks such as component creation, destruction, and foreground/background switching. It also provides the
  [background communication capability](../../../reference/apis-ability-kit/js-apis-app-ability-uiAbility.md#background-communication-capability)
@@ -16,7 +16,7 @@ UIAbility is an application component that has the UI. It inherits from
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

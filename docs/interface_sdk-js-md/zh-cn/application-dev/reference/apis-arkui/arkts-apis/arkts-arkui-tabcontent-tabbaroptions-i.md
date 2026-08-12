@@ -22,7 +22,7 @@ badge?: BadgeParamWithNumber | BadgeParamWithString
 
 TabBar 信息标记组件。
 
-**类型：** [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| BadgeParamWithString
+**类型：** BadgeParamWithNumber \| BadgeParamWithString
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ icon?: string | Resource
 
 页签内的图片内容。未设置时不显示图片。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ text?: string | Resource
 
 页签内的文字内容。未设置时不显示文字。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 

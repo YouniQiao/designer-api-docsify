@@ -6,7 +6,7 @@ Enumerates the KV store security levels.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SecurityLevel
+**Substitutes:** [SecurityLevel](ohos.data.distributedKVStore.SecurityLevel)
 
 <!--Device-distributedData-enum SecurityLevel--><!--Device-distributedData-enum SecurityLevel-End-->
 
@@ -56,7 +56,7 @@ Low security level. If data leakage occurs, minor impact will be caused. For exa
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SecurityLevel#S1
+**Substitutes:** [S1](ohos.data.distributedKVStore.SecurityLevel#S1)
 
 <!--Device-SecurityLevel-S1 = 2--><!--Device-SecurityLevel-S1 = 2-End-->
 
@@ -74,7 +74,7 @@ Medium security level. If data leakage occurs, moderate impact will be caused. F
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SecurityLevel#S2
+**Substitutes:** [S2](ohos.data.distributedKVStore.SecurityLevel#S2)
 
 <!--Device-SecurityLevel-S2 = 3--><!--Device-SecurityLevel-S2 = 3-End-->
 
@@ -92,7 +92,7 @@ High security level. If data leakage occurs, major impact will be caused. For ex
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SecurityLevel#S3
+**Substitutes:** [S3](ohos.data.distributedKVStore.SecurityLevel#S3)
 
 <!--Device-SecurityLevel-S3 = 5--><!--Device-SecurityLevel-S3 = 5-End-->
 
@@ -110,7 +110,7 @@ Critical security level. If data leakage occurs, severe impact will be caused. F
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.SecurityLevel#S4
+**Substitutes:** [S4](ohos.data.distributedKVStore.SecurityLevel#S4)
 
 <!--Device-SecurityLevel-S4 = 6--><!--Device-SecurityLevel-S4 = 6-End-->
 

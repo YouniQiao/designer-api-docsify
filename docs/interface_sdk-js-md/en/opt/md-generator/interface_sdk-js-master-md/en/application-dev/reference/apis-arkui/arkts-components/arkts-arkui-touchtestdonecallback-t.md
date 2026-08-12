@@ -21,4 +21,4 @@ Represents the callback type for dynamically specifying gesture recognizer parti
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | Yes |
-| recognizers | Array&lt;GestureRecognizer&gt; | Yes |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | Yes |

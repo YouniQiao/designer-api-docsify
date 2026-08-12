@@ -104,7 +104,7 @@ encode(input?: string): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.encodeInto
+**替代接口：** [encodeInto](#encodeInto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -180,7 +180,7 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **废弃版本：** 9
 
-**替代接口：** [util.TextEncoder.encodeIntoUint8Array](arkts-arkts-util-textencoder-c.md#encodeintouint8array)
+**替代接口：** [encodeIntoUint8Array](#encodeIntoUint8Array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 

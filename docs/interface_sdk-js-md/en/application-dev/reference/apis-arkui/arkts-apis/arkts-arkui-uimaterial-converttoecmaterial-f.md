@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## convertToECMaterial
@@ -28,11 +28,11 @@ Convert from ImmersiveMaterial to another ImmersiveMaterial set on EffectCompone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| material | uiMaterial.ImmersiveMaterial | Yes | The ImmersiveMaterial. |
+| material | [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Yes | The ImmersiveMaterial. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| uiMaterial.ImmersiveMaterial | The ImmersiveMaterial set on EffectComponent. |
+| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | The ImmersiveMaterial set on EffectComponent. |
 

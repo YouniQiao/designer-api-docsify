@@ -5,7 +5,7 @@
 > **NOTE：**
 > 
 > To implement an embeddable atomic service, make sure it inherits from
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). If the atomic service does
+> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). If the atomic service does
 > not inherit from **EmbeddableUIAbility**, the system cannot guarantee its proper operation.
 
 **Since:** 18
@@ -19,7 +19,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { HalfScreenLaunchComponent } from 'kits/@kit.ArkUI';
+import { HalfScreenLaunchComponent } from '@kit.ArkUI';
 ```
 
 ## appId
@@ -84,9 +84,9 @@ Invoked when an error occurs during the running of the atomic service.
 onReceive?: Callback<Record<string, Object>>
 ```
 
-Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-window.md) APIs.
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](@ohos.window) APIs.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 20
 
@@ -103,8 +103,8 @@ onTerminated?: Callback<TerminationInfo>
 ```
 
 Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateselfwithresult)or  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md/arkts-ability-uiabilitycontext-c.md#terminateself).
+[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)or  
+[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf).
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 

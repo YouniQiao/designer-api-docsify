@@ -13,7 +13,7 @@ Defines drag-related information when triggering spring loading callbacks.This i
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## dataSummary

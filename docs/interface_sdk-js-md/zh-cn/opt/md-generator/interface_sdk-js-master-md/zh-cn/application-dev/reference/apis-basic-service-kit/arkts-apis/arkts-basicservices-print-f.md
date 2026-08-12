@@ -6,7 +6,7 @@
 function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 ```
 
-打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md#print)接口，传入context。
+打印接口，传入文件进行打印，使用callback异步回调。拉起系统打印预览界面，需要使用[print](#print)接口，传入context。
 
 **起始版本：** 10
 
@@ -20,15 +20,15 @@ function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| files | Array&lt;string&gt; | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PrintTask&gt; | 是 |
+| files | Array & lt;string & gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -58,7 +58,7 @@ print.print([fileUri.getUriFromPath(filePath)], (error: BusinessError, printTask
 function print(files: Array<string>): Promise<PrintTask>
 ```
 
-打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](arkts-basicservices-print-f.md#print)接口，传入context。
+打印接口，传入文件进行打印，使用Promise异步回调。拉起系统打印预览界面，需要使用[print](#print)接口，传入context。
 
 **起始版本：** 10
 
@@ -72,20 +72,20 @@ function print(files: Array<string>): Promise<PrintTask>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| files | Array&lt;string&gt; | 是 |
+| files | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PrintTask&gt; |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -127,16 +127,16 @@ function print(files: Array<string>, context: Context, callback: AsyncCallback<P
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| files | Array&lt;string&gt; | 是 |
+| files | Array & lt;string & gt; | 是 |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PrintTask&gt; | 是 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -196,21 +196,21 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| files | Array&lt;string&gt; | 是 |
+| files | Array & lt;string & gt; | 是 |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PrintTask&gt; |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -269,7 +269,7 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| jobName | string | 是 |
+| [jobName](arkts-basicservices-print-printjobdata-i.md) | string | 是 |
 | printAdapter | [PrintDocumentAdapter](arkts-basicservices-print-printdocumentadapter-i.md) | 是 |
 | printAttributes | [PrintAttributes](arkts-basicservices-print-printattributes-i.md) | 是 |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 |
@@ -278,14 +278,14 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 
 | 类型 |
 | --- |
-| Promise&lt;PrintTask&gt; |
+| Promise&lt;[PrintTask](arkts-basicservices-print-printtask-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

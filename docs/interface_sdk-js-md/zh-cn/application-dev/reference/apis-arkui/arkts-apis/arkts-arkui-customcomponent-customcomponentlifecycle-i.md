@@ -1,7 +1,7 @@
 # CustomComponentLifecycle
 
 CustomComponentLifecycle用于监控自定义组件生命周期的变化，开发者可以通过  
-[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getlifecycle)获取CustomComponentLifecycle实例。
+[UIUtils.getLifecycle](arkts-arkui-arkui-statemanagement-uiutils-c.md#getLifecycle)获取CustomComponentLifecycle实例。
 
 **起始版本：** 24
 
@@ -33,7 +33,7 @@ addObserver函数用于注册自定义组件生命周期监听器。当自定义
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | 是 | 监听自定义组件的监听器。 |
+| observer | [CustomComponentLifecycleObserver](arkts-arkui-customcomponent-customcomponentlifecycleobserver-i.md) | 是 | 监听自定义组件的监听器。 |
 
 ## getCurrentState
 
@@ -57,7 +57,7 @@ getCurrentState函数用于获得自定义组件当前的生命周期状态。
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomComponentLifecycleState](arkts-arkui-arkui-statemanagement-customcomponentlifecyclestate-e.md) | 自定义组件当前的生命周期状态。 |
+| [CustomComponentLifecycleState](arkts-arkui-customcomponent-customcomponentlifecyclestate-e.md) | 自定义组件当前的生命周期状态。 |
 
 ## removeObserver
 
@@ -81,5 +81,5 @@ removeObserver函数用于移除自定义组件生命周期监听器。解除注
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | [CustomComponentLifecycleObserver](arkts-arkui-arkui-statemanagement-customcomponentlifecycleobserver-i.md) | 是 | 监听自定义组件的监听器。 |
+| observer | [CustomComponentLifecycleObserver](arkts-arkui-customcomponent-customcomponentlifecycleobserver-i.md) | 是 | 监听自定义组件的监听器。 |
 

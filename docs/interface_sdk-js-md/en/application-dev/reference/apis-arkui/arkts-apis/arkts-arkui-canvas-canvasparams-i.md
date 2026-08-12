@@ -18,7 +18,7 @@ imageAIOptions?: ImageAIOptions
 
 AI image analysis options.You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
+**Type:** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
 
 **Since:** 23
 

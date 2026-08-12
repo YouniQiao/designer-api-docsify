@@ -14,7 +14,7 @@
 
 | Type | Description |
 | --- | --- |
-| AsyncGenerator&lt;T, TReturn, TNext&gt; |  |
+| [AsyncGenerator](arkts-lib-es2018-asyncgenerator-asyncgenerator-i.md)&lt;T, TReturn, TNext&gt; |  |
 
 ## next
 

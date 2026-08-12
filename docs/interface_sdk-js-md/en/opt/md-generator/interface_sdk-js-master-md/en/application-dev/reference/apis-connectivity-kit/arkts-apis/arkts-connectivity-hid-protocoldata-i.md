@@ -11,7 +11,7 @@ Describe the protocol data is received from remote host.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## protocol
@@ -22,7 +22,7 @@ protocol: ProtocolType
 
 protocol of protocol data.
 
-**Type:** [ProtocolType](arkts-connectivity-hid-protocoltype-e.md)
+**Type:** ProtocolType
 
 **Since:** 23
 

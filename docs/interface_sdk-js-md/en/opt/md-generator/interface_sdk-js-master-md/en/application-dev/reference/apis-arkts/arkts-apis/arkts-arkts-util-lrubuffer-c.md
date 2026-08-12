@@ -6,7 +6,7 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache](arkts-arkts-util-lrucache-c.md)
+**Substitutes:** [LRUCache](arkts-arkts-util-lrucache-c.md#LRUCache)
 
 <!--Device-util-class LruBuffer<K, V>--><!--Device-util-class LruBuffer<K, V>-End-->
 
@@ -15,7 +15,7 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -30,7 +30,7 @@ Specifies the default iterator for an object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.LRUCache.[Symbol.iterator]
+**Substitutes:** [iterator]](ohos.util.LRUCache.[Symbol.iterator])
 
 <!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
@@ -40,7 +40,7 @@ Specifies the default iterator for an object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[K, V]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## Examples
 
@@ -62,7 +62,7 @@ Performs subsequent operations after a value is removed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
+**Substitutes:** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterRemoval)
 
 <!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
@@ -114,7 +114,7 @@ Clears key-value pairs from this cache. The **afterRemoval()** API will be calle
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.clear](arkts-arkts-util-lrucache-c.md#clear)
+**Substitutes:** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
 <!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
 
@@ -141,7 +141,7 @@ A constructor used to create a **LruBuffer** instance. The default capacity of t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.LRUCache.constructor
+**Substitutes:** [constructor](ohos.util.LRUCache.constructor)
 
 <!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
@@ -171,7 +171,7 @@ Checks whether this cache contains the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.contains](arkts-arkts-util-lrucache-c.md#contains)
+**Substitutes:** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
@@ -211,7 +211,7 @@ Creates a value if the value of the specified key is not available.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
+**Substitutes:** [createDefault](arkts-arkts-util-lrucache-c.md#createDefault)
 
 <!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
 
@@ -248,7 +248,7 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.entries](arkts-arkts-util-lrucache-c.md#entries)
+**Substitutes:** [entries](arkts-arkts-util-lrucache-c.md#entries)
 
 <!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
 
@@ -258,7 +258,7 @@ Obtains a new iterator object that contains all key-value pairs in this object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[K, V]&gt;](arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## Examples
 
@@ -280,7 +280,7 @@ Obtains the value of the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.get](arkts-arkts-util-lrucache-c.md#get)
+**Substitutes:** [get](arkts-arkts-util-lrucache-c.md#get)
 
 <!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
@@ -320,7 +320,7 @@ Obtains the capacity of this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
+**Substitutes:** [getCapacity](arkts-arkts-util-lrucache-c.md#getCapacity)
 
 <!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
 
@@ -353,7 +353,7 @@ Obtains the number of return values for **createDefault()**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
+**Substitutes:** [getCreateCount](arkts-arkts-util-lrucache-c.md#getCreateCount)
 
 <!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
@@ -387,7 +387,7 @@ Obtains the number of times that the queried values are matched.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
+**Substitutes:** [getMatchCount](arkts-arkts-util-lrucache-c.md#getMatchCount)
 
 <!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
@@ -422,7 +422,7 @@ Obtains the number of times that the queried values are mismatched.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
+**Substitutes:** [getMissCount](arkts-arkts-util-lrucache-c.md#getMissCount)
 
 <!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
 
@@ -457,7 +457,7 @@ Obtains the number of additions to this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
+**Substitutes:** [getPutCount](arkts-arkts-util-lrucache-c.md#getPutCount)
 
 <!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
 
@@ -491,7 +491,7 @@ Obtains the number of removals from this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
+**Substitutes:** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getRemovalCount)
 
 <!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
@@ -527,7 +527,7 @@ Checks whether this cache is empty.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
+**Substitutes:** [isEmpty](arkts-arkts-util-lrucache-c.md#isEmpty)
 
 <!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
 
@@ -561,7 +561,7 @@ Obtains all keys in this cache, listed from the most to the least recently acces
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.keys](arkts-arkts-util-lrucache-c.md#keys)
+**Substitutes:** [keys](arkts-arkts-util-lrucache-c.md#keys)
 
 <!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
 
@@ -595,7 +595,7 @@ Adds a key-value pair to this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.put](arkts-arkts-util-lrucache-c.md#put)
+**Substitutes:** [put](arkts-arkts-util-lrucache-c.md#put)
 
 <!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
@@ -635,7 +635,7 @@ Removes the specified key and its value from this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.remove](arkts-arkts-util-lrucache-c.md#remove)
+**Substitutes:** [remove](arkts-arkts-util-lrucache-c.md#remove)
 
 <!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
 
@@ -675,7 +675,7 @@ Obtains the string representation of this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.toString](arkts-arkts-util-lrucache-c.md#tostring)
+**Substitutes:** [toString](arkts-arkts-util-lrucache-c.md#toString)
 
 <!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
 
@@ -711,7 +711,7 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
+**Substitutes:** [updateCapacity](arkts-arkts-util-lrucache-c.md#updateCapacity)
 
 <!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
 
@@ -742,7 +742,7 @@ Obtains all values in this cache, listed from the most to the least recently acc
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.LRUCache.values](arkts-arkts-util-lrucache-c.md#values)
+**Substitutes:** [values](arkts-arkts-util-lrucache-c.md#values)
 
 <!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 
@@ -780,7 +780,7 @@ Total number of values in this cache.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.util.LRUCache.length
+**Substitutes:** [length](ohos.util.LRUCache.length)
 
 <!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
 

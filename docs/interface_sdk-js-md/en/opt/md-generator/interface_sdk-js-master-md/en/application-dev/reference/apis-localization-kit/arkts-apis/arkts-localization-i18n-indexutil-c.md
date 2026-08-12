@@ -11,7 +11,7 @@ Provides index management capabilities, such as obtaining the locale index list 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## addLocale
@@ -102,7 +102,7 @@ Obtains the index list of the current locale.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## Examples
 

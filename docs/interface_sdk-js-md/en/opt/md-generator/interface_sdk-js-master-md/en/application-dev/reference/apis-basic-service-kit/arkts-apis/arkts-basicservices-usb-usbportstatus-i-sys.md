@@ -6,7 +6,7 @@ Enumerates USB port roles.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
+**Substitutes:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#USBPortStatus)
 
 <!--Device-usb-interface USBPortStatus--><!--Device-usb-interface USBPortStatus-End-->
 
@@ -17,7 +17,7 @@ Enumerates USB port roles.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## currentDataRole
@@ -34,7 +34,7 @@ Current data role.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPortStatus.currentDataRole](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentdatarole)
+**Substitutes:** [currentDataRole](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentDataRole)
 
 <!--Device-USBPortStatus-currentDataRole: number--><!--Device-USBPortStatus-currentDataRole: number-End-->
 
@@ -56,7 +56,7 @@ Current USB mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPortStatus.currentMode](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentmode)
+**Substitutes:** [currentMode](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentMode)
 
 <!--Device-USBPortStatus-currentMode: number--><!--Device-USBPortStatus-currentMode: number-End-->
 
@@ -78,7 +78,7 @@ Current power role.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBPortStatus.currentPowerRole](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentpowerrole)
+**Substitutes:** [currentPowerRole](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#currentPowerRole)
 
 <!--Device-USBPortStatus-currentPowerRole: number--><!--Device-USBPortStatus-currentPowerRole: number-End-->
 

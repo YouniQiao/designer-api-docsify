@@ -12,7 +12,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#isRamConstrainedDevice
+**Substitutes:** [isRamConstrainedDevice](ohos.app.ability.appManager/appManager#isRamConstrainedDevice)
 
 <!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>--><!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>-End-->
 
@@ -22,7 +22,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -50,7 +50,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#isRamConstrainedDevice
+**Substitutes:** [isRamConstrainedDevice](ohos.app.ability.appManager/appManager#isRamConstrainedDevice)
 
 <!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void-End-->
 

@@ -40,7 +40,7 @@ readonly capabilities?: Array<AudioStreamInfo>
 
 设备支持的音频流能力。
 
-**类型：** Array&lt;AudioStreamInfo&gt;
+**类型：** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
 **起始版本：** 22
 
@@ -118,7 +118,7 @@ readonly deviceType: DeviceType
 
 设备类型。
 
-**类型：** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
+**类型：** DeviceType
 
 **起始版本：** 7
 
@@ -158,7 +158,7 @@ readonly encodingTypes?: Array<AudioEncodingType>
 
 支持的编码类型。
 
-**类型：** Array&lt;AudioEncodingType&gt;
+**类型：** Array&lt;[AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)&gt;
 
 **起始版本：** 11
 

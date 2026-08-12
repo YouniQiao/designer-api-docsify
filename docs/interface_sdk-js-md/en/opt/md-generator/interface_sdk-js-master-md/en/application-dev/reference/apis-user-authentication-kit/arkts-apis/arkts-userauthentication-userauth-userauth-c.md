@@ -6,7 +6,7 @@ Provides APIs for managing the **UserAuth** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
+**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
 
 <!--Device-userAuth-class UserAuth--><!--Device-userAuth-class UserAuth-End-->
 
@@ -15,7 +15,7 @@ Provides APIs for managing the **UserAuth** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## auth
@@ -35,7 +35,7 @@ Starts user authentication. This API uses a callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -93,7 +93,7 @@ Cancels the authentication based on the context ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthInstance.cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
+**Substitutes:** [cancel](arkts-userauthentication-userauth-authinstance-i.md#cancel)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -141,7 +141,7 @@ A constructor used to create a **UserAuth** instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance)
+**Substitutes:** [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance)
 
 <!--Device-UserAuth-constructor()--><!--Device-UserAuth-constructor()-End-->
 
@@ -167,7 +167,7 @@ Checks whether the specified authentication capability is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus)
+**Substitutes:** [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getAvailableStatus)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 

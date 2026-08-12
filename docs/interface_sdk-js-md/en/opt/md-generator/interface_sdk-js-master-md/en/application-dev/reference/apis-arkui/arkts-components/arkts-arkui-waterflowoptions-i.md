@@ -35,7 +35,7 @@ footerContent?: ComponentContent
 Footer of the **WaterFlow** component. This parameter has a higher priority than **footer**. If both  
 **footer** and **footerContent** are set, the component set by **footerContent** will be used.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 18
 

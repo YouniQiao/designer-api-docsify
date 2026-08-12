@@ -24,5 +24,5 @@ Matches a string with this regular expression, and returns an iterable of matche
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;RegExpMatchArray&gt; |  |
+| IterableIterator&lt;RegExpMatchArray&gt; |  |
 

@@ -10,13 +10,13 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 > **说明：**
 > > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)替代。
+> [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback:
+**替代接口：** [createAVPlayer](media.createAVPlayer(callback:)
 
 <!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
 
@@ -26,7 +26,7 @@ function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoPlayer&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -54,13 +54,13 @@ function createVideoPlayer(): Promise<VideoPlayer>
 异步方式创建视频播放实例，通过Promise获取返回值。
 
 > **说明：**
-> > 从API version 8开始支持，从API version 9开始废弃，建议使用[createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)替代。
+> > 从API version 8开始支持，从API version 9开始废弃，建议使用[createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)()
+**替代接口：** [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer)()
 
 <!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
 
@@ -70,7 +70,7 @@ function createVideoPlayer(): Promise<VideoPlayer>
 
 | 类型 |
 | --- |
-| Promise&lt;VideoPlayer&gt; |
+| Promise&lt;[VideoPlayer](arkts-media-multimedia-media-videoplayer-i.md)&gt; |
 
 ## 示例
 

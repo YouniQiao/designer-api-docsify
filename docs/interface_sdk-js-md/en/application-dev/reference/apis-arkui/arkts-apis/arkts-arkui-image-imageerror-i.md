@@ -56,7 +56,7 @@ downloadInfo?: RequestDownloadInfo
 
 Download information of network images.
 
-**Type:** [RequestDownloadInfo](../arkts-components/arkts-arkui-requestdownloadinfo-t.md)
+**Type:** [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md)
 
 **Since:** 23
 
@@ -76,7 +76,7 @@ error?: BusinessError<void>
 
 Business Error.
 
-**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt;
 
 **Since:** 23
 

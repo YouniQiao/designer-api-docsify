@@ -94,7 +94,7 @@ Returns an iterator over all values
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | An iterator over all values. |
+| IterableIterator&lt;T&gt; | An iterator over all values. |
 
 ## $_set
 
@@ -395,7 +395,7 @@ Returns a new Array Iterator object that contains the key/value pairs for each i
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, T]&gt; | A new Array Iterator object. |
+| IterableIterator&lt;[int, T]&gt; | A new Array Iterator object. |
 
 ## every
 
@@ -794,7 +794,7 @@ Creates a new `Array` instance from an `ArrayLike` object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | An array-like object to convert to an array. |
+| arr | ArrayLike&lt;T&gt; | Yes | An array-like object to convert to an array. |
 
 **Return value:**
 
@@ -824,7 +824,7 @@ Creates a new `Array` instance from an iterable or array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | Yes | An iterable or array-like object to convert to an array. |
+| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | An iterable or array-like object to convert to an array. |
 
 **Return value:**
 
@@ -885,7 +885,7 @@ Creates a new `Array` instance from an iterable object, applying a mapping funct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterable | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | Yes | An iterable or array-like object to convert to an array. |
+| iterable | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | Yes | An iterable or array-like object to convert to an array. |
 | mapfn | (v: T, k: int) =&gt; U | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
@@ -1068,7 +1068,7 @@ Returns a new Array Iterator object that contains the keys for each index in the
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 ## lastIndexOf
 
@@ -1872,7 +1872,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | A new Array Iterator object. |
+| IterableIterator&lt;T&gt; | A new Array Iterator object. |
 
 ## with
 

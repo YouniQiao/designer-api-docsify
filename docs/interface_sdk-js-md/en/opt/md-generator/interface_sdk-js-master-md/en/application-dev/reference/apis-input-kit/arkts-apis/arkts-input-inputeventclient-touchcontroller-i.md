@@ -13,7 +13,7 @@ Provides the capability of simulating touch operations. The simulated touch oper
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## touchDown
@@ -44,16 +44,16 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [4300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-display-does-not-exist) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -136,15 +136,15 @@ Moves a touch point. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -178,15 +178,15 @@ Releases a touch point. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

@@ -56,7 +56,7 @@ Creates and runs an animation shortcut on the component. Specify the keyframes a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyframes | Array&lt;AnimateStyle&gt; | Yes | keyframes is used to describe key frame parameters of the animation. |
+| keyframes | Array&lt;[AnimateStyle](arkts-arkui-viewmodel-animatestyle-i.md)&gt; | Yes | keyframes is used to describe key frame parameters of the animation. |
 | options | [AnimateOptions](arkts-arkui-viewmodel-animateoptions-i.md) | Yes | Options. is used to describe animation parameters. |
 
 **Return value:**

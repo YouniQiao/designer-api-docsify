@@ -13,7 +13,7 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## cause
@@ -84,7 +84,7 @@ state: BondState
 
 Profile connection state of the device.
 
-**Type:** [BondState](arkts-connectivity-connection-bondstate-e.md)
+**Type:** BondState
 
 **Since:** 10
 

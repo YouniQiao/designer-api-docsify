@@ -14,7 +14,7 @@ Deletes an RDB store. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
+**Substitutes:** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleteRdbStore)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-rdb-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -24,9 +24,9 @@ Deletes an RDB store. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.&lt;br&gt;For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). &lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). |
+| context | Context | Yes | Application context.&lt;br&gt;For details about the application context of the FA model, see [Context](./app/context). &lt;br&gt;For details about the application context of the stage model, see [Context](./app/context). |
 | name | string | Yes | Name of the RDB store to delete. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## deleteRdbStore
@@ -43,7 +43,7 @@ Deletes an RDB store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleterdbstore)
+**Substitutes:** [deleteRdbStore](arkts-arkdata-relationalstore-deleterdbstore-f.md#deleteRdbStore)
 
 <!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-rdb-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 
@@ -53,7 +53,7 @@ Deletes an RDB store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context.&lt;br&gt;For details about the application context of the FA model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). &lt;br&gt;For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md). |
+| context | Context | Yes | Application context.&lt;br&gt;For details about the application context of the FA model, see [Context](./app/context). &lt;br&gt;For details about the application context of the stage model, see [Context](./app/context). |
 | name | string | Yes | Name of the RDB store to delete. |
 
 **Return value:**

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## decomposeToPicture
@@ -35,17 +35,17 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Picture \| undefined&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600208](../errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600208](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

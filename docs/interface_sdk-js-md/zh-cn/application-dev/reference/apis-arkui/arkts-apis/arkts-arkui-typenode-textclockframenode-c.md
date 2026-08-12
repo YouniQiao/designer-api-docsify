@@ -34,11 +34,11 @@ abstract initialize(options?: TextClockOptions): TextClockAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | 否 |  |
+| options | TextClockOptions | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextClockAttribute](../arkts-components/arkts-arkui-textclock-attribute.md) |  |
+| TextClockAttribute |  |
 

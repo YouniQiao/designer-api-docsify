@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## create
@@ -34,9 +34,9 @@ Create an image processing instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function create can not work correctly due to limited &lt;br&gt;device capabilities. |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
-| [29200003](../errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create image processing instance. For example, &lt;br&gt;the number of instances exceeds the upper limit. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function create can not work correctly due to limited &lt;br&gt;device capabilities. |
+| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [29200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) | Failed to create image processing instance. For example, &lt;br&gt;the number of instances exceeds the upper limit. |
 
 ## Examples
 

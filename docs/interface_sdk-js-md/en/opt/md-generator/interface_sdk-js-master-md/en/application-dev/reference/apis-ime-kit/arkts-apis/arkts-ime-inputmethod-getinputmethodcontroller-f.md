@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getInputMethodController
@@ -18,7 +18,7 @@ Input method controller
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethod#getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller)
+**Substitutes:** [getController](arkts-ime-inputmethod-getcontroller-f.md#getController)
 
 <!--Device-inputMethod-function getInputMethodController(): InputMethodController--><!--Device-inputMethod-function getInputMethodController(): InputMethodController-End-->
 

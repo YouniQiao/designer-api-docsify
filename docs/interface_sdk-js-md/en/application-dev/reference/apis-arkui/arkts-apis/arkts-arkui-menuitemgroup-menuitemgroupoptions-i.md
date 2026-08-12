@@ -18,7 +18,7 @@ footer?: ResourceStr | CustomBuilder
 
 Defines the footer display info.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ header?: ResourceStr | CustomBuilder
 
 Defines the header display info.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 

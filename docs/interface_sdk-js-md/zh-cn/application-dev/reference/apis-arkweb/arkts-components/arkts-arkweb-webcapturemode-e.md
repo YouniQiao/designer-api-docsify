@@ -1,6 +1,6 @@
 # WebCaptureMode
 
-Enum type supplied to {@link captureMode} for setting the web capture mode.
+Enum type supplied to [captureMode](arkts-arkweb-screencaptureconfig-i.md#captureMode) for setting the web capture mode.
 
 **起始版本：** 11
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router#RouterOptions
+**替代接口：** [RouterOptions](ohos.router#RouterOptions)
 
 <!--Device-unnamed-export interface BackRouterOptions--><!--Device-unnamed-export interface BackRouterOptions-End-->
 
@@ -26,7 +26,7 @@ params?: Object
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router.RouterOptions#params
+**替代接口：** [params](ohos.router.RouterOptions#params)
 
 <!--Device-BackRouterOptions-params?: Object--><!--Device-BackRouterOptions-params?: Object-End-->
 
@@ -46,7 +46,7 @@ uri?: string
 
 **废弃版本：** 8
 
-**替代接口：** ohos.router.RouterOptions#url
+**替代接口：** [url](ohos.router.RouterOptions#url)
 
 <!--Device-BackRouterOptions-uri?: string--><!--Device-BackRouterOptions-uri?: string-End-->
 

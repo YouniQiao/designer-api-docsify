@@ -2,9 +2,9 @@
 
 Options of the eclipse style. The eclipse style visualizes the progress in a way similar to the moon waxing from new to full.
 
-Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
-**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 10
 

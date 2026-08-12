@@ -20,7 +20,7 @@ fontColor?: ResourceColor
 
 默认值：`\$r('sys.color.ohos_id_color_text_secondary')`
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** $r('sys.color.ohos_id_color_text_secondary')
 
@@ -102,7 +102,7 @@ text?: ResourceStr
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 23
 

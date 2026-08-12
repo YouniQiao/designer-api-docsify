@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from 'kits/@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## isDoNotDisturbEnabled
@@ -36,8 +36,8 @@ Checks whether Do Not Disturb is enabled on this device.The Do Not Disturb state
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [35200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

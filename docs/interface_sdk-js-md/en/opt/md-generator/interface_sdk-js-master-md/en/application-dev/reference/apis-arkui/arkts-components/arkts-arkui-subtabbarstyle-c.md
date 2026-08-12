@@ -90,7 +90,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 id(value: string): SubTabBarStyle
 ```
 
-Sets the [ID](arkts-arkui-commonmethod-c.md#id) of the subtab.
+Sets the [ID](CommonMethod#id) of the subtab.
 
 **Since:** 11
 
@@ -151,7 +151,7 @@ indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
 Sets the indicator style of the selected subtab. Compared with  
-[indicator](arkts-arkui-subtabbarstyle-c.md#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md/arkts-arkui-imagefit-e.md). It takes effect only in the horizontal layout.
+[indicator](#indicator), the image format is added. For details about the display effect of the image, see [ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md#ImageFit). It takes effect only in the horizontal layout.
 
 **Since:** 22
 
@@ -167,7 +167,7 @@ Sets the indicator style of the selected subtab. Compared with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| [DrawableTabBarIndicator](../arkts-apis/arkts-arkui-tabcontent-drawabletabbarindicator-i.md) | Yes |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | Yes |
 
 **Return value:**
 

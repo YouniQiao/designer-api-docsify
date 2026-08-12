@@ -13,7 +13,7 @@ Represents an OTA update policy.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## delayUpdateTime
@@ -43,8 +43,8 @@ disableSystemOtaUpdate?: boolean
 ```
 
 Whether to disable public network upgrade. The value **true** indicates that public network upgrade is disabled,and the value **false** indicates the opposite. If this field is used as an input parameter of  
-[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy), the default value can be retained.The current configuration can be obtained via the  
-[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy) API. After public network upgrade is disabled, you can perform intranet upgrade.
+[systemManager.setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setOtaUpdatePolicy), the default value can be retained.The current configuration can be obtained via the  
+[systemManager.getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getOtaUpdatePolicy) API. After public network upgrade is disabled, you can perform intranet upgrade.
 
 **Type:** boolean
 
@@ -126,7 +126,7 @@ policyType: PolicyType
 
 Type of the update policy.
 
-**Type:** [PolicyType](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileshare-policytype-e.md)
+**Type:** PolicyType
 
 **Since:** 12
 

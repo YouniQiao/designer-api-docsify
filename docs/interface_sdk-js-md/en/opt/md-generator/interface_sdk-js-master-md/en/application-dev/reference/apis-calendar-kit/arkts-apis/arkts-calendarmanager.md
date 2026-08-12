@@ -11,7 +11,7 @@ The calendarManager module provides APIs for calendar and event management,inclu
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## Summary

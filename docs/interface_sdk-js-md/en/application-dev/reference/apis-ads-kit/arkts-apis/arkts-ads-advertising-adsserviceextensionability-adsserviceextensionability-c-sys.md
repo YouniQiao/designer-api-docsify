@@ -15,7 +15,7 @@ Provides the capability of integrating advertising services with vendors.
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from 'kits/@kit.AdsKit';
+import { RespCallback } from '@kit.AdsKit';
 ```
 
 ## onLoadAd

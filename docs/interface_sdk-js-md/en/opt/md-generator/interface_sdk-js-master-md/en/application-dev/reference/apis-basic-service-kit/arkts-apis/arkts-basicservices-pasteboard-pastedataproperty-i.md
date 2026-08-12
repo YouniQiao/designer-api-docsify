@@ -1,7 +1,7 @@
 # PasteDataProperty
 
 Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range,and additional data. The defined properties can be applied to the pasteboard only with the  
-[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setproperty) method.
+[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setProperty) method.
 
 **Since:** 7
 
@@ -12,7 +12,7 @@ Defines the properties of PasteData in the pasteboard, including the timestamp, 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## additions
@@ -40,7 +40,7 @@ localOnly: boolean
 ```
 
 Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the  
-[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) attribute instead.
+[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md#ShareOption) attribute instead.
 
 **Type:** boolean
 

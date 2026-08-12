@@ -2,7 +2,7 @@
 
 Defines the error parameter.
 
-**Inheritance/Implementation:** BusinessError extends [Error](../../apis-arkts/arkts-apis/arkts-arkts-error-c.md/arkts-arkts-error-c.md)
+**Inheritance/Implementation:** BusinessError extends [Error](Error)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Defines the error parameter.
 ## Modules to Import
 
 ```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
 ```
 
 ## constructor

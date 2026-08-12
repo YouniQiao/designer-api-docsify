@@ -14,7 +14,7 @@ Combines two or more arrays.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | [ConcatArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-concatarray-i.md)&lt;T&gt;[] | Yes |
+| items | [ConcatArray](arkts-lib-es5-concatarray-i.md)&lt;T&gt;[] | Yes |
 
 **Return value:**
 
@@ -36,7 +36,7 @@ Combines two or more arrays.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| items | (T \| [ConcatArray&lt;T&gt;)[]](../../apis-arkts/arkts-apis/arkts-arkts-concatarray-i.md) | Yes |
+| items | (T \| [ConcatArray](arkts-lib-es5-concatarray-i.md)&lt;T&gt;)[] | Yes |
 
 **Return value:**
 
@@ -58,7 +58,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: readonly T[]) =&gt; value is S | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: readonly T[]) = & gt; value is S | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -81,7 +81,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: readonly T[]) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: readonly T[]) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -104,7 +104,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: readonly T[]) =&gt; value is S | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: readonly T[]) = & gt; value is S | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -127,7 +127,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: readonly T[]) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: readonly T[]) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -150,7 +150,7 @@ Performs the specified action for each element in an array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: T, index: number, array: readonly T[]) =&gt; void | Yes |
+| callbackfn | (value: T, index: number, array: readonly T[]) = & gt; void | Yes |
 | thisArg | any | No |
 
 ## indexOf
@@ -235,7 +235,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: T, index: number, array: readonly T[]) =&gt; U | Yes |
+| callbackfn | (value: T, index: number, array: readonly T[]) = & gt; U | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -258,7 +258,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) = & gt; T | Yes |
 
 **Return value:**
 
@@ -276,7 +276,7 @@ reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, arr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) = & gt; T | Yes |
 | initialValue | T | Yes |
 
 **Return value:**
@@ -299,7 +299,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; U | Yes |
+| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -322,7 +322,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) = & gt; T | Yes |
 
 **Return value:**
 
@@ -340,7 +340,7 @@ reduceRight(callbackfn: (previousValue: T, currentValue: T, currentIndex: number
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; T | Yes |
+| callbackfn | (previousValue: T, currentValue: T, currentIndex: number, array: readonly T[]) = & gt; T | Yes |
 | initialValue | T | Yes |
 
 **Return value:**
@@ -363,7 +363,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) =&gt; U | Yes |
+| callbackfn | (previousValue: U, currentValue: T, currentIndex: number, array: readonly T[]) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -409,7 +409,7 @@ Determines whether the specified callback function returns true for any element 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: T, index: number, array: readonly T[]) =&gt; unknown | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: T, index: number, array: readonly T[]) = & gt; unknown | Yes |
 | thisArg | any | No |
 
 **Return value:**

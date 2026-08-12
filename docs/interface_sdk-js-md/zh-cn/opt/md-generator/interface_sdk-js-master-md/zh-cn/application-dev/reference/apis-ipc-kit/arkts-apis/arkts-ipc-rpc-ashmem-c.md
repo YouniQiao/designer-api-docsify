@@ -80,7 +80,7 @@ static create(name: string, size: number): Ashmem
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -131,7 +131,7 @@ static create(ashmem: Ashmem): Ashmem
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -164,7 +164,7 @@ static createAshmem(name: string, size: number): Ashmem
 
 **废弃版本：** 9
 
-**替代接口：** [create](arkts-ipc-rpc-ashmem-c.md#create)()
+**替代接口：** [create](create())
 
 <!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
 
@@ -211,7 +211,7 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 
 **废弃版本：** 9
 
-**替代接口：** [create](arkts-ipc-rpc-ashmem-c.md#create)()
+**替代接口：** [create](create())
 
 <!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
 
@@ -292,7 +292,7 @@ mapAshmem(mapType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapTypedAshmem](arkts-ipc-rpc-ashmem-c.md#maptypedashmem)(mapType:
+**替代接口：** [mapTypedAshmem](mapTypedAshmem(mapType:)
 
 <!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
@@ -337,7 +337,7 @@ mapReadAndWriteAshmem(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)()
+**替代接口：** [mapReadWriteAshmem](#mapReadWriteAshmem)()
 
 <!--Device-Ashmem-mapReadAndWriteAshmem(): boolean--><!--Device-Ashmem-mapReadAndWriteAshmem(): boolean-End-->
 
@@ -376,7 +376,7 @@ mapReadOnlyAshmem(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapReadonlyAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadonlyashmem)()
+**替代接口：** [mapReadonlyAshmem](#mapReadonlyAshmem)()
 
 <!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
@@ -421,7 +421,7 @@ mapReadWriteAshmem(): void
 
 | 错误码ID |
 | --- |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
+| [1900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) |
 
 ## 示例
 
@@ -458,7 +458,7 @@ mapReadonlyAshmem(): void
 
 | 错误码ID |
 | --- |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
+| [1900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) |
 
 ## 示例
 
@@ -501,8 +501,8 @@ mapTypedAshmem(mapType: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) |
 
 ## 示例
 
@@ -531,13 +531,13 @@ readAshmem(size: number, offset: number): number[]
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)(size:
+**替代接口：** [readDataFromAshmem](readDataFromAshmem(size:)
 
 <!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
@@ -560,8 +560,8 @@ readAshmem(size: number, offset: number): number[]
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-共享内存读数据失败) |
 
 ## 示例
 
@@ -594,7 +594,7 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 11
 
@@ -619,8 +619,8 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-共享内存读数据失败) |
 
 ## 示例
 
@@ -659,13 +659,13 @@ readFromAshmem(size: number, offset: number): number[]
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)(size:
+**替代接口：** [readDataFromAshmem](readDataFromAshmem(size:)
 
 <!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
 
@@ -716,7 +716,7 @@ setProtection(protectionType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setProtectionType](arkts-ipc-rpc-ashmem-c.md#setprotectiontype)(protectionType:
+**替代接口：** [setProtectionType](setProtectionType(protectionType:)
 
 <!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
 
@@ -774,8 +774,8 @@ setProtectionType(protectionType: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900002](../errorcode-rpc.md#1900002-系统调用ioctl失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900002-系统调用ioctl失败) |
 
 ## 示例
 
@@ -832,13 +832,13 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)(buf:
+**替代接口：** [writeDataToAshmem](writeDataToAshmem(buf:)
 
 <!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
@@ -856,8 +856,8 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-共享内存写数据失败) |
 
 ## 示例
 
@@ -888,7 +888,7 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 11
 
@@ -908,8 +908,8 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-共享内存写数据失败) |
 
 ## 示例
 
@@ -945,13 +945,13 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)(buf:
+**替代接口：** [writeDataToAshmem](writeDataToAshmem(buf:)
 
 <!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 

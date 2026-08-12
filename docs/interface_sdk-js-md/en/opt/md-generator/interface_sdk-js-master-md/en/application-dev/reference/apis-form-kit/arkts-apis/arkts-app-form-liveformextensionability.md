@@ -1,7 +1,7 @@
 # @ohos.app.form.LiveFormExtensionAbility
 
 The **LiveFormExtensionAbility** module, inherited from
- [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md), provides interactive widget functions,
+ [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility), provides interactive widget functions,
  including creating and destroying interactive widgets.
  > **NOTE**
  > Exceptions may occur if some APIs are called. For details about the API list, see
@@ -11,7 +11,7 @@ The **LiveFormExtensionAbility** module, inherited from
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormInfo } from 'kits/@kit.FormKit';
+import { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## Summary

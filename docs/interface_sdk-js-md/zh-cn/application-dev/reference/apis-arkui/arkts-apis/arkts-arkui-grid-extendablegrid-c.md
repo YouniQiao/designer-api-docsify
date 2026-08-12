@@ -2,7 +2,7 @@
 
 可扩展Grid组件。
 
-**继承/实现关系：** ExtendableGrid implements [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md/arkts-arkui-grid-attribute.md)
+**继承/实现关系：** ExtendableGrid implements [GridAttribute](arkts-arkui-grid-gridattribute-i.md#GridAttribute)
 
 **起始版本：** 26.0.0
 
@@ -39,8 +39,8 @@ static $_instantiate<T extends ExtendableGrid>(
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 |  |
-| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -76,9 +76,9 @@ static _instantiateImpl<T extends ExtendableGrid>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setGridOptions
 
@@ -104,7 +104,7 @@ public setGridOptions(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 |  |
-| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | 否 |  |
+| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | 否 |  |
 
 **返回值：**
 

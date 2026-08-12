@@ -29,5 +29,5 @@ export function createRelativeContainerNode(context: UIContext, options?: FrameN
 
 | 类型 | 说明 |
 | --- | --- |
-| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | 返回 RelativeContainer 类型的 FrameNode |
+| RelativeContainer | 返回 RelativeContainer 类型的 FrameNode |
 

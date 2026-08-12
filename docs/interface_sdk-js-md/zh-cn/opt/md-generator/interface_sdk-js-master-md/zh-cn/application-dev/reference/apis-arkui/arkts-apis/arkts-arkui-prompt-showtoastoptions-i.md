@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowToastOptions
+**替代接口：** [ShowToastOptions](ohos.promptAction/promptAction.ShowToastOptions)
 
 <!--Device-prompt-interface ShowToastOptions--><!--Device-prompt-interface ShowToastOptions-End-->
 
@@ -26,7 +26,7 @@ bottom?: string | number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowToastOptions#bottom
+**替代接口：** [bottom](ohos.promptAction/promptAction.ShowToastOptions#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -46,7 +46,7 @@ duration?: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowToastOptions#duration
+**替代接口：** [duration](ohos.promptAction/promptAction.ShowToastOptions#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -66,7 +66,7 @@ message: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowToastOptions#message
+**替代接口：** [message](ohos.promptAction/promptAction.ShowToastOptions#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

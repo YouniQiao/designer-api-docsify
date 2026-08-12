@@ -15,7 +15,7 @@ Options for setting the render target of an audio renderer.This parameter takes 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## streamId
@@ -24,7 +24,7 @@ import { audio } from 'kits/@kit.AudioKit';
 streamId: long
 ```
 
-The stream ID of the {@link SourceType#SOURCE_TYPE_VOICE_COMMUNICATION}capture stream identified by uid. This stream is the injection target for the render stream.It is valid only when the target is non-PLAYBACK.
+The stream ID of the [SOURCE_TYPE_VOICE_COMMUNICATION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_COMMUNICATION)capture stream identified by uid. This stream is the injection target for the render stream.It is valid only when the target is non-PLAYBACK.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

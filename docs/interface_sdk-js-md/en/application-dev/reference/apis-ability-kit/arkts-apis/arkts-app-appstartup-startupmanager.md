@@ -20,7 +20,7 @@ The module provides the capability to manage startup tasks in
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -35,5 +35,5 @@ import { startupManager } from 'kits/@kit.AbilityKit';
 | [removeAllStartupTaskResults](arkts-ability-startupmanager-removeallstartuptaskresults-f.md#removeallstartuptaskresults) | Removes all startup task results.If there are preloading tasks for .so files, the corresponding .so files is set to the unloaded state. However, .so files that have already been loaded in the cache will not be removed. |
 | [removeStartupTaskResult](arkts-ability-startupmanager-removestartuptaskresult-f.md#removestartuptaskresult) | Removes the initialization result of a startup task or .so file preloading task.  - If a startup task name is passed, the initialization result of that startup task is removed.  - If a .so file is passed, the .so file is set to the unloaded state, but the loaded .so file in the cache is not  removed. |
 | [run](arkts-ability-startupmanager-run-f.md#run) | Runs startup tasks or loads .so files.  > **NOTE：** >  > This API cannot be used to run startup tasks defined in a feature-type HAP. To run those tasks, use > [startupManager.run](arkts-ability-startupmanager-run-f.md#run) > . |
-| [run](arkts-ability-startupmanager-run-f.md#run-1) | Runs startup tasks or loads .so files. You can specify  [AbilityStageContext](arkts-ability-abilitystagecontext-c.md) for loading startup tasks. This API uses a promise to return the result. |
+| [run](arkts-ability-startupmanager-run-f.md#run-1) | Runs startup tasks or loads .so files. You can specify  [AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext) for loading startup tasks. This API uses a promise to return the result. |
 

@@ -2,7 +2,7 @@
 
 Touch Action Function Parameters
 
-**继承/实现关系：** TouchEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**继承/实现关系：** TouchEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md#BaseEvent)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ Obtains all historical points of the current frame.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;HistoricalPoint&gt; | return all historical points. Undefined will be returned if the internal runtime environment is broken. |
+| Array&lt;[HistoricalPoint](arkts-arkui-common-historicalpoint-i.md)&gt; | return all historical points. Undefined will be returned if the internal runtime environment is broken. |
 
 ## preventDefault
 
@@ -58,7 +58,7 @@ Blocks the default event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100017](../errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
+| [100017](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-event.md#100017-组件不支持阻止默认事件) | Component does not support prevent function. |
 
 ## stopPropagation
 

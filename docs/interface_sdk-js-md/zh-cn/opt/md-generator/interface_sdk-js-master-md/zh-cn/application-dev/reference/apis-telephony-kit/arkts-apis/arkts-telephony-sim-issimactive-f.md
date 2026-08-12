@@ -57,7 +57,7 @@ Checks whether the SIM card in a specified slot is activated.
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 

@@ -11,7 +11,7 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getAllLauncherAbilityInfo)
 > 替代。
 
 **起始版本：** 8
@@ -20,7 +20,7 @@ function getAllLauncherAbilityInfos(userId: number, callback: AsyncCallback<Arra
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)(userId:
+**替代接口：** [getAllLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo(userId:)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -49,7 +49,7 @@ function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbili
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)
+> [getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getAllLauncherAbilityInfo)
 > 替代。
 
 **起始版本：** 8
@@ -58,7 +58,7 @@ function getAllLauncherAbilityInfos(userId: number): Promise<Array<LauncherAbili
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getalllauncherabilityinfo-f-sys.md#getalllauncherabilityinfo)(userId:
+**替代接口：** [getAllLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getAllLauncherAbilityInfo(userId:)
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

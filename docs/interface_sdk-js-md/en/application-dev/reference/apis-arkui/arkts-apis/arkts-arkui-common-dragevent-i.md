@@ -57,14 +57,14 @@ Get dragData from DragEvent.
 
 | Type | Description |
 | --- | --- |
-| [UnifiedData](../arkts-components/arkts-arkui-unifieddata-t.md) | get dragData, undefined will be returned if the internal runtime environment is broken. |
+| [UnifiedData](arkts-arkui-unifieddata-t.md) | get dragData, undefined will be returned if the internal runtime environment is broken. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [190002](../errorcode-uicontext.md#190002-invalid-callback-function) | Data error. |
-| [190001](../errorcode-uicontext.md#190001-invalid-uicontext-object) | Data not found. |
+| [190002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
+| [190001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-data-not-found) | Data not found. |
 
 ## getDisplayId
 
@@ -274,7 +274,7 @@ Get dragEvent result from DragEvent.
 
 | Type | Description |
 | --- | --- |
-| [DragResult](../arkts-components/arkts-arkui-dragresult-e.md) | dragResult Data. |
+| [DragResult](arkts-arkui-common-dragresult-e.md) | dragResult Data. |
 
 ## getSummary
 
@@ -466,7 +466,7 @@ Set dragData into DragEvent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unifiedData | [UnifiedData](../arkts-components/arkts-arkui-unifieddata-t.md) | Yes | dragData. |
+| unifiedData | [UnifiedData](arkts-arkui-unifieddata-t.md) | Yes | dragData. |
 
 ## setDataLoadParams
 
@@ -514,7 +514,7 @@ Set dragEvent result to DragEvent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dragResult | [DragResult](../arkts-components/arkts-arkui-dragresult-e.md) | Yes | the return of dragEvent. |
+| dragResult | [DragResult](arkts-arkui-common-dragresult-e.md) | Yes | the return of dragEvent. |
 
 ## startDataLoading
 
@@ -538,7 +538,7 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](../arkts-components/arkts-arkui-datasyncoptions-t.md) | Yes | the data sync options. |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | Yes | the data sync options. |
 
 **Return value:**
 
@@ -550,8 +550,8 @@ Request the drag data to be synchronized to caller, can be notified with the syn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [190003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -581,7 +581,7 @@ dragBehavior: DragBehavior
 
 If copy is COPY, this DragEvent is a copy event.
 
-**Type:** [DragBehavior](../arkts-components/arkts-arkui-dragbehavior-e.md)
+**Type:** [DragBehavior](arkts-arkui-common-dragbehavior-e.md)
 
 **Default:** COPY
 

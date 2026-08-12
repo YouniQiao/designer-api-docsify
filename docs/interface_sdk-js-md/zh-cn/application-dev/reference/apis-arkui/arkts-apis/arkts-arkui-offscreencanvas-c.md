@@ -78,7 +78,7 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 | --- | --- | --- | --- |
 | width | number | 是 | OffscreenCanvas组件的宽度。 &lt;br&gt;异常值NaN和Infinity按无效值处理。 &lt;br&gt;默认单位为vp。 |
 | height | number | 是 | OffscreenCanvas组件的高度。 &lt;br&gt;异常值NaN和Infinity按无效值处理。 &lt;br&gt;默认单位为vp。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置OffscreenCanvas对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。 &lt;br&gt;默认值：DEFAULT。 |
+| unit | LengthMetricsUnit | 是 | 用来配置OffscreenCanvas对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值NaN和Infinity按默认值处理。 &lt;br&gt;默认值：DEFAULT。 |
 
 ## getContext
 
@@ -111,7 +111,7 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 
 | 类型 | 说明 |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) | OffscreenCanvas组件的绘图上下文。 如果getContext方法的入参contextType为"2d"以外类型（包括null或者undefined），返回undefined， 使用前应判断返回值是否为undefined。 |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) | OffscreenCanvas组件的绘图上下文。 如果getContext方法的入参contextType为"2d"以外类型（包括null或者undefined），返回undefined， 使用前应判断返回值是否为undefined。 |
 
 ## transferToImageBitmap
 
@@ -137,7 +137,7 @@ transferToImageBitmap(): ImageBitmap
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) | 创建的ImageBitmap对象。 |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | 创建的ImageBitmap对象。 |
 
 ## height
 

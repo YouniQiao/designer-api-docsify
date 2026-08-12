@@ -11,7 +11,7 @@ Defines the abstract interface of albums.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## getAssets
@@ -42,9 +42,9 @@ Obtains image and video assets. This API uses an asynchronous callback to return
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900012 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## getAssets
@@ -75,16 +75,16 @@ Obtains image and video assets. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;FetchResult&lt;PhotoAsset&gt;&gt; |
+| Promise & lt;FetchResult & lt;PhotoAsset & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 13900012 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## albumName
@@ -111,7 +111,7 @@ readonly albumSubtype: AlbumSubtype
 
 Subtype of the album.
 
-**Type:** [AlbumSubtype](arkts-medialibrary-sendablephotoaccesshelper-albumsubtype-e.md)
+**Type:** AlbumSubtype
 
 **Since:** 10
 
@@ -127,7 +127,7 @@ readonly albumType: AlbumType
 
 Type of the album.
 
-**Type:** [AlbumType](arkts-medialibrary-photoaccesshelper-albumtype-e.md)
+**Type:** AlbumType
 
 **Since:** 10
 

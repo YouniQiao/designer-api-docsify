@@ -11,7 +11,7 @@ This module provides the serial port management functions, including enabling an
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from 'kits/@kit.BasicServicesKit';
+import { serialManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

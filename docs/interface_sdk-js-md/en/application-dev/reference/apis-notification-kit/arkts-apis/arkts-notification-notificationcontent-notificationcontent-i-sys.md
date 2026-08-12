@@ -18,7 +18,7 @@ liveView?: NotificationLiveViewContent
 
 Common live view.
 
-**Type:** [NotificationLiveViewContent](arkts-notification-notificationmanager-notificationliveviewcontent-t-sys.md)
+**Type:** [NotificationLiveViewContent](arkts-notification-notificationcontent-notificationliveviewcontent-i-sys.md)
 
 **Since:** 11
 

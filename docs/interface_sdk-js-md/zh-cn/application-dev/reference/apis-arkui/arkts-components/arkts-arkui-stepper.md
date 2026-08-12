@@ -25,7 +25,7 @@ Called when the stepper component is used.
 
 **废弃版本：** 22
 
-**替代接口：** <!--SUBSTITUTE_API-->Swiper.SwiperAttribute#index<!--/SUBSTITUTE_API-->
+**替代接口：** [index](Swiper.SwiperAttribute#index)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

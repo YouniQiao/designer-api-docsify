@@ -18,13 +18,13 @@ function getSensorListSync(): Array<Sensor>
 
 | 类型 |
 | --- |
-| Array&lt;Sensor&gt; |
+| Array & lt;Sensor & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) |
+| [14500101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) |
 
 ## 示例
 

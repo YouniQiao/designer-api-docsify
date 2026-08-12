@@ -29,7 +29,7 @@ onAdLoadFailure(errorCode: number, errorMsg: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | errorCode | number | 是 |
-| errorMsg | string | 是 |
+| [errorMsg](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-operresult-i.md) | string | 是 |
 
 ## 示例
 
@@ -67,7 +67,7 @@ onAdLoadSuccess(ads: Array<Advertisement>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ads | Array&lt;Advertisement&gt; | 是 |
+| [ads](arkts-ads-advertising-adcomponent-adcomponent-s.md) | Array & lt;Advertisement & gt; | 是 |
 
 ## 示例
 

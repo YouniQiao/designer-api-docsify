@@ -34,17 +34,17 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 
 | 类型 |
 | --- |
-| Promise&lt;Object&gt; |
+| Promise & lt;Object & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-延时时间小于零) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
 
 ## 示例
 
@@ -96,15 +96,15 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 
 | 类型 |
 | --- |
-| Promise&lt;R&gt; |
+| Promise & lt;R & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-延时时间小于零) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) |
 
 ## 示例
 

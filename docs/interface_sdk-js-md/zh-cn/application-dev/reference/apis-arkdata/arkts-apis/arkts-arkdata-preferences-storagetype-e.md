@@ -4,9 +4,9 @@ Preferences的存储模式枚举。
 
 > **说明：**
 > 
-> - 在选择存储模式前，建议调用[isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md#isstoragetypesupported)检查当前平台是否支持对应存储模式。
+> - 在选择存储模式前，建议调用[isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md#isStorageTypeSupported)检查当前平台是否支持对应存储模式。
 > 
-> - 当选择某一模式通过[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences)接口获取实例后，不允许中途切换模式。
+> - 当选择某一模式通过[preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取实例后，不允许中途切换模式。
 > 
 > - 首选项不支持不同模式间数据的迁移，若需将数据从一种模式切换至另一种模式，需通过读写首选项的形式进行数据迁移。
 > 

@@ -13,7 +13,7 @@ Defines the popup button
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from '@kit.ArkUI';
 ```
 
 ## action
@@ -24,7 +24,7 @@ action?: VoidCallback
 
 Set the button callback.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ text: ResourceStr
 
 Set the button display content.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

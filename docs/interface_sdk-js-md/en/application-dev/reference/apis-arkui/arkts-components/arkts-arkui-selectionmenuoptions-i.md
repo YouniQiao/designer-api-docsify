@@ -80,7 +80,7 @@ Type of the custom context menu on selection.
 
 Default value: **MenuType.SELECTION_MENU**
 
-**Type:** [MenuType](../arkts-apis/arkts-arkui-menutype-e.md)
+**Type:** MenuType
 
 **Since:** 13
 
@@ -102,7 +102,7 @@ onDisappear?: Callback<void>
 
 Callback invoked when the custom context menu on selection disappears.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 10
 

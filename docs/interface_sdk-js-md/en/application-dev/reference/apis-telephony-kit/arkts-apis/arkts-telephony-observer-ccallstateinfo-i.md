@@ -13,7 +13,7 @@ Indicates carrier call state and number.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## state
@@ -24,7 +24,7 @@ state: CCallState
 
 Indicates carrier call state.
 
-**Type:** [CCallState](arkts-telephony-call-ccallstate-e.md)
+**Type:** CCallState
 
 **Since:** 23
 

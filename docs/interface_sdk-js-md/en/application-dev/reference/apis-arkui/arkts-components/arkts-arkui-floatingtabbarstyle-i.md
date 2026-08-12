@@ -42,7 +42,7 @@ barBottomMargin?: Length
 
 The distance between the bar and the bottom of tab. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ barSideMargin?: Length
 
 The width of the left and right margins of the bar. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ maskColor?: ResourceColor
 
 The color of the mask.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 26.0.0
 
@@ -130,7 +130,7 @@ maskHeight?: Length
 
 The height of the mask. It cannot be set in percentage.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 26.0.0
 

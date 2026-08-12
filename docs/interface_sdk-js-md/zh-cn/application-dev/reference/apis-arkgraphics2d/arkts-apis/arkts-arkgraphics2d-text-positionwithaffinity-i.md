@@ -18,7 +18,7 @@ affinity: Affinity
 
 位置亲和度。
 
-**类型：** [Affinity](../../apis-arkui/arkts-apis/arkts-arkui-affinity-t.md)
+**类型：** Affinity
 
 **起始版本：** 12
 

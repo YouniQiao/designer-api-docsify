@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.ChangeNotification
+**替代接口：** [ChangeNotification](ohos.data.distributedKVStore.ChangeNotification)
 
 <!--Device-distributedData-interface ChangeNotification--><!--Device-distributedData-interface ChangeNotification-End-->
 
@@ -22,7 +22,7 @@ deleteEntries: Entry[]
 
 数据删除记录。
 
-**类型：** [Entry](arkts-arkdata-distributeddata-entry-i.md)[]
+**类型：** Entry[]
 
 **起始版本：** 7
 
@@ -30,7 +30,7 @@ deleteEntries: Entry[]
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.ChangeNotification#deleteEntries
+**替代接口：** [deleteEntries](ohos.data.distributedKVStore.ChangeNotification#deleteEntries)
 
 <!--Device-ChangeNotification-deleteEntries: Entry[]--><!--Device-ChangeNotification-deleteEntries: Entry[]-End-->
 
@@ -52,7 +52,7 @@ deviceId: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.ChangeNotification#deviceId
+**替代接口：** [deviceId](ohos.data.distributedKVStore.ChangeNotification#deviceId)
 
 <!--Device-ChangeNotification-deviceId: string--><!--Device-ChangeNotification-deviceId: string-End-->
 
@@ -66,7 +66,7 @@ insertEntries: Entry[]
 
 数据添加记录。
 
-**类型：** [Entry](arkts-arkdata-distributeddata-entry-i.md)[]
+**类型：** Entry[]
 
 **起始版本：** 7
 
@@ -74,7 +74,7 @@ insertEntries: Entry[]
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.ChangeNotification#insertEntries
+**替代接口：** [insertEntries](ohos.data.distributedKVStore.ChangeNotification#insertEntries)
 
 <!--Device-ChangeNotification-insertEntries: Entry[]--><!--Device-ChangeNotification-insertEntries: Entry[]-End-->
 
@@ -88,7 +88,7 @@ updateEntries: Entry[]
 
 数据更新记录。
 
-**类型：** [Entry](arkts-arkdata-distributeddata-entry-i.md)[]
+**类型：** Entry[]
 
 **起始版本：** 7
 
@@ -96,7 +96,7 @@ updateEntries: Entry[]
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.ChangeNotification#updateEntries
+**替代接口：** [updateEntries](ohos.data.distributedKVStore.ChangeNotification#updateEntries)
 
 <!--Device-ChangeNotification-updateEntries: Entry[]--><!--Device-ChangeNotification-updateEntries: Entry[]-End-->
 

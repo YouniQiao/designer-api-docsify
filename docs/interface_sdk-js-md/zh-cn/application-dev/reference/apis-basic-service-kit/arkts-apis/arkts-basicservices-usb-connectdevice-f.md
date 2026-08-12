@@ -8,7 +8,7 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 打开USB设备。
 
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices)获取设备信息以及device，再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright)获取设备请求权限。
+需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices)获取设备信息以及device，再调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight)获取设备请求权限。
 
 **起始版本：** 8
 
@@ -16,7 +16,7 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)
+**替代接口：** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)
 
 <!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
 
@@ -26,7 +26,7 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) | 是 | USB设备信息。 |
+| device | USBDevice | 是 | USB设备信息。 |
 
 **返回值：**
 

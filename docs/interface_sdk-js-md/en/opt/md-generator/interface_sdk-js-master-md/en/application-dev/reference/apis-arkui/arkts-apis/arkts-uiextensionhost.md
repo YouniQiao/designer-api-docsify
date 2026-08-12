@@ -5,7 +5,7 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 > **NOTE：**
 > 
 > No new function will be added to this module. Related functions will be provided in the
-> [uiExtension](arkts-arkui-uiextension.md) interface.
+> [uiExtension](arkts-arkui-uiextension.md#uiExtension) interface.
 > 
 > The APIs provided by this module are system APIs.
 
@@ -22,7 +22,7 @@ Intended only for the **UIExtensionComponent** that has process isolation requir
 ## Modules to Import
 
 ```TypeScript
-import { uiExtensionHost } from 'kits/@kit.ArkUI';
+import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
 ## Summary

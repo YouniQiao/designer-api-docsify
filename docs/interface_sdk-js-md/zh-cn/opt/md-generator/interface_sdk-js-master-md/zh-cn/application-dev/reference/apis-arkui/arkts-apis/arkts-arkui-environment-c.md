@@ -8,10 +8,10 @@ Environment提供设备环境状态的查询能力，可将系统环境变量（
 | key | 类型 | 说明 |
 | -------------------- | --------------- | ------------------------------------------------------------ |
 | accessibilityEnabled | string | 无障碍屏幕朗读是否启用。当无法获取环境变量中的accessibilityEnabled的值时，将通过envProp、envProps等接口传入的开发者指定的默认值添加到AppStorage中。 |
-| colorMode | [ColorMode](arkts-arkui-colormode-e.md) | 深浅色模式，可选值为：&lt;br&gt;- **ColorMode.LIGHT：浅色模式**；&lt;br&gt;- **ColorMode.DARK**：深色模式。 |
+| colorMode | [ColorMode](@link ColorMode) | 深浅色模式，可选值为： & lt;br & gt;- **ColorMode.LIGHT：浅色模式**； & lt;br & gt;- **ColorMode.DARK**：深色模式。 |
 | fontScale | number | 字体大小比例。 |
-| fontWeightScale | number | 字重比例。 |
-| layoutDirection | [LayoutDirection](arkts-arkui-layoutdirection-e.md) | 布局方向类型，可选值为：&lt;br&gt;- **LayoutDirection.LTR**：从左到右；&lt;br&gt;- **LayoutDirection.RTL**：从右到左；&lt;br&gt;- **LayoutDirection.Auto**：跟随系统。 |
+| [fontWeightScale](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md) | number | 字重比例。 |
+| layoutDirection | [LayoutDirection](@link LayoutDirection) | 布局方向类型，可选值为： & lt;br & gt;- **LayoutDirection.LTR**：从左到右； & lt;br & gt;- **LayoutDirection.RTL**：从右到左； & lt;br & gt;- **LayoutDirection.Auto**：跟随系统。 |
 | languageCode | string |
 
 **起始版本：** 7
@@ -35,7 +35,7 @@ static EnvProp<S>(key: string, value: S): boolean
 
 **废弃版本：** 10
 
-**替代接口：** [Environment#envProp](arkts-arkui-environment-c.md#envprop)
+**替代接口：** [envProp](#envProp)
 
 <!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean--><!--Device-Environment-static EnvProp<S>(key: string, value: S): boolean-End-->
 
@@ -54,6 +54,12 @@ static EnvProp<S>(key: string, value: S): boolean
 | --- |
 | boolean |
 
+## 示例
+
+```TypeScript
+Environment.EnvProp('accessibilityEnabled', 'default');
+```
+
 ## EnvProps
 
 ```TypeScript
@@ -65,13 +71,13 @@ static EnvProps(
   ): void
 ```
 
-和[EnvProp](arkts-arkui-environment-c.md#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用EnvProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
+和[EnvProp](#EnvProp)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用EnvProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [Environment#envProps](arkts-arkui-environment-c.md#envprops)
+**替代接口：** [envProps](#envProps)
 
 <!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-Environment-static EnvProps(    props: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
@@ -95,7 +101,7 @@ static Keys(): Array<string>
 
 **废弃版本：** 10
 
-**替代接口：** [Environment#keys](arkts-arkui-environment-c.md#keys)
+**替代接口：** [keys](#keys)
 
 <!--Device-Environment-static Keys(): Array<string>--><!--Device-Environment-static Keys(): Array<string>-End-->
 
@@ -105,7 +111,18 @@ static Keys(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
+
+## 示例
+
+```TypeScript
+Environment.EnvProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.Keys(); // keys 包含 accessibilityEnabled、languageCode、prop
+```
 
 ## envProp
 
@@ -139,13 +156,17 @@ static envProp<S>(key: string, value: S): boolean
 | --- |
 | boolean |
 
+## 示例
+
+envProp具体使用，详见[从UI中访问Environment参数](../../../ui/state-management/arkts-environment.md#从ui中访问environment参数)。
+
 ## envProps
 
 ```TypeScript
 static envProps(props: EnvPropsOptions[]): void
 ```
 
-和[envProp](arkts-arkui-environment-c.md#envprop)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用envProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
+和[envProp](#envProp)功能类似，不同点在于参数为数组，可以一次性初始化多个数据。在没有调用envProps的情况下，直接使用AppStorage读取环境变量，将无法获取到对应的环境变量值。建议在应用启动时调用，将系统环境变量批量存入[AppStorage](../../../ui/state-management/arkts-appstorage.md)中。
 
 **起始版本：** 10
 
@@ -160,6 +181,15 @@ static envProps(props: EnvPropsOptions[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | props | [EnvPropsOptions](arkts-arkui-envpropsoptions-i.md)[] | 是 |
+
+## 示例
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+```
 
 ## keys
 
@@ -181,4 +211,15 @@ static keys(): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
+
+## 示例
+
+```TypeScript
+Environment.envProps([{ key: 'accessibilityEnabled', defaultValue: 'default' }, {
+  key: 'languageCode',
+  defaultValue: 'en'
+}, { key: 'prop', defaultValue: 'hhhh' }]);
+
+let keys: Array<string> = Environment.keys(); // keys 包含 accessibilityEnabled、languageCode、prop
+```

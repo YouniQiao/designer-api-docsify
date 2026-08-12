@@ -1,7 +1,7 @@
 # DragSpringLoadingConfiguration
 
-Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#ondragspringloading) binding or dynamically updated during BEGIN state using  
-[updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateconfiguration).
+Defines the configuration parameters for drag hover detection. The default settings typically suffice. These settings can be customized through [onDragSpringLoading](../arkts-components/arkts-arkui-commonmethod-c.md#onDragSpringLoading) binding or dynamically updated during BEGIN state using  
+[updateConfiguration](arkts-arkui-dragcontroller-springloadingcontext-c.md#updateConfiguration).
 
 **Since:** 20
 
@@ -12,7 +12,7 @@ Defines the configuration parameters for drag hover detection. The default setti
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## stillTimeLimit

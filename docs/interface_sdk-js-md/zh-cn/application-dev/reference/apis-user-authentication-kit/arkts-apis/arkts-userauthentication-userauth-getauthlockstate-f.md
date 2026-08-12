@@ -30,17 +30,17 @@ function getAuthLockState(authType: UserAuthType): Promise<AuthLockState>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;AuthLockState&gt; | Promise对象，当查询成功时，返回值为指定认证类型的身份认证冻结状态。失败时报错。 |
+| Promise&lt;[AuthLockState](arkts-userauthentication-userauth-authlockstate-i.md)&gt; | Promise对象，当查询成功时，返回值为指定认证类型的身份认证冻结状态。失败时报错。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
-| [12500008](../errorcode-useriam.md#12500008-参数校验失败) | The parameter is out of range. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
+| [12500008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500008-参数校验失败) | The parameter is out of range. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 

@@ -6,7 +6,7 @@ The module provides the actions, entities, and flags used in Want objects.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantConstant/wantConstant
+**Substitutes:** [wantConstant/wantConstant](ohos.app.ability.wantConstant/wantConstant)
 
 <!--Device-unnamed-declare namespace wantConstant--><!--Device-unnamed-declare namespace wantConstant-End-->
 

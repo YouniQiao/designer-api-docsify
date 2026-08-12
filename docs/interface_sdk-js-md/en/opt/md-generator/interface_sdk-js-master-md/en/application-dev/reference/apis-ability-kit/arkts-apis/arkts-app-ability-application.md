@@ -13,7 +13,7 @@ You can use this module to create a [Context](../../../application-models/applic
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## Summary

@@ -8,7 +8,7 @@ Enumerates the ability states.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager#AbilityState
+**Substitutes:** [AbilityState](ohos.app.ability.abilityManager/abilityManager#AbilityState)
 
 <!--Device-abilityManager-export enum AbilityState--><!--Device-abilityManager-export enum AbilityState-End-->
 
@@ -30,7 +30,7 @@ The ability is in the initial state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager.AbilityState#INITIAL
+**Substitutes:** [INITIAL](ohos.app.ability.abilityManager/abilityManager.AbilityState#INITIAL)
 
 <!--Device-AbilityState-INITIAL = 0--><!--Device-AbilityState-INITIAL = 0-End-->
 
@@ -52,7 +52,7 @@ The ability is running in the foreground.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager.AbilityState#FOREGROUND
+**Substitutes:** [FOREGROUND](ohos.app.ability.abilityManager/abilityManager.AbilityState#FOREGROUND)
 
 <!--Device-AbilityState-FOREGROUND = 9--><!--Device-AbilityState-FOREGROUND = 9-End-->
 
@@ -74,7 +74,7 @@ The ability is running in the background.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager.AbilityState#BACKGROUND
+**Substitutes:** [BACKGROUND](ohos.app.ability.abilityManager/abilityManager.AbilityState#BACKGROUND)
 
 <!--Device-AbilityState-BACKGROUND = 10--><!--Device-AbilityState-BACKGROUND = 10-End-->
 
@@ -96,7 +96,7 @@ The ability is being switched to the foreground.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager.AbilityState#FOREGROUNDING
+**Substitutes:** [FOREGROUNDING](ohos.app.ability.abilityManager/abilityManager.AbilityState#FOREGROUNDING)
 
 <!--Device-AbilityState-FOREGROUNDING = 11--><!--Device-AbilityState-FOREGROUNDING = 11-End-->
 
@@ -118,7 +118,7 @@ The ability is being switched to the background.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager.AbilityState#BACKGROUNDING
+**Substitutes:** [BACKGROUNDING](ohos.app.ability.abilityManager/abilityManager.AbilityState#BACKGROUNDING)
 
 <!--Device-AbilityState-BACKGROUNDING = 12--><!--Device-AbilityState-BACKGROUNDING = 12-End-->
 

@@ -1,8 +1,8 @@
 # NfcFTag
 
-Provides methods for creating an NFC-F tag, obtaining tag information, and controlling tag read and write.&lt;p&gt;This class inherits from the {@link TagSession} abstract class and provides interfaces to create an{@code NfcFTag} and obtain the tag information.
+Provides methods for creating an NFC-F tag, obtaining tag information, and controlling tag read and write.&lt;p&gt;This class inherits from the [TagSession](TagSession) abstract class and provides interfaces to create an{@code NfcFTag} and obtain the tag information.
 
-**Inheritance/Implementation:** NfcFTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** NfcFTag extends [TagSession](TagSession)
 
 **Since:** 12
 
@@ -42,6 +42,16 @@ Obtains the PMm (consisting of the IC code and manufacturer parameters) from thi
 | --- | --- |
 | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the PMm. |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcF tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let pmm : number[] = nfcF.getPmm();
+console.info("nfcF pmm: " + pmm);
+```
+
 ## getSystemCode
 
 ArkTS-Dyn:
@@ -71,4 +81,14 @@ Obtains the system code from this {@code NfcFTag} instance.
 | Type | Description |
 | --- | --- |
 | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the system code. |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcF tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let systemCode : number[] = nfcF.getSystemCode();
+console.info("nfcF systemCode: " + systemCode);
+```
 

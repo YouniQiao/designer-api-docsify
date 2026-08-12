@@ -2,7 +2,7 @@
 
 Defines the mouse event.
 
-**Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md)
+**Inheritance/Implementation:** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Defines the mouse event.
 ## Modules to Import
 
 ```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@kit.InputKit';
 ```
 
 ## action
@@ -26,7 +26,7 @@ action: Action
 
 Enumerates mouse event types.
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
 
 **Since:** 9
 
@@ -159,7 +159,7 @@ globalX?: int
 ```
 
 X coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the X coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -178,7 +178,7 @@ globalY?: int
 ```
 
 Y coordinate of the mouse event in the global coordinate system with the upper left corner of the primary screen as the origin, in px. When this parameter is used as an input parameter, it is mandatory and supports only integers if  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
+[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)is set to **true**. If **MouseEventData.useGlobalCoordinate** is set to **false**, this parameter is optional, and the Y coordinate in the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. When this parameter is used as an output parameter, it is reported by the system.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -386,7 +386,7 @@ toolType: ToolType
 
 Tool type.
 
-**Type:** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
+**Type:** [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
 
 **Since:** 11
 

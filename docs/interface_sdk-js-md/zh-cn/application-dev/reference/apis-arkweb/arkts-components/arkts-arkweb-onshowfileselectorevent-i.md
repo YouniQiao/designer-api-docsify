@@ -18,7 +18,7 @@ fileSelector: FileSelectorParam
 
 文件选择器的相关信息。
 
-**类型：** [FileSelectorParam](../arkts-apis/arkts-arkweb-web-fileselectorparam-c.md)
+**类型：** [FileSelectorParam](arkts-arkweb-fileselectorparam-c.md)
 
 **起始版本：** 12
 

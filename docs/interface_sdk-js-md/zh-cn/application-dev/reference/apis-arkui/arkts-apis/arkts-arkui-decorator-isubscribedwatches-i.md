@@ -2,7 +2,7 @@
 
 Define ISubscribedWatches interface.
 
-**继承/实现关系：** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-arkui-decorator-iwatchsubscriberregister-i.md)
+**继承/实现关系：** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-arkui-decorator-iwatchsubscriberregister-i.md#IWatchSubscriberRegister)
 
 **起始版本：** 23
 

@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md)。
+> 从API Version 9开始，该接口不再维护，推荐使用新接口[ResultSet](arkts-arkdata-relationalstore-resultset-i.md#ResultSet)。
 
 **起始版本：** 7
 
@@ -12,7 +12,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore](arkts-data-relationalstore.md)
+**替代接口：** [relationalStore](arkts-data-relationalstore.md#relationalStore)
 
 <!--Device-unnamed-export interface ResultSet--><!--Device-unnamed-export interface ResultSet-End-->
 
@@ -32,11 +32,23 @@ close(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.close
+**替代接口：** [close](ohos.data.relationalStore.ResultSet.close)
 
 <!--Device-ResultSet-close(): void--><!--Device-ResultSet-close(): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
+## 示例
+
+```TypeScript
+let predicatesClose = new dataRdb.RdbPredicates("EMPLOYEE");
+let promiseClose = rdbStore.query(predicatesClose, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promiseClose.then((resultSet) => {
+  resultSet.close();
+}).catch((err) => {
+  console.error('resultset close failed');
+});
+```
 
 ## getBlob
 
@@ -52,7 +64,7 @@ getBlob(columnIndex: number): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.getBlob
+**替代接口：** [getBlob](ohos.data.relationalStore.ResultSet.getBlob)
 
 <!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array--><!--Device-ResultSet-getBlob(columnIndex: number): Uint8Array-End-->
 
@@ -70,6 +82,12 @@ getBlob(columnIndex: number): Uint8Array
 | --- | --- |
 | Uint8Array | 以字节数组的形式返回指定列的值。 |
 
+## 示例
+
+```TypeScript
+const codes = resultSet.getBlob(resultSet.getColumnIndex("CODES"));
+```
+
 ## getColumnIndex
 
 ```TypeScript
@@ -84,7 +102,7 @@ getColumnIndex(columnName: string): number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.getColumnIndex
+**替代接口：** [getColumnIndex](ohos.data.relationalStore.ResultSet.getColumnIndex)
 
 <!--Device-ResultSet-getColumnIndex(columnName: string): number--><!--Device-ResultSet-getColumnIndex(columnName: string): number-End-->
 
@@ -102,6 +120,18 @@ getColumnIndex(columnName: string): number
 | --- | --- |
 | number | 返回指定列的索引。 |
 
+## 示例
+
+```TypeScript
+const success = resultSet.goToFirstRow();
+if (success) {
+  const id = resultSet.getLong(resultSet.getColumnIndex("ID"));
+  const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+  const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+  const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+}
+```
+
 ## getColumnName
 
 ```TypeScript
@@ -116,7 +146,7 @@ getColumnName(columnIndex: number): string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.getColumnName
+**替代接口：** [getColumnName](ohos.data.relationalStore.ResultSet.getColumnName)
 
 <!--Device-ResultSet-getColumnName(columnIndex: number): string--><!--Device-ResultSet-getColumnName(columnIndex: number): string-End-->
 
@@ -134,6 +164,14 @@ getColumnName(columnIndex: number): string
 | --- | --- |
 | string | 返回指定列的名称。 |
 
+## 示例
+
+```TypeScript
+const id = resultSet.getColumnName(0);
+const name = resultSet.getColumnName(1);
+const age = resultSet.getColumnName(2);
+```
+
 ## getDouble
 
 ```TypeScript
@@ -148,7 +186,7 @@ getDouble(columnIndex: number): number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.getDouble
+**替代接口：** [getDouble](ohos.data.relationalStore.ResultSet.getDouble)
 
 <!--Device-ResultSet-getDouble(columnIndex: number): number--><!--Device-ResultSet-getDouble(columnIndex: number): number-End-->
 
@@ -166,6 +204,12 @@ getDouble(columnIndex: number): number
 | --- | --- |
 | number | 以double形式返回指定列的值。 |
 
+## 示例
+
+```TypeScript
+const salary = resultSet.getDouble(resultSet.getColumnIndex("SALARY"));
+```
+
 ## getLong
 
 ```TypeScript
@@ -180,7 +224,7 @@ getLong(columnIndex: number): number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.getLong
+**替代接口：** [getLong](ohos.data.relationalStore.ResultSet.getLong)
 
 <!--Device-ResultSet-getLong(columnIndex: number): number--><!--Device-ResultSet-getLong(columnIndex: number): number-End-->
 
@@ -198,6 +242,12 @@ getLong(columnIndex: number): number
 | --- | --- |
 | number | 以Long形式返回指定列的值。&lt;br/&gt;该接口支持的数据范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议使用 [getDouble](../../../reference/apis-arkdata/js-apis-data-resultset.md#getdouble)。 |
 
+## 示例
+
+```TypeScript
+const age = resultSet.getLong(resultSet.getColumnIndex("AGE"));
+```
+
 ## getString
 
 ```TypeScript
@@ -212,7 +262,7 @@ getString(columnIndex: number): string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.getString
+**替代接口：** [getString](ohos.data.relationalStore.ResultSet.getString)
 
 <!--Device-ResultSet-getString(columnIndex: number): string--><!--Device-ResultSet-getString(columnIndex: number): string-End-->
 
@@ -230,6 +280,12 @@ getString(columnIndex: number): string
 | --- | --- |
 | string | 以字符串形式返回指定列的值。 |
 
+## 示例
+
+```TypeScript
+const name = resultSet.getString(resultSet.getColumnIndex("NAME"));
+```
+
 ## goTo
 
 ```TypeScript
@@ -244,7 +300,7 @@ goTo(offset: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.goTo
+**替代接口：** [goTo](ohos.data.relationalStore.ResultSet.goTo)
 
 <!--Device-ResultSet-goTo(offset: number): boolean--><!--Device-ResultSet-goTo(offset: number): boolean-End-->
 
@@ -262,6 +318,19 @@ goTo(offset: number): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
+## 示例
+
+```TypeScript
+let predicatesgoto = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoto = rdbStore.query(predicatesgoto, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoto.then((resultSet) => {
+  resultSet.goTo(1);
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
+
 ## goToFirstRow
 
 ```TypeScript
@@ -276,7 +345,7 @@ goToFirstRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.goToFirstRow
+**替代接口：** [goToFirstRow](ohos.data.relationalStore.ResultSet.goToFirstRow)
 
 <!--Device-ResultSet-goToFirstRow(): boolean--><!--Device-ResultSet-goToFirstRow(): boolean-End-->
 
@@ -287,6 +356,19 @@ goToFirstRow(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果成功移动结果集到第一行，则为true；否则为false。 |
+
+## 示例
+
+```TypeScript
+let predicatesgoFirst = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoFirst = rdbStore.query(predicatesgoFirst, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoFirst.then((resultSet) => {
+  resultSet.goToFirstRow();
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToLastRow
 
@@ -302,7 +384,7 @@ goToLastRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.goToLastRow
+**替代接口：** [goToLastRow](ohos.data.relationalStore.ResultSet.goToLastRow)
 
 <!--Device-ResultSet-goToLastRow(): boolean--><!--Device-ResultSet-goToLastRow(): boolean-End-->
 
@@ -313,6 +395,19 @@ goToLastRow(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果成功移动结果集到最后一行，则为true；否则为false。 |
+
+## 示例
+
+```TypeScript
+let predicatesgoLast = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoLast = rdbStore.query(predicatesgoLast, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoLast.then((resultSet) => {
+  resultSet.goToLastRow();
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToNextRow
 
@@ -328,7 +423,7 @@ goToNextRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.goToNextRow
+**替代接口：** [goToNextRow](ohos.data.relationalStore.ResultSet.goToNextRow)
 
 <!--Device-ResultSet-goToNextRow(): boolean--><!--Device-ResultSet-goToNextRow(): boolean-End-->
 
@@ -339,6 +434,18 @@ goToNextRow(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果成功移动结果集到下一行，则为true；否则为false。 |
+
+## 示例
+
+```TypeScript
+let predicatesgoNext = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoNext = rdbStore.query(predicatesgoNext, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoNext.then((resultSet) => {
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToPreviousRow
 
@@ -354,7 +461,7 @@ goToPreviousRow(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.goToPreviousRow
+**替代接口：** [goToPreviousRow](ohos.data.relationalStore.ResultSet.goToPreviousRow)
 
 <!--Device-ResultSet-goToPreviousRow(): boolean--><!--Device-ResultSet-goToPreviousRow(): boolean-End-->
 
@@ -365,6 +472,18 @@ goToPreviousRow(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果成功移动结果集到上一行，则为true；否则为false。 |
+
+## 示例
+
+```TypeScript
+let predicatesgoPrev = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygoPrev = rdbStore.query(predicatesgoPrev, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygoPrev.then((resultSet) => {
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
 
 ## goToRow
 
@@ -380,7 +499,7 @@ goToRow(position: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.goToRow
+**替代接口：** [goToRow](ohos.data.relationalStore.ResultSet.goToRow)
 
 <!--Device-ResultSet-goToRow(position: number): boolean--><!--Device-ResultSet-goToRow(position: number): boolean-End-->
 
@@ -398,6 +517,19 @@ goToRow(position: number): boolean
 | --- | --- |
 | boolean | 如果成功移动结果集，则为true；否则返回false。 |
 
+## 示例
+
+```TypeScript
+let predicatesgotorow = new dataRdb.RdbPredicates("EMPLOYEE");
+let promisequerygotorow = rdbStore.query(predicatesgotorow, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
+promisequerygotorow.then((resultSet) => {
+  resultSet.goToRow(5);
+  resultSet.close();
+}).catch((err) => {
+  console.error('query failed');
+});
+```
+
 ## isColumnNull
 
 ```TypeScript
@@ -412,7 +544,7 @@ isColumnNull(columnIndex: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.isColumnNull
+**替代接口：** [isColumnNull](ohos.data.relationalStore.ResultSet.isColumnNull)
 
 <!--Device-ResultSet-isColumnNull(columnIndex: number): boolean--><!--Device-ResultSet-isColumnNull(columnIndex: number): boolean-End-->
 
@@ -429,6 +561,12 @@ isColumnNull(columnIndex: number): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果当前行中指定列的值为null，则返回true，否则返回false。 |
+
+## 示例
+
+```TypeScript
+const isColumnNull = resultSet.isColumnNull(resultSet.getColumnIndex("CODES"));
+```
 
 ## columnCount
 
@@ -448,7 +586,7 @@ columnCount: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.columnCount
+**替代接口：** [columnCount](ohos.data.relationalStore.ResultSet.columnCount)
 
 <!--Device-ResultSet-columnCount: number--><!--Device-ResultSet-columnCount: number-End-->
 
@@ -472,7 +610,7 @@ columnNames: Array&lt;string&gt;
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.columnNames
+**替代接口：** [columnNames](ohos.data.relationalStore.ResultSet.columnNames)
 
 <!--Device-ResultSet-columnNames: Array<string>--><!--Device-ResultSet-columnNames: Array<string>-End-->
 
@@ -496,7 +634,7 @@ isAtFirstRow: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.isAtFirstRow
+**替代接口：** [isAtFirstRow](ohos.data.relationalStore.ResultSet.isAtFirstRow)
 
 <!--Device-ResultSet-isAtFirstRow: boolean--><!--Device-ResultSet-isAtFirstRow: boolean-End-->
 
@@ -520,7 +658,7 @@ isAtLastRow: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.isAtLastRow
+**替代接口：** [isAtLastRow](ohos.data.relationalStore.ResultSet.isAtLastRow)
 
 <!--Device-ResultSet-isAtLastRow: boolean--><!--Device-ResultSet-isAtLastRow: boolean-End-->
 
@@ -544,7 +682,7 @@ isClosed: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.isClosed
+**替代接口：** [isClosed](ohos.data.relationalStore.ResultSet.isClosed)
 
 <!--Device-ResultSet-isClosed: boolean--><!--Device-ResultSet-isClosed: boolean-End-->
 
@@ -568,7 +706,7 @@ isEnded: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.isEnded
+**替代接口：** [isEnded](ohos.data.relationalStore.ResultSet.isEnded)
 
 <!--Device-ResultSet-isEnded: boolean--><!--Device-ResultSet-isEnded: boolean-End-->
 
@@ -592,7 +730,7 @@ isStarted: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.isStarted
+**替代接口：** [isStarted](ohos.data.relationalStore.ResultSet.isStarted)
 
 <!--Device-ResultSet-isStarted: boolean--><!--Device-ResultSet-isStarted: boolean-End-->
 
@@ -616,7 +754,7 @@ rowCount: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.rowCount
+**替代接口：** [rowCount](ohos.data.relationalStore.ResultSet.rowCount)
 
 <!--Device-ResultSet-rowCount: number--><!--Device-ResultSet-rowCount: number-End-->
 
@@ -640,7 +778,7 @@ rowIndex: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.relationalStore.ResultSet.rowIndex
+**替代接口：** [rowIndex](ohos.data.relationalStore.ResultSet.rowIndex)
 
 <!--Device-ResultSet-rowIndex: number--><!--Device-ResultSet-rowIndex: number-End-->
 

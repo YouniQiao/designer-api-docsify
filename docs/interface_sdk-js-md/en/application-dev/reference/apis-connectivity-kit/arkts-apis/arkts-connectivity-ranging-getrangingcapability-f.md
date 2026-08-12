@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from 'kits/@kit.ConnectivityKit';
+import { ranging } from '@kit.ConnectivityKit';
 ```
 
 ## getRangingCapability
@@ -30,13 +30,13 @@ Queries whether the current device supports ranging capability.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;RangingCapabilitySupported&gt; | Promise used to return the result. |
+| Promise&lt;[RangingCapabilitySupported](arkts-connectivity-ranging-rangingcapabilitysupported-i.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 34900053 | The ranging service is disabled. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

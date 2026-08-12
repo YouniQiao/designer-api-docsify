@@ -15,7 +15,7 @@ Parameters used to open the NodeGraphComponent.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## customIcons
@@ -26,7 +26,7 @@ customIcons?: Array<GeneratorResultPageIcon>
 
 Custom icons used on the AI generated image results page.
 
-**Type:** Array&lt;GeneratorResultPageIcon&gt;
+**Type:** Array&lt;[GeneratorResultPageIcon](arkts-arkui-imagegeneration-generatorresultpageicon-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

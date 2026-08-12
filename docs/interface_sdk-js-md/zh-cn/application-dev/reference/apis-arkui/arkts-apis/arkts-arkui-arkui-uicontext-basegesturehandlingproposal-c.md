@@ -18,7 +18,7 @@ action: SmartGestureAction
 
 要执行的智能手势操作。定义手势触发的具体操作。
 
-**类型：** [SmartGestureAction](arkts-arkui-smartgestureaction-e.md)
+**类型：** SmartGestureAction
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ operateIntention: OperateIntention
 
 底层的用户操作意图。表示基本的用户交互目标。
 
-**类型：** [OperateIntention](arkts-arkui-operateintention-e.md)
+**类型：** OperateIntention
 
 **起始版本：** 26.0.0
 

@@ -13,7 +13,7 @@ Defines the parameters required for the uninstall of a shared bundle.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'kits/@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## bundleName

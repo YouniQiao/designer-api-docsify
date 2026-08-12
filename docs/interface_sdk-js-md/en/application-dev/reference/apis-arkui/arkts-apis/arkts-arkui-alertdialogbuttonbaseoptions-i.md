@@ -44,7 +44,7 @@ backgroundColor?: ResourceColor
 
 Background color of the button.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -119,7 +119,7 @@ fontColor?: ResourceColor
 
 Font color of the button.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -143,7 +143,7 @@ Style of the button.
 
 Default value: **DialogButtonStyle.DEFAULT**
 
-**Type:** [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md)
+**Type:** DialogButtonStyle
 
 **Default:** -
 
@@ -167,7 +167,7 @@ value: ResourceStr
 
 Text of the button. If the value is null, the button is not displayed.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 

@@ -26,13 +26,13 @@ Defines Rating Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [RatingOptions](arkts-arkui-rating-ratingoptions-i.md) | No | the options of Rating. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md) |  |
+| [RatingAttribute](arkts-arkui-rating-ratingattribute-i.md) |  |
 
 
 ## Rating
@@ -62,12 +62,12 @@ Defines Rating Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RatingAttribute&gt; | Yes | rating attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RatingAttribute](arkts-arkui-rating-ratingattribute-i.md)&gt; | Yes | rating attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md) |  |
+| [RatingAttribute](arkts-arkui-rating-ratingattribute-i.md) |  |
 

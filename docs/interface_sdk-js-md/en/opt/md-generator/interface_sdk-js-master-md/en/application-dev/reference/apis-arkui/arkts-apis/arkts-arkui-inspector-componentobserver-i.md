@@ -11,7 +11,7 @@ The ComponentObserver is used to listen for layout, draw and drawChildren events
 ## Modules to Import
 
 ```TypeScript
-import { inspector } from 'kits/@kit.ArkUI';
+import { inspector } from '@kit.ArkUI';
 ```
 
 ## off('layout')
@@ -37,7 +37,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'layout' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 ## off('draw')
 
@@ -62,7 +62,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'draw' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 ## off('drawChildren')
 
@@ -266,7 +266,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'layout' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('draw')
 
@@ -291,7 +291,7 @@ Registers a callback with the corresponding query condition by using the handle.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'draw' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 ## on('drawChildren')
 

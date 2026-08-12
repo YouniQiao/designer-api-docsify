@@ -20,4 +20,4 @@ callback for deleting the forms.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |

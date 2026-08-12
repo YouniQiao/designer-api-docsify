@@ -1,7 +1,7 @@
 # OfflineResourceMap
 
 Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the  
-[injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectofflineresources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly.
+[injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectOfflineResources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ Implements an **OfflineResourceMap** object, which is used to set information re
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resource

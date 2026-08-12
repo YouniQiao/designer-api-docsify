@@ -18,7 +18,7 @@ captureMode: WebCaptureMode
 
 Web screen capture mode.
 
-**Type:** [WebCaptureMode](../arkts-apis/arkts-arkweb-web-webcapturemode-e.md)
+**Type:** [WebCaptureMode](arkts-arkweb-webcapturemode-e.md)
 
 **Since:** 10
 

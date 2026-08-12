@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
+import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
 ## getAbilityDelegator
@@ -12,7 +12,7 @@ import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 function getAbilityDelegator(): AbilityDelegator
 ```
 
-Obtains an [AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) object.
+Obtains an [AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator) object.
 
 **Since:** 9
 

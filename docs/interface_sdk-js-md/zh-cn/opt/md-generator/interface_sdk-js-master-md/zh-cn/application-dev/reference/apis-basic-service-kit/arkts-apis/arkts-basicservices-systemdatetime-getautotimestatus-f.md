@@ -24,7 +24,7 @@ function getAutoTimeStatus(): boolean
 
 | 错误码ID |
 | --- |
-| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) |
+| [13000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) |
 
 ## 示例
 

@@ -6,7 +6,7 @@ Defines the **value** object in a KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Value
+**Substitutes:** [Value](ohos.data.distributedKVStore.Value)
 
 <!--Device-distributedData-interface Value--><!--Device-distributedData-interface Value-End-->
 
@@ -20,13 +20,13 @@ type: ValueType
 
 Type of the value.
 
-**Type:** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
+**Type:** ValueType
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Value#type
+**Substitutes:** [type](ohos.data.distributedKVStore.Value#type)
 
 <!--Device-Value-type: ValueType--><!--Device-Value-type: ValueType-End-->
 
@@ -46,7 +46,7 @@ Value of the KV pair stored in the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Value#value
+**Substitutes:** [value](ohos.data.distributedKVStore.Value#value)
 
 <!--Device-Value-value: Uint8Array | string | number | boolean--><!--Device-Value-value: Uint8Array | string | number | boolean-End-->
 

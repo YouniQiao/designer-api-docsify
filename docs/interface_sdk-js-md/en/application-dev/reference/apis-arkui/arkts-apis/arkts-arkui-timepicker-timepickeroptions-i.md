@@ -60,7 +60,7 @@ selected?: Date | Bindable<Date>
 
 Specifies the time selector check time.
 
-**Type:** Date \| Bindable&lt;Date&gt;
+**Type:** Date \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;Date&gt;
 
 **Since:** 23
 

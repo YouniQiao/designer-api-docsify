@@ -24,8 +24,8 @@ Canvas is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) \| DrawingRenderingContext | No | Canvas context object. |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | No | Options for AI analyzer. |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md) | No | Canvas context object. |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
 
 **Return value:**
 
@@ -93,7 +93,7 @@ Defines Canvas Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CanvasAttribute&gt; | Yes | Canvas attribute instance. |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CanvasAttribute](arkts-arkui-canvas-canvasattribute-i.md)&gt; | Yes | Canvas attribute instance. |
 
 **Return value:**
 

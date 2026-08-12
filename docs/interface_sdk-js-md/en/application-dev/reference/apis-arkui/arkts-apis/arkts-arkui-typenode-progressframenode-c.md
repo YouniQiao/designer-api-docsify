@@ -34,11 +34,11 @@ Initialize Progress FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ProgressOptions](../arkts-components/arkts-arkui-progressoptions-i.md) | Yes |  |
+| value | ProgressOptions | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) |  |
+| ProgressAttribute |  |
 

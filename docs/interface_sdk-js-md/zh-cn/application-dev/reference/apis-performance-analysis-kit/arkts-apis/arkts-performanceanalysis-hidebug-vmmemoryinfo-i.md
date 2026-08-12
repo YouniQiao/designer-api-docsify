@@ -1,6 +1,6 @@
 # VMMemoryInfo
 
-VM�ڴ���Ϣ��
+VM内存信息。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@ VM�ڴ���Ϣ��
 allArraySize: bigint
 ```
 
-��ʾ��ǰ�������������������С����KBΪ��λ��
+表示当前虚拟机的所有数组对象大小，以KB为单位。
 
 **类型：** bigint
 
@@ -34,7 +34,7 @@ allArraySize: bigint
 heapUsed: bigint
 ```
 
-��ʾ��ǰ�����ʹ�õĶѴ�С����KBΪ��λ��
+表示当前虚拟机使用的堆大小，以KB为单位。
 
 **类型：** bigint
 
@@ -52,7 +52,7 @@ heapUsed: bigint
 totalHeap: bigint
 ```
 
-��ʾ��ǰ������Ķ��ܴ�С����KBΪ��λ��
+表示当前虚拟机的堆总大小，以KB为单位。
 
 **类型：** bigint
 

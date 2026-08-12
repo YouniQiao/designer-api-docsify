@@ -20,7 +20,7 @@ Default type.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.RingtoneType#RINGTONE_TYPE_SIM_CARD_0](arkts-audio-systemsoundmanager-ringtonetype-e.md#ringtone_type_sim_card_0)
+**Substitutes:** [RINGTONE_TYPE_SIM_CARD_0](#RINGTONE_TYPE_SIM_CARD_0)
 
 <!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0--><!--Device-RingtoneType-RINGTONE_TYPE_DEFAULT = 0-End-->
 
@@ -52,7 +52,7 @@ Multi-sim type.
 
 **Deprecated since:** 11
 
-**Substitutes:** [systemSoundManager.RingtoneType#RINGTONE_TYPE_SIM_CARD_1](arkts-audio-systemsoundmanager-ringtonetype-e.md#ringtone_type_sim_card_1)
+**Substitutes:** [RINGTONE_TYPE_SIM_CARD_1](#RINGTONE_TYPE_SIM_CARD_1)
 
 <!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1--><!--Device-RingtoneType-RINGTONE_TYPE_MULTISIM = 1-End-->
 

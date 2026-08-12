@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| RowAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

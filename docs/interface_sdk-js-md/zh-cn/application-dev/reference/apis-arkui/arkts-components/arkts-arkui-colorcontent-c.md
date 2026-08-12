@@ -19,7 +19,7 @@ static readonly ORIGIN: ColorContent
 重置[fillColor](ImageAttribute#fillColor(value: ResourceColor))接口，效果上与不设置  
 [fillColor](ImageAttribute#fillColor(value: ResourceColor))一致。
 
-**类型：** [ColorContent](../arkts-apis/arkts-arkui-image-colorcontent-c.md)
+**类型：** [ColorContent](arkts-arkui-colorcontent-c.md)
 
 **起始版本：** 15
 

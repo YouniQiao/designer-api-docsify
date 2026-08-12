@@ -73,19 +73,19 @@ curve?: Curve | string | ICurve
 "steps(number,step-position)"：阶梯曲线，number必须设置，为正整数，step-position参数可选，支持设置start或end，默认值为end。例如"steps(3,start)"。
 
 "interpolating-spring(velocity,mass,stiffness,damping)"：具体参数含义参考  
-[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)。
+[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring)。
 
 "responsive-spring-motion(response,dampingFraction,overlapDuration)"：具体参数含义参考  
-[responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)。
+[responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion)。
 
-"spring(velocity,mass,stiffness,damping)"：具体参数含义参考[springCurve](arkts-arkui-curves-springcurve-f.md#springcurve)。
+"spring(velocity,mass,stiffness,damping)"：具体参数含义参考[springCurve](arkts-arkui-curves-springcurve-f.md#springCurve)。
 
 "spring-motion(response,dampingFraction,overlapDuration)"：具体参数含义参考  
-[springMotion](arkts-arkui-curves-springmotion-f.md#springmotion)。
+[springMotion](arkts-arkui-curves-springmotion-f.md#springMotion)。
 
 默认值：Curve.EaseInOut
 
-**类型：** [Curve](arkts-arkui-curve-e.md) \| string \| ICurve
+**类型：** [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-t.md)
 
 **默认值：** Curve.EaseInOut
 
@@ -141,7 +141,7 @@ duration?: int
 
 **说明：**1. API版本26.0.0之前，在ArkTS卡片上最大动画持续时间为1000毫秒，若超出则固定为1000毫秒。从API版本26.0.0开始，在ArkTS卡片上最大动画持续时间调整为2000毫秒。
 
-2. 可以通过在持续时间为0的动画闭包函数中改变属性，以实现停止该属性动画的效果。3. 设置小于0的值时按0处理。4. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。5. curve配置[springMotion](arkts-arkui-curves-springmotion-f.md#springmotion)、[responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)、[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)曲线时，duration不生效。
+2. 可以通过在持续时间为0的动画闭包函数中改变属性，以实现停止该属性动画的效果。3. 设置小于0的值时按0处理。4. 设置浮点型类型的值时，向下取整。例如，设置值为1.2，按照1处理。5. curve配置[springMotion](arkts-arkui-curves-springmotion-f.md#springMotion)、[responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion)、[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring)曲线时，duration不生效。
 
 **类型：** int
 
@@ -165,7 +165,7 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 
 设置动画的期望帧率。
 
-**类型：** [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md)
+**类型：** [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md)
 
 **起始版本：** 23
 

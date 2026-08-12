@@ -2,7 +2,7 @@
 
 特效资源.
 
-**继承/实现关系：** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**继承/实现关系：** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **起始版本：** 21
 
@@ -42,6 +42,26 @@ getPropertyValue(propertyName: string): Object | null | undefined
 | --- | --- |
 | Object | 特效属性值，如果"get"操作失败则返回null. |
 
+## 示例
+
+```TypeScript
+import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
+
+function getEffectProperty() {
+  let scene: Promise<Scene> = Scene.load();
+  scene.then(async (result: Scene | undefined) => {
+    if (!result) {
+      return;
+    }
+    let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+    // 特效ID，固定格式为'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'，比如'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'
+    let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
+    let effect: Effect = await sceneFactory.createEffect(params);
+    effect.getPropertyValue('exposure');
+  });
+}
+```
+
 ## setPropertyValue
 
 ```TypeScript
@@ -72,6 +92,26 @@ setPropertyValue(propertyName: string, value: Object | undefined): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果"set"操作失败则返回false |
+
+## 示例
+
+```TypeScript
+import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
+
+function setEffectProperty() {
+  let scene: Promise<Scene> = Scene.load();
+  scene.then(async (result: Scene | undefined) => {
+    if (!result) {
+      return;
+    }
+    let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+    // 特效ID，固定格式为'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'，比如'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'
+    let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"};
+    let effect: Effect = await sceneFactory.createEffect(params);
+    effect.setPropertyValue('exposure', 1);
+  });
+}
+```
 
 ## effectId
 

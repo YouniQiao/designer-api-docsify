@@ -6,7 +6,7 @@
 
 **废弃版本：** 10
 
-**替代接口：** [userAuth.UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)
+**替代接口：** [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#UserAuthInstance)
 
 <!--Device-userAuth-interface AuthInstance--><!--Device-userAuth-interface AuthInstance-End-->
 
@@ -22,14 +22,14 @@ cancel: () => void
 
 > **说明：**
 > 
-> 使用获取到的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行取消认证，此[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)需要是正
+> 使用获取到的[AuthInstance](#AuthInstance)对象调用该接口进行取消认证，此[AuthInstance](#AuthInstance)需要是正
 > 在进行认证的对象。
 
 **起始版本：** 9
 
 **废弃版本：** 10
 
-**替代接口：** [userAuth.UserAuthInstance.cancel](arkts-userauthentication-userauth-userauthinstance-i.md#cancel)
+**替代接口：** [cancel](arkts-userauthentication-userauth-userauthinstance-i.md#cancel)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -41,9 +41,9 @@ cancel: () => void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -72,17 +72,17 @@ off: (name: AuthEventKey) => void
 取消订阅特定类型的认证事件。
 
 - **name**: 表示认证事件类型，取值为"result"时，取消订阅认证结果；取值为"tip"时，取消订阅认证过程中的提示信息，类型为  
-[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。
+[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey)。
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[AuthInstance](#AuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 9
 
 **废弃版本：** 10
 
-**替代接口：** userAuth.UserAuthInstance.off
+**替代接口：** [off](#off)
 
 <!--Device-AuthInstance-off: (name: AuthEventKey) => void--><!--Device-AuthInstance-off: (name: AuthEventKey) => void-End-->
 
@@ -98,8 +98,8 @@ off: (name: AuthEventKey) => void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -135,18 +135,18 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 订阅指定类型的用户认证事件。
 
 - **name**: 表示认证事件类型，取值为"result"时，回调函数返回认证结果；取值为"tip"时，回调函数返回认证过程中的提示信息，类型为  
-[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md)。  
-- **callback**: 认证接口的回调函数，用于返回认证结果或认证过程中的提示信息，类型为[AuthEvent](arkts-userauthentication-userauth-authevent-i.md)。
+[AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey)。  
+- **callback**: 认证接口的回调函数，用于返回认证结果或认证过程中的提示信息，类型为[AuthEvent](arkts-userauthentication-userauth-authevent-i.md#AuthEvent)。
 
 > **说明：**
 > 
-> 使用获取到的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行订阅。
+> 使用获取到的[AuthInstance](#AuthInstance)对象调用该接口进行订阅。
 
 **起始版本：** 9
 
 **废弃版本：** 10
 
-**替代接口：** userAuth.UserAuthInstance.on
+**替代接口：** [on](userAuth.UserAuthInstance.on)
 
 <!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void--><!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void-End-->
 
@@ -163,8 +163,8 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -215,13 +215,13 @@ start: () => void
 
 > **说明：**
 > 
-> 使用获取到的[AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)对象调用该接口进行认证。
+> 使用获取到的[AuthInstance](#AuthInstance)对象调用该接口进行认证。
 
 **起始版本：** 9
 
 **废弃版本：** 10
 
-**替代接口：** [userAuth.UserAuthInstance.start](arkts-userauthentication-userauth-userauthinstance-i.md#start)
+**替代接口：** [start](arkts-userauthentication-userauth-userauthinstance-i.md#start)
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -233,17 +233,17 @@ start: () => void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) |
-| [12500009](../errorcode-useriam.md#12500009-认证被锁定) |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12500007](../errorcode-useriam.md#12500007-认证服务繁忙) |
-| [12500004](../errorcode-useriam.md#12500004-认证操作超时) |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-| [12500003](../errorcode-useriam.md#12500003-认证被取消) |
-| [12500001](../errorcode-useriam.md#12500001-认证不通过) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) |
+| [12500009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-认证被锁定) |
+| [12500006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-认证信任等级不支持) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-认证服务繁忙) |
+| [12500004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-认证操作超时) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-认证被取消) |
+| [12500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-认证不通过) |
 
 ## 示例
 

@@ -236,7 +236,7 @@ Get the NavPathInfo array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NavPathInfo&gt; | The NavPathInfo array. |
+| Array&lt;[NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md)&gt; | The NavPathInfo array. |
 
 ## moveIndexToTop
 
@@ -322,7 +322,7 @@ Pops the top NavDestination out of the stack.
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## pop
 
@@ -353,7 +353,7 @@ Pops the top NavDestination out of the stack.
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## popToIndex
 
@@ -491,7 +491,7 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
@@ -504,10 +504,10 @@ Pushes the NavDestination into the stack.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -531,7 +531,7 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
@@ -544,10 +544,10 @@ Pushes the NavDestination into the stack.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -585,10 +585,10 @@ Pushes the specified NavDestination into the stack.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -614,7 +614,7 @@ Pushes the specified NavDestination into the stack.
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of the NavDestination to be pushed. |
 | param | Object | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | Yes | The callback when next page returns. |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](arkts-arkui-navigation-popinfo-i.md)&gt; | Yes | The callback when next page returns. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 **Return value:**
@@ -627,10 +627,10 @@ Pushes the specified NavDestination into the stack.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushPath
 
@@ -654,7 +654,7 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 ## pushPath
@@ -679,7 +679,7 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 ## pushPathByName
@@ -732,7 +732,7 @@ Pushes the specified NavDestination into the stack.
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of the NavDestination to be pushed. |
 | param | Object | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | Yes | The callback when next page returns. |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](arkts-arkui-navigation-popinfo-i.md)&gt; | Yes | The callback when next page returns. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 ## removeByIndexes
@@ -847,7 +847,7 @@ Replace the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to replace in stack. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the NavDestination to replace in stack. |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 **Return value:**
@@ -860,10 +860,10 @@ Replace the NavDestination into the stack.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## replacePath
 
@@ -887,7 +887,7 @@ Replace the current NavDestination with the specific one.The current NavDestinat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 ## replacePath
@@ -912,7 +912,7 @@ Replace the current NavDestination with the specific one.The current NavDestinat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
+| info | [NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
 | options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Indicates options of stack operation. |
 
 ## replacePathByName
@@ -987,7 +987,7 @@ Set the NavPathInfo array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | Yes | The NavPathInfo array. |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md)&gt; | Yes | The NavPathInfo array. |
 | animated | boolean | No | Indicate whether the operation has animation. |
 
 ## size

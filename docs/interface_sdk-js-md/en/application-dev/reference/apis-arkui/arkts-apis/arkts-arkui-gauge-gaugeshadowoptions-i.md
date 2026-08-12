@@ -2,7 +2,7 @@
 
 Defines the options of gauge track shadow.
 
-**Inheritance/Implementation:** GaugeShadowOptions extends [MultiShadowOptions](arkts-arkui-common-multishadowoptions-i.md)
+**Inheritance/Implementation:** GaugeShadowOptions extends [MultiShadowOptions](MultiShadowOptions)
 
 **Since:** 23
 

@@ -2,7 +2,7 @@
 
 Portrait Photo Conflict Functions object.
 
-**Inheritance/Implementation:** PortraitPhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md), [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md), [ApertureQuery](arkts-camera-camera-aperturequery-i.md)
+**Inheritance/Implementation:** PortraitPhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery), [ApertureQuery](arkts-camera-camera-aperturequery-i.md#ApertureQuery)
 
 **Since:** 13
 
@@ -17,6 +17,6 @@ Portrait Photo Conflict Functions object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 

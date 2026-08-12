@@ -38,7 +38,7 @@ shape?: CircleShape | EllipseShape | PathShape | RectShape
 
 Custom shape of the slider.
 
-**Type:** [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape
+**Type:** [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md)
 
 **Since:** 23
 

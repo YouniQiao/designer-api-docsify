@@ -13,7 +13,7 @@ Defines the RDB store configuration.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## allowRebuild
@@ -53,7 +53,7 @@ Whether to automatically clear the dirty data (data that has been deleted from t
 Default value: **true**.
 
 For a database with device-cloud synergy, this parameter can be used to set whether to automatically clear the data deleted from the cloud on the device. You can manually clear the data by calling   
-[cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata).
+[cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleanDirtyData).
 
 This parameter is supported since API version 11.
 
@@ -78,7 +78,7 @@ cryptoParam?: CryptoParam
 Custom encryption parameters.
 
 If this parameter is left empty, the default encryption parameters are used. For details, see default values of   
-[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md).
+[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md#CryptoParam).
 
 This parameter is valid only when **encrypt** is set to **true** or the key is not empty.
 
@@ -174,7 +174,7 @@ encrypt?: boolean
 ```
 
 Whether to encrypt the RDB store. After the database is created, this parameter cannot be modified directly. To change the database encryption status, call the   
-[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex) API.
+[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyEx) API.
 
 **true**: encrypt the RDB store.
 
@@ -313,7 +313,7 @@ Security level of the RDB store.
 
 SystemCapability.DistributedDataManager.RelationalStore.Core
 
-**Type:** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
+**Type:** SecurityLevel
 
 **Since:** 9
 

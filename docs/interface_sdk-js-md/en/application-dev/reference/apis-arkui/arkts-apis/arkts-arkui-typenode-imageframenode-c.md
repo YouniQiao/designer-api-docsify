@@ -34,13 +34,13 @@ Initialize Image FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| DrawableDescriptor | Yes |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |  |
+| ImageAttribute |  |
 
 ## initialize
 
@@ -64,13 +64,13 @@ Initialize Image FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| DrawableDescriptor \| ImageContent | Yes |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| ImageContent | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |  |
+| ImageAttribute |  |
 
 ## initialize
 
@@ -94,12 +94,12 @@ Initialize Image FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| DrawableDescriptor | Yes |  |
-| value | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | Yes |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Yes |  |
+| value | ImageAIOptions | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |  |
+| ImageAttribute |  |
 

@@ -11,7 +11,7 @@ Describes the window properties.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## brightness
@@ -21,7 +21,7 @@ brightness: number
 ```
 
 Screen brightness of the window. The brightness can be set by calling  
-[setWindowBrightness()](arkts-arkui-window-window-i.md#setwindowbrightness). The value is a floating-point number. Valid values are in the range [0.0, 1.0] (where **1.0** means the brightest) or the special value **-1.0** (which means that the brightness follows the system). If no value is passed, the brightness follows the system. In this case, the obtained brightness value is **-1.0**.
+[setWindowBrightness()](arkts-arkui-window-window-i.md#setWindowBrightness). The value is a floating-point number. Valid values are in the range [0.0, 1.0] (where **1.0** means the brightest) or the special value **-1.0** (which means that the brightness follows the system). If no value is passed, the brightness follows the system. In this case, the obtained brightness value is **-1.0**.
 
 **Type:** number
 
@@ -78,9 +78,9 @@ drawableRect: Rect
 ```
 
 Size of the rectangle that can be drawn in the window. The upper boundary and left boundary are calculated relative to the top-left vertex of the window. In the stage model, this property should be obtained after  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent)is called to load the page content.
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent)is called to load the page content.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ globalDisplayRect?: Rect
 
 Window size in the global coordinate system. In extended screen scenarios, the top-left corner of the primary screen is used as the coordinate origin. In virtual screen scenarios, the top-left corner of the virtual screen is used as the coordinate origin. The default value is [0, 0, 0, 0].
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 20
 
@@ -207,7 +207,7 @@ isPrivacyMode: boolean
 ```
 
 Whether the window is in privacy mode. **true** if the window is in privacy mode, **false** otherwise. You can call  
-[setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode)to set the privacy mode of the window.
+[setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setWindowPrivacyMode)to set the privacy mode of the window.
 
 **Type:** boolean
 
@@ -301,13 +301,13 @@ type: WindowType
 
 Window type.
 
-**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+**Type:** WindowType
 
 **Since:** 7
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [WindowProperties#windowType](arkts-arkui-window-windowproperties-i.md#windowtype)
+**Substitutes:** [windowType](#windowType)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -322,9 +322,9 @@ windowRect: Rect
 ```
 
 Window size, which can be obtained from the page lifecycle  
-[onPageShow](@ohos.app.ability.UIAbility:UIAbility.onPageShow) or the application lifecycle [onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md/arkts-ability-app-ability-uiability-uiability-c.md#onforeground).
+[onPageShow](@ohos.app.ability.UIAbility:UIAbility.onPageShow) or the application lifecycle [onForeground](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#onForeground).
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 7
 
@@ -342,7 +342,7 @@ windowType?: WindowType
 
 Window type
 
-**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+**Type:** WindowType
 
 **Since:** 26.0.0
 

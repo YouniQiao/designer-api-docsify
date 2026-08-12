@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## create
@@ -32,15 +32,15 @@ Creates a floating ball controller. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;FloatingBallController&gt; | Promise used to return the floating ball controller. |
+| Promise&lt;[FloatingBallController](arkts-arkui-floatingball-floatingballcontroller-i.md)&gt; | Promise used to return the floating ball controller. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.The context parameter is null. &lt;br&gt;2.The FloatingBallConfiguration parameter is null. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes: &lt;br&gt;1.The application context or main window is invalid. &lt;br&gt;2.System internal error, such as null pointer or insufficient memory. |
+| [1300019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.The context parameter is null. &lt;br&gt;2.The FloatingBallConfiguration parameter is null. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes: &lt;br&gt;1.The application context or main window is invalid. &lt;br&gt;2.System internal error, such as null pointer or insufficient memory. |
 
 ## Examples
 

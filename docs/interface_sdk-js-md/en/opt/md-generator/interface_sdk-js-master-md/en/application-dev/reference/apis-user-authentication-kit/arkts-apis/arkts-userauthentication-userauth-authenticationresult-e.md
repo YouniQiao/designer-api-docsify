@@ -6,7 +6,7 @@ Enumerates the authentication results.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md)
+**Substitutes:** [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode)
 
 <!--Device-userAuth-export enum AuthenticationResult--><!--Device-userAuth-export enum AuthenticationResult-End-->
 
@@ -24,7 +24,7 @@ The device does not support the current authentication mode.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#type_not_support)
+**Substitutes:** [TYPE_NOT_SUPPORT](arkts-userauthentication-userauth-resultcode-e.md#TYPE_NOT_SUPPORT)
 
 <!--Device-AuthenticationResult-NO_SUPPORT = -1--><!--Device-AuthenticationResult-NO_SUPPORT = -1-End-->
 
@@ -42,7 +42,7 @@ The authentication is successful.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.SUCCESS](arkts-userauthentication-userauth-resultcode-e.md#success)
+**Substitutes:** [SUCCESS](arkts-userauthentication-userauth-resultcode-e.md#SUCCESS)
 
 <!--Device-AuthenticationResult-SUCCESS = 0--><!--Device-AuthenticationResult-SUCCESS = 0-End-->
 
@@ -60,7 +60,7 @@ The feature comparison failed.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.FAIL](arkts-userauthentication-userauth-resultcode-e.md#fail)
+**Substitutes:** [FAIL](arkts-userauthentication-userauth-resultcode-e.md#FAIL)
 
 <!--Device-AuthenticationResult-COMPARE_FAILURE = 1--><!--Device-AuthenticationResult-COMPARE_FAILURE = 1-End-->
 
@@ -78,7 +78,7 @@ The authentication was canceled by the user.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.CANCELED](arkts-userauthentication-userauth-resultcode-e.md#canceled)
+**Substitutes:** [CANCELED](arkts-userauthentication-userauth-resultcode-e.md#CANCELED)
 
 <!--Device-AuthenticationResult-CANCELED = 2--><!--Device-AuthenticationResult-CANCELED = 2-End-->
 
@@ -96,7 +96,7 @@ The authentication has timed out.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.TIMEOUT](arkts-userauthentication-userauth-resultcode-e.md#timeout)
+**Substitutes:** [TIMEOUT](arkts-userauthentication-userauth-resultcode-e.md#TIMEOUT)
 
 <!--Device-AuthenticationResult-TIMEOUT = 3--><!--Device-AuthenticationResult-TIMEOUT = 3-End-->
 
@@ -130,7 +130,7 @@ The authentication service is not available. Try again later.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.BUSY](arkts-userauthentication-userauth-resultcode-e.md#busy)
+**Substitutes:** [BUSY](arkts-userauthentication-userauth-resultcode-e.md#BUSY)
 
 <!--Device-AuthenticationResult-BUSY = 5--><!--Device-AuthenticationResult-BUSY = 5-End-->
 
@@ -148,7 +148,7 @@ The authentication parameters are invalid.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#invalid_parameters)
+**Substitutes:** [INVALID_PARAMETERS](arkts-userauthentication-userauth-resultcode-e.md#INVALID_PARAMETERS)
 
 <!--Device-AuthenticationResult-INVALID_PARAMETERS = 6--><!--Device-AuthenticationResult-INVALID_PARAMETERS = 6-End-->
 
@@ -166,7 +166,7 @@ The user account is locked because the number of authentication failures has rea
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.LOCKED](arkts-userauthentication-userauth-resultcode-e.md#locked)
+**Substitutes:** [LOCKED](arkts-userauthentication-userauth-resultcode-e.md#LOCKED)
 
 <!--Device-AuthenticationResult-LOCKED = 7--><!--Device-AuthenticationResult-LOCKED = 7-End-->
 
@@ -184,7 +184,7 @@ No authentication credential is registered.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#not_enrolled)
+**Substitutes:** [NOT_ENROLLED](arkts-userauthentication-userauth-resultcode-e.md#NOT_ENROLLED)
 
 <!--Device-AuthenticationResult-NOT_ENROLLED = 8--><!--Device-AuthenticationResult-NOT_ENROLLED = 8-End-->
 
@@ -202,7 +202,7 @@ Other errors.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.ResultCode.GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#general_error)
+**Substitutes:** [GENERAL_ERROR](arkts-userauthentication-userauth-resultcode-e.md#GENERAL_ERROR)
 
 <!--Device-AuthenticationResult-GENERAL_ERROR = 100--><!--Device-AuthenticationResult-GENERAL_ERROR = 100-End-->
 

@@ -56,7 +56,7 @@ getAccessibleResource(): Array<string>
 ```
 
 Obtains the list of accessible resources requested for the web page. For details about the resource types, see  
-[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md).
+[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#ProtectedResourceType).
 
 **Since:** 9
 
@@ -70,7 +70,7 @@ Obtains the list of accessible resources requested for the web page. For details
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getOrigin
 
@@ -114,4 +114,4 @@ Grants the permission for resources requested by the web page.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resources | Array&lt;string&gt; | Yes |
+| resources | Array & lt;string & gt; | Yes |

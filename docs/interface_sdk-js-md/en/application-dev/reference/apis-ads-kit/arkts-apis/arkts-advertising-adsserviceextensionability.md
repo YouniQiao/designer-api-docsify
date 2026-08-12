@@ -7,7 +7,7 @@ The AdsServiceExtensionAbility module provides ExtensionAbilities for the ads se
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from 'kits/@kit.AdsKit';
+import { RespCallback } from '@kit.AdsKit';
 ```
 
 ## Summary

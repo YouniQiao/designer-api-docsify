@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from 'kits/@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 ```
 
 ## addAllowedRunningBundles
@@ -23,10 +23,10 @@ Adds applications to the application running trustlist. Only applications in the
 > 
 > 2. If the application running blocklist is not empty, this API cannot be used to add applications to the running
 > trustlist. Otherwise, the error code 9200010 is reported. APIs related to the application running blocklist
-> include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#adddisallowedrunningbundlessync),
-> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f.md#adddisallowedrunningbundles),
-> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f.md#adddisallowedrunningbundles), and
-> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f.md#adddisallowedrunningbundles).
+> include [addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#addDisallowedRunningBundlesSync),
+> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f.md#addDisallowedRunningBundles),
+> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f.md#addDisallowedRunningBundles), and
+> [addDisallowedRunningBundles](arkts-mdm-applicationmanager-adddisallowedrunningbundles-f.md#addDisallowedRunningBundles).
 > 
 > 3. This API only takes effect for third-party applications. System applications are not subject to this list and
 > are allowed to run by default.
@@ -46,18 +46,18 @@ Adds applications to the application running trustlist. Only applications in the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-| appIdentifiers | Array&lt;string&gt; | Yes |
+| appIdentifiers | Array & lt;string & gt; | Yes |
 | accountId | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [9200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200010-policy-conflict) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

@@ -65,7 +65,7 @@ readonly request: NotificationRequest
 
 Notification content.
 
-**Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)
+**Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)
 
 **Since:** 7
 

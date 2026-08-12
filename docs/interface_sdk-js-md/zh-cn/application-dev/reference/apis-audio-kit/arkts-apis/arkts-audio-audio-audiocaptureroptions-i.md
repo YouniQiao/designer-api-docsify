@@ -46,7 +46,7 @@ playbackCaptureConfig?: AudioPlaybackCaptureConfig
 
 **废弃版本：** 12
 
-**替代接口：** OH_AVScreenCapture
+**替代接口：** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig--><!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig-End-->
 

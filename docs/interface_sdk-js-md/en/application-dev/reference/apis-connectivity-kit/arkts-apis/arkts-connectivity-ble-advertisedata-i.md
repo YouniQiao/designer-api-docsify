@@ -13,7 +13,7 @@ Describes the advertising data.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## advertiseName
@@ -22,7 +22,7 @@ import { ble } from 'kits/@kit.ConnectivityKit';
 advertiseName?: string
 ```
 
-Indicates the local name data type in the advertisement packet. If both the property and{@link AdvertiseData#includeDeviceName} property are used together,the {@link AdvertiseData#advertiseName} property will ultimately take effect.
+Indicates the local name data type in the advertisement packet. If both the property and[includeDeviceName](#includeDeviceName) property are used together,the [advertiseName](#advertiseName) property will ultimately take effect.
 
 **Type:** string
 

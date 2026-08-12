@@ -1,7 +1,7 @@
 # DownloadInfo
 
 Defines the download task information, which is the callback parameter of the   
-[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#gettaskinfo) API.
+[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo) API.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Defines the download task information, which is the callback parameter of the
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## description

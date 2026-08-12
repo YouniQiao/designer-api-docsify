@@ -13,7 +13,7 @@ Defines the data structure of the task information for query. The fields availab
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## bundle

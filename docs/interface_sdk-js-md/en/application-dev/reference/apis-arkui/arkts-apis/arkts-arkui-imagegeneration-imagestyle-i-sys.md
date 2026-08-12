@@ -15,7 +15,7 @@ Style types supported by AI image generation models, like Graffiti, Watercolor.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## icon
@@ -26,7 +26,7 @@ icon: image.PixelMap | string | Resource
 
 The style icon information which will display in style list.
 
-**Type:** image.PixelMap \| string \| Resource
+**Type:** image.PixelMap \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -48,7 +48,7 @@ name: ResourceStr
 
 The style name information which will display in style list.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 

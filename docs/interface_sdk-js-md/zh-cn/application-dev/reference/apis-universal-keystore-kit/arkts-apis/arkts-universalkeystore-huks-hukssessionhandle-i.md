@@ -17,7 +17,7 @@ challenge?: Uint8Array
 ```
 
 表示  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)操作之后获取到的challenge信息。默认为undefined。
+[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Uint8Array
 

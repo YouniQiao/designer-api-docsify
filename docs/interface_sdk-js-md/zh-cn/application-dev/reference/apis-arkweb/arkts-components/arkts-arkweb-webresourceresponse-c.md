@@ -168,7 +168,7 @@ getResponseHeader(): Array<Header>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Header&gt; | 返回资源响应头。 |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | 返回资源响应头。 |
 
 ## getResponseIsReady
 
@@ -334,7 +334,7 @@ setResponseHeader(header: Array<Header>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | 是 | 要设置的资源响应头。 |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | 是 | 要设置的资源响应头。 |
 
 ## setResponseIsReady
 

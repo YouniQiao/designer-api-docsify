@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## getDragPreview
@@ -16,8 +16,8 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 > **NOTE：**
 > 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object
+> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
+> [UIContext](@ohos.arkui.UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object
 > associated with the current UI context.
 
 **Since:** 11
@@ -26,7 +26,7 @@ Obtains the **DragPreview** object, which represents the preview displayed durin
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.DragController#getDragPreview
+**Substitutes:** [getDragPreview](ohos.arkui.UIContext.DragController#getDragPreview)
 
 **Model restriction:** This API can be used only in the stage model.
 

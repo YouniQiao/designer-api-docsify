@@ -34,7 +34,7 @@ Returns an iterator over the entries of the Map.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | iterator over entries. |
+| IterableIterator&lt;[K, V]&gt; | iterator over entries. |
 
 ## clear
 
@@ -226,7 +226,7 @@ Returns elements from the Map as an array of Entries.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | an array of Entries. |
+| IterableIterator&lt;[K, V]&gt; | an array of Entries. |
 
 ## forEach
 
@@ -389,7 +389,7 @@ Returns elements from the Map as an keys Iterator.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | iterator with map keys. |
+| IterableIterator&lt;K&gt; | iterator with map keys. |
 
 ## set
 
@@ -468,7 +468,7 @@ Returns elements from the Map as an values Iterator.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | iterator with map values. |
+| IterableIterator&lt;V&gt; | iterator with map values. |
 
 ## size
 

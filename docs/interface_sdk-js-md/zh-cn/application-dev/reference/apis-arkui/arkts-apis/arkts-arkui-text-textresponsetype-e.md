@@ -88,7 +88,7 @@ SELECT = 2
 DEFAULT = 3
 ```
 
-注册此类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT时，右键、长按、鼠标、[selection](selection)选中均会触发并显示此类型对应的菜单。
+注册此类型的菜单，但未注册RIGHT_CLICK、LONG_PRESS、SELECT时，右键、长按、鼠标、[selection](arkts-arkui-text-textattribute-i.md#selection)选中均会触发并显示此类型对应的菜单。
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 

@@ -25,4 +25,4 @@ Defines the dimension property with number with units(vp|px|fp|lpx|%), and resou
 | [FP](arkts-arkui-fp-t.md) |
 | [LPX](arkts-arkui-lpx-t.md) |
 | [Percentage](arkts-arkui-percentage-t.md) |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |
+| [Resource](arkts-arkui-resource-t.md) |

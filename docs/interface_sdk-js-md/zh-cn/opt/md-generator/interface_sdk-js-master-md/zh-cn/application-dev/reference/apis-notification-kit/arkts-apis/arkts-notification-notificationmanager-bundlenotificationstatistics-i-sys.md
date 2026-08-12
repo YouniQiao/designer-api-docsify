@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## bundle
@@ -24,7 +24,7 @@ bundle: BundleOption
 
 指定应用的包信息。
 
-**类型：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md)
+**类型：** BundleOption
 
 **起始版本：** 26.0.0
 

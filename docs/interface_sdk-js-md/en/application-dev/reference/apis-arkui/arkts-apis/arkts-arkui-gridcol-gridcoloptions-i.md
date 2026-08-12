@@ -18,7 +18,7 @@ offset?: int | GridColColumnOption
 
 Sets the offset of current gird-container item.
 
-**Type:** int \| GridColColumnOption
+**Type:** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ order?: int | GridColColumnOption
 
 Sets the order of current gird-container item.
 
-**Type:** int \| GridColColumnOption
+**Type:** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ span?: int | GridColColumnOption
 
 Sets the span of current gird-container item.
 
-**Type:** int \| GridColColumnOption
+**Type:** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **Since:** 23
 

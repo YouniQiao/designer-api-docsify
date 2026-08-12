@@ -4,7 +4,7 @@
 type OnSuperResolutionChanged = (enabled: boolean) => void
 ```
 
-Describes the callback used to listen for video super resolution status changes. If super resolution is enabled by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md), this callback is invoked to report the super resolution status changes. It is also invoked to report the initial status when the video starts. However,this callback is not invoked when super resolution is not enabled.
+Describes the callback used to listen for video super resolution status changes. If super resolution is enabled by using [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md#PlaybackStrategy), this callback is invoked to report the super resolution status changes. It is also invoked to report the initial status when the video starts. However,this callback is not invoked when super resolution is not enabled.
 
 Super resolution is automatically disabled in either of the following cases:
 

@@ -1,7 +1,7 @@
 # AVMetadataExtractor
 
 元数据获取类，用于从媒体资源中获取元数据、缩略图。在调用AVMetadataExtractor的方法前，需要先通过  
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor)构建一个AVMetadataExtractor实例。
+[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor)构建一个AVMetadataExtractor实例。
 
 获取音频或视频元数据、视频缩略图的demo可参考：[使用AVMetadataExtractor提取音视频元数据信息(ArkTS)](../../../media/media/avmetadataextractor.md)。
 
@@ -55,8 +55,8 @@ fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
 
 ## fetchAlbumCover
 
@@ -76,14 +76,14 @@ fetchAlbumCover(): Promise<image.PixelMap>
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
 
 ## fetchFrameByTime
 
@@ -111,16 +111,16 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## fetchFrameByTimeWithTimeout
 
@@ -146,23 +146,23 @@ fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param:
 | timeUs | number | 是 |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 |
-| timeoutMs | number | 是 |
+| [timeoutMs](../../apis-ability-kit/arkts-apis/arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;image.PixelMap \| undefined&gt; |
+| Promise & lt;image.PixelMap \ | undefined & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../errorcode-media.md#5400104-操作超时) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## fetchFramesByTimes
 
@@ -200,12 +200,12 @@ fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: P
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../errorcode-media.md#5400104-操作超时) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## fetchFramesByTimesWithTimeout
 
@@ -239,19 +239,19 @@ fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOption
 | timesUs | number[] | 是 |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 是 |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | 是 |
-| timeoutMs | number | 是 |
+| [timeoutMs](../../apis-ability-kit/arkts-apis/arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | number | 是 |
 | callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../errorcode-media.md#5400104-操作超时) |
-| [5400105](../errorcode-media.md#5400105-播放服务死亡) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## fetchMetadata
 
@@ -277,9 +277,9 @@ fetchMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
 
 ## fetchMetadata
 
@@ -299,15 +299,15 @@ fetchMetadata(): Promise<AVMetadata>
 
 | 类型 |
 | --- |
-| Promise&lt;AVMetadata&gt; |
+| Promise & lt;AVMetadata & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
 
 ## fetchMetadataWithTimeout
 
@@ -329,23 +329,23 @@ fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| timeoutMs | number | 是 |
+| [timeoutMs](../../apis-ability-kit/arkts-apis/arkts-ability-app-appstartup-startupconfig-startupconfig-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;AVMetadata \| undefined&gt; |
+| Promise & lt;AVMetadata \ | undefined & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5411012](../errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
-| [5400106](../errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../errorcode-media.md#5400104-操作超时) |
-| [5400108](../errorcode-media.md#5400108-参数超过取值范围) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5411012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-http明文拦截导致请求不受支持) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) |
 
 ## release
 
@@ -371,7 +371,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## release
 
@@ -391,13 +391,13 @@ release(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setUrlSource
 
@@ -406,8 +406,8 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
 网络点播资源地址描述，通过该接口设置数据源。只支持获取网络  
-[fetchMetadata](arkts-media-media-avmetadataextractor-i.md#fetchmetadata)（元数据）和  
-[fetchFrameByTime](arkts-media-media-avmetadataextractor-i.md#fetchframebytime)（缩略图），在获取之前，必须设置媒体资源URL。
+[fetchMetadata](#fetchMetadata)（元数据）和  
+[fetchFrameByTime](#fetchFrameByTime)（缩略图），在获取之前，必须设置媒体资源URL。
 
 **起始版本：** 20
 
@@ -420,7 +420,7 @@ setUrlSource(url: string, headers?: Record<string, string>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | url | string | 是 |
-| headers | Record&lt;string, string&gt; | 否 |
+| headers | Record & lt;string, string & gt; | 否 |
 
 ## dataSrc
 

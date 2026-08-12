@@ -14,7 +14,7 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#addSlot
+**替代接口：** [addSlot](ohos.notificationManager/notificationManager#addSlot)
 
 <!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -24,7 +24,7 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 要创建的通知通道的类型。 |
+| type | SlotType | 是 | 要创建的通知通道的类型。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
 
@@ -42,7 +42,7 @@ function addSlot(type: SlotType): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#addSlot
+**替代接口：** [addSlot](ohos.notificationManager/notificationManager#addSlot)
 
 <!--Device-notification-function addSlot(type: SlotType): Promise<void>--><!--Device-notification-function addSlot(type: SlotType): Promise<void>-End-->
 
@@ -52,7 +52,7 @@ function addSlot(type: SlotType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SlotType](arkts-notification-notificationmanager-slottype-e.md) | 是 | 要创建的通知通道的类型。 |
+| type | SlotType | 是 | 要创建的通知通道的类型。 |
 
 **返回值：**
 

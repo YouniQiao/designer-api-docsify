@@ -34,7 +34,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| Coordinate2D | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## displayX
 

@@ -17,7 +17,7 @@ function remove(
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#remove
+**替代接口：** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -32,7 +32,7 @@ function remove(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
-| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
+| [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -49,7 +49,7 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#remove
+**替代接口：** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -64,14 +64,14 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 |
-| notificationKey | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
+| [notificationKey](arkts-notification-notificationrequest-notificationfilter-i-sys.md) | [NotificationKey](arkts-notification-notificationsubscribe-notificationkey-i-sys.md) | 是 |
 | reason | [RemoveReason](arkts-notification-notificationsubscribe-removereason-e-sys.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## remove
@@ -86,7 +86,7 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#remove
+**替代接口：** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -117,7 +117,7 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#remove
+**替代接口：** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -138,4 +138,4 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

@@ -8,14 +8,14 @@ By提供的API能力具有以下几个特点：
 
 2、控件属性支持多种匹配模式。
 
-3、支持控件绝对定位，相对定位，可通过[By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isbefore)和  
-[By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](arkts-test-uitest-by-c.md#isafter)等API限定邻近控件特征进行辅助定位。
+3、支持控件绝对定位，相对定位，可通过[By.isBefore&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isBefore)和  
+[By.isAfter&lt;sup&gt;(deprecated)&lt;/sup&gt;](#isAfter)等API限定邻近控件特征进行辅助定位。
 
 By类提供的所有API均为同步接口，建议使用者通过静态构造器BY来链式创建By对象。
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[On&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[On&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#On)替代。
 
 **起始版本：** 8
 
@@ -23,7 +23,7 @@ By类提供的所有API均为同步接口，建议使用者通过静态构造器
 
 **废弃版本：** 9
 
-**替代接口：** [On](arkts-test-uitest-on-c.md)
+**替代接口：** [On](arkts-test-uitest-on-c.md#On)
 
 <!--Device-unnamed-declare class By--><!--Device-unnamed-declare class By-End-->
 
@@ -47,7 +47,7 @@ clickable(b?: boolean): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#clickable](arkts-test-uitest-on-c.md#clickable)
+**替代接口：** [clickable](arkts-test-uitest-on-c.md#clickable)
 
 <!--Device-By-clickable(b?: boolean): By--><!--Device-By-clickable(b?: boolean): By-End-->
 
@@ -92,7 +92,7 @@ enabled(b?: boolean): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#enabled](arkts-test-uitest-on-c.md#enabled)
+**替代接口：** [enabled](arkts-test-uitest-on-c.md#enabled)
 
 <!--Device-By-enabled(b?: boolean): By--><!--Device-By-enabled(b?: boolean): By-End-->
 
@@ -137,7 +137,7 @@ focused(b?: boolean): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#focused](arkts-test-uitest-on-c.md#focused)
+**替代接口：** [focused](arkts-test-uitest-on-c.md#focused)
 
 <!--Device-By-focused(b?: boolean): By--><!--Device-By-focused(b?: boolean): By-End-->
 
@@ -182,7 +182,7 @@ id(id: number): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#id](arkts-test-uitest-on-c.md#id)(id:
+**替代接口：** [id](On#id(id:)
 
 <!--Device-By-id(id: number): By--><!--Device-By-id(id: number): By-End-->
 
@@ -219,7 +219,7 @@ isAfter(by: By): By
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isAfter&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isafter)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isAfter&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isAfter)替代。
 
 **起始版本：** 8
 
@@ -227,7 +227,7 @@ isAfter(by: By): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#isAfter](arkts-test-uitest-on-c.md#isafter)(on:
+**替代接口：** [isAfter](On#isAfter(on:)
 
 <!--Device-By-isAfter(by: By): By--><!--Device-By-isAfter(by: By): By-End-->
 
@@ -265,7 +265,7 @@ isBefore(by: By): By
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[isBefore&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isbefore)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[isBefore&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-on-c.md#isBefore)替代。
 
 **起始版本：** 8
 
@@ -273,7 +273,7 @@ isBefore(by: By): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#isBefore](arkts-test-uitest-on-c.md#isbefore)(on:
+**替代接口：** [isBefore](On#isBefore(on:)
 
 <!--Device-By-isBefore(by: By): By--><!--Device-By-isBefore(by: By): By-End-->
 
@@ -319,7 +319,7 @@ key(key: string): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#id](arkts-test-uitest-on-c.md#id)(id:
+**替代接口：** [id](On#id(id:)
 
 <!--Device-By-key(key: string): By--><!--Device-By-key(key: string): By-End-->
 
@@ -364,7 +364,7 @@ scrollable(b?: boolean): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#scrollable](arkts-test-uitest-on-c.md#scrollable)
+**替代接口：** [scrollable](arkts-test-uitest-on-c.md#scrollable)
 
 <!--Device-By-scrollable(b?: boolean): By--><!--Device-By-scrollable(b?: boolean): By-End-->
 
@@ -409,7 +409,7 @@ selected(b?: boolean): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#selected](arkts-test-uitest-on-c.md#selected)
+**替代接口：** [selected](arkts-test-uitest-on-c.md#selected)
 
 <!--Device-By-selected(b?: boolean): By--><!--Device-By-selected(b?: boolean): By-End-->
 
@@ -454,7 +454,7 @@ text(txt: string, pattern?: MatchPattern): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#text](arkts-test-uitest-on-c.md#text)
+**替代接口：** [text](arkts-test-uitest-on-c.md#text)
 
 <!--Device-By-text(txt: string, pattern?: MatchPattern): By--><!--Device-By-text(txt: string, pattern?: MatchPattern): By-End-->
 
@@ -465,7 +465,7 @@ text(txt: string, pattern?: MatchPattern): By
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | txt | string | 是 | 指定控件文本，用于匹配目标控件文本。 |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md)。 |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | 否 | 指定的文本匹配模式，默认为[EQUALS](arkts-test-uitest-matchpattern-e.md#MatchPattern)。 |
 
 **返回值：**
 
@@ -500,7 +500,7 @@ type(tp: string): By
 
 **废弃版本：** 9
 
-**替代接口：** [On#type](arkts-test-uitest-on-c.md#type)(tp:
+**替代接口：** [type](On#type(tp:)
 
 <!--Device-By-type(tp: string): By--><!--Device-By-type(tp: string): By-End-->
 

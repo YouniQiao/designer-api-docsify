@@ -12,7 +12,7 @@ Adds a notification slot of a specified type. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#addSlot
+**Substitutes:** [addSlot](ohos.notificationManager/notificationManager#addSlot)
 
 <!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void--><!--Device-notification-function addSlot(type: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#addSlot
+**Substitutes:** [addSlot](ohos.notificationManager/notificationManager#addSlot)
 
 <!--Device-notification-function addSlot(type: SlotType): Promise<void>--><!--Device-notification-function addSlot(type: SlotType): Promise<void>-End-->
 
@@ -54,4 +54,4 @@ Adds a notification slot of a specified type. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

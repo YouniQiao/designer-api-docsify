@@ -11,7 +11,7 @@ Describes the options for tiff image packing.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## compression
@@ -43,7 +43,7 @@ orientation?: Orientation
 
 Image orientation.Default value is TOP_LEFT.
 
-**Type:** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
+**Type:** Orientation
 
 **Since:** 26.0.0
 

@@ -20,13 +20,13 @@ declare function stat(file: string | number): Promise<Stat>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Stat&gt; |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; |
 
 **错误码：**
 
@@ -67,8 +67,8 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 |
 
 **错误码：**
 

@@ -13,7 +13,7 @@ NavDestination info.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## index
@@ -44,7 +44,7 @@ mode?: NavDestinationMode
 
 NavDestination mode.
 
-**Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**Type:** NavDestinationMode
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ name: ResourceStr
 
 Changed NavDestination name.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 
@@ -104,7 +104,7 @@ navigationId: ResourceStr
 
 Navigation id.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 
@@ -144,7 +144,7 @@ size?: Size
 
 NavDestination size.
 
-**Type:** [Size](../arkts-components/arkts-arkui-size-i.md)
+**Type:** Size
 
 **Since:** 23
 

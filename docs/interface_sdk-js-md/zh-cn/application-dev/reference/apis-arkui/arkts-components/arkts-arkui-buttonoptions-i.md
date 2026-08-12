@@ -17,7 +17,7 @@ buttonStyle?: ButtonStyleMode
 ```
 
 按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
 [fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonStyleMode.EMPHASIZED 
@@ -26,7 +26,7 @@ buttonStyle?: ButtonStyleMode
 
 按钮重要程度：强调按钮>普通按钮>文字按钮。
 
-**类型：** [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md)
+**类型：** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
 **默认值：** ButtonStyleMode.EMPHASIZED
 
@@ -79,7 +79,7 @@ role?: ButtonRole
 ```
 
 按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor)、  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
 [fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonRole.NORMAL
@@ -144,7 +144,7 @@ type?: ButtonType
 
 API version 18及之后，ButtonType的默认值修改为ButtonType.ROUNDED_RECTANGLE。API version 18之前的版本，ButtonType的默认值为ButtonType.Capsule。
 
-**类型：** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
+**类型：** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **起始版本：** 7
 

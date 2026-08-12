@@ -13,7 +13,7 @@ Represents the number and size of local and cloud files of an application.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from 'kits/@kit.CoreFileKit';
+import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
 ## bothFileCount

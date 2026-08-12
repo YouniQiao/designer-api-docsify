@@ -1,8 +1,8 @@
 # RadioAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** RadioAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** RadioAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<RadioAttribute> | Attribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RadioAttribute](arkts-arkui-radio-radioattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 在Radio组件上，定 制属性区的方法。&lt;br/&gt;RadioAttribute表示 [属性](../../../reference/apis-arkui/arkui-ts/ts-basic-components-radio.md#RadioAttribute)。&lt;br/&gt;CommonMethod表示 [通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)和[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。&lt;br/&gt;modifier：属性修改器，开发者需要自定义class实现AttributeModifier接口。&lt;br/&gt;当 modifier的值为undefined时，不使用属性修改器。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RadioAttribute](arkts-arkui-radio-radioattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | 在Radio组件上，定 制属性区的方法。&lt;br/&gt;RadioAttribute表示 [属性](../../../reference/apis-arkui/arkui-ts/ts-basic-components-radio.md#RadioAttribute)。&lt;br/&gt;CommonMethod表示 [通用属性](common)和[通用事件](common)。&lt;br/&gt;modifier：属性修改器，开发者需要自定义class实现AttributeModifier接口。&lt;br/&gt;当 modifier的值为undefined时，不使用属性修改器。 |
 
 **返回值：**
 
@@ -48,7 +48,7 @@ default attributeModifier(modifier: AttributeModifier<RadioAttribute> | Attribut
 default checked(isChecked: boolean | undefined | Bindable<boolean>): this
 ```
 
-设置单选框的选中状态。与[checked](arkts-arkui-radio-radioattribute-i.md#checked)相比，isChecked参数新增了对undefined类型的支持。
+设置单选框的选中状态。与[checked](checked)相比，isChecked参数新增了对undefined类型的支持。
 
 该属性支持Bindable双向绑定变量。
 
@@ -66,7 +66,7 @@ default checked(isChecked: boolean | undefined | Bindable<boolean>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isChecked | boolean \| undefined \| Bindable&lt;boolean&gt; | 是 | 单选框的选中状态。&lt;br/&gt;默认值：false&lt;br/&gt;当isChecked的值为undefined 时取默认值false。&lt;br/&gt;值为true时，单选框被选中。值为false时，单选框不被选中。 |
+| isChecked | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | 是 | 单选框的选中状态。&lt;br/&gt;默认值：false&lt;br/&gt;当isChecked的值为undefined 时取默认值false。&lt;br/&gt;值为true时，单选框被选中。值为false时，单选框不被选中。 |
 
 **返回值：**
 
@@ -97,7 +97,7 @@ default contentModifier(modifier: ContentModifier<RadioConfiguration> | undefine
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;RadioConfiguration&gt; \| undefined | 是 | 在Radio组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需 要自定义class实现ContentModifier接口。&lt;br/&gt;当modifier的值为undefined时，不使用内容修改器。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[RadioConfiguration](arkts-arkui-radio-radioconfiguration-i.md)&gt; \| undefined | 是 | 在Radio组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改器，开发者需 要自定义class实现ContentModifier接口。&lt;br/&gt;当modifier的值为undefined时，不使用内容修改器。 |
 
 **返回值：**
 
@@ -127,7 +127,7 @@ default onChange(callback: OnRadioChangeCallback | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnRadioChangeCallback](../arkts-components/arkts-arkui-onradiochangecallback-t.md) \| undefined | 是 | 单选框选中状态改变时触发该回调。&lt;br/&gt;当callback的值为undefined时，不使用回调函数。 |
+| callback | [OnRadioChangeCallback](arkts-arkui-onradiochangecallback-t.md) \| undefined | 是 | 单选框选中状态改变时触发该回调。&lt;br/&gt;当callback的值为undefined时，不使用回调函数。 |
 
 **返回值：**
 

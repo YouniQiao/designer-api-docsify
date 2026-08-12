@@ -11,7 +11,7 @@ Declare the options of AdvancedDialogV2Button
 ## Modules to Import
 
 ```TypeScript
-import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from 'kits/@kit.ArkUI';
+import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from '@kit.ArkUI';
 ```
 
 ## action
@@ -40,7 +40,7 @@ background?: ColorMetrics
 
 Sets the background color of a button.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -146,7 +146,7 @@ fontColor?: ColorMetrics
 
 Sets the Button Text Color.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -188,7 +188,7 @@ textAlign?: TextAlign
 
 Set the alignment mode for the button label.
 
-**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Default:** { TextAlign.Start }
 

@@ -18,7 +18,7 @@ deleteEntries: Entry[]
 
 数据删除记录。
 
-**类型：** [Entry](arkts-arkdata-distributeddata-entry-i.md)[]
+**类型：** Entry[]
 
 **起始版本：** 9
 
@@ -58,7 +58,7 @@ insertEntries: Entry[]
 
 数据添加记录。
 
-**类型：** [Entry](arkts-arkdata-distributeddata-entry-i.md)[]
+**类型：** Entry[]
 
 **起始版本：** 9
 
@@ -78,7 +78,7 @@ updateEntries: Entry[]
 
 数据更新记录。
 
-**类型：** [Entry](arkts-arkdata-distributeddata-entry-i.md)[]
+**类型：** Entry[]
 
 **起始版本：** 9
 

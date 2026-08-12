@@ -19,7 +19,7 @@ The module provides pure type definitions for common capabilities within MDM Kit
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import { common } from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -28,9 +28,9 @@ import { common } from 'kits/@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | Defines application instance data.  It is used as an input parameter in the  [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addusernonstopapps),  [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeusernonstopapps),  [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addfreezeexemptedapps), and  [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removefreezeexemptedapps)APIs. |
-| [InstallationResult](arkts-mdm-common-installationresult-i.md) | An object that holds the application installation result.  This object is used as a callback parameter in  [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult). |
-| [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | Defines the policy change event.  This API is used as a callback input parameter of  [onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onadminpolicychanged). |
+| [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | Defines application instance data.  It is used as an input parameter in the  [addUserNonStopApps](arkts-mdm-applicationmanager-addusernonstopapps-f.md#addUserNonStopApps),  [removeUserNonStopApps](arkts-mdm-applicationmanager-removeusernonstopapps-f.md#removeUserNonStopApps),  [addFreezeExemptedApps](arkts-mdm-applicationmanager-addfreezeexemptedapps-f.md#addFreezeExemptedApps), and  [removeFreezeExemptedApps](arkts-mdm-applicationmanager-removefreezeexemptedapps-f.md#removeFreezeExemptedApps)APIs. |
+| [InstallationResult](arkts-mdm-common-installationresult-i.md) | An object that holds the application installation result.  This object is used as a callback parameter in  [EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult). |
+| [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | Defines the policy change event.  This API is used as a callback input parameter of  [onAdminPolicyChanged](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onAdminPolicyChanged). |
 
 ### Enums
 
@@ -38,11 +38,11 @@ import { common } from 'kits/@kit.MDMKit';
 | --- | --- |
 | [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | Enumerates enterprise device management policies. |
 | [Result](arkts-mdm-common-result-e.md) | Enumerates application installation results. |
-| [StartupScene](arkts-mdm-common-startupscene-e.md) | Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first-time startup wizard are complete, the device system calls the  [onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onstartupguidecompleted)API to notify the device administrator application. |
+| [StartupScene](arkts-mdm-common-startupscene-e.md) | Startup wizard completion scenario. When the initial switch to a sub-user (only on PCs), OTA upgrade, and first-time startup wizard are complete, the device system calls the  [onStartupGuideCompleted](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onStartupGuideCompleted)API to notify the device administrator application. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | **EnterpriseAdminExtensionContext** is the context of  [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md)and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md). |
+| [EnterpriseAdminExtensionContext](arkts-mdm-common-enterpriseadminextensioncontext-t.md) | **EnterpriseAdminExtensionContext** is the context of  [EnterpriseAdminExtensionAbility](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#EnterpriseAdminExtensionAbility)and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext). |
 

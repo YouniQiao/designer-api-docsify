@@ -36,7 +36,7 @@ accessibilityDescription?: ResourceStr
 
 Switch/CheckBox/Radio的无障碍描述。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ accessibilityText?: ResourceStr
 
 Switch/CheckBox/Radio的无障碍文本属性。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

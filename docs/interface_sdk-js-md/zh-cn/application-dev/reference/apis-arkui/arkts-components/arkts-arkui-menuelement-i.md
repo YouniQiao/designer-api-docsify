@@ -64,7 +64,7 @@ icon?: ResourceStr
 
 菜单项图标。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 
@@ -108,7 +108,7 @@ value: ResourceStr
 
 菜单项文本。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 7
 

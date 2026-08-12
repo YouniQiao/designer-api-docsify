@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryContactSyncInfo
@@ -34,18 +34,18 @@ If the returned contact synchronization information is empty, the invoking party
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Indicates the context of the application or capability. |
+| context | Context | Yes | Indicates the context of the application or capability. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ContactSyncInfo&gt;&gt; | Returns the array of contacts synchronization information for the calling application. Returns null if no contacts are being synchronized. |
+| Promise&lt;Array&lt;[ContactSyncInfo](arkts-contacts-contact-contactsyncinfo-i.md)&gt;&gt; | Returns the array of contacts synchronization information for the calling application. Returns null if no contacts are being synchronized. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
 

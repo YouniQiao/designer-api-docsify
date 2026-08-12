@@ -114,7 +114,7 @@ onWindowReady(window: window.Window): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [window](../arkts-components/arkts-arkui-window-t.md) | window.Window | 是 |
+| [window](arkts-arkui-window-n.md) | window.Window | 是 |
 
 ## 示例
 

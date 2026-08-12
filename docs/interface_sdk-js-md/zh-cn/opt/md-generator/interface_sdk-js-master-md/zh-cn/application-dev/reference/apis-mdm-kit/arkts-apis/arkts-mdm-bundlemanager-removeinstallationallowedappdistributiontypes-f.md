@@ -7,9 +7,9 @@ function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistribut
 ```
 
 移除应用的分发类型。若只移除了数组中部分的分发类型，则当前设备可以安装数组中剩下的分发类型的应用，但无法安装  
-[AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)中未添加的分发类型的应用。
+[AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md#AppDistributionType)中未添加的分发类型的应用。
 
-应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](arkts-mdm-bundlemanager-applicationinfo-i.md)的appDistributionType属性。
+应用程序签名证书的分发类型详细介绍请参见[ApplicationInfo](../../apis-ability-kit/arkts-apis/arkts-ability-applicationinfo-i.md#ApplicationInfo)的appDistributionType属性。
 
 **起始版本：** 20
 
@@ -26,16 +26,16 @@ function removeInstallationAllowedAppDistributionTypes(admin: Want, appDistribut
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
-| appDistributionTypes | Array&lt;AppDistributionType&gt; | 是 |
+| appDistributionTypes | Array & lt;AppDistributionType & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

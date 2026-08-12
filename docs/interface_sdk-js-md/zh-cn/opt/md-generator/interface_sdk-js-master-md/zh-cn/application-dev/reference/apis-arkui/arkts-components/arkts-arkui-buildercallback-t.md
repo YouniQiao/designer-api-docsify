@@ -20,4 +20,4 @@ declare type BuilderCallback<Args extends Object[] = any[]> = (...args: Args) =>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| args | Args | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Args | 是 |

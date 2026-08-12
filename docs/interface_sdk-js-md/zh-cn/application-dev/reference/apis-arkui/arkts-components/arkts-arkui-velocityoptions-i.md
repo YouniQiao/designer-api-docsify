@@ -24,7 +24,7 @@ angle: ParticleTuple<number, number>
 
 默认值：[0.0,0.0]
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **起始版本：** 10
 
@@ -48,7 +48,7 @@ speed: ParticleTuple<number, number>
 
 默认值：[0.0,0.0]
 
-**类型：** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **起始版本：** 10
 

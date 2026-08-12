@@ -34,14 +34,14 @@ Obtains the supported portrait effects.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;PortraitEffect&gt; | Array of portrait effects supported. |
+| Array&lt;[PortraitEffect](arkts-camera-camera-portraiteffect-e-sys.md)&gt; | Array of portrait effects supported. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from 'kits/@kit.BasicServicesKit';
+import { systemLoad } from '@kit.BasicServicesKit';
 ```
 
 ## off('systemLoadChange')
@@ -27,13 +27,13 @@ Disables listening for system load level changes. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'systemLoadChange' | Yes | Change type. This parameter has a fixed value of **systemLoadChange**. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SystemLoadLevel&gt; | No | Callback used to return the system load level. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; | No | Callback used to return the system load level. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Callback parameter error; &lt;br&gt; 2. Unregister type has not register; 3. Parameter verification failed. |
 
 ## Examples
 

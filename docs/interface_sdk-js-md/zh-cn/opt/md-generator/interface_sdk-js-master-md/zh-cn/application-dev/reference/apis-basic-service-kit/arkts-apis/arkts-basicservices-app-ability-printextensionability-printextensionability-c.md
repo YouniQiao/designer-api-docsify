@@ -34,7 +34,7 @@ public onCancelPrintJob(jobInfo: print.PrintJob): void
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## onConnectPrinter
 
@@ -202,7 +202,7 @@ onRequestPreview(jobInfo: print.PrintJob): string
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -251,7 +251,7 @@ public onRequestPrinterCapability(printerId: number): print.PrinterCapability
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## onStartDiscoverPrinter
 
@@ -259,7 +259,7 @@ public onRequestPrinterCapability(printerId: number): print.PrinterCapability
 onStartDiscoverPrinter(): void
 ```
 
-开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addprintertodiscovery) 将发现的打印机信息上报给系统。
+开始发现打印机时调用。开发者可在此回调中实现自己的打印机发现逻辑，可通过 [addPrinterToDiscovery](arkts-basicservices-print-addprintertodiscovery-f.md#addPrinterToDiscovery) 将发现的打印机信息上报给系统。
 
 **起始版本：** 14
 
@@ -308,7 +308,7 @@ public onStartPrintJob(jobInfo: print.PrintJob): void
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## onStopDiscoverPrinter
 

@@ -4,7 +4,7 @@
 export type UIAbilityContext = _UIAbilityContext.default
 ```
 
-Defines the context environment for the [UIAbility](arkts-app-ability-uiability.md). It inherits from Context.
+Defines the context environment for the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). It inherits from Context.
 
 **Since:** 9
 

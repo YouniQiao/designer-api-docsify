@@ -20,4 +20,4 @@ Callback for updating the forms.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| configInfo | Array&lt;FormCustomConfig&gt; | Yes |
+| configInfo | Array&lt;[FormCustomConfig](arkts-form-forminfo-formcustomconfig-i-sys.md)&gt; | Yes |

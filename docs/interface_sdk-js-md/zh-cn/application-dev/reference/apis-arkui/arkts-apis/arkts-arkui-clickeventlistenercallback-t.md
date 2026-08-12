@@ -20,6 +20,6 @@ type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | 是 | the information of ClickEvent |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 否 | the information of frameNode |
+| event | [ClickEvent](arkts-arkui-common-clickevent-i.md) | 是 | the information of ClickEvent |
+| node | FrameNode | 否 | the information of frameNode |
 

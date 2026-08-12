@@ -18,7 +18,7 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 
 设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置。默认值：{"size":["0.00px","0.00px"]}
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| LeadingMarginPlaceholder
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
 
 **起始版本：** 23
 
@@ -86,12 +86,12 @@ shaderStyle?: ShaderStyle
 
 设置文本着色器效果。
 
-该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md)的fontColor。
+该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#RichEditorTextStyleResult)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
+[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#RichEditorTextStyleResult)的fontColor。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**类型：** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
 
@@ -133,7 +133,7 @@ textDirection?: TextDirection
 
 默认值：TextDirection.DEFAULT
 
-**类型：** [TextDirection](arkts-arkui-textdirection-e.md)
+**类型：** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **起始版本：** 23
 
@@ -157,7 +157,7 @@ textVerticalAlign?: TextVerticalAlign
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
+**类型：** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
 
 **起始版本：** 24
 

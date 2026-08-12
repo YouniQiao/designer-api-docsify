@@ -20,7 +20,7 @@ Describes a region, which is used to describe the region where the shape can be 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -55,7 +55,7 @@ Copies a **Region** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 ## constructor
 
@@ -178,7 +178,7 @@ Checks whether another region is equal to this region.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Return value:**
 
@@ -217,7 +217,7 @@ Checks whether a point is contained in this region.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isRect
 
@@ -259,7 +259,7 @@ Checks whether another region is contained in this region.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| other | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| other | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Return value:**
 
@@ -271,7 +271,7 @@ Checks whether another region is contained in this region.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## offset
 
@@ -312,7 +312,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 | regionOp | [RegionOp](arkts-arkgraphics2d-drawing-regionop-e.md) | Yes |
 
 **Return value:**
@@ -325,7 +325,7 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## quickContains
 
@@ -391,7 +391,7 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## quickRejectRegion
 
@@ -411,7 +411,7 @@ Checks whether the existing region does not intersect with another region. Actua
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Return value:**
 
@@ -452,7 +452,7 @@ Sets a region that matches the outline of a path within the cropping area.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | Yes |
-| clip | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| clip | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |
 
 **Return value:**
 
@@ -464,7 +464,7 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setRect
 
@@ -499,7 +499,7 @@ Sets a rectangle.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setRegion
 
@@ -519,4 +519,4 @@ Sets the existing region to another region.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| region | [Region](../../apis-image-kit/arkts-apis/arkts-image-image-region-i.md) | Yes |
+| region | [Region](arkts-arkgraphics2d-drawing-region-c.md) | Yes |

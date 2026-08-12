@@ -13,7 +13,7 @@ Font variable instance information, which stores preset variable font style info
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## coordinates

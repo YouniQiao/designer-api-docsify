@@ -24,7 +24,7 @@ columnWidths?: LengthMetrics[]
 
 1. 当文本长度大于列宽时，文本被截断。2. 当设置为异常值时，使用默认值。3. 支持设置为Undefined和Null，不支持Undefined[]和Null[]。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)[]
+**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)[]
 
 **起始版本：** 23
 
@@ -46,10 +46,10 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 **说明：**
 
-1. 单列数据选择器使用string[]，[Resource](arkts-arkui-resource-t.md)，  
-[TextPickerRangeContent](arkts-arkui-textpicker-textpickerrangecontent-i.md)[]类型。2. 多列非联动数据选择器使用string[][]类型。 3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md)[]类型。4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。5. range的类型及列数不可以动态修改。
+1. 单列数据选择器使用string[]，[Resource](Resource)，  
+[TextPickerRangeContent](arkts-arkui-textpicker-textpickerrangecontent-i.md#TextPickerRangeContent)[]类型。2. 多列非联动数据选择器使用string[][]类型。 3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md#TextCascadePickerRangeContent)[]类型。4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。5. range的类型及列数不可以动态修改。
 
-**类型：** string[] \| string[][] \| Resource \| TextPickerRangeContent[] \| TextCascadePickerRangeContent[]
+**类型：** string[] \| string[][] \| [Resource](arkts-arkui-resource-t.md) \| [TextPickerRangeContent](arkts-arkui-textpicker-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md)[]
 
 **起始版本：** 23
 
@@ -75,7 +75,7 @@ selected?: int | int[] | Bindable<int> | Bindable<int[]>
 
 1. 单列数据选择器使用int类型。2. 多列数据选择器使用int[]类型。3. 从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。
 
-**类型：** int \| int[] \| Bindable&lt;int&gt; \| Bindable&lt;int[]&gt;
+**类型：** int \| int[] \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int[]&gt;
 
 **起始版本：** 23
 
@@ -99,9 +99,9 @@ value?: BindableResourceStr | BindableResourceStrArray
 
 **说明：**
 
-1. 从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。2. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。3. 单列数据选择器使用[ResourceStr](arkts-arkui-resourcestr-t.md)类型。4. 多列数据选择器使用[ResourceStr](arkts-arkui-resourcestr-t.md)[]类型。
+1. 从API version 23开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync-static.md)双向绑定变量。2. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。3. 单列数据选择器使用[ResourceStr](ResourceStr)类型。4. 多列数据选择器使用[ResourceStr](ResourceStr)[]类型。
 
-**类型：** [BindableResourceStr](arkts-arkui-bindableresourcestr-t.md) \| BindableResourceStrArray
+**类型：** [BindableResourceStr](arkts-arkui-bindableresourcestr-t.md) \| [BindableResourceStrArray](arkts-arkui-bindableresourcestrarray-t.md)
 
 **起始版本：** 23
 

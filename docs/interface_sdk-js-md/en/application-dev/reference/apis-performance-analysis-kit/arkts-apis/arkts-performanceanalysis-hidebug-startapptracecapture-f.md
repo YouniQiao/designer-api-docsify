@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## startAppTraceCapture
@@ -13,7 +13,7 @@ function startAppTraceCapture(tags: long[], flag: TraceFlag, limitSize: int): st
 ```
 
 Starts automatic trace collection in a specified scope. This API is a supplement to the HiTrace module. The performance consumption during trace collection increases with the collection scope. Therefore, before using this API, you are advised to run the **hitrace** command to capture trace logs and select the key scope of trace collection to improve the API performance.  
-**startAppTraceCapture()** and [stopAppTraceCapture()](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopapptracecapture) must be called in pairs.Repeat calling of **startAppTraceCapture()** will cause exceptions. Trace collection consumes a lot of performance resources. Therefore, call **stopAppTraceCapture()** immediately after trace collection is complete.
+**startAppTraceCapture()** and [stopAppTraceCapture()](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopAppTraceCapture) must be called in pairs.Repeat calling of **startAppTraceCapture()** will cause exceptions. Trace collection consumes a lot of performance resources. Therefore, call **stopAppTraceCapture()** immediately after trace collection is complete.
 
 When an application calls **startAppTraceCapture()** to collect trace data and the size of the data exceeds the value of **limitSize**, the system automatically calls **stopAppTraceCapture()** to stop trace collection.Therefore, if **limitSize** is set improperly, the generated trace data is insufficient for fault analysis.Therefore, you need to evaluate the value of **limitSize** as required.
 
@@ -38,7 +38,7 @@ To obtain the unit trace traffic of an application, you can call **startAppTrace
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tags | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Scope for trace collection. For details, see [tags](arkts-performanceanalysis-hidebug-tags-n.md#tags). |
-| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Yes | For details, see [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md). |
+| flag | [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md) | Yes | For details, see [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md#TraceFlag). |
 | limitSize | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Limit on the trace file size, in bytes. The maximum size of a single file is 500 MB. |
 
 **Return value:**
@@ -51,10 +51,10 @@ To obtain the unit trace traffic of an application, you can call **startAppTrace
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid argument, Possible causes: 1.The limit parameter is too small. 2.The parameter is not within the enumeration type. 3.The parameter type error or parameter order error. |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Abnormal trace status. |
-| [11400103](../errorcode-hiviewdfx-hidebug-trace.md#11400103-permission-verification-failed) | No write permission on the file. |
-| [11400102](../errorcode-hiviewdfx-hidebug-trace.md#11400102-repeated-trace-capture) | Capture trace already enabled. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid argument, Possible causes: 1.The limit parameter is too small. 2.The parameter is not within the enumeration type. 3.The parameter type error or parameter order error. |
+| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Abnormal trace status. |
+| [11400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400103-permission-verification-failed) | No write permission on the file. |
+| [11400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400102-repeated-trace-capture) | Capture trace already enabled. |
 
 ## Examples
 

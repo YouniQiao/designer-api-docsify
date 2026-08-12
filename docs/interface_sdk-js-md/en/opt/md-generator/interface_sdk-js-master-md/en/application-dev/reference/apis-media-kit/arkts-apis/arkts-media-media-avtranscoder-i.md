@@ -1,6 +1,6 @@
 # AVTranscoder
 
-AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md#createavtranscoder) to create an AVTranscoder instance.
+AVTranscoder is a transcoding management class. It provides APIs to transcode videos. Before calling any API in AVTranscoder, you must use [createAVTranscoder()](arkts-media-media-createavtranscoder-f.md#createAVTranscoder) to create an AVTranscoder instance.
 
 For details about the AVTranscoder demo, see   
 [Using AVTranscoder for Transcoding](../../../media/media/using-avtranscoder-for-transcodering.md).
@@ -14,7 +14,7 @@ For details about the AVTranscoder demo, see
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addWatermark
@@ -44,16 +44,16 @@ add a watermark for the AVTranscoder. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## cancel
 
@@ -63,9 +63,9 @@ cancel(): Promise<void>
 
 Cancels video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](arkts-media-media-avtranscoder-i.md#prepare),   
-[start()](arkts-media-media-avtranscoder-i.md#start), [pause()](arkts-media-media-avtranscoder-i.md#pause), or   
-[resume()](arkts-media-media-avtranscoder-i.md#resume) API is called.
+This API can be called only after the [prepare()](#prepare),   
+[start()](#start), [pause()](#pause), or   
+[resume()](#resume) API is called.
 
 **Since:** 12
 
@@ -79,15 +79,15 @@ This API can be called only after the [prepare()](arkts-media-media-avtranscoder
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## off('complete')
 
@@ -167,7 +167,7 @@ on(type:'complete', callback: Callback<void>):void
 Subscribes to the event indicating that transcoding is complete. An application can subscribe to only one transcoding progress update event. When the application initiates multiple subscriptions to this event, the last subscription is applied. This API uses an asynchronous callback to return the result.
 
 When this event is reported, the current transcoding operation is complete. You need to call   
-[release()](arkts-media-media-avtranscoder-i.md#release) to exit the transcoding.
+[release()](#release) to exit the transcoding.
 
 **Since:** 12
 
@@ -190,7 +190,7 @@ When this event is reported, the current transcoding operation is complete. You 
 on(type:'error', callback: ErrorCallback):void
 ```
 
-Subscribes to AVTranscoder errors. If this event is reported, call [release()](arkts-media-media-avtranscoder-i.md#release) to exit the transcoding. This API uses an asynchronous callback to return the result.
+Subscribes to AVTranscoder errors. If this event is reported, call [release()](#release) to exit the transcoding. This API uses an asynchronous callback to return the result.
 
 An application can subscribe to only one AVTranscoder error event. When the application initiates multiple subscriptions to this event, the last subscription is applied.
 
@@ -213,14 +213,14 @@ An application can subscribe to only one AVTranscoder error event. When the appl
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## on('progressUpdate')
 
@@ -253,8 +253,8 @@ pause(): Promise<void>
 
 Pauses video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [start()](arkts-media-media-avtranscoder-i.md#start) API is called. You can call   
-[resume()](arkts-media-media-avtranscoder-i.md#resume) to resume transcoding.
+This API can be called only after the [start()](#start) API is called. You can call   
+[resume()](#resume) to resume transcoding.
 
 **Since:** 12
 
@@ -268,15 +268,15 @@ This API can be called only after the [start()](arkts-media-media-avtranscoder-i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## prepare
 
@@ -304,17 +304,17 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400106](../errorcode-media.md#5400106-format-not-supported) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## release
 
@@ -338,14 +338,14 @@ After the resources are released, you can no longer perform any operation on the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## resume
 
@@ -355,7 +355,7 @@ resume(): Promise<void>
 
 Resumes video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [pause()](arkts-media-media-avtranscoder-i.md#pause) API is called.
+This API can be called only after the [pause()](#pause) API is called.
 
 **Since:** 12
 
@@ -369,15 +369,15 @@ This API can be called only after the [pause()](arkts-media-media-avtranscoder-i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## start
 
@@ -387,7 +387,7 @@ start(): Promise<void>
 
 Starts video transcoding. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](arkts-media-media-avtranscoder-i.md#prepare) API is called.
+This API can be called only after the [prepare()](#prepare) API is called.
 
 **Since:** 12
 
@@ -401,15 +401,15 @@ This API can be called only after the [prepare()](arkts-media-media-avtranscoder
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../errorcode-media.md#5400103-io-error) |
-| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## fdDst
 

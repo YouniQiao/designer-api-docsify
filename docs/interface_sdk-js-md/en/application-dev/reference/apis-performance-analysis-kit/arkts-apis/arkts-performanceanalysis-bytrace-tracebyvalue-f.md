@@ -14,7 +14,7 @@ Defines a numeric variable that indicates the number of timeslice trace tasks.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.hiTraceMeter.traceByValue
+**Substitutes:** [traceByValue](ohos.hiTraceMeter.traceByValue)
 
 <!--Device-bytrace-function traceByValue(name: string, count: number): void--><!--Device-bytrace-function traceByValue(name: string, count: number): void-End-->
 

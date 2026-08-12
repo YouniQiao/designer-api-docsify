@@ -25,12 +25,12 @@ export declare function RichText(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string \| Resource | 是 | . |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | . |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichTextAttribute](../arkts-components/arkts-arkui-richtext-attribute.md) |  |
+| [RichTextAttribute](arkts-arkui-richtext-richtextattribute-i.md) |  |
 

@@ -98,7 +98,7 @@ barStyle?: BarStyle
 
 Set tool bar style.Default value: BarStyle.STANDARD.
 
-**Type:** [BarStyle](../arkts-components/arkts-arkui-barstyle-e.md)
+**Type:** [BarStyle](arkts-arkui-navigation-barstyle-e.md)
 
 **Default:** BarStyle.STANDARD
 

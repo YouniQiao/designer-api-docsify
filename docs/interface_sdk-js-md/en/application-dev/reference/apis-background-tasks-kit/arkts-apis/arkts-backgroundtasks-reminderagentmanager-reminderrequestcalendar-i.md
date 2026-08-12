@@ -4,7 +4,7 @@ ReminderRequestCalendar extends ReminderRequest
 
 Defines a reminder for a calendar event.
 
-**Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
+**Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
 **Since:** 9
 
@@ -17,7 +17,7 @@ Defines a reminder for a calendar event.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## dateTime
@@ -28,7 +28,7 @@ dateTime: LocalDateTime
 
 Reminder time.
 
-**Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
+**Type:** LocalDateTime
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ endDateTime?: LocalDateTime
 
 End time of the reminder.
 
-**Type:** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
+**Type:** LocalDateTime
 
 **Since:** 12
 

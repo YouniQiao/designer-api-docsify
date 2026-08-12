@@ -1,8 +1,8 @@
 # USBDevice
 
-USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)。
+USB设备信息，继承自[Device](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)。
 
-**继承/实现关系：** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md)
+**继承/实现关系：** USBDevice extends [Device](arkts-driverdevelopment-devicemanager-device-i.md#Device)
 
 **起始版本：** 10
 

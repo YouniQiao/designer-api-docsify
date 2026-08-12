@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## connectToCandidateConfigWithUserAction
@@ -34,19 +34,19 @@ Connect to a specified candidate hotspot by networkId, and wait for user respond
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2501006](../errorcode-wifi.md#2501006-connection-request-rejected) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2501007](../errorcode-wifi.md#2501007-parameter-verification-failed) |
-| [2501005](../errorcode-wifi.md#2501005-no-user-response-to-the-connection-request) |
-| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
-| [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [2501006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501006-connection-request-rejected) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2501007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501007-parameter-verification-failed) |
+| [2501005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501005-no-user-response-to-the-connection-request) |
+| [2501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501000-sta-internal-error) |
+| [2501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501001-sta-disabled) |
 
 ## Examples
 

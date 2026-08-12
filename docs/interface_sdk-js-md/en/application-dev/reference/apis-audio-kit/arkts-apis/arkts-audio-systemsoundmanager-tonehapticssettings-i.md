@@ -13,7 +13,7 @@ Haptics settings in tone scenario.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## hapticsUri
@@ -22,7 +22,7 @@ import { systemSoundManager } from 'kits/@kit.AudioKit';
 hapticsUri?: string
 ```
 
-Haptics uri. Users can set/get this parameter when {@link ToneHapticsSettings#mode} is{@link ToneHapticsMode#NON_SYC}. In other cases, this uri is useless and should be ignored.
+Haptics uri. Users can set/get this parameter when [mode](#mode) is[NON_SYC](ToneHapticsMode#NON_SYC). In other cases, this uri is useless and should be ignored.
 
 **Type:** string
 

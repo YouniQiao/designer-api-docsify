@@ -6,7 +6,7 @@
 function isDebugState(): boolean
 ```
 
-��ȡӦ�ý��̵ĵ���״̬��
+获取应用进程的调试状态。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function isDebugState(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Ӧ�ý��̵�Ark���Native���Ƿ��ڵ���״̬��true�����ڵ���״̬��false��δ���ڵ���״̬�� |
+| boolean | 应用进程的Ark层或Native层是否处于调试状态。true：处于调试状态。false：未处于调试状态。 |
 
 ## 示例
 

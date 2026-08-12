@@ -3,12 +3,12 @@
 The **ImageSource** class provides APIs to obtain image information.
 
 Before calling any API in ImageSource, you must use   
-[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
+[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
 Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -19,7 +19,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createImageRawData
@@ -42,14 +42,14 @@ Obtains raw data from an image.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ImageRawData&gt; |
+| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
 
 ## createPicture
 
@@ -80,15 +80,15 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) |
 
 ## createPictureAtIndex
 
@@ -119,17 +119,17 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) |
 
 ## createPixelMap
 
@@ -140,8 +140,8 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses a promise to return the result.
 
 Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see   
+[createPixelMapUsingAllocator](#createPixelMapUsingAllocator). This API can be used to specify the memory type   
+[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
 [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
@@ -174,7 +174,7 @@ Starting from API version 15, you are advised to use
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## createPixelMap
 
@@ -185,8 +185,8 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 Creates a PixelMap object based on the default parameters. This API uses an asynchronous callback to return the result.
 
 Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see   
+[createPixelMapUsingAllocator](#createPixelMapUsingAllocator). This API can be used to specify the memory type   
+[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
 [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
@@ -224,8 +224,8 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 Creates a PixelMap object based on decoding options. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
 
 Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocator](arkts-image-image-imagesource-i.md#createpixelmapusingallocator). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see   
+[createPixelMapUsingAllocator](#createPixelMapUsingAllocator). This API can be used to specify the memory type   
+[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
 [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
@@ -296,25 +296,25 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;PixelMap&gt;&gt; |
+| Promise & lt;Array & lt;PixelMap & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980109](../errorcode-image.md#62980109-cropping-error) |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-data-error-in-the-shared-memory) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-cropping-error) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980174](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-abnormal-dma-memory-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
 
 ## createPixelMapList
 
@@ -357,19 +357,19 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Error Code ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980109](../errorcode-image.md#62980109-cropping-error) |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-data-error-in-the-shared-memory) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-cropping-error) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980174](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-abnormal-dma-memory-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
 
 ## createPixelMapList
 
@@ -413,19 +413,19 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Error Code ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
-| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
-| [62980109](../errorcode-image.md#62980109-cropping-error) |
-| [62980173](../errorcode-image.md#62980173-dma-memory-space-error) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
-| [62980174](../errorcode-image.md#62980174-abnormal-dma-memory-data) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-data-error-in-the-shared-memory) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
+| [62980109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-cropping-error) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma-memory-space-error) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980174](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-abnormal-dma-memory-data) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
 
 ## createPixelMapSync
 
@@ -441,8 +441,8 @@ Images occupy a large amount of memory. When you finish using a PixelMap instanc
 Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 Starting from API version 15, you are advised to use   
-[createPixelMapUsingAllocatorSync](arkts-image-image-imagesource-i.md#createpixelmapusingallocatorsync). This API can be used to specify the memory type   
-[AllocatorType](arkts-image-image-allocatortype-e.md) of the output PixelMap. For details, see   
+[createPixelMapUsingAllocatorSync](#createPixelMapUsingAllocatorSync). This API can be used to specify the memory type   
+[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType) of the output PixelMap. For details, see   
 [Optimizing Memory for Image Decoding (ArkTS)](../../../media/image/image-allocator-type.md).
 
 > **NOTE：**
@@ -506,20 +506,20 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
+| [7700302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-memory-allocation-failed) |
+| [7700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-unsupported-memory-allocation-type) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -564,14 +564,14 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
-| [7700302](../errorcode-image.md#7700302-memory-allocation-failed) |
-| [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) |
-| [7700203](../errorcode-image.md#7700203-unsupported-options) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
+| [7700302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-memory-allocation-failed) |
+| [7700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-unsupported-memory-allocation-type) |
+| [7700203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-unsupported-options) |
 
 ## createThumbnail
 
@@ -599,18 +599,18 @@ Creates a thumbnail image based on image decoding parameters.This method uses a 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PixelMap \| undefined&gt; |
+| Promise & lt;PixelMap \ | undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
-| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-thumbnail-generation-failed) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) |
+| [7700303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) |
 
 ## createThumbnailSync
 
@@ -644,12 +644,12 @@ Synchronously creates a thumbnail image based on image decoding parameters.This 
 
 | Error Code ID |
 | --- |
-| [7700103](../errorcode-image.md#7700103-image-oversized) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700305](../errorcode-image.md#7700305-thumbnail-generation-failed) |
-| [7700301](../errorcode-image.md#7700301-decoding-failure) |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
-| [7700303](../errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) |
+| [7700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-image-oversized) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-thumbnail-generation-failed) |
+| [7700301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-decoding-failure) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) |
+| [7700303](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-image-does-not-contain-thumbnail-data) |
 
 ## getDelayTimeList
 
@@ -669,20 +669,20 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980149](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) |
 
 ## getDelayTimeList
 
@@ -708,14 +708,14 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 
 | Error Code ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980149](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) |
 
 ## getDisposalTypeList
 
@@ -735,16 +735,16 @@ Obtains the list of disposal types. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980149](../errorcode-image.md#62980149-invalid-image-parameter) |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980149](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-invalid-image-parameter) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
 
 ## getFrameCount
 
@@ -764,21 +764,21 @@ Obtains the number of frames. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-image-format-mismatch) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
 
 ## getFrameCount
 
@@ -804,15 +804,15 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
-| [62980137](../errorcode-image.md#62980137-invalid-image-operation) |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-image-format-mismatch) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-invalid-image-operation) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
 
 ## getImageInfo
 
@@ -837,7 +837,7 @@ Obtains the image information with the specified index. This API uses an asynchr
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | index | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes |
 
 ## getImageInfo
 
@@ -861,7 +861,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Yes |
 
 ## getImageInfo
 
@@ -891,7 +891,7 @@ Obtains the image information. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ImageInfo&gt; |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
 ## getImageInfoSync
 
@@ -946,23 +946,23 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | Yes |
+| key | Array & lt;PropertyKey & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; |
+| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;PropertyKey, string \| null & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980116](../errorcode-image.md#62980116-decoding-failure) |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980116](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-decoding-failure) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) |
 
 ## getImageProperty
 
@@ -991,24 +991,24 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980112](../errorcode-image.md#62980112-image-format-mismatch) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
-| [62980118](../errorcode-image.md#62980118-plugin-creation-failure) |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
-| [62980122](../errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
-| [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) |
-| [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) |
+| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980112](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-image-format-mismatch) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
+| [62980135](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) |
+| [62980118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-plugin-creation-failure) |
+| [62980123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [62980122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-failure-in-decoding-the-image-header) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-incomplete-image-source-data) |
+| [62980110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-incorrect-image-source-data) |
 
 ## getImageProperty
 
@@ -1024,7 +1024,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**Substitutes:** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1041,7 +1041,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getImageProperty
 
@@ -1057,7 +1057,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**Substitutes:** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1082,7 +1082,7 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**Substitutes:** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1139,9 +1139,9 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 | Error Code ID |
 | --- |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-abnormal-image-source) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) |
 
 ## modifyImageProperties
 
@@ -1169,22 +1169,22 @@ This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;2
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;PropertyKey, string \| null&gt; | Yes |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;PropertyKey, string \| null & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980146](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
+| [62980135](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) |
+| [62980123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1197,14 +1197,14 @@ Modifies image properties in batches. This API uses a promise to return the resu
 > **NOTE：**
 > 
 > - Calling this API to modify properties alters the property byte length. You are advised to create an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-4) instance by passing a
 > file descriptor or an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by
 > passing a URI.
 > 
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more
 > efficient than
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> [modifyImageProperties](#modifyImageProperties)
 > .
 > 
 > - This API applies only to images that are in JPEG, PNG, HEIF, or WEBP format and contain the Exif information.
@@ -1219,21 +1219,21 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null&gt; | Yes |
+| records | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string \| null & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700304](../errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700304](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-failed-to-write-image-information-to-the-file) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) |
 
 ## modifyImageProperty
 
@@ -1268,17 +1268,17 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980146](../errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
-| [62980133](../errorcode-image.md#62980133-image-property-value-out-of-range) |
-| [62980135](../errorcode-image.md#62980135-invalid-image-property-value) |
-| [62980123](../errorcode-image.md#62980123-exif-decoding-not-supported) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [62980146](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-failed-to-write-image-property-values-to-the-file) |
+| [62980133](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980133-image-property-value-out-of-range) |
+| [62980135](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-invalid-image-property-value) |
+| [62980123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-exif-decoding-not-supported) |
 
 ## modifyImageProperty
 
@@ -1300,7 +1300,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImageSource.modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(key:
+**Substitutes:** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1317,7 +1317,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## modifyImageProperty
 
@@ -1339,7 +1339,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [image.ImageSource.modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(key:
+**Substitutes:** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1366,7 +1366,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 > **NOTE：**
 > 
 > When reading a DNG image, this API applies special handling to some **propertyKeys**. For details about the
-> values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md):
+> values of the following properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey):
 > 
 > - **NewSubfileType**, **ImageWidth**, **ImageLength**, **DefaultCropSize**, **Orientation**, **Compression**,
 > **PhotometricInterpretation**, **PlanarConfiguration**, **RowsPerStrip**, **StripOffsets**, **StripByteCounts**
@@ -1409,15 +1409,15 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ImageMetadata&gt; |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) |
 
 ## readImageMetadataByType
 
@@ -1457,15 +1457,15 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ImageMetadata&gt; |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) |
 
 ## release
 
@@ -1513,7 +1513,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## updateData
 
@@ -1542,7 +1542,7 @@ Updates incremental data. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## updateData
 
@@ -1585,14 +1585,14 @@ Modifies image properties in batches. This API uses a promise to return the resu
 > **NOTE：**
 > 
 > - Calling this API to modify properties alters the property byte length. You are advised to create an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource-4) instance by passing a
 > file descriptor or an
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource) instance by
 > passing a URI.
 > 
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more
 > efficient than
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> [modifyImageProperties](#modifyImageProperties)
 > .
 > 
 > - This API applies only to images that are in JPEG, PNG, or HEIF format and contain the Exif information.
@@ -1617,15 +1617,15 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7700102](../errorcode-image.md#7700102-unsupported-mime-type) |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) |
-| [7700202](../errorcode-image.md#7700202-unsupported-metadata) |
+| [7700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-unsupported-mime-type) |
+| [7700204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-invalid-parameter) |
+| [7700202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-unsupported-metadata) |
 
 ## supportedFormats
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgent } from '@kit.BackgroundTasksKit';
 ```
 
 ## getValidReminders
@@ -20,7 +20,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders)
+**Substitutes:** [getValidReminders](reminderAgentManager.getValidReminders)
 
 <!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
@@ -30,7 +30,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return an array of all valid reminders set by the current application. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return an array of all valid reminders set by the current application. |
 
 ## Examples
 
@@ -77,7 +77,7 @@ Obtains all valid (not yet expired) reminders set by the current application. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager.getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders)
+**Substitutes:** [getValidReminders](reminderAgentManager.getValidReminders)
 
 <!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 

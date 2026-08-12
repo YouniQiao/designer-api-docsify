@@ -12,7 +12,7 @@ Writes event information to the event file of the current day. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent#write
+**Substitutes:** [write](ohos.hiviewdfx.hiAppEvent/hiAppEvent#write)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
 
@@ -30,7 +30,7 @@ Writes event information to the event file of the current day. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -64,7 +64,7 @@ Writes event information to the event file of the current day. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent#write
+**Substitutes:** [write](ohos.hiviewdfx.hiAppEvent/hiAppEvent#write)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 

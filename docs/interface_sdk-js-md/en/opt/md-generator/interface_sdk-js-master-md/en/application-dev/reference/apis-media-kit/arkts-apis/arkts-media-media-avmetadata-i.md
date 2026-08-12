@@ -1,8 +1,8 @@
 # AVMetadata
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of  
-[AVRecorder](#AVRecorder).
+[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of  
+[AVRecorder](arkts-media-media-avrecorder-i.md#AVRecorder).
 
 **Since:** 11
 
@@ -13,7 +13,7 @@ Defines the audio and video metadata. Parameters that are not declared as read-o
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## album
@@ -250,7 +250,7 @@ hdrType?: HdrType
 
 HDR type of the media asset. This parameter is not supported in AVRecorder settings.
 
-**Type:** [HdrType](../../apis-arkui/arkts-components/arkts-arkui-hdrtype-e.md)
+**Type:** HdrType
 
 **Since:** 12
 
@@ -266,7 +266,7 @@ location?: Location
 
 Geographical location of the media asset.
 
-**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**Type:** Location
 
 **Since:** 12
 
@@ -346,7 +346,7 @@ tracks?: Array<MediaDescription>
 
 Tracks info of the media asset. This parameter is not supported in AVRecorder settings.
 
-**Type:** Array&lt;MediaDescription&gt;
+**Type:** Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;
 
 **Since:** 20
 

@@ -75,7 +75,7 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the offscreen canvas.&lt;br&gt; **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
 | height | number | Yes | Height of the offscreen canvas.&lt;br&gt; **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT**. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT**. |
 
 ## getContext
 
@@ -102,13 +102,13 @@ Obtains the drawing context of the offscreen canvas.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | contextType | "2d" | Yes | Type of the drawing context of the offscreen canvas. The value can only be **"2d"**.&lt;br&gt; **"2d"**: creates an **OffscreenCanvasRenderingContext2D** object that represents a two-dimensional rendering context.&lt;br&gt; The values **undefined** and **null** are considered as invalid values, and **undefined** is returned. |
-| options | [RenderingContextSettings](../arkts-apis/arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null**. |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [OffscreenCanvasRenderingContext2D](../arkts-apis/arkts-arkui-canvas-offscreencanvasrenderingcontext2d-c.md) | Drawing context of the offscreen canvas. If the input parameter contextType of the **getContext** method is not **"2d"** (including null or undefined), **undefined** will be returned. Before using the method, check whether the return value is **undefined**. |
+| [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md) | Drawing context of the offscreen canvas. If the input parameter contextType of the **getContext** method is not **"2d"** (including null or undefined), **undefined** will be returned. Before using the method, check whether the return value is **undefined**. |
 
 ## transferToImageBitmap
 
@@ -134,7 +134,7 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) | ImageBitmap** object created. |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | ImageBitmap** object created. |
 
 ## height
 

@@ -1,6 +1,6 @@
 # Tool
 
-本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md)中定义的数据结构的转换功能。
+本模块定义的工具类，仅提供静态的方法，主要完成其他模块和[common2D](arkts-graphics-common2d.md#common2D)中定义的数据结构的转换功能。
 
 > **说明：**
 > 
@@ -38,7 +38,7 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | ResourceColor格式的颜色值（支持所有的4种输入，示例中提供10个示例输入）。其中第4种类型 [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)只接受``\\$r('belonging.type.name')``构造方法，需要确保该资源在main/resources/base/element目录下已定义(app支 持color、string和integer，sys只支持color)。 |
+| resourceColor | ResourceColor | 是 | ResourceColor格式的颜色值（支持所有的4种输入，示例中提供10个示例输入）。其中第4种类型 [Resource](Resource)只接受``\\$r('belonging.type.name')``构造方法，需要确保该资源在main/resources/base/element目录下已定义(app支 持color、string和integer，sys只支持color)。 |
 
 **返回值：**
 
@@ -50,7 +50,7 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeColorFromResourceColor
 
@@ -72,7 +72,7 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| resourceColor | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | ResourceColor格式的颜色值（支持所有的4种输入，示例中提供10个示例输入）。其中第4种类型 [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)只接受``\\$r('belonging.type.name')``构造方法，需要确保该资源在main/resources/base/element目录下已定义(app支 持color、string和integer，sys只支持color)。 |
+| resourceColor | ResourceColor | 是 | ResourceColor格式的颜色值（支持所有的4种输入，示例中提供10个示例输入）。其中第4种类型 [Resource](Resource)只接受``\\$r('belonging.type.name')``构造方法，需要确保该资源在main/resources/base/element目录下已定义(app支 持color、string和integer，sys只支持color)。 |
 
 **返回值：**
 
@@ -84,5 +84,5 @@ static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

@@ -20,7 +20,7 @@ declare function read(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:read](arkts-corefile-fileio-read-f.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-read-f.md#read)
 
 <!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): Promise<ReadOut>-End-->
 
@@ -38,7 +38,7 @@ declare function read(
 
 | 类型 |
 | --- |
-| Promise&lt;ReadOut&gt; |
+| Promise&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; |
 
 
 ## read
@@ -53,7 +53,7 @@ declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<R
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:read](arkts-corefile-fileio-read-f.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-read-f.md#read)
 
 <!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -65,7 +65,7 @@ declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<R
 | --- | --- | --- |
 | fd | number | 是 |
 | buffer | ArrayBuffer | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | 是 |
 
 
 ## read
@@ -89,7 +89,7 @@ declare function read(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:read](arkts-corefile-fileio-read-f.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-read-f.md#read)
 
 <!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options: {    offset?: number;    length?: number;    position?: number;  },  callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -102,4 +102,4 @@ declare function read(
 | fd | number | 是 |
 | buffer | ArrayBuffer | 是 |
 | options | {     offset?: number;     length?: number;     position?: number;   } | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | 是 |

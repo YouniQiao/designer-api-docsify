@@ -20,5 +20,5 @@ Represents the callback invoked when the Enter key on the soft keyboard is press
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| enterKey | [EnterKeyType](arkts-arkui-enterkeytype-e.md) | Yes |
+| enterKey | [EnterKeyType](../arkts-apis/arkts-arkui-textinput-enterkeytype-e.md) | Yes |
 | event | [SubmitEvent](arkts-arkui-submitevent-i.md) | Yes |

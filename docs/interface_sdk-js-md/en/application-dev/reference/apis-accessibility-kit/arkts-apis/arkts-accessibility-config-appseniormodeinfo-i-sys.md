@@ -15,7 +15,7 @@ Indicates the senior mode information of an application.
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## appIndex

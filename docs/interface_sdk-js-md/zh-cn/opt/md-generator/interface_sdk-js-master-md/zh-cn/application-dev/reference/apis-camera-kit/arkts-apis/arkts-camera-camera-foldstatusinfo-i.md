@@ -16,7 +16,7 @@ readonly foldStatus: FoldStatus
 
 折叠屏折叠状态。
 
-**类型：** [FoldStatus](../../apis-arkui/arkts-apis/arkts-arkui-foldstatus-e.md)
+**类型：** FoldStatus
 
 **起始版本：** 12
 
@@ -34,7 +34,7 @@ readonly supportedCameras: Array<CameraDevice>
 
 当前折叠状态所支持的相机信息列表。
 
-**类型：** Array&lt;CameraDevice&gt;
+**类型：** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **起始版本：** 12
 

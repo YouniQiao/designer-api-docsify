@@ -21,13 +21,13 @@ The type of conversion result function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| this | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) | Yes | The ISendable to which the parsed key value pair belongs. |
+| this | ISendable | Yes | The ISendable to which the parsed key value pair belongs. |
 | key | string | Yes | Attribute name. |
-| value | [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) \| undefined \| null | Yes | The value of the parsed key value pair. |
+| value | ISendable \| undefined \| null | Yes | The value of the parsed key value pair. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ISendable](../../apis-image-kit/arkts-apis/arkts-image-sendableimage-isendable-t.md) \| undefined \| null | Return the modified ISendable or undefined or null. |
+| ISendable \| undefined \| null | Return the modified ISendable or undefined or null. |
 

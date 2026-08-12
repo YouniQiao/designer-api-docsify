@@ -80,7 +80,7 @@ operationInfo: OperationInfo[]
 
 Operation information list.
 
-**Type:** [OperationInfo](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md)[]
+**Type:** OperationInfo[]
 
 **Since:** 26.0.0
 

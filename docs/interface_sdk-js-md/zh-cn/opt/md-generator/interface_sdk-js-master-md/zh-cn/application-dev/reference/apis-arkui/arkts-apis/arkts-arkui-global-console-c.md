@@ -29,13 +29,13 @@ static assert(value?: Object, ...arguments: Object[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | Object | 否 |
-| arguments | Object[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## count
 
@@ -63,7 +63,7 @@ static count(label?: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## countReset
 
@@ -91,7 +91,7 @@ static countReset(label?: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## debug
 
@@ -116,7 +116,7 @@ static debug(message: string, ...arguments: any[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | string | 是 |
-| arguments | any[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## dir
 
@@ -160,7 +160,7 @@ static dirxml(...arguments: Object[]): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arguments | Object[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## error
 
@@ -185,7 +185,7 @@ static error(message: string, ...arguments: any[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | string | 是 |
-| arguments | any[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## group
 
@@ -207,7 +207,7 @@ static group(...arguments: Object[]): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arguments | Object[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## groupCollapsed
 
@@ -229,7 +229,7 @@ static groupCollapsed(...arguments: Object[]): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arguments | Object[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## groupEnd
 
@@ -270,7 +270,7 @@ static info(message: string, ...arguments: any[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | string | 是 |
-| arguments | any[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## log
 
@@ -295,7 +295,7 @@ static log(message: string, ...arguments: any[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | string | 是 |
-| arguments | any[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |
 
 ## table
 
@@ -345,7 +345,7 @@ static time(label?: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## timeEnd
 
@@ -373,7 +373,7 @@ static timeEnd(label?: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## timeLog
 
@@ -396,13 +396,13 @@ static timeLog(label?: string, ...arguments: Object[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | label | string | 否 |
-| arguments | Object[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## trace
 
@@ -424,7 +424,7 @@ static trace(...arguments: Object[]): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| arguments | Object[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | Object[] | 是 |
 
 ## traceHybridStack
 
@@ -465,4 +465,4 @@ static warn(message: string, ...arguments: any[]): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | message | string | 是 |
-| arguments | any[] | 是 |
+| [arguments](../../apis-arkts/arkts-apis/arkts-arkts-taskpool-task-c.md) | any[] | 是 |

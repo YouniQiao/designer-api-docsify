@@ -22,7 +22,7 @@ focusedAreaBackgroundColor?: ResourceColor
 
 Background color of the focus area.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 7
 
@@ -70,7 +70,7 @@ focusedDayColor?: ResourceColor
 
 Style of focus color.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 7
 
@@ -94,7 +94,7 @@ focusedLunarColor?: ResourceColor
 
 Focus on Lunar Colors.
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 7
 

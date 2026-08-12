@@ -1,6 +1,6 @@
 # WebContextMenuParam
 
-Defines the context menu param, related to {@link WebContextMenuParam} method.
+Defines the context menu param, related to [WebContextMenuParam](#WebContextMenuParam) method.
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Returns the type of context node.
 getEditStateFlags(): number
 ```
 
-Returns the context editable flags {@link ContextMenuEditStateFlags}.
+Returns the context editable flags [ContextMenuEditStateFlags](arkts-arkweb-contextmenueditstateflags-e.md#ContextMenuEditStateFlags).
 
 **Since:** 9
 
@@ -120,7 +120,7 @@ Returns input field type if the context menu was invoked on an input field.
 
 | Type | Description |
 | --- | --- |
-| [ContextMenuInputFieldType](../arkts-apis/arkts-arkweb-web-contextmenuinputfieldtype-e.md) | Input field type if the context menu was invoked on an input field. |
+| [ContextMenuInputFieldType](arkts-arkweb-contextmenuinputfieldtype-e.md) | Input field type if the context menu was invoked on an input field. |
 
 ## getLinkUrl
 

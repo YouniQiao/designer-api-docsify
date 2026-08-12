@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#HeartRateResponse
+**替代接口：** [HeartRateResponse](ohos.sensor/sensor#HeartRateResponse)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -32,7 +32,7 @@ heartRate: number
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#HeartRateResponse.heartRate
+**替代接口：** [heartRate](ohos.sensor/sensor#HeartRateResponse.heartRate)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 

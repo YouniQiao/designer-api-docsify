@@ -36,7 +36,7 @@ backgroundMask(color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 指定Panel的背景蒙层。 |
+| color | ResourceColor | 是 | 指定Panel的背景蒙层。 |
 
 ## customHeight
 
@@ -62,7 +62,7 @@ customHeight(value: Dimension | PanelHeight)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| PanelHeight | 是 | 指定PanelType.CUSTOM状态下的高度。 |
+| value | Dimension \| [PanelHeight](arkts-arkui-panelheight-e.md) | 是 | 指定PanelType.CUSTOM状态下的高度。 |
 
 ## dragBar
 
@@ -375,5 +375,5 @@ type(value: PanelType)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PanelType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md) | 是 | 设置可滑动面板的类型。 |
+| value | [PanelType](arkts-arkui-paneltype-e.md) | 是 | 设置可滑动面板的类型。 |
 

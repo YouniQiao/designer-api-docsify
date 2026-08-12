@@ -29,5 +29,5 @@ Create a FrameNode of FlowItem type.On API 26.0.0 and above, It can also create 
 
 | Type | Description |
 | --- | --- |
-| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | Return FlowItem type FrameNode. |
+| FlowItem | Return FlowItem type FrameNode. |
 

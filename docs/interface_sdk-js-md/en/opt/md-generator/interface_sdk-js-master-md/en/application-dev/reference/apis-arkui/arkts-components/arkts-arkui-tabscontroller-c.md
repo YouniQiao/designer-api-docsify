@@ -58,7 +58,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 > **NOTE：**
 > 
 > - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
-> preloading in the [onAppear](arkts-arkui-commonmethod-c.md#onappear) lifecycle of **Tabs**.
+> preloading in the [onAppear](CommonMethod#onAppear) lifecycle of **Tabs**.
 > 
 > - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
 > when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
@@ -88,13 +88,13 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setTabBarOpacity
 
@@ -160,4 +160,4 @@ Sets the translation distance of the tab bar.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes |
+| translate | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes |

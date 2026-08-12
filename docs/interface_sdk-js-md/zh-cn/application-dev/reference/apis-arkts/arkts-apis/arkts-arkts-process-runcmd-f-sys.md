@@ -32,5 +32,5 @@ function runCmd(
 
 | 类型 | 说明 |
 | --- | --- |
-| [ChildProcess](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-childprocess-childprocess-c.md) | 返回一个子进程对象。 |
+| ChildProcess | 返回一个子进程对象。 |
 

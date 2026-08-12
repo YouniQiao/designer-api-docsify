@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-This configuration is only available for the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) and [RichEditor](./rich_editor) components.
+This configuration is only available for the [Text](./text) and [RichEditor](./rich_editor) components.
 
 **Since:** 11
 
@@ -20,7 +20,7 @@ Color of the entity after successful text detection.
 
 Default value: **'#ff0a59f7'**
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Default value:
 
 }
 
-**Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
+**Type:** DecorationStyleInterface
 
 **Since:** 12
 
@@ -78,7 +78,7 @@ Whether to enable the preview menu displayed when long-pressing recognized text.
 
 Default value: **false**
 
-When [copyOptions](arkts-arkui-richeditor-richeditorattribute-i.md#copyoptions) is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.
+When [copyOptions](RichEditorAttribute#copyOptions) is set to **None**, even if **enablePreviewMenu** is set to **true**, long-pressing AI entities will not display the preview menu.
 
 This API can be properly called on phones and tablets, but has no effect on other devices such as PCs, 2-in-1devices, TVs, and wearables.
 
@@ -104,7 +104,7 @@ onDetectResultUpdate?: Callback<string>
 
 Callback invoked when text recognition succeeds.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 11
 

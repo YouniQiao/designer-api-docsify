@@ -40,7 +40,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 13900025 |
 | 13900027 |
 | 13900004 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900038 |
 | 13900001 |
 | 13900002 |

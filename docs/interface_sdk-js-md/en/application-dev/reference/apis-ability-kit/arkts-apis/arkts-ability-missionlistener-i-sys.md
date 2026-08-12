@@ -43,6 +43,44 @@ Called when the system closes a mission.
 | --- | --- | --- | --- |
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
 
+## Examples
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let listener: missionManager.MissionListener = {
+  onMissionCreated: (mission) => {
+    console.info(`onMissionCreated mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionDestroyed: (mission) => {
+    console.info(`onMissionDestroyed mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionSnapshotChanged: (mission) => {
+    console.info(`onMissionSnapshotChanged mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionMovedToFront: (mission) => {
+    console.info(`onMissionMovedToFront mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionLabelUpdated: (mission) => {
+    console.info(`onMissionLabelUpdated mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionIconUpdated: (mission, icon) => {
+    console.info(`onMissionIconUpdated mission: ${JSON.stringify(mission)}`);
+    console.info(`onMissionIconUpdated icon: ${JSON.stringify(icon)}`);
+  },
+  onMissionClosed: (mission) => {
+    console.info(`onMissionClosed mission: ${JSON.stringify(mission)}`);
+  }
+};
+
+try {
+  let listenerId = missionManager.on('mission', listener);
+} catch (paramError) {
+  console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+}
+```
+
 ## onMissionCreated
 
 ArkTS-Dyn:
@@ -73,6 +111,10 @@ Called when the system creates a mission.
 | --- | --- | --- | --- |
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
 
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
+
 ## onMissionDestroyed
 
 ArkTS-Dyn:
@@ -102,6 +144,10 @@ Called when the system destroys a mission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
 
 ## onMissionIconUpdated
 
@@ -134,6 +180,10 @@ Called when the system updates the icon of a mission.
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
 | icon | image.PixelMap | Yes | New mission icon. |
 
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
+
 ## onMissionLabelUpdated
 
 ArkTS-Dyn:
@@ -163,6 +213,10 @@ Called when the system updates the label of a mission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
 
 ## onMissionMovedToFront
 
@@ -194,6 +248,10 @@ Called when the system moves a mission to the foreground.
 | --- | --- | --- | --- |
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
 
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
+
 ## onMissionSnapshotChanged
 
 ArkTS-Dyn:
@@ -223,4 +281,8 @@ Called when the system updates the snapshot of a mission.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
 

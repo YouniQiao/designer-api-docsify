@@ -25,7 +25,7 @@ height?: Length
 Height. The value must be greater than or equal to 0.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and  
 **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -47,7 +47,7 @@ radiusHeight?: Length
 
 Height of the rounded corner. The value must be greater than or equal to 0.Unit: vp, Invalid values are treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -69,7 +69,7 @@ radiusWidth?: Length
 
 Width of the rounded corner. The value must be greater than or equal to 0.Unit: vp, Invalid values are treated as the default value.Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -91,7 +91,7 @@ width?: Length
 
 Width. The value must be greater than or equal to 0Unit: vp, The **undefined**, **null**, **NaN**, and **Infinity**values are invalid and treated as the default value. Default value: **0**.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 

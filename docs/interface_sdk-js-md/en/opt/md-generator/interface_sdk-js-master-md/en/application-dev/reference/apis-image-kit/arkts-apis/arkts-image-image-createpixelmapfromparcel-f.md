@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapFromParcel
@@ -36,15 +36,15 @@ Creates a PixelMap object based on MessageSequence parameter.
 
 | Error Code ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap-serialization-failed) |
-| [62980177](../errorcode-image.md#62980177-abnormal-api-environment) |
-| [62980096](../errorcode-image.md#62980096-operation-failed) |
-| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980179](../errorcode-image.md#62980179-abnormal-buffer-size) |
-| [62980178](../errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
-| [62980180](../errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) |
-| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
-| [62980105](../errorcode-image.md#62980105-failure-in-obtaining-image-data) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap-serialization-failed) |
+| [62980177](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980177-abnormal-api-environment) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980179](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980179-abnormal-buffer-size) |
+| [62980178](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-failure-in-creating-a-pixelmap) |
+| [62980180](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980180-failure-in-mapping-the-file-descriptor) |
+| [62980246](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
+| [62980105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980105-failure-in-obtaining-image-data) |
 
 ## Examples
 

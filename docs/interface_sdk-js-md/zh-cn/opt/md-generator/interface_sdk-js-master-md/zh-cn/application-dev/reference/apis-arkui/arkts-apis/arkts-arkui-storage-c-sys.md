@@ -47,7 +47,7 @@ constructor(needCrossThread?: boolean, file?: string)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | needCrossThread | boolean | 否 |
-| file | string | 否 |
+| [file](../../apis-core-file-kit/arkts-apis/arkts-corefile-storagestatistics-storagestats-i-sys.md) | string | 否 |
 
 ## delete
 

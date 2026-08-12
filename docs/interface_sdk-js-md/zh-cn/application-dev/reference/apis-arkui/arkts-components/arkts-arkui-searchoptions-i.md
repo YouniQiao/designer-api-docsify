@@ -74,7 +74,7 @@ placeholder?: ResourceStr
 
 设置无输入时的提示文本。当需要自定义提示文本时传入此参数，不传入时不显示提示文本。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 8
 
@@ -94,7 +94,7 @@ value?: string | Bindable<string>
 
 Text input in the search text box.
 
-**类型：** string \| Bindable&lt;string&gt;
+**类型：** string \| [Bindable](../arkts-apis/arkts-arkui-common-bindable-i.md)&lt;string&gt;
 
 **起始版本：** 20
 

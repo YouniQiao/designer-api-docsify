@@ -13,7 +13,7 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## addAfter

@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to {@link onClientAuthenticationRequest} method.
+Defines the client certificate request result, related to [onClientAuthenticationRequest](onClientAuthenticationRequest) method.
 
 **Since:** 9
 
@@ -98,13 +98,13 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | identity | string | Yes | The identify of the credential. |
-| credentialTypeOrCertChainFile | [CredentialType](../arkts-apis/arkts-arkweb-web-credentialtype-e.md) \| string | Yes | The type of the credential or the file that store client certificate chain. |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-credentialtype-e.md) \| string | Yes | The type of the credential or the file that store client certificate chain. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## constructor
 

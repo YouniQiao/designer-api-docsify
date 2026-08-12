@@ -20,7 +20,7 @@ accessibilityDescription?: ResourceStr
 
 默认值为“单指双击即可执行”。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 20
 
@@ -104,7 +104,7 @@ accessibilityText?: ResourceStr
 
 默认值：""
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 20
 

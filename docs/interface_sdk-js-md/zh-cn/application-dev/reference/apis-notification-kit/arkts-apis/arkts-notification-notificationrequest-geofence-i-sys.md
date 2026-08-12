@@ -20,7 +20,7 @@ coordinateSystemType:CoordinateSystemType
 
 中心点坐标系类型。
 
-**类型：** [CoordinateSystemType](arkts-notification-notificationmanager-coordinatesystemtype-t-sys.md)
+**类型：** [CoordinateSystemType](arkts-notification-notificationrequest-coordinatesystemtype-e-sys.md)
 
 **起始版本：** 23
 

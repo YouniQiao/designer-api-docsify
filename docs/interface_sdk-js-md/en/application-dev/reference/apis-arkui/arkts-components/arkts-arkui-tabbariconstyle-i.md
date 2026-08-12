@@ -24,7 +24,7 @@ Default value: **#FF007DFF**
 
 This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #FF007DFF
 
@@ -54,7 +54,7 @@ Default value: **#33182431**
 
 This attribute only applies to an SVG image. Once set, the fill color will replace that of the SVG image.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #33182431
 

@@ -46,7 +46,7 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -121,7 +121,7 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -238,7 +238,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 | center | common2D.Point | 是 |
 | radiusX | number | 是 |
 | radiusY | number | 是 |
-| gradients | Array&lt;[number, number]&gt; | 是 |
+| gradients | Array & lt;[number, number] & gt; | 是 |
 
 **返回值：**
 
@@ -250,7 +250,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## createRippleMask
 
@@ -287,7 +287,7 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -327,7 +327,7 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -411,7 +411,7 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 | center | common2D.Point | 是 |
 | width | number | 是 |
 | propagationRadius | number | 是 |
-| blurRadius | number | 是 |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
 | turbulenceStrength | number | 否 |
 
 **返回值：**
@@ -424,7 +424,7 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

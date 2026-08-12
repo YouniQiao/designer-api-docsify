@@ -34,11 +34,11 @@ abstract initialize(scroller?: Scroller): ScrollAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 | scroll的控制器。 |
+| scroller | Scroller | 否 | scroll的控制器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) |  |
+| ScrollAttribute |  |
 

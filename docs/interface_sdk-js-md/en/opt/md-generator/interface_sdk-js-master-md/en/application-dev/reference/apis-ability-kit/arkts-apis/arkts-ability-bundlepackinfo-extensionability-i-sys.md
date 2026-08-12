@@ -18,7 +18,7 @@ readonly forms: Array<AbilityFormInfo>
 
 Widget information.
 
-**Type:** Array&lt;AbilityFormInfo&gt;
+**Type:** Array&lt;[AbilityFormInfo](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)&gt;
 
 **Since:** 9
 

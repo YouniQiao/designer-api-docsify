@@ -13,7 +13,7 @@ Defines the **value** object in a KV store.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## type
@@ -24,7 +24,7 @@ type: ValueType
 
 Type of the value.
 
-**Type:** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
+**Type:** ValueType
 
 **Since:** 9
 

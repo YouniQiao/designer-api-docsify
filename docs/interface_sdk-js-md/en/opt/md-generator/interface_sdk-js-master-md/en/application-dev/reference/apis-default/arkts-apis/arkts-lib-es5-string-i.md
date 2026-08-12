@@ -128,7 +128,7 @@ Determines whether two strings are equivalent in the current or specified locale
 | --- | --- | --- |
 | that | string | Yes |
 | locales | string \| string[] | No |
-| options | Intl.CollatorOptions | No |
+| options | [Intl.CollatorOptions](arkts-intl-collatoroptions-i.md) | No |
 
 **Return value:**
 
@@ -156,7 +156,7 @@ Matches a string with a regular expression, and returns an array containing the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RegExpMatchArray](../../apis-arkts/arkts-apis/arkts-arkts-regexp-regexpmatcharray-c.md) |
+| [RegExpMatchArray](arkts-lib-es5-regexpmatcharray-i.md) |
 
 ## replace
 
@@ -196,7 +196,7 @@ Replaces text in a string, using a regular expression or search string.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | searchValue | string \| RegExp | Yes |
-| replacer | (substring: string, ...args: any[]) =&gt; string | Yes |
+| replacer | (substring: string, ...args: any[]) = & gt; string | Yes |
 
 **Return value:**
 

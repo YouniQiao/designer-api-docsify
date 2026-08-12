@@ -32,15 +32,15 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: n
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [16700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) |
+| [16700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) |
 
 ## 示例
 
@@ -95,15 +95,15 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: n
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [16700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) |
+| [16700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) |
 
 ## 示例
 

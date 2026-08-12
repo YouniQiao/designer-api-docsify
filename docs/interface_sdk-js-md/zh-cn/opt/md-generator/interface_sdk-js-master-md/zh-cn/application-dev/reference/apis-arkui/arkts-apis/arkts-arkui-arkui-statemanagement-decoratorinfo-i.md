@@ -20,9 +20,9 @@ decoratorName: string
 
 当V2对象使用[@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)时，值为：'@Trace'。
 
-当V2对象使用[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)时，值为：'MakeObserved'。
+当V2对象使用[makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved)时，值为：'MakeObserved'。
 
-当V2对象使用[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility)时，值为：'EnableV2Compatible'。 
+当V2对象使用[enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enableV2Compatibility)时，值为：'EnableV2Compatible'。 
 
 当V2对象使用built-in类型数据时，值为：'ProxyObservedV2'。
 
@@ -46,7 +46,7 @@ dependentInfo: Array<ElementInfo>
 
 使用该可观察对象的组件信息。若对象没有用在任何UI上，则返回空数组。
 
-**类型：** Array&lt;ElementInfo&gt;
+**类型：** Array&lt;[ElementInfo](arkts-arkui-arkui-statemanagement-elementinfo-i.md)&gt;
 
 **起始版本：** 23
 

@@ -13,7 +13,7 @@ Indicates the option for determining if a number is an emergency number for spec
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## slotId

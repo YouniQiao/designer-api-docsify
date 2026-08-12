@@ -36,7 +36,7 @@ Creates an instance of ChildrenMainSize.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## splice
 
@@ -62,13 +62,13 @@ Changes children main size by removing or replacing existing elements and/or add
 | --- | --- | --- |
 | start | number | Yes |
 | deleteCount | number | No |
-| childrenSize | Array&lt;number&gt; | No |
+| childrenSize | Array & lt;number & gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## update
 
@@ -99,7 +99,7 @@ Updates main size for specified child.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## childDefaultSize
 

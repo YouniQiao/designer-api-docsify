@@ -2,7 +2,7 @@
 
 定义自定义几何形状的顶点数组及其数据.
 
-**继承/实现关系：** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
+**继承/实现关系：** CustomGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
 
 **起始版本：** 18
 

@@ -13,7 +13,7 @@ Defines a contact's relationship.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## CUSTOM_LABEL

@@ -14,7 +14,7 @@ Opens a stream based on the file descriptor. This API returns the result synchro
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdopenStreamSync](arkts-corefile-fileio-fdopenstreamsync-f.md#fdopenstreamsync)
+**Substitutes:** [fdopenStreamSync](arkts-corefile-file-fs-fdopenstreamsync-f.md#fdopenStreamSync)
 
 <!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream--><!--Device-unnamed-declare function fdopenStreamSync(fd: number, mode: string): Stream-End-->
 
@@ -31,5 +31,5 @@ Opens a stream based on the file descriptor. This API returns the result synchro
 
 | Type | Description |
 | --- | --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) | File stream. |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) | File stream. |
 

@@ -84,7 +84,7 @@ richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResul
 
 删除的文本或图片Span的信息。
 
-**类型：** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**类型：** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **起始版本：** 10
 

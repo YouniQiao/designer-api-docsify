@@ -29,24 +29,24 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 | context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 |
 | mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | 是 |
 | progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | 是 |
-| contacts | Array&lt;Contact&gt; | 是 |
+| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [16700103](../errorcode-contacts.md#16700103-用户取消) |
-| [16700004](../errorcode-contacts.md#16700004-联系人数量超过限制) |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) |
-| [16700003](../errorcode-contacts.md#16700003-禁止后台调用) |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [16700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-用户取消) |
+| [16700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700004-联系人数量超过限制) |
+| [16700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) |
+| [16700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700003-禁止后台调用) |
+| [16700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) |
 
 ## 示例
 

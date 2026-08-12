@@ -38,7 +38,7 @@ oldPreviewText: PreviewText
 
 The info of PreviewText before the change.
 
-**Type:** [PreviewText](arkts-arkui-previewtext-i.md)
+**Type:** [PreviewText](arkts-arkui-textcommon-previewtext-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ rangeAfter: TextRange
 
 The selected area after the change.
 
-**Type:** [TextRange](arkts-arkui-textrange-i.md)
+**Type:** [TextRange](arkts-arkui-textcommon-textrange-i.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ rangeBefore: TextRange
 
 The selected area before the change.
 
-**Type:** [TextRange](arkts-arkui-textrange-i.md)
+**Type:** [TextRange](arkts-arkui-textcommon-textrange-i.md)
 
 **Since:** 23
 

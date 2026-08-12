@@ -14,7 +14,7 @@ Defines the return result of intent execution. The
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## interactionInfo

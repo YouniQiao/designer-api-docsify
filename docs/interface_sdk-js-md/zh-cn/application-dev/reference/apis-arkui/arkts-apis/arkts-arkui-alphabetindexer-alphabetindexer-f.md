@@ -59,7 +59,7 @@ export declare function AlphabetIndexer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;AlphabetIndexerAttribute&gt; | 是 | AlphabetIndexer属性实例 |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[AlphabetIndexerAttribute](arkts-arkui-alphabetindexer-alphabetindexerattribute-i.md)&gt; | 是 | AlphabetIndexer属性实例 |
 
 **返回值：**
 

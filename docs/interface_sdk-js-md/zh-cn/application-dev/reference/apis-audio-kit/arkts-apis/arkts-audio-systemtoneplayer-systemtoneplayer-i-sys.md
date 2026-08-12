@@ -1,7 +1,7 @@
 # SystemTonePlayer（系统接口）
 
 系统提示音播放器提供了短信提示音、通知提示音的播放、配置、获取信息等功能。在调用SystemTonePlayer的接口前，需要先通过  
-[getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getsystemtoneplayer)创建实例。
+[getSystemTonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getSystemTonePlayer-1)创建实例。
 
 **起始版本：** 11
 
@@ -47,7 +47,21 @@ getAudioVolumeScale(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let scale = systemTonePlayer.getAudioVolumeScale();
+  console.info('Succeeded in doing getAudioVolumeScale.');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getAudioVolumeScale. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getHapticsFeature
 
@@ -77,8 +91,22 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  let feature: systemSoundManager.ToneHapticsFeature = systemTonePlayer.getHapticsFeature();
+  console.info('Succeeded in doing getHapticsFeature.');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to getHapticsFeature. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## getSupportedHapticsFeatures
 
@@ -108,8 +136,18 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSoundManager.ToneHapticsFeature>) => {
+  console.info('Succeeded in doing getSupportedHapticsFeatures.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getSupportedHapticsFeatures. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## getTitle
 
@@ -139,8 +177,20 @@ getTitle(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.getTitle().then((value: string) => {
+  console.info('Succeeded in doing getTitle.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getTitle. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## off('playFinished')
 
@@ -171,8 +221,24 @@ off(type: 'playFinished', callback?: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+systemTonePlayer.off('playFinished');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let playFinishedCallback = (streamId: number) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+};
+
+systemTonePlayer.on('playFinished', 0, playFinishedCallback);
+
+systemTonePlayer.off('playFinished', playFinishedCallback);
+```
 
 ## off('error')
 
@@ -203,8 +269,26 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 取消该事件的所有监听。
+systemTonePlayer.off('error');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let callback = (err: BusinessError) => {
+  console.info(`Succeeded in using on or off function. code: ${err.code}, message: ${err.message}`);
+};
+
+systemTonePlayer.on('error', callback);
+
+systemTonePlayer.off('error', callback);
+```
 
 ## offError
 
@@ -234,8 +318,26 @@ offError(callback?: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 取消该事件的所有监听。
+systemTonePlayer.offError();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let callback = (err: BusinessError) => {
+  console.info(`Succeeded in using on or off function. code: ${err.code}, message: ${err.message}`);
+};
+
+systemTonePlayer.onError(callback);
+
+systemTonePlayer.offError(callback);
+```
 
 ## offPlayFinished
 
@@ -265,8 +367,24 @@ offPlayFinished(callback?: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+systemTonePlayer.offPlayFinished();
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let playFinishedCallback = (streamId) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+};
+
+systemTonePlayer.onPlayFinished(0, playFinishedCallback);
+
+systemTonePlayer.offPlayFinished(playFinishedCallback);
+```
 
 ## on('playFinished')
 
@@ -293,15 +411,35 @@ on(type: 'playFinished', streamId: int, callback: Callback<int>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'playFinished' | 是 | 事件回调类型，支持的事件为'playFinished'，当铃音播放完成时，触发该事件。 |
-| streamId | int | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md#start)获取。 当streamId传入0时，可监听当前播放器对应的所有音频流。 |
+| streamId | int | 是 | 监听对象为指定streamId对应的音频流，streamId通过[start](#start)获取。 当streamId传入0时，可监听当前播放器对应的所有音频流。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 'playFinished'的回调方法。返回播放完成的音频流的streamId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 监听所有音频流的结束事件。
+systemTonePlayer.on('playFinished', 0, (streamId: number) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+});
+
+// 监听指定音频流的结束事件。
+systemTonePlayer.start().then((value: number) => {
+  systemTonePlayer.on('playFinished', value, (streamId: number) => {
+    console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start system tone player. ${err}`);
+});
+```
 
 ## on('error')
 
@@ -332,8 +470,18 @@ on(type: 'error', callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.on('error', (err: BusinessError) => {
+  console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## onError
 
@@ -363,8 +511,18 @@ onError(callback: ErrorCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.onError((err: BusinessError) => {
+  console.info(`Succeeded in using onError function. code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## onPlayFinished
 
@@ -397,8 +555,28 @@ onPlayFinished(streamId: int, callback: Callback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 监听所有音频流的结束事件。
+systemTonePlayer.onPlayFinished(0, (streamId) => {
+  console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+});
+
+// 监听指定音频流的结束事件。
+systemTonePlayer.start().then((value) => {
+  systemTonePlayer.onPlayFinished(value, (streamId) => {
+    console.info(`Receive the callback of playFinished, streamId: ${streamId}.`);
+  });
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start system tone player. ${err}`);
+});
+```
 
 ## prepare
 
@@ -428,9 +606,21 @@ prepare(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.prepare().then(() => {
+  console.info('Succeeded in doing prepare.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to prepare. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## release
 
@@ -460,7 +650,19 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+systemTonePlayer.release().then(() => {
+  console.info('Succeeded in doing release.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to release. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## setAudioVolumeScale
 
@@ -496,10 +698,25 @@ setAudioVolumeScale(scale: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. For example, value is outside [0,1]. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [20700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. For example, value is outside [0,1]. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let scale = 0.5;
+try {
+  systemTonePlayer.setAudioVolumeScale(scale);
+  console.info('Succeeded in doing setAudioVolumeScale.');
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to setAudioVolumeScale. Code: ${error.code}, message: ${error.message}`);
+}
+```
 
 ## setHapticsFeature
 
@@ -509,7 +726,7 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 设置播放铃音时的振动风格。
 
-调用本接口前，应该先调用[getSupportedHapticsFeatures](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md#getsupportedhapticsfeatures)查询支持的振动风格，如果设置不支持的振动风格，则设置失败。
+调用本接口前，应该先调用[getSupportedHapticsFeatures](#getSupportedHapticsFeatures)查询支持的振动风格，如果设置不支持的振动风格，则设置失败。
 
 **起始版本：** 13
 
@@ -531,10 +748,25 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [20700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSoundManager.ToneHapticsFeature>) => {
+  console.info('Succeeded in doing getSupportedHapticsFeatures.');
+  if (features.length > 0) {
+    let feature: systemSoundManager.ToneHapticsFeature = features[0];
+    systemTonePlayer.setHapticsFeature(feature);
+    console.info('Succeeded in doing setHapticsFeature.');
+  }
+}).catch((err: BusinessError) => {
+  console.error(`Failed to getSupportedHapticsFeatures. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## start
 
@@ -566,7 +798,7 @@ start(toneOptions?: SystemToneOptions): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| toneOptions | [SystemToneOptions](arkts-audio-systemsoundmanager-systemtoneoptions-t.md) | 否 | 系统提示音选项。 |
+| toneOptions | [SystemToneOptions](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md) | 否 | 系统提示音选项。 |
 
 **返回值：**
 
@@ -578,10 +810,28 @@ start(toneOptions?: SystemToneOptions): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class SystemToneOptions {
+  muteAudio: boolean = false;
+  muteHaptics: boolean = false;
+}
+let systemToneOptions: SystemToneOptions = {muteAudio: true, muteHaptics: false};
+
+systemTonePlayer.start(systemToneOptions).then((value) => {
+  console.info('Succeeded in doing start.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## stop
 
@@ -623,7 +873,20 @@ stop(id: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let streamID = 0; // streamID为start方法返回的streamID，此处只做初始化。
+systemTonePlayer.stop(streamID).then(() => {
+  console.info('Succeeded in doing stop.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
+});
+```
 

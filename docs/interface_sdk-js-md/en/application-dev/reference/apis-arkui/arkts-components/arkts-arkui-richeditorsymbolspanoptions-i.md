@@ -42,7 +42,7 @@ style?: RichEditorSymbolSpanStyle
 
 Style of the symbol span. If this parameter is left empty, the default style will be used.
 
-**Type:** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
+**Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 
 **Since:** 11
 

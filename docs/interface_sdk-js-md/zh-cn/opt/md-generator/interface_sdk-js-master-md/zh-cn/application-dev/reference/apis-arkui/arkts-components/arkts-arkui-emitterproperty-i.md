@@ -104,7 +104,7 @@ size?: SizeT<number>
 
 未传入时保持其当前发射窗口大小。需传入两个有效参数且都大于0，若其中一个为异常值，则size不生效。
 
-**类型：** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**类型：** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **起始版本：** 12
 

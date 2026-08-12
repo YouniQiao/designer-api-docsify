@@ -2,7 +2,7 @@
 
 Represents error that is thrown when the requested operation is not supported.
 
-**Inheritance/Implementation:** UnsupportedOperationError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** UnsupportedOperationError extends [Error](Error)
 
 **Since:** 26.0.0
 

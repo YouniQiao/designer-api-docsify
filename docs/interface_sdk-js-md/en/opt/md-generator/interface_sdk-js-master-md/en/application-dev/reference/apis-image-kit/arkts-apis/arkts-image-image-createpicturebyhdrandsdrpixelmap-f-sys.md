@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPictureByHdrAndSdrPixelMap
@@ -33,13 +33,13 @@ Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The syste
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
 
 ## Examples
 
@@ -111,14 +111,14 @@ Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified opt
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Picture&gt; |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
 
 ## Examples
 

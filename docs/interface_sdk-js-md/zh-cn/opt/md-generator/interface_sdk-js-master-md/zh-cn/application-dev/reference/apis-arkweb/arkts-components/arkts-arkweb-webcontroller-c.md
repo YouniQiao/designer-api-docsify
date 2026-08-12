@@ -6,7 +6,7 @@ Defines the Web controller.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController
+**替代接口：** [WebviewController](ohos.web.webview.webview.WebviewController)
 
 <!--Device-unnamed-declare class WebController--><!--Device-unnamed-declare class WebController-End-->
 
@@ -24,7 +24,7 @@ Checks whether the web page can go back.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#accessBackward
+**替代接口：** [accessBackward](ohos.web.webview.webview.WebviewController#accessBackward)
 
 <!--Device-WebController-accessBackward(): boolean--><!--Device-WebController-accessBackward(): boolean-End-->
 
@@ -48,7 +48,7 @@ Checks whether the web page can go forward.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#accessForward
+**替代接口：** [accessForward](ohos.web.webview.webview.WebviewController#accessForward)
 
 <!--Device-WebController-accessForward(): boolean--><!--Device-WebController-accessForward(): boolean-End-->
 
@@ -72,7 +72,7 @@ Checks whether the web page can go back or forward the given number of steps.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#accessStep
+**替代接口：** [accessStep](ohos.web.webview.webview.WebviewController#accessStep)
 
 <!--Device-WebController-accessStep(step: number): boolean--><!--Device-WebController-accessStep(step: number): boolean-End-->
 
@@ -102,7 +102,7 @@ Goes back in the history of the web page.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#backward
+**替代接口：** [backward](ohos.web.webview.webview.WebviewController#backward)
 
 <!--Device-WebController-backward()--><!--Device-WebController-backward()-End-->
 
@@ -120,7 +120,7 @@ Clears the history in the Web.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#clearHistory
+**替代接口：** [clearHistory](ohos.web.webview.webview.WebviewController#clearHistory)
 
 <!--Device-WebController-clearHistory(): void--><!--Device-WebController-clearHistory(): void-End-->
 
@@ -138,7 +138,7 @@ Constructor.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#constructor
+**替代接口：** [constructor](ohos.web.webview.webview.WebviewController#constructor)
 
 <!--Device-WebController-constructor()--><!--Device-WebController-constructor()-End-->
 
@@ -156,7 +156,7 @@ Deletes a registered JavaScript object with given name.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#deleteJavaScriptRegister
+**替代接口：** [deleteJavaScriptRegister](ohos.web.webview.webview.WebviewController#deleteJavaScriptRegister)
 
 <!--Device-WebController-deleteJavaScriptRegister(name: string)--><!--Device-WebController-deleteJavaScriptRegister(name: string)-End-->
 
@@ -180,7 +180,7 @@ Goes forward in the history of the web page.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#forward
+**替代接口：** [forward](ohos.web.webview.webview.WebviewController#forward)
 
 <!--Device-WebController-forward()--><!--Device-WebController-forward()-End-->
 
@@ -198,7 +198,7 @@ Gets network cookie manager
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.WebCookieManager
+**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
@@ -222,7 +222,7 @@ getHitTest(): HitTestType
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#getHitTest
+**替代接口：** [getHitTest](ohos.web.webview.webview.WebviewController#getHitTest)
 
 <!--Device-WebController-getHitTest(): HitTestType--><!--Device-WebController-getHitTest(): HitTestType-End-->
 
@@ -246,7 +246,7 @@ Loads the data or URL.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#loadData
+**替代接口：** [loadData](ohos.web.webview.webview.WebviewController#loadData)
 
 <!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })--><!--Device-WebController-loadData(options: { data: string, mimeType: string, encoding: string, baseUrl?: string, historyUrl?: string })-End-->
 
@@ -270,7 +270,7 @@ Loads the given URL.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#loadUrl
+**替代接口：** [loadUrl](ohos.web.webview.webview.WebviewController#loadUrl)
 
 <!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })--><!--Device-WebController-loadUrl(options: { url: string | Resource, headers?: Array<Header> })-End-->
 
@@ -280,7 +280,7 @@ Loads the given URL.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | { url: string \| Resource, headers?: Array&lt;Header&gt; } | 是 |
+| options | { url: string \| Resource, headers?: Array&lt;[Header](arkts-arkweb-header-i.md)&gt; } | 是 |
 
 ## onActive
 
@@ -288,13 +288,13 @@ Loads the given URL.
 onActive(): void
 ```
 
-Let the Web active.It is no longer maintained since API version 9, and it is recommended to use {@link onActive} instead.
+Let the Web active.It is no longer maintained since API version 9, and it is recommended to use [onActive](#onActive) instead.
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#onActive
+**替代接口：** [onActive](ohos.web.webview.webview.WebviewController#onActive)
 
 <!--Device-WebController-onActive(): void--><!--Device-WebController-onActive(): void-End-->
 
@@ -306,13 +306,13 @@ Let the Web active.It is no longer maintained since API version 9, and it is rec
 onInactive(): void
 ```
 
-Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use {@link onInactive} instead.
+Let the Web inactive.It is no longer maintained since API version 9, and it is recommended to use [onInactive](#onInactive) instead.
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#onInactive
+**替代接口：** [onInactive](ohos.web.webview.webview.WebviewController#onInactive)
 
 <!--Device-WebController-onInactive(): void--><!--Device-WebController-onInactive(): void-End-->
 
@@ -330,7 +330,7 @@ refreshes the current URL.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#refresh
+**替代接口：** [refresh](ohos.web.webview.webview.WebviewController#refresh)
 
 <!--Device-WebController-refresh()--><!--Device-WebController-refresh()-End-->
 
@@ -348,7 +348,7 @@ Registers the JavaScript object and method list.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#registerJavaScriptProxy
+**替代接口：** [registerJavaScriptProxy](ohos.web.webview.webview.WebviewController#registerJavaScriptProxy)
 
 <!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })--><!--Device-WebController-registerJavaScriptProxy(options: { object: object, name: string, methodList: Array<string> })-End-->
 
@@ -358,7 +358,7 @@ Registers the JavaScript object and method list.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | { object: object, name: string, methodList: Array&lt;string&gt; } | 是 |
+| options | { object: object, name: string, methodList: Array & lt;string & gt; } | 是 |
 
 ## requestFocus
 
@@ -372,7 +372,7 @@ Gets the request focus.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#requestFocus
+**替代接口：** [requestFocus](ohos.web.webview.webview.WebviewController#requestFocus)
 
 <!--Device-WebController-requestFocus()--><!--Device-WebController-requestFocus()-End-->
 
@@ -390,7 +390,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#runJavaScript
+**替代接口：** [runJavaScript](ohos.web.webview.webview.WebviewController#runJavaScript)
 
 <!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })--><!--Device-WebController-runJavaScript(options: { script: string, callback?: (result: string) => void })-End-->
 
@@ -400,7 +400,7 @@ Asynchronously execute JavaScript in the context of the currently displayed page
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | { script: string, callback?: (result: string) =&gt; void } | 是 |
+| options | { script: string, callback?: (result: string) = & gt; void } | 是 |
 
 ## stop
 
@@ -414,7 +414,7 @@ Stops the current load.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#stop
+**替代接口：** [stop](ohos.web.webview.webview.WebviewController#stop)
 
 <!--Device-WebController-stop()--><!--Device-WebController-stop()-End-->
 
@@ -432,7 +432,7 @@ zoom(factor: number): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.webview.webview.WebviewController#zoom
+**替代接口：** [zoom](ohos.web.webview.webview.WebviewController#zoom)
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 
@@ -442,4 +442,4 @@ zoom(factor: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| factor | number | 是 |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | number | 是 |

@@ -2,7 +2,7 @@
 
 Defines the TextPickerDialogOptions for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
+**Inheritance/Implementation:** TextPickerDialogOptions extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)
 
 **Since:** 8
 
@@ -176,7 +176,7 @@ Style of accept button.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In the acceptButtonStyle and cancelButtonStyle configurations,&lt;br&gt;only one primary field can be set to true at most.&lt;br&gt;If both the primary fields are set to true, neither will take effect.&lt;/p&gt;
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ alignment?: DialogAlignment
 
 Alignment mode of the dialog box in the vertical direction.
 
-**Type:** [DialogAlignment](../arkts-apis/arkts-arkui-alertdialog-dialogalignment-e.md)
+**Type:** DialogAlignment
 
 **Default:** DialogAlignment.Default [since 11]
 
@@ -222,7 +222,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the dialog box.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -246,7 +246,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for customizing the background blur style.
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
@@ -268,7 +268,7 @@ backgroundColor?: ResourceColor
 
 Backplane color of the dialog box.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -292,7 +292,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Options for customizing the background effect.
 
-**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 19
 
@@ -342,7 +342,7 @@ Style of cancel button.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In the acceptButtonStyle and cancelButtonStyle configurations,&lt;br&gt;only one primary field can be set to true at most.&lt;br&gt;If both the primary fields are set to true, neither will take effect.&lt;/p&gt;
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
@@ -436,7 +436,7 @@ Font color, font size, and font weight of the top and bottom items.
 
 Default Value：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
-**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**Type:** PickerTextStyle
 
 **Default:** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
@@ -514,7 +514,7 @@ Display area of the dialog box in hover mode.
 
 Default Value: HoverModeAreaType.BOTTOM_SCREEN
 
-**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -538,7 +538,7 @@ maskRect?: Rectangle
 
 Mask area of the dialog box.Events outside the mask area are transparently transmitted, and events within the mask area are not.
 
-**Type:** [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md)
+**Type:** Rectangle
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
@@ -562,7 +562,7 @@ offset?: Offset
 
 Offset of the dialog box based on the alignment settings.
 
-**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
@@ -588,7 +588,7 @@ Represents the callback triggered during the scrolling of the text picker when a
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In scenarios where the picker contains linked columns,&lt;br&gt;the use of this callback is not recommended.&lt;br&gt;The reason is that it identifies nodes where items enter the divider area during scrolling.&lt;br&gt;However, items that change in response to the scrolling do not themselves scroll. As a result,&lt;br&gt;he callback's return values will only reflect changes for the currently scrolling column,&lt;br&gt;while other non-scrolling columns will remain unchanged.&lt;/p&gt;
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 18
 
@@ -610,7 +610,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 Callback invoked when the scrolling in the text picker of the dialog box stops.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 14
 
@@ -634,7 +634,7 @@ Background style of selected items.
 
 Default Value: { color: \$r('sys.color.comp_background_tertiary'),borderRadius: \$r('sys.float.corner_radius_level12') }
 
-**Type:** [PickerBackgroundStyle](../arkts-apis/arkts-arkui-textpicker-pickerbackgroundstyle-i.md)
+**Type:** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
 **Default:** { color: $r('sys.color.comp_background_tertiary'), borderRadius: $r('sys.float.corner_radius_level12') }
 
@@ -658,7 +658,7 @@ selectedTextStyle?: PickerTextStyle
 
 Font color, font size, and font weight of the selected item.
 
-**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**Type:** PickerTextStyle
 
 **Since:** 10
 
@@ -680,7 +680,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
 
@@ -704,7 +704,7 @@ Font color, font size, and font weight of all items except the top, bottom, and 
 
 Default Value：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
-**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**Type:** PickerTextStyle
 
 **Default:** { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 

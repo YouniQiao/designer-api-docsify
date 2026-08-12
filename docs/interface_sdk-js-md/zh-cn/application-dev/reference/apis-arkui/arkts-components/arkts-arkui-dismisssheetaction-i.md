@@ -18,7 +18,7 @@ dismiss: Callback<void>
 
 半模态页面关闭回调函数。开发者需要退出页面时调用。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
 
@@ -48,7 +48,7 @@ DismissReason.SLIDE_DOWN生效半模态底部弹窗形态和居中弹窗形态�
 
 半模态气泡弹窗形态无滑动退出能力。
 
-**类型：** [DismissReason](../arkts-apis/arkts-arkui-common-dismissreason-e.md)
+**类型：** [DismissReason](arkts-arkui-dismissreason-e.md)
 
 **起始版本：** 12
 

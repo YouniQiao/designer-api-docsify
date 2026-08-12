@@ -42,7 +42,7 @@ parameters: Record<string, string>
 
 Parameters of the unit test that is started currently.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 8
 

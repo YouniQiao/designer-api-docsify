@@ -1,6 +1,6 @@
 # Filter
 
-图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
+图像效果类，用于通过链式调用将指定效果添加到效果链表中，适用于图片滤镜处理、视觉效果增强、图像美化等场景。在调用Filter的方法前，需要先通过[createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createEffect)创建一个Filter实例。在添加效果后，需调用[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#getEffectPixelMap)获取处理后的图像。
 
 **起始版本：** 9
 
@@ -31,7 +31,7 @@ ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blurRadius | number | 是 |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
 | center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | 是 |
 | maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | 是 |
 | fractionStops | [FractionStop](../../apis-arkui/arkts-components/arkts-arkui-fractionstop-t.md)[] | 是 |
@@ -40,13 +40,13 @@ ellipticalGradientBlur(blurRadius: number, center: EllipticalMaskCenter,
 
 | 类型 |
 | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) |
+| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

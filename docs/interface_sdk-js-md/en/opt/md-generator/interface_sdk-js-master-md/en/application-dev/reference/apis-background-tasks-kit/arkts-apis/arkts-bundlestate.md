@@ -13,7 +13,7 @@ This module provides APIs for collecting statistics on device usage.
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

@@ -40,7 +40,7 @@ static readonly fixAtIdealSize: LayoutPolicy
 
 When the component adapts to its child components (content), its size equals the child components(content) and is not constrained by the parent component's content area size.
 
-**Type:** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
+**Type:** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **Since:** 20
 
@@ -64,7 +64,7 @@ static readonly matchParent: LayoutPolicy
 
 When the component adapts to the parent component's layout, its size equals the parent component's content area (excluding the areas defined by **padding**, **border**, and **safeAreaPadding**).
 
-**Type:** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
+**Type:** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **Since:** 15
 
@@ -88,7 +88,7 @@ static readonly wrapContent: LayoutPolicy
 
 When the component adapts to its child components (content), its size equals the child components(content) and is constrained by the parent component's content area size.
 
-**Type:** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
+**Type:** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **Since:** 20
 

@@ -13,7 +13,7 @@ The BreakIterator class is used for finding the location of break point in text.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## current

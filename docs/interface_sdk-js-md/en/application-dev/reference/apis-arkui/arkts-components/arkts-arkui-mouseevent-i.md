@@ -1,8 +1,8 @@
 # MouseEvent
 
-Inherits from [BaseEvent](arkts-arkui-baseevent-i.md).
+Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent).
 
-**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **Since:** 8
 
@@ -36,7 +36,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
+| Coordinate2D | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## getHistoricalPoints
 
@@ -46,8 +46,8 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 Obtains all historical point information of the current frame. Historical points can be used to achieve smoother drawing effects.
 
-This API can only be called from [MouseEvent](arkts-arkui-mouseevent-i.md) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onmouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of  
-[MouseEvent](arkts-arkui-mouseevent-i.md) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onmouse), and the remaining points are treated as historical points.
+This API can only be called from [MouseEvent](#MouseEvent) to obtain information about historical points of the current frame when [onMouse](arkts-arkui-commonmethod-c.md#onMouse) is triggered. The mouse event reporting frequency per frame varies across different devices. Typically, only one mouse event is reported per frame. If the number of  
+[MouseEvent](#MouseEvent) instances received in the current frame is greater than 1, the last point of that frame is returned via [onMouse](arkts-arkui-commonmethod-c.md#onMouse), and the remaining points are treated as historical points.
 
 **Since:** 26.0.0
 
@@ -65,7 +65,7 @@ This API can only be called from [MouseEvent](arkts-arkui-mouseevent-i.md) to ob
 
 | Type | Description |
 | --- | --- |
-| Array&lt;MouseHistoricalPoint&gt; | Array of all historical point information for the current frame. |
+| Array&lt;[MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md)&gt; | Array of all historical point information for the current frame. |
 
 ## stopPropagation
 
@@ -93,7 +93,7 @@ action: MouseAction
 
 Mouse action.
 
-**Type:** [MouseAction](../arkts-apis/arkts-arkui-mouseaction-e.md)
+**Type:** MouseAction
 
 **Since:** 8
 
@@ -113,7 +113,7 @@ button: MouseButton
 
 Mouse button.
 
-**Type:** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)
+**Type:** MouseButton
 
 **Since:** 8
 
@@ -186,7 +186,7 @@ Value range: [0, +∞)
 **NOTE：**
 
 This field is used when dispatching events using the  
-[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy) API. Each time an event is dispatched, this field is increased by 100000.
+[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000.
 
 Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
@@ -266,7 +266,7 @@ pressedButtons?: MouseButton[]
 
 Set of buttons being pressed.
 
-**Type:** [MouseButton](../arkts-apis/arkts-arkui-mousebutton-e.md)[]
+**Type:** MouseButton[]
 
 **Since:** 15
 
@@ -353,7 +353,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [MouseEvent#windowX](arkts-arkui-mouseevent-i.md#windowx)
+**Substitutes:** [windowX](#windowX)
 
 <!--Device-MouseEvent-screenX: number--><!--Device-MouseEvent-screenX: number-End-->
 
@@ -380,7 +380,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **Deprecated since:** 10
 
-**Substitutes:** [MouseEvent#windowY](arkts-arkui-mouseevent-i.md#windowy)
+**Substitutes:** [windowY](#windowY)
 
 <!--Device-MouseEvent-screenY: number--><!--Device-MouseEvent-screenY: number-End-->
 

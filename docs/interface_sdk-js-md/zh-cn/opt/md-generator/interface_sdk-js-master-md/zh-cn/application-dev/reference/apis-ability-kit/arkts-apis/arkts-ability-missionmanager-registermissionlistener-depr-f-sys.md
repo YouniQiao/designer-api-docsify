@@ -12,7 +12,7 @@ function registerMissionListener(listener: MissionListener): number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#on
+**替代接口：** [on](ohos.app.ability.missionManager/missionManager#on)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

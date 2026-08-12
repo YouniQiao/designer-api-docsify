@@ -7,7 +7,7 @@ function acquireShareData(missionId: number, callback: AsyncCallback<Record<stri
 ```
 
 系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用callback异步回调。
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调并返回分享数据。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -28,9 +28,9 @@ function acquireShareData(missionId: number, callback: AsyncCallback<Record<stri
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 
 ## acquireShareData
@@ -40,7 +40,7 @@ function acquireShareData(missionId: number): Promise<Record<string, Object>>
 ```
 
 系统弹框通过该接口发起原子化服务分享，触发目标UIAbility的  
-[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare)回调并返回分享数据。使用Promise异步回调。
+[onShare](arkts-ability-app-ability-uiability-uiability-c.md#onShare)回调并返回分享数据。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -60,13 +60,13 @@ function acquireShareData(missionId: number): Promise<Record<string, Object>>
 
 | 类型 |
 | --- |
-| Promise&lt;{ [key: string]: Object |
-| Promise&lt;Record&lt;string, Object&gt;&gt; |
+| Promise & lt;{ [key: string]: Object |
+| Promise & lt;Record & lt;string, Object & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

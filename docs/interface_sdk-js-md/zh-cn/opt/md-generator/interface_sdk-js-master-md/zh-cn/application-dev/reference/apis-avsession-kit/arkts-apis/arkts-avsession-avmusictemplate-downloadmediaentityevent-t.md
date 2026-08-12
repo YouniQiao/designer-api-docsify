@@ -25,4 +25,4 @@ type DownloadMediaEntityEvent = (controlType: DownloadControlType, mediaEntity: 
 
 | 类型 |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |

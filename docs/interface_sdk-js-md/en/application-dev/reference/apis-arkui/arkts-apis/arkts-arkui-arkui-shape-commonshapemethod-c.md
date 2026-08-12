@@ -13,7 +13,7 @@ Common shape method class
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## fill
@@ -38,7 +38,7 @@ Sets the fill color of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes |  |
+| color | ResourceColor | Yes |  |
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Sets coordinate offset relative to the layout completion position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | [Position](arkts-arkui-position-i.md) | Yes |  |
+| offset | Position | Yes |  |
 
 **Return value:**
 
@@ -98,7 +98,7 @@ Sets the position of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | [Position](arkts-arkui-position-i.md) | Yes |  |
+| position | Position | Yes |  |
 
 **Return value:**
 

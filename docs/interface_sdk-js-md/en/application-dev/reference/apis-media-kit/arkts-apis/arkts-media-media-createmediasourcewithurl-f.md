@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createMediaSourceWithUrl
@@ -29,7 +29,7 @@ Creates a media source for streaming media to be pre-downloaded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL of the media source. The following streaming media formats are supported: HLS, HTTP- FLV, DASH, and HTTPS.&lt;br&gt; - FD path of the local M3U8 file. |
-| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | HTTP header customized for streaming media pre-download. If this parameter is not passed, the default HTTP header of the network request is used.<br>**Since:** 13 |
+| headers | Record&lt;string, string&gt; | No | HTTP header customized for streaming media pre-download. If this parameter is not passed, the default HTTP header of the network request is used.<br>**Since:** 13 |
 
 **Return value:**
 
@@ -41,8 +41,8 @@ Creates a media source for streaming media to be pre-downloaded.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 
 
 ## createMediaSourceWithUrl
@@ -66,7 +66,7 @@ Creates a media source for streaming media to be pre-downloaded.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | : Url of the media source. The following streaming media formats are supported: HLS, HTTP-FLV, DASH, and HTTPS. |
-| headers | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | No | : Headers attached to network request while player request data. |
+| headers | Record&lt;string, string&gt; | No | : Headers attached to network request while player request data. |
 
 **Return value:**
 
@@ -78,6 +78,6 @@ Creates a media source for streaming media to be pre-downloaded.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. |
 

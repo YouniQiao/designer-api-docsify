@@ -50,7 +50,7 @@ EXPOSURE_MODE_LOCKED = 0
 EXPOSURE_MODE_AUTO = 1
 ```
 
-自动曝光模式。支持曝光区域中心点设置，可以使用[AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setmeteringpoint)接口设置曝光区域中心点。
+自动曝光模式。支持曝光区域中心点设置，可以使用[AutoExposure.setMeteringPoint](arkts-camera-camera-autoexposure-i.md#setMeteringPoint)接口设置曝光区域中心点。
 
 设置该模式后，仅设置后的首次拍照生效。
 

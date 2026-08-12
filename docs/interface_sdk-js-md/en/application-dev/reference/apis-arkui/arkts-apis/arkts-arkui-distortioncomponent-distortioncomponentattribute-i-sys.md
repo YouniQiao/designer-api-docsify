@@ -2,7 +2,7 @@
 
 Defines the DistortionComponent attribute functions
 
-**Inheritance/Implementation:** DistortionComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** DistortionComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 26.0.0
 

@@ -11,7 +11,7 @@ Configuring parameters in BeaconFence request.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## beacon
@@ -58,7 +58,7 @@ transitionCallback?: Callback<GeofenceTransition>
 
 Indicates the callback for reporting the BeaconFence transition status.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GeofenceTransition&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
 
 **Since:** 20
 

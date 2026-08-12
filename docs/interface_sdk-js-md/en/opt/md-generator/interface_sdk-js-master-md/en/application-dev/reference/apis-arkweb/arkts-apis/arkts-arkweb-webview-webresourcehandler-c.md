@@ -11,7 +11,7 @@ Used to intercept url requests. Response headers and body can be sent through We
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## didFail
@@ -40,8 +40,8 @@ Notify that this request should be failed.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didFail
 
@@ -68,8 +68,8 @@ Notify that this request should be failed.
 
 | Error Code ID |
 | --- |
-| [17100101](../errorcode-webview.md#17100101-incorrect-network-error-code) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [17100101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100101-incorrect-network-error-code) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didFail
 
@@ -97,7 +97,7 @@ Notify that this request should be failed.
 
 | Error Code ID |
 | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didFinish
 
@@ -119,7 +119,7 @@ Notify that this request should be finished and there is no more data available.
 
 | Error Code ID |
 | --- |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didReceiveResponse
 
@@ -147,8 +147,8 @@ Pass response headers to intercepted requests.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
 
 ## didReceiveResponseBody
 
@@ -176,5 +176,5 @@ Pass response body data to intercepted requests.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) |

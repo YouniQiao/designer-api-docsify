@@ -20,5 +20,5 @@ The callback of load committed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| loadCommittedDetails | [LoadCommittedDetails](../arkts-apis/arkts-arkweb-web-loadcommitteddetails-i.md) | Yes | callback information of onNavigationEntryCommitted. |
+| loadCommittedDetails | [LoadCommittedDetails](arkts-arkweb-loadcommitteddetails-i.md) | Yes | callback information of onNavigationEntryCommitted. |
 

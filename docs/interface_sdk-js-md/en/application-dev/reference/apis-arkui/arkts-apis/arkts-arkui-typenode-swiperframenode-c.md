@@ -34,11 +34,11 @@ Initialize Swiper FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [SwiperController](../arkts-components/arkts-arkui-swipercontroller-c.md) | No | The controller for swiper. |
+| controller | SwiperController | No | The controller for swiper. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) |  |
+| SwiperAttribute |  |
 

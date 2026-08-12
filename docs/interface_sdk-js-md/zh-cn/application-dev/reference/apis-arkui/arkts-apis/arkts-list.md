@@ -17,7 +17,7 @@
 | [ListBackPressBehavior](arkts-arkui-list-listbackpressbehavior-i.md) | 定义List组件的系统返回键行为。 |
 | [ListDividerOptions](arkts-arkui-list-listdivideroptions-i.md) | 定义List或ListItemGroup组件的分割线样式。 |
 | [ListOptions](arkts-arkui-list-listoptions-i.md) | 定义List组件参数。  &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;:&lt;br&gt;- List组件通用属性clip的默认值为true。&lt;/p&gt; |
-| [UIListEvent](arkts-arkui-list-uilistevent-i.md) | frameNode中[getEvent('List')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventlist19)方法的返回值，可用于给List节点设置滚动事件。  UIListEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。 |
+| [UIListEvent](arkts-arkui-list-uilistevent-i.md) | frameNode中[getEvent('List')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventlist19)方法的返回值，可用于给List节点设置滚动事件。  UIListEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。 |
 | [VisibleListContentInfo](arkts-arkui-list-visiblelistcontentinfo-i.md) | 定义List可见内容区子组件的详细信息。 |
 
 <!--Del-->

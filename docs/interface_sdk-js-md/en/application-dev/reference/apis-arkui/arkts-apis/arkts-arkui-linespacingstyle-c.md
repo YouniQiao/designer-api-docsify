@@ -36,8 +36,8 @@ A constructor used to create a text line spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Yes | Text line spacing.&lt;br&gt;Default value: **0.0**&lt;br&gt;Value range: [0, +∞) &lt;br&gt;**NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
-| options | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | No | Line spacing options.&lt;br&gt;Default value: **{ onlyBetweenLines: false } |
+| lineSpacing | LengthMetrics | Yes | Text line spacing.&lt;br&gt;Default value: **0.0**&lt;br&gt;Value range: [0, +∞) &lt;br&gt;**NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
+| options | LineSpacingOptions | No | Line spacing options.&lt;br&gt;Default value: **{ onlyBetweenLines: false } |
 
 ## lineSpacing
 
@@ -49,7 +49,7 @@ Text line spacing.
 
 Value range: [0, +∞)
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
 **Type:** number
 
@@ -73,7 +73,7 @@ readonly options?: LineSpacingOptions
 
 Line spacing options.
 
-**Type:** [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md)
+**Type:** LineSpacingOptions
 
 **Since:** 26.0.0
 

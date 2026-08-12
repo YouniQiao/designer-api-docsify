@@ -14,7 +14,7 @@ function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.commonEventManager:commonEventManager.unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe)
+**替代接口：** [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe)
 
 <!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void--><!--Device-commonEvent-function unsubscribe(subscriber: CommonEventSubscriber, callback?: AsyncCallback<void>): void-End-->
 

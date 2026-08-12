@@ -11,7 +11,7 @@ Multi-thread detection functional parameter configuration
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## abort

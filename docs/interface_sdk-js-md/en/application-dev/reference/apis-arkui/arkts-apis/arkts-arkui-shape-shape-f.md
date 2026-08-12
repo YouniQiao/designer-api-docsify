@@ -26,13 +26,13 @@ Shape is returned when the parameter is transferred.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | No | A pixelMap can be drawn in the area of shape. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ShapeAttribute](../arkts-components/arkts-arkui-shape-attribute.md) | The attribute of the Shape. |
+| [ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md) | The attribute of the Shape. |
 
 
 ## Shape
@@ -62,12 +62,12 @@ Defines Shape Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ShapeAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ShapeAttribute](../arkts-components/arkts-arkui-shape-attribute.md) |  |
+| [ShapeAttribute](arkts-arkui-shape-shapeattribute-i.md) |  |
 

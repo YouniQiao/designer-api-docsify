@@ -24,7 +24,7 @@ Set a paste button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PasteButtonOptions](../arkts-components/arkts-arkui-pastebuttonoptions-i.md) | No | Options of the paste button. |
+| options | [PasteButtonOptions](arkts-arkui-pastebutton-pastebuttonoptions-i.md) | No | Options of the paste button. |
 
 **Return value:**
 

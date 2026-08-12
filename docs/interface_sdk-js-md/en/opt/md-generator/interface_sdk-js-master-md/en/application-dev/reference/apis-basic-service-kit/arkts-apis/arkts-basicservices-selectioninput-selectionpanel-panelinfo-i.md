@@ -12,7 +12,7 @@ Defines attributes of the word selection panel, including its type, position, an
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from 'kits/@kit.BasicServicesKit';
+import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
 ```
 
 ## height
@@ -39,7 +39,7 @@ Height of the word selection panel, in px. The value range is (0, +∞). If **0*
 panelType: PanelType
 ```
 
-Word selection panel types, which include two options. For details, see [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md).
+Word selection panel types, which include two options. For details, see [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md#PanelType).
 
 **Type:** [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Value
+**替代接口：** [Value](ohos.data.distributedKVStore.Value)
 
 <!--Device-distributedData-interface Value--><!--Device-distributedData-interface Value-End-->
 
@@ -20,13 +20,13 @@ type: ValueType
 
 值类型。
 
-**类型：** [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md)
+**类型：** ValueType
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Value#type
+**替代接口：** [type](ohos.data.distributedKVStore.Value#type)
 
 <!--Device-Value-type: ValueType--><!--Device-Value-type: ValueType-End-->
 
@@ -46,7 +46,7 @@ value: Uint8Array | string | number | boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Value#value
+**替代接口：** [value](ohos.data.distributedKVStore.Value#value)
 
 <!--Device-Value-value: Uint8Array | string | number | boolean--><!--Device-Value-value: Uint8Array | string | number | boolean-End-->
 

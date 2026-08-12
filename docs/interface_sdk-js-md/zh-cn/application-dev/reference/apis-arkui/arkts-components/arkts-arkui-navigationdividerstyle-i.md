@@ -20,7 +20,7 @@ color?: ResourceColor
 
 默认值：#33000000，灰色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 23
 
@@ -48,7 +48,7 @@ endMargin?: Length
 
 取值范围：[0, +∞)
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 23
 
@@ -76,7 +76,7 @@ startMargin?: Length
 
 取值范围：[0, +∞)
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 23
 

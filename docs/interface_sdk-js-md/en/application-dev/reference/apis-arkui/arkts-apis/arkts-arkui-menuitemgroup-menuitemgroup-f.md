@@ -25,8 +25,8 @@ Defines MenuItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemGroupOptions](../arkts-components/arkts-arkui-menuitemgroupoptions-i.md) | No | The options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| value | [MenuItemGroupOptions](arkts-arkui-menuitemgroup-menuitemgroupoptions-i.md) | No | The options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines MenuItemGroup Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MenuItemGroupAttribute&gt; | Yes | menuitemgroup attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[MenuItemGroupAttribute](arkts-arkui-menuitemgroup-menuitemgroupattribute-i.md)&gt; | Yes | menuitemgroup attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

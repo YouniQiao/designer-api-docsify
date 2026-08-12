@@ -132,7 +132,7 @@ getAllAvailableItems(): Array<FrameNode>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;FrameNode&gt; | FrameNode数据节点集合。 |
+| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | FrameNode数据节点集合。 |
 
 ## insertItem
 
@@ -352,7 +352,7 @@ onUpdateChild(id: int, node: FrameNode): void
 reloadAllItems(): void
 ```
 
-重新加载全部数据操作。实际调用了LazyForEach中的[OnDataReloaded](arkts-arkui-lazyforeach-datachangelistener-i.md#ondatareloaded)接口通知组件重新加载所有数据。
+重新加载全部数据操作。实际调用了LazyForEach中的[OnDataReloaded](DataChangeListener.onDataReloaded)接口通知组件重新加载所有数据。
 
 **起始版本：** 23
 

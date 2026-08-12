@@ -6,7 +6,7 @@
 > 
 > 当组件同时绑定双击和单击手势且双击手势先绑定时，单击手势会有300ms的延时。
 
-**继承/实现关系：** TapGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**继承/实现关系：** TapGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **起始版本：** 23
 
@@ -22,9 +22,9 @@
 static $_instantiate(factory: () => TapGesture, value?: TapGestureParameters): TapGesture
 ```
 
-创建点击手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+创建点击手势对象。继承自[Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)。
 
-触发点击手势事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-common-sourcetool-e.md)值为Unknown，事件的[SourceType](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-sourcetype-e.md/arkts-input-multimodalinput-touchevent-sourcetype-e.md)值为KEY或JOYSTICK。
+触发点击手势事件的设备类型为键盘或手柄时，事件的[SourceTool](SourceTool)值为Unknown，事件的[SourceType](SourceType)值为KEY或JOYSTICK。
 
 **起始版本：** 23
 
@@ -71,7 +71,7 @@ onAction(event: Callback<GestureEvent>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

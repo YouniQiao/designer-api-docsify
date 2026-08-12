@@ -32,15 +32,15 @@ function setDlpFeature(status: DlpFeatureStatus): Promise<StatusInfoResult>
 
 | 类型 |
 | --- |
-| Promise&lt;StatusInfoResult&gt; |
+| Promise&lt;[StatusInfoResult](arkts-dataprotection-dlpsetdlpfeature-statusinforesult-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

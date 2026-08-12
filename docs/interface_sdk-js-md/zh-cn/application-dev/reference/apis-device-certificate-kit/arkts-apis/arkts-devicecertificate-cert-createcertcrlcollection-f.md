@@ -22,8 +22,8 @@ function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | 是 | X509Cert数组。 |
-| crls | Array&lt;X509CRL&gt; | 否 | X509CRL数组。 |
+| certs | Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt; | 是 | X509Cert数组。 |
+| crls | Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | 否 | X509CRL数组。 |
 
 **返回值：**
 
@@ -35,8 +35,8 @@ function createCertCRLCollection(certs: Array<X509Cert>, crls?: Array<X509CRL>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
 
 ## 示例
 

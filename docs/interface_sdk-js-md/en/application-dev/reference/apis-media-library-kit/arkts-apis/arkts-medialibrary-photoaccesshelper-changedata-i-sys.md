@@ -13,7 +13,7 @@ Defines the return value of the listener callback.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## sharedAlbumAssets
@@ -24,7 +24,7 @@ sharedAlbumAssets: Array<SharedAlbumAsset>
 
 sharedAlbumAssets of the same type
 
-**Type:** Array&lt;SharedAlbumAsset&gt;
+**Type:** Array&lt;[SharedAlbumAsset](arkts-medialibrary-photoaccesshelper-sharedalbumasset-i-sys.md)&gt;
 
 **Since:** 14
 

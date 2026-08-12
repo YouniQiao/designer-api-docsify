@@ -56,7 +56,7 @@ readonly capabilities: Array<Capability>
 
 辅助应用能力列表。
 
-**类型：** Array&lt;Capability&gt;
+**类型：** Array&lt;[Capability](arkts-accessibility-accessibility-capability-t.md)&gt;
 
 **起始版本：** 7
 

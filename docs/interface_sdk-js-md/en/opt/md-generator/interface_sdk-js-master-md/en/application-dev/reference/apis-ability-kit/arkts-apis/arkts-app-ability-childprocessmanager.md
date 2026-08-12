@@ -11,7 +11,7 @@ The childProcessManager module provides the child process management capability.
 ## Modules to Import
 
 ```TypeScript
-import { childProcessManager } from 'kits/@kit.AbilityKit';
+import { childProcessManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

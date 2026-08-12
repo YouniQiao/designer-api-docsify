@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from 'kits/@kit.ArkUI';
+import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
 ```
 
 ## onContentWillChange
@@ -44,7 +44,7 @@ barBackgroundColor?: ResourceColor
 
 Sets the barBackgroundColor of tabs.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -88,7 +88,7 @@ controller?: TabsController
 
 Provide methods for switching tabs.
 
-**Type:** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
+**Type:** TabsController
 
 **Since:** 12
 
@@ -130,7 +130,7 @@ layoutMode?: LayoutMode
 
 Sets the layout mode of the bottom tab bar
 
-**Type:** [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md)
+**Type:** LayoutMode
 
 **Since:** 18
 
@@ -152,7 +152,7 @@ onChange?: Callback<number>
 
 onChange callback of tabs when tabs changed.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** Callback&lt;number&gt;
 
 **Since:** 12
 
@@ -172,7 +172,7 @@ onTabBarClick?: Callback<number>
 
 onTabBarClick callback of tabs when tabbar is clicked.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** Callback&lt;number&gt;
 
 **Since:** 12
 

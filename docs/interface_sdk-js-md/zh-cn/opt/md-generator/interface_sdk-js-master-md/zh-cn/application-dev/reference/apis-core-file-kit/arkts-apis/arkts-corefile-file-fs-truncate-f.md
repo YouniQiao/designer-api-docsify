@@ -20,14 +20,14 @@ declare function truncate(file: string | number, len?: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
 | len | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
@@ -71,7 +71,7 @@ declare function truncate(file: string | number, callback: AsyncCallback<void>):
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
@@ -116,7 +116,7 @@ declare function truncate(file: string | number, len: number, callback: AsyncCal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| number | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| number | 是 |
 | len | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 

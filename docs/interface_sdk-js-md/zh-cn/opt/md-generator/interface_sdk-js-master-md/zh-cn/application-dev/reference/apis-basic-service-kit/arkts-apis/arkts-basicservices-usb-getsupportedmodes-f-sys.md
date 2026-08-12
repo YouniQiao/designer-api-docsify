@@ -12,7 +12,7 @@ function getSupportedModes(portId: number): PortModeType
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes)
+**替代接口：** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes)
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -24,7 +24,7 @@ function getSupportedModes(portId: number): PortModeType
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| portId | number | 是 |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
 
 **返回值：**
 

@@ -48,7 +48,7 @@ Direction of the flip animation.
 
 Default value: **FlipDirection.DOWN**
 
-**Type:** [FlipDirection](arkts-arkui-textcommon-flipdirection-e.md)
+**Type:** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **Since:** 20
 

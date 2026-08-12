@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from 'kits/@kit.AbilityKit';
+import { abilityManager } from '@kit.AbilityKit';
 ```
 
 ## isEmbeddedOpenAllowed
@@ -12,7 +12,7 @@ import { abilityManager } from 'kits/@kit.AbilityKit';
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md) can be started in embedded mode. This API uses a promise to return the result.
+Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility) can be started in embedded mode. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuia
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | Yes | Context of the caller. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the caller. |
 | appId | string | Yes | Unique ID of the application, which is allocated by the cloud. |
 
 **Return value:**
@@ -43,8 +43,8 @@ Checks whether the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuia
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 

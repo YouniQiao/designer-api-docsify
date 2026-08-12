@@ -2,7 +2,7 @@
 
 CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上绘制，绘制对象可以是形状、文本、图片等。
 
-**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md#CanvasRenderer)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置CanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。 |
+| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | 否 | 用来配置CanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 异常值undefined和null按RenderingContextSettings的默认值处理。 |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置CanvasRenderingContext2D对象的单位模式， 配置后无法更改。异常值undefined、NaN和Infinity按默认值处理。默认值：DEFAULT。 |
 
 ## getContext2DFromDrawingContext
@@ -66,20 +66,20 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | 是 | 一个DrawingRenderingContext类型的对象。 |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | 否 | 渲染上下文的配置选项。 默认值：{ antialias: false }。 |
+| drawingContext | [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md) | 是 | 一个DrawingRenderingContext类型的对象。 |
+| options | [RenderingContextOptions](arkts-arkui-canvas-renderingcontextoptions-i.md) | 否 | 渲染上下文的配置选项。 默认值：{ antialias: false }。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) | 返回一个CanvasRenderingContext2D对象， 其与入参的DrawingRenderingContext绑定了相同的Canvas组件。 |
+| [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md) | 返回一个CanvasRenderingContext2D对象， 其与入参的DrawingRenderingContext绑定了相同的Canvas组件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [103702](../errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) | The drawingContext is not bound to a canvas component. @static |
+| [103702](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) | The drawingContext is not bound to a canvas component. @static |
 
 ## offAttach
 
@@ -109,7 +109,7 @@ offAttach(callback?: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offDetach
 
@@ -139,7 +139,7 @@ offDetach(callback?: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onAttach
 
@@ -179,7 +179,7 @@ onAttach(callback: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onDetach
 
@@ -217,7 +217,7 @@ onDetach(callback: VoidCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -247,7 +247,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | 是 | 执行AI分析所需要的入参，用于配置AI分析功能。 异常值undefined或null按无效值处理。 |
+| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | 是 | 执行AI分析所需要的入参，用于配置AI分析功能。 异常值undefined或null按无效值处理。 |
 
 **返回值：**
 
@@ -259,9 +259,9 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | Image analysis feature is not supported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | Image analysis is stopped. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | Image analysis is currently being executed. |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | Image analysis feature is not supported. |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | Image analysis is stopped. |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 

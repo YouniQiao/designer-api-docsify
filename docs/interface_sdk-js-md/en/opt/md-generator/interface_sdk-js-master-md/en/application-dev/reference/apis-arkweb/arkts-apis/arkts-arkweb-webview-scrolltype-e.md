@@ -1,6 +1,6 @@
 # ScrollType
 
-Enumerates the scroll types for [setScrollable](setScrollable).
+Enumerates the scroll types for [setScrollable](arkts-arkweb-webview-webviewcontroller-c.md#setScrollable).
 
 **Since:** 12
 

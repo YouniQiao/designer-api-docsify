@@ -15,7 +15,7 @@ Information related to eUICC chips/devices.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## osVersion

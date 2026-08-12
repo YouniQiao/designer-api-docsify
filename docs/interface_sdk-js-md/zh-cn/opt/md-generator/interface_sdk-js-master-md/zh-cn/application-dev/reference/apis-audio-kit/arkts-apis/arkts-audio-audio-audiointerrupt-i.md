@@ -10,7 +10,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.AudioRendererOptions
+**替代接口：** [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md#AudioRendererOptions)
 
 <!--Device-audio-interface AudioInterrupt--><!--Device-audio-interface AudioInterrupt-End-->
 
@@ -24,13 +24,13 @@ contentType: ContentType
 
 音频打断媒体类型。
 
-**类型：** [ContentType](arkts-audio-audio-contenttype-e.md)
+**类型：** ContentType
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.AudioRendererOptions#rendererInfo
+**替代接口：** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
 
 <!--Device-AudioInterrupt-contentType: ContentType--><!--Device-AudioInterrupt-contentType: ContentType-End-->
 
@@ -50,7 +50,7 @@ pauseWhenDucked: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.InterruptEvent#hintType
+**替代接口：** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
 
 <!--Device-AudioInterrupt-pauseWhenDucked: boolean--><!--Device-AudioInterrupt-pauseWhenDucked: boolean-End-->
 
@@ -70,7 +70,7 @@ streamUsage: StreamUsage
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.audio.AudioRendererOptions#rendererInfo
+**替代接口：** [rendererInfo](ohos.multimedia.audio.AudioRendererOptions#rendererInfo)
 
 <!--Device-AudioInterrupt-streamUsage: StreamUsage--><!--Device-AudioInterrupt-streamUsage: StreamUsage-End-->
 

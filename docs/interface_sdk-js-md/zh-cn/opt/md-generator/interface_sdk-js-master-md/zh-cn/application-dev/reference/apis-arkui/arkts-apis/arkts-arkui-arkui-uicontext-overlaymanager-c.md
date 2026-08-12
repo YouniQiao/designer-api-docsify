@@ -30,7 +30,7 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | 是 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 | index | number | 否 |
 
 ## addComponentContentWithOrder
@@ -55,7 +55,7 @@ Creates a floating layer node with the specified display order.This API allows y
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | 是 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 否 |
 
 ## hideAllComponentContents
@@ -98,7 +98,7 @@ Hide the ComponentContent.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | 是 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 
 ## openOrderOverlay
 
@@ -122,20 +122,20 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | 是 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103307](../errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) |
+| [103307](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103307-系统弹出窗口导致无法打开浮层) |
 
 ## removeComponentContent
 
@@ -159,7 +159,7 @@ Removes a specified ComponentContent node from the OverlayManager
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | 是 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |
 
 ## showAllComponentContents
 
@@ -201,4 +201,4 @@ Show the ComponentContent.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md) | 是 |
+| content | [ComponentContent](arkts-arkui-componentcontent-c.md) | 是 |

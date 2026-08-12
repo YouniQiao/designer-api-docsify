@@ -13,7 +13,7 @@ This module provides data sharing and expansion capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { DataShareExtensionAbility } from 'kits/@kit.ArkData';
+import { DataShareExtensionAbility } from '@kit.ArkData';
 ```
 
 ## batchInsert
@@ -90,8 +90,8 @@ Batch updates data into the database. This API is called by the server and can b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;UpdateOperation&gt;&gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;number&gt;&gt;&gt; | Yes |
+| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;number&gt;&gt;&gt; | Yes |
 
 ## Examples
 
@@ -403,7 +403,7 @@ Queries data from the database. This API can be overridden as required.
 | --- | --- | --- |
 | uri | string | Yes |
 | predicates | dataSharePredicates.DataSharePredicates | Yes |
-| columns | Array&lt;string&gt; | Yes |
+| columns | Array & lt;string & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Object&gt; | Yes |
 
 ## Examples

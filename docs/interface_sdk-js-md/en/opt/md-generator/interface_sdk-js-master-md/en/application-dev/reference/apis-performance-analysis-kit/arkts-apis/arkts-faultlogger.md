@@ -2,13 +2,13 @@
 
 The **faultLogger** APIs can be used to query fault logs of an application cached on the system. The APIs use the application bundle name and the UID allocated by the system as the unique key value.
 
-The number of application fault logs stored in the system is limited by the system log pressure. You are advised to use [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md) to subscribe to fault events such as  
+The number of application fault logs stored in the system is limited by the system log pressure. You are advised to use [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiAppEvent) to subscribe to fault events such as  
 **APP_CRASH** and **APP_FREEZE**.
 
 > **NOTE：**
 > 
 > The APIs of this module are no longer maintained since API version 18. You are advised to use
-> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md) to subscribe to the **APP_CRASH** and
+> [@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiAppEvent) to subscribe to the **APP_CRASH** and
 > **APP_FREEZE** events in later versions.
 > 
 > For details about how to use HiAppEvent to subscribe to the **APP_CRASH** event, see
@@ -23,7 +23,7 @@ The number of application fault logs stored in the system is limited by the syst
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent
+**Substitutes:** [hiAppEvent](ohos.hiviewdfx.hiAppEvent)
 
 <!--Device-unnamed-declare namespace FaultLogger--><!--Device-unnamed-declare namespace FaultLogger-End-->
 
@@ -32,7 +32,7 @@ The number of application fault logs stored in the system is limited by the syst
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from 'kits/@kit.PerformanceAnalysisKit';
+import { FaultLogger } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

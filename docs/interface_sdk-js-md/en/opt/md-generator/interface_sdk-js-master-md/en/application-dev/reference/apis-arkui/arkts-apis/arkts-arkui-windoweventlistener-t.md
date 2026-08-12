@@ -19,4 +19,4 @@ Callback function for window event
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | windowId | number | Yes |
-| event | window.WindowEventType | Yes |
+| event | [window.WindowEventType](arkts-arkui-window-windoweventtype-e.md) | Yes |

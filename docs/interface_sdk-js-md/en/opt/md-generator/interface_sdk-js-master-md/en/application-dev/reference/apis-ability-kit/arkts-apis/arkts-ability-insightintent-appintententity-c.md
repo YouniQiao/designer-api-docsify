@@ -2,7 +2,7 @@
 
 Define AppIntentEntity.
 
-**Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)
+**Inheritance/Implementation:** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md#IntentEntity)
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ Define AppIntentEntity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## onQueryEntity
@@ -44,7 +44,7 @@ Called when query entity execute.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;T&gt;&gt; |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 ## displayName
 

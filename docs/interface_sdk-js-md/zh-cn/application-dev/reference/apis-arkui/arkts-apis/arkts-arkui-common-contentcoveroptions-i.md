@@ -1,10 +1,10 @@
 # ContentCoverOptions
 
-继承自[BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)。
+继承自[BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)。
 
 全屏模态页面内容选项。
 
-**继承/实现关系：** ContentCoverOptions extends [BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)
+**继承/实现关系：** ContentCoverOptions extends [BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)
 
 **起始版本：** 23
 
@@ -72,7 +72,7 @@ modalTransition?: ModalTransition
 
 同transition同时设置时，此属性不生效。
 
-**类型：** [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md)
+**类型：** [ModalTransition](arkts-arkui-common-modaltransition-e.md)
 
 **默认值：** ModalTransition.Default
 
@@ -94,7 +94,7 @@ transition?: TransitionEffect
 
 全屏模态页面的自定义转场方式。
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 23
 

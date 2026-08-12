@@ -22,7 +22,7 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：&lt;br&gt;VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)类型的指定时长振动；&lt;br&gt;VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)类型的预置振动。&lt;br&gt;此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)。stopMode需与启动振动时的VibrateEffect类型对应，否则停止操作可能无效。 |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：&lt;br&gt;VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的指定时长振动；&lt;br&gt;VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。&lt;br&gt;此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的VibrateEffect类型对应，否则停止操作可能无效。 |
 
 **返回值：**
 
@@ -34,8 +34,8 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -138,15 +138,15 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：&lt;br&gt;VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)类型的固定时长振动；&lt;br&gt;VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)类型的预置振动。&lt;br&gt;此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)。stopMode需与启动振动时的 VibrateEffect类型对应，否则停止操作可能无效。 |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：&lt;br&gt;VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的固定时长振动；&lt;br&gt;VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。&lt;br&gt;此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的 VibrateEffect类型对应，否则停止操作可能无效。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象。回调结果可用于确认振动是否成功停止。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -265,7 +265,7 @@ function stopVibration(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -320,7 +320,7 @@ function stopVibration(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -365,7 +365,7 @@ function stopVibration(param?: VibratorInfoParam): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [VibratorInfoParam](arkts-sensorservice-vibrator-vibratorinfoparam-i.md) | 否 | 指出需要停止振动的设备和马达信息。不传参时默认停止本地设备的全部马达振动。deviceId默认值为-1（本地设备），vibratorId默认值为0（该设备的全部马 达）。deviceId和vibratorId可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync)或 [vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。 |
+| param | [VibratorInfoParam](arkts-sensorservice-vibrator-vibratorinfoparam-i.md) | 否 | 指出需要停止振动的设备和马达信息。不传参时默认停止本地设备的全部马达振动。deviceId默认值为-1（本地设备），vibratorId默认值为0（该设备的全部马 达）。deviceId和vibratorId可通过[vibrator.getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync)或 [vibrator.on](arkts-sensorservice-vibrator-on-f.md#on)查询获取。 |
 
 **返回值：**
 
@@ -377,8 +377,8 @@ function stopVibration(param?: VibratorInfoParam): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-操作设备失败) | Device operation failed. |
 
 ## 示例
 

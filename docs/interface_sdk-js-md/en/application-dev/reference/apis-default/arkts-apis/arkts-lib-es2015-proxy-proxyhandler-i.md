@@ -72,7 +72,7 @@ A trap for `Object.defineProperty()`.
 | --- | --- | --- | --- |
 | target | T | Yes |  |
 | property | string \| symbol | Yes |  |
-| attributes | [PropertyDescriptor](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-propertydescriptor-i.md) | Yes |  |
+| attributes | PropertyDescriptor | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ A trap for `Object.getOwnPropertyDescriptor()`.
 
 | Type | Description |
 | --- | --- |
-| [PropertyDescriptor](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-ssap-propertydescriptor-i.md) |  |
+| PropertyDescriptor |  |
 
 ## getPrototypeOf
 
@@ -251,7 +251,7 @@ A trap for `Reflect.ownKeys()`.
 
 | Type | Description |
 | --- | --- |
-| [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;string \| symbol&gt; |  |
+| ArrayLike&lt;string \| symbol&gt; |  |
 
 ## preventExtensions
 

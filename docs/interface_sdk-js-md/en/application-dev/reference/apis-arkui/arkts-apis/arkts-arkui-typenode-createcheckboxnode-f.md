@@ -29,5 +29,5 @@ Create a FrameNode of Checkbox type.On API 26.0.0 and above, It can also create 
 
 | Type | Description |
 | --- | --- |
-| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | Return Checkbox type FrameNode. |
+| Checkbox | Return Checkbox type FrameNode. |
 

@@ -44,7 +44,7 @@ footerComponent?: ComponentContent
 
 同一个footerComponent不推荐同时给不同的ListItemGroup使用，否则会导致显示问题。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 13
 
@@ -120,7 +120,7 @@ headerComponent?: ComponentContent
 
 同一个headerComponent不推荐同时给不同的ListItemGroup使用，否则会导致显示问题。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 13
 

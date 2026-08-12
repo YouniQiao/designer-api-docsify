@@ -2,7 +2,7 @@
 
 animation element
 
-**Inheritance/Implementation:** AnimationElement extends [Element](arkts-arkui-viewmodel-element-i.md)
+**Inheritance/Implementation:** AnimationElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
 
 **Since:** 4
 

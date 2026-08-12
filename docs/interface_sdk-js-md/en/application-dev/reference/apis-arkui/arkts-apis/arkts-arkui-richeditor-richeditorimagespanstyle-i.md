@@ -18,7 +18,7 @@ layoutStyle?: RichEditorLayoutStyle
 
 RichEditor ImageSpan Layout Style.
 
-**Type:** [RichEditorLayoutStyle](../arkts-components/arkts-arkui-richeditorlayoutstyle-i.md)
+**Type:** [RichEditorLayoutStyle](arkts-arkui-richeditor-richeditorlayoutstyle-i.md)
 
 **Since:** 23
 

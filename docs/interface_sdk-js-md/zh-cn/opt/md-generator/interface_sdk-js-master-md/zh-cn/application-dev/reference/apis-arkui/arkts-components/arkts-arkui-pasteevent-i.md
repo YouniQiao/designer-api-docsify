@@ -18,7 +18,7 @@ preventDefault?: Callback<void>
 
 省略时，执行系统默认粘贴行为。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 11
 

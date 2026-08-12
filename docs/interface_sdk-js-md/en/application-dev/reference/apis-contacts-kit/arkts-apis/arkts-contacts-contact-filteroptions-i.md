@@ -13,7 +13,7 @@ Defines contact filter options.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## filterCondition
@@ -44,7 +44,7 @@ value?: string | ValueType[]
 
 Filter value. The default value is **undefined**.
 
-**Type:** string \| ValueType[]
+**Type:** string \| [ValueType](../../apis-arkdata/arkts-apis/arkts-arkdata-valuetype-t.md)[]
 
 **Since:** 15
 

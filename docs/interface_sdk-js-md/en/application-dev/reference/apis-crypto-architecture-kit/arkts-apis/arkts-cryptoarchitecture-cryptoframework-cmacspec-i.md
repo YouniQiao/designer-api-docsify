@@ -1,12 +1,12 @@
 # CmacSpec
 
-Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md). It is used as an input parameter for CMAC computation.
+Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md#MacSpec). It is used as an input parameter for CMAC computation.
 
 > **NOTE：**
 > 
 > **cipherName** specifies the symmetric cipher algorithm used by CMAC. It is mandatory.
 
-**Inheritance/Implementation:** CmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md)
+**Inheritance/Implementation:** CmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md#MacSpec)
 
 **Since:** 18
 
@@ -19,7 +19,7 @@ Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherName

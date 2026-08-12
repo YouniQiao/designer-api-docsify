@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## dumpJsRawHeapData
@@ -47,14 +47,14 @@ Dumps the original heap snapshot of the VM for the current thread and generates 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-quota-exceeded) | Quota exceeded. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
+| [11400109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
+| [11400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
+| [11400111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
+| [11400110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
+| [11400107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
+| [11400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
+| [11400113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+| [11400112](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
 
 ## Examples
 
@@ -106,14 +106,14 @@ Dumps the original heap snapshot of the VM for the current thread. The API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-quota-exceeded) | Quota exceeded. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
+| [11400109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
+| [11400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
+| [11400111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
+| [11400110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
+| [11400107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
+| [11400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
+| [11400113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+| [11400112](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
 
 
 ## dumpJsRawHeapData
@@ -156,12 +156,12 @@ The generated file will be stored in a folder within the application directory. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400109](../errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
-| [11400108](../errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
-| [11400111](../errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
-| [11400110](../errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
-| [11400107](../errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
-| [11400106](../errorcode-hiviewdfx-hidebug.md#11400106-quota-exceeded) | Quota exceeded. |
-| [11400113](../errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
-| [11400112](../errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
+| [11400109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400109-waiting-for-the-child-dump-process-times-out) | Timeout while waiting for the child process to finish. |
+| [11400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400108-failed-to-wait-for-the-child-dump-process-to-finish) | Failed to wait for the child process to finish. |
+| [11400111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400111-failed-to-call-the-nodeapi) | Napi interface call exception. |
+| [11400110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400110-insufficient-disk-space) | Disk remaining space too low. |
+| [11400107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400107-failed-to-fork-the-child-dump-process) | Fork operation failed. |
+| [11400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400106-api-call-quota-exceeded) | Quota exceeded. |
+| [11400113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400113-failed-to-create-a-dump-file) | Failed to create dump file. |
+| [11400112](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400112-repeated-data-dump) | Repeated data dump. |
 

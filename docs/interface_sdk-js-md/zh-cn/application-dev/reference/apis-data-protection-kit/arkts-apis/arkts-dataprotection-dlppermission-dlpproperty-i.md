@@ -18,7 +18,7 @@ actionUponExpiry?: ActionType
 
 表示到期后文件是否允许打开（打开后拥有编辑权限），仅在expireTime不为空时生效，默认为空。
 
-**类型：** [ActionType](arkts-dataprotection-dlppermission-actiontype-e.md)
+**类型：** ActionType
 
 **起始版本：** 21
 
@@ -54,7 +54,7 @@ authUserList?: Array<AuthUser>
 
 表示授权用户列表，默认为空。
 
-**类型：** Array&lt;AuthUser&gt;
+**类型：** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i.md)&gt;
 
 **起始版本：** 21
 
@@ -110,7 +110,7 @@ everyoneAccessList?: Array<DLPFileAccess>
 
 表示授予所有人的权限，默认为空。
 
-**类型：** Array&lt;DLPFileAccess&gt;
+**类型：** Array&lt;[DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)&gt;
 
 **起始版本：** 21
 

@@ -1,8 +1,8 @@
 # PersistenceV2
 
-继承自[AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)，PersistenceV2提供UI状态的持久化存储能力，支持将应用状态数据持久化到磁盘，在应用重启后恢复数据，适用于需要保留UI状态数据的场景。具体UI使用说明，详见[PersistenceV2(持久化存储UI状态)](../../../ui/state-management/arkts-new-persistencev2.md)。
+继承自[AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2)，PersistenceV2提供UI状态的持久化存储能力，支持将应用状态数据持久化到磁盘，在应用重启后恢复数据，适用于需要保留UI状态数据的场景。具体UI使用说明，详见[PersistenceV2(持久化存储UI状态)](../../../ui/state-management/arkts-new-persistencev2.md)。
 
-**继承/实现关系：** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md)
+**继承/实现关系：** PersistenceV2 extends [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md#AppStorageV2)
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ static globalConnect<T extends object>(
 
 将键值对数据存储在应用磁盘中。如果给定的key已经存在于[PersistenceV2](../../../ui/state-management/arkts-new-persistencev2.md)中，返回对应的值；否则，会通过获取默认值的构造器构造默认值，并返回。如果通过globalConnect连接的对象是  
 [\@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md)对象，该对象  
-[\@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)属性的变化，会触发整个关联对象的自动刷新；非\@Trace属性变化则不会自动持久化，如需持久化非\@Trace属性的变化，可调用[PersistenceV2.save](arkts-arkui-arkui-statemanagement-persistencev2-c.md#save)接口手动存储。
+[\@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md)属性的变化，会触发整个关联对象的自动刷新；非\@Trace属性变化则不会自动持久化，如需持久化非\@Trace属性的变化，可调用[PersistenceV2.save](#save)接口手动存储。
 
 > **说明：**
 > 
@@ -58,7 +58,7 @@ static globalConnect<T extends object>(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-ability-connectoptions-t.md)&lt;T&gt; | 是 |
+| type | [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | 是 |
 
 **返回值：**
 
@@ -75,7 +75,7 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
 ```
 
 将键值对数据存储在应用磁盘中。支持集合类型  
-[`Array`，`Map`，`Set`，`collections.Array`，`collections.Map`，`collections.Set`类型的持久化](../../../ui/state-management/arkts-new-persistencev2.md#globalconnect支持集合的类型)。注意在持久化`Array&lt;ClassA&gt;`类型的数据时，需要调用[`makeObserved`](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved)使返回的对象被观察到。不支持多个嵌套集合，例如不支持`Array&lt;Array<ClassA>&gt;&lt;ClassA&gt;>`的持久化。
+[`Array`，`Map`，`Set`，`collections.Array`，`collections.Map`，`collections.Set`类型的持久化](../../../ui/state-management/arkts-new-persistencev2.md#globalconnect支持集合的类型)。注意在持久化`Array&lt;ClassA&gt;`类型的数据时，需要调用[`makeObserved`](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved)使返回的对象被观察到。不支持多个嵌套集合，例如不支持`Array&lt;Array<ClassA>&gt;&lt;ClassA&gt;>`的持久化。
 
 > **说明：**
 > 
@@ -101,7 +101,7 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; \| [ConnectOptions&lt;T&gt;](../../apis-ability-kit/arkts-apis/arkts-ability-ability-connectoptions-t.md) | 是 |
+| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; \| [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | 是 |
 
 **返回值：**
 
@@ -163,4 +163,4 @@ static save<T>(keyOrType: string | TypeConstructorWithArgs<T>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| keyOrType | string \| [TypeConstructorWithArgs&lt;T&gt;](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md) | 是 |
+| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | 是 |

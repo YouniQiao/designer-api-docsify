@@ -23,7 +23,7 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | bundleName | string | 是 |
-| extensionAbilityType | bundleManager.ExtensionAbilityType | 是 |
+| [extensionAbilityType](arkts-ability-extensionabilityinfo-i.md) | bundleManager.ExtensionAbilityType | 是 |
 | resourceFlags | number | 是 |
 | appIndex | number | 否 |
 
@@ -31,16 +31,16 @@ function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityTyp
 
 | 类型 |
 | --- |
-| Array&lt;LauncherAbilityResourceInfo&gt; |
+| Array & lt;LauncherAbilityResourceInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

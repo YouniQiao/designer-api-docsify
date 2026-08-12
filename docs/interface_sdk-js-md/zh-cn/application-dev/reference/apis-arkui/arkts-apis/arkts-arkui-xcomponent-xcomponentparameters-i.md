@@ -18,7 +18,7 @@ controller?: XComponentController
 
 给组件绑定一个控制器，通过控制器调用组件方法，仅类型为SURFACE或TEXTURE时有效。
 
-**类型：** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
+**类型：** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ nativeXComponentHandler: Callback<NativeXComponentPointer>
 
 用于处理NativeXComponent实例的回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NativeXComponentPointer&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[NativeXComponentPointer](arkts-arkui-nativexcomponentpointer-t.md)&gt;
 
 **起始版本：** 23
 

@@ -29,5 +29,5 @@ export function createXComponentNodeDefault(context: UIContext, options?: FrameN
 
 | 类型 | 说明 |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | 返回XComponent类型的FrameNode。 |
+| XComponent | 返回XComponent类型的FrameNode。 |
 

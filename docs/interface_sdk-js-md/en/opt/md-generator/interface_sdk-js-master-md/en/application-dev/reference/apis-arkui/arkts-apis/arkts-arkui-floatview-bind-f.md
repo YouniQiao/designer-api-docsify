@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## bind
@@ -14,13 +14,13 @@ function bind(floatViewController: FloatViewController, floatingBallController: 
 ```
 
 Binds the float view and floating ball. You need to create the  
-[float view controller](arkts-arkui-floatview-floatviewcontroller-i.md) and  
-[floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md) first, and neither of them has been started. This API uses a promise to return the result.
+[float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and  
+[floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) first, and neither of them has been started. This API uses a promise to return the result.
 
 > **NOTE：**
 > 
 > - After the binding is successful, calling [start()](arkts-arkui-floatview-floatviewcontroller-i.md#start) or
-> [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startfloatingball) will
+> [startFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#startFloatingBall) will
 > create both a float view and the floating ball window, and trigger the status callback registered for the
 > corresponding window. However, only one window is displayed at a time, and the display sequence depends on which
 > controller's start API is called first.
@@ -29,7 +29,7 @@ Binds the float view and floating ball. You need to create the
 > clicking.
 > 
 > - After the binding is successful, calling the stop API ([stop()](arkts-arkui-floatview-floatviewcontroller-i.md#stop) or
-> [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopfloatingball)) of
+> [stopFloatingBall()](arkts-arkui-floatingball-floatingballcontroller-i.md#stopFloatingBall)) of
 > either controller will destroy both the float view and the floating ball window, and trigger the status callback
 > registered for the corresponding window.
 
@@ -55,17 +55,17 @@ Binds the float view and floating ball. You need to create the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
 
 ## Examples
 

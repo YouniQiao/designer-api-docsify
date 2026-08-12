@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream](arkts-corefile-fileio-stream-depr-i.md)
+**替代接口：** [Stream](arkts-corefile-file-fs-stream-i.md#Stream)
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -28,7 +28,7 @@ close(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.close](arkts-corefile-fileio-stream-depr-i.md#close)
+**替代接口：** [close](arkts-corefile-file-fs-stream-i.md#close)
 
 <!--Device-Stream-close(): Promise<void>--><!--Device-Stream-close(): Promise<void>-End-->
 
@@ -67,7 +67,7 @@ close(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.close](arkts-corefile-fileio-stream-depr-i.md#close)
+**替代接口：** [close](arkts-corefile-file-fs-stream-i.md#close)
 
 <!--Device-Stream-close(callback: AsyncCallback<void>): void--><!--Device-Stream-close(callback: AsyncCallback<void>): void-End-->
 
@@ -104,7 +104,7 @@ closeSync(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.closeSync](arkts-corefile-fileio-stream-depr-i.md#closesync)
+**替代接口：** [closeSync](arkts-corefile-file-fs-stream-i.md#closeSync)
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
 
@@ -132,7 +132,7 @@ flush(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.flush](arkts-corefile-fileio-stream-depr-i.md#flush)
+**替代接口：** [flush](arkts-corefile-file-fs-stream-i.md#flush)
 
 <!--Device-Stream-flush(): Promise<void>--><!--Device-Stream-flush(): Promise<void>-End-->
 
@@ -171,7 +171,7 @@ flush(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.flush](arkts-corefile-fileio-stream-depr-i.md#flush)
+**替代接口：** [flush](arkts-corefile-file-fs-stream-i.md#flush)
 
 <!--Device-Stream-flush(callback: AsyncCallback<void>): void--><!--Device-Stream-flush(callback: AsyncCallback<void>): void-End-->
 
@@ -208,7 +208,7 @@ flushSync(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.flushSync](arkts-corefile-fileio-stream-depr-i.md#flushsync)
+**替代接口：** [flushSync](arkts-corefile-file-fs-stream-i.md#flushSync)
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
 
@@ -243,7 +243,7 @@ read(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.read](arkts-corefile-fileio-stream-depr-i.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): Promise<ReadOut>--><!--Device-Stream-read(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): Promise<ReadOut>-End-->
 
@@ -260,7 +260,7 @@ read(
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ReadOut&gt; | Promise对象。返回读取的结果。 |
+| Promise&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | Promise对象。返回读取的结果。 |
 
 ## 示例
 
@@ -302,7 +302,7 @@ read.
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.read](arkts-corefile-fileio-stream-depr-i.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<ReadOut>): void-End-->
 
@@ -313,7 +313,7 @@ read.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | buffer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | 是 | callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | 是 | callback. |
 
 ## read
 
@@ -337,7 +337,7 @@ read(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.read](arkts-corefile-fileio-stream-depr-i.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-stream-i.md#read)
 
 <!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void--><!--Device-Stream-read(    buffer: ArrayBuffer,    options: {      position?: number;      offset?: number;      length?: number;    },    callback: AsyncCallback<ReadOut>  ): void-End-->
 
@@ -349,7 +349,7 @@ read(
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于读取文件的缓冲区。 |
 | options | {       position?: number;       offset?: number;       length?: number;     } | 是 | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示将数据读取到缓冲区的位置，即相对于缓冲区首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-? length，number类型，表示期望读取数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望读取文件的位置，单位为Byte。可选，默认从当前位置开始读 。&lt;br/&gt;约束：offset+length<=buffer.size。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReadOut&gt; | 是 | 异步从流文件读取数据之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReadOut](arkts-corefile-fileio-readout-depr-i.md)&gt; | 是 | 异步从流文件读取数据之后的回调。 |
 
 ## 示例
 
@@ -398,7 +398,7 @@ readSync(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.readSync](arkts-corefile-fileio-stream-depr-i.md#readsync)
+**替代接口：** [readSync](arkts-corefile-file-fs-stream-i.md#readSync)
 
 <!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number--><!--Device-Stream-readSync(    buffer: ArrayBuffer,    options?: {      position?: number;      offset?: number;      length?: number;    }  ): number-End-->
 
@@ -457,7 +457,7 @@ write(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.write](arkts-corefile-fileio-stream-depr-i.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): Promise<number>--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): Promise<number>-End-->
 
@@ -513,7 +513,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.write](arkts-corefile-fileio-stream-depr-i.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
@@ -549,7 +549,7 @@ write(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.write](arkts-corefile-fileio-stream-depr-i.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-stream-i.md#write)
 
 <!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void--><!--Device-Stream-write(    buffer: ArrayBuffer | string,    options: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    },    callback: AsyncCallback<number>  ): void-End-->
 
@@ -609,7 +609,7 @@ writeSync(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stream.writeSync](arkts-corefile-fileio-stream-depr-i.md#writesync)
+**替代接口：** [writeSync](arkts-corefile-file-fs-stream-i.md#writeSync)
 
 <!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number--><!--Device-Stream-writeSync(    buffer: ArrayBuffer | string,    options?: {      offset?: number;      length?: number;      position?: number;      encoding?: string;    }  ): number-End-->
 

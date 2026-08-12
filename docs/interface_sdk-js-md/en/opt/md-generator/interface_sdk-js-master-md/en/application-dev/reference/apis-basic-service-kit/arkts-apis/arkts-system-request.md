@@ -4,13 +4,13 @@ The **system.request** module provides applications with basic upload and downlo
  > **NOTE**
  >
  > - The APIs of this module are deprecated since API version 9. You are advised to use
- > [@ohos.request](arkts-basicservices-request-n.md) instead.
+ > [@ohos.request](arkts-basicservices-request-n.md#request) instead.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

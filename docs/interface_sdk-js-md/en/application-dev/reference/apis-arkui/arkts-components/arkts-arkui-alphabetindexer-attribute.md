@@ -1,14 +1,14 @@
 # AlphabetIndexer properties/events
 
-When the [width](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#width) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+When the [width](CommonMethod#width(value: Length)) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
-The default value of the [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding) attribute is 4 vp.
+The default value of the [padding](CommonMethod#padding) attribute is 4 vp.
 
-The [maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale) and [minFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#minfontscale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
+The [maxFontScale](TextAttribute#maxFontScale) and [minFontScale](TextAttribute#minFontScale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](common), the following events are supported.
 
 **Inheritance/Implementation:** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
 
@@ -42,8 +42,8 @@ Sets the alignment style of the indexer pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](../arkts-apis/arkts-arkui-alphabetindexer-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.&lt;br&gt;Default value: **IndexerAlign.END |
-| offset | [Length](../arkts-apis/arkts-arkui-length-t.md) | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](AlphabetIndexerAttribute#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
+| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.&lt;br&gt;Default value: **IndexerAlign.END |
+| offset | Length | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](AlphabetIndexerAttribute#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
 
@@ -59,7 +59,7 @@ When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 
 
 > **NOTE：**
 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 12.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
 
 **Since:** 11
 
@@ -101,7 +101,7 @@ Sets the text color for unselected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of unselected items.&lt;br&gt;Default value: **0x99182431**, which is a slightly transparent brown. |
+| value | ResourceColor | Yes | Text color of unselected items.&lt;br&gt;Default value: **0x99182431**, which is a slightly transparent brown. |
 
 ## enableHapticFeedback
 
@@ -151,7 +151,7 @@ Sets the text style for unselected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of unselected items.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| value | Font | Yes | Text style of unselected items.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 ## itemBorderRadius
 
@@ -201,7 +201,7 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.&lt;br&gt;The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding), and the maximum height of an index item is (component height minus the top and bottom [padding](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#padding))/number of index items. If the input value is less than or equal to 0, the default value is used.&lt;br&gt;Default value: **16.0**&lt;br&gt;Unit: vp |
+| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.&lt;br&gt;The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right [padding](CommonMethod#padding), and the maximum height of an index item is (component height minus the top and bottom [padding](CommonMethod#padding))/number of index items. If the input value is less than or equal to 0, the default value is used.&lt;br&gt;Default value: **16.0**&lt;br&gt;Unit: vp |
 
 ## onPopupSelect
 
@@ -225,7 +225,7 @@ Triggered when a secondary index item in the pop-up window is selected. The call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerPopupSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Yes | Event triggered when a secondary index item in the pop- up window is selected.<br>**Since:** 18 |
+| callback | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | Yes | Event triggered when a secondary index item in the pop- up window is selected.<br>**Since:** 18 |
 
 ## onRequestPopupData
 
@@ -273,7 +273,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAlphabetIndexerSelectCallback](../arkts-apis/arkts-arkui-onalphabetindexerselectcallback-t.md) | Yes | Event triggered when an index item is selected.<br>**Since:** 18 |
+| callback | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | Yes | Event triggered when an index item is selected.<br>**Since:** 18 |
 
 ## onSelected
 
@@ -291,7 +291,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 **Deprecated since:** 8
 
-**Substitutes:** onSelect
+**Substitutes:** [onSelect](onSelect)
 
 <!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute-End-->
 
@@ -335,7 +335,7 @@ Since API version 26.0.0, if neither **popupBackground** nor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the pop-up window.&lt;br&gt;The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle) to **NONE**.&lt;br&gt; |
+| value | ResourceColor | Yes | Background color of the pop-up window.&lt;br&gt;The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle) to **NONE**.&lt;br&gt; |
 
 ## popupBackgroundBlurStyle
 
@@ -362,7 +362,7 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BlurStyle](arkts-arkui-blurstyle-e.md) | Yes | Background blur style of the pop-up window.&lt;br&gt;The background blur effect can affect [popupBackground](AlphabetIndexerAttribute#popupBackground). You can disable the effect by setting it to **NONE**. |
+| value | BlurStyle | Yes | Background blur style of the pop-up window.&lt;br&gt;The background blur effect can affect [popupBackground](AlphabetIndexerAttribute#popupBackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -386,7 +386,7 @@ Sets the text color for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the primary index item in the pop-up window.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
+| value | ResourceColor | Yes | Text color of the primary index item in the pop-up window.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
 
 ## popupFont
 
@@ -410,7 +410,7 @@ Sets the text style for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the primary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:' 24.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| value | Font | Yes | Text style of the primary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:' 24.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 ## popupItemBackgroundColor
 
@@ -436,7 +436,7 @@ Sets the background color for the secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier: **#FFFFFFFF**, which is white.&lt;br&gt;API version 12 and later: **#00000000**, which is transparent. |
+| value | ResourceColor | Yes | Background color of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier: **#FFFFFFFF**, which is white.&lt;br&gt;API version 12 and later: **#00000000**, which is transparent. |
 
 ## popupItemBorderRadius
 
@@ -488,7 +488,7 @@ Sets the text style for the secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size :24,&lt;br&gt;weight:FontWeight.Medium&lt;br&gt;} |
+| value | Font | Yes | Text style of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size :24,&lt;br&gt;weight:FontWeight.Medium&lt;br&gt;} |
 
 ## popupPosition
 
@@ -512,7 +512,7 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](../arkts-apis/arkts-arkui-display-position-i.md) | Yes | Position of the pop-up window relative to the center of the indexer's top border.&lt;br&gt; Default value: **{x: 60.0, y: 48.0} |
+| value | Position | Yes | Position of the pop-up window relative to the center of the indexer's top border.&lt;br&gt; Default value: **{x: 60.0, y: 48.0} |
 
 ## popupSelectedColor
 
@@ -538,7 +538,7 @@ Sets the text color for the selected secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the selected secondary index items in the pop-up window.&lt;br&gt;Default value: **#FF182431**, which is dark blue. |
+| value | ResourceColor | Yes | Text color of the selected secondary index items in the pop-up window.&lt;br&gt;Default value: **#FF182431**, which is dark blue. |
 
 ## popupTitleBackground
 
@@ -564,7 +564,7 @@ Sets the background color for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color for the primary index item in the pop-up window.&lt;br&gt;Default value :&lt;br&gt;If the pop-up window has only one index: **#00FFFFFF**.&lt;br&gt;If the pop-up window has multiple indexes: **#0c182431**. |
+| value | ResourceColor | Yes | Background color for the primary index item in the pop-up window.&lt;br&gt;Default value :&lt;br&gt;If the pop-up window has only one index: **#00FFFFFF**.&lt;br&gt;If the pop-up window has multiple indexes: **#0c182431**. |
 
 ## popupUnselectedColor
 
@@ -590,7 +590,7 @@ Sets the text color for the unselected secondary index items in the pop-up windo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the unselected secondary index items in the pop-up window.&lt;br&gt; Default value: **#FF182431**, which is dark blue. |
+| value | ResourceColor | Yes | Text color of the unselected secondary index items in the pop-up window.&lt;br&gt; Default value: **#FF182431**, which is dark blue. |
 
 ## selected
 
@@ -617,7 +617,7 @@ Since API version 10, this parameter supports two-way binding through
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the selected item.&lt;br&gt;Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md).length – 1]&lt;br&gt;Default value: **0 |
+| index | number | Yes | Index of the selected item.&lt;br&gt;Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md#AlphabetIndexerOptions).length – 1]&lt;br&gt;Default value: **0 |
 
 ## selectedBackgroundColor
 
@@ -641,7 +641,7 @@ Sets the background color of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1A007DFF**, which is semi-transparent blue-green. |
+| value | ResourceColor | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1A007DFF**, which is semi-transparent blue-green. |
 
 ## selectedColor
 
@@ -665,7 +665,7 @@ Sets the text color for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
+| value | ResourceColor | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
 
 ## selectedFont
 
@@ -689,7 +689,7 @@ Sets the text style for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Text style of the selected item.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| value | Font | Yes | Text style of the selected item.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
 
 ## usingPopup
 

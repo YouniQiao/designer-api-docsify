@@ -22,7 +22,7 @@ corresponding application process on the phone after receiving data sent by the 
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from 'kits/@kit.DistributedServiceKit';
+import { proxyChannelManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

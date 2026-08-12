@@ -13,7 +13,7 @@ Defines the popup init info.
 ## Modules to Import
 
 ```TypeScript
-import { PopupV2Button, PopupV2, PopupV2InitInfo } from 'kits/@kit.ArkUI';
+import { PopupV2Button, PopupV2, PopupV2InitInfo } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -44,7 +44,7 @@ direction?: Direction
 
 Indicates the attribute of the current popup direction.
 
-**Type:** [Direction](arkts-arkui-direction-e.md)
+**Type:** Direction
 
 **Default:** Direction.Auto
 
@@ -66,7 +66,7 @@ icon?: ResourceStr
 
 The icon of Popup.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -106,7 +106,7 @@ maxWidth?: Dimension
 
 Set the max width of the popup.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 400.0_vp
 
@@ -128,7 +128,7 @@ message: ResourceStr
 
 The message of Popup.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -168,7 +168,7 @@ onClose?: VoidCallback
 
 The close button callback of Popup.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 26.0.0
 
@@ -210,7 +210,7 @@ title?: ResourceStr
 
 The title of Popup.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

@@ -2,7 +2,7 @@
 
 Observable Date base class.
 
-**Inheritance/Implementation:** ObservedDate extends [Date](../../apis-arkts/arkts-apis/arkts-arkts-date-c.md/arkts-arkts-date-c.md)
+**Inheritance/Implementation:** ObservedDate extends [Date](Date)
 
 **Since:** 26.0.0
 

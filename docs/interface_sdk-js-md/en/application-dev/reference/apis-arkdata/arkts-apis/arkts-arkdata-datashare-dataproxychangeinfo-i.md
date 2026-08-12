@@ -13,7 +13,7 @@ Defines a struct for notifying subscribers of the shared configuration changes, 
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## type
@@ -24,7 +24,7 @@ type: ChangeType
 
 Data change type.
 
-**Type:** [ChangeType](arkts-arkdata-relationalstore-changetype-e.md)
+**Type:** ChangeType
 
 **Since:** 20
 

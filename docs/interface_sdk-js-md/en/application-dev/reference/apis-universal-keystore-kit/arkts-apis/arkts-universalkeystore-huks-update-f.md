@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## update
@@ -22,7 +22,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession)(
+**Substitutes:** [updateSession](huks.updateSession()
 
 <!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -35,7 +35,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 | handle | number | Yes | Handle of the **update** operation, which is of the uint64 type. |
 | token | Uint8Array | No | Token of the **update** operation. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Parameter set used for the **update** operation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the obtained **HuksResult**. Otherwise, **err** is an error object. |
 
 
 ## update
@@ -54,7 +54,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession)(handle:
+**Substitutes:** [updateSession](huks.updateSession(handle:)
 
 <!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function update(handle: number, token?: Uint8Array, options: HuksOptions): Promise<HuksResult>-End-->
 
@@ -72,5 +72,5 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise that returns **HuksResult**. |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise that returns **HuksResult**. |
 

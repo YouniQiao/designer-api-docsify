@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## pairDevice
@@ -18,7 +18,7 @@ Starts pairing with a remote Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.pairDevice
+**Substitutes:** [pairDevice](ohos.bluetoothManager/bluetoothManager.pairDevice)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

@@ -2,7 +2,7 @@
 
 RichEditor组件控制器基类。
 
-**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md/arkts-arkui-texteditcontrollerex-i.md)
+**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md#TextEditControllerEx)
 
 **起始版本：** 12
 

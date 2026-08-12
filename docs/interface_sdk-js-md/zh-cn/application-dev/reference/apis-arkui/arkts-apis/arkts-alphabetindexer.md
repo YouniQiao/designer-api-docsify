@@ -26,6 +26,6 @@
 | 名称 | 说明 |
 | --- | --- |
 | [OnAlphabetIndexerPopupSelectCallback](arkts-arkui-onalphabetindexerpopupselectcallback-t.md) | 提示弹窗二级索引项被选中时触发的事件。 |
-| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | [usingPopup](arkts-arkui-alphabetindexer-alphabetindexerattribute-i.md#usingpopup)设置值为true，索引项被选中时触发的事件。 |
+| [OnAlphabetIndexerRequestPopupDataCallback](arkts-arkui-onalphabetindexerrequestpopupdatacallback-t.md) | [usingPopup](arkts-arkui-alphabetindexer-alphabetindexerattribute-i.md#usingPopup)设置值为true，索引项被选中时触发的事件。 |
 | [OnAlphabetIndexerSelectCallback](arkts-arkui-onalphabetindexerselectcallback-t.md) | 索引项被选中时触发的事件。 |
 

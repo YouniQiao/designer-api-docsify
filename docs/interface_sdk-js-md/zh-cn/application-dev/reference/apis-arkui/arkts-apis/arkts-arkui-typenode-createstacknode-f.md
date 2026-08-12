@@ -29,5 +29,5 @@ export function createStackNode(context: UIContext, options?: FrameNodeOptions):
 
 | 类型 | 说明 |
 | --- | --- |
-| [Stack](arkts-arkui-typenode-stack-t.md) | 返回 Stack 类型的 FrameNode。 |
+| Stack | 返回 Stack 类型的 FrameNode。 |
 

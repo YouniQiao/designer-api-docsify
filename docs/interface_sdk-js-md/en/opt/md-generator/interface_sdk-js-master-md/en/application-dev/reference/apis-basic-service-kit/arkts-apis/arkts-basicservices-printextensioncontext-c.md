@@ -2,7 +2,7 @@
 
 The context of print extension. It allows access to serviceExtension-specific resources.
 
-**Inheritance/Implementation:** PrintExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** PrintExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 26.0.0
 

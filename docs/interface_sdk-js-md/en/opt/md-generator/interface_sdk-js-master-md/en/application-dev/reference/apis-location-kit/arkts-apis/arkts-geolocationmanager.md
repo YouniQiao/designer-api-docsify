@@ -12,7 +12,7 @@ Provides interfaces for acquiring location information, managing location switch
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## Summary

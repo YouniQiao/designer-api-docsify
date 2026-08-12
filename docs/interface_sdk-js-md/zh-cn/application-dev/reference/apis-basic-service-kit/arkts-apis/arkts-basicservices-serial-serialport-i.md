@@ -38,8 +38,8 @@ close(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## drain
 
@@ -69,9 +69,9 @@ drain(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## flush
 
@@ -101,9 +101,9 @@ flush串口缓冲区。使用Promise异步回调。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## getCts
 
@@ -133,9 +133,9 @@ getCts(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## getDsr
 
@@ -165,9 +165,9 @@ getDsr(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## offDataRead
 
@@ -197,8 +197,8 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## offDisconnect
 
@@ -228,8 +228,8 @@ offDisconnect(callback?: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## onDataRead
 
@@ -237,7 +237,7 @@ offDisconnect(callback?: Callback<void>): void
 onDataRead(callback: Callback<Uint8Array>): void
 ```
 
-监听串口端口接收到的数据。使用Callback异步回调。调用{@link close}接口时，会清理全部回调
+监听串口端口接收到的数据。使用Callback异步回调。调用[close](#close)接口时，会清理全部回调
 
 **起始版本：** 26.0.0
 
@@ -259,9 +259,9 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## onDisconnect
 
@@ -269,7 +269,7 @@ onDataRead(callback: Callback<Uint8Array>): void
 onDisconnect(callback: Callback<void>): void
 ```
 
-监听USB虚拟串口断开事件。使用Callback异步回调。调用{@link close}接口时，会清理全部回调
+监听USB虚拟串口断开事件。使用Callback异步回调。调用[close](#close)接口时，会清理全部回调
 
 **起始版本：** 26.0.0
 
@@ -291,8 +291,8 @@ onDisconnect(callback: Callback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## open
 
@@ -328,11 +328,11 @@ open(config?: SerialConfigs): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-端口已被占用) | Port already in use. |
-| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-需要用户授权) | User authorization required. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-端口已被占用) | Port already in use. |
+| [35700007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-需要用户授权) | User authorization required. |
 
 ## sendBrk
 
@@ -362,9 +362,9 @@ sendBrk(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## setDtr
 
@@ -400,9 +400,9 @@ setDtr(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## setRts
 
@@ -438,9 +438,9 @@ setRts(enable: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
 
 ## write
 
@@ -483,11 +483,11 @@ write(data: Uint8Array, timeout?: int): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
-| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-传输超时) | Transmission timeout. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) | Port not open. |
+| [35700006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-传输超时) | Transmission timeout. |
 
 ## portInfo
 

@@ -18,7 +18,7 @@ content: ResourceStr
 
 菜单名称。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -44,7 +44,7 @@ icon?: ResourceStr
 
 默认值：undefined，不显示菜单图标。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -92,7 +92,7 @@ labelInfo?: ResourceStr
 
 默认值：undefined，不显示快捷键提示。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 15
 

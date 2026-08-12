@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| RelativeContainerAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

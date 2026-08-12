@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## off('bluetoothDeviceFind')
@@ -18,7 +18,7 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.off#event:bluetoothDeviceFind
+**Substitutes:** [bluetoothDeviceFind](ohos.bluetoothManager/bluetoothManager.off#event:bluetoothDeviceFind)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -56,7 +56,7 @@ Unsubscribe the event reported when a remote Bluetooth device is bonded.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.off#event:bondStateChange
+**Substitutes:** [bondStateChange](ohos.bluetoothManager/bluetoothManager.off#event:bondStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -94,7 +94,7 @@ Unsubscribe the event of a pairing request from a remote Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.off#event:pinRequired
+**Substitutes:** [pinRequired](ohos.bluetoothManager/bluetoothManager.off#event:pinRequired)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -132,7 +132,7 @@ Unsubscribe the event reported when the Bluetooth state changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.off#event:stateChange
+**Substitutes:** [stateChange](ohos.bluetoothManager/bluetoothManager.off#event:stateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -170,7 +170,7 @@ Unsubscribe the event reported when data is read from the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.off#event:sppRead
+**Substitutes:** [sppRead](ohos.bluetoothManager/bluetoothManager.off#event:sppRead)
 
 <!--Device-bluetooth-function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuffer>): void--><!--Device-bluetooth-function off(type: 'sppRead', clientSocket: number, callback?: Callback<ArrayBuffer>): void-End-->
 

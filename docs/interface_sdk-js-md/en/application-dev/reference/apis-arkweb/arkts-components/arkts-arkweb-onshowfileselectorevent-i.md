@@ -38,7 +38,7 @@ result: FileSelectorResult
 
 File selection result to be sent to the **Web** component.
 
-**Type:** [FileSelectorResult](../arkts-apis/arkts-arkweb-web-fileselectorresult-c.md)
+**Type:** [FileSelectorResult](arkts-arkweb-fileselectorresult-c.md)
 
 **Since:** 12
 

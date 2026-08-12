@@ -30,7 +30,7 @@ constructor(unit?: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 ## invalidate
 
@@ -78,7 +78,7 @@ get size(): Size
 
 获取DrawingRenderingContext的大小。
 
-**类型：** [Size](arkts-arkui-window-size-i.md)
+**类型：** [Size](arkts-arkui-size-i.md)
 
 **起始版本：** 12
 

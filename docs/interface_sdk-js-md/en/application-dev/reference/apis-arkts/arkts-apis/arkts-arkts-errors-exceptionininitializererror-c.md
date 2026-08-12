@@ -2,7 +2,7 @@
 
 Represents error that is thrown when there is an error in initializer
 
-**Inheritance/Implementation:** ExceptionInInitializerError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ExceptionInInitializerError extends [Error](Error)
 
 **Since:** 26.0.0
 

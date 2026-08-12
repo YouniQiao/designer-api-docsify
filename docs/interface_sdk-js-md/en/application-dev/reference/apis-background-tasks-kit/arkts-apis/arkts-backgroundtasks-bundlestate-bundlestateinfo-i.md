@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## merge
@@ -22,7 +22,7 @@ import { bundleState } from 'kits/@kit.BackgroundTasksKit';
 merge(toMerge: BundleStateInfo): void
 ```
 
-Merges a specified {@link BundleActiveInfo} object with this {@link BundleActiveInfo} object.The bundle name of both objects must be the same.
+Merges a specified [BundleActiveInfo](BundleActiveInfo) object with this [BundleActiveInfo](BundleActiveInfo) object.The bundle name of both objects must be the same.
 
 **Since:** 7
 

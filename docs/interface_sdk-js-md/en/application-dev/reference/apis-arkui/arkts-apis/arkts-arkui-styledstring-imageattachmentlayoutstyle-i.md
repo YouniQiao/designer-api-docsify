@@ -38,7 +38,7 @@ margin?: LengthMetrics | Margin
 
 Outer Margin.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Margin
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Margin](arkts-arkui-margin-t.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ padding?: LengthMetrics | Padding
 
 Inner margin.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| Padding
+**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [Padding](arkts-arkui-units-padding-i.md)
 
 **Since:** 23
 

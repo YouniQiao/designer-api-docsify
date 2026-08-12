@@ -2,7 +2,7 @@
 
 Represents an error that occurs when array is oging to be indexed out of its bounds
 
-**Inheritance/Implementation:** ArrayIndexOutOfBoundsError extends [RangeError](arkts-arkts-errors-rangeerror-c.md)
+**Inheritance/Implementation:** ArrayIndexOutOfBoundsError extends [RangeError](arkts-arkts-errors-rangeerror-c.md#RangeError)
 
 **Since:** 26.0.0
 

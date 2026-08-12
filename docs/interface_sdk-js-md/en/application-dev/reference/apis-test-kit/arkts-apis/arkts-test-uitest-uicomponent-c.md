@@ -8,7 +8,7 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component](arkts-test-uitest-component-c.md)
+**Substitutes:** [Component](arkts-test-uitest-component-c.md#Component)
 
 <!--Device-unnamed-declare class UiComponent--><!--Device-unnamed-declare class UiComponent-End-->
 
@@ -17,7 +17,7 @@ In **UiTest**, the **UiComponent** class represents a component on the UI and pr
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## click
@@ -34,7 +34,7 @@ Clicks this component. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#click](arkts-test-uitest-component-c.md#click)
+**Substitutes:** [click](arkts-test-uitest-component-c.md#click)
 
 <!--Device-UiComponent-click(): Promise<void>--><!--Device-UiComponent-click(): Promise<void>-End-->
 
@@ -73,7 +73,7 @@ Double-clicks this component. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#doubleClick](arkts-test-uitest-component-c.md#doubleclick)
+**Substitutes:** [doubleClick](arkts-test-uitest-component-c.md#doubleClick)
 
 <!--Device-UiComponent-doubleClick(): Promise<void>--><!--Device-UiComponent-doubleClick(): Promise<void>-End-->
 
@@ -112,7 +112,7 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#getId](arkts-test-uitest-component-c.md#getid)
+**Substitutes:** [getId](arkts-test-uitest-component-c.md#getId)
 
 <!--Device-UiComponent-getId(): Promise<number>--><!--Device-UiComponent-getId(): Promise<number>-End-->
 
@@ -151,7 +151,7 @@ Obtains the key of this component. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#getId](arkts-test-uitest-component-c.md#getid)
+**Substitutes:** [getId](arkts-test-uitest-component-c.md#getId)
 
 <!--Device-UiComponent-getKey(): Promise<string>--><!--Device-UiComponent-getKey(): Promise<string>-End-->
 
@@ -190,7 +190,7 @@ Obtains the text information of this component. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#getText](arkts-test-uitest-component-c.md#gettext)
+**Substitutes:** [getText](arkts-test-uitest-component-c.md#getText)
 
 <!--Device-UiComponent-getText(): Promise<string>--><!--Device-UiComponent-getText(): Promise<string>-End-->
 
@@ -229,7 +229,7 @@ Obtains the type of this component. This API uses a promise to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#getType](arkts-test-uitest-component-c.md#gettype)
+**Substitutes:** [getType](arkts-test-uitest-component-c.md#getType)
 
 <!--Device-UiComponent-getType(): Promise<string>--><!--Device-UiComponent-getType(): Promise<string>-End-->
 
@@ -268,7 +268,7 @@ Inputs text to a component. This API takes effect only for editable text compone
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#inputText](arkts-test-uitest-component-c.md#inputtext)(text:
+**Substitutes:** [inputText](Component#inputText(text:)
 
 <!--Device-UiComponent-inputText(text: string): Promise<void>--><!--Device-UiComponent-inputText(text: string): Promise<void>-End-->
 
@@ -313,7 +313,7 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#isClickable](arkts-test-uitest-component-c.md#isclickable)
+**Substitutes:** [isClickable](arkts-test-uitest-component-c.md#isClickable)
 
 <!--Device-UiComponent-isClickable(): Promise<boolean>--><!--Device-UiComponent-isClickable(): Promise<boolean>-End-->
 
@@ -356,7 +356,7 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#isEnabled](arkts-test-uitest-component-c.md#isenabled)
+**Substitutes:** [isEnabled](arkts-test-uitest-component-c.md#isEnabled)
 
 <!--Device-UiComponent-isEnabled(): Promise<boolean>--><!--Device-UiComponent-isEnabled(): Promise<boolean>-End-->
 
@@ -399,7 +399,7 @@ Obtains the focused status of this component. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#isFocused](arkts-test-uitest-component-c.md#isfocused)
+**Substitutes:** [isFocused](arkts-test-uitest-component-c.md#isFocused)
 
 <!--Device-UiComponent-isFocused(): Promise<boolean>--><!--Device-UiComponent-isFocused(): Promise<boolean>-End-->
 
@@ -442,7 +442,7 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#isScrollable](arkts-test-uitest-component-c.md#isscrollable)
+**Substitutes:** [isScrollable](arkts-test-uitest-component-c.md#isScrollable)
 
 <!--Device-UiComponent-isScrollable(): Promise<boolean>--><!--Device-UiComponent-isScrollable(): Promise<boolean>-End-->
 
@@ -485,7 +485,7 @@ Obtains the selected status of this component. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#isSelected](arkts-test-uitest-component-c.md#isselected)
+**Substitutes:** [isSelected](arkts-test-uitest-component-c.md#isSelected)
 
 <!--Device-UiComponent-isSelected(): Promise<boolean>--><!--Device-UiComponent-isSelected(): Promise<boolean>-End-->
 
@@ -528,7 +528,7 @@ Long-clicks this component. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#longClick](arkts-test-uitest-component-c.md#longclick)
+**Substitutes:** [longClick](arkts-test-uitest-component-c.md#longClick)
 
 <!--Device-UiComponent-longClick(): Promise<void>--><!--Device-UiComponent-longClick(): Promise<void>-End-->
 
@@ -567,7 +567,7 @@ Scrolls on this component to search for the target component (applicable to comp
 
 **Deprecated since:** 9
 
-**Substitutes:** [Component#scrollSearch](arkts-test-uitest-component-c.md#scrollsearch)(on:
+**Substitutes:** [scrollSearch](Component#scrollSearch(on:)
 
 <!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>--><!--Device-UiComponent-scrollSearch(by: By): Promise<UiComponent>-End-->
 

@@ -6,5 +6,5 @@ type PromiseSettledResult<T> = PromiseFulfilledResult<T> | PromiseRejectedResult
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PromiseFulfilledResult&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-promise-promisefulfilledresult-c.md) |
-| [PromiseRejectedResult](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiserejectedresult-c.md) |
+| [PromiseFulfilledResult](arkts-lib-es2020-promise-promisefulfilledresult-i.md) & lt;T & gt; |
+| [PromiseRejectedResult](arkts-lib-es2020-promise-promiserejectedresult-i.md) |

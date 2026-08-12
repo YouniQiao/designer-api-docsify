@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## destroyPanel
@@ -12,7 +12,7 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 function destroyPanel(panel: Panel): Promise<void>
 ```
 
-Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)to destroy the panel object created by **createPanel()**. This API uses a promise to return the result.
+Destroys the word selection panel. This API is used together with [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)to destroy the panel object created by **createPanel()**. This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -28,7 +28,7 @@ Destroys the word selection panel. This API is used together with [createPanel](
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| panel | [Panel](arkts-basicservices-selectionmanager-panel-i.md) | Yes | Word selection panel to destroy. |
+| panel | Panel | Yes | Word selection panel to destroy. |
 
 **Return value:**
 
@@ -40,7 +40,7 @@ Destroys the word selection panel. This API is used together with [createPanel](
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service exception. |
 
 ## Examples
 

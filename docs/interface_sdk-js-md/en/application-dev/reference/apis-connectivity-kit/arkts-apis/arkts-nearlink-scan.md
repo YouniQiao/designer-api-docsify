@@ -15,7 +15,7 @@ Provides methods for scanning and discovering nearby devices.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [i18n.I18NUtil](arkts-localization-i18n-i18nutil-c.md)
+**替代接口：** [I18NUtil](arkts-localization-i18n-i18nutil-c.md#I18NUtil)
 
 <!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
@@ -22,7 +22,7 @@ unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: string,
 
 **废弃版本：** 9
 
-**替代接口：** [i18n.I18NUtil.unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert)
+**替代接口：** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitConvert)
 
 <!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 

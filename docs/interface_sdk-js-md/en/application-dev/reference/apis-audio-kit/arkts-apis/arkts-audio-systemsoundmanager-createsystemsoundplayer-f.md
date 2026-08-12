@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## createSystemSoundPlayer
@@ -32,7 +32,7 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
 ## Examples
 

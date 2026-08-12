@@ -44,7 +44,7 @@ changeConfirmation(
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;void&gt;&gt; |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 ## 示例
 
@@ -96,13 +96,13 @@ changePrivilege(
 | userId | number | 是 |
 | bundleName | string | 是 |
 | sharingResource | string | 是 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 ## 示例
 
@@ -170,7 +170,7 @@ confirmInvitation(
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;string&gt;&gt; |
+| Promise & lt;Result & lt;string & gt; & gt; |
 
 ## 示例
 
@@ -223,7 +223,7 @@ exit(userId: number, bundleName: string, sharingResource: string): Promise<Resul
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;void&gt;&gt; |
+| Promise & lt;Result & lt;void & gt; & gt; |
 
 ## 示例
 
@@ -279,7 +279,7 @@ queryParticipants(
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;cloudData.sharing.Participant & gt; & gt; & gt; |
 
 ## 示例
 
@@ -365,7 +365,7 @@ queryParticipantsByInvitation(
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;Array&lt;cloudData.sharing.Participant&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;cloudData.sharing.Participant & gt; & gt; & gt; |
 
 ## 示例
 
@@ -447,13 +447,13 @@ share(
 | userId | number | 是 |
 | bundleName | string | 是 |
 | sharingResource | string | 是 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 ## 示例
 
@@ -515,13 +515,13 @@ unshare(
 | userId | number | 是 |
 | bundleName | string | 是 |
 | sharingResource | string | 是 |
-| participants | Array&lt;cloudData.sharing.Participant&gt; | 是 |
+| participants | Array & lt;cloudData.sharing.Participant & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;Array&lt;Result&lt;cloudData.sharing.Participant&gt;&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;Result & lt;cloudData.sharing.Participant & gt; & gt; & gt; & gt; |
 
 ## 示例
 

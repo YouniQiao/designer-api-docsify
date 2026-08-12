@@ -20,7 +20,7 @@ function createMediaSourceWithStreamData(streams: Array<MediaStream>): MediaSour
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| streams | Array&lt;MediaStream&gt; | 是 |
+| streams | Array&lt;[MediaStream](arkts-media-multimedia-media-mediastream-i.md)&gt; | 是 |
 
 **返回值：**
 

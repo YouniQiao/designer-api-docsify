@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## isCleartextPermitted
@@ -34,7 +34,7 @@ Checks whether the Cleartext traffic is permitted.To invoke this method, you mus
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

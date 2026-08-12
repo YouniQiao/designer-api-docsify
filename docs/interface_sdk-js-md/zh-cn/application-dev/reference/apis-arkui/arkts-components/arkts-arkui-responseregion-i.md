@@ -32,7 +32,7 @@ height?: LengthMetrics | string
 
 默认值：LengthMetrics.percent(1)
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
+**类型：** LengthMetrics \| string
 
 **默认值：** LengthMetrics.percent(1)
 
@@ -58,7 +58,7 @@ tool?: ResponseRegionSupportedTool
 
 默认值：ResponseRegionSupportedTool.ALL
 
-**类型：** [ResponseRegionSupportedTool](../arkts-apis/arkts-arkui-responseregionsupportedtool-e.md)
+**类型：** ResponseRegionSupportedTool
 
 **默认值：** ResponseRegionSupportedTool.ALL
 
@@ -84,7 +84,7 @@ width?: LengthMetrics | string
 
 默认值：LengthMetrics.percent(1)
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| string
+**类型：** LengthMetrics \| string
 
 **默认值：** LengthMetrics.percent(1)
 
@@ -110,7 +110,7 @@ x?: LengthMetrics
 
 默认值：LengthMetrics.vp(0)
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** LengthMetrics
 
 **默认值：** LengthMetrics.vp(0)
 
@@ -136,7 +136,7 @@ y?: LengthMetrics
 
 默认值：LengthMetrics.vp(0)
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** LengthMetrics
 
 **默认值：** LengthMetrics.vp(0)
 

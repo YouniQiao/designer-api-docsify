@@ -13,7 +13,7 @@ Describes the rectangle used to hold the minimize, maximize, and close buttons o
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## height

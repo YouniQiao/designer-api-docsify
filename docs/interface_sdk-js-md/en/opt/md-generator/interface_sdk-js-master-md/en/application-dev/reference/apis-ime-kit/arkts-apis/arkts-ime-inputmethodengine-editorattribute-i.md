@@ -1,7 +1,7 @@
 # EditorAttribute
 
 In the following API examples, you must first use   
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -12,7 +12,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## abilityName
@@ -55,7 +55,7 @@ readonly capitalizeMode?: CapitalizeMode
 
 Whether to capitalize the first letter in the edit box. If it is not set or is set to an invalid value, the first letter is not capitalized by default.
 
-**Type:** [CapitalizeMode](arkts-ime-inputmethod-capitalizemode-e.md)
+**Type:** CapitalizeMode
 
 **Since:** 20
 
@@ -154,7 +154,7 @@ readonly immersiveMode?: ImmersiveMode
 
 Immersive mode of the input method.
 
-**Type:** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-immersivemode-t.md)
+**Type:** ImmersiveMode
 
 **Since:** 15
 

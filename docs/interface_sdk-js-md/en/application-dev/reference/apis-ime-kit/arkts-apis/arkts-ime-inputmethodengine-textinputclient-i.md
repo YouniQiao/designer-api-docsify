@@ -9,7 +9,7 @@ In the following API examples, you must first use
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient](arkts-ime-inputmethodengine-inputclient-i.md)
+**Substitutes:** [InputClient](arkts-ime-inputmethodengine-inputclient-i.md#InputClient)
 
 <!--Device-inputMethodEngine-interface TextInputClient--><!--Device-inputMethodEngine-interface TextInputClient-End-->
 
@@ -18,7 +18,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## deleteBackward
@@ -35,7 +35,7 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length:
+**Substitutes:** [deleteBackward](inputMethodEngine.InputClient.deleteBackward(length:)
 
 <!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteBackward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -46,7 +46,7 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -81,7 +81,7 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteBackward](arkts-ime-inputmethodengine-inputclient-i.md#deletebackward)(length:
+**Substitutes:** [deleteBackward](inputMethodEngine.InputClient.deleteBackward(length:)
 
 <!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteBackward(length: number): Promise<boolean>-End-->
 
@@ -130,7 +130,7 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length:
+**Substitutes:** [deleteForward](inputMethodEngine.InputClient.deleteForward(length:)
 
 <!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-deleteForward(length: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -141,7 +141,7 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -176,7 +176,7 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.deleteForward](arkts-ime-inputmethodengine-inputclient-i.md#deleteforward)(length:
+**Substitutes:** [deleteForward](inputMethodEngine.InputClient.deleteForward(length:)
 
 <!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>--><!--Device-TextInputClient-deleteForward(length: number): Promise<boolean>-End-->
 
@@ -225,7 +225,7 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length:
+**Substitutes:** [getBackward](inputMethodEngine.InputClient.getBackward(length:)
 
 <!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getBackward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -236,7 +236,7 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -267,7 +267,7 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getBackward](arkts-ime-inputmethodengine-inputclient-i.md#getbackward)(length:
+**Substitutes:** [getBackward](inputMethodEngine.InputClient.getBackward(length:)
 
 <!--Device-TextInputClient-getBackward(length: number): Promise<string>--><!--Device-TextInputClient-getBackward(length: number): Promise<string>-End-->
 
@@ -312,7 +312,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)(callback:
+**Substitutes:** [getEditorAttribute](inputMethodEngine.InputClient.getEditorAttribute(callback:)
 
 <!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-TextInputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
 
@@ -322,7 +322,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;EditorAttribute&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the attribute of the edit box. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -355,7 +355,7 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getEditorAttribute](arkts-ime-inputmethodengine-inputclient-i.md#geteditorattribute)(callback:
+**Substitutes:** [getEditorAttribute](inputMethodEngine.InputClient.getEditorAttribute(callback:)
 
 <!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-TextInputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
@@ -365,7 +365,7 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;EditorAttribute&gt; | Promise used to return the attribute of the edit box. |
+| Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md)&gt; | Promise used to return the attribute of the edit box. |
 
 ## Examples
 
@@ -394,7 +394,7 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length:
+**Substitutes:** [getForward](inputMethodEngine.InputClient.getForward(length:)
 
 <!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void--><!--Device-TextInputClient-getForward(length: number, callback: AsyncCallback<string>): void-End-->
 
@@ -405,7 +405,7 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | length | number | Yes | Text length, which cannot be less than 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the obtained text. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -436,7 +436,7 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.getForward](arkts-ime-inputmethodengine-inputclient-i.md#getforward)(length:
+**Substitutes:** [getForward](inputMethodEngine.InputClient.getForward(length:)
 
 <!--Device-TextInputClient-getForward(length: number): Promise<string>--><!--Device-TextInputClient-getForward(length: number): Promise<string>-End-->
 
@@ -481,7 +481,7 @@ Inserts text. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text:
+**Substitutes:** [insertText](inputMethodEngine.InputClient.insertText(text:)
 
 <!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -492,7 +492,7 @@ Inserts text. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Text to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -526,7 +526,7 @@ Inserts text. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text:
+**Substitutes:** [insertText](inputMethodEngine.InputClient.insertText(text:)
 
 <!--Device-TextInputClient-insertText(text: string): Promise<boolean>--><!--Device-TextInputClient-insertText(text: string): Promise<boolean>-End-->
 
@@ -574,7 +574,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action:
+**Substitutes:** [sendKeyFunction](inputMethodEngine.InputClient.sendKeyFunction(action:)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void--><!--Device-TextInputClient-sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void-End-->
 
@@ -585,7 +585,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | action | number | Yes | Action of the function key. &lt;br&gt;- **0**: invalid key. &lt;br&gt;- **1**: confirm key (Enter key). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -620,7 +620,7 @@ Sends the function key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodEngine.InputClient.sendKeyFunction](arkts-ime-inputmethodengine-inputclient-i.md#sendkeyfunction)(action:
+**Substitutes:** [sendKeyFunction](inputMethodEngine.InputClient.sendKeyFunction(action:)
 
 <!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>--><!--Device-TextInputClient-sendKeyFunction(action: number): Promise<boolean>-End-->
 

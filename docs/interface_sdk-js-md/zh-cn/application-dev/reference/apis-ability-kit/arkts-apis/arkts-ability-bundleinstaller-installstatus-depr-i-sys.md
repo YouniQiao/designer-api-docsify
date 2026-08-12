@@ -20,7 +20,7 @@
 status: bundle.InstallErrorCode
 ```
 
-表示安装或卸载错误状态码。取值范围：枚举值[InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)。
+表示安装或卸载错误状态码。取值范围：枚举值[InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md#InstallErrorCode)。
 
 **类型：** bundle.InstallErrorCode
 

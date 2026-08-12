@@ -1,13 +1,13 @@
 # DigitIndicator
 
-A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
+A constructor used to create a **DigitIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#Indicator).
 
 > **NOTE：**
 > 
 > When pages are turned by group, the child nodes displayed in the digit-style navigation indicator do not count
 > placeholder nodes.
 > 
-> The maximum value of [maxFontScale](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#maxfontscale) for the digit-style navigation indicator is
+> The maximum value of [maxFontScale](TextAttribute#maxFontScale) for the digit-style navigation indicator is
 > **2**.
 > 
 > The mirror display of the page number depends on the RTL status of the system.
@@ -80,13 +80,13 @@ Sets the font style of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the digit-style navigation indicator.&lt;br&gt;Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.&lt;br&gt;Default value:&lt;br&gt;{ size:?14,?weight:?FontWeight.Normal?} |
+| value | Font | Yes | Font style of the digit-style navigation indicator.&lt;br&gt;Only the **size** and **weight** parameters in **Font** are adjustable. Setting **family** and **style** has no effect.&lt;br&gt;Default value:&lt;br&gt;{ size:?14,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## fontColor
 
@@ -114,13 +114,13 @@ Sets the font color of the digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the digit-style navigation indicator.&lt;br&gt;Default value: **'#ff182431' |
+| value | ResourceColor | Yes | Font color of the digit-style navigation indicator.&lt;br&gt;Default value: **'#ff182431' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedDigitFont
 
@@ -148,13 +148,13 @@ Sets the font style of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-font-i.md) | Yes | Font style of the selected digit-style navigation indicator.&lt;br&gt;Default value:&lt;br&gt;{?size:?1 4,?weight:?FontWeight.Normal?} |
+| value | Font | Yes | Font style of the selected digit-style navigation indicator.&lt;br&gt;Default value:&lt;br&gt;{?size:?1 4,?weight:?FontWeight.Normal?} |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 
 ## selectedFontColor
 
@@ -182,11 +182,11 @@ Sets the font color of the selected digit-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Font color of the selected digit-style navigation indicator.&lt;br&gt;Default value: **'#ff182431' |
+| value | ResourceColor | Yes | Font color of the selected digit-style navigation indicator.&lt;br&gt;Default value: **'#ff182431' |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Current digit-style navigation indicator. |
+| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Current digit-style navigation indicator. |
 

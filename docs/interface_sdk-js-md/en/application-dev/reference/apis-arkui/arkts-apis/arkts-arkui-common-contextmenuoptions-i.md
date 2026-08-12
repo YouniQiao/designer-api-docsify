@@ -154,7 +154,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the menu.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -218,7 +218,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the menu's background effect with options
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ borderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 
 Border radius of the menu.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The value can be in percentage.&lt;br&gt;If the sum of the two maximum corner radii in the horizontal direction exceeds the menu's width, or if the sum of the two maximum corner radii in the vertical direction exceeds the menu's height, the default corner radius of the menu will be used.&lt;/p&gt;
 
-**Type:** [Length](arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [Length](arkts-arkui-length-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** 8vp for 2-in-1 devices and 20vp for other devices
 
@@ -260,7 +260,7 @@ colorMode?: AnchoredColorMode
 
 Define the menu theme color mode.
 
-**Type:** [AnchoredColorMode](../arkts-components/arkts-arkui-anchoredcolormode-e.md)
+**Type:** [AnchoredColorMode](arkts-arkui-common-anchoredcolormode-e.md)
 
 **Default:** AnchoredColorMode.FOLLOW_TARGET
 
@@ -326,7 +326,7 @@ gridStyle?: MenuGridStyleOptions
 
 Define grid style of menu. Only fixed-style menus are effective.For example, using MenuElement in bindMenu/bindContextMenu or using MenuItemOptions in MenuItem.
 
-**Type:** [MenuGridStyleOptions](../arkts-components/arkts-arkui-menugridstyleoptions-i.md)
+**Type:** [MenuGridStyleOptions](arkts-arkui-common-menugridstyleoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -412,7 +412,7 @@ mask?: boolean | MenuMaskType
 
 Whether it is a menu without mask.
 
-**Type:** boolean \| MenuMaskType
+**Type:** boolean \| [MenuMaskType](arkts-arkui-common-menumasktype-i.md)
 
 **Default:** true when preview is enabled, or is false
 
@@ -598,7 +598,7 @@ outlineColor?: ResourceColor | EdgeColors
 
 The color of menu's outer border.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md)
 
 **Default:** '#19ffffff'
 
@@ -620,7 +620,7 @@ outlineWidth?: Dimension | EdgeOutlineWidths
 
 The width of menu's outer border.If outline effects are required, outlineWidth is required.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md)
 
 **Default:** 0vp - Percentage values are not supported.
 
@@ -664,7 +664,7 @@ preview?: MenuPreviewMode | CustomBuilder
 
 Preview displayed when the context menu is triggered by a long-press or use the isShown variable of bindContextMenu to display the preview content style of the menu.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This parameter has no effect when responseType is set to ResponseType.RightClick.&lt;br&gt;If preview is set to MenuPreviewMode.NONE or is not set, the enableArrow parameter is effective.&lt;br&gt;If preview is set to MenuPreviewMode.IMAGE or CustomBuilder, no arrow will be displayed even when enableArrow is true.&lt;/p&gt;
 
-**Type:** [MenuPreviewMode](../arkts-components/arkts-arkui-menupreviewmode-e.md) \| CustomBuilder
+**Type:** [MenuPreviewMode](arkts-arkui-common-menupreviewmode-e.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Default:** MenuPreviewMode.NONE
 
@@ -686,7 +686,7 @@ previewAnimationOptions?: ContextMenuAnimationOptions
 
 The preview animator options.
 
-**Type:** [ContextMenuAnimationOptions](../arkts-components/arkts-arkui-contextmenuanimationoptions-i.md)
+**Type:** [ContextMenuAnimationOptions](arkts-arkui-common-contextmenuanimationoptions-i.md)
 
 **Since:** 23
 

@@ -37,4 +37,16 @@ static load(uri: ResourceStr, param: SceneLoadParams):Promise<Scene>
 
 | 类型 |
 | --- |
-| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c-sys.md)&gt; |
+| Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; |
+
+## 示例
+
+```TypeScript
+import { Scene, SceneLoadParams } from '@kit.ArkGraphics3D';
+
+function loadModelWithParams(): Promise<Scene> {
+  let loadParams: SceneLoadParams = { offset: 0 };
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
+  return scene;
+}
+```

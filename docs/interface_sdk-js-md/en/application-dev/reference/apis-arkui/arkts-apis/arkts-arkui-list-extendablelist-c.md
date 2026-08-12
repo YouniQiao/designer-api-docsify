@@ -2,7 +2,7 @@
 
 Defines the Extendable List.
 
-**Inheritance/Implementation:** ExtendableList implements [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md/arkts-arkui-list-attribute.md)
+**Inheritance/Implementation:** ExtendableList implements [ListAttribute](arkts-arkui-list-listattribute-i.md#ListAttribute)
 
 **Since:** 26.0.0
 
@@ -39,8 +39,8 @@ Constructor of Extendable List.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| options | [ListOptions](arkts-arkui-list-listoptions-i.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -76,9 +76,9 @@ Entry of Extendable List.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setListOptions
 
@@ -102,7 +102,7 @@ Set the List Options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListOptions](../arkts-components/arkts-arkui-listoptions-i.md) | No |  |
+| options | [ListOptions](arkts-arkui-list-listoptions-i.md) | No |  |
 
 **Return value:**
 

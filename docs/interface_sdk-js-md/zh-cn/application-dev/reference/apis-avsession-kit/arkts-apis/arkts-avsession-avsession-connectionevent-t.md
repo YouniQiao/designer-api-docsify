@@ -18,6 +18,6 @@ The connection event supplied by system to indicate device state and information
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [ConnectionState](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-remotedevice-connectionstate-t.md) | 是 | 设备连接状态。 |
+| state | ConnectionState | 是 | 设备连接状态。 |
 | device | [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | 是 | device information |
 

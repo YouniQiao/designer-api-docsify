@@ -1,8 +1,8 @@
 # ReactiveBuilderNode
 
-ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变量。ReactiveBuilderNode中持有的[FrameNode](arkts-arkui-framenode-c.md)仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的  
-[getFrameNode](arkts-arkui-buildernode-c.md#getframenode)方法和[FrameNode](arkts-arkui-framenode-c.md)节点的  
-[getRenderNode](arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-arkui-rendernode-c.md)的接口对其进行属性设置与子节点操作。
+ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变量。ReactiveBuilderNode中持有的[FrameNode](FrameNode)仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的  
+[getFrameNode](arkts-arkui-buildernode-c.md#getFrameNode)方法和[FrameNode](FrameNode)节点的  
+[getRenderNode](arkts-arkui-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](arkts-arkui-rendernode-c.md#RenderNode)的接口对其进行属性设置与子节点操作。
 
 **起始版本：** 26.0.0
 
@@ -38,8 +38,8 @@ build(builder: CustomBuilder, options?: BuildOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../ui/state-management/arkts-builder.md)。 |
-| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 否 | build相关的配置项。&lt;br/&gt;默认值：参考[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)各个成员的默认值。 |
+| builder | CustomBuilder | 是 | 创建对应节点树的时候所需的无状态UI方法[@Builder](../../../ui/state-management/arkts-builder.md)。 |
+| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 否 | build相关的配置项。&lt;br/&gt;默认值：参考[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md#BuildOptions)各个成员的默认值。 |
 
 ## constructor
 
@@ -47,8 +47,8 @@ build(builder: CustomBuilder, options?: BuildOptions): void
 constructor(uiContext: UIContext, options?: RenderOptions)
 ```
 
-用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](arkts-arkui-rendernode-c.md)中显示时，需要显式指定  
-[RenderOptions](arkts-arkui-buildernode-renderoptions-i.md)中的[selfIdealSize](arkts-arkui-buildernode-renderoptions-i.md)，否则ReactiveBuilderNode内的节点默认父组件布局约束为[0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
+用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](arkts-arkui-rendernode-c.md#RenderNode)中显示时，需要显式指定  
+[RenderOptions](arkts-arkui-buildernode-renderoptions-i.md#RenderOptions)中的[selfIdealSize](arkts-arkui-buildernode-renderoptions-i.md#RenderOptions)，否则ReactiveBuilderNode内的节点默认父组件布局约束为[0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
 
 **起始版本：** 26.0.0
 
@@ -116,7 +116,7 @@ flushState(): void
 getFrameNode(): FrameNode | null
 ```
 
-获取ReactiveBuilderNode中的[FrameNode](arkts-arkui-framenode-c.md)。在ReactiveBuilderNode执行build操作之后，才会生成FrameNode。
+获取ReactiveBuilderNode中的[FrameNode](FrameNode)。在ReactiveBuilderNode执行build操作之后，才会生成FrameNode。
 
 **起始版本：** 26.0.0
 
@@ -176,16 +176,16 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > 
 > 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层且绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，事件的
 > [SourceType](../../../reference/apis-arkui/arkui-ts/ts-gesture-settings.md#sourcetype枚举说明8)不会发生变化，规格可查看
-> [onTouch](arkts-arkui-common-commonmethod-i.md#ontouch)。
+> [onTouch](CommonMethod#onTouch)。
 > 
-> 注入事件为轴事件[（AxisEvent）](arkts-arkui-common-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发[RotationGesture](arkts-arkui-gesture-gesture-c.md)。
+> 注入事件为轴事件[（AxisEvent）](AxisEvent)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发[RotationGesture](gesture)。
 > 
 > 转发的事件会在被分发到的目标组件所在的子树里做触摸测试（TouchTest），并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。
 > 
-> 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段、轴事件的scrollStep字段，同时要保证事件的完整，比如触摸事件的[TouchType](arkts-arkui-enums-touchtype-e.md)中DOWN和UP字段都要
+> 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段、轴事件的scrollStep字段，同时要保证事件的完整，比如触摸事件的[TouchType](TouchType)中DOWN和UP字段都要
 > 有，防止出现未定义行为。
 > 
-> [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > postTouchEvent接口需要提供手势坐标相对于输入事件对端内的局部坐标，postInputEvent接口需要提供手势坐标相对于输入事件对端内的窗口坐标。
 > 
@@ -231,15 +231,15 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > 
 > - 传入的坐标值单位需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
-> - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，[TouchType](arkts-arkui-enums-touchtype-e.md)不会发生变化，规格可查看
-> [onTouch](arkts-arkui-common-commonmethod-i.md#ontouch)。
+> - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，[TouchType](TouchType)不会发生变化，规格可查看
+> [onTouch](CommonMethod#onTouch)。
 > 
-> - 注入事件为轴事件[AxisEvent](arkts-arkui-common-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势[RotationGesture](arkts-arkui-gesture-gesture-c.md)。
+> - 注入事件为轴事件[AxisEvent](AxisEvent)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势[RotationGesture](gesture)。
 > 
 > - 转发的事件会在被分发到的目标组件及其子组件里做事件处理，并触发对应手势。可以通过入参控制当前组件和目标组件手势是否为竞争关系。
 > 
 > - 如果event转化为对应的事件后，该事件为开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的
-> [TouchType](arkts-arkui-enums-touchtype-e.md)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
+> [TouchType](TouchType)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
 > 
 > - 支持同一个事件转发多次&lt;!--Del--&gt;，不支持[UIExtensionComponent](ui_extension_component)调用本接口&lt;!--DelEnd--&gt;。
 
@@ -258,7 +258,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
-| competitionStrategy | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | 否 | 分发事件的手势是否为竞争场景，默认为非竞争。 |
+| competitionStrategy | CompetitionStrategy | 否 | 分发事件的手势是否为竞争场景，默认为非竞争。 |
 
 **返回值：**
 
@@ -276,7 +276,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。
 
-OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent)获取。OffsetB为point点相对于buildNode的偏移量，可以通过  
+OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getPositionToParent)获取。OffsetB为point点相对于buildNode的偏移量，可以通过  
 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。OffsetC为OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。
 
 ![postTouchEvent](../../../reference/apis-arkui/figures/postTouchEvent.PNG)
@@ -285,7 +285,7 @@ OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[
 > 
 > 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。
 > 
-> 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
+> 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
 > 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt;
 > 
@@ -307,7 +307,7 @@ OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | 是 | 触摸事件。 |
+| event | TouchEvent | 是 | 触摸事件。 |
 
 **返回值：**
 
@@ -324,7 +324,7 @@ recycle(): void
 触发ReactiveBuilderNode中自定义组件的回收。自定义组件的回收是组件复用机制中的环节，具体信息请参见  
 [@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。从API版本26.0.0开始，ReactiveBuilderNode中的自定义组件支持V2组件复用，请参见[@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
 
-ReactiveBuilderNode通过[reuse](arkts-arkui-buildernode-reactivebuildernode-c.md#reuse)和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
+ReactiveBuilderNode通过[reuse](#reuse)和recycle完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
 
 **起始版本：** 26.0.0
@@ -346,7 +346,7 @@ reuse(param?: RecordData): void
 触发ReactiveBuilderNode中的自定义组件的复用。组件复用请参见[@Reusable装饰器：V1组件复用](../../../ui/state-management/arkts-reusable.md)。关于ReactiveBuilderNode的解绑场景请参见[节点解绑](../../../ui/arkts-user-defined-arktsNode-builderNode.md#解除实体节点引用关系)。从API版本26.0.0开始，ReactiveBuilderNode中的自定义组件支持V2组件复用，请参见  
 [@ReusableV2装饰器：V2组件复用](../../../ui/state-management/arkts-new-reusableV2.md)。
 
-ReactiveBuilderNode通过reuse和[recycle](arkts-arkui-buildernode-reactivebuildernode-c.md#recycle)完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
+ReactiveBuilderNode通过reuse和[recycle](#recycle)完成其内外自定义组件之间的复用事件传递，具体使用场景请参见  
 [BuilderNode调用reuse和recycle接口实现节点复用能力](../../../ui/arkts-user-defined-arktsNode-builderNode.md#buildernode调用reuse和recycle接口实现节点复用能力)。
 
 **起始版本：** 26.0.0
@@ -363,7 +363,7 @@ ReactiveBuilderNode通过reuse和[recycle](arkts-arkui-buildernode-reactivebuild
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | 用于复用[ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md)的参数。该参数将直接用于 [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md)中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定 义组件的[aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期 回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveBuilderNode中的自定义组件将直接使用构造时的数据源。 |
+| param | [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) | 否 | 用于复用[ReactiveBuilderNode](#ReactiveBuilderNode)的参数。该参数将直接用于 [ReactiveBuilderNode](#ReactiveBuilderNode)中所有顶层自定义组件的复用，应该包含每个自定义组件的构造函数参数所需内容，否则，会导致未定义行为。调用此方法将同步触发内部自定 义组件的[aboutToReuse](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttoreuse10)生命周期 回调，并将该参数作为回调的入参。默认值为undefined，此时ReactiveBuilderNode中的自定义组件将直接使用构造时的数据源。 |
 
 ## updateConfiguration
 
@@ -372,7 +372,7 @@ updateConfiguration(): void
 ```
 
 传递系统环境变化事件，触发节点的全量更新。可用于通知对象更新，是否更新所使用的系统环境由应用当前的系统环境变化决定。系统环境变化的相关信息请参见  
-[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md/arkts-ability-app-ability-configuration-configuration-i.md)。
+[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#Configuration)。
 
 **起始版本：** 26.0.0
 

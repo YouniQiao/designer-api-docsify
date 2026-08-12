@@ -22,7 +22,7 @@ menuType?: MenuType
 
 从API version 20起，`MenuType.PREVIEW_MENU`支持超链接预览。
 
-**类型：** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
+**类型：** MenuType
 
 **起始版本：** 13
 
@@ -40,7 +40,7 @@ onAppear?: Callback<void>
 
 自定义选择菜单弹出时回调。
 
-**类型：** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 13
 
@@ -58,7 +58,7 @@ onDisappear?: Callback<void>
 
 自定义选择菜单关闭时回调。
 
-**类型：** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 13
 
@@ -76,7 +76,7 @@ onMenuHide?: Callback<void>
 
 自定义选择菜单隐藏时回调。
 
-**类型：** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 21
 
@@ -94,7 +94,7 @@ onMenuShow?: Callback<void>
 
 自定义选择菜单显示时回调。
 
-**类型：** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 21
 
@@ -112,7 +112,7 @@ preview?: CustomBuilder
 
 自定义选择菜单的预览内容样式，未配置时无预览内容。
 
-**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** CustomBuilder
 
 **起始版本：** 13
 
@@ -130,7 +130,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 自定义选择预览菜单选项。
 
-**类型：** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**类型：** [PreviewMenuOptions](arkts-arkweb-previewmenuoptions-i.md)
 
 **起始版本：** 20
 

@@ -3,7 +3,7 @@
 ###### 子组件
  无
  ###### FilterAttribute
- 不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+ 不支持[通用事件](./@internal/component/ets/common)。
 
 
 ## 汇总

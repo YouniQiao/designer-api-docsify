@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [userAuth.IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md)
+**替代接口：** [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#IAuthCallback)
 
 <!--Device-userAuth-interface AuthEvent--><!--Device-userAuth-interface AuthEvent-End-->
 
@@ -24,7 +24,7 @@ callback(result: EventInfo): void
 
 **废弃版本：** 11
 
-**替代接口：** [userAuth.IAuthCallback.onResult](arkts-userauthentication-userauth-iauthcallback-i.md#onresult)(result:
+**替代接口：** [onResult](userAuth.IAuthCallback.onResult(result:)
 
 <!--Device-AuthEvent-callback(result: EventInfo): void--><!--Device-AuthEvent-callback(result: EventInfo): void-End-->
 

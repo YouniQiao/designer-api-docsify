@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getSupportedFeatures
@@ -22,7 +22,7 @@ Obtains the features supported by this device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getSupportedFeatures
+**Substitutes:** [getSupportedFeatures](ohos.wifiManager/wifiManager.getSupportedFeatures)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

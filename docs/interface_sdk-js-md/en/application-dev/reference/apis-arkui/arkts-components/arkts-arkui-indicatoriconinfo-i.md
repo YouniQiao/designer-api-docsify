@@ -18,7 +18,7 @@ icon: ResourceStr | SymbolGlyphModifier
 
 Icon that needs to be set.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| SymbolGlyphModifier
+**Type:** ResourceStr \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 

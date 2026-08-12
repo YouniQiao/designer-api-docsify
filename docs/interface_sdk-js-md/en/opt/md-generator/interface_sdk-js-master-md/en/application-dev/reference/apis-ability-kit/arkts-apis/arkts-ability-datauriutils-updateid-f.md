@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from 'kits/@kit.AbilityKit';
+import { dataUriUtils } from '@kit.AbilityKit';
 ```
 
 ## updateId
@@ -37,7 +37,7 @@ Updates the ID in a given URI.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

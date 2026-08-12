@@ -13,7 +13,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [UIWaterFlowEvent](arkts-arkui-waterflow-uiwaterflowevent-i.md) | frameNode中[getEvent('WaterFlow')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventwaterflow19)方法的返回值，可用于给WaterFlow节点设置滚动事件。  UIWaterFlowEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。 |
+| [UIWaterFlowEvent](arkts-arkui-waterflow-uiwaterflowevent-i.md) | frameNode中[getEvent('WaterFlow')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventwaterflow19)方法的返回值，可用于给WaterFlow节点设置滚动事件。  UIWaterFlowEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。 |
 | [WaterFlowOptions](arkts-arkui-waterflow-waterflowoptions-i.md) | 提供瀑布流组件的参数。 |
 
 ### 枚举

@@ -11,7 +11,7 @@ Describes the button style of the system decoration bar.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## buttonBackgroundCornerRadius

@@ -52,7 +52,7 @@ touchEvent?: TouchEvent
 
 Touch action information.
 
-**Type:** [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md)
+**Type:** TouchEvent
 
 **Since:** 11
 

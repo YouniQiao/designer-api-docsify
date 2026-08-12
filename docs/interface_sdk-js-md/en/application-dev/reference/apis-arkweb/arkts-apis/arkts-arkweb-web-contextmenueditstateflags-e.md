@@ -1,6 +1,6 @@
 # ContextMenuEditStateFlags
 
-Defines the context menu supported event bit flags, related to {@link onContextMenuShow} method.
+Defines the context menu supported event bit flags, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method.
 
 **Since:** 23
 

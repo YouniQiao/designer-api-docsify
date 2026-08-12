@@ -13,7 +13,7 @@ Represents the basic information about a distributed device.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## deviceId
@@ -58,7 +58,7 @@ Device name.
 deviceType: string
 ```
 
-[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicetype).
+[Device type](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceType).
 
 **Type:** string
 

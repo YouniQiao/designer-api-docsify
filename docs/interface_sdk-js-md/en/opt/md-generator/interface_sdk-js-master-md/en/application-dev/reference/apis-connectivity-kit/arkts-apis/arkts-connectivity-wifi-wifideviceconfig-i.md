@@ -6,7 +6,7 @@ Wi-Fi device configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig
+**Substitutes:** [WifiDeviceConfig](ohos.wifiManager/wifiManager.WifiDeviceConfig)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -15,7 +15,7 @@ Wi-Fi device configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## bssid
@@ -32,7 +32,7 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.bssid
+**Substitutes:** [bssid](ohos.wifiManager/wifiManager.WifiDeviceConfig.bssid)
 
 <!--Device-WifiDeviceConfig-bssid: string--><!--Device-WifiDeviceConfig-bssid: string-End-->
 
@@ -52,7 +52,7 @@ Hide SSID or not, false(default): not hide
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.isHiddenSsid
+**Substitutes:** [isHiddenSsid](ohos.wifiManager/wifiManager.WifiDeviceConfig.isHiddenSsid)
 
 <!--Device-WifiDeviceConfig-isHiddenSsid: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid: boolean-End-->
 
@@ -72,7 +72,7 @@ Wi-Fi key: maximum length is 64
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.preSharedKey
+**Substitutes:** [preSharedKey](ohos.wifiManager/wifiManager.WifiDeviceConfig.preSharedKey)
 
 <!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
 
@@ -86,13 +86,13 @@ securityType: WifiSecurityType
 
 Security type: reference definition of WifiSecurityType
 
-**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
+**Type:** WifiSecurityType
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.securityType
+**Substitutes:** [securityType](ohos.wifiManager/wifiManager.WifiDeviceConfig.securityType)
 
 <!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
@@ -112,7 +112,7 @@ Wi-Fi SSID: the maximum length is 32
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.ssid
+**Substitutes:** [ssid](ohos.wifiManager/wifiManager.WifiDeviceConfig.ssid)
 
 <!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceClass
@@ -20,7 +20,7 @@ Obtains the class of a peer Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getRemoteDeviceClass
+**Substitutes:** [getRemoteDeviceClass](ohos.bluetoothManager/bluetoothManager.getRemoteDeviceClass)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -38,7 +38,7 @@ Obtains the class of a peer Bluetooth device.
 
 | Type | Description |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | The class of the remote device, { |
+| DeviceClass | The class of the remote device, { |
 
 ## Examples
 

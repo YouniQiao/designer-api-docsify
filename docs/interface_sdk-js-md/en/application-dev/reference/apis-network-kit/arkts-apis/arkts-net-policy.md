@@ -13,7 +13,7 @@ Provides interfaces to manage network policy rules.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## Summary
@@ -107,7 +107,7 @@ import { policy } from 'kits/@kit.NetworkKit';
 | [NetBackgroundPolicy](arkts-network-policy-netbackgroundpolicy-e-sys.md) | Indicate whether the application can use metered networks in background. |
 | [NetUidPolicy](arkts-network-policy-netuidpolicy-e-sys.md) | Uid Specifies the Internet access policy in background mode. |
 | [NetUidRule](arkts-network-policy-netuidrule-e-sys.md) | Rules whether an uid can access to a metered or non-metered network. |
-| [RemindType](arkts-network-policy-remindtype-e-sys.md) | Specify the remind type, see {@link updateRemindPolicy}. |
+| [RemindType](arkts-network-policy-remindtype-e-sys.md) | Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateRemindPolicy). |
 <!--DelEnd-->
 
 ### Types

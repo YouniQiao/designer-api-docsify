@@ -16,7 +16,7 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)
+**替代接口：** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestSuspendDelay)
 
 <!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
@@ -33,7 +33,7 @@ function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySus
 
 | 类型 | 说明 |
 | --- | --- |
-| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | 返回延迟挂起信息。 |
+| DelaySuspendInfo | 返回延迟挂起信息。 |
 
 ## 示例
 

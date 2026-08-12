@@ -8,7 +8,7 @@ Display status of **nextLabel** in the stepper.
 
 **Deprecated since:** 22
 
-**Substitutes:** [Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper)
+**Substitutes:** [Swiper](Swiper)
 
 <!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
 
@@ -25,7 +25,7 @@ The button on the right is clickable and can navigate users to the next **Steppe
 **NOTE：**
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index) instead.
+[index](SwiperAttribute#index) instead.
 
 **Since:** 8
 
@@ -33,7 +33,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper.SwiperAttribute#index
+**Substitutes:** [index](Swiper.SwiperAttribute#index)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,7 +52,7 @@ The button on the right is disabled.
 **NOTE：**
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[indicatorInteractive](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#indicatorinteractive) instead.
+[indicatorInteractive](SwiperAttribute#indicatorInteractive) instead.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper.SwiperAttribute#indicatorInteractive
+**Substitutes:** [indicatorInteractive](Swiper.SwiperAttribute#indicatorInteractive)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -79,7 +79,7 @@ The button on the right is not displayed, and a progress bar is displayed instea
 **NOTE：**
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper) instead.
+[Swiper](swiper) instead.
 
 **Since:** 8
 
@@ -87,7 +87,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** [Swiper](../arkts-apis/arkts-arkui-swiper-swiper-f.md/arkts-arkui-swiper-swiper-f.md#swiper)
+**Substitutes:** [Swiper](Swiper)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,7 +107,7 @@ The button on the right reads "Skip" by default. You can define the processing l
 **NOTE：**
 
 This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[index](../arkts-apis/arkts-arkui-swiper-swiperattribute-i.md/arkts-arkui-swiper-swiperattribute-i.md#index) instead.
+[index](SwiperAttribute#index) instead.
 
 **Since:** 8
 
@@ -115,7 +115,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper.SwiperAttribute#index
+**Substitutes:** [index](Swiper.SwiperAttribute#index)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

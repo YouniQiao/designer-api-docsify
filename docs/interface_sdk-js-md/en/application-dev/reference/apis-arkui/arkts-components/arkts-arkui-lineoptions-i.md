@@ -24,7 +24,7 @@ height?: Length
 
 Height.If the value is invalid or the default value is used, the height required for the content is used.Unit: vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ width?: Length
 
 Width.If the value is invalid or the default value is used, the width required for the content is used.Unit: vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 7
 

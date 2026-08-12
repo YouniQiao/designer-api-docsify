@@ -2,7 +2,7 @@
 
 Geometric node type that holds renderable mesh data and supports optional deformation features.
 
-**Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
+**Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
 **Since:** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## on
@@ -29,5 +29,5 @@ Register for an event
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | string | Yes | Indicates the type of event registered. |
-| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | Yes | Represents the registered event function |
+| listener | EventListener | Yes | Represents the registered event function |
 

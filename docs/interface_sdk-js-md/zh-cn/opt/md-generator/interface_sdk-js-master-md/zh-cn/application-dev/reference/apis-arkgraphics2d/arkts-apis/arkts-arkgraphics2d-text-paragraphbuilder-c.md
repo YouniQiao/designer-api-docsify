@@ -1,9 +1,9 @@
 # ParagraphBuilder
 
-段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)和  
-[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md)初始化ParagraphBuilder，然后通过  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)设置文本样式、[addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext)添加文本内容，最终调用  
-[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)对象进行排版和绘制。
+段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)和  
+[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection)初始化ParagraphBuilder，然后通过  
+[pushStyle](#pushStyle)设置文本样式、[addText](#addText)添加文本内容，最终调用  
+[build()](#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)对象进行排版和绘制。
 
 **起始版本：** 12
 
@@ -144,7 +144,7 @@ addText(text: string): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| text | string | 是 |
+| [text](arkts-graphics-text.md) | string | 是 |
 
 ## 示例
 
@@ -351,8 +351,8 @@ popStyle(): void
 
 > **说明：**
 > 
-> 必须在调用[pushStyle()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
-> [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中的textStyle作为默认样式。
+> 必须在调用[pushStyle()](#pushStyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
+> [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中的textStyle作为默认样式。
 
 **起始版本：** 12
 
@@ -420,7 +420,7 @@ pushStyle(textStyle: TextStyle): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| textStyle | [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) | 是 |
+| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | 是 |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## onDownloadSuccess
@@ -27,7 +27,7 @@ Subscribes to the pre-download completion events. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | Callback URL to be registered, with a maximum of 8,192 bytes. |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 

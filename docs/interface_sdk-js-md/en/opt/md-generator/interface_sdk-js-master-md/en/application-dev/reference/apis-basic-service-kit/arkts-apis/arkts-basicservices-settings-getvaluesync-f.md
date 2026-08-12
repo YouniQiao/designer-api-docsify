@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## getValueSync
@@ -18,7 +18,7 @@ Get value from settingsdata(synchronous method)
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#getValueSync
+**Substitutes:** [getValueSync](#getValueSync)
 
 **Model restriction:** This API can be used only in the FA model.
 

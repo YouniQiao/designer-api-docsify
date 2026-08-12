@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## createGattServer
@@ -18,7 +18,7 @@ create a JavaScript Gatt server instance.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble#createGattServer
+**Substitutes:** [createGattServer](ohos.bluetooth.ble/ble#createGattServer)
 
 <!--Device-BLE-function createGattServer(): GattServer--><!--Device-BLE-function createGattServer(): GattServer-End-->
 

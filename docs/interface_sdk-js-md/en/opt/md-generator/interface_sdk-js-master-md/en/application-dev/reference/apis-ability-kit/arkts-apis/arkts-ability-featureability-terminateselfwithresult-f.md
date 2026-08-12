@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from 'kits/@kit.AbilityKit';
+import { featureAbility } from '@kit.AbilityKit';
 ```
 
 ## terminateSelfWithResult
@@ -13,7 +13,7 @@ function terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallba
 ```
 
 Terminates this ability. This API uses an asynchronous callback to return the result. If the ability is started by calling  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
+[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
 
@@ -75,7 +75,7 @@ function terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
 Terminates this ability. This API uses a promise to return the result. If the ability is started by calling  
-[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
+[startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult), the result is returned to the caller when **terminateSelfWithResult** is called. Otherwise, no result is returned to the caller when **terminateSelfWithResult** is called.
 
 **Since:** 7
 
@@ -95,7 +95,7 @@ Terminates this ability. This API uses a promise to return the result. If the ab
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

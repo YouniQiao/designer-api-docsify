@@ -2,7 +2,7 @@
 
 The context of Photo Editor extension. It allows access to PhotoEditorExtension-specific resources.
 
-**Inheritance/Implementation:** PhotoEditorExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** PhotoEditorExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 12
 
@@ -45,10 +45,52 @@ Save image data by image pixmap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
-| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+| [29600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600003-image-too-large) | Image too big. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
+| [29600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+
+## Examples
+
+```TypeScript
+import { common, UIExtensionContentSession, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { image } from '@kit.ImageKit';
+
+const TAG = '[ExamplePhotoEditorAbility]';
+
+@Entry
+@Component
+struct Index {
+  // Original image
+  @State originalImage: PixelMap | null = null;
+
+  build() {
+    Row() {
+      Column() {
+        Button('RotateAndSaveImg').onClick(event => {
+          hilog.info(0x0000, TAG, `Start to edit image and save.`);
+
+          this.originalImage?.rotate(90).then(() => {
+            let packOpts: image.PackingOption = { format: 'image/jpeg', quality: 98 };
+            try {
+              let context = this.getUIContext().getHostContext() as common.PhotoEditorExtensionContext;
+              context.saveEditedContentWithImage(this.originalImage as image.PixelMap,
+                packOpts).then(data => {
+                  hilog.info(0x0000, TAG,
+                    `saveContentEditingWithImage result: ${JSON.stringify(data)}`);
+                });
+            } catch (e) {
+              hilog.error(0x0000, TAG, `saveContentEditingWithImage failed:${e}`);
+              return;
+            }
+          })
+        }).margin({ top: 10 })
+      }
+    }
+  }
+}
+```
 
 ## saveEditedContentWithUri
 
@@ -82,8 +124,67 @@ Save image data by uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
-| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
-| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+| [29600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600003-image-too-large) | Image too big. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
+| [29600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+
+## Examples
+
+```TypeScript
+import { common, UIExtensionContentSession, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG = '[ExamplePhotoEditorAbility]';
+
+@Entry
+@Component
+struct Index {
+  // Original image
+  @State originalImage: PixelMap | null = null;
+
+  build() {
+    Row() {
+      Column() {
+        Button('RotateAndSaveImg').onClick(event => {
+          hilog.info(0x0000, TAG, `Start to edit image and save.`);
+
+          this.originalImage?.rotate(90).then(() => {
+            const imagePackerApi: image.ImagePacker = image.createImagePacker();
+            let packOpts: image.PackingOption = { format: 'image/jpeg', quality: 98 };
+            imagePackerApi.packToData(this.originalImage, packOpts).then((data: ArrayBuffer) => {
+              let context = this.getUIContext().getHostContext() as common.PhotoEditorExtensionContext;
+              let filePath = context.filesDir + '/edited.jpg';
+              let file: fileIo.File | undefined;
+              try{
+                file = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE
+                | fileIo.OpenMode.CREATE | fileIo.OpenMode.TRUNC);
+                let writeLen = fileIo.writeSync(file.fd, data);
+                hilog.info(0x0000, TAG, 'write data to file succeed and size is:'
+                  + writeLen);
+                fileIo.closeSync(file);
+                context.saveEditedContentWithUri(filePath).then
+                  (data => {
+                    hilog.info(0x0000, TAG,
+                      `saveContentEditingWithUri result: ${JSON.stringify(data)}`);
+                  });
+              } catch (e) {
+                hilog.info(0x0000, TAG, `writeImage failed:${e}`);
+              } finally {
+                fileIo.close(file);
+              }
+            }).catch((error: BusinessError) => {
+              hilog.error(0x0000, TAG,
+                'Failed to pack the image. And the error is: ' + String(error));
+            })
+          })
+        }).margin({ top: 10 })
+      }
+    }
+  }
+}
+```
 

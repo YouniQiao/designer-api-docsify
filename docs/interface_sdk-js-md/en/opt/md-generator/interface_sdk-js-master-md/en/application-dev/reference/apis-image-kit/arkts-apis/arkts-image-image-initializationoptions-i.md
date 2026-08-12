@@ -11,7 +11,7 @@ Defines PixelMap initialization options.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alphaType
@@ -62,7 +62,7 @@ pixelFormat?: PixelMapFormat
 
 Pixel format of the generated PixelMap. The default value is **RGBA_8888**.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 8
 
@@ -102,7 +102,7 @@ size: Size
 
 Image size.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 8
 
@@ -122,7 +122,7 @@ srcPixelFormat?: PixelMapFormat
 
 Pixel format of the passed-in buffer data. The default value is **BGRA_8888**.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 12
 

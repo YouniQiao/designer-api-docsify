@@ -6,7 +6,7 @@ Represents the tip information displayed during the authentication, which is use
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md)
+**Substitutes:** [AuthTipInfo](arkts-userauthentication-userauth-authtipinfo-i.md#AuthTipInfo)
 
 <!--Device-userAuth-interface TipInfo--><!--Device-userAuth-interface TipInfo-End-->
 
@@ -15,7 +15,7 @@ Represents the tip information displayed during the authentication, which is use
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## module
@@ -32,7 +32,7 @@ ID of the module that sends the tip information.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.AuthTipInfo.tipType](arkts-userauthentication-userauth-authtipinfo-i.md#tiptype)
+**Substitutes:** [tipType](arkts-userauthentication-userauth-authtipinfo-i.md#tipType)
 
 <!--Device-TipInfo-module: number--><!--Device-TipInfo-module: number-End-->
 
@@ -52,7 +52,7 @@ Tip to be given during the authentication process.
 
 **Deprecated since:** 11
 
-**Substitutes:** [userAuth.AuthTipInfo.tipCode](arkts-userauthentication-userauth-authtipinfo-i.md#tipcode)
+**Substitutes:** [tipCode](arkts-userauthentication-userauth-authtipinfo-i.md#tipCode)
 
 <!--Device-TipInfo-tip: number--><!--Device-TipInfo-tip: number-End-->
 

@@ -25,14 +25,14 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | 是 |
 | context | common.Context | 是 |
-| parameters | Record&lt;string, string&gt; | 是 |
+| parameters | Record & lt;string, string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

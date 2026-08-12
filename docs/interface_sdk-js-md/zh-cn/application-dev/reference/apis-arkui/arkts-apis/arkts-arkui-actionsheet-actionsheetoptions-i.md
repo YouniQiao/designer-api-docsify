@@ -24,13 +24,13 @@ alignment?: DialogAlignment
 
 **说明：**
 
-若在[UIExtension](arkts-arkui-uiextension.md)中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
+若在[UIExtension](arkts-arkui-uiextension.md#uiExtension)中设置showInSubWindow为true，弹窗将基于UIExtension的宿主窗口对齐。
 
 **ArkTS-Dyn起始版本：** 11 
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**类型：** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **默认值：** DialogAlignment.Bottom
 
@@ -218,7 +218,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **默认值：** Color.Black - borderColor must be used with borderWidth in pairs.
 
@@ -250,7 +250,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **默认值：** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
@@ -290,7 +290,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
@@ -344,7 +344,7 @@ confirm?: ActionSheetButtonOptions
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
+**类型：** [ActionSheetButtonOptions](arkts-arkui-actionsheet-actionsheetbuttonoptions-i.md)
 
 **起始版本：** 23
 
@@ -382,7 +382,7 @@ cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **默认值：** - {topLeft:'32vp', topRight:'32vp', bottomLeft:'32vp', bottomRight:'32vp'}, The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent component's width or height.
 
@@ -628,7 +628,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getuniqueid)。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)。
 
 取值范围：大于等于0的数字。传入小于0的数字本项配置不生效。
 
@@ -704,7 +704,7 @@ message: string | Resource
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -896,7 +896,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;DismissDialogAction&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-actionsheet-dismissdialogaction-i.md)&gt;
 
 **起始版本：** 23
 
@@ -924,7 +924,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **默认值：** - Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
@@ -952,7 +952,7 @@ sheets: Array<SheetInfo>
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** Array&lt;SheetInfo&gt;
+**类型：** Array&lt;[SheetInfo](arkts-arkui-actionsheet-sheetinfo-i.md)&gt;
 
 **起始版本：** 23
 
@@ -1037,10 +1037,10 @@ systemMaterial?: SystemUiMaterial
 **说明：**
 
 - 默认值：ImmersiveOptions的style为ImmersiveStyle.ULTRA_THICK的ImmersiveMaterial对象。设置undefined时与默认值保持一致。  
-- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、背景模糊  
-[backgroundBlurStyle](arkts-arkui-common-commonmethod-i.md#backgroundblurstyle)、背景效果[backgroundEffect](arkts-arkui-common-commonmethod-i.md#backgroundeffect)、边框颜色  
-[borderColor](arkts-arkui-common-commonmethod-i.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-common-commonmethod-i.md#borderwidth)、阴影  
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow)，不建议与上述接口一起使用。
+- 不同的材质具有不同的效果，该接口影响背景色[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、背景模糊  
+[backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))、背景效果[backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、边框颜色  
+[borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影  
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，不建议与上述接口一起使用。
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
@@ -1072,7 +1072,7 @@ title: string | Resource
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 

@@ -29,4 +29,4 @@ resolvedOptions(): ResolvedCollatorOptions
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ResolvedCollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvedcollatoroptions-i.md) |
+| [ResolvedCollatorOptions](arkts-intl-resolvedcollatoroptions-i.md) |

@@ -22,5 +22,5 @@ Represents the callback invoked when the paste is about to be completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PasteEvent](../arkts-apis/arkts-arkui-richeditor-pasteevent-i.md) | No | User paste event. |
+| event | [PasteEvent](arkts-arkui-pasteevent-i.md) | No | User paste event. |
 

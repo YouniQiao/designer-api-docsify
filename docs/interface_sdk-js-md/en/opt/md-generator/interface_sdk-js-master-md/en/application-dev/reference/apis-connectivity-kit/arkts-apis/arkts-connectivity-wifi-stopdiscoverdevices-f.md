@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## stopDiscoverDevices
@@ -18,7 +18,7 @@ Stops discovering Wi-Fi P2P devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.stopDiscoverP2pDevices
+**Substitutes:** [stopDiscoverP2pDevices](ohos.wifiManager/wifiManager.stopDiscoverP2pDevices)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

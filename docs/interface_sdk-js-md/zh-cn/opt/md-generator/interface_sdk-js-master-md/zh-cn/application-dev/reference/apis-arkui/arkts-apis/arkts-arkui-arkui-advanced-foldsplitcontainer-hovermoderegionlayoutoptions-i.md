@@ -44,7 +44,7 @@ horizontalSplitRatio?: number
 
 主要区域宽度与扩展区域宽度的比值。取值可使用PresetSplitRatio预设值或自定义数值，取值范围为(0, +∞)，传入小于等于0的值时使用默认值。此字段在extra有效且showExtraRegion设置为true时生效。extra有效是指FoldSplitContainer组件传入了extra参数。
 
-默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md).LAYOUT_3V2
+默认值：[PresetSplitRatio](arkts-arkui-arkui-advanced-foldsplitcontainer-presetsplitratio-e.md#PresetSplitRatio).LAYOUT_3V2
 
 **类型：** number
 

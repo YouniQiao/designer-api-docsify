@@ -18,7 +18,7 @@ handler: ScreenCaptureHandler
 
 User operation.
 
-**Type:** [ScreenCaptureHandler](../arkts-apis/arkts-arkweb-web-screencapturehandler-c.md)
+**Type:** [ScreenCaptureHandler](arkts-arkweb-screencapturehandler-c.md)
 
 **Since:** 12
 

@@ -14,7 +14,7 @@ Opens a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:openSync](arkts-corefile-fileio-opensync-f.md#opensync)
+**Substitutes:** [openSync](arkts-corefile-file-fs-opensync-f.md#openSync)
 
 <!--Device-unnamed-declare function openSync(path: string, flags?: number, mode?: number): number--><!--Device-unnamed-declare function openSync(path: string, flags?: number, mode?: number): number-End-->
 

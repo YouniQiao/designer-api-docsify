@@ -13,7 +13,7 @@ Provide interfaces and functions for HiRetrieval feature.
 ## Modules to Import
 
 ```TypeScript
-import { hiRetrieval } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiRetrieval } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

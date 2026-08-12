@@ -37,7 +37,7 @@ code?: int
 ```
 
 表示订阅者接收到的公共事件数据。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`code`字段传递的数据一致。取值范围[-2147483648, 2147483647]，默认值为0。
+[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`code`字段传递的数据一致。取值范围[-2147483648, 2147483647]，默认值为0。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -60,7 +60,7 @@ data?: string
 ```
 
 表示订阅者接收到的公共事件数据，数据大小不超过64KB。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`data`字段传递的数据一致。
+[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`data`字段传递的数据一致。
 
 **类型：** string
 
@@ -101,7 +101,7 @@ parameters?: { [key: string]: any }
 ```
 
 表示订阅者接收到的公共事件的附加信息。该字段取值与发布者使用  
-[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md)中的`parameters`字段传递的数据一致。
+[commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)发布公共事件时，通过[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData)中的`parameters`字段传递的数据一致。
 
 **类型：** { [key: string]: any }
 

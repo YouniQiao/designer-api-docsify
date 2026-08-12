@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from 'kits/@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## requestAutoSave
@@ -35,8 +35,8 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -145,11 +145,11 @@ Trigger an auto save request.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
-| request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes |
+| request | [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) | Yes |
 | callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |

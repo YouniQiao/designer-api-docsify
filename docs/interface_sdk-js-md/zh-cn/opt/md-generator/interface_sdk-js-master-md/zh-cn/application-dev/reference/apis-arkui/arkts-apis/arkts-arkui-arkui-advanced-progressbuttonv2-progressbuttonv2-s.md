@@ -134,7 +134,7 @@ progressButtonRadius?: LengthMetrics
 
 下载按钮的圆角（不支持百分比设置）。&lt;br/&gt;取值范围：[0, height/2]&lt;br/&gt;默认值：height/2&lt;br/&gt;设置非法数值时，按照默认值处理。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 18
 
@@ -156,7 +156,7 @@ progressButtonWidth?: LengthMetrics
 
 下载按钮的宽度。&lt;br/&gt;默认值：44vp
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 18
 

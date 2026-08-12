@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## getDevices
@@ -17,7 +17,7 @@ Obtains the list of USB devices connected to the host.
 > **NOTE：**
 > 
 > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
-> request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)
+> request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)
 > and then initiate a control transfer to obtain it.
 
 **Since:** 9
@@ -32,13 +32,13 @@ Obtains the list of USB devices connected to the host.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; | USB device list. |
+| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevice&gt;&gt; | USB device list. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## Examples
 

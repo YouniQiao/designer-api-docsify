@@ -25,7 +25,7 @@ Returns a section of an SharedArrayBuffer.
 
 | Type | Description |
 | --- | --- |
-| SharedArrayBuffer |  |
+| [SharedArrayBuffer](arkts-lib-es2017-sharedmemory-sharedarraybuffer-i.md) |  |
 
 ## [Symbol.species]
 
@@ -33,7 +33,7 @@ Returns a section of an SharedArrayBuffer.
 readonly [Symbol.species]: SharedArrayBuffer
 ```
 
-**Type:** SharedArrayBuffer
+**Type:** [SharedArrayBuffer](arkts-lib-es2017-sharedmemory-sharedarraybuffer-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

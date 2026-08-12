@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## dial
@@ -20,7 +20,7 @@ Makes a call.
 
 **Deprecated since:** 9
 
-**Substitutes:** telephony.call#dialCall
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -34,7 +34,7 @@ Makes a call.
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
 | options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Indicates additional information carried in the call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
 ## Examples
 
@@ -64,7 +64,7 @@ Makes a call.
 
 **Deprecated since:** 9
 
-**Substitutes:** telephony.call#dialCall
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -115,7 +115,7 @@ Makes a call.
 
 **Deprecated since:** 9
 
-**Substitutes:** telephony.call#dialCall
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -128,7 +128,7 @@ Makes a call.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Indicates the called number. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for getting the result of the call. Returns {@code true} if the call request is successful; returns {@code false} otherwise. Note that the value {@code true} indicates only the successful processing of the request; it does not mean that the call is or can be connected. |
 
 ## Examples
 

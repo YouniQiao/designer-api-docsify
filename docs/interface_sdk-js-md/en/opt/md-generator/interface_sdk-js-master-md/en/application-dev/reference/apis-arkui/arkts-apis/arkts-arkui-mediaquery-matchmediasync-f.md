@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## matchMediaSync
@@ -17,21 +17,21 @@ Sets the media query condition. This API returns the corresponding media query l
 > **NOTE：**
 > 
 > - This API is supported since API version 7 and deprecated since API version 18. You are advised to use
-> [matchMediaSync](arkts-arkui-arkui-uicontext-mediaquery-c.md#matchmediasync) instead. Before calling this API, you
-> need to obtain the [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object using the
-> [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) method in
-> [UIContext](arkts-arkui-uicontext.md).
+> [matchMediaSync](@link @ohos.arkui.UIContext:MediaQuery#matchMediaSync) instead. Before calling this API, you
+> need to obtain the [MediaQuery](@link @ohos.arkui.UIContext:MediaQuery) object using the
+> [getMediaQuery](@link @ohos.arkui.UIContext:UIContext#getMediaQuery) method in
+> [UIContext](@link @ohos.arkui.UIContext).
 > 
 > - Since API version 10, you can use the
-> [getMediaQuery](arkts-arkui-arkui-uicontext-uicontext-c.md#getmediaquery) API in
-> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) to obtain the
-> [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md) object associated with the current UI context.
+> [getMediaQuery](@link @ohos.arkui.UIContext:UIContext#getMediaQuery) API in
+> [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the
+> [MediaQuery](arkts-arkui-arkui-uicontext-mediaquery-c.md#MediaQuery) object associated with the current UI context.
 
 **Since:** 7
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.MediaQuery#matchMediaSync
+**Substitutes:** [matchMediaSync](ohos.arkui.UIContext.MediaQuery#matchMediaSync)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

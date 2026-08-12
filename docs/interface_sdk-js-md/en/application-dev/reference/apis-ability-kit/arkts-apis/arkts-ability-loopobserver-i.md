@@ -35,3 +35,17 @@ Called when a timeout occurs for the main thread to process an event in the JS r
 | --- | --- | --- | --- |
 | timeout | int | Yes | Actual execution time of the main thread. The value must be greater than **0**. The unit is milliseconds (ms). The value should be an integer. |
 
+## Examples
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+let observer: errorManager.LoopObserver = {
+  onLoopTimeOut(timeout: number) {
+    console.info('Duration timeout: ' + timeout);
+  }
+};
+
+errorManager.on("loopObserver", 1, observer);
+```
+

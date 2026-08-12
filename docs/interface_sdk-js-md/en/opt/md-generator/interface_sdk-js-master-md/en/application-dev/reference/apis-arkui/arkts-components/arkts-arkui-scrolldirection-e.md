@@ -52,7 +52,7 @@ Vertical or horizontal scrolling is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScrollDirection#FREE](arkts-arkui-scrolldirection-e.md#free)
+**Substitutes:** [FREE](#FREE)
 
 <!--Device-ScrollDirection-Free--><!--Device-ScrollDirection-Free-End-->
 

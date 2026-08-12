@@ -31,7 +31,43 @@ Creates a FrameNode of the **Text** type.
 
 | Type | Description |
 | --- | --- |
-| [Text](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-text-c.md) | FrameNode of the **Text** type. |
+| Text | FrameNode of the **Text** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create a Text node.
+    let text = typeNode.createNode(uiContext, 'Text');
+    text.initialize("Hello").fontColor(Color.Blue).fontSize(14);
+    typeNode.getAttribute(text, 'Text')?.fontWeight(FontWeight.Bold);
+    col.appendChild(text);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Text sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## createNode
@@ -65,7 +101,42 @@ Creates a FrameNode of the **Column** type.
 
 | Type | Description |
 | --- | --- |
-| [Column](arkts-arkui-typenode-column-t.md) | FrameNode of the **Column** type. |
+| Column | FrameNode of the **Column** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Column controller by extending NodeController.
+class MyColumnController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a Column node.
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(col)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myColumnController: MyColumnController = new MyColumnController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ColumnSample')
+      NodeContainer(this.myColumnController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -99,7 +170,42 @@ Creates a FrameNode of the Row type.
 
 | Type | Description |
 | --- | --- |
-| [Row](arkts-arkui-typenode-row-t.md) | FrameNode of the **Row** type. |
+| Row | FrameNode of the **Row** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Row controller by extending NodeController.
+class MyRowController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a row.
+    let row = typeNode.createNode(uiContext, 'Row')
+    row.initialize({ space: 5 })
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(row)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myRowController: MyRowController = new MyRowController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('RowSample')
+      NodeContainer(this.myRowController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -133,7 +239,46 @@ Creates a FrameNode of the **Stack** type.
 
 | Type | Description |
 | --- | --- |
-| [Stack](arkts-arkui-typenode-stack-t.md) | FrameNode of the **Stack** type. |
+| Stack | FrameNode of the **Stack** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Stack controller by extending NodeController.
+class MyStackController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a Stack node.
+    let stack = typeNode.createNode(uiContext, 'Stack')
+    stack.initialize({ alignContent: Alignment.Top })
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(stack)
+    let text = typeNode.createNode(uiContext, 'Text')
+    text.initialize("This is Text")
+    // Add a Text node to the Stack node.
+    stack.appendChild(text)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myStackController: MyStackController = new MyStackController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('StackSample')
+      NodeContainer(this.myStackController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -167,7 +312,49 @@ Creates a FrameNode of the **GridRow** type.
 
 | Type | Description |
 | --- | --- |
-| [GridRow](arkts-arkui-typenode-gridrow-t.md) | FrameNode of the **GridRow** type. |
+| GridRow | FrameNode of the **GridRow** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom GridRow controller by extending NodeController.
+class MyGridRowController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a GridRow.
+    let gridRow = typeNode.createNode(uiContext, 'GridRow')
+    gridRow.initialize({ columns: 12 })
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(gridRow)
+    // Create a GridCol node.
+    let gridCol = typeNode.createNode(uiContext, 'GridCol')
+    gridCol.initialize({ span: 2, offset: 4 })
+      .height("100%")
+      .backgroundColor(Color.Red)
+    // Add gridCol to gridRow.
+    gridRow.appendChild(gridCol)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myGridRowController: MyGridRowController = new MyGridRowController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('GridRowSample')
+      NodeContainer(this.myGridRowController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -201,7 +388,49 @@ Creates a FrameNode of the **GridCol** type.
 
 | Type | Description |
 | --- | --- |
-| [GridCol](arkts-arkui-typenode-gridcol-t.md) | FrameNode of the **GridCol** type. |
+| GridCol | FrameNode of the **GridCol** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom GridRow controller by extending NodeController.
+class MyGridRowController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a GridRow.
+    let gridRow = typeNode.createNode(uiContext, 'GridRow')
+    gridRow.initialize({ columns: 12 })
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(gridRow)
+    // Create a GridCol node.
+    let gridCol = typeNode.createNode(uiContext, 'GridCol')
+    gridCol.initialize({ span: 2, offset: 4 })
+      .height("100%")
+      .backgroundColor(Color.Red)
+    // Add gridCol to gridRow.
+    gridRow.appendChild(gridCol)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myGridRowController: MyGridRowController = new MyGridRowController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('GridColSample')
+      NodeContainer(this.myGridRowController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -235,7 +464,42 @@ Creates a FrameNode of the Flex type.
 
 | Type | Description |
 | --- | --- |
-| [Flex](arkts-arkui-typenode-flex-t.md) | FrameNode of the **Flex** type. |
+| Flex | FrameNode of the **Flex** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Flex controller by extending NodeController.
+class MyFlexController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a Flex.
+    let flex = typeNode.createNode(uiContext, 'Flex')
+    flex.initialize()
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(flex)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myFlexController: MyFlexController = new MyFlexController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('FlexSample')
+      NodeContainer(this.myFlexController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -269,7 +533,61 @@ Creates a FrameNode of the **Swiper** type.
 
 | Type | Description |
 | --- | --- |
-| [Swiper](arkts-arkui-typenode-swiper-t.md) | FrameNode of the **Swiper** type. |
+| Swiper | FrameNode of the **Swiper** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Swiper controller by extending NodeController.
+class MySwiperController extends NodeController {
+  swiperController: SwiperController = new SwiperController()
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    // Create a Swiper node.
+    let swiperNode = typeNode.createNode(uiContext, 'Swiper')
+
+    // Create a Text node.
+    let text0 = typeNode.createNode(uiContext, 'Text')
+    text0.initialize("0")
+      .width('100%')
+      .height('100%')
+      .textAlign(TextAlign.Center)
+    // Add text0 to the Swiper.
+    swiperNode.appendChild(text0)
+    // Create another Text node for switching.
+    let text1 = typeNode.createNode(uiContext, 'Text')
+    text1.initialize("1")
+      .width('100%')
+      .height('100%')
+      .textAlign(TextAlign.Center)
+    // Add text1 to the swiper.
+    swiperNode.appendChild(text1)
+    swiperNode.commonAttribute.width('100%')
+      .height('20%')
+      .backgroundColor(0xAFEEEE)
+    // Bind the swiper to the controller.
+    typeNode.bindController(swiperNode, this.swiperController, 'Swiper')
+    typeNode.getAttribute(swiperNode, 'Swiper')?.loop(false)
+    return swiperNode;
+
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private mySwiperController: MySwiperController = new MySwiperController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('SwiperSample')
+      NodeContainer(this.mySwiperController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -303,7 +621,45 @@ Creates a FrameNode of the **Progress** type.
 
 | Type | Description |
 | --- | --- |
-| [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | FrameNode of the **Progress** type. |
+| Progress | FrameNode of the **Progress** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Progress controller by extending NodeController.
+class MyProgressNodeController extends NodeController {
+  public uiContext: UIContext | null = null;
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.uiContext = uiContext;
+    this.rootNode = new FrameNode(uiContext);
+    // Create a Progress node.
+    let node = typeNode.createNode(uiContext, 'Progress');
+    node.initialize({
+      value: 15,
+      total: 200,
+      type: ProgressType.ScaleRing
+    }).width(100)
+      .height(100)
+    this!.rootNode!.appendChild(node);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Sample {
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(new MyProgressNodeController()).margin(5)
+    }.width('100%').height('100%')
+
+  }
+}
+```
 
 
 ## createNode
@@ -337,7 +693,59 @@ Creates a FrameNode of the **Scroll** type.
 
 | Type | Description |
 | --- | --- |
-| [Scroll](arkts-arkui-typenode-scroll-t.md) | FrameNode of the **Scroll** type. |
+| Scroll | FrameNode of the **Scroll** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Scroll controller by extending NodeController.
+class MyScrollController extends NodeController {
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    // Create a Scroll node.
+    let scroller: Scroller = new Scroller();
+    // Create a Scroll node and set its properties.
+    let scrollNode = typeNode.createNode(uiContext, 'Scroll');
+    scrollNode.initialize(scroller).size({ width: '100%', height: 500 });
+    typeNode.getAttribute(scrollNode, "Scroll")?.friction(0.6);
+
+    let colNode = typeNode.createNode(uiContext, 'Column');
+    // Add a Column node to Scroll.
+    scrollNode.appendChild(colNode);
+
+    for (let i = 0; i < 10; i++) {
+      let text = typeNode.createNode(uiContext, 'Text');
+      text.initialize('item' + i)
+        .size({ width: '90%', height: 100 })
+        .textAlign(TextAlign.Center)
+        .backgroundColor(0xF9CF93);
+      colNode.appendChild(text);
+    }
+
+    this!.rootNode!.appendChild(scrollNode);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myScrollController: MyScrollController = new MyScrollController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ScrollSample')
+      NodeContainer(this.myScrollController)
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -371,7 +779,42 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | FrameNode of the **RelativeContainer** type. |
+| RelativeContainer | FrameNode of the **RelativeContainer** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom RelativeContainer controller by extending NodeController.
+class MyRelativeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    // Create a RelativeContainer node.
+    let relative = typeNode.createNode(uiContext, 'RelativeContainer')
+    relative.initialize()
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Gray)
+    node.appendChild(relative)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myRelativeController: MyRelativeController = new MyRelativeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('RelativeContainerSample')
+      NodeContainer(this.myRelativeController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -405,7 +848,48 @@ Creates a FrameNode of the **Divider** type.
 
 | Type | Description |
 | --- | --- |
-| [Divider](arkts-arkui-typenode-divider-t.md) | FrameNode of the **Divider** type. |
+| Divider | FrameNode of the **Divider** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Divider controller by extending NodeController.
+class MyDividerController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Divider node.
+    let divider = typeNode.createNode(uiContext, 'Divider')
+    divider.initialize()
+      .strokeWidth(1)
+    // Add the Divider node to col.
+    col.appendChild(divider)
+
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myDividerController: MyDividerController = new MyDividerController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('DividerSample')
+      NodeContainer(this.myDividerController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -439,7 +923,43 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | FrameNode of the **LoadingProgress** type. |
+| LoadingProgress | FrameNode of the **LoadingProgress** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom LoadingProgress controller by extending NodeController.
+class MyLoadingProgressNodeController extends NodeController {
+  public uiContext: UIContext | null = null;
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.uiContext = uiContext;
+    this.rootNode = new FrameNode(uiContext);
+    // Create LoadingProgress node.
+    let node = typeNode.createNode(uiContext, 'LoadingProgress');
+    node.initialize()
+      .width(100)
+      .height(100)
+      .color(Color.Red)
+      .enableLoading(true)
+    this!.rootNode!.appendChild(node);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Sample {
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(new MyLoadingProgressNodeController()).margin(5)
+    }.width('100%').height('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -473,7 +993,44 @@ Creates a FrameNode of the **Search** type.
 
 | Type | Description |
 | --- | --- |
-| [Search](arkts-arkui-typenode-search-t.md) | FrameNode of the **Search** type. |
+| Search | FrameNode of the **Search** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create a Search node.
+    let search = typeNode.createNode(uiContext, 'Search');
+    search.initialize({ value: "Search" })
+      .searchButton('SEARCH')
+      .textFont({ size: 14, weight: 400 })
+    col.appendChild(search);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Search sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## createNode
@@ -507,7 +1064,49 @@ Creates a FrameNode of the **Blank** type.
 
 | Type | Description |
 | --- | --- |
-| [Blank](arkts-arkui-typenode-blank-t.md) | FrameNode of the **Blank** type. |
+| Blank | FrameNode of the **Blank** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Blank controller by extending NodeController.
+class MyBlankController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Blank node.
+    let blank = typeNode.createNode(uiContext, 'Blank')
+    blank.initialize()
+      .width('50%')
+      .height('50%')
+      .backgroundColor(Color.Blue)
+    col.appendChild(blank)
+
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myBlankController: MyBlankController = new MyBlankController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('BlankSample')
+      NodeContainer(this.myBlankController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -541,7 +1140,53 @@ Creates a FrameNode of the **Image** type.
 
 | Type | Description |
 | --- | --- |
-| [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | FrameNode of the **Image** type. |
+| Image | FrameNode of the **Image** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Image controller by extending NodeController.
+class MyImageController extends NodeController {
+  public uiContext: UIContext | null = null;
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.uiContext = uiContext;
+    this.rootNode = new FrameNode(uiContext);
+    // Create an Image node.
+    let imageNode = typeNode.createNode(uiContext, 'Image');
+    imageNode
+      // Replace $r('app.media.img') with the image resource file you use.
+      .initialize($r('app.media.img'))
+      .width(100)
+      .height(100)
+      .fillColor(Color.Red)
+      .objectFit(ImageFit.Contain)
+      .renderMode(ImageRenderMode.Template)
+      .fitOriginalSize(true)
+      .matchTextDirection(true)
+      .objectRepeat(ImageRepeat.X)
+      .autoResize(true)
+
+    this!.rootNode!.appendChild(imageNode);
+    return this.rootNode;
+
+  }
+}
+
+@Entry
+@Component
+struct Sample {
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(new MyImageController()).margin(5)
+    }.width('100%').height('100%')
+
+  }
+}
+```
 
 
 ## createNode
@@ -575,7 +1220,66 @@ Creates a FrameNode of the **List** type.
 
 | Type | Description |
 | --- | --- |
-| [List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md) | FrameNode of the **List** type. |
+| List | FrameNode of the **List** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom List controller by extending NodeController.
+class MyListController extends NodeController {
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    // Create a List node.
+    this.rootNode = new FrameNode(uiContext);
+    // Create a List node.
+    let listNode = typeNode.createNode(uiContext, 'List');
+    listNode.initialize({ space: 3 }).size({ width: '100%', height: '100%' });
+    typeNode.getAttribute(listNode, "List")?.friction(0.6);
+
+    // Create a ListItemGroup node in the List.
+    let listItemGroupNode = typeNode.createNode(uiContext, 'ListItemGroup');
+    listItemGroupNode.initialize({ space: 3 });
+    listNode.appendChild(listItemGroupNode);
+
+    // Add ListItem nodes to ListItemGroup.
+    let listItemNode1 = typeNode.createNode(uiContext, 'ListItem');
+    listItemNode1.initialize({ style: ListItemStyle.NONE }).height(100).borderWidth(1).backgroundColor('#FF00FF');
+    let text1 = typeNode.createNode(uiContext, 'Text');
+    text1.initialize('ListItem1');
+    listItemNode1.appendChild(text1);
+    listItemGroupNode.appendChild(listItemNode1);
+
+    // Create a ListItem, add a Text to the ListItem, and add the ListItem to listItemGroup.
+    let listItemNode2 = typeNode.createNode(uiContext, 'ListItem');
+    listItemNode2.initialize({ style: ListItemStyle.CARD }).borderWidth(1).backgroundColor('#FF00FF');
+    typeNode.getAttribute(listItemNode2, "ListItem")?.height(100);
+    let text2 = typeNode.createNode(uiContext, 'Text');
+    text2.initialize('ListItem2');
+    listItemNode2.appendChild(text2);
+    listItemGroupNode.appendChild(listItemNode2);
+
+    this!.rootNode!.appendChild(listNode);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myListController: MyListController = new MyListController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ListSample')
+      NodeContainer(this.myListController)
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -609,7 +1313,11 @@ Creates a FrameNode of the **ListItem** type.
 
 | Type | Description |
 | --- | --- |
-| [ListItem](arkts-arkui-typenode-listitem-t.md) | FrameNode of the **ListItem** type. |
+| ListItem | FrameNode of the **ListItem** type. |
+
+## Examples
+
+See the example for [createNode('List')](#createnodelist12).
 
 
 ## createNode
@@ -643,7 +1351,42 @@ Creates a FrameNode of the **TextInput** type.
 
 | Type | Description |
 | --- | --- |
-| [TextInput](arkts-arkui-typenode-textinput-t.md) | FrameNode of the **TextInput** type. |
+| TextInput | FrameNode of the **TextInput** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create a TextInput.
+    let textInput = typeNode.createNode(uiContext, 'TextInput');
+    textInput.initialize({ text: "TextInput" });
+    col.appendChild(textInput);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextInput sample')
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## createNode
@@ -677,7 +1420,49 @@ Creates a FrameNode of the **Button** type.
 
 | Type | Description |
 | --- | --- |
-| [Button](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-mouseevent-button-e.md) | FrameNode of the **Button** type. |
+| Button | FrameNode of the **Button** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Button controller by extending NodeController.
+class MyButtonController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Button node.
+    let button = typeNode.createNode(uiContext, 'Button')
+    button.initialize("This is Button")
+      .onClick(() => {
+        uiContext.getPromptAction().showToast({ message: "Button clicked" })
+      })
+    col.appendChild(button)
+
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myButtonController: MyButtonController = new MyButtonController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ButtonSample')
+      NodeContainer(this.myButtonController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -711,7 +1496,11 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 | Type | Description |
 | --- | --- |
-| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | FrameNode of the **ListItemGroup** type. |
+| ListItemGroup | FrameNode of the **ListItemGroup** type. |
+
+## Examples
+
+See the example for [createNode('List')](#createnodelist12).
 
 
 ## createNode
@@ -745,7 +1534,70 @@ Creates a FrameNode of the **WaterFlow** type.
 
 | Type | Description |
 | --- | --- |
-| [WaterFlow](arkts-arkui-typenode-waterflow-t.md) | FrameNode of the **WaterFlow** type. |
+| WaterFlow | FrameNode of the **WaterFlow** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom WaterFlow controller by extending NodeController.
+class MyWaterFlowController extends NodeController {
+  public rootNode: FrameNode | null = null;
+  private minHeight: number = 80;
+  private maxHeight: number = 180;
+
+  // Calculate the FlowItem height.
+  private getHeight() {
+    let ret = Math.floor(Math.random() * this.maxHeight);
+    return (ret > this.minHeight ? ret : this.minHeight);
+  }
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    // Create a WaterFlow node and set its properties.
+    let waterFlowNode = typeNode.createNode(uiContext, 'WaterFlow');
+    waterFlowNode.attribute.size({ width: '100%', height: '100%' })
+      .columnsTemplate('1fr 1fr')
+      .columnsGap(10)
+      .rowsGap(5);
+    typeNode.getAttribute(waterFlowNode, "WaterFlow")?.friction(0.6);
+
+    // Create a FlowItem node and set its properties.
+    for (let i = 0; i < 20; i++) {
+      let flowItemNode = typeNode.createNode(uiContext, 'FlowItem');
+      flowItemNode.attribute.size({ height: this.getHeight() });
+      typeNode.getAttribute(flowItemNode, "FlowItem")?.width('100%');
+      waterFlowNode.appendChild(flowItemNode);
+
+      let text = typeNode.createNode(uiContext, 'Text');
+      text.initialize('N' + i)
+        .size({ width: '100%', height: '100%' })
+        .textAlign(TextAlign.Center)
+        .backgroundColor(0xF9CF93);
+      flowItemNode.appendChild(text);
+    }
+
+    this!.rootNode!.appendChild(waterFlowNode);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myWaterFlowController: MyWaterFlowController = new MyWaterFlowController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('WaterFlowSample')
+      NodeContainer(this.myWaterFlowController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -779,7 +1631,11 @@ Creates a FrameNode of the **FlowItem** type.
 
 | Type | Description |
 | --- | --- |
-| [FlowItem](arkts-arkui-typenode-flowitem-t.md) | FrameNode of the **FlowItem** type. |
+| FlowItem | FrameNode of the **FlowItem** type. |
+
+## Examples
+
+See the example for [createNode('WaterFlow')](#createnodewaterflow12).
 
 
 ## createNode
@@ -813,7 +1669,43 @@ Creates a FrameNode of the **XComponent** type.
 
 | Type | Description |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | FrameNode of the **XComponent** type. |
+| XComponent | FrameNode of the **XComponent** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col);
+    // Create an XComponent object.
+    let xcomponent = typeNode.createNode(uiContext, 'XComponent');
+    xcomponent.attribute.backgroundColor(Color.Red);
+    col.appendChild(xcomponent);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('XComponentSample')
+      NodeContainer(this.myNodeController)
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -842,13 +1734,55 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
-| options | [XComponentOptions](../arkts-components/arkts-arkui-xcomponentoptions-i.md) | Yes | Options of the **XComponent**. |
+| options | XComponentOptions | Yes | Options of the **XComponent**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | FrameNode of the **XComponent** type. |
+| XComponent | FrameNode of the **XComponent** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  controller: XComponentController = new XComponentController();
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col);
+    // Set the XComponent parameter object.
+    let options: XComponentOptions = {
+      type: XComponentType.SURFACE,
+      controller: this.controller
+    };
+    // Create an XComponent object.
+    let xcomponent = typeNode.createNode(uiContext, 'XComponent', options);
+    xcomponent.attribute.backgroundColor(Color.Red);
+    col.appendChild(xcomponent);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('XComponentSample')
+      NodeContainer(this.myNodeController)
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -877,13 +1811,53 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'XComponent' | Yes | Node type. Set to **'XComponent'**. |
-| parameters | [NativeXComponentParameters](../arkts-components/arkts-arkui-nativexcomponentparameters-i.md) | Yes | Options of the **XComponent**. |
+| parameters | NativeXComponentParameters | Yes | Options of the **XComponent**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [XComponent](arkts-arkui-typenode-xcomponent-t.md) | FrameNode of the **XComponent** type. |
+| XComponent | FrameNode of the **XComponent** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  controller: XComponentController = new XComponentController();
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col);
+    let parameters: NativeXComponentParameters = {
+      type: XComponentType.SURFACE
+    };
+    // Create an XComponent object.
+    let xcomponent = typeNode.createNode(uiContext, 'XComponent', parameters);
+    xcomponent.attribute.backgroundColor(Color.Red);
+    col.appendChild(xcomponent);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('XComponentSample')
+      NodeContainer(this.myNodeController)
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -917,7 +1891,51 @@ Creates a FrameNode of the **Checkbox** type.
 
 | Type | Description |
 | --- | --- |
-| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | FrameNode of the **Checkbox** type. |
+| Checkbox | FrameNode of the **Checkbox** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Checkbox controller by extending NodeController.
+class MyCheckboxController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Checkbox node.
+    let checkbox = typeNode.createNode(uiContext, 'Checkbox')
+    checkbox.initialize({ name: 'checkbox1', group: 'checkboxGroup1' })
+
+    // Create another Checkbox node.
+    let checkbox1 = typeNode.createNode(uiContext, 'Checkbox')
+    checkbox1.initialize({ name: 'checkbox2', group: 'checkboxGroup1' })
+
+    // Add the two Checkbox nodes to col for comparison.
+    col.appendChild(checkbox)
+    col.appendChild(checkbox1)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myCheckboxController: MyCheckboxController = new MyCheckboxController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('CheckboxSample')
+      NodeContainer(this.myCheckboxController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -951,7 +1969,53 @@ Creates a FrameNode of the **CheckboxGroup** type.
 
 | Type | Description |
 | --- | --- |
-| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | FrameNode of the **CheckboxGroup** type. |
+| CheckboxGroup | FrameNode of the **CheckboxGroup** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom CheckboxGroup controller by extending NodeController.
+class MyCheckboxGroupController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    let checkbox = typeNode.createNode(uiContext, 'Checkbox')
+    checkbox.initialize({ name: 'checkbox1', group: 'checkboxGroup1' })
+
+    let checkbox1 = typeNode.createNode(uiContext, 'Checkbox')
+    checkbox1.initialize({ name: 'checkbox2', group: 'checkboxGroup1' })
+
+    // Create a CheckboxGroup node.
+    let checkboxGroup = typeNode.createNode(uiContext, 'CheckboxGroup')
+    checkboxGroup.initialize({ group: 'checkboxGroup1' })
+
+    col.appendChild(checkbox)
+    col.appendChild(checkbox1)
+    col.appendChild(checkboxGroup)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myCheckboxGroupController: MyCheckboxGroupController = new MyCheckboxGroupController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('CheckboxGroupSample')
+      NodeContainer(this.myCheckboxGroupController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -985,7 +2049,50 @@ Creates a FrameNode of the **Radio** type.
 
 | Type | Description |
 | --- | --- |
-| [Radio](arkts-arkui-typenode-radio-t.md) | FrameNode of the **Radio** type. |
+| Radio | FrameNode of the **Radio** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Radio controller by extending NodeController.
+class MyRadioController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Radio node.
+    let radio1 = typeNode.createNode(uiContext, 'Radio')
+    radio1.initialize({ value: 'radio1', group: 'radioGroup' })
+
+    // Create another Radio node for comparison.
+    let radio2 = typeNode.createNode(uiContext, 'Radio')
+    radio2.initialize({ value: 'radio2', group: 'radioGroup' })
+
+    col.appendChild(radio1)
+    col.appendChild(radio2)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myRadioController: MyRadioController = new MyRadioController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('RadioSample')
+      NodeContainer(this.myRadioController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -1019,7 +2126,46 @@ Creates a FrameNode of the **Rating** type.
 
 | Type | Description |
 | --- | --- |
-| [Rating](arkts-arkui-typenode-rating-t.md) | FrameNode of the **Rating** type. |
+| Rating | FrameNode of the **Rating** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Rating controller by extending NodeController.
+class MyRatingController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Rating node.
+    let rating = typeNode.createNode(uiContext, 'Rating')
+    rating.initialize({ rating: 0 })
+    col.appendChild(rating)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myRatingController: MyRatingController = new MyRatingController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('RatingSample')
+
+      NodeContainer(this.myRatingController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -1053,7 +2199,44 @@ Creates a FrameNode of the **Select** type.
 
 | Type | Description |
 | --- | --- |
-| [Select](arkts-arkui-typenode-select-t.md) | FrameNode of the **Select** type. |
+| Select | FrameNode of the **Select** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Select controller by extending NodeController.
+class MySelectController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Select node and set its options.
+    let select = typeNode.createNode(uiContext, 'Select')
+    select.initialize([{ value: "option one" }, { value: "option two" }, { value: "option three" }])
+    col.appendChild(select)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private mySelectController: MySelectController = new MySelectController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('SelectSample')
+      NodeContainer(this.mySelectController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -1087,7 +2270,45 @@ Creates a FrameNode of the **Slider** type.
 
 | Type | Description |
 | --- | --- |
-| [Slider](arkts-arkui-typenode-slider-t.md) | FrameNode of the **Slider** type. |
+| Slider | FrameNode of the **Slider** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Slider controller by extending NodeController.
+class MySliderController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Slider node.
+    let slider = typeNode.createNode(uiContext, 'Slider')
+    slider.initialize({value:50})
+    col.appendChild(slider)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private mySliderController: MySliderController = new MySliderController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('SliderSample')
+      NodeContainer(this.mySliderController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -1116,13 +2337,52 @@ Creates a FrameNode of the **Toggle** type.
 | --- | --- | --- | --- |
 | context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context for node creation. |
 | nodeType | 'Toggle' | Yes | Node type. Set to **'Toggle'**. |
-| options | [ToggleOptions](../arkts-components/arkts-arkui-toggleoptions-i.md) | No | Options for configuring the node of the Toggle type, including setting the style through the **type** property. |
+| options | ToggleOptions | No | Options for configuring the node of the Toggle type, including setting the style through the **type** property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Toggle](arkts-arkui-typenode-toggle-t.md) | FrameNode of the **Toggle** type. |
+| Toggle | FrameNode of the **Toggle** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Toggle controller by extending NodeController.
+class MyToggleController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // Create a Toggle node.
+    let toggleSwitch = typeNode.createNode(uiContext, 'Toggle')
+    toggleSwitch.initialize({ type: ToggleType.Switch })
+    col.appendChild(toggleSwitch)
+
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myToggleController: MyToggleController = new MyToggleController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ToggleSample')
+      NodeContainer(this.myToggleController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -1156,7 +2416,43 @@ Creates a FrameNode of the **Marquee** type.
 
 | Type | Description |
 | --- | --- |
-| [Marquee](arkts-arkui-typenode-marquee-t.md) | FrameNode of the **Marquee** type. |
+| Marquee | FrameNode of the **Marquee** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 })
+    node.appendChild(col);
+    // Create a Marquee node.
+    let marquee = typeNode.createNode(uiContext, 'Marquee');
+    marquee.initialize({start:true,src:'Marquee, if need display, src shall be long'})
+      .width(100);
+    col.appendChild(marquee);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Marquee createNode sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## createNode
@@ -1190,7 +2486,42 @@ Creates a FrameNode of the **TextArea** type.
 
 | Type | Description |
 | --- | --- |
-| [TextArea](arkts-arkui-typenode-textarea-t.md) | FrameNode of the **TextArea** type. |
+| TextArea | FrameNode of the **TextArea** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 })
+    node.appendChild(col);
+    // Create a TextArea node.
+    let textArea = typeNode.createNode(uiContext, 'TextArea');
+    textArea.initialize({ text: "TextArea" });
+    col.appendChild(textArea);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextArea create sample')
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## createNode
@@ -1224,7 +2555,42 @@ Creates a FrameNode of the **SymbolGlyph** type.
 
 | Type | Description |
 | --- | --- |
-| [SymbolGlyph](arkts-arkui-typenode-symbolglyph-t.md) | FrameNode of the **SymbolGlyph** type. |
+| SymbolGlyph | FrameNode of the **SymbolGlyph** type. |
+
+## Examples
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// Implement a custom UI controller by extending NodeController.
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // Create a SymbolGlyph node.
+    let symbolGlyph = typeNode.createNode(uiContext, 'SymbolGlyph');
+    symbolGlyph.initialize($r('sys.symbol.ohos_trash'));
+    col.appendChild(symbolGlyph);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('SymbolGlyph sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## createNode
@@ -1258,7 +2624,13 @@ Creates a FrameNode of the **QRCode** type.
 
 | Type | Description |
 | --- | --- |
-| [QRCode](arkts-arkui-typenode-qrcode-t.md) | FrameNode of the **QRCode** type. |
+| QRCode | FrameNode of the **QRCode** type. |
+
+## Examples
+
+```TypeScript
+typeNode.createNode(uiContext, 'QRCode');
+```
 
 
 ## createNode
@@ -1292,7 +2664,13 @@ Creates a FrameNode of the **Badge** type.
 
 | Type | Description |
 | --- | --- |
-| [Badge](arkts-arkui-typenode-badge-t.md) | FrameNode of the **Badge** type. |
+| Badge | FrameNode of the **Badge** type. |
+
+## Examples
+
+```TypeScript
+typeNode.createNode(uiContext, 'Badge');
+```
 
 
 ## createNode
@@ -1326,7 +2704,13 @@ Creates a FrameNode of the **TextClock** type.
 
 | Type | Description |
 | --- | --- |
-| [TextClock](arkts-arkui-typenode-textclock-t.md) | FrameNode of the **TextClock** type. |
+| TextClock | FrameNode of the **TextClock** type. |
+
+## Examples
+
+```TypeScript
+typeNode.createNode(uiContext, 'TextClock');
+```
 
 
 ## createNode
@@ -1360,7 +2744,13 @@ Creates a FrameNode of the **TextTimer** type.
 
 | Type | Description |
 | --- | --- |
-| [TextTimer](arkts-arkui-typenode-texttimer-t.md) | FrameNode of the **TextTimer** type. |
+| TextTimer | FrameNode of the **TextTimer** type. |
+
+## Examples
+
+```TypeScript
+typeNode.createNode(uiContext, 'TextTimer');
+```
 
 
 ## createNode
@@ -1394,7 +2784,65 @@ Creates a FrameNode of the **Grid** type.
 
 | Type | Description |
 | --- | --- |
-| [Grid](arkts-arkui-typenode-grid-t.md) | FrameNode of the **Grid** type. |
+| Grid | FrameNode of the **Grid** type. |
+
+## Examples
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// Implement a custom Grid controller by extending NodeController.
+class MyGridController extends NodeController {
+  public rootNode: FrameNode | null = null;
+  private scroller: Scroller = new Scroller();
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    // Create a Grid node and set its properties.
+    let gridNode = typeNode.createNode(uiContext, 'Grid');
+    gridNode.initialize(this.scroller, { regularSize: [1, 1] })
+      .size({ width: '90%', height: 300 })
+      .columnsTemplate('1fr 1fr 1fr 1fr 1fr')
+      .rowsTemplate('1fr 1fr 1fr 1fr 1fr')
+      .columnsGap(10)
+      .rowsGap(10);
+    typeNode.getAttribute(gridNode, "Grid")?.friction(0.6);
+
+    // Create a GridItem node and set its properties.
+    for (let i = 0; i < 25; i++) {
+      let gridItemNode = typeNode.createNode(uiContext, 'GridItem');
+      gridItemNode.initialize({ style: GridItemStyle.NONE }).size({ height: '100%' });
+      typeNode.getAttribute(gridItemNode, "GridItem")?.width('100%');
+
+      let text = typeNode.createNode(uiContext, 'Text');
+      text.initialize((i % 5).toString())
+        .size({ width: '100%', height: '100%' })
+        .textAlign(TextAlign.Center)
+        .backgroundColor(0xF9CF93);
+      gridItemNode.appendChild(text);
+      gridNode.appendChild(gridItemNode);
+    }
+
+    this!.rootNode!.appendChild(gridNode);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myGridController: MyGridController = new MyGridController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('GridSample')
+      NodeContainer(this.myGridController)
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## createNode
@@ -1428,5 +2876,9 @@ Creates a FrameNode of the **GridItem** type.
 
 | Type | Description |
 | --- | --- |
-| [GridItem](arkts-arkui-typenode-griditem-t.md) | FrameNode of the **GridItem** type. |
+| GridItem | FrameNode of the **GridItem** type. |
+
+## Examples
+
+See the example for [createNode('Grid')](#createnodegrid14).
 

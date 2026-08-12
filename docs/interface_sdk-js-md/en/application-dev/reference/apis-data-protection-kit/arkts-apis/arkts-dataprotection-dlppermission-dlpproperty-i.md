@@ -13,7 +13,7 @@ Represents the authorization information.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## actionUponExpiry
@@ -24,7 +24,7 @@ actionUponExpiry?: ActionType
 
 Whether the file can be opened after the permission expires (with the editing permission). This parameter is valid only when **expireTime** is not empty. This parameter is left empty by default.
 
-**Type:** [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md)
+**Type:** ActionType
 
 **Since:** 21
 
@@ -60,7 +60,7 @@ authUserList?: Array<AuthUser>
 
 List of users who are authorized to access the DLP file. By default, this parameter is left blank.
 
-**Type:** Array&lt;AuthUser&gt;
+**Type:** Array&lt;[AuthUser](arkts-dataprotection-dlppermission-authuser-i.md)&gt;
 
 **Since:** 21
 
@@ -116,7 +116,7 @@ everyoneAccessList?: Array<DLPFileAccess>
 
 Permission granted to everyone. This parameter is left blank by default.
 
-**Type:** Array&lt;DLPFileAccess&gt;
+**Type:** Array&lt;[DLPFileAccess](arkts-dataprotection-dlppermission-dlpfileaccess-e.md)&gt;
 
 **Since:** 21
 
@@ -152,7 +152,7 @@ extensionFields?: Record<string, Object>
 
 Extended attribute of a DLP file. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 24
 

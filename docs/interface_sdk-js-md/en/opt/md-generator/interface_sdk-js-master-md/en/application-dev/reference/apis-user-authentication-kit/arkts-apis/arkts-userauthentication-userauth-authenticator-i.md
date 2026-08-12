@@ -6,7 +6,7 @@ Provides APIs for managing the **Authenticator** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthInstance](arkts-userauthentication-userauth-authinstance-i.md)
+**Substitutes:** [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md#AuthInstance)
 
 <!--Device-userAuth-interface Authenticator--><!--Device-userAuth-interface Authenticator-End-->
 
@@ -15,7 +15,7 @@ Provides APIs for managing the **Authenticator** object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## execute
@@ -30,7 +30,7 @@ Starts user authentication. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -73,7 +73,7 @@ Starts user authentication. This API uses a promise to return the result.
 
 **Deprecated since:** 8
 
-**Substitutes:** [userAuth.AuthInstance.start](arkts-userauthentication-userauth-authinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-authinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -92,7 +92,7 @@ Starts user authentication. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

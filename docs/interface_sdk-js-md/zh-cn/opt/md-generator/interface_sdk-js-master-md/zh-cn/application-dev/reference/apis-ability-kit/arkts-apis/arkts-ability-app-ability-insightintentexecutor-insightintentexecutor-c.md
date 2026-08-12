@@ -36,7 +36,7 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| param | Record&lt;string, Object&gt; | 是 |
+| param | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
@@ -126,10 +126,10 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIAbility](arkts-app-ability-uiability.md)组件后台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+当意图执行依赖[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)组件后台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
 
-- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)、  
-onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)。  
+- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)、  
+onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground)。  
 - 若UIAbility组件热启动，意图执行时UIAbility组件生命周期触发顺序：onExecuteInUIAbilityBackgroundMode。
 
 **起始版本：** 11
@@ -147,7 +147,7 @@ onExecuteInUIAbilityBackgroundMode、[onBackground](arkts-ability-app-ability-ui
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| param | Record&lt;string, Object&gt; | 是 |
+| param | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
@@ -221,13 +221,13 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIAbility](arkts-app-ability-uiability.md)组件前台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+当意图执行依赖[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)组件前台启动时，会在UIAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
 
-- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)、  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)、onExecuteInUIAbilityForegroundMode、[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)。  
+- 若UIAbility组件冷启动，意图执行时UIAbility组件生命周期触发顺序：[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)、  
+[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)、onExecuteInUIAbilityForegroundMode、[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground)。  
 - 若UIAbility组件热启动，且启动时UIAbility组件处于后台，意图执行时UIAbility组件生命周期触发顺序：  
-[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)、onExecuteInUIAbilityForegroundMode、  
-[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)。  
+[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant)、onExecuteInUIAbilityForegroundMode、  
+[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground)。  
 - 若UIAbility组件热启动，且启动时UIAbility组件处于前台，意图执行时UIAbility组件生命周期触发顺序：onExecuteInUIAbilityForegroundMode。
 
 **起始版本：** 11
@@ -245,7 +245,7 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| param | Record&lt;string, Object&gt; | 是 |
+| param | Record & lt;string, Object & gt; | 是 |
 | pageLoader | window.WindowStage | 是 |
 
 **返回值：**
@@ -348,12 +348,12 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-当意图执行依赖[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)启动时，会在UIExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
+当意图执行依赖[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)启动时，会在UIExtensionAbility组件生命周期执行中触发本意图执行接口。支持同步返回和使用Promise异步返回。
 
 - 意图执行时UIExtensionAbility生命周期触发顺序：  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate)、  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate)、onExecuteInUIExtensionAbility、  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground)。
+[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate)、  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)、onExecuteInUIExtensionAbility、  
+[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground)。
 
 **起始版本：** 11
 
@@ -368,7 +368,7 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | name | string | 是 |
-| param | Record&lt;string, Object&gt; | 是 |
+| param | Record & lt;string, Object & gt; | 是 |
 | pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 |
 
 **返回值：**

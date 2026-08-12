@@ -38,7 +38,7 @@ sideBarBackground?: ResourceColor
 
 设置侧边栏的背景颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 18
 
@@ -58,7 +58,7 @@ sideBarIcon?: Resource | SymbolGlyphModifier
 
 侧边栏的展开图标。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| SymbolGlyphModifier
+**类型：** Resource \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **默认值：** $r('sys.symbol.open_sidebar')
 

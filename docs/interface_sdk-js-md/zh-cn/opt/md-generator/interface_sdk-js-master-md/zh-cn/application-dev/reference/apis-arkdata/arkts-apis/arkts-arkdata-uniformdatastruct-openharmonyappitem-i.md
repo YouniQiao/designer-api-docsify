@@ -141,7 +141,7 @@ readonly uniformDataType: 'openharmony.app-item'
 ```
 
 统一数据类型标识为桌面图标类型数据，固定为“openharmony.app-item”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
 
 **类型：** 'openharmony.app-item'
 

@@ -11,7 +11,7 @@ Provides optional attributes for the search area.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## onChange
@@ -89,7 +89,7 @@ Style of the cancel button on the right. Default value:
 
 When style is set to **CancelButtonStyle.CONSTANT**, the cancel button is displayed in a default style.
 
-**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
+**Type:** IconOptions
 
 **Since:** 18
 
@@ -143,7 +143,7 @@ copyOptions?: CopyOptions
 
 Whether the input text can be copied. Default value: **CopyOptions.LocalDevice**.
 
-**Type:** [CopyOptions](arkts-arkui-copyoptions-e.md)
+**Type:** CopyOptions
 
 **Since:** 18
 
@@ -254,7 +254,7 @@ enterKeyType?: EnterKeyType
 
 Type of the Enter key. Default value: **EnterKeyType.Search**.
 
-**Type:** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
+**Type:** EnterKeyType
 
 **Since:** 18
 
@@ -429,7 +429,7 @@ onCopy?: Callback<string>
 
 Callback triggered when a copy operation is performed. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 18
 
@@ -447,7 +447,7 @@ onCut?: Callback<string>
 
 Callback triggered when a cut operation is performed. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 18
 
@@ -465,7 +465,7 @@ onDidDelete?: Callback<DeleteValue>
 
 Callback triggered when text is deleted. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeleteValue&gt;
+**Type:** Callback&lt;[DeleteValue](arkts-arkui-deletevalue-i.md)&gt;
 
 **Since:** 18
 
@@ -483,7 +483,7 @@ onDidInsert?: Callback<InsertValue>
 
 Callback triggered when text is inserted. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InsertValue&gt;
+**Type:** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md)&gt;
 
 **Since:** 18
 
@@ -502,7 +502,7 @@ onEditChange?: Callback<boolean>
 Callback triggered when the input status changes. If a cursor is displayed, that is, the value of **isEditing** is  
 **true**, the text box is in the editing state. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 18
 
@@ -520,7 +520,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 Callback triggered when users click the search icon or the search button, or touch the search button on a soft keyboard. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; \| SearchSubmitCallback
+**Type:** Callback&lt;string&gt; \| [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
 
 **Since:** 18
 
@@ -538,7 +538,7 @@ onWillDelete?: Callback<DeleteValue, boolean>
 
 Callback triggered when text is about to be deleted. **true**: Delete the text. **false**: Do not delete the text.Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeleteValue, boolean&gt;
+**Type:** Callback&lt;[DeleteValue](arkts-arkui-deletevalue-i.md), boolean&gt;
 
 **Since:** 18
 
@@ -557,7 +557,7 @@ onWillInsert?: Callback<InsertValue, boolean>
 Callback triggered when text is about to be inserted. **true**: Insert the input content into the result string.  
 **false**: Do not insert the input content into the result string. Default value: **undefined**.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InsertValue, boolean&gt;
+**Type:** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md), boolean&gt;
 
 **Since:** 18
 
@@ -594,7 +594,7 @@ placeholderFont?: Font
 Placeholder text style, including the font size, font weight, font family, and font style. Default value:  
 **{size: \$r('sys_float.ohos_id_text_size_body1')}**.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -656,7 +656,7 @@ Default value in light mode: **{size: '16vp', color: '#99182431', src:' '}**.
 
 Default value in dark mode: **{size: '16vp', color: '#99ffffff', src:' '}**.
 
-**Type:** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier
+**Type:** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 18
 
@@ -710,7 +710,7 @@ textAlign?: TextAlign
 
 Text alignment mode in the search text box. Default value: **TextAlign.Start**.
 
-**Type:** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**Type:** TextAlign
 
 **Since:** 18
 
@@ -729,7 +729,7 @@ textFont?: Font
 Style of the text entered in the search box, including the font size, font width, font family, and font style.Currently, only the default font family is supported. Default value:  
 **{size: \$r('sys_float.ohos_id_text_size_body1')}**.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 

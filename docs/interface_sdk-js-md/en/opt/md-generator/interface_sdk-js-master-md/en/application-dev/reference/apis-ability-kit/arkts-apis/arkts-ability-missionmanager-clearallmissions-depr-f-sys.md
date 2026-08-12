@@ -12,7 +12,7 @@ Clears all unlocked missions. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#clearAllMissions
+**Substitutes:** [clearAllMissions](ohos.app.ability.missionManager/missionManager#clearAllMissions)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -59,7 +59,7 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#clearAllMissions
+**Substitutes:** [clearAllMissions](ohos.app.ability.missionManager/missionManager#clearAllMissions)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -73,7 +73,7 @@ Clears all unlocked missions. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

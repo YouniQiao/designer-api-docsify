@@ -6,7 +6,7 @@ Configuring parameters in location requests
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest
+**Substitutes:** [LocationRequest](ohos.geoLocationManager/geoLocationManager.LocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@ Configuring parameters in location requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## distanceInterval
@@ -32,7 +32,7 @@ distanceInterval?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest#distanceInterval
+**Substitutes:** [distanceInterval](ohos.geoLocationManager/geoLocationManager.LocationRequest#distanceInterval)
 
 <!--Device-LocationRequest-distanceInterval?: number--><!--Device-LocationRequest-distanceInterval?: number-End-->
 
@@ -50,7 +50,7 @@ maxAccuracy?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest#maxAccuracy
+**Substitutes:** [maxAccuracy](ohos.geoLocationManager/geoLocationManager.LocationRequest#maxAccuracy)
 
 <!--Device-LocationRequest-maxAccuracy?: number--><!--Device-LocationRequest-maxAccuracy?: number-End-->
 
@@ -62,13 +62,13 @@ maxAccuracy?: number
 priority?: LocationRequestPriority
 ```
 
-**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
+**Type:** LocationRequestPriority
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest#priority
+**Substitutes:** [priority](ohos.geoLocationManager/geoLocationManager.LocationRequest#priority)
 
 <!--Device-LocationRequest-priority?: LocationRequestPriority--><!--Device-LocationRequest-priority?: LocationRequestPriority-End-->
 
@@ -80,13 +80,13 @@ priority?: LocationRequestPriority
 scenario?: LocationRequestScenario
 ```
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest#scenario
+**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.LocationRequest#scenario)
 
 <!--Device-LocationRequest-scenario?: LocationRequestScenario--><!--Device-LocationRequest-scenario?: LocationRequestScenario-End-->
 
@@ -104,7 +104,7 @@ timeInterval?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest#timeInterval
+**Substitutes:** [timeInterval](ohos.geoLocationManager/geoLocationManager.LocationRequest#timeInterval)
 
 <!--Device-LocationRequest-timeInterval?: number--><!--Device-LocationRequest-timeInterval?: number-End-->
 

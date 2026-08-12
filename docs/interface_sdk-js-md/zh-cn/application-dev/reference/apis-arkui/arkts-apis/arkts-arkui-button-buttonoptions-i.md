@@ -17,8 +17,8 @@ buttonStyle?: ButtonStyleMode
 ```
 
 按钮的样式和重要程度，根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、[fontColor](fontColor)和  
-[role](arkts-arkui-button-buttonoptions-i.md#role)接口设置，实际显示效果以最后一次设置为准。
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、[fontColor](arkts-arkui-button-buttonattribute-i.md#fontColor)和  
+[role](role)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonStyleMode.EMPHASIZED 
 
@@ -58,7 +58,7 @@ controlSize?: ControlSize
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [ControlSize](../arkts-components/arkts-arkui-controlsize-e.md)
+**类型：** [ControlSize](arkts-arkui-button-controlsize-e.md)
 
 **默认值：** ControlSize.NORMAL
 
@@ -79,8 +79,8 @@ role?: ButtonRole
 ```
 
 按钮的角色，根据设置枚举值的不同，系统自动会调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](arkts-arkui-common-commonmethod-i.md#backgroundcolor)、[fontColor](fontColor)和  
-[buttonStyle](arkts-arkui-button-buttonoptions-i.md#buttonstyle)接口设置，实际显示效果以最后一次设置为准。
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、[fontColor](arkts-arkui-button-buttonattribute-i.md#fontColor)和  
+[buttonStyle](buttonStyle)接口设置，实际显示效果以最后一次设置为准。
 
 默认值：ButtonRole.NORMAL 
 
@@ -88,7 +88,7 @@ role?: ButtonRole
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [ButtonRole](../arkts-components/arkts-arkui-buttonrole-e.md)
+**类型：** [ButtonRole](arkts-arkui-button-buttonrole-e.md)
 
 **默认值：** ButtonRole.NORMAL
 

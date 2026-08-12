@@ -130,7 +130,7 @@ Deletes text within a specified range in the editable content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Range of the text to be deleted, including the start and end positions.&lt;br&gt;If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
+| range | TextRange | No | Range of the text to be deleted, including the start and end positions.&lt;br&gt;If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
 
 ## getCaretOffset
 
@@ -153,7 +153,7 @@ Obtains the position information of the caret.
 > - The location information in the return value is the location of the caret relative to the editable component.
 > 
 > - If the caret position cannot be obtained (for example, when the
-> [TextInputController](../arkts-apis/arkts-arkui-textinput-textinputcontroller-c.md/arkts-arkui-textinput-textinputcontroller-c.md) is not bound to the [TextInput](./text_input) component),
+> [TextInputController](TextInputController) is not bound to the [TextInput](./text_input) component),
 > **null** is returned.
 
 **Since:** 11
@@ -172,7 +172,7 @@ Obtains the position information of the caret.
 
 | Type | Description |
 | --- | --- |
-| [CaretOffset](../arkts-apis/arkts-arkui-common-caretoffset-i.md) | Position of the caret relative to the text box. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | Position of the caret relative to the text box. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSelection
 
@@ -198,7 +198,7 @@ Obtains the current text selection range.
 
 | Type | Description |
 | --- | --- |
-| [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | Current text selection range, or cursor position if no text is selected. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| TextRange | Current text selection range, or cursor position if no text is selected. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentLineCount
 
@@ -250,7 +250,7 @@ Obtains the position of the edited text area relative to the component and its s
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Position of the edited text area relative to the component and its size. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RectResult](arkts-arkui-rectresult-i.md) | Position of the edited text area relative to the component and its size. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## scrollToVisible
 
@@ -280,7 +280,7 @@ interface does not take effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | Text range to be scrolled to the visible area, including the start and end positions. of the text.&lt;br&gt;The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.&lt;br&gt;If no range is specified, the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
+| range | TextRange | No | Text range to be scrolled to the visible area, including the start and end positions. of the text.&lt;br&gt;The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.&lt;br&gt;If no range is specified, the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
 
 ## setStyledPlaceholder
 
@@ -311,5 +311,5 @@ interface does not take effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | Styled string for the placeholder. This takes precedence over the plain text. **placeholder** attribute.&lt;br&gt;The placeholder does not support gesture events or hyperlink navigation within styled strings. |
+| styledString | StyledString | Yes | Styled string for the placeholder. This takes precedence over the plain text. **placeholder** attribute.&lt;br&gt;The placeholder does not support gesture events or hyperlink navigation within styled strings. |
 

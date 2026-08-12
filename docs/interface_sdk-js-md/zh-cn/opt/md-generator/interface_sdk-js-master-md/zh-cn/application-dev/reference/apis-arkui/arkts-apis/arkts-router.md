@@ -9,14 +9,14 @@ Router提供页面跳转能力，包括跳转到应用内的指定页面、同�
 > - 页面路由需要在页面渲染完成之后才能调用，在onInit和onReady生命周期中页面还处于渲染阶段，禁止调用页面路由方法。
 > 
 > - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见
-> [UIContext](arkts-arkui-uicontext.md)说明。
+> [UIContext](@ohos.arkui.UIContext)说明。
 > 
 > - 如果使用传入callback形式的
-> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushUrl)
 > 或
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)
-> 接口，callback中通过[getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)等接口获取的栈信息为中间态的栈信息，可能与栈操作完全结束后，再通过
-> [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength)等接口获取的栈信息不一致。
+> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)
+> 接口，callback中通过[getLength](arkts-arkui-arkui-uicontext-router-c.md#getLength)等接口获取的栈信息为中间态的栈信息，可能与栈操作完全结束后，再通过
+> [getLength](arkts-arkui-arkui-uicontext-router-c.md#getLength)等接口获取的栈信息不一致。
 
 **起始版本：** 8
 

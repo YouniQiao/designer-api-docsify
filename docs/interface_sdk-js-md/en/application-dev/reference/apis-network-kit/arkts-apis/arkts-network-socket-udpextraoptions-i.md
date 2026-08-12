@@ -2,7 +2,7 @@
 
 Defines other properties of the UDPSocket connection.
 
-**Inheritance/Implementation:** UDPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md)
+**Inheritance/Implementation:** UDPExtraOptions extends [ExtraOptionsBase](arkts-network-socket-extraoptionsbase-i.md#ExtraOptionsBase)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ Defines other properties of the UDPSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## broadcast

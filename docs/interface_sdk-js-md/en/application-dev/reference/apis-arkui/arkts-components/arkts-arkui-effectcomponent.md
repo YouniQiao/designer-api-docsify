@@ -56,7 +56,7 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EffectComponentOptions](../arkts-apis/arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | No | EffectComponent constructor parameter. |
+| options | [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md) | No | EffectComponent constructor parameter. |
 
 ## Summary
 

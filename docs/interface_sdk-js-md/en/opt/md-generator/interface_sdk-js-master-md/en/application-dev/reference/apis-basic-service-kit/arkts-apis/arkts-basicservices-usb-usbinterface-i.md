@@ -1,12 +1,12 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md) can contain multiple **USBInterface** instances,each providing a specific function.
+Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md#USBConfig) can contain multiple **USBInterface** instances,each providing a specific function.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)
+**Substitutes:** [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface)
 
 <!--Device-usb-interface USBInterface--><!--Device-usb-interface USBInterface-End-->
 
@@ -15,7 +15,7 @@ Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## alternateSetting
@@ -32,7 +32,7 @@ Settings for alternating between descriptors of the same USB interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.alternateSetting](arkts-basicservices-usbmanager-usbinterface-i.md#alternatesetting)
+**Substitutes:** [alternateSetting](arkts-basicservices-usbmanager-usbinterface-i.md#alternateSetting)
 
 <!--Device-USBInterface-alternateSetting: number--><!--Device-USBInterface-alternateSetting: number-End-->
 
@@ -52,7 +52,7 @@ Device type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.clazz](arkts-basicservices-usbmanager-usbinterface-i.md#clazz)
+**Substitutes:** [clazz](arkts-basicservices-usbmanager-usbinterface-i.md#clazz)
 
 <!--Device-USBInterface-clazz: number--><!--Device-USBInterface-clazz: number-End-->
 
@@ -72,7 +72,7 @@ Endpoints that belong to the USB interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.endpoints](arkts-basicservices-usbmanager-usbinterface-i.md#endpoints)
+**Substitutes:** [endpoints](arkts-basicservices-usbmanager-usbinterface-i.md#endpoints)
 
 <!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
@@ -92,7 +92,7 @@ Unique ID of the USB interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.id](arkts-basicservices-usbmanager-usbinterface-i.md#id)
+**Substitutes:** [id](arkts-basicservices-usbmanager-usbinterface-i.md#id)
 
 <!--Device-USBInterface-id: number--><!--Device-USBInterface-id: number-End-->
 
@@ -112,7 +112,7 @@ Interface name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.name](arkts-basicservices-usbmanager-usbinterface-i.md#name)
+**Substitutes:** [name](arkts-basicservices-usbmanager-usbinterface-i.md#name)
 
 <!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
@@ -132,7 +132,7 @@ Interface protocol.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.protocol](arkts-basicservices-usbmanager-usbinterface-i.md#protocol)
+**Substitutes:** [protocol](arkts-basicservices-usbmanager-usbinterface-i.md#protocol)
 
 <!--Device-USBInterface-protocol: number--><!--Device-USBInterface-protocol: number-End-->
 
@@ -152,7 +152,7 @@ Device subclass.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBInterface.subClass](arkts-basicservices-usbmanager-usbinterface-i.md#subclass)
+**Substitutes:** [subClass](arkts-basicservices-usbmanager-usbinterface-i.md#subClass)
 
 <!--Device-USBInterface-subClass: number--><!--Device-USBInterface-subClass: number-End-->
 

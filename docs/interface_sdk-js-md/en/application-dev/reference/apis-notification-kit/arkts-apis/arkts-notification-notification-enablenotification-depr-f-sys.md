@@ -14,7 +14,7 @@ Sets whether to enable notification for a specified application.This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#setNotificationEnable
+**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,9 +28,9 @@ Sets whether to enable notification for a specified application.This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable notification. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## enableNotification
@@ -47,7 +47,7 @@ Sets whether to enable notification for a specified application. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#setNotificationEnable
+**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -61,7 +61,7 @@ Sets whether to enable notification for a specified application. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes | Bundle information of the application. |
+| bundle | BundleOption | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable notification. |
 
 **Return value:**

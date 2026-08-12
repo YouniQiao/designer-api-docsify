@@ -34,7 +34,7 @@ Returns the event object if it is a keyboard event, otherwise returns null.
 
 | Type | Description |
 | --- | --- |
-| [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | The keyboard event object or null. |
+| [KeyEvent](arkts-arkui-common-keyevent-i.md) | The keyboard event object or null. |
 
 ## asMouseEvent
 
@@ -60,7 +60,7 @@ Returns the event object if it is a mouse event, otherwise returns null.
 
 | Type | Description |
 | --- | --- |
-| [MouseEvent](../arkts-components/arkts-arkui-mouseevent-i.md) | The mouse event object or null. |
+| [MouseEvent](arkts-arkui-common-mouseevent-i.md) | The mouse event object or null. |
 
 ## asTouchEvent
 
@@ -86,7 +86,7 @@ Returns the event object if it is a touch event, otherwise returns null.
 
 | Type | Description |
 | --- | --- |
-| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | The touch event object or null. |
+| [TouchEvent](arkts-arkui-common-touchevent-i.md) | The touch event object or null. |
 
 ## isKeyEvent
 

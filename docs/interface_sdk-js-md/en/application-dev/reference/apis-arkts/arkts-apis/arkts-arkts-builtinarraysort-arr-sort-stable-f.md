@@ -23,7 +23,7 @@ Sorts the array in-place, stable sorting algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;Byte&gt; | Yes | The array to sort. |
+| arr | FixedArray&lt;[Byte](arkts-arkts-byte-c.md)&gt; | Yes | The array to sort. |
 | startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
 | endIndex | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
 | comp | (lhs: byte, rhs: byte) =&gt; int | Yes | The comparator function. |
@@ -52,7 +52,7 @@ Sorts the array in-place, stable sorting algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;Short&gt; | Yes | The array to sort. |
+| arr | FixedArray&lt;[Short](arkts-arkts-short-c.md)&gt; | Yes | The array to sort. |
 | startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
 | endIndex | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
 | comp | (lhs: short, rhs: short) =&gt; int | Yes | The comparator function. |
@@ -81,7 +81,7 @@ Sorts the array in-place, stable sorting algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;Int&gt; | Yes | The array to sort. |
+| arr | FixedArray&lt;[Int](arkts-arkts-int-c.md)&gt; | Yes | The array to sort. |
 | startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
 | endIndex | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
 | comp | (lhs: int, rhs: int) =&gt; int | Yes | The comparator function. |
@@ -110,7 +110,7 @@ Sorts the array in-place, stable sorting algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;Long&gt; | Yes | The array to sort. |
+| arr | FixedArray&lt;[Long](arkts-arkts-long-c.md)&gt; | Yes | The array to sort. |
 | startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
 | endIndex | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
 | comp | (lhs: long, rhs: long) =&gt; int | Yes | The comparator function. |
@@ -139,7 +139,7 @@ Sorts the array in-place, stable sorting algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;Float&gt; | Yes | The array to sort. |
+| arr | FixedArray&lt;[Float](arkts-arkts-float-c.md)&gt; | Yes | The array to sort. |
 | startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
 | endIndex | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
 | comp | (lhs: float, rhs: float) =&gt; int | Yes | The comparator function. |
@@ -168,7 +168,7 @@ Sorts the array in-place, stable sorting algorithm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | FixedArray&lt;Double&gt; | Yes | The array to sort. |
+| arr | FixedArray&lt;[Double](arkts-arkts-double-c.md)&gt; | Yes | The array to sort. |
 | startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
 | endIndex | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
 | comp | (lhs: double, rhs: double) =&gt; int | Yes | The comparator function. |

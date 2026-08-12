@@ -1,6 +1,6 @@
 # CacheMode
 
-Enum type supplied to {@link cacheMode} for setting the Web cache mode.
+Enum type supplied to [cacheMode](arkts-arkweb-web-webattribute-i.md#cacheMode) for setting the Web cache mode.
 
 **起始版本：** 23
 

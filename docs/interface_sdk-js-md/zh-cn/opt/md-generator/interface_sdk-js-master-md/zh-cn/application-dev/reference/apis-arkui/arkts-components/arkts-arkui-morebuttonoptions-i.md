@@ -16,7 +16,7 @@ backgroundBlurStyle?: BlurStyle
 
 更多图标的菜单背景模糊样式，设置后，更多图标的菜单将应用指定的模糊样式；不设置时关闭背景模糊效果。
 
-**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **起始版本：** 19
 

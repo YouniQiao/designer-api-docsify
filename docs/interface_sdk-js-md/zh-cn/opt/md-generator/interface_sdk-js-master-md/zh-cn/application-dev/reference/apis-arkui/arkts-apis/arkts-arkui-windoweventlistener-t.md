@@ -19,4 +19,4 @@ declare type WindowEventListener = (windowId: number, event: window.WindowEventT
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | windowId | number | 是 |
-| event | window.WindowEventType | 是 |
+| event | [window.WindowEventType](arkts-arkui-window-windoweventtype-e.md) | 是 |

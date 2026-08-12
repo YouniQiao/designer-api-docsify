@@ -37,7 +37,7 @@ readonly device:string
 ```
 
 表示同步的设备ID，可通过  
-[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)等接口获取所有可信设备ID列表。
+[getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)等接口获取所有可信设备ID列表。
 
 **类型：** string
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSimpleNumberFormatBySkeleton
@@ -39,7 +39,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Error Code ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
 
 
 ## getSimpleNumberFormatBySkeleton
@@ -54,7 +54,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Deprecated since:** 20
 
-**Substitutes:** [i18n.getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton)(skeleton:
+**Substitutes:** [getSimpleNumberFormatBySkeleton](i18n.getSimpleNumberFormatBySkeleton(skeleton:)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -79,4 +79,4 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Error Code ID |
 | --- |
-| [890001](../errorcode-i18n.md#890001-parameter-error) |
+| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |

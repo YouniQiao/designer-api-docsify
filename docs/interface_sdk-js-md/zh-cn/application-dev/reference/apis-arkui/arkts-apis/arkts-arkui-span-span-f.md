@@ -24,7 +24,7 @@ export declare function Span(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 |  |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |  |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function Span(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SpanAttribute&gt; | 是 | Span属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SpanAttribute](arkts-arkui-span-spanattribute-i.md)&gt; | 是 | Span属性实例。 |
 
 **返回值：**
 

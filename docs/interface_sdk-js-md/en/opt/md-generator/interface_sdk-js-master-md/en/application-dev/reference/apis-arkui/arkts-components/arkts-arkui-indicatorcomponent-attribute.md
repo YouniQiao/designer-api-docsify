@@ -112,7 +112,7 @@ Called when the index value changes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes |
+| event | Callback & lt;number & gt; | Yes |
 
 ## style
 
@@ -138,7 +138,7 @@ Sets the indicator style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | Yes |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) | Yes |
 
 ## vertical
 

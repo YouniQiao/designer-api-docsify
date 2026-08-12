@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 3 and deprecated since API version 9. You are advised to use
-> [UploadConfig](arkts-basicservices-agent-config-i.md) instead.
+> [UploadConfig](arkts-basicservices-agent-config-i.md#Config) instead.
 
 **Since:** 3
 
@@ -11,7 +11,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**Substitutes:** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface DownloadRequestOptions--><!--Device-unnamed-export interface DownloadRequestOptions-End-->
 
@@ -20,7 +20,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -37,7 +37,7 @@ Called when API call is complete.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-DownloadRequestOptions-complete?: () => void--><!--Device-DownloadRequestOptions-complete?: () => void-End-->
 
@@ -57,7 +57,7 @@ Called when downloading fails.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void--><!--Device-DownloadRequestOptions-fail?: (data: any, code: number) => void-End-->
 
@@ -84,7 +84,7 @@ Called when the files are successfully downloaded.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void--><!--Device-DownloadRequestOptions-success?: (data: DownloadResponse) => void-End-->
 
@@ -112,7 +112,7 @@ Download description.The default value is the file name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.description
+**Substitutes:** [description](ohos.request.agent.Config.description)
 
 <!--Device-DownloadRequestOptions-description?: string--><!--Device-DownloadRequestOptions-description?: string-End-->
 
@@ -134,7 +134,7 @@ Name of the file to downloaded.The value is obtained from the current request or
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.saveas
+**Substitutes:** [saveas](ohos.request.agent.Config.saveas)
 
 <!--Device-DownloadRequestOptions-filename?: string--><!--Device-DownloadRequestOptions-filename?: string-End-->
 
@@ -156,7 +156,7 @@ Request header.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.headers
+**Substitutes:** [headers](ohos.request.agent.Config.headers)
 
 <!--Device-DownloadRequestOptions-header?: string--><!--Device-DownloadRequestOptions-header?: string-End-->
 
@@ -178,7 +178,7 @@ Resource URL.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Config.url
+**Substitutes:** [url](ohos.request.agent.Config.url)
 
 <!--Device-DownloadRequestOptions-url: string--><!--Device-DownloadRequestOptions-url: string-End-->
 

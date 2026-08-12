@@ -1,6 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the {@link onInterceptKeyboardAttach} event.
+Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](arkts-arkweb-web-webattribute-i.md#onInterceptKeyboardAttach) event.
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ controller: WebKeyboardController
 
 The web keyboard controller.
 
-**类型：** [WebKeyboardController](../arkts-components/arkts-arkweb-webkeyboardcontroller-c.md)
+**类型：** [WebKeyboardController](arkts-arkweb-web-webkeyboardcontroller-c.md)
 
 **起始版本：** 23
 

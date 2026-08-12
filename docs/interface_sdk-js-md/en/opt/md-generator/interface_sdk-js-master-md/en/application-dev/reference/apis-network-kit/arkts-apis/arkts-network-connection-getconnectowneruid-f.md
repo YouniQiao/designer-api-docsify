@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## getConnectOwnerUid
@@ -28,23 +28,23 @@ Obtains the data network that is activated by default.You can only call this met
 | --- | --- | --- |
 | protocol | [ProtocolType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-hid-protocoltype-e.md) | Yes |
 | local | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes |
-| remote | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes |
+| [remote](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) | [NetAddress](arkts-network-connection-netaddress-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [2100301](../errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-nonvpn-application) |
+| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2100301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100301-failed-to-authenticate-the-caller-nonvpn-application) |
 
 ## Examples
 

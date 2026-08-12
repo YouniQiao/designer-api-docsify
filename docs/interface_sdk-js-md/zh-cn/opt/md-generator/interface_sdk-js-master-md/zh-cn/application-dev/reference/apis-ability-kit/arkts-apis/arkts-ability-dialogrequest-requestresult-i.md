@@ -16,7 +16,7 @@ result: ResultCode
 
 表示结果码。
 
-**类型：** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
+**类型：** ResultCode
 
 **起始版本：** 9
 

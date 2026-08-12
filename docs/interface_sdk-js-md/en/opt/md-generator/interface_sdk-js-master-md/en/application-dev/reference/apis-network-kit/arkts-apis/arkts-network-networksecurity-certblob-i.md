@@ -11,7 +11,7 @@ Define the certificate content.
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from 'kits/@kit.NetworkKit';
+import { networkSecurity } from '@kit.NetworkKit';
 ```
 
 ## data
@@ -38,7 +38,7 @@ type: CertType
 
 Certificate type.
 
-**Type:** [CertType](arkts-network-http-certtype-e.md)
+**Type:** CertType
 
 **Since:** 11
 

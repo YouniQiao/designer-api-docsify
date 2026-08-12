@@ -1,6 +1,6 @@
 # DetectedBlankScreenReason
 
-Enum type supplied to {@link BlankScreenDetectionEventInfo} when onDetectedBlankScreen being called.
+Enum type supplied to [BlankScreenDetectionEventInfo](arkts-arkweb-web-blankscreendetectioneventinfo-i.md#BlankScreenDetectionEventInfo) when onDetectedBlankScreen being called.
 
 **起始版本：** 23
 

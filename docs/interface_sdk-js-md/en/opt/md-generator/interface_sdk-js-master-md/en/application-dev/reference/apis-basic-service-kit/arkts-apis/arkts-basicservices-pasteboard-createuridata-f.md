@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## createUriData
@@ -18,7 +18,7 @@ Creates a **PasteData** object of the URI type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.createData](arkts-basicservices-pasteboard-createdata-f.md#createdata)(mimeType:
+**Substitutes:** [createData](pasteboard.createData(mimeType:)
 
 <!--Device-pasteboard-function createUriData(uri: string): PasteData--><!--Device-pasteboard-function createUriData(uri: string): PasteData-End-->
 

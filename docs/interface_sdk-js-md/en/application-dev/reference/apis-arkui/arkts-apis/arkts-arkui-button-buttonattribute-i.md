@@ -2,7 +2,7 @@
 
 Defines the Button component attributes.
 
-**Inheritance/Implementation:** ButtonAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** ButtonAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;ButtonAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of button. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[ButtonAttribute](arkts-arkui-button-buttonattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of button. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Set the content modifier of button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; \| undefined | Yes | The content modifier of button. |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-button-buttonconfiguration-i.md)&gt; \| undefined | Yes | The content modifier of button. |
 
 **Return value:**
 
@@ -184,7 +184,7 @@ Font family.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource \| undefined | Yes |  |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -274,7 +274,7 @@ Font weight.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int \| FontWeight \| string \| undefined | Yes |  |
+| value | int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| undefined | Yes |  |
 
 **Return value:**
 
@@ -334,7 +334,7 @@ Sets the maximum magnification of the button text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double \| Resource \| undefined | Yes |  |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -364,7 +364,7 @@ Sets the minimum zoom-out ratio of the button text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double \| Resource \| undefined | Yes |  |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -394,7 +394,7 @@ Set the Button role.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonRole](../arkts-components/arkts-arkui-buttonrole-e.md) \| undefined | Yes | button role |
+| value | [ButtonRole](arkts-arkui-button-buttonrole-e.md) \| undefined | Yes | button role |
 
 **Return value:**
 

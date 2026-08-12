@@ -40,7 +40,7 @@ type?: DataPanelType
 
 数据面板的类型（不支持动态修改）。默认值：DataPanelType.Circle。
 
-**类型：** [DataPanelType](../arkts-components/arkts-arkui-datapaneltype-e.md)
+**类型：** [DataPanelType](arkts-arkui-datapanel-datapaneltype-e.md)
 
 **起始版本：** 23
 

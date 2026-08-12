@@ -40,7 +40,7 @@ curve?: Curve | ICurve
 
 设置滚动曲线。
 
-**类型：** [Curve](arkts-arkui-curve-e.md) \| ICurve
+**类型：** [Curve](arkts-arkui-curve-e.md) \| [ICurve](../arkts-components/arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.Ease
 

@@ -136,7 +136,7 @@ onChange?: Callback<number>
 
 Tabs页签切换后触发的事件，回调参数为切换后的页签索引，索引值从0开始。当onContentWillChange回调返回false拦截页面切换时，该事件不会被触发。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** Callback&lt;number&gt;
 
 **起始版本：** 12
 
@@ -154,7 +154,7 @@ onTabBarClick?: Callback<number>
 
 Tabs页签点击后触发的事件，回调参数为被点击页签的索引值，索引值从0开始。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt;
+**类型：** Callback&lt;number&gt;
 
 **起始版本：** 12
 

@@ -2,7 +2,7 @@
 
 rect attribute declaration.
 
-**Inheritance/Implementation:** RectAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** RectAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;RectAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Called when the fillet size is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Array&lt;RadiusItem&gt; \| undefined | Yes |  |
+| value | [Length](arkts-arkui-length-t.md) \| Array&lt;[RadiusItem](arkts-arkui-radiusitem-t.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -154,7 +154,7 @@ Set Rect options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | Rect constructor options. |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | No | Rect constructor options. |
 
 **Return value:**
 

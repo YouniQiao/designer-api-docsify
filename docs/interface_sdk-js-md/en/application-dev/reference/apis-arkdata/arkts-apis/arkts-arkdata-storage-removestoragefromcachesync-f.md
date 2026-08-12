@@ -14,7 +14,7 @@ Removes the singleton **Storage** instance of a file from the cache. The removed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.preferences.preferences.removePreferencesFromCache
+**Substitutes:** [removePreferencesFromCache](ohos.preferences.preferences.removePreferencesFromCache)
 
 <!--Device-storage-function removeStorageFromCacheSync(path: string): void--><!--Device-storage-function removeStorageFromCacheSync(path: string): void-End-->
 

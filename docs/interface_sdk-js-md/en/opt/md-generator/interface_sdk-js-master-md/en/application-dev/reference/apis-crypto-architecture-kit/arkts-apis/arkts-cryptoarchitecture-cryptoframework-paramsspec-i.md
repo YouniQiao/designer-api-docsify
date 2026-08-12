@@ -1,9 +1,9 @@
 # ParamsSpec
 
-Encapsulates the parameters used for encryption or decryption. You need to construct its child class object and pass it to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption.
+Encapsulates the parameters used for encryption or decryption. You need to construct its child class object and pass it to [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3) for symmetric encryption or decryption.
 
 &lt;br&gt;It applies to the symmetric block cipher modes that require parameters such as the initialization vector (IV). If the IV is not required (for example, the ECB mode), pass in **null** to  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init).
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3).
 
 > **NOTE：**
 > 
@@ -14,9 +14,9 @@ Encapsulates the parameters used for encryption or decryption. You need to const
 > **NOTE：**
 > 
 > The **params** parameter in
-> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) is of the
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3) is of the
 > **ParamsSpec** type (parent class). However, a child class object (such as
-> [IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md)) needs to be passed in. When constructing the child class
+> [IvParamsSpec](arkts-cryptoarchitecture-cryptoframework-ivparamsspec-i.md#IvParamsSpec)) needs to be passed in. When constructing the child class
 > object, you must set **algName** for its parent class **ParamsSpec** to specify the child class object to be
 > passed to **init()**.
 
@@ -31,7 +31,7 @@ Encapsulates the parameters used for encryption or decryption. You need to const
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## algName

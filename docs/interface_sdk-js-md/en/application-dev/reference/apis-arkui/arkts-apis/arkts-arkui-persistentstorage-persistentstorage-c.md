@@ -113,5 +113,5 @@ Persist given AppStorage properties with given names.If a property does not exis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| props | [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)&lt;Any&gt;[] | Yes | persistent parameter |
+| props | [PersistPropsOptions](arkts-arkui-persistentstorage-persistpropsoptions-i.md)&lt;Any&gt;[] | Yes | persistent parameter |
 

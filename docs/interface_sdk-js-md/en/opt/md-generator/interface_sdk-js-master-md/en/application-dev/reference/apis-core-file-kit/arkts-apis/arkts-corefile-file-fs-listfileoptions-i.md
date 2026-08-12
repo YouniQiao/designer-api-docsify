@@ -11,7 +11,7 @@ Defines the options used in **listFile()**.
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## filter
@@ -22,7 +22,7 @@ filter?: Filter
 
 File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
 
-**Type:** [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md)
+**Type:** [Filter](arkts-corefile-file-fs-filter-i.md)
 
 **Since:** 11
 

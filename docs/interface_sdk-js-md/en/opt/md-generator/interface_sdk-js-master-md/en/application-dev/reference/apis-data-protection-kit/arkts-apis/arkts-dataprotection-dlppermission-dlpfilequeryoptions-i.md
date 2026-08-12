@@ -11,7 +11,7 @@ Represents the query options about an enterprise DLP file.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## classificationLabel

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from 'kits/@kit.NotificationKit';
+import { notificationSubscribe } from '@kit.NotificationKit';
 ```
 
 ## distributeOperation
@@ -31,7 +31,7 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hashcode | string | Yes | Unique notification ID. |
-| operationInfo | [OperationInfo](arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | No | Cross-device operation information. This parameter is left empty by default. |
+| operationInfo | OperationInfo | No | Cross-device operation information. This parameter is left empty by default. |
 
 **Return value:**
 
@@ -43,11 +43,11 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) | Distributed operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
-| [1600021](../errorcode-notification.md#1600021-crossdevice-communication-timeout) | Distributed operation timed out. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600010-distributed-operation-failed) | Distributed operation failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [1600021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600021-crossdevice-communication-timeout) | Distributed operation timed out. |
 
 ## Examples
 

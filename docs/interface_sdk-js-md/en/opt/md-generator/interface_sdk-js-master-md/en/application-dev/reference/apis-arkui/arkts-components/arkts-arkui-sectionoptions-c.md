@@ -111,7 +111,7 @@ Unit: vp
 
 When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
-**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| Dimension
+**Type:** [Margin](../arkts-apis/arkts-arkui-margin-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** {top: 0, right: 0, bottom: 0, left: 0}
 

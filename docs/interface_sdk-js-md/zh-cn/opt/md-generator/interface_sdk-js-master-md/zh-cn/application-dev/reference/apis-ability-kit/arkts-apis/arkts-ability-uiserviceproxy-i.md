@@ -38,11 +38,98 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |
+| data | Record & lt;string, Object & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+
+## 示例
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[Extension] ';
+
+@Entry
+@Component
+struct UIServiceExtensionAbility {
+  comProxy: common.UIServiceProxy | null = null;
+  dataCallBack: common.UIServiceExtensionConnectCallback = {
+    onData: (data: Record<string, Object>) => {
+      console.info(`${TAG} dataCallBack received data: ${JSON.stringify(data)}.`);
+    },
+    onDisconnect: () => {
+      console.info(`${TAG} dataCallBack onDisconnect.`);
+      this.comProxy = null;
+    }
+  }
+
+  build() {
+    Scroll() {
+      Column() {
+        // 创建一个连接UIServiceExtension的按钮
+        Button('connectUIServiceExtensionAbility', { type: ButtonType.Capsule, stateEffect: true })
+          .margin({
+            top: 5,
+            left: 10,
+            right: 10,
+            bottom: 5
+          })
+          .alignRules({
+            center: { anchor: '__container__', align: VerticalAlign.Center },
+            middle: { anchor: '__container__', align: HorizontalAlign.Center }
+          })
+          .onClick(() => {
+            this.myConnectUIServiceExtensionAbility()
+          });
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+
+  // 自定义连接UIServiceExtension的函数
+  myConnectUIServiceExtensionAbility() {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    let startWant: Want = {
+      deviceId: '',
+      bundleName: 'com.acts.myapplication',
+      abilityName: 'UiServiceExtensionAbility'
+    };
+
+    try {
+      // 连接UIServiceExtension
+      context.connectUIServiceExtensionAbility(startWant, this.dataCallBack)
+        .then((proxy: common.UIServiceProxy) => {
+          console.info(TAG + `try to connectUIServiceExtensionAbility ${proxy}`);
+          this.comProxy = proxy;
+          let formData: Record<string, string> = {
+            'PATH': '/tmp/aaa.jpg'
+          };
+          try {
+            console.info(`${TAG} sendData.`);
+            // 给UIServiceExtension发送数据
+            this.comProxy.sendData(formData);
+          } catch (err) {
+            let code = (err as BusinessError).code;
+            let message = (err as BusinessError).message;
+            console.error(`${TAG} sendData failed, code is ${code}, message is ${message}.`);
+          }
+        }).catch((err: Error) => {
+        let code = (err as BusinessError).code;
+        let message = (err as BusinessError).message;
+        console.error(`${TAG} connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+      });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`${TAG} connectUIServiceExtensionAbility failed, code is ${code}, message is ${message}.`);
+    }
+  }
+}
+```

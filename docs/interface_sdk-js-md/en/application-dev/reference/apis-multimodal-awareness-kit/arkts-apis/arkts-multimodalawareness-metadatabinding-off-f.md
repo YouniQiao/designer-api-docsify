@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off('operationSubmitMetadata')
@@ -30,14 +30,14 @@ Unsubscribes from system events that are used to obtain the encoded metadata. Th
 | --- | --- | --- | --- |
 | type | 'operationSubmitMetadata' | Yes | Event type. This parameter has a fixed value of **operationSubmitMetadata**, indicating the system application's attempt to obtain the encoded metadata. |
 | bundleName | string | Yes | Application bundle name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback used to return the encoded metadata. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback used to return the encoded metadata. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
-| [32100005](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-unsubscription-failed) | Unsubscribe Failed. Possible causes: &lt;br&gt; 1. Abnormal system capability. &lt;br&gt; 2. IPC communication abnormality. |
+| [32100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
+| [32100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-unsubscription-failed) | Unsubscribe Failed. Possible causes: &lt;br&gt; 1. Abnormal system capability. &lt;br&gt; 2. IPC communication abnormality. |
 
 ## Examples
 

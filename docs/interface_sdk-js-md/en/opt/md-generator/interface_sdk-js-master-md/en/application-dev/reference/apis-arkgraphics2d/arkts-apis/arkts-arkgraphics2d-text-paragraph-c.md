@@ -3,7 +3,7 @@
 Implements a carrier that stores the text content and style. You can perform operations such as layout and drawing.
 
 Before calling any of the following APIs, you must use [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
-[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md) class to create a **Paragraph** object.
+[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **Paragraph** object.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Before calling any of the following APIs, you must use [build()](arkts-arkgraphi
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## didExceedMaxLines
@@ -54,7 +54,7 @@ forceReuseRasterResult(isForce: boolean): void
 Sets whether to force reuse of the rasterization result. If this API is not called, the system allows updating the rasterization result by default.
 
 This API is suitable for scenarios where the text content remains unchanged but  
-[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](arkts-arkgraphics2d-text-paragraph-c.md#paint) is called for drawing.
+[paint](#paint) needs to be called multiple times for drawing. By reusing the rasterization result, repeated rasterization calculations can be avoided to improve drawing performance. After this setting is applied, it takes effect the next time [paint](#paint) is called for drawing.
 
 **Since:** 26.0.0
 
@@ -139,7 +139,7 @@ Obtains the actually visible text range in the specified line, excluding any ove
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| lineNumber | number | Yes |
+| [lineNumber](arkts-arkgraphics2d-text-linemetrics-i.md) | number | Yes |
 | includeSpaces | boolean | Yes |
 
 **Return value:**
@@ -218,7 +218,7 @@ Obtains the character position information closest to the given coordinates.
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -285,13 +285,13 @@ Obtains the character range corresponding to the specified glyph range.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Range&gt; |
+| Array & lt;Range & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -392,13 +392,13 @@ Obtains the glyph range corresponding to the specified character range.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Range&gt; |
+| Array & lt;Range & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -573,7 +573,7 @@ Obtains an array of line measurement information.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;LineMetrics&gt; |
+| Array & lt;LineMetrics & gt; |
 
 ## Examples
 
@@ -601,7 +601,7 @@ Obtains the line measurement information of a line.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| lineNumber | number | Yes |
+| [lineNumber](arkts-arkgraphics2d-text-linemetrics-i.md) | number | Yes |
 
 **Return value:**
 
@@ -940,7 +940,7 @@ Obtains the rectangles occupied by all placeholders in the text.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextBox&gt; |
+| Array & lt;TextBox & gt; |
 
 ## Examples
 
@@ -969,14 +969,14 @@ Obtains the rectangles occupied by the characters in the range of the text under
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Yes |
-| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | Yes |
+| widthStyle | [RectWidthStyle](../../apis-arkui/arkts-apis/arkts-arkui-rectwidthstyle-t.md) | Yes |
 | heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextBox&gt; |
+| Array & lt;TextBox & gt; |
 
 ## Examples
 
@@ -1064,7 +1064,7 @@ Obtains all the text lines.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextLine&gt; |
+| Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; |
 
 ## Examples
 
@@ -1078,7 +1078,7 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)).
+Obtains the range of text that is visible on the screen in a paragraph. Excludes text that is not displayed due to truncation by the maximum line count (the maxLines attribute of [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle))or replacement in ellipsis mode ([EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)).
 
 **NOTE：**
 
@@ -1108,7 +1108,7 @@ The returned range depends on the specific truncation of the paragraph(for examp
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Range&gt; |
+| Array & lt;Range & gt; |
 
 ## Examples
 
@@ -1176,13 +1176,13 @@ Performs layout and calculates the positions of all glyphs. This API uses a prom
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1333,7 +1333,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 ```
 
 Draws text on the canvas with (x, y) as the upper-left corner. You must call  
-[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+[layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
 **Since:** 12
 
@@ -1367,7 +1367,7 @@ paragraph.paint(canvas, 0, 0);
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset: number): void
 ```
 
-Draws text along a path on the canvas. You must call [layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
+Draws text along a path on the canvas. You must call [layout()](#layout) for typesetting before calling this API; otherwise, the text content cannot be displayed correctly.
 
 **Since:** 12
 

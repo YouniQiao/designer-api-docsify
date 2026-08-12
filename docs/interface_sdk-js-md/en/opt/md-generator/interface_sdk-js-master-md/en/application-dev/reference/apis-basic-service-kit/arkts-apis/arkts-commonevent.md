@@ -6,7 +6,7 @@ The **CommonEvent** module provides capabilities to publish, subscribe to, and u
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.commonEventManager:commonEventManager](arkts-commoneventmanager.md)
+**Substitutes:** [commonEventManager](arkts-commoneventmanager.md#commonEventManager)
 
 <!--Device-unnamed-declare namespace commonEvent--><!--Device-unnamed-declare namespace commonEvent-End-->
 

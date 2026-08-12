@@ -26,13 +26,13 @@ Defines DynamicComponent Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | Yes | The options |
+| options | [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md) | Yes | The options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DynamicComponentAttribute](../arkts-components/arkts-arkui-dynamiccomponent-attribute.md) |  |
+| [DynamicComponentAttribute](arkts-arkui-dynamiccomponent-dynamiccomponentattribute-i-sys.md) |  |
 
 
 ## DynamicComponent
@@ -63,11 +63,11 @@ Defines DynamicComponent Component.It requires call setDynamicComponentOptions a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DynamicComponentAttribute&gt; | Yes | the callback to set up DynamicComponent's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DynamicComponentAttribute](arkts-arkui-dynamiccomponent-dynamiccomponentattribute-i-sys.md)&gt; | Yes | the callback to set up DynamicComponent's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DynamicComponentAttribute](../arkts-components/arkts-arkui-dynamiccomponent-attribute.md) | The attribute of the DynamicComponent. |
+| [DynamicComponentAttribute](arkts-arkui-dynamiccomponent-dynamiccomponentattribute-i-sys.md) | The attribute of the DynamicComponent. |
 

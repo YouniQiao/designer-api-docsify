@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## startAdvertising
@@ -14,13 +14,13 @@ function startAdvertising(setting: AdvertiseSetting, advData: AdvertiseData, adv
 
 Starts BLE advertising.
 
-- If only {@link AdvertiseData#includeDeviceName} is set to true,  
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true,  
 the local name will be carried in the broadcast packet.  
-- If only {@link AdvertiseData#advertiseName} is set,  
+- If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is set,  
 its value will be used as a custom name and carried in the broadcast packet.  
-- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
-the {@link AdvertiseData#advertiseName} property will take effect.  
-- To set {@link AdvertiseData#advertiseName},  
+- If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is specified,  
+the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) property will take effect.  
+- To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName),  
 ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 10
@@ -42,17 +42,17 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | setting | [AdvertiseSetting](arkts-connectivity-ble-advertisesetting-i.md) | Yes |
-| advData | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | Yes |
-| advResponse | [AdvertiseData](arkts-connectivity-ble-advertisedata-i.md) | No |
+| advData | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | Yes |
+| advResponse | [AdvertiseData](arkts-connectivity-bluetoothmanager-advertisedata-i.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900010 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2902054 |
 | 2900001 |
 | 2900003 |
@@ -113,15 +113,15 @@ try {
 function startAdvertising(advertisingParams: AdvertisingParams, callback: AsyncCallback<number>): void
 ```
 
-Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API {@link enableAdvertising} or {@link disableAdvertising}.To completely stop the advertising corresponding to the ID, invoke the API {@link stopAdvertising} with ID.
+Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableAdvertising) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableAdvertising).To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) with ID.
 
-- If only {@link AdvertiseData#includeDeviceName} is set to true,  
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true,  
 the local name will be carried in the broadcast packet.  
-- If only {@link AdvertiseData#advertiseName} is set,  
+- If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is set,  
 its value will be used as a custom name and carried in the broadcast packet.  
-- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
-the {@link AdvertiseData#advertiseName} property will take effect.  
-- To set {@link AdvertiseData#advertiseName},  
+- If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is specified,  
+the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) property will take effect.  
+- To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName),  
 ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
@@ -140,17 +140,17 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | Yes |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900010 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2902054 |
 | 2900001 |
 | 2900003 |
@@ -225,15 +225,15 @@ try {
 function startAdvertising(advertisingParams: AdvertisingParams): Promise<number>
 ```
 
-Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API {@link enableAdvertising} or {@link disableAdvertising}.To completely stop the advertising corresponding to the ID, invoke the API {@link stopAdvertising} with ID.
+Starts BLE advertising.The API returns a advertising ID. The ID can be used to temporarily enable or disable this advertising using the API [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableAdvertising) or [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableAdvertising).To completely stop the advertising corresponding to the ID, invoke the API [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) with ID.
 
-- If only {@link AdvertiseData#includeDeviceName} is set to true,  
+- If only [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true,  
 the local name will be carried in the broadcast packet.  
-- If only {@link AdvertiseData#advertiseName} is set,  
+- If only [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is set,  
 its value will be used as a custom name and carried in the broadcast packet.  
-- If {@link AdvertiseData#includeDeviceName} is set to true and {@link AdvertiseData#advertiseName} is specified,  
-the {@link AdvertiseData#advertiseName} property will take effect.  
-- To set {@link AdvertiseData#advertiseName},  
+- If [includeDeviceName](arkts-connectivity-ble-advertisedata-i.md#includeDeviceName) is set to true and [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) is specified,  
+the [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName) property will take effect.  
+- To set [advertiseName](arkts-connectivity-ble-advertisedata-i.md#advertiseName),  
 ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 **Since:** 11
@@ -252,22 +252,22 @@ ensure that ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME has been added.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| advertisingParams | [AdvertisingParams](arkts-connectivity-advertising-advertisingparams-i.md) | Yes |
+| advertisingParams | [AdvertisingParams](arkts-connectivity-ble-advertisingparams-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
 | 2900010 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2902054 |
 | 2900001 |
 | 2900003 |

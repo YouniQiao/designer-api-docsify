@@ -19,7 +19,7 @@ Common properties for intent decorators, used to define basic information about 
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
 ```
 
 ## displayDescription
@@ -101,7 +101,7 @@ Icon of the intent. It is displayed in the AI entry point.
 - If the value is a [resource](../../reference/apis-localization-kit/js-apis-resource-manager.md), the icon is read  
  from a local resource.
 
-**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 20
 
@@ -211,7 +211,7 @@ parameters?: Record<string, Object>
 
 Data format of intent parameters, which is used to define the input data format during intent calls.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 20
 
@@ -233,7 +233,7 @@ result?: Record<string, Object>
 
 Data format for the results returned by intent calls. It defines how the data should be structured.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 20
 

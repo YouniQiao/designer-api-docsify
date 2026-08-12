@@ -18,7 +18,7 @@ backgroundColor?: ResourceColor
 
 Describes the button background color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ borderRadius?: Length | BorderRadiuses
 
 Describes the button border radius.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| BorderRadiuses
+**Type:** Length \| BorderRadiuses
 
 **Since:** 12
 
@@ -62,7 +62,7 @@ fontColor?: ResourceColor
 
 Describes the button text color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 
@@ -84,7 +84,7 @@ fontFamily?: Resource | string
 
 Describes the button font family.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| string
+**Type:** Resource \| string
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ fontSize?: Length
 
 Describes the button text size.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 12
 
@@ -128,7 +128,7 @@ fontStyle?: FontStyle
 
 Describes the button font style.
 
-**Type:** [FontStyle](../arkts-apis/arkts-arkui-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 12
 
@@ -150,7 +150,7 @@ fontWeight?: FontWeight | number | string
 
 Describes the button font weight.
 
-**Type:** [FontWeight](../arkts-apis/arkts-arkui-fontweight-e.md) \| number \| string
+**Type:** FontWeight \| number \| string
 
 **Since:** 12
 
@@ -194,7 +194,7 @@ role?: ButtonRole
 
 Describes the button role.
 
-**Type:** [ButtonRole](arkts-arkui-buttonrole-e.md)
+**Type:** ButtonRole
 
 **Since:** 12
 
@@ -216,7 +216,7 @@ style?: ButtonStyleMode
 
 Describes the button style.
 
-**Type:** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
+**Type:** ButtonStyleMode
 
 **Since:** 12
 
@@ -238,7 +238,7 @@ type?: ButtonType
 
 Describes the button type.
 
-**Type:** [ButtonType](arkts-arkui-buttontype-e.md)
+**Type:** ButtonType
 
 **Since:** 12
 

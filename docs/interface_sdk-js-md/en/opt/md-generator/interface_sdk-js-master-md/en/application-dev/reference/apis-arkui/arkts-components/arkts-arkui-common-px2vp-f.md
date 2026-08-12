@@ -12,7 +12,7 @@ Converts a number in units of px to a number in units of vp.By default, the virt
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#px2vp
+**Substitutes:** [px2vp](ohos.arkui.UIContext.UIContext#px2vp)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

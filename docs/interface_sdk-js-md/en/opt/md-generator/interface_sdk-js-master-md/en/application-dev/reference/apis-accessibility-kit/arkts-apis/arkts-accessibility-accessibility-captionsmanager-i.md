@@ -1,7 +1,7 @@
 # CaptionsManager
 
 Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the   
-[accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager) API to obtain a **CaptionsManager** instance.
+[accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getCaptionsManager) API to obtain a **CaptionsManager** instance.
 
 **Since:** 8
 
@@ -12,7 +12,7 @@ Implements configuration management for captions. Before calling any API of **Ca
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## off('enableChange')
@@ -42,7 +42,7 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -95,13 +95,13 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'styleChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -147,7 +147,7 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [off('enableChange')](accessibility.CaptionsManager.off(type: 'enableChange', callback?: Callback&lt;boolean&gt;))
+> [off('enableChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 8
@@ -169,7 +169,7 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -210,7 +210,7 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 > Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
 > 
 > - After calling this method, you must use
-> [off('styleChange')](accessibility.CaptionsManager.off(type: 'styleChange', callback?: Callback&lt;CaptionsStyle&gt;))
+> [off('styleChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 8
@@ -226,13 +226,13 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'styleChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CaptionsStyle&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

@@ -26,13 +26,13 @@ Defines GridRow Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | [GridRowOptions](arkts-arkui-gridrow-gridrowoptions-i.md) | No | GridRow options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridRowAttribute](../arkts-components/arkts-arkui-gridrow-attribute.md) |  |
+| [GridRowAttribute](arkts-arkui-gridrow-gridrowattribute-i.md) |  |
 
 
 ## GridRow
@@ -62,12 +62,12 @@ Defines GridRow Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridRowAttribute&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridRowAttribute](arkts-arkui-gridrow-gridrowattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridRowAttribute](../arkts-components/arkts-arkui-gridrow-attribute.md) |  |
+| [GridRowAttribute](arkts-arkui-gridrow-gridrowattribute-i.md) |  |
 

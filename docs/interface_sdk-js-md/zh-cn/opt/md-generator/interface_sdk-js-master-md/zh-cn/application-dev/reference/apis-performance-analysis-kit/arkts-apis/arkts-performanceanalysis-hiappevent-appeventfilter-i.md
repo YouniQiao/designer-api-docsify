@@ -1,6 +1,6 @@
 # AppEventFilter
 
-提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md)的订阅过滤条件的参数选项。用于在事件观察者中设置事件过滤条件，确保只有满足过滤条件的事件才会被监听处理。
+提供设置[Watcher](arkts-performanceanalysis-hiappevent-watcher-i.md#Watcher)的订阅过滤条件的参数选项。用于在事件观察者中设置事件过滤条件，确保只有满足过滤条件的事件才会被监听处理。
 
 > **说明：**
 > 
@@ -18,7 +18,7 @@
 domain: string
 ```
 
-需要订阅的事件领域。可以是系统事件领域（hiAppEvent.domain.OS）或开发者在使用[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)接口时传入的自定义事件信息（[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)）中的事件领域。
+需要订阅的事件领域。可以是系统事件领域（hiAppEvent.domain.OS）或开发者在使用[Write](arkts-performanceanalysis-hiappevent-write-f.md#write)接口时传入的自定义事件信息（[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md#AppEventInfo)）中的事件领域。
 
 **类型：** string
 
@@ -38,7 +38,7 @@ eventTypes?: EventType[]
 
 需要订阅的事件类型集合。默认不进行过滤。
 
-**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)[]
+**类型：** EventType[]
 
 **起始版本：** 9
 

@@ -20,7 +20,7 @@ desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 
 如果不希望解码任何辅助图，可以直接解码为PixelMap，使用PixelMap创建仅包含主图的Picture。
 
-**类型：** Array&lt;AuxiliaryPictureType&gt;
+**类型：** Array&lt;[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)&gt;
 
 **起始版本：** 13
 
@@ -66,7 +66,7 @@ desiredSizeForMainPixelMap?: Size
 
 辅助图的宽度与高度均与主图按照同比例进行相应拉伸/缩放。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 24
 

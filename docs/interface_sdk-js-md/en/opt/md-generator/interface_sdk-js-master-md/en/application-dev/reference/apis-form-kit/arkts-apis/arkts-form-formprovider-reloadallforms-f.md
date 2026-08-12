@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from 'kits/@kit.FormKit';
+import { formProvider } from '@kit.FormKit';
 ```
 
 ## reloadAllForms
@@ -13,7 +13,7 @@ function reloadAllForms(context: UIAbilityContext): Promise<number>
 ```
 
 Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to  perform batch updates of all widgets added to the current application. It can only be called within a   
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-app-ability-uiability.md/arkts-app-ability-uiability.md) and uses a promise to return the result.
+[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
 
 **Since:** 22
 
@@ -35,13 +35,13 @@ Reloads all widgets. Invoked in the main process of the application, this API no
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
 
 ## Examples
 

@@ -36,7 +36,7 @@ regionTint: Array<SystemBarRegionTint>
 
 当前已改变的所有系统栏信息。
 
-**类型：** Array&lt;SystemBarRegionTint&gt;
+**类型：** Array&lt;[SystemBarRegionTint](arkts-arkui-window-systembarregiontint-i-sys.md)&gt;
 
 **起始版本：** 8
 

@@ -11,7 +11,7 @@ Specifies the list of field names to return after returning-related APIs are cal
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## columns

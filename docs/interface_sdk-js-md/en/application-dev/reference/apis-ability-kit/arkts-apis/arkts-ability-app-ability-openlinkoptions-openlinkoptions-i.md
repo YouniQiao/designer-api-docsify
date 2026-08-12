@@ -1,7 +1,7 @@
 # OpenLinkOptions
 
 **OpenLinkOptions** can be used as an input parameter of  
-[openLink()](arkts-ability-uiabilitycontext-c.md#openlink) to indicate whether to enable only App Linking and pass in optional parameters in the form of key-value pairs.
+[openLink()](arkts-ability-uiabilitycontext-c.md#openLink) to indicate whether to enable only App Linking and pass in optional parameters in the form of key-value pairs.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { OpenLinkOptions } from 'kits/@kit.AbilityKit';
+import { OpenLinkOptions } from '@kit.AbilityKit';
 ```
 
 ## appLinkingOnly
@@ -108,9 +108,9 @@ parameters?: Record<string, Object>
 
 List of parameters in Want.
 
-Note: For details about the usage rules, see **parameters** in [want](arkts-ability-app-ability-want-want-c.md).
+Note: For details about the usage rules, see **parameters** in [want](arkts-ability-app-ability-want-want-c.md#Want).
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 12
 

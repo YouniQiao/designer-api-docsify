@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 本模块接口从API Version 10开始不再维护，从API version 23开始废弃，推荐使用新接口[@ohos.cooperate](../../apis-distributed-service-kit/arkts-apis/arkts-cooperate.md/arkts-cooperate.md) (键鼠穿越)。
+> - 本模块接口从API Version 10开始不再维护，从API version 23开始废弃，推荐使用新接口[@ohos.cooperate](../../apis-distributed-service-kit/arkts-apis/arkts-cooperate.md#cooperate) (键鼠穿越)。
 > 
 > - 本模块接口均为系统接口。
 
@@ -12,7 +12,7 @@
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate
+**替代接口：** [cooperate/cooperate](ohos.cooperate/cooperate)
 
 <!--Device-unnamed-declare namespace inputDeviceCooperate--><!--Device-unnamed-declare namespace inputDeviceCooperate-End-->
 

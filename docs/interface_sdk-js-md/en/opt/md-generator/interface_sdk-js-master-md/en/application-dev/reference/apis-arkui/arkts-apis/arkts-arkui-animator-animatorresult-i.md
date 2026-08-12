@@ -11,7 +11,7 @@ Defines the animator result.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -20,7 +20,7 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@ki
 cancel(): void
 ```
 
-Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/js-apis-animator.md#properties) callback. This API is functionally identical to [finish](arkts-arkui-animator-animatorresult-i.md#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
+Cancels the animation, triggering the [onCancel](../../../reference/apis-arkui/js-apis-animator.md#properties) callback. This API is functionally identical to [finish](#finish) except for the callback it triggers. It is recommended that you use the **finish** API to end animations.
 
 **Since:** 6
 
@@ -107,7 +107,7 @@ onFrame: (progress: number) => void
 Called when a frame is received.
 
 **progress**: current value of the animation. Value range: [begin, end] defined in   
-[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md). Default value range: [0, 1]
+[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions). Default value range: [0, 1]
 
 **Since:** 12
 
@@ -158,7 +158,7 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Deprecated since:** 12
 
-**Substitutes:** ohos.animator.onCancel
+**Substitutes:** [onCancel](ohos.animator.onCancel)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -181,7 +181,7 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Deprecated since:** 12
 
-**Substitutes:** ohos.animator.onFinish
+**Substitutes:** [onFinish](ohos.animator.onFinish)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -204,7 +204,7 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Deprecated since:** 12
 
-**Substitutes:** ohos.animator.onFrame
+**Substitutes:** [onFrame](ohos.animator.onFrame)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -233,7 +233,7 @@ Note: This API is supported since API version 6 and deprecated since API version
 
 **Deprecated since:** 12
 
-**Substitutes:** ohos.animator.onRepeat
+**Substitutes:** [onRepeat](ohos.animator.onRepeat)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -316,8 +316,8 @@ Resets the animation parameters of this animator.
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -365,8 +365,8 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
 Resets the animation parameters of this animator. Compared with   
-[reset](arkts-arkui-animator-animatorresult-i.md#reset), this API accepts parameters of the   
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+[reset](#reset), this API accepts parameters of the   
+[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
 **Since:** 18
 
@@ -388,8 +388,8 @@ Resets the animation parameters of this animator. Compared with
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -512,7 +512,7 @@ Updates this animator.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.animator.reset
+**Substitutes:** [reset](ohos.animator.reset)
 
 <!--Device-AnimatorResult-update(options: AnimatorOptions): void--><!--Device-AnimatorResult-update(options: AnimatorOptions): void-End-->
 

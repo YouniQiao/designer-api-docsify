@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## setStartWindowBackgroundColor
@@ -32,7 +32,7 @@ This API takes effect for all processes of the same bundle name, for example, in
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name of the UIAbility. The value is a string of 0 to 200 bytes. Only the module names within the same application can be set. The module name is specified in the **name** field of the [module.json5 file](../../../quick-start/module-configuration-file.md#tags-in-the-configuration-file). |
 | abilityName | string | Yes | Name of the UIAbility. The value is a string of 0 to 200 bytes. Only the ability names within the same application can be set. The UIAbility name is specified in the **name** field under [abilities in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities). |
-| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Yes | Background color of the splash screen. |
+| color | ColorMetrics | Yes | Background color of the splash screen. |
 
 **Return value:**
 
@@ -44,9 +44,9 @@ This API takes effect for all processes of the same bundle name, for example, in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
-| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.function setStartWindowBackgroundColor can not work correctly due to limited device capabilities. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: Parameter exceeds the allowed length. |
 
 ## Examples
 

@@ -24,7 +24,7 @@ This module provides tools for processing rectangles.Use scenarios:
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## centerX

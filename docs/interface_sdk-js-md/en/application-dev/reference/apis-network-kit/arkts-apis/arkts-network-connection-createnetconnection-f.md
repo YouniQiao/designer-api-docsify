@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## createNetConnection
@@ -28,8 +28,8 @@ Create a network connection with optional netSpecifier and timeout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See {@link NetSpecifier}. |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | The time in milliseconds to attempt looking for a suitable network before {@link NetConnection#netUnavailable} is called. |
+| netSpecifier | [NetSpecifier](arkts-network-connection-netspecifier-i.md) | No | Indicates the network specifier. See [NetSpecifier](arkts-network-connection-netspecifier-i.md#NetSpecifier). |
+| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | The time in milliseconds to attempt looking for a suitable network before [netUnavailable](NetConnection#netUnavailable) is called. |
 
 **Return value:**
 

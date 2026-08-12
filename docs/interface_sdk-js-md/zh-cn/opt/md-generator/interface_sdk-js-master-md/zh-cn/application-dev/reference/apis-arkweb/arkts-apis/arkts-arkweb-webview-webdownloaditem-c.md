@@ -56,7 +56,7 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getCurrentSpeed
 
@@ -386,7 +386,7 @@ pause(): void
 
 | 错误码ID |
 | --- |
-| [17100019](../errorcode-webview.md#17100019-下载还没开始) |
+| [17100019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100019-下载还没开始) |
 
 ## resume
 
@@ -408,7 +408,7 @@ resume(): void
 
 | 错误码ID |
 | --- |
-| [17100016](../errorcode-webview.md#17100016-下载任务没有处于暂停状态) |
+| [17100016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100016-下载任务没有处于暂停状态) |
 
 ## serialize
 
@@ -465,4 +465,4 @@ start(downloadPath: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

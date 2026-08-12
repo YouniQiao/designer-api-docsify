@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfos
@@ -14,7 +14,7 @@ function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallba
 
 Queries usage information about each bundle within a specified period.
 
-This method queries usage information at the {@link #BY_OPTIMIZED} interval by default.
+This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) interval by default.
 
 **Since:** 7
 
@@ -36,7 +36,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleActiveInfoResponse&gt; | Yes | the callback of queryBundleStateInfos. the {@link BundleActiveInfoResponse} objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md#BundleActiveInfoResponse) objects containing the usage information about each bundle. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ function queryBundleStateInfos(begin: number, end: number): Promise<BundleActive
 
 Queries usage information about each bundle within a specified period.
 
-This method queries usage information at the {@link #BY_OPTIMIZED} interval by default.
+This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) interval by default.
 
 **Since:** 7
 
@@ -90,7 +90,7 @@ This method queries usage information at the {@link #BY_OPTIMIZED} interval by d
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;BundleActiveInfoResponse&gt; | the promise returned by queryBundleStatsInfos. the { |
+| Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | the promise returned by queryBundleStatsInfos. the { |
 
 ## Examples
 

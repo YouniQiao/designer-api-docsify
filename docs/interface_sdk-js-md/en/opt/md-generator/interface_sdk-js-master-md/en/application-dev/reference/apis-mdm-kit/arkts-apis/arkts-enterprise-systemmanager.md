@@ -18,7 +18,7 @@ This module provides system management capabilities, including NTP time server s
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## Summary
@@ -37,6 +37,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 | [getInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabledforaccount-f.md#getinstalllocalenterpriseappenabledforaccount) |
 | [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies) |
 | [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies-1) |
+| [getLocalHotaDomain](arkts-mdm-systemmanager-getlocalhotadomain-f.md#getlocalhotadomain) |
 | [getNTPServer](arkts-mdm-systemmanager-getntpserver-f.md#getntpserver) |
 | [getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy) |
 | [getUpdateAuthData](arkts-mdm-systemmanager-getupdateauthdata-f.md#getupdateauthdata) |
@@ -50,6 +51,7 @@ import { systemManager } from 'kits/@kit.MDMKit';
 | [setAutoUnlockAfterReboot](arkts-mdm-systemmanager-setautounlockafterreboot-f.md#setautounlockafterreboot) |
 | [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md#setinstalllocalenterpriseappenabled) |
 | [setInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabledforaccount-f.md#setinstalllocalenterpriseappenabledforaccount) |
+| [setLocalHotaDomain](arkts-mdm-systemmanager-setlocalhotadomain-f.md#setlocalhotadomain) |
 | [setNTPServer](arkts-mdm-systemmanager-setntpserver-f.md#setntpserver) |
 | [setOtaUpdateNonceEnable](arkts-mdm-systemmanager-setotaupdatenonceenable-f.md#setotaupdatenonceenable) |
 | [setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy) |

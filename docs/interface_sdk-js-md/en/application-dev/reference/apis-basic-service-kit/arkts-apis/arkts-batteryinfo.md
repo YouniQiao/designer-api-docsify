@@ -13,7 +13,7 @@ The **batteryInfo** module provides APIs for querying the charger type, battery 
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+import { batteryInfo } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat](arkts-corefile-fileio-stat-depr-i.md)
+**替代接口：** [Stat](arkts-corefile-file-fs-stat-i.md#Stat)
 
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
@@ -28,7 +28,7 @@ isBlockDevice(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isBlockDevice](arkts-corefile-fileio-stat-depr-i.md#isblockdevice)
+**替代接口：** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isBlockDevice)
 
 <!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
@@ -61,7 +61,7 @@ isCharacterDevice(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isCharacterDevice](arkts-corefile-fileio-stat-depr-i.md#ischaracterdevice)
+**替代接口：** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#isCharacterDevice)
 
 <!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
@@ -94,7 +94,7 @@ isDirectory(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isDirectory](arkts-corefile-fileio-stat-depr-i.md#isdirectory)
+**替代接口：** [isDirectory](arkts-corefile-file-fs-stat-i.md#isDirectory)
 
 <!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
@@ -127,7 +127,7 @@ isFIFO(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isFIFO](arkts-corefile-fileio-stat-depr-i.md#isfifo)
+**替代接口：** [isFIFO](arkts-corefile-file-fs-stat-i.md#isFIFO)
 
 <!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
@@ -160,7 +160,7 @@ isFile(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isFile](arkts-corefile-fileio-stat-depr-i.md#isfile)
+**替代接口：** [isFile](arkts-corefile-file-fs-stat-i.md#isFile)
 
 <!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
@@ -193,7 +193,7 @@ isSocket(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isSocket](arkts-corefile-fileio-stat-depr-i.md#issocket)
+**替代接口：** [isSocket](arkts-corefile-file-fs-stat-i.md#isSocket)
 
 <!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
@@ -226,7 +226,7 @@ isSymbolicLink(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.isSymbolicLink](arkts-corefile-fileio-stat-depr-i.md#issymboliclink)
+**替代接口：** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#isSymbolicLink)
 
 <!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
@@ -261,7 +261,7 @@ readonly atime: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.atime](arkts-corefile-fileio-stat-depr-i.md#atime)
+**替代接口：** [atime](arkts-corefile-file-fs-stat-i.md#atime)
 
 <!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
 
@@ -303,7 +303,7 @@ readonly ctime: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.ctime](arkts-corefile-fileio-stat-depr-i.md#ctime)
+**替代接口：** [ctime](arkts-corefile-file-fs-stat-i.md#ctime)
 
 <!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
@@ -345,7 +345,7 @@ readonly gid: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.gid](arkts-corefile-fileio-stat-depr-i.md#gid)
+**替代接口：** [gid](arkts-corefile-file-fs-stat-i.md#gid)
 
 <!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
@@ -367,7 +367,7 @@ readonly ino: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.file.fs.Stat.ino
+**替代接口：** [ino](ohos.file.fs.Stat.ino)
 
 <!--Device-Stat-readonly ino: number--><!--Device-Stat-readonly ino: number-End-->
 
@@ -409,7 +409,7 @@ readonly mode: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.mode](arkts-corefile-fileio-stat-depr-i.md#mode)
+**替代接口：** [mode](arkts-corefile-file-fs-stat-i.md#mode)
 
 <!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
 
@@ -431,7 +431,7 @@ readonly mtime: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.mtime](arkts-corefile-fileio-stat-depr-i.md#mtime)
+**替代接口：** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
 
 <!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
@@ -493,7 +493,7 @@ readonly size: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.size](arkts-corefile-fileio-stat-depr-i.md#size)
+**替代接口：** [size](arkts-corefile-file-fs-stat-i.md#size)
 
 <!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
 
@@ -515,7 +515,7 @@ readonly uid: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:Stat.uid](arkts-corefile-fileio-stat-depr-i.md#uid)
+**替代接口：** [uid](arkts-corefile-file-fs-stat-i.md#uid)
 
 <!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 

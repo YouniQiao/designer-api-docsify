@@ -16,7 +16,7 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 > 
 > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
-**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**继承/实现关系：** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 **起始版本：** 8
 
@@ -79,7 +79,7 @@ constructor(settings?: RenderingContextSettings, unit?: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置CanvasRenderingContext2D对象的参数， 见[RenderingContextSettings](#renderingcontextsettings)。 &lt;br&gt;异常值undefined和null按[RenderingContextSettings](#renderingcontextsettings)的默认值处理。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置CanvasRenderingContext2D对象的单位模式， 配置后无法更改。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。 &lt;br&gt;默认值：DEFAULT。 |
+| unit | LengthMetricsUnit | 否 | 用来配置CanvasRenderingContext2D对象的单位模式， 配置后无法更改。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。 &lt;br&gt;默认值：DEFAULT。 |
 
 ## getContext2DFromDrawingContext
 
@@ -91,7 +91,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 > **说明：**
 > 
-> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建[Canvas](arkts-arkui-canvasrenderingcontext2d-c.md#canvas)组件，否则会导致应用崩溃。
+> - 从该接口获取的CanvasRenderingContext2D对象不允许作为参数创建[Canvas](./canvas)组件，否则会导致应用崩溃。
 > 
 > - 当入参的DrawingRenderingContext对象未绑定Canvas组件时，将返回错误码。
 
@@ -124,7 +124,7 @@ static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, o
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [103702](../errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) | The drawingContext is not bound to a canvas component. |
+| [103702](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-绘制上下文未绑定canvas组件) | The drawingContext is not bound to a canvas component. |
 
 ## off('onAttach')
 
@@ -151,13 +151,13 @@ off(type: 'onAttach', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onAttach' | 是 | 取消订阅CanvasRenderingContext2D与Canvas组件发生绑定的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 否 | 为空表示取消所有订阅CanvasRenderingContext2D与Canvas组件 发生绑定后触发的回调。 非空则取消订阅发生绑定对应的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
+| callback | Callback&lt;void&gt; | 否 | 为空表示取消所有订阅CanvasRenderingContext2D与Canvas组件 发生绑定后触发的回调。 非空则取消订阅发生绑定对应的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## off('onDetach')
 
@@ -184,13 +184,13 @@ off(type: 'onDetach', callback?: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onDetach' | 是 | 取消订阅CanvasRenderingContext2D与Canvas组件解除绑定的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 否 | 为空代表取消所有订阅CanvasRenderingContext2D与Canvas组件 解除绑定后触发的回调。 非空代表取消订阅解除绑定对应的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
+| callback | Callback&lt;void&gt; | 否 | 为空代表取消所有订阅CanvasRenderingContext2D与Canvas组件 解除绑定后触发的回调。 非空代表取消订阅解除绑定对应的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('onAttach')
 
@@ -229,13 +229,13 @@ on(type: 'onAttach', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onAttach' | 是 | 订阅CanvasRenderingContext2D与Canvas组件发生绑定的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件 发生绑定后触发的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
+| callback | Callback&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件 发生绑定后触发的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## on('onDetach')
 
@@ -270,13 +270,13 @@ on(type: 'onDetach', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'onDetach' | 是 | 订阅CanvasRenderingContext2D与Canvas组件解除绑定的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件 解除绑定后触发的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
+| callback | Callback&lt;void&gt; | 是 | 订阅CanvasRenderingContext2D与Canvas组件 解除绑定后触发的回调。 &lt;br&gt;异常值undefined或null按无效值处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -315,7 +315,7 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | 是 | 执行AI分析所需要的入参，用于配置AI分析的类型（如主体识别、文字识别等）。详见 [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md)。 &lt;br&gt;异常值undefined或null按无效值处理。 |
+| config | ImageAnalyzerConfig | 是 | 执行AI分析所需要的入参，用于配置AI分析的类型（如主体识别、文字识别等）。详见 [ImageAnalyzerConfig](ImageAnalyzerConfig)。 &lt;br&gt;异常值undefined或null按无效值处理。 |
 
 **返回值：**
 
@@ -327,9 +327,9 @@ startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | Image analysis feature is unsupported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | Image analysis is stopped. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | Image analysis is currently being executed. |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai图像分析功能不支持) | Image analysis feature is unsupported. |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai图像分析已停止) | Image analysis is stopped. |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai图像分析正在进行中) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 
@@ -398,7 +398,7 @@ readonly canvas: FrameNode
 
 获取和CanvasRenderingContext2D关联的Canvas组件的FrameNode实例。可用于监听关联Canvas组件的可见状态。&lt;br&gt;默认值：null。
 
-**类型：** [FrameNode](arkts-arkui-framenode-c.md)
+**类型：** [FrameNode](arkts-arkui-framenode-t.md)
 
 **起始版本：** 13
 

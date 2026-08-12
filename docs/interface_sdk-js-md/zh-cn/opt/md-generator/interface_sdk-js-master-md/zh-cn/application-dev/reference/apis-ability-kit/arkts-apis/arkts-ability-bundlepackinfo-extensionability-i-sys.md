@@ -18,7 +18,7 @@ readonly forms: Array<AbilityFormInfo>
 
 卡片信息。
 
-**类型：** Array&lt;AbilityFormInfo&gt;
+**类型：** Array&lt;[AbilityFormInfo](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)&gt;
 
 **起始版本：** 9
 

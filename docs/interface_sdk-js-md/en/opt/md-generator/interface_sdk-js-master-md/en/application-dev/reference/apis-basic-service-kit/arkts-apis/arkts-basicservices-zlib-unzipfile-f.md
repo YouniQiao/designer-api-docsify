@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## unzipFile
@@ -23,7 +23,7 @@ Unzips a file. The execution result is returned after the decompression is compl
 
 **Deprecated since:** 9
 
-**Substitutes:** [zlib.decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile)(inFile:
+**Substitutes:** [decompressFile](zlib.decompressFile(inFile:)
 
 <!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function unzipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -41,7 +41,7 @@ Unzips a file. The execution result is returned after the decompression is compl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

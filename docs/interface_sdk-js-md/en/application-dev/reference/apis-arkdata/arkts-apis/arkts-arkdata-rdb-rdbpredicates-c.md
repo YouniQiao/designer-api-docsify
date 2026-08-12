@@ -8,7 +8,7 @@ Defines predicates for an RDB store. This class determines whether the condition
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
+**Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates)
 
 <!--Device-rdb-class RdbPredicates--><!--Device-rdb-class RdbPredicates-End-->
 
@@ -28,7 +28,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
+**Substitutes:** [and](arkts-arkdata-relationalstore-rdbpredicates-c.md#and)
 
 <!--Device-RdbPredicates-and(): RdbPredicates--><!--Device-RdbPredicates-and(): RdbPredicates-End-->
 
@@ -38,7 +38,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginwrap)
+**Substitutes:** [beginWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginWrap)
 
 <!--Device-RdbPredicates-beginWrap(): RdbPredicates--><!--Device-RdbPredicates-beginWrap(): RdbPredicates-End-->
 
@@ -73,7 +73,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -101,7 +101,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.beginsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginswith)
+**Substitutes:** [beginsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#beginsWith)
 
 <!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-beginsWith(field: string, value: string): RdbPredicates-End-->
 
@@ -118,7 +118,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -141,7 +141,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.between](arkts-arkdata-relationalstore-rdbpredicates-c.md#between)
+**Substitutes:** [between](arkts-arkdata-relationalstore-rdbpredicates-c.md#between)
 
 <!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-between(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
@@ -152,14 +152,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
+| low | ValueType | Yes | Minimum value of the range to set. |
+| high | ValueType | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -182,7 +182,7 @@ A constructor used to create an **RdbPredicates** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
+**Substitutes:** [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md#RdbPredicates)
 
 <!--Device-RdbPredicates-constructor(name: string)--><!--Device-RdbPredicates-constructor(name: string)-End-->
 
@@ -214,7 +214,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.contains](arkts-arkdata-relationalstore-rdbpredicates-c.md#contains)
+**Substitutes:** [contains](arkts-arkdata-relationalstore-rdbpredicates-c.md#contains)
 
 <!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-contains(field: string, value: string): RdbPredicates-End-->
 
@@ -231,7 +231,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -254,7 +254,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
+**Substitutes:** [distinct](arkts-arkdata-relationalstore-rdbpredicates-c.md#distinct)
 
 <!--Device-RdbPredicates-distinct(): RdbPredicates--><!--Device-RdbPredicates-distinct(): RdbPredicates-End-->
 
@@ -264,7 +264,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -287,7 +287,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endwrap)
+**Substitutes:** [endWrap](arkts-arkdata-relationalstore-rdbpredicates-c.md#endWrap)
 
 <!--Device-RdbPredicates-endWrap(): RdbPredicates--><!--Device-RdbPredicates-endWrap(): RdbPredicates-End-->
 
@@ -297,7 +297,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** created. |
+| RdbPredicates | RdbPredicates** created. |
 
 ## Examples
 
@@ -325,7 +325,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.endsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#endswith)
+**Substitutes:** [endsWith](arkts-arkdata-relationalstore-rdbpredicates-c.md#endsWith)
 
 <!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-endsWith(field: string, value: string): RdbPredicates-End-->
 
@@ -342,7 +342,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -365,7 +365,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalto)
+**Substitutes:** [equalTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#equalTo)
 
 <!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-equalTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -376,13 +376,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -405,7 +405,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.glob](arkts-arkdata-relationalstore-rdbpredicates-c.md#glob)
+**Substitutes:** [glob](arkts-arkdata-relationalstore-rdbpredicates-c.md#glob)
 
 <!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-glob(field: string, value: string): RdbPredicates-End-->
 
@@ -422,7 +422,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -445,7 +445,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthan)
+**Substitutes:** [greaterThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterThan)
 
 <!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThan(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -456,13 +456,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -485,7 +485,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterthanorequalto)
+**Substitutes:** [greaterThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#greaterThanOrEqualTo)
 
 <!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-greaterThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -496,13 +496,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -525,7 +525,7 @@ Creates an **RdbPredicates** object to group the query results based on the spec
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupby)
+**Substitutes:** [groupBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#groupBy)
 
 <!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates--><!--Device-RdbPredicates-groupBy(fields: Array<string>): RdbPredicates-End-->
 
@@ -541,7 +541,7 @@ Creates an **RdbPredicates** object to group the query results based on the spec
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -564,7 +564,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
+**Substitutes:** [in](arkts-arkdata-relationalstore-rdbpredicates-c.md#in)
 
 <!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-in(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
@@ -581,7 +581,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -604,7 +604,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inalldevices)
+**Substitutes:** [inAllDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inAllDevices)
 
 <!--Device-RdbPredicates-inAllDevices(): RdbPredicates--><!--Device-RdbPredicates-inAllDevices(): RdbPredicates-End-->
 
@@ -614,7 +614,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -634,7 +634,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 > **NOTE：**
 
 > The value of **devices** can be obtained by using &lt;!--RP2--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > . &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 
@@ -644,7 +644,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#indevices)
+**Substitutes:** [inDevices](arkts-arkdata-relationalstore-rdbpredicates-c.md#inDevices)
 
 <!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates--><!--Device-RdbPredicates-inDevices(devices: Array<string>): RdbPredicates-End-->
 
@@ -660,7 +660,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -704,7 +704,7 @@ Creates an **RdbPredicates** object to specify the index column.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.indexedBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#indexedby)
+**Substitutes:** [indexedBy](arkts-arkdata-relationalstore-rdbpredicates-c.md#indexedBy)
 
 <!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates--><!--Device-RdbPredicates-indexedBy(field: string): RdbPredicates-End-->
 
@@ -720,7 +720,7 @@ Creates an **RdbPredicates** object to specify the index column.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -743,7 +743,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.isNotNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnotnull)
+**Substitutes:** [isNotNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isNotNull)
 
 <!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNotNull(field: string): RdbPredicates-End-->
 
@@ -759,13 +759,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
 
 ## Examples
 
@@ -788,7 +788,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.isNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isnull)
+**Substitutes:** [isNull](arkts-arkdata-relationalstore-rdbpredicates-c.md#isNull)
 
 <!--Device-RdbPredicates-isNull(field: string): RdbPredicates--><!--Device-RdbPredicates-isNull(field: string): RdbPredicates-End-->
 
@@ -804,7 +804,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -827,7 +827,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthan)
+**Substitutes:** [lessThan](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessThan)
 
 <!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThan(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -838,13 +838,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -867,7 +867,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessthanorequalto)
+**Substitutes:** [lessThanOrEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#lessThanOrEqualTo)
 
 <!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -878,13 +878,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -907,7 +907,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.like](arkts-arkdata-relationalstore-rdbpredicates-c.md#like)
+**Substitutes:** [like](arkts-arkdata-relationalstore-rdbpredicates-c.md#like)
 
 <!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates--><!--Device-RdbPredicates-like(field: string, value: string): RdbPredicates-End-->
 
@@ -924,7 +924,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -947,7 +947,7 @@ Creates an **RdbPredicates** object to limit the number of records.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.limitAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitas)
+**Substitutes:** [limitAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#limitAs)
 
 <!--Device-RdbPredicates-limitAs(value: number): RdbPredicates--><!--Device-RdbPredicates-limitAs(value: number): RdbPredicates-End-->
 
@@ -963,7 +963,7 @@ Creates an **RdbPredicates** object to limit the number of records.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -986,7 +986,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.notBetween](arkts-arkdata-relationalstore-rdbpredicates-c.md#notbetween)
+**Substitutes:** [notBetween](arkts-arkdata-relationalstore-rdbpredicates-c.md#notBetween)
 
 <!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates--><!--Device-RdbPredicates-notBetween(field: string, low: ValueType, high: ValueType): RdbPredicates-End-->
 
@@ -997,14 +997,14 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| low | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Minimum value of the range to set. |
-| high | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Maximum value of the range to set. |
+| low | ValueType | Yes | Minimum value of the range to set. |
+| high | ValueType | Yes | Maximum value of the range to set. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1027,7 +1027,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notequalto)
+**Substitutes:** [notEqualTo](arkts-arkdata-relationalstore-rdbpredicates-c.md#notEqualTo)
 
 <!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates--><!--Device-RdbPredicates-notEqualTo(field: string, value: ValueType): RdbPredicates-End-->
 
@@ -1038,13 +1038,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Column name in the database table. |
-| value | [ValueType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-valuetype-t.md) | Yes | Value to match. |
+| value | ValueType | Yes | Value to match. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1067,7 +1067,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notin)
+**Substitutes:** [notIn](arkts-arkdata-relationalstore-rdbpredicates-c.md#notIn)
 
 <!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates--><!--Device-RdbPredicates-notIn(field: string, value: Array<ValueType>): RdbPredicates-End-->
 
@@ -1084,7 +1084,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1107,7 +1107,7 @@ Creates an **RdbPredicates** object to specify the start position of the returne
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetas)
+**Substitutes:** [offsetAs](arkts-arkdata-relationalstore-rdbpredicates-c.md#offsetAs)
 
 <!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates--><!--Device-RdbPredicates-offsetAs(rowOffset: number): RdbPredicates-End-->
 
@@ -1123,7 +1123,7 @@ Creates an **RdbPredicates** object to specify the start position of the returne
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1146,7 +1146,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
+**Substitutes:** [or](arkts-arkdata-relationalstore-rdbpredicates-c.md#or)
 
 <!--Device-RdbPredicates-or(): RdbPredicates--><!--Device-RdbPredicates-or(): RdbPredicates-End-->
 
@@ -1156,7 +1156,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** created. |
+| RdbPredicates | RdbPredicates** created. |
 
 ## Examples
 
@@ -1181,7 +1181,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.orderByAsc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbyasc)
+**Substitutes:** [orderByAsc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderByAsc)
 
 <!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByAsc(field: string): RdbPredicates-End-->
 
@@ -1197,7 +1197,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 
@@ -1220,7 +1220,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.RdbPredicates.orderByDesc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderbydesc)
+**Substitutes:** [orderByDesc](arkts-arkdata-relationalstore-rdbpredicates-c.md#orderByDesc)
 
 <!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates--><!--Device-RdbPredicates-orderByDesc(field: string): RdbPredicates-End-->
 
@@ -1236,7 +1236,7 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | Type | Description |
 | --- | --- |
-| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) | RdbPredicates** object created. |
+| RdbPredicates | RdbPredicates** object created. |
 
 ## Examples
 

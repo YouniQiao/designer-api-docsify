@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## hasRight
@@ -20,7 +20,7 @@ Checks whether the application has the permission to access the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasright)
+**Substitutes:** [hasRight](arkts-basicservices-usbmanager-hasright-f.md#hasRight)
 
 <!--Device-usb-function hasRight(deviceName: string): boolean--><!--Device-usb-function hasRight(deviceName: string): boolean-End-->
 

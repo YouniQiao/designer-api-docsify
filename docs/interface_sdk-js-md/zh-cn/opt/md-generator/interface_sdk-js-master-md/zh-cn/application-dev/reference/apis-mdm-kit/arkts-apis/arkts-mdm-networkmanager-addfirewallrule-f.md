@@ -10,16 +10,16 @@ function addFirewallRule(admin: Want, firewallRule: FirewallRule): void
 
 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md#LogType)。
 
 > **说明：**
 > 
-> - 添加了[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。
+> - 添加了[Action](arkts-mdm-networkmanager-action-e.md#Action)为ALLOW规则后，将会默认添加DENY规则，不在ALLOW规则之内的网络数据包将会被丢弃或拦截。
 > 
 > - 设备重启，将会清空防火墙过滤规则。
 > 
-> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#adddomainfilterrule)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规
-> 则中，均按[Action](arkts-mdm-networkmanager-action-e.md)为ALLOW、DENY、REJECT的顺序进行匹配。
+> - 规则匹配顺序：先匹配域名过滤规则（由[addDomainFilterRule](arkts-mdm-networkmanager-adddomainfilterrule-f.md#addDomainFilterRule)添加），再匹配本接口添加的IP防火墙规则；在域名规则或IP规
+> 则中，均按[Action](arkts-mdm-networkmanager-action-e.md#Action)为ALLOW、DENY、REJECT的顺序进行匹配。
 
 **起始版本：** 12
 
@@ -42,10 +42,10 @@ API version 21及之前版本，仅支持IPv4。从API version 22开始，支持
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

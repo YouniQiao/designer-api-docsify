@@ -69,7 +69,7 @@ Obtains the position of the character nearest to the specified coordinate based 
 | --- | --- | --- |
 | x | number | Yes |
 | y | number | Yes |
-| encoding | [TextEncoding](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-textencoding-e.md) | No |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No |
 
 **Return value:**
 
@@ -105,7 +105,7 @@ Obtains the character range and the actual glyph range based on the specified gl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getCharacterRangeForGlyphRange
 
@@ -130,13 +130,13 @@ Obtains the character range and the actual glyph range based on the specified gl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | glyphRange | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| encoding | [TextEncoding](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-textencoding-e.md) | No |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getGlyphPositionAtCoordinate
 
@@ -197,7 +197,7 @@ Obtains the glyph range and the actual character range based on the specified ch
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getGlyphRangeForCharacterRange
 
@@ -222,13 +222,13 @@ Obtains the glyph range and the actual character range based on the specified ch
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | charRange | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| encoding | [TextEncoding](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-textencoding-e.md) | No |
+| encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextRange&gt; |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; |
 
 ## getLineCount
 
@@ -276,7 +276,7 @@ Obtains the information about the specified line, including line metrics, text s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| lineNumber | number | Yes |
+| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | Yes |
 
 **Return value:**
 
@@ -307,11 +307,11 @@ Obtains the drawing area information of the characters or placeholders within an
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | range | [TextRange](arkts-arkui-textrange-i.md) | Yes |
-| widthStyle | [RectWidthStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectwidthstyle-e.md) | Yes |
-| heightStyle | [RectHeightStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-rectheightstyle-e.md) | Yes |
+| widthStyle | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Yes |
+| heightStyle | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextBox&gt; |
+| Array&lt;[TextBox](arkts-arkui-textbox-t.md)&gt; |

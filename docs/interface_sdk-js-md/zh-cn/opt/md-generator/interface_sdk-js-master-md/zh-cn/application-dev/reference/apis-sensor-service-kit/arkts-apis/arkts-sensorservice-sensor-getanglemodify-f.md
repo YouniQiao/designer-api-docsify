@@ -13,7 +13,7 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation)(currentRotationMatrix:
+**替代接口：** [getAngleVariation](sensor.getAngleVariation(currentRotationMatrix:)
 
 <!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>,    callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -23,8 +23,8 @@ Obtains the angle change between two rotation matrices. This API uses an asynchr
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| currentRotationMatrix | Array&lt;number&gt; | 是 |
-| preRotationMatrix | Array&lt;number&gt; | 是 |
+| currentRotationMatrix | Array & lt;number & gt; | 是 |
+| preRotationMatrix | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 ## 示例
@@ -58,7 +58,7 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getAngleVariation](arkts-sensorservice-sensor-getanglevariation-f.md#getanglevariation)(currentRotationMatrix:
+**替代接口：** [getAngleVariation](sensor.getAngleVariation(currentRotationMatrix:)
 
 <!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getAngleModify(currentRotationMatrix: Array<number>, preRotationMatrix: Array<number>): Promise<Array<number>>-End-->
 
@@ -68,14 +68,14 @@ Obtains the angle change between two rotation matrices. This API uses a promise 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| currentRotationMatrix | Array&lt;number&gt; | 是 |
-| preRotationMatrix | Array&lt;number&gt; | 是 |
+| currentRotationMatrix | Array & lt;number & gt; | 是 |
+| preRotationMatrix | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to {@link onConsole} method.
+Encompassed message information as parameters to [onConsole](arkts-arkweb-web-webattribute-i.md#onConsole) method.
 
 **Since:** 23
 
@@ -112,7 +112,7 @@ Gets the source of a console message.
 
 | Type | Description |
 | --- | --- |
-| [ConsoleMessageSource](../arkts-components/arkts-arkweb-consolemessagesource-e.md) | Return the source of a console message. |
+| [ConsoleMessageSource](arkts-arkweb-web-consolemessagesource-e.md) | Return the source of a console message. |
 
 ## getSourceId
 

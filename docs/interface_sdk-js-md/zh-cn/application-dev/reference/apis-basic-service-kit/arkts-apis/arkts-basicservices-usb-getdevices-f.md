@@ -14,7 +14,7 @@ function getDevices(): Array<Readonly<USBDevice>>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)
+**替代接口：** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)
 
 <!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
 

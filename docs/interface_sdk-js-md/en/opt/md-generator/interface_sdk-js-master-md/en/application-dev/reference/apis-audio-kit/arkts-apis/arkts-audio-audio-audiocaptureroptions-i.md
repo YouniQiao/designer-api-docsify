@@ -11,7 +11,7 @@ Describes audio capturer configurations.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerInfo
@@ -47,7 +47,7 @@ This API is supported since API version 10 and deprecated since API version 12. 
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig--><!--Device-AudioCapturerOptions-playbackCaptureConfig?: AudioPlaybackCaptureConfig-End-->
 
@@ -59,7 +59,7 @@ This API is supported since API version 10 and deprecated since API version 12. 
 playbackCaptureMode?: AudioPlaybackCaptureMode
 ```
 
-The playback capture mode for audio capturer.This can be a combination of the available {@link AudioPlaybackCaptureMode}.
+The playback capture mode for audio capturer.This can be a combination of the available [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md#AudioPlaybackCaptureMode).
 
 **Type:** [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e.md)
 

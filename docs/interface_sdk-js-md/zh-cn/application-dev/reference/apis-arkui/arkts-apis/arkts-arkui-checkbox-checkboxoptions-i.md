@@ -18,11 +18,11 @@ group?: string
 
 用于指定多选框所属群组的名称（即所属CheckboxGroup的名称）。
 
-默认值：undefined，默认状态下配合[CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md)属性group信息为undefined的节点使用。 
+默认值：undefined，默认状态下配合[CheckboxGroupOptions](CheckboxGroupOptions)属性group信息为undefined的节点使用。 
 
 **说明：**
 
-未配合使用[CheckboxGroup](arkts-arkui-checkboxgroup-checkboxgroup-f.md#checkboxgroup)组件时，此值无用。 
+未配合使用[CheckboxGroup](checkboxgroup)组件时，此值无用。 
 
 **卡片能力（仅ArkTS-Dyn）：** 从API version 9开始，该接口支持在ArkTS卡片中使用。
 
@@ -50,7 +50,7 @@ indicatorBuilder?: CustomBuilder
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 

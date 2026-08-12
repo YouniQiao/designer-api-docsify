@@ -72,7 +72,7 @@ respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: strin
 ```
 
 用于应用程序向播放器发送响应头信息，应在第一次调用  
-[respondData](media.MediaSourceLoadingRequest.respondData(uuid: number, offset: number, buffer: ArrayBuffer))方法之前调用。
+[respondData](#respondData)方法之前调用。
 
 **起始版本：** 18
 
@@ -87,7 +87,7 @@ respondHeader(uuid: number, header?: Record<string, string>, redirectUrl?: strin
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | uuid | number | 是 |
-| [header](#header) | Record&lt;string, string&gt; | 否 |
+| [header](#header) | Record & lt;string, string & gt; | 否 |
 | redirectUrl | string | 否 |
 
 ## header

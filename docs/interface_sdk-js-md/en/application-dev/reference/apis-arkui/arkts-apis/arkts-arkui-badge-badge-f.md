@@ -25,14 +25,14 @@ Defines Badge Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| BadgeParamWithString | Yes | Markup component parameters of the numeric and character string types |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
+| value | [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| [BadgeParamWithString](arkts-arkui-badge-badgeparamwithstring-i.md) | Yes | Markup component parameters of the numeric and character string types |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
+| [BadgeAttribute](arkts-arkui-badge-badgeattribute-i.md) |  |
 
 
 ## Badge
@@ -62,12 +62,12 @@ Defines Badge Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;BadgeAttribute&gt; | Yes | badge attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[BadgeAttribute](arkts-arkui-badge-badgeattribute-i.md)&gt; | Yes | badge attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
+| [BadgeAttribute](arkts-arkui-badge-badgeattribute-i.md) |  |
 

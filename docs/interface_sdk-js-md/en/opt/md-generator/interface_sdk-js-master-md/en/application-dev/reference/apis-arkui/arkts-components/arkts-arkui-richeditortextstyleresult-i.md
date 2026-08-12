@@ -120,7 +120,7 @@ fontStyle: FontStyle
 
 Font style.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 10
 
@@ -264,7 +264,7 @@ strokeWidth?: number
 
 Text stroke width.
 
-The unit is [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+The unit is [vp](common).
 
 **Type:** number
 
@@ -320,7 +320,7 @@ Text shadow.
 
 Only the shadow blur radius, shadow color, and shadow offset can be queried.
 
-**Type:** Array&lt;ShadowOptions&gt;
+**Type:** Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **Since:** 12
 

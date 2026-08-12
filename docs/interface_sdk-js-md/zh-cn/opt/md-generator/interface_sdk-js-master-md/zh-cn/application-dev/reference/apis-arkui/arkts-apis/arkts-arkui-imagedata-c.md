@@ -66,7 +66,7 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 | [width](#width) | number | 是 |
 | [height](#height) | number | 是 |
 | [data](#data) | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 ## data
 

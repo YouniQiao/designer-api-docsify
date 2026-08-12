@@ -1,8 +1,8 @@
 # MouseEvent
 
-继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
+继承于[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)。
 
-**继承/实现关系：** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**继承/实现关系：** MouseEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **起始版本：** 8
 
@@ -42,7 +42,7 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 获取当前帧的所有历史点信息。历史点可用于实现更平滑的绘制效果。
 
-该接口仅能在[MouseEvent](arkts-arkui-mouseevent-i.md)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onmouse)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](arkts-arkui-mouseevent-i.md)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onmouse)返回，其余点作为历史点。
+该接口仅能在[MouseEvent](#MouseEvent)中调用，用于获取触发[onMouse](arkts-arkui-commonmethod-c.md#onMouse)时当前帧历史点的相关信息，不同设备每帧的鼠标事件上报频率不同，一帧通常只会上报一个鼠标事件，如果当前帧收到的[MouseEvent](#MouseEvent)数目大于1，会将该帧最后一个点通过[onMouse](arkts-arkui-commonmethod-c.md#onMouse)返回，其余点作为历史点。
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ getHistoricalPoints?(): Array<MouseHistoricalPoint>
 
 | 类型 |
 | --- |
-| Array&lt;MouseHistoricalPoint&gt; |
+| Array&lt;[MouseHistoricalPoint](arkts-arkui-mousehistoricalpoint-i.md)&gt; |
 
 ## stopPropagation
 
@@ -102,7 +102,7 @@ button: MouseButton
 
 鼠标按键。
 
-**类型：** [MouseButton](../../apis-test-kit/arkts-apis/arkts-test-uitest-mousebutton-e.md)
+**类型：** MouseButton
 
 **起始版本：** 8
 
@@ -166,7 +166,7 @@ eventHandleId?: number
 
 取值范围：[0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
@@ -238,7 +238,7 @@ pressedButtons?: MouseButton[]
 
 当前按下的鼠标按键集合。
 
-**类型：** [MouseButton](../../apis-test-kit/arkts-apis/arkts-test-uitest-mousebutton-e.md)[]
+**类型：** MouseButton[]
 
 **起始版本：** 15
 
@@ -310,7 +310,7 @@ screenX: number
 
 **废弃版本：** 10
 
-**替代接口：** [MouseEvent#windowX](arkts-arkui-mouseevent-i.md#windowx)
+**替代接口：** [windowX](#windowX)
 
 <!--Device-MouseEvent-screenX: number--><!--Device-MouseEvent-screenX: number-End-->
 
@@ -332,7 +332,7 @@ screenY: number
 
 **废弃版本：** 10
 
-**替代接口：** [MouseEvent#windowY](arkts-arkui-mouseevent-i.md#windowy)
+**替代接口：** [windowY](#windowY)
 
 <!--Device-MouseEvent-screenY: number--><!--Device-MouseEvent-screenY: number-End-->
 

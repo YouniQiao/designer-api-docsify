@@ -2,7 +2,7 @@
 
 Represents error that is thrown when illegal arithmetic operation has occurred (e.g. division by zero)
 
-**Inheritance/Implementation:** ArithmeticError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ArithmeticError extends [Error](Error)
 
 **Since:** 26.0.0
 

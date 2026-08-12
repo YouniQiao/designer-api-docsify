@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## getTypeDescriptor
@@ -26,7 +26,7 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| typeId | string | Yes |
+| [typeId](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | Yes |
 
 **Return value:**
 
@@ -38,7 +38,7 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

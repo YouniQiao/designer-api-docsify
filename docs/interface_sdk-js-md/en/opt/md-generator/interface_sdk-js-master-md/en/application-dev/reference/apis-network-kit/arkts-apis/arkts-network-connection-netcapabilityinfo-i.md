@@ -11,7 +11,7 @@ Receive information about changes in network capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## netCap
@@ -40,7 +40,7 @@ netHandle: NetHandle
 
 Defines the handle of the data network.
 
-**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
+**Type:** NetHandle
 
 **Since:** 11
 

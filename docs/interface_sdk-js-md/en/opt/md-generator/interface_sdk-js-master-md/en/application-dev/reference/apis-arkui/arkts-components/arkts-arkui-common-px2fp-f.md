@@ -12,7 +12,7 @@ Converts a number in units of px to a number in units of fp.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#px2fp
+**Substitutes:** [px2fp](ohos.arkui.UIContext.UIContext#px2fp)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

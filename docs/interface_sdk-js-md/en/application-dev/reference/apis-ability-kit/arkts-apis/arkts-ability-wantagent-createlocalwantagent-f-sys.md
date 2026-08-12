@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## createLocalWantAgent
@@ -30,7 +30,7 @@ Create a local WantAgent object.The WantAgent created by this interface stores d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [LocalWantAgentInfo](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md) | Yes | Information about the local WantAgent object to create. |
+| info | LocalWantAgentInfo | Yes | Information about the local WantAgent object to create. |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ Create a local WantAgent object.The WantAgent created by this interface stores d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 
 ## Examples
 

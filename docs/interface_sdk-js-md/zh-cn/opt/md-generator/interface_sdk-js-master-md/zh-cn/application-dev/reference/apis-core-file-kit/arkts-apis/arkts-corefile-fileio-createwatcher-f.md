@@ -12,7 +12,7 @@ declare function createWatcher(filename: string, events: number, callback: Async
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:createWatcher](arkts-corefile-fileio-createwatcher-f.md#createwatcher)
+**替代接口：** [createWatcher](arkts-corefile-file-fs-createwatcher-f.md#createWatcher)
 
 <!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher--><!--Device-unnamed-declare function createWatcher(filename: string, events: number, callback: AsyncCallback<number>): Watcher-End-->
 
@@ -30,4 +30,4 @@ declare function createWatcher(filename: string, events: number, callback: Async
 
 | 类型 |
 | --- |
-| [Watcher](arkts-corefile-file-fs-watcher-i.md) |
+| [Watcher](arkts-corefile-fileio-watcher-depr-i.md) |

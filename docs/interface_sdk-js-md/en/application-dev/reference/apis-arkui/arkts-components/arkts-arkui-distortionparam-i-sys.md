@@ -40,7 +40,7 @@ A positive value indicates outward distortion, and a negative value indicates in
 
 Recommended value range for x, y, z, and w: **[-1, 1]**
 
-**Type:** [Vector4](../arkts-apis/arkts-arkui-graphics-vector4-i.md)
+**Type:** [Vector4](arkts-arkui-vector4-t-sys.md)
 
 **Default:** [0, 0, 0, 0]
 
@@ -66,7 +66,7 @@ Coordinates of the bottom-left corner.
 
 Default value: **[0, 1]**
 
-**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**Type:** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **Default:** [0, 1]
 
@@ -92,7 +92,7 @@ Coordinates of the bottom-right corner.
 
 Default value: **[1, 1]**
 
-**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**Type:** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **Default:** [1, 1]
 
@@ -118,7 +118,7 @@ Coordinates of the top-left corner.
 
 Default value: **[0, 0]**
 
-**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**Type:** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **Default:** [0, 0]
 
@@ -144,7 +144,7 @@ Coordinates of the top-right corner.
 
 Default value: **[1, 0]**
 
-**Type:** [Vector2](../arkts-apis/arkts-arkui-graphics-vector2-i.md)
+**Type:** [Vector2](arkts-arkui-vector2-t-sys.md)
 
 **Default:** [1, 0]
 

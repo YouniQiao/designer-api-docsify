@@ -2,7 +2,7 @@
 
 Defines the gesture recognizer.
 
-**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**Inheritance/Implementation:** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#GestureRecognizer)
 
 **Since:** 23
 
@@ -106,5 +106,5 @@ Returns the the pan gesture options of the recognizer.
 
 | Type | Description |
 | --- | --- |
-| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | Pan gesture options |
+| [PanGestureOptions](arkts-arkui-gesture-pangestureoptions-c.md) | Pan gesture options |
 

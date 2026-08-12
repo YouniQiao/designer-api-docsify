@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getLocalName
@@ -18,7 +18,7 @@ Obtains the Bluetooth local name of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getLocalName
+**Substitutes:** [getLocalName](ohos.bluetoothManager/bluetoothManager.getLocalName)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

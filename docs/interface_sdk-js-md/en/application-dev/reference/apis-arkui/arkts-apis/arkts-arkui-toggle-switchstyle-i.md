@@ -38,7 +38,7 @@ pointRadius?: double | Resource
 
 Set the radius of the point of the switch.
 
-**Type:** double \| Resource
+**Type:** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ trackBorderRadius?: double | Resource
 
 Set the border radius of the track of the switch.
 
-**Type:** double \| Resource
+**Type:** double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

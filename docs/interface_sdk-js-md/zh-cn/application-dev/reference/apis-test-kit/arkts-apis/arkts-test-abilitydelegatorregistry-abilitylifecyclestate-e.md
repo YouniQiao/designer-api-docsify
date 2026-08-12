@@ -1,7 +1,7 @@
 # AbilityLifecycleState
 
-Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md)的  
-[getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md#getabilitystate)方法返回不同ability生命周期。
+Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator)的  
+[getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#getAbilityState)方法返回不同ability生命周期。
 
 **起始版本：** 9
 

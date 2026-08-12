@@ -11,7 +11,7 @@ Holds User-Agent metadata information and uses to generate User-Agent client hin
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getArchitecture
@@ -78,7 +78,7 @@ Returns the current list of UserAgentBrandVersion which are used to generate the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;UserAgentBrandVersion&gt; |
+| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; |
 
 ## getFormFactors
 
@@ -100,7 +100,7 @@ Gets the value for the sec-ch-ua-form-factors.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;UserAgentFormFactor&gt; |
+| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; |
 
 ## getFullVersion
 
@@ -302,7 +302,7 @@ Sets User-Agent metadata brands and their versions.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| brandVersionList | Array&lt;UserAgentBrandVersion&gt; | Yes |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes |
 
 ## setFormFactors
 
@@ -326,7 +326,7 @@ Sets User-Agent metadata form factors.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formFactors | Array&lt;UserAgentFormFactor&gt; | Yes |
+| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes |
 
 ## setFullVersion
 

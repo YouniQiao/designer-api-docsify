@@ -11,7 +11,7 @@ Represents the deferred task information, which is used to set the trigger condi
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -235,7 +235,7 @@ networkType?: NetworkType
 
 Network type.
 
-**Type:** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
+**Type:** NetworkType
 
 **Since:** 9
 

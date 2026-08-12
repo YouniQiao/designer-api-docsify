@@ -5,7 +5,7 @@ export type AccessibilityExtensionContext = _AccessibilityExtensionContext.defau
 ```
 
 Defines the context of the accessibility extension. For details, see   
-[AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md).
+[AccessibilityExtensionContext](./application/AccessibilityExtensionContext).
 
 **Since:** 10
 

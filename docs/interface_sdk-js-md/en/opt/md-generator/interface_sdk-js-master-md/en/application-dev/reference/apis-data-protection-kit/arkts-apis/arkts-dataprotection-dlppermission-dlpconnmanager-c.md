@@ -16,7 +16,7 @@ Calls **registerPlugin** and **unregisterPlugin** to register or unregister call
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## constructor
@@ -25,7 +25,7 @@ import { dlpPermission } from 'kits/@kit.DataProtectionKit';
 constructor()
 ```
 
-Represents a constructor for instantiating [DlpConnManager](arkts-dataprotection-dlppermission-dlpconnmanager-c.md).
+Represents a constructor for instantiating [DlpConnManager](#DlpConnManager).
 
 **Since:** 21
 
@@ -41,8 +41,8 @@ Represents a constructor for instantiating [DlpConnManager](arkts-dataprotection
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -90,12 +90,12 @@ Registers a callback with the SA.
 
 | Error Code ID |
 | --- |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [19100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -150,12 +150,12 @@ This API unregisters a callback and releases resources when an application exits
 
 | Error Code ID |
 | --- |
-| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) |
-| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100004](../errorcode-dlp.md#19100004-credential-service-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [19100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [19100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

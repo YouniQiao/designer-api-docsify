@@ -64,7 +64,7 @@ status: SelectStatus
 
 Defines the select status of CheckboxGroup.
 
-**Type:** [SelectStatus](../arkts-components/arkts-arkui-selectstatus-e.md)
+**Type:** [SelectStatus](arkts-arkui-checkboxgroup-selectstatus-e.md)
 
 **Since:** 23
 

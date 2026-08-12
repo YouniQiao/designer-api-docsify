@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.request:request.UploadConfig](arkts-basicservices-request-uploadconfig-i.md)
+**替代接口：** [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)
 
 <!--Device-unnamed-export interface UploadResponse--><!--Device-unnamed-export interface UploadResponse-End-->
 
@@ -24,7 +24,7 @@ code: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.HttpResponse.statusCode
+**替代接口：** [statusCode](arkts-basicservices-agent-httpresponse-i.md#statusCode)
 
 <!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
 
@@ -44,7 +44,7 @@ data: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.Progress.extras
+**替代接口：** [extras](ohos.request.agent.Progress.extras)
 
 <!--Device-UploadResponse-data: string--><!--Device-UploadResponse-data: string-End-->
 
@@ -64,7 +64,7 @@ headers: Object
 
 **废弃版本：** 9
 
-**替代接口：** ohos.request.agent.HttpResponse.headers
+**替代接口：** [headers](ohos.request.agent.HttpResponse.headers)
 
 <!--Device-UploadResponse-headers: Object--><!--Device-UploadResponse-headers: Object-End-->
 

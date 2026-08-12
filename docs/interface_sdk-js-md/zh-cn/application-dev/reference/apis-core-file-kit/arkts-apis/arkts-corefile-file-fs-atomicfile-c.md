@@ -40,7 +40,7 @@ constructor(path: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -269,7 +269,7 @@ getBaseFile(): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 打开的File对象。 |
+| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 
@@ -343,7 +343,7 @@ openRead(): ReadStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReadStream](arkts-corefile-fileio-readstream-c.md) | 文件可读流。 |
+| [ReadStream](arkts-corefile-file-fs-readstream-c.md) | 文件可读流。 |
 
 **错误码：**
 
@@ -521,7 +521,7 @@ startWrite(): WriteStream
 
 | 类型 | 说明 |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流。 |
 
 **错误码：**
 

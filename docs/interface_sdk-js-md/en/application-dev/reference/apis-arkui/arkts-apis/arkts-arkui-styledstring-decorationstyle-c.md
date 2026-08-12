@@ -32,7 +32,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | text decoration value. |
+| value | [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md) | Yes | text decoration value. |
 
 ## constructor
 
@@ -54,7 +54,7 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | text decoration value. |
+| value | [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md) | Yes | text decoration value. |
 | options | [DecorationOptions](arkts-arkui-styledstring-decorationoptions-i.md) | No | decoration options. |
 
 ## color

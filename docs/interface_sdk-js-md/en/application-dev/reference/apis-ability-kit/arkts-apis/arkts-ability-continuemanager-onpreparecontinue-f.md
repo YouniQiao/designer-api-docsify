@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## onPrepareContinue
@@ -29,11 +29,11 @@ Register prepareContinue event, when the ability is configured with 'ContinueQui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes | the ability context. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | Yes | Used to handle ('prepareContinue') command. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | Yes | Used to handle ('prepareContinue') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| [16300501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
 

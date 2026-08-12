@@ -2,7 +2,7 @@
 
 Configures the parameters of a popup. You can use the   
 [getPromptAction()](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getpromptaction) method in   
-[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md) to obtain the [PromptAction](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md) object, and then call the attributes of **options** when   
+[UIContext](@ohos.arkui.UIContext) to obtain the [PromptAction](@ohos.arkui.UIContext) object, and then call the attributes of **options** when   
 [openPopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#openpopup18) or   
 [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) is called.
 
@@ -54,7 +54,7 @@ Unit: vp
 
 Percentage values are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 8.0_vp.
 
@@ -91,7 +91,7 @@ Unit: vp
 
 1. If **arrowOffset** is not set, the distance between the popup arrow and the four corners must be no less than the corner radius.2. If **arrowPointPosition** is set, **arrowOffset** does not take effect.3. Percentage values are not supported.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 18
 
@@ -116,7 +116,7 @@ Position of the tooltip arrow relative to its parent component. Available positi
 
 Default value: **ArrowPointPosition.CENTER**
 
-**Type:** [ArrowPointPosition](../arkts-apis/arkts-arkui-arrowpointposition-e.md)
+**Type:** ArrowPointPosition
 
 **Since:** 18
 
@@ -146,7 +146,7 @@ Unit: vp
 
 Percentage values are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 16.0_vp.
 
@@ -198,7 +198,7 @@ Whether the popup covers the pointing component during avoidance.
 
 Default value: **AvoidanceMode.COVER_TARGET**
 
-**Type:** [AvoidanceMode](arkts-arkui-avoidancemode-e.md)
+**Type:** AvoidanceMode
 
 **Default:** AvoidanceMode.COVER_TARGET
 
@@ -248,7 +248,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Defines the popup's background blur style with options
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 26.0.0
 
@@ -326,7 +326,7 @@ Unit: vp
 
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.2. If no inner outline is set, this parameter must be used together with **borderLinearGradient**.3. For double outlines, it is recommended that the inner outline width should not exceed 10 vp.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 20
 
@@ -491,7 +491,7 @@ levelMode?: LevelMode
 
 Defines the display level of the popup.
 
-**Type:** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**Type:** LevelMode
 
 **Since:** 26.0.0
 
@@ -514,7 +514,7 @@ mask?: boolean | PopupMaskType
 Whether to apply a mask with the specified color to the popup. The value **false** means that no mask is applied,   
 **true** means that a transparent mask is applied, and **PopupMaskType** means that a mask with the specified color is applied. Default value: **true**
 
-**Type:** boolean \| PopupMaskType
+**Type:** boolean \| [PopupMaskType](arkts-arkui-popupmasktype-i.md)
 
 **Since:** 18
 
@@ -544,7 +544,7 @@ Default value: **{x:0, y:0}**
 
 Unit: vp
 
-**Type:** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**Type:** Position
 
 **Default:** { x: 0, y: 0 }
 
@@ -574,7 +574,7 @@ Interactive dismissal behavior. The default value is **true**, meaning that the 
 
 1. No more **onWillDismiss** callback is allowed in an **onWillDismiss** callback.2. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
-**Type:** boolean \| Callback&lt;DismissPopupAction&gt;
+**Type:** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **Since:** 18
 
@@ -630,7 +630,7 @@ Unit: vp
 
 1. Percentage values are not supported. If a percentage value is set, the value **0** is used.2. If the outer outline is not set, this parameter must be used together with **outlineLinearGradient**.3. For double outlines, it is recommended that the outer outline width should not exceed 10 vp.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 20
 
@@ -654,7 +654,7 @@ Preferred position of the popup. If the set position is insufficient for holding
 
 Default value: **Placement.Bottom**
 
-**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
+**Type:** Placement
 
 **Default:** Placement.Bottom
 
@@ -676,9 +676,9 @@ Default value: **Placement.Bottom**
 popupColor?: ResourceColor
 ```
 
-Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: [TRANSPARENT](../arkts-apis/arkts-arkui-enums-color-e.md/arkts-arkui-enums-color-e.md) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)
+Color of the popup. To remove the background blur, set **backgroundBlurStyle** to **BlurStyle.NONE**. Default value: [TRANSPARENT](Color) plus [COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -704,7 +704,7 @@ Default value: **20**
 
 Unit: vp
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 20.0_vp.
 
@@ -730,7 +730,7 @@ Popup shadow.
 
 Default value: **ShadowStyle.OUTER_DEFAULT_MD**
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Default:** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -784,7 +784,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for popup. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of popup.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -810,7 +810,7 @@ Default value: **8**
 
 Unit: vp
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 18
 
@@ -836,7 +836,7 @@ Transition animations for the entrance and exit of the popup.
 
 1. If this parameter is not set, the default effect is used.2. Touching the back button during the entrance animation interrupts it and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.3. Touching the back button during the exit animation does not affect the animation playback; the back button is unresponsive.4. [updatePopup](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#updatepopup18) cannot be used for update.
 
-**Type:** [TransitionEffect](../arkts-apis/arkts-arkui-common-transitioneffect-c.md)
+**Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 18
 
@@ -858,7 +858,7 @@ width?: Dimension
 
 Width of the popup.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 18
 

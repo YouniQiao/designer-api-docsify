@@ -26,7 +26,7 @@ function getDefaultDisplaySync(): Display
 
 | 错误码ID |
 | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
 
 ## 示例
 

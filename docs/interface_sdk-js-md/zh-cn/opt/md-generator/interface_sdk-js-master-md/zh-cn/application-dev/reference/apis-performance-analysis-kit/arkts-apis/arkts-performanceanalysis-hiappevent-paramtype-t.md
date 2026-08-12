@@ -21,4 +21,4 @@ type ParamType = number | number | number | string | boolean | Array<string>
 | double |
 | string |
 | boolean |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |

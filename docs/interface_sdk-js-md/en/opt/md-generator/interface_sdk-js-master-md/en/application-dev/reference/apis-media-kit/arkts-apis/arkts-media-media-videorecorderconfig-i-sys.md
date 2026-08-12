@@ -13,7 +13,7 @@ Provides the video recorder configuration definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioSourceType
@@ -42,7 +42,7 @@ location?: Location
 
 geographical location information.
 
-**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**Type:** Location
 
 **Since:** 9
 

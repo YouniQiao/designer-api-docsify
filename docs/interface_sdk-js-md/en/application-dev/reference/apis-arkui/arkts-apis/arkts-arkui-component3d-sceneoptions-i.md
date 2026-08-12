@@ -18,7 +18,7 @@ modelType?: ModelType
 
 Scene type when 3D rendering
 
-**Type:** [ModelType](../arkts-components/arkts-arkui-modeltype-e.md)
+**Type:** [ModelType](arkts-arkui-component3d-modeltype-e.md)
 
 **Default:** ModelType.SURFACE
 

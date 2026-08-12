@@ -20,7 +20,7 @@ readonly abilities: Array<ModuleAbilityInfo>
 
 Ability information of the module.
 
-**Type:** Array&lt;ModuleAbilityInfo&gt;
+**Type:** Array&lt;[ModuleAbilityInfo](arkts-ability-bundlepackinfo-moduleabilityinfo-i-sys.md)&gt;
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ readonly apiVersion: ApiVersion
 
 API version of the module.
 
-**Type:** [ApiVersion](arkts-ability-freeinstall-apiversion-t-sys.md)
+**Type:** [ApiVersion](arkts-ability-bundlepackinfo-apiversion-i-sys.md)
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ readonly distro: ModuleDistroInfo
 
 Distribution information of the module.
 
-**Type:** [ModuleDistroInfo](arkts-ability-freeinstall-moduledistroinfo-t-sys.md)
+**Type:** [ModuleDistroInfo](arkts-ability-bundlepackinfo-moduledistroinfo-i-sys.md)
 
 **Since:** 9
 
@@ -100,7 +100,7 @@ readonly extensionAbilities: Array<ExtensionAbility>
 
 ExtensionAbility information of the module.
 
-**Type:** Array&lt;ExtensionAbility&gt;
+**Type:** Array&lt;[ExtensionAbility](arkts-ability-bundlepackinfo-extensionability-i-sys.md)&gt;
 
 **Since:** 9
 

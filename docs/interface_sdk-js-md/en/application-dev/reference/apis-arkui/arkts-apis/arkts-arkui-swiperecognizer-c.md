@@ -1,8 +1,8 @@
 # SwipeRecognizer
 
-Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md).
+Implements a swipe gesture recognizer. Inherits from [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer).
 
-**Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**Inheritance/Implementation:** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
 
 **Since:** 18
 
@@ -36,7 +36,7 @@ Obtains the direction for recognizing swipe gestures.
 
 | Type | Description |
 | --- | --- |
-| [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md) | Direction for recognizing swipe gestures. |
+| [SwipeDirection](arkts-arkui-swipedirection-e.md) | Direction for recognizing swipe gestures. |
 
 ## getVelocityThreshold
 

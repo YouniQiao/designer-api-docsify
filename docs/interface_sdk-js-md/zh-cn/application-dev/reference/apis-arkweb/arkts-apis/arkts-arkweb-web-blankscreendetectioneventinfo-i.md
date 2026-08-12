@@ -18,7 +18,7 @@ blankScreenDetails?: BlankScreenDetails
 
 The details of this detection result.
 
-**类型：** [BlankScreenDetails](../arkts-components/arkts-arkweb-blankscreendetails-i.md)
+**类型：** [BlankScreenDetails](arkts-arkweb-web-blankscreendetails-i.md)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ blankScreenReason: DetectedBlankScreenReason
 
 The reason why we consider this page is blank.
 
-**类型：** [DetectedBlankScreenReason](../arkts-components/arkts-arkweb-detectedblankscreenreason-e.md)
+**类型：** [DetectedBlankScreenReason](arkts-arkweb-web-detectedblankscreenreason-e.md)
 
 **起始版本：** 23
 

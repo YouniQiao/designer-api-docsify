@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setUserProperty
@@ -12,7 +12,7 @@ import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
 function setUserProperty(name: string, value: string): void
 ```
 
-Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md) is configured.
+Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#Processor) is configured.
 
 **Since:** 11
 
@@ -35,7 +35,7 @@ Sets a user property, which is used for association when a [Processor](arkts-per
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## Examples
 

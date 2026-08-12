@@ -24,11 +24,11 @@ config: ParticleConfigs
 
 config类型和type值有关联：
 
-1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](../arkts-components/arkts-arkui-pointparticleparameters-i.md/arkts-arkui-pointparticleparameters-i.md) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](../arkts-components/arkts-arkui-imageparticleparameters-i.md/arkts-arkui-imageparticleparameters-i.md) 。
+1. 如果type为ParticleType.POINT，则config类型为[PointParticleParameters](arkts-arkui-particle-pointparticleparameters-i.md#PointParticleParameters) 。2. 如果type为ParticleType.IMAGE，则config类型为[ImageParticleParameters](arkts-arkui-particle-imageparticleparameters-i.md#ImageParticleParameters) 。
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleConfigs](../arkts-components/arkts-arkui-particleconfigs-i.md)
+**类型：** [ParticleConfigs](arkts-arkui-particleconfigs-t.md)
 
 **起始版本：** 23
 
@@ -122,7 +122,7 @@ type: ParticleType
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleType](../arkts-components/arkts-arkui-particletype-e.md)
+**类型：** [ParticleType](arkts-arkui-particle-particletype-e.md)
 
 **起始版本：** 23
 

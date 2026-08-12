@@ -2,7 +2,7 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment
 
-**Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md)
+**Inheritance/Implementation:** DedicatedWorkerGlobalScope extends [WorkerGlobalScope](arkts-arkts-worker-workerglobalscope-i.md#WorkerGlobalScope)
 
 **Since:** 7
 
@@ -10,7 +10,7 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope
+**Substitutes:** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#ThreadWorkerGlobalScope)
 
 <!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope-End-->
 
@@ -19,7 +19,7 @@ Specifies the worker thread running environment, which is isolated from the host
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## close
@@ -36,7 +36,7 @@ Close the worker thread to stop the worker from receiving messages
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope.close
+**Substitutes:** [close](ohos.worker.ThreadWorkerGlobalScope.close)
 
 <!--Device-DedicatedWorkerGlobalScope-close(): void--><!--Device-DedicatedWorkerGlobalScope-close(): void-End-->
 
@@ -76,7 +76,7 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope.onmessage
+**Substitutes:** [onmessage](ohos.worker.ThreadWorkerGlobalScope.onmessage)
 
 <!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
 
@@ -103,7 +103,7 @@ The onmessage attribute of parentPort specifies the event handler to be called t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope.onmessageerror
+**Substitutes:** [onmessageerror](ohos.worker.ThreadWorkerGlobalScope.onmessageerror)
 
 <!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
 
@@ -130,7 +130,7 @@ Send a message to be host thread from the worker
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope.postMessage
+**Substitutes:** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void-End-->
 
@@ -157,7 +157,7 @@ Send a message to be host thread from the worker
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope.postMessage
+**Substitutes:** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
 
@@ -207,7 +207,7 @@ Send a message to host thread from the worker
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.ThreadWorkerGlobalScope.postMessage
+**Substitutes:** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
 

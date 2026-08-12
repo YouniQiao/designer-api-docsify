@@ -13,7 +13,7 @@ Defines the popup options.
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -47,7 +47,7 @@ direction?: Direction
 
 Indicates the attribute of the current popup direction.
 
-**Type:** [Direction](arkts-arkui-direction-e.md)
+**Type:** Direction
 
 **Default:** Direction.Auto
 
@@ -89,7 +89,7 @@ maxWidth?: Dimension
 
 Set the max width of the popup.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 400.0_vp
 
@@ -131,7 +131,7 @@ onClose?: VoidCallback
 
 The close button callback of Popup.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 

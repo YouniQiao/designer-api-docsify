@@ -6,7 +6,7 @@ KVStore常量。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.data.distributedKVStore.Constants
+**替代接口：** [Constants](ohos.data.distributedKVStore.Constants)
 
 <!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
 

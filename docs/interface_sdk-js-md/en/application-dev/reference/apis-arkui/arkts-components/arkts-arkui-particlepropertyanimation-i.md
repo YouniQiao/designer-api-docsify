@@ -20,7 +20,7 @@ Animation curve.
 
 Default value: **Curve.Linear**
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| ICurve
+**Type:** Curve \| ICurve
 
 **Default:** Curve.Linear
 

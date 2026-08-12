@@ -24,7 +24,7 @@ attachBrush(brush: Brush): void
 ```
 
 绑定画刷到画布上，在画布上进行绘制时，将使用画刷的样式对绘制图形形状的内部进行填充。调用本方法后，画刷将持续生效于后续所有绘制操作，直至调用  
-[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)解除绑定。
+[detachBrush](#detachBrush)解除绑定。
 
 > **说明：**
 > 
@@ -46,7 +46,7 @@ attachBrush(brush: Brush): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## attachPen
 
@@ -54,7 +54,7 @@ attachBrush(brush: Brush): void
 attachPen(pen: Pen): void
 ```
 
-绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作，直至调用[detachPen](arkts-arkgraphics2d-drawing-canvas-c.md#detachpen)解除绑定。
+绑定画笔到画布上，在画布上进行绘制时，将使用画笔的样式去绘制图形形状的轮廓。调用本方法后，画笔将持续生效于后续所有绘制操作，直至调用[detachPen](#detachPen)解除绑定。
 
 > **说明：**
 > 
@@ -76,7 +76,7 @@ attachPen(pen: Pen): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clear
 
@@ -84,7 +84,7 @@ attachPen(pen: Pen): void
 clear(color: common2D.Color): void
 ```
 
-使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)。
+使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](#drawColor)。
 
 **起始版本：** 12
 
@@ -102,7 +102,7 @@ clear(color: common2D.Color): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clear
 
@@ -110,7 +110,7 @@ clear(color: common2D.Color): void
 clear(color: common2D.Color | number): void
 ```
 
-使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)。
+使用指定颜色填充画布上的裁剪区域。效果等同于[drawColor](#drawColor)。
 
 **起始版本：** 18
 
@@ -150,7 +150,7 @@ clipPath(path: Path, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clipRect
 
@@ -178,7 +178,7 @@ clipRect(rect: common2D.Rect, clipOp?: ClipOp, doAntiAlias?: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clipRegion
 
@@ -205,7 +205,7 @@ clipRegion(region: Region, clipOp?: ClipOp): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clipRoundRect
 
@@ -233,7 +233,7 @@ clipRoundRect(roundRect: RoundRect, clipOp?: ClipOp, doAntiAlias?: boolean): voi
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## concatMatrix
 
@@ -259,7 +259,7 @@ concatMatrix(matrix: Matrix): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## constructor
 
@@ -287,7 +287,7 @@ constructor(pixelmap: image.PixelMap)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## detachBrush
 
@@ -295,7 +295,7 @@ constructor(pixelmap: image.PixelMap)
 detachBrush(): void
 ```
 
-将画刷与画布解绑，在画布上进行绘制时，不会再使用画刷对绘制图形形状的内部进行填充。本方法与[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)配合使用，用于在完成绘制后解除画刷绑定。
+将画刷与画布解绑，在画布上进行绘制时，不会再使用画刷对绘制图形形状的内部进行填充。本方法与[attachBrush](#attachBrush)配合使用，用于在完成绘制后解除画刷绑定。
 
 **起始版本：** 11
 
@@ -309,7 +309,7 @@ detachBrush(): void
 detachPen(): void
 ```
 
-将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。本方法与[attachPen](arkts-arkgraphics2d-drawing-canvas-c.md#attachpen)配合使用，用于在完成绘制后解除画笔绑定。
+将画笔与画布解绑，在画布上进行绘制时，不会再使用画笔去绘制图形形状的轮廓。本方法与[attachPen](#attachPen)配合使用，用于在完成绘制后解除画笔绑定。
 
 **起始版本：** 11
 
@@ -343,7 +343,7 @@ drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawArcWithCenter
 
@@ -351,7 +351,7 @@ drawArc(arc: common2D.Rect, startAngle: number, sweepAngle: number): void
 drawArcWithCenter(arc: common2D.Rect, startAngle: number, sweepAngle: number, useCenter: boolean): void
 ```
 
-在画布上绘制圆弧。与[drawArc](arkts-arkgraphics2d-drawing-canvas-c.md#drawarc)相比，本接口增加了useCenter参数，用于控制圆弧的起点和终点是否连接圆弧的中心点。该方法允许指定圆弧的起始角度和扫描角度。
+在画布上绘制圆弧。与[drawArc](#drawArc)相比，本接口增加了useCenter参数，用于控制圆弧的起点和终点是否连接圆弧的中心点。该方法允许指定圆弧的起始角度和扫描角度。
 
 **起始版本：** 18
 
@@ -392,7 +392,7 @@ drawBackground(brush: Brush): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawCircle
 
@@ -420,7 +420,7 @@ drawCircle(x: number, y: number, radius: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawColor
 
@@ -428,7 +428,7 @@ drawCircle(x: number, y: number, radius: number): void
 drawColor(color: common2D.Color, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)对画布当前裁剪区域进行填充。
 
 **起始版本：** 11
 
@@ -447,7 +447,7 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawColor
 
@@ -455,8 +455,8 @@ drawColor(color: common2D.Color, blendMode?: BlendMode): void
 drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。性能优于  
-[drawColor](arkts-arkgraphics2d-drawing-canvas-c.md#drawcolor)接口，推荐使用本接口。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)对画布当前裁剪区域进行填充。性能优于  
+[drawColor](#drawColor)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -478,7 +478,7 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawColor
 
@@ -486,7 +486,7 @@ drawColor(alpha: number, red: number, green: number, blue: number, blendMode?: B
 drawColor(color: number, blendMode?: BlendMode): void
 ```
 
-使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md)对画布当前裁剪区域进行填充。
+使用指定颜色并按照指定的[BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)对画布当前裁剪区域进行填充。
 
 **起始版本：** 18
 
@@ -505,7 +505,7 @@ drawColor(color: number, blendMode?: BlendMode): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawGlyphs
 
@@ -528,9 +528,9 @@ drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<comm
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| glyphIds | Array&lt;number&gt; | 是 |
+| glyphIds | Array & lt;number & gt; | 是 |
 | glyphIdOffset | number | 是 |
-| positions | Array&lt;common2D.Point&gt; | 是 |
+| positions | Array & lt;common2D.Point & gt; | 是 |
 | positionOffset | number | 是 |
 | glyphCount | number | 是 |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
@@ -539,7 +539,7 @@ drawGlyphs(glyphIds: Array<number>, glyphIdOffset: number, positions: Array<comm
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## drawImage
 
@@ -568,7 +568,7 @@ drawImage(pixelmap: image.PixelMap, left: number, top: number, samplingOptions?:
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawImageLattice
 
@@ -577,7 +577,7 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
       filterMode: FilterMode): void
 ```
 
-将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine](arkts-arkgraphics2d-drawing-canvas-c.md#drawimagenine)固定将图像分割为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。
+将图像按照矩形网格对象的设置划分为多个网格，并把图像的每个部分按照网格对象的设置绘制到画布上的目标矩形区域。与[drawImageNine](#drawImageNine)固定将图像分割为9个部分不同，本接口通过Lattice对象支持自定义网格分割。使用此接口时，设置开启抗锯齿无效。
 
 偶数行和列（起始计数为0）的每个交叉点对应的网格区域保持原始尺寸不缩放，若固定网格区域的尺寸不超过目标矩形，则会在不缩放的情况下被绘制在目标矩形，反之则会按比例缩放绘制在目标矩形；在角落区域绘制后，若目标矩形中仍有未被覆盖的区域，则剩下的区域会通过拉伸或压缩来绘制，以便完全覆盖目标矩形。
 
@@ -600,7 +600,7 @@ drawImageLattice(pixelmap: image.PixelMap, lattice: Lattice, dstRect: common2D.R
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawImageNine
 
@@ -632,7 +632,7 @@ drawImageNine(pixelmap: image.PixelMap, center: common2D.Rect, dstRect: common2D
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawImageRect
 
@@ -660,7 +660,7 @@ drawImageRect(pixelmap: image.PixelMap, dstRect: common2D.Rect, samplingOptions?
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawImageRectWithSrc
 
@@ -691,7 +691,7 @@ drawImageRectWithSrc(pixelmap: image.PixelMap, srcRect: common2D.Rect, dstRect: 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawLine
 
@@ -720,7 +720,7 @@ drawLine(x0: number, y0: number, x1: number, y1: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawNestedRoundRect
 
@@ -747,7 +747,7 @@ drawNestedRoundRect(outer: RoundRect, inner: RoundRect): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawOval
 
@@ -773,7 +773,7 @@ drawOval(oval: common2D.Rect): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawPath
 
@@ -799,7 +799,7 @@ drawPath(path: Path): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawPixelMapMesh
 
@@ -823,16 +823,16 @@ drawPixelMapMesh(pixelmap: image.PixelMap, meshWidth: number, meshHeight: number
 | pixelmap | image.PixelMap | 是 |
 | meshWidth | number | 是 |
 | meshHeight | number | 是 |
-| vertices | Array&lt;number&gt; | 是 |
+| [vertices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | Array & lt;number & gt; | 是 |
 | vertOffset | number | 是 |
-| colors | Array&lt;number&gt; \| null | 是 |
+| colors | Array & lt;number & gt; \ | null | 是 |
 | colorOffset | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawPoint
 
@@ -859,7 +859,7 @@ drawPoint(x: number, y: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawPoints
 
@@ -879,14 +879,14 @@ drawPoints(points: Array<common2D.Point>, mode?: PointMode): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| points | Array&lt;common2D.Point&gt; | 是 |
+| points | Array & lt;common2D.Point & gt; | 是 |
 | mode | [PointMode](arkts-arkgraphics2d-drawing-pointmode-e.md) | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawRect
 
@@ -912,7 +912,7 @@ drawRect(rect: common2D.Rect): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawRect
 
@@ -920,7 +920,7 @@ drawRect(rect: common2D.Rect): void
 drawRect(left: number, top: number, right: number, bottom: number): void
 ```
 
-绘制一个矩形，默认使用黑色填充。性能优于[drawRect](arkts-arkgraphics2d-drawing-canvas-c.md#drawrect)接口，推荐使用本接口。
+绘制一个矩形，默认使用黑色填充。性能优于[drawRect](#drawRect)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -941,7 +941,7 @@ drawRect(left: number, top: number, right: number, bottom: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawRegion
 
@@ -967,7 +967,7 @@ drawRegion(region: Region): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawRoundRect
 
@@ -993,7 +993,7 @@ drawRoundRect(roundRect: RoundRect): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawShadow
 
@@ -1026,7 +1026,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawShadow
 
@@ -1059,7 +1059,7 @@ drawShadow(path: Path, planeParams: common2D.Point3d, devLightPos: common2D.Poin
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawSingleCharacter
 
@@ -1088,7 +1088,7 @@ drawSingleCharacter(text: string, font: Font, x: number, y: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawSingleCharacterWithFeatures
 
@@ -1112,13 +1112,13 @@ drawSingleCharacterWithFeatures(text: string, font: Font, x: number, y: number, 
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
 | x | number | 是 |
 | y | number | 是 |
-| features | Array&lt;FontFeature&gt; | 是 |
+| features | Array & lt;FontFeature & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## drawTextBlob
 
@@ -1146,7 +1146,7 @@ drawTextBlob(blob: TextBlob, x: number, y: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## drawVertices
 
@@ -1170,18 +1170,18 @@ drawVertices(vertexMode: VertexMode, vertexCount: number, positions: Array<commo
 | --- | --- | --- |
 | vertexMode | [VertexMode](arkts-arkgraphics2d-drawing-vertexmode-e.md) | 是 |
 | vertexCount | number | 是 |
-| positions | Array&lt;common2D.Point&gt; | 是 |
-| texs | Array&lt;common2D.Point&gt; \| null | 是 |
-| colors | Array&lt;number&gt; \| null | 是 |
+| positions | Array & lt;common2D.Point & gt; | 是 |
+| texs | Array & lt;common2D.Point & gt; \ | null | 是 |
+| colors | Array & lt;number & gt; \ | null | 是 |
 | indexCount | number | 是 |
-| indices | Array&lt;number&gt; \| null | 是 |
+| [indices](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | Array & lt;number & gt; \ | null | 是 |
 | mode | [BlendMode](../../apis-arkui/arkts-components/arkts-arkui-blendmode-e.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
 
 ## getHeight
 
@@ -1413,7 +1413,7 @@ resetMatrix(): void
 restore(): void
 ```
 
-恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](arkts-arkgraphics2d-drawing-canvas-c.md#save)或[saveLayer](arkts-arkgraphics2d-drawing-canvas-c.md#savelayer)配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
+恢复保存在栈顶的画布状态（画布矩阵和裁剪区域）。需要与保存接口[save](#save)或[saveLayer](#saveLayer)配合使用。若栈顶状态由saveLayer保存，恢复时还会将saveLayer分配的位图绘制到画布上；若栈为空（无已保存状态），则不执行恢复操作。
 
 **起始版本：** 12
 
@@ -1427,7 +1427,7 @@ restore(): void
 restoreToCount(count: number): void
 ```
 
-恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](arkts-arkgraphics2d-drawing-canvas-c.md#save)或[saveLayer](arkts-arkgraphics2d-drawing-canvas-c.md#savelayer)保存画布状态后才能使用本接口恢复。
+恢复到指定深度的画布状态（画布矩阵和裁剪区域）。需要先调用[save](#save)或[saveLayer](#saveLayer)保存画布状态后才能使用本接口恢复。
 
 **起始版本：** 12
 
@@ -1445,7 +1445,7 @@ restoreToCount(count: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## rotate
 
@@ -1473,7 +1473,7 @@ rotate(degrees: number, sx: number, sy: number) : void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## save
 
@@ -1481,7 +1481,7 @@ rotate(degrees: number, sx: number, sy: number) : void
 save(): number
 ```
 
-保存当前画布状态（画布矩阵和裁剪区域）到栈顶。需要与恢复接口[restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore)配合使用。
+保存当前画布状态（画布矩阵和裁剪区域）到栈顶。需要与恢复接口[restore](#restore)配合使用。
 
 **起始版本：** 12
 
@@ -1501,7 +1501,7 @@ save(): number
 saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 ```
 
-保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。需要与恢复接口[restore](arkts-arkgraphics2d-drawing-canvas-c.md#restore)配合使用，调用restore将会舍弃对矩阵和裁剪区域做的更改，并绘制位图。
+保存当前画布的矩阵和裁剪区域，并为后续绘制分配位图。需要与恢复接口[restore](#restore)配合使用，调用restore将会舍弃对矩阵和裁剪区域做的更改，并绘制位图。
 
 **起始版本：** 12
 
@@ -1526,7 +1526,7 @@ saveLayer(rect?: common2D.Rect | null, brush?: Brush | null): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## scale
 
@@ -1553,7 +1553,7 @@ scale(sx: number, sy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setMatrix
 
@@ -1579,7 +1579,7 @@ setMatrix(matrix: Matrix): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## skew
 
@@ -1606,7 +1606,7 @@ skew(sx: number, sy: number) : void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## translate
 
@@ -1633,4 +1633,4 @@ translate(dx: number, dy: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

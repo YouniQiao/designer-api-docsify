@@ -28,5 +28,5 @@ Define Env Decorator type
 
 | Type | Description |
 | --- | --- |
-| PropertyDecorator | Env decorator |
+| [PropertyDecorator](../../apis-default/arkts-apis/arkts-propertydecorator-t.md) | Env decorator |
 

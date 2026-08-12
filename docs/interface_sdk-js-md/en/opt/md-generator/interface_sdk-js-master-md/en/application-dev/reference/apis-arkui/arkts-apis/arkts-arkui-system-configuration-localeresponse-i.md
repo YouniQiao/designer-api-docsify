@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LocaleResponse } from 'kits/@kit.ArkUI';
+import { LocaleResponse } from '@kit.ArkUI';
 ```
 
 ## countryOrRegion

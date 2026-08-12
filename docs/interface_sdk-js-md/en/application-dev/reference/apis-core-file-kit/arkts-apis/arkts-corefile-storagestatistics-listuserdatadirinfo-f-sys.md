@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## listUserdataDirInfo
@@ -32,15 +32,15 @@ Queries the space usage of the **\/data** directory on the user device.This API 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;UserdataDirInfo&gt;&gt; | Promise used to return the space usage of the **\/data** directory on the user device. |
+| Promise&lt;Array&lt;[UserdataDirInfo](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)&gt;&gt; | Promise used to return the space usage of the **\/data** directory on the user device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13600015 | Failed to traverse the query data partition directory. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

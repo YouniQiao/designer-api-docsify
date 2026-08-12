@@ -36,9 +36,9 @@ function execute(func: Function, ...args: Object[]): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 11 |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 11 |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -90,8 +90,8 @@ function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -153,8 +153,8 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要在任务池中执行的任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| task | Task | 是 | 需要在任务池中执行的任务。 |
+| priority | Priority | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -167,11 +167,11 @@ function execute(task: Task, priority?: Priority): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 17 |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-worker初始化失败) | Worker initialization failed.<br>**适用版本：** 9 - 17 |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -220,7 +220,7 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要在任务池中执行的泛型任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 等待执行的任务的优先级，默认值为 **taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -232,10 +232,10 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -284,7 +284,7 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | group | [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md) | 是 | 需要在任务池中执行的任务组。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 等待执行的任务组的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -296,8 +296,8 @@ function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200059](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed.<br>**适用版本：** 24+ |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -375,7 +375,7 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要在任务池中执行的任务。 |
+| task | Task | 是 | 需要在任务池中执行的任务。 |
 | configs | [Configs](arkts-arkts-taskpool-configs-i.md) | 是 | 该参数可以设置超时时间和任务优先级。 |
 
 **返回值：**
@@ -388,11 +388,11 @@ function execute(task: Task, configs: Configs): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200058](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -480,11 +480,11 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200058](../errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200058](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200058-任务执行超时) | Task timed out. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
 
 ## 示例
 
@@ -554,9 +554,9 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200059](../errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200070](../errorcode-utils.md#10200070-任务组执行超时) | TaskGroup timed out. |
+| [10200059](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200059-任务组不能重复执行) | TaskGroup cannot be re-executed. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200070](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200070-任务组执行超时) | TaskGroup timed out. |
 
 ## 示例
 

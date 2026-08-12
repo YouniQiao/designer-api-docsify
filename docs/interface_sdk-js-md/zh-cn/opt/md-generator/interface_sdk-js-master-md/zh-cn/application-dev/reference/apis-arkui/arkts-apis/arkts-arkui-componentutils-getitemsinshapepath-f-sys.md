@@ -28,4 +28,4 @@ function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>
 
 | 类型 |
 | --- |
-| Array&lt;ImageItem&gt; |
+| Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt; |

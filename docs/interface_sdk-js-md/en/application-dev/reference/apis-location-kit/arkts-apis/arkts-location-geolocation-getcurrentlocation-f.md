@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getCurrentLocation
@@ -20,7 +20,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +32,8 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | Yes | Indicates the location request parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| request | CurrentLocationRequest | Yes | Indicates the location request parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -79,7 +79,7 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Location&gt; | Yes | Indicates the callback for reporting the location result. |
 
 ## Examples
 
@@ -112,7 +112,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -124,7 +124,7 @@ Obtain current location
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md) | No | Indicates the location request parameters. |
+| request | CurrentLocationRequest | No | Indicates the location request parameters. |
 
 **Return value:**
 

@@ -18,7 +18,7 @@ bottom?: PixelRoundCalcPolicy
 
 Rounding alignment for the component's bottom edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
-**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**Type:** PixelRoundCalcPolicy
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -44,7 +44,7 @@ end?: PixelRoundCalcPolicy
 
 Rounding alignment for the component's end edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
-**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**Type:** PixelRoundCalcPolicy
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -70,7 +70,7 @@ start?: PixelRoundCalcPolicy
 
 Rounding alignment for the component's start edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
-**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**Type:** PixelRoundCalcPolicy
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -96,7 +96,7 @@ top?: PixelRoundCalcPolicy
 
 Rounding alignment for the component's top edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
-**Type:** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**Type:** PixelRoundCalcPolicy
 
 **Default:** PixelRoundCalcPolicy.NO_FORCE_ROUND
 

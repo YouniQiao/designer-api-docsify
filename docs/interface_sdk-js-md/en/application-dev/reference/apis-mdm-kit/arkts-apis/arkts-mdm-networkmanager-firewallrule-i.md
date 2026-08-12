@@ -4,7 +4,7 @@ Represents a firewall rule.
 
 In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 are supported since API version 22.
 
-[LogType](arkts-mdm-networkmanager-logtype-e.md) is supported since API version 23.
+[LogType](arkts-mdm-networkmanager-logtype-e.md#LogType) is supported since API version 23.
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ In API version 21 and earlier versions, only IPv4 is supported. IPv4 and IPv6 ar
 ## Modules to Import
 
 ```TypeScript
-import { networkManager } from 'kits/@kit.MDMKit';
+import { networkManager } from '@kit.MDMKit';
 ```
 
 ## action
@@ -31,10 +31,10 @@ Action to take, that is, receive or discard the data packets.
 This parameter is mandatory when a firewall filtering rule is added.
 
 This parameter is optional when a firewall is removed. If this parameter is left empty, all  
-[Action](arkts-mdm-networkmanager-action-e.md) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**,  
+[Action](arkts-mdm-networkmanager-action-e.md#Action) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**,  
 **destPort**, and **appUid** must be also left empty.
 
-**Type:** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 12
 
@@ -117,10 +117,10 @@ Direction chains to which the rule applies.
 This parameter is mandatory when a firewall filtering rule is added.
 
 This parameter is optional when a firewall is removed. If this parameter is left empty, all  
-[Direction](arkts-mdm-networkmanager-direction-e.md) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**,  
+[Direction](arkts-mdm-networkmanager-direction-e.md#Direction) chains are cleared, and **srcAddr**, **destAddr**, **srcPort**,  
 **destPort**, and **appUid** must be also left empty.
 
-**Type:** [Direction](arkts-mdm-networkmanager-direction-e.md)
+**Type:** Direction
 
 **Since:** 12
 
@@ -186,7 +186,7 @@ protocol?: Protocol
 
 Network protocol. If the value is **ALL** or **ICMP**, the settings of **srcPort** and **destPort** are invalid.
 
-**Type:** [Protocol](../../apis-network-kit/arkts-apis/arkts-network-socket-protocol-e.md)
+**Type:** Protocol
 
 **Since:** 12
 

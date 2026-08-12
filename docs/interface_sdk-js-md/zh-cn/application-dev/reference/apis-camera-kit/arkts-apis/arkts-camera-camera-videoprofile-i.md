@@ -1,8 +1,8 @@
 # VideoProfile
 
-视频配置信息项，继承[Profile](arkts-camera-camera-profile-i.md)。
+视频配置信息项，继承[Profile](arkts-camera-camera-profile-i.md#Profile)。
 
-**继承/实现关系：** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md)
+**继承/实现关系：** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md#Profile)
 
 **起始版本：** 10
 

@@ -27,7 +27,7 @@ customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode
 
 选择是否使能自定义组件冻结。仅在LazyForEach下直接使用自定义组件时生效，其他情况不适用。
 
-默认为[AUTO](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)。
+默认为[AUTO](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md#LazyForEachCustomComponentFreezeMode)。
 
 **类型：** [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)
 
@@ -51,7 +51,7 @@ memoryOptimizationStrategy?: LazyForEachMemOptStrategy
 
 LazyForEach的内存优化策略。该参数在创建LazyForEach时设定，不支持动态修改。
 
-默认值：[DEFAULT](arkts-arkui-lazyforeachmemoptstrategy-e.md)
+默认值：[DEFAULT](arkts-arkui-lazyforeachmemoptstrategy-e.md#LazyForEachMemOptStrategy)
 
 **类型：** [LazyForEachMemOptStrategy](arkts-arkui-lazyforeachmemoptstrategy-e.md)
 
@@ -73,7 +73,7 @@ releaseStrategy?: LazyForEachReleaseStrategy
 
 为LazyForEach配置资源释放策略。
 
-默认使用[BATCH](arkts-arkui-lazyforeachreleasestrategy-e.md)，批量释放节点。
+默认使用[BATCH](arkts-arkui-lazyforeachreleasestrategy-e.md#LazyForEachReleaseStrategy)，批量释放节点。
 
 **类型：** [LazyForEachReleaseStrategy](arkts-arkui-lazyforeachreleasestrategy-e.md)
 

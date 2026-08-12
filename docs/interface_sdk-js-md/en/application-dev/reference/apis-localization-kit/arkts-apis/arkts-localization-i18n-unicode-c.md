@@ -13,7 +13,7 @@ Provides the API for accessing unicode character properties. For example, determ
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## detectEncoding

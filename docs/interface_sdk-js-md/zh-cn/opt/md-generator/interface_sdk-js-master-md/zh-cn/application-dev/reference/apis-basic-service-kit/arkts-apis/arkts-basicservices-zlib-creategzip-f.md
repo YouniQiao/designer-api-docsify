@@ -20,7 +20,7 @@ function createGZip(): Promise<GZip>
 
 | 类型 |
 | --- |
-| Promise&lt;GZip&gt; |
+| Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; |
 
 ## 示例
 

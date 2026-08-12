@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## getSelectionContent
@@ -33,12 +33,12 @@ Obtains the content of the selected text. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
-| [33600004](../../apis-basic-services-kit/errorcode-selection.md#33600004-the-api-is-called-too-frequently) | The interface is called too frequently. |
-| [33600005](../../apis-basic-services-kit/errorcode-selection.md#33600005-incorrect-api-call-timing) | The interface is called at the wrong time. |
-| [33600006](../../apis-basic-services-kit/errorcode-selection.md#33600006-word-selection-prohibited-in-the-current-application) | The current application is prohibited from accessing content. |
-| [33600007](../../apis-basic-services-kit/errorcode-selection.md#33600007-selected-text-is-out-of-range) | The length of selected content is out of range. |
-| [33600008](../../apis-basic-services-kit/errorcode-selection.md#33600008-content-acquisition-timed-out) | Getting the selected content times out. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) | Selection service invocation exception. |
+| [33600004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600004-the-api-is-called-too-frequently) | The interface is called too frequently. |
+| [33600005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600005-incorrect-api-call-timing) | The interface is called at the wrong time. |
+| [33600006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600006-word-selection-prohibited-in-the-current-application) | The current application is prohibited from accessing content. |
+| [33600007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600007-selected-text-is-out-of-range) | The length of selected content is out of range. |
+| [33600008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600008-content-acquisition-timed-out) | Getting the selected content times out. |
 
 ## Examples
 

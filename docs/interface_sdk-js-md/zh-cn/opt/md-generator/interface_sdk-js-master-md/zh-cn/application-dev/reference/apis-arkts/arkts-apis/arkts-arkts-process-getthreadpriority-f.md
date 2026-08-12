@@ -12,7 +12,7 @@ function getThreadPriority(v: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [process.ProcessManager.getThreadPriority](arkts-arkts-process-processmanager-c.md#getthreadpriority)
+**替代接口：** [getThreadPriority](arkts-arkts-process-processmanager-c.md#getThreadPriority)
 
 <!--Device-process-function getThreadPriority(v: number): number--><!--Device-process-function getThreadPriority(v: number): number-End-->
 

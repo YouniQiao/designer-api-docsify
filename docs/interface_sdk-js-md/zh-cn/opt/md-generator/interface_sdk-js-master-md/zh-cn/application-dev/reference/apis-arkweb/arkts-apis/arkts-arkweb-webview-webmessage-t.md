@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-用于描述{@link onMessageEventExt}所支持的数据类型。
+用于描述[onMessageEventExt](onMessageEventExt)所支持的数据类型。
 
 **起始版本：** 9
 

@@ -18,7 +18,7 @@ subWindowOptions?: SubWindowOptions
 
 创建子窗口的参数。无默认参数，当windowAttribute配置为SUB_WINDOW时必选，否则会导致窗口创建失败。
 
-**类型：** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md)
+**类型：** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md)
 
 **起始版本：** 14
 
@@ -98,7 +98,7 @@ windowRect: Rect
 
 窗口矩形区域。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 14
 

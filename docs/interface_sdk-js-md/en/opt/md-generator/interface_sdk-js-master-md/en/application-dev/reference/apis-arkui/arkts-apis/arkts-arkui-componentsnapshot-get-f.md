@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## get
@@ -12,12 +12,12 @@ import { componentSnapshot } from 'kits/@kit.ArkUI';
 function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md). This API uses an asynchronous callback to return the result.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API uses an asynchronous callback to return the result.
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
+> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
 > object associated with the current UI context.
 > 
 > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
@@ -27,7 +27,7 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentSnapshot#get
+**Substitutes:** [get](ohos.arkui.UIContext.ComponentSnapshot#get)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +49,8 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -102,12 +102,12 @@ struct SnapshotExample {
 function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md). This API uses a promise to return the result.
+Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API uses a promise to return the result.
 
 > **NOTE：**
 > 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getcomponentsnapshot)
-> API in [UIContext](arkts-arkui-uicontext.md) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md)
+> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
+> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
 > object associated with the current UI context.
 > 
 > - The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
@@ -117,7 +117,7 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.ComponentSnapshot#get
+**Substitutes:** [get](ohos.arkui.UIContext.ComponentSnapshot#get)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,14 +138,14 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

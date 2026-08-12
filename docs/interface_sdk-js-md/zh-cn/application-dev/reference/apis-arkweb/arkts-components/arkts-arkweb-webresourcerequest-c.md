@@ -1,6 +1,6 @@
 # WebResourceRequest
 
-Encompassed message information as parameters to {@link onConsole} method.
+Encompassed message information as parameters to [onConsole](onConsole) method.
 
 **起始版本：** 8
 
@@ -50,7 +50,7 @@ getRequestHeader(): Array<Header>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Header&gt; | 返回资源请求头信息。 |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | 返回资源请求头信息。 |
 
 ## getRequestMethod
 

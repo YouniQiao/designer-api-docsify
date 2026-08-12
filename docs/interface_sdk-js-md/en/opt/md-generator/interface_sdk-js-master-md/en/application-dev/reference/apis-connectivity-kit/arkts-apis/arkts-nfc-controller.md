@@ -11,7 +11,7 @@ Provides methods to operate or manage NFC.
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

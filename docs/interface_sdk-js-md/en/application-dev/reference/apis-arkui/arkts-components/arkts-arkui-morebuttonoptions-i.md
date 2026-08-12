@@ -18,7 +18,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the more button menu. If this parameter is not set, background blur is disabled.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 19
 
@@ -46,7 +46,7 @@ This parameter is only effective when **backgroundBlurStyle** is set.
 
 Avoid using this API in conjunction with **backgroundEffect**.
 
-**Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
@@ -72,7 +72,7 @@ Title bar background properties, including blur radius, brightness, saturation, 
 
 Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
-**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 19
 

@@ -1,8 +1,8 @@
 # SwipeGestureHandlerOptions
 
-Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
+Provides the parameters of the swipe gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions).
 
-**Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
+**Inheritance/Implementation:** SwipeGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
 
 **Since:** 12
 
@@ -22,7 +22,7 @@ Directions in which the swipe gesture can be recognized.
 
 Default value: **SwipeDirection.All**
 
-**Type:** [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md)
+**Type:** [SwipeDirection](arkts-arkui-swipedirection-e.md)
 
 **Since:** 12
 

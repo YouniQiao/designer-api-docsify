@@ -7,7 +7,7 @@
 > - 本Class首批接口从API version 14开始支持。
 > 
 > - AVCastPickerHelper样式显示为半模态，实际会绑定
-> [全模态页面（bindContentCover）](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#bindcontentcover)
+> [全模态页面（bindContentCover）](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindContentCover)
 > 。
 
 **起始版本：** 14
@@ -22,7 +22,7 @@
 constructor(context: Context)
 ```
 
-创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#gethostcontext)。
+创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext)。
 
 **起始版本：** 14
 
@@ -42,8 +42,8 @@ constructor(context: Context)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## off('pickerStateChange')
 
@@ -72,8 +72,8 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## on('pickerStateChange')
 
@@ -104,8 +104,8 @@ on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## resetCommunicationDevice
 
@@ -127,7 +127,7 @@ resetCommunicationDevice(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## select
 
@@ -155,10 +155,10 @@ select(options?: AVCastPickerOptions): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

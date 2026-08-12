@@ -1,7 +1,7 @@
 # WindowMode
 
 Enumerates the window modes in which a UIAbility can be displayed at startup. It can be used in  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startability).
+[startAbility](arkts-ability-uiabilitycontext-c.md#startAbility-2).
 
 **Since:** 12
 

@@ -37,7 +37,7 @@ code?: int
 ```
 
 Common event data received by the subscriber. The value of this field is the same as that of the **code** field in   
-[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses   
+[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses   
 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event. The value ranges from –2147483648 to 2147483647.The default value is **0**.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
@@ -61,7 +61,7 @@ data?: string
 ```
 
 Common event data received by the subscriber. The data size cannot exceed 64 KB.The value of this field is the same as that of the **data** field in  
-[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses  
+[CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses  
 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
 
 **Type:** string
@@ -102,7 +102,7 @@ Name of the common event that is being received.
 parameters?: { [key: string]: any }
 ```
 
-Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) when the publisher uses   
+Additional information about the common event received by the subscriber. The value of this field is the same as that of the **parameters** field in [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses   
 [commonEventManager.publish](arkts-basicservices-commoneventmanager-publish-f.md#publish)to publish a common event.
 
 **Type:** { [key: string]: any }

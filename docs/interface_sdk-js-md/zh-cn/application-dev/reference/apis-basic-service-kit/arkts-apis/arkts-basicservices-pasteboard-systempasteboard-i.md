@@ -1,6 +1,6 @@
 # SystemPasteboard
 
-系统剪贴板对象。在调用SystemPasteboard的接口前，需要先通过[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard)获取系统剪贴板。
+系统剪贴板对象。在调用SystemPasteboard的接口前，需要先通过[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getSystemPasteboard)获取系统剪贴板。
 
 **起始版本：** 6
 
@@ -24,7 +24,7 @@ clear(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.clearData](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardata)(callback:
+**替代接口：** [clearData](pasteboard.SystemPasteboard.clearData(callback:)
 
 <!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -40,7 +40,7 @@ clear(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -69,7 +69,7 @@ clear(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.clearData](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardata)()
+**替代接口：** [clearData](#clearData)()
 
 <!--Device-SystemPasteboard-clear(): Promise<void>--><!--Device-SystemPasteboard-clear(): Promise<void>-End-->
 
@@ -100,7 +100,7 @@ systemPasteboard.clear().then((data) => {
 clearData(callback: AsyncCallback<void>): void
 ```
 
-清空系统剪贴板内容，使用callback异步回调。调用此方法后，系统将删除剪贴板中的所有数据，触发已注册的'update'监听回调。清空成功后，剪贴板中将没有任何数据，hasData方法将返回false。适用于需要异步清空剪贴板且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[clearDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardatasync)不同，此接口不会阻塞UI线程，更适合在UI交互中使用。
+清空系统剪贴板内容，使用callback异步回调。调用此方法后，系统将删除剪贴板中的所有数据，触发已注册的'update'监听回调。清空成功后，剪贴板中将没有任何数据，hasData方法将返回false。适用于需要异步清空剪贴板且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[clearDataSync](#clearDataSync)不同，此接口不会阻塞UI线程，更适合在UI交互中使用。
 
 **起始版本：** 9
 
@@ -122,7 +122,7 @@ clearData(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -196,7 +196,7 @@ clearDataSync(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -216,7 +216,7 @@ try {
 detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 ```
 
-检测**本地**剪贴板中存在的[Pattern](arkts-basicservices-pasteboard-pattern-e.md)模式，使用Promise异步回调。本地剪贴板指当前设备上的剪贴板数据，不包括跨设备传输的远端剪贴板数据。适用于应用在粘贴数据前需要检测剪贴板内容是否包含特定类型的数据(如URL、邮箱、电话号码等)，以便进行相应处理或提供智能提示的场景。
+检测**本地**剪贴板中存在的[Pattern](arkts-basicservices-pasteboard-pattern-e.md#Pattern)模式，使用Promise异步回调。本地剪贴板指当前设备上的剪贴板数据，不包括跨设备传输的远端剪贴板数据。适用于应用在粘贴数据前需要检测剪贴板内容是否包含特定类型的数据(如URL、邮箱、电话号码等)，以便进行相应处理或提供智能提示的场景。
 
 **起始版本：** 13
 
@@ -242,7 +242,7 @@ detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -305,7 +305,7 @@ ArkTS-Sta:
 getChangeCount(): long
 ```
 
-获取剪贴板内容的变化次数。执行成功时返回剪贴板内容的变化次数，否则返回0。当剪贴板内容过期或调用[clearDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardatasync)等接口导致剪贴板内容为空时，内容变化次数不会因此改变。系统重启或剪贴板服务异常重启时，剪贴板内容变化次数重新从0开始计数。对同一内容连续多次复制会被记录为多次更改，每次复制均会导致内容变化次数增加。
+获取剪贴板内容的变化次数。执行成功时返回剪贴板内容的变化次数，否则返回0。当剪贴板内容过期或调用[clearDataSync](#clearDataSync)等接口导致剪贴板内容为空时，内容变化次数不会因此改变。系统重启或剪贴板服务异常重启时，剪贴板内容变化次数重新从0开始计数。对同一内容连续多次复制会被记录为多次更改，每次复制均会导致内容变化次数增加。
 
 **起始版本：** 18
 
@@ -359,7 +359,7 @@ try {
 getData(callback: AsyncCallback<PasteData>): void
 ```
 
-读取系统剪贴板内容，使用callback异步回调。将剪贴板数据封装为PasteData对象返回。调用此方法后，系统将从剪贴板服务读取当前内容，通过callback返回PasteData对象。读取成功后，应用可以通过PasteData对象的方法获取具体的数据内容（如文本、HTML、URI等）。适用于需要异步读取剪贴板内容的场景，如UI响应优先、避免阻塞主线程。与[getDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#getdatasync)相比，getData不会阻塞UI线程，适合处理大量数据或远端数据。
+读取系统剪贴板内容，使用callback异步回调。将剪贴板数据封装为PasteData对象返回。调用此方法后，系统将从剪贴板服务读取当前内容，通过callback返回PasteData对象。读取成功后，应用可以通过PasteData对象的方法获取具体的数据内容（如文本、HTML、URI等）。适用于需要异步读取剪贴板内容的场景，如UI响应优先、避免阻塞主线程。与[getDataSync](#getDataSync)相比，getData不会阻塞UI线程，适合处理大量数据或远端数据。
 
 **起始版本：** 9
 
@@ -378,15 +378,15 @@ getData(callback: AsyncCallback<PasteData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PasteData&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -409,7 +409,7 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 getData(): Promise<PasteData>
 ```
 
-读取系统剪贴板内容，将剪贴板数据封装为PasteData对象返回，使用Promise异步回调。适用于需要异步读取剪贴板内容的场景，如UI响应优先、避免阻塞主线程。适用于应用需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md/arkts-arkdata-unifieddatachannel-unifieddata-c.md)读取剪贴板数据的场景。
+读取系统剪贴板内容，将剪贴板数据封装为PasteData对象返回，使用Promise异步回调。适用于需要异步读取剪贴板内容的场景，如UI响应优先、避免阻塞主线程。适用于应用需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md#UnifiedData)读取剪贴板数据的场景。
 
 **起始版本：** 9
 
@@ -428,14 +428,14 @@ getData(): Promise<PasteData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PasteData&gt; | Promise对象，返回系统剪贴板数据。 |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise对象，返回系统剪贴板数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
+| [27787277](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -478,7 +478,7 @@ getDataSource(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -498,7 +498,7 @@ try {
 getDataSync(): PasteData
 ```
 
-读取系统剪贴板内容，此接口为同步接口。适用于应用需要在关键业务流程中同步获取剪贴板数据，或需要立即处理剪贴板内容的场景。避免在UI线程调用此接口，以免阻塞界面；处理大量数据或远端数据时，建议使用异步接口[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getdata)。
+读取系统剪贴板内容，此接口为同步接口。适用于应用需要在关键业务流程中同步获取剪贴板数据，或需要立即处理剪贴板内容的场景。避免在UI线程调用此接口，以免阻塞界面；处理大量数据或远端数据时，建议使用异步接口[getData](arkts-basicservices-pasteboard-pastedatarecord-i.md#getData)。
 
 **起始版本：** 11
 
@@ -523,8 +523,8 @@ getDataSync(): PasteData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -562,25 +562,25 @@ getDataWithProgress(params: GetDataParams): Promise<PasteData>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md) | 是 | 应用在使用剪贴板提供的文件拷贝能力的情况下需要的参数，包含目标路径、文件冲突选项、进度条类型等。 |
+| params | GetDataParams | 是 | 应用在使用剪贴板提供的文件拷贝能力的情况下需要的参数，包含目标路径、文件冲突选项、进度条类型等。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PasteData&gt; | Promise对象，返回系统剪贴板数据。 |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise对象，返回系统剪贴板数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
-| [12900007](../../apis-basic-services-kit/errorcode-pasteboard.md#12900007-文件拷贝失败) | Invalid destUri or file system error. |
-| [12900003](../../apis-basic-services-kit/errorcode-pasteboard.md#12900003-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [12900008](../../apis-basic-services-kit/errorcode-pasteboard.md#12900008-启动进度条hap失败) | Failed to start progress. |
-| [12900009](../../apis-basic-services-kit/errorcode-pasteboard.md#12900009-进度上报异常) | Progress exits abnormally. |
-| [12900010](../../apis-basic-services-kit/errorcode-pasteboard.md#12900010-获取粘贴数据失败) | System error occurred during paste execution. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. |
+| [12900007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900007-文件拷贝失败) | Invalid destUri or file system error. |
+| [12900003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900003-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [12900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900008-启动进度条hap失败) | Failed to start progress. |
+| [12900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900009-进度上报异常) | Progress exits abnormally. |
+| [12900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900010-获取粘贴数据失败) | System error occurred during paste execution. |
 
 ## 示例
 
@@ -716,7 +716,7 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.getData](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)(callback:
+**替代接口：** [getData](pasteboard.SystemPasteboard.getData(callback:)
 
 <!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
@@ -726,13 +726,13 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PasteData&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | 是 | 回调函数。当读取成功，err为undefined，data为返回的系统剪贴板数据；否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -763,7 +763,7 @@ getPasteData(): Promise<PasteData>
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.getData](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)()
+**替代接口：** [getData](#getData)()
 
 <!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>--><!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>-End-->
 
@@ -773,7 +773,7 @@ getPasteData(): Promise<PasteData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PasteData&gt; | Promise对象，返回系统剪贴板数据。 |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Promise对象，返回系统剪贴板数据。 |
 
 ## 示例
 
@@ -794,7 +794,7 @@ systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
 getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 ```
 
-读取系统剪贴板内容，使用Promise异步回调。适用于需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md/arkts-arkdata-unifieddatachannel-unifieddata-c.md)进行跨应用数据交换的场景。当应用需要与其他支持UnifiedData的应用进行数据共享，或需要处理复杂的多类型数据时，使用本接口。与[getData](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)相比，getUnifiedData提供了更标准化的数据格式。
+读取系统剪贴板内容，使用Promise异步回调。适用于需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md#UnifiedData)进行跨应用数据交换的场景。当应用需要与其他支持UnifiedData的应用进行数据共享，或需要处理复杂的多类型数据时，使用本接口。与[getData](#getData)相比，getUnifiedData提供了更标准化的数据格式。
 
 **起始版本：** 12
 
@@ -818,8 +818,8 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [27787277](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -893,8 +893,8 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -916,7 +916,7 @@ try {
 hasData(callback: AsyncCallback<boolean>): void
 ```
 
-判断系统剪贴板中是否有内容，使用callback异步回调。适用于需要异步判断剪贴板是否有内容且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[hasDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#hasdatasync)不同，此接口不会阻塞UI线程，更适合在UI交互中调用。
+判断系统剪贴板中是否有内容，使用callback异步回调。适用于需要异步判断剪贴板是否有内容且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[hasDataSync](#hasDataSync)不同，此接口不会阻塞UI线程，更适合在UI交互中调用。
 
 **起始版本：** 9
 
@@ -938,7 +938,7 @@ hasData(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1020,7 +1020,7 @@ hasDataSync(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -1068,8 +1068,8 @@ hasDataType(mimeType: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -1097,7 +1097,7 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.hasData](arkts-basicservices-pasteboard-systempasteboard-i.md#hasdata)(callback:
+**替代接口：** [hasData](pasteboard.SystemPasteboard.hasData(callback:)
 
 <!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1113,7 +1113,7 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1144,7 +1144,7 @@ hasPasteData(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.hasData](arkts-basicservices-pasteboard-systempasteboard-i.md#hasdata)()
+**替代接口：** [hasData](#hasData)()
 
 <!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>--><!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>-End-->
 
@@ -1230,7 +1230,7 @@ isRemoteData(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -1290,7 +1290,7 @@ off(type: 'update', callback?: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1401,7 +1401,7 @@ on(type: 'update', callback: () => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1509,8 +1509,8 @@ removeAppShareOptions(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
 
 ## 示例
 
@@ -1557,10 +1557,10 @@ setAppShareOptions(shareOptions: ShareOption): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [12900006](../../apis-basic-services-kit/errorcode-pasteboard.md#12900006-设置已存在) | Settings already exist. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [12900006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900006-设置已存在) | Settings already exist. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API.<br>**适用版本：** 14+ |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12 - 13 |
 
 ## 示例
 
@@ -1580,7 +1580,7 @@ try {
 setData(data: PasteData, callback: AsyncCallback<void>): void
 ```
 
-将数据写入系统剪贴板，使用callback异步回调。调用此方法后，系统会将PasteData对象写入到系统剪贴板中。写入成功后，其他应用可以读取该剪贴板数据。写入的数据会替换剪贴板中已有的内容。适用于需要异步写入剪贴板内容的场景，如UI响应优先、避免阻塞主线程。与[setDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#setdatasync)相比，setData不会阻塞UI线程。
+将数据写入系统剪贴板，使用callback异步回调。调用此方法后，系统会将PasteData对象写入到系统剪贴板中。写入成功后，其他应用可以读取该剪贴板数据。写入的数据会替换剪贴板中已有的内容。适用于需要异步写入剪贴板内容的场景，如UI响应优先、避免阻塞主线程。与[setDataSync](#setDataSync)相比，setData不会阻塞UI线程。
 
 **起始版本：** 9
 
@@ -1603,9 +1603,9 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [27787278](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
 
 ## 示例
 
@@ -1627,7 +1627,7 @@ systemPasteboard.setData(pasteData, (err, data) => {
 setData(data: PasteData): Promise<void>
 ```
 
-将数据写入系统剪贴板，使用Promise异步回调。适用于需要异步写入剪贴板且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[setDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#setdatasync)不同，此接口不会阻塞UI线程，更适合在UI交互中调用。
+将数据写入系统剪贴板，使用Promise异步回调。适用于需要异步写入剪贴板且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[setDataSync](#setDataSync)不同，此接口不会阻塞UI线程，更适合在UI交互中调用。
 
 **起始版本：** 9
 
@@ -1655,9 +1655,9 @@ setData(data: PasteData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [27787278](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
 
 ## 示例
 
@@ -1701,8 +1701,8 @@ setDataSync(data: PasteData): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 
@@ -1747,7 +1747,7 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.setData](arkts-basicservices-pasteboard-systempasteboard-i.md#setdata)(data:
+**替代接口：** [setData](pasteboard.SystemPasteboard.setData(data:)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
@@ -1764,7 +1764,7 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
 
 ## 示例
 
@@ -1794,7 +1794,7 @@ setPasteData(data: PasteData): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.SystemPasteboard.setData](arkts-basicservices-pasteboard-systempasteboard-i.md#setdata)(data:
+**替代接口：** [setData](pasteboard.SystemPasteboard.setData(data:)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 
@@ -1832,7 +1832,7 @@ systemPasteboard.setPasteData(pasteData).then((data: void) => {
 setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 ```
 
-将数据写入系统剪贴板，使用Promise异步回调。适用于需要异步写入剪贴板且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[setUnifiedDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#setunifieddatasync)不同，此接口不会阻塞UI线程，更适合在UI交互中调用。
+将数据写入系统剪贴板，使用Promise异步回调。适用于需要异步写入剪贴板且不阻塞主线程的场景，如UI响应优先的交互流程。与同步接口[setUnifiedDataSync](#setUnifiedDataSync)不同，此接口不会阻塞UI线程，更适合在UI交互中调用。
 
 **起始版本：** 12
 
@@ -1860,9 +1860,9 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
-| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [27787277](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-另外一个复制或粘贴正在进行) | Another copy or paste operation is in progress. |
+| [27787278](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-禁止复制) | Replication is prohibited. |
 
 ## 示例
 
@@ -1917,7 +1917,7 @@ systemPasteboard.setUnifiedData(data).then(() => {
 setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 ```
 
-将数据写入系统剪贴板，此接口为同步接口。适用于需要同步使用标准化数据结构UnifiedData进行跨应用数据交换的场景。当应用需要在关键业务流程中立即写入剪贴板数据，且需要与其他支持[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md/arkts-arkdata-unifieddatachannel-unifieddata-c.md)的应用进行数据共享时使用。
+将数据写入系统剪贴板，此接口为同步接口。适用于需要同步使用标准化数据结构UnifiedData进行跨应用数据交换的场景。当应用需要在关键业务流程中立即写入剪贴板数据，且需要与其他支持[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md#UnifiedData)的应用进行数据共享时使用。
 
 **起始版本：** 12
 
@@ -1939,8 +1939,8 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [12900005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-请求超时) | Excessive processing time for internal data. |
 
 ## 示例
 

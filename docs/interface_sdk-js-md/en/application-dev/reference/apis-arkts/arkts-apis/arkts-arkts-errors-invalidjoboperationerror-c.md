@@ -2,7 +2,7 @@
 
 Represents the error that is thrown when invalid operation is called on coroutine
 
-**Inheritance/Implementation:** InvalidJobOperationError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** InvalidJobOperationError extends [Error](Error)
 
 **Since:** 26.0.0
 

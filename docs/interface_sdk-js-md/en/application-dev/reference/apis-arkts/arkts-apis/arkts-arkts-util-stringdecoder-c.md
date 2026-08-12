@@ -13,7 +13,7 @@ Provide the ability to decode binary streams into strings. The supported encodin
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

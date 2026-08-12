@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getP2pPeerDevices
@@ -18,7 +18,7 @@ Obtains the information about the found devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getP2pPeerDevices
+**Substitutes:** [getP2pPeerDevices](ohos.wifiManager/wifiManager.getP2pPeerDevices)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -30,7 +30,7 @@ Obtains the information about the found devices.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WifiP2pDevice[]&gt; |
+| Promise & lt;WifiP2pDevice[] & gt; |
 
 
 ## getP2pPeerDevices
@@ -45,7 +45,7 @@ Obtains the information about the found devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getP2pPeerDevices
+**Substitutes:** [getP2pPeerDevices](ohos.wifiManager/wifiManager.getP2pPeerDevices)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 

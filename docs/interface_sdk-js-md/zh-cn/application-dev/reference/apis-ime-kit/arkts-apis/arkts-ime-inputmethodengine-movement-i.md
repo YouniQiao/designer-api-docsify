@@ -18,7 +18,7 @@ direction: Direction
 
 选中文本时，光标的移动方向。
 
-**类型：** [Direction](arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 10
 

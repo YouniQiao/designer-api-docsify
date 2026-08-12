@@ -18,7 +18,7 @@ bias?: Bias
 
 Offset of the component under the anchor constraints.The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
-**Type:** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
+**Type:** Bias
 
 **Default:** {horizontal:0.5,vertical:0.5}
 
@@ -88,7 +88,7 @@ left?: HorizontalAlignParam
 
 Left alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
-**Type:** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
+**Type:** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **Since:** 9
 
@@ -110,7 +110,7 @@ middle?: HorizontalAlignParam
 
 Center alignment in the horizontal direction.In versions earlier than API version 23, the input parameter type is { anchor: string, align: HorizontalAlign }.
 
-**Type:** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
+**Type:** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **Since:** 9
 
@@ -132,7 +132,7 @@ right?: HorizontalAlignParam
 
 Right alignment.In versions earlier than API version 23, the input parameter type is { anchor: string, align:HorizontalAlign }.
 
-**Type:** [HorizontalAlignParam](../arkts-apis/arkts-arkui-common-horizontalalignparam-i.md)
+**Type:** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **Since:** 9
 

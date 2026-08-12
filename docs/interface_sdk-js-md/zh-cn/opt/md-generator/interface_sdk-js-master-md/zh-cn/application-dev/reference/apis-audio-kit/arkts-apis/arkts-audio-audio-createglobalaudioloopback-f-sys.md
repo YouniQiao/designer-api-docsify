@@ -8,7 +8,7 @@ function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolea
 
 创建全局音频环回实例，提供低时延入耳监听功能。硬件音频环回只能在支持的平台中创建，应用程序可以使用  
 > **说明：**
-> {@link AudioStreamManager#isAudioLoopbackSupported}先检查。
+> [isAudioLoopbackSupported](arkts-audio-audio-audiostreammanager-i.md#isAudioLoopbackSupported)先检查。
 > 系统中应该只有一个拥有全局环回的主实例，其他
 > 是控制器。控制器可以通过向主设备发送命令来管理全局环回。
 > 实例，并从中监听状态变化。
@@ -34,12 +34,12 @@ function createGlobalAudioLoopback(mode: AudioLoopbackMode, isController: boolea
 
 | 类型 |
 | --- |
-| Promise&lt;AudioLoopback \| null&gt; |
+| Promise&lt;[AudioLoopback](arkts-audio-audio-audioloopback-i.md) \| null & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |

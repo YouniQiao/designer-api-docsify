@@ -13,7 +13,7 @@ Indicates the options of NavDestination switch.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## navigationId
@@ -24,7 +24,7 @@ navigationId: ResourceStr
 
 The navigationId that need observation.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 

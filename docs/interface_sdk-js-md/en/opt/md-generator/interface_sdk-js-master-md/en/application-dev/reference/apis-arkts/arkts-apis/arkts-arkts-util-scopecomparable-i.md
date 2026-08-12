@@ -11,7 +11,7 @@ The values of the **ScopeComparable** type are used to implement the **compareTo
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## compareTo

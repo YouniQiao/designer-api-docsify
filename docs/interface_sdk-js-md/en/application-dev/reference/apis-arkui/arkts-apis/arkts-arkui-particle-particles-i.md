@@ -18,7 +18,7 @@ particles: Array<ParticleOptions>
 
 Array of particles.
 
-**Type:** Array&lt;ParticleOptions&gt;
+**Type:** Array&lt;[ParticleOptions](arkts-arkui-particle-particleoptions-i.md)&gt;
 
 **Since:** 23
 

@@ -3,7 +3,7 @@
 本模块提供SendableResource资源相关信息，包括应用包名、应用模块名、资源类型等。SendableResource实现了  
 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable)接口，支持跨线程传输，用于在多线程场景下访问应用资源。
 
-**继承/实现关系：** SendableResource extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**继承/实现关系：** SendableResource extends [lang.ISendable](lang.ISendable)
 
 **起始版本：** 12
 
@@ -83,7 +83,7 @@ params?: collections.Array <string | number>
 
 资源参数，包括：资源名（string类型）、格式化接口替换值（按占位符顺序提供string或number）、复数接口量词（number类型，表示数量）。格式化接口的替换值用于字符串格式化时的参数替换，复数接口的量词用于选择多语言环境下的复数形式。
 
-**类型：** collections.Array &lt;string \| number&gt;
+**类型：** collections.Array&lt;string \| number&gt;
 
 **起始版本：** 12
 

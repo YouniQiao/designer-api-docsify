@@ -8,7 +8,7 @@ Defines the options for fetching file attributes.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md)
+**Substitutes:** [FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions)
 
 <!--Device-userFileManager-interface AlbumFetchOptions--><!--Device-userFileManager-interface AlbumFetchOptions-End-->
 
@@ -19,7 +19,7 @@ Defines the options for fetching file attributes.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## predicates
@@ -38,7 +38,7 @@ Predicates that specify the fetch criteria.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.FetchOptions.predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#predicates)
+**Substitutes:** [predicates](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#predicates)
 
 <!--Device-AlbumFetchOptions-predicates: dataSharePredicates.DataSharePredicates--><!--Device-AlbumFetchOptions-predicates: dataSharePredicates.DataSharePredicates-End-->
 

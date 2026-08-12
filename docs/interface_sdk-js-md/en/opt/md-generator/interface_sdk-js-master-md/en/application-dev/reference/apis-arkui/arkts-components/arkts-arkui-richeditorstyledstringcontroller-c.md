@@ -1,9 +1,9 @@
 # RichEditorStyledStringController
 
 Represents the controller of the **RichEditor** component constructed using the styled string. Inherits from   
-[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
+[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController).
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) and implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md/arkts-arkui-styledstringcontroller-i.md)
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController) and implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md#StyledStringController)
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ onContentChanged(listener: StyledStringChangedListener): void
 ```
 
 Registers the callback for the text content change. This callback is triggered only when the text content is changed by backend programs, and is not triggered when   
-[setStyledString](arkts-arkui-richeditorstyledstringcontroller-c.md#setstyledstring) is called.
+[setStyledString](#setStyledString) is called.
 
 **Since:** 12
 

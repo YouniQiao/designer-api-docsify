@@ -46,7 +46,7 @@ Mask color.
 
 Default value: **\$r('sys.color.ohos_id_color_mask_thin')**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 20
 

@@ -1,8 +1,8 @@
 # WithThemeAttribute
 
-不支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+不支持[通用属性](common)。
 
-不支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+不支持[通用事件](common)。
 
 **起始版本：** 12
 

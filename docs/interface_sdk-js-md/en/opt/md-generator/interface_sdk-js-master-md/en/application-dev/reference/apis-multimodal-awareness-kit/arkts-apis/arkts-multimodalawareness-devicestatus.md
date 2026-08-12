@@ -11,7 +11,7 @@ The **deviceStatus** module provides the device status awareness functionality.
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## Summary

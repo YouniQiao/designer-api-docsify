@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## promiseWrapper
@@ -20,7 +20,7 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 **Deprecated since:** 9
 
-**Substitutes:** [util.promisify](arkts-arkts-util-promisify-f.md#promisify)
+**Substitutes:** [promisify](arkts-arkts-util-promisify-f.md#promisify)
 
 <!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
 

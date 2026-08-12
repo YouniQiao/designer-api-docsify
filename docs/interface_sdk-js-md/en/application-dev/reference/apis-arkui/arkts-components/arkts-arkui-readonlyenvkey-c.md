@@ -18,7 +18,7 @@ static readonly WINDOW_AVOID_AREA: ReadonlySystemEnvKey<window.UIEnvWindowAvoidA
 
 System environment avoidarea key that is used to obtain the avoid area of the window, measured in vp.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoVP&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoVP&gt;
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ static readonly WINDOW_AVOID_AREA_PX: ReadonlySystemEnvKey<window.UIEnvWindowAvo
 
 System environment avoidarea key that is used to obtain the avoid area of the window, measured in px.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoPX&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.UIEnvWindowAvoidAreaInfoPX&gt;
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ static readonly WINDOW_DISPLAY_ID: ReadonlySystemEnvKey<long>
 
 System environmental displayid key that is used to obtain the display id of the window.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;long&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;long&gt;
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ static readonly WINDOW_IS_FOCUSED: ReadonlySystemEnvKey<boolean>
 
 System environment windowisfocused key that is used to obtain whether the window is focused or not.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;boolean&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;boolean&gt;
 
 **Since:** 26.0.0
 
@@ -104,7 +104,7 @@ static readonly WINDOW_IS_HIGHLIGHTED: ReadonlySystemEnvKey<boolean>
 
 System environment windowishighlighted key that is used to obtain whether the window is highlighted or not.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;boolean&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;boolean&gt;
 
 **Since:** 26.0.0
 
@@ -124,7 +124,7 @@ static readonly WINDOW_SIZE: ReadonlySystemEnvKey<window.SizeInVP>
 
 System environment windowsize key that is used to obtain the size of the window, measured in vp.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.SizeInVP&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.SizeInVP&gt;
 
 **Since:** 26.0.0
 
@@ -146,7 +146,7 @@ static readonly WINDOW_SIZE_PX: ReadonlySystemEnvKey<window.Size>
 
 System environment windowsize key that is used to obtain the size of the window, measured in px.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;window.Size&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;window.Size&gt;
 
 **Since:** 26.0.0
 
@@ -168,7 +168,7 @@ static readonly WINDOW_SYSTEM_DENSITY: ReadonlySystemEnvKey<double>
 
 System environmental system density key that is used to obtain the system density of the display  where the window is located.
 
-**Type:** [ReadonlySystemEnvKey](../arkts-apis/arkts-arkui-decorator-readonlysystemenvkey-c.md)&lt;double&gt;
+**Type:** [ReadonlySystemEnvKey](arkts-arkui-readonlysystemenvkey-c.md)&lt;double&gt;
 
 **Since:** 26.0.0
 

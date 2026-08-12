@@ -28,8 +28,8 @@ function off(type: 'operationSubmitMetadata', bundleName: string, callback?: Cal
 
 | 错误码ID |
 | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) |
-| [32100005](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-取消订阅失败) |
+| [32100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) |
+| [32100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-取消订阅失败) |
 
 ## 示例
 

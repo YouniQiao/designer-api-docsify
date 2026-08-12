@@ -104,9 +104,9 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md) | 是 | 无障碍事件类型。 |
+| type | EventType | 是 | 无障碍事件类型。 |
 | bundleName | string | 是 | 目标应用名。 |
-| triggerAction | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | 是 | 触发事件的 Action。 |
+| triggerAction | Action | 是 | 触发事件的 Action。 |
 
 ## 示例
 
@@ -438,7 +438,7 @@ textResourceAnnouncedForAccessibility?: Resource
 
 主动播报的内容支持传入Resource类型，且只能传入string。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**类型：** Resource
 
 **起始版本：** 18
 
@@ -460,7 +460,7 @@ triggerAction: Action
 
 触发事件的Action，不可缺省。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 7
 
@@ -482,7 +482,7 @@ type: EventType
 
 无障碍事件类型，不可缺省。
 
-**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
+**类型：** EventType
 
 **起始版本：** 7
 

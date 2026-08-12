@@ -1,6 +1,6 @@
 # MutableStyledString
 
-继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md)类。
+继承于[StyledString](arkts-arkui-styledstring-styledstring-c.md#StyledString)类。
 
 > **以下接口异常入参处理统一说明：**
 > 
@@ -8,7 +8,7 @@
 > 
 > 当styledKey和styledValue传入异常值或者两者对应关系不匹配时，会抛出异常。
 
-**继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-styledstring-c.md)
+**继承/实现关系：** MutableStyledString extends [StyledString](arkts-arkui-styledstring-styledstring-c.md#StyledString)
 
 **起始版本：** 23
 
@@ -84,8 +84,8 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| ImageAttachment \| CustomSpan | 是 | 属性字符串文本内容。&lt;br/&gt;**说明：** &lt;br/&gt;当value的类型为ImageAttachment或 CustomSpan时，styles参数不生效。&lt;br/&gt;需要设置styles时，通过[setStyle](arkts-arkui-styledstring-mutablestyledstring-c.md#setstyle)等方法实现。 |
-| styles | Array&lt;StyleOptions&gt; | 否 | 属性字符串初始化选项。&lt;br/&gt;**说明：** &lt;br/&gt;start为异常值时，按默认值0处理；&lt;br/&gt;当length为异常值时， length等于属性字符串在start后的实际长度；&lt;br/&gt;当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
+| value | string \| [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) \| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 是 | 属性字符串文本内容。&lt;br/&gt;**说明：** &lt;br/&gt;当value的类型为ImageAttachment或 CustomSpan时，styles参数不生效。&lt;br/&gt;需要设置styles时，通过[setStyle](#setStyle)等方法实现。 |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styledstring-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。&lt;br/&gt;**说明：** &lt;br/&gt;start为异常值时，按默认值0处理；&lt;br/&gt;当length为异常值时， length等于属性字符串在start后的实际长度；&lt;br/&gt;当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
 
 ## insertString
 
@@ -116,7 +116,7 @@ insertString(start: int, other: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## insertStyledString
 
@@ -147,7 +147,7 @@ insertStyledString(start: int, other: StyledString): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeString
 
@@ -157,7 +157,7 @@ removeString(start: int, length: int): void
 
 移除指定范围的字符串。
 
-当属性字符串中包含图片或[CustomSpan](arkts-arkui-styledstring-customspan-c.md)时，同样生效。
+当属性字符串中包含图片或[CustomSpan](arkts-arkui-styledstring-customspan-c.md#CustomSpan)时，同样生效。
 
 **起始版本：** 23
 
@@ -180,7 +180,7 @@ removeString(start: int, length: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeStyle
 
@@ -216,7 +216,7 @@ removeStyle(start: int, length: int, styledKey: StyledStringKey): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## removeStyles
 
@@ -251,7 +251,7 @@ removeStyles(start: int, length: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceString
 
@@ -283,7 +283,7 @@ replaceString(start: int, length: int, other: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceStyle
 
@@ -313,7 +313,7 @@ replaceStyle(spanStyle: SpanStyle): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## replaceStyledString
 
@@ -345,7 +345,7 @@ replaceStyledString(start: int, length: int, other: StyledString): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## setStyle
 
@@ -375,5 +375,5 @@ setStyle(spanStyle: SpanStyle): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | The parameter check failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. |
 

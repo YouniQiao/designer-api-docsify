@@ -13,7 +13,7 @@ Provides methods for setting the sound effect, including the ringtone, dial tone
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

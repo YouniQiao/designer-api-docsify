@@ -36,7 +36,7 @@ allowList?: string[]
 isMultiValues?: boolean
 ```
 
-表示是否是多值类型的共享配置，默认为false，表示非多值类型。如果为true，则表示本次发布的数据是多值类型，则 [value](arkts-arkdata-datashare-proxydata-i.md#value) 参数将被忽略。默认值： false。
+表示是否是多值类型的共享配置，默认为false，表示非多值类型。如果为true，则表示本次发布的数据是多值类型，则 [value](#value) 参数将被忽略。默认值： false。
 
 **类型：** boolean
 
@@ -98,7 +98,7 @@ value?: ValueType
 
 共享配置的值。不填则为空字符串。  
 **说明：**1. API版本26.0.0之前，字符串长度不超过4096个字节；从API版本26.0.0开始，默认允许的字符串最大长度为4096字节，可以在
-[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md)中配置maxValueLength将最大长度扩展到102400字节。2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
+[DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md#DataProxyConfig)中配置maxValueLength将最大长度扩展到102400字节。2. 当首次发布共享配置时，如果未填写，将默认设置为空字符串。在更新共享配置时，如果未填写，共享配置的值将不会被更新。
 
 **类型：** [ValueType](arkts-arkdata-valuetype-t.md)
 
@@ -118,7 +118,7 @@ value?: ValueType
 values?: Record<int, ValueType>
 ```
 
-多值类型取值。**Record**中的第一个参数为key，key由用户指定，必须唯一。第二个参数为key对应的value。单个应用在单个URI下最多支持添加10个value，每个value最大长度为4096字节。同时，所有va lue的总长度受参数值[maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxvaluelength)]限制。该参数仅在[isMultiValues](arkts-arkdata-datashare-proxydata-i.md#ismultivalues)}设置为true时生效。
+多值类型取值。**Record**中的第一个参数为key，key由用户指定，必须唯一。第二个参数为key对应的value。单个应用在单个URI下最多支持添加10个value，每个value最大长度为4096字节。同时，所有va lue的总长度受参数值[maxValueLength](arkts-arkdata-datashare-dataproxyconfig-i.md#maxValueLength)]限制。该参数仅在[isMultiValues](#isMultiValues)}设置为true时生效。
 
 **类型：** ArkTS-Dyn: Record&lt;number, [ValueType](arkts-arkdata-valuetype-t.md)&gt;  <br>ArkTS-Sta：Record&lt;int, [ValueType](arkts-arkdata-valuetype-t.md)&gt;
 

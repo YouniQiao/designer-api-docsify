@@ -38,7 +38,7 @@ type: DataOperationType.RELOAD
 
 Type of data reloading.
 
-**Type:** DataOperationType.RELOAD
+**Type:** [DataOperationType.RELOAD](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
 

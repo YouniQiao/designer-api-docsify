@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md)
+**替代接口：** [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#DeviceManager)
 
 <!--Device-deviceManager-interface DeviceManager--><!--Device-deviceManager-interface DeviceManager-End-->
 
@@ -28,7 +28,7 @@ authenticateDevice(
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindtarget)(deviceId:
+**替代接口：** [bindTarget](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.bindTarget(deviceId:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -42,16 +42,16 @@ authenticateDevice(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | 是 |
-| authParam | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i-sys.md) | 是 |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | 是 |
+| [authParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -151,8 +151,8 @@ deleteCredential(queryInfo: string, callback: AsyncCallback<{ resultInfo: string
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -204,7 +204,7 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename)
+**替代接口：** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceName)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -225,8 +225,8 @@ getDeviceInfo(networkId: string, callback: AsyncCallback<DeviceInfo>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -264,7 +264,7 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getdevicename)
+**替代接口：** [getDeviceName](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getDeviceName)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -284,14 +284,14 @@ getDeviceInfo(networkId: string): Promise<DeviceInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;DeviceInfo&gt; |
+| Promise & lt;DeviceInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -322,7 +322,7 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
+**替代接口：** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getLocalDeviceNetworkId)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -342,8 +342,8 @@ getLocalDeviceInfo(callback: AsyncCallback<DeviceInfo>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -380,7 +380,7 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
+**替代接口：** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getLocalDeviceNetworkId)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -394,13 +394,13 @@ getLocalDeviceInfo(): Promise<DeviceInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;DeviceInfo&gt; |
+| Promise & lt;DeviceInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -429,7 +429,7 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getlocaldevicenetworkid)
+**替代接口：** [getLocalDeviceNetworkId](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getLocalDeviceNetworkId)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -443,15 +443,15 @@ getLocalDeviceInfoSync(): DeviceInfo
 
 | 类型 |
 | --- |
-| [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) |
+| [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -481,7 +481,7 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)(callback:
+**替代接口：** [getAvailableDeviceList](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceList(callback:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -501,8 +501,8 @@ getTrustedDeviceList(callback: AsyncCallback<Array<DeviceInfo>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -538,7 +538,7 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)()
+**替代接口：** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceList)()
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -552,13 +552,13 @@ getTrustedDeviceList(): Promise<Array<DeviceInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;DeviceInfo&gt;&gt; |
+| Promise & lt;Array & lt;DeviceInfo & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -587,7 +587,7 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+**替代接口：** [getAvailableDeviceListSync](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -601,15 +601,15 @@ getTrustedDeviceListSync(): Array<DeviceInfo>
 
 | 类型 |
 | --- |
-| Array&lt;DeviceInfo&gt; |
+| Array & lt;DeviceInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -657,16 +657,16 @@ getTrustedDeviceListSync(isRefresh: boolean): Array<DeviceInfo>
 
 | 类型 |
 | --- |
-| Array&lt;DeviceInfo&gt; |
+| Array & lt;DeviceInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -715,8 +715,8 @@ importCredential(credentialInfo: string, callback: AsyncCallback<{ resultInfo: s
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -797,7 +797,7 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -818,8 +818,8 @@ off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -848,7 +848,7 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -869,8 +869,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAc
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -914,7 +914,7 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -935,8 +935,8 @@ off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: Devi
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -980,7 +980,7 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1001,8 +1001,8 @@ off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: num
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1057,8 +1057,8 @@ off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1112,8 +1112,8 @@ off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1149,7 +1149,7 @@ off(type: 'serviceDie', callback?: () => void): void
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1164,14 +1164,14 @@ off(type: 'serviceDie', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'serviceDie' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1202,7 +1202,7 @@ ui状态变更回调。
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1223,8 +1223,8 @@ ui状态变更回调。
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1266,7 +1266,7 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1287,8 +1287,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeActi
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1332,7 +1332,7 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1353,8 +1353,8 @@ on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: Device
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1398,7 +1398,7 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1419,8 +1419,8 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1475,8 +1475,8 @@ on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1530,8 +1530,8 @@ on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1567,7 +1567,7 @@ on(type: 'serviceDie', callback: () => void): void
 
 **废弃版本：** 11
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1582,14 +1582,14 @@ on(type: 'serviceDie', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'serviceDie' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1638,11 +1638,11 @@ publishDeviceDiscovery(publishInfo: PublishInfo): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-发布业务不可用) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [11600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600105-发布业务不可用) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1687,7 +1687,7 @@ release(): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager)
+**替代接口：** [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releaseDeviceManager)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1701,9 +1701,9 @@ release(): void
 
 | 错误码ID |
 | --- |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1751,8 +1751,8 @@ requestCredentialRegisterInfo(requestInfo: string, callback: AsyncCallback<{ reg
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1801,7 +1801,7 @@ setUserOperation(operateAction: number, params: string): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.replyUiAction](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#replyuiaction)
+**替代接口：** [replyUiAction](arkts-distributedservice-distributeddevicemanager-devicemanager-i-sys.md#replyUiAction)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1822,9 +1822,9 @@ setUserOperation(operateAction: number, params: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1862,7 +1862,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
+**替代接口：** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1882,11 +1882,11 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -1936,7 +1936,7 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startdiscovering)(discoverParam:
+**替代接口：** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1951,17 +1951,17 @@ startDeviceDiscovery(subscribeInfo: SubscribeInfo, filterOptions?: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | subscribeInfo | [SubscribeInfo](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | 是 |
-| filterOptions | string | 否 |
+| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | string | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -2033,7 +2033,7 @@ stopDeviceDiscovery(subscribeId: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.stopDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#stopdiscovering)
+**替代接口：** [stopDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#stopDiscovering)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2047,16 +2047,16 @@ stopDeviceDiscovery(subscribeId: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| subscribeId | number | 是 |
+| [subscribeId](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md) | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -2087,7 +2087,7 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 **废弃版本：** 11
 
-**替代接口：** [@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindtarget)
+**替代接口：** [unbindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#unbindTarget)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 
@@ -2101,16 +2101,16 @@ unAuthenticateDevice(deviceInfo: DeviceInfo): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i-sys.md) | 是 |
+| deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -2167,16 +2167,16 @@ unPublishDeviceDiscovery(publishId: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| publishId | number | 是 |
+| [publishId](arkts-distributedservice-devicemanager-publishinfo-i-sys.md) | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -2226,8 +2226,8 @@ verifyAuthInfo(authInfo: AuthInfo, callback: AsyncCallback<{ deviceId: string, l
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

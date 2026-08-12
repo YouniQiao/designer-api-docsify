@@ -1,8 +1,8 @@
 # BadgeParamWithString
 
-Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md) and has all attributes of **BadgeParam**.
+Inherits from [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam) and has all attributes of **BadgeParam**.
 
-**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md)
+**Inheritance/Implementation:** BadgeParamWithString extends [BadgeParam](arkts-arkui-badgeparam-i.md#BadgeParam)
 
 **Since:** 7
 
@@ -24,7 +24,7 @@ Text string of the badge content.
 
 The ResourceStr type is supported since API version 20.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 7
 

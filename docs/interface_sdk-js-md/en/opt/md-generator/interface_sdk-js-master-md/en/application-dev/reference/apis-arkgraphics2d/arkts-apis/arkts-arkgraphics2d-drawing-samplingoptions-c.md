@@ -20,7 +20,7 @@ Implements sampling options.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ constructor()
 ```
 
 Creates a **SamplingOptions** object, where the default value of  
-[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) is **FILTER_MODE_NEAREST**.
+[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#FilterMode) is **FILTER_MODE_NEAREST**.
 
 **Since:** 12
 
@@ -62,4 +62,4 @@ Creates a **SamplingOptions** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

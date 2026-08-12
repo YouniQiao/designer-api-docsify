@@ -1,7 +1,7 @@
 # RouterPageState
 
 Enumerates the states of a page during routing. **RouterPageState** is used in  
-[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via  
+[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo) as the callback parameter for passive observation via  
 [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback&lt;RouterPageInfo&gt;)).
 
 **Since:** 11

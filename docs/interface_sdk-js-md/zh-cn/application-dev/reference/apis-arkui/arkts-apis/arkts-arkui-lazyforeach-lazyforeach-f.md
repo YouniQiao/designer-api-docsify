@@ -33,7 +33,7 @@ export declare function LazyForEach<T = Any>(dataSource: IDataSource<T>,
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach组件。 |
+| [LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md) | LazyForEach组件。 |
 
 
 ## LazyForEach
@@ -71,7 +71,7 @@ export declare function LazyForEach<T = Any>(dataSource: IDataSource<T>,
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach组件 |
+| [LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md) | LazyForEach组件 |
 
 
 ## LazyForEach
@@ -100,11 +100,11 @@ export declare function LazyForEach<T = Any>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyForEachAttribute&gt; | 是 | 回调来设置LazyForEach的属性 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md)&gt; | 是 | 回调来设置LazyForEach的属性 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyForEachAttribute](../arkts-components/arkts-arkui-lazyforeach-attribute.md) | LazyForEach的属性。 |
+| [LazyForEachAttribute](arkts-arkui-lazyforeach-lazyforeachattribute-i.md) | LazyForEach的属性。 |
 

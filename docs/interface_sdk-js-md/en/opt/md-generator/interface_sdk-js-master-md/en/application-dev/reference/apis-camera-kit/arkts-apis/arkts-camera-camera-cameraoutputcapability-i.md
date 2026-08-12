@@ -11,7 +11,7 @@ Describes the camera output capability.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## photoProfiles
@@ -22,7 +22,7 @@ readonly photoProfiles: Array<Profile>
 
 Supported photo profiles.
 
-**Type:** Array&lt;Profile&gt;
+**Type:** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ readonly previewProfiles: Array<Profile>
 
 Supported preview profiles.
 
-**Type:** Array&lt;Profile&gt;
+**Type:** Array&lt;[Profile](arkts-camera-camera-profile-i.md)&gt;
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ readonly supportedMetadataObjectTypes: Array<MetadataObjectType>
 
 Supported metadata object types.
 
-**Type:** Array&lt;MetadataObjectType&gt;
+**Type:** Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt;
 
 **Since:** 10
 
@@ -76,7 +76,7 @@ readonly videoProfiles: Array<VideoProfile>
 
 Supported video profiles.
 
-**Type:** Array&lt;VideoProfile&gt;
+**Type:** Array&lt;[VideoProfile](arkts-camera-camera-videoprofile-i.md)&gt;
 
 **Since:** 10
 

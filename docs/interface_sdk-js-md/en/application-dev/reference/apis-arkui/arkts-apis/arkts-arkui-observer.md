@@ -15,7 +15,7 @@ Register callbacks to observe ArkUI behavior.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## Summary

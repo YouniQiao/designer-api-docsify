@@ -1,6 +1,6 @@
 # PdfData
 
-Defines the callback of createPdf, related to {@link createPDF} method.
+Defines the callback of createPdf, related to [createPDF](createPDF) method.
 
 **Since:** 23
 
@@ -13,7 +13,7 @@ Defines the callback of createPdf, related to {@link createPDF} method.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## pdfArrayBuffer

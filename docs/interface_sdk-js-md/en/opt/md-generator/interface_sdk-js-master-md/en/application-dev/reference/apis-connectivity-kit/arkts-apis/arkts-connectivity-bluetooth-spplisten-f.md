@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppListen
@@ -18,7 +18,7 @@ Creates a Bluetooth server listening socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppListen
+**Substitutes:** [sppListen](ohos.bluetoothManager/bluetoothManager.sppListen)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

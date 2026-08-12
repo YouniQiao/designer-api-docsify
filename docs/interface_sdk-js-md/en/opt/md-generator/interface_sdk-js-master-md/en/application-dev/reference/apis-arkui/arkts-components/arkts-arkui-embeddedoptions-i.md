@@ -58,7 +58,7 @@ placeholder?: ComponentContent
 
 Set placeholder.If set placeholder ComponentContent, show placeholder node when connection is not established.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 26.0.0
 

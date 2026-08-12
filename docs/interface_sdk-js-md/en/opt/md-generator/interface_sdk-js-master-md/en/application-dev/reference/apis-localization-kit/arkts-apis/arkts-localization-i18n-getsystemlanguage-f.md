@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## getSystemLanguage
@@ -18,7 +18,7 @@ Obtains the system language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.System.getSystemLanguage](arkts-localization-i18n-system-c.md#getsystemlanguage)
+**Substitutes:** [getSystemLanguage](arkts-localization-i18n-system-c.md#getSystemLanguage)
 
 <!--Device-i18n-export function getSystemLanguage(): string--><!--Device-i18n-export function getSystemLanguage(): string-End-->
 

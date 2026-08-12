@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## setApplicationEnabled
@@ -20,7 +20,7 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -36,7 +36,7 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## setApplicationEnabled
@@ -53,7 +53,7 @@ Sets whether to enable an application. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 

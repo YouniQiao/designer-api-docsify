@@ -4,14 +4,14 @@
 
 > **补充说明：**
 > 
-> - 当未设置builder或refreshingContent时，是通过更新子组件的[translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate)属性实现的下拉
+> - 当未设置builder或refreshingContent时，是通过更新子组件的[translate](CommonMethod#translate(value: TranslateOptions))属性实现的下拉
 > 位移效果。下拉位移过程中不会触发子组件的
-> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange)事件。子组件设置
-> [translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate)属性时不会生效。
+> [onAreaChange](CommonMethod#onAreaChange(event: (oldValue: Area, newValue: Area) => void))事件。子组件设置
+> [translate](CommonMethod#translate(value: TranslateOptions))属性时不会生效。
 > 
 > - 当设置了builder或refreshingContent时，是通过更新子组件相对于Refresh组件的位置实现的下拉位移效果。下拉位移过程中可以触发子组件的
-> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange)事件。子组件设置
-> [position](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#position)属性时会固定子组件相对于Refresh组件的位置，导致子组件不会跟手进行下拉位移。
+> [onAreaChange](CommonMethod#onAreaChange(event: (oldValue: Area, newValue: Area) => void))事件。子组件设置
+> [position](CommonMethod#position)属性时会固定子组件相对于Refresh组件的位置，导致子组件不会跟手进行下拉位移。
 > 
 > - 通过builder参数设置的自定义组件在未指定宽度和高度时，其尺寸将自适应子组件，在指定宽度而未指定高度时，其高度将自适应下拉距离。通过refreshingContent参数设置的自定义组件若未指定高度，其高度同样会自适应下拉
 > 距离。当自定义组件高度自适应下拉距离时，随着下拉距离的增加，该组件的高度亦随之增加；当自定义组件的高度设定为固定值或自适应至最大高度时，随着下拉距离的增加，自定义组件与Refresh组件上边界之间的间距亦会随之增加。
@@ -33,7 +33,7 @@ builder?: CustomBuilder
 自定义刷新区域显示内容。&lt;br/&gt;**说明：**&lt;br/&gt;API version 10及之前版本，自定义组件的高度限制在64vp之内。API version 11及以后版本没有此限制。&lt;br/&gt;自定义组件设置了固定高度时，自定义组件会以固定高度显示在刷新区域下方；自定义组件未设置高度时，自定义组件高度会自适应刷新区域高度，会发生自定义组件高度跟随刷新区域变化至0的现象。建议对自定义组件设置最小高度约束来避免自定义组件高度小于预期的情况发生，具体可参照
 [示例3](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#示例3自定义刷新区域显示内容-builder)。&lt;br/&gt;从API version 12开始，建议使用refreshingContent参数替代builder参数自定义刷新区域显示内容，以避免刷新过程中因自定义组件销毁重建造成的动画中断问题。
 
-**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**类型：** CustomBuilder
 
 **起始版本：** 10
 
@@ -64,7 +64,7 @@ friction?: number | string
 
 **废弃版本：** 11
 
-**替代接口：** RefreshAttribute#pullDownRatio
+**替代接口：** [pullDownRatio](RefreshAttribute#pullDownRatio)
 
 <!--Device-RefreshOptions-friction?: number | string--><!--Device-RefreshOptions-friction?: number | string-End-->
 
@@ -100,7 +100,7 @@ promptText?: ResourceStr
 [refreshOffset](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#refreshoffset12)属性默认值为96vp。&lt;br/&gt;自定义文本最大的字体缩放倍数  
 [maxFontScale](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#maxfontscale12)为2。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -143,7 +143,7 @@ refreshingContent?: ComponentContent
 自定义刷新区域显示内容。&lt;br/&gt;**说明：**&lt;br/&gt;与builder参数同时设置时builder参数不生效。&lt;br/&gt;自定义组件设置了固定高度时，自定义组件会以固定高度显示在刷新区域下方；自定义组件未设置高度时，自定义组件高度会自适应刷新区域高度，会发生自定义组件高度跟随刷新区域变化至0的现象。建议对自定义组件设置最小高度约束来避免自定义组件高度小于预期的情况发生，具体可参照
 [示例4](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#示例4自定义刷新区域显示内容-refreshingcontent)。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 12
 

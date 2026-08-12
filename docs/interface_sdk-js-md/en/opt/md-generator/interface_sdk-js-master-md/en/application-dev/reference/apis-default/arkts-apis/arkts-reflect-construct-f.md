@@ -18,9 +18,9 @@ Constructs the target with the elements of specified array as the arguments and 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| target | new (...args: A) =&gt; R | Yes |
+| target | new (...args: A) = & gt; R | Yes |
 | argumentsList | [Readonly](arkts-readonly-t.md)&lt;A&gt; | Yes |
-| newTarget | new (...args: any) =&gt; any | No |
+| newTarget | new (...args: any) = & gt; any | No |
 
 **Return value:**
 
@@ -40,7 +40,7 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | Function | Yes |
-| argumentsList | [ArrayLike&lt;any&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| argumentsList | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;any&gt; | Yes |
 | newTarget | Function | No |
 
 **Return value:**

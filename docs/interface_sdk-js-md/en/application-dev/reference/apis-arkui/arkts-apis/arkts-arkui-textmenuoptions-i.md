@@ -20,7 +20,7 @@ Menu display mode.
 
 Default value: **TextMenuShowMode.DEFAULT**
 
-**Type:** [TextMenuShowMode](arkts-arkui-textcommon-textmenushowmode-e.md)
+**Type:** [TextMenuShowMode](arkts-arkui-textmenushowmode-e.md)
 
 **Since:** 16
 

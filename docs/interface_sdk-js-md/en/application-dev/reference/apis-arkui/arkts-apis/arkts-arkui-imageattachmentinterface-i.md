@@ -64,7 +64,7 @@ Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
 
 Default value: **ImageFit.Cover**
 
-**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
+**Type:** ImageFit
 
 **Since:** 12
 
@@ -89,7 +89,7 @@ Image size, which does not support percentage values.
 The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is  
 **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
-**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**Type:** SizeOptions
 
 **Since:** 12
 
@@ -111,7 +111,7 @@ value: PixelMap
 
 Image data source.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** PixelMap
 
 **Since:** 12
 
@@ -135,7 +135,7 @@ Alignment mode of the image with the text.
 
 Default value: **ImageSpanAlignment.BOTTOM**
 
-**Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
+**Type:** ImageSpanAlignment
 
 **Since:** 12
 

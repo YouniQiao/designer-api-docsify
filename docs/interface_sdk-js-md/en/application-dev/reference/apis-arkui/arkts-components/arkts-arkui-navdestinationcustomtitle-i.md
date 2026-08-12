@@ -18,7 +18,7 @@ builder: CustomBuilder
 
 Content of the title bar.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ Height of the title bar.
 
 Value range: [0, +��)
 
-**Type:** [TitleHeight](../arkts-apis/arkts-arkui-enums-titleheight-e.md) \| Length
+**Type:** TitleHeight \| Length
 
 **Since:** 9
 

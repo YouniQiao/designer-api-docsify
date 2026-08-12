@@ -26,7 +26,7 @@ position?: Position
 
 **注意：** 若应用需隐藏系统默认音量面板，必须提供自定义音量面板，以确保用户仍可调节音量。
 
-**类型：** [Position](../../apis-arkui/arkts-apis/arkts-arkui-position-i.md)
+**类型：** [Position](../../apis-arkui/arkts-apis/arkts-arkui-units-position-i.md)
 
 **起始版本：** 23
 

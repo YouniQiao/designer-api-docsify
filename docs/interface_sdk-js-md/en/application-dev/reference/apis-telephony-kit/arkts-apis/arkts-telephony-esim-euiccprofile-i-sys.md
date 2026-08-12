@@ -15,7 +15,7 @@ Information about an embedded profile (subscription) on an eUICC.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## accessRules
@@ -26,7 +26,7 @@ accessRules: Array<AccessRule>
 
 Optional access rules that specify which apps can manage this profile. Default platform management when not set.
 
-**Type:** Array&lt;AccessRule&gt;
+**Type:** Array&lt;[AccessRule](arkts-telephony-esim-accessrule-i.md)&gt;
 
 **Since:** 18
 

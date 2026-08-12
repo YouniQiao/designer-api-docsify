@@ -13,7 +13,7 @@ XMPMetadata instance.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## enumerateTags
@@ -50,7 +50,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## getBlob
 
@@ -80,8 +80,8 @@ Obtains the XMP metadata as a blob.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
 ## getTag
 
@@ -111,13 +111,13 @@ Get a single XMP tag from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;XMPTag \| null&gt; | Promise used to return the XMP tag. |
+| Promise&lt;[XMPTag](arkts-image-image-xmptag-i.md) \| null&gt; | Promise used to return the XMP tag. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## getTags
 
@@ -148,13 +148,13 @@ Get all XMP tags from specified path.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, XMPTag&gt;&gt; | A Promise instance used to return all XMP tags. |
+| Promise&lt;Record&lt;string, [XMPTag](arkts-image-image-xmptag-i.md)&gt;&gt; | A Promise instance used to return all XMP tags. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## registerXMPNamespace
 
@@ -190,7 +190,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
 
 ## removeTag
 
@@ -226,7 +226,7 @@ Remove the XMP tag from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## setBlob
 
@@ -262,7 +262,7 @@ Set a blob into the XMP metadata.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
 
 ## setValue
 
@@ -300,5 +300,5 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
+| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
 

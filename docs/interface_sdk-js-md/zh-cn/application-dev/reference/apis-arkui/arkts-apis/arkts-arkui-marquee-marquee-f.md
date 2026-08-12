@@ -30,7 +30,7 @@ export declare function Marquee(
 
 | 类型 | 说明 |
 | --- | --- |
-| [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) |  |
+| [MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md) |  |
 
 
 ## Marquee
@@ -59,11 +59,11 @@ export declare function Marquee(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MarqueeAttribute&gt; | 是 | Marquee属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md)&gt; | 是 | Marquee属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) |  |
+| [MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md) |  |
 

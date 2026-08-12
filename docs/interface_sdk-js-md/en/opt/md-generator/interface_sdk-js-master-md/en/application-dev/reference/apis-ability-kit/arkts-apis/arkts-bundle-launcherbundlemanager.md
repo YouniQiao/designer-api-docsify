@@ -1,7 +1,7 @@
 # @ohos.bundle.launcherBundleManager
 
 The module providers APIs for launcher applications (applications with icons on the home screen) to obtain the  
-[launcher ability information](arkts-ability-launcherabilityinfo-i.md).
+[launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo).
 
 **Since:** 9
 
@@ -12,7 +12,7 @@ The module providers APIs for launcher applications (applications with icons on 
 ## Modules to Import
 
 ```TypeScript
-import { launcherBundleManager } from 'kits/@kit.AbilityKit';
+import { launcherBundleManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

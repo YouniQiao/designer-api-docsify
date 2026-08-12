@@ -1,6 +1,6 @@
 # AppEventPackage
 
-提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext)接口获得。
+提供订阅返回的事件包的参数定义。可用于获取事件包的详细信息，事件包由[takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takeNext)接口获得。
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ appEventInfos: Array<AppEventInfo>
 
 **原子化服务API：** 从API version 12开始，该参数支持在原子化服务中使用。
 
-**类型：** Array&lt;AppEventInfo&gt;
+**类型：** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
 **起始版本：** 12
 

@@ -25,8 +25,8 @@ Defines ToolBarItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | No | column options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| options | [ToolBarItemOptions](arkts-arkui-toolbar-toolbaritemoptions-i.md) | No | column options |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines ToolBarItem Component.It requires call setToolBarItemOptions at start of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ToolBarItemAttribute&gt; | Yes | the callback to set up toolbaritem's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ToolBarItemAttribute](arkts-arkui-toolbar-toolbaritemattribute-i.md)&gt; | Yes | the callback to set up toolbaritem's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 

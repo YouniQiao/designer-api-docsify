@@ -20,7 +20,7 @@ Distance of the focus box from the component's edge.
 
 A positive number indicates the outside, and a negative number indicates the inside. The value cannot be in percentage.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ strokeColor?: ColorMetrics
 
 Stroke color of the focus box.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ Stroke width of the focus box.
 
 Negative numbers and percentages are not supported.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 

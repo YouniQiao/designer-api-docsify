@@ -18,7 +18,7 @@ menuPolicy?: MenuPolicy
 
 Menu pop-up policy.
 
-**类型：** [MenuPolicy](../arkts-apis/arkts-arkui-common-menupolicy-e.md)
+**类型：** [MenuPolicy](arkts-arkui-menupolicy-e.md)
 
 **起始版本：** 12
 

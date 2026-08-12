@@ -13,7 +13,7 @@ Obtains detailed information of a file, including attributes such as the file si
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## isBlockDevice
@@ -339,7 +339,7 @@ readonly location: LocationType
 
 File location, which indicates whether the file is stored in a local device or in the cloud.
 
-**Type:** [LocationType](arkts-corefile-fileio-locationtype-e.md)
+**Type:** [LocationType](arkts-corefile-file-fs-locationtype-e.md)
 
 **Since:** 23
 

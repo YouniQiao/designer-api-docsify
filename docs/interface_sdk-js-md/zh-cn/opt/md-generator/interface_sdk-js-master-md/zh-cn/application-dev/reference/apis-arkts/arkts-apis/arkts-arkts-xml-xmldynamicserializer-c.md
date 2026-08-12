@@ -42,8 +42,8 @@ addEmptyElement(name: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -84,7 +84,7 @@ constructor(encoding?: string)
 
 | 错误码ID |
 | --- |
-| [10200066](../errorcode-utils.md#10200066-编码格式错误) |
+| [10200066](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200066-编码格式错误) |
 
 ## 示例
 
@@ -102,7 +102,7 @@ endElement(): void
 
 > **说明：**
 > 
-> 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startelement)接口写入元素开始标记。
+> 调用该接口前必须先调用[startElement](arkts-arkts-xml-xmlserializer-c.md#startElement)接口写入元素开始标记。
 
 **起始版本：** 20
 
@@ -116,8 +116,8 @@ endElement(): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200065](../errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200065](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200065-元素开始标记与元素结束标记未匹配使用) |
 
 ## 示例
 
@@ -202,9 +202,9 @@ setAttributes(name: string, value: string): void
 
 | 错误码ID |
 | --- |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200063](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -251,8 +251,8 @@ setCdata(text: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -293,8 +293,8 @@ setComment(text: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -329,8 +329,8 @@ setDeclaration(): void
 
 | 错误码ID |
 | --- |
-| [10200063](../errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200063](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml文件声明或属性位置设置错误) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
 
 ## 示例
 
@@ -371,8 +371,8 @@ setDocType(text: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -397,7 +397,7 @@ setNamespace(prefix: string, namespace: string): void
 
 > **说明：**
 > 
-> 该接口应在[startElement](arkts-arkts-xml-xmldynamicserializer-c.md#startelement)之前调用，为即将开启的元素设置命名空间前缀。调用顺序：
+> 该接口应在[startElement](#startElement)之前调用，为即将开启的元素设置命名空间前缀。调用顺序：
 > 先调用setNamespace设置命名空间，再调用startElement开启元素。
 > 
 > 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的前缀以及对同一个元素设置多个命名空间。
@@ -421,8 +421,8 @@ setNamespace(prefix: string, namespace: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -449,8 +449,8 @@ setText(text: string): void
 
 > **说明：**
 > 
-> 该接口必须在[startElement](arkts-arkts-xml-xmldynamicserializer-c.md#startelement)之后、
-> [endElement](arkts-arkts-xml-xmldynamicserializer-c.md#endelement)之前调用，用于设置当前元素的文本内容。
+> 该接口必须在[startElement](#startElement)之后、
+> [endElement](#endElement)之前调用，用于设置当前元素的文本内容。
 
 **起始版本：** 20
 
@@ -470,8 +470,8 @@ setText(text: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 
@@ -499,7 +499,7 @@ startElement(name: string): void
 
 > **说明：**
 > 
-> - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endelement)写入元素结束标记，以确保节点正确闭合。
+> - 调用该接口后须调用[endElement](arkts-arkts-xml-xmlserializer-c.md#endElement)写入元素结束标记，以确保节点正确闭合。
 > 
 > - 该接口对所添加数据不做标准XML校验处理，请确保所添加的数据符合标准XML规范。比如不允许添加数字开头的元素名称。
 
@@ -521,8 +521,8 @@ startElement(name: string): void
 
 | 错误码ID |
 | --- |
-| [10200062](../errorcode-utils.md#10200062-xml的累积长度已超过上限) |
-| [10200064](../errorcode-utils.md#10200064-入参字符串不能为空) |
+| [10200062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml的累积长度已超过上限) |
+| [10200064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-入参字符串不能为空) |
 
 ## 示例
 

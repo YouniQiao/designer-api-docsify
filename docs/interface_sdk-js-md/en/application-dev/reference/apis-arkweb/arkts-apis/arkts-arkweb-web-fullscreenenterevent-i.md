@@ -18,7 +18,7 @@ handler: FullScreenExitHandler
 
 Function handle for exiting full screen mode.
 
-**Type:** [FullScreenExitHandler](../arkts-components/arkts-arkweb-fullscreenexithandler-c.md)
+**Type:** [FullScreenExitHandler](arkts-arkweb-web-fullscreenexithandler-c.md)
 
 **Since:** 23
 

@@ -1,7 +1,7 @@
 # MenuItemConfiguration
 
 You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
+[CommonConfiguration](CommonConfiguration).
 
 **Inheritance/Implementation:** MenuItemConfiguration extends [CommonConfiguration<MenuItemConfiguration>](CommonConfiguration<MenuItemConfiguration>)
 
@@ -53,7 +53,7 @@ Icon of the drop-down menu option.
 
 The string type can be used to load network images and local images.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -149,7 +149,7 @@ Text content of the drop-down menu option.
 
 If the length of the text exceeds the width of the menu item text area, the text will be truncated.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 

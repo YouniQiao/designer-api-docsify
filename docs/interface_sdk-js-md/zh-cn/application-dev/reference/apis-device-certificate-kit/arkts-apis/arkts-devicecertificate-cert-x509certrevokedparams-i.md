@@ -76,7 +76,7 @@ crls?: Array<X509CRL>
 
 CRL列表。最大个数：100。
 
-**类型：** Array&lt;X509CRL&gt;
+**类型：** Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -144,7 +144,7 @@ revocationFlags: Array<CertRevocationFlag>
 
 吊销检查标志。数组长度范围：[1, 4]。数组必须包含CERT_REVOCATION_CRL_CHECK或CERT_REVOCATION_OCSP_CHECK。
 
-**类型：** Array&lt;CertRevocationFlag&gt;
+**类型：** Array&lt;[CertRevocationFlag](arkts-devicecertificate-cert-certrevocationflag-e.md)&gt;
 
 **起始版本：** 26.0.0
 

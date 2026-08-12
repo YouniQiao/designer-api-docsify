@@ -37,7 +37,7 @@
 | 名称 | 类型 | 只读 | 可选 | 说明 |
 | -------- | -------- | -------- | -- | -------- |
 | scroller | [Scroller]{@link scroll:Scroller} | 否 | 否 | 可滚动组件的控制器。用于与可滚动组件进行绑定。 |
-| direction | [ScrollBarDirection](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。&lt;br/&gt;默认值：ScrollBarDirection.Vertical |
+| direction | [ScrollBarDirection](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md#scrollbardirection枚举说明) | 否 | 是 | 滚动条的方向，控制可滚动组件对应方向的滚动。 & lt;br/ & gt;默认值：ScrollBarDirection.Vertical |
 | state | [BarState]{@link enums:BarState} | 否 | 是 |
 
 ## ScrollBarDirection枚举说明

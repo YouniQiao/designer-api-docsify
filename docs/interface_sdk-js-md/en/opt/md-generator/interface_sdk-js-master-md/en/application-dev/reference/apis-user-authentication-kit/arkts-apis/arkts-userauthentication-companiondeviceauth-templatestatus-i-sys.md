@@ -13,7 +13,7 @@ Describes the complete status information about a registered companion device au
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## addedTime
@@ -63,7 +63,7 @@ enabledBusinessIds: number[]
 ```
 
 List of supported service IDs. It specifies the service scenarios where the template is enabled. You can update the service scenarios by calling the  
-[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateenabledbusinessids) API.
+[updateEnabledBusinessIds](arkts-userauthentication-companiondeviceauth-updateenabledbusinessids-f-sys.md#updateEnabledBusinessIds) API.
 
 **Type:** number[]
 

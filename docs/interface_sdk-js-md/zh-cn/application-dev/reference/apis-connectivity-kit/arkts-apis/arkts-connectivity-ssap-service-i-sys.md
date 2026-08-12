@@ -16,9 +16,9 @@ SSAP服务。
 events?: Event[]
 ```
 
-属于此服务的事件。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持该字段。
+属于此服务的事件。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addService)方法中不支持该字段。
 
-**类型：** [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[]
+**类型：** Event[]
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ events?: Event[]
 methods?: Method[]
 ```
 
-属于此服务的方法。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addservice)方法中不支持此字段。
+属于此服务的方法。&lt;br&gt;[addService](arkts-connectivity-ssap-server-i.md#addService)方法中不支持此字段。
 
 **类型：** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 

@@ -90,7 +90,7 @@ assetId: string
 
 - 该属性发生变化则其他元数据属性都将被刷新。  
 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
-- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setavmetadata)方法将失败，返回错误码6600101。
+- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setAVMetadata-1)方法将失败，返回错误码6600101。
 
 **类型：** string
 
@@ -160,7 +160,7 @@ description?: string
 displayTags?: number
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md)。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md#DisplayTag)。
 
 在使用了cast+协议的音频投播场景下，不支持使用该属性。
 
@@ -216,13 +216,13 @@ extras?: {[key: string]: Object}
 
 播放列表媒体额外字段。
 
-从API版本26.0.0开始，DLNA投播场景下支持将[ExtraKey](arkts-avsession-avsession-extrakey-e.md)中DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE两个键的值传递给对端设备，键值对的值需传入符合XML格式的字符串。如传入入参`{[avSession.ExtraKey.DLNA_CURRENT_URI_METADATA]: '&lt;xxtv&gt;...&lt;/xxtv&gt;'}`。
+从API版本26.0.0开始，DLNA投播场景下支持将[ExtraKey](arkts-avsession-avsession-extrakey-e.md#ExtraKey)中DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE两个键的值传递给对端设备，键值对的值需传入符合XML格式的字符串。如传入入参`{[avSession.ExtraKey.DLNA_CURRENT_URI_METADATA]: '&lt;xxtv&gt;...&lt;/xxtv&gt;'}`。
 
 - 非DLNA投播场景不生效。  
 - 非字符串类型不生效。  
 - 非XML格式会触发  
 [on('castControlIoError')](avSession.AVCastController.on(type: 'castControlIoError', callback: ErrorCallback))回调并返回错误码6612000。错误码的详细介绍请参见[媒体会话管理错误码](../../../reference/apis-avsession-kit/errorcode-avsession.md)。  
-- 通过extras字段，在[ExtraKey](arkts-avsession-avsession-extrakey-e.md)中通过DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE键传入的字符串总长度需小于40960字  
+- 通过extras字段，在[ExtraKey](arkts-avsession-avsession-extrakey-e.md#ExtraKey)中通过DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE键传入的字符串总长度需小于40960字  
 节。
 
 **类型：** {[key: string]: Object}

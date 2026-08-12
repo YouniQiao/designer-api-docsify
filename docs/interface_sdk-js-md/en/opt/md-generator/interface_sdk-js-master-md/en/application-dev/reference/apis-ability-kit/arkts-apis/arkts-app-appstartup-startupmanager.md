@@ -18,7 +18,7 @@ The module provides the capability to manage startup tasks in
 ## Modules to Import
 
 ```TypeScript
-import { startupManager } from 'kits/@kit.AbilityKit';
+import { startupManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

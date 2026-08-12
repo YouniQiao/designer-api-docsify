@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.RequestResult](arkts-ipc-rpc-requestresult-i.md)
+**替代接口：** [RequestResult](arkts-ipc-rpc-requestresult-i.md#RequestResult)
 
 <!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 
@@ -26,7 +26,7 @@ code: number
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.RequestResult#code](arkts-ipc-rpc-requestresult-i.md#code)
+**替代接口：** [code](arkts-ipc-rpc-requestresult-i.md#code)
 
 <!--Device-SendRequestResult-code: number--><!--Device-SendRequestResult-code: number-End-->
 
@@ -46,7 +46,7 @@ data: MessageParcel
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.RequestResult#data](arkts-ipc-rpc-requestresult-i.md#data)
+**替代接口：** [data](arkts-ipc-rpc-requestresult-i.md#data)
 
 <!--Device-SendRequestResult-data: MessageParcel--><!--Device-SendRequestResult-data: MessageParcel-End-->
 
@@ -66,7 +66,7 @@ errCode: number
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.RequestResult#errCode](arkts-ipc-rpc-requestresult-i.md#errcode)
+**替代接口：** [errCode](arkts-ipc-rpc-requestresult-i.md#errCode)
 
 <!--Device-SendRequestResult-errCode: number--><!--Device-SendRequestResult-errCode: number-End-->
 
@@ -86,7 +86,7 @@ reply: MessageParcel
 
 **废弃版本：** 9
 
-**替代接口：** [rpc.RequestResult#reply](arkts-ipc-rpc-requestresult-i.md#reply)
+**替代接口：** [reply](arkts-ipc-rpc-requestresult-i.md#reply)
 
 <!--Device-SendRequestResult-reply: MessageParcel--><!--Device-SendRequestResult-reply: MessageParcel-End-->
 

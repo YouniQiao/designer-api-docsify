@@ -18,7 +18,7 @@ color?: ResourceColor
 
 文本背景色。默认为透明，无背景色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 11
 
@@ -40,7 +40,7 @@ radius?: Dimension | BorderRadiuses
 
 文本背景圆角。默认无圆角。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
+**类型：** Dimension \| BorderRadiuses
 
 **起始版本：** 11
 

@@ -6,7 +6,7 @@
 function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 ```
 
-��ȡ/proc/{pid}/smaps_rollup��/proc/{pid}/statm�ڵ�������Ի�ȡӦ�ý����ڴ���Ϣ��ʹ��Promise�첽�ص���
+读取/proc/{pid}/smaps_rollup和/proc/{pid}/statm节点的数据以获取应用进程内存信息，使用Promise异步回调。
 
 **起始版本：** 20
 
@@ -18,7 +18,7 @@ function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;NativeMemInfo&gt; |
+| Promise&lt;[NativeMemInfo](arkts-performanceanalysis-hidebug-nativememinfo-i.md)&gt; |
 
 ## 示例
 

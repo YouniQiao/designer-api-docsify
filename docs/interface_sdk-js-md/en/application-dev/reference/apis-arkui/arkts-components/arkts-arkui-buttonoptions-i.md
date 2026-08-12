@@ -17,7 +17,7 @@ buttonStyle?: ButtonStyleMode
 ```
 
 Style and importance of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [role](ButtonAttribute#role) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 Default value: **ButtonStyleMode.EMPHASIZED**
@@ -26,7 +26,7 @@ Default value: **ButtonStyleMode.EMPHASIZED**
 
 The button primacy is as follows, from high to low: emphasized button, normal button, text button.
 
-**Type:** [ButtonStyleMode](../arkts-apis/arkts-arkui-button-buttonstylemode-e.md)
+**Type:** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
 **Default:** ButtonStyleMode.EMPHASIZED
 
@@ -54,7 +54,7 @@ Button size.
 
 Default value: **ControlSize.NORMAL**
 
-**Type:** [ControlSize](../arkts-apis/arkts-arkui-button-controlsize-e.md)
+**Type:** [ControlSize](arkts-arkui-controlsize-e.md)
 
 **Default:** ControlSize.NORMAL
 
@@ -79,7 +79,7 @@ role?: ButtonRole
 ```
 
 Role of the button. The system automatically adjusts the button background color and text color based on the enumerated value. You can also use the   
-[backgroundColor](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),   
 [fontColor](ButtonAttribute#fontColor), and [buttonStyle](ButtonAttribute#buttonStyle) APIs to set the background color and text color. The actual displayed effect will be determined by the last setting.
 
 Default value: **ButtonRole.NORMAL**
@@ -144,7 +144,7 @@ Default value: **ButtonType.ROUNDED_RECTANGLE**
 
 API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. Versions earlier than API version 18: The default value is **ButtonType.Capsule**.
 
-**Type:** [ButtonType](../arkts-apis/arkts-arkui-button-buttontype-e.md)
+**Type:** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **Since:** 7
 

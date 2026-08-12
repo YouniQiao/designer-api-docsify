@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from 'kits/@kit.DistributedServiceKit';
+import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 ```
 
 ## getPeerInfoById
@@ -34,13 +34,13 @@ Obtains information about the peer application in the specified session.
 
 | Type | Description |
 | --- | --- |
-| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
+| PeerInfo | Information about the peer application if the corresponding **peerInfo** exists; **undefined** if the session ID is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -82,11 +82,11 @@ Get the application information in the ability connection session
 
 | Type | Description |
 | --- | --- |
-| [PeerInfo](arkts-distributedservice-abilityconnectionmanager-peerinfo-i.md) | Returns the collaborative application information at the sink end. |
+| PeerInfo | Returns the collaborative application information at the sink end. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 

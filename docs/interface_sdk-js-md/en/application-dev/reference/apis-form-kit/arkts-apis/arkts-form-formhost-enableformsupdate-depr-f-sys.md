@@ -14,7 +14,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#enableFormsUpdate](arkts-form-formhost-enableformsupdate-depr-f-sys.md#enableformsupdate)
+**Substitutes:** [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableFormsUpdate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -29,7 +29,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget updatable, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## enableFormsUpdate
@@ -46,7 +46,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#enableFormsUpdate](arkts-form-formhost-enableformsupdate-depr-f-sys.md#enableformsupdate)
+**Substitutes:** [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableFormsUpdate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

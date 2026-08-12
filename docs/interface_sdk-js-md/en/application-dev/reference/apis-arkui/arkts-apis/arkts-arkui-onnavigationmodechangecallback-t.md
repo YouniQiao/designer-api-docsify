@@ -20,5 +20,5 @@ Callback function when NavigationMode changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) | Yes | current NavigationMode. |
+| mode | NavigationMode | Yes | current NavigationMode. |
 

@@ -22,7 +22,7 @@ Default value:
 
 GradientDirection.Bottom
 
-**Type:** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
+**Type:** GradientDirection
 
 **Since:** 12
 

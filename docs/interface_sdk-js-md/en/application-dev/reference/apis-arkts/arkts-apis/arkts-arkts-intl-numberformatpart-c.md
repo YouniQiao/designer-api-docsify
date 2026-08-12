@@ -32,6 +32,6 @@ The constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [NumberFormatPartTypes](arkts-arkts-intl-numberformatparttypes-t.md) | Yes |  |
+| type | NumberFormatPartTypes | Yes |  |
 | value | string | Yes |  |
 

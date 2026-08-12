@@ -1,6 +1,6 @@
 # VibratorEvent
 
-振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md)的events数组中定义具体的振动事件。
+振动事件。用于[VibratorPattern](arkts-sensorservice-vibrator-vibratorpattern-i.md#VibratorPattern)的events数组中定义具体的振动事件。
 
 **起始版本：** 18
 
@@ -108,7 +108,7 @@ points?: Array<VibratorCurvePoint>
 
 可选参数，表示振动调节曲线数组。使用场景：适用于需要精细控制振动强度和频率变化趋势的交互反馈场景。数组中元素个数最少设置4个，最大设置16个。
 
-**类型：** Array&lt;VibratorCurvePoint&gt;
+**类型：** Array&lt;[VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)&gt;
 
 **起始版本：** 18
 

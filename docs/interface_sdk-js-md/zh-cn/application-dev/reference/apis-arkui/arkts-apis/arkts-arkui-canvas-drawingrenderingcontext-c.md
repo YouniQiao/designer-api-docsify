@@ -60,7 +60,7 @@ get canvas(): DrawingCanvas | undefined
 
 获取绘制内容的画布对象。
 
-**类型：** [DrawingCanvas](arkts-arkui-drawingcanvas-t.md)
+**类型：** DrawingCanvas
 
 **起始版本：** 23
 

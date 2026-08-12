@@ -11,7 +11,7 @@ Creates an **Animator** object.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## create
@@ -26,13 +26,13 @@ Creates an **AnimatorResult** object for animations.
 > 
 > - Since API version 10, you can use the
 > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in
-> [UIContext](arkts-arkui-uicontext.md), which ensures that the object is created in the intended UI instance.
+> [UIContext](@ohos.arkui.UIContext), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#createAnimator
+**Substitutes:** [createAnimator](ohos.arkui.UIContext.UIContext#createAnimator)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,7 +56,7 @@ Creates an **AnimatorResult** object for animations.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -85,8 +85,8 @@ static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
 Creates an **AnimatorResult** object for animations. Compared with  
-[create](arkts-arkui-animator-animator-c.md#create), this API accepts parameters of the   
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+[create](#create), this API accepts parameters of the   
+[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
 **Since:** 18
 
@@ -114,7 +114,7 @@ Creates an **AnimatorResult** object for animations. Compared with
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -138,7 +138,7 @@ Creates an animation.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.animator.create
+**Substitutes:** [create](ohos.animator.create)
 
 <!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
 

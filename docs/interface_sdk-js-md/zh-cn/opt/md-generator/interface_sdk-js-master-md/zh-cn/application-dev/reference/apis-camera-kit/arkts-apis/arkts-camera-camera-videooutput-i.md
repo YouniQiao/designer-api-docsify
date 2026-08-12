@@ -1,8 +1,8 @@
 # VideoOutput
 
-录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
-**继承/实现关系：** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**继承/实现关系：** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **起始版本：** 10
 
@@ -18,8 +18,8 @@ enableMirror(enabled: boolean): void
 
 启用/关闭镜像录像。
 
-- 调用该接口前，需要通过[isMirrorSupported](arkts-camera-camera-videooutput-i.md#ismirrorsupported)查询是否支录像镜像功能。  
-- 启用/关闭录像镜像后，需要通过[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation)获取录像旋转角度以及  
+- 调用该接口前，需要通过[isMirrorSupported](#isMirrorSupported)查询是否支录像镜像功能。  
+- 启用/关闭录像镜像后，需要通过[getVideoRotation](#getVideoRotation)获取录像旋转角度以及  
 [updateRotation](@ohos.multimedia.media:media.AVRecorder.updateRotation)更新旋转角度。
 
 **起始版本：** 15
@@ -40,9 +40,9 @@ enableMirror(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getActiveFrameRate
 
@@ -52,7 +52,7 @@ getActiveFrameRate(): FrameRateRange
 
 获取已设置的帧率范围。
 
-使用[setFrameRate](arkts-camera-camera-videooutput-i.md#setframerate)对录像流设置过帧率后可查询。
+使用[setFrameRate](#setFrameRate)对录像流设置过帧率后可查询。
 
 **起始版本：** 12
 
@@ -94,7 +94,7 @@ getActiveProfile(): VideoProfile
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getSupportedFrameRates
 
@@ -116,7 +116,7 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 | 类型 |
 | --- |
-| Array&lt;FrameRateRange&gt; |
+| Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; |
 
 ## getVideoRotation
 
@@ -155,8 +155,8 @@ getVideoRotation(deviceDegree?: number): ImageRotation
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## isMirrorSupported
 
@@ -184,7 +184,7 @@ isMirrorSupported(): boolean
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## off('frameStart')
 
@@ -344,13 +344,13 @@ setFrameRate(minFps: number, maxFps: number): void
 
 设置录像流帧率范围，设置的范围必须在支持的帧率范围内。
 
-进行设置前，可通过[getSupportedFrameRates](arkts-camera-camera-videooutput-i.md#getsupportedframerates)查询支持的帧率范围。
+进行设置前，可通过[getSupportedFrameRates](#getSupportedFrameRates)查询支持的帧率范围。
 
 > **说明：**
 > 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
+> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession)或[VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)模式下支持。
 > 
-> 接口调用前，先调用[getActiveFrameRate](arkts-camera-camera-videooutput-i.md#getactiveframerate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则
+> 接口调用前，先调用[getActiveFrameRate](#getActiveFrameRate)接口查询当前VideoSession的帧率，若下发的帧率与当前帧率相等，则
 > 下发的帧率不会生效。
 
 **起始版本：** 12
@@ -372,8 +372,8 @@ setFrameRate(minFps: number, maxFps: number): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400110](../errorcode-camera.md#7400110-与当前配置存在冲突) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-与当前配置存在冲突) |
 
 ## start
 
@@ -401,8 +401,8 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## start
 
@@ -424,14 +424,14 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## stop
 
@@ -475,4 +475,4 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

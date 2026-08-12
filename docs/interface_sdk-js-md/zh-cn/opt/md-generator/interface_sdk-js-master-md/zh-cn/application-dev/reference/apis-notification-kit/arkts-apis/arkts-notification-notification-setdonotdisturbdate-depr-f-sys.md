@@ -12,7 +12,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, callback: AsyncCallback<voi
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#setDoNotDisturbDate
+**替代接口：** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#setDoNotDisturbDate
+**替代接口：** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -62,7 +62,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## setDoNotDisturbDate
@@ -77,7 +77,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number, callback: A
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#setDoNotDisturbDate
+**替代接口：** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -108,7 +108,7 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#setDoNotDisturbDate
+**替代接口：** [setDoNotDisturbDate](ohos.notificationManager/notificationManager#setDoNotDisturbDate)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -129,4 +129,4 @@ function setDoNotDisturbDate(date: DoNotDisturbDate, userId: number): Promise<vo
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

@@ -8,7 +8,7 @@ Defines the cipher functions.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.security.cryptoFramework.Cipher
+**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-unnamed-export default class Cipher--><!--Device-unnamed-export default class Cipher-End-->
 
@@ -17,7 +17,7 @@ Defines the cipher functions.
 ## Modules to Import
 
 ```TypeScript
-import { CipherAesOptions, CipherResponse, CipherRsaOptions } from 'kits/@kit.CryptoArchitectureKit';
+import { CipherAesOptions, CipherResponse, CipherRsaOptions } from '@kit.CryptoArchitectureKit';
 ```
 
 ## aes
@@ -34,7 +34,7 @@ Encrypts or decrypts data using AES.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.security.cryptoFramework.Cipher
+**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-Cipher-static aes(options: CipherAesOptions): void--><!--Device-Cipher-static aes(options: CipherAesOptions): void-End-->
 
@@ -60,7 +60,7 @@ Encrypts or decrypts data using RSA.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.security.cryptoFramework.Cipher
+**Substitutes:** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-Cipher-static rsa(options: CipherRsaOptions): void--><!--Device-Cipher-static rsa(options: CipherRsaOptions): void-End-->
 

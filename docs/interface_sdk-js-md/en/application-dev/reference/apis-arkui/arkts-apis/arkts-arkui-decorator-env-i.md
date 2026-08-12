@@ -16,8 +16,8 @@ Defining Env PropertyDecorator.
 value:  string
 ```
 
-Key value input by the user.On API 26.0.0 and above, it can also support a string literal in the format "ReadonlyEnvKey.&lt;keyName&gt;" or "WritableEnvKey.&lt;keyName&gt;".The key name must be one declared in [ReadonlyEnvKey](../arkts-components/arkts-arkui-readonlyenvkey-c.md/arkts-arkui-readonlyenvkey-c.md) or  
-[WritableEnvKey](../arkts-components/arkts-arkui-writableenvkey-c.md/arkts-arkui-writableenvkey-c.md). Arbitrary strings are not supported.
+Key value input by the user.On API 26.0.0 and above, it can also support a string literal in the format "ReadonlyEnvKey.&lt;keyName&gt;" or "WritableEnvKey.&lt;keyName&gt;".The key name must be one declared in [ReadonlyEnvKey](arkts-arkui-decorator-readonlyenvkey-c.md#ReadonlyEnvKey) or  
+[WritableEnvKey](arkts-arkui-decorator-writableenvkey-c.md#WritableEnvKey). Arbitrary strings are not supported.
 
 **Type:** string
 

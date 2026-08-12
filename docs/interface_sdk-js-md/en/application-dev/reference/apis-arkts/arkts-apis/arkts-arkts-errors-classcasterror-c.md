@@ -2,7 +2,7 @@
 
 Represents error that is thrown in case of illegal class casting
 
-**Inheritance/Implementation:** ClassCastError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ClassCastError extends [Error](Error)
 
 **Since:** 26.0.0
 

@@ -18,7 +18,7 @@ context: UIAbilityContext | UIContext
 
 触发页面切换的Navigation对应的上下文信息。
 
-**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| UIContext
+**类型：** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ from: NavDestinationInfo | NavBar
 
 From navigation content info.
 
-**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**类型：** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ to: NavDestinationInfo | NavBar
 
 To navigation content info.
 
-**类型：** [NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md) \| NavBar
+**类型：** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
 
 **起始版本：** 23
 

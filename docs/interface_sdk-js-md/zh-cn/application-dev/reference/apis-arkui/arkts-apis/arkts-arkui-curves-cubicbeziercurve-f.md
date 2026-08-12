@@ -31,5 +31,5 @@ export function cubicBezierCurve(x1: double, y1: double, x2: double, y2: double)
 
 | 类型 | 说明 |
 | --- | --- |
-| [ICurve](arkts-arkui-icurve-t.md) | 曲线的插值对象。 |
+| ICurve | 曲线的插值对象。 |
 

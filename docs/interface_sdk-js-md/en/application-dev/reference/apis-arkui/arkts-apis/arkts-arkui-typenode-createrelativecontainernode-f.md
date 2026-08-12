@@ -29,5 +29,5 @@ Create a FrameNode of RelativeContainer type.On API 26.0.0 and above, It can als
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainer](arkts-arkui-typenode-relativecontainer-t.md) | Return RelativeContainer type FrameNode. |
+| RelativeContainer | Return RelativeContainer type FrameNode. |
 

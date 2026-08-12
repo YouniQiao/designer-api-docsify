@@ -11,7 +11,7 @@ Defines the DownloadFileButton style option.
 ## Modules to Import
 
 ```TypeScript
-import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from 'kits/@kit.ArkUI';
+import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from '@kit.ArkUI';
 ```
 
 ## fontColor
@@ -76,7 +76,7 @@ fontStyle?: FontStyle
 
 Font Style.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 12
 

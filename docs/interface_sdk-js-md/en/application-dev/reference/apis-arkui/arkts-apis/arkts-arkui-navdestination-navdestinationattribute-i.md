@@ -2,7 +2,7 @@
 
 The attribute function of NavDestination
 
-**Inheritance/Implementation:** NavDestinationAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** NavDestinationAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set the attribute modifier of navDestination.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of navDestination. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of navDestination. |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Set back button icon and accessibility broadcast content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap \| SymbolGlyphModifier \| undefined | Yes | Indicates icon of back button. |
+| icon | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) \| undefined | Yes | Indicates icon of back button. |
 | accessibilityText | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined | No | Indicates content needs to broadcast. |
 
 **Return value:**
@@ -95,7 +95,7 @@ Bind NavDestination to nested scrollable container components to automatically h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scrollInfos | Array&lt;NestedScrollInfo&gt; \| undefined | Yes | The controllers of the nested scrollable container components. |
+| scrollInfos | Array&lt;[NestedScrollInfo](arkts-arkui-navdestination-nestedscrollinfo-i.md)&gt; \| undefined | Yes | The controllers of the nested scrollable container components. |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ Set NavDestination custom animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | [NavDestinationTransitionDelegate](../arkts-components/arkts-arkui-navdestinationtransitiondelegate-t.md) \| undefined | Yes | The delegate of NavDestination custom animation. |
+| delegate | [NavDestinationTransitionDelegate](arkts-arkui-navdestinationtransitiondelegate-t.md) \| undefined | Yes | The delegate of NavDestination custom animation. |
 
 **Return value:**
 
@@ -431,7 +431,7 @@ NavDestination title bar's menus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt; \| CustomBuilder \| undefined | Yes |  |
+| items | Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes |  |
 | options | [NavigationMenuOptions](../arkts-components/arkts-arkui-navigationmenuoptions-i.md) \| undefined | No | Indicates the options of menu. |
 
 **Return value:**
@@ -463,7 +463,7 @@ Sets the different mode of NavDestination.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md) \| undefined | Yes | NavDestinationMode<br>**Since:** 26.0.0 |
+| value | [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md) \| undefined | Yes | NavDestinationMode<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -493,7 +493,7 @@ Invoked when destination is active.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NavDestinationActiveReason&gt; \| undefined | Yes | Indicates callback when destination is active. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md)&gt; \| undefined | Yes | Indicates callback when destination is active. |
 
 **Return value:**
 
@@ -553,7 +553,7 @@ Invoked when the navDestination is hidden.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;VisibilityChangeReason&gt; \| undefined | Yes | Indicates callback when the navDestination is hidden. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[VisibilityChangeReason](arkts-arkui-navdestination-visibilitychangereason-e.md)&gt; \| undefined | Yes | Indicates callback when the navDestination is hidden. |
 
 **Return value:**
 
@@ -583,7 +583,7 @@ Invoked when destination is inactive.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NavDestinationActiveReason&gt; \| undefined | Yes | Indicates callback when destination is inactive. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[NavDestinationActiveReason](arkts-arkui-navdestination-navdestinationactivereason-e.md)&gt; \| undefined | Yes | Indicates callback when destination is inactive. |
 
 **Return value:**
 
@@ -643,7 +643,7 @@ Invoked before sub-components of NavDestination are created.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;NavDestinationContext&gt; \| undefined | Yes | Indicates callback that invoked before sub- components of NavDestination are created. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md)&gt; \| undefined | Yes | Indicates callback that invoked before sub- components of NavDestination are created. |
 
 **Return value:**
 
@@ -675,7 +675,7 @@ Triggered when page is reconstructed. The custom state saved by onSaveState is p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [RestoreStateCallback](../arkts-components/arkts-arkui-restorestatecallback-t.md) \| undefined | Yes | Custom state restore callback. |
+| callback | [RestoreStateCallback](arkts-arkui-restorestatecallback-t.md) \| undefined | Yes | Custom state restore callback. |
 
 **Return value:**
 
@@ -737,7 +737,7 @@ Triggered when page becomes hidden. Save custom page state for potential restora
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [SaveStateCallback](../arkts-components/arkts-arkui-savestatecallback-t.md) \| undefined | Yes | Custom state save callback. |
+| callback | [SaveStateCallback](arkts-arkui-savestatecallback-t.md) \| undefined | Yes | Custom state save callback. |
 
 **Return value:**
 
@@ -767,7 +767,7 @@ Invoked when the navDestination page is displayed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;VisibilityChangeReason&gt; \| undefined | Yes | Indicates callback when the navDestination page is displayed. |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[VisibilityChangeReason](arkts-arkui-navdestination-visibilitychangereason-e.md)&gt; \| undefined | Yes | Indicates callback when the navDestination page is displayed. |
 
 **Return value:**
 
@@ -917,7 +917,7 @@ Set NavDestination's preferred Orientation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| orientation | [Orientation](arkts-arkui-window-orientation-e.md) \| undefined | Yes | The preferred Orientation of NavDestination. |
+| orientation | [Orientation](arkts-arkui-orientation-t.md) \| undefined | Yes | The preferred Orientation of NavDestination. |
 
 **Return value:**
 
@@ -1067,7 +1067,7 @@ NavDestination title bar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| CustomBuilder \| NavDestinationCommonTitle \| NavDestinationCustomTitle \| Resource \| undefined | Yes | NavDestination title. |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavDestinationCommonTitle](arkts-arkui-navdestination-navdestinationcommontitle-i.md) \| [NavDestinationCustomTitle](arkts-arkui-navdestination-navdestinationcustomtitle-i.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | NavDestination title. |
 | options | [NavigationTitleOptions](../arkts-components/arkts-arkui-navigationtitleoptions-i.md) \| undefined | No | Indicates the options of titlebar. |
 
 **Return value:**
@@ -1098,7 +1098,7 @@ Configure toolbar with default style parameter or custom parameter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toolbarParam | Array&lt;[ToolbarItem](../arkts-components/arkts-arkui-toolbaritem-i.md)&gt; \| CustomBuilder \| undefined | Yes | Toolbar configuration parameters. |
+| toolbarParam | Array&lt;[ToolbarItem](../arkts-components/arkts-arkui-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | Toolbar configuration parameters. |
 | options | [NavigationToolbarOptions](../arkts-components/arkts-arkui-navigationtoolbaroptions-i.md) \| undefined | No | Indicates the options of toolbar. |
 
 **Return value:**

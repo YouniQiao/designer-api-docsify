@@ -6,7 +6,7 @@
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
-> - 如果SelectTitleBar设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编
+> - 如果SelectTitleBar设置[通用属性](./@internal/component/ets/common)和[通用事件](./@internal/component/ets/common)，编
 > 译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SelectTitleBar本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议
 > SelectTitleBar设置通用属性和通用事件。
 
@@ -74,7 +74,7 @@ menuItems?: Array<SelectTitleBarMenuItem>
 
 右侧菜单项列表，定义标题栏右侧的菜单项。需要在右侧添加菜单项时传入此参数，缺省时不显示右侧菜单区域。
 
-**类型：** Array&lt;SelectTitleBarMenuItem&gt;
+**类型：** Array&lt;[SelectTitleBarMenuItem](arkts-arkui-arkui-advanced-selecttitlebar-selecttitlebarmenuitem-c.md)&gt;
 
 **起始版本：** 10
 
@@ -112,7 +112,7 @@ options: Array<SelectOption>
 
 下拉菜单中的项。
 
-**类型：** Array&lt;SelectOption&gt;
+**类型：** Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt;
 
 **起始版本：** 10
 

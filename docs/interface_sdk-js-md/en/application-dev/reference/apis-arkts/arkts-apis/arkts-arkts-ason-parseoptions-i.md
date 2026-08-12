@@ -13,7 +13,7 @@ Parse's options
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## bigIntMode
@@ -24,7 +24,7 @@ bigIntMode: BigIntMode
 
 Enum defining modes for handling bigint.
 
-**Type:** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
+**Type:** BigIntMode
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # ScreenCaptureHandler
 
-Defines the onScreenCapture callback, related to {@link onScreenCapture} method.
+Defines the onScreenCapture callback, related to [onScreenCapture](onScreenCapture) method.
 
 **起始版本：** 10
 

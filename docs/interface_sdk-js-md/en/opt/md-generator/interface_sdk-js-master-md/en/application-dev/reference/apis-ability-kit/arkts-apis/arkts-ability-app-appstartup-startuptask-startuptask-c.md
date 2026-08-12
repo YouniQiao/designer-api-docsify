@@ -14,7 +14,7 @@ The module provides capabilities related to startup tasks in
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from 'kits/@kit.AbilityKit';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## init
@@ -43,7 +43,7 @@ Called when all the dependent startup tasks are complete. You can initialize the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Object \| void&gt; |
+| Promise & lt;Object \ | void & gt; |
 
 ## Examples
 

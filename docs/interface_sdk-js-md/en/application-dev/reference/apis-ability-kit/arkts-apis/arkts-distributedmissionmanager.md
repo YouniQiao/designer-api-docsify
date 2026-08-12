@@ -17,7 +17,7 @@ The distributedMissionManager module implements mission management across device
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -70,8 +70,8 @@ import { distributedMissionManager } from 'kits/@kit.AbilityKit';
 | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | ContinueCallback registered for notify continue result. |
 | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | Parameters corresponding to continue mission. |
 | [ContinueMissionInfo](arkts-ability-distributedmissionmanager-continuemissioninfo-t-sys.md) | Parameters corresponding to continue mission. |
-| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | Defines the callback invoked after synchronization starts. It is used as an input parameter in  [registerMissionListener](registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback)). |
-| [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Defines the parameters required for registering a listener. It is used as an input parameter in  [registerMissionListener](registerMissionListener(parameter: MissionDeviceInfo, options: MissionCallback)). |
-| [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | Defines the parameters required for mission synchronization. It is used an input parameter in  [startSyncRemoteMissions](startSyncRemoteMissions(parameter: MissionParameter)). |
+| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | Defines the callback invoked after synchronization starts. It is used as an input parameter in  [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener-1). |
+| [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | Defines the parameters required for registering a listener. It is used as an input parameter in  [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener-1). |
+| [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | Defines the parameters required for mission synchronization. It is used an input parameter in  [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startSyncRemoteMissions-1). |
 <!--DelEnd-->
 

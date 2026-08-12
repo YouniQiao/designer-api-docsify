@@ -11,14 +11,14 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [zlib.compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile)
+> [zlib.compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [zlib.compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile)(inFile:
+**替代接口：** [compressFile](zlib.compressFile(inFile:)
 
 <!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function zipFile(inFile: string, outFile: string, options: Options): Promise<void>-End-->
 
@@ -36,7 +36,7 @@ function zipFile(inFile: string, outFile: string, options: Options): Promise<voi
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

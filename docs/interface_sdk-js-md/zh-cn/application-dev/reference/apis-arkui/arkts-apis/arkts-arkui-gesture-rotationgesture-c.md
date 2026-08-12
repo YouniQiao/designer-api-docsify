@@ -6,7 +6,7 @@
 > 
 > - 从API version 7开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
 
-**继承/实现关系：** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**继承/实现关系：** RotationGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **起始版本：** 23
 
@@ -22,7 +22,7 @@
 static $_instantiate(factory: () => RotationGesture, value?: RotationGestureHandlerOptions): RotationGesture
 ```
 
-设置旋转手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+设置旋转手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)。
 
 **起始版本：** 23
 
@@ -53,7 +53,7 @@ static $_instantiate(factory: () => RotationGesture, value?: RotationGestureHand
 onActionCancel(event: Callback<GestureEvent>): this
 ```
 
-Rotation手势识别成功，接收到触摸取消事件触发的回调。与[onActionCancel](arkts-arkui-gesture-rotationgesture-c.md#onactioncancel)相比，该回调返回手势事件信息。
+Rotation手势识别成功，接收到触摸取消事件触发的回调。与[onActionCancel](#onActionCancel)相比，该回调返回手势事件信息。
 
 **起始版本：** 23
 
@@ -69,7 +69,7 @@ Rotation手势识别成功，接收到触摸取消事件触发的回调。与[on
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
@@ -99,7 +99,7 @@ Rotation手势识别成功，当抬起最后一根满足手势触发条件的手
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
@@ -129,7 +129,7 @@ Rotation手势识别成功后触发的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 
@@ -159,7 +159,7 @@ Rotation手势移动过程中触发的回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

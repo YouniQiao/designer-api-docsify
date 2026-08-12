@@ -38,7 +38,7 @@ data: Array<PublishedItem>
 
 指定回调的数据。
 
-**类型：** Array&lt;PublishedItem&gt;
+**类型：** Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i.md)&gt;
 
 **起始版本：** 10
 

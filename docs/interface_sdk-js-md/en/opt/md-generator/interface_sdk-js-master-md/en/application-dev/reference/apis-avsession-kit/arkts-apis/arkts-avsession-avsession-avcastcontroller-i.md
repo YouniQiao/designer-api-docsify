@@ -11,7 +11,7 @@ AVCastController definition used to implement a remote control when a cast is co
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## getAVPlaybackState
@@ -32,13 +32,13 @@ Get the playback status of the current player
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getAVPlaybackState
 
@@ -60,13 +60,13 @@ Get the playback status of the current player
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVPlaybackState&gt; |
+| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getCurrentItem
 
@@ -86,13 +86,13 @@ Get the current playing item
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVQueueItem&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getCurrentItem
 
@@ -114,13 +114,13 @@ Get the current playing item
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVQueueItem&gt; |
+| Promise&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getRecommendedResolutionLevel
 
@@ -148,13 +148,13 @@ Get recommended resolution of remote player based on each decoder.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ResolutionLevel&gt; |
+| Promise&lt;[ResolutionLevel](arkts-avsession-avsession-resolutionlevel-e.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getSupportedDecoders
 
@@ -176,13 +176,13 @@ Get supported decoders of remote player.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;DecoderType&gt;&gt; |
+| Promise&lt;Array&lt;[DecoderType](arkts-avsession-avsession-decodertype-e.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getSupportedHdrCapabilities
 
@@ -204,13 +204,13 @@ Get supported hdr capabilities of remote player.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;hdrCapability.HDRFormat&gt;&gt; |
+| Promise & lt;Array & lt;hdrCapability.HDRFormat & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getSupportedPlaySpeeds
 
@@ -232,13 +232,13 @@ Get supported speed of remote player.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getValidCommands
 
@@ -258,13 +258,13 @@ Get commands supported by the current cast controller
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## getValidCommands
 
@@ -284,13 +284,13 @@ Get commands supported by the current cast controller
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AVCastControlCommandType&gt;&gt; |
+| Promise&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('playbackStateChange')
 
@@ -313,14 +313,14 @@ Unregister playback state changed callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |
-| callback | (state: AVPlaybackState) =&gt; void | No |
+| callback | (state: AVPlaybackState) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('mediaItemChange')
 
@@ -348,8 +348,8 @@ Unregister listener for current media item playback events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('playNext')
 
@@ -377,8 +377,8 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('playPrevious')
 
@@ -406,8 +406,8 @@ Unregister playback command callback sent by remote side or media center.When ca
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('requestPlay')
 
@@ -428,14 +428,14 @@ Unregister requested playback command callback sent by remote side or media cent
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'requestPlay' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('endOfStream')
 
@@ -462,8 +462,8 @@ Unregister endOfStream state callback.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('seekDone')
 
@@ -491,8 +491,8 @@ Unregister listens for playback events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('validCommandChange')
 
@@ -513,15 +513,15 @@ Unregister the valid commands of the casted session changed callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'validCommandChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## off('videoSizeChange')
 
@@ -547,8 +547,8 @@ Unregister listener for video size change event, used at remote side.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## Examples
 
@@ -582,14 +582,14 @@ Unregister listens for playback error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## off('castControlGenericError')
 
@@ -618,7 +618,7 @@ Unregister listeners for cast control generic error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('castControlIoError')
 
@@ -647,7 +647,7 @@ Unregister listeners for cast control input/output error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('castControlParsingError')
 
@@ -676,7 +676,7 @@ Unregister listeners for cast control parsing error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('castControlDecodingError')
 
@@ -705,7 +705,7 @@ Unregister listeners for cast control decoding error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('castControlAudioRendererError')
 
@@ -734,7 +734,7 @@ Unregister listeners for cast control audio renderer error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('castControlDrmError')
 
@@ -763,7 +763,7 @@ Unregister listeners for cast control drm error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## off('keyRequest')
 
@@ -792,8 +792,8 @@ Unregister listener for drm key request.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## off('customDataChange')
 
@@ -816,13 +816,13 @@ Unregister listener for custom data sent from remote device.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('playbackStateChange')
 
@@ -845,15 +845,15 @@ Register playback state changed callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'playbackStateChange' | Yes |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | Yes |
-| callback | (state: AVPlaybackState) =&gt; void | Yes |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes |
+| callback | (state: AVPlaybackState) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('mediaItemChange')
 
@@ -876,14 +876,14 @@ Register listener for current media item playback events.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'mediaItemChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('playNext')
 
@@ -912,8 +912,8 @@ Register playback command callback sent by remote side or media center.Applicati
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('playPrevious')
 
@@ -942,8 +942,8 @@ Register playback command callback sent by remote side or media center.Applicati
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('requestPlay')
 
@@ -964,14 +964,14 @@ Register requested playback command callback sent by remote side or media center
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'requestPlay' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVQueueItem&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('endOfStream')
 
@@ -998,8 +998,8 @@ Register endOfStream state callback.Application needs update the new media resou
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('seekDone')
 
@@ -1028,8 +1028,8 @@ Register listens for playback events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('validCommandChange')
 
@@ -1050,15 +1050,15 @@ Register the valid commands of the casted session changed callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'validCommandChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVCastControlCommandType&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## on('videoSizeChange')
 
@@ -1079,14 +1079,14 @@ Register listener for video size change event, used at remote side.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'videoSizeChange' | Yes |
-| callback | (width: number, height: number) =&gt; void | Yes |
+| callback | (width: number, height: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## Examples
 
@@ -1124,14 +1124,14 @@ Register listeners for playback error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
-| [5400104](../../apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
-| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) |
+| [5400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) |
+| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## on('castControlGenericError')
 
@@ -1160,21 +1160,21 @@ Register listeners for cast control generic error events.
 
 | Error Code ID |
 | --- |
-| [6611108](../errorcode-avsession.md#6611108-operation-not-allowed) |
-| [6611104](../errorcode-avsession.md#6611104-unsupported-playback-speed) |
-| [6611105](../errorcode-avsession.md#6611105-device-revocation) |
-| [6611106](../errorcode-avsession.md#6611106-invalid-input-parameter) |
-| [6611107](../errorcode-avsession.md#6611107-memory-allocation-failure) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6611004](../errorcode-avsession.md#6611004-runtime-check-failure) |
-| [6611100](../errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) |
-| [6611101](../errorcode-avsession.md#6611101-unsupported-seek-mode) |
-| [6611102](../errorcode-avsession.md#6611102-invalid-seek-target) |
-| [6611103](../errorcode-avsession.md#6611103-unsupported-playback-mode) |
-| [6611000](../errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) |
-| [6611001](../errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) |
-| [6611002](../errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) |
-| [6611003](../errorcode-avsession.md#6611003-cast-controller-loading-timeout) |
+| [6611108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611108-operation-not-allowed) |
+| [6611104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611104-unsupported-playback-speed) |
+| [6611105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611105-device-revocation) |
+| [6611106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611106-invalid-input-parameter) |
+| [6611107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611107-memory-allocation-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6611004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611004-runtime-check-failure) |
+| [6611100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611100-crossdevice-data-transmission-locked) |
+| [6611101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611101-unsupported-seek-mode) |
+| [6611102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611102-invalid-seek-target) |
+| [6611103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611103-unsupported-playback-mode) |
+| [6611000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611000-unknown-error-in-the-cast-controller) |
+| [6611001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611001-unknown-error-in-the-remote-device) |
+| [6611002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611002-loading-position-exceeds-the-total-video-progress) |
+| [6611003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611003-cast-controller-loading-timeout) |
 
 ## on('castControlIoError')
 
@@ -1203,24 +1203,24 @@ Register listeners for cast control input/output error events.
 
 | Error Code ID |
 | --- |
-| [6612004](../errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) |
-| [6612100](../errorcode-avsession.md#6612100-no-playable-content) |
-| [6612005](../errorcode-avsession.md#6612005-file-does-not-exist) |
-| [6612101](../errorcode-avsession.md#6612101-failure-in-reading-media-assets) |
-| [6612006](../errorcode-avsession.md#6612006-no-permission-for-io-operations) |
-| [6612102](../errorcode-avsession.md#6612102-resource-is-being-used) |
-| [6612007](../errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) |
-| [6612103](../errorcode-avsession.md#6612103-content-expired) |
-| [6612000](../errorcode-avsession.md#6612000-unknown-io-error) |
-| [6612001](../errorcode-avsession.md#6612001-network-connection-failure) |
-| [6612002](../errorcode-avsession.md#6612002-network-timeout) |
-| [6612003](../errorcode-avsession.md#6612003-invalid-contenttype-http-header) |
-| [6612008](../errorcode-avsession.md#6612008-data-to-read-out-of-range) |
-| [6612104](../errorcode-avsession.md#6612104-requested-content-cannot-be-used) |
-| [6612105](../errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) |
-| [6612106](../errorcode-avsession.md#6612106-frequent-resource-usage) |
-| [6612107](../errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6612004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612004-unexpected-http-response-status-code-from-the-http-server) |
+| [6612100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612100-no-playable-content) |
+| [6612005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612005-file-does-not-exist) |
+| [6612101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612101-failure-in-reading-media-assets) |
+| [6612006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612006-no-permission-for-io-operations) |
+| [6612102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612102-resource-is-being-used) |
+| [6612007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612007-operation-not-allowed-by-network-security-configuration) |
+| [6612103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612103-content-expired) |
+| [6612000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612000-unknown-io-error) |
+| [6612001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612001-network-connection-failure) |
+| [6612002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612002-network-timeout) |
+| [6612003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612003-invalid-contenttype-http-header) |
+| [6612008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612008-data-to-read-out-of-range) |
+| [6612104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612104-requested-content-cannot-be-used) |
+| [6612105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612105-unable-to-verify-the-allowed-content) |
+| [6612106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612106-frequent-resource-usage) |
+| [6612107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612107-failure-in-sending-resource-packages-to-the-remote-device) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## on('castControlParsingError')
 
@@ -1249,12 +1249,12 @@ Register listeners for cast control parsing error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6613004](../errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) |
-| [6613000](../errorcode-avsession.md#6613000-unknown-parsing-error) |
-| [6613001](../errorcode-avsession.md#6613001-invalid-type) |
-| [6613002](../errorcode-avsession.md#6613002-error-in-parsing-media-manifest) |
-| [6613003](../errorcode-avsession.md#6613003-unsupported-media-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6613004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613004-unsupported-feature-in-the-media-manifest) |
+| [6613000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613000-unknown-parsing-error) |
+| [6613001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613001-invalid-type) |
+| [6613002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613002-error-in-parsing-media-manifest) |
+| [6613003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613003-unsupported-media-format) |
 
 ## on('castControlDecodingError')
 
@@ -1283,13 +1283,13 @@ Register listeners for cast control decoding error events.
 
 | Error Code ID |
 | --- |
-| [6614004](../errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6614005](../errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) |
-| [6614000](../errorcode-avsession.md#6614000-unknown-decoding-error) |
-| [6614001](../errorcode-avsession.md#6614001-decoder-initialization-failure) |
-| [6614002](../errorcode-avsession.md#6614002-decoder-query-failure) |
-| [6614003](../errorcode-avsession.md#6614003-media-sample-decoding-failure) |
+| [6614004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614004-content-format-is-beyond-the-device-capability) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6614005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614005-decoding-of-the-content-format-is-not-supported) |
+| [6614000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614000-unknown-decoding-error) |
+| [6614001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614001-decoder-initialization-failure) |
+| [6614002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614002-decoder-query-failure) |
+| [6614003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614003-media-sample-decoding-failure) |
 
 ## on('castControlAudioRendererError')
 
@@ -1318,10 +1318,10 @@ Register listeners for cast control audio renderer error error events.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6615000](../errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) |
-| [6615001](../errorcode-avsession.md#6615001-audio-renderer-initialization-failure) |
-| [6615002](../errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6615000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615000-unknown-error-related-to-the-audio-renderer) |
+| [6615001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615001-audio-renderer-initialization-failure) |
+| [6615002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615002-audio-renderer-failure-in-writing-data) |
 
 ## on('castControlDrmError')
 
@@ -1350,17 +1350,17 @@ Register listeners for cast control drm error events.
 
 | Error Code ID |
 | --- |
-| [6616004](../errorcode-avsession.md#6616004-license-obtaining-failure) |
-| [6616100](../errorcode-avsession.md#6616100-error-in-processing-the-key-response) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6616005](../errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) |
-| [6616006](../errorcode-avsession.md#6616006-drm-system-error) |
-| [6616007](../errorcode-avsession.md#6616007-drm-privileges-revoked) |
-| [6616000](../errorcode-avsession.md#6616000-unknown-drm-error) |
-| [6616001](../errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) |
-| [6616002](../errorcode-avsession.md#6616002-device-provisioning-failure) |
-| [6616003](../errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) |
-| [6616008](../errorcode-avsession.md#6616008-expired-drm-license-loaded) |
+| [6616004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616004-license-obtaining-failure) |
+| [6616100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616100-error-in-processing-the-key-response) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6616005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616005-operation-not-allowed-by-the-license-policy) |
+| [6616006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616006-drm-system-error) |
+| [6616007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616007-drm-privileges-revoked) |
+| [6616000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616000-unknown-drm-error) |
+| [6616001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616001-device-does-not-support-the-selected-drm-solution) |
+| [6616002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616002-device-provisioning-failure) |
+| [6616003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616003-drmprotected-content-to-play-is-incompatible) |
+| [6616008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616008-expired-drm-license-loaded) |
 
 ## on('keyRequest')
 
@@ -1389,8 +1389,8 @@ Register listener for drm key request.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## on('customDataChange')
 
@@ -1413,13 +1413,13 @@ Register listener for custom data sent from remote device.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## prepare
 
@@ -1446,9 +1446,9 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## prepare
 
@@ -1476,15 +1476,15 @@ Load the current item and mediaUri can be null, this is needed for sink media in
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## processMediaKeyResponse
 
@@ -1513,14 +1513,14 @@ Process the response corresponding to the media key request obtained by the appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## release
 
@@ -1546,7 +1546,7 @@ Destroy the controller
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## release
 
@@ -1568,13 +1568,13 @@ Destroy the controller
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## sendControlCommand
 
@@ -1601,10 +1601,10 @@ Send control commands to remote player
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
 
 ## sendControlCommand
 
@@ -1632,16 +1632,16 @@ Send control commands to remote player
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
-| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
 
 ## sendCustomData
 
@@ -1669,13 +1669,13 @@ Sends custom data to a remote device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
 
 ## start
 
@@ -1702,9 +1702,9 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |
 
 ## start
 
@@ -1732,12 +1732,12 @@ Play the current item, should contain mediaUri otherwise the playback will fail.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-remote-session-does-not-exist) |

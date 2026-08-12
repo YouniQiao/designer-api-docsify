@@ -17,9 +17,9 @@ accessibilitySpanOptions?: AccessibilitySpanOptions
 ```
 
 Accessibility settings. By default, the default value of   
-[AccessibilitySpanOptions](../arkts-apis/arkts-arkui-textcommon-accessibilityspanoptions-i.md/arkts-arkui-textcommon-accessibilityspanoptions-i.md) is used.
+[AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md#AccessibilitySpanOptions) is used.
 
-**Type:** [AccessibilitySpanOptions](../arkts-apis/arkts-arkui-accessibilityspanoptions-i.md)
+**Type:** AccessibilitySpanOptions
 
 **Since:** 23
 

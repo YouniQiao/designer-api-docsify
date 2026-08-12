@@ -18,7 +18,7 @@ handler: DataResubmissionHandler
 
 Form data resubmission handle.
 
-**类型：** [DataResubmissionHandler](../arkts-components/arkts-arkweb-dataresubmissionhandler-c.md)
+**类型：** [DataResubmissionHandler](arkts-arkweb-web-dataresubmissionhandler-c.md)
 
 **起始版本：** 23
 

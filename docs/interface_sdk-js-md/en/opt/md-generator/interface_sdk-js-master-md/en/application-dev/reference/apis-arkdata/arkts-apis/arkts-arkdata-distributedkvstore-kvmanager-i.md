@@ -1,6 +1,6 @@
 # KVManager
 
-Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**,you must use [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager) to create a **KVManager** instance.
+Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**,you must use [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager) to create a **KVManager** instance.
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Provides an instance to obtain information about a distributed KV store. Before 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## closeKVStore
@@ -35,14 +35,14 @@ Closes a distributed KV store. This API uses an asynchronous callback to return 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -107,20 +107,20 @@ Closes a distributed KV store. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | kvConfig | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -184,15 +184,15 @@ Deletes a distributed KV store. This API uses an asynchronous callback to return
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
 
 ## Examples
 
@@ -258,21 +258,21 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | kvConfig | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
 
 ## Examples
 
@@ -322,8 +322,8 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
 Obtains the IDs of all distributed KV stores that are created by  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) and have not been deleted by  
-[deleteKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#deletekvstore). This API uses an asynchronous callback to return the result.
+[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
+[deleteKVStore](#deleteKVStore). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -344,7 +344,7 @@ Obtains the IDs of all distributed KV stores that are created by
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -374,8 +374,8 @@ getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
 Obtains the IDs of all distributed KV stores that are created by  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) and have not been deleted by  
-[deleteKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#deletekvstore). This API uses a promise to return the result.
+[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
+[deleteKVStore](#deleteKVStore). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -395,13 +395,13 @@ Obtains the IDs of all distributed KV stores that are created by
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string[]&gt; |
+| Promise & lt;string[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -451,7 +451,7 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes |
 
@@ -459,9 +459,9 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100002](../errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
+| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -524,22 +524,22 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100002](../errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
-| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
+| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -595,7 +595,7 @@ Unsubscribes from the termination (death) of the distributed data service. The *
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -639,7 +639,7 @@ Subscribes to the termination (death) of the distributed data service. If the se
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

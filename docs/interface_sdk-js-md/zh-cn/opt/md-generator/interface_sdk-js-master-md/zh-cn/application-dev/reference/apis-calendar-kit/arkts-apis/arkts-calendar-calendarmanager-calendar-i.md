@@ -1,7 +1,7 @@
 # Calendar
 
 下列API示例中需先通过  
-[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar)、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
+[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar)、[getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getCalendar)中任一方法获取Calendar对象，再通过此对象调用对应方法，对该Calendar下的日程进行创建、删除、修改、查询等操作。
 
 **起始版本：** 10
 
@@ -38,14 +38,14 @@ addEvent(event: Event): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -109,8 +109,8 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -165,20 +165,20 @@ addEvents(events: Event[]): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | 是 |
+| events | [Event[]](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -240,15 +240,15 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | 是 |
+| events | [Event[]](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -315,7 +315,7 @@ deleteEvent(id: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -446,7 +446,7 @@ deleteEvents(ids: number[]): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -691,14 +691,14 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 | 类型 |
 | --- |
-| Promise&lt;Event[]&gt; |
+| Promise & lt;Event[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -770,8 +770,8 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -856,8 +856,8 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -914,14 +914,14 @@ Opens the event edit page.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900005](../errorcode-calendarManager.md#23900005-该日程不支持编辑) |
-| [23900001](../errorcode-calendarManager.md#23900001-参数值错误) |
+| [23900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900005-该日程不支持编辑) |
+| [23900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-参数值错误) |
 
 ## 示例
 
@@ -1006,14 +1006,14 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 | 类型 |
 | --- |
-| Promise&lt;Event[]&gt; |
+| Promise & lt;Event[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-内部程序错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1079,13 +1079,13 @@ setConfig(config: CalendarConfig): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [23900001](../errorcode-calendarManager.md#23900001-参数值错误) |
+| [23900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-参数值错误) |
 
 ## 示例
 
@@ -1142,7 +1142,7 @@ setConfig(config: CalendarConfig, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [23900001](../errorcode-calendarManager.md#23900001-参数值错误) |
+| [23900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-参数值错误) |
 
 ## 示例
 
@@ -1200,7 +1200,7 @@ updateEvent(event: Event): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

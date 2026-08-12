@@ -13,7 +13,7 @@ class MeasureUtils
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## getParagraphs
@@ -38,14 +38,14 @@ Get layout info of the styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | The styled string value. |
-| options | [TextLayoutOptions](arkts-arkui-textlayoutoptions-i.md) | No | The layout options. |
+| styledString | StyledString | Yes | The styled string value. |
+| options | TextLayoutOptions | No | The layout options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[Paragraph](arkts-arkui-paragraph-t.md)&gt; | paragraph result |
+| Array&lt;Paragraph&gt; | paragraph result |
 
 ## measureText
 
@@ -105,5 +105,5 @@ Obtains the width and height of the specified text in a single line layout.
 
 | Type | Description |
 | --- | --- |
-| [SizeOptions](arkts-arkui-sizeoptions-i.md) | width and height for text to display |
+| SizeOptions | width and height for text to display |
 

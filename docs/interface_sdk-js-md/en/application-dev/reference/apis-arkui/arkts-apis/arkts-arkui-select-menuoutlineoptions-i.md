@@ -18,7 +18,7 @@ color?: ResourceColor | EdgeColors
 
 the color of the menu outline.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ width?: Dimension | EdgeOutlineWidths
 
 the width of the menu outline.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeOutlineWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md)
 
 **Since:** 23
 

@@ -18,7 +18,7 @@ condition:Geofence
 
 Details about a geofence.
 
-**Type:** [Geofence](../../apis-location-kit/arkts-apis/arkts-location-geolocation-geofence-i.md)
+**Type:** [Geofence](arkts-notification-notificationrequest-geofence-i-sys.md)
 
 **Since:** 23
 
@@ -54,7 +54,7 @@ type:TriggerType
 
 Trigger type.
 
-**Type:** [TriggerType](arkts-notification-notificationmanager-triggertype-t-sys.md)
+**Type:** [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md)
 
 **Since:** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## sppCloseServerSocket
@@ -20,7 +20,7 @@ Disables an spp server socket and releases related resources.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.socket/socket#sppCloseServerSocket
+**Substitutes:** [sppCloseServerSocket](ohos.bluetooth.socket/socket#sppCloseServerSocket)
 
 <!--Device-bluetoothManager-function sppCloseServerSocket(socket: number): void--><!--Device-bluetoothManager-function sppCloseServerSocket(socket: number): void-End-->
 
@@ -30,14 +30,14 @@ Disables an spp server socket and releases related resources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| socket | number | Yes | Indicates the server socket ID, returned by {@link sppListen}. |
+| socket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetoothmanager-spplisten-f.md#sppListen). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 

@@ -13,7 +13,7 @@ Defines the request for publishing a reminder.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## forceDistributed
@@ -23,7 +23,7 @@ forceDistributed?: boolean
 ```
 
 Whether notifications are forcibly displayed in all scenarios across devices. The default value is **false**. For details, see  
-[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#forcedistributed)  
+[NotificationRequest.forceDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md#forceDistributed)  
 - **true**: Notifications are displayed on all collaboration devices.  
 - **false**: Notifications are displayed on the applications that are on the collaborative management list.
 
@@ -48,7 +48,7 @@ notDistributed?: boolean
 ```
 
 Whether notifications are not displayed in all scenarios across devices. The default value is **false**. For details, see  
-[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md/arkts-notification-notificationrequest-notificationrequest-i-sys.md#notdistributed)  
+[NotificationRequest.notDistributed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i-sys.md#notDistributed)  
 - **true**: Notifications are displayed only on the local device.  
 - **false**: Notifications are displayed on all collaborative devices.
 

@@ -17,7 +17,7 @@ The ArkWeb kernel uses an object of this interface class to control the player c
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## enterFullscreen

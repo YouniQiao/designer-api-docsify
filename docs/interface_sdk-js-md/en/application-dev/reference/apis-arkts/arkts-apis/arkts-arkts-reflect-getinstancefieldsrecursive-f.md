@@ -28,5 +28,5 @@ Returns public instance fields of a class and its parents.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InstanceField&gt; | an array of instance fields. |
+| Array&lt;[InstanceField](arkts-arkts-reflect-instancefield-c.md)&gt; | an array of instance fields. |
 

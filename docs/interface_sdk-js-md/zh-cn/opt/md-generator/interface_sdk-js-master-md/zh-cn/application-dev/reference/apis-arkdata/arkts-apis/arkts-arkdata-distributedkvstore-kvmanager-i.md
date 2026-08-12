@@ -1,6 +1,6 @@
 # KVManager
 
-分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。
+分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager)构建一个KVManager实例。
 
 **起始版本：** 9
 
@@ -29,14 +29,14 @@ closeKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -101,20 +101,20 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | kvConfig | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -178,15 +178,15 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
 
 ## 示例
 
@@ -252,21 +252,21 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | appId | string | 是 |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | kvConfig | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
 
 ## 示例
 
@@ -316,8 +316,8 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
 获取所有通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
-[deleteKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#deletekvstore)方法删除的分布式键值数据库的storeId，使用callback异步回调。
+[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))方法创建的且没有调用  
+[deleteKVStore](#deleteKVStore)方法删除的分布式键值数据库的storeId，使用callback异步回调。
 
 **起始版本：** 9
 
@@ -338,7 +338,7 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -368,8 +368,8 @@ getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
 获取所有通过  
-[getKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore)方法创建的且没有调用  
-[deleteKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#deletekvstore)方法删除的分布式键值数据库的storeId，使用Promise异步回调。
+[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))方法创建的且没有调用  
+[deleteKVStore](#deleteKVStore)方法删除的分布式键值数据库的storeId，使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -389,13 +389,13 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 | 类型 |
 | --- |
-| Promise&lt;string[]&gt; |
+| Promise & lt;string[] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -424,7 +424,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 ```
 
 通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用  
-[closeKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#closekvstore)关闭数据库释放资源。
+[closeKVStore](#closeKVStore)关闭数据库释放资源。
 
 > **注意：**
 > 
@@ -443,7 +443,7 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | 是 |
 
@@ -451,9 +451,9 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
+| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -495,7 +495,7 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
 指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用  
-[closeKVStore](arkts-arkdata-distributedkvstore-kvmanager-i.md#closekvstore)关闭数据库释放资源。
+[closeKVStore](#closeKVStore)关闭数据库释放资源。
 
 > **注意：**
 > 
@@ -514,22 +514,22 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| storeId | string | 是 |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | 是 |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
-| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [15100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
+| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -586,7 +586,7 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -614,7 +614,7 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 订阅服务终止事件。如果服务终止，需要重新调用  
 [on('dataChange')](distributedKVStore.SingleKVStore.on(event: 'dataChange', type: SubscribeType, listener: Callback&lt;ChangeNotification&gt;))和  
 [on('syncComplete')](distributedKVStore.SingleKVStore.on(event: 'syncComplete', syncCallback: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用  
-[off('distributedDataServiceDie')](distributedKVStore.KVManager.off(event: 'distributedDataServiceDie', deathCallback?: Callback&lt;void&gt;))取消订阅。
+[off('distributedDataServiceDie')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)取消订阅。
 
 **起始版本：** 9
 
@@ -633,7 +633,7 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

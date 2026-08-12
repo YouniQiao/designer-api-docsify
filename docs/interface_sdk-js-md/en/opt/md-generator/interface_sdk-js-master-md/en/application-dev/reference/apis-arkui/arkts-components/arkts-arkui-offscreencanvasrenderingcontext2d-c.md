@@ -11,13 +11,13 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 > 
 > The following path-related APIs apply only to paths created within
 > **OffscreenCanvasRenderingContext2D** and do not affect paths defined in
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
-> or [Path2D](arkts-arkui-path2d-c.md):
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
+> or [Path2D](arkts-arkui-path2d-c.md#Path2D):
 > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
 > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
 > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
 
-**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 **Since:** 8
 
@@ -78,7 +78,7 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | width | number | Yes |
 | height | number | Yes |
 | settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No |
 
 ## toDataURL
 

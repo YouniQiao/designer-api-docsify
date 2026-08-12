@@ -152,7 +152,7 @@ getResponseHeader(): Array<Header>
 
 | 类型 |
 | --- |
-| Array&lt;Header&gt; |
+| Array&lt;[Header](arkts-arkweb-header-i.md)&gt; |
 
 ## getResponseIsReady
 
@@ -304,7 +304,7 @@ setResponseHeader(header: Array<Header>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| header | Array&lt;Header&gt; | 是 |
+| header | Array&lt;[Header](arkts-arkweb-header-i.md)&gt; | 是 |
 
 ## setResponseIsReady
 

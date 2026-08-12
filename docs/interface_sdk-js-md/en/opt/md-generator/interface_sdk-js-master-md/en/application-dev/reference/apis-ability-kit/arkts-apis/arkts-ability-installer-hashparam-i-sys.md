@@ -13,7 +13,7 @@ Defines the hash parameters for bundle installation and uninstall.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'kits/@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## hashValue

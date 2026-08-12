@@ -138,7 +138,7 @@ Obtains the type of this gesture recognizer.
 
 | Type | Description |
 | --- | --- |
-| GestureControl.GestureType | Type of the current gesture recognizer. |
+| [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md) | Type of the current gesture recognizer. |
 
 ## isBuiltIn
 
@@ -242,7 +242,7 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getuniqueid) API. |
+| uniqueId | int | Yes | Unique ID of the component. This ID can be obtained via the [getUniqueId](arkts-arkui-eventtargetinfo-c.md#getUniqueId) API. |
 
 **Return value:**
 
@@ -280,7 +280,7 @@ Whether the current gesture recognizer is valid.
 preventBegin(): void
 ```
 
-Prevents a gesture recognizer from participating in the current gesture recognition before all fingers are lifted. If the system has already determined the result of the gesture recognizer (regardless of success or failure), calling this API will be ineffective. Unlike GestureRecognizer.[setEnabled](arkts-arkui-gesturerecognizer-c.md#setenabled)(isEnabled: boolean), which only affects callback execution, this API prevents the recognizer from participating in the recognition process entirely.
+Prevents a gesture recognizer from participating in the current gesture recognition before all fingers are lifted. If the system has already determined the result of the gesture recognizer (regardless of success or failure), calling this API will be ineffective. Unlike GestureRecognizer.[setEnabled](#setEnabled)(isEnabled: boolean), which only affects callback execution, this API prevents the recognizer from participating in the recognition process entirely.
 
 **Since:** 20
 

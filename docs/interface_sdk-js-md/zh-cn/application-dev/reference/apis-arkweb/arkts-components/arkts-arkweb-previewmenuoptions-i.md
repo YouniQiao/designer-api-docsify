@@ -20,7 +20,7 @@ hapticFeedbackMode?: HapticFeedbackMode
 
 默认值：HapticFeedbackMode.DISABLED，菜单弹出时不振动。
 
-**类型：** [HapticFeedbackMode](../../apis-arkui/arkts-components/arkts-arkui-hapticfeedbackmode-e.md)
+**类型：** HapticFeedbackMode
 
 **默认值：** HapticFeedbackMode.DISABLED
 

@@ -11,7 +11,7 @@ The **UiWindow** class represents a window on the UI and provides APIs for obtai
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## close
@@ -34,15 +34,15 @@ Closes a window. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -77,14 +77,14 @@ Focuses a window. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -119,14 +119,14 @@ Obtains the bounds information of a window. This API uses a promise to return th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Rect&gt; |
+| Promise&lt;[Rect](arkts-test-uitest-rect-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -164,14 +164,14 @@ Obtains the bundle name of the application to which a window belongs. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -209,14 +209,14 @@ Obtains the ID of the display to which a window belongs. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -251,14 +251,14 @@ Obtains the window title. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -293,14 +293,14 @@ Obtains the window mode. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WindowMode&gt; |
+| Promise&lt;[WindowMode](arkts-test-uitest-windowmode-e.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -335,14 +335,14 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -369,7 +369,7 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [UiWindow#isActive](arkts-test-uitest-uiwindow-c.md#isactive)
+**Substitutes:** [isActive](#isActive)
 
 <!--Device-UiWindow-isActived(): Promise<boolean>--><!--Device-UiWindow-isActived(): Promise<boolean>-End-->
 
@@ -379,14 +379,14 @@ Checks whether a window is active. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -421,14 +421,14 @@ Checks whether a window is focused. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -449,7 +449,7 @@ async function demo() {
 maximize(): Promise<void>
 ```
 
-Maximizes a window. A window can be resumed to its previous mode using {@link resume}. This API uses a promise to return the result. This API is applicable to windows that can be maximized.
+Maximizes a window. A window can be resumed to its previous mode using [resume](#resume). This API uses a promise to return the result. This API is applicable to windows that can be maximized.
 
 **Since:** 9
 
@@ -463,15 +463,15 @@ Maximizes a window. A window can be resumed to its previous mode using {@link re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -492,7 +492,7 @@ async function demo() {
 minimize(): Promise<void>
 ```
 
-Minimizes a window. A window can be resumed to its previous mode using {@link resume}. This API uses a promise to return the result. This API is applicable to windows that can be minimized.
+Minimizes a window. A window can be resumed to its previous mode using [resume](#resume). This API uses a promise to return the result. This API is applicable to windows that can be minimized.
 
 **Since:** 9
 
@@ -506,15 +506,15 @@ Minimizes a window. A window can be resumed to its previous mode using {@link re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -556,16 +556,16 @@ Moves a window to the target point. This API uses a promise to return the result
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -608,16 +608,16 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## resume
 
@@ -639,15 +639,15 @@ Resumes a window to its previous mode. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 
@@ -668,7 +668,7 @@ async function demo() {
 split(): Promise<void>
 ```
 
-Switches to the split-screen mode. A window can be resumed to its previous mode using {@link resume}. This API uses a promise to return the result. This API is applicable to windows that support screen splitting.
+Switches to the split-screen mode. A window can be resumed to its previous mode using [resume](#resume). This API uses a promise to return the result. This API is applicable to windows that support screen splitting.
 
 **Since:** 9
 
@@ -682,15 +682,15 @@ Switches to the split-screen mode. A window can be resumed to its previous mode 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) |
-| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
+| [17000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) |
+| [17000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) |
+| [17000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) |
 
 ## Examples
 

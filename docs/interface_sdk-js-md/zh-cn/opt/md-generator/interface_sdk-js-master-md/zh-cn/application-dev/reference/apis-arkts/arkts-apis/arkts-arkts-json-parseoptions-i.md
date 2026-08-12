@@ -16,7 +16,7 @@ bigIntMode: BigIntMode
 
 定义处理BigInt的模式。由于JSON规范不支持BigInt类型，且Number精度范围为-(2^53-1)到(2^53-1)，本模块提供三种模式以适配不同场景的整数精度需求。
 
-**类型：** [BigIntMode](arkts-arkts-ason-bigintmode-e.md)
+**类型：** BigIntMode
 
 **起始版本：** 12
 

@@ -14,7 +14,7 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#cancel
+**替代接口：** [cancel](ohos.notificationManager/notificationManager#cancel)
 
 <!--Device-notification-function cancel(id: number, callback: AsyncCallback<void>): void--><!--Device-notification-function cancel(id: number, callback: AsyncCallback<void>): void-End-->
 
@@ -42,7 +42,7 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#cancel
+**替代接口：** [cancel](ohos.notificationManager/notificationManager#cancel)
 
 <!--Device-notification-function cancel(id: number, label: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancel(id: number, label: string, callback: AsyncCallback<void>): void-End-->
 
@@ -71,7 +71,7 @@ function cancel(id: number, label?: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#cancel
+**替代接口：** [cancel](ohos.notificationManager/notificationManager#cancel)
 
 <!--Device-notification-function cancel(id: number, label?: string): Promise<void>--><!--Device-notification-function cancel(id: number, label?: string): Promise<void>-End-->
 

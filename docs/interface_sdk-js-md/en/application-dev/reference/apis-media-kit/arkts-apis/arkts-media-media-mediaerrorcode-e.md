@@ -8,7 +8,7 @@ Enumerates the media error codes.
 
 **Deprecated since:** 11
 
-**Substitutes:** [media.AVErrorCode](arkts-media-media-averrorcode-e.md)
+**Substitutes:** [AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode)
 
 <!--Device-media-enum MediaErrorCode--><!--Device-media-enum MediaErrorCode-End-->
 
@@ -28,7 +28,7 @@ The operation is successful.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_OK
+**Substitutes:** [AVERR_OK](arkts-media-media-averrorcode-e.md#AVERR_OK)
 
 <!--Device-MediaErrorCode-MSERR_OK = 0--><!--Device-MediaErrorCode-MSERR_OK = 0-End-->
 
@@ -48,7 +48,7 @@ Failed to allocate memory. The system may have no available memory.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_NO_MEMORY
+**Substitutes:** [AVERR_NO_MEMORY](arkts-media-media-averrorcode-e.md#AVERR_NO_MEMORY)
 
 <!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1--><!--Device-MediaErrorCode-MSERR_NO_MEMORY = 1-End-->
 
@@ -68,7 +68,7 @@ No permission to perform the operation.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_OPERATE_NOT_PERMIT
+**Substitutes:** [AVERR_OPERATE_NOT_PERMIT](arkts-media-media-averrorcode-e.md#AVERR_OPERATE_NOT_PERMIT)
 
 <!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2--><!--Device-MediaErrorCode-MSERR_OPERATION_NOT_PERMIT = 2-End-->
 
@@ -88,7 +88,7 @@ Invalid input parameter.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_INVALID_PARAMETER
+**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3--><!--Device-MediaErrorCode-MSERR_INVALID_VAL = 3-End-->
 
@@ -108,7 +108,7 @@ An I/O error occurs.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_IO
+**Substitutes:** [AVERR_IO](arkts-media-media-averrorcode-e.md#AVERR_IO)
 
 <!--Device-MediaErrorCode-MSERR_IO = 4--><!--Device-MediaErrorCode-MSERR_IO = 4-End-->
 
@@ -128,7 +128,7 @@ The operation times out.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_TIMEOUT
+**Substitutes:** [AVERR_TIMEOUT](arkts-media-media-averrorcode-e.md#AVERR_TIMEOUT)
 
 <!--Device-MediaErrorCode-MSERR_TIMEOUT = 5--><!--Device-MediaErrorCode-MSERR_TIMEOUT = 5-End-->
 
@@ -148,7 +148,7 @@ An unknown error occurs.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_INVALID_PARAMETER
+**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
 
 <!--Device-MediaErrorCode-MSERR_UNKNOWN = 6--><!--Device-MediaErrorCode-MSERR_UNKNOWN = 6-End-->
 
@@ -168,7 +168,7 @@ Invalid server.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_SERVICE_DIED
+**Substitutes:** [AVERR_SERVICE_DIED](arkts-media-media-averrorcode-e.md#AVERR_SERVICE_DIED)
 
 <!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7--><!--Device-MediaErrorCode-MSERR_SERVICE_DIED = 7-End-->
 
@@ -188,7 +188,7 @@ The operation is not allowed in the current state.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_INVALID_PARAMETER
+**Substitutes:** [AVERR_INVALID_PARAMETER](arkts-media-media-averrorcode-e.md#AVERR_INVALID_PARAMETER)
 
 <!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8--><!--Device-MediaErrorCode-MSERR_INVALID_STATE = 8-End-->
 
@@ -208,7 +208,7 @@ The operation is not supported in the current version.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.multimedia.media/media.AVErrorCode#AVERR_UNSUPPORT_CAPABILITY
+**Substitutes:** [AVERR_UNSUPPORT_CAPABILITY](arkts-media-media-averrorcode-e.md#AVERR_UNSUPPORT_CAPABILITY)
 
 <!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9--><!--Device-MediaErrorCode-MSERR_UNSUPPORTED = 9-End-->
 

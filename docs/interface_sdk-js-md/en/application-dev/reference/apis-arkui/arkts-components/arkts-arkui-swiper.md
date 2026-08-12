@@ -73,7 +73,7 @@ Creates a **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [SwiperController](../arkts-apis/arkts-arkui-swiper-swipercontroller-c.md) | No | Controller to bind to the component to manage page switching and preload specific child components. |
+| controller | [SwiperController](arkts-arkui-swipercontroller-c.md) | No | Controller to bind to the component to manage page switching and preload specific child components. |
 
 ## Summary
 

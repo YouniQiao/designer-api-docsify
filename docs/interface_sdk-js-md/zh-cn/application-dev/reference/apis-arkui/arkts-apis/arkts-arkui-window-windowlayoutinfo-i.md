@@ -40,7 +40,7 @@ windowRect: Rect
 
 窗口尺寸，窗口在屏幕上的实际位置和大小。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 15
 

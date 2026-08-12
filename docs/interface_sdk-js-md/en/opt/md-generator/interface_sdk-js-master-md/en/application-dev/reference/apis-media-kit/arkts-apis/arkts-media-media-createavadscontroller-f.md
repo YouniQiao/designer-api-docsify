@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVAdsController
@@ -32,10 +32,10 @@ Create an ad playback controller associated with the player instance.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVAdsController \| undefined&gt; |
+| Promise&lt;[AVAdsController](arkts-media-media-avadscontroller-i.md) \| undefined & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |

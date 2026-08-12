@@ -15,7 +15,7 @@ Defines an event query instance.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onComplete
@@ -55,7 +55,7 @@ Callback used to return the query result statistics: (reason: int, total: int) =
 onQuery: (infos: SysEventInfo[]) => void
 ```
 
-Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)[]) =>void.
+Callback used to return the queried system events: (infos: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo)[]) =>void.
 
 **Since:** 9
 

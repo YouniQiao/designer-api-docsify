@@ -1,6 +1,6 @@
 # MutableStyledString
 
-Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
+Inherits from the [StyledString](arkts-arkui-styledstring-c.md#StyledString) class.
 
 > **An exception is thrown in the following cases:**
 > 
@@ -9,7 +9,7 @@ Inherits from the [StyledString](arkts-arkui-styledstring-c.md) class.
 > 
 > **styledKey** or **styledValue** is set to an invalid value or they do not match.
 
-**Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md)
+**Inheritance/Implementation:** MutableStyledString extends [StyledString](arkts-arkui-styledstring-c.md#StyledString)
 
 **Since:** 12
 
@@ -49,7 +49,7 @@ clearStyles(): void
 
 Removes all styles of this styled string.
 
-After a style is removed, the value set for the corresponding style attribute in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component is used. If the value is not set, the default value is used.
+After a style is removed, the value set for the corresponding style attribute in the [Text](text) component is used. If the value is not set, the default value is used.
 
 **Since:** 12
 
@@ -90,7 +90,7 @@ Inserts a string.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## insertStyledString
 
@@ -121,7 +121,7 @@ Inserts a new styled string at the specified position.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## removeString
 
@@ -131,7 +131,7 @@ removeString(start: number, length: number): void
 
 Removes the string in the specified range of this styled string.
 
-This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md).
+This API equally works when the styled string contains an image or [CustomSpan](arkts-arkui-customspan-c.md#CustomSpan).
 
 **Since:** 12
 
@@ -154,7 +154,7 @@ This API equally works when the styled string contains an image or [CustomSpan](
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## removeStyle
 
@@ -164,7 +164,7 @@ removeStyle(start: number, length: number, styledKey: StyledStringKey): void
 
 Removes the style for the specified range of this styled string.
 
-After a style is removed, the value set for the corresponding style attribute in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component is used. If the value is not set, the default value is used.
+After a style is removed, the value set for the corresponding style attribute in the [Text](text) component is used. If the value is not set, the default value is used.
 
 This API equally works when the styled string contains an image.
 
@@ -190,7 +190,7 @@ This API equally works when the styled string contains an image.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## removeStyles
 
@@ -200,7 +200,7 @@ removeStyles(start: number, length: number): void
 
 Removes all styles for the specified range of this styled string.
 
-After a style is removed, the value set for the corresponding style attribute in the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component is used. If the value is not set, the default value is used.
+After a style is removed, the value set for the corresponding style attribute in the [Text](text) component is used. If the value is not set, the default value is used.
 
 This API equally works when the styled string contains an image.
 
@@ -225,7 +225,7 @@ This API equally works when the styled string contains an image.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## replaceString
 
@@ -257,7 +257,7 @@ Replaces the string in the specified range of this styled string.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## replaceStyle
 
@@ -287,7 +287,7 @@ Replaces the style in the specified range of this styled string.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## replaceStyledString
 
@@ -319,7 +319,7 @@ Replaces the styled string in the specified range.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setStyle
 
@@ -349,4 +349,4 @@ Sets a new style for the specified range of this styled string.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

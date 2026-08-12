@@ -13,7 +13,7 @@ Represents the access records of an application or device.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -96,7 +96,7 @@ permissionRecords: Array<PermissionUsedRecord>
 
 Collection of permission usage records under the current application or device. Each element corresponds to a specific permission, allowing further viewing of access count, rejection count, last access time, and detailed records.
 
-**Type:** Array&lt;PermissionUsedRecord&gt;
+**Type:** Array&lt;[PermissionUsedRecord](arkts-ability-privacymanager-permissionusedrecord-i-sys.md)&gt;
 
 **Since:** 9
 

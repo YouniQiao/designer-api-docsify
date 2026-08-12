@@ -13,7 +13,7 @@ Defines the parameters for creating a PiP controller.
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## componentController
@@ -22,9 +22,9 @@ import { PiPWindow } from 'kits/@kit.ArkUI';
 componentController: XComponentController
 ```
 
-Original [XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent) controller.
+Original [XComponent](XComponent) controller.
 
-**Type:** [XComponentController](../arkts-components/arkts-arkui-xcomponentcontroller-c.md)
+**Type:** [XComponentController](arkts-arkui-xcomponent-xcomponentcontroller-c.md)
 
 **Since:** 11
 
@@ -43,9 +43,9 @@ contentHeight?: int
 ```
 
 Height of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in  
-[typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is 1080. When the PiP controller is created  
+[typeNode mode](arkts-arkui-pipwindow-create-f.md#create-1), the default value is 1080. When the PiP controller is created  
 [not in typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is the height of the  
-[XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent).
+[XComponent](XComponent).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -66,9 +66,9 @@ contentWidth?: int
 ```
 
 Width of the original content, in px. It is used to determine the aspect ratio of the PiP window. When the PiP controller is created in  
-[typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is 1920. When the PiP controller is created  
+[typeNode mode](arkts-arkui-pipwindow-create-f.md#create-1), the default value is 1920. When the PiP controller is created  
 [not in typeNode mode](arkts-arkui-pipwindow-create-f.md#create), the default value is the width of the  
-[XComponent](arkts-arkui-xcomponent-xcomponent-f.md#xcomponent).
+[XComponent](XComponent).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -110,7 +110,7 @@ controlGroups?: Array<PiPControlGroup>
 
 A list of optional component groups of the PiP controller. An application can configure whether to display these optional components. If this parameter is not set for the application, the panel displays basic components (such as the play/pause component of the video playback component group). If this parameter is set for the application,a maximum of three components can be selected. If more than three controls are selected, error code 401 is reported by the API.
 
-**Type:** Array&lt;PiPControlGroup&gt;
+**Type:** Array&lt;[PiPControlGroup](arkts-arkui-pipwindow-pipcontrolgroup-t.md)&gt;
 
 **Since:** 12
 
@@ -206,7 +206,7 @@ If no value is passed, **0** is used.
 handleId?: int
 ```
 
-ID of the subpage under the **Navigation** component. After the Full-screen Window button is touched,the specified page is restored. This parameter applies only in scenarios where the UIAbility uses [Navigation](arkts-arkui-navigation-navigation-f.md#navigation) to manage pages. It can be set to any subpage ID within the Navigation hierarchy. The default value is **-1**, indicating that the topmost page in the Navigation stack is restored. You are advised to use [getUniqueId()](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#getuniqueid) to obtain the page ID. When you use page routing provided by [Navigation](arkts-arkui-navigation-navigation-f.md#navigation), you are advised to use the [system routing table](../../../ui/arkts-navigation-cross-package.md#system-routing-table).Otherwise, the page ID obtained by calling [getUniqueId()](../arkts-components/arkts-arkui-basecustomcomponent-c.md/arkts-arkui-basecustomcomponent-c.md#getuniqueid)may be incorrect.
+ID of the subpage under the **Navigation** component. After the Full-screen Window button is touched,the specified page is restored. This parameter applies only in scenarios where the UIAbility uses [Navigation](Navigation) to manage pages. It can be set to any subpage ID within the Navigation hierarchy. The default value is **-1**, indicating that the topmost page in the Navigation stack is restored. You are advised to use [getUniqueId()](BaseCustomComponent#getUniqueId) to obtain the page ID. When you use page routing provided by [Navigation](Navigation), you are advised to use the [system routing table](../../../ui/arkts-navigation-cross-package.md#system-routing-table).Otherwise, the page ID obtained by calling [getUniqueId()](BaseCustomComponent#getUniqueId)may be incorrect.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -230,7 +230,7 @@ localStorage?: LocalStorage
 
 A page-level UI state storage unit. In multi-instance scenarios, it can be used to track the UI state storage object of the main window instance. If no value is passed, you cannot retrieve the main window's UI storage object through the PiP window.
 
-**Type:** [LocalStorage](arkts-arkui-localstorage-c.md)
+**Type:** [LocalStorage](arkts-arkui-localstorage-localstorage-c.md)
 
 **Since:** 17
 
@@ -250,7 +250,7 @@ navigationId?: string
 
 ID of the **Navigation** component. If no value is passed, the page does not need to be cached.
 
-1. When the UIAbility uses [Navigation](arkts-arkui-navigation-navigation-f.md#navigation) to manage pages,set the ID of the **Navigation** component for the PiP controller.This ensures that the original page can be restored from the PiP window.2. When the UIAbility uses [Router](arkts-router.md) to manage pages,you do not need to set the ID of the **Navigation** component for the PiP controller.3. If the UIAbility has only one page, you do not need to set the navigation ID.The original page can be restored from the PiP window.
+1. When the UIAbility uses [Navigation](Navigation) to manage pages,set the ID of the **Navigation** component for the PiP controller.This ensures that the original page can be restored from the PiP window.2. When the UIAbility uses [Router](arkts-router.md#router) to manage pages,you do not need to set the ID of the **Navigation** component for the PiP controller.3. If the UIAbility has only one page, you do not need to set the navigation ID.The original page can be restored from the PiP window.
 
 **Type:** string
 

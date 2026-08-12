@@ -38,7 +38,7 @@ mode?: NavDestinationMode
 
 NavDestination类型。
 
-**类型：** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**类型：** [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
 
 **起始版本：** 23
 
@@ -138,7 +138,7 @@ size?: Size
 
 NavDestination的尺寸。
 
-**类型：** [Size](arkts-arkui-size-i.md)
+**类型：** Size
 
 **起始版本：** 23
 

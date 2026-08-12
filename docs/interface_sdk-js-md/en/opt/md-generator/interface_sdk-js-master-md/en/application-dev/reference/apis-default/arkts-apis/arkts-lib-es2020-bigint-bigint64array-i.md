@@ -14,7 +14,7 @@ A typed array of 64-bit signed integer values. The contents are initialized to 0
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;bigint&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;bigint&gt; |
 
 ## copyWithin
 
@@ -54,7 +54,7 @@ Yields index, value pairs for every entry in the array.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;[number, bigint]&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[number, bigint]&gt; |
 
 ## every
 
@@ -70,7 +70,7 @@ Determines whether all the members of an array satisfy the specified test.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -117,7 +117,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; any | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: bigint, index: number, array: BigInt64Array) = & gt; any | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -140,7 +140,7 @@ Returns the value of the first element in the array where predicate is true, and
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -163,7 +163,7 @@ Returns the index of the first element in the array where predicate is true, and
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -186,7 +186,7 @@ Performs the specified action for each element in an array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: bigint, index: number, array: BigInt64Array) =&gt; void | Yes |
+| callbackfn | (value: bigint, index: number, array: BigInt64Array) = & gt; void | Yes |
 | thisArg | any | No |
 
 ## includes
@@ -271,7 +271,7 @@ Yields each index in the array.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;number&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;number&gt; |
 
 ## lastIndexOf
 
@@ -310,7 +310,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (value: bigint, index: number, array: BigInt64Array) =&gt; bigint | Yes |
+| callbackfn | (value: bigint, index: number, array: BigInt64Array) = & gt; bigint | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -333,7 +333,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; bigint | Yes |
+| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; bigint | Yes |
 
 **Return value:**
 
@@ -355,7 +355,7 @@ Calls the specified callback function for all the elements in an array. The retu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; U | Yes |
+| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -378,7 +378,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; bigint | Yes |
+| callbackfn | (previousValue: bigint, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; bigint | Yes |
 
 **Return value:**
 
@@ -400,7 +400,7 @@ Calls the specified callback function for all the elements in an array, in desce
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) =&gt; U | Yes |
+| callbackfn | (previousValue: U, currentValue: bigint, currentIndex: number, array: BigInt64Array) = & gt; U | Yes |
 | initialValue | U | Yes |
 
 **Return value:**
@@ -439,7 +439,7 @@ Sets a value or an array of values.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| array | [ArrayLike&lt;bigint&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;bigint&gt; | Yes |
 | offset | number | No |
 
 ## slice
@@ -479,7 +479,7 @@ Determines whether the specified callback function returns true for any element 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| predicate | (value: bigint, index: number, array: BigInt64Array) =&gt; boolean | Yes |
+| [predicate](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-cloudsyncconfig-i.md) | (value: bigint, index: number, array: BigInt64Array) = & gt; boolean | Yes |
 | thisArg | any | No |
 
 **Return value:**
@@ -502,7 +502,7 @@ Sorts the array.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| compareFn | (a: bigint, b: bigint) =&gt; number \| bigint | No |
+| compareFn | (a: bigint, b: bigint) = & gt; number \ | bigint | No |
 
 **Return value:**
 
@@ -595,7 +595,7 @@ Yields each value in the array.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator&lt;bigint&gt;](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md) |
+| [IterableIterator](arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;bigint&gt; |
 
 ## BYTES_PER_ELEMENT
 
@@ -633,7 +633,7 @@ readonly buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** ArrayBufferLike
+**Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
 <!--Device-BigInt64Array-readonly buffer: ArrayBufferLike--><!--Device-BigInt64Array-readonly buffer: ArrayBufferLike-End-->
 

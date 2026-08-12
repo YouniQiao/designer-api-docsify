@@ -6,7 +6,7 @@ Defines a **HeartRateResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#HeartRateResponse
+**Substitutes:** [HeartRateResponse](ohos.sensor/sensor#HeartRateResponse)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -17,7 +17,7 @@ Defines a **HeartRateResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## heartRate
@@ -34,7 +34,7 @@ Heart rate.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#HeartRateResponse.heartRate
+**Substitutes:** [heartRate](ohos.sensor/sensor#HeartRateResponse.heartRate)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 

@@ -46,7 +46,7 @@ fontColor?: ResourceColor
 
 文本按钮字体颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -70,7 +70,7 @@ fontSize?: Length
 
 默认值：跟随主题。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 10
 

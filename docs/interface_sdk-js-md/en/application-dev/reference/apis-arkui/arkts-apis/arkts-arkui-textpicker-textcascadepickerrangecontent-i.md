@@ -18,7 +18,7 @@ children?: TextCascadePickerRangeContent[]
 
 Linkage data.
 
-**Type:** [TextCascadePickerRangeContent](../arkts-components/arkts-arkui-textcascadepickerrangecontent-i.md)[]
+**Type:** [TextCascadePickerRangeContent](arkts-arkui-textpicker-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Text information.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:If the text length exceeds the column width, the text will be truncated.&lt;/p&gt;
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 

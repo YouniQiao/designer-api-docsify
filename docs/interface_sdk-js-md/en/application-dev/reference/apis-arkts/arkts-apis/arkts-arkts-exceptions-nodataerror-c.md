@@ -2,7 +2,7 @@
 
 Represents an error thrown when data is expected but not provided.
 
-**Inheritance/Implementation:** NoDataError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** NoDataError extends [Error](Error)
 
 **Since:** 26.0.0
 

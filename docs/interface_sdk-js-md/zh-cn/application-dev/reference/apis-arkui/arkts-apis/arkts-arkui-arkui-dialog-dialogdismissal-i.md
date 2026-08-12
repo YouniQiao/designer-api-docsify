@@ -38,7 +38,7 @@ reason: DismissReason
 
 无法关闭对话框的原因。
 
-**类型：** [DismissReason](arkts-arkui-common-dismissreason-e.md)
+**类型：** DismissReason
 
 **起始版本：** 26.1.0
 

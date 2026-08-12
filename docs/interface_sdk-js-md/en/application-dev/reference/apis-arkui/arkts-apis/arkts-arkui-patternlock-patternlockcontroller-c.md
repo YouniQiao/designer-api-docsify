@@ -68,5 +68,5 @@ Sets the authentication challenge result for the pattern password.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [PatternLockChallengeResult](../arkts-components/arkts-arkui-patternlockchallengeresult-e.md) | Yes | Authentication challenge result of the pattern password. |
+| result | [PatternLockChallengeResult](arkts-arkui-patternlock-patternlockchallengeresult-e.md) | Yes | Authentication challenge result of the pattern password. |
 

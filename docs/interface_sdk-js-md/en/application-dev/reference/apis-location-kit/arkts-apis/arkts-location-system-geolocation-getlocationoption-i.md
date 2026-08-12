@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest
+**Substitutes:** [CurrentLocationRequest](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from 'kits/@kit.LocationKit';
+import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from '@kit.LocationKit';
 ```
 
 ## complete
@@ -34,7 +34,7 @@ Called when the execution is completed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback
+**Substitutes:** [callback](ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -56,7 +56,7 @@ Called when the location types fail to be obtained
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback
+**Substitutes:** [callback](ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -85,7 +85,7 @@ Called when the geographic location is obtained.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback
+**Substitutes:** [callback](ohos.geoLocationManager/geoLocationManager.getCurrentLocation#callback)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -137,7 +137,7 @@ Timeout duration, in milliseconds.For the rich device, the default value is 3000
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#timeoutMs
+**Substitutes:** [timeoutMs](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#timeoutMs)
 
 **Model restriction:** This API can be used only in the FA model.
 

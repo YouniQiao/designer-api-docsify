@@ -40,7 +40,7 @@ readonly letterSpacing: number
 
 Letter spacing.
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
 **Type:** number
 

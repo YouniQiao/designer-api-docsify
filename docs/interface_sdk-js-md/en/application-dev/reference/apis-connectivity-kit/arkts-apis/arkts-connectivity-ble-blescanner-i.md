@@ -1,6 +1,6 @@
 # BleScanner
 
-Manages the ble scanner.Before calling a ble scanner method, you must use {@link createBleScanner} to create an BleScanner instance.
+Manages the ble scanner.Before calling a ble scanner method, you must use [createBleScanner](arkts-connectivity-ble-createblescanner-f.md#createBleScanner) to create an BleScanner instance.
 
 **Since:** 15
 
@@ -13,7 +13,7 @@ Manages the ble scanner.Before calling a ble scanner method, you must use {@link
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## off('BLEDeviceFind')
@@ -43,15 +43,15 @@ Unsubscribe BLE scan result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScanReport&gt; | No | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | No | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
 ## Examples
@@ -100,15 +100,15 @@ Subscribe BLE scan result.On API 26.0.0 and above, if the application has ohos.p
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEDeviceFind' | Yes | Type of the scan result event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScanReport&gt; | Yes | Callback used to listen for the scan result event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScanReport](arkts-connectivity-ble-scanreport-i.md)&gt; | Yes | Callback used to listen for the scan result event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 15 - 24 |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed.<br>**Applicable version:** 15 - 24 |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900099 | Operation failed. |
 
 ## Examples
@@ -154,7 +154,7 @@ Starts scanning for specified BLE devices with filters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. {@link ScanOptions#interval} set to 0, and {@link ScanOptions#dutyMode} set to {@link SCAN_MODE_LOW_POWER} and {@link ScanOptions#matchMode} set to {@link MATCH_MODE_AGGRESSIVE}. and {@link ScanOptions#phyType} set to {@link PHY_LE_ALL_SUPPORTED}. and {@link ScanOptions#reportMode} set to {@link ScanReportMode#NORMAL}. |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutyMode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#SCAN_MODE_LOW_POWER) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchMode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#MATCH_MODE_AGGRESSIVE). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phyType) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#PHY_LE_ALL_SUPPORTED). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportMode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#NORMAL). |
 
 **Return value:**
 
@@ -166,10 +166,10 @@ Starts scanning for specified BLE devices with filters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900009 | Fails to start scan as it is out of hardware resources. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2902050 | Failed to start scan as Ble scan is already started by the app. |
 | 2900003 | Bluetooth disabled. |
@@ -232,7 +232,7 @@ Starts scanning for specified BLE devices with filters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filters | Array&lt;ScanFilter&gt; \| null | Yes | Indicates the list of filters used to filter out specified devices. If you do not want to use filter, set this parameter to {@code null}. |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. {@link ScanOptions#interval} set to 0, and {@link ScanOptions#dutyMode} set to {@link SCAN_MODE_LOW_POWER} and {@link ScanOptions#matchMode} set to {@link MATCH_MODE_AGGRESSIVE}. and {@link ScanOptions#phyType} set to {@link PHY_LE_ALL_SUPPORTED}. and {@link ScanOptions#reportMode} set to {@link ScanReportMode#NORMAL}. |
+| options | ScanOptions | No | Indicates the parameters for scanning and if the user does not assign a value, the default value will be used. [interval](arkts-connectivity-ble-scanoptions-i.md#interval) set to 0, and [dutyMode](arkts-connectivity-ble-scanoptions-i.md#dutyMode) set to [SCAN_MODE_LOW_POWER](arkts-connectivity-ble-scanduty-e.md#SCAN_MODE_LOW_POWER) and [matchMode](arkts-connectivity-ble-scanoptions-i.md#matchMode) set to [MATCH_MODE_AGGRESSIVE](arkts-connectivity-ble-matchmode-e.md#MATCH_MODE_AGGRESSIVE). and [phyType](arkts-connectivity-ble-scanoptions-i.md#phyType) set to [PHY_LE_ALL_SUPPORTED](arkts-connectivity-ble-phytype-e.md#PHY_LE_ALL_SUPPORTED). and [reportMode](arkts-connectivity-ble-scanoptions-i.md#reportMode) set to [NORMAL](arkts-connectivity-ble-scanreportmode-e.md#NORMAL). |
 
 **Return value:**
 
@@ -244,9 +244,9 @@ Starts scanning for specified BLE devices with filters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900009 | Fails to start scan as it is out of hardware resources. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2902050 | Failed to start scan as Ble scan is already started by the app. |
 | 2900003 | Bluetooth disabled. |
@@ -284,8 +284,8 @@ Stops BLE scanning.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

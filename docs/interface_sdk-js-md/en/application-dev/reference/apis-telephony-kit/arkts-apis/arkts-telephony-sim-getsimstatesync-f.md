@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from 'kits/@kit.TelephonyKit';
+import { sim } from '@kit.TelephonyKit';
 ```
 
 ## getSimStateSync
@@ -32,7 +32,7 @@ Obtains the state of the SIM card in a specified slot.
 
 | Type | Description |
 | --- | --- |
-| [SimState](arkts-telephony-sim-simstate-e.md) | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
+| SimState | Returns one of the following SIM card states: &lt;ul&gt; &lt;li&gt;{ |
 
 ## Examples
 

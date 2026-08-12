@@ -5,17 +5,17 @@ Defines the options of the **Refresh** component.
 > **Supplementary Notes**
 > 
 > - If neither **builder** nor **refreshingContent** is set, the pull-down displacement effect is implemented by
-> adjusting the [translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate) attribute of the child component.
+> adjusting the [translate](CommonMethod#translate(value: TranslateOptions)) attribute of the child component.
 > During the pull-down process, the
-> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange) event of the child
+> [onAreaChange](CommonMethod#onAreaChange(event: (oldValue: Area, newValue: Area) => void)) event of the child
 > component is not triggered, and any changes made to the
-> [translate](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#translate) attribute of the child component do not take
+> [translate](CommonMethod#translate(value: TranslateOptions)) attribute of the child component do not take
 > effect.
 > 
 > - When **builder** or **refreshingContent** is set, the pull-down displacement effect is implemented by adjusting
 > the position of the child component relative to the **Refresh** component. During the pull-down process, the
-> [onAreaChange](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onareachange) event of the child
-> component can be triggered. However, if the [position](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#position) attribute is set for the child
+> [onAreaChange](CommonMethod#onAreaChange(event: (oldValue: Area, newValue: Area) => void)) event of the child
+> component can be triggered. However, if the [position](CommonMethod#position) attribute is set for the child
 > component, the position of the child component relative to the **Refresh** component is fixed, preventing the child
 > component from moving down with the pull gesture.
 > 
@@ -44,7 +44,7 @@ builder?: CustomBuilder
 Custom content in the refreshing area.NOTE In API version 10 and earlier versions, there is a height limit of 64 vp on custom components. This restriction is removed since API version 11.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see  
 [Example 3](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-3-customizing-the-refreshing-area-content-with-builder).Since API version 12, use **refreshingContent** instead of **builder** for customizing the content of the refreshing area, to avoid animation interruptions caused by the destruction and re-creation of the custom component during the refreshing process.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 10
 
@@ -78,7 +78,7 @@ Coefficient of friction, which indicates the component's sensitivity to the pull
 
 **Deprecated since:** 11
 
-**Substitutes:** RefreshAttribute#pullDownRatio
+**Substitutes:** [pullDownRatio](RefreshAttribute#pullDownRatio)
 
 <!--Device-RefreshOptions-friction?: number | string--><!--Device-RefreshOptions-friction?: number | string-End-->
 
@@ -115,7 +115,7 @@ Custom text displayed at the bottom of the refreshing area.NOTE When setting the
 **refreshingContent** to customize the content displayed in the refreshing area, the text set with  
 **promptText** will not be displayed.When **promptText** is set and effective, the refreshOffset attribute defaults to 96 vp.The maximum font scale factor for the custom text, as specified by maxFontScale, is 2.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -158,7 +158,7 @@ refreshingContent?: ComponentContent
 Custom content in the refreshing area.NOTE If this parameter and the **builder** parameter are set at the same time, the **builder** parameter does not take effect.When a custom component is set with a fixed height, it will be displayed below the refreshing area at that fixed height; when the custom component does not have a height set, its height will adapt to the height of the refreshing area, which may result in the height of the custom component changing to 0 along with the refreshing area. To maintain the intended layout, configure a minimum height constraint for a custom component, which ensures that the component's height does not fall below a certain threshold. For details about how to apply this constraint, see  
 [Example 4](../../../reference/apis-arkui/arkui-ts/ts-container-refresh.md#example-4-customizing-the-refreshing-area-content-with-refreshingcontent).
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 12
 

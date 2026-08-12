@@ -13,7 +13,7 @@ Defines the options used in **createWriteStream()**.
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## mode
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 mode?: int
 ```
 
-[OpenMode](arkts-corefile-fileio-openmode-n.md#openmode) for creating the writeable stream. You must specify one of the following options.
+[OpenMode](arkts-corefile-fileio-openmode-n.md#OpenMode) for creating the writeable stream. You must specify one of the following options.
 
 - **OpenMode.READ_ONLY(0o0)**: read-only, which is the default value.  
 - **OpenMode.WRITE_ONLY(0o1)**: write-only.  

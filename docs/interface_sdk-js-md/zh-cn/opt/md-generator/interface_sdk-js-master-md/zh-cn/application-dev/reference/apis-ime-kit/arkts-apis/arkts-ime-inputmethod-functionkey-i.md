@@ -16,7 +16,7 @@ enterKeyType: EnterKeyType
 
 输入法enter键类型。
 
-**类型：** [EnterKeyType](../../apis-arkui/arkts-components/arkts-arkui-enterkeytype-e.md)
+**类型：** EnterKeyType
 
 **起始版本：** 10
 

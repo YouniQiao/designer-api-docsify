@@ -12,7 +12,7 @@ Defines an explicit animation. When an animation is required, call this API expl
 > 
 > - Since API version 10, you can use
 > [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto) in
-> [UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md) to specify the UI execution context.
+> [UIContext](@ohos.arkui.UIContext) to specify the UI execution context.
 > 
 > - Avoid using **animateTo** in **aboutToAppear** or **aboutToDisappear**.
 > 
@@ -25,7 +25,7 @@ Defines an explicit animation. When an animation is required, call this API expl
 > [aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear), the
 > component is being destroyed, so animations should not be used.
 > 
-> - When a component appears or disappears, you can add animation effects through the [transition](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+> - When a component appears or disappears, you can add animation effects through the [transition](common)
 > attribute.
 > 
 > - For attributes not supported by component transitions, see
@@ -41,7 +41,7 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#animateTo
+**Substitutes:** [animateTo](ohos.arkui.UIContext.UIContext#animateTo)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,4 +56,4 @@ Defines an explicit animation. When an animation is required, call this API expl
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [AnimateParam](arkts-arkui-animateparam-i.md) | Yes |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |

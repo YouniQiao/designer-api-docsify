@@ -6,7 +6,7 @@ USB设备端口。
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md)
+**替代接口：** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md#USBPort)
 
 <!--Device-usb-interface USBPort--><!--Device-usb-interface USBPort-End-->
 
@@ -28,7 +28,7 @@ USB端口唯一标识。
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBPort.id](arkts-basicservices-usbmanager-usbport-i-sys.md#id)
+**替代接口：** [id](arkts-basicservices-usbmanager-usbport-i-sys.md#id)
 
 <!--Device-USBPort-id: number--><!--Device-USBPort-id: number-End-->
 
@@ -44,13 +44,13 @@ status: USBPortStatus
 
 USB端口角色。
 
-**类型：** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
+**类型：** USBPortStatus
 
 **起始版本：** 9
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBPort.status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
+**替代接口：** [status](arkts-basicservices-usbmanager-usbport-i-sys.md#status)
 
 <!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
 
@@ -66,13 +66,13 @@ supportedModes: PortModeType
 
 USB端口所支持的模式的数字组合掩码。
 
-**类型：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
+**类型：** PortModeType
 
 **起始版本：** 9
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.USBPort.supportedModes](arkts-basicservices-usbmanager-usbport-i-sys.md#supportedmodes)
+**替代接口：** [supportedModes](arkts-basicservices-usbmanager-usbport-i-sys.md#supportedModes)
 
 <!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 

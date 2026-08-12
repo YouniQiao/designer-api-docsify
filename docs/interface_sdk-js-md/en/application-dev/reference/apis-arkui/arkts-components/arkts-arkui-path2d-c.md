@@ -8,12 +8,12 @@
 > is required, you can create an empty Path2D object.
 > 
 > The methods of the Path2D object do not take effect for the paths set in the
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
 > and
-> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md)
+> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D)
 > objects.
 
-**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **Since:** 8
 
@@ -47,8 +47,8 @@ Adds a path to this path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](../arkts-apis/arkts-arkui-viewmodel-path2d-i.md) | Yes | Path to be added to this path. Unit: px.&lt;br&gt; The **undefined** and **null** values are treated as invalid. |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix of the new path.&lt;br&gt; The **undefined** and **null** values are treated as invalid.&lt;br&gt; Default value: **null**. |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path to be added to this path. Unit: px.&lt;br&gt; The **undefined** and **null** values are treated as invalid. |
+| transform | Matrix2D | No | Transformation matrix of the new path.&lt;br&gt; The **undefined** and **null** values are treated as invalid.&lt;br&gt; Default value: **null**. |
 
 ## constructor
 
@@ -96,7 +96,7 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
+| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
 
 ## constructor
 
@@ -122,7 +122,7 @@ Constructs a Path2D object using a path object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](../arkts-apis/arkts-arkui-viewmodel-path2d-i.md) | Yes | Path** object. |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path** object. |
 
 ## constructor
 
@@ -150,8 +150,8 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](../arkts-apis/arkts-arkui-viewmodel-path2d-i.md) | Yes | Path** object. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path** object. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
 
 ## constructor
 
@@ -177,7 +177,7 @@ Constructs a Path2D object using a path string that complies with the SVG path d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | string | Yes | Path that complies with the [SVG path syntax](arkts-arkui-path2d-c.md). Invalid values are treated as invalid inputs. |
+| d | string | Yes | Path that complies with the [SVG path syntax](#Path2D). Invalid values are treated as invalid inputs. |
 
 ## constructor
 
@@ -205,6 +205,6 @@ Constructs a Path2D object using a path string that complies with the SVG path s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string | Yes | Path that complies with the [SVG path syntax](arkts-arkui-path2d-c.md). Invalid values are treated as invalid inputs. |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
+| description | string | Yes | Path that complies with the [SVG path syntax](#Path2D). Invalid values are treated as invalid inputs. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the Path2D object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
 

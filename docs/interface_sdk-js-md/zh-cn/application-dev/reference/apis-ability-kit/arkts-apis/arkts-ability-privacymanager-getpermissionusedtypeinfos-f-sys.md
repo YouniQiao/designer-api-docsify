@@ -26,25 +26,25 @@ function getPermissionUsedTypeInfos(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenId | ArkTS-Dyn: number \| null  <br>ArkTS-Sta：int \| null | 否 | 访问敏感权限的应用身份标识。可通过应用[BundleInfo](arkts-ability-bundleinfo-i.md)中的 [ApplicationInfo](arkts-ability-applicationinfo-i.md)的accessTokenId字段获取。当需要查询特定应用的敏感权限访问类型信息 时传入具体的tokenId；为0或null时表示查询所有应用的敏感权限访问类型信息。从API version 20开始，新增支持null类型。 &lt;br&gt;默认值：0。 |
+| tokenId | ArkTS-Dyn: number \| null  <br>ArkTS-Sta：int \| null | 否 | 访问敏感权限的应用身份标识。可通过应用[BundleInfo](./bundleManager/BundleInfo)中的 [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo)的accessTokenId字段获取。当需要查询特定应用的敏感权限访问类型信息 时传入具体的tokenId；为0或null时表示查询所有应用的敏感权限访问类型信息。从API version 20开始，新增支持null类型。 &lt;br&gt;默认值：0。 |
 | permissionName | Permissions | 否 | 被访问的敏感权限名称。当需要查询特定敏感权限的访问类型信息时传入具体的权限名；为空时表示查询所有敏感权限的访问类型信息。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。默认值：空。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;PermissionUsedTypeInfo&gt;&gt; | Promise used to return the list of permission access type information. |
+| Promise&lt;Array&lt;[PermissionUsedTypeInfo](arkts-ability-privacymanager-permissionusedtypeinfo-i-sys.md)&gt;&gt; | Promise used to return the list of permission access type information. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12100009](../errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. PermissionName exceeds 256 characters. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
-| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) | The input tokenId does not exist. |
-| [12100003](../errorcode-access-token.md#12100003-权限名不存在) | The input permissionName does not exist. |
+| [12100009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) | Common inner error. A database error occurs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) | Invalid parameter. PermissionName exceeds 256 characters. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system app. Interface caller is not a system app. |
+| [12100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) | The input tokenId does not exist. |
+| [12100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) | The input permissionName does not exist. |
 
 ## 示例
 

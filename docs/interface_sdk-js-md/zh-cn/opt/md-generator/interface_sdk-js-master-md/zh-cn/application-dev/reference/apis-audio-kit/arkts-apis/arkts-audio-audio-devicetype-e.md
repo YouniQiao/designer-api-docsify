@@ -250,7 +250,7 @@ HEARING_AID = 30
 
 助听器设备。
 
-Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
+Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
 
 **起始版本：** 26.0.0
 
@@ -266,7 +266,7 @@ NEARLINK = 31
 
 星闪设备。
 
-Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
+Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
 
 **起始版本：** 26.0.0
 

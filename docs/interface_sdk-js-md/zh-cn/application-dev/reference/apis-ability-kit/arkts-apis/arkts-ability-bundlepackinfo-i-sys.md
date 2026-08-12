@@ -20,7 +20,7 @@ readonly packages: Array<PackageConfig>
 
 pack.info的包信息。
 
-**类型：** Array&lt;PackageConfig&gt;
+**类型：** Array&lt;[PackageConfig](arkts-ability-bundlepackinfo-packageconfig-i-sys.md)&gt;
 
 **起始版本：** 9
 
@@ -40,7 +40,7 @@ readonly summary: PackageSummary
 
 pack.info中的包摘要信息。
 
-**类型：** [PackageSummary](arkts-ability-freeinstall-packagesummary-t-sys.md)
+**类型：** [PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)
 
 **起始版本：** 9
 

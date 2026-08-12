@@ -11,7 +11,7 @@ Describe the type of Bluetooth address.
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.ConnectivityKit';
+import { common } from '@kit.ConnectivityKit';
 ```
 
 ## address
@@ -52,7 +52,7 @@ The type of the Bluetooth address.
 rawAddressType?: BluetoothRawAddressType
 ```
 
-Address type defined by the Bluetooth Core Specification.It is used only when the {@link BluetoothAddress#addressType} is {@link BluetoothAddressType#REAL}.
+Address type defined by the Bluetooth Core Specification.It is used only when the [addressType](#addressType) is [REAL](arkts-connectivity-common-bluetoothaddresstype-e.md#REAL).
 
 **Type:** [BluetoothRawAddressType](arkts-connectivity-common-bluetoothrawaddresstype-e.md)
 

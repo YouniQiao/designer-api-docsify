@@ -11,7 +11,7 @@ NDEF records definition, see NFCForum-TS-NDEF_1.0.
 ## Modules to Import
 
 ```TypeScript
-import { tag } from 'kits/@kit.ConnectivityKit';
+import { tag } from '@kit.ConnectivityKit';
 ```
 
 ## id

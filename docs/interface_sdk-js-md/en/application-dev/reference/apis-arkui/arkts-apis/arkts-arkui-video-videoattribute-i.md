@@ -2,7 +2,7 @@
 
 Defines the Video attribute.
 
-**Inheritance/Implementation:** VideoAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** VideoAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Set image analyzer with config.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) \| undefined | Yes |  |
+| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -64,7 +64,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -304,7 +304,7 @@ Called when playback fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| ErrorCallback \| undefined | Yes |  |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -364,7 +364,7 @@ Called when the video enters and exits the full screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;FullscreenInfo&gt; \| undefined | Yes |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[FullscreenInfo](arkts-arkui-video-fullscreeninfo-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -424,7 +424,7 @@ Called when the video preparation is complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PreparedInfo&gt; \| undefined | Yes |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PreparedInfo](arkts-arkui-video-preparedinfo-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -454,7 +454,7 @@ Called when the playback time information is reported after the operation progre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -484,7 +484,7 @@ Called when the time information is reported when the progress bar process is op
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -574,7 +574,7 @@ Called when the playback progress changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PlaybackInfo&gt; \| undefined | Yes |  |
+| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PlaybackInfo](arkts-arkui-video-playbackinfo-i.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -604,7 +604,7 @@ Set Video options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VideoOptions](../arkts-components/arkts-arkui-videooptions-i.md) | Yes | Video constructor options |
+| value | [VideoOptions](arkts-arkui-video-videooptions-i.md) | Yes | Video constructor options |
 
 **Return value:**
 

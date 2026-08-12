@@ -14,7 +14,7 @@ function cleanBundleCacheFiles(bundleName: string, callback: AsyncCallback<void>
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 
@@ -46,7 +46,7 @@ function cleanBundleCacheFiles(bundleName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 **需要权限：** ohos.permission.REMOVE_CACHE_FILES
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## attachGroup
@@ -33,15 +33,15 @@ If any task ID does not meet the attachment conditions, all tasks in the list wi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900008](../../apis-basic-services-kit/errorcode-request.md#21900008-task-group-not-found-or-deleted) |
-| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
-| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900008-task-group-not-found-or-deleted) |
+| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [21900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-operation-not-supported-by-the-task-state) |
+| [21900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

@@ -35,5 +35,5 @@ resolvedOptions(): ResolvedCollatorOptions
 
 | Type | Description |
 | --- | --- |
-| [ResolvedCollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvedcollatoroptions-i.md) |  |
+| ResolvedCollatorOptions |  |
 

@@ -18,7 +18,7 @@ The **inputConsumer** module implements listening for combination key events as 
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## Summary
@@ -33,7 +33,7 @@ import { inputConsumer } from 'kits/@kit.InputKit';
 | [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md#offhotkeychange) | Unsubscribe from hotkey event. |
 | [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md#offkeypressed) | Cancels consumption of key events. |
 | [on](arkts-input-inputconsumer-on-f.md#on-1) | Subscribes to application shortcut key change events. This API obtains combination key input events that meet the specified conditions, and uses an asynchronous callback to return the result. |
-| [on](arkts-input-inputconsumer-on-f.md#on-2) | Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.  If the API call is successful, the system's default response to the key event will be intercepted; that is, system-level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call  [off](inputConsumer.off(type: 'keyPressed', callback?: Callback&lt;KeyEvent&gt;)) to disable listening for the key event. |
+| [on](arkts-input-inputconsumer-on-f.md#on-2) | Subscribes to key press events. If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. This API uses an asynchronous callback to return the result.  If the API call is successful, the system's default response to the key event will be intercepted; that is, system-level actions, such as volume adjustment, will no longer be triggered. To restore the system response, call  [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off) to disable listening for the key event. |
 | [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md#onhotkeychange) | Listening for hotkey event. |
 | [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md#onkeypressed) | Subscribes to key press events. This API uses an asynchronous callback to return the result.If the current application is in the foreground focus window, a callback is triggered when the specified key is pressed. |
 

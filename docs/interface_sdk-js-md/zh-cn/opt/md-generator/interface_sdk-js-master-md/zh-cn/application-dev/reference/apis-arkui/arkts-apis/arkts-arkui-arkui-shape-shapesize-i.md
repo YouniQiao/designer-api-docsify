@@ -16,7 +16,7 @@ height?: number | string
 
 形状的高度。 
 
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。 
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 
 
 单位：vp
 
@@ -48,7 +48,7 @@ width?: number | string
 
 形状的宽度。
 
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md)。 
+类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 
 
 单位：vp
 

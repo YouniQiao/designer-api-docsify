@@ -13,7 +13,7 @@ Defines the onscreen content.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## bundleName
@@ -79,7 +79,7 @@ paragraphs?: Paragraph[]
 
 Paragraph information of the onscreen content. This parameter is available only when **options.textOnly** is set to **True**.
 
-**Type:** [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md)[]
+**Type:** Paragraph[]
 
 **Since:** 20
 

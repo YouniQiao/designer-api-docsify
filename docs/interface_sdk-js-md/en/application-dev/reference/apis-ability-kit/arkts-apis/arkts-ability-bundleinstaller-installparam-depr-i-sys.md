@@ -8,7 +8,7 @@ Describes the parameters required for bundle installation, recovery, or uninstal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.InstallParam](arkts-ability-installer-installparam-i-sys.md)
+**Substitutes:** [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam)
 
 <!--Device-unnamed-export interface InstallParam--><!--Device-unnamed-export interface InstallParam-End-->
 
@@ -40,7 +40,7 @@ The value can be:
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.InstallParam.installFlag](arkts-ability-installer-installparam-i-sys.md#installflag)
+**Substitutes:** [installFlag](arkts-ability-installer-installparam-i-sys.md#installFlag)
 
 <!--Device-InstallParam-installFlag: number--><!--Device-InstallParam-installFlag: number-End-->
 
@@ -66,7 +66,7 @@ Whether to retain the bundle data when the application is uninstalled. The defau
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.InstallParam.isKeepData](arkts-ability-installer-installparam-i-sys.md#iskeepdata)
+**Substitutes:** [isKeepData](arkts-ability-installer-installparam-i-sys.md#isKeepData)
 
 <!--Device-InstallParam-isKeepData: boolean--><!--Device-InstallParam-isKeepData: boolean-End-->
 
@@ -92,7 +92,7 @@ User ID. The default value is the user ID of the caller.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.installer:installer.InstallParam.userId](arkts-ability-installer-installparam-i-sys.md#userid)
+**Substitutes:** [userId](arkts-ability-installer-installparam-i-sys.md#userId)
 
 <!--Device-InstallParam-userId: number--><!--Device-InstallParam-userId: number-End-->
 

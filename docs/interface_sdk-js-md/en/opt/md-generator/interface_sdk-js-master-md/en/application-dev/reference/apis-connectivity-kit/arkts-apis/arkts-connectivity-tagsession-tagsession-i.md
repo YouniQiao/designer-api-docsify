@@ -30,9 +30,25 @@ Connects to a tag. Must be called before data is read from or written to the tag
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+try {
+    tag.getIsoDep(tagInfo).connect(); 
+    console.info("tag connect success");
+} catch (businessError) {
+    console.error("tag connect businessError: " + businessError);
+}
+```
 
 ## connectTag
 
@@ -46,7 +62,7 @@ Connects to a tag.&lt;p&gt;This method must be called before data is read from o
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#connect
+**Substitutes:** [connect](tagSession.TagSession#connect)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -60,6 +76,18 @@ Connects to a tag.&lt;p&gt;This method must be called before data is read from o
 | --- |
 | boolean |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let connectStatus : boolean = tag.getIsoDep(tagInfo).connectTag();
+console.info("connectStatus: " + connectStatus);
+```
+
 ## getMaxSendLength
 
 ```TypeScript
@@ -72,7 +100,7 @@ Queries the maximum length of data that can be sent to a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#getMaxTransmitSize
+**Substitutes:** [getMaxTransmitSize](#getMaxTransmitSize)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -85,6 +113,18 @@ Queries the maximum length of data that can be sent to a tag.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | number |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let maxSendLen = tag.getIsoDep(tagInfo).getMaxSendLength(); 
+console.info("tag maxSendLen: " + maxSendLen);
+```
 
 ## getMaxTransmitSize
 
@@ -114,9 +154,25 @@ Obtains the maximum length of data that can be sent to a tag.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+try {
+    let maxTransmitSize = tag.getIsoDep(tagInfo).getMaxTransmitSize(); 
+    console.info("tag maxTransmitSize = " + maxTransmitSize);
+} catch (businessError) {
+    console.error("tag getMaxTransmitSize businessError: " + businessError);
+}
+```
 
 ## getSendDataTimeout
 
@@ -130,7 +186,7 @@ Queries the timeout duration (ms) for sending data to a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#getTimeout
+**Substitutes:** [getTimeout](#getTimeout)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -144,6 +200,18 @@ Queries the timeout duration (ms) for sending data to a tag.
 | --- |
 | number |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let sendDataTimeout = tag.getIsoDep(tagInfo).getSendDataTimeout(); 
+console.info("tag sendDataTimeout: " + sendDataTimeout);
+```
+
 ## getTagInfo
 
 ```TypeScript
@@ -156,7 +224,7 @@ Obtains the tag information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.tag/tag#getTagInfo
+**Substitutes:** [getTagInfo](ohos.nfc.tag/tag#getTagInfo)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -169,6 +237,18 @@ Obtains the tag information.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | tag.TagInfo |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let tagInfo : TagInfo = tag.getIsoDep(tagInfo).getTagInfo();
+console.info("tag tagInfo: " + tagInfo);
+```
 
 ## getTimeout
 
@@ -198,9 +278,25 @@ Obtains the timeout duration (ms) for sending data to a tag.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+try {
+    let timeout = tag.getIsoDep(tagInfo).getTimeout(); 
+    console.info("tag timeout = " + timeout);
+} catch (businessError) {
+    console.error("tag getTimeout businessError: " + businessError);
+}
+```
 
 ## isConnected
 
@@ -228,7 +324,23 @@ Checks whether a connection has been set up with a tag.
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+try {
+    let isConnected = tag.getIsoDep(tagInfo).isConnected(); 
+    console.info("tag isConnected = " + isConnected);
+} catch (businessError) {
+    console.error("tag isConnected businessError: " + businessError);
+}
+```
 
 ## isTagConnected
 
@@ -242,7 +354,7 @@ Checks whether a connection has been set up with a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#isConnected
+**Substitutes:** [isConnected](tagSession.TagSession#isConnected)
 
 <!--Device-TagSession-isTagConnected(): boolean--><!--Device-TagSession-isTagConnected(): boolean-End-->
 
@@ -253,6 +365,18 @@ Checks whether a connection has been set up with a tag.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let isTagConnected = tag.getIsoDep(tagInfo).isTagConnected(); 
+console.info("isTagConnected: " + isTagConnected);
+```
 
 ## reset
 
@@ -266,13 +390,24 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#resetConnection
+**Substitutes:** [resetConnection](#resetConnection)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
 <!--Device-TagSession-reset(): void--><!--Device-TagSession-reset(): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+tag.getIsoDep(tagInfo).reset();
+```
 
 ## resetConnection
 
@@ -296,9 +431,25 @@ Resets a connection with a tag and restores the default timeout duration for wri
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+try {
+    tag.getIsoDep(tagInfo).resetConnection(); 
+    console.info("tag resetConnection success");
+} catch (businessError) {
+    console.error("tag resetConnection businessError: " + businessError);
+}
+```
 
 ## sendData
 
@@ -312,7 +463,7 @@ Writes data to a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#transmit
+**Substitutes:** [transmit](tagSession.TagSession#transmit)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -330,7 +481,34 @@ Writes data to a tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number[]&gt; |
+| Promise & lt;number[] & gt; |
+
+## Examples
+
+```TypeScript
+import tag from '@kit.ConnectivityKit';
+import { BusinessError } from '@ohos.base';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+    // Connect the tag if it has not been connected.
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }  
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    tag.getIsoDep(tagInfo).sendData(cmdData).then((response) => {
+    console.info("tagSession sendData Promise response: " + response);
+    }).catch((err : BusinessError)=> {
+    console.error("tagSession sendData Promise err: " + err);
+    });
+}
+```
 
 ## sendData
 
@@ -344,7 +522,7 @@ Writes data to a tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#transmit
+**Substitutes:** [transmit](tagSession.TagSession#transmit)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -359,6 +537,34 @@ Writes data to a tag.
 | data | number[] | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+    // Connect the tag if it has not been connected.
+    if (!tag.getIsoDep(tagInfo).isTagConnected()) {
+        if (!tag.getIsoDep(tagInfo).connectTag()) {
+            console.error("tagSession connectTag failed.");
+            return;
+        }
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    tag.getIsoDep(tagInfo).sendData(cmdData, (err, response)=> {
+        if (err) {
+            console.error("tagSession sendData AsyncCallback err: " + err);
+        } else {
+            console.info("tagSession sendData AsyncCallback response: " + response);
+        }
+    });
+}
+```
+
 ## setSendDataTimeout
 
 ```TypeScript
@@ -371,7 +577,7 @@ Sets the timeout duration (ms) for sending data to a tag.&lt;p&gt;If data is not
 
 **Deprecated since:** 9
 
-**Substitutes:** tagSession.TagSession#setTimeout
+**Substitutes:** [setTimeout](tagSession.TagSession#setTimeout)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -390,6 +596,19 @@ Sets the timeout duration (ms) for sending data to a tag.&lt;p&gt;If data is not
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | boolean |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let timeoutMs = 700; // Set the expected timeout interval.
+let setStatus = tag.getIsoDep(tagInfo).setSendDataTimeout(timeoutMs); 
+console.info("tag setSendDataTimeout setStatus: " + setStatus);
+```
 
 ## setTimeout
 
@@ -419,10 +638,27 @@ Sets the timeout duration (ms) for sending data to a tag.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+let timeoutMs = 700; // Set the expected timeout interval.
+try {
+    tag.getIsoDep(tagInfo).setTimeout(timeoutMs); 
+    console.info("tag setTimeout success");
+} catch (businessError) {
+    console.error("tag setTimeout businessError: " + businessError);
+}
+```
 
 ## transmit
 
@@ -452,17 +688,51 @@ Writes data to a tag.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number[]&gt; |
+| Promise & lt;number[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+// Connect the tag if it has not been connected.
+    try {
+        if (!tag.getIsoDep(tagInfo).isConnected()) {
+            tag.getIsoDep(tagInfo).connect();
+        }
+    } catch (businessError) {
+        console.error("tag connect businessError: " + businessError);
+        return;
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    try {
+    tag.getIsoDep(tagInfo).transmit(cmdData).then((response) => {
+        console.info("tagSession transmit Promise response: " + response);
+    }).catch((err : BusinessError)=> {
+        console.error("tagSession transmit Promise err: " + err);
+    });
+    } catch (businessError) {
+        console.error("tag transmit businessError: " + businessError);
+        return;
+    }
+}
+```
 
 ## transmit
 
@@ -493,8 +763,43 @@ Writes data to a tag.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
-| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [3100204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) |
+| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// tagInfo is the object provided by the NFC service when allocating a tag. For details, see tag.TagInfo in @ohos.nfc.tag. 
+// getter API, which can be getIsoDep, getNdef, getMifareClassic, and so on.
+
+function tagSessionDemo() {
+    // Connect the tag if it has not been connected.
+    try {
+        if (!tag.getIsoDep(tagInfo).isConnected()) {
+            tag.getIsoDep(tagInfo).connect();
+        }
+    } catch (businessError) {
+        console.error("tag connect businessError: " + businessError);
+        return;
+    }
+
+    let cmdData = [0x01, 0x02, 0x03, 0x04]; // Set command data correctly.
+    try {
+        tag.getIsoDep(tagInfo).transmit(cmdData, (err, response)=> {
+            if (err) {
+                console.error("tagSession transmit AsyncCallback err: " + err);
+            } else {
+                console.info("tagSession transmit AsyncCallback response: " + response);
+            }
+        });
+    } catch (businessError) {
+        console.error("tag transmit businessError: " + businessError);
+        return;
+    }
+}
+```

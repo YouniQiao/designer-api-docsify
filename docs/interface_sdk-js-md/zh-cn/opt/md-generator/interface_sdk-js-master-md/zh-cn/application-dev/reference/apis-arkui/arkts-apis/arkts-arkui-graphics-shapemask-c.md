@@ -50,6 +50,53 @@ setCircleShape(circle: Circle): void
 | --- | --- | --- |
 | circle | [Circle](arkts-arkui-graphics-circle-i.md) | 是 |
 
+## 示例
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setCircleShape({ centerY: uiContext.vp2px(75), centerX: uiContext.vp2px(75), radius: uiContext.vp2px(75) });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## setCommandPath
 
 ```TypeScript
@@ -74,6 +121,54 @@ setCommandPath(path: CommandPath): void
 | --- | --- | --- |
 | path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | 是 |
 
+## 示例
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+const mask = new ShapeMask();
+mask.setCommandPath({ commands: 'M100 0 L0 100 L50 200 L150 200 L200 100 Z' });
+mask.fillColor = 0X55FF0000;
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0XFF00FF00;
+renderNode.shapeMask = mask;
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
+
 ## setOvalShape
 
 ```TypeScript
@@ -96,7 +191,49 @@ setOvalShape(oval: Rect): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| oval | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 |
+| oval | [Rect](arkts-arkui-rect-t.md) | 是 |
+
+## 示例
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setOvalShape({ left: 0, right: uiContext.vp2px(150), top: 0, bottom: uiContext.vp2px(100) });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setRectShape
 
@@ -120,7 +257,59 @@ setRectShape(rect: Rect): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| rect | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 |
+| rect | [Rect](arkts-arkui-rect-t.md) | 是 |
+
+## 示例
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    mask.setRectShape({
+      left: 0,
+      right: uiContext.vp2px(150),
+      top: 0,
+      bottom: uiContext.vp2px(150)
+    });
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = {
+      x: 0,
+      y: 0,
+      width: 150,
+      height: 150
+    };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## setRoundRectShape
 
@@ -144,7 +333,58 @@ setRoundRectShape(roundRect: RoundRect): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | 是 |
+
+## 示例
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, ShapeMask, RoundRect } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const mask = new ShapeMask();
+    const roundRect: RoundRect = {
+      rect: { left: 0, top: 0, right: uiContext.vp2px(150), bottom: uiContext.vp2px(150) },
+      corners: {
+        topLeft: { x: 32, y: 32 },
+        topRight: { x: 32, y: 32 },
+        bottomLeft: { x: 32, y: 32 },
+        bottomRight: { x: 32, y: 32 }
+      }
+    };
+    mask.setRoundRectShape(roundRect);
+    mask.fillColor = 0X55FF0000;
+
+    const renderNode = new RenderNode();
+    renderNode.frame = { x: 0, y: 0, width: 150, height: 150 };
+    renderNode.backgroundColor = 0XFF00FF00;
+    renderNode.shapeMask = mask;
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }
+  }
+}
+```
 
 ## fillColor
 
@@ -158,7 +398,7 @@ fillColor: number
 
 超出范围时按默认值处理。
 
-通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md)方式与RenderNode本身的颜色混合，生成最终颜色。
+通过fillColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)方式与RenderNode本身的颜色混合，生成最终颜色。
 
 **类型：** number
 
@@ -186,7 +426,7 @@ strokeColor: number
 
 超出范围时按默认值处理。 
 
-通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md/arkts-arkgraphics2d-drawing-blendmode-e.md)方式与RenderNode本身的颜色混合，生成最终颜色。
+通过strokeColor的透明度和亮度生成一个仅含透明度的颜色。亮度越高，颜色越透明。然后，使用[BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode)方式与RenderNode本身的颜色混合，生成最终颜色。
 
 **类型：** number
 

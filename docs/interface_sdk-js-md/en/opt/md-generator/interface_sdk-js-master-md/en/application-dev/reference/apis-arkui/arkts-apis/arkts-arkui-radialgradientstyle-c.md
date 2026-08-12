@@ -1,8 +1,8 @@
 # RadialGradientStyle
 
-Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
+Displays a radial gradient. **RadialGradientStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle).
 
-**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**Inheritance/Implementation:** RadialGradientStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle)
 
 **Since:** 20
 

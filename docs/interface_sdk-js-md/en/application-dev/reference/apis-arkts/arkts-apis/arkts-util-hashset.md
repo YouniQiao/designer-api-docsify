@@ -1,8 +1,8 @@
 # @ohos.util.HashSet
 
-HashSet is implemented based on [HashMap](arkts-util-hashmap.md). In HashSet, only the **value** object is
+HashSet is implemented based on [HashMap](arkts-arkts-util-hashmap-hashmap-c.md#HashMap). In HashSet, only the **value** object is
  processed.
- Unlike [TreeSet](arkts-util-treeset.md), which stores and accesses data in sorted order, HashSet sorts data by
+ Unlike [TreeSet](arkts-arkts-util-treeset-treeset-c.md#TreeSet), which stores and accesses data in sorted order, HashSet sorts data by
  hash value. This means that HashSet may use a different order when storing and accessing elements. Both of them allow
  only unique elements. However, null values are allowed in HashSet, but not in TreeSet, because null values may affect
  the order of elements in the container.
@@ -18,7 +18,7 @@ HashSet is implemented based on [HashMap](arkts-util-hashmap.md). In HashSet, on
 ## Modules to Import
 
 ```TypeScript
-import { HashSet } from 'kits/@kit.ArkTS';
+import { HashSet } from '@kit.ArkTS';
 ```
 
 ## Summary

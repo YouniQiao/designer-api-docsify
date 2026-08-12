@@ -11,14 +11,14 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)
-> 替代。pushNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)
+> 替代。pushNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
@@ -26,7 +26,7 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**替代接口：** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +47,10 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
 ## 示例
 
@@ -99,14 +99,14 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)替代。
-> pushNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute-1)替代。
+> pushNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
@@ -114,7 +114,7 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**替代接口：** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,10 +140,10 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
 ## 示例
 
@@ -194,14 +194,14 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)
-> 替代。pushNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)
+> 替代。pushNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
@@ -209,7 +209,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**替代接口：** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -231,10 +231,10 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
 ## 示例
 
@@ -283,14 +283,14 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 > **说明：**
 > 
 > - 从API version 10开始支持，从API version 18开始废弃，建议使用
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)
-> 替代。pushNamedRoute需先通过[UIContext](arkts-arkui-uicontext.md)中的
+> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute-3)
+> 替代。pushNamedRoute需先通过[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](arkts-arkui-uicontext.md)实例，然后通过该实例进行调用。
+> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
 > 
-> - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](arkts-arkui-uicontext.md)对象。
+> [Router](@ohos.arkui.UIContext)对象。
 
 **起始版本：** 10
 
@@ -298,7 +298,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 
 **废弃版本：** 18
 
-**替代接口：** [@ohos.arkui.UIContext:Router#pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)(options:
+**替代接口：** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -325,10 +325,10 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100003-路由压入的page过多) | Page stack error. Too many pages are pushed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Named route error. The named route does not exist. |
 
 ## 示例
 

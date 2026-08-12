@@ -1,8 +1,8 @@
 # SheetOptions
 
-Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md).
+Optional attributes of the sheet. Inherits from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions).
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Callback function when the sheet interactive dismiss
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sheetDismiss | [SheetDismiss](../arkts-apis/arkts-arkui-common-sheetdismiss-i.md) | Yes |  |
+| sheetDismiss | [SheetDismiss](arkts-arkui-sheetdismiss-i.md) | Yes |  |
 
 ## blurStyle
 
@@ -70,7 +70,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 Defines the sheet's border color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the sheet's border style.
 
-**Type:** [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** BorderStyle \| [EdgeStyles](../arkts-apis/arkts-arkui-units-edgestyles-i.md)
 
 **Since:** 12
 
@@ -114,7 +114,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Defines the sheet's border width.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** Dimension \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **Since:** 12
 
@@ -136,7 +136,7 @@ detentSelection?: SheetSize | Length
 
 Select a detent from detents property
 
-**Type:** [SheetSize](../arkts-apis/arkts-arkui-common-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
 
 **Default:** detents[0]
 
@@ -302,7 +302,7 @@ height?: SheetSize | Length
 
 Defines sheet height
 
-**Type:** [SheetSize](../arkts-apis/arkts-arkui-common-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-sheetsize-e.md) \| Length
 
 **Default:** SheetSize.LARGE
 
@@ -374,7 +374,7 @@ maskColor?: ResourceColor
 
 Defines sheet maskColor
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -444,7 +444,7 @@ onDetentsDidChange?: Callback<number>
 
 Called when detents of the sheet changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -466,7 +466,7 @@ onHeightDidChange?: Callback<number>
 
 Called when height of the sheet is changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -488,7 +488,7 @@ onTypeDidChange?: Callback<SheetType>
 
 Called when the sheet type changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SheetType&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[SheetType](arkts-arkui-sheettype-e.md)&gt;
 
 **Since:** 12
 
@@ -510,7 +510,7 @@ onWidthDidChange?: Callback<number>
 
 Called when width of the sheet changed
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;number&gt;
 
 **Since:** 12
 
@@ -532,7 +532,7 @@ onWillDismiss?: Callback<DismissSheetAction>
 
 Callback function when the sheet will dismiss
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DismissSheetAction&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[DismissSheetAction](arkts-arkui-dismisssheetaction-i.md)&gt;
 
 **Since:** 12
 
@@ -554,7 +554,7 @@ onWillSpringBackWhenDismiss?: Callback<SpringBackAction>
 
 Sheet springs back callback when dismiss
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SpringBackAction&gt;
+**Type:** [Callback](arkts-arkui-callback-i.md)&lt;[SpringBackAction](arkts-arkui-springbackaction-i.md)&gt;
 
 **Since:** 12
 
@@ -576,7 +576,7 @@ placement?: Placement
 
 The placement of popup sheet type.Supports all positions defined in Placement.
 
-**Type:** [Placement](../arkts-apis/arkts-arkui-placement-e.md)
+**Type:** Placement
 
 **Default:** Placement.Bottom
 
@@ -624,7 +624,7 @@ preferType?: SheetType
 
 Defines the sheet prefer type
 
-**Type:** [SheetType](../arkts-apis/arkts-arkui-common-sheettype-e.md)
+**Type:** [SheetType](arkts-arkui-sheettype-e.md)
 
 **Since:** 11
 
@@ -646,7 +646,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **Since:** 15
 
@@ -670,7 +670,7 @@ Define strategy for drawing rounded corners.NOTE
 
 1. **RenderStrategy.FAST**: The current component and its child components will be drawn directly onto the canvas with rounded corners applied.2. **RenderStrategy.OFFSCREEN**: The current component and its child components will first be rendered onto an off-screen canvas, then undergo a rounded corner clipping, and finally be drawn onto the main canvas.
 
-**Type:** [RenderStrategy](../arkts-apis/arkts-arkui-renderstrategy-e.md)
+**Type:** RenderStrategy
 
 **Default:** RenderStrategy.FAST
 
@@ -694,7 +694,7 @@ scrollSizeMode?: ScrollSizeMode
 
 Determine sheet scroll size mode.
 
-**Type:** [ScrollSizeMode](../arkts-apis/arkts-arkui-common-scrollsizemode-e.md)
+**Type:** [ScrollSizeMode](arkts-arkui-scrollsizemode-e.md)
 
 **Default:** ScrollSizeMode.FELLOW_DETEND
 
@@ -718,7 +718,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the sheet's shadow.
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
 
@@ -788,7 +788,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for sheet. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of sheet.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 
 **Since:** 26.0.0
 
@@ -810,7 +810,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 Defines the sheet title
 
-**Type:** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| CustomBuilder
+**Type:** [SheetTitleOptions](arkts-arkui-sheettitleoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 11
 
@@ -832,7 +832,7 @@ uiContext?: UIContext
 
 The UIContext that the sheet belongs to
 
-**Type:** [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** [UIContext](arkts-arkui-uicontext-t.md)
 
 **Since:** 12
 
@@ -854,7 +854,7 @@ width?: Dimension
 
 Defines the sheet's width.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 12
 

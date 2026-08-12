@@ -1,13 +1,13 @@
 # UIServiceExtensionAbility (System API)
 
 UIServiceExtensionAbility provides extended capabilities related to the floating window component. It inherits from   
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md). It is mainly used to provide services with UIs for third-party applications.
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It is mainly used to provide services with UIs for third-party applications.
 
 > **NOTE：**
 > 
 > The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
-**Inheritance/Implementation:** UIServiceExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** UIServiceExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **Since:** 14
 
@@ -22,7 +22,7 @@ UIServiceExtensionAbility provides extended capabilities related to the floating
 ## Modules to Import
 
 ```TypeScript
-import { UIServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+import { UIServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -32,8 +32,8 @@ onConnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
 Called when the connection to a   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) is established. If the UIServiceExtensionAbility is started by calling   
-[connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectuiserviceextensionability), this callback will be invoked after [onCreate()](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) object for communication between the client and server.
+[UIServiceExtensionAbility](#UIServiceExtensionAbility) is established. If the UIServiceExtensionAbility is started by calling   
+[connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectUIServiceExtensionAbility), this callback will be invoked after [onCreate()](#onCreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#UIServiceHostProxy) object for communication between the client and server.
 
 **Since:** 14
 
@@ -51,8 +51,8 @@ Called when the connection to a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md) information about the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md), including the ability name and bundle name. |
-| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) object, used for communication between the client and server. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility), including the ability name and bundle name. |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#UIServiceHostProxy) object, used for communication between the client and server. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ Called to initialize the service logic.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md) information about the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md), including the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility), including the ability name and bundle name. |
 
 ## Examples
 
@@ -130,7 +130,7 @@ Callback invoked when data is received.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | Proxy that sends data to the client. |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data received. |
+| data | Record&lt;string, Object&gt; | Yes | Data received. |
 
 ## Examples
 
@@ -169,7 +169,7 @@ Called back when data is sent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | Indicates the UI service host proxy. |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Indicates the received data. |
+| data | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the received data. |
 
 ## onDestroy
 
@@ -178,7 +178,7 @@ onDestroy(): void
 ```
 
 Called to clear resources when this   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) is destroyed.
+[UIServiceExtensionAbility](#UIServiceExtensionAbility) is destroyed.
 
 **Since:** 14
 
@@ -211,7 +211,7 @@ onDisconnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
 Called when the connection to a   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) is interrupted.
+[UIServiceExtensionAbility](#UIServiceExtensionAbility) is interrupted.
 
 **Since:** 14
 
@@ -229,7 +229,7 @@ Called when the connection to a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md) information about the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md), including the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility), including the ability name and bundle name. |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes | Proxy that sends data to the sender. |
 
 ## Examples
@@ -257,9 +257,9 @@ onRequest(want: Want, startId: int): void
 ```
 
 Called to request to start a   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). If the UIServiceExtensionAbility is started by calling   
-[startAbility](arkts-ability-uiabilitycontext-c.md#startability) or   
-[startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startuiserviceextensionability), this callback will be invoked after [onCreate](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#oncreate). The value of   
+[UIServiceExtensionAbility](#UIServiceExtensionAbility). If the UIServiceExtensionAbility is started by calling   
+[startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) or   
+[startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startUIServiceExtensionAbility), this callback will be invoked after [onCreate](#onCreate). The value of   
 **startId** is incremented for each UIServiceExtensionAbility that is started.
 
 **Since:** 14
@@ -278,7 +278,7 @@ Called to request to start a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md) information about the [UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md), including the ability name and bundle name. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | [Want](arkts-ability-app-ability-want-want-c.md#Want) information about the [UIServiceExtensionAbility](#UIServiceExtensionAbility), including the ability name and bundle name. |
 | startId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of times the instance has been started. The initial value is **1** for the first start, and it increments automatically for subsequent starts. |
 
 ## Examples
@@ -300,8 +300,8 @@ onWindowDidCreate(window: window.Window): void
 ```
 
 Called when a window is created for the   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). Through this callback, the   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md) passes the  created window object to the foreground application.
+[UIServiceExtensionAbility](#UIServiceExtensionAbility). Through this callback, the   
+[UIServiceExtensionAbility](#UIServiceExtensionAbility) passes the  created window object to the foreground application.
 
 **Since:** 14
 
@@ -341,9 +341,9 @@ onWindowWillCreate(config: window.ExtensionWindowConfig): void
 ```
 
 Called when a window will be created for the   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). Through   
+[UIServiceExtensionAbility](#UIServiceExtensionAbility). Through   
 **window.ExtensionWindowConfig** in the callback, the foreground application sends the parameters for creating the window to the   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md).
+[UIServiceExtensionAbility](#UIServiceExtensionAbility).
 
 **Since:** 14
 
@@ -383,7 +383,7 @@ context: UIServiceExtensionContext
 ```
 
 Context environment for a   
-[UIServiceExtensionAbility](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md). This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md).
+[UIServiceExtensionAbility](#UIServiceExtensionAbility). This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [UIServiceExtensionContext](arkts-ability-uiserviceextensioncontext-c-sys.md)
 

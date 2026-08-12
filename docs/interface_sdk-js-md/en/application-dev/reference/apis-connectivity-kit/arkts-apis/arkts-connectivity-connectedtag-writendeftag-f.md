@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## writeNdefTag
@@ -20,7 +20,7 @@ Writes the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#write
+**Substitutes:** [write](ohos.connectedTag/connectedTag#write)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -69,7 +69,7 @@ Writes the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#write
+**Substitutes:** [write](ohos.connectedTag/connectedTag#write)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -82,7 +82,7 @@ Writes the NDEF Data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string | Yes | The Data to write. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes |  |
 
 ## Examples
 

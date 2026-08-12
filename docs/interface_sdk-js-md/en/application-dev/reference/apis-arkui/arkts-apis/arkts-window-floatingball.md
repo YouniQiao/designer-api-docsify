@@ -5,7 +5,7 @@ This module provides essential functionalities for floating balls. It lets you c
 > **NOTE：**
 > 
 > - For the system capability SystemCapability.Window.SessionManager, use
-> [canIUse()](arkts-arkui-global-caniuse-f.md#caniuse) to check whether the device supports this system
+> [canIUse()](canIUse) to check whether the device supports this system
 > capability and the corresponding APIs.
 
 **Since:** 20
@@ -19,7 +19,7 @@ This module provides essential functionalities for floating balls. It lets you c
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## Summary

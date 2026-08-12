@@ -13,7 +13,7 @@ The childprocess object can be used to create a new process.
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## close
@@ -52,7 +52,7 @@ Return it as 'Uint8Array of the stderr until EOF
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## getOutput
 
@@ -74,7 +74,7 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## kill
 
@@ -96,7 +96,7 @@ Send a signal to process
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| signal | number \| string | Yes |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | Yes |
 
 ## wait
 
@@ -118,7 +118,7 @@ Return 'number' is the target process exit code
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## exitCode
 

@@ -38,7 +38,7 @@ type: AnimationType
 
 窗口动画类型。
 
-**类型：** [AnimationType](arkts-arkui-window-animationtype-e-sys.md)
+**类型：** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **起始版本：** 20
 

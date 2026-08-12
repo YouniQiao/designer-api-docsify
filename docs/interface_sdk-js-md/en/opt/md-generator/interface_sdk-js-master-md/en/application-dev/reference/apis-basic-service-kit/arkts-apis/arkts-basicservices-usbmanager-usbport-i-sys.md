@@ -13,7 +13,7 @@ Represents a USB port.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## id
@@ -42,7 +42,7 @@ status: USBPortStatus
 
 USB port role.
 
-**Type:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)
+**Type:** USBPortStatus
 
 **Since:** 9
 
@@ -60,7 +60,7 @@ supportedModes: PortModeType
 
 Numeric mask combination for the supported mode list.
 
-**Type:** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
+**Type:** PortModeType
 
 **Since:** 9
 

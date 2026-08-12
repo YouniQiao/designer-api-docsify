@@ -13,7 +13,7 @@ Represents data of the hyperlink type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## description
@@ -54,7 +54,7 @@ Object of the dictionary type used to describe the attributes of the hyperlink. 
 
 By default, it is an empty dictionary object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 
@@ -73,7 +73,7 @@ readonly uniformDataType: 'general.hyperlink'
 ```
 
 Uniform data type, which has a fixed value of **general.hyperlink**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'general.hyperlink'
 

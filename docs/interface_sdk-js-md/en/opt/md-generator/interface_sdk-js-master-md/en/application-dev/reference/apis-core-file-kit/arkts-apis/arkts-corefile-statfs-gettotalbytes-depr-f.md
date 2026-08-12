@@ -12,7 +12,7 @@ Obtains the total size of the specified file system, in bytes. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.statvfs:statfs.getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes)
+**Substitutes:** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
 
 <!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -54,7 +54,7 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.statvfs:statfs.getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes)
+**Substitutes:** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
 
 <!--Device-Statfs-function getTotalBytes(path: string): Promise<number>--><!--Device-Statfs-function getTotalBytes(path: string): Promise<number>-End-->
 
@@ -70,7 +70,7 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

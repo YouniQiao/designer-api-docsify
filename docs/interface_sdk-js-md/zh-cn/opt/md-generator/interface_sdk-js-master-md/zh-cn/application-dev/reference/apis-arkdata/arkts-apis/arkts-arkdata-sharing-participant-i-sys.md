@@ -72,7 +72,7 @@ role?: Role
 
 参与者的角色，为邀请者或被邀请者。默认为undefined。
 
-**类型：** [Role](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
+**类型：** Role
 
 **起始版本：** 11
 
@@ -90,7 +90,7 @@ state?: State
 
 共享的状态。默认为undefined。
 
-**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 11
 

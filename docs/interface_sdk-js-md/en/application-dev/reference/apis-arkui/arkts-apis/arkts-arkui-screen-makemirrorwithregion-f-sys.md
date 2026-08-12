@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { screen } from 'kits/@kit.ArkUI';
+import { screen } from '@kit.ArkUI';
 ```
 
 ## makeMirrorWithRegion
@@ -30,7 +30,7 @@ Sets a rectangle on the screen to mirror mode. This API uses a promise to return
 | --- | --- | --- | --- |
 | mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the primary screen. The ID must be a non-negative integer. |
 | mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | Yes | Array of IDs of secondary screens. Each ID must be a positive integer. |
-| mainScreenRegion | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | Yes | Rectangle on the primary screen to be mirrored. |
+| mainScreenRegion | Rect | Yes | Rectangle on the primary screen to be mirrored. |
 
 **Return value:**
 
@@ -42,8 +42,8 @@ Sets a rectangle on the screen to mirror mode. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

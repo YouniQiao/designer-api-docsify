@@ -22,6 +22,6 @@ Callback function when the shortcut key registered by the system application mee
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | Yes | Options for registering shortcut keys when the system applies. |
+| keyOptions | KeyOptions | Yes | Options for registering shortcut keys when the system applies. |
 | keyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event when a shortcut key is triggered. |
 

@@ -18,7 +18,7 @@ font?: Font
 
 默认值遵循主题设置。
 
-**类型：** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 12
 

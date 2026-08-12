@@ -36,7 +36,7 @@ reason: DismissReason
 
 Dismiss reason type.
 
-**Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
+**Type:** [DismissReason](arkts-arkui-common-dismissreason-e.md)
 
 **Since:** 23
 

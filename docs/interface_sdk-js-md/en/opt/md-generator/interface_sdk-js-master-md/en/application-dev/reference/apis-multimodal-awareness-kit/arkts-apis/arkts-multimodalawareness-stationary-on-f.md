@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from 'kits/@kit.MultimodalAwarenessKit';
+import { stationary } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## on
@@ -27,7 +27,7 @@ Subscribes to the device status.
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | Yes |
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | Yes |
 | reportLatencyNs | number | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | Yes |
 
 ## Examples
 

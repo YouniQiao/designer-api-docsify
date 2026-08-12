@@ -6,7 +6,7 @@ Defines the routing state.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#RouterState
+**Substitutes:** [RouterState](ohos.router#RouterState)
 
 <!--Device-unnamed-export interface RouterState--><!--Device-unnamed-export interface RouterState-End-->
 
@@ -15,7 +15,7 @@ Defines the routing state.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## index
@@ -32,7 +32,7 @@ Index of the current page in the stack. The index starts from 1 from the bottom 
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.RouterState#index
+**Substitutes:** [index](ohos.router.RouterState#index)
 
 <!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
@@ -52,7 +52,7 @@ Name of the current page, that is, the file name.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.RouterState#name
+**Substitutes:** [name](ohos.router.RouterState#name)
 
 <!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
@@ -72,7 +72,7 @@ Path of the current page.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.RouterState#path
+**Substitutes:** [path](ohos.router.RouterState#path)
 
 <!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
 

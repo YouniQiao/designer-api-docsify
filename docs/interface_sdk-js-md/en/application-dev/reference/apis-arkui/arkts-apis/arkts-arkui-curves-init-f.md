@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## init
@@ -20,7 +20,7 @@ Implements initialization for the interpolation curve, which is used to create a
 
 **Deprecated since:** 9
 
-**Substitutes:** [initCurve](arkts-arkui-curves-initcurve-f.md#initcurve)
+**Substitutes:** [initCurve](arkts-arkui-curves-initcurve-f.md#initCurve)
 
 <!--Device-curves-function init(curve?: Curve): string--><!--Device-curves-function init(curve?: Curve): string-End-->
 
@@ -30,7 +30,7 @@ Implements initialization for the interpolation curve, which is used to create a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | [Curve](arkts-arkui-curve-e.md) | No | Curve type.&lt;br&gt;Default value: **Curve.Linear |
+| curve | Curve | No | Curve type.&lt;br&gt;Default value: **Curve.Linear |
 
 **Return value:**
 

@@ -92,7 +92,7 @@ touchObject: TouchObject
 
 历史点对应触摸事件的基础信息。
 
-**类型：** [TouchObject](../arkts-apis/arkts-arkui-common-touchobject-i.md)
+**类型：** [TouchObject](arkts-arkui-touchobject-i.md)
 
 **起始版本：** 10
 

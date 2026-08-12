@@ -8,7 +8,7 @@ Defines the menu item option.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](EditMenuOptions)
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -28,7 +28,7 @@ Selected text.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](EditMenuOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -50,7 +50,7 @@ content: ResourceStr
 
 Display content.
 
-**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -58,7 +58,7 @@ Display content.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](EditMenuOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,7 +74,7 @@ startIcon?: ResourceStr
 
 Display icon. The default value is empty, and no icon is displayed.
 
-**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ Display icon. The default value is empty, and no icon is displayed.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**Substitutes:** [EditMenuOptions](EditMenuOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

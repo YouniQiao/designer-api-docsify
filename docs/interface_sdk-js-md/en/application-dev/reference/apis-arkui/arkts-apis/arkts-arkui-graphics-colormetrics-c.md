@@ -74,7 +74,7 @@ blend color
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. The type of the input parameter is not ColorMetrics. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. The type of the input parameter is not ColorMetrics. |
 
 ## colorWithSpace
 
@@ -98,7 +98,7 @@ Instantiate the ColorMetrics class using colorSpace and rgba.Only some propertie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpace | [ColorSpace](arkts-arkui-colorspace-e.md) | Yes | colorSpace of color. |
+| colorSpace | ColorSpace | Yes | colorSpace of color. |
 | red | double | Yes | red value of rgba. The range of the red channel is [0, 1]. |
 | green | double | Yes | green value of rgba. The range of the green channel is [0, 1]. |
 | blue | double | Yes | blue value of rgba. The range of the blue channel is [0, 1]. |
@@ -162,7 +162,7 @@ Instantiate the ColorMetrics class using ResourceColor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | resource color |
+| color | ResourceColor | Yes | resource color |
 
 **Return value:**
 
@@ -174,8 +174,8 @@ Instantiate the ColorMetrics class using ResourceColor
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [180003](../errorcode-event.md#180003-input-event-is-not-a-cloned-event) | Failed to obtain the color resource. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
+| [180003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-event.md#180003-input-event-is-not-a-cloned-event) | Failed to obtain the color resource. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
 
 ## rgba
 

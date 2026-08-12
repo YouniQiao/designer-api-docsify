@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from 'kits/@kit.ArkUI';
+import { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -2,7 +2,7 @@
 
 Defines the text style options.
 
-**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md)
+**Inheritance/Implementation:** TextPickerTextStyle extends [PickerTextStyle](PickerTextStyle)
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ maxFontSize?: double | string | Resource
 
 Maximum font size.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ minFontSize?: double | string | Resource
 
 Minimum font size, used in conjunction with maxFontSize.When minFontSize and maxFontSize are set,the size setting in font is ineffective.The default maximum number of lines is 1,and the default height adaptation mode is MIN_FONT_SIZE_FIRST.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 

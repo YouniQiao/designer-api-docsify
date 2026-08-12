@@ -13,7 +13,7 @@ Defines device information.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## deviceId
@@ -64,7 +64,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** [DeviceType](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-devicetype-e.md)
+**Type:** DeviceType
 
 **Since:** 26.0.0
 

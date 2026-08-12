@@ -38,7 +38,7 @@ type?: DataPanelType
 
 DataPanel Type.Default value: DataPanelType.Circle.
 
-**Type:** [DataPanelType](../arkts-components/arkts-arkui-datapaneltype-e.md)
+**Type:** [DataPanelType](arkts-arkui-datapanel-datapaneltype-e.md)
 
 **Since:** 23
 

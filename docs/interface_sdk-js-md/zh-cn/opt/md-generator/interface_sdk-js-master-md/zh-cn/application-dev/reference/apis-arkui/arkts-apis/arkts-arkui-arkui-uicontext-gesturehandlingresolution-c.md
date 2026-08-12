@@ -30,7 +30,7 @@ constructor(isConsumed: boolean)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [isConsumed](#isconsumed) | boolean | 是 |
+| [isConsumed](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md) | boolean | 是 |
 
 ## isConsumed
 

@@ -15,7 +15,7 @@ Describes the callback for a single system bar.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## backgroundColor
@@ -86,7 +86,7 @@ region?: Rect
 
 Current position and size of the system bar. The default value is {0,0,0,0}.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 8
 
@@ -106,7 +106,7 @@ type: WindowType
 
 Type of the system bar whose properties are changed. Only the status bar and navigation bar are supported.
 
-**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+**Type:** WindowType
 
 **Since:** 8
 

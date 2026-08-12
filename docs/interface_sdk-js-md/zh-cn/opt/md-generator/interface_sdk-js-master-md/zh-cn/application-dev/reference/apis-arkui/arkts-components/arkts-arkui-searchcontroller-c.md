@@ -1,20 +1,20 @@
 # SearchController
 
-Search组件的控制器继承自[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)，涉及的接口有  
-[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentrect)、  
-[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#gettextcontentlinecount)、  
-[getCaretOffset](arkts-arkui-textcontentcontrollerbase-c.md#getcaretoffset)、[addText](arkts-arkui-textcontentcontrollerbase-c.md#addtext)、  
-[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deletetext)、[getSelection](arkts-arkui-textcontentcontrollerbase-c.md#getselection)、[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearpreviewtext)、  
-[setStyledPlaceholder](arkts-arkui-textcontentcontrollerbase-c.md#setstyledplaceholder)、  
-[deleteBackward](arkts-arkui-textcontentcontrollerbase-c.md#deletebackward)、  
-[scrollToVisible](arkts-arkui-textcontentcontrollerbase-c.md#scrolltovisible)&lt;!--Del--&gt;以及系统接口  
-[getText](arkts-arkui-textcontentcontrollerbase-c-sys.md#gettext)&lt;!--DelEnd--&gt;。
+Search组件的控制器继承自[TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase)，涉及的接口有  
+[getTextContentRect](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentRect)、  
+[getTextContentLineCount](arkts-arkui-textcontentcontrollerbase-c.md#getTextContentLineCount)、  
+[getCaretOffset](TextContentControllerBase#getCaretOffset)、[addText](TextContentControllerBase#addText)、  
+[deleteText](arkts-arkui-textcontentcontrollerbase-c.md#deleteText)、[getSelection](TextContentControllerBase#getSelection)、[clearPreviewText](arkts-arkui-textcontentcontrollerbase-c.md#clearPreviewText)、  
+[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder)、  
+[deleteBackward](TextContentControllerBase#deleteBackward)、  
+[scrollToVisible](TextContentControllerBase#scrollToVisible)&lt;!--Del--&gt;以及系统接口  
+[getText](TextContentControllerBase#getText)&lt;!--DelEnd--&gt;。
 
 ## 导入对象
 
 ```ts controller: SearchController = new SearchController();```
 
-**继承/实现关系：** SearchController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md)
+**继承/实现关系：** SearchController extends [TextContentControllerBase](arkts-arkui-textcontentcontrollerbase-c.md#TextContentControllerBase)
 
 **起始版本：** 8
 

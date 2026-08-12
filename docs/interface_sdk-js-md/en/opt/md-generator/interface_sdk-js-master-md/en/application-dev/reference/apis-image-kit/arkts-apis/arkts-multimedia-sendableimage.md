@@ -11,7 +11,7 @@ The module provides APIs for image processing based on the [Sendable](../../../a
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## Summary

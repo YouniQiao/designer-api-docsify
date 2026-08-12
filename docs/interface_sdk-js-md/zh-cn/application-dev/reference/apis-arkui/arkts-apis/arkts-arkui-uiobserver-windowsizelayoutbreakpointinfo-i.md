@@ -18,7 +18,7 @@ readonly heightBreakpoint: HeightBreakpoint
 
 当前窗口的高度断点分类。该值根据已配置的高度断点阈值和宽高比，指示窗口当前所处的高度类别。
 
-**类型：** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
+**类型：** HeightBreakpoint
 
 **起始版本：** 24
 
@@ -38,7 +38,7 @@ readonly widthBreakpoint: WidthBreakpoint
 
 当前窗口的宽度断点分类。该值根据已配置的宽度断点阈值，指示窗口当前处于哪个宽度类别。
 
-**类型：** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
+**类型：** WidthBreakpoint
 
 **起始版本：** 24
 

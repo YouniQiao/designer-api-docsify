@@ -6,7 +6,7 @@
 function createEffect(source: image.PixelMap): Filter
 ```
 
-通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。
+通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#getEffectPixelMap)获取处理后的图像。
 
 **起始版本：** 9
 

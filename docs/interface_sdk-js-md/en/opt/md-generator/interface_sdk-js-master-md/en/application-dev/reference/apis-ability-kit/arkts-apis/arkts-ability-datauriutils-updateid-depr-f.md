@@ -12,7 +12,7 @@ Updates the ID in the specified uri
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.dataUriUtils/dataUriUtils#updateId
+**Substitutes:** [updateId](ohos.app.ability.dataUriUtils/dataUriUtils#updateId)
 
 <!--Device-dataUriUtils-function updateId(uri: string, id: number): string--><!--Device-dataUriUtils-function updateId(uri: string, id: number): string-End-->
 

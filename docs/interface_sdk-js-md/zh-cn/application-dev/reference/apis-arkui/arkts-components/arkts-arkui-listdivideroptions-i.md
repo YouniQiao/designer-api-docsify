@@ -24,7 +24,7 @@ color?: ResourceColor
 
 默认值：0x08000000
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** 0x08000000 [since 18]
 
@@ -58,7 +58,7 @@ endMargin?: Length
 
 endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** 0vp [since 18]
 
@@ -92,7 +92,7 @@ startMargin?: Length
 
 endMargin + startMargin 超过列宽度后startMargin和endMargin均会被置0。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **默认值：** 0vp [since 18]
 
@@ -122,7 +122,7 @@ strokeWidth: Length
 
 设置为负数，百分比，或者大于等于List内容区长度时，按0处理。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 7
 

@@ -11,7 +11,7 @@ Describes the SSAP service.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## events
@@ -20,9 +20,9 @@ import { ssap } from 'kits/@kit.ConnectivityKit';
 events?: Event[]
 ```
 
-The events belong to this service.&lt;br&gt;This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
+The events belong to this service.&lt;br&gt;This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addService) method.
 
-**Type:** [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[]
+**Type:** Event[]
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ The events belong to this service.&lt;br&gt;This field is not supported in [addS
 methods?: Method[]
 ```
 
-The methods belong to this service.&lt;br&gt;This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addservice) method.
+The methods belong to this service.&lt;br&gt;This field is not supported in [addService](arkts-connectivity-ssap-server-i.md#addService) method.
 
 **Type:** [Method](arkts-connectivity-ssap-method-i-sys.md)[]
 

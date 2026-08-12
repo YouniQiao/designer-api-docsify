@@ -1,14 +1,14 @@
 # @ohos.app.ability.CompletionHandlerForAbilityStartCallback
 
 **CompletionHandlerForAbilityStartCallback** is an optional parameter of
- [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md). It provides callback results for launching ability
+ [AbilityStartCallback](./application/AbilityStartCallback). It provides callback results for launching ability
  components of specific types through the vertical panel.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from 'kits/@kit.AbilityKit';
+import { CompletionHandlerForAbilityStartCallback, AbilityStartFailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

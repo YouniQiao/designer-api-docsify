@@ -1,7 +1,7 @@
 # CanvasPattern
 
 **CanvasPattern** represents an object, created by the  
-[createPattern](../arkts-apis/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md/arkts-arkui-viewmodel-canvasrenderingcontext2d-i.md#createpattern)API, describing an image filling pattern based on the image and repetition mode.
+[createPattern](CanvasRenderingContext2D#createPattern)API, describing an image filling pattern based on the image and repetition mode.
 
 **Since:** 8
 
@@ -36,5 +36,5 @@ Uses a **Matrix2D** object as a parameter to perform matrix transformation on th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No | Transformation matrix.&lt;br&gt;The **undefined** and **null** values are treated as invalid.&lt;br&gt;Default value: **null**. |
+| transform | Matrix2D | No | Transformation matrix.&lt;br&gt;The **undefined** and **null** values are treated as invalid.&lt;br&gt;Default value: **null**. |
 

@@ -1,8 +1,8 @@
 # PhotoOutput
 
-拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+拍照会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
-**继承/实现关系：** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**继承/实现关系：** PhotoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **起始版本：** 10
 
@@ -36,8 +36,8 @@ capture(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## capture
 
@@ -59,14 +59,14 @@ capture(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## capture
 
@@ -95,9 +95,9 @@ capture(setting: PhotoCaptureSetting, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## capture
 
@@ -125,15 +125,15 @@ capture(setting: PhotoCaptureSetting): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400104](../errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableAutoExtendedGainmapDelivery
 
@@ -163,9 +163,9 @@ enableAutoExtendedGainmapDelivery(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableMirror
 
@@ -175,8 +175,8 @@ enableMirror(enabled: boolean): void
 
 是否启用动态照片镜像拍照。
 
-调用该接口前，需要通过[isMovingPhotoSupported](arkts-camera-camera-photooutput-i.md#ismovingphotosupported)查询是否支持动态照片拍摄功能以及通过  
-[isMirrorSupported](arkts-camera-camera-photooutput-i.md#ismirrorsupported)查询是否支持镜像拍照功能。
+调用该接口前，需要通过[isMovingPhotoSupported](#isMovingPhotoSupported)查询是否支持动态照片拍摄功能以及通过  
+[isMirrorSupported](#isMirrorSupported)查询是否支持镜像拍照功能。
 
 **起始版本：** 13
 
@@ -196,9 +196,9 @@ enableMirror(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## enableMovingPhoto
 
@@ -228,9 +228,9 @@ enableMovingPhoto(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getActiveProfile
 
@@ -258,7 +258,7 @@ getActiveProfile(): Profile
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getPhotoRotation
 
@@ -297,8 +297,8 @@ getPhotoRotation(deviceDegree?: number): ImageRotation
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getSupportedMovingPhotoVideoCodecTypes
 
@@ -320,13 +320,13 @@ getSupportedMovingPhotoVideoCodecTypes(): Array<VideoCodecType>
 
 | 类型 |
 | --- |
-| Array&lt;VideoCodecType&gt; |
+| Array&lt;[VideoCodecType](arkts-camera-camera-videocodectype-e.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## isAutoExtendedGainmapDeliverySupported
 
@@ -400,7 +400,7 @@ isMovingPhotoSupported(): boolean
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## isPhotoQualityPrioritizationSupported
 
@@ -434,7 +434,7 @@ isPhotoQualityPrioritizationSupported(qualityPrioritization: PhotoQualityPriorit
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## off('photoAvailable')
 
@@ -457,7 +457,7 @@ off(type: 'photoAvailable', callback?: AsyncCallback<Photo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'photoAvailable' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 否 |
 
 ## off('photoAssetAvailable')
 
@@ -500,7 +500,7 @@ off(type: 'captureStart', callback?: AsyncCallback<number>): void
 
 **废弃版本：** 11
 
-**替代接口：** camera.PhotoOutput.off(type:
+**替代接口：** [off](camera.PhotoOutput.off(type:)
 
 <!--Device-PhotoOutput-off(type: 'captureStart', callback?: AsyncCallback<number>): void--><!--Device-PhotoOutput-off(type: 'captureStart', callback?: AsyncCallback<number>): void-End-->
 
@@ -534,7 +534,7 @@ off(type: 'captureStartWithInfo', callback?: AsyncCallback<CaptureStartInfo>): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'captureStartWithInfo' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | 否 |
 
 ## off('frameShutter')
 
@@ -557,7 +557,7 @@ off(type: 'frameShutter', callback?: AsyncCallback<FrameShutterInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameShutter' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | 否 |
 
 ## off('frameShutterEnd')
 
@@ -580,7 +580,7 @@ off(type: 'frameShutterEnd', callback?: AsyncCallback<FrameShutterEndInfo>): voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameShutterEnd' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | 否 |
 
 ## off('captureEnd')
 
@@ -603,7 +603,7 @@ off(type: 'captureEnd', callback?: AsyncCallback<CaptureEndInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'captureEnd' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | 否 |
 
 ## off('captureReady')
 
@@ -696,7 +696,7 @@ offCapturePhotoAvailable(callback?: Callback<CapturePhoto>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CapturePhoto&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 否 |
 
 ## on('photoAvailable')
 
@@ -723,7 +723,7 @@ on(type: 'photoAvailable', callback: AsyncCallback<Photo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'photoAvailable' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Photo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Photo](arkts-camera-camera-photo-i.md)&gt; | 是 |
 
 ## on('photoAssetAvailable')
 
@@ -770,7 +770,7 @@ on(type: 'captureStart', callback: AsyncCallback<number>): void
 
 **废弃版本：** 11
 
-**替代接口：** camera.PhotoOutput.on(type:
+**替代接口：** [on](camera.PhotoOutput.on(type:)
 
 <!--Device-PhotoOutput-on(type: 'captureStart', callback: AsyncCallback<number>): void--><!--Device-PhotoOutput-on(type: 'captureStart', callback: AsyncCallback<number>): void-End-->
 
@@ -789,7 +789,7 @@ on(type: 'captureStart', callback: AsyncCallback<number>): void
 on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): void
 ```
 
-监听拍照开始，通过注册回调函数获取[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)。使用callback异步回调。
+监听拍照开始，通过注册回调函数获取[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md#CaptureStartInfo)。使用callback异步回调。
 
 > **说明：**
 > 
@@ -808,7 +808,7 @@ on(type: 'captureStartWithInfo', callback: AsyncCallback<CaptureStartInfo>): voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'captureStartWithInfo' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureStartInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)&gt; | 是 |
 
 ## on('frameShutter')
 
@@ -831,7 +831,7 @@ on(type: 'frameShutter', callback: AsyncCallback<FrameShutterInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameShutter' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterInfo](arkts-camera-camera-frameshutterinfo-i.md)&gt; | 是 |
 
 ## on('frameShutterEnd')
 
@@ -858,7 +858,7 @@ on(type: 'frameShutterEnd', callback: AsyncCallback<FrameShutterEndInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'frameShutterEnd' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FrameShutterEndInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FrameShutterEndInfo](arkts-camera-camera-frameshutterendinfo-i.md)&gt; | 是 |
 
 ## on('captureEnd')
 
@@ -885,7 +885,7 @@ on(type: 'captureEnd', callback: AsyncCallback<CaptureEndInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'captureEnd' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CaptureEndInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)&gt; | 是 |
 
 ## on('captureReady')
 
@@ -998,7 +998,7 @@ onCapturePhotoAvailable(callback: Callback<CapturePhoto>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CapturePhoto&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CapturePhoto](arkts-camera-camera-capturephoto-i.md)&gt; | 是 |
 
 ## setMovingPhotoVideoCodecType
 
@@ -1026,7 +1026,7 @@ setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## setPhotoQualityPrioritization
 
@@ -1037,7 +1037,7 @@ setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization)
 设置拍照画质优先策略。
 
 设置之前，可先使用方法  
-[isPhotoQualityPrioritizationSupported](arkts-camera-camera-photooutput-i.md#isphotoqualityprioritizationsupported)对设备是否支持指定的拍照画质优先策略进行检查。
+[isPhotoQualityPrioritizationSupported](#isPhotoQualityPrioritizationSupported)对设备是否支持指定的拍照画质优先策略进行检查。
 
 **起始版本：** 21
 
@@ -1057,5 +1057,5 @@ setPhotoQualityPrioritization(qualityPrioritization: PhotoQualityPrioritization)
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |

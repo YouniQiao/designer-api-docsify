@@ -1,10 +1,10 @@
 # ControlCenter
 
-ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)。
+ControlCenter继承自[ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#ControlCenterQuery)。
 
 控制中心类，用于使能相机控制器。
 
-**继承/实现关系：** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md)
+**继承/实现关系：** ControlCenter extends [ControlCenterQuery](arkts-camera-camera-controlcenterquery-i.md#ControlCenterQuery)
 
 **起始版本：** 20
 
@@ -42,5 +42,5 @@ enableControlCenter(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

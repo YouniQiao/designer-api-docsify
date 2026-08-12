@@ -13,7 +13,7 @@ Defines the options of MeasureText.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from 'kits/@kit.ArkUI';
+import { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -44,7 +44,7 @@ constraintWidth?: double | string | Resource
 
 Text display area of width.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ fontFamily?: string | Resource
 
 Font list of text.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -84,7 +84,7 @@ fontSize?: double | string | Resource
 
 Font Size.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -164,7 +164,7 @@ lineHeight?: double | string | Resource
 
 Vertical center mode of the font.
 
-**Type:** double \| string \| Resource
+**Type:** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -264,7 +264,7 @@ textContent: string | Resource
 
 Text to display.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -304,7 +304,7 @@ wordBreak?: WordBreak
 
 Set the word break type.
 
-**Type:** [WordBreak](arkts-arkui-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 23
 

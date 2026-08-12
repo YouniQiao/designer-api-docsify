@@ -40,7 +40,7 @@ style: RichEditorParagraphStyle
 
 Paragraph style.
 
-**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 11
 

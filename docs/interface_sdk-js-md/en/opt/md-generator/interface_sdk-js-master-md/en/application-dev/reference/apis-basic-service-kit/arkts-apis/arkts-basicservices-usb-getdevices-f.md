@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## getDevices
@@ -18,7 +18,7 @@ Obtains the USB device list.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices)
+**Substitutes:** [getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)
 
 <!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usb-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
@@ -28,7 +28,7 @@ Obtains the USB device list.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Readonly&lt;USBDevice&gt;&gt; |
+| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevice&gt;&gt; |
 
 ## Examples
 

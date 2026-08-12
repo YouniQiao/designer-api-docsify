@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-unnamed-export interface CipherAesOptions--><!--Device-unnamed-export interface CipherAesOptions-End-->
 
@@ -24,7 +24,7 @@ complete: () => void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-complete: () => void--><!--Device-CipherAesOptions-complete: () => void-End-->
 
@@ -42,7 +42,7 @@ fail: (data: string, code: number) => void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-fail: (data: string, code: number) => void--><!--Device-CipherAesOptions-fail: (data: string, code: number) => void-End-->
 
@@ -67,7 +67,7 @@ success: (data: CipherResponse) => void
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-success: (data: CipherResponse) => void--><!--Device-CipherAesOptions-success: (data: CipherResponse) => void-End-->
 
@@ -95,7 +95,7 @@ action: string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-action: string--><!--Device-CipherAesOptions-action: string-End-->
 
@@ -115,7 +115,7 @@ AES加解密的初始向量，经过base64编码后的字符串，默认值为ke
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-iv?: string--><!--Device-CipherAesOptions-iv?: string-End-->
 
@@ -135,7 +135,7 @@ AES加解密的初始向量字节长度，当前为预留字段，默认值16，
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-ivLen?: string--><!--Device-CipherAesOptions-ivLen?: string-End-->
 
@@ -155,7 +155,7 @@ AES加解密的初始向量偏移，默认值0，仅支持0。
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-ivOffset?: string--><!--Device-CipherAesOptions-ivOffset?: string-End-->
 
@@ -175,7 +175,7 @@ key: string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-key: string--><!--Device-CipherAesOptions-key: string-End-->
 
@@ -195,7 +195,7 @@ text: string
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-text: string--><!--Device-CipherAesOptions-text: string-End-->
 
@@ -215,7 +215,7 @@ AES算法的加密模式和填充项，默认AES/CBC/PKCS5Padding。
 
 **废弃版本：** 11
 
-**替代接口：** ohos.security.cryptoFramework.Cipher
+**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
 
 <!--Device-CipherAesOptions-transformation?: string--><!--Device-CipherAesOptions-transformation?: string-End-->
 

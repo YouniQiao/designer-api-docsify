@@ -28,5 +28,5 @@ Create a FrameNode of Badge type.
 
 | Type | Description |
 | --- | --- |
-| [Badge](arkts-arkui-typenode-badge-t.md) | Return Badge type FrameNode. |
+| Badge | Return Badge type FrameNode. |
 

@@ -11,7 +11,7 @@ Remote device operation methods.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -36,7 +36,7 @@ Gets the ACB connection state.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) |
+| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) |
 
 **Error codes:**
 
@@ -44,7 +44,7 @@ Gets the ACB connection state.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getConnectionState
 
@@ -68,7 +68,7 @@ Gets the profile connection state.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md) |
+| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ Gets the profile connection state.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getDeviceClass
 
@@ -108,7 +108,7 @@ Gets the type of the NearLink device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getDeviceInformation
 
@@ -140,7 +140,7 @@ Obtains the remote device information.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getDeviceName
 
@@ -172,7 +172,7 @@ Gets the name of the NearLink device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## getPairingState
 
@@ -196,7 +196,7 @@ Gets the pairing state.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md) |
+| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) |
 
 **Error codes:**
 
@@ -204,7 +204,7 @@ Gets the pairing state.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## startPairing
 
@@ -228,7 +228,7 @@ Initiate pairing to remote NearLink device.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -236,4 +236,4 @@ Initiate pairing to remote NearLink device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |

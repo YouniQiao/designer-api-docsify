@@ -21,7 +21,7 @@ areaChangePlaceholder?: Record<string, ComponentContent>
 Placeholder for size changes, displayed when the UIExtensionComponent's size changes and the internal rendering of  
 **UIExtension** is not completed. The key value can be **FOLD_TO_EXPAND** (size change for folding and expanding)or **UNDEFINED** (default size change).
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
+**Type:** Record&lt;string, ComponentContent&gt;
 
 **Since:** 14
 
@@ -45,7 +45,7 @@ Whether the DPI settings follow the host or UIExtensionAbility.
 
 Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
 
-**Type:** [DpiFollowStrategy](../arkts-apis/arkts-arkui-uiextensioncomponent-dpifollowstrategy-e-sys.md)
+**Type:** [DpiFollowStrategy](arkts-arkui-dpifollowstrategy-e-sys.md)
 
 **Default:** DpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
@@ -95,7 +95,7 @@ placeholder?: ComponentContent
 
 Placeholder to be displayed before the UIExtensionComponent establishes a connection with the UIExtensionAbility.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 12
 

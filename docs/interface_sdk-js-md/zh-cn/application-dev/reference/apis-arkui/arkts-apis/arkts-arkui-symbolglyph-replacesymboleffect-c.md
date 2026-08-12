@@ -2,7 +2,7 @@
 
 ReplaceSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** ReplaceSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
+**继承/实现关系：** ReplaceSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md#SymbolEffect)
 
 **起始版本：** 23
 
@@ -34,8 +34,8 @@ ReplaceSymbolEffect的构造函数，替换动效。支持指定具体的替换�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | 否 | 动效范围。&lt;br/&gt;默认值：EffectScope.LAYER |
-| replaceType | [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md) | 否 | 替换动效类型。&lt;br/&gt;默认值：ReplaceEffectType.SEQUENTIAL |
+| scope | [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md) | 否 | 动效范围。&lt;br/&gt;默认值：EffectScope.LAYER |
+| replaceType | [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md) | 否 | 替换动效类型。&lt;br/&gt;默认值：ReplaceEffectType.SEQUENTIAL |
 
 ## replaceType
 
@@ -47,7 +47,7 @@ replaceType?: ReplaceEffectType
 
 默认值：ReplaceEffectType.SEQUENTIAL
 
-**类型：** [ReplaceEffectType](../arkts-components/arkts-arkui-replaceeffecttype-e.md)
+**类型：** [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
 
 **起始版本：** 23
 
@@ -69,7 +69,7 @@ scope?: EffectScope
 
 默认值：EffectScope.LAYER
 
-**类型：** [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md)
+**类型：** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 
 **起始版本：** 23
 

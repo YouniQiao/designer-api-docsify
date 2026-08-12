@@ -25,8 +25,8 @@ Defines MenuItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | No | the options of MenuItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | the options of MenuItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines MenuItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MenuItemAttribute&gt; | Yes | menuitem attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md)&gt; | Yes | menuitem attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

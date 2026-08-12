@@ -12,14 +12,14 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
 > [sensor.getGeomagneticInfo]
-> {@link sensor.getGeomagneticInfo(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)}
+> [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo)(locationOptions:
+**替代接口：** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void-End-->
 
@@ -31,7 +31,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | 是 |
 | timeMillis | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;GeomagneticResponse&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -63,14 +63,14 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo)替
+> [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo-1)替
 > 代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getgeomagneticinfo)(locationOptions:
+**替代接口：** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>-End-->
 
@@ -87,7 +87,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 
 | 类型 |
 | --- |
-| Promise&lt;GeomagneticResponse&gt; |
+| Promise&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; |
 
 ## 示例
 

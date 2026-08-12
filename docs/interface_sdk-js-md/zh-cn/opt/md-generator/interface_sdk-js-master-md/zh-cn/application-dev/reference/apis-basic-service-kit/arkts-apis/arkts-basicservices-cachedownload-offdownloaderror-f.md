@@ -19,7 +19,7 @@ function offDownloadError(url: string, callback?: Callback<DownloadError>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | url | string | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;DownloadError&gt; | 否 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | 否 |
 
 ## 示例
 

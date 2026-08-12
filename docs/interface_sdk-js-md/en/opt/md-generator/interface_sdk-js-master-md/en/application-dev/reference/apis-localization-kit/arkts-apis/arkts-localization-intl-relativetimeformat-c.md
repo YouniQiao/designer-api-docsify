@@ -6,7 +6,7 @@ Provides the relative time formatting capability.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat)
+**Substitutes:** [RelativeTimeFormat]]([Intl.RelativeTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat))
 
 <!--Device-intl-export class RelativeTimeFormat--><!--Device-intl-export class RelativeTimeFormat-End-->
 
@@ -15,7 +15,7 @@ Provides the relative time formatting capability.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -30,7 +30,7 @@ Creates a **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
+**Substitutes:** [constructor]]([Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,7 +59,7 @@ Creates a **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat)
+**Substitutes:** [constructor]]([Intl.RelativeTimeFormat.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -71,7 +71,7 @@ Creates a **RelativeTimeFormat** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes |
+| locale | string \| Array & lt;string & gt; | Yes |
 | options | [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md) | No |
 
 ## Examples
@@ -99,7 +99,7 @@ Formats a relative time.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format)
+**Substitutes:** [format]]([Intl.RelativeTimeFormat.format](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -143,7 +143,7 @@ Formats the relative time
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat.formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts)
+**Substitutes:** [formatToParts]]([Intl.RelativeTimeFormat.formatToParts](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/formatToParts))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,7 +162,7 @@ Formats the relative time
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;object&gt; |
+| Array & lt;object & gt; |
 
 ## Examples
 
@@ -186,7 +186,7 @@ Defines the formatting options for a **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions)
+**Substitutes:** [resolvedOptions]]([Intl.RelativeTimeFormat.resolvedOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

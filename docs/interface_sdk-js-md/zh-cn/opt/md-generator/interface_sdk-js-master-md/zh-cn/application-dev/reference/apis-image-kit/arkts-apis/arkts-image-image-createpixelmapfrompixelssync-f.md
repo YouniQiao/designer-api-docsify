@@ -26,23 +26,23 @@ The following pixel formats are not supported for PixelMap creation:RGBA_1010102
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pixels | ArrayBuffer | 是 |
+| [pixels](arkts-image-image-positionarea-i.md) | ArrayBuffer | 是 |
 | param | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) |
-| [7600207](../errorcode-image.md#7600207-不支持的数据格式) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) |
+| [7600207](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-不支持的数据格式) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## 示例
 

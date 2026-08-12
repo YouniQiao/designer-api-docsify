@@ -132,7 +132,7 @@ Compares this message with another for equality
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | concurrency.Message | Yes | the other message to compare with. |
+| other | [concurrency.Message](arkts-arkts-concurrency-message-c.md) | Yes | the other message to compare with. |
 
 **Return value:**
 

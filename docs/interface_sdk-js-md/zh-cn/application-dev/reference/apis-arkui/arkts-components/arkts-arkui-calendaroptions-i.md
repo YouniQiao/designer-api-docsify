@@ -34,7 +34,7 @@ disabledDateRange?: DateRange[]
 > 2. 若在日期区间内，结束日期早于开始日期，则该日期区间无效。
 > 3. 当在入口区选定某日期，通过上下箭头调整日期进行增加或减少操作时，若遇到禁用日期，系统将自动跳过整个禁用区间。
 
-**类型：** [DateRange](../arkts-apis/arkts-arkui-common-daterange-i.md)[]
+**类型：** DateRange[]
 
 **起始版本：** 19
 
@@ -61,7 +61,7 @@ end?: Date
 > 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
 
 > **说明：** 若start日期晚于end日期，则start日期、end日期都设置无效，选中日期为默认值。
-> 详见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+> 详见[start和end设置规则](#start和end设置规则)。
 
 **类型：** Date
 
@@ -120,7 +120,7 @@ hintRadius?: number | Resource
 selected?: Date
 ```
 
-设置选中项的日期。当需要预设选中日期时传入此参数，不需要预设时使用当前系统日期。选中的日期未设置或日期格式不符合规范则为默认值。选中日期与start、end参数的配合关系见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+设置选中项的日期。当需要预设选中日期时传入此参数，不需要预设时使用当前系统日期。选中的日期未设置或日期格式不符合规范则为默认值。选中日期与start、end参数的配合关系见[start和end设置规则](#start和end设置规则)。
 
 > 默认值：当前系统日期。
 
@@ -155,7 +155,7 @@ start?: Date
 > 取值范围：[Date('0001-01-01'), Date('5000-12-31')]
 
 > **说明：** 若start日期晚于end日期，则start日期、end日期都设置无效，选中日期为默认值。
-> 详见[start和end设置规则](arkts-arkui-calendaroptions-i.md)。
+> 详见[start和end设置规则](#start和end设置规则)。
 
 **类型：** Date
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## bindDevice
@@ -13,10 +13,10 @@ function bindDevice(deviceAddress: PartnerDeviceAddress, deviceCapability: Devic
     businessCapability: BusinessCapability, partnerAgentExtensionAbilityName: string): Promise<void>
 ```
 
-Bind the partner device.After successfully binding the device, if the device meets the discovery requirements,the {@link PartnerAgentExtensionAbility} of the application will be launched.  
-- If the {@link DeviceCapability.supportBR} in the capability variable is set to true,  
+Bind the partner device.After successfully binding the device, if the device meets the discovery requirements,the [PartnerAgentExtensionAbility](arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md#PartnerAgentExtensionAbility) of the application will be launched.  
+- If the [supportBR](arkts-connectivity-partneragent-devicecapability-i.md#supportBR) in the capability variable is set to true,  
  the application's ability will be launched when the device is connected via Bluetooth.  
-- If the {@link DeviceCapability.supportBleAdvertiser} in the capability variable is set to true,  
+- If the [supportBleAdvertiser](arkts-connectivity-partneragent-devicecapability-i.md#supportBleAdvertiser) in the capability variable is set to true,  
  the application's ability will be launched when the device is detected via Bluetooth scanning.
 
 Note: The device must be paired first.
@@ -44,15 +44,15 @@ Note: The device must be paired first.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [34900004](../errorcode-fusionConnectivity.md#34900004-device-address-registered) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [34900005](../errorcode-fusionConnectivity.md#34900005-bluetooth-disabled) |
-| [34900003](../errorcode-fusionConnectivity.md#34900003-device-not-paired) |
-| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [34900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900004-device-address-registered) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [34900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900005-bluetooth-disabled) |
+| [34900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900003-device-not-paired) |
+| [34900099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |

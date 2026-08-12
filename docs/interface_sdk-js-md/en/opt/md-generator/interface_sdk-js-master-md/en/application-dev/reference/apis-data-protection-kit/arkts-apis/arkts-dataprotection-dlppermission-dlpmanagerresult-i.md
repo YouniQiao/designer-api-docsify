@@ -11,7 +11,7 @@ Represents information about the trigger of the DLP manager application.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## resultCode

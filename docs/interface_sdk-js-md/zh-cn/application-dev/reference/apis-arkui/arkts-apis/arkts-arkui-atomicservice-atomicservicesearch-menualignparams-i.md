@@ -18,7 +18,7 @@ alignType: MenuAlignType
 
 对齐方式类型。默认值：`MenuAlignType.START`。
 
-**类型：** [MenuAlignType](../arkts-components/arkts-arkui-menualigntype-e.md)
+**类型：** MenuAlignType
 
 **起始版本：** 18
 
@@ -38,7 +38,7 @@ offset?: Offset
 
 按照对齐类型对齐后，下拉菜单相对下拉按钮的偏移量。默认值：`{dx: 0, dy: 0}`。
 
-**类型：** [Offset](arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 18
 

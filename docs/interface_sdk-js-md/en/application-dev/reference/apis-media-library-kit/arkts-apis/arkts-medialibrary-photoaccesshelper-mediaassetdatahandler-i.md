@@ -14,7 +14,7 @@ MediaAssetDataHandler is a media asset handler used to customize the media asset
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## onDataPrepared
@@ -26,9 +26,9 @@ onDataPrepared(data: T, map?: Map<string, string>): void
 Called when the requested media asset is ready. If an error occurs, **data** returned by the callback is   
 **undefined**. Each media asset request corresponds to a callback.
 
-T supports the following data types: ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md/arkts-image-image-imagesource-i.md),   
-[MovingPhoto](arkts-file-photoaccesshelper.md), and boolean. ArrayBuffer indicates the image or video asset data, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md/arkts-image-image-imagesource-i.md) indicates the image source,   
-[MovingPhoto](arkts-file-photoaccesshelper.md) indicates a moving photo object, and boolean indicates whether the image or video is successfully written to the application sandbox directory.
+T supports the following data types: ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md#ImageSource),   
+[MovingPhoto](arkts-file-photoaccesshelper.md#photoAccessHelper), and boolean. ArrayBuffer indicates the image or video asset data, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md#ImageSource) indicates the image source,   
+[MovingPhoto](arkts-file-photoaccesshelper.md#photoAccessHelper) indicates a moving photo object, and boolean indicates whether the image or video is successfully written to the application sandbox directory.
 
 Information returned by **map**:
 
@@ -48,7 +48,7 @@ Information returned by **map**:
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the following data types: ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md/arkts-image-image-imagesource-i.md), [MovingPhoto](arkts-file-photoaccesshelper.md), and boolean. |
+| data | T | Yes | Data of the image asset that is ready. It is of the generic type and supports the following data types: ArrayBuffer, [ImageSource](../../apis-image-kit/arkts-apis/arkts-image-image-imagesource-i.md#ImageSource), [MovingPhoto](arkts-file-photoaccesshelper.md#photoAccessHelper), and boolean. |
 | map | Map&lt;string, string&gt; | No | Additional information about the image asset, such as the image quality. Currently, only **quality** is supported.<br>**Since:** 12 |
 
 ## onDataPrepared

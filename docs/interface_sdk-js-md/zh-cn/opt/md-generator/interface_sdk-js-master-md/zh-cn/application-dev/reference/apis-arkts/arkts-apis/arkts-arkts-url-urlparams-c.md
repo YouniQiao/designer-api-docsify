@@ -28,7 +28,7 @@ URLParams是一个用于解析、构造和操作URL参数的实用类。该类�
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[string, string]&gt; |
+| IterableIterator & lt;[string, string] & gt; |
 
 ## 示例
 
@@ -51,7 +51,7 @@ for (let pair of iter) {
 append(name: string, value: string): void
 ```
 
-将新的键值对插入到查询字符串。与[set](arkts-arkts-url-urlparams-c.md#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
+将新的键值对插入到查询字符串。与[set](#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
 **起始版本：** 9
 
@@ -101,7 +101,7 @@ URLParams的构造函数，用于创建URL参数对象，适用于需要解析�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 |
+| init | string[][] \| Record & lt;string, string & gt; \ | string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 |
 
 ## 示例
 
@@ -173,7 +173,7 @@ entries(): IterableIterator<[string, string]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[string, string]&gt; |
+| IterableIterator & lt;[string, string] & gt; |
 
 ## 示例
 
@@ -210,7 +210,7 @@ forEach(callbackFn: (value: string, key: string, searchParams: URLParams) => voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callbackFn | (value: string, key: string, searchParams: URLParams) =&gt; void | 是 |
+| callbackFn | (value: string, key: string, searchParams: URLParams) = & gt; void | 是 |
 | thisArg | Object | 否 |
 
 ## 示例
@@ -359,7 +359,7 @@ keys(): IterableIterator<string>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;string&gt; |
+| IterableIterator & lt;string & gt; |
 
 ## 示例
 
@@ -488,7 +488,7 @@ values(): IterableIterator<string>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;string&gt; |
+| IterableIterator & lt;string & gt; |
 
 ## 示例
 

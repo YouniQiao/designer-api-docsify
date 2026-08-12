@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppConnect
@@ -20,7 +20,7 @@ Connects to a remote device over the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppConnect
+**Substitutes:** [sppConnect](ohos.bluetoothManager/bluetoothManager.sppConnect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -33,8 +33,8 @@ Connects to a remote device over the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
-| option | [SppOption](arkts-connectivity-bluetoothmanager-sppoption-i.md) | Yes | Indicates the connect parameters {@link SppOption}. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#SppOption). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 ## Examples
 

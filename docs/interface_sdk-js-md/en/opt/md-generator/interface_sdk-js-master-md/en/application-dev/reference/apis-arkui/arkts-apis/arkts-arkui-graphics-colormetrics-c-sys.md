@@ -40,7 +40,7 @@ Create ColorMetrics class using HDR color with default exposure.Create an HDR co
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## createHDRColorWithLinearExposure
 
@@ -76,7 +76,7 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## createHDRColorWithLogExposure
 
@@ -101,7 +101,7 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| exposure | number | Yes |
+| [exposure](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md) | number | Yes |
 | colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | Yes |
 | red | number | Yes |
 | green | number | Yes |
@@ -112,7 +112,7 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## getBlueValue
 

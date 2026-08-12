@@ -38,7 +38,7 @@ columnsTemplate?: string | ItemFillPolicy
 
 设置当前网格布局的列数。非法值：按默认值处理。
 
-**类型：** string \| ItemFillPolicy
+**类型：** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 

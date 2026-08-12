@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## connectToNetwork
@@ -20,7 +20,7 @@ Connects to Wi-Fi network.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.connectToNetwork
+**Substitutes:** [connectToNetwork](ohos.wifiManager/wifiManager.connectToNetwork)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 

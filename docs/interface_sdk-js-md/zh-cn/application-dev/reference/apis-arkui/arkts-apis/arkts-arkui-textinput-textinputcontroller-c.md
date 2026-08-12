@@ -12,7 +12,7 @@ TextInput组件的控制器继承自
 [scrollToVisible](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#scrolltovisible23)&lt;!-  
 -Del--&gt;以及系统接口[getText](../../../reference/apis-arkui/arkui-ts/ts-text-common-sys.md#gettext19)&lt;!--DelEnd--&gt;。
 
-**继承/实现关系：** TextInputController extends [TextContentControllerBase](arkts-arkui-common-textcontentcontrollerbase-c.md)
+**继承/实现关系：** TextInputController extends [TextContentControllerBase](TextContentControllerBase)
 
 **起始版本：** 23
 

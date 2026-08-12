@@ -6,7 +6,7 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager
+**替代接口：** [missionManager/missionManager](ohos.app.ability.missionManager/missionManager)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

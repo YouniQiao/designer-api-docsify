@@ -2,7 +2,7 @@
 
 In addition to universal attributes, the following attributes are supported.
 
-Since API version 12, the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) are supported when **type** is set to **SURFACE** or  
+Since API version 12, the [universal events](./common) are supported when **type** is set to **SURFACE** or  
 **TEXTURE**.
 
 **Inheritance/Implementation:** XComponentAttribute extends [CommonMethod<XComponentAttribute>](CommonMethod<XComponentAttribute>)
@@ -22,8 +22,8 @@ enableAnalyzer(enable: boolean)
 Sets whether to enable the AI image analyzer, which supports subject recognition, text recognition, and object lookup.
 
 For the settings to take effect, this attribute must be used together with  
-[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startimageanalyzer) and  
-[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopimageanalyzer) of **XComponentController**.
+[StartImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#startImageAnalyzer) and  
+[StopImageAnalyzer](arkts-arkui-xcomponentcontroller-c.md#stopImageAnalyzer) of **XComponentController**.
 
 This feature cannot be used together with the  
 [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) attribute. If they are set at the same time, the **CustomBuilder** attribute in **overlay** has no effect. This feature depends on device capabilities.

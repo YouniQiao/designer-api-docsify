@@ -2,11 +2,11 @@
 
 ImageSource类，用于获取图片相关信息。
 
-在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)构建一个ImageSource实例。
+在调用ImageSource的方法前，需要先通过[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)构建一个ImageSource实例。
 
 ImageSource的所有方法均不支持并发调用。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 6
 
@@ -38,14 +38,14 @@ createImageRawData(): Promise<ImageRawData>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ImageRawData&gt; | Promise对象，返回ImageRawData对象，其中含有数据缓冲区和像素位数。 |
+| Promise&lt;[ImageRawData](arkts-image-image-imagerawdata-i.md)&gt; | Promise对象，返回ImageRawData对象，其中含有数据缓冲区和像素位数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 
 ## createPicture
 
@@ -77,15 +77,15 @@ createPicture(options?: DecodingOptionsForPicture): Promise<Picture>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Picture&gt; | Promise对象，返回Picture。 |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise对象，返回Picture。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**适用版本：** 24+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Decode failed. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, unsupported desiredPixelFormat causes a failure in converting an image into the desired pixel format.<br>**适用版本：** 24+ |
 
 ## createPicture
 
@@ -113,13 +113,13 @@ Creates a Picture object based on image decoding parameters. This method uses a 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Picture \| undefined&gt; | A Promise instance used to return the Picture object. |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | A Promise instance used to return the Picture object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Failed to decode image. |
 
 ## createPictureAtIndex
 
@@ -155,17 +155,17 @@ createPictureAtIndex(index: int): Promise<Picture>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Picture&gt; | Promise对象，返回Picture。 |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md)&gt; | Promise对象，返回Picture。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
 
 ## createPictureAtIndex
 
@@ -193,17 +193,17 @@ Decodes an image at the specified index into a Picture object.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Picture \| undefined&gt; | Promise that returns the Picture object. |
+| Promise&lt;[Picture](arkts-image-image-picture-i.md) \| undefined&gt; | Promise that returns the Picture object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decoding failed. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Decoding failed. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options. For example, index is invalid. |
 
 ## createPixelMap
 
@@ -213,7 +213,7 @@ createPixelMap(options?: DecodingOptions): Promise<PixelMap>
 
 通过图片解码参数创建PixelMap对象。使用Promise异步回调。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -284,7 +284,7 @@ createPixelMap(callback: AsyncCallback<PixelMap>): void
 
 通过默认参数创建PixelMap对象。使用callback异步回调。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -343,7 +343,7 @@ createPixelMap(options: DecodingOptions, callback: AsyncCallback<PixelMap>): voi
 
 通过图片解码参数创建PixelMap对象。使用callback异步回调。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createPixelMapUsingAllocator)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -441,19 +441,19 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
+| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980174](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -493,19 +493,19 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
+| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980174](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
 
 ## createPixelMapList
 
@@ -546,19 +546,19 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980109](../errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980174](../errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980109-裁剪错误) | Failed to crop the image. |
+| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980174](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980174-dma内存数据异常) | The DMA memory data is abnormal. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
 
 ## createPixelMapSync
 
@@ -572,7 +572,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
 
-从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md)，详情请参考  
+从API version 15开始，推荐使用[createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createPixelMapUsingAllocatorSync)，该接口可以指定输出pixelMap的内存类型[AllocatorType](arkts-image-image-allocatortype-e.md#AllocatorType)，详情请参考  
 [图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 > **说明：**
@@ -598,7 +598,7 @@ createPixelMapSync(options?: DecodingOptions): PixelMap
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 用于同步返回创建结果。 |
+| PixelMap | 用于同步返回创建结果。 |
 
 ## createPixelMapSync
 
@@ -626,7 +626,7 @@ Create a PixelMap object based on image decoding parameters synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | Return the PixelMap. If decoding fails, return undefined. |
+| PixelMap | Return the PixelMap. If decoding fails, return undefined. |
 
 ## createPixelMapUsingAllocator
 
@@ -670,14 +670,14 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocator
 
@@ -713,13 +713,13 @@ Creates a PixelMap based on decoding parameters, the memory type used by the Pix
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat causes a failure in converting an imagge into the desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -757,20 +757,20 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 用于同步返回创建结果。 |
+| PixelMap | 用于同步返回创建结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options, e.g, cannot convert image into desired pixel format. |
 
 ## createPixelMapUsingAllocatorSync
 
@@ -799,19 +799,19 @@ Creates a PixelMap based on decoding parameters synchronously, the memory type u
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | Return the PixelMap. If decoding fails, return undefined. |
+| PixelMap | Return the PixelMap. If decoding fails, return undefined. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Failed to decode image. |
-| [7700302](../errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
-| [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
-| [7700203](../errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Failed to decode image. |
+| [7700302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700302-内存分配失败) | Failed to allocate memory. |
+| [7700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type. For example, use share memory to decode HDR image as only DMA supported HDR metadata. |
+| [7700203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700203-不支持的选项) | Unsupported options, For example, unsupported desiredPixelFormat cause a failure in converting an image into the desired pixel format. |
 
 ## createThumbnail
 
@@ -859,12 +859,12 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
-| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700305](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Decode failed. |
+| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
+| [7700303](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
 
 ## createThumbnailSync
 
@@ -872,7 +872,7 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 ```
 
-通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md)对象。
+通过图片解码参数同步创建缩略图。返回创建结果对应的[PixelMap](arkts-image-image-pixelmap-i.md#PixelMap)对象。
 
 当前支持对JPEG和HEIF格式的图片创建缩略图PixelMap对象。
 
@@ -907,18 +907,18 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 用于同步返回创建结果。 |
+| PixelMap | 用于同步返回创建结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
-| [7700305](../errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
-| [7700301](../errorcode-image.md#7700301-解码失败) | Decode failed. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
-| [7700303](../errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
+| [7700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700103-图片太大) | Image too large. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
+| [7700305](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700305-缩略图生成失败) | Thumbnail generation failed. |
+| [7700301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700301-解码失败) | Decode failed. |
+| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) | Invalid parameter, e.g, invalid generate size. |
+| [7700303](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700303-图片不包含缩略图数据) | Image does not carry thumbnail data. |
 
 ## getDelayTimeList
 
@@ -952,14 +952,14 @@ getDelayTimeList(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980149](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getDelayTimeList
 
@@ -993,14 +993,14 @@ getDelayTimeList(callback: AsyncCallback<Array<int>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980149](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getDisposalTypeList
 
@@ -1034,10 +1034,10 @@ getDisposalTypeList(): Promise<Array<int>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980149](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
+| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 
 ## getFrameCount
 
@@ -1071,15 +1071,15 @@ getFrameCount(): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## getFrameCount
 
@@ -1113,15 +1113,15 @@ getFrameCount(callback: AsyncCallback<int>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
+| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## getImageInfo
 
@@ -1148,7 +1148,7 @@ getImageInfo(index: int, callback: AsyncCallback<ImageInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int | 是 | 创建ImageSource时的序号。默认值为0，表示第一张图片。当取值为N时，表示第N+1张图片。单帧图片场景中index取值只能为0，动图等多帧图片场景中index的取值范围为： [0, (帧数-1)]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
 ## getImageInfo
 
@@ -1171,7 +1171,7 @@ Obtains information about an image with the specified sequence number and uses a
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int | 是 | Sequence number of an image. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo \| undefined&gt; | 是 | Callback used to return the image information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | 是 | Callback used to return the image information. |
 
 ## getImageInfo
 
@@ -1197,7 +1197,7 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图片信息成功，err为undefined，data为获取到的图片信息；否则为错误对象。 |
 
 ## getImageInfo
 
@@ -1219,7 +1219,7 @@ Obtains information about this image and uses a callback to return the result.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo \| undefined&gt; | 是 | Callback used to return the image information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | 是 | Callback used to return the image information. |
 
 ## getImageInfo
 
@@ -1251,7 +1251,7 @@ getImageInfo(index?: int): Promise<ImageInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ImageInfo&gt; | Promise对象，返回获取到的图片信息。 |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise对象，返回获取到的图片信息。 |
 
 ## getImageInfo
 
@@ -1279,7 +1279,7 @@ Get image information from image source.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ImageInfo \| undefined&gt; | A Promise instance used to return the image information. |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md) \| undefined&gt; | A Promise instance used to return the image information. |
 
 ## getImageInfoSync
 
@@ -1364,23 +1364,23 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | 是 | 图片属性名的数组。 |
+| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 | 图片属性名的数组。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Record&lt;PropertyKey, string \| null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
+| Promise&lt;Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt;&gt; | Promise对象，返回图片属性值，如获取失败则返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getImageProperties
 
@@ -1402,7 +1402,7 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | Array&lt;PropertyKey&gt; | 是 | Name of the properties whose value is to be obtained. |
+| key | Array&lt;[PropertyKey](arkts-image-image-propertykey-e.md)&gt; | 是 | Name of the properties whose value is to be obtained. |
 
 **返回值：**
 
@@ -1414,10 +1414,10 @@ Obtains the value of properties in an image. This method uses a promise to retur
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980116](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
+| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1454,18 +1454,18 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980118](../errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
-| [62980122](../errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
-| [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
+| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types;3.Parameter verification failed; |
+| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
+| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980118](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980118-创建插件失败) | Failed to create the image plugin. |
+| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
+| [62980122](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980122-解码图片头异常) | Failed to decode the image header. |
+| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 
 ## getImageProperty
 
@@ -1480,7 +1480,7 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 11废弃，建议使用
-> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> [getImageProperty](#getImageProperty)代
 > 替。
 
 **起始版本：** 7
@@ -1489,7 +1489,7 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**替代接口：** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1521,7 +1521,7 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 11废弃，建议使用
-> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> [getImageProperty](#getImageProperty)代
 > 替。
 
 **起始版本：** 7
@@ -1530,7 +1530,7 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**替代接口：** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1556,7 +1556,7 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 11废弃，建议使用
-> [getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)代
+> [getImageProperty](#getImageProperty)代
 > 替。
 
 **起始版本：** 7
@@ -1565,7 +1565,7 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)(key:
+**替代接口：** [getImageProperty](image.ImageSource.getImageProperty(key:)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1620,9 +1620,9 @@ getImagePropertySync(key: PropertyKey): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
 
 ## getImagePropertySync
 
@@ -1656,9 +1656,9 @@ Obtains the value of a property in the image.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
+| [7700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, key is not supported. |
 
 ## modifyImageProperties
 
@@ -1689,7 +1689,7 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| records | Record&lt;PropertyKey, string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
+| records | Record&lt;[PropertyKey](arkts-image-image-propertykey-e.md), string \| null&gt; | 是 | 包含图片属性名和属性值的数组。 |
 
 **返回值：**
 
@@ -1701,10 +1701,10 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; 3.Parameter verification failed; |
+| [62980146](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 
 ## modifyImageProperties
 
@@ -1738,9 +1738,9 @@ Modify the value of properties in an image with the specified keys.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
+| [62980146](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 
 ## modifyImagePropertiesEnhanced
 
@@ -1752,11 +1752,11 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 > **说明：**
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例。
 > 
 > - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> [modifyImageProperties](#modifyImageProperties)
 > 更高效。
 > 
 > - 支持修改JPEG、PNG、HEIF和WEBP文件类型的图片属性，图片需要包含Exif信息。
@@ -1787,9 +1787,9 @@ modifyImagePropertiesEnhanced(records: Record<string, string | null>): Promise<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700304](../errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700304](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700304-图片信息写入文件失败) | Failed to write image properties to the file. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. For example, the property key is not supported, or the property value is invalid. |
 
 ## modifyImageProperty
 
@@ -1833,11 +1833,11 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
-| [62980146](../errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
-| [62980133](../errorcode-image.md#62980133-图片属性赋值超出范围) | The EXIF data is out of range. |
-| [62980135](../errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
-| [62980123](../errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2 .Incorrect parameter types; |
+| [62980146](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980146-图片属性值写入文件失败) | The EXIF data failed to be written to the file. |
+| [62980133](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980133-图片属性赋值超出范围) | The EXIF data is out of range. |
+| [62980135](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980135-图片属性值无效) | The EXIF value is invalid. |
+| [62980123](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980123-图片不支持exif解码) | The image does not support EXIF decoding. |
 
 ## modifyImageProperty
 
@@ -1855,7 +1855,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 > ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
 > - 从API version 9开始支持，从API version 11废弃，建议使用
-> [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)代替。
+> [modifyImageProperty](#modifyImageProperty)代替。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1865,7 +1865,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(key:
+**替代接口：** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1900,7 +1900,7 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 > ImageSource不支持调用此接口，请改用fd或path创建的ImageSource。
 > 
 > - 从API version 9开始支持，从API version 11废弃，建议使用
-> [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)代替。
+> [modifyImageProperty](#modifyImageProperty)代替。
 > 
 > - 调用modifyImageProperty接口修改Exif字段时，必须确保对应的图片文件有写权限，否则会导致字段修改不成功。
 
@@ -1910,7 +1910,7 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 **废弃版本：** 11
 
-**替代接口：** [image.ImageSource.modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty)(key:
+**替代接口：** [modifyImageProperty](image.ImageSource.modifyImageProperty(key:)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1942,7 +1942,7 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 
 > **说明：**
 > 
-> 读取DNG格式图片时，该接口对部分propertyKeys有特殊处理。以下字段的字符串取值请参考[PropertyKey](arkts-image-image-propertykey-e.md)中的值：
+> 读取DNG格式图片时，该接口对部分propertyKeys有特殊处理。以下字段的字符串取值请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)中的值：
 > 
 > - NewSubfileType、ImageWidth、ImageLength、DefaultCropSize、Orientation、Compression、PhotometricInterpretation、
 > PlanarConfiguration、RowsPerStrip、StripOffsets、StripByteCounts、SamplesPerPixel、BitsPerSample、YCbCrCoefficients、
@@ -1960,22 +1960,22 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 > 
 > - ISOSpeedRatings字段：当该标签值为0或65535时，会优先使用推荐曝光指数，若不存在则依次使用标准输出灵敏度、ISO速度、曝光指数。
 > 
-> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。
+> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md#DngPropertyKey)。
 > 
-> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。
 > 
 > - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
 > [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
 > 
-> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。
 
 **起始版本：** 23
 
@@ -1998,15 +1998,15 @@ readImageMetadata(propertyKeys?: string[], index?: int): Promise<ImageMetadata>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ImageMetadata&gt; | Promise对象，返回ImageMetadata对象，其中含有图片属性名对应的metadata对象，通过ImageMetadata中的metadata对 象可以获取图片属性值。 |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象，返回ImageMetadata对象，其中含有图片属性名对应的metadata对象，通过ImageMetadata中的metadata对 象可以获取图片属性值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 
 ## readImageMetadataByType
 
@@ -2032,22 +2032,22 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 > 
 > - 当传入的MetadataType与图片格式无法匹配时，返回错误码7700102。
 > 
-> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md)。
+> - 从API version 24开始，支持读取DNG元数据。要查询的属性的具体信息请参考[DngPropertyKey](arkts-image-image-dngpropertykey-e.md#DngPropertyKey)。
 > 
-> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+> - 从API version 24开始，支持读取HEIFS元数据。要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取PNG元数据。要查询的属性的具体信息请参考[PngPropertyKey](arkts-image-image-pngpropertykey-e.md#PngPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取JFIF元数据。要查询的属性的具体信息请参考[JfifPropertyKey](arkts-image-image-jfifpropertykey-e.md#JfifPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取TIFF元数据。要查询的属性的具体信息请参考[TiffPropertyKey](arkts-image-image-tiffpropertykey-e.md#TiffPropertyKey)。
 > 
-> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取GIF元数据。要查询的属性的具体信息请参考[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)。
 > 
 > - 从API版本26.0.0开始，支持读取JPEG、PNG、GIF、DNG、TIFF格式图片的XMP元数据。XMP元数据的操作方法可以参考
 > [XMPMetadata](../../../reference/apis-image-kit/arkts-apis-image-XMPMetadata.md)。
 > 
-> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md)。
+> - 从API版本26.0.0开始，支持读取AVIS元数据。要查询的属性的具体信息请参考[AvisPropertyKey](arkts-image-image-avispropertykey-e.md#AvisPropertyKey)。
 
 **起始版本：** 24
 
@@ -2070,15 +2070,15 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: int): Promise<Im
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ImageMetadata&gt; | Promise对象。返回的ImageMetadata对象中含有对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图 片属性值。 |
+| Promise&lt;[ImageMetadata](arkts-image-image-imagemetadata-i.md)&gt; | Promise对象。返回的ImageMetadata对象中含有对应的metadata对象，通过ImageMetadata中的metadata对象可以获取图 片属性值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 
 ## release
 
@@ -2223,11 +2223,11 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 > **说明：**
 > 
-> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例或通过传入的uri创建
-> [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource)实例。
+> - 调用该接口修改属性会改变属性字节长度，建议通过传入文件描述符来创建[image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例或通过传入的uri创建
+> [image.createImageSource](arkts-image-image-createimagesource-f.md#createImageSource)实例。
 > 
 > - 该方法在内存中完成批量数据修改后会一次性写入文件，相比
-> [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyimageproperties)
+> [modifyImageProperties](#modifyImageProperties)
 > 更高效。
 > 
 > - 支持修改JPEG、PNG和HEIF文件类型的图片属性，图片需要包含Exif信息。修改属性前，先通过supportedFormats属性查询设备是否支持HEIF格式的Exif读写。
@@ -2263,9 +2263,9 @@ writeImageMetadata(imageMetadata: ImageMetadata): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: The imageSource object is released. |
-| [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
+| [7700102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
+| [7700204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: The imageSource object is released. |
+| [7700202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
 
 ## supportedFormats
 
@@ -2277,7 +2277,7 @@ readonly supportedFormats: Array<string>
 
 包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/sup&gt;。从API版本26.0.0开始，增加支持AVIF、AVIS格式。
 
-部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats)接口，动态查询当前设备上的解码能力。
+部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getImageSourceSupportedFormats)接口，动态查询当前设备上的解码能力。
 
 **类型：** Array&lt;string&gt;
 

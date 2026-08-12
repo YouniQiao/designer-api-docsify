@@ -6,9 +6,9 @@
  当系统应用或输入法应用需要提供输入法切换入口时使用本模块。典型场景包括：系统设置应用中的输入法管理页面、输入法应用自身的设置界面、或其他需要让用户选择和切换输入法的系统级界面。本组件仅系统应用和输入法应用可调用，
  `patternOptions`参数仅系统预置输入法支持。
  本模块与输入法框架其他模块的关系如下：
- — [@ohos.inputMethod](arkts-inputmethod.md)：面向普通前台应用，提供输入法的控制与管理能力（如显示/隐藏软键盘、切换输入法等），可通过程序化接口
+ — [@ohos.inputMethod](arkts-inputmethod.md#inputMethod)：面向普通前台应用，提供输入法的控制与管理能力（如显示/隐藏软键盘、切换输入法等），可通过程序化接口
  `switchInputMethod`切换输入法，适用于无需交互式选择界面的场景。
- — [@ohos.inputMethodEngine](arkts-inputmethodengine.md)：面向输入法应用，提供创建软键盘窗口、插入/删除字符等输入法服务端能力。
+ — [@ohos.inputMethodEngine](arkts-inputmethodengine.md#inputMethodEngine)：面向输入法应用，提供创建软键盘窗口、插入/删除字符等输入法服务端能力。
  — **@ohos.inputMethodList（本模块）**：面向系统应用和输入法应用，提供可视化的输入法切换列表弹窗控件，适用于需要交互式选择界面的场景。
  本模块包含以下关键组件和接口：
 | Interface/Struct |
@@ -21,9 +21,9 @@
  ###### 子组件
  无
  ###### 属性
- 不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)
+ 不支持[通用属性](./@internal/component/ets/common)
  ######  事件
- 不支持[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)
+ 不支持[通用事件](./@internal/component/ets/common)
 
 
 ## 汇总

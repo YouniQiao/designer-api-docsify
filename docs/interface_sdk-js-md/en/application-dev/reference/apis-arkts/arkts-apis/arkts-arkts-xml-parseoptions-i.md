@@ -13,7 +13,7 @@ Parse options for XmlPullParser.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## attributeValueCallbackFunction
@@ -106,7 +106,7 @@ Token value callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |  |
+| eventType | EventType | Yes |  |
 | value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |  |
 
 ## ignoreNameSpace

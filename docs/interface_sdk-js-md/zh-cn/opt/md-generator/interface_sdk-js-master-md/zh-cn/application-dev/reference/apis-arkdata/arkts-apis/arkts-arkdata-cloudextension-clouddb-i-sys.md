@@ -34,13 +34,13 @@ delete(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
 
 ## 示例
 
@@ -84,7 +84,7 @@ generateId(count: number): Promise<Result<Array<string>>>
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; |
 
 ## 示例
 
@@ -124,13 +124,13 @@ heartbeat(lockId: number): Promise<Result<LockInfo>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| lockId | number | 是 |
+| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; |
 
 ## 示例
 
@@ -181,14 +181,14 @@ insert(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
 
 ## 示例
 
@@ -226,7 +226,7 @@ lock(): Promise<Result<LockInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; |
 
 ## 示例
 
@@ -273,7 +273,7 @@ query(table: string, fields: Array<string>, queryCount: number, queryCursor: str
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| fields | Array&lt;string&gt; | 是 |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | 是 |
 | queryCount | number | 是 |
 | queryCursor | string | 是 |
 
@@ -281,7 +281,7 @@ query(table: string, fields: Array<string>, queryCount: number, queryCursor: str
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;CloudData&gt;&gt; |
+| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; |
 
 ## 示例
 
@@ -326,13 +326,13 @@ unlock(lockId: number): Promise<Result<boolean>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| lockId | number | 是 |
+| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;boolean&gt;&gt; |
+| Promise & lt;Result & lt;boolean & gt; & gt; |
 
 ## 示例
 
@@ -378,14 +378,14 @@ update(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | 是 |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
 
 ## 示例
 

@@ -12,7 +12,7 @@ Subscribes to notifications of all applications under this user.This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#subscribe
+**Substitutes:** [subscribe](ohos.notificationSubscribe/notificationSubscribe#subscribe)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -46,7 +46,7 @@ Subscribes to a notification with the subscription information specified.This AP
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#subscribe
+**Substitutes:** [subscribe](ohos.notificationSubscribe/notificationSubscribe#subscribe)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -77,7 +77,7 @@ Subscribes to a notification with the subscription information specified.This AP
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#subscribe
+**Substitutes:** [subscribe](ohos.notificationSubscribe/notificationSubscribe#subscribe)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -98,4 +98,4 @@ Subscribes to a notification with the subscription information specified.This AP
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

@@ -46,7 +46,7 @@ UIExtensionComponent(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | import('../api/@ohos.app.ability.Want').default | 是 | 表示UIExtensionAbility的want |
-| options | [UIExtensionOptions](../arkts-apis/arkts-arkui-uiextensioncomponent-uiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置 |
+| options | [UIExtensionOptions](arkts-arkui-uiextensionoptions-i-sys.md) | 否 | UIExtensionComponentAttribute的构造配置 |
 
 ## 汇总
 

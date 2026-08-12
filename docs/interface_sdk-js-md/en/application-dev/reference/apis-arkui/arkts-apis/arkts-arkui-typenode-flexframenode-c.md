@@ -34,11 +34,11 @@ Initialize Flex FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [FlexOptions](../arkts-components/arkts-arkui-flexoptions-i.md) | No | Flex options. |
+| value | FlexOptions | No | Flex options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |  |
+| FlexAttribute |  |
 

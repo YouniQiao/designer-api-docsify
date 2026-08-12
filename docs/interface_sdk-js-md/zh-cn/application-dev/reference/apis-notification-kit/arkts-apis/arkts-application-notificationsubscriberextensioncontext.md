@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionContext } from 'kits/@kit.NotificationKit';
+import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
 ```
 
 ## 汇总

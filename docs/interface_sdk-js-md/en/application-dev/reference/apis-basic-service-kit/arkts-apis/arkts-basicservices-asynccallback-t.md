@@ -4,7 +4,7 @@
 export type AsyncCallback<T, E = void> = (err: BusinessError<E> | null, data: T | undefined) => void
 ```
 
-Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type. The type of the asynchronous return value is defined by the developer.
+Defines a common callback that carries an error parameter and asynchronous return value.The error parameter is of the [BusinessError](arkts-basicservices-base-businesserror-c.md#BusinessError) type. The type of the asynchronous return value is defined by the developer.
 
 **Since:** 23
 

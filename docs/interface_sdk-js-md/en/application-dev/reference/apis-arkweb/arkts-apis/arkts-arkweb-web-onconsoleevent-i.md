@@ -18,7 +18,7 @@ message: ConsoleMessage
 
 Console message information of the event.
 
-**Type:** [ConsoleMessage](../arkts-components/arkts-arkweb-consolemessage-c.md)
+**Type:** [ConsoleMessage](arkts-arkweb-web-consolemessage-c.md)
 
 **Since:** 23
 

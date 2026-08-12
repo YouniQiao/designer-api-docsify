@@ -2,7 +2,7 @@
 
 本模块提供基础的应用国际化能力，包括时间日期格式化、数字格式化、排序等，相关接口在ECMA 402标准中定义。
 
-[国际化-I18n](../../apis-localization-kit/arkts-apis/arkts-i18n.md/arkts-i18n.md)提供其他非ECMA 402定义的国际化接口，与本模块共同使用可提供完整的国际化支持能力。
+[国际化-I18n](../../apis-localization-kit/arkts-apis/arkts-i18n.md#i18n)提供其他非ECMA 402定义的国际化接口，与本模块共同使用可提供完整的国际化支持能力。
 
 > **说明：**
 > 

@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getmagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。
+> - 以下API需先使用UIContext中的[getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getMagnifier)方法获取Magnifier实例，再通过此实例调用对应方法。
 > 
 > - 与文本类组件自带的放大镜能力互不影响，文本类组件推荐使用自带的放大镜能力。
 

@@ -89,7 +89,7 @@ function startAbility(parameter: StartAbilityParameter): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

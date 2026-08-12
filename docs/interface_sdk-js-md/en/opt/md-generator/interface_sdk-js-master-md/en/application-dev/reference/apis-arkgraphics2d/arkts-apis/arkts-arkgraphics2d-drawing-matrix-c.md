@@ -20,7 +20,7 @@ Implements a matrix.A 3 x 3 matrix is shown as below.![matrix_3x3](../../../refe
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -55,7 +55,7 @@ Copies a matrix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 ## getAll
 
@@ -75,7 +75,7 @@ Obtains all element values of this matrix.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## getValue
 
@@ -107,7 +107,7 @@ Obtains a matrix value of a given index, which ranges from 0 to 8.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## invert
 
@@ -127,7 +127,7 @@ Inverts this matrix and returns the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Inverts this matrix and returns the result.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isAffine
 
@@ -179,7 +179,7 @@ Checks whether two **OH_Drawing_Matrix** objects are equal.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Return value:**
 
@@ -191,7 +191,7 @@ Checks whether two **OH_Drawing_Matrix** objects are equal.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isIdentity
 
@@ -231,19 +231,19 @@ Maps a source point array to a destination point array by means of matrix transf
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes |
+| src | Array & lt;common2D.Point & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## mapRadius
 
@@ -289,7 +289,7 @@ Sets the destination rectangle to the bounding rectangle of the shape obtained a
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| dst | common2D.Rect | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | Yes |
 | src | common2D.Rect | Yes |
 
 **Return value:**
@@ -302,7 +302,7 @@ Sets the destination rectangle to the bounding rectangle of the shape obtained a
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## postConcat
 
@@ -322,7 +322,7 @@ Right-multiply the existing matrix by another matrix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 ## postRotate
 
@@ -343,14 +343,14 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | degree | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## postScale
 
@@ -372,14 +372,14 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 | --- | --- | --- |
 | sx | number | Yes |
 | sy | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## postSkew
 
@@ -401,7 +401,7 @@ Right-multiply the existing matrix by a skew transformation matrix.
 | --- | --- | --- |
 | kx | number | Yes |
 | ky | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 ## postTranslate
@@ -429,7 +429,7 @@ Post multiplies this matrix by a matrix that is derived from an identity matrix 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## preConcat
 
@@ -449,13 +449,13 @@ Preconcats the existing matrix with the passed-in matrix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## preRotate
 
@@ -476,14 +476,14 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | degree | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## preScale
 
@@ -505,14 +505,14 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 | --- | --- | --- |
 | sx | number | Yes |
 | sy | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## preSkew
 
@@ -534,7 +534,7 @@ Left-multiply the existing matrix by a skew transformation matrix.
 | --- | --- | --- |
 | kx | number | Yes |
 | ky | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 ## preTranslate
@@ -562,7 +562,7 @@ Premultiplies this matrix by a matrix that is derived from an identity matrix af
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## rectStaysRect
 
@@ -637,13 +637,13 @@ Sets parameters for this matrix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| values | Array&lt;number&gt; | Yes |
+| values | Array & lt;number & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setMatrix
 
@@ -663,7 +663,7 @@ Updates the existing matrix with another matrix.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| matrix | Array&lt;number&gt; \| [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
+| [matrix](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-transformobject-i.md) | Array & lt;number & gt; \ | [Matrix](arkts-arkgraphics2d-drawing-matrix-c.md) | Yes |
 
 ## setPolyToPoly
 
@@ -683,8 +683,8 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| src | Array&lt;common2D.Point&gt; | Yes |
-| dst | Array&lt;common2D.Point&gt; | Yes |
+| src | Array & lt;common2D.Point & gt; | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | Array & lt;common2D.Point & gt; | Yes |
 | count | number | Yes |
 
 **Return value:**
@@ -697,7 +697,7 @@ Sets this matrix to a transformation matrix that maps the source point array to 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setRectToRect
 
@@ -718,7 +718,7 @@ Sets this matrix to a transformation matrix that maps a source rectangle to a de
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | src | common2D.Rect | Yes |
-| dst | common2D.Rect | Yes |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | common2D.Rect | Yes |
 | scaleToFit | [ScaleToFit](arkts-arkgraphics2d-drawing-scaletofit-e.md) | Yes |
 
 **Return value:**
@@ -731,7 +731,7 @@ Sets this matrix to a transformation matrix that maps a source rectangle to a de
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setRotation
 
@@ -752,14 +752,14 @@ Sets this matrix as an identity matrix and rotates it by a given degree around t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | degree | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setScale
 
@@ -781,14 +781,14 @@ Sets this matrix as an identity matrix and scales it with the coefficients (sx, 
 | --- | --- | --- |
 | sx | number | Yes |
 | sy | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## setSinCos
 
@@ -810,7 +810,7 @@ Sets the matrix to rotate around the rotation center (px, py) with the specified
 | --- | --- | --- |
 | sinValue | number | Yes |
 | cosValue | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 ## setSkew
@@ -833,7 +833,7 @@ Sets the skew coefficients of a matrix.
 | --- | --- | --- |
 | kx | number | Yes |
 | ky | number | Yes |
-| px | number | Yes |
+| [px](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) | number | Yes |
 | py | number | Yes |
 
 ## setTranslation
@@ -861,4 +861,4 @@ Sets this matrix as an identity matrix and translates it by a given distance (dx
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

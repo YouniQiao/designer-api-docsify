@@ -8,7 +8,7 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.InterruptEvent
+**Substitutes:** [InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent)
 
 <!--Device-audio-interface InterruptAction--><!--Device-audio-interface InterruptAction-End-->
 
@@ -17,7 +17,7 @@ Describes the callback invoked for audio interruption or focus gain events.When 
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## actionType
@@ -36,7 +36,7 @@ Event type.The value TYPE_ACTIVATED means the focus gain event, and TYPE_INTERRU
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.InterruptEvent#eventType
+**Substitutes:** [eventType](ohos.multimedia.audio.InterruptEvent#eventType)
 
 <!--Device-InterruptAction-actionType: InterruptActionType--><!--Device-InterruptAction-actionType: InterruptActionType-End-->
 
@@ -58,7 +58,7 @@ Whether the focus is gained or released. **true** if the focus is gained or rele
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.InterruptEvent#hintType
+**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
 
 <!--Device-InterruptAction-activated?: boolean--><!--Device-InterruptAction-activated?: boolean-End-->
 
@@ -80,7 +80,7 @@ Hint provided along with the audio interruption event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.InterruptEvent#hintType
+**Substitutes:** [hintType](arkts-audio-audio-interruptevent-i.md#hintType)
 
 <!--Device-InterruptAction-hint?: InterruptHint--><!--Device-InterruptAction-hint?: InterruptHint-End-->
 
@@ -102,7 +102,7 @@ Type of the audio interruption event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.audio.InterruptEvent#eventType
+**Substitutes:** [eventType](ohos.multimedia.audio.InterruptEvent#eventType)
 
 <!--Device-InterruptAction-type?: InterruptType--><!--Device-InterruptAction-type?: InterruptType-End-->
 

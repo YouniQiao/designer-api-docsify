@@ -34,5 +34,5 @@ Initialize RelativeContainer FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |  |
+| RelativeContainerAttribute |  |
 

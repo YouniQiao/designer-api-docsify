@@ -4,7 +4,7 @@ HeifsMetadata implements Metadata
 
 HEIF序列图像元数据类，用于存储图像的元数据。
 
-**继承/实现关系：** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md)
+**继承/实现关系：** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ clone(): Promise<HeifsMetadata>
 static createInstance(): HeifsMetadata
 ```
 
-创建一个空的[HeifsMetadata](arkts-image-image-heifsmetadata-c.md)实例。
+创建一个空的[HeifsMetadata](#HeifsMetadata)实例。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 获取图片中所有元数据的属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
 
@@ -78,7 +78,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 ## getBlob
 
@@ -100,7 +100,7 @@ getBlob(): Promise<ArrayBuffer>
 
 | 类型 |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## getProperties
 
@@ -110,7 +110,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像元数据的属性值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
 
@@ -124,19 +124,19 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| key | Array&lt;string&gt; | 是 |
+| key | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## setBlob
 
@@ -164,13 +164,13 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setProperties
 
@@ -180,7 +180,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
 
@@ -194,19 +194,19 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## heifsCanvasHeight
 

@@ -1,10 +1,10 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md).
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery).
 
 It provides APIs related to focus operations.
 
-**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md)
+**Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
 
 **Since:** 11
 
@@ -17,7 +17,7 @@ It provides APIs related to focus operations.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFocalLength
@@ -54,7 +54,7 @@ Obtains the focal length in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusMode
 
@@ -78,13 +78,13 @@ Obtains the focus mode in use.
 
 | Type | Description |
 | --- | --- |
-| [FocusMode](arkts-camera-camera-focusmode-e.md) | Focus mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
+| FocusMode | Focus mode obtained. If the operation fails, undefined is returned and an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusPoint
 
@@ -108,13 +108,13 @@ Obtains the focal point in use.
 
 | Type | Description |
 | --- | --- |
-| [Point](arkts-camera-camera-point-i.md) | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
+| Point | Focal point obtained. If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## lockFocusTracking
 
@@ -140,14 +140,14 @@ Lock focus tracking.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| focusPoint | [Point](arkts-camera-camera-point-i.md) | Yes | lock focus tracking point. |
+| focusPoint | Point | Yes | lock focus tracking point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## setFocusMode
 
@@ -157,7 +157,7 @@ setFocusMode(afMode: FocusMode): void
 
 Sets a focus mode.
 
-Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isfocusmodesupported) to check whether the focus mode is supported.
+Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported) to check whether the focus mode is supported.
 
 **Since:** 11
 
@@ -173,13 +173,13 @@ Before the setting, call [isFocusModeSupported](arkts-camera-camera-focusquery-i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| afMode | [FocusMode](arkts-camera-camera-focusmode-e.md) | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
+| afMode | FocusMode | Yes | Focus mode. If the input parameter is null or undefined, it is treated as 0 and manual focus is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFocusPoint
 
@@ -205,13 +205,13 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](arkts-camera-camera-point-i.md) | Yes | Focal point. The value range of x and y must be within [0, 1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
+| point | Point | Yes | Focal point. The value range of x and y must be within [0, 1]. If a value less than 0 is passed, the value **0** is used. If a value greater than **1** is passed, the value **1** is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## unlockFocusTracking
 
@@ -237,6 +237,6 @@ Unlock focus tracking.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

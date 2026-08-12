@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## isScreenOn
@@ -18,7 +18,7 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [power.isActive](arkts-basicservices-power-isactive-f.md#isactive)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
 
 <!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
@@ -55,7 +55,7 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [power.isActive](arkts-basicservices-power-isactive-f.md#isactive)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
 
 <!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 
@@ -65,7 +65,7 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

@@ -432,7 +432,7 @@ Sets the state anouncement text of the component under accessibility.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| description | string \| Resource \| undefined | 是 | the state anouncement text of the component under accessibility. if incoming is undefined, it will be processed as empty string. |
+| description | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | the state anouncement text of the component under accessibility. if incoming is undefined, it will be processed as empty string. |
 
 **返回值：**
 
@@ -522,7 +522,7 @@ Sets accessibility same page mode
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pageMode | [AccessibilitySamePageMode](../arkts-components/arkts-arkui-accessibilitysamepagemode-e.md) \| undefined | 是 | accessibility same page mode |
+| pageMode | [AccessibilitySamePageMode](arkts-arkui-common-accessibilitysamepagemode-e.md) \| undefined | 是 | accessibility same page mode |
 
 **返回值：**
 
@@ -552,7 +552,7 @@ Sets accessibilityVirtualNode
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | set virtual node of accessibility |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | set virtual node of accessibility |
 
 **返回值：**
 
@@ -582,7 +582,7 @@ Sets the alignment mode of the component content in the drawing area.Default val
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignment | [Alignment](arkts-arkui-alignment-e.md) \| LocalizedAlignment \| undefined | 是 |  |
+| alignment | [Alignment](arkts-arkui-alignment-e.md) \| [LocalizedAlignment](arkts-arkui-localizedalignment-e.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -612,7 +612,7 @@ Sets the alignment rules in the relative container.&lt;br&gt;This API is valid o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) \| LocalizedAlignRuleOptions \| undefined | 是 |  |
+| value | [AlignRuleOption](arkts-arkui-common-alignruleoption-i.md) \| [LocalizedAlignRuleOptions](arkts-arkui-common-localizedalignruleoptions-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -672,7 +672,7 @@ Allowed drop uniformData type for this node.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;UniformDataType&gt; \| null \| Array&lt;string&gt; \| undefined | 是 | the uniformData type for this node. |
+| value | Array&lt;[UniformDataType](arkts-arkui-uniformdatatype-t.md)&gt; \| null \| Array&lt;string&gt; \| undefined | 是 | the uniformData type for this node. |
 
 **返回值：**
 
@@ -702,7 +702,7 @@ animation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| undefined | 是 |  |
+| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -764,7 +764,7 @@ default backdropBlur(radius: double | undefined, options?: BlurOptions, sysOptio
 | --- | --- | --- | --- |
 | radius | double \| undefined | 是 | 为当前组件添加背景模糊效果，入参为模糊半径，模糊半径越大越模糊，为0时不模糊。&lt;br/&gt;当radius的值为undefined时，恢复为默认无模糊的 背景。 |
 | options | [BlurOptions](arkts-arkui-common-bluroptions-i.md) | 否 | 灰阶模糊参数。对图像中的黑白色进行色阶调整，使其趋于灰色更为柔和美观，对图像中的彩色调整没有效果。&lt;br/&gt;默认值：grayscale: [0,0] |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
 
 **返回值：**
 
@@ -794,8 +794,8 @@ Set the background to a given CustomBuilder, or set it to a specific ResourceCol
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| ResourceColor \| undefined | 是 |  |
-| options | [BackgroundOptions](../arkts-components/arkts-arkui-backgroundoptions-i.md) | 否 |  |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined | 是 |  |
+| options | [BackgroundOptions](arkts-arkui-common-backgroundoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -825,9 +825,9 @@ default backgroundBlurStyle(style: BlurStyle | undefined, options?: BackgroundBl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) \| undefined | 是 | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。&lt;br/&gt;当style的值为undefined时，恢复为默认 关闭模糊的背景。 |
+| style | [BlurStyle](arkts-arkui-common-blurstyle-e.md) \| undefined | 是 | 背景模糊样式。模糊样式中封装了模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度五个参数。&lt;br/&gt;当style的值为undefined时，恢复为默认 关闭模糊的背景。 |
 | options | [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md) | 否 | 背景模糊选项。&lt;br/&gt;该参数在ArkTS卡片中，暂不支持使用。 |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | 否 | 系统自适应调节参数。&lt;br/&gt;默认值：{ disableSystemAdaptation: false } |
 
 **返回值：**
 
@@ -857,7 +857,7 @@ default backgroundBrightness(params: BackgroundBrightnessOptions | undefined): t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [BackgroundBrightnessOptions](../arkts-components/arkts-arkui-backgroundbrightnessoptions-i.md) \| undefined | 是 | 设置组件背景提亮效果，包括：亮度变化速率，提亮程度。&lt;br/&gt;当params的值为undefined时，恢 复为无提亮效果的背景。 |
+| params | [BackgroundBrightnessOptions](arkts-arkui-common-backgroundbrightnessoptions-i.md) \| undefined | 是 | 设置组件背景提亮效果，包括：亮度变化速率，提亮程度。&lt;br/&gt;当params的值为undefined时，恢 复为无提亮效果的背景。 |
 
 **返回值：**
 
@@ -887,7 +887,7 @@ Background color
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColorMetrics \| undefined | 是 |  |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [ColorMetrics](arkts-arkui-colormetrics-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -906,7 +906,7 @@ default backgroundEffect(options: BackgroundEffectOptions | undefined, sysOption
 > **说明：**
 > 
 > backgroundEffect接口为实时接口，每帧对模糊等效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考：
+> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考：
 > [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
 
 **起始版本：** 23
@@ -924,7 +924,7 @@ default backgroundEffect(options: BackgroundEffectOptions | undefined, sysOption
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md) \| undefined | 是 | 设置组件背景属性包括：饱和度，亮度，颜色。&lt;br/&gt;当options的值为undefined时，恢复为无效果的背 景。 |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 |  |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -954,7 +954,7 @@ default backgroundFilter(filter: Filter | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | 是 | 背景滤镜视觉效果。&lt;br/&gt;当filter的值为undefined时，无背景滤镜视觉效果。 |
+| filter | [Filter](arkts-arkui-filter-t.md) \| undefined | 是 | 背景滤镜视觉效果。&lt;br/&gt;当filter的值为undefined时，无背景滤镜视觉效果。 |
 
 **返回值：**
 
@@ -984,7 +984,7 @@ Background image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap \| undefined | 是 | the background image source |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| undefined | 是 | the background image source |
 
 **返回值：**
 
@@ -1014,8 +1014,8 @@ Background image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap \| undefined | 是 | the background image source |
-| options | [BackgroundImageOptions](../arkts-components/arkts-arkui-backgroundimageoptions-i.md) | 是 | config the options |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| undefined | 是 | the background image source |
+| options | [BackgroundImageOptions](arkts-arkui-common-backgroundimageoptions-i.md) | 是 | config the options |
 
 **返回值：**
 
@@ -1045,7 +1045,7 @@ Background image src:Image address url
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap \| undefined | 是 |  |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](arkts-arkui-pixelmap-t.md) \| undefined | 是 |  |
 | repeat | [ImageRepeat](arkts-arkui-imagerepeat-e.md) | 是 |  |
 
 **返回值：**
@@ -1076,7 +1076,7 @@ Background image position x:Horizontal coordinate;y:Vertical axis coordinate.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| Alignment \| undefined | 是 |  |
+| value | [Position](arkts-arkui-position-i.md) \| [Alignment](arkts-arkui-alignment-e.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1136,7 +1136,7 @@ Background image size
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) \| ImageSize \| undefined | 是 | The width and height of the background image. |
+| value | [SizeOptions](arkts-arkui-sizeoptions-i.md) \| [ImageSize](arkts-arkui-imagesize-e.md) \| undefined | 是 | The width and height of the background image. |
 
 **返回值：**
 
@@ -1154,7 +1154,7 @@ default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builde
 
 > **说明：**
 > 
-> 该接口不支持在[attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 该接口不支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 23
 
@@ -1170,9 +1170,9 @@ default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | 配置全屏模态页面内容。 |
-| type | [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md) | 否 | 全屏模态页面的系统转场方式。&lt;br/&gt; 默认值：ModalTransition.DEFAULT。&lt;br/&gt;**说明：**&lt;br /&gt; 同 transition同时设置时，此属性不生效。 |
+| isShow | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 配置全屏模态页面内容。 |
+| type | [ModalTransition](arkts-arkui-common-modaltransition-e.md) | 否 | 全屏模态页面的系统转场方式。&lt;br/&gt; 默认值：ModalTransition.DEFAULT。&lt;br/&gt;**说明：**&lt;br /&gt; 同 transition同时设置时，此属性不生效。 |
 
 **返回值：**
 
@@ -1202,8 +1202,8 @@ default bindContentCover(isShow: boolean | Bindable<boolean> | undefined, builde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | 配置全屏模态页面内容。 |
+| isShow | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 | 是否显示全屏模态页面。&lt;br/&gt;-true：显示全屏模态页面。&lt;br/&gt;-false：隐藏全屏模态页面。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 配置全屏模态页面内容。 |
 | options | [ContentCoverOptions](arkts-arkui-common-contentcoveroptions-i.md) | 否 | 配置全屏模态页面的可选属性。 |
 
 **返回值：**
@@ -1234,7 +1234,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of context menu. |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of context menu. |
 | responseType | [ResponseType](arkts-arkui-responsetype-e.md) \| undefined | 是 | Indicates response type of context menu, Long pressing with a mouse device is not supported. |
 | options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
@@ -1266,8 +1266,8 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming twoway binding parameters. true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. &lt;/p&gt; |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of context menu. |
+| isShow | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming twoway binding parameters. true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. &lt;/p&gt; |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
@@ -1299,8 +1299,8 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming two-way binding parameters. true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. &lt;/p&gt; |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; \| undefined | 是 | Indicates the content of context menu. |
+| isShow | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming two-way binding parameters. true means display content, false means hide content, default is false. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. &lt;/p&gt; |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-common-menuelement-i.md)&gt; \| undefined | 是 | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
@@ -1332,7 +1332,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| Array&lt;MenuElement&gt; \| undefined | 是 | Indicates the content of context menu. |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| Array&lt;[MenuElement](arkts-arkui-common-menuelement-i.md)&gt; \| undefined | 是 | Indicates the content of context menu. |
 | responseType | [ResponseType](arkts-arkui-responsetype-e.md) \| undefined | 是 | Indicates response type of context menu. Long pressing with a mouse device is not supported. |
 | options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
@@ -1364,7 +1364,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;[ResponseType](arkts-arkui-responsetype-e.md)&gt; \| undefined | 是 | Indicates the content of context menu. Undefined means unbinding. |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](arkts-arkui-responsetype-e.md)&gt; \| undefined | 是 | Indicates the content of context menu. Undefined means unbinding. |
 | options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
@@ -1396,7 +1396,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;[ResponseType](arkts-arkui-responsetype-e.md)&gt; \| Array&lt;MenuElement&gt; \| undefined | 是 | Indicates the content of context menu. Undefined means unbinding. |
+| content | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ResponseType](arkts-arkui-responsetype-e.md)&gt; \| Array&lt;[MenuElement](arkts-arkui-common-menuelement-i.md)&gt; \| undefined | 是 | Indicates the content of context menu. Undefined means unbinding. |
 | options | [ContextMenuOptions](arkts-arkui-common-contextmenuoptions-i.md) | 否 | Indicates the options of context menu. |
 
 **返回值：**
@@ -1427,7 +1427,7 @@ Menu control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | Array&lt;MenuElement&gt; \| CustomBuilder \| undefined | 是 | Indicates the content of menu. |
+| content | Array&lt;[MenuElement](arkts-arkui-common-menuelement-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of menu. |
 | options | [MenuOptions](arkts-arkui-common-menuoptions-i.md) | 否 | Indicates the options of menu. |
 
 **返回值：**
@@ -1458,8 +1458,8 @@ Menu control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming two-way binding parameters. true means display menu, false means hide menu, default is false. |
-| content | Array&lt;MenuElement&gt; \| CustomBuilder \| undefined | 是 | Indicates the content of menu. |
+| isShow | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 | Menu display switch, supports incoming two-way binding parameters. true means display menu, false means hide menu, default is false. |
+| content | Array&lt;[MenuElement](arkts-arkui-common-menuelement-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | Indicates the content of menu. |
 | options | [MenuOptions](arkts-arkui-common-menuoptions-i.md) | 否 | Indicates the options of menu. |
 
 **返回值：**
@@ -1491,7 +1491,7 @@ Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | show | boolean \| undefined | 是 | Whether to show the popup, default is false. |
-| popup | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) \| CustomPopupOptions \| undefined | 是 |  |
+| popup | [PopupOptions](arkts-arkui-common-popupoptions-i.md) \| [CustomPopupOptions](arkts-arkui-common-custompopupoptions-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1509,7 +1509,7 @@ default bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: Cust
 
 > **说明：**
 > 
-> 该接口不支持在[attributeModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 该接口不支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 23
 
@@ -1525,9 +1525,9 @@ default bindSheet(isShow: boolean | Bindable<boolean> | undefined, builder: Cust
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 | 是否显示半模态页面。&lt;br/&gt;true：显示半模态页面。&lt;br/&gt;false：隐藏半模态页面。 |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | 配置半模态页面内容。 |
-| options | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 | 配置半模态页面的可选属性。 |
+| isShow | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 | 是否显示半模态页面。&lt;br/&gt;true：显示半模态页面。&lt;br/&gt;false：隐藏半模态页面。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 配置半模态页面内容。 |
+| options | [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 否 | 配置半模态页面的可选属性。 |
 
 **返回值：**
 
@@ -1557,8 +1557,8 @@ Tips control
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [TipsMessageType](../arkts-components/arkts-arkui-tipsmessagetype-t.md) \| undefined | 是 |  |
-| options | [TipsOptions](../arkts-components/arkts-arkui-tipsoptions-i.md) | 否 |  |
+| message | [TipsMessageType](arkts-arkui-tipsmessagetype-t.md) \| undefined | 是 |  |
+| options | [TipsOptions](arkts-arkui-common-tipsoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -1588,8 +1588,8 @@ Defines how the component's content (including the content of it child component
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BlendMode](../arkts-components/arkts-arkui-blendmode-e.md) \| undefined | 是 | Blend mode. &lt;br&gt;Default value: **BlendMode.NONE**. &lt;br&gt;**NOTE：**&lt;br&gt;When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
-| type | [BlendApplyType](../arkts-components/arkts-arkui-blendapplytype-e.md) | 否 | Whether the blend mode is implemented offscreen. &lt;br&gt;Default value: **BlendApplyType.FAST**. &lt;br&gt;**NOTE：**&lt;br&gt;1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. &lt;br&gt;2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;, backgroundEffect, and brightness. |
+| value | [BlendMode](arkts-arkui-common-blendmode-e.md) \| undefined | 是 | Blend mode. &lt;br&gt;Default value: **BlendMode.NONE**. &lt;br&gt;**NOTE：**&lt;br&gt;When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
+| type | [BlendApplyType](arkts-arkui-common-blendapplytype-e.md) | 否 | Whether the blend mode is implemented offscreen. &lt;br&gt;Default value: **BlendApplyType.FAST**. &lt;br&gt;**NOTE：**&lt;br&gt;1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. &lt;br&gt;2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;, backgroundEffect, and brightness. |
 
 **返回值：**
 
@@ -1621,7 +1621,7 @@ Adds the content blurring effect for the current component. The input parameter 
 | --- | --- | --- | --- |
 | blurRadius | double \| undefined | 是 | value indicates radius of backdrop blur. |
 | options | [BlurOptions](arkts-arkui-common-bluroptions-i.md) | 否 | options indicates blur options. |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 | system adaptive options. |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | 否 | system adaptive options. |
 
 **返回值：**
 
@@ -1681,7 +1681,7 @@ Sets the border color.Default value: **Color.Black**.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors \| undefined | 是 |  |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1711,7 +1711,7 @@ Sets the border image of the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderImageOption](../arkts-components/arkts-arkui-borderimageoption-i.md) \| undefined | 是 | Border image or border gradient. |
+| value | [BorderImageOption](arkts-arkui-common-borderimageoption-i.md) \| undefined | 是 | Border image or border gradient. |
 
 **返回值：**
 
@@ -1741,7 +1741,7 @@ Sets the radius of the border rounded corners. The radius is restricted by the c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses \| undefined | 是 |  |
+| value | [Length](arkts-arkui-length-t.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md) \| undefined | 是 |  |
 | type | [RenderStrategy](arkts-arkui-renderstrategy-e.md) \| undefined | 否 | Application types for drawing rounded corners. Default value: **RenderStrategy.FAST**. |
 
 **返回值：**
@@ -1772,7 +1772,7 @@ Sets the border style.Default value: **BorderStyle.Solid**.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles \| undefined | 是 |  |
+| value | [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1802,7 +1802,7 @@ Sets the border width.Percentage values are not supported.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths \| undefined | 是 |  |
+| value | [Length](arkts-arkui-length-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -1863,7 +1863,7 @@ Sets the parameters of the chain in which the component is the head.&lt;br&gt;Th
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | direction | [Axis](arkts-arkui-axis-e.md) \| undefined | 是 | indicates direction of the chain |
-| style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) \| undefined | 是 | indicates style of the chain |
+| style | [ChainStyle](arkts-arkui-common-chainstyle-e.md) \| undefined | 是 | indicates style of the chain |
 
 **返回值：**
 
@@ -1923,7 +1923,7 @@ default clickEffect(value: ClickEffect | null | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ClickEffect](../arkts-components/arkts-arkui-clickeffect-i.md) \| null \| undefined | 是 | 设置当前组件点击回弹效果。&lt;br/&gt;**说明：**&lt;br/&gt;可通过undefined或者null取消点击回弹效果。&lt;br/&gt;不 建议在组件大小动态变化的场景中使用该功能。&lt;br/&gt;当组件无法触发通用事件时，不支持该属性。&lt;br/&gt;回弹触发缩放后可能造成触摸点不在控件上，控件上无法响应手势事件。 |
+| value | [ClickEffect](arkts-arkui-common-clickeffect-i.md) \| null \| undefined | 是 | 设置当前组件点击回弹效果。&lt;br/&gt;**说明：**&lt;br/&gt;可通过undefined或者null取消点击回弹效果。&lt;br/&gt;不 建议在组件大小动态变化的场景中使用该功能。&lt;br/&gt;当组件无法触发通用事件时，不支持该属性。&lt;br/&gt;回弹触发缩放后可能造成触摸点不在控件上，控件上无法响应手势事件。 |
 
 **返回值：**
 
@@ -1975,7 +1975,7 @@ default clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 > 
 > 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
 > 
-> 形状中的[fill](../arkts-components/arkts-arkui-commonshapemethod-c.md/arkts-arkui-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+> 形状中的[fill](arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
 
 **起始版本：** 23
 
@@ -1991,7 +1991,7 @@ default clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape \| undefined | 是 | 参数为相应类型的组件，按指定的形状（形状中可包含位置信息）对当 前组件进行裁剪。&lt;br/&gt;**说明：** 裁剪不会导致被裁剪区域无法响应绑定的手势事件。&lt;br/&gt;当value的值为undefined时，会重置为当前值。 |
+| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | 是 | 参数为相应类型的组件，按指定的形状（形状中可包含位置信息）对当 前组件进行裁剪。&lt;br/&gt;**说明：** 裁剪不会导致被裁剪区域无法响应绑定的手势事件。&lt;br/&gt;当value的值为undefined时，会重置为当前值。 |
 
 **返回值：**
 
@@ -2021,7 +2021,7 @@ Applies a color blend effect to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Color](arkts-arkui-color-e.md) \| string \| Resource \| undefined | 是 | Color to blend with the component. |
+| value | [Color](arkts-arkui-color-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | Color to blend with the component. |
 
 **返回值：**
 
@@ -2051,7 +2051,7 @@ default compositingFilter(filter: Filter | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | 是 | 合成滤镜视觉效果。&lt;br/&gt;当filter的值为undefined时，无合成滤镜视觉效果。 |
+| filter | [Filter](arkts-arkui-filter-t.md) \| undefined | 是 | 合成滤镜视觉效果。&lt;br/&gt;当filter的值为undefined时，无合成滤镜视觉效果。 |
 
 **返回值：**
 
@@ -2323,7 +2323,7 @@ Set preview of the component for dragging process
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preview | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| DragItemInfo \| string \| undefined | 是 | preview of the component for dragging process |
+| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-common-dragiteminfo-i.md) \| string \| undefined | 是 | preview of the component for dragging process |
 | config | [PreviewConfiguration](arkts-arkui-common-previewconfiguration-i.md) | 否 | drag preview configuration. |
 
 **返回值：**
@@ -2354,7 +2354,7 @@ Set the selectable area drag preview options.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DragPreviewOptions](../arkts-components/arkts-arkui-dragpreviewoptions-i.md) \| undefined | 是 | preview options value. |
+| value | [DragPreviewOptions](arkts-arkui-common-dragpreviewoptions-i.md) \| undefined | 是 | preview options value. |
 | options | [DragInteractionOptions](arkts-arkui-common-draginteractionoptions-i.md) | 否 | drag interaction options value. |
 
 **返回值：**
@@ -2415,7 +2415,7 @@ Sets the drawModifier of the current component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [DrawModifier](../arkts-components/arkts-arkui-drawmodifier-c.md) \| undefined | 是 | drawModifier used to draw, or undefined if it is not available. Default value: undefined A custom modifier applies only to the FrameNode of the currently bound component, not to its subnodes. |
+| modifier | [DrawModifier](arkts-arkui-common-drawmodifier-c.md) \| undefined | 是 | drawModifier used to draw, or undefined if it is not available. Default value: undefined A custom modifier applies only to the FrameNode of the currently bound component, not to its subnodes. |
 
 **返回值：**
 
@@ -2507,8 +2507,8 @@ Sets the safe area to be expanded to.&lt;br&gt;default:{types: [SafeAreaType.SYS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| types | Array&lt;SafeAreaType&gt; | 否 | Indicates the types of the safe area. |
-| edges | Array&lt;SafeAreaEdge&gt; | 否 | Indicates the edges of the safe area. |
+| types | Array&lt;[SafeAreaType](arkts-arkui-common-safeareatype-e.md)&gt; | 否 | Indicates the types of the safe area. |
+| edges | Array&lt;[SafeAreaEdge](arkts-arkui-common-safeareaedge-e.md)&gt; | 否 | Indicates the edges of the safe area. |
 
 **返回值：**
 
@@ -2781,9 +2781,9 @@ Applies a foreground blur style to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md) \| undefined | 是 | Settings of the foreground blur style. |
+| style | [BlurStyle](arkts-arkui-common-blurstyle-e.md) \| undefined | 是 | Settings of the foreground blur style. |
 | options | [ForegroundBlurStyleOptions](arkts-arkui-common-foregroundblurstyleoptions-i.md) | 否 |  |
-| sysOptions | [SystemAdaptiveOptions](../arkts-components/arkts-arkui-systemadaptiveoptions-i.md) | 否 | system adaptive options. |
+| sysOptions | [SystemAdaptiveOptions](arkts-arkui-common-systemadaptiveoptions-i.md) | 否 | system adaptive options. |
 
 **返回值：**
 
@@ -2813,7 +2813,7 @@ default foregroundColor(value: ResourceColor | ColoringStrategy | undefined): th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| ColoringStrategy \| undefined | 是 | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。&lt;br/&gt;当value的值为 undefined时，维持之前取值或组件默认取值，具体行为不同组件可能会有差异，建议开发者使用确定颜色或[ColoringStrategy](arkts-arkui-enums-coloringstrategy-e.md)。 |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [ColoringStrategy](arkts-arkui-coloringstrategy-e.md) \| undefined | 是 | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。&lt;br/&gt;当value的值为 undefined时，维持之前取值或组件默认取值，具体行为不同组件可能会有差异，建议开发者使用确定颜色或[ColoringStrategy](ColoringStrategy)。 |
 
 **返回值：**
 
@@ -2873,7 +2873,7 @@ default foregroundFilter(filter: Filter | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | 是 | 前景滤镜（内容）视觉效果。&lt;br/&gt;当filter的值为undefined时，无前景滤镜（内容）视觉效果。 |
+| filter | [Filter](arkts-arkui-filter-t.md) \| undefined | 是 | 前景滤镜（内容）视觉效果。&lt;br/&gt;当filter的值为undefined时，无前景滤镜（内容）视觉效果。 |
 
 **返回值：**
 
@@ -2934,7 +2934,7 @@ default geometryTransition(id: string | undefined, options?: GeometryTransitionO
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | id | string \| undefined | 是 | geometry transition id |
-| options | [GeometryTransitionOptions](../arkts-components/arkts-arkui-geometrytransitionoptions-i.md) | 否 | 组件内共享元素转场动画参数。&lt;br&gt;默认值为 { follow: false }。 |
+| options | [GeometryTransitionOptions](arkts-arkui-common-geometrytransitionoptions-i.md) | 否 | 组件内共享元素转场动画参数。&lt;br&gt;默认值为 { follow: false }。 |
 
 **返回值：**
 
@@ -3085,7 +3085,7 @@ Sets the height of the component or its vertical layout policy. By default, the 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| heightValue | [Length](arkts-arkui-length-t.md) \| LayoutPolicy \| undefined | 是 |  |
+| heightValue | [Length](arkts-arkui-length-t.md) \| [LayoutPolicy](arkts-arkui-common-layoutpolicy-c.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -3235,8 +3235,8 @@ Expands the layout safe area of a component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| types | Array&lt;LayoutSafeAreaType&gt; \| undefined | 否 | The region type to expand the component's layout safe area into. The default value is LayoutSafeAreaType.SYSTEM. |
-| edges | Array&lt;LayoutSafeAreaEdge&gt; \| undefined | 否 | The set of edges for which to ignore layout safe area. The default value is LayoutSafeAreaEdge.ALL. |
+| types | Array&lt;[LayoutSafeAreaType](arkts-arkui-common-layoutsafeareatype-e.md)&gt; \| undefined | 否 | The region type to expand the component's layout safe area into. The default value is LayoutSafeAreaType.SYSTEM. |
+| edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-common-layoutsafeareaedge-e.md)&gt; \| undefined | 否 | The set of edges for which to ignore layout safe area. The default value is LayoutSafeAreaEdge.ALL. |
 
 **返回值：**
 
@@ -3296,7 +3296,7 @@ Invert the input image. Value defines the scale of the conversion. 100% of the v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double \| InvertOptions \| undefined | 是 | value indicates the scale of the conversion or the options of invert. |
+| value | double \| [InvertOptions](arkts-arkui-common-invertoptions-i.md) \| undefined | 是 | value indicates the scale of the conversion or the options of invert. |
 
 **返回值：**
 
@@ -3356,7 +3356,7 @@ Sets hot keys
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey \| undefined | 是 | Character of the combination key. |
+| value | string \| [FunctionKey](arkts-arkui-functionkey-e.md) \| undefined | 是 | Character of the combination key. |
 | keys | Array&lt;[ModifierKey](arkts-arkui-modifierkey-e.md)&gt; \| undefined | 是 | The modifier keys modify the action of key when the key are pressed at the same time. |
 | action | () =&gt; void | 否 | Callback function, triggered when the shortcut keyboard is pressed. |
 
@@ -3478,7 +3478,7 @@ Linear Gradient angle: Angle of Linear Gradient. The default value is 180;direct
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md) \| undefined | 是 | Linear gradient. &lt;br&gt;If **options** is **undefined**, the linear gradient is disabled. |
+| value | [LinearGradientOptions](arkts-arkui-common-lineargradientoptions-i.md) \| undefined | 是 | Linear gradient. &lt;br&gt;If **options** is **undefined**, the linear gradient is disabled. |
 
 **返回值：**
 
@@ -3539,7 +3539,7 @@ Sets the margin of the component.Default value: **0**.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Margin](arkts-arkui-margin-t.md) \| Length \| LocalizedMargin \| undefined | 是 |  |
+| value | [Margin](arkts-arkui-margin-t.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedMargin](arkts-arkui-localizedmargin-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -3569,7 +3569,7 @@ Sets the anchor for locating the component, which is used to move the component 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| LocalizedPosition \| undefined | 是 |  |
+| value | [Position](arkts-arkui-position-i.md) \| [LocalizedPosition](arkts-arkui-localizedposition-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -3599,7 +3599,7 @@ default mask(value: ProgressMask | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ProgressMask](../arkts-components/arkts-arkui-progressmask-c.md) \| undefined | 是 | 在当前组件上加上可动态设置进度、最大值和颜色的遮罩。&lt;br/&gt;当value的值为undefined时，恢复为无进度遮罩效果。 |
+| value | [ProgressMask](arkts-arkui-common-progressmask-c.md) \| undefined | 是 | 在当前组件上加上可动态设置进度、最大值和颜色的遮罩。&lt;br/&gt;当value的值为undefined时，恢复为无进度遮罩效果。 |
 
 **返回值：**
 
@@ -3629,7 +3629,7 @@ default maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| EllipseShape \| PathShape \| RectShape \| undefined | 是 | 在当前组件上加上指定形状的遮罩。&lt;br/&gt;当value的值为 undefined时，会重置为当前值。 |
+| value | [CircleShape](arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | 是 | 在当前组件上加上指定形状的遮罩。&lt;br/&gt;当value的值为 undefined时，会重置为当前值。 |
 
 **返回值：**
 
@@ -3643,7 +3643,7 @@ default maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | un
 default materialFilter(filter: Filter | undefined): this
 ```
 
-设置系统材质滤镜效果，系统材质滤镜的绘制早于[backgroundFilter](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundfilter)绘制，即位于backgroundFilter的更底层。
+设置系统材质滤镜效果，系统材质滤镜的绘制早于[backgroundFilter](#backgroundFilter)绘制，即位于backgroundFilter的更底层。
 
 **起始版本：** 23
 
@@ -3659,7 +3659,7 @@ default materialFilter(filter: Filter | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) \| undefined | 是 | 系统材质滤镜视觉效果。设置为undefined时恢复为无系统材质滤镜效果。 |
+| filter | [Filter](arkts-arkui-filter-t.md) \| undefined | 是 | 系统材质滤镜视觉效果。设置为undefined时恢复为无系统材质滤镜效果。 |
 
 **返回值：**
 
@@ -3779,7 +3779,7 @@ Sets the mouse response region of current component
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;Rectangle&gt; \| Rectangle \| undefined | 是 |  |
+| value | Array&lt;[Rectangle](arkts-arkui-common-rectangle-i.md)&gt; \| [Rectangle](arkts-arkui-common-rectangle-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -3809,7 +3809,7 @@ Set nextFocus.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| nextStep | [FocusMovement](../arkts-components/arkts-arkui-focusmovement-i.md) \| undefined | 是 |  |
+| nextStep | [FocusMovement](arkts-arkui-common-focusmovement-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -3869,7 +3869,7 @@ Sets the offset of the component relative to its original position.&lt;br&gt;The
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| Edges \| LocalizedEdges \| undefined | 是 |  |
+| value | [Position](arkts-arkui-position-i.md) \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -3929,7 +3929,7 @@ Register accessibility focus callback,when the component is focused or out of fo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AccessibilityFocusCallback](../arkts-components/arkts-arkui-accessibilityfocuscallback-t.md) \| undefined | 是 | accessibility focus callback function |
+| callback | [AccessibilityFocusCallback](arkts-arkui-accessibilityfocuscallback-t.md) \| undefined | 是 | accessibility focus callback function |
 
 **返回值：**
 
@@ -3959,7 +3959,7 @@ Trigger a accessibility hover event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AccessibilityCallback](../arkts-components/arkts-arkui-accessibilitycallback-t.md) \| undefined | 是 | A callback instance used when the component is touched after accessibility mode is enabled. |
+| callback | [AccessibilityCallback](arkts-arkui-accessibilitycallback-t.md) \| undefined | 是 | A callback instance used when the component is touched after accessibility mode is enabled. |
 
 **返回值：**
 
@@ -4079,7 +4079,7 @@ This callback is triggered when the size or position of this component has finis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [AreaChangeCallback](../arkts-components/arkts-arkui-areachangecallback-t.md) | 是 | Callback invoked when the area of the component changes. |
+| event | [AreaChangeCallback](arkts-arkui-areachangecallback-t.md) | 是 | Callback invoked when the area of the component changes. |
 | options | [AreaChangeOptions](arkts-arkui-common-areachangeoptions-i.md) | 否 | The options for the area change event. |
 
 **返回值：**
@@ -4140,7 +4140,7 @@ Handle axis events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AxisEvent&gt; \| undefined | 是 |  |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[AxisEvent](arkts-arkui-common-axisevent-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4200,7 +4200,7 @@ Called to specify how to perform the touch test on the children of this componen
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | ((value: Array&lt;TouchTestInfo&gt;) =&gt; TouchResult) \| undefined | 是 |  |
+| event | ((value: Array&lt;[TouchTestInfo](arkts-arkui-common-touchtestinfo-c.md)&gt;) =&gt; TouchResult) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4264,7 +4264,7 @@ Trigger a click event when a click is clicked, move distance should smaller than
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt; \| undefined | 是 | this function callback executed when the click action is recognized |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[ClickEvent](arkts-arkui-common-clickevent-i.md)&gt; \| undefined | 是 | this function callback executed when the click action is recognized |
 | distanceThreshold | double \| undefined | 是 | the distance threshold of finger's movement when detecting a click action @default (2^31-1)vp |
 
 **返回值：**
@@ -4325,7 +4325,7 @@ Digital crown input.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;CrownEvent&gt; \| undefined | 是 |  |
+| handler | [Callback](arkts-arkui-callback-t.md)&lt;[CrownEvent](arkts-arkui-common-crownevent-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4510,8 +4510,8 @@ When a dragged object hovers over the target, it triggers a callback notificatio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;SpringLoadingContext&gt; \| null \| undefined | 是 | Registers the callback for spring loading response, or sets it to null to disable the support for spring loading. |
-| configuration | [DragSpringLoadingConfiguration](../arkts-components/arkts-arkui-dragspringloadingconfiguration-t.md) | 否 | The initialized spring loading configuration which is only used when the entire spring detecting. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[SpringLoadingContext](arkts-arkui-springloadingcontext-t.md)&gt; \| null \| undefined | 是 | Registers the callback for spring loading response, or sets it to null to disable the support for spring loading. |
+| configuration | [DragSpringLoadingConfiguration](arkts-arkui-dragspringloadingconfiguration-t.md) | 否 | The initialized spring loading configuration which is only used when the entire spring detecting. |
 
 **返回值：**
 
@@ -4604,7 +4604,7 @@ The component bound to this event can be used as the drag release target.This ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventCallback | [OnDragEventCallback](arkts-arkui-ondrageventcallback-t.md) \| undefined | 是 | event callback. |
-| dropOptions | [DropOptions](../arkts-components/arkts-arkui-dropoptions-i.md) | 是 | the drop handling options. |
+| dropOptions | [DropOptions](arkts-arkui-common-dropoptions-i.md) | 是 | the drop handling options. |
 
 **返回值：**
 
@@ -4664,7 +4664,7 @@ Trigger a FocusAxisEvent.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;FocusAxisEvent&gt; \| undefined | 是 |  |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[FocusAxisEvent](arkts-arkui-common-focusaxisevent-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4694,7 +4694,7 @@ When the events and gestures on this node and higher-priority nodes have been co
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureCollectInterceptCallback](../arkts-components/arkts-arkui-gesturecollectinterceptcallback-t.md) | 是 | A callback instance used when the component does a touch test. |
+| callback | [GestureCollectInterceptCallback](arkts-arkui-gesturecollectinterceptcallback-t.md) | 是 | A callback instance used when the component does a touch test. |
 
 **返回值：**
 
@@ -4754,7 +4754,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](../arkts-components/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
 
 **返回值：**
 
@@ -4788,7 +4788,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](../arkts-components/arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-gesturerecognizerjudgebegincallback-t.md) \| undefined | 是 | A callback instance used when a gesture bound to this component will be accepted. |
 | exposeInnerGesture | boolean \| undefined | 是 | This parameter is a flag. This flag determines whether to expose internal gestures. The default value is false. |
 
 **返回值：**
@@ -4849,7 +4849,7 @@ Trigger a hover move event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;HoverEvent&gt; \| undefined | 是 |  |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[HoverEvent](arkts-arkui-common-hoverevent-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4879,7 +4879,7 @@ Keyboard input
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; \| undefined | 是 | Callback for handling the key event. |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[KeyEvent](arkts-arkui-common-keyevent-i.md), boolean&gt; \| undefined | 是 | Callback for handling the key event. |
 
 **返回值：**
 
@@ -4909,7 +4909,7 @@ Customize the handling and distribution of key events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; \| undefined | 是 |  |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[KeyEvent](arkts-arkui-common-keyevent-i.md), boolean&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -4939,7 +4939,7 @@ Handle keyboard events before input method events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;KeyEvent, boolean&gt; \| undefined | 是 | Callback for handling the key event. |
+| event | [Callback](arkts-arkui-callback-t.md)&lt;[KeyEvent](arkts-arkui-common-keyevent-i.md), boolean&gt; \| undefined | 是 | Callback for handling the key event. |
 
 **返回值：**
 
@@ -5029,7 +5029,7 @@ After binding, a callback is triggered when the preDrag status change finished.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PreDragStatus&gt; \| undefined | 是 | callback - The callback will be triggered when the preDrag status change. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[PreDragStatus](arkts-arkui-common-predragstatus-e.md)&gt; \| undefined | 是 | callback - The callback will be triggered when the preDrag status change. |
 
 **返回值：**
 
@@ -5059,7 +5059,7 @@ This callback is triggered when the component size changes due to layout updates
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [SizeChangeCallback](../arkts-components/arkts-arkui-sizechangecallback-t.md) \| undefined | 是 | event callback. |
+| event | [SizeChangeCallback](arkts-arkui-sizechangecallback-t.md) \| undefined | 是 | event callback. |
 
 **返回值：**
 
@@ -5119,7 +5119,7 @@ When the component does a touch test, a user-defined callback is triggered.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent, [HitTestMode](arkts-arkui-hittestmode-e.md)&gt; \| undefined | 是 | A callback instance used when the component does a touch test. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;[TouchEvent](arkts-arkui-common-touchevent-i.md), [HitTestMode](arkts-arkui-hittestmode-e.md)&gt; \| undefined | 是 | A callback instance used when the component does a touch test. |
 
 **返回值：**
 
@@ -5149,7 +5149,7 @@ Register one callback which will be executed when all gesture recognizers are co
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [TouchTestDoneCallback](../arkts-components/arkts-arkui-touchtestdonecallback-t.md) \| undefined | 是 | A callback instance used when all gesture recognizers are collected. |
+| callback | [TouchTestDoneCallback](arkts-arkui-touchtestdonecallback-t.md) \| undefined | 是 | A callback instance used when all gesture recognizers are collected. |
 
 **返回值：**
 
@@ -5273,7 +5273,7 @@ default opacity(value: double | Resource | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double \| Resource \| undefined | 是 | 元素的不透明度，取值范围为0到1，若设置的值小于0时，则取值为0，若设置的值大于1时，则取值为1，1表示不透明，0表示完全透明， 达到隐藏组件效果，但是在布局中占位。 &lt;br&gt; 默认值：1 &lt;br/&gt;**说明：** &lt;br/&gt; 子组件会继承父组件的透明度，并与自身的透明度属性叠加。如：父组件透明度为0.1，子组件设置透明度为0.8，则子组件实际透 明度为0.1*0.8=0.08。&lt;br/&gt;当opacity的值为undefined时，恢复为默认不透明度为1的状态。 |
+| value | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | 是 | 元素的不透明度，取值范围为0到1，若设置的值小于0时，则取值为0，若设置的值大于1时，则取值为1，1表示不透明，0表示完全透明， 达到隐藏组件效果，但是在布局中占位。 &lt;br&gt; 默认值：1 &lt;br/&gt;**说明：** &lt;br/&gt; 子组件会继承父组件的透明度，并与自身的透明度属性叠加。如：父组件透明度为0.1，子组件设置透明度为0.8，则子组件实际透 明度为0.1*0.8=0.08。&lt;br/&gt;当opacity的值为undefined时，恢复为默认不透明度为1的状态。 |
 
 **返回值：**
 
@@ -5333,7 +5333,7 @@ Sets the color of the outline.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors \| undefined | 是 | Outline color. &lt;br&gt;Default value: **Color.Black**. |
+| value | [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md) \| undefined | 是 | Outline color. &lt;br&gt;Default value: **Color.Black**. |
 
 **返回值：**
 
@@ -5363,7 +5363,7 @@ Sets the radius of the outline corners.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| OutlineRadiuses \| undefined | 是 | adius of the outline corners. Percentage values are not supported. &lt;br&gt;Default value: **0**. &lt;br&gt;Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth. |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| [OutlineRadiuses](arkts-arkui-units-outlineradiuses-i.md) \| undefined | 是 | adius of the outline corners. Percentage values are not supported. &lt;br&gt;Default value: **0**. &lt;br&gt;Maximum effective value: Component width/2 + outlineWidth or component height/2 + outlineWidth. |
 
 **返回值：**
 
@@ -5393,7 +5393,7 @@ Sets the style of the outline.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [OutlineStyle](arkts-arkui-common-outlinestyle-e.md) \| EdgeOutlineStyles \| undefined | 是 | Outline style. &lt;br&gt;Default value: **OutlineStyle.SOLID**. |
+| value | [OutlineStyle](arkts-arkui-common-outlinestyle-e.md) \| [EdgeOutlineStyles](arkts-arkui-units-edgeoutlinestyles-i.md) \| undefined | 是 | Outline style. &lt;br&gt;Default value: **OutlineStyle.SOLID**. |
 
 **返回值：**
 
@@ -5423,7 +5423,7 @@ Sets the thickness of the outline.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Dimension](arkts-arkui-dimension-t.md) \| EdgeOutlineWidths \| undefined | 是 | Outline thickness. Percentage values are not supported. &lt;br&gt;Default value: **0**Outline thickness. Percentage values are not supported. &lt;br&gt;Default value: **0**. |
+| value | [Dimension](arkts-arkui-dimension-t.md) \| [EdgeOutlineWidths](arkts-arkui-units-edgeoutlinewidths-i.md) \| undefined | 是 | Outline thickness. Percentage values are not supported. &lt;br&gt;Default value: **0**Outline thickness. Percentage values are not supported. &lt;br&gt;Default value: **0**. |
 
 **返回值：**
 
@@ -5453,7 +5453,7 @@ Add mask text to the current component. The layout is the same as that of the cu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| CustomBuilder \| ComponentContent&lt;Object&gt; \| undefined | 是 |  |
+| value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
 | options | [OverlayOptions](arkts-arkui-common-overlayoptions-i.md) | 否 |  |
 
 **返回值：**
@@ -5484,7 +5484,7 @@ Sets the padding of the component.Default value: **0**.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Length \| LocalizedPadding \| undefined | 是 |  |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -5605,7 +5605,7 @@ Sets the absolute position of the component relative to the position of the pare
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| Edges \| LocalizedEdges \| undefined | 是 |  |
+| value | [Position](arkts-arkui-position-i.md) \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -5668,7 +5668,7 @@ Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md) \| undefined | 是 | Radial gradient. &lt;br&gt;- **center**: center of the radial gradient, that is, the coordinates relative to the upper left corner of the current component. &lt;br&gt;- **radius**: radius of the radial gradient. &lt;br&gt; Value range: [0, +∞). &lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is treated as **0**. &lt;br&gt;- colors: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. &lt;br&gt;- **repeating**: whether the colors are repeated. &lt;br&gt; Default value: **false**. |
+| value | [RadialGradientOptions](arkts-arkui-common-radialgradientoptions-i.md) \| undefined | 是 | Radial gradient. &lt;br&gt;- **center**: center of the radial gradient, that is, the coordinates relative to the upper left corner of the current component. &lt;br&gt;- **radius**: radius of the radial gradient. &lt;br&gt; Value range: [0, +∞). &lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is treated as **0**. &lt;br&gt;- colors: array of color stops, each of which consists of a color and its stop position. Invalid colors are automatically skipped. &lt;br&gt;- **repeating**: whether the colors are repeated. &lt;br&gt; Default value: **false**. |
 
 **返回值：**
 
@@ -5758,7 +5758,7 @@ Sets the response region of the current component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;Rectangle&gt; \| Rectangle \| undefined | 是 |  |
+| value | Array&lt;[Rectangle](arkts-arkui-common-rectangle-i.md)&gt; \| [Rectangle](arkts-arkui-common-rectangle-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -5788,7 +5788,7 @@ Sets the response region list of the current component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| regions | Array&lt;ResponseRegion&gt; \| undefined | 是 |  |
+| regions | Array&lt;[ResponseRegion](arkts-arkui-common-responseregion-i.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -5848,7 +5848,7 @@ Reuse id is used for identify the reuse type of each @ComponentV2 custom compone
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ReuseOptions](../arkts-components/arkts-arkui-reuseoptions-i.md) \| undefined | 是 | The configuration parameter for reusable custom component. |
+| options | [ReuseOptions](arkts-arkui-common-reuseoptions-i.md) \| undefined | 是 | The configuration parameter for reusable custom component. |
 
 **返回值：**
 
@@ -5908,7 +5908,7 @@ default rotate(value: RotateOptions | RotateAngleOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RotateOptions](../arkts-components/arkts-arkui-rotateoptions-i.md) \| RotateAngleOptions \| undefined | 是 | 可使组件在以组件左上角为坐标原点的坐标系中进行旋转。其中，(x, y, z）指定一个矢量，作为 旋转轴；或使用(angleX, angleY, angleZ）指定三个轴方向上的旋转角。&lt;br/&gt;默认值：{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0 ,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无旋转效果。 |
+| value | [RotateOptions](arkts-arkui-common-rotateoptions-i.md) \| [RotateAngleOptions](arkts-arkui-common-rotateangleoptions-i.md) \| undefined | 是 | 可使组件在以组件左上角为坐标原点的坐标系中进行旋转。其中，(x, y, z）指定一个矢量，作为 旋转轴；或使用(angleX, angleY, angleZ）指定三个轴方向上的旋转角。&lt;br/&gt;默认值：{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0 ,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无旋转效果。 |
 
 **返回值：**
 
@@ -5938,7 +5938,7 @@ Sets the safe area padding. It enables a container to add a component-level safe
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](arkts-arkui-units-padding-i.md) \| LengthMetrics \| LocalizedPadding \| undefined | 是 | Indicates safeArea padding values |
+| paddingValue | [Padding](arkts-arkui-units-padding-i.md) \| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| [LocalizedPadding](arkts-arkui-localizedpadding-i.md) \| undefined | 是 | Indicates safeArea padding values |
 
 **返回值：**
 
@@ -5998,7 +5998,7 @@ default scale(value: ScaleOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ScaleOptions](../arkts-components/arkts-arkui-scaleoptions-i.md) \| undefined | 是 | 可以分别设置X轴、Y轴、Z轴的缩放比例，默认值为1，同时可以通过centerX和centerY设置缩放的中心点。&lt;br/&gt;默认值：{&lt;br /&gt;x: 1,&lt;br/&gt;y: 1,&lt;br/&gt;z: 1,&lt;br/&gt;centerX:'50%',&lt;br/&gt;centerY:'50%'&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无缩放效果。 |
+| value | [ScaleOptions](arkts-arkui-common-scaleoptions-i.md) \| undefined | 是 | 可以分别设置X轴、Y轴、Z轴的缩放比例，默认值为1，同时可以通过centerX和centerY设置缩放的中心点。&lt;br/&gt;默认值：{&lt;br /&gt;x: 1,&lt;br/&gt;y: 1,&lt;br/&gt;z: 1,&lt;br/&gt;centerX:'50%',&lt;br/&gt;centerY:'50%'&lt;br/&gt;}&lt;br/&gt;当value的值为undefined时，恢复为无缩放效果。 |
 
 **返回值：**
 
@@ -6058,7 +6058,7 @@ Applies a shadow effect to the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle \| undefined | 是 | Shadow of the component. &lt;br&gt;When the value type is **ShadowOptions**, the blur radius, shadow color, and offset along the x-axis and y-axis can be specified. &lt;br&gt;When the value type is **ShadowStyle**, the shadow style can be specified. |
+| value | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-common-shadowstyle-e.md) \| undefined | 是 | Shadow of the component. &lt;br&gt;When the value type is **ShadowOptions**, the blur radius, shadow color, and offset along the x-axis and y-axis can be specified. &lt;br&gt;When the value type is **ShadowStyle**, the shadow style can be specified. |
 
 **返回值：**
 
@@ -6149,7 +6149,7 @@ Provides a callback to set the parallel relationship between gestures of current
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [ShouldRecognizerParallelWithCallback](../arkts-components/arkts-arkui-shouldrecognizerparallelwithcallback-t.md) \| undefined | 是 | A callback instance used when a component is doing touch test. |
+| callback | [ShouldRecognizerParallelWithCallback](arkts-arkui-shouldrecognizerparallelwithcallback-t.md) \| undefined | 是 | A callback instance used when a component is doing touch test. |
 
 **返回值：**
 
@@ -6209,7 +6209,7 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SmartGestureShortcutOptions](../arkts-components/arkts-arkui-smartgestureshortcutoptions-i.md) | 否 | Options for configuring smart gesture shortcuts. |
+| options | [SmartGestureShortcutOptions](arkts-arkui-common-smartgestureshortcutoptions-i.md) | 否 | Options for configuring smart gesture shortcuts. |
 
 **返回值：**
 
@@ -6269,7 +6269,7 @@ Sets styles for component state.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [StateStyles](../arkts-components/arkts-arkui-statestyles-i.md) \| undefined | 是 |  |
+| value | [StateStyles](arkts-arkui-common-statestyles-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -6444,7 +6444,7 @@ Config toolbar for current component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 |  |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -6458,7 +6458,7 @@ Config toolbar for current component.
 default transform(value: Matrix4Transit | undefined): this
 ```
 
-可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#transform3d)接口。
+可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](#transform3D)接口。
 
 **起始版本：** 23
 
@@ -6474,7 +6474,7 @@ default transform(value: Matrix4Transit | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) \| undefined | 是 | 设置当前组件的变换矩阵。&lt;br/&gt;当value的值为undefined时，恢复为单位矩阵的效果。 |
+| value | [Matrix4Transit](arkts-arkui-matrix4transit-t.md) \| undefined | 是 | 设置当前组件的变换矩阵。&lt;br/&gt;当value的值为undefined时，恢复为单位矩阵的效果。 |
 
 **返回值：**
 
@@ -6504,7 +6504,7 @@ default transform3D(transform: Matrix4Transit | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) \| undefined | 是 | 三维变换矩阵。&lt;br/&gt;当transform的值为undefined时，恢复为单位矩阵的效果。 |
+| transform | [Matrix4Transit](arkts-arkui-matrix4transit-t.md) \| undefined | 是 | 三维变换矩阵。&lt;br/&gt;当transform的值为undefined时，恢复为单位矩阵的效果。 |
 
 **返回值：**
 
@@ -6534,7 +6534,7 @@ default transition(value: TransitionEffect | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
+| value | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](arkts-arkui-common-transitioneffect-c.md#TransitionEffect)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
 
 **返回值：**
 
@@ -6564,7 +6564,7 @@ default transition(effect: TransitionEffect | undefined, onFinish: TransitionFin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md/arkts-arkui-transitioneffect-c.md)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
+| effect | [TransitionEffect](arkts-arkui-common-transitioneffect-c.md) \| undefined | 是 | 设置组件插入时显示和删除时隐藏的过渡效果。&lt;br/&gt;**说明：** &lt;br/&gt;详细描述 [TransitionEffect](arkts-arkui-common-transitioneffect-c.md#TransitionEffect)对象说明。&lt;br/&gt;当value的值为undefined时，无过渡效果。 |
 | onFinish | [TransitionFinishCallback](arkts-arkui-transitionfinishcallback-t.md) \| undefined | 是 | 转场动画结束回调。 |
 
 **返回值：**
@@ -6747,7 +6747,7 @@ default visualEffect(effect: VisualEffect | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [VisualEffect](../arkts-components/arkts-arkui-visualeffect-t.md) \| undefined | 是 | 非滤镜视觉效果。&lt;br/&gt;当effect的值为undefined时，无非滤镜视觉效果。 |
+| effect | [VisualEffect](arkts-arkui-visualeffect-t.md) \| undefined | 是 | 非滤镜视觉效果。&lt;br/&gt;当effect的值为undefined时，无非滤镜视觉效果。 |
 
 **返回值：**
 
@@ -6777,7 +6777,7 @@ Sets the width of the component or its horizontal layout policy. By default, the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| widthValue | [Length](arkts-arkui-length-t.md) \| LayoutPolicy \| undefined | 是 |  |
+| widthValue | [Length](arkts-arkui-length-t.md) \| [LayoutPolicy](arkts-arkui-common-layoutpolicy-c.md) \| undefined | 是 |  |
 
 **返回值：**
 

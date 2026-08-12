@@ -1,6 +1,6 @@
 # RemindType (System API)
 
-Specify the remind type, see {@link updateRemindPolicy}.
+Specify the remind type, see [updateRemindPolicy](arkts-network-policy-updateremindpolicy-f-sys.md#updateRemindPolicy).
 
 **Since:** 10
 

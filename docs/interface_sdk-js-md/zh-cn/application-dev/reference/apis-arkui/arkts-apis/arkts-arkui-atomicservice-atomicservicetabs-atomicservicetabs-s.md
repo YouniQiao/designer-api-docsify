@@ -42,7 +42,7 @@ barBackgroundColor?: ResourceColor
 
 设置TabBar的背景颜色，默认值为透明。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -86,7 +86,7 @@ controller?: TabsController
 
 Tabs组件的控制器，用于控制页签切换。默认值为new TabsController()。
 
-**类型：** [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md)
+**类型：** TabsController
 
 **起始版本：** 12
 
@@ -128,7 +128,7 @@ layoutMode?: LayoutMode
 
 设置底部页签的图片、文字排布的方式，默认值为LayoutMode.VERTICAL。
 
-**类型：** [LayoutMode](arkts-arkui-tabcontent-layoutmode-e.md)
+**类型：** LayoutMode
 
 **起始版本：** 18
 
@@ -150,7 +150,7 @@ onChange?: Callback<number>
 
 Tabs页签切换后触发的事件，回调参数为切换后的页签索引，索引值从0开始。当onContentWillChange回调返回false拦截页面切换时，该事件不会被触发。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**类型：** Callback&lt;number&gt;
 
 **起始版本：** 12
 
@@ -170,7 +170,7 @@ onTabBarClick?: Callback<number>
 
 Tabs页签点击后触发的事件，回调参数为被点击页签的索引值，索引值从0开始。默认值为空。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt;
+**类型：** Callback&lt;number&gt;
 
 **起始版本：** 12
 

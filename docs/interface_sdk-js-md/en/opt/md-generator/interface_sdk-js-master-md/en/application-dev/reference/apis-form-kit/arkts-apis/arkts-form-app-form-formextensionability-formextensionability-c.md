@@ -11,7 +11,7 @@ Widget extension class. It provides APIs to notify the widget provider that a wi
 ## Modules to Import
 
 ```TypeScript
-import { FormExtensionAbility } from 'kits/@kit.FormKit';
+import { FormExtensionAbility } from '@kit.FormKit';
 ```
 
 ## onAcquireFormState
@@ -165,7 +165,7 @@ Called to notify the widget provider that the widget visibility status is being 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| newStatus | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | Yes |
+| [newStatus](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-updatesimmessageoptions-i-sys.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | Yes |
 
 ## Examples
 
@@ -435,7 +435,7 @@ onUpdateForm(formId: string, wantParams?: Record<string, Object>): void
 ```
 
 Called to notify the widget provider that a widget is being updated, with update parameters carried. After obtaining the latest data, your application should call   
-[updateForm](arkts-form-formprovider-updateform-f.md#updateform) of **formProvider** to update the widget data.
+[updateForm](arkts-form-formprovider-updateform-f.md#updateForm) of **formProvider** to update the widget data.
 
 **Since:** 9
 
@@ -485,7 +485,7 @@ context: FormExtensionContext
 ```
 
 Context of the FormExtensionAbility. This context is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 This API can be used in atomic services since API version 11.
 

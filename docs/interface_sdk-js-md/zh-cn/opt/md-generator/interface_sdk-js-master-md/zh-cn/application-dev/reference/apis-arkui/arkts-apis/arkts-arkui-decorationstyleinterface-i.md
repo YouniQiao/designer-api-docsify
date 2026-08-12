@@ -46,7 +46,7 @@ style?: TextDecorationStyle
 
 默认值：TextDecorationStyle.SOLID。
 
-**类型：** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
+**类型：** TextDecorationStyle
 
 **起始版本：** 12
 
@@ -94,7 +94,7 @@ type: TextDecorationType
 
 默认值：TextDecorationType.None。
 
-**类型：** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
+**类型：** TextDecorationType
 
 **起始版本：** 12
 

@@ -62,7 +62,7 @@ role?: ButtonRole
 
 Describes the button role.
 
-**Type:** [ButtonRole](../arkts-components/arkts-arkui-buttonrole-e.md)
+**Type:** [ButtonRole](arkts-arkui-button-buttonrole-e.md)
 
 **Default:** ButtonRole.NORMAL
 

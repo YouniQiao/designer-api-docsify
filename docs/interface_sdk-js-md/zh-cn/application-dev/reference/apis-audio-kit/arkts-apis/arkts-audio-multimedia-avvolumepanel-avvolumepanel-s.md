@@ -44,7 +44,7 @@ volumeLevel?: int
 
 如果该值小于当前设备音量的最小值，则视为设置最小音量值。
 
-获取设备的最大值、最小值和当前值，可参考[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)。
+获取设备的最大值、最小值和当前值，可参考[AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md#AudioVolumeGroupManager)。
 
 **类型：** int
 

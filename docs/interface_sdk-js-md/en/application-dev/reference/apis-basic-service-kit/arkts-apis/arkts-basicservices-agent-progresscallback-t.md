@@ -18,5 +18,5 @@ The callback function for the download progress event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Progress](arkts-basicservices-agent-progress-i.md) | Yes | callback function with a `Progress` argument. |
+| progress | Progress | Yes | callback function with a `Progress` argument. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## on('applicationState')
@@ -29,7 +29,7 @@ Registers an observer to listen for lifecycle changes of all applications.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | Application state observer, which is used to listen for applications lifecycle changes. |
+| observer | ApplicationStateObserver | Yes | Application state observer, which is used to listen for applications lifecycle changes. |
 
 **Return value:**
 
@@ -41,9 +41,9 @@ Registers an observer to listen for lifecycle changes of all applications.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -109,7 +109,7 @@ Registers an observer to listen for lifecycle changes of the specified applicati
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationState' | Yes | Type of the API to call. It is fixed at **'applicationState'**. |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | Yes | Application state observer, which is used to listen for application lifecycle changes. |
+| observer | ApplicationStateObserver | Yes | Application state observer, which is used to listen for application lifecycle changes. |
 | bundleNameList | Array&lt;string&gt; | Yes | bundleName** array of the application. A maximum of 128 bundle names can be passed. |
 
 **Return value:**
@@ -122,9 +122,9 @@ Registers an observer to listen for lifecycle changes of the specified applicati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

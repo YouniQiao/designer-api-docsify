@@ -96,7 +96,7 @@ size: Size
 
 创建的图片尺寸，宽高值必须为正整数。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 8
 

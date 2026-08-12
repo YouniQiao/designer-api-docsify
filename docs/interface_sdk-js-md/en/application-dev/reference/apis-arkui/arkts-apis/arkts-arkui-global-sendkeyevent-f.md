@@ -22,7 +22,7 @@ Send key event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | Yes | KeyEvent to be sent. |
+| event | KeyEvent | Yes | KeyEvent to be sent. |
 
 **Return value:**
 

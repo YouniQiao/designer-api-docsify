@@ -2,7 +2,7 @@
 
 Represents boxed boolean value and related operations
 
-**Inheritance/Implementation:** Boolean extends [Object](arkts-arkts-object-c.md) and implements [Comparable<boolean>](Comparable<boolean>)
+**Inheritance/Implementation:** Boolean extends [Object](Object) and implements [Comparable<boolean>](Comparable<boolean>)
 
 **Since:** 24
 

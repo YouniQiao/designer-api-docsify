@@ -18,7 +18,7 @@ The callback of 'keyDown' or 'keyUp' event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | Yes | the key event. |
+| event | KeyEvent | Yes | the key event. |
 
 **Return value:**
 

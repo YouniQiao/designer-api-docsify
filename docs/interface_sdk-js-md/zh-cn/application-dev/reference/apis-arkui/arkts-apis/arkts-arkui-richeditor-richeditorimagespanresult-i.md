@@ -18,7 +18,7 @@ imageStyle: RichEditorImageSpanStyleResult
 
 图片样式。
 
-**类型：** [RichEditorImageSpanStyleResult](../arkts-components/arkts-arkui-richeditorimagespanstyleresult-i.md)
+**类型：** [RichEditorImageSpanStyleResult](arkts-arkui-richeditor-richeditorimagespanstyleresult-i.md)
 
 **起始版本：** 23
 
@@ -61,7 +61,7 @@ spanPosition: RichEditorSpanPosition
 
 Span位置。
 
-**类型：** [RichEditorSpanPosition](../arkts-components/arkts-arkui-richeditorspanposition-i.md)
+**类型：** [RichEditorSpanPosition](arkts-arkui-richeditor-richeditorspanposition-i.md)
 
 **起始版本：** 23
 

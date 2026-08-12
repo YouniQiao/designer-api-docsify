@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager
+**Substitutes:** [geoLocationManager/geoLocationManager](ohos.geoLocationManager/geoLocationManager)
 
 <!--Device-unnamed-export default class Geolocation--><!--Device-unnamed-export default class Geolocation-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from 'kits/@kit.LocationKit';
+import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from '@kit.LocationKit';
 ```
 
 ## getLocation
@@ -32,7 +32,7 @@ Obtains the geographic location.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCurrentLocation
+**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -114,7 +114,7 @@ Listens to the geographical location. If this method is called multiple times, t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:locationChange
+**Substitutes:** [locationChange](ohos.geoLocationManager/geoLocationManager.on#event:locationChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -144,7 +144,7 @@ Cancels listening to the geographical location.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.off#event:locationChange
+**Substitutes:** [locationChange](ohos.geoLocationManager/geoLocationManager.off#event:locationChange)
 
 **Required permissions:** ohos.permission.LOCATION
 

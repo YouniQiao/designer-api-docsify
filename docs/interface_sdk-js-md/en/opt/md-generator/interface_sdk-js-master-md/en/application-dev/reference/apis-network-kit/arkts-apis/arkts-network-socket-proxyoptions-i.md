@@ -11,7 +11,7 @@ Define parameters for the proxy connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address
@@ -22,7 +22,7 @@ address: NetAddress
 
 Proxy server address.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 18
 

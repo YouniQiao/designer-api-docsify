@@ -22,7 +22,7 @@ hoverScale?: AnimationRange<number>
 
 倍率设置参数小于等于0时，不生效。
 
-[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu)场景下，不生效。
+[bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu-1)场景下，不生效。
 
 设置transition接口时，不生效。 
 
@@ -116,7 +116,7 @@ transition?: TransitionEffect
 
 在菜单退出动效过程中，横竖屏切换时，菜单会避让。二级菜单不继承自定义动效。弹出过程中可以点击二级菜单，但在退出动效执行过程中不允许点击二级菜单。
 
-详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md)对象说明。
+详细描述见[TransitionEffect](arkts-arkui-transitioneffect-c.md#TransitionEffect)对象说明。
 
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 

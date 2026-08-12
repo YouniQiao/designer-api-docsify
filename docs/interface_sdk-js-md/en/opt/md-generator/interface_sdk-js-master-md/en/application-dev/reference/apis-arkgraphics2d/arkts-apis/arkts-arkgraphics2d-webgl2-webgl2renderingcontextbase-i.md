@@ -130,7 +130,7 @@ Binds a sampler
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | unit | webgl.GLuint | Yes |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
+| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
 
 ## bindTransformFeedback
 
@@ -242,7 +242,7 @@ Clears bufferfi
 | buffer | webgl.GLenum | Yes |
 | drawbuffer | webgl.GLint | Yes |
 | [depth](#depth) | webgl.GLfloat | Yes |
-| [stencil](#stencil) | webgl.GLint | Yes |
+| [stencil](arkts-arkgraphics2d-webgl-webglcontextattributes-i.md) | webgl.GLint | Yes |
 
 ## clearBufferfv
 
@@ -437,7 +437,7 @@ Compressed texture image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
 | border | webgl.GLint | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -527,7 +527,7 @@ Compressed texture sub image 3D from ArrayBufferView
 | height | webgl.GLsizei | Yes |
 | [depth](#depth) | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | No |
 | srcLengthOverride | webgl.GLuint | No |
 
@@ -733,7 +733,7 @@ Deletes a sampler
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
+| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
 
 ## deleteSync
 
@@ -1013,7 +1013,7 @@ Attaches a texture layer to a framebuffer
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
-| attachment | webgl.GLenum | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | webgl.GLenum | Yes |
 | texture | webgl.WebGLTexture \| null | Yes |
 | level | webgl.GLint | Yes |
 | layer | webgl.GLint | Yes |
@@ -1139,7 +1139,7 @@ Gets buffer sub data
 | --- | --- | --- |
 | target | webgl.GLenum | Yes |
 | srcByteOffset | webgl.GLintptr | Yes |
-| dstBuffer | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| dstBuffer | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | dstOffset | webgl.GLuint | No |
 | length | webgl.GLuint | No |
 
@@ -1309,7 +1309,7 @@ Gets sampler parameter
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
+| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
 | pname | webgl.GLenum | Yes |
 
 **Return value:**
@@ -1539,7 +1539,7 @@ Returns whether a sampler is valid
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
+| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) \| null | Yes |
 
 **Return value:**
 
@@ -1737,7 +1737,7 @@ Sets sampler parameterf
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
+| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
 | pname | webgl.GLenum | Yes |
 | param | webgl.GLfloat | Yes |
 
@@ -1761,7 +1761,7 @@ Sets sampler parameteri
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sampler | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
+| [sampler](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [WebGLSampler](arkts-arkgraphics2d-webgl2-webglsampler-i.md) | Yes |
 | pname | webgl.GLenum | Yes |
 | param | webgl.GLint | Yes |
 
@@ -1889,7 +1889,7 @@ Sets texture image 3D from ArrayBufferView
 | border | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | ArrayBufferView \| null | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage3D
 
@@ -1932,7 +1932,7 @@ Sets texture image 3D from ArrayBufferView with offset
 | border | webgl.GLint | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 | srcOffset | webgl.GLuint | Yes |
 
 ## texStorage2D
@@ -2132,7 +2132,7 @@ Sets texture sub image 3D from ArrayBufferView
 | [depth](#depth) | webgl.GLsizei | Yes |
 | format | webgl.GLenum | Yes |
 | type | webgl.GLenum | Yes |
-| srcData | ArrayBufferView \| null | Yes |
+| srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 | srcOffset | webgl.GLuint | No |
 
 ## transformFeedbackVaryings
@@ -2409,7 +2409,7 @@ Sets uniform block binding
 | --- | --- | --- |
 | program | webgl.WebGLProgram | Yes |
 | uniformBlockIndex | webgl.GLuint | Yes |
-| [uniformBlockBinding](#uniformblockbinding) | webgl.GLuint | Yes |
+| [uniformBlockBinding](arkts-arkgraphics2d-webgl2-webgl2renderingcontextbase-i.md) | webgl.GLuint | Yes |
 
 ## uniformMatrix2x3fv
 

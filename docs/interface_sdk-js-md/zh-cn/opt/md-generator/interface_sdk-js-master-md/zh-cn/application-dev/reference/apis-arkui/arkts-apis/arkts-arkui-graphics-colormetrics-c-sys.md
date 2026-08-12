@@ -14,7 +14,7 @@
 static createHDRColor(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](arkts-arkui-colorspace-e.md)和rgba格式颜色实例化支持HDR的ColorMetrics类。适用于无需调整曝光系数、直接指定HDR颜色分量的场景，如HDR纯色背景绘制、固定HDR色彩配置。
+使用[ColorSpace](ColorSpace)和rgba格式颜色实例化支持HDR的ColorMetrics类。适用于无需调整曝光系数、直接指定HDR颜色分量的场景，如HDR纯色背景绘制、固定HDR色彩配置。
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ static createHDRColor(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 | 类型 |
 | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## createHDRColorWithLinearExposure
 
@@ -49,8 +49,8 @@ static createHDRColorWithLinearExposure(linearExposure: number, colorSpace: Colo
     red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](arkts-arkui-colorspace-e.md)、线性曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。如不需要通过曝光系数调节，可使用  
-[createHDRColor](arkts-arkui-graphics-colormetrics-c-sys.md#createhdrcolor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按线性比例均匀调整HDR亮度的场景，如HDR图像预览、视频播放器色彩调节。
+使用[ColorSpace](ColorSpace)、线性曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。如不需要通过曝光系数调节，可使用  
+[createHDRColor](#createHDRColor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按线性比例均匀调整HDR亮度的场景，如HDR图像预览、视频播放器色彩调节。
 
 **起始版本：** 26.0.0
 
@@ -77,7 +77,7 @@ static createHDRColorWithLinearExposure(linearExposure: number, colorSpace: Colo
 
 | 类型 |
 | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## createHDRColorWithLogExposure
 
@@ -86,9 +86,9 @@ static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
     red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-使用[ColorSpace](arkts-arkui-colorspace-e.md)、对数型曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。与  
-[createHDRColorWithLinearExposure](arkts-arkui-graphics-colormetrics-c-sys.md#createhdrcolorwithlinearexposure)相比，两者均通过曝光系数创建HDR色彩，区别在于本方法使用对数型曝光系数（指数级增加曝光程度），后者使用线性曝光系数（线性增加曝光程度），开发者可根据所需的曝光调节方式选择。如不需要通过曝光系数调节，可使用  
-[createHDRColor](arkts-arkui-graphics-colormetrics-c-sys.md#createhdrcolor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按对数关系调整HDR亮度（更贴近人眼感知）的场景，如HDR照片编辑、影视后期调色。
+使用[ColorSpace](ColorSpace)、对数型曝光系数和rgba格式颜色实例化支持HDR的ColorMetrics类。与  
+[createHDRColorWithLinearExposure](#createHDRColorWithLinearExposure)相比，两者均通过曝光系数创建HDR色彩，区别在于本方法使用对数型曝光系数（指数级增加曝光程度），后者使用线性曝光系数（线性增加曝光程度），开发者可根据所需的曝光调节方式选择。如不需要通过曝光系数调节，可使用  
+[createHDRColor](#createHDRColor)直接设置RGB分量值大于1.0来呈现HDR效果。适用于需要按对数关系调整HDR亮度（更贴近人眼感知）的场景，如HDR照片编辑、影视后期调色。
 
 **起始版本：** 26.0.0
 
@@ -104,7 +104,7 @@ static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| exposure | number | 是 |
+| [exposure](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md) | number | 是 |
 | colorSpace | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 是 |
 | red | number | 是 |
 | green | number | 是 |
@@ -115,7 +115,7 @@ static createHDRColorWithLogExposure(exposure: number, colorSpace: ColorSpace,
 
 | 类型 |
 | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
 ## getBlueValue
 

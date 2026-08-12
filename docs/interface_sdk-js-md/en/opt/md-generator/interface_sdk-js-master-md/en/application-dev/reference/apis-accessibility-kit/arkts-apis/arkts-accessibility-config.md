@@ -13,7 +13,7 @@ The **accessibility.config** module provides APIs for configuring system accessi
 ## Modules to Import
 
 ```TypeScript
-import { config } from 'kits/@kit.AccessibilityKit';
+import { config } from '@kit.AccessibilityKit';
 ```
 
 ## Summary

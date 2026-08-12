@@ -17,7 +17,7 @@ Provides APIs for managing the device's root attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from 'kits/@kit.CoreFileKit';
+import { fileAccess } from '@kit.CoreFileKit';
 ```
 
 ## listFile
@@ -26,7 +26,7 @@ import { fileAccess } from 'kits/@kit.CoreFileKit';
 listFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#FileInfo) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 **Deprecated since:** 23
 
-**Substitutes:** [@ohos.file.fs:fileIo.listFile](arkts-corefile-fileio-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-fileio-listfile-f.md#listFile)
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -135,7 +135,7 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md) is returned by [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions from the device root directory. This API returns the result synchronously. [FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md#FileInfo) is returned by [next](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
 

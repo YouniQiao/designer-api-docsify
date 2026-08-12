@@ -20,7 +20,7 @@ leadingMargin?: LengthMetrics | LeadingMarginPlaceholder
 
 默认值：0
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| LeadingMarginPlaceholder
+**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-richeditor-leadingmarginplaceholder-i.md)
 
 **起始版本：** 23
 
@@ -128,9 +128,9 @@ shaderStyle?: ShaderStyle
 
 设置文本着色器效果。
 
-该接口与[TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md)的strokeWidth同时设置时，该接口不生效。
+该接口与[TextStyleInterface](arkts-arkui-styledstring-textstyleinterface-i.md#TextStyleInterface)的strokeWidth同时设置时，该接口不生效。
 
-**类型：** [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**类型：** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
 
@@ -196,7 +196,7 @@ textDirection?: TextDirection
 
 默认值：TextDirection.DEFAULT
 
-**类型：** [TextDirection](arkts-arkui-textdirection-e.md)
+**类型：** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **起始版本：** 23
 
@@ -240,7 +240,7 @@ textVerticalAlign?: TextVerticalAlign
 
 默认值：TextVerticalAlign.BASELINE
 
-**类型：** [TextVerticalAlign](arkts-arkui-textverticalalign-e.md)
+**类型：** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
 
 **起始版本：** 24
 

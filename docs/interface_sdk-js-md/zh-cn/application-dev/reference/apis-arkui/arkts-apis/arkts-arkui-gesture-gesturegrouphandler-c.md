@@ -2,7 +2,7 @@
 
 手势组处理器对象类型。
 
-**继承/实现关系：** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesturehandler-c.md)
+**继承/实现关系：** GestureGroupHandler extends [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md#GestureHandler)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesturegroupgesturehandleroptions-i.md) | 否 | 手势组处理器配置参数。 |
+| options | [GestureGroupGestureHandlerOptions](arkts-arkui-gesture-gesturegroupgesturehandleroptions-i.md) | 否 | 手势组处理器配置参数。 |
 
 ## onCancel
 
@@ -42,7 +42,7 @@ constructor(options?: GestureGroupGestureHandlerOptions)
 onCancel(event: VoidCallback): this
 ```
 
-设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesturemode-e.md).Sequence）取消后触发回调。
+设置手势组处理器取消回调。顺序组合手势（[GestureMode](arkts-arkui-gesture-gesturemode-e.md#GestureMode).Sequence）取消后触发回调。
 
 **起始版本：** 23
 

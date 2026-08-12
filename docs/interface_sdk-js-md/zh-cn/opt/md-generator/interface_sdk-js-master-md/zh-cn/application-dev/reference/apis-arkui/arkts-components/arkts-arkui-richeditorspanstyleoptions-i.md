@@ -2,9 +2,9 @@
 
 文本样式选项。
 
-继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md)。
+继承自[RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)。
 
-**继承/实现关系：** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
+**继承/实现关系：** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)
 
 **起始版本：** 10
 

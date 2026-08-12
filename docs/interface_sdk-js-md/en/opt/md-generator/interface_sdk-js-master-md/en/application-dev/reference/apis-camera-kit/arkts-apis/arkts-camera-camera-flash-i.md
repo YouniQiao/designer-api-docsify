@@ -1,10 +1,10 @@
 # Flash
 
-**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md).
+**Flash** inherits from [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery).
 
 It provides APIs related to the flash.
 
-**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md)
+**Inheritance/Implementation:** Flash extends [FlashQuery](arkts-camera-camera-flashquery-i.md#FlashQuery)
 
 **Since:** 11
 
@@ -15,7 +15,7 @@ It provides APIs related to the flash.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getFlashMode
@@ -44,7 +44,7 @@ Obtains the flash mode in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## offFlashStateChange
 
@@ -68,7 +68,7 @@ Unsubscribes from flash light status change events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | No |
 
 ## onFlashStateChange
 
@@ -92,7 +92,7 @@ Subscribes to flash light status change events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FlashState&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FlashState](arkts-camera-camera-flashstate-e.md)&gt; | Yes |
 
 ## setFlashMode
 
@@ -104,7 +104,7 @@ Sets a flash mode.
 
 Before the setting, do the following checks:
 
-1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasflash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isflashmodesupported) to check whether the camera device supports the flash mode.
+1. Use [hasFlash](arkts-camera-camera-flashquery-i.md#hasFlash) to check whether the camera device has flash.2. Use [isFlashModeSupported](arkts-camera-camera-flashquery-i.md#isFlashModeSupported) to check whether the camera device supports the flash mode.
 
 **Since:** 11
 
@@ -124,4 +124,4 @@ Before the setting, do the following checks:
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |

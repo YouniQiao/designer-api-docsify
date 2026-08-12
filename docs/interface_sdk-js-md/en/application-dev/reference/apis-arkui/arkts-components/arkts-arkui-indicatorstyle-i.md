@@ -24,7 +24,7 @@ Unit: vp
 
 Value range: [0, +∞)
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0
 
@@ -50,7 +50,7 @@ Color of the indicator and board.
 
 Default value: **#FF007DFF**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -78,7 +78,7 @@ Unit: vp
 
 Value range: [0, +∞)
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 
@@ -106,7 +106,7 @@ Unit: vp
 
 Value range: [0, +∞)
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 8
 
@@ -140,7 +140,7 @@ Value range: [0, +∞)
 
 If this parameter is set to **0**, the tab text width will be used instead.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 0
 

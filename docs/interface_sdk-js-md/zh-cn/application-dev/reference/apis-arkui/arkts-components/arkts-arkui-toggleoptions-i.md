@@ -54,7 +54,7 @@ type: ToggleType
 
 默认值：ToggleType.Switch
 
-**类型：** [ToggleType](../arkts-apis/arkts-arkui-toggle-toggletype-e.md)
+**类型：** [ToggleType](arkts-arkui-toggletype-e.md)
 
 **起始版本：** 8
 

@@ -11,7 +11,7 @@ Provides methods for managing the web cookies.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## clearAllCookies
@@ -34,13 +34,13 @@ Remove all cookies Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clearAllCookies
 
@@ -68,7 +68,7 @@ Remove all cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clearAllCookiesSync
 
@@ -112,13 +112,13 @@ Delete the session cookies Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clearSessionCookie
 
@@ -146,7 +146,7 @@ Delete the session cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## clearSessionCookieSync
 
@@ -191,15 +191,15 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookie
 
@@ -228,15 +228,15 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookie
 
@@ -266,9 +266,9 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookieSync
 
@@ -320,9 +320,9 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## configCookieSync
 
@@ -373,9 +373,9 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## deleteEntireCookie
 
@@ -389,7 +389,7 @@ Remove all cookies.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.web.webview.WebCookieManager#clearAllCookiesSync
+**Substitutes:** [clearAllCookiesSync](#clearAllCookiesSync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -407,7 +407,7 @@ Delete the session cookies.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.web.webview.WebCookieManager#clearSessionCookieSync
+**Substitutes:** [clearSessionCookieSync](#clearSessionCookieSync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -465,7 +465,7 @@ Fetches all stored cookies asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;WebHttpCookie&gt;&gt; |
+| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; |
 
 ## fetchCookie
 
@@ -493,14 +493,14 @@ Gets all cookies for the given URL Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookie
 
@@ -527,14 +527,14 @@ Gets all cookies for the given URL Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookie
 
@@ -563,8 +563,8 @@ Gets all cookies for the given URL Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookie
 
@@ -594,13 +594,13 @@ Gets all cookies for the given URL Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookieSync
 
@@ -639,8 +639,8 @@ Gets all cookies for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## fetchCookieSync
 
@@ -680,7 +680,7 @@ Gets all cookies for the given URL.
 
 | Error Code ID |
 | --- |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## getCookie
 
@@ -694,7 +694,7 @@ Gets all cookies for the given URL.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.web.webview.WebCookieManager#fetchCookieSync
+**Substitutes:** [fetchCookieSync](#fetchCookieSync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -716,8 +716,8 @@ Gets all cookies for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## isCookieAllowed
 
@@ -789,7 +789,7 @@ Set whether the instance should send and accept cookies.By default this is set t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -817,7 +817,7 @@ Set whether the instance should send and accept thirdparty cookies.By default th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## saveCookieAsync
 
@@ -839,13 +839,13 @@ Save the cookies Asynchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## saveCookieAsync
 
@@ -873,7 +873,7 @@ Save the cookies Asynchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## saveCookieSync
 
@@ -906,7 +906,7 @@ Set a single cookie (key-value pair) for the given URL.
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.web.webview.WebCookieManager#configCookieSync
+**Substitutes:** [configCookieSync](#configCookieSync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 
@@ -923,9 +923,9 @@ Set a single cookie (key-value pair) for the given URL.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100005](../errorcode-webview.md#17100005-invalid-cookie-value) |
-| [17100002](../errorcode-webview.md#17100002-incorrect-url-format) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-invalid-cookie-value) |
+| [17100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-incorrect-url-format) |
 
 ## setLazyInitializeWebEngine
 

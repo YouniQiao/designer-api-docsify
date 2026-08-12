@@ -15,7 +15,7 @@ This module provides the capability to manage HyperSnap.
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

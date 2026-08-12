@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getCachedGnssLocationsSize
@@ -18,7 +18,7 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize
+**Substitutes:** [getCachedGnssLocationsSize](ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -59,7 +59,7 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize
+**Substitutes:** [getCachedGnssLocationsSize](ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -71,7 +71,7 @@ Obtain the number of cached GNSS locations reported at a time
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

@@ -6,7 +6,7 @@ Defines the options of GridContainer.
 
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions
+**Substitutes:** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-unnamed-declare interface GridContainerOptions--><!--Device-unnamed-declare interface GridContainerOptions-End-->
 
@@ -26,7 +26,7 @@ Sets the total number of columns in the current layout.
 
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions
+**Substitutes:** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-columns?: number | "auto"--><!--Device-GridContainerOptions-columns?: number | "auto"-End-->
 
@@ -46,7 +46,7 @@ Grid layout column spacing.
 
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions
+**Substitutes:** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-gutter?: number | string--><!--Device-GridContainerOptions-gutter?: number | string-End-->
 
@@ -66,7 +66,7 @@ Spacing on both sides of the grid layout.
 
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions
+**Substitutes:** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-margin?: number | string--><!--Device-GridContainerOptions-margin?: number | string-End-->
 
@@ -86,7 +86,7 @@ Select the device width type.
 
 **Deprecated since:** 9
 
-**Substitutes:** grid_col/GridColOptions
+**Substitutes:** [grid_col/GridColOptions](grid_col/GridColOptions)
 
 <!--Device-GridContainerOptions-sizeType?: SizeType--><!--Device-GridContainerOptions-sizeType?: SizeType-End-->
 

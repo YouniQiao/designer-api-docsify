@@ -2,9 +2,9 @@
 
 Defines the progress bar style options.
 
-Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
-**Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** ProgressStyleOptions extends [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 8
 
@@ -50,7 +50,7 @@ Scale width of the ring-style progress indicator. Percentage values are not supp
 
 Default value: **2.0vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 8
 
@@ -76,7 +76,7 @@ Default value: **4.0vp**
 
 If the value is out of the range, the default value is used.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 8
 

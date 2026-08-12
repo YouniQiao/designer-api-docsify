@@ -13,7 +13,7 @@ Describes a text decoration.
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## color
@@ -44,7 +44,7 @@ decorationStyle?: TextDecorationStyle
 
 Style of the decoration. The default value is **SOLID**.
 
-**Type:** [TextDecorationStyle](../../apis-arkui/arkts-apis/arkts-arkui-enums-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -85,7 +85,7 @@ textDecoration?: TextDecorationType
 
 Type of the decoration. The default value is **NONE**.
 
-**Type:** [TextDecorationType](../../apis-arkui/arkts-apis/arkts-arkui-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

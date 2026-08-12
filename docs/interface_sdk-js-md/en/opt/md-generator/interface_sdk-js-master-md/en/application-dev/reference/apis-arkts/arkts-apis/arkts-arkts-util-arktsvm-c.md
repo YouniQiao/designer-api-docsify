@@ -11,7 +11,7 @@ A class that provides VM maintenance and test capabilities for developers.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## enableLocalHandleDetection
@@ -50,7 +50,7 @@ Get all heap memory information from ArkTS-VMs and the shared heap.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HeapMemoryInfo[]&gt; |
+| Promise&lt;[HeapMemoryInfo](arkts-arkts-util-heapmemoryinfo-i.md)[]&gt; |
 
 ## offVMHeapMemoryPressure
 

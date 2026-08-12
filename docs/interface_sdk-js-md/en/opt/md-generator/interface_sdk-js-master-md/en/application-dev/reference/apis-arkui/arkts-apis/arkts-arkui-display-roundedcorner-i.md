@@ -11,7 +11,7 @@ Describes a single rounded corner on the screen.
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## position
@@ -22,7 +22,7 @@ readonly position: Position
 
 Coordinates of the center point of the rounded corner.
 
-**Type:** [Position](arkts-arkui-display-position-i.md)
+**Type:** Position
 
 **Since:** 23
 

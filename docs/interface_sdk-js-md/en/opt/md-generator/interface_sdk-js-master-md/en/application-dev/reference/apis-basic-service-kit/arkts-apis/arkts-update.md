@@ -52,7 +52,7 @@ This module enables users to quickly troubleshoot, free up storage space, and pr
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

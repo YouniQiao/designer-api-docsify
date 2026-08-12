@@ -6,7 +6,7 @@
 > 
 > - 本Class首批接口从API version 12开始支持。
 > 
-> - 以下API需先使用UIContext中的[getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getcursorcontroller)方法获取CursorController实例，再通过此实例调用对应方法。
+> - 以下API需先使用UIContext中的[getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getCursorController)方法获取CursorController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -87,5 +87,5 @@ setCustomCursor(value: image.PixelMap, focusX?: number, focusY?: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | image.PixelMap | 是 |
-| focusX | number | 否 |
-| focusY | number | 否 |
+| [focusX](../../apis-input-kit/arkts-apis/arkts-input-pointer-customcursor-i.md) | number | 否 |
+| [focusY](../../apis-input-kit/arkts-apis/arkts-input-pointer-customcursor-i.md) | number | 否 |

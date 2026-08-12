@@ -40,7 +40,7 @@ eventType: EventType
 
 事件类型。
 
-**类型：** [EventType](../../apis-arkts/arkts-apis/arkts-arkts-xml-eventtype-e.md)
+**类型：** EventType
 
 **起始版本：** 9
 

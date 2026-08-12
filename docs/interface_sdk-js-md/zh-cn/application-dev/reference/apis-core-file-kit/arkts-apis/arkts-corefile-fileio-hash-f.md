@@ -14,7 +14,7 @@ declare function hash(path: string, algorithm: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.hash:hash](arkts-corefile-fileio-hash-f.md#hash)
+**替代接口：** [hash](arkts-file-hash.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
 
@@ -48,7 +48,7 @@ declare function hash(path: string, algorithm: string, callback: AsyncCallback<s
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.hash:hash](arkts-corefile-fileio-hash-f.md#hash)
+**替代接口：** [hash](arkts-file-hash.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 

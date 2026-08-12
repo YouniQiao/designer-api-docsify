@@ -21,7 +21,7 @@ Authenticates the specified domain account with an authorization token.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Indicates the domain account information for authentication. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Indicates the domain account information for authentication. |
 | token | Uint8Array | Yes | Indicates the authorization token generated when PIN or biometric authentication is successful. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Indicates the callback for notifying the authentication result. |
+| callback | IUserAuthCallback | Yes | Indicates the callback for notifying the authentication result. |
 

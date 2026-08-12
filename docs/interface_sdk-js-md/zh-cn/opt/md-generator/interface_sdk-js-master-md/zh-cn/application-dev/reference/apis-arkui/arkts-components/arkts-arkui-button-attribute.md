@@ -1,8 +1,8 @@
 # Button属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。
+支持[通用事件](common)。
 
 **继承/实现关系：** ButtonAttribute extends [CommonMethod<ButtonAttribute>](CommonMethod<ButtonAttribute>)
 
@@ -19,12 +19,12 @@ buttonStyle(value: ButtonStyleMode)
 ```
 
 设置Button组件的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
 [fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
 
 > **说明：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 11
 
@@ -66,7 +66,7 @@ contentModifier(modifier: ContentModifier<ButtonConfiguration>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;ButtonConfiguration&gt; | 是 |
+| modifier | [ContentModifier](arkts-arkui-contentmodifier-i.md)&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | 是 |
 
 ## controlSize
 
@@ -78,7 +78,7 @@ controlSize(value: ControlSize)
 
 > **说明：**
 > 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 11
 
@@ -192,7 +192,7 @@ fontStyle(value: FontStyle)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 |
+| value | [FontStyle](#fontstyle) | 是 |
 
 ## fontWeight
 
@@ -297,7 +297,7 @@ role(value: ButtonRole)
 ```
 
 设置Button组件的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
 [fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。ERROR角色通常用于删除、清空等危险或警示性操作。
 
 **起始版本：** 12

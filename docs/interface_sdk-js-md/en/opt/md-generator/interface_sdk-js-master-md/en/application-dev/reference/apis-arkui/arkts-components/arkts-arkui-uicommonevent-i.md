@@ -14,7 +14,7 @@ Implements a common event callback. Passing **undefined** as the input parameter
 setOnAppear(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) event.
+Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onAppear) event.
 
 **Since:** 12
 
@@ -30,7 +30,7 @@ Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) eve
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnBlur
 
@@ -38,7 +38,7 @@ Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onappear) eve
 setOnBlur(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
+Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onBlur) event.
 
 **Since:** 12
 
@@ -54,7 +54,7 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnClick
 
@@ -62,7 +62,7 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onblur) event.
 setOnClick(callback: Callback<ClickEvent> | undefined): void
 ```
 
-Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick).
+Set the callback for the [click event](CommonMethod#onClick(event: (event: ClickEvent) => void)).
 
 **Since:** 12
 
@@ -78,7 +78,7 @@ Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick).
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt; \| undefined | Yes |
 
 ## setOnDisappear
 
@@ -86,7 +86,7 @@ Set the callback for the [click event](arkts-arkui-commonmethod-c.md#onclick).
 setOnDisappear(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappear) event.
+Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#onDisAppear) event.
 
 **Since:** 12
 
@@ -102,7 +102,7 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappea
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnFocus
 
@@ -110,7 +110,7 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#ondisappea
 setOnFocus(callback: Callback<void> | undefined): void
 ```
 
-Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event.
+Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onFocus) event.
 
 **Since:** 12
 
@@ -126,7 +126,7 @@ Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes |
 
 ## setOnHover
 
@@ -134,7 +134,7 @@ Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onfocus) event
 setOnHover(callback: HoverCallback | undefined): void
 ```
 
-Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover) event.
+Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onHover) event.
 
 **Since:** 12
 
@@ -158,7 +158,7 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onhover) event
 setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 ```
 
-Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+Sets the callback for the [key event](common).
 
 **Since:** 12
 
@@ -174,7 +174,7 @@ Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-ap
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyEvent&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[KeyEvent](arkts-arkui-keyevent-i.md)&gt; \| undefined | Yes |
 
 ## setOnMouse
 
@@ -182,7 +182,7 @@ Sets the callback for the [key event](../../apis-ability-kit/arkts-apis/arkts-ap
 setOnMouse(callback: Callback<MouseEvent> | undefined): void
 ```
 
-Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event.
+Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onMouse) event.
 
 **Since:** 12
 
@@ -198,7 +198,7 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MouseEvent&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[MouseEvent](arkts-arkui-mouseevent-i.md)&gt; \| undefined | Yes |
 
 ## setOnSizeChange
 
@@ -206,7 +206,7 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onmouse) event
 setOnSizeChange(callback: SizeChangeCallback | undefined): void
 ```
 
-Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizechange) event, which is triggered when the component's size changes.
+Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onSizeChange) event, which is triggered when the component's size changes.
 
 **Since:** 12
 
@@ -230,7 +230,7 @@ Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onsizecha
 setOnTouch(callback: Callback<TouchEvent> | undefined): void
 ```
 
-Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch).
+Sets the callback for the [touch event](CommonMethod#onTouch(event: (event: TouchEvent) => void)).
 
 **Since:** 12
 
@@ -246,7 +246,7 @@ Sets the callback for the [touch event](arkts-arkui-commonmethod-c.md#ontouch).
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;[TouchEvent](arkts-arkui-touchevent-i.md)&gt; \| undefined | Yes |
 
 ## setOnVisibleAreaApproximateChange
 
@@ -255,7 +255,7 @@ setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: Visib
 ```
 
 Sets the callback for the  
-[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onvisibleareachange)visible area change event.
+[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange)visible area change event.
 
 **Since:** 12
 

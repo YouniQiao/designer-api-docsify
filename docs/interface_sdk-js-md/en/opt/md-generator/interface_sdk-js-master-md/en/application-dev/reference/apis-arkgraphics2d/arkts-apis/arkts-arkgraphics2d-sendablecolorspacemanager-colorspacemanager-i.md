@@ -4,7 +4,7 @@ Implements management of color space objects. ColorSpaceManager is a core class 
 
 Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager.
 
-**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md)
+**Inheritance/Implementation:** ColorSpaceManager extends [ISendable](arkts-arkgraphics2d-sendablecolorspacemanager-isendable-t.md#ISendable)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Before calling any of the following APIs, you must use [create()](arkts-arkgraph
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -42,7 +42,7 @@ Obtains the color space type.
 
 | Error Code ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -75,7 +75,7 @@ Obtains the gamma of the color space.
 
 | Error Code ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -102,13 +102,13 @@ Obtains the white point value of the color space. The chromaticity coordinates [
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| collections.Array&lt;number&gt; |
+| collections.Array & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 

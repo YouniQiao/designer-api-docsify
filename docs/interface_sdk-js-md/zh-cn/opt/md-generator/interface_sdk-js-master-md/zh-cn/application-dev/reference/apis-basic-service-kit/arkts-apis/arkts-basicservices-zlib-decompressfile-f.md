@@ -35,10 +35,10 @@ function decompressFile(inFile: string, outFile: string, options: Options, callb
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 
@@ -103,10 +103,10 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 
@@ -167,16 +167,16 @@ function decompressFile(inFile: string, outFile: string, options?: Options): Pro
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 

@@ -15,7 +15,7 @@ Provides APIs for interacting with the cloud sync service.You need to inherit th
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## connectAssetLoader
@@ -158,7 +158,7 @@ Obtains brief application information. This API uses a promise to return the res
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; | Promise used to return bundleName and AppBriefInfo, in KV pairs. |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; | Promise used to return bundleName and AppBriefInfo, in KV pairs. |
 
 ## Examples
 
@@ -210,7 +210,7 @@ Obtains the application database schema information. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;AppSchema&gt;&gt; | Promise used to return the schema information obtained. |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; | Promise used to return the schema information obtained. |
 
 ## Examples
 
@@ -257,7 +257,7 @@ Obtains the server information. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ServiceInfo&gt; | Promise used to return the server information obtained. |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; | Promise used to return the server information obtained. |
 
 ## Examples
 
@@ -318,7 +318,7 @@ Subscribes to data. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;Database&gt;&gt; | Yes | Data to be subscribed to, in KV pairs of the application bundle name and database information. |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes | Data to be subscribed to, in KV pairs of the application bundle name and database information. |
 | expirationTime | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Subscription expiration time, in ms. |
 
 **Return value:**
@@ -379,7 +379,7 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unsubscribeInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;string&gt;&gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
+| unsubscribeInfo | Record&lt;string, Array&lt;string&gt;&gt; | Yes | Data to be unsubscribed from, in an array of KV pairs consisting of the application bundle name and database information. |
 
 **Return value:**
 

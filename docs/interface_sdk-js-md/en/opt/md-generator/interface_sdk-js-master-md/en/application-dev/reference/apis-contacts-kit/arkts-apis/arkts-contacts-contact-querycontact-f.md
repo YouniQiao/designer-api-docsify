@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## queryContact
@@ -18,7 +18,7 @@ Queries a contact based on the specified key. This API uses an asynchronous call
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**Substitutes:** [queryContact](contact.queryContact(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -31,7 +31,7 @@ Queries a contact based on the specified key. This API uses an asynchronous call
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | key | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 ## Examples
 
@@ -70,16 +70,16 @@ Queries a contact based on the specified key. This API uses an asynchronous call
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | key | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -114,7 +114,7 @@ Queries a contact based on the specified key and holder. This API uses an asynch
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**Substitutes:** [queryContact](contact.queryContact(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -128,7 +128,7 @@ Queries a contact based on the specified key and holder. This API uses an asynch
 | --- | --- | --- |
 | key | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 ## Examples
 
@@ -171,17 +171,17 @@ Queries a contact based on the specified key and holder. This API uses an asynch
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | key | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -220,7 +220,7 @@ Queries a contact based on the specified key and attributes. This API uses an as
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**Substitutes:** [queryContact](contact.queryContact(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -234,7 +234,7 @@ Queries a contact based on the specified key and attributes. This API uses an as
 | --- | --- | --- |
 | key | string | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 ## Examples
 
@@ -275,17 +275,17 @@ Queries a contact based on the specified key and attributes. This API uses an as
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | key | string | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -322,7 +322,7 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**Substitutes:** [queryContact](contact.queryContact(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -337,7 +337,7 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 | key | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 ## Examples
 
@@ -382,18 +382,18 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | key | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | Yes |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Contact&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -434,7 +434,7 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.queryContact](arkts-contacts-contact-querycontact-f.md#querycontact)(context:
+**Substitutes:** [queryContact](contact.queryContact(context:)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -454,7 +454,7 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Contact&gt; |
+| Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; |
 
 ## Examples
 
@@ -495,7 +495,7 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes |
+| context | [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) | Yes |
 | key | string | Yes |
 | holder | [Holder](arkts-contacts-contact-holder-c.md) | No |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | No |
@@ -504,14 +504,14 @@ Queries a contact based on the specified key, holder, and attributes. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Contact&gt; |
+| Promise&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

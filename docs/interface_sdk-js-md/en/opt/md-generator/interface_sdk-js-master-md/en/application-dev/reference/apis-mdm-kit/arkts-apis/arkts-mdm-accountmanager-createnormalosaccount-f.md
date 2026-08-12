@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from 'kits/@kit.MDMKit';
+import { accountManager } from '@kit.MDMKit';
 ```
 
 ## createNormalOsAccount
@@ -13,7 +13,7 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 ```
 
 Creates a normal system account. A maximum of two normal system accounts (  
-[osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md/arkts-basicservices-osaccount-osaccounttype-e.md)) can be created.
+[osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) can be created.
 
 > **NOTE：**
 > 
@@ -44,20 +44,20 @@ Creates a normal system account. A maximum of two normal system accounts (
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;osAccount.OsAccountInfo&gt; |
+| Promise & lt;osAccount.OsAccountInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [9201003](../errorcode-enterpriseDeviceManager.md#9201003-failed-to-add-an-account) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [9201040](../errorcode-enterpriseDeviceManager.md#9201040-system-account-count-has-reached-the-upper-limit) |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [9201003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201003-failed-to-add-an-account) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [9201040](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201040-system-account-count-has-reached-the-upper-limit) |
+| [204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

@@ -13,7 +13,7 @@ Options for creating an image or video asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## cameraShotKey
@@ -42,7 +42,7 @@ subtype?: PhotoSubtype
 
 Subtype of the image or video.
 
-**Type:** [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md)
+**Type:** PhotoSubtype
 
 **Since:** 10
 

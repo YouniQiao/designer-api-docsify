@@ -15,7 +15,7 @@ Object used for store least recently used sendable Object.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## clear
@@ -112,7 +112,7 @@ Returns an iterable of key-value pairs for each element in the SendableLruCache.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | A new iterable iterator object. |
+| IterableIterator&lt;[K, V]&gt; | A new iterable iterator object. |
 
 ## get
 

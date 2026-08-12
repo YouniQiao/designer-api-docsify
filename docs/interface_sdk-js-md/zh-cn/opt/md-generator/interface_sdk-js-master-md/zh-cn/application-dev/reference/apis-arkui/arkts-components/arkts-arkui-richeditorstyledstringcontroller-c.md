@@ -1,12 +1,12 @@
 # RichEditorStyledStringController
 
-使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
+使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)。
 
 ## 导入对象
 
 ```ts controller: RichEditorStyledStringController = new RichEditorStyledStringController();```
 
-**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md) implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md/arkts-arkui-styledstringcontroller-i.md)
+**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController) implements [StyledStringController](../arkts-apis/arkts-arkui-styledstringcontroller-i.md#StyledStringController)
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ getStyledString(): MutableStyledString
 onContentChanged(listener: StyledStringChangedListener): void
 ```
 
-注册文本内容变化回调，该回调仅在后端程序导致文本内容变更时触发，调用[setStyledString](arkts-arkui-richeditorstyledstringcontroller-c.md#setstyledstring)时不会触发。
+注册文本内容变化回调，该回调仅在后端程序导致文本内容变更时触发，调用[setStyledString](#setStyledString)时不会触发。
 
 **起始版本：** 12
 

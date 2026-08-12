@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## stopBluetoothDiscovery
@@ -18,7 +18,7 @@ Stops Bluetooth device scanning.On API 10 and above, the permission required by 
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection#stopBluetoothDiscovery
+**Substitutes:** [stopBluetoothDiscovery](ohos.bluetooth.connection/connection#stopBluetoothDiscovery)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -32,8 +32,8 @@ Stops Bluetooth device scanning.On API 10 and above, the permission required by 
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |

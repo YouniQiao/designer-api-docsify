@@ -2,9 +2,9 @@
 
 frameNode中[getEvent('WaterFlow')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventwaterflow19)方法的返回值，可用于给WaterFlow节点设置滚动事件。
 
-UIWaterFlowEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。
+UIWaterFlowEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。
 
-**继承/实现关系：** UIWaterFlowEvent extends [UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)
+**继承/实现关系：** UIWaterFlowEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnWaterFlowScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](onScrollIndex)事件的回调。
+设置[onScrollIndex](arkts-arkui-waterflow-waterflowattribute-i.md#onScrollIndex)事件的回调。
 
 方法入参为undefined时，会重置事件回调。
 
@@ -64,7 +64,7 @@ setOnScrollIndex(callback: OnWaterFlowScrollIndexCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnWaterFlowScrollIndexCallback](../arkts-components/arkts-arkui-onwaterflowscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。 |
+| callback | [OnWaterFlowScrollIndexCallback](arkts-arkui-onwaterflowscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。 |
 
 ## setOnWillScroll
 

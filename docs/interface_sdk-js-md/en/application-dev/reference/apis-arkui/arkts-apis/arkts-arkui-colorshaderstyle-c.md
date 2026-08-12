@@ -1,8 +1,8 @@
 # ColorShaderStyle
 
-Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md).
+Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle).
 
-**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md)
+**Inheritance/Implementation:** ColorShaderStyle extends [ShaderStyle](arkts-arkui-shaderstyle-c.md#ShaderStyle)
 
 **Since:** 20
 
@@ -36,7 +36,7 @@ A constructor used to create a **ResourceColor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | Options for displaying a solid color. |
+| color | ResourceColor | Yes | Options for displaying a solid color. |
 
 ## color
 
@@ -46,7 +46,7 @@ color: ResourceColor
 
 Options for displaying a solid color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 20
 

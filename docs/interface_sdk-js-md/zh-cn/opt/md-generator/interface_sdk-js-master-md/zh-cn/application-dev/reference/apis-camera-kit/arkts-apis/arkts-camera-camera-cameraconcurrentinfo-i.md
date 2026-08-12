@@ -34,7 +34,7 @@ readonly modes: Array<SceneMode>
 
 相机支持的模式。
 
-**类型：** Array&lt;SceneMode&gt;
+**类型：** Array&lt;[SceneMode](arkts-camera-camera-scenemode-e.md)&gt;
 
 **起始版本：** 18
 
@@ -52,7 +52,7 @@ readonly outputCapabilities: Array<CameraOutputCapability>
 
 相机对应模式的输出能力集。
 
-**类型：** Array&lt;CameraOutputCapability&gt;
+**类型：** Array&lt;[CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md)&gt;
 
 **起始版本：** 18
 

@@ -6,7 +6,7 @@ Provides util functions.
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.I18NUtil](arkts-localization-i18n-i18nutil-c.md)
+**Substitutes:** [I18NUtil](arkts-localization-i18n-i18nutil-c.md#I18NUtil)
 
 <!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
@@ -15,7 +15,7 @@ Provides util functions.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## unitConvert
@@ -30,7 +30,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Deprecated since:** 9
 
-**Substitutes:** [i18n.I18NUtil.unitConvert](arkts-localization-i18n-i18nutil-c.md#unitconvert)
+**Substitutes:** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitConvert)
 
 <!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 

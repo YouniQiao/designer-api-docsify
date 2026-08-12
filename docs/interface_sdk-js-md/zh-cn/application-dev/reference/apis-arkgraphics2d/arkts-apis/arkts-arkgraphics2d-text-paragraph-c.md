@@ -2,7 +2,7 @@
 
 保存文本内容及样式的载体，支持排版与绘制操作。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -50,8 +50,8 @@ forceReuseRasterResult(isForce: boolean): void
 
 设置是否强制复用光栅化结果。不调用此接口时，系统默认允许更新光栅化结果。
 
-适用于文本内容未发生变化但需要多次调用[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
-[paint](arkts-arkgraphics2d-text-paragraph-c.md#paint)绘制时生效。
+适用于文本内容未发生变化但需要多次调用[paint](#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
+[paint](#paint)绘制时生效。
 
 **起始版本：** 26.0.0
 
@@ -202,14 +202,14 @@ getActualTextRange(lineNumber: int, includeSpaces: boolean): Range
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要获取文本范围的行索引，行索引从0开始。该接口只能获取已有行的边界，即输入行索引从0开始。最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)接口获取。 |
+| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要获取文本范围的行索引，行索引从0开始。该接口只能获取已有行的边界，即输入行索引从0开始。最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getLineCount)接口获取。 |
 | includeSpaces | boolean | 是 | 表示是否应包含空白字符。true表示包含空白字符，false表示不包含空白字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
+| Range | 返回对应行数的实际文本范围。如果行索引非法，返回的start和end均为0。 |
 
 ## 示例
 
@@ -291,13 +291,13 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding: drawing.TextEnc
 
 | 类型 | 说明 |
 | --- | --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字符位置信息。 |
+| PositionWithAffinity | 字符位置信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## 示例
 
@@ -398,7 +398,7 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| glyphRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 字形范围。 |
+| glyphRange | Range | 是 | 字形范围。 |
 | encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的字符范围表示字节范围。对于UTF-16编码，返回的字符范 围表示UTF-16编码单元范围。 |
 
 **返回值：**
@@ -411,7 +411,7 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## 示例
 
@@ -521,7 +521,7 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity
 
 | 类型 | 说明 |
 | --- | --- |
-| [PositionWithAffinity](../../apis-arkui/arkts-apis/arkts-arkui-positionwithaffinity-i.md) | 字形位置信息。 |
+| PositionWithAffinity | 字形位置信息。 |
 
 ## 示例
 
@@ -553,7 +553,7 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| characterRange | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 字符范围。 |
+| characterRange | Range | 是 | 字符范围。 |
 | encoding | drawing.TextEncoding | 是 | 文本编码类型。目前仅支持UTF-8和UTF-16编码类型。对于UTF-8编码，返回的实际字符范围表示字节范围。对于UTF-16编码，返回的实 际字符范围表示UTF-16编码单元范围。 |
 
 **返回值：**
@@ -566,7 +566,7 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## 示例
 
@@ -777,7 +777,7 @@ getLineHeight(line: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~[getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)-1。 |
+| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~[getLineCount](#getLineCount)-1。 |
 
 **返回值：**
 
@@ -849,13 +849,13 @@ getLineMetrics(lineNumber: int): LineMetrics | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)接口获取。 |
+| lineNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要查询度量信息的行的编号，行号从0开始，最大行索引为文本行数量-1，文本行数量可通过 [getLineCount](#getLineCount)接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LineMetrics](../../apis-arkui/arkts-apis/arkts-arkui-linemetrics-t.md) | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
+| LineMetrics | 如果指定的行号有效且度量信息存在，则返回一个包含该行度量数据的LineMetrics对象；如果行号无效或无法获取度量信息，则返回undefined。 |
 
 ## 示例
 
@@ -891,7 +891,7 @@ getLineWidth(line: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~[getLineCount](arkts-arkgraphics2d-text-paragraph-c.md#getlinecount)-1。 |
+| line | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文本行索引，整数，范围为0~[getLineCount](#getLineCount)-1。 |
 
 **返回值：**
 
@@ -1109,7 +1109,7 @@ getParagraphStyle(): ParagraphStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 段落的样式配置。 &lt;br&gt;其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
+| ParagraphStyle | 段落的样式配置。 &lt;br&gt;其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
 
 ## 示例
 
@@ -1353,9 +1353,9 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 是 | 需要获取的区域的文本区间。 |
-| widthStyle | [RectWidthStyle](arkts-arkgraphics2d-text-rectwidthstyle-e.md) | 是 | 返回的矩形区域的宽度的规格。 |
-| heightStyle | [RectHeightStyle](arkts-arkgraphics2d-text-rectheightstyle-e.md) | 是 | 返回的矩形区域的高度的规格。 |
+| range | Range | 是 | 需要获取的区域的文本区间。 |
+| widthStyle | RectWidthStyle | 是 | 返回的矩形区域的宽度的规格。 |
+| heightStyle | RectHeightStyle | 是 | 返回的矩形区域的高度的规格。 |
 
 **返回值：**
 
@@ -1491,7 +1491,7 @@ getTextLines(): Array<TextLine>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;TextLine&gt; | 文本行载体数组。 |
+| Array&lt;[TextLine](arkts-arkgraphics2d-text-textline-c.md)&gt; | 文本行载体数组。 |
 
 ## 示例
 
@@ -1505,8 +1505,8 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)的maxLines属性）截断或省略号模式（  
-[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md)）替换而未显示的文本。
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)的maxLines属性）截断或省略号模式（  
+[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)）替换而未显示的文本。
 
 **说明：**
 
@@ -1642,7 +1642,7 @@ getWordBoundary(offset: int): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 单词的索引区间。 |
+| Range | 单词的索引区间。 |
 
 ## 示例
 
@@ -1690,7 +1690,7 @@ layout(width: double): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -1936,7 +1936,7 @@ ArkTS-Sta:
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
-在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout)接口进行排版，否则无法正确显示文本内容。
+在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()](#layout)接口进行排版，否则无法正确显示文本内容。
 
 **起始版本：** 12
 
@@ -1978,7 +1978,7 @@ ArkTS-Sta:
 paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: double, vOffset: double): void
 ```
 
-在画布上沿路径绘制文本。调用前必须先调用[layout()](arkts-arkgraphics2d-text-paragraph-c.md#layout)接口进行排版，否则无法正确显示文本内容。
+在画布上沿路径绘制文本。调用前必须先调用[layout()](#layout)接口进行排版，否则无法正确显示文本内容。
 
 **起始版本：** 12
 

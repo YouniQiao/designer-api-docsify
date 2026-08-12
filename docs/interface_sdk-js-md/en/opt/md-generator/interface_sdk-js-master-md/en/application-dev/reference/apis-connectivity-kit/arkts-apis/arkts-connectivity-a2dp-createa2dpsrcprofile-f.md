@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from 'kits/@kit.ConnectivityKit';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## createA2dpSrcProfile
@@ -30,5 +30,5 @@ create the instance of a2dp profile.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |

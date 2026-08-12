@@ -24,4 +24,4 @@ type SettingsChangeEvent = (settingItem: SettingItem) => Promise<SettingItem>
 
 | 类型 |
 | --- |
-| Promise&lt;SettingItem&gt; |
+| Promise&lt;[SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md)&gt; |

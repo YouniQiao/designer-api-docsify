@@ -11,7 +11,7 @@ The **Zip** module provides APIs for file compression and decompression.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

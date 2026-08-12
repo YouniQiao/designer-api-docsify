@@ -2,7 +2,7 @@
 
 The &lt;web&gt; component is a container for displaying web page content.
 
-**Inheritance/Implementation:** WebElement extends [Element](arkts-arkui-viewmodel-element-i.md)
+**Inheritance/Implementation:** WebElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
 
 **Since:** 6
 

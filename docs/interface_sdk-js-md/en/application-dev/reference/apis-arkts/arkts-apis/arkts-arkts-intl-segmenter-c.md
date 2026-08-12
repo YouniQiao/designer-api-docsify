@@ -32,7 +32,7 @@ Creates a new Segmenter.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| BCP47LanguageTag[] | No | the locales. |
+| locales | BCP47LanguageTag \| BCP47LanguageTag[] | No | the locales. |
 | options | [SegmenterOptions](arkts-arkts-intl-segmenteroptions-i.md) | No | the options. |
 
 ## resolvedOptions
@@ -112,12 +112,12 @@ Returns supported locales.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| BCP47LanguageTag[] | Yes | the locales. |
+| locales | BCP47LanguageTag \| BCP47LanguageTag[] | Yes | the locales. |
 | options | [PickLocaleMatchSegmenterOptions](arkts-arkts-intl-picklocalematchsegmenteroptions-i.md) | No | the options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)[] | supported locales. |
+| BCP47LanguageTag[] | supported locales. |
 

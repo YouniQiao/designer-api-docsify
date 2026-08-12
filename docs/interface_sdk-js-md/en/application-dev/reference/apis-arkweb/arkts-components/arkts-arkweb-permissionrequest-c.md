@@ -62,7 +62,7 @@ getAccessibleResource(): Array<string>
 ```
 
 Obtains the list of accessible resources requested for the web page. For details about the resource types, see  
-[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md).
+[ProtectedResourceType](arkts-arkweb-protectedresourcetype-e.md#ProtectedResourceType).
 
 **Since:** 9
 

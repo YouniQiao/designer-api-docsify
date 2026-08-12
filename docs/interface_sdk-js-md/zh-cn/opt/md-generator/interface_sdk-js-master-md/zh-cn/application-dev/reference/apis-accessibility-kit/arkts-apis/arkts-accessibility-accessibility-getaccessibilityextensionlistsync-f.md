@@ -25,14 +25,14 @@ function getAccessibilityExtensionListSync(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| abilityType | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 |
-| stateType | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 |
+| [abilityType](../../apis-ability-kit/arkts-apis/arkts-ability-abilitystatedata-c.md) | [AbilityType](arkts-accessibility-accessibility-abilitytype-t.md) | 是 |
+| [stateType](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-bundlestate-bundleactivestate-i.md) | [AbilityState](arkts-accessibility-accessibility-abilitystate-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;AccessibilityAbilityInfo&gt; |
+| Array&lt;[AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md)&gt; |
 
 ## 示例
 

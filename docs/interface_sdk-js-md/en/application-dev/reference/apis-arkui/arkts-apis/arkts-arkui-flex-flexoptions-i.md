@@ -106,7 +106,7 @@ space?: FlexSpaceOptions
 
 Spacing between child components along the main axis or cross axis of the Flex component.
 
-**Type:** [FlexSpaceOptions](../arkts-components/arkts-arkui-flexspaceoptions-i.md)
+**Type:** [FlexSpaceOptions](arkts-arkui-flex-flexspaceoptions-i.md)
 
 **Default:** {main: LengthMetrics.px(0), cross: LengthMetrics.px(0)}
 

@@ -13,7 +13,7 @@ Navigation info.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## navigationId
@@ -44,7 +44,7 @@ pathStack: NavPathStack
 
 Navigation path stack.
 
-**Type:** [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md)
+**Type:** NavPathStack
 
 **Since:** 23
 

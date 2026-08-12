@@ -1,6 +1,6 @@
 # WebCustomScheme
 
-Defines the configuration of web custom scheme, related to {@link customizeSchemes} method.
+Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-arkweb-webview-webviewcontroller-c.md#customizeSchemes) method.
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Defines the configuration of web custom scheme, related to {@link customizeSchem
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## isCodeCacheSupported

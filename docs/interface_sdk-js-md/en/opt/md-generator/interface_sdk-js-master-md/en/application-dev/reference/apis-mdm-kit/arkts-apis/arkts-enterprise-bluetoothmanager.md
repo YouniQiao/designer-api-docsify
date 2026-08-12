@@ -8,7 +8,7 @@ This module provides device Bluetooth management capabilities, including setting
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 > 
 > The global restriction policies are provided by **restrictions**. To disable Bluetooth globally, see
-> [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md).
+> [@ohos.enterprise.restrictions](arkts-enterprise-restrictions.md#restrictions).
 
 **Since:** 12
 
@@ -21,7 +21,7 @@ This module provides device Bluetooth management capabilities, including setting
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.MDMKit';
+import { bluetoothManager } from '@kit.MDMKit';
 ```
 
 ## Summary

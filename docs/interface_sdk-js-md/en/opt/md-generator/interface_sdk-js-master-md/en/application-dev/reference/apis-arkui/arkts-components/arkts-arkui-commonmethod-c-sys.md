@@ -15,7 +15,7 @@ advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
 Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with   
-[blendMode](arkts-arkui-commonmethod-c.md#blendmode).
+[blendMode](arkts-arkui-commonmethod-c.md#blendMode).
 
 **Since:** 13
 
@@ -34,7 +34,7 @@ Defines how the component's content (including the content of it child component
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | Yes |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e-sys.md) | No |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No |
 
 **Return value:**
 
@@ -99,7 +99,7 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
 Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the   
-[renderGroup](arkts-arkui-commonmethod-c.md#rendergroup) attribute of the ancestor component. 
+[renderGroup](arkts-arkui-commonmethod-c.md#renderGroup) attribute of the ancestor component. 
 
 Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting   
 **excludeFromRenderGroup** helps optimize the drawing performance.
@@ -115,7 +115,7 @@ If this attribute is not set, the current component and its children are not rem
 > [scale](arkts-arkui-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries
 > because the current component has attributes such as
 > [shadow](arkts-arkui-commonmethod-c.md#shadow) and
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect), the displayed
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelStretchEffect), the displayed
 > content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
 
 **Since:** 22

@@ -10,6 +10,30 @@ Navigation configuration options.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## clearContentStackOnPrimaryNavigation
+
+```TypeScript
+clearContentStackOnPrimaryNavigation?: boolean
+```
+
+Whether to clear the content stack when navigation is triggered from the primary side.
+
+In Navigation split mode, when enabled, navigaiton triggered from the primary side clears old NavDestination after the Primary/Home node while preserving all NavDestinations created by the current operation.
+
+**Type:** boolean
+
+**Default:** false
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-NavigationConfiguration-clearContentStackOnPrimaryNavigation?: boolean--><!--Device-NavigationConfiguration-clearContentStackOnPrimaryNavigation?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## recyclePagesOnLowMemory
 
 ```TypeScript

@@ -94,7 +94,7 @@ function off(eventId: long, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 事件ID，由开发者定义，用于辨别事件。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
 
 ## 示例
 
@@ -151,7 +151,7 @@ function off(eventId: string, callback: Callback<EventData>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;EventData&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
 
 ## 示例
 
@@ -194,7 +194,7 @@ function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventId | string | 是 | 事件ID。 不可为空字符串，大小不超过10240字节，超出部分会被截断。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;GenericEventData&lt;T&gt;&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[GenericEventData](arkts-basicservices-emitter-genericeventdata-i.md)&lt;T&gt;&gt; | 是 | 回调函数，指定要取消订阅的事件处理函数，需与订阅时使用的 callback一致。 |
 
 ## 示例
 

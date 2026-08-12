@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligence } from 'kits/@kit.ArkData';
+import { intelligence } from '@kit.ArkData';
 ```
 
 ## getSupportedCloudModel
@@ -28,5 +28,5 @@ Obtains the supported cloud embedding models.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;CloudModelInfo&gt;&gt; | The promise returned by the function. |
+| Promise&lt;Array&lt;[CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)&gt;&gt; | The promise returned by the function. |
 

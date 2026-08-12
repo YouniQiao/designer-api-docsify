@@ -1,25 +1,25 @@
 # Poly1305ParamsSpec
 
-加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数，需要nonce、AAD和认证标签。它是  
-[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)的子类，用于在对称加解密时作为  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法的参数。
+加解密参数[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)的子类，封装使用ChaCha20-Poly1305 AEAD模式进行加密或解密的参数，需要nonce、AAD和认证标签。它是  
+[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)的子类，用于在对称加解密时作为  
+[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3)方法的参数。
 
 &lt;br&gt;适用于[ChaCha20-Poly1305](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md#chacha20)。
 
 > **说明：**
 > 
-> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法前需要
-> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)）。
+> 传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3)方法前需要
+> 指定其algName属性（来源于父类[ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)）。
 > 
 > 在ChaCha20-Poly1305加密时，需从
-> [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinal)或
-> [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#dofinalsync)输出的
-> [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)末尾提取16字节，作为解密时
-> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)或
-> [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initsync)方法的参数
-> [Poly1305ParamsSpec](arkts-cryptoarchitecture-cryptoframework-poly1305paramsspec-i.md)中的authTag。
+> [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal)或
+> [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinalSync-1)输出的
+> [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md#DataBlob)末尾提取16字节，作为解密时
+> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3)或
+> [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initSync)方法的参数
+> [Poly1305ParamsSpec](#Poly1305ParamsSpec)中的authTag。
 
-**继承/实现关系：** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md)
+**继承/实现关系：** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)
 
 **起始版本：** 22
 
@@ -37,7 +37,7 @@ aad: DataBlob
 
 指明加解密参数aad。
 
-**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
+**类型：** DataBlob
 
 **起始版本：** 22
 
@@ -57,7 +57,7 @@ authTag: DataBlob
 
 指定加解密参数authTag，长度为16字节。
 
-**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
+**类型：** DataBlob
 
 **起始版本：** 22
 
@@ -77,7 +77,7 @@ iv: DataBlob
 
 Nonce（通过iv字段传入），长度为12字节。
 
-**类型：** [DataBlob](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-datablob-i.md)
+**类型：** DataBlob
 
 **起始版本：** 22
 

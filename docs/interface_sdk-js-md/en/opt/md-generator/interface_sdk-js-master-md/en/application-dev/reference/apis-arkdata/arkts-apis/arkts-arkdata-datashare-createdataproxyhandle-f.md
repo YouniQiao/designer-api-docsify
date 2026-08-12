@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## createDataProxyHandle
@@ -26,13 +26,13 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;DataProxyHandle&gt; |
+| Promise&lt;[DataProxyHandle](arkts-arkdata-datashare-dataproxyhandle-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15700000](../errorcode-datashare.md#15700000-internal-error) |
+| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 

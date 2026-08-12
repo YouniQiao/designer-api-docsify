@@ -2,7 +2,7 @@
 
 Represents an error that occurs when exception is thrown and not caught
 
-**Inheritance/Implementation:** UncaughtExceptionError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** UncaughtExceptionError extends [Error](Error)
 
 **Since:** 26.0.0
 

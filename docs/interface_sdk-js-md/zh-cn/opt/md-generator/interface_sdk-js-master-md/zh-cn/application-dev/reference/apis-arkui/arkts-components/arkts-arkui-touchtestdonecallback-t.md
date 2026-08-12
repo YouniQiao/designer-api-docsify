@@ -21,4 +21,4 @@ declare type TouchTestDoneCallback = (event: BaseGestureEvent, recognizers: Arra
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | [BaseGestureEvent](../arkts-apis/arkts-arkui-basegestureevent-i.md) | 是 |
-| recognizers | Array&lt;GestureRecognizer&gt; | 是 |
+| recognizers | Array&lt;[GestureRecognizer](../arkts-apis/arkts-arkui-gesturerecognizer-c.md)&gt; | 是 |

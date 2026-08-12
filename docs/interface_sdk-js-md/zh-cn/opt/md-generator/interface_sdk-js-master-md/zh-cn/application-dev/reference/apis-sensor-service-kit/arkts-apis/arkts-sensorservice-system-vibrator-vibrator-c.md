@@ -4,7 +4,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.vibrator/vibrator
+**替代接口：** [vibrator/vibrator](ohos.vibrator/vibrator)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -23,14 +23,14 @@ static vibrate(options?: VibrateOptions): void
 > **说明：**
 > 
 > 除Lite Wearable外，从API version 8开始，建议使用
-> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 > 替代。
 
 **起始版本：** 3
 
 **废弃版本：** 8
 
-**替代接口：** [@ohos.vibrator:vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](@ohos.vibrator:vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 

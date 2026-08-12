@@ -1,6 +1,6 @@
 # RenderMode
 
-Defines the web render mode, related to {@link RenderMode}.
+Defines the web render mode, related to [RenderMode](#RenderMode).
 
 **起始版本：** 12
 

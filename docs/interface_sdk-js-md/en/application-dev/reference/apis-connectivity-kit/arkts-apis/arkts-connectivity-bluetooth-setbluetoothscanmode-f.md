@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## setBluetoothScanMode
@@ -20,7 +20,7 @@ Sets the Bluetooth scan mode for a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.setBluetoothScanMode
+**Substitutes:** [setBluetoothScanMode](ohos.bluetoothManager/bluetoothManager.setBluetoothScanMode)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -32,7 +32,7 @@ Sets the Bluetooth scan mode for a device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md) | Yes | Indicates the Bluetooth scan mode to set, {@link ScanMode}. |
+| mode | ScanMode | Yes | Indicates the Bluetooth scan mode to set, [ScanMode](arkts-connectivity-bluetooth-scanmode-e.md#ScanMode). |
 | duration | number | Yes | Indicates the duration in seconds, in which the host is discoverable. |
 
 **Return value:**

@@ -26,7 +26,7 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | phoneNumber | string | 是 | 联系人的电话号码。 |
 | minDuration | int | 是 | 最短通话时长，单位为秒，取值范围大于0。 |
 
@@ -40,9 +40,9 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 
@@ -90,7 +90,7 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | phoneNumber | string | 是 | 联系人的电话号码。 |
 | minDuration | int | 是 | 最短通话时长，单位为秒，取值范围大于0。 |
 | withinTime | int | 是 | 表示从当前时间开始计算，通话的起始时间和结束时间应在此时间范围内，单位为秒。最多可设置6小时，超过6小时的默认以6小时查询。 |
@@ -105,9 +105,9 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 

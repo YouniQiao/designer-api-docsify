@@ -39,15 +39,15 @@ beginAxis(axis: Axis, value: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -114,15 +114,15 @@ endAxis(axis: Axis): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -158,15 +158,15 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-显示器不存在) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -225,15 +225,15 @@ pressButton(button: Button): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -296,15 +296,15 @@ releaseButton(button: Button): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -339,15 +339,15 @@ updateAxis(axis: Axis, value: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

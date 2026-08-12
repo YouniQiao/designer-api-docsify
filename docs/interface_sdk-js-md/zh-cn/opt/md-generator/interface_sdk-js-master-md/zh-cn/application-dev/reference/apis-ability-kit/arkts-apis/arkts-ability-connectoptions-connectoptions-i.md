@@ -1,7 +1,7 @@
 # ConnectOptions
 
 在连接指定的后台服务时作为入参，用于接收连接过程中的状态变化，如作为  
-[connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)的入参，连接指定的ServiceExtensionAbility。
+[connectServiceExtensionAbility](./application/UIAbilityContext:UIAbilityContext.connectServiceExtensionAbility)的入参，连接指定的ServiceExtensionAbility。
 
 **起始版本：** 7
 
@@ -28,7 +28,38 @@ onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 |
-| remote | rpc.IRemoteObject | 是 |
+| [remote](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) | rpc.IRemoteObject | 是 |
+
+## 示例
+
+```TypeScript
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect(elementName: bundleManager.ElementName, remote: rpc.IRemoteObject) {
+    console.info(`onConnect elementName: ${elementName}`);
+  },
+  onDisconnect(elementName: bundleManager.ElementName) {
+    console.info(`onDisconnect elementName: ${elementName}`);
+  },
+  onFailed(code: number) {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection: number = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```
 
 ## onDisconnect
 
@@ -50,6 +81,37 @@ onDisconnect(elementName: ElementName): void
 | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 |
 
+## 示例
+
+```TypeScript
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect(elementName: bundleManager.ElementName, remote: rpc.IRemoteObject) {
+    console.info(`onConnect elementName: ${elementName}`);
+  },
+  onDisconnect(elementName: bundleManager.ElementName) {
+    console.info(`onDisconnect elementName: ${elementName}`);
+  },
+  onFailed(code: number) {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection: number = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```
+
 ## onFailed
 
 ```TypeScript
@@ -69,3 +131,34 @@ onFailed(code: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | code | number | 是 |
+
+## 示例
+
+```TypeScript
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect(elementName: bundleManager.ElementName, remote: rpc.IRemoteObject) {
+    console.info(`onConnect elementName: ${elementName}`);
+  },
+  onDisconnect(elementName: bundleManager.ElementName) {
+    console.info(`onDisconnect elementName: ${elementName}`);
+  },
+  onFailed(code: number) {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection: number = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```

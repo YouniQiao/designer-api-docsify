@@ -13,7 +13,7 @@ Represents the application database schema.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## bundleName
@@ -42,7 +42,7 @@ databases: Array<Database>
 
 Database information of the application.
 
-**Type:** Array&lt;Database&gt;
+**Type:** Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;
 
 **Since:** 11
 

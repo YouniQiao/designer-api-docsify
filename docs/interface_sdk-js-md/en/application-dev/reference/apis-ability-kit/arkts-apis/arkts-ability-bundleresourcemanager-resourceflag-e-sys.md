@@ -91,7 +91,7 @@ The obtained information is sorted by label. It must be used together with **GET
 GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010
 ```
 
-The [drawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-drawabledescriptor.md/arkts-arkui-drawabledescriptor.md) object of the application icon is obtained.
+The [drawableDescriptor](@ohos.arkui.drawableDescriptor) object of the application icon is obtained.
 
 **Since:** 12
 
@@ -110,8 +110,8 @@ GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
 ```
 
 The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the  
-[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getlauncherabilityresourceinfo)and  
-[getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getalllauncherabilityresourceinfo)APIs.
+[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo)and  
+[getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md#getAllLauncherAbilityResourceInfo)APIs.
 
 **Since:** 20
 

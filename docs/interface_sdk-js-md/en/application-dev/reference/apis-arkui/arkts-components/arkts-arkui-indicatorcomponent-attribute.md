@@ -122,7 +122,7 @@ Called when the index value changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-callback-i.md)&lt;number&gt; | Yes |  |
+| event | Callback&lt;number&gt; | Yes |  |
 
 ## style
 
@@ -150,7 +150,7 @@ Sets the indicator style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| DigitIndicator | Yes | the style value |
+| indicatorStyle | DotIndicator \| DigitIndicator | Yes | the style value |
 
 ## vertical
 

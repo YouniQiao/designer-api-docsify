@@ -2,7 +2,7 @@
 
 Defines user face angle data.
 
-**Inheritance/Implementation:** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)
+**Inheritance/Implementation:** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Defines user face angle data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from 'kits/@kit.MultimodalAwarenessKit';
+import { userStatus } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## hpeNetworkId

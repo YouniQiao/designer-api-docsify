@@ -76,7 +76,7 @@ richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResul
 
 Information about the deleted text or image span.
 
-**Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 10
 

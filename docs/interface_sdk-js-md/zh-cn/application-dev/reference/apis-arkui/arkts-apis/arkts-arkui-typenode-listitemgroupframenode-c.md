@@ -34,11 +34,11 @@ abstract initialize(options?: ListItemGroupOptions): ListItemGroupAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ListItemGroupOptions](../arkts-components/arkts-arkui-listitemgroupoptions-i.md) | 否 | list item group 节点的选项。 |
+| options | ListItemGroupOptions | 否 | list item group 节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |  |
+| ListItemGroupAttribute |  |
 

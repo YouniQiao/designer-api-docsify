@@ -76,7 +76,7 @@ cleanFileCache(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
@@ -102,7 +102,7 @@ A constructor used to create a **CloudFileCache** instance. Data is not shared b
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -128,7 +128,7 @@ getCachedTotalSize(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -176,7 +176,7 @@ off(event: 'progress', callback?: Callback<DownloadProgress>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13600001 |
 
 ## 示例
@@ -219,7 +219,7 @@ off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'batchDownload' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiDownloadProgress&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 否 |
 
 **错误码：**
 
@@ -272,7 +272,7 @@ on(event: 'progress', callback: Callback<DownloadProgress>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13600001 |
 
 ## 示例
@@ -312,7 +312,7 @@ on(event: 'batchDownload', callback: Callback<MultiDownloadProgress>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | 'batchDownload' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MultiDownloadProgress&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MultiDownloadProgress](arkts-corefile-cloudsync-multidownloadprogress-c.md)&gt; | 是 |
 
 **错误码：**
 
@@ -368,13 +368,13 @@ start(uri: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900002 |
 | 14000002 |
 | 13900025 |
@@ -431,7 +431,7 @@ start(uri: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900002 |
 | 14000002 |
 | 13900025 |
@@ -476,14 +476,14 @@ startBatch(uris: Array<string>, fileType?: DownloadFileType): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| uris | Array&lt;string&gt; | 是 |
+| uris | Array & lt;string & gt; | 是 |
 | fileType | [DownloadFileType](arkts-corefile-cloudsync-downloadfiletype-e.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
@@ -545,13 +545,13 @@ When **stop()** is called, the current file download process terminates, and dow
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900002 |
 | 14000002 |
 | 13600001 |
@@ -600,7 +600,7 @@ stop(uri: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 13900002 |
 | 14000002 |
 | 13600001 |
@@ -630,7 +630,7 @@ fileCache.stop(uri, (err: BusinessError) => {
 stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 ```
 
-停止由[startBatch](arkts-corefile-cloudsync-cloudfilecache-c.md#startbatch)启动的云文件批量缓存任务。使用Promise异步回调。
+停止由[startBatch](#startBatch)启动的云文件批量缓存任务。使用Promise异步回调。
 
 调用stopBatch接口会终止当前文件批量缓存流程，未下载完成的缓存文件是否删除由needClean参数决定。
 
@@ -644,14 +644,14 @@ stopBatch(downloadId: number, needClean?: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| downloadId | number | 是 |
+| [downloadId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-downloadinfo-i.md) | number | 是 |
 | needClean | boolean | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 

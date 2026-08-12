@@ -13,7 +13,7 @@ You can trigger download manually through this interface, or resume failed or ca
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## resumeDownload
@@ -42,7 +42,7 @@ Resume the canceled or failed download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100018](../errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
+| [17100018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
 
 ## setDownloadDelegate
 

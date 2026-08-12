@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## from
@@ -65,7 +65,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| arrayBuffer | ArrayBuffer \| SharedArrayBuffer | Yes |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -79,8 +79,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 
@@ -126,7 +126,7 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 | Error Code ID |
 | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 

@@ -254,7 +254,7 @@ rect(x: number, y: number, w: number, h: number): void
 | x | number | 是 |
 | y | number | 是 |
 | w | number | 是 |
-| h | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
 
 ## roundRect
 
@@ -283,11 +283,11 @@ roundRect(x: number, y: number, w: number, h: number, radii?: number | Array<num
 | x | number | 是 |
 | y | number | 是 |
 | w | number | 是 |
-| h | number | 是 |
-| radii | number \| Array&lt;number&gt; | 否 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
+| radii | number \| Array & lt;number & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [103701](../errorcode-canvas.md#103701-参数错误) |
+| [103701](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-参数错误) |

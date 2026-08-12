@@ -1,6 +1,6 @@
 # MenuItemConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。
 
 **继承/实现关系：** MenuItemConfiguration extends [CommonConfiguration<MenuItemConfiguration>](CommonConfiguration<MenuItemConfiguration>)
 
@@ -56,7 +56,7 @@ icon?: ResourceStr
 
 string格式可用于加载网络图片和本地图片。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -152,7 +152,7 @@ value: ResourceStr
 
 当文本字符的长度超过菜单项文本区域的宽度时，文本将会被截断。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 

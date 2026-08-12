@@ -59,7 +59,7 @@ Converts a number to a string by using the current or specified locale.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | locales | string \| string[] | No |
-| options | Intl.NumberFormatOptions | No |
+| options | [Intl.NumberFormatOptions](arkts-intl-numberformatoptions-i.md) | No |
 
 **Return value:**
 

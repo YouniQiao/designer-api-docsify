@@ -76,7 +76,7 @@ node?: FrameNode
 
 触发手势的节点。默认值为null，表示没有触发手势的节点。
 
-**类型：** [FrameNode](arkts-arkui-framenode-t.md)
+**类型：** FrameNode
 
 **起始版本：** 20
 

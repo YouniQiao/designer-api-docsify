@@ -2,7 +2,7 @@
 
 The axis event triggers this method invocation.
 
-**Inheritance/Implementation:** AxisEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**Inheritance/Implementation:** AxisEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md#BaseEvent)
 
 **Since:** 23
 

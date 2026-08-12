@@ -35,7 +35,7 @@ Use new function to create Rect.Anonymous Object Rectification.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](../arkts-apis/arkts-arkui-rect-roundedrectoptions-i.md) | No |
+| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | No |
 
 ## Rect
 
@@ -61,7 +61,7 @@ Defines the constructor of Rect component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](../arkts-apis/arkts-arkui-rect-roundedrectoptions-i.md) | No |
+| options | [RectOptions](arkts-arkui-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-roundedrectoptions-i.md) | No |
 
 ## Summary
 

@@ -11,7 +11,7 @@ Represents optional configuration items for the **NumberFormat** object.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## decimal
@@ -22,7 +22,7 @@ decimal?: TextStyle
 
 Text style for the decimal point. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 18
 
@@ -40,7 +40,7 @@ fraction?: TextStyle
 
 Text style for the fraction part. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 18
 
@@ -58,7 +58,7 @@ integer?: TextStyle
 
 Text style for the integer part. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 18
 
@@ -76,7 +76,7 @@ unit?: TextStyle
 
 Text style for the unit. The default value is the default text style of StyledString.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-textstyle-i.md)
+**Type:** TextStyle
 
 **Since:** 18
 

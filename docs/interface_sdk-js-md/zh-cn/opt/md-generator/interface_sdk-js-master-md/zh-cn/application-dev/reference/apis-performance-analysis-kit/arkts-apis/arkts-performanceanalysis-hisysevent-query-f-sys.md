@@ -30,13 +30,13 @@ function query(queryArg: QueryArg, rules: QueryRule[], querier: Querier): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11200302](../errorcode-hisysevent-sys.md#11200302-非法的查询规则) |
-| [11200303](../errorcode-hisysevent-sys.md#11200303-并发查询的数量超过限制) |
-| [11200301](../errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [11200304](../errorcode-hisysevent-sys.md#11200304-查询频率超过限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11200302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200302-非法的查询规则) |
+| [11200303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200303-并发查询的数量超过限制) |
+| [11200301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200301-查询规则的数量超过限制) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [11200304](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200304-查询频率超过限制) |
 
 ## 示例
 

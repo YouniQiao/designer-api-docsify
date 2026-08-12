@@ -20,5 +20,5 @@ function getLevel(): Promise<SystemLoadLevel>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;SystemLoadLevel&gt; | Promise对象，返回系统负载融合档位。 |
+| Promise&lt;[SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)&gt; | Promise对象，返回系统负载融合档位。 |
 

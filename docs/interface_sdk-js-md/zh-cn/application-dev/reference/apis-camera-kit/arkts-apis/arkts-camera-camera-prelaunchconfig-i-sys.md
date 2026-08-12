@@ -40,7 +40,7 @@ cameraDevice: CameraDevice
 
 Camera device.
 
-**类型：** [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md)
+**类型：** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **起始版本：** 10
 

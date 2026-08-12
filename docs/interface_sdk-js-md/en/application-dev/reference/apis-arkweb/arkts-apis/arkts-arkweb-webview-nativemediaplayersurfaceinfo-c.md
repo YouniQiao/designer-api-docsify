@@ -17,7 +17,7 @@ Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface info
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## id
@@ -27,7 +27,7 @@ id: string
 ```
 
 Surface ID, which is the **psurfaceid** of the native image used for rendering at the same layer.&lt;br&gt;For details, see  
-[NativeEmbedDataInfo](arkts-arkweb-web-nativeembeddatainfo-i.md).
+[NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md#NativeEmbedDataInfo).
 
 **Type:** string
 

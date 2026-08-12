@@ -72,7 +72,7 @@ navigationType: WebNavigationType
 
 The type of the navigation.
 
-**Type:** [WebNavigationType](../arkts-components/arkts-arkweb-webnavigationtype-e.md)
+**Type:** [WebNavigationType](arkts-arkweb-web-webnavigationtype-e.md)
 
 **Since:** 23
 

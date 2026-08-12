@@ -1,9 +1,9 @@
 # VideoOutput
 
 VideoOutput implements output information used in a video session. It inherits from   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md).
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
 
-**Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **Since:** 10
 
@@ -14,7 +14,7 @@ VideoOutput implements output information used in a video session. It inherits f
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## enableMirror
@@ -26,10 +26,10 @@ enableMirror(enabled: boolean): void
 Enables or disables mirror recording.
 
 - Before calling this API, check whether mirror recording is supported by using   
-[isMirrorSupported](arkts-camera-camera-videooutput-i.md#ismirrorsupported).  
+[isMirrorSupported](#isMirrorSupported).  
 - After enabling or disabling mirror recording, call   
-[getVideoRotation](arkts-camera-camera-videooutput-i.md#getvideorotation) to obtain the rotation angle and   
-[updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md/arkts-media-media-avrecorder-i.md#updaterotation) to update the rotation angle.
+[getVideoRotation](#getVideoRotation) to obtain the rotation angle and   
+[updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updateRotation) to update the rotation angle.
 
 **Since:** 15
 
@@ -49,9 +49,9 @@ Enables or disables mirror recording.
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getActiveFrameRate
 
@@ -61,7 +61,7 @@ getActiveFrameRate(): FrameRateRange
 
 Obtains the configured frame rate range.
 
-This API is valid only after [setFrameRate](arkts-camera-camera-videooutput-i.md#setframerate) is called to set a frame rate range for video streams.
+This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for video streams.
 
 **Since:** 12
 
@@ -103,7 +103,7 @@ Obtains the profile that takes effect currently.
 
 | Error Code ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## getSupportedFrameRates
 
@@ -125,7 +125,7 @@ Obtains the supported frame rates.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;FrameRateRange&gt; |
+| Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; |
 
 ## getVideoRotation
 
@@ -166,8 +166,8 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## isMirrorSupported
 
@@ -195,7 +195,7 @@ Checks whether mirror recording is supported.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## off('frameStart')
 
@@ -355,14 +355,14 @@ setFrameRate(minFps: number, maxFps: number): void
 
 Sets a frame rate range for video streams. The range must be within the supported frame rate range,
 
-which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-videooutput-i.md#getsupportedframerates).
+which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates).
 
 > **NOTE：**
 > 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md) or
-> [VideoSession](arkts-camera-camera-videosession-i.md) mode.
+> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or
+> [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
 > 
-> Before calling this API, call [getActiveFrameRate](arkts-camera-camera-videooutput-i.md#getactiveframerate) to obtain the
+> Before calling this API, call [getActiveFrameRate](#getActiveFrameRate) to obtain the
 > current frame rate of the video session. If the delivered frame rate matches the current frame rate, the
 > delivered frame rate is not applied.
 
@@ -385,8 +385,8 @@ which can be obtained by calling [getSupportedFrameRates](arkts-camera-camera-vi
 
 | Error Code ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
-| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
+| [7400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-configuration-conflicts) |
 
 ## start
 
@@ -414,8 +414,8 @@ Starts video recording. This API uses an asynchronous callback to return the res
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -437,14 +437,14 @@ Starts video recording. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
 
 ## stop
 
@@ -488,4 +488,4 @@ Stops video recording. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

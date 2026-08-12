@@ -24,7 +24,7 @@ Creates a finalization registry with an associated cleanup callback
 
 | Type | Description |
 | --- | --- |
-| FinalizationRegistry&lt;T&gt; |  |
+| [FinalizationRegistry](arkts-lib-es2021-weakref-finalizationregistry-i.md)&lt;T&gt; |  |
 
 ## prototype
 
@@ -32,7 +32,7 @@ Creates a finalization registry with an associated cleanup callback
 readonly prototype: FinalizationRegistry<any>
 ```
 
-**Type:** FinalizationRegistry&lt;any&gt;
+**Type:** [FinalizationRegistry](arkts-lib-es2021-weakref-finalizationregistry-i.md)&lt;any&gt;
 
 **ArkTS mode:** ArkTS-Dyn only
 

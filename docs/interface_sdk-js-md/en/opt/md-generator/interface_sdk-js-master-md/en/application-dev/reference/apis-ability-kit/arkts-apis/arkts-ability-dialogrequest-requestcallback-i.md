@@ -11,7 +11,7 @@ Provides a callback for setting the modal dialog box request result.
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -40,7 +40,7 @@ Sets the result of the request for the modal dialog box.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

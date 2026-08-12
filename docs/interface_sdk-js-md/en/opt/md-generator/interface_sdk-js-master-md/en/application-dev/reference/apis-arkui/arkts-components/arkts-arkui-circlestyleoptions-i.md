@@ -88,7 +88,7 @@ Radius of the background circle.
 
 Default value: 1.833 times (that is, 11/6) of the value of [circleRadius](PatternLockAttribute#circleRadius)
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 

@@ -18,18 +18,18 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
-| dst | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| src | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
-| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980246](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-读取pixelmap失败) |
+| [62980248](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-pixelmap不允许修改) |
 
 ## 示例
 
@@ -78,23 +78,23 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
-| dst | [PixelMap](arkts-image-image-pixelmap-i.md) | 是 |
+| src | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
-| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980246](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-读取pixelmap失败) |
+| [62980248](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-pixelmap不允许修改) |
 
 ## 示例
 

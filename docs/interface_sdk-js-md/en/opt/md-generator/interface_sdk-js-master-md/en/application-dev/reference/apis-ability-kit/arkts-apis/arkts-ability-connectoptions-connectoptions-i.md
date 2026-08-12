@@ -1,7 +1,7 @@
 # ConnectOptions
 
 **ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of  
-[connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)to connect to a ServiceExtensionAbility.
+[connectServiceExtensionAbility](./application/UIAbilityContext:UIAbilityContext.connectServiceExtensionAbility)to connect to a ServiceExtensionAbility.
 
 **Since:** 7
 
@@ -28,7 +28,38 @@ Called when a connection is set up.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes |
-| remote | rpc.IRemoteObject | Yes |
+| [remote](../../apis-driver-development-kit/arkts-apis/arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md) | rpc.IRemoteObject | Yes |
+
+## Examples
+
+```TypeScript
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect(elementName: bundleManager.ElementName, remote: rpc.IRemoteObject) {
+    console.info(`onConnect elementName: ${elementName}`);
+  },
+  onDisconnect(elementName: bundleManager.ElementName) {
+    console.info(`onDisconnect elementName: ${elementName}`);
+  },
+  onFailed(code: number) {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection: number = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```
 
 ## onDisconnect
 
@@ -50,6 +81,37 @@ Called when a connection is interrupted.
 | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes |
 
+## Examples
+
+```TypeScript
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect(elementName: bundleManager.ElementName, remote: rpc.IRemoteObject) {
+    console.info(`onConnect elementName: ${elementName}`);
+  },
+  onDisconnect(elementName: bundleManager.ElementName) {
+    console.info(`onDisconnect elementName: ${elementName}`);
+  },
+  onFailed(code: number) {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection: number = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```
+
 ## onFailed
 
 ```TypeScript
@@ -69,3 +131,34 @@ Called when a connection fails.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | code | number | Yes |
+
+## Examples
+
+```TypeScript
+import { UIAbility, common, Want, AbilityConstant } from '@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+
+let connectWant: Want = {
+  bundleName: 'com.example.myapp',
+  abilityName: 'MyAbility'
+};
+
+let connectOptions: common.ConnectOptions = {
+  onConnect(elementName: bundleManager.ElementName, remote: rpc.IRemoteObject) {
+    console.info(`onConnect elementName: ${elementName}`);
+  },
+  onDisconnect(elementName: bundleManager.ElementName) {
+    console.info(`onDisconnect elementName: ${elementName}`);
+  },
+  onFailed(code: number) {
+    console.error(`onFailed code: ${code}`);
+  }
+};
+
+class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    let connection: number = this.context.connectServiceExtensionAbility(connectWant, connectOptions);
+  }
+}
+```

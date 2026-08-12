@@ -1,6 +1,6 @@
 # USBConfiguration
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md) can contain multiple **USBConfig**instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#USBDevice) can contain multiple **USBConfig**instances.
 
 **Since:** 9
 
@@ -11,7 +11,7 @@ Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## attributes

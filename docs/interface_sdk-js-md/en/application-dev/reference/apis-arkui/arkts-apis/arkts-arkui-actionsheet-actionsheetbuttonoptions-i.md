@@ -104,7 +104,7 @@ value: string | Resource
 
 Button text.Anonymous Object Rectification.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

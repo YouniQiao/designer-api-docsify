@@ -36,7 +36,7 @@ radius?: Dimension | BorderRadiuses
 
 文本背景圆角。默认无圆角。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 11
 

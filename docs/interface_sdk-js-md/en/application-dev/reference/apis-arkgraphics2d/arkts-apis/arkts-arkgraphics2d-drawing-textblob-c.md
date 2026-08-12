@@ -20,7 +20,7 @@ Defines a block consisting of one or more characters with the same font.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## bounds
@@ -88,9 +88,9 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Content to be used for drawing the text blob. |
-| len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#counttext). |
+| len | number | Yes | Number of glyphs, which is an integer obtained from [countText](arkts-arkgraphics2d-drawing-font-c.md#countText). |
 | points | common2D.Point[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of **len**. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font** object. |
+| font | Font | Yes | Font** object. |
 
 **Return value:**
 
@@ -102,7 +102,7 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromPosText
 
@@ -127,7 +127,7 @@ Creates a TextBlob object from the text.The coordinates of each font in the Text
 | text | string | Yes | Content to be used for drawing the text blob. |
 | len | int | Yes | Number of fonts. The value is an integer and is obtained from countText. |
 | points | common2D.Point[] | Yes | Array of points, which are used to specify the coordinates of each font. The array length must be the same as the value of len. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Specify text size, font, text scale, etc. |
+| font | Font | Yes | Specify text size, font, text scale, etc. |
 
 **Return value:**
 
@@ -139,7 +139,7 @@ Creates a TextBlob object from the text.The coordinates of each font in the Text
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromRunBuffer
 
@@ -161,8 +161,8 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | Yes | TextBlobRunBuffer** array. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font** object. |
+| pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | Yes | TextBlobRunBuffer** array. |
+| font | Font | Yes | Font** object. |
 | bounds | common2D.Rect | No | Bounding box. If this parameter is not set, there is no bounding box. |
 
 **Return value:**
@@ -175,7 +175,7 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromRunBuffer
 
@@ -197,8 +197,8 @@ Creates a Textblob object based on the RunBuffer information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | Yes | The array of TextBlobRunBuffer. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font used for this run. |
+| pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | Yes | The array of TextBlobRunBuffer. |
+| font | Font | Yes | Font used for this run. |
 | bounds | common2D.Rect | No | Optional run bounding box. The default value is null; |
 
 **Return value:**
@@ -211,7 +211,7 @@ Creates a Textblob object based on the RunBuffer information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromString
 
@@ -234,8 +234,8 @@ Converts a value of the string type into a **TextBlob** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Content to be used for drawing the text blob. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Font** object. |
-| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | No | Encoding type. The default value is **TEXT_ENCODING_UTF8**. Currently, only **TEXT_ENCODING_UTF8** takes effect, and other encoding types are treated as **TEXT_ENCODING_UTF8**. |
+| font | Font | Yes | Font** object. |
+| encoding | TextEncoding | No | Encoding type. The default value is **TEXT_ENCODING_UTF8**. Currently, only **TEXT_ENCODING_UTF8** takes effect, and other encoding types are treated as **TEXT_ENCODING_UTF8**. |
 
 **Return value:**
 
@@ -247,7 +247,7 @@ Converts a value of the string type into a **TextBlob** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromString
 
@@ -270,8 +270,8 @@ Converts a value of the string type into a TextBlob object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Content to be used for drawing the text blob. |
-| font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes | Specify text size, font, text scale, etc. |
-| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | No | Encoding type. The default value is TEXT_ENCODING_UTF8. Currently, only TEXT_ENCODING_UTF8 takes effect, and other encoding types are treated as TEXT_ENCODING_UTF8. |
+| font | Font | Yes | Specify text size, font, text scale, etc. |
+| encoding | TextEncoding | No | Encoding type. The default value is TEXT_ENCODING_UTF8. Currently, only TEXT_ENCODING_UTF8 takes effect, and other encoding types are treated as TEXT_ENCODING_UTF8. |
 
 **Return value:**
 
@@ -283,7 +283,7 @@ Converts a value of the string type into a TextBlob object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## uniqueID
 

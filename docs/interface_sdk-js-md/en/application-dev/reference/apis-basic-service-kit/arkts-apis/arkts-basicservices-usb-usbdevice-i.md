@@ -8,7 +8,7 @@ Represents the USB device information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)
+**Substitutes:** [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#USBDevice)
 
 <!--Device-usb-interface USBDevice--><!--Device-usb-interface USBDevice-End-->
 
@@ -17,7 +17,7 @@ Represents the USB device information.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## busNum
@@ -36,7 +36,7 @@ Bus address.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.busNum](arkts-basicservices-usbmanager-usbdevice-i.md#busnum)
+**Substitutes:** [busNum](arkts-basicservices-usbmanager-usbdevice-i.md#busNum)
 
 <!--Device-USBDevice-busNum: number--><!--Device-USBDevice-busNum: number-End-->
 
@@ -58,7 +58,7 @@ Device class.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.clazz](arkts-basicservices-usbmanager-usbdevice-i.md#clazz)
+**Substitutes:** [clazz](arkts-basicservices-usbmanager-usbdevice-i.md#clazz)
 
 <!--Device-USBDevice-clazz: number--><!--Device-USBDevice-clazz: number-End-->
 
@@ -72,7 +72,7 @@ configs: Array<USBConfig>
 
 Device configuration descriptor information.
 
-**Type:** Array&lt;USBConfig&gt;
+**Type:** Array&lt;[USBConfig](arkts-basicservices-usb-usbconfig-i.md)&gt;
 
 **Since:** 8
 
@@ -80,7 +80,7 @@ Device configuration descriptor information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.configs](arkts-basicservices-usbmanager-usbdevice-i.md#configs)
+**Substitutes:** [configs](arkts-basicservices-usbmanager-usbdevice-i.md#configs)
 
 <!--Device-USBDevice-configs: Array<USBConfig>--><!--Device-USBDevice-configs: Array<USBConfig>-End-->
 
@@ -102,7 +102,7 @@ Device address.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devaddress)
+**Substitutes:** [devAddress](arkts-basicservices-usbmanager-usbdevice-i.md#devAddress)
 
 <!--Device-USBDevice-devAddress: number--><!--Device-USBDevice-devAddress: number-End-->
 
@@ -124,7 +124,7 @@ Device manufacturer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.manufacturerName](arkts-basicservices-usbmanager-usbdevice-i.md#manufacturername)
+**Substitutes:** [manufacturerName](arkts-basicservices-usbmanager-usbdevice-i.md#manufacturerName)
 
 <!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
@@ -146,7 +146,7 @@ Device name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.name](arkts-basicservices-usbmanager-usbdevice-i.md#name)
+**Substitutes:** [name](arkts-basicservices-usbmanager-usbdevice-i.md#name)
 
 <!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
 
@@ -168,7 +168,7 @@ Product ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.productId](arkts-basicservices-usbmanager-usbdevice-i.md#productid)
+**Substitutes:** [productId](arkts-basicservices-usbmanager-usbdevice-i.md#productId)
 
 <!--Device-USBDevice-productId: number--><!--Device-USBDevice-productId: number-End-->
 
@@ -190,7 +190,7 @@ Product name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.productName](arkts-basicservices-usbmanager-usbdevice-i.md#productname)
+**Substitutes:** [productName](arkts-basicservices-usbmanager-usbdevice-i.md#productName)
 
 <!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
@@ -212,7 +212,7 @@ Device protocol code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.protocol](arkts-basicservices-usbmanager-usbdevice-i.md#protocol)
+**Substitutes:** [protocol](arkts-basicservices-usbmanager-usbdevice-i.md#protocol)
 
 <!--Device-USBDevice-protocol: number--><!--Device-USBDevice-protocol: number-End-->
 
@@ -234,7 +234,7 @@ Sequence number.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.serial](arkts-basicservices-usbmanager-usbdevice-i.md#serial)
+**Substitutes:** [serial](arkts-basicservices-usbmanager-usbdevice-i.md#serial)
 
 <!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
 
@@ -256,7 +256,7 @@ Device subclass.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.subClass](arkts-basicservices-usbmanager-usbdevice-i.md#subclass)
+**Substitutes:** [subClass](arkts-basicservices-usbmanager-usbdevice-i.md#subClass)
 
 <!--Device-USBDevice-subClass: number--><!--Device-USBDevice-subClass: number-End-->
 
@@ -278,7 +278,7 @@ Vendor ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorid)
+**Substitutes:** [vendorId](arkts-basicservices-usbmanager-usbdevice-i.md#vendorId)
 
 <!--Device-USBDevice-vendorId: number--><!--Device-USBDevice-vendorId: number-End-->
 
@@ -300,7 +300,7 @@ Version.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.USBDevice.version](arkts-basicservices-usbmanager-usbdevice-i.md#version)
+**Substitutes:** [version](arkts-basicservices-usbmanager-usbdevice-i.md#version)
 
 <!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
 

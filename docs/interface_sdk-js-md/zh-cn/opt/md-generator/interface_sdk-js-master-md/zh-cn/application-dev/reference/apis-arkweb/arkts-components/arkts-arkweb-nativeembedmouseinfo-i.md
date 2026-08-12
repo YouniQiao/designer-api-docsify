@@ -32,7 +32,7 @@ mouseEvent?: MouseEvent
 
 鼠标/触摸板点击/长按信息。
 
-**类型：** [MouseEvent](../../apis-arkui/arkts-components/arkts-arkui-mouseevent-i.md)
+**类型：** MouseEvent
 
 **起始版本：** 20
 

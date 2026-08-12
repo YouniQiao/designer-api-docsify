@@ -11,7 +11,7 @@ Describes the timestamp of the sensor data.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## accuracy

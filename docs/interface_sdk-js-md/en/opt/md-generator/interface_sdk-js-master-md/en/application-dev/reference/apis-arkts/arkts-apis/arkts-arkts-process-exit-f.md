@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit
@@ -20,7 +20,7 @@ Exercise caution when using this API. After this API is called, the application 
 
 **Deprecated since:** 9
 
-**Substitutes:** [process.ProcessManager.exit](arkts-arkts-process-processmanager-c.md#exit)
+**Substitutes:** [exit](arkts-arkts-process-processmanager-c.md#exit)
 
 <!--Device-process-function exit(code: number): void--><!--Device-process-function exit(code: number): void-End-->
 

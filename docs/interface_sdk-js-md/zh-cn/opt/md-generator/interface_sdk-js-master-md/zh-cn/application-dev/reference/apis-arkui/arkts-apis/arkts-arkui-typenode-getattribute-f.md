@@ -23,13 +23,54 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Text' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Text' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建Text
+    let text = typeNode.createNode(uiContext, 'Text');
+    text.initialize('Hello');
+    // 获取Text的属性
+    typeNode.getAttribute(text, 'Text')?.fontColor(Color.Red)
+    col.appendChild(text);
+    // 创建另一个Text用于对比
+    let text2 = typeNode.createNode(uiContext, 'Text');
+    text2.initialize('world');
+    col.appendChild(text2);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Text sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -55,13 +96,53 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Column' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Column' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建Column
+    let col1 = typeNode.createNode(uiContext, 'Column');
+    col1.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    // 获取Column的属性
+    typeNode.getAttribute(col1, 'Column')?.backgroundColor(Color.Blue).width('100%');
+    col.appendChild(col1);
+    // 创建另一个Column用于对比
+    let col2 = typeNode.createNode(uiContext, 'Column');
+    col2.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    col.appendChild(col2);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Column sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -87,13 +168,53 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Row' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Row' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建Row
+    let row1 = typeNode.createNode(uiContext, 'Row');
+    row1.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    // 获取Row的属性
+    typeNode.getAttribute(row1, 'Row')?.backgroundColor(Color.Blue).width('100%');
+    col.appendChild(row1);
+    // 创建另一个Row用于对比
+    let row2 = typeNode.createNode(uiContext, 'Row');
+    row2.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    col.appendChild(row2);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Row sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -119,13 +240,53 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Stack' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Stack' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建Stack
+    let stack1 = typeNode.createNode(uiContext, 'Stack');
+    stack1.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    // 获取Stack的属性
+    typeNode.getAttribute(stack1, 'Stack')?.backgroundColor(Color.Blue).width('100%')
+    col.appendChild(stack1);
+    // 创建另一个Stack用于对比
+    let stack2 = typeNode.createNode(uiContext, 'Stack');
+    stack2.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    col.appendChild(stack2);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Row sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -151,13 +312,53 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Flex' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Flex' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建Flex
+    let flex1 = typeNode.createNode(uiContext, 'Flex');
+    flex1.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    // 获取Flex的属性
+    typeNode.getAttribute(flex1, 'Flex')?.backgroundColor(Color.Blue).width('100%')
+    col.appendChild(flex1);
+    // 创建另一个Flex用于对比
+    let flex2 = typeNode.createNode(uiContext, 'Flex');
+    flex2.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    col.appendChild(flex2);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('Flex sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -183,13 +384,17 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Swiper' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Swiper' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) |
+
+## 示例
+
+请参考[createNode('Swiper')12+示例](#createnodeswiper12)。
 
 
 ## getAttribute
@@ -215,13 +420,52 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Progress' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Progress' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Progress控制器
+class MyProgressNodeController extends NodeController {
+  public uiContext: UIContext | null = null;
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.uiContext = uiContext;
+    this.rootNode = new FrameNode(uiContext);
+    let node = typeNode.createNode(uiContext, 'Progress');
+    node.initialize({
+      value: 15,
+      total: 200,
+      type: ProgressType.ScaleRing
+    }).width(100)
+      .height(100)
+    // 获取Progress的属性
+    typeNode.getAttribute(node, 'Progress');
+    this!.rootNode!.appendChild(node);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Sample {
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(new MyProgressNodeController()).margin(5)
+    }.width('100%').height('100%')
+
+  }
+}
+```
 
 
 ## getAttribute
@@ -247,13 +491,17 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Scroll' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Scroll' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('Scroll')](#createnodescroll12)的示例。
 
 
 ## getAttribute
@@ -279,13 +527,53 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'RelativeContainer' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'RelativeContainer' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建RelativeContainer
+    let relative1 = typeNode.createNode(uiContext, 'RelativeContainer');
+    relative1.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    // 获取RelativeContainer的属性
+    typeNode.getAttribute(relative1, 'RelativeContainer')?.backgroundColor(Color.Blue).width('100%')
+    col.appendChild(relative1);
+    // 创建另一个RelativeContainer用于对比
+    let relative2 = typeNode.createNode(uiContext, 'RelativeContainer');
+    relative2.initialize().width('50%').height('20%').backgroundColor(Color.Pink);
+    col.appendChild(relative2);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('RelativeContainer sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -294,7 +582,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined
 ```
 
-获取[LoadingProgress](../../apis-arkui/arkts-components/arkts-arkui-loading_progress-i)节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+获取[LoadingProgress](../@internal/component/ets/loading_progress)节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
 
@@ -311,13 +599,50 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'LoadingProgress' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'LoadingProgress' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义LoadingProgress控制器
+class MyLoadingProgressNodeController extends NodeController {
+  public uiContext: UIContext | null = null;
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.uiContext = uiContext;
+    this.rootNode = new FrameNode(uiContext);
+    let node = typeNode.createNode(uiContext, 'LoadingProgress');
+    node.initialize()
+      .width(100)
+      .height(100)
+      .color(Color.Red)
+      .enableLoading(true)
+    // 获取LoadingProgress的属性
+    typeNode.getAttribute(node, 'LoadingProgress');
+    this!.rootNode!.appendChild(node);
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Sample {
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(new MyLoadingProgressNodeController()).margin(5)
+    }.width('100%').height('100%')
+  }
+}
+```
 
 
 ## getAttribute
@@ -343,13 +668,59 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Image' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Image' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Image控制器
+class MyImageController extends NodeController {
+  public uiContext: UIContext | null = null;
+  public rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.uiContext = uiContext;
+    this.rootNode = new FrameNode(uiContext);
+    let imageNode = typeNode.createNode(uiContext, 'Image');
+    imageNode
+      // $r('app.media.img')需要替换为开发者所需的图像资源文件
+      .initialize($r('app.media.img'))
+      .width(100)
+      .height(100)
+      .fillColor(Color.Red)
+      .objectFit(ImageFit.Contain)
+      .renderMode(ImageRenderMode.Template)
+      .fitOriginalSize(true)
+      .matchTextDirection(true)
+      .objectRepeat(ImageRepeat.X)
+      .autoResize(true)
+    // 获取Image的属性
+    typeNode.getAttribute(imageNode, 'Image');
+    this!.rootNode!.appendChild(imageNode);
+    return this.rootNode;
+
+  }
+}
+
+@Entry
+@Component
+struct Sample {
+  build() {
+    Column({ space: 10 }) {
+      NodeContainer(new MyImageController()).margin(5)
+    }.width('100%').height('100%')
+
+  }
+}
+```
 
 
 ## getAttribute
@@ -375,13 +746,17 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'List' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'List' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('List')](#createnodelist12)的示例。
 
 
 ## getAttribute
@@ -407,13 +782,17 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'ListItem' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'ListItem' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('List')](#createnodelist12)的示例。
 
 
 ## getAttribute
@@ -439,13 +818,50 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'TextInput' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextInput' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建TextInput
+    let textInput = typeNode.createNode(uiContext, 'TextInput');
+    textInput.initialize({ placeholder: 'TextInput placeholderColor' });
+    // 获取TextInput的属性
+    typeNode.getAttribute(textInput, 'TextInput')?.placeholderColor(Color.Red);
+    col.appendChild(textInput);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextInput getAttribute sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -471,13 +887,56 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Button' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Button' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Button控制器
+class MyButtonController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    let button = typeNode.createNode(uiContext, 'Button')
+    button.initialize('This is Button')
+      .onClick(() => {
+        uiContext.getPromptAction().showToast({ message: 'Button clicked' })
+      })
+    // 获取Button属性
+    typeNode.getAttribute(button, 'Button')?.buttonStyle(ButtonStyleMode.TEXTUAL);
+    col.appendChild(button)
+
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myButtonController: MyButtonController = new MyButtonController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ButtonSample')
+      NodeContainer(this.myButtonController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## getAttribute
@@ -503,13 +962,19 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'ListItemGroup' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'ListItemGroup' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |
+
+## 示例
+
+```TypeScript
+typeNode.getAttribute(node, 'ListItemGroup');
+```
 
 
 ## getAttribute
@@ -535,13 +1000,17 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'WaterFlow' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'WaterFlow' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('WaterFlow')](#createnodewaterflow12)的示例。
 
 
 ## getAttribute
@@ -567,13 +1036,17 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'FlowItem' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'FlowItem' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('WaterFlow')](#createnodewaterflow12)的示例。
 
 
 ## getAttribute
@@ -599,13 +1072,19 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'XComponent' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'XComponent' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [XComponentAttribute](../arkts-components/arkts-arkui-xcomponent-attribute.md) |
+
+## 示例
+
+```TypeScript
+typeNode.getAttribute(node, 'XComponent');
+```
 
 
 ## getAttribute
@@ -631,13 +1110,58 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Checkbox' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Checkbox' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Checkbox控制器
+class MyCheckboxController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // 创建Checkbox
+    let checkbox = typeNode.createNode(uiContext, 'Checkbox')
+    checkbox.initialize({ name: 'checkbox1', group: 'checkboxGroup1' })
+
+    // 创建另一个Checkbox
+    let checkbox1 = typeNode.createNode(uiContext, 'Checkbox')
+    checkbox1.initialize({ name: 'checkbox2', group: 'checkboxGroup1' })
+    // 给另一个Checkbox设置形状属性
+    typeNode.getAttribute(checkbox1,'Checkbox')?.shape(CheckBoxShape.ROUNDED_SQUARE)
+    // 将两个checkbox添加至col进行比较
+    col.appendChild(checkbox)
+    col.appendChild(checkbox1)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myCheckboxController: MyCheckboxController = new MyCheckboxController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('CheckboxSample')
+      NodeContainer(this.myCheckboxController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## getAttribute
@@ -663,13 +1187,57 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Radio' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Radio' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Radio控制器
+class MyRadioController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // 创建radio
+    let radio1 = typeNode.createNode(uiContext, 'Radio')
+    radio1.initialize({ value: 'radio1', group: 'radioGroup' })
+    typeNode.getAttribute(radio1,'Radio')?.checked(true)
+    // 创建另一个radio用于对比
+    let radio2 = typeNode.createNode(uiContext, 'Radio')
+    radio2.initialize({ value: 'radio2', group: 'radioGroup' })
+
+
+    col.appendChild(radio1)
+    col.appendChild(radio2)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myRadioController: MyRadioController = new MyRadioController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('RadioSample')
+      NodeContainer(this.myRadioController);
+    }.width('100%')
+  }
+}
+```
 
 
 ## getAttribute
@@ -695,13 +1263,52 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Slider' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Slider' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Slider控制器
+class MySliderController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // 创建Slider
+    let slider = typeNode.createNode(uiContext, 'Slider')
+    slider.initialize({value:50})
+    typeNode.getAttribute(slider,'Slider')?.selectedColor(Color.Pink)
+    col.appendChild(slider)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private mySliderController: MySliderController = new MySliderController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('SliderSample')
+      NodeContainer(this.mySliderController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## getAttribute
@@ -727,13 +1334,52 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Toggle' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Toggle' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { NodeController, FrameNode, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义Toggle控制器
+class MyToggleController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext)
+    node.commonAttribute
+    let col = typeNode.createNode(uiContext, 'Column')
+    col.initialize({ space: 5 })
+      .width('100%')
+      .height('100%')
+    node.appendChild(col)
+    // 创建Toggle
+    let toggleSwitch = typeNode.createNode(uiContext, 'Toggle')
+    toggleSwitch.initialize({ type: ToggleType.Switch })
+    typeNode.getAttribute(toggleSwitch,'Toggle')?.selectedColor(Color.Orange)
+    col.appendChild(toggleSwitch)
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myToggleController: MyToggleController = new MyToggleController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('ToggleSample')
+      NodeContainer(this.myToggleController);
+
+    }.width('100%')
+  }
+}
+```
 
 
 ## getAttribute
@@ -759,13 +1405,50 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'TextArea' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'TextArea' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) |
+
+## 示例
+
+```TypeScript
+import { FrameNode, NodeController, typeNode } from '@kit.ArkUI';
+
+// 继承NodeController实现自定义UI控制器
+class MyNodeController extends NodeController {
+  makeNode(uiContext: UIContext): FrameNode | null {
+    let node = new FrameNode(uiContext);
+    node.commonAttribute;
+    let col = typeNode.createNode(uiContext, 'Column');
+    col.initialize({ space: 5 });
+    node.appendChild(col);
+    // 创建TextArea
+    let textArea = typeNode.createNode(uiContext, 'TextArea');
+    textArea.initialize({ placeholder: 'TextArea placeholderColor' });
+    col.appendChild(textArea);
+    // 获取TextArea节点的属性
+    typeNode.getAttribute(textArea, 'TextArea')?.placeholderColor(Color.Red);
+    return node;
+  }
+}
+
+@Entry
+@Component
+struct FrameNodeTypeTest {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Column({ space: 5 }) {
+      Text('TextArea getAttribute sample');
+      NodeContainer(this.myNodeController);
+    }
+  }
+}
+```
 
 
 ## getAttribute
@@ -791,13 +1474,17 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'Grid' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'Grid' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('Grid')](#createnodegrid14)的示例。
 
 
 ## getAttribute
@@ -823,10 +1510,14 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | node | [FrameNode](arkts-arkui-framenode-c.md) | 是 |
-| nodeType | 'GridItem' | 是 |
+| [nodeType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenenodes-node-i.md) | 'GridItem' | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |
+
+## 示例
+
+完整示例请参考[createNode('Grid')](#createnodegrid14)的示例。

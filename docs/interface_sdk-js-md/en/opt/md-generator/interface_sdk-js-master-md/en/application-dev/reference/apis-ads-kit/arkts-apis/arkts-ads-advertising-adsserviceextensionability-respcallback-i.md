@@ -11,7 +11,7 @@ Ad request callback.
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from 'kits/@kit.AdsKit';
+import { RespCallback } from '@kit.AdsKit';
 ```
 
 ## [[Call]]
@@ -32,4 +32,4 @@ Data in the ad request callback.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| respData | Map&lt;string, Array&lt;advertising.Advertisement&gt;&gt; | Yes |
+| respData | Map & lt;string, Array & lt;advertising.Advertisement & gt; & gt; | Yes |

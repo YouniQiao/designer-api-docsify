@@ -13,7 +13,7 @@ Annotates the minimum available version supported by an API. This annotation cap
 ## Modules to Import
 
 ```TypeScript
-import { SuppressWarnings, Available, SuppressWarningsType } from 'kits/@kit.BasicServicesKit';
+import { SuppressWarnings, Available, SuppressWarningsType } from '@kit.BasicServicesKit';
 ```
 
 ## minApiVersion

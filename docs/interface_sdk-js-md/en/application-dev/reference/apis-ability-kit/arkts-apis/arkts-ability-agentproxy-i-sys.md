@@ -42,7 +42,7 @@ Send authentication to the AgentExtensionAbility.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
+| [35600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
 
 ## sendData
 
@@ -74,5 +74,5 @@ Send data to the AgentExtensionAbility.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35600002](../errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
+| [35600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#35600002-failed-to-send-ipc-messages) | Failed to send the IPC message. |
 

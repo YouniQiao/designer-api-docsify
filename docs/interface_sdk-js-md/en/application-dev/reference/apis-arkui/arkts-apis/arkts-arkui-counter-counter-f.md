@@ -24,7 +24,7 @@ Defines the Counter component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -60,8 +60,8 @@ Defines Counter Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CounterAttribute&gt; | Yes | Counter attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Child component |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CounterAttribute](arkts-arkui-counter-counterattribute-i.md)&gt; | Yes | Counter attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Child component |
 
 **Return value:**
 

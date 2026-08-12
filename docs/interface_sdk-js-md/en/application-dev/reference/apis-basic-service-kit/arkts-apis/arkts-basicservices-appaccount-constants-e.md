@@ -27,7 +27,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.Constants.ACTION_CREATE_ACCOUNT_IMPLICITLY](arkts-basicservices-appaccount-constants-e.md#action_create_account_implicitly)
+**Substitutes:** [ACTION_CREATE_ACCOUNT_IMPLICITLY](#ACTION_CREATE_ACCOUNT_IMPLICITLY)
 
 <!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'--><!--Device-Constants-ACTION_ADD_ACCOUNT_IMPLICITLY = 'addAccountImplicitly'-End-->
 
@@ -49,7 +49,7 @@ Note: This API is supported since API version 8 and deprecated since API version
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.Constants.ACTION_AUTH](arkts-basicservices-appaccount-constants-e.md#action_auth)
+**Substitutes:** [ACTION_AUTH](#ACTION_AUTH)
 
 <!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'--><!--Device-Constants-ACTION_AUTHENTICATE = 'authenticate'-End-->
 

@@ -18,7 +18,7 @@ readonly heightBreakpoint: HeightBreakpoint
 
 窗口高度所在的布局断点枚举。
 
-**类型：** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
+**类型：** HeightBreakpoint
 
 **起始版本：** 22
 
@@ -40,7 +40,7 @@ readonly widthBreakpoint: WidthBreakpoint
 
 窗口宽度所在的布局断点枚举。
 
-**类型：** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
+**类型：** WidthBreakpoint
 
 **起始版本：** 22
 

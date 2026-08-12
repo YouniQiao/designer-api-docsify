@@ -13,7 +13,7 @@ Provide APIs to set system uiAppearance.
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from 'kits/@kit.ArkUI';
+import { uiAppearance } from '@kit.ArkUI';
 ```
 
 ## Summary

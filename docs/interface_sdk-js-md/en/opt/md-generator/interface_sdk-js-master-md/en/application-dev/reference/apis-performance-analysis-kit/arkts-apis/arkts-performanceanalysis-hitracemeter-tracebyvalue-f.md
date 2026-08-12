@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceMeter } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## traceByValue
@@ -15,7 +15,7 @@ function traceByValue(name: string, count: number): void
 Traces the value changes of an integer variable.
 
 Since API version 19, you are advised to use the  
-[traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue) API to specify the trace output level.
+[traceByValue](#traceByValue-1) API to specify the trace output level.
 
 **Since:** 8
 

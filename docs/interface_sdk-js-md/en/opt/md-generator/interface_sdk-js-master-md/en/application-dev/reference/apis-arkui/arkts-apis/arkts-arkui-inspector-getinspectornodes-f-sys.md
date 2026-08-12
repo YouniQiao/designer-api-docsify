@@ -12,7 +12,7 @@ Get inspector node infos.
 
 **Deprecated since:** 9
 
-**Substitutes:** getInspectorTree
+**Substitutes:** [getInspectorTree](getInspectorTree)
 
 <!--Device-unnamed-declare function getInspectorNodes(): object--><!--Device-unnamed-declare function getInspectorNodes(): object-End-->
 

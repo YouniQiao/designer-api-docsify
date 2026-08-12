@@ -28,7 +28,7 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ad | [Advertisement](arkts-ads-advertisement-advertisement-i.md) | 是 | 广告对象。 |
+| ad | Advertisement | 是 | 广告对象。 |
 | options | [AdDisplayOptions](arkts-ads-advertising-addisplayoptions-i.md) | 是 | 广告展示参数。 |
 | context | common.UIAbilityContext | 否 | UIAbility的上下文环境，不设置从api: [@ohos.app.ability.common](https://developer.huawei.com/consumer/cn/doc/harmonyos-references/ js-apis-app-ability-common)中获取。<br>**起始版本：** 12 |
 
@@ -36,9 +36,9 @@ function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.U
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800004](../errorcode-ads.md#21800004-广告展示失败) | Failed to display the ad. |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) | System internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800004-广告展示失败) | Failed to display the ad. |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) | System internal error. |
 
 ## 示例
 

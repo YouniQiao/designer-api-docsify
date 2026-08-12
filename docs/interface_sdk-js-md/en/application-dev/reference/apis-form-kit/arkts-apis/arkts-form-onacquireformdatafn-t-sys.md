@@ -28,5 +28,5 @@ Called when the system acquire the form data.
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Returns the wantParams object. |
+| Record&lt;string, Object&gt; | Returns the wantParams object. |
 

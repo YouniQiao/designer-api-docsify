@@ -40,7 +40,7 @@ FolderStack(options?: FolderStackOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [FolderStackOptions](../arkts-apis/arkts-arkui-folderstack-folderstackoptions-i.md) | 否 | FolderStack的配置项，用于设置悬停态时需要移到上半屏的子组件。当需要使用折叠屏悬停能力时，通过upperItems数组指定子组件id；不 传入时FolderStack作为普通Stack组件使用，不启用悬停能力，upperItems默认为空数组。 |
+| options | [FolderStackOptions](arkts-arkui-folderstackoptions-i.md) | 否 | FolderStack的配置项，用于设置悬停态时需要移到上半屏的子组件。当需要使用折叠屏悬停能力时，通过upperItems数组指定子组件id；不 传入时FolderStack作为普通Stack组件使用，不启用悬停能力，upperItems默认为空数组。 |
 
 ## 汇总
 

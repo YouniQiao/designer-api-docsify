@@ -124,7 +124,7 @@ fontStyle?: FontStyle
 
 Font style.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 10
 
@@ -270,7 +270,7 @@ The stroke join style of the text.
 strokeWidth?: LengthMetrics | number
 ```
 
-Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md/arkts-arkui-graphics-lengthunit-e.md), the current setting does not take effect and is processed as 0.
+Text stroke width. If the unit value of LengthMetrics is [PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md#LengthUnit), the current setting does not take effect and is processed as 0.
 
 If the value is less than 0, the value is an entity word. If the value is greater than 0, the value is an outline word. If the value is equal to 0, there is no stroke effect.
 
@@ -280,7 +280,7 @@ Unit: LengthMetrics is followed by LengthMetrics when the type is LengthMetrics,
 
 Value range: (-∞, +∞)
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| number
+**Type:** LengthMetrics \| number
 
 **Since:** 23
 
@@ -334,7 +334,7 @@ Text shadow. It supports input parameters in an array to implement multiple text
 
 Only the shadow blur radius, color, and offset can be set. Smart color picking is not supported.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt;
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **Since:** 11
 

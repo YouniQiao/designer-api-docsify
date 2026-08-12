@@ -11,7 +11,7 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)
+> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState)
 > 替代。
 
 **起始版本：** 9
@@ -20,7 +20,7 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#getCooperateSwitchState
+**替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState)
 
 <!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boolean }>): void-End-->
 
@@ -39,8 +39,8 @@ function getState(deviceDescriptor: string, callback: AsyncCallback<{ state: boo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -85,7 +85,7 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate)替
+> [cooperate.getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState-1)替
 > 代。
 
 **起始版本：** 9
@@ -94,7 +94,7 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#getCooperateSwitchState
+**替代接口：** [getCooperateSwitchState](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState)
 
 <!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>--><!--Device-inputDeviceCooperate-function getState(deviceDescriptor: string): Promise<{ state: boolean }>-End-->
 
@@ -118,8 +118,8 @@ function getState(deviceDescriptor: string): Promise<{ state: boolean }>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## alloc
@@ -27,7 +27,7 @@ Creates and initializes a **Buffer** object of the specified length.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | size | number | Yes |
-| fill | string \| Buffer \| number \| number \| number | No |
+| fill | string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| number \| number \| number | No |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No |
 
 **Return value:**

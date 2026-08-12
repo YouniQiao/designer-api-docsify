@@ -14,7 +14,7 @@ function getPorts(): Array<USBPort>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getports)
+**替代接口：** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getPorts)
 
 <!--Device-usb-function getPorts(): Array<USBPort>--><!--Device-usb-function getPorts(): Array<USBPort>-End-->
 

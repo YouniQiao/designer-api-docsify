@@ -36,5 +36,5 @@ You can customize this API as required. Dynamic configuration using the **if/els
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [UIGestureEvent](../arkts-apis/arkts-arkui-common-uigestureevent-i.md) | Yes | UIGestureEvent** object, which is used to set the gesture to be bound to the component. |
+| event | [UIGestureEvent](arkts-arkui-uigestureevent-i.md) | Yes | UIGestureEvent** object, which is used to set the gesture to be bound to the component. |
 

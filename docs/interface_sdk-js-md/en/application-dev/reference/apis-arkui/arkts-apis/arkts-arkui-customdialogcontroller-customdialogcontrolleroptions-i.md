@@ -36,7 +36,7 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ borderColor?: ResourceColor | EdgeColors
 
 Defines the custom dialog's border color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md)
 
 **Since:** 23
 
@@ -198,7 +198,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the custom dialog's border style.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Since:** 23
 
@@ -218,7 +218,7 @@ borderWidth?: Dimension | EdgeWidths
 
 Defines the custom dialog's border width.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md)
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ builder: CustomBuilder | ExtendableComponent
 
 Custom builder function.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| ExtendableComponent
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md)
 
 **Since:** 23
 
@@ -636,7 +636,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -736,7 +736,7 @@ onWillDismiss?: Callback<DismissDialogAction>
 
 Callback function when the CustomDialog interactive dismiss.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[DismissDialogAction](arkts-arkui-actionsheet-dismissdialogaction-i.md)&gt;
 
 **Since:** 23
 
@@ -776,7 +776,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the custom dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 

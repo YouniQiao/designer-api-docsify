@@ -6,7 +6,7 @@ P2P connection status.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pConnectState
+**Substitutes:** [P2pConnectState](ohos.wifiManager/wifiManager.P2pConnectState)
 
 <!--Device-wifi-enum P2pConnectState--><!--Device-wifi-enum P2pConnectState-End-->
 
@@ -24,7 +24,7 @@ p2p is disconnected.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pConnectState.DISCONNECTED
+**Substitutes:** [DISCONNECTED](ohos.wifiManager/wifiManager.P2pConnectState.DISCONNECTED)
 
 <!--Device-P2pConnectState-DISCONNECTED = 0--><!--Device-P2pConnectState-DISCONNECTED = 0-End-->
 
@@ -42,7 +42,7 @@ p2p is connected.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.P2pConnectState.CONNECTED
+**Substitutes:** [CONNECTED](ohos.wifiManager/wifiManager.P2pConnectState.CONNECTED)
 
 <!--Device-P2pConnectState-CONNECTED = 1--><!--Device-P2pConnectState-CONNECTED = 1-End-->
 

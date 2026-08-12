@@ -27,5 +27,5 @@ NavDestination自定义转场动画的代理函数。
 
 | 类型 | 说明 |
 | --- | --- |
-| (Array&lt;NavDestinationTransition&gt; \| undefined) | user-set custom navDestination transitions. |
+| (Array&lt;[NavDestinationTransition](arkts-arkui-navdestination-navdestinationtransition-i.md)&gt; \| undefined) | user-set custom navDestination transitions. |
 

@@ -9,14 +9,14 @@ function getProcessRunningInfos(): Promise<Array<ProcessRunningInfo>>
 获取有关运行进程的信息。使用Promise异步回调。
 
 > 从 API Version 9 开始废弃，建议使用
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#getRunningProcessInformation
+**替代接口：** [getRunningProcessInformation](ohos.app.ability.appManager/appManager#getRunningProcessInformation)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -53,14 +53,14 @@ function getProcessRunningInfos(callback: AsyncCallback<Array<ProcessRunningInfo
 获取有关运行进程的信息。使用callback异步回调。
 
 > 从 API Version 9 开始废弃，建议使用
-> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation)
+> [appManager.getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#getRunningProcessInformation
+**替代接口：** [getRunningProcessInformation](ohos.app.ability.appManager/appManager#getRunningProcessInformation)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 

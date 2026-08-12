@@ -34,7 +34,7 @@ Gets the text content of the selected range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | No | selected range. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | No | selected range. |
 
 **Return value:**
 

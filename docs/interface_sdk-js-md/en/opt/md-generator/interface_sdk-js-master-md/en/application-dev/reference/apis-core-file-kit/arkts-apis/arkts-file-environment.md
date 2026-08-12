@@ -11,7 +11,7 @@ The **Environment** module provides ArkTS APIs for obtaining the root directorie
 ## Modules to Import
 
 ```TypeScript
-import { Environment } from 'kits/@kit.CoreFileKit';
+import { Environment } from '@kit.CoreFileKit';
 ```
 
 ## Summary

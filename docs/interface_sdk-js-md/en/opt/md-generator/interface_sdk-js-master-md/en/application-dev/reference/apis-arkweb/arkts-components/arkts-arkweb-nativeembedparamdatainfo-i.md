@@ -48,7 +48,7 @@ paramItems?: Array<NativeEmbedParamItem>
 
 Details of the changed **param** element, including the status change type, ID, name, and value of each **param**element.
 
-**Type:** Array&lt;NativeEmbedParamItem&gt;
+**Type:** Array&lt;[NativeEmbedParamItem](arkts-arkweb-nativeembedparamitem-i.md)&gt;
 
 **Since:** 21
 

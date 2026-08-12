@@ -16,7 +16,7 @@ The default duration of delayed suspension is 3 minutes when the battery level i
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-depr-f.md#requestsuspenddelay)
+**Substitutes:** [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestSuspendDelay)
 
 <!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo--><!--Device-backgroundTaskManager-function requestSuspendDelay(reason: string, callback: Callback<void>): DelaySuspendInfo-End-->
 
@@ -27,13 +27,13 @@ The default duration of delayed suspension is 3 minutes when the battery level i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | string | Yes | Reason for delayed transition to the suspended state. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Invoked when a delay is about to time out. Generally, this callback is used to notify the application 6 seconds before the delay times out. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md) | Information about the suspension delay. |
+| DelaySuspendInfo | Information about the suspension delay. |
 
 ## Examples
 

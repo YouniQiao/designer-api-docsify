@@ -98,7 +98,7 @@ setOvalShape(oval: Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 | 椭圆形的形状。 |
+| oval | [Rect](arkts-arkui-rect-t.md) | 是 | 椭圆形的形状。 |
 
 ## setRectShape
 
@@ -122,7 +122,7 @@ setRectShape(rect: Rect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 | 矩形的形状。 |
+| rect | [Rect](arkts-arkui-rect-t.md) | 是 | 矩形的形状。 |
 
 ## setRoundRectShape
 
@@ -146,5 +146,5 @@ setRoundRectShape(roundRect: RoundRect): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-roundrect-c.md) | 是 | 圆角矩形的形状。 |
+| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | 是 | 圆角矩形的形状。 |
 

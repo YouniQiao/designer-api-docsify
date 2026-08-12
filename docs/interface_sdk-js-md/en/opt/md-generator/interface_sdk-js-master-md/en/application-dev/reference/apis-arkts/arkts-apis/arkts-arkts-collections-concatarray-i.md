@@ -10,7 +10,7 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 - T: type, which can be any of the  
 [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).
 
-**Inheritance/Implementation:** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md)
+**Inheritance/Implementation:** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md#ISendable)
 
 **Since:** 12
 
@@ -21,7 +21,7 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## join
@@ -79,7 +79,7 @@ Selects a range of elements in this array to create an array.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [ConcatArray](arkts-arkts-collections-concatarray-i.md)&lt;T&gt; |
+| ConcatArray & lt;T & gt; |
 
 ## [index: number]
 

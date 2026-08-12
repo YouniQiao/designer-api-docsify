@@ -453,7 +453,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 默认值：KeyboardAvoidMode.NONE
 
-**类型：** [KeyboardAvoidMode](../arkts-apis/arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**类型：** [KeyboardAvoidMode](arkts-arkui-keyboardavoidmode-e.md)
 
 **默认值：** KeyboardAvoidMode.NONE
 
@@ -477,7 +477,7 @@ levelMode?: LevelMode
 
 默认值：LevelMode.OVERLAY
 
-**类型：** [LevelMode](../arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
+**类型：** LevelMode
 
 **起始版本：** 26.0.0
 
@@ -569,7 +569,7 @@ offset?: Position
 
 不支持设置百分比。
 
-**类型：** [Position](../arkts-apis/arkts-arkui-display-position-i.md)
+**类型：** Position
 
 **默认值：** { x: 0, y: 0 } [since 11]
 
@@ -597,7 +597,7 @@ onWillDismiss?: boolean | Callback<DismissPopupAction>
 
 在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** boolean \| Callback&lt;DismissPopupAction&gt;
+**类型：** boolean \| [Callback](arkts-arkui-callback-i.md)&lt;[DismissPopupAction](arkts-arkui-dismisspopupaction-i.md)&gt;
 
 **起始版本：** 12
 
@@ -703,7 +703,7 @@ placementOnTop?: boolean
 
 **废弃版本：** 10
 
-**替代接口：** [PopupOptions#placement](arkts-arkui-popupoptions-i.md#placement)
+**替代接口：** [placement](#placement)
 
 <!--Device-PopupOptions-placementOnTop?: boolean--><!--Device-PopupOptions-placementOnTop?: boolean-End-->
 
@@ -717,9 +717,9 @@ popupColor?: Color | string | Resource | number
 
 气泡的颜色。如需去除模糊背景填充效果，需将backgroundBlurStyle设置为BlurStyle.NONE。
 
-默认值：透明色[TRANSPARENT](../arkts-apis/arkts-arkui-color-e.md/arkts-arkui-color-e.md)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md)。
+默认值：透明色[TRANSPARENT](Color)加模糊背景填充效果[COMPONENT_ULTRA_THICK](arkts-arkui-blurstyle-e.md#BlurStyle)。
 
-**类型：** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| string \| Resource \| number
+**类型：** Color \| string \| Resource \| number
 
 **起始版本：** 11
 
@@ -915,7 +915,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 默认值：ShadowStyle.OUTER_DEFAULT_MD
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **默认值：** ShadowStyle.OUTER_DEFAULT_MD.
 
@@ -965,8 +965,8 @@ systemMaterial?: SystemUiMaterial
 
 **说明：**
 
-不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、边框颜色  
-[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影  
+不同系统材质对应不同的属性影响效果，该接口影响背景色[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundColor)、边框颜色  
+[borderColor](arkts-arkui-commonmethod-c.md#borderColor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderWidth)、阴影  
 [shadow](arkts-arkui-commonmethod-c.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)

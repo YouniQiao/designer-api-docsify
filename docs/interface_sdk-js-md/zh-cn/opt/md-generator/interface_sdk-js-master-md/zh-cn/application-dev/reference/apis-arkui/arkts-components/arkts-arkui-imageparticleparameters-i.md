@@ -40,7 +40,7 @@ size: ParticleTuple<Dimension, Dimension>
 
 默认值：[0, 0]
 
-**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;Dimension, Dimension&gt;
+**类型：** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md), [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **起始版本：** 10
 

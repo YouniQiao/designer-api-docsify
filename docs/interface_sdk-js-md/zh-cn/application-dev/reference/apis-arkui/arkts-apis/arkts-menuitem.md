@@ -21,6 +21,6 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md) | 除支持[通用属性](common)外，还支持以下属性： |
 | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) |  |
 

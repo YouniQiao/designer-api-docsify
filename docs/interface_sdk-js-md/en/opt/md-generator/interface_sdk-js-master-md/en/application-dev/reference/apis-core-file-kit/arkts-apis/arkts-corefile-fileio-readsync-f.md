@@ -20,7 +20,7 @@ Reads data from a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:readSync](arkts-corefile-fileio-readsync-f.md#readsync)
+**Substitutes:** [readSync](arkts-corefile-file-fs-readsync-f.md#readSync)
 
 <!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number--><!--Device-unnamed-declare function readSync(  fd: number,  buffer: ArrayBuffer,  options?: {    offset?: number;    length?: number;    position?: number;  }): number-End-->
 

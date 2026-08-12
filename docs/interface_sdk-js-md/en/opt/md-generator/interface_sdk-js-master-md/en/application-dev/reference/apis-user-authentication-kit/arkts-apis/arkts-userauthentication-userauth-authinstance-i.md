@@ -6,7 +6,7 @@ Implements user authentication.
 
 **Deprecated since:** 10
 
-**Substitutes:** [userAuth.UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)
+**Substitutes:** [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#UserAuthInstance)
 
 <!--Device-userAuth-interface AuthInstance--><!--Device-userAuth-interface AuthInstance-End-->
 
@@ -15,7 +15,7 @@ Implements user authentication.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## cancel
@@ -28,15 +28,15 @@ Cancels this authentication.
 
 > **NOTE：**
 > 
-> Use the obtained [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) object to call this API to cancel authentication.
-> This [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) must be the object that is currently performing
+> Use the obtained [AuthInstance](#AuthInstance) object to call this API to cancel authentication.
+> This [AuthInstance](#AuthInstance) must be the object that is currently performing
 > authentication.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [userAuth.UserAuthInstance.cancel](arkts-userauthentication-userauth-userauthinstance-i.md#cancel)
+**Substitutes:** [cancel](arkts-userauthentication-userauth-userauthinstance-i.md#cancel)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -48,9 +48,9 @@ Cancels this authentication.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -79,18 +79,18 @@ off: (name: AuthEventKey) => void
 Unsubscribes from the user authentication events of the specified type.
 
 - **name**: indicates the authentication event type. The value **result** means to unsubscribe from the  
-authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md).
+authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey).
 
 > **NOTE：**
 > 
-> The [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) instance used to invoke this API must be the one used to
+> The [AuthInstance](#AuthInstance) instance used to invoke this API must be the one used to
 > subscribe to the event.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** userAuth.UserAuthInstance.off
+**Substitutes:** [off](#off)
 
 <!--Device-AuthInstance-off: (name: AuthEventKey) => void--><!--Device-AuthInstance-off: (name: AuthEventKey) => void-End-->
 
@@ -106,8 +106,8 @@ authentication result, and the value **tip** means to unsubscribe from the authe
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -143,19 +143,19 @@ on: (name: AuthEventKey, callback: AuthEvent) => void
 Subscribes to the user authentication events of the specified type.
 
 - **name**: indicates the authentication event type. The value **result** means that the callback returns the  
-authentication result, and the value **tip** means that the callback returns the authentication tip information.For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md).  
+authentication result, and the value **tip** means that the callback returns the authentication tip information.For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey).  
 - **callback**: callback used to return the authentication result or tip information. For details, see  
-[AuthEvent](arkts-userauthentication-userauth-authevent-i.md).
+[AuthEvent](arkts-userauthentication-userauth-authevent-i.md#AuthEvent).
 
 > **NOTE：**
 > 
-> Use the [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) instance obtained to call this API.
+> Use the [AuthInstance](#AuthInstance) instance obtained to call this API.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** userAuth.UserAuthInstance.on
+**Substitutes:** [on](userAuth.UserAuthInstance.on)
 
 <!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void--><!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void-End-->
 
@@ -172,8 +172,8 @@ authentication result, and the value **tip** means that the callback returns the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 
@@ -224,13 +224,13 @@ Starts authentication.
 
 > **NOTE：**
 > 
-> Use the obtained [AuthInstance](arkts-userauthentication-userauth-authinstance-i.md) object to call this API for authentication.
+> Use the obtained [AuthInstance](#AuthInstance) object to call this API for authentication.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [userAuth.UserAuthInstance.start](arkts-userauthentication-userauth-userauthinstance-i.md#start)
+**Substitutes:** [start](arkts-userauthentication-userauth-userauthinstance-i.md#start)
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -242,17 +242,17 @@ Starts authentication.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [12500009](../errorcode-useriam.md#12500009-authentication-locked) |
-| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12500007](../errorcode-useriam.md#12500007-authentication-service-is-busy) |
-| [12500004](../errorcode-useriam.md#12500004-authentication-timed-out) |
-| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-| [12500003](../errorcode-useriam.md#12500003-authentication-canceled) |
-| [12500001](../errorcode-useriam.md#12500001-authentication-failed) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [12500009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-authentication-locked) |
+| [12500006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12500007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-authentication-service-is-busy) |
+| [12500004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-authentication-timed-out) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-authentication-canceled) |
+| [12500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-authentication-failed) |
 
 ## Examples
 

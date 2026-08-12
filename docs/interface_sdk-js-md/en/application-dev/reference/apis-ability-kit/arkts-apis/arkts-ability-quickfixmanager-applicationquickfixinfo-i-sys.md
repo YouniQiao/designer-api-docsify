@@ -15,7 +15,7 @@ Defines the quick fix information at the application level.
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from 'kits/@kit.AbilityKit';
+import { quickFixManager } from '@kit.AbilityKit';
 ```
 
 ## bundleName
@@ -86,7 +86,7 @@ readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>
 
 Quick fix information at the HAP file level.
 
-**Type:** Array&lt;HapModuleQuickFixInfo&gt;
+**Type:** Array&lt;[HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md)&gt;
 
 **Since:** 9
 

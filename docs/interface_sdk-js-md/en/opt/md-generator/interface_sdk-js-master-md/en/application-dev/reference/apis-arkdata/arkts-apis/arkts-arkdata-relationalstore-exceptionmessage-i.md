@@ -11,7 +11,7 @@ Represents an exception message about the SQL statement executed by the database
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code

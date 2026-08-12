@@ -1,6 +1,6 @@
 # @ohos.bundle.overlay
 
-本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息查询以及禁用使能的能力。
+本模块提供overlay特征应用的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo)信息查询以及禁用使能的能力。
 
 overlay特征应用指应用中包含有overlay资源包，overlay资源包详见  
 [overlay机制](../../../quick-start/resource-categories-and-access.md#overlay机制)。

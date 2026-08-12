@@ -36,7 +36,7 @@ mouseEvent?: MouseEvent
 
 Information about clicking or touching and holding using the mouse or touchpad.
 
-**Type:** [MouseEvent](../../apis-arkui/arkts-components/arkts-arkui-mouseevent-i.md)
+**Type:** MouseEvent
 
 **Since:** 20
 
@@ -54,7 +54,7 @@ result?: EventResult
 
 Mouse event consumption result.
 
-**Type:** [EventResult](../arkts-apis/arkts-arkweb-web-eventresult-c.md)
+**Type:** [EventResult](arkts-arkweb-eventresult-c.md)
 
 **Since:** 20
 

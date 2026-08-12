@@ -13,7 +13,7 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from 'kits/@kit.ArkUI';
+import { AtomicServiceMenuBar } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -40,7 +40,7 @@ A constructor used to create an **AtomicServiceMenuBar** object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
+| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 
 ## setVisible
 

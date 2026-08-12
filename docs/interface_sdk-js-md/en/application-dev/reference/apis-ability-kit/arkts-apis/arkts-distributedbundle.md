@@ -5,7 +5,7 @@ The distributedBundle module manages distributed bundles.
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
+> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md#distributedBundleManager)
 > instead.
 > 
 > The APIs provided by this module are system APIs.
@@ -16,7 +16,7 @@ The distributedBundle module manages distributed bundles.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.distributedBundleManager:distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
+**Substitutes:** [distributedBundleManager](arkts-bundle-distributedbundlemanager.md#distributedBundleManager)
 
 <!--Device-unnamed-declare namespace distributedBundle--><!--Device-unnamed-declare namespace distributedBundle-End-->
 
@@ -27,7 +27,7 @@ The distributedBundle module manages distributed bundles.
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from 'kits/@kit.AbilityKit';
+import { distributedBundle } from '@kit.AbilityKit';
 ```
 
 ## Summary

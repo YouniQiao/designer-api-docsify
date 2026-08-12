@@ -5,16 +5,16 @@ Describes the rectangle of the surface held by the **XComponent**.
 > **NOTE：**
 
 > The **surfaceWidth** and **surfaceHeight** attributes default to the size of the **XComponent** if the
-> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API is not called and neither
+> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setXComponentSurfaceRect) API is not called and neither
 > [border](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#border) nor
-> [padding](arkts-arkui-commonmethod-c.md#padding) is set.
+> [padding](CommonMethod#padding) is set.
 > 
 > Make sure the values of **surfaceWidth** and **surfaceHeight** do not exceed 8192 px. Exceeding this limit may
 > lead to rendering issues.
 > 
 > In immersive scenarios, the default layout of **SurfaceRect** does not include the safe area. To achieve an
 > immersive effect, you must set the surface display area using the
-> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setxcomponentsurfacerect) API.
+> [setXComponentSurfaceRect](arkts-arkui-xcomponentcontroller-c.md#setXComponentSurfaceRect) API.
 
 **Since:** 12
 

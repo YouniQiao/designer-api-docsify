@@ -178,7 +178,7 @@ style?: SliderStyle
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** [SliderStyle](../arkts-components/arkts-arkui-sliderstyle-e.md)
+**类型：** [SliderStyle](arkts-arkui-slider-sliderstyle-e.md)
 
 **默认值：** SliderStyle.OutSet
 
@@ -217,7 +217,7 @@ value?: double | undefined | Bindable<double>
 
 **ArkTS-Sta起始版本：** 23
 
-**类型：** double \| undefined \| Bindable&lt;double&gt;
+**类型：** double \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;double&gt;
 
 **起始版本：** 23
 

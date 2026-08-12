@@ -11,7 +11,7 @@ Provides methods to accessing bluetooth HID(Human Interface Device)-related capa
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

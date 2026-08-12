@@ -21,24 +21,24 @@ function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Ar
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | filePath | string | 是 |
-| identifyPolicies | Array&lt;Policy&gt; | 是 |
+| identifyPolicies | Array & lt;Policy & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;MatchResult&gt;&gt; |
+| Promise&lt;Array&lt;[MatchResult](arkts-dataprotection-identifysensitivecontent-matchresult-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19110003](../errorcode-dlp.md#19110003-文件不支持) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [19110002](../errorcode-dlp.md#19110002-文件敏感信息识别超时) |
-| [19110001](../errorcode-dlp.md#19110001-参数错误) |
-| [19110004](../errorcode-dlp.md#19110004-系统功能运行异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [19110003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110003-文件不支持) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [19110002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110002-文件敏感信息识别超时) |
+| [19110001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110001-参数错误) |
+| [19110004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110004-系统功能运行异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

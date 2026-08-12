@@ -79,7 +79,7 @@ constructor(numberFormat: intl.NumberFormat | SimpleNumberFormat, options?: Styl
 
 **废弃版本：** 20
 
-**替代接口：** [i18n.StyledNumberFormat.constructor](arkts-localization-i18n-stylednumberformat-c.md#constructor)(numberFormat:
+**替代接口：** [constructor](i18n.StyledNumberFormat.constructor(numberFormat:)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

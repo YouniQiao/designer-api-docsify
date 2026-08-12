@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## showToast
@@ -31,7 +31,7 @@ see [ShowToastOptions](#showtoastoptions).
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showToast
+**Substitutes:** [showToast](ohos.arkui.UIContext.PromptAction#showToast)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,8 +49,8 @@ see [ShowToastOptions](#showtoastoptions).
 
 | Error Code ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

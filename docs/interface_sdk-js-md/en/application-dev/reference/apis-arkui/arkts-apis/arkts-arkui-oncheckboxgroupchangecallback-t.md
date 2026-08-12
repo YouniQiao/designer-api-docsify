@@ -20,5 +20,5 @@ Defines a CheckboxGroup callback when onChange.Anonymous Object Rectification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckboxGroupResult](../arkts-components/arkts-arkui-checkboxgroupresult-i.md) | Yes | checkbox group result |
+| value | [CheckboxGroupResult](arkts-arkui-checkboxgroup-checkboxgroupresult-i.md) | Yes | checkbox group result |
 

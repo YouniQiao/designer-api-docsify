@@ -13,7 +13,7 @@ The proxy of the UIExtension window.
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'kits/@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## hideNonSecureWindows
@@ -27,8 +27,8 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 > **NOTE：**
 > 
 > - A non-secure window refers to any window that may obstruct the
-> [EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i) or
-> [UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i), such as global floating windows
+> [EmbeddedComponent](./@internal/component/ets/embedded_component) or
+> [UIExtensionComponent](./@internal/component/ets/ui_extension_component), such as global floating windows
 > , host subwindows, and dialog box windows created by the host application (excluding windows of these types
 > created by system applications).
 > 
@@ -69,10 +69,10 @@ Sets whether to hide non-secure windows. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS". 2. The UIExtension window proxy is abnormal. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. Permission denied. Interface caller does not have permission "ohos.permission.ALLOW_SHOW_NON_SECURE_WINDOWS". 2. The UIExtension window proxy is abnormal. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -145,9 +145,9 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | The UIExtension window proxy is abnormal. |
-| [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | The UIExtension window proxy is abnormal. |
+| [1300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
 
 ## Examples
 

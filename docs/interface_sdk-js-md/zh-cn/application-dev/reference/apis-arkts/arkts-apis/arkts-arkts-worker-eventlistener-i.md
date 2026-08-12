@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventListener
+**替代接口：** [WorkerEventListener](arkts-arkts-worker-workereventlistener-i.md#WorkerEventListener)
 
 <!--Device-unnamed-export interface EventListener--><!--Device-unnamed-export interface EventListener-End-->
 
@@ -28,7 +28,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventListener.(event:
+**替代接口：** [ohos.worker.WorkerEventListener.](ohos.worker.WorkerEventListener.(event:)
 
 <!--Device-EventListener-(evt: Event): void | Promise<void>--><!--Device-EventListener-(evt: Event): void | Promise<void>-End-->
 
@@ -38,7 +38,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| evt | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 | evt evt 回调的事件类。 |
+| evt | [Event](arkts-arkts-worker-event-i.md) | 是 | evt evt 回调的事件类。 |
 
 ## 示例
 

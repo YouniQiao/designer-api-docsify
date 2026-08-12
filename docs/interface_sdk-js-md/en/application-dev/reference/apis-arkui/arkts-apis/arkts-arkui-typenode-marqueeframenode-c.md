@@ -34,11 +34,11 @@ Initialize Marquee FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MarqueeOptions](../arkts-components/arkts-arkui-marqueeoptions-i.md) | Yes |  |
+| value | MarqueeOptions | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MarqueeAttribute](../arkts-components/arkts-arkui-marquee-attribute.md) |  |
+| MarqueeAttribute |  |
 

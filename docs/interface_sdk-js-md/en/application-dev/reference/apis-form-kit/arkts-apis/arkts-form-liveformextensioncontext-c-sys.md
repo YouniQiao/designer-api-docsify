@@ -1,10 +1,10 @@
 # LiveFormExtensionContext
 
 **LiveFormExtensionContext**, inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md), is the context of   
-[LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md).
+[ExtensionContext](./application/ExtensionContext:ExtensionContext), is the context of   
+[LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
 
-**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ ArkTS-Sta:
 public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): long
 ```
 
-Connect a service extension ability.The destination of the connection must be a service extension.You must implement the {@link ConnectOptions} interface to obtain the proxy of the target service extension when the Service extension is connected.
+Connect a service extension ability.The destination of the connection must be a service extension.You must implement the [ConnectOptions](ConnectOptions) interface to obtain the proxy of the target service extension when the Service extension is connected.
 
 **Since:** 21
 
@@ -57,10 +57,10 @@ Connect a service extension ability.The destination of the connection must be a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [16500100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## disconnectServiceExtensionAbility
 
@@ -74,7 +74,7 @@ ArkTS-Sta:
 public disconnectServiceExtensionAbility(connectionId: long): Promise<void>
 ```
 
-Disconnect an ability to a service extension, in contrast to {@link connectServiceExtensionAbility}.
+Disconnect an ability to a service extension, in contrast to [connectServiceExtensionAbility](#connectServiceExtensionAbility).
 
 **Since:** 21
 
@@ -104,7 +104,7 @@ Disconnect an ability to a service extension, in contrast to {@link connectServi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16501011](../errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) | The form can not support this operation |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 

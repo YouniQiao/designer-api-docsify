@@ -34,7 +34,7 @@ type: ServiceType
 
 服务类型。
 
-**类型：** [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md)
+**类型：** ServiceType
 
 **起始版本：** 10
 

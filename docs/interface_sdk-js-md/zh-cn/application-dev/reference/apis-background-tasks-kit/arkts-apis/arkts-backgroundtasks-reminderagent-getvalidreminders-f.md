@@ -14,7 +14,7 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders)
+**替代接口：** [getValidReminders](reminderAgentManager.getValidReminders)
 
 <!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgent-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
@@ -72,7 +72,7 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.getValidReminders](arkts-backgroundtasks-reminderagentmanager-getvalidreminders-f.md#getvalidreminders)
+**替代接口：** [getValidReminders](reminderAgentManager.getValidReminders)
 
 <!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgent-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 

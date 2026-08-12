@@ -50,7 +50,7 @@ Obtains the pressed status of modifier keys. For details about the error message
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -232,7 +232,7 @@ source: SourceType
 
 Type of the event input device.
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** [SourceType](arkts-arkui-sourcetype-e.md)
 
 **Since:** 8
 
@@ -254,7 +254,7 @@ sourceTool: SourceTool
 
 Event input source type.
 
-**Type:** [SourceTool](../arkts-apis/arkts-arkui-common-sourcetool-e.md)
+**Type:** [SourceTool](arkts-arkui-sourcetool-e.md)
 
 **Since:** 9
 
@@ -276,7 +276,7 @@ target: EventTarget
 
 Object that triggers the gesture event.
 
-**Type:** [EventTarget](../../apis-arkts/arkts-apis/arkts-arkts-worker-eventtarget-i.md)
+**Type:** [EventTarget](arkts-arkui-eventtarget-i.md)
 
 **Since:** 8
 

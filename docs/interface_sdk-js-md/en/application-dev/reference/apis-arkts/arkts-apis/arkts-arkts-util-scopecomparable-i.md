@@ -13,7 +13,7 @@ The ScopeComparable contains comparison methods.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## compareTo

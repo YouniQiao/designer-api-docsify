@@ -13,7 +13,7 @@ Describes the event service.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## description
@@ -44,7 +44,7 @@ type: ServiceType
 
 Service type.
 
-**Type:** [ServiceType](arkts-calendar-calendarmanager-servicetype-e.md)
+**Type:** ServiceType
 
 **Since:** 10
 

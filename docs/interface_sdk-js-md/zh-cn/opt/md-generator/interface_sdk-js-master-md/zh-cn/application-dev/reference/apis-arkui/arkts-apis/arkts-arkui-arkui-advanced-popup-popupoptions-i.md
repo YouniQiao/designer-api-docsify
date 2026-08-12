@@ -60,7 +60,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 12
 

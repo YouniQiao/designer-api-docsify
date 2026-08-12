@@ -1,6 +1,6 @@
 # HitTestValue
 
-Provides element information of the click area. related to {@link getLastHitTest} method.
+Provides element information of the click area. related to [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) method.
 
 **Since:** 23
 
@@ -13,7 +13,7 @@ Provides element information of the click area. related to {@link getLastHitTest
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## extra

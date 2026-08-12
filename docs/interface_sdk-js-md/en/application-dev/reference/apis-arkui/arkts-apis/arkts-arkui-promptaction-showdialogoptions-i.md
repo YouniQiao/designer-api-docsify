@@ -13,7 +13,7 @@ Show dialog options.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## alignment
@@ -24,7 +24,7 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** DialogAlignment
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines the dialog's background blur Style
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -66,7 +66,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Defines the dialog's background blur style with options
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ backgroundColor?: ResourceColor
 
 Defines the dialog's background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -108,7 +108,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Defines the dialog's background effect with options
 
-**Type:** [BackgroundEffectOptions](../arkts-components/arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 23
 
@@ -170,7 +170,7 @@ hoverModeArea?: HoverModeAreaType
 
 Defines the dialog's display area in hover mode.
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -300,7 +300,7 @@ maskRect?: Rectangle
 
 Mask Region of dialog. The size can't exceed the main window.
 
-**Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
+**Type:** Rectangle
 
 **Since:** 23
 
@@ -340,7 +340,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -360,7 +360,7 @@ onDidAppear?: VoidCallback
 
 Callback function when the dialog appears.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -380,7 +380,7 @@ onDidDisappear?: VoidCallback
 
 Callback function when the dialog disappears.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -400,7 +400,7 @@ onWillAppear?: VoidCallback
 
 Callback function before the dialog openAnimation starts.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -420,7 +420,7 @@ onWillDisappear?: VoidCallback
 
 Callback function before the dialog closeAnimation starts.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -440,7 +440,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 23
 

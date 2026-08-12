@@ -36,7 +36,7 @@ get size(): Size
 
 Obtains the width and height of the canvas.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 11
 
@@ -56,7 +56,7 @@ get sizeInPixel(): Size
 
 Obtains the width and height of the canvas in px.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 12
 

@@ -72,7 +72,7 @@ Loads tone. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -141,7 +141,7 @@ Releases the player. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -210,7 +210,7 @@ Starts player. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -279,7 +279,7 @@ Stops player. This method uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

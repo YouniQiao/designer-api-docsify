@@ -13,7 +13,7 @@ Defines the popup icon options
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## borderRadius
@@ -24,7 +24,7 @@ borderRadius?: Length | BorderRadiuses
 
 Set the icon border radius.
 
-**Type:** [Length](arkts-arkui-length-t.md) \| BorderRadiuses
+**Type:** Length \| BorderRadiuses
 
 **Default:** $r('sys.float.ohos_id_corner_radius_default_s')
 
@@ -46,7 +46,7 @@ fillColor?: ResourceColor
 
 Set the icon fill color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ height?: Dimension
 
 Set the icon height.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 32.0_vp
 
@@ -88,7 +88,7 @@ image?: ResourceStr
 
 Set the icon image.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ width?: Dimension
 
 Set the icon width.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 32.0_vp
 

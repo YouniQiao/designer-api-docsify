@@ -13,7 +13,7 @@ ActionMenu options.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from 'kits/@kit.ArkUI';
+import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
 ## buttons
@@ -25,7 +25,7 @@ buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTrip
 
 Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
 
-**Type:** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| PromptActionDoubleButtons \| PromptActionTripleButtons \| PromptActionQuadrupleButtons \| PromptActionQuintupleButtons \| PromptActionSextupleButtons
+**Type:** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| [PromptActionDoubleButtons](arkts-arkui-promptaction-promptactiondoublebuttons-t.md) \| [PromptActionTripleButtons](arkts-arkui-promptaction-promptactiontriplebuttons-t.md) \| [PromptActionQuadrupleButtons](arkts-arkui-promptaction-promptactionquadruplebuttons-t.md) \| [PromptActionQuintupleButtons](arkts-arkui-promptaction-promptactionquintuplebuttons-t.md) \| [PromptActionSextupleButtons](arkts-arkui-promptaction-promptactionsextuplebuttons-t.md)
 
 **Since:** 23
 
@@ -131,7 +131,7 @@ onDidAppear?: VoidCallback
 
 Callback function when the menu appears.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -151,7 +151,7 @@ onDidDisappear?: VoidCallback
 
 Callback function when the menu disappears.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -171,7 +171,7 @@ onWillAppear?: VoidCallback
 
 Callback function before the menu openAnimation starts.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 
@@ -191,7 +191,7 @@ onWillDisappear?: VoidCallback
 
 Callback function before the menu closeAnimation starts.
 
-**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**Type:** VoidCallback
 
 **Since:** 23
 

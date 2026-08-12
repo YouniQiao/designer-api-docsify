@@ -11,7 +11,7 @@ Defines the certificate chain data, which is passed in as input parameters durin
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## count

@@ -11,7 +11,7 @@ Want is a carrier for information transfer between objects (application componen
 ## Modules to Import
 
 ```TypeScript
-import { Want } from 'kits/@kit.AbilityKit';
+import { Want } from '@kit.AbilityKit';
 ```
 
 ## abilityName
@@ -133,7 +133,7 @@ flags?: number
 ```
 
 How the Want object will be handled. The value is of the enumeration type   
-[Flags](arkts-ability-wantconstant-flags-e.md). A numeric value should be passed by default.
+[Flags](arkts-ability-wantconstant-flags-e.md#Flags). A numeric value should be passed by default.
 
 For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI_PERMISSION**), the receiver is temporarily granted the permission to read the data pointed to by the URI.
 
@@ -187,7 +187,7 @@ a string.
 - **ohos.aafwk.param.callerAppId**: appId of the caller. The value is a string.  
 - **ohos.aafwk.param.callerAppIdentifier**: appIdentifier of the caller. The value is a string.  
 - **ohos.aafwk.param.callerToken**: token of the caller. The value is a string.  
-- **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md), that is,   
+- **ohos.aafwk.param.callerUid**: UID in [BundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo), that is,   
 the application's UID in the bundle information. The value is a number.  
 - **ohos.param.callerAppCloneIndex**: clone index of the caller. The value is of the numeric type.  
 - **component.startup.newRules**: enabled status of the new control rule. The value is of the Boolean type.  
@@ -195,21 +195,21 @@ the application's UID in the bundle information. The value is a number.
 - **ohos.ability.params.abilityRecoveryRestart**: support for ability restart upon fault recovery. The value is of   
 the Boolean type.  
 - **ohos.extra.param.key.showMode**: mode to show the atomic service startup. The value is an enumerated value of   
-[wantConstant.ShowMode](arkts-ability-wantconstant-showmode-e.md).
+[wantConstant.ShowMode](./@ohos.app.ability.wantConstant:wantConstant.showMode).
 
 **NOTE：**
 
 In cross-device scenarios, the following fields do not take effect and cannot be used for identity or permission verification: **ohos.aafwk.param.callerPid**, **ohos.aafwk.param.callerToken**, and **ohos.aafwk.param.callerUid**.
 
-2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the keys and their values, see [wantConstant.Params](arkts-ability-wantconstant-params-e.md).3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
+2. Certain keys are defined by the system, and their values need to be manually assigned. For details about the keys and their values, see [wantConstant.Params](./@ohos.app.ability.wantConstant:wantConstant.params).3. In addition to the foregoing cases, applications may further agree on the key-value pairs to transfer.
 
 **NOTE：**
 
 For details about the constants of **Params** in **want**, see   
-[wantConstant](arkts-ability-wantconstant.md).
+[wantConstant](arkts-app-ability-wantconstant.md#wantConstant).
 
 Note that a maximum of 100 KB data that can be transferred by using **WantParams**. If the data volume exceeds 100 KB, transfer data in [WriteRawDataBuffer](./@ohos.rpc:rpc.writeRawDataBuffer) or   
-[uri](arkts-ability-app-ability-want-want-c.md#uri) mode.
+[uri](../../apis-arkts/arkts-apis/arkts-uri.md#uri) mode.
 
 The values of **parameters** must be of the following basic data types: String, Number, Boolean, Object, undefined, and null. Functions in an object cannot be transferred.
 

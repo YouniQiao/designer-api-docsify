@@ -106,7 +106,7 @@ The spacing between two rounds of marquee.
 
 Default value is marquee width.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 23
 
@@ -176,7 +176,7 @@ Step length of the scrolling animation text. If the value is greater than the te
 
 Default value: **6**
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
 **Type:** number
 

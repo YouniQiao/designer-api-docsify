@@ -1,8 +1,8 @@
 # AutoFillExtensionAbility (System API)
 
-The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md).
+The AutoFillExtensionAbility module provides APIs for automatically filling in and saving accounts and passwords. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility).
 
-**Inheritance/Implementation:** AutoFillExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** AutoFillExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **Since:** 11
 
@@ -17,7 +17,7 @@ The AutoFillExtensionAbility module provides APIs for automatically filling in a
 ## Modules to Import
 
 ```TypeScript
-import { AutoFillExtensionAbility } from 'kits/@kit.AbilityKit';
+import { AutoFillExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onBackground
@@ -169,7 +169,7 @@ Called when an auto-fill request is initiated or a password is generated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
 | request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | Yes | Data to be automatically filled in. |
 | callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | Yes | Callback used for the auto-fill request. |
 
@@ -265,7 +265,7 @@ Called when automatic or manual saving is initiated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
 | request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md) | Yes | Data to be saved. |
 | callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | Yes | Callback used for the saving request. |
 
@@ -326,7 +326,7 @@ Called when a UIExtensionContentSession instance is destroyed for this AutoFillE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UI content information related to the AutoFillExtensionAbility. |
 
 ## Examples
 

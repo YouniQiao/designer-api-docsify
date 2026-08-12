@@ -31,7 +31,7 @@ Creates a progress indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;Type&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
+| options | [ProgressOptions](arkts-arkui-progressoptions-i.md)&lt;[Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md)&gt; | Yes | Options of the progress indicator, which vary by progress indicator type. |
 
 ## Summary
 

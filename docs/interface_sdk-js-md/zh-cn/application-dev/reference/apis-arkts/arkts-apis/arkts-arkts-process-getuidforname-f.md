@@ -14,7 +14,7 @@ function getUidForName(v: string): number
 
 **废弃版本：** 9
 
-**替代接口：** [process.ProcessManager.getUidForName](arkts-arkts-process-processmanager-c.md#getuidforname)
+**替代接口：** [getUidForName](arkts-arkts-process-processmanager-c.md#getUidForName)
 
 <!--Device-process-function getUidForName(v: string): number--><!--Device-process-function getUidForName(v: string): number-End-->
 

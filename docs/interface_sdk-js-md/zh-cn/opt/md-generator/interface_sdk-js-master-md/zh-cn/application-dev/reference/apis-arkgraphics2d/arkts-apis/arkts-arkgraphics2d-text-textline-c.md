@@ -2,8 +2,8 @@
 
 描述段落基础文本行结构的载体。
 
-下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)类的[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines)接口或者  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md)类的[createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline)接口获取到TextLine对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)类的[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines)接口或者  
+[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset)类的[createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine)接口获取到TextLine对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -33,7 +33,7 @@ createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string)
 | --- | --- | --- |
 | width | number | 是 |
 | ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | 是 |
-| ellipsis | string | 是 |
+| [ellipsis](arkts-arkgraphics2d-text-textstyle-i.md) | string | 是 |
 
 **返回值：**
 
@@ -188,7 +188,7 @@ getGlyphRuns(): Array<Run>
 
 | 类型 |
 | --- |
-| Array&lt;Run&gt; |
+| Array&lt;[Run](arkts-arkgraphics2d-text-run-c.md)&gt; |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from 'kits/@kit.CoreFileKit';
+import { keyManager } from '@kit.CoreFileKit';
 ```
 
 ## deactivateUserKey
@@ -37,11 +37,11 @@ When the screen is locked, the specified user key is uninstalled synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. Possible causes: Mandatory parameters are left unspecified; Or input parameter has type different from the type the interface requires. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. Possible causes: Mandatory parameters are left unspecified; Or input parameter has type different from the type the interface requires. |
 | 13600009 | User ID out of range. Possible causes: input parameter userId &lt; 100 or userId &gt; 10736. |
 | 13600008 | No such object. Possible causes: Cannot find userkey for the specified user. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

@@ -18,7 +18,7 @@ PanGesture is used to trigger a pan gesture when the movement distance of a fing
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 7
 
@@ -34,7 +34,7 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } \| PanGestureOptions | No |  |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | No |  |
 
 **Return value:**
 
@@ -48,7 +48,7 @@ Creates a pan gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-ges
 (options?: PanGestureHandlerOptions): PanGestureInterface
 ```
 
-Creates a pan gesture. Compared with [PanGesture](arkts-arkui-pangestureinterface-i.md) | PanGestureOptions)}, this API adds the **isFingerCountLimited** and **distanceMap** parameters to **options**, which control whether to enforce the exact number of fingers touching the screen and specify the minimum pan distance required to trigger the gesture for different input sources, respectively.
+Creates a pan gesture. Compared with [PanGesture](PanGestureInterface(value?: { fingers?: number; direction?: PanDirection; distance?: number) | PanGestureOptions)}, this API adds the **isFingerCountLimited** and **distanceMap** parameters to **options**, which control whether to enforce the exact number of fingers touching the screen and specify the minimum pan distance required to trigger the gesture for different input sources, respectively.
 
 **Since:** 15
 
@@ -128,7 +128,7 @@ Registers the callback for pan gesture cancellation. This callback is triggered 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes | Callback for pan gesture cancellation. |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes | Callback for pan gesture cancellation. |
 
 **Return value:**
 

@@ -11,7 +11,7 @@ Provides APIs for handling data transformations related to state management.
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## addMonitor
@@ -46,9 +46,9 @@ Dynamically adds a listener to the state variable of state management V2. For de
 
 | Error Code ID |
 | --- |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) |
-| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) |
+| [130001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) |
+| [130000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) |
+| [130002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) |
 
 ## applySync
 
@@ -85,7 +85,7 @@ Synchronously updates a specified state variable. This API receives a closure fu
 
 | Error Code ID |
 | --- |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
+| [140001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
 
 ## Examples
 
@@ -282,7 +282,7 @@ static clearMonitor(target: object, path: string | string[], monitorCallback?: M
 ```
 
 Deletes the listener added to the state variable of the state management V2 by calling the  
-[addMonitor](arkts-arkui-arkui-statemanagement-uiutils-c.md#addmonitor) API. For details, see  
+[addMonitor](#addMonitor) API. For details, see  
 [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
@@ -307,9 +307,9 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 | Error Code ID |
 | --- |
-| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) |
-| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) |
-| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) |
+| [130001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) |
+| [130000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) |
+| [130002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) |
 
 ## enableV2Compatibility
 
@@ -407,8 +407,8 @@ Processes all state variable modifications before this API call and synchronizes
 
 | Error Code ID |
 | --- |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
+| [140002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) |
+| [140001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
 
 ## Examples
 
@@ -479,8 +479,8 @@ Synchronously updates all state variable modifications before this API call, inc
 
 | Error Code ID |
 | --- |
-| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) |
-| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
+| [140002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) |
+| [140001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) |
 
 ## Examples
 
@@ -533,7 +533,7 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) of the given @Component(V1) or @ComponentV2.  
+Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#CustomComponentContext) of the given @Component(V1) or @ComponentV2.  
 **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool,see  
 [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
@@ -825,7 +825,7 @@ Creates a mutable two-way data binding instance, which is used to construct the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | getter | [GetterCallback](arkts-arkui-gettercallback-t.md)&lt;T&gt; | Yes |
-| setter | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | Yes |
+| [setter](../../apis-ability-kit/arkts-apis/arkts-ability-appmanager-keepalivebundleinfo-i-sys.md) | [SetterCallback](arkts-arkui-settercallback-t.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
@@ -950,7 +950,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @Observed and can be used to initialize @ObjectLink.
 
-This API can be used together with [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility) in scenarios where state management V1 and V2 are used together. For details, see  
+This API can be used together with [enableV2Compatibility](#enableV2Compatibility) in scenarios where state management V1 and V2 are used together. For details, see  
 [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19

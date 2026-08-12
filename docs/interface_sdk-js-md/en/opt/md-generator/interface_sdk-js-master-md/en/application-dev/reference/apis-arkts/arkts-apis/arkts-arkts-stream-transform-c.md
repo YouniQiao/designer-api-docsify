@@ -1,9 +1,9 @@
 # Transform
 
 A special duplex stream that supports data conversion and result output. The **Transform** class inherits from  
-[Duplex](arkts-arkts-stream-duplex-c.md) and supports all the APIs in **Duplex**.
+[Duplex](arkts-arkts-stream-duplex-c.md#Duplex) and supports all the APIs in **Duplex**.
 
-**Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md)
+**Inheritance/Implementation:** Transform extends [Duplex](arkts-arkts-stream-duplex-c.md#Duplex)
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ A special duplex stream that supports data conversion and result output. The **T
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor

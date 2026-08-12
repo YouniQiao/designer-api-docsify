@@ -12,7 +12,7 @@ QuickImageDataHandler is a media asset handler used to customize the media asset
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## onDataPrepared
@@ -41,4 +41,4 @@ Information returned by **map**:
 | --- | --- | --- |
 | data | T | Yes |
 | imageSource | image.ImageSource | Yes |
-| map | Map&lt;string, string&gt; | Yes |
+| map | Map & lt;string, string & gt; | Yes |

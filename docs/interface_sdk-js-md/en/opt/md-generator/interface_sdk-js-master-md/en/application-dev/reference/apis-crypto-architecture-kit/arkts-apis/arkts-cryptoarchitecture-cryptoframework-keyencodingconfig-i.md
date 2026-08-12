@@ -18,7 +18,7 @@ Represents the RSA private key encoding parameters. You can use it to generate a
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## cipherName

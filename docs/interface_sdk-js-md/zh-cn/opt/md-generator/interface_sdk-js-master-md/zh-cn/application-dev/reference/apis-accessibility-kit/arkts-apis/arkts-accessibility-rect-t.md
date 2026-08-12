@@ -4,7 +4,7 @@
 export type Rect = _Rect
 ```
 
-表示矩形区域，请参考[Rect](arkts-accessibility-rect-t.md)。
+表示矩形区域，请参考[Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md#Rect)。
 
 **起始版本：** 10
 

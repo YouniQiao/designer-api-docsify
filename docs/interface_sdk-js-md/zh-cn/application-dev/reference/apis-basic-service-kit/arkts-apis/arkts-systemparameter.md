@@ -7,7 +7,7 @@
 > **说明：**
 > 
 > - 本模块接口从API version 9开始不再维护，建议使用新接口
-> [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md)替代。
+> [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md#systemParameterEnhance)替代。
 > 
 > - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 > 
@@ -21,7 +21,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemParameterEnhance:systemParameterEnhance](arkts-systemparameterenhance.md)
+**替代接口：** [systemParameterEnhance](arkts-systemparameterenhance.md#systemParameterEnhance)
 
 <!--Device-unnamed-declare namespace systemParameter--><!--Device-unnamed-declare namespace systemParameter-End-->
 

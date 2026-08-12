@@ -13,7 +13,7 @@ Defines selection menu options for SelectionContainer.
 ## Modules to Import
 
 ```TypeScript
-import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
 ## onAppear
@@ -24,7 +24,7 @@ onAppear?: Callback<string>
 
 Called when the selection menu appears.The callback parameter is the selected text concatenated in the visual order of Text components.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -44,7 +44,7 @@ onDisappear?: Callback<void>
 
 Called when the selection menu disappears.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ onMenuHide?: Callback<string>
 
 Called when the selection menu is hidden.The callback parameter is the selected text concatenated in the visual order of Text components.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
 
@@ -84,7 +84,7 @@ onMenuShow?: Callback<string>
 
 Called when the selection menu is displayed.The callback parameter is the selected text concatenated in the visual order of Text components.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 26.0.0
 

@@ -13,7 +13,7 @@ Provides the capability of integrating advertising services with vendors.
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from 'kits/@kit.AdsKit';
+import { RespCallback } from '@kit.AdsKit';
 ```
 
 ## onLoadAd
@@ -36,8 +36,8 @@ Called when the media application starts to load an ad.The device vendor needs t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| adParam | advertising.AdRequestParams | Yes |
-| adOptions | advertising.AdOptions | Yes |
+| [adParam](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdRequestParams | Yes |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | Yes |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes |
 
 ## Examples
@@ -77,7 +77,7 @@ Called when the media application starts to load multiple ads.The device vendor 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | adParams | advertising.AdRequestParams[] | Yes |
-| adOptions | advertising.AdOptions | Yes |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | Yes |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | Yes |
 
 ## Examples

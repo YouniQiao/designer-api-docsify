@@ -52,7 +52,7 @@ icons?: ButtonIconOptions
 
 资源获取错误以及未设置该属性时，使用默认图标。
 
-**类型：** [ButtonIconOptions](../arkts-components/arkts-arkui-buttoniconoptions-i.md)
+**类型：** [ButtonIconOptions](arkts-arkui-sidebar-buttoniconoptions-i.md)
 
 **起始版本：** 23
 

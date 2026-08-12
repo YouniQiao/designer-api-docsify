@@ -2,7 +2,7 @@
 
 Defines the options of Shadow.
 
-**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](arkts-arkui-common-multishadowoptions-i.md)
+**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](MultiShadowOptions)
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ colors?: Array<ResourceColor | LinearGradient>
 
 Current shadow colors.
 
-**Type:** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md) \| LinearGradient&gt;
+**Type:** Array&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-datapanel-lineargradient-c.md)&gt;
 
 **Default:** Consistent with valueColors
 

@@ -1,6 +1,6 @@
 # LayoutAlgorithm
 
-[DynamicLayout](arkts-arkui-components-arkdynamiclayout.md)组件支持的布局算法详细信息。
+[DynamicLayout](@ohos.arkui.components.ArkDynamicLayout)组件支持的布局算法详细信息。
  > **说明：**
 
 

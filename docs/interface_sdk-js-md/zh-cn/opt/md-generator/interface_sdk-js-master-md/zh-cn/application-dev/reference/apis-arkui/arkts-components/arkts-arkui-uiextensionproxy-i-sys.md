@@ -33,7 +33,7 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
 
 ## off('syncReceiverRegister')
 
@@ -58,7 +58,7 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 否 |
 
 ## on('asyncReceiverRegister')
 
@@ -83,7 +83,7 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'asyncReceiverRegister' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
 
 ## on('syncReceiverRegister')
 
@@ -108,7 +108,7 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'syncReceiverRegister' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
+| callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | 是 |
 
 ## send
 
@@ -132,7 +132,7 @@ send(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |
+| data | Record & lt;string, Object & gt; | 是 |
 
 ## sendSync
 
@@ -156,18 +156,18 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |
+| data | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
 | object |
-| Record&lt;string, Object&gt; |
+| Record & lt;string, Object & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [100011](../errorcode-uiextension.md#100011-未注册同步回调) |
-| [100012](../errorcode-uiextension.md#100012-数据发送失败) |
+| [100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-uiextension.md#100011-未注册同步回调) |
+| [100012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-uiextension.md#100012-数据发送失败) |

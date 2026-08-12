@@ -58,7 +58,7 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.&lt;br&gt;For abnormal values NaN and Infinity, the default values are used.&lt;br&gt;Default value: DEFAULT. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.&lt;br&gt;For abnormal values NaN and Infinity, the default values are used.&lt;br&gt;Default value: DEFAULT. |
 
 ## identity
 
@@ -158,7 +158,7 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **Deprecated since:** 10
 
-**Substitutes:** [rotate](arkts-arkui-matrix2d-c.md#rotate)
+**Substitutes:** [rotate](#rotate)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

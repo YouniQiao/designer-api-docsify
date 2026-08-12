@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## on('streamChange')
@@ -20,7 +20,7 @@ Subscribe Wi-Fi stream change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:streamChange
+**Substitutes:** [streamChange](ohos.wifiManager/wifiManager.on#event:streamChange)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_CONNECTION
 
@@ -35,7 +35,7 @@ Subscribe Wi-Fi stream change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'streamChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 1: stream down, 2: stream up, 3: stream bidirectional |
 
 
 ## on('hotspotStaJoin')
@@ -52,7 +52,7 @@ Subscribe Wi-Fi hotspot sta join events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:hotspotStaJoin
+**Substitutes:** [hotspotStaJoin](ohos.wifiManager/wifiManager.on#event:hotspotStaJoin)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -67,7 +67,7 @@ Subscribe Wi-Fi hotspot sta join events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaJoin' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | Yes | the callback of on |
 
 
 ## on('hotspotStaLeave')
@@ -84,7 +84,7 @@ Subscribe Wi-Fi hotspot sta leave events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:hotspotStaLeave
+**Substitutes:** [hotspotStaLeave](ohos.wifiManager/wifiManager.on#event:hotspotStaLeave)
 
 **Required permissions:** ohos.permission.MANAGE_WIFI_HOTSPOT
 
@@ -99,5 +99,5 @@ Subscribe Wi-Fi hotspot sta leave events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStaLeave' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StationInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;StationInfo&gt; | Yes | the callback of on |
 

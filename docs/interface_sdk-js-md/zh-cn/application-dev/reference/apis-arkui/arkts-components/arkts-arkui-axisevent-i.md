@@ -1,8 +1,8 @@
 # AxisEvent
 
-轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
+轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)。
 
-**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**继承/实现关系：** AxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **起始版本：** 17
 
@@ -36,7 +36,7 @@ getCurrentLocalPosition?(): Coordinate2D
 
 | 类型 | 说明 |
 | --- | --- |
-| [Coordinate2D](../arkts-apis/arkts-arkui-coordinate2d-i.md) | 点击位置相对于当前组件实时位置的左上角坐标。 |
+| Coordinate2D | 点击位置相对于当前组件实时位置的左上角坐标。 |
 
 ## getHorizontalAxisValue
 
@@ -140,7 +140,7 @@ hasAxis(axisType: AxisType): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| axisType | [AxisType](../arkts-apis/arkts-arkui-axistype-e.md) | 是 | 轴事件的轴类型。 |
+| axisType | AxisType | 是 | 轴事件的轴类型。 |
 
 **返回值：**
 
@@ -156,7 +156,7 @@ action: AxisAction
 
 轴事件的动作类型。
 
-**类型：** [AxisAction](../arkts-apis/arkts-arkui-axisaction-e.md)
+**类型：** AxisAction
 
 **起始版本：** 17
 
@@ -228,7 +228,7 @@ eventHandleId?: number
 
 取值范围：[0, +∞)
 
-**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md/arkts-arkui-buildernode-c.md#postinputeventwithstrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
+**说明：** 在使用[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy)接口分发事件时会使用该字段，事件每分发一次字段会增加100000。
 
 多次使用相同的eventHandleId进行事件分发将导致事件响应异常。仅在构造事件的时候需要对此字段赋值，其余情况开发者无需处理。
 
@@ -306,7 +306,7 @@ propagation: Callback<void>
 
 激活[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 17
 

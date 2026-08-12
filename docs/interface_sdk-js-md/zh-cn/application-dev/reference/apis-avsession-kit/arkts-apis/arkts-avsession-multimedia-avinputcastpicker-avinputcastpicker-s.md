@@ -42,7 +42,7 @@ customPicker?: CustomBuilder
 
 If not set, system will show the default appearance for different device type.
 
-**类型：** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**类型：** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **起始版本：** 23
 

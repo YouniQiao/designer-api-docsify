@@ -13,7 +13,7 @@ Sets the alignment between the drop-down list button and the drop-down list box.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## alignType
@@ -24,7 +24,7 @@ alignType: MenuAlignType
 
 Alignment type. Default value: **MenuAlignType.START**
 
-**Type:** [MenuAlignType](arkts-arkui-select-menualigntype-e.md)
+**Type:** MenuAlignType
 
 **Since:** 18
 
@@ -44,7 +44,7 @@ offset?: Offset
 
 Offset of the drop-down list box relative to the drop-down list button after alignment based on the alignment type.Default value: **{dx: 0, dy: 0}**
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 18
 

@@ -28,5 +28,5 @@ Create a FrameNode of TextTimer type.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextTimer](arkts-arkui-typenode-texttimer-t.md) | Return TextTimer type FrameNode. |
+| TextTimer | Return TextTimer type FrameNode. |
 

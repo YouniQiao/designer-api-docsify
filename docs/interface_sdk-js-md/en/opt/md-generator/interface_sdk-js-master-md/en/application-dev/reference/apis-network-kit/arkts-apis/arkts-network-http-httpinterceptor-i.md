@@ -11,7 +11,7 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## interceptorHandle
@@ -41,7 +41,7 @@ Intercept an HTTP process and do changes as disired.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ChainContinue&gt; |
+| Promise&lt;[ChainContinue](arkts-network-http-chaincontinue-t.md)&gt; |
 
 ## Examples
 

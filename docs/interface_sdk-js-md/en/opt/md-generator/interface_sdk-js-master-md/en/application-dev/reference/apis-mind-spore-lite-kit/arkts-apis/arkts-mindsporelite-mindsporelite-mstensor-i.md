@@ -11,7 +11,7 @@ Provides MSTensor definition
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from 'kits/@kit.MindSporeLiteKit';
+import { mindSporeLite } from '@kit.MindSporeLiteKit';
 ```
 
 ## getData
@@ -103,7 +103,7 @@ Set MSTensor data
 
 **Parameters:**
 
-| [Name](#name) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | inputArray | ArrayBuffer | Yes |
 
@@ -174,7 +174,7 @@ dtype: DataType
 
 The data type of the tensor.
 
-**Type:** [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md)
+**Type:** DataType
 
 **Since:** 10
 

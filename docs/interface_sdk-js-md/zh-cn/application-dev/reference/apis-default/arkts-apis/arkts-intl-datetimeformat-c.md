@@ -47,7 +47,7 @@ constructor(locale: string | Array<string>, options?: DateTimeOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string \| Array&lt;string&gt; | 是 | 区域ID或区域ID数组。输入是区域ID数组时，使用第一个有效的区域ID。 |
-| options | [DateTimeOptions](arkts-intl-datetimeoptions-i.md) | 否 | 创建时间日期格式化对象时可设置的配置项。 &lt;br&gt;若所有选项均未设置时，year、month、day三个属性的默认值为numeric。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
+| options | DateTimeOptions | 否 | 创建时间日期格式化对象时可设置的配置项。 &lt;br&gt;若所有选项均未设置时，year、month、day三个属性的默认值为numeric。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。 |
 
 ## format
 
@@ -126,5 +126,5 @@ resolvedOptions(): DateTimeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [DateTimeOptions](arkts-intl-datetimeoptions-i.md) | 时间日期格式化对象设置的配置项。 |
+| DateTimeOptions | 时间日期格式化对象设置的配置项。 |
 

@@ -216,7 +216,7 @@ wants?: Array<ShortcutWant>
 
 A collection of target Wants information defined within the shortcut.
 
-**Type:** Array&lt;ShortcutWant&gt;
+**Type:** Array&lt;[ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)&gt;
 
 **Since:** 20
 

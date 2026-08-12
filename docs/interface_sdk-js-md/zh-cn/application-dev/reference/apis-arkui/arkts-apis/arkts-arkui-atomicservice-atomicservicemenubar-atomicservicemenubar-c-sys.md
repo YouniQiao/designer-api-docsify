@@ -42,7 +42,7 @@ AtomicServiceMenuBar的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | 是 | 当前原子化服务的UI上下文信息。 |
+| uiContext | UIContext | 是 | 当前原子化服务的UI上下文信息。 |
 
 ## setVisible
 

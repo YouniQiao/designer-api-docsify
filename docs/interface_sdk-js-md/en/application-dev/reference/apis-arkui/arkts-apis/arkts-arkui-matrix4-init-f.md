@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## init
@@ -51,5 +51,5 @@ Constructor of Matrix, which can create a fourth-order matrix based on the input
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Return to Matrix4Transit |
+| Matrix4Transit | Return to Matrix4Transit |
 

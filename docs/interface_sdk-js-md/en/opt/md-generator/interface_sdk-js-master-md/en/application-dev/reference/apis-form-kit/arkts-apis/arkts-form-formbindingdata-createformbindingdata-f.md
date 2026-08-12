@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from 'kits/@kit.FormKit';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## createFormBindingData
@@ -38,7 +38,7 @@ Creates a **FormBindingData** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

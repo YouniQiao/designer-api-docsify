@@ -6,7 +6,7 @@
 function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>
 ```
 
-创建普通系统账号。最多可以创建2个normal类型的系统账号 ([osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md/arkts-basicservices-osaccount-osaccounttype-e.md)) 。
+创建普通系统账号。最多可以创建2个normal类型的系统账号 ([osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) 。
 
 > **说明：**
 > 
@@ -35,20 +35,20 @@ function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsA
 
 | 类型 |
 | --- |
-| Promise&lt;osAccount.OsAccountInfo&gt; |
+| Promise & lt;osAccount.OsAccountInfo & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [9201003](../errorcode-enterpriseDeviceManager.md#9201003-创建账号失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [9201040](../errorcode-enterpriseDeviceManager.md#9201040-系统账号数量已达到最大限制) |
-| [204](../../errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [9201003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201003-创建账号失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9201040](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201040-系统账号数量已达到最大限制) |
+| [204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#204-用户访问控制策略拒绝此访问) |
+| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

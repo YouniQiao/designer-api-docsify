@@ -1,6 +1,6 @@
 # AbilityLifecycleCallback
 
-[UIAbility](arkts-app-ability-uiability.md)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility](arkts-app-ability-uiability.md)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
 
 **起始版本：** 9
 
@@ -16,7 +16,7 @@
 onAbilityBackground(ability: UIAbility): void
 ```
 
-在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发后回调。
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground)触发后回调。
 
 **起始版本：** 9
 
@@ -46,7 +46,7 @@ onAbilityBackground(ability: UIAbility): void
 onAbilityContinue(ability: UIAbility): void
 ```
 
-在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发后回调。
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#onContinue)触发后回调。
 
 **起始版本：** 9
 
@@ -76,7 +76,7 @@ onAbilityContinue(ability: UIAbility): void
 onAbilityCreate(ability: UIAbility): void
 ```
 
-在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发后回调。
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)触发后回调。
 
 **起始版本：** 9
 
@@ -106,7 +106,7 @@ onAbilityCreate(ability: UIAbility): void
 onAbilityDestroy(ability: UIAbility): void
 ```
 
-在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发后回调。
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onDestroy)触发后回调。
 
 **起始版本：** 9
 
@@ -136,7 +136,7 @@ onAbilityDestroy(ability: UIAbility): void
 onAbilityForeground(ability: UIAbility): void
 ```
 
-在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发后回调。
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground)触发后回调。
 
 **起始版本：** 9
 
@@ -166,7 +166,7 @@ onAbilityForeground(ability: UIAbility): void
 onAbilitySaveState?(ability: UIAbility): void
 ```
 
-在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState)触发后回调。
 
 **起始版本：** 12
 
@@ -196,7 +196,7 @@ onAbilitySaveState?(ability: UIAbility): void
 onAbilitySaveState?: OnAbilitySaveStateFn
 ```
 
-在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发后回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState)触发后回调。
 
 **起始版本：** 23
 
@@ -214,7 +214,7 @@ onAbilitySaveState?: OnAbilitySaveStateFn
 onAbilityWillBackground?(ability: UIAbility): void
 ```
 
-在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground)触发前回调。
 
 **起始版本：** 12
 
@@ -244,7 +244,7 @@ onAbilityWillBackground?(ability: UIAbility): void
 onAbilityWillBackground?: OnAbilityWillBackgroundFn
 ```
 
-在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground)触发前回调。
+在UIAbility的[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground)触发前回调。
 
 **起始版本：** 23
 
@@ -262,7 +262,7 @@ onAbilityWillBackground?: OnAbilityWillBackgroundFn
 onAbilityWillContinue?(ability: UIAbility): void
 ```
 
-在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#onContinue)触发前回调。
 
 **起始版本：** 12
 
@@ -292,7 +292,7 @@ onAbilityWillContinue?(ability: UIAbility): void
 onAbilityWillContinue?: OnAbilityWillContinueFn
 ```
 
-在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#oncontinue)触发前回调。
+在UIAbility的[onContinue](arkts-ability-app-ability-uiability-uiability-c.md#onContinue)触发前回调。
 
 **起始版本：** 23
 
@@ -310,7 +310,7 @@ onAbilityWillContinue?: OnAbilityWillContinueFn
 onAbilityWillCreate?(ability: UIAbility): void
 ```
 
-在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)触发前回调。
 
 **起始版本：** 12
 
@@ -340,7 +340,7 @@ onAbilityWillCreate?(ability: UIAbility): void
 onAbilityWillCreate?: OnAbilityWillCreateFn
 ```
 
-在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)触发前回调。
+在UIAbility的[onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)触发前回调。
 
 **起始版本：** 23
 
@@ -358,7 +358,7 @@ onAbilityWillCreate?: OnAbilityWillCreateFn
 onAbilityWillDestroy?(ability: UIAbility): void
 ```
 
-在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onDestroy)触发前回调。
 
 **起始版本：** 12
 
@@ -388,7 +388,7 @@ onAbilityWillDestroy?(ability: UIAbility): void
 onAbilityWillDestroy?: OnAbilityWillDestroyFn
 ```
 
-在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy)触发前回调。
+在UIAbility的[onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onDestroy)触发前回调。
 
 **起始版本：** 23
 
@@ -406,7 +406,7 @@ onAbilityWillDestroy?: OnAbilityWillDestroyFn
 onAbilityWillForeground?(ability: UIAbility): void
 ```
 
-在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground)触发前回调。
 
 **起始版本：** 12
 
@@ -436,7 +436,7 @@ onAbilityWillForeground?(ability: UIAbility): void
 onAbilityWillForeground?: OnAbilityWillForegroundFn
 ```
 
-在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground)触发前回调。
+在UIAbility的[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground)触发前回调。
 
 **起始版本：** 23
 
@@ -454,7 +454,7 @@ onAbilityWillForeground?: OnAbilityWillForegroundFn
 onAbilityWillSaveState?(ability: UIAbility): void
 ```
 
-在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState)触发前回调。
 
 **起始版本：** 12
 
@@ -484,7 +484,7 @@ onAbilityWillSaveState?(ability: UIAbility): void
 onAbilityWillSaveState?: OnAbilityWillSaveStateFn
 ```
 
-在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onsavestate)触发前回调。
+在UIAbility的[onSaveState](arkts-ability-app-ability-uiability-uiability-c.md#onSaveState)触发前回调。
 
 **起始版本：** 23
 
@@ -502,7 +502,7 @@ onAbilityWillSaveState?: OnAbilityWillSaveStateFn
 onNewWant?(ability: UIAbility): void
 ```
 
-在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant)触发后回调。
 
 **起始版本：** 12
 
@@ -532,7 +532,7 @@ onNewWant?(ability: UIAbility): void
 onNewWant?: OnNewWantFn
 ```
 
-在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发后回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant)触发后回调。
 
 **起始版本：** 23
 
@@ -550,7 +550,7 @@ onNewWant?: OnNewWantFn
 onWillNewWant?(ability: UIAbility): void
 ```
 
-在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant)触发前回调。
 
 **起始版本：** 12
 
@@ -580,7 +580,7 @@ onWillNewWant?(ability: UIAbility): void
 onWillNewWant?: OnWillNewWantFn
 ```
 
-在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant)触发前回调。
+在UIAbility的[onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant)触发前回调。
 
 **起始版本：** 23
 
@@ -629,7 +629,7 @@ onWindowStageActive(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发后回调。
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)触发后回调。
 
 **起始版本：** 9
 
@@ -660,7 +660,7 @@ onWindowStageCreate(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageDestroy(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发后回调。
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageDestroy)触发后回调。
 
 **起始版本：** 9
 
@@ -722,7 +722,7 @@ onWindowStageInactive(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore)触发后回调。
 
 **起始版本：** 12
 
@@ -753,7 +753,7 @@ onWindowStageRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 onWindowStageRestore?: OnWindowStageRestoreFn
 ```
 
-在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发后回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore)触发后回调。
 
 **起始版本：** 23
 
@@ -771,7 +771,7 @@ onWindowStageRestore?: OnWindowStageRestoreFn
 onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)触发前回调。
 
 **起始版本：** 12
 
@@ -802,7 +802,7 @@ onWindowStageWillCreate?(ability: UIAbility, windowStage: window.WindowStage): v
 onWindowStageWillCreate?: OnWindowStageWillCreateFn
 ```
 
-在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)触发前回调。
+在UIAbility的[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)触发前回调。
 
 **起始版本：** 23
 
@@ -820,7 +820,7 @@ onWindowStageWillCreate?: OnWindowStageWillCreateFn
 onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageDestroy)触发前回调。
 
 **起始版本：** 12
 
@@ -851,7 +851,7 @@ onWindowStageWillDestroy?(ability: UIAbility, windowStage: window.WindowStage): 
 onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
 ```
 
-在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagedestroy)触发前回调。
+在UIAbility的[onWindowStageDestroy](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageDestroy)触发前回调。
 
 **起始版本：** 23
 
@@ -869,7 +869,7 @@ onWindowStageWillDestroy?: OnWindowStageWillDestroyFn
 onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): void
 ```
 
-在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore)触发前回调。
 
 **起始版本：** 12
 
@@ -900,7 +900,7 @@ onWindowStageWillRestore?(ability: UIAbility, windowStage: window.WindowStage): 
 onWindowStageWillRestore?: OnWindowStageWillRestoreFn
 ```
 
-在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagerestore)触发前回调。
+在UIAbility的[onWindowStageRestore](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageRestore)触发前回调。
 
 **起始版本：** 23
 

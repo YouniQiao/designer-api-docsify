@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#OrientationResponse
+**替代接口：** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
 
 <!--Device-unnamed-export interface CompassResponse--><!--Device-unnamed-export interface CompassResponse-End-->
 
@@ -30,7 +30,7 @@ direction: number
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#OrientationResponse.alpha
+**替代接口：** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

@@ -17,7 +17,7 @@ autoCleanDeviceDirtyData?: boolean
 ```
 
 指定本地设备是否自动清理远端设备删除后同步过来的数据，true表示自动清理，false表示手动清理，默认自动清理。若设置为false，需要主动调用  
-[cleanDeviceDirtyData](arkts-arkdata-relationalstore-rdbstore-i-sys.md#cleandevicedirtydata)进行脏数据清理。
+[cleanDeviceDirtyData](arkts-arkdata-relationalstore-rdbstore-i-sys.md#cleanDeviceDirtyData)进行脏数据清理。
 
 [多设备协同表模式](../../../database/data-sync-of-rdb-store.md#数据同步存储机制)分布式数据表配置不生效。
 

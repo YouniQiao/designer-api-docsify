@@ -2,7 +2,7 @@
 
 The AppServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
-**Inheritance/Implementation:** AppServiceExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** AppServiceExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **Since:** 20
 
@@ -15,7 +15,7 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 ## Modules to Import
 
 ```TypeScript
-import { AppServiceExtensionAbility } from 'kits/@kit.AbilityKit';
+import { AppServiceExtensionAbility } from '@kit.AbilityKit';
 ```
 
 ## onConnect
@@ -25,7 +25,7 @@ onConnect(want: Want): rpc.RemoteObject
 ```
 
 Called when an AppServiceExtensionAbility instance is connected by calling  
-[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectappserviceextensionability).
+[connectAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#connectAppServiceExtensionAbility).
 
 **Since:** 20
 
@@ -204,7 +204,7 @@ onRequest(want: Want, startId: int): void
 ```
 
 Called each time an AppServiceExtensionAbility instance is started by calling  
-[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startappserviceextensionability).
+[startAppServiceExtensionAbility()](arkts-ability-uiabilitycontext-c.md#startAppServiceExtensionAbility).
 
 **Since:** 20
 
@@ -245,7 +245,7 @@ context: AppServiceExtensionContext
 ```
 
 Context environment for an AppServiceExtensionAbility. This context inherits from  
-[ExtensionContext](arkts-ability-extensioncontext-c.md).
+[ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md)
 

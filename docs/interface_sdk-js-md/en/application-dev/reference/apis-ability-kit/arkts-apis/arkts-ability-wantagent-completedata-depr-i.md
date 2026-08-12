@@ -8,7 +8,7 @@ Describes the data returned by after wantAgent.trigger is called.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#CompleteData
+**Substitutes:** [CompleteData](ohos.app.ability.wantAgent/wantAgent#CompleteData)
 
 <!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 
@@ -30,7 +30,7 @@ Extra data collected by the common event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#extraInfo
+**Substitutes:** [extraInfo](ohos.app.ability.wantAgent/wantAgent.CompleteData#extraInfo)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,7 +54,7 @@ Request code used to trigger the WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#finalCode
+**Substitutes:** [finalCode](ohos.app.ability.wantAgent/wantAgent.CompleteData#finalCode)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +78,7 @@ Final data collected by the common event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#finalData
+**Substitutes:** [finalData](ohos.app.ability.wantAgent/wantAgent.CompleteData#finalData)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +94,7 @@ info: WantAgent
 
 Triggered WantAgent.
 
-**Type:** [WantAgent](arkts-ability-wantagent-t.md)
+**Type:** [WantAgent](arkts-ability-wantagent-depr-t.md)
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ Triggered WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#info
+**Substitutes:** [info](ohos.app.ability.wantAgent/wantAgent.CompleteData#info)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,7 +126,7 @@ Existing Want that is triggered.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent.CompleteData#want
+**Substitutes:** [want](ohos.app.ability.wantAgent/wantAgent.CompleteData#want)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

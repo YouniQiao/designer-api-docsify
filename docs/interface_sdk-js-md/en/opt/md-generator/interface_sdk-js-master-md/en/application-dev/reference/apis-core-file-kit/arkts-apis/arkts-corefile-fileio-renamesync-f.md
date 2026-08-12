@@ -12,7 +12,7 @@ Renames a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:renameSync](arkts-corefile-fileio-renamesync-f.md#renamesync)
+**Substitutes:** [renameSync](arkts-corefile-file-fs-renamesync-f.md#renameSync)
 
 <!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void--><!--Device-unnamed-declare function renameSync(oldPath: string, newPath: string): void-End-->
 

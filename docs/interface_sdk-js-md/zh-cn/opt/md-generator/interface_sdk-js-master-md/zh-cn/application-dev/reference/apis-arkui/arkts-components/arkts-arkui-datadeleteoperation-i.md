@@ -58,7 +58,7 @@ type: DataOperationType.DELETE
 
 数据删除类型。
 
-**类型：** DataOperationType.DELETE
+**类型：** [DataOperationType.DELETE](arkts-arkui-dataoperationtype-e.md)
 
 **起始版本：** 12
 

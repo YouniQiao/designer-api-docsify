@@ -30,7 +30,11 @@ drawBehind Method. Executed before drawing associated Node.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## Examples
+
+See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
 
 ## drawContent
 
@@ -54,7 +58,11 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## Examples
+
+See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
 
 ## drawForeground
 
@@ -78,7 +86,11 @@ drawforeground Method. This method is executed after drawing the associated Node
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## Examples
+
+See [Example 2: Implementing Custom Foreground Drawing for a Container Through DrawModifier](#example-2-implementing-custom-foreground-drawing-for-a-container-through-drawmodifier).
 
 ## drawFront
 
@@ -102,7 +114,11 @@ drawFront Method. Executed after drawing associated Node.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## Examples
+
+See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).
 
 ## drawOverlay
 
@@ -131,7 +147,68 @@ Custom drawing consists of five layers: Behind, Content, Front, Foreground, and 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| drawContext | [DrawContext](../arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| drawContext | [DrawContext](arkts-arkui-drawcontext-t.md) | Yes |
+
+## Examples
+
+```TypeScript
+// test.ets
+import { drawing } from '@kit.ArkGraphics2D';
+
+class MyForegroundDrawModifier extends DrawModifier {
+  public scaleX: number = 3;
+  public scaleY: number = 3;
+  uiContext: UIContext;
+
+  constructor(uiContext: UIContext) {
+    super();
+    this.uiContext = uiContext;
+  }
+
+  // Override the drawOverlay method to customize the foreground drawing of overlay.
+  drawOverlay(context: DrawContext): void {
+    const brush = new drawing.Brush();
+    brush.setColor({
+      alpha: 255,
+      red: 0,
+      green: 50,
+      blue: 100
+    });
+    context.canvas.attachBrush(brush);
+    const halfWidth = context.size.width / 2;
+    const halfHeight = context.size.height / 2;
+    context.canvas.drawRect({
+      left: this.uiContext.vp2px(halfWidth - 30 * this.scaleX),
+      top: this.uiContext.vp2px(halfHeight - 30 * this.scaleY),
+      right: this.uiContext.vp2px(halfWidth + 30 * this.scaleX),
+      bottom: this.uiContext.vp2px(halfHeight + 60 * this.scaleY)
+    });
+  }
+}
+
+@Entry
+@Component
+struct DrawModifierExample {
+  // Instantiate the foreground drawing class of the overlay, passing the UIContext instance.
+  private overlayModifier: MyForegroundDrawModifier = new MyForegroundDrawModifier(this.getUIContext());
+
+  build() {
+    Column() {
+      Text('Here is a child node')
+        .fontSize(36)
+        .width('100%')
+        .height('100%')
+        .textAlign(TextAlign.Center)
+    }
+    .margin(50)
+    .width(280)
+    .height(300)
+    .backgroundColor(0x87CEEB)
+    // Apply custom foreground drawing by passing the DrawModifier instance.
+    .drawModifier(this.overlayModifier)
+  }
+}
+```
 
 ## invalidate
 
@@ -150,3 +227,7 @@ Invalidate the component, which will cause a re-render of the component.No overl
 <!--Device-DrawModifier-invalidate(): void--><!--Device-DrawModifier-invalidate(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Examples
+
+See [Example 1: Implementing Custom Drawing Through DrawModifier](#example-1-implementing-custom-drawing-through-drawmodifier).

@@ -2,7 +2,7 @@
 
 Represents boxed char value and related operations
 
-**Inheritance/Implementation:** Char extends [Object](arkts-arkts-object-c.md) and implements [Comparable<Char>](Comparable<Char>)
+**Inheritance/Implementation:** Char extends [Object](Object) and implements [Comparable<Char>](Comparable<Char>)
 
 **Since:** 24
 

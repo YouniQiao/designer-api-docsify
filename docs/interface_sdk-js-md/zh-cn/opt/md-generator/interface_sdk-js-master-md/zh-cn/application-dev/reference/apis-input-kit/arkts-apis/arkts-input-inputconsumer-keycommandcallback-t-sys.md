@@ -21,4 +21,4 @@ type KeyCommandCallback = (keyOptions: KeyOptions, keyEvent: KeyEvent) => void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | 是 |
-| keyEvent | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| [keyEvent](arkts-input-inputeventclient-keyeventdata-i.md) | [KeyEvent](arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |

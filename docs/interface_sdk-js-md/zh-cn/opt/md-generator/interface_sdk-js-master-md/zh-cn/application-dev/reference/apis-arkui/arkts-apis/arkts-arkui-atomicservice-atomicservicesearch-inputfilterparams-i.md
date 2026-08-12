@@ -16,7 +16,7 @@ error?: Callback<string>
 
 正则匹配失败时，返回被过滤的内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
 

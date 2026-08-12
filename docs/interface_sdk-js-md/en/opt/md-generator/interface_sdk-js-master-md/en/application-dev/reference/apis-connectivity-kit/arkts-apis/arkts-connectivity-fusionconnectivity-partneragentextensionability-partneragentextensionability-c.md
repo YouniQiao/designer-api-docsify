@@ -2,7 +2,7 @@
 
 Class for the PartnerAgentExtensionAbility.Applications can use this ability to discover devices.
 
-**Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-extensionability-extensionability-c.md/arkts-ability-app-ability-extensionability-extensionability-c.md)
+**Inheritance/Implementation:** PartnerAgentExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **Since:** 23
 
@@ -13,7 +13,7 @@ Class for the PartnerAgentExtensionAbility.Applications can use this ability to 
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionAbility } from 'kits/@kit.ConnectivityKit';
+import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
 ```
 
 ## onDestroyWithReason

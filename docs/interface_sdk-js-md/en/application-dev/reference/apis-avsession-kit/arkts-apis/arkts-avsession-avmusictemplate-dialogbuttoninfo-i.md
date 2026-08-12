@@ -13,7 +13,7 @@ The definition of dialog button information.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## buttonId
@@ -64,7 +64,7 @@ buttonType: ButtonType
 
 Button type.
 
-**Type:** [ButtonType](../../apis-arkui/arkts-apis/arkts-arkui-button-buttontype-e.md)
+**Type:** ButtonType
 
 **Since:** 23
 

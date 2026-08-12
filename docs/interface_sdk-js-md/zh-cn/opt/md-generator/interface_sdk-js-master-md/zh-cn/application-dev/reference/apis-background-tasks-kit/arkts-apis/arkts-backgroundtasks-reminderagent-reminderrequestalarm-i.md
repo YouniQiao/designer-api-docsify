@@ -2,13 +2,13 @@
 
 闹钟实例对象，用于设置提醒的时间。
 
-**继承/实现关系：** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md)
+**继承/实现关系：** ReminderRequestAlarm extends [ReminderRequest](arkts-backgroundtasks-reminderagent-reminderrequest-i.md#ReminderRequest)
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.reminderAgentManager:reminderAgentManager.ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md)
+**替代接口：** [ReminderRequestAlarm](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#ReminderRequestAlarm)
 
 <!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestAlarm extends ReminderRequest-End-->
 
@@ -28,7 +28,7 @@ daysOfWeek?: Array<number>
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.ReminderRequestAlarm.daysOfWeek](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#daysofweek)
+**替代接口：** [daysOfWeek](reminderAgentManager.ReminderRequestAlarm.daysOfWeek)
 
 <!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>--><!--Device-ReminderRequestAlarm-daysOfWeek?: Array<number>-End-->
 
@@ -48,7 +48,7 @@ hour: number
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.ReminderRequestAlarm.hour](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#hour)
+**替代接口：** [hour](reminderAgentManager.ReminderRequestAlarm.hour)
 
 <!--Device-ReminderRequestAlarm-hour: number--><!--Device-ReminderRequestAlarm-hour: number-End-->
 
@@ -68,7 +68,7 @@ minute: number
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.ReminderRequestAlarm.minute](arkts-backgroundtasks-reminderagentmanager-reminderrequestalarm-i.md#minute)
+**替代接口：** [minute](reminderAgentManager.ReminderRequestAlarm.minute)
 
 <!--Device-ReminderRequestAlarm-minute: number--><!--Device-ReminderRequestAlarm-minute: number-End-->
 

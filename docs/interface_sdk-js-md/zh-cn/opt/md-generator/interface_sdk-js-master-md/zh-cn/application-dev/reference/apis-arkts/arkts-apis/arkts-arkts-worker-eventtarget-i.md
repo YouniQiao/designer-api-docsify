@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget
+**替代接口：** [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
 
 <!--Device-unnamed-export interface EventTarget--><!--Device-unnamed-export interface EventTarget-End-->
 
@@ -24,7 +24,7 @@ addEventListener(type: string, listener: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.addEventListener
+**替代接口：** [addEventListener](ohos.worker.WorkerEventTarget.addEventListener)
 
 <!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void--><!--Device-EventTarget-addEventListener(type: string, listener: EventListener): void-End-->
 
@@ -35,7 +35,7 @@ addEventListener(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 |
 
 ## 示例
 
@@ -62,7 +62,7 @@ dispatchEvent(event: Event): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.dispatchEvent
+**替代接口：** [dispatchEvent](ohos.worker.WorkerEventTarget.dispatchEvent)
 
 <!--Device-EventTarget-dispatchEvent(event: Event): boolean--><!--Device-EventTarget-dispatchEvent(event: Event): boolean-End-->
 
@@ -72,7 +72,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 |
 
 **返回值：**
 
@@ -135,7 +135,7 @@ removeAllListener(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.removeAllListener
+**替代接口：** [removeAllListener](ohos.worker.WorkerEventTarget.removeAllListener)
 
 <!--Device-EventTarget-removeAllListener(): void--><!--Device-EventTarget-removeAllListener(): void-End-->
 
@@ -168,7 +168,7 @@ removeEventListener(type: string, callback?: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.WorkerEventTarget.removeEventListener
+**替代接口：** [removeEventListener](ohos.worker.WorkerEventTarget.removeEventListener)
 
 <!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void--><!--Device-EventTarget-removeEventListener(type: string, callback?: EventListener): void-End-->
 
@@ -179,7 +179,7 @@ removeEventListener(type: string, callback?: EventListener): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| callback | [EventListener](arkts-arkts-process-eventlistener-t.md) | 否 |
+| callback | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 |
 
 ## 示例
 

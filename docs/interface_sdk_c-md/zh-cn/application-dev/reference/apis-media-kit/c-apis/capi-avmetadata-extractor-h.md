@@ -112,7 +112,7 @@ OH_AVErrCode OH_AVMetadataExtractor_SetMediaSource(OH_AVMetadataExtractor *extra
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | 函数执行结果。<br> AV_ERR_OK：表示执行成功。<br> AV_ERR_INVALID_VAL：输入的extractor为空指针或输入的source无效。 |
+| OH_AVErrCode | 函数执行结果。<br> AV_ERR_OK：表示执行成功。<br> AV_ERR_INVALID_VAL：输入的extractor为空指针或输入的source无效。 |
 
 ### OH_AVMetadataExtractor_Create()
 
@@ -157,7 +157,7 @@ OH_AVErrCode OH_AVMetadataExtractor_SetFDSource(OH_AVMetadataExtractor* extracto
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作被禁止。<br> AV_ERR_NO_MEMORY：内部内存分配失败。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作被禁止。<br> AV_ERR_NO_MEMORY：内部内存分配失败。 |
 
 ### OH_AVMetadataExtractor_FetchMetadata()
 
@@ -182,7 +182,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchMetadata(OH_AVMetadataExtractor* extrac
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作被禁止。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。<br> AV_ERR_NO_MEMORY：内部内存分配失败。<br> AV_ERR_IO_CLEARTEXT_NOT_PERMITTED：（API version 23新增）不允许HTTP明文流量。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作被禁止。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。<br> AV_ERR_NO_MEMORY：内部内存分配失败。<br> AV_ERR_IO_CLEARTEXT_NOT_PERMITTED：（API version 23新增）不允许HTTP明文流量。 |
 
 ### OH_AVMetadataExtractor_FetchAlbumCover()
 
@@ -207,7 +207,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchAlbumCover(OH_AVMetadataExtractor* extr
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作被禁止。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。<br> AV_ERR_NO_MEMORY：内部内存分配失败。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作被禁止。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。<br> AV_ERR_NO_MEMORY：内部内存分配失败。 |
 
 ### OH_AVMetadataExtractor_FetchFrameByTime()
 
@@ -227,7 +227,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFrameByTime(OH_AVMetadataExtractor *ext
 | -- | -- |
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md) *extractor | 指向OH_AVMetadataExtractor实例的指针。 |
 | int64_t timeUs | 要从视频资源中提取图像的时间位置（单位：微秒）。 |
-| [OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode) seekMode | 定义指定时间与关键帧之间关系的跳转模式。详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
+| OH_AVMedia_SeekMode seekMode | 定义指定时间与关键帧之间关系的跳转模式。详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
 | const OH_AVMetadataExtractor_OutputParam* outputParam | 图像的输出参数，例如图像的高度或者宽度。详见[OH_AVMetadataExtractor_OutputParam](capi-avmetadataextractor-oh-avmetadataextractor-outputparam.md)。若为空指针，使用视频的原始尺寸。注意：用户需要使用{@link OH_PixelmapNative_Destroy}在使用pixelMap后将其释放。 |
 | OH_PixelmapNative** pixelMap | 用于接收从视频源提取的图像，详见{@link OH_PixelmapNative}。 |
 
@@ -235,7 +235,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFrameByTime(OH_AVMetadataExtractor *ext
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | 函数执行结果。<br> AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作不允许。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。<br> AV_ERR_SERVICE_DIED：服务已终止。<br> AV_ERR_IO_CLEARTEXT_NOT_PERMITTED：不允许HTTP明文流量。 |
+| OH_AVErrCode | 函数执行结果。<br> AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入参数无效。<br> AV_ERR_OPERATE_NOT_PERMIT：操作不允许。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。<br> AV_ERR_SERVICE_DIED：服务已终止。<br> AV_ERR_IO_CLEARTEXT_NOT_PERMITTED：不允许HTTP明文流量。 |
 
 ### OH_AVMetadataExtractor_OnFrameFetched()
 
@@ -268,7 +268,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFramesByTimes(OH_AVMetadataExtractor *e
 | [OH_AVMetadataExtractor](capi-avmetadataextractor-oh-avmetadataextractor.md) *extractor | 指向OH_AVMetadataExtractor实例的指针。 |
 | int64_t timesUs[] | The times array expected to fetch picture from the video resource. The unit is microsecond(us). |
 | uint16_t timesUsSize | 输入时间点数组的长度。 |
-| [OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode) seekMode | 定义每个给定时间与关键帧之间关系的跳转选项，详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
+| OH_AVMedia_SeekMode seekMode | 定义每个给定时间与关键帧之间关系的跳转选项，详见[OH_AVMedia_SeekMode](capi-avmedia-base-h.md#oh_avmedia_seekmode)。 |
 | const OH_AVMetadataExtractor_OutputParam* outputParam | 图像的输出参数，例如图像的高度或者宽度。详见[OH_AVMetadataExtractor_OutputParam](capi-avmetadataextractor-oh-avmetadataextractor-outputparam.md)。若该参数为空指针，则获取的帧使用视频原始尺寸。 |
 | [OH_AVMetadataExtractor_OnFrameFetched](capi-avmetadata-extractor-h.md#oh_avmetadataextractor_onframefetched) onFrameInfoCallback | 每帧提取完成或提取失败后调用的回调函数。 |
 | void* userData | 传递给回调函数的用户自定义数据指针。 |
@@ -277,7 +277,7 @@ OH_AVErrCode OH_AVMetadataExtractor_FetchFramesByTimes(OH_AVMetadataExtractor *e
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | 函数执行结果。<br> AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入参数无效。<br> AV_ERR_SERVICE_DIED：服务已终止。<br> AV_ERR_IO_CLEARTEXT_NOT_PERMITTED：不允许HTTP明文流量。<br> AV_ERR_OPERATE_NOT_PERMIT：操作不允许。由onFrameInfoCallback返回。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。由onFrameInfoCallback返回。<br> AV_ERR_TIMEOUT：执行超时。由onFrameInfoCallback返回。 |
+| OH_AVErrCode | 函数执行结果。<br> AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL：输入参数无效。<br> AV_ERR_SERVICE_DIED：服务已终止。<br> AV_ERR_IO_CLEARTEXT_NOT_PERMITTED：不允许HTTP明文流量。<br> AV_ERR_OPERATE_NOT_PERMIT：操作不允许。由onFrameInfoCallback返回。<br> AV_ERR_UNSUPPORTED_FORMAT：格式不支持。由onFrameInfoCallback返回。<br> AV_ERR_TIMEOUT：执行超时。由onFrameInfoCallback返回。 |
 
 ### OH_AVMetadataExtractor_CancelAllFetchFrames()
 
@@ -319,7 +319,7 @@ OH_AVErrCode OH_AVMetadataExtractor_Release(OH_AVMetadataExtractor* extractor)
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_AVErrCode](../AVCodecKit/capi-native-averrors-h.md#oh_averrcode) | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。 |
+| OH_AVErrCode | AV_ERR_OK：执行成功。<br> AV_ERR_INVALID_VAL： 输入的extractor为空指针或参数无效。 |
 
 ### OH_AVMetadataExtractor_OutputParam_Create()
 

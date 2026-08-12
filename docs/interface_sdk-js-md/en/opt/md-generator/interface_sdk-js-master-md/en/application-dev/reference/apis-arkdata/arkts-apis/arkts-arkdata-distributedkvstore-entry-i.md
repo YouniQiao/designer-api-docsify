@@ -11,7 +11,7 @@ Provides key-value pairs stored in the distributedKVStore.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## key
@@ -40,7 +40,7 @@ value: Value
 
 Indicates the value
 
-**Type:** [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)
+**Type:** Value
 
 **Since:** 9
 

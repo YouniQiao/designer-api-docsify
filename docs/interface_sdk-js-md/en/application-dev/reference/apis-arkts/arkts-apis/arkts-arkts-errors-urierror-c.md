@@ -2,7 +2,7 @@
 
 Represents an error that occurs when a global URI handling function was used in a wrong way
 
-**Inheritance/Implementation:** URIError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** URIError extends [Error](Error)
 
 **Since:** 26.0.0
 

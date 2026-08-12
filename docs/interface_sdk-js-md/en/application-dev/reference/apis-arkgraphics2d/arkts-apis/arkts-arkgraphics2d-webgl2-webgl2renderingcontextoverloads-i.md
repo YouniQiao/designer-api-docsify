@@ -91,7 +91,7 @@ Sets buffer data from ArrayBufferView with offset
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Buffer target |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | usage | webgl.GLenum | Yes | Buffer usage |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 | length | webgl.GLuint | No | Length |
@@ -152,7 +152,7 @@ Sets buffer sub data with offset
 | --- | --- | --- | --- |
 | target | webgl.GLenum | Yes | Buffer target |
 | dstByteOffset | webgl.GLintptr | Yes | Destination byte offset |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 | length | webgl.GLuint | No | Length |
 
@@ -234,7 +234,7 @@ Compressed texture image 2D from ArrayBufferView
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
 | border | webgl.GLint | Yes | Border |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
@@ -320,7 +320,7 @@ Compressed texture sub image 2D from ArrayBufferView
 | width | webgl.GLsizei | Yes | Width |
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | Format |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | No | Source offset |
 | srcLengthOverride | webgl.GLuint | No | Source length override |
 
@@ -360,7 +360,7 @@ Reads pixels from the framebuffer to ArrayBufferView
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| dstData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Destination data |
+| dstData | ArrayBufferView \| null | Yes | Destination data |
 
 ## readPixels
 
@@ -437,7 +437,7 @@ Reads pixels from the framebuffer to ArrayBufferView with offset
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| dstData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Destination data |
+| dstData | ArrayBufferView | Yes | Destination data |
 | dstOffset | webgl.GLuint | Yes | Destination offset |
 
 ## texImage2D
@@ -480,7 +480,7 @@ Sets texture image 2D from pixels
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | ArrayBufferView \| null | Yes | Pixel data |
 
 ## texImage2D
 
@@ -643,7 +643,7 @@ Sets texture image 2D from ArrayBufferView with offset
 | border | webgl.GLint | Yes | Border |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 
 ## texSubImage2D
@@ -686,7 +686,7 @@ Sets texture sub image 2D from pixels
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| pixels | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) \| null | Yes | Pixel data |
+| pixels | ArrayBufferView \| null | Yes | Pixel data |
 
 ## texSubImage2D
 
@@ -851,7 +851,7 @@ Sets texture sub image 2D from ArrayBufferView with offset
 | height | webgl.GLsizei | Yes | Height |
 | format | webgl.GLenum | Yes | Pixel format |
 | type | webgl.GLenum | Yes | Pixel type |
-| srcData | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes | Source data |
+| srcData | ArrayBufferView | Yes | Source data |
 | srcOffset | webgl.GLuint | Yes | Source offset |
 
 ## uniform1fv

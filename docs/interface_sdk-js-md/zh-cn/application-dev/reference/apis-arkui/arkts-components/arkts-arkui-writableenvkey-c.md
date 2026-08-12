@@ -19,12 +19,12 @@
 static readonly DIRECTION: WritableSystemEnvKey<Direction>
 ```
 
-[@Env](../../../reference/apis-arkui/arkui-ts/ts-env-system-property.md#env)变量参数，通过@Env(WritableEnvKey.DIRECTION)可获取[Direction](../arkts-apis/arkts-arkui-enums-direction-e.md/arkts-arkui-enums-direction-e.md)枚举类型的值。
+[@Env](../../../reference/apis-arkui/arkui-ts/ts-env-system-property.md#env)变量参数，通过@Env(WritableEnvKey.DIRECTION)可获取[Direction](Direction)枚举类型的值。
 
 当该装饰器声明在[@Component](../../../ui/state-management/arkts-create-custom-components.md#component)或  
 [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2)中时，用于获取窗口所在屏幕的布局方向。
 
-**类型：** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;[Direction](../arkts-apis/arkts-arkui-direction-e.md)&gt;
+**类型：** [WritableSystemEnvKey](arkts-arkui-writablesystemenvkey-c.md)&lt;Direction&gt;
 
 **起始版本：** 26.0.0
 

@@ -86,7 +86,7 @@ placeholder?: ComponentContent
 
 设置占位符。如果设置了占位ComponentContent，则在连接未建立时显示占位节点。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 12
 

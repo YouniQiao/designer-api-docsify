@@ -13,7 +13,7 @@ The definition of setting Information.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## desc
@@ -104,7 +104,7 @@ settingValue?: string | boolean | SettingContent[] | WantAgent
 
 Value of the setting item.SWITCH: bool, LIST: SettingContent, JUMP: string.
 
-**Type:** string \| boolean \| SettingContent[] \| WantAgent
+**Type:** string \| boolean \| [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md)[] \| [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
 
 **Since:** 23
 

@@ -26,7 +26,7 @@ onAllErrors接口与onerror接口之间的行为差异如下：
 
  推荐使用onAllErrors接口，因为它提供了更全面的异常捕获能力，并且不会导致线程终止。
 
-**继承/实现关系：** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md)
+**继承/实现关系：** ThreadWorker implements [WorkerEventTarget](arkts-arkts-worker-workereventtarget-i.md#WorkerEventTarget)
 
 **起始版本：** 9
 
@@ -61,8 +61,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -107,8 +107,8 @@ ThreadWorker构造函数。
 
 | 错误码ID |
 | --- |
-| [10200003](../errorcode-utils.md#10200003-worker初始化失败) |
-| [10200007](../errorcode-utils.md#10200007-worker文件路径异常) |
+| [10200003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-worker初始化失败) |
+| [10200007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200007-worker文件路径异常) |
 
 ## 示例
 
@@ -142,7 +142,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 |
 
 **返回值：**
 
@@ -154,7 +154,7 @@ dispatchEvent(event: Event): boolean
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -200,8 +200,8 @@ off(type: string, listener?: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -258,8 +258,8 @@ on(type: string, listener: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -298,8 +298,8 @@ onAllErrors?: ErrorCallback
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## once
 
@@ -328,8 +328,8 @@ once(type: string, listener: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -372,8 +372,8 @@ onerror?: (err: ErrorEvent) => void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## onexit
 
@@ -401,8 +401,8 @@ onexit?: (code: number) => void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## onmessage
 
@@ -430,8 +430,8 @@ onmessage?: (event: MessageEvents) => void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## onmessageerror
 
@@ -459,8 +459,8 @@ onmessageerror?: (event: MessageEvents) => void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## postMessage
 
@@ -489,8 +489,8 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -594,8 +594,8 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -639,8 +639,8 @@ postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 
 | 错误码ID |
 | --- |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -705,14 +705,14 @@ registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| instanceName | string | 是 |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | 是 |
 | globalCallObject | Object | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -781,7 +781,7 @@ removeAllListener(): void
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -823,7 +823,7 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -862,7 +862,7 @@ terminate(): void
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -894,13 +894,13 @@ unregisterGlobalCallObject(instanceName?: string): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| instanceName | string | 否 |
+| [instanceName](../../apis-ability-kit/arkts-apis/arkts-ability-errormanager-globalerror-i.md) | string | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 

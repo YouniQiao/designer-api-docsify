@@ -6,7 +6,7 @@
 function setEventHubMultithreadingEnabled(context: common.Context, enabled: boolean): void
 ```
 
-设置[Context](arkts-ability-context-t.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。
+设置[Context](./app/context)中的[EventHub](arkts-ability-eventhub-c.md#EventHub)是否启用跨线程通信能力。
 
 > **说明：**
 > 

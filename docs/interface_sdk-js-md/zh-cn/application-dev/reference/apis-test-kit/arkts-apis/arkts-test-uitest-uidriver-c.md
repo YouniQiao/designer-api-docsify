@@ -4,7 +4,7 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[Driver&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#Driver)替代。
 
 **起始版本：** 8
 
@@ -12,7 +12,7 @@ UiDriver类为uitest测试框架的总入口，提供控件匹配/查找，按�
 
 **废弃版本：** 9
 
-**替代接口：** [Driver](arkts-test-uitest-driver-c.md)
+**替代接口：** [Driver](arkts-test-uitest-driver-c.md#Driver)
 
 <!--Device-unnamed-declare class UiDriver--><!--Device-unnamed-declare class UiDriver-End-->
 
@@ -28,7 +28,7 @@ assertComponentExist(by: By): Promise<void>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[assertComponentExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#assertcomponentexist)替
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[assertComponentExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#assertComponentExist)替
 > 代。
 
 **起始版本：** 8
@@ -37,7 +37,7 @@ assertComponentExist(by: By): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#assertComponentExist](arkts-test-uitest-driver-c.md#assertcomponentexist)
+**替代接口：** [assertComponentExist](arkts-test-uitest-driver-c.md#assertComponentExist)
 
 <!--Device-UiDriver-assertComponentExist(by: By): Promise<void>--><!--Device-UiDriver-assertComponentExist(by: By): Promise<void>-End-->
 
@@ -59,9 +59,9 @@ assertComponentExist(by: By): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000003](../errorcode-uitest.md#17000003-断言失败) | if the assertion failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | if the input parameters are invalid. |
-| [17000002](../errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
+| [17000003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-断言失败) | if the assertion failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | if the input parameters are invalid. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-接口不支持并发调用) | The API does not support concurrent calls. |
 
 ## 示例
 
@@ -93,7 +93,7 @@ UiDriver对象采取如下操作：在目标坐标点单击。使用Promise异�
 
 **废弃版本：** 9
 
-**替代接口：** [Component#click](arkts-test-uitest-component-c.md#click)
+**替代接口：** [click](arkts-test-uitest-component-c.md#click)
 
 <!--Device-UiDriver-click(x: number, y: number): Promise<void>--><!--Device-UiDriver-click(x: number, y: number): Promise<void>-End-->
 
@@ -142,7 +142,7 @@ static create(): UiDriver
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#create](arkts-test-uitest-driver-c.md#create)
+**替代接口：** [create](arkts-test-uitest-driver-c.md#create)
 
 <!--Device-UiDriver-static create(): UiDriver--><!--Device-UiDriver-static create(): UiDriver-End-->
 
@@ -175,7 +175,7 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayms)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[delayMs&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#delayMs)替代。
 
 **起始版本：** 8
 
@@ -183,7 +183,7 @@ UiDriver对象在给定的时间内延时。使用Promise异步回调。
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#delayMs](arkts-test-uitest-driver-c.md#delayms)
+**替代接口：** [delayMs](arkts-test-uitest-driver-c.md#delayMs)
 
 <!--Device-UiDriver-delayMs(duration: number): Promise<void>--><!--Device-UiDriver-delayMs(duration: number): Promise<void>-End-->
 
@@ -223,7 +223,7 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleclick)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[doubleClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#doubleClick)替代。
 
 **起始版本：** 8
 
@@ -231,7 +231,7 @@ UiDriver对象采取如下操作：在目标坐标点双击。使用Promise异�
 
 **废弃版本：** 9
 
-**替代接口：** [Component#doubleClick](arkts-test-uitest-component-c.md#doubleclick)
+**替代接口：** [doubleClick](arkts-test-uitest-component-c.md#doubleClick)
 
 <!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-doubleClick(x: number, y: number): Promise<void>-End-->
 
@@ -272,7 +272,7 @@ findComponent(by: By): Promise<UiComponent>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponent)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponent&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findComponent-1)替代。
 
 **起始版本：** 8
 
@@ -280,7 +280,7 @@ findComponent(by: By): Promise<UiComponent>
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#findComponent](arkts-test-uitest-driver-c.md#findcomponent)(on:
+**替代接口：** [findComponent](Driver#findComponent(on:)
 
 <!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>--><!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>-End-->
 
@@ -296,7 +296,7 @@ findComponent(by: By): Promise<UiComponent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UiComponent&gt; | Promise对象，返回控件对象。 |
+| Promise&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt; | Promise对象，返回控件对象。 |
 
 ## 示例
 
@@ -320,7 +320,7 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findcomponents)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[findComponents&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#findComponents-1)替代。
 
 **起始版本：** 8
 
@@ -328,7 +328,7 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#findComponents](arkts-test-uitest-driver-c.md#findcomponents)(on:
+**替代接口：** [findComponents](Driver#findComponents(on:)
 
 <!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>--><!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>-End-->
 
@@ -344,7 +344,7 @@ findComponents(by: By): Promise<Array<UiComponent>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;UiComponent&gt;&gt; | Promise对象，返回控件对象的列表。 |
+| Promise&lt;Array&lt;[UiComponent](arkts-test-uitest-uicomponent-c.md)&gt;&gt; | Promise对象，返回控件对象的列表。 |
 
 ## 示例
 
@@ -368,7 +368,7 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longclick)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[longClick&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-component-c.md#longClick)替代。
 
 **起始版本：** 8
 
@@ -376,7 +376,7 @@ UiDriver对象采取如下操作：在目标坐标点长按下鼠标左键。使
 
 **废弃版本：** 9
 
-**替代接口：** [Component#longClick](arkts-test-uitest-component-c.md#longclick)
+**替代接口：** [longClick](arkts-test-uitest-component-c.md#longClick)
 
 <!--Device-UiDriver-longClick(x: number, y: number): Promise<void>--><!--Device-UiDriver-longClick(x: number, y: number): Promise<void>-End-->
 
@@ -417,7 +417,7 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[pressBack&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#pressback)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[pressBack&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#pressBack)替代。
 
 **起始版本：** 8
 
@@ -425,7 +425,7 @@ UiDriver对象进行点击BACK键的操作。使用Promise异步回调。
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#pressBack](arkts-test-uitest-driver-c.md#pressback)()
+**替代接口：** [pressBack](arkts-test-uitest-driver-c.md#pressBack)()
 
 <!--Device-UiDriver-pressBack(): Promise<void>--><!--Device-UiDriver-pressBack(): Promise<void>-End-->
 
@@ -459,7 +459,7 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screencap)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[screenCap&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#screenCap)替代。
 
 **起始版本：** 8
 
@@ -467,7 +467,7 @@ UiDriver对象采取如下操作：捕获当前屏幕，并保存为PNG格式的
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#screenCap](arkts-test-uitest-driver-c.md#screencap)(savePath:
+**替代接口：** [screenCap](Driver#screenCap(savePath:)
 
 <!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>--><!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>-End-->
 
@@ -515,7 +515,7 @@ UiDriver对象采取如下操作：从给出的起始坐标点滑向给出的目
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#swipe](arkts-test-uitest-driver-c.md#swipe)
+**替代接口：** [swipe](arkts-test-uitest-driver-c.md#swipe)
 
 <!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>--><!--Device-UiDriver-swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>-End-->
 
@@ -558,7 +558,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 > **说明：**
 > 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerkey)替代。
+> 从API version 8开始支持，从API version 9开始废弃，建议使用[triggerKey&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#triggerKey)替代。
 
 **起始版本：** 8
 
@@ -566,7 +566,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 **废弃版本：** 9
 
-**替代接口：** [Driver#triggerKey](arkts-test-uitest-driver-c.md#triggerkey)(keyCode:
+**替代接口：** [triggerKey](Driver#triggerKey(keyCode:)
 
 <!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>--><!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>-End-->
 
@@ -576,7 +576,7 @@ UiDriver对象采取如下操作：通过key值找到对应键并点击。使用
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md)。 |
+| keyCode | number | 是 | 指定的key值，取值大于等于0的整数，取值范围：[KeyCode键码值](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode)。 |
 
 **返回值：**
 

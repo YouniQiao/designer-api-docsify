@@ -30,8 +30,8 @@ LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | 是 |
-| itemGenerator | (item: any, index: number) =&gt; void | 是 |
-| keyGenerator | (item: any, index: number) =&gt; string | 否 |
+| itemGenerator | (item: any, index: number) = & gt; void | 是 |
+| keyGenerator | (item: any, index: number) = & gt; string | 否 |
 
 ## LazyForEach
 
@@ -65,8 +65,8 @@ LazyForEach从提供的数据源中按需迭代数据，并在每次迭代过程
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | dataSource | [IDataSource](arkts-arkui-idatasource-i.md) | 是 |
-| itemGenerator | (item: any, index: number) =&gt; void | 是 |
-| keyGenerator | (item: any, index: number) =&gt; string | 否 |
+| itemGenerator | (item: any, index: number) = & gt; void | 是 |
+| keyGenerator | (item: any, index: number) = & gt; string | 否 |
 | options | [LazyForEachOptions](arkts-arkui-lazyforeachoptions-i.md) | 否 |
 
 ## 汇总

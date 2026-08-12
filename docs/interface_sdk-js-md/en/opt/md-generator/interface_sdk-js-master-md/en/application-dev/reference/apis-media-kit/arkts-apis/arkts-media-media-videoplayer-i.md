@@ -1,13 +1,13 @@
 # VideoPlayer
 
 VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use   
-[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer) to create a VideoPlayer instance.
+[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createVideoPlayer) to create a VideoPlayer instance.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media](arkts-multimedia-media.md)
+**Substitutes:** [media](arkts-multimedia-media.md#media)
 
 <!--Device-media-interface VideoPlayer--><!--Device-media-interface VideoPlayer-End-->
 
@@ -16,7 +16,7 @@ VideoPlayer is a class for video playback management. It provides APIs to manage
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## getTrackDescription
@@ -31,7 +31,7 @@ Obtains the video track information. This API uses an asynchronous callback to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback:
+**Substitutes:** [getTrackDescription](@ohos.multimedia.media:media.AVPlayer.getTrackDescription(callback:)
 
 <!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -41,7 +41,7 @@ Obtains the video track information. This API uses an asynchronous callback to r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes |
 
 ## getTrackDescription
 
@@ -55,7 +55,7 @@ Obtains the video track information. This API uses a promise to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
+**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)()
 
 <!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-VideoPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -65,7 +65,7 @@ Obtains the video track information. This API uses a promise to return the resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; |
 
 ## on('playbackCompleted')
 
@@ -79,7 +79,7 @@ Subscribes to the video playback completion event.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVPlayer.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'playbackCompleted', callback: Callback<void>): void-End-->
 
@@ -104,7 +104,7 @@ Subscribes to the video buffering update event. This API works only under online
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVPlayer.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-VideoPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
@@ -115,7 +115,7 @@ Subscribes to the video buffering update event. This API works only under online
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes |
+| callback | (infoType: BufferingInfoType, value: number) = & gt; void | Yes |
 
 ## on('startRenderFrame')
 
@@ -129,7 +129,7 @@ Subscribes to the frame rendering start event.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVPlayer.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void--><!--Device-VideoPlayer-on(type: 'startRenderFrame', callback: Callback<void>): void-End-->
 
@@ -154,7 +154,7 @@ Subscribes to the video width and height change event.
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVPlayer.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void--><!--Device-VideoPlayer-on(type: 'videoSizeChanged', callback: (width: number, height: number) => void): void-End-->
 
@@ -165,7 +165,7 @@ Subscribes to the video width and height change event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'videoSizeChanged' | Yes |
-| callback | (width: number, height: number) =&gt; void | Yes |
+| callback | (width: number, height: number) = & gt; void | Yes |
 
 ## on('audioInterrupt')
 
@@ -174,13 +174,13 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
 Subscribes to the audio interruption event. For details, see   
-[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md/arkts-audio-audio-interruptevent-i.md).
+[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent).
 
 **Since:** 9
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVPlayer.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-VideoPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
@@ -191,7 +191,7 @@ Subscribes to the audio interruption event. For details, see
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioInterrupt' | Yes |
-| callback | (info: audio.InterruptEvent) =&gt; void | Yes |
+| callback | (info: audio.InterruptEvent) = & gt; void | Yes |
 
 ## on('error')
 
@@ -205,7 +205,7 @@ Subscribes to video playback error events. After an error event is reported, you
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.multimedia.media:media.AVPlayer.on(type:
+**Substitutes:** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -230,7 +230,7 @@ Pauses video playback. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)(callback:
+**Substitutes:** [pause](@ohos.multimedia.media:media.AVPlayer.pause(callback:)
 
 <!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -254,7 +254,7 @@ Pauses video playback. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)()
+**Substitutes:** [pause](arkts-media-media-avplayer-i.md#pause)()
 
 <!--Device-VideoPlayer-pause(): Promise<void>--><!--Device-VideoPlayer-pause(): Promise<void>-End-->
 
@@ -264,7 +264,7 @@ Pauses video playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## play
 
@@ -278,7 +278,7 @@ Starts video playback. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.play](arkts-media-media-avplayer-i.md#play)(callback:
+**Substitutes:** [play](@ohos.multimedia.media:media.AVPlayer.play(callback:)
 
 <!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void-End-->
 
@@ -302,7 +302,7 @@ Starts video playback. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.play](arkts-media-media-avplayer-i.md#play)()
+**Substitutes:** [play](arkts-media-media-avplayer-i.md#play)()
 
 <!--Device-VideoPlayer-play(): Promise<void>--><!--Device-VideoPlayer-play(): Promise<void>-End-->
 
@@ -312,7 +312,7 @@ Starts video playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## prepare
 
@@ -326,7 +326,7 @@ Prepares for video playback. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)(callback:
+**Substitutes:** [prepare](@ohos.multimedia.media:media.AVPlayer.prepare(callback:)
 
 <!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -350,7 +350,7 @@ Prepares for video playback. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)()
+**Substitutes:** [prepare](arkts-media-media-avplayer-i.md#prepare)()
 
 <!--Device-VideoPlayer-prepare(): Promise<void>--><!--Device-VideoPlayer-prepare(): Promise<void>-End-->
 
@@ -360,7 +360,7 @@ Prepares for video playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## release
 
@@ -374,7 +374,7 @@ Releases the video playback resources. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.release](arkts-media-media-avplayer-i.md#release)(callback:
+**Substitutes:** [release](@ohos.multimedia.media:media.AVPlayer.release(callback:)
 
 <!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -398,7 +398,7 @@ Releases the video playback resources. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.release](arkts-media-media-avplayer-i.md#release)()
+**Substitutes:** [release](arkts-media-media-avplayer-i.md#release)()
 
 <!--Device-VideoPlayer-release(): Promise<void>--><!--Device-VideoPlayer-release(): Promise<void>-End-->
 
@@ -408,7 +408,7 @@ Releases the video playback resources. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## reset
 
@@ -422,7 +422,7 @@ Resets video playback. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)(callback:
+**Substitutes:** [reset](@ohos.multimedia.media:media.AVPlayer.reset(callback:)
 
 <!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -446,7 +446,7 @@ Resets video playback. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)()
+**Substitutes:** [reset](arkts-media-media-avplayer-i.md#reset)()
 
 <!--Device-VideoPlayer-reset(): Promise<void>--><!--Device-VideoPlayer-reset(): Promise<void>-End-->
 
@@ -456,7 +456,7 @@ Resets video playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## seek
 
@@ -470,7 +470,7 @@ Seeks to the specified playback position. The previous key frame at the specifie
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**Substitutes:** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, callback: AsyncCallback<number>): void-End-->
 
@@ -495,7 +495,7 @@ Seeks to the specified playback position. This API uses an asynchronous callback
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**Substitutes:** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void-End-->
 
@@ -521,7 +521,7 @@ Seeks to the specified playback position. If **mode** is not specified, the prev
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**Substitutes:** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>--><!--Device-VideoPlayer-seek(timeMs: number, mode?: SeekMode): Promise<number>-End-->
 
@@ -538,7 +538,7 @@ Seeks to the specified playback position. If **mode** is not specified, the prev
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## setDisplaySurface
 
@@ -557,7 +557,7 @@ Sets a surface ID. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 <!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -587,7 +587,7 @@ Sets a surface ID. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 <!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>--><!--Device-VideoPlayer-setDisplaySurface(surfaceId: string): Promise<void>-End-->
 
@@ -603,7 +603,7 @@ Sets a surface ID. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setSpeed
 
@@ -617,7 +617,7 @@ Sets the playback speed. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.setSpeed](arkts-media-media-avplayer-i.md#setspeed)
+**Substitutes:** [setSpeed](arkts-media-media-avplayer-i.md#setSpeed)
 
 <!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void--><!--Device-VideoPlayer-setSpeed(speed: number, callback: AsyncCallback<number>): void-End-->
 
@@ -642,7 +642,7 @@ Sets the playback speed. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.setSpeed](arkts-media-media-avplayer-i.md#setspeed)
+**Substitutes:** [setSpeed](arkts-media-media-avplayer-i.md#setSpeed)
 
 <!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>--><!--Device-VideoPlayer-setSpeed(speed: number): Promise<number>-End-->
 
@@ -658,7 +658,7 @@ Sets the playback speed. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## setVolume
 
@@ -672,7 +672,7 @@ Sets the volume. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)
+**Substitutes:** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
 
 <!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-setVolume(vol: number, callback: AsyncCallback<void>): void-End-->
 
@@ -697,7 +697,7 @@ Sets the volume. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)
+**Substitutes:** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
 
 <!--Device-VideoPlayer-setVolume(vol: number): Promise<void>--><!--Device-VideoPlayer-setVolume(vol: number): Promise<void>-End-->
 
@@ -713,7 +713,7 @@ Sets the volume. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## stop
 
@@ -727,7 +727,7 @@ Stops video playback. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)(callback:
+**Substitutes:** [stop](@ohos.multimedia.media:media.AVPlayer.stop(callback:)
 
 <!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -751,7 +751,7 @@ Stops video playback. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.multimedia.media:media.AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)()
+**Substitutes:** [stop](arkts-media-media-avplayer-i.md#stop)()
 
 <!--Device-VideoPlayer-stop(): Promise<void>--><!--Device-VideoPlayer-stop(): Promise<void>-End-->
 
@@ -761,7 +761,7 @@ Stops video playback. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## audioInterruptMode
 
@@ -777,7 +777,7 @@ Audio interruption mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#audioInterruptMode
+**Substitutes:** [audioInterruptMode](ohos.multimedia.media/media.AVPlayer#audioInterruptMode)
 
 <!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-VideoPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
@@ -797,7 +797,7 @@ Current video playback position, in ms.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#currentTime
+**Substitutes:** [currentTime](ohos.multimedia.media/media.AVPlayer#currentTime)
 
 <!--Device-VideoPlayer-readonly currentTime: number--><!--Device-VideoPlayer-readonly currentTime: number-End-->
 
@@ -817,7 +817,7 @@ Video duration, in ms. The value **-1** indicates the live mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#duration
+**Substitutes:** [duration](ohos.multimedia.media/media.AVPlayer#duration)
 
 <!--Device-VideoPlayer-readonly duration: number--><!--Device-VideoPlayer-readonly duration: number-End-->
 
@@ -849,7 +849,7 @@ To play an independent video file, use **src=fd://xx**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#fdSrc
+**Substitutes:** [fdSrc](ohos.multimedia.media/media.AVPlayer#fdSrc)
 
 <!--Device-VideoPlayer-fdSrc: AVFileDescriptor--><!--Device-VideoPlayer-fdSrc: AVFileDescriptor-End-->
 
@@ -869,7 +869,7 @@ Video height, in px.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#height
+**Substitutes:** [height](ohos.multimedia.media/media.AVPlayer#height)
 
 <!--Device-VideoPlayer-readonly height: number--><!--Device-VideoPlayer-readonly height: number-End-->
 
@@ -889,7 +889,7 @@ Whether to loop video playback. **true** to loop, **false** otherwise.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#loop
+**Substitutes:** [loop](ohos.multimedia.media/media.AVPlayer#loop)
 
 <!--Device-VideoPlayer-loop: boolean--><!--Device-VideoPlayer-loop: boolean-End-->
 
@@ -909,7 +909,7 @@ Video playback state.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#state
+**Substitutes:** [state](ohos.multimedia.media/media.AVPlayer#state)
 
 <!--Device-VideoPlayer-readonly state: VideoPlayState--><!--Device-VideoPlayer-readonly state: VideoPlayState-End-->
 
@@ -941,7 +941,7 @@ WebM is no longer supported since API version 11.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#url
+**Substitutes:** [url](ohos.multimedia.media/media.AVPlayer#url)
 
 <!--Device-VideoPlayer-url: string--><!--Device-VideoPlayer-url: string-End-->
 
@@ -961,7 +961,7 @@ Video scale type. The default value is **VIDEO_SCALE_TYPE_FIT**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#videoScaleType
+**Substitutes:** [videoScaleType](ohos.multimedia.media/media.AVPlayer#videoScaleType)
 
 <!--Device-VideoPlayer-videoScaleType?: VideoScaleType--><!--Device-VideoPlayer-videoScaleType?: VideoScaleType-End-->
 
@@ -981,7 +981,7 @@ Video width, in px.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVPlayer#width
+**Substitutes:** [width](ohos.multimedia.media/media.AVPlayer#width)
 
 <!--Device-VideoPlayer-readonly width: number--><!--Device-VideoPlayer-readonly width: number-End-->
 

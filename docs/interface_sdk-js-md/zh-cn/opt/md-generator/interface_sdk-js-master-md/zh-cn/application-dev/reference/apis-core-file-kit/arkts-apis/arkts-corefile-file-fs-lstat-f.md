@@ -24,7 +24,7 @@ declare function lstat(path: string): Promise<Stat>
 
 | 类型 |
 | --- |
-| Promise&lt;Stat&gt; |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; |
 
 **错误码：**
 
@@ -61,7 +61,7 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 |
 
 **错误码：**
 

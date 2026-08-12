@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## isSupported
@@ -20,7 +20,7 @@ Checks whether a specified type of card emulation is supported.&lt;p&gt;This met
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation#hasHceCapability
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
 
 **Model restriction:** This API can be used only in the stage model.
 

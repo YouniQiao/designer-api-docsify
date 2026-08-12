@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## setTime
@@ -20,7 +20,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)
 
 **Required permissions:** ohos.permission.SET_TIME
 
@@ -33,7 +33,7 @@ Sets the system time. This API uses an asynchronous callback to return the resul
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | time | number | Yes | Timestamp to set, in milliseconds. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ Sets the system time. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)
+**Substitutes:** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)
 
 **Required permissions:** ohos.permission.SET_TIME
 

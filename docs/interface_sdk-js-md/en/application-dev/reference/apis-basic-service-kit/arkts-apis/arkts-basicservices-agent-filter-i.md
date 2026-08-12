@@ -13,7 +13,7 @@ Defines the filter criteria.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## action
@@ -28,7 +28,7 @@ Task action.
 - **DOWNLOAD**: Download tasks.  
 - If this parameter is not set, all tasks are queried.
 
-**Type:** [Action](arkts-basicservices-agent-action-e.md)
+**Type:** Action
 
 **Since:** 10
 
@@ -104,7 +104,7 @@ state?: State
 
 Task state. If this parameter is not set, all tasks are queried.
 
-**Type:** [State](arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Since:** 10
 

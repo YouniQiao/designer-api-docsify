@@ -12,7 +12,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -77,7 +77,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -97,7 +97,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

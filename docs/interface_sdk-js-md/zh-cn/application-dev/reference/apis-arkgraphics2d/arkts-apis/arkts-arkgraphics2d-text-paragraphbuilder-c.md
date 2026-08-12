@@ -1,9 +1,9 @@
 # ParagraphBuilder
 
-段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)和  
-[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md)初始化ParagraphBuilder，然后通过  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)设置文本样式、[addText](arkts-arkgraphics2d-text-paragraphbuilder-c.md#addtext)添加文本内容，最终调用  
-[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)对象进行排版和绘制。
+段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)和  
+[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection)初始化ParagraphBuilder，然后通过  
+[pushStyle](#pushStyle)设置文本样式、[addText](#addText)添加文本内容，最终调用  
+[build()](#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)对象进行排版和绘制。
 
 **起始版本：** 12
 
@@ -326,7 +326,7 @@ build(): Paragraph
 
 | 类型 | 说明 |
 | --- | --- |
-| [Paragraph](../../apis-arkui/arkts-apis/arkts-arkui-paragraph-t.md) | 可用于后续渲染的 Paragraph 对象。 |
+| Paragraph | 可用于后续渲染的 Paragraph 对象。 |
 
 ## 示例
 
@@ -506,7 +506,7 @@ ParagraphBuilder对象的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paragraphStyle | [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md) | 是 | 段落样式。 |
+| paragraphStyle | ParagraphStyle | 是 | 段落样式。 |
 | fontCollection | [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 是 | 字体集对象，提供文本排版所需的字体资源，用于在段落构建过程中进行字形匹配和文本渲染。 |
 
 ## 示例
@@ -586,8 +586,8 @@ popStyle(): void
 
 > **说明：**
 > 
-> 必须在调用[pushStyle()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushstyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
-> [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)中的textStyle作为默认样式。
+> 必须在调用[pushStyle()](#pushStyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
+> [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中的textStyle作为默认样式。
 
 **起始版本：** 12
 
@@ -696,7 +696,7 @@ pushStyle(textStyle: TextStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textStyle | [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) | 是 | 包含了对文本的各种视觉属性的定义，如字体、字号、颜色、字重、字间距、行距、装饰（如下划线、删除线）、文本阴影等。 |
+| textStyle | TextStyle | 是 | 包含了对文本的各种视觉属性的定义，如字体、字号、颜色、字重、字间距、行距、装饰（如下划线、删除线）、文本阴影等。 |
 
 ## 示例
 

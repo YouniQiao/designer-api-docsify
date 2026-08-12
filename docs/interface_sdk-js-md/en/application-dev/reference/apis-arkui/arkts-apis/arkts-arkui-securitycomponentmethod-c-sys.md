@@ -11,14 +11,14 @@ the security component specifications. For specific constraints,see [Constraints
 
 ## Key Enums
 
-- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text  
+- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#SecurityComponentLayoutDirection): Enumeration of icon and text  
 layout directions for the security component. Specifies horizontal or vertical layout.  
-- [ButtonType](arkts-arkui-button-buttontype-e.md): Enumeration of button styles for the security component.  
+- [ButtonType](@global:ButtonType): Enumeration of button styles for the security component.  
 Specifies capsule, circle, rounded rectangle, or normal button style.
 
 ## Key APIs
 
-- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
+- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md#SecurityComponentMethod): A collection of universal attribute methods for  
 security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
 ## Child Components

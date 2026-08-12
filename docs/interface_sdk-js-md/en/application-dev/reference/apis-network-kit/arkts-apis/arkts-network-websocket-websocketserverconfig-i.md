@@ -13,7 +13,7 @@ Defines parameters for a WebSocket Server.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## maxConcurrentClientsNumber

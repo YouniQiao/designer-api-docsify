@@ -16,7 +16,7 @@ adjust: Array<UIFontAdjustInfo>
 
 字体原本的weight值对应需显示的值。
 
-**类型：** Array&lt;UIFontAdjustInfo&gt;
+**类型：** Array&lt;[UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md)&gt;
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ alias: Array<UIFontAliasInfo>
 
 别名列表。
 
-**类型：** Array&lt;UIFontAliasInfo&gt;
+**类型：** Array&lt;[UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md)&gt;
 
 **起始版本：** 23
 

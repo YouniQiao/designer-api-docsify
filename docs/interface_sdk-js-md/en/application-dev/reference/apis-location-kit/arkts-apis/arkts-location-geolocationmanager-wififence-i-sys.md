@@ -15,7 +15,7 @@ Indicates Wi-Fi fence information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## type
@@ -48,7 +48,7 @@ wifiFeatures: Array<WirelessSignalFeature>
 
 Indicates Wi-Fi features.
 
-**Type:** Array&lt;WirelessSignalFeature&gt;
+**Type:** Array&lt;[WirelessSignalFeature](arkts-location-geolocationmanager-wirelesssignalfeature-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

@@ -32,7 +32,7 @@ caseFirst?: LocaleCollationCaseFirst
 
 Flag that defines whether case is taken into account for the locale's collation rules.
 
-**Type:** LocaleCollationCaseFirst
+**Type:** [LocaleCollationCaseFirst](arkts-intl-localecollationcasefirst-t.md)
 
 <!--Device-LocaleOptions-caseFirst?: LocaleCollationCaseFirst--><!--Device-LocaleOptions-caseFirst?: LocaleCollationCaseFirst-End-->
 
@@ -56,7 +56,7 @@ hourCycle?: LocaleHourCycleKey
 
 The time keeping format convention used by the locale.
 
-**Type:** LocaleHourCycleKey
+**Type:** [LocaleHourCycleKey](arkts-intl-localehourcyclekey-t.md)
 
 <!--Device-LocaleOptions-hourCycle?: LocaleHourCycleKey--><!--Device-LocaleOptions-hourCycle?: LocaleHourCycleKey-End-->
 

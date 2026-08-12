@@ -18,5 +18,5 @@ Defines a callback triggered when a blank screen is detected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [BlankScreenDetectionEventInfo](../arkts-apis/arkts-arkweb-web-blankscreendetectioneventinfo-i.md) | Yes | Detailed information when a blank screen is detected. |
+| event | [BlankScreenDetectionEventInfo](arkts-arkweb-blankscreendetectioneventinfo-i.md) | Yes | Detailed information when a blank screen is detected. |
 

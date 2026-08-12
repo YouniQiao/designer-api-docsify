@@ -168,7 +168,7 @@ makeCustomEnv<T>(owner: IVariableOwner, envKey: CustomEnvKey<T>, varName: string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | 是 | 该变量的自定义组件所有者。 |
-| envKey | [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境变量键。 |
+| envKey | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境变量键。 |
 | varName | string | 是 | 被@CustomEnv装饰的变量名。 |
 | localInitValue | T | 是 | @CustomEnv本地初始值。 |
 
@@ -201,7 +201,7 @@ makeEnv<T>(owner: IVariableOwner, envValue: string | SystemEnvKey<T>, varName: s
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | 是 | 自定义组件。 |
-| envValue | string \| SystemEnvKey&lt;T&gt; | 是 | 支持的环境变量类型 [APi22 - API24] |
+| envValue | string \| [SystemEnvKey](arkts-arkui-decorator-systemenvkey-c.md)&lt;T&gt; | 是 | 支持的环境变量类型 [APi22 - API24] |
 | varName | string | 是 | @Env装饰的变量名。 |
 | envOptions | [EnvOptions](arkts-arkui-decorator-envoptions-i.md)&lt;T&gt; | 否 | makeEnv的其他选项。 |
 
@@ -399,7 +399,7 @@ Create a monitored variable instance.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfos | Array&lt;IMonitorPathInfo&gt; | 是 | monitor path to its accessor |
+| pathInfos | Array&lt;[IMonitorPathInfo](arkts-arkui-decorator-imonitorpathinfo-i.md)&gt; | 是 | monitor path to its accessor |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 是 | callback when then monitor triggers |
 | owner | [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md) | 否 | owner of this monitor |
 
@@ -429,7 +429,7 @@ makeMonitor(pathInfos: Array<IMonitorPathInfo>, monitorCallback: MonitorCallback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathInfos | Array&lt;IMonitorPathInfo&gt; | 是 | monitor path to its accessor |
+| pathInfos | Array&lt;[IMonitorPathInfo](arkts-arkui-decorator-imonitorpathinfo-i.md)&gt; | 是 | monitor path to its accessor |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 是 | callback when the monitor triggers |
 | options | [MakeMonitorOptions](arkts-arkui-decorator-makemonitoroptions-i.md) | 否 | options of this monitor |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## setTimezone
@@ -18,7 +18,7 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#settimezone)
+**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone)
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -71,7 +71,7 @@ Sets the system time zone. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#settimezone)
+**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone)
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -89,7 +89,7 @@ Sets the system time zone. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 

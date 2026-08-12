@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## selectContact
@@ -18,7 +18,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)(callback:
+**Substitutes:** [selectContacts](contact.selectContacts(callback:)
 
 <!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void--><!--Device-contact-function selectContact(callback: AsyncCallback<Array<Contact>>): void-End-->
 
@@ -28,7 +28,7 @@ Selects a contact. This API uses an asynchronous callback to return the result.
 
 | [Name](arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Contact&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -59,7 +59,7 @@ Selects a contact. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [contact.selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectcontacts)()
+**Substitutes:** [selectContacts](arkts-contacts-contact-selectcontacts-f.md#selectContacts)()
 
 <!--Device-contact-function selectContact(): Promise<Array<Contact>>--><!--Device-contact-function selectContact(): Promise<Array<Contact>>-End-->
 
@@ -69,7 +69,7 @@ Selects a contact. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Contact&gt;&gt; |
+| Promise&lt;Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt;&gt; |
 
 ## Examples
 

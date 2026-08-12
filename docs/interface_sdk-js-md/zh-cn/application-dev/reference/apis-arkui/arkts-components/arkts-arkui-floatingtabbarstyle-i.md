@@ -42,7 +42,7 @@ barBottomMargin?: Length
 
 栏与选项卡底部之间的距离。不能以百分比形式设置。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 26.0.0
 
@@ -64,7 +64,7 @@ barSideMargin?: Length
 
 条形的左右边距的宽度。不能以百分比形式设置。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 26.0.0
 
@@ -108,7 +108,7 @@ maskColor?: ResourceColor
 
 蒙版的颜色。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 26.0.0
 
@@ -130,7 +130,7 @@ maskHeight?: Length
 
 遮罩的高度。不能以百分比形式设置。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 26.0.0
 

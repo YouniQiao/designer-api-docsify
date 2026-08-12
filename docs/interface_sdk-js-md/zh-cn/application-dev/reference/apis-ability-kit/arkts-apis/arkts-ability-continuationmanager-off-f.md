@@ -14,7 +14,7 @@ function off(type: 'deviceSelected', token: number): void
 
 **废弃版本：** 22
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -37,11 +37,11 @@ function off(type: 'deviceSelected', token: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) | The specified callback has been registered. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) | The specified token or callback is not registered. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16600004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600004-指定的callback已注册) | The specified callback has been registered. |
+| [16600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
+| [16600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) | The specified token or callback is not registered. |
 
 ## 示例
 
@@ -71,7 +71,7 @@ function off(type: 'deviceUnselected', token: number): void
 
 **废弃版本：** 22
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -94,11 +94,11 @@ function off(type: 'deviceUnselected', token: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16600004](../errorcode-DistributedSchedule.md#16600004-指定的callback已注册) | The specified callback has been registered. |
-| [16600001](../errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
-| [16600002](../errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) | The specified token or callback is not registered. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16600004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600004-指定的callback已注册) | The specified callback has been registered. |
+| [16600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600001-系统服务工作异常) | The system ability works abnormally. |
+| [16600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600002-指定的token或callback未注册) | The specified token or callback is not registered. |
 
 ## 示例
 
@@ -128,7 +128,7 @@ function off(type: 'deviceConnect', callback?: Callback<ContinuationResult>): vo
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,7 +170,7 @@ function off(type: 'deviceDisconnect', callback?: Callback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:
+**替代接口：** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -22,5 +22,5 @@ Represents the callback invoked when the popup state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [PopupStateChangeParam](../arkts-apis/arkts-arkui-common-popupstatechangeparam-i.md) | Yes | Display state of the popup. |
+| event | [PopupStateChangeParam](arkts-arkui-popupstatechangeparam-i.md) | Yes | Display state of the popup. |
 

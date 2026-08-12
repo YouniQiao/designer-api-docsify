@@ -23,5 +23,5 @@ Defines the callback type used in accessibility hover events.The value of isHove
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isHover | boolean | 是 |  |
-| event | [AccessibilityHoverEvent](../arkts-apis/arkts-arkui-common-accessibilityhoverevent-i.md) | 是 |  |
+| event | [AccessibilityHoverEvent](arkts-arkui-accessibilityhoverevent-i.md) | 是 |  |
 

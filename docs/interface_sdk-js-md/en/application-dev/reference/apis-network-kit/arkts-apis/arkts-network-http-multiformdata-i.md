@@ -13,7 +13,7 @@ Represents the properties of a form object.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## contentType

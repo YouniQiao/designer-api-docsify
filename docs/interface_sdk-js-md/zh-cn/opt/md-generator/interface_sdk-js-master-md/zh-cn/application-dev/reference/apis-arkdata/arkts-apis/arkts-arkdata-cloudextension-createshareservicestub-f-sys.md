@@ -26,7 +26,7 @@ function createShareServiceStub(instance: ShareCenter): Promise<rpc.RemoteObject
 
 | 类型 |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## 示例
 

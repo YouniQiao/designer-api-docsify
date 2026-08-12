@@ -13,7 +13,7 @@ TemplateFormDetailInfo
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -104,7 +104,7 @@ dimension: FormDimension
 
 Obtains the form dimension of the template form.
 
-**Type:** [FormDimension](arkts-form-forminfo-formdimension-e.md)
+**Type:** FormDimension
 
 **Since:** 23
 

@@ -18,7 +18,7 @@ builder: CustomBuilder
 
 Sets the custom title builder.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ height: TitleHeight | Length
 
 Sets the custom title height.
 
-**Type:** [TitleHeight](arkts-arkui-titleheight-e.md) \| Length
+**Type:** [TitleHeight](arkts-arkui-titleheight-e.md) \| [Length](arkts-arkui-length-t.md)
 
 **Since:** 23
 

@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
 
@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## complete
@@ -28,7 +28,7 @@ Called when API call is complete.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
 
@@ -46,7 +46,7 @@ Called when API call has failed. Header information and HTTP status code returne
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
 
@@ -71,7 +71,7 @@ Called when API call is successful.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.on
+**Substitutes:** [on](ohos.request.agent.Task.on)
 
 <!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
 
@@ -97,7 +97,7 @@ Result token returned by the download API.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.Task.tid
+**Substitutes:** [tid](ohos.request.agent.Task.tid)
 
 <!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
 

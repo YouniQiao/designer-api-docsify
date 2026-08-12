@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfosForSelf
@@ -34,10 +34,10 @@ Obtains all SkillInfo objects of the calling application.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;SkillInfo&gt;&gt; |
+| Promise & lt;Array & lt;SkillInfo & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17700101](../errorcode-bundle.md#17700101-bundle-manager-service-abnormal) |
+| [17700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700101-bundle-manager-service-abnormal) |

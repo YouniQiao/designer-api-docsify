@@ -11,7 +11,7 @@ Obtains traffic statistics.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## Summary

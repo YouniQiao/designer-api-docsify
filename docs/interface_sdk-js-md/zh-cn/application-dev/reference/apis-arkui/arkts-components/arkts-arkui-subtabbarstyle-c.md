@@ -64,7 +64,7 @@ SubTabBarStyle的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
+| content | ResourceStr | 是 | 页签内的文字内容。 |
 
 ## constructor
 
@@ -90,7 +90,7 @@ SubTabBarStyle的构造函数。支持ComponentContent设置自定义内容。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | 是 | 页签内的内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持labelStyle属性。&lt;br /&gt;2.自定义内容超 出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | ResourceStr \| ComponentContent | 是 | 页签内的内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持labelStyle属性。&lt;br /&gt;2.自定义内容超 出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 ## id
 
@@ -162,8 +162,8 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-设置选中子页签的下划线风格。与[indicator](arkts-arkui-subtabbarstyle-c.md#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照  
-[ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md)。子页签的下划线风格仅在水平模式下有效。
+设置选中子页签的下划线风格。与[indicator](#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照  
+[ImageFit.Cover](ImageFit)。子页签的下划线风格仅在水平模式下有效。
 
 **起始版本：** 22
 
@@ -181,7 +181,7 @@ indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| DrawableTabBarIndicator | 是 | 选中子页签的下划线风格对象。&lt;br /&gt;IndicatorStyle：一般形式的下划线样式。&lt;br /&gt; DrawableTabBarIndicator：图片形式的下划线样式。 |
+| value | [IndicatorStyle](arkts-arkui-indicatorstyle-i.md) \| [DrawableTabBarIndicator](arkts-arkui-drawabletabbarindicator-i.md) | 是 | 选中子页签的下划线风格对象。&lt;br /&gt;IndicatorStyle：一般形式的下划线样式。&lt;br /&gt; DrawableTabBarIndicator：图片形式的下划线样式。 |
 
 **返回值：**
 
@@ -245,7 +245,7 @@ SubTabBarStyle的静态构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
+| content | ResourceStr | 是 | 页签内的文字内容。 |
 
 **返回值：**
 
@@ -277,7 +277,7 @@ SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ComponentContent | 是 | 页签内的内容。支持ComponentContent设置自定义内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持 labelStyle属性。&lt;br /&gt;2.自定义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
+| content | ResourceStr \| ComponentContent | 是 | 页签内的内容。支持ComponentContent设置自定义内容。&lt;br /&gt;**说明：**&lt;br /&gt;1.自定义内容不支持 labelStyle属性。&lt;br /&gt;2.自定义内容超出页签范围，则不显示超出部分。&lt;br /&gt;3.自定义内容小于页签范围，则会居中对齐。&lt;br /&gt;4.自定义内容异常或无可用显示组件，则显示空白。 |
 
 **返回值：**
 
@@ -341,7 +341,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| padding | [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。 &lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),&lt;br/&gt;top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | LocalizedPadding | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。 &lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),&lt;br/&gt;top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **返回值：**
 

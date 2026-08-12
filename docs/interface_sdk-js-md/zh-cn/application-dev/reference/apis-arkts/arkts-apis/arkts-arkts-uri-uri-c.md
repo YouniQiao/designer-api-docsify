@@ -38,7 +38,7 @@ addEncodedSegment(pathSegment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+| URI | 返回已追加字段的URI对象。 |
 
 ## 示例
 
@@ -77,7 +77,7 @@ addQueryValue(key: string, value: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回添加查询部分后的URI对象。 |
+| URI | 返回添加查询部分后的URI对象。 |
 
 ## 示例
 
@@ -115,7 +115,7 @@ addSegment(pathSegment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回已追加字段的URI对象。 |
+| URI | 返回已追加字段的URI对象。 |
 
 ## 示例
 
@@ -279,7 +279,7 @@ clearQuery(): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回一个已被清除查询部分的URI对象。 |
+| URI | 返回一个已被清除查询部分的URI对象。 |
 
 ## 示例
 
@@ -316,7 +316,7 @@ constructor(uri: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid uri string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-参数解析错误) | Invalid uri string. |
 
 ## 示例
 
@@ -359,7 +359,7 @@ static createFromParts(scheme: string, ssp: string, fragment: string): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回由给定方案、方案特定部分和片段创建的URI对象。 |
+| URI | 返回由给定方案、方案特定部分和片段创建的URI对象。 |
 
 ## 示例
 
@@ -382,7 +382,7 @@ equals(other: URI): boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.uri.URI.equalsTo
+**替代接口：** [equalsTo](#equalsTo)
 
 <!--Device-URI-equals(other: URI): boolean--><!--Device-URI-equals(other: URI): boolean-End-->
 
@@ -392,7 +392,7 @@ equals(other: URI): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | 是 | 需要比较的URI对象。 |
+| other | URI | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
@@ -430,7 +430,7 @@ equalsTo(other: URI): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [URI](arkts-arkts-uri-uri-c.md) | 是 | 需要比较的URI对象。 |
+| other | URI | 是 | 需要比较的URI对象。 |
 
 **返回值：**
 
@@ -730,7 +730,7 @@ normalize(): URI
 
 | 类型 | 说明 |
 | --- | --- |
-| [URI](arkts-arkts-uri-uri-c.md) | 返回一个path被规范化后的URI对象。 |
+| URI | 返回一个path被规范化后的URI对象。 |
 
 ## 示例
 

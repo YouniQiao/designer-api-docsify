@@ -28,5 +28,5 @@ export function getListEvent(node: FrameNode): UIListEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIListEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

@@ -2,7 +2,7 @@
 
 Represents the base class of the **RichEditor** component controller.
 
-**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-textcommon-texteditcontrollerex-i.md/arkts-arkui-textcommon-texteditcontrollerex-i.md)
+**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](TextEditControllerEx)
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ Obtains the relative position of the caret in the **RichEditor** component. If t
 
 | Type | Description |
 | --- | --- |
-| [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md) | Relative position of the caret in the **RichEditor** component. |
+| RectResult | Relative position of the caret in the **RichEditor** component. |
 
 ## getLayoutManager
 
@@ -132,7 +132,7 @@ Obtains a **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](../arkts-apis/arkts-arkui-layoutmanager-i.md) | LayoutManager** object. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| LayoutManager | LayoutManager** object. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getPreviewText
 
@@ -158,7 +158,7 @@ Obtains the preview text.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](../arkts-apis/arkts-arkui-previewtext-i.md) | Preview text. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| PreviewText | Preview text. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTypingStyle
 
@@ -234,7 +234,7 @@ Scroll the input field component to make the specified content visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](../arkts-apis/arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
+| range | TextRange | No | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setCaretOffset
 
@@ -305,7 +305,7 @@ On non-2-in-1 devices, when **options** is set to **MenuPolicy.DEFAULT**, the fo
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the selection. |
 | selectionEnd | number | Yes | End position of the selection. |
-| options | [SelectionOptions](../arkts-apis/arkts-arkui-common-selectionoptions-i.md) | No | Configuration of options.<br>**Since:** 12 |
+| options | SelectionOptions | No | Configuration of options.<br>**Since:** 12 |
 
 ## setStyledPlaceholder
 
@@ -331,7 +331,7 @@ Set the styledString placeholder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](../arkts-apis/arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
+| styledString | StyledString | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 
 ## setTypingParagraphStyle
 
@@ -357,7 +357,7 @@ Sets the preset paragraph style. The input text takes effect only when the compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md) | Yes | Preset paragraph style. |
+| style | [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md) | Yes | Preset paragraph style. |
 
 ## setTypingStyle
 

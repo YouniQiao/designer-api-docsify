@@ -24,7 +24,7 @@ Defines SymbolSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](arkts-arkui-resource-t.md) | Yes |  |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes |  |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines SymbolSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SymbolSpanAttribute&gt; | Yes | SymbolSpan attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md)&gt; | Yes | SymbolSpan attribute instance |
 
 **Return value:**
 

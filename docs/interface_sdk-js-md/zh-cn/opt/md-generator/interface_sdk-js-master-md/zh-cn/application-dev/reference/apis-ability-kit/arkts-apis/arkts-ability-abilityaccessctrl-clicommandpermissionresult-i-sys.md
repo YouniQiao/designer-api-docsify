@@ -18,7 +18,7 @@ requiredCliPermissions: Array<CliPermissionDetail>
 
 当前CLI命令依赖的CLI权限信息列表。
 
-**类型：** Array&lt;CliPermissionDetail&gt;
+**类型：** Array&lt;[CliPermissionDetail](arkts-ability-abilityaccessctrl-clipermissiondetail-i-sys.md)&gt;
 
 **起始版本：** 26.0.0
 

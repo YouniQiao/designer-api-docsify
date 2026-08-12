@@ -13,7 +13,7 @@
 
 **与闪控球联动：**
 
-本模块可与[@ohos.window.floatingBall](arkts-window-floatingball.md)（闪控球）联合使用。通过  
+本模块可与[@ohos.window.floatingBall](arkts-window-floatingball.md#floatingBall)（闪控球）联合使用。通过  
 [floatView.bind](arkts-arkui-floatview-bind-f.md#bind)接口将标准悬浮窗控制器与闪控球控制器绑定后，用户点击闪控球可展开为标准悬浮窗，点击标准悬浮窗左上角的缩小按钮可收起为闪控球，实现两种窗口形态的相互切换。
 
 **全局悬浮窗和标准悬浮窗对比**
@@ -22,7 +22,7 @@
 - 区别：  
  - 全局悬浮窗由开发者管理并实现UI绘制，无统一UI及动效。  
  - 标准悬浮窗由系统管理并统一绘制UI，动效更为高端精致。  
- - 标准悬浮窗支持与[闪控球](arkts-window-floatingball.md)互相绑定联合使用，实现更复杂场景。
+ - 标准悬浮窗支持与[闪控球](arkts-window-floatingball.md#floatingBall)互相绑定联合使用，实现更复杂场景。
 
 **起始版本：** 26.0.0
 
@@ -49,11 +49,11 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [bind](arkts-arkui-floatview-bind-f.md#bind) | 绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和  [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)，且均未启动。使用Promise异步回调。 |
+| [bind](arkts-arkui-floatview-bind-f.md#bind) | 绑定标准悬浮窗和闪控球。需要先创建[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController)和  [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController)，且均未启动。使用Promise异步回调。 |
 | [create](arkts-arkui-floatview-create-f.md#create) | 创建标准悬浮窗控制器。使用Promise异步回调。 |
 | [getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getfloatviewlimits) | 根据传入的模板类型获取对应标准悬浮窗窗口的限制，单位为px。 |
 | [isFloatViewEnabled](arkts-arkui-floatview-isfloatviewenabled-f.md#isfloatviewenabled) | 判断当前设备是否支持标准悬浮窗功能。 |
-| [unbind](arkts-arkui-floatview-unbind-f.md#unbind) | 解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md)和  [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md)均停止后才可解绑。使用Promise异步回调。 |
+| [unbind](arkts-arkui-floatview-unbind-f.md#unbind) | 解绑标准悬浮窗和闪控球。需要在[标准悬浮窗控制器](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController)和  [闪控球控制器](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController)均停止后才可解绑。使用Promise异步回调。 |
 
 ### 接口
 

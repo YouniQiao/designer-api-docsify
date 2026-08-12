@@ -28,7 +28,7 @@ Releases output resources. This API uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## main
 

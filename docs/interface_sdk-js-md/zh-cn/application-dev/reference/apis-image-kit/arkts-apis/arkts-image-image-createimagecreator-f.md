@@ -12,7 +12,7 @@ function createImageCreator(width: number, height: number, format: number, capac
 
 > **说明：**
 > 
-> 从API version 9开始支持，从API version 11废弃，建议使用[createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)代替。
+> 从API version 9开始支持，从API version 11废弃，建议使用[createImageCreator](#createImageCreator)代替。
 
 **起始版本：** 9
 
@@ -20,7 +20,7 @@ function createImageCreator(width: number, height: number, format: number, capac
 
 **废弃版本：** 11
 
-**替代接口：** [image.createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator)(size:
+**替代接口：** [createImageCreator](image.createImageCreator(size:)
 
 <!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator--><!--Device-image-function createImageCreator(width: number, height: number, format: number, capacity: number): ImageCreator-End-->
 
@@ -70,7 +70,7 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) | 是 | 图像的默认大小。单位：像素（px）。 |
+| size | Size | 是 | 图像的默认大小。单位：像素（px）。 |
 | format | [ImageFormat](arkts-image-image-imageformat-e.md) | 是 | 图像格式，如YCBCR_422_SP，JPEG。 |
 | capacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 同时访问的最大图像数。该参数仅作为期望值，实际capacity由设备硬件决定。 |
 
@@ -84,7 +84,7 @@ function createImageCreator(size: Size, format: ImageFormat, capacity: int): Ima
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; |
 
 ## 示例
 

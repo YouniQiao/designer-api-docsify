@@ -88,7 +88,7 @@ Key value of an application instance.
 
 **Deprecated since:** 15
 
-**Substitutes:** [BadgeNumberCallbackData#appInstanceKey](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md#appinstancekey)
+**Substitutes:** [appInstanceKey](#appInstanceKey)
 
 <!--Device-BadgeNumberCallbackData-readonly instanceKey?: number--><!--Device-BadgeNumberCallbackData-readonly instanceKey?: number-End-->
 

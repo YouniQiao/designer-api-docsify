@@ -16,7 +16,7 @@ readonly abilitiesInfo: Array<AbilityInfo>
 
 Information about all ability components of the current module. The information can be obtained by passing in  
 **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-i.md)&gt;
 
@@ -54,7 +54,7 @@ readonly dependencies: Array<Dependency>
 
 Dynamic shared libraries on which the module depends.
 
-**Type:** Array&lt;Dependency&gt;
+**Type:** Array&lt;[Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)&gt;
 
 **Since:** 9
 
@@ -125,7 +125,7 @@ readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
 ```
 
 Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags**parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)&gt;
 
@@ -145,7 +145,7 @@ readonly fileContextMenuConfig: string
 
 File menu configuration of the module. The information can be obtained by passing in  
 **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** string
 
@@ -293,7 +293,7 @@ readonly metadata: Array<Metadata>
 ```
 
 Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -347,7 +347,7 @@ readonly preloads: Array<PreloadItem>
 
 Preloaded modules in the atomic service.
 
-**Type:** Array&lt;PreloadItem&gt;
+**Type:** Array&lt;[PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)&gt;
 
 **Since:** 9
 
@@ -365,9 +365,9 @@ readonly routerMap: Array<RouterItem>
 
 [Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and  
 **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
-**Type:** Array&lt;RouterItem&gt;
+**Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
 **Since:** 12
 

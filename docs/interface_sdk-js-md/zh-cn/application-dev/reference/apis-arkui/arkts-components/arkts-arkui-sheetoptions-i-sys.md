@@ -1,10 +1,10 @@
 # SheetOptions
 
-继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
+继承自[BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)。
 
 半模态页面内容选项。
 
-**继承/实现关系：** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
+**继承/实现关系：** SheetOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **起始版本：** 10
 
@@ -48,13 +48,13 @@ edgeLightMode?: EdgeLightMode
 offset?: Position
 ```
 
-设置半模态弹窗偏移量。当半模态为底部弹窗时，支持设置底部间距。不支持设置半模态的[SheetOptions](arkts-arkui-sheetoptions-i.md)中的detents属性。y轴设置为负数的时候不生效。
+设置半模态弹窗偏移量。当半模态为底部弹窗时，支持设置底部间距。不支持设置半模态的[SheetOptions](arkts-arkui-sheetoptions-i.md#SheetOptions)中的detents属性。y轴设置为负数的时候不生效。
 
 默认值：x轴为0vp，y轴坐标为0vp。
 
 **系统接口：** 此接口为系统接口。
 
-**类型：** [Position](../arkts-apis/arkts-arkui-position-i.md)
+**类型：** Position
 
 **起始版本：** 14
 

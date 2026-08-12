@@ -6,7 +6,7 @@ Configuring parameters in geo fence requests
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeofenceRequest
+**Substitutes:** [GeofenceRequest](ohos.geoLocationManager/geoLocationManager.GeofenceRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@ Configuring parameters in geo fence requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## geofence
@@ -26,13 +26,13 @@ import { geolocation } from 'kits/@kit.LocationKit';
 geofence: Geofence
 ```
 
-**Type:** [Geofence](arkts-location-geolocation-geofence-i.md)
+**Type:** Geofence
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeofenceRequest#geofence
+**Substitutes:** [geofence](ohos.geoLocationManager/geoLocationManager.GeofenceRequest#geofence)
 
 <!--Device-GeofenceRequest-geofence: Geofence--><!--Device-GeofenceRequest-geofence: Geofence-End-->
 
@@ -44,13 +44,13 @@ geofence: Geofence
 priority: LocationRequestPriority
 ```
 
-**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
+**Type:** LocationRequestPriority
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeofenceRequest#priority
+**Substitutes:** [priority](ohos.geoLocationManager/geoLocationManager.GeofenceRequest#priority)
 
 <!--Device-GeofenceRequest-priority: LocationRequestPriority--><!--Device-GeofenceRequest-priority: LocationRequestPriority-End-->
 
@@ -62,13 +62,13 @@ priority: LocationRequestPriority
 scenario: LocationRequestScenario
 ```
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeofenceRequest#scenario
+**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.GeofenceRequest#scenario)
 
 <!--Device-GeofenceRequest-scenario: LocationRequestScenario--><!--Device-GeofenceRequest-scenario: LocationRequestScenario-End-->
 

@@ -18,7 +18,7 @@ Combines two or more arrays.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [ConcatArray](../../apis-arkts/arkts-apis/arkts-arkts-concatarray-i.md)&lt;T&gt;[] | Yes |  |
+| items | [ConcatArray](arkts-lib-es5-concatarray-i.md)&lt;T&gt;[] | Yes |  |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ Combines two or more arrays.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | (T \| ConcatArray&lt;T&gt;)[] | Yes |  |
+| items | (T \| [ConcatArray](arkts-lib-es5-concatarray-i.md)&lt;T&gt;)[] | Yes |  |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## isConnected
@@ -20,7 +20,7 @@ Checks whether a Wi-Fi connection has been set up.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.isConnected
+**Substitutes:** [isConnected](ohos.wifiManager/wifiManager.isConnected)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

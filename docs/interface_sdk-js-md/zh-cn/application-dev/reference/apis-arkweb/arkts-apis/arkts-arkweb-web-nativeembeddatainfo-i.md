@@ -36,7 +36,7 @@ info?: NativeEmbedInfo
 
 Detailed information about the same-layer tag.
 
-**类型：** [NativeEmbedInfo](../arkts-components/arkts-arkweb-nativeembedinfo-i.md)
+**类型：** [NativeEmbedInfo](arkts-arkweb-web-nativeembedinfo-i.md)
 
 **起始版本：** 23
 
@@ -54,7 +54,7 @@ status?: NativeEmbedStatus
 
 Lifecycle status of the same-layer tag.
 
-**类型：** [NativeEmbedStatus](../arkts-components/arkts-arkweb-nativeembedstatus-e.md)
+**类型：** [NativeEmbedStatus](arkts-arkweb-web-nativeembedstatus-e.md)
 
 **起始版本：** 23
 

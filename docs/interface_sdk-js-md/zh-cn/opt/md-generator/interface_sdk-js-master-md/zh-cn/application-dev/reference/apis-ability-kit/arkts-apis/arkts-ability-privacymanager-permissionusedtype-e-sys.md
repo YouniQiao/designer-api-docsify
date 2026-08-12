@@ -4,9 +4,9 @@
 
 | 名称 | 值 | 说明 |
 | ----------------------- | -- | ---------------- |
-| [NORMAL_TYPE](#normal_type) | 0 | 表示通过弹窗授权或设置授权来使用敏感权限。 |
-| [PICKER_TYPE](#picker_type) | 1 | 表示通过某个PICKER服务来使用敏感权限，但此方式不会授予权限。 |
-| [SECURITY_COMPONENT_TYPE](#security_component_type) | 2 |
+| [NORMAL_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 0 | 表示通过弹窗授权或设置授权来使用敏感权限。 |
+| [PICKER_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 1 | 表示通过某个PICKER服务来使用敏感权限，但此方式不会授予权限。 |
+| [SECURITY_COMPONENT_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 2 |
 
 **起始版本：** 12
 

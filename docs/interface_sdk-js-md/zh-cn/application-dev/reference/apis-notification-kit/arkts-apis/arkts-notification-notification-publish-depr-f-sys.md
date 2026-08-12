@@ -14,7 +14,7 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#publish
+**替代接口：** [publish](ohos.notificationManager/notificationManager#publish)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,7 +28,7 @@ function publish(request: NotificationRequest, userId: number, callback: AsyncCa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | userId | number | 是 | 用户ID。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 被指定的回调方法。 |
 
@@ -47,7 +47,7 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#publish
+**替代接口：** [publish](ohos.notificationManager/notificationManager#publish)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -61,7 +61,7 @@ function publish(request: NotificationRequest, userId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
+| request | [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | userId | number | 是 | 用户ID。 |
 
 **返回值：**

@@ -13,7 +13,7 @@ Serial port object, which provides information and communication capabilities of
 ## Modules to Import
 
 ```TypeScript
-import { serial } from 'kits/@kit.BasicServicesKit';
+import { serial } from '@kit.BasicServicesKit';
 ```
 
 ## close
@@ -44,8 +44,8 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## drain
 
@@ -75,9 +75,9 @@ Waits until all write requests are complete. This API returns the result asynchr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## flush
 
@@ -107,9 +107,9 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getCts
 
@@ -139,9 +139,9 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## getDsr
 
@@ -171,9 +171,9 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDataRead
 
@@ -197,14 +197,14 @@ Cancels listening for data receiving events on the serial port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. &lt;br&gt;Default value: Clear all listeners for data receiving events on the serial port. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. &lt;br&gt;Default value: Clear all listeners for data receiving events on the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## offDisconnect
 
@@ -228,14 +228,14 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. &lt;br&gt;Default value: Clears all callbacks for USB virtual serial port disconnection events. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. &lt;br&gt;Default value: Clears all callbacks for USB virtual serial port disconnection events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDataRead
 
@@ -243,7 +243,7 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 onDataRead(callback: Callback<Uint8Array>): void
 ```
 
-Listens for data received by the serial port. This API uses an asynchronous callback to return the result.When {@link close} is called, all callbacks are cleared.
+Listens for data received by the serial port. This API uses an asynchronous callback to return the result.When [close](#close) is called, all callbacks are cleared.
 
 **Since:** 26.0.0
 
@@ -259,15 +259,15 @@ Listens for data received by the serial port. This API uses an asynchronous call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the data received by the serial port. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the data received by the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## onDisconnect
 
@@ -275,7 +275,7 @@ Listens for data received by the serial port. This API uses an asynchronous call
 onDisconnect(callback: Callback<void>): void
 ```
 
-This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback.When the {@link close} interface is invoked, all callbacks are cleared.
+This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback.When the [close](#close) interface is invoked, all callbacks are cleared.
 
 **Since:** 26.0.0
 
@@ -291,14 +291,14 @@ This interface is used to listen to the disconnection event of the USB virtual s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback of the USB virtual serial port disconnection event. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback of the USB virtual serial port disconnection event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## open
 
@@ -334,11 +334,11 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
-| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) | Port already in use. |
+| [35700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) | User authorization required. |
 
 ## sendBrk
 
@@ -368,9 +368,9 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setDtr
 
@@ -406,9 +406,9 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## setRts
 
@@ -444,9 +444,9 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
 
 ## write
 
@@ -489,11 +489,11 @@ Sends data. This API returns the result asynchronously through a promise.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
-| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
-| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
-| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
-| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) | Service error. |
+| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) | Invalid parameter. |
+| [35700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) | Virtual serial port disconnected. |
+| [35700005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) | Port not open. |
+| [35700006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) | Transmission timeout. |
 
 ## portInfo
 

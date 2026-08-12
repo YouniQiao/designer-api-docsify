@@ -6,7 +6,7 @@
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
-> - 如果SubHeader设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会
+> - 如果SubHeader设置[通用属性](./@internal/component/ets/common)和[通用事件](./@internal/component/ets/common)，编译工具链会
 > 额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到SubHeader本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议SubHeader设置通用属性和
 > 通用事件。
 
@@ -136,7 +136,7 @@ icon?: ResourceStr
 iconSymbolOptions?: SymbolOptions
 ```
 
-icon为[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)时的设置项。
+icon为[SymbolGlyph](./@internal/component/ets/symbolglyph)时的设置项。
 
 默认值：undefined，表示不显示图标。
 
@@ -162,7 +162,7 @@ operationItem?: Array<OperationOption>
 
 默认值：undefined，表示不显示操作区。
 
-**类型：** Array&lt;OperationOption&gt;
+**类型：** Array&lt;[OperationOption](arkts-arkui-arkui-advanced-subheader-operationoption-c.md)&gt;
 
 **起始版本：** 10
 
@@ -182,11 +182,11 @@ operationSymbolOptions?: Array<SymbolOptions>
 
 operationType为OperationType.ICON_GROUP，
 
-operationItem设置多个图标，图标为[SymbolGlyph](../../apis-arkui/arkts-components/arkts-arkui-symbolglyph-i)时的设置项。
+operationItem设置多个图标，图标为[SymbolGlyph](./@internal/component/ets/symbolglyph)时的设置项。
 
 默认值：undefined，表示不设置Symbol图标。
 
-**类型：** Array&lt;SymbolOptions&gt;
+**类型：** Array&lt;[SymbolOptions](arkts-arkui-arkui-advanced-subheader-symboloptions-c.md)&gt;
 
 **起始版本：** 12
 
@@ -208,7 +208,7 @@ operationType?: OperationType
 
 默认值：OperationType.BUTTON
 
-**类型：** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
+**类型：** [OperationType](arkts-arkui-arkui-advanced-subheader-operationtype-e.md)
 
 **起始版本：** 10
 

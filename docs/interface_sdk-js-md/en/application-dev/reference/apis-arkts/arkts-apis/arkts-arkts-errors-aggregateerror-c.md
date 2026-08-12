@@ -2,7 +2,7 @@
 
 AggregateError object represents an error when several errors need to be wrapped in a single error.
 
-**Inheritance/Implementation:** AggregateError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** AggregateError extends [Error](Error)
 
 **Since:** 26.0.0
 

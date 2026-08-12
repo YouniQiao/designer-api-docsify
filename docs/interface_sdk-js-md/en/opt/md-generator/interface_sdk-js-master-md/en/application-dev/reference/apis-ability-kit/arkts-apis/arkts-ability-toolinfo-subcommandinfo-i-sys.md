@@ -38,7 +38,7 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 Schemas about event for subcommand.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Record&lt;string, Object&gt;&gt;
+**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 26.0.0
 

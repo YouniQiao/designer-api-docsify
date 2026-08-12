@@ -17,8 +17,8 @@ CALLBACK = 0
 ```
 
 The intent execution result is returned through the  
-[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode)or  
-[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability)API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md).
+[onExecuteInUIAbilityForegroundMode](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIAbilityForegroundMode)or  
+[onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onExecuteInUIExtensionAbility)API in the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor).
 
 **Since:** 23
 
@@ -39,9 +39,9 @@ FUNCTION = 1
 ```
 
 The intent execution result is returned after the  
-[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendexecuteresult) or  
-[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendintentresult) API in  
-[intent provider management](arkts-app-ability-insightintentprovider.md) is called.
+[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) or  
+[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult) API in  
+[intent provider management](arkts-app-ability-insightintentprovider.md#insightIntentProvider) is called.
 
 **Since:** 23
 

@@ -88,7 +88,7 @@ rect: RectResult
 
 Position, width, and height of the child component.
 
-**Type:** [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md)
+**Type:** [RectResult](arkts-arkui-rectresult-i.md)
 
 **Since:** 11
 

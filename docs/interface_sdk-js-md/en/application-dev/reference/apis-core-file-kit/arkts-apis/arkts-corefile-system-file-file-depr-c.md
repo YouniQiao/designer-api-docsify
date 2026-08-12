@@ -26,7 +26,7 @@ Checks whether a file or directory exists.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:access](arkts-corefile-system-file-file-depr-c.md#access)
+**Substitutes:** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-File-static access(options: FileAccessOption): void--><!--Device-File-static access(options: FileAccessOption): void-End-->
 
@@ -52,7 +52,7 @@ Copies a file to the given URI.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
+**Substitutes:** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
 
 <!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
 
@@ -78,7 +78,7 @@ Deletes a local file.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
+**Substitutes:** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-File-static delete(options: FileDeleteOption): void--><!--Device-File-static delete(options: FileDeleteOption): void-End-->
 
@@ -104,7 +104,7 @@ Obtains information about a local file.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:stat](arkts-corefile-file-fs-stat-f.md#stat)
+**Substitutes:** [stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-File-static get(options: FileGetOption): void--><!--Device-File-static get(options: FileGetOption): void-End-->
 
@@ -130,7 +130,7 @@ Obtains all files in the specified directory.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**Substitutes:** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
 
@@ -156,7 +156,7 @@ Creates a directory.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:mkdir](arkts-corefile-system-file-file-depr-c.md#mkdir)
+**Substitutes:** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-File-static mkdir(options: FileMkdirOption): void--><!--Device-File-static mkdir(options: FileMkdirOption): void-End-->
 
@@ -182,7 +182,7 @@ Moves a specified file to a given location.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:moveFile](arkts-corefile-file-fs-movefile-f.md#movefile)
+**Substitutes:** [moveFile](arkts-corefile-file-fs-movefile-f.md#moveFile)
 
 <!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
 
@@ -208,7 +208,7 @@ Reads buffer data from a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:read](arkts-corefile-file-fs-read-f.md#read)
+**Substitutes:** [read](arkts-corefile-file-fs-read-f.md#read)
 
 <!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void--><!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void-End-->
 
@@ -234,7 +234,7 @@ Reads text from a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:readText](arkts-corefile-system-file-file-depr-c.md#readtext)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
 
 <!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
 
@@ -260,7 +260,7 @@ Deletes a directory.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:rmdir](arkts-corefile-system-file-file-depr-c.md#rmdir)
+**Substitutes:** [rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir)
 
 <!--Device-File-static rmdir(options: FileRmdirOption): void--><!--Device-File-static rmdir(options: FileRmdirOption): void-End-->
 
@@ -286,7 +286,7 @@ Writes buffer data into a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:write](arkts-corefile-file-fs-write-f.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void--><!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void-End-->
 
@@ -312,7 +312,7 @@ Writes text into a file. Only text files can be read and written.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:write](arkts-corefile-file-fs-write-f.md#write)
+**Substitutes:** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-File-static writeText(options: FileWriteTextOption): void--><!--Device-File-static writeText(options: FileWriteTextOption): void-End-->
 

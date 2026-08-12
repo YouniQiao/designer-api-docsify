@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#DoNotDisturbDate
+**替代接口：** [DoNotDisturbDate](ohos.notificationManager/notificationManager#DoNotDisturbDate)
 
 <!--Device-notification-export interface DoNotDisturbDate--><!--Device-notification-export interface DoNotDisturbDate-End-->
 
@@ -28,7 +28,7 @@ begin: Date
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbDate#begin
+**替代接口：** [begin](ohos.notificationManager/notificationManager.DoNotDisturbDate#begin)
 
 <!--Device-DoNotDisturbDate-begin: Date--><!--Device-DoNotDisturbDate-begin: Date-End-->
 
@@ -50,7 +50,7 @@ end: Date
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbDate#end
+**替代接口：** [end](ohos.notificationManager/notificationManager.DoNotDisturbDate#end)
 
 <!--Device-DoNotDisturbDate-end: Date--><!--Device-DoNotDisturbDate-end: Date-End-->
 
@@ -66,13 +66,13 @@ type: DoNotDisturbType
 
 免打扰设置的时间类型。
 
-**类型：** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
+**类型：** DoNotDisturbType
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager.DoNotDisturbDate#type
+**替代接口：** [type](ohos.notificationManager/notificationManager.DoNotDisturbDate#type)
 
 <!--Device-DoNotDisturbDate-type: DoNotDisturbType--><!--Device-DoNotDisturbDate-type: DoNotDisturbType-End-->
 

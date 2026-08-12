@@ -52,13 +52,13 @@ lockAsync<T>(callback: AsyncLockCallback<T>): Promise<T>
 
 | 类型 |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-锁不存在) |
 
 ## lockAsync
 
@@ -87,13 +87,13 @@ lockAsync<T>(callback: AsyncLockCallback<T>, mode: AsyncLockMode): Promise<T>
 
 | 类型 |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-锁不存在) |
 
 ## lockAsync
 
@@ -102,7 +102,7 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
         options: AsyncLockOptions<U>): Promise<T | U>
 ```
 
-在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。回调在调用lockAsync的同一线程中以异步方式执行。在{@link AsyncLockOptions}中可以提供一个可选的超时值。在这种情况下，如果超时前未能获取锁，lockAsync将返回被拒绝的Promise并带上一个BusinessError实例。这种情况下，错误信息将包含持有的锁和等待的锁的信息以及可能的死锁警告。
+在获取的锁下执行操作。该方法首先获取锁，然后调用回调，最后释放锁。回调在调用lockAsync的同一线程中以异步方式执行。在[AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md#AsyncLockOptions)中可以提供一个可选的超时值。在这种情况下，如果超时前未能获取锁，lockAsync将返回被拒绝的Promise并带上一个BusinessError实例。这种情况下，错误信息将包含持有的锁和等待的锁的信息以及可能的死锁警告。
 
 **起始版本：** 12
 
@@ -124,14 +124,14 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
 
 | 类型 |
 | --- |
-| Promise&lt;T \| U&gt; |
+| Promise & lt;T \ | U & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200031](../errorcode-utils.md#10200031-lockasync超时) |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| [10200031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200031-lockasync超时) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-锁不存在) |
 
 ## query
 
@@ -165,7 +165,7 @@ static query(name: string): AsyncLockState
 
 | 错误码ID |
 | --- |
-| [10200030](../errorcode-utils.md#10200030-锁不存在) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-锁不存在) |
 
 ## queryAll
 

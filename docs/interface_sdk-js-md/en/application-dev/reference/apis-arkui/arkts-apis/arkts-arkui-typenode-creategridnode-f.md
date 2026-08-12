@@ -29,5 +29,5 @@ Create a FrameNode of Grid type.On API 26.0.0 and above, It can also create a Fr
 
 | Type | Description |
 | --- | --- |
-| [Grid](arkts-arkui-typenode-grid-t.md) | Return Grid type FrameNode. |
+| Grid | Return Grid type FrameNode. |
 

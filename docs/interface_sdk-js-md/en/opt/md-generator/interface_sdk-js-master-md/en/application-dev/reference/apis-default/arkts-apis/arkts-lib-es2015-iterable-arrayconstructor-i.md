@@ -14,7 +14,7 @@ Creates an array from an iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; \| [ArrayLike&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
+| iterable | Iterable & lt;T & gt; \ | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
@@ -36,8 +36,8 @@ Creates an array from an iterable object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| iterable | Iterable&lt;T&gt; \| [ArrayLike&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md) | Yes |
-| mapfn | (v: T, k: number) =&gt; U | Yes |
+| iterable | Iterable & lt;T & gt; \ | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |
+| mapfn | (v: T, k: number) = & gt; U | Yes |
 | thisArg | any | No |
 
 **Return value:**

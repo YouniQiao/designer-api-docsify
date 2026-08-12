@@ -26,7 +26,7 @@ Defines CheckboxGroup Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | No | the options of CheckboxGroup. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines CheckboxGroup Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CheckboxGroupAttribute&gt; | Yes | checkboxgroup attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; | Yes | checkboxgroup attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

@@ -2,10 +2,10 @@
 
 > **说明：**
 > 
-> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md)替代。
+> 从API version 6开始支持，从API version 9开始废弃，建议使用[AVPlayer](arkts-media-media-n.md#media)替代。
 
 音频播放管理类，用于管理和播放音频媒体。在调用AudioPlayer的方法前，需要先通过  
-[createAudioPlayer()](arkts-media-media-createaudioplayer-f.md#createaudioplayer)构建一个AudioPlayer实例。
+[createAudioPlayer()](arkts-media-media-createaudioplayer-f.md#createAudioPlayer)构建一个AudioPlayer实例。
 
 **起始版本：** 6
 
@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media](arkts-media-media-n.md)
+**替代接口：** [media](arkts-media-media-n.md#media)
 
 <!--Device-unnamed-interface AudioPlayer--><!--Device-unnamed-interface AudioPlayer-End-->
 
@@ -29,7 +29,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 > **说明：**
 > > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)
 > 替代。
 
 **起始版本：** 8
@@ -38,7 +38,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback:
+**替代接口：** [getTrackDescription](@ohos.multimedia.media:media.AVPlayer.getTrackDescription(callback:)
 
 <!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -48,7 +48,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;MediaDescription&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的 MediaDescription数组，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取音频轨道信息成功时，err为undefined，data为获取到的 MediaDescription数组，否则为错误对象。 |
 
 ## getTrackDescription
 
@@ -60,7 +60,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 > **说明：**
 > > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)替代。
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)替代。
 
 **起始版本：** 8
 
@@ -68,7 +68,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)()
+**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#getTrackDescription)()
 
 <!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AudioPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -78,7 +78,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;MediaDescription&gt;&gt; | 音频轨道信息MediaDescription数组Promise返回值。 |
+| Promise&lt;Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;&gt; | 音频轨道信息MediaDescription数组Promise返回值。 |
 
 ## on('bufferingUpdate')
 
@@ -99,7 +99,7 @@ on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: numbe
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void--><!--Device-AudioPlayer-on(type: 'bufferingUpdate', callback: (infoType: BufferingInfoType, value: number) => void): void-End-->
 
@@ -131,7 +131,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -163,7 +163,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -195,7 +195,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -227,7 +227,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -259,7 +259,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -291,7 +291,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -323,7 +323,7 @@ on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeCh
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void--><!--Device-AudioPlayer-on(type: 'play' | 'pause' | 'stop' | 'reset' | 'dataLoad' | 'finish' | 'volumeChange', callback: () => void): void-End-->
 
@@ -355,7 +355,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void--><!--Device-AudioPlayer-on(type: 'timeUpdate', callback: Callback<number>): void-End-->
 
@@ -374,7 +374,7 @@ on(type: 'timeUpdate', callback: Callback<number>): void
 on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 ```
 
-监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md/arkts-audio-audio-interruptevent-i.md)。
+监听音频焦点变化事件，参考[audio.InterruptEvent](../../apis-audio-kit/arkts-apis/arkts-audio-audio-interruptevent-i.md#InterruptEvent)。
 
 > **说明：**
 > > 从API version 9开始支持，从API version 9开始废弃，建议使用
@@ -387,7 +387,7 @@ on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void--><!--Device-AudioPlayer-on(type: 'audioInterrupt', callback: (info: audio.InterruptEvent) => void): void-End-->
 
@@ -419,7 +419,7 @@ on(type: 'error', callback: ErrorCallback): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.multimedia.media:media.AVPlayer.on(type:
+**替代接口：** [on](@ohos.multimedia.media:media.AVPlayer.on(type:)
 
 <!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void--><!--Device-AudioPlayer-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -450,7 +450,7 @@ pause(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)(callback:
+**替代接口：** [pause](@ohos.multimedia.media:media.AVPlayer.pause(callback:)
 
 <!--Device-AudioPlayer-pause(): void--><!--Device-AudioPlayer-pause(): void-End-->
 
@@ -474,7 +474,7 @@ play(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.play](arkts-media-media-avplayer-i.md#play)(callback:
+**替代接口：** [play](@ohos.multimedia.media:media.AVPlayer.play(callback:)
 
 <!--Device-AudioPlayer-play(): void--><!--Device-AudioPlayer-play(): void-End-->
 
@@ -498,7 +498,7 @@ release(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.release](arkts-media-media-avplayer-i.md#release)(callback:
+**替代接口：** [release](@ohos.multimedia.media:media.AVPlayer.release(callback:)
 
 <!--Device-AudioPlayer-release(): void--><!--Device-AudioPlayer-release(): void-End-->
 
@@ -522,7 +522,7 @@ reset(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)(callback:
+**替代接口：** [reset](@ohos.multimedia.media:media.AVPlayer.reset(callback:)
 
 <!--Device-AudioPlayer-reset(): void--><!--Device-AudioPlayer-reset(): void-End-->
 
@@ -546,7 +546,7 @@ seek(timeMs: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.seek](arkts-media-media-avplayer-i.md#seek)
+**替代接口：** [seek](arkts-media-media-avplayer-i.md#seek)
 
 <!--Device-AudioPlayer-seek(timeMs: number): void--><!--Device-AudioPlayer-seek(timeMs: number): void-End-->
 
@@ -568,7 +568,7 @@ setVolume(vol: number): void
 
 > **说明：**
 > > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)替代。
+> [AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setVolume)替代。
 
 **起始版本：** 6
 
@@ -576,7 +576,7 @@ setVolume(vol: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.setVolume](arkts-media-media-avplayer-i.md#setvolume)
+**替代接口：** [setVolume](arkts-media-media-avplayer-i.md#setVolume)
 
 <!--Device-AudioPlayer-setVolume(vol: number): void--><!--Device-AudioPlayer-setVolume(vol: number): void-End-->
 
@@ -606,7 +606,7 @@ stop(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.multimedia.media:media.AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)(callback:
+**替代接口：** [stop](@ohos.multimedia.media:media.AVPlayer.stop(callback:)
 
 <!--Device-AudioPlayer-stop(): void--><!--Device-AudioPlayer-stop(): void-End-->
 
@@ -628,7 +628,7 @@ audioInterruptMode?: audio.InterruptMode
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#audioInterruptMode
+**替代接口：** [audioInterruptMode](ohos.multimedia.media/media.AVPlayer#audioInterruptMode)
 
 <!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AudioPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
@@ -650,7 +650,7 @@ readonly currentTime: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#currentTime
+**替代接口：** [currentTime](ohos.multimedia.media/media.AVPlayer#currentTime)
 
 <!--Device-AudioPlayer-readonly currentTime: number--><!--Device-AudioPlayer-readonly currentTime: number-End-->
 
@@ -672,7 +672,7 @@ readonly duration: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#duration
+**替代接口：** [duration](ohos.multimedia.media/media.AVPlayer#duration)
 
 <!--Device-AudioPlayer-readonly duration: number--><!--Device-AudioPlayer-readonly duration: number-End-->
 
@@ -708,7 +708,7 @@ fdSrc: AVFileDescriptor
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#fdSrc
+**替代接口：** [fdSrc](ohos.multimedia.media/media.AVPlayer#fdSrc)
 
 <!--Device-AudioPlayer-fdSrc: AVFileDescriptor--><!--Device-AudioPlayer-fdSrc: AVFileDescriptor-End-->
 
@@ -730,7 +730,7 @@ loop: boolean
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#loop
+**替代接口：** [loop](ohos.multimedia.media/media.AVPlayer#loop)
 
 <!--Device-AudioPlayer-loop: boolean--><!--Device-AudioPlayer-loop: boolean-End-->
 
@@ -762,7 +762,7 @@ ohos.permission.READ_MEDIA 或 ohos.permission.INTERNET。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#url
+**替代接口：** [url](ohos.multimedia.media/media.AVPlayer#url)
 
 **需要权限：** ohos.permission.READ_MEDIA or ohos.permission.INTERNET
 
@@ -786,7 +786,7 @@ readonly state: AudioState
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimedia.media/media.AVPlayer#state
+**替代接口：** [state](ohos.multimedia.media/media.AVPlayer#state)
 
 <!--Device-AudioPlayer-readonly state: AudioState--><!--Device-AudioPlayer-readonly state: AudioState-End-->
 

@@ -15,7 +15,7 @@ Defines the authorization information of a continuous task.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## appIndex
@@ -48,7 +48,7 @@ authResult?: UserAuthResult
 
 Type of user authorization status.
 
-**Type:** [UserAuthResult](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-userauthresult-i.md)
+**Type:** UserAuthResult
 
 **Since:** 22
 

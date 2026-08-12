@@ -14,7 +14,7 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -68,7 +68,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -83,7 +83,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | number | 是 | 任务ID。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 是 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当把指定任务id的任务切到前台成功，err为undefined，否则为错误对象。 |
 
 ## 示例
@@ -123,7 +123,7 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -138,7 +138,7 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | missionId | number | 是 | 任务ID。 |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 否 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 
 **返回值：**
 

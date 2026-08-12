@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
+import { ChildProcessArgs } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -12,5 +12,5 @@ import { ChildProcessArgs } from 'kits/@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | The module describes the parameters transferred to the child process. When starting a child process through  [childProcessManager](arkts-app-ability-childprocessmanager.md), you can transfer parameters to the child process through **ChildProcessArgs**. |
+| [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | The module describes the parameters transferred to the child process. When starting a child process through  [childProcessManager](arkts-app-ability-childprocessmanager.md#childProcessManager), you can transfer parameters to the child process through **ChildProcessArgs**. |
 

@@ -26,7 +26,7 @@ Defines Scroll Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | No | scroller |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines Scroll Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ScrollAttribute&gt; | Yes | The style to create a Scroll. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ScrollAttribute](arkts-arkui-scroll-scrollattribute-i.md)&gt; | Yes | The style to create a Scroll. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 

@@ -44,7 +44,7 @@ function construct(target: Function, argumentsList: ArrayLike<any>, newTarget?: 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | Function | Yes |  |
-| argumentsList | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;any&gt; | Yes |  |
+| argumentsList | ArrayLike&lt;any&gt; | Yes |  |
 | newTarget | Function | No |  |
 
 **Return value:**

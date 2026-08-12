@@ -13,7 +13,7 @@ This filter value is used to filter business ability info
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from 'kits/@kit.AbilityKit';
+import { businessAbilityRouter } from '@kit.AbilityKit';
 ```
 
 ## businessType
@@ -24,7 +24,7 @@ businessType: BusinessType
 
 Indicates the type of business ability info
 
-**Type:** [BusinessType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-update-businesstype-i-sys.md)
+**Type:** BusinessType
 
 **Since:** 10
 

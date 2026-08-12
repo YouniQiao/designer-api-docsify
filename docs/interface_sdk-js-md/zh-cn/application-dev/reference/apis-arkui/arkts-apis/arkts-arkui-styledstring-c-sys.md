@@ -16,7 +16,7 @@
 static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)。
 
 当属性字符串包含UserDataSpan等自定义样式，需要自定义序列化逻辑时使用此方法；不包含自定义样式时使用基础版marshalling方法即可。
 
@@ -36,8 +36,8 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c-sys.md) | 是 | 待序列化的属性字符串对象，包含文本内容及样式信息。 |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 用于序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)的回调函数。回调函数签名： (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer，其中marshallableVal为需要序列化的对象，返回值为序列化后的ArrayBuffer数 据。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 待序列化的属性字符串对象，包含文本内容及样式信息。 |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 用于序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)的回调函数。回调函数签名： (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer，其中marshallableVal为需要序列化的对象，返回值为序列化后的ArrayBuffer数 据。 |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ static marshalling(styledString: StyledString): ArrayBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c-sys.md) | 是 | 要序列化的属性字符串对象，包含文本内容及样式信息。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 要序列化的属性字符串对象，包含文本内容及样式信息。 |
 
 **返回值：**
 
@@ -83,7 +83,7 @@ static marshalling(styledString: StyledString): ArrayBuffer
 static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md)。
+反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)。
 
 当需要从序列化数据中恢复包含UserDataSpan等自定义样式的属性字符串时使用此方法；恢复不含自定义样式的属性字符串时使用基础版unmarshalling方法即可。
 
@@ -110,14 +110,14 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StyledString&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -151,12 +151,12 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StyledString&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

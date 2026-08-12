@@ -11,7 +11,7 @@ Provides information about window size layout breakpoint changes.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## heightBreakpoint

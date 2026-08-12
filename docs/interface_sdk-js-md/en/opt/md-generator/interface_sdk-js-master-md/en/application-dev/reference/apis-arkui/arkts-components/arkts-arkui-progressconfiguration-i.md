@@ -1,6 +1,6 @@
 # ProgressConfiguration
 
-Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md).
+Provides progress indicator configuration. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
 
 **Inheritance/Implementation:** ProgressConfiguration extends [CommonConfiguration<ProgressConfiguration>](CommonConfiguration<ProgressConfiguration>)
 

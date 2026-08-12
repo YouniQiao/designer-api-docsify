@@ -2,9 +2,9 @@
 
 时间选择器弹窗选项。
 
-继承自[TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)。
+继承自[TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md#TimePickerOptions)。
 
-**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md)
+**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepicker-timepickeroptions-i.md#TimePickerOptions)
 
 **起始版本：** 23
 
@@ -99,7 +99,7 @@ alignment?: DialogAlignment
 
 默认值：DialogAlignment.Default
 
-**类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**类型：** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **起始版本：** 23
 
@@ -249,7 +249,7 @@ hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，�
 
 minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 
-**类型：** [DateTimeOptions](../arkts-components/arkts-arkui-datetimeoptions-t.md)
+**类型：** DateTimeOptions
 
 **起始版本：** 23
 
@@ -426,7 +426,7 @@ offset?: Offset
 
 默认值：{ dx: 0, dy: 0 }
 
-**类型：** [Offset](arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 23
 
@@ -519,7 +519,7 @@ onEnterSelectedArea?: Callback<TimePickerResult>
 - 当enableCascade设置为true时，由于上午/下午列与小时列存在联动关系，不建议使用该回调。该回调标识的是滑动过程中选项进入分割线区域内的节  
  点，而联动变化的选项并不涉及滑动，因此，回调的返回值中，仅当前滑动列的值会正常变化，其余未滑动列的值保持不变。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TimePickerResult&gt;
+**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TimePickerResult](arkts-arkui-timepicker-timepickerresult-i.md)&gt;
 
 **起始版本：** 23
 
@@ -613,7 +613,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 - 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 23
 

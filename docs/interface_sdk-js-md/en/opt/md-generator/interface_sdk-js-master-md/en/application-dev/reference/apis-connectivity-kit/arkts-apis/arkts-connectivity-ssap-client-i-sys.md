@@ -1,6 +1,6 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use {@link createClient} to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method,you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
 
 **Since:** 26.0.0
 
@@ -11,7 +11,7 @@ Manages SSAP client. Before calling a SSAP client method,you must use {@link cre
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from 'kits/@kit.ConnectivityKit';
+import { ssap } from '@kit.ConnectivityKit';
 ```
 
 ## callMethod
@@ -44,7 +44,7 @@ Calls the method of a server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Method&gt; |
+| Promise&lt;[Method](arkts-connectivity-ssap-method-i-sys.md)&gt; |
 
 **Error codes:**
 
@@ -52,8 +52,8 @@ Calls the method of a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |
 
@@ -137,7 +137,7 @@ Reads the descriptor of a server.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PropertyDescriptor&gt; |
+| Promise & lt;PropertyDescriptor & gt; |
 
 **Error codes:**
 
@@ -145,8 +145,8 @@ Reads the descriptor of a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |
 
@@ -181,7 +181,7 @@ Enables or disables indication of a property when value changed.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -190,8 +190,8 @@ Enables or disables indication of a property when value changed.
 | 36100003 |
 | 36100099 |
 | 36100030 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |
 
@@ -203,8 +203,8 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 Writes the descriptor of a server.
 
-This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setpropertynotification) or  
-[setPropertyIndication](arkts-connectivity-ssap-client-i-sys.md#setpropertyindication) instead.
+This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setPropertyNotification) or  
+[setPropertyIndication](#setPropertyIndication) instead.
 
 **Since:** 26.0.0
 
@@ -228,7 +228,7 @@ This method does not support writing client property configuration descriptors. 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
@@ -236,7 +236,7 @@ This method does not support writing client property configuration descriptors. 
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |

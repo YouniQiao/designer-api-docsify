@@ -24,8 +24,8 @@ export declare function Canvas(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md) \| DrawingRenderingContext | 否 | Canvas组件的绘图上下文。 |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imageaioptions-i.md) | 否 | 给组件设置一个AI分析选项， 通过此项可配置分析类型或绑定一个分析控制器。 异常值null和undefined按ImageAIOptions的默认值处理， 默认取值为{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }， 即开启主体识别和文字识别功能。 |
+| context | [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md) | 否 | Canvas组件的绘图上下文。 |
+| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | 否 | 给组件设置一个AI分析选项， 通过此项可配置分析类型或绑定一个分析控制器。 异常值null和undefined按ImageAIOptions的默认值处理， 默认取值为{ type: [ImageAnalyzerType.SUBJECT, ImageAnalyzerType.TEXT], aiController: new ImageAnalyzerController() }， 即开启主体识别和文字识别功能。 |
 
 **返回值：**
 
@@ -103,7 +103,7 @@ Defines Canvas Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CanvasAttribute&gt; | 是 | Canvas attribute instance. |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CanvasAttribute](arkts-arkui-canvas-canvasattribute-i.md)&gt; | 是 | Canvas attribute instance. |
 
 **返回值：**
 

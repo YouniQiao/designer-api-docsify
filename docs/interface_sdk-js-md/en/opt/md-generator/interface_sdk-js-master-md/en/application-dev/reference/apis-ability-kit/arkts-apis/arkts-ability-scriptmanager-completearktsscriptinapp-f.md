@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from 'kits/@kit.AbilityKit';
+import { scriptManager } from '@kit.AbilityKit';
 ```
 
 ## completeArkTSScriptInApp
@@ -36,12 +36,12 @@ complete arkTS script for in-app skills.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000020](../errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
+| [16000020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000020-context-is-not-an-abilitylevel-context) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) |

@@ -36,7 +36,7 @@ unit?: LengthMetricsUnit
 
 Indicates the unit mode employed by Canvas during drawing.&lt;br&gt;It can only be set when creating the **Canvas** component and cannot be modified afterwards.&lt;br&gt;Default value: **LengthMetricsUnit.DEFAULT**
 
-**Type:** [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md)
+**Type:** LengthMetricsUnit
 
 **Since:** 23
 

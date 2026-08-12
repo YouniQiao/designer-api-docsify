@@ -21,7 +21,7 @@ URI of the file.
 **Note：**:
 
 Only the   
-[DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalto)predicate can be used for this field during photo query.
+[DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalTo)predicate can be used for this field during photo query.
 
 **Since:** 10
 

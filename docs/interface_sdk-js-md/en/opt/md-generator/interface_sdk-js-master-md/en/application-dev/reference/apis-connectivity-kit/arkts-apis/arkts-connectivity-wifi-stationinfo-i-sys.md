@@ -6,7 +6,7 @@ Wi-Fi station information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.StationInfo
+**Substitutes:** [StationInfo](ohos.wifiManager/wifiManager.StationInfo)
 
 <!--Device-wifi-interface StationInfo--><!--Device-wifi-interface StationInfo-End-->
 
@@ -17,7 +17,7 @@ Wi-Fi station information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## ipAddress
@@ -34,7 +34,7 @@ The IP address of the Wi-Fi client
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.StationInfo.ipAddress
+**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.StationInfo.ipAddress)
 
 <!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
 
@@ -56,7 +56,7 @@ The MAC address of the Wi-Fi client
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.StationInfo.macAddress
+**Substitutes:** [macAddress](ohos.wifiManager/wifiManager.StationInfo.macAddress)
 
 <!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
 
@@ -78,7 +78,7 @@ the network name of the Wi-Fi client
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.StationInfo.name
+**Substitutes:** [name](ohos.wifiManager/wifiManager.StationInfo.name)
 
 <!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
 

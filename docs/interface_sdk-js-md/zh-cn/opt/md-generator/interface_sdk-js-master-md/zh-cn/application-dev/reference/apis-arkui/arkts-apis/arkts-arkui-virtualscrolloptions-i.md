@@ -42,6 +42,21 @@ onLazyLoading方法需在懒加载场景下使用。开发者可设置自定义�
 | --- | --- | --- |
 | index | number | 是 |
 
+## 示例
+
+```TypeScript
+// 假设数据项总数为100，首屏渲染需3项数据
+// 初始数组提供前3项数据（arr = ['No.0', 'No.1', 'No.2']），并开启数据懒加载功能
+List() {
+  Repeat<string>(this.arr)
+    .each((repeatItem: RepeatItem<string>) => { ListItem() { Text(repeatItem.item) }})
+    .virtualScroll({ 
+      onTotalCount: () => { return 100; },
+      onLazyLoading: (index: number) => { this.arr[index] = `No.${index}`; }
+    })
+}
+```
+
 ## onTotalCount
 
 ```TypeScript
@@ -50,7 +65,7 @@ onTotalCount?(): number
 
 可选方法，计算期望加载的数据项总数。需要开发者给定计算方法，其返回值可以不等于数据源长度（实际传入Repeat的数组的长度）。
 
-[totalCount](arkts-arkui-virtualscrolloptions-i.md#totalcount)和onTotalCount()的返回值都表示期望加载的数据项总数。开发者可直接设置totalCount属性，给出期望加载的数据项总数，也可以通过onTotalCount()设定自定义方法，计算期望加载的数据项总数。totalCount与onTotalCount()最多设置一个。如果均未设置，则采用默认值：数据源长度；如果同时设置，则忽略totalCount。
+[totalCount](#totalCount)和onTotalCount()的返回值都表示期望加载的数据项总数。开发者可直接设置totalCount属性，给出期望加载的数据项总数，也可以通过onTotalCount()设定自定义方法，计算期望加载的数据项总数。totalCount与onTotalCount()最多设置一个。如果均未设置，则采用默认值：数据源长度；如果同时设置，则忽略totalCount。
 
 onTotalCount()不同返回值的数据加载处理规则与totalCount一致，具体如下：
 
@@ -58,7 +73,7 @@ onTotalCount()不同返回值的数据加载处理规则与totalCount一致，�
 - 0 < onTotalCount()返回值 &lt;= 数据源长度时，只加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据。  
 - onTotalCount()返回值 &gt; 数据源长度时，代表Repeat期望加载区间[0, onTotalCount()返回值 - 1]索引范围内的数据，容器组件滚动条样式根据onTotalCount()返回值变化。在容器组件滚  
 动过程中，应用需要保证在列表即将滑动到数据源末尾时请求后续数据。开发者需要对数据请求的错误场景（如网络延迟）进行保护操作，直到数据源全部加载完成，否则列表滑动过程中会出现滚动效果异常。建议配合使用  
-[onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading)实现数据懒加载。  
+[onLazyLoading](#onLazyLoading)实现数据懒加载。  
 - onTotalCount()返回值是非自然数时，由数据源长度取代其返回值。
 
 **起始版本：** 19
@@ -85,7 +100,7 @@ memoryOptimizationStrategy?: RepeatMemOptStrategy
 
 Repeat的内存优化策略。该参数在创建Repeat时设定，不支持动态修改。
 
-默认值：[DEFAULT](arkts-arkui-repeatmemoptstrategy-e.md)
+默认值：[DEFAULT](arkts-arkui-repeatmemoptstrategy-e.md#RepeatMemOptStrategy)
 
 **类型：** [RepeatMemOptStrategy](arkts-arkui-repeatmemoptstrategy-e.md)
 
@@ -138,9 +153,9 @@ totalCount = 0时，不加载数据。
 0 < totalCount &lt;= 数据源长度时，界面中只渲染区间[0, totalCount - 1]范围内的数据。
 
 totalCount &gt; 数据源长度时，Repeat将渲染区间[0, totalCount - 1]范围内的数据，容器组件滚动条样式根据totalCount值变化。在容器组件滚动过程中，应用需要保证在列表即将滑动到数据源末尾时请求后续数据。开发者需要对数据请求的错误场景（如网络延迟）进行保护操作，直到数据源全部加载完成，否则列表滑动过程中会出现滚动效果异常。建议配合使用  
-[onLazyLoading](arkts-arkui-virtualscrolloptions-i.md#onlazyloading)实现数据懒加载。
+[onLazyLoading](#onLazyLoading)实现数据懒加载。
 
-除totalCount属性外，开发者也可以通过[onTotalCount](arkts-arkui-virtualscrolloptions-i.md#ontotalcount)方法设置自定义方法，计算期望加载的数据项总数。
+除totalCount属性外，开发者也可以通过[onTotalCount](#onTotalCount)方法设置自定义方法，计算期望加载的数据项总数。
 
 **类型：** number
 

@@ -13,7 +13,7 @@ Provides information about an accessibility application.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## abilityTypes
@@ -68,7 +68,7 @@ readonly capabilities: Array<Capability>
 
 Capabilities list of the accessibility application.
 
-**Type:** Array&lt;Capability&gt;
+**Type:** Array&lt;[Capability](arkts-accessibility-accessibility-capability-t.md)&gt;
 
 **Since:** 7
 

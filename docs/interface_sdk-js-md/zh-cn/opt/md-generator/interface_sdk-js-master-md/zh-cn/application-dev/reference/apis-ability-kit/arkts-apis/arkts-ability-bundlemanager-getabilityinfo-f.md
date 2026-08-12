@@ -29,14 +29,14 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; |
+| Promise & lt;Array & lt;AbilityInfo & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 ## 示例
 

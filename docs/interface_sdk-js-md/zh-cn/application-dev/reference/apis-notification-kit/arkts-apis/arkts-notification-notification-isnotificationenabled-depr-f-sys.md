@@ -14,7 +14,7 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isNotificationEnabled
+**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -28,7 +28,7 @@ function isNotificationEnabled(bundle: BundleOption, callback: AsyncCallback<boo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 获取通知使能状态回调函数。 |
 
 
@@ -46,7 +46,7 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isNotificationEnabled
+**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -60,7 +60,7 @@ function isNotificationEnabled(bundle: BundleOption): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | 是 | 指定应用的包信息。 |
+| bundle | BundleOption | 是 | 指定应用的包信息。 |
 
 **返回值：**
 
@@ -83,7 +83,7 @@ function isNotificationEnabled(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isNotificationEnabled
+**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -114,7 +114,7 @@ function isNotificationEnabled(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isNotificationEnabled
+**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -145,7 +145,7 @@ function isNotificationEnabled(userId: number, callback: AsyncCallback<boolean>)
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isNotificationEnabled
+**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -177,7 +177,7 @@ function isNotificationEnabled(userId: number): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isNotificationEnabled
+**替代接口：** [isNotificationEnabled](ohos.notificationManager/notificationManager#isNotificationEnabled)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

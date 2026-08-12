@@ -26,7 +26,7 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;VibratorInfo&gt; | 马达设备的信息数组。每个元素包含deviceId、vibratorId、deviceName、isHdHapticSupported、isLocalVibrator等属性，可 用于选择合适的马达触发振动或判断设备振动能力。 |
+| Array&lt;[VibratorInfo](arkts-sensorservice-vibrator-vibratorinfo-i.md)&gt; | 马达设备的信息数组。每个元素包含deviceId、vibratorId、deviceName、isHdHapticSupported、isLocalVibrator等属性，可 用于选择合适的马达触发振动或判断设备振动能力。 |
 
 ## 示例
 

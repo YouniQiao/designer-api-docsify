@@ -13,7 +13,7 @@ Defines the struct of the template used in a subscription.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## predicates
@@ -25,7 +25,7 @@ predicates: Record<string, string>
 Predicates to use. When  
 [**on**](dataShare.DataShareHelper.on(type: 'rdbDataChange', uris: Array&lt;string&gt;, templateId: TemplateId, callback: AsyncCallback&lt;RdbDataChangeNode&gt;))is called, the predicates are used to generate data. This parameter applies only to RDB data storage.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 10
 

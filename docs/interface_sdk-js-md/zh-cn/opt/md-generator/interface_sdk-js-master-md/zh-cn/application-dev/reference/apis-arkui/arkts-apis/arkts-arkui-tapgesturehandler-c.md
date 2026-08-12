@@ -56,7 +56,7 @@ onAction(event: Callback<GestureEvent>): TapGestureHandler
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | 是 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 |
 
 **返回值：**
 

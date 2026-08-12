@@ -1,8 +1,8 @@
 # NavigationAttribute
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性：
+除支持[通用属性](./../../@internal/component/ets/common)外，还支持以下属性：
 
-**继承/实现关系：** NavigationAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** NavigationAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<NavigationAttribute> | Att
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;NavigationAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 在当前组件上 ，动态设置属性方法，支持使用if/else语法。&lt;br/&gt;CommonMethod：通用属性和事件。&lt;br/&gt;取值为undefined时，按当前组件的属性方法默认值处理。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | 在当前组件上 ，动态设置属性方法，支持使用if/else语法。&lt;br/&gt;CommonMethod：通用属性和事件。&lt;br/&gt;取值为undefined时，按当前组件的属性方法默认值处理。 |
 
 **返回值：**
 
@@ -52,7 +52,7 @@ default backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier 
 
 > **说明：**
 > 
-> 不支持通过[SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md/arkts-arkui-symbolglyphmodifier-t.md)对象的
+> 不支持通过[SymbolGlyphModifier](./../SymbolGlyphModifier:SymbolGlyphModifier)对象的
 > [fontSize](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#fontsize)属性修改图标大小、
 > [effectStrategy](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#effectstrategy)属性修改
 > 动效、[symbolEffect](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#symboleffect12)属性修
@@ -72,7 +72,7 @@ default backButtonIcon(icon: string | PixelMap | Resource | SymbolGlyphModifier 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| icon | string \| PixelMap \| Resource \| SymbolGlyphModifier \| undefined | 是 | 标题栏中返回键图标。&lt;br/&gt;取值为undefined时，显示返回键图标。 |
+| icon | string \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) \| undefined | 是 | 标题栏中返回键图标。&lt;br/&gt;取值为undefined时，显示返回键图标。 |
 | accessibilityText | [ResourceStr](arkts-arkui-resourcestr-t.md) \| undefined | 否 | 需要播报的内容。&lt;br/&gt;取值为undefined时，无播报内容。 |
 
 **返回值：**
@@ -109,7 +109,7 @@ default customNavContentTransition(delegate: ((from: NavContentInfo, to: NavCont
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | ((from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation) =&gt; NavigationAnimatedTransition \| undefined) \| undefined | 是 | 自定义转场动画的回调函数。&lt;br/&gt;from：退场Destination的页面信息。&lt;br/&gt;to：进场Destination的页面信息。&lt; br/&gt;operation：当前页面转场的类型。&lt;br/&gt;当回调函数返回[NavigationAnimatedTransition](../arkts-components/arkts-arkui-navigationanimatedtransition-i.md/arkts-arkui-navigationanimatedtransition-i.md)时，表示自定义 转场动画协议；返回undefined时表示未定义，执行默认转场动效。 &lt;br/&gt;取值为undefined时，不使用自定义转场动画回调函数，执行默认转场动效。 |
+| delegate | ((from: NavContentInfo, to: NavContentInfo, operation: NavigationOperation) =&gt; NavigationAnimatedTransition \| undefined) \| undefined | 是 | 自定义转场动画的回调函数。&lt;br/&gt;from：退场Destination的页面信息。&lt;br/&gt;to：进场Destination的页面信息。&lt; br/&gt;operation：当前页面转场的类型。&lt;br/&gt;当回调函数返回[NavigationAnimatedTransition](arkts-arkui-navigation-navigationanimatedtransition-i.md#NavigationAnimatedTransition)时，表示自定义 转场动画协议；返回undefined时表示未定义，执行默认转场动效。 &lt;br/&gt;取值为undefined时，不使用自定义转场动画回调函数，执行默认转场动效。 |
 
 **返回值：**
 
@@ -213,7 +213,7 @@ default enableModeChangeAnimation(isEnabled: boolean | undefined): this
 default enableToolBarAdaptation(enable: boolean | undefined): this
 ```
 
-设置是否启用Navigation和NavDestination的工具栏[toolbarConfiguration](NavigationAttribute.toolbarConfiguration)自适应能力。关闭此能力后，底部工具栏[toolbarConfiguration](NavigationAttribute.toolbarConfiguration)将不会再移动至页面右上角的菜单中。该接口不适配于自定义菜单，使用该接口需采用[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md/arkts-arkui-navigationmenuitem-i.md)接口来定义[菜单](NavigationAttribute.menus)。
+设置是否启用Navigation和NavDestination的工具栏[toolbarConfiguration](#toolbarConfiguration)自适应能力。关闭此能力后，底部工具栏[toolbarConfiguration](#toolbarConfiguration)将不会再移动至页面右上角的菜单中。该接口不适配于自定义菜单，使用该接口需采用[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md#NavigationMenuItem)接口来定义[菜单](#menus)。
 
 **起始版本：** 23
 
@@ -243,7 +243,7 @@ default enableToolBarAdaptation(enable: boolean | undefined): this
 default enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined): this
 ```
 
-设置是否启用[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i)页面  
+设置是否启用[NavDestination](./../../@internal/component/ets/nav_destination)页面  
 [onHidden](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#onhidden10)、  
 [onShown](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#onshown10)生命周期与全模态的联动触发。
 
@@ -281,7 +281,7 @@ default enableVisibilityLifecycleWithContentCover(isEnabled: boolean | undefined
 default hideBackButton(value: boolean | undefined): this
 ```
 
-设置是否隐藏标题栏中的返回键。返回键仅在[titleMode](NavigationAttribute.titleMode)设置为NavigationTitleMode.Mini时才生效。
+设置是否隐藏标题栏中的返回键。返回键仅在[titleMode](#titleMode)设置为NavigationTitleMode.Mini时才生效。
 
 **起始版本：** 23
 
@@ -476,7 +476,7 @@ default ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edge
 > 
 > - 若组件扩展到非安全区域内，此时在非安全区域里触发的事件（例如：点击事件）等可能会被系统拦截，优先响应状态栏等系统组件。
 > 
-> - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为[STACK](../arkts-components/arkts-arkui-barstyle-e.md/arkts-arkui-barstyle-e.md)模式。
+> - 组件想要扩展到非安全区域内，需隐藏或者设置标题栏和工具栏为[STACK](../arkts-components/arkts-arkui-barstyle-e.md#BarStyle)模式。
 
 **起始版本：** 23
 
@@ -507,11 +507,11 @@ default ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType> | undefined, edge
 default menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, options?: NavigationMenuOptions | undefined): this
 ```
 
-设置页面右上角菜单。不设置时不显示菜单项。使用Array&lt;[NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md/arkts-arkui-navigationmenuitem-i.md)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
+设置页面右上角菜单。不设置时不显示菜单项。使用Array&lt;[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md#NavigationMenuItem)&gt; 写法时，竖屏最多支持显示3个图标，横屏最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。
 
 &gt; **说明：**
 > 
-> 不支持通过[SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md/arkts-arkui-symbolglyphmodifier-t.md)对象的
+> 不支持通过[SymbolGlyphModifier](./../SymbolGlyphModifier:SymbolGlyphModifier)对象的
 > [fontSize](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#fontsize)属性修改图标大小、
 > [effectStrategy](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#effectstrategy)属性修改
 > 动效、[symbolEffect](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#symboleffect12)属性修
@@ -531,8 +531,8 @@ default menus(items: Array<NavigationMenuItem> | CustomBuilder | undefined, opti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| items | Array&lt;NavigationMenuItem&gt; \| CustomBuilder \| undefined | 是 |  |
-| options | [NavigationMenuOptions](../arkts-components/arkts-arkui-navigationmenuoptions-i.md) \| undefined | 否 | 菜单选项。&lt;br/&gt;取值为undefined时，按NavigationMenuOptions中的默认值处理。 |
+| items | Array&lt;[NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 |  |
+| options | [NavigationMenuOptions](arkts-arkui-navigation-navigationmenuoptions-i.md) \| undefined | 否 | 菜单选项。&lt;br/&gt;取值为undefined时，按NavigationMenuOptions中的默认值处理。 |
 
 **返回值：**
 
@@ -592,7 +592,7 @@ default mode(value: NavigationMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NavigationMode](../arkts-components/arkts-arkui-navigationmode-e.md) \| undefined | 是 |  |
+| value | [NavigationMode](arkts-arkui-navigation-navigationmode-e.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -606,7 +606,7 @@ default mode(value: NavigationMode | undefined): this
 default navBarPosition(value: NavBarPosition | undefined): this
 ```
 
-设置导航页位置。仅在[mode](NavigationAttribute.mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。
+设置导航页位置。仅在[mode](#mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。
 
 **起始版本：** 23
 
@@ -636,7 +636,7 @@ default navBarPosition(value: NavBarPosition | undefined): this
 default navBarWidth(value: Length | Bindable<Length> | undefined): this
 ```
 
-设置导航页宽度。仅在[mode](NavigationAttribute.mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。
+设置导航页宽度。仅在[mode](#mode)设置为NavigationMode.Auto或NavigationMode.Split时生效。
 
 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md)双向绑定变量。
 
@@ -654,7 +654,7 @@ default navBarWidth(value: Length | Bindable<Length> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Bindable&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | 是 |  |
+| value | [Length](arkts-arkui-length-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -801,7 +801,7 @@ default onNavigationModeChange(callback: ((mode: NavigationMode) => void) | unde
 default onTitleModeChange(callback: ((titleMode: NavigationTitleMode) => void) | undefined): this
 ```
 
-当[titleMode](NavigationAttribute.titleMode)为NavigationTitleMode.Free时，随着可滚动组件的滑动标题栏模式发生变化时触发此回调。
+当[titleMode](#titleMode)为NavigationTitleMode.Free时，随着可滚动组件的滑动标题栏模式发生变化时触发此回调。
 
 **起始版本：** 23
 
@@ -940,7 +940,7 @@ Navigation双栏模式下，支持设置右侧页面显示默认占位页，占�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| placeholder | [ComponentContent](../arkts-components/arkts-arkui-componentcontent-t.md)&lt;T&gt; | 是 | 设置Navigation双栏模式下右侧的默认占位页。 |
+| placeholder | ComponentContent&lt;T&gt; | 是 | 设置Navigation双栏模式下右侧的默认占位页。 |
 
 **返回值：**
 
@@ -977,7 +977,7 @@ default systemBarStyle(style: SystemBarStyle | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [SystemBarStyle](arkts-arkui-window-systembarstyle-i.md) \| undefined | 是 | 系统状态栏样式。&lt;br/&gt;取值为undefined时，无样式。 |
+| style | [SystemBarStyle](arkts-arkui-systembarstyle-t.md) \| undefined | 是 | 系统状态栏样式。&lt;br/&gt;取值为undefined时，无样式。 |
 
 **返回值：**
 
@@ -1013,8 +1013,8 @@ default title(value: ResourceStr | CustomBuilder | NavigationCommonTitle | Navig
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| CustomBuilder \| NavigationCommonTitle \| NavigationCustomTitle \| undefined | 是 |  |
-| options | [NavigationTitleOptions](../arkts-components/arkts-arkui-navigationtitleoptions-i.md) \| undefined | 否 | 标题栏选项。 包含标题栏背景颜色、标题栏背景模糊样式及模糊选项、标题栏背景属性、标题栏布局方式、标题栏起始端内 间距、标题栏结束端内间距、主标题属性修改器、子标题属性修改器、是否响应悬停态。&lt;br/&gt;取值为undefined时，按NavigationTitleOptions中的默认值处理。 |
+| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [NavigationCommonTitle](arkts-arkui-navigation-navigationcommontitle-i.md) \| [NavigationCustomTitle](arkts-arkui-navigation-navigationcustomtitle-i.md) \| undefined | 是 |  |
+| options | [NavigationTitleOptions](arkts-arkui-navigation-navigationtitleoptions-i.md) \| undefined | 否 | 标题栏选项。 包含标题栏背景颜色、标题栏背景模糊样式及模糊选项、标题栏背景属性、标题栏布局方式、标题栏起始端内 间距、标题栏结束端内间距、主标题属性修改器、子标题属性修改器、是否响应悬停态。&lt;br/&gt;取值为undefined时，按NavigationTitleOptions中的默认值处理。 |
 
 **返回值：**
 
@@ -1080,7 +1080,7 @@ default toolbarConfiguration(value: Array<ToolbarItem> | CustomBuilder | undefin
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ToolbarItem&gt; \| CustomBuilder \| undefined | 是 | 工具栏内容，使用Array&lt;[ToolbarItem](../arkts-components/arkts-arkui-toolbaritem-i.md/arkts-arkui-toolbaritem-i.md)&gt; 设置的工具栏有如下特性：&lt;br/&gt;工具栏所有选项均分底部工具栏，在每个均分内容区布局文本和图标。&lt;br/&gt;竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。横屏模式时，如果为 [Split](../arkts-components/arkts-arkui-navigationmode-e.md/arkts-arkui-navigationmode-e.md)模式，仍按照竖屏模式显示，如果为[Stack](../arkts-components/arkts-arkui-navigationmode-e.md/arkts-arkui-navigationmode-e.md)模式需配合menus属性的Array&lt; [NavigationMenuItem](../arkts-components/arkts-arkui-navigationmenuitem-i.md/arkts-arkui-navigationmenuitem-i.md)&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。&lt;br/&gt;使用 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)写法为用户自定义工具栏选项，不具备以上功能。&lt;br/ &gt;取值为undefined时，无工具栏。 |
+| value | Array&lt;[ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md)&gt; \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | 工具栏内容，使用Array&lt;[ToolbarItem](arkts-arkui-navigation-toolbaritem-i.md#ToolbarItem)&gt; 设置的工具栏有如下特性：&lt;br/&gt;工具栏所有选项均分底部工具栏，在每个均分内容区布局文本和图标。&lt;br/&gt;竖屏模式最多支持显示5个图标，多余的图标会被放入自动生成的更多图标。横屏模式时，如果为 [Split](arkts-arkui-navigation-navigationmode-e.md#NavigationMode)模式，仍按照竖屏模式显示，如果为[Stack](arkts-arkui-navigation-navigationmode-e.md#NavigationMode)模式需配合menus属性的Array&lt; [NavigationMenuItem](arkts-arkui-navigation-navigationmenuitem-i.md#NavigationMenuItem)&gt;使用，底部工具栏会自动隐藏，同时底部工具栏所有选项移动至页面右上角菜单。&lt;br/&gt;使用 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)写法为用户自定义工具栏选项，不具备以上功能。&lt;br/ &gt;取值为undefined时，无工具栏。 |
 | options | [NavigationToolbarOptions](arkts-arkui-navigation-navigationtoolbaroptions-i.md) \| undefined | 否 | 工具栏选项。 包含工具栏背景颜色、工具栏背景模糊样式及模糊选项、工具栏背景属性、工具栏布局方式、是否隐藏工 具栏的文本、工具栏更多图标的菜单选项。&lt;br/&gt;取值为undefined时，按NavigationToolbarOptions中的默认值处理。 |
 
 **返回值：**

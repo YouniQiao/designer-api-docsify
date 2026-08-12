@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## originalText
@@ -13,7 +13,7 @@ export function originalText(text: string, pattern?: MatchPattern): On
 ```
 
 Specifies the original text for the target Component.If the accessibility property  
-[accessibilityLevel](../../apis-arkui/arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#accessibilitylevel)of a component is set to 'no' or 'no-hide-descendants',you will not be able to use {@link On.text} to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with {@link On.text}
+[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)of a component is set to 'no' or 'no-hide-descendants',you will not be able to use [text](arkts-test-uitest-on-c.md#text) to match the component with the specified original text, but you can use this method to achieve it;if the component does not set the above accessibility property, this method has no difference with [text](arkts-test-uitest-on-c.md#text)
 
 **Since:** 23
 
@@ -28,7 +28,7 @@ Specifies the original text for the target Component.If the accessibility proper
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | the original text value. |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the {@link MatchPattern} of the text value. &lt;br&gt;Default value: {@link MatchPattern.EQUALS} |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | the [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) of the text value. &lt;br&gt;Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
 
 **Return value:**
 
@@ -40,5 +40,5 @@ Specifies the original text for the target Component.If the accessibility proper
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

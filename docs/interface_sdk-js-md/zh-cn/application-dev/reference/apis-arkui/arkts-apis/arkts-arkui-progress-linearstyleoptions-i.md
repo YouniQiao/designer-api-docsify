@@ -2,9 +2,9 @@
 
 线性样式选项。
 
-继承自[ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)。
+继承自[ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md#ScanEffectOptions)和[CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)。
 
-**继承/实现关系：** LinearStyleOptions extends [ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
+**继承/实现关系：** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **起始版本：** 23
 
@@ -22,7 +22,7 @@ strokeRadius?: PX | VP | LPX | Resource
 
 设置线性进度条的圆角半径。取值范围[0, strokeWidth / 2]。默认值：strokeWidth / 2。
 
-**类型：** [PX](arkts-arkui-px-t.md) \| VP \| LPX \| Resource
+**类型：** [PX](arkts-arkui-px-t.md) \| [VP](arkts-arkui-vp-t.md) \| [LPX](arkts-arkui-lpx-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **默认值：** strokeWidth / 2
 

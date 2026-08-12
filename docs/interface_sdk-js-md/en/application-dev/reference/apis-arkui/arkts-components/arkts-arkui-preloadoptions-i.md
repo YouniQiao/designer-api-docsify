@@ -18,7 +18,7 @@ onDestroy?: Callback<void>
 
 Callback when preloaded page is destroyed by the system.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.1.0
 

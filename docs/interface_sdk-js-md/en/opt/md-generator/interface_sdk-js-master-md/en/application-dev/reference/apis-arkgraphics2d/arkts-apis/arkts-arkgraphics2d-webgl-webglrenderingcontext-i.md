@@ -2,7 +2,7 @@
 
 WebGL 1.0
 
-**Inheritance/Implementation:** WebGLRenderingContext extends [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md), [WebGLRenderingContextOverloads](arkts-arkgraphics2d-webgl-webglrenderingcontextoverloads-i.md)
+**Inheritance/Implementation:** WebGLRenderingContext extends [WebGLRenderingContextBase](arkts-arkgraphics2d-webgl-webglrenderingcontextbase-i.md#WebGLRenderingContextBase), [WebGLRenderingContextOverloads](arkts-arkgraphics2d-webgl-webglrenderingcontextoverloads-i.md#WebGLRenderingContextOverloads)
 
 **Since:** 7
 

@@ -19,7 +19,7 @@ The module provides APIs for setting, obtaining, and deleting the disposed statu
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from 'kits/@kit.AbilityKit';
+import { appControl } from '@kit.AbilityKit';
 ```
 
 ## Summary

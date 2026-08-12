@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## getSignalInformationSync
@@ -30,7 +30,7 @@ Obtains the list of signal strength information of the registered network corres
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;SignalInformation&gt; |
+| Array & lt;SignalInformation & gt; |
 
 ## Examples
 

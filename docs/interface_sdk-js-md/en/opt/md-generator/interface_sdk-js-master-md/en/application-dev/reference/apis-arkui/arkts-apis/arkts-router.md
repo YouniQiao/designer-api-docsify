@@ -12,14 +12,14 @@ For routing management, it is recommended that you use the
 > 
 > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
 > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](arkts-arkui-uicontext.md).
+> [UIContext](@ohos.arkui.UIContext).
 > 
 > - When using
-> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)
+> [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushUrl)
 > or
-> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushnamedroute)
+> [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)
 > with a callback to return the result, be aware that the stack information obtained through the callback using APIs
-> such as [getLength](arkts-arkui-arkui-uicontext-router-c.md#getlength) represents an intermediate state during the
+> such as [getLength](arkts-arkui-arkui-uicontext-router-c.md#getLength) represents an intermediate state during the
 > navigation operation. This temporary state might differ from the final stack information available after the stack
 > operation is complete.
 
@@ -32,7 +32,7 @@ For routing management, it is recommended that you use the
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## Summary

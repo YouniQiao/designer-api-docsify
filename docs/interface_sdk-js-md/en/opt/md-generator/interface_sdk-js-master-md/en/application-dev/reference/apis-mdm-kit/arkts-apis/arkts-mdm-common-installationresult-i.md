@@ -3,7 +3,7 @@
 An object that holds the application installation result.
 
 This object is used as a callback parameter in  
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult).
+[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult).
 
 **Since:** 22
 
@@ -14,7 +14,7 @@ This object is used as a callback parameter in
 ## Modules to Import
 
 ```TypeScript
-import { common } from 'kits/@kit.MDMKit';
+import { common } from '@kit.MDMKit';
 ```
 
 ## message
@@ -43,7 +43,7 @@ result: Result
 
 Application installation result. **SUCCESS** indicates that the application is successfully installed and can be properly used. **FAIL** indicates that the application fails to be installed and is unavailable.
 
-**Type:** [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md)
+**Type:** Result
 
 **Since:** 22
 

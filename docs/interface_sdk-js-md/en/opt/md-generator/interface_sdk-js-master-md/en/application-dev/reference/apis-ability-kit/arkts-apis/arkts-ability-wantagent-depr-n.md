@@ -6,7 +6,7 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent
+**Substitutes:** [wantAgent/wantAgent](ohos.app.ability.wantAgent/wantAgent)
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 

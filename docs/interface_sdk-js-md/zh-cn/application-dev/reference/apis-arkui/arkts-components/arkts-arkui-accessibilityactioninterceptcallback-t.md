@@ -24,7 +24,7 @@ declare type AccessibilityActionInterceptCallback = (action: AccessibilityAction
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | [AccessibilityAction](../arkts-apis/arkts-arkui-common-accessibilityaction-e.md) | 是 | 可访问性操作类型的枚举。 |
+| action | [AccessibilityAction](arkts-arkui-accessibilityaction-e.md) | 是 | 可访问性操作类型的枚举。 |
 
 **返回值：**
 

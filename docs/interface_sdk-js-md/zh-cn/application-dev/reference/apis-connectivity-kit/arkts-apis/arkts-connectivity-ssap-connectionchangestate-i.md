@@ -38,7 +38,7 @@ state: ConnectionState
 
 连接状态。
 
-**类型：** [ConnectionState](arkts-connectivity-remotedevice-connectionstate-t.md)
+**类型：** ConnectionState
 
 **起始版本：** 26.0.0
 

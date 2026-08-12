@@ -31,7 +31,7 @@ CUSTOM = 1
 ```
 
 Intercepts and forwards messages. When this policy is configured, the system intercepts the current key event and does not process the event. In addition, the  
-[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)callback API is used to notify the MDM app of the key event, which does not block the processing of other events.
+[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent)callback API is used to notify the MDM app of the key event, which does not block the processing of other events.
 
 **Since:** 23
 

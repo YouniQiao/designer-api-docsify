@@ -1,6 +1,6 @@
 # OnScrollFrameBeginHandlerResult
 
-[OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md)返回的实际相对上一帧滚动偏移量。
+[OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md#OnScrollFrameBeginCallback)返回的实际相对上一帧滚动偏移量。
 
 > **说明：**
 > 

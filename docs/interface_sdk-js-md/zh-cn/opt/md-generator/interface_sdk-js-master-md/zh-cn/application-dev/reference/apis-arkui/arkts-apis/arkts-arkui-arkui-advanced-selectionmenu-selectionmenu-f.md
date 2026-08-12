@@ -6,7 +6,7 @@
 export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
-入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。例如，富文本组件[RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i)使用  
+入参为空时，文本选择菜单组件SelectionMenu内容区大小及组件大小为零。例如，富文本组件[RichEditor](./@internal/component/ets/rich_editor)使用  
 [bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)接口绑定一个SelectionMenu的右键菜单，则右键富文本组件区域时无任何菜单弹出。
 
 **起始版本：** 11

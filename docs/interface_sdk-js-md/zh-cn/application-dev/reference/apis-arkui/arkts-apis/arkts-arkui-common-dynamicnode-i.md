@@ -32,7 +32,7 @@ Set the move action.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnMoveHandler](../arkts-components/arkts-arkui-onmovehandler-t.md) \| undefined | 是 |  |
+| handler | [OnMoveHandler](arkts-arkui-onmovehandler-t.md) \| undefined | 是 |  |
 
 **返回值：**
 
@@ -62,8 +62,8 @@ Set the move action.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [OnMoveHandler](../arkts-components/arkts-arkui-onmovehandler-t.md) \| undefined | 是 |  |
-| eventHandler | [ItemDragEventHandler](../arkts-components/arkts-arkui-itemdrageventhandler-i.md) | 是 |  |
+| handler | [OnMoveHandler](arkts-arkui-onmovehandler-t.md) \| undefined | 是 |  |
+| eventHandler | [ItemDragEventHandler](arkts-arkui-common-itemdrageventhandler-i.md) | 是 |  |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # DotIndicator
 
-A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md).
+A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-indicator-c.md#Indicator).
 
 **Inheritance/Implementation:** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 
@@ -38,7 +38,7 @@ Sets the color of the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the dot-style navigation indicator.&lt;br&gt;Default value: **'#1A182431'** ( light gray) |
+| value | ResourceColor | Yes | Color of the dot-style navigation indicator.&lt;br&gt;Default value: **'#1A182431'** ( light gray) |
 
 **Return value:**
 
@@ -104,7 +104,7 @@ Set indicator icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | Yes | Indicator items whose icons need to be set. |
+| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)&gt; | Yes | Indicator items whose icons need to be set. |
 
 **Return value:**
 
@@ -138,7 +138,7 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
@@ -172,7 +172,7 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
@@ -272,7 +272,7 @@ Sets the color of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the selected dot-style navigation indicator.&lt;br&gt;Default value: **'#007DFF'** (blue) |
+| value | ResourceColor | Yes | Color of the selected dot-style navigation indicator.&lt;br&gt;Default value: **'#007DFF'** (blue) |
 
 **Return value:**
 
@@ -306,7 +306,7 @@ Sets the height of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
@@ -340,7 +340,7 @@ Sets the width of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
 
 **Return value:**
 
@@ -374,7 +374,7 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.&lt;br&gt;Default value: **10** for PCs and 2-in-1 devices and **8** for other devices&lt;br&gt;Unit: vp&lt; br&gt;Value range: [0, +∞) |
+| space | LengthMetrics | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.&lt;br&gt;Default value: **10** for PCs and 2-in-1 devices and **8** for other devices&lt;br&gt;Unit: vp&lt; br&gt;Value range: [0, +∞) |
 
 **Return value:**
 

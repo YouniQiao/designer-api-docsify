@@ -1,7 +1,7 @@
 # StatusMonitor (System API)
 
 Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling  
-[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor).
+[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor).
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Status monitor object. It is used to listen for or obtain information such as th
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## getTemplateStatus
@@ -41,13 +41,13 @@ Obtains the status of the companion device template. This API is used to query t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;TemplateStatus[]&gt; |
+| Promise&lt;[TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md)[]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
 
 ## Examples
 
@@ -95,7 +95,7 @@ Unsubscribes from the events for status changes of companion devices that can be
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
 
 ## Examples
 
@@ -146,7 +146,7 @@ Unsubscribes from the continuous authentication status change event of the compa
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
 
 ## Examples
 
@@ -206,7 +206,7 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
 
 ## Examples
 
@@ -257,7 +257,7 @@ Subscribes to the events for status changes of companion devices that can be add
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
 
 ## Examples
 
@@ -308,8 +308,8 @@ Subscribes to the events for continuous authentication status of companion devic
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
-| [32600002](../errorcode-useriam.md#32600002-template-not-found) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-template-not-found) |
 
 ## Examples
 
@@ -368,7 +368,7 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) |
+| [32600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) |
 
 ## Examples
 

@@ -58,7 +58,7 @@ direction: TextDeleteDirection
 
 The deleted direction.
 
-**Type:** [TextDeleteDirection](arkts-arkui-textdeletedirection-e.md)
+**Type:** [TextDeleteDirection](arkts-arkui-textcommon-textdeletedirection-e.md)
 
 **Since:** 23
 

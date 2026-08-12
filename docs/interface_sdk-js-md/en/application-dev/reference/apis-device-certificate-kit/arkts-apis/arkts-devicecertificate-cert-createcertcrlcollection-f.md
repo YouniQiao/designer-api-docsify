@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## createCertCRLCollection
@@ -29,7 +29,7 @@ Creates an object for a collection of X.509 certificates and CRLs.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | certs | Array&lt;X509Cert&gt; | Yes | X.509 certificates. |
-| crls | Array&lt;X509CRL&gt; | No | Array of X509CRL. |
+| crls | Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | No | Array of X509CRL. |
 
 **Return value:**
 
@@ -41,8 +41,8 @@ Creates an object for a collection of X.509 certificates and CRLs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
 
 ## Examples
 

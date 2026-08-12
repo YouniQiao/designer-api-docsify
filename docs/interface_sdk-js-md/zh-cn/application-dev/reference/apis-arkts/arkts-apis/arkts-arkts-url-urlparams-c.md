@@ -88,7 +88,7 @@ for (let pair of iter) {
 append(name: string, value: string): void
 ```
 
-将新的键值对插入到查询字符串。与[set](arkts-arkts-url-urlparams-c.md#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
+将新的键值对插入到查询字符串。与[set](#set)方法不同，append不会替换已存在的键名对应的值，而是追加一个新的键值对，允许同一键名存在多个值。如需替换已有键值，请使用set方法。
 
 **起始版本：** 9
 
@@ -142,7 +142,7 @@ URLParams的构造函数，用于创建URL参数对象，适用于需要解析�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| URLParams | 否 | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：URL查询参数字符串。 &lt;br/&gt;- URLParams：URLParams实例对象。 &lt;br/&gt;- 默认值：null。 |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：URL查询参数字符串。 &lt;br/&gt;- URLParams：URLParams实例对象。 &lt;br/&gt;- 默认值：null。 |
 
 ## 示例
 
@@ -203,7 +203,7 @@ constructor(init?: [string, string][] | Record<string, string> | string | URLPar
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | [string, string][] \| Record&lt;string, string&gt; \| string \| URLParams | 否 | init init |
+| init | [string, string][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | init init |
 
 ## delete
 

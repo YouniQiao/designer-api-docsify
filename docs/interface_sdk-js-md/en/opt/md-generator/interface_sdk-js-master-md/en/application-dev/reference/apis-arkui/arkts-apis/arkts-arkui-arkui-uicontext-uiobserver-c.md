@@ -6,7 +6,7 @@ Provides APIs for listening for UI component behavior changes.
 > 
 > - The initial APIs of this class are supported since API version 11.
 > 
-> - In the following API examples, you must first use [getUIObserver()](arkts-arkui-arkui-uicontext-uicontext-c.md#getuiobserver) in
+> - In the following API examples, you must first use [getUIObserver()](arkts-arkui-arkui-uicontext-uicontext-c.md#getUIObserver) in
 > **UIContext** to obtain a **UIObserver** instance, and then call the APIs using the obtained instance.
 > 
 > - UIObserver can only listen for relevant information within the current process and does not support obtaining
@@ -22,7 +22,7 @@ Provides APIs for listening for UI component behavior changes.
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## addGlobalGestureListener
@@ -444,7 +444,7 @@ Removes a callback function to be called after tapGesture is called.
 off(type: 'beforePanStart', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture [onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart) pre-execution events, canceling callbacks registered via  
+Unregisters the listener for pan gesture [onActionStart](PanGestureInterface.onActionStart) pre-execution events, canceling callbacks registered via  
 [on('beforePanStart')](UIObserver#on(type: 'beforePanStart', callback: PanListenerCallback)).
 
 **Since:** 19
@@ -470,7 +470,7 @@ Unregisters the listener for pan gesture [onActionStart](arkts-arkui-pangesturei
 off(type: 'beforePanEnd', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture [onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend) pre-execution events,canceling callbacks registered via  
+Unregisters the listener for pan gesture [onActionEnd](PanGestureInterface.onActionEnd) pre-execution events,canceling callbacks registered via  
 [on('beforePanEnd')](UIObserver#on(type: 'beforePanEnd', callback: PanListenerCallback)).
 
 **Since:** 19
@@ -496,7 +496,7 @@ Unregisters the listener for pan gesture [onActionEnd](arkts-arkui-pangestureint
 off(type: 'afterPanStart', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture [onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart) post-execution events, canceling callbacks registered via  
+Unregisters the listener for pan gesture [onActionStart](PanGestureInterface.onActionStart) post-execution events, canceling callbacks registered via  
 [on('afterPanStart')](UIObserver#on(type: 'afterPanStart', callback: PanListenerCallback)).
 
 **Since:** 19
@@ -522,7 +522,7 @@ Unregisters the listener for pan gesture [onActionStart](arkts-arkui-pangesturei
 off(type: 'afterPanEnd', callback?: PanListenerCallback): void
 ```
 
-Unregisters the listener for pan gesture [onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend) post-execution events, canceling callbacks registered via  
+Unregisters the listener for pan gesture [onActionEnd](PanGestureInterface.onActionEnd) post-execution events, canceling callbacks registered via  
 [on('afterPanEnd')](UIObserver#on(type: 'afterPanEnd', callback: PanListenerCallback)).
 
 **Since:** 19
@@ -841,7 +841,7 @@ Unregister the listener for content switching events of the **Swiper** component
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No |
 
 ## offSwiperContentUpdate
 
@@ -866,7 +866,7 @@ Unregister the listener for content switching events of a specific **Swiper** co
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | config | observer.ObserverOptions | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | No |
 
 ## on('navDestinationUpdate')
 
@@ -1260,7 +1260,7 @@ Registers a callback function to be called after tapGesture is called.
 on(type: 'beforePanStart', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture [onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart) pre-execution events, executing the callback before the actual [onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionStart](PanGestureInterface.onActionStart) pre-execution events, executing the callback before the actual [onActionStart](PanGestureInterface.onActionStart) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -1285,7 +1285,7 @@ Listens for pan gesture [onActionStart](arkts-arkui-pangestureinterface-i.md#ona
 on(type: 'beforePanEnd', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture [onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend) pre-execution events, executing the callback before the actual [onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend) event. It works for finger swiping,mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionEnd](PanGestureInterface.onActionEnd) pre-execution events, executing the callback before the actual [onActionEnd](PanGestureInterface.onActionEnd) event. It works for finger swiping,mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -1310,7 +1310,7 @@ Listens for pan gesture [onActionEnd](arkts-arkui-pangestureinterface-i.md#onact
 on(type: 'afterPanStart', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture [onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart) post-execution events, executing the callback after the actual [onActionStart](arkts-arkui-pangestureinterface-i.md#onactionstart) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionStart](PanGestureInterface.onActionStart) post-execution events, executing the callback after the actual [onActionStart](PanGestureInterface.onActionStart) event. It works for finger swiping, mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -1335,7 +1335,7 @@ Listens for pan gesture [onActionStart](arkts-arkui-pangestureinterface-i.md#ona
 on(type: 'afterPanEnd', callback: PanListenerCallback): void
 ```
 
-Listens for pan gesture [onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend) post-execution events, executing the callback after the actual [onActionEnd](arkts-arkui-pangestureinterface-i.md#onactionend) event. It works for finger swiping,mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
+Listens for pan gesture [onActionEnd](PanGestureInterface.onActionEnd) post-execution events, executing the callback after the actual [onActionEnd](PanGestureInterface.onActionEnd) event. It works for finger swiping,mouse dragging, mouse wheel scrolling, and touchpad movements, but not for screen reader touch mode.
 
 **Since:** 19
 
@@ -1516,7 +1516,7 @@ Typically, a **RENDER_OUT** notification is received when a component moves off-
 
 | Error Code ID |
 | --- |
-| [161001](../errorcode-node-render-monitor.md#161001-number-of-nodes-listening-for-render-state-exceeds-the-limit) |
+| [161001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node-render-monitor.md#161001-number-of-nodes-listening-for-render-state-exceeds-the-limit) |
 
 ## on('textChange')
 
@@ -1664,7 +1664,7 @@ Listens for content switching events of the **Swiper** component. This API uses 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes |
 
 ## onSwiperContentUpdate
 
@@ -1689,7 +1689,7 @@ Listens for content switching events of a specific **Swiper** component identifi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | config | observer.ObserverOptions | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SwiperContentInfo&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SwiperContentInfo](arkts-arkui-arkui-uicontext-swipercontentinfo-i.md)&gt; | Yes |
 
 ## removeGlobalGestureListener
 

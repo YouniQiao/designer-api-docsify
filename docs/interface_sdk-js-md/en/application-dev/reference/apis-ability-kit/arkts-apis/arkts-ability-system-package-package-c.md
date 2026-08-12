@@ -19,7 +19,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from 'kits/@kit.AbilityKit';
+import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from '@kit.AbilityKit';
 ```
 
 ## hasInstalled
@@ -36,7 +36,7 @@ Checks whether an application exists, or whether a native application has been i
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager#canOpenLink
+**Substitutes:** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canOpenLink)
 
 <!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void--><!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void-End-->
 

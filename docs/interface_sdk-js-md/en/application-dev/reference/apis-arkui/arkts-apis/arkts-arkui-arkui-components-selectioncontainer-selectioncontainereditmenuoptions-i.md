@@ -13,7 +13,7 @@ Defines custom edit menu options for SelectionContainer.
 ## Modules to Import
 
 ```TypeScript
-import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from 'kits/@kit.ArkUI';
+import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
 ## onMenuItemClick
@@ -42,7 +42,7 @@ onCreateMenu?: OnCreateMenuCallback
 
 Passes the default menu, invokes before every display to generate a menu for triggering click events.
 
-**Type:** [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md)
+**Type:** OnCreateMenuCallback
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ onPrepareMenu?: OnPrepareMenuCallback
 
 Callback before displaying the menu when the selection text changes.
 
-**Type:** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
+**Type:** OnPrepareMenuCallback
 
 **Since:** 26.0.0
 

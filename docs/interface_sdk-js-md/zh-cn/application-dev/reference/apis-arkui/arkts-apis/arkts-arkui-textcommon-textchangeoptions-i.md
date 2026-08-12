@@ -38,7 +38,7 @@ oldPreviewText: PreviewText
 
 变化前的预上屏信息。
 
-**类型：** [PreviewText](arkts-arkui-previewtext-i.md)
+**类型：** [PreviewText](arkts-arkui-textcommon-previewtext-i.md)
 
 **起始版本：** 23
 

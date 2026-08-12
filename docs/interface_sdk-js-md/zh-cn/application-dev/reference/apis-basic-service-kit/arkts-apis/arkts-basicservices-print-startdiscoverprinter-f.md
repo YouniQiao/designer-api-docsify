@@ -24,15 +24,15 @@ function startDiscoverPrinter(extensionList: Array<string>, callback: AsyncCallb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#PrintExtensionAbility)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步开始发现打印机之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
 ## 示例
 
@@ -78,7 +78,7 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
+| extensionList | Array&lt;string&gt; | 是 | 要加载的 [打印扩展能力](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md#PrintExtensionAbility)列表，列表成员为打印扩展能力的包名，空列表表示加载所有扩展能力。 |
 
 **返回值：**
 
@@ -90,8 +90,8 @@ function startDiscoverPrinter(extensionList: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | the application does not have permission to call this function. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application<br>**适用版本：** 10 - 19 |
 
 ## 示例
 

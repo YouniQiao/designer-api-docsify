@@ -28,7 +28,7 @@ Select(options: Array<SelectOption>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | 是 | 设置下拉选项。 |
+| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | 是 | 设置下拉选项。 |
 
 ## 汇总
 

@@ -13,7 +13,7 @@ Describes the parameters used for creating an application clone.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from 'kits/@kit.AbilityKit';
+import { installer } from '@kit.AbilityKit';
 ```
 
 ## appIndex
@@ -41,7 +41,7 @@ userId?: number
 ```
 
 ID of the user for whom the clone is to be created. You can obtain the user ID by calling  
-[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller.
+[getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). The default value is the user ID of the caller.
 
 **Type:** number
 

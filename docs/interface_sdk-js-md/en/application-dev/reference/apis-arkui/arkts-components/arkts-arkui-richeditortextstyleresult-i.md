@@ -22,7 +22,7 @@ decoration: DecorationStyleResult
 
 Text decorative line.
 
-**Type:** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
+**Type:** DecorationStyleResult
 
 **Since:** 10
 
@@ -44,7 +44,7 @@ fontColor: ResourceColor
 
 Font color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -132,7 +132,7 @@ fontStyle: FontStyle
 
 Font style.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 10
 
@@ -246,7 +246,7 @@ strokeColor?: ResourceColor
 
 Text stroke color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 
@@ -268,7 +268,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 Get the stroke join style of the text.
 
-**Type:** [StrokeJoinStyle](../arkts-apis/arkts-arkui-textcommon-strokejoinstyle-e.md)
+**Type:** StrokeJoinStyle
 
 **Since:** 26.0.0
 
@@ -290,7 +290,7 @@ strokeWidth?: number
 
 Text stroke width.
 
-The unit is [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+The unit is [vp](common).
 
 **Type:** number
 
@@ -324,7 +324,7 @@ radius: 0
 
 }
 
-**Type:** [TextBackgroundStyle](../arkts-apis/arkts-arkui-span-textbackgroundstyle-i.md)
+**Type:** TextBackgroundStyle
 
 **Since:** 18
 

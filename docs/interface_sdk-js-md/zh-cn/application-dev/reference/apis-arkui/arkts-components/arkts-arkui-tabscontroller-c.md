@@ -62,7 +62,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 > **说明：**
 
-> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear)生命周期中去控制。
+> - Tabs的preloadItems需要在Tabs创建之后去调用，首次预加载推荐在Tabs的[onAppear](CommonMethod#onAppear)生命周期中去控制。
 > 
 > - 如果TabsController对象未绑定任何Tabs组件，直接调用该接口，会抛出JS异常。因此使用该接口时，建议通过try-catch捕获异常。
 > 
@@ -85,7 +85,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。&lt;br/&gt;默认值：空数组。 |
+| indices | Optional&lt;Array&lt;number&gt;&gt; | 是 | 需预加载的子节点的下标数组。&lt;br/&gt;默认值：空数组。 |
 
 **返回值：**
 
@@ -97,7 +97,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -165,5 +165,5 @@ setTabBarTranslate(translate: TranslateOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 | 设置TabBar的平移距离。 |
+| translate | TranslateOptions | 是 | 设置TabBar的平移距离。 |
 

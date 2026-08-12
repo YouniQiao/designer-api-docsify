@@ -2,7 +2,7 @@
 
 类ClickActionProposal。
 
-**继承/实现关系：** ClickActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md)
+**继承/实现关系：** ClickActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **起始版本：** 26.0.0
 
@@ -34,5 +34,5 @@ SelectActionProposal构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 是 | 响应选择操作的节点。 |
+| node | FrameNode | 是 | 响应选择操作的节点。 |
 

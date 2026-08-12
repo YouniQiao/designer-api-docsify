@@ -178,7 +178,7 @@ valueResource?: Resource
 
 Content of the **SymbolSpan** component.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 11
 

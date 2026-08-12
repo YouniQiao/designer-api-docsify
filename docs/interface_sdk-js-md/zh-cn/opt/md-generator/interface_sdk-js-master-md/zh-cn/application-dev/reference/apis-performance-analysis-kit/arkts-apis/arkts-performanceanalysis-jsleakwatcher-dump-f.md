@@ -6,7 +6,7 @@
 function dump(filePath: string): Array<string>
 ```
 
-����й©�б���������ڴ���ա�
+导出泄漏列表和虚拟机内存快照。
 
 **起始版本：** 12
 
@@ -24,7 +24,7 @@ function dump(filePath: string): Array<string>
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## 示例
 

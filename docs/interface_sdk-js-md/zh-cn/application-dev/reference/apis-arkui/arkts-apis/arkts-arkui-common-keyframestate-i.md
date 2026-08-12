@@ -45,11 +45,11 @@ curve?: Curve | string | ICurve
 
 **说明：**
 
-由于[springMotion](arkts-arkui-curves-springmotion-f.md#springmotion)、  
-[responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)、  
-[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)曲线时长不生效，故不支持这三种曲线。
+由于[springMotion](arkts-arkui-curves-springmotion-f.md#springMotion)、  
+[responsiveSpringMotion](arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion)、  
+[interpolatingSpring](arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring)曲线时长不生效，故不支持这三种曲线。
 
-**类型：** [Curve](arkts-arkui-curve-e.md) \| string \| ICurve
+**类型：** [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-t.md)
 
 **起始版本：** 23
 

@@ -1,6 +1,6 @@
 # PathEffect
 
-路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setpatheffect)将其应用到画笔上，从而在绘制路径时改变路径的渲染样式。
+路径效果对象，用于创建多种路径效果，包括虚线、圆角、离散、叠加和组合路径效果等。可通过[Pen.setPathEffect](arkts-arkgraphics2d-drawing-pen-c.md#setPathEffect)将其应用到画笔上，从而在绘制路径时改变路径的渲染样式。
 
 > **说明：**
 > 
@@ -73,7 +73,7 @@ static createCornerPathEffect(radius: number): PathEffect
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createDashPathEffect
 
@@ -82,7 +82,7 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 ```
 
 创建将路径变为虚线的路径效果对象，通过指定ON/OFF长度数组生成规则间距的虚线。当需要自定义形状作为虚线段填充时，可使用  
-[createPathDashEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createpathdasheffect)。
+[createPathDashEffect](#createPathDashEffect)。
 
 **起始版本：** 12
 
@@ -94,7 +94,7 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| intervals | Array&lt;number&gt; | 是 |
+| intervals | Array & lt;number & gt; | 是 |
 | phase | number | 是 |
 
 **返回值：**
@@ -107,7 +107,7 @@ static createDashPathEffect(intervals: Array<number>, phase: number): PathEffect
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createDiscretePathEffect
 
@@ -128,7 +128,7 @@ static createDiscretePathEffect(segLength: number, dev: number, seedAssist?: num
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | segLength | number | 是 |
-| dev | number | 是 |
+| [dev](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileio-stat-depr-i.md) | number | 是 |
 | seedAssist | number | 否 |
 
 **返回值：**
@@ -144,7 +144,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 ```
 
 创建一个虚线路径效果对象，通过路径描述的形状生成。与  
-[createDashPathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createdashpatheffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
+[createDashPathEffect](#createDashPathEffect)使用intervals数组指定ON/OFF长度创建规则间距虚线不同，本接口通过Path指定虚线段的图形形状。
 
 **起始版本：** 18
 
@@ -171,7 +171,7 @@ static createPathDashEffect(path: Path, advance: number, phase: number, style: P
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## createSumPathEffect
 
@@ -180,7 +180,7 @@ static createSumPathEffect(firstPathEffect: PathEffect, secondPathEffect: PathEf
 ```
 
 创建一个叠加的路径效果。与  
-[createComposePathEffect](arkts-arkgraphics2d-drawing-patheffect-c.md#createcomposepatheffect)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
+[createComposePathEffect](#createComposePathEffect)不同，此接口会分别对两个参数的效果各自独立进行表现，然后将两个效果简单重叠显示。
 
 **起始版本：** 18
 

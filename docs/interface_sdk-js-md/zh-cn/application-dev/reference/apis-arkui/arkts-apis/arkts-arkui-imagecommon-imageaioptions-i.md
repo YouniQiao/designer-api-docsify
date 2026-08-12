@@ -4,10 +4,10 @@
 
 > **说明：**
 > 
-> 该特性中的参数types优先级高于[ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md)中的参数types，两者同时设置时以该特性设置的值为准。
+> 该特性中的参数types优先级高于[ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md#ImageAnalyzerConfig)中的参数types，两者同时设置时以该特性设置的值为准。
 > 
-> 该特性依赖设备能力，且需要和对应组件的[enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer)接口
-> （例如[Image组件](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md)）搭配使用。
+> 该特性依赖设备能力，且需要和对应组件的[enableAnalyzer](ImageAttribute.enableAnalyzer)接口
+> （例如[Image组件](./image)）搭配使用。
 
 **起始版本：** 23
 
@@ -23,7 +23,7 @@
 aiController?: ImageAnalyzerController | ESValue
 ```
 
-图像AI分析控制器，需要对应组件的enableAnalyzer接口（例如Image组件的[enableAnalyzer](arkts-arkui-image-imageattribute-i.md#enableanalyzer)接口）设置为true才能生效。目前只支持ESValue类型。
+图像AI分析控制器，需要对应组件的enableAnalyzer接口（例如Image组件的[enableAnalyzer](ImageAttribute.enableAnalyzer)接口）设置为true才能生效。目前只支持ESValue类型。
 
 **类型：** [ImageAnalyzerController](arkts-arkui-imagecommon-imageanalyzercontroller-c.md) \| ESValue
 
@@ -45,7 +45,7 @@ types?: ImageAnalyzerType[]
 
 图像AI分析类型。
 
-**类型：** [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[]
+**类型：** [ImageAnalyzerType](arkts-arkui-imagecommon-imageanalyzertype-e.md)[]
 
 **起始版本：** 23
 

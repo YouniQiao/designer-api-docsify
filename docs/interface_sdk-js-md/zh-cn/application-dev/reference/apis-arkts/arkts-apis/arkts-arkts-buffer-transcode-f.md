@@ -23,8 +23,8 @@ function transcode(source: Buffer | Uint8Array, fromEnc: string, toEnc: string):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | 是 | 待转码的Buffer或Uint8Array实例，提供需要重新编码的源数据。 |
-| fromEnc | string | 是 | 当前编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
-| toEnc | string | 是 | 目标编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md)。 |
+| fromEnc | string | 是 | 当前编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#BufferEncoding)。 |
+| toEnc | string | 是 | 目标编码。 支持的格式范围为[BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#BufferEncoding)。 |
 
 **返回值：**
 

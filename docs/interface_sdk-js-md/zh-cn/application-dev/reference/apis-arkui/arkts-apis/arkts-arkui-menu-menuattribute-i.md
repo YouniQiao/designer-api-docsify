@@ -1,8 +1,8 @@
 # MenuAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** MenuAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** MenuAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;MenuAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | Menu组件的属性修改 器。取值为undefined时，则不使用属性修改器。&lt;br/&gt;MenuAttribute：当前组件的[属性](../arkts-components/arkts-arkui-menu-attribute.md/arkts-arkui-menu-attribute.md)&lt;br/&gt;CommonMethod： [通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuAttribute](arkts-arkui-menu-menuattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | Menu组件的属性修改 器。取值为undefined时，则不使用属性修改器。&lt;br/&gt;MenuAttribute：当前组件的[属性](#MenuAttribute)&lt;br/&gt;CommonMethod： [通用属性](common) |
 
 **返回值：**
 
@@ -247,7 +247,7 @@ default subMenuExpandingMode(mode: SubMenuExpandingMode | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [SubMenuExpandingMode](../arkts-components/arkts-arkui-submenuexpandingmode-e.md) \| undefined | 是 | Menu子菜单展开样式。取值为undefined时，按默认值处理。&lt;br/&gt;默认值： SubMenuExpandingMode.SIDE_EXPAND |
+| mode | [SubMenuExpandingMode](arkts-arkui-menu-submenuexpandingmode-e.md) \| undefined | 是 | Menu子菜单展开样式。取值为undefined时，按默认值处理。&lt;br/&gt;默认值： SubMenuExpandingMode.SIDE_EXPAND |
 
 **返回值：**
 

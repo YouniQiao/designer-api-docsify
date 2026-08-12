@@ -11,7 +11,7 @@ Cloud sync configuration.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## enablePredicate
@@ -40,7 +40,7 @@ mode: SyncMode
 
 Indicates the database synchronization mode.
 
-**Type:** [SyncMode](arkts-arkdata-relationalstore-syncmode-e.md)
+**Type:** SyncMode
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ predicate?: RdbPredicates
 
 Indicates the table-level synchronization predicate.
 
-**Type:** [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)
+**Type:** RdbPredicates
 
 **Since:** 26.0.0
 

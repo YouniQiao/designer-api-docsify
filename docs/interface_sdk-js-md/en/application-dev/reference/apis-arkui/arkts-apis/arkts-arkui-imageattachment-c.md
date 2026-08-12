@@ -43,7 +43,7 @@ constructor(attachment: Optional<AttachmentType>)
 ```
 
 A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and  
-[ResourceStr](arkts-arkui-resourcestr-t.md) types.
+[ResourceStr](ResourceStr) types.
 
 **Since:** 15
 
@@ -61,7 +61,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachment | [Optional](arkts-arkui-optional-t.md)&lt;AttachmentType&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr](arkts-arkui-resourcestr-t.md). |
+| attachment | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr](ResourceStr). |
 
 ## colorFilter
 
@@ -115,7 +115,7 @@ readonly objectFit?: ImageFit
 
 Image scale type of the styled string.
 
-**Type:** [ImageFit](arkts-arkui-imagefit-e.md)
+**Type:** ImageFit
 
 **Since:** 12
 
@@ -139,7 +139,7 @@ Image size of the styled string.
 
 Number-type values use px as the unit.
 
-**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**Type:** SizeOptions
 
 **Since:** 12
 
@@ -165,7 +165,7 @@ Number-type values use vp as the unit.
 
 If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
 
-**Type:** [SizeOptions](arkts-arkui-units-sizeoptions-i.md)
+**Type:** SizeOptions
 
 **Since:** 21
 
@@ -214,7 +214,7 @@ readonly value: PixelMap
 
 Image data source of the styled string.
 
-**Type:** [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)
+**Type:** PixelMap
 
 **Since:** 12
 
@@ -236,7 +236,7 @@ readonly verticalAlign?: ImageSpanAlignment
 
 Image alignment mode of the styled string.
 
-**Type:** [ImageSpanAlignment](arkts-arkui-enums-imagespanalignment-e.md)
+**Type:** ImageSpanAlignment
 
 **Since:** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getFontCount
@@ -32,7 +32,7 @@ Returns **0** if the font file is not found, the font file path is invalid, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \\$rawfile('file name in the resources/rawfile directory of the project'). |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \\$rawfile('file name in the resources/rawfile directory of the project'). |
 
 **Return value:**
 

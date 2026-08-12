@@ -18,7 +18,7 @@ icon: string | Resource
 
 图片资源。 icon是string类型时，表示图片存放的路径，例如"/common/hello.png"。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ text?: string | Resource
 
 **说明：**当文本长度大于列宽时，文本被截断。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **默认值：** ""
 

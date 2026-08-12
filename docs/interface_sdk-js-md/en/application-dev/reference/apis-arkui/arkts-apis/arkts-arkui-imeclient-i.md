@@ -34,7 +34,7 @@ Sets the extension configuration of an input method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [InputMethodExtraConfig](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md) | Yes | Extension configuration of an input method. |
+| config | [InputMethodExtraConfig](arkts-arkui-inputmethodextraconfig-t.md) | Yes | Extension configuration of an input method. |
 
 ## nodeId
 

@@ -8,7 +8,7 @@ Defines the callback invoked when the acceleration sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse
+**Substitutes:** [AccelerometerResponse](ohos.sensor/sensor#AccelerometerResponse)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -19,7 +19,7 @@ Defines the callback invoked when the acceleration sensor data changes.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## x
@@ -38,7 +38,7 @@ Acceleration on the x-axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse.x
+**Substitutes:** [x](ohos.sensor/sensor#AccelerometerResponse.x)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -64,7 +64,7 @@ Acceleration on the y-axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse.y
+**Substitutes:** [y](ohos.sensor/sensor#AccelerometerResponse.y)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -90,7 +90,7 @@ Acceleration on the z-axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#AccelerometerResponse.z
+**Substitutes:** [z](ohos.sensor/sensor#AccelerometerResponse.z)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 

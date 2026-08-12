@@ -2,7 +2,7 @@
 
 Provides Base Controller for RichEditor.
 
-**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](arkts-arkui-textcommon-texteditcontrollerex-i.md)
+**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](TextEditControllerEx)
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ Get LayoutManager.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Return the LayoutManager. |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | Return the LayoutManager. |
 
 ## getPreviewText
 
@@ -142,7 +142,7 @@ Get PreviewText.
 
 | Type | Description |
 | --- | --- |
-| [PreviewText](arkts-arkui-previewtext-i.md) | Return the PreviewText. |
+| [PreviewText](arkts-arkui-textcommon-previewtext-i.md) | Return the PreviewText. |
 
 ## getTypingStyle
 
@@ -166,7 +166,7 @@ Get the typing text style.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) |  |
+| [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) |  |
 
 ## isEditing
 
@@ -212,7 +212,7 @@ Scroll the input field component to make the specified content visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setCaretOffset
 
@@ -292,7 +292,7 @@ Set the styledString placeholder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 
 ## setTypingParagraphStyle
 
@@ -340,7 +340,7 @@ Set the typing text style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md) | Yes | set the typing text style. |
+| value | [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md) | Yes | set the typing text style. |
 
 ## stopEditing
 

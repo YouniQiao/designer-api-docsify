@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from 'kits/@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## setOverlayEnabled
@@ -32,9 +32,9 @@ Enables or disables a module with the overlay feature in the current application
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
 
 ## Examples
 
@@ -86,15 +86,15 @@ Enables or disables a module with the overlay feature in the current application
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700033](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) |
 
 ## Examples
 

@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| RadioAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

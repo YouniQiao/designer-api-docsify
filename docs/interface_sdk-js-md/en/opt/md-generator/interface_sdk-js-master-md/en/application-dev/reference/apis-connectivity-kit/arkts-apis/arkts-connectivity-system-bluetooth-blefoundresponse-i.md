@@ -9,7 +9,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BluetoothDevice, BLEFoundResponse, StopBLEScanOptions, SubscribeBLEFoundOptions, StartBLEScanOptions } from 'kits/@kit.ConnectivityKit';
+import { BluetoothDevice, BLEFoundResponse, StopBLEScanOptions, SubscribeBLEFoundOptions, StartBLEScanOptions } from '@kit.ConnectivityKit';
 ```
 
 ## devices
@@ -20,7 +20,7 @@ devices: Array<BluetoothDevice>
 
 The devices of BLEFoundResponse
 
-**Type:** Array&lt;BluetoothDevice&gt;
+**Type:** Array&lt;[BluetoothDevice](arkts-connectivity-system-bluetooth-bluetoothdevice-i.md)&gt;
 
 **Since:** 6
 

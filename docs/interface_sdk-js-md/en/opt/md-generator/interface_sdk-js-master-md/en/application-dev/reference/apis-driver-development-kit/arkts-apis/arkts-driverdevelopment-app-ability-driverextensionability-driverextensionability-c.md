@@ -11,7 +11,7 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionContext } from 'kits/@kit.DriverDevelopmentKit';
+import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 ```
 
 ## onConnect
@@ -165,13 +165,13 @@ Dumps client information. It is recommended that developers don't DUMP sensitive
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| params | Array&lt;string&gt; | Yes |
+| params | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## Examples
 

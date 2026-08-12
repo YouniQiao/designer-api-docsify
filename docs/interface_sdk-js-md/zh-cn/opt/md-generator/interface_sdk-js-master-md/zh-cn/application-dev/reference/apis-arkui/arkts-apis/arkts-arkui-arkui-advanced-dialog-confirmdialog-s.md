@@ -106,7 +106,7 @@ onCheckedChange?: Callback<boolean>
 
 checkbox的选中状态改变事件回调。回调参数类型为boolean，true表示checkbox已选中，false表示checkbox未选中。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 12
 
@@ -128,7 +128,7 @@ primaryButton?: ButtonOptions
 
 默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
 
-**类型：** [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md)
+**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -150,7 +150,7 @@ secondaryButton?: ButtonOptions
 
 默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
 
-**类型：** [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md)
+**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -170,7 +170,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| CustomTheme
+**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 

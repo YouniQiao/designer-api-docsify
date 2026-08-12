@@ -11,7 +11,7 @@ Location subsystem command structure.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## command
@@ -38,7 +38,7 @@ scenario: LocationRequestScenario
 
 Information about the scenario where the command is sent.
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 9
 

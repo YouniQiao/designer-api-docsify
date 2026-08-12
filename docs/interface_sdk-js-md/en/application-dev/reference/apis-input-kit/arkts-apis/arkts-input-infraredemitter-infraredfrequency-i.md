@@ -13,7 +13,7 @@ Defines the frequency range of IR signals.
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from 'kits/@kit.InputKit';
+import { infraredEmitter } from '@kit.InputKit';
 ```
 
 ## max

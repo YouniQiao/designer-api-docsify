@@ -68,7 +68,7 @@ minimumSignificantDigits?: number | undefined
 type?: PluralRuleType | undefined
 ```
 
-**Type:** [PluralRuleType](../../apis-arkts/arkts-apis/arkts-arkts-intl-pluralruletype-t.md) \| undefined
+**Type:** PluralRuleType \| undefined
 
 **ArkTS mode:** ArkTS-Dyn only
 

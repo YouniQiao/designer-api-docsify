@@ -30,7 +30,7 @@ GridContainer(value?: GridContainerOptions)
 
 **废弃版本：** 9
 
-**替代接口：** <!--SUBSTITUTE_API-->grid_col/GridColInterface<!--/SUBSTITUTE_API-->
+**替代接口：** [grid_col/GridColInterface](grid_col/GridColInterface)
 
 <!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute--><!--Device-GridContainerInterface-(value?: GridContainerOptions): GridContainerAttribute-End-->
 

@@ -13,7 +13,7 @@ Defines additional options for binding an input method.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## isSimpleKeyboardEnabled
@@ -44,7 +44,7 @@ requestKeyboardReason?: RequestKeyboardReason
 
 Reason for requesting the keyboard. This attribute is set by the edit box application. If this attribute is not set or is set to an invalid value, the keyboard will not be triggered by default.
 
-**Type:** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
+**Type:** RequestKeyboardReason
 
 **Since:** 19
 

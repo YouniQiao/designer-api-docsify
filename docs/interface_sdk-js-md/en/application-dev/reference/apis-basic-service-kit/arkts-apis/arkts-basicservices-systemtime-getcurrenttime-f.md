@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getCurrentTime
@@ -20,7 +20,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -31,7 +31,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isNano | boolean | Yes | Whether the time to return is in nanoseconds.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch. |
 
 **Error codes:**
 
@@ -73,7 +73,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getCurrentTime(callback: AsyncCallback<number>): void-End-->
 
@@ -83,7 +83,7 @@ Obtains the time elapsed since the Unix epoch. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the time elapsed since the Unix epoch, in milliseconds. |
 
 **Error codes:**
 
@@ -125,7 +125,7 @@ Obtains the time elapsed since the Unix epoch. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTime](arkts-basicservices-systemdatetime-gettime-f.md#gettime)
+**Substitutes:** [getTime](arkts-basicservices-systemdatetime-gettime-f.md#getTime)
 
 <!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getCurrentTime(isNano?: boolean): Promise<number>-End-->
 

@@ -13,7 +13,7 @@ Defines the color mode used for current snapshot taking.By default, the system d
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## colorSpace

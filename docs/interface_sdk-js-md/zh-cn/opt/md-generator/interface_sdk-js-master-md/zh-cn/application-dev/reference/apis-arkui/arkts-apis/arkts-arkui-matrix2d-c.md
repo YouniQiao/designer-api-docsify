@@ -56,7 +56,7 @@ constructor(unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 ## identity
 
@@ -80,7 +80,7 @@ identity(): Matrix2D
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## invert
 
@@ -104,7 +104,7 @@ invert(): Matrix2D
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## multiply
 
@@ -128,13 +128,13 @@ multiply(other?: Matrix2D): Matrix2D
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) | 否 |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## rotate
 
@@ -148,7 +148,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 **废弃版本：** 10
 
-**替代接口：** [rotate](arkts-arkui-matrix2d-c.md#rotate)
+**替代接口：** [rotate](#rotate)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -167,7 +167,7 @@ rotate(rx?: number, ry?: number): Matrix2D
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## rotate
 
@@ -201,7 +201,7 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## scale
 
@@ -232,7 +232,7 @@ scale(sx?: number, sy?: number): Matrix2D
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## translate
 
@@ -263,7 +263,7 @@ translate(tx?: number, ty?: number): Matrix2D
 
 | 类型 |
 | --- |
-| [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](arkts-arkui-matrix2d-c.md) |
 
 ## rotateX
 

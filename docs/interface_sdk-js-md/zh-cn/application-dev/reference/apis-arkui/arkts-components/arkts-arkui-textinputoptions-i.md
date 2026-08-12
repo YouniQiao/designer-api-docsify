@@ -38,7 +38,7 @@ placeholder?: ResourceStr
 
 设置无输入时的提示文本。不设置时默认无提示文本。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 7
 
@@ -66,7 +66,7 @@ text?: ResourceStr
 
 从API version 18开始，该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 7
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -39,7 +39,7 @@ Compares buf1 to buf2
 
 | Error Code ID |
 | --- |
-| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 

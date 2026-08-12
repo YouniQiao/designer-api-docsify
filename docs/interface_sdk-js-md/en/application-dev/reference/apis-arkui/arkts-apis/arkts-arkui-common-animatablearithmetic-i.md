@@ -32,7 +32,7 @@ Defines the equality judgment rule of the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
+| rhs | [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Defines the multiplication rule of the data type.
 
 | Type | Description |
 | --- | --- |
-| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
+| [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
 
 ## plus
 
@@ -92,13 +92,13 @@ Defines the addition rule of the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
+| rhs | [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
+| [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
 
 ## subtract
 
@@ -122,11 +122,11 @@ Defines the subtraction rule of the data type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rhs | [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
+| rhs | [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md)&lt;T&gt; | Yes | another value |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatableArithmetic](../arkts-components/arkts-arkui-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
+| [AnimatableArithmetic](arkts-arkui-common-animatablearithmetic-i.md)&lt;T&gt; | new value which implements AnimatableArithmetic&lt;T&gt; interface |
 

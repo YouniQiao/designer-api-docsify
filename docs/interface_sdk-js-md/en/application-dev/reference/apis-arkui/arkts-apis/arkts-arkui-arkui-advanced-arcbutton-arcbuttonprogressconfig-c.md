@@ -15,7 +15,7 @@ The class used for configuring ArcButton to support progress bar display.
 ## Modules to Import
 
 ```TypeScript
-import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -42,7 +42,7 @@ Constructor of the ArcButtonProgressConfig.
 | --- | --- | --- | --- |
 | value | double | Yes | sets the value of progress. &lt;br&gt;Value range:[0, total] &lt;br&gt;When setting a value less than 0, it is set to 0; when setting a value greater than total, it is set to total. |
 | total | double | No | sets the total of progress. |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | No | sets the foreground color of progress. |
+| color | ResourceColor | No | sets the foreground color of progress. |
 
 ## color
 
@@ -52,7 +52,7 @@ public color?: ResourceColor
 
 Sets the foreground color of Progress.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 23
 

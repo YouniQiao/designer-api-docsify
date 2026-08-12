@@ -16,7 +16,7 @@ new <T = any>(values?: readonly T[] | null): Set<T>
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Set&lt;T&gt; |
+| Set & lt;T & gt; |
 
 ## prototype
 

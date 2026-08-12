@@ -24,13 +24,13 @@ Defines IndicatorComponent Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [IndicatorComponentController](../arkts-components/arkts-arkui-indicatorcomponentcontroller-c.md) | No | IndicatorComponent constructor options |
+| controller | [IndicatorComponentController](arkts-arkui-indicatorcomponent-indicatorcomponentcontroller-c.md) | No | IndicatorComponent constructor options |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IndicatorComponentAttribute](../arkts-components/arkts-arkui-indicatorcomponent-attribute.md) |  |
+| [IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 
 
 ## IndicatorComponent
@@ -59,11 +59,11 @@ Defines IndicatorComponent Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IndicatorComponentAttribute&gt; | Yes | indicatorComponent attribute instance |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md)&gt; | Yes | indicatorComponent attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [IndicatorComponentAttribute](../arkts-components/arkts-arkui-indicatorcomponent-attribute.md) |  |
+| [IndicatorComponentAttribute](arkts-arkui-indicatorcomponent-indicatorcomponentattribute-i.md) |  |
 

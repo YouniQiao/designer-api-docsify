@@ -1061,7 +1061,7 @@ Attaches a renderbuffer to a framebuffer
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | renderbuffertarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | [renderbuffer](#renderbuffer) | [WebGLRenderbuffer](arkts-arkgraphics2d-webgl-webglrenderbuffer-i.md) \| null | Yes |
 
@@ -1092,7 +1092,7 @@ Attaches a texture to a framebuffer
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | textarget | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | [texture](#texture) | [WebGLTexture](arkts-arkgraphics2d-webgl-webgltexture-i.md) \| null | Yes |
 | level | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
@@ -1378,7 +1378,7 @@ Returns a framebuffer attachment parameter
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| attachment | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
+| [attachment](../../apis-telephony-kit/arkts-apis/arkts-telephony-sms-mmsinformation-i-sys.md) | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | pname | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 
 **Return value:**
@@ -2110,7 +2110,7 @@ Sets the polygon offset
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| factor | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
+| [factor](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-materialproperty-i.md) | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 | units | [GLfloat](arkts-arkgraphics2d-glfloat-t.md) | Yes |
 
 ## renderbufferStorage
@@ -8225,7 +8225,7 @@ readonly canvas: HTMLCanvasElement | OffscreenCanvas
 
 The canvas element
 
-**Type:** HTMLCanvasElement \| OffscreenCanvas
+**Type:** HTMLCanvasElement \| [OffscreenCanvas](../../apis-arkui/arkts-components/arkts-arkui-offscreencanvas-c.md)
 
 **Since:** 7
 

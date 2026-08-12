@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## on('wifiStateChange')
@@ -20,7 +20,7 @@ Subscribe Wi-Fi status change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:wifiStateChange
+**Substitutes:** [wifiStateChange](ohos.wifiManager/wifiManager.on#event:wifiStateChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -33,7 +33,7 @@ Subscribe Wi-Fi status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiStateChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
 
 ## on('wifiConnectionChange')
@@ -50,7 +50,7 @@ Subscribe Wi-Fi connection change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:wifiConnectionChange
+**Substitutes:** [wifiConnectionChange](ohos.wifiManager/wifiManager.on#event:wifiConnectionChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -63,7 +63,7 @@ Subscribe Wi-Fi connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiConnectionChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: disconnected, 1: connected |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 0: disconnected, 1: connected |
 
 
 ## on('wifiScanStateChange')
@@ -80,7 +80,7 @@ Subscribe Wi-Fi scan status change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:wifiScanStateChange
+**Substitutes:** [wifiScanStateChange](ohos.wifiManager/wifiManager.on#event:wifiScanStateChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -93,7 +93,7 @@ Subscribe Wi-Fi scan status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiScanStateChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: scan fail, 1: scan success |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 0: scan fail, 1: scan success |
 
 
 ## on('wifiRssiChange')
@@ -110,7 +110,7 @@ Subscribe Wi-Fi rssi change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:wifiRssiChange
+**Substitutes:** [wifiRssiChange](ohos.wifiManager/wifiManager.on#event:wifiRssiChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -123,7 +123,7 @@ Subscribe Wi-Fi rssi change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'wifiRssiChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on |
 
 
 ## on('hotspotStateChange')
@@ -140,7 +140,7 @@ Subscribe Wi-Fi hotspot state change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:hotspotStateChange
+**Substitutes:** [hotspotStateChange](ohos.wifiManager/wifiManager.on#event:hotspotStateChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -153,7 +153,7 @@ Subscribe Wi-Fi hotspot state change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hotspotStateChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 0: inactive, 1: active, 2: activating, 3: de-activating |
 
 ## Examples
 
@@ -186,7 +186,7 @@ Subscribe P2P status change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:p2pStateChange
+**Substitutes:** [p2pStateChange](ohos.wifiManager/wifiManager.on#event:p2pStateChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -199,7 +199,7 @@ Subscribe P2P status change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pStateChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on, 1: idle, 2: starting, 3:started, 4: closing, 5: closed |
 
 
 ## on('p2pConnectionChange')
@@ -216,7 +216,7 @@ Subscribe P2P connection change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:p2pConnectionChange
+**Substitutes:** [p2pConnectionChange](ohos.wifiManager/wifiManager.on#event:p2pConnectionChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -229,7 +229,7 @@ Subscribe P2P connection change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pConnectionChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pLinkedInfo&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pLinkedInfo&gt; | Yes | the callback of on |
 
 
 ## on('p2pDeviceChange')
@@ -246,7 +246,7 @@ Subscribe P2P local device change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:p2pDeviceChange
+**Substitutes:** [p2pDeviceChange](ohos.wifiManager/wifiManager.on#event:p2pDeviceChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -259,7 +259,7 @@ Subscribe P2P local device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDeviceChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pDevice&gt; | Yes | the callback of on |
 
 
 ## on('p2pPeerDeviceChange')
@@ -276,7 +276,7 @@ Subscribe P2P peer device change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:p2pPeerDeviceChange
+**Substitutes:** [p2pPeerDeviceChange](ohos.wifiManager/wifiManager.on#event:p2pPeerDeviceChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION
 
@@ -289,7 +289,7 @@ Subscribe P2P peer device change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPeerDeviceChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;WifiP2pDevice[]&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;WifiP2pDevice[]&gt; | Yes | the callback of on |
 
 
 ## on('p2pPersistentGroupChange')
@@ -306,7 +306,7 @@ Subscribe P2P persistent group change events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:p2pPersistentGroupChange
+**Substitutes:** [p2pPersistentGroupChange](ohos.wifiManager/wifiManager.on#event:p2pPersistentGroupChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -319,7 +319,7 @@ Subscribe P2P persistent group change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pPersistentGroupChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback of on |
 
 
 ## on('p2pDiscoveryChange')
@@ -336,7 +336,7 @@ Subscribe P2P discovery events.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.on#event:p2pDiscoveryChange
+**Substitutes:** [p2pDiscoveryChange](ohos.wifiManager/wifiManager.on#event:p2pDiscoveryChange)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -349,5 +349,5 @@ Subscribe P2P discovery events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'p2pDiscoveryChange' | Yes | event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | the callback of on |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | the callback of on |
 

@@ -13,7 +13,7 @@ Returns the list of onscreen awareness information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## appIndex
@@ -82,7 +82,7 @@ Application bundle name.
 collectStrategy?: number
 ```
 
-Page collection policy, which is the bitwise OR operation combination of &lt;br&gt; [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md).
+Page collection policy, which is the bitwise OR operation combination of &lt;br&gt; [CollectStrategy](onScreen. CollectStrategy).
 
 **Type:** number
 
@@ -124,7 +124,7 @@ entityInfo?: EntityInfo[]
 
 Entity information.
 
-**Type:** [EntityInfo](arkts-multimodalawareness-onscreen-entityinfo-i-sys.md)[]
+**Type:** EntityInfo[]
 
 **Since:** 23
 

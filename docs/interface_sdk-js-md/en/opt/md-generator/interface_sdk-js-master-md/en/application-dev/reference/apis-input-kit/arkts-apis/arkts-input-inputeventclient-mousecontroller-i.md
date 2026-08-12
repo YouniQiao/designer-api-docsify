@@ -13,7 +13,7 @@ Provides the capability of simulating mouse operations. The simulated mouse oper
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## beginAxis
@@ -45,15 +45,15 @@ Starts an axis event. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -120,15 +120,15 @@ Ends an axis event. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -164,15 +164,15 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-display-does-not-exist) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -231,15 +231,15 @@ Presses a mouse button. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -302,15 +302,15 @@ Release a mouse button. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -345,15 +345,15 @@ Updates an axis event. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

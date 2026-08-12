@@ -62,7 +62,7 @@ mode?: DividerMode
 
 The mode of Divider.
 
-**Type:** [DividerMode](arkts-arkui-dividermode-e.md)
+**Type:** DividerMode
 
 **Since:** 19
 

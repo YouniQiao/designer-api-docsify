@@ -22,7 +22,7 @@ Defining wrapBuilder function.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| builder | (...args: Args) =&gt; void | Yes |
+| builder | (...args: Args) = & gt; void | Yes |
 
 **Return value:**
 

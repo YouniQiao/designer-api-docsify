@@ -11,7 +11,7 @@ The module provides APIs for an application to use the system camera to take pho
 ## Modules to Import
 
 ```TypeScript
-import { cameraPicker } from 'kits/@kit.CameraKit';
+import { cameraPicker } from '@kit.CameraKit';
 ```
 
 ## Summary

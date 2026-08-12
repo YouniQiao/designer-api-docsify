@@ -26,7 +26,7 @@ Defines Web Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [WebOptions](arkts-arkweb-web-weboptions-i.md) | Yes | . |
-| content_ | [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

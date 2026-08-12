@@ -11,7 +11,7 @@ VisualEffect class, used to apply background color blending, border lighting, co
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## backgroundColorBlender
@@ -78,8 +78,8 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | lightPosition | common2D.Point3d | Yes |
-| lightColor | common2D.Color | Yes |
-| lightIntensity | number | Yes |
+| [lightColor](../../apis-notification-kit/arkts-apis/arkts-notification-notificationslot-notificationslot-i.md) | common2D.Color | Yes |
+| [lightIntensity](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor-colorresponse-i-sys.md) | number | Yes |
 | borderWidth | number | Yes |
 
 **Return value:**
@@ -92,7 +92,7 @@ Adds a 3D lighting effect to the border of a rounded rectangle component.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -158,9 +158,9 @@ Adds a color gradient effect to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| colors | Array&lt;Color&gt; | Yes |
-| positions | Array&lt;common2D.Point&gt; | Yes |
-| strengths | Array&lt;number&gt; | Yes |
+| colors | Array & lt;Color & gt; | Yes |
+| positions | Array & lt;common2D.Point & gt; | Yes |
+| strengths | Array & lt;number & gt; | Yes |
 | alphaMask | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | No |
 
 **Return value:**
@@ -173,7 +173,7 @@ Adds a color gradient effect to the component.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -310,7 +310,7 @@ Adds a material effect to the component. The material effect simulates the optic
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -6,7 +6,7 @@
 function getInputMethodSetting(): InputMethodSetting
 ```
 
-获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。
+获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md#InputMethodSetting)。
 
 **起始版本：** 8
 
@@ -14,7 +14,7 @@ function getInputMethodSetting(): InputMethodSetting
 
 **废弃版本：** 9
 
-**替代接口：** [inputMethod#getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting)
+**替代接口：** [getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting)
 
 <!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting--><!--Device-inputMethod-function getInputMethodSetting(): InputMethodSetting-End-->
 

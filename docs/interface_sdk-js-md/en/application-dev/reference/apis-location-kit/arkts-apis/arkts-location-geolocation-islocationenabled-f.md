@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## isLocationEnabled
@@ -20,7 +20,7 @@ Obtain current location switch status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.isLocationEnabled
+**Substitutes:** [isLocationEnabled](ohos.geoLocationManager/geoLocationManager.isLocationEnabled)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,7 +32,7 @@ Obtain current location switch status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Obtain current location switch status
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.isLocationEnabled
+**Substitutes:** [isLocationEnabled](ohos.geoLocationManager/geoLocationManager.isLocationEnabled)
 
 **Required permissions:** ohos.permission.LOCATION
 

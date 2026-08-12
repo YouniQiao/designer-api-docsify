@@ -33,9 +33,9 @@ static addMonitor(valueCallback: MonitorValueCallback | MonitorValueCallback[],
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valueCallback | [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md) \| MonitorValueCallback[] | 是 | 返回被监听状态变量的箭头函数或箭头函数数组。 |
+| valueCallback | [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md) \| [MonitorValueCallback](arkts-arkui-monitorvaluecallback-t.md)[] | 是 | 返回被监听状态变量的箭头函数或箭头函数数组。 |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 是 | 触发监听时调用的回调函数。 |
-| options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | 否 | 设置函数的行为，默认行行为详见[MonitorOptions]{ |
+| options | [MonitorOptions](arkts-arkui-utils-monitoroptions-i.md) | 否 | 设置函数的行为，默认行行为详见[MonitorOptions]{ |
 
 **返回值：**
 
@@ -47,7 +47,7 @@ static addMonitor(valueCallback: MonitorValueCallback | MonitorValueCallback[],
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | options.owner is not ComponentV2 struct. |
+| [130000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | options.owner is not ComponentV2 struct. |
 
 ## addMonitor
 
@@ -72,9 +72,9 @@ static addMonitor(valueInfo: MonitorValueInfo | MonitorValueInfo[],
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valueInfo | [MonitorValueInfo](arkts-arkui-utils-monitorvalueinfo-i.md) \| MonitorValueInfo[] | 是 | 监听变量的信息或其数组。 |
+| valueInfo | [MonitorValueInfo](arkts-arkui-utils-monitorvalueinfo-i.md) \| [MonitorValueInfo](arkts-arkui-utils-monitorvalueinfo-i.md)[] | 是 | 监听变量的信息或其数组。 |
 | monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | 是 | 触发监听时调用的回调函数。 |
-| options | [MonitorBaseOptions](arkts-arkui-utils-monitorbaseoptions-i.md) | 否 | 设置函数的行为，默认行为详见[MonitorBaseOptions](arkts-arkui-utils-monitorbaseoptions-i.md)。 |
+| options | [MonitorBaseOptions](arkts-arkui-utils-monitorbaseoptions-i.md) | 否 | 设置函数的行为，默认行为详见[MonitorBaseOptions](arkts-arkui-utils-monitorbaseoptions-i.md#MonitorBaseOptions)。 |
 
 **返回值：**
 
@@ -86,7 +86,7 @@ static addMonitor(valueInfo: MonitorValueInfo | MonitorValueInfo[],
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [130000](../errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | options.owner is not ComponentV2 struct. |
+| [130000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-addmonitorclearmonitor非法目标对象) | options.owner is not ComponentV2 struct. |
 
 ## canBeObserved
 
@@ -117,7 +117,7 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [ObservedResult](arkts-arkui-arkui-statemanagement-observedresult-i.md) | 返回对象是否可被观察的结果。 |
+| [ObservedResult](arkts-arkui-utils-observedresult-i.md) | 返回对象是否可被观察的结果。 |
 
 ## clearMonitor
 
@@ -171,7 +171,7 @@ static getCustomComponentContext<T extends IVariableOwner>(customComponent: T): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md) | 传入自定义组件的上下文信息。 |
+| [CustomComponentContext](arkts-arkui-utils-customcomponentcontext-i.md) | 传入自定义组件的上下文信息。 |
 
 ## getLifecycle
 
@@ -179,7 +179,7 @@ static getCustomComponentContext<T extends IVariableOwner>(customComponent: T): 
 static getLifecycle<T extends IVariableOwner>(customComponent: T): CustomComponentLifecycle
 ```
 
-getLifecycle用于获取[自定义组件的生命周期](arkts-arkui-decorator-componentinit-i.md)实例。
+getLifecycle用于获取[自定义组件的生命周期](arkts-arkui-decorator-componentinit-i.md#ComponentInit)实例。
 
 **起始版本：** 24
 
@@ -261,7 +261,7 @@ static makeBinding<T>(getter: GetterCallback<T>): Binding<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Binding](arkts-arkui-arkui-statemanagement-binding-c.md)&lt;T&gt; | 包含一个value属性，用于获取当前绑定的值，且只能读取，不能修改。 |
+| [Binding](arkts-arkui-utils-binding-c.md)&lt;T&gt; | 包含一个value属性，用于获取当前绑定的值，且只能读取，不能修改。 |
 
 ## makeBinding
 

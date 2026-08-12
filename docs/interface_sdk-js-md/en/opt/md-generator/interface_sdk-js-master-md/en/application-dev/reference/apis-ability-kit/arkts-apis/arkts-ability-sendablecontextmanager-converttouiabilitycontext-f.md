@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToUIAbilityContext
@@ -40,7 +40,7 @@ Converts a SendableContext object to a UIAbilityContext object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

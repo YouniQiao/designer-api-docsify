@@ -1,7 +1,7 @@
 # RadioConfiguration
 
 You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
+[CommonConfiguration](CommonConfiguration).
 
 **Inheritance/Implementation:** RadioConfiguration extends [CommonConfiguration<RadioConfiguration>](CommonConfiguration<RadioConfiguration>)
 
@@ -49,7 +49,7 @@ Changes the selected state of the radio button.
 
 The value **true** means that the radio button changes from unselected to selected, and **false** means that the radio button changes from selected to unselected.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
 

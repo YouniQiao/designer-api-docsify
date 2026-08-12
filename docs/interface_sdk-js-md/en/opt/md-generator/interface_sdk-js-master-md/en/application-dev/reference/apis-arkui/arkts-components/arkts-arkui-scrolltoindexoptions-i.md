@@ -16,7 +16,7 @@ extraOffset?: LengthMetrics
 
 Extra offset for scrolling to a specified index.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 12
 

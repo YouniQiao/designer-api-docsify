@@ -18,7 +18,7 @@ Called when the route jumps.
 
 **Deprecated since:** 13
 
-**Substitutes:** <!--SUBSTITUTE_API-->NavPathInfo<!--/SUBSTITUTE_API-->
+**Substitutes:** [NavPathInfo](arkts-arkui-navpathinfo-c.md#NavPathInfo)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +44,7 @@ Called when using the navigator.
 
 **Deprecated since:** 13
 
-**Substitutes:** <!--SUBSTITUTE_API-->NavigationAttribute<!--/SUBSTITUTE_API-->
+**Substitutes:** [NavigationAttribute](arkts-arkui-navigation-attribute.md#NavigationAttribute)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -46,7 +46,7 @@ getErrorOutput(): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## getOutput
 
@@ -68,7 +68,7 @@ getOutput(): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## kill
 
@@ -90,7 +90,7 @@ kill(signal: number | string): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| signal | number \| string | 是 |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number \| string | 是 |
 
 ## wait
 
@@ -112,7 +112,7 @@ wait(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## exitCode
 

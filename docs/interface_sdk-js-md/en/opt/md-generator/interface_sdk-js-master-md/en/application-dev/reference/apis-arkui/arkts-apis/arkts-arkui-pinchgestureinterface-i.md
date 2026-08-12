@@ -21,7 +21,7 @@
 (value?: { fingers?: number; distance?: number }): PinchGestureInterface
 ```
 
-Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md).
+Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 7
 
@@ -50,7 +50,7 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&
 ```
 
 Sets the parameters for the pinch gesture. Compared with  
-[PinchGesture](arkts-arkui-pinchgestureinterface-i.md))},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+[PinchGesture](PinchGestureInterface(value?: { fingers?: number; distance?: number))},this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
 
@@ -94,7 +94,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | () =&gt; void | Yes |
+| event | () = & gt; void | Yes |
 
 **Return value:**
 
@@ -109,7 +109,7 @@ onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
 Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with   
-[onActionCancel](arkts-arkui-pinchgestureinterface-i.md#onactioncancel), this callback returns gesture event information.
+[onActionCancel](PinchGestureInterface.onActionCancel(event: () => void)), this callback returns gesture event information.
 
 **Since:** 18
 
@@ -125,7 +125,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt; | Yes |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | Yes |
 
 **Return value:**
 
@@ -153,7 +153,7 @@ Triggered when all fingers are lifted after successful pinch gesture recognition
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -181,7 +181,7 @@ Triggered after the pinch gesture is recognized.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 
@@ -209,7 +209,7 @@ Triggered when the user moves the finger in the pinch gesture on the screen.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| event | (event: GestureEvent) =&gt; void | Yes |
+| event | (event: GestureEvent) = & gt; void | Yes |
 
 **Return value:**
 

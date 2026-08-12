@@ -64,7 +64,7 @@ placeholder?: ComponentContent
 
 默认值：null，表示不显示占位符。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 26.0.0
 

@@ -18,7 +18,7 @@ customComponentFreezeMode?: LazyForEachCustomComponentFreezeMode
 
 Freeze mode for cached custom nodes that have been removed from the component tree. Default value: LazyForEachCustomComponentFreezeMode.AUTO.
 
-**Type:** [LazyForEachCustomComponentFreezeMode](../arkts-components/arkts-arkui-lazyforeachcustomcomponentfreezemode-e.md)
+**Type:** [LazyForEachCustomComponentFreezeMode](arkts-arkui-lazyforeach-lazyforeachcustomcomponentfreezemode-e.md)
 
 **Default:** LazyForEachCustomComponentFreezeMode.AUTO
 
@@ -40,7 +40,7 @@ memoryOptimizationStrategy?: LazyForEachMemOptStrategy
 
 Memory optimization strategy for LazyForEach.
 
-**Type:** [LazyForEachMemOptStrategy](../arkts-components/arkts-arkui-lazyforeachmemoptstrategy-e.md)
+**Type:** [LazyForEachMemOptStrategy](arkts-arkui-lazyforeach-lazyforeachmemoptstrategy-e.md)
 
 **Since:** 26.0.0
 
@@ -60,7 +60,7 @@ releaseStrategy?: LazyForEachReleaseStrategy
 
 Resource release strategy for LazyForEach discarded nodes.Default value:LazyForEachReleaseStrategy.BATCH.
 
-**Type:** [LazyForEachReleaseStrategy](../arkts-components/arkts-arkui-lazyforeachreleasestrategy-e.md)
+**Type:** [LazyForEachReleaseStrategy](arkts-arkui-lazyforeach-lazyforeachreleasestrategy-e.md)
 
 **Default:** LazyForEachReleaseStrategy.BATCH
 

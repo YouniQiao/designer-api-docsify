@@ -13,7 +13,7 @@ Represents the configuration for saving images or videos to the media library, i
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## fileNameExtension
@@ -44,9 +44,9 @@ File name extension, for example, **'jpg'**.
 photoType: PhotoType
 ```
 
-[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md) of the created media file, which can be **IMAGE** or **VIDEO**.
+[PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md#PhotoType) of the created media file, which can be **IMAGE** or **VIDEO**.
 
-**Type:** [PhotoType](arkts-medialibrary-sendablephotoaccesshelper-phototype-e.md)
+**Type:** PhotoType
 
 **Since:** 23
 

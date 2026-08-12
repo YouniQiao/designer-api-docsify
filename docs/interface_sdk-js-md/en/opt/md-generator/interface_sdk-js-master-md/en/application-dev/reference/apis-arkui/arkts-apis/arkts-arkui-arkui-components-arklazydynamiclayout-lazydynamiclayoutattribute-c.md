@@ -13,7 +13,7 @@ Defines the LazyDynamicLayout attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 ```
 
 ## onVisibleIndexesChange
@@ -38,7 +38,7 @@ Called when visible indexes change.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number[]&gt; \| undefined | Yes |
+| callback | [Callback](arkts-arkui-callback-t.md) & lt;number[] & gt; \ | undefined | Yes |
 
 **Return value:**
 

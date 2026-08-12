@@ -13,7 +13,7 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## $_iterator
@@ -36,7 +36,7 @@ Specifies the default iterator for an object.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
+| IterableIterator&lt;[K, V]&gt; | Returns a two - dimensional array in the form of key - value pairs. |
 
 ## afterRemoval
 
@@ -177,7 +177,7 @@ Returns an array of key-value pairs of enumeratable properties of a given object
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | Returns an array of key-value pairs for the enumeratable properties of the given object itself. |
+| IterableIterator&lt;[K, V]&gt; | Returns an array of key-value pairs for the enumeratable properties of the given object itself. |
 
 ## get
 

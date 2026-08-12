@@ -1,7 +1,7 @@
 # CheckBoxConfiguration
 
 You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
+[CommonConfiguration](CommonConfiguration).
 
 **Inheritance/Implementation:** CheckBoxConfiguration extends [CommonConfiguration<CheckBoxConfiguration>](CommonConfiguration<CheckBoxConfiguration>)
 
@@ -75,7 +75,7 @@ Triggers a change in the check box selection state.
 
 The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
 

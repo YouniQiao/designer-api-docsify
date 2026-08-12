@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from 'kits/@kit.ArkUI';
+import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';
 ```
 
 ## Summary

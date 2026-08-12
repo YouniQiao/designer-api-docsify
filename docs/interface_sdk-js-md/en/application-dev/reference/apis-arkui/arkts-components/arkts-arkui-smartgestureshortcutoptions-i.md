@@ -20,7 +20,7 @@ Smart gesture response priority. Currently only **GestureShortcut.PRIMARY** is s
 
 Default value: **GestureShortcut.PRIMARY**.
 
-**Type:** [GestureShortcut](../arkts-apis/arkts-arkui-gestureshortcut-e.md)
+**Type:** GestureShortcut
 
 **Since:** 26.0.0
 

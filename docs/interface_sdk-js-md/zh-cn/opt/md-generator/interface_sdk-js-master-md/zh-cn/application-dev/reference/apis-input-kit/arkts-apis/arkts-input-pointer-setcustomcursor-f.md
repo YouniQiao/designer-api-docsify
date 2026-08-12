@@ -21,20 +21,20 @@ function setCustomCursor(windowId: number, pixelMap: image.PixelMap, focusX?: nu
 | --- | --- | --- |
 | windowId | number | 是 |
 | pixelMap | image.PixelMap | 是 |
-| focusX | number | 否 |
-| focusY | number | 否 |
+| [focusX](arkts-input-pointer-customcursor-i.md) | number | 否 |
+| [focusY](arkts-input-pointer-customcursor-i.md) | number | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -109,14 +109,14 @@ function setCustomCursor(windowId: number, cursor: CustomCursor, config: CursorC
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [26500001](../errorcode-pointer.md#26500001-无效的windowid) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [26500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-pointer.md#26500001-无效的windowid) |
 
 ## 示例
 

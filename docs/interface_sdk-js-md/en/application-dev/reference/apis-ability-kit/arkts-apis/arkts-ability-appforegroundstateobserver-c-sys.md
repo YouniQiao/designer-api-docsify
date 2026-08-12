@@ -37,3 +37,16 @@ Called when the application launch or exit state changes.
 | --- | --- | --- | --- |
 | appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes | Application state data. |
 
+## Examples
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+let observer: appManager.AppForegroundStateObserver = {
+  onAppStateChanged(appStateData: appManager.AppStateData) {
+    console.info(`onAppStateChanged appStateData: ${JSON.stringify(appStateData)}`);
+  },
+};
+appManager.on('appForegroundState', observer);
+```
+

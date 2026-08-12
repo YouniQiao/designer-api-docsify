@@ -30,7 +30,7 @@ Creates a **Canvas** object for drawing operations using the drawing API. Config
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | No |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No |
 
 ## invalidate
 
@@ -78,7 +78,7 @@ get size(): Size
 
 Obtains the size of the **DrawingRenderingContext** object.
 
-**Type:** [Size](../arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** [Size](arkts-arkui-size-i.md)
 
 **Since:** 12
 

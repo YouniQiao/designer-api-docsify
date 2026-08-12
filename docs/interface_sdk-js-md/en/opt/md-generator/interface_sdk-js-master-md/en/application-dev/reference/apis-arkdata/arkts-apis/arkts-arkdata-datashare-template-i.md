@@ -11,7 +11,7 @@ Defines the struct of the template used in a subscription.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## predicates

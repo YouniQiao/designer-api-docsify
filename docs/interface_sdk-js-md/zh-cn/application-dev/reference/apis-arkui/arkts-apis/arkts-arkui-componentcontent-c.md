@@ -2,7 +2,7 @@
 
 Defines ComponentContent.
 
-**继承/实现关系：** ComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md)
+**继承/实现关系：** ComponentContent extends [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md#ComponentContentBase)
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ Constructor.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
+| builder | WrappedBuilder&lt;CustomBuilder&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
 
 ## constructor
 
@@ -60,7 +60,7 @@ Constructor.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
+| builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. |
 | args | T | 是 | Parameters used to update the ComponentContent. |
 
 ## constructor
@@ -86,7 +86,7 @@ Constructor.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | uiContext used to create the ComponentContent |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. ComponentContent. |
+| builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | Defines the builder that will be called to build ComponentContent. ComponentContent. |
 | args | T | 是 | Parameters used to update the ComponentContent. |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | Defines the options that will be used when building. |
 

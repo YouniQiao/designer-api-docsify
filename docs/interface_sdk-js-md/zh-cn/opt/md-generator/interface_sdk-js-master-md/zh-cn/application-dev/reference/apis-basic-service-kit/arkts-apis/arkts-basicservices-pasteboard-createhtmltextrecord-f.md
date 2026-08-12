@@ -12,7 +12,7 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 
 **废弃版本：** 9
 
-**替代接口：** [pasteboard.createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord)(mimeType:
+**替代接口：** [createRecord](pasteboard.createRecord(mimeType:)
 
 <!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord--><!--Device-pasteboard-function createHtmlTextRecord(htmlText: string): PasteDataRecord-End-->
 
@@ -22,7 +22,7 @@ function createHtmlTextRecord(htmlText: string): PasteDataRecord
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| htmlText | string | 是 |
+| [htmlText](arkts-basicservices-pasteboard-pastedatarecord-i.md) | string | 是 |
 
 **返回值：**
 

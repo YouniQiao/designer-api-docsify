@@ -6,7 +6,7 @@
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the {@link Want} of an {@link WantAgent}.
+Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#getWant
+**Substitutes:** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
@@ -26,8 +26,8 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent) whose UID is to be obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
 
 
 ## getWant
@@ -36,7 +36,7 @@ Obtains the {@link Want} of an {@link WantAgent}.
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the {@link Want} of an {@link WantAgent}.
+Obtains the [Want](Want) of an [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent).
 
 **Since:** 7
 
@@ -44,7 +44,7 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#getWant
+**Substitutes:** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
@@ -56,7 +56,7 @@ Obtains the {@link Want} of an {@link WantAgent}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | Indicates the {@link WantAgent} whose UID is to be obtained. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md#WantAgent) whose UID is to be obtained. |
 
 **Return value:**
 

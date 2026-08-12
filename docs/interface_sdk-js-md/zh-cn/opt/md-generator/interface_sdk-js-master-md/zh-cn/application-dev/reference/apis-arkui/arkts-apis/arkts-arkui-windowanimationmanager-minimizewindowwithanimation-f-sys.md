@@ -21,8 +21,8 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;WindowAnimationFinishedCallback&gt; | 是 |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | 是 |
 
 ## 示例
 
@@ -109,13 +109,13 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](../arkts-components/arkts-arkui-windowanimationtarget-i-sys.md) | 是 |
+| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;WindowAnimationFinishedCallback&gt; |
+| Promise&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; |
 
 ## 示例
 

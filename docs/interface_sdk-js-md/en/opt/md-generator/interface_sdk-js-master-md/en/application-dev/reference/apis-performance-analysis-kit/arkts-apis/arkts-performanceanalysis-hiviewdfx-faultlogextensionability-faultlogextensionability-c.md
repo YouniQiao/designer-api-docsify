@@ -2,7 +2,7 @@
 
 This module implements the delayed fault notification feature.
 
-When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time.
+When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiAppEvent), the previous event can be received only after the application restarts. If the application fails to start or remains unresponsive for a long time, the fault may not be reported in time.
 
 > **NOTE：**
 > 
@@ -21,7 +21,7 @@ When the crash and freeze events are subscribed by [HiAppEvent](arkts-performanc
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogExtensionAbility } from 'kits/@kit.PerformanceAnalysisKit';
+import { FaultLogExtensionAbility } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## onConnect
@@ -122,7 +122,7 @@ context: FaultLogExtensionContext
 ```
 
 Context of the FaultLogExtensionAbility. This context is inherited from  
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md).
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md)
 

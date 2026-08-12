@@ -11,13 +11,13 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)替代。
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)(stopMode:
+**替代接口：** [stopVibration](vibrator.stopVibration(stopMode:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -29,13 +29,13 @@ function stop(stopMode: VibratorStopMode): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 |
+| [stopMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -71,14 +71,14 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)
+> [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration)(stopMode:
+**替代接口：** [stopVibration](vibrator.stopVibration(stopMode:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -90,7 +90,7 @@ function stop(stopMode: VibratorStopMode, callback?: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 |
+| [stopMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
 
 ## 示例

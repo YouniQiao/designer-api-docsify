@@ -58,7 +58,7 @@ numeric: RelativeTimeFormatNumeric
 
 Numeric option.
 
-**Type:** [RelativeTimeFormatNumeric](../../apis-default/arkts-apis/arkts-intl-relativetimeformatnumeric-t.md)
+**Type:** RelativeTimeFormatNumeric
 
 **Since:** 26.0.0
 
@@ -78,7 +78,7 @@ style: RelativeTimeFormatStyle
 
 Style option.
 
-**Type:** [RelativeTimeFormatStyle](../../apis-default/arkts-apis/arkts-intl-relativetimeformatstyle-t.md)
+**Type:** RelativeTimeFormatStyle
 
 **Since:** 26.0.0
 

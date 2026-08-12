@@ -24,13 +24,13 @@ Defines the DataPanel component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [DataPanelOptions](../arkts-components/arkts-arkui-datapaneloptions-i.md) | Yes | data panel options. |
+| options | [DataPanelOptions](arkts-arkui-datapanel-datapaneloptions-i.md) | Yes | data panel options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataPanelAttribute](../arkts-components/arkts-arkui-datapanel-attribute.md) |  |
+| [DataPanelAttribute](arkts-arkui-datapanel-datapanelattribute-i.md) |  |
 
 
 ## DataPanel
@@ -59,11 +59,11 @@ Defines DataPanel Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DataPanelAttribute&gt; | Yes | DataPanel attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DataPanelAttribute](arkts-arkui-datapanel-datapanelattribute-i.md)&gt; | Yes | DataPanel attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DataPanelAttribute](../arkts-components/arkts-arkui-datapanel-attribute.md) |  |
+| [DataPanelAttribute](arkts-arkui-datapanel-datapanelattribute-i.md) |  |
 

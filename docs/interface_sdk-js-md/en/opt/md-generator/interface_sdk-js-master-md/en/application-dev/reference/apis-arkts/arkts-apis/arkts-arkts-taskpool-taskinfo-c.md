@@ -11,7 +11,7 @@ Describes the internal information about a task.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## duration
@@ -58,7 +58,7 @@ state: State
 
 Task state. You are advised not to change the value.&lt;br&gt;This API can be used in atomic services since API version 11.
 
-**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Default:** State::WAITING
 

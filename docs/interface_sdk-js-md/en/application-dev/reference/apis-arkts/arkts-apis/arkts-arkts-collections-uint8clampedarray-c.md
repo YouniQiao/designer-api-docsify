@@ -1,6 +1,6 @@
 # Uint8ClampedArray
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md).
+A linear data structure that is implemented on [ArkTS ArrayBuffer](./arkts/@arkts.collections:collections).
 
 > **NOTE：**
 > 
@@ -20,7 +20,7 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collect
 ## Modules to Import
 
 ```TypeScript
-import { collections } from 'kits/@kit.ArkTS';
+import { collections } from '@kit.ArkTS';
 ```
 
 ## [Symbol.iterator]
@@ -45,13 +45,13 @@ Returns an iterator that iterates over numbers.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object that yields numbers. |
+| IterableIterator&lt;number&gt; | Iterator object that yields numbers. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -87,8 +87,8 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## constructor
 
@@ -112,7 +112,7 @@ A constructor used to create an empty ArkTS Uint8ClampedArray.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -142,7 +142,7 @@ A constructor used to create an ArkTS Uint8ClampedArray of a given length.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -172,7 +172,7 @@ A constructor that creates an ArkTS Uint8ClampedArray from an iterable object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -196,13 +196,13 @@ A constructor that creates an ArkTS Uint8ClampedArray from an array-like object 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Uint8ClampedArray. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 4. |
+| array | ArrayLike&lt;number&gt; \| ArrayBuffer | Yes | Object used to construct the ArkTS Uint8ClampedArray. When the parameter type is ArrayBuffer, the number of bytes occupied by the buffer must be an integer multiple of 1. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -226,7 +226,7 @@ A constructor that creates an ArkTS Uint8ClampedArray from an ArrayBuffer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | ArrayBuffer object used to construct the ArkTS Uint8ClampedArray. The number of bytes occupied by the buffer must be an integer multiple of 4. |
+| buffer | ArrayBuffer | Yes | ArrayBuffer object used to construct the ArkTS Uint8ClampedArray. The number of bytes occupied by the buffer must be an integer multiple of 1. |
 | byteOffset | number | No | Byte offset of the buffer, beginning at 0. The default value is **0**. |
 | length | number | No | Length of the ArkTS Uint8ClampedArray. The default value is **0**. |
 
@@ -234,7 +234,7 @@ A constructor that creates an ArkTS Uint8ClampedArray from an ArrayBuffer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
+| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Uint8ClampedArray's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -266,14 +266,14 @@ Copies elements within a given range from this ArkTS Uint8ClampedArray to anothe
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | Uint8ClampedArray after being modified. |
+| Uint8ClampedArray | Uint8ClampedArray after being modified. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## entries
 
@@ -281,7 +281,7 @@ Copies elements within a given range from this ArkTS Uint8ClampedArray to anothe
 entries(): IterableIterator<[number, number]>
 ```
 
-Returns an iterator object that contains the key-value pair of each element in this ArkTS Float32Array.
+Returns an iterator object that contains the key-value pair of each element in this ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
@@ -297,14 +297,14 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | Iterator object. |
+| IterableIterator&lt;[number, number]&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## every
 
@@ -340,8 +340,8 @@ Checks whether all elements in this ArkTS Uint8ClampedArray meet a given conditi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## fill
 
@@ -373,14 +373,14 @@ Fills all elements in a given range in this ArkTS Uint8ClampedArray with a value
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | Filled ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Filled ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## filter
 
@@ -410,14 +410,14 @@ Returns a new ArkTS Uint8ClampedArray that contains all elements that meet the g
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | Filtered ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Filtered ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## find
 
@@ -453,8 +453,8 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## findIndex
 
@@ -490,8 +490,8 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## forEach
 
@@ -521,8 +521,8 @@ Calls a callback function for each element in this ArkTS Uint8ClampedArray.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## from
 
@@ -546,13 +546,13 @@ Creates an ArkTS Uint8ClampedArray from an array-like or iterator object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
+| arrayLike | ArrayLike&lt;number&gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray generated. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
 
 ## from
 
@@ -576,14 +576,14 @@ Creates an ArkTS Uint8ClampedArray from an array-like object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
+| arrayLike | ArrayLike&lt;T&gt; | Yes | Array-like object used to construct the ArkTS Uint8ClampedArray. |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | Yes | A mapping function to call on every element of the array. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray generated. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
 
 ## from
 
@@ -614,7 +614,7 @@ Creates an ArkTS Uint8ClampedArray from an iterator object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray generated. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray generated. |
 
 ## includes
 
@@ -622,7 +622,7 @@ Creates an ArkTS Uint8ClampedArray from an iterator object.
 includes(searchElement: number, fromIndex?: number): boolean
 ```
 
-Checks whether elements are contained in this ArkTS Float32Array.
+Checks whether elements are contained in this ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
@@ -651,8 +651,8 @@ Checks whether elements are contained in this ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## indexOf
 
@@ -660,7 +660,7 @@ Checks whether elements are contained in this ArkTS Float32Array.
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found,  
+Returns the index of the first occurrence of a value in this ArkTS Uint8ClampedArray. If the value is not found,  
 **-1** is returned.
 
 **Since:** 12
@@ -678,7 +678,7 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Float32Array, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Float32Array. |
+| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Uint8ClampedArray, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Uint8ClampedArray. |
 
 **Return value:**
 
@@ -690,8 +690,8 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## join
 
@@ -699,7 +699,7 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 join(separator?: string): string
 ```
 
-Concatenates all elements in this ArkTS Float32Array into a string, with a given separator.
+Concatenates all elements in this ArkTS Uint8ClampedArray into a string, with a given separator.
 
 **Since:** 12
 
@@ -727,8 +727,8 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## keys
 
@@ -736,7 +736,7 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 keys(): IterableIterator<number>
 ```
 
-Returns an iterator object that contains the key (index) of each element in this ArkTS Float32Array.
+Returns an iterator object that contains the key (index) of each element in this ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
@@ -752,14 +752,14 @@ Returns an iterator object that contains the key (index) of each element in this
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object. |
+| IterableIterator&lt;number&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -784,7 +784,7 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Ui
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | number | Yes | Value to search for. |
-| fromIndex | number | No | Index from which the search starts. The default value is **0**. If the index is greater than or equal to the length of the ArkTS Uint8ClampedArray, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Uint8ClampedArray. |
+| fromIndex | number | No | Index from which the search starts. The default value is the ArkTS Uint8ClampedArray length minus 1 (i.e., starting from the end). If the index is greater than or equal to the length of the ArkTS Uint8ClampedArray, **-1** is returned. If a negative number is passed in, the search starts from the end of the ArkTS Uint8ClampedArray. |
 
 **Return value:**
 
@@ -796,8 +796,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Ui
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## map
 
@@ -827,14 +827,14 @@ Applies a callback function to each element in this ArkTS Uint8ClampedArray and 
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## of
 
@@ -864,7 +864,7 @@ Creates an ArkTS Uint8ClampedArray with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray instance. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -900,8 +900,8 @@ Applies a reduce function on each element in this ArkTS Uint8ClampedArray and re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduce
 
@@ -938,8 +938,8 @@ Applies a reduce function for each element in this ArkTS Uint8ClampedArray, rece
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -976,8 +976,8 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function for 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1013,8 +1013,8 @@ Reversely traverses this ArkTS Uint8ClampedArray, applies a reduce function on e
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reverse
 
@@ -1038,14 +1038,14 @@ Reverses this ArkTS Uint8ClampedArray.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | Reversed ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Reversed ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## set
 
@@ -1069,15 +1069,15 @@ Writes the elements in an array-like object to the given start position in seque
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes | A typed or untyped array of values to set. |
+| array | ArrayLike&lt;number&gt; | Yes | A typed or untyped array of values to set. |
 | offset | number | No | The index in the current array at which the values are to be written. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## slice
 
@@ -1108,14 +1108,14 @@ Selects a range of elements in this ArkTS Uint8ClampedArray to create an ArkTS U
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## some
 
@@ -1151,8 +1151,8 @@ Checks whether any element in this ArkTS Uint8ClampedArray meets a given conditi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## sort
 
@@ -1182,14 +1182,14 @@ Sorts elements in this ArkTS Uint8ClampedArray and returns the sorted ArkTS Uint
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | Sorted ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | Sorted ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## subarray
 
@@ -1220,14 +1220,14 @@ Truncates an array from a specified position and returns a new ArkTS Uint8Clampe
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](arkts-arkts-typeduarrays-uint8clampedarray-c.md) | New ArkTS Uint8ClampedArray. |
+| Uint8ClampedArray | New ArkTS Uint8ClampedArray. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1257,8 +1257,8 @@ Generates digits that match the cultural conventions of the current system local
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toString
 
@@ -1288,8 +1288,8 @@ Converts an ArkTS Uint8ClampedArray into a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## values
 
@@ -1297,7 +1297,7 @@ Converts an ArkTS Uint8ClampedArray into a string.
 values(): IterableIterator<number>
 ```
 
-Returns an iterator object that contains the value of each element in this ArkTS Float32Array.
+Returns an iterator object that contains the value of each element in this ArkTS Uint8ClampedArray.
 
 **Since:** 12
 
@@ -1313,14 +1313,14 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; | Iterator object. |
+| IterableIterator&lt;number&gt; | Iterator object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
-| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1328,7 +1328,7 @@ Returns an iterator object that contains the value of each element in this ArkTS
 static readonly BYTES_PER_ELEMENT: number
 ```
 
-Number of bytes occupied by each element in the ArkTS Int16Array.
+Number of bytes occupied by each element in the ArkTS Uint8ClampedArray.
 
 **Type:** number
 
@@ -1368,7 +1368,7 @@ Returns the item at that index.
 readonly buffer: ArrayBuffer
 ```
 
-Bottom-layer buffer used by an ArkTS Int16Array.
+Bottom-layer buffer used by an ArkTS Uint8ClampedArray.
 
 **Type:** ArrayBuffer
 
@@ -1388,7 +1388,7 @@ Bottom-layer buffer used by an ArkTS Int16Array.
 readonly byteLength: number
 ```
 
-Number of bytes occupied by an ArkTS Int16Array.
+Number of bytes occupied by an ArkTS Uint8ClampedArray.
 
 **Type:** number
 
@@ -1408,7 +1408,7 @@ Number of bytes occupied by an ArkTS Int16Array.
 readonly byteOffset: number
 ```
 
-Offset between the ArkTS Int16Array and the start position of the ArrayBuffer.
+Offset between the ArkTS Uint8ClampedArray and the start position of the ArrayBuffer.
 
 **Type:** number
 
@@ -1428,7 +1428,7 @@ Offset between the ArkTS Int16Array and the start position of the ArrayBuffer.
 readonly length: number
 ```
 
-Number of elements in an ArkTS Int16Array.
+Number of elements in an ArkTS Uint8ClampedArray.
 
 **Type:** number
 

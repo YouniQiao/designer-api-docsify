@@ -6,7 +6,7 @@
 function getVMRuntimeStats(): GcStats
 ```
 
-��ȡϵͳGCͳ����Ϣ��
+获取系统GC统计信息。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function getVMRuntimeStats(): GcStats
 
 | 类型 | 说明 |
 | --- | --- |
-| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | ϵͳGCͳ����Ϣ�� |
+| [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md) | 系统GC统计信息。 |
 
 ## 示例
 

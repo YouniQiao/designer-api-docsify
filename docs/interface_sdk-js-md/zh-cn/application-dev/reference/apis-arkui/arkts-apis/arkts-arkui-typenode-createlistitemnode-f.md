@@ -29,5 +29,5 @@ export function createListItemNode(context: UIContext, options?: FrameNodeOption
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItem](arkts-arkui-typenode-listitem-t.md) | 返回 ListItem 类型的 FrameNode |
+| ListItem | 返回 ListItem 类型的 FrameNode |
 

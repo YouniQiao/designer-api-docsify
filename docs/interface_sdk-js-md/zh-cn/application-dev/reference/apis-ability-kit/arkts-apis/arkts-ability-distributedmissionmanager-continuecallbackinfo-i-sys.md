@@ -20,7 +20,7 @@ info: ContinuableInfo
 
 表示当前任务的流转信息。
 
-**类型：** [ContinuableInfo](arkts-ability-distributedmissionmanager-continuableinfo-t-sys.md)
+**类型：** ContinuableInfo
 
 **起始版本：** 11
 
@@ -42,7 +42,7 @@ state: ContinueState
 
 表示当前任务的流转状态。
 
-**类型：** [ContinueState](arkts-ability-abilityconstant-continuestate-e.md)
+**类型：** ContinueState
 
 **起始版本：** 11
 

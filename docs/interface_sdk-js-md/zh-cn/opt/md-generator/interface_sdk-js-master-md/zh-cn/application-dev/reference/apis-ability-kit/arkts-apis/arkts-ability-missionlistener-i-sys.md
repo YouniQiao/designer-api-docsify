@@ -32,6 +32,53 @@ onMissionClosed(mission: number): void
 | --- | --- | --- |
 | mission | number | 是 |
 
+## 示例
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义任务状态监听器对象
+let listener: missionManager.MissionListener = {
+  // 任务创建时的回调处理
+  onMissionCreated: (mission) => {
+    console.info(`onMissionCreated mission: ${JSON.stringify(mission)}`);
+  },
+  // 任务销毁时的回调处理
+  onMissionDestroyed: (mission) => {
+    console.info(`onMissionDestroyed mission: ${JSON.stringify(mission)}`);
+  },
+  // 任务缩略图更新时的回调处理
+  onMissionSnapshotChanged: (mission) => {
+    console.info(`onMissionSnapshotChanged mission: ${JSON.stringify(mission)}`);
+  },
+  // 任务移至前台时的回调处理
+  onMissionMovedToFront: (mission) => {
+    console.info(`onMissionMovedToFront mission: ${JSON.stringify(mission)}`);
+  },
+  // 任务标签更新时的回调处理
+  onMissionLabelUpdated: (mission) => {
+    console.info(`onMissionLabelUpdated mission: ${JSON.stringify(mission)}`);
+  },
+  // 任务图标更新时的回调处理
+  onMissionIconUpdated: (mission, icon) => {
+    console.info(`onMissionIconUpdated mission: ${JSON.stringify(mission)}`);
+    console.info(`onMissionIconUpdated icon: ${JSON.stringify(icon)}`);
+  },
+  // 任务关闭时的回调处理
+  onMissionClosed: (mission) => {
+    console.info(`onMissionClosed mission: ${JSON.stringify(mission)}`);
+  }
+};
+
+try {
+  // 注册任务状态监听器
+  let listenerId = missionManager.on('mission', listener);
+} catch (paramError) {
+  console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+}
+```
+
 ## onMissionCreated
 
 ```TypeScript
@@ -54,6 +101,10 @@ onMissionCreated(mission: number): void
 | --- | --- | --- |
 | mission | number | 是 |
 
+## 示例
+
+详细示例请见[onMissionClosed](#onmissionclosed9)。
+
 ## onMissionDestroyed
 
 ```TypeScript
@@ -75,6 +126,10 @@ onMissionDestroyed(mission: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mission | number | 是 |
+
+## 示例
+
+详细示例请见[onMissionClosed](#onmissionclosed9)。
 
 ## onMissionIconUpdated
 
@@ -99,6 +154,10 @@ onMissionIconUpdated(mission: number, icon: image.PixelMap): void
 | mission | number | 是 |
 | icon | image.PixelMap | 是 |
 
+## 示例
+
+详细示例请见[onMissionClosed](#onmissionclosed9)。
+
 ## onMissionLabelUpdated
 
 ```TypeScript
@@ -120,6 +179,10 @@ onMissionLabelUpdated(mission: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mission | number | 是 |
+
+## 示例
+
+详细示例请见[onMissionClosed](#onmissionclosed9)。
 
 ## onMissionMovedToFront
 
@@ -143,6 +206,10 @@ onMissionMovedToFront(mission: number): void
 | --- | --- | --- |
 | mission | number | 是 |
 
+## 示例
+
+详细示例请见[onMissionClosed](#onmissionclosed9)。
+
 ## onMissionSnapshotChanged
 
 ```TypeScript
@@ -164,3 +231,7 @@ onMissionSnapshotChanged(mission: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mission | number | 是 |
+
+## 示例
+
+详细示例请见[onMissionClosed](#onmissionclosed9)。

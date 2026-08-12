@@ -18,7 +18,7 @@ direction: RichEditorDeleteDirection
 
 The deleted direction.
 
-**Type:** [RichEditorDeleteDirection](../arkts-components/arkts-arkui-richeditordeletedirection-e.md)
+**Type:** [RichEditorDeleteDirection](arkts-arkui-richeditor-richeditordeletedirection-e.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ richEditorDeleteSpans: Array<RichEditorTextSpanResult | RichEditorImageSpanResul
 
 The deleted span object.
 
-**Type:** Array&lt;RichEditorTextSpanResult \| RichEditorImageSpanResult&gt;
+**Type:** Array&lt;[RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md) \| [RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md)&gt;
 
 **Since:** 23
 

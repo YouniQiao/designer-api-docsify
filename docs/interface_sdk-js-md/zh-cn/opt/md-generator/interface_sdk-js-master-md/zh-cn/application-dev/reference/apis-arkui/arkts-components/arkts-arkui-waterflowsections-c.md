@@ -108,7 +108,7 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 | --- | --- | --- |
 | start | number | 是 |
 | deleteCount | number | 否 |
-| sections | Array&lt;SectionOptions&gt; | 否 |
+| sections | Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; | 否 |
 
 **返回值：**
 
@@ -169,4 +169,4 @@ values(): Array<SectionOptions>
 
 | 类型 |
 | --- |
-| Array&lt;SectionOptions&gt; |
+| Array&lt;[SectionOptions](arkts-arkui-sectionoptions-c.md)&gt; |

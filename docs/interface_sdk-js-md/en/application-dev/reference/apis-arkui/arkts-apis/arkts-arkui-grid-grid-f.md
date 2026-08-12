@@ -27,13 +27,13 @@ Grid is returned when the parameter is transferred.
 | --- | --- | --- | --- |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | No | Controller bound to the grid |
 | layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | No | The options to help grid layout |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) |  |
+| [GridAttribute](arkts-arkui-grid-gridattribute-i.md) |  |
 
 
 ## Grid
@@ -63,12 +63,12 @@ Grid is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridAttribute&gt; | Yes | The style to create a Grid. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridAttribute](arkts-arkui-grid-gridattribute-i.md)&gt; | Yes | The style to create a Grid. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) | The attribute of the Grid. |
+| [GridAttribute](arkts-arkui-grid-gridattribute-i.md) | The attribute of the Grid. |
 

@@ -70,7 +70,7 @@ isSensorOnline: boolean
 sensorId: int
 ```
 
-传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md)枚举值。
+传感器类型ID，对应[SensorId](arkts-sensorservice-sensor-sensorid-e.md#SensorId)枚举值。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

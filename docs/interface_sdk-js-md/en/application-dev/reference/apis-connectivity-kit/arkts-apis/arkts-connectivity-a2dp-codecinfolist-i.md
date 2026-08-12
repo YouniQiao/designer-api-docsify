@@ -13,7 +13,7 @@ Describes the codec information.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from 'kits/@kit.ConnectivityKit';
+import { a2dp } from '@kit.ConnectivityKit';
 ```
 
 ## codecBitRateArray

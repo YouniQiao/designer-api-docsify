@@ -64,7 +64,7 @@ Returns an iterator for the elements in the ArrayLike object.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | An iterator instance. |
+| IterableIterator&lt;T&gt; | An iterator instance. |
 
 ## length
 

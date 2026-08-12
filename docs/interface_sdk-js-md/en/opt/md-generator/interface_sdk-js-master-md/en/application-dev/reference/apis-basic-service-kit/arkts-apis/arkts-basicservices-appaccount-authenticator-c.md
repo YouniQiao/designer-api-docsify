@@ -11,7 +11,7 @@ Provides APIs to operate the authenticator.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## addAccountImplicitly
@@ -37,7 +37,7 @@ Adds an application account implicitly based on the specified authentication typ
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.Authenticator.createAccountImplicitly](arkts-basicservices-appaccount-authenticator-c.md#createaccountimplicitly)(options:
+**Substitutes:** [createAccountImplicitly](appAccount.Authenticator.createAccountImplicitly(options:)
 
 <!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-addAccountImplicitly(      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -98,7 +98,7 @@ Authenticates an application account to obtain the OAuth token. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.Authenticator.auth](arkts-basicservices-appaccount-authenticator-c.md#auth)(name:
+**Substitutes:** [auth](appAccount.Authenticator.auth(name:)
 
 <!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-Authenticator-authenticate(      name: string,      authType: string,      callerBundleName: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -133,7 +133,7 @@ Checks the account labels. This API uses an asynchronous callback to return the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | name | string | Yes |
-| labels | Array&lt;string&gt; | Yes |
+| labels | Array & lt;string & gt; | Yes |
 | callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | Yes |
 
 ## Examples

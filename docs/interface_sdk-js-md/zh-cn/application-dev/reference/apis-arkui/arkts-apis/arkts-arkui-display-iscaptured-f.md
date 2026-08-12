@@ -28,7 +28,7 @@ function isCaptured(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 
@@ -75,8 +75,8 @@ function isCaptured(bundleNameList: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1.The size of bundleNameList is larger than 100. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [1400004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1.The size of bundleNameList is larger than 100. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 

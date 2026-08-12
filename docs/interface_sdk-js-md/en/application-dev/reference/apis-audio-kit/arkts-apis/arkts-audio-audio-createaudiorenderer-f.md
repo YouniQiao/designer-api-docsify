@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createAudioRenderer
@@ -12,7 +12,7 @@ import { audio } from 'kits/@kit.AudioKit';
 function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer>): void
 ```
 
-Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
+Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer) instance.This method uses a promise to return the renderer instance.
 
 The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
 
@@ -33,7 +33,7 @@ If you want to use AudioRenderer api to implement a music playback application, 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioRenderer instance obtained; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -76,7 +76,7 @@ audio.createAudioRenderer(audioRendererOptions,(err, data) => {
 function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallback<AudioRenderer | null>): void
 ```
 
-Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
+Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer) instance.This method uses a promise to return the renderer instance.
 
 The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
 
@@ -97,7 +97,7 @@ If you want to use AudioRenderer api to implement a music playback application, 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | Yes | Renderer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer \| null&gt; | Yes | Callback used to return the audio renderer instance, or null when an error happens. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md) \| null&gt; | Yes | Callback used to return the audio renderer instance, or null when an error happens. |
 
 
 ## createAudioRenderer
@@ -106,7 +106,7 @@ If you want to use AudioRenderer api to implement a music playback application, 
 function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer>
 ```
 
-Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
+Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer) instance.This method uses a promise to return the renderer instance.
 
 The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
 
@@ -132,7 +132,7 @@ If you want to use AudioRenderer api to implement a music playback application, 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRenderer&gt; | Promise used to return the AudioRenderer instance. |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | Promise used to return the AudioRenderer instance. |
 
 ## Examples
 
@@ -174,7 +174,7 @@ audio.createAudioRenderer(audioRendererOptions).then((data) => {
 function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRenderer | null>
 ```
 
-Obtains an {@link AudioRenderer} instance.This method uses a promise to return the renderer instance.
+Obtains an [AudioRenderer](arkts-audio-audio-audiorenderer-i.md#AudioRenderer) instance.This method uses a promise to return the renderer instance.
 
 The AudioRenderer instance is used to play streaming audio data.When using AudioRenderer apis, there are many instructions for application to achieve better performance and lower power consumption:In music or audiobook background playback situation, you can have low power consumption by following this best practices document **Low-Power Rules in Music Playback Scenarios**.And for navigation situation, you can follow **Low-Power Rules in Navigation and Positioning Scenarios**.
 
@@ -200,5 +200,5 @@ If you want to use AudioRenderer api to implement a music playback application, 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AudioRenderer \| null&gt; | Promise used to return the audio renderer instance, or null when an error happens. |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md) \| null&gt; | Promise used to return the audio renderer instance, or null when an error happens. |
 

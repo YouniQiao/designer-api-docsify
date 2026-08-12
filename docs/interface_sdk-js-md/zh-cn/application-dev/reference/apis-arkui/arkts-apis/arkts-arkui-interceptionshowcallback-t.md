@@ -20,8 +20,8 @@ Navigation页面跳转前和页面跳转后的拦截回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | 是 | 页面跳转之前的栈顶页面信息。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
-| to | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | 是 | 页面跳转之后的栈顶页面信息。 <br>取值约束:参数值为navBar，则表示跳转的目标页面为Navigation首页。 |
+| from | [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | 是 | 页面跳转之前的栈顶页面信息。 <br>取值约束:参数值为navBar，则表示跳转前的页面为Navigation首页。 |
+| to | [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | 是 | 页面跳转之后的栈顶页面信息。 <br>取值约束:参数值为navBar，则表示跳转的目标页面为Navigation首页。 |
 | operation | [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md) | 是 | 当前页面跳转类型。 |
 | isAnimated | boolean | 是 | 页面跳转是否有动画。 <br>true：页面跳转有动画。 false：页面跳转没有动画。 |
 

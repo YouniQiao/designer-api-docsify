@@ -15,7 +15,7 @@ Defines the DND time.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## begin
@@ -66,7 +66,7 @@ type: DoNotDisturbType
 
 DND time type.
 
-**Type:** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
+**Type:** DoNotDisturbType
 
 **Since:** 9
 

@@ -12,7 +12,7 @@ Defines the predicates for an RDB store. This class determines whether the condi
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -33,7 +33,7 @@ Creates an **RdbPredicates** object to add the AND condition.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 ## beginWrap
 
@@ -53,7 +53,7 @@ Creates an **RdbPredicates** object to add a left parenthesis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 ## beginsWith
 
@@ -80,13 +80,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## between
 
@@ -114,13 +114,13 @@ Creates an **RdbPredicates** object to search for the records that are within th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## constructor
 
@@ -146,7 +146,7 @@ Defines a constructor used to create an **RdbPredicates** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## contains
 
@@ -173,13 +173,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## distinct
 
@@ -199,7 +199,7 @@ Creates an **RdbPredicates** object to filter out duplicate records.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 ## endWrap
 
@@ -219,7 +219,7 @@ Creates an **RdbPredicates** object to add a right parenthesis.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 ## endsWith
 
@@ -246,13 +246,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## equalTo
 
@@ -279,13 +279,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## glob
 
@@ -312,13 +312,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## greaterThan
 
@@ -345,13 +345,13 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## greaterThanOrEqualTo
 
@@ -378,13 +378,13 @@ Creates an **RdbPredicates** object to search for the records that are greater t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## groupBy
 
@@ -404,19 +404,19 @@ Creates a **RdbPredicates** object to group the query results based on the speci
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fields | Array&lt;string&gt; | Yes |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## having
 
@@ -437,19 +437,19 @@ Filters for group data that meets the conditions.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | conditions | string | Yes |
-| args | Array&lt;ValueType&gt; | No |
+| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
 
 ## in
 
@@ -476,19 +476,19 @@ Creates an **RdbPredicates** object to search for the records that are in the gi
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | Array&lt;ValueType&gt; | Yes |
+| value | Array & lt;ValueType & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## inAllDevices
 
@@ -508,7 +508,7 @@ Creates an **RdbPredicates** object to specify all remote devices on the network
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 ## inDevices
 
@@ -521,7 +521,7 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 > **NOTE：**
 > 
 > **devices** can be obtained by using [deviceManager.getAvailableDeviceListSync]
-> {@link @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceListSync}.
+> [getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync).
 > When calling **sync()**, you need to call **inDevices** to specify the devices. If **inDevices** is not used,
 > data will be synced to all devices on the network by default.
 
@@ -535,19 +535,19 @@ Creates an **RdbPredicates** object to specify the remote devices to connect on 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| devices | Array&lt;string&gt; | Yes |
+| devices | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## indexedBy
 
@@ -573,13 +573,13 @@ Creates a **RdbPredicates** object to specify the index column.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isNotNull
 
@@ -605,13 +605,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isNull
 
@@ -637,13 +637,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## lessThan
 
@@ -670,13 +670,13 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## lessThanOrEqualTo
 
@@ -703,13 +703,13 @@ Creates an **RdbPredicates** object to search for the records that are less than
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## like
 
@@ -736,13 +736,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## limitAs
 
@@ -768,13 +768,13 @@ Creates a **RdbPredicates** object to limit the number of records.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notBetween
 
@@ -802,13 +802,13 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notContains
 
@@ -835,13 +835,13 @@ Creates an **RdbPredicates** object to search for the records that do not contai
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notEqualTo
 
@@ -868,13 +868,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notIn
 
@@ -895,19 +895,19 @@ Creates an **RdbPredicates** object to search for the records that are out of th
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | field | string | Yes |
-| value | Array&lt;ValueType&gt; | Yes |
+| value | Array & lt;ValueType & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notLike
 
@@ -934,13 +934,13 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## offsetAs
 
@@ -966,13 +966,13 @@ Creates an **RdbPredicates** object to set the start position of the query resul
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## or
 
@@ -992,7 +992,7 @@ Creates an **RdbPredicates** object to add the OR condition.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 ## orderByAsc
 
@@ -1018,13 +1018,13 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## orderByDesc
 
@@ -1050,10 +1050,10 @@ Creates an **RdbPredicates** object to sort the records in the specified column 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) |
+| [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md) |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |

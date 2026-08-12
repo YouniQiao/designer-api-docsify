@@ -11,7 +11,7 @@ Class to be override for backup extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { BundleVersion } from 'kits/@kit.CoreFileKit';
+import { BundleVersion } from '@kit.CoreFileKit';
 ```
 
 ## getBackupCompatibilityInfo
@@ -42,7 +42,7 @@ Callback to be called when getting application backup compatibilityInfo.Develope
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getBackupInfo
 
@@ -96,4 +96,4 @@ Callback to be called when getting application restore compatibilityInfo.Develop
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |

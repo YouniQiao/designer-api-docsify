@@ -167,5 +167,5 @@ onDatasetChange(dataOperations: Array<DataOperation>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataOperations | Array&lt;DataOperation&gt; | 是 |  |
+| dataOperations | Array&lt;[DataOperation](arkts-arkui-dataoperation-t.md)&gt; | 是 |  |
 

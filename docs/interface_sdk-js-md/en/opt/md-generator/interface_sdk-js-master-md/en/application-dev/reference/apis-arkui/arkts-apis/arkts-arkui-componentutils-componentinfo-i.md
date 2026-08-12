@@ -11,7 +11,7 @@ Implements a **ComponentInfo** object, which provides the size, position, transl
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## localOffset
@@ -22,7 +22,7 @@ localOffset: Offset
 
 Offset of the component relative to the parent component.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ screenOffset: Offset
 
 Offset of the component relative to the screen.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 10
 
@@ -102,7 +102,7 @@ size: Size
 
 Component size.
 
-**Type:** [Size](arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 10
 
@@ -162,7 +162,7 @@ windowOffset: Offset
 
 Offset of the component relative to the window.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 10
 

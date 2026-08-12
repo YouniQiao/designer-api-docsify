@@ -33,7 +33,7 @@ Creates a new proxy instance that implements the specified interfaces and uses t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | linker | RuntimeLinker | Yes | The `RuntimeLinker` used to generate the proxy class at runtime. |
-| interfaces | FixedArray&lt;Class&gt; | Yes | An array of `Class` objects representing the interfaces to implement. |
+| interfaces | FixedArray&lt;[Class](arkts-arkts-class-c.md)&gt; | Yes | An array of `Class` objects representing the interfaces to implement. |
 | handler | [InvocationHandler](arkts-arkts-reflect-invocationhandler-i.md) | Yes | The `InvocationHandler` to handle method and property operations. |
 
 **Return value:**

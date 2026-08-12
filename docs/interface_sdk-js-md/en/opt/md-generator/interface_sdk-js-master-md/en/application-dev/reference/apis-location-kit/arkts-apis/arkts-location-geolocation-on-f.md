@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## on('locationChange')
@@ -18,7 +18,7 @@ Subscribe location changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:locationChange
+**Substitutes:** [locationChange](ohos.geoLocationManager/geoLocationManager.on#event:locationChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -31,7 +31,7 @@ Subscribe location changed
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'locationChange' | Yes |
-| request | [LocationRequest](arkts-location-geolocation-locationrequest-i.md) | Yes |
+| request | [LocationRequest](arkts-location-geolocationmanager-locationrequest-i.md) | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Location&gt; | Yes |
 
 ## Examples
@@ -58,7 +58,7 @@ Subscribe location switch changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:locationEnabledChange
+**Substitutes:** [locationEnabledChange](ohos.geoLocationManager/geoLocationManager.on#event:locationEnabledChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -96,7 +96,7 @@ Subscribe to cache GNSS locations update messages
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:cachedGnssLocationsChange
+**Substitutes:** [cachedGnssLocationsChange](ohos.geoLocationManager/geoLocationManager.on#event:cachedGnssLocationsChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -136,7 +136,7 @@ Subscribe gnss status changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:satelliteStatusChange
+**Substitutes:** [satelliteStatusChange](ohos.geoLocationManager/geoLocationManager.on#event:satelliteStatusChange)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -174,7 +174,7 @@ Subscribe nmea message changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:nmeaMessage
+**Substitutes:** [nmeaMessage](ohos.geoLocationManager/geoLocationManager.on#event:nmeaMessage)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -212,7 +212,7 @@ Add a geofence and subscribe geo fence status changed
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.on#event:gnssFenceStatusChange
+**Substitutes:** [gnssFenceStatusChange](ohos.geoLocationManager/geoLocationManager.on#event:gnssFenceStatusChange)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -59,7 +59,7 @@ Defines Marquee Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MarqueeAttribute&gt; | Yes | Marquee attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md)&gt; | Yes | Marquee attribute instance |
 
 **Return value:**
 

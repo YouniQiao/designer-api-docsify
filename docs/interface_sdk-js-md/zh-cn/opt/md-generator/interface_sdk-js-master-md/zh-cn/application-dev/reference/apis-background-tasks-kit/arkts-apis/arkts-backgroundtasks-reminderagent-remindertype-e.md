@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.reminderAgentManager:reminderAgentManager.ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
+**替代接口：** [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#ReminderType)
 
 <!--Device-reminderAgent-export enum ReminderType--><!--Device-reminderAgent-export enum ReminderType-End-->
 
@@ -24,7 +24,7 @@ REMINDER_TYPE_TIMER = 0
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_timer)
+**替代接口：** [REMINDER_TYPE_TIMER](reminderAgentManager.ReminderType.REMINDER_TYPE_TIMER)
 
 <!--Device-ReminderType-REMINDER_TYPE_TIMER = 0--><!--Device-ReminderType-REMINDER_TYPE_TIMER = 0-End-->
 
@@ -42,7 +42,7 @@ REMINDER_TYPE_CALENDAR = 1
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.ReminderType.REMINDER_TYPE_CALENDAR](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_calendar)
+**替代接口：** [REMINDER_TYPE_CALENDAR](reminderAgentManager.ReminderType.REMINDER_TYPE_CALENDAR)
 
 <!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1--><!--Device-ReminderType-REMINDER_TYPE_CALENDAR = 1-End-->
 
@@ -60,7 +60,7 @@ REMINDER_TYPE_ALARM = 2
 
 **废弃版本：** 9
 
-**替代接口：** [reminderAgentManager.ReminderType.REMINDER_TYPE_ALARM](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md#reminder_type_alarm)
+**替代接口：** [REMINDER_TYPE_ALARM](reminderAgentManager.ReminderType.REMINDER_TYPE_ALARM)
 
 <!--Device-ReminderType-REMINDER_TYPE_ALARM = 2--><!--Device-ReminderType-REMINDER_TYPE_ALARM = 2-End-->
 

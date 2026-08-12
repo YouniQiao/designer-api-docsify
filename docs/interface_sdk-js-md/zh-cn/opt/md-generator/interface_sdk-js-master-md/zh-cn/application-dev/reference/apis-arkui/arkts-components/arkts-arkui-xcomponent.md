@@ -20,7 +20,7 @@ XComponent(value: { id: string; type: string; libraryname?: string; controller?:
 
 **废弃版本：** 12
 
-**替代接口：** <!--SUBSTITUTE_API-->(value:<!--/SUBSTITUTE_API-->
+**替代接口：** [(value:]((value:)
 
 <!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
 

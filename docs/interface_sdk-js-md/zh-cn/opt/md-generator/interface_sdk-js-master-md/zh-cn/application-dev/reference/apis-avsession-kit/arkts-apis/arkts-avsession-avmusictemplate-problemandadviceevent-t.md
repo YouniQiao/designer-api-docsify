@@ -24,4 +24,4 @@ type ProblemAndAdviceEvent = (advice: string) => Promise<OperResult>
 
 | 类型 |
 | --- |
-| Promise&lt;OperResult&gt; |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; |

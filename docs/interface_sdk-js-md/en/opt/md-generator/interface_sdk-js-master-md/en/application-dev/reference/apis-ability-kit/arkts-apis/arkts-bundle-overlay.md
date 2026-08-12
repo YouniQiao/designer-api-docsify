@@ -1,7 +1,7 @@
 # @ohos.bundle.overlay
 
 The module provides APIs for querying the  
-[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md) of an application with the overlay feature, and disabling and enabling the feature.
+[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md#OverlayModuleInfo) of an application with the overlay feature, and disabling and enabling the feature.
 
 An application with the overlay feature contains an overlay resource package. For details about this package, see  
 [Overlay Mechanism](../../../quick-start/resource-categories-and-access.md#overlay-mechanism).
@@ -20,7 +20,7 @@ An application with the overlay feature contains an overlay resource package. Fo
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from 'kits/@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## Summary

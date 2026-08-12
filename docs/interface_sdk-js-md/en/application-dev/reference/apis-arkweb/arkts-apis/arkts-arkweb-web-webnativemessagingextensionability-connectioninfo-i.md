@@ -13,7 +13,7 @@ Represents the information object of the web native messaging connection.
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from 'kits/@kit.ArkWeb';
+import { ConnectionInfo } from '@kit.ArkWeb';
 ```
 
 ## bundleName

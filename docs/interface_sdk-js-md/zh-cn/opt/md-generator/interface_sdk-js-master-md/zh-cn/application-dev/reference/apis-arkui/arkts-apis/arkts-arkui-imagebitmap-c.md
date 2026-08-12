@@ -22,7 +22,7 @@ close(): void
 > - 必须与[constructor()](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-imagebitmap.md#constructor)方法配对
 > 使用，创建ImageBitmap对象后，应在使用完毕时调用close()释放资源。未调用close()可能导致图形资源泄漏，影响应用性能。
 > 
-> - 建议在Canvas绘制完成后调用，如在[onReady](arkts-arkui-canvasattribute-c.md#onready)回调的最后调用close()。
+> - 建议在Canvas绘制完成后调用，如在[onReady](arkts-arkui-canvasattribute-c.md#onReady)回调的最后调用close()。
 
 **起始版本：** 8
 
@@ -83,7 +83,7 @@ constructor(src: string, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | src | string | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 ## constructor
 
@@ -105,7 +105,7 @@ constructor(data: PixelMap)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
+| data | [PixelMap](arkts-arkui-pixelmap-t.md) | 是 |
 
 ## constructor
 
@@ -129,8 +129,8 @@ constructor(data: PixelMap, unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| data | [PixelMap](arkts-arkui-pixelmap-t.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 ## constructor
 
@@ -155,7 +155,7 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | data | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
 
 ## height
 

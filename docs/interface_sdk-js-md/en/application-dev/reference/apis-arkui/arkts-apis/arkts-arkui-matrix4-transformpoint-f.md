@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## transformPoint
@@ -20,7 +20,7 @@ Applies the current transformation effect to a coordinate point.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformpoint)
+**Substitutes:** [transformPoint](arkts-arkui-matrix4-matrix4transit-i.md#transformPoint)
 
 <!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]--><!--Device-matrix4-function transformPoint(options: [number, number]): [number, number]-End-->
 

@@ -6,7 +6,7 @@ Enumerates power role types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md)
+**Substitutes:** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType)
 
 <!--Device-usb-export enum PowerRoleType--><!--Device-usb-export enum PowerRoleType-End-->
 
@@ -26,7 +26,7 @@ None
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PowerRoleType.NONE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#none)
+**Substitutes:** [NONE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#NONE)
 
 <!--Device-PowerRoleType-NONE = 0--><!--Device-PowerRoleType-NONE = 0-End-->
 
@@ -46,7 +46,7 @@ External power supply.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PowerRoleType.SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#source)
+**Substitutes:** [SOURCE](arkts-basicservices-usbmanager-powerroletype-e-sys.md#SOURCE)
 
 <!--Device-PowerRoleType-SOURCE = 1--><!--Device-PowerRoleType-SOURCE = 1-End-->
 
@@ -66,7 +66,7 @@ Internal power supply.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.PowerRoleType.SINK](arkts-basicservices-usbmanager-powerroletype-e-sys.md#sink)
+**Substitutes:** [SINK](arkts-basicservices-usbmanager-powerroletype-e-sys.md#SINK)
 
 <!--Device-PowerRoleType-SINK = 2--><!--Device-PowerRoleType-SINK = 2-End-->
 

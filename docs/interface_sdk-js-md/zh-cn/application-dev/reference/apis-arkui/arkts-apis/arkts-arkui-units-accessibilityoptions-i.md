@@ -42,8 +42,8 @@ accessibilityPreferred?: boolean
 actionControllerId?: string
 ```
 
-指定特定[唯一标识ID](arkts-arkui-common-commonmethod-i.md#id)的子组件。配置  
-[accessibilityGroup](arkts-arkui-common-commonmethod-i.md#accessibilitygroup)的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定标识的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
+指定特定[唯一标识ID](CommonMethod#id)的子组件。配置  
+[accessibilityGroup](CommonMethod#accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions))的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定标识的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
 
 **说明：**
 
@@ -76,7 +76,7 @@ actionControllerRoleType?: AccessibilityRoleType
 ```
 
 指定特定类型的子组件。配置  
-[accessibilityGroup](arkts-arkui-common-commonmethod-i.md#accessibilitygroup)的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定类型的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
+[accessibilityGroup](CommonMethod#accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions))的容器组件进行无障碍聚合后，如果触发无障碍的控制操作时，会将操作转发给该特定类型的子组件。从而聚合屏幕朗读下的点击事件，避免需要对子组件单独进行聚焦。
 
 **说明：**
 
@@ -106,8 +106,8 @@ actionControllerRoleType?: AccessibilityRoleType
 stateControllerId?: string
 ```
 
-指定特定[唯一标识ID](arkts-arkui-common-commonmethod-i.md#id)的子组件。配置  
-[accessibilityGroup](arkts-arkui-common-commonmethod-i.md#accessibilitygroup)的容器组件进行无障碍聚合后，会将该特定标识的子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
+指定特定[唯一标识ID](CommonMethod#id)的子组件。配置  
+[accessibilityGroup](CommonMethod#accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions))的容器组件进行无障碍聚合后，会将该特定标识的子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
 
 **说明：**
 
@@ -138,7 +138,7 @@ stateControllerRoleType?: AccessibilityRoleType
 ```
 
 指定特定类型的子组件。配置  
-[accessibilityGroup](arkts-arkui-common-commonmethod-i.md#accessibilitygroup)的容器组件进行无障碍聚合后，会将该特定类型的子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
+[accessibilityGroup](CommonMethod#accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions))的容器组件进行无障碍聚合后，会将该特定类型的子组件的选中状态和状态播报文本作为聚合组件的状态和播报文本。从而聚合屏幕朗读下的状态播报，避免需要对子组件单独进行聚焦。
 
 **说明：**
 

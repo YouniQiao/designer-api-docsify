@@ -11,7 +11,7 @@ Defines the mDNS service information.
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## host
@@ -22,7 +22,7 @@ host?: NetAddress
 
 IP address of the host.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 11
 
@@ -58,7 +58,7 @@ serviceAttribute?: Array<ServiceAttribute>
 
 DNS-SD TXT record pairs.
 
-**Type:** Array&lt;ServiceAttribute&gt;
+**Type:** Array&lt;[ServiceAttribute](arkts-network-mdns-serviceattribute-i.md)&gt;
 
 **Since:** 11
 

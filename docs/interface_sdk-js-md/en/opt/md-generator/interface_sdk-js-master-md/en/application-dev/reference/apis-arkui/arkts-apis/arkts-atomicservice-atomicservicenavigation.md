@@ -2,13 +2,13 @@
 
 ###### Child Components
  Supported
- Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md) for page routing.
+ Since API version 10, you are advised to use [NavPathStack](../arkts-components/arkts-arkui-navpathstack-c.md#NavPathStack) for page routing.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from 'kits/@kit.ArkUI';
+import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -13,7 +13,7 @@ Indicates SIM card type and status.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## reason
@@ -42,7 +42,7 @@ state: SimState
 
 Indicates the SIM card states.
 
-**Type:** [SimState](arkts-telephony-sim-simstate-e.md)
+**Type:** SimState
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ type: CardType
 
 Indicates the SIM card type.
 
-**Type:** [CardType](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-cardemulation-cardtype-e.md)
+**Type:** CardType
 
 **Since:** 7
 

@@ -1,7 +1,7 @@
 # MemoryLevel
 
 Enumerates the memory levels of the entire device. You can use it in  
-[onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onmemorylevel) of the UIAbility to complete different operations.
+[onMemoryLevel()](arkts-ability-app-ability-ability-ability-c.md#onMemoryLevel) of the UIAbility to complete different operations.
 
 > **NOTE：**
 > 

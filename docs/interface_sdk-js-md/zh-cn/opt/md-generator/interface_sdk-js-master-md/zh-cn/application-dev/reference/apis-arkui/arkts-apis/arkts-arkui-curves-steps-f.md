@@ -10,13 +10,13 @@ function steps(count: number, end: boolean): string
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves. stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)替代。
+> 从API version 7开始支持，从API version 9开始废弃。建议使用[Curves. stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepsCurve)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [curves.stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepscurve)
+**替代接口：** [stepsCurve](arkts-arkui-curves-stepscurve-f.md#stepsCurve)
 
 <!--Device-curves-function steps(count: number, end: boolean): string--><!--Device-curves-function steps(count: number, end: boolean): string-End-->
 

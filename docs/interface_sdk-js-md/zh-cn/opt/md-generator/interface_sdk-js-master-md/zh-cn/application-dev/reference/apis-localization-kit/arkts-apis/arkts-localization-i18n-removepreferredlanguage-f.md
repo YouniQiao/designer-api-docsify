@@ -12,7 +12,7 @@ export function removePreferredLanguage(index: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [i18n.System.removePreferredLanguage](arkts-localization-i18n-system-c-sys.md#removepreferredlanguage)
+**替代接口：** [removePreferredLanguage](arkts-localization-i18n-system-c-sys.md#removePreferredLanguage)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 

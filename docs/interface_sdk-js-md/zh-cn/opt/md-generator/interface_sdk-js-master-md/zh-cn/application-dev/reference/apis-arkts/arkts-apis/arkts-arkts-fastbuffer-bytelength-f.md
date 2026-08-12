@@ -20,7 +20,7 @@ function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| FastBuffer \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 |
+| value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| TypedArray \| DataView \| ArrayBuffer \| SharedArrayBuffer | 是 |
 | encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | 否 |
 
 **返回值：**

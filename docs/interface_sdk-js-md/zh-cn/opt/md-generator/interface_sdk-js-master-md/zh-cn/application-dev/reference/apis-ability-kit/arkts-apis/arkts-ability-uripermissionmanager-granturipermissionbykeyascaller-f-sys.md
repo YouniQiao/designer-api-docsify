@@ -32,22 +32,22 @@ function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) |
-| [16000092](../errorcode-ability.md#16000092-无权限授权uri) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [16000093](../errorcode-ability.md#16000093-调用方的token-id无效) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [16000094](../errorcode-ability.md#16000094-目标应用的token-id无效) |
-| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) |
-| [16000091](../errorcode-ability.md#16000091-根据key获取文件uri数据失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-不支持沙箱应用授权uri) |
+| [16000092](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000092-无权限授权uri) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [16000093](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000093-调用方的token-id无效) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16000094](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000094-目标应用的token-id无效) |
+| [16000058](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-指定的uri-flag无效) |
+| [16000091](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000091-根据key获取文件uri数据失败) |
 
 ## 示例
 

@@ -23,13 +23,13 @@ config: ParticleColorPropertyUpdaterConfigs
 颜色属性变化类型type有三类：
 
 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。 
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.NONE]。 
 
 2、type为ParticleUpdater.RANDOM，表示随机变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。 
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.RANDOM]。 
 
 3、type为ParticleUpdater.CURVE,表示按动画曲线变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]。 
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.CURVE]。 
 
 **说明：**
 
@@ -37,7 +37,7 @@ config: ParticleColorPropertyUpdaterConfigs
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)
+**类型：** [ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md)
 
 **起始版本：** 23
 
@@ -61,7 +61,7 @@ type: ParticleUpdater
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [ParticleUpdater](../arkts-components/arkts-arkui-particleupdater-e.md)
+**类型：** [ParticleUpdater](arkts-arkui-particle-particleupdater-e.md)
 
 **起始版本：** 23
 

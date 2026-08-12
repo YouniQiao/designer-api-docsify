@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## addSlot
@@ -22,6 +22,14 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[getSlot](notificationManager.getSlot(slotType: SlotType,callback: AsyncCallback<NotificationSlot>): void) 获取指定类型的通知渠道。
+
+[removeSlot](notificationManager.removeSlot(slotType: SlotType,callback: AsyncCallback<void>): void) 删除当前应用指定类型的通知渠道。
+
+[removeAllSlots](notificationManager.removeAllSlots(callback: AsyncCallback<void>): void) 删除所有渠道通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 |
@@ -33,11 +41,11 @@ function addSlot(type: SlotType, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-内存空间不足) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -72,6 +80,14 @@ function addSlot(type: SlotType): Promise<void>
 
 **系统能力：** SystemCapability.Notification.Notification
 
+**参见：**
+
+[getSlot](notificationManager.getSlot(slotType: SlotTyp): Promise<NotificationSlot>) 获取指定类型的通知渠道。
+
+[removeSlot](notificationManager.removeSlot(slotType: SlotType): Promise<void>) 删除当前应用指定类型的通知渠道。
+
+[removeAllSlots](notificationManager.removeAllSlots(): Promise<void>) 删除当前应用的所有渠道通知。
+
 **参数：**
 
 | 参数名 | 类型 | 必填 |
@@ -82,17 +98,17 @@ function addSlot(type: SlotType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1600012](../errorcode-notification.md#1600012-内存空间不足) |
-| [1600001](../errorcode-notification.md#1600001-内部错误) |
-| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1600012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-内存空间不足) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

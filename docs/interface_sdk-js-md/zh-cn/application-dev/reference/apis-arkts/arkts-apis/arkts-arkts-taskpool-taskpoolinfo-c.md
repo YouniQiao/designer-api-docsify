@@ -18,7 +18,7 @@ taskInfos: TaskInfo[]
 
 任务的内部信息。不建议修改此值。
 
-**类型：** [TaskInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-taskinfo-i.md)[]
+**类型：** TaskInfo[]
 
 **起始版本：** 10
 

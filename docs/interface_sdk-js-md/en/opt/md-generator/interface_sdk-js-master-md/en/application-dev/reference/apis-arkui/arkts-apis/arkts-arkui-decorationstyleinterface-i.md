@@ -48,7 +48,7 @@ Style of the text decorative line.
 
 Default value: **TextDecorationStyle.SOLID**.
 
-**Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ Type of the text decorative line.
 
 Default value: **TextDecorationType.None**.
 
-**Type:** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

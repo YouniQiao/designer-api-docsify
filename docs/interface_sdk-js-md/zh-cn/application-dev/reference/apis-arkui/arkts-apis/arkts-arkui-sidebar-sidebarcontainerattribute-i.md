@@ -1,8 +1,8 @@
 # SideBarContainerAttribute
 
-除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性：
+除支持[通用属性](./../../@internal/component/ets/common)外，还支持以下属性：
 
-**继承/实现关系：** SideBarContainerAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** SideBarContainerAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<SideBarContainerAttribute>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;SideBarContainerAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 在当 前组件上，动态设置属性方法，支持使用if/else语法。&lt;br/&gt;CommonMethod：通用属性和事件。&lt;br/&gt;取值为undefined时，按当前组件的属性方法默认值处理。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[SideBarContainerAttribute](arkts-arkui-sidebar-sidebarcontainerattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | 在当 前组件上，动态设置属性方法，支持使用if/else语法。&lt;br/&gt;CommonMethod：通用属性和事件。&lt;br/&gt;取值为undefined时，按当前组件的属性方法默认值处理。 |
 
 **返回值：**
 
@@ -126,7 +126,7 @@ default divider(value: DividerStyle | null | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DividerStyle](../arkts-components/arkts-arkui-dividerstyle-i.md) \| null \| undefined | 是 | 分割线的样式。&lt;br/&gt;默认为DividerStyle：显示分割线。&lt;br/&gt;- null或undefined：行为不做处理，分 割线样式与默认值保持一致。&lt;br/&gt;**说明：** &lt;br/&gt;API version 11及以下版本，null效果为不显示分割线。 |
+| value | DividerStyle \| null \| undefined | 是 | 分割线的样式。&lt;br/&gt;默认为DividerStyle：显示分割线。&lt;br/&gt;- null或undefined：行为不做处理，分 割线样式与默认值保持一致。&lt;br/&gt;**说明：** &lt;br/&gt;API version 11及以下版本，null效果为不显示分割线。 |
 
 **返回值：**
 
@@ -182,11 +182,11 @@ Embed场景下，增大组件尺寸时仅增大内容区的尺寸。
 
 当缩小侧边栏的尺寸至minSideBarWidth后，继续缩小组件尺寸时，
 
-- 如果[autoHide](SideBarContainerAttribute.autoHide)属性为false，则会保持侧边栏宽度  
-[minSideBarWidth](SideBarContainerAttribute.minSideBarWidth)和内容区宽度minContentWidth不变，但内容区会被截断显示；  
+- 如果[autoHide](#autoHide)属性为false，则会保持侧边栏宽度  
+[minSideBarWidth](#minSideBarWidth)和内容区宽度minContentWidth不变，但内容区会被截断显示；  
 - 如果autoHide属性为true，则会优先隐藏侧边栏，然后继续缩小至内容区宽度minContentWidth后，内容区宽度保持不变，但内容区会被截断显示。
 
-minContentWidth优先于侧边栏的[maxSideBarWidth](SideBarContainerAttribute.maxSideBarWidth)与sideBarWidth属性，minContentWidth未设置时默认值优先级低于设置的minSideBarWidth与maxSideBarWidth属性。
+minContentWidth优先于侧边栏的[maxSideBarWidth](#maxSideBarWidth)与sideBarWidth属性，minContentWidth未设置时默认值优先级低于设置的minSideBarWidth与maxSideBarWidth属性。
 
 **起始版本：** 23
 
@@ -252,7 +252,7 @@ default onChange(callback: ((value: boolean) => void) | undefined): this
 
 触发该事件的条件：
 
-1. showSideBar属性值变换时。2. showSideBar属性自适应行为变化时。3. 分割线拖拽触发[autoHide](SideBarContainerAttribute.autoHide)时。
+1. showSideBar属性值变换时。2. showSideBar属性自适应行为变化时。3. 分割线拖拽触发[autoHide](#autoHide)时。
 
 **起始版本：** 23
 
@@ -360,7 +360,7 @@ default showSideBar(value: boolean | Bindable<boolean> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| Bindable&lt;boolean&gt; \| undefined | 是 |  |
+| value | boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -452,7 +452,7 @@ default sideBarWidth(value: Length | Bindable<Length> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](arkts-arkui-length-t.md) \| Bindable&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | 是 |  |
+| value | [Length](arkts-arkui-length-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Length](arkts-arkui-length-t.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 

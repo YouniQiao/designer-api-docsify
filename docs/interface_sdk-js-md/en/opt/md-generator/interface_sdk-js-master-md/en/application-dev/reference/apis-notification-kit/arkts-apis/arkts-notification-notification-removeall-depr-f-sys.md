@@ -12,7 +12,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#removeAll
+**Substitutes:** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -26,7 +26,7 @@ Removes all notifications for a specified application. This API uses an asynchro
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | Yes |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 
@@ -42,7 +42,7 @@ Removes all notifications. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#removeAll
+**Substitutes:** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -71,7 +71,7 @@ Removes all notifications for a specified user. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#removeAll
+**Substitutes:** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -101,7 +101,7 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#removeAll
+**Substitutes:** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -121,7 +121,7 @@ Removes all notifications for a specified user. This API uses a promise to retur
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## removeAll
@@ -136,7 +136,7 @@ Removes all notifications for a specified application. This API uses a promise t
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#removeAll
+**Substitutes:** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -150,10 +150,10 @@ Removes all notifications for a specified application. This API uses a promise t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bundle | [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md) | No |
+| bundle | [BundleOption](arkts-notification-notificationextensionsubscription-bundleoption-t.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

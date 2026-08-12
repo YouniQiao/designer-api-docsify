@@ -11,7 +11,7 @@ Describes the partner device address.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from 'kits/@kit.ConnectivityKit';
+import { partnerAgent } from '@kit.ConnectivityKit';
 ```
 
 ## bluetoothAddress

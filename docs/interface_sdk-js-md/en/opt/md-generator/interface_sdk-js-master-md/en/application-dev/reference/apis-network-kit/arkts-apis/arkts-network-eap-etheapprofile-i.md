@@ -11,7 +11,7 @@ Eth EAP profile.
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## altSubjectMatch
@@ -150,7 +150,7 @@ eapMethod: EapMethod
 
 EAP authentication method
 
-**Type:** [EapMethod](arkts-network-eap-eapmethod-e.md)
+**Type:** EapMethod
 
 **Since:** 20
 
@@ -214,7 +214,7 @@ phase2Method: Phase2Method
 
 Phase 2 authentication method
 
-**Type:** [Phase2Method](arkts-network-eap-phase2method-e.md)
+**Type:** Phase2Method
 
 **Since:** 20
 

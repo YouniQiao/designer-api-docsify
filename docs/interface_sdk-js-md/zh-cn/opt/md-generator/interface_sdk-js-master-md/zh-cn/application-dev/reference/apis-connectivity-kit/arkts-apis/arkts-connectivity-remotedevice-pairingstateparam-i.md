@@ -34,7 +34,7 @@ preState: PairingState
 
 上一个配对状态。
 
-**类型：** [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md)
+**类型：** PairingState
 
 **起始版本：** 26.0.0
 
@@ -88,7 +88,7 @@ state: PairingState
 
 当前配对状态。
 
-**类型：** [PairingState](arkts-connectivity-remotedevice-pairingstate-t.md)
+**类型：** PairingState
 
 **起始版本：** 26.0.0
 

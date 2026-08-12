@@ -10,7 +10,7 @@ new(): Map<any, any>
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Map&lt;any, any&gt; |
+| Map & lt;any, any & gt; |
 
 ## [[Construct]]
 
@@ -28,7 +28,7 @@ new <K, V>(entries?: readonly (readonly [K, V])[] | null): Map<K, V>
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Map&lt;K, V&gt; |
+| Map & lt;K, V & gt; |
 
 ## prototype
 

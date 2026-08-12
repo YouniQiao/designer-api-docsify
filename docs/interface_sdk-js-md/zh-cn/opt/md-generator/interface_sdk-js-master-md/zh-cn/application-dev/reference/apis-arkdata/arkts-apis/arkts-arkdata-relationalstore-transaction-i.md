@@ -1,13 +1,13 @@
 # Transaction
 
-提供以事务方式管理数据库的方法。事务对象是通过[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction)接口创建的，不同事务对象之间的操作是隔离的，不同类型事务的区别见[TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md) 。
+提供以事务方式管理数据库的方法。事务对象是通过[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createTransaction)接口创建的，不同事务对象之间的操作是隔离的，不同类型事务的区别见[TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md#TransactionType) 。
 
-当前关系型数据库同一时刻仅支持一个写事务，所以如果当前[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)存在写事务未释放，创建IMMEDIATE或EXCLUSIVE事务会返回14800024错误码。如果是创建的DEFERRED事务，则可能在首次使用DEFERRED事务调用写操作时返回14800024错误码。通过IMMEDIATE或EXCLUSIVE创建写事务或者DEFERRED事务升级到写事务之后，  
-[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)的写操作也会返回14800024错误码。
+当前关系型数据库同一时刻仅支持一个写事务，所以如果当前[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#RdbStore)存在写事务未释放，创建IMMEDIATE或EXCLUSIVE事务会返回14800024错误码。如果是创建的DEFERRED事务，则可能在首次使用DEFERRED事务调用写操作时返回14800024错误码。通过IMMEDIATE或EXCLUSIVE创建写事务或者DEFERRED事务升级到写事务之后，  
+[RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#RdbStore)的写操作也会返回14800024错误码。
 
 当事务并发量较高且写事务持续时间较长时，返回14800024错误码的次数可能会变多，开发者可以通过减少事务占用时长减少14800024出现的次数，也可以通过重试的方式处理14800024错误码。
 
-在使用以下API前，请先通过[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createtransaction)方法获取Transaction实例，再通过此实例调用对应方法。
+在使用以下API前，请先通过[createTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#createTransaction)方法获取Transaction实例，再通过此实例调用对应方法。
 
 > **说明：**
 > 
@@ -15,7 +15,7 @@
 
 **示例：**
 
-示例代码中this.context定义见Stage模型的应用[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。
+示例代码中this.context定义见Stage模型的应用[Context](./app/context)。
 
 **起始版本：** 14
 
@@ -35,15 +35,15 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
+按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
 
 **起始版本：** 14
 
@@ -56,33 +56,33 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## batchInsertSync
 
@@ -96,15 +96,15 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): number
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
-按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
+按每批32766个参数，分批以[ConflictResolution.ON_CONFLICT_REPLACE](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)策略写入，参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小，中途失败则立即返回。
 
 **起始版本：** 14
 
@@ -117,7 +117,7 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): number
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 
 **返回值：**
 
@@ -129,21 +129,21 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): number
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## batchInsertWithConflictResolution
 
@@ -155,17 +155,17 @@ batchInsertWithConflictResolution(
     ): Promise<number>
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，使用Promise异步回调。
+向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)，使用Promise异步回调。
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -186,37 +186,37 @@ batchInsertWithConflictResolution(
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 | conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800034](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800022](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## batchInsertWithConflictResolutionSync
 
@@ -225,17 +225,17 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
       conflict: ConflictResolution): number
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)。
+向目标表中插入一组数据，可以通过conflict参数指定冲突解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)。
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -256,7 +256,7 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 | conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | 是 |
 
 **返回值：**
@@ -269,24 +269,24 @@ batchInsertWithConflictResolutionSync(table: string, values: Array<ValuesBucket>
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800022](../errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800034](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800034-sqlite库使用不正确) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800022](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite异步回调请求被中止) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## batchInsertWithReturning
 
@@ -295,18 +295,18 @@ batchInsertWithReturning(table: string, values: Array<ValuesBucket>, config: Ret
       conflict?: ConflictResolution): Promise<Result>
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回  
-[Result](arkts-arkdata-relationalstore-result-i.md)。使用Promise异步回调。
+向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)，返回  
+[Result](arkts-arkdata-relationalstore-result-i.md#Result)。使用Promise异步回调。
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -331,7 +331,7 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | 是 |
 | conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | 否 |
 
@@ -339,23 +339,23 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | 类型 |
 | --- |
-| Promise&lt;Result&gt; |
+| Promise & lt;Result & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## batchInsertWithReturningSync
 
@@ -364,18 +364,18 @@ batchInsertWithReturningSync(table: string, values: Array<ValuesBucket>, config:
       conflict?: ConflictResolution): Result
 ```
 
-向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回  
-[Result](arkts-arkdata-relationalstore-result-i.md)。
+向目标表中插入一组数据，可以通过conflict参数指定当发生数据冲突时的解决模式[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)，返回  
+[Result](arkts-arkdata-relationalstore-result-i.md#Result)。
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -400,7 +400,7 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 | config | [ReturningConfig](arkts-arkdata-relationalstore-returningconfig-i.md) | 是 |
 | conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | 否 |
 
@@ -414,17 +414,17 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## commit
 
@@ -444,21 +444,21 @@ commit(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## delete
 
@@ -484,27 +484,27 @@ delete(predicates: RdbPredicates): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## deleteSync
 
@@ -536,21 +536,21 @@ deleteSync(predicates: RdbPredicates): number
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## deleteWithReturning
 
@@ -558,7 +558,7 @@ deleteSync(predicates: RdbPredicates): number
 deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise<Result>
 ```
 
-根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise异步回调。
+根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md#Result)，使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -579,23 +579,23 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 
 | 类型 |
 | --- |
-| Promise&lt;Result&gt; |
+| Promise & lt;Result & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## deleteWithReturningSync
 
@@ -603,7 +603,7 @@ deleteWithReturning(predicates: RdbPredicates, config: ReturningConfig): Promise
 deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Result
 ```
 
-根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
+根据RdbPredicates的实例对象从数据库中删除数据，返回[Result](arkts-arkdata-relationalstore-result-i.md#Result)。
 
 **起始版本：** 23
 
@@ -630,17 +630,17 @@ deleteWithReturningSync(predicates: RdbPredicates, config: ReturningConfig): Res
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## execute
 
@@ -652,8 +652,8 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 
 该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
 
-此接口不支持执行查询、附加数据库和事务操作，查询可以使用[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-transaction-i.md#query)接口代替、附加数据库可以使用  
+此接口不支持执行查询、附加数据库和事务操作，查询可以使用[querySql](#querySql)、  
+[query](#query)接口代替、附加数据库可以使用  
 [attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)接口代替。
 
 不支持分号分隔的多条语句。
@@ -671,34 +671,34 @@ execute(sql: string, args?: Array<ValueType>): Promise<ValueType>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| args | Array&lt;ValueType&gt; | 否 |
+| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ValueType&gt; |
+| Promise & lt;ValueType & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## executeSync
 
@@ -710,8 +710,8 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 
 该接口支持执行增删改操作，支持执行PRAGMA语法的sql，支持对表的操作（建表、删表、修改表），返回结果类型由执行具体sql的结果决定。
 
-此接口不支持执行查询、附加数据库和事务操作，查询可以使用[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql)、  
-[query](arkts-arkdata-relationalstore-transaction-i.md#query)接口代替、附加数据库可以使用  
+此接口不支持执行查询、附加数据库和事务操作，查询可以使用[querySql](#querySql)、  
+[query](#query)接口代替、附加数据库可以使用  
 [attach](arkts-arkdata-relationalstore-rdbstore-i.md#attach)接口代替。
 
 不支持分号分隔的多条语句。
@@ -729,7 +729,7 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| args | Array&lt;ValueType&gt; | 否 |
+| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
@@ -741,22 +741,22 @@ executeSync(sql: string, args?: Array<ValueType>): ValueType
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## insert
 
@@ -770,11 +770,11 @@ insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Prom
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -796,27 +796,27 @@ insert(table: string, values: ValuesBucket, conflict?: ConflictResolution): Prom
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## insertSync
 
@@ -831,11 +831,11 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -850,7 +850,7 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) \| sendableRelationalStore.ValuesBucket | 是 |
+| values | ValuesBucket \| sendableRelationalStore.ValuesBucket | 是 |
 | conflict | [ConflictResolution](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-conflictresolution-e.md) | 否 |
 
 **返回值：**
@@ -863,21 +863,21 @@ insertSync(table: string, values: ValuesBucket | sendableRelationalStore.ValuesB
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## query
 
@@ -898,28 +898,28 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| columns | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ResultSet&gt; |
+| Promise & lt;ResultSet & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## querySql
 
@@ -940,29 +940,29 @@ querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| args | Array&lt;ValueType&gt; | 否 |
+| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ResultSet&gt; |
+| Promise & lt;ResultSet & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## querySqlSync
 
@@ -970,7 +970,7 @@ querySql(sql: string, args?: Array<ValueType>): Promise<ResultSet>
 querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 ```
 
-根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+根据指定SQL语句查询数据库中的数据，SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool)线程中执行。
 
 **起始版本：** 14
 
@@ -983,7 +983,7 @@ querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| args | Array&lt;ValueType&gt; | 否 |
+| [args](arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
@@ -995,17 +995,17 @@ querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## querySqlWithoutRowCount
 
@@ -1013,7 +1013,7 @@ querySqlSync(sql: string, args?: Array<ValueType>): ResultSet
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数。使用Promise异步回调。性能优于[querySql](arkts-arkdata-relationalstore-transaction-i.md#querysql)接口。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。
+根据指定条件查询数据库中的数据，查询时不计算行数。使用Promise异步回调。性能优于[querySql](#querySql)接口。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。
 
 **起始版本：** 23
 
@@ -1028,20 +1028,20 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| bindArgs | Array&lt;ValueType&gt; | 否 |
+| bindArgs | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;LiteResultSet&gt; |
+| Promise&lt;[LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## querySqlWithoutRowCountSync
 
@@ -1049,7 +1049,7 @@ querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteR
 querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResultSet
 ```
 
-根据指定SQL语句查询数据库中的数据，查询时不计算行数。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对querySqlWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+根据指定SQL语句查询数据库中的数据，查询时不计算行数。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。对querySqlWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool)线程中执行。
 
 **起始版本：** 23
 
@@ -1064,7 +1064,7 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| bindArgs | Array&lt;ValueType&gt; | 否 |
+| bindArgs | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
@@ -1076,8 +1076,8 @@ querySqlWithoutRowCountSync(sql: string, bindArgs?: Array<ValueType>): LiteResul
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## querySync
 
@@ -1086,7 +1086,7 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 ```
 
 根据指定条件查询数据库中的数据。对query同步接口获得的resultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到  
-[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool)线程中执行。
 
 **起始版本：** 14
 
@@ -1099,7 +1099,7 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| columns | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
@@ -1111,17 +1111,17 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## queryWithoutRowCount
 
@@ -1129,7 +1129,7 @@ querySync(predicates: RdbPredicates, columns?: Array<string>): ResultSet
 queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数，性能优于[query](arkts-arkdata-relationalstore-transaction-i.md#query)接口。使用Promise异步回调。
+根据指定条件查询数据库中的数据，查询时不计算行数，性能优于[query](#query)接口。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -1144,19 +1144,19 @@ queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promis
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| columns | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;LiteResultSet&gt; |
+| Promise&lt;[LiteResultSet](arkts-arkdata-relationalstore-literesultset-c.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## queryWithoutRowCountSync
 
@@ -1165,7 +1165,7 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 ```
 
 根据指定条件查询数据库中的数据，查询时不计算行数。对queryWithoutRowCountSync同步接口获得的LiteResultSet进行操作时，若逻辑复杂且循环次数过多，可能造成freeze问题，建议将此步骤放到  
-[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md)线程中执行。
+[taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool)线程中执行。
 
 **起始版本：** 23
 
@@ -1180,7 +1180,7 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| columns | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
@@ -1192,7 +1192,7 @@ queryWithoutRowCountSync(predicates: RdbPredicates, columns?: Array<string>): Li
 
 | 错误码ID |
 | --- |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## rollback
 
@@ -1212,21 +1212,21 @@ rollback(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## update
 
@@ -1240,11 +1240,11 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResol
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -1266,27 +1266,27 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictResol
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## updateSync
 
@@ -1300,11 +1300,11 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -1332,21 +1332,21 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 
 | 错误码ID |
 | --- |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800023](../errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800027](../errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
-| [14800026](../errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800031](../errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite访问权限被拒绝) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800027](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite尝试写入只读数据库) |
+| [14800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite数据库内存不足) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlitetext或blob超出大小限制) |
 
 ## updateWithReturning
 
@@ -1356,17 +1356,17 @@ updateWithReturning(values: ValuesBucket, predicates: RdbPredicates, config: Ret
 ```
 
 根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式  
-[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)，使用Promise异步回调。
+[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)，返回[Result](arkts-arkdata-relationalstore-result-i.md#Result)，使用Promise异步回调。
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -1393,23 +1393,23 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | 类型 |
 | --- |
-| Promise&lt;Result&gt; |
+| Promise & lt;Result & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |
 
 ## updateWithReturningSync
 
@@ -1419,17 +1419,17 @@ updateWithReturningSync(values: ValuesBucket, predicates: RdbPredicates, config:
 ```
 
 根据RdbPredicates的指定实例对象更新数据库中的数据，可以通过conflict参数指定当发生数据冲突时的解决模式  
-[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md)，返回[Result](arkts-arkdata-relationalstore-result-i.md)。
+[ConflictResolution](arkts-arkdata-relationalstore-conflictresolution-e.md#ConflictResolution)，返回[Result](arkts-arkdata-relationalstore-result-i.md#Result)。
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
 如果单条数据超过此限制，在后续通过RdbStore的  
 [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)或  
-[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、  
-[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+[querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getValue)、  
+[getString](arkts-arkdata-relationalstore-resultset-i.md#getString)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用  
-[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#querybystep)接口。
+[queryByStep](arkts-arkdata-relationalstore-rdbstore-i.md#queryByStep)接口。
 
 单条字符串类型字段最大支持写入8MB，超出部分将被截断，仅保留前8MB数据，若需存储超过8MB的内容，建议使用blob类型。
 
@@ -1462,14 +1462,14 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 | 错误码ID |
 | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
-| [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
-| [14800032](../errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
-| [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) |
-| [14800025](../errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
-| [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
-| [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) |
-| [14800029](../errorcode-data-rdb.md#14800029-sqlite数据库已满) |
-| [14800028](../errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
-| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
-| [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) |
+| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) |
+| [14800032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800032-sqlite由于违反约束而中止) |
+| [14800021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite通用错误) |
+| [14800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800025-sqlite数据库中的表被锁定) |
+| [14800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) |
+| [14800011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-数据库文件异常) |
+| [14800029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite数据库已满) |
+| [14800028](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite发生了某种磁盘io错误) |
+| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [14800014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-目标实例已关闭) |

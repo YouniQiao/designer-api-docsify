@@ -12,7 +12,7 @@ Cancels notifications under a notification group of this application. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancelGroup
+**Substitutes:** [cancelGroup](ohos.notificationManager/notificationManager#cancelGroup)
 
 <!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notification-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -38,7 +38,7 @@ Cancels notifications under a notification group of this application. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancelGroup
+**Substitutes:** [cancelGroup](ohos.notificationManager/notificationManager#cancelGroup)
 
 <!--Device-notification-function cancelGroup(groupName: string): Promise<void>--><!--Device-notification-function cancelGroup(groupName: string): Promise<void>-End-->
 
@@ -54,4 +54,4 @@ Cancels notifications under a notification group of this application. This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

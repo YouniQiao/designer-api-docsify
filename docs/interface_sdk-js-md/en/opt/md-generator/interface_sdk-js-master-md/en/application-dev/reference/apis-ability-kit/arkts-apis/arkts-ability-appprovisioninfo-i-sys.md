@@ -200,7 +200,7 @@ readonly validity: Validity
 
 Validity period in the configuration file.
 
-**Type:** [Validity](arkts-ability-bundlemanager-validity-t-sys.md)
+**Type:** [Validity](arkts-ability-appprovisioninfo-validity-i-sys.md)
 
 **Since:** 10
 

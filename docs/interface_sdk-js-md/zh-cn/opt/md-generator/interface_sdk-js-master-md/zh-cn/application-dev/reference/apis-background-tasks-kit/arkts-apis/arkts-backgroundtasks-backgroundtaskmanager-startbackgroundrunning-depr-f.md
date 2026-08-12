@@ -12,7 +12,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)(context:
+**替代接口：** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -118,7 +118,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-depr-f.md#startbackgroundrunning)(context:
+**替代接口：** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -138,7 +138,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

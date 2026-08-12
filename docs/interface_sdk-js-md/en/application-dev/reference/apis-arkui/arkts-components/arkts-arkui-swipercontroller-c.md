@@ -169,7 +169,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | No | Callback invoked when the animation stops.<br>**Since:** 18 |
+| callback | VoidCallback | No | Callback invoked when the animation stops.<br>**Since:** 18 |
 
 ## isFakeDragging
 
@@ -215,7 +215,7 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 > **NOTE：**
 > 
 > **preloadItems** of **Swiper** needs to be called after **Swiper** is created. You are advised to control the
-> first preloading in the [onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear) lifecycle of **Swiper**.
+> first preloading in the [onAppear](CommonMethod#onAppear) lifecycle of **Swiper**.
 
 **Since:** 18
 
@@ -235,7 +235,7 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload. |
+| indices | Optional&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload. |
 
 **Return value:**
 
@@ -247,8 +247,8 @@ When combining with [LazyForEach](../../../ui/rendering-control/arkts-rendering-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
 
 ## showNext
 

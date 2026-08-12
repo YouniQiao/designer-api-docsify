@@ -15,7 +15,7 @@ The module provides APIs for querying and adjusting the screen brightness and mo
 ## Modules to Import
 
 ```TypeScript
-import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from 'kits/@kit.BasicServicesKit';
+import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
 ```
 
 ## getMode
@@ -88,7 +88,7 @@ timeout (automatic). It cannot prevent screen-off caused by user actions (such a
 
 **Deprecated since:** 7
 
-**Substitutes:** @ohos.window:Window.setWindowKeepScreenOn
+**Substitutes:** [setWindowKeepScreenOn](@ohos.window:Window.setWindowKeepScreenOn)
 
 <!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void--><!--Device-Brightness-static setKeepScreenOn(options?: SetKeepScreenOnOptions): void-End-->
 
@@ -138,7 +138,7 @@ Sets the screen brightness.
 
 **Deprecated since:** 7
 
-**Substitutes:** [@ohos.brightness:brightness.setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue)
+**Substitutes:** [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setValue)
 
 <!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void--><!--Device-Brightness-static setValue(options?: SetBrightnessOptions): void-End-->
 

@@ -37,7 +37,7 @@ DRAG_SUCCESSFUL = 0
 ```
 
 The drag is successful. This value applies to  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop).
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)).
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ DRAG_FAILED = 1
 ```
 
 The drag fails. This value applies to  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop).
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)).
 
 **Since:** 10
 
@@ -79,7 +79,7 @@ DRAG_CANCELED = 2
 ```
 
 The drag is canceled. This value applies to  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop).
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)).
 
 **Since:** 10
 
@@ -99,8 +99,8 @@ The drag is canceled. This value applies to
 DROP_ENABLED = 3
 ```
 
-The component allows dropping. This value applies to [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter),  
-[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), and [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave).
+The component allows dropping. This value applies to [onDragEnter](arkts-arkui-commonmethod-c.md#onDragEnter),  
+[onDragMove](arkts-arkui-commonmethod-c.md#onDragMove), and [onDragLeave](arkts-arkui-commonmethod-c.md#onDragLeave).
 
 **Since:** 10
 
@@ -120,8 +120,8 @@ The component allows dropping. This value applies to [onDragEnter](arkts-arkui-c
 DROP_DISABLED = 4
 ```
 
-The component does not allow dropping. This value applies to [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter),  
-[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), and [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave).
+The component does not allow dropping. This value applies to [onDragEnter](arkts-arkui-commonmethod-c.md#onDragEnter),  
+[onDragMove](arkts-arkui-commonmethod-c.md#onDragMove), and [onDragLeave](arkts-arkui-commonmethod-c.md#onDragLeave).
 
 **Since:** 10
 

@@ -1,8 +1,8 @@
 # BaseGestureEvent
 
-Defines the basic gesture event type. Inherits from [BaseEvent](arkts-arkui-common-baseevent-i.md).
+Defines the basic gesture event type. Inherits from [BaseEvent](BaseEvent).
 
-**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md)
+**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](BaseEvent)
 
 **Since:** 11
 
@@ -24,7 +24,7 @@ Information about touch points of the gesture event. For gesture events initiate
 
 **fingerInfos** only records information about effective fingers that participate in the touch. Fingers that are pressed first but do not participate in triggering of the current gesture will not be shown in **fingerInfos**. The default value is an empty array **[]**, and an empty array indicates no effective touch point information.
 
-**Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
+**Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 20
 
@@ -46,7 +46,7 @@ fingerList: FingerInfo[]
 
 Information about all fingers triggering the event.
 
-**Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
+**Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 11
 

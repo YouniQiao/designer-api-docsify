@@ -54,7 +54,7 @@ domainAccountInfo: DomainAccountInfo
 
 域账号的信息。
 
-**类型：** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md)
+**类型：** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
 **起始版本：** 10
 

@@ -2,7 +2,7 @@
 
 折线绘制组件属性。
 
-**继承/实现关系：** PolylineAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**继承/实现关系：** PolylineAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<PolylineAttribute> | Attri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;PolylineAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -64,7 +64,7 @@ default points(value: Array<ShapePoint> | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;ShapePoint&gt; \| undefined | 是 | 折线经过坐标点列表。使用时传入一个二维数组，每个子数组表示一个顶点的[x, y]坐标。 &lt;br/&gt;默认值：[]（空数组）&lt;br/&gt;默认单位：vp &lt;br/&gt;异常值undefined和null按照默认值处理。 |
+| value | Array&lt;[ShapePoint](arkts-arkui-shapepoint-t.md)&gt; \| undefined | 是 | 折线经过坐标点列表。使用时传入一个二维数组，每个子数组表示一个顶点的[x, y]坐标。 &lt;br/&gt;默认值：[]（空数组）&lt;br/&gt;默认单位：vp &lt;br/&gt;异常值undefined和null按照默认值处理。 |
 
 **返回值：**
 

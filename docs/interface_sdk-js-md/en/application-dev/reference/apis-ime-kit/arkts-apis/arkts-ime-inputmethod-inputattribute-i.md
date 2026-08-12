@@ -13,7 +13,7 @@ Attribute of Input.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## abilityName
@@ -64,7 +64,7 @@ enterKeyType: EnterKeyType
 
 Indicates the enter key type of the input method.
 
-**Type:** [EnterKeyType](../../apis-arkui/arkts-apis/arkts-arkui-textinput-enterkeytype-e.md)
+**Type:** EnterKeyType
 
 **Since:** 10
 

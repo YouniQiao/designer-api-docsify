@@ -51,7 +51,7 @@ decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## decodeSync
 
@@ -109,7 +109,7 @@ encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 
 | 类型 |
 | --- |
-| Promise&lt;Uint8Array&gt; |
+| Promise & lt;Uint8Array & gt; |
 
 ## encodeSync
 
@@ -167,7 +167,7 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## encodeToStringSync
 

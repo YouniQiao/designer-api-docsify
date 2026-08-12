@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## closeSync
@@ -28,7 +28,7 @@ Closes a file or directory. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| File | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File** object or FD of the file to close. Once closed, the **File** object or FD cannot be used for read or write operations. |
 
 **Error codes:**
 

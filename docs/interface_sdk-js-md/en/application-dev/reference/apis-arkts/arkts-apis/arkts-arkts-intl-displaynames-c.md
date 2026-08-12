@@ -32,8 +32,8 @@ Creates a new DisplayNames.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| locales | [BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md) \| BCP47LanguageTag[] | No | the locales. |
-| options | [DisplayNamesOptions](arkts-arkts-intl-displaynamesoptions-i.md) | No | the options. |
+| locales | BCP47LanguageTag \| BCP47LanguageTag[] | No | the locales. |
+| options | DisplayNamesOptions | No | the options. |
 
 ## of
 
@@ -87,7 +87,7 @@ Returns the resolved options.
 
 | Type | Description |
 | --- | --- |
-| [ResolvedDisplayNamesOptions](arkts-arkts-intl-resolveddisplaynamesoptions-i.md) | the resolved options. |
+| ResolvedDisplayNamesOptions | the resolved options. |
 
 ## supportedLocalesOf
 

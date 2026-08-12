@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe#RemoveReason
+**替代接口：** [RemoveReason](ohos.notificationSubscribe/notificationSubscribe#RemoveReason)
 
 <!--Device-notification-export enum RemoveReason--><!--Device-notification-export enum RemoveReason-End-->
 
@@ -30,7 +30,7 @@ CLICK_REASON_REMOVE = 1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CLICK_REASON_REMOVE
+**替代接口：** [CLICK_REASON_REMOVE](ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CLICK_REASON_REMOVE)
 
 <!--Device-RemoveReason-CLICK_REASON_REMOVE = 1--><!--Device-RemoveReason-CLICK_REASON_REMOVE = 1-End-->
 
@@ -52,7 +52,7 @@ CANCEL_REASON_REMOVE = 2
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CANCEL_REASON_REMOVE
+**替代接口：** [CANCEL_REASON_REMOVE](ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CANCEL_REASON_REMOVE)
 
 <!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2--><!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2-End-->
 

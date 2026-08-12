@@ -28,7 +28,7 @@ columnWidths?: LengthMetrics[]
 > 4. 当columnWidths数组长度与实际列数不匹配时，超出列数的列宽值将被忽略；未指定列宽的列将均分组件剩余可用宽度
 > （组件宽度减去已指定列宽之和）。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)[]
+**类型：** LengthMetrics[]
 
 **默认值：** Each column has equal width, calculated by dividing the total component width by the number of columns.
 
@@ -54,13 +54,13 @@ range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascade
 
 > **说明：**
 > 
-> 1. 单列数据选择器使用string[]，[Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)，[TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]类型。
+> 1. 单列数据选择器使用string[]，[Resource](Resource)，[TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md#TextPickerRangeContent)[]类型。
 > 2. 多列非联动数据选择器使用string[][]类型。
-> 3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]类型。
+> 3. 多列联动数据选择器使用[TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md#TextCascadePickerRangeContent)[]类型。
 > 4. Resource类型只支持[strarray.json](../../../quick-start/resource-categories-and-access.md#资源组目录)。
 > 5. range的类型及列数不可以动态修改。
 
-**类型：** string[] \| string[][] \| Resource \| TextPickerRangeContent[] \| TextCascadePickerRangeContent[]
+**类型：** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **起始版本：** 8
 
@@ -117,14 +117,14 @@ value?: ResourceStr | ResourceStr[]
 > **说明：**
 > 
 > 1. 从API version 10开始，该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-> 2. 从API version 20开始，支持[Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md)类型。
+> 2. 从API version 20开始，支持[Resource](Resource)类型。
 > 3. 只有显示文本列表时该值有效。显示图片或图文混排的列表时，该值无效。
-> 4. 单列数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)类型。
-> 5. 多列非联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)[]类型，数组长度与列数一致。
-> 6. 多列联动数据选择器使用[ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)[]类型，数组长度与层级数一致。
+> 4. 单列数据选择器使用[ResourceStr](ResourceStr)类型。
+> 5. 多列非联动数据选择器使用[ResourceStr](ResourceStr)[]类型，数组长度与列数一致。
+> 6. 多列联动数据选择器使用[ResourceStr](ResourceStr)[]类型，数组长度与层级数一致。
 > 7. 当selected和value均未设置，或selected值无效时，使用默认值。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ResourceStr[]
+**类型：** ResourceStr \| ResourceStr[]
 
 **默认值：** value of the first item [since 8 - 9]
 

@@ -11,7 +11,7 @@ Provides methods to operate or manage NFC card emulation.
 ## Modules to Import
 
 ```TypeScript
-import { cardEmulation } from 'kits/@kit.ConnectivityKit';
+import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

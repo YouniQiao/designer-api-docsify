@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## createHttp
@@ -26,7 +26,7 @@ Creates an HTTP request task.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [HttpRequest](arkts-network-connection-httprequest-t.md) |
+| [HttpRequest](arkts-network-http-httprequest-i.md) |
 
 ## Examples
 

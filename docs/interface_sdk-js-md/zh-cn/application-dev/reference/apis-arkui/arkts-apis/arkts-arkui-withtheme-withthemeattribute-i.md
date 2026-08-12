@@ -1,6 +1,6 @@
 # WithThemeAttribute
 
-不支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。
+不支持[通用属性](./../../@internal/component/ets/common)和[通用事件](./../../@internal/component/ets/common)。
 
 **起始版本：** 23
 
@@ -81,7 +81,7 @@ default setWithThemeOptions(options: WithThemeOptions | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withthemeoptions-i.md) \| undefined | 是 | 创建WithTheme的选项。 |
+| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | 是 | 创建WithTheme的选项。 |
 
 **返回值：**
 

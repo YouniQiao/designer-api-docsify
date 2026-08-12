@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## uninstallFont
@@ -42,9 +42,9 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | Font file does not exist. |
-| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Font file delete error. |
-| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | Other error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system application. |
+| [31100107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | Font file does not exist. |
+| [31100108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Font file delete error. |
+| [31100109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | Other error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system application. |
 

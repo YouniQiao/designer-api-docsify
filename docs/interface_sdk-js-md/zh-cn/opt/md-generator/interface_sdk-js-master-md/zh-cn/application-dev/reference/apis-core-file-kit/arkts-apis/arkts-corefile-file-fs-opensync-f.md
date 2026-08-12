@@ -27,7 +27,7 @@ declare function openSync(path: string, mode?: number): File
 
 | 类型 |
 | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) |
+| [File](arkts-corefile-file-fs-file-i.md) |
 
 **错误码：**
 

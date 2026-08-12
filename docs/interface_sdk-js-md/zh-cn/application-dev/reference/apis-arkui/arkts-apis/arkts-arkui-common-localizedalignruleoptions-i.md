@@ -80,7 +80,7 @@ end?: LocalizedHorizontalAlignParam
 
 Right alignment with left-to-right scripts and left alignment with right-to-left scripts in the horizontal direction.
 
-**类型：** [LocalizedHorizontalAlignParam](../arkts-components/arkts-arkui-localizedhorizontalalignparam-i.md)
+**类型：** [LocalizedHorizontalAlignParam](arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 23
 
@@ -100,7 +100,7 @@ middle?: LocalizedHorizontalAlignParam
 
 Center alignment in the horizontal direction.
 
-**类型：** [LocalizedHorizontalAlignParam](../arkts-components/arkts-arkui-localizedhorizontalalignparam-i.md)
+**类型：** [LocalizedHorizontalAlignParam](arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 23
 
@@ -120,7 +120,7 @@ start?: LocalizedHorizontalAlignParam
 
 Left alignment with left-to-right scripts and right alignment with right-to-left scripts in the horizontal direction.
 
-**类型：** [LocalizedHorizontalAlignParam](../arkts-components/arkts-arkui-localizedhorizontalalignparam-i.md)
+**类型：** [LocalizedHorizontalAlignParam](arkts-arkui-common-localizedhorizontalalignparam-i.md)
 
 **起始版本：** 23
 

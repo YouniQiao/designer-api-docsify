@@ -106,7 +106,7 @@ actionAreaDistance?: Length
 
 Swipe distance threshold for deleting the list item. This threshold applies after the swipe action component is fully swiped into view and triggers the deletion action.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** 56vp
 
@@ -130,7 +130,7 @@ builder?: CustomBuilder
 
 Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 10
 
@@ -152,7 +152,7 @@ builderComponent?: ComponentContent
 
 Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 18
 

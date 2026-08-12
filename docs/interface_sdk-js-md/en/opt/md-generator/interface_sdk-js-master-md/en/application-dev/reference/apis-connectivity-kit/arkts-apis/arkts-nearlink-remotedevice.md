@@ -13,7 +13,7 @@ Provides interaction methods such as pairing and connection with remote devices.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

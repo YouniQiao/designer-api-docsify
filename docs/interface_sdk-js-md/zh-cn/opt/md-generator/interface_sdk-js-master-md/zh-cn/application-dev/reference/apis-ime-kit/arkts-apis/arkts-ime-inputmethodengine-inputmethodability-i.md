@@ -1,9 +1,9 @@
 # InputMethodAbility
 
 InputMethodAbility是输入法应用的核心能力对象，提供输入法生命周期管理、面板创建与销毁、事件订阅等功能。输入法应用通过  
-[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取该实例。
+[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取该实例。
 
-下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability)获取到InputMethodAbility实例后，通过实例调用。
+下列API均需使用[getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getInputMethodAbility)获取到InputMethodAbility实例后，通过实例调用。
 
 **起始版本：** 9
 
@@ -18,7 +18,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 ```
 
 创建输入法面板，仅支持输入法应用在  
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)（输入法扩展能力）类中调用。使用callback异步回调。
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)（输入法扩展能力）类中调用。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -30,7 +30,7 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 | info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Panel&gt; | 是 |
 
@@ -38,8 +38,8 @@ createPanel(ctx: BaseContext, info: PanelInfo, callback: AsyncCallback<Panel>): 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
 
 ## 示例
 
@@ -80,7 +80,7 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 ```
 
 创建输入法面板，仅支持输入法应用在  
-[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md)类中调用。使用promise异步回调。
+[InputMethodExtensionAbility](arkts-ime-inputmethodextensionability-c.md#InputMethodExtensionAbility)类中调用。使用promise异步回调。
 
 **起始版本：** 10
 
@@ -92,21 +92,21 @@ createPanel(ctx: BaseContext, info: PanelInfo): Promise<Panel>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| [ctx](../../apis-arkui/arkts-apis/arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 | info | [PanelInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-selectioninput-selectionpanel-panelinfo-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Panel&gt; |
+| Promise & lt;Panel & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
 
 ## 示例
 
@@ -161,7 +161,7 @@ destroyPanel(panel: Panel, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -223,13 +223,13 @@ destroyPanel(panel: Panel): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -289,7 +289,7 @@ getSecurityMode(): SecurityMode
 
 | 错误码ID |
 | --- |
-| [12800004](../errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
+| [12800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-不是输入法应用) |
 
 ## 示例
 
@@ -317,7 +317,7 @@ off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClien
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'inputStart' | 是 |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | 否 |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | 否 |
 
 ## 示例
 
@@ -344,7 +344,7 @@ off(type: 'inputStop', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'inputStop' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## 示例
 
@@ -373,7 +373,7 @@ off(type: 'setCallingWindow', callback: (wid: number) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'setCallingWindow' | 是 |
-| callback | (wid: number) =&gt; void | 是 |
+| callback | (wid: number) = & gt; void | 是 |
 
 ## 示例
 
@@ -402,7 +402,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 ## 示例
 
@@ -434,7 +434,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 ## 示例
 
@@ -466,7 +466,7 @@ off(type: 'setSubtype', callback?: (inputMethodSubtype: InputMethodSubtype) => v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'setSubtype' | 是 |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | 否 |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 否 |
 
 ## 示例
 
@@ -495,7 +495,7 @@ off(type: 'securityModeChange', callback?: Callback<SecurityMode>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'securityModeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 否 |
 
 ## 示例
 
@@ -534,7 +534,7 @@ off(type: 'privateCommand', callback?: Callback<Record<string, CommandDataType>>
 
 | 错误码ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
 
 ## 示例
 
@@ -634,7 +634,7 @@ on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient:
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'inputStart' | 是 |
-| callback | (kbController: KeyboardController, inputClient: InputClient) =&gt; void | 是 |
+| callback | (kbController: KeyboardController, inputClient: InputClient) = & gt; void | 是 |
 
 ## 示例
 
@@ -669,7 +669,7 @@ on(type: 'inputStop', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'inputStop' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## 示例
 
@@ -702,7 +702,7 @@ on(type: 'setCallingWindow', callback: (wid: number) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'setCallingWindow' | 是 |
-| callback | (wid: number) =&gt; void | 是 |
+| callback | (wid: number) = & gt; void | 是 |
 
 ## 示例
 
@@ -735,7 +735,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## 示例
 
@@ -771,7 +771,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'keyboardShow' \| 'keyboardHide' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## 示例
 
@@ -807,7 +807,7 @@ on(type: 'setSubtype', callback: (inputMethodSubtype: InputMethodSubtype) => voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'setSubtype' | 是 |
-| callback | (inputMethodSubtype: InputMethodSubtype) =&gt; void | 是 |
+| callback | (inputMethodSubtype: InputMethodSubtype) = & gt; void | 是 |
 
 ## 示例
 
@@ -842,7 +842,7 @@ on(type: 'securityModeChange', callback: Callback<SecurityMode>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'securityModeChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;SecurityMode&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SecurityMode](arkts-ime-inputmethodengine-securitymode-e.md)&gt; | 是 |
 
 ## 示例
 
@@ -882,7 +882,7 @@ on(type: 'privateCommand', callback: Callback<Record<string, CommandDataType>>):
 
 | 错误码ID |
 | --- |
-| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
 
 ## 示例
 
@@ -925,7 +925,7 @@ on(type: 'callingDisplayDidChange', callback: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

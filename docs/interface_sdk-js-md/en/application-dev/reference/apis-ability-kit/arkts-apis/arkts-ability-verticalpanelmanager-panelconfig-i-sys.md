@@ -15,7 +15,7 @@ Indicates the panel config
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from 'kits/@kit.AbilityKit';
+import { verticalPanelManager } from '@kit.AbilityKit';
 ```
 
 ## sourceAppInfo
@@ -33,7 +33,7 @@ Indicates the info about source app
 -SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string.
 -SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 20
 

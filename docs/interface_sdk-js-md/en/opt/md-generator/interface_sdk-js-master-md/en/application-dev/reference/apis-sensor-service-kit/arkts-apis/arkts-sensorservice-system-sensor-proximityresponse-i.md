@@ -6,7 +6,7 @@ Callback invoked when the proximity sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#ProximityResponse
+**Substitutes:** [ProximityResponse](ohos.sensor/sensor#ProximityResponse)
 
 <!--Device-unnamed-export interface ProximityResponse--><!--Device-unnamed-export interface ProximityResponse-End-->
 
@@ -15,7 +15,7 @@ Callback invoked when the proximity sensor data changes.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## distance
@@ -32,7 +32,7 @@ Distance between a visible object and the device screen.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#ProximityResponse.distance
+**Substitutes:** [distance](ohos.sensor/sensor#ProximityResponse.distance)
 
 **Model restriction:** This API can be used only in the FA model.
 

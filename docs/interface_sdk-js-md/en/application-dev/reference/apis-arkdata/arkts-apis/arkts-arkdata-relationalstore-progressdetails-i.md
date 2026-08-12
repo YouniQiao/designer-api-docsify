@@ -13,7 +13,7 @@ Describes detail of the cloud sync {@code Progress}.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## code
@@ -44,7 +44,7 @@ Statistics of each table.
 
 The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, TableDetails&gt;
+**Type:** Record&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ schedule: Progress
 
 Describes the status of data sync progress.
 
-**Type:** [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md)
+**Type:** Progress
 
 **Since:** 10
 

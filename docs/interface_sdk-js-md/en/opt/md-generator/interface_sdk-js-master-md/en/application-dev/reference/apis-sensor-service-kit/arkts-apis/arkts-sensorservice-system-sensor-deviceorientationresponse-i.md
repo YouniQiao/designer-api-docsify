@@ -6,7 +6,7 @@ Defines a **DeviceOrientationResponse** object.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#OrientationResponse
+**Substitutes:** [OrientationResponse](arkts-sensorservice-sensor-orientationresponse-i.md#OrientationResponse)
 
 <!--Device-unnamed-export interface DeviceOrientationResponse--><!--Device-unnamed-export interface DeviceOrientationResponse-End-->
 
@@ -15,7 +15,7 @@ Defines a **DeviceOrientationResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from 'kits/@kit.SensorServiceKit';
+import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## alpha
@@ -32,7 +32,7 @@ Rotation angle around the Z axis when the X/Y axis of the device coincides with 
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#OrientationResponse.alpha
+**Substitutes:** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -54,7 +54,7 @@ Rotation angle around the X axis when the Y/Z axis of the device coincides with 
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#OrientationResponse.beta
+**Substitutes:** [beta](ohos.sensor/sensor#OrientationResponse.beta)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -76,7 +76,7 @@ Rotation angle around the Y axis when the X/Z axis of the device coincides with 
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.sensor/sensor#OrientationResponse.gamma
+**Substitutes:** [gamma](ohos.sensor/sensor#OrientationResponse.gamma)
 
 **Model restriction:** This API can be used only in the FA model.
 

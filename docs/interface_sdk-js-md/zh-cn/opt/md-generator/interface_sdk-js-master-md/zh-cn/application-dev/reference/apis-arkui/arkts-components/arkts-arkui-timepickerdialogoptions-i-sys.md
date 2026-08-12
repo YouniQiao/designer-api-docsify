@@ -2,9 +2,9 @@
 
 时间选择器弹窗选项。
 
-继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md)。
+继承自[TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)。
 
-**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md)
+**继承/实现关系：** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)
 
 **起始版本：** 8
 
@@ -25,9 +25,9 @@ distortionMode?: DistortionMode
 > **系统接口：** 此接口为系统接口。
 
 > **说明：** 当取值为 DISTORTION_AUTO 时，需设置
-> [ImmersiveMaterial](ImmersiveMaterial) 类型材质方可生效，并依据设备算力档位自动生效非线性效果（高中档算力设备生效，
+> [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) 类型材质方可生效，并依据设备算力档位自动生效非线性效果（高中档算力设备生效，
 > 低档算力设备不生效）。非线性动画会增加渲染开销，建议在低端设备上谨慎使用。
-> 各枚举取值含义请参见[DistortionMode](arkts-arkui-distortionmode-e-sys.md)。
+> 各枚举取值含义请参见[DistortionMode](distortionmode)。
 
 **类型：** [DistortionMode](arkts-arkui-distortionmode-e-sys.md)
 
@@ -56,8 +56,8 @@ edgeLightMode?: EdgeLightMode
 > **系统接口：** 此接口为系统接口。
 
 > **说明：** 当取值为 EDGELIGHT_AUTO 时，需设置
-> [ImmersiveMaterial](ImmersiveMaterial) 类型材质方可生效，并依据设备算力档位自动生效流光效果（高档算力设备生效，
-> 中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。各枚举取值含义请参见[EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)。
+> [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) 类型材质方可生效，并依据设备算力档位自动生效流光效果（高档算力设备生效，
+> 中低档算力设备不生效）。流光动画会增加渲染开销，建议在低端设备上谨慎使用。各枚举取值含义请参见[EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md#EdgeLightMode)。
 
 **类型：** [EdgeLightMode](arkts-arkui-edgelightmode-e-sys.md)
 

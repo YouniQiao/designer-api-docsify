@@ -34,7 +34,7 @@ focusModeList?: Array<FilterOptions>
 
 专注模式。
 
-**类型：** Array&lt;FilterOptions&gt;
+**类型：** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **起始版本：** 15
 
@@ -52,7 +52,7 @@ id?: Array<FilterOptions>
 
 联系人id。
 
-**类型：** Array&lt;FilterOptions&gt;
+**类型：** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **起始版本：** 15
 
@@ -70,7 +70,7 @@ name?: Array<FilterOptions>
 
 联系人姓名。
 
-**类型：** Array&lt;FilterOptions&gt;
+**类型：** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **起始版本：** 15
 

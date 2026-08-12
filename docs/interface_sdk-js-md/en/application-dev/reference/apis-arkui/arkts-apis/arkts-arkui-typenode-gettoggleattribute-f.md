@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ToggleAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

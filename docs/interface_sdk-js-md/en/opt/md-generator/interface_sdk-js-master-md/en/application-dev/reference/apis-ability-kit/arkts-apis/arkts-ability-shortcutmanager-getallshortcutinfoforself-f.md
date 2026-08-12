@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## getAllShortcutInfoForSelf
@@ -25,7 +25,7 @@ Obtains all the shortcut information defined in the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;ShortcutInfo&gt;&gt; |
+| Promise & lt;Array & lt;ShortcutInfo & gt; & gt; |
 
 ## Examples
 

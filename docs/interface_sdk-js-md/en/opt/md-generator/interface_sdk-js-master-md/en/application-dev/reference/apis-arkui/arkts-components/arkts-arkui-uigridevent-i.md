@@ -1,9 +1,9 @@
 # UIGridEvent
 
 Represents the return value of the  
-[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent) method in **frameNode**,which can be used to set scroll events for a **Grid** node.
+[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-3) method in **frameNode**,which can be used to set scroll events for a **Grid** node.
 
-**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIGridEvent extends [UIScrollableCommonEvent](arkts-arkui-uiscrollablecommonevent-i.md#UIScrollableCommonEvent)
 
 **Since:** 19
 

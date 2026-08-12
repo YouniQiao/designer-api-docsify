@@ -13,7 +13,7 @@ Describes audio capturer information.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerFlags
@@ -44,7 +44,7 @@ source: SourceType
 
 Audio source type.
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** SourceType
 
 **Since:** 8
 

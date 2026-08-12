@@ -15,7 +15,7 @@ Represents the database information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## alias
@@ -66,7 +66,7 @@ tables: Array<Table>
 
 Table in the database, including the detailed data information.
 
-**Type:** Array&lt;Table&gt;
+**Type:** Array&lt;[Table](arkts-arkdata-cloudextension-table-i-sys.md)&gt;
 
 **Since:** 11
 

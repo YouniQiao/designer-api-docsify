@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## createService
@@ -26,13 +26,13 @@ Establish a new connection that can be used to connect to all the SEs available 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;SEService&gt; | Returns the created SEService instance. |
+| Promise&lt;[SEService](arkts-connectivity-omapi-seservice-i.md)&gt; | Returns the created SEService instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 
 ## Examples
 

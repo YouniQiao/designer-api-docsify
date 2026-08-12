@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 The mode of NavDestination.
 
-**Type:** [NavDestinationMode](../arkts-components/arkts-arkui-navdestinationmode-e.md)
+**Type:** [NavDestinationMode](arkts-arkui-navdestination-navdestinationmode-e.md)
 
 **Since:** 26.0.0
 

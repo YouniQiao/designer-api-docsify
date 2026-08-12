@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## setProxyMode
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function setProxyMode(mode: ProxyMode): Promise<void>
 ```
 
-Set the proxy mode {@link ProxyMode}.
+Set the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#ProxyMode).
 
 **Since:** 20
 
@@ -42,8 +42,8 @@ Set the proxy mode {@link ProxyMode}.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 

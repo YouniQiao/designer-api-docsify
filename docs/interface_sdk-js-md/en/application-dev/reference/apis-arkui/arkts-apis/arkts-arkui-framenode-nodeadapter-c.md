@@ -123,7 +123,7 @@ Obtain all data results.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;FrameNode&gt; | Return all valid FrameNode collections. |
+| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; | Return all valid FrameNode collections. |
 
 ## insertItem
 

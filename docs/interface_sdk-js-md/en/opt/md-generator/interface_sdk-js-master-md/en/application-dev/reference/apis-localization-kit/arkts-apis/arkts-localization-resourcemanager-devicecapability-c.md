@@ -11,7 +11,7 @@ Defines the device capability.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## deviceType
@@ -22,7 +22,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
+**Type:** DeviceType
 
 **Since:** 6
 
@@ -40,7 +40,7 @@ screenDensity: ScreenDensity
 
 Screen density of the device.
 
-**Type:** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
+**Type:** ScreenDensity
 
 **Since:** 6
 

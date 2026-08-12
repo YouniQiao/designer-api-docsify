@@ -36,7 +36,7 @@ optionConstraintRange?: Range
 
 选项范围约束。
 
-**类型：** [Range](arkts-basicservices-scan-range-i.md)
+**类型：** Range
 
 **起始版本：** 20
 

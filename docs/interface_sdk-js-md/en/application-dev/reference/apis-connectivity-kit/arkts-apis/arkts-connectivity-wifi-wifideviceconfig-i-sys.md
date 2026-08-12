@@ -8,7 +8,7 @@ Wi-Fi device configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig
+**Substitutes:** [WifiDeviceConfig](ohos.wifiManager/wifiManager.WifiDeviceConfig)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -17,7 +17,7 @@ Wi-Fi device configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## creatorUid
@@ -36,7 +36,7 @@ The UID of the Wi-Fi configuration creator
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.creatorUid
+**Substitutes:** [creatorUid](ohos.wifiManager/wifiManager.WifiDeviceConfig.creatorUid)
 
 <!--Device-WifiDeviceConfig-creatorUid: number--><!--Device-WifiDeviceConfig-creatorUid: number-End-->
 
@@ -60,7 +60,7 @@ Disable reason
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.disableReason
+**Substitutes:** [disableReason](ohos.wifiManager/wifiManager.WifiDeviceConfig.disableReason)
 
 <!--Device-WifiDeviceConfig-disableReason: number--><!--Device-WifiDeviceConfig-disableReason: number-End-->
 
@@ -76,7 +76,7 @@ ipType: IpType
 
 IP Type
 
-**Type:** [IpType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-iptype-e.md)
+**Type:** IpType
 
 **Since:** 6
 
@@ -84,7 +84,7 @@ IP Type
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.ipType
+**Substitutes:** [ipType](ohos.wifiManager/wifiManager.WifiDeviceConfig.ipType)
 
 <!--Device-WifiDeviceConfig-ipType: IpType--><!--Device-WifiDeviceConfig-ipType: IpType-End-->
 
@@ -108,7 +108,7 @@ Allocated networkId
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.netId
+**Substitutes:** [netId](ohos.wifiManager/wifiManager.WifiDeviceConfig.netId)
 
 <!--Device-WifiDeviceConfig-netId: number--><!--Device-WifiDeviceConfig-netId: number-End-->
 
@@ -132,7 +132,7 @@ Random mac address, the length is 6
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.randomMacAddr
+**Substitutes:** [randomMacAddr](ohos.wifiManager/wifiManager.WifiDeviceConfig.randomMacAddr)
 
 <!--Device-WifiDeviceConfig-randomMacAddr: string--><!--Device-WifiDeviceConfig-randomMacAddr: string-End-->
 
@@ -156,7 +156,7 @@ Random mac type
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.randomMacType
+**Substitutes:** [randomMacType](ohos.wifiManager/wifiManager.WifiDeviceConfig.randomMacType)
 
 <!--Device-WifiDeviceConfig-randomMacType: number--><!--Device-WifiDeviceConfig-randomMacType: number-End-->
 
@@ -172,7 +172,7 @@ staticIp: IpConfig
 
 IP config of static
 
-**Type:** [IpConfig](arkts-connectivity-wifi-ipconfig-i-sys.md)
+**Type:** IpConfig
 
 **Since:** 6
 
@@ -180,7 +180,7 @@ IP config of static
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.WifiDeviceConfig.staticIp
+**Substitutes:** [staticIp](ohos.wifiManager/wifiManager.WifiDeviceConfig.staticIp)
 
 <!--Device-WifiDeviceConfig-staticIp: IpConfig--><!--Device-WifiDeviceConfig-staticIp: IpConfig-End-->
 

@@ -18,5 +18,5 @@ The callback when microphone capturing state of current page has been changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [MicrophoneCaptureStateChangeInfo](../arkts-components/arkts-arkweb-microphonecapturestatechangeinfo-i.md) | Yes | the microphone capturing state event. |
+| event | [MicrophoneCaptureStateChangeInfo](arkts-arkweb-web-microphonecapturestatechangeinfo-i.md) | Yes | the microphone capturing state event. |
 

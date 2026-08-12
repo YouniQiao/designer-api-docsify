@@ -33,7 +33,7 @@ Controlling Swiper to change to the specified subcomponent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int \| undefined | Yes | the index of item to be redirected, default value is 0, undefined means setting to default value. |
-| animationMode | [SwiperAnimationMode](../arkts-components/arkts-arkui-swiperanimationmode-e.md) \| boolean | No | animation mode for changeIndex, true is equivalent to SwiperAnimationMode.DEFAULT_ANIMATION, false is equivalent to SwiperAnimationMode.NO_ANIMATION |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiper-swiperanimationmode-e.md) \| boolean | No | animation mode for changeIndex, true is equivalent to SwiperAnimationMode.DEFAULT_ANIMATION, false is equivalent to SwiperAnimationMode.NO_ANIMATION |
 
 ## constructor
 
@@ -165,8 +165,8 @@ Called when need to preload specified child.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
 
 ## showNext
 

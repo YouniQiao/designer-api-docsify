@@ -11,7 +11,7 @@ Defines DialogTextStyleOptions in the dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from 'kits/@kit.ArkUI';
+import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
 ```
 
 ## wordBreak
@@ -22,7 +22,7 @@ wordBreak?: WordBreak
 
 Set the word break type.
 
-**Type:** [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 26.1.0
 

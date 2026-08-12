@@ -18,7 +18,7 @@ handler: HttpAuthHandler
 
 通知Web组件用户操作行为。
 
-**类型：** [HttpAuthHandler](../arkts-apis/arkts-arkweb-web-httpauthhandler-c.md)
+**类型：** [HttpAuthHandler](arkts-arkweb-httpauthhandler-c.md)
 
 **起始版本：** 12
 

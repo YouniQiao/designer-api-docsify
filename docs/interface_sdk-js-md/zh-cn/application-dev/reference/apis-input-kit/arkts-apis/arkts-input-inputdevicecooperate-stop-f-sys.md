@@ -11,7 +11,7 @@ function stop(callback: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate)
+> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivateCooperate)
 > 替代。
 
 **起始版本：** 9
@@ -20,7 +20,7 @@ function stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#deactivateCooperate
+**替代接口：** [deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivateCooperate)
 
 <!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function stop(callback: AsyncCallback<void>): void-End-->
 
@@ -38,8 +38,8 @@ function stop(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -83,7 +83,7 @@ function stop(): Promise<void>
 > **说明：**
 > 
 > 从 API version 9开始支持，从API version 23开始废弃。建议使用
-> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate)替代。
+> [cooperate.deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivateCooperate-1)替代。
 
 **起始版本：** 9
 
@@ -91,7 +91,7 @@ function stop(): Promise<void>
 
 **废弃版本：** 23
 
-**替代接口：** ohos.cooperate/cooperate#deactivateCooperate
+**替代接口：** [deactivateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivateCooperate)
 
 <!--Device-inputDeviceCooperate-function stop(): Promise<void>--><!--Device-inputDeviceCooperate-function stop(): Promise<void>-End-->
 
@@ -109,7 +109,7 @@ function stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api.<br>**适用版本：** 12+ |
 
 ## 示例
 

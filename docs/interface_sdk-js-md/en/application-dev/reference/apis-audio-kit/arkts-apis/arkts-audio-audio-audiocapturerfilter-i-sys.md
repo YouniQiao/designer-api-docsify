@@ -15,7 +15,7 @@ Describe audio capturer filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## capturerInfo

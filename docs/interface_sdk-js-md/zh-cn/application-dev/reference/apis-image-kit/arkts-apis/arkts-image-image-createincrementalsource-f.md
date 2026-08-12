@@ -26,7 +26,7 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 
 
 ## createIncrementalSource
@@ -57,5 +57,5 @@ Creates an ImageSource instance based on the buffer in incremental.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
+| ImageSource | Returns the ImageSource instance if the operation is successful; returns undefined otherwise. |
 

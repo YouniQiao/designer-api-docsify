@@ -13,7 +13,7 @@ Describes the internal information about a worker thread.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## priority
@@ -24,7 +24,7 @@ priority?: Priority
 
 Priority of the calling thread. If the return value is empty, no task is running. You are advised not to change the value.
 
-**Type:** [Priority](arkts-arkts-taskpool-priority-e.md)
+**Type:** Priority
 
 **Since:** 10
 

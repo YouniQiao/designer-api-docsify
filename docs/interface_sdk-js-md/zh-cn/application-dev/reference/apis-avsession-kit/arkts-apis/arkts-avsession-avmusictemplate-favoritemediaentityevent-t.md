@@ -27,5 +27,5 @@ type FavoriteMediaEntityEvent = (actionType: MediaFavoriteType, mediaEntity: Med
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;OperResult&gt; | Promise对象，返回收藏媒体实体的操作结果对象。 |
+| Promise&lt;[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)&gt; | Promise对象，返回收藏媒体实体的操作结果对象。 |
 

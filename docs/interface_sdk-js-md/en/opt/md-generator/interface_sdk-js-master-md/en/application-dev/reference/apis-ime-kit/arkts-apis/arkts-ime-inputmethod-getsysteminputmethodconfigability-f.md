@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getSystemInputMethodConfigAbility
@@ -30,7 +30,7 @@ Get system input method config ability
 
 | Error Code ID |
 | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 

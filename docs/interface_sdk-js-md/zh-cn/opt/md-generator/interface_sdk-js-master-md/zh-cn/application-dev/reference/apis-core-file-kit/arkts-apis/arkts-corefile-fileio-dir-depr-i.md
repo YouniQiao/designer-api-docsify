@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-unnamed-declare interface Dir--><!--Device-unnamed-declare interface Dir-End-->
 
@@ -24,7 +24,7 @@ close(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-close(): Promise<void>--><!--Device-Dir-close(): Promise<void>-End-->
 
@@ -34,7 +34,7 @@ close(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -57,7 +57,7 @@ close(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-close(callback: AsyncCallback<void>): void--><!--Device-Dir-close(callback: AsyncCallback<void>): void-End-->
 
@@ -90,7 +90,7 @@ closeSync(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-closeSync(): void--><!--Device-Dir-closeSync(): void-End-->
 
@@ -114,7 +114,7 @@ read(): Promise<Dirent>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-read(): Promise<Dirent>--><!--Device-Dir-read(): Promise<Dirent>-End-->
 
@@ -124,7 +124,7 @@ read(): Promise<Dirent>
 
 | 类型 |
 | --- |
-| Promise&lt;Dirent&gt; |
+| Promise&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; |
 
 ## 示例
 
@@ -149,7 +149,7 @@ read(callback: AsyncCallback<Dirent>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-read(callback: AsyncCallback<Dirent>): void--><!--Device-Dir-read(callback: AsyncCallback<Dirent>): void-End-->
 
@@ -159,7 +159,7 @@ read(callback: AsyncCallback<Dirent>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Dirent&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Dirent](arkts-corefile-fileio-dirent-depr-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -185,7 +185,7 @@ readSync(): Dirent
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-Dir-readSync(): Dirent--><!--Device-Dir-readSync(): Dirent-End-->
 

@@ -2,7 +2,7 @@
 
 Class for the context of the PartnerAgentExtensionAbility.
 
-**Inheritance/Implementation:** PartnerAgentExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** PartnerAgentExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 23
 
@@ -15,5 +15,5 @@ Class for the context of the PartnerAgentExtensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionContext } from 'kits/@kit.ConnectivityKit';
+import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
 ```

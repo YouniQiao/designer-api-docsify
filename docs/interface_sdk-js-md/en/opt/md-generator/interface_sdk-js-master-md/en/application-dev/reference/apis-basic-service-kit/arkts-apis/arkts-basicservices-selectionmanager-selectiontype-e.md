@@ -4,9 +4,9 @@ Enumerates the word selection types.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description |
 | ------------ | -- | ------------------ |
-| [MOUSE_MOVE](#mouse_move) | 1 | Word selection by sliding the mouse or touchpad. |
+| [MOUSE_MOVE](arkts-basicservices-selectionmanager-selectiontype-e.md) | 1 | Word selection by sliding the mouse or touchpad. |
 | [DOUBLE_CLICK](#double_click) | 2 | Word selection by double-clicking the mouse or touchpad. |
-| [TRIPLE_CLICK](#triple_click) | 3 |
+| [TRIPLE_CLICK](arkts-basicservices-selectionmanager-selectiontype-e.md) | 3 |
 
 **Since:** 24
 

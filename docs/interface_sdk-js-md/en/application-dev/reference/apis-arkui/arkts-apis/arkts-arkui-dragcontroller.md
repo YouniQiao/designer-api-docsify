@@ -15,7 +15,7 @@ This module allows developers to trigger a drag event.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## Summary

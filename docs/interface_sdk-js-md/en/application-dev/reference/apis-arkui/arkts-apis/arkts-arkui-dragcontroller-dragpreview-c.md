@@ -13,7 +13,7 @@ Provides the functions of setting color or updating animation.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## animate
@@ -38,7 +38,7 @@ update preview style with animation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | Yes | animation options |
+| options | AnimationOptions | Yes | animation options |
 | handler | () =&gt; void | Yes | change style functions |
 
 ## setForegroundColor
@@ -63,5 +63,5 @@ change foreground color of preview
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Yes | color value |
+| color | ResourceColor | Yes | color value |
 

@@ -32,7 +32,7 @@ Interprets the low bits of a BigInt as a 2's-complement signed integer.All highe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bits | number | Yes |
+| [bits](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | Yes |
 | int | bigint | Yes |
 
 **Return value:**
@@ -55,7 +55,7 @@ Interprets the low bits of a BigInt as an unsigned integer.All higher bits are d
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| bits | number | Yes |
+| [bits](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-deflatependingoutputinfo-i.md) | number | Yes |
 | int | bigint | Yes |
 
 **Return value:**
@@ -70,4 +70,4 @@ Interprets the low bits of a BigInt as an unsigned integer.All higher bits are d
 readonly prototype: BigInt
 ```
 
-**Type:** BigInt
+**Type:** [BigInt](arkts-lib-es2020-bigint-bigint-i.md)

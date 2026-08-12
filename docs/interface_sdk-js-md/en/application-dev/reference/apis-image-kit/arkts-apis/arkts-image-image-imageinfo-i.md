@@ -13,7 +13,7 @@ Describes image information.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## alphaType
@@ -67,7 +67,7 @@ isHdr: boolean
 ```
 
 Whether the image is an HDR image. The value **true** means an HDR image, and **false** means an SDR image. For   
-[ImageSource](arkts-image-image-imagesource-i.md), this parameter specifies whether the source image is in HDR format. For [PixelMap](arkts-image-image-pixelmap-i.md), this parameter specifies whether the decoded PixelMap is in HDR format.
+[ImageSource](arkts-image-image-imagesource-i.md#ImageSource), this parameter specifies whether the source image is in HDR format. For [PixelMap](arkts-image-image-pixelmap-i.md#PixelMap), this parameter specifies whether the decoded PixelMap is in HDR format.
 
 **Type:** boolean
 
@@ -87,11 +87,11 @@ mimeType: string
 
 Actual image format (MIME type).
 
-The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-image-packingoption-i.md) during image encoding.
+The supported formats for image decoding and image encoding are different. Do not directly use the actual image format obtained after decoding as the value of **format** in [PackingOption](arkts-image-image-packingoption-i.md#PackingOption) during image encoding.
 
 You can use the **supportedFormats** property of   
-[ImageSource](arkts-image-image-imagesource-i.md#supportedformats) and   
-[ImagePacker](arkts-image-image-imagepacker-i.md#supportedformats) to view the supported formats for decoding and encoding.
+[ImageSource](@ohos.multimedia.image: image.ImageSource#supportedFormats) and   
+[ImagePacker](@ohos.multimedia.image: image.ImagePacker#supportedFormats) to view the supported formats for decoding and encoding.
 
 **Type:** string
 
@@ -111,7 +111,7 @@ pixelFormat: PixelMapFormat
 
 Pixel format.
 
-**Type:** [PixelMapFormat](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-multimedia-movingphotoview-pixelmapformat-e.md)
+**Type:** PixelMapFormat
 
 **Since:** 12
 
@@ -133,7 +133,7 @@ size: Size
 
 Image size.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 6
 

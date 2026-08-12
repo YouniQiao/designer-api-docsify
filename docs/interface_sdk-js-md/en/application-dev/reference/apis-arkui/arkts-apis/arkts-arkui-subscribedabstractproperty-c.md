@@ -17,7 +17,7 @@ Represents a synchronized property from [AppStorage](../../../ui/state-managemen
 abstract aboutToBeDeleted(): void
 ```
 
-Cancels the synchronization relationship between the [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)instance and [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
+Cancels the synchronization relationship between the [SubscribedAbstractProperty](#SubscribedAbstractProperty)instance and [AppStorage](../../../ui/state-management/arkts-appstorage.md) or  
 [LocalStorage](../../../ui/state-management/arkts-localstorage.md), whether it is a one-way or two-way binding.After **aboutToBeDeleted** is called, the **SubscribedAbstractProperty** instance is invalidated, meaning it can no longer be used to call the [set](arkts-arkui-localstorage-c.md#set) or [get](arkts-arkui-localstorage-c.md#get) API.
 
 **Since:** 10
@@ -29,6 +29,14 @@ Cancels the synchronization relationship between the [SubscribedAbstractProperty
 <!--Device-SubscribedAbstractProperty-abstract aboutToBeDeleted(): void--><!--Device-SubscribedAbstractProperty-abstract aboutToBeDeleted(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link = AppStorage.setAndLink('PropB', 49); // PropA -> 47, PropB -> 49
+link.aboutToBeDeleted();
+```
 
 ## constructor
 
@@ -157,6 +165,14 @@ Reads the data of the synchronized property from [AppStorage](../../../ui/state-
 | --- | --- |
 | T | Data of the synchronized property in AppStorage or LocalStorage. |
 
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47); 
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');    
+prop1.get(); //  prop1.get()=47
+```
+
 ## id
 
 ```TypeScript
@@ -202,6 +218,14 @@ Property name.
 | Type | Description |
 | --- | --- |
 | string | Property name. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47); 
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.info(); // prop1.info() = 'PropA'
+```
 
 ## notifyHasChanged
 
@@ -294,6 +318,26 @@ Sets the data of the synchronized property in [AppStorage](../../../ui/state-man
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | newValue | T | Yes | Data to set. Since API version 12, the value can be **null** or **undefined**. |
+
+## Examples
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); //  prop1.get()=1
+// Since API version 12, the Map, Set, Date types, as well as null, undefined, and union types are supported.
+let a: Map<string, number> = new Map([['1', 0]]);
+let prop2 = AppStorage.setAndProp('MapA', a);
+prop2.set(a);
+let b: Set<string> = new Set('1');
+let prop3 = AppStorage.setAndProp('SetB', b);
+prop3.set(b);
+let c: Date = new Date('2024');
+let prop4 = AppStorage.setAndProp('DateC', c);
+prop4.set(c);
+prop2.set(null);
+prop3.set(undefined);
+```
 
 ## unlinkSuscriber
 

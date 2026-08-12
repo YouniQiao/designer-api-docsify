@@ -2,7 +2,7 @@
 
 Represents the base class of the **RichEditor** component controller.
 
-**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md/arkts-arkui-texteditcontrollerex-i.md)
+**Inheritance/Implementation:** RichEditorBaseController implements [TextEditControllerEx](../arkts-apis/arkts-arkui-texteditcontrollerex-i.md#TextEditControllerEx)
 
 **Since:** 12
 

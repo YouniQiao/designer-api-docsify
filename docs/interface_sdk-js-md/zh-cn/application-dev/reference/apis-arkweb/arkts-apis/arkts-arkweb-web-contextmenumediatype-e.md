@@ -1,6 +1,6 @@
 # ContextMenuMediaType
 
-Defines the context menu media type, related to {@link onContextMenuShow} method.
+Defines the context menu media type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method.
 
 **起始版本：** 23
 

@@ -1,14 +1,14 @@
 # @ohos.app.ability.CompletionHandlerForAtomicService
 
 **CompletionHandlerForAtomicService** is an optional parameter of
- [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md) and is used to handle the
+ [AtomicServiceOptions](arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md#AtomicServiceOptions) and is used to handle the
  result of an atomic service launch request.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { FailureCode } from 'kits/@kit.AbilityKit';
+import { FailureCode } from '@kit.AbilityKit';
 ```
 
 ## Summary

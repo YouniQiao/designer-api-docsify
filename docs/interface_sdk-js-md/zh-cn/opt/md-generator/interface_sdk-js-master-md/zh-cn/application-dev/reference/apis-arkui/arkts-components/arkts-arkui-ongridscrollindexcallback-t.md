@@ -21,4 +21,4 @@ Grid组件可见区域item变化事件的回调类型。
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | first | number | 是 |
-| last | number | 是 |
+| [last](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md) | number | 是 |

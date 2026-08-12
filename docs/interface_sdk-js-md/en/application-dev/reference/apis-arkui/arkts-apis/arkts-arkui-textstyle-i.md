@@ -20,7 +20,7 @@ Word break rule.
 
 Default value: **WordBreak.BREAK_ALL**
 
-**Type:** [WordBreak](arkts-arkui-enums-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 12
 

@@ -1,6 +1,6 @@
 # ProgressConfiguration
 
-进度条配置。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。
+进度条配置。继承自[CommonConfiguration](CommonConfiguration)。
 
 **继承/实现关系：** ProgressConfiguration extends [CommonConfiguration<ProgressConfiguration>](CommonConfiguration<ProgressConfiguration>)
 

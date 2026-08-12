@@ -6,7 +6,7 @@ Configuring parameters in current location requests
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest
+**Substitutes:** [CurrentLocationRequest](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@ Configuring parameters in current location requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## maxAccuracy
@@ -32,7 +32,7 @@ maxAccuracy?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#maxAccuracy
+**Substitutes:** [maxAccuracy](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#maxAccuracy)
 
 <!--Device-CurrentLocationRequest-maxAccuracy?: number--><!--Device-CurrentLocationRequest-maxAccuracy?: number-End-->
 
@@ -44,13 +44,13 @@ maxAccuracy?: number
 priority?: LocationRequestPriority
 ```
 
-**Type:** [LocationRequestPriority](arkts-location-geolocation-locationrequestpriority-e.md)
+**Type:** LocationRequestPriority
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#priority
+**Substitutes:** [priority](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#priority)
 
 <!--Device-CurrentLocationRequest-priority?: LocationRequestPriority--><!--Device-CurrentLocationRequest-priority?: LocationRequestPriority-End-->
 
@@ -62,13 +62,13 @@ priority?: LocationRequestPriority
 scenario?: LocationRequestScenario
 ```
 
-**Type:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
+**Type:** LocationRequestScenario
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#scenario
+**Substitutes:** [scenario](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#scenario)
 
 <!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario--><!--Device-CurrentLocationRequest-scenario?: LocationRequestScenario-End-->
 
@@ -86,7 +86,7 @@ timeoutMs?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#timeoutMs
+**Substitutes:** [timeoutMs](ohos.geoLocationManager/geoLocationManager.CurrentLocationRequest#timeoutMs)
 
 <!--Device-CurrentLocationRequest-timeoutMs?: number--><!--Device-CurrentLocationRequest-timeoutMs?: number-End-->
 

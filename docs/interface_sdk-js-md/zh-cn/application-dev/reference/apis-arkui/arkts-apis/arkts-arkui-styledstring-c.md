@@ -19,7 +19,7 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 属性字符串的构造函数。
 
 不支持在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)之前创建。
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)之前创建。
 
 **起始版本：** 12
 
@@ -37,8 +37,8 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| ImageAttachment \| CustomSpan | 是 | 属性字符串文本内容。 &lt;br&gt;**说明：** &lt;br&gt;当value的类型为ImageAttachment或CustomSpan时，styles参数不生效。 &lt;br&gt;需要设置styles时，通过[setStyle](arkts-arkui-mutablestyledstring-c.md#setstyle)等方法实现。 |
-| styles | Array&lt;StyleOptions&gt; | 否 | 属性字符串初始化选项。 &lt;br&gt;**说明：** &lt;br&gt;start为异常值时，按默认值0处理； &lt;br&gt;当length为异常值时，length等于属性字符串在start后的实际长度； &lt;br&gt;当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | 是 | 属性字符串文本内容。 &lt;br&gt;**说明：** &lt;br&gt;当value的类型为ImageAttachment或CustomSpan时，styles参数不生效。 &lt;br&gt;需要设置styles时，通过[setStyle](arkts-arkui-mutablestyledstring-c.md#setStyle)等方法实现。 |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。 &lt;br&gt;**说明：** &lt;br&gt;start为异常值时，按默认值0处理； &lt;br&gt;当length为异常值时，length等于属性字符串在start后的实际长度； &lt;br&gt;当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
 
 ## equals
 
@@ -64,7 +64,7 @@ equals(other: StyledString): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | StyledString类型的比较对象。 |
+| other | [StyledString](arkts-arkui-styledstring-c.md) | 是 | StyledString类型的比较对象。 |
 
 **返回值：**
 
@@ -105,14 +105,14 @@ static fromHtml(html: string): Promise<StyledString>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;StyledString&gt; | 属性字符串。resolve返回转换后的属性字符串；reject抛出异常。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | 属性字符串。resolve返回转换后的属性字符串；reject抛出异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [170001](../errorcode-styled-string.md#170001-转换错误) | Convert Error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170001-转换错误) | Convert Error. |
 
 ## getString
 
@@ -168,19 +168,19 @@ getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<Spa
 | --- | --- | --- | --- |
 | start | number | 是 | 指定范围属性字符串的下标。 |
 | length | number | 是 | 指定范围属性字符串的长度。 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。 &lt;br&gt;**说明：** &lt;br&gt;当不传入该参数时默认获取开发者设置的[StyledStringKey](arkts-arkui-styledstringkey-e.md)所有枚举值样式。 |
+| styledKey | [StyledStringKey](arkts-arkui-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。 &lt;br&gt;**说明：** &lt;br&gt;当不传入该参数时默认获取开发者设置的[StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey)所有枚举值样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SpanStyle&gt; | 各样式对象的数组。 &lt;br&gt;**说明：** &lt;br&gt;当指定范围属性字符串未设置任何样式，则返回空数组。 &lt;br&gt;当start和length越界或者必填传入undefined时，会抛出异常； &lt;br&gt;当styledKey传入异常值或undefined时，会抛出异常。 &lt;br&gt;当styledKey为CustomSpan时，返回的是创建CustomSpan时传入的样式对象，即修改该样式对象也会影响实际的显示效果。 |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; | 各样式对象的数组。 &lt;br&gt;**说明：** &lt;br&gt;当指定范围属性字符串未设置任何样式，则返回空数组。 &lt;br&gt;当start和length越界或者必填传入undefined时，会抛出异常； &lt;br&gt;当styledKey传入异常值或undefined时，会抛出异常。 &lt;br&gt;当styledKey为CustomSpan时，返回的是创建CustomSpan时传入的样式对象，即修改该样式对象也会影响实际的显示效果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -213,13 +213,13 @@ subStyledString(start: number, length?: number): StyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 子属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。 &lt;br&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
+| [StyledString](arkts-arkui-styledstring-c.md) | 子属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。 &lt;br&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## toHtml
 
@@ -228,7 +228,7 @@ static toHtml(styledString: StyledString): string
 ```
 
 将属性字符串转换成HTML格式字符串，属性字符串样式将映射为对应的HTML标签（如TextStyle映射为含style属性的span标签、ImageAttachment映射为img标签）。支持转换的属性字符串  
-[StyledStringKey](arkts-arkui-styledstringkey-e.md)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。
+[StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。
 
 使用方法参考  
 [示例12（fromHtml和toHtml互相转换）](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#示例12fromhtml和tohtml互相转换)。
@@ -249,7 +249,7 @@ static toHtml(styledString: StyledString): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 要转换成HTML格式字符串的属性字符串对象。 |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 要转换成HTML格式字符串的属性字符串对象。 |
 
 **返回值：**
 
@@ -261,7 +261,7 @@ static toHtml(styledString: StyledString): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## length
 

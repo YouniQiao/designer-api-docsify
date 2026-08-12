@@ -12,7 +12,7 @@ function register(callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,7 +55,7 @@ function register(options: ContinuationExtraParams, callback: AsyncCallback<numb
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -103,7 +103,7 @@ function register(options?: ContinuationExtraParams): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:
+**替代接口：** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -121,7 +121,7 @@ function register(options?: ContinuationExtraParams): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

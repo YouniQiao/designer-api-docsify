@@ -26,7 +26,7 @@ Defines Radio Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [RadioOptions](arkts-arkui-radio-radiooptions-i.md) | Yes | the options of Radio. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines Radio Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RadioAttribute&gt; | Yes | radio attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RadioAttribute](arkts-arkui-radio-radioattribute-i.md)&gt; | Yes | radio attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 

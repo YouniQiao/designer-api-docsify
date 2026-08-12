@@ -11,7 +11,7 @@ Defines the print attributes.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## colorMode
@@ -102,7 +102,7 @@ pageSize?: PrintPageSize | PrintPageType
 
 Page size of the file to print.
 
-**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| PrintPageType
+**Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
 **Since:** 11
 

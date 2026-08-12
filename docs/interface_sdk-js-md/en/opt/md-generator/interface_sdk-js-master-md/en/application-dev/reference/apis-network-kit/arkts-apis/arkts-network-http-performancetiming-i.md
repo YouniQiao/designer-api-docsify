@@ -11,7 +11,7 @@ Counting the time taken of various stages of HTTP request.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## dnsTiming

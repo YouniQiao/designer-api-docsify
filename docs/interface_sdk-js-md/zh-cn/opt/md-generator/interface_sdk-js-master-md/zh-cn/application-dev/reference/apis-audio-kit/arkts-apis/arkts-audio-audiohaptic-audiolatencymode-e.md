@@ -28,7 +28,7 @@ AUDIO_LATENCY_MODE_NORMAL = 0
 AUDIO_LATENCY_MODE_FAST = 1
 ```
 
-低时延模式。当音频文件过长时可能被截断，该特性与[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md/arkts-media-soundpool-soundpool-i.md)一致。
+低时延模式。当音频文件过长时可能被截断，该特性与[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md#SoundPool)一致。
 
 **起始版本：** 11
 

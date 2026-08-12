@@ -33,7 +33,7 @@ function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundle
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;ExtBundleStats&gt; | Promise对象，返回指定用户、指定系统应用包名或系统服务名称的空间占用详情。 |
+| Promise&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt; | Promise对象，返回指定用户、指定系统应用包名或系统服务名称的空间占用详情。 |
 
 **错误码：**
 
@@ -41,8 +41,8 @@ function getExtBundleStats(userId: int, businessName: string): Promise<ExtBundle
 | --- | --- |
 | 13600012 | Failed to query the specified business space usage. |
 | 13600010 | The input parameter is invalid. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## 示例

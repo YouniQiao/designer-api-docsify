@@ -55,7 +55,7 @@ Creates a ListItem component.
 
 **Deprecated since:** 10
 
-**Substitutes:** <!--SUBSTITUTE_API-->listItem/ListItemInterface<!--/SUBSTITUTE_API-->
+**Substitutes:** [listItem/ListItemInterface](listItem/ListItemInterface)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

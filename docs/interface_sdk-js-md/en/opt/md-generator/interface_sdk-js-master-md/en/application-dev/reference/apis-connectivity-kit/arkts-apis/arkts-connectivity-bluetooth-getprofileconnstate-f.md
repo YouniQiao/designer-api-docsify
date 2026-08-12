@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getProfileConnState
@@ -18,7 +18,7 @@ Obtains the connection state of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getProfileConnectionState
+**Substitutes:** [getProfileConnectionState](ohos.bluetoothManager/bluetoothManager.getProfileConnectionState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -30,13 +30,13 @@ Obtains the connection state of profile.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| profileId | [ProfileId](arkts-connectivity-constant-profileid-e.md) | Yes |
+| profileId | [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ProfileConnectionState](arkts-connectivity-bluetooth-profileconnectionstate-e.md) |
+| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) |
 
 ## Examples
 

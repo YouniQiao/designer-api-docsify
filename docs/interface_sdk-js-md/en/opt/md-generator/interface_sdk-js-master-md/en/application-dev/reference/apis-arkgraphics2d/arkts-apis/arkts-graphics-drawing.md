@@ -18,7 +18,7 @@ During application development, you often need to draw different elements. Typic
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## Summary

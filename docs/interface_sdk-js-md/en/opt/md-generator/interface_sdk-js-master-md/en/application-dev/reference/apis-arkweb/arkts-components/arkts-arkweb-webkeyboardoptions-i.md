@@ -33,7 +33,7 @@ enterKeyType?: number
 ```
 
 Type of the **Enter** key on the system soft keyboard. For details about the value range, see  
-[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md/arkts-ime-inputmethod-enterkeytype-e.md). This parameter is optional and the default value is **UNSPECIFIED**. This parameter is valid only when **useSystemKeyboard** is set to **true** and  
+[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType). This parameter is optional and the default value is **UNSPECIFIED**. This parameter is valid only when **useSystemKeyboard** is set to **true** and  
 **enterKeyType** is set to a valid value.
 
 **Type:** number

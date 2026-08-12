@@ -1,6 +1,6 @@
 # EventTarget
 
-[BaseEvent](arkts-arkui-baseevent-i.md)中参数target的类型。
+[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)中参数target的类型。
 
 触发事件的元素对象的显示区域。
 
@@ -20,7 +20,7 @@ area: Area
 
 目标元素的区域信息。
 
-**类型：** [Area](../arkts-apis/arkts-arkui-area-i.md)
+**类型：** Area
 
 **起始版本：** 8
 

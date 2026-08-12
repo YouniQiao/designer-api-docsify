@@ -66,7 +66,7 @@ center?: PositionT<number>
 
 The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
-**类型：** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
+**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **默认值：** {x:0,y:0}
 
@@ -90,7 +90,7 @@ region?: FieldRegion
 
 The region influenced by the ripple field.
 
-**类型：** [FieldRegion](../arkts-apis/arkts-arkui-particle-fieldregion-i.md)
+**类型：** [FieldRegion](arkts-arkui-fieldregion-i.md)
 
 **默认值：** {shape:DisturbanceFieldShape.RECT,position:{x:0,y:0},size:{width:0,height:0}}
 

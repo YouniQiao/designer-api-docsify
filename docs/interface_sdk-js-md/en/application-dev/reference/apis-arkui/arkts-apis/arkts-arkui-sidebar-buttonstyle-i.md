@@ -38,7 +38,7 @@ icons?: ButtonIconOptions
 
 Set the button icon when sidebar status has changed
 
-**Type:** [ButtonIconOptions](../arkts-components/arkts-arkui-buttoniconoptions-i.md)
+**Type:** [ButtonIconOptions](arkts-arkui-sidebar-buttoniconoptions-i.md)
 
 **Since:** 23
 

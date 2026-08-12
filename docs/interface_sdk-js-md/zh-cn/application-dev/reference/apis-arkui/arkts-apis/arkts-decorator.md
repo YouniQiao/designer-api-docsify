@@ -8,10 +8,10 @@
 | --- | --- |
 | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md) | 自定义环境变量的Key的类型。 |
 | [ReadonlyEnvKey](arkts-arkui-decorator-readonlyenvkey-c.md) | 只读系统环境变量Key类，用于@Env装饰器的字符串参数格式`'ReadonlyEnvKey.&lt;keyName&gt;'`中的key声明。 |
-| [ReadonlySystemEnvKey](arkts-arkui-decorator-readonlysystemenvkey-c.md) | 只读系统环境变量Key，继承自[SystemEnvKey](../arkts-components/arkts-arkui-systemenvkey-c.md/arkts-arkui-systemenvkey-c.md)。 |
+| [ReadonlySystemEnvKey](arkts-arkui-decorator-readonlysystemenvkey-c.md) | 只读系统环境变量Key，继承自[SystemEnvKey](arkts-arkui-decorator-systemenvkey-c.md#SystemEnvKey)。 |
 | [SystemEnvKey](arkts-arkui-decorator-systemenvkey-c.md) | 系统环境变量Key的基类。 |
 | [WritableEnvKey](arkts-arkui-decorator-writableenvkey-c.md) | 可写系统环境变量Key类，用于@Env装饰器的字符串参数格式`'WritableEnvKey.&lt;keyName&gt;'`中的key声明。 |
-| [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md) | 可写系统环境变量Key，继承自[SystemEnvKey](../arkts-components/arkts-arkui-systemenvkey-c.md/arkts-arkui-systemenvkey-c.md)。 |
+| [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md) | 可写系统环境变量Key，继承自[SystemEnvKey](arkts-arkui-decorator-systemenvkey-c.md#SystemEnvKey)。 |
 
 ### 接口
 

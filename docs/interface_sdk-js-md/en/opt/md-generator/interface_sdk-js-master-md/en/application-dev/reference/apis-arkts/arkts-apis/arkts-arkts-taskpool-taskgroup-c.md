@@ -1,7 +1,7 @@
 # TaskGroup
 
 Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling  
-[addTask](arkts-arkts-taskpool-taskgroup-c.md#addtask). If any task fails, the corresponding exception is thrown.If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
+[addTask](#addTask-1). If any task fails, the corresponding exception is thrown.If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ Implements a task group, in which tasks are associated with each other and all t
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## addTask
@@ -33,16 +33,16 @@ Adds the function to be executed to this task group. Before using this API, you 
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | func | Function | Yes |
-| args | Object[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Object[] | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
 
 ## Examples
 
@@ -75,7 +75,7 @@ Adds a created task to this task group. Before using this API, you must create a
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Yes |
 
@@ -83,9 +83,9 @@ Adds a created task to this task group. Before using this API, you must create a
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
 
 ## Examples
 
@@ -141,7 +141,7 @@ A constructor used to create a **TaskGroup** instance, with the task group name 
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [name](#name) | string | Yes |
 

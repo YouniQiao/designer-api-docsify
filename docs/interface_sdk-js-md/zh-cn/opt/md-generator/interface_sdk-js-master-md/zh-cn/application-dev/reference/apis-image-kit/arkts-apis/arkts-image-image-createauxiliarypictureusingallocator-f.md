@@ -29,7 +29,7 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 | --- | --- | --- |
 | auxiliaryPictureInfo | [AuxiliaryPictureInfo](arkts-image-image-auxiliarypictureinfo-i.md) | 是 |
 | allocatorType | [AllocatorType](arkts-image-image-allocatortype-e.md) | 否 |
-| pixels | ArrayBuffer | 否 |
+| [pixels](arkts-image-image-positionarea-i.md) | ArrayBuffer | 否 |
 
 **返回值：**
 
@@ -41,9 +41,9 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600205](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-不支持的内存格式或像素格式) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## 示例
 

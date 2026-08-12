@@ -36,8 +36,8 @@ destroy(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## destroy
 
@@ -59,14 +59,14 @@ destroy(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVCallState
 
@@ -86,15 +86,15 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVCallState&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVCallState
 
@@ -114,15 +114,15 @@ getAVCallState(): Promise<AVCallState>
 
 | 类型 |
 | --- |
-| Promise&lt;AVCallState&gt; |
+| Promise&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVMetadata
 
@@ -148,9 +148,9 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVMetadata
 
@@ -172,15 +172,15 @@ getAVMetadata(): Promise<AVMetadata>
 
 | 类型 |
 | --- |
-| Promise&lt;AVMetadata&gt; |
+| Promise & lt;AVMetadata & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVMetadataSync
 
@@ -208,9 +208,9 @@ getAVMetadataSync(): AVMetadata
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVPlaybackState
 
@@ -230,15 +230,15 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVPlaybackState&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVPlaybackState
 
@@ -260,15 +260,15 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 类型 |
 | --- |
-| Promise&lt;AVPlaybackState&gt; |
+| Promise&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVPlaybackStateSync
 
@@ -296,9 +296,9 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueItems
 
@@ -318,15 +318,15 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVQueueItem&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueItems
 
@@ -348,15 +348,15 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AVQueueItem&gt;&gt; |
+| Promise&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueItemsSync
 
@@ -378,15 +378,15 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 | 类型 |
 | --- |
-| Array&lt;AVQueueItem&gt; |
+| Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueTitle
 
@@ -412,9 +412,9 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueTitle
 
@@ -436,15 +436,15 @@ getAVQueueTitle(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getAVQueueTitleSync
 
@@ -472,9 +472,9 @@ getAVQueueTitleSync(): string
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getCallMetadata
 
@@ -494,15 +494,15 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CallMetadata&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getCallMetadata
 
@@ -522,15 +522,15 @@ getCallMetadata(): Promise<CallMetadata>
 
 | 类型 |
 | --- |
-| Promise&lt;CallMetadata&gt; |
+| Promise&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getDesktopLyricState
 
@@ -552,17 +552,17 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 | 类型 |
 | --- |
-| Promise&lt;DesktopLyricState&gt; |
+| Promise&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## getExtras
 
@@ -588,12 +588,12 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
 
 ## getExtras
 
@@ -615,18 +615,18 @@ getExtras(): Promise<{[key: string]: Object}>
 
 | 类型 |
 | --- |
-| Promise&lt;{[key: string]: Object}&gt; |
+| Promise & lt;{[key: string]: Object} & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
 
 ## getExtrasWithEvent
 
@@ -652,16 +652,16 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;ExtraInfo&gt; |
+| Promise&lt;[ExtraInfo](arkts-avsession-avsession-extrainfo-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
 
 ## getLaunchAbility
 
@@ -687,9 +687,9 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getLaunchAbility
 
@@ -717,9 +717,9 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getMediaCenterControlType
 
@@ -727,7 +727,7 @@ getLaunchAbility(): Promise<WantAgent>
 getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 ```
 
-获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置优先显示的控制类型列表。使用Promise异步回调。
+获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置优先显示的控制类型列表。使用Promise异步回调。
 
 如果应用未设置或者设置为空列表，则返回空列表。
 
@@ -743,14 +743,14 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AVMediaCenterControlType&gt;&gt; |
+| Promise&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getOutputDevice
 
@@ -770,7 +770,7 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;OutputDeviceInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
@@ -799,7 +799,7 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;OutputDeviceInfo&gt; |
+| Promise&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; |
 
 **错误码：**
 
@@ -834,8 +834,8 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getRealPlaybackPositionSync
 
@@ -863,8 +863,8 @@ getRealPlaybackPositionSync(): number
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getSupportedLoopModes
 
@@ -874,7 +874,7 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 获取应用支持的循环模式列表。使用Promise异步回调。
 
-该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
 
@@ -890,14 +890,14 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;LoopMode&gt;&gt; |
+| Promise&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getSupportedPlaySpeeds
 
@@ -907,7 +907,7 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 获取应用支持的播放倍速列表。使用Promise异步回调。
 
-该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
 
@@ -923,14 +923,14 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getValidCommands
 
@@ -950,15 +950,15 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;AVControlCommandType&gt;&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getValidCommands
 
@@ -980,15 +980,15 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;AVControlCommandType&gt;&gt; |
+| Promise&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## getValidCommandsSync
 
@@ -1010,15 +1010,15 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 | 类型 |
 | --- |
-| Array&lt;AVControlCommandType&gt; |
+| Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isActive
 
@@ -1044,9 +1044,9 @@ isActive(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isActive
 
@@ -1068,15 +1068,15 @@ isActive(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isActiveSync
 
@@ -1104,9 +1104,9 @@ isActiveSync(): boolean
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## isDesktopLyricEnabled
 
@@ -1128,16 +1128,16 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## isDesktopLyricVisible
 
@@ -1159,17 +1159,17 @@ isDesktopLyricVisible(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## off('metadataChange')
 
@@ -1192,15 +1192,15 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'metadataChange' | 是 |
-| callback | (data: AVMetadata) =&gt; void | 否 |
+| callback | (data: AVMetadata) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('playbackStateChange')
 
@@ -1223,15 +1223,15 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |
-| callback | (state: AVPlaybackState) =&gt; void | 否 |
+| callback | (state: AVPlaybackState) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('callMetadataChange')
 
@@ -1254,15 +1254,15 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'callMetadataChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallMetadata&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('callStateChange')
 
@@ -1285,15 +1285,15 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'callStateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVCallState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('sessionDestroy')
 
@@ -1316,15 +1316,15 @@ off(type: 'sessionDestroy', callback?: () => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'sessionDestroy' | 是 |
-| callback | () =&gt; void | 否 |
+| callback | () = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('activeStateChange')
 
@@ -1347,15 +1347,15 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'activeStateChange' | 是 |
-| callback | (isActive: boolean) =&gt; void | 否 |
+| callback | (isActive: boolean) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('validCommandChange')
 
@@ -1378,15 +1378,15 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'validCommandChange' | 是 |
-| callback | (commands: Array&lt;AVControlCommandType&gt;) =&gt; void | 否 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('outputDeviceChange')
 
@@ -1409,15 +1409,15 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('sessionEvent')
 
@@ -1440,15 +1440,15 @@ off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'sessionEvent' | 是 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | 否 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('queueItemsChange')
 
@@ -1471,15 +1471,15 @@ off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'queueItemsChange' | 是 |
-| callback | (items: Array&lt;AVQueueItem&gt;) =&gt; void | 否 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('queueTitleChange')
 
@@ -1502,15 +1502,15 @@ off(type: 'queueTitleChange', callback?: (title: string) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'queueTitleChange' | 是 |
-| callback | (title: string) =&gt; void | 否 |
+| callback | (title: string) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('extrasChange')
 
@@ -1533,15 +1533,15 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'extrasChange' | 是 |
-| callback | (extras: {[key: string]: Object}) =&gt; void | 否 |
+| callback | (extras: {[key: string]: Object}) = & gt; void | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## off('customDataChange')
 
@@ -1570,8 +1570,8 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offDesktopLyricEnabled
 
@@ -1599,8 +1599,8 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offDesktopLyricStateChanged
 
@@ -1622,14 +1622,14 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1657,8 +1657,8 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offMediaCenterControlTypeChanged
 
@@ -1668,7 +1668,7 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 
 取消控制类型列表变化的监听事件。
 
-取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
+取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -1682,14 +1682,14 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offSupportedLoopModesChange
 
@@ -1699,7 +1699,7 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 取消支持的循环模式列表变化事件监听。
 
-取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
+取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -1715,14 +1715,14 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LoopMode&gt;&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## offSupportedPlaySpeedsChange
 
@@ -1732,7 +1732,7 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 
 取消支持的播放倍速列表变化事件监听。
 
-取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
+取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -1754,8 +1754,8 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('metadataChange')
 
@@ -1780,16 +1780,16 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'metadataChange' | 是 |
-| filter | Array&lt;keyof AVMetadata&gt; \| 'all' | 是 |
-| callback | (data: AVMetadata) =&gt; void | 是 |
+| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | 是 |
+| callback | (data: AVMetadata) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('playbackStateChange')
 
@@ -1814,16 +1814,16 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'playbackStateChange' | 是 |
-| filter | Array&lt;keyof AVPlaybackState&gt; \| 'all' | 是 |
-| callback | (state: AVPlaybackState) =&gt; void | 是 |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | 是 |
+| callback | (state: AVPlaybackState) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('callMetadataChange')
 
@@ -1848,16 +1848,16 @@ on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callba
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'callMetadataChange' | 是 |
-| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array&lt;keyof CallMetadata&gt; 表示关注Array中的字 段变化。\|
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;CallMetadata&gt; | 是 |
+| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array & lt;keyof CallMetadata & gt; 表示关注Array中的字 段变化。\ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('callStateChange')
 
@@ -1882,16 +1882,16 @@ on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'callStateChange' | 是 |
-| filter | Array&lt;keyof AVCallState&gt; \| 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array&lt;keyof AVCallState&gt;表示关注Array中的字段变 化。\|
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVCallState&gt; | 是 |
+| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array & lt;keyof AVCallState & gt;表示关注Array中的字段变 化。\ |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('sessionDestroy')
 
@@ -1916,15 +1916,15 @@ on(type: 'sessionDestroy', callback: () => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'sessionDestroy' | 是 |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('activeStateChange')
 
@@ -1949,15 +1949,15 @@ on(type: 'activeStateChange', callback: (isActive: boolean) => void)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'activeStateChange' | 是 |
-| callback | (isActive: boolean) =&gt; void | 是 |
+| callback | (isActive: boolean) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('validCommandChange')
 
@@ -1982,15 +1982,15 @@ on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'validCommandChange' | 是 |
-| callback | (commands: Array&lt;AVControlCommandType&gt;) =&gt; void | 是 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('outputDeviceChange')
 
@@ -2015,15 +2015,15 @@ on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: Output
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'outputDeviceChange' | 是 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 是 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('sessionEvent')
 
@@ -2048,15 +2048,15 @@ on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'sessionEvent' | 是 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | 是 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('queueItemsChange')
 
@@ -2081,15 +2081,15 @@ on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): voi
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'queueItemsChange' | 是 |
-| callback | (items: Array&lt;AVQueueItem&gt;) =&gt; void | 是 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('queueTitleChange')
 
@@ -2112,15 +2112,15 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'queueTitleChange' | 是 |
-| callback | (title: string) =&gt; void | 是 |
+| callback | (title: string) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('extrasChange')
 
@@ -2143,15 +2143,15 @@ on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'extrasChange' | 是 |
-| callback | (extras: {[key: string]: Object}) =&gt; void | 是 |
+| callback | (extras: {[key: string]: Object}) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## on('customDataChange')
 
@@ -2180,8 +2180,8 @@ on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onDesktopLyricEnabled
 
@@ -2209,8 +2209,8 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onDesktopLyricStateChanged
 
@@ -2232,14 +2232,14 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DesktopLyricState&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2267,8 +2267,8 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onMediaCenterControlTypeChanged
 
@@ -2278,7 +2278,7 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 注册控制类型列表变化的监听事件。使用callback异步回调。
 
-其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setmediacentercontroltype)接口设置。
+其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -2292,14 +2292,14 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;AVMediaCenterControlType&gt;&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onSupportedLoopModesChange
 
@@ -2309,7 +2309,7 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 注册支持的循环模式列表变化的监听事件。使用callback异步回调。
 
-其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setsupportedloopmodes)接口设置。
+其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -2325,14 +2325,14 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;LoopMode&gt;&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## onSupportedPlaySpeedsChange
 
@@ -2342,7 +2342,7 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 
 注册支持的播放倍速列表变化的监听事件。使用callback异步回调。
 
-其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setsupportedplayspeeds)接口设置。
+其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
 
 **起始版本：** 26.0.0
 
@@ -2364,8 +2364,8 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## sendAVKeyEvent
 
@@ -2393,7 +2393,7 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | 错误码ID |
 | --- |
 | 600105 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 600106 |
 | 600101 |
 | 600103 |
@@ -2425,14 +2425,14 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 600105 |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 | 600106 |
 | 600101 |
 | 600103 |
@@ -2457,20 +2457,20 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | command | string | 是 |
-| args | {[key: string]: Object} | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendCommonCommand
 
@@ -2493,25 +2493,25 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | command | string | 是 |
-| args | {[key: string]: Object} | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | {[key: string]: Object} | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendControlCommand
 
@@ -2544,13 +2544,13 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendControlCommand
 
@@ -2584,19 +2584,19 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
-| [6600106](../errorcode-avsession.md#6600106-会话未激活) |
-| [6600107](../errorcode-avsession.md#6600107-命令消息过载) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [6600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) |
+| [6600107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) |
 
 ## sendCustomData
 
@@ -2618,21 +2618,21 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |
+| data | Record & lt;string, Object & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## setDesktopLyricState
 
@@ -2660,17 +2660,17 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## setDesktopLyricVisible
 
@@ -2698,17 +2698,17 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
-| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
-| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) |
+| [6600111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) |
 
 ## skipToQueueItem
 
@@ -2728,17 +2728,17 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| itemId | number | 是 |
+| [itemId](arkts-avsession-avsession-avqueueitem-i.md) | number | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## skipToQueueItem
 
@@ -2760,22 +2760,22 @@ skipToQueueItem(itemId: number): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| itemId | number | 是 |
+| [itemId](arkts-avsession-avsession-avqueueitem-i.md) | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
-| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
+| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
 
 ## sessionId
 

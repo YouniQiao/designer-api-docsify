@@ -104,7 +104,7 @@ spacing?: LengthMetrics
 
 默认值：跑马灯组件宽度。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 23
 

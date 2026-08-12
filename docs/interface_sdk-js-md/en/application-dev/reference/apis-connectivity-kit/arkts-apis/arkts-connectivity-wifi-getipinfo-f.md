@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getIpInfo
@@ -22,7 +22,7 @@ Obtains the IP information of a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getIpInfo
+**Substitutes:** [getIpInfo](ohos.wifiManager/wifiManager.getIpInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -34,7 +34,7 @@ Obtains the IP information of a Wi-Fi connection.
 
 | Type | Description |
 | --- | --- |
-| [IpInfo](arkts-connectivity-wifi-ipinfo-i.md) | Returns the IP information of the Wi-Fi connection. |
+| IpInfo | Returns the IP information of the Wi-Fi connection. |
 
 ## Examples
 

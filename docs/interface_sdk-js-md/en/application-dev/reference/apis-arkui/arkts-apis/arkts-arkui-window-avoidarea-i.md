@@ -3,7 +3,7 @@
 Describes the area to avoid for window content.
 
 When adapting window content for an  
-[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md).
+[immersive layout](../../../windowmanager/window-terminology.md#immersive-layout), you should adjust the content based on the corresponding **AvoidArea** specified by [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType).
 
 In the avoid area, the application window content is obscured and does not respond to user click events.
 
@@ -24,7 +24,7 @@ In the avoid area, the application window content is obscured and does not respo
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## bottomRect
@@ -35,7 +35,7 @@ bottomRect: Rect
 
 Rectangle centered at the bottom of the window's two diagonals.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 7
 
@@ -55,7 +55,7 @@ leftRect: Rect
 
 Rectangle centered to the left of the window's two diagonals.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 7
 
@@ -75,7 +75,7 @@ rightRect: Rect
 
 Rectangle centered to the right of the window's two diagonals.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 7
 
@@ -95,7 +95,7 @@ topRect: Rect
 
 Rectangle centered at the top of the window's two diagonals.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 7
 

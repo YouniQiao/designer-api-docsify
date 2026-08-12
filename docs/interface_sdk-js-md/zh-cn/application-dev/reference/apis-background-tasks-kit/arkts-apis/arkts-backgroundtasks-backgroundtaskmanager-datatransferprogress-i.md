@@ -38,7 +38,7 @@ progressInfo: ProgressInfo
 
 通知进度信息。
 
-**类型：** [ProgressInfo](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-pasteboard-progressinfo-i.md)
+**类型：** ProgressInfo
 
 **起始版本：** 26.1.0
 
@@ -58,7 +58,7 @@ wantAgent?: WantAgent
 
 通知参数，用于指定点击长时任务通知后跳转的界面。
 
-**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)
+**类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
 **起始版本：** 26.1.0
 

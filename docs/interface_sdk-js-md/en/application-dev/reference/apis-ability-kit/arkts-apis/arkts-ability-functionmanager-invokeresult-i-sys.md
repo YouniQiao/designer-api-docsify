@@ -15,7 +15,7 @@ Encapsulates the success or failure status of function invocation.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from 'kits/@kit.AbilityKit';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## data
@@ -24,7 +24,7 @@ import { functionManager } from 'kits/@kit.AbilityKit';
 data?: any
 ```
 
-The returned data on success. The type can be any JSON value.Only present when {@link InvokeResult.success } is true.
+The returned data on success. The type can be any JSON value.Only present when [success](#success) is true.
 
 **Type:** any
 
@@ -46,7 +46,7 @@ The returned data on success. The type can be any JSON value.Only present when {
 errorCode?: number
 ```
 
-The error code on failure (numeric).Only present when {@link InvokeResult.success } is false.
+The error code on failure (numeric).Only present when [success](#success) is false.
 
 **Type:** number
 
@@ -68,7 +68,7 @@ The error code on failure (numeric).Only present when {@link InvokeResult.succes
 errorMsg?: string
 ```
 
-The error description on failure.Only present when {@link InvokeResult.success } is false.
+The error description on failure.Only present when [success](#success) is false.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ The error description on failure.Only present when {@link InvokeResult.success }
 success: boolean
 ```
 
-Indicates whether the invocation was successful (at business logic level).true: Invocation succeeded, {@link InvokeResult.data } contains the returned data.false: Invocation failed, {@link InvokeResult.errorCode } and {@link InvokeResult.errorMsg } contain error information.
+Indicates whether the invocation was successful (at business logic level).true: Invocation succeeded, [data](#data) contains the returned data.false: Invocation failed, [errorCode](#errorCode) and [errorMsg](#errorMsg) contain error information.
 
 **Type:** boolean
 

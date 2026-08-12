@@ -138,7 +138,7 @@ type?: PluralRuleType | undefined
 
 Type option.
 
-**Type:** [PluralRuleType](arkts-arkts-intl-pluralruletype-t.md) \| undefined
+**Type:** PluralRuleType \| undefined
 
 **Since:** 26.0.0
 

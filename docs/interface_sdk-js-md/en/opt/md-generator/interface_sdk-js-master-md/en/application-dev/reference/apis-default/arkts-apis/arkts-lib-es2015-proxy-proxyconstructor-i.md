@@ -15,7 +15,7 @@ Creates a Proxy object. The Proxy object allows you to create an object that can
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | T | Yes |
-| handler | ProxyHandler&lt;T&gt; | Yes |
+| handler | [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
@@ -38,10 +38,10 @@ Creates a revocable Proxy object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | target | T | Yes |
-| handler | ProxyHandler&lt;T&gt; | Yes |
+| handler | [ProxyHandler](arkts-lib-es2015-proxy-proxyhandler-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| { proxy: T; revoke: () =&gt; void; } |
+| { proxy: T; revoke: () = & gt; void; } |

@@ -2,7 +2,7 @@
 
 Define DotIndicator, the indicator type is dot.
 
-**Inheritance/Implementation:** DotIndicator extends [Indicator](../arkts-components/arkts-arkui-indicator-c.md/arkts-arkui-indicator-c.md)
+**Inheritance/Implementation:** DotIndicator extends [Indicator](arkts-arkui-swiper-indicator-c.md#Indicator)
 
 **Since:** 23
 
@@ -82,7 +82,7 @@ Set indicator icon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; \| undefined | Yes | indicator items need to be set icon. |
+| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-swiper-indicatoriconinfo-i.md)&gt; \| undefined | Yes | indicator items need to be set icon. |
 
 **Return value:**
 

@@ -13,7 +13,7 @@ Describes the initialization options for ImageReceiver.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## capacity
@@ -44,7 +44,7 @@ size?: Size
 
 Image size, with both the width and height greater than 0.
 
-**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**Type:** Size
 
 **Since:** 23
 

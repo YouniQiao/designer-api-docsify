@@ -13,7 +13,7 @@ Describes the layout information and measurement information of a run of text in
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## fontMetrics
@@ -44,7 +44,7 @@ textStyle: TextStyle
 
 Text style.
 
-**Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
+**Type:** TextStyle
 
 **Since:** 12
 

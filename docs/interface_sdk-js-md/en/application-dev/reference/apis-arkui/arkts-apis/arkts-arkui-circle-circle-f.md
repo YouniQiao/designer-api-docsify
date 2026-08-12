@@ -24,13 +24,13 @@ Circle is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CircleOptions](../arkts-components/arkts-arkui-circleoptions-i.md) | No | The options to create a Circle. |
+| options | [CircleOptions](arkts-arkui-circle-circleoptions-i.md) | No | The options to create a Circle. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CircleAttribute](../arkts-components/arkts-arkui-circle-attribute.md) | The attribute of the Circle. |
+| [CircleAttribute](arkts-arkui-circle-circleattribute-i.md) | The attribute of the Circle. |
 
 
 ## Circle
@@ -59,11 +59,11 @@ Defines Circle Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;CircleAttribute&gt; | Yes | Circle options. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CircleAttribute](arkts-arkui-circle-circleattribute-i.md)&gt; | Yes | Circle options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CircleAttribute](../arkts-components/arkts-arkui-circle-attribute.md) |  |
+| [CircleAttribute](arkts-arkui-circle-circleattribute-i.md) |  |
 

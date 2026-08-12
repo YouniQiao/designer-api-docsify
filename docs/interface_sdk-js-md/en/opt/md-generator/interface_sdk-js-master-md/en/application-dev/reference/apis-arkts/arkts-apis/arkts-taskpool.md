@@ -4,11 +4,11 @@ TaskPool provides a multi-thread running environment for applications. It helps 
 [Utils Error Codes](../../../reference/apis-arkts/errorcode-utils.md).For details about the precautions for using TaskPool, see  
 [Precautions for TaskPool](../../../arkts-utils/taskpool-introduction.md#precautions-for-taskpool).The following concepts are used in this topic:
 
-- Task group task: task in a [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md).  
-- Serial queue task: task in a [SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md).  
-- Asynchronous queue task: task in an [AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md).  
+- Task group task: task in a [TaskGroup](arkts-arkts-taskpool-taskgroup-c.md#TaskGroup).  
+- Serial queue task: task in a [SequenceRunner](arkts-arkts-taskpool-sequencerunner-c.md#SequenceRunner).  
+- Asynchronous queue task: task in an [AsyncRunner](arkts-arkts-taskpool-asyncrunner-c.md#AsyncRunner).  
 - Periodic task: task executed by calling  
-[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically).
+[executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executePeriodically).
 
 **Since:** 9
 
@@ -19,7 +19,7 @@ TaskPool provides a multi-thread running environment for applications. It helps 
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## Summary

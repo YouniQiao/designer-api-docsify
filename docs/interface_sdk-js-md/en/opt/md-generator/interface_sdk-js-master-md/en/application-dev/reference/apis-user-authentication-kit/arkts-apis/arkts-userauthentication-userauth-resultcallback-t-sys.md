@@ -21,4 +21,4 @@ Defines the callback for returning remote authentication results. This type is u
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | challenge | Uint8Array | Yes |
-| result | [UserAuthResult](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager-userauthresult-e.md) | Yes |
+| result | [UserAuthResult](arkts-userauthentication-userauth-userauthresult-i.md) | Yes |

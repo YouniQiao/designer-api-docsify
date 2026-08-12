@@ -1,12 +1,12 @@
 # SystemDefinedRecord
 
 Represents specific data types defined by OpenHarmony. It is a child class of   
-[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of OpenHarmony-specific data types. You are advised to use the child class of **SystemDefinedRecord**, for example,   
-[SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md),   
-[SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md), and   
-[SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md), to describe OpenHarmony-specific data.
+[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord) and a base class of OpenHarmony-specific data types. You are advised to use the child class of **SystemDefinedRecord**, for example,   
+[SystemDefinedForm](arkts-arkdata-unifieddatachannel-systemdefinedform-c.md#SystemDefinedForm),   
+[SystemDefinedAppItem](arkts-arkdata-unifieddatachannel-systemdefinedappitem-c.md#SystemDefinedAppItem), and   
+[SystemDefinedPixelMap](arkts-arkdata-unifieddatachannel-systemdefinedpixelmap-c.md#SystemDefinedPixelMap), to describe OpenHarmony-specific data.
 
-**Inheritance/Implementation:** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
+**Inheritance/Implementation:** SystemDefinedRecord extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)
 
 **Since:** 10
 
@@ -19,7 +19,7 @@ Represents specific data types defined by OpenHarmony. It is a child class of
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details
@@ -30,7 +30,7 @@ details?: Record<string, int | long | double | string | Uint8Array>
 
 A dictionary type object, where the key is of the string type, and the value can be a number, a string, or a Uint8Array. The default value is an empty dictionary object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| long \| double \| string \| Uint8Array&gt;
+**Type:** Record&lt;string, int \| long \| double \| string \| Uint8Array&gt;
 
 **Since:** 10
 

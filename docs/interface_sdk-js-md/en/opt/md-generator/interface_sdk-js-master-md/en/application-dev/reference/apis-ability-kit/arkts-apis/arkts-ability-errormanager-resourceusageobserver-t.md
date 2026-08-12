@@ -20,6 +20,6 @@ The observer will be called by the system when resource usage exceed threshold.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resourceType | [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Yes |
+| [resourceType](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | [ResourceType](arkts-ability-errormanager-resourcetype-e.md) | Yes |
 | resourceSize | number | Yes |
 | detailInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | No |

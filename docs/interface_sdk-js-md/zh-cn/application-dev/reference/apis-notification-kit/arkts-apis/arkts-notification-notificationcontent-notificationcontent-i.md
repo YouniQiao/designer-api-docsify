@@ -26,7 +26,7 @@ contentType?: notification.ContentType
 
 **废弃版本：** 11
 
-**替代接口：** [NotificationContent#notificationContentType](arkts-notification-notificationcontent-notificationcontent-i.md#notificationcontenttype)
+**替代接口：** [notificationContentType](#notificationContentType)
 
 <!--Device-NotificationContent-contentType?: notification.ContentType--><!--Device-NotificationContent-contentType?: notification.ContentType-End-->
 
@@ -40,7 +40,7 @@ longText?: NotificationLongTextContent
 
 长文本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_LONG_TEXT时使用，通知展开后可展示完整长文本内容。
 
-**类型：** [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md)
+**类型：** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
 **起始版本：** 7
 
@@ -76,7 +76,7 @@ normal?: NotificationBasicContent
 
 基本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_BASIC_TEXT时使用，通知以普通文本样式展示标题和正文。
 
-**类型：** [NotificationBasicContent](arkts-notification-notificationmanager-notificationbasiccontent-t.md)
+**类型：** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **起始版本：** 7
 

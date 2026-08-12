@@ -25,8 +25,8 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| file | number \| File | 是 | 已打开的File对象或已打开的文件描述符fd。 |
-| mode | [MappingMode](arkts-corefile-fileio-mappingmode-e.md) | 是 | 创建文件内存映射对象的选项，必须指定如下选项中的一个： &lt;br&gt;MappingMode.READ_ONLY(0)：只读映射模式。文件映射区不可写，修改会抛出异常。 &lt;br&gt;MappingMode.READ_WRITE(1)：读写映射模式。修改会写入文件映射区，后续由操作系统同步到文件（非实时）。 &lt;br&gt;MappingMode.PRIVATE(2)：私有映射模式。是一种写时复制的映射机制，对映射区的修改仅对当前进程可见，不会影响原始文件。 |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 | 已打开的File对象或已打开的文件描述符fd。 |
+| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | 是 | 创建文件内存映射对象的选项，必须指定如下选项中的一个： &lt;br&gt;MappingMode.READ_ONLY(0)：只读映射模式。文件映射区不可写，修改会抛出异常。 &lt;br&gt;MappingMode.READ_WRITE(1)：读写映射模式。修改会写入文件映射区，后续由操作系统同步到文件（非实时）。 &lt;br&gt;MappingMode.PRIVATE(2)：私有映射模式。是一种写时复制的映射机制，对映射区的修改仅对当前进程可见，不会影响原始文件。 |
 | offset | number | 是 | 文件映射区的起始位置，单位为Byte。 |
 | size | number | 是 | 文件映射区的大小，单位为Byte。 |
 
@@ -34,7 +34,7 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;FileMapping&gt; | Promise对象。返回FileMapping对象。 |
+| Promise&lt;[FileMapping](arkts-corefile-file-fs-filemapping-i.md)&gt; | Promise对象。返回FileMapping对象。 |
 
 **错误码：**
 

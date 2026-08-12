@@ -38,7 +38,7 @@ type?: ProgressType
 
 指定进度条类型。默认值：ProgressType.Linear。
 
-**类型：** [ProgressType](../arkts-components/arkts-arkui-progresstype-e.md)
+**类型：** [ProgressType](arkts-arkui-progress-progresstype-e.md)
 
 **起始版本：** 23
 

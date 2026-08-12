@@ -169,7 +169,7 @@ Parses a JSON object string and returns an Array.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;JsonRecordType&gt; | The parsed Array object |
+| Array&lt;[JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; | The parsed Array object |
 
 ## parseJsonElement
 
@@ -264,7 +264,7 @@ Parses a JSON object string and returns a Record.
 
 | Type | Description |
 | --- | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, JsonRecordType&gt; | The parsed Record object |
+| Record&lt;string, [JsonRecordType](arkts-arkts-jsonrecordtype-t.md)&gt; | The parsed Record object |
 
 ## parseUpdate
 
@@ -897,7 +897,7 @@ Converts Array of Double to JSON format
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | Array&lt;Double&gt; | Yes | Array of Double to be converted |
+| d | Array&lt;[Double](arkts-arkts-double-c.md)&gt; | Yes | Array of Double to be converted |
 
 **Return value:**
 
@@ -927,7 +927,7 @@ Converts ArrayLike of Double to JSON format
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;Double&gt; | Yes | ArrayLike of Double to be converted |
+| d | ArrayLike&lt;[Double](arkts-arkts-double-c.md)&gt; | Yes | ArrayLike of Double to be converted |
 
 **Return value:**
 

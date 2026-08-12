@@ -11,7 +11,7 @@ The ProxyConfig used by applyProxyOverride.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## bypassHostnamesWithoutPeriod
@@ -74,7 +74,7 @@ If false all URLs will use proxy settings except URLs match the bypass rules.If 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## getBypassRules
 
@@ -96,7 +96,7 @@ Returns the bypass rules.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getProxyRules
 
@@ -118,7 +118,7 @@ Returns the proxy rules.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;ProxyRule&gt; |
+| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; |
 
 ## insertBypassRule
 
@@ -146,7 +146,7 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## insertDirectRule
 
@@ -174,7 +174,7 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## insertProxyRule
 
@@ -208,7 +208,7 @@ e.g. example.com host: example.com  https://example.com scheme: https host: exam
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## isReverseBypassEnabled
 

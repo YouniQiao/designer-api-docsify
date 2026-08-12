@@ -14,5 +14,5 @@
 
 | Type | Description |
 | --- | --- |
-| AsyncIterator&lt;T&gt; |  |
+| [AsyncIterator](arkts-lib-es2018-asynciterable-asynciterator-i.md)&lt;T&gt; |  |
 

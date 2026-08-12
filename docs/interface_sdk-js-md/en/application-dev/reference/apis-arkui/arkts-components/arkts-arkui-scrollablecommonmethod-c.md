@@ -100,7 +100,7 @@ Sets the content clipping area for this scrollable component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| RectShape | Yes | A value from enum ContentClipMode or a customized clip rect. |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | Yes | A value from enum ContentClipMode or a customized clip rect. |
 
 **Return value:**
 
@@ -196,7 +196,7 @@ Set the sensitivity of rotating crown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | Yes | The sensitivity of rotating crown, default value is { MEDIUM }. |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | Yes | The sensitivity of rotating crown, default value is { MEDIUM }. |
 
 **Return value:**
 
@@ -228,8 +228,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. &lt;br&gt;Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
-| options | [EdgeEffectOptions](../arkts-apis/arkts-arkui-common-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt; /em&gt; means the opposite. &lt;br&gt;Default value:&lt;br&gt;&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
+| edgeEffect | EdgeEffect | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. &lt;br&gt;Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt; /em&gt; means the opposite. &lt;br&gt;Default value:&lt;br&gt;&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
 
 **Return value:**
 
@@ -325,8 +325,8 @@ Called when setting whether to enable fading Edge effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to turn on the edge fade effect |
-| options | [FadingEdgeOptions](../arkts-apis/arkts-arkui-common-fadingedgeoptions-i.md) | No | The options of fadingEdge. |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to turn on the edge fade effect |
+| options | [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | No | The options of fadingEdge. |
 
 **Return value:**
 
@@ -422,7 +422,7 @@ Sets the nested scrolling options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](../arkts-apis/arkts-arkui-common-nestedscrolloptions-i.md) | Yes | options for nested scrolling. |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | Yes | options for nested scrolling. |
 
 **Return value:**
 
@@ -524,7 +524,7 @@ Called when the scrollable did end fling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | callback of end fling. |
+| handler | VoidCallback | Yes | callback of end fling. |
 
 **Return value:**
 
@@ -610,7 +610,7 @@ Triggered when the scrollable component scrolls.
 
 **Deprecated since:** 12
 
-**Substitutes:** [ScrollableCommonMethod#onDidScroll](arkts-arkui-scrollablecommonmethod-c.md#ondidscroll)
+**Substitutes:** [onDidScroll](#onDidScroll)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -720,7 +720,7 @@ Called when the scrollable will scroll.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OnWillScrollCallback&gt; | Yes | callback of scrollable. |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md)&gt; | Yes | callback of scrollable. |
 
 **Return value:**
 
@@ -754,7 +754,7 @@ Called when the scrollable will start dragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | callback of start dragging. |
+| handler | VoidCallback | Yes | callback of start dragging. |
 
 **Return value:**
 
@@ -788,7 +788,7 @@ Called when the scrollable will start fling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | callback of start fling. |
+| handler | VoidCallback | Yes | callback of start fling. |
 
 **Return value:**
 
@@ -822,7 +822,7 @@ Called when the scrollable will end dragging.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [OnWillStopDraggingCallback](../arkts-apis/arkts-arkui-onwillstopdraggingcallback-t.md) | Yes | callback of end dragging. |
+| handler | [OnWillStopDraggingCallback](arkts-arkui-onwillstopdraggingcallback-t.md) | Yes | callback of end dragging. |
 
 **Return value:**
 
@@ -854,7 +854,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.&lt;br&gt;Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
+| barState | BarState | Yes | Scrollbar state.&lt;br&gt;Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
 
 **Return value:**
 
@@ -886,7 +886,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string | Yes | Scrollbar color.&lt;br&gt;Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) &lt;br&gt;A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
+| color | Color \| number \| string | Yes | Scrollbar color.&lt;br&gt;Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) &lt;br&gt;A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -918,7 +918,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | [Color](../arkts-apis/arkts-arkui-color-e.md) \| number \| string \| Resource | Yes | Scrollbar color.&lt;br&gt;Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) &lt;br&gt;A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | Color \| number \| string \| Resource | Yes | Scrollbar color.&lt;br&gt;Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) &lt;br&gt;A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -950,7 +950,7 @@ Sets the scrollbar track height.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | Scrollbar track height. &lt;br&gt;The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. &lt;br&gt; Default value: adaptive to the height of the scrollable component. |
+| height | LengthMetrics \| undefined | Yes | Scrollbar track height. &lt;br&gt;The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. &lt;br&gt; Default value: adaptive to the height of the scrollable component. |
 
 **Return value:**
 
@@ -982,7 +982,7 @@ Margin of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| margin | [ScrollBarMargin](../arkts-apis/arkts-arkui-scrollbarmargin-i.md) | Yes | Margin of the scrollbar. |
+| margin | ScrollBarMargin | Yes | Margin of the scrollbar. |
 
 **Return value:**
 

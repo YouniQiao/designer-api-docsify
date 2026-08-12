@@ -22,11 +22,11 @@ Triggered before the menu is displayed after the text selection area changes. Me
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | Yes | Menu items to be displayed.<br>**NOTE**<br>Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes | Menu items to be displayed.<br>**NOTE**<br>Modifications to the name, icon, or shortcut hint of default menu items do not take effect. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;TextMenuItem&gt; | Menu items after the processing. |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Menu items after the processing. |
 

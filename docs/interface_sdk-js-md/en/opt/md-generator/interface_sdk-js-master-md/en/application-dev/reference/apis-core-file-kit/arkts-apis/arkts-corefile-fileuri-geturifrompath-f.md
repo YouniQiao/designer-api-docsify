@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from 'kits/@kit.CoreFileKit';
+import { fileUri } from '@kit.CoreFileKit';
 ```
 
 ## getUriFromPath
@@ -38,7 +38,7 @@ Get the uri from the path of file in app sandbox
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

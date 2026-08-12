@@ -11,7 +11,7 @@ Describes the pre-downloaded download information.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## network
@@ -22,7 +22,7 @@ readonly network: NetworkInfo
 
 Pre-downloaded network information.
 
-**Type:** [NetworkInfo](arkts-basicservices-cachedownload-networkinfo-i.md)
+**Type:** NetworkInfo
 
 **Since:** 20
 

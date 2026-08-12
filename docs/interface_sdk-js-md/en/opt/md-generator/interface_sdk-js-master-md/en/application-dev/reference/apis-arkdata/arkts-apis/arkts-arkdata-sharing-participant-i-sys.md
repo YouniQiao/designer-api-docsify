@@ -13,7 +13,7 @@ Represents information about a participant of device-cloud sharing.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from 'kits/@kit.ArkData';
+import { cloudData } from '@kit.ArkData';
 ```
 
 ## attachInfo
@@ -78,7 +78,7 @@ role?: Role
 
 Role of the participant, inviter or invitee. The default value is undefined.
 
-**Type:** [Role](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-role-e-sys.md)
+**Type:** Role
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ state?: State
 
 State of the device-cloud sharing. The default value is undefined.
 
-**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Since:** 11
 

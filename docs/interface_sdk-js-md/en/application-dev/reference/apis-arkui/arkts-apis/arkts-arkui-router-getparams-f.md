@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## getParams
@@ -18,7 +18,7 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 > 
 > **getParams** obtains only the parameters of the current page and does not clear the parameters associated with
@@ -30,7 +30,7 @@ Obtains the parameters passed from the page that initiates redirection to the cu
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#getParams](arkts-arkui-arkui-uicontext-router-c.md#getparams)
+**Substitutes:** [getParams](arkts-arkui-arkui-uicontext-router-c.md#getParams)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,8 +1,8 @@
 # SwipeRecognizer
 
-快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+快滑手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)。
 
-**继承/实现关系：** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**继承/实现关系：** SwipeRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md#GestureRecognizer)
 
 **起始版本：** 18
 
@@ -36,7 +36,7 @@ getDirection(): SwipeDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md) | 预设快滑手势识别器触发快滑手势滑动方向。 |
+| [SwipeDirection](arkts-arkui-swipedirection-e.md) | 预设快滑手势识别器触发快滑手势滑动方向。 |
 
 ## getVelocityThreshold
 

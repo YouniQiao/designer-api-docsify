@@ -12,7 +12,7 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 > 
 > * Canvas组件的宽或高超过8000px时使用CPU渲染，会导致性能明显下降。
 
-**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**继承/实现关系：** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **起始版本：** 8
 
@@ -63,7 +63,7 @@ clearRect(x: number, y: number, w: number, h: number): void
 | x | number | 是 |
 | y | number | 是 |
 | w | number | 是 |
-| h | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
 
 ## clip
 
@@ -271,7 +271,7 @@ createPattern(image: ImageBitmap, repetition: string | null): CanvasPattern | nu
 
 | 类型 |
 | --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) |
 
 ## createRadialGradient
 
@@ -478,7 +478,7 @@ fillRect(x: number, y: number, w: number, h: number): void
 | x | number | 是 |
 | y | number | 是 |
 | w | number | 是 |
-| h | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
 
 ## fillText
 
@@ -593,7 +593,7 @@ getPixelMap(sx: number, sy: number, sw: number, sh: number): PixelMap
 
 | 类型 |
 | --- |
-| [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) |
+| [PixelMap](arkts-arkui-pixelmap-t.md) |
 
 ## getTransform
 
@@ -914,7 +914,7 @@ setPixelMap(value?: PixelMap): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 否 |
+| value | [PixelMap](arkts-arkui-pixelmap-t.md) | 否 |
 
 ## setTransform
 
@@ -951,8 +951,8 @@ setTransform方法使用的参数和transform()方法相同，但setTransform()�
 | a | number | 是 |
 | b | number | 是 |
 | c | number | 是 |
-| d | number | 是 |
-| e | number | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | f | number | 是 |
 
 ## setTransform
@@ -1046,7 +1046,7 @@ strokeRect(x: number, y: number, w: number, h: number): void
 | x | number | 是 |
 | y | number | 是 |
 | w | number | 是 |
-| h | number | 是 |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | 是 |
 
 ## strokeText
 
@@ -1134,8 +1134,8 @@ transform方法对应一个变换矩阵，想对一个图形进行变化的时�
 | a | number | 是 |
 | b | number | 是 |
 | c | number | 是 |
-| d | number | 是 |
-| e | number | 是 |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 | f | number | 是 |
 
 ## translate
@@ -1169,13 +1169,13 @@ translate(x: number, y: number): void
 antialias: boolean | undefined
 ```
 
-用于设置绘制图形和文本时是否开启抗锯齿。设置此接口会覆盖[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)中的抗锯齿效果，未通过该接口设置时，默认值为undefined，与[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)中的抗锯齿效果保持一致。
+用于设置绘制图形和文本时是否开启抗锯齿。设置此接口会覆盖[RenderingContextSettings](./renderingcontextsettings)中的抗锯齿效果，未通过该接口设置时，默认值为undefined，与[RenderingContextSettings](./renderingcontextsettings)中的抗锯齿效果保持一致。
 
 设置绘制图形和文本时是否开启抗锯齿。
 
 **true**表示开启抗锯齿；**false**表示不开启抗锯齿。
 
-值为**undefined**时，与[RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md)中的抗锯齿效果保持一致。
+值为**undefined**时，与[RenderingContextSettings](./renderingcontextsettings)中的抗锯齿效果保持一致。
 
 **类型：** boolean \| undefined
 
@@ -1227,15 +1227,15 @@ fillStyle: string | number | CanvasGradient | CanvasPattern
 
 - 类型为number时，表示设置填充区域的颜色，不支持设置全透明色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中number类型说明。
 
-- 类型为[CanvasGradient](arkts-arkui-canvasgradient-c.md)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
+- 类型为[CanvasGradient](./canvasgradient)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
 
-- 类型为[CanvasPattern](arkts-arkui-canvaspattern-i.md)时，使用[createPattern](./createpattern)方法创建。
+- 类型为[CanvasPattern](./canvaspattern)时，使用[createPattern](./createpattern)方法创建。
 
  默认值：'#000000'（黑色）
 
  异常值设置无效，保持设置前效果。
 
-**类型：** string \| number \| CanvasGradient \| CanvasPattern
+**类型：** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **默认值：** #000000 (black)
 
@@ -1460,7 +1460,7 @@ letterSpacing: LengthMetrics | string
 > 
 > 推荐使用LengthMetrics，性能更好。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| string
+**类型：** LengthMetrics \| string
 
 **默认值：** 0vp
 
@@ -1728,15 +1728,15 @@ strokeStyle: string | number | CanvasGradient | CanvasPattern
 
 - 类型为number时，表示设置线条使用的颜色，不支持设置全透明色，颜色格式参考[ResourceColor](../../../reference/apis-arkui/arkui-ts/ts-types.md#resourcecolor)中number类型说明。
 
-- 类型为[CanvasGradient](arkts-arkui-canvasgradient-c.md)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
+- 类型为[CanvasGradient](./canvasgradient)时，表示渐变对象，使用[createLinearGradient](./createlineargradient)方法创建。
 
-- 类型为[CanvasPattern](arkts-arkui-canvaspattern-i.md)时，使用[createPattern](./createpattern)方法创建。
+- 类型为[CanvasPattern](./canvaspattern)时，使用[createPattern](./createpattern)方法创建。
 
  默认值：'#000000'（黑色）
 
  异常值设置无效，保持设置前效果。
 
-**类型：** string \| number \| CanvasGradient \| CanvasPattern
+**类型：** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **默认值：** #000000 (black)
 

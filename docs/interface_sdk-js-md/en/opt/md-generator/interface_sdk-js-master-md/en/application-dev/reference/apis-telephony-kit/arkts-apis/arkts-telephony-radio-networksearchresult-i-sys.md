@@ -13,7 +13,7 @@ Obtains the network search results.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## isNetworkSearchSuccess
@@ -42,7 +42,7 @@ networkSearchResult: Array<NetworkInformation>
 
 Obtains the network search results.
 
-**Type:** Array&lt;NetworkInformation&gt;
+**Type:** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
 **Since:** 6
 

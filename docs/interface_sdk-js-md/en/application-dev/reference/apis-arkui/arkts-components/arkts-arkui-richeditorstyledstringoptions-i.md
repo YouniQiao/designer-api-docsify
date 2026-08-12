@@ -18,7 +18,7 @@ controller: RichEditorStyledStringController
 
 Controller for the **RichEditor** component.
 
-**Type:** [RichEditorStyledStringController](../arkts-apis/arkts-arkui-richeditor-richeditorstyledstringcontroller-c.md)
+**Type:** [RichEditorStyledStringController](arkts-arkui-richeditorstyledstringcontroller-c.md)
 
 **Since:** 12
 

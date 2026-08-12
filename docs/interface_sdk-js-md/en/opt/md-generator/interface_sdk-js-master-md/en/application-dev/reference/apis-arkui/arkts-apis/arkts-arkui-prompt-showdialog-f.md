@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from 'kits/@kit.ArkUI';
+import { prompt } from '@kit.ArkUI';
 ```
 
 ## showDialog
@@ -18,7 +18,7 @@ Displays the dialog box.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showDialog
+**Substitutes:** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
 
@@ -70,7 +70,7 @@ Displays the dialog box.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.arkui.UIContext.PromptAction#showDialog
+**Substitutes:** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
 
@@ -86,7 +86,7 @@ Displays the dialog box.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;ShowDialogSuccessResponse&gt; |
+| Promise & lt;ShowDialogSuccessResponse & gt; |
 
 ## Examples
 

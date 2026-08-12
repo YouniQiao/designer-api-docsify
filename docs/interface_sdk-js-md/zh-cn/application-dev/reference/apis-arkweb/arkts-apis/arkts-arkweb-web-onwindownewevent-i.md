@@ -18,7 +18,7 @@ handler: ControllerHandler
 
 Lets you set the WebviewController instance for creating a new window.
 
-**类型：** [ControllerHandler](../arkts-components/arkts-arkweb-controllerhandler-c.md)
+**类型：** [ControllerHandler](arkts-arkweb-web-controllerhandler-c.md)
 
 **起始版本：** 23
 

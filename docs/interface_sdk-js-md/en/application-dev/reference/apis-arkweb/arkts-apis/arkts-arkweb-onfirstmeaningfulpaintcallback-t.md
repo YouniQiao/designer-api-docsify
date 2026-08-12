@@ -18,5 +18,5 @@ The callback of firstMeaningfulPaint.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| firstMeaningfulPaint | [FirstMeaningfulPaint](../arkts-components/arkts-arkweb-firstmeaningfulpaint-i.md) | Yes | callback information of onFirstMeaningfulPaint. |
+| firstMeaningfulPaint | [FirstMeaningfulPaint](arkts-arkweb-web-firstmeaningfulpaint-i.md) | Yes | callback information of onFirstMeaningfulPaint. |
 

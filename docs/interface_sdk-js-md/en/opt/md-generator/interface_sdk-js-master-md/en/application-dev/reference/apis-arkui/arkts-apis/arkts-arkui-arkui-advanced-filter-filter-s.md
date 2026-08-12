@@ -13,7 +13,7 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
+import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
 ```
 
 ## container
@@ -58,7 +58,7 @@ FilterParams, Callback method after a user clicks a filter item.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filterResults | Array&lt;FilterResult&gt; | Yes |
+| filterResults | Array&lt;[FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)&gt; | Yes |
 
 ## additionFilters
 
@@ -112,7 +112,7 @@ multiFilters: Array<FilterParams>
 
 Multi-dimensional filtering parameters.
 
-**Type:** Array&lt;FilterParams&gt;
+**Type:** Array&lt;[FilterParams](arkts-arkui-arkui-advanced-filter-filterparams-c.md)&gt;
 
 **Since:** 22
 

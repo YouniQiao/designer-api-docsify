@@ -1,18 +1,18 @@
 # RichEditorController
 
-RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)。
+RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)。
 
 > **说明：**
 > 
-> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan)、
-> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan)、[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)
-> 、[addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
+> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addTextSpan)、
+> [addImageSpan](#addImageSpan)、[addBuilderSpan](#addBuilderSpan)
+> 、[addSymbolSpan](#addSymbolSpan)），组件会自动滚动内容使得插入内容末尾可见。
 
 ## 导入对象
 
 ```ts controller: RichEditorController = new RichEditorController();```
 
-**继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
+**继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)
 
 **起始版本：** 10
 
@@ -32,18 +32,18 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 > 
 > - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。
 > 
-> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md)设置此builder在RichEditor中的index（一个文字为一个单位）。
+> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions)设置此builder在RichEditor中的index（一个文字为一个单位）。
 > 
 > - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。
 > 
 > - 支持通过[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)设置自定义菜单。
 > 
-> - 不支持通过[getSpans](arkts-arkui-richeditorcontroller-c.md#getspans)，[getSelection](arkts-arkui-richeditorcontroller-c.md#getselection)，
+> - 不支持通过[getSpans](#getSpans)，[getSelection](#getSelection)，
 > [onSelect](RichEditorAttribute#onSelect)，[aboutToDelete](RichEditorAttribute#aboutToDelete)获取
 > builderSpan信息。
 > 
-> - 不支持通过[updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle)，
-> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle)等方式更新builder。
+> - 不支持通过[updateSpanStyle](#updateSpanStyle)，
+> [updateParagraphStyle](#updateParagraphStyle)等方式更新builder。
 > 
 > - 对此builder节点进行复制或粘贴不生效。
 > 
@@ -53,37 +53,37 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 > 
 > - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。
 > 
-> - 对[addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan)的节点文本，
+> - 对[addBuilderSpan](#addBuilderSpan)的节点文本，
 > [enableDataDetector](RichEditorAttribute#enableDataDetector)、
 > [dataDetectorConfig](RichEditorAttribute#dataDetectorConfig)、
 > [enableSelectedDataDetector](RichEditorAttribute#enableSelectedDataDetector)功能不会生效。
-> 通用属性仅支持[size](arkts-arkui-commonmethod-c.md#size)、[padding](arkts-arkui-commonmethod-c.md#padding)、[margin](arkts-arkui-commonmethod-c.md#margin)、
-> [aspectRatio](arkts-arkui-commonmethod-c.md#aspectratio)、[borderStyle](arkts-arkui-commonmethod-c.md#borderstyle)、
-> [borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、[borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、
-> [borderRadius](arkts-arkui-commonmethod-c.md#borderradius)、
-> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、
-> [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle)
-> 、[opacity](arkts-arkui-commonmethod-c.md#opacity)、
-> [blur](arkts-arkui-commonmethod-c.md#blur)、
-> [backdropBlur](arkts-arkui-commonmethod-c.md#backdropblur)、
-> [shadow](arkts-arkui-commonmethod-c.md#shadow)、
-> [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、
-> [brightness](arkts-arkui-commonmethod-c.md#brightness)、[saturate](arkts-arkui-commonmethod-c.md#saturate)
-> 、[contrast](arkts-arkui-commonmethod-c.md#contrast)、
-> [invert](arkts-arkui-commonmethod-c.md#invert)、
+> 通用属性仅支持[size](CommonMethod#size)、[padding](CommonMethod#padding)、[margin](CommonMethod#margin)、
+> [aspectRatio](arkts-arkui-commonmethod-c.md#aspectRatio)、[borderStyle](CommonMethod#borderStyle)、
+> [borderWidth](CommonMethod#borderWidth)、[borderColor](CommonMethod#borderColor)、
+> [borderRadius](CommonMethod#borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses))、
+> [backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
+> 、[opacity](CommonMethod#opacity(value: number | Resource))、
+> [blur](CommonMethod#blur(value: number, options?: BlurOptions))、
+> [backdropBlur](arkts-arkui-commonmethod-c.md#backdropBlur)、
+> [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))、
+> [grayscale](CommonMethod#grayscale(value: number))、
+> [brightness](CommonMethod#brightness(value: number))、[saturate](arkts-arkui-commonmethod-c.md#saturate)
+> 、[contrast](CommonMethod#contrast(value: number))、
+> [invert](CommonMethod#invert(value: number | InvertOptions))、
 > [sepia](arkts-arkui-commonmethod-c.md#sepia)、
-> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、
-> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、
-> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、
-> [clip](arkts-arkui-commonmethod-c.md#clip)、[mask](arkts-arkui-commonmethod-c.md#mask)、
-> [foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundblurstyle)
-> 、[accessibilityGroup](arkts-arkui-commonmethod-c.md#accessibilitygroup)、
-> [accessibilityText](arkts-arkui-commonmethod-c.md#accessibilitytext)、
-> [accessibilityDescription](arkts-arkui-commonmethod-c.md#accessibilitydescription)、
-> [accessibilityLevel](arkts-arkui-commonmethod-c.md#accessibilitylevel)、
-> [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericaleffect)、
-> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)。
+> [hueRotate](arkts-arkui-commonmethod-c.md#hueRotate)、
+> [colorBlend](arkts-arkui-commonmethod-c.md#colorBlend)、
+> [linearGradientBlur](arkts-arkui-commonmethod-c.md#linearGradientBlur)、
+> [clip](CommonMethod#clip(value: boolean))、[mask](CommonMethod#mask(value: ProgressMask))、
+> [foregroundBlurStyle](arkts-arkui-commonmethod-c.md#foregroundBlurStyle)
+> 、[accessibilityGroup](CommonMethod#accessibilityGroup(value: boolean))、
+> [accessibilityText](CommonMethod#accessibilityText(value: string))、
+> [accessibilityDescription](CommonMethod#accessibilityDescription(value: string))、
+> [accessibilityLevel](CommonMethod#accessibilityLevel)、
+> [sphericalEffect](arkts-arkui-commonmethod-c.md#sphericalEffect)、
+> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightUpEffect)、
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelStretchEffect)。
 
 **起始版本：** 11
 
@@ -132,7 +132,7 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
+| value | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 |
 | options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | 否 |
 
 **返回值：**
@@ -257,13 +257,13 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 | 类型 |
 | --- |
-| Array&lt;RichEditorSpan&gt; |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getParagraphs
 
@@ -293,7 +293,7 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 
 | 类型 |
 | --- |
-| Array&lt;RichEditorParagraphResult&gt; |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; |
 
 ## getSelection
 
@@ -347,7 +347,7 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 | 类型 |
 | --- |
-| Array&lt;RichEditorImageSpanResult \| [RichEditorTextSpanResult&gt;](arkts-arkui-richeditortextspanresult-i.md) |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; |
 
 ## toStyledString
 
@@ -383,7 +383,7 @@ toStyledString(value: RichEditorRange): StyledString
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## updateParagraphStyle
 
@@ -435,4 +435,4 @@ updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateIm
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| RichEditorUpdateImageSpanStyleOptions \| [RichEditorUpdateSymbolSpanStyleOptions](../arkts-apis/arkts-arkui-richeditor-richeditorupdatesymbolspanstyleoptions-i.md) | 是 |
+| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) \| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | 是 |

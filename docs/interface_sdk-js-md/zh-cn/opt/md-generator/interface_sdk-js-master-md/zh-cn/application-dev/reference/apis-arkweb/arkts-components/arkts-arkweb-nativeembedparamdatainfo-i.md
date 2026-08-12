@@ -48,7 +48,7 @@ paramItems?: Array<NativeEmbedParamItem>
 
 发生变化的param元素的详细信息，包括每一个param元素的状态变化类型、id、参数名称和参数值。
 
-**类型：** Array&lt;NativeEmbedParamItem&gt;
+**类型：** Array&lt;[NativeEmbedParamItem](arkts-arkweb-nativeembedparamitem-i.md)&gt;
 
 **起始版本：** 21
 

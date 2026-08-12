@@ -12,7 +12,7 @@ Obtains the information about a given mission. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#getMissionInfo
+**Substitutes:** [getMissionInfo](ohos.app.ability.missionManager/missionManager#getMissionInfo)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -65,7 +65,7 @@ Obtains the information about a given mission. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#getMissionInfo
+**Substitutes:** [getMissionInfo](ohos.app.ability.missionManager/missionManager#getMissionInfo)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

@@ -29,5 +29,5 @@ Create a FrameNode of Slider type.On API 26.0.0 and above, It can also create a 
 
 | Type | Description |
 | --- | --- |
-| [Slider](arkts-arkui-typenode-slider-t.md) | Return Slider type FrameNode. |
+| Slider | Return Slider type FrameNode. |
 

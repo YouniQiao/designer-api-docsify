@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## setAbilityFileTypesForSelf
@@ -30,17 +30,17 @@ Sets the file types that can be opened by the current application.
 | --- | --- | --- |
 | moduleName | string | Yes |
 | abilityName | string | Yes |
-| fileTypes | Array&lt;string&gt; | Yes |
+| fileTypes | Array & lt;string & gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [17700351](../errorcode-bundle.md#17700351-invalid-file-type) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [17700351](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700351-invalid-file-type) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
 
 ## Examples
 

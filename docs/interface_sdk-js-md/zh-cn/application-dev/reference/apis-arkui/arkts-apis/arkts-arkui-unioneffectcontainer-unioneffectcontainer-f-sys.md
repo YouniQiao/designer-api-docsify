@@ -28,13 +28,13 @@ Provides a UnionEffectContainer Component that generates a component fusion effe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md) | 否 | The options to create a UnionEffectContainer. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of UnionEffectContainer |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of UnionEffectContainer |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UnionEffectContainerAttribute](../arkts-components/arkts-arkui-unioneffectcontainer-attribute.md) |  |
+| [UnionEffectContainerAttribute](arkts-arkui-unioneffectcontainer-unioneffectcontainerattribute-i-sys.md) |  |
 
 
 ## UnionEffectContainer
@@ -66,12 +66,12 @@ Defines UnionEffectContainer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;UnionEffectContainerAttribute&gt; | 是 | UnionEffectContainer attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[UnionEffectContainerAttribute](arkts-arkui-unioneffectcontainer-unioneffectcontainerattribute-i-sys.md)&gt; | 是 | UnionEffectContainer attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [UnionEffectContainerAttribute](../arkts-components/arkts-arkui-unioneffectcontainer-attribute.md) |  |
+| [UnionEffectContainerAttribute](arkts-arkui-unioneffectcontainer-unioneffectcontainerattribute-i-sys.md) |  |
 

@@ -1,8 +1,8 @@
 # PanRecognizer
 
-滑动手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)。
+滑动手势识别器对象，继承于[GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#GestureRecognizer)。
 
-**继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
+**继承/实现关系：** PanRecognizer extends [GestureRecognizer](arkts-arkui-gesture-gesturerecognizer-c.md#GestureRecognizer)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ getDirection(): PanDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [PanDirection](arkts-arkui-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
+| [PanDirection](arkts-arkui-gesture-pandirection-e.md) | 当前滑动手势识别器的识别方向。 |
 
 ## getDistance
 
@@ -71,7 +71,7 @@ getDistanceMap(): Map<SourceTool, double>
 > **说明：**
 > 
 > 仅支持对通过Pan手势初始化配置修改的设备类型进行阈值查询。对于默认滑动阈值，可通过查询
-> [SourceTool](arkts-arkui-common-sourcetool-e.md).Unknown类型获取。其他未主动设置的类型则无法获取。
+> [SourceTool](SourceTool).Unknown类型获取。其他未主动设置的类型则无法获取。
 
 **起始版本：** 26.0.0
 
@@ -111,5 +111,5 @@ getPanGestureOptions(): PanGestureOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 当前滑动手势识别器的属性。 |
+| [PanGestureOptions](arkts-arkui-gesture-pangestureoptions-c.md) | 当前滑动手势识别器的属性。 |
 

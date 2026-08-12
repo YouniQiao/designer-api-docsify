@@ -135,7 +135,7 @@ Sets the video playback position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second&lt;br&gt;Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-videocontroller-c.md#setcurrenttime). |
+| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second&lt;br&gt;Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setCurrentTime-1). |
 
 ## setCurrentTime
 
@@ -159,8 +159,8 @@ Sets the video playback position with the specified seek mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second |
-| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-media-seekmode-e.md) | Yes | Seek mode. |
+| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | Yes | Seek mode. |
 
 ## start
 

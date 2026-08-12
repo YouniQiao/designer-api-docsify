@@ -5,7 +5,7 @@
  > **NOTE**
  >
  > - This is deprecated since API version 21. You are advised to use
- > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) instead. For details about how
+ > [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instead. For details about how
  > to set an embedded UIAbility, see [UIExtensionAbility](../../../application-models/uiextensionability-sys.md).
  >
  > - The APIs provided by this module are system APIs.
@@ -16,7 +16,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionContext } from 'kits/@kit.ArkUI';
+import { WindowExtensionContext } from '@kit.ArkUI';
 ```
 
 ## Summary

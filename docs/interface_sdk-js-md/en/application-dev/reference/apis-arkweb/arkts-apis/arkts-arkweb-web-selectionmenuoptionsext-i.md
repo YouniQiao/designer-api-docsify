@@ -18,7 +18,7 @@ menuType?: MenuType
 
 Menu type, default value is MenuType.SELECTION_MENU.
 
-**Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-menutype-e.md)
+**Type:** [MenuType](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-menutype-e.md)
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ preview?: CustomBuilder
 
 The preview content of selection menu.
 
-**Type:** [CustomBuilder](../../apis-arkui/arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](../../apis-arkui/arkts-apis/arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ previewMenuOptions?: PreviewMenuOptions
 
 Defines the options of preview menu.
 
-**Type:** [PreviewMenuOptions](../../apis-arkui/arkts-components/arkts-arkui-previewmenuoptions-i.md)
+**Type:** [PreviewMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-richeditor-previewmenuoptions-i.md)
 
 **Since:** 23
 

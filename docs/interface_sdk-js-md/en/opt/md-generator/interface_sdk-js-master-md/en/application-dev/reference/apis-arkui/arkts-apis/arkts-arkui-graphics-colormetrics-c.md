@@ -38,6 +38,27 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 | --- |
 | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) |
 
+## Examples
+
+```TypeScript
+import { ColorMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct MyStateSample {
+  @State colorMetrics: ColorMetrics = ColorMetrics.resourceColor($r('sys.color.font_primary')).autoRefresh!(true)
+
+  build() {
+    Column() {
+      Text('Test ColorMetrics')
+    }
+    .width('100%')
+    .height('100%')
+    .backgroundColor(this.colorMetrics)
+  }
+}
+```
+
 ## blendColor
 
 ```TypeScript
@@ -72,7 +93,7 @@ Blends a specified color (**overlayColor**) with the current color and returns t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## colorWithSpace
 
@@ -80,7 +101,7 @@ Blends a specified color (**overlayColor**) with the current color and returns t
 static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: number, alpha?: number): ColorMetrics
 ```
 
-Creates a **ColorMetrics** instance using specified [ColorSpace](arkts-arkui-colorspace-e.md) and RGBA values. Only certain attributes support color configuration in the display-p3 color space.
+Creates a **ColorMetrics** instance using specified [ColorSpace](ColorSpace) and RGBA values. Only certain attributes support color configuration in the display-p3 color space.
 
 **Since:** 20
 
@@ -172,8 +193,8 @@ Instantiates the **ColorMetrics** class using a color in resource reference form
 
 | Error Code ID |
 | --- |
-| [180003](../errorcode-event.md#180003-input-event-is-not-a-cloned-event) |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [180003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-event.md#180003-input-event-is-not-a-cloned-event) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## rgba
 

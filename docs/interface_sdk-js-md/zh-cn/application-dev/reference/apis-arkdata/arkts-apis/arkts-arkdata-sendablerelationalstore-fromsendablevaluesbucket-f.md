@@ -20,7 +20,7 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| valuesBucket | [ValuesBucket](arkts-arkdata-rdb-valuesbucket-t.md) | 是 | 可用于跨线程传递的ValuesBucket数据。 |
+| valuesBucket | ValuesBucket | 是 | 可用于跨线程传递的ValuesBucket数据。 |
 
 **返回值：**
 
@@ -32,8 +32,8 @@ function fromSendableValuesBucket(valuesBucket: ValuesBucket): NonSendableBucket
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [14800000](../../apis-basic-services-kit/errorcode-settings.md#14800000-参数检查失败) | Inner error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [14800000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 
 ## 示例
 

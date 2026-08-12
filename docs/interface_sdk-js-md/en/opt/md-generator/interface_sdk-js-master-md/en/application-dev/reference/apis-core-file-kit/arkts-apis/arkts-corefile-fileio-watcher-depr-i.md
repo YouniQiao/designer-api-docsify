@@ -6,7 +6,7 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:Watcher](arkts-corefile-fileio-watcher-depr-i.md)
+**Substitutes:** [Watcher](arkts-corefile-file-fs-watcher-i.md#Watcher)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 
@@ -24,7 +24,7 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:Watcher.stop](arkts-corefile-fileio-watcher-depr-i.md#stop)
+**Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
 
 <!--Device-Watcher-stop(): Promise<void>--><!--Device-Watcher-stop(): Promise<void>-End-->
 
@@ -34,7 +34,7 @@ Stops the **watcher** instance. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -60,7 +60,7 @@ Stops the **watcher** instance. This API uses an asynchronous callback to return
 
 **Deprecated since:** 10
 
-**Substitutes:** [@ohos.file.fs:Watcher.stop](arkts-corefile-fileio-watcher-depr-i.md#stop)
+**Substitutes:** [stop](arkts-corefile-file-fs-watcher-i.md#stop)
 
 <!--Device-Watcher-stop(callback: AsyncCallback<void>): void--><!--Device-Watcher-stop(callback: AsyncCallback<void>): void-End-->
 

@@ -18,7 +18,7 @@ localeMatcher?: RelativeTimeFormatLocaleMatcher
 
 Locale matcher option.
 
-**Type:** [RelativeTimeFormatLocaleMatcher](arkts-arkts-intl-relativetimeformatlocalematcher-t.md)
+**Type:** RelativeTimeFormatLocaleMatcher
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ numeric?: RelativeTimeFormatNumeric
 
 Numeric option.
 
-**Type:** [RelativeTimeFormatNumeric](../../apis-default/arkts-apis/arkts-intl-relativetimeformatnumeric-t.md)
+**Type:** RelativeTimeFormatNumeric
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ style?: RelativeTimeFormatStyle
 
 Style option.
 
-**Type:** [RelativeTimeFormatStyle](../../apis-default/arkts-apis/arkts-intl-relativetimeformatstyle-t.md)
+**Type:** RelativeTimeFormatStyle
 
 **Since:** 26.0.0
 

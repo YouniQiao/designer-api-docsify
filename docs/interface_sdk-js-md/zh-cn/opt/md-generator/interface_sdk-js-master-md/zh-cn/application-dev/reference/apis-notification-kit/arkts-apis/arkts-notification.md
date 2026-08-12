@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager
+**替代接口：** [notificationManager/notificationManager](ohos.notificationManager/notificationManager)
 
 <!--Device-unnamed-declare namespace notification--><!--Device-unnamed-declare namespace notification-End-->
 

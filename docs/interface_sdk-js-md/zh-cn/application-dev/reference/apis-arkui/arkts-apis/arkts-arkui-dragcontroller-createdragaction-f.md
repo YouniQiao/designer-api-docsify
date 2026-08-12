@@ -10,9 +10,9 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 > **说明：**
 > 
-> - 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
-> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> - 从API version 11开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController)方法获取当前UI
+> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController)对象。
 > 
 > - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
 
@@ -22,7 +22,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.DragController#createDragAction
+**替代接口：** [createDragAction](ohos.arkui.UIContext.DragController#createDragAction)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,8 +49,8 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## 示例
 

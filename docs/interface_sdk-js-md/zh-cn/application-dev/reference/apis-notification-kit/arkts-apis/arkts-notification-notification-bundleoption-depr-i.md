@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [./notification/NotificationCommonDef:BundleOption](arkts-notification-notification-bundleoption-depr-i.md)
+**替代接口：** [BundleOption](arkts-notification-notificationcommondef-bundleoption-i.md#BundleOption)
 
 <!--Device-notification-export interface BundleOption--><!--Device-notification-export interface BundleOption-End-->
 
@@ -30,7 +30,7 @@ bundle: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#BundleOption
+**替代接口：** [BundleOption](ohos.notificationManager/notificationManager#BundleOption)
 
 <!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
@@ -52,7 +52,7 @@ uid?: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#BundleOption
+**替代接口：** [BundleOption](ohos.notificationManager/notificationManager#BundleOption)
 
 <!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
 

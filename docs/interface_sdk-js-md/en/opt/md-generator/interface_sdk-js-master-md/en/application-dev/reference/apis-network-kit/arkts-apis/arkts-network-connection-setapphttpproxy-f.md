@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## setAppHttpProxy
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function setAppHttpProxy(httpProxy: HttpProxy): void
 ```
 
-Set application level http proxy {@link HttpProxy}.
+Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy).
 
 **Since:** 11
 
@@ -24,14 +24,14 @@ Set application level http proxy {@link HttpProxy}.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| httpProxy | [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | Yes |
+| [httpProxy](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
 
 ## Examples
 

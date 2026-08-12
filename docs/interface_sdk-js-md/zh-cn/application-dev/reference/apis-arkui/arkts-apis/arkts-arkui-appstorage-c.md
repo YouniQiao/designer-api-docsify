@@ -26,7 +26,7 @@ static Clear(): boolean
 
 删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。前提是AppStorage已经没有任何订阅者。如果有订阅者，Clear将不会生效并返回false。如果没有订阅者且删除成功则返回true。
 
-订阅者的含义参考[delete](arkts-arkui-appstorage-c.md#delete)。
+订阅者的含义参考[delete](#delete)。
 
 **起始版本：** 9
 
@@ -34,7 +34,7 @@ static Clear(): boolean
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#clear](arkts-arkui-appstorage-c.md#clear)
+**替代接口：** [clear](#clear)
 
 <!--Device-AppStorage-static Clear(): boolean--><!--Device-AppStorage-static Clear(): boolean-End-->
 
@@ -46,6 +46,17 @@ static Clear(): boolean
 | --- | --- |
 | boolean | 如果AppStorage中的属性已经没有订阅者则删除成功，返回true。否则返回false。 |
 
+## 示例
+
+```TypeScript
+let clearResult = AppStorage.staticClear();
+```
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.Clear(); // true，已经没有订阅者
+```
+
 ## Delete
 
 ```TypeScript
@@ -56,7 +67,7 @@ static Delete(propName: string): boolean
 
 仅当AppStorage中该属性没有任何订阅者时可删除成功并返回true；如果有订阅者，则返回false。
 
-属性的订阅者为[Link](arkts-arkui-appstorage-c.md#link)、[Prop](arkts-arkui-appstorage-c.md#prop)等接口返回的实例，以及  
+属性的订阅者为[Link](#Link)、[Prop](#Prop)等接口返回的实例，以及  
 [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)和  
 [@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。如果\@StorageLink('propName')、\@StorageProp('propName')装饰的变量或SubscribedAbstractProperty实例依旧对propName有同步关系，则该属性不能从AppStorage中删除。
 
@@ -66,7 +77,7 @@ static Delete(propName: string): boolean
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#delete](arkts-arkui-appstorage-c.md#delete)
+**替代接口：** [delete](#delete)
 
 <!--Device-AppStorage-static Delete(propName: string): boolean--><!--Device-AppStorage-static Delete(propName: string): boolean-End-->
 
@@ -84,6 +95,17 @@ static Delete(propName: string): boolean
 | --- | --- |
 | boolean | 如果AppStorage中有对应的属性，且该属性已经没有订阅者，则删除成功，返回true。如果属性不存在，或者该属性还存在订阅者，则返回false。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+AppStorage.Link('PropA');
+let res: boolean = AppStorage.Delete('PropA'); // false，PropA 还存在订阅者
+
+AppStorage.SetOrCreate('PropB', 48);
+let res1: boolean = AppStorage.Delete('PropB'); // true，PropB 已从AppStorage成功删除
+```
+
 ## Get
 
 ```TypeScript
@@ -98,7 +120,7 @@ static Get<T>(propName: string): T | undefined
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#get](arkts-arkui-appstorage-c.md#get)
+**替代接口：** [get](#get)
 
 <!--Device-AppStorage-static Get<T>(propName: string): T | undefined--><!--Device-AppStorage-static Get<T>(propName: string): T | undefined-End-->
 
@@ -116,6 +138,13 @@ static Get<T>(propName: string): T | undefined
 | --- | --- |
 | T | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let value: number = AppStorage.Get('PropA') as number; // 47
+```
+
 ## Has
 
 ```TypeScript
@@ -130,7 +159,7 @@ static Has(propName: string): boolean
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#has](arkts-arkui-appstorage-c.md#has)
+**替代接口：** [has](#has)
 
 <!--Device-AppStorage-static Has(propName: string): boolean--><!--Device-AppStorage-static Has(propName: string): boolean-End-->
 
@@ -147,6 +176,12 @@ static Has(propName: string): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果propName对应的属性在AppStorage中存在，则返回true。不存在则返回false。 |
+
+## 示例
+
+```TypeScript
+AppStorage.Has('simpleProp');
+```
 
 ## IsMutable
 
@@ -182,6 +217,13 @@ static IsMutable(propName: string): boolean
 | --- | --- |
 | boolean | 返回AppStorage中propName对应的属性是否是可变的。当前该返回值恒为true。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.IsMutable('PropA');
+```
+
 ## Keys
 
 ```TypeScript
@@ -196,7 +238,7 @@ static Keys(): IterableIterator<string>
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#keys](arkts-arkui-appstorage-c.md#keys)
+**替代接口：** [keys](#keys)
 
 <!--Device-AppStorage-static Keys(): IterableIterator<string>--><!--Device-AppStorage-static Keys(): IterableIterator<string>-End-->
 
@@ -207,6 +249,13 @@ static Keys(): IterableIterator<string>
 | 类型 | 说明 |
 | --- | --- |
 | IterableIterator&lt;string&gt; | AppStorage中所有的属性名。 |
+
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.Keys();
+```
 
 ## Link
 
@@ -226,7 +275,7 @@ static Link(propName: string): any
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#link](arkts-arkui-appstorage-c.md#link)
+**替代接口：** [link](#link)
 
 <!--Device-AppStorage-static Link(propName: string): any--><!--Device-AppStorage-static Link(propName: string): any-End-->
 
@@ -243,6 +292,15 @@ static Link(propName: string): any
 | 类型 | 说明 |
 | --- | --- |
 | any | 返回双向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
+
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.Link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.Link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ## Prop
 
@@ -262,7 +320,7 @@ static Prop(propName: string): any
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#prop](arkts-arkui-appstorage-c.md#prop)
+**替代接口：** [prop](#prop)
 
 <!--Device-AppStorage-static Prop(propName: string): any--><!--Device-AppStorage-static Prop(propName: string): any-End-->
 
@@ -280,13 +338,22 @@ static Prop(propName: string): any
 | --- | --- |
 | any | 返回单向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.Prop('PropA');
+prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
+```
+
 ## Set
 
 ```TypeScript
 static Set<T>(propName: string, newValue: T): boolean
 ```
 
-在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[SetOrCreate](arkts-arkui-appstorage-c.md#setorcreate)不同，Set仅在propName已存在时生效，propName不存在时返回false。从API version 12开始，newValue可以为null或undefined。
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[SetOrCreate](#SetOrCreate)不同，Set仅在propName已存在时生效，propName不存在时返回false。从API version 12开始，newValue可以为null或undefined。
 
 **起始版本：** 7
 
@@ -294,7 +361,7 @@ static Set<T>(propName: string, newValue: T): boolean
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#set](arkts-arkui-appstorage-c.md#set)
+**替代接口：** [set](#set)
 
 <!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean--><!--Device-AppStorage-static Set<T>(propName: string, newValue: T): boolean-End-->
 
@@ -313,13 +380,21 @@ static Set<T>(propName: string, newValue: T): boolean
 | --- | --- |
 | boolean | 如果AppStorage中不存在propName对应的属性，返回false。设置成功则返回true。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 48);
+let res: boolean = AppStorage.Set('PropA', 47); // true
+let res1: boolean = AppStorage.Set('PropB', 47); // false
+```
+
 ## SetAndLink
 
 ```TypeScript
 static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-与[Link](arkts-arkui-appstorage-c.md#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其双向绑定数据。defaultValue必须为T类型，且不能为null或undefined。
+与[Link](#Link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其双向绑定数据。defaultValue必须为T类型，且不能为null或undefined。
 
 **起始版本：** 7
 
@@ -327,7 +402,7 @@ static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#setAndLink](arkts-arkui-appstorage-c.md#setandlink)
+**替代接口：** [setAndLink](#setAndLink)
 
 <!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>--><!--Device-AppStorage-static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>-End-->
 
@@ -346,13 +421,21 @@ static SetAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 | --- | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的双向绑定的数据。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropB', 49); // 用默认值49创建PropB
+let link2: SubscribedAbstractProperty<number> = AppStorage.SetAndLink('PropA', 50); // PropA已存在，值为47
+```
+
 ## SetAndProp
 
 ```TypeScript
 static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>
 ```
 
-与[Prop](arkts-arkui-appstorage-c.md#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。defaultValue必须为S类型，且不能为null或undefined。
+与[Prop](#Prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。defaultValue必须为S类型，且不能为null或undefined。
 
 **起始版本：** 7
 
@@ -360,7 +443,7 @@ static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractPrope
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#setAndProp](arkts-arkui-appstorage-c.md#setandprop)
+**替代接口：** [setAndProp](#setAndProp)
 
 <!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>--><!--Device-AppStorage-static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractProperty<S>-End-->
 
@@ -379,6 +462,13 @@ static SetAndProp<S>(propName: string, defaultValue: S): SubscribedAbstractPrope
 | --- | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;S&gt; | SubscribedAbstractProperty&lt;S&gt;的实例，为AppStorage中propName对应属性的单向绑定的数据。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.SetAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
+
 ## SetOrCreate
 
 ```TypeScript
@@ -393,7 +483,7 @@ static SetOrCreate<T>(propName: string, newValue: T): void
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#setOrCreate](arkts-arkui-appstorage-c.md#setorcreate)
+**替代接口：** [setOrCreate](#setOrCreate)
 
 <!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void--><!--Device-AppStorage-static SetOrCreate<T>(propName: string, newValue: T): void-End-->
 
@@ -405,6 +495,12 @@ static SetOrCreate<T>(propName: string, newValue: T): void
 | --- | --- | --- | --- |
 | propName | string | 是 | AppStorage中的属性名。 |
 | newValue | T | 是 | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
+
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('simpleProp', 121);
+```
 
 ## Size
 
@@ -420,7 +516,7 @@ static Size(): number
 
 **废弃版本：** 10
 
-**替代接口：** [AppStorage#size](arkts-arkui-appstorage-c.md#size)
+**替代接口：** [size](#size)
 
 <!--Device-AppStorage-static Size(): number--><!--Device-AppStorage-static Size(): number-End-->
 
@@ -432,6 +528,13 @@ static Size(): number
 | --- | --- |
 | number | AppStorage中属性的数量。 |
 
+## 示例
+
+```TypeScript
+AppStorage.SetOrCreate('PropB', 48);
+let res: number = AppStorage.Size(); // 1
+```
+
 ## clear
 
 ```TypeScript
@@ -440,7 +543,7 @@ static clear(): boolean
 
 删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者，clear不会生效并返回false。
 
-订阅者的含义参考[delete](arkts-arkui-appstorage-c.md#delete)。
+订阅者的含义参考[delete](#delete)。
 
 **起始版本：** 10
 
@@ -458,6 +561,13 @@ static clear(): boolean
 | --- | --- |
 | boolean | 如果AppStorage中的属性已经没有订阅者则删除成功，返回true；如果当前仍有订阅者，返回false。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let res: boolean = AppStorage.clear(); // true，已经没有订阅者
+```
+
 ## delete
 
 ```TypeScript
@@ -472,13 +582,13 @@ static delete(propName: string): boolean
 
 1. [@StorageLink](../../../ui/state-management/arkts-appstorage.md#storagelink)、[@StorageProp](../../../ui/state-management/arkts-appstorage.md#storageprop)装饰的变量。
 
-2. 通过[link](arkts-arkui-appstorage-c.md#link)、[prop](arkts-arkui-appstorage-c.md#prop)、[setAndLink](arkts-arkui-appstorage-c.md#setandlink)、[setAndProp](arkts-arkui-appstorage-c.md#setandprop)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)的实例。
+2. 通过[link](#link)、[prop](#prop)、[setAndLink](#setAndLink)、[setAndProp](#setAndProp)接口返回的[SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md#SubscribedAbstractProperty)的实例。
 
 如需删除这些订阅者，可通过以下方式：
 
 1. 删除\@StorageLink、\@StorageProp所在的自定义组件。删除自定义组件请参考[自定义组件的删除](../../../ui/state-management/arkts-page-custom-components-lifecycle.md#自定义组件的删除)。
 
-2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#abouttobedeleted)接口。
+2. 对link、prop、setAndLink、setAndProp接口返回的SubscribedAbstractProperty的实例调用[aboutToBeDeleted](arkts-arkui-subscribedabstractproperty-c.md#aboutToBeDeleted)接口。
 
 **起始版本：** 10
 
@@ -501,6 +611,17 @@ static delete(propName: string): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 如果AppStorage中有对应的属性，且该属性已经没有订阅者，则删除成功，返回true。如果属性不存在，或者该属性还存在订阅者，则返回false。 |
+
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+AppStorage.link<number>('PropA');
+let res: boolean = AppStorage.delete('PropA'); // false，PropA 还存在订阅者
+
+AppStorage.setOrCreate('PropB', 48);
+let res1: boolean = AppStorage.delete('PropB'); // true，PropB 已从AppStorage成功删除
+```
 
 ## get
 
@@ -532,6 +653,13 @@ static get<T>(propName: string): T | undefined
 | --- | --- |
 | T | AppStorage中propName对应的属性值，如果不存在则返回undefined。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let value: number = AppStorage.get('PropA') as number; // 47
+```
+
 ## has
 
 ```TypeScript
@@ -562,6 +690,12 @@ static has(propName: string): boolean
 | --- | --- |
 | boolean | 如果propName对应的属性在AppStorage中存在，则返回true。不存在则返回false。 |
 
+## 示例
+
+```TypeScript
+AppStorage.has('simpleProp');
+```
+
 ## keys
 
 ```TypeScript
@@ -586,13 +720,20 @@ static keys(): IterableIterator<string>
 | --- | --- |
 | IterableIterator&lt;string&gt; | AppStorage中所有的属性名。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let keys: IterableIterator<string> = AppStorage.keys();
+```
+
 ## link
 
 ```TypeScript
 static link<T>(propName: string): SubscribedAbstractProperty<T>
 ```
 
-与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立双向数据绑定。如果给定的propName在AppStorage中存在，返回AppStorage中propName对应属性的双向绑定数据。与[prop](arkts-arkui-appstorage-c.md#prop)的单向数据绑定不同，link的修改会同步回AppStorage，AppStorage会将变化同步到所有绑定该propName的数据和自定义组件中。
+与[AppStorage](../../../ui/state-management/arkts-appstorage.md)中对应的propName建立双向数据绑定。如果给定的propName在AppStorage中存在，返回AppStorage中propName对应属性的双向绑定数据。与[prop](#prop)的单向数据绑定不同，link的修改会同步回AppStorage，AppStorage会将变化同步到所有绑定该propName的数据和自定义组件中。
 
 如果AppStorage中不存在propName，则返回undefined。
 
@@ -617,6 +758,15 @@ static link<T>(propName: string): SubscribedAbstractProperty<T>
 | 类型 | 说明 |
 | --- | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | 返回双向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
+
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let linkToPropA1: SubscribedAbstractProperty<number> = AppStorage.link('PropA');
+let linkToPropA2: SubscribedAbstractProperty<number> = AppStorage.link('PropA'); // linkToPropA2.get() == 47
+linkToPropA1.set(48); // 双向同步：linkToPropA1.get() == linkToPropA2.get() == 48
+```
 
 ## prop
 
@@ -648,6 +798,15 @@ static prop<T>(propName: string): SubscribedAbstractProperty<T>
 | --- | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | 返回单向绑定的数据，如果AppStorage中不存在对应的propName，则返回undefined。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop1: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+let prop2: SubscribedAbstractProperty<number> = AppStorage.prop('PropA');
+prop1.set(1); // 单向同步：prop1.get()的值为1，prop2.get()的值为47
+```
+
 ## ref
 
 ```TypeScript
@@ -656,7 +815,7 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 
 如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。否则，返回undefined。
 
-与[link](arkts-arkui-appstorage-c.md#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)类型的变量。
+与[link](#link)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#AbstractProperty)类型的变量。
 
 **起始版本：** 12
 
@@ -678,7 +837,16 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md)&lt;T&gt; | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | 返回AppStorage中propName对应属性的引用，如果AppStorage中不存在对应的propName，则返回undefined。 |
+
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let refToPropA1: AbstractProperty<number> | undefined = AppStorage.ref('PropA');
+let refToPropA2: AbstractProperty<number> | undefined = AppStorage.ref('PropA'); // refToPropA2.get() == 47
+refToPropA1?.set(48); // 同步修改AppStorage：refToPropA1.get() == refToPropA2.get() == 48
+```
 
 ## set
 
@@ -686,7 +854,7 @@ static ref<T>(propName: string): AbstractProperty<T> | undefined
 static set<T>(propName: string, newValue: T): boolean
 ```
 
-在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[setOrCreate](arkts-arkui-appstorage-c.md#setorcreate)不同，set仅在propName已存在时生效，propName不存在时返回false。
+在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中设置propName对应属性的值。如果newValue与propName对应属性的值相同，则不做赋值操作，状态变量不会通知UI刷新propName对应属性的值。与[setOrCreate](#setOrCreate)不同，set仅在propName已存在时生效，propName不存在时返回false。
 
 **起始版本：** 10
 
@@ -711,13 +879,21 @@ static set<T>(propName: string, newValue: T): boolean
 | --- | --- |
 | boolean | 如果AppStorage中不存在propName对应的属性，或设值失败，则返回false。设置成功则返回true。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 48);
+let res: boolean = AppStorage.set('PropA', 47); // true
+let res1: boolean = AppStorage.set('PropB', 47); // false
+```
+
 ## setAndLink
 
 ```TypeScript
 static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-与[link](arkts-arkui-appstorage-c.md#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其双向绑定数据。
+与[link](#link)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的双向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其双向绑定数据。
 
 **起始版本：** 10
 
@@ -742,13 +918,21 @@ static setAndLink<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 | --- | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的双向绑定的数据。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let link1: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropB', 49); // 用默认值49创建PropB
+let link2: SubscribedAbstractProperty<number> = AppStorage.setAndLink('PropA', 50); // PropA已存在，值为47
+```
+
 ## setAndProp
 
 ```TypeScript
 static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractProperty<T>
 ```
 
-与[prop](arkts-arkui-appstorage-c.md#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。
+与[prop](#prop)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回该propName对应的属性的单向绑定数据。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，返回其单向绑定数据。
 
 **起始版本：** 10
 
@@ -773,15 +957,22 @@ static setAndProp<T>(propName: string, defaultValue: T): SubscribedAbstractPrope
 | --- | --- |
 | [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | SubscribedAbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的单向绑定的数据。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let prop: SubscribedAbstractProperty<number> = AppStorage.setAndProp('PropB', 49); // PropA -> 47, PropB -> 49
+```
+
 ## setAndRef
 
 ```TypeScript
 static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 ```
 
-与[ref](arkts-arkui-appstorage-c.md#ref)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其引用。
+与[ref](#ref)接口类似，如果给定的propName在[AppStorage](../../../ui/state-management/arkts-appstorage.md)中存在，则返回AppStorage中propName对应属性的引用。如果不存在，则使用defaultValue在AppStorage中创建和初始化propName对应的属性，并返回其引用。
 
-与[setAndLink](arkts-arkui-appstorage-c.md#setandlink)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md)类型的变量。
+与[setAndLink](#setAndLink)的功能基本一致，区别在于不需要手动释放返回的[AbstractProperty&lt;T&gt;](arkts-arkui-abstractproperty-i.md#AbstractProperty)类型的变量。
 
 **起始版本：** 12
 
@@ -804,7 +995,15 @@ static setAndRef<T>(propName: string, defaultValue: T): AbstractProperty<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md)&lt;T&gt; | AbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的引用。 |
+| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | AbstractProperty&lt;T&gt;的实例，为AppStorage中propName对应属性的引用。 |
+
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropA', 47);
+let ref1: AbstractProperty<number> = AppStorage.setAndRef('PropB', 49); // 用默认值49创建PropB
+let ref2: AbstractProperty<number> = AppStorage.setAndRef('PropA', 50); // PropA已存在，值为47
+```
 
 ## setOrCreate
 
@@ -833,6 +1032,12 @@ static setOrCreate<T>(propName: string, newValue: T): void
 | propName | string | 是 | AppStorage中的属性名。 |
 | newValue | T | 是 | propName对应属性的新值，从API version 12开始可以为null或undefined。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('simpleProp', 121);
+```
+
 ## size
 
 ```TypeScript
@@ -857,13 +1062,20 @@ static size(): number
 | --- | --- |
 | number | AppStorage中属性的数量。 |
 
+## 示例
+
+```TypeScript
+AppStorage.setOrCreate('PropB', 48);
+let res: number = AppStorage.size(); // 1
+```
+
 ## staticClear
 
 ```TypeScript
 static staticClear(): boolean
 ```
 
-删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者，staticClear不会生效并返回false。订阅者的含义参考[delete](arkts-arkui-appstorage-c.md#delete)。
+删除[AppStorage](../../../ui/state-management/arkts-appstorage.md)中所有属性。仅当AppStorage没有任何订阅者时可删除成功并返回true；如果有订阅者，staticClear不会生效并返回false。订阅者的含义参考[delete](#delete)。
 
 **起始版本：** 7
 
@@ -871,7 +1083,7 @@ static staticClear(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [AppStorage.Clear](arkts-arkui-appstorage-c.md#clear)
+**替代接口：** [Clear](#Clear)
 
 <!--Device-AppStorage-static staticClear(): boolean--><!--Device-AppStorage-static staticClear(): boolean-End-->
 
@@ -882,4 +1094,15 @@ static staticClear(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 删除AppStorage中所有的属性。仅当没有任何订阅者时删除成功，返回true；如果仍有订阅者，返回false。 |
+
+## 示例
+
+```TypeScript
+let clearResult = AppStorage.staticClear();
+```
+
+```TypeScript
+AppStorage.SetOrCreate('PropA', 47);
+let res: boolean = AppStorage.Clear(); // true，已经没有订阅者
+```
 

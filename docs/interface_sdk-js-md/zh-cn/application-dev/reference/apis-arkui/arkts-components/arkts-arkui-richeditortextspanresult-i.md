@@ -42,7 +42,7 @@ paragraphStyle?: RichEditorParagraphStyle
 
 省略时，使用系统默认段落样式。
 
-**类型：** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**类型：** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **起始版本：** 12
 
@@ -108,7 +108,7 @@ symbolSpanStyle?: RichEditorSymbolSpanStyle
 
 组件SymbolSpan样式信息。
 
-**类型：** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
+**类型：** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 
 **起始版本：** 11
 
@@ -156,7 +156,7 @@ url信息。
 
 当需要为文本设置超链接样式时传入此参数。
 
-**类型：** [RichEditorUrlStyle](../arkts-apis/arkts-arkui-richeditor-richeditorurlstyle-i.md)
+**类型：** [RichEditorUrlStyle](arkts-arkui-richeditorurlstyle-i.md)
 
 **起始版本：** 19
 
@@ -202,7 +202,7 @@ SymbolSpan资源内容。
 
 默认值：undefined。
 
-**类型：** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**类型：** Resource
 
 **起始版本：** 11
 

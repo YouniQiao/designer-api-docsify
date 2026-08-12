@@ -18,7 +18,7 @@ newState: CameraCaptureState
 
 New state.
 
-**Type:** [CameraCaptureState](../arkts-apis/arkts-arkweb-web-cameracapturestate-e.md)
+**Type:** [CameraCaptureState](arkts-arkweb-cameracapturestate-e.md)
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ originalState: CameraCaptureState
 
 Original state.
 
-**Type:** [CameraCaptureState](../arkts-apis/arkts-arkweb-web-cameracapturestate-e.md)
+**Type:** [CameraCaptureState](arkts-arkweb-cameracapturestate-e.md)
 
 **Since:** 23
 

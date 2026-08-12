@@ -14,7 +14,7 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:open](arkts-corefile-fileio-open-f.md#open)
+**替代接口：** [open](arkts-corefile-file-fs-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, flags?: number, mode?: number): Promise<number>--><!--Device-unnamed-declare function open(path: string, flags?: number, mode?: number): Promise<number>-End-->
 
@@ -49,7 +49,7 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:open](arkts-corefile-fileio-open-f.md#open)
+**替代接口：** [open](arkts-corefile-file-fs-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -77,7 +77,7 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:open](arkts-corefile-fileio-open-f.md#open)
+**替代接口：** [open](arkts-corefile-file-fs-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, flags: number, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, flags: number, callback: AsyncCallback<number>): void-End-->
 
@@ -106,7 +106,7 @@ declare function open(path: string, flags: number, mode: number, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:open](arkts-corefile-fileio-open-f.md#open)
+**替代接口：** [open](arkts-corefile-file-fs-open-f.md#open)
 
 <!--Device-unnamed-declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function open(path: string, flags: number, mode: number, callback: AsyncCallback<number>): void-End-->
 

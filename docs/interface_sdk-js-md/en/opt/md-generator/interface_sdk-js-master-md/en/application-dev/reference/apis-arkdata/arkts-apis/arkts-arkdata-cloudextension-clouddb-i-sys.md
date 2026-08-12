@@ -13,7 +13,7 @@ Provides APIs for performing cloud database operations.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## delete
@@ -40,13 +40,13 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | table | string | Yes |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes |
+| [extensions](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
 
 ## Examples
 
@@ -90,7 +90,7 @@ Generates IDs for the data records inserted to the cloud database.The IDs are un
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;Array&lt;string&gt;&gt;&gt; |
+| Promise & lt;Result & lt;Array & lt;string & gt; & gt; & gt; |
 
 ## Examples
 
@@ -130,13 +130,13 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| lockId | number | Yes |
+| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; |
 
 ## Examples
 
@@ -187,14 +187,14 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | table | string | Yes |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes |
+| values | Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
+| [extensions](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
 
 ## Examples
 
@@ -232,7 +232,7 @@ Locks this cloud database. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;LockInfo&gt;&gt; |
+| Promise & lt;Result & lt;LockInfo & gt; & gt; |
 
 ## Examples
 
@@ -279,7 +279,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | table | string | Yes |
-| fields | Array&lt;string&gt; | Yes |
+| [fields](arkts-arkdata-cloudextension-table-i-sys.md) | Array & lt;string & gt; | Yes |
 | queryCount | number | Yes |
 | queryCursor | string | Yes |
 
@@ -287,7 +287,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;CloudData&gt;&gt; |
+| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; |
 
 ## Examples
 
@@ -332,13 +332,13 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| lockId | number | Yes |
+| [lockId](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Result&lt;boolean&gt;&gt; |
+| Promise & lt;Result & lt;boolean & gt; & gt; |
 
 ## Examples
 
@@ -384,14 +384,14 @@ Updates data in the cloud. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | table | string | Yes |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes |
+| values | Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
+| [extensions](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-nnrtdevice-i.md) | Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; |
 
 ## Examples
 

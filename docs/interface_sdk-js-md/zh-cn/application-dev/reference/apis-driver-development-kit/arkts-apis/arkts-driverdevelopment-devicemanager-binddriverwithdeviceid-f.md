@@ -6,7 +6,7 @@
 function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long>): Promise<RemoteDeviceDriver>
 ```
 
-根据queryDevices()返回的设备信息绑定设备。使用Promise异步回调。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#querydevices)获取设备信息列表。
+根据queryDevices()返回的设备信息绑定设备。使用Promise异步回调。需要调用[deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices)获取设备信息列表。
 
 **起始版本：** 19
 
@@ -29,15 +29,15 @@ function bindDriverWithDeviceId(deviceId: long, onDisconnect: AsyncCallback<long
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;RemoteDeviceDriver&gt; | Promise对象，返回RemoteDeviceDriver对象。 |
+| Promise&lt;[RemoteDeviceDriver](arkts-driverdevelopment-devicemanager-remotedevicedriver-i.md)&gt; | Promise对象，返回RemoteDeviceDriver对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
-| [26300002](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-驱动服务端不允许驱动客户端绑定) | The driver service does not allow any client to bind. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permission check failed. |
+| [26300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) | ExternalDeviceManager service exception. |
+| [26300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300002-驱动服务端不允许驱动客户端绑定) | The driver service does not allow any client to bind. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permission check failed. |
 
 ## 示例
 

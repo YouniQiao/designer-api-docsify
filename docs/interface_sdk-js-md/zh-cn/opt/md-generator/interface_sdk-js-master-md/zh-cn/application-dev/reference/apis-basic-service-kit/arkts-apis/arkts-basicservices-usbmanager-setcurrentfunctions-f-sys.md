@@ -12,7 +12,7 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 **废弃版本：** 12
 
-**替代接口：** [usbManager.setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setdevicefunctions)(funcs:
+**替代接口：** [setDeviceFunctions](usbManager.setDeviceFunctions(funcs:)
 
 <!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>-End-->
 
@@ -30,11 +30,11 @@ function setCurrentFunctions(funcs: FunctionType): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [14400002](../../apis-basic-services-kit/errorcode-usb.md#14400002-hdc功能被禁用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [14400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400002-hdc功能被禁用) |

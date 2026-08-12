@@ -13,7 +13,7 @@ Provides the number formatting capability, supporting automatic unit conversion 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor

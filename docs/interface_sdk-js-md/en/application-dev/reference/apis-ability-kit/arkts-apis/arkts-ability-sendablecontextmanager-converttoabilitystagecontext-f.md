@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from 'kits/@kit.AbilityKit';
+import { sendableContextManager } from '@kit.AbilityKit';
 ```
 
 ## convertToAbilityStageContext
@@ -30,7 +30,7 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sendableContext | [SendableContext](arkts-ability-sendablecontextmanager-sendablecontext-t.md) | Yes |  |
+| sendableContext | SendableContext | Yes |  |
 
 **Return value:**
 
@@ -42,7 +42,7 @@ Converts a SendableContext object to an AbilityStageContext object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter invalid. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
 
 ## Examples
 

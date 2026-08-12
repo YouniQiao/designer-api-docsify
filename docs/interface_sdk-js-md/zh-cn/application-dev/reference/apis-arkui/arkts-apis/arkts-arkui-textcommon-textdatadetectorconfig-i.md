@@ -53,7 +53,7 @@ decoration?: DecorationStyleInterface
 
 }
 
-**类型：** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
+**类型：** [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
 **起始版本：** 23
 
@@ -117,7 +117,7 @@ types: TextDataDetectorType[] | undefined | null
 
 设置文本识别的实体类型。设置types为null或者undefined或者[]时，识别所有类型的实体，否则只识别指定类型的实体。
 
-**类型：** TextDataDetectorType[] \| undefined \| null
+**类型：** [TextDataDetectorType](arkts-arkui-textcommon-textdatadetectortype-e.md)[] \| undefined \| null
 
 **起始版本：** 23
 

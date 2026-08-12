@@ -20,8 +20,8 @@ All data operation types.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [DataAddOperation](arkts-arkui-dataaddoperation-i.md) |
-| [DataDeleteOperation](../arkts-apis/arkts-arkui-lazyforeach-datadeleteoperation-i.md) |
-| [DataChangeOperation](../arkts-apis/arkts-arkui-lazyforeach-datachangeoperation-i.md) |
+| [DataDeleteOperation](arkts-arkui-datadeleteoperation-i.md) |
+| [DataChangeOperation](arkts-arkui-datachangeoperation-i.md) |
 | [DataMoveOperation](arkts-arkui-datamoveoperation-i.md) |
 | [DataExchangeOperation](arkts-arkui-dataexchangeoperation-i.md) |
 | [DataReloadOperation](arkts-arkui-datareloadoperation-i.md) |

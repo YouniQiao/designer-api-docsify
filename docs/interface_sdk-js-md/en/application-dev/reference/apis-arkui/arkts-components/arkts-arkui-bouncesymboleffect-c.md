@@ -2,7 +2,7 @@
 
 Defines BounceSymbolEffect class, which inherits from **SymbolEffect**.
 
-**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** BounceSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
 
 **Since:** 12
 
@@ -39,7 +39,7 @@ A constructor used to create a **ScaleSymbolEffect** instance, which comes with 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
-| direction | [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md) | No | Effect direction.&lt;br&gt;Default value: **EffectDirection.DOWN |
+| direction | [EffectDirection](arkts-arkui-effectdirection-e.md) | No | Effect direction.&lt;br&gt;Default value: **EffectDirection.DOWN |
 
 ## direction
 
@@ -51,7 +51,7 @@ Effect direction.
 
 Default value: **EffectDirection.DOWN**
 
-**Type:** [EffectDirection](../arkts-apis/arkts-arkui-symbolglyph-effectdirection-e.md)
+**Type:** [EffectDirection](arkts-arkui-effectdirection-e.md)
 
 **Since:** 12
 

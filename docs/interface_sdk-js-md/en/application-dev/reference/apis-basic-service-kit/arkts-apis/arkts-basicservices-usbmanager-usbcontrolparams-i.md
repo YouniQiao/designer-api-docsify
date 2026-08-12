@@ -8,7 +8,7 @@ Represents control transfer parameters.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-usbManager-interface USBControlParams--><!--Device-usbManager-interface USBControlParams-End-->
 
@@ -17,7 +17,7 @@ Represents control transfer parameters.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## data
@@ -36,7 +36,7 @@ Buffer for writing or reading data.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-USBControlParams-data: Uint8Array--><!--Device-USBControlParams-data: Uint8Array-End-->
 
@@ -58,7 +58,7 @@ Index of the request parameter.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-USBControlParams-index: number--><!--Device-USBControlParams-index: number-End-->
 
@@ -72,7 +72,7 @@ reqType: USBControlRequestType
 
 Control request type.
 
-**Type:** [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
+**Type:** USBControlRequestType
 
 **Since:** 9
 
@@ -80,7 +80,7 @@ Control request type.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-USBControlParams-reqType: USBControlRequestType--><!--Device-USBControlParams-reqType: USBControlRequestType-End-->
 
@@ -102,7 +102,7 @@ Request type.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-USBControlParams-request: number--><!--Device-USBControlParams-request: number-End-->
 
@@ -116,7 +116,7 @@ target: USBRequestTargetType
 
 Request target type.
 
-**Type:** [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
+**Type:** USBRequestTargetType
 
 **Since:** 9
 
@@ -124,7 +124,7 @@ Request target type.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-USBControlParams-target: USBRequestTargetType--><!--Device-USBControlParams-target: USBRequestTargetType-End-->
 
@@ -146,7 +146,7 @@ Request parameter.
 
 **Deprecated since:** 18
 
-**Substitutes:** [usbManager.USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+**Substitutes:** [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md#USBDeviceRequestParams)
 
 <!--Device-USBControlParams-value: number--><!--Device-USBControlParams-value: number-End-->
 

@@ -29,5 +29,5 @@ export function createListItemGroupNode(context: UIContext, options?: FrameNodeO
 
 | 类型 | 说明 |
 | --- | --- |
-| [ListItemGroup](arkts-arkui-typenode-listitemgroup-t.md) | 返回 ListItemGroup 类型的 FrameNode |
+| ListItemGroup | 返回 ListItemGroup 类型的 FrameNode |
 

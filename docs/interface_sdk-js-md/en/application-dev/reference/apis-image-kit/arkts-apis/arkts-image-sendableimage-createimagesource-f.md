@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from 'kits/@kit.ImageKit';
+import { sendableImage } from '@kit.ImageKit';
 ```
 
 ## createImageSource
@@ -37,7 +37,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -82,7 +82,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 
@@ -105,7 +105,7 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
 Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap).
+[sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createPixelMap).
 
 Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
@@ -132,7 +132,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Type | Description |
 | --- | --- |
-| [ImageSource](arkts-image-sendableimage-imagesource-i.md) | ImageSource instance. If the operation fails, undefined is returned. |
+| ImageSource | ImageSource instance. If the operation fails, undefined is returned. |
 
 ## Examples
 

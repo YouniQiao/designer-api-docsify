@@ -4,7 +4,7 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 
 > **说明：**
 
-> - 以下API需先使用UIContext中的{@link getUIObserver()}方法获取到UIObserver对象，再通过该对象调用对应方法。
+> - 以下API需先使用UIContext中的[getUIObserver](arkts-arkui-arkui-uicontext-uicontext-c.md#getUIObserver)方法获取到UIObserver对象，再通过该对象调用对应方法。
 
 > - UIObserver仅能监听到本进程内的UI组件状态变化信息，
 > - 不支持获取&lt;!--Del--&gt;[UIExtensionComponent](ui_extension_component)等&lt;!--DelEnd--&gt;跨进程场景的信息。
@@ -34,7 +34,7 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 | [off](arkts-arkui-uiobserver-off-f.md#off-8) |
 | [off](arkts-arkui-uiobserver-off-f.md#off-9) |
 | [off](arkts-arkui-uiobserver-off-f.md#off-10) |
-| [off](arkts-arkui-uiobserver-off-f.md#off-11) | 取消监听Navigation的页面切换事件。与[uiObserver.off](uiObserver.off( type: 'navDestinationSwitch', context:UIAbilityContext \|
+| [off](arkts-arkui-uiobserver-off-f.md#off-11) |
 | [on](arkts-arkui-uiobserver-on-f.md#on) |
 | [on](arkts-arkui-uiobserver-on-f.md#on-1) |
 | [on](arkts-arkui-uiobserver-on-f.md#on-2) |
@@ -74,6 +74,6 @@ UIObserver提供了UI组件行为变化的无感监听能力，支持监听Navig
 | 名称 |
 | --- |
 | [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) |
-| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md)中，作为  [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \|
+| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | routerPage生命周期触发时对应的状态。RouterPageState用于[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo)中，作为  [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \|
 | [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) |
 | [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) |

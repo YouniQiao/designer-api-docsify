@@ -4,11 +4,11 @@ AbilityStage is a [module](../../../quick-start/application-package-overview.md#
 
 When the [HAP](../../../quick-start/hap-package.md) or [HSP](../../../quick-start/in-app-hsp.md) of an application is first loaded, an AbilityStage instance is created. If a module contains both AbilityStage and other components (like UIAbility or ExtensionAbility), the AbilityStage instance is created before the other component instances.
 
-An AbilityStage has the lifecycle callbacks [onCreate()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate) and  
-[onDestroy()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#ondestroy), and the event callbacks  
-[onAcceptWant()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant),  
-[onConfigurationUpdate()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onconfigurationupdate), and  
-[onMemoryLevel()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onmemorylevel).
+An AbilityStage has the lifecycle callbacks [onCreate()](#onCreate) and  
+[onDestroy()](#onDestroy), and the event callbacks  
+[onAcceptWant()](#onAcceptWant),  
+[onConfigurationUpdate()](#onConfigurationUpdate), and  
+[onMemoryLevel()](#onMemoryLevel).
 
 **Since:** 9
 
@@ -21,7 +21,7 @@ An AbilityStage has the lifecycle callbacks [onCreate()](arkts-ability-app-abili
 ## Modules to Import
 
 ```TypeScript
-import { AbilityStage } from 'kits/@kit.AbilityKit';
+import { AbilityStage } from '@kit.AbilityKit';
 ```
 
 ## onAboutToCreateAbility
@@ -30,7 +30,7 @@ import { AbilityStage } from 'kits/@kit.AbilityKit';
 onAboutToCreateAbility(): void
 ```
 
-Called when the ability stage is about to create the first ability.If both this method and {@link onAboutToCreateAbilityAsync} are overridden,only {@link onAboutToCreateAbilityAsync} takes effect.
+Called when the ability stage is about to create the first ability.If both this method and [onAboutToCreateAbilityAsync](#onAboutToCreateAbilityAsync) are overridden,only [onAboutToCreateAbilityAsync](#onAboutToCreateAbilityAsync) takes effect.
 
 **Since:** 24
 
@@ -48,7 +48,7 @@ Called when the ability stage is about to create the first ability.If both this 
 onAboutToCreateAbilityAsync(): Promise<void>
 ```
 
-Called when the ability stage is about to create the first ability. This API uses a promise to return the result.Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved.If both {@link onAboutToCreateAbility} and this method are overridden, only this method takes effect.
+Called when the ability stage is about to create the first ability. This API uses a promise to return the result.Subsequent lifecycle callbacks will be suspended until the returned Promise is resolved.If both [onAboutToCreateAbility](#onAboutToCreateAbility) and this method are overridden, only this method takes effect.
 
 **Since:** 26.0.0
 
@@ -80,7 +80,7 @@ If a UIAbility instance with the same ID already exists in the system, that inst
 > **NOTE：**
 > 
 > Starting from API version 20, this callback is not triggered when
-> [AbilityStage.onAcceptWantAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwantasync) is implemented.
+> [AbilityStage.onAcceptWantAsync](#onAcceptWantAsync) is implemented.
 
 **Since:** 9
 
@@ -175,12 +175,12 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)class. This API returns the result synchronously and does not support asynchronous callbacks.
+Called when the system global configuration (such as the system language and dark/light color mode) changes. All the configuration items are defined in the [Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)class. This API returns the result synchronously and does not support asynchronous callbacks.
 
 > **NOTE：**
 > 
 > There are certain restrictions when this callback is actually triggered. For example, if you set the application
-> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setlanguage), the
+> language by calling [setLanguage](arkts-ability-applicationcontext-c.md#setLanguage), the
 > system does not trigger the **onConfigurationUpdate** callback even if the system language changes. For details,
 > see [When to Use](../../../application-models/subscribe-system-environment-variable-changes.md#when-to-use).
 
@@ -355,7 +355,7 @@ Called when a UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd--&gt;
 If the application already has a process with the same ID, the UIAbility&lt;!--Del--&gt; or UIExtensionAbility&lt;!--DelEnd-  
 -&gt; runs in that process. Otherwise, a new process is created.
 
-If you implement both **onNewProcessRequest** and [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.
+If you implement both **onNewProcessRequest** and [onAcceptWant](#onAcceptWant), the system first invokes the **onNewProcessRequest** callback, and then the **onAcceptWant** callback.
 
 &lt;!--Del--&gt;
 
@@ -370,7 +370,7 @@ The **isolationProcess** field can be set to **true** in the
 > from API version 20, a UIExtensionAbility can also be launched in the specified process.&lt;!--DelEnd--&gt;
 > 
 > - Starting from API version 20, this callback is not executed when
-> [AbilityStage.onNewProcessRequestAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequestasync) is implemented.
+> [AbilityStage.onNewProcessRequestAsync](#onNewProcessRequestAsync) is implemented.
 
 **Since:** 11
 
@@ -480,7 +480,7 @@ Called when the application is closed by the user, allowing the user to choose b
 > called if the application is terminated forcibly.
 > 
 > - This API is not executed when
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync) is implemented.
+> [AbilityStage.onPrepareTerminationAsync](#onPrepareTerminationAsync) is implemented.
 
 **Since:** 15
 

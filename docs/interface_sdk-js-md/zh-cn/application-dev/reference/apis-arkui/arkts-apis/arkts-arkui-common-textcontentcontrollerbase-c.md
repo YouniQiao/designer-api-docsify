@@ -99,7 +99,7 @@ Delete text in TextRange.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | 否 | range for deleting. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 否 | range for deleting. |
 
 ## getCaretOffset
 
@@ -149,7 +149,7 @@ Gets the selected range of text content.
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextRange](arkts-arkui-textrange-i.md) | range for selecting. |
+| [TextRange](arkts-arkui-textcommon-textrange-i.md) | range for selecting. |
 
 ## getTextContentLineCount
 
@@ -223,7 +223,7 @@ Scroll the input field component to make the specified content visible.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | 否 | The visible range. If the parameter is invalid, this method will have no effect. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 否 | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setStyledPlaceholder
 
@@ -247,5 +247,5 @@ Set the styled placeholder.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 

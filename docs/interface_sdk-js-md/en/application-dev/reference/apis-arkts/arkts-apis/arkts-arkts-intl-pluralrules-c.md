@@ -33,7 +33,7 @@ Creates a new PluralRules.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locales | string \| FixedArray&lt;string&gt; | No | the locales. |
-| options | [PluralRulesOptions](arkts-arkts-intl-pluralrulesoptions-i.md) | No | the options. |
+| options | PluralRulesOptions | No | the options. |
 
 ## resolvedOptions
 
@@ -57,7 +57,7 @@ Returns resolved options.
 
 | Type | Description |
 | --- | --- |
-| [ResolvedPluralRulesOptions](arkts-arkts-intl-resolvedpluralrulesoptions-i.md) | the resolved options. |
+| ResolvedPluralRulesOptions | the resolved options. |
 
 ## select
 
@@ -87,7 +87,7 @@ Selects a plural rule category.
 
 | Type | Description |
 | --- | --- |
-| [LDMLPluralRule](arkts-arkts-intl-ldmlpluralrule-t.md) | the plural rule. |
+| LDMLPluralRule | the plural rule. |
 
 ## supportedLocalesOf
 

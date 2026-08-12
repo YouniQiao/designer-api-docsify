@@ -69,7 +69,7 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 | --- | --- | --- |
 | [width](#width) | number | Yes |
 | [height](#height) | number | Yes |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-graphics-lengthmetricsunit-e.md) | Yes |
+| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |
 
 ## getContext
 

@@ -68,7 +68,7 @@ edgeEffect?: ChainEdgeEffect
 
 链式动效的边缘效果。
 
-**类型：** [ChainEdgeEffect](../arkts-components/arkts-arkui-chainedgeeffect-e-sys.md)
+**类型：** [ChainEdgeEffect](arkts-arkui-list-chainedgeeffect-e-sys.md)
 
 **默认值：** ChainEdgeEffect.DEFAULT
 

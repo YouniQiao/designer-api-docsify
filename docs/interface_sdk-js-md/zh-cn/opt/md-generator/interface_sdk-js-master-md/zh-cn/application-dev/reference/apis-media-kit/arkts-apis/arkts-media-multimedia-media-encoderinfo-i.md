@@ -16,7 +16,7 @@ bitRate?: Range
 
 编码器比特率范围，包含最小和最大比特率，单位为bit/s。
 
-**类型：** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 11
 
@@ -32,7 +32,7 @@ channels?: Range
 
 音频采集器的声道数范围，包含最小和最大声道数。仅在音频编码器中可用。
 
-**类型：** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 11
 
@@ -48,7 +48,7 @@ frameRate?: Range
 
 视频帧率范围，包含最小和最大帧率，单位为fps。仅在视频编码器中可用。
 
-**类型：** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 11
 
@@ -64,7 +64,7 @@ height?: Range
 
 视频帧高度范围，包含最小和最大高度，单位为像素（px）。仅在视频编码器中可用。
 
-**类型：** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 11
 
@@ -128,7 +128,7 @@ width?: Range
 
 视频帧宽度范围，包含最小和最大宽度，单位为像素（px）。仅在视频编码器中可用。
 
-**类型：** [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md)
+**类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
 **起始版本：** 11
 

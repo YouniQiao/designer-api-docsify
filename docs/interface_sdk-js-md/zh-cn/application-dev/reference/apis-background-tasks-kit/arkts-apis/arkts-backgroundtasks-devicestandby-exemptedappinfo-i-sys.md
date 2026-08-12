@@ -58,7 +58,7 @@ name: string
 resourceTypes: int
 ```
 
-资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md)。
+资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType)。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

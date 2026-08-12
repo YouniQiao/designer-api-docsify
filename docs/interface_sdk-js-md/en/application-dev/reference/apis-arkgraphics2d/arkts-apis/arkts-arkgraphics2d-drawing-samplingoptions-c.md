@@ -22,7 +22,7 @@ Implements sampling options.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## constructor
@@ -32,7 +32,7 @@ constructor()
 ```
 
 Creates a **SamplingOptions** object, where the default value of  
-[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md) is **FILTER_MODE_NEAREST**.
+[FilterMode](arkts-arkgraphics2d-drawing-filtermode-e.md#FilterMode) is **FILTER_MODE_NEAREST**.
 
 **Since:** 12
 
@@ -68,5 +68,5 @@ Creates a **SamplingOptions** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

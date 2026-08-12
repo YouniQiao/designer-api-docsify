@@ -28,5 +28,5 @@ Defines the callback type used in onGetStartIndexByIndex of GridLayoutOptions.
 
 | Type | Description |
 | --- | --- |
-| [StartLineInfo](../arkts-apis/arkts-arkui-grid-startlineinfo-i-sys.md) | - |
+| [StartLineInfo](arkts-arkui-startlineinfo-i-sys.md) | - |
 

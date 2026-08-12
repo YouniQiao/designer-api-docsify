@@ -34,8 +34,8 @@ Add a blendMode effect to the current component.Cannot be used together with the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effect | [BlendMode](../arkts-components/arkts-arkui-blendmode-e.md) \| Blender \| undefined | 是 | When the effect type is BlendMode type, define Different hybrid modes. |
-| type | [BlendApplyType](../arkts-components/arkts-arkui-blendapplytype-e-sys.md) | 否 | Different blend apply type Default value: BlendApplyType.FAST. |
+| effect | [BlendMode](arkts-arkui-common-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) \| undefined | 是 | When the effect type is BlendMode type, define Different hybrid modes. |
+| type | [BlendApplyType](arkts-arkui-common-blendapplytype-e.md) | 否 | Different blend apply type Default value: BlendApplyType.FAST. |
 
 **返回值：**
 
@@ -69,7 +69,7 @@ Sets the edge light effect for the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [EdgeLightParams](../arkts-components/arkts-arkui-edgelightparams-i-sys.md) \| undefined | 是 | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
+| params | [EdgeLightParams](arkts-arkui-common-edgelightparams-i-sys.md) \| undefined | 是 | Edge light effect parameters. Defines the position, length, intensity, color, and thickness of the light effect. If params is undefined, the edge light effect is removed. |
 
 **返回值：**
 
@@ -133,7 +133,7 @@ Applies a spatial effect to component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](../arkts-components/arkts-arkui-spatialeffectparams-i-sys.md) \| undefined | 是 | Spatial effect parameters. |
+| params | [SpatialEffectParams](arkts-arkui-common-spatialeffectparams-i-sys.md) \| undefined | 是 | Spatial effect parameters. |
 
 **返回值：**
 
@@ -198,7 +198,7 @@ Specify whether the current component participates in the fusion effect of the a
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean \| undefined | 是 | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.&lt;br&gt;The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. &lt;br&gt;Default value: **false**. Undefined means to default value. |
-| options | [GravityCenterOptions](../arkts-components/arkts-arkui-gravitycenteroptions-i-sys.md) | 否 | Gravitational center parameter. This parameter must be used together with UnionMode.GRAVITY_UNION. |
+| options | [GravityCenterOptions](arkts-arkui-common-gravitycenteroptions-i-sys.md) | 否 | Gravitational center parameter. This parameter must be used together with UnionMode.GRAVITY_UNION. |
 
 **返回值：**
 

@@ -6,7 +6,7 @@
 export function beforeComponent(com: Component): On
 ```
 
-要求目标组件位于由给定{@link Component}指定的另一个组件之前对象，用于相对于组件定位。
+要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md#Component)指定的另一个组件之前对象，用于相对于组件定位。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ export function beforeComponent(com: Component): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| com | [Component](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-component-i.md) | 是 | 描述了目标组件在前面的组件。 |
+| com | [Component](arkts-test-uitest-component-c.md) | 是 | 描述了目标组件在前面的组件。 |
 
 **返回值：**
 
@@ -32,5 +32,5 @@ export function beforeComponent(com: Component): On
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 

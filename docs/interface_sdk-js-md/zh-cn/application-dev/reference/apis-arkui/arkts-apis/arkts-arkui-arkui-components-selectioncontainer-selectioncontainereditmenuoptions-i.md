@@ -36,7 +36,7 @@ onCreateMenu?: OnCreateMenuCallback
 
 每次菜单显示前触发，传入默认菜单项并返回处理后的菜单项。默认值为空，不触发该回调。
 
-**类型：** [OnCreateMenuCallback](arkts-arkui-oncreatemenucallback-t.md)
+**类型：** OnCreateMenuCallback
 
 **起始版本：** 26.0.0
 
@@ -56,7 +56,7 @@ onPrepareMenu?: OnPrepareMenuCallback
 
 文本选中内容变化后、菜单显示前触发，可在该回调中调整菜单数据。默认值为空，不触发该回调。
 
-**类型：** [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md)
+**类型：** OnPrepareMenuCallback
 
 **起始版本：** 26.0.0
 

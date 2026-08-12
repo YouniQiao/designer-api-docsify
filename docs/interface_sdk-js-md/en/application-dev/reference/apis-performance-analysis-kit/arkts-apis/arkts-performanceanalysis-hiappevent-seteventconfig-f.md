@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## setEventConfig
@@ -26,8 +26,8 @@ Configuration items vary depending on events. Currently, only the following even
 > **NOTE：**
 > 
 > Since API version 26.0.0, all settings of this API are supported by
-> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy). You are advised to use
-> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy).
+> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy). You are advised to use
+> [configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy).
 
 **Since:** 15
 
@@ -44,7 +44,7 @@ Configuration items vary depending on events. Currently, only the following even
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Event name. |
-| config | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ParamType&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:&lt;br&gt;- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.&lt;br&gt;- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
+| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:&lt;br&gt;- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.&lt;br&gt;- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
 
 **Return value:**
 
@@ -56,7 +56,7 @@ Configuration items vary depending on events. Currently, only the following even
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

@@ -44,14 +44,14 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | (result: WebMessage) =&gt; void | 是 |
+| callback | (result: WebMessage) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) |
 
 ## onMessageEventExt
 
@@ -59,7 +59,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md)类型消息。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#WebMessageType)类型消息。
 
 **起始版本：** 10
 
@@ -73,14 +73,14 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | (result: WebMessageExt) =&gt; void | 是 |
+| callback | (result: WebMessageExt) = & gt; void | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) |
 
 ## postMessageEvent
 
@@ -108,8 +108,8 @@ postMessageEvent(message: WebMessage): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) |
 
 ## postMessageEventExt
 
@@ -137,8 +137,8 @@ postMessageEventExt(message: WebMessageExt): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [17100010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) |
 
 ## isExtentionType
 

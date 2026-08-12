@@ -16,7 +16,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyformsenableupdate)
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -30,7 +30,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |
 | isEnableUpdate | boolean | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -47,7 +47,7 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-depr-f-sys.md#notifyformsenableupdate)
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -61,11 +61,11 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| formIds | Array&lt;string&gt; | Yes |
+| formIds | Array & lt;string & gt; | Yes |
 | isEnableUpdate | boolean | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

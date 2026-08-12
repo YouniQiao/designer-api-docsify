@@ -28,7 +28,7 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| country | string | 是 |
+| [country](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-postaladdress-c.md) | string | 是 |
 | options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | 否 |
 
 ## 示例

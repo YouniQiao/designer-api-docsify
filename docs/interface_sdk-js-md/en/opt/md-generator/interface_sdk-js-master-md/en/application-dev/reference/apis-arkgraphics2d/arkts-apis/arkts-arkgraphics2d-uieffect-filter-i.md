@@ -11,7 +11,7 @@ Filter effect class, used to apply corresponding effects to specified components
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -32,7 +32,7 @@ Adds a blur effect to the component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| blurRadius | number | Yes |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
 
 **Return value:**
 
@@ -102,7 +102,7 @@ The maximum supported brightness boost multiple is calculated as the device's cu
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| ratio | number | Yes |
+| [ratio](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | Yes |
 
 **Return value:**
 
@@ -114,8 +114,8 @@ The maximum supported brightness boost multiple is calculated as the device's cu
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

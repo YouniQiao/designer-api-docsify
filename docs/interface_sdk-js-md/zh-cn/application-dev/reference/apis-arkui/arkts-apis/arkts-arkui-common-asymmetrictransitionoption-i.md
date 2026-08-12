@@ -18,7 +18,7 @@ appear: TransitionEffect
 
 TransitionEffect used for appearing
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ disappear: TransitionEffect
 
 TransitionEffect used for disappearing
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** [TransitionEffect](arkts-arkui-common-transitioneffect-c.md)
 
 **起始版本：** 23
 

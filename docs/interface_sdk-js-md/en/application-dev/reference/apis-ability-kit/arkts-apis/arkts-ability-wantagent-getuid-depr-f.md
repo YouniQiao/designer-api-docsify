@@ -14,7 +14,7 @@ Obtains the UID of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#getUid
+**Substitutes:** [getUid](ohos.app.ability.wantAgent/wantAgent#getUid)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -26,8 +26,8 @@ Obtains the UID of a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | whose UID to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Create a callback method for WantAgent. |
 
 ## Examples
 
@@ -98,7 +98,7 @@ Obtains the UID of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.wantAgent/wantAgent#getUid
+**Substitutes:** [getUid](ohos.app.ability.wantAgent/wantAgent#getUid)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,7 +110,7 @@ Obtains the UID of a WantAgent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | whose UID to obtain. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | whose UID to obtain. |
 
 **Return value:**
 

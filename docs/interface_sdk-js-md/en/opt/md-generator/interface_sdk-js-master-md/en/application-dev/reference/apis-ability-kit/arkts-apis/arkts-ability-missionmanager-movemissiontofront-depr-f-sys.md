@@ -12,7 +12,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**Substitutes:** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -61,7 +61,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**Substitutes:** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -76,7 +76,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | missionId | number | Yes |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | Yes |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## Examples
@@ -111,7 +111,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#moveMissionToFront
+**Substitutes:** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -126,13 +126,13 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | missionId | number | Yes |
-| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c-sys.md) | No |
+| options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

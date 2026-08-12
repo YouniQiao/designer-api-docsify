@@ -157,7 +157,7 @@ Indicates the lifecycle function type when an OE Extension instance is created.<
 | Parameter | Description |
 | -- | -- |
 | (ContentEmbed_ExtensionInstanceHandle instance | Pointer to the OE Extension instance object. |
-| [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) \*want | Represents a pointer to an [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) instance. |
+| AbilityBase_Want \*want | Represents a pointer to an [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) instance. |
 
 ### OH_ContentEmbed_Extension_OnDestroyFunc()
 
@@ -721,7 +721,7 @@ Sets the snapshot image of the OE document associated with the client-side OE ob
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) object | [ContentEmbed_ObjectHandle](capi-contentembed-contentembed-object8h.md) instance. |
-| OH_PixelmapNative *pixelMap | Pixel map object of the document snapshot. For details, see [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md). |
+| [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md) *pixelMap | Pixel map object of the document snapshot. For details, see [OH_PixelmapNative](../ImageKit/capi-image-nativemodule-oh-pixelmapnative.md). |
 
 **Returns**:
 
@@ -746,7 +746,7 @@ Starts the {@link UIAbility} of the current instance using the OE Extension cont
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | Pointer to the context object of the OE Extension. |
-| [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) *want | Parameter passed when the UIAbility is started. For details, see [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md). |
+| AbilityBase_Want *want | Parameter passed when the UIAbility is started. For details, see [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md). |
 
 **Returns**:
 
@@ -771,7 +771,7 @@ Starts the {@link UIAbility} of the OE Extension context using the start options
 | Parameter | Description |
 | -- | -- |
 | [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) context | Pointer to the OE Extension context object. |
-| [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md) *want | Parameter passed when the UIAbility is started. For details, see [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md). |
+| AbilityBase_Want *want | Parameter passed when the UIAbility is started. For details, see [AbilityBase_Want](../AbilityKit/capi-abilitybase-abilitybase-want.md). |
 | AbilityRuntime_StartOptions *options | Additional options for starting the UIAbility. For details, see {@link AbilityRuntime_StartOptions}. |
 
 **Returns**:

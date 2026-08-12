@@ -14,7 +14,7 @@ function setTime(time: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)
+**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)
 
 **需要权限：** ohos.permission.SET_TIME
 
@@ -71,7 +71,7 @@ function setTime(time: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#settime)
+**替代接口：** [setTime](arkts-basicservices-systemdatetime-settime-f-sys.md#setTime)
 
 **需要权限：** ohos.permission.SET_TIME
 

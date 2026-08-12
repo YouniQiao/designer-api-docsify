@@ -1,7 +1,7 @@
 # MissionInfo (System API)
 
 The module defines detailed information about a mission. The information can be obtained through  
-[getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo).
+[getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo).
 
 **Since:** 8
 

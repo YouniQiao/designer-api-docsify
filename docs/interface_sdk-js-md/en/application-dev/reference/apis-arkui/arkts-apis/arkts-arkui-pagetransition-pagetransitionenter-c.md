@@ -2,7 +2,7 @@
 
 Provides an interface to set transition style when a page enters.
 
-**Inheritance/Implementation:** PageTransitionEnter extends [CommonTransition](arkts-arkui-pagetransition-commontransition-c.md)
+**Inheritance/Implementation:** PageTransitionEnter extends [CommonTransition](arkts-arkui-pagetransition-commontransition-c.md#CommonTransition)
 
 **Since:** 23
 

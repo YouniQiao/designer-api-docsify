@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from 'kits/@kit.AbilityKit';
+import { errorManager } from '@kit.AbilityKit';
 ```
 
 ## on('error')
@@ -41,8 +41,8 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) |
 
 ## Examples
 
@@ -98,13 +98,13 @@ This API can only be used in the main thread. If a thread error occurs, an error
 | --- | --- | --- |
 | type | 'loopObserver' | Yes |
 | timeout | number | Yes |
-| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [LoopObserver](arkts-ability-errormanager-loopobserver-t.md) | Yes |
+| [observer](../../apis-arkui/arkts-apis/arkts-arkui-viewmodel-observer-i.md) | [LoopObserver](arkts-ability-loopobserver-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -150,8 +150,8 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
 
 ## Examples
 
@@ -204,8 +204,8 @@ Registers a rejected promise observer with any thread in the process. Once regis
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
 
 ## Examples
 
@@ -245,7 +245,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 > **NOTE：**
 > 
 > If the callback function runs for more than 1 second, the
-> [AppRecovery](arkts-app-ability-apprecovery.md) feature may not work. The execution duration can
+> [AppRecovery](arkts-app-ability-apprecovery.md#appRecovery) feature may not work. The execution duration can
 > be calculated by parsing the time difference between **begin** and **Freeze callback execution completed** in
 > HiLogs. If the execution duration exceeds 1 second, you can optimize the callback logic by using methods such as
 > asynchronous processing, reducing operations that block other tasks, and optimizing the data structures to reduce
@@ -270,7 +270,7 @@ This API can only be used in the main thread. If a thread error occurs, an error
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -311,8 +311,8 @@ Registers a global error observer via the **errorManager.on** API within any thr
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
 
 ## Examples
 

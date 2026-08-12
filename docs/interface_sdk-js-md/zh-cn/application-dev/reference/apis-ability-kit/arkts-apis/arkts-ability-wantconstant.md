@@ -8,7 +8,7 @@ wantConstant模块提供want中操作want常数和解释Flags说明的能力。
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.wantConstant/wantConstant
+**替代接口：** [wantConstant/wantConstant](ohos.app.ability.wantConstant/wantConstant)
 
 <!--Device-unnamed-declare namespace wantConstant--><!--Device-unnamed-declare namespace wantConstant-End-->
 

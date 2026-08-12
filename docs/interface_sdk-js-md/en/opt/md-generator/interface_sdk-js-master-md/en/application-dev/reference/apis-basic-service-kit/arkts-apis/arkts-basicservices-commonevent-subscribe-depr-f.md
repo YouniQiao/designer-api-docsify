@@ -12,7 +12,7 @@ Subscribes to common events. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.commonEventManager:commonEventManager.subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md#subscribe)
+**Substitutes:** [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md#subscribe)
 
 <!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void--><!--Device-commonEvent-function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<CommonEventData>): void-End-->
 

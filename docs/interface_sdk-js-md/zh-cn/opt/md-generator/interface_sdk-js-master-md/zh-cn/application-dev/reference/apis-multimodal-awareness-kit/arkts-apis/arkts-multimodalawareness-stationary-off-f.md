@@ -20,7 +20,7 @@ function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<A
 | --- | --- | --- |
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 |
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ActivityResponse&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 否 |
 
 ## 示例
 

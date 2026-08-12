@@ -2,9 +2,9 @@
 
 用于clipShape和maskShape接口的矩形形状。
 
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)。
+继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
 
-**继承/实现关系：** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
+**继承/实现关系：** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| RoundRectShapeOptions | 否 | 矩形形状参数。 |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | 否 | 矩形形状参数。 |
 
 ## radius
 
@@ -90,7 +90,7 @@ radiusHeight(rHeight: double | string): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rHeight | double \| string | 是 | 矩形形状圆角半径的高度。 &lt;br/&gt; 类型为number时取值范围是 [0, +∞)，类型为string时是[Length](arkts-arkui-length-t.md)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rHeight | double \| string | 是 | 矩形形状圆角半径的高度。 &lt;br/&gt; 类型为number时取值范围是 [0, +∞)，类型为string时是[Length](Length)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -120,7 +120,7 @@ radiusWidth(rWidth: double | string): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rWidth | double \| string | 是 | 矩形形状圆角半径的宽度。&lt;br/&gt; 类型为double时取值范围是 [0, +∞)，类型为string时是[Length](arkts-arkui-length-t.md)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rWidth | double \| string | 是 | 矩形形状圆角半径的宽度。&lt;br/&gt; 类型为double时取值范围是 [0, +∞)，类型为string时是[Length](Length)。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

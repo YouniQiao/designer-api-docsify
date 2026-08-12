@@ -13,7 +13,7 @@ Before calling any of the following APIs, you must use [floatingBall.create()](a
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from 'kits/@kit.ArkUI';
+import { floatingBall } from '@kit.ArkUI';
 ```
 
 ## getFloatingBallWindowInfo
@@ -34,18 +34,18 @@ Obtains the floating ball window information. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;FloatingBallWindowInfo&gt; |
+| Promise&lt;[FloatingBallWindowInfo](arkts-arkui-floatingball-floatingballwindowinfo-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -79,15 +79,15 @@ Unregisters the listener for lifecycle state changes of the floating ball.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatingBallState&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -129,9 +129,9 @@ Unregisters the listener for click events of the floating ball.
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -174,9 +174,9 @@ Unregister floating ball destroy event listener.
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -218,16 +218,16 @@ Registers a listener for lifecycle state changes of the floating ball. To preven
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'stateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FloatingBallState&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FloatingBallState](arkts-arkui-floatingball-floatingballstate-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -269,10 +269,10 @@ Registers a listener for click events of the floating ball. To prevent memory le
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -315,10 +315,10 @@ Register floating ball destroy event listener.
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -362,21 +362,21 @@ Restores the main window of the application and loads the specified page. This A
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1300026](../errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [1300026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300026-failure-in-launch-an-application-window-via-a-floating-ball) |
+| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -436,15 +436,15 @@ is in the foreground (the [lifecycle state](../../../windowmanager/window-overvi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -485,21 +485,21 @@ Starts the floating ball. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300021](../errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) |
-| [1300020](../errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300021-failure-in-starting-multiple-floating-balls) |
+| [1300020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300020-failure-in-creating-a-floating-ball-window) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -542,15 +542,15 @@ Stops the floating ball. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300022](../errorcode-window.md#1300022-repeated-floating-ball-operation) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300022-repeated-floating-ball-operation) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
 
 ## Examples
 
@@ -589,21 +589,21 @@ Updates the floating ball. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
-| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
-| [1300027](../errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) |
-| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300024](../errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
-| [1300028](../errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) |
+| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
+| [1300027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300027-cannot-change-template-type-when-updating-the-floating-ball) |
+| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300024-abnormal-floating-ball-window-state) |
+| [1300028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300028-floating-ball-based-on-a-static-template-cannot-be-updated) |
 
 ## Examples
 

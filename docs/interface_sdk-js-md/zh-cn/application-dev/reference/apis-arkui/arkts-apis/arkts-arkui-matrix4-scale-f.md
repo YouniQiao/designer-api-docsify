@@ -16,7 +16,7 @@ Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
 
 **废弃版本：** 10
 
-**替代接口：** [matrix4.Matrix4Transit.scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
+**替代接口：** [scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
 
 <!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit--><!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit-End-->
 
@@ -32,5 +32,5 @@ Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。
 
 | 类型 | 说明 |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | 缩放后的矩阵对象。 |
+| Matrix4Transit | 缩放后的矩阵对象。 |
 

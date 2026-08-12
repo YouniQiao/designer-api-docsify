@@ -13,7 +13,7 @@ Represents the upgrade file, including the file type and file path, which are us
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## filePath
@@ -42,7 +42,7 @@ fileType: ComponentType
 
 File type, which specifies the type of the upgrade package. If this parameter is set to **OTA**, the system performs the firmware upgrade based on the OTA type, including integrity check and system partition writing.
 
-**Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
+**Type:** ComponentType
 
 **Since:** 9
 

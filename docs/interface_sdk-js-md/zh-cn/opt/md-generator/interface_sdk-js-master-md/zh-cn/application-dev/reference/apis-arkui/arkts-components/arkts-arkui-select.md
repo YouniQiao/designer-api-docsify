@@ -26,7 +26,7 @@ Select(options: Array<SelectOption>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | 是 |
+| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | 是 |
 
 ## 汇总
 

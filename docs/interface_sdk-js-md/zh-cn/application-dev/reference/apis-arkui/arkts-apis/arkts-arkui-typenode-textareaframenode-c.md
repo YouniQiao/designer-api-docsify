@@ -34,11 +34,11 @@ abstract initialize(value?: TextAreaOptions): TextAreaAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextAreaOptions](../arkts-components/arkts-arkui-textareaoptions-i.md) | 否 |  |
+| value | TextAreaOptions | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) |  |
+| TextAreaAttribute |  |
 

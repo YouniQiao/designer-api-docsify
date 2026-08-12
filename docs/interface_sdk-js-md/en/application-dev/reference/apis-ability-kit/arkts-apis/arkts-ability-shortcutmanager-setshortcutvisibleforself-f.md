@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from 'kits/@kit.AbilityKit';
+import { shortcutManager } from '@kit.AbilityKit';
 ```
 
 ## setShortcutVisibleForSelf
@@ -39,7 +39,7 @@ Sets whether to display the specified shortcut for the current application. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
+| [17700070](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is not exist. |
 
 ## Examples
 

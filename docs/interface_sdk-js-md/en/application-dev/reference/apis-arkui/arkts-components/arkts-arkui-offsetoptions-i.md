@@ -18,7 +18,7 @@ xOffset?: Dimension
 
 Horizontal scrolling offset.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 0
 
@@ -42,7 +42,7 @@ yOffset?: Dimension
 
 Vertical scrolling offset.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 0
 

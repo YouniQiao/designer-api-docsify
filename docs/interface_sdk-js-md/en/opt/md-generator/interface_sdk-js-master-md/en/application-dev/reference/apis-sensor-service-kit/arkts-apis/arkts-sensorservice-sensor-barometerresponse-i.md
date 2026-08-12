@@ -1,8 +1,8 @@
 # BarometerResponse
 
-Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the barometer sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -13,7 +13,7 @@ Describes the barometer sensor data. It extends from [Response](arkts-sensorserv
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## pressure

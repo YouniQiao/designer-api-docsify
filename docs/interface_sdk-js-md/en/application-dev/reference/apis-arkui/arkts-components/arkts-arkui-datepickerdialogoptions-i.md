@@ -2,9 +2,9 @@
 
 Defines the configuration options of the date picker dialog box.
 
-Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md).
+Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions).
 
-**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md)
+**Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)
 
 **Since:** 8
 
@@ -33,7 +33,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 **Deprecated since:** 10
 
-**Substitutes:** datePicker/DatePickerDialogOptions#onDateAccept
+**Substitutes:** [onDateAccept](datePicker/DatePickerDialogOptions#onDateAccept)
 
 <!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
 
@@ -43,7 +43,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DatePickerResult](../arkts-apis/arkts-arkui-datepicker-datepickerresult-i.md) | Yes |  |
+| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |  |
 
 ## onCancel
 
@@ -82,7 +82,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 **Deprecated since:** 10
 
-**Substitutes:** datePicker/DatePickerDialogOptions#onDateChange
+**Substitutes:** [onDateChange](datePicker/DatePickerDialogOptions#onDateChange)
 
 <!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
 
@@ -92,7 +92,7 @@ This API is supported since API version 8 and deprecated since API version 10. Y
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DatePickerResult](../arkts-apis/arkts-arkui-datepicker-datepickerresult-i.md) | Yes |  |
+| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |  |
 
 ## onDidAppear
 
@@ -200,9 +200,9 @@ Style of the accept button.
 
 **NOTE：**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
@@ -226,7 +226,7 @@ Alignment mode of the dialog box in the vertical direction.
 
 Default value: **DialogAlignment.Default**
 
-**Type:** [DialogAlignment](../arkts-apis/arkts-arkui-alertdialog-dialogalignment-e.md)
+**Type:** DialogAlignment
 
 **Default:** DialogAlignment.Default [since 11]
 
@@ -256,7 +256,7 @@ Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
 
 Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -280,7 +280,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 Options for customizing the background blur style.
 
-**Type:** [BackgroundBlurStyleOptions](../arkts-apis/arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
@@ -309,7 +309,7 @@ Default value: **Color.Transparent**
 When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to  
 **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -333,7 +333,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 Options for customizing the background effect.
 
-**Type:** [BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)
+**Type:** BackgroundEffectOptions
 
 **Since:** 19
 
@@ -389,9 +389,9 @@ Style of the cancel button.
 
 **NOTE：**
 
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md), the displayed effect is still a capsule button ([Capsule](../arkts-apis/arkts-arkui-button-buttontype-e.md/arkts-arkui-button-buttontype-e.md)).
+1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
 
-**Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
+**Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
@@ -420,7 +420,7 @@ Default value:
 
 **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
 
-**Type:** [DateTimeOptions](../../apis-localization-kit/arkts-apis/arkts-localization-intl-datetimeoptions-i.md)
+**Type:** DateTimeOptions
 
 **Default:** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
@@ -446,7 +446,7 @@ Text color, font size, and font weight of edge items (the second item above or b
 
 Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
-**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**Type:** PickerTextStyle
 
 **Default:** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } [since 11]
 
@@ -536,7 +536,7 @@ Display area of the dialog box when the device is in semi-folded mode.
 
 Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
-**Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
+**Type:** HoverModeAreaType
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -660,7 +660,7 @@ Mask area of the dialog box. Events outside the mask area are transparently tran
 
 Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
-**Type:** [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md)
+**Type:** Rectangle
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
@@ -686,7 +686,7 @@ Offset of the dialog box based on the **alignment** settings.
 
 Default value: **{ dx: 0 , dy: 0 }**
 
-**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
@@ -714,7 +714,7 @@ Callback invoked when the OK button in the dialog box is clicked.
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -740,7 +740,7 @@ Callback triggered when date selection changes through scrolling in the dialog b
 
 When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Date&gt;
+**Type:** Callback&lt;Date&gt;
 
 **Since:** 10
 
@@ -764,7 +764,7 @@ Text color, font size, and font weight of the selected item.
 
 Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
 
-**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**Type:** PickerTextStyle
 
 **Default:** { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium } [since 11]
 
@@ -791,7 +791,7 @@ Shadow of the dialog box.
 Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
 **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
-**Type:** [ShadowOptions](../arkts-apis/arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
 
@@ -846,7 +846,7 @@ systemMaterial?: SystemUiMaterial
 
 Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](../arkts-apis/arkts-arkui-systemuimaterial-t.md)
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 
@@ -870,7 +870,7 @@ Text color, font size, and font weight of candidate items (the first item immedi
 
 Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
-**Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
+**Type:** PickerTextStyle
 
 **Default:** { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } [since 11]
 

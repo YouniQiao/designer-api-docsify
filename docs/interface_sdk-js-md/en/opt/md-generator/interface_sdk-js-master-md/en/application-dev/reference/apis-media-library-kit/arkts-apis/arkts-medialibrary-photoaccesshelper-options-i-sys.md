@@ -13,7 +13,7 @@ Provides APIs for input Options.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## rankingMethod
@@ -64,7 +64,7 @@ suggestionFields?: FieldType[]
 
 Suggestion Fields option
 
-**Type:** [FieldType](../../apis-arkdata/arkts-apis/arkts-arkdata-cloudextension-fieldtype-e-sys.md)[]
+**Type:** FieldType[]
 
 **Since:** 23
 

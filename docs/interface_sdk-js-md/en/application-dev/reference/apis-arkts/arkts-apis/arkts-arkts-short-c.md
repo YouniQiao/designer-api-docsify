@@ -2,7 +2,7 @@
 
 Represents boxed short value and related operations
 
-**Inheritance/Implementation:** Short extends [Integral](arkts-arkts-numeric-integral-c.md) and implements [Comparable<Short>](Comparable<Short>)
+**Inheritance/Implementation:** Short extends [Integral](arkts-arkts-numeric-integral-c.md#Integral) and implements [Comparable<Short>](Comparable<Short>)
 
 **Since:** 26.0.0
 

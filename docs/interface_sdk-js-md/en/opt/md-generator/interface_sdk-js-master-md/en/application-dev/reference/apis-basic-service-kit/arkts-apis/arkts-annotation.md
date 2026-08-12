@@ -17,7 +17,7 @@ This module defines the annotation types of OpenHarmony ArkTS APIs, such as the 
 ## Modules to Import
 
 ```TypeScript
-import { SuppressWarnings, Available, SuppressWarningsType } from 'kits/@kit.BasicServicesKit';
+import { SuppressWarnings, Available, SuppressWarningsType } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

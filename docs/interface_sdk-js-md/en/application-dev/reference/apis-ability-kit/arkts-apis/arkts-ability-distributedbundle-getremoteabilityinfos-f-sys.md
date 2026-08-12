@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from 'kits/@kit.AbilityKit';
+import { distributedBundle } from '@kit.AbilityKit';
 ```
 
 ## getRemoteAbilityInfos
@@ -21,7 +21,7 @@ Obtains the information about remote abilities that match the given element name
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -36,7 +36,7 @@ Obtains the information about remote abilities that match the given element name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementNames | Array&lt;[ElementName](arkts-ability-elementname-elementname-depr-i.md)&gt; | Yes | ElementName** array, whose maximum length is 10. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the remote ability information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)&gt;&gt; | Yes | Callback used to return an array of the remote ability information. |
 
 
 ## getRemoteAbilityInfos
@@ -53,7 +53,7 @@ Obtains the information about remote abilities that match the given element name
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

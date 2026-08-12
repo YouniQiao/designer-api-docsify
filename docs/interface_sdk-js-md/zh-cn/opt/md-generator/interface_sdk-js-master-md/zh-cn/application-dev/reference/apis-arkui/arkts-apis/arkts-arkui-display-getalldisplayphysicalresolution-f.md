@@ -20,13 +20,13 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt; |
+| Promise&lt;Array&lt;[DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

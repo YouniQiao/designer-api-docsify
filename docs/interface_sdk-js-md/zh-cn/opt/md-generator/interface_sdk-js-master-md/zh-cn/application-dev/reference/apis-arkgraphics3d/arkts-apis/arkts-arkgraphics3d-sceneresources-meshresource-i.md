@@ -2,7 +2,7 @@
 
 几何节点的网络数据描述资源
 
-**继承/实现关系：** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**继承/实现关系：** MeshResource extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **起始版本：** 18
 

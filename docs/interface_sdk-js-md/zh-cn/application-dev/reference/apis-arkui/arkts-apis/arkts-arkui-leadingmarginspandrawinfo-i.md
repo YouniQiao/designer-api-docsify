@@ -70,7 +70,7 @@ direction: TextDirection
 
 文本内容的方向。
 
-**类型：** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**类型：** TextDirection
 
 **起始版本：** 22
 

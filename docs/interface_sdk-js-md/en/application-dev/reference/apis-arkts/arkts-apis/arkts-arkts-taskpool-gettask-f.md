@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## getTask
@@ -45,7 +45,7 @@ Obtains the corresponding task instance by task ID, or by task ID and task name.
 
 | Type | Description |
 | --- | --- |
-| [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
+| Task | Task instance. If an exception occurs, **undefined** is returned. For details, see the preceding description. |
 
 ## Examples
 

@@ -20,7 +20,7 @@ coordinateSystemType:CoordinateSystemType
 
 Coordinate system type of the center point.
 
-**Type:** [CoordinateSystemType](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-coordinatesystemtype-e.md)
+**Type:** [CoordinateSystemType](arkts-notification-notificationrequest-coordinatesystemtype-e-sys.md)
 
 **Since:** 23
 
@@ -100,7 +100,7 @@ monitorEvent:MonitorEvent
 
 Event type for monitoring a geofence.
 
-**Type:** [MonitorEvent](arkts-notification-notificationmanager-monitorevent-t-sys.md)
+**Type:** [MonitorEvent](arkts-notification-notificationrequest-monitorevent-e-sys.md)
 
 **Since:** 23
 

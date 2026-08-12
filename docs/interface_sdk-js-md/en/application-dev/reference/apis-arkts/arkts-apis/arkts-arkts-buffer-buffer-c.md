@@ -13,7 +13,7 @@ The Buffer object is a method of handling buffers dedicated to binary data.
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## compare
@@ -60,7 +60,7 @@ Compares this **Buffer** object with another object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 ## Examples
 
@@ -122,7 +122,7 @@ Compares buf with target and returns a number indicating whether buf comes befor
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/targetEnd/sourceStart/sourceEnd]" is out of range. It must be >= 0 and <= [right range]. Received value is: [targetStart/targetEnd/sourceStart/sourceEnd] |
 
 ## copy
 
@@ -167,7 +167,7 @@ Copies data at the specified position in this **Buffer** object to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[targetStart/sourceStart/sourceEnd]" is out of range. It must be >= 0. Received value is: [targetStart/sourceStart/sourceEnd] |
 
 ## Examples
 
@@ -214,8 +214,8 @@ Creates and returns an iterator that contains key-value pairs of this **Buffer**
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, number]&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, long]&gt; | <br>**Applicable version:** 11 and later |
+| IterableIterator&lt;[number, number]&gt; | Iterator that contains the key and value, both of which are of the number type.<br>**Applicable version:** 9 - 10 |
+| ArkTS-Dyn: IterableIterator&lt;[number, number]&gt;  <br>ArkTS-Sta：IterableIterator&lt;[int, long]&gt; | <br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -261,7 +261,7 @@ Checks whether this **Buffer** object is the same as another **Buffer** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| otherBuffer | Uint8Array \| Buffer | Yes | Buffer** object to compare. |
+| otherBuffer | Uint8Array \| [Buffer](arkts-arkts-buffer-buffer-c.md) | Yes | Buffer** object to compare. |
 
 **Return value:**
 
@@ -322,10 +322,10 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| Buffer \| Uint8Array \| number \| number \| number  <br>ArkTS-Sta：string \| Buffer \| Uint8Array \| int \| double \| long | Yes | Value to fill.<br>**Since:** 11 |
+| value | ArkTS-Dyn: string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array \| number \| number \| number  <br>ArkTS-Sta：string \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array \| int \| double \| long | Yes | Value to fill.<br>**Since:** 11 |
 | offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the start position in this **Buffer** object where data is filled. The default value is **0**. |
 | end | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Offset to the end position in this **Buffer** object (not inclusive). The default value is the length of this **Buffer** object. |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -337,7 +337,7 @@ Fills this **Buffer** object at the specified position. By default, data is fill
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/end]" is out of range. It must be >= 0 and <= [right range]. Received value is: [offset/end] |
 
 ## includes
 
@@ -367,9 +367,9 @@ Checks whether this **Buffer** object contains the specified value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | ArkTS-Dyn: string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -406,9 +406,9 @@ Obtains the index of the first occurrence of the specified value in this **Buffe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | ArkTS-Dyn: string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is **0**. |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -444,7 +444,7 @@ Creates and returns an iterator that contains the keys of this **Buffer** object
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | Iterator created. |
+| ArkTS-Dyn: IterableIterator&lt;number&gt;  <br>ArkTS-Sta：IterableIterator&lt;int&gt; | Iterator created. |
 
 ## Examples
 
@@ -495,9 +495,9 @@ Obtains the index of the last occurrence of the specified value in this **Buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: string \| number \| number \| number \| Buffer \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| Buffer \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
+| value | ArkTS-Dyn: string \| number \| number \| number \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array  <br>ArkTS-Sta：string \| int \| double \| long \| [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Value to match.<br>**Since:** 11 |
 | byteOffset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Number of bytes to skip before starting to check data. If the offset is a negative number, data is checked from the end of the **Buffer** object. The default value is the length of this **Buffer** object. |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
+| encoding | BufferEncoding | No | Encoding format (valid only when **value** is a string). The default value is **'utf8'**. |
 
 **Return value:**
 
@@ -545,7 +545,7 @@ Reads a 64-bit, big-endian, signed big integer from this **Buffer** object at th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -603,7 +603,7 @@ Reads a 64-bit, little-endian, signed big integer from this **Buffer** object at
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -661,7 +661,7 @@ Reads a 64-bit, big-endian, unsigned big integer from this **Buffer** object at 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -718,7 +718,7 @@ Reads a 64-bit, little-endian, unsigned big integer from this **Buffer** object 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -776,7 +776,7 @@ Reads a 64-bit, big-endian, double-precision floating-point number from this **B
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -832,7 +832,7 @@ Reads a 64-bit, little-endian, double-precision floating-point number from this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -888,7 +888,7 @@ Reads a 32-bit, big-endian, single-precision floating-point number from this **B
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -944,7 +944,7 @@ Reads a 32-bit, little-endian, single-precision floating-point number from this 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1000,7 +1000,7 @@ Reads a 16-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1056,7 +1056,7 @@ Reads a 16-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1112,7 +1112,7 @@ Reads a 32-bit, big-endian, signed integer from this **Buffer** object at the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1168,7 +1168,7 @@ Reads a 32-bit, little-endian, signed integer from this **Buffer** object at the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1224,7 +1224,7 @@ Reads an 8-bit signed integer from this **Buffer** object at the specified offse
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
 ## Examples
 
@@ -1283,7 +1283,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1341,7 +1341,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1397,7 +1397,7 @@ Reads a 16-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1455,7 +1455,7 @@ Reads a 16-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2 . Received value is: [offset] |
 
 ## Examples
 
@@ -1513,7 +1513,7 @@ Reads a 32-bit, big-endian, unsigned integer from this **Buffer** object at the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1569,7 +1569,7 @@ Reads a 32-bit, little-endian, unsigned integer from this **Buffer** object at t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -1625,7 +1625,7 @@ Reads an 8-bit unsigned integer from this **Buffer** object at the specified off
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1 . Received value is: [offset] |
 
 ## Examples
 
@@ -1684,7 +1684,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1741,7 +1741,7 @@ Reads the specified number of bytes from this **Buffer** object at the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1837,7 +1837,7 @@ Converts this **Buffer** object into an array of unsigned 16-bit integers and sw
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
+| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 16-bits |
 
 ## Examples
 
@@ -1880,7 +1880,7 @@ Converts this **Buffer** object into an array of unsigned 32-bit integers and sw
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
+| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 32-bits |
 
 ## Examples
 
@@ -1923,7 +1923,7 @@ Converts this **Buffer** object into an array of unsigned 64-bit integers and sw
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200009](../errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
+| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer-size-error) | The buffer size must be a multiple of 64-bits |
 
 ## Examples
 
@@ -2092,7 +2092,7 @@ Decodes buf to a string according to the specified character encoding in encodin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| encoding | [BufferEncoding](arkts-arkts-fastbuffer-bufferencoding-t.md) | No | encoding [encoding='utf8'] The character encoding to use |
+| encoding | BufferEncoding | No | encoding [encoding='utf8'] The character encoding to use |
 | start | int | No | start [start = 0] The byte offset to start decoding at The value should be an integer. |
 | end | int | No | end [end = buf.length] The byte offset to stop decoding at (not inclusive) The value should be an integer. |
 
@@ -2130,7 +2130,7 @@ Creates and returns an iterator that contains the values of this **Buffer** obje
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt;  <br>ArkTS-Sta：[IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | Iterator. |
+| ArkTS-Dyn: IterableIterator&lt;number&gt;  <br>ArkTS-Sta：IterableIterator&lt;long&gt; | Iterator. |
 
 ## Examples
 
@@ -2197,7 +2197,7 @@ Writes a string of the specified length to this **Buffer** object at the specifi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[offset/length]" is out of range. It must be >= 0 and <= buf.length. Received value is: [offset/length] |
 
 ## Examples
 
@@ -2256,7 +2256,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2310,7 +2310,7 @@ Writes a 64-bit, little-endian, signed big integer to this **Buffer** object at 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2364,7 +2364,7 @@ Writes a 64-bit, big-endian, signed big integer to this **Buffer** object at the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2418,7 +2418,7 @@ Writes a 64-bit, little-endian, unsigned big integer to this **Buffer** object a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2472,7 +2472,7 @@ Writes a 64-bit, big-endian, double-precision floating-point number to this **Bu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -2526,7 +2526,7 @@ Writes a 64-bit, little-endian, double-precision floating-point number to this *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8 . Received value is: [offset] |
 
 ## Examples
 
@@ -2580,7 +2580,7 @@ Writes a 32-bit, big-endian, single-precision floating-point number to this **Bu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -2634,7 +2634,7 @@ Writes a 32-bit, little-endian, single-precision floating-point number to this *
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4 . Received value is: [offset] |
 
 ## Examples
 
@@ -2688,7 +2688,7 @@ Writes a 16-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2742,7 +2742,7 @@ Writes a 16-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2796,7 +2796,7 @@ Writes a 32-bit, big-endian, signed integer to this **Buffer** object at the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2850,7 +2850,7 @@ Writes a 32-bit, little-endian, signed integer to this **Buffer** object at the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2904,7 +2904,7 @@ Writes an 8-bit signed integer to this **Buffer** object at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2962,7 +2962,7 @@ Writes a big-endian signed value of the specified length to this **Buffer** obje
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3017,7 +3017,7 @@ Writes a little-endian signed value of the specified length to this **Buffer** o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3071,7 +3071,7 @@ Writes a 16-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3128,7 +3128,7 @@ Writes a 16-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3185,7 +3185,7 @@ Writes a 32-bit, big-endian, unsigned integer to this **Buffer** object at the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3239,7 +3239,7 @@ Writes a 32-bit, little-endian, unsigned integer to this **Buffer** object at th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3293,7 +3293,7 @@ Writes an 8-bit unsigned integer to this **Buffer** object at the specified offs
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3357,7 +3357,7 @@ Writes an unsigned big-endian value of the specified length to this **Buffer** o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3412,7 +3412,7 @@ Writes an unsigned little-endian value of the specified length to this **Buffer*
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## Examples
 

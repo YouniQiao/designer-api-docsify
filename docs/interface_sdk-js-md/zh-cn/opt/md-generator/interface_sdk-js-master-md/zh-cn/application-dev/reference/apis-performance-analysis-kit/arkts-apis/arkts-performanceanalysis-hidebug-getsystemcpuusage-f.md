@@ -6,11 +6,11 @@
 function getSystemCpuUsage(): number
 ```
 
-��ȡϵͳ��CPU��Դռ�������
+获取系统的CPU资源占用情况。
 
-> **ע��**
+> **注意**
 > 
-> ���ڸýӿ��漰�����ͨ�ţ���ʱ�ϳ���Ϊ�˱��������������⣬���鲻Ҫ�����߳���ֱ�ӵ��øýӿڡ�
+> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。
 
 **起始版本：** 12
 
@@ -28,7 +28,7 @@ function getSystemCpuUsage(): number
 
 | 错误码ID |
 | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

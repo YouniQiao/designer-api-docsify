@@ -10,7 +10,7 @@ Navigation导航控制器，以栈的数据结构管理Navigation中所有的子
 > 1.连续调用多个导航控制器操作方法时，中间过程会被忽略，显示最终的栈操作结果。
 
 > 例如：在Page1页面先pop再push一个Page1，系统会认为操作前和操作后的结果一致而不进行任何操作，如果需要强行push一个Page1实例，可以设置
-> [NavigationOption](../arkts-components/arkts-arkui-navigationoptions-i.md/arkts-arkui-navigationoptions-i.md)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
+> [NavigationOption](arkts-arkui-navigation-navigationoptions-i.md#NavigationOptions)中的launchMode属性值为LaunchMode.NEW_INSTANCE模式。
 > 
 > 2.不建议开发者通过监听页面生命周期的方式管理自己的导航控制器。
 > 
@@ -252,7 +252,7 @@ getPathStack(): Array<NavPathInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;NavPathInfo&gt; | 当前路由栈中的路由页面信息数组。 |
+| Array&lt;[NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md)&gt; | 当前路由栈中的路由页面信息数组。 |
 
 ## moveIndexToTop
 
@@ -565,10 +565,10 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestination
 
@@ -576,7 +576,7 @@ pushDestination(info: NavPathInfo, animated?: boolean): Promise<void>
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+将info指定的NavDestination页面信息入栈，使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-navigation-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 > **说明：**
 > 
@@ -610,10 +610,10 @@ pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -656,10 +656,10 @@ pushDestinationByName(name: string, param: Object, animated?: boolean): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -690,7 +690,7 @@ pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, ani
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。仅 [pop](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#pop)、 [popToName](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。 |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](arkts-arkui-navigation-popinfo-i.md)&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。仅 [pop](#pop-1)、 [popToName](#popToName-1)、 [popToIndex](#popToIndex-1)中设置result参数后触发。 |
 | animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 **返回值：**
@@ -703,10 +703,10 @@ pushDestinationByName(name: string, param: Object, onPop: Callback<PopInfo>, ani
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## pushPath
 
@@ -739,7 +739,7 @@ pushPath(info: NavPathInfo, animated?: boolean): void
 pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+将info指定的NavDestination页面信息入栈，具体根据options中指定不同的[LaunchMode](arkts-arkui-navigation-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 23
 
@@ -808,7 +808,7 @@ pushPathByName(name: string, param: Object, onPop: Callback<PopInfo>, animated?:
 | --- | --- | --- | --- |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | 开发者设置的NavDestination页面详细参数。 |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时触发该回调处理返回结果。仅 [pop](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#pop)、 [popToName](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoname)、 [popToIndex](../arkts-components/arkts-arkui-navpathstack-c.md/arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。 |
+| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](arkts-arkui-navigation-popinfo-i.md)&gt; | 是 | Callback回调，用于页面出栈时触发该回调处理返回结果。仅 [pop](#pop-1)、 [popToName](#popToName-1)、 [popToIndex](#popToIndex-1)中设置result参数后触发。 |
 | animated | boolean | 否 | 是否支持转场动画。&lt;br/&gt;true：支持转场动画；false：不支持转场动画。&lt;br/&gt;默认值：true |
 
 ## removeByIndexes
@@ -879,7 +879,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 
 将路由栈内指定navDestinationId的NavDestination页面删除。navDestinationId可以在NavDestination的  
 [onReady](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md#onready11)回调中获取，也可以在  
-[NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md)中获取。
+[NavDestinationInfo](arkts-arkui-uiobserver-navdestinationinfo-i.md#NavDestinationInfo)中获取。
 
 **起始版本：** 23
 
@@ -909,7 +909,7 @@ removeByNavDestinationId(navDestinationId: string): boolean
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+替换路由栈操作。使用Promise异步回调返回接口调用结果，具体根据options中指定不同的[LaunchMode](arkts-arkui-navigation-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 23
 
@@ -938,10 +938,10 @@ replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
 
 ## replacePath
 
@@ -974,7 +974,7 @@ replacePath(info: NavPathInfo, animated?: boolean): void
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-替换路由栈操作，具体根据options中指定不同的[LaunchMode](../arkts-components/arkts-arkui-launchmode-e.md/arkts-arkui-launchmode-e.md)，来实现不同的行为。
+替换路由栈操作，具体根据options中指定不同的[LaunchMode](arkts-arkui-navigation-launchmode-e.md#LaunchMode)，来实现不同的行为。
 
 **起始版本：** 23
 
@@ -1065,7 +1065,7 @@ setPathStack(pathStack: Array<NavPathInfo>, animated?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | 是 | 设置当前路由栈中的路由页面信息数组。&lt;br/&gt;**说明：**&lt;br/&gt;数组长度无限制。 |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navigation-navpathinfo-c.md)&gt; | 是 | 设置当前路由栈中的路由页面信息数组。&lt;br/&gt;**说明：**&lt;br/&gt;数组长度无限制。 |
 | animated | boolean | 否 | 是否开启转场动画。&lt;br/&gt;true：开启转场动画；false：不开启转场动画。&lt;br /&gt; 默认值：true |
 
 ## size

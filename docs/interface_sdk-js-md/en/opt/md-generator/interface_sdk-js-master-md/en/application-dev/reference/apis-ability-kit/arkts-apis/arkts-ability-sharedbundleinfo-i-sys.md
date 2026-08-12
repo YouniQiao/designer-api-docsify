@@ -54,7 +54,7 @@ readonly sharedModuleInfo: Array<SharedModuleInfo>
 
 Information about the shared module.
 
-**Type:** Array&lt;SharedModuleInfo&gt;
+**Type:** Array&lt;[SharedModuleInfo](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)&gt;
 
 **Since:** 10
 

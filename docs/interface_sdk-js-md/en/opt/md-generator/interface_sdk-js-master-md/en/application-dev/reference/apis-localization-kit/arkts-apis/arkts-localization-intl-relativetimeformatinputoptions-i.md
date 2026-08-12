@@ -6,7 +6,7 @@ Defines the configuration options for a **RelativeTimeFormat** object.Since API 
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options)
+**Substitutes:** [RelativeTimeFormatOptions]]([Intl.RelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#options))
 
 <!--Device-intl-export interface RelativeTimeFormatInputOptions--><!--Device-intl-export interface RelativeTimeFormatInputOptions-End-->
 
@@ -15,7 +15,7 @@ Defines the configuration options for a **RelativeTimeFormat** object.Since API 
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## localeMatcher
@@ -34,7 +34,7 @@ The default value is **best fit**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#localematcher)
+**Substitutes:** [localeMatcher]]([Intl.RelativeTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#localematcher))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -61,7 +61,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric)
+**Substitutes:** [numeric]]([Intl.RelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#numeric))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -85,7 +85,7 @@ The default value is **long**.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style)
+**Substitutes:** [style]]([Intl.RelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat#style))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

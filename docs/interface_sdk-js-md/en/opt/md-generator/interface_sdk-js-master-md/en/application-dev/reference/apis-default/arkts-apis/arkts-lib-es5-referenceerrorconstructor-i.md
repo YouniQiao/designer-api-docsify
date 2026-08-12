@@ -16,7 +16,7 @@
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ReferenceError](../../apis-arkts/arkts-apis/arkts-arkts-errors-referenceerror-c.md) |
+| [ReferenceError](arkts-lib-es5-referenceerror-i.md) |
 
 ## [[Construct]]
 
@@ -34,7 +34,7 @@ new(message?: string): ReferenceError
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ReferenceError](../../apis-arkts/arkts-apis/arkts-arkts-errors-referenceerror-c.md) |
+| [ReferenceError](arkts-lib-es5-referenceerror-i.md) |
 
 ## prototype
 
@@ -42,4 +42,4 @@ new(message?: string): ReferenceError
 readonly prototype: ReferenceError
 ```
 
-**Type:** ReferenceError
+**Type:** [ReferenceError](arkts-lib-es5-referenceerror-i.md)

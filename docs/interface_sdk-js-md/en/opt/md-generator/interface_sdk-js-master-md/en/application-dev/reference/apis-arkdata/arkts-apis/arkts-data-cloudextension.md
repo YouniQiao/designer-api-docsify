@@ -11,7 +11,7 @@ The cloudExtension module provides APIs for third-party vendors to implement the
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## Summary

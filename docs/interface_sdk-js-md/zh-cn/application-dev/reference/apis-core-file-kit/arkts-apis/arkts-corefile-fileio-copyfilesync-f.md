@@ -14,7 +14,7 @@ declare function copyFileSync(src: string | number, dest: string | number, mode?
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:copyFileSync](arkts-corefile-fileio-copyfilesync-f.md#copyfilesync)
+**替代接口：** [copyFileSync](arkts-corefile-file-fs-copyfilesync-f.md#copyFileSync)
 
 <!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void--><!--Device-unnamed-declare function copyFileSync(src: string | number, dest: string | number, mode?: number): void-End-->
 

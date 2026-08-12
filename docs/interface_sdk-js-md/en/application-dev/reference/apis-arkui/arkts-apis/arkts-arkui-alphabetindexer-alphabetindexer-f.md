@@ -59,7 +59,7 @@ Defines AlphabetIndexer Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;AlphabetIndexerAttribute&gt; | Yes | AlphabetIndexer attribute instance |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[AlphabetIndexerAttribute](arkts-arkui-alphabetindexer-alphabetindexerattribute-i.md)&gt; | Yes | AlphabetIndexer attribute instance |
 
 **Return value:**
 

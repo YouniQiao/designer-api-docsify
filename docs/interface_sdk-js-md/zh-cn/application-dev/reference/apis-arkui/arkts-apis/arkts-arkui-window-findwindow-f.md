@@ -22,7 +22,7 @@ function findWindow(name: string): Window
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | 窗口名称。查找子窗口或系统窗口时使用[Configuration](arkts-arkui-window-configuration-i.md)中的窗口名称；查找主窗口时使用 [getWindowName](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12)获取当前实例的窗口名称。 |
+| name | string | 是 | 窗口名称。查找子窗口或系统窗口时使用[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的窗口名称；查找主窗口时使用 [getWindowName](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getwindowname12)获取当前实例的窗口名称。 |
 
 **返回值：**
 
@@ -34,8 +34,8 @@ function findWindow(name: string): Window
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. |
 
 ## 示例
 

@@ -13,7 +13,7 @@ Parameter for dynamically enable advertising.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## advertisingId

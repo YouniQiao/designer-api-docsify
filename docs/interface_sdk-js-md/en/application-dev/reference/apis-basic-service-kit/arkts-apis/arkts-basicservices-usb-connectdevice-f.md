@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## connectDevice
@@ -14,8 +14,8 @@ function connectDevice(device: USBDevice): Readonly<USBDevicePipe>
 
 Connects to a USB device.
 
-Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) to obtain the USB device list, and then call  
-[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestright) to request the device access permission.
+Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, and then call  
+[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission.
 
 **Since:** 8
 
@@ -23,7 +23,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice)
+**Substitutes:** [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)
 
 <!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>--><!--Device-usb-function connectDevice(device: USBDevice): Readonly<USBDevicePipe>-End-->
 
@@ -33,7 +33,7 @@ Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| device | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Yes | USB device information. |
+| device | USBDevice | Yes | USB device information. |
 
 **Return value:**
 

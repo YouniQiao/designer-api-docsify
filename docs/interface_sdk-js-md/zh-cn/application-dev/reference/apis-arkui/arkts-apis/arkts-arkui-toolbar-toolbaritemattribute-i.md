@@ -81,7 +81,7 @@ setToolBarItemOptions(options?: ToolBarItemOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ToolBarItemOptions](../arkts-components/arkts-arkui-toolbaritemoptions-i.md) | 否 | 列选项 |
+| options | [ToolBarItemOptions](arkts-arkui-toolbar-toolbaritemoptions-i.md) | 否 | 列选项 |
 
 **返回值：**
 

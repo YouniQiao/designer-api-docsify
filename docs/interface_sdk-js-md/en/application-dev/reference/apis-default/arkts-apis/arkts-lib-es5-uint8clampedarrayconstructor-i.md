@@ -20,7 +20,7 @@ new(length: number): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## [[Construct]]
 
@@ -34,13 +34,13 @@ new(array: ArrayLike<number> | ArrayBufferLike): Uint8ClampedArray
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;number&gt; \| ArrayBufferLike | Yes |  |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; \| [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## [[Construct]]
 
@@ -54,7 +54,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Clamped
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md) | Yes |  |
+| buffer | [ArrayBufferLike](arkts-arraybufferlike-t.md) | Yes |  |
 | byteOffset | number | No |  |
 | length | number | No |  |
 
@@ -62,7 +62,7 @@ new(buffer: ArrayBufferLike, byteOffset?: number, length?: number): Uint8Clamped
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## from
 
@@ -80,13 +80,13 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## from
 
@@ -104,7 +104,7 @@ Creates an array from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;T&gt; | Yes |  |
+| arrayLike | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;T&gt; | Yes |  |
 | mapfn | (v: T, k: number) =&gt; number | Yes |  |
 | thisArg | any | No |  |
 
@@ -112,7 +112,7 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## of
 
@@ -136,7 +136,7 @@ Returns a new array from a set of elements.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## BYTES_PER_ELEMENT
 
@@ -158,7 +158,7 @@ The size in bytes of each element in the array.
 readonly prototype: Uint8ClampedArray
 ```
 
-**Type:** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md)
+**Type:** [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

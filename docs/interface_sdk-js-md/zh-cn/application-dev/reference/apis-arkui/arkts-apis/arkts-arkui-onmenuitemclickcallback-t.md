@@ -20,7 +20,7 @@ export type OnMenuItemClickCallback = (menuItem: TextMenuItem, range: TextRange)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | 是 | 菜单项。<br/>**说明：** <br/>从API version 23开始，对于具备可展开二级菜单能力的一级菜单项，例如自动填充，仅执行系统默认逻辑，不会执行用 户自定义逻辑。 |
+| menuItem | [TextMenuItem](arkts-arkui-textcommon-textmenuitem-i.md) | 是 | 菜单项。<br/>**说明：** <br/>从API version 23开始，对于具备可展开二级菜单能力的一级菜单项，例如自动填充，仅执行系统默认逻辑，不会执行用 户自定义逻辑。 |
 | range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | 是 | 选中的文本信息。 |
 
 **返回值：**

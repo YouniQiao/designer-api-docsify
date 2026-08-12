@@ -34,11 +34,11 @@ abstract initialize(options?: GridItemOptions): GridItemAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | 否 | Grid节点的选项。 |
+| options | GridItemOptions | 否 | Grid节点的选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |  |
+| GridItemAttribute |  |
 

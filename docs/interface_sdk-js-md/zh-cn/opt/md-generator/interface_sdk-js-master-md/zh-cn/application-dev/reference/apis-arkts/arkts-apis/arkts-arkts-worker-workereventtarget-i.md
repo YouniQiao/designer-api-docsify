@@ -35,8 +35,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200005](../errorcode-utils.md#10200005-worker不支持某api) |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -73,7 +73,7 @@ dispatchEvent(event: Event): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | 是 |
+| event | [Event](arkts-arkts-worker-event-i.md) | 是 |
 
 **返回值：**
 
@@ -85,7 +85,7 @@ dispatchEvent(event: Event): boolean
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -124,7 +124,7 @@ removeAllListener(): void
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 
@@ -170,7 +170,7 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 | 错误码ID |
 | --- |
-| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) |
+| [10200004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) |
 
 ## 示例
 

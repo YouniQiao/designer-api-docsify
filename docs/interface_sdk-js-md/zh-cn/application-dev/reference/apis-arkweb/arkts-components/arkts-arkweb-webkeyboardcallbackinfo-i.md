@@ -1,6 +1,6 @@
 # WebKeyboardCallbackInfo
 
-Defines the web keyboard callback info related to the {@link onInterceptKeyboardAttach} event.
+Defines the web keyboard callback info related to the [onInterceptKeyboardAttach](onInterceptKeyboardAttach) event.
 
 **起始版本：** 12
 

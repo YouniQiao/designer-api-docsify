@@ -20,14 +20,14 @@ function pick(): Promise<PickInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;PickInfo&gt; |
+| Promise&lt;[PickInfo](arkts-arkui-screenshot-pickinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

@@ -22,7 +22,7 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
+| observer | ApplicationStateObserver | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
 
 **返回值：**
 
@@ -34,8 +34,8 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -114,7 +114,7 @@ function onApplicationStateChange(observer: ApplicationStateObserver, bundleName
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| observer | [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
+| observer | ApplicationStateObserver | 是 | 应用状态监听器，用于监听应用的生命周期变化。 |
 | bundleNameList | Array&lt;string&gt; | 是 | 表示需要注册监听的bundleName数组。最大值128。 |
 
 **返回值：**
@@ -127,8 +127,8 @@ function onApplicationStateChange(observer: ApplicationStateObserver, bundleName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

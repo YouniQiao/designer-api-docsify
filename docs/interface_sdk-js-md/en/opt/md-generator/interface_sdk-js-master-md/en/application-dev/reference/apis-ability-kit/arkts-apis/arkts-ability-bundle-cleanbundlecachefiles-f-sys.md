@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from 'kits/@kit.AbilityKit';
+import { bundle } from '@kit.AbilityKit';
 ```
 
 ## cleanBundleCacheFiles
@@ -18,7 +18,7 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -48,7 +48,7 @@ Clears the cache data of an application. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 **Required permissions:** ohos.permission.REMOVE_CACHE_FILES
 
@@ -68,4 +68,4 @@ Clears the cache data of an application. This API uses a promise to return the r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

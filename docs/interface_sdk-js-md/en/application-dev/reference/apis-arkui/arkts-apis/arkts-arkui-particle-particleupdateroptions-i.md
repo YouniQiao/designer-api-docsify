@@ -18,7 +18,7 @@ config: ParticlePropertyUpdaterConfigs
 
 Particle updater configuration.
 
-**Type:** [ParticlePropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlepropertyupdaterconfigs-i.md)
+**Type:** [ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md)
 
 **Since:** 23
 

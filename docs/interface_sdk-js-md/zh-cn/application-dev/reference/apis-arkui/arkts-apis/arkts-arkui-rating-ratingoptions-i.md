@@ -66,7 +66,7 @@ rating: double | undefined | Bindable<double>
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** double \| undefined \| Bindable&lt;double&gt;
+**类型：** double \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;double&gt;
 
 **起始版本：** 23
 

@@ -34,8 +34,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
-| [5400109](../errorcode-media.md#5400109-会话id不存在) | Sessions not exist. Return by promise. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [5400109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400109-会话id不存在) | Sessions not exist. Return by promise. |
 
 ## 示例
 

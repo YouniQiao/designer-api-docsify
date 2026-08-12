@@ -1,9 +1,9 @@
 # BackgroundTaskMode
 
 Main type of a continuous task. It is usually used together with the subtype   
-[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md). For details, see the mapping table. The two types are newly added in API version 21 for   
-[requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning) and   
-[updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) continuous tasks.
+[BackgroundTaskSubmode](arkts-backgroundtasks-backgroundtaskmanager-backgroundtasksubmode-e.md#BackgroundTaskSubmode). For details, see the mapping table. The two types are newly added in API version 21 for   
+[requesting](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-3) and   
+[updating](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning-1) continuous tasks.
 
 When the main type of the continuous task is **MODE_SPECIAL_SCENARIO_PROCESSING**, or that of a non-PC/2-in-1 device is **MODE_TASK_KEEPING**, you need to request the ACL permission   
 [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system)before calling APIs related to continuous tasks. In other scenarios, this permission is not required.
@@ -29,7 +29,7 @@ Use scenario: upload and download in non-hosting mode, for example, uploading or
 **NOTE：**
 
 1. During data transfer, the application needs to update the progress.If the progress is not updated for more than 10 minutes,the continuous task of the **DATA_TRANSFER** type will be canceled.2. The notification type of the progress update must be live view. For details, see the example in  
-[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning).
+[startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning-2).
 
 **Since:** 21
 
@@ -211,8 +211,8 @@ Use scenarios: An application exports media files in the background or uses a th
 **NOTE：**
 
 1. If an application needs to run in the background for a long time,it can request user authorization through the  
-[requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestauthfromuser) API and check the authorization result via  
-[checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkspecialscenarioauth).2. Since API version 24, this capability is available only to applications that have obtainedthe ACL permission  
+[requestAuthFromUser](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#requestAuthFromUser) API and check the authorization result via  
+[checkSpecialScenarioAuth](arkts-backgroundtasks-backgroundtaskmanager-continuoustaskrequest-c.md#checkSpecialScenarioAuth).2. Since API version 24, this capability is available only to applications that have obtainedthe ACL permission  
 [ohos.permission.KEEP_BACKGROUND_RUNNING_SPECIAL_SCENARIO](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_special_scenario).For API version 23 and earlier,this capability is available only to applications that have obtained the ACL permission  
 [ohos.permission.KEEP_BACKGROUND_RUNNING_SYSTEM](../../../security/AccessToken/restricted-permissions.md#ohospermissionkeep_background_running_system).Applications that have obtained this permission are not affected for API version 24 and later.3. This task type must be used independently and notifications cannot be combined.Specifically, when you request or update a continuous task,it must be of the **MODE_SPECIAL_SCENARIO_PROCESSING** type. Otherwise, an error is returned.
 

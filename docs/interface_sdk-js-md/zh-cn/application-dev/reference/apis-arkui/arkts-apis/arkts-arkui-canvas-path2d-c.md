@@ -2,7 +2,7 @@
 
 2D path object for path drawing
 
-**继承/实现关系：** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**继承/实现关系：** Path2D extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md#CanvasPath)
 
 **起始版本：** 23
 

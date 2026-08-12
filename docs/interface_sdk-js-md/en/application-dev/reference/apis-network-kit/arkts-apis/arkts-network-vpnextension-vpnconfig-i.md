@@ -13,7 +13,7 @@ Define configuration of the VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from 'kits/@kit.NetworkKit';
+import { vpnExtension } from '@kit.NetworkKit';
 ```
 
 ## addresses

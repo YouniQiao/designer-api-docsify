@@ -18,7 +18,7 @@ fadingEdgeLength?: LengthMetrics
 
 设置边缘渐隐长度。默认值为32vp，设置小于0的值或undefined或不设置则取默认值。设置的长度超过容器高度的一半时，渐隐长度取容器高度的一半。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** LengthMetrics
 
 **默认值：** 32vp
 

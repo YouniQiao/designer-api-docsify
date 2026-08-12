@@ -18,7 +18,7 @@ keyCode: KeyCode
 
 按键编码。
 
-**类型：** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
+**类型：** KeyCode
 
 **起始版本：** 23
 

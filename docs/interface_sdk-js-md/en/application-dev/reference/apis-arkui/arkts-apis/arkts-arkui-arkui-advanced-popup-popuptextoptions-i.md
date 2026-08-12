@@ -13,7 +13,7 @@ Defines the popup text options
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## fontColor
@@ -24,7 +24,7 @@ fontColor?: ResourceColor
 
 Set the text font color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** $r('sys.color.ohos_id_color_text_secondary')
 
@@ -90,7 +90,7 @@ text?: ResourceStr
 
 Set the text display content.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 

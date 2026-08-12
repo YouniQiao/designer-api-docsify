@@ -11,7 +11,7 @@ Defines the network capability set.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## bearerTypes
@@ -72,7 +72,7 @@ networkCap?: Array<NetCap>
 
 Network-specific capabilities.
 
-**Type:** Array&lt;NetCap&gt;
+**Type:** Array&lt;[NetCap](arkts-network-connection-netcap-e.md)&gt;
 
 **Since:** 11
 

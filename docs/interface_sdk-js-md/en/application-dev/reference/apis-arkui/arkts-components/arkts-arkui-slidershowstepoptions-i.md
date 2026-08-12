@@ -24,7 +24,7 @@ If **Key** is set to a negative number or a decimal, the setting does not take e
 
 Default value: **{}**
 
-**Type:** Map&lt;number, SliderStepItemAccessibility&gt;
+**Type:** Map&lt;number, [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md)&gt;
 
 **Since:** 20
 

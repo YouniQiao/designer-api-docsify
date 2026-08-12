@@ -1,8 +1,8 @@
 # AccessibilityElement
 
 Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call   
-[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getfocuselement)or   
-[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getwindowrootelement)to obtain an **AccessibilityElement** instance.
+[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement-1)or   
+[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement-1)to obtain an **AccessibilityElement** instance.
 
 **Since:** 9
 
@@ -34,7 +34,20 @@ Obtains the names of all actions supported by this element. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the names of all actions supported by the element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the names of all actions supported by the element. |
+
+## Examples
+
+```TypeScript
+// rootElement is an instance of AccessibilityElement.
+rootElement.actionNames((err: BusinessError, data: string[]) => {
+  if (err && err.code) {
+    console.error(`failed to get action names, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in get action names, ${JSON.stringify(data)}`);
+})
+```
 
 ## actionNames
 
@@ -60,6 +73,19 @@ Obtains the names of all actions supported by this element. This API uses a prom
 | --- | --- |
 | Promise&lt;Array&lt;string&gt;&gt; | Promise used to return the names of all actions supported by the element. |
 
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.actionNames().then((data: string[]) => {
+  console.info(`Succeeded in get action names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to get action names, Code is ${err.code}, message is ${err.message}`);
+})
+```
+
 ## attributeNames
 
 ```TypeScript
@@ -82,7 +108,23 @@ Obtains all attribute names of this element. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return all attribute names of the element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return all attribute names of the element. |
+
+## Examples
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.attributeNames((err: BusinessError, data: ElementAttributeKeys[]) => {
+  if (err && err.code) {
+    console.error(`failed to get attribute names, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in get attribute names, ${JSON.stringify(data)}`);
+});
+```
 
 ## attributeNames
 
@@ -107,6 +149,20 @@ Obtains all attribute names of this element. This API uses a promise to return t
 | Type | Description |
 | --- | --- |
 | Promise&lt;Array&lt;T&gt;&gt; | Promise used to return all attribute names of the element. |
+
+## Examples
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
+  console.info(`Succeeded in get attribute names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to get attribute names, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## attributeValue
 
@@ -134,14 +190,32 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attributeName | T | Yes | Attribute name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the attribute value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the attribute value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
+
+## Examples
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let attributeName: ElementAttributeKeys = 'bundleName';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.attributeValue(attributeName, (err: BusinessError, data: string) => {
+  if (err && err.code) {
+    console.error(`failed to get attribute value, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in get attribute value, ${JSON.stringify(data)}`);
+});
+```
 
 ## attributeValue
 
@@ -177,8 +251,24 @@ Obtains the attribute value based on an attribute name. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300004](../errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-attribute-does-not-exist) | This property does not exist. |
+
+## Examples
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let attributeName: ElementAttributeKeys = 'bundleName';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.attributeValue(attributeName).then((data: string) => {
+  console.info(`Succeeded in get attribute value by name, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to get attribute value, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -204,13 +294,30 @@ Finds an element based on the content type. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | type | 'content' | Yes | Type of element finding. The value is fixed at **'content'**. |
 | condition | string | Yes | Search criteria. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition = 'keyword';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.findElement('content', condition, (err: BusinessError, data: AccessibilityElement[])=>{
+  if (err && err.code) {
+    console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+});
+```
 
 ## findElement
 
@@ -247,7 +354,22 @@ Finds an element based on the content type. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition = 'keyword';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.findElement('content', condition).then((data: AccessibilityElement[]) => {
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -273,13 +395,31 @@ Finds an element based on the focus type. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
 | condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { FocusType } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusType = 'normal';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.findElement('focusType', condition, (err: BusinessError, data: AccessibilityElement)=>{
+  if (err && err.code) {
+    console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+});
+```
 
 ## findElement
 
@@ -316,7 +456,23 @@ Finds an element based on the focus type. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { FocusType } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusType = 'normal';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.findElement('focusType', condition).then((data: AccessibilityElement) => {
+  console.info(`Succeeded in find element,${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -342,13 +498,31 @@ Finds an element based on the focus direction. This API uses an asynchronous cal
 | --- | --- | --- | --- |
 | type | 'focusDirection' | Yes | Type of element finding. The value is fixed at **'focusDirection'**. |
 | condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Direction of the next focus element. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { FocusDirection } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusDirection = 'up';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.findElement('focusDirection', condition, (err: BusinessError, data: AccessibilityElement) =>{
+  if (err && err.code) {
+    console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+});
+```
 
 ## findElement
 
@@ -385,7 +559,23 @@ Finds an element based on the focus direction. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { FocusDirection } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusDirection = 'up';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.findElement('focusDirection', condition).then((data: AccessibilityElement) => {
+  console.info(`Succeeded in find element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to find element, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## performAction
 
@@ -409,16 +599,34 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md). |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
 | parameters | object | Yes | Parameters required for performing the target action. Empty by default. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+let parameters: object = [];
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.performAction(actionName, parameters, (err: BusinessError) => {
+  if (err && err.code) {
+    console.error(`failed to perform action, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in perform action,actionName is ${actionName}, parameters is ${parameters}`);
+});
+```
 
 ## performAction
 
@@ -442,7 +650,7 @@ Performs an action based on the specified action name. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md). |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
 | parameters | object | No | Parameters required for performing the target action. Empty by default. |
 
 **Return value:**
@@ -455,8 +663,69 @@ Performs an action based on the specified action name. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.performAction(actionName).then(() => {
+  console.info(`Succeeded in perform action,actionName is ${actionName}`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to perform action, Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+Example of an action without parameters:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+// An action that does not require any parameter setting is an action without parameters, as specified in the action description.
+rootElement.performAction('click').then(() => {
+  console.info(`Succeeded in perform action.`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to perform action, Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+Example of an action with parameters:
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+// Sample code of setSelection
+rootElement.performAction('setSelection', {
+  selectTextBegin: '0', // Start position of the selection.
+  selectTextEnd: '8',   // End position of the selection.
+  selectTextInForWard: true   // true indicates the insertion point, and false indicates the selection range.
+}).then(() => {
+  console.info(`Succeeded in perform action`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to perform action, Code is ${err.code}, message is ${err.message}`);
+});
+```
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement is an instance of AccessibilityElement.
+// Sample code of setCursorPosition
+rootElement.performAction('setCursorPosition', {
+  offset: '1'   // Position of the cursor.
+}).then(() => {
+  console.info(`Succeeded in perform action`);
+}).catch((err: BusinessError) => {
+  console.error(`failed to perform action, Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## performAction
 
@@ -480,13 +749,30 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+
+// rootElement is an instance of AccessibilityElement.
+rootElement.performAction(actionName, (err: BusinessError) => {
+  if (err && err.code) {
+    console.error(`failed to perform action, Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in perform action, actionName is ${actionName}`);
+});
+```
 

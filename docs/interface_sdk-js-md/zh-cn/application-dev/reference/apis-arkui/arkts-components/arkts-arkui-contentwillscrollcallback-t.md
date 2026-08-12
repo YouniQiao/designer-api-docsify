@@ -24,7 +24,7 @@ Swiper即将滑动前触发的回调，返回值表示是否允许此次滑动�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [SwiperContentWillScrollResult](../arkts-apis/arkts-arkui-swiper-swipercontentwillscrollresult-i.md) | 是 | 即将滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。 |
+| result | [SwiperContentWillScrollResult](arkts-arkui-swipercontentwillscrollresult-i.md) | 是 | 即将滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。 |
 
 **返回值：**
 

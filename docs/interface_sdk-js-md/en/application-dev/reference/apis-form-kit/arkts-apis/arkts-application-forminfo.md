@@ -5,7 +5,7 @@ The **formInfo** module provides types and enums related to the widget informati
 > **NOTE：**
 
 > - This module is deprecated since API version 9. You are advised to use
-> [formInfo](arkts-application-forminfo.md) instead.
+> [formInfo](arkts-app-form-forminfo.md#formInfo) instead.
 
 **Since:** 8
 
@@ -13,7 +13,7 @@ The **formInfo** module provides types and enums related to the widget informati
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.form.formInfo/formInfo
+**Substitutes:** [formInfo/formInfo](ohos.app.form.formInfo/formInfo)
 
 <!--Device-unnamed-declare namespace formInfo--><!--Device-unnamed-declare namespace formInfo-End-->
 

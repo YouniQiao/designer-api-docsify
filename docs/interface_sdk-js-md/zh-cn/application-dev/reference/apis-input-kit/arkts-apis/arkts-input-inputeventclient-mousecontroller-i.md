@@ -55,9 +55,9 @@ beginAxis(axis: Axis, value: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) | The axis event is in progress. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -132,9 +132,9 @@ endAxis(axis: Axis): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -184,9 +184,9 @@ moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-显示器不存在) | The display does not exist. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -253,9 +253,9 @@ pressButton(button: Button): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is already pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is already pressed. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -326,9 +326,9 @@ releaseButton(button: Button): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is not pressed. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) | The mouse button is not pressed. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 
@@ -377,9 +377,9 @@ updateAxis(axis: Axis, value: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
-| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) | The axis event is not in progress. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 

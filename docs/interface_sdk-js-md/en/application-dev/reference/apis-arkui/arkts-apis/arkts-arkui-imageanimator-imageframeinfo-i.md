@@ -78,7 +78,7 @@ src: string | Resource | PixelMap
 
 Image path
 
-**Type:** string \| Resource \| PixelMap
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md)
 
 **Since:** 23
 

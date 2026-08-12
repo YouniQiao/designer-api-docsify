@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { settings } from 'kits/@kit.BasicServicesKit';
+import { settings } from '@kit.BasicServicesKit';
 ```
 
 ## getValue
@@ -20,7 +20,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#getValue
+**Substitutes:** [getValue](ohos.settings#getValue)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -32,9 +32,9 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the [DataAbilityHelper](ohos.aafwk.ability.DataAbilityHelper) used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;object&gt; | Yes | The callback of getValue result. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.settings#getValue
+**Substitutes:** [getValue](ohos.settings#getValue)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -79,7 +79,7 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the {@link ohos.aafwk.ability.DataAbilityHelper} used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the [DataAbilityHelper](ohos.aafwk.ability.DataAbilityHelper) used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**
@@ -125,7 +125,7 @@ Get value from settingsdata
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback of getValue result. |
 
 ## Examples
 

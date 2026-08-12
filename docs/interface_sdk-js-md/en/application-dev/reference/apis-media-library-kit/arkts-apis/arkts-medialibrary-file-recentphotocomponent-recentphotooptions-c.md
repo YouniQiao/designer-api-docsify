@@ -13,7 +13,7 @@ RecentPhotoOptions Object
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from 'kits/@kit.MediaLibraryKit';
+import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from '@kit.MediaLibraryKit';
 ```
 
 ## MIMEType
@@ -104,7 +104,7 @@ public photoSource?: PhotoSource
 
 PhotoSource
 
-**Type:** [PhotoSource](arkts-medialibrary-photoaccesshelper-photosource-e.md)
+**Type:** [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 26.0.0
 

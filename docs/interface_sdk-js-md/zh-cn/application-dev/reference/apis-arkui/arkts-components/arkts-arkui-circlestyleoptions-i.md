@@ -20,7 +20,7 @@ color?: ResourceColor
 
 默认值：'#33182431'（深灰色，20%不透明度）。
 
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -98,7 +98,7 @@ radius?: LengthMetrics
 
 取值范围：大于0。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 12
 

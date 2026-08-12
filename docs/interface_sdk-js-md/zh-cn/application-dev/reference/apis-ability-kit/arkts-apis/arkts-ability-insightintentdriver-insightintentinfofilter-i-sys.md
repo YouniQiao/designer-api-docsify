@@ -40,8 +40,8 @@ bundleName?: string
 intentFlags: int
 ```
 
-意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
-[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md)。
+意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
+[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag)。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

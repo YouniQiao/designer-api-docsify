@@ -26,7 +26,7 @@ function getFontCount(path: string | Resource) : int
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string \| Resource | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 需要查询的字体文件的路径，应为 "file:// + 字体文件绝对路径" 或 \\$rawfile('工程中resources/rawfile目录下的文件名称')。 |
 
 **返回值：**
 

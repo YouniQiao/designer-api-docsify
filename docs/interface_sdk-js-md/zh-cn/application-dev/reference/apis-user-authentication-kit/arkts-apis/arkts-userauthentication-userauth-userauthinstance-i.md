@@ -2,7 +2,7 @@
 
 用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。
 
-使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance)方法获取UserAuthInstance对象。
+使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance)方法获取UserAuthInstance对象。
 
 > **说明：**
 > 
@@ -44,9 +44,9 @@ cancel(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -101,7 +101,7 @@ off(type: 'result', callback?: IAuthCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](#UserAuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 10
 
@@ -124,8 +124,8 @@ off(type: 'result', callback?: IAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -181,7 +181,7 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](#UserAuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 20
 
@@ -197,14 +197,14 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认 证并调用[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))订阅该事件后，调用该 方法可取消订阅，不会再触发该事件。 |
+| type | 'authTip' | 是 | 取消订阅的事件类型，支持的事件为'authTip'，当[start()](#start)调用完成，发起身份认 证并调用[on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))订阅该事件后，调用该 方法可取消订阅，不会再触发该事件。 |
 | callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 否 | 认证接口的回调函数，用于返回认证中间状态。 当不传该参数时默认值为调用 [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口时传递的参数值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -258,7 +258,7 @@ offAuthTip(callback?: AuthTipCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](#UserAuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 23
 
@@ -278,7 +278,7 @@ offAuthTip(callback?: AuthTipCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -332,7 +332,7 @@ offResult(callback?: IAuthCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](#UserAuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 23
 
@@ -352,8 +352,8 @@ offResult(callback?: IAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -410,7 +410,7 @@ on(type: 'result', callback: IAuthCallback): void
 
 > **说明：**
 > 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam)时传入了有效的uiContext），收到认证结果后，若需弹出其
 > 他窗口，应先获取控件弹窗释放的标志消息，通过
 > [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅控件释放消息（
 > authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
@@ -429,15 +429,15 @@ on(type: 'result', callback: IAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证并完成认证 交互后，触发该事件。 |
+| type | 'result' | 是 | 订阅事件类型，表明该事件用来返回认证结果，当[start()](#start)调用完成，发起身份认证并完成认证 交互后，触发该事件。 |
 | callback | [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md) | 是 | 认证接口的回调函数，用于返回认证结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## on('authTip')
 
@@ -449,7 +449,7 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 > **说明：**
 > 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam)时传入了有效的uiContext），收到认证结果后，若需弹出其
 > 他窗口，应先获取控件弹窗释放的标志消息，通过
 > [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅控件释放消息（
 > authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
@@ -468,14 +468,14 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'authTip' | 是 | 订阅事件类型，支持的事件为'authTip'，当[start()](arkts-userauthentication-userauth-userauthinstance-i.md#start)调用完成，发起身份认证，触 发该事件。 |
+| type | 'authTip' | 是 | 订阅事件类型，支持的事件为'authTip'，当[start()](#start)调用完成，发起身份认证，触 发该事件。 |
 | callback | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) | 是 | 认证接口的回调函数，用于返回认证中间状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -548,7 +548,7 @@ onAuthTip(callback: AuthTipCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -601,7 +601,7 @@ try {
 onResult(callback: IAuthCallback): void
 ```
 
-订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证失败尝试并不会通过该接口返回。如果需要感知整个认证过程中用户的每一次认证失败尝试，请通过[on('authTip')](arkts-userauthentication-userauth-userauthinstance-i.md#on)接口订阅。
+订阅用户身份认证的最终结果。通过该接口获取到的是用户在认证控件完成身份认证交互后的最终身份认证结果。认证控件消失前，用户中间的认证失败尝试并不会通过该接口返回。如果需要感知整个认证过程中用户的每一次认证失败尝试，请通过[on('authTip')](#on-1)接口订阅。
 
 **起始版本：** 23
 
@@ -621,8 +621,8 @@ onResult(callback: IAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 
@@ -768,19 +768,19 @@ start(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
-| [12500013](../errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
-| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
-| [12500011](../errorcode-useriam.md#12500011-提示通知切换自定义认证) | Switched to the customized authentication process. |
-| [12500009](../errorcode-useriam.md#12500009-认证被锁定) | Authentication is locked out. |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
-| [12500007](../errorcode-useriam.md#12500007-认证服务繁忙) | Authentication service is busy.<br>**适用版本：** 10 - 19 |
-| [12500004](../errorcode-useriam.md#12500004-认证操作超时) | Authentication timeout.<br>**适用版本：** 10 - 19 |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
-| [12500003](../errorcode-useriam.md#12500003-认证被取消) | Authentication canceled. |
-| [12500001](../errorcode-useriam.md#12500001-认证不通过) | Authentication failed.<br>**适用版本：** 10 - 19 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [12500013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
+| [12500010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
+| [12500011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500011-提示通知切换自定义认证) | Switched to the customized authentication process. |
+| [12500009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-认证被锁定) | Authentication is locked out. |
+| [12500006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
+| [12500007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-认证服务繁忙) | Authentication service is busy.<br>**适用版本：** 10 - 19 |
+| [12500004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-认证操作超时) | Authentication timeout.<br>**适用版本：** 10 - 19 |
+| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [12500003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-认证被取消) | Authentication canceled. |
+| [12500001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-认证不通过) | Authentication failed.<br>**适用版本：** 10 - 19 |
 
 ## 示例
 

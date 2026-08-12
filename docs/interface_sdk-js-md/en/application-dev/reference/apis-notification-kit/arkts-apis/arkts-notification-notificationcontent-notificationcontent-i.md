@@ -26,7 +26,7 @@ Notification content type.
 
 **Deprecated since:** 11
 
-**Substitutes:** [NotificationContent#notificationContentType](arkts-notification-notificationcontent-notificationcontent-i.md#notificationcontenttype)
+**Substitutes:** [notificationContentType](#notificationContentType)
 
 <!--Device-NotificationContent-contentType?: notification.ContentType--><!--Device-NotificationContent-contentType?: notification.ContentType-End-->
 
@@ -41,7 +41,7 @@ longText?: NotificationLongTextContent
 Long text notification content. This parameter is used when **notificationContentType** is  
 **NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
 
-**Type:** [NotificationLongTextContent](arkts-notification-notificationmanager-notificationlongtextcontent-t.md)
+**Type:** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
 **Since:** 7
 
@@ -79,7 +79,7 @@ normal?: NotificationBasicContent
 Basic notification content. This parameter is used when **notificationContentType** is  
 **NOTIFICATION_CONTENT_BASIC_TEXT**. The notification displays the title and body in a plain text style.
 
-**Type:** [NotificationBasicContent](arkts-notification-notificationmanager-notificationbasiccontent-t.md)
+**Type:** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
 **Since:** 7
 

@@ -50,7 +50,7 @@ grantStatus: GrantStatus
 
 权限授权状态。
 
-**类型：** [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)
+**类型：** GrantStatus
 
 **起始版本：** 26.0.0
 

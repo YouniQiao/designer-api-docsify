@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getPairedDevices
@@ -20,7 +20,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getPairedDevices
+**Substitutes:** [getPairedDevices](ohos.bluetoothManager/bluetoothManager.getPairedDevices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

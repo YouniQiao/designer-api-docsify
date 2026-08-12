@@ -40,7 +40,7 @@ dataBits?: DataBits
 
 数据位&lt;br&gt;默认值:EIGHT。
 
-**类型：** [DataBits](arkts-basicservices-serial-databits-e.md)
+**类型：** DataBits
 
 **默认值：** EIGHT
 
@@ -62,7 +62,7 @@ parity?: Parity
 
 校验位&lt;br&gt;默认值:NONE。
 
-**类型：** [Parity](arkts-basicservices-serialmanager-parity-e.md)
+**类型：** Parity
 
 **默认值：** NONE
 
@@ -108,7 +108,7 @@ stopBits?: StopBits
 
 &lt;br&gt;默认值:ONE。
 
-**类型：** [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
+**类型：** StopBits
 
 **默认值：** ONE
 

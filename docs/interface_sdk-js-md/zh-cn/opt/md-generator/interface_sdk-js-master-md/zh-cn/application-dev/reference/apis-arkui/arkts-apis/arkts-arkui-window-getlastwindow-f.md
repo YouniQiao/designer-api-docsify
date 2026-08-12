@@ -8,7 +8,7 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 获取当前应用内层级最高的子窗口，使用callback异步回调。
 
-若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主窗口。
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showWindow)进行显示，则返回应用主窗口。
 
 **起始版本：** 9
 
@@ -22,16 +22,16 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Window&gt; | 是 |
+| [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300006](../errorcode-window.md#1300006-窗口上下文异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) |
 
 ## 示例
 
@@ -87,7 +87,7 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 获取当前应用内层级最高的子窗口，使用Promise异步回调。
 
-若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showwindow)进行显示，则返回应用主窗口。
+若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showWindow)进行显示，则返回应用主窗口。
 
 **起始版本：** 9
 
@@ -101,21 +101,21 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
+| [ctx](arkts-arkui-window-configuration-i.md) | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Window&gt; |
+| Promise&lt;[Window](arkts-arkui-window-window-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
-| [1300006](../errorcode-window.md#1300006-窗口上下文异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) |
 
 ## 示例
 

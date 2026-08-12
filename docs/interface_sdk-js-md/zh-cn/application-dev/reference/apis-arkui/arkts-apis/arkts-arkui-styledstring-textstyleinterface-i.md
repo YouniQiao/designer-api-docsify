@@ -40,7 +40,7 @@ fontConfigs?: FontConfigs
 
 字体配置。默认值继承[FontConfigs](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#fontconfigs24)。
 
-**类型：** [FontConfigs](arkts-arkui-fontconfigs-i.md)
+**类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **起始版本：** 26.0.0
 
@@ -156,7 +156,7 @@ fontWeight?: int | FontWeight | string
 
 number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter"、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
 
-**类型：** int \| FontWeight \| string
+**类型：** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **起始版本：** 23
 
@@ -200,7 +200,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -246,7 +246,7 @@ superscript?: SuperscriptStyle
 
 默认值：SuperscriptStyle.NORMAL
 
-**类型：** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
+**类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **起始版本：** 26.0.0
 

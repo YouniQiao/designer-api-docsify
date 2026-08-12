@@ -13,7 +13,7 @@ Represents the optional parameter used to remove an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## token

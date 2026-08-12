@@ -5,7 +5,7 @@ Enumerates the error codes.
 > **NOTE：**
 > 
 > This API is deprecated since API version 9. You are advised to use
-> [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksexceptionerrcode-e.md).
+> [HuksExceptionErrCode&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-huksexceptionerrcode-e.md#HuksExceptionErrCode).
 
 **Since:** 8
 
@@ -13,7 +13,7 @@ Enumerates the error codes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null]
+**Substitutes:** [null](null)
 
 <!--Device-huks-export enum HuksErrorCode--><!--Device-huks-export enum HuksErrorCode-End-->
 

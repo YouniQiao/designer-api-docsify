@@ -2,8 +2,8 @@
 
 描述段落基础文本行结构的载体。
 
-下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md)类的[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines)接口或者  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md)类的[createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline)接口获取到TextLine对象实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)类的[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines)接口或者  
+[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset)类的[createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine)接口获取到TextLine对象实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | width | double | 是 | 截断后的行宽度，浮点数，单位为物理像素px。 |
-| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
+| ellipsisMode | EllipsisMode | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
 | ellipsis | string | 是 | 截断的标记字符串。 |
 
 **返回值：**
@@ -155,7 +155,7 @@ createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | width | double | 是 | 截断后的行宽度，浮点数，单位为物理像素px。 |
-| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
+| ellipsisMode | EllipsisMode | 是 | 截断的类型，当前仅支持头部截断START和尾部截断END。 |
 | ellipsis | string | 是 | 截断的标记字符串。 |
 
 **返回值：**
@@ -309,7 +309,7 @@ getGlyphRuns(): Array<Run>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Run&gt; | 该文本行中的文本排版单元数组。 |
+| Array&lt;[Run](arkts-arkgraphics2d-text-run-c.md)&gt; | 该文本行中的文本排版单元数组。 |
 
 ## 示例
 
@@ -464,7 +464,7 @@ getTextRange(): Range
 
 | 类型 | 说明 |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | 该行文本在整个段落文本中的索引区间。 |
+| Range | 该行文本在整个段落文本中的索引区间。 |
 
 ## 示例
 

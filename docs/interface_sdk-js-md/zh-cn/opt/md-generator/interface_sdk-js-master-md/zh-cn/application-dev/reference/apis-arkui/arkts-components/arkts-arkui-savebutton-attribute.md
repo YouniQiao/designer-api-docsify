@@ -58,7 +58,7 @@ iconSize(size: Dimension | SizeOptions)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [SizeOptions](../arkts-apis/arkts-arkui-units-sizeoptions-i.md) | 是 |
+| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [SizeOptions](../arkts-apis/arkts-arkui-sizeoptions-i.md) | 是 |
 
 ## onClick
 
@@ -219,7 +219,7 @@ symbolIconColor(color: Array<ResourceColor>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | 是 |
+| color | Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 ## symbolRenderingStrategy
 

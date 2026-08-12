@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createHdrDarkenBlender
@@ -30,7 +30,7 @@ Creates an HdrDarkenBlender instance for HDR layer darken blending effect.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | hdrBrightnessRatio | number | Yes |
-| grayscaleFactor | [number, number, number] | No |
+| [grayscaleFactor](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | [number, number, number] | No |
 
 **Return value:**
 

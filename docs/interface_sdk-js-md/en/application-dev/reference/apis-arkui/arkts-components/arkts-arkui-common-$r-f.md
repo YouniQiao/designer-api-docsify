@@ -31,5 +31,5 @@ global \$r function
 
 | Type | Description |
 | --- | --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |
+| Resource |  |
 

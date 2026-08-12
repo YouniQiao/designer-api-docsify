@@ -2,7 +2,7 @@
 
 图片加载异常时触发回调的返回对象。
 
-当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md)时该事件不触发。
+当组件的参数类型为[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor)时该事件不触发。
 
 **起始版本：** 9
 
@@ -88,7 +88,7 @@ error?: BusinessError<void>
 
 默认值：{ code : -1, message : "" }
 
-**类型：** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)&lt;void&gt;
+**类型：** [BusinessError](arkts-arkui-businesserror-t.md)&lt;void&gt;
 
 **起始版本：** 20
 

@@ -2,9 +2,9 @@
 
 环形无刻度样式选项。
 
-继承自[ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)。
+继承自[ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md#ScanEffectOptions)和[CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)。
 
-**继承/实现关系：** RingStyleOptions extends [ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
+**继承/实现关系：** RingStyleOptions extends [ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ status?: ProgressStatus
 
 设置进度条状态。当设置为ProgressStatus.LOADING时会开启检查更新动效，此时设置进度值不生效。当从ProgressStatus.LOADING设置为ProgressStatus.PROGRESSING时，检查更新动效会执行到终点再停止。默认值：ProgressStatus.PROGRESSING。
 
-**类型：** [ProgressStatus](../arkts-components/arkts-arkui-progressstatus-e.md)
+**类型：** [ProgressStatus](arkts-arkui-progress-progressstatus-e.md)
 
 **起始版本：** 23
 

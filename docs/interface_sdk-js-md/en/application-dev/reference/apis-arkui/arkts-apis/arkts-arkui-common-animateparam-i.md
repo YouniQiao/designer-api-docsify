@@ -36,7 +36,7 @@ curve?: Curve | string | ICurve
 
 Animation curve.
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| ICurve
+**Type:** [Curve](arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-arkui-icurve-t.md)
 
 **Default:** Curve.EaseInOut
 
@@ -102,7 +102,7 @@ expectedFrameRateRange?: ExpectedFrameRateRange
 
 Expected frame rate range of the animation.
 
-**Type:** [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md)
+**Type:** [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md)
 
 **Since:** 23
 

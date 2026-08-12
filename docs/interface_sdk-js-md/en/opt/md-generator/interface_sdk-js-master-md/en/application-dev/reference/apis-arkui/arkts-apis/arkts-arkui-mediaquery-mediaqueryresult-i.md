@@ -11,7 +11,7 @@ Provides the media query result.
 ## Modules to Import
 
 ```TypeScript
-import { mediaquery } from 'kits/@kit.ArkUI';
+import { mediaquery } from '@kit.ArkUI';
 ```
 
 ## matches

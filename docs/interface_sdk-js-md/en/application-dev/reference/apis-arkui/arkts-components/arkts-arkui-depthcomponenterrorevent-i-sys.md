@@ -68,7 +68,7 @@ error?: BusinessError<void>
 
 Business Error.
 
-**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)&lt;void&gt;
+**Type:** BusinessError&lt;void&gt;
 
 **Since:** 26.0.0
 

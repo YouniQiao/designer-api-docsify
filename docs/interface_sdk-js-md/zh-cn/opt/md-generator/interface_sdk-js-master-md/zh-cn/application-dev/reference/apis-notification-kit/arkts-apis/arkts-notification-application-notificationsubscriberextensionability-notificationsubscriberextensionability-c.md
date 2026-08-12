@@ -13,7 +13,7 @@ NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from 'kits/@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
 ```
 
 ## onCancelMessages
@@ -36,7 +36,7 @@ onCancelMessages(hashCodes: Array<string>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| hashCodes | Array&lt;string&gt; | 是 |
+| hashCodes | Array & lt;string & gt; | 是 |
 
 ## 示例
 

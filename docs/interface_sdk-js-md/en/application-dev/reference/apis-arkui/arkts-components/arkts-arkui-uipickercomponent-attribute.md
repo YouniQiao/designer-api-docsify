@@ -1,8 +1,8 @@
 # UIPickerComponent properties/events
 
-In addition to the [universal attributes](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following attributes are supported.
+In addition to the [universal attributes](common), the following attributes are supported.
 
-In addition to the [universal events](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md), the following events are supported.
+In addition to the [universal events](common), the following events are supported.
 
 **Inheritance/Implementation:** UIPickerComponentAttribute extends [CommonMethod<UIPickerComponentAttribute>](CommonMethod<UIPickerComponentAttribute>)
 
@@ -43,7 +43,7 @@ Default value: true If the value of isLoop is undefined, the default value is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isLoop | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether loop scrolling is enabled. |
+| isLoop | Optional&lt;boolean&gt; | Yes | Whether loop scrolling is enabled. |
 
 ## displayedItemCount
 
@@ -69,7 +69,7 @@ Sets the total number of visible items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;int&gt; | Yes | The total number of visible items. |
+| count | Optional&lt;int&gt; | Yes | The total number of visible items. |
 
 ## enableHapticFeedback
 
@@ -103,7 +103,7 @@ Default value: true If the value of enable is undefined, the default value is us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;boolean&gt; | Yes | Whether to enable haptic feedback. |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable haptic feedback. |
 
 ## itemHeight
 
@@ -129,7 +129,7 @@ Sets the height of each item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;LengthMetrics&gt; | Yes | Height of each item. |
+| height | Optional&lt;LengthMetrics&gt; | Yes | Height of each item. |
 
 ## onChange
 
@@ -164,7 +164,7 @@ NOTE
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OnUIPickerComponentCallback&gt; | Yes | Callback triggered when the selected item changes. |
+| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes | Callback triggered when the selected item changes. |
 
 ## onScrollStop
 
@@ -192,7 +192,7 @@ If callback is set to undefined, the callback is not used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;OnUIPickerComponentCallback&gt; | Yes | Callback triggered when the picker scrolling stops. |
+| callback | Optional&lt;[OnUIPickerComponentCallback](arkts-arkui-onuipickercomponentcallback-t.md)&gt; | Yes | Callback triggered when the picker scrolling stops. |
 
 ## selectionIndicator
 
@@ -220,5 +220,5 @@ Default value: { type: PickerIndicatorType.BACKGROUND, borderRadius: { value:12,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;PickerIndicatorStyle&gt; | Yes | Style of the selected item indicator. |
+| style | Optional&lt;[PickerIndicatorStyle](arkts-arkui-pickerindicatorstyle-i.md)&gt; | Yes | Style of the selected item indicator. |
 

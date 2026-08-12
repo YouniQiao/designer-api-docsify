@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.statvfs:statfs](arkts-file-statvfs.md)
+**替代接口：** [statfs](arkts-file-statvfs.md#statfs)
 
 <!--Device-unnamed-declare namespace Statfs--><!--Device-unnamed-declare namespace Statfs-End-->
 

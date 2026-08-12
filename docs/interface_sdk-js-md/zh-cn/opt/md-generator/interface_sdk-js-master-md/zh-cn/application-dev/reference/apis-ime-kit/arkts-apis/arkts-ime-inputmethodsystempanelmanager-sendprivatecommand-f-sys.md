@@ -22,17 +22,17 @@ function sendPrivateCommand(commandData: Record<string, CommandDataType>): Promi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| commandData | Record&lt;string, CommandDataType&gt; | 是 |
+| commandData | Record & lt;string, CommandDataType & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [12800026](../errorcode-inputmethod-framework.md#12800026-输入法系统面板错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12800026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800026-输入法系统面板错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

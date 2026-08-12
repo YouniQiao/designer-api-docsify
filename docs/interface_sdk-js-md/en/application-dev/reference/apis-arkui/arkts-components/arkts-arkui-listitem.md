@@ -43,7 +43,7 @@ Creates a ListItem component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ListItemOptions](../arkts-apis/arkts-arkui-listitem-listitemoptions-i.md) | No |  |
+| value | [ListItemOptions](arkts-arkui-listitemoptions-i.md) | No |  |
 
 ## ListItem
 
@@ -59,7 +59,7 @@ Creates a ListItem component.
 
 **Deprecated since:** 10
 
-**Substitutes:** <!--SUBSTITUTE_API-->listItem/ListItemInterface<!--/SUBSTITUTE_API-->
+**Substitutes:** [listItem/ListItemInterface](listItem/ListItemInterface)
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
 

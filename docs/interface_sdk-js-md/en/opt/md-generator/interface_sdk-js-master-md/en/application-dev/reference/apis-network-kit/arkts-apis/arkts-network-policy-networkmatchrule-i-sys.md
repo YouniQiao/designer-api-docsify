@@ -13,7 +13,7 @@ The matching rules of network quota policies.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from 'kits/@kit.NetworkKit';
+import { policy } from '@kit.NetworkKit';
 ```
 
 ## identity
@@ -40,9 +40,9 @@ To specify the identity of network, such as different WLAN.
 netType: NetBearType
 ```
 
-netType see {@link NetBearType}.
+netType see [NetBearType](arkts-network-policy-netbeartype-t.md#NetBearType).
 
-**Type:** [NetBearType](arkts-network-statistics-netbeartype-t.md)
+**Type:** NetBearType
 
 **Since:** 10
 

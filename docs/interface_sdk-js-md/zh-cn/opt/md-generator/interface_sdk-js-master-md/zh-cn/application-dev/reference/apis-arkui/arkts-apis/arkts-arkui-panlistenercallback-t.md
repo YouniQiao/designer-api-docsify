@@ -22,4 +22,4 @@ Pan手势事件监听函数类型。
 | --- | --- | --- |
 | event | [GestureEvent](arkts-arkui-gestureevent-i.md) | 是 |
 | current | [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md) | 是 |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 否 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 否 |

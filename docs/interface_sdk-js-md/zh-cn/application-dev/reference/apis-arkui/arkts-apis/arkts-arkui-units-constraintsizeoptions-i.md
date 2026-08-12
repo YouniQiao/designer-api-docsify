@@ -4,9 +4,9 @@
 
 > **说明：**
 > 
-> 在[Row](../../apis-arkui/arkts-components/arkts-arkui-row-i)、[Column](../../apis-arkui/arkts-components/arkts-arkui-column-i)、
-> [RelativeContainer](../../apis-arkui/arkts-components/arkts-arkui-relative_container-i)组件中，width、height设置auto表示自适应子组件。在
-> [TextInput](../../apis-arkui/arkts-components/arkts-arkui-text_input-i)组件中，width设置auto表示自适应文本宽度。
+> 在[Row](../../@internal/component/ets/row)、[Column](../../@internal/component/ets/column)、
+> [RelativeContainer](../../@internal/component/ets/relative_container)组件中，width、height设置auto表示自适应子组件。在
+> [TextInput](../../@internal/component/ets/text_input)组件中，width设置auto表示自适应文本宽度。
 
 **起始版本：** 23
 

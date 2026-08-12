@@ -24,7 +24,7 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 | --- | --- | --- | --- |
 | mainScreen | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 主屏幕ID，该参数仅支持正整数输入。 |
 | mirrorScreen | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt; | 是 | 镜像屏幕ID集合。其中ID应为正整数。 |
-| mainScreenRegion | [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md) | 是 | 主屏创建镜像的矩形区域。 |
+| mainScreenRegion | Rect | 是 | 主屏创建镜像的矩形区域。 |
 
 **返回值：**
 
@@ -36,8 +36,8 @@ function makeMirrorWithRegion(mainScreen: long, mirrorScreen: Array<long>, mainS
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 

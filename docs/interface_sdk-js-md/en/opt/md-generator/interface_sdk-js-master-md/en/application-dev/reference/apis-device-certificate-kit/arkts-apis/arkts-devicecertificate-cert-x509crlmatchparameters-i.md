@@ -11,7 +11,7 @@ Represents the parameters used to match a certificate revocation list (CRL). If 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## issuer
@@ -94,7 +94,7 @@ x509Cert?: X509Cert
 
 Certificate object.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 11
 

@@ -39,7 +39,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually. &lt;br&gt;The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
+| radius | Dimension \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually. &lt;br&gt;The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
 
 ## iconSize
 
@@ -65,7 +65,7 @@ Sets the icon size of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. &lt;br&gt;The default width and height are 16 vp.&lt;br&gt;Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. &lt;br&gt;For the system icons provided by the **SaveButton** component: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. &lt;br&gt;For custom icons: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. &lt;br&gt;- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in [ImageFit.Cover](../arkts-apis/arkts-arkui-enums-imagefit-e.md/arkts-arkui-enums-imagefit-e.md) mode. |
+| size | Dimension \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. &lt;br&gt;The default width and height are 16 vp.&lt;br&gt;Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. &lt;br&gt;For the system icons provided by the **SaveButton** component: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. &lt;br&gt;For custom icons: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. &lt;br&gt;- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in [ImageFit.Cover](ImageFit) mode. |
 
 ## onClick
 
@@ -92,7 +92,7 @@ Triggered when the **SaveButton** component is clicked. When a user clicks the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [SaveButtonCallback](../arkts-apis/arkts-arkui-savebuttoncallback-t.md) | Yes | Callback object for the click event, which carries click details, authorization result and error information. &lt;br&gt;Starting from API version 18, **SaveButtonCallback** is adopted uniformly, which additionally provides error information.<br>**Since:** 18 |
+| event | [SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md) | Yes | Callback object for the click event, which carries click details, authorization result and error information. &lt;br&gt;Starting from API version 18, **SaveButtonCallback** is adopted uniformly, which additionally provides error information.<br>**Since:** 18 |
 
 ## setIcon
 
@@ -120,7 +120,7 @@ Sets the icon of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Custom icon resource information. Only data sources of the Resource type are supported. &lt;br&gt;Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md/arkts-multimedia-image.md). If the resource is not an image resource or the format is not supported, the icon is displayed as blank. &lt;br&gt;Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
+| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported. &lt;br&gt;Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image](./image). If the resource is not an image resource or the format is not supported, the icon is displayed as blank. &lt;br&gt;Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
 
 ## setText
 
@@ -208,7 +208,7 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. &lt;br&gt;For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. &lt;br&gt;For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of [FontWeight](../arkts-apis/arkts-arkui-enums-fontweight-e.md/arkts-arkui-enums-fontweight-e.md) (for example, **"normal"**). &lt;br&gt;Default value: **FontWeight.Normal** (the corresponding value is **400**) &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. &lt;br&gt;For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. &lt;br&gt;For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of [FontWeight](FontWeight) (for example, **"normal"**). &lt;br&gt;Default value: **FontWeight.Normal** (the corresponding value is **400**) &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolIconColor
 
@@ -276,7 +276,7 @@ rendering strategy determines how the color array is applied.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md) | Yes | Rendering strategy for the symbol icon of the save button, which defines how the symbol icon is rendered. &lt;br&gt;Default value: SymbolRenderingStrategy.SINGLE. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| strategy | SymbolRenderingStrategy | Yes | Rendering strategy for the symbol icon of the save button, which defines how the symbol icon is rendered. &lt;br&gt;Default value: SymbolRenderingStrategy.SINGLE. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## userCancelEvent
 

@@ -22,7 +22,7 @@ Disabled date range.
 
 1. If the start date or end date within a date range is invalid or is not set, the entire date range does not take effect.2. If the end date is earlier than the start date within a date range, the entire date range does not take effect.3. When users select a date and adjust it with the up or down arrow keys, the system skips over all dates in the disabled date range.
 
-**Type:** [DateRange](arkts-arkui-daterange-i.md)[]
+**Type:** DateRange[]
 
 **Since:** 19
 

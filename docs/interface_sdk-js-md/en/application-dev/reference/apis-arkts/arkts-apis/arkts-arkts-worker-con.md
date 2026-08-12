@@ -14,7 +14,7 @@ The object used by the worker thread to communicate with the host thread.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.workerPort
+**Substitutes:** [workerPort](#workerPort)
 
 <!--Device-worker-const parentPort: DedicatedWorkerGlobalScope--><!--Device-worker-const parentPort: DedicatedWorkerGlobalScope-End-->
 

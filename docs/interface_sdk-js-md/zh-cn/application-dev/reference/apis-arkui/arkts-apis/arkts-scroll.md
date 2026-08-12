@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Scroller](arkts-arkui-scroll-scroller-c.md) | 可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到[ArcList](arkts-arkui-arclist.md)、  [ArcScrollBar](arkts-arkui-arcscrollbar.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、Scroll、[ScrollBar](scroll_bar)、  [Grid](arkts-arkui-grid-grid-f.md#grid)、[WaterFlow](water_flow)上。 |
+| [Scroller](arkts-arkui-scroll-scroller-c.md) | 可滚动容器组件的控制器，可以将此组件绑定至容器组件，然后通过它控制容器组件的滚动。同一个控制器不可以控制多个容器组件，目前支持绑定到[ArcList](arkts-arkui-arkui-arclist-con.md#ArcList)、  [ArcScrollBar](arkts-arkui-arkui-arcscrollbar-arcscrollbar-f.md#ArcScrollBar)、[List](list)、Scroll、[ScrollBar](scroll_bar)、  [Grid](grid)、[WaterFlow](water_flow)上。 |
 
 ### 接口
 
@@ -21,7 +21,7 @@
 | [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md) | 翻页模式的参数选项。 |
 | [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md) | 限位滚动模式对象。 |
 | [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md) | 滑动到指定Index的参数选项。 |
-| [UIScrollEvent](arkts-arkui-scroll-uiscrollevent-i.md) | frameNode中[getEvent('Scroll')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventscroll19)方法的返回值，可用于给Scroll节点设置滚动事件。  UIScrollEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。 |
+| [UIScrollEvent](arkts-arkui-scroll-uiscrollevent-i.md) | frameNode中[getEvent('Scroll')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventscroll19)方法的返回值，可用于给Scroll节点设置滚动事件。  UIScrollEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。 |
 
 ### 枚举
 

@@ -16,7 +16,7 @@ fallbackGroups: Array<UIFontFallbackGroupInfo>
 
 备用字体集。
 
-**类型：** Array&lt;UIFontFallbackGroupInfo&gt;
+**类型：** Array&lt;[UIFontFallbackGroupInfo](arkts-arkui-font-uifontfallbackgroupinfo-i.md)&gt;
 
 **起始版本：** 11
 
@@ -56,7 +56,7 @@ generic: Array<UIFontGenericInfo>
 
 系统所支持的通用字体集列表。
 
-**类型：** Array&lt;UIFontGenericInfo&gt;
+**类型：** Array&lt;[UIFontGenericInfo](arkts-arkui-font-uifontgenericinfo-i.md)&gt;
 
 **起始版本：** 11
 

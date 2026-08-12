@@ -1,6 +1,6 @@
 # TextSpanType
 
-[Span](../arkts-apis/arkts-arkui-span-span-f.md/arkts-arkui-span-span-f.md#span)类型信息。
+[Span](./span)类型信息。
 
 > **说明：**
 > 

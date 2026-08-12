@@ -2,13 +2,13 @@
 
 Defines the paragraph style options.
 
-Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md).
+Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange).
 
 > **NOTE：**
 > 
 > Applicable scope of the API: spans involved in the specified range.
 
-**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md)
+**Inheritance/Implementation:** RichEditorParagraphStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)
 
 **Since:** 11
 
@@ -26,7 +26,7 @@ style: RichEditorParagraphStyle
 
 Paragraph style.
 
-**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 11
 

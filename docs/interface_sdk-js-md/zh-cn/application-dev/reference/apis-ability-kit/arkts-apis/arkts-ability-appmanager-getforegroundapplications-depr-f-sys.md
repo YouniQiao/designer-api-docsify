@@ -6,7 +6,7 @@
 function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>): void
 ```
 
-获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用callback异步回调。
+获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md#AppStateData)定义。使用callback异步回调。
 
 **起始版本：** 8
 
@@ -14,7 +14,7 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#getForegroundApplications
+**替代接口：** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -51,7 +51,7 @@ appManager.getForegroundApplications((err, data) => {
 function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
-获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用Promise异步回调。
+获取所有当前处于前台的应用信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md#AppStateData)定义。使用Promise异步回调。
 
 **起始版本：** 8
 
@@ -59,7 +59,7 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#getForegroundApplications
+**替代接口：** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 

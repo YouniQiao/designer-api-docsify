@@ -43,7 +43,7 @@ autoCleanDirtyData?: boolean
 指定是否自动清理云端删除后同步到本地的数据，true表示自动清理，false表示手动清理，默认自动清理。
 
 对于端云协同的数据库，当云端删除的数据同步到设备端时，可通过该参数设置设备端是否自动清理。手动清理可以通过  
-[cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleandirtydata)接口清理。
+[cleanDirtyData&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkdata-relationalstore-rdbstore-i.md#cleanDirtyData)接口清理。
 
 从API version 11开始，支持此可选参数。
 
@@ -65,7 +65,7 @@ cryptoParam?: CryptoParam
 
 指定用户自定义的加密参数。
 
-当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md)各参数默认值。
+当此参数不填时，使用默认的加密参数，见[CryptoParam](arkts-arkdata-relationalstore-cryptoparam-i.md#CryptoParam)各参数默认值。
 
 此配置只有在encrypt选项设置为true或密钥非空时才有效。
 
@@ -151,7 +151,7 @@ enableSemanticIndex?: boolean
 encrypt?: boolean
 ```
 
-指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyex)接口进行更新操作。
+指定数据库是否加密，默认非加密。数据库创建完成后，此参数不允许直接修改。如需变更数据库加密状态，请调用[rekeyEx](arkts-arkdata-relationalstore-rdbstore-i.md#rekeyEx)接口进行更新操作。
 
 true：加密。
 
@@ -276,7 +276,7 @@ securityLevel: SecurityLevel
 
 设置数据库安全级别。
 
-**类型：** [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md)
+**类型：** SecurityLevel
 
 **起始版本：** 9
 

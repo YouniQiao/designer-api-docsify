@@ -4,7 +4,7 @@
 declare type UIStatesChangeHandler = (node: FrameNode, currentUIStates: number) => void
 ```
 
-当UI状态发生变化时触发的回调。接收回调触发时的[UIState](arkts-arkui-framenode-uistate-e.md)状态，该参数的取值为UIState状态枚举值或其运算结果。
+当UI状态发生变化时触发的回调。接收回调触发时的[UIState](arkts-arkui-framenode-uistate-e.md#UIState)状态，该参数的取值为UIState状态枚举值或其运算结果。
 
 **起始版本：** 20
 

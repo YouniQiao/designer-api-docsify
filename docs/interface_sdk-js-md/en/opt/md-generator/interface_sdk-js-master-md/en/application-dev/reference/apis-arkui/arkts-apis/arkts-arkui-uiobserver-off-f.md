@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## off('navDestinationUpdate')
@@ -13,7 +13,7 @@ export function off(type: 'navDestinationUpdate', options: { navigationId: Resou
 ```
 
 Unsubscribes from status changes of the **NavDestination** component. Compared with  
-[uiObserver.off](uiObserver.off(type: 'navDestinationUpdate', callback?: Callback&lt;NavDestinationInfo&gt;)), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
+[uiObserver.off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off), this API supports the **options** parameter, which enables you to specify the ID of the target **Navigation** component to observe.
 
 **Since:** 11
 
@@ -84,7 +84,7 @@ Removes a callback function that was previously registered with `on()`.
 | --- | --- | --- |
 | type | 'scrollEvent' | Yes |
 | options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No |
 
 ## Examples
 
@@ -179,7 +179,7 @@ Removes a callback function that was previously registered with `on()`.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'scrollEvent' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ScrollEventInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScrollEventInfo](arkts-arkui-uiobserver-scrolleventinfo-i.md)&gt; | No |
 
 
 ## off('routerPageUpdate')
@@ -259,8 +259,8 @@ Unregisters the listener for screen pixel density changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'densityUpdate' | Yes |
-| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DensityInfo&gt; | No |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DensityInfo](arkts-arkui-uiobserver-densityinfo-c.md)&gt; | No |
 
 
 ## off('willDraw')
@@ -286,7 +286,7 @@ Unregisters the listener for drawing instruction dispatch in each frame.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'willDraw' | Yes |
-| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 
@@ -313,7 +313,7 @@ Unregisters the listener for layout completion status in each frame.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'didLayout' | Yes |
-| context | [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | Yes |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 
@@ -341,7 +341,7 @@ Unsubscribes from **TabContent** page switching events for the specified **Tabs*
 | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes |
 | options | [ObserverOptions](../../apis-telephony-kit/arkts-apis/arkts-telephony-observer-observeroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No |
 
 
 ## off('tabContentUpdate')
@@ -367,7 +367,7 @@ Unsubscribes from the **TabContent** switching event.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'tabContentUpdate' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TabContentInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No |
 
 
 ## off('navDestinationSwitch')
@@ -398,7 +398,7 @@ Unsubscribes from **Navigation** component page switching events.
 | --- | --- | --- |
 | type | 'navDestinationSwitch' | Yes |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No |
 
 
 ## off('navDestinationSwitch')
@@ -413,7 +413,7 @@ export function off(
 ```
 
 Unsubscribes from **Navigation** component page switching events. Compared with  
-[uiObserver.off](uiObserver.off( type: 'navDestinationSwitch', context: UIAbilityContext | UIContext, callback?: Callback&lt;NavDestinationSwitchInfo&gt; )),this API supports the **observerOptions** parameter, which enables you to configure observation options.
+[uiObserver.off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off),this API supports the **observerOptions** parameter, which enables you to configure observation options.
 
 **Since:** 12
 
@@ -432,4 +432,4 @@ Unsubscribes from **Navigation** component page switching events. Compared with
 | type | 'navDestinationSwitch' | Yes |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
 | observerOptions | [NavDestinationSwitchObserverOptions](arkts-arkui-uiobserver-navdestinationswitchobserveroptions-i.md) | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NavDestinationSwitchInfo&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NavDestinationSwitchInfo](arkts-arkui-uiobserver-navdestinationswitchinfo-i.md)&gt; | No |

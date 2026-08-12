@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## readNdefTag
@@ -20,7 +20,7 @@ Reads the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#read
+**Substitutes:** [read](ohos.connectedTag/connectedTag#read)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -62,7 +62,7 @@ Reads the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#read
+**Substitutes:** [read](ohos.connectedTag/connectedTag#read)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -74,7 +74,7 @@ Reads the NDEF Data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes |  |
 
 ## Examples
 

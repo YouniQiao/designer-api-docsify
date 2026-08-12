@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appMemoryOptimizer } from 'kits/@kit.AbilityKit';
+import { appMemoryOptimizer } from '@kit.AbilityKit';
 ```
 
 ## evictModuleFilePages
@@ -28,13 +28,13 @@ Configuration file path: {Module directory}/src/main/resources/rawfile/memory_op
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| moduleNames | Array&lt;string&gt; | Yes |
+| moduleNames | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 

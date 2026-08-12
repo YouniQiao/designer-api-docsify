@@ -18,7 +18,7 @@ error: WebResourceError
 
 The information of error.
 
-**类型：** [WebResourceError](../arkts-components/arkts-arkweb-webresourceerror-c.md)
+**类型：** [WebResourceError](arkts-arkweb-web-webresourceerror-c.md)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ request: WebResourceRequest
 
 The information of request.
 
-**类型：** [WebResourceRequest](../arkts-components/arkts-arkweb-webresourcerequest-c.md)
+**类型：** [WebResourceRequest](arkts-arkweb-web-webresourcerequest-c.md)
 
 **起始版本：** 23
 

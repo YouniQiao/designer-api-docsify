@@ -1,6 +1,6 @@
 # IndicatorComponent属性/事件
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性。
+除支持[通用属性](common)外，还支持以下属性。
 
 **继承/实现关系：** IndicatorComponentAttribute extends [CommonMethod<IndicatorComponentAttribute>](CommonMethod<IndicatorComponentAttribute>)
 
@@ -118,7 +118,7 @@ Called when the index value changes.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+| event | Callback & lt;number & gt; | 是 |
 
 ## style
 
@@ -144,7 +144,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../arkts-apis/arkts-arkui-swiper-digitindicator-c.md) | 是 |
+| indicatorStyle | [DotIndicator](arkts-arkui-dotindicator-c.md) \| [DigitIndicator](arkts-arkui-digitindicator-c.md) | 是 |
 
 ## vertical
 

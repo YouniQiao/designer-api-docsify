@@ -12,7 +12,7 @@ Obtains the snapshot of a given mission. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#getMissionSnapShot
+**Substitutes:** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -62,7 +62,7 @@ Obtains the snapshot of a given mission. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#getMissionSnapShot
+**Substitutes:** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

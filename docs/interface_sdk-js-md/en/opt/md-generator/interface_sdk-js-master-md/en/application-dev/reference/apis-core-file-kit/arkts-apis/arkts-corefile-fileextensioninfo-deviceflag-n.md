@@ -17,7 +17,7 @@ Defines the values of **deviceFlags** used in **RootInfo**. **deviceFlags** is u
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from 'kits/@kit.CoreFileKit';
+import { fileExtensionInfo } from '@kit.CoreFileKit';
 ```
 
 ## Summary

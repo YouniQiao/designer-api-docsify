@@ -6,7 +6,7 @@
 function removeCheckRule(rule: bigint) : void
 ```
 
-ɾ��һ�����������ɾ���Ĺ��������������Ч��
+删除一条或多条规则，删除的规则后续将不再生效。
 
 **起始版本：** 9
 
@@ -20,13 +20,13 @@ function removeCheckRule(rule: bigint) : void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rule | bigint | 是 | ��Ҫɾ���Ĺ��� |
+| rule | bigint | 是 | 需要删除的规则。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | the parameter check failed, only one bigint type parameter is needed |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | the parameter check failed, only one bigint type parameter is needed |
 
 ## 示例
 

@@ -13,7 +13,7 @@ The **Display** module provides APIs for managing displays, such as obtaining in
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -31,7 +31,7 @@ import { display } from 'kits/@kit.ArkUI';
 | [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md#getalldisplayphysicalresolution) | Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result. |
 | [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays) | Obtains all Display objects. This API uses an asynchronous callback to return the result. |
 | [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) | Obtains all Display objects. This API uses a promise to return the result. |
-| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md#getbrightnessinfo) | Obtains the screen brightness information of a display. If the screen does not support HDR, the  **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
+| [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md#getbrightnessinfo) | Obtains the screen brightness information of a display. If the screen does not support HDR, the  **currentHeadroom** and **maxHeadroom** fields in the returned [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo)object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
 | [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md#getcurrentfoldcreaseregion) | Obtains the crease region of the foldable device in the current display mode. |
 | [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay) | Obtains the default Display object. This API uses an asynchronous callback to return the result. |
 | [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay-1) | Obtains the default Display object. This API uses a promise to return the result. |
@@ -67,7 +67,7 @@ import { display } from 'kits/@kit.ArkUI';
 | [on](arkts-arkui-display-on-f.md#on-5) | Subscribes to folding angle change events of the foldable device. Note that there are two folding angles for dual-fold axis devices. When oriented with the charging port at the bottom, the hinges are identified from right to left as the first and second fold axes, respectively. |
 | [on](arkts-arkui-display-on-f.md#on-6) | Subscribes to events indicating the status of the device's screen content is being captured. |
 | [on](arkts-arkui-display-on-f.md#on-7) | Subscribes to display mode change events of the foldable device.  To subscribe to fold status change events of foldable devices, use  [display.on('foldStatusChange')](display.on(type: 'foldStatusChange', callback: Callback&lt;FoldStatus&gt;)).  The two are different. In terms of timing, the fold status changes first, and the bottom layer matches the display mode status based on the fold status. |
-| [on](arkts-arkui-display-on-f.md#on-8) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the  **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
+| [on](arkts-arkui-display-on-f.md#on-8) | Subscribes to events related to screen brightness information changes. If the screen does not support HDR, the  **currentHeadroom** and **maxHeadroom** fields in the [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md#BrightnessInfo) object use the default values. For virtual screens, the **sdrNits** field in the BrightnessInfo object uses the default value. |
 | [onAdd](arkts-arkui-display-onadd-f.md#onadd) | Register the callback for display add events. |
 | [onBrightnessInfoChange](arkts-arkui-display-onbrightnessinfochange-f.md#onbrightnessinfochange) | Register the callback for brightness info changes. |
 | [onCaptureStatusChange](arkts-arkui-display-oncapturestatuschange-f.md#oncapturestatuschange) | Register the callback for the status of the device's screen content is being captured. |
@@ -104,7 +104,7 @@ import { display } from 'kits/@kit.ArkUI';
 | --- | --- |
 | [BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md) | Describes the screen brightness information. The information comes from the underlying screen data. |
 | [CutoutInfo](arkts-arkui-display-cutoutinfo-i.md) | Describes the unusable area of a display, including punch hole, notch, and curved area of a waterfall display. |
-| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use  [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use  [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) or  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync) to obtain a Display instance. |
 | [DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md) | Describes the display mode of a device and the corresponding physical screen resolution information. |
 | [FoldCreaseRegion](arkts-arkui-display-foldcreaseregion-i.md) | Describes the crease region of a foldable device. |
 | [Position](arkts-arkui-display-position-i.md) | Describes a coordinate position. In the global coordinate system, the origin is the top-left corner of the primary screen. In the relative coordinate system, the origin is the top-left corner of the specified screen. |
@@ -119,7 +119,7 @@ import { display } from 'kits/@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use  [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays) or  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync) to obtain a Display instance. |
+| [Display](arkts-arkui-display-display-i-sys.md) | Implements a Display instance, with attributes and APIs defined.  Before calling any API in Display, you must use  [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) or  [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync) to obtain a Display instance. |
 <!--DelEnd-->
 
 ### Enums

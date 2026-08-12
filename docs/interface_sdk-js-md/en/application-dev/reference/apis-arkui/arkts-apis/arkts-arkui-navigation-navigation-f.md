@@ -26,13 +26,13 @@ Defines Navigation Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | No | Navigation constructor options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md) |  |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) |  |
 
 
 ## Navigation
@@ -63,13 +63,13 @@ Defines Navigation Component
 | --- | --- | --- | --- |
 | pathInfos | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | No | Navigation constructor options |
 | homeDestination | [HomePathInfo](arkts-arkui-navigation-homepathinfo-i.md) | No | The custom home destination info.<br>**Since:** 26.0.0 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md) |  |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) |  |
 
 
 ## Navigation
@@ -99,12 +99,12 @@ Defines Navigation Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;NavigationAttribute&gt; | Yes | navigation attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md)&gt; | Yes | navigation attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NavigationAttribute](../arkts-components/arkts-arkui-navigation-attribute.md) | Returns the instance of the NavigationAttribute. |
+| [NavigationAttribute](arkts-arkui-navigation-navigationattribute-i.md) | Returns the instance of the NavigationAttribute. |
 

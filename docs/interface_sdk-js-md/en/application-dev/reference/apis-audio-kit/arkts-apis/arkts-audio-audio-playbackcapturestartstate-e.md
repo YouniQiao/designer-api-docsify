@@ -1,6 +1,6 @@
 # PlaybackCaptureStartState
 
-Defines the playback capture start state, which is returned asynchronously after calling {@link AudioCapturer.requestPlaybackCaptureStart} function.
+Defines the playback capture start state, which is returned asynchronously after calling [requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestPlaybackCaptureStart) function.
 
 **Since:** 26.0.0
 

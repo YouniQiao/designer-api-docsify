@@ -1,7 +1,7 @@
 # ParagraphStyle
 
-段落样式，用于控制段落的整体布局行为，包括对齐方式、断行策略和最大行数等属性。ParagraphStyle作为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)构造函数的必要参数，与  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)（控制文本级别样式）分工协作，共同决定段落的最终排版效果。
+段落样式，用于控制段落的整体布局行为，包括对齐方式、断行策略和最大行数等属性。ParagraphStyle作为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)构造函数的必要参数，与  
+[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)（控制文本级别样式）分工协作，共同决定段落的最终排版效果。
 
 **起始版本：** 12
 
@@ -19,7 +19,7 @@ align?: TextAlign
 
 文本对齐方式，默认为START。若同时配置tab属性，制表符对齐方式将失效。
 
-**类型：** [TextAlign](arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **起始版本：** 12
 
@@ -81,7 +81,7 @@ compressHeadPunctuation?: boolean
 
 **说明：**
 
-1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md)中的"ss08"特性，否则无法压缩。2. 在行首标点压缩范围内的标点才在本特性作用范围内。行首压缩的标点范围:  
+1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#FontFeature)中的"ss08"特性，否则无法压缩。2. 在行首标点压缩范围内的标点才在本特性作用范围内。行首压缩的标点范围:  
 | 标点 | Unicode码位 | Unicode名称 |  
 |---------|---------|-------------|  
 | 「 | U+300C | LEFT CORNER BRACKET |  
@@ -199,7 +199,7 @@ includeFontPadding?: boolean
 lineSpacing?: double
 ```
 
-行间距，单位为物理像素px，默认值为0。lineSpacing不受[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中lineHeightMaximum和lineHeightMinimum限制。尾行默认保留行间距，可通过设置[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md)的textHeightBehavior为DISABLE_ALL或DISABLE_LAST_ASCENT禁用尾行行间距。
+行间距，单位为物理像素px，默认值为0。lineSpacing不受[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中lineHeightMaximum和lineHeightMinimum限制。尾行默认保留行间距，可通过设置[ParagraphStyle](#ParagraphStyle)的textHeightBehavior为DISABLE_ALL或DISABLE_LAST_ASCENT禁用尾行行间距。
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
 
@@ -239,7 +239,7 @@ maxLines?: int
 orphanCharOptimization?: boolean
 ```
 
-设置文本排版时是否使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md)为非BREAK_ALL并且待排版文本首个[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的locale为“zh-Hans”或“zh-Hant”时生效。true表示使能孤字优化，false表示不使能孤字优化，默认值为false。
+设置文本排版时是否使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#WordBreak)为非BREAK_ALL并且待排版文本首个[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的locale为“zh-Hans”或“zh-Hant”时生效。true表示使能孤字优化，false表示不使能孤字优化，默认值为false。
 
 **类型：** boolean
 
@@ -303,7 +303,7 @@ strutStyle?: StrutStyle
 tab?: TextTab
 ```
 
-表示段落中文本制表符后的文本对齐方式及位置，默认将制表符替换为一个空格。此参数与文本对齐方式（align属性）或省略号样式（[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中的ellipsis属性）共同配置时无效。
+表示段落中文本制表符后的文本对齐方式及位置，默认将制表符替换为一个空格。此参数与文本对齐方式（align属性）或省略号样式（[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的ellipsis属性）共同配置时无效。
 
 **类型：** [TextTab](arkts-arkgraphics2d-text-texttab-i.md)
 
@@ -347,7 +347,7 @@ textDirection?: TextDirection
 
 文本方向，默认为LTR。
 
-**类型：** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
+**类型：** TextDirection
 
 **起始版本：** 12
 
@@ -387,7 +387,7 @@ textStyle?: TextStyle
 
 作用于整个段落的文本样式，默认为初始的文本样式。
 
-**类型：** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
+**类型：** TextStyle
 
 **起始版本：** 12
 
@@ -425,10 +425,10 @@ trailingSpaceOptimized?: boolean
 verticalAlign?: TextVerticalAlign
 ```
 
-文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的heightScale）或行内不同字号（即设置  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
+文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的heightScale）或行内不同字号（即设置  
+[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
 
-**类型：** [TextVerticalAlign](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textverticalalign-e.md)
+**类型：** TextVerticalAlign
 
 **起始版本：** 20
 
@@ -448,7 +448,7 @@ wordBreak?: WordBreak
 
 断词类型，默认为BREAK_WORD。
 
-**类型：** [WordBreak](../../apis-arkui/arkts-apis/arkts-arkui-enums-wordbreak-e.md)
+**类型：** WordBreak
 
 **起始版本：** 12
 

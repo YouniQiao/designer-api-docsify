@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from 'kits/@kit.AbilityKit';
+import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
 ## grantUriPermissionByKeyAsCaller
@@ -38,22 +38,22 @@ Grants the URI access permission of the specified application to the target appl
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [16000092](../errorcode-ability.md#16000092-no-permission-to-authorize-uri) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [16000093](../errorcode-ability.md#16000093-invalid-caller-token-id) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000094](../errorcode-ability.md#16000094-invalid-target-token-id) |
-| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000091](../errorcode-ability.md#16000091-failed-to-obtain-a-file-uri-by-key) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [16000092](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000092-no-permission-to-authorize-uri) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [16000093](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000093-invalid-caller-token-id) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000094](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000094-invalid-target-token-id) |
+| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000091](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000091-failed-to-obtain-a-file-uri-by-key) |
 
 ## Examples
 

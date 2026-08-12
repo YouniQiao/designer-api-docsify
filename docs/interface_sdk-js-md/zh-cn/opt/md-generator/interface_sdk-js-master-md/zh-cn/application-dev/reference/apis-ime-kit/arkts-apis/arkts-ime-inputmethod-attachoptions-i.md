@@ -16,7 +16,7 @@ requestKeyboardReason?: RequestKeyboardReason
 
 请求键盘输入的原因。
 
-**类型：** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
+**类型：** RequestKeyboardReason
 
 **默认值：** RequestKeyboardReason.NONE
 

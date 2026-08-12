@@ -2,10 +2,10 @@
 
 Linear style options.
 
-Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and  
-[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions) and  
+[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
-**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 10
 
@@ -25,7 +25,7 @@ Border radius of the linear progress indicator.
 
 Value range: [0, strokeWidth/2] Default value: **strokeWidth/2**
 
-**Type:** [PX](../arkts-apis/arkts-arkui-px-t.md) \| VP \| LPX \| Resource
+**Type:** PX \| VP \| LPX \| Resource
 
 **Default:** strokeWidth / 2
 
@@ -51,7 +51,7 @@ Stroke width of the progress indicator. Percentage values are not supported.
 
 Default value: **4.0vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 

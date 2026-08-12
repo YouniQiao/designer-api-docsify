@@ -11,7 +11,7 @@ The XmlPullParser interface is used to parse the existing xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from 'kits/@kit.ArkTS';
+import { xml } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -60,7 +60,7 @@ Starts parsing the XML file.
 
 **Deprecated since:** 14
 
-**Substitutes:** ohos.xml.XmlPullParser.parseXml
+**Substitutes:** [parseXml](#parseXml)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -29,5 +29,5 @@ export function createCheckboxNode(context: UIContext, options?: FrameNodeOption
 
 | 类型 | 说明 |
 | --- | --- |
-| [Checkbox](arkts-arkui-typenode-checkbox-t.md) | 返回 Checkbox 类型的 FrameNode |
+| Checkbox | 返回 Checkbox 类型的 FrameNode |
 

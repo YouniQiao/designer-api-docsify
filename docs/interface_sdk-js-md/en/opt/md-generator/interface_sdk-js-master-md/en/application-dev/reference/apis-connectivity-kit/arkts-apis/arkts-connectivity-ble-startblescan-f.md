@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## startBLEScan
@@ -18,7 +18,7 @@ Starts scanning for specified BLE devices with filters.On API 10 and above, the 
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble#startBLEScan
+**Substitutes:** [startBLEScan](ohos.bluetooth.ble/ble#startBLEScan)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -32,16 +32,16 @@ Starts scanning for specified BLE devices with filters.On API 10 and above, the 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| filters | Array&lt;ScanFilter&gt; | Yes |
+| filters | Array & lt;ScanFilter & gt; | Yes |
 | options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |

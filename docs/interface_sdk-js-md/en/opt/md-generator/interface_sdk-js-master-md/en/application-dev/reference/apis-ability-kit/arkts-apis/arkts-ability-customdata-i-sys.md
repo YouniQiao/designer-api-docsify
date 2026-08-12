@@ -1,7 +1,7 @@
 # CustomData (System API)
 
 When starting a modal page, you can transfer custom data to the autofill service through  
-[reloadInModal](arkts-ability-autofillextensioncontext-c-sys.md#reloadinmodal) and obtain the data through  
+[reloadInModal](arkts-ability-autofillextensioncontext-c-sys.md#reloadInModal) and obtain the data through  
 [onFillRequest](./../@ohos.app.ability.AutoFillExtensionAbility:AutoFillExtensionAbility.onFillRequest) of the service.
 
 **Since:** 13

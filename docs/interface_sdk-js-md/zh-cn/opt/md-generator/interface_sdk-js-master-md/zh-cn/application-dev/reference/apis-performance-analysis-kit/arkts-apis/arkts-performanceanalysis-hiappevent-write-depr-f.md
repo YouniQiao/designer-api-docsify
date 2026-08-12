@@ -12,7 +12,7 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#write
+**替代接口：** [write](ohos.hiviewdfx.hiAppEvent/hiAppEvent#write)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object): Promise<void>-End-->
 
@@ -30,7 +30,7 @@ function write(eventName: string, eventType: EventType, keyValues: object): Prom
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -64,7 +64,7 @@ function write(eventName: string, eventType: EventType, keyValues: object, callb
 
 **废弃版本：** 9
 
-**替代接口：** ohos.hiviewdfx.hiAppEvent/hiAppEvent#write
+**替代接口：** [write](ohos.hiviewdfx.hiAppEvent/hiAppEvent#write)
 
 <!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(eventName: string, eventType: EventType, keyValues: object, callback: AsyncCallback<void>): void-End-->
 

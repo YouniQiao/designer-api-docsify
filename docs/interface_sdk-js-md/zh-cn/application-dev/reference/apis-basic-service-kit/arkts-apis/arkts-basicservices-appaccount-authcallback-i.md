@@ -180,7 +180,7 @@ onResult: (code: int, result?: AuthResult) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 |  |
-| result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 否 |  |
+| result | AuthResult | 否 |  |
 
 ## 示例
 

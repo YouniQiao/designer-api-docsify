@@ -13,7 +13,7 @@ The ContextConstant module defines context-related enums, including the file enc
 ## Modules to Import
 
 ```TypeScript
-import { contextConstant } from 'kits/@kit.AbilityKit';
+import { contextConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

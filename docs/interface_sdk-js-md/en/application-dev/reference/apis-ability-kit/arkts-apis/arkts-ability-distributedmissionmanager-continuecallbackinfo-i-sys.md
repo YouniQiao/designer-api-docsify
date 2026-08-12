@@ -15,7 +15,7 @@ Defines the information about the callback that is triggered for mission continu
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from 'kits/@kit.AbilityKit';
+import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
 ## info
@@ -26,7 +26,7 @@ info: ContinuableInfo
 
 Continuation information of the mission.
 
-**Type:** [ContinuableInfo](arkts-ability-distributedmissionmanager-continuableinfo-t-sys.md)
+**Type:** ContinuableInfo
 
 **Since:** 11
 
@@ -48,7 +48,7 @@ state: ContinueState
 
 Continuation state of the mission.
 
-**Type:** [ContinueState](arkts-ability-abilityconstant-continuestate-e.md)
+**Type:** ContinueState
 
 **Since:** 11
 

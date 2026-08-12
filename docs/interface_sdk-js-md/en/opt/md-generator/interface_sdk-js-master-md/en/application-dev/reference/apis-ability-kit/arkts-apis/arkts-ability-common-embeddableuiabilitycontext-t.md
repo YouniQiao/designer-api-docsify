@@ -5,7 +5,7 @@ export type EmbeddableUIAbilityContext = _EmbeddableUIAbilityContext.default
 ```
 
 Defines the context environment for the  
-[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). It inherits from Context.
+[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). It inherits from Context.
 
 **Since:** 12
 

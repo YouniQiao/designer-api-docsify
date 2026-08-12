@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getRealActiveTime
@@ -18,7 +18,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealActiveTime(isNano: boolean, callback: AsyncCallback<number>): void-End-->
 
@@ -69,7 +69,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemTime-function getRealActiveTime(callback: AsyncCallback<number>): void--><!--Device-systemTime-function getRealActiveTime(callback: AsyncCallback<number>): void-End-->
 
@@ -119,7 +119,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getuptime)
+**Substitutes:** [getUptime](arkts-basicservices-systemdatetime-getuptime-f.md#getUptime)
 
 <!--Device-systemTime-function getRealActiveTime(isNano?: boolean): Promise<number>--><!--Device-systemTime-function getRealActiveTime(isNano?: boolean): Promise<number>-End-->
 
@@ -135,7 +135,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

@@ -1,8 +1,8 @@
 # TextPickerDialogOptionsExt
 
-文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)。
+文本选择器弹窗的参数继承自[TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md#TextPickerOptions)。
 
-**继承/实现关系：** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)
+**继承/实现关系：** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md#TextPickerOptions)
 
 **起始版本：** 23
 

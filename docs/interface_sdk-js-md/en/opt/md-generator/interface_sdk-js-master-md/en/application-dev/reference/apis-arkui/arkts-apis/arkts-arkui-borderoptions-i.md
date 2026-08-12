@@ -16,7 +16,7 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the border color.
 
-**Type:** EdgeColors \| ResourceColor \| LocalizedEdgeColors
+**Type:** EdgeColors \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the gap of dash when BorderStyle is dashed.
 
-**Type:** EdgeWidths \| LengthMetrics \| LocalizedEdgeWidths
+**Type:** EdgeWidths \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -56,7 +56,7 @@ dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the length of dash when BorderStyle is dashed.
 
-**Type:** EdgeWidths \| LengthMetrics \| LocalizedEdgeWidths
+**Type:** EdgeWidths \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ radius?: BorderRadiuses | Length | LocalizedBorderRadiuses
 
 Defines the border radius.
 
-**Type:** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| Length \| LocalizedBorderRadiuses
+**Type:** [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 12
 
@@ -96,7 +96,7 @@ style?: EdgeStyles | BorderStyle
 
 Defines the border style.
 
-**Type:** EdgeStyles \| BorderStyle
+**Type:** EdgeStyles \| [BorderStyle](arkts-arkui-borderstyle-e.md)
 
 **Since:** 11
 
@@ -116,7 +116,7 @@ width?: EdgeWidths | Length | LocalizedEdgeWidths
 
 Defines the border width.
 
-**Type:** EdgeWidths \| Length \| LocalizedEdgeWidths
+**Type:** EdgeWidths \| [Length](arkts-arkui-length-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
 

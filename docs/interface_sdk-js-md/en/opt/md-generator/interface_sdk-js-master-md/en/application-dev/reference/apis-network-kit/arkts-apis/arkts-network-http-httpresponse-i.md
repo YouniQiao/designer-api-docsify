@@ -11,7 +11,7 @@ Defines the response to an HTTP request.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## connectionExtraInfo
@@ -106,7 +106,7 @@ Server status code.
 result: string | Object | ArrayBuffer
 ```
 
-result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.If {@link HttpRequestOptions#expectDataType} is set, the system preferentially returns this parameter.
+result can be a string (API 6) or an ArrayBuffer(API 8). Object is deprecated from API 8.If [expectDataType](arkts-network-http-httprequestoptions-i.md#expectDataType) is set, the system preferentially returns this parameter.
 
 **Type:** string \| Object \| ArrayBuffer
 

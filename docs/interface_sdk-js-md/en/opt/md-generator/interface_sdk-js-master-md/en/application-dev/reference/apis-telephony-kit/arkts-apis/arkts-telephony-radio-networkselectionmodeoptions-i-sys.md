@@ -13,7 +13,7 @@ Obtains the network selection mode option.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from 'kits/@kit.TelephonyKit';
+import { radio } from '@kit.TelephonyKit';
 ```
 
 ## networkInformation

@@ -13,7 +13,7 @@ The TextDecoder represents a text decoder that accepts a string as input,decodes
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

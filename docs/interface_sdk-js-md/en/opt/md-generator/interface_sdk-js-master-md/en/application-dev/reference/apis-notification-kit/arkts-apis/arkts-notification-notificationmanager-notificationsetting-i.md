@@ -11,7 +11,7 @@ Describes the setting status of the notification mode switch.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## badgeNumberEnabled

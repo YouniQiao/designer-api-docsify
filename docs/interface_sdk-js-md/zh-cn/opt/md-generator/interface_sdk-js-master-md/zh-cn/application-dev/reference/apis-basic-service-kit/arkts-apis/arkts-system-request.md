@@ -3,7 +3,7 @@
 system.request部件主要给应用提供上传下载文件的基础能力。
  > **说明：**
  >
- > - 从API Version 9开始所有接口不再维护，推荐使用新接口[@ohos.request](arkts-basicservices-request-n.md)。
+ > - 从API Version 9开始所有接口不再维护，推荐使用新接口[@ohos.request](arkts-basicservices-request-n.md#request)。
 
 
 ## 汇总

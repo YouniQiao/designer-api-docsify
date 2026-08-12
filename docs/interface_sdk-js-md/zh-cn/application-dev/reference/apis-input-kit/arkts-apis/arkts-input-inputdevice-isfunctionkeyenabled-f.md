@@ -20,7 +20,7 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| functionKey | [FunctionKey](arkts-input-inputdevice-functionkey-e.md) | 是 | 需要设置的功能键类型。 |
+| functionKey | FunctionKey | 是 | 需要设置的功能键类型。 |
 
 **返回值：**
 
@@ -32,8 +32,8 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [3900002](../errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [3900002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-键盘设备没有连接) | There is currently no keyboard device connected. |
 
 ## 示例
 

@@ -62,7 +62,7 @@ type: DataOperationType.EXCHANGE
 
 数据交换类型。
 
-**类型：** DataOperationType.EXCHANGE
+**类型：** [DataOperationType.EXCHANGE](arkts-arkui-dataoperationtype-e.md)
 
 **起始版本：** 12
 

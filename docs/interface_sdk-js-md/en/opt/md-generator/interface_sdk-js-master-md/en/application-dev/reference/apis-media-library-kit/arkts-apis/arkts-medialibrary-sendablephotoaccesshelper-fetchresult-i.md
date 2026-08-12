@@ -2,7 +2,7 @@
 
 Provides APIs to manage the file retrieval result.
 
-**Inheritance/Implementation:** FetchResult extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** FetchResult extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ Provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## close
@@ -79,7 +79,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;T&gt;&gt; |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 **Error codes:**
 
@@ -173,7 +173,7 @@ Obtains the first asset in the result set. This API uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
@@ -220,7 +220,7 @@ Obtains the last asset in the result set. This API uses a promise to return the 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
@@ -257,7 +257,7 @@ getNextObject(): Promise<T>
 
 Obtains the next asset in the result set. This API uses a promise to return the result.
 
-Before using this API, you must use [isAfterLast()](arkts-medialibrary-sendablephotoaccesshelper-fetchresult-i.md#isafterlast) to check whether the current position is the end of the result set.
+Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 12
 
@@ -269,7 +269,7 @@ Before using this API, you must use [isAfterLast()](arkts-medialibrary-sendablep
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
@@ -323,13 +323,13 @@ Obtains the asset with the given index in the result set. This API uses a promis
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 | 14000011 |
 
 ## Examples

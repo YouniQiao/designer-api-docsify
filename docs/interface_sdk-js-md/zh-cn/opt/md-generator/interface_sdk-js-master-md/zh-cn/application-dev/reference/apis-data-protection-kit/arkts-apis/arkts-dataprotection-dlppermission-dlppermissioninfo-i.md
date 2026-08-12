@@ -30,7 +30,7 @@ dlpFileAccess: DLPFileAccess
 flags: number
 ```
 
-表示DLP文件的详细操作权限，取值范围由不同[ActionFlagType](arkts-dataprotection-dlppermission-actionflagtype-e.md)的组合决定。
+表示DLP文件的详细操作权限，取值范围由不同[ActionFlagType](arkts-dataprotection-dlppermission-actionflagtype-e.md#ActionFlagType)的组合决定。
 
 **类型：** number
 

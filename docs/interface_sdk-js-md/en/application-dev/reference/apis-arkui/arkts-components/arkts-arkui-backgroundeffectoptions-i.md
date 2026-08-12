@@ -18,7 +18,7 @@ adaptiveColor?: AdaptiveColor
 
 Adaptive color mode used for the background blur effect. Default value: **DEFAULT** . When set to **AVERAGE**, the adaptive color mode takes effect only when the color has transparency.
 
-**Type:** [AdaptiveColor](../arkts-apis/arkts-arkui-common-adaptivecolor-e.md)
+**Type:** [AdaptiveColor](arkts-arkui-adaptivecolor-e.md)
 
 **Default:** AdaptiveColor.DEFAULT
 
@@ -90,7 +90,7 @@ color?: ResourceColor
 
 Color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 
@@ -115,7 +115,7 @@ inactiveColor?: ResourceColor
 Background color when the blur effect does not take effect. This parameter must be used together with the   
 **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** Color.Transparent
 

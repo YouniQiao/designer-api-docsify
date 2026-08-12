@@ -26,5 +26,5 @@ The query media tab content event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;MediaTabContent&gt; | (MediaTabContent) returned through promise |
+| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; | (MediaTabContent) returned through promise |
 

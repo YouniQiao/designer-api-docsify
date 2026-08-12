@@ -18,7 +18,7 @@ moreButtonOptions?: MoreButtonOptions
 
 Options for the toolbar's more button menu.
 
-**Type:** [MoreButtonOptions](../arkts-apis/arkts-arkui-navigation-morebuttonoptions-i.md)
+**Type:** [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md)
 
 **Since:** 19
 

@@ -1,8 +1,8 @@
 # PreviewOutput
 
-预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
-**继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **起始版本：** 10
 
@@ -18,7 +18,7 @@
 addDeferredSurface(surfaceId: string): void
 ```
 
-配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
+配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitConfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
 
 **起始版本：** 24
 
@@ -34,14 +34,14 @@ addDeferredSurface(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 从[XComponent](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-xcomponent-f.md/arkts-arkui-xcomponent-xcomponent-f.md#xcomponent)组件获取的surfaceId。 |
+| surfaceId | string | 是 | 从[XComponent](XComponent)组件获取的surfaceId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
 
 ## enableBandwidthCompression
 
@@ -51,11 +51,11 @@ enableBandwidthCompression(enabled: boolean): void
 
 使能预览带宽压缩。
 
-使能之前，可先使用方法[isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported)对设备是否支持预览带宽压缩进行检查。
+使能之前，可先使用方法[isBandwidthCompressionSupported](#isBandwidthCompressionSupported)对设备是否支持预览带宽压缩进行检查。
 
 > **说明：**
 > 
-> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流
+> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之前调用，否则会影响预览流
 > 出流格式。
 
 **起始版本：** 23
@@ -78,9 +78,9 @@ enableBandwidthCompression(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getActiveFrameRate
 
@@ -90,7 +90,7 @@ getActiveFrameRate(): FrameRateRange
 
 获取已设置的帧率范围。
 
-使用[setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate)接口对预览流设置过帧率后可查询。
+使用[setFrameRate](#setFrameRate)接口对预览流设置过帧率后可查询。
 
 **起始版本：** 12
 
@@ -136,7 +136,7 @@ getActiveProfile(): Profile
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getPreviewRotation
 
@@ -173,7 +173,7 @@ getPreviewRotation(displayRotation?: int): ImageRotation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayRotation | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 显示设备的屏幕旋转角度，通过 [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md/arkts-arkui-display-getdefaultdisplaysync-f.md#getdefaultdisplaysync)获得。 &lt;br&gt; 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。 &lt;br&gt; 单位为度数（degree），取值范围为[0, 360]。<br>**起始版本：** 23 |
+| displayRotation | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 显示设备的屏幕旋转角度，通过 [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)获得。 &lt;br&gt; 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。 &lt;br&gt; 单位为度数（degree），取值范围为[0, 360]。<br>**起始版本：** 23 |
 
 **返回值：**
 
@@ -185,8 +185,8 @@ getPreviewRotation(displayRotation?: int): ImageRotation
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 12 - 22 |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getSupportedFrameRates
 
@@ -210,7 +210,7 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;FrameRateRange&gt; | 支持的帧率范围列表。若接口调用失败，返回undefined。 |
+| Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; | 支持的帧率范围列表。若接口调用失败，返回undefined。 |
 
 ## isBandwidthCompressionSupported
 
@@ -492,7 +492,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 监听事件，固定为'error'，previewOutput创建成功可监听。预览接口使用错误时触发该事件，比如调用 [Session.start](arkts-camera-camera-session-i.md#start)，[CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release)等接口发 生错误时返回对应错误信息。 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，用于获取错误信息。返回错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 ## onError
 
@@ -574,11 +574,11 @@ setFrameRate(minFps: int, maxFps: int): void
 
 设置预览流帧率范围，设置的范围必须在支持的帧率范围内。
 
-进行设置前，可通过[getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates)接口查询支持的帧率范围。
+进行设置前，可通过[getSupportedFrameRates](#getSupportedFrameRates)接口查询支持的帧率范围。
 
 > **说明：**
 > 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
+> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession)或[VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)模式下支持。
 
 **起始版本：** 12
 
@@ -601,8 +601,8 @@ setFrameRate(minFps: int, maxFps: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400110](../errorcode-camera.md#7400110-与当前配置存在冲突) | Unresolved conflicts with current configurations. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-与当前配置存在冲突) | Unresolved conflicts with current configurations. |
 
 ## setLogViewAssistEnable
 
@@ -610,11 +610,11 @@ setFrameRate(minFps: int, maxFps: int): void
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](arkts-camera-camera-previewoutput-i.md#islogviewassistsupported)查询设备是否支持预览辅助监看。
+LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#isLogViewAssistSupported)查询设备是否支持预览辅助监看。
 
 > **说明：**
 > 
-> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之后调用。
+> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之后调用。
 > 
 > - 预览辅助监看效果仅支持1080P及以下分辨率。
 
@@ -640,9 +640,9 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setPreviewRotation
 
@@ -667,14 +667,14 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | previewRotation | [ImageRotation](arkts-camera-camera-imagerotation-e.md) | 是 | 预览旋转角度 |
-| isDisplayLocked | boolean | 否 | Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。true表示锁定方向，false表示不锁定方向。详情请参考 [SurfaceRotationOptions](../../apis-arkui/arkts-apis/arkts-arkui-xcomponent-surfacerotationoptions-i.md/arkts-arkui-xcomponent-surfacerotationoptions-i.md) |
+| isDisplayLocked | boolean | 否 | Surface在屏幕旋转时是否锁定方向，未设置时默认取值为false，即不锁定方向。true表示锁定方向，false表示不锁定方向。详情请参考 [SurfaceRotationOptions](SurfaceRotationOptions) |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## start
 
@@ -694,7 +694,7 @@ start(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.start](arkts-camera-camera-session-i.md#start)(callback:
+**替代接口：** [start](camera.Session.start(callback:)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -704,13 +704,13 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始输出预览流成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始输出预览流成功，err为undefined，否则为错误对象。错误码类型 [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## start
 
@@ -730,7 +730,7 @@ start(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.start](arkts-camera-camera-session-i.md#start)()
+**替代接口：** [start](arkts-camera-camera-session-i.md#start)()
 
 <!--Device-PreviewOutput-start(): Promise<void>--><!--Device-PreviewOutput-start(): Promise<void>-End-->
 
@@ -746,7 +746,7 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## stop
 
@@ -766,7 +766,7 @@ stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)(callback:
+**替代接口：** [stop](camera.Session.stop(callback:)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -796,7 +796,7 @@ stop(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)()
+**替代接口：** [stop](arkts-camera-camera-session-i.md#stop)()
 
 <!--Device-PreviewOutput-stop(): Promise<void>--><!--Device-PreviewOutput-stop(): Promise<void>-End-->
 

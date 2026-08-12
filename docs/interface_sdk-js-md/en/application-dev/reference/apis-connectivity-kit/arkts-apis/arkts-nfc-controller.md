@@ -13,7 +13,7 @@ Provides methods to operate or manage NFC.
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## Summary
@@ -25,7 +25,7 @@ import { nfcController } from 'kits/@kit.ConnectivityKit';
 | [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md#closenfc) | Disables NFC. |
 | [disableNfc](arkts-connectivity-nfccontroller-disablenfc-f.md#disablenfc) | Disables NFC.This API can be called only by system applications |
 | [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md#enablenfc) | Enables NFC.This API can be called only by system applications |
-| [getNfcState](arkts-connectivity-nfccontroller-getnfcstate-f.md#getnfcstate) | Obtains the NFC status.&lt;p&gt;The NFC status can be any of the following: &lt;ul&gt;&lt;li&gt;{@link #STATE_OFF}: Indicates that NFC is disabled. &lt;li&gt;{@link #STATE_TURNING_ON}: Indicates that NFC is being enabled.&lt;li&gt;{@link #STATE_ON}: Indicates that NFC is enabled. &lt;li&gt;{@link #STATE_TURNING_OFF}: Indicates that NFC is being disabled.&lt;/ul&gt; |
+| [getNfcState](arkts-connectivity-nfccontroller-getnfcstate-f.md#getnfcstate) | Obtains the NFC status.&lt;p&gt;The NFC status can be any of the following: &lt;ul&gt;&lt;li&gt;[STATE_OFF](#STATE_OFF): Indicates that NFC is disabled. &lt;li&gt;[STATE_TURNING_ON](#STATE_TURNING_ON): Indicates that NFC is being enabled.&lt;li&gt;[STATE_ON](#STATE_ON): Indicates that NFC is enabled. &lt;li&gt;[STATE_TURNING_OFF](#STATE_TURNING_OFF): Indicates that NFC is being disabled.&lt;/ul&gt; |
 | [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md#isnfcavailable) | Checks whether a device supports NFC. |
 | [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md#isnfcopen) | Checks whether NFC is enabled. |
 | [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md#isnfcsupported) | Checks whether a device supports NFC. |

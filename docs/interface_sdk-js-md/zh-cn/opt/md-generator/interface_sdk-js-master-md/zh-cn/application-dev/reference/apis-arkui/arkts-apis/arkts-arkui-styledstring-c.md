@@ -17,7 +17,7 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 属性字符串的构造函数。
 
 不支持在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)之前创建。
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)之前创建。
 
 **起始版本：** 12
 
@@ -33,8 +33,8 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | string \| ImageAttachment \| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 是 |
-| styles | Array&lt;StyleOptions&gt; | 否 |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | 是 |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | 否 |
 
 ## equals
 
@@ -103,8 +103,8 @@ static fromHtml(html: string): Promise<StyledString>
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [170001](../errorcode-styled-string.md#170001-转换错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [170001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170001-转换错误) |
 
 ## getString
 
@@ -162,13 +162,13 @@ getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<Spa
 
 | 类型 |
 | --- |
-| Array&lt;SpanStyle&gt; |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## subStyledString
 
@@ -205,7 +205,7 @@ subStyledString(start: number, length?: number): StyledString
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## toHtml
 
@@ -214,7 +214,7 @@ static toHtml(styledString: StyledString): string
 ```
 
 将属性字符串转换成HTML格式字符串，属性字符串样式将映射为对应的HTML标签（如TextStyle映射为含style属性的span标签、ImageAttachment映射为img标签）。支持转换的属性字符串  
-[StyledStringKey](arkts-arkui-styledstringkey-e.md)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。
+[StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey)包括：StyledStringKey.FONT、StyledStringKey.DECORATION、StyledStringKey.LETTER_SPACING、StyledStringKey.TEXT_SHADOW、StyledStringKey.LINE_HEIGHT、StyledStringKey.IMAGE。
 
 使用方法参考  
 [示例12（fromHtml和toHtml互相转换）](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#示例12fromhtml和tohtml互相转换)。
@@ -245,7 +245,7 @@ static toHtml(styledString: StyledString): string
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## length
 

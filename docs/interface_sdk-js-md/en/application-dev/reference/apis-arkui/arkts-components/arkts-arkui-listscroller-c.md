@@ -4,10 +4,10 @@ Implements the scroll controller of the **List** component. A **List** component
 
 > **NOTE：**
 > 
-> **ListScroller** inherits from [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md) and has all methods of
-> [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md).
+> **ListScroller** inherits from [Scroller](Scroller) and has all methods of
+> [Scroller](Scroller).
 
-**Inheritance/Implementation:** ListScroller extends [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)
+**Inheritance/Implementation:** ListScroller extends [Scroller](Scroller)
 
 **Since:** 11
 
@@ -23,7 +23,7 @@ Implements the scroll controller of the **List** component. A **List** component
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the [list items](list_item) in the [EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md) state and sets callback events.
+Collapses the [list items](list_item) in the [EXPANDED](SwipeActionState) state and sets callback events.
 
 **Since:** 11
 
@@ -41,14 +41,14 @@ Collapses the [list items](list_item) in the [EXPANDED](../arkts-apis/arkts-arku
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CloseSwipeActionOptions](../arkts-apis/arkts-arkui-list-closeswipeactionoptions-i.md) | No | Callback events for collapsing [list items](list_item) in the [EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md) state. |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | No | Callback events for collapsing [list items](list_item) in the [EXPANDED](SwipeActionState) state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRectInGroup
 
@@ -91,14 +91,14 @@ Obtains the size of a [list item](list_item) in a [list item group](list_item_gr
 
 | Type | Description |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | Size of the list item in the list item group and its position relative to the list. &lt;br&gt;Unit: vp |
+| RectResult | Size of the list item in the list item group and its position relative to the list. &lt;br&gt;Unit: vp |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
 
@@ -137,8 +137,8 @@ Obtains the index information of the child component at the specified coordinate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
 
@@ -167,12 +167,12 @@ Scrolls to the specified list item in the specified list item group.
 | index | number | Yes | Index of the target list item group in the current container.&lt;br&gt;**NOTE：**&lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
 | indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.&lt;br&gt; **NOTE：**&lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
 | smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and **false** (disabled).&lt;br&gt;Default value: **false**&lt;br&gt;**NOTE：**&lt;br&gt;When **smooth** is set to **true**, all passed items are loaded and counted in layout calculation. This may result in performance issues if a large number of items are involved. |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container.&lt;br&gt;Default value: **ScrollAlign.START |
+| align | ScrollAlign | No | How the list item to scroll to is aligned with the container.&lt;br&gt;Default value: **ScrollAlign.START |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 

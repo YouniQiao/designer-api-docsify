@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## fdopenStream
@@ -13,7 +13,7 @@ declare function fdopenStream(fd: number, mode: string): Promise<Stream>
 ```
 
 Opens a stream based on an FD. This API uses a promise to return the result. To close the stream, use **close()** of  
-[Stream](arkts-corefile-file-fs-stream-i.md).
+[Stream](arkts-corefile-file-fs-stream-i.md#Stream).
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Opens a stream based on an FD. This API uses a promise to return the result. To 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Stream&gt; |
+| Promise&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<
 ```
 
 Opens a stream based on an FD. This API uses an asynchronous callback to return the result. To close the stream, use  
-**close()** of [Stream](arkts-corefile-file-fs-stream-i.md).
+**close()** of [Stream](arkts-corefile-file-fs-stream-i.md#Stream).
 
 **Since:** 9
 
@@ -92,7 +92,7 @@ Opens a stream based on an FD. This API uses an asynchronous callback to return 
 | --- | --- | --- |
 | fd | number | Yes |
 | mode | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | Yes |
 
 **Error codes:**
 

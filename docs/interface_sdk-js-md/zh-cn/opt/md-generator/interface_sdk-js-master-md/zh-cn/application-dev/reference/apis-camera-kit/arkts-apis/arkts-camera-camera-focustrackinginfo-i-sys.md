@@ -37,7 +37,7 @@ trackingRegion: Rect
 
 Tracking region.
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 15
 

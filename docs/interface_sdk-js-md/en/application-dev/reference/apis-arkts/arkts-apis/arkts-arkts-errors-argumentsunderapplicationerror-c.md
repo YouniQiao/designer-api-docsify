@@ -2,7 +2,7 @@
 
 Represents the error that is thrown when there is a wrong unsafe call to Function
 
-**Inheritance/Implementation:** ArgumentsUnderapplicationError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ArgumentsUnderapplicationError extends [Error](Error)
 
 **Since:** 26.0.0
 

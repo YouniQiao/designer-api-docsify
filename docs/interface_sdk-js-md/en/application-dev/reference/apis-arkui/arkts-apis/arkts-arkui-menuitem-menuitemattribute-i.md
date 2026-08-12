@@ -2,7 +2,7 @@
 
 Defines the MenuItem component attributes.
 
-**Inheritance/Implementation:** MenuItemAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** MenuItemAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -35,7 +35,7 @@ Set the attribute modifier of menu item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes | The attribute modifier of menu item. |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[MenuItemAttribute](arkts-arkui-menuitem-menuitemattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes | The attribute modifier of menu item. |
 
 **Return value:**
 
@@ -215,7 +215,7 @@ Whether the relevant check icon is displayed when a menu item is selected.Use ty
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| ResourceStr \| SymbolGlyphModifier \| undefined | Yes | Whether to display icon when selected. &lt;br&gt;true: displays the default check mark when selected. &lt;br&gt;false: does not displays icon when selected. &lt;br&gt;ResourceStr or SymbolGlyphModifier: displays the specified icon when selected. |
+| value | boolean \| [ResourceStr](arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md) \| undefined | Yes | Whether to display icon when selected. &lt;br&gt;true: displays the default check mark when selected. &lt;br&gt;false: does not displays icon when selected. &lt;br&gt;ResourceStr or SymbolGlyphModifier: displays the specified icon when selected. |
 
 **Return value:**
 
@@ -245,7 +245,7 @@ Setting whether menuItem is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined \| Bindable&lt;boolean&gt; | Yes |  |
+| value | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | Yes |  |
 
 **Return value:**
 
@@ -275,7 +275,7 @@ Set menuitem options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| CustomBuilder | No | menuitem constructor options |
+| value | [MenuItemOptions](arkts-arkui-menuitem-menuitemoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | menuitem constructor options |
 
 **Return value:**
 
@@ -305,7 +305,7 @@ Create the submenu for custom menu item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | Indicates the builder function for submenu. |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | Yes | Indicates the builder function for submenu. |
 
 **Return value:**
 

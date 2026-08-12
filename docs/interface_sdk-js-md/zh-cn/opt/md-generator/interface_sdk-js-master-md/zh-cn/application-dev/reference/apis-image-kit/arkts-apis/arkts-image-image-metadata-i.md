@@ -1,6 +1,6 @@
 # Metadata
 
-Metadata类，用于存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md)。
+Metadata类，用于存储图像的元数据。目前支持的元数据类型可参考[MetadataType](arkts-image-image-metadatatype-e.md#MetadataType)。
 
 > **说明：**
 > 
@@ -30,7 +30,7 @@ clone(): Promise<Metadata>
 
 | 类型 |
 | --- |
-| Promise&lt;Metadata&gt; |
+| Promise & lt;Metadata & gt; |
 
 ## getAllProperties
 
@@ -40,8 +40,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 获取图片中所有元数据的属性和值。使用Promise异步回调。
 
-如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、  
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey)、  
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 13
 
@@ -53,7 +53,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 ## getBlob
 
@@ -75,7 +75,7 @@ getBlob(): Promise<ArrayBuffer>
 
 | 类型 |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## getProperties
 
@@ -85,8 +85,8 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像中属性的值。使用Promise异步回调。
 
-如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、  
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey)、  
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 13
 
@@ -98,20 +98,20 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| key | Array&lt;string&gt; | 是 |
+| key | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## setBlob
 
@@ -139,13 +139,13 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setProperties
 
@@ -155,8 +155,8 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md)、  
-[GifPropertyKey](arkts-image-image-gifpropertykey-e.md)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md)。
+如要查询属性值信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)、[FragmentMapPropertyKey](arkts-image-image-fragmentmappropertykey-e.md#FragmentMapPropertyKey)、  
+[GifPropertyKey](arkts-image-image-gifpropertykey-e.md#GifPropertyKey)和[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 13
 
@@ -168,17 +168,17 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |

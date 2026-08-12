@@ -26,5 +26,5 @@ The query compilation by keyword event.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Compilation[]&gt; | (Compilation[]) returned through promise |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; | (Compilation[]) returned through promise |
 

@@ -14,7 +14,7 @@ Configures the application event logging function, such as setting the event log
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent#configure
+**Substitutes:** [configure](ohos.hiviewdfx.hiAppEvent/hiAppEvent#configure)
 
 <!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
 
@@ -24,7 +24,7 @@ Configures the application event logging function, such as setting the event log
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ConfigOption](arkts-performanceanalysis-hiappevent-configoption-i.md) | Yes | Configuration items for application event logging. |
+| config | ConfigOption | Yes | Configuration items for application event logging. |
 
 **Return value:**
 

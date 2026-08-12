@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## createDragAction
@@ -17,9 +17,9 @@ Initiates a drag action, with the object to be dragged and the drag information 
 > **NOTE：**
 > 
 > - Since API version 11, you can use the
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the
-> [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md) object associated with the current UI context.
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
+> [UIContext](@ohos.arkui.UIContext) to obtain the
+> [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object associated with the current UI context.
 > 
 > - For optimal drag and drop performance, limit the number of drag previews.
 
@@ -29,7 +29,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.DragController#createDragAction
+**Substitutes:** [createDragAction](ohos.arkui.UIContext.DragController#createDragAction)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,7 +43,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | Yes | Object to be dragged. |
+| customArray | Array&lt;CustomBuilder \| DragItemInfo&gt; | Yes | Object to be dragged. |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
 
 **Return value:**
@@ -56,8 +56,8 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

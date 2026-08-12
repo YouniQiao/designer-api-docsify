@@ -6,7 +6,7 @@ Configuring parameters in reverse geocode requests
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest
+**Substitutes:** [ReverseGeoCodeRequest](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -17,7 +17,7 @@ Configuring parameters in reverse geocode requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## latitude
@@ -32,7 +32,7 @@ latitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#latitude
+**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#latitude)
 
 <!--Device-ReverseGeoCodeRequest-latitude: number--><!--Device-ReverseGeoCodeRequest-latitude: number-End-->
 
@@ -50,7 +50,7 @@ locale?: string
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#locale
+**Substitutes:** [locale](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#locale)
 
 <!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
@@ -68,7 +68,7 @@ longitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#longitude
+**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#longitude)
 
 <!--Device-ReverseGeoCodeRequest-longitude: number--><!--Device-ReverseGeoCodeRequest-longitude: number-End-->
 
@@ -86,7 +86,7 @@ maxItems?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#maxItems
+**Substitutes:** [maxItems](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#maxItems)
 
 <!--Device-ReverseGeoCodeRequest-maxItems?: number--><!--Device-ReverseGeoCodeRequest-maxItems?: number-End-->
 

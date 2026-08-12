@@ -1,8 +1,8 @@
 # Hyperlink
 
-[Text](arkts-arkdata-unifieddatachannel-text-c.md)的子类，用于描述超链接类型数据。
+[Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)的子类，用于描述超链接类型数据。
 
-**继承/实现关系：** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md)
+**继承/实现关系：** Hyperlink extends [Text](arkts-arkdata-unifieddatachannel-text-c.md#Text)
 
 **起始版本：** 10
 

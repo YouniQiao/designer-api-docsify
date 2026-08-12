@@ -20,7 +20,7 @@ backgroundBlurStyle?: BlurStyle
 
 默认值：BlurStyle.NONE，表示无模糊效果。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ backgroundColor?: ResourceColor
 
 默认值：'#00000000'，表示背景透明。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 26.0.0
 
@@ -72,7 +72,7 @@ end: LengthMetrics.resource(\$r('sys.float.margin_right'))
 
 }。
 
-**类型：** [LocalizedMargin](arkts-arkui-localizedmargin-t.md)
+**类型：** LocalizedMargin
 
 **起始版本：** 26.0.0
 
@@ -94,7 +94,7 @@ safeAreaEdges?: Array<SafeAreaEdge>
 
 默认值：[SafeAreaEdge.TOP]。
 
-**类型：** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
+**类型：** Array&lt;SafeAreaEdge&gt;
 
 **起始版本：** 26.0.0
 
@@ -116,7 +116,7 @@ safeAreaTypes?: Array<SafeAreaType>
 
 默认值：[SafeAreaType.SYSTEM]。
 
-**类型：** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
+**类型：** Array&lt;SafeAreaType&gt;
 
 **起始版本：** 26.0.0
 

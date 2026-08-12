@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## getAllDisplayPhysicalResolution
@@ -28,13 +28,13 @@ Obtains all the display modes supported by the current device, along with the ph
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;DisplayPhysicalResolution&gt;&gt; | Promise used to return all the DisplayPhysicalResolution objects. The objects are sorted in ascending order of physical screen resolution information in the array. |
+| Promise&lt;Array&lt;[DisplayPhysicalResolution](arkts-arkui-display-displayphysicalresolution-i.md)&gt;&gt; | Promise used to return all the DisplayPhysicalResolution objects. The objects are sorted in ascending order of physical screen resolution information in the array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 

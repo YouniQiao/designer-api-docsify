@@ -13,7 +13,7 @@ Defines the download task configuration.
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## background
@@ -104,7 +104,7 @@ Path where the downloaded file is stored. The default value is the cache directo
 - In the FA model, use the   
 [Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir) method to obtain the application storage path.  
 - In the Stage model, use the **AbilityContext** class in   
-[Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md) to obtain the file path.
+[Context (Context Base Class of the Stage Model)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context) to obtain the file path.
 
 **Type:** string
 

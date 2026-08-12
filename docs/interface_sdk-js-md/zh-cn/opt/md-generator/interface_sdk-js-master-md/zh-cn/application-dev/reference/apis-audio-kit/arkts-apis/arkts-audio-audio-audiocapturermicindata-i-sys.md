@@ -36,7 +36,7 @@ data: ArrayBuffer
 ecData?: ArrayBuffer
 ```
 
-回声参考音频数据缓冲。如果录音配置没有设置ecStreamInfo，则此缓冲将为空。有关详细信息，请参见{@link #AudioCapturerMicInConfig}。
+回声参考音频数据缓冲。如果录音配置没有设置ecStreamInfo，则此缓冲将为空。有关详细信息，请参见[AudioCapturerMicInConfig](arkts-audio-audio-audiocapturermicinconfig-i-sys.md#AudioCapturerMicInConfig)。
 
 **类型：** ArrayBuffer
 

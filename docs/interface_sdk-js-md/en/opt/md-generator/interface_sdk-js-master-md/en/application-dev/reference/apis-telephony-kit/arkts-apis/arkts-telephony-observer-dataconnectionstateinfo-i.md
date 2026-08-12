@@ -11,7 +11,7 @@ Indicates cellular data connect state and technology type.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## network
@@ -38,7 +38,7 @@ state: DataConnectState
 
 Indicates cellular data connect state.
 
-**Type:** [DataConnectState](arkts-telephony-data-dataconnectstate-e.md)
+**Type:** DataConnectState
 
 **Since:** 11
 

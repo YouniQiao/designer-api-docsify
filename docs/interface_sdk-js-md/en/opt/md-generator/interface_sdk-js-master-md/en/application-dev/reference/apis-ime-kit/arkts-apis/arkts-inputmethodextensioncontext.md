@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtensionContext } from 'kits/@kit.IMEKit';
+import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
 ## Summary

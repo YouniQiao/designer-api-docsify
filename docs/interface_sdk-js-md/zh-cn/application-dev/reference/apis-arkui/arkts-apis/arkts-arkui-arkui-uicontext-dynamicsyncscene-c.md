@@ -32,7 +32,7 @@ Gets the FrameRateRange of the DynamicSyncScene.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | The range of frameRate. |
+| [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md) | The range of frameRate. |
 
 ## setFrameRateRange
 
@@ -56,5 +56,5 @@ Sets the FrameRateRange of the DynamicSyncScene.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | [ExpectedFrameRateRange](../arkts-components/arkts-arkui-expectedframeraterange-i.md) | 是 | The range of frameRate. |
+| range | [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md) | 是 | The range of frameRate. |
 

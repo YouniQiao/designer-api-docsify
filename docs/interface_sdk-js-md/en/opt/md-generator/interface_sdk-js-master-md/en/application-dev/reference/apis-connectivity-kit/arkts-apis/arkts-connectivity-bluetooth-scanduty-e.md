@@ -6,7 +6,7 @@ The enum of scan duty.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanDuty
+**Substitutes:** [ScanDuty](ohos.bluetoothManager/bluetoothManager.ScanDuty)
 
 <!--Device-bluetooth-enum ScanDuty--><!--Device-bluetooth-enum ScanDuty-End-->
 
@@ -24,7 +24,7 @@ low power mode
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanDuty.SCAN_MODE_LOW_POWER
+**Substitutes:** [SCAN_MODE_LOW_POWER](ohos.bluetoothManager/bluetoothManager.ScanDuty.SCAN_MODE_LOW_POWER)
 
 <!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0--><!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0-End-->
 
@@ -42,7 +42,7 @@ balanced power mode
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanDuty.SCAN_MODE_BALANCED
+**Substitutes:** [SCAN_MODE_BALANCED](ohos.bluetoothManager/bluetoothManager.ScanDuty.SCAN_MODE_BALANCED)
 
 <!--Device-ScanDuty-SCAN_MODE_BALANCED = 1--><!--Device-ScanDuty-SCAN_MODE_BALANCED = 1-End-->
 
@@ -60,7 +60,7 @@ Scan using highest duty cycle
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.ScanDuty.SCAN_MODE_LOW_LATENCY
+**Substitutes:** [SCAN_MODE_LOW_LATENCY](ohos.bluetoothManager/bluetoothManager.ScanDuty.SCAN_MODE_LOW_LATENCY)
 
 <!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2-End-->
 

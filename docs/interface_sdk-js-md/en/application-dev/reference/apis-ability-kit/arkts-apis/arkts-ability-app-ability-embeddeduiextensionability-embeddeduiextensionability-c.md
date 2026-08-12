@@ -1,12 +1,12 @@
 # EmbeddedUIExtensionAbility
 
 EmbeddedUIExtensionAbility is a component that enables cross-process UI embedding. It inherits from  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md).You can implement this class to add cross-process UI embedding capabilities to your applications. A typical use case is embedding a UI, provided by the application's own EmbeddedUIExtensionAbility, into a  
-[UIAbility](arkts-app-ability-uiability.md) page using an  
-[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i).For details about the inheritance relationship of each ability, see  
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility).You can implement this class to add cross-process UI embedding capabilities to your applications. A typical use case is embedding a UI, provided by the application's own EmbeddedUIExtensionAbility, into a  
+[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) page using an  
+[EmbeddedComponent](@internal/component/ets/embedded_component).For details about the inheritance relationship of each ability, see  
 [Inheritance Relationship](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability-inheritance-relationship).This API can be properly called on PCs/2-in-1 devices and tablets. It is unavailable on other devices.
 
-**Inheritance/Implementation:** EmbeddedUIExtensionAbility extends [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)
+**Inheritance/Implementation:** EmbeddedUIExtensionAbility extends [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)
 
 **Since:** 12
 
@@ -21,6 +21,6 @@ EmbeddedUIExtensionAbility is a component that enables cross-process UI embeddin
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddedUIExtensionAbility } from 'kits/@kit.AbilityKit';
+import { EmbeddedUIExtensionAbility } from '@kit.AbilityKit';
 ```
 

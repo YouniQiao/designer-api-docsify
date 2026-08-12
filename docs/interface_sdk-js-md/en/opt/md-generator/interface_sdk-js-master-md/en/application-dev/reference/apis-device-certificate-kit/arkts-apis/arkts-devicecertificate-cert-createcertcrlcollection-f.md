@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## createCertCRLCollection
@@ -26,8 +26,8 @@ Creates an object for a collection of X.509 certificates and CRLs.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| certs | Array&lt;X509Cert&gt; | Yes |
-| crls | Array&lt;X509CRL&gt; | No |
+| [certs](../../apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-security-cryptoextensionability-hukscryptoextensionresult-i.md) | Array & lt;X509Cert & gt; | Yes |
+| [crls](arkts-devicecertificate-cert-x509certrevokedparams-i.md) | Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt; | No |
 
 **Return value:**
 
@@ -39,8 +39,8 @@ Creates an object for a collection of X.509 certificates and CRLs.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
 
 ## Examples
 

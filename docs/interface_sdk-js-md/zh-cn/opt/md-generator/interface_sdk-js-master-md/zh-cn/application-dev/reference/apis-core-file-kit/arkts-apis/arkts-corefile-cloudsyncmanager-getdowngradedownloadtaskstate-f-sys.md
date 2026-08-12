@@ -26,21 +26,21 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | 是 |
+| bundleNames | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;DownloadProgress&gt;&gt; |
+| Promise & lt;Array & lt;DownloadProgress & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 13900020 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13900010 |
 
 ## 示例

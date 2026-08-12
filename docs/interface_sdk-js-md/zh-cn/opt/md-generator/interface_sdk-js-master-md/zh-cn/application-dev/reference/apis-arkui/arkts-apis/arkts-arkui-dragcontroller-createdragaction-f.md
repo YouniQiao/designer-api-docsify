@@ -10,9 +10,9 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 > **说明：**
 > 
-> - 从API version 11开始，可以通过使用[UIContext](arkts-arkui-uicontext.md)中的
-> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getdragcontroller)方法获取当前UI
-> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md)对象。
+> - 从API version 11开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
+> [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController)方法获取当前UI
+> 上下文关联的[DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController)对象。
 > 
 > - 建议控制传递的拖拽背板数量，传递过多容易导致拖起的效率问题。
 
@@ -20,7 +20,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.DragController#createDragAction
+**替代接口：** [createDragAction](ohos.arkui.UIContext.DragController#createDragAction)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,7 +34,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| customArray | Array&lt;CustomBuilder \| [DragItemInfo&gt;](arkts-arkui-common-dragiteminfo-i.md) | 是 |
+| customArray | Array&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| [DragItemInfo](../arkts-components/arkts-arkui-dragiteminfo-i.md)&gt; | 是 |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | 是 |
 
 **返回值：**
@@ -47,8 +47,8 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 | 错误码ID |
 | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

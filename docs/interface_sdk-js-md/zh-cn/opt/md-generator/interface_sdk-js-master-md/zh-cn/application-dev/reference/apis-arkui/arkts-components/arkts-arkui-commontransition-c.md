@@ -128,7 +128,7 @@ translate(value: TranslateOptions): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [TranslateOptions](arkts-arkui-translateoptions-i.md) | 是 |
+| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | 是 |
 
 **返回值：**
 

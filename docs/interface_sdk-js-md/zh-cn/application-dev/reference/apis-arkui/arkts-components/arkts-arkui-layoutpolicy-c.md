@@ -38,7 +38,7 @@ static readonly fixAtIdealSize: LayoutPolicy
 
 当前组件自适应子组件（内容）时，其大小与子组件（内容）相等，并且其大小不受父组件内容区大小约束。适用于需要根据内容自动调整大小且可以超出父容器的场景，例如悬浮提示、下拉菜单等。
 
-**类型：** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
+**类型：** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **起始版本：** 20
 
@@ -62,7 +62,7 @@ static readonly matchParent: LayoutPolicy
 
 当前组件自适应父组件布局时，其大小与父组件内容区相等，不包括padding，border和safeAreaPadding。适用于需要组件填满父容器内容区的场景，例如列表项、卡片容器等。
 
-**类型：** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
+**类型：** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **起始版本：** 15
 
@@ -86,7 +86,7 @@ static readonly wrapContent: LayoutPolicy
 
 当前组件自适应子组件（内容）时，其大小与子组件（内容）相等，并且其大小受父组件内容区大小约束。适用于需要根据内容自动调整大小但不能超出父容器的场景，例如文本容器、弹窗内容区等。
 
-**类型：** [LayoutPolicy](../arkts-apis/arkts-arkui-common-layoutpolicy-c.md)
+**类型：** [LayoutPolicy](arkts-arkui-layoutpolicy-c.md)
 
 **起始版本：** 20
 

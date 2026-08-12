@@ -13,7 +13,7 @@ A color picker class used to obtain the main color from image data. It is suitab
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## getAverageColor
@@ -40,7 +40,7 @@ Reads the average color value from the image and writes the result to a Color in
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Average color value. If the operation fails, null is returned. |
+| Color | Average color value. If the operation fails, null is returned. |
 
 ## Examples
 
@@ -94,7 +94,7 @@ Reads the color value with the highest saturation from the image and writes the 
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the color with the highest saturation. If the operation fails, null is returned. |
+| Color | Color value of the color with the highest saturation. If the operation fails, null is returned. |
 
 ## Examples
 
@@ -148,7 +148,7 @@ Reads the color value with the largest proportion in the image and writes the re
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the color with the largest proportion. If the operation fails, null is returned. |
+| Color | Color value of the color with the largest proportion. If the operation fails, null is returned. |
 
 ## Examples
 
@@ -258,7 +258,7 @@ Reads the color value of the main color from the image and writes the result to 
 
 | Type | Description |
 | --- | --- |
-| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | Color value of the main color. If the operation fails, null is returned. |
+| Color | Color value of the main color. If the operation fails, null is returned. |
 
 ## Examples
 

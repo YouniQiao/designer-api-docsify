@@ -2,7 +2,7 @@
 
 Defines the Extendable RelativeContainer.
 
-**Inheritance/Implementation:** ExtendableRelativeContainer implements [RelativeContainerAttribute](arkts-arkui-relativecontainer-relativecontainerattribute-i.md)
+**Inheritance/Implementation:** ExtendableRelativeContainer implements [RelativeContainerAttribute](arkts-arkui-relativecontainer-relativecontainerattribute-i.md#RelativeContainerAttribute)
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Constructor of Extendable RelativeContainer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -74,9 +74,9 @@ Entry of Extendable RelativeContainer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 ## setRelativeContainerOptions
 

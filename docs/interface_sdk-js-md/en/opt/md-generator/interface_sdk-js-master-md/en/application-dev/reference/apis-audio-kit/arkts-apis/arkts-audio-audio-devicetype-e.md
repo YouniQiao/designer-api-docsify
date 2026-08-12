@@ -248,7 +248,7 @@ Distributed device.
 HEARING_AID = 30
 ```
 
-Hearing aid audio device.Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
+Hearing aid audio device.Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
 
 **Since:** 26.0.0
 
@@ -262,7 +262,7 @@ Hearing aid audio device.Note: This original device type can be obtained after i
 NEARLINK = 31
 ```
 
-Nearlink device.Note: This original device type can be obtained after it is declared via {@link AudioRoutingManager#declareDeviceTypesCompatibility}.
+Nearlink device.Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
 
 **Since:** 26.0.0
 

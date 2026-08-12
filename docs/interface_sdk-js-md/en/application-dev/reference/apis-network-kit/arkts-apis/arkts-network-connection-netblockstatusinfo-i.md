@@ -13,7 +13,7 @@ Get network status information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## blocked
@@ -42,7 +42,7 @@ netHandle: NetHandle
 
 Defines the handle of the data network.
 
-**Type:** [NetHandle](arkts-network-connection-nethandle-i.md)
+**Type:** NetHandle
 
 **Since:** 11
 

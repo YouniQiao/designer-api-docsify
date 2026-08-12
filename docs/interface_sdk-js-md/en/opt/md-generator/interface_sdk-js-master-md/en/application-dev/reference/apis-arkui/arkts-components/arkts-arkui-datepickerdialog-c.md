@@ -20,14 +20,14 @@ Shows a date picker dialog box.
 > 
 > Since API version 10, you can use the
 > [showDatePickerDialog](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#showdatepickerdialog) API
-> in [UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md), which ensures that the date picker dialog box is shown in the
+> in [UIContext](@ohos.arkui.UIContext), which ensures that the date picker dialog box is shown in the
 > intended UI instance.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#showDatePickerDialog
+**Substitutes:** [showDatePickerDialog](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#showDatePickerDialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

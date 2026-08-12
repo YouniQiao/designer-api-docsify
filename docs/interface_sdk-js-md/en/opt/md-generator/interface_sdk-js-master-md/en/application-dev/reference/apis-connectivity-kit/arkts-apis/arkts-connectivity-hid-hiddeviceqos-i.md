@@ -11,7 +11,7 @@ Represents the Quality of Service (QoS) settings for a bluetooth hid device appl
 ## Modules to Import
 
 ```TypeScript
-import { hid } from 'kits/@kit.ConnectivityKit';
+import { hid } from '@kit.ConnectivityKit';
 ```
 
 ## delayVariation
@@ -76,7 +76,7 @@ serviceType?: ServiceType
 
 L2CAP service type, default = SERVICE_BEST_EFFORT.
 
-**Type:** [ServiceType](arkts-connectivity-hid-servicetype-e.md)
+**Type:** ServiceType
 
 **Since:** 23
 

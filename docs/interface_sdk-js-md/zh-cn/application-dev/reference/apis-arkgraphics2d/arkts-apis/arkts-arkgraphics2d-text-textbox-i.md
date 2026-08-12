@@ -18,7 +18,7 @@ direction: TextDirection
 
 文本方向。
 
-**类型：** [TextDirection](arkts-arkgraphics2d-text-textdirection-e.md)
+**类型：** TextDirection
 
 **起始版本：** 12
 

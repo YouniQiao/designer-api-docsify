@@ -2,10 +2,10 @@
 
 CounterV2NumberStyleOptions定义了列表型和紧凑型CounterV2的属性和事件。
 
-继承于[CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)，包含该接口及  
-[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md)所有属性。本节仅展示新增属性，继承属性请参见父接口。
+继承于[CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md#CounterV2InlineStyleOptions)，包含该接口及  
+[CounterV2CommonOptions](arkts-arkui-arkui-advanced-counterv2-counterv2commonoptions-c.md#CounterV2CommonOptions)所有属性。本节仅展示新增属性，继承属性请参见父接口。
 
-**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md)
+**继承/实现关系：** CounterV2NumberStyleOptions extends [CounterV2InlineStyleOptions](arkts-arkui-arkui-advanced-counterv2-counterv2inlinestyleoptions-c.md#CounterV2InlineStyleOptions)
 
 **起始版本：** 26.0.0
 

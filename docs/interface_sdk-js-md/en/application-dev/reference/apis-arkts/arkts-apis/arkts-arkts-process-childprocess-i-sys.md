@@ -15,7 +15,7 @@ The childprocess object can be used to create a new process.
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## close

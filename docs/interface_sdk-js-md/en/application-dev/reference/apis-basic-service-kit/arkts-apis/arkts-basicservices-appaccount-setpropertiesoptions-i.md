@@ -13,7 +13,7 @@ Represents the options for setting authenticator properties.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## parameters
@@ -24,7 +24,7 @@ parameters?: Record<string, Object>
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 
@@ -42,7 +42,7 @@ properties?: Record<string, Object>
 
 Property object. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 

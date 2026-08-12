@@ -1,7 +1,7 @@
 # SystemPasteboard
 
 Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using  
-[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard).
+[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getSystemPasteboard).
 
 **Since:** 6
 
@@ -12,7 +12,7 @@ Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, 
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## clear
@@ -27,7 +27,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.clearData](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardata)(callback:
+**Substitutes:** [clearData](pasteboard.SystemPasteboard.clearData(callback:)
 
 <!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -43,7 +43,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -70,7 +70,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.clearData](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardata)()
+**Substitutes:** [clearData](#clearData)()
 
 <!--Device-SystemPasteboard-clear(): Promise<void>--><!--Device-SystemPasteboard-clear(): Promise<void>-End-->
 
@@ -80,7 +80,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -121,7 +121,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -158,7 +158,7 @@ Clears the system pasteboard. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -193,7 +193,7 @@ Clears the system pasteboard. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -213,7 +213,7 @@ try {
 detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 ```
 
-Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pasteboard. This API uses a promise to return the result.
+Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md#Pattern) in the system pasteboard. This API uses a promise to return the result.
 
 **Since:** 13
 
@@ -225,19 +225,19 @@ Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md) in the system pa
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| patterns | Array&lt;Pattern&gt; | Yes |
+| [patterns](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodlist-patternoptions-i.md) | Array & lt;Pattern & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;Pattern&gt;&gt; |
+| Promise & lt;Array & lt;Pattern & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -269,7 +269,7 @@ getChangeCount(): number
 ```
 
 Obtains the number of pasteboard content changes.Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise.Even though the PasteData expires, or the data becomes empty because of the called  
-[clearDataSync](arkts-basicservices-pasteboard-systempasteboard-i.md#cleardatasync) API, the number of data changes remains.When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
+[clearDataSync](#clearDataSync) API, the number of data changes remains.When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
 
 **Since:** 18
 
@@ -322,15 +322,15 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PasteData&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -373,14 +373,14 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PasteData&gt; |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -424,7 +424,7 @@ Obtains the name of the application that provides data.
 
 | Error Code ID |
 | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -467,8 +467,8 @@ Obtains a **PasteData** object from the pasteboard. This API returns the result 
 
 | Error Code ID |
 | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -510,19 +510,19 @@ Obtains the PasteData from the system pasteboard with system progress.This API u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PasteData&gt; |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900007](../../apis-basic-services-kit/errorcode-pasteboard.md#12900007-file-copying-failure) |
-| [12900003](../../apis-basic-services-kit/errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [12900008](../../apis-basic-services-kit/errorcode-pasteboard.md#12900008-progress-startup-failure) |
-| [12900009](../../apis-basic-services-kit/errorcode-pasteboard.md#12900009-progress-reporting-exception) |
-| [12900010](../../apis-basic-services-kit/errorcode-pasteboard.md#12900010-data-obtaining-failure) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900007-file-copying-failure) |
+| [12900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900008-progress-startup-failure) |
+| [12900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900009-progress-reporting-exception) |
+| [12900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900010-data-obtaining-failure) |
 
 ## Examples
 
@@ -586,7 +586,7 @@ Obtains the types of PasteData in the system pasteboard. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## Examples
 
@@ -613,7 +613,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.getData](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)(callback:
+**Substitutes:** [getData](pasteboard.SystemPasteboard.getData(callback:)
 
 <!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
@@ -623,13 +623,13 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;PasteData&gt; | Yes |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -661,7 +661,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.getData](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)()
+**Substitutes:** [getData](#getData)()
 
 <!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>--><!--Device-SystemPasteboard-getPasteData(): Promise<PasteData>-End-->
 
@@ -671,7 +671,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PasteData&gt; |
+| Promise&lt;[PasteData](arkts-basicservices-pasteboard-pastedata-i.md)&gt; |
 
 ## Examples
 
@@ -711,14 +711,14 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;unifiedDataChannel.UnifiedData&gt; |
+| Promise & lt;unifiedDataChannel.UnifiedData & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -768,8 +768,8 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 
 | Error Code ID |
 | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -811,7 +811,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -848,7 +848,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -889,7 +889,7 @@ Checks whether the system pasteboard contains data. This API returns the result 
 
 | Error Code ID |
 | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -935,8 +935,8 @@ Checks whether the pasteboard contains data of the specified type.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -962,7 +962,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.hasData](arkts-basicservices-pasteboard-systempasteboard-i.md#hasdata)(callback:
+**Substitutes:** [hasData](pasteboard.SystemPasteboard.hasData(callback:)
 
 <!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
@@ -978,7 +978,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1007,7 +1007,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.hasData](arkts-basicservices-pasteboard-systempasteboard-i.md#hasdata)()
+**Substitutes:** [hasData](#hasData)()
 
 <!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>--><!--Device-SystemPasteboard-hasPasteData(): Promise<boolean>-End-->
 
@@ -1017,7 +1017,7 @@ Checks whether the system pasteboard contains data. This API uses a promise to r
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 
@@ -1089,7 +1089,7 @@ Checks whether the data in the pasteboard is from another device.
 
 | Error Code ID |
 | --- |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -1122,13 +1122,13 @@ Unsubscribes the content change event of the system pasteboard.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'update' | Yes |
-| callback | () =&gt; void | No |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1192,13 +1192,13 @@ Subscribes the content change event of the system pasteboard.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'update' | Yes |
-| callback | () =&gt; void | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1264,8 +1264,8 @@ Deletes the global pasteable range of the application.
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1300,16 +1300,16 @@ Sets pasteable range of PasteData for application.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| shareOptions | [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) | Yes |
+| [shareOptions](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) | [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900006](../../apis-basic-services-kit/errorcode-pasteboard.md#12900006-settings-already-exists) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900006-settings-already-exists) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1350,9 +1350,9 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [27787278](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
 
 ## Examples
 
@@ -1397,15 +1397,15 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [27787278](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
 
 ## Examples
 
@@ -1450,8 +1450,8 @@ Writes data to the system system pasteboard. This API returns the result synchro
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -1478,7 +1478,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.setData](arkts-basicservices-pasteboard-systempasteboard-i.md#setdata)(data:
+**Substitutes:** [setData](pasteboard.SystemPasteboard.setData(data:)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
@@ -1495,7 +1495,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1523,7 +1523,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [pasteboard.SystemPasteboard.setData](arkts-basicservices-pasteboard-systempasteboard-i.md#setdata)(data:
+**Substitutes:** [setData](pasteboard.SystemPasteboard.setData(data:)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 
@@ -1539,7 +1539,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -1581,15 +1581,15 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [27787278](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
 
 ## Examples
 
@@ -1644,8 +1644,8 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 

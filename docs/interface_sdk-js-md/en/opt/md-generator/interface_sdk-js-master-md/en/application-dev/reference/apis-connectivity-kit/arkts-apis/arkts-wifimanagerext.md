@@ -13,7 +13,7 @@ Provides extended methods to operate or manage Wi-Fi.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManagerExt } from 'kits/@kit.ConnectivityKit';
+import { wifiManagerExt } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

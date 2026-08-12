@@ -2,7 +2,7 @@
 
 Represents an error that occurs when a numeric types conversion is performed on an index expression,and the fractional part differs from 0.
 
-**Inheritance/Implementation:** NonIntegralIndexError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** NonIntegralIndexError extends [Error](Error)
 
 **Since:** 26.0.0
 

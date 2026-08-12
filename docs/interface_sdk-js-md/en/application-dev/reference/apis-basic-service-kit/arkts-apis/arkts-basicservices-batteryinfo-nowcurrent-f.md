@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from 'kits/@kit.BasicServicesKit';
+import { batteryInfo } from '@kit.BasicServicesKit';
 ```
 
 ## nowCurrent

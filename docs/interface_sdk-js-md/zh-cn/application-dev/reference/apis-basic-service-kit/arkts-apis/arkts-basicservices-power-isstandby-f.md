@@ -26,7 +26,7 @@ function isStandby(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+| [4900101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
 ## 示例
 

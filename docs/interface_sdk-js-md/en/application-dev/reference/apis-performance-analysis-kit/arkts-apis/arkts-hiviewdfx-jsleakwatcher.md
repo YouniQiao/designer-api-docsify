@@ -13,7 +13,7 @@ This module provides the capability of monitoring whether JS objects are leaked.
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## Summary

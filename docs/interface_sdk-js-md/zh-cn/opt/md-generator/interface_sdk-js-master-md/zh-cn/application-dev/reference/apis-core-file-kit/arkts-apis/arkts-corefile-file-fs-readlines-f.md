@@ -19,13 +19,13 @@ declare function readLines(filePath: string, options?: Options): Promise<ReaderI
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | filePath | string | 是 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ReaderIterator&gt; |
+| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; |
 
 **错误码：**
 
@@ -65,7 +65,7 @@ declare function readLines(filePath: string, callback: AsyncCallback<ReaderItera
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | filePath | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 |
 
 **错误码：**
 
@@ -104,8 +104,8 @@ declare function readLines(filePath: string, options: Options, callback: AsyncCa
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | filePath | string | 是 |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ReaderIterator&gt; | 是 |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 |
 
 **错误码：**
 

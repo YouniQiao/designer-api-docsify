@@ -16,7 +16,7 @@ sourceDensity: number
 
 图片资源像素密度。单位：ppi（像素/英寸）。
 
-在解码参数[DecodingOptions](arkts-image-image-decodingoptions-i.md)未设置desiredSize的前提下，当前参数SourceOptions.sourceDensity与DecodingOptions.fitDensity非零时将对解码输出的pixelmap进行缩放。
+在解码参数[DecodingOptions](arkts-image-image-decodingoptions-i.md#DecodingOptions)未设置desiredSize的前提下，当前参数SourceOptions.sourceDensity与DecodingOptions.fitDensity非零时将对解码输出的pixelmap进行缩放。
 
 缩放后宽计算公式如下(高同理)：(width * fitDensity + (sourceDensity >> 1)) / sourceDensity。
 
@@ -60,7 +60,7 @@ sourceSize?: Size
 
 图像像素大小，默认值为空。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 9
 

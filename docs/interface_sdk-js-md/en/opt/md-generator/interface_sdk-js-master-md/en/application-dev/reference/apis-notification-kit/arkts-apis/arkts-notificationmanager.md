@@ -30,7 +30,7 @@ The APIs of this module follow the following workflow of notifications: Authoriz
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## Summary

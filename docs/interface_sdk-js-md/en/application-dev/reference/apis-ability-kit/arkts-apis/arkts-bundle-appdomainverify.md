@@ -17,7 +17,7 @@ This module provides app domain verification info.
 ## Modules to Import
 
 ```TypeScript
-import { appDomainVerify } from 'kits/@kit.AbilityKit';
+import { appDomainVerify } from '@kit.AbilityKit';
 ```
 
 ## Summary

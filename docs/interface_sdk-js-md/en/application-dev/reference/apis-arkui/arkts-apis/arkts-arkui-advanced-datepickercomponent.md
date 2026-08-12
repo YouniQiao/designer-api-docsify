@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -12,11 +12,11 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 
 | Name | Description |
 | --- | --- |
-| [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) | CommonOptions defines common options for the date time picker.  > **Description:** >  > - For Date usage, refer to > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions对象说明)。 >  > - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow, > text may be truncated. >  > - When parameters are omitted or set to undefined, default values are used. >  > - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part > (year, month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the > time part (hour, minute, second). |
-| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions defines options for the date picker.  Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md). |
+| [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md) | CommonOptions defines common options for the date time picker.  > **Description:** >  > - For Date usage, refer to > [TimePickerOptions](../../../reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md#timepickeroptions对象说明)。 >  > - The text size of DatePickerComponent adapts between 14vp and 16vp. When the component width is too narrow, > text may be truncated. >  > - When parameters are omitted or set to undefined, default values are used. >  > - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md#DateOptions), setting start, end, and selected only takes effect for the date part > (year, month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md#TimeOptions), setting start, end, and selected only takes effect for the > time part (hour, minute, second). |
+| [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md) | DateOptions defines options for the date picker.  Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions). |
 | [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md) | DatePickerComponentOptions defines options for the date time picker component. |
 | [DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md) | DatePickerComponentResult defines the selection result of the date time picker. |
-| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions defines options for the time picker.  Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md). |
+| [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md) | TimeOptions defines options for the time picker.  Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions). |
 
 ### Structs
 

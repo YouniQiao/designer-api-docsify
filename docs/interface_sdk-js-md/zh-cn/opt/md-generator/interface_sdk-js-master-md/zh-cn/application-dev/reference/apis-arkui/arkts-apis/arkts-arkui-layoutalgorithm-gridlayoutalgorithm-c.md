@@ -4,10 +4,10 @@
 
 > **说明：**
 > 
-> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](arkts-arkui-components-arkdynamiclayout.md)组件的入
+> GridLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](@ohos.arkui.components.ArkDynamicLayout)组件的入
 > 参指定布局算法。
 
-**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
+**继承/实现关系：** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **起始版本：** 24
 
@@ -83,7 +83,7 @@ public columnsTemplate?: string | ItemFillPolicy
 
 装饰器类型：@Trace
 
-**类型：** string \| ItemFillPolicy
+**类型：** string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 

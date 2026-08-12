@@ -13,7 +13,7 @@ Defines the parameters for creating a child window or system window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## ctx
@@ -144,7 +144,7 @@ windowType: WindowType
 
 Indicates window type
 
-**Type:** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+**Type:** WindowType
 
 **Since:** 9
 

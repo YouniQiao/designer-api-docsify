@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## offSelectionComplete
@@ -30,7 +30,7 @@ Unregisters the callback used to listen for the word selection completion event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;SelectionInfo&gt; | No | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md). If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | No | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md#SelectionInfo). If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
 

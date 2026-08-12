@@ -1,10 +1,10 @@
 # ContentCoverOptions
 
-继承自[BindOptions](arkts-arkui-bindoptions-i.md)。
+继承自[BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)。
 
 全屏模态页面内容选项。
 
-**继承/实现关系：** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md)
+**继承/实现关系：** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **起始版本：** 10
 
@@ -74,7 +74,7 @@ onWillDismiss?: Callback<DismissContentCoverAction>
 
 当用户执行back事件关闭交互操作时，如果注册该回调函数，则不会立刻关闭。在回调函数中可以通过reason得到阻拦关闭页面的操作类型，从而根据原因选择是否关闭全屏模态页面。在onWillDismiss回调中，不能再做onWillDismiss拦截。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DismissContentCoverAction&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;[DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md)&gt;
 
 **起始版本：** 12
 

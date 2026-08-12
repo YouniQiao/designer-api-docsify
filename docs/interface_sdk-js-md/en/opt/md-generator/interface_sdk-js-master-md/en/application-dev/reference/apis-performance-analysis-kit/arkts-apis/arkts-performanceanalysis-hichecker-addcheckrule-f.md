@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from 'kits/@kit.PerformanceAnalysisKit';
+import { hichecker } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## addCheckRule
@@ -30,7 +30,7 @@ Adds one or more check rules. HiChecker detects unexpected operations or gives f
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

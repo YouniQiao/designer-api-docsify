@@ -11,7 +11,7 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## classOfDevice
@@ -40,7 +40,7 @@ majorClass: MajorClass
 
 Major classes of Bluetooth devices.
 
-**Type:** [MajorClass](arkts-connectivity-connection-majorclass-t.md)
+**Type:** MajorClass
 
 **Since:** 10
 
@@ -58,7 +58,7 @@ majorMinorClass: MajorMinorClass
 
 Major and minor classes of Bluetooth devices.
 
-**Type:** [MajorMinorClass](arkts-connectivity-bluetoothmanager-majorminorclass-e.md)
+**Type:** MajorMinorClass
 
 **Since:** 10
 

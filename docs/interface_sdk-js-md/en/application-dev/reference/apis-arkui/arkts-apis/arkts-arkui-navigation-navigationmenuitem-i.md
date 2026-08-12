@@ -36,7 +36,7 @@ icon?: string | Resource
 
 The value of navigation menu item.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -96,7 +96,7 @@ value: string | Resource
 
 The value of navigation menu item.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

@@ -20,7 +20,7 @@ Style of the placeholder text.
 
 The default value follows the theme.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ Color of the placeholder text.
 
 The default value follows the theme.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 12
 

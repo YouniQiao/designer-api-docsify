@@ -35,11 +35,11 @@ Initialize Text FrameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | content | string \| Resource | No |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | No |  |
+| value | TextOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md) |  |
+| TextAttribute |  |
 

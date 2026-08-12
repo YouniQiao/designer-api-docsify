@@ -24,13 +24,13 @@ function on(type: 'prepareContinue', context: Context, callback: AsyncCallback<C
 | --- | --- | --- | --- |
 | type | 'prepareContinue' | 是 | 固定值：prepareContinue。 |
 | context | [Context](arkts-ability-context-c.md) | 是 | Ability的Context。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | 是 | 回调函数。当快速拉起结果获取成功，err为undefined，ContinueResultInfo为获取到的快速启动结果。否则为 错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 是 | 回调函数。当快速拉起结果获取成功，err为undefined，ContinueResultInfo为获取到的快速启动结果。否则为 错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
+| [16300501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
 
 ## 示例
 

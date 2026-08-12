@@ -14,7 +14,7 @@
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-文本行间距的构造函数。未通过该接口设置时，默认行间距为0.0。LengthMetrics的value值小于0时，取默认值0.0。当与[LineHeightStyle](arkts-arkui-lineheightstyle-c.md)的lineHeightMultiple同时设置且lineHeightMultiple生效时，该参数不生效。
+文本行间距的构造函数。未通过该接口设置时，默认行间距为0.0。LengthMetrics的value值小于0时，取默认值0.0。当与[LineHeightStyle](arkts-arkui-lineheightstyle-c.md#LineHeightStyle)的lineHeightMultiple同时设置且lineHeightMultiple生效时，该参数不生效。
 
 **起始版本：** 26.0.0
 

@@ -8,7 +8,7 @@ Configuring parameters in geocode requests
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest
+**Substitutes:** [GeoCodeRequest](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -19,7 +19,7 @@ Configuring parameters in geocode requests
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## description
@@ -36,7 +36,7 @@ description: string
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#description
+**Substitutes:** [description](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#description)
 
 <!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
 
@@ -56,7 +56,7 @@ locale?: string
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#locale
+**Substitutes:** [locale](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#locale)
 
 <!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
 
@@ -76,7 +76,7 @@ maxItems?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#maxItems
+**Substitutes:** [maxItems](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#maxItems)
 
 <!--Device-GeoCodeRequest-maxItems?: number--><!--Device-GeoCodeRequest-maxItems?: number-End-->
 
@@ -96,7 +96,7 @@ maxLatitude?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#maxLatitude
+**Substitutes:** [maxLatitude](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#maxLatitude)
 
 <!--Device-GeoCodeRequest-maxLatitude?: number--><!--Device-GeoCodeRequest-maxLatitude?: number-End-->
 
@@ -116,7 +116,7 @@ maxLongitude?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#maxLongitude
+**Substitutes:** [maxLongitude](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#maxLongitude)
 
 <!--Device-GeoCodeRequest-maxLongitude?: number--><!--Device-GeoCodeRequest-maxLongitude?: number-End-->
 
@@ -136,7 +136,7 @@ minLatitude?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#minLatitude
+**Substitutes:** [minLatitude](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#minLatitude)
 
 <!--Device-GeoCodeRequest-minLatitude?: number--><!--Device-GeoCodeRequest-minLatitude?: number-End-->
 
@@ -156,7 +156,7 @@ minLongitude?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#minLongitude
+**Substitutes:** [minLongitude](ohos.geoLocationManager/geoLocationManager.GeoCodeRequest#minLongitude)
 
 <!--Device-GeoCodeRequest-minLongitude?: number--><!--Device-GeoCodeRequest-minLongitude?: number-End-->
 

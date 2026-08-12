@@ -1,7 +1,7 @@
 # NodeAdapter
 
 Provides lazy loading capabilities for FrameNode data, implementing  
-[LazyForEach](../../apis-arkui/arkts-components/arkts-arkui-lazy_for_each-i) API functionality.
+[LazyForEach](../@internal/component/ets/lazy_for_each) API functionality.
 
 > **NOTE：**
 > 
@@ -133,7 +133,7 @@ Obtains all available items. Available nodes include both currently displayed an
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;FrameNode&gt; |
+| Array&lt;[FrameNode](arkts-arkui-framenode-c.md)&gt; |
 
 ## insertItem
 
@@ -184,6 +184,10 @@ Checks whether the NodeAdapter's backend reference has been released. Frontend n
 | --- |
 | boolean |
 
+## Examples
+
+See [NodeAdapter Validity Check Example](#nodeadapter-validity-check-example).
+
 ## moveItem
 
 ```TypeScript
@@ -221,16 +225,16 @@ Called when a FrameNode is attached to the NodeAdapter.
 > 
 > In versions earlier than API version 26.0.0, this callback is triggered when the host node is attached to the
 > main tree. If you set this callback by dynamically assigning a value, you can complete the setting after calling
-> [attachNodeAdapter](arkts-arkui-framenode-nodeadapter-c.md#attachnodeadapter) and before the host node is attached to the main tree.
+> [attachNodeAdapter](#attachNodeAdapter) and before the host node is attached to the main tree.
 > In this case, you will receive this callback when the host node is attached to the main tree.
 > 
 > In API version 26.0.0 and later, this callback is triggered immediately when the NodeAdapter is bound to the host
 > node, instead of when the host node is attached to the main tree. In this case, the host node may not have been
 > attached to the main tree. If the node on which the callback logic depends has been mounted (for example,
 > accessing layout information or executing animation), you are advised to register
-> [onAppear](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#onappear) in the callback and place the related logic in **onAppear** for
+> [onAppear](CommonMethod#onAppear) in the callback and place the related logic in **onAppear** for
 > execution. If you set this callback by dynamically assigning a value, complete the setting before calling
-> [attachNodeAdapter](arkts-arkui-framenode-nodeadapter-c.md#attachnodeadapter). Otherwise, the callback may fail to be triggered.
+> [attachNodeAdapter](#attachNodeAdapter). Otherwise, the callback may fail to be triggered.
 
 **Since:** 12
 
@@ -383,7 +387,7 @@ Called when a loaded node is reused. Node reuse occurs when the key value of a c
 reloadAllItems(): void
 ```
 
-Reloads all items in this node. This API calls the [OnDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md/arkts-arkui-datachangelistener-i.md#ondatareloaded) API in **LazyForEach** to trigger component data refresh.
+Reloads all items in this node. This API calls the [OnDataReloaded](../arkts-components/arkts-arkui-datachangelistener-i.md#onDataReloaded) API in **LazyForEach** to trigger component data refresh.
 
 **Since:** 12
 

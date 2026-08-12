@@ -36,7 +36,7 @@ function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObse
 
 | 错误码ID |
 | --- |
-| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) |
+| [16000205](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-当前接口未在主线程中调用) |
 
 ## 示例
 

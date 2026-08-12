@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> - 本模块接口从API version 9开始废弃，建议使用新接口[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-depr-n.md)替代。
+> - 本模块接口从API version 9开始废弃，建议使用新接口[@ohos.hiviewdfx.hiAppEvent](arkts-performanceanalysis-hiappevent-n.md#hiAppEvent)替代。
 
 ## 汇总
 

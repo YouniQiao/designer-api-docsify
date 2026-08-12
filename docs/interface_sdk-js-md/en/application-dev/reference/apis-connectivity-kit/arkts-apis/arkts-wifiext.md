@@ -15,7 +15,7 @@ Provides extended methods to operate or manage Wi-Fi.
 ## Modules to Import
 
 ```TypeScript
-import { wifiext } from 'kits/@kit.ConnectivityKit';
+import { wifiext } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

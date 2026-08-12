@@ -14,7 +14,7 @@ Deletes the ID from the end of the path component of the given uri.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.dataUriUtils/dataUriUtils#deleteId
+**Substitutes:** [deleteId](ohos.app.ability.dataUriUtils/dataUriUtils#deleteId)
 
 <!--Device-dataUriUtils-function deleteId(uri: string): string--><!--Device-dataUriUtils-function deleteId(uri: string): string-End-->
 

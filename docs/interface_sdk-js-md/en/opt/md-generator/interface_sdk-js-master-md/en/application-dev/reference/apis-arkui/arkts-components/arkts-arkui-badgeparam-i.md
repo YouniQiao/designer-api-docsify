@@ -23,7 +23,7 @@ Default value: **BadgePosition.RightTop**
 With the **Position** type, percentage values are not supported. If an invalid value is set, the default value  
 **(0,0)**, which indicates the upper left corner of the component, will be used.
 
-With the **BadgePosition** type, the position is mirrored based on the [Direction](../arkts-apis/arkts-arkui-direction-e.md/arkts-arkui-direction-e.md) property.
+With the **BadgePosition** type, the position is mirrored based on the [Direction](Direction) property.
 
 **Type:** [BadgePosition](arkts-arkui-badgeposition-e.md) \| Position
 

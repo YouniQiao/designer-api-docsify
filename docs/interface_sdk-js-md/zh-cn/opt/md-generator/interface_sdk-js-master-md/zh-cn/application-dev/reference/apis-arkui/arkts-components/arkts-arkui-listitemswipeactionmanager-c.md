@@ -36,8 +36,8 @@ static collapse(node: FrameNode): void
 
 | 错误码ID |
 | --- |
-| [100023](../errorcode-node.md#100023-参数错误) |
-| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+| [106203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#106203-传入的节点未挂载到组件树上) |
 
 ## expand
 
@@ -72,5 +72,5 @@ static expand(node: FrameNode, direction: ListItemSwipeActionDirection): void
 
 | 错误码ID |
 | --- |
-| [100023](../errorcode-node.md#100023-参数错误) |
-| [106203](../errorcode-node.md#106203-传入的节点未挂载到组件树上) |
+| [100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) |
+| [106203](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#106203-传入的节点未挂载到组件树上) |

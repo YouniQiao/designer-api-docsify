@@ -15,7 +15,7 @@ Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## subWindowOptions
@@ -27,7 +27,7 @@ subWindowOptions?: SubWindowOptions
 Parameters used for creating a child window. There is no default value. This parameter is mandatory when  
 **windowAttribute** is set to **SUB_WINDOW**. Otherwise, the window fails to be created.
 
-**Type:** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i-sys.md)
+**Type:** [SubWindowOptions](arkts-arkui-window-subwindowoptions-i.md)
 
 **Since:** 14
 
@@ -117,7 +117,7 @@ windowRect: Rect
 
 Rectangular area of the window.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 14
 

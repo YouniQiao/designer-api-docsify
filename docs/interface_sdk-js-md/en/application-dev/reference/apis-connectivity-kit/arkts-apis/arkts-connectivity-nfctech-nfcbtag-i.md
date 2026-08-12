@@ -1,8 +1,8 @@
 # NfcBTag
 
-Provides interfaces to create an {@code NfcBTag} and perform I/O operations on the tag.&lt;p&gt;This class inherits from the {@link TagSession} abstract class and provides interfaces to create an{@code NfcBTag} and obtain the tag information.
+Provides interfaces to create an {@code NfcBTag} and perform I/O operations on the tag.&lt;p&gt;This class inherits from the [TagSession](TagSession) abstract class and provides interfaces to create an{@code NfcBTag} and obtain the tag information.
 
-**Inheritance/Implementation:** NfcBTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** NfcBTag extends [TagSession](TagSession)
 
 **Since:** 12
 
@@ -42,6 +42,16 @@ Obtains the application data of a tag.
 | --- | --- |
 | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the application data of the tag. |
 
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcB tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let respAppData : number[] = nfcB.getRespAppData();
+console.info("nfcB respAppData: " + respAppData);
+```
+
 ## getRespProtocol
 
 ArkTS-Dyn:
@@ -71,4 +81,14 @@ Obtains the protocol information of a tag.
 | Type | Description |
 | --- | --- |
 | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the protocol information of the tag. |
+
+## Examples
+
+```TypeScript
+import { tag } from '@kit.ConnectivityKit';
+
+// Obtain the correct nfcB tag by using the tag.TagInfo API in @ohos.nfc.tag.
+let respProtocol : number[] = nfcB.getRespProtocol();
+console.info("nfcB respProtocol: " + respProtocol);
+```
 

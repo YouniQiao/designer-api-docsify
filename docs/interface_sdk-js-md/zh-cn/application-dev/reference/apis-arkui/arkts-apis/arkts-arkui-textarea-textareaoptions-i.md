@@ -60,7 +60,7 @@ text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<strin
 
 Sets the current value of TextArea.
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| Bindable&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| Bindable&lt;Resource&gt; \| Bindable&lt;string&gt;
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt;
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## getAppNativeMemInfoWithCache
@@ -17,7 +17,7 @@ Obtains the memory information of the application process. This API uses the cac
 > **NOTE：**
 > 
 > Reading **\/proc/{pid}/smaps_rollup** is time-consuming. Therefore, you are advised not to use this API in the
-> main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md/arkts-taskpool.md) or [@ohos.worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md) to
+> main thread. You can use [@ohos.taskpool](../../apis-arkts/arkts-apis/arkts-taskpool.md#taskpool) or [@ohos.worker](@ohos.worker) to
 > enable asynchronous threads to avoid application frame freezing.
 
 **Since:** 20

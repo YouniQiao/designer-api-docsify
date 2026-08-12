@@ -64,7 +64,7 @@ accessibilityDescription?: ResourceStr
 
 默认值："单指双击即可执行"。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -120,7 +120,7 @@ accessibilityText?: ResourceStr
 
 默认值：有label默认值为当前项label属性内容，没有设置label时，默认值为" "。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -168,7 +168,7 @@ label?: ResourceStr
 
 图标标签描述。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -208,7 +208,7 @@ value: ResourceStr
 
 图标资源。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

@@ -1,6 +1,6 @@
 # RadioConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md)。
+开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。
 
 **继承/实现关系：** RadioConfiguration extends [CommonConfiguration<RadioConfiguration>](CommonConfiguration<RadioConfiguration>)
 
@@ -48,7 +48,7 @@ triggerChange: Callback<boolean>
 
 值为true时，表示从未选中变为选中。值为false时，表示从选中变为未选中。
 
-**类型：** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
+**类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 12
 

@@ -81,7 +81,7 @@ spanPosition: RichEditorSpanPosition
 
 The position of the text span.
 
-**Type:** [RichEditorSpanPosition](../arkts-components/arkts-arkui-richeditorspanposition-i.md)
+**Type:** [RichEditorSpanPosition](arkts-arkui-richeditor-richeditorspanposition-i.md)
 
 **Since:** 23
 
@@ -141,7 +141,7 @@ urlStyle?: RichEditorUrlStyle
 
 RichEditor url style.
 
-**Type:** [RichEditorUrlStyle](../arkts-components/arkts-arkui-richeditorurlstyle-i.md)
+**Type:** [RichEditorUrlStyle](arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **Since:** 23
 
@@ -181,7 +181,7 @@ valueResource?: Resource
 
 The resource string of the symbol span.
 
-**Type:** [Resource](arkts-arkui-resource-t.md)
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

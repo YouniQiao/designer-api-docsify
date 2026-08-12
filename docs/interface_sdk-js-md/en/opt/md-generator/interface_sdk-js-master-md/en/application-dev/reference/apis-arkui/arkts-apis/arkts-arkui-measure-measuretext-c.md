@@ -11,7 +11,7 @@ Defines the Measure interface.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from 'kits/@kit.ArkUI';
+import { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## measureText
@@ -27,7 +27,7 @@ Measures the single-line display width of the specified text. For multi-line tex
 > 
 > - Since API version 12, you can use the
 > [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils12) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [MeasureUtils](arkts-arkui-uicontext.md) object
+> [UIContext](@ohos.arkui.UIContext) to obtain the [MeasureUtils](@ohos.arkui.UIContext) object
 > associated with the current UI context.
 > 
 > - **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**,
@@ -38,7 +38,7 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.MeasureUtils#measureText
+**Substitutes:** [measureText](ohos.arkui.UIContext.MeasureUtils#measureText)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,14 +96,14 @@ Measures the width and height of the given text.
 > 
 > - Since API version 12, you can use the
 > [getMeasureUtils](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getmeasureutils12) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [MeasureUtils](arkts-arkui-uicontext.md) object
+> [UIContext](@ohos.arkui.UIContext) to obtain the [MeasureUtils](@ohos.arkui.UIContext) object
 > associated with the current UI context.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.MeasureUtils#measureTextSize
+**Substitutes:** [measureTextSize](ohos.arkui.UIContext.MeasureUtils#measureTextSize)
 
 **Model restriction:** This API can be used only in the stage model.
 

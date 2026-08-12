@@ -17,7 +17,7 @@ The module provides the capability to manage and invoke functions in the system.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from 'kits/@kit.AbilityKit';
+import { functionManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

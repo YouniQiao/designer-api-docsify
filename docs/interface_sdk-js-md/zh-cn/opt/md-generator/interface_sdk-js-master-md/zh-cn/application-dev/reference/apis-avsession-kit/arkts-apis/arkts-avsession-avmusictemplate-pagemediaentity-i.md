@@ -1,8 +1,8 @@
 # PageMediaEntity
 
-标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
 
-**继承/实现关系：** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
+**继承/实现关系：** PageMediaEntity extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
 
 **起始版本：** 23
 

@@ -12,7 +12,7 @@ function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isBadgeDisplayed
+**替代接口：** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#isBadgeDisplayed
+**替代接口：** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -62,4 +62,4 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |

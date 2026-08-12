@@ -38,7 +38,7 @@ status: SelectStatus
 
 Set the group of status.
 
-**Type:** [SelectStatus](../arkts-components/arkts-arkui-selectstatus-e.md)
+**Type:** [SelectStatus](arkts-arkui-checkboxgroup-selectstatus-e.md)
 
 **Since:** 23
 

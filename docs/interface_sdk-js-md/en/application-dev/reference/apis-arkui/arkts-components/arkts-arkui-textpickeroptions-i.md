@@ -24,7 +24,7 @@ Default value: Each column has equal width, calculated by dividing the total com
 
 1. Text truncation occurs when content exceeds column width.2. Invalid values are treated as the default value.3. Individual array elements can be **Undefined** or **Null**, but the entire array cannot be **Undefined[]** or **Null[]**.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)[]
+**Type:** LengthMetrics[]
 
 **Default:** Each column has equal width, calculated by dividing the total component width by the number of columns.
 
@@ -50,9 +50,9 @@ Data selection range of the picker. This parameter cannot be set to an empty arr
 
 **NOTE：**
 
-1. Single-column pickers: string[], [Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md), or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[]2. Multi-column independent pickers: string[][]3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories).5. The type and number of columns in the range cannot be dynamically modified.
+1. Single-column pickers: string[], [Resource](Resource), or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md#TextPickerRangeContent)[]2. Multi-column independent pickers: string[][]3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md#TextCascadePickerRangeContent)[]4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories).5. The type and number of columns in the range cannot be dynamically modified.
 
-**Type:** string[] \| string[][] \| Resource \| TextPickerRangeContent[] \| TextCascadePickerRangeContent[]
+**Type:** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 8
 
@@ -106,9 +106,9 @@ Default value: value of the first item in the data list.
 **NOTE：**
 
 1. Since API version 10, this parameter supports two-way binding through  
- [\$\$](../../../ui/state-management/arkts-two-way-sync.md).2. The [Resource](../arkts-apis/arkts-arkui-resource-t.md/arkts-arkui-resource-t.md) type is supported since API version 20.3. This parameter works only when the picker contains text only. It does not work when the picker contains images or mixed content.4. Single-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)5. Multi-column pickers: [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md/arkts-arkui-resourcestr-t.md)[]
+ [\$\$](../../../ui/state-management/arkts-two-way-sync.md).2. The [Resource](Resource) type is supported since API version 20.3. This parameter works only when the picker contains text only. It does not work when the picker contains images or mixed content.4. Single-column pickers: [ResourceStr](ResourceStr)5. Multi-column pickers: [ResourceStr](ResourceStr)[]
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| ResourceStr[]
+**Type:** ResourceStr \| ResourceStr[]
 
 **Default:** value of the first item [since 8 - 9]
 

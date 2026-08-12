@@ -34,11 +34,11 @@ Initialize ListItem FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ListItemOptions](../arkts-components/arkts-arkui-listitemoptions-i.md) | No | list item options. |
+| options | ListItemOptions | No | list item options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) |  |
+| ListItemAttribute |  |
 

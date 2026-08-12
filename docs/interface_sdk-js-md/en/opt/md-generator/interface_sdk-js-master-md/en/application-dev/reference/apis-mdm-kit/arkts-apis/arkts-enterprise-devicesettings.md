@@ -16,7 +16,7 @@ This module provides enterprise device settings capabilities, including setting 
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from 'kits/@kit.MDMKit';
+import { deviceSettings } from '@kit.MDMKit';
 ```
 
 ## Summary

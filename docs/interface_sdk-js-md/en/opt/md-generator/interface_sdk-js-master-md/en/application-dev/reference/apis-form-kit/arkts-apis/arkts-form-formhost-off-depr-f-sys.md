@@ -17,7 +17,7 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** @ohos.app.form.formHost:formHost#off
+**Substitutes:** [off](@ohos.app.form.formHost:formHost#off)
 
 <!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void--><!--Device-formHost-function off(type: 'formUninstall', callback?: Callback<string>): void-End-->
 

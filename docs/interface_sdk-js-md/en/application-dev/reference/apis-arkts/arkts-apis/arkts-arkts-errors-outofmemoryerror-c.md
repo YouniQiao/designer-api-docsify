@@ -2,7 +2,7 @@
 
 Represents an error that occurs when memory allocation fails
 
-**Inheritance/Implementation:** OutOfMemoryError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** OutOfMemoryError extends [Error](Error)
 
 **Since:** 26.0.0
 

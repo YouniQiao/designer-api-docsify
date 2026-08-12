@@ -4,8 +4,8 @@
 
 | 名称 | 值 | 说明 |
 | -- | -- | -- |
-| [ALWAYS_DARK](#always_dark) | 0 | 系统始终为深色。 |
-| [ALWAYS_LIGHT](#always_light) | 1 |
+| [ALWAYS_DARK](arkts-arkui-uiappearance-darkmode-e.md) | 0 | 系统始终为深色。 |
+| [ALWAYS_LIGHT](arkts-arkui-uiappearance-darkmode-e.md) | 1 |
 
 **起始版本：** 20
 

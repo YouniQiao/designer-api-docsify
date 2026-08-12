@@ -11,7 +11,7 @@ Defines TCPSocket connection parameters.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## address
@@ -22,7 +22,7 @@ address: NetAddress
 
 Bound IP address and port number.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 10
 

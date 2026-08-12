@@ -188,7 +188,7 @@ weight: number
 
 系统字体的字重。
 
-取值范围：[100,900]，取值间隔为100，分别对应[FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md/arkts-arkgraphics2d-text-fontweight-e.md)枚举中的值。
+取值范围：[100,900]，取值间隔为100，分别对应[FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md#FontWeight)枚举中的值。
 
 默认值：100
 
@@ -212,7 +212,7 @@ width: number
 
 系统字体的宽度。
 
-取值范围：[1,9]，取值间隔为1，分别对应[FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md/arkts-arkgraphics2d-text-fontwidth-e.md)枚举中的值。
+取值范围：[1,9]，取值间隔为1，分别对应[FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md#FontWidth)枚举中的值。
 
 **类型：** number
 

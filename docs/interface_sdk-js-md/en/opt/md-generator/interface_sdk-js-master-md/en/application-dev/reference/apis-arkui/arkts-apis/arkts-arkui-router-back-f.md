@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { router } from 'kits/@kit.ArkUI';
+import { router } from '@kit.ArkUI';
 ```
 
 ## back
@@ -18,14 +18,14 @@ Returns to the previous page or a specified page, which deletes all pages betwee
 > 
 > - Since API version 10, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 8
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#back](arkts-arkui-arkui-uicontext-router-c.md#back)(options?:
+**Substitutes:** [back](@ohos.arkui.UIContext:Router#back(options?:)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,14 +58,14 @@ Returns to the specified page, which deletes all pages between the current page 
 > 
 > - Since API version 12, you can use the
 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](arkts-arkui-uicontext.md) to obtain the [Router](arkts-arkui-uicontext.md) object associated
+> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
 > with the current UI context.
 
 **Since:** 12
 
 **Deprecated since:** 18
 
-**Substitutes:** [@ohos.arkui.UIContext:Router#back](arkts-arkui-arkui-uicontext-router-c.md#back)(index:
+**Substitutes:** [back](@ohos.arkui.UIContext:Router#back(index:)
 
 **Model restriction:** This API can be used only in the stage model.
 

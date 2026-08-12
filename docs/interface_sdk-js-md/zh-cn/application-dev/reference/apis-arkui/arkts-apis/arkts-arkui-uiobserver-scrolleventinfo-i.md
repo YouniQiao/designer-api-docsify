@@ -18,7 +18,7 @@ axis?: Axis
 
 滚动轴。
 
-**类型：** [Axis](arkts-arkui-axis-e.md)
+**类型：** Axis
 
 **起始版本：** 26.0.0
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from 'kits/@kit.AbilityKit';
+import { overlay } from '@kit.AbilityKit';
 ```
 
 ## getTargetOverlayModuleInfos
@@ -24,16 +24,16 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| targetModuleName | string | Yes |
+| [targetModuleName](arkts-ability-overlaymoduleinfo-i.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;OverlayModuleInfo&gt;&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
 
 ## Examples
 
@@ -78,21 +78,21 @@ Obtains the OverlayModuleInfo associated with the specified target module. Modul
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| targetModuleName | string | Yes |
+| [targetModuleName](arkts-ability-overlaymoduleinfo-i.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;OverlayModuleInfo&gt;&gt; |
+| Promise & lt;Array & lt;OverlayModuleInfo & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) |
 
 ## Examples
 

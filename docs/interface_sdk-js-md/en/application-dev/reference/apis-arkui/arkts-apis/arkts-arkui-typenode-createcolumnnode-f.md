@@ -29,5 +29,5 @@ Create a FrameNode of Column type.On API 26.0.0 and above, It can also create a 
 
 | Type | Description |
 | --- | --- |
-| [Column](arkts-arkui-typenode-column-t.md) | Return Column type FrameNode. |
+| Column | Return Column type FrameNode. |
 

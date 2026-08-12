@@ -1,8 +1,8 @@
 # Material
 
-材质类型，继承自[SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)。
+材质类型，继承自[SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)。
 
-**继承/实现关系：** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**继承/实现关系：** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **起始版本：** 12
 
@@ -76,7 +76,7 @@ readonly materialType: MaterialType
 
 材质类型。
 
-**类型：** [MaterialType](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialtype-e.md)
+**类型：** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
 **起始版本：** 12
 

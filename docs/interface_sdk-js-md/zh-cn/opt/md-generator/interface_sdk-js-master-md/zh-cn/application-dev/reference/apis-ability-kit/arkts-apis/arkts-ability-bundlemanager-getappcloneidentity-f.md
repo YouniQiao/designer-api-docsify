@@ -26,15 +26,15 @@ function getAppCloneIdentity(uid: number): Promise<AppCloneIdentity>
 
 | 类型 |
 | --- |
-| Promise&lt;AppCloneIdentity&gt; |
+| Promise & lt;AppCloneIdentity & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700021](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-指定的uid无效) |
 
 ## 示例
 

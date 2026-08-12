@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SplitLayout } from 'kits/@kit.ArkUI';
+import { SplitLayout } from '@kit.ArkUI';
 ```
 
 ## Summary

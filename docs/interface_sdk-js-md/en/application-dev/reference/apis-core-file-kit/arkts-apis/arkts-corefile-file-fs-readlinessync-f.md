@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## readLinesSync
@@ -27,7 +27,7 @@ Reads the text content of a file line by line. This API returns the result synch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | No | Options for reading the text. The options are as follows:&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 

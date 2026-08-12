@@ -45,10 +45,10 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;TextSpanType&gt; | 是 |
-| content | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;CustomBuilder&gt; | 是 |
-| responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;TextResponseType&gt; | 是 |
-| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SelectionContainerMenuOptions&gt; | 否 |
+| spanType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextSpanType](../arkts-components/arkts-arkui-textspantype-e.md)&gt; | 是 |
+| content | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 |
+| responseType | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[TextResponseType](../arkts-components/arkts-arkui-textresponsetype-e.md)&gt; | 是 |
+| options | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | 否 |
 
 **返回值：**
 
@@ -84,7 +84,7 @@ caretColor(color: Optional<ResourceColor>): SelectionContainerAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ResourceColor&gt; | 是 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -136,7 +136,7 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 > **说明：**
 > 
-> 当同时为当前场景设置了[bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#bindselectionmenu)和editMenuOptions时，优先使用
+> 当同时为当前场景设置了[bindSelectionMenu](#bindSelectionMenu)和editMenuOptions时，优先使用
 > bindSelectionMenu，editMenuOptions不生效。bindSelectionMenu用于完全自定义菜单风格和触发条件，由开发者定义所有菜单项；editMenuOptions用于在系统默认菜单基础上添加扩
 > 展项，触发条件不变。建议根据自定义程度需求选择。
 
@@ -154,7 +154,7 @@ editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): Selectio
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| editMenu | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SelectionContainerEditMenuOptions&gt; | 是 |
+| editMenu | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | 是 |
 
 **返回值：**
 
@@ -204,9 +204,9 @@ onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#textjoinstyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textJoinStyle)配置决定。
 > 
-> - 仅当容器级[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onwillcopy)返回true时，该回调才会触发。
+> - 仅当容器级[onWillCopy](#onWillCopy)返回true时，该回调才会触发。
 
 **起始版本：** 26.0.0
 
@@ -278,9 +278,9 @@ onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAtt
 
 > **说明：**
 > 
-> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#textjoinstyle)配置决定。
+> - 回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由[textJoinStyle](#textJoinStyle)配置决定。
 > 
-> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#oncopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
+> - 返回false时，会阻止本次跨节点复制及容器级[onCopy](#onCopy)回调触发，但不会影响各Text子组件已独立处理完成的复制事件逻辑。
 
 **起始版本：** 26.0.0
 
@@ -333,7 +333,7 @@ selectedBackgroundColor(color: Optional<ResourceColor>): SelectionContainerAttri
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;ResourceColor&gt; | 是 |
+| color | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[ResourceColor](arkts-arkui-resourcecolor-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -351,9 +351,9 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 > **说明：**
 > 
-> - 该配置会影响[onWillCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#onwillcopy)、
-> [onCopy](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#oncopy)、
-> [bindSelectionMenu](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md#bindselectionmenu)相关回调中返回的文本内容。
+> - 该配置会影响[onWillCopy](#onWillCopy)、
+> [onCopy](#onCopy)、
+> [bindSelectionMenu](#bindSelectionMenu)相关回调中返回的文本内容。
 > 
 > - 该配置也会影响系统内置菜单项中依赖文本拼接结果的逻辑。例如，选择两个Text节点中的文本时，若配置为SelectionContainerTextJoinStyle.NEWLINE，执行复制后两段文本之间会插入换行符；若配置
 > 为SelectionContainerTextJoinStyle.DIRECT，执行复制后两段文本会直接拼接。
@@ -372,7 +372,7 @@ textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContai
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;SelectionContainerTextJoinStyle&gt; | 是 |
+| style | [Optional](../arkts-components/arkts-arkui-optional-t.md)&lt;[SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | 是 |
 
 **返回值：**
 

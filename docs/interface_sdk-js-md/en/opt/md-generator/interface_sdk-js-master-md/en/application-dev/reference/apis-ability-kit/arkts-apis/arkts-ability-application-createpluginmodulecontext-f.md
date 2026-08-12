@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { application } from 'kits/@kit.AbilityKit';
+import { application } from '@kit.AbilityKit';
 ```
 
 ## createPluginModuleContext
@@ -27,7 +27,7 @@ Creates the context of a plugin under the current application based on the conte
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes |
-| pluginBundleName | string | Yes |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | Yes |
 | pluginModuleName | string | Yes |
 
 **Return value:**

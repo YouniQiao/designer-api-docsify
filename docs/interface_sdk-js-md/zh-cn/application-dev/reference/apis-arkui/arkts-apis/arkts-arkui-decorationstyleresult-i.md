@@ -18,7 +18,7 @@ color: ResourceColor
 
 装饰线颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ style?: TextDecorationStyle
 
 装饰线样式。
 
-**类型：** [TextDecorationStyle](arkts-arkui-enums-textdecorationstyle-e.md)
+**类型：** TextDecorationStyle
 
 **起始版本：** 12
 
@@ -90,7 +90,7 @@ type: TextDecorationType
 
 装饰线类型。
 
-**类型：** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
+**类型：** TextDecorationType
 
 **起始版本：** 12
 

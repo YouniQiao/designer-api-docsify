@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from 'kits/@kit.ArkUI';
+import { curves } from '@kit.ArkUI';
 ```
 
 ## responsiveSpringMotion
@@ -36,5 +36,5 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) |  |
+| ICurve |  |
 

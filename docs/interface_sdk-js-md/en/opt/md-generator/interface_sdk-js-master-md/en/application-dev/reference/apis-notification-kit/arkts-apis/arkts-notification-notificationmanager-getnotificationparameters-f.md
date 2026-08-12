@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## getNotificationParameters
@@ -13,7 +13,7 @@ function getNotificationParameters(id: number, label?: string): Promise<Notifica
 ```
 
 Obtains some information about the **wantAgent** field in   
-[NotificationRequest](arkts-notification-notificationmanager-notificationrequest-t.md). This API uses a promise to return the result.
+[NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest). This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -34,16 +34,16 @@ Obtains some information about the **wantAgent** field in
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;NotificationParameters&gt; |
+| Promise & lt;NotificationParameters & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [1600001](../errorcode-notification.md#1600001-internal-error) |
-| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
+| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
+| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 

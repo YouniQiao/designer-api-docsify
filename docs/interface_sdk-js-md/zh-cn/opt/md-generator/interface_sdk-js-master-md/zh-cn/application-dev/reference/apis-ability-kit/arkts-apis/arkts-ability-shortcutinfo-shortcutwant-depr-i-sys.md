@@ -2,13 +2,13 @@
 
 > **说明：**
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](#ShortcutWant)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [shortcutInfo:ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)
+**替代接口：** [ShortcutWant](#ShortcutWant)
 
 <!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
 
@@ -30,7 +30,7 @@ readonly targetBundle: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetBundle
+**替代接口：** [targetBundle](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetBundle)
 
 <!--Device-ShortcutWant-readonly targetBundle: string--><!--Device-ShortcutWant-readonly targetBundle: string-End-->
 
@@ -52,7 +52,7 @@ readonly targetClass: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetAbility
+**替代接口：** [targetAbility](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetAbility)
 
 <!--Device-ShortcutWant-readonly targetClass: string--><!--Device-ShortcutWant-readonly targetClass: string-End-->
 

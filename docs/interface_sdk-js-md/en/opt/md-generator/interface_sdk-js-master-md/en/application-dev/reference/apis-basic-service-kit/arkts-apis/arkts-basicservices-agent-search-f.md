@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## search
@@ -13,7 +13,7 @@ function search(callback: AsyncCallback<Array<string>>): void
 ```
 
 Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
+[Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -31,8 +31,8 @@ Searches for task IDs based on
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## search
@@ -42,7 +42,7 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
 Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md). This API uses an asynchronous callback to return the result.
+[Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -61,8 +61,8 @@ Searches for task IDs based on
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## search
@@ -72,7 +72,7 @@ function search(filter?: Filter): Promise<Array<string>>
 ```
 
 Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md). This API uses a promise to return the result.
+[Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result.
 
 **Since:** 10
 
@@ -90,11 +90,11 @@ Searches for task IDs based on
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

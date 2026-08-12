@@ -2,7 +2,7 @@
 
 自定义弹窗的内容，继承自[BaseDialogOptions](../../../reference/apis-arkui/js-apis-promptAction copy.md#basedialogoptions11)。
 
-**继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)
+**继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
 
 **起始版本：** 23
 
@@ -20,7 +20,7 @@ backgroundBlurStyle?: BlurStyle
 
 弹窗背板模糊材质。&lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。&lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -42,7 +42,7 @@ backgroundColor?: ResourceColor
 
 设置弹窗背板颜色。&lt;br/&gt;默认值：Color.Transparent&lt;br/&gt;**说明：** &lt;br/&gt;backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 23
 
@@ -142,7 +142,7 @@ height?: Dimension
 
 设置弹窗背板的高度。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认最大值：0.9 *（窗口高度 - 安全区域）。&lt;br /&gt;- 百分比参数方式：弹窗参考高度为（窗口高度 - 安全区域），在此基础上调小或调大。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 23
 
@@ -182,7 +182,7 @@ width?: Dimension
 
 设置弹窗背板的宽度。&lt;br /&gt;**说明：**&lt;br&gt;- 默认最大值：400vp &lt;br /&gt;- 百分比参数方式：弹窗参考宽度基于所在窗口宽度调整。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 23
 

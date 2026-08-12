@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getPluginBundlePathForSelf
@@ -25,7 +25,7 @@ Obtains the installation path of a specified plugin in the current
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pluginBundleName | string | Yes |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | Yes |
 
 **Return value:**
 
@@ -37,7 +37,7 @@ Obtains the installation path of a specified plugin in the current
 
 | Error Code ID |
 | --- |
-| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

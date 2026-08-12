@@ -28,15 +28,15 @@ Defines DepthComponent Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| background | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | Yes | Background resource (required). |
+| background | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | Background resource (required). |
 | options | [DepthComponentOptions](arkts-arkui-depthcomponent-depthcomponentoptions-i-sys.md) | No | DepthComponent options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Subcomponents of DepthComponent. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Subcomponents of DepthComponent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DepthComponentAttribute](../arkts-components/arkts-arkui-depthcomponent-attribute.md) |  |
+| [DepthComponentAttribute](arkts-arkui-depthcomponent-depthcomponentattribute-i-sys.md) |  |
 
 
 ## DepthComponent
@@ -68,12 +68,12 @@ Defines DepthComponent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DepthComponentAttribute&gt; | Yes | DepthComponent attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DepthComponentAttribute](arkts-arkui-depthcomponent-depthcomponentattribute-i-sys.md)&gt; | Yes | DepthComponent attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DepthComponentAttribute](../arkts-components/arkts-arkui-depthcomponent-attribute.md) |  |
+| [DepthComponentAttribute](arkts-arkui-depthcomponent-depthcomponentattribute-i-sys.md) |  |
 

@@ -33,6 +33,44 @@ Called when the system closes a mission.
 | --- | --- | --- |
 | mission | number | Yes |
 
+## Examples
+
+```TypeScript
+import { missionManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let listener: missionManager.MissionListener = {
+  onMissionCreated: (mission) => {
+    console.info(`onMissionCreated mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionDestroyed: (mission) => {
+    console.info(`onMissionDestroyed mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionSnapshotChanged: (mission) => {
+    console.info(`onMissionSnapshotChanged mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionMovedToFront: (mission) => {
+    console.info(`onMissionMovedToFront mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionLabelUpdated: (mission) => {
+    console.info(`onMissionLabelUpdated mission: ${JSON.stringify(mission)}`);
+  },
+  onMissionIconUpdated: (mission, icon) => {
+    console.info(`onMissionIconUpdated mission: ${JSON.stringify(mission)}`);
+    console.info(`onMissionIconUpdated icon: ${JSON.stringify(icon)}`);
+  },
+  onMissionClosed: (mission) => {
+    console.info(`onMissionClosed mission: ${JSON.stringify(mission)}`);
+  }
+};
+
+try {
+  let listenerId = missionManager.on('mission', listener);
+} catch (paramError) {
+  console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+}
+```
+
 ## onMissionCreated
 
 ```TypeScript
@@ -55,6 +93,10 @@ Called when the system creates a mission.
 | --- | --- | --- |
 | mission | number | Yes |
 
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
+
 ## onMissionDestroyed
 
 ```TypeScript
@@ -76,6 +118,10 @@ Called when the system destroys a mission.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mission | number | Yes |
+
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
 
 ## onMissionIconUpdated
 
@@ -100,6 +146,10 @@ Called when the system updates the icon of a mission.
 | mission | number | Yes |
 | icon | image.PixelMap | Yes |
 
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
+
 ## onMissionLabelUpdated
 
 ```TypeScript
@@ -121,6 +171,10 @@ Called when the system updates the label of a mission.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mission | number | Yes |
+
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
 
 ## onMissionMovedToFront
 
@@ -144,6 +198,10 @@ Called when the system moves a mission to the foreground.
 | --- | --- | --- |
 | mission | number | Yes |
 
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).
+
 ## onMissionSnapshotChanged
 
 ```TypeScript
@@ -165,3 +223,7 @@ Called when the system updates the snapshot of a mission.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mission | number | Yes |
+
+## Examples
+
+For details, see [onMissionClosed](#onmissionclosed9).

@@ -22,5 +22,5 @@ Callback invoked when an error occurs during background resource loading.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [DepthComponentErrorEvent](../arkts-components/arkts-arkui-depthcomponenterrorevent-i-sys.md) | Yes |  |
+| error | [DepthComponentErrorEvent](arkts-arkui-depthcomponent-depthcomponenterrorevent-i-sys.md) | Yes |  |
 

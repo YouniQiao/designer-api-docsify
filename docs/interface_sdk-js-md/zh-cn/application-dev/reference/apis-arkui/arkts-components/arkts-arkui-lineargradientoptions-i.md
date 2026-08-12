@@ -74,7 +74,7 @@ Defines the direction of linear gradient.
 
 Anonymous Object Rectification.
 
-**类型：** [GradientDirection](../arkts-apis/arkts-arkui-gradientdirection-e.md)
+**类型：** GradientDirection
 
 **默认值：** GradientDirection.Bottom
 

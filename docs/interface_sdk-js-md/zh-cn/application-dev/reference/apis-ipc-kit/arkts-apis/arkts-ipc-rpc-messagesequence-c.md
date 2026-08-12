@@ -47,7 +47,7 @@ static closeFileDescriptor(fd: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
 ## 示例
 
@@ -202,8 +202,8 @@ static dupFileDescriptor(fd: int): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900013](../errorcode-rpc.md#1900013-系统调用dup失败) | Failed to call dup. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900013-系统调用dup失败) | Failed to call dup. |
 
 ## 示例
 
@@ -562,9 +562,9 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 从MessageSequence读取ArrayBuffer类型数据。
 
-- 必须与[writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writearraybuffer)配对使用。  
+- 必须与[writeArrayBuffer](#writeArrayBuffer)配对使用。  
 - 读取typeCode必须与写入typeCode一致，顺序必须匹配。  
-- typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md)。
+- typeCode必须正确匹配，不匹配会导致数据异常或错误，建议根据业务类型选择合适的[TypeCode](arkts-ipc-rpc-typecode-e.md#TypeCode)。
 
 **起始版本：** 12
 
@@ -590,8 +590,8 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -625,11 +625,11 @@ try {
 readAshmem(): Ashmem
 ```
 
-从MessageSequence读取匿名共享对象。使用前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)方法进行内存映射。
+从MessageSequence读取匿名共享对象。使用前需先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem)方法进行内存映射。
 
 - readAshmem()获取对象。  
-- [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)映射内存。  
-- [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)读取数据。  
+- [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem)映射内存。  
+- [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readDataFromAshmem)读取数据。  
 - unmapAshmem()取消映射。  
 - closeAshmem()关闭对象。  
 - 必须先映射才能读取数据。  
@@ -654,7 +654,7 @@ readAshmem(): Ashmem
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -722,7 +722,7 @@ readBoolean(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -769,8 +769,8 @@ readBooleanArray(dataIn: boolean[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -821,7 +821,7 @@ readBooleanArray(): boolean[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -856,7 +856,7 @@ readByte(): int
 
 从MessageSequence实例中读取字节值。
 
-- 必须与[writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)配对使用。  
+- 必须与[writeByte](#writeByte)配对使用。  
 - 一次写入对应一次读取。
 
 **起始版本：** 9
@@ -877,7 +877,7 @@ readByte(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -930,8 +930,8 @@ readByteArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1009,7 +1009,7 @@ readByteArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1063,7 +1063,7 @@ readChar(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1116,8 +1116,8 @@ readCharArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1196,7 +1196,7 @@ readCharArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1252,7 +1252,7 @@ readDouble(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1305,8 +1305,8 @@ readDoubleArray(dataIn: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1382,7 +1382,7 @@ readDoubleArray(): double[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1415,10 +1415,10 @@ readException(): void
 - 在调用sendMessageRequest收到响应后调用。  
 - 在每次IPC/RPC调用后优先调用此方法。  
 - 如有异常立即处理并终止后续数据读取，异常处理后建议调用reclaim()释放MessageSequence对象。  
-- 此方法与[writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)方法配对使用。  
-- 调用顺序：服务端处理请求 → [writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception) → 客户端收到响应 →   
-[readException](arkts-ipc-rpc-messagesequence-c.md#readexception) - 如果服务端未调用  
-[writeNoException](arkts-ipc-rpc-messagesequence-c.md#writenoexception)，调用此方法会失败。
+- 此方法与[writeNoException](#writeNoException)方法配对使用。  
+- 调用顺序：服务端处理请求 → [writeNoException](#writeNoException) → 客户端收到响应 →   
+[readException](#readException) - 如果服务端未调用  
+[writeNoException](#writeNoException)，调用此方法会失败。
 
 **起始版本：** 9
 
@@ -1432,7 +1432,7 @@ readException(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1526,7 +1526,7 @@ readFileDescriptor(): int
 
 从MessageSequence中读取文件描述符。接收端读取到的是映射后的新文件描述符编号，与发送端写入的描述符编号不同，但指向同一个文件资源。读取后建议及时使用并关闭，防止资源泄漏。如需长期使用，可调用dupFileDescriptor复制描述符。
 
-- 必须与[writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writefiledescriptor)配对使用。  
+- 必须与[writeFileDescriptor](#writeFileDescriptor)配对使用。  
 - 不要依赖源端的fd编号。  
 - 读取后需要管理生命周期。  
 - 建议及时使用避免资源浪费。  
@@ -1550,7 +1550,7 @@ readFileDescriptor(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1606,7 +1606,7 @@ readFloat(): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1659,8 +1659,8 @@ readFloatArray(dataIn: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1736,7 +1736,7 @@ readFloatArray(): double[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1794,7 +1794,7 @@ readInt(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1851,8 +1851,8 @@ readIntArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1928,7 +1928,7 @@ readIntArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -1957,7 +1957,7 @@ readInterfaceToken(): string
 
 从MessageSequence对象中读取接口描述符，接口描述符按写入MessageSequence的顺序读取，本地对象可使用该信息检验本次通信。
 
-- 必须与[writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeinterfacetoken)配对使用。  
+- 必须与[writeInterfaceToken](#writeInterfaceToken)配对使用。  
 - 读取前应确保缓冲区中有可读数据。  
 - 建议在收到IPC请求后立即读取校验。
 
@@ -1979,7 +1979,7 @@ readInterfaceToken(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2035,7 +2035,7 @@ readLong(): long
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2088,8 +2088,8 @@ readLongArray(dataIn: long[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2165,7 +2165,7 @@ readLongArray(): long[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2217,9 +2217,9 @@ readParcelable(dataIn: Parcelable): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2286,9 +2286,9 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900012](../errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js回调方法执行失败) | Failed to call the JS callback function. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2346,7 +2346,7 @@ readRawData(size: number): number[]
 
 **废弃版本：** 11
 
-**替代接口：** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readrawdatabuffer)(size:
+**替代接口：** [readRawDataBuffer](readRawDataBuffer(size:)
 
 <!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
@@ -2368,8 +2368,8 @@ readRawData(size: number): number[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2409,7 +2409,7 @@ readRawDataBuffer(size: int): ArrayBuffer
 - 需与写入时的数据大小匹配。  
 - 该接口是一次性接口,不允许在一次parcel通信中多次调用。  
 - 大数据量传输时注意系统资源占用。  
-- 必须与[writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)配对使用。
+- 必须与[writeRawDataBuffer](#writeRawDataBuffer)配对使用。
 
 **起始版本：** 11
 
@@ -2435,8 +2435,8 @@ readRawDataBuffer(size: int): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2494,8 +2494,8 @@ readRemoteObject(): IRemoteObject
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2557,8 +2557,8 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2618,7 +2618,7 @@ readRemoteObjectArray(): IRemoteObject[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2664,7 +2664,7 @@ readShort(): int
 
 从MessageSequence实例中读取短整数值。
 
-- 必须与[writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)配对使用。  
+- 必须与[writeShort](#writeShort)配对使用。  
 - 注意写入时的取值范围[-2^15, 2^15-1]，超出此范围会导致数据截断。
 
 **起始版本：** 9
@@ -2685,7 +2685,7 @@ readShort(): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2738,8 +2738,8 @@ readShortArray(dataIn: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2815,7 +2815,7 @@ readShortArray(): int[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2866,7 +2866,7 @@ readString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2918,8 +2918,8 @@ readStringArray(dataIn: string[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -2970,7 +2970,7 @@ readStringArray(): string[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -3055,14 +3055,14 @@ rewindRead(pos: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 开始读取数据的目标位置，以字节为单位。用于重新定位MessageSequence的读指针，值应在 [0, [getSize](arkts-ipc-rpc-messagesequence-c.md#getsize)]范围内。 |
+| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 开始读取数据的目标位置，以字节为单位。用于重新定位MessageSequence的读指针，值应在 [0, [getSize](#getSize)]范围内。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-读取messagesequence数据失败) | Failed to read data from the message sequence. |
 
 ## 示例
 
@@ -3113,14 +3113,14 @@ rewindWrite(pos: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 开始写入数据的目标位置，以字节为单位。用于重新定位MessageSequence的写指针，值应在 [0, [getSize](arkts-ipc-rpc-messagesequence-c.md#getsize)]范围内。 |
+| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 开始写入数据的目标位置，以字节为单位。用于重新定位MessageSequence的写指针，值应在 [0, [getSize](#getSize)]范围内。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3175,9 +3175,9 @@ setCapacity(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
-| [1900011](../errorcode-rpc.md#1900011-内存分配失败) | Memory allocation failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [1900011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900011-内存分配失败) | Memory allocation failed. |
 
 ## 示例
 
@@ -3228,8 +3228,8 @@ setSize(size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3257,12 +3257,12 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 
 将ArrayBuffer类型数据写入MessageSequence对象。
 
-- 此方法与[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer)方法配对使用。  
+- 此方法与[readArrayBuffer](#readArrayBuffer)方法配对使用。  
 - 写入的typeCode必须与读取的typeCode一致，否则会导致数据异常。  
-- 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readarraybuffer)读取数据。  
+- 调用顺序：先调用writeArrayBuffer()写入数据 → 再调用[readArrayBuffer](#readArrayBuffer)读取数据。  
 - typeCode参数决定了数据的写入和读取方式。  
 - 读写typeCode不匹配会导致数据解析错误。  
-- 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md)枚举值。
+- 必须根据实际数据类型选择正确的[TypeCode](arkts-ipc-rpc-typecode-e.md#TypeCode)枚举值。
 
 **起始版本：** 12
 
@@ -3283,8 +3283,8 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3318,15 +3318,15 @@ writeAshmem(ashmem: Ashmem): void
 将指定的匿名共享对象写入此MessageSequence。
 
 - 创建Ashmem对象：Ashmem.create()。  
-- 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) +   
-[writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)。  
+- 映射内存并写入数据：[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem) +   
+[writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writeDataToAshmem)。  
 - 将Ashmem写入MessageSequence：writeAshmem()。  
-- 接收端读取Ashmem：[readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem)。  
+- 接收端读取Ashmem：[readAshmem](#readAshmem)。  
 - 接收端映射内存并读取数据：mapReadWriteAshmem() + readDataFromAshmem()。  
 - 此方法与readAshmem()方法配对使用。  
-- 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](arkts-ipc-rpc-messagesequence-c.md#readashmem) →   
-[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) →   
-[readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)。  
+- 调用顺序：writeAshmem() → 传输MessageSequence → [readAshmem](#readAshmem) →   
+[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapReadWriteAshmem) →   
+[readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readDataFromAshmem)。  
 - 使用前需先创建Ashmem对象并写入数据。
 
 **起始版本：** 9
@@ -3347,8 +3347,8 @@ writeAshmem(ashmem: Ashmem): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3388,7 +3388,7 @@ writeBoolean(val: boolean): void
 
 将布尔值写入MessageSequence实例。
 
-- 必须与[readBoolean](arkts-ipc-rpc-messagesequence-c.md#readboolean)配对使用。  
+- 必须与[readBoolean](#readBoolean)配对使用。  
 - 一次写入对应一次读取。
 
 **起始版本：** 9
@@ -3409,8 +3409,8 @@ writeBoolean(val: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3437,7 +3437,7 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 将布尔数组写入MessageSequence实例。
 
-- 必须与[readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readbooleanarray)配对使用。  
+- 必须与[readBooleanArray](#readBooleanArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -3458,8 +3458,8 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3495,9 +3495,9 @@ writeByte(val: int): void
 - 存储范围:[0, 255](无符号)或[-128, 127](有符号)。  
 - 数据对齐方式为字节对齐。  
 - 数值必须在字节范围内，超出范围可能导致数据截断。  
-- 读取时必须使用[readByte](arkts-ipc-rpc-messagesequence-c.md#readbyte)方法配对读取。  
-- 不适合传输大范围数值，大范围数值建议使用[writeInt](arkts-ipc-rpc-messagesequence-c.md#writeint)/  
-[writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)等。
+- 读取时必须使用[readByte](#readByte)方法配对读取。  
+- 不适合传输大范围数值，大范围数值建议使用[writeInt](#writeInt)/  
+[writeLong](#writeLong)等。
 
 **起始版本：** 9
 
@@ -3517,8 +3517,8 @@ writeByte(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3551,7 +3551,7 @@ writeByteArray(byteArray: int[]): void
 
 将字节数组写入MessageSequence实例。
 
-- 必须与[readByteArray](arkts-ipc-rpc-messagesequence-c.md#readbytearray)配对使用。  
+- 必须与[readByteArray](#readByteArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -3572,8 +3572,8 @@ writeByteArray(byteArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3607,7 +3607,7 @@ writeChar(val: int): void
 
 将单个字符值写入MessageSequence实例。
 
-- 必须与[readChar](arkts-ipc-rpc-messagesequence-c.md#readchar)配对使用。  
+- 必须与[readChar](#readChar)配对使用。  
 - 一次写入对应一次读取。
 
 **起始版本：** 9
@@ -3628,8 +3628,8 @@ writeChar(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3662,7 +3662,7 @@ writeCharArray(charArray: int[]): void
 
 将单个字符数组写入MessageSequence实例。
 
-- 必须与[readCharArray](arkts-ipc-rpc-messagesequence-c.md#readchararray)配对使用。  
+- 必须与[readCharArray](#readCharArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -3683,8 +3683,8 @@ writeCharArray(charArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3717,7 +3717,7 @@ writeDouble(val: double): void
 
 将双精度浮点值写入MessageSequence实例。
 
-- 必须与[readDouble](arkts-ipc-rpc-messagesequence-c.md#readdouble)配对使用。  
+- 必须与[readDouble](#readDouble)配对使用。  
 - 一次写入对应一次读取。
 
 **起始版本：** 9
@@ -3738,8 +3738,8 @@ writeDouble(val: double): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3772,7 +3772,7 @@ writeDoubleArray(doubleArray: double[]): void
 
 将双精度浮点数组写入MessageSequence实例。
 
-- 必须与[readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readdoublearray)配对使用。  
+- 必须与[readDoubleArray](#readDoubleArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -3793,8 +3793,8 @@ writeDoubleArray(doubleArray: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3855,8 +3855,8 @@ writeFileDescriptor(fd: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3904,14 +3904,14 @@ writeFloat(val: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要写入的双精度浮点值。适用于传输浮点数据(如坐标、比例、测量值等)。 必须与[readFloat](arkts-ipc-rpc-messagesequence-c.md#readfloat)配对使用。 |
+| val | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 要写入的双精度浮点值。适用于传输浮点数据(如坐标、比例、测量值等)。 必须与[readFloat](#readFloat)配对使用。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3944,7 +3944,7 @@ writeFloatArray(floatArray: double[]): void
 
 将双精度浮点数组写入MessageSequence实例。
 
-- 必须与[readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readfloatarray)配对使用。  
+- 必须与[readFloatArray](#readFloatArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -3965,8 +3965,8 @@ writeFloatArray(floatArray: double[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -3998,9 +3998,9 @@ writeInt(val: int): void
 ```
 
 将整数值写入MessageSequence实例。 调用此方法后，整数值会被以32位有符号整数形式存入缓冲区当前写指针位置，并自动更新写指针。该方法适用于传输标准整数数据。对于小范围数值建议使用  
-[writeByte](arkts-ipc-rpc-messagesequence-c.md#writebyte)/[writeShort](arkts-ipc-rpc-messagesequence-c.md#writeshort)提高效率；对于大范围数值建议使用[writeLong](arkts-ipc-rpc-messagesequence-c.md#writelong)。
+[writeByte](#writeByte)/[writeShort](#writeShort)提高效率；对于大范围数值建议使用[writeLong](#writeLong)。
 
-- 必须与[readInt](arkts-ipc-rpc-messagesequence-c.md#readint)配对使用。  
+- 必须与[readInt](#readInt)配对使用。  
 - 一次写入对应一次读取  
 - 占用4字节(32位)存储空间。  
 - 采用系统默认字节序存储。  
@@ -4026,8 +4026,8 @@ writeInt(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4061,7 +4061,7 @@ writeIntArray(intArray: int[]): void
 
 将整数数组写入MessageSequence实例。
 
-- 必须与[readIntArray](arkts-ipc-rpc-messagesequence-c.md#readintarray)配对使用。  
+- 必须与[readIntArray](#readIntArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4082,8 +4082,8 @@ writeIntArray(intArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4110,7 +4110,7 @@ writeInterfaceToken(token: string): void
 
 将接口描述符写入MessageSequence对象，远端对象可使用该信息校验本次通信。适用于需要验证通信双方接口一致性的场景，如跨进程服务调用、安全通信验证以及标识服务端提供的接口类型。建议使用唯一且有意义的描述符字符串（如"com.example.service"），避免使用敏感信息，长度应小于40960。调用此方法后，接口描述符字符串会被序列化并存入MessageSequence缓冲区。远端在接收到通信请求后，可读取该描述符来验证请求来源的合法性。
 
-- 必须与[readInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#readinterfacetoken)配对使用。  
+- 必须与[readInterfaceToken](#readInterfaceToken)配对使用。  
 - 长度超过限制会抛出参数错误异常。
 
 **起始版本：** 9
@@ -4131,8 +4131,8 @@ writeInterfaceToken(token: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4165,7 +4165,7 @@ writeLong(val: long): void
 
 将长整数值写入MessageSequence实例。
 
-- 必须与[readLong](arkts-ipc-rpc-messagesequence-c.md#readlong)配对使用。  
+- 必须与[readLong](#readLong)配对使用。  
 - 一次写入对应一次读取。
 
 **起始版本：** 9
@@ -4186,8 +4186,8 @@ writeLong(val: long): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4220,7 +4220,7 @@ writeLongArray(longArray: long[]): void
 
 将长整数数组写入MessageSequence实例。
 
-- 必须与[readLongArray](arkts-ipc-rpc-messagesequence-c.md#readlongarray)配对使用。  
+- 必须与[readLongArray](#readLongArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4241,8 +4241,8 @@ writeLongArray(longArray: long[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4269,10 +4269,10 @@ writeNoException(): void
 
 向MessageSequence写入“指示未发生异常”的信息。通常在IPC/RPC通信的服务端实现以及onRemoteMessageRequest回调中调用。
 
-- 此方法与[readException](arkts-ipc-rpc-messagesequence-c.md#readexception)方法配对使用。  
+- 此方法与[readException](#readException)方法配对使用。  
 - 服务端在处理请求完成后，应调用writeNoException()写入未发生异常的信息。  
-- 客户端在收到响应后，应调用[readException](arkts-ipc-rpc-messagesequence-c.md#readexception)读取异常信息。  
-- 如果服务端未调用writeNoException()，客户端调用[readException](arkts-ipc-rpc-messagesequence-c.md#readexception)会读取失败。
+- 客户端在收到响应后，应调用[readException](#readException)读取异常信息。  
+- 如果服务端未调用writeNoException()，客户端调用[readException](#readException)会读取失败。
 
 **起始版本：** 9
 
@@ -4286,7 +4286,7 @@ writeNoException(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4355,8 +4355,8 @@ writeParcelable(val: Parcelable): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4403,7 +4403,7 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 
 将可序列化对象数组写入MessageSequence实例。适用于批量传输多个自定义数据结构对象的场景，如传输多条业务记录、批量配置信息、多个实体对象等。
 
-- 必须与[readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readparcelablearray)配对使用。  
+- 必须与[readParcelableArray](#readParcelableArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4424,8 +4424,8 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4487,7 +4487,7 @@ writeRawData(rawData: number[], size: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writerawdatabuffer)(rawData:
+**替代接口：** [writeRawDataBuffer](writeRawDataBuffer(rawData:)
 
 <!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
@@ -4504,8 +4504,8 @@ writeRawData(rawData: number[], size: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4564,8 +4564,8 @@ writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4596,7 +4596,7 @@ try {
 writeRemoteObject(obj: IRemoteObject): void
 ```
 
-序列化远程对象并将其写入[MessageSequence](arkts-ipc-rpc-messagesequence-c.md)对象。调用此方法后，IRemoteObject对象会被序列化为特定格式并存入MessageSequence的缓冲区中，同时会更新内部写指针位置。该序列化对象可在接收端通过readRemoteObject方法反序列化读取。
+序列化远程对象并将其写入[MessageSequence](#MessageSequence)对象。调用此方法后，IRemoteObject对象会被序列化为特定格式并存入MessageSequence的缓冲区中，同时会更新内部写指针位置。该序列化对象可在接收端通过readRemoteObject方法反序列化读取。
 
 - 只能写入有效的IRemoteObject对象，传入无效对象会抛出异常。  
 - 序列化后的对象占用固定大小的缓冲区空间。  
@@ -4620,9 +4620,9 @@ writeRemoteObject(obj: IRemoteObject): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900008](../errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-非法的ipc对象) | The proxy or remote object is invalid. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4661,7 +4661,7 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 将IRemoteObject对象数组写入MessageSequence。适用于需要传递多个远程对象的场景，如批量注册多个服务代理、传递多个回调接口、多服务端点管理等。
 
-- 必须与[readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readremoteobjectarray)配对使用。  
+- 必须与[readRemoteObjectArray](#readRemoteObjectArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4682,8 +4682,8 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4729,7 +4729,7 @@ writeShort(val: int): void
 将短整数值写入MessageSequence实例。
 
 - 超出范围会导致数据截断。  
-- 必须与[readShort](arkts-ipc-rpc-messagesequence-c.md#readshort)配对使用。  
+- 必须与[readShort](#readShort)配对使用。  
 - 一次写入对应一次读取。
 
 **起始版本：** 9
@@ -4750,8 +4750,8 @@ writeShort(val: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4784,7 +4784,7 @@ writeShortArray(shortArray: int[]): void
 
 将短整数数组写入MessageSequence实例。
 
-- 必须与[readShortArray](arkts-ipc-rpc-messagesequence-c.md#readshortarray)配对使用。  
+- 必须与[readShortArray](#readShortArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4805,8 +4805,8 @@ writeShortArray(shortArray: int[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4833,10 +4833,10 @@ writeString(val: string): void
 
 将字符串值写入MessageSequence实例。调用此方法后，字符串会被序列化存入缓冲区。写入时会先存储字符串长度，再存储字节数据。
 
-- 此方法与[readString](arkts-ipc-rpc-messagesequence-c.md#readstring)方法配对使用。  
+- 此方法与[readString](#readString)方法配对使用。  
 - 先写入长度，再写入内容。  
 - 支持多语言字符集。  
-- 长度信息便于[readString](arkts-ipc-rpc-messagesequence-c.md#readstring)确定读取边界。  
+- 长度信息便于[readString](#readString)确定读取边界。  
 - 注意区分字符数和字节数，中文字符占用更多字节。  
 - 长字符串会占用较多缓冲区空间。  
 - 空字符串也可以正常写入。
@@ -4861,8 +4861,8 @@ writeString(val: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 
@@ -4890,7 +4890,7 @@ writeStringArray(stringArray: string[]): void
 
 将字符串数组写入MessageSequence实例。
 
-- 必须与[readStringArray](arkts-ipc-rpc-messagesequence-c.md#readstringarray)配对使用。  
+- 必须与[readStringArray](#readStringArray)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4911,8 +4911,8 @@ writeStringArray(stringArray: string[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-向messagesequence写入数据失败) | Failed to write data to the message sequence. |
 
 ## 示例
 

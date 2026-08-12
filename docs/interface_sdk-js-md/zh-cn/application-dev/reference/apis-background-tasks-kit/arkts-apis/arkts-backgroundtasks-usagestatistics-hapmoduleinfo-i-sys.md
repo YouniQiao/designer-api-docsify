@@ -180,7 +180,7 @@ formRecords: Array<HapFormInfo>
 
 FA中卡片的使用记录。
 
-**类型：** Array&lt;HapFormInfo&gt;
+**类型：** Array&lt;[HapFormInfo](arkts-backgroundtasks-usagestatistics-hapforminfo-i-sys.md)&gt;
 
 **起始版本：** 9
 

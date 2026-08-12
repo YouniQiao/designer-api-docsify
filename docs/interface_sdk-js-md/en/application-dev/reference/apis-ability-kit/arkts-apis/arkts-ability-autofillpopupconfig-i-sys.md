@@ -20,7 +20,7 @@ placement?: PopupPlacement
 
 Position of the auto-fill pop-up. If this parameter is not set, the position is not updated.
 
-**Type:** [PopupPlacement](arkts-ability-autofillmanager-popupplacement-t-sys.md)
+**Type:** [PopupPlacement](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ popupSize?: PopupSize
 
 Width and height of the auto-fill pop-up. If this parameter is not set, the width and height are not updated.
 
-**Type:** [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md)
+**Type:** [PopupSize](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)
 
 **Since:** 12
 

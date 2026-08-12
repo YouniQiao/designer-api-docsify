@@ -36,8 +36,8 @@ SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. application which is not a system application uses system API. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed, |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. application which is not a system application uses system API. |
 
 ## 示例
 
@@ -87,18 +87,18 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;SyncFolder&gt;&gt; | Promise对象。返回所有网盘应用的同步根列表。 |
+| Promise&lt;Array&lt;[SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)&gt;&gt; | Promise对象。返回所有网盘应用的同步根列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
-| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) | Temporary failure. Retry is recommended (e.g., network issues). |
-| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) | Cloud disk is not allowed on this device. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
-| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) | IPC communication failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Device not supported. |
+| [34400014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) | Temporary failure. Retry is recommended (e.g., network issues). |
+| [34400015](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) | Cloud disk is not allowed on this device. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [34400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) | IPC communication failed. |
 
 ## 示例
 

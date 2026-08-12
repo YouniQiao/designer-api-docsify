@@ -20,7 +20,7 @@ Defines the ArkTS Array reduction function, which is used by the 'reduceRight' A
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | previousValue | AccType | Yes |
-| currentValue | ElementType | Yes |
+| [currentValue](../../apis-notification-kit/arkts-apis/arkts-notification-notificationcontent-notificationprogress-i.md) | ElementType | Yes |
 | currentIndex | number | Yes |
 | array | ArrayType | Yes |
 

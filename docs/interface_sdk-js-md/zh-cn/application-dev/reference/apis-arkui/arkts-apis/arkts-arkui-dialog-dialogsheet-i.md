@@ -38,7 +38,7 @@ icon?: ResourceStr
 
 图标内容。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.1.0
 
@@ -60,7 +60,7 @@ title: ResourceStr
 
 标题内容。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.1.0
 

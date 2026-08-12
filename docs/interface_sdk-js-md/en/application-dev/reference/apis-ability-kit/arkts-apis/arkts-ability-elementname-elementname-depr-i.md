@@ -1,12 +1,12 @@
 # ElementName
 
 The module provides element name information, which can be obtained through  
-[Context.getElementName](arkts-ability-context-t.md).
+[Context.getElementName](./../app/context).
 
 > **NOTE：**
 > 
 > The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-ElementName](arkts-ability-elementname-elementname-depr-i.md) instead.
+> [bundleManager-ElementName](#ElementName) instead.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ The module provides element name information, which can be obtained through
 
 **Deprecated since:** 9
 
-**Substitutes:** [elementName:ElementName](arkts-ability-elementname-elementname-depr-i.md)
+**Substitutes:** [ElementName](#ElementName)
 
 <!--Device-unnamed-export interface ElementName--><!--Device-unnamed-export interface ElementName-End-->
 
@@ -38,7 +38,7 @@ Ability name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ElementName#abilityName
+**Substitutes:** [abilityName](ohos.bundle.bundleManager/bundleManager.ElementName#abilityName)
 
 <!--Device-ElementName-abilityName: string--><!--Device-ElementName-abilityName: string-End-->
 
@@ -62,7 +62,7 @@ Bundle name.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ElementName#bundleName
+**Substitutes:** [bundleName](ohos.bundle.bundleManager/bundleManager.ElementName#bundleName)
 
 <!--Device-ElementName-bundleName: string--><!--Device-ElementName-bundleName: string-End-->
 
@@ -86,7 +86,7 @@ Device ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ElementName#deviceId
+**Substitutes:** [deviceId](ohos.bundle.bundleManager/bundleManager.ElementName#deviceId)
 
 <!--Device-ElementName-deviceId?: string--><!--Device-ElementName-deviceId?: string-End-->
 
@@ -110,7 +110,7 @@ Short name of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ElementName#shortName
+**Substitutes:** [shortName](ohos.bundle.bundleManager/bundleManager.ElementName#shortName)
 
 <!--Device-ElementName-shortName?: string--><!--Device-ElementName-shortName?: string-End-->
 
@@ -134,7 +134,7 @@ Resource ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.ElementName#uri
+**Substitutes:** [uri](ohos.bundle.bundleManager/bundleManager.ElementName#uri)
 
 <!--Device-ElementName-uri?: string--><!--Device-ElementName-uri?: string-End-->
 

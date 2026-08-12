@@ -2,7 +2,7 @@
 
 Represents the matching result returned by string.prototype.matchAll(),or the non iterative result of RegExp.prototype.exec() in global mode.
 
-**Inheritance/Implementation:** RegExpMatchArray extends [RegExpResultArray](arkts-arkts-regexp-regexpresultarray-c.md)
+**Inheritance/Implementation:** RegExpMatchArray extends [RegExpResultArray](arkts-arkts-regexp-regexpresultarray-c.md#RegExpResultArray)
 
 **Since:** 26.0.0
 

@@ -12,7 +12,7 @@ Registers a listener to observe the mission status.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#on
+**Substitutes:** [on](ohos.app.ability.missionManager/missionManager#on)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

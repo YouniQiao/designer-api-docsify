@@ -58,7 +58,7 @@ state: State
 
 任务的状态。state标识任务的当前状态，不建议修改此值。&lt;br/&gt;从API version 11开始，该接口支持在原子化服务中使用。
 
-**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **默认值：** State::WAITING
 

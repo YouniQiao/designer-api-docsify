@@ -2,7 +2,7 @@
 
 Defines a common callback that carries an error parameter.It is used to return error information when an asynchronous operation fails.The specific error code is defined by each API.For details, please refer to the error code description of the corresponding API.
 
-The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-i.md) type.
+The information returned by the callback is an error parameter of the [BusinessError](arkts-basicservices-base-businesserror-i.md#BusinessError) type.
 
 **Since:** 6
 
@@ -13,7 +13,7 @@ The information returned by the callback is an error parameter of the [BusinessE
 ## Modules to Import
 
 ```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from 'kits/@kit.BasicServicesKit';
+import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
 ```
 
 ## [[Call]]

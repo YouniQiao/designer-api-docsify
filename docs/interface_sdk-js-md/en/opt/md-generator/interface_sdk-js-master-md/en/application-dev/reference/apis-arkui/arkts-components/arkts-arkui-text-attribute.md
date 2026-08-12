@@ -51,13 +51,13 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
 Sets the custom selection menu.
 
 The long-press response duration of **bindSelectionMenu** is 600 ms while that of  
-[bindContextMenu](arkts-arkui-commonmethod-c.md#bindcontextmenu)is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence.
+[bindContextMenu](arkts-arkui-commonmethod-c.md#bindContextMenu)is 800 ms. When both are bound and their triggering methods are set to long press, **bindSelectionMenu** takes precedence.
 
 When the custom menu is too long, it is recommended that nest a [Scroll](./scroll) component inside to prevent the keyboard from being obscured.
 
 > **NOTE：**
 > 
-> This API cannot be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier).
+> This API cannot be called within [attributeModifier](CommonMethod#attributeModifier).
 > 
 > When [editMenuOptions](TextAttribute#editMenuOptions) is used for configuring the text selection menu, the
 > system's default style and trigger conditions are preserved.
@@ -121,7 +121,7 @@ Sets whether to enable leading punctuation compression.
 > - Leading punctuation is not compressed by default.
 > 
 > - For the range of punctuation marks that support leading compression, see
-> [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md/arkts-arkgraphics2d-text-paragraphstyle-i.md).
+> [ParagraphStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle).
 
 **Since:** 23
 
@@ -146,7 +146,7 @@ contentTransition(transition: Optional<ContentTransition>)
 ```
 
 Applies a transition animation to text content. Supports numeric flip animation via  
-[NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md/arkts-arkui-numerictexttransition-c.md).
+[NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md#NumericTextTransition).
 
 **Since:** 20
 
@@ -162,7 +162,7 @@ Applies a transition animation to text content. Supports numeric flip animation 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| transition | [Optional](arkts-arkui-optional-t.md)&lt;ContentTransition&gt; | Yes |
+| transition | [Optional](arkts-arkui-optional-t.md)&lt;[ContentTransition](../arkts-apis/arkts-arkui-contenttransition-c.md)&gt; | Yes |
 
 ## copyOption
 
@@ -176,7 +176,7 @@ Since API version 20, copied text from the **Text** component includes HTML-form
 
 - When the **Text** component contains child elements, only [Span](./span) and  
 [ImageSpan](./image_span) support HTML-formatted pasteboard content.  
-- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md/arkts-arkui-styledstring-c.md#tohtml) for supported HTML conversion scope.
+- For styled strings, refer to [toHtml](../arkts-apis/arkts-arkui-styledstring-c.md#toHtml) for supported HTML conversion scope.
 
 When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**:
 
@@ -185,7 +185,7 @@ When **copyOption** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice
 - To support **Ctrl+C** copying, also set [textSelectable](TextAttribute#textSelectable) to  
 **TextSelectableMode.SELECTABLE_FOCUSABLE**.
 
-The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelgesture) on the parent. For implementation guidance, see  
+The **Text** component listens for **onClick**, which is a non-bubbling event. To allow parent components to respond to clicks within the **Text** area, use [parallelGesture](arkts-arkui-commonmethod-c.md#parallelGesture) on the parent. For implementation guidance, see  
 [Example 7: Setting Text Recognition](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#example-7-setting-text-recognition).
 
 Because widgets do not have the long press event, the menu will not be displayed when users long press text.
@@ -272,9 +272,9 @@ draggable(value: boolean)
 
 Sets the drag effect of the selected text.
 
-This attribute cannot be used together with the [onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) event.
+This attribute cannot be used together with the [onDragStart](CommonMethod#onDragStart) event.
 
-If set to **true**, **draggable** must be used in conjunction with [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md/arkts-corefile-file-fs-copyoptions-i.md). When  
+If set to **true**, **draggable** must be used in conjunction with [CopyOptions](CopyOptions). When  
 **copyOptions** is set to **CopyOptions.InApp** or **CopyOptions.LocalDevice**, the selected text becomes draggable and can be copied into a text box.
 
 **Since:** 9
@@ -302,7 +302,7 @@ Sets the extended options for the custom menu, including the text content, icon,
 When  
 [disableMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablemenuitems20) or
 
-[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](../arkts-apis/arkts-arkui-editmenuoptions-i.md/arkts-arkui-editmenuoptions-i.md#oncreatemenu) callback of **editMenuOptions**.
+[disableSystemServiceMenuItems](../../../reference/apis-arkui/arkts-apis-uicontext-textmenucontroller.md#disablesystemservicemenuitems20)is used to disable system service menu items in the text selection menu, the disabled menu options will be excluded from the parameter list in the [onCreateMenu](EditMenuOptions.onCreateMenu) callback of **editMenuOptions**.
 
 > **NOTE：**
 > 
@@ -354,7 +354,7 @@ For the settings to work, **overflow** must be set to **TextOverflow.Ellipsis** 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [EllipsisMode](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-ellipsismode-e.md) | Yes |
+| value | [EllipsisMode](#ellipsismode) | Yes |
 
 ## enableAutoSpacing
 
@@ -428,7 +428,7 @@ To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** perm
 
 > **NOTE：**
 > 
-> This API can be called within [attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier) since API version 18.
+> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 18.
 
 **Since:** 13
 
@@ -456,7 +456,7 @@ Sets whether to enable entity recognition for selected text. This API only works
 
 When **enableSelectedDataDetector** is set to **true**, all entity types are recognized by default.
 
-This feature is only effective when [CopyOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-copyoptions-i.md/arkts-corefile-file-fs-copyoptions-i.md) is set to **CopyOptions.LocalDevice** or  
+This feature is only effective when [CopyOptions](CopyOptions) is set to **CopyOptions.LocalDevice** or  
 **CopyOptions.CrossDevice**.
 
 **Since:** 22
@@ -521,7 +521,7 @@ Sets the text style, covering the font size, font width, font family, and font s
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| value | [Font](#font) | Yes |
 
 ## font
 
@@ -549,7 +549,7 @@ It is only effective for the **Text** component, not for its child components.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| fontValue | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
+| fontValue | [Font](#font) | Yes |
 | options | [FontSettingOptions](../arkts-apis/arkts-arkui-fontsettingoptions-i.md) | No |
 
 ## fontColor
@@ -586,7 +586,7 @@ Sets the font family.
 
 > **NOTE：**
 > 
-> You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md/arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync) to register custom fonts.
+> You can use [loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync) to register custom fonts.
 
 **Since:** 7
 
@@ -625,14 +625,14 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 > The **Text** component cannot contain both text and the child component **Span** or **ImageSpan**. If both of
 > them exist, only the content in **Span** or **ImageSpan** is displayed.
 > 
-> The typesetting engine rounds down the value of [width](arkts-arkui-commonmethod-c.md#width) to ensure that
+> The typesetting engine rounds down the value of [width](CommonMethod#width(value: Length)) to ensure that
 > the value is an integer. If the typesetting engine rounds up the value instead, the right side of the text may be
 > clipped.
 > 
 > When multiple **Text** components are placed in the [Row](./row) container with no specific layout or space
 > allocation settings configured, the components are laid out based on the maximum size of the container. To make
 > sure the sum of the components' main axis sizes does not exceed the main axis size of the container, you can set
-> [layoutWeight](arkts-arkui-commonmethod-c.md#layoutweight) or use the [flex layout](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+> [layoutWeight](arkts-arkui-commonmethod-c.md#layoutWeight) or use the [flex layout](./common).
 > 
 > The system's default font supports the following ligatures: Th, fb, ff, fb, ffb, ffh, ffi, ffk, ffl, fh, fi, fk,
 > fl, rf, rt, rv, rx, ry. These ligatures may cause unexpected effects of spans and styled strings. Disabling the
@@ -706,7 +706,7 @@ Sets the font style.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes |
+| value | [FontStyle](#fontstyle) | Yes |
 
 ## fontVariations
 
@@ -730,7 +730,7 @@ Set the font variation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [fontVariations](#fontvariations) | Array&lt;FontVariation&gt; | Yes |
+| [fontVariations](#fontvariations) | Array & lt;FontVariation & gt; | Yes |
 
 ## fontWeight
 
@@ -1088,7 +1088,7 @@ The **marqueeOptions** settings take effect only when **textOverflow** is set to
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Optional](arkts-arkui-optional-t.md)&lt;TextMarqueeOptions&gt; | Yes |
+| options | [Optional](arkts-arkui-optional-t.md)&lt;[TextMarqueeOptions](arkts-arkui-textmarqueeoptions-i.md)&gt; | Yes |
 
 ## maxFontScale
 
@@ -1176,7 +1176,7 @@ If **maxLineHeight** is less than **minLineHeight**, **maxLineHeight** takes eff
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | Yes |
+| value | LengthMetrics \| undefined | Yes |
 
 ## maxLines
 
@@ -1287,7 +1287,7 @@ Sets the minimum line height of text. If the value is less than or equal to 0, t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | Yes |
+| value | LengthMetrics \| undefined | Yes |
 
 ## minLines
 
@@ -1301,7 +1301,7 @@ If the actual text height is less than the height for the minimum number of line
 
 When this API and [maxLines](TextAttribute#maxLines) are both set, the minimum line height cannot exceed the maximum line height.
 
-If [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize) is set for the text, the component height is confined within the [constraintSize](arkts-arkui-commonmethod-c.md#constraintsize) bounds.
+If [constraintSize](CommonMethod#constraintSize) is set for the text, the component height is confined within the [constraintSize](CommonMethod#constraintSize) bounds.
 
 **Since:** 22
 
@@ -1343,7 +1343,7 @@ Called when data is copied to the pasteboard, which is displayed when the text b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (value: string) =&gt; void | Yes |
+| callback | (value: string) = & gt; void | Yes |
 
 ## onMarqueeStateChange
 
@@ -1367,7 +1367,7 @@ Called when the marquee animation reaches the specified state.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;MarqueeState&gt; | Yes |
+| callback | Callback&lt;[MarqueeState](arkts-arkui-marqueestate-e.md)&gt; | Yes |
 
 ## onTextSelectionChange
 
@@ -1391,7 +1391,7 @@ Called when the text selection position changes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (selectionStart: number, selectionEnd: number) =&gt; void | Yes |
+| callback | (selectionStart: number, selectionEnd: number) = & gt; void | Yes |
 
 ## onWillCopy
 
@@ -1417,7 +1417,7 @@ Called before the copy operation is performed.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string, boolean&gt; | Yes |
+| callback | Callback & lt;string, boolean & gt; | Yes |
 
 ## optimizeTrailingSpace
 
@@ -1435,7 +1435,7 @@ When **Text.optimizeTrailingSpace** is set to **true**:
 
 When optimizing pure space text by setting [optimizeTrailingSpace](TextAttribute#optimizeTrailingSpace) to  
 **true**, you cannot simultaneously set  
-[backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor),  
+[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor)),  
 [decoration](TextAttribute#decoration), and [textAlign](TextAttribute#textAlign) attributes.
 
 **Since:** 20
@@ -1462,8 +1462,8 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 Sets whether to enable orphan character optimization during text typesetting. If this attribute is not set, orphan character optimization is disabled by default.
 
-Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](TextAttribute#wordBreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md/arkts-arkgraphics2d-text-textstyle-i.md) of the first  
-[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md/arkts-arkgraphics2d-text-textstyle-i.md) of the text to be typeset is either **"zh-Hans"** or  
+Orphan character optimization improves the text layout by handling the orphan character (the first Chinese character of the last line of a paragraph) more efficiently. When enabled, it adjusts line breaks to avoid orphan characters as much as possible. This feature takes effect only when [wordBreak](TextAttribute#wordBreak) is not **BREAK_ALL** and [locale](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) of the first  
+[TextStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textstyle-i.md#TextStyle) of the text to be typeset is either **"zh-Hans"** or  
 **"zh-Hant"**.
 
 **Since**: 26.0.0
@@ -1563,7 +1563,7 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 ```
 
 Applies a transition animation to text content. Supports numeric flip animation via  
-[NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md/arkts-arkui-numerictexttransition-c.md).
+[NumericTextTransition](../arkts-apis/arkts-arkui-numerictexttransition-c.md#NumericTextTransition).
 
 **Since:** 23
 
@@ -1600,7 +1600,7 @@ If the value of **selectionStart** is greater than or equal to that of **selecti
 **textSize** will be used.
 
 If the selection range falls within a truncated or invisible area, selection is ignored. When  
-[clip](arkts-arkui-commonmethod-c.md#clip) is set to **false**, the text outside the parent component can be selected.
+[clip](CommonMethod#clip(value: boolean)) is set to **false**, the text outside the parent component can be selected.
 
 You can obtain the selection range change result through the  
 [onTextSelectionChange](TextAttribute#onTextSelectionChange) API.
@@ -1628,8 +1628,8 @@ You can obtain the selection range change result through the
 shaderStyle(shader: ShaderStyle)
 ```
 
-Applies gradient or solid color effects to text. Supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md/arkts-arkui-radialgradientstyle-c.md),  
-[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md/arkts-arkui-lineargradientstyle-c.md), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md/arkts-arkui-colorshaderstyle-c.md). **shaderStyle**takes precedence over [fontColor](SymbolSpanAttribute#fontColor) and AI-based styling. For solid colors,prefer using [fontColor](SymbolSpanAttribute#fontColor).
+Applies gradient or solid color effects to text. Supports [RadialGradientStyle](../arkts-apis/arkts-arkui-radialgradientstyle-c.md#RadialGradientStyle),  
+[LinearGradientStyle](../arkts-apis/arkts-arkui-lineargradientstyle-c.md#LinearGradientStyle), and [ColorShaderStyle](../arkts-apis/arkts-arkui-colorshaderstyle-c.md#ColorShaderStyle). **shaderStyle**takes precedence over [fontColor](SymbolSpanAttribute#fontColor) and AI-based styling. For solid colors,prefer using [fontColor](SymbolSpanAttribute#fontColor).
 
 **Since:** 20
 
@@ -1671,7 +1671,7 @@ Specify the tail indentation for each line in a text block.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array&lt;LengthMetrics&gt;&gt; | Yes |
+| value | [Optional](arkts-arkui-optional-t.md)&lt;LengthMetrics \| Array & lt;LengthMetrics & gt; & gt; | Yes |
 
 ## textAlign
 
@@ -1684,7 +1684,7 @@ Sets the horizontal alignment of the text.
 The text takes up the full width of the **Text** component.
 
 The vertical position of the text paragraph can be controlled by the  
-[align](arkts-arkui-commonmethod-c.md#align) attribute, but the horizontal position cannot be controlled by  
+[align](CommonMethod#align(value: Alignment)) attribute, but the horizontal position cannot be controlled by  
 **align** in this component. The specific effects are as follows:
 
 - **Alignment.TopStart**, **Alignment.Top**, **Alignment.TopEnd**: Content aligns to the top.  
@@ -1713,7 +1713,7 @@ When **textAlign** is set to **TextAlign.JUSTIFY**, the [wordBreak](TextAttribut
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md) | Yes |
+| value | [TextAlign](#textalign) | Yes |
 
 ## textCase
 
@@ -1763,7 +1763,7 @@ This API takes effect only when the height of the text content exceeds the compo
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [textContentAlign](#textcontentalign) | [Optional](arkts-arkui-optional-t.md)&lt;TextContentAlign&gt; | Yes |
+| [textContentAlign](#textcontentalign) | [Optional](arkts-arkui-optional-t.md)&lt;[TextContentAlign](../arkts-apis/arkts-arkui-textcontentalign-e.md)&gt; | Yes |
 
 ## textDirection
 
@@ -1787,7 +1787,7 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| direction | [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md) \| undefined | Yes |
+| direction | TextDirection \| undefined | Yes |
 
 ## textIndent
 
@@ -1821,7 +1821,7 @@ textOverflow(options: TextOverflowOptions)
 
 Sets the display mode for overflowing text.
 
-When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md) is set to **TextOverflow.None**, **TextOverflow.Clip**, or  
+When [TextOverflowOptions](arkts-arkui-textoverflowoptions-i.md#TextOverflowOptions) is set to **TextOverflow.None**, **TextOverflow.Clip**, or  
 **TextOverflow.Ellipsis**:
 
 - **TextOverflow.None** or **TextOverflow.Clip**: Text is truncated when it exceeds the maximum number of lines.  
@@ -1839,8 +1839,8 @@ When **TextOverflowOptions** is set to **TextOverflow.MARQUEE**:
 
 - Text scrolls horizontally within a single line.  
 - [maxLines](TextAttribute#maxLines) and[copyOption](TextAttribute#copyOption) are ignored.  
-- The [clip](arkts-arkui-commonmethod-c.md#clip) attribute of the **Text** component defaults to **true**.  
-- [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md/arkts-arkui-customspan-c.md) is not supported in marquee mode.  
+- The [clip](CommonMethod#clip(value: boolean)) attribute of the **Text** component defaults to **true**.  
+- [CustomSpan](../arkts-apis/arkts-arkui-customspan-c.md#CustomSpan) is not supported in marquee mode.  
 - Behavior of [textAlign](TextAttribute#textAlign): If the text does not scroll, **textAlign** applies; if  
 the text scrolls, **textAlign** is ignored.  
 - Since API version 12, **TextOverflow.MARQUEE** is available for the **ImageSpan** component, where the text and  
@@ -1917,7 +1917,7 @@ Since API version 11, this API supports input parameters in an array to implemen
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | Yes |
+| value | [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt; | Yes |
 
 ## textVerticalAlign
 
@@ -1935,8 +1935,8 @@ Sets the vertical alignment of the text.
 > - The effect of this attribute is noticeable only when the same font size is used in a paragraph and
 > [lineHeight](TextAttribute#lineHeight) is set, or when different font sizes are mixed in a paragraph.
 > Otherwise, the effect is the same regardless of whether this attribute is set or which enum value is used. The
-> **SuperscriptStyle** in [TextStyle](../arkts-apis/arkts-arkui-textstyle-i.md/arkts-arkui-textstyle-i.md) takes effect only when the value of
-> [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md/arkts-arkui-textverticalalign-e.md) is set to **TextVerticalAlign.BASELINE**. In other vertical
+> **SuperscriptStyle** in [TextStyle](TextStyle) takes effect only when the value of
+> [TextVerticalAlign](TextVerticalAlign) is set to **TextVerticalAlign.BASELINE**. In other vertical
 > alignment modes, the superscript and subscript texts are displayed in the same way as the normal text.
 
 **Since:** 20
@@ -1981,4 +1981,4 @@ To break text by character, with the excess part displayed as an ellipsis (...),
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md) | Yes |
+| value | [WordBreak](#wordbreak) | Yes |

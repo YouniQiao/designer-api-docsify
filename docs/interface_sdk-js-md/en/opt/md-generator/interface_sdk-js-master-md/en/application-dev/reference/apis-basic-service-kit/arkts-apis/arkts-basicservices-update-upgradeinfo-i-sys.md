@@ -13,7 +13,7 @@ Represents update information.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## businessType
@@ -24,7 +24,7 @@ businessType: BusinessType
 
 Upgrade service type.
 
-**Type:** [BusinessType](arkts-basicservices-update-businesstype-i-sys.md)
+**Type:** BusinessType
 
 **Since:** 9
 

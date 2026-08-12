@@ -13,7 +13,7 @@ An image effect class used to add a specified effect to the effect chain through
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -57,7 +57,7 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+| Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 ## Examples
 
@@ -154,13 +154,13 @@ Adds the blur effect to the effect chain and returns the instance of the chain. 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Blur radius, in px. Value range: [0, +∞). A larger blur radius produces a more pronounced blur effect. No effect is applied when a negative value is passed in. |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Shader tile mode, which affects the blur effect at the image edges. |
+| tileMode | TileMode | Yes | Shader tile mode, which affects the blur effect at the image edges. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
+| Filter | Returns a Filter instance with the added effects, for continuing to add effects or obtaining the processed image. |
 
 ## Examples
 
@@ -261,7 +261,7 @@ Adds the brightness effect to the effect chain and returns the instance of the c
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
+| Filter | Returns the Filter instance with the added effects, for further adding effects or obtaining the processed image. |
 
 ## Examples
 
@@ -451,7 +451,7 @@ Obtains image.PixelMap of the source image to which the effect chain has been ad
 
 **Deprecated since:** 11
 
-**Substitutes:** [effectKit.Filter#getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)
+**Substitutes:** [getEffectPixelMap](#getEffectPixelMap)
 
 <!--Device-Filter-getPixelMap(): image.PixelMap--><!--Device-Filter-getPixelMap(): image.PixelMap-End-->
 
@@ -508,7 +508,7 @@ Adds the grayscale effect to the effect chain and returns the instance of the ch
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
+| Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 ## Examples
 
@@ -592,7 +592,7 @@ Adds the invert effect to the effect chain and returns the instance of the chain
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
+| Filter | Returns the Filter instance with the added effects, which can be used to continue adding effects or obtain the processed image. |
 
 ## Examples
 
@@ -688,13 +688,13 @@ Performs color transformation on the image using a custom color matrix, adds the
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
+| Filter | Filter instance with effects added, which can be used to add more effects or obtain the processed image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. |
 
 ## Examples
 

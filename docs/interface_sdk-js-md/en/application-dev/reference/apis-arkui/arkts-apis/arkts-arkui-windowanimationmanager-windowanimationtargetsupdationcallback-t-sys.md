@@ -21,6 +21,6 @@ Callback function on window animation targets update.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullScreenWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | The fullscreen window target. |
+| fullScreenWindowTarget | WindowAnimationTarget | Yes | The fullscreen window target. |
 | floatingWindowTargets | Array&lt;WindowAnimationTarget&gt; | Yes | All the floating window targets. |
 

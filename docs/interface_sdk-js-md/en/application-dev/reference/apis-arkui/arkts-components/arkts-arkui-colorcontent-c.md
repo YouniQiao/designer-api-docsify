@@ -18,7 +18,7 @@ static readonly ORIGIN: ColorContent
 
 Resets the [fillColor](ImageAttribute#fillColor(value: ResourceColor)) API, effectively the same as not setting [fillColor](ImageAttribute#fillColor(value: ResourceColor)).
 
-**Type:** [ColorContent](../arkts-apis/arkts-arkui-image-colorcontent-c.md)
+**Type:** [ColorContent](arkts-arkui-colorcontent-c.md)
 
 **Since:** 15
 

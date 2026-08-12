@@ -6,7 +6,7 @@ USB端口模式类型。
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md)
+**替代接口：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#PortModeType)
 
 <!--Device-usb-export enum PortModeType--><!--Device-usb-export enum PortModeType-End-->
 
@@ -26,7 +26,7 @@ NONE = 0
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PortModeType.NONE](arkts-basicservices-usbmanager-portmodetype-e-sys.md#none)
+**替代接口：** [NONE](arkts-basicservices-usbmanager-portmodetype-e-sys.md#NONE)
 
 <!--Device-PortModeType-NONE = 0--><!--Device-PortModeType-NONE = 0-End-->
 
@@ -46,7 +46,7 @@ UFP = 1
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PortModeType.UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#ufp)
+**替代接口：** [UFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#UFP)
 
 <!--Device-PortModeType-UFP = 1--><!--Device-PortModeType-UFP = 1-End-->
 
@@ -66,7 +66,7 @@ DFP = 2
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PortModeType.DFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#dfp)
+**替代接口：** [DFP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#DFP)
 
 <!--Device-PortModeType-DFP = 2--><!--Device-PortModeType-DFP = 2-End-->
 
@@ -86,7 +86,7 @@ DRP = 3
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PortModeType.DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#drp)
+**替代接口：** [DRP](arkts-basicservices-usbmanager-portmodetype-e-sys.md#DRP)
 
 <!--Device-PortModeType-DRP = 3--><!--Device-PortModeType-DRP = 3-End-->
 
@@ -106,7 +106,7 @@ NUM_MODES = 4
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.PortModeType.NUM_MODES](arkts-basicservices-usbmanager-portmodetype-e-sys.md#num_modes)
+**替代接口：** [NUM_MODES](arkts-basicservices-usbmanager-portmodetype-e-sys.md#NUM_MODES)
 
 <!--Device-PortModeType-NUM_MODES = 4--><!--Device-PortModeType-NUM_MODES = 4-End-->
 

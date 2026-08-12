@@ -20,6 +20,6 @@ Called when a child component enters or leaves the list display area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | [VisibleListContentInfo](../arkts-components/arkts-arkui-visiblelistcontentinfo-i.md) | Yes | Information about the currently displayed first list item or list item group. |
-| end | [VisibleListContentInfo](../arkts-components/arkts-arkui-visiblelistcontentinfo-i.md) | Yes | Information about the currently displayed last list item or list item group. |
+| start | [VisibleListContentInfo](arkts-arkui-list-visiblelistcontentinfo-i.md) | Yes | Information about the currently displayed first list item or list item group. |
+| end | [VisibleListContentInfo](arkts-arkui-list-visiblelistcontentinfo-i.md) | Yes | Information about the currently displayed last list item or list item group. |
 

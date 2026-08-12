@@ -18,7 +18,7 @@ annulusRegion?: ParticleAnnulusRegion
 
 the description of the annulus region. This parameter is valid only for emitter whose shape is annulus.
 
-**Type:** [ParticleAnnulusRegion](../arkts-components/arkts-arkui-particleannulusregion-i.md)
+**Type:** [ParticleAnnulusRegion](arkts-arkui-particle-particleannulusregion-i.md)
 
 **Since:** 23
 

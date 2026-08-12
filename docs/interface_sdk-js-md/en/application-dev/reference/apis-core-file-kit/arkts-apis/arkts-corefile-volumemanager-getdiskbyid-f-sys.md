@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## getDiskById
@@ -38,7 +38,7 @@ Querying disk information based on the disk ID.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Disk&gt; | return Promise |
+| Promise&lt;[Disk](arkts-corefile-volumemanager-disk-i-sys.md)&gt; | return Promise |
 
 **Error codes:**
 
@@ -46,7 +46,7 @@ Querying disk information based on the disk ID.
 | --- | --- |
 | 13600010 | The input parameter is invalid. |
 | 13600008 | No such object. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 

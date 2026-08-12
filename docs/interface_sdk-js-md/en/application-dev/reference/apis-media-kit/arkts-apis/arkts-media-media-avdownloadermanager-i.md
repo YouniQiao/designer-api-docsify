@@ -13,7 +13,7 @@ Definition of the Offline Download Management Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAVDownloadTask
@@ -128,7 +128,7 @@ Obtains the offline download cache directory of a specified task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
 ## getTaskProgress
 
@@ -170,7 +170,7 @@ Obtains the progress of a specified offline download task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
 ## getTaskStatus
 
@@ -206,7 +206,7 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
 ## offProgressChange
 
@@ -332,8 +332,8 @@ Suspending the download of a specified task
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 
 ## release
 
@@ -381,7 +381,7 @@ Remove a download task from the offline download manager
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 
 ## resumeDownloadTask
 
@@ -411,8 +411,8 @@ Resuming Offline download of a Specified Task
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 
 ## setRequestTimeout
 

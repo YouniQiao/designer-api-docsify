@@ -10,10 +10,10 @@ declare type MethodDecorator = <T>(target: Object, propertyKey: string | symbol,
 | --- | --- | --- |
 | target | Object | Yes |
 | propertyKey | string \| symbol | Yes |
-| descriptor | TypedPropertyDescriptor&lt;T&gt; | Yes |
+| descriptor | [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| TypedPropertyDescriptor&lt;T&gt; \| void |
+| [TypedPropertyDescriptor](arkts-lib-es5-typedpropertydescriptor-i.md)&lt;T&gt; \| void |

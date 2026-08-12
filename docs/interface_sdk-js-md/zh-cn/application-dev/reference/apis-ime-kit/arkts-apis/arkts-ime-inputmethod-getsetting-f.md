@@ -6,7 +6,7 @@
 function getSetting(): InputMethodSetting
 ```
 
-获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。
+获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md#InputMethodSetting)。
 
 **含义/功能**：获取输入法设置实例，用于查询输入法列表、订阅输入法变化事件、查询面板可见性等配置管理操作。
 
@@ -32,7 +32,7 @@ function getSetting(): InputMethodSetting
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800007](../errorcode-inputmethod-framework.md#12800007-输入法设置器异常) | input method setter error. Possible cause: create InputMethodSetting object failed. |
+| [12800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800007-输入法设置器异常) | input method setter error. Possible cause: create InputMethodSetting object failed. |
 
 ## 示例
 

@@ -34,7 +34,7 @@ Obtains the border widths of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Border widths of the child component. |
+| DirectionalEdgesT&lt;number&gt; | Border widths of the child component. |
 
 ## getMargin
 
@@ -60,7 +60,7 @@ Obtains the margin values of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Margin values of the child component. |
+| DirectionalEdgesT&lt;number&gt; | Margin values of the child component. |
 
 ## getPadding
 
@@ -86,7 +86,7 @@ Obtains the padding values of the child component.
 
 | Type | Description |
 | --- | --- |
-| [DirectionalEdgesT](../arkts-apis/arkts-arkui-directionaledgest-i.md)&lt;number&gt; | Padding values of the child component. |
+| DirectionalEdgesT&lt;number&gt; | Padding values of the child component. |
 
 ## measure
 
@@ -112,13 +112,13 @@ Imposes size constraints on the child component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Size constraint. |
+| constraint | ConstraintSizeOptions | Yes | Size constraint. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MeasureResult](../arkts-apis/arkts-arkui-common-measureresult-i.md) | Provides the measurement result of the component. |
+| [MeasureResult](arkts-arkui-measureresult-i.md) | Provides the measurement result of the component. |
 
 ## uniqueId
 

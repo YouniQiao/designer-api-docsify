@@ -21,5 +21,5 @@ Handler of swiper, used in OnAnimationEnd.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | The index of the current swiper. |
-| event | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | The extra information of the animation. |
+| event | SwiperAnimationEvent | Yes | The extra information of the animation. |
 

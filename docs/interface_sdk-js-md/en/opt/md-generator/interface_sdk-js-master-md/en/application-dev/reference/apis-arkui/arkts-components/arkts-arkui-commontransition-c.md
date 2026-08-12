@@ -128,7 +128,7 @@ Sets the translation effect for page transitions.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes |
+| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes |
 
 **Return value:**
 

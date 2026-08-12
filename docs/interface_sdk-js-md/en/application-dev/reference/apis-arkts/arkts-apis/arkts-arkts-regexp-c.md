@@ -2,7 +2,7 @@
 
 Regular expression
 
-**Inheritance/Implementation:** RegExp extends [Object](arkts-arkts-object-c.md)
+**Inheritance/Implementation:** RegExp extends [Object](Object)
 
 **Since:** 24
 
@@ -330,7 +330,7 @@ Returns an iterator that iterates over all matches in the string.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;RegExpMatchArray&gt; | an iterator that iterates over all match results. |
+| IterableIterator&lt;[RegExpMatchArray](arkts-arkts-regexp-regexpmatcharray-c.md)&gt; | an iterator that iterates over all match results. |
 
 ## replace
 

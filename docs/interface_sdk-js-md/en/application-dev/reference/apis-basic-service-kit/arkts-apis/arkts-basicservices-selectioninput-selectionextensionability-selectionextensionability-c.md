@@ -3,11 +3,11 @@
 This module provides APIs for word selection extension, which can implement extended interactions such as searching and translating text using a mouse or touchpad. Word selection extension services can be customized by inheriting SelectionExtensionAbility. You need to declare this ExtensionAbility in the project configuration. For details, see   
 [Developing a Word Selection Extension Ability](../../../basic-services/selectionInput/selection-services-application-guide.md).This module provides the following capabilities:
 
-- Lifecycle management: Use the [onConnect](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md#onconnect) and   
-[onDisconnect](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md#ondisconnect) callbacks to process the connection and disconnection logic.  
+- Lifecycle management: Use the [onConnect](#onConnect) and   
+[onDisconnect](#onDisconnect) callbacks to process the connection and disconnection logic.  
 - **context**: You can use **context** to call   
-[startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of   
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) to create a word selection panel.
+[startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startAbility) to start the target ability in the same app, or use **context** as an input parameter of   
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel) to create a word selection panel.
 
 > **NOTE：**
 > 
@@ -26,7 +26,7 @@ This module provides APIs for word selection extension, which can implement exte
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionAbility } from 'kits/@kit.BasicServicesKit';
+import { SelectionExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
 ## onConnect
@@ -91,7 +91,7 @@ class ServiceExtAbility extends SelectionExtensionAbility {
 onDisconnect(): void
 ```
 
-Defines a callback triggered when the client disconnects from the **SelectionExtensionAbility** (for example, when the user disables the word selection function or switches the word selection app). You can perform cleanup operations for the **onConnect** callback in this callback. For example, you can call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel) to destroy the created panel, or call  
+Defines a callback triggered when the client disconnects from the **SelectionExtensionAbility** (for example, when the user disables the word selection function or switches the word selection app). You can perform cleanup operations for the **onConnect** callback in this callback. For example, you can call [destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroyPanel) to destroy the created panel, or call  
 [off('selectionCompleted')](@ohos.selectionInput.selectionManager:selectionManager.off(type: 'selectionCompleted', callback?: Callback&lt;SelectionInfo&gt;))to unsubscribe from the word selection completion event.
 
 The callback is triggered only when the **SelectionExtensionAbility** is disconnected normally. It is not triggered in cases of abnormal disconnection (for example, process termination due to low memory conditions).
@@ -128,9 +128,9 @@ context: SelectionExtensionContext
 ```
 
 Context of the **SelectionExtensionAbility**. This context is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md). You can use **context** to call   
-[startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startability) to start the target ability in the same app, or use **context** as an input parameter of   
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel) to create a word selection panel.
+[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext). You can use **context** to call   
+[startAbility](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md#startAbility) to start the target ability in the same app, or use **context** as an input parameter of   
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel) to create a word selection panel.
 
 **Type:** [SelectionExtensionContext](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c.md)
 

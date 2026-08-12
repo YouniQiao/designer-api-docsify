@@ -22,13 +22,13 @@ Configures menu item information.
 | Placement.LeftBottom or Placement.RightBottom|
 
 **Table 3 Default menu position when enableArrow is set to true and placement is not set or set to an invalid value**  
-| API| Default Menu Position|
+| [API](../../apis-ability-kit/arkts-apis/arkts-ability-abilitytoolaccessctrl-operationtype-e-sys.md) | Default Menu Position|
 |------|-------------|
-| [bindMenu](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
-| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindmenu) | Placement.BottomLeft |
-| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.Top |
-| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |
-| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindcontextmenuwithresponse) |
+| [bindMenu](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft |
+| [bindMenu&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindMenu) | Placement.BottomLeft |
+| [bindContextMenu&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu) | Placement.Top |
+| [bindContextMenu&lt;sup&gt;12+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenu-1) | Placement.BottomLeft |
+| [bindContextMenuWithResponse&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-commonmethod-c.md#bindContextMenuWithResponse) |
 
 **Since:** 10
 

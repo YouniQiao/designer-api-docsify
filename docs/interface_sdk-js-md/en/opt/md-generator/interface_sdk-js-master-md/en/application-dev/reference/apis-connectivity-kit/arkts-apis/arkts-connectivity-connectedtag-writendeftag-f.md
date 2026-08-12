@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connectedTag } from 'kits/@kit.ConnectivityKit';
+import { connectedTag } from '@kit.ConnectivityKit';
 ```
 
 ## writeNdefTag
@@ -18,7 +18,7 @@ Writes the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#write
+**Substitutes:** [write](ohos.connectedTag/connectedTag#write)
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -36,7 +36,7 @@ Writes the NDEF Data.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Writes the NDEF Data.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.connectedTag/connectedTag#write
+**Substitutes:** [write](ohos.connectedTag/connectedTag#write)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

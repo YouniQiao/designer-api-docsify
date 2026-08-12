@@ -20,7 +20,7 @@ fontColor?: ResourceColor
 
 默认为主题色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 12
 
@@ -40,9 +40,9 @@ fontColor?: ResourceColor
 fontConfigs?: FontConfigs
 ```
 
-字体配置。默认值继承[FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)。
+字体配置。默认值继承[FontConfigs](FontConfigs)。
 
-**类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
+**类型：** FontConfigs
 
 **起始版本：** 24
 
@@ -66,7 +66,7 @@ fontFamily?: ResourceStr
 
 默认为主题字体。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -94,7 +94,7 @@ fontSize?: LengthMetrics
 
 单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 12
 
@@ -118,7 +118,7 @@ fontStyle?: FontStyle
 
 默认值：FontStyle.Normal
 
-**类型：** [FontStyle](arkts-arkui-enums-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 12
 
@@ -194,7 +194,7 @@ strokeColor?: ResourceColor
 
 默认值为字体颜色，设置异常值时取字体颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 20
 
@@ -218,7 +218,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 默认值：StrokeJoinStyle.MITER_JOIN。
 
-**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
+**类型：** StrokeJoinStyle
 
 **起始版本：** 26.0.0
 
@@ -244,7 +244,7 @@ strokeWidth?: LengthMetrics
 
 默认值为0。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 20
 
@@ -268,7 +268,7 @@ superscript?: SuperscriptStyle
 
 默认值：SuperscriptStyle.NORMAL
 
-**类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
+**类型：** SuperscriptStyle
 
 **起始版本：** 20
 

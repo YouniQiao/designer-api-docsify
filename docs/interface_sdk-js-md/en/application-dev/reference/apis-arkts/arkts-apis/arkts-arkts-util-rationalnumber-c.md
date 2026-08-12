@@ -13,7 +13,7 @@ The rational number is mainly to compare rational numbers and obtain the numerat
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## compare

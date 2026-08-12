@@ -130,7 +130,7 @@ policy?: BlurStyleActivePolicy
 
 默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
 
-**类型：** [BlurStyleActivePolicy](../arkts-components/arkts-arkui-blurstyleactivepolicy-e.md)
+**类型：** [BlurStyleActivePolicy](arkts-arkui-common-blurstyleactivepolicy-e.md)
 
 **默认值：** BlurStyleActivePolicy.ALWAYS_ACTIVE
 

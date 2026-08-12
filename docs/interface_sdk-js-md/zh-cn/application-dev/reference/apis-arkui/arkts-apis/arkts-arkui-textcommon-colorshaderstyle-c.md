@@ -1,8 +1,8 @@
 # ColorShaderStyle
 
-显示为纯色。ColorShaderStyle继承自[ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)。
+显示为纯色。ColorShaderStyle继承自[ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)。
 
-**继承/实现关系：** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
+**继承/实现关系：** ColorShaderStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)
 
 **起始版本：** 24
 

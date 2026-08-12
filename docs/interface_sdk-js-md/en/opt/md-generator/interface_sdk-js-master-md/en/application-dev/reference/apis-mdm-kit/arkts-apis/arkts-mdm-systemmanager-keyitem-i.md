@@ -1,6 +1,6 @@
 # KeyItem
 
-Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md) event occurs.
+Enumerates other key information. This refers to the information of other keys that have been pressed when the current [KeyCode](arkts-mdm-systemmanager-keycode-e.md#KeyCode) event occurs.
 
 **Since:** 23
 
@@ -11,7 +11,7 @@ Enumerates other key information. This refers to the information of other keys t
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## downTime
@@ -40,7 +40,7 @@ keyCode: KeyCode
 
 Key code.
 
-**Type:** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
+**Type:** KeyCode
 
 **Since:** 23
 

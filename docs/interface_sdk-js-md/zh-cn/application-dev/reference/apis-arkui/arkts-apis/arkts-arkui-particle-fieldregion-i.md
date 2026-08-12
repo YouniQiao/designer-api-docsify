@@ -40,7 +40,7 @@ shape?: DisturbanceFieldShape
 
 The shape of the field
 
-**类型：** [DisturbanceFieldShape](../arkts-components/arkts-arkui-disturbancefieldshape-e.md)
+**类型：** [DisturbanceFieldShape](arkts-arkui-particle-disturbancefieldshape-e.md)
 
 **默认值：** DisturbanceFieldShape.RECT
 

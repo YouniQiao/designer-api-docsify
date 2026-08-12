@@ -5,7 +5,7 @@ The module provides a set of camera service APIs for you to easily develop a cam
 > **NOTE：**
 > 
 > - This topic describes only system APIs provided by the module. For details about its public APIs, see
-> [@ohos.multimedia.camera (Camera Management)](arkts-multimedia-camera.md).
+> [@ohos.multimedia.camera (Camera Management)](#camera).
 
 **Since:** 10
 
@@ -16,7 +16,7 @@ The module provides a set of camera service APIs for you to easily develop a cam
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## Summary

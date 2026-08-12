@@ -58,7 +58,7 @@ type: GestureControl.GestureType
 
 The type of gesture.
 
-**Type:** GestureControl.GestureType
+**Type:** [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)
 
 **Since:** 23
 

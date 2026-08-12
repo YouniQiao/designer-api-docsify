@@ -1,6 +1,6 @@
 # HdrStaticMetadata
 
-静态元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_STATIC_METADATA关键字对应的值。
+静态元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey)中HDR_STATIC_METADATA关键字对应的值。
 
 **起始版本：** 12
 

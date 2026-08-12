@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ColumnAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

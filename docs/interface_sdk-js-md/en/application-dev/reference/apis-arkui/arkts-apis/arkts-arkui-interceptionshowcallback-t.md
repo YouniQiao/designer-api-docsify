@@ -20,8 +20,8 @@ navigation interception callback using in willShow and didShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | Indicates the starting NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
-| to | [NavDestinationContext](../arkts-components/arkts-arkui-navdestinationcontext-i.md) \| NavBar | Yes | Indicates the destination NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
-| operation | [NavigationOperation](../arkts-components/arkts-arkui-navigationoperation-e.md) | Yes | Indicates the type of stack operation. |
+| from | [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Indicates the starting NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| to | [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) \| [NavBar](arkts-arkui-navbar-t.md) | Yes | Indicates the destination NavDestination or NavBar. <br>Value constraint:If the parameter value is navBar, the navigation home page is displayed. |
+| operation | [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md) | Yes | Indicates the type of stack operation. |
 | isAnimated | boolean | Yes | Indicates whether the transition is animated. |
 

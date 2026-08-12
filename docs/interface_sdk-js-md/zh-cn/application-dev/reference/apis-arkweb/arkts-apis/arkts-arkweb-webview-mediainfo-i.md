@@ -128,7 +128,7 @@ mediaType: MediaType
 
 Type of the media.
 
-**类型：** [MediaType](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-mediatype-e.md)
+**类型：** MediaType
 
 **起始版本：** 23
 

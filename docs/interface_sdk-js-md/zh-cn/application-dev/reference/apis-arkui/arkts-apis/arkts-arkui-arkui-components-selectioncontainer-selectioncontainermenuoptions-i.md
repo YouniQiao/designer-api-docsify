@@ -18,7 +18,7 @@ onAppear?: Callback<string>
 
 选择菜单出现时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ onDisappear?: Callback<void>
 
 选择菜单消失时触发。默认值为空，不触发该回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
 
@@ -58,7 +58,7 @@ onMenuHide?: Callback<string>
 
 选择菜单隐藏时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ onMenuShow?: Callback<string>
 
 选择菜单显示时触发。回调参数为按Text组件视觉顺序拼接后的选中文本，拼接方式由textJoinStyle配置决定。默认值为空，不触发该回调。
 
-**类型：** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 26.0.0
 

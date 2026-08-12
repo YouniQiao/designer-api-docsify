@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| WaterFlowAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

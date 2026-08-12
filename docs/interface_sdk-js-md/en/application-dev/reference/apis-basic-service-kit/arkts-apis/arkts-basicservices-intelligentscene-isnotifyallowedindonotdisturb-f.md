@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from 'kits/@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## isNotifyAllowedInDoNotDisturb
@@ -36,8 +36,8 @@ Checks whether calling bundle is allow notify(e.g. sound & vibration) when syste
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [35200001](../../apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [35200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-intelligentScene.md#35200001-internal-error) | Internal error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

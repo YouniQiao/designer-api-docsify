@@ -18,5 +18,5 @@ The callback when microphone capturing state of current page has been changed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [MicrophoneCaptureStateChangeInfo](../arkts-components/arkts-arkweb-microphonecapturestatechangeinfo-i.md) | 是 | the microphone capturing state event. |
+| event | [MicrophoneCaptureStateChangeInfo](arkts-arkweb-web-microphonecapturestatechangeinfo-i.md) | 是 | the microphone capturing state event. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getRemoteDeviceName
@@ -20,7 +20,7 @@ Obtains the name of a peer Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.getRemoteDeviceName
+**Substitutes:** [getRemoteDeviceName](ohos.bluetoothManager/bluetoothManager.getRemoteDeviceName)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

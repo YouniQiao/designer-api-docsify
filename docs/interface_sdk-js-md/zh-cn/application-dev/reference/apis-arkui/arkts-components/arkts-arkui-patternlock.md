@@ -35,7 +35,7 @@ PatternLock(controller?: PatternLockController)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| controller | [PatternLockController](../arkts-apis/arkts-arkui-patternlock-patternlockcontroller-c.md) | 否 | 设置PatternLock组件控制器，用于重置组件状态和设置图案密码状态。当需要程序化控制组件状态（如重置密码锁、设置密码验证结果）时 传入此参数；不传入时无法通过控制器手动操作组件状态（即无法调用reset()、setChallengeResult()等方法）。 |
+| controller | [PatternLockController](arkts-arkui-patternlockcontroller-c.md) | 否 | 设置PatternLock组件控制器，用于重置组件状态和设置图案密码状态。当需要程序化控制组件状态（如重置密码锁、设置密码验证结果）时 传入此参数；不传入时无法通过控制器手动操作组件状态（即无法调用reset()、setChallengeResult()等方法）。 |
 
 ## 汇总
 

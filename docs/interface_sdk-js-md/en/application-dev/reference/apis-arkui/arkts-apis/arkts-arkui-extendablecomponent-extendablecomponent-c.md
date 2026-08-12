@@ -2,7 +2,7 @@
 
 Definition of extendable component, which is base class of custom component and custom dialog.
 
-**Inheritance/Implementation:** ExtendableComponent implements [LifeCycle](arkts-arkui-extendablecomponent-lifecycle-i.md), [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md)
+**Inheritance/Implementation:** ExtendableComponent implements [LifeCycle](arkts-arkui-extendablecomponent-lifecycle-i.md#LifeCycle), [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md#IVariableOwner)
 
 **Since:** 23
 

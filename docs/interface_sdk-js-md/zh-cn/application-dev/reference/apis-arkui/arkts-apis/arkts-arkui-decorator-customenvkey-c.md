@@ -50,5 +50,5 @@ static create<T>(): CustomEnvKey<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomEnvKey](../arkts-components/arkts-arkui-customenvkey-c.md)&lt;T&gt; | CustomEnvKey |
+| [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | CustomEnvKey |
 

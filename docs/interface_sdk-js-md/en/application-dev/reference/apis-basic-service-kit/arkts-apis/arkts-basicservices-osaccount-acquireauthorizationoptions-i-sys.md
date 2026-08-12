@@ -15,7 +15,7 @@ Defines the options for acquiring the authorization.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## challenge
@@ -57,7 +57,7 @@ User interaction context configuration. The default value is **undefined**.
 
 Note: This parameter is valid only when **isInteractionAllowed** is set to **true**.
 
-**Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c-sys.md)
+**Type:** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 
 **Default:** undefined, which means the authorization dialog will be displayed in modal system mode.
 

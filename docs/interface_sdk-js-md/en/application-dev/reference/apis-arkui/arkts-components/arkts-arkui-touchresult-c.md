@@ -43,7 +43,7 @@ strategy: TouchTestStrategy
 
 Event dispatch strategy.
 
-**Type:** [TouchTestStrategy](../arkts-apis/arkts-arkui-common-touchteststrategy-e.md)
+**Type:** [TouchTestStrategy](arkts-arkui-touchteststrategy-e.md)
 
 **Since:** 11
 

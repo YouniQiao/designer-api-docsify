@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## isScreenOn
@@ -20,7 +20,7 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [power.isActive](arkts-basicservices-power-isactive-f.md#isactive)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
 
 <!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void--><!--Device-power-function isScreenOn(callback: AsyncCallback<boolean>): void-End-->
 
@@ -30,7 +30,7 @@ Checks the screen status of the current device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the screen status obtained, where the value **true** indicates on and the value **false** indicates off. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the screen status obtained, where the value **true** indicates on and the value **false** indicates off. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ Checks the screen status of the current device. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [power.isActive](arkts-basicservices-power-isactive-f.md#isactive)
+**Substitutes:** [isActive](arkts-basicservices-power-isactive-f.md#isActive)
 
 <!--Device-power-function isScreenOn(): Promise<boolean>--><!--Device-power-function isScreenOn(): Promise<boolean>-End-->
 

@@ -6,7 +6,7 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)
+**Substitutes:** [DateTimeFormatOptions]]([Intl.DateTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options))
 
 <!--Device-intl-export interface DateTimeOptions--><!--Device-intl-export interface DateTimeOptions-End-->
 
@@ -15,7 +15,7 @@ Defines the options for a **DateTimeOptions** object. Since API version 9, the *
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## dateStyle
@@ -37,7 +37,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.dateStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#datestyle)
+**Substitutes:** [dateStyle]]([Intl.DateTimeFormatOptions.dateStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#datestyle))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -63,7 +63,7 @@ Day display format. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day)
+**Substitutes:** [day]]([Intl.DateTimeFormatOptions.day](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#day))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -92,7 +92,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.dayPeriod](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#dayperiod)
+**Substitutes:** [dayPeriod]]([Intl.DateTimeFormatOptions.dayPeriod](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#dayperiod))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -121,7 +121,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.era](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#era)
+**Substitutes:** [era]]([Intl.DateTimeFormatOptions.era](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#era))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -148,7 +148,7 @@ Format matching algorithm. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher)
+**Substitutes:** [formatMatcher]]([Intl.DateTimeFormatOptions.formatMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#formatmatcher))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -174,7 +174,7 @@ Hour display format. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour)
+**Substitutes:** [hour]]([Intl.DateTimeFormatOptions.hour](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,7 +202,7 @@ If **hour12** and **hourCycle** are not set and the 24-hour clock is turned on, 
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12)
+**Substitutes:** [hour12]]([Intl.DateTimeFormatOptions.hour12](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hour12))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -234,7 +234,7 @@ For the display effects when **dateStyle** or **timeStyle** is not set, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hourcycle)
+**Substitutes:** [hourCycle]]([Intl.DateTimeFormatOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#hourcycle))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -285,7 +285,7 @@ Locale matching algorithm. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#localematcher)
+**Substitutes:** [localeMatcher]]([Intl.DateTimeFormatOptions.localeMatcher](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#localematcher))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -311,7 +311,7 @@ Minute display format. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute)
+**Substitutes:** [minute]]([Intl.DateTimeFormatOptions.minute](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#minute))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -340,7 +340,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#month)
+**Substitutes:** [month]]([Intl.DateTimeFormatOptions.month](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#month))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -371,7 +371,7 @@ Numbering system. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem)
+**Substitutes:** [numberingSystem]]([Intl.DateTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#numberingsystem))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -397,7 +397,7 @@ Second display format. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second)
+**Substitutes:** [second]]([Intl.DateTimeFormatOptions.second](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#second))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -426,7 +426,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.timeStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timestyle)
+**Substitutes:** [timeStyle]]([Intl.DateTimeFormatOptions.timeStyle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timestyle))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -450,7 +450,7 @@ Time zone in use. The value is a valid IANA time zone ID.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone)
+**Substitutes:** [timeZone]]([Intl.DateTimeFormatOptions.timeZone](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezone))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -479,7 +479,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.timeZoneName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezonename)
+**Substitutes:** [timeZoneName]]([Intl.DateTimeFormatOptions.timeZoneName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#timezonename))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -508,7 +508,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.weekday](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#weekday)
+**Substitutes:** [weekday]]([Intl.DateTimeFormatOptions.weekday](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#weekday))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -537,7 +537,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.DateTimeFormatOptions.year](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#year)
+**Substitutes:** [year]]([Intl.DateTimeFormatOptions.year](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#year))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

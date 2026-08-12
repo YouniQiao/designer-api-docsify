@@ -62,7 +62,7 @@ capabilities?: AgentCapabilities
 
 Capability set supported by the agent.
 
-**Type:** [AgentCapabilities](arkts-ability-common-agentcapabilities-t.md)
+**Type:** [AgentCapabilities](arkts-ability-agentcard-agentcapabilities-i.md)
 
 **Since:** 24
 
@@ -282,7 +282,7 @@ skills: Array<AgentSkill>
 
 Skills represent the abilities of an agent.
 
-**Type:** Array&lt;AgentSkill&gt;
+**Type:** Array&lt;[AgentSkill](arkts-ability-agentcard-agentskill-i.md)&gt;
 
 **Since:** 24
 

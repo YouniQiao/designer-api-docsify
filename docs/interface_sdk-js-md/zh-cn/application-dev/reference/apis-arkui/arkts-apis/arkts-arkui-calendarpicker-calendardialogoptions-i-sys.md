@@ -2,14 +2,14 @@
 
 日历选择器弹窗选项。
 
-继承自[CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)。
+继承自[CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md#CalendarOptions)。
 
 > **说明：**
 > 
 > 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够
 > 完整显示的最小窗口宽度为386vp。
 
-**继承/实现关系：** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md)
+**继承/实现关系：** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md#CalendarOptions)
 
 **起始版本：** 23
 

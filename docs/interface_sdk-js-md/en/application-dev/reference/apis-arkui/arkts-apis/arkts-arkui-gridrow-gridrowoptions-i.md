@@ -38,7 +38,7 @@ columns?: int | GridRowColumnOption
 
 Sets the total number of columns in the current layout.
 
-**Type:** int \| GridRowColumnOption
+**Type:** int \| [GridRowColumnOption](arkts-arkui-gridrow-gridrowcolumnoption-i.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ gutter?: Length | GutterOption
 
 layout spacing between sub-components
 
-**Type:** [Length](arkts-arkui-length-t.md) \| GutterOption
+**Type:** [Length](arkts-arkui-length-t.md) \| [GutterOption](arkts-arkui-gridrow-gutteroption-i.md)
 
 **Since:** 23
 

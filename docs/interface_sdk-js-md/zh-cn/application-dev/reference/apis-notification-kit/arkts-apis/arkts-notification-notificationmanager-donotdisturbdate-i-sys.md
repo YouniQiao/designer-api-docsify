@@ -15,7 +15,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## begin
@@ -66,7 +66,7 @@ type: DoNotDisturbType
 
 免打扰设置的时间类型。
 
-**类型：** [DoNotDisturbType](arkts-notification-notificationmanager-donotdisturbtype-e-sys.md)
+**类型：** DoNotDisturbType
 
 **起始版本：** 9
 

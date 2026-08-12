@@ -191,7 +191,7 @@ Returns an iterable of key, value pairs for every entry in the sparse array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, T]&gt; | An iterable of key, value pairs for every entry in the sparse array. |
+| IterableIterator&lt;[int, T]&gt; | An iterable of key, value pairs for every entry in the sparse array. |
 
 ## every
 
@@ -511,7 +511,7 @@ Creates a new SparseArray instance from an array-like or iterable object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLike | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | Yes | An array-like or iterable object to convert to a sparse array. |
+| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | Yes | An array-like or iterable object to convert to a sparse array. |
 
 **Return value:**
 
@@ -541,7 +541,7 @@ Creates a new SparseArray instance from an array-like.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arr | [ArrayLike](arkts-arkts-arraylike-i.md)&lt;U&gt; | Yes | An array-like or iterable object to convert to a sparse array. |
+| arr | ArrayLike&lt;U&gt; | Yes | An array-like or iterable object to convert to a sparse array. |
 
 **Return value:**
 
@@ -693,7 +693,7 @@ Returns an iterable of keys in the sparse array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | An iterable of keys in the sparse array. |
+| IterableIterator&lt;int&gt; | An iterable of keys in the sparse array. |
 
 ## lastIndexOf
 
@@ -1327,7 +1327,7 @@ Returns an iterable of values in the sparse array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | An iterable of values in the sparse array. |
+| IterableIterator&lt;T&gt; | An iterable of values in the sparse array. |
 
 ## length
 

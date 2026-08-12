@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ImageAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

@@ -16,7 +16,7 @@ onDestroy?: Callback<void>
 
 Callback when preloaded page is destroyed by the system.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.1.0
 

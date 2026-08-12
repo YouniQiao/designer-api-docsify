@@ -64,7 +64,7 @@ volumeType: AudioVolumeType
 
 当前音频流的音量类型。
 
-**类型：** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md)
+**类型：** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
 **起始版本：** 24
 

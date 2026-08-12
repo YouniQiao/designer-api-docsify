@@ -2,7 +2,7 @@
 
 Provides methods for attribute path component.
 
-**Inheritance/Implementation:** PathAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**Inheritance/Implementation:** PathAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Set Path options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | No | Path constructor options. |
+| options | [PathOptions](arkts-arkui-path-pathoptions-i.md) | No | Path constructor options. |
 
 **Return value:**
 

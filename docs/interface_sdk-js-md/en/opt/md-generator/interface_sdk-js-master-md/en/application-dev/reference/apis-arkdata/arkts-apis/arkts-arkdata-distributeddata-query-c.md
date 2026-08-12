@@ -6,7 +6,7 @@ Provides APIs to create a **Query** object, which defines different data query c
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query
+**Substitutes:** [Query](ohos.data.distributedKVStore.Query)
 
 <!--Device-distributedData-class Query--><!--Device-distributedData-class Query-End-->
 
@@ -24,7 +24,7 @@ Creates a **Query** object with the AND condition.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#and
+**Substitutes:** [and](ohos.data.distributedKVStore.Query#and)
 
 <!--Device-Query-and(): Query--><!--Device-Query-and(): Query-End-->
 
@@ -63,7 +63,7 @@ Creates a **Query** object for a query condition group with a left parenthesis.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#beginGroup
+**Substitutes:** [beginGroup](ohos.data.distributedKVStore.Query#beginGroup)
 
 <!--Device-Query-beginGroup(): Query--><!--Device-Query-beginGroup(): Query-End-->
 
@@ -102,7 +102,7 @@ Defines a constructor used to create a **Query** instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#constructor
+**Substitutes:** [constructor](ohos.data.distributedKVStore.Query#constructor)
 
 <!--Device-Query-constructor()--><!--Device-Query-constructor()-End-->
 
@@ -119,7 +119,7 @@ Creates a **Query** object with the device ID as the key prefix.
 > **NOTE：**
 > 
 > The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync).
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
 > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
 > applications.
 > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
@@ -128,7 +128,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#deviceId
+**Substitutes:** [deviceId](ohos.data.distributedKVStore.Query#deviceId)
 
 <!--Device-Query-deviceId(deviceId: string): Query--><!--Device-Query-deviceId(deviceId: string): Query-End-->
 
@@ -170,7 +170,7 @@ Creates a **Query** object for a query condition group with a right parenthesis.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#endGroup
+**Substitutes:** [endGroup](ohos.data.distributedKVStore.Query#endGroup)
 
 <!--Device-Query-endGroup(): Query--><!--Device-Query-endGroup(): Query-End-->
 
@@ -209,7 +209,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#equalTo
+**Substitutes:** [equalTo](ohos.data.distributedKVStore.Query#equalTo)
 
 <!--Device-Query-equalTo(field: string, value: number | string | boolean): Query--><!--Device-Query-equalTo(field: string, value: number | string | boolean): Query-End-->
 
@@ -253,7 +253,7 @@ Obtains the query statement of the **Query** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#getSqlLike
+**Substitutes:** [getSqlLike](ohos.data.distributedKVStore.Query#getSqlLike)
 
 <!--Device-Query-getSqlLike(): string--><!--Device-Query-getSqlLike(): string-End-->
 
@@ -289,7 +289,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#greaterThan
+**Substitutes:** [greaterThan](ohos.data.distributedKVStore.Query#greaterThan)
 
 <!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query--><!--Device-Query-greaterThan(field: string, value: number | string | boolean): Query-End-->
 
@@ -333,7 +333,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#greaterThanOrEqualTo
+**Substitutes:** [greaterThanOrEqualTo](ohos.data.distributedKVStore.Query#greaterThanOrEqualTo)
 
 <!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-greaterThanOrEqualTo(field: string, value: number | string): Query-End-->
 
@@ -377,7 +377,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#inNumber
+**Substitutes:** [inNumber](ohos.data.distributedKVStore.Query#inNumber)
 
 <!--Device-Query-inNumber(field: string, valueList: number[]): Query--><!--Device-Query-inNumber(field: string, valueList: number[]): Query-End-->
 
@@ -421,7 +421,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#inString
+**Substitutes:** [inString](ohos.data.distributedKVStore.Query#inString)
 
 <!--Device-Query-inString(field: string, valueList: string[]): Query--><!--Device-Query-inString(field: string, valueList: string[]): Query-End-->
 
@@ -465,7 +465,7 @@ Creates a **Query** object to search for the records whose value is not **null**
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#isNotNull
+**Substitutes:** [isNotNull](ohos.data.distributedKVStore.Query#isNotNull)
 
 <!--Device-Query-isNotNull(field: string): Query--><!--Device-Query-isNotNull(field: string): Query-End-->
 
@@ -508,7 +508,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#isNull
+**Substitutes:** [isNull](ohos.data.distributedKVStore.Query#isNull)
 
 <!--Device-Query-isNull(field: string): Query--><!--Device-Query-isNull(field: string): Query-End-->
 
@@ -551,7 +551,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#lessThan
+**Substitutes:** [lessThan](ohos.data.distributedKVStore.Query#lessThan)
 
 <!--Device-Query-lessThan(field: string, value: number | string): Query--><!--Device-Query-lessThan(field: string, value: number | string): Query-End-->
 
@@ -595,7 +595,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#lessThanOrEqualTo
+**Substitutes:** [lessThanOrEqualTo](ohos.data.distributedKVStore.Query#lessThanOrEqualTo)
 
 <!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query--><!--Device-Query-lessThanOrEqualTo(field: string, value: number | string): Query-End-->
 
@@ -639,7 +639,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#like
+**Substitutes:** [like](ohos.data.distributedKVStore.Query#like)
 
 <!--Device-Query-like(field: string, value: string): Query--><!--Device-Query-like(field: string, value: string): Query-End-->
 
@@ -683,7 +683,7 @@ Creates a **Query** object to specify the number of records in the query result 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#limit
+**Substitutes:** [limit](ohos.data.distributedKVStore.Query#limit)
 
 <!--Device-Query-limit(total: number, offset: number): Query--><!--Device-Query-limit(total: number, offset: number): Query-End-->
 
@@ -730,7 +730,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#notEqualTo
+**Substitutes:** [notEqualTo](ohos.data.distributedKVStore.Query#notEqualTo)
 
 <!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query--><!--Device-Query-notEqualTo(field: string, value: number | string | boolean): Query-End-->
 
@@ -774,7 +774,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#notInNumber
+**Substitutes:** [notInNumber](ohos.data.distributedKVStore.Query#notInNumber)
 
 <!--Device-Query-notInNumber(field: string, valueList: number[]): Query--><!--Device-Query-notInNumber(field: string, valueList: number[]): Query-End-->
 
@@ -818,7 +818,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#notInString
+**Substitutes:** [notInString](ohos.data.distributedKVStore.Query#notInString)
 
 <!--Device-Query-notInString(field: string, valueList: string[]): Query--><!--Device-Query-notInString(field: string, valueList: string[]): Query-End-->
 
@@ -862,7 +862,7 @@ Creates a **Query** object with the OR condition.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#or
+**Substitutes:** [or](ohos.data.distributedKVStore.Query#or)
 
 <!--Device-Query-or(): Query--><!--Device-Query-or(): Query-End-->
 
@@ -901,7 +901,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#orderByAsc
+**Substitutes:** [orderByAsc](ohos.data.distributedKVStore.Query#orderByAsc)
 
 <!--Device-Query-orderByAsc(field: string): Query--><!--Device-Query-orderByAsc(field: string): Query-End-->
 
@@ -945,7 +945,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#orderByDesc
+**Substitutes:** [orderByDesc](ohos.data.distributedKVStore.Query#orderByDesc)
 
 <!--Device-Query-orderByDesc(field: string): Query--><!--Device-Query-orderByDesc(field: string): Query-End-->
 
@@ -989,7 +989,7 @@ Creates a **Query** object with a specified key prefix.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#prefixKey
+**Substitutes:** [prefixKey](ohos.data.distributedKVStore.Query#prefixKey)
 
 <!--Device-Query-prefixKey(prefix: string): Query--><!--Device-Query-prefixKey(prefix: string): Query-End-->
 
@@ -1033,7 +1033,7 @@ Resets the **Query** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#reset
+**Substitutes:** [reset](ohos.data.distributedKVStore.Query#reset)
 
 <!--Device-Query-reset(): Query--><!--Device-Query-reset(): Query-End-->
 
@@ -1072,7 +1072,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#setSuggestIndex
+**Substitutes:** [setSuggestIndex](ohos.data.distributedKVStore.Query#setSuggestIndex)
 
 <!--Device-Query-setSuggestIndex(index: string): Query--><!--Device-Query-setSuggestIndex(index: string): Query-End-->
 
@@ -1116,7 +1116,7 @@ Creates a **Query** object to search for the records with the specified field th
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Query#unlike
+**Substitutes:** [unlike](ohos.data.distributedKVStore.Query#unlike)
 
 <!--Device-Query-unlike(field: string, value: string): Query--><!--Device-Query-unlike(field: string, value: string): Query-End-->
 

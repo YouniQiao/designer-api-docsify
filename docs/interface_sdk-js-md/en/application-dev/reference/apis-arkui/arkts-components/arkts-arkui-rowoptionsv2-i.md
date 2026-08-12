@@ -29,7 +29,7 @@ Spacing between child components.This parameter does not take effect if the valu
 > The value of **space** can be a number greater than or equal to 0, a string that can be converted to a number, or a
 > Resource type that can be converted to a number. Default value: **0**.
 
-**Type:** [SpaceType](arkts-arkui-spacetype-t.md)
+**Type:** SpaceType
 
 **Since:** 18
 

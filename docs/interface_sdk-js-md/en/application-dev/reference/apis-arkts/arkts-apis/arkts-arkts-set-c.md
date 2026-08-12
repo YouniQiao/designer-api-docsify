@@ -34,7 +34,7 @@ Returns the default iterator of the Set, which is the values() iterator.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | The default iterator of the Set. |
+| IterableIterator&lt;K&gt; | The default iterator of the Set. |
 
 ## add
 
@@ -232,7 +232,7 @@ Returns an iterable of [v, v] pairs for every value in the Set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, K]&gt; | an iterable of [v, v] pairs. |
+| IterableIterator&lt;[K, K]&gt; | an iterable of [v, v] pairs. |
 
 ## forEach
 
@@ -310,7 +310,7 @@ Despite name, returns elements from the Set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | an iterable of the values in the Set. |
+| IterableIterator&lt;K&gt; | an iterable of the values in the Set. |
 
 ## toString
 
@@ -358,7 +358,7 @@ Returns elements from the Set.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | an iterable of the values in the Set. |
+| IterableIterator&lt;K&gt; | an iterable of the values in the Set. |
 
 ## size
 

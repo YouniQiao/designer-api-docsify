@@ -29,5 +29,5 @@ export function createCheckboxGroupNode(context: UIContext, options?: FrameNodeO
 
 | 类型 | 说明 |
 | --- | --- |
-| [CheckboxGroup](arkts-arkui-typenode-checkboxgroup-t.md) | 返回 CheckboxGroup 类型的 FrameNode |
+| CheckboxGroup | 返回 CheckboxGroup 类型的 FrameNode |
 

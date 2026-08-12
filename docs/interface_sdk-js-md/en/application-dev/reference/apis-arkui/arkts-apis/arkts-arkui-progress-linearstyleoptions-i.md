@@ -2,7 +2,7 @@
 
 Defines the linear style Options.
 
-**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](../arkts-components/arkts-arkui-scaneffectoptions-i.md/arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](../arkts-components/arkts-arkui-commonprogressstyleoptions-i.md/arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ strokeRadius?: PX | VP | LPX | Resource
 
 Defines the stroke radius property.Default value: strokeWidth / 2.
 
-**Type:** [PX](arkts-arkui-px-t.md) \| VP \| LPX \| Resource
+**Type:** [PX](arkts-arkui-px-t.md) \| [VP](arkts-arkui-vp-t.md) \| [LPX](arkts-arkui-lpx-t.md) \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Default:** strokeWidth / 2
 

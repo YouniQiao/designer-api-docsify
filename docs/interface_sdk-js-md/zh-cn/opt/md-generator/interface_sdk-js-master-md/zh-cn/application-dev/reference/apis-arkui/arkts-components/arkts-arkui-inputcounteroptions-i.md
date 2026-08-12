@@ -16,7 +16,7 @@ counterTextColor?: ColorMetrics
 
 It is the color of counter when textField hasn't wanted to exceed the maximum character count.
 
-**类型：** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 22
 
@@ -36,7 +36,7 @@ counterTextOverflowColor?: ColorMetrics
 
 It is the color of counter when textField wants to exceed the maximum character count.
 
-**类型：** [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 22
 

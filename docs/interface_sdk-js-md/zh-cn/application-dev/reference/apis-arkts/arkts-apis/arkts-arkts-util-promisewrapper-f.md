@@ -14,7 +14,7 @@ function promiseWrapper(original: (err: Object, value: Object) => void): Object
 
 **废弃版本：** 9
 
-**替代接口：** [util.promisify](arkts-arkts-util-promisify-f.md#promisify)
+**替代接口：** [promisify](arkts-arkts-util-promisify-f.md#promisify)
 
 <!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object--><!--Device-util-function promiseWrapper(original: (err: Object, value: Object) => void): Object-End-->
 

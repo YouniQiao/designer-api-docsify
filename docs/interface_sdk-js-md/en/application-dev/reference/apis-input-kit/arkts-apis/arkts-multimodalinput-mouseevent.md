@@ -1,13 +1,13 @@
 # @ohos.multimodalInput.mouseEvent(Mouse Event)
 
 The **mouseEvent** module provides mouse events reported by a device. It is inherited from
- [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
+ [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent).
 
 
 ## Modules to Import
 
 ```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@kit.InputKit';
 ```
 
 ## Summary

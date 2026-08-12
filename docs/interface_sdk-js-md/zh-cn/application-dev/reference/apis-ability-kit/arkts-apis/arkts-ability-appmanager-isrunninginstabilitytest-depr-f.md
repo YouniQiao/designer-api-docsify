@@ -18,7 +18,7 @@ function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#isRunningInStabilityTest
+**替代接口：** [isRunningInStabilityTest](ohos.app.ability.appManager/appManager#isRunningInStabilityTest)
 
 <!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void-End-->
 
@@ -63,7 +63,7 @@ function isRunningInStabilityTest(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#isRunningInStabilityTest
+**替代接口：** [isRunningInStabilityTest](ohos.app.ability.appManager/appManager#isRunningInStabilityTest)
 
 <!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>--><!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>-End-->
 

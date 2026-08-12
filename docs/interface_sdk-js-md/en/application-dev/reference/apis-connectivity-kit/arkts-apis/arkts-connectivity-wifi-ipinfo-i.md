@@ -8,7 +8,7 @@ Wi-Fi IP information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo
+**Substitutes:** [IpInfo](ohos.wifiManager/wifiManager.IpInfo)
 
 <!--Device-wifi-interface IpInfo--><!--Device-wifi-interface IpInfo-End-->
 
@@ -17,7 +17,7 @@ Wi-Fi IP information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## gateway
@@ -36,7 +36,7 @@ The gateway of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.gateway
+**Substitutes:** [gateway](ohos.wifiManager/wifiManager.IpInfo.gateway)
 
 <!--Device-IpInfo-gateway: number--><!--Device-IpInfo-gateway: number-End-->
 
@@ -58,7 +58,7 @@ The IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.ipAddress
+**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.IpInfo.ipAddress)
 
 <!--Device-IpInfo-ipAddress: number--><!--Device-IpInfo-ipAddress: number-End-->
 
@@ -80,7 +80,7 @@ The IP address lease duration of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.leaseDuration
+**Substitutes:** [leaseDuration](ohos.wifiManager/wifiManager.IpInfo.leaseDuration)
 
 <!--Device-IpInfo-leaseDuration: number--><!--Device-IpInfo-leaseDuration: number-End-->
 
@@ -102,7 +102,7 @@ The network mask of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.netmask
+**Substitutes:** [netmask](ohos.wifiManager/wifiManager.IpInfo.netmask)
 
 <!--Device-IpInfo-netmask: number--><!--Device-IpInfo-netmask: number-End-->
 
@@ -124,7 +124,7 @@ The primary DNS server IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.primaryDns
+**Substitutes:** [primaryDns](ohos.wifiManager/wifiManager.IpInfo.primaryDns)
 
 <!--Device-IpInfo-primaryDns: number--><!--Device-IpInfo-primaryDns: number-End-->
 
@@ -146,7 +146,7 @@ T he secondary DNS server IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.secondDns
+**Substitutes:** [secondDns](ohos.wifiManager/wifiManager.IpInfo.secondDns)
 
 <!--Device-IpInfo-secondDns: number--><!--Device-IpInfo-secondDns: number-End-->
 
@@ -168,7 +168,7 @@ The DHCP server IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpInfo.serverIp
+**Substitutes:** [serverIp](ohos.wifiManager/wifiManager.IpInfo.serverIp)
 
 <!--Device-IpInfo-serverIp: number--><!--Device-IpInfo-serverIp: number-End-->
 

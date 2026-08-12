@@ -1,8 +1,8 @@
 # BackgroundBlurStyleOptions
 
-继承自[BlurStyleOptions](../arkts-components/arkts-arkui-blurstyleoptions-i.md/arkts-arkui-blurstyleoptions-i.md)。
+继承自[BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md#BlurStyleOptions)。
 
-**继承/实现关系：** BackgroundBlurStyleOptions extends [BlurStyleOptions](../arkts-components/arkts-arkui-blurstyleoptions-i.md/arkts-arkui-blurstyleoptions-i.md)
+**继承/实现关系：** BackgroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md#BlurStyleOptions)
 
 **起始版本：** 23
 
@@ -44,7 +44,7 @@ policy?: BlurStyleActivePolicy
 
 默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
 
-**类型：** [BlurStyleActivePolicy](../arkts-components/arkts-arkui-blurstyleactivepolicy-e.md)
+**类型：** [BlurStyleActivePolicy](arkts-arkui-common-blurstyleactivepolicy-e.md)
 
 **默认值：** BlurStyleActivePolicy.ALWAYS_ACTIVE
 

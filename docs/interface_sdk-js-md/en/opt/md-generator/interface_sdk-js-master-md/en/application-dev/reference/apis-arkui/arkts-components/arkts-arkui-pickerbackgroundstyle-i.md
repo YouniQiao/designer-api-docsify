@@ -20,9 +20,9 @@ Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corne
 
 **NOTE：**
 
-1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md/arkts-arkui-graphics-lengthmetrics-c.md): uniform radius with a customizable unit2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md/arkts-arkui-borderradiuses-t.md): per-corner radius values (vp units only)3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md/arkts-arkui-localizedborderradiuses-i.md): per-corner radius values with individual units
+1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): uniform radius with a customizable unit2. [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md#BorderRadiuses): per-corner radius values (vp units only)3. [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md#LocalizedBorderRadiuses): per-corner radius values with individual units
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** LengthMetrics \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) \| [LocalizedBorderRadiuses](../arkts-apis/arkts-arkui-localizedborderradiuses-i.md)
 
 **Default:** { value:24, unit:LengthUnit.VP }
 

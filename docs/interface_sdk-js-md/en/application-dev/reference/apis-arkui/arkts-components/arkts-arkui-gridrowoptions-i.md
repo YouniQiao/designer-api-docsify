@@ -26,7 +26,7 @@ Invalid values are treated as the default value.
 
 Unit: vp.
 
-**Type:** [BreakPoints](../arkts-apis/arkts-arkui-gridrow-breakpoints-i.md)
+**Type:** [BreakPoints](arkts-arkui-breakpoints-i.md)
 
 **Since:** 9
 
@@ -55,7 +55,7 @@ The value is an integer greater than 0.
 
 Invalid values are treated as the default value.
 
-**Type:** number \| GridRowColumnOption
+**Type:** number \| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
 **Since:** 9
 
@@ -81,7 +81,7 @@ Default value: **GridRowDirection.Row**
 
 Invalid values are treated as the default value.
 
-**Type:** [GridRowDirection](../arkts-apis/arkts-arkui-gridrow-gridrowdirection-e.md)
+**Type:** [GridRowDirection](arkts-arkui-gridrowdirection-e.md)
 
 **Since:** 9
 
@@ -109,7 +109,7 @@ Invalid values are treated as the default value.
 
 Unit: vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GutterOption
+**Type:** Length \| [GutterOption](arkts-arkui-gutteroption-i.md)
 
 **Since:** 9
 

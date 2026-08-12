@@ -2,9 +2,9 @@
 
 The **uiExtension** module provides APIs for the  
 [EmbeddedUIExtensionAbility](../../../application-models/embeddeduiextensionability.md) (or  
-[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)) to obtain the host application window information or the information about the corresponding  
-[EmbeddedComponent](../../apis-arkui/arkts-components/arkts-arkui-embedded_component-i)&lt;!--Del--&gt; (or  
-[UIExtensionComponent](../../apis-arkui/arkts-components/arkts-arkui-ui_extension_component-i))&lt;!--DelEnd--&gt; component.
+[UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)) to obtain the host application window information or the information about the corresponding  
+[EmbeddedComponent](./@internal/component/ets/embedded_component)&lt;!--Del--&gt; (or  
+[UIExtensionComponent](./@internal/component/ets/ui_extension_component))&lt;!--DelEnd--&gt; component.
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ The **uiExtension** module provides APIs for the
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from 'kits/@kit.ArkUI';
+import { uiExtension } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -18,7 +18,7 @@ distortionMode?: DistortionMode
 
 设置对话框的变形动画模式。
 
-**类型：** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
+**类型：** DistortionMode
 
 **默认值：** DistortionMode.DISTORTION_AUTO
 
@@ -42,7 +42,7 @@ edgeLightMode?: EdgeLightMode
 
 设置对话框的edgeLight动画模式。
 
-**类型：** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
+**类型：** EdgeLightMode
 
 **默认值：** EdgeLightMode.EDGELIGHT_AUTO
 

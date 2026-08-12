@@ -20,7 +20,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | 程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager)获取实例。 |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i.md) | 程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager)获取实例。 |
 | [PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md) | 表示某次权限授权状态变化的详情。 |
 
 <!--Del-->
@@ -28,7 +28,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i-sys.md) | 程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager)获取实例。 |
+| [AtManager](arkts-ability-abilityaccessctrl-atmanager-i-sys.md) | 程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager)获取实例。 |
 | [PermissionStatusInfo](arkts-ability-abilityaccessctrl-permissionstatusinfo-i-sys.md) | 表示权限状态信息。 |
 | [CliInfo](arkts-ability-abilityaccessctrl-cliinfo-i-sys.md) | 表示CLI（Command Line Interface，命令行界面）信息。 |
 | [PermissionDialogDetail](arkts-ability-abilityaccessctrl-permissiondialogdetail-i-sys.md) | 表示单条命令的权限弹窗信息。 |

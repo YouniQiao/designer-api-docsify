@@ -11,7 +11,7 @@ Stream from which data can be read. A readable stream is used to read data from 
 ## Modules to Import
 
 ```TypeScript
-import { stream } from 'kits/@kit.ArkTS';
+import { stream } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -154,7 +154,7 @@ readable.on('data', () => {
 isPaused(): boolean
 ```
 
-Checks whether the readable stream is paused. The stream is paused after [pause()](arkts-arkts-stream-readable-c.md#pause)is called and resumes from the paused state after [resume()](arkts-arkts-stream-readable-c.md#resume) is called.
+Checks whether the readable stream is paused. The stream is paused after [pause()](#pause)is called and resumes from the paused state after [resume()](#resume) is called.
 
 **Since:** 12
 
@@ -338,7 +338,7 @@ Attaches a writable stream to the readable stream to implement automatic data tr
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | Yes |
+| [destination](../../apis-network-kit/arkts-apis/arkts-network-connection-routeinfo-i.md) | [Writable](arkts-arkts-stream-writable-c.md) | Yes |
 | options | Object | No |
 
 **Return value:**
@@ -456,7 +456,7 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 | Error Code ID |
 | --- |
-| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) |
+| [10200038](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread-is-not-implemented) |
 
 ## Examples
 
@@ -581,7 +581,7 @@ Detaches a writable stream previously attached to the readable stream.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| destination | [Writable](arkts-arkts-stream-writable-c.md) | No |
+| [destination](../../apis-network-kit/arkts-apis/arkts-network-connection-routeinfo-i.md) | [Writable](arkts-arkts-stream-writable-c.md) | No |
 
 **Return value:**
 

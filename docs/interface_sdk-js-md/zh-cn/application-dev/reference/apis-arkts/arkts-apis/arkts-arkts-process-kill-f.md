@@ -14,7 +14,7 @@ function kill(signal: number, pid: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [process.ProcessManager.kill](arkts-arkts-process-processmanager-c.md#kill)
+**替代接口：** [kill](arkts-arkts-process-processmanager-c.md#kill)
 
 <!--Device-process-function kill(signal: number, pid: number): boolean--><!--Device-process-function kill(signal: number, pid: number): boolean-End-->
 

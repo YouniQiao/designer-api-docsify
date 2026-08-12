@@ -46,7 +46,7 @@ Implementation for creating a v2 custom component
 | factory | () =&gt; S | 是 | factory to create instance of custom component |
 | initializers | () =&gt; S_Options | 否 | initial data for all the fields in custom component |
 | reuseId | () =&gt; string | 否 | reuse id for reusable. Only valid if custom component decorated with @ReusableV2 |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | tail closure for custom component |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | tail closure for custom component |
 
 ## _invokeImpl
 
@@ -83,7 +83,7 @@ Implementation for creating a v2 custom component
 | factory | () =&gt; S | 是 | factory to create instance of custom component |
 | initializers | () =&gt; S_Options | 否 | initial data for all the fields in custom component |
 | reuseId | () =&gt; string | 否 | reuse id for reusable. Only valid if custom component decorated with @ReusableV2 |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | tail closure for custom component |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | tail closure for custom component |
 | options | [CustomComponentInvokeOptions](arkts-arkui-customcomponent-customcomponentinvokeoptions-i.md) | 否 | additional invoke options |
 
 ## aboutToReuse

@@ -1,6 +1,6 @@
 # SystemMemInfo
 
-����ϵͳ�ڴ���Ϣ���������ڴ桢�����ڴ�Ϳ����ڴ档
+描述系统内存信息，包括总内存、空闲内存和可用内存。
 
 **起始版本：** 12
 
@@ -16,7 +16,7 @@
 availableMem: bigint
 ```
 
-ϵͳ���õ��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemAvailable��
+系统可用的内存，以KB为单位，计算方式：/proc/meminfo: MemAvailable。
 
 **类型：** bigint
 
@@ -34,7 +34,7 @@ availableMem: bigint
 freeMem: bigint
 ```
 
-ϵͳ���е��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemFree��
+系统空闲的内存，以KB为单位，计算方式：/proc/meminfo: MemFree。
 
 **类型：** bigint
 
@@ -52,7 +52,7 @@ freeMem: bigint
 totalMem: bigint
 ```
 
-ϵͳ�ܵ��ڴ棬��KBΪ��λ�����㷽ʽ��/proc/meminfo: MemTotal��
+系统总的内存，以KB为单位，计算方式：/proc/meminfo: MemTotal。
 
 **类型：** bigint
 

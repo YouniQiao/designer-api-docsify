@@ -13,7 +13,7 @@ Provide a number formatting interface which could format number to StyleString.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## constructor
@@ -38,7 +38,7 @@ A constructor used to create a StyledNumberFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| SimpleNumberFormat | Yes | Indicates the number format object that used to format number. |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | Indicates the number format object that used to format number. |
 | options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No | Indicates the options used to format the number. |
 
 ## format
@@ -69,5 +69,5 @@ Formats a number as a rich text object.
 
 | Type | Description |
 | --- | --- |
-| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-c.md) | Rich text object after formatting. |
+| [StyledString](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-styledstring-c.md) | Rich text object after formatting. |
 

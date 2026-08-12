@@ -15,7 +15,7 @@ The module provides the capability to interact with cli tools in the system.
 ## Modules to Import
 
 ```TypeScript
-import { cliManager } from 'kits/@kit.AbilityKit';
+import { cliManager } from '@kit.AbilityKit';
 ```
 
 ## Summary

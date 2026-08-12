@@ -25,13 +25,13 @@ function getExtBundleStats(userId: number, businessName: string): Promise<ExtBun
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | userId | number | 是 |
-| businessName | string | 是 |
+| [businessName](arkts-corefile-storagestatistics-extbundlestats-i-sys.md) | string | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ExtBundleStats&gt; |
+| Promise&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt; |
 
 **错误码：**
 
@@ -39,8 +39,8 @@ function getExtBundleStats(userId: number, businessName: string): Promise<ExtBun
 | --- |
 | 13600012 |
 | 13600010 |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例

@@ -2,7 +2,7 @@
 
 HierarchicalSymbolEffect继承自父类SymbolEffect。
 
-**继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md)
+**继承/实现关系：** HierarchicalSymbolEffect extends [SymbolEffect](arkts-arkui-symboleffect-c.md#SymbolEffect)
 
 **起始版本：** 12
 

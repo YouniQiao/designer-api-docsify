@@ -13,7 +13,7 @@ Defines the scanner parameters.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.BasicServicesKit';
+import { scan } from '@kit.BasicServicesKit';
 ```
 
 ## optionConstraintInt
@@ -42,7 +42,7 @@ optionConstraintRange?: Range
 
 Range constraint of the option.
 
-**Type:** [Range](arkts-basicservices-scan-range-i.md)
+**Type:** Range
 
 **Since:** 20
 

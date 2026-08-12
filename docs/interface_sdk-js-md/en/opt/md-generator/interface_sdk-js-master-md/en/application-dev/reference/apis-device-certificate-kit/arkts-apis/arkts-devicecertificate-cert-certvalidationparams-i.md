@@ -11,7 +11,7 @@ Parameters for certificate validation.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadIntermediateCa
@@ -108,7 +108,7 @@ ignoreErrs?: Array<CertResult>
 
 Allows specific validation errors to be ignored. Maximum count: 8.&lt;br&gt;The errors that can be ignored include: ERR_CERT_NOT_YET_VALID, ERR_CERT_HAS_EXPIRED,ERR_UNKNOWN_CRITICAL_EXTENSION, ERR_CRL_NOT_FOUND, ERR_CRL_NOT_YET_VALID, ERR_CRL_HAS_EXPIRED,ERR_OCSP_RESPONSE_NOT_FOUND, ERR_NETWORK_TIMEOUT.
 
-**Type:** Array&lt;CertResult&gt;
+**Type:** Array&lt;[CertResult](arkts-devicecertificate-cert-certresult-e.md)&gt;
 
 **Since:** 26.0.0
 
@@ -128,7 +128,7 @@ keyUsage?: Array<KeyUsageType>
 
 Key usage list. Verify that the certificate's key usage extension includes the specified usage.Maximum count: 9.&lt;br&gt;The certificate must contain all specified key usages for verification to be successful.
 
-**Type:** Array&lt;KeyUsageType&gt;
+**Type:** Array&lt;[KeyUsageType](arkts-devicecertificate-cert-keyusagetype-e.md)&gt;
 
 **Since:** 26.0.0
 

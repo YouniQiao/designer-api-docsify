@@ -1,8 +1,8 @@
 # TextPickerTextStyle
 
-文本样式选项，继承自[PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md)。
+文本样式选项，继承自[PickerTextStyle](PickerTextStyle)。
 
-**继承/实现关系：** TextPickerTextStyle extends [PickerTextStyle](arkts-arkui-common-pickertextstyle-i.md)
+**继承/实现关系：** TextPickerTextStyle extends [PickerTextStyle](PickerTextStyle)
 
 **起始版本：** 23
 
@@ -18,9 +18,9 @@
 maxFontSize?: double | string | Resource
 ```
 
-文本最大显示字号。详细规则请参考Text组件的[maxFontSize](arkts-arkui-text-textattribute-i.md#maxfontsize)属性。
+文本最大显示字号。详细规则请参考Text组件的[maxFontSize](TextAttribute#maxFontSize)属性。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -38,9 +38,9 @@ maxFontSize?: double | string | Resource
 minFontSize?: double | string | Resource
 ```
 
-文本最小显示字号，与maxFontSize配合使用。当设置minFontSize和maxFontSize时，font中的size将不生效。默认最大行数为1，自适应高度方式为MIN_FONT_SIZE_FIRST。详细规则请参考Text组件的[minFontSize](arkts-arkui-text-textattribute-i.md#minfontsize)属性。
+文本最小显示字号，与maxFontSize配合使用。当设置minFontSize和maxFontSize时，font中的size将不生效。默认最大行数为1，自适应高度方式为MIN_FONT_SIZE_FIRST。详细规则请参考Text组件的[minFontSize](TextAttribute#minFontSize)属性。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ minFontSize?: double | string | Resource
 overflow?: TextOverflow
 ```
 
-文本截断方式。当设置为MARQUEE时，该属性不生效。详细规则请参考Text组件的[textOverflow](arkts-arkui-text-textattribute-i.md#textoverflow)属性。
+文本截断方式。当设置为MARQUEE时，该属性不生效。详细规则请参考Text组件的[textOverflow](TextAttribute#textOverflow)属性。
 
 **类型：** [TextOverflow](arkts-arkui-textoverflow-e.md)
 

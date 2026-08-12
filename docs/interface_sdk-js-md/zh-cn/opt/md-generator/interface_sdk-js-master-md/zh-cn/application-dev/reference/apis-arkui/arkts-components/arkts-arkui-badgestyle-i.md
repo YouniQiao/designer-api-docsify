@@ -5,7 +5,7 @@ Badge的样式。包括文本颜色、大小、字重、标记颜色和标记大
 > **说明：**
 > 
 > 当`borderWidth`大于0且`borderColor`与`badgeColor`颜色不一致时，先绘制角标，再绘制描边。由于边缘像素经过抗锯齿处理，抗锯齿产生半透明像素，四角会出现 `badgeColor` 颜色的描边线。如
-> 需实现相关场景，建议使用[Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md)组件设置[outline](arkts-arkui-commonmethod-c.md#outline)代替Badge组件。
+> 需实现相关场景，建议使用[Text](./text)组件设置[outline](arkts-arkui-commonmethod-c.md#outline)代替Badge组件。
 
 **起始版本：** 7
 
@@ -55,7 +55,7 @@ Badge的大小。string类型支持number类型取值的字符串形式，可以
 
 1. 不支持设置百分比，当设置为百分比时，按照默认值处理。2. 从API version 20开始，支持ResourceStr类型。3. 当设置了fontSize且badgeSize小于fontSize时，badgeSize将按照fontSize生效。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 16vp
 
@@ -195,7 +195,7 @@ fontSize?: number | ResourceStr
 
 1. 不支持设置百分比，当设置为百分比时，按照默认值处理。2. 从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 10vp
 
@@ -223,7 +223,7 @@ fontWeight?: number | FontWeight | ResourceStr
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。从API version 20开始，支持ResourceStr类型。
 
-**类型：** number \| FontWeight \| ResourceStr
+**类型：** number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
 
@@ -273,7 +273,7 @@ outerBorderWidth?: LengthMetrics
 
 不支持设置百分比，当设置为百分比时，按照默认值处理。
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **默认值：** 0vp
 

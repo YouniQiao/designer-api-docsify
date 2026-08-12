@@ -114,7 +114,7 @@ Compressed texture image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 
 ## compressedTexSubImage2D
 
@@ -152,7 +152,7 @@ Compressed texture sub image 2D
 | width | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| data | [ArrayBufferView](../../apis-arkts/arkts-apis/arkts-arkts-arraybuffer-arraybufferview-i.md) | Yes |
+| data | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) | Yes |
 
 ## readPixels
 
@@ -188,7 +188,7 @@ Reads pixels from the framebuffer
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pixels | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -228,7 +228,7 @@ Sets texture image 2D from pixels
 | border | [GLint](arkts-arkgraphics2d-glint-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pixels | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texImage2D
 
@@ -302,7 +302,7 @@ Sets texture sub image 2D from pixels
 | height | [GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes |
 | format | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
 | type | [GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes |
-| pixels | ArrayBufferView \| null | Yes |
+| [pixels](../../apis-image-kit/arkts-apis/arkts-image-image-positionarea-i.md) | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) \| null | Yes |
 
 ## texSubImage2D
 

@@ -25,7 +25,7 @@ Defines Particle Component
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| particles | [Particles](../arkts-components/arkts-arkui-particles-i.md) | 是 | particle constructor options<br>**起始版本：** 23 |
+| particles | [Particles](arkts-arkui-particle-particles-i.md) | 是 | particle constructor options<br>**起始版本：** 23 |
 
 **返回值：**
 
@@ -60,7 +60,7 @@ Defines Particle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ParticleAttribute&gt; | 是 | Particle attribute instance |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ParticleAttribute](arkts-arkui-particle-particleattribute-i.md)&gt; | 是 | Particle attribute instance |
 
 **返回值：**
 

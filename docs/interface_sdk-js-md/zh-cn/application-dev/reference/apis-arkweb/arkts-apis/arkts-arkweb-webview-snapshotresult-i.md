@@ -54,7 +54,7 @@ size?: SizeOptions
 
 Actual size drawn on the web page.The value is of the number type, and the unit is vp.
 
-**类型：** [SizeOptions](../../apis-arkui/arkts-apis/arkts-arkui-sizeoptions-i.md)
+**类型：** SizeOptions
 
 **起始版本：** 23
 

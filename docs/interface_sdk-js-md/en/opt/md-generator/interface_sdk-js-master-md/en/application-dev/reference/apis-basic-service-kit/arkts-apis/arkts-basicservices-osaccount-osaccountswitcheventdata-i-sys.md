@@ -13,7 +13,7 @@ Defines the event that indicates the start or end of a foreground-background OS 
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## displayId

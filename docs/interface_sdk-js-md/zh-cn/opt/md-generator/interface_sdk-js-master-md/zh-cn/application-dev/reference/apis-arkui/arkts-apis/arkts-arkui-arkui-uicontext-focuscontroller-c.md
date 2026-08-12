@@ -4,7 +4,7 @@
 
 > **说明：**
 > 
-> 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller)方法获取FocusController实例，再通过该实例调用对应方法。
+> 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController)方法获取FocusController实例，再通过该实例调用对应方法。
 
 **起始版本：** 12
 
@@ -109,9 +109,9 @@ requestFocus(key: string): void
 
 | 错误码ID |
 | --- |
-| [150002](../errorcode-focus.md#150002-祖先节点无法获得焦点) |
-| [150003](../errorcode-focus.md#150003-节点不存在) |
-| [150001](../errorcode-focus.md#150001-节点无法获得焦点) |
+| [150002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-focus.md#150002-祖先节点无法获得焦点) |
+| [150003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-focus.md#150003-节点不存在) |
+| [150001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-focus.md#150001-节点无法获得焦点) |
 
 ## setAutoFocusTransfer
 

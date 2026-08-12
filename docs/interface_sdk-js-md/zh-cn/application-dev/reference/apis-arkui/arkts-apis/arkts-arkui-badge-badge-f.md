@@ -25,14 +25,14 @@ export declare function Badge(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| BadgeParamWithString | 是 | 数字、字符串类型的标记组件参数。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
+| value | [BadgeParamWithNumber](arkts-arkui-badge-badgeparamwithnumber-i.md) \| [BadgeParamWithString](arkts-arkui-badge-badgeparamwithstring-i.md) | 是 | 数字、字符串类型的标记组件参数。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
+| [BadgeAttribute](arkts-arkui-badge-badgeattribute-i.md) |  |
 
 
 ## Badge
@@ -62,12 +62,12 @@ export declare function Badge(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;BadgeAttribute&gt; | 是 | badge属性实例。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[BadgeAttribute](arkts-arkui-badge-badgeattribute-i.md)&gt; | 是 | badge属性实例。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BadgeAttribute](../arkts-components/arkts-arkui-badge-attribute.md) |  |
+| [BadgeAttribute](arkts-arkui-badge-badgeattribute-i.md) |  |
 

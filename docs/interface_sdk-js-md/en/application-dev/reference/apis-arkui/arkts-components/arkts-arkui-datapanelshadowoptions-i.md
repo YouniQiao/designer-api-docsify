@@ -1,8 +1,8 @@
 # DataPanelShadowOptions
 
-Inherits from [MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md) and has all properties of **MultiShadowOptions**.
+Inherits from [MultiShadowOptions](MultiShadowOptions) and has all properties of **MultiShadowOptions**.
 
-**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](../arkts-apis/arkts-arkui-common-multishadowoptions-i.md/arkts-arkui-common-multishadowoptions-i.md)
+**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](MultiShadowOptions)
 
 **Since:** 10
 
@@ -28,7 +28,7 @@ If the number of the set shadow colors is less than that of the data segments, t
 
 If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
 
-**Type:** Array&lt;ResourceColor \| LinearGradient&gt;
+**Type:** Array&lt;ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
 
 **Default:** Consistent with valueColors
 

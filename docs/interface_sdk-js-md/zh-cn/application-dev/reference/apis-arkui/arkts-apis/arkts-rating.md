@@ -4,7 +4,7 @@
  > **说明：**
  >
  > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
- > - 当Rating的父节点有指定宽高时，需为Rating组件指定宽高，或为父节点设置值为true的[clip](arkts-arkui-common-commonmethod-i.md#clip)属性。
+ > - 当Rating的父节点有指定宽高时，需为Rating组件指定宽高，或为父节点设置值为true的[clip](CommonMethod#clip(clip: Optional<boolean>))属性。
  ###### 子组件
  无
  ###### 键盘走焦规格
@@ -30,7 +30,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [RatingAttribute](arkts-arkui-rating-ratingattribute-i.md) |  |
-| [RatingConfiguration](arkts-arkui-rating-ratingconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。 |
+| [RatingConfiguration](arkts-arkui-rating-ratingconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。 |
 | [RatingOptions](arkts-arkui-rating-ratingoptions-i.md) | 评分组件的信息。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
 | [StarStyleOptions](arkts-arkui-rating-starstyleoptions-i.md) | 评分组件选中、未选中以及部分选中的星级样式。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
 

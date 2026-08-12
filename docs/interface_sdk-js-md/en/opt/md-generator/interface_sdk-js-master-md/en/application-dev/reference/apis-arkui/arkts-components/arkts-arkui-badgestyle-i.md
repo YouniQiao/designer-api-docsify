@@ -7,7 +7,7 @@ Describes the badge style. It includes the font color, font size, badge color, b
 > - When **borderWidth** is set to a value greater than 0 and **borderColor** is different from **badgeColor**, the
 > badge is drawn before the border. Edge pixels are anti-aliased, which produces semi-transparent pixels. This causes
 > the border in **badgeColor** to become visible at the four corners. To implement related scenarios, it is
-> recommended that you use the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component with its
+> recommended that you use the [Text](./text) component with its
 > [outline](arkts-arkui-commonmethod-c.md#outline) attribute instead of the **Badge** component.
 
 **Since:** 7
@@ -54,7 +54,7 @@ Unit: fp. Default value: **16vp**.
 
 1. Percentage values are not supported. If a percentage value is set, the default value is used.2. If **fontSize** is set and **badgeSize** is smaller than fontSize, **badgeSize** will take effect based on the value of **fontSize**.
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 16vp
 
@@ -194,7 +194,7 @@ The value must be greater than 0. If the value is **0**, the text is not display
 
 1. Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** number \| ResourceStr
+**Type:** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Default:** 10vp
 
@@ -222,7 +222,7 @@ Default value: **FontWeight.Normal**
 
 Percentage values are not supported. If a percentage value is set, the default value is used. The ResourceStr type is supported since API version 20.
 
-**Type:** number \| FontWeight \| ResourceStr
+**Type:** number \| FontWeight \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
 
@@ -272,7 +272,7 @@ Unit: vp
 
 Percentage values are not supported. If a percentage value is set, the default value is used.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Default:** 0vp
 

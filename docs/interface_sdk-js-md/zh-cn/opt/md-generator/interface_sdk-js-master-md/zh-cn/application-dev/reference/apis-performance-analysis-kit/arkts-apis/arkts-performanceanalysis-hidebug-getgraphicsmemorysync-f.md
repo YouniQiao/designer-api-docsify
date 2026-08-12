@@ -6,11 +6,11 @@
 function getGraphicsMemorySync(): number
 ```
 
-ʹ��ͬ����ʽ��ȡӦ���Դ��ܴ�С��gl + graph����
+使用同步方式获取应用显存总大小（gl + graph）。
 
-> **ע��**
+> **注意**
 > 
-> ���ڸýӿ��漰��ο����ͨ�ţ����ʱ���ܴﵽ�뼶��Ϊ�˱��������������⣬���鲻Ҫ�����̵߳��øýӿڣ��Ƽ�ʹ���첽�ӿ�`getGraphicsMemory`��
+> 由于该接口涉及多次跨进程通信，其耗时可能达到秒级。为了避免引入性能问题，建议不要在主线程调用该接口，推荐使用异步接口`getGraphicsMemory`。
 
 **起始版本：** 14
 
@@ -30,7 +30,7 @@ function getGraphicsMemorySync(): number
 
 | 错误码ID |
 | --- |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
+| [11400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-cpuusage统计异常) |
 
 ## 示例
 

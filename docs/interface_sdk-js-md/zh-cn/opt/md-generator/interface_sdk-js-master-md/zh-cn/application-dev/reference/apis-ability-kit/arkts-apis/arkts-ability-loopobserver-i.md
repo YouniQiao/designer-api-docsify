@@ -30,3 +30,17 @@ onLoopTimeOut?(timeout: number): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | timeout | number | 是 |
+
+## 示例
+
+```TypeScript
+import { errorManager } from '@kit.AbilityKit';
+
+let observer: errorManager.LoopObserver = {
+  onLoopTimeOut(timeout: number) {
+    console.info('Duration timeout: ' + timeout);
+  }
+};
+
+errorManager.on('loopObserver', 1, observer);
+```

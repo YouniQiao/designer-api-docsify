@@ -49,7 +49,7 @@ REPAIRED = 2
 ```
 
 The database is repaired and the undamaged data is restored. Currently, only the   
-[vector store](arkts-arkdata-relationalstore-storeconfig-i.md) supports this capability.
+[vector store](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) supports this capability.
 
 **Since:** 12
 

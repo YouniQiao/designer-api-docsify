@@ -18,7 +18,7 @@ controller: WebviewController
 
 Sets the controller of the Web.
 
-**Type:** [WebviewController](arkts-arkweb-webview-webviewcontroller-c.md)
+**Type:** [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 23
 
@@ -106,9 +106,9 @@ A token indicating that the current Web component specifies a shared rendering p
 src: string | Resource
 ```
 
-Web resource address. If accessing local resource files, please use \$rawfile or resource protocol.If you load a local resource file that applies the sandbox path outside the package (files support html and txt types),please use the file:// sandbox file path.Src cannot dynamically change the address through state variables (for example: @State).If you need to change it, please reload it through {@link loadUrl}.
+Web resource address. If accessing local resource files, please use \$rawfile or resource protocol.If you load a local resource file that applies the sandbox path outside the package (files support html and txt types),please use the file:// sandbox file path.Src cannot dynamically change the address through state variables (for example: @State).If you need to change it, please reload it through [loadUrl](loadUrl).
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

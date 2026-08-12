@@ -6,7 +6,7 @@ Enum for location priority
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequestPriority
+**Substitutes:** [LocationRequestPriority](ohos.geoLocationManager/geoLocationManager.LocationRequestPriority)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -24,7 +24,7 @@ UNSET = 0x200
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#UNSET
+**Substitutes:** [UNSET](ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#UNSET)
 
 <!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 
@@ -40,7 +40,7 @@ ACCURACY
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#ACCURACY
+**Substitutes:** [ACCURACY](ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#ACCURACY)
 
 <!--Device-LocationRequestPriority-ACCURACY--><!--Device-LocationRequestPriority-ACCURACY-End-->
 
@@ -56,7 +56,7 @@ LOW_POWER
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#LOW_POWER
+**Substitutes:** [LOW_POWER](ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#LOW_POWER)
 
 <!--Device-LocationRequestPriority-LOW_POWER--><!--Device-LocationRequestPriority-LOW_POWER-End-->
 
@@ -72,7 +72,7 @@ FIRST_FIX
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#FIRST_FIX
+**Substitutes:** [FIRST_FIX](ohos.geoLocationManager/geoLocationManager.LocationRequestPriority#FIRST_FIX)
 
 <!--Device-LocationRequestPriority-FIRST_FIX--><!--Device-LocationRequestPriority-FIRST_FIX-End-->
 

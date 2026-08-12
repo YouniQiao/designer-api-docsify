@@ -14,7 +14,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -30,7 +30,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | isVisible | boolean | Yes | Whether to make the widgets visible. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## notifyFormsVisible
@@ -47,7 +47,7 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.app.form.formHost:formHost#notifyFormsVisible](arkts-form-formhost-notifyformsvisible-depr-f-sys.md#notifyformsvisible)
+**Substitutes:** [notifyFormsVisible](arkts-form-formhost-notifyformsvisible-f-sys.md#notifyFormsVisible)
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

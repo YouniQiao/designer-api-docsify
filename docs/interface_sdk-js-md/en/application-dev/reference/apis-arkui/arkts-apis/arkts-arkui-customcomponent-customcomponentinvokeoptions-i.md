@@ -2,7 +2,7 @@
 
 Defining interface for _invokeImpl options.
 
-**Inheritance/Implementation:** CustomComponentInvokeOptions extends [CustomComponentBaseOptions](arkts-arkui-customcomponent-customcomponentbaseoptions-i.md)
+**Inheritance/Implementation:** CustomComponentInvokeOptions extends [CustomComponentBaseOptions](arkts-arkui-customcomponent-customcomponentbaseoptions-i.md#CustomComponentBaseOptions)
 
 **Since:** 24
 

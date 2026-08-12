@@ -15,7 +15,7 @@ Configuration parameter of ExceptionPromptV2.Use @ObservedV2 and @Trace to suppo
 ## Modules to Import
 
 ```TypeScript
-import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from 'kits/@kit.ArkUI';
+import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -50,7 +50,7 @@ public actionText?: ResourceStr
 
 Text of the icon on the right of the ExceptionPromptV2.If this parameter is not set or is set to undefined, the text is not displayed.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -70,7 +70,7 @@ public icon?: ResourceStr
 
 Icon style of the ExceptionPromptV2.If this parameter is not set or is set to undefined, the icon is not displayed.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 
@@ -110,7 +110,7 @@ public marginTop: Dimension
 
 Top margin of the ExceptionPromptV2.Distance from the top to the content area of ExceptionPromptV2.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 26.0.0
 
@@ -170,7 +170,7 @@ public tip?: ResourceStr
 
 Text content of the ExceptionPromptV2.By default, the following text resources are provided:1. ohos_network_not_connected: displayed when no Internet connection.2. ohos_network_connected_unstable: displayed when the Internet connection is unstable.3. ohos_unstable_connect_server: displayed when the server fails to be connected.4. ohos_custom_network_tips_left: displayed when an Internet connection is available  but the location fails to be obtained.If this parameter is not set or is set to undefined, the text content is not displayed.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 26.0.0
 

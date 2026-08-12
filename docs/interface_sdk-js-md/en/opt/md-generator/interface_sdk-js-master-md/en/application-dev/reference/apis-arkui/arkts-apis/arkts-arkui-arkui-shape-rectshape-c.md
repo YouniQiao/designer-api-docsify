@@ -2,7 +2,7 @@
 
 Represents a rectangle shape used in the **clipShape** and **maskShape** APIs.
 
-This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
+This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape).
 
 **Inheritance/Implementation:** RectShape extends [BaseShape<RectShape>](BaseShape<RectShape>)
 
@@ -15,7 +15,7 @@ This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md).
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -68,7 +68,7 @@ Sets the radius of the rectangle border corners.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [radius](#radius) | number \| string \| Array&lt;number \| string&gt; | Yes |
+| [radius](#radius) | number \| string \| Array & lt;number \ | string & gt; | Yes |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from 'kits/@kit.FormKit';
+import { formBindingData } from '@kit.FormKit';
 ```
 
 ## createFormBindingData
@@ -34,13 +34,13 @@ Creates a **FormBindingData** object.
 
 | Type | Description |
 | --- | --- |
-| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | FormBindingData** object created based on the passed data. |
+| FormBindingData | FormBindingData** object created based on the passed data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -109,5 +109,5 @@ Create an FormBindingData instance.
 
 | Type | Description |
 | --- | --- |
-| [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md) | Returns the FormBindingData. |
+| FormBindingData | Returns the FormBindingData. |
 

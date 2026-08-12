@@ -16,7 +16,7 @@ Defines the Embed Options.
 supportCssDisplayChange?: boolean
 ```
 
-Whether the {@link onNativeEmbedVisibilityChange} event supports display-related attributes of the embed element.&lt;br&gt;Default value is false. If true, the changes of the display-related attributes of the embed element will be reported through the {@link onNativeEmbedVisibilityChange} event.
+Whether the [onNativeEmbedVisibilityChange](arkts-arkweb-web-webattribute-i.md#onNativeEmbedVisibilityChange) event supports display-related attributes of the embed element.&lt;br&gt;Default value is false. If true, the changes of the display-related attributes of the embed element will be reported through the [onNativeEmbedVisibilityChange](arkts-arkweb-web-webattribute-i.md#onNativeEmbedVisibilityChange) event.
 
 **类型：** boolean
 

@@ -1,6 +1,6 @@
 # WebNavigationType
 
-Enum type supplied to {@link navigationType} for the navigation's type.
+Enum type supplied to [navigationType](arkts-arkweb-loadcommitteddetails-i.md#navigationType) for the navigation's type.
 
 **起始版本：** 11
 

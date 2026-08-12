@@ -15,7 +15,7 @@ Defines the LazyDynamicLayout attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 ```
 
 ## onVisibleIndexesChange
@@ -42,7 +42,7 @@ Called when visible indexes change.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;int[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [Callback](arkts-arkui-callback-t.md)&lt;int[]&gt; \| undefined | Yes | Callback used to return the list of index numbers of visible subcomponents. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 

@@ -29,8 +29,8 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要延时执行的任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
+| task | Task | 是 | 需要延时执行的任务。 |
+| priority | Priority | 否 | 延时执行的任务的优先级，该参数默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -42,11 +42,11 @@ function executeDelayed(delayTime: number, task: Task, priority?: Priority): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
-| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent.<br>**适用版本：** 12+ |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization.<br>**适用版本：** 12+ |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent.<br>**适用版本：** 12+ |
+| [10200028](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again.<br>**适用版本：** 12+ |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -94,7 +94,7 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 | --- | --- | --- | --- |
 | delayTime | number | 是 | 延时时间。单位：ms。delayTime值必须要大于等于0。 |
 | task | [GenericsTask](arkts-arkts-taskpool-genericstask-c.md)&lt;A, R&gt; | 是 | 需要延时执行的泛型任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| priority | Priority | 否 | 延时执行的任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -106,9 +106,9 @@ function executeDelayed<A extends Array<Object>, R>(delayTime: number, task: Gen
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
-| [10200028](../errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs.<br>**适用版本：** 18+ |
+| [10200028](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-延时时间小于零) | The delayTime is less than zero. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
 
 ## 示例
 

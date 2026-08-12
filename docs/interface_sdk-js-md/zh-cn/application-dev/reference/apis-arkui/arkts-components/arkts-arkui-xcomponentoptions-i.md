@@ -40,7 +40,7 @@ imageAIOptions?: ImageAIOptions
 
 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器，仅类型为SURFACE或TEXTURE时有效。未设置时不配置AI分析选项，可通过[enableAnalyzer](XComponentAttribute#enableAnalyzer)属性单独启用AI分析。
 
-**类型：** [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md)
+**类型：** ImageAIOptions
 
 **起始版本：** 12
 

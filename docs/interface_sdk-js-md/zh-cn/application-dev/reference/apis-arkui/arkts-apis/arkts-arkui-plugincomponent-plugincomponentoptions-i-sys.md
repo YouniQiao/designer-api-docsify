@@ -42,7 +42,7 @@ template: PluginComponentTemplate
 
 组件模板，用于跟提供方定义的组件绑定。AnonyMous Object Rectification
 
-**类型：** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
+**类型：** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md)
 
 **起始版本：** 23
 

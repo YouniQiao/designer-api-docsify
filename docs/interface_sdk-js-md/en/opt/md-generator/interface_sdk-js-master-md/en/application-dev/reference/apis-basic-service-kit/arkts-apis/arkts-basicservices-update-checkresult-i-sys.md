@@ -13,7 +13,7 @@ Indicates the version check result.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## isExistNewVersion

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from 'kits/@kit.CoreFileKit';
+import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
 ## getAllExtBundleStats
@@ -38,7 +38,7 @@ Obtains the space usage of all system applications or system services of a speci
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;ExtBundleStats&gt;&gt; | Promise used to return the space usage of all system applications or system services of a specified user. |
+| Promise&lt;Array&lt;[ExtBundleStats](arkts-corefile-storagestatistics-extbundlestats-i-sys.md)&gt;&gt; | Promise used to return the space usage of all system applications or system services of a specified user. |
 
 **Error codes:**
 
@@ -46,8 +46,8 @@ Obtains the space usage of all system applications or system services of a speci
 | --- | --- |
 | 13600013 | Failed to query all business space usage. |
 | 13600010 | The input parameter is invalid. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

@@ -2,7 +2,7 @@
 
 Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md)
+**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpickeroptions-i.md#TextPickerOptions)
 
 **Since:** 20
 
@@ -148,7 +148,7 @@ backgroundBlurStyle?: BlurStyle
 
 Defines the textPickerDialog's background blur Style
 
-**Type:** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -442,7 +442,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](../arkts-apis/arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 20
 
@@ -462,7 +462,7 @@ onAccept?: Callback<TextPickerResult>
 
 Called when the OK button in the dialog is clicked.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -482,7 +482,7 @@ onChange?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected in dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -502,7 +502,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 This event is triggered when an item enters the selected area in dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -522,7 +522,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected and scrolling has stopped in dialog.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
 
@@ -584,7 +584,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 20
 

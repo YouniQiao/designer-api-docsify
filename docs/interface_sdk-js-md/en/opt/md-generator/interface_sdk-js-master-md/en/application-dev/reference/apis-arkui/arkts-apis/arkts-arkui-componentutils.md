@@ -13,7 +13,7 @@ The **componentUtils** module provides API for obtaining the coordinates and siz
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## Summary

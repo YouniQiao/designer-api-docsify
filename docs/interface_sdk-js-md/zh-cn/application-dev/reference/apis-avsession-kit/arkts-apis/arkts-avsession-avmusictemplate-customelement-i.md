@@ -1,8 +1,8 @@
 # CustomElement
 
-“我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。
+“我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。
 
-**继承/实现关系：** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md)
+**继承/实现关系：** CustomElement extends [OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)
 
 **起始版本：** 23
 
@@ -80,7 +80,7 @@ userInfo?: UserInfo
 
 用户信息。
 
-**类型：** [UserInfo](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-userinfo-i.md)
+**类型：** UserInfo
 
 **起始版本：** 23
 

@@ -13,7 +13,7 @@ Defines the content of a data change notification, including inserted data, upda
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## deleteEntries
@@ -24,7 +24,7 @@ deleteEntries: Entry[]
 
 Data deleted.
 
-**Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
+**Type:** Entry[]
 
 **Since:** 9
 
@@ -64,7 +64,7 @@ insertEntries: Entry[]
 
 Data inserted.
 
-**Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
+**Type:** Entry[]
 
 **Since:** 9
 
@@ -84,7 +84,7 @@ updateEntries: Entry[]
 
 Data updated.
 
-**Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
+**Type:** Entry[]
 
 **Since:** 9
 

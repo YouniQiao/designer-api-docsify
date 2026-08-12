@@ -19,7 +19,7 @@ Provides APIs for listening for UI component behavior changes.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## Summary
@@ -39,7 +39,7 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 | [off](arkts-arkui-uiobserver-off-f.md#off-8) |
 | [off](arkts-arkui-uiobserver-off-f.md#off-9) |
 | [off](arkts-arkui-uiobserver-off-f.md#off-10) |
-| [off](arkts-arkui-uiobserver-off-f.md#off-11) | Unsubscribes from **Navigation** component page switching events. Compared with  [uiObserver.off](uiObserver.off( type: 'navDestinationSwitch', context: UIAbilityContext \|
+| [off](arkts-arkui-uiobserver-off-f.md#off-11) |
 | [on](arkts-arkui-uiobserver-on-f.md#on) |
 | [on](arkts-arkui-uiobserver-on-f.md#on-1) |
 | [on](arkts-arkui-uiobserver-on-f.md#on-2) |
@@ -79,6 +79,6 @@ import { uiObserver } from 'kits/@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md) |
-| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in  [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md) as the callback parameter for passive observation via  [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \|
+| [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md) | Enumerates the states of a page during routing. **RouterPageState** is used in  [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo) as the callback parameter for passive observation via  [routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext \|
 | [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md) |
 | [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md) |

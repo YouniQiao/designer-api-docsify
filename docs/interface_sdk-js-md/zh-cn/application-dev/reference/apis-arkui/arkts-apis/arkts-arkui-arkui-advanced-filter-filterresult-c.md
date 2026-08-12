@@ -48,7 +48,7 @@ name: ResourceStr
 
 **说明：**如果文本大于列宽时，文本被截断。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 
@@ -74,7 +74,7 @@ value: ResourceStr
 
 **说明：**如果文本大于列宽时，文本被截断。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 10
 

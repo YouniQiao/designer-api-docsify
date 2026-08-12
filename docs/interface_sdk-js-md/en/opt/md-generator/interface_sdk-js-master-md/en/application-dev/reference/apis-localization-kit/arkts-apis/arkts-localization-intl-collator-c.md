@@ -11,7 +11,7 @@ Provides the string collation capability.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## compare
@@ -99,8 +99,8 @@ Creates a **Collator** object based on the specified locale and options.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| locale | string \| Array&lt;string&gt; | Yes |
-| options | [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) | No |
+| locale | string \| Array & lt;string & gt; | Yes |
+| options | [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) | No |
 
 ## Examples
 
@@ -131,7 +131,7 @@ Obtains the options for creating a **Collator** object.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [CollatorOptions](arkts-localization-intl-collatoroptions-i.md) |
+| [CollatorOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-collatoroptions-i.md) |
 
 ## Examples
 

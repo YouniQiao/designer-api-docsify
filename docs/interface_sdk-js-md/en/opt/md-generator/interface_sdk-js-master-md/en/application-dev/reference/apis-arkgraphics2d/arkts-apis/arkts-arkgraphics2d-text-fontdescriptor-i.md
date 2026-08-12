@@ -11,7 +11,7 @@ Describes the font descriptor information.
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## copyright
@@ -370,7 +370,7 @@ variationAxisRecords?: Array<FontVariationAxis>
 
 Font variable axis record array, which is used to describe the variable axis information supported by the font.For non-variable fonts, this field is **undefined**.
 
-**Type:** Array&lt;FontVariationAxis&gt;
+**Type:** Array&lt;[FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md)&gt;
 
 **Since:** 24
 
@@ -388,7 +388,7 @@ variationInstanceRecords?: Array<FontVariationInstance>
 
 Font variable instance record array, which is used to describe the variable instance information supported by the font. For non-variable fonts, this field is **undefined**.
 
-**Type:** Array&lt;FontVariationInstance&gt;
+**Type:** Array&lt;[FontVariationInstance](arkts-arkgraphics2d-text-fontvariationinstance-i.md)&gt;
 
 **Since:** 24
 
@@ -424,7 +424,7 @@ weight?: FontWeight
 
 Font weight. The default value is **0**.
 
-**Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
+**Type:** FontWeight
 
 **Since:** 14
 

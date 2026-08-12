@@ -23,5 +23,5 @@ Defines a swiper callback when onAnimationStart.
 | --- | --- | --- | --- |
 | index | int | Yes | The index value of the swiper page that when animation start. The value range is all integers The value should be an integer. |
 | targetIndex | int | Yes | The target index value of the swiper page that when animation start. The value range is all integers The value should be an integer. |
-| extraInfo | [SwiperAnimationEvent](../arkts-components/arkts-arkui-swiperanimationevent-i.md) | Yes | The extra callback info. |
+| extraInfo | [SwiperAnimationEvent](arkts-arkui-swiper-swiperanimationevent-i.md) | Yes | The extra callback info. |
 

@@ -12,7 +12,7 @@ function isLocalContact(id: number, callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 10
 
-**替代接口：** [contact.isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact)(context:
+**替代接口：** [isLocalContact](contact.isLocalContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -72,8 +72,8 @@ function isLocalContact(context: Context, id: number, callback: AsyncCallback<bo
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -108,7 +108,7 @@ function isLocalContact(id: number): Promise<boolean>
 
 **废弃版本：** 10
 
-**替代接口：** [contact.isLocalContact](arkts-contacts-contact-islocalcontact-f.md#islocalcontact)(context:
+**替代接口：** [isLocalContact](contact.isLocalContact(context:)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -126,7 +126,7 @@ function isLocalContact(id: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## 示例
 
@@ -168,14 +168,14 @@ function isLocalContact(context: Context, id: number): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

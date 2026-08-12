@@ -38,7 +38,7 @@ decoration?: DecorationStyleInterface
 
 The decoration of AI entity.
 
-**Type:** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
+**Type:** [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ types: TextDataDetectorType[] | undefined | null
 
 Text data detector types. The default value is an empty array.Set to `undefined` or `null` will restore it to the default value.
 
-**Type:** TextDataDetectorType[] \| undefined \| null
+**Type:** [TextDataDetectorType](arkts-arkui-textcommon-textdatadetectortype-e.md)[] \| undefined \| null
 
 **Since:** 23
 

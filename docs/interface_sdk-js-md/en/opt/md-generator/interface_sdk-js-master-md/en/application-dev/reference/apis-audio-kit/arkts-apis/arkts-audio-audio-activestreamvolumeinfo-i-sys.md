@@ -13,7 +13,7 @@ Volume information for active audio streams.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## appVolume
@@ -64,7 +64,7 @@ volumeType: AudioVolumeType
 
 Volume type of the current stream.
 
-**Type:** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e-sys.md)
+**Type:** [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
 
 **Since:** 24
 

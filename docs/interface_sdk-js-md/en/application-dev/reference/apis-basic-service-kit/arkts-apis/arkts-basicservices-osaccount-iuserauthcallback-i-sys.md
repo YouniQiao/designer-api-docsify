@@ -15,7 +15,7 @@ Provides callbacks for user authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onAcquireInfo
@@ -95,7 +95,7 @@ Called to return the result code and authentication result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
-| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | Yes |  |
+| extraInfo | AuthResult | Yes |  |
 
 ## Examples
 

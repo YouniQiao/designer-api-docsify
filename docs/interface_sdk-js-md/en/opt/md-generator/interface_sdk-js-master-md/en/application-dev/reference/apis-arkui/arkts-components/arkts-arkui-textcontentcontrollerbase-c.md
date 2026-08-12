@@ -143,7 +143,7 @@ Obtains the position information of the caret.
 > - The location information in the return value is the location of the caret relative to the editable component.
 > 
 > - If the caret position cannot be obtained (for example, when the
-> [TextInputController](arkts-arkui-textinputcontroller-c.md) is not bound to the [TextInput](./text_input) component),
+> [TextInputController](arkts-arkui-textinputcontroller-c.md#TextInputController) is not bound to the [TextInput](./text_input) component),
 > **null** is returned.
 
 **Since:** 11

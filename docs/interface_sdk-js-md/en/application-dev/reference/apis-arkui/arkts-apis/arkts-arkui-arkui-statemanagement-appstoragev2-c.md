@@ -14,7 +14,7 @@ For details about how to use AppStorageV2, see
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## connect
@@ -47,7 +47,7 @@ Stores key-value pair data in the application memory. If the given key already e
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Type. If no key is specified, the name of the type is used as the key. |
-| keyOrDefaultCreator | string \| StorageDefaultCreator&lt;T&gt; | No | Key, or constructor for obtaining the default value. The default value is **undefined**. |
+| keyOrDefaultCreator | string \| [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | No | Key, or constructor for obtaining the default value. The default value is **undefined**. |
 | defaultCreator | [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt; | No | Constructor for obtaining the default value. The default value is **undefined**. |
 
 **Return value:**
@@ -106,5 +106,5 @@ Removes the specified key-value pair from [AppStorageV2](../../../ui/state-manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOrType | string \| TypeConstructorWithArgs&lt;T&gt; | Yes | Key to be removed. If a type is specified, the key to be removed is the name of that type. |
+| keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be removed. If a type is specified, the key to be removed is the name of that type. |
 

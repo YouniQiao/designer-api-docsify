@@ -24,4 +24,4 @@ type QueryCompilationByKeywordEvent = (keyword: string) => Promise<Compilation[]
 
 | 类型 |
 | --- |
-| Promise&lt;Compilation[]&gt; |
+| Promise&lt;[Compilation](arkts-avsession-avmusictemplate-compilation-i.md)[]&gt; |

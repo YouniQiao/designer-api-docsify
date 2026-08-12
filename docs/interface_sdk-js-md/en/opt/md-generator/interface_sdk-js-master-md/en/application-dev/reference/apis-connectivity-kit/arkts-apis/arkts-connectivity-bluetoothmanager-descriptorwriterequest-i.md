@@ -6,7 +6,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest
+**Substitutes:** [DescriptorWriteRequest](ohos.bluetooth.ble/ble.DescriptorWriteRequest)
 
 <!--Device-bluetoothManager-interface DescriptorWriteRequest--><!--Device-bluetoothManager-interface DescriptorWriteRequest-End-->
 
@@ -15,7 +15,7 @@ Describes the parameters of the Gatt client's characteristic write request.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## characteristicUuid
@@ -32,7 +32,7 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#characteristicUuid
+**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.DescriptorWriteRequest#characteristicUuid)
 
 <!--Device-DescriptorWriteRequest-characteristicUuid: string--><!--Device-DescriptorWriteRequest-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The UUID of a DescriptorWriteRequest instance
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#descriptorUuid
+**Substitutes:** [descriptorUuid](ohos.bluetooth.ble/ble.DescriptorWriteRequest#descriptorUuid)
 
 <!--Device-DescriptorWriteRequest-descriptorUuid: string--><!--Device-DescriptorWriteRequest-descriptorUuid: string-End-->
 
@@ -72,7 +72,7 @@ Indicates the address of the client that initiates the write request
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#deviceId
+**Substitutes:** [deviceId](ohos.bluetooth.ble/ble.DescriptorWriteRequest#deviceId)
 
 <!--Device-DescriptorWriteRequest-deviceId: string--><!--Device-DescriptorWriteRequest-deviceId: string-End-->
 
@@ -92,7 +92,7 @@ Whether this request should be pending for later operation
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#isPrepared
+**Substitutes:** [isPrepared](ohos.bluetooth.ble/ble.DescriptorWriteRequest#isPrepared)
 
 <!--Device-DescriptorWriteRequest-isPrep: boolean--><!--Device-DescriptorWriteRequest-isPrep: boolean-End-->
 
@@ -112,7 +112,7 @@ Whether the remote client need a response
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#needRsp
+**Substitutes:** [needRsp](ohos.bluetooth.ble/ble.DescriptorWriteRequest#needRsp)
 
 <!--Device-DescriptorWriteRequest-needRsp: boolean--><!--Device-DescriptorWriteRequest-needRsp: boolean-End-->
 
@@ -132,7 +132,7 @@ Indicates the byte offset of the start position for writing characteristic value
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#offset
+**Substitutes:** [offset](ohos.bluetooth.ble/ble.DescriptorWriteRequest#offset)
 
 <!--Device-DescriptorWriteRequest-offset: number--><!--Device-DescriptorWriteRequest-offset: number-End-->
 
@@ -152,7 +152,7 @@ The UUID of the service to which the descriptor belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#serviceUuid
+**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.DescriptorWriteRequest#serviceUuid)
 
 <!--Device-DescriptorWriteRequest-serviceUuid: string--><!--Device-DescriptorWriteRequest-serviceUuid: string-End-->
 
@@ -172,7 +172,7 @@ The Id of the write request
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#transId
+**Substitutes:** [transId](ohos.bluetooth.ble/ble.DescriptorWriteRequest#transId)
 
 <!--Device-DescriptorWriteRequest-transId: number--><!--Device-DescriptorWriteRequest-transId: number-End-->
 
@@ -192,7 +192,7 @@ Indicates the value to be written
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.ble/ble.DescriptorWriteRequest#value
+**Substitutes:** [value](ohos.bluetooth.ble/ble.DescriptorWriteRequest#value)
 
 <!--Device-DescriptorWriteRequest-value: ArrayBuffer--><!--Device-DescriptorWriteRequest-value: ArrayBuffer-End-->
 

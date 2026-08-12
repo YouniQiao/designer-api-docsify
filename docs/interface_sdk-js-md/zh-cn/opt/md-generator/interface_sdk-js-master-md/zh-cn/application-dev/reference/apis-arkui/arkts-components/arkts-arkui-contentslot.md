@@ -26,7 +26,7 @@ ContentSlot(content: Content)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| content | [Content](../arkts-apis/arkts-arkui-content-c.md) | 是 |
+| content | [Content](arkts-arkui-content-t.md) | 是 |
 
 ## 汇总
 

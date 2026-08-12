@@ -31,5 +31,5 @@ global \$r function
 
 | 类型 | 说明 |
 | --- | --- |
-| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |  |
+| Resource |  |
 

@@ -1,6 +1,6 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
 
 **Since:** 10
 
@@ -13,7 +13,7 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## writeCharacteristicValueWithContext
@@ -43,29 +43,29 @@ Writes the characteristic of a BLE peripheral device with context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
-| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports {@link GattWriteType#WRITE} mode. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
+| writeType | [GattWriteType](arkts-connectivity-ble-gattwritetype-e.md) | Yes | Write type of the characteristic. The interface currently only supports [WRITE](arkts-connectivity-ble-gattwritetype-e.md#WRITE) mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;GattRspContext&gt; | Promise used to return the result. |
+| Promise&lt;[GattRspContext](arkts-connectivity-ble-gattrspcontext-i-sys.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 2901004 | The connection is congested. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2901005 | The connection is not encrypted. |
 | 2901006 | The connection is not authenticated. |
 | 2901007 | The connection is not authorized. |
 | 2901001 | Write forbidden. |
 | 2900011 | The operation is busy. The last operation is not complete. |
 | 2901003 | The connection is not established. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900099 | Operation failed. |
 
 ## Examples

@@ -13,7 +13,7 @@ Defines the dynamic range mode used for current snapshot taking.By default, the 
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## dynamicRangeMode
@@ -24,7 +24,7 @@ dynamicRangeMode?: DynamicRangeMode
 
 Set one specific dynamic range mode that you want to use.
 
-**Type:** [DynamicRangeMode](../arkts-components/arkts-arkui-dynamicrangemode-e.md)
+**Type:** DynamicRangeMode
 
 **Since:** 23
 

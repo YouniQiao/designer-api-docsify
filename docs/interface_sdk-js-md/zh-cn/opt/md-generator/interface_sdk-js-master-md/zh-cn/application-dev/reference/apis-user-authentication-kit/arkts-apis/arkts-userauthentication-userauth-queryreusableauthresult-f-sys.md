@@ -22,7 +22,7 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| authParam | [AuthParam](arkts-userauthentication-userauth-authparam-i-sys.md) | 是 |
+| [authParam](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [AuthParam](arkts-userauthentication-userauth-authparam-i.md) | 是 |
 
 **返回值：**
 
@@ -34,11 +34,11 @@ function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 
 | 错误码ID |
 | --- |
-| [12500008](../errorcode-useriam.md#12500008-参数校验失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-| [12500017](../errorcode-useriam.md#12500017-复用身份认证结果失败) |
+| [12500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500008-参数校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500017-复用身份认证结果失败) |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from 'kits/@kit.ArkUI';
+import { ArcScrollBarAttribute, ArcScrollBar } from '@kit.ArkUI';
 ```
 
 ## ArcScrollBar
@@ -30,13 +30,13 @@ Defines ArcScrollBar Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ArcScrollBarOptions](arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) |  |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) |  |
 
 
 ## ArcScrollBar
@@ -66,12 +66,12 @@ Defines ArcScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ArcScrollBarAttribute&gt; | Yes | The style to create an ArcScrollBar. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | CustomBuilderT&lt;[ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md)&gt; | Yes | The style to create an ArcScrollBar. |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-c.md) | The attribute of the ArcScrollBar. |
+| [ArcScrollBarAttribute](arkts-arkui-arkui-arcscrollbar-arcscrollbarattribute-i.md) | The attribute of the ArcScrollBar. |
 

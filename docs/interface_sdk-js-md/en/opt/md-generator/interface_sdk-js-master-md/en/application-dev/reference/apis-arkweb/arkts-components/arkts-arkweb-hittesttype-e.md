@@ -6,7 +6,7 @@ Enumerates the test result types of the click event.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md)
+**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#WebHitTestType)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 
@@ -24,7 +24,7 @@ Editable area.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#edittext)
+**Substitutes:** [EditText](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#EditText)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +44,7 @@ Email address.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#email)
+**Substitutes:** [Email](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Email)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +64,7 @@ Hyperlink whose **src** is **http**.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#httpanchor)
+**Substitutes:** [HttpAnchor](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#HttpAnchor)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,7 +84,7 @@ Image with a hyperlink, where **src** is **http**.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#httpanchorimg)
+**Substitutes:** [HttpAnchorImg](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#HttpAnchorImg)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,7 +104,7 @@ HTML::img tag.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#img)
+**Substitutes:** [Img](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Img)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -124,7 +124,7 @@ Geographical address.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#map)
+**Substitutes:** [Map](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Map)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,7 +144,7 @@ Phone number.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#phone)
+**Substitutes:** [Phone](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Phone)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -164,7 +164,7 @@ Unknown content.
 
 **Deprecated since:** 21
 
-**Substitutes:** [@ohos.web.webview:webview.WebHitTestType.Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md/arkts-arkweb-webview-webhittesttype-e.md#unknown)
+**Substitutes:** [Unknown](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#Unknown)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

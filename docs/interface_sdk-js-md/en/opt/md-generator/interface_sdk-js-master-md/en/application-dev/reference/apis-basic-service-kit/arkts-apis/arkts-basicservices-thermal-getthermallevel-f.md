@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## getThermalLevel
@@ -18,7 +18,7 @@ Obtains the current thermal level.
 
 **Deprecated since:** 9
 
-**Substitutes:** [thermal.getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel)
+**Substitutes:** [getLevel](arkts-basicservices-thermal-getlevel-f.md#getLevel)
 
 <!--Device-thermal-function getThermalLevel(): ThermalLevel--><!--Device-thermal-function getThermalLevel(): ThermalLevel-End-->
 

@@ -1,7 +1,7 @@
 # Panel
 
 In the following API examples, you must first use   
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -12,7 +12,7 @@ In the following API examples, you must first use
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## off('sizeUpdate')
@@ -27,7 +27,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. When you call
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustPanelRect-1)
 > to adjust the panel size, the system calculates the final value based on certain rules (for example, whether
 > the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the
 > panel layout.
@@ -69,7 +69,7 @@ Listens for the panel size change. This API uses an asynchronous callback to ret
 > 
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
 > state. When you call
-> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustpanelrect)
+> [adjustPanelRect](arkts-ime-inputmethodengine-panel-i.md#adjustPanelRect-1)
 > to adjust the panel size, the system calculates the final value based on certain rules (for example, whether
 > the panel size exceeds the screen). This callback can be used to obtain the actual panel size to refresh the
 > panel layout.
@@ -110,8 +110,8 @@ Sets the shadow effect of the input method window.
 
 > **NOTE：**
 > 
-> Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md) is **SOFT_KEYBOARD** and
-> [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md) is **FLG_FIXED** are not supported.
+> Panels whose [PanelType](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) is **SOFT_KEYBOARD** and
+> [PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) is **FLG_FIXED** are not supported.
 
 **Since:** 22
 
@@ -134,9 +134,9 @@ Sets the shadow effect of the input method window.
 
 | Error Code ID |
 | --- |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
 
 ## Examples
 

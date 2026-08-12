@@ -20,7 +20,7 @@ declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| builder | (...args: Args) =&gt; void | 是 |
+| builder | (...args: Args) = & gt; void | 是 |
 
 **返回值：**
 

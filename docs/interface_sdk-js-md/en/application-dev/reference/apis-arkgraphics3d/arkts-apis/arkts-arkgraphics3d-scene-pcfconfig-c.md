@@ -2,7 +2,7 @@
 
 param config for pcf soft shadow
 
-**Inheritance/Implementation:** PCFConfig extends [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md)
+**Inheritance/Implementation:** PCFConfig extends [SoftShadowConfig](arkts-arkgraphics3d-scene-softshadowconfig-c.md#SoftShadowConfig)
 
 **Since:** 26.0.0
 

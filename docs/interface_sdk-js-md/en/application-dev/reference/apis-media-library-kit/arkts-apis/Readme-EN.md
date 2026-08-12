@@ -380,6 +380,7 @@
   - [PhotoSubtype](arkts-medialibrary-photoaccesshelper-photosubtype-e.md)
   - [PhotoType](arkts-medialibrary-photoaccesshelper-phototype-e.md)
   - [PhotoViewMIMETypes](arkts-medialibrary-photoaccesshelper-photoviewmimetypes-e.md)
+  - [PickerColorMode](arkts-medialibrary-photoaccesshelper-pickercolormode-e.md)
   - [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md)
   - [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
   - [PreferredCompatibleMode](arkts-medialibrary-photoaccesshelper-preferredcompatiblemode-e.md)

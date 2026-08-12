@@ -34,7 +34,7 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 | Type | Description |
 | --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
+| Coordinate2D | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -184,7 +184,7 @@ hand?: InteractionHand
 
 Whether the event is triggered by a left-hand or right-hand tap.
 
-**Type:** [InteractionHand](arkts-arkui-interactionhand-e.md)
+**Type:** InteractionHand
 
 **Since:** 15
 

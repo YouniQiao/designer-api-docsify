@@ -13,7 +13,7 @@ Defines an HTTP Interceptor chain.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## addChain
@@ -52,7 +52,7 @@ Add an interceptor chain to the HTTP client.
 | --- | --- |
 | 2300802 | Duplicated interceptor type in the chain. |
 | 2300801 | Parameter type not supported by the interceptor. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
 ## apply
 
@@ -76,7 +76,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpRequest | [HttpRequest](arkts-network-http-httprequest-i.md) | Yes | Initiates an HTTP request to a given URL. |
+| httpRequest | HttpRequest | Yes | Initiates an HTTP request to a given URL. |
 
 **Return value:**
 
@@ -89,7 +89,7 @@ Attach the chain to the target http request.Only one chain can be attached to a 
 | Error Code ID | Error Message |
 | --- | --- |
 | 2300801 | Parameter type not supported by the interceptor. |
-| [2300999](../errorcode-net-http.md#2300999-internal-error) | Internal error. |
+| [2300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-http.md#2300999-internal-error) | Internal error. |
 
 ## getChain
 

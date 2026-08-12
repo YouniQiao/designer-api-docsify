@@ -22,7 +22,7 @@ imageAIOptions?: ImageAIOptions
 
 默认值：不开启AI分析功能。
 
-**类型：** [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
+**类型：** ImageAIOptions
 
 **起始版本：** 23
 
@@ -43,13 +43,13 @@ unit?: LengthMetricsUnit
 ```
 
 用于描述Canvas绘制时所采用的单位模式，不同单位模式会影响绘制时的坐标和尺寸计算方式，具体说明见  
-[LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md)。
+[LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md#LengthMetricsUnit)。
 
 仅可在创建Canvas时设置，后续不可修改。
 
 默认值：LengthMetricsUnit.DEFAULT
 
-**类型：** [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md)
+**类型：** LengthMetricsUnit
 
 **起始版本：** 23
 

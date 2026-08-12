@@ -11,7 +11,7 @@ Represents the data change information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## isDirectory
@@ -38,7 +38,7 @@ type: NotifyType
 
 Type of the data change.
 
-**Type:** [NotifyType](arkts-corefile-cloudsync-notifytype-e.md)
+**Type:** NotifyType
 
 **Since:** 12
 

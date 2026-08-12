@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## setAppHttpProxy
@@ -12,7 +12,7 @@ import { connection } from 'kits/@kit.NetworkKit';
 function setAppHttpProxy(httpProxy: HttpProxy): void
 ```
 
-Set application level http proxy {@link HttpProxy}.
+Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy).
 
 **Since:** 11
 
@@ -26,14 +26,14 @@ Set application level http proxy {@link HttpProxy}.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| httpProxy | [HttpProxy](arkts-network-ethernet-httpproxy-t.md) | Yes | Indicates the application level proxy settings. For details, see {@link HttpProxy}. |
+| httpProxy | HttpProxy | Yes | Indicates the application level proxy settings. For details, see [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
 
 ## Examples
 

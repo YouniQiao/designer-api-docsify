@@ -18,7 +18,7 @@ spanPosition: RichEditorSpanPosition
 
 The position of the text span.
 
-**Type:** [RichEditorSpanPosition](../arkts-components/arkts-arkui-richeditorspanposition-i.md)
+**Type:** [RichEditorSpanPosition](arkts-arkui-richeditor-richeditorspanposition-i.md)
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ textStyle?: RichEditorTextStyle
 
 text style.
 
-**Type:** [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md)
+**Type:** [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md)
 
 **Since:** 23
 

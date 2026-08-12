@@ -20,7 +20,7 @@ Car key.
 
 **NOTE：**
 
-1. The car key subtype takes effect only when a continuous task of the BLUETOOTH_INTERACTION type is requested.2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updatebackgroundrunning) API.
+1. The car key subtype takes effect only when a continuous task of the BLUETOOTH_INTERACTION type is requested.2. Continuous tasks of this type cannot be updated through the [updateBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-updatebackgroundrunning-f.md#updateBackgroundRunning) API.
 
 **Since:** 16
 

@@ -24,7 +24,7 @@ Video is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VideoOptions](../arkts-components/arkts-arkui-videooptions-i.md) | Yes | The options to create a Video. |
+| value | [VideoOptions](arkts-arkui-video-videooptions-i.md) | Yes | The options to create a Video. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines Video Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;VideoAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

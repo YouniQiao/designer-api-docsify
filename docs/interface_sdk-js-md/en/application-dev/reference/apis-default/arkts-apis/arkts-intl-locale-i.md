@@ -18,7 +18,7 @@ Gets the most likely values for the language, script, and region of the locale b
 
 | Type | Description |
 | --- | --- |
-| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |  |
+| Locale |  |
 
 ## minimize
 
@@ -36,7 +36,7 @@ Attempts to remove information about the locale that would be added by calling `
 
 | Type | Description |
 | --- | --- |
-| [Locale](../../apis-localization-kit/arkts-apis/arkts-localization-intl-locale-c.md) |  |
+| Locale |  |
 
 ## toString
 
@@ -54,7 +54,7 @@ Returns the locale's full locale identifier string.
 
 | Type | Description |
 | --- | --- |
-| [BCP47LanguageTag](../../apis-arkts/arkts-apis/arkts-arkts-intl-bcp47languagetag-t.md) |  |
+| BCP47LanguageTag |  |
 
 ## baseName
 

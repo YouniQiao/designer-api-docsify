@@ -2,7 +2,7 @@
 
 Slider后缀组件无障碍信息参数。
 
-**继承/实现关系：** SliderSuffixOptions extends [SliderCustomContentOptions](../arkts-components/arkts-arkui-slidercustomcontentoptions-i.md/arkts-arkui-slidercustomcontentoptions-i.md)
+**继承/实现关系：** SliderSuffixOptions extends [SliderCustomContentOptions](arkts-arkui-slider-slidercustomcontentoptions-i.md#SliderCustomContentOptions)
 
 **起始版本：** 23
 

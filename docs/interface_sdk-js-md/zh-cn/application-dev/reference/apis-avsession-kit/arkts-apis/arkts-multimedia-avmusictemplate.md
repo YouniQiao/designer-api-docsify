@@ -38,40 +38,40 @@ AVMusicTemplate
 
 | 名称 | 说明 |
 | --- | --- |
-| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。 |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。 |
 | [AVMusicTemplateController](arkts-avsession-avmusictemplate-avmusictemplatecontroller-c.md) | 音频模板控制器，可以获得音频模板控制器唯一的标识，用于与接入音频模板的媒体应用数据交互。 |
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [Album](arkts-avsession-avmusictemplate-album-i.md) | 专辑的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。 |
-| [Banner](arkts-avsession-avmusictemplate-banner-i.md) | 海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。 |
-| [Compilation](arkts-avsession-avmusictemplate-compilation-i.md) | 合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。 |
-| [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | “我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。 |
+| [Album](arkts-avsession-avmusictemplate-album-i.md) | 专辑的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)。 |
+| [Banner](arkts-avsession-avmusictemplate-banner-i.md) | 海报的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)。 |
+| [Compilation](arkts-avsession-avmusictemplate-compilation-i.md) | 合集的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。 |
+| [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | “我的主页”自定义元素的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。 |
 | [DialogActionInfo](arkts-avsession-avmusictemplate-dialogactioninfo-i.md) | 对话框动作信息的定义。 |
 | [DialogButtonInfo](arkts-avsession-avmusictemplate-dialogbuttoninfo-i.md) | 对话框按钮信息的定义。 |
 | [DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md) | 对话框信息的定义。 |
 | [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md) | 剧集的范围的定义。 |
 | [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md) | 收藏/订阅的定义。 |
 | [MediaElement](arkts-avsession-avmusictemplate-mediaelement-i.md) | 媒体元素Singer/Radio/Banner结构体定义 |
-| [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | 媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。 |
+| [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md) | 媒体实例的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。 |
 | [MediaTab](arkts-avsession-avmusictemplate-mediatab-i.md) | 媒体标签页的定义。 |
-| [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | 媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。 |
+| [MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md) | 媒体标签页内容的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。 |
 | [MemberPurchaseInfo](arkts-avsession-avmusictemplate-memberpurchaseinfo-i.md) | 会员购买信息的定义。 |
 | [OperResult](arkts-avsession-avmusictemplate-operresult-i.md) | 操作结果的定义。 |
-| [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | 标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md)。 |
+| [PageMediaEntity](arkts-avsession-avmusictemplate-pagemediaentity-i.md) | 标签页媒体的定义。继承自[OperResult](arkts-avsession-avmusictemplate-operresult-i.md#OperResult)。 |
 | [PlayInfo](arkts-avsession-avmusictemplate-playinfo-i.md) | 播放信息的定义。 |
 | [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md) | 二维码信息的定义。 |
 | [QueryMediaEntityParam](arkts-avsession-avmusictemplate-querymediaentityparam-i.md) | 查询媒体实例参数的定义。 |
-| [Ranking](arkts-avsession-avmusictemplate-ranking-i.md) | 排行榜的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。 |
+| [Ranking](arkts-avsession-avmusictemplate-ranking-i.md) | 排行榜的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)。 |
 | [SearchPlayInfo](arkts-avsession-avmusictemplate-searchplayinfo-i.md) | 搜播信息的定义。 |
 | [SearchPlayMusicInfo](arkts-avsession-avmusictemplate-searchplaymusicinfo-i.md) | 搜播的音频信息的定义。 |
 | [SearchPlayMusicItem](arkts-avsession-avmusictemplate-searchplaymusicitem-i.md) | 搜播的音频项目的定义。 |
 | [SearchPlayVideoInfo](arkts-avsession-avmusictemplate-searchplayvideoinfo-i.md) | 搜播的视频信息的定义。 |
 | [SettingContent](arkts-avsession-avmusictemplate-settingcontent-i.md) | 设置内容的定义（音频模板里有定义设置页面，设置内容用于设置页的填充）。 |
 | [SettingItem](arkts-avsession-avmusictemplate-settingitem-i.md) | 设置项的定义。 |
-| [Single](arkts-avsession-avmusictemplate-single-i.md) | 单曲的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)。 |
+| [Single](arkts-avsession-avmusictemplate-single-i.md) | 单曲的定义。继承自[MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md#MediaEntity)。 |
 | [UserInfo](arkts-avsession-avmusictemplate-userinfo-i.md) | 用户信息的定义。 |
 
 <!--Del-->

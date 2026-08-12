@@ -13,7 +13,7 @@ Defines the options for creating an application account.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## customData
@@ -24,7 +24,7 @@ customData?: Record<string, string>
 
 Custom data. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 9
 

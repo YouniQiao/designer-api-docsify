@@ -8,7 +8,7 @@ Wi-Fi IP configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpConfig
+**Substitutes:** [IpConfig](ohos.wifiManager/wifiManager.IpConfig)
 
 <!--Device-wifi-interface IpConfig--><!--Device-wifi-interface IpConfig-End-->
 
@@ -19,7 +19,7 @@ Wi-Fi IP configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## dnsServers
@@ -38,7 +38,7 @@ DNS servers.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.dnsServers
+**Substitutes:** [dnsServers](ohos.wifiManager/wifiManager.IpConfig.dnsServers)
 
 <!--Device-IpConfig-dnsServers: number[]--><!--Device-IpConfig-dnsServers: number[]-End-->
 
@@ -62,7 +62,7 @@ Domains.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.domains
+**Substitutes:** [domains](ohos.wifiManager/wifiManager.IpConfig.domains)
 
 <!--Device-IpConfig-domains: Array<string>--><!--Device-IpConfig-domains: Array<string>-End-->
 
@@ -86,7 +86,7 @@ Gate way.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.gateway
+**Substitutes:** [gateway](ohos.wifiManager/wifiManager.IpConfig.gateway)
 
 <!--Device-IpConfig-gateway: number--><!--Device-IpConfig-gateway: number-End-->
 
@@ -110,7 +110,7 @@ IP address.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.IpConfig.ipAddress
+**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.IpConfig.ipAddress)
 
 <!--Device-IpConfig-ipAddress: number--><!--Device-IpConfig-ipAddress: number-End-->
 

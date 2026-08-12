@@ -20,7 +20,7 @@ Color of the divider.
 
 Default value: **'#33000000'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** '#33000000'
 
@@ -50,7 +50,7 @@ Unit: vp (default) or px.
 
 Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 0
 
@@ -80,7 +80,7 @@ Unit: vp (default) or px.
 
 Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 0
 
@@ -110,7 +110,7 @@ Unit: vp (default) or px.
 
 If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column.Percentages are not supported.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Default:** 2.0px
 

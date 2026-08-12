@@ -12,7 +12,7 @@ function getStorage(path: string, callback: AsyncCallback<Storage>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.getPreferences
+**替代接口：** [getPreferences](ohos.preferences.preferences.getPreferences)
 
 <!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void--><!--Device-storage-function getStorage(path: string, callback: AsyncCallback<Storage>): void-End-->
 
@@ -36,7 +36,7 @@ function getStorage(path: string): Promise<Storage>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.preferences.preferences.getPreferences
+**替代接口：** [getPreferences](ohos.preferences.preferences.getPreferences)
 
 <!--Device-storage-function getStorage(path: string): Promise<Storage>--><!--Device-storage-function getStorage(path: string): Promise<Storage>-End-->
 
@@ -50,4 +50,4 @@ function getStorage(path: string): Promise<Storage>
 
 | 类型 |
 | --- |
-| Promise&lt;Storage&gt; |
+| Promise & lt;Storage & gt; |

@@ -18,7 +18,7 @@ bottom?: PixelRoundCalcPolicy
 
 组件底部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**类型：** PixelRoundCalcPolicy
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -44,7 +44,7 @@ end?: PixelRoundCalcPolicy
 
 组件尾部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**类型：** PixelRoundCalcPolicy
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -70,7 +70,7 @@ start?: PixelRoundCalcPolicy
 
 组件前部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**类型：** PixelRoundCalcPolicy
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 
@@ -96,7 +96,7 @@ top?: PixelRoundCalcPolicy
 
 组件上部边界取整对齐方式。&lt;br&gt;不设置pixelRound或者设置异常值时按四舍五入规则取整。
 
-**类型：** [PixelRoundCalcPolicy](../arkts-apis/arkts-arkui-pixelroundcalcpolicy-e.md)
+**类型：** PixelRoundCalcPolicy
 
 **默认值：** PixelRoundCalcPolicy.NO_FORCE_ROUND
 

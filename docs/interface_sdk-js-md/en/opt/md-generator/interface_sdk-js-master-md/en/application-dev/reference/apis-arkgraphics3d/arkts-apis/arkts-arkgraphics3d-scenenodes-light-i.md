@@ -2,7 +2,7 @@
 
 Defines light interface.
 
-**Inheritance/Implementation:** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
+**Inheritance/Implementation:** Light extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
 **Since:** 12
 

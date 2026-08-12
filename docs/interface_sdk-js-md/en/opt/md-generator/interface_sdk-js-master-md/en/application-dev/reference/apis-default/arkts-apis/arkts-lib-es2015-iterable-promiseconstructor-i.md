@@ -14,13 +14,13 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| values | Iterable&lt;T \| [PromiseLike&lt;T&gt;&gt;](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | Yes |
+| values | Iterable & lt;T \ | [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T&gt;[]&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;[]&gt; |
 
 ## race
 
@@ -36,10 +36,10 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| values | Iterable&lt;T \| [PromiseLike&lt;T&gt;&gt;](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | Yes |
+| values | Iterable & lt;T \ | [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt;&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt; |

@@ -13,7 +13,7 @@ Defines the decorator and component information associated with the observable o
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from 'kits/@kit.ArkUI';
+import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
 
 ## decoratorName
@@ -31,9 +31,9 @@ If the V1 object uses [@Track](../../../ui/state-management/arkts-track.md), the
 If the V2 object uses [@Trace](../../../ui/state-management/arkts-new-observedV2-and-trace.md), the value is  
 **'@Trace'**.
 
-If the V2 object uses [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved), the value is **'MakeObserved'**.
+If the V2 object uses [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved), the value is **'MakeObserved'**.
 
-If the V2 object uses [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enablev2compatibility), the value is  
+If the V2 object uses [enableV2Compatibility](arkts-arkui-arkui-statemanagement-uiutils-c.md#enableV2Compatibility), the value is  
 **'EnableV2Compatible'**.
 
 If the V2 object uses built-in data, the value is **'ProxyObservedV2'**.
@@ -60,7 +60,7 @@ dependentInfo: Array<ElementInfo>
 
 Information about the component that uses the observable object. If the object is not used in any UI, an empty array is returned.
 
-**Type:** Array&lt;ElementInfo&gt;
+**Type:** Array&lt;[ElementInfo](arkts-arkui-arkui-statemanagement-elementinfo-i.md)&gt;
 
 **Since:** 23
 

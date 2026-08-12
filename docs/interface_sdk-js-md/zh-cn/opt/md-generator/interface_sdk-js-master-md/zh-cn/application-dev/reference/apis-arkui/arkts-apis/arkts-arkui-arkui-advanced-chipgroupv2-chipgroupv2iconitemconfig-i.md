@@ -102,7 +102,7 @@ action: Callback<void>
 
 自定义尾部图标的响应事件。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** Callback&lt;void&gt;
 
 **起始版本：** 26.0.0
 
@@ -122,8 +122,8 @@ icon: ChipV2ImageIconConfig
 
 自定义尾部图标，设置后会在ChipGroupV2尾部区域显示指定的图标。
 
-如果想动态修改图标尺寸，那么必须在引入[ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md)时，使用  
-[SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md/arkts-arkui-symbolglyphmodifier-t.md)类型，并通过该类型提供的方法设置图标尺寸属性，例如通过fontSize或size方法动态调整尺寸值。
+如果想动态修改图标尺寸，那么必须在引入[ChipGroupV2IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2icongroupsuffix-s.md#ChipGroupV2IconGroupSuffix)时，使用  
+[SymbolGlyphModifier](./arkui/SymbolGlyphModifier:SymbolGlyphModifier)类型，并通过该类型提供的方法设置图标尺寸属性，例如通过fontSize或size方法动态调整尺寸值。
 
 **类型：** [ChipV2ImageIconConfig](arkts-arkui-arkui-advanced-chipv2-chipv2imageiconconfig-i.md)
 

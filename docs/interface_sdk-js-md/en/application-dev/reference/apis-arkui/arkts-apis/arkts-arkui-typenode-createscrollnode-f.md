@@ -29,5 +29,5 @@ Create a FrameNode of Scroll type.On API 26.0.0 and above, It can also create a 
 
 | Type | Description |
 | --- | --- |
-| [Scroll](arkts-arkui-typenode-scroll-t.md) | Return Scroll type FrameNode. |
+| Scroll | Return Scroll type FrameNode. |
 

@@ -13,7 +13,7 @@ Represents EAP profile (configuration) information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.MDMKit';
+import { wifiManager } from '@kit.MDMKit';
 ```
 
 ## altSubjectMatch
@@ -184,7 +184,7 @@ eapMethod: EapMethod
 
 EAP authentication method.
 
-**Type:** [EapMethod](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-wifimanager-eapmethod-e.md)
+**Type:** EapMethod
 
 **Since:** 12
 
@@ -265,7 +265,7 @@ phase2Method: Phase2Method
 Phase 2 authentication method. This parameter is mandatory only when **eapMethod** is **EAP_PEAP** or  
 **EAP_TTLS**.
 
-**Type:** [Phase2Method](../../apis-network-kit/arkts-apis/arkts-network-eap-phase2method-e.md)
+**Type:** Phase2Method
 
 **Since:** 12
 

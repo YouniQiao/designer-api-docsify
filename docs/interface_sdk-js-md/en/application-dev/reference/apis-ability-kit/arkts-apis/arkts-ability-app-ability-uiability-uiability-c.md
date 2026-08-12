@@ -2,7 +2,7 @@
 
 Application component that has the UI. It provides lifecycle callbacks such as component creation, destruction, and foreground/background switching, and supports background communication.
 
-**Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md)
+**Inheritance/Implementation:** UIAbility extends [Ability](arkts-ability-app-ability-ability-ability-c.md#Ability)
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ Application component that has the UI. It provides lifecycle callbacks such as c
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from 'kits/@kit.AbilityKit';
+import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
 ## onBackPressed
@@ -111,16 +111,16 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 > [specified mode](../../../application-models/uiability-launch-type.md#specified).
 > 
 > - When you use methods such as
-> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
+> [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)
 > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in
-> [Flags](arkts-ability-wantconstant-flags-e.md) in the Want object.
+> [Flags](arkts-ability-wantconstant-flags-e.md#Flags) in the Want object.
 > 
 > - During a
 > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this
-> callback must be invoked before [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground) or after
-> [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground). During a
+> callback must be invoked before [onForeground](#onForeground) or after
+> [onBackground](#onBackground). During a
 > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this
-> callback must be invoked before [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant).
+> callback must be invoked before [onNewWant](#onNewWant).
 
 **Since:** 18
 
@@ -136,7 +136,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
@@ -170,16 +170,16 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 > [specified mode](../../../application-models/uiability-launch-type.md#specified).
 > 
 > - When you use methods such as
-> [startAbility](arkts-ability-uiabilitycontext-c.md#startability)
+> [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)
 > to start an application, you must include **FLAG_ABILITY_ON_COLLABORATE** in
-> [Flags](arkts-ability-wantconstant-flags-e.md) in the Want object.
+> [Flags](arkts-ability-wantconstant-flags-e.md#Flags) in the Want object.
 > 
 > - During a
 > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability), this
-> callback must be invoked before [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground) or after
-> [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground). During a
+> callback must be invoked before [onForeground](#onForeground) or after
+> [onBackground](#onBackground). During a
 > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability), this
-> callback must be invoked before [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant).
+> callback must be invoked before [onNewWant](#onNewWant).
 
 **Since:** 23
 
@@ -195,7 +195,7 @@ Callback invoked to return the collaboration result in multi-device collaboratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Want parameter, which supports only the key **"ohos.extra.param.key.supportCollaborateIndex"**. The key can be used to obtain the data passed by the caller and perform corresponding processing. |
 
 **Return value:**
 
@@ -233,7 +233,7 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to be migrated.<br>**Since:** 11 |
+| wantParam | Record&lt;string, Object&gt; | Yes | Data to be migrated.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -333,7 +333,7 @@ onDestroy(): void | Promise<void>
 ```
 
 Called when the UIAbility is destroyed (for example, when the UIAbility is terminated using the   
-[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)API). You can clear resources and save data during this lifecycle.
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateSelf)API). You can clear resources and save data during this lifecycle.
 
 This API returns the result synchronously or uses a promise to return the result.
 
@@ -395,7 +395,7 @@ onDestroy(): Promise<void> | undefined
 ```
 
 Called when the UIAbility is destroyed (for example, when the UIAbility is terminated using the   
-[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)API). You can clear resources and save data during this lifecycle.
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateSelf)API). You can clear resources and save data during this lifecycle.
 
 This API returns the result synchronously or uses a promise to return the result.
 
@@ -431,7 +431,7 @@ onDidBackground(): void
 ```
 
 Called after the application has transitioned to the background. It is called after   
-[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground). It can be used to release resources after the application has entered the background, for example, stopping audio playback.
+[onBackground](#onBackground). It can be used to release resources after the application has entered the background, for example, stopping audio playback.
 
 This API returns the result synchronously and does not support asynchronous callback.
 
@@ -506,7 +506,7 @@ onDidForeground(): void
 ```
 
 Called after the application has transitioned to the foreground. It is called after   
-[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground). It can be used to capture the moment when the application fully transitions to the foreground. When paired with [onWillForeground](arkts-ability-app-ability-uiability-uiability-c.md#onwillforeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
+[onForeground](#onForeground). It can be used to capture the moment when the application fully transitions to the foreground. When paired with [onWillForeground](#onWillForeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
 
 This API returns the result synchronously and does not support asynchronous callback.
 
@@ -613,7 +613,7 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 ```
 
 Called when a started UIAbility instance is brought up again. If there are specific scenarios where you do not want this lifecycle callback to be triggered, you can use   
-[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setonnewwantskipscenarios) to set those [scenarios](arkts-ability-contextconstant-scenarios-e.md).
+[setOnNewWantSkipScenarios](arkts-ability-uiabilitycontext-c.md#setOnNewWantSkipScenarios) to set those [scenarios](arkts-ability-contextconstant-scenarios-e.md#Scenarios).
 
 This API returns the result synchronously and does not support asynchronous callback.
 
@@ -656,14 +656,14 @@ onPrepareToTerminate(): boolean
 ```
 
 Triggered by the system just before the UIAbility is about to close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down. You can return **true** to block the current closure attempt and then manually call   
-[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually.This API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateSelf)at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually.This API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
 
 > **NOTE：**
 > 
 > - Starting from API version 15, this callback is not executed when
-> [UIAbility.onPrepareToTerminateAsync](arkts-ability-app-ability-uiability-uiability-c.md#onpreparetoterminateasync) is implemented. When
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
-> or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) is
+> [UIAbility.onPrepareToTerminateAsync](#onPrepareToTerminateAsync) is implemented. When
+> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onPrepareTerminationAsync)
+> or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onPrepareTermination) is
 > implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the
 > UIAbility.
 > 
@@ -733,13 +733,13 @@ onPrepareToTerminateAsync(): Promise<boolean>
 Triggered by the system just before the UIAbility is close (for example, when the user clicks the close button in the top-right corner of the application window or exits from the dock or system tray), allowing for additional operations to be performed before the UIAbility is officially shut down.
 
 You can return **true** to block the current closure attempt and then manually call   
-[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateself)at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually.Starting from API version 15, this API executes the callback normally only on 2-in-1 devices. It does not execute the callback on other devices.Starting from API version 19, this API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
+[terminateSelf](arkts-ability-uiabilitycontext-c.md#terminateSelf)at an appropriate time to close it. For example, you might ask the user to confirm whether they want to close the UIAbility and then proceed with the closure manually.Starting from API version 15, this API executes the callback normally only on 2-in-1 devices. It does not execute the callback on other devices.Starting from API version 19, this API executes the callback normally only on 2-in-1 devices and tablets. It does not execute the callback on other devices.
 
 > **NOTE：**
 > 
 > - When
-> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)
-> or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onpreparetermination) is
+> [AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onPrepareTerminationAsync)
+> or [AbilityStage.onPrepareTermination](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onPrepareTermination) is
 > implemented, this callback is not executed if the user right-clicks the dock bar or system tray to close the
 > UIAbility.
 > 
@@ -791,13 +791,13 @@ export default class EntryAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, Object>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to **SAVE_WHEN_ERROR**),this callback is invoked to save the UIAbility data in the case of an application fault.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#appRecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery) set to **SAVE_WHEN_ERROR**),this callback is invoked to save the UIAbility data in the case of an application fault.
 
 > **NOTE：**
 > 
 > Starting from API version 20, this callback is not executed when
-> [onSaveStateAsync](arkts-ability-app-ability-uiability-uiability-c.md#onsavestateasync)
+> [onSaveStateAsync](#onSaveStateAsync)
 > is implemented.
 
 **Since:** 9
@@ -817,7 +817,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) when the application restarts.<br>**Since:** 11 |
+| wantParam | Record&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#onCreate) when the application restarts.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -845,14 +845,14 @@ export default class MyUIAbility extends UIAbility {
 onSaveState(reason: AbilityConstant.StateType, wantParam: Record<string, RecordData>): AbilityConstant.OnSaveResult
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to   
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#appRecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery) set to   
 **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault.
 
 > **NOTE：**
 > 
 > Starting from API version 20, this callback is not executed when
-> [onSaveStateAsync](arkts-ability-app-ability-uiability-uiability-c.md#onsavestateasync)
+> [onSaveStateAsync](#onSaveStateAsync)
 > is implemented.
 
 **Since:** 23
@@ -870,7 +870,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | reason | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently, only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) when the application restarts. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#onCreate) when the application restarts. |
 
 **Return value:**
 
@@ -884,8 +884,8 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, Object>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to **SAVE_WHEN_ERROR**),this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#appRecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery) set to **SAVE_WHEN_ERROR**),this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
 
 **Since:** 20
 
@@ -904,7 +904,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently , only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) when the application restarts. |
+| wantParam | Record&lt;string, Object&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#onCreate) when the application restarts. |
 
 **Return value:**
 
@@ -934,8 +934,8 @@ class MyUIAbility extends UIAbility {
 onSaveStateAsync(stateType: AbilityConstant.StateType, wantParam: Record<string, RecordData>): Promise<AbilityConstant.OnSaveResult>
 ```
 
-This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) set to   
+This API must be used with [appRecovery](arkts-app-ability-apprecovery.md#appRecovery). When the application has enabled the fault recovery feature (with the **saveOccasion** parameter in   
+[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery) set to   
 **SAVE_WHEN_ERROR**), this callback is invoked to save the UIAbility data in the case of an application fault. This API uses a promise to return the result.
 
 **Since:** 23
@@ -953,7 +953,7 @@ This API must be used with [appRecovery](arkts-app-ability-apprecovery.md). When
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | stateType | AbilityConstant.StateType | Yes | Reason for triggering the application to save its state. Currently , only **APP_RECOVERY** (fault recovery scenario) is supported. |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) when the application restarts. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Custom application state data, which is stored in **Want.parameters** in [onCreate](#onCreate) when the application restarts. |
 
 **Return value:**
 
@@ -985,7 +985,7 @@ Called when an atomic service is shared across devices. You can set the title, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Data to share.<br>**Since:** 11 |
+| wantParam | Record&lt;string, Object&gt; | Yes | Data to share.<br>**Since:** 11 |
 
 ## Examples
 
@@ -1022,7 +1022,7 @@ Called when an atomic service is shared across devices. You can set the title, a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | Data to share. |
+| wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Data to share. |
 
 ## onWillBackground
 
@@ -1031,7 +1031,7 @@ onWillBackground(): void
 ```
 
 Called just when the application transitions to the background. It is called before   
-[onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground). It can be used to log various types of data, such as faults, statistics, security information, and user behavior that occur during application running.
+[onBackground](#onBackground). It can be used to log various types of data, such as faults, statistics, security information, and user behavior that occur during application running.
 
 This API returns the result synchronously and does not support asynchronous callback.
 
@@ -1084,7 +1084,7 @@ onWillForeground(): void
 ```
 
 Called just before the application transitions to the foreground. It is called before   
-[onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground). It can be used to capture the moment when the application starts to transition to the foreground. When paired with [onDidForeground](arkts-ability-app-ability-uiability-uiability-c.md#ondidforeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
+[onForeground](#onForeground). It can be used to capture the moment when the application starts to transition to the foreground. When paired with [onDidForeground](#onDidForeground), it can also measure the duration from the application's initial foreground entry to its full transition into the foreground state.
 
 This API returns the result synchronously and does not support asynchronous callback.
 
@@ -1160,7 +1160,7 @@ export default class EntryAbility extends UIAbility {
 onWindowStageCreate(windowStage: window.WindowStage): void
 ```
 
-Called when a [WindowStage](../../apis-arkui/arkts-apis/arkts-window.md/arkts-window.md) instance is created. You can load a page through the WindowStage instance in this callback.
+Called when a [WindowStage](./@ohos.window) instance is created. You can load a page through the WindowStage instance in this callback.
 
 **Since:** 9
 
@@ -1248,8 +1248,8 @@ Called when the page stack is restored for the target UIAbility during cross-dev
 > **NOTE：**
 > 
 > When an application is launched as a result of a migration, the **onWindowStageRestore()** lifecycle callback
-> function, rather than **onWindowStageCreate()**, is triggered following [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate) or
-> [onNewWant()](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant). This sequence occurs for both
+> function, rather than **onWindowStageCreate()**, is triggered following [onCreate()](#onCreate) or
+> [onNewWant()](#onNewWant). This sequence occurs for both
 > [cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability) and
 > [hot start](../../../application-models/uiability-intra-device-interaction.md#hot-starting-uiability).
 
@@ -1375,7 +1375,7 @@ isDestroyed: boolean
 
 Indicates whether the UIAbility has been destroyed. The default value is **false**.
 
-After the [onDestroy](arkts-ability-app-ability-uiability-uiability-c.md#ondestroy) callback is executed, this property is set to **true**.
+After the [onDestroy](#onDestroy) callback is executed, this property is set to **true**.
 
 **Type:** boolean
 
@@ -1397,8 +1397,8 @@ lastRequestWant: Want
 
 Want in the most recent request to launch the UIAbility.
 
-- On the first launch of a UIAbility, it is the Want parameter received in [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate).  
-- On subsequent launches, it is the most recent Want received in [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant).
+- On the first launch of a UIAbility, it is the Want parameter received in [onCreate](#onCreate).  
+- On subsequent launches, it is the most recent Want received in [onNewWant](#onNewWant).
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
@@ -1421,7 +1421,7 @@ launchWant: Want
 ```
 
 Want in the request used to   
-[cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability) the UIAbility. The value is the Want received in [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate).
+[cold start](../../../application-models/uiability-intra-device-interaction.md#cold-starting-uiability) the UIAbility. The value is the Want received in [onCreate](#onCreate).
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 

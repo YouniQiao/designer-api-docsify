@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#LightResponse
+**替代接口：** [LightResponse](ohos.sensor/sensor#LightResponse)
 
 <!--Device-unnamed-export interface LightResponse--><!--Device-unnamed-export interface LightResponse-End-->
 
@@ -30,7 +30,7 @@ intensity: number
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#LightResponse.intensity
+**替代接口：** [intensity](ohos.sensor/sensor#LightResponse.intensity)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

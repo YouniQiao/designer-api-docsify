@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAudioRecorder
@@ -20,7 +20,7 @@ Creates an AudioRecorder instance to control audio recording. Only one AudioReco
 
 **Deprecated since:** 9
 
-**Substitutes:** [media.createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder)(callback:
+**Substitutes:** [createAVRecorder](media.createAVRecorder(callback:)
 
 <!--Device-media-function createAudioRecorder(): AudioRecorder--><!--Device-media-function createAudioRecorder(): AudioRecorder-End-->
 

@@ -6,7 +6,7 @@ Describes the class of a bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondStateParam
+**Substitutes:** [BondStateParam](ohos.bluetoothManager/bluetoothManager.BondStateParam)
 
 <!--Device-bluetooth-interface BondStateParam--><!--Device-bluetooth-interface BondStateParam-End-->
 
@@ -15,7 +15,7 @@ Describes the class of a bluetooth device.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## deviceId
@@ -32,7 +32,7 @@ Address of a Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondStateParam.deviceId
+**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.BondStateParam.deviceId)
 
 <!--Device-BondStateParam-deviceId: string--><!--Device-BondStateParam-deviceId: string-End-->
 
@@ -46,13 +46,13 @@ state: BondState
 
 Profile connection state of the device.
 
-**Type:** [BondState](arkts-connectivity-connection-bondstate-e.md)
+**Type:** BondState
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BondStateParam.state
+**Substitutes:** [state](ohos.bluetoothManager/bluetoothManager.BondStateParam.state)
 
 <!--Device-BondStateParam-state: BondState--><!--Device-BondStateParam-state: BondState-End-->
 

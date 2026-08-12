@@ -8,7 +8,7 @@ Defines the content of data change notifications, including inserted data, updat
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ChangeNotification
+**Substitutes:** [ChangeNotification](ohos.data.distributedKVStore.ChangeNotification)
 
 <!--Device-distributedData-interface ChangeNotification--><!--Device-distributedData-interface ChangeNotification-End-->
 
@@ -22,7 +22,7 @@ deleteEntries: Entry[]
 
 Data deleted.
 
-**Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
+**Type:** Entry[]
 
 **Since:** 7
 
@@ -30,7 +30,7 @@ Data deleted.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ChangeNotification#deleteEntries
+**Substitutes:** [deleteEntries](ohos.data.distributedKVStore.ChangeNotification#deleteEntries)
 
 <!--Device-ChangeNotification-deleteEntries: Entry[]--><!--Device-ChangeNotification-deleteEntries: Entry[]-End-->
 
@@ -52,7 +52,7 @@ UUID of the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ChangeNotification#deviceId
+**Substitutes:** [deviceId](ohos.data.distributedKVStore.ChangeNotification#deviceId)
 
 <!--Device-ChangeNotification-deviceId: string--><!--Device-ChangeNotification-deviceId: string-End-->
 
@@ -66,7 +66,7 @@ insertEntries: Entry[]
 
 Data inserted.
 
-**Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
+**Type:** Entry[]
 
 **Since:** 7
 
@@ -74,7 +74,7 @@ Data inserted.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ChangeNotification#insertEntries
+**Substitutes:** [insertEntries](ohos.data.distributedKVStore.ChangeNotification#insertEntries)
 
 <!--Device-ChangeNotification-insertEntries: Entry[]--><!--Device-ChangeNotification-insertEntries: Entry[]-End-->
 
@@ -88,7 +88,7 @@ updateEntries: Entry[]
 
 Data updated.
 
-**Type:** [Entry](../../apis-arkui/arkts-apis/arkts-arkui-customcomponent-entry-i.md)[]
+**Type:** Entry[]
 
 **Since:** 7
 
@@ -96,7 +96,7 @@ Data updated.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.ChangeNotification#updateEntries
+**Substitutes:** [updateEntries](ohos.data.distributedKVStore.ChangeNotification#updateEntries)
 
 <!--Device-ChangeNotification-updateEntries: Entry[]--><!--Device-ChangeNotification-updateEntries: Entry[]-End-->
 

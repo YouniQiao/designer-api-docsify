@@ -16,7 +16,7 @@ globalPosition: Position
 
 Position of the top-left corner of the target element in the current window coordinate system.
 
-**Type:** [Position](arkts-arkui-display-position-i.md)
+**Type:** [Position](arkts-arkui-position-i.md)
 
 **Since:** 8
 
@@ -59,7 +59,7 @@ position: Position
 Position of the top-left corner of the target element in the  
 [component coordinate system](../../../ui/arkui-glossary.md#component-coordinate-system) of the parent element.
 
-**Type:** [Position](arkts-arkui-display-position-i.md)
+**Type:** [Position](arkts-arkui-position-i.md)
 
 **Since:** 8
 

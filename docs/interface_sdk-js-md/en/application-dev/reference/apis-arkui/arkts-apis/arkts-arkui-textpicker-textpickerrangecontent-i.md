@@ -18,7 +18,7 @@ icon: string | Resource
 
 Image resource.If the value is a string, such as **"/common/hello.png"**, it represents the path to the image.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ Text information.
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the text length exceeds the column width, the text will be truncated.&lt;/p&gt;
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Default:** ""
 

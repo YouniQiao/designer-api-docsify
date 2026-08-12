@@ -2,7 +2,7 @@
 
 Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar,such as leap month.
 
-**Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md)
+**Inheritance/Implementation:** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md#Calendar)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Provide a ChineseCalendar interface which could handle unique characteristics of
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## checkLeapMonth
@@ -56,7 +56,7 @@ Checks whether a given month exist leap month in gregorianYear and cyclicalYear.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## setChineseCalendarTime
 

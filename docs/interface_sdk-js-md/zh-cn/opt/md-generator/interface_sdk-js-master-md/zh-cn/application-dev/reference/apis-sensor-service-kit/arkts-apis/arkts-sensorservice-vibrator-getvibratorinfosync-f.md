@@ -24,7 +24,7 @@ function getVibratorInfoSync(param?: VibratorInfoParam): Array<VibratorInfo>
 
 | 类型 |
 | --- |
-| Array&lt;VibratorInfo&gt; |
+| Array&lt;[VibratorInfo](arkts-sensorservice-vibrator-vibratorinfo-i.md)&gt; |
 
 ## 示例
 

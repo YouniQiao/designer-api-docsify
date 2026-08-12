@@ -2,7 +2,7 @@
 
 Component sheet options
 
-**Inheritance/Implementation:** SheetOptions extends [BindOptions](../arkts-components/arkts-arkui-bindoptions-i.md/arkts-arkui-bindoptions-i.md)
+**Inheritance/Implementation:** SheetOptions extends [BindOptions](arkts-arkui-common-bindoptions-i.md#BindOptions)
 
 **Since:** 23
 
@@ -152,7 +152,7 @@ blurStyle?: BlurStyle
 
 Background blur of the sheet. By default, there is no background blur.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** [BlurStyle](arkts-arkui-common-blurstyle-e.md)
 
 **Default:** BlurStyle.NONE
 
@@ -175,7 +175,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 Border color of the sheet.  
 **borderColor** must be used with **borderWidth** in pairs.&lt;p&gt;**NOTE：**:&lt;br&gt;For bottom sheets, the bottom border color setting is ineffective.&lt;/p&gt;
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Default:** Color.Black
 
@@ -197,7 +197,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 Defines the sheet's border style.
 
-**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**Type:** [BorderStyle](arkts-arkui-borderstyle-e.md) \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **Since:** 23
 
@@ -217,7 +217,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 Border width of the sheet.You can set the width for all four sides or set separate widths for individual sides.Default value: **0**.Percentage parameter method:Set the border width of the sheet as a percentage of the width of the parent element.If the left and right border widths of the sheet are greater than the width of the sheet, and the top and bottom border widths are greater than the height of the sheet, the display may not appear as expected.&lt;p&gt;**Note：**:&lt;br&gt;For bottom sheets, the bottom border width setting is ineffective.&lt;/p&gt;
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 23
 
@@ -237,7 +237,7 @@ detentSelection?: SheetSize | Length
 
 Select a detent from detents property
 
-**Type:** [SheetSize](arkts-arkui-common-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-common-sheetsize-e.md) \| [Length](arkts-arkui-length-t.md)
 
 **Default:** detents[0]
 
@@ -259,7 +259,7 @@ detents?: SingleLengthDetent | DoubleLengthDetents | TripleLengthDetents
 
 Defines sheet detents
 
-**Type:** [SingleLengthDetent](arkts-arkui-singlelengthdetent-t.md) \| DoubleLengthDetents \| TripleLengthDetents
+**Type:** [SingleLengthDetent](arkts-arkui-singlelengthdetent-t.md) \| [DoubleLengthDetents](arkts-arkui-doublelengthdetents-t.md) \| [TripleLengthDetents](arkts-arkui-triplelengthdetents-t.md)
 
 **Since:** 23
 
@@ -390,7 +390,7 @@ height?: SheetSize | Length
 
 Defines sheet height
 
-**Type:** [SheetSize](arkts-arkui-common-sheetsize-e.md) \| Length
+**Type:** [SheetSize](arkts-arkui-common-sheetsize-e.md) \| [Length](arkts-arkui-length-t.md)
 
 **Default:** Sheet.LARGE
 
@@ -412,7 +412,7 @@ hoverModeArea?: HoverModeAreaType
 
 Defines the sheet's display area in hover mode.
 
-**Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**Type:** [HoverModeAreaType](arkts-arkui-common-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -434,7 +434,7 @@ keyboardAvoidMode?: SheetKeyboardAvoidMode
 
 Determine the mode of sheet how to avoid keyboard.
 
-**Type:** [SheetKeyboardAvoidMode](../arkts-components/arkts-arkui-sheetkeyboardavoidmode-e.md)
+**Type:** [SheetKeyboardAvoidMode](arkts-arkui-common-sheetkeyboardavoidmode-e.md)
 
 **Default:** SheetKeyboardAvoidMode.TRANSLATE_AND_SCROLL
 
@@ -476,7 +476,7 @@ modalTransition?: ModalTransition
 
 Defines transition type when preferType is SheetType.CONTENT_COVER.
 
-**Type:** [ModalTransition](../arkts-components/arkts-arkui-modaltransition-e.md)
+**Type:** [ModalTransition](arkts-arkui-common-modaltransition-e.md)
 
 **Default:** ModalTransition.DEFAULT
 
@@ -498,7 +498,7 @@ mode?: SheetMode
 
 Determine the level sheet shows, whether sheet should be displayed within the page.
 
-**Type:** [SheetMode](../arkts-components/arkts-arkui-sheetmode-e.md)
+**Type:** [SheetMode](arkts-arkui-common-sheetmode-e.md)
 
 **Default:** SheetMode.OVERLAY
 
@@ -584,7 +584,7 @@ radius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 
 Defines sheet radius
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| BorderRadiuses \| [LocalizedBorderRadiuses](arkts-arkui-localizedborderradiuses-i.md)
 
 **Since:** 23
 
@@ -648,7 +648,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the sheet.Default value for 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_SM**.
 
-**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-common-shadowstyle-e.md)
 
 **Since:** 23
 
@@ -668,7 +668,7 @@ showClose?: boolean | Resource
 
 Defines whether the close icon is displayed
 
-**Type:** boolean \| Resource
+**Type:** boolean \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Default:** true
 
@@ -732,7 +732,7 @@ title?: SheetTitleOptions | CustomBuilder
 
 Title of the sheet.
 
-**Type:** [SheetTitleOptions](../arkts-components/arkts-arkui-sheettitleoptions-i.md) \| CustomBuilder
+**Type:** [SheetTitleOptions](arkts-arkui-common-sheettitleoptions-i.md) \| [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -752,7 +752,7 @@ uiContext?: UIContext
 
 The UIContext that the sheet belongs to
 
-**Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
+**Type:** [UIContext](arkts-arkui-uicontext-t.md)
 
 **Since:** 23
 

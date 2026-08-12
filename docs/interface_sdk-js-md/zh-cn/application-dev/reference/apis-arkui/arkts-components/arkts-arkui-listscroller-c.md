@@ -4,13 +4,13 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 
 > **说明：**
 > 
-> ListScroller继承自[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)，具有[Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)的全部方法。
+> ListScroller继承自[Scroller](Scroller)，具有[Scroller](Scroller)的全部方法。
 
 ## 导入对象
 
 ```ts listScroller: ListScroller = new ListScroller();```
 
-**继承/实现关系：** ListScroller extends [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md/arkts-arkui-scroll-scroller-c.md)
+**继承/实现关系：** ListScroller extends [Scroller](Scroller)
 
 **起始版本：** 11
 
@@ -26,7 +26,7 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-将[EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)状态的[ListItem](./list_item)收起，并设置回调事件。
+将[EXPANDED](SwipeActionState)状态的[ListItem](./list_item)收起，并设置回调事件。
 
 **起始版本：** 11
 
@@ -44,14 +44,14 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CloseSwipeActionOptions](../arkts-apis/arkts-arkui-list-closeswipeactionoptions-i.md) | 否 | 收起[EXPANDED](../arkts-apis/arkts-arkui-listitem-swipeactionstate-e.md/arkts-arkui-listitem-swipeactionstate-e.md)状态的[ListItem](./list_item)的回 调事件集合。不传入时不设置回调事件。 |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | 否 | 收起[EXPANDED](SwipeActionState)状态的[ListItem](./list_item)的回 调事件集合。不传入时不设置回调事件。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getItemRectInGroup
 
@@ -84,14 +84,14 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | ListItemGroup中的ListItem的大小和相对于List的位置。&lt;br/&gt;单位：vp。 |
+| RectResult | ListItemGroup中的ListItem的大小和相对于List的位置。&lt;br/&gt;单位：vp。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
 
@@ -130,8 +130,8 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
 
@@ -160,12 +160,12 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 | index | number | 是 | 要滑动到的目标元素所在的ListItemGroup在当前容器中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;index值设置成负值或者大于当前容器子组件的最大索引值， 视为异常值，本次跳转不生效。 |
 | indexInGroup | number | 是 | 要滑动到的目标元素在index指定的ListItemGroup中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;indexInGroup值设置成负值或者大 于index指定的ListItemGroup容器子组件的最大索引值，视为异常值，本次跳转不生效。 |
 | smooth | boolean | 否 | 设置该次滑动是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false&lt;br/&gt;**说明：** &lt;br/&gt;开启动效时，会对经过的所有item进行加载 和布局计算，当大量加载item时会导致性能问题。 |
-| align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;默认值：ScrollAlign.START。 |
+| align | ScrollAlign | 否 | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;默认值：ScrollAlign.START。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 

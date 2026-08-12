@@ -1,8 +1,8 @@
 # VibratePreset
 
 Represents the preset vibration effect. You can pass **VibratePreset** to  
-[VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md) to specify a preset vibration effect when calling  
-[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startvibration).
+[VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a preset vibration effect when calling  
+[vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1).
 
 **Since:** 9
 
@@ -13,7 +13,7 @@ Represents the preset vibration effect. You can pass **VibratePreset** to
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## count

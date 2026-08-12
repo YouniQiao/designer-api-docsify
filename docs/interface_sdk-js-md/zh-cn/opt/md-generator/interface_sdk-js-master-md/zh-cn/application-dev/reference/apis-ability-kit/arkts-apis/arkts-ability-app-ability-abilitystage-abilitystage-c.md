@@ -4,8 +4,8 @@ AbilityStage是一个[Module](../../../quick-start/application-package-overview.
 
 应用的[HAP](../../../quick-start/hap-package.md)/[HSP](../../../quick-start/in-app-hsp.md)在首次加载时会创建一个AbilityStage实例。当一个Module中存在AbilityStage和其他组件（UIAbility/ExtensionAbility组件），AbilityStage实例会早于其他组件实例创建。
 
-AbilityStage拥有[onCreate()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#oncreate)、[onDestroy()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#ondestroy)生命周期回调和  
-[onAcceptWant()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)、[onConfigurationUpdate()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onconfigurationupdate)、[onMemoryLevel()](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onmemorylevel)事件回调等。
+AbilityStage拥有[onCreate()](#onCreate)、[onDestroy()](#onDestroy)生命周期回调和  
+[onAcceptWant()](#onAcceptWant)、[onConfigurationUpdate()](#onConfigurationUpdate)、[onMemoryLevel()](#onMemoryLevel)事件回调等。
 
 **起始版本：** 9
 
@@ -54,7 +54,7 @@ onAcceptWant(want: Want): string
 
 > **说明：**
 > 
-> 从API version 20开始，当[AbilityStage.onAcceptWantAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwantasync)实现时，本回调函数将不会被触发。
+> 从API version 20开始，当[AbilityStage.onAcceptWantAsync](#onAcceptWantAsync)实现时，本回调函数将不会被触发。
 
 **起始版本：** 9
 
@@ -121,7 +121,7 @@ onAcceptWantAsync(want: Want): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 
@@ -145,11 +145,11 @@ class MyAbilityStage extends AbilityStage {
 onConfigurationUpdate(newConfig: Configuration): void
 ```
 
-当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)类中。同步接口，不支持异步回调。
+当系统全局配置（例如系统语言、深浅色等）发生变更时，会触发该回调。配置项均定义在[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)类中。同步接口，不支持异步回调。
 
 > **说明：**
 > 
-> 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口
+> 该回调方法在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setLanguage)接口
 > 设置应用的语言，即便系统语言发生变化，系统也不再触发onConfigurationUpdate回调。详见
 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
@@ -325,7 +325,7 @@ onNewProcessRequest(want: Want): string
 
 如果该应用已有相同标识的进程存在，则待启动的UIAbility&lt;!--Del--&gt;或UIExtensionAbility&lt;!--DelEnd--&gt;运行在此进程中，否则创建新的进程。
 
-如果开发者同时实现onNewProcessRequest和[onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onacceptwant)，将先收到onNewProcessRequest回调，再收到onAcceptWant回调。
+如果开发者同时实现onNewProcessRequest和[onAcceptWant](#onAcceptWant)，将先收到onNewProcessRequest回调，再收到onAcceptWant回调。
 
 &lt;!--Del--&gt;
 
@@ -338,7 +338,7 @@ onNewProcessRequest(want: Want): string
 > - 在API version 19及之前版本，仅支持在指定进程中启动UIAbility。&lt;!--Del--&gt;从API version 20开始，新增支持在指定进程中启动UIExtensionAbility。&lt;!--DelEnd
 &gt; -->
 > 
-> - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onnewprocessrequestasync)实现时，本回调函
+> - 从API version 20开始，当[AbilityStage.onNewProcessRequestAsync](#onNewProcessRequestAsync)实现时，本回调函
 > 数将不执行。
 
 **起始版本：** 11
@@ -411,7 +411,7 @@ onNewProcessRequestAsync(want: Want): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 
@@ -441,7 +441,7 @@ onPrepareTermination(): AbilityConstant.PrepareTermination
 > 
 > - 仅当应用正常退出（例如，通过doc栏/托盘关闭应用，或者应用随设备关机而退出）时会调用该接口。如果应用被强制关闭，则不会调用该接口。
 > 
-> - 当[AbilityStage.onPrepareTerminationAsync](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onprepareterminationasync)实现时，本回调函数将不执行。
+> - 当[AbilityStage.onPrepareTerminationAsync](#onPrepareTerminationAsync)实现时，本回调函数将不执行。
 
 **起始版本：** 15
 
@@ -504,7 +504,7 @@ onPrepareTerminationAsync(): Promise<AbilityConstant.PrepareTermination>
 
 | 类型 |
 | --- |
-| Promise&lt;AbilityConstant.PrepareTermination&gt; |
+| Promise & lt;AbilityConstant.PrepareTermination & gt; |
 
 ## 示例
 

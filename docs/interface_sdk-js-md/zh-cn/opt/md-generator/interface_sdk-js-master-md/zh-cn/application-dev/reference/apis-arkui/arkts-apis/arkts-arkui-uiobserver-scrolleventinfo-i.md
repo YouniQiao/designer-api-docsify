@@ -16,7 +16,7 @@ axis?: Axis
 
 滚动方向。
 
-**类型：** [Axis](arkts-arkui-axis-e.md)
+**类型：** Axis
 
 **起始版本：** 20
 

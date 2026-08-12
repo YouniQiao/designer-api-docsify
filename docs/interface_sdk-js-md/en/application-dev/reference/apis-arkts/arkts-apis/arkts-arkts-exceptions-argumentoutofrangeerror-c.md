@@ -2,7 +2,7 @@
 
 Represents exception that is thrown when provided argument have value outside the allowable range
 
-**Inheritance/Implementation:** ArgumentOutOfRangeError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** ArgumentOutOfRangeError extends [Error](Error)
 
 **Since:** 26.0.0
 

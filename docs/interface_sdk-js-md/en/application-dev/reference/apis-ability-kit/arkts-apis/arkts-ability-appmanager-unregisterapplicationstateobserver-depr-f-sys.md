@@ -14,7 +14,7 @@ Unregister application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -29,7 +29,7 @@ Unregister application state observer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | observerId | number | Yes | Indicates the number code of the observer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
 ## Examples
 
@@ -64,7 +64,7 @@ Unregister application state observer.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 **Required permissions:** ohos.permission.RUNNING_STATE_OBSERVER
 

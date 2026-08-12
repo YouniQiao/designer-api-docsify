@@ -1,8 +1,8 @@
 # AbilityLifecycleState
 
 Enumerates the ability lifecycle states. It can be used in  
-[getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md/arkts-ability-abilitydelegator-i.md#getabilitystate) of  
-[AbilityDelegator](arkts-test-abilitydelegatorregistry-abilitydelegator-t.md) to return different ability lifecycle states.
+[getAbilityState(ability)](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#getAbilityState) of  
+[AbilityDelegator](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegator-i.md#AbilityDelegator) to return different ability lifecycle states.
 
 **Since:** 9
 

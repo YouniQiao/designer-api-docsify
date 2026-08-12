@@ -3,5 +3,5 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyLayoutDirection, LazyLayoutAlgorithm, LazyLayoutHelper, LazyCustomLayoutAlgorithmOptions, LazyCustomLayoutAlgorithm } from 'kits/@kit.ArkUI';
+import { LazyLayoutDirection, LazyLayoutAlgorithm, LazyLayoutHelper, LazyCustomLayoutAlgorithmOptions, LazyCustomLayoutAlgorithm } from '@kit.ArkUI';
 ```

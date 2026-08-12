@@ -40,7 +40,7 @@ fontColor?: Array<ResourceColor>
 
 默认值：不同渲染策略下默认值不同。
 
-**类型：** Array&lt;ResourceColor&gt;
+**类型：** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;
 
 **起始版本：** 11
 

@@ -1,6 +1,6 @@
 # Tag
 
-Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-asset-assetmap-t.md)), which are in key-value (KV) pairs.
+Enumerate the keys of asset attributes ([AssetMap](arkts-assetstore-asset-assetmap-t.md#AssetMap)), which are in key-value (KV) pairs.
 
 **Since:** 11
 

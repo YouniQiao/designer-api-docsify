@@ -8,7 +8,7 @@ Defines the capability type.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation#hasHceCapability
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
 
 <!--Device-cardEmulation-enum FeatureType--><!--Device-cardEmulation-enum FeatureType-End-->
 
@@ -28,7 +28,7 @@ This constant is used to check whether HCE card emulation is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation#hasHceCapability
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ This constant is used to check whether SIM card emulation is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation#hasHceCapability
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +72,7 @@ This constant is used to check whether eSE card emulation is supported.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.cardEmulation/cardEmulation#hasHceCapability
+**Substitutes:** [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability)
 
 **Model restriction:** This API can be used only in the stage model.
 

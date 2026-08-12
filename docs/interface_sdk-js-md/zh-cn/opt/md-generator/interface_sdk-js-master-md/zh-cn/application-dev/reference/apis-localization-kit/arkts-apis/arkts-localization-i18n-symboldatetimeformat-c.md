@@ -4,7 +4,7 @@
 [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持  
 [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。
 
-**继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
+**继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md#DateTimeFormat)
 
 **起始版本：** 26.0.0
 
@@ -41,7 +41,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 
 | 错误码ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
 
 ## format
 
@@ -201,7 +201,7 @@ public parse(text: string, lenientMode: boolean): number
 
 | 错误码ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
 
 ## resolvedOptions
 

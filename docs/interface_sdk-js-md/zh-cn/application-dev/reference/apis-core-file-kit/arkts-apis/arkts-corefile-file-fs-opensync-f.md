@@ -29,7 +29,7 @@ declare function openSync(path: string, mode?: number): File
 
 | 类型 | 说明 |
 | --- | --- |
-| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 打开的File对象。 |
+| [File](arkts-corefile-file-fs-file-i.md) | 打开的File对象。 |
 
 **错误码：**
 

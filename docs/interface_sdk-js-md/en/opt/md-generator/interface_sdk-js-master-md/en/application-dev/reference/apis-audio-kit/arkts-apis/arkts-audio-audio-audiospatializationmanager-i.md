@@ -11,7 +11,7 @@ Implements audio spatialization management.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## isSpatializationEnabledForCurrentDevice
@@ -59,7 +59,7 @@ Unsubscribes from the spatial audio rendering status change event of the current
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
 
 ## on('spatializationEnabledChangeForCurrentDevice')
 
@@ -86,4 +86,4 @@ Subscribes to the spatial audio rendering status change event of the current dev
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |

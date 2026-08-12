@@ -20,7 +20,7 @@ Effect strategy of the symbol span.
 
 Default value: **SymbolEffectStrategy.NONE**
 
-**Type:** [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
+**Type:** SymbolEffectStrategy
 
 **Since:** 11
 
@@ -122,7 +122,7 @@ Rendering strategy of the symbol span.
 
 Default value: **SymbolRenderingStrategy.SINGLE**
 
-**Type:** [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)
+**Type:** SymbolRenderingStrategy
 
 **Since:** 11
 

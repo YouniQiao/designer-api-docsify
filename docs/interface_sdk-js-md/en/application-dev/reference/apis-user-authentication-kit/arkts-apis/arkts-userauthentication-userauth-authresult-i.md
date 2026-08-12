@@ -8,7 +8,7 @@ Represents the authentication result object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md)
+**Substitutes:** [AuthResultInfo](arkts-userauthentication-userauth-authresultinfo-i.md#AuthResultInfo)
 
 <!--Device-userAuth-interface AuthResult--><!--Device-userAuth-interface AuthResult-End-->
 
@@ -17,7 +17,7 @@ Represents the authentication result object.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## freezingTime
@@ -36,7 +36,7 @@ Time for which the authentication operation is frozen. The unit is milliseconds.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthResultInfo.lockoutDuration](arkts-userauthentication-userauth-authresultinfo-i.md#lockoutduration)
+**Substitutes:** [lockoutDuration](arkts-userauthentication-userauth-authresultinfo-i.md#lockoutDuration)
 
 <!--Device-AuthResult-freezingTime?: number--><!--Device-AuthResult-freezingTime?: number-End-->
 
@@ -58,7 +58,7 @@ Number of remaining authentication operations.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthResultInfo.remainAttempts](arkts-userauthentication-userauth-authresultinfo-i.md#remainattempts)
+**Substitutes:** [remainAttempts](arkts-userauthentication-userauth-authresultinfo-i.md#remainAttempts)
 
 <!--Device-AuthResult-remainTimes?: number--><!--Device-AuthResult-remainTimes?: number-End-->
 
@@ -80,7 +80,7 @@ Authentication token information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [userAuth.AuthResultInfo.token](arkts-userauthentication-userauth-authresultinfo-i.md#token)
+**Substitutes:** [token](arkts-userauthentication-userauth-authresultinfo-i.md#token)
 
 <!--Device-AuthResult-token?: Uint8Array--><!--Device-AuthResult-token?: Uint8Array-End-->
 

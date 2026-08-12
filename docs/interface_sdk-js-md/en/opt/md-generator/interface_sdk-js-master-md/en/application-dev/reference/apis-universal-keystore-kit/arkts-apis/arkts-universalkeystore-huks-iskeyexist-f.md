@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## isKeyExist
@@ -18,7 +18,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)(keyAlias:
+**Substitutes:** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -59,7 +59,7 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist)(keyAlias:
+**Substitutes:** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 
@@ -76,7 +76,7 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## Examples
 

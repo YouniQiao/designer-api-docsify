@@ -11,7 +11,7 @@ Defines TLS security options. The CA certificate is mandatory, and other paramet
 ## Modules to Import
 
 ```TypeScript
-import { socket } from 'kits/@kit.NetworkKit';
+import { socket } from '@kit.NetworkKit';
 ```
 
 ## ca
@@ -118,7 +118,7 @@ protocols?: Protocol | Array<Protocol>
 
 TLS protocol version
 
-**Type:** [Protocol](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-protocol-e.md) \| Array&lt;Protocol&gt;
+**Type:** Protocol \| Array&lt;Protocol&gt;
 
 **Since:** 10
 

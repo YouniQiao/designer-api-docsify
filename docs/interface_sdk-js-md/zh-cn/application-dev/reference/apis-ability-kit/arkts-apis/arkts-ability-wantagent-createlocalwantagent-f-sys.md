@@ -10,7 +10,7 @@ function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 
 > **说明：**
 > 本接口创建的本地WantAgent实例仅存储于WantAgent客户端，不受WantAgent服务端管理。使用该本地实例时，需要校验实例，以保证安全性。
-> 本地WantAgent实例创建后，触发方法参见[wantAgent.triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync)接口说明。
+> 本地WantAgent实例创建后，触发方法参见[wantAgent.triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerAsync)接口说明。
 
 **起始版本：** 20
 
@@ -28,19 +28,19 @@ function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| info | [LocalWantAgentInfo](arkts-ability-wantagent-localwantagentinfo-t-sys.md) | 是 | Information about the local WantAgent object to create. |
+| info | LocalWantAgentInfo | 是 | Information about the local WantAgent object to create. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md) | Returns the created WantAgent. |
+| [WantAgent](arkts-ability-wantagent-t.md) | Returns the created WantAgent. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
 
 ## 示例
 

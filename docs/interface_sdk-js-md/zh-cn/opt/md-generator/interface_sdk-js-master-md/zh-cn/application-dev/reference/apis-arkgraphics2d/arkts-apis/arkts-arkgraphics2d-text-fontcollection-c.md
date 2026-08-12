@@ -1,8 +1,8 @@
 # FontCollection
 
-字体集，用于管理文本排版所需的字体资源。FontCollection为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md)提供字体匹配和字形查找能力，是文本排版管线的基础组件。提供全局实例（[getGlobalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getglobalinstance)）和本地实例（  
-[getLocalInstance](arkts-arkgraphics2d-text-fontcollection-c.md#getlocalinstance)），全局实例加载的字体在应用内共享，适用于普通应用场景；本地实例各实例独立，加载的字体仅对当前实例生效、实例间互不影响，推荐卡片场景使用。支持通过[loadFontSync](arkts-arkgraphics2d-text-fontcollection-c.md#loadfontsync)或  
-[loadFont](arkts-arkgraphics2d-text-fontcollection-c.md#loadfont)加载自定义字体。
+字体集，用于管理文本排版所需的字体资源。FontCollection为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)提供字体匹配和字形查找能力，是文本排版管线的基础组件。提供全局实例（[getGlobalInstance](#getGlobalInstance)）和本地实例（  
+[getLocalInstance](#getLocalInstance)），全局实例加载的字体在应用内共享，适用于普通应用场景；本地实例各实例独立，加载的字体仅对当前实例生效、实例间互不影响，推荐卡片场景使用。支持通过[loadFontSync](#loadFontSync)或  
+[loadFont](#loadFont)加载自定义字体。
 
 **起始版本：** 12
 
@@ -128,7 +128,7 @@ let fontCollection = text.FontCollection.getLocalInstance();
 loadFont(name: string, path: string | Resource): Promise<void>
 ```
 
-加载自定义字体。使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含：ttf、otf。
+加载自定义字体。使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含：ttf、otf。
 
 **起始版本：** 18
 
@@ -151,13 +151,13 @@ loadFont(name: string, path: string | Resource): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 
@@ -192,7 +192,7 @@ struct RenderTest {
 loadFontSync(name: string, path: string | Resource): void
 ```
 
-同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf。
+同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf。
 
 **起始版本：** 12
 
@@ -253,7 +253,7 @@ struct RenderTest {
 loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): void
 ```
 
-同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf、ttc。
+同步接口，加载自定义字体。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的fontFamilies属性配置，才能显示自定义字体效果。支持的字体文件格式包含：ttf、otf、ttc。
 
 **起始版本：** 23
 
@@ -277,14 +277,14 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): vo
 
 | 错误码ID |
 | --- |
-| [25900008](../errorcode-drawing.md#25900008-文件损坏) |
-| [25900003](../errorcode-drawing.md#25900003-打开文件失败) |
-| [25900002](../errorcode-drawing.md#25900002-文件未找到) |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
-| [25900007](../errorcode-drawing.md#25900007-文件为空) |
-| [25900006](../errorcode-drawing.md#25900006-读取文件失败) |
-| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) |
-| [25900004](../errorcode-drawing.md#25900004-文件定位失败) |
+| [25900008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900008-文件损坏) |
+| [25900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900003-打开文件失败) |
+| [25900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900002-文件未找到) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
+| [25900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900007-文件为空) |
+| [25900006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900006-读取文件失败) |
+| [25900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900005-获取文件大小失败) |
+| [25900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900004-文件定位失败) |
 
 ## 示例
 
@@ -331,7 +331,7 @@ struct Index {
 loadFontWithCheck(name: string, path: string | Resource, index?: number): Promise<void>
 ```
 
-加载自定义字体，使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含：ttf、otf、ttc。
+加载自定义字体，使用Promise异步回调。其中参数name对应的值需要在[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的fontFamilies属性配置，才能显示自定义字体效果，支持的字体文件格式包含：ttf、otf、ttc。
 
 **起始版本：** 23
 
@@ -355,20 +355,20 @@ loadFontWithCheck(name: string, path: string | Resource, index?: number): Promis
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [25900008](../errorcode-drawing.md#25900008-文件损坏) |
-| [25900003](../errorcode-drawing.md#25900003-打开文件失败) |
-| [25900002](../errorcode-drawing.md#25900002-文件未找到) |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
-| [25900007](../errorcode-drawing.md#25900007-文件为空) |
-| [25900006](../errorcode-drawing.md#25900006-读取文件失败) |
-| [25900005](../errorcode-drawing.md#25900005-获取文件大小失败) |
-| [25900004](../errorcode-drawing.md#25900004-文件定位失败) |
+| [25900008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900008-文件损坏) |
+| [25900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900003-打开文件失败) |
+| [25900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900002-文件未找到) |
+| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
+| [25900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900007-文件为空) |
+| [25900006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900006-读取文件失败) |
+| [25900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900005-获取文件大小失败) |
+| [25900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900004-文件定位失败) |
 
 ## 示例
 
@@ -493,7 +493,7 @@ unloadFont(name: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 

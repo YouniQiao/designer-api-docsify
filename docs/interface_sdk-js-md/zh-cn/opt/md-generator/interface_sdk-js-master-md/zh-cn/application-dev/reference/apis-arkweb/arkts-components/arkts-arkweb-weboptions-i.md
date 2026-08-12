@@ -16,7 +16,7 @@ controller: WebController | WebviewController
 
 Sets the controller of the Web.
 
-**类型：** [WebController](arkts-arkweb-webcontroller-c.md) \| WebviewController
+**类型：** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **起始版本：** 11
 

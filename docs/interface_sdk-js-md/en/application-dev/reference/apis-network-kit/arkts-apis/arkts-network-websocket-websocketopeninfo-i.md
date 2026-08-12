@@ -13,7 +13,7 @@ The result for open info of a WebSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## message

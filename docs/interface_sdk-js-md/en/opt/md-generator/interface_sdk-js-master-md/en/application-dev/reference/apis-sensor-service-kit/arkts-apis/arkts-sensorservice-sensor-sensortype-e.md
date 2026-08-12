@@ -6,7 +6,7 @@ Enumerates the sensor types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId](arkts-sensorservice-sensor-sensorid-e.md)
+**Substitutes:** [SensorId](arkts-sensorservice-sensor-sensorid-e.md#SensorId)
 
 <!--Device-sensor-enum SensorType--><!--Device-sensor-enum SensorType-End-->
 
@@ -24,7 +24,7 @@ Acceleration sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#accelerometer)
+**Substitutes:** [ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER = 1--><!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER = 1-End-->
 
@@ -42,7 +42,7 @@ Gyroscope sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#gyroscope)
+**Substitutes:** [GYROSCOPE](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE = 2--><!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE = 2-End-->
 
@@ -60,7 +60,7 @@ Ambient light sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#ambient_light)
+**Substitutes:** [AMBIENT_LIGHT](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_LIGHT)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_LIGHT = 5--><!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_LIGHT = 5-End-->
 
@@ -78,7 +78,7 @@ Magnetic field sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#magnetic_field)
+**Substitutes:** [MAGNETIC_FIELD](arkts-sensorservice-sensor-sensorid-e.md#MAGNETIC_FIELD)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD = 6--><!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD = 6-End-->
 
@@ -96,7 +96,7 @@ Barometer sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#barometer)
+**Substitutes:** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#BAROMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_BAROMETER = 8--><!--Device-SensorType-SENSOR_TYPE_ID_BAROMETER = 8-End-->
 
@@ -114,7 +114,7 @@ Hall effect sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#HALL](arkts-sensorservice-sensor-sensorid-e.md#hall)
+**Substitutes:** [HALL](arkts-sensorservice-sensor-sensorid-e.md#HALL)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HALL = 10--><!--Device-SensorType-SENSOR_TYPE_ID_HALL = 10-End-->
 
@@ -132,7 +132,7 @@ Proximity sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#proximity)
+**Substitutes:** [PROXIMITY](arkts-sensorservice-sensor-sensorid-e.md#PROXIMITY)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PROXIMITY = 12--><!--Device-SensorType-SENSOR_TYPE_ID_PROXIMITY = 12-End-->
 
@@ -150,7 +150,7 @@ Humidity sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#humidity)
+**Substitutes:** [HUMIDITY](arkts-sensorservice-sensor-sensorid-e.md#HUMIDITY)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HUMIDITY = 13--><!--Device-SensorType-SENSOR_TYPE_ID_HUMIDITY = 13-End-->
 
@@ -168,7 +168,7 @@ Orientation sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#orientation)
+**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#ORIENTATION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ORIENTATION = 256--><!--Device-SensorType-SENSOR_TYPE_ID_ORIENTATION = 256-End-->
 
@@ -186,7 +186,7 @@ Gravity sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#gravity)
+**Substitutes:** [GRAVITY](arkts-sensorservice-sensor-sensorid-e.md#GRAVITY)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GRAVITY = 257--><!--Device-SensorType-SENSOR_TYPE_ID_GRAVITY = 257-End-->
 
@@ -204,7 +204,7 @@ Linear acceleration sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#LINEAR_ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#linear_accelerometer)
+**Substitutes:** [LINEAR_ACCELEROMETER](arkts-sensorservice-sensor-sensorid-e.md#LINEAR_ACCELEROMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258--><!--Device-SensorType-SENSOR_TYPE_ID_LINEAR_ACCELERATION = 258-End-->
 
@@ -222,7 +222,7 @@ Rotation vector sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#rotation_vector)
+**Substitutes:** [ROTATION_VECTOR](arkts-sensorservice-sensor-sensorid-e.md#ROTATION_VECTOR)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ROTATION_VECTOR = 259--><!--Device-SensorType-SENSOR_TYPE_ID_ROTATION_VECTOR = 259-End-->
 
@@ -240,7 +240,7 @@ Ambient temperature sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensorid-e.md#ambient_temperature)
+**Substitutes:** [AMBIENT_TEMPERATURE](arkts-sensorservice-sensor-sensorid-e.md#AMBIENT_TEMPERATURE)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260--><!--Device-SensorType-SENSOR_TYPE_ID_AMBIENT_TEMPERATURE = 260-End-->
 
@@ -258,7 +258,7 @@ Uncalibrated magnetic field sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#magnetic_field_uncalibrated)
+**Substitutes:** [MAGNETIC_FIELD_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#MAGNETIC_FIELD_UNCALIBRATED)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorType-SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
@@ -276,7 +276,7 @@ Uncalibrated gyroscope sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#gyroscope_uncalibrated)
+**Substitutes:** [GYROSCOPE_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#GYROSCOPE_UNCALIBRATED)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorType-SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED = 263-End-->
 
@@ -294,7 +294,7 @@ Significant motion sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#significant_motion)
+**Substitutes:** [SIGNIFICANT_MOTION](arkts-sensorservice-sensor-sensorid-e.md#SIGNIFICANT_MOTION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264--><!--Device-SensorType-SENSOR_TYPE_ID_SIGNIFICANT_MOTION = 264-End-->
 
@@ -312,7 +312,7 @@ Pedometer detection sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#pedometer_detection)
+**Substitutes:** [PEDOMETER_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER_DETECTION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265--><!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER_DETECTION = 265-End-->
 
@@ -330,7 +330,7 @@ Pedometer sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#pedometer)
+**Substitutes:** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER = 266--><!--Device-SensorType-SENSOR_TYPE_ID_PEDOMETER = 266-End-->
 
@@ -348,7 +348,7 @@ Heart rate sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#heart_rate)
+**Substitutes:** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#HEART_RATE)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_HEART_RATE = 278--><!--Device-SensorType-SENSOR_TYPE_ID_HEART_RATE = 278-End-->
 
@@ -366,7 +366,7 @@ Wear detection sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#wear_detection)
+**Substitutes:** [WEAR_DETECTION](arkts-sensorservice-sensor-sensorid-e.md#WEAR_DETECTION)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_WEAR_DETECTION = 280--><!--Device-SensorType-SENSOR_TYPE_ID_WEAR_DETECTION = 280-End-->
 
@@ -384,7 +384,7 @@ Uncalibrated acceleration sensor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.SensorId#ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#accelerometer_uncalibrated)
+**Substitutes:** [ACCELEROMETER_UNCALIBRATED](arkts-sensorservice-sensor-sensorid-e.md#ACCELEROMETER_UNCALIBRATED)
 
 <!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorType-SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED = 281-End-->
 

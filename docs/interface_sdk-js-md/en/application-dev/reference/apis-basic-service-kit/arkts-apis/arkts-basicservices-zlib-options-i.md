@@ -13,7 +13,7 @@ Defines options used to compress or decompress a ZIP file.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## keepTopLevelFolder

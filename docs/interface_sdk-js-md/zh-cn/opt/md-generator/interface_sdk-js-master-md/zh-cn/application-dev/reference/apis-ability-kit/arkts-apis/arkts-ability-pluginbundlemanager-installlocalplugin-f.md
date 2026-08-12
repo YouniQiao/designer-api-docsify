@@ -22,27 +22,27 @@ function installLocalPlugin(pluginFilePaths: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| pluginFilePaths | Array&lt;string&gt; | 是 |
+| pluginFilePaths | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [17700015](../errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
-| [17700012](../errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
-| [17700010](../errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
-| [17700011](../errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
-| [17700091](../errorcode-bundle.md#17700091-插件与主体同包名) |
-| [17700073](../errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [17700087](../errorcode-bundle.md#17700087-当前设备不支持安装插件) |
-| [17700052](../errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
-| [17700016](../errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
-| [17700048](../errorcode-bundle.md#17700048-代码签名校验失败) |
-| [17700017](../errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |
+| [17700015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-多个hap配置信息不同导致应用安装失败) |
+| [17700012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-安装包路径无效或者文件过大导致应用安装失败) |
+| [17700010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-文件解析失败导致应用安装失败) |
+| [17700011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-签名校验失败导致应用安装失败) |
+| [17700091](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700091-插件与主体同包名) |
+| [17700073](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-由于设备上存在具有相同包名称但不同签名信息的应用程序导致安装失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [17700087](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700087-当前设备不支持安装插件) |
+| [17700052](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-非开发者模式下不允许安装调试应用) |
+| [17700016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-系统磁盘空间不足导致应用安装失败) |
+| [17700048](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-代码签名校验失败) |
+| [17700017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-新安装的应用版本号低于已安装的版本号导致应用安装失败) |

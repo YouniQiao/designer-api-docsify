@@ -12,15 +12,15 @@ Creates a new AsyncGenerator function.
 
 **Parameters:**
 
-| [Name](#name) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| args | string[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | string[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| AsyncGeneratorFunction |
+| [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |
 
 ## [[Construct]]
 
@@ -34,15 +34,15 @@ Creates a new AsyncGenerator function.
 
 **Parameters:**
 
-| [Name](#name) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| args | string[] | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | string[] | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| AsyncGeneratorFunction |
+| [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md) |
 
 ## length
 
@@ -76,6 +76,6 @@ readonly prototype: AsyncGeneratorFunction
 
 A reference to the prototype.
 
-**Type:** AsyncGeneratorFunction
+**Type:** [AsyncGeneratorFunction](arkts-lib-es2018-asyncgenerator-asyncgeneratorfunction-i.md)
 
 <!--Device-AsyncGeneratorFunctionConstructor-readonly prototype: AsyncGeneratorFunction--><!--Device-AsyncGeneratorFunctionConstructor-readonly prototype: AsyncGeneratorFunction-End-->

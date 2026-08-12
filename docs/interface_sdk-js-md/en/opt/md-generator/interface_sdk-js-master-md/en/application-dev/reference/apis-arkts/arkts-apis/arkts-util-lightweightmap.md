@@ -4,7 +4,7 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
  LightWeightMap is based on generics and uses a lightweight structure. Its default initial capacity is 8, and it has
  the capacity doubled in each expansion.
  The keys in such a set are searched using hash values, which are stored in an array.
- Compared with [HashMap](arkts-util-hashmap.md), which can also store KV pairs, LightWeightMap occupies less
+ Compared with [HashMap](arkts-arkts-util-hashmap-hashmap-c.md#HashMap), which can also store KV pairs, LightWeightMap occupies less
  memory.
  **Recommended use case**: Use LightWeightMap when you need to store and access KV pairs.
  This topic uses the following to identify the use of generics:
@@ -19,7 +19,7 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightMap } from 'kits/@kit.ArkTS';
+import { LightWeightMap } from '@kit.ArkTS';
 ```
 
 ## Summary

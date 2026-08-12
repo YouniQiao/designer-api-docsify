@@ -21,7 +21,7 @@ declare function readText(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:readText](arkts-corefile-fileio-readtext-f.md#readtext)
+**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>-End-->
 
@@ -63,7 +63,7 @@ declare function readText(
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:readText](arkts-corefile-fileio-readtext-f.md#readtext)
+**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void-End-->
 

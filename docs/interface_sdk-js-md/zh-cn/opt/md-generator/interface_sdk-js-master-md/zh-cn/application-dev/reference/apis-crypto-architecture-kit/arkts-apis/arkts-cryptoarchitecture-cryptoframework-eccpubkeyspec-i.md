@@ -1,10 +1,10 @@
 # ECCPubKeySpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定ECC算法中公钥包含的参数。
+密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)的子类，用于指定ECC算法中公钥包含的参数。
 
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec)方法创建密钥生成器。
+&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec)方法创建密钥生成器。
 
-**继承/实现关系：** ECCPubKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)
+**继承/实现关系：** ECCPubKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)
 
 **起始版本：** 10
 
@@ -42,7 +42,7 @@ pk: Point
 
 指定ECC算法的公钥pk。
 
-**类型：** [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md)
+**类型：** Point
 
 **起始版本：** 10
 

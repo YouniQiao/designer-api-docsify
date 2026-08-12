@@ -14,7 +14,7 @@ function isRamConstrainedDevice(): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#isRamConstrainedDevice
+**替代接口：** [isRamConstrainedDevice](ohos.app.ability.appManager/appManager#isRamConstrainedDevice)
 
 <!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>--><!--Device-appManager-function isRamConstrainedDevice(): Promise<boolean>-End-->
 
@@ -54,7 +54,7 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#isRamConstrainedDevice
+**替代接口：** [isRamConstrainedDevice](ohos.app.ability.appManager/appManager#isRamConstrainedDevice)
 
 <!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void-End-->
 

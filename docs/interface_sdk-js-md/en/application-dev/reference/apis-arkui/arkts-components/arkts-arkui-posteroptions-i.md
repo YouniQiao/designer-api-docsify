@@ -17,13 +17,13 @@ contentTransitionEffect?: ContentTransitionEffect
 ```
 
 Transition effect to apply when the video preview image changes. This parameter does not take effect if   
-**showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md) is not provided.
+**showFirstFrame** is **true**, or if a valid **previewUri** in [VideoOptions](arkts-arkui-videooptions-i.md#VideoOptions) is not provided.
 
 Default value: **ContentTransitionEffect.IDENTITY**.
 
 If this parameter is set to **undefined** or **null**, it defaults to **ContentTransitionEffect.IDENTITY**.
 
-**Type:** [ContentTransitionEffect](arkts-arkui-contenttransitioneffect-c.md)
+**Type:** ContentTransitionEffect
 
 **Default:** ContentTransitionEffect.IDENTITY
 
@@ -45,7 +45,7 @@ If this parameter is set to **undefined** or **null**, it defaults to **ContentT
 showFirstFrame?: boolean
 ```
 
-Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md) has no effect.
+Whether to enable first frame display, showing the first frame of the video as a preview. When first frame display is enabled, the previewUri field in [VideoOptions](arkts-arkui-videooptions-i.md#VideoOptions) has no effect.
 
 **true**: Enable first frame display.
 

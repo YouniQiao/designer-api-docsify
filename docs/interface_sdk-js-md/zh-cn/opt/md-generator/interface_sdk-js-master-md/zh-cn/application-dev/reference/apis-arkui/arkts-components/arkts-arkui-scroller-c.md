@@ -12,7 +12,7 @@
 > aboutToAppear在创建自定义组件的新实例后，在执行其build()方法之前执行。因此如果滚动组件在自定义组件build内，在该自定义组件aboutToAppear执行时，内部滚动组件还没有创建，是不能正常调用上述
 > Scroller方法的。
 
-> 4. 以[onAppear](arkts-arkui-commonmethod-c.md#onappear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用
+> 4. 以[onAppear](CommonMethod#onAppear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用
 > Scroller方法的。
 
 ## 导入对象
@@ -85,7 +85,7 @@ contentSize(): SizeResult
 
 | 错误码ID |
 | --- |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## currentOffset
 
@@ -97,7 +97,7 @@ currentOffset() : OffsetResult
 
 > **说明：**
 > 
-> 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明。推荐使用[offset](arkts-arkui-scroller-c.md#offset)函数，其返回类型显式包含undefined。
+> 1. 当Scroller没有和组件绑定时，该接口会返回undefined，但是接口中没有声明。推荐使用[offset](#offset)函数，其返回类型显式包含undefined。
 > 
 > 2. Grid、List、WaterFlow组件有懒加载机制，组件内容没有加载并布局完成时，内容总偏移量通过估算得到，估算结果可能会有误差。其中List组件可以通过
 > [childrenMainSize](ListAttribute#childrenMainSize)属性解决估算不准确的问题，Grid与WaterFlow估算不准暂无解决方案。
@@ -144,8 +144,8 @@ fling(velocity: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## getFrameNode
 
@@ -210,8 +210,8 @@ getItemIndex(x: number, y: number): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## getItemRect
 
@@ -251,8 +251,8 @@ getItemRect(index: number): RectResult
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## isAtEnd
 
@@ -288,7 +288,7 @@ isAtEnd(): boolean
 offset() : OffsetResult | undefined
 ```
 
-获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](arkts-arkui-scroller-c.md#currentoffset)接口保持一致。
+获取当前的滚动总偏移量。除接口声明有undefined以外，其他与[currentOffset](#currentOffset)接口保持一致。
 
 **起始版本：** 23
 
@@ -320,11 +320,11 @@ scrollBy(dx: Length, dy: Length)
 > 
 > - 各组件行为存在差异：
 > 
-> - [ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
+> - [ArcList](../arkts-apis/arkts-arkui-arkui-arclist-con.md#ArcList)和[List](./list)组件会对所有经过的item进行加载和布局。
 > 
-> - Grid组件和[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。跳转指一帧滑动。
+> - Grid组件和[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md#WaterFlowLayoutMode)模式的WaterFlow组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估算出要显示的item。跳转指一帧滑动。
 > 
-> - [ALWAYS_TOP_DOWN](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
+> - [ALWAYS_TOP_DOWN](arkts-arkui-waterflowlayoutmode-e.md#WaterFlowLayoutMode)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
 > 到对应位置。跳转指一帧滑动。
 
 **起始版本：** 9
@@ -401,7 +401,7 @@ scrollPage(value: { next: boolean; direction?: Axis })
 
 **废弃版本：** 9
 
-**替代接口：** [Scroller#scrollPage](arkts-arkui-scroller-c.md#scrollpage)
+**替代接口：** [scrollPage](#scrollPage)
 
 <!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })--><!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })-End-->
 
@@ -427,12 +427,12 @@ scrollTo(options: ScrollOptions)
 > 
 > - 各组件行为存在差异：
 > 
-> - [ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)和[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)组件会对所有经过的item进行加载和布局。
+> - [ArcList](../arkts-apis/arkts-arkui-arkui-arclist-con.md#ArcList)和[List](./list)组件会对所有经过的item进行加载和布局。
 > 
-> - Grid组件和[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md)模式的[WaterFlow](./water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估
+> - Grid组件和[SLIDING_WINDOW](arkts-arkui-waterflowlayoutmode-e.md#WaterFlowLayoutMode)模式的[WaterFlow](./water_flow)组件在跳转距离较大（大于2倍组件主轴高度）时，会直接估
 > 算出要显示的item。跳转指一帧滑动。
 > 
-> - [ALWAYS_TOP_DOWN](arkts-arkui-waterflowlayoutmode-e.md)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
+> - [ALWAYS_TOP_DOWN](arkts-arkui-waterflowlayoutmode-e.md#WaterFlowLayoutMode)模式的WaterFlow组件向后跳转（即dx或dy为正值时）会加载和布局所有经过的item，向前跳转（即dx或dy为负值时）会直接跳转
 > 到对应位置。跳转指一帧滑动。
 
 **起始版本：** 7
@@ -463,7 +463,7 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 > 
 > 1. 仅支持ArcList、Grid、List、WaterFlow组件。
 > 
-> 2. 在[LazyForEach](./lazy_for_each)、[ForEach](./for_each)、[Repeat](../arkts-apis/arkts-arkui-repeat-con.md/arkts-arkui-repeat-con.md#repeat)刷新数据源时，需确保在数据刷新完成之后再
+> 2. 在[LazyForEach](./lazy_for_each)、[ForEach](./for_each)、[Repeat](./repeat)刷新数据源时，需确保在数据刷新完成之后再
 > 调用此接口。
 > 
 > 3. 从API version 11开始，在List中支持[contentStartOffset](ListAttribute#contentStartOffset(value: number))和

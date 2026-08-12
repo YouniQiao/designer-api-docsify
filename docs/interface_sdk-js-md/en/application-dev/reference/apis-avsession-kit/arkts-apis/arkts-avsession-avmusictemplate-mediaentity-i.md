@@ -13,7 +13,7 @@ The definition of MediaEntity.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from 'kits/@kit.AVSessionKit';
+import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
 ## desc
@@ -144,7 +144,7 @@ playState: PlaybackState
 
 Play state of the media resource.
 
-**Type:** [PlaybackState](arkts-avsession-avsession-playbackstate-e.md)
+**Type:** PlaybackState
 
 **Since:** 23
 

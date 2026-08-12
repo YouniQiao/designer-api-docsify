@@ -36,7 +36,7 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 &lt;br&gt;默认值为HorizontalAlign.Center。 |
+| value | [HorizontalAlign](arkts-arkui-enums-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 &lt;br&gt;默认值为HorizontalAlign.Center。 |
 
 **返回值：**
 
@@ -68,7 +68,7 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | footer生成器函数 &lt;br&gt;传入undefined移除footer。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | footer生成器函数 &lt;br&gt;传入undefined移除footer。 |
 
 **返回值：**
 
@@ -100,7 +100,7 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | 是 | header生成器函数 &lt;br&gt;传递undefined将移除header。 |
+| builder | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| undefined | 是 | header生成器函数 &lt;br&gt;传递undefined将移除header。 |
 
 **返回值：**
 
@@ -132,7 +132,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 &lt;br&gt;传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 &lt;br&gt;传递undefined将取消注册回调。 |
 
 **返回值：**
 
@@ -196,7 +196,7 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | 是 | header和footer吸顶吸底样式。 |
+| sticky | [StickyStyle](arkts-arkui-list-stickystyle-e.md) \| undefined | 是 | header和footer吸顶吸底样式。 |
 
 **返回值：**
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#HEART_RATE
+**替代接口：** [HEART_RATE](arkts-sensorservice-sensor-sensorid-e.md#HEART_RATE)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -26,7 +26,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -55,7 +55,7 @@ success: (data: HeartRateResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **需要权限：** ohos.permission.READ_HEALTH_DATA
 
@@ -69,4 +69,4 @@ success: (data: HeartRateResponse) => void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | [HeartRateResponse](arkts-sensorservice-sensor-heartrateresponse-i.md) | 是 |
+| data | [HeartRateResponse](arkts-sensorservice-system-sensor-heartrateresponse-i.md) | 是 |

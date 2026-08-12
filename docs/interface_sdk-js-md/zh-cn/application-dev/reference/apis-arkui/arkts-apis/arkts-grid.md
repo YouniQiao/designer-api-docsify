@@ -14,7 +14,7 @@
 | --- | --- |
 | [ComputedBarAttribute](arkts-arkui-grid-computedbarattribute-i.md) | 滚动条位置和长度对象。 |
 | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | Grid布局选项。 |
-| [UIGridEvent](arkts-arkui-grid-uigridevent-i.md) | frameNode中[getEvent('Grid')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventgrid19)方法的返回值，可用于给Grid节点设置滚动事件。  UIGridEvent继承于[UIScrollableCommonEvent](arkts-arkui-common-uiscrollablecommonevent-i.md)。 |
+| [UIGridEvent](arkts-arkui-grid-uigridevent-i.md) | frameNode中[getEvent('Grid')](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#geteventgrid19)方法的返回值，可用于给Grid节点设置滚动事件。  UIGridEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。 |
 
 <!--Del-->
 ### 接口（系统接口）
@@ -43,7 +43,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) | 根据指定的目标索引，计算Grid滚动到该位置时页面内对应的起始行，用于支持[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex)等操作。  **系统接口：** 此接口为系统接口。  **模型约束：** 此接口仅可在Stage模型下使用。 |
+| [OnGetStartIndexByIndexCallback](arkts-arkui-ongetstartindexbyindexcallback-t-sys.md) | 根据指定的目标索引，计算Grid滚动到该位置时页面内对应的起始行，用于支持[scrollToIndex](Scroller#scrollToIndex)等操作。  **系统接口：** 此接口为系统接口。  **模型约束：** 此接口仅可在Stage模型下使用。 |
 | [OnGetStartIndexByOffsetCallback](arkts-arkui-ongetstartindexbyoffsetcallback-t-sys.md) | 根据Grid的总偏移量，计算当前页面起始行的位置，用于快速滑动或反向滑动场景。  **系统接口：** 此接口为系统接口。  **模型约束：** 此接口仅可在Stage模型下使用。 |
 <!--DelEnd-->
 

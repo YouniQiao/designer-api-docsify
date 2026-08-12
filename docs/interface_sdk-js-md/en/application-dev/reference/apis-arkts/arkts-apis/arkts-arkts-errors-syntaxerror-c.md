@@ -2,7 +2,7 @@
 
 Represents an error that occurs when trying to interpret syntactically invalid code
 
-**Inheritance/Implementation:** SyntaxError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** SyntaxError extends [Error](Error)
 
 **Since:** 26.0.0
 

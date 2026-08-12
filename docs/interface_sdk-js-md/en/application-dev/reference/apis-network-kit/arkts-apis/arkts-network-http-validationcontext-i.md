@@ -1,6 +1,6 @@
 # ValidationContext
 
-The validation context of {@link ValidationCallback}
+The validation context of [ValidationCallback](arkts-network-http-validationcallback-t.md#ValidationCallback)
 
 **Since:** 26.0.0
 
@@ -13,7 +13,7 @@ The validation context of {@link ValidationCallback}
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## host
@@ -84,7 +84,7 @@ x509Certs: X509Cert[]
 
 X509 certificate chain.
 
-**Type:** [X509Cert](arkts-network-http-x509cert-t.md)[]
+**Type:** X509Cert[]
 
 **Since:** 26.0.0
 

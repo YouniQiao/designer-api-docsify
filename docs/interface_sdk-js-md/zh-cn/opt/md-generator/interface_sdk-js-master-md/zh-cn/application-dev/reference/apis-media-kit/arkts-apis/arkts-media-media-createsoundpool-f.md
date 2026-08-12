@@ -36,7 +36,7 @@ function createSoundPool(
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 
@@ -92,13 +92,13 @@ function createSoundPool(maxStreams: number, audioRenderInfo: audio.AudioRendere
 
 | 类型 |
 | --- |
-| Promise&lt;SoundPool&gt; |
+| Promise & lt;SoundPool & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 

@@ -25,7 +25,7 @@ buttonType?: ButtonType
 
 Background type of the **SaveButton** component.Default value: ButtonType.Capsule.
 
-**Type:** [ButtonType](arkts-arkui-buttontype-e.md)
+**Type:** ButtonType
 
 **Since:** 10
 

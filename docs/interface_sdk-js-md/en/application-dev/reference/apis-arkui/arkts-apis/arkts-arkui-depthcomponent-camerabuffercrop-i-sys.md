@@ -64,7 +64,7 @@ cropOffset: CropOffset
 
 Crop frame offset relative to buffer top-left corner.
 
-**Type:** [CropOffset](../arkts-components/arkts-arkui-cropoffset-i-sys.md)
+**Type:** [CropOffset](arkts-arkui-depthcomponent-cropoffset-i-sys.md)
 
 **Since:** 26.0.0
 

@@ -19,9 +19,9 @@ type ValueType = number | string | boolean | Array<number> | Array<string> | Arr
 | number |
 | string |
 | boolean |
-| Array&lt;number&gt; |
-| Array&lt;string&gt; |
-| Array&lt;boolean&gt; |
+| Array & lt;number & gt; |
+| Array & lt;string & gt; |
+| Array & lt;boolean & gt; |
 | Uint8Array |
 | object |
 | bigint |

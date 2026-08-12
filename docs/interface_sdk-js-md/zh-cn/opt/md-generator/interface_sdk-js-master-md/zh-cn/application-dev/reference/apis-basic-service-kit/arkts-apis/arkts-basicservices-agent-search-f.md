@@ -6,7 +6,7 @@
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-根据默认[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id，即查询调用时刻至24小时前的所有任务的任务id。使用callback异步回调。
+根据默认[Filter](arkts-basicservices-agent-filter-i.md#Filter)过滤条件查找任务id，即查询调用时刻至24小时前的所有任务的任务id。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -24,8 +24,8 @@ function search(callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 
 ## search
@@ -34,7 +34,7 @@ function search(callback: AsyncCallback<Array<string>>): void
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用callback异步回调。
+根据[Filter](arkts-basicservices-agent-filter-i.md#Filter)过滤条件查找任务id。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -53,8 +53,8 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
 
 
 ## search
@@ -63,7 +63,7 @@ function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-根据[Filter](arkts-basicservices-agent-filter-i.md)过滤条件查找任务id。使用Promise异步回调。
+根据[Filter](arkts-basicservices-agent-filter-i.md#Filter)过滤条件查找任务id。使用Promise异步回调。
 
 **起始版本：** 10
 
@@ -81,11 +81,11 @@ function search(filter?: Filter): Promise<Array<string>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |

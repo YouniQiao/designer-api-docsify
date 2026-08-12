@@ -1,8 +1,8 @@
 # CheckboxGroupAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** CheckboxGroupAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** CheckboxGroupAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;CheckboxGroupAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | CheckboxGroup的属性修饰器。&lt;br/&gt;CheckboxGroupAttribute：当前组件的[属性](../arkts-components/arkts-arkui-checkboxgroup-attribute.md/arkts-arkui-checkboxgroup-attribute.md)&lt;br/&gt;CommonMethod： [通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | CheckboxGroup的属性修饰器。&lt;br/&gt;CheckboxGroupAttribute：当前组件的[属性](#CheckboxGroupAttribute)&lt;br/&gt;CommonMethod： [通用属性](common) |
 
 **返回值：**
 
@@ -96,7 +96,7 @@ default contentModifier(modifier: ContentModifier<CheckBoxGroupConfiguration> | 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;CheckBoxGroupConfiguration&gt; \| undefined | 是 | CheckboxGroup的内容修饰器。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxGroupConfiguration](arkts-arkui-checkboxgroup-checkboxgroupconfiguration-i.md)&gt; \| undefined | 是 | CheckboxGroup的内容修饰器。 |
 
 **返回值：**
 
@@ -170,9 +170,9 @@ CheckboxGroup的选中状态或群组内的Checkbox的选中状态发生变化�
 default selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 ```
 
-设置是否全选。若同组的[Checkbox](arkts-arkui-checkbox-checkbox-f.md#checkbox)显式设置了select属性，则Checkbox的优先级高。
+设置是否全选。若同组的[Checkbox](checkbox)显式设置了select属性，则Checkbox的优先级高。
 
-在与带有缓存功能的组件（如[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)）配合使用时，未创建的Checkbox选中状态需由开发者控制。
+在与带有缓存功能的组件（如[List](list)）配合使用时，未创建的Checkbox选中状态需由开发者控制。
 
 该属性支持Bindable双向绑定变量。
 
@@ -190,7 +190,7 @@ default selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAllSelected | boolean \| undefined \| Bindable&lt;boolean&gt; | 是 | 是否全选。&lt;br/&gt;默认值：false&lt;br/&gt;值为true时，多选框群组将全部被选中；值为 false时，多选框群组将全部取消选中。 |
+| isAllSelected | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | 是 | 是否全选。&lt;br/&gt;默认值：false&lt;br/&gt;值为true时，多选框群组将全部被选中；值为 false时，多选框群组将全部取消选中。 |
 
 **返回值：**
 
@@ -204,7 +204,7 @@ default selectAll(isAllSelected: boolean | undefined | Bindable<boolean>): this
 default selectedColor(value: ResourceColor | undefined): this
 ```
 
-设置被选中或部分选中状态的颜色。与[selectedColor](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md#selectedcolor)相比，resColor参数新增了对undefined类型的支持。
+设置被选中或部分选中状态的颜色。与[selectedColor](#selectedColor)相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 

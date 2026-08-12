@@ -1,10 +1,10 @@
 # UIWaterFlowEvent
 
 Represents the return value of the  
-[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent) method in  
+[getEvent('WaterFlow')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-2) method in  
 **frameNode**, which can be used to set scroll events for a **WaterFlow** node.
 
-**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)
+**Inheritance/Implementation:** UIWaterFlowEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **Since:** 19
 
@@ -41,7 +41,7 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | Yes | Callback for the **onDidScroll** event. |
+| callback | OnScrollCallback \| undefined | Yes | Callback for the **onDidScroll** event. |
 
 ## setOnScrollIndex
 
@@ -99,5 +99,5 @@ If the input parameter is **undefined**, the event callback is reset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | Yes | Callback for the **onWillScroll** event. |
+| callback | OnWillScrollCallback \| undefined | Yes | Callback for the **onWillScroll** event. |
 

@@ -25,7 +25,7 @@ Represents information about the authentication result reuse. This API is used t
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## reuseDuration
@@ -35,7 +35,7 @@ reuseDuration: int
 ```
 
 Reuse duration of the authentication result, in milliseconds. The value must be greater than 0 and the maximum value is  
-[MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration)(300,000 milliseconds, that is, 5 minutes). You are advised to set a proper duration based on the service scenario:
+[MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#MAX_ALLOWABLE_REUSE_DURATION)(300,000 milliseconds, that is, 5 minutes). You are advised to set a proper duration based on the service scenario:
 
 - Advanced security scenarios (such as payment): A short duration (for example, 30 seconds to 1 minute) is  
 recommended.  

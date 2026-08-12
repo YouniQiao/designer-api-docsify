@@ -1,7 +1,7 @@
 # ItemFillPolicy
 
-定义一个适用于[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)、[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、  
-[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-i)和  
+定义一个适用于[WaterFlow](../../@internal/component/ets/water_flow)、[Grid](../../@internal/component/ets/grid)、  
+[List](../../@internal/component/ets/list)、[Swiper](../../@internal/component/ets/swiper)和  
 [LazyVWaterFlowLayout](../../../reference/apis-arkui/arkui-ts/ts-container-lazyvwaterflowlayout.md)组件的响应式布局策略。LazyVWaterFlowLayout组件从API版本26.0.0开始支持。
 
 **起始版本：** 23

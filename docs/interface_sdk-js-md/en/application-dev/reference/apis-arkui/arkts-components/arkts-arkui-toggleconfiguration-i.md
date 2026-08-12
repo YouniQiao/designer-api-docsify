@@ -1,7 +1,7 @@
 # ToggleConfiguration
 
 You need a custom class to implement the **ContentModifier** API. This API inherits from   
-[CommonConfiguration](../arkts-apis/arkts-arkui-common-commonconfiguration-i.md/arkts-arkui-common-commonconfiguration-i.md).
+[CommonConfiguration](CommonConfiguration).
 
 **Inheritance/Implementation:** ToggleConfiguration extends [CommonConfiguration<ToggleConfiguration>](CommonConfiguration<ToggleConfiguration>)
 
@@ -75,7 +75,7 @@ Callback invoked when the toggle's state changes.
 
 **true**: The toggle is turned on. **false**: The toggle is turned off.
 
-**Type:** [Callback](arkts-arkui-callback-i.md)&lt;boolean&gt;
+**Type:** Callback&lt;boolean&gt;
 
 **Since:** 12
 

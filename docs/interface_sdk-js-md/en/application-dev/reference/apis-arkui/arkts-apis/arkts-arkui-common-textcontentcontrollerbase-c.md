@@ -33,7 +33,7 @@ Add a text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | text value. |
-| textOperationOptions | [TextContentControllerOptions](../arkts-components/arkts-arkui-textcontentcontrolleroptions-i.md) | No | operation info. |
+| textOperationOptions | [TextContentControllerOptions](arkts-arkui-common-textcontentcontrolleroptions-i.md) | No | operation info. |
 
 **Return value:**
 
@@ -99,7 +99,7 @@ Delete text in TextRange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | No | range for deleting. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | No | range for deleting. |
 
 ## getCaretOffset
 
@@ -149,7 +149,7 @@ Gets the selected range of text content.
 
 | Type | Description |
 | --- | --- |
-| [TextRange](arkts-arkui-textrange-i.md) | range for selecting. |
+| [TextRange](arkts-arkui-textcommon-textrange-i.md) | range for selecting. |
 
 ## getTextContentLineCount
 
@@ -223,7 +223,7 @@ Scroll the input field component to make the specified content visible.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [TextRange](arkts-arkui-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
+| range | [TextRange](arkts-arkui-textcommon-textrange-i.md) | No | The visible range. If the parameter is invalid, this method will have no effect. |
 
 ## setStyledPlaceholder
 
@@ -247,5 +247,5 @@ Set the styled placeholder.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | The styledString for placeholder. If the parameter is invalid, this method will have no effect. |
 

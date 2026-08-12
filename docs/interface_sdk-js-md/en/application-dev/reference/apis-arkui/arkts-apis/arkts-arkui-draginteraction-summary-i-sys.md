@@ -15,7 +15,7 @@ Defines the data summary of the dragged object.
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from 'kits/@kit.ArkUI';
+import { dragInteraction } from '@kit.ArkUI';
 ```
 
 ## dataSize

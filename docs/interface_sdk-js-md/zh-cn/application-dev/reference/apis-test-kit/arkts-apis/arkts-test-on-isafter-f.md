@@ -6,7 +6,7 @@
 export function isAfter(on: On): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given {@link On}object,used to locate Component relatively.
+Requires that the target Component which is after another Component that specified by the given [On](arkts-test-uitest-on-c.md#On)object,used to locate Component relatively.
 
 **起始版本：** 23
 

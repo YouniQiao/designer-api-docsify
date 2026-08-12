@@ -15,7 +15,7 @@ Describes audio renderer filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## rendererId

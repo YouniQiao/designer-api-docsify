@@ -2,7 +2,7 @@
 
 A mutual exclusion lock that provides exclusive access to a shared resource
 
-**Inheritance/Implementation:** Mutex implements [Lock](arkts-arkts-syncprimitives-lock-i.md)
+**Inheritance/Implementation:** Mutex implements [Lock](arkts-arkts-syncprimitives-lock-i.md#Lock)
 
 **Since:** 26.0.0
 

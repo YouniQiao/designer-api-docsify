@@ -6,7 +6,7 @@
 function getSystemMemInfo(): SystemMemInfo
 ```
 
-��ȡϵͳ�ڴ���Ϣ����ȡ/proc/meminfo�ڵ�����ݡ�
+获取系统内存信息。读取/proc/meminfo节点的数据。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function getSystemMemInfo(): SystemMemInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | ϵͳ�ڴ���Ϣ�� |
+| [SystemMemInfo](arkts-performanceanalysis-hidebug-systemmeminfo-i.md) | 系统内存信息。 |
 
 ## 示例
 

@@ -18,7 +18,7 @@ gestures: GestureHandler[]
 
 Indicates the gestures included in the gesture group.
 
-**Type:** [GestureHandler](arkts-arkui-gesturehandler-c.md)[]
+**Type:** [GestureHandler](arkts-arkui-gesture-gesturehandler-c.md)[]
 
 **Since:** 23
 

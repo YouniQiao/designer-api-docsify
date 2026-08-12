@@ -18,7 +18,7 @@
 | --- | --- |
 | [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md#isopenaccessibility) | 判断是否启用了辅助应用，使用callback异步回调。 |
 | [isOpenAccessibility](arkts-accessibility-accessibility-isopenaccessibility-f.md#isopenaccessibility-1) | 判断是否启用了辅助应用，使用Promise异步回调。 |
-| [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync) | 查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。 |
+| [isOpenAccessibilitySync](arkts-accessibility-accessibility-isopenaccessibilitysync-f.md#isopenaccessibilitysync) | 查询当前系统内是否存在已开启的辅助应用。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync)。 |
 | [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md#isopentouchguide) | 判断触摸浏览模式是否开启，使用callback异步回调。 |
 | [isOpenTouchGuide](arkts-accessibility-accessibility-isopentouchguide-f.md#isopentouchguide-1) | 判断触摸浏览模式是否开启，使用Promise异步回调。 |
 | [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md#isopentouchguidesync) | 是否开启了触摸浏览模式。 |
@@ -31,9 +31,9 @@
 | [sendEvent](arkts-accessibility-accessibility-sendevent-f.md#sendevent-1) | 发送无障碍事件，使用Promise异步回调。 |
 | [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent) | 发送无障碍事件，使用callback异步回调。 |
 | [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendaccessibilityevent-1) | 发送无障碍事件，使用Promise异步回调。 |
-| [on](arkts-accessibility-accessibility-on-f.md#on) | 监听辅助应用启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。 |
+| [on](arkts-accessibility-accessibility-on-f.md#on) | 监听辅助应用启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync)。 |
 | [onAccessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md#onaccessibilitystatechange) | Register the observe of the accessibility state changed. |
-| [on](arkts-accessibility-accessibility-on-f.md#on-1) | 监听触摸浏览功能启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync)。 |
+| [on](arkts-accessibility-accessibility-on-f.md#on-1) | 监听触摸浏览功能启用状态变化事件，使用callback异步回调。如需获取系统内辅助应用信息，推荐使用  [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync)。 |
 | [onTouchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md#ontouchguidestatechange) | Register the observe of the touchGuide state changed. |
 | [off](arkts-accessibility-accessibility-off-f.md#off) | 取消监听辅助应用启用状态变化事件，使用callback异步回调。 |
 | [offAccessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md#offaccessibilitystatechange) | Unregister the observe of the accessibility state changed. |
@@ -80,7 +80,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getcaptionsmanager)获取 CaptionsManager实例。 |
+| [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 字幕配置管理，在调用CaptionsManager的方法前，需要先通过 [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getCaptionsManager)获取 CaptionsManager实例。 |
 | [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md) | 字幕风格。 |
 | [AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) | 辅助应用信息。 |
 

@@ -18,7 +18,7 @@ parameters?: Array<ParameterItem>
 
 Custom data for launching the shortcut. The data must be strings. Both keys and values can be strings up to 1024characters long.
 
-**Type:** Array&lt;ParameterItem&gt;
+**Type:** Array&lt;[ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)&gt;
 
 **Since:** 20
 

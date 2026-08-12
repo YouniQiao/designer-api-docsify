@@ -18,7 +18,7 @@ offset?: int | GridColColumnOption
 
 栅格子组件相对于原本位置偏移的列数。
 
-**类型：** int \| GridColColumnOption
+**类型：** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ order?: int | GridColColumnOption
 
 元素的序号，根据栅格子组件的序号，从小到大对栅格子组件做排序。
 
-**类型：** int \| GridColColumnOption
+**类型：** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ span?: int | GridColColumnOption
 
 栅格子组件占用栅格容器组件的列数。span为0表示该元素不参与布局计算，即不会被渲染。
 
-**类型：** int \| GridColColumnOption
+**类型：** int \| [GridColColumnOption](arkts-arkui-gridcol-gridcolcolumnoption-i.md)
 
 **起始版本：** 23
 

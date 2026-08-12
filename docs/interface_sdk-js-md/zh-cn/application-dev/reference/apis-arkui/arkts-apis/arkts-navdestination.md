@@ -12,7 +12,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md) | 支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)。 |
+| [NavDestinationAttribute](arkts-arkui-navdestination-navdestinationattribute-i.md) | 支持[通用属性](./../../@internal/component/ets/common)。 |
 | [NavDestinationCommonTitle](arkts-arkui-navdestination-navdestinationcommontitle-i.md) | NavDestination通用标题。 |
 | [NavDestinationContext](arkts-arkui-navdestination-navdestinationcontext-i.md) | NavDestination上下文信息。 |
 | [NavDestinationCustomTitle](arkts-arkui-navdestination-navdestinationcustomtitle-i.md) | NavDestination自定义标题。 |

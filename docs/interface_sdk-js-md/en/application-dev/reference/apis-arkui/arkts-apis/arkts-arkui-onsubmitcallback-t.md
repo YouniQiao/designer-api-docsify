@@ -23,5 +23,5 @@ Anonymous Object Rectification.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enterKey | [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md) | Yes | Input method Enter key type. |
-| event | [SubmitEvent](../arkts-components/arkts-arkui-submitevent-i.md) | Yes | The event submitted. |
+| event | [SubmitEvent](arkts-arkui-textinput-submitevent-i.md) | Yes | The event submitted. |
 

@@ -1,7 +1,7 @@
 # AccessibilityElement
 
 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。
+[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
 
 **起始版本：** 9
 
@@ -31,6 +31,21 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.actionNames((err: BusinessError, data: string[]) => {
+  if (err) {
+    console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
+});
+```
+
 ## actionNames
 
 ```TypeScript
@@ -51,7 +66,20 @@ actionNames(): Promise<Array<string>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.actionNames().then((data: string[]) => {
+  console.info(`succeeded in getting action names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## attributeNames
 
@@ -75,6 +103,22 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | 是 |
 
+## 示例
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.attributeNames((err: BusinessError, data: ElementAttributeKeys[]) => {
+  if (err) {
+    console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
+});
+```
+
 ## attributeNames
 
 ```TypeScript
@@ -95,7 +139,21 @@ attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;T&gt;&gt; |
+| Promise & lt;Array & lt;T & gt; & gt; |
+
+## 示例
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
+  console.info(`succeeded in getting attribute names, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## attributeValue
 
@@ -127,8 +185,26 @@ attributeValue<T extends keyof ElementAttributeValues>(
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [9300004](../errorcode-accessibility.md#9300004-属性不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [9300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-属性不存在) |
+
+## 示例
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let attributeName: ElementAttributeKeys = 'bundleName';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.attributeValue(attributeName, (err: BusinessError, data: string) => {
+  if (err) {
+    console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in getting attribute value, ${JSON.stringify(data)}`);
+});
+```
 
 ## attributeValue
 
@@ -156,14 +232,30 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 
 | 类型 |
 | --- |
-| Promise&lt;ElementAttributeValues[T]&gt; |
+| Promise & lt;ElementAttributeValues[T] & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [9300004](../errorcode-accessibility.md#9300004-属性不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [9300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-属性不存在) |
+
+## 示例
+
+```TypeScript
+import { ElementAttributeKeys } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let attributeName: ElementAttributeKeys = 'bundleName';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.attributeValue(attributeName).then((data: string) => {
+  console.info(`succeeded in getting attribute value by name, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get attribute value. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -193,7 +285,25 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition = 'keyword';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.findElement('content', condition, (err: BusinessError, data: AccessibilityElement[]) => {
+  if (err) {
+    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+});
+```
 
 ## findElement
 
@@ -228,7 +338,23 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition = 'keyword';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.findElement('content', condition).then((data: AccessibilityElement[]) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -258,7 +384,25 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusType = 'normal';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.findElement('focusType', condition, (err: BusinessError, data: AccessibilityElement) => {
+  if (err) {
+    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+});
+```
 
 ## findElement
 
@@ -293,7 +437,23 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { FocusType, AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusType = 'normal';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.findElement('focusType', condition).then((data: AccessibilityElement) => {
+  console.info(`succeeded in finding element,${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## findElement
 
@@ -323,7 +483,25 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusDirection = 'up';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.findElement('focusDirection', condition, (err: BusinessError, data: AccessibilityElement) => {
+  if (err) {
+    console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+});
+```
 
 ## findElement
 
@@ -358,7 +536,23 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { FocusDirection, AccessibilityElement } from '@kit.AccessibilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let condition: FocusDirection = 'up';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.findElement('focusDirection', condition).then((data: AccessibilityElement) => {
+  console.info(`succeeded in finding element, ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## performAction
 
@@ -380,7 +574,7 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| actionName | string | 是 |
+| [actionName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | string | 是 |
 | parameters | object | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
@@ -388,8 +582,26 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [9300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+let parameters: object = {};
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.performAction(actionName, parameters, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in performing action,actionName is ${actionName}, parameters is ${parameters}`);
+});
+```
 
 ## performAction
 
@@ -411,21 +623,71 @@ performAction(actionName: string, parameters?: object): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| actionName | string | 是 |
+| [actionName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | string | 是 |
 | parameters | object | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [9300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) |
+
+## 示例
+
+无参数Action。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+// Action描述中无明确要求的，均为无参数Action。
+rootElement.performAction('click').then(() => {
+  console.info(`succeeded in performing action.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+有参数Action（setSelection）。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+// setSelection示例代码。
+rootElement.performAction('setSelection', {
+  selectTextBegin: '0', // 表示选择起始位置。
+  selectTextEnd: '8',   // 表示选择结束位置。
+  selectTextInForWard: true   // true表示为前光标，false表示为后光标。
+}).then(() => {
+  console.info(`succeeded in performing action`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+有参数Action（setCursorPosition）。
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+// setCursorPosition示例代码。
+rootElement.performAction('setCursorPosition', {
+  offset: '1'   // 表示光标的设置位置。
+}).then(() => {
+  console.info(`succeeded in performing action`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+});
+```
 
 ## performAction
 
@@ -447,12 +709,29 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| actionName | string | 是 |
+| [actionName](../../apis-notification-kit/arkts-apis/arkts-notification-notificationsubscribe-operationinfo-i-sys.md) | string | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [9300005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let actionName = 'action';
+
+// rootElement是AccessibilityElement的实例，通过getFocusElement()或getWindowRootElement()获取
+rootElement.performAction(actionName, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to perform action. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`succeeded in performing action, actionName is ${actionName}`);
+});
+```

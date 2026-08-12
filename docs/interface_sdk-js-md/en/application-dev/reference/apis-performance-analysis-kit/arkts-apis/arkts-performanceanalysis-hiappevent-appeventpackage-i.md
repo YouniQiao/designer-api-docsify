@@ -1,6 +1,6 @@
 # AppEventPackage
 
-Defines parameters of an **AppEventPackage** object. This API is used to obtain detail information about an event package, which is obtained using the [takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takenext) API.
+Defines parameters of an **AppEventPackage** object. This API is used to obtain detail information about an event package, which is obtained using the [takeNext](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md#takeNext) API.
 
 **Since:** 9
 
@@ -13,7 +13,7 @@ Defines parameters of an **AppEventPackage** object. This API is used to obtain 
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## appEventInfos
@@ -26,7 +26,7 @@ Event object group.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
-**Type:** Array&lt;AppEventInfo&gt;
+**Type:** Array&lt;[AppEventInfo](arkts-performanceanalysis-hiappevent-appeventinfo-i.md)&gt;
 
 **Since:** 12
 

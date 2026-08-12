@@ -1,7 +1,7 @@
 # GetAuthInfoOptions (System API)
 
 Represents a set of optional parameters for  
-[GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getauthinfo).
+[GetAuthInfo](arkts-basicservices-osaccount-useridentitymanager-c-sys.md#getAuthInfo-3).
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Represents a set of optional parameters for
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## accountId
@@ -43,7 +43,7 @@ authType?: AuthType
 
 Authentication type, which is **undefined** by default.
 
-**Type:** [AuthType](arkts-basicservices-osaccount-authtype-e-sys.md)
+**Type:** AuthType
 
 **Since:** 12
 

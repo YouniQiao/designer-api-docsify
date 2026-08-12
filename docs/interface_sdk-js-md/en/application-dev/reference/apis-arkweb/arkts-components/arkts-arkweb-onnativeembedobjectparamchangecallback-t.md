@@ -18,5 +18,5 @@ Defines a callback triggered when the **param** element embedded in the same-lay
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [NativeEmbedParamDataInfo](../arkts-apis/arkts-arkweb-web-nativeembedparamdatainfo-i.md) | Yes | Detailed information about the changes of the **param** element embedded in the **object** tag. |
+| event | [NativeEmbedParamDataInfo](arkts-arkweb-nativeembedparamdatainfo-i.md) | Yes | Detailed information about the changes of the **param** element embedded in the **object** tag. |
 

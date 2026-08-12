@@ -72,7 +72,7 @@ Creates a horizontal linear layout container. You can set the spacing between ch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RowOptions](arkts-arkui-rowoptions-i.md) \| RowOptionsV2 | No | Spacing between elements in a horizontal layout. The value can be of the number, string, or Resource type. |
+| options | [RowOptions](arkts-arkui-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-rowoptionsv2-i.md) | No | Spacing between elements in a horizontal layout. The value can be of the number, string, or Resource type. |
 
 ## Summary
 

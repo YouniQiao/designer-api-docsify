@@ -1,7 +1,7 @@
 # ProgressSignal
 
 Defines a function for canceling the paste task. This parameter is valid only when  
-[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md) is set to **NONE**.
+[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**.
 
 **Since:** 15
 
@@ -12,7 +12,7 @@ Defines a function for canceling the paste task. This parameter is valid only wh
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## cancel

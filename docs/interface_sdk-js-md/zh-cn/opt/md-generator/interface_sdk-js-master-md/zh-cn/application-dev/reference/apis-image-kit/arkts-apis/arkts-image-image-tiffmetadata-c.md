@@ -178,7 +178,7 @@ readonly orientation?: Orientation
 
 Indicates image orientation for correct display rotation/flip.
 
-**类型：** [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md)
+**类型：** Orientation
 
 **起始版本：** 26.0.0
 

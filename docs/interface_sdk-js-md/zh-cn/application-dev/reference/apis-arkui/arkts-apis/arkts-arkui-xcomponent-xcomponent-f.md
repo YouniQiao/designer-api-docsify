@@ -24,7 +24,7 @@ export declare function XComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| XComponentOptions \| NativeXComponentParameters | 是 | 用于 创建XComponent的选项。 |
+| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md) \| [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | 是 | 用于 创建XComponent的选项。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function XComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;XComponentAttribute&gt; | 是 | 用于设置XComponent属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; | 是 | 用于设置XComponent属性的回调。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Represents a read-only Map
 
-**Inheritance/Implementation:** ReadonlyMap extends [Iterable<[K, V]>]{@link Iterable<[K, V]>}
+**Inheritance/Implementation:** ReadonlyMap extends [Iterable<[K, V]>][Iterable<[K, V]>](Iterable<[K, V]>)
 
 **Since:** 26.0.0
 
@@ -34,7 +34,7 @@ Returns elements from the Map as an array of Entries.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[K, V]&gt; | an array of Entries. |
+| IterableIterator&lt;[K, V]&gt; | an array of Entries. |
 
 ## forEach
 
@@ -142,7 +142,7 @@ Returns elements from the Map as an keys Iterator.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;K&gt; | ValueIterator with map keys. |
+| IterableIterator&lt;K&gt; | ValueIterator with map keys. |
 
 ## values
 
@@ -166,7 +166,7 @@ Returns elements from the Map as an values Iterator.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;V&gt; | ValueIterator with map values. |
+| IterableIterator&lt;V&gt; | ValueIterator with map values. |
 
 ## size
 

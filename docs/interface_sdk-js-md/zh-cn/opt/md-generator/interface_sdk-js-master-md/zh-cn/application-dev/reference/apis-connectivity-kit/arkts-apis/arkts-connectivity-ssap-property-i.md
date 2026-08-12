@@ -68,7 +68,7 @@ Property实例的UUID长度必须为32，由16进制数字字符和连字符共3
 serviceUuid: string
 ```
 
-属性所属的{@link Service}实例的UUID长度必须为32，禁止使用星闪标准服务UUID。&lt;br&gt;不允许使用NearLink标准UUID。
+属性所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID长度必须为32，禁止使用星闪标准服务UUID。&lt;br&gt;不允许使用NearLink标准UUID。
 
 **类型：** string
 

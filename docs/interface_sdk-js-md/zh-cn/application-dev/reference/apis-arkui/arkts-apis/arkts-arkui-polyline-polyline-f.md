@@ -30,7 +30,7 @@ export declare function Polyline(
 
 | 类型 | 说明 |
 | --- | --- |
-| [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md) | 折线的属性。 |
+| [PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md) | 折线的属性。 |
 
 
 ## Polyline
@@ -59,11 +59,11 @@ export declare function Polyline(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolylineAttribute&gt; | 是 | 设置组件属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md) |  |
+| [PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md) |  |
 

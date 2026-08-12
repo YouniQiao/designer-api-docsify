@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## usbCancelTransfer
@@ -19,7 +19,7 @@ Cancels an asynchronous USB data transfer request.
 > This API is used to proactively cancel an unfinished USB data transfer request (for example, the one submitted by
 > **usbSubmitTransfer**).
 > Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claiminterface)
+> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
 > API to claim a communication interface.
 
 **Since:** 18
@@ -38,11 +38,11 @@ Cancels an asynchronous USB data transfer request.
 
 | Error Code ID |
 | --- |
-| [14400011](../../apis-basic-services-kit/errorcode-usb.md#14400011-no-ongoing-transfer-found) |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) |
-| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) |
-| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) |
+| [14400011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400011-no-ongoing-transfer-found) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [14400010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) |
+| [14400008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) |
+| [14400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) |
 
 ## Examples
 

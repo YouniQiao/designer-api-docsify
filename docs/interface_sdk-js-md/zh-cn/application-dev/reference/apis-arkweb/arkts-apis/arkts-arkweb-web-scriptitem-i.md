@@ -54,7 +54,7 @@ urlRegexRules?: Array<UrlRegexRule>
 
 Set the regular expression rule that allows execution of this JavaScript.
 
-**类型：** Array&lt;UrlRegexRule&gt;
+**类型：** Array&lt;[UrlRegexRule](arkts-arkweb-web-urlregexrule-i.md)&gt;
 
 **起始版本：** 23
 

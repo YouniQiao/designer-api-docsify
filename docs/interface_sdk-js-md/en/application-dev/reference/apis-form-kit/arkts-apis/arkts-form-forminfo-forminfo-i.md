@@ -13,7 +13,7 @@ Provides information about a form.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from 'kits/@kit.FormKit';
+import { formInfo } from '@kit.FormKit';
 ```
 
 ## abilityName
@@ -64,7 +64,7 @@ colorMode: ColorMode
 
 Obtains the color mode of this form.
 
-**Type:** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
+**Type:** ColorMode
 
 **Since:** 9
 
@@ -86,7 +86,7 @@ customizeData: Record<string, string>
 
 Obtains the custom data defined in this form.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 9
 
@@ -104,7 +104,7 @@ Obtains the custom data defined in this form.
 defaultDimension: int
 ```
 
-Obtains the default grid style of this form.The value must be a positive integer, refer to {@link formInfo.FormDimension}.
+Obtains the default grid style of this form.The value must be a positive integer, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#FormDimension).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -364,7 +364,7 @@ Obtains the scheduledUpdateTime.
 supportDimensions: Array<int>
 ```
 
-Obtains the grid styles supported by this form.The minimum length is 1, refer to {@link formInfo.FormDimension}.
+Obtains the grid styles supported by this form.The minimum length is 1, refer to [FormDimension](arkts-form-forminfo-formdimension-e.md#FormDimension).
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -384,7 +384,7 @@ Obtains the grid styles supported by this form.The minimum length is 1, refer to
 supportedShapes: Array<int>
 ```
 
-Obtains the shape supported by this form.The minimum length is 1, refer to {@link formInfo.FormShape}.
+Obtains the shape supported by this form.The minimum length is 1, refer to [FormShape](arkts-form-forminfo-formshape-e.md#FormShape).
 
 **Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
 
@@ -428,7 +428,7 @@ type: FormType
 
 Obtains the type of this form. Currently, JS forms are supported.
 
-**Type:** [FormType](../../apis-arkdata/arkts-apis/arkts-arkdata-data-udmfcomponents-formtype-e.md)
+**Type:** FormType
 
 **Since:** 9
 

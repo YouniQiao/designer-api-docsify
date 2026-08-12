@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## createPixelMapUsingAllocator
@@ -41,9 +41,9 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
-| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
-| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
+| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
 ## Examples
 

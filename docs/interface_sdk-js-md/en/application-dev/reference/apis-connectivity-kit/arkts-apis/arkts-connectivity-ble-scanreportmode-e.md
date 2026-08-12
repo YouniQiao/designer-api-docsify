@@ -36,7 +36,7 @@ In normal mode, the advertisement packet is reported immediately after being sca
 BATCH = 2
 ```
 
-Enables delayed sending of advertising packets in batch mode by the interval specified by{@link ScanOptions#interval}.
+Enables delayed sending of advertising packets in batch mode by the interval specified by[interval](arkts-connectivity-ble-scanoptions-i.md#interval).
 
 **Since:** 19
 

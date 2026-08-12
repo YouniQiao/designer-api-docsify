@@ -40,7 +40,7 @@ objectFit?: ImageFit
 
 Scale mode of the image.
 
-**Type:** [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md)
+**Type:** ImageFit
 
 **Since:** 10
 
@@ -85,7 +85,7 @@ verticalAlign?: ImageSpanAlignment
 
 Vertical alignment mode of the image.
 
-**Type:** [ImageSpanAlignment](../arkts-apis/arkts-arkui-enums-imagespanalignment-e.md)
+**Type:** ImageSpanAlignment
 
 **Since:** 10
 

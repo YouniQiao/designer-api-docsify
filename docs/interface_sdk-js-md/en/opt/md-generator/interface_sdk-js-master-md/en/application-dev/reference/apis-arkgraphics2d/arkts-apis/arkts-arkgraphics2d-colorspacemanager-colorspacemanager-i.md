@@ -13,7 +13,7 @@ Before calling any of the following APIs, you must use [create()](arkts-arkgraph
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from 'kits/@kit.ArkGraphics2D';
+import { colorSpaceManager } from '@kit.ArkGraphics2D';
 ```
 
 ## getColorSpaceName
@@ -40,7 +40,7 @@ Obtains the color space type.
 
 | Error Code ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -78,7 +78,7 @@ Obtains the gamma of the color space.
 
 | Error Code ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -110,13 +110,13 @@ Obtains the coordinates of the white point in the color space.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 

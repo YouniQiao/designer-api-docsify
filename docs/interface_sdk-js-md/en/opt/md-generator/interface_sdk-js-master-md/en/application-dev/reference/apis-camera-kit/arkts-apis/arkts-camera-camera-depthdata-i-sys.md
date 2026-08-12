@@ -13,7 +13,7 @@ Describes a depth data object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## release
@@ -36,13 +36,13 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -96,7 +96,7 @@ readonly format: CameraFormat
 
 Camera output format.
 
-**Type:** [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md)
+**Type:** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
 **Since:** 13
 

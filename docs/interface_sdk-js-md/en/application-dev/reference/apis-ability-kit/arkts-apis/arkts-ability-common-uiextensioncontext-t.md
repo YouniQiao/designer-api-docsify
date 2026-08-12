@@ -5,7 +5,7 @@ export type UIExtensionContext = _UIExtensionContext.default
 ```
 
 Defines the context environment for the  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md). It inherits from Context.
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). It inherits from Context.
 
 **Since:** 10
 

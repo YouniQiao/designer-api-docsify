@@ -11,7 +11,7 @@ Immersive material parameters.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## applyShadow
@@ -22,7 +22,7 @@ applyShadow?: boolean
 
 Whether to add a shadow effect for a material.
 
-If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#shadow) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
+If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
 
 Note: This parameter takes effect only for the display effect of devices with all levels of computing power.
 
@@ -64,7 +64,7 @@ The capability of automatically adapting the material to the complementary color
 [cancelButton](SearchAttribute#cancelButton), caret colors in   
 [caretStyle](SearchAttribute#caretStyle), and text and icon colors in   
 [tabBar](TabContentAttribute#tabBar(options: string | Resource | CustomBuilder | TabBarOptions)) of the   
-**TabContent** component when the [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md/arkts-arkui-bottomtabbarstyle-c.md) style is used.
+**TabContent** component when the [BottomTabBarStyle](../arkts-components/arkts-arkui-bottomtabbarstyle-c.md#BottomTabBarStyle) style is used.
 
 Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
 

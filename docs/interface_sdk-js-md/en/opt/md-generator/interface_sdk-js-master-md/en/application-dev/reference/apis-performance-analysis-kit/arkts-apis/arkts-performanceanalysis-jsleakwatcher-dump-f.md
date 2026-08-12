@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from 'kits/@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## dump
@@ -30,7 +30,7 @@ Dumps the list of leaked objects and VM memory snapshot.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## Examples
 

@@ -11,7 +11,7 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 > 替代。
 
 **起始版本：** 8
@@ -20,7 +20,7 @@ function vibrate(duration: number, callback?: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -62,7 +62,7 @@ function vibrate(duration: number): Promise<void>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)替代。
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)替代。
 
 **起始版本：** 8
 
@@ -70,7 +70,7 @@ function vibrate(duration: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -115,7 +115,7 @@ function vibrate(effectId: EffectId): Promise<void>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)替代。
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)替代。
 
 **起始版本：** 8
 
@@ -123,7 +123,7 @@ function vibrate(effectId: EffectId): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -135,7 +135,7 @@ function vibrate(effectId: EffectId): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | 是 | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync)查询是否支持。 |
+| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | 是 | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#isSupportEffectSync)查询是否支持。 |
 
 **返回值：**
 
@@ -168,7 +168,7 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)
+> [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)
 > 替代。
 
 **起始版本：** 8
@@ -177,7 +177,7 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [vibrator.startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration)(effect:
+**替代接口：** [startVibration](vibrator.startVibration(effect:)
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -189,7 +189,7 @@ function vibrate(effectId: EffectId, callback?: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | 是 | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync)查询是否支持。 |
+| effectId | [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | 是 | 预置的振动效果ID。字符串最大长度64，超出部分截取前64个字符。建议先通过 [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect)或 [vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#isSupportEffectSync)查询是否支持。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，当马达振动成功，err为undefined，否则为错误对象。使用场景：不填写时仅触发振动不获取回调结果。 |
 
 ## 示例

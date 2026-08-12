@@ -12,7 +12,7 @@ declare function lstatSync(path: string): Stat
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:lstatSync](arkts-corefile-fileio-lstatsync-f.md#lstatsync)
+**替代接口：** [lstatSync](arkts-corefile-file-fs-lstatsync-f.md#lstatSync)
 
 <!--Device-unnamed-declare function lstatSync(path: string): Stat--><!--Device-unnamed-declare function lstatSync(path: string): Stat-End-->
 
@@ -28,4 +28,4 @@ declare function lstatSync(path: string): Stat
 
 | 类型 |
 | --- |
-| [Stat](arkts-corefile-file-fs-stat-i.md) |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) |

@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| GridAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

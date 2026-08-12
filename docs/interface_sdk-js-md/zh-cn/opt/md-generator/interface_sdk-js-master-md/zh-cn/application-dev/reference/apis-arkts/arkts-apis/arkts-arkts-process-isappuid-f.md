@@ -12,7 +12,7 @@ function isAppUid(v: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [process.ProcessManager.isAppUid](arkts-arkts-process-processmanager-c.md#isappuid)
+**替代接口：** [isAppUid](arkts-arkts-process-processmanager-c.md#isAppUid)
 
 <!--Device-process-function isAppUid(v: number): boolean--><!--Device-process-function isAppUid(v: number): boolean-End-->
 

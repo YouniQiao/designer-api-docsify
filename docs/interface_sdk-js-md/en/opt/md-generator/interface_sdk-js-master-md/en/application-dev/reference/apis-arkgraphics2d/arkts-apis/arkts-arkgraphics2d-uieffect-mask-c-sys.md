@@ -13,7 +13,7 @@ Mask effect class, used as input for Filter and VisualEffect. Different types of
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## createPixelMapMask
@@ -40,7 +40,7 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 | pixelMap | image.PixelMap | Yes |
 | srcRect | common2D.Rect | Yes |
 | dstRect | common2D.Rect | Yes |
-| fillColor | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) | No |
+| fillColor | [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) | No |
 
 **Return value:**
 
@@ -52,7 +52,7 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -127,7 +127,7 @@ Creates a Mask instance by inputting a pixelMap. This interface does not perform
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -244,7 +244,7 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 | center | common2D.Point | Yes |
 | radiusX | number | Yes |
 | radiusY | number | Yes |
-| gradients | Array&lt;[number, number]&gt; | Yes |
+| gradients | Array & lt;[number, number] & gt; | Yes |
 
 **Return value:**
 
@@ -256,7 +256,7 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## createRippleMask
 
@@ -293,7 +293,7 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -333,7 +333,7 @@ Creates and sets a Mask instance indicating whether to use blur caching. This Ma
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -417,7 +417,7 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 | center | common2D.Point | Yes |
 | width | number | Yes |
 | propagationRadius | number | Yes |
-| blurRadius | number | Yes |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | Yes |
 | turbulenceStrength | number | No |
 
 **Return value:**
@@ -430,7 +430,7 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

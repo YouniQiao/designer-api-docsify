@@ -2,7 +2,7 @@
 
 OIS (Optical Image Stabilization) interface.
 
-**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md)
+**Inheritance/Implementation:** OIS extends [OISQuery](arkts-camera-camera-oisquery-i.md#OISQuery)
 
 **Since:** 24
 
@@ -13,7 +13,7 @@ OIS (Optical Image Stabilization) interface.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## setOISMode
@@ -44,8 +44,8 @@ Sets the OIS mode.
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
 
 ## setOISModeCustom
 
@@ -76,5 +76,5 @@ Sets custom OIS bias values for each axis.
 
 | Error Code ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |

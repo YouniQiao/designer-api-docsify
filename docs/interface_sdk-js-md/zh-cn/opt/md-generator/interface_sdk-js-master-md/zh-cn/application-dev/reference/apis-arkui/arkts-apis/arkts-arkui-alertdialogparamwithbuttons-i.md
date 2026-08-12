@@ -1,8 +1,8 @@
 # AlertDialogParamWithButtons
 
-继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md)。
+继承自[AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)。
 
-**继承/实现关系：** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md)
+**继承/实现关系：** AlertDialogParamWithButtons extends [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogParam)
 
 **起始版本：** 7
 

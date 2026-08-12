@@ -1,8 +1,8 @@
 # BadgeParamWithNumber
 
-BadgeParamWithNumber继承自[BadgeParam](../arkts-components/arkts-arkui-badgeparam-i.md/arkts-arkui-badgeparam-i.md)，具有BadgeParam的全部属性。
+BadgeParamWithNumber继承自[BadgeParam](arkts-arkui-badge-badgeparam-i.md#BadgeParam)，具有BadgeParam的全部属性。
 
-**继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](../arkts-components/arkts-arkui-badgeparam-i.md/arkts-arkui-badgeparam-i.md)
+**继承/实现关系：** BadgeParamWithNumber extends [BadgeParam](arkts-arkui-badge-badgeparam-i.md#BadgeParam)
 
 **起始版本：** 23
 

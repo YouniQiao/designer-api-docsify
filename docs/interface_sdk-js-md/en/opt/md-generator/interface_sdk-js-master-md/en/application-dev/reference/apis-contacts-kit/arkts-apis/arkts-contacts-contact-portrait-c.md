@@ -4,17 +4,17 @@ Defines a contact's portrait.
 
 > **NOTE：**
 > 
-> Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)
-> format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addcontactviaui) or
-> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#savetoexistingcontactviaui) API.)
+> Since API version 22, contact portraits can be set in URI or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)
+> format. (Currently, contact avatars cannot be set through the [addContactViaUI](arkts-contacts-contact-addcontactviaui-f.md#addContactViaUI) or
+> [saveToExistingContactViaUI](arkts-contacts-contact-savetoexistingcontactviaui-f.md#saveToExistingContactViaUI) API.)
 > 
 > URI indicates the address of the contact portrait file that can be accessed, and
-> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md)
+> [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) indicates the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)
 > object generated based on the contact portrait resource.
 > 
 > Since API version 22, the profile picture resource can be read through URI. The resource can be opened only in
-> [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md/arkts-corefile-file-fs-open-f.md#open) mode and cannot be directly displayed in the **Image** component using a URI. You need to read
-> the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md/arkts-image-image-pixelmap-i.md) format.
+> [fs.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open) mode and cannot be directly displayed in the **Image** component using a URI. You need to read
+> the resource and display it in [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) format.
 
 **Since:** 7
 
@@ -25,7 +25,7 @@ Defines a contact's portrait.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## photo

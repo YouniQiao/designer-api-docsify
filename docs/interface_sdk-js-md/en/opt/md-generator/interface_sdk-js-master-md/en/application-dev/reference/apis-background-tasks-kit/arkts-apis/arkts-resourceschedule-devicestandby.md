@@ -11,7 +11,7 @@ Provides methods for managing device standby,including the methods for querying 
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from 'kits/@kit.BackgroundTasksKit';
+import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
 ## Summary

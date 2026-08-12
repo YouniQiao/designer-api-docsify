@@ -2,7 +2,7 @@
 
 Defines the Arc swiper attribute functions.
 
-**Inheritance/Implementation:** ArcSwiperAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** ArcSwiperAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 26.0.0
 
@@ -15,7 +15,7 @@ Defines the Arc swiper attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from 'kits/@kit.ArkUI';
+import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
 ```
 
 ## customContentTransition
@@ -70,7 +70,7 @@ Set the sensitivity of rotating crown.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sensitivity | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) \| undefined | Yes | The sensitivity of rotating crown, default value is { MEDIUM }, undefined means setting to default value. |
+| sensitivity | CrownSensitivity \| undefined | Yes | The sensitivity of rotating crown, default value is { MEDIUM }, undefined means setting to default value. |
 
 **Return value:**
 
@@ -190,7 +190,7 @@ Set effect when scrolling over edge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | [EdgeEffect](arkts-arkui-edgeeffect-e.md) \| undefined | Yes | scrolling effect over edge, default value is { EdgeEffect.Spring }, undefined means setting to default value. |
+| edgeEffect | EdgeEffect \| undefined | Yes | scrolling effect over edge, default value is { EdgeEffect.Spring }, undefined means setting to default value. |
 
 **Return value:**
 

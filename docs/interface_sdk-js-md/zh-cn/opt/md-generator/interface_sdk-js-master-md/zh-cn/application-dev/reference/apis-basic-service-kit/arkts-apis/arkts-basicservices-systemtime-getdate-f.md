@@ -12,7 +12,7 @@ function getDate(callback: AsyncCallback<Date>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
+**替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getDate)
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 
@@ -62,7 +62,7 @@ function getDate(): Promise<Date>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.systemDateTime:systemDateTime.getDate](arkts-basicservices-systemdatetime-getdate-f.md#getdate)
+**替代接口：** [getDate](arkts-basicservices-systemdatetime-getdate-f.md#getDate)
 
 <!--Device-systemTime-function getDate(): Promise<Date>--><!--Device-systemTime-function getDate(): Promise<Date>-End-->
 
@@ -72,7 +72,7 @@ function getDate(): Promise<Date>
 
 | 类型 |
 | --- |
-| Promise&lt;Date&gt; |
+| Promise & lt;Date & gt; |
 
 **错误码：**
 

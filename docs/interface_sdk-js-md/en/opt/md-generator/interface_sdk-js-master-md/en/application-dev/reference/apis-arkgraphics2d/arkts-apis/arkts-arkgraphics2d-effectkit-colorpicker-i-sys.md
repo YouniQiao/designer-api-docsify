@@ -11,7 +11,7 @@ A color picker class used to obtain the main color from image data. It is suitab
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## discriminatePictureLightDegree
@@ -96,7 +96,7 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -154,7 +154,7 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -208,7 +208,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
 
 ## Examples
 
@@ -262,7 +262,7 @@ Generates an immersive background color that creates an immersive visual effect,
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
 
 ## Examples
 
@@ -316,7 +316,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
 
 ## Examples
 
@@ -370,7 +370,7 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
 
 ## Examples
 
@@ -424,7 +424,7 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) |
+| [Color](../../apis-arkui/arkts-apis/arkts-arkui-enums-color-e.md) |
 
 ## Examples
 
@@ -482,7 +482,7 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -540,13 +540,13 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Map&lt;Color \| null, number \| null&gt; |
+| Map & lt;Color \ | null, number \| null & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

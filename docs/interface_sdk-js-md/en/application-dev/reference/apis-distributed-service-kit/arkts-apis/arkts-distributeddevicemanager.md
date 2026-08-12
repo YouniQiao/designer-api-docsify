@@ -19,7 +19,7 @@ The **distributedDeviceManager** module provides APIs for distributed device man
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from 'kits/@kit.DistributedServiceKit';
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 ```
 
 ## Summary

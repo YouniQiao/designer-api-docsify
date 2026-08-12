@@ -40,7 +40,7 @@ ChildrenMainSize有参构造函数。
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## splice
 
@@ -66,13 +66,13 @@ splice(start: number, deleteCount?: number, childrenSize?: Array<number>): void
 | --- | --- | --- |
 | start | number | 是 |
 | deleteCount | number | 否 |
-| childrenSize | Array&lt;number&gt; | 否 |
+| childrenSize | Array & lt;number & gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## update
 
@@ -103,7 +103,7 @@ update(index: number, childSize: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## childDefaultSize
 

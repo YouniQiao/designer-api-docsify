@@ -17,7 +17,7 @@ After the **CanvasRenderingContext2D** object is bound to the **Canvas** compone
 > * When the width or height of the **Canvas** component exceeds 8000 px, rendering via the CPU causes
 > significant performance degradation.
 
-**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **Since:** 8
 
@@ -68,7 +68,7 @@ Clears the content in a rectangle on the canvas.
 | x | number | Yes |
 | y | number | Yes |
 | w | number | Yes |
-| h | number | Yes |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
 
 ## clip
 
@@ -278,7 +278,7 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [CanvasPattern](../arkts-apis/arkts-arkui-canvaspattern-canvaspattern-i.md) |
+| [CanvasPattern](arkts-arkui-canvaspattern-i.md) |
 
 ## createRadialGradient
 
@@ -485,7 +485,7 @@ Fills a rectangle on the canvas.
 | x | number | Yes |
 | y | number | Yes |
 | w | number | Yes |
-| h | number | Yes |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
 
 ## fillText
 
@@ -624,7 +624,7 @@ Obtains the current transformation matrix being applied to the context.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix2D](../arkts-apis/arkts-arkui-canvaspattern-matrix2d-c.md) |
+| [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) |
 
 ## measureText
 
@@ -969,9 +969,9 @@ Resets the existing transformation matrix and creates a new transformation matri
 | a | number | Yes |
 | b | number | Yes |
 | c | number | Yes |
-| d | number | Yes |
-| e | number | Yes |
-| f | number | Yes |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [f](../../apis-arkts/arkts-apis/arkts-arkts-float-c.md) | number | Yes |
 
 ## setTransform
 
@@ -995,7 +995,7 @@ Resets the current transformation to the identity matrix, and then creates a new
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [transform](#transform) | [Matrix2D](../arkts-apis/arkts-arkui-canvaspattern-matrix2d-c.md) | No |
+| [transform](#transform) | [Matrix2D](../arkts-apis/arkts-arkui-matrix2d-c.md) | No |
 
 ## stroke
 
@@ -1064,7 +1064,7 @@ Draws an outlined rectangle on the canvas without filling its interior.
 | x | number | Yes |
 | y | number | Yes |
 | w | number | Yes |
-| h | number | Yes |
+| [h](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-ecccommonparamsspec-i.md) | number | Yes |
 
 ## strokeText
 
@@ -1154,9 +1154,9 @@ Defines a transformation matrix. To transform a graph, you only need to set para
 | a | number | Yes |
 | b | number | Yes |
 | c | number | Yes |
-| d | number | Yes |
-| e | number | Yes |
-| f | number | Yes |
+| [d](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | number | Yes |
+| [f](../../apis-arkts/arkts-apis/arkts-arkts-float-c.md) | number | Yes |
 
 ## translate
 
@@ -1220,7 +1220,7 @@ direction: CanvasDirection
 
 Sets the text direction. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned.
 
-For details, see {@link CanvasDirection}.
+For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md#CanvasDirection).
 
 Default value: **"inherit"**
 
@@ -1248,10 +1248,10 @@ Sets the fill color for rendering. This attribute is write-only. You can set its
 
 - When the type is string, this attribute indicates the color of the fill area. For details about  
  the color format, see the description for the string type in  
- [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md#ResourceColor).
 
 - When the type is number, this attribute indicates the color of the fill area. Fully transparent  
- colors are not supported. For details about the color format, see the description for the number  type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ colors are not supported. For details about the color format, see the description for the number  type in [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md#ResourceColor).
 
 - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is created  
  via the [createLinearGradient](#createlineargradient) API.
@@ -1263,7 +1263,7 @@ Sets the fill color for rendering. This attribute is write-only. You can set its
 
  Invalid values do not take effect. The effect before the setting is retained.
 
-**Type:** string \| number \| CanvasGradient \| CanvasPattern
+**Type:** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **Default:** #000000 (black)
 
@@ -1358,7 +1358,7 @@ Syntax: ctx.font = 'font-style font-weight font-size font-family'
 
 Starting from API version 20, this API is used to set registered custom fonts (the DevEco Studio Previewer does not support custom fonts). You can register a custom font in either of the following ways:
 
-Register a custom font by calling the asynchronous API this.uiContext.getFont().[registerFont](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md/arkts-arkui-arkui-uicontext-font-c.md#registerfont)of ArkUI. Immediate rendering after calling this API may result in the custom font not taking effect.
+Register a custom font by calling the asynchronous API this.uiContext.getFont().[registerFont](Font#registerFont)of ArkUI. Immediate rendering after calling this API may result in the custom font not taking effect.
 
 Directly call the fontCollection.[loadFontSync](../../../reference/apis-arkgraphics2d/js-apis-graphics-text.md#loadfontsync)API of the font engine to register the custom font. In this case, the **fontCollection**instance must be **text.FontCollection.getGlobalInstance()** because the component loads fonts from this instance by default. If you use another instance, the custom font may not take effect.
 
@@ -1480,7 +1480,7 @@ Indicates whether to apply image smoothing adjustments when drawing images. The 
 imageSmoothingQuality: ImageSmoothingQuality
 ```
 
-Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**.This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see{@link ImageSmoothingQuality}. Default value: **"low"**  
+Sets the image smoothing quality when **imageSmoothingEnabled** is set to **true**.This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see[ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md#ImageSmoothingQuality). Default value: **"low"**  
 > **NOTE：**
 > 
 > The resources used in this example are not located in the **src** > **main** > **resource** directory. Starting
@@ -1540,7 +1540,7 @@ Default value: **0** (Invalid values are treated as the default value.)
 > 
 > The LengthMetrics type is recommended for better performance.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| string
+**Type:** LengthMetrics \| string
 
 **Default:** 0vp
 
@@ -1610,7 +1610,7 @@ Invalid values **NaN** and **Infinity** are treated as the default value.
 lineJoin: CanvasLineJoin
 ```
 
-Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see {@link CanvasLineJoin}.&lt;br&gt;Available values are as follows:&lt;br&gt;- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width.&lt;br&gt;- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent.&lt;br&gt;- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in  
+Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#CanvasLineJoin).&lt;br&gt;Available values are as follows:&lt;br&gt;- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width.&lt;br&gt;- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent.&lt;br&gt;- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in  
 **miterLimit**.&lt;br&gt;Default value: **'miter'**
 
 **Type:** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
@@ -1723,7 +1723,7 @@ shadowColor: string
 Sets the shadow color. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned.
 
 For details about the color format, see the description for the string type in  
-[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md#ResourceColor).
 
 Default value: **'#00000000'** (transparent black)
 
@@ -1808,23 +1808,23 @@ Sets the stroke color. This attribute is write-only. You can set its value throu
 
 - When the type is string, this attribute indicates the stroke color. For details about  
  the color format, see the description for the string type in  
- [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md#ResourceColor).
 
 - When the type is number, this attribute indicates the stroke color. Fully transparent  
  colors are not supported. For details about the color format, see the description for  the number type in  
- [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md).
+ [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md#ResourceColor).
 
 - When the type is **CanvasGradient**, this attribute indicates a gradient object, which is  
  created via the [createLinearGradient](#createlineargradient) API.
 
 - When the type is **CanvasPattern**, this attribute indicates a pattern, which is created  
- via the [createPattern](CanvasRenderingContext2D#createPattern) API.
+ via the [createPattern](#createPattern) API.
 
  Default value: **'#000000'** (black)
 
  Invalid values do not take effect. The effect before the setting is retained.
 
-**Type:** string \| number \| CanvasGradient \| CanvasPattern
+**Type:** string \| number \| [CanvasGradient](arkts-arkui-canvasgradient-c.md) \| [CanvasPattern](arkts-arkui-canvaspattern-i.md)
 
 **Default:** #000000 (black)
 

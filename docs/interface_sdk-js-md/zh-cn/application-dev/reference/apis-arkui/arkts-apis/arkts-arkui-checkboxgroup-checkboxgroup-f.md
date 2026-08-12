@@ -26,11 +26,11 @@ Defines CheckboxGroup Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [CheckboxGroupOptions](arkts-arkui-checkboxgroup-checkboxgroupoptions-i.md) | 否 | the options of CheckboxGroup. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CheckboxGroupAttribute](../arkts-components/arkts-arkui-checkboxgroup-attribute.md) |  |
+| [CheckboxGroupAttribute](arkts-arkui-checkboxgroup-checkboxgroupattribute-i.md) |  |
 

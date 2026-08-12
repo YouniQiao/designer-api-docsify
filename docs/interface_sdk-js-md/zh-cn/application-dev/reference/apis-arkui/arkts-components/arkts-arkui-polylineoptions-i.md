@@ -28,7 +28,7 @@ height?: Length
 
 若给定值小于0，则按默认值处理。异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 7
 
@@ -56,7 +56,7 @@ width?: Length
 
 若给定值小于0，则按默认值处理。异常值undefined、null、NaN和Infinity按照默认值处理。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 7
 

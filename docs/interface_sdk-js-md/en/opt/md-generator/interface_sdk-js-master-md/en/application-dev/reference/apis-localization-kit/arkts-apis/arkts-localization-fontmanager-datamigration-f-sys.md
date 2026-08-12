@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from 'kits/@kit.LocalizationKit';
+import { fontManager } from '@kit.LocalizationKit';
 ```
 
 ## dataMigration
@@ -40,7 +40,7 @@ Data migration API used during device upgrades to start a migration task, provid
 
 | Error Code ID |
 | --- |
-| [31100110](../errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) |
-| [31100111](../errorcode-font-manager.md#31100111-migration-task-being-executed) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [31100110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100110-failed-to-call-the-api-due-to-system-errors) |
+| [31100111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100111-migration-task-being-executed) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

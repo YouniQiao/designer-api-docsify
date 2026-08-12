@@ -6,7 +6,7 @@ Display status of **nextLabel** in the stepper.
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper
+**Substitutes:** [Swiper](Swiper)
 
 <!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
 
@@ -29,7 +29,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper.SwiperAttribute#index
+**Substitutes:** [index](Swiper.SwiperAttribute#index)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,7 +54,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper.SwiperAttribute#indicatorInteractive
+**Substitutes:** [indicatorInteractive](Swiper.SwiperAttribute#indicatorInteractive)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -79,7 +79,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper
+**Substitutes:** [Swiper](Swiper)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -105,7 +105,7 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 
 **Deprecated since:** 22
 
-**Substitutes:** Swiper.SwiperAttribute#index
+**Substitutes:** [index](Swiper.SwiperAttribute#index)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -29,7 +29,7 @@ Alignment of the overlay relative to the component.
 
 Default value: **TopStart**
 
-**Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
+**Type:** Alignment
 
 **Since:** 7
 

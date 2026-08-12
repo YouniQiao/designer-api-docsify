@@ -19,7 +19,7 @@ function createAudioRenderer(options: AudioRendererOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | options | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AudioRenderer&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -80,7 +80,7 @@ function createAudioRenderer(options: AudioRendererOptions): Promise<AudioRender
 
 | 类型 |
 | --- |
-| Promise&lt;AudioRenderer&gt; |
+| Promise&lt;[AudioRenderer](arkts-audio-audio-audiorenderer-i.md)&gt; |
 
 ## 示例
 

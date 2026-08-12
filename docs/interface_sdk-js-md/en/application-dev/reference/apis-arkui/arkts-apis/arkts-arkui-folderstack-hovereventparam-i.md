@@ -78,7 +78,7 @@ windowStatusType: WindowStatusType
 
 Window status type
 
-**Type:** [WindowStatusType](../arkts-components/arkts-arkui-windowstatustype-t.md)
+**Type:** [WindowStatusType](arkts-arkui-windowstatustype-t.md)
 
 **Since:** 23
 

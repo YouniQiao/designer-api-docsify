@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## getResourceManager
@@ -28,7 +28,7 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
 ## Examples
 
@@ -81,7 +81,7 @@ Obtains the **ResourceManager** object of the specified application. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ResourceManager&gt; | Yes | Callback used to return the **ResourceManager** object. |
+| callback | AsyncCallback&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Yes | Callback used to return the **ResourceManager** object. |
 
 ## Examples
 
@@ -135,7 +135,7 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
+| Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Promise used to return the **ResourceManager** object. |
 
 ## Examples
 
@@ -189,7 +189,7 @@ Obtains the **ResourceManager** object of the specified application. This API us
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;ResourceManager&gt; | Promise used to return the **ResourceManager** object. |
+| Promise&lt;[ResourceManager](arkts-localization-resourcemanager-resourcemanager-i.md)&gt; | Promise used to return the **ResourceManager** object. |
 
 ## Examples
 

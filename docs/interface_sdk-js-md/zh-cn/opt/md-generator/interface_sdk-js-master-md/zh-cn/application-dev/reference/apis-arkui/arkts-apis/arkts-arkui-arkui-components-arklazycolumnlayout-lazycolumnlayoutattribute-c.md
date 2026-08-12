@@ -152,7 +152,7 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [space](#space) | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | 是 |
+| [space](#space) | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 

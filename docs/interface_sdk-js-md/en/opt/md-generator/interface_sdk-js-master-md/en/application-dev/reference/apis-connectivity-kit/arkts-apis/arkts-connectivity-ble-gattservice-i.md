@@ -11,7 +11,7 @@ Describes the Gatt service.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## characteristics
@@ -20,7 +20,7 @@ import { ble } from 'kits/@kit.ConnectivityKit';
 characteristics: Array<BLECharacteristic>
 ```
 
-The {@link BLECharacteristic} list belongs to this GattService instance
+The [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#BLECharacteristic) list belongs to this GattService instance
 
 **Type:** Array&lt;BLECharacteristic&gt;
 

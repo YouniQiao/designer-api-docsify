@@ -8,7 +8,7 @@ Base interface of profile.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.baseProfile/baseProfile.BaseProfile
+**Substitutes:** [BaseProfile](ohos.bluetooth.baseProfile/baseProfile.BaseProfile)
 
 <!--Device-bluetoothManager-interface BaseProfile--><!--Device-bluetoothManager-interface BaseProfile-End-->
 
@@ -17,7 +17,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectionDevices
@@ -34,7 +34,7 @@ Obtains the connected devices list of profile.On API 10 and above, the permissio
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.baseProfile/baseProfile#getConnectedDevices
+**Substitutes:** [getConnectedDevices](arkts-connectivity-baseprofile-baseprofile-i.md#getConnectedDevices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -54,9 +54,9 @@ Obtains the connected devices list of profile.On API 10 and above, the permissio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
@@ -87,7 +87,7 @@ Obtains the profile state of device.On API 10 and above, the permission required
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.baseProfile/baseProfile#getConnectionState
+**Substitutes:** [getConnectionState](ohos.bluetooth.baseProfile/baseProfile#getConnectionState)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -107,16 +107,16 @@ Obtains the profile state of device.On API 10 and above, the permission required
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Returns { |
+| ProfileConnectionState | Returns { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
 | 2900004 | Profile not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

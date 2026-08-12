@@ -30,8 +30,8 @@ onLoadAd(adParam: advertising.AdRequestParams, adOptions: advertising.AdOptions,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| adParam | advertising.AdRequestParams | 是 |
-| adOptions | advertising.AdOptions | 是 |
+| [adParam](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdRequestParams | 是 |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | 是 |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 |
 
 ## 示例
@@ -71,7 +71,7 @@ onLoadAdWithMultiSlots(adParams: advertising.AdRequestParams[], adOptions: adver
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | adParams | advertising.AdRequestParams[] | 是 |
-| adOptions | advertising.AdOptions | 是 |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | advertising.AdOptions | 是 |
 | respCallback | [RespCallback](arkts-ads-advertising-adsserviceextensionability-respcallback-i.md) | 是 |
 
 ## 示例

@@ -1,7 +1,7 @@
 # StartOptions
 
 StartOptions can be used as an input parameter for APIs used to launch a UIAbility (for example,  
-[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
+[startAbility()](arkts-ability-uiabilitycontext-c.md#startAbility)). It specifies the options for starting the target UIAbility, including but not limited to the window mode and the display where the target UIAbility is started.
 
 **Since:** 9
 
@@ -14,7 +14,7 @@ StartOptions can be used as an input parameter for APIs used to launch a UIAbili
 ## Modules to Import
 
 ```TypeScript
-import { StartOptions } from 'kits/@kit.AbilityKit';
+import { StartOptions } from '@kit.AbilityKit';
 ```
 
 ## completionHandler
@@ -212,7 +212,7 @@ Process mode of the UIAbility after it is started.
 **Constraints**:
 
 1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).3. **processMode** and **startupVisibility** must be set in pair.
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.ProcessMode
 
@@ -260,7 +260,7 @@ Background color of the window for the UIAbility of the current application upon
 - This property does not take effect for the UIAbility of another application.  
 - This property takes effect only on 2-in-1 devices and tablets.  
 - This property takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).
 
 **Type:** string
 
@@ -287,7 +287,7 @@ Icon displayed on the starting window for the UIAbility of the current applicati
 - This property does not take effect for the UIAbility of another application.  
 - This property takes effect only on 2-in-1 devices and tablets.  
 - This property takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).  
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).  
 - The maximum size of an image used as the startup icon is 600 MB.
 
 **Type:** image.PixelMap
@@ -313,7 +313,7 @@ Visibility status of the UIAbility after it is started. If the target UIAbility 
 **Constraints**:
 
 1. This property takes effect only on 2-in-1 devices and tablets.2. This property takes effect only in  
-[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability).3. **processMode** and **startupVisibility** must be set in pair.
+[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility).3. **processMode** and **startupVisibility** must be set in pair.
 
 **Type:** contextConstant.StartupVisibility
 
@@ -390,7 +390,7 @@ windowHeight?: int
 Window height, in px.
 
 The value range is [**minWindowHeight**, **maxWindowHeight**], with the unit being vp. You can call  
-[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
+[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
 
 **Constraints**:
 
@@ -442,7 +442,7 @@ windowMode?: int
 ```
 
 Window mode for the UIAbility upon startup. For details, see  
-[WindowMode](arkts-ability-abilityconstant-windowmode-e.md).
+[WindowMode](arkts-ability-abilityconstant-windowmode-e.md#WindowMode).
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -490,7 +490,7 @@ windowWidth?: int
 Window width, in px.
 
 The value range is [**minWindowWidth**, **maxWindowWidth**], with the unit being vp. You can call  
-[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
+[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert it to the corresponding px value.
 
 **Constraints**:
 

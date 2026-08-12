@@ -16,9 +16,9 @@
 rules: Array<SuppressWarningsType>
 ```
 
-支持告警消除的规则集合，用于指定需要抑制的告警类型。可通过数组传入多个规则同时抑制多种告警，数组至少包含一个元素。可选取值参见[SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)。建议仅在明确告警不影响应用功能或已做兼容性处理时使用，避免掩盖潜在问题。
+支持告警消除的规则集合，用于指定需要抑制的告警类型。可通过数组传入多个规则同时抑制多种告警，数组至少包含一个元素。可选取值参见[SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md#SuppressWarningsType)。建议仅在明确告警不影响应用功能或已做兼容性处理时使用，避免掩盖潜在问题。
 
-**类型：** Array&lt;SuppressWarningsType&gt;
+**类型：** Array&lt;[SuppressWarningsType](arkts-basicservices-annotation-suppresswarningstype-e.md)&gt;
 
 **起始版本：** 23
 

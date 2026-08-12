@@ -19,7 +19,7 @@ declare function createRandomAccessFileSync(file: string | File, mode?: number,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | string \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | string \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 | mode | number | 否 |
 | options | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | 否 |
 

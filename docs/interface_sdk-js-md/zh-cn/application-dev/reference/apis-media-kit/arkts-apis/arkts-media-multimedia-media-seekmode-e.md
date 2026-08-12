@@ -74,7 +74,7 @@ SEEK_CONTINUOUS = 3
 
 应用可以调用[isSeekContinuousSupported](@ohos.multimedia.media:media.AVPlayer.isSeekContinuousSupported)方法根据返回结果感知视频源是否支持该模式Seek。
 
-对于不支持该Seek模式的视频源调用该模式Seek时，会上报AVERR_SEEK_CONTINUOUS_UNSUPPORTED错误(参考[AVErrorCode](arkts-media-media-averrorcode-e.md))，同时画面更新的流畅性会降低。
+对于不支持该Seek模式的视频源调用该模式Seek时，会上报AVERR_SEEK_CONTINUOUS_UNSUPPORTED错误(参考[AVErrorCode](arkts-media-media-averrorcode-e.md#AVErrorCode))，同时画面更新的流畅性会降低。
 
 该Seek模式不会触发  
 [on('seekDone')](@ohos.multimedia.media:media.AVPlayer.on(type: 'seekDone', callback: Callback&lt;int&gt;))事件。

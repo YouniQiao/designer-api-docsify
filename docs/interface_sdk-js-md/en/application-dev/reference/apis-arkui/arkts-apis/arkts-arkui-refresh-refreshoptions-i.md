@@ -18,7 +18,7 @@ builder?: CustomBuilder
 
 Custom component to display during dragging.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ refreshing: boolean | Bindable<boolean>
 
 Whether the current component is being refreshed.This parameter supports \$ for two-way binding of variables.
 
-**Type:** boolean \| Bindable&lt;boolean&gt;
+**Type:** boolean \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt;
 
 **Since:** 23
 

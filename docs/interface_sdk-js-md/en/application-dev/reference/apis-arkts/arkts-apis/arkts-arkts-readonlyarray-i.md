@@ -64,7 +64,7 @@ Returns a new iterator object that contains key-value pairs for each index in th
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[int, T]&gt; | New iterator object. |
+| IterableIterator&lt;[int, T]&gt; | New iterator object. |
 
 ## every
 
@@ -384,7 +384,7 @@ Returns a new iterator object that contains the keys for each index in the array
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | New iterator object containing keys. |
+| IterableIterator&lt;int&gt; | New iterator object containing keys. |
 
 ## lastIndexOf
 
@@ -684,5 +684,5 @@ Returns a new iterator object that contains the values for each index in the arr
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;T&gt; | New iterator object containing values. |
+| IterableIterator&lt;T&gt; | New iterator object containing values. |
 

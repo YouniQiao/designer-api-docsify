@@ -3,7 +3,7 @@
 LightWeightSet可用于存储一系列值的集合，存储元素中value唯一。
  LightWeightSet依据泛型定义，采用轻量级结构，初始默认容量大小为8，每次扩容为原始容量的两倍。
  集合中value值的查找依赖于hash算法，通过一个数组存储hash值，然后根据hash值映射到对应的存储位置获取value。
- LightWeightSet和[HashSet](arkts-util-hashset.md)都是用于存储元素的集合类型，但LightWeightSet的占用内存更小。
+ LightWeightSet和[HashSet](arkts-arkts-util-hashset-hashset-c.md#HashSet)都是用于存储元素的集合类型，但LightWeightSet的占用内存更小。
  **推荐使用场景：** 当需要存储一组唯一元素、对数据进行去重、或需要基于hash快速查找元素时，推荐使用LightWeightSet。
  相比HashSet，LightWeightSet占用内存更小，适合内存敏感场景下的小规模数据存储与查找。
  文档中使用了泛型，涉及以下泛型标记符：

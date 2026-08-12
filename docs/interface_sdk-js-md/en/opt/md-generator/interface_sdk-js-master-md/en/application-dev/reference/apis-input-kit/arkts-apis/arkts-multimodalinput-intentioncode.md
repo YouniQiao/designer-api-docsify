@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { IntentionCode } from 'kits/@kit.InputKit';
+import { IntentionCode } from '@kit.InputKit';
 ```
 
 ## Summary

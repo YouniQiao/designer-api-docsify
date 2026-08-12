@@ -20,7 +20,7 @@ readonly app: BundleConfigInfo
 
 包的配置信息。
 
-**类型：** [BundleConfigInfo](arkts-ability-freeinstall-bundleconfiginfo-t-sys.md)
+**类型：** [BundleConfigInfo](arkts-ability-bundlepackinfo-bundleconfiginfo-i-sys.md)
 
 **起始版本：** 9
 
@@ -40,7 +40,7 @@ readonly modules: Array<ModuleConfigInfo>
 
 包的module配置信息。
 
-**类型：** Array&lt;ModuleConfigInfo&gt;
+**类型：** Array&lt;[ModuleConfigInfo](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)&gt;
 
 **起始版本：** 9
 

@@ -11,7 +11,7 @@ Provides interfaces to manage net firewall.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from 'kits/@kit.NetworkKit';
+import { netFirewall } from '@kit.NetworkKit';
 ```
 
 ## Summary

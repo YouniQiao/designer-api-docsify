@@ -24,13 +24,13 @@ export declare function Search(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SearchOptions](../arkts-components/arkts-arkui-searchoptions-i.md) | 否 |  |
+| options | [SearchOptions](arkts-arkui-search-searchoptions-i.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md) |  |
+| [SearchAttribute](arkts-arkui-search-searchattribute-i.md) |  |
 
 
 ## Search
@@ -59,11 +59,11 @@ export declare function Search(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SearchAttribute&gt; | 是 | Search属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SearchAttribute](arkts-arkui-search-searchattribute-i.md)&gt; | 是 | Search属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md) |  |
+| [SearchAttribute](arkts-arkui-search-searchattribute-i.md) |  |
 

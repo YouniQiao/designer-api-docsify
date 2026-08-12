@@ -18,7 +18,7 @@ distortionMode?: DistortionMode
 
 Sets the distortion animation Mode of the menu.
 
-**Type:** [DistortionMode](../arkts-components/arkts-arkui-distortionmode-e-sys.md)
+**Type:** [DistortionMode](arkts-arkui-common-distortionmode-e-sys.md)
 
 **Default:** DistortionMode.DISTORTION_AUTO
 
@@ -42,7 +42,7 @@ edgeLightMode?: EdgeLightMode
 
 Sets the edgeLight animation Mode of the menu.
 
-**Type:** [EdgeLightMode](../arkts-components/arkts-arkui-edgelightmode-e-sys.md)
+**Type:** [EdgeLightMode](arkts-arkui-common-edgelightmode-e-sys.md)
 
 **Default:** EdgeLightMode.EDGELIGHT_DISABLED
 

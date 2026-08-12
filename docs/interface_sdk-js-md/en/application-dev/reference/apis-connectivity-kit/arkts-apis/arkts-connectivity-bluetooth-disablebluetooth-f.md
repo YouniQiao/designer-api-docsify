@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## disableBluetooth
@@ -20,7 +20,7 @@ Disables Bluetooth on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.disableBluetooth
+**Substitutes:** [disableBluetooth](ohos.bluetoothManager/bluetoothManager.disableBluetooth)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## isSupported
@@ -12,7 +12,7 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function isSupported(type: RunningLockType): boolean
 ```
 
-Checks whether a specified type of {@link RunningLock} is supported.
+Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported.
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ Checks whether a specified type of {@link RunningLock} is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
 ## Examples
 

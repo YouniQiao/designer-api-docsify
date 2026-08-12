@@ -20,7 +20,7 @@ new (elements: Iterable<number>): Uint8ClampedArray
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es2015-iterable-uint8clampedarray-i.md) |  |
 
 ## from
 
@@ -46,5 +46,5 @@ Creates an array from an array-like or iterable object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es2015-iterable-uint8clampedarray-i.md) |  |
 

@@ -11,7 +11,7 @@ This module provides the capabilities of managing the system pasteboard to suppo
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from 'kits/@kit.BasicServicesKit';
+import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

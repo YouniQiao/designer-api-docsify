@@ -13,7 +13,7 @@ Provides APIs for mobile applications to access different SEs in mobile devices,
 ## Modules to Import
 
 ```TypeScript
-import { omapi } from 'kits/@kit.ConnectivityKit';
+import { omapi } from '@kit.ConnectivityKit';
 ```
 
 ## Summary

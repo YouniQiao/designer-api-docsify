@@ -16,7 +16,7 @@ appRotation: AppRotation
 
 当前应用方向的旋转角度。
 
-**类型：** [AppRotation](../arkts-apis/arkts-arkui-enums-approtation-e.md)
+**类型：** AppRotation
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ foldStatus: FoldStatus
 
 当前设备的折叠状态。
 
-**类型：** [FoldStatus](../arkts-apis/arkts-arkui-foldstatus-e.md)
+**类型：** FoldStatus
 
 **起始版本：** 12
 

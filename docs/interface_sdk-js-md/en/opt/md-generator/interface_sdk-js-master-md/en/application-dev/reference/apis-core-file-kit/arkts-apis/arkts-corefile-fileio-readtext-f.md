@@ -19,7 +19,7 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:readText](arkts-corefile-fileio-readtext-f.md#readtext)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>--><!--Device-unnamed-declare function readText(  filePath: string,  options?: {    position?: number;    length?: number;    encoding?: string;  }): Promise<string>-End-->
 
@@ -36,7 +36,7 @@ Reads the text content of a file. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 
 ## readText
@@ -59,7 +59,7 @@ Reads the text content of a file. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:readText](arkts-corefile-fileio-readtext-f.md#readtext)
+**Substitutes:** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
 
 <!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function readText(  filePath: string,  options: {    position?: number;    length?: number;    encoding?: string;  },  callback: AsyncCallback<string>): void-End-->
 

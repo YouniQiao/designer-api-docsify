@@ -15,7 +15,7 @@ Represents the cloud data.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## hasMore
@@ -66,7 +66,7 @@ values: Array<Record<string, CloudType>>
 
 Array of data to be queried, which consists of the data value and ExtensionValue.
 
-**Type:** Array&lt;Record&lt;string, CloudType&gt;&gt;
+**Type:** Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 
 **Since:** 11
 

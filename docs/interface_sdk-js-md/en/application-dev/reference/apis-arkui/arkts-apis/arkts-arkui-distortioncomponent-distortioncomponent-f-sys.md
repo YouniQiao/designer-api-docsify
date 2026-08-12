@@ -28,13 +28,13 @@ Defines a DistortionComponent that provides spatial distortion visual effects.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [DistortionComponentOptions](arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md) | No | DistortionComponent Options. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | Subcomponents of DistortionComponent. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | Subcomponents of DistortionComponent. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DistortionComponentAttribute](../arkts-components/arkts-arkui-distortioncomponent-attribute.md) |  |
+| [DistortionComponentAttribute](arkts-arkui-distortioncomponent-distortioncomponentattribute-i-sys.md) |  |
 
 
 ## DistortionComponent
@@ -66,12 +66,12 @@ Defines a DistortionComponent that provides spatial distortion visual effects.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DistortionComponentAttribute&gt; | Yes | DistortionComponent attribute instance. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container. |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DistortionComponentAttribute](arkts-arkui-distortioncomponent-distortioncomponentattribute-i-sys.md)&gt; | Yes | DistortionComponent attribute instance. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [DistortionComponentAttribute](../arkts-components/arkts-arkui-distortioncomponent-attribute.md) |  |
+| [DistortionComponentAttribute](arkts-arkui-distortioncomponent-distortioncomponentattribute-i-sys.md) |  |
 

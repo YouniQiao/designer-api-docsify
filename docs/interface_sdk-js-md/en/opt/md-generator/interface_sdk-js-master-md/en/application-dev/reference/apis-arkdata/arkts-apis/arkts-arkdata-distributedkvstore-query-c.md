@@ -11,7 +11,7 @@ Provides methods to create a **Query** object, which defines different data quer
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from 'kits/@kit.ArkData';
+import { distributedKVStore } from '@kit.ArkData';
 ```
 
 ## and
@@ -125,9 +125,9 @@ Creates a **Query** object with the device ID as the key prefix.
 > **NOTE：**
 > 
 > **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)
+> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
 > .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md).
+> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
 **Since:** 9
 
@@ -153,7 +153,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -224,7 +224,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -255,7 +255,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## getSqlLike
 
@@ -306,7 +306,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -337,7 +337,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## greaterThanOrEqualTo
 
@@ -349,7 +349,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -380,7 +380,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## inNumber
 
@@ -392,7 +392,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -423,7 +423,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## inString
 
@@ -435,7 +435,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -466,7 +466,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -496,7 +496,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -526,7 +526,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -556,7 +556,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -586,7 +586,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -616,7 +616,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -647,7 +647,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## lessThanOrEqualTo
 
@@ -659,7 +659,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -690,7 +690,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## like
 
@@ -702,7 +702,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -733,7 +733,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -786,7 +786,7 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -819,7 +819,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -850,7 +850,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notInNumber
 
@@ -862,7 +862,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -893,7 +893,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## notInString
 
@@ -905,7 +905,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -936,7 +936,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1008,7 +1008,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1038,7 +1038,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1069,7 +1069,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1099,7 +1099,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1152,7 +1152,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1247,7 +1247,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -1278,7 +1278,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 > **NOTE：**
 > 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md).
+> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
 > 
 > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
 > store using the **getKVStore()** method in
@@ -1309,7 +1309,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

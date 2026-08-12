@@ -1,8 +1,8 @@
 # GyroscopeResponse
 
-Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md).
+Describes the gyroscope sensor data. It extends from [Response](arkts-sensorservice-sensor-response-i.md#Response).
 
-**Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**Inheritance/Implementation:** GyroscopeResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **Since:** 8
 
@@ -15,7 +15,7 @@ Describes the gyroscope sensor data. It extends from [Response](arkts-sensorserv
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## x

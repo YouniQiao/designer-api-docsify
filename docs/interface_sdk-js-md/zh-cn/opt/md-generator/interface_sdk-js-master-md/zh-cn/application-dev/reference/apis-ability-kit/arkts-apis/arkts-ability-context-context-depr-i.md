@@ -2,7 +2,7 @@
 
 Context模块提供了Ability或Application的上下文的基础能力，包括允许访问特定于应用程序的资源、请求和验证权限等。
 
-**继承/实现关系：** Context extends [BaseContext](arkts-ability-basecontext-c.md)
+**继承/实现关系：** Context extends [BaseContext](BaseContext)
 
 **起始版本：** 6
 
@@ -96,7 +96,7 @@ getAppType(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getAppVersionInfo
 
@@ -162,7 +162,7 @@ getApplicationContext(): Context
 
 | 类型 |
 | --- |
-| [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) |
+| [Context](arkts-ability-context-context-depr-i.md) |
 
 ## getApplicationInfo
 
@@ -250,7 +250,7 @@ getBundleName(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getCacheDir
 
@@ -294,7 +294,7 @@ getCacheDir(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getCallingBundle
 
@@ -338,7 +338,7 @@ getCallingBundle(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getDisplayOrientation
 
@@ -382,7 +382,7 @@ getDisplayOrientation(): Promise<bundle.DisplayOrientation>
 
 | 类型 |
 | --- |
-| Promise&lt;bundle.DisplayOrientation&gt; |
+| Promise & lt;bundle.DisplayOrientation & gt; |
 
 ## getElementName
 
@@ -474,7 +474,7 @@ getExternalCacheDir(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getFilesDir
 
@@ -518,7 +518,7 @@ getFilesDir(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getHapModuleInfo
 
@@ -584,7 +584,7 @@ getOrCreateDistributedDir(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getOrCreateDistributedDir
 
@@ -628,7 +628,7 @@ getOrCreateLocalDir(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getOrCreateLocalDir
 
@@ -738,7 +738,7 @@ getProcessName(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## isUpdatingConfigurations
 
@@ -782,7 +782,7 @@ isUpdatingConfigurations(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## printDrawnCompleted
 
@@ -826,7 +826,7 @@ printDrawnCompleted(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## requestPermissionsFromUser
 
@@ -852,9 +852,9 @@ requestPermissionsFromUser(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| permissions | Array&lt;string&gt; | 是 |
+| permissions | Array & lt;string & gt; | 是 |
 | requestCode | number | 是 |
-| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | 是 |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | 是 |
 
 ## requestPermissionsFromUser
 
@@ -876,14 +876,14 @@ requestPermissionsFromUser(permissions: Array<string>, requestCode: number): Pro
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| permissions | Array&lt;string&gt; | 是 |
+| permissions | Array & lt;string & gt; | 是 |
 | requestCode | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;PermissionRequestResult&gt; |
+| Promise&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; |
 
 ## setDisplayOrientation
 
@@ -934,7 +934,7 @@ setDisplayOrientation(orientation: bundle.DisplayOrientation): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setShowOnLockScreen
 
@@ -948,7 +948,7 @@ setShowOnLockScreen(show: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.window:window.WindowStage.setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
+**替代接口：** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -975,7 +975,7 @@ setShowOnLockScreen(show: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.window:window.WindowStage.setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
+**替代接口：** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -993,7 +993,7 @@ setShowOnLockScreen(show: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setWakeUpScreen
 
@@ -1007,7 +1007,7 @@ setWakeUpScreen(wakeUp: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.window:window.setWakeUpScreen
+**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1034,7 +1034,7 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 
 **废弃版本：** 12
 
-**替代接口：** @ohos.window:window.setWakeUpScreen
+**替代接口：** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1052,7 +1052,7 @@ setWakeUpScreen(wakeUp: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## verifyPermission
 
@@ -1081,7 +1081,7 @@ verifyPermission(permission: string, options?: PermissionOptions): Promise<numbe
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## verifyPermission
 

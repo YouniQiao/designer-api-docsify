@@ -18,7 +18,7 @@ localStorage?: LocalStorage
 
 The LocalStorage of the Builder.
 
-**Type:** [LocalStorage](arkts-arkui-localstorage-c.md)
+**Type:** LocalStorage
 
 **Since:** 26.0.0
 

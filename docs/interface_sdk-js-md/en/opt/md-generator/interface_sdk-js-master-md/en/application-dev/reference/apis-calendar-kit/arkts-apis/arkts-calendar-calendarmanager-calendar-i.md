@@ -1,7 +1,7 @@
 # Calendar
 
 In the following API examples, you need to use   
-[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar) to obtain 
+[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getCalendar) to obtain 
 
 a **Calendar** object before calling related APIs.
 
@@ -14,7 +14,7 @@ a **Calendar** object before calling related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## addEvent
@@ -47,14 +47,14 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -119,8 +119,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -176,20 +176,20 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes |
+| events | [Event[]](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -252,15 +252,15 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes |
+| events | [Event[]](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -327,7 +327,7 @@ Deletes an event with the specified ID. This API uses a promise to return the re
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -458,7 +458,7 @@ Deletes a batch of events with the specified IDs. This API uses a promise to ret
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -704,14 +704,14 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Event[]&gt; |
+| Promise & lt;Event[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -784,8 +784,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -871,8 +871,8 @@ For versions earlier than API version 20, the default fields to be obtained incl
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -931,14 +931,14 @@ This API can be used to view and edit calendar events in the system calendar.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900005](../errorcode-calendarManager.md#23900005-event-not-editable) |
-| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) |
+| [23900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900005-event-not-editable) |
+| [23900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) |
 
 ## Examples
 
@@ -1024,14 +1024,14 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Event[]&gt; |
+| Promise & lt;Event[] & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [23900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1097,13 +1097,13 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) |
+| [23900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) |
 
 ## Examples
 
@@ -1160,7 +1160,7 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) |
+| [23900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) |
 
 ## Examples
 
@@ -1218,7 +1218,7 @@ Updates an event, with the ID of the updated event specified in Event. This API 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

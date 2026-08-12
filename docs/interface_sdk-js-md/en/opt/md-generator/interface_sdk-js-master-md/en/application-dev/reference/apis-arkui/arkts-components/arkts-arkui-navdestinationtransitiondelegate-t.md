@@ -28,4 +28,4 @@ Defines the delegate function for custom transition animations of the **NavDesti
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;NavDestinationTransition&gt; \| undefined |
+| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined |

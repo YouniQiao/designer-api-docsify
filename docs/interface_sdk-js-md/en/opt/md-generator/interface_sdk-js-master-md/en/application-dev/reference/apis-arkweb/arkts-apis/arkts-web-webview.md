@@ -11,7 +11,7 @@ This module provides the capability to manage web modules.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## Summary

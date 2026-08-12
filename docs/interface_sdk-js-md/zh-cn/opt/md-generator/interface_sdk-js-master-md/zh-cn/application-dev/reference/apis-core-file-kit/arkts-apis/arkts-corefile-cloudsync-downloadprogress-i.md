@@ -64,7 +64,7 @@ state: State
 
 枚举值，云文件下载状态。
 
-**类型：** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 11
 

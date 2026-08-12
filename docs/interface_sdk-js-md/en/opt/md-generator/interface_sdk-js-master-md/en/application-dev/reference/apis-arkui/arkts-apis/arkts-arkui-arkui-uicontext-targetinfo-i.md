@@ -11,7 +11,7 @@ Specifies the target node for component binding.
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## componentId
@@ -41,7 +41,7 @@ id: string | number
 ```
 
 Target node for binding popups or menus.&lt;br&gt;**NOTE：**&lt;br&gt;1. When **id** is a number, it corresponds to the component's **UniqueID**,whose uniqueness is guaranteed by the system.&lt;br&gt;2. When **id** is a string,it corresponds to the component specified by the universal attribute
-[id](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#id). You must ensure the uniqueness of this ID,although there may be multiple instances.
+[id](CommonMethod#id). You must ensure the uniqueness of this ID,although there may be multiple instances.
 
 **Type:** string \| number
 

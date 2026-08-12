@@ -24,7 +24,7 @@ function createHdrDarkenBlender(hdrBrightnessRatio: number,
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | hdrBrightnessRatio | number | 是 |
-| grayscaleFactor | [number, number, number] | 否 |
+| [grayscaleFactor](arkts-arkgraphics2d-uieffect-hdrdarkenblender-i-sys.md) | [number, number, number] | 否 |
 
 **返回值：**
 

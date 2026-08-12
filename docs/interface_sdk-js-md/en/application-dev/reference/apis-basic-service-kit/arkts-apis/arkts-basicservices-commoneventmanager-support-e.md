@@ -296,7 +296,7 @@ Indicates the action of a common event that the user unlocks the device.
 
 **Deprecated since:** 10
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_SCREEN_UNLOCKED](arkts-basicservices-commoneventmanager-support-e.md#common_event_screen_unlocked)
+**Substitutes:** [COMMON_EVENT_SCREEN_UNLOCKED](#COMMON_EVENT_SCREEN_UNLOCKED)
 
 <!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'--><!--Device-Support-COMMON_EVENT_USER_PRESENT = 'usual.event.USER_PRESENT'-End-->
 
@@ -1367,7 +1367,7 @@ To subscribe to this common event, your application must have the **ohos.permiss
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_handsfree_ag_connect_state_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_HANDSFREE_AG_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.handsfree.ag.CONNECT_STATE_UPDATE'-End-->
 
@@ -1432,7 +1432,7 @@ To subscribe to this common event, your application must have the **ohos.permiss
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_connect_state_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.CONNECT_STATE_UPDATE'-End-->
 
@@ -1497,7 +1497,7 @@ To subscribe to this common event, your application must have the **ohos.permiss
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_avrcp_connect_state_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_AVRCP_CONNECT_STATE_UPDATE =        'usual.event.bluetooth.a2dpsource.AVRCP_CONNECT_STATE_UPDATE'-End-->
 
@@ -1520,7 +1520,7 @@ To subscribe to this common event, your application must have the **ohos.permiss
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_a2dpsource_codec_value_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE](#COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =        'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_A2DPSOURCE_CODEC_VALUE_UPDATE =        'usual.event.bluetooth.a2dpsource.CODEC_VALUE_UPDATE'-End-->
 
@@ -1584,7 +1584,7 @@ COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_acl_state_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =        'usual.event.bluetooth.remotedevice.ACL_CONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_CONNECTED =        'usual.event.bluetooth.remotedevice.ACL_CONNECTED'-End-->
 
@@ -1607,7 +1607,7 @@ To subscribe to this common event, your application must have the **ohos.permiss
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_acl_state_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =        'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_ACL_DISCONNECTED =        'usual.event.bluetooth.remotedevice.ACL_DISCONNECTED'-End-->
 
@@ -1651,7 +1651,7 @@ To subscribe to this common event, your application must have the **ohos.permiss
 
 **Deprecated since:** 20
 
-**Substitutes:** [commonEventManager.Support#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE](arkts-basicservices-commoneventmanager-support-e.md#common_event_bluetooth_remotedevice_pair_state_change)
+**Substitutes:** [COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE](#COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE_CHANGE)
 
 <!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =        'usual.event.bluetooth.remotedevice.PAIR_STATE'--><!--Device-Support-COMMON_EVENT_BLUETOOTH_REMOTEDEVICE_PAIR_STATE =        'usual.event.bluetooth.remotedevice.PAIR_STATE'-End-->
 

@@ -7,7 +7,7 @@ The **DataShareResultSet** module provides APIs for accessing the result set obt
 ## Modules to Import
 
 ```TypeScript
-import { DataType } from 'kits/@kit.ArkData';
+import { DataType } from '@kit.ArkData';
 ```
 
 ## Summary

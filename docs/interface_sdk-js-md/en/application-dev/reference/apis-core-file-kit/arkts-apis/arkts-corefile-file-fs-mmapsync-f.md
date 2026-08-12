@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## mmapSync
@@ -28,7 +28,7 @@ Creates a file mapping object based on a file descriptor or file object by using
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number \| File | Yes | File object or open file descriptor fd that has been opened. |
+| file | number \| [File](arkts-corefile-file-fs-file-i.md) | Yes | File object or open file descriptor fd that has been opened. |
 | mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options: &lt;br&gt;MappingMode.READ_ONLY(0): read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. &lt;br&gt;MappingMode.READ_WRITE(1): read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). &lt;br&gt;MappingMode.PRIVATE(2): private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the original file. |
 | offset | number | Yes | Start position of the file mapping area, in bytes. |
 | size | number | Yes | Size of the file mapping area, in bytes. |
@@ -37,7 +37,7 @@ Creates a file mapping object based on a file descriptor or file object by using
 
 | Type | Description |
 | --- | --- |
-| [FileMapping](arkts-corefile-fileio-filemapping-i.md) | FileMapping object. |
+| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) | FileMapping object. |
 
 **Error codes:**
 

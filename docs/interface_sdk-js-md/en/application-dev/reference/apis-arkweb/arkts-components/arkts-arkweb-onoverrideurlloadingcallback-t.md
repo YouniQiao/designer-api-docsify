@@ -20,7 +20,7 @@ The callback of onOverrideUrlLoading.Should not call WebviewController.loadUrl w
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webResourceRequest | [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md) | Yes | callback information of onOverrideUrlLoading. |
+| webResourceRequest | [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md) | Yes | callback information of onOverrideUrlLoading. |
 
 **Return value:**
 

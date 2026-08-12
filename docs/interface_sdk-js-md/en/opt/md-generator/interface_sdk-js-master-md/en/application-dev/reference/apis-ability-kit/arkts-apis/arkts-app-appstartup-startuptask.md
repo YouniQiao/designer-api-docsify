@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupTask } from 'kits/@kit.AbilityKit';
+import { StartupTask } from '@kit.AbilityKit';
 ```
 
 ## Summary

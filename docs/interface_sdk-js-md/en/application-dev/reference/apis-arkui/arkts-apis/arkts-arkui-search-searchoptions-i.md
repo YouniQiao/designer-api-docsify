@@ -22,7 +22,7 @@ Controller of the &lt;Search&gt; component.
 
 Anonymous Object Rectification.
 
-**Type:** [SearchController](../arkts-components/arkts-arkui-searchcontroller-c.md)
+**Type:** [SearchController](arkts-arkui-search-searchcontroller-c.md)
 
 **Since:** 23
 
@@ -88,7 +88,7 @@ value?: string | Bindable<string>
 
 Text input in the search text box.
 
-**Type:** string \| Bindable&lt;string&gt;
+**Type:** string \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt;
 
 **Since:** 23
 

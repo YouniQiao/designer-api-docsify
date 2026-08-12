@@ -92,7 +92,7 @@ Iterator over object properties if jsonType == JsonType.JsonObject.on type error
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;[string, JsonElement]&gt; | An iterator over the object properties. |
+| IterableIterator&lt;[string, JsonElement]&gt; | An iterator over the object properties. |
 
 ## asArray
 
@@ -350,7 +350,7 @@ Creates a new JSON element from a key-value structure.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elements | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The key-value structure to create from. |
+| elements | Record&lt;string, [JsonElement](arkts-arkts-jsonx-jsonelement-c.md)&gt; | Yes | The key-value structure to create from. |
 
 ## createArray
 

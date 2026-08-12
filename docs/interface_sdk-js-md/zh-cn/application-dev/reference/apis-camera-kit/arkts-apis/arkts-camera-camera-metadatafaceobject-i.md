@@ -1,9 +1,9 @@
 # MetadataFaceObject
 
-相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.  
+相机检测到的人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md#MetadataObject)。[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)相机信息中的数据来源，通过metadataOutput.  
 [on('metadataObjectsAvailable')](camera.MetadataOutput.on(type: 'metadataObjectsAvailable', callback: AsyncCallback&lt;Array<MetadataObject>&gt;&lt;MetadataObject&gt;>))接口获取。
 
-**继承/实现关系：** MetadataFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md)
+**继承/实现关系：** MetadataFaceObject extends [MetadataObject](arkts-camera-camera-metadataobject-i.md#MetadataObject)
 
 **起始版本：** 26.0.0
 
@@ -61,7 +61,7 @@ readonly leftEyeBoundingBox: Rect
 
 左眼区域框。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 26.0.0
 
@@ -101,7 +101,7 @@ readonly rightEyeBoundingBox: Rect
 
 右眼区域框。
 
-**类型：** [Rect](../../apis-test-kit/arkts-apis/arkts-test-uitest-rect-i.md)
+**类型：** Rect
 
 **起始版本：** 26.0.0
 

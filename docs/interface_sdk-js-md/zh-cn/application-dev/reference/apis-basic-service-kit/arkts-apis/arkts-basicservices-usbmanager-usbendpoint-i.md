@@ -1,6 +1,6 @@
 # USBEndpoint
 
-通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)获取。
+通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface)获取。
 
 > **说明：**
 > 
@@ -60,7 +60,7 @@ direction: USBRequestDirection
 
 端点的方向。
 
-**类型：** [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
+**类型：** USBRequestDirection
 
 **起始版本：** 9
 
@@ -166,7 +166,7 @@ number: number
 type: int
 ```
 
-端点类型。取值见[UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
+端点类型。取值见[UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md#UsbEndpointTransferType)
 
 **类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 

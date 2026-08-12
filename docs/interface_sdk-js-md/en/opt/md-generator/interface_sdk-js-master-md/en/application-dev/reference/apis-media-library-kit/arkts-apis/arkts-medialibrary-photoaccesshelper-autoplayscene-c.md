@@ -11,7 +11,7 @@ Defines the playback mode of the moving photo in different scenarios.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## playMode
@@ -22,7 +22,7 @@ playMode: PlayMode
 
 Whether to support automatic playback of the moving photo.
 
-**Type:** [PlayMode](arkts-medialibrary-photoaccesshelper-playmode-e.md)
+**Type:** PlayMode
 
 **Since:** 23
 

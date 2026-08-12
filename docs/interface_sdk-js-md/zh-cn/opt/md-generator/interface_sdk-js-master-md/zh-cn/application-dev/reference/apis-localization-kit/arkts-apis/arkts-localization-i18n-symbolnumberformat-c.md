@@ -4,7 +4,7 @@
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
-**继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md)
+**继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md#NumberFormat)
 
 **起始版本：** 26.0.0
 
@@ -194,7 +194,7 @@ public parse(text: string, lenientMode: boolean): number
 
 | 错误码ID |
 | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
 
 ## resolvedOptions
 

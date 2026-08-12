@@ -8,7 +8,7 @@ The enum of BR scan mode.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode
+**Substitutes:** [ScanMode](ohos.bluetooth.connection/connection.ScanMode)
 
 <!--Device-bluetoothManager-enum ScanMode--><!--Device-bluetoothManager-enum ScanMode-End-->
 
@@ -28,7 +28,7 @@ Indicates the scan mode is none
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_NONE
+**Substitutes:** [SCAN_MODE_NONE](ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_NONE)
 
 <!--Device-ScanMode-SCAN_MODE_NONE = 0--><!--Device-ScanMode-SCAN_MODE_NONE = 0-End-->
 
@@ -48,7 +48,7 @@ Indicates the scan mode is connectable
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_CONNECTABLE
+**Substitutes:** [SCAN_MODE_CONNECTABLE](ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_CONNECTABLE)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE = 1-End-->
 
@@ -68,7 +68,7 @@ Indicates the scan mode is general discoverable
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_GENERAL_DISCOVERABLE
+**Substitutes:** [SCAN_MODE_GENERAL_DISCOVERABLE](ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_GENERAL_DISCOVERABLE)
 
 <!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2--><!--Device-ScanMode-SCAN_MODE_GENERAL_DISCOVERABLE = 2-End-->
 
@@ -88,7 +88,7 @@ Indicates the scan mode is limited discoverable
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_LIMITED_DISCOVERABLE
+**Substitutes:** [SCAN_MODE_LIMITED_DISCOVERABLE](ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_LIMITED_DISCOVERABLE)
 
 <!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3--><!--Device-ScanMode-SCAN_MODE_LIMITED_DISCOVERABLE = 3-End-->
 
@@ -108,7 +108,7 @@ Indicates the scan mode is connectable and general discoverable
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE
+**Substitutes:** [SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE](ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE = 4-End-->
 
@@ -128,7 +128,7 @@ Indicates the scan mode is connectable and limited discoverable
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE
+**Substitutes:** [SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE](ohos.bluetooth.connection/connection.ScanMode#SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE)
 
 <!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5--><!--Device-ScanMode-SCAN_MODE_CONNECTABLE_LIMITED_DISCOVERABLE = 5-End-->
 

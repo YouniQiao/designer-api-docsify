@@ -64,18 +64,18 @@ loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| adParam | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | 是 |
-| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 |
+| [adParam](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md) | 是 |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | [AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 |
 | listener | [AdLoadListener](arkts-ads-advertising-adloadlistener-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
-| [21800003](../errorcode-ads.md#21800003-广告请求加载失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
+| [21800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-广告请求加载失败) |
 
 ## 示例
 
@@ -129,17 +129,17 @@ loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | adParams | [AdRequestParams](arkts-ads-advertising-adrequestparams-i.md)[] | 是 |
-| adOptions | [AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 |
+| [adOptions](arkts-ads-advertising-autoadcomponent-autoadcomponent-s.md) | [AdOptions](arkts-ads-advertising-adoptions-i.md) | 是 |
 | listener | [MultiSlotsAdLoadListener](arkts-ads-advertising-multislotsadloadlistener-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
-| [21800003](../errorcode-ads.md#21800003-广告请求加载失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
+| [21800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-广告请求加载失败) |
 
 ## 示例
 

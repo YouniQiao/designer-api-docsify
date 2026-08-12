@@ -2,7 +2,7 @@
 
 Defines a UIScrollableCommonEvent which is used to set event to target component.
 
-**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md)
+**Inheritance/Implementation:** UIScrollableCommonEvent extends [UICommonEvent](arkts-arkui-uicommonevent-i.md#UICommonEvent)
 
 **Since:** 19
 
@@ -36,7 +36,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. |
 
 ## setOnReachStart
 
@@ -62,7 +62,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. |
 
 ## setOnScrollFrameBegin
 
@@ -88,7 +88,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling begin each frame. |
+| callback | OnScrollFrameBeginCallback \| undefined | Yes | callback function, triggered when the scrolling begin each frame. |
 
 ## setOnScrollStart
 
@@ -114,7 +114,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling started. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling started. |
 
 ## setOnScrollStop
 
@@ -140,5 +140,5 @@ Set or reset the callback which is triggered when the scrolling stoped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling stoped. |
+| callback | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; \| undefined | Yes | callback function, triggered when the scrolling stoped. |
 

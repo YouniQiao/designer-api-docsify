@@ -1,6 +1,6 @@
 # ContextMenuSourceType
 
-Defines the context menu source type, related to {@link onContextMenuShow} method.
+Defines the context menu source type, related to [onContextMenuShow](arkts-arkweb-web-webattribute-i.md#onContextMenuShow) method.
 
 **Since:** 23
 

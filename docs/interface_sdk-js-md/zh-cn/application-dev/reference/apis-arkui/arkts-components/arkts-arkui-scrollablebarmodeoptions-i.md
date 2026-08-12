@@ -24,7 +24,7 @@ Scrollable模式下的TabBar的左右边距（不支持百分比设置）。
 
 取值范围：[0, +∞)。设置为小于0的值时，按默认值显示。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 10
 
@@ -48,7 +48,7 @@ Scrollable模式下不滚动时的页签排布方式，仅水平模式下有效�
 
 默认值：LayoutStyle.ALWAYS_CENTER
 
-**类型：** [LayoutStyle](../arkts-apis/arkts-arkui-tabs-layoutstyle-e.md)
+**类型：** [LayoutStyle](arkts-arkui-layoutstyle-e.md)
 
 **起始版本：** 10
 

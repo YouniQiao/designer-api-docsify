@@ -21,7 +21,7 @@ Authenticates the specified domain account.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i-sys.md) | Yes | Indicates the domain account information for authentication. |
+| domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Indicates the domain account information for authentication. |
 | credential | Uint8Array | Yes | Indicates the credential for authentication. |
-| callback | [IUserAuthCallback](arkts-basicservices-osaccount-iuserauthcallback-i-sys.md) | Yes | Indicates the authentication callback. |
+| callback | IUserAuthCallback | Yes | Indicates the authentication callback. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getAbilityInfo
@@ -31,7 +31,7 @@ Obtains the ability information based on the given resource identifier and abili
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the resource. The value is the same as that of the [uris field under skills in the module.json5 file](../../../quick-start/module-configuration-file.md#skills). |
-| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md), indicating the ability information to be obtained. |
+| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md#AbilityFlag), indicating the ability information to be obtained. |
 
 **Return value:**
 
@@ -43,8 +43,8 @@ Obtains the ability information based on the given resource identifier and abili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The ability is not found. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) | The ability is not found. |
 
 ## Examples
 

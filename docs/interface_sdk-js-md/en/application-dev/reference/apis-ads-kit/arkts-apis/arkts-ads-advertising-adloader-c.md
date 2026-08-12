@@ -13,7 +13,7 @@ Provides the APIs for loading ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from 'kits/@kit.AdsKit';
+import { advertising } from '@kit.AdsKit';
 ```
 
 ## constructor
@@ -84,10 +84,10 @@ Loads an ad.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [21800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 
 ## Examples
 
@@ -150,10 +150,10 @@ Loads multiple ads.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
-| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [21800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 
 ## Examples
 

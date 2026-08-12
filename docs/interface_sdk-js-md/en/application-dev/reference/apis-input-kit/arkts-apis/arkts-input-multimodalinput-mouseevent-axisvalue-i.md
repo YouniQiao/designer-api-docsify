@@ -13,7 +13,7 @@ Defines the mouse axis type and axis value.
 ## Modules to Import
 
 ```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from 'kits/@kit.InputKit';
+import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@kit.InputKit';
 ```
 
 ## axis
@@ -24,7 +24,7 @@ axis: Axis
 
 Mouse axis type.
 
-**Type:** [Axis](../../apis-arkui/arkts-apis/arkts-arkui-enums-axis-e.md)
+**Type:** [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
 
 **Since:** 9
 

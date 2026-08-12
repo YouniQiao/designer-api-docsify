@@ -19,9 +19,9 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): T
 设置滚动条是否自动调整边距。默认不会自动调整边距。
 
 打开滚动条自动边距调整后，滚动条滚动方向上会避让组件[padding](arkts-arkui-commonmethod-c.md#padding)、  
-[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、  
+[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeAreaPadding)、  
 [contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentstartoffset22)/[contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentendoffset22)区域。如果设置了  
-[scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)属性，则自动调整边距不生效。当[padding](arkts-arkui-commonmethod-c.md#padding)、[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeareapadding)、  
+[scrollBarMargin](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarmargin20)属性，则自动调整边距不生效。当[padding](arkts-arkui-commonmethod-c.md#padding)、[safeAreaPadding](arkts-arkui-commonmethod-c.md#safeAreaPadding)、  
 [contentStartOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentstartoffset22)、[contentEndOffset](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#contentendoffset22)在水平方向上的总和大于组件的宽度，或在垂直方向上的总和大于组件的高度时，滚动条不显示。
 
 **起始版本：** 26.0.0
@@ -103,7 +103,7 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](../arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) | 是 |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 |
 
 **返回值：**
 
@@ -183,8 +183,8 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 设置表冠响应事件灵敏度。
 
-组件收到[表冠事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)的前提是该组件获焦，焦点控制可以通过[focusable](arkts-arkui-commonmethod-c.md#focusable)、  
-[defaultFocus](arkts-arkui-commonmethod-c.md#defaultfocus)、[focusOnTouch](arkts-arkui-commonmethod-c.md#focusontouch)进行管理。
+组件收到[表冠事件](./common)的前提是该组件获焦，焦点控制可以通过[focusable](arkts-arkui-commonmethod-c.md#focusable)、  
+[defaultFocus](arkts-arkui-commonmethod-c.md#defaultFocus)、[focusOnTouch](arkts-arkui-commonmethod-c.md#focusOnTouch)进行管理。
 
 **起始版本：** 18
 
@@ -200,7 +200,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 |
+| [sensitivity](../../apis-localization-kit/arkts-apis/arkts-localization-intl-collatoroptions-i.md) | [Optional](arkts-arkui-optional-t.md)&lt;[CrownSensitivity](../arkts-apis/arkts-arkui-crownsensitivity-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -231,7 +231,7 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [edgeEffect](#edgeeffect) | [EdgeEffect](../arkts-apis/arkts-arkui-edgeeffect-e.md) | 是 |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。&lt;br/&gt;默认值：&lt;br/&gt;List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \|
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。 & lt;br/ & gt;默认值： & lt;br/ & gt;List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \ |
 
 **返回值：**
 
@@ -310,25 +310,25 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 > **说明：**
 > 
 > fadingEdge是通过设置[overlay](arkts-arkui-commonmethod-c.md#overlay)属性和
-> [blendMode](arkts-arkui-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER，
+> [blendMode](arkts-arkui-commonmethod-c.md#blendMode)属性（参数值为BlendMode.SRC_OVER，
 > BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截
 > 屏的接口有：[blur](arkts-arkui-commonmethod-c.md#blur)、
-> [linearGradientBlur](arkts-arkui-commonmethod-c.md#lineargradientblur)、
-> [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualeffect)、
+> [linearGradientBlur](arkts-arkui-commonmethod-c.md#linearGradientBlur)、
+> [brightness](arkts-arkui-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-commonmethod-c.md#visualEffect)、
 > [grayscale](arkts-arkui-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-commonmethod-c.md#saturate)、
 > [contrast](arkts-arkui-commonmethod-c.md#contrast)、
 > [invert](arkts-arkui-commonmethod-c.md#invert)、
 > [sepia](arkts-arkui-commonmethod-c.md#sepia)、
-> [hueRotate](arkts-arkui-commonmethod-c.md#huerotate)、
-> [colorBlend](arkts-arkui-commonmethod-c.md#colorblend)、
-> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightupeffect)、
-> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelstretcheffect)、
-> [blendMode](arkts-arkui-commonmethod-c.md#blendmode)、
-> [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundbrightness)。
+> [hueRotate](arkts-arkui-commonmethod-c.md#hueRotate)、
+> [colorBlend](arkts-arkui-commonmethod-c.md#colorBlend)、
+> [lightUpEffect](arkts-arkui-commonmethod-c.md#lightUpEffect)、
+> [pixelStretchEffect](arkts-arkui-commonmethod-c.md#pixelStretchEffect)、
+> [blendMode](arkts-arkui-commonmethod-c.md#blendMode)、
+> [backgroundBrightness](arkts-arkui-commonmethod-c.md#backgroundBrightness)。
 > 
 > fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。
 > 
-> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果，
+> fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-commonmethod-c.md#systemMaterial)相关属性，会影响系统材质的显示效果，
 > 导致材质效果与预期效果不一致。
 > 
 > fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-commonmethod-c.md#clip)属性为false不生效。
@@ -368,11 +368,11 @@ flingSpeedLimit(speedLimit: number): T
 > 
 > - 惯性动效是指手指快速滑动并离开屏幕后，滚动内容继续滚动并逐渐减速停止的效果，也称为惯性滚动。
 > 
-> - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用[fling](arkts-arkui-scroller-c.md#fling)方法。
+> - 惯性动效触发场景包括：惯性手指快速滑动并离手时，或调用[fling](Scroller#fling)方法。
 > 
-> - 使用鼠标滚轮、键盘方向键方式滚动，或通过[scrollTo](arkts-arkui-scroller-c.md#scrollto)等方法直接滚动到指定位置，不会产生惯性动效。
+> - 使用鼠标滚轮、键盘方向键方式滚动，或通过[scrollTo](Scroller#scrollTo)等方法直接滚动到指定位置，不会产生惯性动效。
 > 
-> - 如果惯性动效通过[fling](arkts-arkui-scroller-c.md#fling)方法触发，则flingSpeedLimit设置不生效。
+> - 如果惯性动效通过[fling](Scroller#fling)方法触发，则flingSpeedLimit设置不生效。
 
 **起始版本：** 11
 
@@ -466,7 +466,7 @@ onDidScroll(handler: OnScrollCallback): T
 
 > **说明：**
 > 
-> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributeModifier)中调用。
 
 **起始版本：** 12
 
@@ -580,7 +580,7 @@ onReachEnd(event: () => void): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 
@@ -612,7 +612,7 @@ onReachStart(event: () => void): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 
@@ -630,14 +630,14 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 > **说明：**
 > 
-> 从API version 11开始支持，从API version 12开始废弃。[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、[Grid](./grid)和[WaterFlow](./water_flow)
+> 从API version 11开始支持，从API version 12开始废弃。[List](./list)、[Grid](./grid)和[WaterFlow](./water_flow)
 > 组件的onScroll事件在布局之后触发，
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [ScrollableCommonMethod#onDidScroll](arkts-arkui-scrollablecommonmethod-c.md#ondidscroll)
+**替代接口：** [onDidScroll](#onDidScroll)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -651,7 +651,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 |
+| event | (scrollOffset: number, scrollState: ScrollState) = & gt; void | 是 |
 
 **返回值：**
 
@@ -665,7 +665,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 onScrollStart(event: () => void): T
 ```
 
-滚动开始时触发。手指拖动滚动组件或其滚动条触发的滚动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滚动控制器触发的带动画的滚动，动画开始时会触发该事件。
+滚动开始时触发。手指拖动滚动组件或其滚动条触发的滚动开始时，会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md#Scroller)滚动控制器触发的带动画的滚动，动画开始时会触发该事件。
 
 触发该事件的条件：
 
@@ -687,7 +687,7 @@ onScrollStart(event: () => void): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 
@@ -701,7 +701,7 @@ onScrollStart(event: () => void): T
 onScrollStop(event: () => void): T
 ```
 
-滚动停止时触发。手指拖动滚动组件或其滚动条触发的滚动，手指离开屏幕后滚动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md)滚动控制器触发的带动画的滚动，动画停止时会触发该事件。
+滚动停止时触发。手指拖动滚动组件或其滚动条触发的滚动，手指离开屏幕后滚动停止时会触发该事件。使用[Scroller](arkts-arkui-scroller-c.md#Scroller)滚动控制器触发的带动画的滚动，动画停止时会触发该事件。
 
 触发该事件的条件：
 
@@ -723,7 +723,7 @@ onScrollStop(event: () => void): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |
 
 **返回值：**
 
@@ -742,13 +742,13 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 回调当前帧将要滚动的偏移量、当前滚动状态及滚动操作来源，其中回调的偏移量为计算得到的将要滚动的偏移量值，并非最终实际滚动偏移。可以通过该回调返回值指定滚动组件将要滚动的偏移。[Scroll](./scroll)组件的  
 [onWillScroll](ScrollAttribute#onWillScroll)接口的参数类型是  
-[ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md)。
+[ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md#ScrollOnWillScrollCallback)。
 
 > **说明：**
 > 
-> - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> - 从API version 14开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributeModifier)中调用。
 > 
-> - 调用不带动画的[ScrollEdge](arkts-arkui-scroller-c.md#scrolledge)和[ScrollToIndex](arkts-arkui-scroller-c.md#scrolltoindex)时，不触发onWillScroll。
+> - 调用不带动画的[ScrollEdge](arkts-arkui-scroller-c.md#scrollEdge)和[ScrollToIndex](arkts-arkui-scroller-c.md#scrollToIndex)时，不触发onWillScroll。
 
 **起始版本：** 12
 
@@ -764,7 +764,7 @@ onWillScroll(handler: Optional<OnWillScrollCallback>): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| handler | [Optional](arkts-arkui-optional-t.md)&lt;OnWillScrollCallback&gt; | 是 |
+| handler | [Optional](arkts-arkui-optional-t.md)&lt;[OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md)&gt; | 是 |
 
 **返回值：**
 
@@ -814,7 +814,7 @@ onWillStartFling(handler: VoidCallback): T
 
 > **说明：**
 > 
-> - 如果惯性动效通过[fling](arkts-arkui-scroller-c.md#fling)方法触发，则onWillStartFling不触发。
+> - 如果惯性动效通过[fling](Scroller#fling)方法触发，则onWillStartFling不触发。
 > 
 > - 惯性动效的触发场景参考
 > [flingSpeedLimit](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#flingspeedlimit11)方法的
@@ -928,7 +928,7 @@ scrollBarColor(color: Color | number | string): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| number \| string | 是 |
+| color | Color \| number \| string | 是 |
 
 **返回值：**
 
@@ -959,7 +959,7 @@ scrollBarColor(color: Color | number | string | Resource): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
+| color | Color \| number \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 |
 
 **返回值：**
 
@@ -997,7 +997,7 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| height | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | 是 |
+| height | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 

@@ -12,7 +12,7 @@ declare function lstat(path: string): Promise<Stat>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:lstat](arkts-corefile-fileio-lstat-f.md#lstat)
+**替代接口：** [lstat](arkts-corefile-file-fs-lstat-f.md#lstat)
 
 <!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
 
@@ -28,7 +28,7 @@ declare function lstat(path: string): Promise<Stat>
 
 | 类型 |
 | --- |
-| Promise&lt;Stat&gt; |
+| Promise&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; |
 
 
 ## lstat
@@ -43,7 +43,7 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:lstat](arkts-corefile-fileio-lstat-f.md#lstat)
+**替代接口：** [lstat](arkts-corefile-file-fs-lstat-f.md#lstat)
 
 <!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 
@@ -54,4 +54,4 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | path | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-fileio-stat-depr-i.md)&gt; | 是 |

@@ -1,8 +1,8 @@
 # CipherSpecItem
 
 Enumerates encryption and decryption parameters, which can be set by using  
-[setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setcipherspec) and obtained by using  
-[getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getcipherspec).
+[setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setCipherSpec) and obtained by using  
+[getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getCipherSpec).
 
 &lt;br&gt;Currently, only RSA and SM2 are supported. For details, see  
 [Asymmetric Key Encryption and Decryption Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).

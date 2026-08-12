@@ -2,7 +2,7 @@
 
 Defines a rect drawing class.
 
-**Inheritance/Implementation:** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
+**Inheritance/Implementation:** RectShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Defines a rect drawing class.
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -40,7 +40,7 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| RoundRectShapeOptions | No |  |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | No |  |
 
 ## radius
 

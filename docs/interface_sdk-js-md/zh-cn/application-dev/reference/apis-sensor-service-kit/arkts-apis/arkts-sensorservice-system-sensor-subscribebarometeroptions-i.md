@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor.SensorId#BAROMETER
+**替代接口：** [BAROMETER](arkts-sensorservice-sensor-sensorid-e.md#BAROMETER)
 
 <!--Device-unnamed-export interface SubscribeBarometerOptions--><!--Device-unnamed-export interface SubscribeBarometerOptions-End-->
 
@@ -28,7 +28,7 @@ fail?: (data: string, code: number) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -57,7 +57,7 @@ success: (data: BarometerResponse) => void
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#on
+**替代接口：** [on](ohos.sensor/sensor#on)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -69,5 +69,5 @@ success: (data: BarometerResponse) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md) | 是 |  |
+| data | [BarometerResponse](arkts-sensorservice-system-sensor-barometerresponse-i.md) | 是 |  |
 

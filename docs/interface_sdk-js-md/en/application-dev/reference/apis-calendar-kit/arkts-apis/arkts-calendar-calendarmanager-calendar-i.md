@@ -1,7 +1,7 @@
 # Calendar
 
 In the following API examples, you need to use   
-[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getcalendar) to obtain 
+[createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createCalendar) or [getCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#getCalendar) to obtain 
 
 a **Calendar** object before calling related APIs.
 
@@ -16,7 +16,7 @@ a **Calendar** object before calling related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from 'kits/@kit.CalendarKit';
+import { calendarManager } from '@kit.CalendarKit';
 ```
 
 ## addEvent
@@ -45,7 +45,7 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| event | Event | Yes | Event object. |
 
 **Return value:**
 
@@ -57,8 +57,8 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -114,15 +114,15 @@ Adds an event, with no event ID, instanceStartTime, and instanceEndTime specifie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
+| event | Event | Yes | Event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the event ID. The event ID is the unique identifier of an event and is the auto-increment primary key of the database. If the value is less than 0, the event creation fails; if the value is greater than 0, the event creation succeeds. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -176,7 +176,7 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes | Array of Event objects. |
+| events | Event[] | Yes | Array of Event objects. |
 
 **Return value:**
 
@@ -188,8 +188,8 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -250,15 +250,15 @@ Adds events in batches, with no event ID, instanceStartTime, and instanceEndTime
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| events | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md)[] | Yes | Array of Event objects. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| events | Event[] | Yes | Array of Event objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -383,7 +383,7 @@ Deletes an event with the specified ID. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | number | Yes | Event ID, which is the unique identifier of an event. If the input event ID is an integer, the event is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -520,7 +520,7 @@ Deletes a batch of events with the specified IDs. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ids | number[] | Yes | Array of event IDs. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## Examples
 
@@ -690,8 +690,8 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -755,14 +755,14 @@ Obtains all events in a calendar that match the filter criteria. This API uses a
 | --- | --- | --- | --- |
 | eventFilter | [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | Yes | Filter criteria. |
 | eventKey | (keyof Event)[] | Yes | Filter field. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -838,14 +838,14 @@ For versions earlier than API version 20, the default fields to be obtained incl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Event[]&gt; | Yes | Callback used to return an array of events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -909,8 +909,8 @@ This API can be used to view and edit calendar events in the system calendar.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900005](../errorcode-calendarManager.md#23900005-event-not-editable) | This event cannot be edited. |
-| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error. |
+| [23900005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900005-event-not-editable) | This event cannot be edited. |
+| [23900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error. |
 
 ## queryEventInstances
 
@@ -953,8 +953,8 @@ Queries the event instance with a specified event key in a calendar. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
+| [23900004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900004-internal-program-error) | Internal program errors. Possible causes: &lt;br&gt;1. dataShare database execution error; &lt;br&gt;2. null pointer error; &lt;br&gt;3. Data parsing error.<br>**Applicable version:** 23 and later |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -1023,7 +1023,7 @@ Sets the calendar configuration information. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
+| [23900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -1072,13 +1072,13 @@ Sets the calendar configuration information. This API uses an asynchronous callb
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Yes | Calendar configuration information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23900001](../errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
+| [23900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-calendar-kit/errorcode-calendarManager.md#23900001-parameter-value-error) | Parameter value error.<br>**Applicable version:** 23 and later |
 
 ## Examples
 
@@ -1128,7 +1128,7 @@ Updates an event, with the ID of the updated event specified in Event. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
+| event | Event | Yes | Event object. |
 
 **Return value:**
 
@@ -1193,8 +1193,8 @@ Updates an event. The ID of the updated event must be specified in Event. If not
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Event](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-event-c.md) | Yes | Event object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of updateEvent. |
+| event | Event | Yes | Event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of updateEvent. |
 
 ## Examples
 

@@ -6,7 +6,7 @@
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#showAlertDialog
+**Substitutes:** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)
 
 <!--Device-unnamed-declare class AlertDialog--><!--Device-unnamed-declare class AlertDialog-End-->
 
@@ -23,8 +23,8 @@ Shows an alert dialog box.
 > **NOTE：**
 > 
 > Since API version 10, you can use the
-> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showalertdialog) API in
-> [UIContext](arkts-arkui-uicontext.md), which ensures that the alert dialog box is shown in the intended UI
+> [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog) API in
+> [UIContext](@ohos.arkui.UIContext), which ensures that the alert dialog box is shown in the intended UI
 > instance.
 
 **Since:** 7
@@ -33,7 +33,7 @@ Shows an alert dialog box.
 
 **Deprecated since:** 18
 
-**Substitutes:** ohos.arkui.UIContext.UIContext#showAlertDialog
+**Substitutes:** [showAlertDialog](arkts-arkui-arkui-uicontext-uicontext-c.md#showAlertDialog)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,5 +45,5 @@ Shows an alert dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | Yes | Defines and displays the **AlertDialog** component.<br>**Since:** 10 |
+| value | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialogparamwithoptions-i.md) | Yes | Defines and displays the **AlertDialog** component.<br>**Since:** 10 |
 

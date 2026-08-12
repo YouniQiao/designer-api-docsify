@@ -14,7 +14,7 @@ Removes a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:unlinkSync](arkts-corefile-fileio-unlinksync-f.md#unlinksync)
+**Substitutes:** [unlinkSync](arkts-corefile-file-fs-unlinksync-f.md#unlinkSync)
 
 <!--Device-unnamed-declare function unlinkSync(path: string): void--><!--Device-unnamed-declare function unlinkSync(path: string): void-End-->
 

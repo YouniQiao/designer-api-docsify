@@ -26,7 +26,7 @@ Defines ListItem Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ListItemOptions](arkts-arkui-listitem-listitemoptions-i.md) | No |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines ListItem Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ListItemAttribute&gt; | Yes | The style to create a ListItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ListItemAttribute](arkts-arkui-listitem-listitemattribute-i.md)&gt; | Yes | The style to create a ListItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
 
 **Return value:**
 

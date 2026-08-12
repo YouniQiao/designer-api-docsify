@@ -2,7 +2,7 @@
 
 Holds the data transferred between worker threads.
 
-**Inheritance/Implementation:** MessageEvent extends [Event](arkts-arkts-worker-event-i.md)
+**Inheritance/Implementation:** MessageEvent extends [Event](arkts-arkts-worker-event-i.md#Event)
 
 **Since:** 7
 
@@ -13,7 +13,7 @@ Holds the data transferred between worker threads.
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## data

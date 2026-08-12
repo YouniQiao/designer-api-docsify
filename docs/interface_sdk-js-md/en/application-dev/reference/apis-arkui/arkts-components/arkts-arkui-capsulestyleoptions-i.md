@@ -2,10 +2,10 @@
 
 Capsule style options.
 
-Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md) and  
-[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md).
+Inherits from [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions) and  
+[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions).
 
-**Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**Inheritance/Implementation:** CapsuleStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **Since:** 10
 
@@ -29,7 +29,7 @@ API version 10: **'#33006cde'**
 
 API version 11 or later: **'#33007dff'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 
@@ -57,7 +57,7 @@ Default value: min(width, height)/2
 
 If an invalid value is set, the default value is used.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Default:** min(width, height) / 2
 
@@ -83,7 +83,7 @@ Border width. Percentage values are not supported.
 
 Default value: **1vp**
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 10
 
@@ -105,7 +105,7 @@ content?: ResourceStr
 
 Text content, which can be customized.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 
@@ -131,9 +131,9 @@ Default value:
 
 Font size (percentage values are not supported): **12fp**
 
-Other text parameters are subject to the theme values of the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) component.
+Other text parameters are subject to the theme values of the [Text](./text) component.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-font-i.md)
+**Type:** Font
 
 **Since:** 10
 
@@ -157,7 +157,7 @@ Font color.
 
 Default value: **'#ff182431'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 10
 

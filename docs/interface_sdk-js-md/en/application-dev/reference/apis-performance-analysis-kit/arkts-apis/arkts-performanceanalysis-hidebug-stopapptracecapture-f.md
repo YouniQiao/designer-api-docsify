@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
+import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## stopAppTraceCapture
@@ -12,7 +12,7 @@ import { hidebug } from 'kits/@kit.PerformanceAnalysisKit';
 function stopAppTraceCapture(): void
 ```
 
-Stops application trace collection. Use [startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md#startapptracecapture) to start collection before calling this API. If this API is called before trace collection or it is repeatedly called, an exception will occur.
+Stops application trace collection. Use [startAppTraceCapture()](arkts-performanceanalysis-hidebug-startapptracecapture-f.md#startAppTraceCapture) to start collection before calling this API. If this API is called before trace collection or it is repeatedly called, an exception will occur.
 
 If **startAppTraceCapture ()** is called without a properly specified **limitSize**, the size of the generated trace may exceed the **limitSize** value, causing the system to automatically call **stopAppTraceCapture()**. In this case, if **stopAppTraceCapture()** is called again, an error code 11400105 will be displayed.
 
@@ -28,8 +28,8 @@ If **startAppTraceCapture ()** is called without a properly specified **limitSiz
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400105](../errorcode-hiviewdfx-hidebug-trace.md#11400105-trace-capture-disabled) | No capture trace running. |
-| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | The status of the trace is abnormal. |
+| [11400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400105-trace-capture-disabled) | No capture trace running. |
+| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | The status of the trace is abnormal. |
 
 ## Examples
 

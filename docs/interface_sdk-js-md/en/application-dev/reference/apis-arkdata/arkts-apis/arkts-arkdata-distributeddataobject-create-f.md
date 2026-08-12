@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from 'kits/@kit.ArkData';
+import { distributedDataObject } from '@kit.ArkData';
 ```
 
 ## create
@@ -26,7 +26,7 @@ Creates a distributed data object. The object properties support basic types (nu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see Context. |
+| context | Context | Yes | Application context. For details about the application context of the FA model, see Context.For details about the application context of the stage model, see Context. |
 | source | object | Yes | Properties of the distributed data object. |
 
 **Return value:**
@@ -39,7 +39,7 @@ Creates a distributed data object. The object properties support basic types (nu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

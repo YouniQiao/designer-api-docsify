@@ -110,7 +110,7 @@ splice(start: int, deleteCount?: int, sections?: Array<SectionOptions>): boolean
 | --- | --- | --- | --- |
 | start | int | 是 | 从0开始计算的索引，会转换为整数，表示要开始改变分组的位置。&lt;br/&gt;**说明：** &lt;br/&gt;1. 如果索引是负数，则从末尾开始计算，使用 `start + WaterFlowSections.length()`。&lt;br/&gt;2. 如果 `start &lt; -WaterFlowSections.length()`，则使用0。<br/>3. 如果 `start &gt;&lt;br/&gt;3. 如果 `start >= WaterFlowSections.length()`，则在最后添加新分组。 &lt;br&gt;取值限定为整数。 |
 | deleteCount | int | 否 | 从0开始计算的索引，会转换为整数，表示要开始改变分组的位置。&lt;br/&gt;**说明：** &lt;br/&gt;1. 如果索引是负数，则从末尾开始计算，使用 `start + WaterFlowSections.length()`。&lt;br/&gt;2. 如果 `start &lt; -WaterFlowSections.length()`，则使用0。<br/>3. 如果 `start &gt;&lt;br/&gt;3. 如果 `start >= WaterFlowSections.length()`，则在最后添加新分组。 &lt;br&gt;取值限定为整数。 |
-| sections | Array&lt;SectionOptions&gt; | 否 | 表示要从start开始加入的分组。如果不指定，`splice()`将只从瀑布流中删除分组。 |
+| sections | Array&lt;[SectionOptions](arkts-arkui-waterflow-sectionoptions-c.md)&gt; | 否 | 表示要从start开始加入的分组。如果不指定，`splice()`将只从瀑布流中删除分组。 |
 
 **返回值：**
 
@@ -171,5 +171,5 @@ values(): Array<SectionOptions>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;SectionOptions&gt; | 瀑布流中所有分组配置信息。 |
+| Array&lt;[SectionOptions](arkts-arkui-waterflow-sectionoptions-c.md)&gt; | 瀑布流中所有分组配置信息。 |
 

@@ -13,7 +13,7 @@ Represents the general entry of the white-box performance test framework.It prov
 ## Modules to Import
 
 ```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/@kit.TestKit';
+import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
 ```
 
 ## create
@@ -22,7 +22,7 @@ import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from 'kits/
 static create(strategy: PerfTestStrategy): PerfTest
 ```
 
-Creates a {@link PerfTest} object and returns the object created. This API is a static API.
+Creates a [PerfTest](#PerfTest) object and returns the object created. This API is a static API.
 
 **Since:** 20
 
@@ -50,10 +50,10 @@ Creates a {@link PerfTest} object and returns the object created. This API is a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. @static |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
-| [32400001](../errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
+| [32400007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. @static |
+| [32400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
+| [32400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400001-initialization-failed) | Initialization failed. |
 
 ## Examples
 
@@ -90,7 +90,7 @@ async function demo() {
 destroy(): void
 ```
 
-Destroys the **PerfTest** object to release the resources occupied by the object. This method is used together with {@link create} and is called after the **PerfTest** object is used. If this method is not called, resources may fail to be released. The **PerfTest** object should not be used after this API is called.
+Destroys the **PerfTest** object to release the resources occupied by the object. This method is used together with [create](#create) and is called after the **PerfTest** object is used. If this method is not called, resources may fail to be released. The **PerfTest** object should not be used after this API is called.
 
 **Since:** 20
 
@@ -106,8 +106,8 @@ Destroys the **PerfTest** object to release the resources occupied by the object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
 ## Examples
 
@@ -139,7 +139,7 @@ async function demo() {
 getMeasureResult(metric: PerfMetric): PerfMeasureResult
 ```
 
-Obtains the measurement data of a specified performance metric. This method must be called after {@link run} is executed. Otherwise, valid measurement data cannot be obtained.
+Obtains the measurement data of a specified performance metric. This method must be called after [run](#run) is executed. Otherwise, valid measurement data cannot be obtained.
 
 **Since:** 20
 
@@ -167,10 +167,10 @@ Obtains the measurement data of a specified performance metric. This method must
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400006](../errorcode-perftest.md#32400006-failed-to-obtain-performance-data) | Failed to obtain the measurement result. |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
-| [32400003](../errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
+| [32400006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400006-failed-to-obtain-performance-data) | Failed to obtain the measurement result. |
+| [32400007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400003-parameter-verification-failed) | Parameter verification failed. |
 
 ## Examples
 
@@ -203,7 +203,7 @@ run(): Promise<void>
 ```
 
 Runs a performance test, iteratively executes test code segments based on the configured times, and collects performance data. This API uses a promise to return the result. In each iteration, the framework executes  
-**actionCode** and **resetCode** (if configured) in sequence and collects performance data during the execution of **actionCode**. After the execution is complete, you can call {@link getMeasureResult} to obtain the collected measurement result data.
+**actionCode** and **resetCode** (if configured) in sequence and collects performance data during the execution of **actionCode**. After the execution is complete, you can call [getMeasureResult](#getMeasureResult) to obtain the collected measurement result data.
 
 **Since:** 20
 
@@ -225,10 +225,10 @@ Runs a performance test, iteratively executes test code segments based on the co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32400007](../errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [32400004](../errorcode-perftest.md#32400004-failed-to-execute-the-callback) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
-| [32400005](../errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
-| [32400002](../errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
+| [32400007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [32400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400004-failed-to-execute-the-callback) | Failed to execute the callback. Possible causes: 1. An exception is thrown in the callback. 2. Callback execution timed out. |
+| [32400005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400005-failed-to-collect-performance-data) | Failed to collect metric data. |
+| [32400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-internal-error) | Internal error. Possible causes: 1. IPC connection failed. 2. The object does not exist. |
 
 ## Examples
 

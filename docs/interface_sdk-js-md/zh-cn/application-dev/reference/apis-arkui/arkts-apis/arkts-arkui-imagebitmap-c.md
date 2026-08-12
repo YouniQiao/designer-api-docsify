@@ -24,7 +24,7 @@ close(): void
 > - 必须与[constructor()](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-imagebitmap.md#constructor)方法配对
 > 使用，创建ImageBitmap对象后，应在使用完毕时调用close()释放资源。未调用close()可能导致图形资源泄漏，影响应用性能。
 > 
-> - 建议在Canvas绘制完成后调用，如在[onReady](arkts-arkui-canvasattribute-c.md#onready)回调的最后调用close()。
+> - 建议在Canvas绘制完成后调用，如在[onReady](arkts-arkui-canvasattribute-c.md#onReady)回调的最后调用close()。
 
 **起始版本：** 8
 
@@ -91,7 +91,7 @@ constructor(src: string, unit: LengthMetricsUnit)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | string | 是 | 图片的数据源支持本地图片。 &lt;br&gt;1、string格式用于加载本地图片，例如ImageBitmap("common/images/example.jpg")， type为"entry"和"feature"类型的Module，其图片加载路径的起点为当前Module的ets文件夹， type为"har"和"shared"类型的Module，其图片加载路径的起点为当前构建的"entry"或"feature" 类型Module的ets文件夹。 &lt;br/&gt;type为"har"和"shared"类型的Module中推荐使用 [ImageSource](../../../media/image/image-decoding.md)图片解码方式将资源图片解码为统一的 PixelMap加载使用。 &lt;br&gt;2、支持本地图片类型：bmp、jpg、png、svg和webp类型。 &lt;br/&gt;**说明：**&lt;br/&gt;- ArkTS卡片上不支持`http://`等网络相关路径前缀、`datashare://`路径前缀 以及`file://data/storage`路径前缀的字符串。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。 |
+| unit | LengthMetricsUnit | 是 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 &lt;br&gt;异常值undefined、NaN和Infinity按默认值处理。 |
 
 ## constructor
 
@@ -115,7 +115,7 @@ constructor(data: PixelMap)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片的数据源支持PixelMap对象。 |
+| data | PixelMap | 是 | 图片的数据源支持PixelMap对象。 |
 
 ## constructor
 
@@ -141,8 +141,8 @@ constructor(data: PixelMap, unit: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | 是 | 图片的数据源支持PixelMap对象。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 |
+| data | PixelMap | 是 | 图片的数据源支持PixelMap对象。 |
+| unit | LengthMetricsUnit | 是 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改， 配置方法同 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)。 |
 
 ## constructor
 
@@ -168,8 +168,8 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 通过资源引用方式设置图片数据源。 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改。 &lt;br&gt;默认值：LengthMetricsUnit.DEFAULT。 |
+| data | Resource | 是 | 通过资源引用方式设置图片数据源。 |
+| unit | LengthMetricsUnit | 否 | 用来配置ImageBitmap对象的单位模式，配置后无法动态更改。 &lt;br&gt;默认值：LengthMetricsUnit.DEFAULT。 |
 
 ## height
 

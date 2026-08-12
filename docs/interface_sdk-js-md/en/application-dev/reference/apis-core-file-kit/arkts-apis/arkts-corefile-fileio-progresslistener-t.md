@@ -18,5 +18,5 @@ Listener used to observe the copy progress.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | Yes | indicates the progress data of copyFile |
+| progress | [Progress](arkts-corefile-file-fs-progress-i.md) | Yes | indicates the progress data of copyFile |
 

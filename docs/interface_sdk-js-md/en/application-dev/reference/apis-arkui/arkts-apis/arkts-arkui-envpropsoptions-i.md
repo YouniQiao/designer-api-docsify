@@ -1,6 +1,6 @@
 # EnvPropsOptions
 
-Defines a key-value pair object used to specify environment variable names and their default values, passed as a parameter to [envProps](arkts-arkui-environment-c.md#envprops).
+Defines a key-value pair object used to specify environment variable names and their default values, passed as a parameter to [envProps](arkts-arkui-environment-c.md#envProps).
 
 **Since:** 10
 
@@ -37,7 +37,7 @@ key: string
 ```
 
 Environment variable name. For details about the value range, see  
-[Built-in Environment Variables](arkts-arkui-environment-c.md).
+[Built-in Environment Variables](@link Environment).
 
 **Type:** string
 

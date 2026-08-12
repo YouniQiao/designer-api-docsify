@@ -8,7 +8,7 @@ Defines the key album information.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md/arkts-medialibrary-photoaccesshelper-albumkeys-e.md)
+**Substitutes:** [AlbumKeys](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#AlbumKeys)
 
 <!--Device-userFileManager-enum AlbumKey--><!--Device-userFileManager-enum AlbumKey-End-->
 
@@ -30,7 +30,7 @@ URI of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumKeys.URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#uri)
+**Substitutes:** [URI](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#URI)
 
 <!--Device-AlbumKey-URI--><!--Device-AlbumKey-URI-End-->
 
@@ -52,7 +52,7 @@ Type of the file.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md/arkts-medialibrary-photoaccesshelper-albumtype-e.md)
+**Substitutes:** [AlbumType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumtype-e.md#AlbumType)
 
 <!--Device-AlbumKey-FILE_TYPE--><!--Device-AlbumKey-FILE_TYPE-End-->
 
@@ -74,7 +74,7 @@ Name of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumKeys.ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#album_name)
+**Substitutes:** [ALBUM_NAME](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e.md#ALBUM_NAME)
 
 <!--Device-AlbumKey-ALBUM_NAME--><!--Device-AlbumKey-ALBUM_NAME-End-->
 
@@ -96,7 +96,7 @@ Date when the file was added. The value is the number of seconds elapsed since t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumKeys.DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#DATE_MODIFIED)
 
 <!--Device-AlbumKey-DATE_ADDED--><!--Device-AlbumKey-DATE_ADDED-End-->
 
@@ -118,7 +118,7 @@ Date when the file content (not the file name) was last modified. The value is t
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.AlbumKeys.DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#date_modified)
+**Substitutes:** [DATE_MODIFIED](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-albumkeys-e-sys.md#DATE_MODIFIED)
 
 <!--Device-AlbumKey-DATE_MODIFIED--><!--Device-AlbumKey-DATE_MODIFIED-End-->
 

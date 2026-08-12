@@ -13,7 +13,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAdsMediaSource
@@ -57,7 +57,7 @@ Add an advertisement film source to the advertisement controller,The insertion t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Insert a media asset whose start value exceeds the value of the main content. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Insert a media asset whose start value exceeds the value of the main content. |
 
 ## disableAllAdsMediaSource
 
@@ -123,7 +123,7 @@ Unregisters the processing function of the event triggered by the completion of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsSkipped
 
@@ -147,7 +147,7 @@ Unregisters the processing function of the event triggered when advertisement is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsStarted
 
@@ -219,7 +219,7 @@ Registers the processing function of the event triggered by the completion of ad
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
 
 ## onAdsListenerAdsSkipped
 
@@ -243,7 +243,7 @@ Registers the processing function of the event triggered when advertisement is s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
 
 ## onAdsListenerAdsStarted
 
@@ -315,7 +315,7 @@ Remove the ad source specified in the AdsController.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the AdsController. |
+| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the AdsController. |
 
 ## skipCurrentAdsMediaSource
 

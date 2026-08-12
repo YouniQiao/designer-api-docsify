@@ -32,12 +32,12 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11102001](../errorcode-hiappevent.md#11102001-非法的观察者名称) |
-| [11102003](../errorcode-hiappevent.md#11102003-非法的条数值) |
-| [11102002](../errorcode-hiappevent.md#11102002-非法的过滤事件领域) |
-| [11102005](../errorcode-hiappevent.md#11102005-非法的超时值) |
-| [11102004](../errorcode-hiappevent.md#11102004-非法的大小值) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11102001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102001-非法的观察者名称) |
+| [11102003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102003-非法的条数值) |
+| [11102002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102002-非法的过滤事件领域) |
+| [11102005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102005-非法的超时值) |
+| [11102004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102004-非法的大小值) |
 
 ## 示例
 

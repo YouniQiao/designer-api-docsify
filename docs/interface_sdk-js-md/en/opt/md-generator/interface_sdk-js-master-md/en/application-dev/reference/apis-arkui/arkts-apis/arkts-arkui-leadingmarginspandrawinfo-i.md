@@ -16,7 +16,7 @@ baseline: number
 
 Distance from the baseline of the current line to the component's upper edge.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 The value must be greater than or equal to 0.
 
@@ -40,7 +40,7 @@ bottom: number
 
 Distance from the bottom of the current line to the component's upper edge.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 The value must be greater than or equal to 0.
 
@@ -64,7 +64,7 @@ direction: TextDirection
 
 Direction of the text content.
 
-**Type:** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**Type:** TextDirection
 
 **Since:** 22
 
@@ -150,7 +150,7 @@ top: number
 
 Distance from the top of the current line to the component's upper edge.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 The value must be greater than or equal to 0.
 
@@ -175,7 +175,7 @@ x: number
 Horizontal offset of the current line relative to the component. For right-to-left (RTL) scripts (direction set to  
 **RTL**), this value represents the distance between the right side of the current line and the component's right edge.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 The value must be greater than or equal to 0.
 

@@ -13,7 +13,7 @@ The **Driver** class is the main entrance of the UiTest framework. This class pr
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## assertComponentExist
@@ -38,7 +38,7 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target {@link Component}. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
 
 **Return value:**
 
@@ -50,9 +50,9 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -78,7 +78,7 @@ ArkTS-Sta:
 click(x: int, y: int): Promise<void>
 ```
 
-Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use {@link clickAt}. This API uses a promise to return the result.
+Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [clickAt](#clickAt). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -107,8 +107,8 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -144,7 +144,7 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
 
 **Return value:**
 
@@ -156,8 +156,8 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -193,7 +193,7 @@ Click on the specified location on the screen, with optional touch options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the options for the click operation. Only the 'pressure' property is applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
 
 **Return value:**
@@ -206,8 +206,8 @@ Click on the specified location on the screen, with optional touch options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## create
 
@@ -237,7 +237,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000001](../errorcode-uitest.md#17000001-initialization-failure) | Initialization failed. |
+| [17000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000001-initialization-failure) | Initialization failed. |
 
 ## Examples
 
@@ -256,7 +256,7 @@ async function demo() {
 createUIEventObserver(): UIEventObserver
 ```
 
-Creates a UI event listener {@link UIEventObserver}.
+Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#UIEventObserver).
 
 **Since:** 10
 
@@ -278,7 +278,7 @@ Creates a UI event listener {@link UIEventObserver}.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -333,9 +333,9 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -392,8 +392,8 @@ Delays a duration of time. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -419,7 +419,7 @@ ArkTS-Sta:
 doubleClick(x: int, y: int): Promise<void>
 ```
 
-Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use {@link doubleClickAt}. This API uses a promise to return the result.
+Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [doubleClickAt](#doubleClickAt). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -448,8 +448,8 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -485,7 +485,7 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
 
 **Return value:**
 
@@ -497,8 +497,8 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -524,7 +524,7 @@ ArkTS-Sta:
 drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use {@link dragBetween}. This API uses a promise to return the result.
+Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragBetween). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -556,8 +556,8 @@ Drags from the start coordinate point to the target coordinate point. This metho
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -599,8 +599,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
@@ -614,8 +614,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -651,8 +651,8 @@ Drag on the screen between the specified points with optional settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the coordinate point where the finger leaves the screen. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger leaves the screen. |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the options for the drag operation. Only the 'pressure', 'speed', and 'duration' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
 
 **Return value:**
@@ -665,8 +665,8 @@ Drag on the screen between the specified points with optional settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## dumpLayout
 
@@ -709,8 +709,8 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## findComponent
 
@@ -734,20 +734,20 @@ Searches for the target component based on the specified attributes. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target {@link Component}. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | Promise used to return the { |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | Promise used to return the { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -767,7 +767,7 @@ async function demo() {
 findComponent(on: On): Promise<Component | null>
 ```
 
-Find the first matched {@link Component} on current UI.
+Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI.
 
 **Since:** 23
 
@@ -781,20 +781,20 @@ Find the first matched {@link Component} on current UI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#Component). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component \| null&gt; | the first matched { |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null&gt; | the first matched { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## findComponents
 
@@ -818,20 +818,20 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target {@link Component}. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Component&gt;&gt; | Promise used to return the list of { |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt;&gt; | Promise used to return the list of { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -851,7 +851,7 @@ async function demo() {
 findComponents(on: On): Promise<Array<Component> | null>
 ```
 
-Find all the matched {@link Component}s on current UI.
+Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on current UI.
 
 **Since:** 23
 
@@ -865,20 +865,20 @@ Find all the matched {@link Component}s on current UI.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#Component). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Component&gt; \| null&gt; | the matched { |
+| Promise&lt;Array&lt;[Component](arkts-test-uitest-component-c.md)&gt; \| null&gt; | the matched { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## findWindow
 
@@ -902,20 +902,20 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | Attributes of the target {@link UiWindow}. |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | Attributes of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiWindow&gt; | Promise used to return the target { |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md)&gt; | Promise used to return the target { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -935,7 +935,7 @@ async function demo() {
 findWindow(filter: WindowFilter): Promise<UiWindow | null>
 ```
 
-Find the first matched {@link UiWindow} window.
+Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) window.
 
 **Since:** 23
 
@@ -949,20 +949,20 @@ Find the first matched {@link UiWindow} window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target {@link UiWindow}. |
+| filter | [WindowFilter](arkts-test-uitest-windowfilter-i.md) | Yes | the filter condition of the target [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;UiWindow \| null&gt; | the first matched { |
+| Promise&lt;[UiWindow](arkts-test-uitest-uiwindow-c.md) \| null&gt; | the first matched { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## fling
 
@@ -992,8 +992,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the point where the finger touches the screen. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the point where the finger leaves the screen. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger touches the screen. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger leaves the screen. |
 | stepLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sliding step length, in pixels. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. &lt;br&gt;Unit: px |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
@@ -1007,8 +1007,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1063,8 +1063,8 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1120,8 +1120,8 @@ Simulates a fling operation on a specified display with the specified direction 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1146,7 +1146,7 @@ Obtains the display density of the current device. This API uses a promise to re
 > **NOTE：**
 > 
 > This method can only be used to obtain the display density of the home screen. To obtain the display density
-> of a specified screen, use {@link getDisplayDensity}(displayId: number).
+> of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
 
 **Since:** 9
 
@@ -1162,13 +1162,13 @@ Obtains the display density of the current device. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The density of the current device display is **Point.x*Point.y**. |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The density of the current device display is **Point.x*Point.y**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1216,14 +1216,14 @@ Obtains the density of the specified display of the current device. This API use
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The density of the specified display is **Point.x*Point.y**. |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The density of the specified display is **Point.x*Point.y**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1248,7 +1248,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 > **NOTE：**
 > 
 > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation
-> of a specified screen, use {@link getDisplayRotation}(displayId: number).
+> of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
 
 **Since:** 9
 
@@ -1264,13 +1264,13 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DisplayRotation&gt; | Promise used to return the display rotation of the current device. |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; | Promise used to return the display rotation of the current device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1318,14 +1318,14 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;DisplayRotation&gt; | Promise used to return the display rotation of the specified device. |
+| Promise&lt;[DisplayRotation](arkts-test-uitest-displayrotation-e.md)&gt; | Promise used to return the display rotation of the specified device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1350,7 +1350,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 > **NOTE：**
 > 
 > This method can only be used to obtain the display size of the home screen. To obtain the display size of a
-> specified screen, use {@link getDisplaySize}(displayId: number).
+> specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
 
 **Since:** 9
 
@@ -1366,13 +1366,13 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The size of the current device screen is **Point.x Point.y**. |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The size of the current device screen is **Point.x Point.y**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1420,14 +1420,14 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Point&gt; | Promise used to return the **Point** object. The size of the specified display is **Point.x Point.y**. |
+| Promise&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Promise used to return the **Point** object. The size of the specified display is **Point.x Point.y**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1486,9 +1486,9 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -1551,8 +1551,8 @@ Injects a multi-finger operation into a device. This method applies to test scen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1619,8 +1619,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1660,7 +1660,7 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
 
 **Return value:**
@@ -1673,8 +1673,8 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1712,9 +1712,9 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. &lt;br&gt; If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of {@link InputTextMode}.paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode). **NOTE：**  If **InputTextMode.addition** is set to **true**, the cursor moves to the end of the text and the specified text is input. If the value is **false**, the specified text is input at the coordinate point. &lt;br&gt; If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode).paste. |
 
 **Return value:**
 
@@ -1726,9 +1726,9 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function can not work correctly due to limited device capabilities. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function can not work correctly due to limited device capabilities. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1780,9 +1780,9 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target {@link Component}. |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Drag speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
@@ -1796,8 +1796,8 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1839,8 +1839,8 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target {@link Component}. |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the long-clicked point. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -1853,8 +1853,8 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1897,8 +1897,8 @@ Swipes from the start point to the end point and checks whether the target compo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target component. |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
@@ -1911,8 +1911,8 @@ Swipes from the start point to the end point and checks whether the target compo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1958,7 +1958,7 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pointers | Array&lt;Point&gt; | Yes | Array of knuckle knock coordinates on the display. The array length can be 1 or 2. If the value is out of range, error code 17000007 is thrown. |
+| pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Yes | Array of knuckle knock coordinates on the display. The array length can be 1 or 2. If the value is out of range, error code 17000007 is thrown. |
 | times | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of consecutive knocks on the display. The value can be 1 or 2. If the value is out of range, error code 17000007 is thrown. |
 
 **Return value:**
@@ -1971,9 +1971,9 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -2001,7 +2001,7 @@ ArkTS-Sta:
 longClick(x: int, y: int): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use {@link longClickAt}.This API uses a promise to return the result.
+Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt).This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2030,8 +2030,8 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2073,7 +2073,7 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2086,8 +2086,8 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -2123,7 +2123,7 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the options for the long click operation. Only the 'duration' and 'pressure' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
 
 **Return value:**
@@ -2136,8 +2136,8 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## mouseClick
 
@@ -2167,10 +2167,10 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Target coordinates of the mouse click. |
-| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of the mouse click. |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -2182,8 +2182,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2225,10 +2225,10 @@ Injects a double-click action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the double-click. |
-| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -2240,8 +2240,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2277,8 +2277,8 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the start point. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | speed | number | No | Mouse drag speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
@@ -2291,8 +2291,8 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2334,8 +2334,8 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the start point. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Speed of mouse drag. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
@@ -2349,8 +2349,8 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2386,8 +2386,8 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the starting point. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the ending point. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | the starting point. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | the ending point. |
 | touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the touch options for speed and duration settings. Only 'speed' and 'duration' properties are valid in this method. Setting other properties will cause BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
 | keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | No | the key options for key codes to press during drag. Default value: Refer to the default value of keyOptions. |
 
@@ -2401,8 +2401,8 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## mouseLongClick
 
@@ -2426,10 +2426,10 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
-| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -2441,8 +2441,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2484,10 +2484,10 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
-| btnId | [MouseButton](../../apis-arkui/arkts-apis/arkts-arkui-enums-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
+| btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 | duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
@@ -2500,8 +2500,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2537,7 +2537,7 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 
 **Return value:**
 
@@ -2549,8 +2549,8 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2592,8 +2592,8 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the start point. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Mouse move speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
@@ -2606,8 +2606,8 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2643,11 +2643,11 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Target coordinates of mouse scrolling. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | number | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
-| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| key1 | number | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | number | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -2659,8 +2659,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2702,11 +2702,11 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| p | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Target coordinates of mouse scrolling. |
+| p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
 | d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Scroll speed of the mouse wheel. &lt;br&gt;Value range:[1, 500] &lt;br&gt;Unit: ticks/s &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 20 |
 
 **Return value:**
@@ -2719,8 +2719,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2756,7 +2756,7 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the clicked point. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the clicked point. |
 
 **Return value:**
 
@@ -2768,8 +2768,8 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2805,7 +2805,7 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the double-clicked point. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-clicked point. |
 
 **Return value:**
 
@@ -2817,8 +2817,8 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2860,7 +2860,7 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the long-clicked point. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
 | pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Long-click pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
@@ -2873,8 +2873,8 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2916,8 +2916,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startPoint | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the start point. |
-| endPoint | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Coordinates of the end point. |
+| startPoint | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
+| endPoint | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Speed of pen swipe. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 | pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Swipe pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
@@ -2931,8 +2931,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2957,7 +2957,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 > **NOTE：**
 > 
 > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button
-> on a specified screen, use {@link pressBack}(displayId: number).
+> on a specified screen, use [pressBack](pressBack)(displayId: number).
 
 **Since:** 9
 
@@ -2979,7 +2979,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3033,8 +3033,8 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -3076,7 +3076,7 @@ Injects an operation of returning to the home screen on the device. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3130,8 +3130,8 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -3179,8 +3179,8 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3235,8 +3235,8 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3256,7 +3256,7 @@ async function demo() {
 screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 ```
 
-Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike {@link screenCap}, this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
+Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike [screenCap](screenCap), this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
 
 **Since:** 10
 
@@ -3273,7 +3273,7 @@ Captures the specified area of the current screen and saves the captured screens
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | savePath | string | Yes | File save path. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
-| rect | [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md) | No | Area of the screen to capture. The default value is the entire screen. |
+| rect | [Rect](arkts-test-uitest-rect-i.md) | No | Area of the screen to capture. The default value is the entire screen. |
 
 **Return value:**
 
@@ -3285,8 +3285,8 @@ Captures the specified area of the current screen and saves the captured screens
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3340,8 +3340,8 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3389,8 +3389,8 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3416,7 +3416,7 @@ ArkTS-Sta:
 swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
-Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use {@link swipeBetween}. This API uses a promise to return the result.
+Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [swipeBetween](#swipeBetween). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -3448,8 +3448,8 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3491,8 +3491,8 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
@@ -3505,8 +3505,8 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -3542,8 +3542,8 @@ Swipe on the screen between the specified points with optional touch options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| from | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
-| to | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | the coordinate point where the finger leaves the screen. |
+| from | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger touches the screen. |
+| to | [Point](arkts-test-uitest-point-i.md) | Yes | the coordinate point where the finger leaves the screen. |
 | options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | No | the options for the swipe operation. Only the 'speed' and 'pressure' properties are applicable for this method. Setting other properties will result in a BusinessError 17000007. Default value: Refer to the default value of TouchOptions. |
 
 **Return value:**
@@ -3556,8 +3556,8 @@ Swipe on the screen between the specified points with optional touch options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## touchPadMultiFingerSwipe
 
@@ -3589,7 +3589,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 | --- | --- | --- | --- |
 | fingers | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of fingers. The value can be 3 or 4. If the value is out of range, error code 401 is thrown. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Swipe direction. |
-| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **{@link TouchPadSwipeOptions }** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
+| options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **[TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md#TouchPadSwipeOptions)** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
 
 **Return value:**
 
@@ -3601,9 +3601,9 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -3645,7 +3645,7 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| point | [Point](../../apis-camera-kit/arkts-apis/arkts-camera-camera-point-i.md) | Yes | Point of the mouse cursor when the two-finger scrolling is performed on the touchpad. |
+| point | [Point](arkts-test-uitest-point-i.md) | Yes | Point of the mouse cursor when the two-finger scrolling is performed on the touchpad. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of two-finger scrolling on the touchpad. |
 | d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of grids scrolled by two fingers on the touchpad. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, the 17000007 error code is returned. |
 | speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Speed of two-finger scrolling on the touchpad. &lt;br&gt;Unit: ticks/s. &lt;br&gt;Value range: [1, 500] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 20 |
@@ -3660,9 +3660,9 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -3698,9 +3698,9 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| key0 | number | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| key1 | number | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| key2 | number | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -3712,8 +3712,8 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3755,9 +3755,9 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). &lt;br&gt;Default value: 0 |
+| key0 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 | displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
 
 **Return value:**
@@ -3770,8 +3770,8 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3813,7 +3813,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
 
 **Return value:**
 
@@ -3825,8 +3825,8 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3869,7 +3869,7 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md/arkts-input-multimodalinput-keycode-keycode-e.md). |
+| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
 | displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
@@ -3882,8 +3882,8 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3929,7 +3929,7 @@ Supported combinations:
 | key | [PenKey](arkts-test-uitest-penkey-e.md) | Yes | Stylus key type, which specifies the stylus key to be used for the operation, such as the handwriting key, air mouse key, and smart key. |
 | mode | [PenMode](arkts-test-uitest-penmode-e.md) | Yes | Stylus mode, which specifies the current operation mode of the stylus, such as the handwriting mode or air mouse mode. |
 | operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | Yes | Stylus key operation mode, which specifies the operation mode of the key, such as single-tap or double-tap. |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in {@link PenKeyOperationOptions}. &lt;br&gt; **Note：**: When **mode** is set to {@link PenMode#AIR_MOUSE} and **key** is set to {@link PenKey#AIR_MOUSE}, the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | No | Operation options, including optional coordinates. The default values are inherited from the default values of the properties in [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md#PenKeyOperationOptions). &lt;br&gt; **Note：**: When **mode** is set to [AIR_MOUSE](arkts-test-uitest-penmode-e.md#AIR_MOUSE) and **key** is set to [AIR_MOUSE](arkts-test-uitest-penkey-e.md#AIR_MOUSE), the **point** attribute in **options** must be set. Otherwise, error code 17000007 will be thrown. |
 
 **Return value:**
 
@@ -3941,9 +3941,9 @@ Supported combinations:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
-| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
+| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## waitForComponent
 
@@ -3967,21 +3967,21 @@ Searches for the target component based on the attributes within a specified tim
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target {@link Component}. |
-| time | number | Yes | Duration for searching for the target {@link Component}, in ms. The value is an integer greater than or equal to 0. &lt;br&gt;Unit: ms &lt;br&gt;Value range: The value should be >= 0 |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
+| time | number | Yes | Duration for searching for the target [Component](arkts-test-uitest-component-c.md#Component), in ms. The value is an integer greater than or equal to 0. &lt;br&gt;Unit: ms &lt;br&gt;Value range: The value should be >= 0 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component&gt; | the first matched { |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md)&gt; | the first matched { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -4001,7 +4001,7 @@ async function demo() {
 waitForComponent(on: On, time: int): Promise<Component | null>
 ```
 
-Find the first matched {@link Component} on current UI during the time given.
+Find the first matched [Component](arkts-test-uitest-component-c.md#Component) on current UI during the time given.
 
 **Since:** 23
 
@@ -4015,21 +4015,21 @@ Find the first matched {@link Component} on current UI during the time given.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target {@link Component}. |
+| on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](arkts-test-uitest-component-c.md#Component). |
 | time | int | Yes | duration of finding in milliseconds. &lt;br&gt;Value range: The value should be >= 0 &lt;br&gt;Unit: ms |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Component \| null&gt; | the first matched { |
+| Promise&lt;[Component](arkts-test-uitest-component-c.md) \| null&gt; | the first matched { |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## waitForIdle
 
@@ -4072,8 +4072,8 @@ Checks whether all components on the current UI are idle. This method is applica
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -4115,7 +4115,7 @@ Wakes up the current display. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 

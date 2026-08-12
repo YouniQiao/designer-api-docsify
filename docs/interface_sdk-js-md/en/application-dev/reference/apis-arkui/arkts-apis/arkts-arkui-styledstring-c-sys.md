@@ -17,7 +17,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 ```
 
 Marshals a styled string by defining a callback to marshal  
-[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
+[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
 
 **Since:** 19
 
@@ -35,8 +35,8 @@ Marshals a styled string by defining a callback to marshal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | Styled string to marshal. |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | Callback defining how to marshal [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md). |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to marshal. |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | Yes | Callback defining how to marshal [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue). |
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Marshals a styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c-sys.md) | Yes | Styled string to marshal. |
+| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | Styled string to marshal. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 ```
 
 Unmarshals a styled string by defining a callback to  
-[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md).
+[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
 
 **Since:** 19
 
@@ -108,14 +108,14 @@ Unmarshals a styled string by defining a callback to
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; | Promise used to return the result. |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -147,12 +147,12 @@ Unmarshals a buffer to obtain a styled string.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c-sys.md)&gt; | Promise used to return the result. |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

@@ -14,7 +14,7 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 **废弃版本：** 9
 
-**替代接口：** [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context:
+**替代接口：** [uploadFile](request.uploadFile(context:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -29,13 +29,13 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) | 是 | 上传的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;UploadTask&gt; | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为 错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | 是 | 回调函数，异步返回UploadTask对象。当上传成功，err为undefined，data为获取到的UploadTask对象；否则为 错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -72,7 +72,7 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 **废弃版本：** 9
 
-**替代接口：** [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)(context:
+**替代接口：** [uploadFile](request.uploadFile(context:)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -92,13 +92,13 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;UploadTask&gt; | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
+| Promise&lt;[UploadTask](arkts-basicservices-request-uploadtask-i.md)&gt; | 使用Promise方式，异步返回上传任务UploadTask的Promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 

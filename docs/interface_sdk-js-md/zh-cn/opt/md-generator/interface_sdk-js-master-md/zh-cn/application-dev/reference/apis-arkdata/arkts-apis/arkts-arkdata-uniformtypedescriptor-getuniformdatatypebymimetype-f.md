@@ -21,7 +21,7 @@ function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): str
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | mimeType | string | 是 |
-| belongsTo | string | 否 |
+| [belongsTo](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | 否 |
 
 **返回值：**
 
@@ -33,7 +33,7 @@ function getUniformDataTypeByMIMEType(mimeType: string, belongsTo?: string): str
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## 示例
 

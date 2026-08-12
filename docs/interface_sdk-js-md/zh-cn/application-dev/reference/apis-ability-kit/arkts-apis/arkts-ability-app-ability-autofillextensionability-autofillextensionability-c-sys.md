@@ -1,9 +1,9 @@
 # AutoFillExtensionAbility（系统接口）
 
 AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)。
+[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)。
 
-**继承/实现关系：** AutoFillExtensionAbility extends [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
+**继承/实现关系：** AutoFillExtensionAbility extends [ExtensionAbility](ExtensionAbility)
 
 **起始版本：** 11
 
@@ -180,8 +180,8 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
-| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i-sys.md) | 是 | 自动填充数据。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| request | [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md) | 是 | 自动填充数据。 |
 | callback | [FillRequestCallback](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md) | 是 | 自动填充请求回调。 |
 
 ## 示例
@@ -318,7 +318,7 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
 | request | [SaveRequest](arkts-ability-autofillrequest-saverequest-i-sys.md) | 是 | 保存请求数据。 |
 | callback | [SaveRequestCallback](arkts-ability-autofillrequest-saverequestcallback-i-sys.md) | 是 | 保存请求回调。 |
 
@@ -419,7 +419,7 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c-sys.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
+| session | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | 是 | AutoFillExtensionAbility界面内容相关信息。 |
 
 ## 示例
 

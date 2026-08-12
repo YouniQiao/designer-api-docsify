@@ -18,14 +18,14 @@ AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，�
 | 名称 | 说明 |
 | --- | --- |
 | [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | 辅助功能扩展的上下文环境，用来配置辅助应用关注信息类型、查询节点信息、手势注入等。 |
-| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。详见[AccessibilityAction](../../apis-arkui/arkts-apis/arkts-arkui-common-accessibilityaction-e.md/arkts-arkui-common-accessibilityaction-e.md)（无障碍节点元素可执行的操作）。 |
+| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | 无障碍节点元素执行特定操作时，为操作提供具体设置的参数值。详见[AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction)（无障碍节点元素可执行的操作）。 |
 <!--DelEnd-->
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用  [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。 |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用  [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。 |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) | 节点元素具备的属性名称及属性值类型信息。 |
 | [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | 表示矩形区域。 |
 
@@ -34,9 +34,9 @@ AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，�
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用  [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getaccessibilityfocusedelement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getrootinactivewindow) 来获取一个 **AccessibilityElement** 实例。 |
-| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | 辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性currentItem。 |
-| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | 辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)中的属性spans。 |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | 无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用  [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。 |
+| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | 辅助功能网格信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)中的属性currentItem。 |
+| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | 辅助功能超链接文本信息。详见[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement)中的属性spans。 |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | 节点元素具备的属性名称及属性值类型信息。 |
 | [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | 查询无障碍节点返回值类型。 |
 <!--DelEnd-->

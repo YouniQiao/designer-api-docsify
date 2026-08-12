@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#BarometerResponse
+**替代接口：** [BarometerResponse](ohos.sensor/sensor#BarometerResponse)
 
 <!--Device-unnamed-export interface BarometerResponse--><!--Device-unnamed-export interface BarometerResponse-End-->
 
@@ -30,7 +30,7 @@ pressure: number
 
 **废弃版本：** 8
 
-**替代接口：** ohos.sensor/sensor#BarometerResponse.pressure
+**替代接口：** [pressure](ohos.sensor/sensor#BarometerResponse.pressure)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

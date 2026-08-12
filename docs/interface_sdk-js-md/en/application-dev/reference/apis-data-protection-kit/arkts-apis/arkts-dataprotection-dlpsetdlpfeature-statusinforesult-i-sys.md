@@ -15,7 +15,7 @@ Describes the DLP settings.
 ## Modules to Import
 
 ```TypeScript
-import { dlpSetDlpFeature } from 'kits/@kit.DataProtectionKit';
+import { dlpSetDlpFeature } from '@kit.DataProtectionKit';
 ```
 
 ## isSuccess

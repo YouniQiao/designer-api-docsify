@@ -12,7 +12,7 @@ Attaches the given ID to the end of the path component of the given uri.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.dataUriUtils/dataUriUtils#attachId
+**Substitutes:** [attachId](ohos.app.ability.dataUriUtils/dataUriUtils#attachId)
 
 <!--Device-dataUriUtils-function attachId(uri: string, id: number): string--><!--Device-dataUriUtils-function attachId(uri: string, id: number): string-End-->
 

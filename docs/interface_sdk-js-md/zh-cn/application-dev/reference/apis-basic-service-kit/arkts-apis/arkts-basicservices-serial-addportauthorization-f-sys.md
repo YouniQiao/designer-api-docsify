@@ -37,8 +37,8 @@ function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
-| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
-| [35700008](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700008-权限被拒绝) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application |
+| [35700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) | Service error. |
+| [35700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) | Invalid parameter. |
+| [35700008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700008-权限被拒绝) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application |
 

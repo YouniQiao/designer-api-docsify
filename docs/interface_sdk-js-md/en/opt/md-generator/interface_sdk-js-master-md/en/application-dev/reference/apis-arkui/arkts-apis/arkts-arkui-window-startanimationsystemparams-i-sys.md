@@ -15,7 +15,7 @@ The configuration does not take effect for inter-application transitions, where 
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animationConfig
@@ -44,7 +44,7 @@ type: AnimationType
 
 Type of the window animation.
 
-**Type:** [AnimationType](arkts-arkui-window-animationtype-e-sys.md)
+**Type:** [AnimationType](arkts-arkui-window-animationtype-e.md)
 
 **Since:** 20
 

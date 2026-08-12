@@ -6,7 +6,7 @@
 function responsiveSpringMotion(response?: number, dampingFraction?: number, overlapDuration?: number): ICurve
 ```
 
-构造弹性跟手动画曲线对象，是[springMotion](arkts-arkui-curves-springmotion-f.md#springmotion)的一种特例，仅默认参数不同，可与springMotion混合使用。
+构造弹性跟手动画曲线对象，是[springMotion](arkts-arkui-curves-springmotion-f.md#springMotion)的一种特例，仅默认参数不同，可与springMotion混合使用。
 
 **起始版本：** 9
 
@@ -28,7 +28,7 @@ function responsiveSpringMotion(response?: number, dampingFraction?: number, ove
 
 | 类型 |
 | --- |
-| [ICurve](../arkts-components/arkts-arkui-icurve-i.md) |
+| [ICurve](arkts-arkui-icurve-t.md) |
 
 ## 示例
 

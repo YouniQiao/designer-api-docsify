@@ -20,7 +20,7 @@ readonly app: BundleConfigInfo
 
 Bundle configuration information.
 
-**Type:** [BundleConfigInfo](arkts-ability-freeinstall-bundleconfiginfo-t-sys.md)
+**Type:** [BundleConfigInfo](arkts-ability-bundlepackinfo-bundleconfiginfo-i-sys.md)
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ readonly modules: Array<ModuleConfigInfo>
 
 Module configuration information of the bundle.
 
-**Type:** Array&lt;ModuleConfigInfo&gt;
+**Type:** Array&lt;[ModuleConfigInfo](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)&gt;
 
 **Since:** 9
 

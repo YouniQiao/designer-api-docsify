@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-Encompassed message information as parameters to {@link onFileSelectorShow} method.
+Encompassed message information as parameters to [onFileSelectorShow](onFileSelectorShow) method.
 
 **起始版本：** 23
 
@@ -68,7 +68,7 @@ Gets an array of selected types for web page files.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Array&lt;AcceptableFileType&gt;&gt; | Return an array of selected types for web page files. |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-web-acceptablefiletype-i.md)&gt;&gt; | Return an array of selected types for web page files. |
 
 ## getDefaultPath
 
@@ -156,7 +156,7 @@ Gets the FileSelectorMode of this file selector.
 
 | 类型 | 说明 |
 | --- | --- |
-| [FileSelectorMode](../arkts-components/arkts-arkweb-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
+| [FileSelectorMode](arkts-arkweb-web-fileselectormode-e.md) | Return the FileSelectorMode of this file selector. |
 
 ## getSuggestedName
 

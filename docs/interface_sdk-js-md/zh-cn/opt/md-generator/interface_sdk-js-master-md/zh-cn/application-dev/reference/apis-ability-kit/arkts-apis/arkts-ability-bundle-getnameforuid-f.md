@@ -10,7 +10,7 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager#getBundleNameByUid
+**替代接口：** [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getBundleNameByUid)
 
 <!--Device-bundle-function getNameForUid(uid: number, callback: AsyncCallback<string>): void--><!--Device-bundle-function getNameForUid(uid: number, callback: AsyncCallback<string>): void-End-->
 
@@ -52,7 +52,7 @@ function getNameForUid(uid: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [null]
+**替代接口：** [null](null)
 
 <!--Device-bundle-function getNameForUid(uid: number): Promise<string>--><!--Device-bundle-function getNameForUid(uid: number): Promise<string>-End-->
 
@@ -68,7 +68,7 @@ function getNameForUid(uid: number): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 

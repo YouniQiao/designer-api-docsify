@@ -13,7 +13,7 @@ An image effect class used to add a specified effect to the effect chain through
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from 'kits/@kit.ArkGraphics2D';
+import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
 ## ellipticalGradientBlur
@@ -51,19 +51,19 @@ Adds the elliptical gradient blur effect to the filter linked list, and returns 
 | blurRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Blur radius, in pixels. The blur effect is proportional to the configured value. A larger value indicates a more obvious effect. |
 | center | [EllipticalMaskCenter](arkts-arkgraphics2d-effectkit-ellipticalmaskcenter-t-sys.md) | Yes | Set the center point of the ellipse. [0, 0] represents the top-left corner of the component, and floating-point numbers are allowed. Values exceeding the boundary will be automatically truncated during implementation. |
 | maskRadius | [EllipticalMaskRadius](arkts-arkgraphics2d-effectkit-ellipticalmaskradius-t-sys.md) | Yes | Set the major axis and minor axis of the ellipse. A radius of 1 is equal to the height of the component. The value range is [0, 10], and floating-point numbers are allowed. Values exceeding the boundary will be automatically truncated during implementation. |
-| fractionStops | [FractionStop](../../apis-arkui/arkts-components/arkts-arkui-fractionstop-t.md)[] | Yes | Gradient blur position and intensity array. The array length ranges from 0 to 12. It has no effect if the length is 0 or greater than 12. Both position and intensity values are between 0 and 1. Position 0 corresponds to the ellipse center, and position 1 corresponds to the ellipse boundary. Intensity 0 means no blur, while intensity 1 equals the blur effect of the input blur radius. |
+| fractionStops | [FractionStop](../../apis-arkui/arkts-apis/arkts-arkui-fractionstop-t.md)[] | Yes | Gradient blur position and intensity array. The array length ranges from 0 to 12. It has no effect if the length is 0 or greater than 12. Both position and intensity values are between 0 and 1. Position 0 corresponds to the ellipse center, and position 1 corresponds to the ellipse boundary. Intensity 0 means no blur, while intensity 1 equals the blur effect of the input blur radius. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i-sys.md) | Final image effect. |
+| Filter | Final image effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

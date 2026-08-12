@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { nfcController } from 'kits/@kit.ConnectivityKit';
+import { nfcController } from '@kit.ConnectivityKit';
 ```
 
 ## openNfc
@@ -18,7 +18,7 @@ Enables NFC.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.nfc.controller/nfcController#enableNfc
+**Substitutes:** [enableNfc](arkts-connectivity-nfccontroller-enablenfc-f.md#enableNfc)
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS
 

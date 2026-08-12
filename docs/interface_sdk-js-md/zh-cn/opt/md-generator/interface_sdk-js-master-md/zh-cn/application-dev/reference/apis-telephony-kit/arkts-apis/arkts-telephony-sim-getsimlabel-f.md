@@ -19,16 +19,16 @@ Obtains the SIM card label.
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | slotId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;SimLabel&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
+| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 
@@ -66,16 +66,16 @@ function getSimLabel(slotId: number): Promise<SimLabel>
 
 | 类型 |
 | --- |
-| Promise&lt;SimLabel&gt; |
+| Promise&lt;[SimLabel](arkts-telephony-sim-simlabel-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [8300999](../errorcode-telephony.md#8300999-内部错误) |
-| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
+| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WithEnvAttribute, WithEnv } from 'kits/@kit.ArkUI';
+import { WithEnvAttribute, WithEnv } from '@kit.ArkUI';
 ```
 
 ## Summary

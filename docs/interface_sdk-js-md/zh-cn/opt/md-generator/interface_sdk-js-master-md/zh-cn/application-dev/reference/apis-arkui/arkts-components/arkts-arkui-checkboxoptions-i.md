@@ -16,7 +16,7 @@ group?: string
 
 用于指定多选框所属群组的名称（即所属CheckboxGroup的名称）。
 
-默认值：undefined，默认状态下配合[CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md)属性group信息为undefined的节点使用。 
+默认值：undefined，默认状态下配合[CheckboxGroupOptions](arkts-arkui-checkboxgroupoptions-i.md#CheckboxGroupOptions)属性group信息为undefined的节点使用。 
 
 **说明：**
 

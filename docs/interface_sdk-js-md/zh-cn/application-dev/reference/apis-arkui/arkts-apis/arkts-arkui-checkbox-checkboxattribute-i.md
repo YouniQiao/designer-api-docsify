@@ -1,8 +1,8 @@
 # CheckboxAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-**继承/实现关系：** CheckboxAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** CheckboxAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -35,7 +35,7 @@ default attributeModifier(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;CheckboxAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 | 多选框的属性修改 器。当modifier的值为undefined时，不使用属性修改器。 |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 | 多选框的属性修改 器。当modifier的值为undefined时，不使用属性修改器。 |
 
 **返回值：**
 
@@ -66,7 +66,7 @@ default contentModifier(modifier: ContentModifier<CheckBoxConfiguration> | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;CheckBoxConfiguration&gt; \| undefined | 是 | 在CheckBox组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改 器，开发者需要自定义class实现ContentModifier接口。&lt;br/&gt;当modifier的值为undefined时，不使用内容修改器。 |
+| modifier | [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;[CheckBoxConfiguration](arkts-arkui-checkbox-checkboxconfiguration-i.md)&gt; \| undefined | 是 | 在CheckBox组件上，定制内容区的方法。&lt;br/&gt;modifier：内容修改 器，开发者需要自定义class实现ContentModifier接口。&lt;br/&gt;当modifier的值为undefined时，不使用内容修改器。 |
 
 **返回值：**
 
@@ -110,7 +110,7 @@ default mark(value: MarkStyle | undefined): this
 default onChange(callback: OnCheckboxChangeCallback | undefined): this
 ```
 
-当选中状态发生变化时，触发该回调。与[onChange](arkts-arkui-checkbox-checkboxattribute-i.md#onchange)相比，callback参数新增了对undefined类型的支持。
+当选中状态发生变化时，触发该回调。与[onChange](#onChange)相比，callback参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 
@@ -126,7 +126,7 @@ default onChange(callback: OnCheckboxChangeCallback | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnCheckboxChangeCallback](../arkts-components/arkts-arkui-oncheckboxchangecallback-t.md) \| undefined | 是 | 返回选中的状态。&lt;br/&gt;当callback的值为undefined时，不使用回调函数。 |
+| callback | [OnCheckboxChangeCallback](arkts-arkui-oncheckboxchangecallback-t.md) \| undefined | 是 | 返回选中的状态。&lt;br/&gt;当callback的值为undefined时，不使用回调函数。 |
 
 **返回值：**
 
@@ -159,7 +159,7 @@ default select(isSelected: boolean | undefined | Bindable<boolean>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSelected | boolean \| undefined \| Bindable&lt;boolean&gt; | 是 | 多选框是否选中。取值为undefined时，按默认值处理。&lt;br/&gt;true：多选框被选中； false：多选框未选中。&lt;br/&gt;默认值：false |
+| isSelected | boolean \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;boolean&gt; | 是 | 多选框是否选中。取值为undefined时，按默认值处理。&lt;br/&gt;true：多选框被选中； false：多选框未选中。&lt;br/&gt;默认值：false |
 
 **返回值：**
 
@@ -173,7 +173,7 @@ default select(isSelected: boolean | undefined | Bindable<boolean>): this
 default selectedColor(value: ResourceColor | undefined): this
 ```
 
-设置多选框选中状态颜色。与[selectedColor](arkts-arkui-checkbox-checkboxattribute-i.md#selectedcolor)相比，value参数新增了对undefined类型的支持。
+设置多选框选中状态颜色。与[selectedColor](#selectedColor)相比，value参数新增了对undefined类型的支持。
 
 **起始版本：** 23
 

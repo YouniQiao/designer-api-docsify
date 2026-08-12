@@ -11,7 +11,7 @@ Implements a serial queue, in which all tasks are executed in sequence.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -110,17 +110,17 @@ Adds a task to the serial queue for execution. Before using this API, you must c
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Object&gt; |
+| Promise & lt;Object & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200025](../errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200025-failed-to-add-a-task-with-dependent-tasks-to-the-queue) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 

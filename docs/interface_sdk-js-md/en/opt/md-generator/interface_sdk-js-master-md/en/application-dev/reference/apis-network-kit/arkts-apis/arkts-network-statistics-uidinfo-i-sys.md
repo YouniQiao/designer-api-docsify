@@ -13,7 +13,7 @@ Parameters for obtaining detailed information on application traffic usage.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## ifaceInfo
@@ -22,7 +22,7 @@ import { statistics } from 'kits/@kit.NetworkKit';
 ifaceInfo: IfaceInfo
 ```
 
-See {@link IfaceInfo}
+See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#IfaceInfo)
 
 **Type:** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 

@@ -27,5 +27,5 @@ Delegate function for NavDestination custom animation.
 
 | Type | Description |
 | --- | --- |
-| (Array&lt;NavDestinationTransition&gt; \| undefined) | user-set custom navDestination transitions. |
+| (Array&lt;[NavDestinationTransition](arkts-arkui-navdestination-navdestinationtransition-i.md)&gt; \| undefined) | user-set custom navDestination transitions. |
 

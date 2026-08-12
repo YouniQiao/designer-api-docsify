@@ -24,13 +24,13 @@ Ellipse is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EllipseOptions](../arkts-components/arkts-arkui-ellipseoptions-i.md) | No | The options to create an Ellipse |
+| options | [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md) | No | The options to create an Ellipse |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EllipseAttribute](../arkts-components/arkts-arkui-ellipse-attribute.md) | The attribute of the Ellipse. |
+| [EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md) | The attribute of the Ellipse. |
 
 
 ## Ellipse
@@ -59,11 +59,11 @@ Defines Ellipse Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EllipseAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [EllipseAttribute](../arkts-components/arkts-arkui-ellipse-attribute.md) |  |
+| [EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md) |  |
 

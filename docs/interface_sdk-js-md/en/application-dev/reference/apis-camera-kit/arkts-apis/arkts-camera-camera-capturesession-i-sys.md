@@ -1,7 +1,7 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and   
+[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
@@ -9,7 +9,7 @@
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.VideoSession](arkts-camera-camera-videosession-i.md)
+**Substitutes:** [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)
 
 <!--Device-camera-interface CaptureSession--><!--Device-camera-interface CaptureSession-End-->
 
@@ -18,7 +18,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## getBeauty
@@ -35,7 +35,7 @@ Obtains the level of the beauty type in use.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Beauty.getBeauty](arkts-camera-camera-beauty-i-sys.md#getbeauty)
+**Substitutes:** [getBeauty](arkts-camera-camera-beauty-i-sys.md#getBeauty)
 
 <!--Device-CaptureSession-getBeauty(type: BeautyType): number--><!--Device-CaptureSession-getBeauty(type: BeautyType): number-End-->
 
@@ -59,7 +59,7 @@ Obtains the level of the beauty type in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 
@@ -100,7 +100,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.BeautyQuery.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautyrange)
+**Substitutes:** [getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange)
 
 <!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>--><!--Device-CaptureSession-getSupportedBeautyRange(type: BeautyType): Array<number>-End-->
 
@@ -124,7 +124,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 
@@ -153,7 +153,7 @@ Obtains the supported beauty types.
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.BeautyQuery.getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getsupportedbeautytypes)
+**Substitutes:** [getSupportedBeautyTypes](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyTypes)
 
 <!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>--><!--Device-CaptureSession-getSupportedBeautyTypes(): Array<BeautyType>-End-->
 
@@ -165,13 +165,13 @@ Obtains the supported beauty types.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;BeautyType&gt; | Array of beauty types supported. |
+| Array&lt;[BeautyType](arkts-camera-camera-beautytype-e-sys.md)&gt; | Array of beauty types supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 
@@ -189,8 +189,8 @@ setBeauty(type: BeautyType, value: number): void
 ```
 
 Sets a beauty type and its level. Beauty mode is turned off only when all the  
-[beauty types](arkts-camera-camera-beautytype-e-sys.md) obtained through  
-[getSupportedBeautyTypes](arkts-camera-camera-capturesession-i-sys.md#getsupportedbeautytypes) are disabled.
+[beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType) obtained through  
+[getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
 
 **Since:** 10
 
@@ -198,7 +198,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 **Deprecated since:** 11
 
-**Substitutes:** [camera.Beauty.setBeauty](arkts-camera-camera-beauty-i-sys.md#setbeauty)
+**Substitutes:** [setBeauty](arkts-camera-camera-beauty-i-sys.md#setBeauty)
 
 <!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void--><!--Device-CaptureSession-setBeauty(type: BeautyType, value: number): void-End-->
 
@@ -211,13 +211,13 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | Yes | Beauty type. |
-| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](arkts-camera-camera-capturesession-i-sys.md#getsupportedbeautyrange). |
+| value | number | Yes | Beauty level, which is obtained through [getSupportedBeautyRange](#getSupportedBeautyRange). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 

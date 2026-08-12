@@ -22,7 +22,7 @@ font?: Font
 
 从API version 12开始，底部页签内容左右排布时默认字体大小为12.0fp。
 
-**类型：** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 10
 
@@ -64,7 +64,7 @@ maxFontSize?: number | ResourceStr
 
 取值范围：[minFontSize, +∞)。异常值时取默认值。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 0.0fp [since 11]
 
@@ -110,7 +110,7 @@ minFontSize?: number | ResourceStr
 
 取值范围：(0, +∞)。异常值时取默认值。
 
-**类型：** number \| ResourceStr
+**类型：** number \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **默认值：** 0.0fp [since 11]
 

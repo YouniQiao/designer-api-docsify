@@ -13,7 +13,7 @@ Represents information about the download progress of a cloud file.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from 'kits/@kit.CoreFileKit';
+import { cloudSync } from '@kit.CoreFileKit';
 ```
 
 ## error
@@ -78,7 +78,7 @@ state: State
 
 File download state.
 
-**Type:** [State](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-state-e.md)
+**Type:** State
 
 **Since:** 11
 

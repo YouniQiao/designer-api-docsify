@@ -138,7 +138,7 @@ builderComponent?: ComponentContent
 
 Swipe action item displayed when the list item is swiped left or right (in vertical list layout)or up or down (in horizontal list layout).
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 18
 

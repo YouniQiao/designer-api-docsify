@@ -1,6 +1,6 @@
 # CameraManager
 
-相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager)接口获取相机管理实例。
+相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager)接口获取相机管理实例。
 
 **起始版本：** 10
 
@@ -16,7 +16,7 @@ createCameraInput(camera: CameraDevice): CameraInput
 
 使用CameraDevice对象创建CameraInput实例，同步返回结果。
 
-该接口使用前首先通过[getSupportedCameras](arkts-camera-camera-cameramanager-i.md#getsupportedcameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选择符合需求的相机设备，然后使用该接口创建CameraInput实例。
+该接口使用前首先通过[getSupportedCameras](#getSupportedCameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选择符合需求的相机设备，然后使用该接口创建CameraInput实例。
 
 **起始版本：** 10
 
@@ -32,7 +32,7 @@ createCameraInput(camera: CameraDevice): CameraInput
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 
 **返回值：**
 
@@ -44,9 +44,9 @@ createCameraInput(camera: CameraDevice): CameraInput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createCameraInput
 
@@ -85,9 +85,9 @@ createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createCaptureSession
 
@@ -105,7 +105,7 @@ createCaptureSession(): CaptureSession
 
 **废弃版本：** 11
 
-**替代接口：** [camera.CameraManager.createSession](arkts-camera-camera-cameramanager-i.md#createsession)
+**替代接口：** [createSession](#createSession)
 
 <!--Device-CameraManager-createCaptureSession(): CaptureSession--><!--Device-CameraManager-createCaptureSession(): CaptureSession-End-->
 
@@ -121,7 +121,7 @@ createCaptureSession(): CaptureSession
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createDeferredPreviewOutput
 
@@ -155,9 +155,9 @@ createDeferredPreviewOutput(profile: Profile): PreviewOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## createMetadataOutput
 
@@ -179,7 +179,7 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| metadataObjectTypes | Array&lt;MetadataObjectType&gt; | 是 |
+| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 |
 
 **返回值：**
 
@@ -191,8 +191,8 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createPhotoOutput
 
@@ -212,7 +212,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 **废弃版本：** 11
 
-**替代接口：** [camera.CameraManager.createPhotoOutput](arkts-camera-camera-cameramanager-i.md#createphotooutput)(profile?:
+**替代接口：** [createPhotoOutput](camera.CameraManager.createPhotoOutput(profile?:)
 
 <!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
 
@@ -235,7 +235,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
 
 ## createPhotoOutput
 
@@ -269,8 +269,8 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createPreviewOutput
 
@@ -305,8 +305,8 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createPreviewOutput
 
@@ -340,8 +340,8 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createSession
 
@@ -375,8 +375,8 @@ createSession<T extends Session>(mode: SceneMode): T
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createVideoOutput
 
@@ -390,8 +390,8 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 
 | SDR/HDR拍摄 | [CameraFormat](arkts-camera-camera-cameraformat-e.md) | [ColorSpace](../../apis-arkui/arkts-apis/arkts-arkui-window-colorspace-e.md) |
 |--------------------|--------------------------|------------------|
-| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |
-| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 |
+| SDR | [CAMERA_FORMAT_YUV_420_SP](arkts-camera-camera-cameraformat-e.md) | [BT709_LIMIT](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) |
+| HDR_VIVID | [CAMERA_FORMAT_YCRCB_P010](arkts-camera-camera-cameraformat-e.md) & lt;br & gt;CAMERA_FORMAT_YCBCR_P010 |
 
 **起始版本：** 10
 
@@ -418,8 +418,8 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## createVideoOutput
 
@@ -453,8 +453,8 @@ createVideoOutput(surfaceId: string): VideoOutput
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getCameraConcurrentInfos
 
@@ -476,19 +476,19 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| cameras | Array&lt;CameraDevice&gt; | 是 |
+| cameras | Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;CameraConcurrentInfo&gt; |
+| Array&lt;[CameraConcurrentInfo](arkts-camera-camera-cameraconcurrentinfo-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getCameraDevice
 
@@ -498,7 +498,7 @@ getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 
 根据相机位置和相机类型查询对应相机。
 
-获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md)和[CameraType](arkts-camera-camera-cameratype-e.md)的相机镜头，如果该接口返回结果为undefined，表示当前设备未查询到该镜头。
+获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md#CameraPosition)和[CameraType](arkts-camera-camera-cameratype-e.md#CameraType)的相机镜头，如果该接口返回结果为undefined，表示当前设备未查询到该镜头。
 
 **起始版本：** 18
 
@@ -525,7 +525,7 @@ getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getCameraDevices
 
@@ -548,20 +548,20 @@ getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | position | [CameraPosition](arkts-camera-camera-cameraposition-e.md) | 是 |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;CameraType&gt; | 是 |
+| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[CameraType](arkts-camera-camera-cameratype-e.md)&gt; | 是 |
 | connectType | [ConnectionType](arkts-camera-camera-connectiontype-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;CameraDevice&gt; |
+| Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getSupportedCameras
 
@@ -572,7 +572,7 @@ getSupportedCameras(): Array<CameraDevice>
 获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。
 
 如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过  
-[getCameraDevices](arkts-camera-camera-cameramanager-i.md#getcameradevices)接口获取。
+[getCameraDevices](#getCameraDevices)接口获取。
 
 **起始版本：** 10
 
@@ -586,7 +586,7 @@ getSupportedCameras(): Array<CameraDevice>
 
 | 类型 |
 | --- |
-| Array&lt;CameraDevice&gt; |
+| Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt; |
 
 ## getSupportedFullOutputCapability
 
@@ -614,7 +614,7 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 | mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | 是 |
 
 **返回值：**
@@ -639,7 +639,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 **废弃版本：** 11
 
-**替代接口：** [camera.CameraManager.getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability)(camera:
+**替代接口：** [getSupportedOutputCapability](camera.CameraManager.getSupportedOutputCapability(camera:)
 
 <!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
 
@@ -649,7 +649,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 
 **返回值：**
 
@@ -677,7 +677,7 @@ getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutpu
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 | mode | [SceneMode](arkts-camera-camera-scenemode-e.md) | 是 |
 
 **返回值：**
@@ -706,13 +706,13 @@ getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
+| [camera](arkts-multimedia-camera.md) | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;SceneMode&gt; |
+| Array&lt;[SceneMode](arkts-camera-camera-scenemode-e.md)&gt; |
 
 ## getTorchMode
 
@@ -786,7 +786,7 @@ isTorchLevelControlSupported(): boolean
 
 | 错误码ID |
 | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isTorchModeSupported
 
@@ -859,7 +859,7 @@ off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'cameraStatus' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 |
 
 ## off('foldStatusChange')
 
@@ -882,7 +882,7 @@ off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'foldStatusChange' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 |
 
 ## off('torchStatusChange')
 
@@ -905,7 +905,7 @@ off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'torchStatusChange' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 |
 
 ## on('cameraStatus')
 
@@ -932,7 +932,7 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'cameraStatus' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;CameraStatusInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 |
 
 ## on('foldStatusChange')
 
@@ -959,7 +959,7 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'foldStatusChange' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;FoldStatusInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 |
 
 ## on('torchStatusChange')
 
@@ -986,7 +986,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'torchStatusChange' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;TorchStatusInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 |
 
 ## setTorchMode
 
@@ -1014,9 +1014,9 @@ setTorchMode(mode: TorchMode): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## setTorchModeOnWithLevel
 
@@ -1040,12 +1040,12 @@ setTorchModeOnWithLevel(torchLevel: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| torchLevel | number | 是 |
+| [torchLevel](arkts-camera-camera-torchstatusinfo-i.md) | number | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |

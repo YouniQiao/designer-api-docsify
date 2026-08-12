@@ -13,7 +13,7 @@ Provides information about a live form.
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormInfo } from 'kits/@kit.FormKit';
+import { LiveFormInfo } from '@kit.FormKit';
 ```
 
 ## borderRadius

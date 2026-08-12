@@ -54,7 +54,7 @@ paramItems?: Array<NativeEmbedParamItem>
 
 The param element array
 
-**Type:** Array&lt;NativeEmbedParamItem&gt;
+**Type:** Array&lt;[NativeEmbedParamItem](arkts-arkweb-web-nativeembedparamitem-i.md)&gt;
 
 **Since:** 23
 

@@ -13,7 +13,7 @@ class FocusController
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from 'kits/@kit.ArkUI';
+import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
 ## activate
@@ -111,9 +111,9 @@ request focus to the specific component.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [150002](../errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
-| [150003](../errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
-| [150001](../errorcode-focus.md#150001-component-not-focusable) | the component cannot be focused. |
+| [150002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
+| [150003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
+| [150001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-focus.md#150001-component-not-focusable) | the component cannot be focused. |
 
 ## setAutoFocusTransfer
 
@@ -161,5 +161,5 @@ Set the priority of key event processing when component cannot handle the key ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [KeyProcessingMode](arkts-arkui-keyprocessingmode-e.md) | Yes | Key processing mode. |
+| mode | KeyProcessingMode | Yes | Key processing mode. |
 

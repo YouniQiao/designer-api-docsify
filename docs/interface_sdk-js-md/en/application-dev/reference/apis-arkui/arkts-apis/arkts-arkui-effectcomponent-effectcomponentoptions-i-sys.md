@@ -20,7 +20,7 @@ effectLayer?: EffectLayer
 
 Use this to determine the component layer 1evel. Default value is none.
 
-**Type:** [EffectLayer](../arkts-components/arkts-arkui-effectlayer-e-sys.md)
+**Type:** [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md)
 
 **Since:** 23
 

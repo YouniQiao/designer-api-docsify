@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [LoadingProgressConfiguration](arkts-arkui-loadingprogress-loadingprogressconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。 |
+| [LoadingProgressConfiguration](arkts-arkui-loadingprogress-loadingprogressconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。 |
 
 ### 枚举
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## hasDefaultNetSync
@@ -32,9 +32,9 @@ Checks whether the default data network is activated.
 
 | Error Code ID |
 | --- |
-| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

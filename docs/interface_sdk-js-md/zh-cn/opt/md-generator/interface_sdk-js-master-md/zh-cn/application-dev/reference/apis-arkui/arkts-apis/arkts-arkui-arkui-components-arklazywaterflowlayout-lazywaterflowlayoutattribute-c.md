@@ -32,7 +32,7 @@ columnsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | 是 |
+| value | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 
@@ -152,7 +152,7 @@ rowsGap(value: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | 是 |
+| value | LengthMetrics \| undefined | 是 |
 
 **返回值：**
 

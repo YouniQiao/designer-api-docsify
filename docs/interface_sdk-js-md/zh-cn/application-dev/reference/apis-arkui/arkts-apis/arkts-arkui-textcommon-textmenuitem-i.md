@@ -58,7 +58,7 @@ id: TextMenuItemId
 
 菜单id。
 
-**类型：** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
+**类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **起始版本：** 23
 

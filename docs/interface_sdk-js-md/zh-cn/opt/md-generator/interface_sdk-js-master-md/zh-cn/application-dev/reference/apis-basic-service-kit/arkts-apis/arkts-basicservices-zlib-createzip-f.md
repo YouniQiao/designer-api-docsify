@@ -20,7 +20,7 @@ function createZip(): Promise<Zip>
 
 | 类型 |
 | --- |
-| Promise&lt;Zip&gt; |
+| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; |
 
 ## 示例
 

@@ -15,7 +15,7 @@ Defines the lazy waterflow layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsGap
@@ -74,7 +74,7 @@ Sets the footer of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The footer builder function. &lt;br&gt;Passing undefined will remove the footer. |
+| builder | CustomBuilder \| undefined | Yes | The footer builder function. &lt;br&gt;Passing undefined will remove the footer. |
 
 **Return value:**
 
@@ -106,7 +106,7 @@ Sets the header of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| undefined | Yes | The header builder function. &lt;br&gt;Passing undefined will remove the header. |
+| builder | CustomBuilder \| undefined | Yes | The header builder function. &lt;br&gt;Passing undefined will remove the header. |
 
 **Return value:**
 
@@ -138,7 +138,7 @@ Called when the first or last item displayed in the component changes.It is trig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../arkts-components/arkts-arkui-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | OnVisibleIndexesChangeCallback \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
 
 **Return value:**
 
@@ -202,7 +202,7 @@ Sets the sticky style for header and footer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sticky | [StickyStyle](../arkts-components/arkts-arkui-stickystyle-e.md) \| undefined | Yes | The sticky style for header and footer. |
+| sticky | StickyStyle \| undefined | Yes | The sticky style for header and footer. |
 
 **Return value:**
 

@@ -16,7 +16,7 @@ localOffset: Offset
 
 组件相对于父组件信息。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 10
 
@@ -76,7 +76,7 @@ screenOffset: Offset
 
 组件相对于屏幕信息。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 10
 
@@ -96,7 +96,7 @@ size: Size
 
 组件大小。
 
-**类型：** [Size](arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 10
 
@@ -156,7 +156,7 @@ windowOffset: Offset
 
 组件相对于窗口信息。
 
-**类型：** [Offset](arkts-arkui-componentutils-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 10
 

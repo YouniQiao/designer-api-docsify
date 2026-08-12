@@ -23,13 +23,13 @@ The default color is black.
 **NOTE：**
 
 Since API version 11, this API supports **ColoringStrategy**, which cannot be used with ArkTS widgets or the   
-[textShadow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textshadow) attribute.
+[textShadow](TextAttribute#textShadow) attribute.
 
 With **ColoringStrategy**, the average color or primary color can be obtained, and the obtained color is applied to the shadow drawing area.
 
 The **'average'** string can be used to trigger the mode for obtaining the average color, and the **'primary'** string for obtaining the primary color.
 
-**Type:** [Color](../arkts-apis/arkts-arkui-color-e.md) \| string \| Resource \| ColoringStrategy
+**Type:** Color \| string \| Resource \| ColoringStrategy
 
 **Since:** 7
 
@@ -57,7 +57,7 @@ Default value: **false**.
 
 **NOTE：**
 
-This attribute does not take effect in [textShadow](../arkts-apis/arkts-arkui-text-textattribute-i.md/arkts-arkui-text-textattribute-i.md#textshadow).
+This attribute does not take effect in [textShadow](TextAttribute#textShadow).
 
 **Type:** boolean
 
@@ -89,7 +89,7 @@ Unit: px
 
 **NOTE：**
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetX** is of the Resource type, its value must be of the number type.
 
@@ -121,7 +121,7 @@ Unit: px
 
 **NOTE：**
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **offsetY** is of the Resource type, its value must be of the number type.
 
@@ -155,7 +155,7 @@ Unit: px
 
 A value less than 0 evaluates to the value **0**.
 
-To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
+To use a value in the unit of vp, you can use [vp2px](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px) to convert the value.
 
 If **radius** is of the Resource type, its value must be of the number type.
 

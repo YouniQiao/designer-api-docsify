@@ -1,7 +1,7 @@
 # StartOptions
 
 StartOptions可以作为启动UIAbility接口（例如  
-[startAbility()](arkts-ability-uiabilitycontext-c.md#startability)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
+[startAbility()](arkts-ability-uiabilitycontext-c.md#startAbility)）的入参，用于指定目标UIAbility启动时的选项，包括但不局限于窗口模式、目标UIAbility启动时所在的屏幕等。
 
 **起始版本：** 9
 
@@ -21,7 +21,7 @@ windowFocused?: boolean
 
 1.该功能仅在2in1和Tablet设备上生效。
 
-2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startability)中生效。
+2.仅在[UIAbilityContext.startAbility](arkts-ability-uiabilitycontext-c.md#startAbility)中生效。
 
 **类型：** boolean
 

@@ -12,7 +12,7 @@ Creates a directory. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir)
+**Substitutes:** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-unnamed-declare function mkdir(path: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function mkdir(path: string, mode?: number): Promise<void>-End-->
 
@@ -29,7 +29,7 @@ Creates a directory. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## mkdir
@@ -44,7 +44,7 @@ Creates a directory. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir)
+**Substitutes:** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -70,7 +70,7 @@ Creates a directory. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:mkdir](arkts-corefile-fileio-mkdir-f.md#mkdir)
+**Substitutes:** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-unnamed-declare function mkdir(path: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, mode: number, callback: AsyncCallback<void>): void-End-->
 

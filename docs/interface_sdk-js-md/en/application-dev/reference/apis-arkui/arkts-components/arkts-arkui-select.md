@@ -28,7 +28,7 @@ Select(options: Array<SelectOption>)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | Yes | Options of the drop-down menu. |
+| options | Array&lt;[SelectOption](arkts-arkui-selectoption-i.md)&gt; | Yes | Options of the drop-down menu. |
 
 ## Summary
 

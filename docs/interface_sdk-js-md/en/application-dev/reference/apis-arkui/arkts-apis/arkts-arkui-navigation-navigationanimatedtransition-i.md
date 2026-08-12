@@ -56,7 +56,7 @@ Configure the animations associated with custom transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transitionProxy | [NavigationTransitionProxy](../arkts-components/arkts-arkui-navigationtransitionproxy-i.md) | Yes |  |
+| transitionProxy | [NavigationTransitionProxy](arkts-arkui-navigation-navigationtransitionproxy-i.md) | Yes |  |
 
 ## isInteractive
 

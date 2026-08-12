@@ -2,7 +2,7 @@
 
 Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
-**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md)
+**Inheritance/Implementation:** TextPickerDialogOptionsExt extends [TextPickerOptions](arkts-arkui-textpicker-textpickeroptions-i.md#TextPickerOptions)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ alignment?: DialogAlignment
 
 Defines the dialog alignment of the screen.
 
-**Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**Type:** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **Since:** 23
 
@@ -206,7 +206,7 @@ defaultTextStyle?: TextPickerTextStyle
 
 Defines to set the default text style for options.
 
-**Type:** [TextPickerTextStyle](../arkts-components/arkts-arkui-textpickertextstyle-i.md)
+**Type:** [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
 
 **Since:** 23
 
@@ -246,7 +246,7 @@ disappearTextStyle?: TextPickerTextStyle
 
 Text style of disappearing items.
 
-**Type:** [TextPickerTextStyle](../arkts-components/arkts-arkui-textpickertextstyle-i.md)
+**Type:** [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
 
 **Since:** 23
 
@@ -352,7 +352,7 @@ offset?: Offset
 
 Defines the dialog offset.
 
-**Type:** [Offset](arkts-arkui-componentutils-offset-i.md)
+**Type:** Offset
 
 **Since:** 23
 
@@ -372,7 +372,7 @@ onAccept?: Callback<TextPickerResult>
 
 Called when the OK button in the dialog is clicked.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -412,7 +412,7 @@ onChange?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected in dialog.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -472,7 +472,7 @@ onEnterSelectedArea?: Callback<TextPickerResult>
 
 This event is triggered when an item enters the selected area in dialog.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -492,7 +492,7 @@ onScrollStop?: Callback<TextPickerResult>
 
 This event is triggered when a TextPicker text is selected and scrolling has stopped in dialog.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;TextPickerResult&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[TextPickerResult](arkts-arkui-textpicker-textpickerresult-i.md)&gt;
 
 **Since:** 23
 
@@ -574,7 +574,7 @@ selectedTextStyle?: TextPickerTextStyle
 
 Text style of selected items
 
-**Type:** [TextPickerTextStyle](../arkts-components/arkts-arkui-textpickertextstyle-i.md)
+**Type:** [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
 
 **Since:** 23
 
@@ -594,7 +594,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Defines the dialog's shadow.
 
-**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**Type:** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **Since:** 23
 
@@ -634,7 +634,7 @@ textStyle?: TextPickerTextStyle
 
 Text style of normal items
 
-**Type:** [TextPickerTextStyle](../arkts-components/arkts-arkui-textpickertextstyle-i.md)
+**Type:** [TextPickerTextStyle](arkts-arkui-textpicker-textpickertextstyle-i.md)
 
 **Since:** 23
 

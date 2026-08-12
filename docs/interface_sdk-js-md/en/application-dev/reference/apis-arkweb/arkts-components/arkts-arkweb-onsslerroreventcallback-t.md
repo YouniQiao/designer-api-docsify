@@ -20,5 +20,5 @@ The callback of ssl error event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sslErrorEvent | [SslErrorEvent](../arkts-apis/arkts-arkweb-web-sslerrorevent-i.md) | Yes | callback information of onSslErrorEvent. |
+| sslErrorEvent | [SslErrorEvent](arkts-arkweb-sslerrorevent-i.md) | Yes | callback information of onSslErrorEvent. |
 

@@ -12,7 +12,7 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#killProcessesByBundleName
+**替代接口：** [killProcessesByBundleName](ohos.app.ability.appManager/appManager#killProcessesByBundleName)
 
 **需要权限：** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -32,7 +32,7 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -63,7 +63,7 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#killProcessesByBundleName
+**替代接口：** [killProcessesByBundleName](ohos.app.ability.appManager/appManager#killProcessesByBundleName)
 
 **需要权限：** ohos.permission.CLEAN_BACKGROUND_PROCESSES
 

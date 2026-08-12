@@ -13,7 +13,7 @@ Defines an instance used to send data to the **PhotoPickerComponent**.
 ## Modules to Import
 
 ```TypeScript
-import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from '@kit.MediaLibraryKit';
 ```
 
 ## addData
@@ -22,7 +22,7 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 addData(dataType: DataType, data: Object): void
 ```
 
-Sends additional configuration data to the **PhotoPickerComponent**. The [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md) parameter identifies the type of data to send. In versions earlier than API version 23, only the **SET_BADGE_CONFIGS** type is supported.
+Sends additional configuration data to the **PhotoPickerComponent**. The [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md#DataType) parameter identifies the type of data to send. In versions earlier than API version 23, only the **SET_BADGE_CONFIGS** type is supported.
 
 **Since:** 21
 
@@ -61,7 +61,7 @@ This API is used by an application to obtain the complete data after a selection
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;CompletedResult&gt; |
+| Promise&lt;[CompletedResult](arkts-medialibrary-file-photopickercomponent-completedresult-c.md)&gt; |
 
 ## deleteData
 
@@ -69,7 +69,7 @@ This API is used by an application to obtain the complete data after a selection
 deleteData(dataType: DataType, data: Object): void
 ```
 
-Sends removal configuration data to the **PhotoPickerComponent**. The [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md) parameter identifies the type of data to send, and only the **SET_BADGE_CONFIGS** type is supported currently.
+Sends removal configuration data to the **PhotoPickerComponent**. The [DataType](arkts-medialibrary-file-photopickercomponent-datatype-e.md#DataType) parameter identifies the type of data to send, and only the **SET_BADGE_CONFIGS** type is supported currently.
 
 **Since:** 21
 
@@ -134,7 +134,7 @@ saveTrustedPhotoAssets(trustedUris: Array<string>, callback: AsyncCallback<Array
 ```
 
 Saves files in a URI list. Generally, this API is used together with  
-[replacePhotoPickerPreview](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md#replacephotopickerpreview) to save the new images or videos in the application sandbox path to Gallery.
+[replacePhotoPickerPreview](#replacePhotoPickerPreview) to save the new images or videos in the application sandbox path to Gallery.
 
 **Since:** 15
 
@@ -148,9 +148,9 @@ Saves files in a URI list. Generally, this API is used together with
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| trustedUris | Array&lt;string&gt; | Yes |
+| trustedUris | Array & lt;string & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes |
-| configs | Array&lt;photoAccessHelper.PhotoCreationConfig&gt; | No |
+| configs | Array & lt;photoAccessHelper.PhotoCreationConfig & gt; | No |
 | saveMode | [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No |
 
 ## saveTrustedPhotoAssetsEx
@@ -165,7 +165,7 @@ Saves files in a URI list. This API uses a promise to return the result.
 > **NOTE：**
 > 
 > This API is usually used together with
-> [replacePhotoPickerPreview](arkts-medialibrary-file-photopickercomponent-pickercontroller-c.md#replacephotopickerpreview) to save the new images or videos in
+> [replacePhotoPickerPreview](#replacePhotoPickerPreview) to save the new images or videos in
 > the application sandbox path to Gallery.
 
 **Since:** 23
@@ -182,15 +182,15 @@ Saves files in a URI list. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| trustedUris | Array&lt;string&gt; | Yes |
-| settings | Array&lt;photoAccessHelper.CreationSetting&gt; | No |
+| trustedUris | Array & lt;string & gt; | Yes |
+| settings | Array & lt;photoAccessHelper.CreationSetting & gt; | No |
 | saveMode | [SaveMode](arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 ## setData
 
@@ -267,14 +267,14 @@ This parameter takes effect only on the photo browser page. **NOT_MOVING_PHOTO**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800202](../errorcode-medialibrary.md#23800202-invalid-scenario-call) |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800202-invalid-scenario-call) |
+| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## setPhotoBrowserItem
 
@@ -319,7 +319,7 @@ Sets whether other UI elements are visible on the photo browser page. By default
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| elements | Array&lt;PhotoBrowserUIElement&gt; | Yes |
+| [elements](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-pagemediaentity-i.md) | Array&lt;[PhotoBrowserUIElement](arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md)&gt; | Yes |
 | isVisible | boolean | Yes |
 
 ## updatePickerOptions
@@ -348,4 +348,4 @@ Updates the attributes of the **PhotoPickerComponent**. This API uses a promise 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

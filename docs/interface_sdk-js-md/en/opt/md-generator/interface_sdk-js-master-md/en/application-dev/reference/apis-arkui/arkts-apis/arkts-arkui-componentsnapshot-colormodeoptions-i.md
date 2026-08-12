@@ -11,7 +11,7 @@ Defines the color space used for the snapshot.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## colorSpace
@@ -25,7 +25,7 @@ Color space used for the snapshot.
 If the target component's color space is known, specify it through **colorSpace** and set **isAuto** to **false**to achieve optimal snapshot quality.
 
 The value can be **DISPLAY_P3**, **SRGB**, or **DISPLAY_BT2020_SRGB** in  
-[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md).
+[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md#ColorSpace).
 
 Default value: **SRGB**
 
@@ -59,7 +59,7 @@ Default value: **false**
 For offscreen snapshots, this parameter can only be set to **false**. Otherwise, the error code 160004 will be returned.
 
 If `isAuto` is set to **true**, you are advised to set `waitUntilRenderFinished` in  
-[SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md) to **true** to ensure that the system can properly detect the used color space.
+[SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md#SnapshotOptions) to **true** to ensure that the system can properly detect the used color space.
 
 If the color space used by the component is uncertain, you are advised to set **isAuto** to **true** so that the system can automatically determine the color space to be used.
 

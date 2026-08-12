@@ -17,7 +17,7 @@ Checks whether a bundle has been installed.
 ## Modules to Import
 
 ```TypeScript
-import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from 'kits/@kit.AbilityKit';
+import { CheckPackageHasInstalledResponse, CheckPackageHasInstalledOptions } from '@kit.AbilityKit';
 ```
 
 ## complete

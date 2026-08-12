@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## startCollectLog
@@ -12,18 +12,18 @@ import { systemManager } from 'kits/@kit.MDMKit';
 function startCollectLog(admin: Want): Promise<void>
 ```
 
-Starts to collect the fault logs of the [FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md/arkts-performanceanalysis-faultlogger-faulttype-e.md) type that have been generated and stored on the device's hard disk. The fault logs, application service logs, and system runtime logs that are not stored on the hard disk cannot be collected.
+Starts to collect the fault logs of the [FaultType](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger-faulttype-e.md#FaultType) type that have been generated and stored on the device's hard disk. The fault logs, application service logs, and system runtime logs that are not stored on the hard disk cannot be collected.
 
 - After the API is called, the system starts a log collection task. The API returns a response immediately after  
 the task is started. The task may fail due to system performance constraints.  
 - This API can be called by multiple MDM apps. Logs collected by different MDM apps under different users are saved  
 separately and do not affect each other. Only one MDM app can start a log collection task at a time. If this API is called before the task is complete, the error code 9201009 is returned, and other MDM apps may call the API only after the task finishes.  
 - Upon task completion, the MDM app is notified via the  
-[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected)callback. The system mounts the collected log files to the MDM app sandbox path, enabling the MDM app to read the logs within the callback.  
+[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onLogCollected)callback. The system mounts the collected log files to the MDM app sandbox path, enabling the MDM app to read the logs within the callback.  
 - If the log collection task takes more than 5 minutes, the  
-[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onlogcollected)callback returns a task execution failure message.  
+[EnterpriseAdminExtensionAbility.onLogCollected](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onLogCollected)callback returns a task execution failure message.  
 - After the app obtains the logs, you are advised to call  
-[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md#finishlogcollected) to remove the collected logs.
+[systemManager.finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md#finishLogCollected) to remove the collected logs.
 
 **Since:** 23
 
@@ -53,11 +53,11 @@ separately and do not affect each other. Only one MDM app can start a log collec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9201009](../errorcode-enterpriseDeviceManager.md#9201009-failed-to-create-a-log-collection-task) | Collecting logs, please try again later. |
-| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9201009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201009-failed-to-create-a-log-collection-task) | Collecting logs, please try again later. |
+| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 
 ## Examples
 

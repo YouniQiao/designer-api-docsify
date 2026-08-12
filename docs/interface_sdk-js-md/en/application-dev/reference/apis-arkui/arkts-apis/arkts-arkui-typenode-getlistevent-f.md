@@ -28,5 +28,5 @@ Get the event instance of List node.
 
 | Type | Description |
 | --- | --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | Return the event instance of FrameNode, and return undefined if it does not exist. |
+| UIListEvent | Return the event instance of FrameNode, and return undefined if it does not exist. |
 

@@ -18,7 +18,7 @@ metaSourceTypes?: Array<MetaSourceType>
 
 元数据源类型，详见MetaSourceType。
 
-**类型：** Array&lt;MetaSourceType&gt;
+**类型：** Array&lt;[MetaSourceType](arkts-media-multimedia-media-metasourcetype-e-sys.md)&gt;
 
 **起始版本：** 12
 

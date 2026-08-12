@@ -1,7 +1,7 @@
 # ChildProcessOptions
 
 The module describes the startup configuration of a child process. When starting a child process through  
-[childProcessManager](arkts-app-ability-childprocessmanager.md), you can configure the startup configuration of the child process through **ChildProcessOptions**.
+[childProcessManager](arkts-app-ability-childprocessmanager.md#childProcessManager), you can configure the startup configuration of the child process through **ChildProcessOptions**.
 
 **Since:** 12
 
@@ -12,7 +12,7 @@ The module describes the startup configuration of a child process. When starting
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessOptions } from 'kits/@kit.AbilityKit';
+import { ChildProcessOptions } from '@kit.AbilityKit';
 ```
 
 ## isolationMode

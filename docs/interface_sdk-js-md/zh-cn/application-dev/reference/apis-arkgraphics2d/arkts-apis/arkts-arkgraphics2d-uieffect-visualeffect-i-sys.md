@@ -1,6 +1,6 @@
 # VisualEffect
 
-VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect)创建一个VisualEffect实例。
+VisualEffect效果类，用于将背景颜色混合、边框光照、颜色渐变等效果添加到组件上。在调用VisualEffect的方法前，需要先通过[createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createEffect)创建一个VisualEffect实例。
 
 **起始版本：** 12
 
@@ -40,7 +40,7 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 | 类型 | 说明 |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回添加了背景颜色更改效果的VisualEffect。 |
+| VisualEffect | 返回添加了背景颜色更改效果的VisualEffect。 |
 
 ## 示例
 
@@ -121,13 +121,13 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 
 | 类型 | 说明 |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回了具有边框光照效果的VisualEffect。 |
+| VisualEffect | 返回了具有边框光照效果的VisualEffect。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -262,13 +262,13 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 
 | 类型 | 说明 |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回具有颜色渐变效果的VisualEffect。 |
+| VisualEffect | 返回具有颜色渐变效果的VisualEffect。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 
@@ -365,13 +365,13 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| distortionParam | [DistortionParam](../../apis-arkui/arkts-components/arkts-arkui-distortionparam-i-sys.md) | 是 | 非线性形变效果的参数。 |
+| distortionParam | DistortionParam | 是 | 非线性形变效果的参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回添加了非线性形变效果的VisualEffect。 |
+| VisualEffect | 返回添加了非线性形变效果的VisualEffect。 |
 
 ## liquidMaterial
 
@@ -405,13 +405,13 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 
 | 类型 | 说明 |
 | --- | --- |
-| [VisualEffect](../../apis-arkui/arkts-components/arkts-arkui-visualeffect-t.md) | 返回具有材质效果的VisualEffect。 |
+| VisualEffect | 返回具有材质效果的VisualEffect。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | 权限校验失败，非系统应用调用系统接口。 |
 
 ## 示例
 

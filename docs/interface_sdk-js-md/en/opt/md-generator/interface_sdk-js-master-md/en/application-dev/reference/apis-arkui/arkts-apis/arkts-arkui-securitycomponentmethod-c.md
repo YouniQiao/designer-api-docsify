@@ -11,14 +11,14 @@ the security component specifications. For specific constraints,see [Constraints
 
 ## Key Enums
 
-- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md): Enumeration of icon and text  
+- [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md#SecurityComponentLayoutDirection): Enumeration of icon and text  
 layout directions for the security component. Specifies horizontal or vertical layout.  
-- [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md/arkts-arkui-buttontype-e.md): Enumeration of button styles for the security component.  
+- [ButtonType](@global:ButtonType): Enumeration of button styles for the security component.  
 Specifies capsule, circle, rounded rectangle, or normal button style.
 
 ## Key APIs
 
-- [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md): A collection of universal attribute methods for  
+- [SecurityComponentMethod](#SecurityComponentMethod): A collection of universal attribute methods for  
 security components. Configures layout, size, text, icon, color, border, and interaction attributes for specific security components.
 
 ## Child Components
@@ -175,7 +175,7 @@ Sets the alignment of the icon and text on the security component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| alignType | [Alignment](arkts-arkui-alignment-e.md) | Yes |
+| [alignType](arkts-arkui-atomicservice-atomicservicesearch-menualignparams-i.md) | [Alignment](arkts-arkui-alignment-e.md) | Yes |
 
 **Return value:**
 
@@ -219,7 +219,7 @@ Sets the alignment rules for child components within a relative container. This 
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer](./relative_container). In the horizontal direction, this method replaces **left** and **right** in the [alignRules](arkts-arkui-securitycomponentmethod-c.md#alignrules) above with **start**and **end**, respectively, allowing the layout to be mirrored in RTL mode. You are advised to use this method preferentially.
+Sets the alignment rules for child components within a relative container. This API takes effect only when the parent container is [RelativeContainer](./relative_container). In the horizontal direction, this method replaces **left** and **right** in the [alignRules](#alignRules) above with **start**and **end**, respectively, allowing the layout to be mirrored in RTL mode. You are advised to use this method preferentially.
 
 **Since:** 15
 
@@ -311,7 +311,7 @@ borderRadius(value: Dimension): T
 
 Sets the border radius of the security component.
 
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md/arkts-arkui-buttontype-e.md).
+The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](@global:ButtonType).
 
 **Since:** 10
 
@@ -343,7 +343,7 @@ borderRadius(radius: Dimension | BorderRadiuses): T
 
 Sets the border radius of the security component, allowing individual setting of the four corner radii.
 
-The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](../arkts-components/arkts-arkui-buttontype-e.md/arkts-arkui-buttontype-e.md).
+The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonType** is **Capsule** or **Circle**,the **borderRadius** setting does not take effect, and the corner radius is automatically determined by the button type. When the **ButtonType** is **Normal** or **ROUNDED_RECTANGLE**, the **borderRadius** setting takes effect.For details, see [ButtonType](@global:ButtonType).
 
 **Since:** 15
 
@@ -359,7 +359,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-units-borderradiuses-i.md) | Yes |
+| radius | [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Yes |
 
 **Return value:**
 
@@ -449,7 +449,7 @@ Sets the parameters of the chain in which the component is the head. This API ta
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| direction | [Axis](arkts-arkui-axis-e.md) | Yes |
+| direction | [Axis](arkts-arkui-enums-axis-e.md) | Yes |
 | style | [ChainStyle](../arkts-components/arkts-arkui-chainstyle-e.md) | Yes |
 
 **Return value:**
@@ -527,7 +527,7 @@ fallbackLineSpacing(enabled: boolean): T
 Enables adaptive line height based on the actual text height for multi-line text.
 
 The **fallbackLineSpacing** attribute is closely coupled with the **lineHeight** attribute of  
-[RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md/arkts-arkui-richeditortextstyle-i.md). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
+[RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle). When the **lineHeight** value is less than the actual rendering height of the text at the current font size, the **fallbackLineSpacing** value determines whether the line height should adapt based on the actual text height.
 
 **Since:** 26.0.0
 
@@ -693,7 +693,7 @@ Sets the font style of the text on the security component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | Yes |
+| value | [FontStyle](#fontstyle) | Yes |
 
 **Return value:**
 
@@ -769,12 +769,12 @@ heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 
 Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments.
 
-The security component text is laid out at [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise,adaptation proceeds according to the specified policy, as follows:&lt;br&gt;**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines) attribute for adjusting the text height. If the layout size with **maxLines**exceeds the layout constraints, the security component attempts to reduce the font size within the range of  
-[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
-[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.&lt;br&gt;**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the  
-[minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.&lt;br&gt;**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height.&lt;br&gt;If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
-[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the  
-[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines) attribute is set, the number of lines does not exceed the  
+The security component text is laid out at [maxFontSize](#maxFontSize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise,adaptation proceeds according to the specified policy, as follows:&lt;br&gt;**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxLines) attribute for adjusting the text height. If the layout size with **maxLines**exceeds the layout constraints, the security component attempts to reduce the font size within the range of  
+[minFontSize](#minFontSize) and  
+[maxFontSize](#maxFontSize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text.&lt;br&gt;**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the  
+[minFontSize](#minFontSize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxFontSize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxLines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text.&lt;br&gt;**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height.&lt;br&gt;If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and  
+[maxFontSize](#maxFontSize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the  
+[maxLines](#maxLines) attribute is set, the number of lines does not exceed the  
 **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines.If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**,  
 **maxLines**, **width**, and **height**.For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
 
@@ -942,7 +942,7 @@ Sets the anchor of the security component for moving the component with its top-
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](arkts-arkui-display-position-i.md) | Yes |
+| value | [Position](#position) | Yes |
 
 **Return value:**
 
@@ -958,7 +958,7 @@ maxFontScale(scale: number | Resource): T
 
 Sets the maximum font scale factor. When this API is invoked and the system font scaling causes the text to enlarge, the font scale factor will not exceed the set maximum scale factor.
 
-This API can be used in conjunction with [minFontScale](arkts-arkui-securitycomponentmethod-c.md#minfontscale).  
+This API can be used in conjunction with [minFontScale](#minFontScale).  
 **maxFontScale** controls the upper limit of the scale factor, and **minFontScale** controls the lower limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
@@ -991,8 +991,8 @@ maxFontSize(maxSize: number | string | Resource): T
 
 Sets the maximum font size for text display.
 
-- When used in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize) and  
-[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- When used in conjunction with [minFontSize](#minFontSize) and  
+[maxLines](#maxLines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
 - **maxFontSize** must be greater than **minFontSize**. If **maxFontSize** is less than **minFontSize**,  
 **minFontSize** will be treated as **maxFontSize**.  
 - When adaptive font size is effective, the **fontSize** setting does not take effect.  
@@ -1027,9 +1027,9 @@ Sets the maximum font size for text display.
 maxLines(line: number | Resource): T
 ```
 
-Sets the maximum number of lines for text. By default, text wraps automatically. When this attribute is specified,the text will display at most the specified number of lines. It can be used independently to limit text lines, or in conjunction with [minFontSize](arkts-arkui-securitycomponentmethod-c.md#minfontsize),  
-[maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize), and  
-[heightAdaptivePolicy](arkts-arkui-securitycomponentmethod-c.md#heightadaptivepolicy). When used with adaptive font size attributes, if the security component text is not fully displayed, the click will not trigger authorization. The  
+Sets the maximum number of lines for text. By default, text wraps automatically. When this attribute is specified,the text will display at most the specified number of lines. It can be used independently to limit text lines, or in conjunction with [minFontSize](#minFontSize),  
+[maxFontSize](#maxFontSize), and  
+[heightAdaptivePolicy](#heightAdaptivePolicy). When used with adaptive font size attributes, if the security component text is not fully displayed, the click will not trigger authorization. The  
 **maxLines** setting affects whether the text can be fully displayed, thereby affecting the authorization behavior of the security component.
 
 **Since:** 18
@@ -1062,7 +1062,7 @@ minFontScale(scale: number | Resource): T
 
 Sets the minimum font scale factor for the text. When this API is invoked and the system font scaling causes the text to shrink, the font scale factor will not fall below the set minimum scale factor.
 
-This API can be used in conjunction with [maxFontScale](arkts-arkui-securitycomponentmethod-c.md#maxfontscale).  
+This API can be used in conjunction with [maxFontScale](#maxFontScale).  
 **minFontScale** controls the lower limit of the scale factor and **maxFontScale** controls the upper limit. They can be set independently or together to precisely control font scaling.
 
 **Since:** 18
@@ -1095,8 +1095,8 @@ minFontSize(minSize: number | string | Resource): T
 
 Sets the minimum font size for text display.
 
-- When used in conjunction with [maxFontSize](arkts-arkui-securitycomponentmethod-c.md#maxfontsize) and  
-[maxLines](arkts-arkui-securitycomponentmethod-c.md#maxlines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
+- When used in conjunction with [maxFontSize](#maxFontSize) and  
+[maxLines](#maxLines), or in combination with layout size constraints, this attribute enables font size adaptation. Using this attribute alone will not take effect.  
 - **minFontSize** must be smaller than **maxFontSize**. If the set value is greater than **maxFontSize**,  
 **maxFontSize** is used instead.  
 - When **minFontSize** is less than or equal to 0, adaptive font size does not take effect.  
@@ -1148,7 +1148,7 @@ Sets the coordinate offset of the security component relative to its own layout 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](arkts-arkui-display-position-i.md) \| Edges \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Yes |
+| value | Position \| Edges \| [LocalizedEdges](arkts-arkui-localizededges-i.md) | Yes |
 
 **Return value:**
 
@@ -1208,7 +1208,7 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [Position](arkts-arkui-display-position-i.md) | Yes |
+| value | [Position](#position) | Yes |
 
 **Return value:**
 
@@ -1223,7 +1223,7 @@ size(value: SizeOptions): T
 ```
 
 Sets the width and height. If not set, the width and height adapt to the element content. The **size** method is used to set both width and height at the same time. To set the width or height individually, use the  
-[width](arkts-arkui-securitycomponentmethod-c.md#width) or [height](arkts-arkui-securitycomponentmethod-c.md#height) method.
+[width](#width) or [height](#height) method.
 
 **Since:** 11
 

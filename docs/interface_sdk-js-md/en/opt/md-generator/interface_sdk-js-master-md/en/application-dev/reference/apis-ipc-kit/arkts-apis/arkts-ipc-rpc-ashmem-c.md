@@ -12,7 +12,7 @@ Provides methods related to anonymous shared memory objects, including creating,
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## closeAshmem
@@ -78,7 +78,7 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -129,7 +129,7 @@ Creates an **Ashmem** object by copying the file descriptor of an existing **Ash
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 
@@ -162,7 +162,7 @@ Creates an **Ashmem** object with the specified name and size. This API is a sta
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](arkts-ipc-rpc-ashmem-c.md#create)()
+**Substitutes:** [create](create())
 
 <!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
 
@@ -209,7 +209,7 @@ Creates an **Ashmem** object by copying the file descriptor of an existing **Ash
 
 **Deprecated since:** 9
 
-**Substitutes:** [create](arkts-ipc-rpc-ashmem-c.md#create)()
+**Substitutes:** [create](create())
 
 <!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
 
@@ -290,7 +290,7 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [mapTypedAshmem](arkts-ipc-rpc-ashmem-c.md#maptypedashmem)(mapType:
+**Substitutes:** [mapTypedAshmem](mapTypedAshmem(mapType:)
 
 <!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
@@ -335,7 +335,7 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 **Deprecated since:** 9
 
-**Substitutes:** [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)()
+**Substitutes:** [mapReadWriteAshmem](#mapReadWriteAshmem)()
 
 <!--Device-Ashmem-mapReadAndWriteAshmem(): boolean--><!--Device-Ashmem-mapReadAndWriteAshmem(): boolean-End-->
 
@@ -374,7 +374,7 @@ Maps the shared file to the read-only virtual address space of the process.
 
 **Deprecated since:** 9
 
-**Substitutes:** [mapReadonlyAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadonlyashmem)()
+**Substitutes:** [mapReadonlyAshmem](#mapReadonlyAshmem)()
 
 <!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
@@ -419,7 +419,7 @@ Maps the shared file to the readable and writable virtual address space of the p
 
 | Error Code ID |
 | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
+| [1900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 ## Examples
 
@@ -456,7 +456,7 @@ Maps the shared file to the read-only virtual address space of the process.
 
 | Error Code ID |
 | --- |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
+| [1900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 ## Examples
 
@@ -499,8 +499,8 @@ Creates the shared file mapping on the virtual address space of this process. Th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900001](../errorcode-rpc.md#1900001-failed-to-call-mmap) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-failed-to-call-mmap) |
 
 ## Examples
 
@@ -530,13 +530,13 @@ Reads data from the shared file associated with this **Ashmem** object.
 > **NOTE：**
 > 
 > - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
+> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)(size:
+**Substitutes:** [readDataFromAshmem](readDataFromAshmem(size:)
 
 <!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
@@ -559,8 +559,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
 
 ## Examples
 
@@ -594,7 +594,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 > **NOTE：**
 > 
 > Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
+> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 11
 
@@ -619,8 +619,8 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900004](../errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-failed-to-read-data-from-the-shared-memory) |
 
 ## Examples
 
@@ -660,13 +660,13 @@ Reads data from the shared file associated with this **Ashmem** object.
 > **NOTE：**
 > 
 > - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
+> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)(size:
+**Substitutes:** [readDataFromAshmem](readDataFromAshmem(size:)
 
 <!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
 
@@ -717,7 +717,7 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 **Deprecated since:** 9
 
-**Substitutes:** [setProtectionType](arkts-ipc-rpc-ashmem-c.md#setprotectiontype)(protectionType:
+**Substitutes:** [setProtectionType](setProtectionType(protectionType:)
 
 <!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
 
@@ -775,8 +775,8 @@ Sets the protection level of the memory region to which the shared file is mappe
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900002](../errorcode-rpc.md#1900002-failed-to-call-ioctl) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900002-failed-to-call-ioctl) |
 
 ## Examples
 
@@ -834,13 +834,13 @@ Writes data to the shared file associated with this **Ashmem** object.
 > **NOTE：**
 > 
 > - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
+> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)(buf:
+**Substitutes:** [writeDataToAshmem](writeDataToAshmem(buf:)
 
 <!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
@@ -858,8 +858,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
 
 ## Examples
 
@@ -891,7 +891,7 @@ Writes data to the shared file associated with this **Ashmem** object.
 > **NOTE：**
 > 
 > Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
+> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 11
 
@@ -911,8 +911,8 @@ Writes data to the shared file associated with this **Ashmem** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900003](../errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [1900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-failed-to-write-data-to-the-shared-memory) |
 
 ## Examples
 
@@ -949,13 +949,13 @@ Writes data to the shared file associated with this **Ashmem** object.
 > **NOTE：**
 > 
 > - Before writing an **Ashmem** object, you need to call
-> [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem) for mapping.
+> [mapReadWriteAshmem](#mapReadWriteAshmem) for mapping.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)(buf:
+**Substitutes:** [writeDataToAshmem](writeDataToAshmem(buf:)
 
 <!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 

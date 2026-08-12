@@ -59,7 +59,7 @@ readonly request: NotificationRequest
 
 Notification content.
 
-**Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i-sys.md)
+**Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)
 
 **Since:** 7
 
@@ -131,7 +131,7 @@ readonly voiceContent?: VoiceContent
 
 Voice broadcast content of the notification.
 
-**Type:** [VoiceContent](arkts-notification-notificationsubscribe-voicecontent-t-sys.md)
+**Type:** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
 **Since:** 26.0.0
 

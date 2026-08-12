@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## enableBluetooth
@@ -18,7 +18,7 @@ Enables Bluetooth on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.enableBluetooth
+**Substitutes:** [enableBluetooth](ohos.bluetoothManager/bluetoothManager.enableBluetooth)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

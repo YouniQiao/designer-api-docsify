@@ -1,10 +1,10 @@
 # @ohos.util
 
-The util module provides common utility functions, such as [TextEncoder](arkts-arkts-util-textencoder-c.md) and  
-[TextDecoder](arkts-arkts-util-textdecoderoptions-i.md) for string encoding and decoding,  
-[RationalNumber&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-rationalnumber-c.md) for rational number operations,  
-[LRUCache&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md) for cache management, [ScopeHelper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-scopehelper-c.md)for range determination, [Base64Helper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-base64helper-c.md) for Base64 encoding and decoding,  
-[types&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-types-c.md) for built-in object type check, and [Aspect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkts-util-aspect-c.md)for instrumentation and replacement on methods.
+The util module provides common utility functions, such as [TextEncoder](arkts-arkts-util-textencoder-c.md#TextEncoder) and  
+[TextDecoder](arkts-arkts-util-textdecoderoptions-i.md#TextDecoderOptions) for string encoding and decoding,  
+[RationalNumber&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-rationalnumber-c.md#RationalNumber) for rational number operations,  
+[LRUCache&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-lrucache-c.md#LRUCache) for cache management, [ScopeHelper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-scopehelper-c.md#ScopeHelper)for range determination, [Base64Helper&lt;sup&gt;9+&lt;/sup&gt;](arkts-arkts-util-base64helper-c.md#Base64Helper) for Base64 encoding and decoding,  
+[types&lt;sup&gt;8+&lt;/sup&gt;](arkts-arkts-util-types-c.md#types) for built-in object type check, and [Aspect&lt;sup&gt;11+&lt;/sup&gt;](arkts-arkts-util-aspect-c.md#Aspect)for instrumentation and replacement on methods.
 
 **Since:** 7
 
@@ -15,7 +15,7 @@ The util module provides common utility functions, such as [TextEncoder](arkts-a
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## Summary

@@ -21,4 +21,4 @@ declare type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | event | [ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md) | 是 |
-| node | [FrameNode](arkts-arkui-framenode-t.md) | 否 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 否 |

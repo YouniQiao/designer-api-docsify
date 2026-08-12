@@ -18,7 +18,7 @@ Defines a block consisting of one or more characters with the same font.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## bounds
@@ -74,7 +74,7 @@ Creates a **TextBlob** object from the text. The coordinates of each font in the
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## makeFromRunBuffer
 
@@ -94,9 +94,9 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| pos | Array&lt;TextBlobRunBuffer&gt; | Yes |
+| pos | Array&lt;[TextBlobRunBuffer](arkts-arkgraphics2d-drawing-textblobrunbuffer-i.md)&gt; | Yes |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
-| [bounds](#bounds) | common2D.Rect | No |
+| [bounds](arkts-arkgraphics2d-drawing-textblob-c.md) | common2D.Rect | No |
 
 **Return value:**
 
@@ -108,7 +108,7 @@ Creates a **TextBlob** object based on the **RunBuffer** information.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## makeFromString
 
@@ -130,7 +130,7 @@ Converts a value of the string type into a **TextBlob** object.
 | --- | --- | --- |
 | text | string | Yes |
 | font | [Font](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | Yes |
-| encoding | [TextEncoding](arkts-arkgraphics2d-drawing-textencoding-e.md) | No |
+| encoding | [TextEncoding](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-textencoding-e.md) | No |
 
 **Return value:**
 
@@ -142,7 +142,7 @@ Converts a value of the string type into a **TextBlob** object.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## uniqueID
 

@@ -40,7 +40,7 @@ readonly appDistributionType: string
 Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**:application installed from AppGallery. &lt;!--RP1--&gt;&lt;!--RP1End--&gt;&lt;li&gt;**enterprise**: enterprise internal application.These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. &lt;!--RP2--  
 &gt; &lt;!--RP2End--&gt;&lt;li&gt;**enterprise_mdm**: enterprise
 [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application). &lt;!--Del--&gt;To install a common enterprise application, you must have  
-[administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md/arkts-mdm-adminmanager-enableadmin-f.md#enableadmin). &lt;!--DelEnd--&gt;&lt;!--RP3--&gt;&lt;!--RP3End--&gt;&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) and offline installer. &lt;!--RP4--&gt;&lt;!--RP4End--&gt;&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. &lt;!--RP5--&gt;&lt;!--RP5End--&gt;&lt;li&gt;none: others.
+[administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md#enableAdmin). &lt;!--DelEnd--&gt;&lt;!--RP3--&gt;&lt;!--RP3End--&gt;&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-application-device-administrator-application) and offline installer. &lt;!--RP4--&gt;&lt;!--RP4End--&gt;&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. &lt;!--RP5--&gt;&lt;!--RP5End--&gt;&lt;li&gt;none: others.
 
 **Type:** string
 
@@ -261,7 +261,7 @@ readonly descriptionResource: Resource
 ```
 
 Resource information of the application description. The resource information obtained contains the bundle name,module name, and ID of the resource. You can call  
-[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)to obtain the resource details.
+[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent)to obtain the resource details.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -344,7 +344,7 @@ readonly iconResource: Resource
 ```
 
 Resource information of the application icon. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call  
-[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)to obtain the resource details.
+[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent)to obtain the resource details.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -394,7 +394,7 @@ readonly label: string
 Application label. It corresponds to the **label** field in the  
 [app.json5](../../../quick-start/app-configuration-file.md) file. For details about **label**, see the  
 **labelResource** field in this table. Starting from API version 20, if  
-[bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getabilityinfo) is used to obtain application information, this field is the application name visible to users, instead of the resource descriptor.
+[bundleManager.getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md#getAbilityInfo) is used to obtain application information, this field is the application name visible to users, instead of the resource descriptor.
 
 **Type:** string
 
@@ -435,7 +435,7 @@ readonly labelResource: Resource
 ```
 
 Resource information of the application label. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call  
-[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent)to obtain the resource details.
+[getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getMediaContent)to obtain the resource details.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
@@ -457,7 +457,7 @@ readonly metadata: Map<string, Array<Metadata>>
 
 Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and  
 **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 Note: Supported since API version 9 and deprecated since API version 10. You are advised to use **metadataArray**instead.
 
@@ -469,7 +469,7 @@ Note: Supported since API version 9 and deprecated since API version 10. You are
 
 **Deprecated since:** 10
 
-**Substitutes:** [ApplicationInfo#metadataArray](arkts-ability-applicationinfo-i.md#metadataarray)
+**Substitutes:** [metadataArray](#metadataArray)
 
 <!--Device-ApplicationInfo-readonly metadata: Map<string, Array<Metadata>>--><!--Device-ApplicationInfo-readonly metadata: Map<string, Array<Metadata>>-End-->
 
@@ -483,9 +483,9 @@ readonly metadataArray: Array<ModuleMetadata>
 
 Metadata of the application. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** and  
 **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
-**Type:** Array&lt;ModuleMetadata&gt;
+**Type:** Array&lt;[ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md)&gt;
 
 **Since:** 10
 
@@ -562,7 +562,7 @@ readonly permissions: Array<string>
 
 Permissions required for accessing the application. The permissions can be obtained by passing in  
 **GET_BUNDLE_INFO_WITH_APPLICATION** and **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags**parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself).
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;string&gt;
 
@@ -602,7 +602,7 @@ Process name.
 readonly releaseType: string
 ```
 
-Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md/arkts-deviceinfo.md)) to determine the compatibility.
+Release type of the SDK used for application packing. Currently, the SDK release types include Canary, Beta, and Release. Each of the Canary and Beta releases can be distinguished by a sequential number, such as Canary1, Canary2, Beta1, and Beta2. You can compare the SDK release type on which application packaging depends and the OS release type (specified by [deviceInfo.distributionOSReleaseType](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#deviceInfo)) to determine the compatibility.
 
 **Type:** string
 

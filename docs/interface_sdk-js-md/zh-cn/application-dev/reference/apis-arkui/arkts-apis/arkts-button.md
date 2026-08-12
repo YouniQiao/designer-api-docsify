@@ -27,8 +27,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
-| [ButtonConfiguration](arkts-arkui-button-buttonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。 |
+| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) | 除支持[通用属性](common)外，还支持以下属性： |
+| [ButtonConfiguration](arkts-arkui-button-buttonconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。 |
 | [ButtonLabelStyle](arkts-arkui-button-buttonlabelstyle-i.md) | 按钮中文本的显示样式。 |
 | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 按钮的样式。 |
 

@@ -6,8 +6,8 @@
 > 
 > - This component can be used only in the stage model.
 > 
-> - If the **ComposeTitleBar** component has [universal attributes](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) and
-> [universal events](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md) configured, the compiler toolchain automatically
+> - If the **ComposeTitleBar** component has [universal attributes](./@internal/component/ets/common) and
+> [universal events](./@internal/component/ets/common) configured, the compiler toolchain automatically
 > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
 > rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and
 > universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes
@@ -24,7 +24,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBar, ComposeTitleBarMenuItem } from 'kits/@kit.ArkUI';
+import { ComposeTitleBar, ComposeTitleBarMenuItem } from '@kit.ArkUI';
 ```
 
 ## item
@@ -55,7 +55,7 @@ menuItems?: Array<ComposeTitleBarMenuItem>
 
 List of menu items on the right.
 
-**Type:** Array&lt;ComposeTitleBarMenuItem&gt;
+**Type:** Array&lt;[ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
 

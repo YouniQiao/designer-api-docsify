@@ -13,7 +13,7 @@ Parameters for checking certificate revocation status.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadCrl
@@ -83,7 +83,7 @@ crls?: Array<X509CRL>
 
 CRL list. Maximum count: 100.
 
-**Type:** Array&lt;X509CRL&gt;
+**Type:** Array&lt;[X509CRL](arkts-devicecertificate-cert-x509crl-i.md)&gt;
 
 **Since:** 26.0.0
 
@@ -151,7 +151,7 @@ revocationFlags: Array<CertRevocationFlag>
 
 Revocation check flag. Array length range: [1,4]. The array must contain either CERT_REVOCATION_CRL_CHECK or CERT_REVOCATION_OCSP_CHECK.
 
-**Type:** Array&lt;CertRevocationFlag&gt;
+**Type:** Array&lt;[CertRevocationFlag](arkts-devicecertificate-cert-certrevocationflag-e.md)&gt;
 
 **Since:** 26.0.0
 

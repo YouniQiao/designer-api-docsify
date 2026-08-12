@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getAltitude
@@ -18,7 +18,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)(seaPressure:
+**Substitutes:** [getDeviceAltitude](sensor.getDeviceAltitude(seaPressure:)
 
 <!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number, callback: AsyncCallback<number>): void-End-->
 
@@ -60,7 +60,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getDeviceAltitude](arkts-sensorservice-sensor-getdevicealtitude-f.md#getdevicealtitude)(seaPressure:
+**Substitutes:** [getDeviceAltitude](sensor.getDeviceAltitude(seaPressure:)
 
 <!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>--><!--Device-sensor-function getAltitude(seaPressure: number, currentPressure: number): Promise<number>-End-->
 
@@ -77,7 +77,7 @@ Obtains the altitude at which the device is located based on the sea-level atmos
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

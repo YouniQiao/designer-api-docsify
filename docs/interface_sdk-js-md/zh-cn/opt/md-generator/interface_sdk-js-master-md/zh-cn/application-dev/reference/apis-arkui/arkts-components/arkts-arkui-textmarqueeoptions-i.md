@@ -162,7 +162,7 @@ spacing?: LengthMetrics
 
 默认值：48.0vp
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 23
 

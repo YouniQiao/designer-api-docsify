@@ -28,7 +28,7 @@ function getDefaultDisplaySync(): Display
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: Display is not created or destroyed. |
+| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: Display is not created or destroyed. |
 
 ## 示例
 

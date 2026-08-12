@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.request:request.File](arkts-basicservices-request-file-i.md)
+**Substitutes:** [File](arkts-basicservices-request-file-i.md#File)
 
 <!--Device-unnamed-export interface RequestFile--><!--Device-unnamed-export interface RequestFile-End-->
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from 'kits/@kit.BasicServicesKit';
+import { UploadResponse, RequestData, DownloadRequestOptions, DownloadResponse, RequestFile, OnDownloadCompleteOptions, OnDownloadCompleteResponse, UploadRequestOptions } from '@kit.BasicServicesKit';
 ```
 
 ## filename
@@ -34,7 +34,7 @@ File name in the header when **multipart** is used.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.FileSpec.filename
+**Substitutes:** [filename](ohos.request.agent.FileSpec.filename)
 
 <!--Device-RequestFile-filename?: string--><!--Device-RequestFile-filename?: string-End-->
 
@@ -56,7 +56,7 @@ Name of a form item when **multipart** is used. The default value is **file**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.FormItem.name
+**Substitutes:** [name](ohos.request.agent.FormItem.name)
 
 <!--Device-RequestFile-name?: string--><!--Device-RequestFile-name?: string-End-->
 
@@ -78,7 +78,7 @@ Type of the file content. By default, the type is obtained based on the extensio
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.FileSpec.contentType
+**Substitutes:** [contentType](ohos.request.agent.FileSpec.contentType)
 
 <!--Device-RequestFile-type?: string--><!--Device-RequestFile-type?: string-End-->
 
@@ -100,7 +100,7 @@ Local path for storing files.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.request.agent.FileSpec.path
+**Substitutes:** [path](ohos.request.agent.FileSpec.path)
 
 <!--Device-RequestFile-uri: string--><!--Device-RequestFile-uri: string-End-->
 

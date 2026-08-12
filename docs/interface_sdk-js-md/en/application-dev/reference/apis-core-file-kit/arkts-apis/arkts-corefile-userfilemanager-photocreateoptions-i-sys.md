@@ -8,7 +8,7 @@ Defines the options for creating an image or video asset.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md)
+**Substitutes:** [PhotoCreateOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#PhotoCreateOptions)
 
 <!--Device-userFileManager-interface PhotoCreateOptions--><!--Device-userFileManager-interface PhotoCreateOptions-End-->
 
@@ -19,7 +19,7 @@ Defines the options for creating an image or video asset.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from 'kits/@kit.CoreFileKit';
+import { userFileManager } from '@kit.CoreFileKit';
 ```
 
 ## cameraShotKey
@@ -40,7 +40,7 @@ This parameter is available only for the system camera, and the key value is def
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoCreateOptions.cameraShotKey](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#camerashotkey)
+**Substitutes:** [cameraShotKey](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#cameraShotKey)
 
 <!--Device-PhotoCreateOptions-cameraShotKey?: string--><!--Device-PhotoCreateOptions-cameraShotKey?: string-End-->
 
@@ -64,7 +64,7 @@ Subtype of the image or video.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.PhotoCreateOptions.subType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md/arkts-medialibrary-photoaccesshelper-photocreateoptions-i-sys.md#subtype)
+**Substitutes:** [subType](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoCreateOptions.subType)
 
 <!--Device-PhotoCreateOptions-subType?: PhotoSubType--><!--Device-PhotoCreateOptions-subType?: PhotoSubType-End-->
 

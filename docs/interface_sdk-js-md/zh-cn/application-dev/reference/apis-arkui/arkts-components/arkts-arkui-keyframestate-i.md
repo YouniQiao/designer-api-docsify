@@ -47,11 +47,11 @@ curve?: Curve | string | ICurve
 
 **说明：**
 
-由于[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md/arkts-arkui-curves-springmotion-f.md#springmotion)、  
-[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md/arkts-arkui-curves-responsivespringmotion-f.md#responsivespringmotion)、  
-[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md/arkts-arkui-curves-interpolatingspring-f.md#interpolatingspring)曲线时长不生效，故不支持这三种曲线。
+由于[springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springMotion)、  
+[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion)、  
+[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring)曲线时长不生效，故不支持这三种曲线。
 
-**类型：** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
+**类型：** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
 **默认值：** Curve.EaseInOut
 

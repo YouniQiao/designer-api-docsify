@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from 'kits/@kit.MDMKit';
+import { adminManager } from '@kit.MDMKit';
 ```
 
 ## startAdminProvision
@@ -33,14 +33,14 @@ Enables the device administrator application to open a page for the BYOD adminis
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | type | [AdminType](arkts-mdm-adminmanager-admintype-e.md) | Yes | Type of the activated device administrator application. Only the **ADMIN_TYPE_BYOD** type is supported. |
 | context | common.Context | Yes | Context information of the administrator application. |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes | Custom parameters. The key value must contain **activateId** and may optionally include **customizedInfo** and **localDeactivationPolicy**. &lt;br&gt;- **activateId**: project activation ID. &lt;br&gt;- **customizedInfo**: enterprise-defined information. &lt;br&gt;- **localDeactivationPolicy**: local deactivation delay (unit: hour). This parameter is supported since API version 22. |
+| parameters | Record&lt;string, string&gt; | Yes | Custom parameters. The key value must contain **activateId** and may optionally include **customizedInfo** and **localDeactivationPolicy**. &lt;br&gt;- **activateId**: project activation ID. &lt;br&gt;- **customizedInfo**: enterprise-defined information. &lt;br&gt;- **localDeactivationPolicy**: local deactivation delay (unit: hour). This parameter is supported since API version 22. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 

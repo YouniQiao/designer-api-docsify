@@ -13,7 +13,7 @@ Construct a **ProcessManager** object.
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## exit
@@ -252,7 +252,7 @@ Sends a signal to the specified process to terminate it. Only the current proces
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| signal | number | Yes |
+| [signal](arkts-arkts-locks-asynclockoptions-c.md) | number | Yes |
 | pid | number | Yes |
 
 **Return value:**

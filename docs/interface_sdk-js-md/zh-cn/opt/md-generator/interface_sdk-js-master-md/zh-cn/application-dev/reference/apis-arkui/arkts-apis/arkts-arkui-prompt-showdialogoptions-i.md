@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowDialogOptions
+**替代接口：** [ShowDialogOptions](ohos.promptAction/promptAction.ShowDialogOptions)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -26,7 +26,7 @@ buttons?: [Button, Button?, Button?]
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowDialogOptions#buttons
+**替代接口：** [buttons](ohos.promptAction/promptAction.ShowDialogOptions#buttons)
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -46,7 +46,7 @@ message?: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowDialogOptions#message
+**替代接口：** [message](ohos.promptAction/promptAction.ShowDialogOptions#message)
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -66,7 +66,7 @@ title?: string
 
 **废弃版本：** 9
 
-**替代接口：** ohos.promptAction/promptAction.ShowDialogOptions#title
+**替代接口：** [title](ohos.promptAction/promptAction.ShowDialogOptions#title)
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

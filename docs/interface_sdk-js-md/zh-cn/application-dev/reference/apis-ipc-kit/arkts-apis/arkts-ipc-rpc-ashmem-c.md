@@ -92,7 +92,7 @@ static create(name: string, size: int): Ashmem
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The Ashmem name passed is empty; 4.The Ashmem size passed is less than or equal to 0. |
 
 ## 示例
 
@@ -145,7 +145,7 @@ static create(ashmem: Ashmem): Ashmem
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The passed parameter is not an Ashmem object; 3.The ashmem instance for obtaining packaging is empty. |
 
 ## 示例
 
@@ -180,7 +180,7 @@ static createAshmem(name: string, size: number): Ashmem
 
 **废弃版本：** 9
 
-**替代接口：** [create](arkts-ipc-rpc-ashmem-c.md#create)()
+**替代接口：** [create](create())
 
 <!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
 
@@ -229,7 +229,7 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 
 **废弃版本：** 9
 
-**替代接口：** [create](arkts-ipc-rpc-ashmem-c.md#create)()
+**替代接口：** [create](create())
 
 <!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
 
@@ -320,7 +320,7 @@ mapAshmem(mapType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapTypedAshmem](arkts-ipc-rpc-ashmem-c.md#maptypedashmem)(mapType:
+**替代接口：** [mapTypedAshmem](mapTypedAshmem(mapType:)
 
 <!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
@@ -367,7 +367,7 @@ mapReadAndWriteAshmem(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)()
+**替代接口：** [mapReadWriteAshmem](#mapReadWriteAshmem)()
 
 <!--Device-Ashmem-mapReadAndWriteAshmem(): boolean--><!--Device-Ashmem-mapReadAndWriteAshmem(): boolean-End-->
 
@@ -408,7 +408,7 @@ mapReadOnlyAshmem(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapReadonlyAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadonlyashmem)()
+**替代接口：** [mapReadonlyAshmem](#mapReadonlyAshmem)()
 
 <!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
@@ -455,7 +455,7 @@ mapReadWriteAshmem(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
+| [1900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
 
 ## 示例
 
@@ -494,7 +494,7 @@ mapReadonlyAshmem(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
+| [1900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
 
 ## 示例
 
@@ -545,8 +545,8 @@ mapTypedAshmem(mapType: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
-| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The passed mapType exceeds the maximum protection level. |
+| [1900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) | Failed to call mmap. |
 
 ## 示例
 
@@ -575,7 +575,7 @@ readAshmem(size: number, offset: number): number[]
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 9
 
@@ -583,7 +583,7 @@ readAshmem(size: number, offset: number): number[]
 
 **废弃版本：** 11
 
-**替代接口：** [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)(size:
+**替代接口：** [readDataFromAshmem](readDataFromAshmem(size:)
 
 <!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
@@ -606,8 +606,8 @@ readAshmem(size: number, offset: number): number[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) | Failed to read data from the shared memory. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-共享内存读数据失败) | Failed to read data from the shared memory. |
 
 ## 示例
 
@@ -646,7 +646,7 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 11
 
@@ -673,8 +673,8 @@ readDataFromAshmem(size: int, offset: int): ArrayBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) | Failed to read data from the shared memory. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-共享内存读数据失败) | Failed to read data from the shared memory. |
 
 ## 示例
 
@@ -713,7 +713,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 8
 
@@ -721,7 +721,7 @@ readFromAshmem(size: number, offset: number): number[]
 
 **废弃版本：** 9
 
-**替代接口：** [readDataFromAshmem](arkts-ipc-rpc-ashmem-c.md#readdatafromashmem)(size:
+**替代接口：** [readDataFromAshmem](readDataFromAshmem(size:)
 
 <!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
 
@@ -774,7 +774,7 @@ setProtection(protectionType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setProtectionType](arkts-ipc-rpc-ashmem-c.md#setprotectiontype)(protectionType:
+**替代接口：** [setProtectionType](setProtectionType(protectionType:)
 
 <!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
 
@@ -840,8 +840,8 @@ setProtectionType(protectionType: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900002](../errorcode-rpc.md#1900002-系统调用ioctl失败) | Failed to call ioctl. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900002-系统调用ioctl失败) | Failed to call ioctl. |
 
 ## 示例
 
@@ -900,7 +900,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 9
 
@@ -908,7 +908,7 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 **废弃版本：** 11
 
-**替代接口：** [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)(buf:
+**替代接口：** [writeDataToAshmem](writeDataToAshmem(buf:)
 
 <!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
@@ -926,8 +926,8 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
-| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) | Failed to write data to the shared memory. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The element does not exist in the array. |
+| [1900003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-共享内存写数据失败) | Failed to write data to the shared memory. |
 
 ## 示例
 
@@ -964,7 +964,7 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 11
 
@@ -986,8 +986,8 @@ writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
-| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) | Failed to write data to the shared memory. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information. |
+| [1900003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-共享内存写数据失败) | Failed to write data to the shared memory. |
 
 ## 示例
 
@@ -1023,7 +1023,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 > **说明：**
 > 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](arkts-ipc-rpc-ashmem-c.md#mapreadwriteashmem)进行映射。
+> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 8
 
@@ -1031,7 +1031,7 @@ writeToAshmem(buf: number[], size: number, offset: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeDataToAshmem](arkts-ipc-rpc-ashmem-c.md#writedatatoashmem)(buf:
+**替代接口：** [writeDataToAshmem](writeDataToAshmem(buf:)
 
 <!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 

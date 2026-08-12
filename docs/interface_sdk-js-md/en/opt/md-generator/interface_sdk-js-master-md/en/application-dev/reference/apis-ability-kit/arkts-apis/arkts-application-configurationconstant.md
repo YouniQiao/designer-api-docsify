@@ -6,7 +6,7 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.ConfigurationConstant/ConfigurationConstant
+**Substitutes:** [ConfigurationConstant/ConfigurationConstant](ohos.app.ability.ConfigurationConstant/ConfigurationConstant)
 
 <!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
 

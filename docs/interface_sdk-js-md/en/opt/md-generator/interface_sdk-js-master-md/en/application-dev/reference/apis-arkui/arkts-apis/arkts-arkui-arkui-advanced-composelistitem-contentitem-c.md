@@ -11,7 +11,7 @@ Defines elements for the left and center areas of the **ComposeListItem** compon
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from 'kits/@kit.ArkUI';
+import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from '@kit.ArkUI';
 ```
 
 ## description

@@ -1,7 +1,7 @@
 # Want
 
 Want是对象间信息传递的载体, 可以用于应用组件间的信息传递。 Want的使用场景之一是作为  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startability)的参数, 其包含了指定的启动目标, 以及启动时需携带的相关数据, 如bundleName和abilityName字段分别指明目标Ability所在应用的Bundle名称以及对应包内的Ability名称。当Ability A需要启动Ability B并传入一些数据时, 可使用Want作为载体将这些数据传递给Ability B。
+[startAbility](./application/UIAbilityContext:UIAbilityContext.startAbility(want: Want, callback: AsyncCallback&lt;void&gt;))的参数, 其包含了指定的启动目标, 以及启动时需携带的相关数据, 如bundleName和abilityName字段分别指明目标Ability所在应用的Bundle名称以及对应包内的Ability名称。当Ability A需要启动Ability B并传入一些数据时, 可使用Want作为载体将这些数据传递给Ability B。
 
 **起始版本：** 6
 
@@ -9,7 +9,7 @@ Want是对象间信息传递的载体, 可以用于应用组件间的信息传�
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want](arkts-ability-want-want-i.md)
+**替代接口：** [Want](arkts-ability-app-ability-want-want-c.md#Want)
 
 <!--Device-unnamed-export declare interface Want--><!--Device-unnamed-export declare interface Want-End-->
 
@@ -31,7 +31,7 @@ abilityName?: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.abilityName](arkts-ability-want-want-i.md#abilityname)
+**替代接口：** [abilityName](arkts-ability-app-ability-want-want-c.md#abilityName)
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
@@ -44,7 +44,7 @@ action?: string
 ```
 
 表示要执行的通用操作（如：查看、分享、应用详情）。在隐式Want中，您可以定义该字段，配合uri或parameters来表示对数据要执行的操作。具体参考：  
-[action说明](arkts-ability-wantconstant-action-depr-e.md)。隐式Want定义及匹配规则参考：  
+[action说明](arkts-ability-wantconstant-action-depr-e.md#Action)。隐式Want定义及匹配规则参考：  
 [显式Want与隐式Want匹配规则](../../../application-models/explicit-implicit-want-mappings.md)。
 
 **类型：** string
@@ -55,7 +55,7 @@ action?: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.action](arkts-ability-want-want-i.md#action)
+**替代接口：** [action](arkts-ability-app-ability-want-want-c.md#action)
 
 <!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
@@ -77,7 +77,7 @@ bundleName?: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.bundleName](arkts-ability-want-want-i.md#bundlename)
+**替代接口：** [bundleName](arkts-ability-app-ability-want-want-c.md#bundleName)
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
@@ -99,7 +99,7 @@ deviceId?: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.deviceId](arkts-ability-want-want-i.md#deviceid)
+**替代接口：** [deviceId](arkts-ability-app-ability-want-want-c.md#deviceId)
 
 <!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
@@ -121,7 +121,7 @@ entities?: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.entities](arkts-ability-want-want-i.md#entities)
+**替代接口：** [entities](arkts-ability-app-ability-want-want-c.md#entities)
 
 <!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
@@ -133,7 +133,7 @@ entities?: Array<string>
 flags?: number
 ```
 
-表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-e.md)。
+表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-depr-e.md#Flags)。
 
 **类型：** number
 
@@ -143,7 +143,7 @@ flags?: number
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.flags](arkts-ability-want-want-i.md#flags)
+**替代接口：** [flags](arkts-ability-app-ability-want-want-c.md#flags)
 
 <!--Device-Want-flags?: number--><!--Device-Want-flags?: number-End-->
 
@@ -175,7 +175,7 @@ ohos.aafwk.param.callerUid 表示[bundleInfo](js-apis-bundle-BundleInfo.md#bundl
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.parameters](arkts-ability-want-want-i.md#parameters)
+**替代接口：** [parameters](arkts-ability-app-ability-want-want-c.md#parameters)
 
 <!--Device-Want-parameters?: { [key: string]: any }--><!--Device-Want-parameters?: { [key: string]: any }-End-->
 
@@ -197,7 +197,7 @@ type?: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.type](arkts-ability-want-want-i.md#type)
+**替代接口：** [type](arkts-ability-app-ability-want-want-c.md#type)
 
 <!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
@@ -219,7 +219,7 @@ uri?: string
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.app.ability.Want:Want.uri](arkts-ability-want-want-i.md#uri)
+**替代接口：** [uri](arkts-ability-app-ability-want-want-c.md#uri)
 
 <!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 

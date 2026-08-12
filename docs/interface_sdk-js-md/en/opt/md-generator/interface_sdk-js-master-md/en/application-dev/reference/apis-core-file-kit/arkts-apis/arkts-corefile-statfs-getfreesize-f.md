@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { statfs } from 'kits/@kit.CoreFileKit';
+import { statfs } from '@kit.CoreFileKit';
 ```
 
 ## getFreeSize
@@ -30,7 +30,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **Error codes:**
 

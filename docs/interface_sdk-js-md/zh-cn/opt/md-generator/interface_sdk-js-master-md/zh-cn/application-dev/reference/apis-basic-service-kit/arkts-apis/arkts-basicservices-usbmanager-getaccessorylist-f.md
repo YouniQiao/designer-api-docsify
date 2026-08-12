@@ -18,14 +18,14 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 | 类型 |
 | --- |
-| Array&lt;Readonly&lt;USBAccessory&gt;&gt; |
+| Array&lt;Readonly&lt;[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [14400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
 
 ## 示例
 

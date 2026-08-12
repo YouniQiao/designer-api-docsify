@@ -15,7 +15,7 @@ Provides APIs for performing cloud database operations.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from 'kits/@kit.ArkData';
+import { cloudExtension } from '@kit.ArkData';
 ```
 
 ## delete
@@ -44,13 +44,13 @@ Deletes data from a cloud database table. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Extended information about the current data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the deleted data and operation result. |
 
 ## Examples
 
@@ -209,14 +209,14 @@ Inserts data to a cloud database table. This API uses a promise to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Data to insert. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Data to insert. |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Extended information about the current data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the inserted data and operation result. |
 
 ## Examples
 
@@ -319,7 +319,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Result&lt;CloudData&gt;&gt; | Promise used to return the data and operation result. |
+| Promise&lt;Result&lt;[CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md)&gt;&gt; | Promise used to return the data and operation result. |
 
 ## Examples
 
@@ -426,14 +426,14 @@ Updates data in the cloud. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
-| values | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Data to insert. |
-| extensions | Array&lt;Record&lt;string, CloudType&gt;&gt; | Yes | Extended information about the current data. |
+| values | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Data to insert. |
+| extensions | Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt; | Yes | Extended information about the current data. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Result&lt;Record&lt;string, CloudType&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
+| Promise&lt;Array&lt;Result&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;&gt;&gt; | Promise used to return the update result and updated data. |
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 Define configuration of the l2tp VPN network.
 
-**Inheritance/Implementation:** L2tpVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md)
+**Inheritance/Implementation:** L2tpVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig)
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ Define configuration of the l2tp VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from 'kits/@kit.NetworkKit';
+import { vpn } from '@kit.NetworkKit';
 ```
 
 ## ipsecCaCertConfig

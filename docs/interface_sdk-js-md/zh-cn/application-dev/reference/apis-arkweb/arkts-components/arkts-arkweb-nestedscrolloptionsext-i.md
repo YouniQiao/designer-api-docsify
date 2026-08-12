@@ -20,7 +20,7 @@ scrollDown?: NestedScrollMode
 
 默认值：NestedScrollMode.SELF_FIRST。
 
-**类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**类型：** NestedScrollMode
 
 **起始版本：** 14
 
@@ -40,7 +40,7 @@ scrollLeft?: NestedScrollMode
 
 默认值：NestedScrollMode.SELF_FIRST。
 
-**类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**类型：** NestedScrollMode
 
 **起始版本：** 14
 
@@ -60,7 +60,7 @@ scrollRight?: NestedScrollMode
 
 默认值：NestedScrollMode.SELF_FIRST。
 
-**类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**类型：** NestedScrollMode
 
 **起始版本：** 14
 
@@ -80,7 +80,7 @@ scrollUp?: NestedScrollMode
 
 默认值：NestedScrollMode.SELF_FIRST。
 
-**类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**类型：** NestedScrollMode
 
 **起始版本：** 14
 

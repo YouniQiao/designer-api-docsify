@@ -200,7 +200,7 @@ Create and return a two-way sync "(link") to named property
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | instance of SubscribedAbstractProperty&lt;T&gt;, return undefined if named property does not already exist in LocalStorage. |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | instance of SubscribedAbstractProperty&lt;T&gt;, return undefined if named property does not already exist in LocalStorage. |
 
 ## ref
 
@@ -230,7 +230,7 @@ Obtain a handler or an alias to LocalStorage property with given name.
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | AbstractProperty object if property with given name exists return undefined otherwise. |
+| [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md)&lt;T&gt; | AbstractProperty object if property with given name exists return undefined otherwise. |
 
 ## set
 
@@ -292,7 +292,7 @@ Like see link(), but will create and initialize a new source property in LocalSt
 
 | 类型 | 说明 |
 | --- | --- |
-| [SubscribedAbstractProperty](arkts-arkui-subscribedabstractproperty-c.md)&lt;T&gt; | instance of SubscribedAbstractProperty&lt;T&gt; Apps can use SDK functions of base class SubscribedAbstractProperty&lt;T&gt; |
+| [SubscribedAbstractProperty](arkts-arkui-storageproperty-subscribedabstractproperty-i.md)&lt;T&gt; | instance of SubscribedAbstractProperty&lt;T&gt; Apps can use SDK functions of base class SubscribedAbstractProperty&lt;T&gt; |
 
 ## setAndRef
 
@@ -325,7 +325,7 @@ If property does not exist in LocalStorage, create it with given default value.
 
 | 类型 | 说明 |
 | --- | --- |
-| [AbstractProperty](arkts-arkui-abstractproperty-i.md)&lt;T&gt; | AbstractProperty object |
+| [AbstractProperty](arkts-arkui-storageproperty-abstractproperty-i.md)&lt;T&gt; | AbstractProperty object |
 
 ## setOrCreate
 

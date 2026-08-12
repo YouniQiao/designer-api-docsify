@@ -54,7 +54,7 @@ onBarRectChange(callback: Callback<Frame>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Frame&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | 是 |
 
 ## setBackgroundColor
 
@@ -78,7 +78,7 @@ Set the background color of the bar.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | 是 |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string & gt; | 是 |
 
 ## setIconColor
 
@@ -102,7 +102,7 @@ Set the color of the icon on the bar.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string&gt; | 是 |
+| color | [Nullable](arkts-arkui-nullable-t.md)&lt;Color \| number \| string & gt; | 是 |
 
 ## setTitleContent
 
@@ -150,7 +150,7 @@ Set the font style of the bar's title.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| font | [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md) | 是 |
+| [font](arkts-font.md) | [FontStyle](arkts-arkui-enums-fontstyle-e.md) | 是 |
 
 ## setVisible
 

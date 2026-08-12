@@ -4,7 +4,7 @@
 
 `span`、`offset`、`order`属性按照`xs`、`sm`、`md`、`lg`、`xl`、`xxl`的顺序具有“继承性”，未设置值的断点将会从前一个断点取值。
 
-API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)，`offset`和`order`的继承规则保持不变。
+API version 20之后，`span`的继承规则见[GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md#GridColColumnOption)，`offset`和`order`的继承规则保持不变。
 
 **起始版本：** 9
 
@@ -26,7 +26,7 @@ offset?: number | GridColColumnOption
 
 非法值：按默认值处理。
 
-**类型：** number \| GridColColumnOption
+**类型：** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **起始版本：** 9
 
@@ -58,7 +58,7 @@ order?: number | GridColColumnOption
 
 当子组件部分设置order，部分不设置order时，未设置order的子组件依次排序靠前，设置了order的子组件按照数值从小到大排列。
 
-**类型：** number \| GridColColumnOption
+**类型：** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **起始版本：** 9
 
@@ -84,7 +84,7 @@ span?: number | GridColColumnOption
 
 非法值：按默认值处理。
 
-**类型：** number \| GridColColumnOption
+**类型：** number \| [GridColColumnOption](arkts-arkui-gridcolcolumnoption-i.md)
 
 **起始版本：** 9
 

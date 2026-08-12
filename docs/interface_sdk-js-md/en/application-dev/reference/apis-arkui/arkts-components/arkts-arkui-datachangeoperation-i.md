@@ -62,7 +62,7 @@ type: DataOperationType.CHANGE
 
 Type of data change.
 
-**Type:** DataOperationType.CHANGE
+**Type:** [DataOperationType.CHANGE](arkts-arkui-dataoperationtype-e.md)
 
 **Since:** 12
 

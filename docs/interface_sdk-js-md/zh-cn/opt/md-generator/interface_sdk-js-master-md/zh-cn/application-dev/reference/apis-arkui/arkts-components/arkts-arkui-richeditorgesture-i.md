@@ -14,13 +14,13 @@
 onClick?: Callback<ClickEvent>
 ```
 
-[ClickEvent](arkts-arkui-clickevent-i.md)为用户点击事件。
+[ClickEvent](arkts-arkui-clickevent-i.md#ClickEvent)为用户点击事件。
 
 点击完成时回调事件。
 
 双击时，第一次点击触发回调事件。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
+**类型：** Callback&lt;[ClickEvent](arkts-arkui-clickevent-i.md)&gt;
 
 **起始版本：** 11
 
@@ -42,7 +42,7 @@ onLongPress?: Callback<GestureEvent>
 
 长按完成时回调事件。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;GestureEvent&gt;
+**类型：** Callback&lt;[GestureEvent](../arkts-apis/arkts-arkui-gestureevent-i.md)&gt;
 
 **起始版本：** 11
 

@@ -26,5 +26,5 @@ type QueryCustomContentEvent = (queryType: CustomType[]) => Promise<CustomElemen
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;CustomElement&gt; | Promise对象，返回我的页面的自定义元素。 |
+| Promise&lt;[CustomElement](arkts-avsession-avmusictemplate-customelement-i.md)&gt; | Promise对象，返回我的页面的自定义元素。 |
 

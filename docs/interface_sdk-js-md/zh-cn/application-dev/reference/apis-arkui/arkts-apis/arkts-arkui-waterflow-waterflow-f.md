@@ -25,14 +25,14 @@ export declare function WaterFlow(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [WaterFlowOptions](../arkts-components/arkts-arkui-waterflowoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 子组件 |
+| options | [WaterFlowOptions](arkts-arkui-waterflow-waterflowoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 子组件 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |  |
+| [WaterFlowAttribute](arkts-arkui-waterflow-waterflowattribute-i.md) |  |
 
 
 ## WaterFlow
@@ -62,12 +62,12 @@ export declare function WaterFlow(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;WaterFlowAttribute&gt; | 是 | 创建WaterFlow的样式 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[WaterFlowAttribute](arkts-arkui-waterflow-waterflowattribute-i.md)&gt; | 是 | 创建WaterFlow的样式 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) | WaterFlow的属性。 |
+| [WaterFlowAttribute](arkts-arkui-waterflow-waterflowattribute-i.md) | WaterFlow的属性。 |
 

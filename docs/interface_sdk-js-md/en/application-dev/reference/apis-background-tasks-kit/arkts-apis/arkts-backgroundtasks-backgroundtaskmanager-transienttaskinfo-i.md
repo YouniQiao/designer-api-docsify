@@ -13,7 +13,7 @@ Describes all transient task information.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from 'kits/@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## remainingQuota
@@ -42,7 +42,7 @@ transientTasks: DelaySuspendInfo[]
 
 All information about the requested transient task.
 
-**Type:** [DelaySuspendInfo](arkts-backgroundtasks-backgroundtaskmanager-delaysuspendinfo-i.md)[]
+**Type:** DelaySuspendInfo[]
 
 **Since:** 20
 

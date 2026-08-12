@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## isFoldable
@@ -32,7 +32,7 @@ Checks whether this device is foldable.
 
 | Error Code ID |
 | --- |
-| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

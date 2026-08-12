@@ -54,7 +54,7 @@ minimumSignificantDigits?: number
 pluralCategories: LDMLPluralRule[]
 ```
 
-**Type:** LDMLPluralRule[]
+**Type:** [LDMLPluralRule](arkts-intl-ldmlpluralrule-t.md)[]
 
 ## type
 
@@ -62,4 +62,4 @@ pluralCategories: LDMLPluralRule[]
 type: PluralRuleType
 ```
 
-**Type:** PluralRuleType
+**Type:** [PluralRuleType](arkts-intl-pluralruletype-t.md)

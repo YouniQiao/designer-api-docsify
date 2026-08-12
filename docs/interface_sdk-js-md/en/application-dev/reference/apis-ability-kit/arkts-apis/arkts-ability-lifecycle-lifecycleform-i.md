@@ -16,7 +16,7 @@ interface of form lifecycle.
 onAcquireFormState?(want: Want): formInfo.FormState
 ```
 
-Called to return a {@link FormState} object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns {@link FormState#DEFAULT} by default.&lt;/p&gt;
+Called to return a [FormState](FormState) object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns [DEFAULT](FormState#DEFAULT) by default.&lt;/p&gt;
 
 **Since:** 8
 
@@ -32,7 +32,7 @@ Called to return a {@link FormState} object.&lt;p&gt;You must override this call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the {@link formInfo#FormState} is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the [FormState](formInfo#FormState) is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
 
 **Return value:**
 
@@ -70,7 +70,7 @@ Called when the form provider is notified that a temporary form is successfully 
 onCreate?(want: Want): formBindingData.FormBindingData
 ```
 
-Called to return a {@link formBindingData.FormBindingData} object.
+Called to return a [FormBindingData](formBindingData.FormBindingData) object.
 
 **Since:** 8
 
@@ -86,7 +86,7 @@ Called to return a {@link formBindingData.FormBindingData} object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a {@link formBindingData#FormBindingData}. The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from {@link formInfo#FormParam#IDENTITY_KEY}, {@link formInfo#FormParam#NAME_KEY}, and {@link formInfo#FormParam#DIMENSION_KEY}, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a [FormBindingData](formBindingData#FormBindingData). The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from [IDENTITY_KEY](formInfo#FormParam#IDENTITY_KEY), [NAME_KEY](formInfo#FormParam#NAME_KEY), and [DIMENSION_KEY](formInfo#FormParam#DIMENSION_KEY), respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
 
 **Return value:**
 
@@ -189,5 +189,5 @@ Called when the form provider receives form events from the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newStatus | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the {@code Map} object indicates form ID,and the value indicates the event type, which can be either {@link formInfo#VisibilityType#FORM_VISIBLE} or {@link formInfo#VisibilityType#FORM_INVISIBLE}. {@link formInfo#VisibilityType#FORM_VISIBLE} means that the form becomes visible, and {@link formInfo#VisibilityType#FORM_INVISIBLE} means that the form becomes invisible. |
+| newStatus | Record&lt;string, number&gt; | Yes | Indicates the form events occurred. The key in the {@code Map} object indicates form ID,and the value indicates the event type, which can be either [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#FORM_VISIBLE) or [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#FORM_INVISIBLE). [FORM_VISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#FORM_VISIBLE) means that the form becomes visible, and [FORM_INVISIBLE](../../apis-form-kit/arkts-apis/arkts-form-forminfo-visibilitytype-e.md#FORM_INVISIBLE) means that the form becomes invisible. |
 

@@ -66,7 +66,7 @@ Creates a **TextMenuItemId** object based on **id**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | Menu ID. |
+| id | ResourceStr | Yes | Menu ID. |
 
 **Return value:**
 
@@ -345,7 +345,7 @@ static readonly autoFill: TextMenuItemId
 ```
 
 ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item  
-**Password Vault** is displayed. This menu item is supported exclusively for the [Search](arkts-arkui-search-search-f.md#search),  
+**Password Vault** is displayed. This menu item is supported exclusively for the [Search](search),  
 [TextInput](text_input), [TextArea](text_area), and [RichEditor](rich_editor) components.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
@@ -413,7 +413,7 @@ static readonly passwordVault: TextMenuItemId
 ```
 
 ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for  
-[Search](arkts-arkui-search-search-f.md#search), [TextInput](./text_input), [TextArea](./text_area), and  
+[Search](./search), [TextInput](./text_input), [TextArea](./text_area), and  
 [RichEditor](./rich_editor).
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)

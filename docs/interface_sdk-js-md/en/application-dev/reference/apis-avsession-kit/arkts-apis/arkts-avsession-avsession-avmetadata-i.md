@@ -13,7 +13,7 @@ The metadata of the current media.Used to set the properties of the current medi
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## album
@@ -120,7 +120,7 @@ The id of play list which current media belongs to, it should be an unique ident
 avQueueImage?: image.PixelMap | string
 ```
 
-The artwork of play list as a {@link PixelMap} or an uri formatted String,
+The artwork of play list as a [PixelMap](PixelMap) or an uri formatted String,
 
 **Type:** image.PixelMap \| string
 
@@ -156,7 +156,7 @@ The name of play list which current media belongs to
 readonly bundleIcon?: image.PixelMap
 ```
 
-The image of the bundle icon as a {@link PixelMap}, no need to be set by application.
+The image of the bundle icon as a [PixelMap](PixelMap), no need to be set by application.
 
 **Type:** image.PixelMap
 
@@ -268,7 +268,7 @@ The duration of this media, used to automatically calculate playback position, d
 fastForwardSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward operation, the default is {@link SECONDS_15}.The system will use this value for fastforward skip intervals instead of {@link skipIntervals}.If not set, the fast forward skip intervals still use {@link skipIntervals}.See {@link SkipIntervals}
+The supported skipIntervals when doing fast forward operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#SECONDS_15).The system will use this value for fastforward skip intervals instead of [skipIntervals](#skipIntervals).If not set, the fast forward skip intervals still use [skipIntervals](#skipIntervals).See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#SkipIntervals)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -288,7 +288,7 @@ The supported skipIntervals when doing fast forward operation, the default is {@
 filter?: int
 ```
 
-The protocols supported by this session, if not set, the default is {@link TYPE_CAST_PLUS_STREAM}.See {@link ProtocolType}
+The protocols supported by this session, if not set, the default is [TYPE_CAST_PLUS_STREAM](arkts-avsession-avsession-protocoltype-e.md#TYPE_CAST_PLUS_STREAM).See [ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType)
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
 
@@ -326,7 +326,7 @@ The lyric of the media, it should be in standard lyric format
 mediaImage?: image.PixelMap | string
 ```
 
-The image of the media as a {@link PixelMap} or an uri formatted String,used to display in media center.
+The image of the media as a [PixelMap](PixelMap) or an uri formatted String,used to display in media center.
 
 **Type:** image.PixelMap \| string
 
@@ -404,7 +404,7 @@ The publishDate of the media
 rewindSkipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing rewind operation, the default is {@link SECONDS_15}.The system will use this value for rewind skip intervals instead of {@link skipIntervals}.If not set, the rewind skip intervals still use {@link skipIntervals}.See {@link SkipIntervals}
+The supported skipIntervals when doing rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#SECONDS_15).The system will use this value for rewind skip intervals instead of [skipIntervals](#skipIntervals).If not set, the rewind skip intervals still use [skipIntervals](#skipIntervals).See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#SkipIntervals)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 
@@ -444,7 +444,7 @@ The single lyric text of the media, not including time prefix
 skipIntervals?: SkipIntervals
 ```
 
-The supported skipIntervals when doing fast forward and rewind operation, the default is {@link SECONDS_15}.See {@link SkipIntervals}
+The supported skipIntervals when doing fast forward and rewind operation, the default is [SECONDS_15](arkts-avsession-avsession-skipintervals-e.md#SECONDS_15).See [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md#SkipIntervals)
 
 **Type:** [SkipIntervals](arkts-avsession-avsession-skipintervals-e.md)
 

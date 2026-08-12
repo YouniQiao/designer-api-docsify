@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## translate
@@ -18,7 +18,7 @@ Translates this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
+**Substitutes:** [translate](arkts-arkui-matrix4-matrix4transit-i.md#translate)
 
 <!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit--><!--Device-matrix4-function translate(options: TranslateOption): Matrix4Transit-End-->
 

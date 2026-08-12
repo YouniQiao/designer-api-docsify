@@ -16,7 +16,7 @@ new <K extends object = object, V = any>(entries?: readonly [K, V][] | null): We
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| WeakMap&lt;K, V&gt; |
+| WeakMap & lt;K, V & gt; |
 
 ## prototype
 

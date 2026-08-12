@@ -2,9 +2,9 @@
 
 Implements a carrier that describes the basic text line structure of a paragraph.
 
-Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the  
-[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline) of the  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) class to create a **TextLine** object.
+Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the  
+[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine) of the  
+[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset) class to create a **TextLine** object.
 
 **Since:** 12
 
@@ -17,7 +17,7 @@ Before calling any of the following APIs, you must use [getTextLines()](arkts-ar
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createTruncatedLine
@@ -43,7 +43,7 @@ Creates a truncated text line object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | width | double | Yes | Line width after truncation, which is a floating-point value in physical pixels (px). |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
+| ellipsisMode | EllipsisMode | Yes | Ellipsis mode. Currently, only **START** and **END** are supported. |
 | ellipsis | string | Yes | String used to mark truncation. |
 
 **Return value:**
@@ -106,7 +106,7 @@ Creates a truncated text line object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | width | double | Yes | The width of the truncated line. |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes | Text ellipsis mode, EllipsisMode:MIDDLE is not supported. |
+| ellipsisMode | EllipsisMode | Yes | Text ellipsis mode, EllipsisMode:MIDDLE is not supported. |
 | ellipsis | string | Yes | Text ellipsis. |
 
 **Return value:**
@@ -250,7 +250,7 @@ Obtains the array of glyph runs in the text line.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Run&gt; | Array of the runs obtained. |
+| Array&lt;[Run](arkts-arkgraphics2d-text-run-c.md)&gt; | Array of the runs obtained. |
 
 ## Examples
 
@@ -405,7 +405,7 @@ Obtains the range of the text in this text line in the entire paragraph.
 
 | Type | Description |
 | --- | --- |
-| [Range](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-scan-range-i.md) | Range of the text in this text line in the entire paragraph. |
+| Range | Range of the text in this text line in the entire paragraph. |
 
 ## Examples
 

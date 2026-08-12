@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from 'kits/@kit.LocationKit';
+import { geolocation } from '@kit.LocationKit';
 ```
 
 ## getAddressesFromLocationName
@@ -20,7 +20,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName
+**Substitutes:** [getAddressesFromLocationName](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,8 +32,8 @@ Obtain latitude and longitude info from location address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes | Indicates the geocode query parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
+| request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GeoAddress&gt;&gt; | Yes | Indicates the callback for reporting the latitude and longitude result. |
 
 ## Examples
 
@@ -65,7 +65,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName
+**Substitutes:** [getAddressesFromLocationName](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -77,7 +77,7 @@ Obtain latitude and longitude info from location address
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| request | [GeoCodeRequest](arkts-location-geolocation-geocoderequest-i.md) | Yes | Indicates the geocode query parameters. |
+| request | GeoCodeRequest | Yes | Indicates the geocode query parameters. |
 
 **Return value:**
 

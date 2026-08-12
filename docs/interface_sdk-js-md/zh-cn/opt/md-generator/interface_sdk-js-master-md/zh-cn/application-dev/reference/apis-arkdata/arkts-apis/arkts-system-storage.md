@@ -6,8 +6,8 @@
  >
  > - 对于Lite Wearable设备类型，该模块长期维护，可正常使用。
  >
- > - 对于支持该模块的其他设备类型，该模块从API version 6开始不再维护，可以使用模块[`@ohos.data.storage`](arkts-data-storage.md)。在API
- > version 9后，推荐使用新模块[`@ohos.data.preferences`](arkts-data-preferences.md)。
+ > - 对于支持该模块的其他设备类型，该模块从API version 6开始不再维护，可以使用模块[`@ohos.data.storage`](arkts-data-storage.md#storage)。在API
+ > version 9后，推荐使用新模块[`@ohos.data.preferences`](arkts-data-preferences.md#preferences)。
  >
  > - 本模块接口仅可在FA模型下使用。
  >
@@ -19,7 +19,7 @@
  **参数：**
 | 参数名  | 类型                    | 必填 |
 | ------- | -------------------- | ---- |
-| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md) | 是   |
+| options | [GetStorageOptions](arkts-arkdata-system-storage-getstorageoptions-i.md#GetStorageOptions) | 是   |
  **示例：**
  ArkTS示例：
  ```js
@@ -102,7 +102,7 @@
  **参数：**
 | 参数名  | 类型                   | 必填 |
 | ------- | ------------------- | ---- |
-| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md) | 是   |
+| options | [SetStorageOptions](arkts-arkdata-system-storage-setstorageoptions-i.md#SetStorageOptions) | 是   |
  **示例：**
  ArkTS示例：
  ```js
@@ -184,7 +184,7 @@
  **参数：**
 | 参数名  | 类型                                        | 必填 |
 | ------- | ------------------------------------------- | ---- |
-| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md) | 否   |
+| options | [ClearStorageOptions](arkts-arkdata-system-storage-clearstorageoptions-i.md#ClearStorageOptions) | 否   |
  **示例：**
  ArkTS示例：
  ```js
@@ -264,7 +264,7 @@
  **参数：**
 | 参数名  | 类型                                          | 必填 |
 | ------- | --------------------------------------------- | ---- |
-| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md) | 是   |
+| options | [DeleteStorageOptions](arkts-arkdata-system-storage-deletestorageoptions-i.md#DeleteStorageOptions) | 是   |
  **示例：**
  ArkTS示例：
  ```js

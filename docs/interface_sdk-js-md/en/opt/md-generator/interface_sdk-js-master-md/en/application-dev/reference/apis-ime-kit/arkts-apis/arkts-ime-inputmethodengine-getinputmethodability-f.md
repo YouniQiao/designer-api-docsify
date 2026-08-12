@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from 'kits/@kit.IMEKit';
+import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
 ## getInputMethodAbility
@@ -12,7 +12,7 @@ import { inputMethodEngine } from 'kits/@kit.IMEKit';
 function getInputMethodAbility(): InputMethodAbility
 ```
 
-Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md) instance for the input method. This API can be called only by an input method.
+Obtains an [InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md#InputMethodAbility) instance for the input method. This API can be called only by an input method.
 
 The input method can use the obtained instance to subscribe to a soft keyboard display/hide request event, create/destroy an input method panel, and the like.
 

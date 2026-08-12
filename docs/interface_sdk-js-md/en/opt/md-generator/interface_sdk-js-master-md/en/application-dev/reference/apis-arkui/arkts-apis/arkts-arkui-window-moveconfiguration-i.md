@@ -11,7 +11,7 @@ Describes the window movement configuration.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## displayId

@@ -11,7 +11,7 @@ Provides attributes of the measured text.
 ## Modules to Import
 
 ```TypeScript
-import { MeasureOptions } from 'kits/@kit.ArkUI';
+import { MeasureOptions } from '@kit.ArkUI';
 ```
 
 ## baselineOffset
@@ -224,7 +224,7 @@ Default value: **1**
 
 Value range for the number type: [0, 3], with intervals of 1, corresponding to the values in the **TextOverflow**enum
 
-**Type:** number \| TextOverflow
+**Type:** number \| [TextOverflow](arkts-arkui-textoverflow-e.md)
 
 **Since:** 10
 
@@ -272,7 +272,7 @@ Default value: **TextCase.Normal**
 
 Value range for the number type: [0, 2], with intervals of 1, corresponding to the values in the **TextCase** enum
 
-**Type:** number \| TextCase
+**Type:** number \| [TextCase](arkts-arkui-textcase-e.md)
 
 **Since:** 10
 
@@ -336,7 +336,7 @@ Default value: **WordBreak.BREAK_WORD**
 
 When used with **{overflow: TextOverflow.Ellipsis}** and **maxLines**, **WordBreak.BREAK_ALL** can insert line breaks between letters when overflow occurs and display excess content with an ellipsis (...).
 
-**Type:** [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md)
+**Type:** WordBreak
 
 **Since:** 11
 

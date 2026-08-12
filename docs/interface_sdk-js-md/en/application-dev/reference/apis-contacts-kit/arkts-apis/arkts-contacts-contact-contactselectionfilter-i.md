@@ -13,7 +13,7 @@ Defines the contact selection filter.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from 'kits/@kit.ContactsKit';
+import { contact } from '@kit.ContactsKit';
 ```
 
 ## filterClause
@@ -44,7 +44,7 @@ filterType: FilterType
 
 Filter type.
 
-**Type:** [FilterType](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-filter-filtertype-e.md)
+**Type:** FilterType
 
 **Since:** 15
 

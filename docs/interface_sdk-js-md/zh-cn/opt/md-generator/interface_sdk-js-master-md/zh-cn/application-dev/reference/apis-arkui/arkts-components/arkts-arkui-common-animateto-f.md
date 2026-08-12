@@ -9,7 +9,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 显式动画接口。在需要动画时，显式调用该接口改变状态以产生动画。
 
 > 
-> - 从API version 10开始，可以通过使用[UIContext](../arkts-apis/arkts-arkui-uicontext.md/arkts-arkui-uicontext.md)中的
+> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
 > [animateTo](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#animateto)来明确UI的执行上下文。
 > 
 > - 不推荐在aboutToAppear、aboutToDisappear中调用动画。
@@ -20,7 +20,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 > - 执行[aboutToDisappear](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#abouttodisappear)时，
 > 组件即将销毁，不能在aboutToDisappear里面做动画。
 > 
-> - 在组件出现和消失时，可以通过[组件内转场](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)添加动画效果。
+> - 在组件出现和消失时，可以通过[组件内转场](common)添加动画效果。
 > 
 > - 组件内转场不支持的属性，可以参考[示例2](../../../reference/apis-arkui/arkui-ts/ts-explicit-animation.md#示例2动画执行结束后组件消失)，使用
 > animateTo实现动画执行结束后组件消失的效果。
@@ -32,7 +32,7 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 
 **废弃版本：** 18
 
-**替代接口：** ohos.arkui.UIContext.UIContext#animateTo
+**替代接口：** [animateTo](ohos.arkui.UIContext.UIContext#animateTo)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -47,4 +47,4 @@ declare function animateTo(value: AnimateParam, event: () => void): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | [AnimateParam](arkts-arkui-animateparam-i.md) | 是 |
-| event | () =&gt; void | 是 |
+| event | () = & gt; void | 是 |

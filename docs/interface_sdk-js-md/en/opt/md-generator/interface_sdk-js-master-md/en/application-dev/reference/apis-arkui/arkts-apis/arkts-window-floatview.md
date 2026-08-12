@@ -15,7 +15,7 @@ interaction panel or control UI, facilitating real-time operations and interacti
 
 **Linkage with the floating ball**:
 
-This module can be used together with [@ohos.window.floatingBall](arkts-window-floatingball.md).After the float view controller is bound to the floating ball controller using the  
+This module can be used together with [@ohos.window.floatingBall](arkts-window-floatingball.md#floatingBall).After the float view controller is bound to the floating ball controller using the  
 [floatView.bind](arkts-arkui-floatview-bind-f.md#bind) API, users can tap the floating ball to expand it as a float view, and click the minimize button in the upper left corner of the float view to collapse it back as a floating ball. This allows for seamless switching between the two window forms.
 
 **Comparison between the global floating window and float view**:
@@ -26,7 +26,7 @@ that can remain displayed on the foreground even after the application's main wi
  - The global floating window is managed and its UI is drawn by developers, without a unified UI or animation effect.  
  - The float view is managed by the system and its UI is drawn in a unified manner, offering a more sophisticated and  
 refined animation effect.  
- - The float view can be bound to the [floating ball](arkts-window-floatingball.md) for joint use,  
+ - The float view can be bound to the [floating ball](arkts-window-floatingball.md#floatingBall) for joint use,  
 enabling more complex scenarios.
 
 **Start version**: 26.0.0
@@ -49,7 +49,7 @@ enabling more complex scenarios.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## Summary

@@ -72,7 +72,7 @@ readonly hapModuleQuickFixInfo: Array<HapModuleQuickFixInfo>
 
 hap级别的快速修复信息。
 
-**类型：** Array&lt;HapModuleQuickFixInfo&gt;
+**类型：** Array&lt;[HapModuleQuickFixInfo](arkts-ability-quickfixmanager-hapmodulequickfixinfo-i-sys.md)&gt;
 
 **起始版本：** 9
 

@@ -2,7 +2,7 @@
 
 用于执行用户身份认证，并支持使用统一用户身份认证控件。该接口提供了完整的用户认证能力，包括订阅认证结果、订阅认证中间状态、启动认证和取消认证等操作。通过统一认证控件，可以为用户提供标准化的认证界面和一致的认证体验。
 
-使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance)方法获取UserAuthInstance对象。
+使用以下接口前，需先通过[getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance)方法获取UserAuthInstance对象。
 
 > **说明：**
 > 
@@ -40,9 +40,9 @@ cancel(): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -97,7 +97,7 @@ off(type: 'result', callback?: IAuthCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](#UserAuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 10
 
@@ -118,8 +118,8 @@ off(type: 'result', callback?: IAuthCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -175,7 +175,7 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 > **说明：**
 > 
-> 需要使用已经成功订阅事件的[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象调用该接口进行取消订阅。
+> 需要使用已经成功订阅事件的[UserAuthInstance](#UserAuthInstance)对象调用该接口进行取消订阅。
 
 **起始版本：** 20
 
@@ -196,7 +196,7 @@ off(type: 'authTip', callback?: AuthTipCallback): void
 
 | 错误码ID |
 | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -251,7 +251,7 @@ on(type: 'result', callback: IAuthCallback): void
 
 > **说明：**
 > 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam)时传入了有效的uiContext），收到认证结果后，若需弹出其
 > 他窗口，应先获取控件弹窗释放的标志消息，通过
 > [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅控件释放消息（
 > authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
@@ -275,8 +275,8 @@ on(type: 'result', callback: IAuthCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## on('authTip')
 
@@ -288,7 +288,7 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 > **说明：**
 > 
-> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md)时传入了有效的uiContext），收到认证结果后，若需弹出其
+> 在PC/2in1设备上，应用如果使用模应用弹窗方式发起认证（即配置用户界面参数[widgetParam](arkts-userauthentication-userauth-widgetparam-i.md#WidgetParam)时传入了有效的uiContext），收到认证结果后，若需弹出其
 > 他窗口，应先获取控件弹窗释放的标志消息，通过
 > [on('authTip')](userAuth.UserAuthInstance.on(type: 'authTip', callback: AuthTipCallback))接口订阅控件释放消息（
 > authTipInfo.tipCode = UserAuthTipCode.WIDGET_RELEASED）。
@@ -312,7 +312,7 @@ on(type: 'authTip', callback: AuthTipCallback): void
 
 | 错误码ID |
 | --- |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 
@@ -387,19 +387,19 @@ start(): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [12500013](../errorcode-useriam.md#12500013-密码过期) |
-| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) |
-| [12500011](../errorcode-useriam.md#12500011-提示通知切换自定义认证) |
-| [12500009](../errorcode-useriam.md#12500009-认证被锁定) |
-| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) |
-| [12500007](../errorcode-useriam.md#12500007-认证服务繁忙) |
-| [12500004](../errorcode-useriam.md#12500004-认证操作超时) |
-| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
-| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-| [12500003](../errorcode-useriam.md#12500003-认证被取消) |
-| [12500001](../errorcode-useriam.md#12500001-认证不通过) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [12500013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500013-密码过期) |
+| [12500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) |
+| [12500011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500011-提示通知切换自定义认证) |
+| [12500009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-认证被锁定) |
+| [12500006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-认证信任等级不支持) |
+| [12500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-认证服务繁忙) |
+| [12500004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-认证操作超时) |
+| [12500005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) |
+| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-认证被取消) |
+| [12500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-认证不通过) |
 
 ## 示例
 

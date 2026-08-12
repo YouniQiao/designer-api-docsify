@@ -18,7 +18,7 @@ bias?: Bias
 
 设置组件在锚点约束下的偏移参数，其值为到左/上侧锚点的距离与锚点间总距离的比值。
 
-**类型：** [Bias](../arkts-apis/arkts-arkui-bias-i.md)
+**类型：** Bias
 
 **默认值：** {horizontal:0.5,vertical:0.5}
 
@@ -42,7 +42,7 @@ bottom?: LocalizedVerticalAlignParam
 
 设置纵向底部对齐的参数。
 
-**类型：** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
+**类型：** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -64,7 +64,7 @@ center?: LocalizedVerticalAlignParam
 
 设置纵向居中对齐方式的参数。
 
-**类型：** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
+**类型：** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
 
@@ -152,7 +152,7 @@ top?: LocalizedVerticalAlignParam
 
 设置纵向顶部对齐的参数。
 
-**类型：** [LocalizedVerticalAlignParam](../arkts-apis/arkts-arkui-common-localizedverticalalignparam-i.md)
+**类型：** [LocalizedVerticalAlignParam](arkts-arkui-localizedverticalalignparam-i.md)
 
 **起始版本：** 12
 

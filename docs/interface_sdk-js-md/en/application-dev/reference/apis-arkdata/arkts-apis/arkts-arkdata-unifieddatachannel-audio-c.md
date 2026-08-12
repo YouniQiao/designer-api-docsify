@@ -1,8 +1,8 @@
 # Audio
 
-Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md) and is used to describe an audio file.
+Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatachannel-file-c.md#File) and is used to describe an audio file.
 
-**Inheritance/Implementation:** Audio extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
+**Inheritance/Implementation:** Audio extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
 
 **Since:** 10
 
@@ -15,7 +15,7 @@ Represents audio data. It is a child class of [File](arkts-arkdata-unifieddatach
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## audioUri

@@ -33,7 +33,7 @@ function setShortcutVisibleForSelf(id: string, visible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is not exist. |
+| [17700070](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is not exist. |
 
 ## 示例
 

@@ -13,7 +13,7 @@ Describes the strut style, which determines the line spacing, baseline alignment
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## enabled
@@ -84,7 +84,7 @@ fontStyle?: FontStyle
 
 Font style. The default value is **NORMAL**.
 
-**Type:** [FontStyle](arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 12
 
@@ -104,7 +104,7 @@ fontWeight?: FontWeight
 
 Font weight. The default value is **W400**. Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, only variable fonts in system fonts support font weight adjustment. Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, both system fonts and variable fonts in third-party registered fonts support font weight adjustment. For non-variable fonts, the font thickness does not change when the font weight value is set to less than **W600**, and a faux bold effect may be triggered when the font weight value is set to **W600** or greater.
 
-**Type:** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
+**Type:** FontWeight
 
 **Since:** 12
 

@@ -28,7 +28,7 @@ constructor(value?: { fingers?: number; direction?: PanDirection; distance?: num
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | 否 | 滑动手势配置参数对象。&lt;br/&gt;fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。&lt;br/&gt;默认值：1 &lt;br/&gt;direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与(&)和逻辑或（\|
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | 否 | 滑动手势配置参数对象。 & lt;br/ & gt;fingers用于指定触发滑动的最少手指数，最小为1指， 最大取值为10指。 & lt;br/ & gt;默认值：1 & lt;br/ & gt;direction用于指定触发滑动的手 势方向，此枚举值支持逻辑与( & )和逻辑或（\ |
 
 ## getDirection
 
@@ -98,7 +98,7 @@ setDirection(value: PanDirection)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [PanDirection](arkts-arkui-pandirection-e.md) | 是 | 用于指定触发滑动的手势方向，此枚举值支持逻辑与(&)和逻辑或（\|
+| value | [PanDirection](arkts-arkui-pandirection-e.md) | 是 | 用于指定触发滑动的手势方向，此枚举值支持逻辑与( & )和逻辑或（\ |
 
 ## setDistance
 

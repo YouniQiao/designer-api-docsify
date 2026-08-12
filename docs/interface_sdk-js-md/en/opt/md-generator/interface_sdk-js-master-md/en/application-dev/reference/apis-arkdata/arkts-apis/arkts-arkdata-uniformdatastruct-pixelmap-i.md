@@ -11,7 +11,7 @@ Represents data of the pixel map type defined by the system.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from 'kits/@kit.ArkData';
+import { uniformDataStruct } from '@kit.ArkData';
 ```
 
 ## details
@@ -57,7 +57,7 @@ readonly uniformDataType: 'openharmony.pixel-map'
 ```
 
 Uniform data type, which has a fixed value of **openharmony.pixel-map**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md).
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'openharmony.pixel-map'
 

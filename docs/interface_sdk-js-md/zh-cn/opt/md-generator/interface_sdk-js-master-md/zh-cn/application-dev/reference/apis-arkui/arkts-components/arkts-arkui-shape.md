@@ -43,7 +43,7 @@ Use the new function to create Shape.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 否 |
+| value | [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md) | 否 |
 
 ## Shape
 
@@ -67,7 +67,7 @@ Shape(value: PixelMap)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 |
+| value | [PixelMap](../arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
 
 ## Shape
 

@@ -24,7 +24,7 @@ export declare function TextTimer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextTimerOptions](../arkts-components/arkts-arkui-texttimeroptions-i.md) | 否 | 通过文本显示计时信息并控制其计时器状态的组件参数。 |
+| options | [TextTimerOptions](arkts-arkui-texttimer-texttimeroptions-i.md) | 否 | 通过文本显示计时信息并控制其计时器状态的组件参数。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function TextTimer(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextTimerAttribute&gt; | 是 | TextTimer属性的实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextTimerAttribute](arkts-arkui-texttimer-texttimerattribute-i.md)&gt; | 是 | TextTimer属性的实例。 |
 
 **返回值：**
 

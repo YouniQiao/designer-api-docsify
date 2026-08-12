@@ -4,8 +4,8 @@
 
 | 名称 | 值 | 说明 |
 | ------------------------- | - | ----------------------- |
-| [ENABLE_BACKGROUND_PLAY](#enable_background_play) | 0 | 支持后台播放。 |
-| [DISABLE_BACKGROUND_PLAY](#disable_background_play) | 1 |
+| [ENABLE_BACKGROUND_PLAY](arkts-avsession-avsession-backgroundplaymode-e.md) | 0 | 支持后台播放。 |
+| [DISABLE_BACKGROUND_PLAY](arkts-avsession-avsession-backgroundplaymode-e.md) | 1 |
 
 **起始版本：** 24
 

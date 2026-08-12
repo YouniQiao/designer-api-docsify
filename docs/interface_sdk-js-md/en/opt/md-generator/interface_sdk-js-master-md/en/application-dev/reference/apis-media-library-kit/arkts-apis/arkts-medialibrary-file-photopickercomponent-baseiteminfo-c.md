@@ -11,7 +11,7 @@ Represents basic image and video information.
 ## Modules to Import
 
 ```TypeScript
-import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from '@kit.MediaLibraryKit';
 ```
 
 ## duration
@@ -22,7 +22,7 @@ duration?: number
 
 Video duration, in milliseconds. In versions earlier than API version 23, the value of **duration** is **0** for moving photos. In API version 23 and later versions, the value of **duration** is the duration of the video clip attached to moving photos. If an exception occurs, **-1** is returned.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ height?: number
 
 Height of the image or video, in px.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -82,7 +82,7 @@ mimeType?: string
 
 MIME type of the image or video.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 You can determine the media type based on the prefix of the **mimeType** string. If the string starts with "image/", it indicates an image. If the string starts with "video/", it indicates a video. For details, see  
 [Identifying Asset Types Using the mimeType Field](../../../media/medialibrary/medialibrary-faqs/medialibrary-asset-judgment-faq.md#identifying-asset-types-using-the-mimetype-field).
@@ -105,7 +105,7 @@ movingPhotoBadgeState?: photoAccessHelper.MovingPhotoBadgeStateType
 
 State of the moving photo badge.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** photoAccessHelper.MovingPhotoBadgeStateType
 
@@ -181,7 +181,7 @@ size?: number
 
 Size of the image or video, in bytes.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 
@@ -203,7 +203,7 @@ uri?: string
 
 URI of the image or video.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **NOTE：**
 
@@ -245,7 +245,7 @@ width?: number
 
 Width of the image or video, in px.
 
-This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md) is set to **THUMBNAIL**. Otherwise, it is left empty.
+This parameter is supported only when [ItemType](arkts-medialibrary-file-photopickercomponent-itemtype-e.md#ItemType) is set to **THUMBNAIL**. Otherwise, it is left empty.
 
 **Type:** number
 

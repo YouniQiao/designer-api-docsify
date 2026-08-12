@@ -1,13 +1,13 @@
 # @ohos.multimodalInput.keyEvent(Key Event)
 
 The **keyEvent** module provides key events reported by a device. It is inherited from
- [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md).
+ [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent).
 
 
 ## Modules to Import
 
 ```TypeScript
-import { KeyEvent, Action, Key } from 'kits/@kit.InputKit';
+import { KeyEvent, Action, Key } from '@kit.InputKit';
 ```
 
 ## Summary

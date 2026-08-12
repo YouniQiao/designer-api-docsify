@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from 'kits/@kit.BasicServicesKit';
+import { systemTime } from '@kit.BasicServicesKit';
 ```
 
 ## getTimezone
@@ -18,7 +18,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)(callback:
+**Substitutes:** [getTimezone](@ohos.systemDateTime:systemDateTime.getTimezone(callback:)
 
 <!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 
@@ -68,7 +68,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.systemDateTime:systemDateTime.getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#gettimezone)()
+**Substitutes:** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone)()
 
 <!--Device-systemTime-function getTimezone(): Promise<string>--><!--Device-systemTime-function getTimezone(): Promise<string>-End-->
 
@@ -78,7 +78,7 @@ Obtains the system time zone. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **Error codes:**
 

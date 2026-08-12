@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from 'kits/@kit.BasicServicesKit';
+import { thermal } from '@kit.BasicServicesKit';
 ```
 
 ## unregisterThermalLevelCallback
@@ -30,7 +30,7 @@ Unregisters from the thermal level changes. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

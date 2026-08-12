@@ -32,8 +32,8 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| ImageAttachment \| CustomSpan | Yes | indicates the current object value of the StyledString. |
-| styles | Array&lt;StyleOptions&gt; | No | indicates the SpanStyle objects. |
+| value | string \| [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) \| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | Yes | indicates the current object value of the StyledString. |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styledstring-styleoptions-i.md)&gt; | No | indicates the SpanStyle objects. |
 
 ## equals
 
@@ -57,7 +57,7 @@ Judge if two attribute strings are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [StyledString](arkts-arkui-styledstring-c.md) | Yes | another StyledString. |
+| other | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | another StyledString. |
 
 **Return value:**
 
@@ -93,14 +93,14 @@ Returns StyledString from the provided HTML string.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;StyledString \| undefined&gt; |  |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-styledstring-c.md) \| undefined&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
 ## getString
 
@@ -156,13 +156,13 @@ Get the attribute objects of the subStyledString.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SpanStyle&gt; |  |
+| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -193,13 +193,13 @@ Get the substring of the StyledString.
 
 | Type | Description |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-c.md) |  |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## toHtml
 
@@ -223,7 +223,7 @@ Returns HTML string from the provided StyledString.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | the StyledString will be converted to a HTML string. |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | the StyledString will be converted to a HTML string. |
 
 **Return value:**
 
@@ -235,7 +235,7 @@ Returns HTML string from the provided StyledString.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## length
 

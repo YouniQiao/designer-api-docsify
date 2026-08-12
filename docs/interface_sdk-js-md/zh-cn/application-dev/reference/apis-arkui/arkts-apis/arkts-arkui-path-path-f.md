@@ -24,7 +24,7 @@ export declare function Path(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | 否 | Path绘制区域。 &lt;br&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PathOptions](arkts-arkui-path-pathoptions-i.md) | 否 | Path绘制区域。 &lt;br&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ Defines Path Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PathAttribute&gt; | 是 | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
 
 **返回值：**
 

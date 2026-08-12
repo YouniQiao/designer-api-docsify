@@ -88,7 +88,7 @@ snapPagination?: Dimension | Array<Dimension>
 
 &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;1.当属性为Dimension时，Dimension表示每页的大小，系统按照该大小进行分页。&lt;br&gt;2.当属性为Array\&lt;Dimension\&gt;时，每个Dimension表示分页点，系统按照分页点进行分页。每个Dimension的范围为[0,可滑动距离]。&lt;br&gt;3.当该属性不填或者Dimension为小于等于0的输入时，按异常值，无限位滚动处理。当该属性值为Array\&lt;Dimension\&gt;数组时，数组中的数值必须为单调递增。&lt;br&gt;4.当输入为百分比时，实际的大小为Scroll组件的视口与百分比数值之积。&lt;/p&gt;
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Array&lt;Dimension&gt;
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| Array&lt;[Dimension](../arkts-apis/arkts-arkui-dimension-t.md)&gt;
 
 **默认值：** 100%
 

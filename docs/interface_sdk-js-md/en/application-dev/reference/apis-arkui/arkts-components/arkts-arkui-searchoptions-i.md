@@ -75,7 +75,7 @@ placeholder?: ResourceStr
 
 Text displayed when there is no input.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 8
 
@@ -103,7 +103,7 @@ Since API version 18, this parameter supports two-way binding through
 
 The Resource type is supported since API version 20.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 8
 

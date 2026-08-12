@@ -19,7 +19,7 @@ COMMON_PARAMS_SPEC = 0
 ```
 
 Common parameters of the public and private keys. You can use  
-[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair)to randomly generate a key pair based on the parameters of this type.
+[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generateKeyPair)to randomly generate a key pair based on the parameters of this type.
 
 **Since:** 10
 
@@ -40,7 +40,7 @@ PRIVATE_KEY_SPEC = 1
 ```
 
 Parameter of the private key. You can use  
-[generatePriKey](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generateprikey) to generate a private key based on the parameters of this type.
+[generatePriKey](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatePriKey) to generate a private key based on the parameters of this type.
 
 **Since:** 10
 
@@ -61,7 +61,7 @@ PUBLIC_KEY_SPEC = 2
 ```
 
 Parameter of the public key. You can use  
-[generatePubKey](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatepubkey) to generate a public key based on the parameters of this type.
+[generatePubKey](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatePubKey) to generate a public key based on the parameters of this type.
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ KEY_PAIR_SPEC = 3
 ```
 
 Full parameters of the public and private keys. You can use  
-[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair)to generate a key pair based on the parameters of this type.
+[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generateKeyPair)to generate a key pair based on the parameters of this type.
 
 **Since:** 10
 

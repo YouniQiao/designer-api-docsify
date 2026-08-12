@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## requestRight
@@ -20,7 +20,7 @@ Requests the temporary permission for the application to access a USB device. Th
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)
+**Substitutes:** [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)
 
 <!--Device-usb-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usb-function requestRight(deviceName: string): Promise<boolean>-End-->
 

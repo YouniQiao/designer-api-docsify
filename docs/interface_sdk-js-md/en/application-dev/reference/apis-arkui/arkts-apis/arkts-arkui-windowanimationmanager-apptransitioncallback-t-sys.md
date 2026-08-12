@@ -21,7 +21,7 @@ Callback function on application transition.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | Window target of the source application. |
-| toWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | Window target of the destination application. |
+| fromWindowTarget | WindowAnimationTarget | Yes | Window target of the source application. |
+| toWindowTarget | WindowAnimationTarget | Yes | Window target of the destination application. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 

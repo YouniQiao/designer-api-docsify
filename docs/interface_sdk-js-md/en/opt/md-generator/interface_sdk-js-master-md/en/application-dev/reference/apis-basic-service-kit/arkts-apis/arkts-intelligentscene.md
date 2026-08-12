@@ -13,7 +13,7 @@ This module provides system focus modes and Do Not Disturb data access abilities
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from 'kits/@kit.BasicServicesKit';
+import { intelligentScene } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -27,16 +27,16 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | 类型 |
 | --- |
-| Promise&lt;PixelMap&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## 示例
 

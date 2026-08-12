@@ -11,7 +11,7 @@ Definition of the Offline Download Management Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## addAVDownloadTask
@@ -84,7 +84,7 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getTaskCacheDirectory
 
@@ -118,7 +118,7 @@ Obtains the offline download cache directory of a specified task.
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## getTaskProgress
 
@@ -152,7 +152,7 @@ Obtains the progress of a specified offline download task.
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## getTaskStatus
 
@@ -186,7 +186,7 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## offProgressChange
 
@@ -302,8 +302,8 @@ Suspending the download of a specified task
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## release
 
@@ -347,7 +347,7 @@ Remove a download task from the offline download manager
 
 | Error Code ID |
 | --- |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## resumeDownloadTask
 
@@ -375,8 +375,8 @@ Resuming Offline download of a Specified Task
 
 | Error Code ID |
 | --- |
-| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
-| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## setRequestTimeout
 

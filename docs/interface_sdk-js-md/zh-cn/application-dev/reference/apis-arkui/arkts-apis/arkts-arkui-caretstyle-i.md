@@ -20,7 +20,7 @@ color?: ResourceColor
 
 默认值：'#ff007dff'，表示蓝色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 10
 
@@ -44,7 +44,7 @@ width?: Length
 
 默认值：'2vp'
 
-**类型：** [Length](arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 10
 

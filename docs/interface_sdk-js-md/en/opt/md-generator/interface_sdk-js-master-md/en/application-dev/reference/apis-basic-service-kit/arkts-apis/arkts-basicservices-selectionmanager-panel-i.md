@@ -1,6 +1,6 @@
 # Panel
 
-Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
+Describes a **Panel** object, which is created using [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This method can be used to set, display, hide, and move the panel, as well as subscribe to events. It is applicable to scenarios where a custom operation UI needs to be displayed to users after word selection is complete.
 
 **Since:** 24
 
@@ -11,7 +11,7 @@ Describes a **Panel** object, which is created using [createPanel](arkts-basicse
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from 'kits/@kit.BasicServicesKit';
+import { selectionManager } from '@kit.BasicServicesKit';
 ```
 
 ## hide
@@ -20,8 +20,8 @@ import { selectionManager } from 'kits/@kit.BasicServicesKit';
 hide(): Promise<void>
 ```
 
-Hides the word selection panel. This API is used together with [show](arkts-basicservices-selectionmanager-panel-i.md#show). This API can be called only after a **Panel** instance is obtained by calling   
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This API uses a promise to return the result. If this API is not called proactively, the panel is automatically hidden when it loses focus.
+Hides the word selection panel. This API is used together with [show](#show). This API can be called only after a **Panel** instance is obtained by calling   
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This API uses a promise to return the result. If this API is not called proactively, the panel is automatically hidden when it loses focus.
 
 **Since:** 24
 
@@ -33,14 +33,14 @@ Hides the word selection panel. This API is used together with [show](arkts-basi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
 ## Examples
 
@@ -61,13 +61,13 @@ selectionPanel.hide().then(() => {
 moveTo(x: number, y: number): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates in the global coordinate system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This API uses a promise to return the result.
+Moves the word selection panel to the specified coordinates in the global coordinate system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This API uses a promise to return the result.
 
 **Since:** 20
 
 **Deprecated since:** 24
 
-**Substitutes:** [selectionManager.Panel.moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay)
+**Substitutes:** [moveToGlobalDisplay](#moveToGlobalDisplay)
 
 <!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
@@ -84,14 +84,14 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
 ## Examples
 
@@ -116,7 +116,7 @@ try {
 moveToGlobalDisplay(x: number, y: number): Promise<void>
 ```
 
-Moves the word selection panel to the specified coordinates in the global coordinates system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This API uses a promise to return the result.
+Moves the word selection panel to the specified coordinates in the global coordinates system of the screen. The panel can be moved to an extended screen. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -137,14 +137,14 @@ Moves the word selection panel to the specified coordinates in the global coordi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
 ## Examples
 
@@ -170,7 +170,7 @@ off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
 Unsubscribes from the word selection panel destruction event. This API is used together with   
-[on('destroyed')](selectionManager.Panel.on(type: 'destroyed', callback: Callback&lt;void&gt;)). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel).
+[on('destroyed')](selectionManager.Panel.on(type: 'destroyed', callback: Callback&lt;void&gt;)). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel).
 
 **Since:** 24
 
@@ -203,7 +203,7 @@ off(type: 'hidden', callback?: Callback<void>): void
 ```
 
 Unsubscribes from the word selection panel hiding event. This API is used together with   
-[on('hidden')](selectionManager.Panel.on(type: 'hidden', callback: Callback&lt;void&gt;)). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel).
+[on('hidden')](selectionManager.Panel.on(type: 'hidden', callback: Callback&lt;void&gt;)). This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel).
 
 **Since:** 24
 
@@ -236,8 +236,8 @@ on(type: 'destroyed', callback: Callback<void>): void
 ```
 
 Subscribes to the word selection panel destruction event. This API is used together with   
-[off('destroyed')](selectionManager.Panel.off(type: 'destroyed', callback?: Callback&lt;void&gt;)). This API can be called only after a **Panel** instance is obtained by calling   
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel).
+[off('destroyed')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off). This API can be called only after a **Panel** instance is obtained by calling   
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel).
 
 **Since:** 24
 
@@ -272,8 +272,8 @@ on(type: 'hidden', callback: Callback<void>): void
 ```
 
 Subscribes to the word selection panel hiding event. This API is used together with   
-[off('hidden')](selectionManager.Panel.off(type: 'hidden', callback?: Callback&lt;void&gt;)). This event is triggered when the panel is hidden by calling [hide](arkts-basicservices-selectionmanager-panel-i.md#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling   
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel).
+[off('hidden')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off). This event is triggered when the panel is hidden by calling [hide](#hide) or automatically hidden when it loses focus. This API can be called only after a **Panel** instance is obtained by calling   
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel).
 
 **Since:** 24
 
@@ -307,7 +307,7 @@ try {
 setUiContent(path: string): Promise<void>
 ```
 
-Sets the UI content for the current word selection panel, for example, to display translation results, search suggestions, or custom action buttons. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This API uses a promise to return the result.
+Sets the UI content for the current word selection panel, for example, to display translation results, search suggestions, or custom action buttons. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -327,14 +327,14 @@ Sets the UI content for the current word selection panel, for example, to displa
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
 ## Examples
 
@@ -359,8 +359,8 @@ try {
 show(): Promise<void>
 ```
 
-Shows the word selection panel. This API is used together with [hide](arkts-basicservices-selectionmanager-panel-i.md#hide). This API can be called only after a **Panel** instance is obtained by calling  
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This API uses a promise to return the result.
+Shows the word selection panel. This API is used together with [hide](#hide). This API can be called only after a **Panel** instance is obtained by calling  
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -374,14 +374,14 @@ Shows the word selection panel. This API is used together with [hide](arkts-basi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
 ## Examples
 
@@ -402,7 +402,7 @@ selectionPanel.show().then(() => {
 startMoving(): Promise<void>
 ```
 
-Sets whether the word selection panel can be dragged along with the mouse, touchpad, or touchscreen. The panel automatically stops moving after the pointer is released. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel). This API uses a promise to return the result. This API must be called in the **onTouch** callback, and the event type must be **TouchType.Down**.
+Sets whether the word selection panel can be dragged along with the mouse, touchpad, or touchscreen. The panel automatically stops moving after the pointer is released. This API can be called only after a **Panel** instance is obtained by calling [createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel). This API uses a promise to return the result. This API must be called in the **onTouch** callback, and the event type must be **TouchType.Down**.
 
 **Since:** 24
 
@@ -416,14 +416,14 @@ Sets whether the word selection panel can be dragged along with the mouse, touch
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
+| [33600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-word-selection-service-invocation-error) |
+| [33600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-word-selection-panel-has-been-destroyed) |
 
 ## Examples
 

@@ -12,7 +12,7 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:createStream](arkts-corefile-fileio-createstream-f.md#createstream)
+**替代接口：** [createStream](arkts-corefile-file-fs-createstream-f.md#createStream)
 
 <!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>--><!--Device-unnamed-declare function createStream(path: string, mode: string): Promise<Stream>-End-->
 
@@ -29,7 +29,7 @@ declare function createStream(path: string, mode: string): Promise<Stream>
 
 | 类型 |
 | --- |
-| Promise&lt;Stream&gt; |
+| Promise&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; |
 
 
 ## createStream
@@ -44,7 +44,7 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.fs:createStream](arkts-corefile-fileio-createstream-f.md#createstream)
+**替代接口：** [createStream](arkts-corefile-file-fs-createstream-f.md#createStream)
 
 <!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function createStream(path: string, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
@@ -56,4 +56,4 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 | --- | --- | --- |
 | path | string | 是 |
 | mode | string | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | 是 |

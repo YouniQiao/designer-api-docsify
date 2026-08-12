@@ -6,7 +6,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache](arkts-arkts-util-lrucache-c.md)
+**替代接口：** [LRUCache](arkts-arkts-util-lrucache-c.md#LRUCache)
 
 <!--Device-util-class LruBuffer<K, V>--><!--Device-util-class LruBuffer<K, V>-End-->
 
@@ -24,7 +24,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.LRUCache.[Symbol.iterator]
+**替代接口：** [iterator]](ohos.util.LRUCache.[Symbol.iterator])
 
 <!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LruBuffer-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
 
@@ -34,7 +34,7 @@ LruBuffer 算法在缓存空间不足时使用新数据替换最不常使用的�
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[K, V]&gt; |
+| IterableIterator & lt;[K, V] & gt; |
 
 ## 示例
 
@@ -56,7 +56,7 @@ afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.afterRemoval](arkts-arkts-util-lrucache-c.md#afterremoval)
+**替代接口：** [afterRemoval](arkts-arkts-util-lrucache-c.md#afterRemoval)
 
 <!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void--><!--Device-LruBuffer-afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void-End-->
 
@@ -108,7 +108,7 @@ clear(): void
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.clear](arkts-arkts-util-lrucache-c.md#clear)
+**替代接口：** [clear](arkts-arkts-util-lrucache-c.md#clear)
 
 <!--Device-LruBuffer-clear(): void--><!--Device-LruBuffer-clear(): void-End-->
 
@@ -135,7 +135,7 @@ constructor(capacity?: number)
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.LRUCache.constructor
+**替代接口：** [constructor](ohos.util.LRUCache.constructor)
 
 <!--Device-LruBuffer-constructor(capacity?: number)--><!--Device-LruBuffer-constructor(capacity?: number)-End-->
 
@@ -165,7 +165,7 @@ contains(key: K): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.contains](arkts-arkts-util-lrucache-c.md#contains)
+**替代接口：** [contains](arkts-arkts-util-lrucache-c.md#contains)
 
 <!--Device-LruBuffer-contains(key: K): boolean--><!--Device-LruBuffer-contains(key: K): boolean-End-->
 
@@ -205,7 +205,7 @@ createDefault(key: K): V
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.createDefault](arkts-arkts-util-lrucache-c.md#createdefault)
+**替代接口：** [createDefault](arkts-arkts-util-lrucache-c.md#createDefault)
 
 <!--Device-LruBuffer-createDefault(key: K): V--><!--Device-LruBuffer-createDefault(key: K): V-End-->
 
@@ -242,7 +242,7 @@ entries(): IterableIterator<[K, V]>
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.entries](arkts-arkts-util-lrucache-c.md#entries)
+**替代接口：** [entries](arkts-arkts-util-lrucache-c.md#entries)
 
 <!--Device-LruBuffer-entries(): IterableIterator<[K, V]>--><!--Device-LruBuffer-entries(): IterableIterator<[K, V]>-End-->
 
@@ -252,7 +252,7 @@ entries(): IterableIterator<[K, V]>
 
 | 类型 |
 | --- |
-| IterableIterator&lt;[K, V]&gt; |
+| IterableIterator & lt;[K, V] & gt; |
 
 ## 示例
 
@@ -274,7 +274,7 @@ get(key: K): V | undefined
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.get](arkts-arkts-util-lrucache-c.md#get)
+**替代接口：** [get](arkts-arkts-util-lrucache-c.md#get)
 
 <!--Device-LruBuffer-get(key: K): V | undefined--><!--Device-LruBuffer-get(key: K): V | undefined-End-->
 
@@ -314,7 +314,7 @@ getCapacity(): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.getCapacity](arkts-arkts-util-lrucache-c.md#getcapacity)
+**替代接口：** [getCapacity](arkts-arkts-util-lrucache-c.md#getCapacity)
 
 <!--Device-LruBuffer-getCapacity(): number--><!--Device-LruBuffer-getCapacity(): number-End-->
 
@@ -347,7 +347,7 @@ getCreateCount(): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.getCreateCount](arkts-arkts-util-lrucache-c.md#getcreatecount)
+**替代接口：** [getCreateCount](arkts-arkts-util-lrucache-c.md#getCreateCount)
 
 <!--Device-LruBuffer-getCreateCount(): number--><!--Device-LruBuffer-getCreateCount(): number-End-->
 
@@ -381,7 +381,7 @@ getMatchCount(): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.getMatchCount](arkts-arkts-util-lrucache-c.md#getmatchcount)
+**替代接口：** [getMatchCount](arkts-arkts-util-lrucache-c.md#getMatchCount)
 
 <!--Device-LruBuffer-getMatchCount(): number--><!--Device-LruBuffer-getMatchCount(): number-End-->
 
@@ -416,7 +416,7 @@ getMissCount(): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.getMissCount](arkts-arkts-util-lrucache-c.md#getmisscount)
+**替代接口：** [getMissCount](arkts-arkts-util-lrucache-c.md#getMissCount)
 
 <!--Device-LruBuffer-getMissCount(): number--><!--Device-LruBuffer-getMissCount(): number-End-->
 
@@ -451,7 +451,7 @@ getPutCount(): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.getPutCount](arkts-arkts-util-lrucache-c.md#getputcount)
+**替代接口：** [getPutCount](arkts-arkts-util-lrucache-c.md#getPutCount)
 
 <!--Device-LruBuffer-getPutCount(): number--><!--Device-LruBuffer-getPutCount(): number-End-->
 
@@ -485,7 +485,7 @@ getRemovalCount(): number
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.getRemovalCount](arkts-arkts-util-lrucache-c.md#getremovalcount)
+**替代接口：** [getRemovalCount](arkts-arkts-util-lrucache-c.md#getRemovalCount)
 
 <!--Device-LruBuffer-getRemovalCount(): number--><!--Device-LruBuffer-getRemovalCount(): number-End-->
 
@@ -521,7 +521,7 @@ isEmpty(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.isEmpty](arkts-arkts-util-lrucache-c.md#isempty)
+**替代接口：** [isEmpty](arkts-arkts-util-lrucache-c.md#isEmpty)
 
 <!--Device-LruBuffer-isEmpty(): boolean--><!--Device-LruBuffer-isEmpty(): boolean-End-->
 
@@ -555,7 +555,7 @@ keys(): K[]
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.keys](arkts-arkts-util-lrucache-c.md#keys)
+**替代接口：** [keys](arkts-arkts-util-lrucache-c.md#keys)
 
 <!--Device-LruBuffer-keys(): K[]--><!--Device-LruBuffer-keys(): K[]-End-->
 
@@ -589,7 +589,7 @@ put(key: K, value: V): V
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.put](arkts-arkts-util-lrucache-c.md#put)
+**替代接口：** [put](arkts-arkts-util-lrucache-c.md#put)
 
 <!--Device-LruBuffer-put(key: K, value: V): V--><!--Device-LruBuffer-put(key: K, value: V): V-End-->
 
@@ -629,7 +629,7 @@ remove(key: K): V | undefined
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.remove](arkts-arkts-util-lrucache-c.md#remove)
+**替代接口：** [remove](arkts-arkts-util-lrucache-c.md#remove)
 
 <!--Device-LruBuffer-remove(key: K): V | undefined--><!--Device-LruBuffer-remove(key: K): V | undefined-End-->
 
@@ -669,7 +669,7 @@ toString(): string
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.toString](arkts-arkts-util-lrucache-c.md#tostring)
+**替代接口：** [toString](arkts-arkts-util-lrucache-c.md#toString)
 
 <!--Device-LruBuffer-toString(): string--><!--Device-LruBuffer-toString(): string-End-->
 
@@ -705,7 +705,7 @@ updateCapacity(newCapacity: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.updateCapacity](arkts-arkts-util-lrucache-c.md#updatecapacity)
+**替代接口：** [updateCapacity](arkts-arkts-util-lrucache-c.md#updateCapacity)
 
 <!--Device-LruBuffer-updateCapacity(newCapacity: number): void--><!--Device-LruBuffer-updateCapacity(newCapacity: number): void-End-->
 
@@ -736,7 +736,7 @@ values(): V[]
 
 **废弃版本：** 9
 
-**替代接口：** [util.LRUCache.values](arkts-arkts-util-lrucache-c.md#values)
+**替代接口：** [values](arkts-arkts-util-lrucache-c.md#values)
 
 <!--Device-LruBuffer-values(): V[]--><!--Device-LruBuffer-values(): V[]-End-->
 
@@ -774,7 +774,7 @@ length: number
 
 **废弃版本：** 9
 
-**替代接口：** ohos.util.LRUCache.length
+**替代接口：** [length](ohos.util.LRUCache.length)
 
 <!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
 

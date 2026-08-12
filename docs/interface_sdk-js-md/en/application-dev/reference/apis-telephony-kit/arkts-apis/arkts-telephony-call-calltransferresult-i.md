@@ -13,7 +13,7 @@ Indicates the result of call transfer.
 ## Modules to Import
 
 ```TypeScript
-import { call } from 'kits/@kit.TelephonyKit';
+import { call } from '@kit.TelephonyKit';
 ```
 
 ## endHour
@@ -114,7 +114,7 @@ status: TransferStatus
 
 Indicates the status of call forwarding.
 
-**Type:** [TransferStatus](arkts-telephony-call-transferstatus-e.md)
+**Type:** TransferStatus
 
 **Since:** 26.0.0
 

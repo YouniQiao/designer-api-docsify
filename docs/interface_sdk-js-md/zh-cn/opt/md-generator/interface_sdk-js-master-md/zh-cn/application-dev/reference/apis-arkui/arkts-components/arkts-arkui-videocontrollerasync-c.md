@@ -5,7 +5,7 @@ VideoControllerAsync是VideoController的异步版本，可以通过Promise获�
 > **说明：**
 > 
 > VideoControllerAsync提供命令执行结果。与VideoController相比，[start](arkts-arkui-videocontroller-c.md#start)、
-> [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](arkts-arkui-videocontrollerasync-c.md#reset)等播
+> [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](#reset)等播
 > 放控制命令为异步执行，请求后立即返回不阻塞当前线程，可通过Promise的then和catch方法处理命令执行结果。
 
 ## 导入对象
@@ -78,7 +78,7 @@ pause(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## requestFullscreen
 
@@ -130,7 +130,7 @@ reset(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setCurrentTime
 
@@ -159,7 +159,7 @@ setCurrentTime(value: number, seekMode?: SeekMode)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | value | number | 是 |
-| seekMode | [SeekMode](../../apis-media-kit/arkts-apis/arkts-media-multimedia-media-seekmode-e.md) | 否 |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 否 |
 
 ## start
 
@@ -185,7 +185,7 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## stop
 
@@ -209,4 +209,4 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

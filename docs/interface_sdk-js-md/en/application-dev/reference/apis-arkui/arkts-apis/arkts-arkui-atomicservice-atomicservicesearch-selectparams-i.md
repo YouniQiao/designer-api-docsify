@@ -13,7 +13,7 @@ Provides optional attributes for the selection area.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from 'kits/@kit.ArkUI';
+import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
 ```
 
 ## onSelect
@@ -42,7 +42,7 @@ arrowPosition?: ArrowPosition
 
 Set the layout direction for text and arrow in select.
 
-**Type:** [ArrowPosition](../arkts-components/arkts-arkui-arrowposition-e.md)
+**Type:** ArrowPosition
 
 **Since:** 18
 
@@ -62,7 +62,7 @@ divider?: Optional<DividerOptions> | null
 
 Sets the divider of select.
 
-**Type:** [Optional](arkts-arkui-optional-t.md)&lt;DividerOptions&gt; \| null
+**Type:** Optional&lt;DividerOptions&gt; \| null
 
 **Since:** 18
 
@@ -82,7 +82,7 @@ font?: Font
 
 Sets the text properties of the select button itself.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -102,7 +102,7 @@ fontColor?: ResourceColor
 
 Sets the text color of the select button itself.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -142,7 +142,7 @@ menuBackgroundBlurStyle?: BlurStyle
 
 Set menu background blur Style.
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 18
 
@@ -162,7 +162,7 @@ menuBackgroundColor?: ResourceColor
 
 Set the menu's background color.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -182,7 +182,7 @@ menuItemContentModifier?: ContentModifier<MenuItemConfiguration>
 
 Register a ContentModifier for each menu item.
 
-**Type:** [ContentModifier](../arkts-components/arkts-arkui-contentmodifier-i.md)&lt;MenuItemConfiguration&gt;
+**Type:** ContentModifier&lt;MenuItemConfiguration&gt;
 
 **Since:** 18
 
@@ -202,7 +202,7 @@ optionBgColor?: ResourceColor
 
 Sets the background color of the select item.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -222,7 +222,7 @@ optionFont?: Font
 
 Sets the text style for select items.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -242,7 +242,7 @@ optionFontColor?: ResourceColor
 
 Sets the text color for select items.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -262,7 +262,7 @@ optionHeight?: Dimension
 
 Set the height of each option.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 18
 
@@ -282,7 +282,7 @@ optionWidth?: Dimension | OptionWidthMode
 
 Set the width of each option and set whether the option width fit the trigger.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| OptionWidthMode
+**Type:** Dimension \| OptionWidthMode
 
 **Since:** 18
 
@@ -322,7 +322,7 @@ selectValue?: ResourceStr
 
 The default text value.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 18
 
@@ -362,7 +362,7 @@ selectedOptionBgColor?: ResourceColor
 
 Sets the background color of the selected items in the select.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -382,7 +382,7 @@ selectedOptionFont?: Font
 
 Sets the text style of the selected items in the select.
 
-**Type:** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 18
 
@@ -402,7 +402,7 @@ selectedOptionFontColor?: ResourceColor
 
 Sets the text color of the selected item in the select.
 
-**Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Since:** 18
 
@@ -422,7 +422,7 @@ space?: Length
 
 Set the space for text and icon in select.
 
-**Type:** [Length](arkts-arkui-length-t.md)
+**Type:** Length
 
 **Since:** 18
 

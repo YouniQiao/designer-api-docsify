@@ -14,7 +14,7 @@ Cancels all notifications. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancelAll
+**Substitutes:** [cancelAll](ohos.notificationManager/notificationManager#cancelAll)
 
 <!--Device-notification-function cancelAll(callback: AsyncCallback<void>): void--><!--Device-notification-function cancelAll(callback: AsyncCallback<void>): void-End-->
 
@@ -24,7 +24,7 @@ Cancels all notifications. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## cancelAll
@@ -41,7 +41,7 @@ Cancels all notifications. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#cancelAll
+**Substitutes:** [cancelAll](ohos.notificationManager/notificationManager#cancelAll)
 
 <!--Device-notification-function cancelAll(): Promise<void>--><!--Device-notification-function cancelAll(): Promise<void>-End-->
 

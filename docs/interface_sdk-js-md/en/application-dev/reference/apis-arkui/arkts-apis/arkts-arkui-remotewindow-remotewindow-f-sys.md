@@ -32,5 +32,5 @@ Defines RemoteWindow Component.
 
 | Type | Description |
 | --- | --- |
-| [RemoteWindowAttribute](../arkts-components/arkts-arkui-remotewindow-attribute.md) |  |
+| [RemoteWindowAttribute](arkts-arkui-remotewindow-remotewindowattribute-i-sys.md) |  |
 

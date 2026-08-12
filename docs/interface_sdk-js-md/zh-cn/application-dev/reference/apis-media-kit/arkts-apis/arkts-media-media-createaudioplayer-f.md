@@ -10,7 +10,7 @@ function createAudioPlayer(): AudioPlayer
 
 > **说明：**
 > > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)替代。
+> [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer)替代。
 
 **起始版本：** 6
 
@@ -18,7 +18,7 @@ function createAudioPlayer(): AudioPlayer
 
 **废弃版本：** 9
 
-**替代接口：** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback:
+**替代接口：** [createAVPlayer](media.createAVPlayer(callback:)
 
 <!--Device-media-function createAudioPlayer(): AudioPlayer--><!--Device-media-function createAudioPlayer(): AudioPlayer-End-->
 

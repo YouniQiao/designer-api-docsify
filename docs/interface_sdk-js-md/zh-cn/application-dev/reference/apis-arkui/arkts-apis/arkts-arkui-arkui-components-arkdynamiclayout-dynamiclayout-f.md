@@ -26,7 +26,7 @@ export declare function DynamicLayout (
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | algorithm | [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md) | 是 | 指定动态布局组件的布局算法。 取非法值时，按照堆叠布局算法[StackLayoutAlgorithm](../../../reference/apis-arkui/js-apis-arkui-layoutAlgorithm.md#stacklayoutalgorithm)布局子组件，子组件堆叠排列。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 是 |  |
+| content_ | CustomBuilder | 是 |  |
 
 **返回值：**
 

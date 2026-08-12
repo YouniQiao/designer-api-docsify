@@ -22,7 +22,7 @@ action?: Action
 - DOWNLOAD表示下载任务。  
 - 如果未填写，则查询所有任务。
 
-**类型：** [Action](arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 10
 
@@ -98,7 +98,7 @@ state?: State
 
 指定任务的状态。如果未填写，则查询所有任务。
 
-**类型：** [State](arkts-basicservices-agent-state-e.md)
+**类型：** State
 
 **起始版本：** 10
 

@@ -11,7 +11,7 @@ Provides the limits of the float view.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from 'kits/@kit.ArkUI';
+import { floatView } from '@kit.ArkUI';
 ```
 
 ## maxSize
@@ -58,7 +58,7 @@ ratioLimits: Array<RatioLimit>
 
 Aspect ratio range of the float view.
 
-**Type:** Array&lt;RatioLimit&gt;
+**Type:** Array&lt;[RatioLimit](arkts-arkui-floatview-ratiolimit-i.md)&gt;
 
 **Since:** 26.0.0
 

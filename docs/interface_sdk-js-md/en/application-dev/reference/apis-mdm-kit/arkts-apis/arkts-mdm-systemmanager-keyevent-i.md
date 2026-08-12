@@ -1,7 +1,7 @@
 # KeyEvent
 
 Enumerates key events. When the  
-[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onkeyevent)key event callback is triggered, the current key event information is transferred.
+[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent)key event callback is triggered, the current key event information is transferred.
 
 **Since:** 23
 
@@ -14,7 +14,7 @@ Enumerates key events. When the
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from 'kits/@kit.MDMKit';
+import { systemManager } from '@kit.MDMKit';
 ```
 
 ## actionTime
@@ -65,7 +65,7 @@ keyCode: KeyCode
 
 Key code.
 
-**Type:** [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md)
+**Type:** KeyCode
 
 **Since:** 23
 
@@ -85,7 +85,7 @@ keyItems: Array<KeyItem>
 
 Information about other keys that are being pressed when the current key event occurs.
 
-**Type:** Array&lt;KeyItem&gt;
+**Type:** Array&lt;[KeyItem](arkts-mdm-systemmanager-keyitem-i.md)&gt;
 
 **Since:** 23
 

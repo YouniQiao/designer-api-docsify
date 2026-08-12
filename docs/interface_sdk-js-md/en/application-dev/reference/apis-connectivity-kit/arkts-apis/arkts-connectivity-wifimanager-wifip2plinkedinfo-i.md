@@ -13,7 +13,7 @@ P2P linked information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## connectState
@@ -24,7 +24,7 @@ connectState: P2pConnectState
 
 Connection status
 
-**Type:** [P2pConnectState](arkts-connectivity-wifi-p2pconnectstate-e.md)
+**Type:** P2pConnectState
 
 **Since:** 9
 

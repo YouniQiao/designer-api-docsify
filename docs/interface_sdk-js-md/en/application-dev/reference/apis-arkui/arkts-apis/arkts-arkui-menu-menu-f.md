@@ -25,13 +25,13 @@ Defines Menu Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MenuAttribute](../arkts-components/arkts-arkui-menu-attribute.md) |  |
+| [MenuAttribute](arkts-arkui-menu-menuattribute-i.md) |  |
 
 
 ## Menu
@@ -61,12 +61,12 @@ Defines Menu Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;MenuAttribute&gt; | Yes | menu attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[MenuAttribute](arkts-arkui-menu-menuattribute-i.md)&gt; | Yes | menu attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MenuAttribute](../arkts-components/arkts-arkui-menu-attribute.md) |  |
+| [MenuAttribute](arkts-arkui-menu-menuattribute-i.md) |  |
 

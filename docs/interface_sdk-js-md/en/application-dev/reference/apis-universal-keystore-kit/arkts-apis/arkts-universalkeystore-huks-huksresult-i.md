@@ -13,7 +13,7 @@ Represents the result returned.
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md)
+**Substitutes:** [HuksReturnResult](arkts-universalkeystore-huks-huksreturnresult-i.md#HuksReturnResult)
 
 <!--Device-huks-export interface HuksResult--><!--Device-huks-export interface HuksResult-End-->
 
@@ -22,7 +22,7 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## certChains
@@ -101,7 +101,7 @@ Reserved field.
 
 Note: This API is deprecated since API version 9. No substitute API is provided.
 
-**Type:** Array&lt;HuksParam&gt;
+**Type:** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **Since:** 8
 

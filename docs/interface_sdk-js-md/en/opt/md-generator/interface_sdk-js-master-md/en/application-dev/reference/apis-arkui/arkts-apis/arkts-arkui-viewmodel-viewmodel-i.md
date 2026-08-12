@@ -29,7 +29,7 @@ Displays content based on the current system language and a path of the language
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| param | object \| Array&lt;any&gt; | No |
+| param | object \| Array & lt;any & gt; | No |
 
 **Return value:**
 

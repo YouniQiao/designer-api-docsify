@@ -15,7 +15,7 @@ A sync root management class that enables the File Manager to access the sync ro
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## constructor
@@ -42,8 +42,8 @@ A constructor used to create a **SyncFolderAccessor** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. application which is not a system application uses system API. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. application which is not a system application uses system API. |
 
 ## Examples
 
@@ -93,18 +93,18 @@ Obtains information about all registered sync roots. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;SyncFolder&gt;&gt; | Promise that returns the sync root list of all cloud disk applications. |
+| Promise&lt;Array&lt;[SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)&gt;&gt; | Promise that returns the sync root list of all cloud disk applications. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported. |
-| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) | Temporary failure. Retry is recommended (e.g., network issues). |
-| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) | Cloud disk is not allowed on this device. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) | IPC communication failed. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported. |
+| [34400014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) | Temporary failure. Retry is recommended (e.g., network issues). |
+| [34400015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) | Cloud disk is not allowed on this device. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [34400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) | IPC communication failed. |
 
 ## Examples
 

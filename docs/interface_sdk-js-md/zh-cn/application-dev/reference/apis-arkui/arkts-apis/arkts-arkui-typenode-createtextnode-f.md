@@ -29,5 +29,5 @@ export function createTextNode(context: UIContext, options?: FrameNodeOptions): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [Text](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-text-c.md) | 返回 Text 类型的 FrameNode |
+| Text | 返回 Text 类型的 FrameNode |
 

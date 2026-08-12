@@ -15,7 +15,7 @@ The module provides the base class for intent execution. You can use this module
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentExecutor } from 'kits/@kit.AbilityKit';
+import { InsightIntentExecutor } from '@kit.AbilityKit';
 ```
 
 ## onExecuteInServiceExtensionAbility
@@ -45,7 +45,7 @@ Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | InsightIntent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
+| param | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | InsightIntent call parameter. |
 
 **Return value:**
 
@@ -170,10 +170,10 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
 
 - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground).  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground).  
 - If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
  intent execution: onExecuteInUIAbilityBackgroundMode.
 
@@ -194,7 +194,7 @@ during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiabilit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
 
 **Return value:**
 
@@ -256,10 +256,10 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
 
 - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onbackground).  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground).  
 - If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
  intent execution: onExecuteInUIAbilityBackgroundMode.
 
@@ -278,7 +278,7 @@ during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiabilit
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | InsightIntent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
+| param | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | InsightIntent call parameter. |
 
 **Return value:**
 
@@ -293,13 +293,13 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
 
 - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),  
+[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
 - If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
-following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
 - If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the  
 following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
@@ -320,8 +320,8 @@ following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
-| pageLoader | window.WindowStage | Yes | WindowStage instance, which is the same as the WindowStage instance in the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) API and can be used to load the page for intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| pageLoader | window.WindowStage | Yes | WindowStage instance, which is the same as the WindowStage instance in the [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
@@ -423,13 +423,13 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-app-ability-uiability.md) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
 
 - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#oncreate),  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),  
+[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
 - If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
-following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onnewwant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onforeground).  
+following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
 - If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the  
 following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
@@ -448,7 +448,7 @@ following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | InsightIntent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
+| param | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | InsightIntent call parameter. |
 | pageLoader | window.WindowStage | Yes | Page loader. |
 
 **Return value:**
@@ -465,12 +465,12 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
 ```
 
 Called during the UIExtensionAbility lifecycle when the  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
 - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate),  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate),onExecuteInUIExtensionAbility, and  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
+[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate),  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate),onExecuteInUIExtensionAbility, and  
+[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground).
 
 **Since:** 11
 
@@ -487,8 +487,8 @@ Called during the UIExtensionAbility lifecycle when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Intent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
-| pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession instance, which is the same as the UIExtensionContentSession instance in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate) API and can be used to load the page for intent execution. |
+| param | Record&lt;string, Object&gt; | Yes | Intent parameter, which is the data passed from the system entry point to the application for this intent execution. |
+| pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | UIExtensionContentSession instance, which is the same as the UIExtensionContentSession instance in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) API and can be used to load the page for intent execution. |
 
 **Return value:**
 
@@ -583,12 +583,12 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
 ```
 
 Called during the UIExtensionAbility lifecycle when the  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
+[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
 
 - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#oncreate),  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onsessioncreate),onExecuteInUIExtensionAbility, and  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onforeground).
+[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate),  
+[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate),onExecuteInUIExtensionAbility, and  
+[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground).
 
 **Since:** 23
 
@@ -605,7 +605,7 @@ Called during the UIExtensionAbility lifecycle when the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | InsightIntent name. |
-| param | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, RecordData&gt; | Yes | InsightIntent call parameter. |
+| param | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | InsightIntent call parameter. |
 | pageLoader | [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md) | Yes | Page loader. |
 
 **Return value:**

@@ -34,5 +34,5 @@ Initialize Divider FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [DividerAttribute](../arkts-components/arkts-arkui-divider-attribute.md) |  |
+| DividerAttribute |  |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from 'kits/@kit.AudioKit';
+import { systemSoundManager } from '@kit.AudioKit';
 ```
 
 ## createSystemSoundPlayer
@@ -24,13 +24,13 @@ Creates a SystemSoundPlayer instance. This function uses a promise to return the
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SystemSoundPlayer \| null&gt; |
+| Promise & lt;SystemSoundPlayer \ | null & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 

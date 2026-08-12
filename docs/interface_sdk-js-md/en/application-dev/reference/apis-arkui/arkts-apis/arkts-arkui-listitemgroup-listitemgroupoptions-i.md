@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 Describes the ListItemGroup footer.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 
@@ -80,7 +80,7 @@ header?: CustomBuilder
 
 Describes the ListItemGroup header.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 

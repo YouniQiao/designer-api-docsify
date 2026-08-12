@@ -24,7 +24,7 @@ Path is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PathOptions](../arkts-components/arkts-arkui-pathoptions-i.md) | No | The options to create a Path |
+| options | [PathOptions](arkts-arkui-path-pathoptions-i.md) | No | The options to create a Path |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines Path Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PathAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PathAttribute](arkts-arkui-path-pathattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

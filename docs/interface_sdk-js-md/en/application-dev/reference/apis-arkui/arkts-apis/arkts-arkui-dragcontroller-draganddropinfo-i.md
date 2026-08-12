@@ -13,7 +13,7 @@ Drag and drop information
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from 'kits/@kit.ArkUI';
+import { dragController } from '@kit.ArkUI';
 ```
 
 ## event
@@ -24,7 +24,7 @@ event: DragEvent
 
 The information containing the drag event.
 
-**Type:** [DragEvent](../arkts-components/arkts-arkui-dragevent-i.md)
+**Type:** DragEvent
 
 **Since:** 23
 

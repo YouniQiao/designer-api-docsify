@@ -1,6 +1,6 @@
 # Flags
 
-Enumerates the common preset keywords of the [Want.flags](arkts-ability-app-ability-want-want-c.md) field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions.
+Enumerates the common preset keywords of the [Want.flags](arkts-ability-app-ability-want-want-c.md#Want) field. You can use these predefined keywords to set or retrieve additional flag information carried in application transitions.
 
 **Since:** 9
 
@@ -91,7 +91,7 @@ FLAG_ABILITY_ON_COLLABORATE = 0x00002000
 ```
 
 In multi-device collaboration scenario, the caller application must initiate a request through the DMS, with this  flag included in the **Flags** field, in order to invoke the lifecycle callback  
-[onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#oncollaborate)of the target application.
+[onCollaborate()](arkts-ability-app-ability-uiability-uiability-c.md#onCollaborate)of the target application.
 
 **Since:** 18
 

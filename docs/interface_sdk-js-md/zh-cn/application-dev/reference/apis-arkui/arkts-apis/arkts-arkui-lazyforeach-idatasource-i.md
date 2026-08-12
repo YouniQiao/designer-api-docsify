@@ -60,7 +60,7 @@ registerDataChangeListener(listener: DataChangeListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](../arkts-components/arkts-arkui-datachangelistener-i.md) | 是 |  |
+| listener | [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md) | 是 |  |
 
 ## totalCount
 
@@ -106,5 +106,5 @@ unregisterDataChangeListener(listener: DataChangeListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [DataChangeListener](../arkts-components/arkts-arkui-datachangelistener-i.md) | 是 |  |
+| listener | [DataChangeListener](arkts-arkui-lazyforeach-datachangelistener-i.md) | 是 |  |
 

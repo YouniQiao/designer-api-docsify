@@ -40,7 +40,7 @@ indicatorBuilder?: CustomBuilder
 
 Custom component to indicate that the radio button is selected. This custom component is center aligned with the radio button. If this parameter is set to **undefined**, the value of **RadioIndicatorType.TICK** is used as the indicator type.
 
-**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
+**Type:** CustomBuilder
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ indicatorType?: RadioIndicatorType
 
 Indicator type of the radio button. If no value is specified, the value of **RadioIndicatorType.TICK** is used.
 
-**Type:** [RadioIndicatorType](../arkts-apis/arkts-arkui-radio-radioindicatortype-e.md)
+**Type:** [RadioIndicatorType](arkts-arkui-radioindicatortype-e.md)
 
 **Since:** 12
 

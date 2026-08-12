@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## createAsrProcessingController
@@ -28,7 +28,7 @@ Create ASR processing controller on one audio capturer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i-sys.md) | Yes | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION}. |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION). |
 
 **Return value:**
 
@@ -40,10 +40,10 @@ Create ASR processing controller on one audio capturer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. e.g. the source type of the input audio capturer is not {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION} or {@link SourceType#SOURCE_TYPE_WAKEUP}, or this audio capturer is already released. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_WAKEUP), or this audio capturer is already released. |
 
 ## Examples
 
@@ -102,7 +102,7 @@ Create ASR processing controller on one audio capturer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i-sys.md) | Yes | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION}. |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes | The audio capturer whose ASR processing will be controlled. The source type of this capturer must be [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION). |
 
 **Return value:**
 
@@ -114,7 +114,7 @@ Create ASR processing controller on one audio capturer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. e.g. the source type of the input audio capturer is not {@link SourceType#SOURCE_TYPE_VOICE_RECOGNITION} or {@link SourceType#SOURCE_TYPE_WAKEUP}, or this audio capturer is already released. |
+| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_WAKEUP), or this audio capturer is already released. |
 

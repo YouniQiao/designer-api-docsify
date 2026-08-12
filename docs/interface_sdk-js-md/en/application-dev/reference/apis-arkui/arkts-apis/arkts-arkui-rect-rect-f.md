@@ -24,13 +24,13 @@ Rect is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| RoundedRectOptions | No | The options to create a Rect |
+| options | [RectOptions](arkts-arkui-rect-rectoptions-i.md) \| [RoundedRectOptions](arkts-arkui-rect-roundedrectoptions-i.md) | No | The options to create a Rect |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RectAttribute](../arkts-components/arkts-arkui-rect-attribute.md) | The attribute of the Rect |
+| [RectAttribute](arkts-arkui-rect-rectattribute-i.md) | The attribute of the Rect |
 
 
 ## Rect
@@ -59,11 +59,11 @@ Defines Rect Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RectAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RectAttribute](arkts-arkui-rect-rectattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RectAttribute](../arkts-components/arkts-arkui-rect-attribute.md) |  |
+| [RectAttribute](arkts-arkui-rect-rectattribute-i.md) |  |
 

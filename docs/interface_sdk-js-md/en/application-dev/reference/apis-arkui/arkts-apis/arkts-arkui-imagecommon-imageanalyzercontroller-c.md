@@ -50,5 +50,5 @@ Gets the AI analysis types supported by the corresponding component.
 
 | Type | Description |
 | --- | --- |
-| [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)[] | The AI analysis types supported by the corresponding component. |
+| [ImageAnalyzerType](arkts-arkui-imagecommon-imageanalyzertype-e.md)[] | The AI analysis types supported by the corresponding component. |
 

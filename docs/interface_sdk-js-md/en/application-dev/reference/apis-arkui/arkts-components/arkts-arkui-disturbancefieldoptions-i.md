@@ -126,7 +126,7 @@ Default value: {x:0, y:0}.
 
 Value range of **x** and **y**: (-∞, +∞).
 
-**Type:** [PositionT](../arkts-apis/arkts-arkui-positiont-t.md)&lt;number&gt;
+**Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **Default:** {x:0,y:0}
 
@@ -180,7 +180,7 @@ Default value: {width:0, height:0}.
 
 Value range of **width** and **height**: [0, +∞).
 
-**Type:** [SizeT](../arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;number&gt;
+**Type:** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **Default:** {width:0,height:0}
 

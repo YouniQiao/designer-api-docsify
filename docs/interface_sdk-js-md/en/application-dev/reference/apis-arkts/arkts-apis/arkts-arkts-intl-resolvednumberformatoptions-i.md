@@ -98,7 +98,7 @@ locale: Intl.BCP47LanguageTag
 
 Locale identifier.
 
-**Type:** Intl.BCP47LanguageTag
+**Type:** [Intl.BCP47LanguageTag](arkts-arkts-intl-bcp47languagetag-t.md)
 
 **Since:** 26.0.0
 

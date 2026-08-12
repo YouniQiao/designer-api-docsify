@@ -16,7 +16,7 @@ Describes the focus tracking information, which is obtained by calling VideoSess
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## trackingMode
@@ -47,7 +47,7 @@ trackingRegion: Rect
 
 Tracking region.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 15
 

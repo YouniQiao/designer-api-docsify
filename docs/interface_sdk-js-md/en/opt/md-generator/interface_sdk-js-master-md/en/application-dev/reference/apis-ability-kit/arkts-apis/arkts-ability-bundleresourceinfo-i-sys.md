@@ -59,7 +59,7 @@ readonly drawableDescriptor: DrawableDescriptor
 
 drawableDescriptor object of the application icon.
 
-**Type:** [DrawableDescriptor](../../apis-arkui/arkts-components/arkts-arkui-drawabledescriptor-t.md)
+**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
 
 **Since:** 12
 

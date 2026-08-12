@@ -6,7 +6,7 @@
 export declare function animateToImmediately(value: AnimateParam, processor: VoidCallback): void
 ```
 
-Define animation functions for immediate distribution.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use{@link ohos.arkui.UIContext.UIContext#animateToImmediately} to explicitly specify the UI context.
+Define animation functions for immediate distribution.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use[animateToImmediately](ohos.arkui.UIContext.UIContext#animateToImmediately) to explicitly specify the UI context.
 
 **Since:** 23
 
@@ -22,6 +22,6 @@ Define animation functions for immediate distribution.This interface depends on 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | Yes | Set animation effect parameters. |
+| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) | Yes | Set animation effect parameters. |
 | processor | [VoidCallback](arkts-arkui-voidcallback-t.md) | Yes | Specify the closure function that displays dynamic effects, and the system will automatically insert transition animations for state changes caused by the closure function. |
 

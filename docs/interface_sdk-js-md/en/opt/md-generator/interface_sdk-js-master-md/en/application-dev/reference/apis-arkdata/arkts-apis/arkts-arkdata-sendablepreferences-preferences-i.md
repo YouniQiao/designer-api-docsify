@@ -2,9 +2,9 @@
 
 Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from   
 [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference.Before calling any API of **Preferences**, obtain a **Preferences** instance by using   
-[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getpreferences).
+[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences).
 
-**Inheritance/Implementation:** Preferences extends [lang.ISendable](../../apis-arkts/arkts-apis/arkts-arkts-lang-isendable-i.md/arkts-arkts-lang-isendable-i.md)
+**Inheritance/Implementation:** Preferences extends [lang.ISendable](lang.ISendable)
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Provides APIs for obtaining and modifying **Preferences** instances. **Preferenc
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from 'kits/@kit.ArkData';
+import { sendablePreferences } from '@kit.ArkData';
 ```
 
 ## clear
@@ -25,7 +25,7 @@ clear(): Promise<void>
 ```
 
 Clears this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
+[flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -39,13 +39,13 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -67,7 +67,7 @@ clearSync(): void
 ```
 
 Clears this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
+[flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -81,7 +81,7 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -96,7 +96,7 @@ delete(key: string): Promise<void>
 ```
 
 Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
+[flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -116,14 +116,14 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -145,7 +145,7 @@ deleteSync(key: string): void
 ```
 
 Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
+[flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -165,8 +165,8 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -194,13 +194,13 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -235,7 +235,7 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 | Error Code ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -270,14 +270,14 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;lang.ISendable&gt; |
+| Promise & lt;lang.ISendable & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -314,13 +314,13 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;lang.ISendable&gt; |
+| Promise & lt;lang.ISendable & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -364,7 +364,7 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 | Error Code ID |
 | --- |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -410,8 +410,8 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -446,14 +446,14 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -504,8 +504,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -545,8 +545,8 @@ Unsubscribes from data changes.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -572,7 +572,7 @@ preferences.flush().then(() => {
 off(type: 'multiProcessChange', callback?: Callback<string>): void
 ```
 
-Unsubscribes from inter-process data changes.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Unsubscribes from inter-process data changes.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
@@ -593,8 +593,8 @@ Unsubscribes from inter-process data changes.This API is provided for applicatio
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -635,15 +635,15 @@ Unsubscribes from changes of specific data.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dataChange' | Yes |
-| keys | Array&lt;string&gt; | Yes |
+| keys | Array & lt;string & gt; | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -672,7 +672,7 @@ preferences.flush().then(() => {
 on(type: 'change', callback: Callback<string>): void
 ```
 
-Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](arkts-arkdata-sendablepreferences-preferences-i.md#flush).
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](#flush).
 
 **Since:** 12
 
@@ -693,8 +693,8 @@ Subscribes to data changes. The registered callback will be invoked to return th
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -720,7 +720,7 @@ on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
 Subscribes to data changes between processes. When multiple processes hold the same preference file, calling   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+[flush](#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 12
 
@@ -741,9 +741,9 @@ Subscribes to data changes between processes. When multiple processes hold the s
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
-| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [15500019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) |
 
 ## Examples
 
@@ -768,7 +768,7 @@ preferences.flush().then(() => {
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
 ```
 
-Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](arkts-arkdata-sendablepreferences-preferences-i.md#flush).
+Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](#flush).
 
 **Since:** 12
 
@@ -783,15 +783,15 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'dataChange' | Yes |
-| keys | Array&lt;string&gt; | Yes |
+| keys | Array & lt;string & gt; | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -820,7 +820,7 @@ put(key: string, value: lang.ISendable): Promise<void>
 ```
 
 Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
+[flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -841,14 +841,14 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 
@@ -870,7 +870,7 @@ putSync(key: string, value: lang.ISendable): void
 ```
 
 Writes data to this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](arkts-arkdata-sendablepreferences-preferences-i.md#flush) to persist the **Preferences** instance.
+[flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
@@ -891,8 +891,8 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15500000](../errorcode-preferences.md#15500000-internal-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 

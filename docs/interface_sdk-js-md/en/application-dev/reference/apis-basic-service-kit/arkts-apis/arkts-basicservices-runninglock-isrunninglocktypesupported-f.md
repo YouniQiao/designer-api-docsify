@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from 'kits/@kit.BasicServicesKit';
+import { runningLock } from '@kit.BasicServicesKit';
 ```
 
 ## isRunningLockTypeSupported
@@ -12,7 +12,7 @@ import { runningLock } from 'kits/@kit.BasicServicesKit';
 function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified type of {@link RunningLock} is supported. This API uses an asynchronous callback to return the result.
+Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -20,7 +20,7 @@ Checks whether a specified type of {@link RunningLock} is supported. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
+**Substitutes:** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -31,7 +31,7 @@ Checks whether a specified type of {@link RunningLock} is supported. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the running lock. |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the query result obtained, where the value **true** indicates that the specified type of the running lock is supported and **false** indicates the opposite. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the query result obtained, where the value **true** indicates that the specified type of the running lock is supported and **false** indicates the opposite. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -52,7 +52,7 @@ runningLock.isRunningLockTypeSupported(runningLock.RunningLockType.BACKGROUND, (
 function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>
 ```
 
-Checks whether a specified type of {@link RunningLock} is supported. This API uses a promise to return the result.
+Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -60,7 +60,7 @@ Checks whether a specified type of {@link RunningLock} is supported. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [runningLock.isSupported](arkts-basicservices-runninglock-issupported-f.md#issupported)
+**Substitutes:** [isSupported](arkts-basicservices-runninglock-issupported-f.md#isSupported)
 
 <!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>--><!--Device-runningLock-function isRunningLockTypeSupported(type: RunningLockType): Promise<boolean>-End-->
 

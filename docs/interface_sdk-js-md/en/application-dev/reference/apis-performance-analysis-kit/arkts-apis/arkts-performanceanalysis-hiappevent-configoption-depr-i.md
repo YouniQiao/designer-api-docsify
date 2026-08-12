@@ -8,7 +8,7 @@ Provides the configuration items for application event logging.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption
+**Substitutes:** [ConfigOption](ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption)
 
 <!--Device-hiAppEvent-interface ConfigOption--><!--Device-hiAppEvent-interface ConfigOption-End-->
 
@@ -30,7 +30,7 @@ Application event logging switch. The value **true** means to disable the applic
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#disable
+**Substitutes:** [disable](ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#disable)
 
 <!--Device-ConfigOption-disable?: boolean--><!--Device-ConfigOption-disable?: boolean-End-->
 
@@ -52,7 +52,7 @@ Maximum size of the event file storage directory. The default value is **10MB**.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#maxStorage
+**Substitutes:** [maxStorage](ohos.hiviewdfx.hiAppEvent/hiAppEvent.ConfigOption#maxStorage)
 
 <!--Device-ConfigOption-maxStorage?: string--><!--Device-ConfigOption-maxStorage?: string-End-->
 

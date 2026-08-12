@@ -28,7 +28,7 @@ Called when content is added to a placeholder component
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| content | [Content](../arkts-apis/arkts-arkui-content-c.md) | Yes |
+| content | [Content](arkts-arkui-content-t.md) | Yes |
 
 ## Summary
 

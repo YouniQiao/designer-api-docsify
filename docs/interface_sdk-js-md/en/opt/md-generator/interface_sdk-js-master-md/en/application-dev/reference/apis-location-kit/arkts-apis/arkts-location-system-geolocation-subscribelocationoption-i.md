@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.geoLocationManager/geoLocationManager.LocationRequest
+**Substitutes:** [LocationRequest](ohos.geoLocationManager/geoLocationManager.LocationRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from 'kits/@kit.LocationKit';
+import { GetLocationTypeOption, SubscribeLocationOption, GeolocationResponse, GetLocationTypeResponse, GetLocationOption } from '@kit.LocationKit';
 ```
 
 ## fail

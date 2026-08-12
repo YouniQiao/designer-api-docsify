@@ -2,9 +2,9 @@
 
 Implements a carrier that describes the basic text line structure of a paragraph.
 
-Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#gettextlines) of the  
-[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createline) of the  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md) class to create a **TextLine** object.
+Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the  
+[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine) of the  
+[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset) class to create a **TextLine** object.
 
 **Since:** 12
 
@@ -15,7 +15,7 @@ Before calling any of the following APIs, you must use [getTextLines()](arkts-ar
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## createTruncatedLine
@@ -39,8 +39,8 @@ Creates a truncated text line object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | width | number | Yes |
-| ellipsisMode | [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md) | Yes |
-| ellipsis | string | Yes |
+| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes |
+| [ellipsis](arkts-arkgraphics2d-text-textstyle-i.md) | string | Yes |
 
 **Return value:**
 
@@ -195,7 +195,7 @@ Obtains the array of glyph runs in the text line.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Run&gt; |
+| Array&lt;[Run](arkts-arkgraphics2d-text-run-c.md)&gt; |
 
 ## Examples
 

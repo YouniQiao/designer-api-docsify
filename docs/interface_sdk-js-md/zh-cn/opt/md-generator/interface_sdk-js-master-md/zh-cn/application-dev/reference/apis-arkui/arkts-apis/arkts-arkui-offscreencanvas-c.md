@@ -72,7 +72,7 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 | --- | --- | --- |
 | [width](#width) | number | 是 |
 | [height](#height) | number | 是 |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 是 |
+| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 是 |
 
 ## getContext
 

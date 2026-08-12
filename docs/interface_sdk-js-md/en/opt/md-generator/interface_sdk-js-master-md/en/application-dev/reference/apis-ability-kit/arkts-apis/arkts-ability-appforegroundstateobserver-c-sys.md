@@ -32,3 +32,16 @@ Called when the application launch or exit state changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appStateData | [AppStateData](arkts-ability-appstatedata-c.md) | Yes |
+
+## Examples
+
+```TypeScript
+import { appManager } from '@kit.AbilityKit';
+
+let observer: appManager.AppForegroundStateObserver = {
+  onAppStateChanged(appStateData: appManager.AppStateData) {
+    console.info(`onAppStateChanged appStateData: ${JSON.stringify(appStateData)}`);
+  },
+};
+appManager.on('appForegroundState', observer);
+```

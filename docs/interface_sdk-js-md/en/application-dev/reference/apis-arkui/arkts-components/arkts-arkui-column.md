@@ -72,7 +72,7 @@ Creates a vertical linear layout container. You can set the spacing between chil
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | No | Vertical spacing between two adjacent child components. The value can be of the number, string, or Resource type. |
+| options | [ColumnOptions](arkts-arkui-columnoptions-i.md) \| [ColumnOptionsV2](arkts-arkui-columnoptionsv2-i.md) | No | Vertical spacing between two adjacent child components. The value can be of the number, string, or Resource type. |
 
 ## Summary
 

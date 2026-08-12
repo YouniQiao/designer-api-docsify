@@ -120,5 +120,5 @@ Removes data with the given key or given class type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyOrType | string \| Class | Yes | key or class type removing |
+| keyOrType | string \| [Class](../../apis-arkts/arkts-apis/arkts-arkts-class-c.md) | Yes | key or class type removing |
 

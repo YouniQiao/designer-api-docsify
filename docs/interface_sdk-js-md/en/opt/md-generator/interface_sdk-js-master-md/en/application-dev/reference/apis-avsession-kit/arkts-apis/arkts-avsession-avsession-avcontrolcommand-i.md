@@ -11,7 +11,7 @@ The definition of command to be sent to the session
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from 'kits/@kit.AVSessionKit';
+import { avSession } from '@kit.AVSessionKit';
 ```
 
 ## command
@@ -20,7 +20,7 @@ import { avSession } from 'kits/@kit.AVSessionKit';
 command: AVControlCommandType
 ```
 
-The command value {@link AVControlCommandType}
+The command value [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md#AVControlCommandType)
 
 **Type:** [AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)
 
@@ -38,7 +38,7 @@ The command value {@link AVControlCommandType}
 commandInfo?: CommandInfo
 ```
 
-The command value {@link CommandInfo}
+The command value [CommandInfo](arkts-avsession-avsession-commandinfo-i.md#CommandInfo)
 
 **Type:** [CommandInfo](arkts-avsession-avsession-commandinfo-i.md)
 
@@ -54,7 +54,7 @@ The command value {@link CommandInfo}
 parameter?: LoopMode | string | number
 ```
 
-parameter of the command. Whether this command requires parameters, see {@link AVSessionCommand}seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a {@link LoopMode} parameter.toggleFavorite command requires assetId {@link AVMetadata.assetId} parameter other commands need no parameter
+parameter of the command. Whether this command requires parameters, see [AVSessionCommand](AVSessionCommand)seek command requires a number parameter setSpeed command requires a number parameter setLoopMode command requires a [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode) parameter.toggleFavorite command requires assetId [assetId](arkts-avsession-avsession-avmetadata-i.md#assetId) parameter other commands need no parameter
 
 **Type:** [LoopMode](arkts-avsession-avsession-loopmode-e.md) \| string \| number
 

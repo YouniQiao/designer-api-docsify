@@ -2,7 +2,7 @@
 
 定义扩展文本组件
 
-**继承/实现关系：** ExtendableText implements [TextAttribute](../arkts-components/arkts-arkui-text-attribute.md/arkts-arkui-text-attribute.md)
+**继承/实现关系：** ExtendableText implements [TextAttribute](arkts-arkui-text-textattribute-i.md#TextAttribute)
 
 **起始版本：** 26.0.0
 
@@ -40,9 +40,9 @@ static $_instantiate<T extends ExtendableText>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content | string \| Resource | 否 |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content | string \| [Resource](arkts-arkui-resource-t.md) | 否 |  |
+| value | [TextOptions](arkts-arkui-text-textoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -78,9 +78,9 @@ static _instantiateImpl<T extends ExtendableText>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setTextOptions
 
@@ -107,8 +107,8 @@ public setTextOptions(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | string \| Resource | 否 |  |
-| value | [TextOptions](../arkts-components/arkts-arkui-textoptions-i.md) | 否 |  |
+| content | string \| [Resource](arkts-arkui-resource-t.md) | 否 |  |
+| value | [TextOptions](arkts-arkui-text-textoptions-i.md) | 否 |  |
 
 **返回值：**
 

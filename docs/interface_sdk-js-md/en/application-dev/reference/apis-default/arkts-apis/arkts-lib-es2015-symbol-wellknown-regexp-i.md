@@ -24,7 +24,7 @@ Matches a string with this regular expression, and returns an array containing t
 
 | Type | Description |
 | --- | --- |
-| [RegExpMatchArray](../../apis-arkts/arkts-apis/arkts-arkts-regexp-regexpmatcharray-c.md) |  |
+| RegExpMatchArray |  |
 
 ## [Symbol.replace]
 

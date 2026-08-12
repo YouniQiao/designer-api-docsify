@@ -4,7 +4,7 @@
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)，支持  
 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)的方法。
 
-**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md)
+**继承/实现关系：** SymbolNumberFormat extends [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md#NumberFormat)
 
 **起始版本：** 26.0.0
 
@@ -78,7 +78,7 @@ public parse(text: string, lenientMode: boolean): double
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
 
 ## resolvedOptions
 

@@ -33,5 +33,5 @@ Obtain the resource in resources/rawfile, used by plugin.
 
 | Type | Description |
 | --- | --- |
-| [Resource](arkts-arkui-resource-t.md) | Returns the resource instance. |
+| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Returns the resource instance. |
 

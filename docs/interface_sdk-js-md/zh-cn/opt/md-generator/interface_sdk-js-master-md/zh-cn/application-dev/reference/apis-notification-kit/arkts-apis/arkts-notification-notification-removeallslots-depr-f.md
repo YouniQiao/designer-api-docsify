@@ -12,7 +12,7 @@ function removeAllSlots(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#removeAllSlots
+**替代接口：** [removeAllSlots](ohos.notificationManager/notificationManager#removeAllSlots)
 
 <!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void--><!--Device-notification-function removeAllSlots(callback: AsyncCallback<void>): void-End-->
 
@@ -37,7 +37,7 @@ function removeAllSlots(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.notificationManager/notificationManager#removeAllSlots
+**替代接口：** [removeAllSlots](ohos.notificationManager/notificationManager#removeAllSlots)
 
 <!--Device-notification-function removeAllSlots(): Promise<void>--><!--Device-notification-function removeAllSlots(): Promise<void>-End-->
 
@@ -47,4 +47,4 @@ function removeAllSlots(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

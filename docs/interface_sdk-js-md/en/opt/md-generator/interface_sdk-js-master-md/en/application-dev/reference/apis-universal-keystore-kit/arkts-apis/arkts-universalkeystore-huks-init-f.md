@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { huks } from 'kits/@kit.UniversalKeystoreKit';
+import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
 ## init
@@ -20,7 +20,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)(keyAlias:
+**Substitutes:** [initSession](huks.initSession(keyAlias:)
 
 <!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void--><!--Device-huks-function init(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksHandle>): void-End-->
 
@@ -32,7 +32,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 | --- | --- | --- |
 | keyAlias | string | Yes |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksHandle&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksHandle](arkts-universalkeystore-huks-hukshandle-i.md)&gt; | Yes |
 
 
 ## init
@@ -49,7 +49,7 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 **Deprecated since:** 9
 
-**Substitutes:** [huks.initSession](arkts-universalkeystore-huks-initsession-f.md#initsession)(keyAlias:
+**Substitutes:** [initSession](huks.initSession(keyAlias:)
 
 <!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>--><!--Device-huks-function init(keyAlias: string, options: HuksOptions): Promise<HuksHandle>-End-->
 
@@ -66,4 +66,4 @@ The **huks.init**, **huks.update**, and **huks.finish** must be used together.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;HuksHandle&gt; |
+| Promise&lt;[HuksHandle](arkts-universalkeystore-huks-hukshandle-i.md)&gt; |

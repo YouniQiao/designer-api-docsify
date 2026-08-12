@@ -1,9 +1,9 @@
 # GetDomainAccountInfoPluginOptions（系统接口）
 
 表示插件查询域账号信息的选项。GetDomainAccountInfoPluginOptions类继承  
-[GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md)
+[GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions)
 
-**继承/实现关系：** GetDomainAccountInfoPluginOptions extends [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md)
+**继承/实现关系：** GetDomainAccountInfoPluginOptions extends [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions)
 
 **起始版本：** 10
 

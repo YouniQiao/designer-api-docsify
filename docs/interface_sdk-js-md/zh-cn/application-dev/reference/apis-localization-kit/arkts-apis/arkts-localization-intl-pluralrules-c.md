@@ -8,7 +8,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.PluralRules](arkts-intl.md#intl.pluralrules)
+**替代接口：** [PluralRules]]([Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules))
 
 <!--Device-intl-export class PluralRules--><!--Device-intl-export class PluralRules-End-->
 
@@ -28,7 +28,7 @@ constructor()
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
+**替代接口：** [constructor]]([Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -59,7 +59,7 @@ constructor(locale: string | Array<string>, options?: PluralRulesOptions)
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
+**替代接口：** [constructor]]([Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -97,7 +97,7 @@ select(n: double): string
 
 **废弃版本：** 20
 
-**替代接口：** [Intl.PluralRules.select](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
+**替代接口：** [select]]([Intl.PluralRules.select](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select))
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -26,7 +26,7 @@ Configuration of the particle type.
 
 The value type of **config** is subject to the value of **type**.
 
-1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md).2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md).
+1. If the type is ParticleType.POINT, the config type is [PointParticleParameters](arkts-arkui-pointparticleparameters-i.md#PointParticleParameters).2. If the type is ParticleType.IMAGE, the config type is [ImageParticleParameters](arkts-arkui-imageparticleparameters-i.md#ImageParticleParameters).
 
 **Type:** ParticleConfigs[PARTICLE]
 

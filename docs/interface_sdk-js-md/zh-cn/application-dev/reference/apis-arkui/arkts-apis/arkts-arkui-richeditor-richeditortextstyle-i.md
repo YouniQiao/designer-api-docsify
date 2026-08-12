@@ -18,7 +18,7 @@ decoration?: DecorationStyleInterface
 
 文本装饰线样式信息。
 
-**类型：** [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md)
+**类型：** [DecorationStyleInterface](arkts-arkui-styledstring-decorationstyleinterface-i.md)
 
 **起始版本：** 23
 
@@ -138,7 +138,7 @@ fontWeight?: int | FontWeight | string
 
 字体粗细。
 
-**类型：** int \| FontWeight \| string
+**类型：** int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string
 
 **起始版本：** 23
 
@@ -202,7 +202,7 @@ lineHeight?: double | string | Resource
 
 文本行高，默认单位为fp。
 
-**类型：** double \| string \| Resource
+**类型：** double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **起始版本：** 23
 
@@ -250,7 +250,7 @@ strokeJoinStyle?: StrokeJoinStyle
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**类型：** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
+**类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
@@ -268,7 +268,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | double
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](arkts-arkui-graphics-lengthunit-e.md)，当前设置不生效，作为0处理。
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](arkts-arkui-graphics-lengthunit-e.md#LengthUnit)，当前设置不生效，作为0处理。
 
 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
 

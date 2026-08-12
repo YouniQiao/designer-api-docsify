@@ -24,11 +24,11 @@ export declare function CalendarPicker(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [CalendarOptions](../arkts-components/arkts-arkui-calendaroptions-i.md) | 否 | calendar options. |
+| options | [CalendarOptions](arkts-arkui-calendarpicker-calendaroptions-i.md) | 否 | calendar options. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CalendarPickerAttribute](../arkts-components/arkts-arkui-calendarpicker-attribute.md) |  |
+| [CalendarPickerAttribute](arkts-arkui-calendarpicker-calendarpickerattribute-i.md) |  |
 

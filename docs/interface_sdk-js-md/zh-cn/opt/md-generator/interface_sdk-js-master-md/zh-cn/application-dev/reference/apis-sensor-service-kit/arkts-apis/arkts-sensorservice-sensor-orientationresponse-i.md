@@ -1,8 +1,8 @@
 # OrientationResponse
 
-方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md)。
+方向传感器数据，继承于[Response](arkts-sensorservice-sensor-response-i.md#Response)。
 
-**继承/实现关系：** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md)
+**继承/实现关系：** OrientationResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
 **起始版本：** 8
 

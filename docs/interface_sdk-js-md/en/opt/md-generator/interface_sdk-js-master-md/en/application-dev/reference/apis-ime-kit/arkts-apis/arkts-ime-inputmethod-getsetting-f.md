@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getSetting
@@ -30,7 +30,7 @@ Input method setting
 
 | Error Code ID |
 | --- |
-| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
+| [12800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800007-input-method-setter-error) |
 
 ## Examples
 

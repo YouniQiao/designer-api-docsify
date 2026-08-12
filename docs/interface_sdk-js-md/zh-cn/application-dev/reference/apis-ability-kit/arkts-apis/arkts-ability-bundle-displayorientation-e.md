@@ -3,7 +3,7 @@
 > **说明：**
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)替代。
+> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation)替代。
 
 屏幕显示方向。
 
@@ -13,7 +13,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.bundleManager:bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
+**替代接口：** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation)
 
 <!--Device-bundle-export enum DisplayOrientation--><!--Device-bundle-export enum DisplayOrientation-End-->
 
@@ -33,7 +33,7 @@ UNSPECIFIED = 0
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#UNSPECIFIED
+**替代接口：** [UNSPECIFIED](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#UNSPECIFIED)
 
 <!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
@@ -51,7 +51,7 @@ LANDSCAPE = 1
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#LANDSCAPE
+**替代接口：** [LANDSCAPE](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#LANDSCAPE)
 
 <!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
@@ -69,7 +69,7 @@ PORTRAIT = 2
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#PORTRAIT
+**替代接口：** [PORTRAIT](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#PORTRAIT)
 
 <!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
@@ -87,7 +87,7 @@ FOLLOW_RECENT = 3
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#FOLLOW_RECENT
+**替代接口：** [FOLLOW_RECENT](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#FOLLOW_RECENT)
 
 <!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eap } from 'kits/@kit.NetworkKit';
+import { eap } from '@kit.NetworkKit';
 ```
 
 ## logOffEthEap
@@ -32,12 +32,12 @@ Check whether the specified network is active.
 
 | Error Code ID |
 | --- |
-| [33200010](../errorcode-net-eap.md#33200010-invalid-eap-status) |
-| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) |
-| [33200002](../errorcode-net-eap.md#33200002-failed-to-exit-extended-authentication-of-the-specified-nic) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) |
-| [33200001](../errorcode-net-eap.md#33200001-invalid-netid) |
+| [33200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200010-invalid-eap-status) |
+| [33200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200009-netmanager-not-exist) |
+| [33200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200002-failed-to-exit-extended-authentication-of-the-specified-nic) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [33200099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200099-internal-program-error) |
+| [33200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200001-invalid-netid) |
 
 ## Examples
 

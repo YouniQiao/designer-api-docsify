@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getSingleSensorByDeviceSync
@@ -31,7 +31,7 @@ Obtains information about the sensor of a specific type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;Sensor&gt; |
+| Array & lt;Sensor & gt; |
 
 ## Examples
 

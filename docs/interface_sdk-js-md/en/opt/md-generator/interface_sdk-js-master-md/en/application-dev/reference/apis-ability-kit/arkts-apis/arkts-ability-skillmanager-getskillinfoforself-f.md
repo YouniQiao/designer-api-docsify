@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from 'kits/@kit.AbilityKit';
+import { skillManager } from '@kit.AbilityKit';
 ```
 
 ## getSkillInfoForSelf
@@ -29,18 +29,18 @@ Obtains SkillInfo of the calling application based on moduleName and skillName.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | moduleName | string | Yes |
-| skillName | string | Yes |
+| [skillName](arkts-ability-skillinfo-i.md) | string | Yes |
 | flags | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;SkillInfo&gt; |
+| Promise & lt;SkillInfo & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
 | 17700093 |
-| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |

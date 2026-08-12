@@ -19,7 +19,7 @@ disable?: ResourceColor | undefined
 Underline color in the disabled state. If no value is specified or if the value specified is **undefined**,  
 **null**, or invalid, the default value is used.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
+**Type:** ResourceColor \| undefined
 
 **Since:** 12
 
@@ -42,7 +42,7 @@ error?: ResourceColor | undefined
 Underline color when an error occurs. If no value is specified or if the value specified is **undefined**,  
 **null**, or invalid, the default value is used. This option changes the color used in the **showCounter**attribute when the maximum number of characters is reached.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
+**Type:** ResourceColor \| undefined
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ normal?: ResourceColor | undefined
 
 Underline color in the normal state. If no value is specified or if the value specified is **undefined**, **null**,or invalid, the default value is used.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
+**Type:** ResourceColor \| undefined
 
 **Since:** 12
 
@@ -86,7 +86,7 @@ typing?: ResourceColor | undefined
 
 Underline color in the typing state. If no value is specified or if the value specified is **undefined**, **null**,or invalid, the default value is used.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined
+**Type:** ResourceColor \| undefined
 
 **Since:** 12
 

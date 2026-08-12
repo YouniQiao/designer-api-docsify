@@ -13,7 +13,7 @@ Describes the setting for Gatt Connection.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from 'kits/@kit.ConnectivityKit';
+import { ble } from '@kit.ConnectivityKit';
 ```
 
 ## autoConnect
@@ -46,7 +46,7 @@ transport?: BluetoothTransport
 
 Transport of the connection, default is {@code TRANSPORT_LE}
 
-**Type:** [BluetoothTransport](arkts-connectivity-ble-bluetoothtransport-t.md)
+**Type:** BluetoothTransport
 
 **Since:** 26.0.0
 

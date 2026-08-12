@@ -34,11 +34,11 @@ abstract initialize(options?: SliderOptions): SliderAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [SliderOptions](../arkts-components/arkts-arkui-slideroptions-i.md) | 否 |  |
+| options | SliderOptions | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |  |
+| SliderAttribute |  |
 

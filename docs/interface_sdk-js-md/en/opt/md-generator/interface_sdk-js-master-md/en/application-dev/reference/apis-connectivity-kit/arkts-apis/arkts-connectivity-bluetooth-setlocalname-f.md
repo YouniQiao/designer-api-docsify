@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## setLocalName
@@ -18,7 +18,7 @@ Sets the Bluetooth friendly name of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.setLocalName
+**Substitutes:** [setLocalName](ohos.bluetoothManager/bluetoothManager.setLocalName)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

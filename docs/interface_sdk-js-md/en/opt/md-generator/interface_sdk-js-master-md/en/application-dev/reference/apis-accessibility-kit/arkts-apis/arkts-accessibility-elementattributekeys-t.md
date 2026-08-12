@@ -5,7 +5,7 @@ export type ElementAttributeKeys = keyof ElementAttributeValues
 ```
 
 Describes the attribute name of   
-[ElementAttributeValues](arkts-accessibility-elementattributevalues-t.md).
+[ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md#ElementAttributeValues).
 
 **Since:** 10
 

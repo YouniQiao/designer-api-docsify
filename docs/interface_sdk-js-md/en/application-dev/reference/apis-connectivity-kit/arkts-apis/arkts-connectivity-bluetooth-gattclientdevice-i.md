@@ -1,6 +1,6 @@
 # GattClientDevice
 
-Manages GATT client. Before calling an Gatt client method, you must use {@link createGattClientDevice} to create an GattClientDevice instance.
+Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
 
 **Since:** 7
 
@@ -8,7 +8,7 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice
+**Substitutes:** [GattClientDevice](ohos.bluetoothManager/bluetoothManager.GattClientDevice)
 
 <!--Device-bluetooth-interface GattClientDevice--><!--Device-bluetooth-interface GattClientDevice-End-->
 
@@ -17,7 +17,7 @@ Manages GATT client. Before calling an Gatt client method, you must use {@link c
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## close
@@ -36,7 +36,7 @@ This method unregisters the device and clears the registered callbacks and handl
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#close
+**Substitutes:** [close](ohos.bluetoothManager/bluetoothManager.GattClientDevice#close)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -73,7 +73,7 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#connect
+**Substitutes:** [connect](ohos.bluetoothManager/bluetoothManager.GattClientDevice#connect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -108,7 +108,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#disconnect
+**Substitutes:** [disconnect](ohos.bluetoothManager/bluetoothManager.GattClientDevice#disconnect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -143,7 +143,7 @@ Obtains the name of BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getDeviceName
+**Substitutes:** [getDeviceName](ohos.bluetoothManager/bluetoothManager.GattClientDevice#getDeviceName)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -155,7 +155,7 @@ Obtains the name of BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to obtain the device name. |
 
 ## Examples
 
@@ -183,7 +183,7 @@ Obtains the name of BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getDeviceName
+**Substitutes:** [getDeviceName](ohos.bluetoothManager/bluetoothManager.GattClientDevice#getDeviceName)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -221,7 +221,7 @@ Get the RSSI value of this BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getRssiValue
+**Substitutes:** [getRssiValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#getRssiValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -233,7 +233,7 @@ Get the RSSI value of this BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback invoked to return the RSSI, in dBm. |
 
 ## Examples
 
@@ -262,7 +262,7 @@ Get the RSSI value of this BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getRssiValue
+**Substitutes:** [getRssiValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#getRssiValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -300,7 +300,7 @@ Starts discovering services.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getServices
+**Substitutes:** [getServices](ohos.bluetoothManager/bluetoothManager.GattClientDevice#getServices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -312,7 +312,7 @@ Starts discovering services.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;GattService&gt;&gt; | Yes | Callback used to catch the services. |
 
 ## Examples
 
@@ -349,7 +349,7 @@ Starts discovering services.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#getServices
+**Substitutes:** [getServices](ohos.bluetoothManager/bluetoothManager.GattClientDevice#getServices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -388,7 +388,7 @@ Unsubscribe characteristic value changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.off#event:BLECharacteristicChange
+**Substitutes:** [BLECharacteristicChange](ohos.bluetoothManager/bluetoothManager.GattClientDevice.off#event:BLECharacteristicChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -401,7 +401,7 @@ Unsubscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | No | Callback used to listen for the characteristic value changed event. |
 
 ## Examples
 
@@ -424,7 +424,7 @@ Unsubscribe client connection state changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.off#event:BLEConnectionStateChange
+**Substitutes:** [BLEConnectionStateChange](ohos.bluetoothManager/bluetoothManager.GattClientDevice.off#event:BLEConnectionStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -437,7 +437,7 @@ Unsubscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | No | Callback used to listen for the connection state changed event. |
 
 ## Examples
 
@@ -460,7 +460,7 @@ Subscribe characteristic value changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.on#event:BLECharacteristicChange
+**Substitutes:** [BLECharacteristicChange](ohos.bluetoothManager/bluetoothManager.GattClientDevice.on#event:BLECharacteristicChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -473,7 +473,7 @@ Subscribe characteristic value changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLECharacteristicChange' | Yes | Type of the characteristic value changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback used to listen for the characteristic value changed event. |
 
 ## Examples
 
@@ -501,7 +501,7 @@ Subscribe client connection state changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice.on#event:BLEConnectionStateChange
+**Substitutes:** [BLEConnectionStateChange](ohos.bluetoothManager/bluetoothManager.GattClientDevice.on#event:BLEConnectionStateChange)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -514,7 +514,7 @@ Subscribe client connection state changed event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'BLEConnectionStateChange' | Yes | Type of the connection state changed event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;BLEConnectChangedState&gt; | Yes | Callback used to listen for the connection state changed event. |
 
 ## Examples
 
@@ -541,7 +541,7 @@ Reads the characteristic of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readCharacteristicValue
+**Substitutes:** [readCharacteristicValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#readCharacteristicValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -553,8 +553,8 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLECharacteristic&gt; | Yes | Callback invoked to return the characteristic value read. |
 
 ## Examples
 
@@ -602,7 +602,7 @@ Reads the characteristic of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readCharacteristicValue
+**Substitutes:** [readCharacteristicValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#readCharacteristicValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -614,7 +614,7 @@ Reads the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to read. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to read. |
 
 **Return value:**
 
@@ -659,7 +659,7 @@ Reads the descriptor of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readDescriptorValue
+**Substitutes:** [readDescriptorValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#readDescriptorValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -671,8 +671,8 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BLEDescriptor&gt; | Yes | Callback invoked to return the descriptor read. |
 
 ## Examples
 
@@ -710,7 +710,7 @@ Reads the descriptor of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#readDescriptorValue
+**Substitutes:** [readDescriptorValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#readDescriptorValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -722,7 +722,7 @@ Reads the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to read. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to read. |
 
 **Return value:**
 
@@ -757,7 +757,7 @@ Set the mtu size of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#setBLEMtuSize
+**Substitutes:** [setBLEMtuSize](ohos.bluetoothManager/bluetoothManager.GattClientDevice#setBLEMtuSize)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -798,7 +798,7 @@ Enables or disables notification of a characteristic when value changed.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#setNotifyCharacteristicChanged
+**Substitutes:** [setNotifyCharacteristicChanged](ohos.bluetoothManager/bluetoothManager.GattClientDevice#setNotifyCharacteristicChanged)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -810,7 +810,7 @@ Enables or disables notification of a characteristic when value changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | BLE characteristic to listen for. |
+| characteristic | BLECharacteristic | Yes | BLE characteristic to listen for. |
 | enable | boolean | Yes | Specifies whether to enable notification of the characteristic. The value {@code true} indicates that notification is enabled, and the value {@code false} indicates that notification is disabled. |
 
 **Return value:**
@@ -852,7 +852,7 @@ Writes the characteristic of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#writeCharacteristicValue
+**Substitutes:** [writeCharacteristicValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#writeCharacteristicValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -864,7 +864,7 @@ Writes the characteristic of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| characteristic | [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md) | Yes | Indicates the characteristic to write. |
+| characteristic | BLECharacteristic | Yes | Indicates the characteristic to write. |
 
 **Return value:**
 
@@ -913,7 +913,7 @@ Writes the descriptor of a BLE peripheral device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.GattClientDevice#writeDescriptorValue
+**Substitutes:** [writeDescriptorValue](ohos.bluetoothManager/bluetoothManager.GattClientDevice#writeDescriptorValue)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -925,7 +925,7 @@ Writes the descriptor of a BLE peripheral device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md) | Yes | Indicates the descriptor to write. |
+| descriptor | BLEDescriptor | Yes | Indicates the descriptor to write. |
 
 **Return value:**
 

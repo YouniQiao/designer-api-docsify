@@ -11,7 +11,7 @@ Defines the default or custom style parameters for the **ArcButton** component.
 ## Modules to Import
 
 ```TypeScript
-import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from 'kits/@kit.ArkUI';
+import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -46,7 +46,7 @@ Background blur style of the arc button.
 
 Default value: **BlurStyle.NONE**
 
-**Type:** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**Type:** BlurStyle
 
 **Since:** 18
 
@@ -68,7 +68,7 @@ This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**
 
 Default value: **Color.Black**
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -90,7 +90,7 @@ This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**
 
 Default value: **Color.White**
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -148,7 +148,7 @@ Font size of the arc button.
 
 Default value: **19fp**
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 18
 
@@ -168,7 +168,7 @@ Font style of the arc button.
 
 Default value: **FontStyle.Normal**
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 18
 
@@ -204,7 +204,7 @@ onClick?: Callback<ClickEvent>
 
 Callback triggered by click actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
+**Type:** Callback&lt;[ClickEvent](../arkts-components/arkts-arkui-clickevent-i.md)&gt;
 
 **Since:** 18
 
@@ -222,7 +222,7 @@ onTouch?: Callback<TouchEvent>
 
 Callback triggered by touch actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
+**Type:** Callback&lt;TouchEvent&gt;
 
 **Since:** 18
 
@@ -264,7 +264,7 @@ This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**
 
 Default value: **Color.White**
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -284,9 +284,9 @@ Parameters for the progress indicator of the **ArcButton** component. If this pr
 **ArcButton** component is displayed as a button (see   
 [Example 1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button)). If this property is set, the component is displayed as a progress indicator (see   
 [Example 2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button)). The progress indicator style is not affected by the settings of the   
-[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) attribute.
+[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode) attribute.
 
-Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+Default value: default values of all properties of [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig)
 
 **Type:** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
@@ -310,7 +310,7 @@ Shadow color of the arc button.
 
 Default value: **Color.Black**
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -369,7 +369,7 @@ styleMode: ArcButtonStyleMode
 ```
 
 Style mode for the arc button. This style cannot be used together with the   
-[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) style.
+[ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig) style.
 
 Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 

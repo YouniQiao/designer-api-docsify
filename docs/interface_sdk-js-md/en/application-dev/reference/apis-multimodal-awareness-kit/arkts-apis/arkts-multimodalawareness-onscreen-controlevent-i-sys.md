@@ -15,7 +15,7 @@ Defines a control event.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from 'kits/@kit.MultimodalAwarenessKit';
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## eventType
@@ -26,7 +26,7 @@ eventType: EventType
 
 Control event type.
 
-**Type:** [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md)
+**Type:** EventType
 
 **Since:** 20
 
@@ -45,7 +45,7 @@ hookId?: long
 ```
 
 Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from   
-[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
+[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent) of a session.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 
@@ -66,7 +66,7 @@ sessionId: long
 ```
 
 ID of the session to be operated. The hook ID and the session ID can be obtained from   
-[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md) of a session.
+[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent) of a session.
 
 **Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
 

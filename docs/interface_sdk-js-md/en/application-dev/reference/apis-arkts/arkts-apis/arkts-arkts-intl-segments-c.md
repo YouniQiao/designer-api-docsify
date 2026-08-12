@@ -34,7 +34,7 @@ Returns itself as the iterator.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;SegmentData&gt; | the iterator. |
+| IterableIterator&lt;[SegmentData](arkts-arkts-intl-segmentdata-i.md)&gt; | the iterator. |
 
 ## constructor
 
@@ -82,5 +82,5 @@ Returns the next result in the segments iterator.
 
 | Type | Description |
 | --- | --- |
-| [IteratorResult](arkts-arkts-iterator-iteratorresult-c.md)&lt;SegmentData&gt; | the next iteration result. |
+| IteratorResult&lt;[SegmentData](arkts-arkts-intl-segmentdata-i.md)&gt; | the next iteration result. |
 

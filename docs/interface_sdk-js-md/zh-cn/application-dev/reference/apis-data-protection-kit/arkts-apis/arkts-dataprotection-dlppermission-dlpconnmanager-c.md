@@ -20,7 +20,7 @@
 constructor()
 ```
 
-[DlpConnManager](arkts-dataprotection-dlppermission-dlpconnmanager-c.md) 实例化时的构造函数。
+[DlpConnManager](#DlpConnManager) 实例化时的构造函数。
 
 **起始版本：** 21
 
@@ -38,7 +38,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -88,11 +88,11 @@ static registerPlugin(plugin: DlpConnPlugin): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -149,11 +149,11 @@ static unregisterPlugin(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) | Credential task time out. |
+| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
+| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) | Credential service error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

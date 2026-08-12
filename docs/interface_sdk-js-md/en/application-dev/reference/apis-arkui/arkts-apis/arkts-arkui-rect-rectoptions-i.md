@@ -38,7 +38,7 @@ radius?: Length | Array<RadiusItem>
 
 Corner radius of the rectangle.
 
-**Type:** [Length](arkts-arkui-length-t.md) \| Array&lt;RadiusItem&gt;
+**Type:** [Length](arkts-arkui-length-t.md) \| Array&lt;[RadiusItem](arkts-arkui-radiusitem-t.md)&gt;
 
 **Since:** 23
 

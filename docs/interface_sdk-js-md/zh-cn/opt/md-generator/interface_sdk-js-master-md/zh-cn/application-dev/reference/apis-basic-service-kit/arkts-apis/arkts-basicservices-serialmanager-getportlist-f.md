@@ -18,7 +18,7 @@ function getPortList(): Readonly<SerialPort>[]
 
 | 类型 |
 | --- |
-| Readonly&lt;SerialPort&gt;[] |
+| Readonly & lt;SerialPort & gt;[] |
 
 ## 示例
 

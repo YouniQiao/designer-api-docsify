@@ -20,7 +20,7 @@ Font settings of the popup message.
 
 1. Setting **family** is not supported.2. The **weight** attribute in **Font** does not support the number type.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 10
 

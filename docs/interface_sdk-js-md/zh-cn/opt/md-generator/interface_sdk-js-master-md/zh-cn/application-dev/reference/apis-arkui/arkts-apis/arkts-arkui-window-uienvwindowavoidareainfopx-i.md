@@ -14,7 +14,7 @@
 cutout: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_CUTOUT类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_CUTOUT类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -30,7 +30,7 @@ cutout: AvoidArea
 keyboard: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -46,7 +46,7 @@ keyboard: AvoidArea
 navigationIndicator: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
@@ -62,7 +62,7 @@ navigationIndicator: AvoidArea
 statusBar: AvoidArea
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM类型的避让区域，单位为px。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM类型的避让区域，单位为px。
 
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 

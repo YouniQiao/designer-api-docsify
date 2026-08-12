@@ -36,7 +36,7 @@ style?: TextDecorationStyle
 
 Style of the text decoration.Default value: TextDecorationStyle.SOLID.
 
-**Type:** [TextDecorationStyle](../arkts-apis/arkts-arkui-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -76,7 +76,7 @@ type: TextDecorationType
 
 Type of the text decoration.
 
-**Type:** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

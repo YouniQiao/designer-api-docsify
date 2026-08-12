@@ -21,6 +21,6 @@ Callback function on minimizing a window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimizingWindowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes | Window target of the minimizing window. |
+| minimizingWindowTarget | WindowAnimationTarget | Yes | Window target of the minimizing window. |
 | finishCallback | [WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md) | Yes | Animation finished callback. |
 

@@ -26,7 +26,7 @@ Defines If Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | condition | boolean | Yes | condition of the branch. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Defines If Component. It requires calling setIfOptions at start of component att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;IfAttribute&gt; | Yes | callback to set up If's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[IfAttribute](arkts-arkui-if-ifattribute-i.md)&gt; | Yes | callback to set up If's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | code for the branch |
 
 **Return value:**
 

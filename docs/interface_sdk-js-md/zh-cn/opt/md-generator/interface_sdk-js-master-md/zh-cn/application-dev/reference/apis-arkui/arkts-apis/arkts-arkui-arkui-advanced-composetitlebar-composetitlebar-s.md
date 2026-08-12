@@ -6,7 +6,7 @@ ComposeTitleBar是一种普通标题栏组件，支持设置标题、头像（�
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
-> - 如果ComposeTitleBar设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和[通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，
+> - 如果ComposeTitleBar设置[通用属性](./@internal/component/ets/common)和[通用事件](./@internal/component/ets/common)，
 > 编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到ComposeTitleBar本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议
 > ComposeTitleBar设置通用属性和通用事件。
 
@@ -46,7 +46,7 @@ menuItems?: Array<ComposeTitleBarMenuItem>
 
 右侧菜单项目列表。不设置时标题栏右侧不显示菜单项目。
 
-**类型：** Array&lt;ComposeTitleBarMenuItem&gt;
+**类型：** Array&lt;[ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
 
 **起始版本：** 10
 

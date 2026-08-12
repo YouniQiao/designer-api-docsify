@@ -4,7 +4,7 @@
 
 API version 21及之前版本，仅支持IPv4。从API version 22开始，支持IPv4和IPv6。
 
-从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md)。
+从API version 23开始，支持[LogType](arkts-mdm-networkmanager-logtype-e.md#LogType)。
 
 **起始版本：** 12
 
@@ -22,9 +22,9 @@ action?: Action
 
 添加域名过滤规则时必填；
 
-移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md)规则的链，且domainName，appUid也必须传入空值。
+移除域名过滤规则时非必填，当值为空时，表示清空所有的匹配[Action](arkts-mdm-networkmanager-action-e.md#Action)规则的链，且domainName，appUid也必须传入空值。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 12
 
@@ -62,9 +62,9 @@ direction?: Direction
 
 添加域名过滤规则时非必填；当值为空，以及设为输出链或输入链时，实际效果为输出链。设为转发链时，appUid需设置为空，否则会报401错误码。
 
-移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md)链，且domainName，appUid也必须传入空值。
+移除域名过滤规则时非必填，当值为空时，表示清空所有的[Direction](arkts-mdm-networkmanager-direction-e.md#Direction)链，且domainName，appUid也必须传入空值。
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 15
 

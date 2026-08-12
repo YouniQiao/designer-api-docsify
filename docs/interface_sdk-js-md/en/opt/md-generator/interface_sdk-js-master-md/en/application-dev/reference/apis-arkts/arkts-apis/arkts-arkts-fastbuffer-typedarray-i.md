@@ -2,7 +2,7 @@
 
 TypedArray inherits the features and methods of Int8Array
 
-**Inheritance/Implementation:** TypedArray extends [Int8Array](../../apis-default/arkts-apis/arkts-lib-es5-int8array-i.md/arkts-lib-es5-int8array-i.md)
+**Inheritance/Implementation:** TypedArray extends [Int8Array](Int8Array)
 
 **Since:** 20
 
@@ -15,5 +15,5 @@ TypedArray inherits the features and methods of Int8Array
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from 'kits/@kit.ArkTS';
+import { fastbuffer } from '@kit.ArkTS';
 ```

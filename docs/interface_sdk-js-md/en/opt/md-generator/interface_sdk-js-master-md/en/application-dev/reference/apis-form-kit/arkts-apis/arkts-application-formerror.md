@@ -11,7 +11,7 @@ interface of formError.
 ## Modules to Import
 
 ```TypeScript
-import { formError } from 'kits/@kit.FormKit';
+import { formError } from '@kit.FormKit';
 ```
 
 ## Summary

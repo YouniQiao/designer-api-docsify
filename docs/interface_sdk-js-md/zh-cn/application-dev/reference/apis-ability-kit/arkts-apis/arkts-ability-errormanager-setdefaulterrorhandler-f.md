@@ -38,7 +38,7 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
+| [16000205](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
 
 ## 示例
 

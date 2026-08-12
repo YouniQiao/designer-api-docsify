@@ -12,8 +12,8 @@ CommonOptions defines common options for the date time picker.
 > 
 > - When parameters are omitted or set to undefined, default values are used.
 > 
-> - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md), setting start, end, and selected only takes effect for the date part
-> (year, month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md), setting start, end, and selected only takes effect for the
+> - In [DateOptions](arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md#DateOptions), setting start, end, and selected only takes effect for the date part
+> (year, month, day). In [TimeOptions](arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md#TimeOptions), setting start, end, and selected only takes effect for the
 > time part (hour, minute, second).
 
 **Since:** 26.0.0
@@ -27,7 +27,7 @@ CommonOptions defines common options for the date time picker.
 ## Modules to Import
 
 ```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from 'kits/@kit.ArkUI';
+import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
 ```
 
 ## enableHapticFeedback
@@ -123,7 +123,7 @@ onChange?: Callback<DatePickerComponentResult>
 
 Callback triggered after date or time is selected.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DatePickerComponentResult&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
 
@@ -143,7 +143,7 @@ onScrollStop?: Callback<DatePickerComponentResult>
 
 Callback triggered when a picker item is selected and scrolling stops.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DatePickerComponentResult&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DatePickerComponentResult](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentresult-c.md)&gt;
 
 **Since:** 26.0.0
 

@@ -36,7 +36,7 @@ onWillChange?: Callback<StyledStringChangeValue, boolean>
 
 Called before text changed.
 
-**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;StyledStringChangeValue, boolean&gt;
+**Type:** [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[StyledStringChangeValue](arkts-arkui-textcommon-styledstringchangevalue-i.md), boolean&gt;
 
 **Since:** 23
 

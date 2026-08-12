@@ -13,7 +13,7 @@ Describes the information about the soft keyboard window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## animated
@@ -44,7 +44,7 @@ beginRect: Rect
 
 Position and size of the soft keyboard before the animation starts.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 18
 
@@ -84,7 +84,7 @@ endRect: Rect
 
 Position and size of the soft keyboard after the animation ends.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 18
 

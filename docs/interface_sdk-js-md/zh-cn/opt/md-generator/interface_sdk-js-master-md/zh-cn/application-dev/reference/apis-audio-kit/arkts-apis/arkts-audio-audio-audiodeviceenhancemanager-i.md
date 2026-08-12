@@ -36,7 +36,7 @@ isEnhancedRoutingSupported(): boolean
 selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-为您的应用程序选择输入设备。此设置适用于创建的所有录制流在您的应用程序下，除非为特定流指定了特定输入设备{@link AudioDeviceEnhanceManager.selectInputDeviceForAudioCapturer}.当应用程序实现它自己的UX用于输入设备选择，它可以通过{@link AudioRoutingManager.get AvailableDevices}，并使用{@link AudioRoutingManager.getPreferredInputDeviceForCapturerInfo}接口获取当前选择的输入设备。当您的应用程序退出或选择的设备下线。在您的应用程序重新启动或设备重新联机后，您的应用程序必须重新发布选择才能使其生效。如果系统不支持该功能，它将为您的应用程序选择一个默认的输入设备。
+为您的应用程序选择输入设备。此设置适用于创建的所有录制流在您的应用程序下，除非为特定流指定了特定输入设备[selectInputDeviceForAudioCapturer](#selectInputDeviceForAudioCapturer).当应用程序实现它自己的UX用于输入设备选择，它可以通过[get AvailableDevices](AudioRoutingManager.get AvailableDevices)，并使用[getPreferredInputDeviceForCapturerInfo](arkts-audio-audio-audioroutingmanager-i.md#getPreferredInputDeviceForCapturerInfo)接口获取当前选择的输入设备。当您的应用程序退出或选择的设备下线。在您的应用程序重新启动或设备重新联机后，您的应用程序必须重新发布选择才能使其生效。如果系统不支持该功能，它将为您的应用程序选择一个默认的输入设备。
 
 **起始版本：** 26.0.0
 
@@ -56,14 +56,14 @@ selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## selectInputDeviceForAudioCapturer
 
@@ -92,14 +92,14 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## selectOutputDevice
 
@@ -107,7 +107,7 @@ selectInputDeviceForAudioCapturer(capturer: AudioCapturer, inputDevice: AudioDev
 selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-选择应用程序的输出设备。此设置适用于创建的所有播放流除非为特定流指定了特定的输出设备{@link AudioDeviceEnhanceManager.selectOutputDeviceForAudioRenderer}.当应用程序实现它自己的UX用于输出设备选择，它可以通过{@link AudioRoutingManager.get AvailableDevices}，并使用{@link AudioRoutingManager.getPreferOutputDeviceForRendererInfo}接口获取当前选定的输出设备。当您的应用程序退出或选择的设备下线。在您的应用程序重新启动或设备重新联机后，您的应用程序必须重新发布选择才能使其生效。如果系统不支持该功能，则会为您的应用程序选择一个默认的输出设备。
+选择应用程序的输出设备。此设置适用于创建的所有播放流除非为特定流指定了特定的输出设备[selectOutputDeviceForAudioRenderer](#selectOutputDeviceForAudioRenderer).当应用程序实现它自己的UX用于输出设备选择，它可以通过[get AvailableDevices](AudioRoutingManager.get AvailableDevices)，并使用[getPreferOutputDeviceForRendererInfo](arkts-audio-audio-audioroutingmanager-i.md#getPreferOutputDeviceForRendererInfo)接口获取当前选定的输出设备。当您的应用程序退出或选择的设备下线。在您的应用程序重新启动或设备重新联机后，您的应用程序必须重新发布选择才能使其生效。如果系统不支持该功能，则会为您的应用程序选择一个默认的输出设备。
 
 **起始版本：** 26.0.0
 
@@ -127,14 +127,14 @@ selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
 
 ## selectOutputDeviceForAudioRenderer
 
@@ -163,11 +163,11 @@ selectOutputDeviceForAudioRenderer(renderer: AudioRenderer, outputDevice: AudioD
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-无效入参) |
-| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |

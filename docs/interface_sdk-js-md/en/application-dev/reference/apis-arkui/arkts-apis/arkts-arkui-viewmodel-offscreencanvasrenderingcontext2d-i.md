@@ -206,7 +206,7 @@ Create an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
+| ImageData | ImageData New ImageData object with width and height specified. |
 
 ## createImageData
 
@@ -230,13 +230,13 @@ Create an ImageData object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
+| imageData | ImageData | Yes | Copy an object of the same width and height from an existing ImageData object The image itself is not allowed to be copied. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData New ImageData object with width and height specified. |
+| ImageData | ImageData New ImageData object with width and height specified. |
 
 ## createLinearGradient
 
@@ -269,7 +269,7 @@ Creates a linear gradient color.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | LinearGradient object. |
+| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) | LinearGradient object. |
 
 ## createPath2D
 
@@ -353,7 +353,7 @@ Create a drawing style template.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | The CanvasImageSource object that is the source of the duplicate image. |
+| image | Image | Yes | The CanvasImageSource object that is the source of the duplicate image. |
 | repetition | string | Yes | Specify how to repeat images. |
 
 **Return value:**
@@ -395,7 +395,7 @@ Create a radial tween object.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | RadialGradient object. |
+| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) | RadialGradient object. |
 
 ## drawImage
 
@@ -419,7 +419,7 @@ Draw an Image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | An element drawn to the context. |
+| image | Image | Yes | An element drawn to the context. |
 | dx | number | Yes | The top left corner of the image is the X-axis coordinates on the target canvas. |
 | dy | number | Yes | The top left corner of the image is the Y-axis coordinates on the target canvas. |
 | dw | number | Yes | Image The width drawn on the target canvas. |
@@ -457,7 +457,7 @@ Draw an Image object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [Image](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-image-i.md) | Yes | An element drawn to the context. |
+| image | Image | Yes | An element drawn to the context. |
 | sx | number | Yes | The upper-left X-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
 | sy | number | Yes | The upper-left Y-axis coordinates of the image's rectangular (clipped) selection box that need to be drawn into the target context. |
 | sw | number | Yes | The width of the image's rectangular (clipped) selection box that needs to be drawn into the target context. |
@@ -679,7 +679,7 @@ Get an ImageData object.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
+| ImageData | ImageData An ImageData object that contains the rectangular ImageData given by the canvas. |
 
 ## getPixelMap
 
@@ -893,7 +893,7 @@ Returns a TextMetrics object used to obtain the width of specified text.
 
 | Type | Description |
 | --- | --- |
-| [TextMetrics](arkts-arkui-canvas-textmetrics-i.md) | Object that contains the text width. You can obtain the width by TextMetrics.width. |
+| [TextMetrics](arkts-arkui-viewmodel-textmetrics-i.md) | Object that contains the text width. You can obtain the width by TextMetrics.width. |
 
 ## moveTo
 
@@ -942,7 +942,7 @@ Draws the specified ImageData object to the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| imageData | ImageData | Yes | An array object containing pixel values. |
 | dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
 | dy | number | Yes | The offset of the position of the source image data in the target canvas (the Y-axis offset). |
 
@@ -976,7 +976,7 @@ Draws the specified ImageData object to the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | An array object containing pixel values. |
+| imageData | ImageData | Yes | An array object containing pixel values. |
 | dx | number | Yes | The offset of the position of the source image data in the target canvas (the offset in the X-axis direction). |
 | dy | number | Yes | he offset of the position of the source image data in the target canvas (the Y-axis offset). |
 | dirtyX | number | Yes | In the source image data, the position of the upper left corner of the rectangular region Default is the upper left corner of the entire image data (x coordinate). |
@@ -1351,7 +1351,7 @@ fillStyle?: string | CanvasGradient | CanvasPattern
 
 Fill style attribute.Paint color used to fill the area.Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object.Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
-**Type:** string \| CanvasGradient \| CanvasPattern
+**Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
 
@@ -1391,7 +1391,7 @@ strokeStyle?: string | CanvasGradient | CanvasPattern
 
 Sets the stroke paint style.Color of the stroke paint.Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object.Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
-**Type:** string \| CanvasGradient \| CanvasPattern
+**Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
 

@@ -13,7 +13,7 @@ Defines the format parameters of the video thumbnail to be obtained.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## autoFlip

@@ -18,7 +18,7 @@ images: Array<ImageItem>
 
 图片信息
 
-**类型：** Array&lt;ImageItem&gt;
+**类型：** Array&lt;[ImageItem](arkts-arkui-componentutils-imageitem-i-sys.md)&gt;
 
 **起始版本：** 23
 

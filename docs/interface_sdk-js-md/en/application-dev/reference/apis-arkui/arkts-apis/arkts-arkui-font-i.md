@@ -18,7 +18,7 @@ family?: string | Resource
 
 Font family. &lt;br&gt;To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order.Example: **'Arial, HarmonyOS Sans'**.Default value: 'HarmonyOS Sans'.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 7
 
@@ -58,7 +58,7 @@ style?: FontStyle
 
 Font style.Default value: FontStyle.Normal.
 
-**Type:** [FontStyle](arkts-arkui-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 7
 
@@ -78,7 +78,7 @@ weight?: FontWeight | number | string
 
 Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.Default value: FontWeight.Normal.
 
-**Type:** [FontWeight](arkts-arkui-fontweight-e.md) \| number \| string
+**Type:** FontWeight \| number \| string
 
 **Since:** 7
 

@@ -15,7 +15,7 @@ Image information for AI-generated images.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from 'kits/@kit.ArkUI';
+import { imageGeneration } from '@kit.ArkUI';
 ```
 
 ## image
@@ -124,7 +124,7 @@ Original image path information for image generation;
 
 &lt;p&gt;**NOTE：**:for high-resolution scenarios, it is best to provide the original image path; if not provided, the image.PixelMap will be used for image generation.&lt;/p&gt;
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 23
 

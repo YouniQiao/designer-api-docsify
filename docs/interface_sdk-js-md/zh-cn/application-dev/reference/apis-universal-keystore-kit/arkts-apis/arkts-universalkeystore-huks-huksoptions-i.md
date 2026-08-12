@@ -38,7 +38,7 @@ properties?: Array<HuksParam>
 
 标签。
 
-**类型：** Array&lt;HuksParam&gt;
+**类型：** Array&lt;[HuksParam](arkts-universalkeystore-huks-huksparam-i.md)&gt;
 
 **起始版本：** 8
 

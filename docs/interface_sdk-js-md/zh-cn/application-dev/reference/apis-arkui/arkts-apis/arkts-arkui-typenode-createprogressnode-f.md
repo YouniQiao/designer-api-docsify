@@ -29,5 +29,5 @@ export function createProgressNode(context: UIContext, options?: FrameNodeOption
 
 | 类型 | 说明 |
 | --- | --- |
-| [Progress](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-progress-i.md) | 返回 Progress 类型的 FrameNode。 |
+| Progress | 返回 Progress 类型的 FrameNode。 |
 

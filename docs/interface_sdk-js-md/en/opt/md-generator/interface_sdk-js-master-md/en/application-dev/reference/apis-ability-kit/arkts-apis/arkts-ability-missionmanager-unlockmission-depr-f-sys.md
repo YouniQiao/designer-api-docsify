@@ -12,7 +12,7 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#unlockMission
+**Substitutes:** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -61,7 +61,7 @@ Unlocks a given mission. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.missionManager/missionManager#unlockMission
+**Substitutes:** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -81,7 +81,7 @@ Unlocks a given mission. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 

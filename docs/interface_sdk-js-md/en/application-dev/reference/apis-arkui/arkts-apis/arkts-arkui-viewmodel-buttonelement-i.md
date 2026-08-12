@@ -2,7 +2,7 @@
 
 The &lt;button&gt; component includes capsule, circle, text, arc, and download buttons.
 
-**Inheritance/Implementation:** ButtonElement extends [Element](arkts-arkui-viewmodel-element-i.md)
+**Inheritance/Implementation:** ButtonElement extends [Element](arkts-arkui-viewmodel-element-i.md#Element)
 
 **Since:** 4
 

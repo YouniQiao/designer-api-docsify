@@ -42,7 +42,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Amount by which the border image is extended beyond the border box.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **Default:** 0
 
@@ -66,7 +66,7 @@ repeat?: RepeatMode
 
 Repeat mode of the source image's slices on the border.
 
-**Type:** [RepeatMode](../arkts-apis/arkts-arkui-common-repeatmode-e.md)
+**Type:** [RepeatMode](arkts-arkui-repeatmode-e.md)
 
 **Default:** RepeatMode.Stretch
 
@@ -90,7 +90,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Slice width of the upper left corner, upper right corner, lower left corner,and lower right corner of the border image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **Default:** 0
 
@@ -116,7 +116,7 @@ Source or gradient color of the border image.When the type is string, this param
 
 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The border image source applies only to container components, such as Row, Column, and Flex.&lt;/p&gt;
 
-**Type:** string \| Resource \| LinearGradient
+**Type:** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **Since:** 11
 
@@ -138,7 +138,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 Width of the border image.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**Type:** Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **Default:** 0
 

@@ -1,7 +1,7 @@
 # UpdatablePickerConfigs
 
 Describes the updatable attributes of the **PhotoPickerComponent**. These attributes are a subset of  
-[PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md).
+[PickerOptions](arkts-medialibrary-file-photopickercomponent-pickeroptions-c.md#PickerOptions).
 
 **Since:** 22
 
@@ -14,7 +14,7 @@ Describes the updatable attributes of the **PhotoPickerComponent**. These attrib
 ## Modules to Import
 
 ```TypeScript
-import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from 'kits/@kit.MediaLibraryKit';
+import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from '@kit.MediaLibraryKit';
 ```
 
 ## appAlbumFilters
@@ -157,9 +157,9 @@ edgeEffect?: EdgeEffect
 
 Scrolling effect when the Picker grid page reaches the edge.
 
-The default value is [EdgeEffect.Spring](../../apis-arkui/arkts-apis/arkts-arkui-enums-edgeeffect-e.md/arkts-arkui-enums-edgeeffect-e.md).
+The default value is [EdgeEffect.Spring](EdgeEffect).
 
-**Type:** [EdgeEffect](../../apis-arkui/arkts-apis/arkts-arkui-edgeeffect-e.md)
+**Type:** EdgeEffect
 
 **Since:** 23
 
@@ -181,7 +181,7 @@ gridMargin?: Margin
 
 Margin of the component grid.
 
-**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
+**Type:** Margin
 
 **Since:** 26.0.0
 
@@ -383,7 +383,7 @@ photoBrowserMargin?: Margin
 
 Margin of the component large image.
 
-**Type:** [Margin](../../apis-arkui/arkts-apis/arkts-arkui-margin-t.md)
+**Type:** Margin
 
 **Since:** 26.0.0
 

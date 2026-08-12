@@ -32,7 +32,7 @@ constructor(name: string, param: unknown, onPop?: import('../api/@ohos.base').Ca
 | --- | --- | --- |
 | [name](#name) | string | 是 |
 | [param](#param) | unknown | 是 |
-| [onPop](#onpop) | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | 否 |
+| [onPop](#onpop) | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | 否 |
 | [isEntry](#isentry) | boolean | 否 |
 
 ## isEntry
@@ -93,7 +93,7 @@ NavDestination页面名称。该名称匹配开发者设置的路由表中的nam
 navDestinationId?: string
 ```
 
-NavDestination页面唯一标识符，该id由系统默认生成且全局唯一，通过[getPathStack](arkts-arkui-navpathstack-c.md#getpathstack)接口可读取，但不可以主动赋新值。
+NavDestination页面唯一标识符，该id由系统默认生成且全局唯一，通过[getPathStack](arkts-arkui-navpathstack-c.md#getPathStack)接口可读取，但不可以主动赋新值。
 
 **类型：** string
 
@@ -113,14 +113,14 @@ NavDestination页面唯一标识符，该id由系统默认生成且全局唯一�
 onPop?: import('../api/@ohos.base').Callback<PopInfo>
 ```
 
-NavDestination页面触发[pop](arkts-arkui-navpathstack-c.md#pop)、  
-[popToName](arkts-arkui-navpathstack-c.md#poptoname)、  
-[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)时返回的回调。仅  
-[pop](arkts-arkui-navpathstack-c.md#pop)、  
-[popToName](arkts-arkui-navpathstack-c.md#poptoname)、  
-[popToIndex](arkts-arkui-navpathstack-c.md#poptoindex)中设置result参数后触发。
+NavDestination页面触发[pop](arkts-arkui-navpathstack-c.md#pop-1)、  
+[popToName](arkts-arkui-navpathstack-c.md#popToName-1)、  
+[popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1)时返回的回调。仅  
+[pop](arkts-arkui-navpathstack-c.md#pop-1)、  
+[popToName](arkts-arkui-navpathstack-c.md#popToName-1)、  
+[popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1)中设置result参数后触发。
 
-**类型：** import('../api/@ohos.base').Callback&lt;PopInfo&gt;
+**类型：** import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt;
 
 **起始版本：** 11
 

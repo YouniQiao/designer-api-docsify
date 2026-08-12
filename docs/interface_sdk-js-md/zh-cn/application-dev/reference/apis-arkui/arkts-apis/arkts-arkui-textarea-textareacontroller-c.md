@@ -2,7 +2,7 @@
 
 Provides the method of switching the cursor position.
 
-**继承/实现关系：** TextAreaController extends [TextContentControllerBase](arkts-arkui-common-textcontentcontrollerbase-c.md)
+**继承/实现关系：** TextAreaController extends [TextContentControllerBase](TextContentControllerBase)
 
 **起始版本：** 23
 

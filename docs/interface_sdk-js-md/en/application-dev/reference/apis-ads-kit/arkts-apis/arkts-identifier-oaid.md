@@ -19,7 +19,7 @@ This module provides the capability of obtaining and resetting the Open Anonymou
 ## Modules to Import
 
 ```TypeScript
-import { identifier } from 'kits/@kit.AdsKit';
+import { identifier } from '@kit.AdsKit';
 ```
 
 ## Summary

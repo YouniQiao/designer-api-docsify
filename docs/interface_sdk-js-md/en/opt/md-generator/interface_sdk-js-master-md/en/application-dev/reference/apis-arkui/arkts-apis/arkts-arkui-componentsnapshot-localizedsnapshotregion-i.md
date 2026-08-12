@@ -19,7 +19,7 @@ Defines the rectangular region for capturing the component snapshot, with coordi
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from 'kits/@kit.ArkUI';
+import { componentSnapshot } from '@kit.ArkUI';
 ```
 
 ## bottom

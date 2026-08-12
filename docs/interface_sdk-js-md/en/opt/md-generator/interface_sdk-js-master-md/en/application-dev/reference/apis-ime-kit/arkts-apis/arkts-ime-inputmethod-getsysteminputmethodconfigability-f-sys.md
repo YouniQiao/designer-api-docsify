@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## getSystemInputMethodConfigAbility
@@ -41,7 +41,7 @@ Get the system input method config ability of a specified user.
 | Error Code ID |
 | --- |
 | 12800023 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |

@@ -13,7 +13,7 @@ Object used for thread synchronization.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -112,7 +112,7 @@ Waits for the ConditionVariable to be notified.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## waitFor
 
@@ -140,4 +140,4 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

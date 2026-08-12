@@ -10,4 +10,4 @@
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| AsyncIterator&lt;T&gt; |
+| [AsyncIterator](arkts-lib-es2018-asynciterable-asynciterator-i.md)&lt;T&gt; |

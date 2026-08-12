@@ -14,7 +14,7 @@ max batch operation size.Maximum number of batch operations.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants#MAX_BATCH_SIZE
+**Substitutes:** [MAX_BATCH_SIZE](ohos.data.distributedKVStore.Constants#MAX_BATCH_SIZE)
 
 <!--Device-Constants-const MAX_BATCH_SIZE = 128--><!--Device-Constants-const MAX_BATCH_SIZE = 128-End-->
 
@@ -34,7 +34,7 @@ max key length.Maximum length of a key in the KV store, in bytes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH
+**Substitutes:** [MAX_KEY_LENGTH](ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH)
 
 <!--Device-Constants-const MAX_KEY_LENGTH = 1024--><!--Device-Constants-const MAX_KEY_LENGTH = 1024-End-->
 
@@ -54,7 +54,7 @@ max device coordinate key length.Maximum length of a device key, in bytes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH_DEVICEs
+**Substitutes:** [MAX_KEY_LENGTH_DEVICEs](ohos.data.distributedKVStore.Constants#MAX_KEY_LENGTH_DEVICEs)
 
 <!--Device-Constants-const MAX_KEY_LENGTH_DEVICE = 896--><!--Device-Constants-const MAX_KEY_LENGTH_DEVICE = 896-End-->
 
@@ -74,7 +74,7 @@ max query length.Maximum query length, in bytes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants#MAX_QUERY_LENGTH
+**Substitutes:** [MAX_QUERY_LENGTH](ohos.data.distributedKVStore.Constants#MAX_QUERY_LENGTH)
 
 <!--Device-Constants-const MAX_QUERY_LENGTH = 512000--><!--Device-Constants-const MAX_QUERY_LENGTH = 512000-End-->
 
@@ -94,7 +94,7 @@ max store id length.Maximum length of a KV store ID, in bytes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants#MAX_STORE_ID_LENGTH
+**Substitutes:** [MAX_STORE_ID_LENGTH](ohos.data.distributedKVStore.Constants#MAX_STORE_ID_LENGTH)
 
 <!--Device-Constants-const MAX_STORE_ID_LENGTH = 128--><!--Device-Constants-const MAX_STORE_ID_LENGTH = 128-End-->
 
@@ -114,7 +114,7 @@ max value length.Maximum length of a value in the KV store, in bytes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Constants#MAX_VALUE_LENGTH
+**Substitutes:** [MAX_VALUE_LENGTH](ohos.data.distributedKVStore.Constants#MAX_VALUE_LENGTH)
 
 <!--Device-Constants-const MAX_VALUE_LENGTH = 4194303--><!--Device-Constants-const MAX_VALUE_LENGTH = 4194303-End-->
 

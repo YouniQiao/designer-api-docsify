@@ -14,7 +14,7 @@
 cutout: UIEnvAvoidAreaVP
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_CUTOUT类型的避让区域，单位为vp。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_CUTOUT类型的避让区域，单位为vp。
 
 **类型：** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
@@ -30,7 +30,7 @@ cutout: UIEnvAvoidAreaVP
 keyboard: UIEnvAvoidAreaVP
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_KEYBOARD类型的避让区域，单位为vp。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_KEYBOARD类型的避让区域，单位为vp。
 
 **类型：** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
@@ -46,7 +46,7 @@ keyboard: UIEnvAvoidAreaVP
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为vp。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_NAVIGATION_INDICATOR类型的避让区域，单位为vp。
 
 **类型：** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
@@ -62,7 +62,7 @@ navigationIndicator: UIEnvAvoidAreaVP
 statusBar: UIEnvAvoidAreaVP
 ```
 
-表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md)为TYPE_SYSTEM类型的避让区域，单位为vp。
+表示[AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType)为TYPE_SYSTEM类型的避让区域，单位为vp。
 
 **类型：** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 

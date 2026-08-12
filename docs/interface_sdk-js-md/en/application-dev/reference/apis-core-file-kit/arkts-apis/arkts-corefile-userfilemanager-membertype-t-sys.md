@@ -12,7 +12,7 @@ Represents the type of a file asset member.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [@ohos.file.photoAccessHelper:photoAccessHelper.MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md/arkts-medialibrary-photoaccesshelper-membertype-t.md)
+**Substitutes:** [MemberType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-membertype-t.md#MemberType)
 
 <!--Device-userFileManager-type MemberType = number | string | boolean--><!--Device-userFileManager-type MemberType = number | string | boolean-End-->
 

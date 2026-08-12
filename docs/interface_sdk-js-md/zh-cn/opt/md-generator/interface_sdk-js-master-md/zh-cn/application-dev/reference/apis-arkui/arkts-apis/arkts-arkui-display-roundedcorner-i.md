@@ -16,7 +16,7 @@ readonly position: Position
 
 圆角圆心的坐标点。
 
-**类型：** [Position](arkts-arkui-display-position-i.md)
+**类型：** Position
 
 **起始版本：** 23
 

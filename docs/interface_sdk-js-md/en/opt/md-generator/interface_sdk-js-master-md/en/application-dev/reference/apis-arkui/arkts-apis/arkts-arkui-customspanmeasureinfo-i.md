@@ -16,7 +16,7 @@ fontSize: number
 
 Text font size.
 
-Unit: [fp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [fp](common)
 
 **Type:** number
 
@@ -62,7 +62,7 @@ maxWidth?: number
 
 Maximum width constraint of the custom span within the parent component's content area.
 
-Unit: [px](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [px](common)
 
 **Type:** number
 

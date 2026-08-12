@@ -2,7 +2,7 @@
 
 Defines linear gradient class.
 
-**Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
+**Inheritance/Implementation:** LinearGradientStyle extends [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md#ShaderStyle)
 
 **Since:** 24
 

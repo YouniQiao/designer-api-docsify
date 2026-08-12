@@ -42,7 +42,7 @@ template: PluginComponentTemplate
 
 Plugin component template.AnonyMous Object Rectification
 
-**Type:** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i.md)
+**Type:** [PluginComponentTemplate](arkts-arkui-plugincomponent-plugincomponenttemplate-i-sys.md)
 
 **Since:** 23
 

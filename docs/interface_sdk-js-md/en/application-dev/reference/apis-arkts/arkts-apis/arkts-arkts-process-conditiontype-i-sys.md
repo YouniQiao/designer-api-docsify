@@ -15,7 +15,7 @@ Provides the ConditionType type,including timeout, killSignal, maxBuffer.
 ## Modules to Import
 
 ```TypeScript
-import { process } from 'kits/@kit.ArkTS';
+import { process } from '@kit.ArkTS';
 ```
 
 ## killSignal

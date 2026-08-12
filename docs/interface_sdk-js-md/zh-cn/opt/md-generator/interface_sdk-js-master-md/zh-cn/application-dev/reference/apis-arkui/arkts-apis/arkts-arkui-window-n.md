@@ -191,5 +191,5 @@
 
 | 名称 |
 | --- |
-| [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md) | 旋转事件通知通用回调函数。  开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md)，返回值类型为  [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md) \\|
+| [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md) | 旋转事件通知通用回调函数。  开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo)，返回值类型为  [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) \\|
 | [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) |

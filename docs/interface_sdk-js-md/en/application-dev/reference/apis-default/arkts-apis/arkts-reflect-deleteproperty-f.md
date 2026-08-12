@@ -17,7 +17,7 @@ Removes a property from an object, equivalent to `delete target[propertyKey]`,ex
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | target | object | Yes |  |
-| propertyKey | [PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md) | Yes |  |
+| propertyKey | PropertyKey | Yes |  |
 
 **Return value:**
 

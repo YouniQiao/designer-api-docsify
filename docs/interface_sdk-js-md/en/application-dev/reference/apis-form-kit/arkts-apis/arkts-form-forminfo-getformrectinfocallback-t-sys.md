@@ -26,5 +26,5 @@ Get form rect info callback
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;formInfo.Rect&gt; | form rect info |
+| Promise&lt;[formInfo.Rect](arkts-form-forminfo-rect-i.md)&gt; | form rect info |
 

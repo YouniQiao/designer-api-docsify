@@ -13,7 +13,7 @@ Represents task data.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## errorMessages
@@ -24,7 +24,7 @@ errorMessages: Array<ErrorMessage>
 
 Error message.
 
-**Type:** Array&lt;ErrorMessage&gt;
+**Type:** Array&lt;[ErrorMessage](arkts-basicservices-update-errormessage-i-sys.md)&gt;
 
 **Since:** 9
 
@@ -96,7 +96,7 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 subStatus: number
 ```
 
-Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md).
+Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#UpgradeStatus).
 
 **Type:** number
 
@@ -116,7 +116,7 @@ versionComponents: Array<VersionComponent>
 
 Version components.
 
-**Type:** Array&lt;VersionComponent&gt;
+**Type:** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
 **Since:** 9
 

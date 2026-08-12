@@ -7,7 +7,7 @@ type ImageErrorCallback = (error: ImageError) => void
 Triggered when an error occurs during image loading.
 
 This event is not triggered if the parameter type of the component is  
-[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md).
+[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor).
 
 **Since:** 9
 
@@ -25,5 +25,5 @@ This event is not triggered if the parameter type of the component is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [ImageError](../arkts-apis/arkts-arkui-image-imageerror-i.md) | Yes | Object returned by the callback triggered when an exception occurs during image loading. |
+| error | [ImageError](arkts-arkui-imageerror-i.md) | Yes | Object returned by the callback triggered when an exception occurs during image loading. |
 

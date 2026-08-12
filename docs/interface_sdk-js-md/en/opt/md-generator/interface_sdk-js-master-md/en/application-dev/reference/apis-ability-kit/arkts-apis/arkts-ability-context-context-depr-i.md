@@ -2,7 +2,7 @@
 
 The context of an ability or an application. It allows access to application-specific resources, request and verification permissions.Can only be obtained through the ability.
 
-**Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
+**Inheritance/Implementation:** Context extends [BaseContext](BaseContext)
 
 **Since:** 6
 
@@ -96,7 +96,7 @@ Obtains the application type.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getAppVersionInfo
 
@@ -162,7 +162,7 @@ Obtains the context of this application.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Context](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-context-i.md) |
+| [Context](arkts-ability-context-context-depr-i.md) |
 
 ## getApplicationInfo
 
@@ -250,7 +250,7 @@ Obtains the bundle name of the current ability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getCacheDir
 
@@ -294,7 +294,7 @@ Obtains the cache directory of this application on the internal storage.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getCallingBundle
 
@@ -338,7 +338,7 @@ Obtains the bundle name of the ability that called the current ability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getDisplayOrientation
 
@@ -382,7 +382,7 @@ Obtains the current display orientation of this ability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;bundle.DisplayOrientation&gt; |
+| Promise & lt;bundle.DisplayOrientation & gt; |
 
 ## getElementName
 
@@ -474,7 +474,7 @@ Obtains the absolute path to the application-specific cache directory
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getFilesDir
 
@@ -518,7 +518,7 @@ Obtains the file directory of this application on the internal storage.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getHapModuleInfo
 
@@ -584,7 +584,7 @@ Obtains the distributed file path for storing ability or application data files.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getOrCreateDistributedDir
 
@@ -628,7 +628,7 @@ Get the local root dir of an app. If it is the first call, the dir will be creat
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## getOrCreateLocalDir
 
@@ -738,7 +738,7 @@ Obtains the name of the current process.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## isUpdatingConfigurations
 
@@ -782,7 +782,7 @@ Checks whether the configuration of this ability is changing.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
 
 ## printDrawnCompleted
 
@@ -826,7 +826,7 @@ Inform the system of the time required for drawing this Page ability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## requestPermissionsFromUser
 
@@ -852,9 +852,9 @@ Requests certain permissions from the system.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| permissions | Array&lt;string&gt; | Yes |
+| permissions | Array & lt;string & gt; | Yes |
 | requestCode | number | Yes |
-| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PermissionRequestResult&gt; | Yes |
+| resultCallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; | Yes |
 
 ## requestPermissionsFromUser
 
@@ -876,14 +876,14 @@ Requests certain permissions from the system.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| permissions | Array&lt;string&gt; | Yes |
+| permissions | Array & lt;string & gt; | Yes |
 | requestCode | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;PermissionRequestResult&gt; |
+| Promise&lt;[PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)&gt; |
 
 ## setDisplayOrientation
 
@@ -934,7 +934,7 @@ Sets the display orientation of the current ability.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setShowOnLockScreen
 
@@ -948,7 +948,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.window:window.WindowStage.setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
+**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -975,7 +975,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.window:window.WindowStage.setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md/arkts-arkui-window-windowstage-i-sys.md#setshowonlockscreen)
+**Substitutes:** [setShowOnLockScreen](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i-sys.md#setShowOnLockScreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -993,7 +993,7 @@ Sets whether to show this ability on top of the lock screen whenever the lock sc
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## setWakeUpScreen
 
@@ -1007,7 +1007,7 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Deprecated since:** 12
 
-**Substitutes:** @ohos.window:window.setWakeUpScreen
+**Substitutes:** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1034,7 +1034,7 @@ Sets whether to wake up the screen when this ability is restored.
 
 **Deprecated since:** 12
 
-**Substitutes:** @ohos.window:window.setWakeUpScreen
+**Substitutes:** [setWakeUpScreen](@ohos.window:window.setWakeUpScreen)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1052,7 +1052,7 @@ Sets whether to wake up the screen when this ability is restored.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## verifyPermission
 
@@ -1081,7 +1081,7 @@ Verify whether the specified permission is allowed for a particular pid and uid 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## verifyPermission
 

@@ -1,6 +1,6 @@
 # AnimationMode
 
-点击[TabBar](../arkts-apis/arkts-arkui-tabcontent-tabcontentattribute-i.md/arkts-arkui-tabcontent-tabcontentattribute-i.md#tabbar)页签时切换TabContent的动画形式枚举。
+点击[TabBar](TabContentAttribute#tabBar(options: string | Resource | CustomBuilder | TabBarOptions))页签时切换TabContent的动画形式枚举。
 
 **起始版本：** 12
 
@@ -56,7 +56,7 @@ ACTION_FIRST = 1
 NO_ANIMATION = 2
 ```
 
-关闭默认动画。调用TabsController的[changeIndex](arkts-arkui-tabscontroller-c.md#changeindex)接口切换TabContent时该枚举值不生效。
+关闭默认动画。调用TabsController的[changeIndex](arkts-arkui-tabscontroller-c.md#changeIndex)接口切换TabContent时该枚举值不生效。
 
 可以通过设置[animationDuration](TabsAttribute#animationDuration)为0实现调用TabsController的changeIndex接口时不带动画。
 

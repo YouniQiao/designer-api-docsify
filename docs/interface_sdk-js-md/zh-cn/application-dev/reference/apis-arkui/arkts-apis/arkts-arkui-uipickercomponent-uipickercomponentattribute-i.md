@@ -1,10 +1,10 @@
 # UIPickerComponentAttribute
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](./common)外，还支持以下属性：
 
-除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件：
+除支持[通用事件](./common)外，还支持以下事件：
 
-**继承/实现关系：** UIPickerComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** UIPickerComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 
@@ -36,7 +36,7 @@ default attributeModifier(modifier: AttributeModifier<UIPickerComponentAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[UIPickerComponentAttribute](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -158,7 +158,7 @@ default itemHeight(height: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| undefined | 是 | 选项高度。&lt;br/&gt;单位：与 [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)一致。&lt;br/&gt;取值范围：[40vp, 64vp]&lt;br/&gt;设置小于40vp或 大于64vp时，使用默认值40vp。&lt;br/&gt;当height的值为undefined时，使用默认值40vp。&lt;br/&gt;不支持"百分比"类型。 |
+| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | 是 | 选项高度。&lt;br/&gt;单位：与 [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics)一致。&lt;br/&gt;取值范围：[40vp, 64vp]&lt;br/&gt;设置小于40vp或 大于64vp时，使用默认值40vp。&lt;br/&gt;当height的值为undefined时，使用默认值40vp。&lt;br/&gt;不支持"百分比"类型。 |
 
 **返回值：**
 
@@ -178,7 +178,7 @@ default onChange(callback: OnUIPickerComponentCallback | undefined): UIPickerCom
 > 
 > 如果某个选项有一半以上的区域进入选中项区域内，则该选项成为选中项。
 > 
-> 选中项区域可通过设置[selectionIndicator](arkts-arkui-uipickercomponent-uipickercomponentattribute-i.md#selectionindicator)进行标识。如果设置选中项指示器为背景，则背景区域即为
+> 选中项区域可通过设置[selectionIndicator](#selectionIndicator)进行标识。如果设置选中项指示器为背景，则背景区域即为
 > 选中项区域。如果设置选中项指示器为分割线，则上下分割线的中心线内的区域为选中项区域。
 
 **起始版本：** 23

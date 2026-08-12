@@ -1,8 +1,8 @@
 # UnlitShadowAlphaMaterial（系统接口）
 
-无光照阴影透明度材质资源。此材质继承自[Material](arkts-arkgraphics3d-sceneresources-material-i.md)，仅绘制材质表面阴影。材质启用[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md)属性时，可与背景融合模拟透明效果。
+无光照阴影透明度材质资源。此材质继承自[Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)，仅绘制材质表面阴影。材质启用[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md#Blend)属性时，可与背景融合模拟透明效果。
 
-**继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md)
+**继承/实现关系：** UnlitShadowAlphaMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)
 
 **起始版本：** 23
 

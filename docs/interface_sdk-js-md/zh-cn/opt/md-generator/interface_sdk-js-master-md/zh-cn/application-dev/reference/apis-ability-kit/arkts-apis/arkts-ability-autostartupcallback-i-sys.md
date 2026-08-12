@@ -34,6 +34,32 @@ onAutoStartupOff(info: AutoStartupInfo): void
 | --- | --- | --- |
 | info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 |
 
+## 示例
+
+```TypeScript
+import { autoStartupManager, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义开机自启动回调对象
+let autoStartupCallback: common.AutoStartupCallback = {
+  onAutoStartupOn(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOn, info: ${JSON.stringify(info)}.`);
+  },
+  onAutoStartupOff(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOff, info: ${JSON.stringify(info)}.`);
+  }
+};
+
+// 订阅系统开机自启动事件
+try {
+  autoStartupManager.on('systemAutoStartup', autoStartupCallback);
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`autoStartupManager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```
+
 ## onAutoStartupOn
 
 ```TypeScript
@@ -57,3 +83,29 @@ onAutoStartupOn(info: AutoStartupInfo): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 |
+
+## 示例
+
+```TypeScript
+import { autoStartupManager, common } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// 定义开机自启动回调对象
+let autoStartupCallback: common.AutoStartupCallback = {
+  onAutoStartupOn(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOn, info: ${JSON.stringify(info)}.`);
+  },
+  onAutoStartupOff(info: common.AutoStartupInfo) {
+    console.info(`autostartupmanager onAutoStartupOff, info: ${JSON.stringify(info)}.`);
+  }
+};
+
+// 订阅系统开机自启动事件
+try {
+  autoStartupManager.on('systemAutoStartup', autoStartupCallback);
+} catch (err) {
+  let code = (err as BusinessError).code;
+  let msg = (err as BusinessError).message;
+  console.error(`autoStartupManager.on failed, err code: ${code}, err msg: ${msg}.`);
+}
+```

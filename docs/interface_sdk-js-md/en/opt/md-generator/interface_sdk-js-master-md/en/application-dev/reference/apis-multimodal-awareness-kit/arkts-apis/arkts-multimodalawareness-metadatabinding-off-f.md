@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from 'kits/@kit.MultimodalAwarenessKit';
+import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 ```
 
 ## off('operationSubmitMetadata')
@@ -34,8 +34,8 @@ Unsubscribes from system events that are used to obtain the encoded metadata. Th
 
 | Error Code ID |
 | --- |
-| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) |
-| [32100005](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-unsubscription-failed) |
+| [32100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| [32100005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100005-unsubscription-failed) |
 
 ## Examples
 

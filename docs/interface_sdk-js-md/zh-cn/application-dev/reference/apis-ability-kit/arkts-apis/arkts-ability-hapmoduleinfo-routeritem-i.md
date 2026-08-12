@@ -58,7 +58,7 @@ readonly data: Array<DataItem>
 
 标识[路由表配置文件](../../../quick-start/module-configuration-file.md#routermap标签)中的字符串自定义数据，即data字段的信息，该字段已由系统解析，无需开发者自行解析。
 
-**类型：** Array&lt;DataItem&gt;
+**类型：** Array&lt;[DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)&gt;
 
 **起始版本：** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## CreateIncrementalSource
@@ -20,18 +20,18 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 The ImageSource instance created in incremental mode supports the following capabilities (applicable to synchronous, callback, and promise modes):
 
 - Obtaining image information: Call   
-[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo)to obtain image information by index, or call   
-[getImageInfo](arkts-image-image-imagesource-i.md#getimageinfo) to directly obtain image information.  
+[getImageInfo](arkts-image-image-imagesource-i.md#getImageInfo)to obtain image information by index, or call   
+[getImageInfo](arkts-image-image-imagesource-i.md#getImageInfo) to directly obtain image information.  
 - Obtaining an image property: Call   
-[getImageProperty](arkts-image-image-imagesource-i.md#getimageproperty)to obtain the value of a property with the specified index in an image.  
+[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)to obtain the value of a property with the specified index in an image.  
 - Obtaining image properties: Call   
-[getImageProperties](arkts-image-image-imagesource-i.md#getimageproperties) to obtain the values of properties with the given names in an image.  
+[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) to obtain the values of properties with the given names in an image.  
 - Updating incremental data: Call   
-[updateData](arkts-image-image-imagesource-i.md#updatedata).  
+[updateData](arkts-image-image-imagesource-i.md#updateData).  
 - Creating a PixelMap object: Call   
-[createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) or   
-[createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap)to create a PixelMap object based on decoding options; call   
-[createPixelMap](arkts-image-image-imagesource-i.md#createpixelmap) to create a PixelMap object based on default parameters.  
+[createPixelMap](arkts-image-image-imagesource-i.md#createPixelMap) or   
+[createPixelMap](arkts-image-image-imagesource-i.md#createPixelMap)to create a PixelMap object based on decoding options; call   
+[createPixelMap](arkts-image-image-imagesource-i.md#createPixelMap) to create a PixelMap object based on default parameters.  
 - Releasing an ImageSource instance: Call   
 [release](arkts-image-image-imagesource-i.md#release).
 
@@ -87,7 +87,7 @@ function CreateIncrementalSource(buf: ArrayBuffer, options?: SourceOptions): Ima
 Creates an ImageSource instance in incremental mode based on buffers. Such an instance does not support reading or writing of Exif information.
 
 The capabilities supported by the ImageSource instance created by this API are the same as those supported by the instance created by   
-[CreateIncrementalSource(buf: ArrayBuffer): ImageSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
+[CreateIncrementalSource(buf: ArrayBuffer): ImageSource](#CreateIncrementalSource).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
 [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9

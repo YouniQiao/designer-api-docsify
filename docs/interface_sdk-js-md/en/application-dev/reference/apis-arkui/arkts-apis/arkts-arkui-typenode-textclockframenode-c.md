@@ -34,11 +34,11 @@ Initialize TextClock FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [TextClockOptions](../arkts-components/arkts-arkui-textclockoptions-i.md) | No |  |
+| options | TextClockOptions | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextClockAttribute](../arkts-components/arkts-arkui-textclock-attribute.md) |  |
+| TextClockAttribute |  |
 

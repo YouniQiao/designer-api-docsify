@@ -1,6 +1,6 @@
 # WebRotateEffect
 
-Enum type supplied to {@link rotateRenderEffect} for setting the effect of rotation.
+Enum type supplied to [rotateRenderEffect](arkts-arkweb-web-webattribute-i.md#rotateRenderEffect) for setting the effect of rotation.
 
 **Since:** 23
 

@@ -28,5 +28,5 @@ Defines a function used to obtain a deferred **UnifiedData** object. Currently, 
 
 | Type | Description |
 | --- | --- |
-| [UnifiedData](../../apis-arkui/arkts-components/arkts-arkui-unifieddata-t.md) | UnifiedData** object. |
+| UnifiedData | UnifiedData** object. |
 

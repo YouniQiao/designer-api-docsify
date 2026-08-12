@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bas } from 'kits/@kit.ConnectivityKit';
+import { bas } from '@kit.ConnectivityKit';
 ```
 
 ## isBasSupported
@@ -34,5 +34,5 @@ Determine whether the local device can obtain the battery level of the remote de
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 2900099 |

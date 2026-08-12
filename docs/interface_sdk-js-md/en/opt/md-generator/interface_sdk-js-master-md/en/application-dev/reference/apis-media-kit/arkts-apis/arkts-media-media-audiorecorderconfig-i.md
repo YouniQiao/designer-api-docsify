@@ -6,7 +6,7 @@ Provides the audio recorder configuration definitions.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderConfig
+**Substitutes:** [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig)
 
 <!--Device-media-interface AudioRecorderConfig--><!--Device-media-interface AudioRecorderConfig-End-->
 
@@ -15,7 +15,7 @@ Provides the audio recorder configuration definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## audioEncodeBitRate
@@ -32,7 +32,7 @@ Audio encoding bit rate, in bit/s.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderProfile#audioBitrate
+**Substitutes:** [audioBitrate](ohos.multimedia.media/media.AVRecorderProfile#audioBitrate)
 
 <!--Device-AudioRecorderConfig-audioEncodeBitRate?: number--><!--Device-AudioRecorderConfig-audioEncodeBitRate?: number-End-->
 
@@ -52,7 +52,7 @@ Audio encoding format. The default value is DEFAULT, it will be deprecated after
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.multimedia.media/media.AudioRecorderConfig.audioEncoderMime
+**Substitutes:** [audioEncoderMime](#audioEncoderMime)
 
 <!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder--><!--Device-AudioRecorderConfig-audioEncoder?: AudioEncoder-End-->
 
@@ -72,7 +72,7 @@ audio encoding format MIME. it used to replace audioEncoder.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderProfile#audioCodec
+**Substitutes:** [audioCodec](ohos.multimedia.media/media.AVRecorderProfile#audioCodec)
 
 <!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType--><!--Device-AudioRecorderConfig-audioEncoderMime?: CodecMimeType-End-->
 
@@ -92,7 +92,7 @@ Audio sampling rate, in Hz.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderProfile#audioSampleRate
+**Substitutes:** [audioSampleRate](ohos.multimedia.media/media.AVRecorderProfile#audioSampleRate)
 
 <!--Device-AudioRecorderConfig-audioSampleRate?: number--><!--Device-AudioRecorderConfig-audioSampleRate?: number-End-->
 
@@ -112,7 +112,7 @@ output file format. see @ContainerFormatType , it used to replace "format".
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderProfile#fileFormat
+**Substitutes:** [fileFormat](ohos.multimedia.media/media.AVRecorderProfile#fileFormat)
 
 <!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType--><!--Device-AudioRecorderConfig-fileFormat?: ContainerFormatType-End-->
 
@@ -132,7 +132,7 @@ Audio output format. The default value is DEFAULT, it will be deprecated after A
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.multimedia.media/media.AudioRecorderConfig.fileFormat
+**Substitutes:** [fileFormat](ohos.multimedia.media/media.AudioRecorderConfig.fileFormat)
 
 <!--Device-AudioRecorderConfig-format?: AudioOutputFormat--><!--Device-AudioRecorderConfig-format?: AudioOutputFormat-End-->
 
@@ -146,13 +146,13 @@ location?: Location
 
 Geographical location information.
 
-**Type:** [Location](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager-location-i.md)
+**Type:** Location
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVMetadata#location
+**Substitutes:** [location](ohos.multimedia.media/media.AVMetadata#location)
 
 <!--Device-AudioRecorderConfig-location?: Location--><!--Device-AudioRecorderConfig-location?: Location-End-->
 
@@ -172,7 +172,7 @@ Number of audio channels.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderProfile#audioChannels
+**Substitutes:** [audioChannels](ohos.multimedia.media/media.AVRecorderProfile#audioChannels)
 
 <!--Device-AudioRecorderConfig-numberOfChannels?: number--><!--Device-AudioRecorderConfig-numberOfChannels?: number-End-->
 
@@ -192,7 +192,7 @@ Audio output uri.support two kind of uri now.format like: scheme + "://" + "cont
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.multimedia.media/media.AVRecorderConfig#url
+**Substitutes:** [url](ohos.multimedia.media/media.AVRecorderConfig#url)
 
 <!--Device-AudioRecorderConfig-uri: string--><!--Device-AudioRecorderConfig-uri: string-End-->
 

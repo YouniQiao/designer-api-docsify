@@ -18,7 +18,7 @@ This module provides device control capabilities for enterprise device managemen
 ## Modules to Import
 
 ```TypeScript
-import { deviceControl } from 'kits/@kit.MDMKit';
+import { deviceControl } from '@kit.MDMKit';
 ```
 
 ## Summary

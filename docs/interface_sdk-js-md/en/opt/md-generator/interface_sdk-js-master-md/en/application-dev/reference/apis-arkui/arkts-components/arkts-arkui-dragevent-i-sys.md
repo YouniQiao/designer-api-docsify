@@ -36,9 +36,9 @@ Sets whether to enable the system's built-in drop animation effect. This API is 
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [190003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## executeFollowHandMorphDropAnimation
 
@@ -50,7 +50,7 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 
 > **NOTE：**
 > 
-> 1. This API takes effect only when [dragAnimationType](arkts-arkui-dragevent-i-sys.md#draganimationtype) is
+> 1. This API takes effect only when [dragAnimationType](#dragAnimationType) is
 > set to **DragAnimationType.FOLLOW_HAND_MORPH**.
 > 
 > 2. Do not implement logic unrelated to the animation in the callback to avoid affecting execution efficiency.
@@ -69,7 +69,7 @@ Sets a callback to be executed after the follow-hand morph drop animation is com
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| onAnimationFinished | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| onAnimationFinished | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes |
 | animationOption | string | No |
 
 ## dragAnimationType
@@ -79,11 +79,11 @@ dragAnimationType?: DragAnimationType
 ```
 
 Sets the drag animation type. This attribute can only be set during the  
-[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart) phase and can be obtained in the  
-[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart), [onDragEnter](arkts-arkui-commonmethod-c.md#ondragenter),  
-[onDragMove](arkts-arkui-commonmethod-c.md#ondragmove), [onDragLeave](arkts-arkui-commonmethod-c.md#ondragleave),  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop), and  
-[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend) callbacks.
+[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart) phase and can be obtained in the  
+[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart), [onDragEnter](arkts-arkui-commonmethod-c.md#onDragEnter),  
+[onDragMove](arkts-arkui-commonmethod-c.md#onDragMove), [onDragLeave](arkts-arkui-commonmethod-c.md#onDragLeave),  
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void)), and  
+[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd) callbacks.
 
 Default value: **DEFAULT**
 

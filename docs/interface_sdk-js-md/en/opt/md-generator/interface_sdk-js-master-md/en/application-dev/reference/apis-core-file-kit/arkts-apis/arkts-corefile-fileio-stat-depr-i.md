@@ -6,7 +6,7 @@ Provides detailed file information. Before calling a method of the **Stat** clas
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat](arkts-corefile-fileio-stat-depr-i.md)
+**Substitutes:** [Stat](arkts-corefile-file-fs-stat-i.md#Stat)
 
 <!--Device-unnamed-declare interface Stat--><!--Device-unnamed-declare interface Stat-End-->
 
@@ -24,7 +24,7 @@ Checks whether this file is a block special file. A block special file supports 
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isBlockDevice](arkts-corefile-fileio-stat-depr-i.md#isblockdevice)
+**Substitutes:** [isBlockDevice](arkts-corefile-file-fs-stat-i.md#isBlockDevice)
 
 <!--Device-Stat-isBlockDevice(): boolean--><!--Device-Stat-isBlockDevice(): boolean-End-->
 
@@ -55,7 +55,7 @@ Checks whether this file is a character special file. A character special file s
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isCharacterDevice](arkts-corefile-fileio-stat-depr-i.md#ischaracterdevice)
+**Substitutes:** [isCharacterDevice](arkts-corefile-file-fs-stat-i.md#isCharacterDevice)
 
 <!--Device-Stat-isCharacterDevice(): boolean--><!--Device-Stat-isCharacterDevice(): boolean-End-->
 
@@ -86,7 +86,7 @@ Checks whether this file is a directory.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isDirectory](arkts-corefile-fileio-stat-depr-i.md#isdirectory)
+**Substitutes:** [isDirectory](arkts-corefile-file-fs-stat-i.md#isDirectory)
 
 <!--Device-Stat-isDirectory(): boolean--><!--Device-Stat-isDirectory(): boolean-End-->
 
@@ -117,7 +117,7 @@ Checks whether this file is a named pipe (or FIFO). Named pipes are used for int
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isFIFO](arkts-corefile-fileio-stat-depr-i.md#isfifo)
+**Substitutes:** [isFIFO](arkts-corefile-file-fs-stat-i.md#isFIFO)
 
 <!--Device-Stat-isFIFO(): boolean--><!--Device-Stat-isFIFO(): boolean-End-->
 
@@ -148,7 +148,7 @@ Checks whether this file is a regular file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isFile](arkts-corefile-fileio-stat-depr-i.md#isfile)
+**Substitutes:** [isFile](arkts-corefile-file-fs-stat-i.md#isFile)
 
 <!--Device-Stat-isFile(): boolean--><!--Device-Stat-isFile(): boolean-End-->
 
@@ -179,7 +179,7 @@ Checks whether this file is a socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isSocket](arkts-corefile-fileio-stat-depr-i.md#issocket)
+**Substitutes:** [isSocket](arkts-corefile-file-fs-stat-i.md#isSocket)
 
 <!--Device-Stat-isSocket(): boolean--><!--Device-Stat-isSocket(): boolean-End-->
 
@@ -210,7 +210,7 @@ Checks whether this file is a symbolic link.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.isSymbolicLink](arkts-corefile-fileio-stat-depr-i.md#issymboliclink)
+**Substitutes:** [isSymbolicLink](arkts-corefile-file-fs-stat-i.md#isSymbolicLink)
 
 <!--Device-Stat-isSymbolicLink(): boolean--><!--Device-Stat-isSymbolicLink(): boolean-End-->
 
@@ -243,7 +243,7 @@ Time when the file was last accessed. The value is the number of seconds elapsed
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.atime](arkts-corefile-fileio-stat-depr-i.md#atime)
+**Substitutes:** [atime](arkts-corefile-file-fs-stat-i.md#atime)
 
 <!--Device-Stat-readonly atime: number--><!--Device-Stat-readonly atime: number-End-->
 
@@ -281,7 +281,7 @@ Time of the last status change of the file. The value is the number of seconds e
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.ctime](arkts-corefile-fileio-stat-depr-i.md#ctime)
+**Substitutes:** [ctime](arkts-corefile-file-fs-stat-i.md#ctime)
 
 <!--Device-Stat-readonly ctime: number--><!--Device-Stat-readonly ctime: number-End-->
 
@@ -319,7 +319,7 @@ ID of the user group of the file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.gid](arkts-corefile-fileio-stat-depr-i.md#gid)
+**Substitutes:** [gid](arkts-corefile-file-fs-stat-i.md#gid)
 
 <!--Device-Stat-readonly gid: number--><!--Device-Stat-readonly gid: number-End-->
 
@@ -339,7 +339,7 @@ File identifier, which varies with files on the same device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.file.fs.Stat.ino
+**Substitutes:** [ino](ohos.file.fs.Stat.ino)
 
 <!--Device-Stat-readonly ino: number--><!--Device-Stat-readonly ino: number-End-->
 
@@ -382,7 +382,7 @@ directory.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.mode](arkts-corefile-fileio-stat-depr-i.md#mode)
+**Substitutes:** [mode](arkts-corefile-file-fs-stat-i.md#mode)
 
 <!--Device-Stat-readonly mode: number--><!--Device-Stat-readonly mode: number-End-->
 
@@ -402,7 +402,7 @@ Time when the file content was last modified. The value is the number of seconds
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.mtime](arkts-corefile-fileio-stat-depr-i.md#mtime)
+**Substitutes:** [mtime](arkts-corefile-file-fs-stat-i.md#mtime)
 
 <!--Device-Stat-readonly mtime: number--><!--Device-Stat-readonly mtime: number-End-->
 
@@ -458,7 +458,7 @@ File size, in bytes. This parameter is valid only for regular files.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.size](arkts-corefile-fileio-stat-depr-i.md#size)
+**Substitutes:** [size](arkts-corefile-file-fs-stat-i.md#size)
 
 <!--Device-Stat-readonly size: number--><!--Device-Stat-readonly size: number-End-->
 
@@ -478,7 +478,7 @@ ID of the file owner.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:Stat.uid](arkts-corefile-fileio-stat-depr-i.md#uid)
+**Substitutes:** [uid](arkts-corefile-file-fs-stat-i.md#uid)
 
 <!--Device-Stat-readonly uid: number--><!--Device-Stat-readonly uid: number-End-->
 

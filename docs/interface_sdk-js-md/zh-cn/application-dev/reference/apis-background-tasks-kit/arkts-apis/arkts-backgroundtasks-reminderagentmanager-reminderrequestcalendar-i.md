@@ -4,7 +4,7 @@ ReminderRequestCalendar extends ReminderRequest
 
 日历实例对象，用于设置提醒的时间。
 
-**继承/实现关系：** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md)
+**继承/实现关系：** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
 **起始版本：** 9
 
@@ -22,7 +22,7 @@ dateTime: LocalDateTime
 
 指明提醒的目标时间。
 
-**类型：** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
+**类型：** LocalDateTime
 
 **起始版本：** 9
 
@@ -58,7 +58,7 @@ endDateTime?: LocalDateTime
 
 指明提醒的结束时间。
 
-**类型：** [LocalDateTime](arkts-backgroundtasks-reminderagentmanager-localdatetime-i.md)
+**类型：** LocalDateTime
 
 **起始版本：** 12
 

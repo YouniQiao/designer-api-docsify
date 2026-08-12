@@ -1,6 +1,6 @@
 # Filter
 
-Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter)创建一个Filter实例。
+Filter效果类，用于将模糊、边缘像素扩展、水波纹等效果添加到组件上。在调用Filter的方法前，需要先通过[createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createFilter)创建一个Filter实例。
 
 **起始版本：** 12
 
@@ -26,7 +26,7 @@ blur(blurRadius: number): Filter
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| blurRadius | number | 是 |
+| [blurRadius](arkts-arkgraphics2d-text-textshadow-i.md) | number | 是 |
 
 **返回值：**
 
@@ -95,7 +95,7 @@ hdrBrightnessRatio(ratio: number): Filter
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| ratio | number | 是 |
+| [ratio](../../apis-arkui/arkts-apis/arkts-arkui-componentutils-getitemsinshapepathparams-i-sys.md) | number | 是 |
 
 **返回值：**
 
@@ -107,8 +107,8 @@ hdrBrightnessRatio(ratio: number): Filter
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

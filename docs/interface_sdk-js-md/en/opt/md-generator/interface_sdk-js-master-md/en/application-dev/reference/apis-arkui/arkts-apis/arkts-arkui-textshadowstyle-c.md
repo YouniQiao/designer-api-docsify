@@ -32,7 +32,7 @@ The **ShadowOptions** object does not support the **fill** field.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | Yes |
+| value | [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt; | Yes |
 
 ## textShadow
 
@@ -42,7 +42,7 @@ readonly textShadow: Array<ShadowOptions>
 
 Text shadow of the styled string.
 
-**Type:** Array&lt;ShadowOptions&gt;
+**Type:** Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt;
 
 **Since:** 12
 

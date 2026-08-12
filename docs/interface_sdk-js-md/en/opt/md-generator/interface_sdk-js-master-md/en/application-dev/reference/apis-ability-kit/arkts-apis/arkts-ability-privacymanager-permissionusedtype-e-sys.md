@@ -4,9 +4,9 @@ Enumerates the means for using a sensitive permission.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description |
 | ----------------------- | -- | ---------------- |
-| [NORMAL_TYPE](#normal_type) | 0 | The sensitive permission is used after authorization through a dialog box or a system settings page. |
-| [PICKER_TYPE](#picker_type) | 1 | Indicates that a sensitive permission is used through a PICKER service, but this method does not grant the permission. |
-| [SECURITY_COMPONENT_TYPE](#security_component_type) | 2 |
+| [NORMAL_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 0 | The sensitive permission is used after authorization through a dialog box or a system settings page. |
+| [PICKER_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 1 | Indicates that a sensitive permission is used through a PICKER service, but this method does not grant the permission. |
+| [SECURITY_COMPONENT_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 2 |
 
 **Since:** 12
 

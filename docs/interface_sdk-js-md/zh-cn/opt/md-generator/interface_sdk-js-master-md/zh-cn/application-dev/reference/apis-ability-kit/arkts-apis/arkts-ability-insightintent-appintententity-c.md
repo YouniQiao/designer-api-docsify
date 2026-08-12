@@ -2,7 +2,7 @@
 
 定义AppIntentEntity。
 
-**继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md)
+**继承/实现关系：** AppIntentEntity implements [IntentEntity](arkts-ability-insightintent-intententity-i.md#IntentEntity)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;T&gt;&gt; |
+| Promise & lt;Array & lt;T & gt; & gt; |
 
 ## 示例
 

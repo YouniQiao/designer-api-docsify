@@ -156,7 +156,7 @@ Gets the response headers.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;Header&gt; | Return the response headers. |
+| Array&lt;[Header](arkts-arkweb-web-header-i.md)&gt; | Return the response headers. |
 
 ## getResponseIsReady
 
@@ -266,7 +266,7 @@ Sets the response data.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | string \| int \| Resource \| ArrayBuffer | 是 | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
+| data | string \| int \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| ArrayBuffer | 是 | the response data. string type indicate strings in HTML format. number type indicate file handle. Resource type indicate \\$rawfile resource. ArrayBuffer type indicate binary data. |
 
 ## setResponseEncoding
 
@@ -310,7 +310,7 @@ Sets the response headers.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| header | Array&lt;Header&gt; | 是 | the response headers. |
+| header | Array&lt;[Header](arkts-arkweb-web-header-i.md)&gt; | 是 | the response headers. |
 
 ## setResponseIsReady
 

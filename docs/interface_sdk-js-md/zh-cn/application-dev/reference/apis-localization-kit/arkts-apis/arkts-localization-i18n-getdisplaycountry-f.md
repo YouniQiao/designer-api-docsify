@@ -14,7 +14,7 @@ export function getDisplayCountry(country: string, locale: string, sentenceCase?
 
 **废弃版本：** 9
 
-**替代接口：** [i18n.System.getDisplayCountry](arkts-localization-i18n-system-c.md#getdisplaycountry)
+**替代接口：** [getDisplayCountry](arkts-localization-i18n-system-c.md#getDisplayCountry)
 
 <!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayCountry(country: string, locale: string, sentenceCase?: boolean): string-End-->
 

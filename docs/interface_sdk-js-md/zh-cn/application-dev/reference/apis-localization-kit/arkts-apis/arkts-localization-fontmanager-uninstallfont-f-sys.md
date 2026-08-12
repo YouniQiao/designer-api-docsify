@@ -36,9 +36,9 @@ function uninstallFont(fullName: string): Promise<int>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [31100107](../errorcode-font-manager.md#31100107-卸载的字体文件不存在) | Font file does not exist. |
-| [31100108](../errorcode-font-manager.md#31100108-无法删除字体) | Font file delete error. |
-| [31100109](../errorcode-font-manager.md#31100109-其他错误导致卸载失败) | Other error. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system application. |
+| [31100107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-卸载的字体文件不存在) | Font file does not exist. |
+| [31100108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-无法删除字体) | Font file delete error. |
+| [31100109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-其他错误导致卸载失败) | Other error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system application. |
 

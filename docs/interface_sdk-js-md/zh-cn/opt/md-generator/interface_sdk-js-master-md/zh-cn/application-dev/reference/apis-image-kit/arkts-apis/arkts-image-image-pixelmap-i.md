@@ -1,10 +1,10 @@
 # PixelMap
 
 The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
-[Bytes per pixel](arkts-image-image-pixelmapformat-e.md).Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-worker.md/arkts-worker.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release](arkts-image-image-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
+[Bytes per pixel](arkts-image-image-pixelmapformat-e.md#PixelMapFormat).Since API version 11, PixelMap supports cross-thread calls through [Worker](@ohos.worker). If a PixelMap object is invoked by another thread through [Worker](@ohos.worker), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
+[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md#image) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md#image) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
+[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **起始版本：** 7
 
@@ -37,10 +37,10 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
-| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
+| [62980108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-图片颜色转换错误) |
 
 ## applyColorSpace
 
@@ -66,16 +66,16 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
-| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
+| [62980108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-图片颜色转换错误) |
 
 ## applyCrop
 
@@ -107,18 +107,18 @@ Crops the PixelMap.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
-| [7600204](../errorcode-image.md#7600204-无效的区域) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) |
 
 ## applyCropSync
 
@@ -150,12 +150,12 @@ Crops the PixelMap.
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
-| [7600204](../errorcode-image.md#7600204-无效的区域) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) |
 
 ## applyFlip
 
@@ -188,18 +188,18 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyFlipSync
 
@@ -232,12 +232,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyRotate
 
@@ -271,18 +271,18 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyRotateSync
 
@@ -316,12 +316,12 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyScale
 
@@ -355,18 +355,18 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyScaleSync
 
@@ -400,12 +400,12 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyTranslate
 
@@ -438,18 +438,18 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## applyTranslateSync
 
@@ -482,12 +482,12 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
 
 ## clone
 
@@ -507,17 +507,17 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | 类型 |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [501](../errorcode-image.md#501-无法调用接口) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980102](../errorcode-image.md#62980102-图片分配内存错误) |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-图片分配内存错误) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) |
 
 ## cloneSync
 
@@ -537,17 +537,17 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [501](../errorcode-image.md#501-无法调用接口) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
-| [62980102](../errorcode-image.md#62980102-图片分配内存错误) |
-| [62980104](../errorcode-image.md#62980104-图片初始化错误) |
-| [62980106](../errorcode-image.md#62980106-图片数据太大) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
+| [62980102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-图片分配内存错误) |
+| [62980104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) |
+| [62980106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) |
 
 ## convertPixelFormat
 
@@ -573,17 +573,17 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980274](../errorcode-image.md#62980274-图片转换失败) |
-| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) |
-| [62980276](../errorcode-image.md#62980276-不支持图片转换目标类型) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980274](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980274-图片转换失败) |
+| [62980178](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) |
+| [62980276](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980276-不支持图片转换目标类型) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
 
 ## createAlphaPixelmap
 
@@ -593,7 +593,7 @@ createAlphaPixelmap(): Promise<PixelMap>
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -609,7 +609,7 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} 
 
 | 类型 |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 ## createAlphaPixelmap
 
@@ -619,7 +619,7 @@ createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
 
-Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -635,7 +635,7 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMap} 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 |
 
 ## createAlphaPixelmapSync
 
@@ -645,7 +645,7 @@ createAlphaPixelmapSync(): PixelMap
 
 Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractAlphaPixelMapSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -659,14 +659,14 @@ Starting from API 26.0.0, it is recommended to use {@link extractAlphaPixelMapSy
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## createCroppedAndScaledPixelMap
 
@@ -695,16 +695,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 类型 |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
-| [7600204](../errorcode-image.md#7600204-无效的区域) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600205](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-不支持的内存格式或像素格式) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) |
 
 ## createCroppedAndScaledPixelMapSync
 
@@ -733,16 +733,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) |
-| [7600301](../errorcode-image.md#7600301-申请内存失败) |
-| [7600204](../errorcode-image.md#7600204-无效的区域) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600205](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-不支持的内存格式或像素格式) |
+| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
+| [7600204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) |
 
 ## createScaledPixelMap
 
@@ -770,14 +770,14 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 类型 |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## createScaledPixelMapSync
 
@@ -805,14 +805,14 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## crop
 
@@ -822,7 +822,7 @@ crop(region: Region, callback: AsyncCallback<void>): void
 
 Crops this image based on a given size. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -849,7 +849,7 @@ crop(region: Region): Promise<void>
 
 Crops a PixelMap based on a given size. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -871,7 +871,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyCrop} instead for
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## cropSync
 
@@ -881,7 +881,7 @@ cropSync(region: Region): void
 
 Crops this image based on a given size. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -901,8 +901,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyCropSync} instead
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## extractAlphaPixelMap
 
@@ -928,17 +928,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600306](../errorcode-image.md#7600306-数据转换失败) |
-| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
+| [7600306](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-数据转换失败) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
 
 ## extractAlphaPixelMapSync
 
@@ -964,17 +964,17 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 |
 | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) |
+| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600306](../errorcode-image.md#7600306-数据转换失败) |
-| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
+| [7600306](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-数据转换失败) |
+| [7600305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
 
 ## flip
 
@@ -984,7 +984,7 @@ flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): voi
 
 Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1012,7 +1012,7 @@ flip(horizontal: boolean, vertical: boolean): Promise<void>
 
 Flips a PixelMap based on a given angle. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1035,7 +1035,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyFlip} instead for
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## flipSync
 
@@ -1045,7 +1045,7 @@ flipSync(horizontal: boolean, vertical: boolean): void
 
 Flips this image horizontally or vertically, or both. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -1066,8 +1066,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyFlipSync} instead
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## getBytesNumberPerRow
 
@@ -1117,9 +1117,9 @@ Obtains the color space of this image.
 
 | 错误码ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980101](../errorcode-image.md#62980101-图片输入数据错误) |
-| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) |
+| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
 
 ## getDensity
 
@@ -1167,7 +1167,7 @@ Obtains the image information of a PixelMap. This API uses a promise to return t
 
 | 类型 |
 | --- |
-| Promise&lt;ImageInfo&gt; |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; |
 
 ## getImageInfo
 
@@ -1191,7 +1191,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ImageInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 |
 
 ## getImageInfoSync
 
@@ -1221,7 +1221,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | 错误码ID |
 | --- |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## getMetadata
 
@@ -1253,10 +1253,10 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
-| [62980302](../errorcode-image.md#62980302-内存拷贝失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) |
+| [62980302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-内存拷贝失败) |
 
 ## getPixelBytesNumber
 
@@ -1306,7 +1306,7 @@ Obtains the unique ID of this PixelMap.
 
 | 错误码ID |
 | --- |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
 
 ## isReleased
 
@@ -1357,8 +1357,8 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | 错误码ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
 
 ## opacity
 
@@ -1368,7 +1368,7 @@ opacity(rate: number, callback: AsyncCallback<void>): void
 
 Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1395,7 +1395,7 @@ opacity(rate: number): Promise<void>
 
 Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1417,7 +1417,7 @@ Starting from API 26.0.0, it is recommended to use {@link setOpacity} instead fo
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## opacitySync
 
@@ -1427,7 +1427,7 @@ opacitySync(rate: number): void
 
 Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
 
-Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacitySync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -1447,8 +1447,8 @@ Starting from API 26.0.0, it is recommended to use {@link setOpacitySync} instea
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## readAllPixelsToBuffer
 
@@ -1474,23 +1474,23 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## readAllPixelsToBufferSync
 
@@ -1516,17 +1516,17 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## readPixels
 
@@ -1534,10 +1534,10 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -1559,7 +1559,7 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} inst
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## readPixels
 
@@ -1567,10 +1567,10 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} inst
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -1595,10 +1595,10 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToArea} inst
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readPixelsToAreaSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -1618,8 +1618,8 @@ Starting from API 26.0.0, it is recommended to use {@link readPixelsToAreaSync} 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## readPixelsToArea
 
@@ -1651,17 +1651,17 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## readPixelsToAreaSync
 
@@ -1693,11 +1693,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## readPixelsToBuffer
 
@@ -1707,7 +1707,7 @@ readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -1723,13 +1723,13 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer}
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## readPixelsToBuffer
 
@@ -1739,7 +1739,7 @@ readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -1755,7 +1755,7 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBuffer}
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## readPixelsToBufferSync
@@ -1766,7 +1766,7 @@ readPixelsToBufferSync(dst: ArrayBuffer): void
 
 Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readAllPixelsToBufferSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -1782,14 +1782,14 @@ Starting from API 26.0.0, it is recommended to use {@link readAllPixelsToBufferS
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| dst | ArrayBuffer | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | ArrayBuffer | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## release
 
@@ -1847,7 +1847,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## rotate
 
@@ -1857,7 +1857,7 @@ rotate(angle: number, callback: AsyncCallback<void>): void
 
 Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1884,7 +1884,7 @@ rotate(angle: number): Promise<void>
 
 Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1906,7 +1906,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyRotate} instead f
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## rotateSync
 
@@ -1916,7 +1916,7 @@ rotateSync(angle: number): void
 
 Rotates this image based on a given angle. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotateSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -1936,8 +1936,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyRotateSync} inste
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## scale
 
@@ -1947,7 +1947,7 @@ scale(x: number, y: number, callback: AsyncCallback<void>): void
 
 Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1975,7 +1975,7 @@ scale(x: number, y: number): Promise<void>
 
 Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -1998,7 +1998,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyScale} instead fo
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## scale
 
@@ -2008,7 +2008,7 @@ scale(x: number, y: number, level: AntiAliasingLevel): Promise<void>
 
 Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScale} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2032,14 +2032,14 @@ Starting from API 26.0.0, it is recommended to use {@link applyScale} instead fo
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## scaleSync
 
@@ -2049,7 +2049,7 @@ scaleSync(x: number, y: number): void
 
 Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2070,8 +2070,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## scaleSync
 
@@ -2081,7 +2081,7 @@ scaleSync(x: number, y: number, level: AntiAliasingLevel): void
 
 Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2103,8 +2103,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyScaleSync} instea
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## setColorSpace
 
@@ -2132,8 +2132,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | 错误码ID |
 | --- |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
-| [62980111](../errorcode-image.md#62980111-图片源数据不完整) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
+| [62980111](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) |
 
 ## setMemoryNameSync
 
@@ -2159,9 +2159,9 @@ Sets a memory name for this PixelMap.
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
-| [62980286](../errorcode-image.md#62980286-pixelmap设置内存标识符失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [62980286](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980286-pixelmap设置内存标识符失败) |
 
 ## setMetadata
 
@@ -2188,16 +2188,16 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
-| [62980173](../errorcode-image.md#62980173-dma内存空间错误) |
-| [62980302](../errorcode-image.md#62980302-内存拷贝失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
+| [62980173](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) |
+| [62980302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-内存拷贝失败) |
 
 ## setOpacity
 
@@ -2229,18 +2229,18 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600207](../errorcode-image.md#7600207-不支持的数据格式) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600207](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-不支持的数据格式) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setOpacitySync
 
@@ -2272,12 +2272,12 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600207](../errorcode-image.md#7600207-不支持的数据格式) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600207](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-不支持的数据格式) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setTransferDetached
 
@@ -2303,7 +2303,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | 错误码ID |
 | --- |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## toSdr
 
@@ -2323,13 +2323,13 @@ Convert pixelmap to standard dynamic range.
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980137](../errorcode-image.md#62980137-图片操作无效) |
+| [62980137](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) |
 
 ## translate
 
@@ -2339,7 +2339,7 @@ translate(x: number, y: number, callback: AsyncCallback<void>): void
 
 Translates this image based on given coordinates. This API uses an asynchronous callback to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -2367,7 +2367,7 @@ translate(x: number, y: number): Promise<void>
 
 Translates a PixelMap based on given coordinates. This API uses a promise to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
 **起始版本：** 9
 
@@ -2390,7 +2390,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslate} instea
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## translateSync
 
@@ -2400,7 +2400,7 @@ translateSync(x: number, y: number): void
 
 Translates this image based on given coordinates. This API returns the result synchronously.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
 
-Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTranslateSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2421,8 +2421,8 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} in
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## unmarshalling
 
@@ -2430,7 +2430,7 @@ Starting from API 26.0.0, it is recommended to use {@link applyTranslateSync} in
 unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 ```
 
-Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createpixelmapfromparcel).
+Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel).
 
 **起始版本：** 10
 
@@ -2448,15 +2448,15 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | 类型 |
 | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; |
+| Promise & lt;PixelMap & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) |
-| [62980096](../errorcode-image.md#62980096-操作失败) |
-| [62980115](../errorcode-image.md#62980115-图片无效参数) |
+| [62980097](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) |
+| [62980096](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) |
+| [62980115](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) |
 
 ## writeAllPixelsFromBuffer
 
@@ -2488,18 +2488,18 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2531,12 +2531,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## writeBufferToPixels
 
@@ -2546,7 +2546,7 @@ writeBufferToPixels(src: ArrayBuffer): Promise<void>
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses a promise to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2568,7 +2568,7 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## writeBufferToPixels
 
@@ -2578,7 +2578,7 @@ writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses an asynchronous callback to return the result.
 
-Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuffer} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2605,7 +2605,7 @@ writeBufferToPixelsSync(src: ArrayBuffer): void
 
 Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBufferSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeAllPixelsFromBufferSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2625,8 +2625,8 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## writePixels
 
@@ -2634,10 +2634,10 @@ Starting from API 26.0.0, it is recommended to use {@link writeAllPixelsFromBuff
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2659,7 +2659,7 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} i
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## writePixels
 
@@ -2667,10 +2667,10 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} i
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
 
-Starting from API 26.0.0, it is recommended to use {@link writePixelsFromArea} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
 **起始版本：** 7
 
@@ -2719,18 +2719,18 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## writePixelsFromAreaSync
 
@@ -2762,12 +2762,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 错误码ID |
 | --- |
-| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
-| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) |
-| [7600201](../errorcode-image.md#7600201-不支持的操作) |
-| [7600104](../errorcode-image.md#7600104-获取图像数据失败) |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
-| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) |
+| [7600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) |
+| [7600201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) |
+| [7600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
 
 ## writePixelsSync
 
@@ -2775,10 +2775,10 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
+[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API returns the result synchronously.
 
-Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSync} instead for better exception handling capabilities.
+Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writePixelsFromAreaSync) instead for better exception handling capabilities.
 
 **起始版本：** 12
 
@@ -2800,8 +2800,8 @@ Starting from API 26.0.0, it is recommended to use {@link writePixelsFromAreaSyn
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [501](../errorcode-image.md#501-无法调用接口) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) |
 
 ## isEditable
 

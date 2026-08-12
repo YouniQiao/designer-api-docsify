@@ -5,13 +5,13 @@ Provides OAuth authenticator callbacks.
 > **NOTE：**
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) instead.
+> [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md#AuthCallback) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [appAccount.AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)
+**Substitutes:** [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md#AuthCallback)
 
 <!--Device-appAccount-interface AuthenticatorCallback--><!--Device-appAccount-interface AuthenticatorCallback-End-->
 
@@ -20,7 +20,7 @@ Provides OAuth authenticator callbacks.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## onRequestRedirected
@@ -39,7 +39,7 @@ Called to redirect a request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AppAccount.AuthCallback.onRequestRedirected](arkts-basicservices-appaccount-authcallback-i.md#onrequestredirected)
+**Substitutes:** [onRequestRedirected](AppAccount.AuthCallback.onRequestRedirected)
 
 <!--Device-AuthenticatorCallback-onRequestRedirected: (request: Want) => void--><!--Device-AuthenticatorCallback-onRequestRedirected: (request: Want) => void-End-->
 
@@ -93,7 +93,7 @@ Called to return the result of an authentication request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AppAccount.AuthCallback.onResult](arkts-basicservices-appaccount-authcallback-i.md#onresult)
+**Substitutes:** [onResult](AppAccount.AuthCallback.onResult)
 
 <!--Device-AuthenticatorCallback-onResult: (code: number, result: { [key: string]: any }) => void--><!--Device-AuthenticatorCallback-onResult: (code: number, result: { [key: string]: any }) => void-End-->
 

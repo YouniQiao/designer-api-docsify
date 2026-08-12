@@ -20,7 +20,7 @@ radius: VP
 
 默认值：0，小于0时取默认值0。
 
-**类型：** [VP](../arkts-apis/arkts-arkui-vp-t.md)
+**类型：** VP
 
 **起始版本：** 10
 

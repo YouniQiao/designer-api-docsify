@@ -28,7 +28,7 @@ Indicates the type of Repeat.
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; |  |
+| [RepeatAttribute](arkts-arkui-repeat-repeatattribute-i.md)&lt;T&gt; |  |
 
 
 ## Repeat
@@ -57,11 +57,11 @@ export declare function Repeat<T>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RepeatAttribute&lt;T&gt;&gt; | 是 | 用于设置Repeat属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RepeatAttribute](arkts-arkui-repeat-repeatattribute-i.md)&lt;T&gt;&gt; | 是 | 用于设置Repeat属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RepeatAttribute](arkts-arkui-repeatattribute-c.md)&lt;T&gt; | Repeat属性实例。 |
+| [RepeatAttribute](arkts-arkui-repeat-repeatattribute-i.md)&lt;T&gt; | Repeat属性实例。 |
 

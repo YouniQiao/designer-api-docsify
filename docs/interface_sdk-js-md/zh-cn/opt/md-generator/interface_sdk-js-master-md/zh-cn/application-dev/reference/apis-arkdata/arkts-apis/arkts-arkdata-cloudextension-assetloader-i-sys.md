@@ -33,13 +33,13 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 | table | string | 是 |
 | gid | string | 是 |
 | prefix | string | 是 |
-| assets | Array&lt;CloudAsset&gt; | 是 |
+| assets | Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; |
 
 ## 示例
 
@@ -76,13 +76,13 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 | --- | --- | --- |
 | table | string | 是 |
 | gid | string | 是 |
-| assets | Array&lt;CloudAsset&gt; | 是 |
+| assets | Array&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Result&lt;CloudAsset&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Result&lt;[CloudAsset](arkts-arkdata-cloudextension-cloudasset-i-sys.md)&gt;&gt;&gt; |
 
 ## 示例
 

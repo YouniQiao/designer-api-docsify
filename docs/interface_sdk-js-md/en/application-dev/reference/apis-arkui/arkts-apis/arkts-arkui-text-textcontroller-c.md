@@ -50,7 +50,7 @@ Get LayoutManager.
 
 | Type | Description |
 | --- | --- |
-| [LayoutManager](arkts-arkui-layoutmanager-i.md) | Return the LayoutManager. |
+| [LayoutManager](arkts-arkui-textcommon-layoutmanager-i.md) | Return the LayoutManager. |
 
 ## setStyledString
 
@@ -76,7 +76,7 @@ Update the styles of StyledString by setStyledString.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StyledString](arkts-arkui-styledstring-c.md) | Yes |  |
+| value | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes |  |
 
 ## setTextSelection
 

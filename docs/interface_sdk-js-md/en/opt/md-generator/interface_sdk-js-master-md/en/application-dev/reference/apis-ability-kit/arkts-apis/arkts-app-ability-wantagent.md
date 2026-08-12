@@ -1,6 +1,6 @@
 # @ohos.app.ability.wantAgent
 
-The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md) object, enabling an application to
+The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md#Want) object, enabling an application to
  trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event)
  at a future time.
  The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to
@@ -14,7 +14,7 @@ The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## Summary

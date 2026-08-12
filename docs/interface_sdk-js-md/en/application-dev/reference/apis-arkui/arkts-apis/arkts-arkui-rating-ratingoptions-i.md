@@ -38,7 +38,7 @@ rating: double | undefined | Bindable<double>
 
 Rating option.
 
-**Type:** double \| undefined \| Bindable&lt;double&gt;
+**Type:** double \| undefined \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;double&gt;
 
 **Since:** 23
 

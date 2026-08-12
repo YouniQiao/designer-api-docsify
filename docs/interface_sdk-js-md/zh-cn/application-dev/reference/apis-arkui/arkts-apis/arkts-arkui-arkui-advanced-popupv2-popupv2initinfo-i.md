@@ -42,7 +42,7 @@ direction?: Direction
 
 默认值：Direction.Auto
 
-**类型：** [Direction](arkts-arkui-direction-e.md)
+**类型：** Direction
 
 **默认值：** Direction.Auto
 
@@ -66,7 +66,7 @@ icon?: ResourceStr
 
 **说明：** 默认值：''，不显示图标。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -114,7 +114,7 @@ maxWidth?: Dimension
 
 1. 在使用引用资源类型时，规定其参数类型要与属性方法本身类型一致。2. maxWidth是数字类型，支持float和整型，例如`\$r('app.float.maxWidth')`、`\$r('app.integer.maxWidth')`。3. 当类型为Resource时，如果未设置单位，默认单位为px。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 400.0_vp
 
@@ -138,7 +138,7 @@ message: ResourceStr
 
 **说明：** 默认值：''，不显示内容文本。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
@@ -182,7 +182,7 @@ onClose?: VoidCallback
 
 默认不设置关闭按钮回调函数。
 
-**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+**类型：** VoidCallback
 
 **起始版本：** 26.0.0
 
@@ -228,7 +228,7 @@ title?: ResourceStr
 
 **说明：** 默认值：''，不显示标题文本。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 26.0.0
 

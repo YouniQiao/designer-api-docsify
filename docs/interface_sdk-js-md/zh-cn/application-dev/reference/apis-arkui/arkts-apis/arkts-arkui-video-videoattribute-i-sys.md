@@ -2,7 +2,7 @@
 
 用于播放视频文件并控制其播放状态的组件。
 
-**继承/实现关系：** VideoAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** VideoAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 23
 

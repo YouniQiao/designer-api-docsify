@@ -42,7 +42,7 @@ edgeEffect?: SwipeEdgeEffect
 
 滑动效果。
 
-**类型：** [SwipeEdgeEffect](../arkts-components/arkts-arkui-swipeedgeeffect-e.md)
+**类型：** [SwipeEdgeEffect](arkts-arkui-listitem-swipeedgeeffect-e.md)
 
 **起始版本：** 23
 
@@ -62,7 +62,7 @@ end?: CustomBuilder | SwipeActionItem
 
 ListItem向左划动时item右边的组件（List垂直布局时）或ListItem向上划动时item下方的组件（List水平布局时）。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md)
 
 **起始版本：** 23
 
@@ -82,7 +82,7 @@ start?: CustomBuilder | SwipeActionItem
 
 当列表项向左或向右滑动（当列表方向为"垂直"时），向上或向下滑动（当列表方向为"水平"时）时显示的操作项。
 
-**类型：** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) \| SwipeActionItem
+**类型：** [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [SwipeActionItem](arkts-arkui-listitem-swipeactionitem-i.md)
 
 **起始版本：** 23
 

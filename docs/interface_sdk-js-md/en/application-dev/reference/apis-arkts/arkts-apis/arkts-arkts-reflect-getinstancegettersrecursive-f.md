@@ -28,5 +28,5 @@ Returns public instance getters of a class and its parents.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;InstanceMethod&gt; | an array of instance getters. |
+| Array&lt;[InstanceMethod](arkts-arkts-reflect-instancemethod-c.md)&gt; | an array of instance getters. |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from 'kits/@kit.ArkUI';
+import { matrix4 } from '@kit.ArkUI';
 ```
 
 ## scale
@@ -20,7 +20,7 @@ Scales this matrix object along the x, y, and z axes.
 
 **Deprecated since:** 10
 
-**Substitutes:** [Matrix4Transit.scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
+**Substitutes:** [scale](arkts-arkui-matrix4-matrix4transit-i.md#scale)
 
 <!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit--><!--Device-matrix4-function scale(options: ScaleOption): Matrix4Transit-End-->
 
@@ -36,5 +36,5 @@ Scales this matrix object along the x, y, and z axes.
 
 | Type | Description |
 | --- | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Matrix object after scaling. |
+| Matrix4Transit | Matrix object after scaling. |
 

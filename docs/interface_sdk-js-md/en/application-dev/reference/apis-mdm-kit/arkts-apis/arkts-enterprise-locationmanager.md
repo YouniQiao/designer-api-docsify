@@ -22,7 +22,7 @@ The **locationManager** module provides location service management capabilities
 ## Modules to Import
 
 ```TypeScript
-import { locationManager } from 'kits/@kit.MDMKit';
+import { locationManager } from '@kit.MDMKit';
 ```
 
 ## Summary

@@ -21,16 +21,16 @@ function setPointerStyle(windowId: int, pointerStyle: PointerStyle, callback: As
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于0的整数。&lt;br&gt;窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。&lt;br&gt;设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md#getpointerstyle)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。 不能传入DEVELOPER_DEFINED_ICON作为参数。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于0的整数。&lt;br&gt;窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。&lt;br&gt;设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md#getPointerStyle)获取。 |
+| pointerStyle | PointerStyle | 是 | 鼠标样式。 不能传入DEVELOPER_DEFINED_ICON作为参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置鼠标样式类型成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -127,8 +127,8 @@ function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于0的整数。&lt;br&gt;窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。&lt;br&gt;设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md#getpointerstyle)获取。 |
-| pointerStyle | [PointerStyle](../../apis-arkui/arkts-apis/arkts-arkui-pointerstyle-t.md) | 是 | 鼠标样式。 |
+| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。取值范围为大于等于0的整数。&lt;br&gt;窗口ID合法并且对应窗口存在时，可以设置窗口的鼠标光标样式。&lt;br&gt;窗口ID合法但窗口不存在时，也可以设置鼠标光标样式。&lt;br&gt;设置 结果可通过[getPointerStyle](arkts-input-pointer-getpointerstyle-f.md#getPointerStyle-1)获取。 |
+| pointerStyle | PointerStyle | 是 | 鼠标样式。 |
 
 **返回值：**
 
@@ -140,8 +140,8 @@ function setPointerStyle(windowId: int, pointerStyle: PointerStyle): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. &lt;br&gt; When the windowId value is -1, the system permission is required to set the global style.  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 

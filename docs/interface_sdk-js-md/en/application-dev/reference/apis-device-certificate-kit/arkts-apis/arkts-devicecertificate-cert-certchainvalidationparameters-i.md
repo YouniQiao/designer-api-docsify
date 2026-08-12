@@ -13,7 +13,7 @@ Represents the parameters for certificate chain validation.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## allowDownloadIntermediateCa
@@ -47,7 +47,7 @@ certCRLs?: Array<CertCRLCollection>
 
 CRL collections used to check whether the certificate is revoked.
 
-**Type:** Array&lt;CertCRLCollection&gt;
+**Type:** Array&lt;[CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md)&gt;
 
 **Since:** 11
 
@@ -87,7 +87,7 @@ keyUsage?: Array<KeyUsageType>
 
 Usage of the key in the certificate to be validated.
 
-**Type:** Array&lt;KeyUsageType&gt;
+**Type:** Array&lt;[KeyUsageType](arkts-devicecertificate-cert-keyusagetype-e.md)&gt;
 
 **Since:** 12
 
@@ -167,7 +167,7 @@ trustAnchors: Array<X509TrustAnchor>
 
 List of trusted anchors.
 
-**Type:** Array&lt;X509TrustAnchor&gt;
+**Type:** Array&lt;[X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)&gt;
 
 **Since:** 11
 

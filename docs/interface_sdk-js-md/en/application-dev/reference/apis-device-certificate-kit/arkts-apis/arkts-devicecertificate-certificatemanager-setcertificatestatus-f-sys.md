@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from 'kits/@kit.DeviceCertificateKit';
+import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
 ## setCertificateStatus
@@ -33,7 +33,7 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | certUri | string | Yes | Unique identifier of the certificate. Currently, only user CA certificates are supported. |
-| certType | [CertType](../../apis-network-kit/arkts-apis/arkts-network-http-certtype-e.md) | Yes | Certificate type. Currently, only the status of user CA certificates ( **CA_CERT_USER**) can be set. |
+| certType | CertType | Yes | Certificate type. Currently, only the status of user CA certificates ( **CA_CERT_USER**) can be set. |
 | enabled | boolean | Yes | Whether the certificate is enabled. **true**: enabled; **false**: disabled. |
 
 **Return value:**
@@ -46,11 +46,11 @@ Sets the status of a CA certificate. Currently, only the status of a user's CA c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. &lt;br&gt;Possible causes: the URI is null or the URI format is wrong, &lt;br&gt; the certType's value is invalid or not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter verification failed. &lt;br&gt;Possible causes: the URI is null or the URI format is wrong, &lt;br&gt; the certType's value is invalid or not supported. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
+| [17500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500002-certificate-not-exist) | The certificate does not exist. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
 
 ## Examples
 

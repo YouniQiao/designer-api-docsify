@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from 'kits/@kit.BasicServicesKit';
+import { power } from '@kit.BasicServicesKit';
 ```
 
 ## isStandby
@@ -30,7 +30,7 @@ Checks whether the device is in standby mode.
 
 | Error Code ID |
 | --- |
-| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
+| [4900101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
 
 ## Examples
 

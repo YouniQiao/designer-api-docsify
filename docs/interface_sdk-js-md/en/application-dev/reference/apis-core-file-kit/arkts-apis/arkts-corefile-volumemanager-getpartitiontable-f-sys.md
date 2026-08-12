@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from 'kits/@kit.CoreFileKit';
+import { volumeManager } from '@kit.CoreFileKit';
 ```
 
 ## getPartitionTable
@@ -38,7 +38,7 @@ Obtains partition table information based on the disk ID. This API uses a promis
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;PartitionTableInfo&gt; | Promise used to return the partition table information of the current disk ID. |
+| Promise&lt;[PartitionTableInfo](arkts-corefile-volumemanager-partitiontableinfo-i-sys.md)&gt; | Promise used to return the partition table information of the current disk ID. |
 
 **Error codes:**
 
@@ -46,8 +46,8 @@ Obtains partition table information based on the disk ID. This API uses a promis
 | --- | --- |
 | 13600010 | The input parameter is invalid. |
 | 13600008 | No such object. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600021 | Get partition table failed. |
 | 13600001 | IPC error. |
 

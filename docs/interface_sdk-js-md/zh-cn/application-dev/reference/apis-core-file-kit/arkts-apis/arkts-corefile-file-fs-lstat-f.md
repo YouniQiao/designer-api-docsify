@@ -26,7 +26,7 @@ declare function lstat(path: string): Promise<Stat>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Stat&gt; | Promise对象。返回Stat对象，表示文件的具体信息，详情见Stat。 |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise对象。返回Stat对象，表示文件的具体信息，详情见Stat。 |
 
 **错误码：**
 
@@ -65,7 +65,7 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件的应用沙箱路径path或URI。&lt;br&gt;**说明：**从API version 22开始，支持传入URI。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stat&gt; | 是 | 异步获取文件具体信息之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | 是 | 异步获取文件具体信息之后的回调。 |
 
 **错误码：**
 

@@ -34,7 +34,7 @@ copySignal?: TaskSignal
 
 取消拷贝信号。
 
-**类型：** [TaskSignal](arkts-corefile-fileio-tasksignal-c.md)
+**类型：** [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md)
 
 **起始版本：** 12
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## getUniformDataTypeByFilenameExtension
@@ -27,7 +27,7 @@ Obtains the uniform data type ID based on the given file name extension and data
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | filenameExtension | string | Yes |
-| belongsTo | string | No |
+| [belongsTo](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | No |
 
 **Return value:**
 
@@ -39,7 +39,7 @@ Obtains the uniform data type ID based on the given file name extension and data
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

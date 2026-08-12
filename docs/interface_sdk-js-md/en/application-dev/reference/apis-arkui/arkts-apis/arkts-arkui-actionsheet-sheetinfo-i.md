@@ -38,7 +38,7 @@ icon?: string | Resource
 
 Sheet icon. By default, no icon is displayed.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ title: string | Resource
 
 Sheet text.
 
-**Type:** string \| Resource
+**Type:** string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
 **Since:** 23
 

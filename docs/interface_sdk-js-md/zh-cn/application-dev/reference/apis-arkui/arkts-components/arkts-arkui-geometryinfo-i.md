@@ -1,8 +1,8 @@
 # GeometryInfo
 
-父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-sizeresult-i.md)。
+父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-sizeresult-i.md#SizeResult)。
 
-**继承/实现关系：** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md)
+**继承/实现关系：** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md#SizeResult)
 
 **起始版本：** 10
 
@@ -20,7 +20,7 @@ borderWidth: EdgeWidth
 
 父组件（自定义组件）边框宽度。单位为： vp。
 
-**类型：** [EdgeWidth](../arkts-apis/arkts-arkui-edgewidth-t.md)
+**类型：** EdgeWidth
 
 **起始版本：** 10
 
@@ -42,7 +42,7 @@ margin: Margin
 
 父组件（自定义组件）margin信息。单位为： vp。
 
-**类型：** [Margin](../arkts-apis/arkts-arkui-margin-t.md)
+**类型：** Margin
 
 **起始版本：** 10
 

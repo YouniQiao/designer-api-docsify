@@ -42,7 +42,7 @@ size?: Size
 
 该参数不会影响接收到的图片大小，实际返回大小由生产者决定，如相机。
 
-**类型：** [Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md)
+**类型：** Size
 
 **起始版本：** 23
 

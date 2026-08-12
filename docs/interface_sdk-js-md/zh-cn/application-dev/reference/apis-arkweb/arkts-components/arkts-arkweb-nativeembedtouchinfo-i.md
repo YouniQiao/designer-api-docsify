@@ -38,7 +38,7 @@ result?: EventResult
 
 通知Web组件手势事件的消费结果。
 
-**类型：** [EventResult](../arkts-apis/arkts-arkweb-web-eventresult-c.md)
+**类型：** [EventResult](arkts-arkweb-eventresult-c.md)
 
 **起始版本：** 12
 
@@ -58,7 +58,7 @@ touchEvent?: TouchEvent
 
 手指触摸动作信息。
 
-**类型：** [TouchEvent](../../apis-arkui/arkts-components/arkts-arkui-touchevent-i.md)
+**类型：** TouchEvent
 
 **起始版本：** 11
 

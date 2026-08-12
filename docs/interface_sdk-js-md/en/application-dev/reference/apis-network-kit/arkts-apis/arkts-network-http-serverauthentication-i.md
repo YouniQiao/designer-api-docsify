@@ -13,7 +13,7 @@ HTTP server authentication.
 ## Modules to Import
 
 ```TypeScript
-import { http } from 'kits/@kit.NetworkKit';
+import { http } from '@kit.NetworkKit';
 ```
 
 ## authenticationType
@@ -44,7 +44,7 @@ credential: Credential
 
 Credential of server.
 
-**Type:** [Credential](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-certificatemanager-credential-i.md)
+**Type:** Credential
 
 **Since:** 18
 

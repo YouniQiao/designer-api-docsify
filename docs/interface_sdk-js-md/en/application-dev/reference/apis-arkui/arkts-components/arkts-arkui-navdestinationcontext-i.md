@@ -34,7 +34,7 @@ Obtains the routing configuration of the current **NavDestination** component.
 
 | Type | Description |
 | --- | --- |
-| [RouteMapConfig](../arkts-apis/arkts-arkui-navdestination-routemapconfig-i.md) | Routing configuration of the current page. &lt;br&gt; **undefined** is returned when the page is not configured through the route table. |
+| [RouteMapConfig](arkts-arkui-routemapconfig-i.md) | Routing configuration of the current page. &lt;br&gt; **undefined** is returned when the page is not configured through the route table. |
 
 ## mode
 
@@ -88,7 +88,7 @@ pathInfo: NavPathInfo
 
 Path information of the navigation destination page.
 
-**Type:** [NavPathInfo](arkts-arkui-navpathinfo-c.md)
+**Type:** NavPathInfo
 
 **Since:** 11
 
@@ -110,7 +110,7 @@ pathStack: NavPathStack
 
 Navigation controller of the current **NavDestination** component.
 
-**Type:** [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md)
+**Type:** NavPathStack
 
 **Since:** 11
 

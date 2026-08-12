@@ -18,7 +18,7 @@ gesture?: RichEditorGesture
 
 RichEditor gesture.
 
-**Type:** [RichEditorGesture](../arkts-components/arkts-arkui-richeditorgesture-i.md)
+**Type:** [RichEditorGesture](arkts-arkui-richeditor-richeditorgesture-i.md)
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ style?: RichEditorTextStyle
 
 text style.
 
-**Type:** [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md)
+**Type:** [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md)
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ urlStyle?: RichEditorUrlStyle
 
 RichEditor url style.
 
-**Type:** [RichEditorUrlStyle](../arkts-components/arkts-arkui-richeditorurlstyle-i.md)
+**Type:** [RichEditorUrlStyle](arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **Since:** 23
 

@@ -11,7 +11,7 @@ Represents the return value of certificate chain validation.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## entityCert
@@ -22,7 +22,7 @@ readonly entityCert: X509Cert
 
 Entity certificate.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 11
 

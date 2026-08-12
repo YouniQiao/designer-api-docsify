@@ -34,9 +34,9 @@ function canOpenLink(link: string): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700056](../errorcode-bundle.md#17700056-指定link的scheme未在queryschemes字段下配置) | The scheme of the specified link is not in the querySchemes. |
-| [17700055](../errorcode-bundle.md#17700055-指定的link无效) | The specified link is invalid. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700056](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700056-指定link的scheme未在queryschemes字段下配置) | The scheme of the specified link is not in the querySchemes. |
+| [17700055](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700055-指定的link无效) | The specified link is invalid. |
 
 ## 示例
 

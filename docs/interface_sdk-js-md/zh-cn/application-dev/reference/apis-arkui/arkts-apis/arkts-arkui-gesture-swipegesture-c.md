@@ -2,7 +2,7 @@
 
 用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。
 
-**继承/实现关系：** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**继承/实现关系：** SwipeGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@
 static $_instantiate(factory: () => SwipeGesture, value?: SwipeGestureHandlerOptions): SwipeGesture
 ```
 
-设置快滑手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md)。
+设置快滑手势事件。继承自[Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)。
 
 **起始版本：** 23
 
@@ -65,7 +65,7 @@ Swipe手势识别成功时触发回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 手势事件回调函数。 |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | 是 | 手势事件回调函数。 |
 
 **返回值：**
 

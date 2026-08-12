@@ -28,7 +28,7 @@ Notification ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#NotificationKey
+**Substitutes:** [NotificationKey](ohos.notificationManager/notificationManager#NotificationKey)
 
 <!--Device-NotificationKey-id: number--><!--Device-NotificationKey-id: number-End-->
 
@@ -50,7 +50,7 @@ Notification label.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#NotificationKey
+**Substitutes:** [NotificationKey](ohos.notificationManager/notificationManager#NotificationKey)
 
 <!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 

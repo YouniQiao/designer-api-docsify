@@ -106,7 +106,7 @@ Changes sections by removing or replacing an existing section and/or adding a se
 | --- | --- | --- | --- |
 | start | int | Yes | Zero-based index at which the changing starts. The value is converted to an integer. &lt;br&gt;The value should be an integer. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;1. A negative index counts back from the end of the section list. If -&lt;em&gt;WaterFlowSections.length()&lt;/em&gt; <= &lt;em&gt;start&lt;/em&gt; < &lt;em&gt;0&lt;/em&gt;, &lt;em&gt;start&lt;/em&gt; + &lt;em&gt;array.length&lt;/em&gt; is used. &lt;br&gt;2. If &lt;em&gt;start&lt;/em&gt; &lt; -<em>WaterFlowSections.length()</em>, <em>0</em> is used. <br>3. If <em>start</em> &gt;&lt;em&gt;WaterFlowSections.length()&lt;/em&gt;, &lt;em&gt;0&lt;/em&gt; is used. &lt;br&gt;3. If &lt;em&gt;start&lt;/em&gt; >= &lt;em&gt;WaterFlowSections.length()&lt;/em&gt;, a new section is added at the end. |
 | deleteCount | int | No | Number of sections to be deleted from the position specified by &lt;em&gt;start&lt;/em&gt;. &lt;br&gt;The value should be an integer. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;1. If &lt;em&gt;deleteCount&lt;/em&gt; is omitted, or if its value is greater than or equal to the number of sections from the position specified by &lt;em&gt;start&lt;/em&gt; to the end of the &lt;em&gt;WaterFlowSections&lt;/em&gt;, then all sections from the position specified by &lt;em&gt;start&lt;/em&gt; to the end of the &lt;em&gt;WaterFlowSections&lt;/em&gt; will be deleted. &lt;br&gt;2. If &lt;em&gt;deleteCount&lt;/em&gt; is &lt;em&gt;0&lt;/em&gt; or a negative number, no sections are deleted. |
-| sections | Array&lt;SectionOptions&gt; | No | Sections to add to the section list, beginning from the position specified by &lt;em&gt;start&lt;/em&gt;. If no section is specified, &lt;em&gt;splice()&lt;/em&gt; will only delete sections from the &lt;em&gt;WaterFlow&lt;/em&gt; component. |
+| sections | Array&lt;[SectionOptions](arkts-arkui-waterflow-sectionoptions-c.md)&gt; | No | Sections to add to the section list, beginning from the position specified by &lt;em&gt;start&lt;/em&gt;. If no section is specified, &lt;em&gt;splice()&lt;/em&gt; will only delete sections from the &lt;em&gt;WaterFlow&lt;/em&gt; component. |
 
 **Return value:**
 
@@ -167,5 +167,5 @@ Obtains the configuration of all sections in the &lt;em&gt;WaterFlow&lt;/em&gt; 
 
 | Type | Description |
 | --- | --- |
-| Array&lt;SectionOptions&gt; | Returns all the section options in the WaterFlow. |
+| Array&lt;[SectionOptions](arkts-arkui-waterflow-sectionoptions-c.md)&gt; | Returns all the section options in the WaterFlow. |
 

@@ -30,7 +30,7 @@ export declare function Ellipse(
 
 | 类型 | 说明 |
 | --- | --- |
-| [EllipseAttribute](../arkts-components/arkts-arkui-ellipse-attribute.md) | 椭圆的属性。 |
+| [EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md) | 椭圆的属性。 |
 
 
 ## Ellipse
@@ -59,11 +59,11 @@ export declare function Ellipse(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;EllipseAttribute&gt; | 是 | 设置组件属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md)&gt; | 是 | 设置组件属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [EllipseAttribute](../arkts-components/arkts-arkui-ellipse-attribute.md) |  |
+| [EllipseAttribute](arkts-arkui-ellipse-ellipseattribute-i.md) |  |
 

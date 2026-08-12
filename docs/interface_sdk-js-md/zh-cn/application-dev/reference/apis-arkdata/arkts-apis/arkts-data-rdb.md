@@ -4,12 +4,12 @@
 
 该模块提供以下关系型数据库相关的常用功能：
 
-- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的词项，主要用来定义数据库的操作条件。  
-- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md)：提供管理关系数据库（RDB）方法的接口。
+- [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md#RdbPredicates)：数据库中用来代表数据实体的性质、特征或者数据实体之间关系的词项，主要用来定义数据库的操作条件。  
+- [RdbStore](arkts-arkdata-rdb-rdbstore-i.md#RdbStore)：提供管理关系数据库（RDB）方法的接口。
 
 > **说明：**
 > 
-> - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.relationalStore](arkts-data-relationalstore.md)。
+> - 从API version 9开始，该接口不再维护，推荐使用新接口[@ohos.data.relationalStore](arkts-data-relationalstore.md#relationalStore)。
 
 **起始版本：** 7
 
@@ -17,7 +17,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore](arkts-data-relationalstore.md)
+**替代接口：** [relationalStore](arkts-data-relationalstore.md#relationalStore)
 
 <!--Device-unnamed-declare namespace rdb--><!--Device-unnamed-declare namespace rdb-End-->
 
@@ -44,7 +44,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | 提供管理关系数据库（RDB）方法的接口。  在使用以下相关接口前，请使用  [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)接口初始化数据库表结构和相关数据。 |
+| [RdbStore](arkts-arkdata-rdb-rdbstore-i.md) | 提供管理关系数据库（RDB）方法的接口。  在使用以下相关接口前，请使用  [executeSql](arkts-arkdata-rdb-rdbstore-i.md#executeSql)接口初始化数据库表结构和相关数据。 |
 | [StoreConfig](arkts-arkdata-rdb-storeconfig-i.md) | 管理关系数据库配置。 |
 
 ### 枚举

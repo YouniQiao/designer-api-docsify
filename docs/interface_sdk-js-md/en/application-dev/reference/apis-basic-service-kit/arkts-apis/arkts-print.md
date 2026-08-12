@@ -13,7 +13,7 @@ The **print** module provides APIs for basic print operations.
 ## Modules to Import
 
 ```TypeScript
-import { print } from 'kits/@kit.BasicServicesKit';
+import { print } from '@kit.BasicServicesKit';
 ```
 
 ## Summary
@@ -49,7 +49,7 @@ import { print } from 'kits/@kit.BasicServicesKit';
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate) | Updates the print job state. This API uses an asynchronous callback to return the result. |
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate-1) | Updates the print job state. This API uses a promise to return the result. |
 | [updatePrinterInDiscovery](arkts-basicservices-print-updateprinterindiscovery-f.md#updateprinterindiscovery) | Updates the printer capabilities to the printer discovery list. This API uses a promise to return the result. |
-| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) | Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) can be updated. |
+| [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md#updateprinterinformation) | Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-print-printerinformation-i.md#PrinterInformation) can be updated. |
 
 <!--Del-->
 ### Functions（系统接口）

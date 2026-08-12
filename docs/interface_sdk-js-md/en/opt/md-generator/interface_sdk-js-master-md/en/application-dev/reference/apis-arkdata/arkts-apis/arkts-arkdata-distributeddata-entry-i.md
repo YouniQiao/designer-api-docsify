@@ -6,7 +6,7 @@ Defines the KV pairs stored in the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Entry
+**Substitutes:** [Entry](ohos.data.distributedKVStore.Entry)
 
 <!--Device-distributedData-interface Entry--><!--Device-distributedData-interface Entry-End-->
 
@@ -26,7 +26,7 @@ Key of the KV pair stored in the KV store.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Entry#key
+**Substitutes:** [key](ohos.data.distributedKVStore.Entry#key)
 
 <!--Device-Entry-key: string--><!--Device-Entry-key: string-End-->
 
@@ -40,13 +40,13 @@ value: Value
 
 Value of the KV pair stored in the KV store.
 
-**Type:** [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)
+**Type:** Value
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Entry#value
+**Substitutes:** [value](ohos.data.distributedKVStore.Entry#value)
 
 <!--Device-Entry-value: Value--><!--Device-Entry-value: Value-End-->
 

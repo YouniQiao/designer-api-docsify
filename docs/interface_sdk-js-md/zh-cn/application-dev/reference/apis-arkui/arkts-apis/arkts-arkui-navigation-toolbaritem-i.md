@@ -55,7 +55,7 @@ activeSymbolIcon?: SymbolGlyphModifier
 ```
 
 工具栏单个选项处于ACTIVE态时的symbol资源（优先级高于activeIcon）。  
-**说明：**不支持通过[SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md/arkts-arkui-symbolglyphmodifier-t.md)对象的
+**说明：**不支持通过[SymbolGlyphModifier](./../SymbolGlyphModifier:SymbolGlyphModifier)对象的
 [fontSize](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#fontsize)属性修改图标大小、  
 [effectStrategy](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#effectstrategy)属性修改动效、[symbolEffect](../../../reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md#symboleffect12)属性修改动效类型。
 
@@ -99,7 +99,7 @@ status?: ToolbarItemStatus
 
 工具栏单个选项的状态。默认值： ToolbarItemStatus.NORMAL。
 
-**类型：** [ToolbarItemStatus](../arkts-components/arkts-arkui-toolbaritemstatus-e.md)
+**类型：** [ToolbarItemStatus](arkts-arkui-navigation-toolbaritemstatus-e.md)
 
 **起始版本：** 23
 

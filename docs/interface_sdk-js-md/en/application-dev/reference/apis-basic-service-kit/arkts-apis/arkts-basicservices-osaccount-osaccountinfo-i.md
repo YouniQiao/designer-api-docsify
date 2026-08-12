@@ -13,7 +13,7 @@ Represents information about an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from 'kits/@kit.BasicServicesKit';
+import { osAccount } from '@kit.BasicServicesKit';
 ```
 
 ## constraints
@@ -127,7 +127,7 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 
 **Deprecated since:** 11
 
-**Substitutes:** [osAccount.OsAccountInfo.isActivated](arkts-basicservices-osaccount-osaccountinfo-i.md#isactivated)
+**Substitutes:** [isActivated](#isActivated)
 
 <!--Device-OsAccountInfo-isActived: boolean--><!--Device-OsAccountInfo-isActived: boolean-End-->
 
@@ -188,7 +188,7 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 
 **Deprecated since:** 11
 
-**Substitutes:** [osAccount.OsAccountInfo.isUnlocked](arkts-basicservices-osaccount-osaccountinfo-i.md#isunlocked)
+**Substitutes:** [isUnlocked](#isUnlocked)
 
 <!--Device-OsAccountInfo-isVerified: boolean--><!--Device-OsAccountInfo-isVerified: boolean-End-->
 

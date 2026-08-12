@@ -13,7 +13,7 @@ Defines the optional parameters carried in the request for establishing a WebSoc
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from 'kits/@kit.NetworkKit';
+import { webSocket } from '@kit.NetworkKit';
 ```
 
 ## caPath
@@ -42,7 +42,7 @@ clientCert?: ClientCert
 
 Client cert.
 
-**Type:** [ClientCert](arkts-network-websocket-clientcert-i.md)
+**Type:** ClientCert
 
 **Since:** 12
 

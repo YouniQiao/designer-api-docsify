@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
+import { abilityDelegatorRegistry } from '@kit.TestKit';
 ```
 
 ## getArguments
@@ -12,7 +12,7 @@ import { abilityDelegatorRegistry } from 'kits/@kit.TestKit';
 function getArguments(): AbilityDelegatorArgs
 ```
 
-Obtains an [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydelegatorargs-t.md) object.
+Obtains an [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md#AbilityDelegatorArgs) object.
 
 **Since:** 9
 
@@ -28,7 +28,7 @@ Obtains an [AbilityDelegatorArgs](arkts-test-abilitydelegatorregistry-abilitydel
 
 | Type | Description |
 | --- | --- |
-| [AbilityDelegatorArgs](../../apis-ability-kit/arkts-apis/arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md) | [AbilityDelegatorArgs]{ |
+| AbilityDelegatorArgs | [AbilityDelegatorArgs]{ |
 
 ## Examples
 

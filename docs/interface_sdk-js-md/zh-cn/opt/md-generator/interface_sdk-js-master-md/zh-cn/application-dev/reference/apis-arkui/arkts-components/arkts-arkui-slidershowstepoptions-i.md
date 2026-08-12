@@ -20,7 +20,7 @@ Key取值范围：[0, INT32_MAX]，当Key设定为负数和小数时，设定项
 
 默认值：{}
 
-**类型：** Map&lt;number, SliderStepItemAccessibility&gt;
+**类型：** Map&lt;number, [SliderStepItemAccessibility](arkts-arkui-sliderstepitemaccessibility-i.md)&gt;
 
 **起始版本：** 20
 

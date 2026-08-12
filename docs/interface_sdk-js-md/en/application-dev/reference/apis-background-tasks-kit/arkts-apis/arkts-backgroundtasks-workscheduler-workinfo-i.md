@@ -13,7 +13,7 @@ Represents the deferred task information, which is used to set the trigger condi
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from 'kits/@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 ```
 
 ## abilityName
@@ -259,7 +259,7 @@ networkType?: NetworkType
 
 Network type.
 
-**Type:** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
+**Type:** NetworkType
 
 **Since:** 9
 
@@ -279,7 +279,7 @@ parameters?: Record<string, int | double | string | boolean>
 
 Carried parameters.
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, int \| double \| string \| boolean&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, int \| double \| string \| boolean&gt;
 
 **Since:** 9
 

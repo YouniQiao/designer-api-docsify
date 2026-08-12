@@ -11,7 +11,7 @@ Monitors telephony state updates of a device, including updates of the network s
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## Summary

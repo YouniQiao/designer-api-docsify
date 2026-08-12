@@ -17,7 +17,7 @@ The column or key names are returned as a string array, in which the strings are
 ## Modules to Import
 
 ```TypeScript
-import { DataType } from 'kits/@kit.ArkData';
+import { DataType } from '@kit.ArkData';
 ```
 
 ## close
@@ -243,7 +243,7 @@ If the specified column or key is empty or the value is not of the DataType type
 
 | Type | Description |
 | --- | --- |
-| [DataType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-datatype-e.md) | Data type obtained. |
+| [DataType](arkts-arkdata-data-datashareresultset-datatype-e-sys.md) | Data type obtained. |
 
 ## Examples
 

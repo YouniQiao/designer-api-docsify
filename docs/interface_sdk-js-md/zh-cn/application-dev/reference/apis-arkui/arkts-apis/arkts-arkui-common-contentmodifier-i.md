@@ -32,5 +32,5 @@ Defining applyContent function.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; |  |
+| [WrappedBuilder](arkts-arkui-builder-wrappedbuilder-c.md)&lt;[CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt;&gt; |  |
 

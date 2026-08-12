@@ -11,7 +11,7 @@ Represents the permission information about a DLP file.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from 'kits/@kit.DataProtectionKit';
+import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
 ## dlpFileAccess
@@ -37,7 +37,7 @@ flags: number
 ```
 
 Operations that can be performed on the DLP file. The value is determined by a combination of different  
-[ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md).
+[ActionFlagTypes](arkts-dataprotection-dlppermission-actionflagtype-e.md#ActionFlagType).
 
 **Type:** number
 

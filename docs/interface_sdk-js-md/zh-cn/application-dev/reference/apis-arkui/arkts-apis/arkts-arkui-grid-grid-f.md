@@ -26,8 +26,8 @@ export declare function Grid(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 否 | 可滚动组件的控制器，与可滚动组件进行绑定。 |
-| layoutOptions | [GridLayoutOptions](../arkts-components/arkts-arkui-gridlayoutoptions-i.md) | 否 | Grid布局选项。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | Grid子组件。 |
+| layoutOptions | [GridLayoutOptions](arkts-arkui-grid-gridlayoutoptions-i.md) | 否 | Grid布局选项。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | Grid子组件。 |
 
 **返回值：**
 
@@ -63,8 +63,8 @@ export declare function Grid(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridAttribute&gt; | 是 | The style to create a Grid. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridAttribute](arkts-arkui-grid-gridattribute-i.md)&gt; | 是 | The style to create a Grid. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 

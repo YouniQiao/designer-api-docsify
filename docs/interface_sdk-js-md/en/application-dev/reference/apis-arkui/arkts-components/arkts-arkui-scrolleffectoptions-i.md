@@ -18,7 +18,7 @@ blurEffectiveEndOffset?: LengthMetrics
 
 The maximum sliding distance of the content area to enable the final blur style of the title bar.Default value: 8vp.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ blurEffectiveStartOffset?: LengthMetrics
 
 The minimum sliding distance of the content area to enable the title bar sliding blur effect.Default value: 0vp.
 
-**Type:** [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** LengthMetrics
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ scrollEffectType?: ScrollEffectType
 
 Title bar scroll blur style.Default value: ScrollEffectType.COMMON_BLUR.
 
-**Type:** [ScrollEffectType](../arkts-apis/arkts-arkui-navigation-scrolleffecttype-e.md)
+**Type:** [ScrollEffectType](arkts-arkui-scrolleffecttype-e.md)
 
 **Since:** 26.0.0
 

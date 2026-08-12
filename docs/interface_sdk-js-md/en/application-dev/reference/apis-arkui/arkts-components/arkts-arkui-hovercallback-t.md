@@ -23,5 +23,5 @@ Defines the callback type for hover events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isHover | boolean | Yes | Whether the element is in the hover state. **true**: yes; **false**: no. |
-| event | [HoverEvent](../arkts-apis/arkts-arkui-common-hoverevent-i.md) | Yes | Position coordinates of the hovered mouse or stylus. |
+| event | [HoverEvent](arkts-arkui-hoverevent-i.md) | Yes | Position coordinates of the hovered mouse or stylus. |
 

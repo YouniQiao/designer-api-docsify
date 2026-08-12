@@ -32,7 +32,7 @@ Set render pipeline of 3D scene render.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of Render pipeline config file |
+| uri | ResourceStr | Yes | The path of Render pipeline config file |
 | selfRenderUpdate | boolean | Yes | Trigger rendering every frame |
 
 ## environment
@@ -57,7 +57,7 @@ Load 3D model environment resource.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of 3D environment resource |
+| uri | ResourceStr | Yes | The path of 3D environment resource |
 
 ## renderHeight
 
@@ -81,7 +81,7 @@ Set render height resolution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Height of gpu render target, target would upscale or downscale to view's height. |
+| value | Dimension | Yes | Height of gpu render target, target would upscale or downscale to view's height. |
 
 ## renderWidth
 
@@ -105,7 +105,7 @@ Set render width resolution.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Width of gpu render target, target would upscale or downscale to view's width. |
+| value | Dimension | Yes | Width of gpu render target, target would upscale or downscale to view's width. |
 
 ## shader
 
@@ -129,7 +129,7 @@ Load shader uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of custom shader |
+| uri | ResourceStr | Yes | The path of custom shader |
 
 ## shaderImageTexture
 
@@ -153,7 +153,7 @@ Load shader texture uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes | The path of texture used by shader |
+| uri | ResourceStr | Yes | The path of texture used by shader |
 
 ## shaderInputBuffer
 

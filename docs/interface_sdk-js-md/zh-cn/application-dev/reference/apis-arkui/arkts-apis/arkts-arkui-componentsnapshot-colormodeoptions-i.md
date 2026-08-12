@@ -20,7 +20,7 @@ colorSpace?: colorSpaceManager.ColorSpace
 
 如果知道被截图组件使用的色彩空间，可以通过`colorSpace`字段指定，并将`isAuto`设置为false，以达到预期的截图效果。
 
-取值范围：[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md)中DISPLAY_P3、SRGB、DISPLAY_BT2020_SRGB。
+取值范围：[colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md#ColorSpace)中DISPLAY_P3、SRGB、DISPLAY_BT2020_SRGB。
 
 默认值：SRGB 
 
@@ -54,7 +54,7 @@ isAuto?: boolean
 
 离屏截图仅支持设置为false，否则会返回错误码160004。
 
-当`isAuto`设置为true时，建议将[SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md)中的`waitUntilRenderFinished`字段也设置为true，以便确保系统可以正常检测到所用的模式。
+当`isAuto`设置为true时，建议将[SnapshotOptions](arkts-arkui-componentsnapshot-snapshotoptions-i.md#SnapshotOptions)中的`waitUntilRenderFinished`字段也设置为true，以便确保系统可以正常检测到所用的模式。
 
 在不确定组件使用的色彩空间时，建议将`isAuto`设置为true，让系统根据实际情况自动决定使用的色彩空间。
 

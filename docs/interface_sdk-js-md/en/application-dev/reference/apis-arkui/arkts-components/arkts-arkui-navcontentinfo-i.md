@@ -42,7 +42,7 @@ mode?: NavDestinationMode
 
 Mode of the navigation destination. If the view is a root view (**NavBar**), the return value is **undefined**.
 
-**Type:** [NavDestinationMode](arkts-arkui-navdestinationmode-e.md)
+**Type:** NavDestinationMode
 
 **Since:** 11
 

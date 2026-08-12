@@ -1,18 +1,18 @@
 # RichEditorController
 
 Implements the **RichEditor** component controller. Inherits from   
-[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md).
+[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController).
 
 > **NOTE：**
 > 
 > When the length of the content exceeds the height of the display area of the component, the insertion interface (
-> such as [addTextSpan](arkts-arkui-richeditorcontroller-c.md#addtextspan),
-> [addImageSpan](arkts-arkui-richeditorcontroller-c.md#addimagespan),
-> [addBuilderSpan](arkts-arkui-richeditorcontroller-c.md#addbuilderspan) and
-> [addSymbolSpan](arkts-arkui-richeditorcontroller-c.md#addsymbolspan)) is called. The component automatically scrolls the
+> such as [addTextSpan](#addTextSpan),
+> [addImageSpan](#addImageSpan),
+> [addBuilderSpan](#addBuilderSpan) and
+> [addSymbolSpan](#addSymbolSpan)) is called. The component automatically scrolls the
 > content to make the end of the inserted content visible.
 
-**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md)
+**Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)
 
 **Since:** 10
 
@@ -33,7 +33,7 @@ Adds a custom layout (BuilderSpan) to **RichEditor**.
 > - This API adds a builder span to take up space in the layout. It calls the system **measure** method to
 > calculate the actual length, width, and position.
 > 
-> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md) to set the index of the builder
+> - You can use [RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions) to set the index of the builder
 > in the **RichEditor** component (with one character as the unit).
 > 
 > - This builder span is unfocusable, draggable, and equipped with certain universal attributes. It behaves
@@ -43,11 +43,11 @@ Adds a custom layout (BuilderSpan) to **RichEditor**.
 > - Custom menus can be set using [bindSelectionMenu](RichEditorAttribute.bindSelectionMenu).
 > 
 > - The information about the builder span cannot be obtained through
-> [getSpans](arkts-arkui-richeditorcontroller-c.md#getspans), [getSelection](arkts-arkui-richeditorcontroller-c.md#getselection),
+> [getSpans](#getSpans), [getSelection](#getSelection),
 > [onSelect](RichEditorAttribute.onSelect), or [aboutToDelete](RichEditorAttribute.aboutToDelete).
 > 
-> - The builder span cannot be updated using [updateSpanStyle](arkts-arkui-richeditorcontroller-c.md#updatespanstyle) or
-> [updateParagraphStyle](arkts-arkui-richeditorcontroller-c.md#updateparagraphstyle).
+> - The builder span cannot be updated using [updateSpanStyle](#updateSpanStyle) or
+> [updateParagraphStyle](#updateParagraphStyle).
 > 
 > - Copying or pasting the builder span does not take effect.
 > 
@@ -70,7 +70,7 @@ Only the following universal attributes are supported:
 [borderColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#bordercolor),   
 [borderRadius](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-border.md#borderradius),   
 [backgroundColor](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundcolor),   
-[backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), [opacity](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md),   
+[backgroundBlurStyle](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9), [opacity](common),   
 [blur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#blur),   
 [backdropBlur](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-background.md#backdropblur),   
 [shadow](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-image-effect.md#shadow),   
@@ -140,7 +140,7 @@ This API is a synchronous API. In a weak network environment, directly adding ne
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
+| value | PixelMap \| [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
 | options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | No |
 
 **Return value:**
@@ -265,13 +265,13 @@ Converts a styled string into a span.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;RichEditorSpan&gt; |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## getParagraphs
 
@@ -301,7 +301,7 @@ Obtains the paragraph information within a specified range.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;RichEditorParagraphResult&gt; |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; |
 
 ## getSelection
 
@@ -355,7 +355,7 @@ Obtains span information.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;RichEditorImageSpanResult \| [RichEditorTextSpanResult&gt;](arkts-arkui-richeditortextspanresult-i.md) |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; |
 
 ## toStyledString
 
@@ -391,7 +391,7 @@ Convert the component content within the given range into a styled string. Symbo
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## updateParagraphStyle
 
@@ -443,4 +443,4 @@ Calling this API will not close the custom context menu on selection by default.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| RichEditorUpdateImageSpanStyleOptions \| [RichEditorUpdateSymbolSpanStyleOptions](../arkts-apis/arkts-arkui-richeditor-richeditorupdatesymbolspanstyleoptions-i.md) | Yes |
+| value | [RichEditorUpdateTextSpanStyleOptions](arkts-arkui-richeditorupdatetextspanstyleoptions-i.md) \| [RichEditorUpdateImageSpanStyleOptions](arkts-arkui-richeditorupdateimagespanstyleoptions-i.md) \| [RichEditorUpdateSymbolSpanStyleOptions](arkts-arkui-richeditorupdatesymbolspanstyleoptions-i.md) | Yes |

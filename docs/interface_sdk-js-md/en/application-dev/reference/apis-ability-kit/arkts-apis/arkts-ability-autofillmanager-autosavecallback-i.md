@@ -13,7 +13,7 @@ Implements callbacks triggered when auto-save is complete.
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from 'kits/@kit.AbilityKit';
+import { autoFillManager } from '@kit.AbilityKit';
 ```
 
 ## onFailure

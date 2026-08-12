@@ -34,8 +34,8 @@ hold(timeout: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -131,7 +131,7 @@ isUsed(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.RunningLock.isHolding](arkts-basicservices-runninglock-runninglock-c.md#isholding)
+**替代接口：** [isHolding](#isHolding)
 
 <!--Device-RunningLock-isUsed(): boolean--><!--Device-RunningLock-isUsed(): boolean-End-->
 
@@ -168,7 +168,7 @@ lock(timeout: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.RunningLock.hold](arkts-basicservices-runninglock-runninglock-c.md#hold)
+**替代接口：** [hold](#hold)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -215,7 +215,7 @@ unhold(): void
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -264,7 +264,7 @@ unlock(): void
 
 **废弃版本：** 9
 
-**替代接口：** [runningLock.RunningLock.unhold](arkts-basicservices-runninglock-runninglock-c.md#unhold)
+**替代接口：** [unhold](#unhold)
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 

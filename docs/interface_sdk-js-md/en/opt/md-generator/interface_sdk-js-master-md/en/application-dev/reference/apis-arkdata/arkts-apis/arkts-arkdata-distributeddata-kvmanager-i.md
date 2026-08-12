@@ -1,13 +1,13 @@
 # KVManager
 
 Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must  use  
-[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) to create a **KVManager** object.
+[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createKVManager) to create a **KVManager** object.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager
+**Substitutes:** [KVManager](ohos.data.distributedKVStore.KVManager)
 
 <!--Device-distributedData-interface KVManager--><!--Device-distributedData-interface KVManager-End-->
 
@@ -25,7 +25,7 @@ Closes a KV store. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#closeKVStore
+**Substitutes:** [closeKVStore](ohos.data.distributedKVStore.KVManager#closeKVStore)
 
 <!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore, callback: AsyncCallback<void>): void-End-->
 
@@ -36,7 +36,7 @@ Closes a KV store. This API uses an asynchronous callback to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -79,7 +79,7 @@ Closes a KV store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#closeKVStore
+**Substitutes:** [closeKVStore](ohos.data.distributedKVStore.KVManager#closeKVStore)
 
 <!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>--><!--Device-KVManager-closeKVStore(appId: string, storeId: string, kvStore: KVStore): Promise<void>-End-->
 
@@ -90,14 +90,14 @@ Closes a KV store. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | kvStore | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -142,7 +142,7 @@ Deletes a KV store. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#deleteKVStore
+**Substitutes:** [deleteKVStore](ohos.data.distributedKVStore.KVManager#deleteKVStore)
 
 <!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -153,7 +153,7 @@ Deletes a KV store. This API uses an asynchronous callback to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 ## Examples
@@ -195,7 +195,7 @@ Deletes a KV store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#deleteKVStore
+**Substitutes:** [deleteKVStore](ohos.data.distributedKVStore.KVManager#deleteKVStore)
 
 <!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>--><!--Device-KVManager-deleteKVStore(appId: string, storeId: string): Promise<void>-End-->
 
@@ -206,13 +206,13 @@ Deletes a KV store. This API uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | appId | string | Yes |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## Examples
 
@@ -252,14 +252,14 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
 Obtains the IDs of all KV stores that are created by  
-[getKVStore()](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) and have not been deleted by  
-[deleteKVStore()](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore). This API uses an asynchronous callback to return the result.
+[getKVStore()](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
+[deleteKVStore()](#deleteKVStore). This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#getAllKVStoreId
+**Substitutes:** [getAllKVStoreId](ohos.data.distributedKVStore.KVManager#getAllKVStoreId)
 
 <!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void--><!--Device-KVManager-getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void-End-->
 
@@ -293,14 +293,14 @@ getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
 Obtains the IDs of all KV stores that are created by  
-[getKVStore()](arkts-arkdata-distributedkvstore-kvmanager-i.md#getkvstore) and have not been deleted by  
-[deleteKVStore()](arkts-arkdata-distributeddata-kvmanager-i.md#deletekvstore). This API uses a promise to return the result.
+[getKVStore()](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
+[deleteKVStore()](#deleteKVStore). This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#getAllKVStoreId
+**Substitutes:** [getAllKVStoreId](ohos.data.distributedKVStore.KVManager#getAllKVStoreId)
 
 <!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>--><!--Device-KVManager-getAllKVStoreId(appId: string): Promise<string[]>-End-->
 
@@ -316,7 +316,7 @@ Obtains the IDs of all KV stores that are created by
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string[]&gt; |
+| Promise & lt;string[] & gt; |
 
 ## Examples
 
@@ -347,7 +347,7 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#getKVStore
+**Substitutes:** [getKVStore](ohos.data.distributedKVStore.KVManager#getKVStore)
 
 <!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options): Promise<T>-End-->
 
@@ -357,14 +357,14 @@ Creates and obtains a KV store. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## Examples
 
@@ -403,7 +403,7 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#getKVStore
+**Substitutes:** [getKVStore](ohos.data.distributedKVStore.KVManager#getKVStore)
 
 <!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void--><!--Device-KVManager-getKVStore<T extends KVStore>(storeId: string, options: Options, callback: AsyncCallback<T>): void-End-->
 
@@ -413,7 +413,7 @@ Creates and obtains a KV store. This API uses an asynchronous callback to return
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| storeId | string | Yes |
+| [storeId](arkts-arkdata-clouddata-bundleinfo-i-sys.md) | string | Yes |
 | options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes |
 
@@ -456,7 +456,7 @@ Unsubscribes from service status changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#off
+**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
 
@@ -496,7 +496,7 @@ Subscribes to service status changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.KVManager#on
+**Substitutes:** [on](ohos.data.distributedKVStore.KVManager#on)
 
 <!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 

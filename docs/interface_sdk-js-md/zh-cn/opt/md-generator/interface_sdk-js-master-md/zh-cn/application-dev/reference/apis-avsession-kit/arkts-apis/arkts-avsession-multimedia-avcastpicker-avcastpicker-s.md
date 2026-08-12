@@ -48,7 +48,7 @@ activeColor?: Color | number | string
 
 未设置时，系统将优先根据normalColor的颜色匹配；如果normalColor也未设置，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| number \| string
+**类型：** Color \| number \| string
 
 **起始版本：** 11
 
@@ -113,7 +113,7 @@ normalColor?: Color | number | string
 
 未设置时，将采用colorMode下的颜色设置。
 
-**类型：** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| number \| string
+**类型：** Color \| number \| string
 
 **起始版本：** 11
 
@@ -154,7 +154,7 @@ pickerStyle?: AVCastPickerStyle
 sessionType?: string
 ```
 
-会话类型，可参考[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md)。默认值为当前应用创建的AVSessionType。
+会话类型，可参考[AVSessionType](arkts-avsession-avsession-avsessiontype-t.md#AVSessionType)。默认值为当前应用创建的AVSessionType。
 
 **类型：** string
 

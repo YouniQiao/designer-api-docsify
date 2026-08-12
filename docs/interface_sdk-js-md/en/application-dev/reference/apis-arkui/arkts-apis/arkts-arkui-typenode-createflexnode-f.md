@@ -29,5 +29,5 @@ Create a FrameNode of Flex type.On API 26.0.0 and above, It can also create a Fr
 
 | Type | Description |
 | --- | --- |
-| [Flex](arkts-arkui-typenode-flex-t.md) | Return Flex type FrameNode. |
+| Flex | Return Flex type FrameNode. |
 

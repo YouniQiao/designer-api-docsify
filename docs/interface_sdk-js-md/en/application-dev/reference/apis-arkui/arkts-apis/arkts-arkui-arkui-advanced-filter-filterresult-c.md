@@ -13,7 +13,7 @@ This parameter specifies the selection result of a filtering dimension.The index
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from 'kits/@kit.ArkUI';
+import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
 ```
 
 ## index
@@ -46,7 +46,7 @@ name: ResourceStr
 
 result name.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 22
 
@@ -68,7 +68,7 @@ value: ResourceStr
 
 result value.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 22
 

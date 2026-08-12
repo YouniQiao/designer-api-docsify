@@ -28,13 +28,13 @@ function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;PictureScanProgress&gt; | Promise对象，返回图片扫描进度信息。 |
+| Promise&lt;[PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md)&gt; | Promise对象，返回图片扫描进度信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

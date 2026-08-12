@@ -2,7 +2,7 @@
 
 Defines AppearSymbolEffect class.
 
-**Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](../arkts-components/arkts-arkui-symboleffect-c.md/arkts-arkui-symboleffect-c.md)
+**Inheritance/Implementation:** AppearSymbolEffect extends [SymbolEffect](arkts-arkui-symbolglyph-symboleffect-c.md#SymbolEffect)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md) | No | The scope type of symbol effect. |
+| scope | [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md) | No | The scope type of symbol effect. |
 
 ## scope
 
@@ -44,7 +44,7 @@ scope?: EffectScope
 
 The scope type of symbol effect.
 
-**Type:** [EffectScope](../arkts-components/arkts-arkui-effectscope-e.md)
+**Type:** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 
 **Since:** 23
 

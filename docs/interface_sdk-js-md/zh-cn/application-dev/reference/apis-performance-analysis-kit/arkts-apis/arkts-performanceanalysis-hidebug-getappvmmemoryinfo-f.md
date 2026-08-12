@@ -6,7 +6,7 @@
 function getAppVMMemoryInfo(): VMMemoryInfo
 ```
 
-��ȡVM�ڴ������Ϣ��
+获取VM内存相关信息。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function getAppVMMemoryInfo(): VMMemoryInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | ����VM�ڴ���Ϣ�� |
+| [VMMemoryInfo](arkts-performanceanalysis-hidebug-vmmemoryinfo-i.md) | 返回VM内存信息。 |
 
 ## 示例
 

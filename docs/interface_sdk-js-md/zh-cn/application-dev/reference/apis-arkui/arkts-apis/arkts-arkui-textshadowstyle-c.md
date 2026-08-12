@@ -36,7 +36,7 @@ ShadowOptions对象中不支持fill字段。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| Array&lt;ShadowOptions&gt; | 是 | 文本阴影设置项。 |
+| value | ShadowOptions \| Array&lt;ShadowOptions&gt; | 是 | 文本阴影设置项。 |
 
 ## textShadow
 

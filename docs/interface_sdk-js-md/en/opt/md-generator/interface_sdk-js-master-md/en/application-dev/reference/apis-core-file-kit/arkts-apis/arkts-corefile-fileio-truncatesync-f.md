@@ -12,7 +12,7 @@ Truncates a file based on the file path. This API returns the result synchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:truncateSync](arkts-corefile-fileio-truncatesync-f.md#truncatesync)
+**Substitutes:** [truncateSync](arkts-corefile-file-fs-truncatesync-f.md#truncateSync)
 
 <!--Device-unnamed-declare function truncateSync(path: string, len?: number): void--><!--Device-unnamed-declare function truncateSync(path: string, len?: number): void-End-->
 

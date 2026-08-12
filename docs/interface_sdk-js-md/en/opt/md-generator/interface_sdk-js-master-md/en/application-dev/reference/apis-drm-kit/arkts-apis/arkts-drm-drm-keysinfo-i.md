@@ -11,7 +11,7 @@ Used to indicate the media key status with a key and its value.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from 'kits/@kit.DrmKit';
+import { drm } from '@kit.DrmKit';
 ```
 
 ## keyId

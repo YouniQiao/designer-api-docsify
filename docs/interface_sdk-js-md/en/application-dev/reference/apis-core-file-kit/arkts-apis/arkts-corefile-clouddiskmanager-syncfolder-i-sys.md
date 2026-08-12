@@ -15,7 +15,7 @@ Encapsulates the sync root information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudDiskManager } from 'kits/@kit.CoreFileKit';
+import { cloudDiskManager } from '@kit.CoreFileKit';
 ```
 
 ## bundleName

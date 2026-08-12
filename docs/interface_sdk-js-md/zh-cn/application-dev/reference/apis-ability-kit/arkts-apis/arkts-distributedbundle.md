@@ -5,7 +5,7 @@
 > **说明：**
 > 
 > 从API version 9开始，该模块不再维护，建议使用
-> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md)替代。
+> [@ohos.bundle.distributedBundleManager](arkts-bundle-distributedbundlemanager.md#distributedBundleManager)替代。
 > 
 > 本模块为系统接口。
 
@@ -15,7 +15,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.bundle.distributedBundleManager:distributedBundleManager](arkts-bundle-distributedbundlemanager.md)
+**替代接口：** [distributedBundleManager](arkts-bundle-distributedbundlemanager.md#distributedBundleManager)
 
 <!--Device-unnamed-declare namespace distributedBundle--><!--Device-unnamed-declare namespace distributedBundle-End-->
 

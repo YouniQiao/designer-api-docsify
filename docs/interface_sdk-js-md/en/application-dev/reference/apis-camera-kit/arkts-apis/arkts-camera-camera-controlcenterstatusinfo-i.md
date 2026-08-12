@@ -13,7 +13,7 @@ Describes the effect status information of a camera controller.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## effectType

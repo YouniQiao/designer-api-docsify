@@ -5,8 +5,8 @@ The module provides APIs for the Home Screen application.
 > **NOTE：**
 > 
 > This module is deprecated since API version 9. You are advised to use
-> [launcherBundleManager](arkts-bundle-launcherbundlemanager.md) and
-> [bundleMonitor](arkts-bundle-bundlemonitor.md) instead.
+> [launcherBundleManager](arkts-bundle-launcherbundlemanager.md#launcherBundleManager) and
+> [bundleMonitor](arkts-bundle-bundlemonitor.md#bundleMonitor) instead.
 > 
 > The APIs provided by this module are system APIs.
 
@@ -14,7 +14,7 @@ The module provides APIs for the Home Screen application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.launcherBundleManager:launcherBundleManager](arkts-bundle-launcherbundlemanager.md)
+**Substitutes:** [launcherBundleManager](arkts-bundle-launcherbundlemanager.md#launcherBundleManager)
 
 <!--Device-unnamed-declare namespace innerBundleManager--><!--Device-unnamed-declare namespace innerBundleManager-End-->
 
@@ -25,7 +25,7 @@ The module provides APIs for the Home Screen application.
 ## Modules to Import
 
 ```TypeScript
-import { BundleStatusCallback } from 'kits/@kit.AbilityKit';
+import { BundleStatusCallback } from '@kit.AbilityKit';
 ```
 
 ## Summary

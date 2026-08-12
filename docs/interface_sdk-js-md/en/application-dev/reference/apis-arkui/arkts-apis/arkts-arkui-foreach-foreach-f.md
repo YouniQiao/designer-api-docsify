@@ -62,7 +62,7 @@ Defines ForEach Component. It requires calling setForEachOptions at start of com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ForEachAttribute&gt; | Yes | callback to set up ForEach's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ForEachAttribute](arkts-arkui-foreach-foreachattribute-i.md)&gt; | Yes | callback to set up ForEach's attributes. |
 
 **Return value:**
 

@@ -18,7 +18,7 @@ Callback used to return the touch event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| touchEvent | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i-sys.md) | Yes |
+| touchEvent | [TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md) | Yes |
 
 **Return value:**
 

@@ -13,7 +13,7 @@ System panel status.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from 'kits/@kit.IMEKit';
+import { inputMethodSystemPanelManager } from '@kit.IMEKit';
 ```
 
 ## inputType

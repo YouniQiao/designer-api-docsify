@@ -1,8 +1,8 @@
 # CompletionHandlerForAtomicService
 
 CompletionHandlerForAtomicService provides two callback functions,  
-[onAtomicServiceRequestSuccess](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestsuccess)and  
-[onAtomicServiceRequestFailure](arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onatomicservicerequestfailure), to handle the results of successful and failed atomic service launch requests, respectively.
+[onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess)and  
+[onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure), to handle the results of successful and failed atomic service launch requests, respectively.
 
 **Since:** 20
 
@@ -13,7 +13,7 @@ CompletionHandlerForAtomicService provides two callback functions,
 ## Modules to Import
 
 ```TypeScript
-import { FailureCode } from 'kits/@kit.AbilityKit';
+import { FailureCode } from '@kit.AbilityKit';
 ```
 
 ## onAtomicServiceRequestFailure

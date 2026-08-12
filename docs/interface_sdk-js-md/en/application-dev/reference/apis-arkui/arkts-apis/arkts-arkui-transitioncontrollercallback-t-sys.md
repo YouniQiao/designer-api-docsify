@@ -20,5 +20,5 @@ Callback function for transition controller
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | window.TransitionContext | Yes | The transition context |
+| context | [window.TransitionContext](arkts-arkui-window-transitioncontext-i-sys.md) | Yes | The transition context |
 

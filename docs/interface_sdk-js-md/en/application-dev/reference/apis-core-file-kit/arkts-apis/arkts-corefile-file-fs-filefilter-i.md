@@ -13,7 +13,7 @@ Describes a file name filter, which can be used to customize file name filtering
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## filter
@@ -22,7 +22,7 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 filter(name: string): boolean
 ```
 
-Filters files of the [listFileExt](arkts-corefile-fileio-listfileext-f.md#listfileext) or [listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listfileextsync) API and determines whether a specified file name should be included in the returned file list.
+Filters files of the [listFileExt](arkts-corefile-fileio-listfileext-f.md#listFileExt) or [listFileExtSync](arkts-corefile-fileio-listfileextsync-f.md#listFileExtSync) API and determines whether a specified file name should be included in the returned file list.
 
 > **NOTE：**
 > 

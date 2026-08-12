@@ -13,7 +13,7 @@ Defines the Animator class.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## create
@@ -22,7 +22,7 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@ki
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Create an animator object for custom animation.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use {@link ohos.arkui.UIContext.UIContext#createAnimator}.
+Create an animator object for custom animation.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use [createAnimator](ohos.arkui.UIContext.UIContext#createAnimator).
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ Create an animator object for custom animation.This interface depends on the UI 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | Yes | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
 
 **Return value:**
 
@@ -50,5 +50,5 @@ Create an animator object for custom animation.This interface depends on the UI 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
 

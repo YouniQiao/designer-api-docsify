@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createVideoPlayer
@@ -20,7 +20,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback:
+**Substitutes:** [createAVPlayer](media.createAVPlayer(callback:)
 
 <!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
 
@@ -30,7 +30,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoPlayer&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the VideoPlayer instance created; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)()
+**Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer)()
 
 <!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
 
@@ -73,7 +73,7 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;VideoPlayer&gt; | Promise used to return the result. If the operation is successful, a VideoPlayer instance is returned; otherwise, **null** is returned. The instance can be used to manage and play video. |
+| Promise&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Promise used to return the result. If the operation is successful, a VideoPlayer instance is returned; otherwise, **null** is returned. The instance can be used to manage and play video. |
 
 ## Examples
 

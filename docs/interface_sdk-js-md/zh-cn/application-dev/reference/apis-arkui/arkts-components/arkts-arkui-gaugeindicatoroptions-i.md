@@ -24,7 +24,7 @@ icon?: ResourceStr
 
 仅支持使用svg格式的图标，若使用其他格式，则使用默认的三角形样式指针。
 
-**类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **默认值：** system style.
 
@@ -64,7 +64,7 @@ space?: Dimension
 
 若设置值大于圆环半径，则使用默认值。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 8vp
 

@@ -54,7 +54,7 @@ Obtains the content size.
 
 | Error Code ID |
 | --- |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## currentOffset
 
@@ -108,8 +108,8 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## getFrameNode
 
@@ -172,8 +172,8 @@ Obtains the index of a child component based on coordinates.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## getItemRect
 
@@ -211,8 +211,8 @@ Obtains the size and position of a child component relative to its container.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [100004](../errorcode-router.md#100004-incorrect-route-name) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) |
 
 ## isAtEnd
 
@@ -346,7 +346,7 @@ Scrolls to the next or previous page.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Scroller#scrollPage](arkts-arkui-scroller-c.md#scrollpage)
+**Substitutes:** [scrollPage](#scrollPage)
 
 <!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })--><!--Device-Scroller-scrollPage(value: { next: boolean; direction?: Axis })-End-->
 
@@ -405,6 +405,6 @@ Scrolls to a specified index, with support for setting an extra offset for the s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | number | Yes |
-| smooth | boolean | No |
+| [smooth](../arkts-apis/arkts-arkui-viewmodel-scrollparam-i.md) | boolean | No |
 | align | [ScrollAlign](arkts-arkui-scrollalign-e.md) | No |
 | options | [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md) | No |

@@ -11,7 +11,7 @@ Interface for defining time base metadata
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## classify

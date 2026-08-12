@@ -8,7 +8,7 @@ Reason for removing the notification.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe#RemoveReason
+**Substitutes:** [RemoveReason](ohos.notificationSubscribe/notificationSubscribe#RemoveReason)
 
 <!--Device-notification-export enum RemoveReason--><!--Device-notification-export enum RemoveReason-End-->
 
@@ -30,7 +30,7 @@ The notification is removed after a click on it.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CLICK_REASON_REMOVE
+**Substitutes:** [CLICK_REASON_REMOVE](ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CLICK_REASON_REMOVE)
 
 <!--Device-RemoveReason-CLICK_REASON_REMOVE = 1--><!--Device-RemoveReason-CLICK_REASON_REMOVE = 1-End-->
 
@@ -52,7 +52,7 @@ The notification is removed by the user.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CANCEL_REASON_REMOVE
+**Substitutes:** [CANCEL_REASON_REMOVE](ohos.notificationSubscribe/notificationSubscribe.RemoveReason#CANCEL_REASON_REMOVE)
 
 <!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2--><!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2-End-->
 

@@ -11,7 +11,7 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from 'kits/@kit.ArkUI';
+import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -137,7 +137,7 @@ Sets the playback direction for this animator animation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [direction](#direction) | [PlayMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-playmode-e.md) | Yes |
+| [direction](#direction) | [PlayMode](arkts-arkui-enums-playmode-e.md) | Yes |
 
 **Return value:**
 

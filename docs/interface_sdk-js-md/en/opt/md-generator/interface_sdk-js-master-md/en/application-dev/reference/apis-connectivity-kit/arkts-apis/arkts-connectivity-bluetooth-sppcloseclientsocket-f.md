@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## sppCloseClientSocket
@@ -18,7 +18,7 @@ Disables an spp client socket and releases related resources.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.sppCloseClientSocket
+**Substitutes:** [sppCloseClientSocket](ohos.bluetoothManager/bluetoothManager.sppCloseClientSocket)
 
 <!--Device-bluetooth-function sppCloseClientSocket(socket: number): void--><!--Device-bluetooth-function sppCloseClientSocket(socket: number): void-End-->
 

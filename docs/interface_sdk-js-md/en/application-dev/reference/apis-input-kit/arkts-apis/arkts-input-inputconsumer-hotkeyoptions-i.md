@@ -13,7 +13,7 @@ Defines shortcut key options.
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from 'kits/@kit.InputKit';
+import { inputConsumer } from '@kit.InputKit';
 ```
 
 ## finalKey
@@ -23,7 +23,7 @@ finalKey: int
 ```
 
 Modified key, which can be any key except the modifier keys and Meta key. For details about the keys, see  
-[@ohos.multimodalInput.keyCode (Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md).
+[@ohos.multimodalInput.keyCode (Keycode)](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode).
 
 For example, in **Ctrl+Shift+Esc**, **Esc** is the modifier key.
 

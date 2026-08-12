@@ -8,7 +8,7 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value)
+**Substitutes:** [ResolvedRelativeTimeFormatOptions]]([Intl.ResolvedRelativeTimeFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#return_value))
 
 <!--Device-intl-export interface RelativeTimeFormatResolvedOptions--><!--Device-intl-export interface RelativeTimeFormatResolvedOptions-End-->
 
@@ -17,7 +17,7 @@ Represents the formatting options for the **RelativeTimeFormat** object.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from 'kits/@kit.LocalizationKit';
+import { intl } from '@kit.LocalizationKit';
 ```
 
 ## locale
@@ -36,7 +36,7 @@ Locale ID, including the language, script, and region.
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#locale)
+**Substitutes:** [locale]]([Intl.ResolvedRelativeTimeFormatOptions.locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#locale))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -67,7 +67,7 @@ Numbering system. The value can be:
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem)
+**Substitutes:** [numberingSystem]]([Intl.ResolvedRelativeTimeFormatOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numberingsystem))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +94,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numeric)
+**Substitutes:** [numeric]]([Intl.ResolvedRelativeTimeFormatOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#numeric))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -121,7 +121,7 @@ For details about their display effects, see
 
 **Deprecated since:** 20
 
-**Substitutes:** [Intl.ResolvedRelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#style)
+**Substitutes:** [style]]([Intl.ResolvedRelativeTimeFormatOptions.style](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions#style))
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

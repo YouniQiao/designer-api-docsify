@@ -24,7 +24,7 @@ export declare function TextArea(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextAreaOptions](../arkts-components/arkts-arkui-textareaoptions-i.md) | 否 |  |
+| value | [TextAreaOptions](arkts-arkui-textarea-textareaoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -59,7 +59,7 @@ export declare function TextArea(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TextAreaAttribute&gt; | 是 | TextArea属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextAreaAttribute](arkts-arkui-textarea-textareaattribute-i.md)&gt; | 是 | TextArea属性实例。 |
 
 **返回值：**
 

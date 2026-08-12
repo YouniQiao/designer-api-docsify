@@ -14,7 +14,7 @@ Creates a symbolic link based on the file path. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+**Substitutes:** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>--><!--Device-unnamed-declare function symlink(target: string, srcPath: string): Promise<void>-End-->
 
@@ -48,7 +48,7 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:symlink](arkts-corefile-fileio-symlink-f.md#symlink)
+**Substitutes:** [symlink](arkts-corefile-file-fs-symlink-f.md#symlink)
 
 <!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function symlink(target: string, srcPath: string, callback: AsyncCallback<void>): void-End-->
 
@@ -60,5 +60,5 @@ Creates a symbolic link based on the file path. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | target | string | Yes | Application sandbox path of the target file. |
 | srcPath | string | Yes | Application sandbox path of the symbolic link. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the symbolic link is created asynchronously. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback invoked when the symbolic link is created asynchronously. |
 

@@ -1,6 +1,6 @@
 # CloudModelInfo
 
-云侧模型的配置信息，在使用云侧文本向量模型时配置，可通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel)接口获取当前设备支持的云侧模型信息。
+云侧模型的配置信息，在使用云侧文本向量模型时配置，可通过[getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getSupportedCloudModel)接口获取当前设备支持的云侧模型信息。
 
 **起始版本：** 26.0.0
 

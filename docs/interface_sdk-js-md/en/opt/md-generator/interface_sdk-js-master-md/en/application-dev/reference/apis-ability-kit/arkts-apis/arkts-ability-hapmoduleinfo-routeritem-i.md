@@ -54,7 +54,7 @@ readonly data: Array<DataItem>
 User-defined string in the  
 [routing table configuration file](../../../quick-start/module-configuration-file.md#routermap), that is, value of the **data** field. This field is parsed by the system. You do not need to parse it.
 
-**Type:** Array&lt;DataItem&gt;
+**Type:** Array&lt;[DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)&gt;
 
 **Since:** 12
 

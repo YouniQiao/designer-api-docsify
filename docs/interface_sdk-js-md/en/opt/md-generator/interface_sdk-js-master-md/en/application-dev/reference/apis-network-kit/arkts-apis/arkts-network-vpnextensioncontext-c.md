@@ -2,7 +2,7 @@
 
 The context of vpn extension. It allows access to serviceExtension-specific resources.
 
-**Inheritance/Implementation:** VpnExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md/arkts-ability-extensioncontext-c.md)
+**Inheritance/Implementation:** VpnExtensionContext extends [ExtensionContext](ExtensionContext)
 
 **Since:** 11
 

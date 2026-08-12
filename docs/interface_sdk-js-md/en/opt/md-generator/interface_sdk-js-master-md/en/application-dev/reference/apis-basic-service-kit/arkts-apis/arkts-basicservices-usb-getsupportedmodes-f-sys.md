@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from 'kits/@kit.BasicServicesKit';
+import { usb } from '@kit.BasicServicesKit';
 ```
 
 ## getSupportedModes
@@ -18,7 +18,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.usbManager:usbManager.getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getsupportedmodes)
+**Substitutes:** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes)
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -30,13 +30,13 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| portId | number | Yes |
+| [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md) |
+| [PortModeType](arkts-basicservices-usb-portmodetype-e-sys.md) |
 
 ## Examples
 

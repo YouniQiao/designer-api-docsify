@@ -18,7 +18,7 @@ config: ParticleConfigs
 
 Particle config.
 
-**Type:** [ParticleConfigs](../arkts-components/arkts-arkui-particleconfigs-i.md)
+**Type:** [ParticleConfigs](arkts-arkui-particleconfigs-t.md)
 
 **Since:** 23
 

@@ -1,8 +1,8 @@
 # AVMetadata
 
 Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig](#AVRecorderConfig) can be used as input parameters for recording of  
-[AVRecorder](#AVRecorder).
+[AVRecorderConfig](arkts-media-multimedia-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of  
+[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md#AVRecorder).
 
 **起始版本：** 11
 
@@ -244,7 +244,7 @@ hdrType?: HdrType
 
 HDR type of the media asset. This parameter is not supported in AVRecorder settings.
 
-**类型：** [HdrType](../../apis-arkui/arkts-components/arkts-arkui-hdrtype-e.md)
+**类型：** HdrType
 
 **起始版本：** 12
 
@@ -260,7 +260,7 @@ location?: Location
 
 Geographical location of the media asset.
 
-**类型：** [Location](../../apis-camera-kit/arkts-apis/arkts-camera-camera-location-i.md)
+**类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
 **起始版本：** 12
 
@@ -340,7 +340,7 @@ tracks?: Array<MediaDescription>
 
 Tracks info of the media asset. This parameter is not supported in AVRecorder settings.
 
-**类型：** Array&lt;MediaDescription&gt;
+**类型：** Array&lt;[MediaDescription](arkts-media-multimedia-media-mediadescription-i.md)&gt;
 
 **起始版本：** 20
 

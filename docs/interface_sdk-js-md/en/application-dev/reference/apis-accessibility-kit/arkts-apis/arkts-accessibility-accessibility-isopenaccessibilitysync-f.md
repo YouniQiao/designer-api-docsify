@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from 'kits/@kit.AccessibilityKit';
+import { accessibility } from '@kit.AccessibilityKit';
 ```
 
 ## isOpenAccessibilitySync
@@ -13,7 +13,7 @@ function isOpenAccessibilitySync(): boolean
 ```
 
 Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, use   
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getaccessibilityextensionlistsync).
+[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
 
 **Since:** 10
 

@@ -10,8 +10,8 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 
 > **说明：**
 > 
-> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数
-> ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
+> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数
+> ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数执行完后子进程会自动销毁。
 > 
 > 调用该接口创建的子进程不支持异步ArkTS API调用，仅支持同步ArkTS API调用。
 
@@ -27,23 +27,23 @@ function startChildProcess(srcEntry: string, startMode: StartMode): Promise<numb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| srcEntry | string | 是 |
+| [srcEntry](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | 是 |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) |
-| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-不支持的操作) |
+| [16000062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-子进程数量超出上限) |
 
 ## 示例
 
@@ -90,8 +90,8 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 > **说明：**
 > 
-> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数
-> ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onstart)函数执行完后子进程会自动销毁。
+> 调用该接口创建子进程成功会返回子进程pid，然后执行子进程的[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数
+> ，[ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数执行完后子进程会自动销毁。
 > 
 > 调用该接口创建的子进程不支持异步ArkTS API调用，仅支持同步ArkTS API调用。
 
@@ -107,7 +107,7 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| srcEntry | string | 是 |
+| [srcEntry](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | string | 是 |
 | startMode | [StartMode](arkts-ability-childprocessmanager-startmode-e.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
@@ -115,10 +115,10 @@ function startChildProcess(srcEntry: string, startMode: StartMode, callback: Asy
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000061](../errorcode-ability.md#16000061-不支持的操作) |
-| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-不支持的操作) |
+| [16000062](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-子进程数量超出上限) |
 
 ## 示例
 

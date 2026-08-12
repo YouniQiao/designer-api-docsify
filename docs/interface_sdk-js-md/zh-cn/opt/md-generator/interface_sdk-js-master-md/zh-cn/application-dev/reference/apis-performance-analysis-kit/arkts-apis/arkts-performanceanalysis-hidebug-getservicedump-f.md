@@ -6,7 +6,7 @@
 function getServiceDump(serviceid : number, fd : number, args : Array<string>) : void
 ```
 
-��ȡϵͳ������Ϣ��
+获取系统服务信息。
 
 **起始版本：** 9
 
@@ -22,14 +22,14 @@ function getServiceDump(serviceid : number, fd : number, args : Array<string>) :
 | --- | --- | --- |
 | serviceid | number | 是 |
 | fd | number | 是 |
-| args | Array&lt;string&gt; | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | Array & lt;string & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11400101](../errorcode-hiviewdfx-hidebug.md#11400101-系统服务获取失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400101-系统服务获取失败) |
 
 ## 示例
 

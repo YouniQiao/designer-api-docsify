@@ -25,4 +25,4 @@ type RequestDialogInfoEvent = (actionType: DialogActionType, actionInfo?: Dialog
 
 | 类型 |
 | --- |
-| Promise&lt;DialogInfo&gt; |
+| Promise&lt;[DialogInfo](arkts-avsession-avmusictemplate-dialoginfo-i.md)&gt; |

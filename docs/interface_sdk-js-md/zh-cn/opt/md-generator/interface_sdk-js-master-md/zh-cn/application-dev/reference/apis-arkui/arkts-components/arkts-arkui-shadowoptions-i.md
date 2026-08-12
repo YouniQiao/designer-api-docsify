@@ -26,7 +26,7 @@ color?: Color | string | Resource | ColoringStrategy
 
 支持使用'average'字符串触发智能平均取色模式，支持使用'primary'字符串触发智能主色模式。
 
-**类型：** [Color](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-scenetypes-color-i.md) \| string \| Resource \| ColoringStrategy
+**类型：** Color \| string \| Resource \| [ColoringStrategy](../arkts-apis/arkts-arkui-coloringstrategy-e.md)
 
 **起始版本：** 11
 

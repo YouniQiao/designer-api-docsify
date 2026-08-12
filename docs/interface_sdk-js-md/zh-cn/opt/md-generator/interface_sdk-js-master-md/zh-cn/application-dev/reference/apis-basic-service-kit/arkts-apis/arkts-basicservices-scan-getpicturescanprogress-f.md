@@ -26,13 +26,13 @@ function getPictureScanProgress(scannerId: string): Promise<PictureScanProgress>
 
 | 类型 |
 | --- |
-| Promise&lt;PictureScanProgress&gt; |
+| Promise&lt;[PictureScanProgress](arkts-basicservices-scan-picturescanprogress-i.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

@@ -20,13 +20,13 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;HotkeyOptions&gt;&gt; | Promise对象，返回所有系统快捷键的列表。 |
+| Promise&lt;Array&lt;[HotkeyOptions](arkts-input-inputconsumer-hotkeyoptions-i.md)&gt;&gt; | Promise对象，返回所有系统快捷键的列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 

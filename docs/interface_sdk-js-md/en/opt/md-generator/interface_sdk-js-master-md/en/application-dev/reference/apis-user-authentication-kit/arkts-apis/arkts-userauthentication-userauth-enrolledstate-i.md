@@ -1,6 +1,6 @@
 # EnrolledState
 
-Represents the state of a credential enrolled. This API is used to describe the current state of enrolled authentication credentials (such as face, fingerprint, and companion device), including the credential digest and quantity. The application can call the [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getenrolledstate) API to query the credential status, and check whether the user's credentials have changed (for example, whether a fingerprint, face,or companion device is added or deleted) to perform corresponding service processing.
+Represents the state of a credential enrolled. This API is used to describe the current state of enrolled authentication credentials (such as face, fingerprint, and companion device), including the credential digest and quantity. The application can call the [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getEnrolledState) API to query the credential status, and check whether the user's credentials have changed (for example, whether a fingerprint, face,or companion device is added or deleted) to perform corresponding service processing.
 
 **Since:** 12
 
@@ -11,7 +11,7 @@ Represents the state of a credential enrolled. This API is used to describe the 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from 'kits/@kit.UserAuthenticationKit';
+import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## credentialCount

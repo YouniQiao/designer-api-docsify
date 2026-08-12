@@ -8,7 +8,7 @@ Represents a screen hopping message notification.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)
+**Substitutes:** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState)
 
 <!--Device-cooperate-enum CooperateMsg--><!--Device-cooperate-enum CooperateMsg-End-->
 
@@ -30,7 +30,7 @@ The preparation for screen hopping is finished.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_PREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_prepare)
+**Substitutes:** [COOPERATE_PREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_PREPARE)
 
 <!--Device-CooperateMsg-COOPERATE_PREPARE = 0--><!--Device-CooperateMsg-COOPERATE_PREPARE = 0-End-->
 
@@ -52,7 +52,7 @@ The preparation for screen hopping is cancelled.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_unprepare)
+**Substitutes:** [COOPERATE_UNPREPARE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_UNPREPARE)
 
 <!--Device-CooperateMsg-COOPERATE_UNPREPARE = 1--><!--Device-CooperateMsg-COOPERATE_UNPREPARE = 1-End-->
 
@@ -74,7 +74,7 @@ Screen hopping starts.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_ACTIVATE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate)
+**Substitutes:** [COOPERATE_ACTIVATE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE = 2--><!--Device-CooperateMsg-COOPERATE_ACTIVATE = 2-End-->
 
@@ -96,7 +96,7 @@ Starting screen hopping succeeds.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_success)
+**Substitutes:** [COOPERATE_ACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_SUCCESS)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE_SUCCESS = 3--><!--Device-CooperateMsg-COOPERATE_ACTIVATE_SUCCESS = 3-End-->
 
@@ -118,7 +118,7 @@ Starting screen hopping fails.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_ACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_activate_failure)
+**Substitutes:** [COOPERATE_ACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_ACTIVATE_FAILURE)
 
 <!--Device-CooperateMsg-COOPERATE_ACTIVATE_FAIL = 4--><!--Device-CooperateMsg-COOPERATE_ACTIVATE_FAIL = 4-End-->
 
@@ -140,7 +140,7 @@ Stopping screen hopping succeeds.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_deactivate_success)
+**Substitutes:** [COOPERATE_DEACTIVATE_SUCCESS](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_DEACTIVATE_SUCCESS)
 
 <!--Device-CooperateMsg-COOPERATE_DEACTIVATE_SUCCESS = 5--><!--Device-CooperateMsg-COOPERATE_DEACTIVATE_SUCCESS = 5-End-->
 
@@ -162,7 +162,7 @@ Stopping screen hopping fails.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_deactivate_failure)
+**Substitutes:** [COOPERATE_DEACTIVATE_FAILURE](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_DEACTIVATE_FAILURE)
 
 <!--Device-CooperateMsg-COOPERATE_DEACTIVATE_FAIL = 6--><!--Device-CooperateMsg-COOPERATE_DEACTIVATE_FAIL = 6-End-->
 
@@ -184,7 +184,7 @@ The screen hopping session is disconnected.
 
 **Deprecated since:** 11
 
-**Substitutes:** [CooperateState.COOPERATE_SESSION_DISCONNECTED](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#cooperate_session_disconnected)
+**Substitutes:** [COOPERATE_SESSION_DISCONNECTED](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#COOPERATE_SESSION_DISCONNECTED)
 
 <!--Device-CooperateMsg-COOPERATE_SESSION_DISCONNECTED = 7--><!--Device-CooperateMsg-COOPERATE_SESSION_DISCONNECTED = 7-End-->
 

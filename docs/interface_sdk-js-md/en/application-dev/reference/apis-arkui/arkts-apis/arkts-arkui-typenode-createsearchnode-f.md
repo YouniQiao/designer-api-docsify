@@ -28,5 +28,5 @@ Create a FrameNode of Search type.
 
 | Type | Description |
 | --- | --- |
-| [Search](arkts-arkui-typenode-search-t.md) | Return Search type FrameNode. |
+| Search | Return Search type FrameNode. |
 

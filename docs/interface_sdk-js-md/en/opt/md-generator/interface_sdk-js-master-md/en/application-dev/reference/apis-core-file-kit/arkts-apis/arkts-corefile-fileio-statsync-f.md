@@ -12,7 +12,7 @@ Obtains file information. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:statSync](arkts-corefile-fileio-statsync-f.md#statsync)
+**Substitutes:** [statSync](arkts-corefile-file-fs-statsync-f.md#statSync)
 
 <!--Device-unnamed-declare function statSync(path: string): Stat--><!--Device-unnamed-declare function statSync(path: string): Stat-End-->
 
@@ -28,4 +28,4 @@ Obtains file information. This API returns the result synchronously.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Stat](arkts-corefile-file-fs-stat-i.md) |
+| [Stat](arkts-corefile-fileio-stat-depr-i.md) |

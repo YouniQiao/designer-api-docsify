@@ -11,7 +11,7 @@ function replace(options: RouterOptions): void
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)替代。
+> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl-1)替代。
 
 **起始版本：** 8
 
@@ -19,7 +19,7 @@ function replace(options: RouterOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.arkui.UIContext:Router#replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceurl)(options:
+**替代接口：** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
 
 <!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
 
@@ -29,7 +29,7 @@ function replace(options: RouterOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RouterOptions](arkts-arkui-system-router-routeroptions-i.md) | 是 | 替换页面描述信息。 |
+| options | RouterOptions | 是 | 替换页面描述信息。 |
 
 ## 示例
 

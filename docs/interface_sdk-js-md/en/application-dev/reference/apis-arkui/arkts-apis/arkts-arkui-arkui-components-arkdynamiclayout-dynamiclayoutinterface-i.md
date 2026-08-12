@@ -13,7 +13,7 @@ Defines the dynamic layout container.
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayoutAttribute, DynamicLayout } from 'kits/@kit.ArkUI';
+import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 ```
 
 ## [[Call]]
@@ -48,5 +48,5 @@ Defines the dynamic layout container.
 
 | Type | Description |
 | --- | --- |
-| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-c.md) |  |
+| [DynamicLayoutAttribute](arkts-arkui-arkui-components-arkdynamiclayout-dynamiclayoutattribute-i.md) |  |
 

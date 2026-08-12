@@ -152,7 +152,7 @@ Sets stroke dashes.The value must be greater than or equal to 0. Invalid values 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Array&lt;any&gt; | Yes |
+| value | Array & lt;any & gt; | Yes |
 
 **Return value:**
 

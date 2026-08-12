@@ -6,7 +6,7 @@ Describes the spp parameters.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.socket/socket.SppOptions
+**Substitutes:** [SppOptions](arkts-connectivity-socket-sppoptions-i.md#SppOptions)
 
 <!--Device-bluetoothManager-interface SppOption--><!--Device-bluetoothManager-interface SppOption-End-->
 
@@ -15,7 +15,7 @@ Describes the spp parameters.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from 'kits/@kit.ConnectivityKit';
+import { bluetoothManager } from '@kit.ConnectivityKit';
 ```
 
 ## secure
@@ -32,7 +32,7 @@ Indicates secure channel or not
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.socket/socket.SppOptions#secure
+**Substitutes:** [secure](ohos.bluetooth.socket/socket.SppOptions#secure)
 
 <!--Device-SppOption-secure: boolean--><!--Device-SppOption-secure: boolean-End-->
 
@@ -44,15 +44,15 @@ Indicates secure channel or not
 type: SppType
 ```
 
-Spp link type {@link SppType}
+Spp link type [SppType](arkts-connectivity-bluetoothmanager-spptype-e.md#SppType)
 
-**Type:** [SppType](arkts-connectivity-socket-spptype-e.md)
+**Type:** SppType
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.socket/socket.SppOptions#type
+**Substitutes:** [type](ohos.bluetooth.socket/socket.SppOptions#type)
 
 <!--Device-SppOption-type: SppType--><!--Device-SppOption-type: SppType-End-->
 
@@ -72,7 +72,7 @@ Indicates the UUID in the SDP record.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.socket/socket.SppOptions#uuid
+**Substitutes:** [uuid](ohos.bluetooth.socket/socket.SppOptions#uuid)
 
 <!--Device-SppOption-uuid: string--><!--Device-SppOption-uuid: string-End-->
 

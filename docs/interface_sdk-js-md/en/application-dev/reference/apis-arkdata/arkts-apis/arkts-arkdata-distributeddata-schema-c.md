@@ -1,7 +1,7 @@
 # Schema
 
 Defines the schema of a KV store. You can create a **Schema** object and place it in  
-[Options](arkts-arkdata-distributeddata-options-i.md) when creating or opening a KV store.
+[Options](arkts-arkdata-distributeddata-options-i.md#Options) when creating or opening a KV store.
 
 **Since:** 8
 
@@ -9,7 +9,7 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Schema
+**Substitutes:** [Schema](ohos.data.distributedKVStore.Schema)
 
 <!--Device-distributedData-class Schema--><!--Device-distributedData-class Schema-End-->
 
@@ -29,7 +29,7 @@ A constructor used to create a **Schema** instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Schema#constructor
+**Substitutes:** [constructor](ohos.data.distributedKVStore.Schema#constructor)
 
 <!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
@@ -51,7 +51,7 @@ String array in JSON format.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Schema#indexes
+**Substitutes:** [indexes](ohos.data.distributedKVStore.Schema#indexes)
 
 <!--Device-Schema-indexes: Array<string>--><!--Device-Schema-indexes: Array<string>-End-->
 
@@ -73,7 +73,7 @@ Schema mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Schema#mode
+**Substitutes:** [mode](ohos.data.distributedKVStore.Schema#mode)
 
 <!--Device-Schema-mode: number--><!--Device-Schema-mode: number-End-->
 
@@ -87,7 +87,7 @@ root: FieldNode
 
 JSON root object.
 
-**Type:** [FieldNode](arkts-arkdata-distributedkvstore-fieldnode-c.md)
+**Type:** FieldNode
 
 **Since:** 8
 
@@ -95,7 +95,7 @@ JSON root object.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Schema#root
+**Substitutes:** [root](ohos.data.distributedKVStore.Schema#root)
 
 <!--Device-Schema-root: FieldNode--><!--Device-Schema-root: FieldNode-End-->
 
@@ -117,7 +117,7 @@ Size of a skip of the schema.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.data.distributedKVStore.Schema#skip
+**Substitutes:** [skip](ohos.data.distributedKVStore.Schema#skip)
 
 <!--Device-Schema-skip: number--><!--Device-Schema-skip: number-End-->
 

@@ -29,5 +29,5 @@ Create a FrameNode of Text type.On API 26.0.0 and above, It can also create a Fr
 
 | Type | Description |
 | --- | --- |
-| [Text](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-text-c.md) | Return Text type FrameNode. |
+| Text | Return Text type FrameNode. |
 

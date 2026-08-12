@@ -22,7 +22,7 @@ function getDisplayByIdSync(displayId: long): Display
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。需要确保displayId准确才能成功获取到对应结果。可以通过 [WindowProperties](arkts-arkui-window-windowproperties-i.md)的displayId属性获取到准确的displayId作为入参。 |
+| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID。该参数仅支持整数输入，该参数大于等于0。需要确保displayId准确才能成功获取到对应结果。可以通过 [WindowProperties](arkts-arkui-window-windowproperties-i.md#WindowProperties)的displayId属性获取到准确的displayId作为入参。 |
 
 **返回值：**
 
@@ -34,8 +34,8 @@ function getDisplayByIdSync(displayId: long): Display
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. Possible causes: Display is null, display id corresponding display does not exist. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. Possible causes: Display is null, display id corresponding display does not exist. |
 
 ## 示例
 

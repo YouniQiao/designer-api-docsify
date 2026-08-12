@@ -60,7 +60,7 @@ target?: AccessibilityElement
 
 发生事件的目标组件。
 
-**类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md)
+**类型：** [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md)
 
 **起始版本：** 20
 

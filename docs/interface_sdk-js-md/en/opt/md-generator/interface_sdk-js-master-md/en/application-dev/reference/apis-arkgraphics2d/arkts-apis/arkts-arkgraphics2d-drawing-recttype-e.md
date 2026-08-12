@@ -1,7 +1,7 @@
 # RectType
 
 Enumerates the types of rectangles used to fill the lattices. Used only in  
-[Lattice](arkts-graphics-drawing.md).
+[Lattice](arkts-graphics-drawing.md#drawing).
 
 **Since:** 12
 
@@ -43,7 +43,7 @@ Sets the lattice to transparent.
 FIXEDCOLOR = 2
 ```
 
-Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md) into a lattice.
+Draws the colors in the **fColors** array in [Lattice](arkts-graphics-drawing.md#drawing) into a lattice.
 
 **Since:** 12
 

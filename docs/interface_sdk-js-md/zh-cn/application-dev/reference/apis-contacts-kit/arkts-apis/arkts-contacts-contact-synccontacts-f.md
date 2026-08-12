@@ -28,10 +28,10 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-arkui/arkts-components/arkts-arkui-context-t.md) | 是 | 应用上下文Context。 |
+| context | Context | 是 | 应用上下文Context。 |
 | mode | [ContactSyncMode](arkts-contacts-contact-contactsyncmode-e.md) | 是 | 表示联系人同步模式的类型。 |
 | progress | [ContactSyncProgress](arkts-contacts-contact-contactsyncprogress-i.md) | 是 | 表示联系人同步进度的相关信息。 |
-| contacts | Array&lt;Contact&gt; | 是 | 表示需要同步至数据库的联系人信息数组。 |
+| contacts | Array&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 表示需要同步至数据库的联系人信息数组。 |
 
 **返回值：**
 
@@ -43,12 +43,12 @@ function syncContacts(context: Context, mode: ContactSyncMode, progress: Contact
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700103](../errorcode-contacts.md#16700103-用户取消) | User cancel. |
-| [16700004](../errorcode-contacts.md#16700004-联系人数量超过限制) | The number of contacts exceeds the limit. |
-| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700003](../errorcode-contacts.md#16700003-禁止后台调用) | Background usage is prohibited. |
-| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-用户取消) | User cancel. |
+| [16700004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700004-联系人数量超过限制) | The number of contacts exceeds the limit. |
+| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700003-禁止后台调用) | Background usage is prohibited. |
+| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 

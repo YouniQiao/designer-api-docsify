@@ -45,7 +45,7 @@ function apply(target: Function, thisArgument: any, argumentsList: ArrayLike<any
 | --- | --- | --- | --- |
 | target | Function | Yes |  |
 | thisArgument | any | Yes |  |
-| argumentsList | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;any&gt; | Yes |  |
+| argumentsList | ArrayLike&lt;any&gt; | Yes |  |
 
 **Return value:**
 

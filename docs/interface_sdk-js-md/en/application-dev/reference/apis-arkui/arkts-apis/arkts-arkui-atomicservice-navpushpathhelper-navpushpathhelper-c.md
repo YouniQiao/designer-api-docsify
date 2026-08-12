@@ -1,6 +1,6 @@
 # NavPushPathHelper
 
-On the initial launch, the atomic service only downloads and installs the main package and its dependencies.Therefore, if the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) to support dynamic loading of the HSP subpackage before the navigation occurs.
+On the initial launch, the atomic service only downloads and installs the main package and its dependencies.Therefore, if the [NavDestination](./@internal/component/ets/nav_destination) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](./@internal/component/ets/navigation) to support dynamic loading of the HSP subpackage before the navigation occurs.
 
 **Since:** 12
 
@@ -13,7 +13,7 @@ On the initial launch, the atomic service only downloads and installs the main p
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from 'kits/@kit.ArkUI';
+import { NavPushPathHelper } from '@kit.ArkUI';
 ```
 
 ## constructor
@@ -38,7 +38,7 @@ A constructor used to create a **NavPushPathHelper** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navPathStack | [NavPathStack](arkts-arkui-navigation-navpathstack-c.md) | Yes | [Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i) stack. |
+| navPathStack | NavPathStack | Yes | [Navigation](./@internal/component/ets/navigation) stack. |
 
 ## pushDestination
 
@@ -47,7 +47,7 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -63,8 +63,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| info | NavPathInfo | Yes | Information about the [NavDestination](./@internal/component/ets/nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -77,11 +77,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -90,9 +90,9 @@ pushDestination(moduleName: string, info: NavPathInfo, options?: NavigationOptio
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
-Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
+Depending on the [LaunchMode](LaunchMode) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -108,9 +108,9 @@ Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| info | NavPathInfo | Yes | Information about the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| options | NavigationOptions | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
@@ -122,11 +122,11 @@ Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -135,7 +135,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -151,9 +151,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](./@internal/component/ets/nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -166,11 +166,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -180,7 +180,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -196,10 +196,10 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| onPop | Callback&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -212,11 +212,11 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushPath
 
@@ -225,7 +225,7 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -241,8 +241,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| info | NavPathInfo | Yes | Information about the [NavDestination](./@internal/component/ets/nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -255,7 +255,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 
 ## pushPath
 
@@ -264,9 +264,9 @@ pushPath(moduleName: string, info: NavPathInfo, options?: NavigationOptions): Pr
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the navigation stack. This API uses a promise to handle asynchronous operations.
 
-Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
+Depending on the [LaunchMode](LaunchMode) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -282,9 +282,9 @@ Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Information about the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| info | NavPathInfo | Yes | Information about the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| options | NavigationOptions | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
@@ -296,7 +296,7 @@ Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -305,7 +305,7 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -321,9 +321,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](./@internal/component/ets/nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -336,7 +336,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 
 ## pushPathByName
 
@@ -346,7 +346,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **name** parameter onto the navigation stack, along with the data specified by **param**. The **onPop** callback handles the return results when the page is popped from the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -362,10 +362,10 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| onPop | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;PopInfo&gt; | Yes | Callback used to receive the result. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| onPop | Callback&lt;PopInfo&gt; | Yes | Callback used to receive the result. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -378,7 +378,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 
 ## replacePath
 
@@ -387,7 +387,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 ```
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack and pushes the  
-[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
+[NavDestination](./@internal/component/ets/nav_destination) page specified by the **info** parameter onto the stack. This API uses a promise to handle asynchronous operations.
 
 **Since:** 12
 
@@ -403,8 +403,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| info | NavPathInfo | Yes | Parameters of the page to replace the top of the navigation stack. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -417,7 +417,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 
 ## replacePath
 
@@ -427,7 +427,7 @@ replacePath(moduleName: string, info: NavPathInfo, options?: NavigationOptions):
 
 Checks for the target subpackage and, if it is not present, initiates a download using the specified module name.Once the subpackage is downloaded, the API pops the top page from the current navigation stack. This API uses a promise to handle asynchronous operations.
 
-Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified in the **options** parameter, different behaviors will be triggered.
+Depending on the [LaunchMode](LaunchMode) specified in the **options** parameter, different behaviors will be triggered.
 
 **Since:** 12
 
@@ -443,9 +443,9 @@ Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Parameters of the page to replace the top of the navigation stack. |
-| options | [NavigationOptions](arkts-arkui-navigation-navigationoptions-i.md) | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| info | NavPathInfo | Yes | Parameters of the page to replace the top of the navigation stack. |
+| options | NavigationOptions | No | Navigation options. The default value is **{ launchMode: LaunchMode.STANDARD, animated: true }**. |
 
 **Return value:**
 
@@ -457,7 +457,7 @@ Depending on the [LaunchMode](arkts-arkui-navigation-launchmode-e.md) specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 
 ## replacePathByName
 
@@ -481,9 +481,9 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| moduleName | string | Yes | Module name of the package where the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page is located. |
-| name | string | Yes | Name of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
-| param | Object | Yes | Settings of the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-nav_destination-i) page. |
+| moduleName | string | Yes | Module name of the package where the [NavDestination](./@internal/component/ets/nav_destination) page is located. |
+| name | string | Yes | Name of the [NavDestination](./@internal/component/ets/nav_destination) page. |
+| param | Object | Yes | Settings of the [NavDestination](./@internal/component/ets/nav_destination) page. |
 | animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
 
 **Return value:**
@@ -496,5 +496,5 @@ Checks for the target subpackage and, if it is not present, initiates a download
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
+| [300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 

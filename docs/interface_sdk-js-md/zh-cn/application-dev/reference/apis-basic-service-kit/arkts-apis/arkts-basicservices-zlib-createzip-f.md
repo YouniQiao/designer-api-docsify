@@ -22,7 +22,7 @@ function createZip(): Promise<Zip>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Zip&gt; | Promise对象。返回压缩解压缩对象实例。 |
+| Promise&lt;[Zip](arkts-basicservices-zlib-zip-i.md)&gt; | Promise对象。返回压缩解压缩对象实例。 |
 
 ## 示例
 

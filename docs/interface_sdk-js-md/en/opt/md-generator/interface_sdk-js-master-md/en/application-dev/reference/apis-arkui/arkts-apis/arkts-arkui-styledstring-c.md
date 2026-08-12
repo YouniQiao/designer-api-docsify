@@ -30,8 +30,8 @@ A constructor used to create a styled string.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| ImageAttachment \| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | Yes |
-| styles | Array&lt;StyleOptions&gt; | No |
+| value | string \| [ImageAttachment](arkts-arkui-imageattachment-c.md) \| [CustomSpan](arkts-arkui-customspan-c.md) | Yes |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styleoptions-i.md)&gt; | No |
 
 ## equals
 
@@ -78,20 +78,20 @@ For details about how to use this API, see
 
 | Tag Name| Description |
 | ------------- | ---------------------------- |
-| \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. |
-| \&lt;span\&gt; | Inline text supporting style configuration. |
-| \&lt;img\&gt; | Image tag, used to insert an image. |
-| \&lt;strong\&gt; | Bold text tag. |
-| &lt;br&gt;&lt;sup&gt;20+&lt;/sup&gt; | Line break tag. |
-| \&lt;b\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Bold text tag. |
-| \&lt;a\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Hyperlink tag. |
-| \&lt;i\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. |
-| \&lt;em\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. |
-| \&lt;s\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. |
-| \&lt;u\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Underline tag, which adds a decorative underline to the text. |
-| \&lt;del\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. |
-| \&lt;sup\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Superscript tag. |
-| \&lt;sub\&gt;&lt;sup&gt;20+&lt;/sup&gt; |
+| \ & lt;p\ & gt; | Paragraph tag, which separates text into paragraphs. |
+| \ & lt;span\ & gt; | Inline text supporting style configuration. |
+| \ & lt;img\ & gt; | Image tag, used to insert an image. |
+| \ & lt;strong\ & gt; | Bold text tag. |
+|  & lt;br & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Line break tag. |
+| \ & lt;b\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Bold text tag. |
+| \ & lt;a\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Hyperlink tag. |
+| \ & lt;i\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Italic text tag. |
+| \ & lt;em\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Italic text tag. |
+| \ & lt;s\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Strikethrough tag, which adds a line through the text. |
+| \ & lt;u\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Underline tag, which adds a decorative underline to the text. |
+| \ & lt;del\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Strikethrough tag, which adds a line through the text. |
+| \ & lt;sup\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; | Superscript tag. |
+| \ & lt;sub\ & gt; & lt;sup & gt;20+ & lt;/sup & gt; |
 
 **Since:** 12
 
@@ -119,8 +119,8 @@ For details about how to use this API, see
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [170001](../errorcode-styled-string.md#170001-conversion-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [170001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170001-conversion-error) |
 
 ## getString
 
@@ -178,13 +178,13 @@ This API returns only styles explicitly set by the developer.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;SpanStyle&gt; |
+| Array&lt;[SpanStyle](arkts-arkui-spanstyle-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## subStyledString
 
@@ -221,7 +221,7 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## toHtml
 
@@ -229,7 +229,7 @@ Obtains a substring of this styled string. The specified range must not exceed t
 static toHtml(styledString: StyledString): string
 ```
 
-Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md), include: **StyledStringKey.FONT**,  
+Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey), include: **StyledStringKey.FONT**,  
 **StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**,  
 **StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**.
 
@@ -262,7 +262,7 @@ For details about how to use this API, see
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## length
 

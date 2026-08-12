@@ -24,7 +24,7 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 组件的内容。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 组件的内容。 |
 
 **返回值：**
 

@@ -2,7 +2,7 @@
 
 Define a rectangular cuboid.
 
-**Inheritance/Implementation:** CubeGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
+**Inheritance/Implementation:** CubeGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
 
 **Since:** 18
 

@@ -2,7 +2,7 @@
 
 Defines the grid layout algorithm.
 
-**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md)
+**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
@@ -68,7 +68,7 @@ public columnsTemplate?: string | ItemFillPolicy
 
 This parameter specifies the number of columns in the current grid layout.
 
-**Type:** string \| ItemFillPolicy
+**Type:** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 

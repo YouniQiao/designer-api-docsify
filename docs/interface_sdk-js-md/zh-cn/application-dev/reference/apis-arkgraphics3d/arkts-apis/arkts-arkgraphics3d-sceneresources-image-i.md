@@ -2,7 +2,7 @@
 
 图像资源.
 
-**继承/实现关系：** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
+**继承/实现关系：** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
 **起始版本：** 12
 

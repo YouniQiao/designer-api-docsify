@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hyperSnapManager } from 'kits/@kit.AbilityKit';
+import { hyperSnapManager } from '@kit.AbilityKit';
 ```
 
 ## setHyperSnapEnabled

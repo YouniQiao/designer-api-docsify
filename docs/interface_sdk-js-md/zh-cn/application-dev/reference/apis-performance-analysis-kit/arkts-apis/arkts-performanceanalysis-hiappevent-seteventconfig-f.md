@@ -17,7 +17,7 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 
 > **说明：**
 > 
-> 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configeventpolicy)。
+> 从API版本26.0.0开始，configEventPolicy已支持本接口所有设置，推荐使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy)。
 
 **起始版本：** 15
 
@@ -34,7 +34,7 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 事件名称。 |
-| config | Record&lt;string, ParamType&gt; | 是 | 事件自定义参数对象。参数名和参数值规格定义如下： &lt;br&gt;- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 &lt;br&gt;- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
+| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | 是 | 事件自定义参数对象。参数名和参数值规格定义如下： &lt;br&gt;- 参数名为string类型，要求非空，且参数名长度需在1024个字符以内。 &lt;br&gt;- 参数值为ParamType类型，参数值长度需在1024个字符以内。 |
 
 **返回值：**
 
@@ -46,7 +46,7 @@ function setEventConfig(name: string, config: Record<string, ParamType>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
 
 ## 示例
 

@@ -1,7 +1,7 @@
 # @ohos.resourceManager
 
 This module provides the capabilities to access application resources and system resources. It allows applications to obtain the best-matching application or system resources based on the current   
-[configuration](arkts-localization-resourcemanager-configuration-c.md), supporting internationalization resource matching and multi-device adaptation. For details about the matching rules, see   
+[configuration](arkts-localization-resourcemanager-configuration-c.md#Configuration), supporting internationalization resource matching and multi-device adaptation. For details about the matching rules, see   
 [Matching Resources](../../../quick-start/resource-categories-and-access.md#matching-resources).
 
 The configuration includes language, script, country/region, orientation, color mode, Mobile Country Code (MCC), Mobile Network Code (MNC), device type, and screen density.
@@ -15,7 +15,7 @@ and color mode.
 
 **How to Use**  
 - In the FA model, you need to import the module and then call   
-[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) to obtain a **ResourceManager** object.  
+[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) to obtain a **ResourceManager** object.  
 - Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object   
 through context without importing any module. For details about the context, see   
 [application context](../../../application-models/application-context-stage.md).
@@ -33,7 +33,7 @@ through context without importing any module. For details about the context, see
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## Summary

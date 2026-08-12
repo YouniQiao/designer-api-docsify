@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from 'kits/@kit.CoreFileKit';
+import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
 ## lseek
@@ -28,7 +28,7 @@ Adjusts the position of the file offset pointer.
 | --- | --- | --- | --- |
 | fd | number | Yes | File descriptor. |
 | offset | number | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. If this parameter is not specified, the file start position is used by default. |
 
 **Return value:**
 

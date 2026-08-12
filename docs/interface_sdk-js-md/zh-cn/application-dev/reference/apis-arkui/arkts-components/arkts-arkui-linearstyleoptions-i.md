@@ -2,9 +2,9 @@
 
 线性样式选项。
 
-继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)。
+继承自[ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions)和[CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)。
 
-**继承/实现关系：** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+**继承/实现关系：** LinearStyleOptions extends [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md#ScanEffectOptions), [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
 
 **起始版本：** 10
 
@@ -26,7 +26,7 @@ strokeRadius?: PX | VP | LPX | Resource
 
 超出取值范围时按默认值处理。
 
-**类型：** [PX](../arkts-apis/arkts-arkui-px-t.md) \| VP \| LPX \| Resource
+**类型：** PX \| VP \| LPX \| Resource
 
 **默认值：** strokeWidth / 2
 
@@ -56,7 +56,7 @@ strokeWidth?: Length
 
 超出取值范围或设置非法值时按默认值处理。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**类型：** Length
 
 **起始版本：** 10
 

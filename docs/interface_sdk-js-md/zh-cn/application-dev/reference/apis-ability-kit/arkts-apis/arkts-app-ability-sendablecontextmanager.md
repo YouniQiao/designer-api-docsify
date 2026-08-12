@@ -1,6 +1,6 @@
 # @ohos.app.ability.sendableContextManager
 
-sendableContextManager模块提供Context与[SendableContext](arkts-ability-sendablecontext-i.md)相互转换的能力。
+sendableContextManager模块提供Context与[SendableContext](arkts-ability-sendablecontext-i.md#SendableContext)相互转换的能力。
 
 **起始版本：** 12
 
@@ -23,7 +23,7 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 | [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md#converttoapplicationcontext) | 将SendableContext对象转换为ApplicationContext。 |
 | [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md#converttocontext) | 将SendableContext对象转换为Context。 |
 | [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md#converttouiabilitycontext) | 将SendableContext对象转换为UIAbilityContext。 |
-| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md#seteventhubmultithreadingenabled) | 设置[Context](arkts-ability-context-t.md)中的[EventHub](arkts-ability-eventhub-c.md)是否启用跨线程通信能力。 |
+| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md#seteventhubmultithreadingenabled) | 设置[Context](./app/context)中的[EventHub](arkts-ability-eventhub-c.md#EventHub)是否启用跨线程通信能力。 |
 
 ### 类型
 

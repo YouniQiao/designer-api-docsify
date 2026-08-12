@@ -28,5 +28,5 @@ Get the attribute instance of FrameNode to set attributes.
 
 | Type | Description |
 | --- | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
+| ListAttribute | Return the attribute instance of FrameNode, and return undefined if it does not exist. |
 

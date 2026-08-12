@@ -20,7 +20,7 @@ Browser policies are a collection of rules and settings that govern how a browse
 ## Modules to Import
 
 ```TypeScript
-import { browser } from 'kits/@kit.MDMKit';
+import { browser } from '@kit.MDMKit';
 ```
 
 ## Summary

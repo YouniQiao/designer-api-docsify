@@ -11,7 +11,7 @@ Describes the crease region of a foldable device.
 ## Modules to Import
 
 ```TypeScript
-import { display } from 'kits/@kit.ArkUI';
+import { display } from '@kit.ArkUI';
 ```
 
 ## creaseRects

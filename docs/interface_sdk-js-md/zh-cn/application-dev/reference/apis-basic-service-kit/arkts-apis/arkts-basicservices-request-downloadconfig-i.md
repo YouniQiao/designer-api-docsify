@@ -97,7 +97,7 @@ filePath?: string
 - FA模型下使用  
 [Context.getCacheDir](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetcachedir)方法获取应用存储路径。
 
-- Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)中AbilityContext的类获取文件路径。
+- Stage模型下使用[Context (Stage模型的上下文基类)](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)中AbilityContext的类获取文件路径。
 
 **类型：** string
 

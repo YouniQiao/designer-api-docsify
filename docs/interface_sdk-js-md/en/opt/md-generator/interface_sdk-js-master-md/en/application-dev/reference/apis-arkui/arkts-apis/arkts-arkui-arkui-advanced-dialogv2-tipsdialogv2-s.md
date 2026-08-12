@@ -13,7 +13,7 @@ Declare CustomDialog TipsDialogV2
 ## Modules to Import
 
 ```TypeScript
-import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from 'kits/@kit.ArkUI';
+import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonAction, AlertDialogV2, CustomContentDialogV2, PopoverDialogV2Options, PopoverDialogV2, SelectDialogV2, PopoverDialogV2OnVisibleChange, TipsDialogV2, AdvancedDialogV2ButtonOptions, ConfirmDialogV2 } from '@kit.ArkUI';
 ```
 
 ## onCheckedChange
@@ -110,7 +110,7 @@ imageBorderColor?: ColorMetrics
 
 Sets the borderColor of TipsDialogV2 image.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** ColorMetrics
 
 **Since:** 18
 
@@ -132,7 +132,7 @@ imageBorderWidth?: LengthMetrics
 
 Sets the borderWidth of TipsDialogV2 image.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 18
 

@@ -1,7 +1,7 @@
 # VideoCallControlGroup
 
 Enumerates the video call component groups. They are used only when  
-[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md) is set to **VIDEO_CALL**.
+[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_CALL**.
 
 **Since:** 12
 

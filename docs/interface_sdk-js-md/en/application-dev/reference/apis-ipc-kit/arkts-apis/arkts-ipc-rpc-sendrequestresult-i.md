@@ -8,7 +8,7 @@ Defines the response to the request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.RequestResult](arkts-ipc-rpc-requestresult-i.md)
+**Substitutes:** [RequestResult](arkts-ipc-rpc-requestresult-i.md#RequestResult)
 
 <!--Device-rpc-interface SendRequestResult--><!--Device-rpc-interface SendRequestResult-End-->
 
@@ -17,7 +17,7 @@ Defines the response to the request.
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from 'kits/@kit.IPCKit';
+import { rpc } from '@kit.IPCKit';
 ```
 
 ## code
@@ -36,7 +36,7 @@ Message code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.RequestResult#code](arkts-ipc-rpc-requestresult-i.md#code)
+**Substitutes:** [code](arkts-ipc-rpc-requestresult-i.md#code)
 
 <!--Device-SendRequestResult-code: number--><!--Device-SendRequestResult-code: number-End-->
 
@@ -58,7 +58,7 @@ data: MessageParcel
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.RequestResult#data](arkts-ipc-rpc-requestresult-i.md#data)
+**Substitutes:** [data](arkts-ipc-rpc-requestresult-i.md#data)
 
 <!--Device-SendRequestResult-data: MessageParcel--><!--Device-SendRequestResult-data: MessageParcel-End-->
 
@@ -80,7 +80,7 @@ Error code.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.RequestResult#errCode](arkts-ipc-rpc-requestresult-i.md#errcode)
+**Substitutes:** [errCode](arkts-ipc-rpc-requestresult-i.md#errCode)
 
 <!--Device-SendRequestResult-errCode: number--><!--Device-SendRequestResult-errCode: number-End-->
 
@@ -102,7 +102,7 @@ reply: MessageParcel
 
 **Deprecated since:** 9
 
-**Substitutes:** [rpc.RequestResult#reply](arkts-ipc-rpc-requestresult-i.md#reply)
+**Substitutes:** [reply](arkts-ipc-rpc-requestresult-i.md#reply)
 
 <!--Device-SendRequestResult-reply: MessageParcel--><!--Device-SendRequestResult-reply: MessageParcel-End-->
 

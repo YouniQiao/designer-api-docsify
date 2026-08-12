@@ -12,7 +12,7 @@ Provides constants that define the names of all predefined event parameters.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param
+**Substitutes:** [Param](#Param)
 
 <!--Device-hiAppEvent-namespace Param--><!--Device-hiAppEvent-namespace Param-End-->
 

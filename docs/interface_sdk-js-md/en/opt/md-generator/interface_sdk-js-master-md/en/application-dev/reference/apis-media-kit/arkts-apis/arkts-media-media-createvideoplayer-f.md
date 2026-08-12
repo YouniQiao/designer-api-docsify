@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createVideoPlayer
@@ -18,7 +18,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)(callback:
+**Substitutes:** [createAVPlayer](media.createAVPlayer(callback:)
 
 <!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void--><!--Device-media-function createVideoPlayer(callback: AsyncCallback<VideoPlayer>): void-End-->
 
@@ -28,7 +28,7 @@ Creates a **VideoPlayer** instance. This API uses an asynchronous callback to re
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;VideoPlayer&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; | Yes |
 
 ## Examples
 
@@ -59,7 +59,7 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [media.createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer)()
+**Substitutes:** [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer)()
 
 <!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>--><!--Device-media-function createVideoPlayer(): Promise<VideoPlayer>-End-->
 
@@ -69,7 +69,7 @@ Creates a VideoPlayer instance. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;VideoPlayer&gt; |
+| Promise&lt;[VideoPlayer](arkts-media-media-videoplayer-i.md)&gt; |
 
 ## Examples
 

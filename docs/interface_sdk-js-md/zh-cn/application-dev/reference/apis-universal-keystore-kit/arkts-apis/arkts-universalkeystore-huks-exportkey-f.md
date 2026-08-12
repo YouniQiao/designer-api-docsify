@@ -11,7 +11,7 @@ function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem)
+> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md#exportKeyItem)
 > 替代。
 
 **起始版本：** 8
@@ -20,7 +20,7 @@ function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 
 **废弃版本：** 9
 
-**替代接口：** [huks.exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem)(keyAlias:
+**替代接口：** [exportKeyItem](huks.exportKeyItem(keyAlias:)
 
 <!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void--><!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallback<HuksResult>): void-End-->
 
@@ -32,7 +32,7 @@ function exportKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 | --- | --- | --- | --- |
 | keyAlias | string | 是 | 密钥别名，应与所用密钥生成时使用的别名相同。 |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | 是 | 空对象（此处传空即可）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HuksResult&gt; | 是 | 回调函数。当导出密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。HuksResult的 outData返回从密钥中导出的公钥。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当导出密钥成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。HuksResult的 outData返回从密钥中导出的公钥。 |
 
 ## 示例
 
@@ -60,7 +60,7 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 > **说明：**
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem)替代。
+> [huks.exportKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-exportkeyitem-f.md#exportKeyItem-1)替代。
 
 **起始版本：** 8
 
@@ -68,7 +68,7 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 **废弃版本：** 9
 
-**替代接口：** [huks.exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem)(keyAlias:
+**替代接口：** [exportKeyItem](huks.exportKeyItem(keyAlias:)
 
 <!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>--><!--Device-huks-function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>-End-->
 
@@ -85,7 +85,7 @@ function exportKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;HuksResult&gt; | Promise对象，返回HuksResult。HuksResult的outData返回从HUKS中导出的公钥。 |
+| Promise&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | Promise对象，返回HuksResult。HuksResult的outData返回从HUKS中导出的公钥。 |
 
 ## 示例
 

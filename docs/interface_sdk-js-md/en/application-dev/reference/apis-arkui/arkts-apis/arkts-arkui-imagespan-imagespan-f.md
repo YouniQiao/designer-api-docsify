@@ -24,7 +24,7 @@ Defines ImageSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| PixelMap | Yes |  |
+| value | [ResourceStr](arkts-arkui-resourcestr-t.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes |  |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Defines ImageSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;ImageSpanAttribute&gt; | Yes | ImageSpan attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ImageSpanAttribute](arkts-arkui-imagespan-imagespanattribute-i.md)&gt; | Yes | ImageSpan attribute instance |
 
 **Return value:**
 

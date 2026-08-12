@@ -13,7 +13,7 @@ Enumerates the metrics for frame performance.
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## firstDrawFrame

@@ -13,7 +13,7 @@ Represents optional configuration items for the SymbolNumberFormat object.Define
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from 'kits/@kit.LocalizationKit';
+import { i18n } from '@kit.LocalizationKit';
 ```
 
 ## groupingSeparator

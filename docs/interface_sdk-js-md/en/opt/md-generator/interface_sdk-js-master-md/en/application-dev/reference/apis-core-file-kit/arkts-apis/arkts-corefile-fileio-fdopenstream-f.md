@@ -12,7 +12,7 @@ Opens a stream based on the file descriptor. This API uses a promise to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)
+**Substitutes:** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md#fdopenStream)
 
 <!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string): Promise<Stream>-End-->
 
@@ -29,7 +29,7 @@ Opens a stream based on the file descriptor. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Stream&gt; |
+| Promise&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; |
 
 
 ## fdopenStream
@@ -44,7 +44,7 @@ Opens a stream based on the file descriptor. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)
+**Substitutes:** [fdopenStream](arkts-corefile-file-fs-fdopenstream-f.md#fdopenStream)
 
 <!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void--><!--Device-unnamed-declare function fdopenStream(fd: number, mode: string, callback: AsyncCallback<Stream>): void-End-->
 
@@ -56,4 +56,4 @@ Opens a stream based on the file descriptor. This API uses an asynchronous callb
 | --- | --- | --- |
 | fd | number | Yes |
 | mode | string | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Stream&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-fileio-stream-depr-i.md)&gt; | Yes |

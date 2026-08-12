@@ -18,7 +18,7 @@ error?: Callback<string>
 
 正则匹配失败时，返回被过滤的内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
 
@@ -38,7 +38,7 @@ inputFilterValue: ResourceStr
 
 正则表达式。仅支持单个字符匹配，不支持字符串匹配。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 18
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from 'kits/@kit.ArkTS';
+import { buffer } from '@kit.ArkTS';
 ```
 
 ## transcode
@@ -29,8 +29,8 @@ Transcodes a **Buffer** or **Uint8Array** object from one encoding format to ano
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | [Buffer](arkts-arkts-buffer-buffer-c.md) \| Uint8Array | Yes | Instance object. |
-| fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md). |
-| toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md). |
+| fromEnc | string | Yes | Current encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#BufferEncoding). |
+| toEnc | string | Yes | Target encoding format. For details about the supported formats, see [BufferEncoding](arkts-arkts-buffer-bufferencoding-t.md#BufferEncoding). |
 
 **Return value:**
 

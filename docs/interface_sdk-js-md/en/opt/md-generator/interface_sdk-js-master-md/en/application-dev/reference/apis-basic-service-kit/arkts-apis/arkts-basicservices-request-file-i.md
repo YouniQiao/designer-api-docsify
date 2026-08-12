@@ -1,6 +1,6 @@
 # File
 
-Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md).
+Describes the list of files in [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig).
 
 **Since:** 6
 
@@ -11,7 +11,7 @@ Describes the list of files in [UploadConfig](arkts-basicservices-request-upload
 ## Modules to Import
 
 ```TypeScript
-import { request } from 'kits/@kit.BasicServicesKit';
+import { request } from '@kit.BasicServicesKit';
 ```
 
 ## filename

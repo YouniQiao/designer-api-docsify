@@ -40,7 +40,7 @@ readonly sortings: Record<string, NotificationSorting>
 
 Array of notification sorting information.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [NotificationSorting](arkts-notification-notificationsorting-notificationsorting-i-sys.md)&gt;
+**Type:** Record&lt;string, [NotificationSorting](arkts-notification-notificationsorting-notificationsorting-i-sys.md)&gt;
 
 **Since:** 7
 

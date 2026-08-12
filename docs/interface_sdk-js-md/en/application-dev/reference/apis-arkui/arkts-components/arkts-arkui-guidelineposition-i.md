@@ -18,7 +18,7 @@ end? : Dimension
 
 Distance between the guideline and the right or bottom of the container.Unit: vp.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 12
 
@@ -40,7 +40,7 @@ start? : Dimension
 
 Distance between the guideline and the left or top of the container.Unit: vp.
 
-**Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**Type:** Dimension
 
 **Since:** 12
 

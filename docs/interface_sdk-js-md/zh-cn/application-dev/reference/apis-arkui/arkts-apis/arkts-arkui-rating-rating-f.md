@@ -26,11 +26,11 @@ Defines Rating Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [RatingOptions](arkts-arkui-rating-ratingoptions-i.md) | 否 | the options of Rating. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RatingAttribute](../arkts-components/arkts-arkui-rating-attribute.md) |  |
+| [RatingAttribute](arkts-arkui-rating-ratingattribute-i.md) |  |
 

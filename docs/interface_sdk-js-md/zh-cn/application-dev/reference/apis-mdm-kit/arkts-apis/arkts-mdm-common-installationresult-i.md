@@ -3,7 +3,7 @@
 应用安装结果。
 
 该对象目前在  
-[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onmarketappinstallresult)作为回调入参使用。
+[EnterpriseAdminExtensionAbility.onMarketAppInstallResult](../../apis-default/arkts-apis/arkts-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onMarketAppInstallResult)作为回调入参使用。
 
 **起始版本：** 22
 
@@ -41,7 +41,7 @@ result: Result
 
 应用安装结果码。SUCCESS表示应用安装成功，应用可正常使用；FAIL表示应用安装失败，应用不可用。
 
-**类型：** [Result](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-result-i.md)
+**类型：** Result
 
 **起始版本：** 22
 

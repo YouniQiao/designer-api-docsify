@@ -33,13 +33,13 @@ addLocalInputEventMonitor(eventMask: int, listener: InputEventListener): InputEv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | eventMask | int | 是 | 事件类型掩码，指定要监视的事件类型 位运算。 |
-| listener | [InputEventListener](../arkts-components/arkts-arkui-inputeventlistener-t.md) | 是 | 事件监听器回调函数。 |
+| listener | InputEventListener | 是 | 事件监听器回调函数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
+| InputEventMonitor | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
 
 ## animateTo
 
@@ -63,7 +63,7 @@ Defining animation function
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | parameters for animation. |
+| value | [AnimateParam](arkts-arkui-common-animateparam-i.md) | 是 | parameters for animation. |
 | event | () =&gt; void | 是 | the closure base on which, the system will create animation automatically |
 
 ## animateToImmediately
@@ -88,7 +88,7 @@ animateToImmediately(param: AnimateParam, processor: VoidCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 | 设置动画效果相关参数 |
+| param | [AnimateParam](arkts-arkui-common-animateparam-i.md) | 是 | 设置动画效果相关参数 |
 | processor | [VoidCallback](arkts-arkui-voidcallback-t.md) | 是 | 指定显示动画的处理函数，在该函数中导致的状态变化系统会自动插入过渡动画。 |
 
 ## bindTabsToNestedScrollable
@@ -113,9 +113,9 @@ Bind tabs to nested scrollable container components to automatically hide tab ba
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 | The controller of the tabs. |
-| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | The controller of the parent scrollable container component. |
-| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | The controller of the child scrollable container component. |
+| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 | The controller of the tabs. |
+| parentScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 | The controller of the parent scrollable container component. |
+| childScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 | The controller of the child scrollable container component. |
 
 ## bindTabsToScrollable
 
@@ -139,8 +139,8 @@ Bind tabs to scrollable container component to automatically hide tab bar.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 | The controller of the tabs. |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | The controller of the scrollable container component. |
+| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 | The controller of the tabs. |
+| scroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 | The controller of the scrollable container component. |
 
 ## closeBindSheet
 
@@ -176,9 +176,9 @@ closeBindSheet(bindSheetContent: ComponentContentBase): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) | The bindSheetContent cannot be found. |
+| [120001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) | The bindSheetContent cannot be found. |
 
 ## constructor
 
@@ -220,7 +220,7 @@ Create an animator object for custom animation.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| SimpleAnimatorOptions | 是 | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | 是 | Options. |
 
 **返回值：**
 
@@ -232,7 +232,7 @@ Create an animator object for custom animation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
@@ -262,14 +262,14 @@ Create a UI instance singleton without window and get its UIContext object.
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | object UIContext, or undefined when failed. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | object UIContext, or undefined when failed. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. @static |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. @static |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -312,7 +312,7 @@ Dispach keyboard event to the frameNode with inspector key.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | node | int \| string | 是 | The uniqueId or inspector key of the target FrameNode. |
-| event | [KeyEvent](../arkts-components/arkts-arkui-keyevent-i.md) | 是 | The keyboard event. |
+| event | [KeyEvent](arkts-arkui-common-keyevent-i.md) | 是 | The keyboard event. |
 
 **返回值：**
 
@@ -343,7 +343,7 @@ enableEventPassthrough(enabled: boolean | undefined, eventType: RawInputEventTyp
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean \| undefined | 是 | 启用或禁用事件直通。默认值为false。 |
-| eventType | [RawInputEventType](arkts-arkui-rawinputeventtype-e.md) | 是 | 原始输入事件的类型。 |
+| eventType | [RawInputEventType](arkts-arkui-enums-rawinputeventtype-e.md) | 是 | 原始输入事件的类型。 |
 
 ## enableSwipeBack
 
@@ -421,7 +421,7 @@ static getAllUIContexts(): UIContext[]
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)[] | An array containing all valid UIContext instances, returns an empty array if no contexts are available. |
 
 ## getAtomicServiceBar
 
@@ -445,7 +445,7 @@ getAtomicServiceBar(): Nullable<AtomicServiceBar>
 
 | 类型 | 说明 |
 | --- | --- |
-| [Nullable](arkts-arkui-nullable-t.md)&lt;AtomicServiceBar&gt; | The atomic service bar. |
+| [Nullable](arkts-arkui-nullable-t.md)&lt;[AtomicServiceBar](arkts-arkui-arkui-uicontext-atomicservicebar-i.md)&gt; | The atomic service bar. |
 
 ## getAttachedFrameNodeById
 
@@ -475,7 +475,7 @@ getAttachedFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The instance of FrameNode. |
+| FrameNode | The instance of FrameNode. |
 
 ## getCallingScopeUIContext
 
@@ -499,7 +499,7 @@ static getCallingScopeUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext for the current calling scope, or undefined if no context can be determined from the call stack. |
 
 ## getComponentSnapshot
 
@@ -679,7 +679,7 @@ getFilteredInspectorTree(filters?: Array<string>): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Unable to obtain current ui context. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) | Unable to obtain current ui context. |
 
 ## getFilteredInspectorTreeById
 
@@ -703,7 +703,7 @@ getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): s
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | string | 是 | [ID](arkts-arkui-common-commonmethod-i.md#id) of the target component. |
+| id | string | 是 | [ID](CommonMethod#id) of the target component. |
 | depth | int | 是 | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
 | filters | Array&lt;string&gt; | 否 | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
 
@@ -717,8 +717,8 @@ getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): s
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-参数错误) | Unable to obtain current ui context. |
-| [100024](../errorcode-node.md#100024-节点没有公共祖先节点) | The parameter depth must be greater than 0. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100023-参数错误) | Unable to obtain current ui context. |
+| [100024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100024-节点没有公共祖先节点) | The parameter depth must be greater than 0. |
 
 ## getFocusController
 
@@ -796,7 +796,7 @@ getFrameNodeById(id: string): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The instance of FrameNode. |
+| FrameNode | The instance of FrameNode. |
 
 ## getFrameNodeByUniqueId
 
@@ -826,7 +826,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
+| FrameNode | The FrameNode with the target uniqueId, or null if the frameNode is not existed. |
 
 ## getHostContext
 
@@ -850,7 +850,7 @@ getHostContext(): Context | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [Context](../arkts-components/arkts-arkui-context-t.md) |  |
+| [Context](arkts-arkui-context-t.md) |  |
 
 ## getId
 
@@ -922,7 +922,7 @@ static getLastFocusedUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last focused UI instance or undefined if no one exists. |
 
 ## getLastForegroundUIContext
 
@@ -946,7 +946,7 @@ static getLastForegroundUIContext(): UIContext | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../arkts-components/arkts-arkui-uicontext-t.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | The UIContext of the last foregrounded UI instance or undefined if no one exists |
 
 ## getMagnifier
 
@@ -1174,13 +1174,13 @@ getPageRootNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-t.md) | The root node of the corresponding page of the UIContext, or null if no root node exists. |
+| FrameNode | The root node of the corresponding page of the UIContext, or null if no root node exists. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [120007](../errorcode-uicontext.md#120007-实例不存在) | The UIContext is not available. |
+| [120007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#120007-实例不存在) | The UIContext is not available. |
 
 ## getPixelRoundMode
 
@@ -1204,7 +1204,7 @@ getPixelRoundMode(): PixelRoundMode
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | the mode of pixel round. |
+| [PixelRoundMode](arkts-arkui-enums-pixelroundmode-e.md) | the mode of pixel round. |
 
 ## getPromptAction
 
@@ -1276,7 +1276,7 @@ getSharedLocalStorage(): LocalStorage | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LocalStorage](arkts-arkui-localstorage-c.md) |  |
+| [LocalStorage](arkts-arkui-localstorage-localstorage-c.md) |  |
 
 ## getSmartGestureController
 
@@ -1396,7 +1396,7 @@ getWindowHeightBreakpoint(): HeightBreakpoint
 
 | 类型 | 说明 |
 | --- | --- |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | The height breakpoint of current window. |
+| [HeightBreakpoint](arkts-arkui-enums-heightbreakpoint-e.md) | The height breakpoint of current window. |
 
 ## getWindowId
 
@@ -1468,7 +1468,7 @@ getWindowWidthBreakpoint(): WidthBreakpoint
 
 | 类型 | 说明 |
 | --- | --- |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | The width breakpoint of current window. |
+| [WidthBreakpoint](arkts-arkui-enums-widthbreakpoint-e.md) | The width breakpoint of current window. |
 
 ## isAvailable
 
@@ -1564,8 +1564,8 @@ Defining keyframe animation function.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [KeyframeAnimateParam](../arkts-components/arkts-arkui-keyframeanimateparam-i.md) | 是 | overall animation parameters |
-| keyframes | Array&lt;[KeyframeState](../arkts-components/arkts-arkui-keyframestate-i.md)&gt; | 是 | all keyframe states |
+| param | [KeyframeAnimateParam](arkts-arkui-common-keyframeanimateparam-i.md) | 是 | overall animation parameters |
+| keyframes | Array&lt;[KeyframeState](arkts-arkui-common-keyframestate-i.md)&gt; | 是 | all keyframe states |
 
 ## lpx2px
 
@@ -1620,7 +1620,7 @@ Open the BindSheet.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | 是 | The content of BindSheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 否 | The options of sheet. |
+| sheetOptions | [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 否 | The options of sheet. |
 | targetId | int | 否 | The uniqueId of the FrameNode to which BindSheet is attached. &lt;br&gt;Value range:(0, +∞) |
 
 **返回值：**
@@ -1633,12 +1633,12 @@ Open the BindSheet.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120002](../errorcode-bindSheet.md#120002-内容节点对应半模态页面已存在) | The bindSheetContent already exists. |
-| [120005](../errorcode-bindSheet.md#120005-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
-| [120004](../errorcode-bindSheet.md#120004-指定的targetid不存在) | The targetId does not exist. |
-| [120006](../errorcode-bindSheet.md#120006-指定的targetid对应的节点并不是page节点或navdestination节点的子节点) | The node of targetId is not a child of the page node or NavDestination node. |
+| [120001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120002-内容节点对应半模态页面已存在) | The bindSheetContent already exists. |
+| [120005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120005-指定的targetid对应的节点未挂载在组件树上) | The node of targetId is not in the component tree. |
+| [120004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120004-指定的targetid不存在) | The targetId does not exist. |
+| [120006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120006-指定的targetid对应的节点并不是page节点或navdestination节点的子节点) | The node of targetId is not a child of the page node or NavDestination node. |
 
 ## postDelayedFrameCallback
 
@@ -1805,7 +1805,7 @@ removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-inputeventmonitor-i.md) | 是 | 监控标识对象（由addLocalInputEventMonitor返回）。 |
+| monitor | InputEventMonitor | 是 | 监控标识对象（由addLocalInputEventMonitor返回）。 |
 
 ## requireDynamicSyncScene
 
@@ -1835,7 +1835,7 @@ Require DynamicSyncScene by id.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;DynamicSyncScene&gt; | The instance of SwiperDynamicSyncScene. |
+| Array&lt;[DynamicSyncScene](arkts-arkui-arkui-uicontext-dynamicsyncscene-c.md)&gt; | The instance of SwiperDynamicSyncScene. |
 
 ## resolveUIContext
 
@@ -2033,7 +2033,7 @@ setPixelRoundMode(mode: PixelRoundMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mode | [PixelRoundMode](arkts-arkui-pixelroundmode-e.md) | 是 | The mode of pixel round. |
+| mode | [PixelRoundMode](arkts-arkui-enums-pixelroundmode-e.md) | 是 | The mode of pixel round. |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -2065,9 +2065,9 @@ static setResourceManagerCacheMaxCountForHSP(count: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100101](../errorcode-uicontext.md#100101-小于0的非法值) | The parameter is less than 0. |
-| [100103](../errorcode-uicontext.md#100103-调用线程错误) | The function cannot be called from a non-main thread. @static |
-| [100102](../errorcode-uicontext.md#100102-参数类型错误) | The parameter value cannot be a floating-point number. |
+| [100101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#100101-小于0的非法值) | The parameter is less than 0. |
+| [100103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#100103-调用线程错误) | The function cannot be called from a non-main thread. @static |
+| [100102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-uicontext.md#100102-参数类型错误) | The parameter value cannot be a floating-point number. |
 
 ## setTextSelectionClearPolicy
 
@@ -2139,7 +2139,7 @@ actionSheet display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ActionSheetOptions](arkts-arkui-actionsheetoptions-i.md) | 是 | Options. |
+| value | [ActionSheetOptions](arkts-arkui-actionsheet-actionsheetoptions-i.md) | 是 | Options. |
 
 ## showAlertDialog
 
@@ -2163,7 +2163,7 @@ alertDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialogparamwithconfirm-i.md) \| AlertDialogParamWithButtons \| AlertDialogParamWithOptions | 是 | Options. |
+| options | [AlertDialogParamWithConfirm](arkts-arkui-alertdialog-alertdialogparamwithconfirm-i.md) \| [AlertDialogParamWithButtons](arkts-arkui-alertdialog-alertdialogparamwithbuttons-i.md) \| [AlertDialogParamWithOptions](arkts-arkui-alertdialog-alertdialogparamwithoptions-i.md) | 是 | Options. |
 
 ## showDatePickerDialog
 
@@ -2187,7 +2187,7 @@ datePickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DatePickerDialogOptions](../arkts-components/arkts-arkui-datepickerdialogoptions-i.md) | 是 | Options. |
+| options | [DatePickerDialogOptions](arkts-arkui-datepicker-datepickerdialogoptions-i.md) | 是 | Options. |
 
 ## showTextPickerDialog
 
@@ -2211,7 +2211,7 @@ textPickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [TextPickerDialogOptions](../arkts-components/arkts-arkui-textpickerdialogoptions-i.md) \| TextPickerDialogOptionsExt | 是 | Dialog style. |
+| style | [TextPickerDialogOptions](arkts-arkui-textpicker-textpickerdialogoptions-i.md) \| TextPickerDialogOptionsExt | 是 | Dialog style. |
 
 ## showTimePickerDialog
 
@@ -2235,7 +2235,7 @@ timePickerDialog display.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TimePickerDialogOptions](../arkts-components/arkts-arkui-timepickerdialogoptions-i.md) | 是 | Options. |
+| options | [TimePickerDialogOptions](arkts-arkui-timepicker-timepickerdialogoptions-i.md) | 是 | Options. |
 
 ## unbindTabsFromNestedScrollable
 
@@ -2259,9 +2259,9 @@ Unbind tabs from nested scrollable container components.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 | The controller of the tabs. |
-| parentScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | The controller of the parent scrollable container component. |
-| childScroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | The controller of the child scrollable container component. |
+| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 | The controller of the tabs. |
+| parentScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 | The controller of the parent scrollable container component. |
+| childScroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 | The controller of the child scrollable container component. |
 
 ## unbindTabsFromScrollable
 
@@ -2285,8 +2285,8 @@ Unbind tabs from scrollable container component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tabsController | [TabsController](../arkts-components/arkts-arkui-tabscontroller-c.md) | 是 | The controller of the tabs. |
-| scroller | [Scroller](../arkts-components/arkts-arkui-scroller-c.md) | 是 | The controller of the scrollable container component. |
+| tabsController | [TabsController](arkts-arkui-tabs-tabscontroller-c.md) | 是 | The controller of the tabs. |
+| scroller | [Scroller](arkts-arkui-scroll-scroller-c.md) | 是 | The controller of the scrollable container component. |
 
 ## updateBindSheet
 
@@ -2311,7 +2311,7 @@ Update the BindSheet with sheetOptions.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContentBase](arkts-arkui-componentcontent-componentcontentbase-c.md) | 是 | The content of BindSheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-sheetoptions-i.md) | 是 | The update options of sheet. |
+| sheetOptions | [SheetOptions](arkts-arkui-common-sheetoptions-i.md) | 是 | The update options of sheet. |
 | partialUpdate | boolean | 否 | If true, only the specified properties in the sheetOptions are updated, otherwise the rest of the properties are overwritten with the default values. Default value is false. |
 
 **返回值：**
@@ -2324,9 +2324,9 @@ Update the BindSheet with sheetOptions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [120001](../errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [120003](../errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) | The bindSheetContent cannot be found. |
+| [120001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120001-内容节点对应半模态页面错误) | The bindSheetContent is incorrect. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [120003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-bindSheet.md#120003-无法找到内容节点对应的半模态页面) | The bindSheetContent cannot be found. |
 
 ## vp2px
 

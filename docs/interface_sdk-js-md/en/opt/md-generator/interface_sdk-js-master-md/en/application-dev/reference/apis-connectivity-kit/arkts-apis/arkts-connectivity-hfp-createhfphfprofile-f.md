@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from 'kits/@kit.ConnectivityKit';
+import { hfp } from '@kit.ConnectivityKit';
 ```
 
 ## createHfpHfProfile
@@ -32,4 +32,4 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |

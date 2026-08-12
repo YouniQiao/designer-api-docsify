@@ -4,13 +4,13 @@ The **Router** module provides APIs to access pages through URIs.
  > **NOTE**
  >
  > - The APIs of this module are no longer maintained since API version 8. You are advised to use
- > [@ohos.router](arkts-router.md) instead.
+ > [@ohos.router](arkts-router.md#router) instead.
 
 
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

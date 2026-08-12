@@ -11,7 +11,7 @@ Defines ChipV2 options interface.
 ## Modules to Import
 
 ```TypeScript
-import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig, IChipV2OptionsConfig, ChipV2SymbolIcon, ChipV2SuffixImageIconConfig, ChipV2LocalizedLabelMarginConfig, ChipV2SymbolIconConfig, ChipV2LabelConfig, ChipV2SuffixSymbolIcon, ChipV2AccessibilityConfig, ChipV2Icon, ChipV2Size, ChipV2CloseConfig, ChipV2SuffixImageIcon, ChipV2Accessibility, ChipV2Options, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2PrefixImageIcon, ChipV2LabelMarginConfig, ChipV2PrefixSymbolIcon, ChipV2, ChipV2CloseIcon, ChipV2PrefixImageIconConfig, ChipV2AccessibilitySelectedType } from 'kits/@kit.ArkUI';
+import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig, IChipV2OptionsConfig, ChipV2SymbolIcon, ChipV2SuffixImageIconConfig, ChipV2LocalizedLabelMarginConfig, ChipV2SymbolIconConfig, ChipV2LabelConfig, ChipV2SuffixSymbolIcon, ChipV2AccessibilityConfig, ChipV2Icon, ChipV2Size, ChipV2CloseConfig, ChipV2SuffixImageIcon, ChipV2Accessibility, ChipV2Options, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2PrefixImageIcon, ChipV2LabelMarginConfig, ChipV2PrefixSymbolIcon, ChipV2, ChipV2CloseIcon, ChipV2PrefixImageIconConfig, ChipV2AccessibilitySelectedType } from '@kit.ArkUI';
 ```
 
 ## onClose
@@ -120,7 +120,7 @@ activatedBackgroundColor?: ColorMetrics
 
 Chip background color when chip is activated.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 26.0.0
 
@@ -180,7 +180,7 @@ backgroundColor?: ColorMetrics
 
 Chip background color.
 
-**Type:** [ColorMetrics](arkts-arkui-colormetrics-t.md)
+**Type:** ColorMetrics
 
 **Since:** 26.0.0
 
@@ -220,7 +220,7 @@ borderRadius?: LengthMetrics
 
 Chip radius.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 26.0.0
 
@@ -260,7 +260,7 @@ direction?: Direction
 
 Indicates the attribute of the current chip direction.
 
-**Type:** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**Type:** Direction
 
 **Since:** 26.0.0
 
@@ -300,7 +300,7 @@ fontSize?: LengthMetrics
 
 Set font size for the label text and the close icon.
 
-**Type:** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**Type:** LengthMetrics
 
 **Since:** 26.0.0
 
@@ -380,7 +380,7 @@ onClicked?: Callback<void>
 
 On clicked action.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 26.0.0
 
@@ -440,7 +440,7 @@ size?: ChipV2Size | SizeT<LengthMetrics>
 
 Chip size.
 
-**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;[LengthMetrics](arkts-arkui-lengthmetrics-t.md)&gt;
+**Type:** [ChipV2Size](arkts-arkui-arkui-advanced-chipv2-chipv2size-e.md) \| SizeT&lt;LengthMetrics&gt;
 
 **Since:** 26.0.0
 

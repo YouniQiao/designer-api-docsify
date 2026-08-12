@@ -6,7 +6,7 @@
 function enable(isEnable: boolean): void
 ```
 
-ʹ��ArkTS����й©��⣬Ĭ�Ϲرա���������ռ�й©��Ϣ�������������ܿ�����
+使能ArkTS对象泄漏检测，默认关闭。开启后会收集泄漏信息，可能增加性能开销。
 
 **起始版本：** 12
 
@@ -20,7 +20,7 @@ function enable(isEnable: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnable | boolean | 是 | �Ƿ�ʹ��jsLeakWatcher��true��ʹ��jsLeakWatcher��false����ʹ��jsLeakWatcher�� |
+| isEnable | boolean | 是 | 是否使能jsLeakWatcher。true：使能jsLeakWatcher；false：不使能jsLeakWatcher。 |
 
 ## 示例
 

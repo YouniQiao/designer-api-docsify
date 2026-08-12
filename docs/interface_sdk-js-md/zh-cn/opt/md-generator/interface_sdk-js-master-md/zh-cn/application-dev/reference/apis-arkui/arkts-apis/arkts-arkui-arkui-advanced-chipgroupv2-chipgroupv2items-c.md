@@ -1,6 +1,6 @@
 # ChipGroupV2Items
 
-ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md)&gt;。
+ChipGroupV2Items定义了ChipGroupV2项的数组类，继承自Array&lt;[ChipGroupV2Item](arkts-arkui-arkui-advanced-chipgroupv2-chipgroupv2item-c.md#ChipGroupV2Item)&gt;。
 
 **继承/实现关系：** ChipGroupV2Items extends [Array<ChipGroupV2Item>](Array<ChipGroupV2Item>)
 

@@ -1,6 +1,6 @@
 # TextDataDetectorConfig
 
-This configuration is only available for the [Text](../../apis-arkgraphics2d/arkts-apis/arkts-graphics-text.md/arkts-graphics-text.md) and [RichEditor](./rich_editor) components.
+This configuration is only available for the [Text](./text) and [RichEditor](./rich_editor) components.
 
 **Since:** 11
 
@@ -96,7 +96,7 @@ onDetectResultUpdate?: Callback<string>
 
 Callback invoked when text recognition succeeds.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**Type:** Callback&lt;string&gt;
 
 **Since:** 11
 

@@ -1,6 +1,6 @@
 # FileSelectorParam
 
-Encompassed message information as parameters to {@link onFileSelectorShow} method.
+Encompassed message information as parameters to [onFileSelectorShow](onFileSelectorShow) method.
 
 **Since:** 9
 
@@ -72,7 +72,7 @@ Gets an array of selected types for web page files.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Array&lt;AcceptableFileType&gt;&gt; | Return an array of selected types for web page files. |
+| Array&lt;Array&lt;[AcceptableFileType](arkts-arkweb-acceptablefiletype-i.md)&gt;&gt; | Return an array of selected types for web page files. |
 
 ## getDefaultPath
 

@@ -11,7 +11,7 @@ Describes the notification information about the change of an album.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumChangeDatas
@@ -22,7 +22,7 @@ albumChangeDatas: AlbumChangeData[] | null
 
 Array of changed albums. If all albums need to be queried again, **albumChangeDatas** is null.
 
-**Type:** AlbumChangeData[] \| null
+**Type:** [AlbumChangeData](arkts-medialibrary-photoaccesshelper-albumchangedata-i.md)[] \| null
 
 **Since:** 20
 

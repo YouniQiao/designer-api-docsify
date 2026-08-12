@@ -11,7 +11,7 @@ Provides the information contained in **RouterPageInfo**, returned by the system
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -122,7 +122,7 @@ size?: Size
 
 Size of the router page, in vp.
 
-**Type:** [Size](../arkts-components/arkts-arkui-size-i.md)
+**Type:** Size
 
 **Since:** 23
 

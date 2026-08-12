@@ -34,7 +34,7 @@ getColorSpaceName(): ColorSpace
 
 | 错误码ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 
@@ -72,7 +72,7 @@ getGamma(): number
 
 | 错误码ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 
@@ -104,13 +104,13 @@ getWhitePoint(): Array<number>
 
 | 类型 |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 

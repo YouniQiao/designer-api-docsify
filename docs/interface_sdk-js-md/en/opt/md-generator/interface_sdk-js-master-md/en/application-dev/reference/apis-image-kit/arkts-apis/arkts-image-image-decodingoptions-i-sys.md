@@ -11,7 +11,7 @@ Describes the image decoding options.
 ## Modules to Import
 
 ```TypeScript
-import { image } from 'kits/@kit.ImageKit';
+import { image } from '@kit.ImageKit';
 ```
 
 ## resolutionQuality
@@ -22,7 +22,7 @@ resolutionQuality?: ResolutionQuality
 
 Image quality.
 
-**Type:** [ResolutionQuality](../../apis-arkui/arkts-components/arkts-arkui-resolutionquality-t-sys.md)
+**Type:** ResolutionQuality
 
 **Since:** 12
 

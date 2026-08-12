@@ -28,7 +28,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;boolean&gt; | A new Array Iterator object. |
+| IterableIterator&lt;boolean&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -59,7 +59,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;byte&gt; | A new Array Iterator object. |
+| IterableIterator&lt;byte&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -90,7 +90,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;short&gt; | A new Array Iterator object. |
+| IterableIterator&lt;short&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -121,7 +121,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;int&gt; | A new Array Iterator object. |
+| IterableIterator&lt;int&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -152,7 +152,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;long&gt; | A new Array Iterator object. |
+| IterableIterator&lt;long&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -183,7 +183,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;float&gt; | A new Array Iterator object. |
+| IterableIterator&lt;float&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -214,7 +214,7 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;double&gt; | A new Array Iterator object. |
+| IterableIterator&lt;double&gt; | A new Array Iterator object. |
 
 
 ## values
@@ -245,5 +245,5 @@ Returns a new Array Iterator object that contains the values for each index in t
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](arkts-arkts-iterator-iterableiterator-i.md)&lt;char&gt; | A new Array Iterator object. |
+| IterableIterator&lt;char&gt; | A new Array Iterator object. |
 

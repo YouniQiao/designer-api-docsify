@@ -2,7 +2,7 @@
 
 MultiNavPathStack is used for storing pages when shown as split mode.
 
-**Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](arkts-arkui-navigation-navpathstack-c.md)
+**Inheritance/Implementation:** MultiNavPathStack extends [NavPathStack](NavPathStack)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ MultiNavPathStack is used for storing pages when shown as split mode.
 ## Modules to Import
 
 ```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from 'kits/@kit.ArkUI';
+import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
 ```
 
 ## clear
@@ -307,7 +307,7 @@ Pop the top NavDestination of the stack. When keepBottomPage sets true, the page
 
 | Type | Description |
 | --- | --- |
-| [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
+| NavPathInfo | Returns the top NavPathInfo if the stack is not empty, otherwise returns undefined. |
 
 ## popToIndex
 
@@ -445,7 +445,7 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
+| info | NavPathInfo | Yes | Indicates the NavDestination to be pushed. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
@@ -471,8 +471,8 @@ Pushes the NavDestination into the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the NavDestination to be pushed. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
+| info | NavPathInfo | Yes | Indicates the NavDestination to be pushed. |
+| options | NavigationOptions | No | Indicates options of stack operation. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
 ## pushPathByName
@@ -527,7 +527,7 @@ Pushes the NavDestination of specified name into the stack.
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of the NavDestination to be pushed. |
 | param | Object | Yes | Indicates the detailed parameter of the NavDestination to be pushed. |
-| onPop | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[PopInfo](../arkts-components/arkts-arkui-popinfo-i.md)&gt; | No | The callback when next page returns. |
+| onPop | Callback&lt;PopInfo&gt; | No | The callback when next page returns. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 | policy | [SplitPolicy](arkts-arkui-arkui-advanced-multinavigation-splitpolicy-e.md) | No | SplitPolicy of the NavDestination which is currently pushed in stack. Default splitPolicy is DETAIL_PAGE. |
 
@@ -613,7 +613,7 @@ Replace the current NavDestination with the one specificed by NavPathInfo.The cu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
+| info | NavPathInfo | Yes | Indicates the new NavDestination in top of the stack. |
 | animated | boolean | No | Indicates whether the transition is animated. |
 
 ## replacePath
@@ -638,8 +638,8 @@ Replace the current NavDestination with the one specificed by NavPathInfo.The cu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | Indicates the new NavDestination in top of the stack. |
-| options | [NavigationOptions](../arkts-components/arkts-arkui-navigationoptions-i.md) | No | Indicates options of stack operation. |
+| info | NavPathInfo | Yes | Indicates the new NavDestination in top of the stack. |
+| options | NavigationOptions | No | Indicates options of stack operation. |
 
 ## replacePathByName
 
@@ -714,7 +714,7 @@ Set placeholder NavDestination.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [NavPathInfo](../arkts-components/arkts-arkui-navpathinfo-c.md) | Yes | info of placeHolder NavDestination. |
+| info | NavPathInfo | Yes | info of placeHolder NavDestination. |
 
 ## size
 

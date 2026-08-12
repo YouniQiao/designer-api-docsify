@@ -20,8 +20,8 @@ Embed = 0
 
 整体容器大小不变时，显示侧边栏会导致内容区缩小，隐藏侧边栏会扩大内容区。
 
-组件尺寸小于[minContentWidth](SideBarContainerAttribute.minContentWidth) +   
-[minSideBarWidth](SideBarContainerAttribute.minSideBarWidth)，并且未设置showSideBar时，侧边栏自动隐藏。
+组件尺寸小于[minContentWidth](arkts-arkui-sidebar-sidebarcontainerattribute-i.md#minContentWidth) +   
+[minSideBarWidth](arkts-arkui-sidebar-sidebarcontainerattribute-i.md#minSideBarWidth)，并且未设置showSideBar时，侧边栏自动隐藏。
 
 未设置minSideBarWidth或者minContentWidth采用未设置接口的默认值进行计算。
 

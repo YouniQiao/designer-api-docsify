@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from 'kits/@kit.BasicServicesKit';
+import { zlib } from '@kit.BasicServicesKit';
 ```
 
 ## createChecksum
@@ -26,7 +26,7 @@ Creates this checksum object. This API uses a promise to return the result.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Checksum&gt; |
+| Promise&lt;[Checksum](arkts-basicservices-zlib-checksum-i.md)&gt; |
 
 ## Examples
 

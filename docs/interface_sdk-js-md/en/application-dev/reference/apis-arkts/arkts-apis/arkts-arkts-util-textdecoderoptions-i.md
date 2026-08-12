@@ -13,7 +13,7 @@ Defines the TextDecoder related options parameters.
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## fatal

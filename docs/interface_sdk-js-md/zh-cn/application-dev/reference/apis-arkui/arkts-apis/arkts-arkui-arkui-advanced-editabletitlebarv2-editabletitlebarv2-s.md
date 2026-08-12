@@ -9,8 +9,8 @@
 > 
 > - 该组件仅可在Stage模型下使用。
 > 
-> - 如果EditableTitleBarV2设置[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)和
-> [通用事件](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
+> - 如果EditableTitleBarV2设置[通用属性](./@internal/component/ets/common)和
+> [通用事件](./@internal/component/ets/common)，编译工具链会额外生成节点__Common__，并将通用属性或通用事件挂载在__Common__上，而不是直接应用到
 > EditableTitleBarV2本身。这可能导致开发者设置的通用属性或通用事件不生效或不符合预期，因此，不建议EditableTitleBarV2设置通用属性和通用事件。
 
 **起始版本：** 26.0.0
@@ -105,7 +105,7 @@ menuItems?: Array<EditableTitleBarMenuItemV2>
 
 默认值：undefined。
 
-**类型：** Array&lt;EditableTitleBarMenuItemV2&gt;
+**类型：** Array&lt;[EditableTitleBarMenuItemV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2-c.md)&gt;
 
 **起始版本：** 26.0.0
 
@@ -177,7 +177,7 @@ title: ResourceStr | EditableTitleV2
 
 默认值：new EditableTitleV2()，表示标题内容为空。
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| EditableTitleV2
+**类型：** ResourceStr \| [EditableTitleV2](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlev2-c.md)
 
 **起始版本：** 26.0.0
 

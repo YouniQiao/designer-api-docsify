@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scan } from 'kits/@kit.ConnectivityKit';
+import { scan } from '@kit.ConnectivityKit';
 ```
 
 ## startScan
@@ -30,8 +30,8 @@ Starts scanning for specified NearLink devices with filters.It is allowed to set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | ScanFilters[] \| null | Yes | The list of filters and this parameter is mandatory. If you do not want to use filter, set this parameter to {@code null}. If you want to use filter, at least one filter should be set. |
-| options | [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md) | No | The parameters for scanning, and the low power mode is used by default. |
+| filters | [ScanFilters](arkts-connectivity-scan-scanfilters-i.md)[] \| null | Yes | The list of filters and this parameter is mandatory. If you do not want to use filter, set this parameter to {@code null}. If you want to use filter, at least one filter should be set. |
+| options | ScanOptions | No | The parameters for scanning, and the low power mode is used by default. |
 
 **Return value:**
 
@@ -43,10 +43,10 @@ Starts scanning for specified NearLink devices with filters.It is allowed to set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the chip does not support it. |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 36100042 | Empty array. |
 | 36100040 | Integer out of range. |
 | 36100041 | Invalid address. |

@@ -34,5 +34,5 @@ Initialize FlowItem FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |  |
+| FlowItemAttribute |  |
 

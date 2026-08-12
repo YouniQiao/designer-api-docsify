@@ -13,7 +13,7 @@ Defines the lazy vertical waterflow layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from 'kits/@kit.ArkUI';
+import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
 ```
 
 ## columnsTemplate
@@ -38,7 +38,7 @@ This parameter specifies the number of columns in the current waterflow layout.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | string \| ItemFillPolicy \| undefined | Yes |
+| value | string \| [ItemFillPolicy](arkts-arkui-itemfillpolicy-i.md) \| undefined | Yes |
 
 **Return value:**
 

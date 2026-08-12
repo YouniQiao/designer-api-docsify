@@ -11,13 +11,13 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 > 
 > The following path-related APIs apply only to paths created within
 > **OffscreenCanvasRenderingContext2D** and do not affect paths defined in
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md)
-> or [Path2D](arkts-arkui-path2d-c.md):
+> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
+> or [Path2D](arkts-arkui-path2d-c.md#Path2D):
 > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
 > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
 > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
 
-**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
 **Since:** 8
 
@@ -53,7 +53,7 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
 | height | number | Yes | Height of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
-| settings | [RenderingContextSettings](../arkts-apis/arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.&lt;br&gt;The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.&lt;br&gt;The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null |
 
 ## constructor
 
@@ -83,8 +83,8 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 | --- | --- | --- | --- |
 | width | number | Yes | Width of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
 | height | number | Yes | Height of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
-| settings | [RenderingContextSettings](../arkts-apis/arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.&lt;br&gt;The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.&lt;br&gt; Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.&lt;br&gt;The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null |
+| unit | LengthMetricsUnit | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.&lt;br&gt; Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
 
 ## toDataURL
 
@@ -143,5 +143,5 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 
 | Type | Description |
 | --- | --- |
-| [ImageBitmap](../arkts-apis/arkts-arkui-canvas-imagebitmap-c.md) | Pixel data rendered on the offscreen canvas. |
+| [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Pixel data rendered on the offscreen canvas. |
 

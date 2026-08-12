@@ -20,10 +20,10 @@ type OnCreateMenuCallback = (menuItems: Array<TextMenuItem>) => Array<TextMenuIt
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | 是 |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Array&lt;TextMenuItem&gt; |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; |

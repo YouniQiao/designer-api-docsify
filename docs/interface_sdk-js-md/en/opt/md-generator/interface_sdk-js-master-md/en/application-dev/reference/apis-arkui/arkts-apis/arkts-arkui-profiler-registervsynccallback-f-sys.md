@@ -20,4 +20,4 @@ Registers vsync callback for profiler.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | (info: string) =&gt; void | Yes |
+| callback | (info: string) = & gt; void | Yes |

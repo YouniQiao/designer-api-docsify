@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## createQuaternion
@@ -18,7 +18,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)(rotationVector:
+**Substitutes:** [getQuaternion](sensor.getQuaternion(rotationVector:)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -28,7 +28,7 @@ Converts a rotation vector into a quaternion. This API uses an asynchronous call
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes |
+| rotationVector | Array & lt;number & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes |
 
 ## Examples
@@ -62,7 +62,7 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getQuaternion](arkts-sensorservice-sensor-getquaternion-f.md#getquaternion)(rotationVector:
+**Substitutes:** [getQuaternion](sensor.getQuaternion(rotationVector:)
 
 <!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createQuaternion(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
@@ -72,13 +72,13 @@ Converts a rotation vector into a quaternion. This API uses a promise to return 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | Yes |
+| rotationVector | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 ## Examples
 

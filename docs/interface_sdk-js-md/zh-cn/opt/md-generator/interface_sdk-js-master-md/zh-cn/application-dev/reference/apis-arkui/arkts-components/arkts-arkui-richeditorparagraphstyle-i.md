@@ -17,7 +17,7 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 设置文本段落缩进，当段落仅存在ImageSpan或BuilderSpan时，此属性值不生效。参数为Dimension类型时，不支持以Percentage形式设置，默认单位为vp。默认值：{"size":  
 ["0.00px","0.00px"]}
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| LeadingMarginPlaceholder
+**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **起始版本：** 11
 
@@ -89,8 +89,8 @@ shaderStyle?: ShaderStyle
 
 默认值：undefined，不设置着色器效果。
 
-该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md)的fontColor。
+该接口与[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
+[RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md#RichEditorTextStyle)的fontColor。
 
 **类型：** [ShaderStyle](../arkts-apis/arkts-arkui-shaderstyle-c.md)
 
@@ -112,7 +112,7 @@ textAlign?: TextAlign
 
 设置文本段落在水平方向的对齐方式。默认值：TextAlign.START
 
-**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **起始版本：** 11
 
@@ -134,7 +134,7 @@ textDirection?: TextDirection
 
 默认值：TextDirection.DEFAULT
 
-**类型：** [TextDirection](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdirection-e.md)
+**类型：** TextDirection
 
 **起始版本：** 23
 
@@ -156,7 +156,7 @@ textVerticalAlign?: TextVerticalAlign
 
 默认值：TextVerticalAlign.BASELINE
 
-**类型：** [TextVerticalAlign](../arkts-apis/arkts-arkui-textverticalalign-e.md)
+**类型：** TextVerticalAlign
 
 **起始版本：** 20
 
@@ -178,7 +178,7 @@ wordBreak?: WordBreak
 
 默认值：WordBreak.BREAK_WORD。
 
-**类型：** [WordBreak](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-wordbreak-e.md)
+**类型：** WordBreak
 
 **起始版本：** 12
 

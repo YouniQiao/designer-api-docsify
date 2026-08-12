@@ -14,7 +14,7 @@ function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): 
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimodalInput.inputDevice#getDeviceInfo
+**替代接口：** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
 
 <!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
 
@@ -25,7 +25,7 @@ function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | deviceId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;InputDeviceData&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -69,7 +69,7 @@ function getDevice(deviceId: number): Promise<InputDeviceData>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.multimodalInput.inputDevice#getDeviceInfo
+**替代接口：** [getDeviceInfo](ohos.multimodalInput.inputDevice#getDeviceInfo)
 
 <!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
 
@@ -85,7 +85,7 @@ function getDevice(deviceId: number): Promise<InputDeviceData>
 
 | 类型 |
 | --- |
-| Promise&lt;InputDeviceData&gt; |
+| Promise&lt;[InputDeviceData](arkts-input-inputdevice-inputdevicedata-i.md)&gt; |
 
 ## 示例
 

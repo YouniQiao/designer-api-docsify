@@ -2,9 +2,9 @@
 
 TimeOptions定义时间选择器的选项。
 
-继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)。
+继承于[CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)。
 
-**继承/实现关系：** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md)
+**继承/实现关系：** TimeOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
 
 **起始版本：** 26.0.0
 

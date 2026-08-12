@@ -54,7 +54,7 @@ paramItems?: Array<NativeEmbedParamItem>
 
 The param element array
 
-**类型：** Array&lt;NativeEmbedParamItem&gt;
+**类型：** Array&lt;[NativeEmbedParamItem](arkts-arkweb-web-nativeembedparamitem-i.md)&gt;
 
 **起始版本：** 23
 

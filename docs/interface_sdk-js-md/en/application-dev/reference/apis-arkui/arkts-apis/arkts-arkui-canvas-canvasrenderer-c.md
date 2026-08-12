@@ -2,7 +2,7 @@
 
 Canvas renderer for drawing shapes, text, images and other objects
 
-**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](../arkts-components/arkts-arkui-canvaspath-c.md/arkts-arkui-canvaspath-c.md)
+**Inheritance/Implementation:** CanvasRenderer extends [CanvasPath](arkts-arkui-canvas-canvaspath-c.md#CanvasPath)
 
 **Since:** 23
 
@@ -79,7 +79,7 @@ Sets the currently created path as the current clipping path
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see {@link CanvasFillRule}. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#CanvasFillRule). |
 
 ## clip
 
@@ -103,8 +103,8 @@ Tailoring according to the specified path
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | Path to be cut. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see {@link CanvasFillRule}. |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Path to be cut. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#CanvasFillRule). |
 
 ## createConicGradient
 
@@ -136,7 +136,7 @@ Creates a gradient around a point with given coordinates.
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) | A CanvasGradient object that draws a conic gradient around the given coordinates. |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) | A CanvasGradient object that draws a conic gradient around the given coordinates. |
 
 ## createImageData
 
@@ -167,7 +167,7 @@ Creates a new, empty ImageData object of the specified size
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |  |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) |  |
 
 ## createImageData
 
@@ -191,13 +191,13 @@ From an existing ImageData object, copy an object with the same width and height
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object to be copied. |
+| imageData | [ImageData](arkts-arkui-canvas-imagedata-c.md) | Yes | ImageData object to be copied. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |  |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) |  |
 
 ## createLinearGradient
 
@@ -230,7 +230,7 @@ Creates a linear gradient object that is specified along the parameter coordinat
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) |  |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) |  |
 
 ## createPattern
 
@@ -261,7 +261,7 @@ Creates a template object using the specified image
 
 | Type | Description |
 | --- | --- |
-| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md) |  |
+| [CanvasPattern](arkts-arkui-canvas-canvaspattern-i.md) |  |
 
 ## createRadialGradient
 
@@ -296,7 +296,7 @@ Creates a radioactive gradient object based on parameters that determine the coo
 
 | Type | Description |
 | --- | --- |
-| [CanvasGradient](../arkts-components/arkts-arkui-canvasgradient-c.md) |  |
+| [CanvasGradient](arkts-arkui-canvas-canvasgradient-c.md) |  |
 
 ## drawImage
 
@@ -320,7 +320,7 @@ Draw an image on a canvas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | Yes | Picture objects drawn to the canvas. |
+| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | Picture objects drawn to the canvas. |
 | dx | double | Yes | x-axis coordinate of the upper left corner of the image on the target canvas. |
 | dy | double | Yes | y-axis coordinate of the upper left corner of the image on the target canvas. |
 
@@ -346,7 +346,7 @@ Draw an image on a canvas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | Yes | Picture objects drawn to the canvas. |
+| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | Picture objects drawn to the canvas. |
 | dx | double | Yes | x-axis coordinate of the upper left corner of the image on the target canvas. |
 | dy | double | Yes | y-axis coordinate of the upper left corner of the image on the target canvas. |
 | dw | double | Yes | Specifies the drawing width of the image on the target canvas. The width of the drawn image will be scaled. |
@@ -375,7 +375,7 @@ Draw an image on a canvas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| PixelMap | Yes | Picture objects drawn to the canvas. |
+| image | [ImageBitmap](arkts-arkui-canvas-imagebitmap-c.md) \| [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | Yes | Picture objects drawn to the canvas. |
 | sx | double | Yes | x coordinate of the upper left corner of the rectangle (cropping) selection box of the image. |
 | sy | double | Yes | y coordinate of the upper left corner of the rectangle (cropping) selection box of the image. |
 | sw | double | Yes | Width of the rectangle (cropping) selection box of the image. |
@@ -407,7 +407,7 @@ Fills existing paths according to the current fill style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see {@link CanvasFillRule}. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#CanvasFillRule). |
 
 ## fill
 
@@ -431,8 +431,8 @@ Fills the specified path according to the current fill style
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | Yes | Path to be filled. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see {@link CanvasFillRule}. |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | Yes | Path to be filled. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Algorithm rule. For details, see [CanvasFillRule](arkts-arkui-canvasfillrule-t.md#CanvasFillRule). |
 
 ## fillRect
 
@@ -519,7 +519,7 @@ Obtains the pixel data of a specified area on the current canvas.
 
 | Type | Description |
 | --- | --- |
-| [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) |  |
+| [ImageData](arkts-arkui-canvas-imagedata-c.md) |  |
 
 ## getLineDash
 
@@ -608,7 +608,7 @@ Obtains the currently applied transformation matrix.
 measureText(text: string): TextMetrics
 ```
 
-Measure the size of a specified text. For details about the return value, see {@link TextMetrics}.
+Measure the size of a specified text. For details about the return value, see [TextMetrics](arkts-arkui-canvas-textmetrics-i.md#TextMetrics).
 
 **Since:** 23
 
@@ -654,7 +654,7 @@ Draws the specified ImageData object onto the canvas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object to be drawn. |
+| imageData | [ImageData](arkts-arkui-canvas-imagedata-c.md) | Yes | ImageData object to be drawn. |
 | dx | double \| string | Yes | Position offset of the source image data in the target canvas (the offset in the x-axis direction). |
 | dy | double \| string | Yes | Position offset of the source image data in the target canvas (the offset in the y-axis direction). |
 
@@ -681,7 +681,7 @@ Draws the specified ImageData object onto the canvas
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](../arkts-components/arkts-arkui-imagedata-c.md) | Yes | ImageData object to be drawn. |
+| imageData | [ImageData](arkts-arkui-canvas-imagedata-c.md) | Yes | ImageData object to be drawn. |
 | dx | double \| string | Yes | Position offset of the source image data in the target canvas (the offset in the x-axis direction). |
 | dy | double \| string | Yes | Position offset of the source image data in the target canvas (the offset in the y-axis direction). |
 | dirtyX | double \| string | Yes | Position of the upper left corner of the rectangular area in the source image data. The default is the upper left corner (x coordinate) of the entire image data. |
@@ -945,7 +945,7 @@ The 2D transformation effect is added. The current transformation matrix is not 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 2D transformation matrix. For details, see {@link Matrix2D}. |
+| transform | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | 2D transformation matrix. For details, see [Matrix2D](Matrix2D). |
 
 ## stroke
 
@@ -969,7 +969,7 @@ Draws the specified path according to the current stroke style
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-viewmodel-path2d-i.md) | No | Specified stroke path object |
+| path | [Path2D](arkts-arkui-canvas-path2d-c.md) | No | Specified stroke path object |
 
 ## strokeRect
 
@@ -1129,7 +1129,7 @@ Set the status whether anti-aliasing is enabled for canvas. The value true indic
 set direction(direction: CanvasDirection)
 ```
 
-Set the text drawing direction. For details, see {@link CanvasDirection}.
+Set the text drawing direction. For details, see [CanvasDirection](arkts-arkui-canvasdirection-t.md#CanvasDirection).
 
 **Type:** [CanvasDirection](arkts-arkui-canvasdirection-t.md)
 
@@ -1269,9 +1269,9 @@ Set the status whether to smooth the image. The value true indicates that the im
 set imageSmoothingQuality(imageSmoothingQuality: ImageSmoothingQuality)
 ```
 
-Set the smoothness level of the current image. For details, see {@link ImageSmoothingQuality}.
+Set the smoothness level of the current image. For details, see [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md#ImageSmoothingQuality).
 
-**Type:** [ImageSmoothingQuality](../arkts-components/arkts-arkui-imagesmoothingquality-t.md)
+**Type:** [ImageSmoothingQuality](arkts-arkui-imagesmoothingquality-t.md)
 
 **Since:** 23
 
@@ -1309,7 +1309,7 @@ Set spacing for letter.
 set lineCap(lineCap: CanvasLineCap)
 ```
 
-Set the line segment endpoint attribute. For details, see {@link CanvasLineCap}.
+Set the line segment endpoint attribute. For details, see [CanvasLineCap](arkts-arkui-canvaslinecap-t.md#CanvasLineCap).
 
 **Type:** [CanvasLineCap](arkts-arkui-canvaslinecap-t.md)
 
@@ -1349,9 +1349,9 @@ Set the dotted line offset attribute.
 set lineJoin(lineJoin: CanvasLineJoin)
 ```
 
-Set the line segment connection point attribute. For details, see {@link CanvasLineJoin}.
+Set the line segment connection point attribute. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#CanvasLineJoin).
 
-**Type:** [CanvasLineJoin](../arkts-components/arkts-arkui-canvaslinejoin-t.md)
+**Type:** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
 
 **Since:** 23
 
@@ -1509,7 +1509,7 @@ Set the attributes specifie the color, gradient, or pattern to use for the strok
 set textAlign(textAlign: CanvasTextAlign)
 ```
 
-Set the text alignment mode. For details, see {@link CanvasTextAlign}.
+Set the text alignment mode. For details, see [CanvasTextAlign](arkts-arkui-canvastextalign-t.md#CanvasTextAlign).
 
 **Type:** [CanvasTextAlign](arkts-arkui-canvastextalign-t.md)
 
@@ -1529,9 +1529,9 @@ Set the text alignment mode. For details, see {@link CanvasTextAlign}.
 set textBaseline(textBaseline: CanvasTextBaseline)
 ```
 
-Set the text baseline. For details, see {@link CanvasTextBaseline}.
+Set the text baseline. For details, see [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md#CanvasTextBaseline).
 
-**Type:** [CanvasTextBaseline](../arkts-components/arkts-arkui-canvastextbaseline-t.md)
+**Type:** [CanvasTextBaseline](arkts-arkui-canvastextbaseline-t.md)
 
 **Since:** 23
 

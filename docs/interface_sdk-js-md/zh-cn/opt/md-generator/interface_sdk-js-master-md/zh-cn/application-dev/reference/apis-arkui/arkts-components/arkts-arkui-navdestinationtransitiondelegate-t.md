@@ -28,4 +28,4 @@ NavDestination自定义转场动画的代理函数。
 
 | 类型 |
 | --- |
-| Array&lt;NavDestinationTransition&gt; \| undefined |
+| Array&lt;[NavDestinationTransition](arkts-arkui-navdestinationtransition-i.md)&gt; \| undefined |

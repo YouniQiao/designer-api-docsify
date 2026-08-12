@@ -6,7 +6,7 @@
 function write(info: AppEventInfo): Promise<void>
 ```
 
-应用事件打点方法，将AppEventInfo类型的事件进行存储，使用Promise方式作为异步回调。通过此接口写入的事件对象是开发者自定义的对象，为了避免与系统事件产生冲突混淆，不建议写入系统事件（[Event](arkts-performanceanalysis-hiappevent-event-n.md#event)中定义的系统事件名称常量）。此接口写入的事件可通过订阅事件观察者（[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)）进行处理。
+应用事件打点方法，将AppEventInfo类型的事件进行存储，使用Promise方式作为异步回调。通过此接口写入的事件对象是开发者自定义的对象，为了避免与系统事件产生冲突混淆，不建议写入系统事件（[Event](arkts-performanceanalysis-hiappevent-event-n.md#event)中定义的系统事件名称常量）。此接口写入的事件可通过订阅事件观察者（[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)）进行处理。
 
 **起始版本：** 9
 
@@ -26,20 +26,20 @@ function write(info: AppEventInfo): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-非法的事件领域名称) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11101003](../errorcode-hiappevent.md#11101003-非法的事件参数数量) |
-| [11101002](../errorcode-hiappevent.md#11101002-非法的事件名称) |
-| [11101005](../errorcode-hiappevent.md#11101005-非法的事件参数名称) |
-| [11101004](../errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
-| [11101006](../errorcode-hiappevent.md#11101006-非法的事件参数数组长度) |
-| [11100001](../errorcode-hiappevent.md#11100001-打点功能被关闭) |
+| [11101001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-非法的事件领域名称) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11101003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101003-非法的事件参数数量) |
+| [11101002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-非法的事件名称) |
+| [11101005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-非法的事件参数名称) |
+| [11101004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
+| [11101006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101006-非法的事件参数数组长度) |
+| [11100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-打点功能被关闭) |
 
 ## 示例
 
@@ -72,7 +72,7 @@ hiAppEvent.write({
 function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 ```
 
-应用事件打点方法，将AppEventInfo类型的事件进行存储，使用callback方式作为异步回调。通过此接口写入的事件对象是开发者自定义的对象，为了避免与系统事件产生冲突混淆，不建议写入系统事件（[Event](arkts-performanceanalysis-hiappevent-event-n.md#event)中定义的系统事件名称常量）。此接口写入的事件可通过订阅事件观察者（[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addwatcher)）进行订阅。
+应用事件打点方法，将AppEventInfo类型的事件进行存储，使用callback方式作为异步回调。通过此接口写入的事件对象是开发者自定义的对象，为了避免与系统事件产生冲突混淆，不建议写入系统事件（[Event](arkts-performanceanalysis-hiappevent-event-n.md#event)中定义的系统事件名称常量）。此接口写入的事件可通过订阅事件观察者（[addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)）进行订阅。
 
 **起始版本：** 9
 
@@ -93,14 +93,14 @@ function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-非法的事件领域名称) |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [11101003](../errorcode-hiappevent.md#11101003-非法的事件参数数量) |
-| [11101002](../errorcode-hiappevent.md#11101002-非法的事件名称) |
-| [11101005](../errorcode-hiappevent.md#11101005-非法的事件参数名称) |
-| [11101004](../errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
-| [11101006](../errorcode-hiappevent.md#11101006-非法的事件参数数组长度) |
-| [11100001](../errorcode-hiappevent.md#11100001-打点功能被关闭) |
+| [11101001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-非法的事件领域名称) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [11101003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101003-非法的事件参数数量) |
+| [11101002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-非法的事件名称) |
+| [11101005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-非法的事件参数名称) |
+| [11101004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-非法的事件参数字符串长度) |
+| [11101006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101006-非法的事件参数数组长度) |
+| [11100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-打点功能被关闭) |
 
 ## 示例
 

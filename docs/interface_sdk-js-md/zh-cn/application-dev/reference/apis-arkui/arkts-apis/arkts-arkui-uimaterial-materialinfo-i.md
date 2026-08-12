@@ -38,7 +38,7 @@ type: MaterialType
 
 材质类型标识，表示当前配置对应的材质类型。该值仅用于类型标识，不映射到底层功能。
 
-**类型：** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
+**类型：** MaterialType
 
 **起始版本：** 26.0.0
 

@@ -16,7 +16,7 @@ confirm?: ButtonOptions
 
 选择弹出框底部按钮。
 
-**类型：** [ButtonOptions](../arkts-components/arkts-arkui-buttonoptions-i.md)
+**类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
 
@@ -80,7 +80,7 @@ radioContent: Array<SheetInfo>
 
 选择弹出框的子项内容列表，每个选择项支持设置文本和选中的回调事件。
 
-**类型：** Array&lt;SheetInfo&gt;
+**类型：** Array&lt;[SheetInfo](arkts-arkui-sheetinfo-i.md)&gt;
 
 **起始版本：** 10
 
@@ -124,7 +124,7 @@ theme?: Theme | CustomTheme
 
 主题信息，可以是CustomTheme或从onWillApplyTheme中获取的Theme实例。
 
-**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| CustomTheme
+**类型：** [Theme](arkts-arkui-arkui-theme-theme-i.md) \| [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
 **起始版本：** 12
 

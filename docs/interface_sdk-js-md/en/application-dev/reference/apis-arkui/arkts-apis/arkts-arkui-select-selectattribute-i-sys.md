@@ -2,7 +2,7 @@
 
 Defines the Select component attributes.
 
-**Inheritance/Implementation:** SelectAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** SelectAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 

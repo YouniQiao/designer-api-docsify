@@ -26,7 +26,7 @@ Display mode of overflowing text.
 
 Default value: **TextOverflow.Clip**
 
-**Type:** [TextOverflow](../arkts-apis/arkts-arkui-textoverflow-e.md)
+**Type:** TextOverflow
 
 **Default:** TextOverflow.Clip [since 18]
 

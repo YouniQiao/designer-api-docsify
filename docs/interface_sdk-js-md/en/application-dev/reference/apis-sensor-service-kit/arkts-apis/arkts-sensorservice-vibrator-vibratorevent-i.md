@@ -13,7 +13,7 @@ Vibration event.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from 'kits/@kit.SensorServiceKit';
+import { vibrator } from '@kit.SensorServiceKit';
 ```
 
 ## duration
@@ -114,7 +114,7 @@ points?: Array<VibratorCurvePoint>
 
 Adjustment points of the vibration curve.
 
-**Type:** Array&lt;VibratorCurvePoint&gt;
+**Type:** Array&lt;[VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)&gt;
 
 **Since:** 18
 

@@ -15,7 +15,7 @@ Provides the capability of simulating touch operations. The simulated touch oper
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from 'kits/@kit.InputKit';
+import { inputEventClient } from '@kit.InputKit';
 ```
 
 ## touchDown
@@ -42,7 +42,7 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | Information about the touch point that is in contact with the display. |
+| touch | TouchPoint | Yes | Information about the touch point that is in contact with the display. |
 
 **Return value:**
 
@@ -54,10 +54,10 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [4300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## touchMove
 
@@ -83,7 +83,7 @@ Moves a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | Information about the touch point to be moved. |
+| touch | TouchPoint | Yes | Information about the touch point to be moved. |
 
 **Return value:**
 
@@ -95,9 +95,9 @@ Moves a touch point. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## touchUp
 
@@ -123,7 +123,7 @@ Releases a touch point. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| touch | [TouchPoint](../../apis-arkui/arkts-apis/arkts-arkui-touchpoint-i.md) | Yes | Information about the touch point to be released. |
+| touch | TouchPoint | Yes | Information about the touch point to be released. |
 
 **Return value:**
 
@@ -135,7 +135,7 @@ Releases a touch point. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
-| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | Invalid input event sequence. Possible causes: &lt;br&gt; 1. The touch point is not touching the display; 2. The touch point ID is not within the valid range [0,9]. |
+| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

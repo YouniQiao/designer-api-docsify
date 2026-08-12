@@ -11,7 +11,7 @@ Provides the capabilities and methods for obtaining Short Message Service (SMS) 
 ## Modules to Import
 
 ```TypeScript
-import { sms } from 'kits/@kit.TelephonyKit';
+import { sms } from '@kit.TelephonyKit';
 ```
 
 ## Summary

@@ -20,10 +20,10 @@ Callback function when the selection menu create.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| menuItems | Array&lt;TextMenuItem&gt; | Yes |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;TextMenuItem&gt; |
+| Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; |

@@ -37,7 +37,7 @@ connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteOb
 
 | 类型 |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## 示例
 
@@ -85,7 +85,7 @@ connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 
 | 类型 |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## 示例
 
@@ -133,7 +133,7 @@ connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject
 
 | 类型 |
 | --- |
-| Promise&lt;rpc.RemoteObject&gt; |
+| Promise & lt;rpc.RemoteObject & gt; |
 
 ## 示例
 
@@ -174,7 +174,7 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, AppBriefInfo&gt;&gt; |
+| Promise&lt;Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
 
 ## 示例
 
@@ -224,7 +224,7 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;AppSchema&gt;&gt; |
+| Promise&lt;Result&lt;[AppSchema](arkts-arkdata-cloudextension-appschema-i-sys.md)&gt;&gt; |
 
 ## 示例
 
@@ -269,7 +269,7 @@ getServiceInfo(): Promise<ServiceInfo>
 
 | 类型 |
 | --- |
-| Promise&lt;ServiceInfo&gt; |
+| Promise&lt;[ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)&gt; |
 
 ## 示例
 
@@ -319,14 +319,14 @@ subscribe(
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| subInfo | Record&lt;string, Array&lt;Database&gt;&gt; | 是 |
+| subInfo | Record&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | 是 |
 | expirationTime | number | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Result&lt;SubscribeInfo&gt;&gt; |
+| Promise & lt;Result & lt;SubscribeInfo & gt; & gt; |
 
 ## 示例
 
@@ -371,13 +371,13 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| unsubscribeInfo | Record&lt;string, Array&lt;string&gt;&gt; | 是 |
+| unsubscribeInfo | Record & lt;string, Array & lt;string & gt; & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

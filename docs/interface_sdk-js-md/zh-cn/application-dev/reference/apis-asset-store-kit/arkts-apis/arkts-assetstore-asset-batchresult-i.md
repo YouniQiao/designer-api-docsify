@@ -1,6 +1,6 @@
 # BatchResult
 
-[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd)、[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate)和[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchremove)批量操作的结果。
+[batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd)、[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate)和[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchRemove)批量操作的结果。
 
 **起始版本：** 26.0.0
 
@@ -36,7 +36,7 @@ failedErrorInfos: Array<BatchErrInfo>
 
 批量操作中失败的关键资产的错误信息数组，全部成功时为空数组。
 
-**类型：** Array&lt;BatchErrInfo&gt;
+**类型：** Array&lt;[BatchErrInfo](arkts-assetstore-asset-batcherrinfo-i.md)&gt;
 
 **起始版本：** 26.0.0
 

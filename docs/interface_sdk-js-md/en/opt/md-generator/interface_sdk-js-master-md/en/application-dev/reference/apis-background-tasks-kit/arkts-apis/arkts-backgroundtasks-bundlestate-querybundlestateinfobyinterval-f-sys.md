@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from 'kits/@kit.BackgroundTasksKit';
+import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
 ## queryBundleStateInfoByInterval
@@ -38,7 +38,7 @@ Queries usage information about each bundle within a specified period at a speci
 | byInterval | [IntervalType](arkts-backgroundtasks-bundlestate-intervaltype-e.md) | Yes |
 | begin | number | Yes |
 | end | number | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;BundleStateInfo&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; | Yes |
 
 ## Examples
 
@@ -96,7 +96,7 @@ Queries usage information about each bundle within a specified period at a speci
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;BundleStateInfo&gt;&gt; |
+| Promise&lt;Array&lt;[BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)&gt;&gt; |
 
 ## Examples
 

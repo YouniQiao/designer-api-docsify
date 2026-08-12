@@ -2,13 +2,13 @@
 
 Specifies the worker thread running environment, which is isolated from the host thread environment.
 
-**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md)
+**Inheritance/Implementation:** WorkerGlobalScope extends [EventTarget](arkts-arkts-worker-eventtarget-i.md#EventTarget)
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.GlobalScope
+**Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
 
 <!--Device-unnamed-declare interface WorkerGlobalScope extends EventTarget--><!--Device-unnamed-declare interface WorkerGlobalScope extends EventTarget-End-->
 
@@ -17,7 +17,7 @@ Specifies the worker thread running environment, which is isolated from the host
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from 'kits/@kit.ArkTS';
+import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
 
 ## onerror
@@ -32,7 +32,7 @@ The onerror attribute of parentPort specifies the event handler to be called whe
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.GlobalScope.onerror
+**Substitutes:** [onerror](ohos.worker.GlobalScope.onerror)
 
 <!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
 
@@ -40,7 +40,7 @@ The onerror attribute of parentPort specifies the event handler to be called whe
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
 
@@ -58,7 +58,7 @@ Worker name specified when there is a new worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.GlobalScope.name
+**Substitutes:** [name](ohos.worker.GlobalScope.name)
 
 <!--Device-WorkerGlobalScope-readonly name: string--><!--Device-WorkerGlobalScope-readonly name: string-End-->
 
@@ -78,7 +78,7 @@ Specify the type attribute for self.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.worker.GlobalScope.self
+**Substitutes:** [self](ohos.worker.GlobalScope.self)
 
 <!--Device-WorkerGlobalScope-readonly self: WorkerGlobalScope & typeof globalThis--><!--Device-WorkerGlobalScope-readonly self: WorkerGlobalScope & typeof globalThis-End-->
 

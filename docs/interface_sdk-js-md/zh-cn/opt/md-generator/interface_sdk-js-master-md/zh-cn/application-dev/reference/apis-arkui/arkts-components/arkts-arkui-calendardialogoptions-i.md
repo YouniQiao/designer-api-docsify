@@ -2,14 +2,14 @@
 
 日历选择器弹窗选项。
 
-继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md)。
+继承自[CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)。
 
 > **说明：**
 > 
 > 在应用窗口缩小过程中，弹窗的宽度会被不断压缩，当缩小到一定程度时会导致其内容无法完整显示，保证CalendarPickerDialog内容能够完整显示的最小
 > 窗口宽度为386vp。
 
-**继承/实现关系：** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md)
+**继承/实现关系：** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)
 
 **起始版本：** 10
 
@@ -153,8 +153,8 @@ acceptButtonStyle?: PickerDialogButtonStyle
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，二者primary字段均配置为true时均不生效。
 > 
 > 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#rounded_rectangle)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
-> [Capsule](arkts-arkui-buttontype-e.md#capsule)的样式。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
+> [Capsule](ButtonType#Capsule)的样式。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -183,7 +183,7 @@ backgroundBlurStyle?: BlurStyle
 > 设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则背景颜色显示效果
 > 不符合预期。设置backgroundEffect后将覆盖本属性效果。
 
-**类型：** [BlurStyle](arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -255,7 +255,7 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md)。
+背景效果参数，用于自定义弹窗背景的显示效果，支持配置模糊半径、饱和度、亮度、颜色等属性，实现不同的背景视觉效果。默认值请参考[BackgroundEffectOptions](arkts-arkui-backgroundeffectoptions-i.md#BackgroundEffectOptions)。
 
 > **说明：**
 > 
@@ -287,8 +287,8 @@ cancelButtonStyle?: PickerDialogButtonStyle
 > 1. acceptButtonStyle与cancelButtonStyle中最多只能有一个primary字段配置为true，二者primary字段均配置为true时均不生效。
 > 
 > 2. 按钮高度默认40vp，在关怀模式-大字体场景下高度不变。即使按钮样式设置为圆角矩形
-> [ROUNDED_RECTANGLE](arkts-arkui-buttontype-e.md#rounded_rectangle)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
-> [Capsule](arkts-arkui-buttontype-e.md#capsule)的样式。
+> [ROUNDED_RECTANGLE](ButtonType#ROUNDED_RECTANGLE)，在关怀模式-大字体场景下按钮形状仍呈现为胶囊型按钮
+> [Capsule](ButtonType#Capsule)的样式。
 
 **类型：** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
@@ -390,7 +390,7 @@ onAccept?: Callback<Date>
 
 回调函数的参数表示选中的日期值。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**类型：** Callback&lt;Date&gt;
 
 **起始版本：** 10
 
@@ -412,7 +412,7 @@ onChange?: Callback<Date>
 
 回调函数的参数表示选中的日期值。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Date&gt;
+**类型：** Callback&lt;Date&gt;
 
 **起始版本：** 10
 
@@ -434,7 +434,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
 
-**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 12
 
@@ -456,14 +456,14 @@ systemMaterial?: SystemUiMaterial
 
 > **说明：**
 > 
-> - 默认值：[ImmersiveOptions](ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的
-> [ImmersiveMaterial](ImmersiveMaterial)对象。设置undefined时与默认值保持一致。
+> - 默认值：[ImmersiveOptions](../arkts-apis/arkts-arkui-uimaterial-immersiveoptions-i.md#ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的
+> [ImmersiveMaterial](../arkts-apis/arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial)对象。设置undefined时与默认值保持一致。
 > - 不同的材质具有不同的视觉效果，包括背景透明度、模糊程度、阴影样式等方面的差异，该接口影响背景色
-> [backgroundColor](arkts-arkui-commonmethod-c.md#backgroundcolor)、背景模糊
-> [backgroundBlurStyle](arkts-arkui-commonmethod-c.md#backgroundblurstyle)
-> 、背景效果[backgroundEffect](arkts-arkui-commonmethod-c.md#backgroundeffect)、边框颜色
-> [borderColor](arkts-arkui-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](arkts-arkui-commonmethod-c.md#borderwidth)、阴影
-> [shadow](arkts-arkui-commonmethod-c.md#shadow)，当设置系统材质时，上述接口不生效。
+> [backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、背景模糊
+> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
+> 、背景效果[backgroundEffect](CommonMethod#backgroundEffect(options: BackgroundEffectOptions))、边框颜色
+> [borderColor](CommonMethod#borderColor)、边框宽度[borderWidth](CommonMethod#borderWidth)、阴影
+> [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))，当设置系统材质时，上述接口不生效。
 
 **类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
 

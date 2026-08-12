@@ -11,7 +11,7 @@ Defines the options for selecting documents.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from 'kits/@kit.CoreFileKit';
+import { picker } from '@kit.CoreFileKit';
 ```
 
 ## allowsMulFolderSelection

@@ -22,7 +22,7 @@ Implements an image filter.
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from 'kits/@kit.ArkGraphics2D';
+import { drawing } from '@kit.ArkGraphics2D';
 ```
 
 ## createBlendImageFilter
@@ -45,7 +45,7 @@ Creates a filter by blending two existing filters in a certain way.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blend mode. |
+| mode | BlendMode | Yes | Blend mode. |
 | background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Filter that serves as the destination color in blend mode. |
 | foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Filter that serves as the source color in blend mode. |
 
@@ -59,7 +59,7 @@ Creates a filter by blending two existing filters in a certain way.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createBlendImageFilter
 
@@ -81,7 +81,7 @@ Makes an ImageFilter object that applies the blend to the input.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes | Blendmode. |
+| mode | BlendMode | Yes | Blendmode. |
 | background | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Indicates the input background filter. |
 | foreground | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) | Yes | Indicates the input foreground filter. |
 
@@ -95,7 +95,7 @@ Makes an ImageFilter object that applies the blend to the input.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## createBlurImageFilter
 
@@ -120,7 +120,7 @@ Creates an image filter with a given blur effect.
 | --- | --- | --- | --- |
 | sigmaX | number | Yes | Standard deviation of the Gaussian blur along the X axis. The value must be a floating point number greater than 0. |
 | sigmaY | number | Yes | Standard deviation of the Gaussian blur along the Y axis. The value must be a floating point number greater than 0. |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode to apply to the edges. |
+| tileMode | TileMode | Yes | Tile mode to apply to the edges. |
 | imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image. |
 
 **Return value:**
@@ -133,7 +133,7 @@ Creates an image filter with a given blur effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createBlurImageFilter
 
@@ -158,7 +158,7 @@ Creates an image filter with a given blur effect.
 | --- | --- | --- | --- |
 | sigmaX | double | Yes | Standard deviation of the Gaussian blur along the X axis. The value must be a floating point number greater than 0. |
 | sigmaY | double | Yes | Standard deviation of the Gaussian blur along the Y axis. The value must be a floating point number greater than 0. |
-| tileMode | [TileMode](arkts-arkgraphics2d-effectkit-tilemode-e.md) | Yes | Tile mode to apply to the edges. |
+| tileMode | TileMode | Yes | Tile mode to apply to the edges. |
 | imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image. |
 
 **Return value:**
@@ -171,7 +171,7 @@ Creates an image filter with a given blur effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## createComposeImageFilter
 
@@ -251,7 +251,7 @@ Creates an image filter object with a given color filter effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorFilter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter. |
+| colorFilter | ColorFilter | Yes | Color filter. |
 | imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image.<br>**Since:** 20 |
 
 **Return value:**
@@ -264,7 +264,7 @@ Creates an image filter object with a given color filter effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createFromColorFilter
 
@@ -286,7 +286,7 @@ Creates an image filter object with a given color filter effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorFilter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) | Yes | Color filter. |
+| colorFilter | ColorFilter | Yes | Color filter. |
 | imageFilter | [ImageFilter](arkts-arkgraphics2d-drawing-imagefilter-c.md) \| null | No | Filter to which the image filter will be applied. The default value is null, indicating that the image filter is directly applied to the original image. |
 
 **Return value:**
@@ -299,7 +299,7 @@ Creates an image filter object with a given color filter effect.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## createFromImage
 

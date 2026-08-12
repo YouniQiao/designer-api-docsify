@@ -14,7 +14,7 @@ Kill process with account.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#killProcessWithAccount
+**Substitutes:** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -69,7 +69,7 @@ Kill process with account.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.appManager/appManager#killProcessWithAccount
+**Substitutes:** [killProcessWithAccount](ohos.app.ability.appManager/appManager#killProcessWithAccount)
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -85,7 +85,7 @@ Kill process with account.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | The process bundle name. |
 | accountId | number | Yes | The account id. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Cut off the callback function of the account process. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Cut off the callback function of the account process. |
 
 ## Examples
 

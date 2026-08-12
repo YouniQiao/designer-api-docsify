@@ -28,7 +28,7 @@ Changes the file owner (owner of the symbolic link, not the file referred to by 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 
 ## lchown

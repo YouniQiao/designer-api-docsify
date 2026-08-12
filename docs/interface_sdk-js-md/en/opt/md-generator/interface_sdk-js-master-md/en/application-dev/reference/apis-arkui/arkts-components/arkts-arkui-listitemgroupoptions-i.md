@@ -34,7 +34,7 @@ footerComponent?: ComponentContent
 
 Footer of the list item group, in the type of ComponentContent.This parameter takes precedence over the footer parameter. This means that, if both footer and footerComponent are set, the value of footerComponent is used.To avoid display issues, do not assign the same footerComponent to different ListItemGroup components.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 13
 
@@ -94,7 +94,7 @@ headerComponent?: ComponentContent
 
 Header of the list item group, in the type of ComponentContent.This parameter takes precedence over the header parameter. This means that, if both header and headerComponent are set, the value of headerComponent is used.To avoid display issues, do not assign the same headerComponent to different ListItemGroup components.
 
-**Type:** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**Type:** ComponentContent
 
 **Since:** 13
 

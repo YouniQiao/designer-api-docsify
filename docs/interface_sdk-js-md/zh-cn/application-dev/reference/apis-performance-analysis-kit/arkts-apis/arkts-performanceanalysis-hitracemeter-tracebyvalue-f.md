@@ -9,7 +9,7 @@ function traceByValue(name: string, count: long): void
 用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。
 
 从API version 19开始，建议使用  
-[traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue)接口，以便分级控制跟踪输出。
+[traceByValue](#traceByValue-1)接口，以便分级控制跟踪输出。
 
 **起始版本：** 8
 

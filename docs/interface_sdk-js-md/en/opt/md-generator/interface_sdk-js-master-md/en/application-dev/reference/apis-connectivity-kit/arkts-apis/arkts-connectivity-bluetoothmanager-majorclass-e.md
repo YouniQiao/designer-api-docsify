@@ -6,7 +6,7 @@ The enum of major class of a bluetooth device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass
+**Substitutes:** [MajorClass](ohos.bluetooth.constant/constant.MajorClass)
 
 <!--Device-bluetoothManager-enum MajorClass--><!--Device-bluetoothManager-enum MajorClass-End-->
 
@@ -24,7 +24,7 @@ Miscellaneous device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_MISC
+**Substitutes:** [MAJOR_MISC](ohos.bluetooth.constant/constant.MajorClass#MAJOR_MISC)
 
 <!--Device-MajorClass-MAJOR_MISC = 0x0000--><!--Device-MajorClass-MAJOR_MISC = 0x0000-End-->
 
@@ -42,7 +42,7 @@ Computer.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_COMPUTER
+**Substitutes:** [MAJOR_COMPUTER](ohos.bluetooth.constant/constant.MajorClass#MAJOR_COMPUTER)
 
 <!--Device-MajorClass-MAJOR_COMPUTER = 0x0100--><!--Device-MajorClass-MAJOR_COMPUTER = 0x0100-End-->
 
@@ -60,7 +60,7 @@ Mobile phone.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_PHONE
+**Substitutes:** [MAJOR_PHONE](ohos.bluetooth.constant/constant.MajorClass#MAJOR_PHONE)
 
 <!--Device-MajorClass-MAJOR_PHONE = 0x0200--><!--Device-MajorClass-MAJOR_PHONE = 0x0200-End-->
 
@@ -78,7 +78,7 @@ Network device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_NETWORKING
+**Substitutes:** [MAJOR_NETWORKING](ohos.bluetooth.constant/constant.MajorClass#MAJOR_NETWORKING)
 
 <!--Device-MajorClass-MAJOR_NETWORKING = 0x0300--><!--Device-MajorClass-MAJOR_NETWORKING = 0x0300-End-->
 
@@ -96,7 +96,7 @@ Audio or video device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_AUDIO_VIDEO
+**Substitutes:** [MAJOR_AUDIO_VIDEO](ohos.bluetooth.constant/constant.MajorClass#MAJOR_AUDIO_VIDEO)
 
 <!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400--><!--Device-MajorClass-MAJOR_AUDIO_VIDEO = 0x0400-End-->
 
@@ -114,7 +114,7 @@ Peripheral device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_PERIPHERAL
+**Substitutes:** [MAJOR_PERIPHERAL](ohos.bluetooth.constant/constant.MajorClass#MAJOR_PERIPHERAL)
 
 <!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500--><!--Device-MajorClass-MAJOR_PERIPHERAL = 0x0500-End-->
 
@@ -132,7 +132,7 @@ Imaging device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_IMAGING
+**Substitutes:** [MAJOR_IMAGING](ohos.bluetooth.constant/constant.MajorClass#MAJOR_IMAGING)
 
 <!--Device-MajorClass-MAJOR_IMAGING = 0x0600--><!--Device-MajorClass-MAJOR_IMAGING = 0x0600-End-->
 
@@ -150,7 +150,7 @@ Wearable device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_WEARABLE
+**Substitutes:** [MAJOR_WEARABLE](ohos.bluetooth.constant/constant.MajorClass#MAJOR_WEARABLE)
 
 <!--Device-MajorClass-MAJOR_WEARABLE = 0x0700--><!--Device-MajorClass-MAJOR_WEARABLE = 0x0700-End-->
 
@@ -168,7 +168,7 @@ Toy.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_TOY
+**Substitutes:** [MAJOR_TOY](ohos.bluetooth.constant/constant.MajorClass#MAJOR_TOY)
 
 <!--Device-MajorClass-MAJOR_TOY = 0x0800--><!--Device-MajorClass-MAJOR_TOY = 0x0800-End-->
 
@@ -186,7 +186,7 @@ Health device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_HEALTH
+**Substitutes:** [MAJOR_HEALTH](ohos.bluetooth.constant/constant.MajorClass#MAJOR_HEALTH)
 
 <!--Device-MajorClass-MAJOR_HEALTH = 0x0900--><!--Device-MajorClass-MAJOR_HEALTH = 0x0900-End-->
 
@@ -204,7 +204,7 @@ Unclassified device.
 
 **Deprecated since:** 10
 
-**Substitutes:** ohos.bluetooth.constant/constant.MajorClass#MAJOR_UNCATEGORIZED
+**Substitutes:** [MAJOR_UNCATEGORIZED](ohos.bluetooth.constant/constant.MajorClass#MAJOR_UNCATEGORIZED)
 
 <!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00--><!--Device-MajorClass-MAJOR_UNCATEGORIZED = 0x1F00-End-->
 

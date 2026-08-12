@@ -13,7 +13,7 @@ Obtains traffic statistics.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## Summary
@@ -79,7 +79,7 @@ import { statistics } from 'kits/@kit.NetworkKit';
 | --- | --- |
 | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) | Parameters for obtaining detailed information on network interface traffic usage. |
 | [NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md) | Used to monitor and manage the status and usage of network interfaces. |
-| [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) | Parameters for an {@link NetStatsInfo} with start time and end time. |
+| [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) | Parameters for an [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) with start time and end time. |
 | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) | Parameters for obtaining detailed information on application traffic usage. |
 <!--DelEnd-->
 
@@ -94,7 +94,7 @@ import { statistics } from 'kits/@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of {@link NetStatsInfoSequenceItem}. |
-| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | {@link NetStatsInfo} for every UID. Key is UID. |
+| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md#NetStatsInfoSequenceItem). |
+| [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) for every UID. Key is UID. |
 <!--DelEnd-->
 

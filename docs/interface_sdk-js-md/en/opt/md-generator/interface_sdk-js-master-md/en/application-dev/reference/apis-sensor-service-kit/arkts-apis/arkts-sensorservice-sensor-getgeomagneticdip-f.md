@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from 'kits/@kit.SensorServiceKit';
+import { sensor } from '@kit.SensorServiceKit';
 ```
 
 ## getGeomagneticDip
@@ -18,7 +18,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix:
+**Substitutes:** [getInclination](sensor.getInclination(inclinationMatrix:)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>, callback: AsyncCallback<number>): void-End-->
 
@@ -28,7 +28,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses an async
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes |
+| inclinationMatrix | Array & lt;number & gt; | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |
 
 ## Examples
@@ -59,7 +59,7 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 **Deprecated since:** 9
 
-**Substitutes:** [sensor.getInclination](arkts-sensorservice-sensor-getinclination-f.md#getinclination)(inclinationMatrix:
+**Substitutes:** [getInclination](sensor.getInclination(inclinationMatrix:)
 
 <!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>--><!--Device-sensor-function getGeomagneticDip(inclinationMatrix: Array<number>): Promise<number>-End-->
 
@@ -69,13 +69,13 @@ Obtains the magnetic dip based on the inclination matrix. This API uses a promis
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| inclinationMatrix | Array&lt;number&gt; | Yes |
+| inclinationMatrix | Array & lt;number & gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## Examples
 

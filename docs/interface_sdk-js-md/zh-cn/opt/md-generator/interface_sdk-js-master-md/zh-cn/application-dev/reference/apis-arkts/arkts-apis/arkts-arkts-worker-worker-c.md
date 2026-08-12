@@ -2,13 +2,13 @@
 
 Worker类包含所有Worker功能。
 
-**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md)
+**继承/实现关系：** Worker implements [EventTarget](arkts-arkts-worker-eventtarget-i.md#EventTarget)
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker
+**替代接口：** [ThreadWorker](arkts-arkts-worker-threadworker-c.md#ThreadWorker)
 
 <!--Device-worker-class Worker implements EventTarget--><!--Device-worker-class Worker implements EventTarget-End-->
 
@@ -26,7 +26,7 @@ constructor(scriptURL: string, options?: WorkerOptions)
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.constructor
+**替代接口：** [constructor](ohos.worker.ThreadWorker.constructor)
 
 <!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-Worker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
@@ -63,7 +63,7 @@ off(type: string, listener?: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.off
+**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
 
 <!--Device-Worker-off(type: string, listener?: EventListener): void--><!--Device-Worker-off(type: string, listener?: EventListener): void-End-->
 
@@ -74,7 +74,7 @@ off(type: string, listener?: EventListener): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 否 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 否 |
 
 ## 示例
 
@@ -99,7 +99,7 @@ on(type: string, listener: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.on
+**替代接口：** [on](ohos.worker.ThreadWorker.on)
 
 <!--Device-Worker-on(type: string, listener: EventListener): void--><!--Device-Worker-on(type: string, listener: EventListener): void-End-->
 
@@ -110,7 +110,7 @@ on(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 |
 
 ## 示例
 
@@ -136,7 +136,7 @@ once(type: string, listener: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.once
+**替代接口：** [once](ohos.worker.ThreadWorker.once)
 
 <!--Device-Worker-once(type: string, listener: EventListener): void--><!--Device-Worker-once(type: string, listener: EventListener): void-End-->
 
@@ -147,7 +147,7 @@ once(type: string, listener: EventListener): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | string | 是 |
-| listener | [EventListener](arkts-arkts-process-eventlistener-t.md) | 是 |
+| listener | [EventListener](arkts-arkts-worker-eventlistener-i.md) | 是 |
 
 ## 示例
 
@@ -173,7 +173,7 @@ onerror?: (err: ErrorEvent) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.onerror
+**替代接口：** [onerror](ohos.worker.ThreadWorker.onerror)
 
 <!--Device-Worker-onerror?: (err: ErrorEvent) => void--><!--Device-Worker-onerror?: (err: ErrorEvent) => void-End-->
 
@@ -197,7 +197,7 @@ onexit?: (code: number) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.onexit
+**替代接口：** [onexit](ohos.worker.ThreadWorker.onexit)
 
 <!--Device-Worker-onexit?: (code: number) => void--><!--Device-Worker-onexit?: (code: number) => void-End-->
 
@@ -221,7 +221,7 @@ onmessage?: (event: MessageEvent) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.onmessage
+**替代接口：** [onmessage](ohos.worker.ThreadWorker.onmessage)
 
 <!--Device-Worker-onmessage?: (event: MessageEvent) => void--><!--Device-Worker-onmessage?: (event: MessageEvent) => void-End-->
 
@@ -245,7 +245,7 @@ onmessageerror?: (event: MessageEvent) => void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.onmessageerror
+**替代接口：** [onmessageerror](ohos.worker.ThreadWorker.onmessageerror)
 
 <!--Device-Worker-onmessageerror?: (event: MessageEvent) => void--><!--Device-Worker-onmessageerror?: (event: MessageEvent) => void-End-->
 
@@ -269,7 +269,7 @@ postMessage(message: Object, transfer: ArrayBuffer[]): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.postMessage
+**替代接口：** [postMessage](ohos.worker.ThreadWorker.postMessage)
 
 <!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void--><!--Device-Worker-postMessage(message: Object, transfer: ArrayBuffer[]): void-End-->
 
@@ -306,7 +306,7 @@ postMessage(message: Object, options?: PostMessageOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.postMessage
+**替代接口：** [postMessage](ohos.worker.ThreadWorker.postMessage)
 
 <!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-Worker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
 
@@ -345,7 +345,7 @@ terminate(): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.worker.ThreadWorker.terminate
+**替代接口：** [terminate](ohos.worker.ThreadWorker.terminate)
 
 <!--Device-Worker-terminate(): void--><!--Device-Worker-terminate(): void-End-->
 

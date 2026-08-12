@@ -48,9 +48,9 @@ Constructor for a custom dialog box.
 > **NOTE：**
 > 
 > Custom dialog box parameters do not support dynamic updates. However, by setting **customStyle** to **true** and
-> configuring attributes such as [background color](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundcolor),
-> [background blur](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#backgroundblurstyle),
-> and [width/height](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md) on the custom component, dynamic updates can be achieved through state variables
+> configuring attributes such as [background color](CommonMethod#backgroundColor(value: ResourceColor)),
+> [background blur](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions)),
+> and [width/height](common) on the custom component, dynamic updates can be achieved through state variables
 > bound to these attributes.
 > 
 > If **CustomDialogController** is used as a global variable to implement global custom dialog boxes, the previous
@@ -110,7 +110,7 @@ Opens the content of the custom dialog box. This API can be called multiple time
 > 
 > **CustomDialog** with subwindow display (**showInSubwindow** set to **true**) is not supported in input method
 > windows. For details, see the constraints in
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md/arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel)
+> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel-1)
 > of the input method framework documentation.
 
 **Since:** 7

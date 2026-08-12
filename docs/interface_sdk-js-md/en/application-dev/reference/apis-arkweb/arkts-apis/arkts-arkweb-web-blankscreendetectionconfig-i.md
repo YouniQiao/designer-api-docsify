@@ -36,7 +36,7 @@ detectionMethods?: BlankScreenDetectionMethod[]
 
 The combination of blank screen detection methods.
 
-**Type:** [BlankScreenDetectionMethod](../arkts-components/arkts-arkweb-blankscreendetectionmethod-e.md)[]
+**Type:** [BlankScreenDetectionMethod](arkts-arkweb-web-blankscreendetectionmethod-e.md)[]
 
 **Since:** 23
 

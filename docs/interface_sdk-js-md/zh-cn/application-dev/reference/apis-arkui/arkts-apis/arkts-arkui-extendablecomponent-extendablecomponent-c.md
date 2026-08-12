@@ -2,7 +2,7 @@
 
 可扩展组件，是自定义组件和自定义对话框的基类。
 
-**继承/实现关系：** ExtendableComponent implements [LifeCycle](arkts-arkui-extendablecomponent-lifecycle-i.md), [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md)
+**继承/实现关系：** ExtendableComponent implements [LifeCycle](arkts-arkui-extendablecomponent-lifecycle-i.md#LifeCycle), [IVariableOwner](arkts-arkui-decorator-ivariableowner-i.md#IVariableOwner)
 
 **起始版本：** 23
 

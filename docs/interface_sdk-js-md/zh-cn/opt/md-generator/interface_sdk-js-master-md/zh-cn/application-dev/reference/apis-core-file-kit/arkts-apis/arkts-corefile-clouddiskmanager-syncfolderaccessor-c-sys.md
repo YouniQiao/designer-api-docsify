@@ -32,8 +32,8 @@ SyncFolderAccessor的构造函数，用于获取SyncFolderAccessor类的实例�
 
 | 错误码ID |
 | --- |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -82,18 +82,18 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;SyncFolder&gt;&gt; |
+| Promise&lt;Array&lt;[SyncFolder](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) |
-| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [34400014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400014-系统内部错误) |
+| [34400015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400015-当前设备不允许使用云盘功能) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [34400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400003-ipc通信失败) |
 
 ## 示例
 

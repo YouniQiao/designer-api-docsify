@@ -24,7 +24,7 @@ Creates a new Generator function.
 
 | Type | Description |
 | --- | --- |
-| GeneratorFunction |  |
+| [GeneratorFunction](arkts-lib-es2015-generator-generatorfunction-i.md) |  |
 
 ## [[Construct]]
 
@@ -48,7 +48,7 @@ Creates a new Generator function.
 
 | Type | Description |
 | --- | --- |
-| GeneratorFunction |  |
+| [GeneratorFunction](arkts-lib-es2015-generator-generatorfunction-i.md) |  |
 
 ## length
 
@@ -86,7 +86,7 @@ readonly prototype: GeneratorFunction
 
 A reference to the prototype.
 
-**Type:** GeneratorFunction
+**Type:** [GeneratorFunction](arkts-lib-es2015-generator-generatorfunction-i.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

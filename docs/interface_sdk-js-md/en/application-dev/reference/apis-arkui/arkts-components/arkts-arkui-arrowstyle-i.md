@@ -20,7 +20,7 @@ Color of the arrow.
 
 Default value: **'#182431'**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #182431
 
@@ -58,7 +58,7 @@ If **showBackground** is set to **true**, the value of **arrowSize** is 3/4 of t
 
 Percentage values are not supported.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** When isSidebarMiddle is false, the default value is 18vp, Otherwise, the default value is 24vp
 
@@ -90,7 +90,7 @@ On both sides of the component:
 
 Default value: **'#19182431'**.
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** When isSidebarMiddle is false, the default value is #00000000, Otherwise,the default value is #1918243 1 [since 10 - 10] @default When isSidebarMiddle is false, the default value is #00000000, Otherwise, the default value is #1918243 1 [since 11]
 
@@ -124,7 +124,7 @@ Default value: **32vp**.
 
 Percentage values are not supported.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
+**Type:** Length
 
 **Default:** When isSidebarMiddle is false, the default value is 24vp, Otherwise,the default value is 32vp
 

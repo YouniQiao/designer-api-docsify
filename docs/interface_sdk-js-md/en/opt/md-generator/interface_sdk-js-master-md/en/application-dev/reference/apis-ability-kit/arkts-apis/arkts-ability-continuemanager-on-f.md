@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from 'kits/@kit.AbilityKit';
+import { continueManager } from '@kit.AbilityKit';
 ```
 
 ## on('prepareContinue')
@@ -28,13 +28,13 @@ Registers a callback to obtain the quick start result when an application is lau
 | --- | --- | --- |
 | type | 'prepareContinue' | Yes |
 | context | [Context](arkts-ability-context-c.md) | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
+| [16300501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) |
 
 ## Examples
 

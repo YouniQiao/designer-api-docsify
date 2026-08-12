@@ -50,7 +50,7 @@ static abs(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -62,7 +62,7 @@ static abs(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## acos
 
@@ -90,7 +90,7 @@ acos(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## acos
 
@@ -112,7 +112,7 @@ static acos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -124,8 +124,8 @@ static acos(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## acosh
 
@@ -153,7 +153,7 @@ acosh(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## acosh
 
@@ -175,7 +175,7 @@ static acosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -187,8 +187,8 @@ static acosh(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## add
 
@@ -210,7 +210,7 @@ add(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -222,7 +222,7 @@ add(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## add
 
@@ -244,8 +244,8 @@ static add(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -257,7 +257,7 @@ static add(x: Value, y: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## asin
 
@@ -285,7 +285,7 @@ asin(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## asin
 
@@ -307,7 +307,7 @@ static asin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -319,8 +319,8 @@ static asin(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## asinh
 
@@ -348,7 +348,7 @@ asinh(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## asinh
 
@@ -370,7 +370,7 @@ static asinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -382,8 +382,8 @@ static asinh(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## atan
 
@@ -411,7 +411,7 @@ atan(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## atan
 
@@ -433,7 +433,7 @@ static atan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -445,8 +445,8 @@ static atan(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## atan2
 
@@ -468,8 +468,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -481,8 +481,8 @@ static atan2(y: Value, x: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## atanh
 
@@ -510,7 +510,7 @@ atanh(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## atanh
 
@@ -532,7 +532,7 @@ static atanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -544,8 +544,8 @@ static atanh(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## cbrt
 
@@ -589,7 +589,7 @@ static cbrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -601,7 +601,7 @@ static cbrt(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## ceil
 
@@ -645,7 +645,7 @@ static ceil(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -657,7 +657,7 @@ static ceil(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## clamp
 
@@ -679,8 +679,8 @@ clamp(min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [min](#min) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| [max](#max) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -692,8 +692,8 @@ clamp(min: Value, max: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## clamp
 
@@ -715,9 +715,9 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| [min](#min) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| [max](#max) | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| [min](#min) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| [max](#max) | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -729,8 +729,8 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## comparedTo
 
@@ -754,7 +754,7 @@ comparedTo(n: Value): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -766,7 +766,7 @@ comparedTo(n: Value): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## constructor
 
@@ -788,13 +788,13 @@ Decimal的构造函数。
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## cos
 
@@ -838,7 +838,7 @@ static cos(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -850,7 +850,7 @@ static cos(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## cosh
 
@@ -894,7 +894,7 @@ static cosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -906,7 +906,7 @@ static cosh(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## decimalPlaces
 
@@ -950,7 +950,7 @@ div(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -962,7 +962,7 @@ div(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## div
 
@@ -984,8 +984,8 @@ static div(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -997,7 +997,7 @@ static div(x: Value, y: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## dividedToIntegerBy
 
@@ -1019,7 +1019,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1031,7 +1031,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## equals
 
@@ -1053,7 +1053,7 @@ equals(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1065,7 +1065,7 @@ equals(n: Value): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## exp
 
@@ -1093,7 +1093,7 @@ exp(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## exp
 
@@ -1115,7 +1115,7 @@ static exp(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1127,8 +1127,8 @@ static exp(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## floor
 
@@ -1172,7 +1172,7 @@ static floor(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1184,7 +1184,7 @@ static floor(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## greaterThan
 
@@ -1206,7 +1206,7 @@ greaterThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1218,7 +1218,7 @@ greaterThan(n: Value): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## greaterThanOrEqualTo
 
@@ -1240,7 +1240,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1252,7 +1252,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## hypot
 
@@ -1274,7 +1274,7 @@ static hypot(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1286,7 +1286,7 @@ static hypot(...n: Value[]): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## isFinite
 
@@ -1440,7 +1440,7 @@ lessThan(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1452,7 +1452,7 @@ lessThan(n: Value): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## lessThanOrEqualTo
 
@@ -1474,7 +1474,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1486,7 +1486,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## ln
 
@@ -1514,7 +1514,7 @@ ln(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## ln
 
@@ -1536,7 +1536,7 @@ static ln(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1548,8 +1548,8 @@ static ln(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## log
 
@@ -1571,7 +1571,7 @@ log(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1583,8 +1583,8 @@ log(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## log
 
@@ -1606,8 +1606,8 @@ static log(n: Value, base: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| base | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1619,8 +1619,8 @@ static log(n: Value, base: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## log10
 
@@ -1642,7 +1642,7 @@ static log10(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1654,8 +1654,8 @@ static log10(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## log2
 
@@ -1677,7 +1677,7 @@ static log2(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1689,8 +1689,8 @@ static log2(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## max
 
@@ -1712,7 +1712,7 @@ static max(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1724,7 +1724,7 @@ static max(...n: Value[]): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## min
 
@@ -1746,7 +1746,7 @@ static min(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1758,7 +1758,7 @@ static min(...n: Value[]): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## mod
 
@@ -1780,7 +1780,7 @@ mod(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1792,7 +1792,7 @@ mod(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## mod
 
@@ -1814,8 +1814,8 @@ static mod(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1827,7 +1827,7 @@ static mod(x: Value, y: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## mul
 
@@ -1849,7 +1849,7 @@ mul(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1861,7 +1861,7 @@ mul(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## mul
 
@@ -1883,8 +1883,8 @@ static mul(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1896,7 +1896,7 @@ static mul(x: Value, y: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## negate
 
@@ -1940,7 +1940,7 @@ pow(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1952,8 +1952,8 @@ pow(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## pow
 
@@ -1975,8 +1975,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| base | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| exponent | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| base | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| exponent | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -1988,8 +1988,8 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200060](../errorcode-utils.md#10200060-超出精度限制) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200060](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200060-超出精度限制) |
 
 ## precision
 
@@ -2045,7 +2045,7 @@ precision(includeZeros: boolean | number): number
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## random
 
@@ -2073,7 +2073,7 @@ static random(): Decimal
 
 | 错误码ID |
 | --- |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) |
+| [10200061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-加密方法不可用) |
 
 ## random
 
@@ -2107,8 +2107,8 @@ static random(significantDigits: number): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-加密方法不可用) |
 
 ## round
 
@@ -2130,7 +2130,7 @@ static round(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2142,7 +2142,7 @@ static round(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## set
 
@@ -2170,9 +2170,9 @@ static set(config: DecimalConfig): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200061](../errorcode-utils.md#10200061-加密方法不可用) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200061-加密方法不可用) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## sign
 
@@ -2196,7 +2196,7 @@ static sign(n: Value): number
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2209,7 +2209,7 @@ static sign(n: Value): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sin
 
@@ -2253,7 +2253,7 @@ static sin(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2265,7 +2265,7 @@ static sin(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sinh
 
@@ -2309,7 +2309,7 @@ static sinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2321,7 +2321,7 @@ static sinh(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sqrt
 
@@ -2365,7 +2365,7 @@ static sqrt(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2377,7 +2377,7 @@ static sqrt(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sub
 
@@ -2399,7 +2399,7 @@ sub(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2411,7 +2411,7 @@ sub(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sub
 
@@ -2433,8 +2433,8 @@ static sub(x: Value, y: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| x | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| y | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| x | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| y | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2446,7 +2446,7 @@ static sub(x: Value, y: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## sum
 
@@ -2470,7 +2470,7 @@ static sum(...n: Value[]): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md)[] | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md)[] | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2482,7 +2482,7 @@ static sum(...n: Value[]): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## tan
 
@@ -2526,7 +2526,7 @@ static tan(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2538,7 +2538,7 @@ static tan(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## tanh
 
@@ -2582,7 +2582,7 @@ static tanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -2594,7 +2594,7 @@ static tanh(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## toBinary
 
@@ -2650,7 +2650,7 @@ toBinary(significantDigits: number): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toBinary
 
@@ -2673,7 +2673,7 @@ toBinary(significantDigits: number, rounding: Rounding): string
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | significantDigits | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -2685,7 +2685,7 @@ toBinary(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
 
 ## toDecimalPlaces
 
@@ -2729,7 +2729,7 @@ toDecimalPlaces(decimalPlaces: number): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 
 **返回值：**
 
@@ -2741,7 +2741,7 @@ toDecimalPlaces(decimalPlaces: number): Decimal
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toDecimalPlaces
 
@@ -2763,8 +2763,8 @@ toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -2776,7 +2776,7 @@ toDecimalPlaces(decimalPlaces: number, rounding: Rounding): Decimal
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
 
 ## toExponential
 
@@ -2820,7 +2820,7 @@ toExponential(decimalPlaces: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 
 **返回值：**
 
@@ -2832,7 +2832,7 @@ toExponential(decimalPlaces: number): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toExponential
 
@@ -2854,8 +2854,8 @@ toExponential(decimalPlaces: number, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -2867,7 +2867,7 @@ toExponential(decimalPlaces: number, rounding: Rounding): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
 
 ## toFixed
 
@@ -2911,7 +2911,7 @@ toFixed(decimalPlaces: number): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
 
 **返回值：**
 
@@ -2923,7 +2923,7 @@ toFixed(decimalPlaces: number): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toFixed
 
@@ -2945,8 +2945,8 @@ toFixed(decimalPlaces: number, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [decimalPlaces](#decimalplaces) | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [decimalPlaces](arkts-arkts-math-decimal-decimal-c.md) | number | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -2958,7 +2958,7 @@ toFixed(decimalPlaces: number, rounding: Rounding): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `decimalPlaces \|
 
 ## toFraction
 
@@ -3002,7 +3002,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| maxDenominator | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| maxDenominator | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -3014,7 +3014,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## toHexadecimal
 
@@ -3070,7 +3070,7 @@ toHexadecimal(significantDigits: number): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toHexadecimal
 
@@ -3093,7 +3093,7 @@ toHexadecimal(significantDigits: number, rounding: Rounding): string
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | significantDigits | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -3105,7 +3105,7 @@ toHexadecimal(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
 
 ## toNearest
 
@@ -3127,7 +3127,7 @@ toNearest(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -3139,7 +3139,7 @@ toNearest(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## toNearest
 
@@ -3161,8 +3161,8 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -3174,8 +3174,8 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toNumber
 
@@ -3253,7 +3253,7 @@ toOctal(significantDigits: number): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toOctal
 
@@ -3276,7 +3276,7 @@ toOctal(significantDigits: number, rounding: Rounding): string
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | significantDigits | number | 是 | {double \| string \|
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -3288,7 +3288,7 @@ toOctal(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
 
 ## toPrecision
 
@@ -3344,7 +3344,7 @@ toPrecision(significantDigits: number): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toPrecision
 
@@ -3367,7 +3367,7 @@ toPrecision(significantDigits: number, rounding: Rounding): string
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | significantDigits | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -3379,7 +3379,7 @@ toPrecision(significantDigits: number, rounding: Rounding): string
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
 
 ## toSignificantDigits
 
@@ -3435,7 +3435,7 @@ toSignificantDigits(significantDigits: number): Decimal
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## toSignificantDigits
 
@@ -3458,7 +3458,7 @@ toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | significantDigits | number | 是 |
-| rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 |
+| [rounding](arkts-arkts-math-decimal-decimalconfig-i.md) | [Rounding](arkts-arkts-rounding-t.md) | 是 |
 
 **返回值：**
 
@@ -3470,7 +3470,7 @@ toSignificantDigits(significantDigits: number, rounding: Rounding): Decimal
 
 | 错误码ID |
 | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
+| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of `significantDigits \|
 
 ## toString
 
@@ -3536,7 +3536,7 @@ static trunc(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| n | [Value](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-value-t.md) | 是 | {double \| string \|
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double \| string \|
 
 **返回值：**
 
@@ -3548,7 +3548,7 @@ static trunc(n: Value): Decimal
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## valueOf
 

@@ -1,8 +1,8 @@
 # CompletionHandler
 
 CompletionHandler provides two callback functions,  
-[onRequestSuccess](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestsuccess) and  
-[onRequestFailure](arkts-ability-app-ability-completionhandler-completionhandler-c.md#onrequestfailure), to handle the results of successful and failed application launch requests, respectively.
+[onRequestSuccess](#onRequestSuccess) and  
+[onRequestFailure](#onRequestFailure), to handle the results of successful and failed application launch requests, respectively.
 
 **Since:** 20
 
@@ -13,7 +13,7 @@ CompletionHandler provides two callback functions,
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandler } from 'kits/@kit.AbilityKit';
+import { CompletionHandler } from '@kit.AbilityKit';
 ```
 
 ## onRequestFailure

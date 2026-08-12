@@ -7,7 +7,7 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 ```
 
 设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在  
-[loadContent()](arkts-arkui-window-window-i.md#loadcontent)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent)调用生效后使用。
+[loadContent()](arkts-arkui-window-window-i.md#loadContent)或[setUIContent()](arkts-arkui-window-window-i.md#setUIContent)调用生效后使用。
 
 **起始版本：** 21
 
@@ -33,9 +33,9 @@ function setWatermarkImageForAppWindows(pixelMap: image.PixelMap | undefined): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
-| [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function setWatermarkImageForAppWindows can not work correctly due to limited device capabilities. |
+| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
 ## 示例
 

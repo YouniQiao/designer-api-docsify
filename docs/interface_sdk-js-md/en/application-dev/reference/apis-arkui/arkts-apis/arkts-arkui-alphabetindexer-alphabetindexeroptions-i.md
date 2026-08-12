@@ -38,7 +38,7 @@ selected: int | Bindable<int>
 
 ID of the selected item.
 
-**Type:** int \| Bindable&lt;int&gt;
+**Type:** int \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt;
 
 **Since:** 23
 

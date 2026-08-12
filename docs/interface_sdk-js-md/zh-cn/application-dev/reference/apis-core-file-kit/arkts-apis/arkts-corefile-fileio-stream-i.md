@@ -1,7 +1,7 @@
 # Stream
 
-文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](arkts-corefile-fileio-createstream-f.md#createstream)方法或者  
-[fileIo.fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenstream)（同步或异步）来构建一个Stream实例。
+文件流，提供流式读写文件数据的能力，使用完毕后需调用close关闭。在调用Stream的方法前，需要先通过[fileIo.createStream](arkts-corefile-fileio-createstream-f.md#createStream)方法或者  
+[fileIo.fdopenStream](arkts-corefile-fileio-fdopenstream-f.md#fdopenStream)（同步或异步）来构建一个Stream实例。
 
 **起始版本：** 23
 

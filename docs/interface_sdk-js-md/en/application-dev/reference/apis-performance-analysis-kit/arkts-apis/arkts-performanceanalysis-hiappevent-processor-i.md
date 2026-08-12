@@ -13,7 +13,7 @@ Defines a data processor for reporting and managing events. You can customize pr
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## appId
@@ -116,7 +116,7 @@ Custom extended parameters. If the input parameter name and value do not meet th
 
 **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 12
 
@@ -288,7 +288,7 @@ Server location information. It is left empty by default. The length of the inpu
 userIds?: string[]
 ```
 
-Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setuserid) API. The default value is an empty array.
+Name array of user IDs that can be reported by the data processor. **name** corresponds to the **name** parameter of the [setUserId](arkts-performanceanalysis-hiappevent-setuserid-f.md#setUserId) API. The default value is an empty array.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 
@@ -310,7 +310,7 @@ Name array of user IDs that can be reported by the data processor. **name** corr
 userProperties?: string[]
 ```
 
-Name array of user properties that can be reported by the data processor. **name** corresponds to the **name**parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setuserproperty) API. The default value is an empty array.
+Name array of user properties that can be reported by the data processor. **name** corresponds to the **name**parameter of the [setUserProperty](arkts-performanceanalysis-hiappevent-setuserproperty-f.md#setUserProperty) API. The default value is an empty array.
 
 **Atomic service API**: This parameter can be used in atomic services since API version 11.
 

@@ -1,6 +1,6 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to {@link onConsole} method.
+Encompassed message information as parameters to [onConsole](onConsole) method.
 
 **起始版本：** 8
 
@@ -20,7 +20,7 @@ Constructor.
 
 **废弃版本：** 9
 
-**替代接口：** ohos.web.ConsoleMessage#constructor
+**替代接口：** [constructor](ohos.web.ConsoleMessage#constructor)
 
 <!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)--><!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)-End-->
 
@@ -32,7 +32,7 @@ Constructor.
 | --- | --- | --- |
 | message | string | 是 |
 | sourceId | string | 是 |
-| lineNumber | number | 是 |
+| [lineNumber](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-linemetrics-i.md) | number | 是 |
 | messageLevel | [MessageLevel](arkts-arkweb-messagelevel-e.md) | 是 |
 
 ## constructor

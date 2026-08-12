@@ -64,7 +64,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 > **NOTE：**
 > 
 > - **preloadItems** of **Tabs** needs to be called after **Tabs** is created. You are advised to control the first
-> preloading in the [onAppear](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#onappear) lifecycle of **Tabs**.
+> preloading in the [onAppear](CommonMethod#onAppear) lifecycle of **Tabs**.
 > 
 > - If the **TabsController** object is not bound to any **Tabs** component, a JavaScript exception will be thrown
 > when this API is called. Therefore, you are advised to use **try-catch** to handle potential exceptions when
@@ -90,7 +90,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| indices | [Optional](../arkts-apis/arkts-arkui-optional-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload.&lt;br&gt;The default value is an empty array. |
+| indices | Optional&lt;Array&lt;number&gt;&gt; | Yes | Array of indexes of the child nodes to preload.&lt;br&gt;The default value is an empty array. |
 
 **Return value:**
 
@@ -102,7 +102,7 @@ Preloads child nodes. After this API is called, all specified child nodes will b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 
@@ -172,5 +172,5 @@ Sets the translation distance of the tab bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| translate | [TranslateOptions](arkts-arkui-translateoptions-i.md) | Yes | Translation distance of the tab bar. |
+| translate | TranslateOptions | Yes | Translation distance of the tab bar. |
 

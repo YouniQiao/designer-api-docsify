@@ -11,14 +11,14 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)(rotationVector:
+**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(rotationVector:)
 
 <!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -28,7 +28,7 @@ function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCall
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | 是 |
+| rotationVector | Array & lt;number & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | 是 |
 
 ## 示例
@@ -61,13 +61,13 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)替代。
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)(rotationVector:
+**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(rotationVector:)
 
 <!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>--><!--Device-sensor-function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>-End-->
 
@@ -77,13 +77,13 @@ function createRotationMatrix(rotationVector: Array<number>): Promise<Array<numb
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| rotationVector | Array&lt;number&gt; | 是 |
+| rotationVector | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;number&gt;&gt; |
+| Promise & lt;Array & lt;number & gt; & gt; |
 
 ## 示例
 
@@ -114,14 +114,14 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)(gravity:
+**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(gravity:)
 
 <!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void-End-->
 
@@ -131,9 +131,9 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| gravity | Array&lt;number&gt; | 是 |
-| geomagnetic | Array&lt;number&gt; | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RotationMatrixResponse&gt; | 是 |
+| gravity | Array & lt;number & gt; | 是 |
+| geomagnetic | Array & lt;number & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; | 是 |
 
 ## 示例
 
@@ -163,13 +163,13 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 > **说明：**
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)替代。
+> [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix)(gravity:
+**替代接口：** [getRotationMatrix](sensor.getRotationMatrix(gravity:)
 
 <!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>--><!--Device-sensor-function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>-End-->
 
@@ -179,11 +179,11 @@ function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| gravity | Array&lt;number&gt; | 是 |
-| geomagnetic | Array&lt;number&gt; | 是 |
+| gravity | Array & lt;number & gt; | 是 |
+| geomagnetic | Array & lt;number & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;RotationMatrixResponse&gt; |
+| Promise&lt;[RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)&gt; |

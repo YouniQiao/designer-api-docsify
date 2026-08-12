@@ -8,7 +8,7 @@ The **inputDeviceCooperate** module implements screen hopping for two or more ne
 
 **Deprecated since:** 23
 
-**Substitutes:** ohos.cooperate/cooperate
+**Substitutes:** [cooperate/cooperate](ohos.cooperate/cooperate)
 
 <!--Device-unnamed-declare namespace inputDeviceCooperate--><!--Device-unnamed-declare namespace inputDeviceCooperate-End-->
 
@@ -17,7 +17,7 @@ The **inputDeviceCooperate** module implements screen hopping for two or more ne
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from 'kits/@kit.InputKit';
+import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
 ## Summary

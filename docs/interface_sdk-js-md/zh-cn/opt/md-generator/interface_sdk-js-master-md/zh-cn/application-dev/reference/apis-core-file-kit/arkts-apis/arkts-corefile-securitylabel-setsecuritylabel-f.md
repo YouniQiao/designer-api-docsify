@@ -25,7 +25,7 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 

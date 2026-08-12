@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from 'kits/@kit.AbilityKit';
+import { bundleManager } from '@kit.AbilityKit';
 ```
 
 ## getSignatureInfo
@@ -12,7 +12,7 @@ import { bundleManager } from 'kits/@kit.AbilityKit';
 function getSignatureInfo(uid: number): SignatureInfo
 ```
 
-Obtains the [signature information](arkts-ability-bundlemanager-signatureinfo-t.md) of an application based on the given UID.
+Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo) of an application based on the given UID.
 
 **Since:** 18
 
@@ -38,8 +38,8 @@ Obtains the [signature information](arkts-ability-bundlemanager-signatureinfo-t.
 
 | Error Code ID |
 | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [17700021](../errorcode-bundle.md#17700021-invalid-uid) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [17700021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-invalid-uid) |
 
 ## Examples
 

@@ -20,7 +20,7 @@ info: CliCmdInfo | Permissions
 
 Operation detail information.
 
-**Type:** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) \| Permissions
+**Type:** [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) \| [Permissions](arkts-ability-permissions-t.md)
 
 **Since:** 26.0.0
 
@@ -40,7 +40,7 @@ operationType: OperationType
 
 Operation type.
 
-**Type:** [OperationType](../../apis-asset-store-kit/arkts-apis/arkts-assetstore-asset-operationtype-e.md)
+**Type:** OperationType
 
 **Since:** 26.0.0
 

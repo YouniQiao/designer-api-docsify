@@ -24,13 +24,13 @@ Polyline is returned when the parameter is transferred.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](../arkts-components/arkts-arkui-polylineoptions-i.md) | No | The options to create a Polyline |
+| options | [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | No | The options to create a Polyline |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md) | The attribute of the Polyline. |
+| [PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md) | The attribute of the Polyline. |
 
 
 ## Polyline
@@ -59,11 +59,11 @@ Defines Polyline Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PolylineAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [PolylineAttribute](../arkts-components/arkts-arkui-polyline-attribute.md) |  |
+| [PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md) |  |
 

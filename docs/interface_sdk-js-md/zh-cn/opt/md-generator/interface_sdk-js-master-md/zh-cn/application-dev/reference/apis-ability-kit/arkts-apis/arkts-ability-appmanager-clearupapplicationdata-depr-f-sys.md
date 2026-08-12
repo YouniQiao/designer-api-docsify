@@ -12,7 +12,7 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#clearUpApplicationData
+**替代接口：** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -32,7 +32,7 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -63,7 +63,7 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.appManager/appManager#clearUpApplicationData
+**替代接口：** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 

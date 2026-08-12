@@ -18,7 +18,7 @@ fontWeightConfigs?: FontWeightConfigs
 
 Defines font weight configurations.
 
-**Type:** [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md)
+**Type:** [FontWeightConfigs](arkts-arkui-textcommon-fontweightconfigs-i.md)
 
 **Since:** 26.0.0
 

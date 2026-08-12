@@ -35,7 +35,7 @@ set summary(value: Record<string, number>)
 ```
 
 是一个字典类型对象，key表示数据类型（见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md)），value为统一数据对象中该类型记录大小总和（单位：Byte）。
+[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)），value为统一数据对象中该类型记录大小总和（单位：Byte）。
 
 **类型：** Record&lt;string, number&gt;
 

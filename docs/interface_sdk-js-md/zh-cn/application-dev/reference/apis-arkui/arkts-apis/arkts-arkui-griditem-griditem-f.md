@@ -25,14 +25,14 @@ export declare function GridItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | 否 | 为GridItem提供可选参数。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
+| value | [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md) | 否 | 为GridItem提供可选参数。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器内容。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |  |
+| [GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md) |  |
 
 
 ## GridItem
@@ -62,12 +62,12 @@ export declare function GridItem(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;GridItemAttribute&gt; | 是 | The style to create a GridItem. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md)&gt; | 是 | The style to create a GridItem. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) | The attribute of the GridItem. |
+| [GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md) | The attribute of the GridItem. |
 

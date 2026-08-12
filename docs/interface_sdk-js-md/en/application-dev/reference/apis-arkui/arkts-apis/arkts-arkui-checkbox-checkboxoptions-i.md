@@ -38,7 +38,7 @@ indicatorBuilder?: CustomBuilder
 
 Custom builder function.
 
-**Type:** [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)
+**Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 23
 

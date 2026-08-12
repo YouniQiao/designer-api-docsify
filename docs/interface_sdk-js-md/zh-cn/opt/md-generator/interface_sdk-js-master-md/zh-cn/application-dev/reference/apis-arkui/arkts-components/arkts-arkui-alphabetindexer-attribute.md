@@ -1,14 +1,14 @@
 # AlphabetIndexer属性/事件
 
-[width](arkts-arkui-commonmethod-c.md#width)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
+[width](CommonMethod#width(value: Length))属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
 
-[padding](arkts-arkui-commonmethod-c.md#padding)属性默认为4vp。
+[padding](CommonMethod#padding)属性默认为4vp。
 
 文本最大的字体缩放倍数[maxFontScale](TextAttribute#maxFontScale)和最小的字体缩放倍数[minFontScale](TextAttribute#minFontScale)皆为1，不跟随系统字体大小调节变化。
 
-除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性：
+除支持[通用属性](common)外，还支持以下属性：
 
-除支持[通用事件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下事件：
+除支持[通用事件](common)外，还支持以下事件：
 
 **继承/实现关系：** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
 
@@ -61,7 +61,7 @@ autoCollapse(value: boolean)
 
 > **说明：**
 
-> 从API version 12开始，该接口支持在[attributeModifier](arkts-arkui-commonmethod-c.md#attributemodifier)中调用。
+> 从API version 12开始，该接口支持在[attributeModifier](CommonMethod#attributeModifier)中调用。
 
 **起始版本：** 11
 
@@ -145,7 +145,7 @@ font(value: Font)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
+| value | [Font](#font) | 是 |
 
 ## itemBorderRadius
 
@@ -275,7 +275,7 @@ onSelected(callback: (index: number) => void)
 
 **废弃版本：** 8
 
-**替代接口：** onSelect
+**替代接口：** [onSelect](onSelect)
 
 <!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute-End-->
 
@@ -285,7 +285,7 @@ onSelected(callback: (index: number) => void)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | (index: number) =&gt; void | 是 |
+| callback | (index: number) = & gt; void | 是 |
 
 ## popupBackground
 
@@ -386,7 +386,7 @@ popupFont(value: Font)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
+| value | [Font](#font) | 是 |
 
 ## popupItemBackgroundColor
 
@@ -458,7 +458,7 @@ popupItemFont(value: Font)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
+| value | [Font](#font) | 是 |
 
 ## popupPosition
 
@@ -642,7 +642,7 @@ selectedFont(value: Font)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md) | 是 |
+| value | [Font](#font) | 是 |
 
 ## usingPopup
 

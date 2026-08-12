@@ -17,7 +17,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
 设置自定义落位动效的执行函数，仅在  
-[useCustomDropAnimation](arkts-arkui-dragevent-i.md#usecustomdropanimation)为true时有效。
+[useCustomDropAnimation](#useCustomDropAnimation)为true时有效。
 
 **起始版本：** 18
 
@@ -35,7 +35,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。&lt;br/&gt; **说明：** &lt;br/&gt;1. 该接口仅在onDrop回调中使用有效。&lt;br/&gt; 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。&lt;br/&gt; 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。&lt;br/&gt; **说明：** &lt;br/&gt;1. 该接口仅在onDrop回调中使用有效。&lt;br/&gt; 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。&lt;br/&gt; 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
 
 ## getData
 
@@ -67,8 +67,8 @@ getData(): UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [190002](../errorcode-uicontext.md#190002-无效的回调函数) | Data error. |
-| [190001](../errorcode-uicontext.md#190001-无效的uicontext对象) | Data not found. |
+| [190002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-获取数据错误) | Data error. |
+| [190001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-数据未找到) | Data not found. |
 
 ## getDisplayId
 
@@ -76,7 +76,7 @@ getData(): UnifiedData
 getDisplayId(): number
 ```
 
-获取当前拖拽事件发生时所在的屏幕ID，不支持在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)阶段使用。
+获取当前拖拽事件发生时所在的屏幕ID，不支持在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)阶段使用。
 
 **起始版本：** 20
 
@@ -262,7 +262,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -288,7 +288,7 @@ getPreviewRect(): Rectangle
 
 | 类型 | 说明 |
 | --- | --- |
-| [Rectangle](../arkts-apis/arkts-arkui-common-rectangle-i.md) | 拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息，单位vp，其中x和y代表预览图左上角的窗口坐标，width和height代表预览图的尺寸。 |
+| [Rectangle](arkts-arkui-rectangle-i.md) | 拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息，单位vp，其中x和y代表预览图左上角的窗口坐标，width和height代表预览图的尺寸。 |
 
 ## getResult
 
@@ -340,7 +340,7 @@ getSummary(): Summary
 
 | 类型 | 说明 |
 | --- | --- |
-| [Summary](../arkts-apis/arkts-arkui-summary-t.md) | 拖拽相关数据的概要。 |
+| [Summary](arkts-arkui-summary-t.md) | 拖拽相关数据的概要。 |
 
 ## getVelocity
 
@@ -488,7 +488,7 @@ getX(): number
 
 **废弃版本：** 10
 
-**替代接口：** [DragEvent#getWindowX](arkts-arkui-dragevent-i.md#getwindowx)
+**替代接口：** [getWindowX](#getWindowX)
 
 <!--Device-DragEvent-getX(): number--><!--Device-DragEvent-getX(): number-End-->
 
@@ -516,7 +516,7 @@ getY(): number
 
 **废弃版本：** 10
 
-**替代接口：** [DragEvent#getWindowY](arkts-arkui-dragevent-i.md#getwindowy)
+**替代接口：** [getWindowY](#getWindowY)
 
 <!--Device-DragEvent-getY(): number--><!--Device-DragEvent-getY(): number-End-->
 
@@ -586,7 +586,7 @@ setData(unifiedData: UnifiedData): void
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](arkts-arkui-dragevent-i.md#setdata)方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中生效。
+设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](#setData)方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中生效。
 
 **起始版本：** 20
 
@@ -604,7 +604,7 @@ setDataLoadParams(dataLoadParams: DataLoadParams): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dataLoadParams | [DataLoadParams](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-dataloadparams-i.md) | 是 | 落入操作时使用的数据加载参数。 |
+| dataLoadParams | [DataLoadParams](arkts-arkui-dataloadparams-t.md) | 是 | 落入操作时使用的数据加载参数。 |
 
 ## setResult
 
@@ -656,7 +656,7 @@ startDataLoading(options: DataSyncOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md/arkts-arkui-arkui-uicontext-dragcontroller-c.md#canceldataloading)接口取消数据加载。 |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#cancelDataLoading)接口取消数据加载。 |
 
 **返回值：**
 
@@ -668,8 +668,8 @@ startDataLoading(options: DataSyncOptions): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. |
-| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. |
+| [190003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -679,14 +679,14 @@ autoHideComponentUniqueIds?: int | int[]
 
 设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
 
-仅在[onDragStart](arkts-arkui-commonmethod-c.md#ondragstart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
+仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
 
 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
 
-组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md/arkts-arkui-arkui-uicontext-uicontext-c.md#getframenodebyid)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md/arkts-arkui-framenode-c.md#getuniqueid)获取。
+组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getUniqueId)获取。
 
-开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#ondragend)或  
-[onDrop](arkts-arkui-commonmethod-c.md#ondrop)中恢复组件显示状态。
+开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或  
+[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void))中恢复组件显示状态。
 
 **类型：** int \| int[]
 
@@ -738,7 +738,7 @@ useCustomDropAnimation: boolean
 
 应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
 
-当不配置或设置为false时，系统默认落位动效生效，当[setResult](arkts-arkui-dragevent-i.md#setresult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则为放大消失动效。
+当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setResult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则为放大消失动效。
 
 当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
 

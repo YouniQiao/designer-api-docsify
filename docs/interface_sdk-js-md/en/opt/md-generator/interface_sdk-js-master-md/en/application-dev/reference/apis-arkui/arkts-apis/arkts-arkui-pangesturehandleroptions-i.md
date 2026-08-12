@@ -1,8 +1,8 @@
 # PanGestureHandlerOptions
 
-Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md).
+Provides the parameters of the pan gesture handler. Inherits from [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions).
 
-**Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
+**Inheritance/Implementation:** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md#BaseHandlerOptions)
 
 **Since:** 12
 
@@ -44,13 +44,13 @@ Default value: **8** for the stylus and **5** for other input sources
 
 **NOTE：**
 
-If a pan gesture and a [tab](tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.
+If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.
 
 Value range: [0, +∞). If the value specified is less than 0, the default value is used.
 
 Since API version 19, the default value is **8**, in vp, for the stylus.
 
-When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md/arkts-arkui-commonmethod-c.md#gesturemodifier), the unit is px.
+When configuring this field with [gestureModifier](../arkts-components/arkts-arkui-commonmethod-c.md#gestureModifier), the unit is px.
 
 **Type:** number
 
@@ -76,7 +76,7 @@ Default value: **8** for the stylus and **5** for other input sources
 
 Value range: [0, +∞). If the value specified is less than 0, the default value is used.
 
-**Type:** Map&lt;SourceTool, number&gt;
+**Type:** Map&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md), number&gt;
 
 **Since:** 19
 

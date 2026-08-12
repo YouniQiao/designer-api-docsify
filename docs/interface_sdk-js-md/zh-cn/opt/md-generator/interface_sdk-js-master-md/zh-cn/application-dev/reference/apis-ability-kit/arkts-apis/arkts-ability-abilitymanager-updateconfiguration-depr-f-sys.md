@@ -12,7 +12,7 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.abilityManager/abilityManager#updateConfiguration
+**替代接口：** [updateConfiguration](ohos.app.ability.abilityManager/abilityManager#updateConfiguration)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -42,7 +42,7 @@ function updateConfiguration(config: Configuration): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** ohos.app.ability.abilityManager/abilityManager#updateConfiguration
+**替代接口：** [updateConfiguration](ohos.app.ability.abilityManager/abilityManager#updateConfiguration)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -62,4 +62,4 @@ function updateConfiguration(config: Configuration): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

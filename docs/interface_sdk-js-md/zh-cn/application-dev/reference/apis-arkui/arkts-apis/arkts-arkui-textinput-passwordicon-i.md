@@ -20,7 +20,7 @@ offIconSrc?: string | Resource
 
 string格式可用于加载网络图片和本地图片。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ onIconSrc?: string | Resource
 
 string格式可用于加载网络图片和本地图片。
 
-**类型：** string \| Resource
+**类型：** string \| [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 23
 

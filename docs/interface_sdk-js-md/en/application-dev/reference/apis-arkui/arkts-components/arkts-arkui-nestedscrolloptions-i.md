@@ -18,7 +18,7 @@ scrollBackward: NestedScrollMode
 
 Set NestedScrollMode when the scrollable component scrolls backward
 
-**Type:** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**Type:** NestedScrollMode
 
 **Since:** 11
 
@@ -40,7 +40,7 @@ scrollForward: NestedScrollMode
 
 Set NestedScrollMode when the scrollable component scrolls forward
 
-**Type:** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
+**Type:** NestedScrollMode
 
 **Since:** 11
 

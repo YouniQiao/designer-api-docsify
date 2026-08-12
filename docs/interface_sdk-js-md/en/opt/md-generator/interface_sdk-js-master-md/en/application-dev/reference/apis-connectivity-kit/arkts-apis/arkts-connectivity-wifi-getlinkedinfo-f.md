@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## getLinkedInfo
@@ -18,7 +18,7 @@ Obtains information about a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getLinkedInfo
+**Substitutes:** [getLinkedInfo](ohos.wifiManager/wifiManager.getLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -30,7 +30,7 @@ Obtains information about a Wi-Fi connection.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;WifiLinkedInfo&gt; |
+| Promise & lt;WifiLinkedInfo & gt; |
 
 
 ## getLinkedInfo
@@ -45,7 +45,7 @@ Obtains information about a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.getLinkedInfo
+**Substitutes:** [getLinkedInfo](ohos.wifiManager/wifiManager.getLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

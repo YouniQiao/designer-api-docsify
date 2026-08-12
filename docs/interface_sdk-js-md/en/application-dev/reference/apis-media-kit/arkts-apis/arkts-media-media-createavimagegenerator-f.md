@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVImageGenerator
@@ -26,13 +26,13 @@ Creates an AVImageGenerator instance. This API uses a promise to return the resu
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVImageGenerator&gt; | Promise used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
+| Promise&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | Promise used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
 ## Examples
 
@@ -73,13 +73,13 @@ Creates an **AVImageGenerator** instance. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;AVImageGenerator \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
+| Promise&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined&gt; | Promise used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
 
 ## createAVImageGenerator
@@ -102,13 +102,13 @@ Creates an AVImageGenerator instance. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVImageGenerator&gt; | Yes | Callback used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, an AVImageGenerator instance is returned; otherwise, **null** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 
 ## Examples
 
@@ -147,11 +147,11 @@ Creates an **AVImageGenerator** instance. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVImageGenerator \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, an **AVImageGenerator** instance is returned; otherwise, **undefined** is returned. The API can be used to obtain a video thumbnail. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 

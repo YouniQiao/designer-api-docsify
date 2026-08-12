@@ -12,7 +12,7 @@ declare function getInspectorNodes(): object
 
 **废弃版本：** 9
 
-**替代接口：** [getInspectorTree](arkts-arkui-global-getinspectortree-f.md#getinspectortree)
+**替代接口：** [getInspectorTree](arkts-arkui-global-getinspectortree-f.md#getInspectorTree)
 
 <!--Device-unnamed-declare function getInspectorNodes(): object--><!--Device-unnamed-declare function getInspectorNodes(): object-End-->
 

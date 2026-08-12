@@ -31,7 +31,7 @@ function getEvent(node: FrameNode, nodeType: 'Scroll'): UIScrollEvent | undefine
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIScrollEvent](../arkts-components/arkts-arkui-uiscrollevent-i.md) | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIScrollEvent | Scroll节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
 ## getEvent
@@ -65,7 +65,7 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIListEvent](../arkts-components/arkts-arkui-uilistevent-i.md) | List节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIListEvent | List节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
 ## getEvent
@@ -74,7 +74,7 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | undefined
 ```
 
-获取[WaterFlow](arkts-arkui-typenode-waterflow-t.md)节点中持有的UIWaterFlowEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。
+获取[WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow)节点中持有的UIWaterFlowEvent对象，用于设置滚动事件。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。设置的滚动事件与声明式定义的事件平行；设置的滚动事件不覆盖原有的声明式事件。同时设置两个事件回调的时候，优先回调声明式事件。
 
 **起始版本：** 19
 
@@ -99,7 +99,7 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIWaterFlowEvent](../arkts-components/arkts-arkui-uiwaterflowevent-i.md) | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIWaterFlowEvent | WaterFlow节点类型的滚动事件，若获取失败，则返回undefined。 |
 
 
 ## getEvent
@@ -133,5 +133,5 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIGridEvent](../arkts-components/arkts-arkui-uigridevent-i.md) | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
+| UIGridEvent | Grid节点类型的滚动事件，若获取失败，则返回undefined。 |
 

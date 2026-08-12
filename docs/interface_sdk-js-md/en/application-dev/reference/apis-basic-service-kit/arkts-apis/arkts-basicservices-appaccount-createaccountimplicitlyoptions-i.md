@@ -13,7 +13,7 @@ Defines the options for implicitly creating an application account.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from 'kits/@kit.BasicServicesKit';
+import { appAccount } from '@kit.BasicServicesKit';
 ```
 
 ## authType
@@ -42,7 +42,7 @@ parameters?: Record<string, Object>
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** Record&lt;string, Object&gt;
 
 **Since:** 9
 

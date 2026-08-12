@@ -11,7 +11,7 @@ The commonType module defines common data types in data management.
 ## Modules to Import
 
 ```TypeScript
-import { commonType } from 'kits/@kit.ArkData';
+import { commonType } from '@kit.ArkData';
 ```
 
 ## Summary

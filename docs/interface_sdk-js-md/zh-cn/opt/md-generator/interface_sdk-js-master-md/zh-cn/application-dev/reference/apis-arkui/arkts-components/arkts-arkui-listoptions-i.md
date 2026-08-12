@@ -26,10 +26,10 @@ initialIndex?: number
 
 设置为负数或超过了当前List最后一个item的索引值时视为无效取值，无效取值按默认值显示。
 
-从API version 14开始，如果在List组件创建完成后首次布局前（如List的[onAttach](arkts-arkui-commonmethod-c.md#onattach)事件中），调用Scroller滚动控制器中不带动画的scrollToIndex或scrollEdge方法，会覆盖initialIndex设置的值。
+从API version 14开始，如果在List组件创建完成后首次布局前（如List的[onAttach](CommonMethod#onAttach)事件中），调用Scroller滚动控制器中不带动画的scrollToIndex或scrollEdge方法，会覆盖initialIndex设置的值。
 
 设置了initialIndex后，List从initialIndex对应的子组件开始布局，在这之前的子组件未参与布局，无法计算准确大小，因此通过  
-[currentOffset](arkts-arkui-scroller-c.md#currentoffset)接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置  
+[currentOffset](Scroller#currentOffset)接口获取到的List的滚动总偏移量通过估算得出，可能会有误差。可通过设置  
 [childrenMainSize](ListAttribute#childrenMainSize)确保List的滚动总偏移量的准确性。
 
 **类型：** number
@@ -56,7 +56,7 @@ scroller?: Scroller
 
 **说明：**
 
-不允许和其他滚动类组件，如：[ArcList](../arkts-apis/arkts-arkui-arclist.md/arkts-arkui-arclist.md)、[List](../../apis-arkts/arkts-apis/arkts-arkts-util-list-list-c.md/arkts-arkts-util-list-list-c.md)、[Grid](./grid)、  
+不允许和其他滚动类组件，如：[ArcList](../arkts-apis/arkts-arkui-arkui-arclist-con.md#ArcList)、[List](./list)、[Grid](./grid)、  
 [Scroll](./scroll)和[WaterFlow](./water_flow)绑定同一个滚动控制对象。
 
 **类型：** [Scroller](arkts-arkui-scroller-c.md)

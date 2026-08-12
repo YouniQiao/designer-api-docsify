@@ -13,7 +13,7 @@ Describes the parameters in the callback of the action event of the PiP controll
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from 'kits/@kit.ArkUI';
+import { PiPWindow } from '@kit.ArkUI';
 ```
 
 ## controlType

@@ -12,7 +12,7 @@ Defines the radial gradient parameters.
 > 
 > When using the **colors** parameter, take note of the following:
 > 
-> [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md/arkts-arkui-resourcecolor-t.md) indicates the color, and **number** indicates the color's position, which
+> [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md#ResourceColor) indicates the color, and **number** indicates the color's position, which
 > ranges from 0 to 1.0: **0** indicates the start of the container, and **1.0** indicates the end of the container.
 > To create a gradient with multiple color stops, you are advised to set the **number** values in ascending order. If
 > a value of **number** in an array is smaller than that in the previous one, it is considered as equal to the

@@ -2,7 +2,7 @@
 
 定义可扩展List组件。
 
-**继承/实现关系：** ExtendableList implements [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md/arkts-arkui-list-attribute.md)
+**继承/实现关系：** ExtendableList implements [ListAttribute](arkts-arkui-list-listattribute-i.md#ListAttribute)
 
 **起始版本：** 26.0.0
 
@@ -40,7 +40,7 @@ static $_instantiate<T extends ExtendableList>(
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
 | options | [ListOptions](arkts-arkui-list-listoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -76,9 +76,9 @@ static _instantiateImpl<T extends ExtendableList>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setListOptions
 

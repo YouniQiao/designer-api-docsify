@@ -20,5 +20,5 @@ type ProgressListener = (progress: ProgressInfo) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| progress | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) | 是 | 定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md)设置为 NONE时才会上报此信息。 |
+| progress | ProgressInfo | 是 | 定义进度上报的数据结构，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator)设置为 NONE时才会上报此信息。 |
 

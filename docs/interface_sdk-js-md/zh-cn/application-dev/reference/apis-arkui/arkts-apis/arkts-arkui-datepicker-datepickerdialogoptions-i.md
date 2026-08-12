@@ -2,9 +2,9 @@
 
 日期选择器弹窗选项。
 
-继承自[DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md)。
+继承自[DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md#DatePickerOptions)。
 
-**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md)
+**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md#DatePickerOptions)
 
 **起始版本：** 23
 
@@ -51,7 +51,7 @@ alignment?: DialogAlignment
 
 默认值：DialogAlignment.Default
 
-**类型：** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
+**类型：** [DialogAlignment](arkts-arkui-alertdialog-dialogalignment-e.md)
 
 **默认值：** DialogAlignment.Default
 
@@ -229,7 +229,7 @@ dateTimeOptions?: DateTimeOptions
 
 hour: 24小时制默认为"2-digit"，设置hour是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"； 12小时制默认为"numeric"，即没有前导0。minute: 默认为"2-digit"，设置minute是否按照2位数字显示，如果实际数值小于10，则会补充前导0并显示，即为"0X"。
 
-**类型：** [DateTimeOptions](../arkts-components/arkts-arkui-datetimeoptions-t.md)
+**类型：** DateTimeOptions
 
 **默认值：** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
@@ -469,7 +469,7 @@ offset?: Offset
 
 默认值：{ dx: 0 , dy: 0 }
 
-**类型：** [Offset](arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **默认值：** { dx: 0 , dy: 0 }
 
@@ -681,7 +681,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。
 
-**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| ShadowStyle
+**类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](../arkts-components/arkts-arkui-shadowstyle-e.md)
 
 **起始版本：** 23
 

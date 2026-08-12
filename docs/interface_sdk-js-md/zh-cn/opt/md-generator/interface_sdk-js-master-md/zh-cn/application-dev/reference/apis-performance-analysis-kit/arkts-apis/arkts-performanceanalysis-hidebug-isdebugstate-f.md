@@ -6,7 +6,7 @@
 function isDebugState(): boolean
 ```
 
-��ȡӦ�ý��̵ĵ���״̬��
+获取应用进程的调试状态。
 
 **起始版本：** 12
 

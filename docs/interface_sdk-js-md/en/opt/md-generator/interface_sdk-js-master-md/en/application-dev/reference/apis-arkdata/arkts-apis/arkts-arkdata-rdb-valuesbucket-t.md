@@ -10,7 +10,7 @@ Defines the types of the key and value in a KV pair.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.data.relationalStore:relationalStore.ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md)
+**Substitutes:** [ValuesBucket](arkts-arkdata-relationalstore-valuesbucket-t.md#ValuesBucket)
 
 <!--Device-rdb-type ValuesBucket = { [key: string]: ValueType | Uint8Array | null }--><!--Device-rdb-type ValuesBucket = { [key: string]: ValueType | Uint8Array | null }-End-->
 

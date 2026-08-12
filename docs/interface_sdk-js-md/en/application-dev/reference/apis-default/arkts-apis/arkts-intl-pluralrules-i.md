@@ -14,7 +14,7 @@ resolvedOptions(): ResolvedPluralRulesOptions
 
 | Type | Description |
 | --- | --- |
-| [ResolvedPluralRulesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolvedpluralrulesoptions-i.md) |  |
+| ResolvedPluralRulesOptions |  |
 
 ## select
 
@@ -34,5 +34,5 @@ select(n: number): LDMLPluralRule
 
 | Type | Description |
 | --- | --- |
-| [LDMLPluralRule](../../apis-arkts/arkts-apis/arkts-arkts-intl-ldmlpluralrule-t.md) |  |
+| LDMLPluralRule |  |
 

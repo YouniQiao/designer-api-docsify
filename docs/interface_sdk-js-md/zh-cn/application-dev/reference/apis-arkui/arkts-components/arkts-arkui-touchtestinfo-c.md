@@ -88,7 +88,7 @@ rect: RectResult
 
 子组件的位置和宽高。
 
-**类型：** [RectResult](../arkts-apis/arkts-arkui-common-rectresult-i.md)
+**类型：** [RectResult](arkts-arkui-rectresult-i.md)
 
 **起始版本：** 11
 

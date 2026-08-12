@@ -13,7 +13,7 @@ Describes the fold state information about a foldable device.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## foldStatus
@@ -24,7 +24,7 @@ readonly foldStatus: FoldStatus
 
 Fold state.
 
-**Type:** [FoldStatus](../../apis-arkui/arkts-apis/arkts-arkui-enums-foldstatus-e.md)
+**Type:** FoldStatus
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ readonly supportedCameras: Array<CameraDevice>
 
 List of cameras supported in the current fold state.
 
-**Type:** Array&lt;CameraDevice&gt;
+**Type:** Array&lt;[CameraDevice](arkts-camera-camera-cameradevice-i.md)&gt;
 
 **Since:** 12
 

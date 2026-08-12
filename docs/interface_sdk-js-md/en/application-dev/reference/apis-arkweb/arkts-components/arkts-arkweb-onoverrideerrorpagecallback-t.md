@@ -18,7 +18,7 @@ The callback of onOverrideErrorPage.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| errorPageEvent | [OnErrorReceiveEvent](../../apis-arkui/arkts-apis/arkts-arkui-atomicservice-atomicserviceweb-onerrorreceiveevent-i.md) | Yes | The information of error. |
+| errorPageEvent | [OnErrorReceiveEvent](arkts-arkweb-onerrorreceiveevent-i.md) | Yes | The information of error. |
 
 **Return value:**
 

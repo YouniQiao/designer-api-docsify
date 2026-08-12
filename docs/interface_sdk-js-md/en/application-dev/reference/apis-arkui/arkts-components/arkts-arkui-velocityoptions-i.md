@@ -24,7 +24,7 @@ angle: ParticleTuple<number, number>
 
 Direction (in angles) in which the particle moves, with the geometric center of the element as the coordinate origin and the horizontal direction as the x-axis. A positive number indicates clockwise rotation.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ speed: ParticleTuple<number, number>
 
 Time rate at which the particle moves.
 
-**Type:** [ParticleTuple](../arkts-apis/arkts-arkui-particletuple-t.md)&lt;number, number&gt;
+**Type:** [ParticleTuple](arkts-arkui-particletuple-t.md)&lt;number, number&gt;
 
 **Since:** 10
 

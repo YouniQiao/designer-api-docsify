@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 ```
 
 ## tracepoint
@@ -12,7 +12,7 @@ import { hiTraceChain } from 'kits/@kit.PerformanceAnalysisKit';
 function tracepoint(mode: HiTraceCommunicationMode, type: HiTraceTracepointType, id: HiTraceId, msg?: string): void
 ```
 
-Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md)logging, which is synchronous.
+Adds a trace point for the [@ohos.hiTraceMeter (Performance Tracing)](arkts-hitracemeter.md#hiTraceMeter)logging, which is synchronous.
 
 When type is set to **CS** and **SR**, the HiTraceMeter tracing starts. When type is set to **CR** and **SS**, the HiTraceMeter tracing ends. When type is set to **GENERAL**, the HiTraceMeter tracing does not start.
 

@@ -2,7 +2,7 @@
 
 The scene resource factory.
 
-**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md)
+**Inheritance/Implementation:** SceneResourceFactory extends [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i.md#RenderResourceFactory)
 
 **Since:** 12
 
@@ -36,6 +36,29 @@ Create a camera.
 | --- |
 | Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { SceneNodeParameters, Camera, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
+
+function createCameraPromise(): Promise<Camera> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
+      // Create a camera.
+      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
+      resolve(camera);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
+
 ## createCamera
 
 ```TypeScript
@@ -63,6 +86,31 @@ Create a camera.
 | --- |
 | Promise&lt;[Camera](arkts-arkgraphics3d-scenenodes-camera-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, CameraParameters,
+  RenderingPipelineType } from '@kit.ArkGraphics3D';
+
+function createCameraPromise(): Promise<Camera> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let nodeParameter: SceneNodeParameters = { name: "camera1" };
+      let camParameter: CameraParameters = {renderingPipeline: RenderingPipelineType.FORWARD};
+      // Create a camera.
+      let camera: Camera = await sceneFactory.createCamera(nodeParameter, camParameter);
+      resolve(camera);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
+
 ## createEffect
 
 ```TypeScript
@@ -89,6 +137,31 @@ Create an effect.
 | --- |
 | Promise&lt;[Effect](arkts-arkgraphics3d-sceneresources-effect-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { SceneResourceFactory, Scene, Effect, EffectParameters } from '@kit.ArkGraphics3D';
+
+function createEffect() : Promise<Effect> {
+  return new Promise((resolve, reject) => {
+    let scene: Promise<Scene> = Scene.load();
+    scene.then(async (result: Scene | undefined) => {
+      if (!result) {
+        return;
+      }
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      // Effect ID, which is in the format of 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX', for example, 'e68a7f45-2d21-4a0d-9aef-7d9c825d3f12'.
+      let params: EffectParameters = {effectId: "e68a7f45-2d21-4a0d-9aef-7d9c825d3f12"}
+      let effect: Effect = await sceneFactory.createEffect(params);
+      resolve(effect);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
+
 ## createEnvironment
 
 ```TypeScript
@@ -114,6 +187,30 @@ Create an environment.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Environment](arkts-arkgraphics3d-sceneresources-environment-i.md)&gt; |
+
+## Examples
+
+```TypeScript
+import { Environment, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
+
+function createEnvironmentPromise(): Promise<Environment> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      // Load environment map resources. The path and file name can be customized based on the specific project resources.
+      let sceneEnvironmentParameter: SceneResourceParameters = { name: "env", uri: $rawfile("KTX/quarry_02_2k_radiance.ktx") };
+      // Create an environment.
+      let env: Environment = await sceneFactory.createEnvironment(sceneEnvironmentParameter);
+      resolve(env);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
 
 ## createGeometry
 
@@ -142,6 +239,36 @@ Create a geometry node.
 | --- |
 | Promise&lt;[Geometry](arkts-arkgraphics3d-scenenodes-geometry-i.md)&gt; |
 
+## Examples
+
+```TypeScript
+import { SceneResourceFactory, Scene, Geometry, CubeGeometry } from '@kit.ArkGraphics3D';
+
+function createGeometryPromise() : Promise<Geometry> {
+  return new Promise((resolve, reject) => {
+    let scene: Promise<Scene> = Scene.load();
+    scene.then(async (result: Scene | undefined) => {
+      if (!result) {
+        return;
+      }
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      // Create cube geometry data.
+      let cubeGeom = new CubeGeometry();
+      cubeGeom.size = { x: 1, y: 1, z: 1 };
+      // Create a mesh resource based on the cube geometry data.
+      let meshRes = await sceneFactory.createMesh({ name: "MeshName" }, cubeGeom);
+      console.info("TEST createGeometryPromise");
+      // Create a geometry object based on the scene node parameters and mesh resource.
+      let geometry: Geometry = await sceneFactory.createGeometry({ name: "GeometryName" }, meshRes);
+      resolve(geometry);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
+
 ## createLight
 
 ```TypeScript
@@ -161,13 +288,36 @@ Create a light.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | params | [SceneNodeParameters](arkts-arkgraphics3d-scene-scenenodeparameters-i.md) | Yes |
-| lightType | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | Yes |
+| [lightType](arkts-arkgraphics3d-scenenodes-light-i.md) | [LightType](arkts-arkgraphics3d-scenenodes-lighttype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Light](arkts-arkgraphics3d-scenenodes-light-i.md)&gt; |
+
+## Examples
+
+```TypeScript
+import { SceneNodeParameters, LightType, Light, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
+
+function createLightPromise() : Promise<Light> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneLightParameter: SceneNodeParameters = { name: "light" };
+      // Create directional light.
+      let light: Light = await sceneFactory.createLight(sceneLightParameter, LightType.DIRECTIONAL);
+      resolve(light);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
 
 ## createMaterial
 
@@ -188,13 +338,36 @@ Create a material.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes |
-| materialType | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Yes |
+| [materialType](arkts-arkgraphics3d-sceneresources-material-i.md) | [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Material](arkts-arkgraphics3d-sceneresources-material-i.md)&gt; |
+
+## Examples
+
+```TypeScript
+import { MaterialType, Material, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
+
+function createMaterialPromise() : Promise<Material> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneMaterialParameter: SceneResourceParameters = { name: "material" };
+      // Create a material.
+      let material: Material = await sceneFactory.createMaterial(sceneMaterialParameter, MaterialType.SHADER);
+      resolve(material);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```
 
 ## createNode
 
@@ -221,3 +394,27 @@ Create a node.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[Node](arkts-arkgraphics3d-scenenodes-node-i.md)&gt; |
+
+## Examples
+
+```TypeScript
+import { SceneNodeParameters, SceneResourceFactory, Scene, Node } from '@kit.ArkGraphics3D';
+
+function createNodePromise(): Promise<Node> {
+  return new Promise((resolve, reject) => {
+    // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+    let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+    scene.then(async (result: Scene) => {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneNodeParameter: SceneNodeParameters = { name: "empty_node",
+        path:"/rootNode_/empty_node" };
+      // Create a node.
+      let node: Node = await sceneFactory.createNode(sceneNodeParameter);
+      resolve(node);
+    }).catch((error: Error) => {
+      console.error('Scene load failed:', error);
+      reject(error);
+    });
+  });
+}
+```

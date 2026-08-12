@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appManager } from 'kits/@kit.AbilityKit';
+import { appManager } from '@kit.AbilityKit';
 ```
 
 ## getForegroundApplications
@@ -13,7 +13,7 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 ```
 
 Obtains applications that are running in the foreground. The application information is defined by  
-[AppStateData](arkts-ability-appmanager-appstatedata-t.md). This API uses an asynchronous callback to return the result.
+[AppStateData](arkts-ability-appstatedata-c.md#AppStateData). This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -35,10 +35,10 @@ Obtains applications that are running in the foreground. The application informa
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -71,7 +71,7 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 ```
 
 Obtains applications that are running in the foreground. The application information is defined by  
-[AppStateData](arkts-ability-appmanager-appstatedata-t.md). This API uses a promise to return the result.
+[AppStateData](arkts-ability-appstatedata-c.md#AppStateData). This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -87,15 +87,15 @@ Obtains applications that are running in the foreground. The application informa
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Array&lt;AppStateData&gt;&gt; |
+| Promise & lt;Array & lt;AppStateData & gt; & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-internal-error) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

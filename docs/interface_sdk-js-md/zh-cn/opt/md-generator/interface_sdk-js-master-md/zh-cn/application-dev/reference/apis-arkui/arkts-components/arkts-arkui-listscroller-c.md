@@ -4,13 +4,13 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 
 > **说明：**
 > 
-> ListScroller继承自[Scroller](arkts-arkui-scroller-c.md)，具有[Scroller](arkts-arkui-scroller-c.md)的全部方法。
+> ListScroller继承自[Scroller](arkts-arkui-scroller-c.md#Scroller)，具有[Scroller](arkts-arkui-scroller-c.md#Scroller)的全部方法。
 
 ## 导入对象
 
 ```ts listScroller: ListScroller = new ListScroller();```
 
-**继承/实现关系：** ListScroller extends [Scroller](arkts-arkui-scroller-c.md)
+**继承/实现关系：** ListScroller extends [Scroller](arkts-arkui-scroller-c.md#Scroller)
 
 **起始版本：** 11
 
@@ -24,7 +24,7 @@ List组件的滚动控制器，通过它控制List组件的滚动，仅支持一
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-将[EXPANDED](arkts-arkui-swipeactionstate-e.md)状态的[ListItem](./list_item)收起，并设置回调事件。
+将[EXPANDED](arkts-arkui-swipeactionstate-e.md#SwipeActionState)状态的[ListItem](./list_item)收起，并设置回调事件。
 
 **起始版本：** 11
 
@@ -46,8 +46,8 @@ closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## getItemRectInGroup
 
@@ -84,8 +84,8 @@ getItemRectInGroup(index: number, indexInGroup: number): RectResult
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## getVisibleListContentInfo
 
@@ -122,8 +122,8 @@ getVisibleListContentInfo(x: number, y: number): VisibleListContentInfo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
 
 ## scrollToItemInGroup
 
@@ -156,5 +156,5 @@ scrollToItemInGroup(index: number, indexInGroup:number, smooth?: boolean, align?
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) |

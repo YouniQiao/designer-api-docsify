@@ -12,7 +12,7 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.hash:hash](arkts-corefile-fileio-hash-f.md#hash)
+**Substitutes:** [hash](arkts-file-hash.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
 
@@ -23,13 +23,13 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| algorithm | string | Yes |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 
 ## hash
@@ -44,7 +44,7 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.hash:hash](arkts-corefile-fileio-hash-f.md#hash)
+**Substitutes:** [hash](arkts-file-hash.md#hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 
@@ -55,5 +55,5 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | string | Yes |
-| algorithm | string | Yes |
+| [algorithm](../../apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-cert-certchainvalidator-i.md) | string | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes |

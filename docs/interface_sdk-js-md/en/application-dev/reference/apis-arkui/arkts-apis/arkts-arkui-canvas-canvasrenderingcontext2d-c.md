@@ -2,7 +2,7 @@
 
 Draw context object for the Canvas component.
 
-**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](../arkts-components/arkts-arkui-canvasrenderer-c.md/arkts-arkui-canvasrenderer-c.md)
+**Inheritance/Implementation:** CanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvas-canvasrenderer-c.md#CanvasRenderer)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Constructor of the canvas drawing context object, which is used to create a draw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see {@link RenderingContextSettings}. |
+| settings | [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md) | No | Drawing attribute. For details, see [RenderingContextSettings](arkts-arkui-canvas-renderingcontextsettings-c.md#RenderingContextSettings). |
 | unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | No | the unit mode |
 
 ## getContext2DFromDrawingContext
@@ -59,20 +59,20 @@ Retrieves a 2D rendering context from the specified drawing context.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](../arkts-components/arkts-arkui-drawingrenderingcontext-c.md) | Yes | A drawing rendering context. |
-| options | [RenderingContextOptions](../arkts-components/arkts-arkui-renderingcontextoptions-i.md) | No | options of the 2D rendering context. |
+| drawingContext | [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md) | Yes | A drawing rendering context. |
+| options | [RenderingContextOptions](arkts-arkui-canvas-renderingcontextoptions-i.md) | No | options of the 2D rendering context. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CanvasRenderingContext2D](../arkts-components/arkts-arkui-canvasrenderingcontext2d-c.md) | Returns a 2D rendering context that is bound to the same canvas component as the input drawingContext. |
+| [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md) | Returns a 2D rendering context that is bound to the same canvas component as the input drawingContext. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. @static |
+| [103702](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. @static |
 
 ## offAttach
 
@@ -102,7 +102,7 @@ Unregister the listener that watches if the canvasrenderingcontext2d attached to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offDetach
 
@@ -132,7 +132,7 @@ Unregister the listener that watches if the canvasrenderingcontext2d detached fr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onAttach
 
@@ -162,7 +162,7 @@ Register the listener that watches if the canvasrenderingcontext2d attached to t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onDetach
 
@@ -192,7 +192,7 @@ Register the listener that watches if the canvasrenderingcontext2d detached from
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -216,7 +216,7 @@ Start image analyzer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
+| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
 
 **Return value:**
 
@@ -228,9 +228,9 @@ Start image analyzer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is not supported. |
-| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
-| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is not supported. |
+| [110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| [110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 

@@ -11,7 +11,7 @@ Describes the information about a media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## albumChangeInfos
@@ -22,7 +22,7 @@ albumChangeInfos?: AlbumChangeInfo[] | null
 
 Smart album change information.
 
-**Type:** AlbumChangeInfo[] \| null
+**Type:** [AlbumChangeInfo](arkts-medialibrary-photoaccesshelper-albumchangeinfo-i.md)[] \| null
 
 **Since:** 23
 
@@ -228,7 +228,7 @@ position?: PositionType
 
 Position of the media asset.
 
-**Type:** [PositionType](arkts-medialibrary-photoaccesshelper-positiontype-e.md)
+**Type:** PositionType
 
 **Since:** 23
 
@@ -282,7 +282,7 @@ thumbnailVisible: ThumbnailVisibility
 
 Accessibility status of the thumbnail.
 
-**Type:** [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md)
+**Type:** ThumbnailVisibility
 
 **Since:** 20
 

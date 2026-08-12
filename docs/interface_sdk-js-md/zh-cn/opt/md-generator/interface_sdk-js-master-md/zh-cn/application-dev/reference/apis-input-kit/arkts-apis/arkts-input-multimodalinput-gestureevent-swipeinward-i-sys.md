@@ -18,7 +18,7 @@ type: ActionType
 
 表示向内滑动事件的类型，固定为SwipeInward。
 
-**类型：** [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md)
+**类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
 **起始版本：** 12
 

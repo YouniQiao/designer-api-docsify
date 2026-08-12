@@ -16,7 +16,7 @@ You can define intent entities by inheriting this class. The child class must be
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from 'kits/@kit.AbilityKit';
+import { insightIntent } from '@kit.AbilityKit';
 ```
 
 ## entityId

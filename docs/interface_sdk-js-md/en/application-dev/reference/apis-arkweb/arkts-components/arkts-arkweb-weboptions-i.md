@@ -1,6 +1,6 @@
 # WebOptions
 
-Defines web options through the [APIs](../arkts-apis/arkts-arkweb-web-web-f.md/arkts-arkweb-web-web-f.md#web).
+Defines web options through the [APIs](web).
 
 **Since:** 8
 
@@ -17,9 +17,9 @@ controller: WebController | WebviewController
 ```
 
 Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use  
-[WebviewController](arkts-arkweb-webviewcontroller-t.md) instead.
+[WebviewController](arkts-arkweb-webviewcontroller-t.md#WebviewController) instead.
 
-**Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| WebviewController
+**Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 8
 
@@ -79,7 +79,7 @@ renderMode? : RenderMode
 
 Rendering mode.
 
-**Type:** [RenderMode](../arkts-apis/arkts-arkweb-web-rendermode-e.md)
+**Type:** [RenderMode](arkts-arkweb-rendermode-e.md)
 
 **Since:** 12
 

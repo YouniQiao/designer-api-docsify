@@ -30,9 +30,9 @@
 | --- | --- |
 | [ColorMetricsStop](arkts-arkui-slider-colormetricsstop-i.md) | 线性渐变颜色断点类型，用于描述渐进色颜色断点。 |
 | [SlideRange](arkts-arkui-slider-sliderange-i.md) | 定义SlideRange中使用的回调类型。 |
-| [SliderAttribute](arkts-arkui-slider-sliderattribute-i.md) | 支持除触摸热区以外的[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)。 |
+| [SliderAttribute](arkts-arkui-slider-sliderattribute-i.md) | 支持除触摸热区以外的[通用属性](common)。 |
 | [SliderBlockStyle](arkts-arkui-slider-sliderblockstyle-i.md) | Slider组件滑块形状参数。 |
-| [SliderConfiguration](arkts-arkui-slider-sliderconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-commonconfiguration-i.md)。 |
+| [SliderConfiguration](arkts-arkui-slider-sliderconfiguration-i.md) | 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。 |
 | [SliderCustomContentOptions](arkts-arkui-slider-slidercustomcontentoptions-i.md) | Slider前后缀组件无障碍信息参数。 |
 | [SliderOptions](arkts-arkui-slider-slideroptions-i.md) | 滑动条的信息。 |
 | [SliderPrefixOptions](arkts-arkui-slider-sliderprefixoptions-i.md) | Slider前缀组件无障碍信息参数。 |

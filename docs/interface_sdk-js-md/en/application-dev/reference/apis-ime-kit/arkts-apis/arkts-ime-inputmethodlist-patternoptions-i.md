@@ -13,7 +13,7 @@ Define pattern options of keyboard.
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from 'kits/@kit.IMEKit';
+import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 ```
 
 ## action
@@ -70,7 +70,7 @@ patterns: Array<Pattern>
 
 Mandatory. Resource of the pattern option.
 
-**Type:** Array&lt;Pattern&gt;
+**Type:** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
 **Since:** 11
 

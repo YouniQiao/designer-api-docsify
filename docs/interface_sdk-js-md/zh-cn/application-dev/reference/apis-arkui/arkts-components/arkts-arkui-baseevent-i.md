@@ -50,7 +50,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## axisHorizontal
 
@@ -236,7 +236,7 @@ source: SourceType
 
 事件输入设备的类型。
 
-**类型：** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**类型：** [SourceType](arkts-arkui-sourcetype-e.md)
 
 **起始版本：** 8
 
@@ -258,7 +258,7 @@ sourceTool: SourceTool
 
 事件输入源的类型。
 
-**类型：** [SourceTool](../arkts-apis/arkts-arkui-common-sourcetool-e.md)
+**类型：** [SourceTool](arkts-arkui-sourcetool-e.md)
 
 **起始版本：** 9
 
@@ -280,7 +280,7 @@ target: EventTarget
 
 触发手势事件的元素对象。
 
-**类型：** [EventTarget](../../apis-arkts/arkts-apis/arkts-arkts-worker-eventtarget-i.md)
+**类型：** [EventTarget](arkts-arkui-eventtarget-i.md)
 
 **起始版本：** 8
 

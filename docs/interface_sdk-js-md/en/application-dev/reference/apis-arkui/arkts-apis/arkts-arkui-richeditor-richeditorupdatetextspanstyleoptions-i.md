@@ -2,7 +2,7 @@
 
 Defines text span style option of RichEditor.
 
-**Inheritance/Implementation:** RichEditorUpdateTextSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md)
+**Inheritance/Implementation:** RichEditorUpdateTextSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ textStyle: RichEditorTextStyle
 
 text style.
 
-**Type:** [RichEditorTextStyle](../arkts-components/arkts-arkui-richeditortextstyle-i.md)
+**Type:** [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyle-i.md)
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ urlStyle?: RichEditorUrlStyle
 
 RichEditor url style.
 
-**Type:** [RichEditorUrlStyle](../arkts-components/arkts-arkui-richeditorurlstyle-i.md)
+**Type:** [RichEditorUrlStyle](arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **Since:** 23
 

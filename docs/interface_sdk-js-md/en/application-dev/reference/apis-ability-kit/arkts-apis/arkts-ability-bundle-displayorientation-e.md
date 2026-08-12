@@ -3,7 +3,7 @@
 > **NOTE：**
 > 
 > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) instead.
+> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation) instead.
 
 Enumerates display orientations.
 
@@ -13,7 +13,7 @@ Enumerates display orientations.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.bundle.bundleManager:bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
+**Substitutes:** [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation)
 
 <!--Device-bundle-export enum DisplayOrientation--><!--Device-bundle-export enum DisplayOrientation-End-->
 
@@ -33,7 +33,7 @@ Unspecified display orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#UNSPECIFIED
+**Substitutes:** [UNSPECIFIED](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#UNSPECIFIED)
 
 <!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
@@ -53,7 +53,7 @@ Landscape orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#LANDSCAPE
+**Substitutes:** [LANDSCAPE](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#LANDSCAPE)
 
 <!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
@@ -73,7 +73,7 @@ Portrait orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#PORTRAIT
+**Substitutes:** [PORTRAIT](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#PORTRAIT)
 
 <!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
@@ -93,7 +93,7 @@ Orientation same as that of the nearest ability in the stack.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleManager/bundleManager.DisplayOrientation#FOLLOW_RECENT
+**Substitutes:** [FOLLOW_RECENT](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#FOLLOW_RECENT)
 
 <!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 

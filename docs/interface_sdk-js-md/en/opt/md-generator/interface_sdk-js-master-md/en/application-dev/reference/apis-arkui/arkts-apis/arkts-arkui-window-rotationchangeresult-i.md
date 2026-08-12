@@ -14,7 +14,7 @@ There are limitations on the size of application windows and system windows. For
 ## Modules to Import
 
 ```TypeScript
-import { window } from 'kits/@kit.ArkUI';
+import { window } from '@kit.ArkUI';
 ```
 
 ## rectType
@@ -25,7 +25,7 @@ rectType: RectType
 
 Type of window rectangle coordinate system.
 
-**Type:** [RectType](arkts-arkui-window-recttype-e.md)
+**Type:** RectType
 
 **Since:** 19
 
@@ -43,7 +43,7 @@ windowRect: Rect
 
 Information about the window's rectangle relative to the screen or parent window coordinate system.
 
-**Type:** [Rect](../../apis-form-kit/arkts-apis/arkts-form-forminfo-rect-i.md)
+**Type:** Rect
 
 **Since:** 19
 

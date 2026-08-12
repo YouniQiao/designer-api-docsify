@@ -1,20 +1,20 @@
 # SearchController
 
-Search组件的控制器继承自[TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)，涉及的接口有  
-[getTextContentRect](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentrect)、  
-[getTextContentLineCount](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#gettextcontentlinecount)、  
-[getCaretOffset](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getcaretoffset)、[addText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#addtext)、  
-[deleteText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletetext)、[getSelection](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#getselection)、[clearPreviewText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#clearpreviewtext)、  
-[setStyledPlaceholder](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#setstyledplaceholder)、  
-[deleteBackward](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#deletebackward)、  
-[scrollToVisible](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md#scrolltovisible)&lt;!--Del--&gt;以及系统接口  
-[getText](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c-sys.md/arkts-arkui-common-textcontentcontrollerbase-c-sys.md#gettext)&lt;!--DelEnd--&gt;。
+Search组件的控制器继承自[TextContentControllerBase](TextContentControllerBase)，涉及的接口有  
+[getTextContentRect](TextContentControllerBase#getTextContentRect)、  
+[getTextContentLineCount](TextContentControllerBase#getTextContentLineCount)、  
+[getCaretOffset](TextContentControllerBase#getCaretOffset)、[addText](TextContentControllerBase#addText)、  
+[deleteText](TextContentControllerBase#deleteText)、[getSelection](TextContentControllerBase#getSelection)、[clearPreviewText](TextContentControllerBase#clearPreviewText)、  
+[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder)、  
+[deleteBackward](TextContentControllerBase#deleteBackward)、  
+[scrollToVisible](TextContentControllerBase#scrollToVisible)&lt;!--Del--&gt;以及系统接口  
+[getText](TextContentControllerBase#getText)&lt;!--DelEnd--&gt;。
 
 ## 导入对象
 
 ```ts controller: SearchController = new SearchController();```
 
-**继承/实现关系：** SearchController extends [TextContentControllerBase](../arkts-apis/arkts-arkui-common-textcontentcontrollerbase-c.md/arkts-arkui-common-textcontentcontrollerbase-c.md)
+**继承/实现关系：** SearchController extends [TextContentControllerBase](TextContentControllerBase)
 
 **起始版本：** 8
 
@@ -100,7 +100,7 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 | --- | --- | --- | --- |
 | selectionStart | number | 是 | 文本选择区域起始位置，文本框中文字的起始位置为0。 &lt;br&gt;当selectionStart小于0时，按照0处理；当selectionStart大于文字最大长度时，按照文字最大长度处理。 |
 | selectionEnd | number | 是 | 文本选择区域结束位置。 &lt;br&gt;当selectionEnd小于0时、按照0处理；当selectionEnd大于文字最大长度时、按照文字最大长度处理。 |
-| options | [SelectionOptions](arkts-arkui-selectionoptions-i.md) | 否 | 选中文字时的配置。 &lt;br&gt;默认值：MenuPolicy.DEFAULT。 |
+| options | SelectionOptions | 否 | 选中文字时的配置。 &lt;br&gt;默认值：MenuPolicy.DEFAULT。 |
 
 ## stopEditing
 

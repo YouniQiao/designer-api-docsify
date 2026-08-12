@@ -27,17 +27,17 @@ Searching for a specified target.
 
 | 类型 |
 | --- |
-| Promise&lt;SearchResult&gt; |
+| Promise&lt;[SearchResult](arkts-mechanic-mechanicmanager-searchresult-i-sys.md)&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
 | 33300004 |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
-| [33300003](../errorcode-mechanic.md#33300003-功能不支持) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) |
+| [33300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-功能不支持) |
 
 ## 示例
 

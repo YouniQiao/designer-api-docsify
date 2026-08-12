@@ -106,7 +106,7 @@ Returns the elements of an array that meet the condition specified in a callback
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## find
 
@@ -274,7 +274,7 @@ Calls a defined callback function on each element of an array, and returns an ar
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## reduce
 
@@ -432,7 +432,7 @@ Reverses the elements in an Array.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## set
 
@@ -450,7 +450,7 @@ Sets a value or an array of values.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;number&gt; | Yes |  |
+| array | [ArrayLike](arkts-lib-es5-arraylike-i.md)&lt;number&gt; | Yes |  |
 | offset | number | No |  |
 
 ## slice
@@ -476,7 +476,7 @@ Returns a section of an array.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## some
 
@@ -550,7 +550,7 @@ Gets a new Uint8ClampedArray view of the ArrayBuffer store for this array, refer
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## toLocaleString
 
@@ -604,7 +604,7 @@ Returns the primitive value of the specified object.
 
 | Type | Description |
 | --- | --- |
-| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |  |
+| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |  |
 
 ## BYTES_PER_ELEMENT
 
@@ -638,7 +638,7 @@ readonly buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md)
+**Type:** [ArrayBufferLike](arkts-arraybufferlike-t.md)
 
 **ArkTS mode:** ArkTS-Dyn only
 

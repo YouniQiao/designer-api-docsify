@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## createAVScreenCaptureRecorder
@@ -24,13 +24,13 @@ Creates an AVScreenCaptureRecorder instance. This API uses a promise to return t
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;AVScreenCaptureRecorder&gt; |
+| Promise&lt;[AVScreenCaptureRecorder](arkts-media-media-avscreencapturerecorder-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
+| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 

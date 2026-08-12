@@ -18,7 +18,7 @@ renderExitReason: RenderExitReason
 
 Cause for the abnormal exit of the rendering process.
 
-**Type:** [RenderExitReason](../arkts-apis/arkts-arkweb-web-renderexitreason-e.md)
+**Type:** [RenderExitReason](arkts-arkweb-renderexitreason-e.md)
 
 **Since:** 12
 

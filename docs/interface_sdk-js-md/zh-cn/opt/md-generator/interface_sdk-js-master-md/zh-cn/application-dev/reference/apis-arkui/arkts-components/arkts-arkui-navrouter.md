@@ -30,7 +30,7 @@ NavRouter()
 
 **废弃版本：** 13
 
-**替代接口：** <!--SUBSTITUTE_API-->NavDestinationAttribute<!--/SUBSTITUTE_API-->
+**替代接口：** [NavDestinationAttribute](arkts-arkui-navdestination-attribute.md#NavDestinationAttribute)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +50,7 @@ NavRouter(value: RouteInfo)
 
 **废弃版本：** 13
 
-**替代接口：** <!--SUBSTITUTE_API-->Navigation#NavPathInfo<!--/SUBSTITUTE_API-->
+**替代接口：** [NavPathInfo](arkts-arkui-navpathinfo-c.md#NavPathInfo)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

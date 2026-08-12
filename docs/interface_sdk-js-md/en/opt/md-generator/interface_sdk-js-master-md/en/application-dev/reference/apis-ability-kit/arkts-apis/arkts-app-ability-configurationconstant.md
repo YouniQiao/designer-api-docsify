@@ -1,7 +1,7 @@
 # @ohos.app.ability.ConfigurationConstant
 
 The ConfigurationConstant module provides preset enumerated values related to  
-[Configuration](arkts-ability-app-ability-configuration-configuration-i.md) operations.
+[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration) operations.
 
 **Since:** 9
 
@@ -12,7 +12,7 @@ The ConfigurationConstant module provides preset enumerated values related to
 ## Modules to Import
 
 ```TypeScript
-import { ConfigurationConstant } from 'kits/@kit.AbilityKit';
+import { ConfigurationConstant } from '@kit.AbilityKit';
 ```
 
 ## Summary

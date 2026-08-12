@@ -13,7 +13,7 @@ Result the metadata for a downloadableProfile.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## downloadableProfile
@@ -132,7 +132,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
+**Type:** ResultCode
 
 **Since:** 18
 

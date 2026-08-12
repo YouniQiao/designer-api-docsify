@@ -1,6 +1,6 @@
 # InputMethodSetting
 
-In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -11,7 +11,7 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from 'kits/@kit.IMEKit';
+import { inputMethod } from '@kit.IMEKit';
 ```
 
 ## enableInputMethod
@@ -38,23 +38,23 @@ Enables or disables an input method. This API uses a promise to return the resul
 | --- | --- | --- |
 | bundleName | string | Yes |
 | extensionName | string | Yes |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes |
+| [enabledState](arkts-ime-inputmethod-inputmethodproperty-i.md) | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) |
+| [12800018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800018-input-method-not-found) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -108,26 +108,26 @@ Change the enabled state of an input method of a specified user.
 | --- | --- | --- |
 | bundleName | string | Yes |
 | extensionName | string | Yes |
-| enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes |
+| [enabledState](arkts-ime-inputmethod-inputmethodproperty-i.md) | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes |
 | userId | number | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) |
-| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) |
+| [12800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) |
+| [12800018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800018-input-method-not-found) |
 | 12800023 |
-| [201](../../errorcode-universal.md#201-permission-denied) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |
 
 ## getAllInputMethodsSync
@@ -158,17 +158,17 @@ Get all input methods sync of a specified user.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;InputMethodProperty&gt; |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
 | 12800023 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |
 
 ## getCursorInfo
@@ -205,11 +205,11 @@ Get the cursor information of a specified user.
 
 | Error Code ID |
 | --- |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 | 12800023 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |
 
 ## Examples
@@ -254,8 +254,8 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -303,11 +303,11 @@ Get subtypes of a specified input method of a specified user.
 
 | Error Code ID |
 | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
 | 12800023 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |
 
 ## getInputMethodsSync
@@ -339,17 +339,17 @@ List enabled or disabled input methods sync of a specified user.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;InputMethodProperty&gt; |
+| Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
 | 12800023 |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12800025 |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 | 12800024 |
 
 ## isPanelShown
@@ -384,9 +384,9 @@ Checks whether the input method panel of a specified type is shown.
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -437,8 +437,8 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -462,7 +462,7 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
 Unsubscribes from the soft keyboard show event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
+[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state.
 
 **Since:** 10
 
@@ -477,7 +477,7 @@ Unsubscribes from the soft keyboard show event of the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'imeShow' | Yes |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | No |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No |
 
 ## Examples
 
@@ -492,7 +492,7 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
 Unsubscribes from the soft keyboard hide event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state.
+[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state.
 
 **Since:** 10
 
@@ -507,7 +507,7 @@ Unsubscribes from the soft keyboard hide event of the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'imeHide' | Yes |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | No |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No |
 
 ## Examples
 
@@ -543,7 +543,7 @@ Unsubscribe from the input method change event.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## on('imeShow')
 
@@ -552,7 +552,7 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
 Subscribes to the soft keyboard show event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
+[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -567,13 +567,13 @@ Subscribes to the soft keyboard show event of the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'imeShow' | Yes |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | Yes |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -590,7 +590,7 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 ```
 
 Subscribes to the soft keyboard hide event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md) in the fixed state. This API uses an asynchronous callback to return the result.
+[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -605,13 +605,13 @@ Subscribes to the soft keyboard hide event of the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'imeHide' | Yes |
-| callback | (info: Array&lt;InputWindowInfo&gt;) =&gt; void | Yes |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -649,4 +649,4 @@ Subscribe to the input method change event.
 
 | Error Code ID |
 | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

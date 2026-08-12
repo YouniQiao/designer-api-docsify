@@ -10,7 +10,7 @@ The **Vibrator** module provides APIs for controlling LED lights and vibrators. 
  > - Module maintenance policy:
  > >   - For lite wearables, this module is constantly maintained and available.
  > >   - For other device types, this module is no longer maintained since API version 8, and You are advised to use
- > the new [@ohos.vibrator](arkts-vibrator.md) module.
+ > the new [@ohos.vibrator](arkts-vibrator.md#vibrator) module.
  > - The initial APIs of this module are supported since API version 3.
  > Newly added APIs will be marked with a superscript to indicate their earliest API version.
  > - This module requires hardware support and can only be debugged on real devices.
@@ -19,7 +19,7 @@ The **Vibrator** module provides APIs for controlling LED lights and vibrators. 
 ## Modules to Import
 
 ```TypeScript
-import { VibrateOptions } from 'kits/@kit.SensorServiceKit';
+import { VibrateOptions } from '@kit.SensorServiceKit';
 ```
 
 ## Summary

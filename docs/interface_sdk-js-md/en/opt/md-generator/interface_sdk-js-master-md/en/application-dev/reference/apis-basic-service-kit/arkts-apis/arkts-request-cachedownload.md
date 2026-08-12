@@ -17,7 +17,7 @@ efficiency. Check whether the ArkUI components support this function by referrin
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from 'kits/@kit.BasicServicesKit';
+import { cacheDownload } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

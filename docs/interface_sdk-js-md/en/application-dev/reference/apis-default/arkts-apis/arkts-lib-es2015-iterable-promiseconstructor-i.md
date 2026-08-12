@@ -24,7 +24,7 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T&gt;[]&gt; |  |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;[]&gt; |  |
 
 ## race
 
@@ -48,5 +48,5 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; |  |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt; |  |
 

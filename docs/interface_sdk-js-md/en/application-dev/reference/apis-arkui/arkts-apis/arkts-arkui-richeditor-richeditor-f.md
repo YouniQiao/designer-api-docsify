@@ -24,13 +24,13 @@ Defines RichEditor Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RichEditorOptions](../arkts-components/arkts-arkui-richeditoroptions-i.md) \| RichEditorStyledStringOptions | Yes |  |
+| options | [RichEditorOptions](arkts-arkui-richeditor-richeditoroptions-i.md) \| [RichEditorStyledStringOptions](arkts-arkui-richeditor-richeditorstyledstringoptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RichEditorAttribute](../arkts-components/arkts-arkui-richeditor-attribute.md) |  |
+| [RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md) |  |
 
 
 ## RichEditor
@@ -59,11 +59,11 @@ Defines RichEditor Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RichEditorAttribute&gt; | Yes | RichEditor attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md)&gt; | Yes | RichEditor attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RichEditorAttribute](../arkts-components/arkts-arkui-richeditor-attribute.md) |  |
+| [RichEditorAttribute](arkts-arkui-richeditor-richeditorattribute-i.md) |  |
 

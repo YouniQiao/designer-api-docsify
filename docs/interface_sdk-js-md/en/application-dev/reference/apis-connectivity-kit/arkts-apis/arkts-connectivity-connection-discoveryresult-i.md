@@ -13,7 +13,7 @@ Describes the contents of the discovery results
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.ConnectivityKit';
+import { connection } from '@kit.ConnectivityKit';
 ```
 
 ## deviceClass
@@ -24,7 +24,7 @@ deviceClass: DeviceClass
 
 The class of the device
 
-**Type:** [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
+**Type:** DeviceClass
 
 **Since:** 18
 

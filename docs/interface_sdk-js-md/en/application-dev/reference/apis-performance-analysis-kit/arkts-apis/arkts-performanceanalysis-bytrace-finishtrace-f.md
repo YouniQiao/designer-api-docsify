@@ -19,7 +19,7 @@ Marks the end of a timeslice trace task.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.hiTraceMeter.finishTrace
+**Substitutes:** [finishTrace](ohos.hiTraceMeter.finishTrace)
 
 <!--Device-bytrace-function finishTrace(name: string, taskId: number): void--><!--Device-bytrace-function finishTrace(name: string, taskId: number): void-End-->
 

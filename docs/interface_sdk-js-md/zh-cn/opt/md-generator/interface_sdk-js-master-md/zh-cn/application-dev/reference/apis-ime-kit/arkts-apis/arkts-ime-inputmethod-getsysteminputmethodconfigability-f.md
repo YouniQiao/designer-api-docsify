@@ -24,7 +24,7 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 | 错误码ID |
 | --- |
-| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 

@@ -32,7 +32,7 @@ supportedColorModes: Array<PrintColorMode>
 
 表示打印机支持的色彩模式列表。
 
-**类型：** Array&lt;PrintColorMode&gt;
+**类型：** Array&lt;[PrintColorMode](arkts-basicservices-print-printcolormode-e.md)&gt;
 
 **起始版本：** 14
 
@@ -48,7 +48,7 @@ supportedDuplexModes: Array<PrintDuplexMode>
 
 表示打印机支持的单双面模式列表。
 
-**类型：** Array&lt;PrintDuplexMode&gt;
+**类型：** Array&lt;[PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)&gt;
 
 **起始版本：** 14
 
@@ -80,7 +80,7 @@ supportedOrientations?: Array<PrintOrientationMode>
 
 表示打印机支持的打印方向列表。
 
-**类型：** Array&lt;PrintOrientationMode&gt;
+**类型：** Array&lt;[PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)&gt;
 
 **起始版本：** 14
 
@@ -96,7 +96,7 @@ supportedPageSizes: Array<PrintPageSize>
 
 表示打印机支持的纸张尺寸列表。
 
-**类型：** Array&lt;PrintPageSize&gt;
+**类型：** Array&lt;[PrintPageSize](arkts-basicservices-print-printpagesize-i.md)&gt;
 
 **起始版本：** 14
 
@@ -112,7 +112,7 @@ supportedQualities?: Array<PrintQuality>
 
 表示打印机支持的打印质量列表。
 
-**类型：** Array&lt;PrintQuality&gt;
+**类型：** Array&lt;[PrintQuality](arkts-basicservices-print-printquality-e.md)&gt;
 
 **起始版本：** 14
 

@@ -15,7 +15,7 @@ Represents a version component.
 ## Modules to Import
 
 ```TypeScript
-import { update } from 'kits/@kit.BasicServicesKit';
+import { update } from '@kit.BasicServicesKit';
 ```
 
 ## componentId
@@ -47,7 +47,7 @@ componentType: ComponentType
 
 Component type.
 
-**Type:** [ComponentType](arkts-basicservices-update-componenttype-e-sys.md)
+**Type:** ComponentType
 
 **Since:** 9
 

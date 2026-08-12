@@ -12,7 +12,7 @@ Creates a stream based on the file path. This API returns the result synchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:createStreamSync](arkts-corefile-fileio-createstreamsync-f.md#createstreamsync)
+**Substitutes:** [createStreamSync](arkts-corefile-file-fs-createstreamsync-f.md#createStreamSync)
 
 <!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->
 
@@ -29,4 +29,4 @@ Creates a stream based on the file path. This API returns the result synchronous
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Stream](arkts-corefile-file-fs-stream-i.md) |
+| [Stream](arkts-corefile-fileio-stream-depr-i.md) |

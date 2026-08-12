@@ -122,7 +122,7 @@ fontStyle: FontStyle
 
 字体样式。
 
-**类型：** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**类型：** FontStyle
 
 **起始版本：** 10
 
@@ -314,7 +314,7 @@ textShadow?: Array<ShadowOptions>
 
 仅支持查询阴影模糊半径、颜色和偏移量。
 
-**类型：** Array&lt;ShadowOptions&gt;
+**类型：** Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 12
 

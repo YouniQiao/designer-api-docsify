@@ -13,7 +13,7 @@ Defines the basic options for selecting media files from Gallery.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from 'kits/@kit.MediaLibraryKit';
+import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
 ## MIMEType
@@ -24,7 +24,7 @@ MIMEType?: PhotoViewMIMETypes
 
 Available media file types. **IMAGE_VIDEO_TYPE** is used by default.
 
-**Type:** [PhotoViewMIMETypes](../../apis-core-file-kit/arkts-apis/arkts-corefile-picker-photoviewmimetypes-e.md)
+**Type:** PhotoViewMIMETypes
 
 **Since:** 10
 
@@ -70,7 +70,7 @@ Media asset filter, with a maximum length of 50 items. If the limit is exceeded,
 
 1. When this filter is applied, other filters become invalid.2. When setting multiple conditions, enclose the filter conditions in parentheses to prevent conflicts with  internal filter items.
 
-**Type:** Array&lt;OperationItem&gt;
+**Type:** Array&lt;[OperationItem](arkts-medialibrary-photoaccesshelper-operationitem-c.md)&gt;
 
 **Since:** 22
 
@@ -92,7 +92,7 @@ autoPlayScenes?: Array<AutoPlayScene>
 
 Playback mode of the moving photo. The maximum array length is 2. If this limit is exceeded, the first two elements are used, and the extra ones are automatically ignored.
 
-**Type:** Array&lt;AutoPlayScene&gt;
+**Type:** Array&lt;[AutoPlayScene](arkts-medialibrary-photoaccesshelper-autoplayscene-c.md)&gt;
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ The string format is as follows: **photoType | photoSubType1,photoSubType2, ... 
 - The second part lists 1 to *N* photoSubTypes, separated by commas, with an OR relationship. Currently, the   
 maximum value of *N* is **1**. Options include **movingPhoto** or "*" (ignore).  
 - The third part lists 1 to *N* mimeTypes, separated by commas, with an OR relationship. Currently, the maximum   
-value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md).
+value of *N* is **10**. The format is similar to [MimeTypeFilter](arkts-medialibrary-photoaccesshelper-mimetypefilter-c.md#MimeTypeFilter).
 
 Filters are combined using intersection logic.
 
@@ -216,9 +216,9 @@ isMovingPhotoBadgeShown?: boolean
 
 Whether the moving photo badge is displayed in the photo browser page. **true** to display the badge, **false** to hide it. The default is **false**.
 
-If this parameter is set to **true**, [Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md) returns the   
+If this parameter is set to **true**, [Photoselectresult](arkts-medialibrary-photoaccesshelper-photoselectresult-c.md#PhotoSelectResult) returns the   
 **movingPhotoBadgeStates** array. The default status of a moving photo is   
-[MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md).
+[MOVING_PHOTO_ENABLED](arkts-medialibrary-photoaccesshelper-movingphotobadgestatetype-e.md#MovingPhotoBadgeStateType).
 
 Note: Use both **isMovingPhotoBadgeShown** and **MovingPhotoBadgeStateType** to determine whether a photo is a moving photo.
 
@@ -348,7 +348,7 @@ An array used to filter media files by type and size.
 
 Only the first three array elements are used; **MIMETypes** and **fileSizeFilter** are ignored.
 
-**Type:** Array&lt;PhotoViewMimeTypeFileSizeFilter&gt;
+**Type:** Array&lt;[PhotoViewMimeTypeFileSizeFilter](arkts-medialibrary-photoaccesshelper-photoviewmimetypefilesizefilter-c.md)&gt;
 
 **Since:** 20
 

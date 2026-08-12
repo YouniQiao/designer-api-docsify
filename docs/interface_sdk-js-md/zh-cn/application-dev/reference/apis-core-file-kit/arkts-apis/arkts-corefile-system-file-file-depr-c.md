@@ -26,7 +26,7 @@ static access(options: FileAccessOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:access](arkts-corefile-system-file-file-depr-c.md#access)
+**替代接口：** [access](arkts-corefile-file-fs-access-f.md#access)
 
 <!--Device-File-static access(options: FileAccessOption): void--><!--Device-File-static access(options: FileAccessOption): void-End-->
 
@@ -133,7 +133,7 @@ static copy(options: FileCopyOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:copyFile](arkts-corefile-file-fs-copyfile-f.md#copyfile)
+**替代接口：** [copyFile](arkts-corefile-file-fs-copyfile-f.md#copyFile)
 
 <!--Device-File-static copy(options: FileCopyOption): void--><!--Device-File-static copy(options: FileCopyOption): void-End-->
 
@@ -242,7 +242,7 @@ static delete(options: FileDeleteOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
+**替代接口：** [unlink](arkts-corefile-file-fs-unlink-f.md#unlink)
 
 <!--Device-File-static delete(options: FileDeleteOption): void--><!--Device-File-static delete(options: FileDeleteOption): void-End-->
 
@@ -349,7 +349,7 @@ static get(options: FileGetOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:stat](arkts-corefile-file-fs-stat-f.md#stat)
+**替代接口：** [stat](arkts-corefile-file-fs-stat-f.md#stat)
 
 <!--Device-File-static get(options: FileGetOption): void--><!--Device-File-static get(options: FileGetOption): void-End-->
 
@@ -456,7 +456,7 @@ static list(options: FileListOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:listFile](arkts-corefile-file-fs-listfile-f.md#listfile)
+**替代接口：** [listFile](arkts-corefile-file-fs-listfile-f.md#listFile)
 
 <!--Device-File-static list(options: FileListOption): void--><!--Device-File-static list(options: FileListOption): void-End-->
 
@@ -563,7 +563,7 @@ static mkdir(options: FileMkdirOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:mkdir](arkts-corefile-system-file-file-depr-c.md#mkdir)
+**替代接口：** [mkdir](arkts-corefile-file-fs-mkdir-f.md#mkdir)
 
 <!--Device-File-static mkdir(options: FileMkdirOption): void--><!--Device-File-static mkdir(options: FileMkdirOption): void-End-->
 
@@ -670,7 +670,7 @@ static move(options: FileMoveOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:moveFile](arkts-corefile-file-fs-movefile-f.md#movefile)
+**替代接口：** [moveFile](arkts-corefile-file-fs-movefile-f.md#moveFile)
 
 <!--Device-File-static move(options: FileMoveOption): void--><!--Device-File-static move(options: FileMoveOption): void-End-->
 
@@ -779,7 +779,7 @@ static readArrayBuffer(options: FileReadArrayBufferOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:read](arkts-corefile-file-fs-read-f.md#read)
+**替代接口：** [read](arkts-corefile-file-fs-read-f.md#read)
 
 <!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void--><!--Device-File-static readArrayBuffer(options: FileReadArrayBufferOption): void-End-->
 
@@ -890,7 +890,7 @@ static readText(options: FileReadTextOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:readText](arkts-corefile-system-file-file-depr-c.md#readtext)
+**替代接口：** [readText](arkts-corefile-file-fs-readtext-f.md#readText)
 
 <!--Device-File-static readText(options: FileReadTextOption): void--><!--Device-File-static readText(options: FileReadTextOption): void-End-->
 
@@ -997,7 +997,7 @@ static rmdir(options: FileRmdirOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:rmdir](arkts-corefile-system-file-file-depr-c.md#rmdir)
+**替代接口：** [rmdir](arkts-corefile-file-fs-rmdir-f.md#rmdir)
 
 <!--Device-File-static rmdir(options: FileRmdirOption): void--><!--Device-File-static rmdir(options: FileRmdirOption): void-End-->
 
@@ -1104,7 +1104,7 @@ static writeArrayBuffer(options: FileWriteArrayBufferOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:write](arkts-corefile-file-fs-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void--><!--Device-File-static writeArrayBuffer(options: FileWriteArrayBufferOption): void-End-->
 
@@ -1213,7 +1213,7 @@ static writeText(options: FileWriteTextOption): void
 
 **废弃版本：** 10
 
-**替代接口：** [@ohos.file.fs:write](arkts-corefile-file-fs-write-f.md#write)
+**替代接口：** [write](arkts-corefile-file-fs-write-f.md#write)
 
 <!--Device-File-static writeText(options: FileWriteTextOption): void--><!--Device-File-static writeText(options: FileWriteTextOption): void-End-->
 

@@ -23,7 +23,7 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| file | number \| [File](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-request-file-i.md) | 是 |
+| [file](arkts-corefile-storagestatistics-storagestats-i-sys.md) | number \| [File](arkts-corefile-file-fs-file-i.md) | 是 |
 | mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | 是 |
 | offset | number | 是 |
 | size | number | 是 |
@@ -32,7 +32,7 @@ declare function mmap(file: number | File, mode: MappingMode, offset: number, si
 
 | 类型 |
 | --- |
-| Promise&lt;FileMapping&gt; |
+| Promise&lt;[FileMapping](arkts-corefile-file-fs-filemapping-i.md)&gt; |
 
 **错误码：**
 

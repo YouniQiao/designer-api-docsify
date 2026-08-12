@@ -22,5 +22,5 @@ type SystemUpdateCallback = (data: SubscribeCallbackData) => void返回携带系
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | [SubscribeCallbackData](arkts-notification-notificationsubscribe-subscribecallbackdata-t-sys.md) | 是 | 返回携带系统属性值的通知信息。 |
+| data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | 是 | 返回携带系统属性值的通知信息。 |
 

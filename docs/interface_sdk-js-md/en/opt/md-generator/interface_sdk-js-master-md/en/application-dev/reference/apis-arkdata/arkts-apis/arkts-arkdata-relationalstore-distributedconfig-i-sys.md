@@ -11,7 +11,7 @@ Defines a struct for distributed configuration of a table.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from 'kits/@kit.ArkData';
+import { relationalStore } from '@kit.ArkData';
 ```
 
 ## references
@@ -22,7 +22,7 @@ references?: Array<Reference>
 
 Specifies the reference relationships between tables.
 
-**Type:** Array&lt;Reference&gt;
+**Type:** Array&lt;[Reference](arkts-arkdata-relationalstore-reference-i-sys.md)&gt;
 
 **Since:** 11
 

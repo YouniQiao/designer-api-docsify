@@ -161,4 +161,4 @@ shaderInputBuffer(buffer: Array<number>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| buffer | Array&lt;number&gt; | 是 |
+| buffer | Array & lt;number & gt; | 是 |

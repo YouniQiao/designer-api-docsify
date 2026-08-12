@@ -117,8 +117,8 @@ execute(task: Task, priority?: Priority): Promise<Object>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| task | [Task](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-task-i.md) | 是 | 需要添加到异步队列中的任务。 |
-| priority | [Priority](arkts-arkts-taskpool-priority-e.md) | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
+| task | Task | 是 | 需要添加到异步队列中的任务。 |
+| priority | Priority | 否 | 指定任务的优先级，默认值为**taskpool.Priority.MEDIUM**。 |
 
 **返回值：**
 
@@ -130,11 +130,11 @@ execute(task: Task, priority?: Priority): Promise<Object>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200025](../errorcode-utils.md#10200025-串行队列中添加了存在依赖的任务) | dependent task not allowed. |
-| [10200057](../errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
-| [10200051](../errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
-| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200054](../errorcode-utils.md#10200054-异步队列任务被丢弃) | The asyncRunner task is discarded. |
+| [10200025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200025-串行队列中添加了存在依赖的任务) | dependent task not allowed. |
+| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-任务无法被两种api执行) | The task cannot be executed by two APIs. |
+| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-无法再次执行周期任务) | The periodic task cannot be executed again. |
+| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200054](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200054-异步队列任务被丢弃) | The asyncRunner task is discarded. |
 
 ## 示例
 

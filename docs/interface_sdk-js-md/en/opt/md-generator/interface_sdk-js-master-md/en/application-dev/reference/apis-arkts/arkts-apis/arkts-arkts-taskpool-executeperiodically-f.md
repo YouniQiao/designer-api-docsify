@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from 'kits/@kit.ArkTS';
+import { taskpool } from '@kit.ArkTS';
 ```
 
 ## executePeriodically
@@ -34,11 +34,11 @@ Executes a task periodically. In this execution mode, you can set the task prior
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
-| [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -110,11 +110,11 @@ Executes a generic task periodically, without verifying the parameter type and r
 
 | Error Code ID |
 | --- |
-| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
-| [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
-| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
+| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 

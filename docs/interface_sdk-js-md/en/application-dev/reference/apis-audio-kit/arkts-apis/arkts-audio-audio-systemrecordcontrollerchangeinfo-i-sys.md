@@ -15,7 +15,7 @@ Defines the information carried when the system recording controller state chang
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## enabled
@@ -48,7 +48,7 @@ sourceType?: SourceType
 
 The expected audio source type configured by the application when enabling the recording controller.It is used to match the corresponding recording scenario and noise reduction mode.
 
-**Type:** [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md)
+**Type:** SourceType
 
 **Since:** 26.0.0
 

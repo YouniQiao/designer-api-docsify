@@ -6,7 +6,7 @@
 function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean>
 ```
 
-判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。
+判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -24,7 +24,7 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c-sys.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
+| context | [Context](arkts-ability-context-c.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。 |
 | appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
 
 **返回值：**
@@ -37,8 +37,8 @@ function isEmbeddedOpenAllowed(context: Context, appId: string): Promise<boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 

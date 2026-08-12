@@ -20,7 +20,7 @@ Image resource of the slider.
 
 The area size for displaying the image is subject to the **blockSize** attribute. Be mindful of the image size when selecting an image.
 
-**Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 10
 
@@ -42,7 +42,7 @@ shape?: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute
 
 Custom shape of the slider.
 
-**Type:** [CircleAttribute](arkts-arkui-circle-attribute.md) \| EllipseAttribute \| PathAttribute \| RectAttribute
+**Type:** CircleAttribute \| EllipseAttribute \| PathAttribute \| RectAttribute
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ Type of the slider in the block direction.
 
 Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
 
-**Type:** [SliderBlockType](../arkts-apis/arkts-arkui-slider-sliderblocktype-e.md)
+**Type:** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
 **Default:** SliderBlockType.DEFAULT - indicating the round slider. [since 11]
 

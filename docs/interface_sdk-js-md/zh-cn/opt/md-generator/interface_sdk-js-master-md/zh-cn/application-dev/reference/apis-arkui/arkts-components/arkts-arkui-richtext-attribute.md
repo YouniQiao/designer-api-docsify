@@ -30,7 +30,7 @@ onComplete(callback: () => void)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |
 
 ## onStart
 
@@ -52,4 +52,4 @@ onStart(callback: () => void)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | () =&gt; void | 是 |
+| callback | () = & gt; void | 是 |

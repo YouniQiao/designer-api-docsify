@@ -2,7 +2,7 @@
 
 Represents an evaluation error
 
-**Inheritance/Implementation:** EvalError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** EvalError extends [Error](Error)
 
 **Since:** 26.0.0
 

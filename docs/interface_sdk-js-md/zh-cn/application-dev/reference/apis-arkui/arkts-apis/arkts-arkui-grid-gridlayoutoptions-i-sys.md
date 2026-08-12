@@ -16,7 +16,7 @@ Grid布局选项。
 onGetStartIndexByIndex?: OnGetStartIndexByIndexCallback
 ```
 
-根据指定的目标索引，计算Grid滚动到该位置时页面内的起始行，用于支持[scrollToIndex](arkts-arkui-scroll-scroller-c.md#scrolltoindex)等操作。
+根据指定的目标索引，计算Grid滚动到该位置时页面内的起始行，用于支持[scrollToIndex](Scroller#scrollToIndex)等操作。
 
 **起始版本：** 23
 

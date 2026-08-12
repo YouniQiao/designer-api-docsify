@@ -18,7 +18,7 @@
 (value?: { fingers?: number; direction?: PanDirection; distance?: number } | PanGestureOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md)。
+创建滑动手势对象。继承自[GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface)。
 
 **起始版本：** 7
 
@@ -34,7 +34,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } \| PanGestureOptions | 否 |  |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } \| [PanGestureOptions](arkts-arkui-pangestureoptions-c.md) | 否 |  |
 
 **返回值：**
 
@@ -48,7 +48,7 @@
 (options?: PanGestureHandlerOptions): PanGestureInterface
 ```
 
-创建滑动手势对象。与[PanGesture](arkts-arkui-pangestureinterface-i.md) | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
+创建滑动手势对象。与[PanGesture](PanGestureInterface(value?: { fingers?: number; direction?: PanDirection; distance?: number) | PanGestureOptions)}相比，options参数新增了对isFingerCountLimited和distanceMap参数，分别表示是否检查触摸屏幕的手指数量以及指定不同输入源触发滑动手势事件的最小滑动距离。
 
 **起始版本：** 15
 
@@ -128,7 +128,7 @@ onActionCancel(event: Callback<GestureEvent>): PanGestureInterface
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | 是 | 滑动手势取消回调。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势取消回调。 |
 
 **返回值：**
 

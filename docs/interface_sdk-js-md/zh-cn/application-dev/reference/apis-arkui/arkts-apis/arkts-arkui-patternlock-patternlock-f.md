@@ -30,7 +30,7 @@ export declare function PatternLock(
 
 | 类型 | 说明 |
 | --- | --- |
-| [PatternLockAttribute](../arkts-components/arkts-arkui-patternlock-attribute.md) | The attribute of the PatternLock. |
+| [PatternLockAttribute](arkts-arkui-patternlock-patternlockattribute-i.md) | The attribute of the PatternLock. |
 
 
 ## PatternLock
@@ -59,11 +59,11 @@ export declare function PatternLock(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;PatternLockAttribute&gt; | 是 | PatternLock属性实例。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PatternLockAttribute](arkts-arkui-patternlock-patternlockattribute-i.md)&gt; | 是 | PatternLock属性实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PatternLockAttribute](../arkts-components/arkts-arkui-patternlock-attribute.md) |  |
+| [PatternLockAttribute](arkts-arkui-patternlock-patternlockattribute-i.md) |  |
 

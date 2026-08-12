@@ -30,7 +30,7 @@ new(...args: any): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| args | any | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | any | 是 |
 
 **返回值：**
 

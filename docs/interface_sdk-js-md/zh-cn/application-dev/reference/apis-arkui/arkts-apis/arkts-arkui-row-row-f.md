@@ -31,14 +31,14 @@ export declare function Row(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RowOptions](../arkts-components/arkts-arkui-rowoptions-i.md) \| RowOptions \| RowOptionsV2 | 否 | 横向布局元素间距，支持设置number、string或Resource类型。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| options | [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | 否 | 横向布局元素间距，支持设置number、string或Resource类型。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |  |
+| [RowAttribute](arkts-arkui-row-rowattribute-i.md) |  |
 
 
 ## Row
@@ -68,12 +68,12 @@ Defines Row Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;RowAttribute&gt; | 是 | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RowAttribute](arkts-arkui-row-rowattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |  |
+| [RowAttribute](arkts-arkui-row-rowattribute-i.md) |  |
 

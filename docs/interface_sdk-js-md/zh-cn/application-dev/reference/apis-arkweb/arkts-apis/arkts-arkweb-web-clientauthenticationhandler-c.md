@@ -1,6 +1,6 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to {@link onClientAuthenticationRequest} method.
+Defines the client certificate request result, related to [onClientAuthenticationRequest](arkts-arkweb-web-webattribute-i.md#onClientAuthenticationRequest) method.
 
 **起始版本：** 23
 
@@ -92,13 +92,13 @@ Confirm to use the identify of the certificate. The identify can be obtained fro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | identity | string | 是 | The identify of the credential. |
-| credentialTypeOrCertChainFile | [CredentialType](../arkts-components/arkts-arkweb-credentialtype-e.md) \| string | 是 | The type of the credential or the file that store client certificate chain. |
+| credentialTypeOrCertChainFile | [CredentialType](arkts-arkweb-web-credentialtype-e.md) \| string | 是 | The type of the credential or the file that store client certificate chain. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## constructor
 

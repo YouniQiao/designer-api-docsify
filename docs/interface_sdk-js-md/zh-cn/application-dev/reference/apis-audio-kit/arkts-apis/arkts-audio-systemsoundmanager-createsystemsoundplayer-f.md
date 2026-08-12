@@ -26,7 +26,7 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 

@@ -2,7 +2,7 @@
 
 Defines the DistortionComponent attribute functions
 
-**继承/实现关系：** DistortionComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**继承/实现关系：** DistortionComponentAttribute extends [CommonMethod](CommonMethod)
 
 **起始版本：** 26.0.0
 

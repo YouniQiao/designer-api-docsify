@@ -69,13 +69,13 @@ updater?: ParticleColorUpdaterOptions
 颜色属性变化配置。颜色属性变化类型type有三类：
 
 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。 
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.NONE]。 
 
 2、type为ParticleUpdater.RANDOM，表示随机变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。 
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.RANDOM]。 
 
 3、type为ParticleUpdater.CURVE,表示按动画曲线变化，则config类型为  
-[ParticleColorPropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md/arkts-arkui-particlecolorpropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]。
+[ParticleColorPropertyUpdaterConfigs](arkts-arkui-particlecolorpropertyupdaterconfigs-t.md#ParticleColorPropertyUpdaterConfigs)[ParticleUpdater.CURVE]。
 
 默认值：type默认为 ParticleUpdater.NONE。 
 

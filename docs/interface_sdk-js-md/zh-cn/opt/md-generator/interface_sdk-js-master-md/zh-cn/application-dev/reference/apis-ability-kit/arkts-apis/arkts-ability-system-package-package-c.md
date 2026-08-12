@@ -26,7 +26,7 @@ static hasInstalled(options: CheckPackageHasInstalledOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** ohos.bundle.bundleManager/bundleManager#canOpenLink
+**替代接口：** [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md#canOpenLink)
 
 <!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void--><!--Device-Package-static hasInstalled(options: CheckPackageHasInstalledOptions): void-End-->
 

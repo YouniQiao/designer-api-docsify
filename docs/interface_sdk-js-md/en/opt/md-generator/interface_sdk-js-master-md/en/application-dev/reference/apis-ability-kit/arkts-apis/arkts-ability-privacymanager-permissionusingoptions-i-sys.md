@@ -13,7 +13,7 @@ Represents the optional parameter set for using a permission.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from 'kits/@kit.AbilityKit';
+import { privacyManager } from '@kit.AbilityKit';
 ```
 
 ## enhancedIdentity
@@ -23,8 +23,8 @@ enhancedIdentity?: string
 ```
 
 Extension identity, used to identify additional identity information of the caller. This field is passed in when it is necessary to distinguish permission usage records from different call sources within the same application.The length must not exceed 48 characters. Passing an excessively long value when calling  
-[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startusingpermission) or  
-[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopusingpermission) will return error code 12100001.
+[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission) or  
+[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission) will return error code 12100001.
 
 Default value: empty string.
 

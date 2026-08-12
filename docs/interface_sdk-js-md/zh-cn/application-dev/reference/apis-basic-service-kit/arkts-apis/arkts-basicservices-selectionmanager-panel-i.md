@@ -1,6 +1,6 @@
 # Panel
 
-划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
+划词面板对象，通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)创建，提供面板内容设置、显示、隐藏、移动及事件订阅等管理能力，适用于在划词完成后向用户展示自定义操作界面的场景。
 
 **起始版本：** 24
 
@@ -16,7 +16,7 @@
 hide(): Promise<void>
 ```
 
-隐藏当前划词面板，与[show](arkts-basicservices-selectionmanager-panel-i.md#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
+隐藏当前划词面板，与[show](#show)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。使用Promise异步回调。如不主动调用，面板在失焦时会自动隐藏。
 
 **起始版本：** 24
 
@@ -36,8 +36,8 @@ hide(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 ## 示例
 
@@ -73,7 +73,7 @@ selectionPanel?.hide().then(() => {
 moveTo(x: int, y: int): Promise<void>
 ```
 
-移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。使用Promise异步回调。
 
 > **说明：**
 > 
@@ -85,7 +85,7 @@ moveTo(x: int, y: int): Promise<void>
 
 **废弃版本：** 24
 
-**替代接口：** [selectionManager.Panel.moveToGlobalDisplay](arkts-basicservices-selectionmanager-panel-i.md#movetoglobaldisplay)
+**替代接口：** [moveToGlobalDisplay](#moveToGlobalDisplay)
 
 <!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
@@ -108,8 +108,8 @@ moveTo(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 ## 示例
 
@@ -140,7 +140,7 @@ ArkTS-Sta:
 moveToGlobalDisplay(x: int, y: int): Promise<void>
 ```
 
-移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
+移动划词面板至屏幕全局坐标系下的指定位置，支持移动到扩展屏上。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -169,8 +169,8 @@ moveToGlobalDisplay(x: int, y: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 ## 示例
 
@@ -214,7 +214,7 @@ try {
 off(type: 'destroyed', callback?: Callback<void>): void
 ```
 
-取消订阅划词面板销毁事件，与[on('destroyed')](selectionManager.Panel.on(type: 'destroyed', callback: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+取消订阅划词面板销毁事件，与[on('destroyed')](selectionManager.Panel.on(type: 'destroyed', callback: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -249,7 +249,7 @@ off(type: 'hidden', callback?: Callback<void>): void
 ```
 
 取消订阅划词面板隐藏事件，与[on('hidden')](selectionManager.Panel.on(type: 'hidden', callback: Callback&lt;void&gt;))搭配使用。需通过  
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -284,7 +284,7 @@ offDestroy(callback?: Callback<void>): void
 ```
 
 取消订阅划词面板销毁事件，与[onDestroy](selectionManager.Panel.onDestroy(callback: Callback&lt;void&gt;))搭配使用。需通过  
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -322,7 +322,7 @@ offHide(callback?: Callback<void>): void
 ```
 
 取消订阅划词面板隐藏事件，与[onHide](selectionManager.Panel.onHide(callback: Callback&lt;void&gt;))搭配使用。需通过  
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -359,7 +359,7 @@ try {
 on(type: 'destroyed', callback: Callback<void>): void
 ```
 
-订阅划词面板销毁事件，与[off('destroyed')](selectionManager.Panel.off(type: 'destroyed', callback?: Callback&lt;void&gt;))搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+订阅划词面板销毁事件，与[off('destroyed')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -374,7 +374,7 @@ on(type: 'destroyed', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'destroyed' | 是 | 设置监听类型，固定取值为'destroyed'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板时触发。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroyPanel)销毁面板时触发。 |
 
 ## 示例
 
@@ -395,8 +395,8 @@ try {
 on(type: 'hidden', callback: Callback<void>): void
 ```
 
-订阅划词面板隐藏事件，与[off('hidden')](selectionManager.Panel.off(type: 'hidden', callback?: Callback&lt;void&gt;))搭配使用。面板调用  
-[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+订阅划词面板隐藏事件，与[off('hidden')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)搭配使用。面板调用  
+[hide](#hide)隐藏或失焦自动隐藏时触发该事件。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -411,7 +411,7 @@ on(type: 'hidden', callback: Callback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'hidden' | 是 | 设置监听类型，固定取值为'hidden'。 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)主动隐藏，或在失焦时自动隐藏。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](#hide)主动隐藏，或在失焦时自动隐藏。 |
 
 ## 示例
 
@@ -433,7 +433,7 @@ onDestroy(callback: Callback<void>): void
 ```
 
 订阅划词面板销毁事件，与[offDestroy](selectionManager.Panel.offDestroy(callback?: Callback&lt;void&gt;))搭配使用。需通过  
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -449,7 +449,7 @@ onDestroy(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroypanel)销毁面板时触发。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，调用[destroyPanel](arkts-basicservices-selectionmanager-destroypanel-f.md#destroyPanel)销毁面板时触发。 |
 
 ## 示例
 
@@ -473,7 +473,7 @@ onHide(callback: Callback<void>): void
 ```
 
 订阅划词面板隐藏事件，与[offHide](selectionManager.Panel.offHide(callback?: Callback&lt;void&gt;))搭配使用。需通过  
-[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。
+[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。
 
 **起始版本：** 24
 
@@ -489,7 +489,7 @@ onHide(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)主动隐藏，或在失焦时自动隐藏。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | 回调函数，面板隐藏时触发。面板可通过调用[hide](#hide)主动隐藏，或在失焦时自动隐藏。 |
 
 ## 示例
 
@@ -512,7 +512,7 @@ try {
 setUiContent(path: string): Promise<void>
 ```
 
-为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
+为当前的划词面板设置界面内容，例如展示翻译结果、搜索建议或自定义操作按钮等。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -540,8 +540,8 @@ setUiContent(path: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 ## 示例
 
@@ -585,7 +585,7 @@ try {
 show(): Promise<void>
 ```
 
-显示划词面板，与[hide](arkts-basicservices-selectionmanager-panel-i.md#hide)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。
+显示划词面板，与[hide](#hide)搭配使用。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。使用Promise异步回调。
 
 **起始版本：** 24
 
@@ -607,8 +607,8 @@ show(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 ## 示例
 
@@ -644,7 +644,7 @@ selectionPanel?.show().then(() => {
 startMoving(): Promise<void>
 ```
 
-设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createpanel)获取到Panel实例后调用。使用Promise异步回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
+设置划词面板可随鼠标、触控板或触屏拖动移动位置，指针释放后自动停止移动。需通过[createPanel](arkts-basicservices-selectionmanager-createpanel-f.md#createPanel)获取到Panel实例后调用。使用Promise异步回调。该接口需在onTouch的回调函数中调用，并且事件类型为TouchType.Down。
 
 **起始版本：** 24
 
@@ -666,8 +666,8 @@ startMoving(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33600001](../../apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
-| [33600002](../../apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
+| [33600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600001-划词服务调用异常) | Selection service exception. |
+| [33600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-selection.md#33600002-划词面板已被销毁) | This selection window has been destroyed. |
 
 ## 示例
 

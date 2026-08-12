@@ -32,7 +32,7 @@ Set the custom keyboard builder when the custom keyboard is used.
 enterKeyType?: number
 ```
 
-Set the enter key type when the system keyboard is used, the "enter" key related to the {@link inputMethodEngine}.
+Set the enter key type when the system keyboard is used, the "enter" key related to the [inputMethodEngine](../../apis-ime-kit/arkts-apis/arkts-inputmethodengine.md#inputMethodEngine).
 
 **类型：** number
 

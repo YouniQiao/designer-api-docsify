@@ -22,7 +22,7 @@ Animation configuration Anonymous Object Rectification.
 
  parameters  and the boolean type enables default spring animation. [since 10 - 11] and the boolean type enables default spring animation. [since 12]
 
-**Type:** [ScrollAnimationOptions](../arkts-apis/arkts-arkui-scroll-scrollanimationoptions-i.md) \| boolean
+**Type:** [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md) \| boolean
 
 **Default:** ScrollAnimationOptions: { duration: 1000, curve: Curve.Ease, canOverScroll: false } [since 18]
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from 'kits/@kit.AbilityKit';
+import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
 ```
 
 ## Summary
@@ -25,5 +25,5 @@ import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightInt
 
 | Name | Description |
 | --- | --- |
-| [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md) | Enum definition of the paramCategory {@link #LinkIntentParamMapping#paramCategory},paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink {@link #InsightIntentLink}. |
+| [LinkParamCategory](arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md) | Enum definition of the paramCategory [paramCategory](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramCategory),paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink [InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-i.md#InsightIntentLink). |
 

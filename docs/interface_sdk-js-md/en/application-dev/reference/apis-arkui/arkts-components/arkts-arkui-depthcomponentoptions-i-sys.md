@@ -46,7 +46,7 @@ depthSpace?: DepthSpaceType
 
 Depth space type.
 
-**Type:** [DepthSpaceType](../arkts-apis/arkts-arkui-depthcomponent-depthspacetype-e-sys.md)
+**Type:** [DepthSpaceType](arkts-arkui-depthspacetype-e-sys.md)
 
 **Default:** DepthSpace.INSTANCE
 

@@ -15,7 +15,7 @@ Defines the moving photo view attribute functions.
 ## Modules to Import
 
 ```TypeScript
-import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from 'kits/@kit.MediaLibraryKit';
+import { PixelMapFormat, MovingPhotoViewAttribute, MovingPhotoView, MovingPhotoViewController, DynamicRangeMode } from '@kit.MediaLibraryKit';
 ```
 
 ## autoPlay
@@ -46,7 +46,7 @@ Sets whether to allow automatic play. If the value is true, the moving photo sta
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## autoPlayPeriod
 
@@ -77,7 +77,7 @@ Sets automatic play period, If not set, the moving photo plays in the full video
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## enableAnalyzer
 
@@ -107,7 +107,7 @@ Sets whether to enable moving photo analyzer. If the value is true, the moving p
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## muted
 
@@ -137,7 +137,7 @@ Called when judging whether the video is muted.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## objectFit
 
@@ -161,13 +161,13 @@ Called when determining the zoom type of the view.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ImageFit](../../apis-arkui/arkts-apis/arkts-arkui-imagefit-e.md) | Yes |  |
+| value | ImageFit | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onComplete
 
@@ -197,7 +197,7 @@ Called when the image load completed.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onError
 
@@ -227,7 +227,7 @@ Called when playback fails.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onFinish
 
@@ -257,7 +257,7 @@ Called when the video playback ends.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onPause
 
@@ -287,7 +287,7 @@ Called when the video playback paused.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onPrepared
 
@@ -317,7 +317,7 @@ Called when playback prepared.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onStart
 
@@ -347,7 +347,7 @@ Called when the video is played.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## onStop
 
@@ -377,7 +377,7 @@ Called when the video playback stopped.
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 
 ## repeatPlay
 
@@ -407,5 +407,5 @@ Sets whether to allow repeat play. If the value is true, the moving photo plays 
 
 | Type | Description |
 | --- | --- |
-| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-i.md) |  |
+| [MovingPhotoViewAttribute](arkts-medialibrary-multimedia-movingphotoview-movingphotoviewattribute-c.md) |  |
 

@@ -1,6 +1,6 @@
 # BasicPrefetcher
 
-Basic implementation of {@link IPrefetcher}.It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
+Basic implementation of [IPrefetcher](arkts-arkui-arkui-prefetcher-iprefetcher-i.md#IPrefetcher).It provides an intelligent data prefetching algorithm to make decisions about which data items should be prefetched in response to the real-time changes of visible on-screen area and changes in the duration of the prefetching. It also determines which prefetch requests should be canceled based on user scrolling actions.
 
 **Inheritance/Implementation:** BasicPrefetcher implements [IPrefetcher<T>](IPrefetcher<T>)
 
@@ -15,7 +15,7 @@ Basic implementation of {@link IPrefetcher}.It provides an intelligent data pref
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from 'kits/@kit.ArkUI';
+import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
 ```
 
 ## constructor

@@ -14,7 +14,7 @@ function requestRight(deviceName: string): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.usbManager:usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright)
+**替代接口：** [requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)
 
 <!--Device-usb-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usb-function requestRight(deviceName: string): Promise<boolean>-End-->
 

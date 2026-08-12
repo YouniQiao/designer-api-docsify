@@ -13,7 +13,7 @@ Result of downloadable Profile list.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from 'kits/@kit.TelephonyKit';
+import { eSIM } from '@kit.TelephonyKit';
 ```
 
 ## downloadableProfiles
@@ -24,7 +24,7 @@ downloadableProfiles: Array<DownloadableProfile>
 
 Gets the downloadable Profiles with filled-in metadata.
 
-**Type:** Array&lt;DownloadableProfile&gt;
+**Type:** Array&lt;[DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)&gt;
 
 **Since:** 18
 
@@ -42,7 +42,7 @@ responseResult: ResultCode
 
 Gets the result of the operation.
 
-**Type:** [ResultCode](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-appaccount-resultcode-e.md)
+**Type:** ResultCode
 
 **Since:** 18
 

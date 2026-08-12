@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## promisify
@@ -26,13 +26,13 @@ Receives a function that uses the error-first callback mode, that is, uses `(err
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| original | (err: Object, value: Object) =&gt; void | Yes |
+| original | (err: Object, value: Object) = & gt; void | Yes |
 
 **Return value:**
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| function |
+| [function](arkts-arkts-taskpool-task-c.md) |
 | Function |
 
 ## Examples

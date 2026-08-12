@@ -82,7 +82,7 @@ stopPropagation: Callback<void>
 
 阻止[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 18
 

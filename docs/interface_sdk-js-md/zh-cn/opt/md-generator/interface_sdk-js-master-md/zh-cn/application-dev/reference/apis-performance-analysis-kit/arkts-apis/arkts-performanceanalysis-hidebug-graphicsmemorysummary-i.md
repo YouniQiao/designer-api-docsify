@@ -1,6 +1,6 @@
 # GraphicsMemorySummary
 
-����Ӧ���Դ����ݣ�����gl��graph���֡�
+描述应用显存数据，包括gl和graph部分。
 
 **起始版本：** 21
 
@@ -14,7 +14,7 @@
 gl: number
 ```
 
-gl�Դ��С��RenderService��Ⱦ���̼���������Դռ�õ��ڴ棬����ͼƬ�������ȣ���KBΪ��λ��
+gl显存大小，RenderService渲染进程加载所需资源占用的内存，例如图片、纹理等，以KB为单位。
 
 **类型：** number
 
@@ -32,7 +32,7 @@ gl�Դ��С��RenderService��Ⱦ���̼���������
 graph: number
 ```
 
-graph�Դ��С������ͳ�Ƶ�DMA�ڴ�ռ�ã�����ֱ��ͨ���ӿ������DMA buffer��ͨ��allocator_host�����DMA buffer����KBΪ��λ��
+graph显存大小，进程统计的DMA内存占用，包括直接通过接口申请的DMA buffer和通过allocator_host申请的DMA buffer，以KB为单位。
 
 **类型：** number
 

@@ -20,7 +20,7 @@ readonly packages: Array<PackageConfig>
 
 Package configuration information in the **pack.info** file.
 
-**Type:** Array&lt;PackageConfig&gt;
+**Type:** Array&lt;[PackageConfig](arkts-ability-bundlepackinfo-packageconfig-i-sys.md)&gt;
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ readonly summary: PackageSummary
 
 Package summary information in the **pack.info** file.
 
-**Type:** [PackageSummary](arkts-ability-freeinstall-packagesummary-t-sys.md)
+**Type:** [PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)
 
 **Since:** 9
 

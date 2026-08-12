@@ -47,7 +47,7 @@ interactionContext?: Context
 
 **注意**：仅当isInteractionAllowed为true时生效。
 
-**类型：** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c-sys.md)
+**类型：** [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md)
 
 **默认值：** undefined, which means the authorization dialog will be displayed in modal system mode.
 

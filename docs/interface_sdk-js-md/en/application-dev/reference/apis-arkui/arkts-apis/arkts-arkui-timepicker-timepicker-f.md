@@ -30,7 +30,7 @@ Defines the TimePicker component.
 
 | Type | Description |
 | --- | --- |
-| [TimePickerAttribute](../arkts-components/arkts-arkui-timepicker-attribute.md) | The attribute of the TimePicker. |
+| [TimePickerAttribute](arkts-arkui-timepicker-timepickerattribute-i.md) | The attribute of the TimePicker. |
 
 
 ## TimePicker
@@ -57,11 +57,11 @@ Defines the TimePicker component. It requires call setTimePickerOptions at start
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TimePickerAttribute&gt; | Yes | the callback to set up component's attribute. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TimePickerAttribute](arkts-arkui-timepicker-timepickerattribute-i.md)&gt; | Yes | the callback to set up component's attribute. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TimePickerAttribute](../arkts-components/arkts-arkui-timepicker-attribute.md) | The attribute of the TimePicker. |
+| [TimePickerAttribute](arkts-arkui-timepicker-timepickerattribute-i.md) | The attribute of the TimePicker. |
 

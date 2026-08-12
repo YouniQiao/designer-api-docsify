@@ -15,7 +15,7 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
 添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
+[finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -33,7 +33,26 @@ abortCommonEvent(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.abortCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in aborting common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## abortCommonEvent
 
@@ -42,7 +61,7 @@ abortCommonEvent(): Promise<void>
 ```
 
 添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
+[finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -54,7 +73,22 @@ abortCommonEvent(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.abortCommonEvent().then(() => {
+  console.info(`Succeeded in aborting common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## abortCommonEventSync
 
@@ -63,13 +97,24 @@ abortCommonEventSync(): void
 ```
 
 同步添加有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
+[finishCommonEvent](#finishCommonEvent)配合使用时，可以中止当前的有序公共事件，使该公共事件不再向下一个订阅者传递。
 
 **起始版本：** 10
 
 <!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
+
+## 示例
+
+```TypeScript
+subscriber.abortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## clearAbortCommonEvent
 
@@ -78,7 +123,7 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
 清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用callback异步回调。
+[finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -96,7 +141,26 @@ clearAbortCommonEvent(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.clearAbortCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in clearing abort common event.`);
+});
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## clearAbortCommonEvent
 
@@ -105,7 +169,7 @@ clearAbortCommonEvent(): Promise<void>
 ```
 
 清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用Promise异步回调。
+[finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下一个订阅者传递。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -117,7 +181,22 @@ clearAbortCommonEvent(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.clearAbortCommonEvent().then(() => {
+  console.info(`Succeeded in clearing abort common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to clear abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## clearAbortCommonEventSync
 
@@ -126,13 +205,24 @@ clearAbortCommonEventSync(): void
 ```
 
 同步清理有序公共事件的中止状态。当该接口与  
-[finishCommonEvent](arkts-basicservices-commoneventsubscriber-commoneventsubscriber-i.md#finishcommonevent)配合使用时，可以使该公共事件继续向下一个订阅者传递。
+[finishCommonEvent](#finishCommonEvent)配合使用时，可以使该公共事件继续向下一个订阅者传递。
 
 **起始版本：** 10
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
 **系统能力：** SystemCapability.Notification.CommonEvent
+
+## 示例
+
+```TypeScript
+subscriber.clearAbortCommonEventSync();
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## finishCommonEvent
 
@@ -158,7 +248,19 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.finishCommonEvent((err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in finishing common event.`);
+});
+```
 
 ## finishCommonEvent
 
@@ -178,7 +280,17 @@ finishCommonEvent(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.finishCommonEvent().then(() => {
+  console.info(`Succeeded in finishing common event.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to finish common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -204,7 +316,19 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.getAbortCommonEvent((err: BusinessError, abortEvent: boolean) => {
+  if (err) {
+    console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+    return;
+  } 
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+});
+```
 
 ## getAbortCommonEvent
 
@@ -224,7 +348,17 @@ getAbortCommonEvent(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.getAbortCommonEvent().then((abortEvent: boolean) => {
+  console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get abort common event. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getAbortCommonEventSync
 
@@ -245,6 +379,13 @@ getAbortCommonEventSync(): boolean
 | 类型 |
 | --- |
 | boolean |
+
+## 示例
+
+```TypeScript
+let abortEvent: boolean = subscriber.getAbortCommonEventSync();
+console.info(`Succeeded in getting abort common event, abortEvent is ${JSON.stringify(abortEvent)}`);
+```
 
 ## getCode
 
@@ -272,7 +413,19 @@ getCode(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.getCode((err: BusinessError, code: number) => {
+  if (err) {
+    console.error(`Failed to get code. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+});
+```
 
 ## getCode
 
@@ -294,7 +447,17 @@ getCode(): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.getCode().then((code: number) => {
+  console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getCodeSync
 
@@ -317,6 +480,13 @@ getCodeSync(): number
 | 类型 |
 | --- |
 | number |
+
+## 示例
+
+```TypeScript
+let code: number = subscriber.getCodeSync();
+console.info(`Succeeded in getting code, code is ${JSON.stringify(code)}`);
+```
 
 ## getData
 
@@ -344,7 +514,20 @@ getData(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+// 获取有序公共事件传递的数据回调
+subscriber.getData((err: BusinessError, data: string) => {
+  if (err) {
+    console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+});
+```
 
 ## getData
 
@@ -366,7 +549,17 @@ getData(): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.getData().then((data: string) => {
+  console.info(`Succeeded in getting data, data is ${JSON.stringify(data)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## getDataSync
 
@@ -389,6 +582,13 @@ getDataSync(): string
 | 类型 |
 | --- |
 | string |
+
+## 示例
+
+```TypeScript
+let data: string = subscriber.getDataSync();
+console.info(`Succeeded in getting data, data is ${data}`);
+```
 
 ## getSubscribeInfo
 
@@ -416,7 +616,19 @@ getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  if (err) {
+    console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+});
+```
 
 ## getSubscribeInfo
 
@@ -440,6 +652,16 @@ getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 | --- |
 | Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md)&gt; |
 
+## 示例
+
+```TypeScript
+subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEventSubscribeInfo) => {
+  console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to get subscribe info. Code is ${err.code}, message is ${err.message}`);
+});
+```
+
 ## getSubscribeInfoSync
 
 ```TypeScript
@@ -461,6 +683,13 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 | 类型 |
 | --- |
 | [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) |
+
+## 示例
+
+```TypeScript
+let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = subscriber.getSubscribeInfoSync();
+console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
+```
 
 ## isOrderedCommonEvent
 
@@ -486,7 +715,19 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.isOrderedCommonEvent((err: BusinessError, isOrdered: boolean) => {
+  if (err) {
+    console.error(`Failed to check ordered common event. Code: ${err.code}, message: ${err.message}`);
+    return;
+  }
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+});
+```
 
 ## isOrderedCommonEvent
 
@@ -506,7 +747,17 @@ isOrderedCommonEvent(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.isOrderedCommonEvent().then((isOrdered: boolean) => {
+  console.info(`isOrderedCommonEvent ${JSON.stringify(isOrdered)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isOrderedCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isOrderedCommonEventSync
 
@@ -527,6 +778,13 @@ isOrderedCommonEventSync(): boolean
 | 类型 |
 | --- |
 | boolean |
+
+## 示例
+
+```TypeScript
+let isOrdered: boolean = subscriber.isOrderedCommonEventSync();
+console.info(`isOrderedCommonEventSync ${JSON.stringify(isOrdered)}`);
+```
 
 ## isStickyCommonEvent
 
@@ -552,7 +810,19 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.isStickyCommonEvent((err: BusinessError, isSticky: boolean) => {
+  if (err) {
+    console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+});
+```
 
 ## isStickyCommonEvent
 
@@ -572,7 +842,17 @@ isStickyCommonEvent(): Promise<boolean>
 
 | 类型 |
 | --- |
-| Promise&lt;boolean&gt; |
+| Promise & lt;boolean & gt; |
+
+## 示例
+
+```TypeScript
+subscriber.isStickyCommonEvent().then((isSticky: boolean) => {
+  console.info(`isStickyCommonEvent ${JSON.stringify(isSticky)}`);
+}).catch((err: BusinessError) => {
+  console.error(`isStickyCommonEvent failed, code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## isStickyCommonEventSync
 
@@ -593,6 +873,13 @@ isStickyCommonEventSync(): boolean
 | 类型 |
 | --- |
 | boolean |
+
+## 示例
+
+```TypeScript
+let isSticky: boolean = subscriber.isStickyCommonEventSync();
+console.info(`isStickyCommonEventSync ${JSON.stringify(isSticky)}`);
+```
 
 ## setCode
 
@@ -621,7 +908,19 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.setCode(1, (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code.`);
+});
+```
 
 ## setCode
 
@@ -649,13 +948,23 @@ setCode(code: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.setCode(1).then(() => {
+  console.info(`Succeeded in setting code.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndData
 
@@ -685,7 +994,19 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting code and data.`);
+});
+```
 
 ## setCodeAndData
 
@@ -714,13 +1035,23 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.setCodeAndData(1, 'publish_data_changed').then(() => {
+  console.info(`Succeeded in setting code and data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setCodeAndDataSync
 
@@ -749,7 +1080,18 @@ setCodeAndDataSync(code: number, data: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+try {
+  subscriber.setCodeAndDataSync(1, 'publish_data_changed');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set code and data. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setCodeSync
 
@@ -777,7 +1119,18 @@ setCodeSync(code: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+try {
+  subscriber.setCodeSync(1);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set code. Code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## setData
 
@@ -806,7 +1159,19 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.setData('publish_data_changed', (err: BusinessError) => {
+  if (err) {
+    console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  console.info(`Succeeded in setting data.`);
+});
+```
 
 ## setData
 
@@ -834,13 +1199,23 @@ setData(data: string): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+subscriber.setData('publish_data_changed').then(() => {
+  console.info(`Succeeded in setting data.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+});
+```
 
 ## setDataSync
 
@@ -868,4 +1243,15 @@ setDataSync(data: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+try {
+  subscriber.setDataSync('publish_data_changed');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`Failed to set data. Code is ${err.code}, message is ${err.message}`);
+}
+```

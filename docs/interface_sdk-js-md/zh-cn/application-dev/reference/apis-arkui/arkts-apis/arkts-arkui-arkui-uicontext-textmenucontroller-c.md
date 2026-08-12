@@ -80,5 +80,5 @@ setMenuOptions(options: TextMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextMenuOptions](arkts-arkui-textmenuoptions-i.md) | 是 | the options of the text menu. |
+| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | 是 | the options of the text menu. |
 

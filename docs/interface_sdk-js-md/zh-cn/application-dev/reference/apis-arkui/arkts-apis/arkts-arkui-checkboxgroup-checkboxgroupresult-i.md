@@ -38,7 +38,7 @@ status: SelectStatus
 
 选中状态。
 
-**类型：** [SelectStatus](../arkts-components/arkts-arkui-selectstatus-e.md)
+**类型：** [SelectStatus](arkts-arkui-checkboxgroup-selectstatus-e.md)
 
 **起始版本：** 23
 

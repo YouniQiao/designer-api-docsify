@@ -1,6 +1,6 @@
 # NativeXComponentParameters
 
-Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding [FrameNode](../arkts-apis/arkts-arkui-framenode-c.md/arkts-arkui-framenode-c.md) object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md).
+Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding [FrameNode](../../../arkui/FrameNode) object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md).
 
 **Since:** 19
 

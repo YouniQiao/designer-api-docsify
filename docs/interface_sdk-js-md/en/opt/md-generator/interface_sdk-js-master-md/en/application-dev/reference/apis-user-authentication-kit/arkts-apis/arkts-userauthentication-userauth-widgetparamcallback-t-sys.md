@@ -26,4 +26,4 @@ Defines the callback for obtaining remote authentication widget parameters. This
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [WidgetParam](arkts-userauthentication-userauth-widgetparam-i-sys.md) |
+| [WidgetParam](arkts-userauthentication-userauth-widgetparam-i.md) |

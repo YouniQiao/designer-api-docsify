@@ -1,14 +1,14 @@
 # ImmersiveMaterial
 
-Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md).
+Immersive material class, which inherits from [Material](arkts-arkui-uimaterial-materialtype-e.md#MaterialType).
 
 The performance of an immersive material varies based on device computing power. The high, medium, and low levels of device computing power are determined by device vendors and defined in the system configuration files. On devices with high- and mid-level computing power, the filter and   
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow) effects of the material layer are affected.On devices with low-level computing power, the   
-[background color](arkts-arkui-common-commonmethod-i.md#backgroundcolor),   
-[border color](arkts-arkui-common-commonmethod-i.md#bordercolor), [border width](arkts-arkui-common-commonmethod-i.md#borderwidth), and   
-[shadow](arkts-arkui-common-commonmethod-i.md#shadow) effects are affected. In addition, the effect of the same material is affected by the immersive light configuration in the application. The material parameters and effects vary depending on the immersive light configuration.
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) effects of the material layer are affected.On devices with low-level computing power, the   
+[background color](CommonMethod#backgroundColor(value: ResourceColor)),   
+[border color](CommonMethod#borderColor), [border width](CommonMethod#borderWidth), and   
+[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) effects are affected. In addition, the effect of the same material is affected by the immersive light configuration in the application. The material parameters and effects vary depending on the immersive light configuration.
 
-**Inheritance/Implementation:** ImmersiveMaterial extends [Material](arkts-arkui-uimaterial-material-c.md)
+**Inheritance/Implementation:** ImmersiveMaterial extends [Material](arkts-arkui-uimaterial-material-c.md#Material)
 
 **Since:** 26.0.0
 
@@ -21,7 +21,7 @@ The performance of an immersive material varies based on device computing power.
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from 'kits/@kit.ArkUI';
+import { uiMaterial } from '@kit.ArkUI';
 ```
 
 ## constructor

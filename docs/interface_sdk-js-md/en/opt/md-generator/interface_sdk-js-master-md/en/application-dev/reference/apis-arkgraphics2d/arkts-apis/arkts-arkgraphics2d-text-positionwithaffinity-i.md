@@ -11,7 +11,7 @@ Describes the position and affinity of a glyph.
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## affinity
@@ -22,7 +22,7 @@ affinity: Affinity
 
 Affinity of the position.
 
-**Type:** [Affinity](../../apis-arkui/arkts-apis/arkts-arkui-affinity-t.md)
+**Type:** Affinity
 
 **Since:** 12
 

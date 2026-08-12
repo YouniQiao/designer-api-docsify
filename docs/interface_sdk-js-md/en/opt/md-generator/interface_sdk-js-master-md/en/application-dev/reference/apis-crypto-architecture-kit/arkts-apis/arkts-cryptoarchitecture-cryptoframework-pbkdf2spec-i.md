@@ -1,6 +1,6 @@
 # PBKDF2Spec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md). It is used as a parameter for PBKDF2 key derivation.
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is used as a parameter for PBKDF2 key derivation.
 
 > **NOTE：**
 > 
@@ -8,7 +8,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 > key derivation, rather than a HexString or Base64-encoded value. In addition, the string must be encoded in
 > UTF-8, as other encodings may alter the derivation outcome.
 
-**Inheritance/Implementation:** PBKDF2Spec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)
+**Inheritance/Implementation:** PBKDF2Spec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec)
 
 **Since:** 11
 
@@ -21,7 +21,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from 'kits/@kit.CryptoArchitectureKit';
+import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
 ## iterations

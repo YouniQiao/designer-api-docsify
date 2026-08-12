@@ -16,7 +16,7 @@
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [URIError](../../apis-arkts/arkts-apis/arkts-arkts-errors-urierror-c.md) |
+| [URIError](arkts-lib-es5-urierror-i.md) |
 
 ## [[Construct]]
 
@@ -34,7 +34,7 @@ new(message?: string): URIError
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [URIError](../../apis-arkts/arkts-apis/arkts-arkts-errors-urierror-c.md) |
+| [URIError](arkts-lib-es5-urierror-i.md) |
 
 ## prototype
 
@@ -42,4 +42,4 @@ new(message?: string): URIError
 readonly prototype: URIError
 ```
 
-**Type:** URIError
+**Type:** [URIError](arkts-lib-es5-urierror-i.md)

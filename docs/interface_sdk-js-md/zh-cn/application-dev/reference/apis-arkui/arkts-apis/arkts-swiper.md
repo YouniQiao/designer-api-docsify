@@ -25,7 +25,7 @@
 | [AutoPlayOptions](arkts-arkui-swiper-autoplayoptions-i.md) | Define autoPlay related options. |
 | [CachedCountOptions](arkts-arkui-swiper-cachedcountoptions-i.md) | 定义用于控制缓存计数行为的属性 |
 | [SwiperAnimationEvent](arkts-arkui-swiper-swiperanimationevent-i.md) | Provides an interface for swiper animation. |
-| [SwiperAttribute](arkts-arkui-swiper-swiperattribute-i.md) | 除支持[通用属性](../../apis-arkui/arkts-components/arkts-arkui-common-attribute.md)外，还支持以下属性： |
+| [SwiperAttribute](arkts-arkui-swiper-swiperattribute-i.md) | 除支持[通用属性](./../../@internal/component/ets/common)外，还支持以下属性： |
 | [SwiperAutoFill](arkts-arkui-swiper-swiperautofill-i.md) | Set Swiper column count adaptation. |
 | [SwiperContentAnimatedTransition](arkts-arkui-swiper-swipercontentanimatedtransition-i.md) | Defines the swiper content animated transition options. |
 | [SwiperContentTransitionProxy](arkts-arkui-swiper-swipercontenttransitionproxy-i.md) | The proxy of SwiperContentAnimatedTransition. |
@@ -43,7 +43,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](../arkts-components/arkts-arkui-swipercontenttransitionproxy-i.md/arkts-arkui-swipercontenttransitionproxy-i.md)中的说明。 |
+| [ContentDidScrollCallback](arkts-arkui-contentdidscrollcallback-t.md) | Swiper滑动时触发的回调，参数可参考[SwiperContentTransitionProxy](arkts-arkui-swiper-swipercontenttransitionproxy-i.md#SwiperContentTransitionProxy)中的说明。 |
 | [ContentWillScrollCallback](arkts-arkui-contentwillscrollcallback-t.md) | Swiper即将滑动前触发的回调，返回值表示是否允许此次滑动。 |
 | [OnSwiperAnimationEndCallback](arkts-arkui-onswiperanimationendcallback-t.md) | 切换动画结束时触发的回调。 |
 | [OnSwiperAnimationStartCallback](arkts-arkui-onswiperanimationstartcallback-t.md) | 切换动画开始时触发的回调。 |

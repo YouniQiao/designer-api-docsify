@@ -11,7 +11,7 @@ Class that holds brand name, major version and full version. Brand name and majo
 ## Modules to Import
 
 ```TypeScript
-import { webview } from 'kits/@kit.ArkWeb';
+import { webview } from '@kit.ArkWeb';
 ```
 
 ## getBrand
@@ -144,4 +144,4 @@ Sets the major version. Should not be blank.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| majorVersion | string | Yes |
+| [majorVersion](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-deviceinfo-con.md) | string | Yes |

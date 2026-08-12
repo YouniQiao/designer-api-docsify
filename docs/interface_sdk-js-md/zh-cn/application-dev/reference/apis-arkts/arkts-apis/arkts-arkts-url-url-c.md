@@ -24,7 +24,7 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 
 **废弃版本：** 9
 
-**替代接口：** ohos.url.URL.parseURL
+**替代接口：** [parseURL](#parseURL)
 
 <!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
@@ -96,13 +96,13 @@ static parseURL(url: string, base?: string | URL): URL
 
 | 类型 | 说明 |
 | --- | --- |
-| [URL](arkts-arkts-url-url-c.md) | 返回解析后的URL对象，包含URL的各组成部分（如协议、主机和路径等属性）。 |
+| URL | 返回解析后的URL对象，包含URL的各组成部分（如协议、主机和路径等属性）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) | Invalid url string. |
+| [10200002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-参数解析错误) | Invalid url string. |
 
 ## 示例
 
@@ -426,7 +426,7 @@ readonly searchParams: URLSearchParams
 
 **废弃版本：** 9
 
-**替代接口：** ohos.url.URLParams
+**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md#URLParams)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

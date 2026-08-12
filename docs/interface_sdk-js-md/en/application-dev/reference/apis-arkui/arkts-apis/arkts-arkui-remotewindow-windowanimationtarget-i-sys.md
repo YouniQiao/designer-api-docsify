@@ -86,7 +86,7 @@ readonly windowBounds: RRect
 
 The window bounds of the window animation target.
 
-**Type:** [RRect](arkts-arkui-windowanimationmanager-rrect-i-sys.md)
+**Type:** [RRect](arkts-arkui-remotewindow-rrect-i-sys.md)
 
 **Since:** 23
 

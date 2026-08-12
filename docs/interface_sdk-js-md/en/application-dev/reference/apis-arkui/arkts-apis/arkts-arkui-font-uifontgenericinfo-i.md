@@ -11,7 +11,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { font } from 'kits/@kit.ArkUI';
+import { font } from '@kit.ArkUI';
 ```
 
 ## adjust
@@ -22,7 +22,7 @@ adjust: Array<UIFontAdjustInfo>
 
 Adjust info of the font set.
 
-**Type:** Array&lt;UIFontAdjustInfo&gt;
+**Type:** Array&lt;[UIFontAdjustInfo](arkts-arkui-font-uifontadjustinfo-i.md)&gt;
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ alias: Array<UIFontAliasInfo>
 
 Alias info of the font set.
 
-**Type:** Array&lt;UIFontAliasInfo&gt;
+**Type:** Array&lt;[UIFontAliasInfo](arkts-arkui-font-uifontaliasinfo-i.md)&gt;
 
 **Since:** 23
 

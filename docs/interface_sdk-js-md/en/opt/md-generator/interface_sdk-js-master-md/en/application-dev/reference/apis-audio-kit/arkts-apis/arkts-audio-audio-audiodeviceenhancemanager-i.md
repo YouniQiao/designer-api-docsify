@@ -11,7 +11,7 @@ Provides enhanced audio device management capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## isEnhancedRoutingSupported
@@ -42,7 +42,7 @@ Queries whether the system supports the enhanced routing functions provided by t
 selectInputDevice(inputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects the input device for your application. This setting applies to all recording streams created under your application, unless a specific input device is designated for a particular stream by{@link AudioDeviceEnhanceManager.selectInputDeviceForAudioCapturer}. When application implements its own UX for input device selection, it can obtain the list of available input devices through{@link AudioRoutingManager.getAvailableDevices}, and use the{@link AudioRoutingManager.getPreferredInputDeviceForCapturerInfo} API to obtain the currently selected input device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function,it will select a default input device for your application.
+Selects the input device for your application. This setting applies to all recording streams created under your application, unless a specific input device is designated for a particular stream by[selectInputDeviceForAudioCapturer](#selectInputDeviceForAudioCapturer). When application implements its own UX for input device selection, it can obtain the list of available input devices through[getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices), and use the[getPreferredInputDeviceForCapturerInfo](arkts-audio-audio-audioroutingmanager-i.md#getPreferredInputDeviceForCapturerInfo) API to obtain the currently selected input device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function,it will select a default input device for your application.
 
 **Since:** 26.0.0
 
@@ -62,14 +62,14 @@ Selects the input device for your application. This setting applies to all recor
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## selectInputDeviceForAudioCapturer
 
@@ -98,14 +98,14 @@ Selects the input device for the target AudioCapturer. Your application must ens
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## selectOutputDevice
 
@@ -113,7 +113,7 @@ Selects the input device for the target AudioCapturer. Your application must ens
 selectOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<void>
 ```
 
-Selects the output device for your application. This setting applies to all playback streams created under your application, unless a specific output device is designated for a particular stream by{@link AudioDeviceEnhanceManager.selectOutputDeviceForAudioRenderer}. When application implements its own UX for output device selection, it can obtain the list of available output devices through{@link AudioRoutingManager.getAvailableDevices}, and use the{@link AudioRoutingManager.getPreferOutputDeviceForRendererInfo} API to obtain the currently selected output device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function, it will select a default output device for your application.
+Selects the output device for your application. This setting applies to all playback streams created under your application, unless a specific output device is designated for a particular stream by[selectOutputDeviceForAudioRenderer](#selectOutputDeviceForAudioRenderer). When application implements its own UX for output device selection, it can obtain the list of available output devices through[getAvailableDevices](arkts-audio-audio-audioroutingmanager-i.md#getAvailableDevices), and use the[getPreferOutputDeviceForRendererInfo](arkts-audio-audio-audioroutingmanager-i.md#getPreferOutputDeviceForRendererInfo) API to obtain the currently selected output device. The selection will become invalid when your application exits or the selected device goes offline. After your application restarts or the device comes back online, your application must re-issue the selection for it to take effect. If the system does not support this function, it will select a default output device for your application.
 
 **Since:** 26.0.0
 
@@ -133,14 +133,14 @@ Selects the output device for your application. This setting applies to all play
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
 
 ## selectOutputDeviceForAudioRenderer
 
@@ -169,11 +169,11 @@ Selects the output device for the target AudioRenderer. Your application must en
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |

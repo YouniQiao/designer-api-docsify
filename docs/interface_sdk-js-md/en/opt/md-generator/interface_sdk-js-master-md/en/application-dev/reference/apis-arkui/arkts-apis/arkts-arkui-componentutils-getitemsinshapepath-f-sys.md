@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from 'kits/@kit.ArkUI';
+import { componentUtils } from '@kit.ArkUI';
 ```
 
 ## getItemsInShapePath
@@ -34,4 +34,4 @@ Get the image objects located within the selected area.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;ImageItem&gt; |
+| Array & lt;ImageItem & gt; |

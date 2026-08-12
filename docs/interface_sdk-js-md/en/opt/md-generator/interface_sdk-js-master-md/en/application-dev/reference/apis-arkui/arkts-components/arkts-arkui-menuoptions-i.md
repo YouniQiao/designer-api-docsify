@@ -1,8 +1,8 @@
 # MenuOptions
 
-Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md).
+Configues menu item information, which is inherited from [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md#ContextMenuOptions).
 
-**Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md)
+**Inheritance/Implementation:** MenuOptions extends [ContextMenuOptions](arkts-arkui-contextmenuoptions-i.md#ContextMenuOptions)
 
 **Since:** 10
 
@@ -50,7 +50,7 @@ Menu title.
 
 **NOTE：**
 
-This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md)&gt;.
+This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt;.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

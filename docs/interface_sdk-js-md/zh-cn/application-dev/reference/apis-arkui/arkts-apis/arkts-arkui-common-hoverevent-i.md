@@ -2,7 +2,7 @@
 
 The hover action triggers this method invocation.
 
-**继承/实现关系：** HoverEvent extends [BaseEvent](../arkts-components/arkts-arkui-baseevent-i.md/arkts-arkui-baseevent-i.md)
+**继承/实现关系：** HoverEvent extends [BaseEvent](arkts-arkui-common-baseevent-i.md#BaseEvent)
 
 **起始版本：** 23
 

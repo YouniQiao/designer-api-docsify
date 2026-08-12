@@ -51,7 +51,7 @@ The value is an integer greater than 0.
 
 Invalid values are treated as the default value.
 
-**Type:** number \| GridRowColumnOption
+**Type:** number \| [GridRowColumnOption](arkts-arkui-gridrowcolumnoption-i.md)
 
 **Since:** 9
 
@@ -101,7 +101,7 @@ Invalid values are treated as the default value.
 
 Unit: vp.
 
-**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| GutterOption
+**Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GutterOption](arkts-arkui-gutteroption-i.md)
 
 **Since:** 9
 

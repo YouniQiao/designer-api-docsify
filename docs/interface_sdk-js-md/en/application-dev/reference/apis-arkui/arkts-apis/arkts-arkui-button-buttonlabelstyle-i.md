@@ -58,7 +58,7 @@ maxFontSize?: double | ResourceStr
 
 Max font size for adapted height.
 
-**Type:** double \| ResourceStr
+**Type:** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ minFontSize?: double | ResourceStr
 
 Min font size for adapted height.
 
-**Type:** double \| ResourceStr
+**Type:** double \| [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 

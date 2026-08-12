@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from 'kits/@kit.ArkUI';
+import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 ```
 
 ## LazyDynamicLayout
@@ -32,7 +32,7 @@ Defines LazyDynamicLayout Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | Yes | Lazy layout algorithm. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | Yes |  |
+| content_ | CustomBuilder | Yes |  |
 
 **Return value:**
 
@@ -68,8 +68,8 @@ Defines LazyDynamicLayout Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;LazyDynamicLayoutAttribute&gt; | Yes | The style to create a LazyDynamicLayout. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | content |
+| style_ | CustomBuilderT&lt;[LazyDynamicLayoutAttribute](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayoutattribute-c.md)&gt; | Yes | The style to create a LazyDynamicLayout. |
+| content_ | CustomBuilder | No | content |
 
 **Return value:**
 

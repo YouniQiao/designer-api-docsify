@@ -13,7 +13,7 @@ Class to execute an asynchronous operation under lock.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from 'kits/@kit.ArkTS';
+import { ArkTSUtils } from '@kit.ArkTS';
 ```
 
 ## constructor
@@ -50,7 +50,7 @@ Perform an operation with the acquired lock exclusively.The method acquires the 
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
 
@@ -58,13 +58,13 @@ Perform an operation with the acquired lock exclusively.The method acquires the 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## lockAsync
 
@@ -84,7 +84,7 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
 | mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes |
@@ -93,13 +93,13 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## lockAsync
 
@@ -108,7 +108,7 @@ lockAsync<T, U>(callback: AsyncLockCallback<T>, mode: AsyncLockMode,
         options: AsyncLockOptions<U>): Promise<T | U>
 ```
 
-Perform an operation with the acquired lock.The method acquires the lock first, then calls the callback, and then releases the lock.The callback is called asynchronously in the same thread where lockAsync was called.An optional timeout value can be provided in {@link AsyncLockOptions}. In this case, lockAsync will reject the resulting promise with a BusinessError instance if the lock is not acquired before timeout exceeds.The error message, in this case, will contain the held and waited locks information and possible deadlock warnings.
+Perform an operation with the acquired lock.The method acquires the lock first, then calls the callback, and then releases the lock.The callback is called asynchronously in the same thread where lockAsync was called.An optional timeout value can be provided in [AsyncLockOptions](arkts-arkts-locks-asynclockoptions-c.md#AsyncLockOptions). In this case, lockAsync will reject the resulting promise with a BusinessError instance if the lock is not acquired before timeout exceeds.The error message, in this case, will contain the held and waited locks information and possible deadlock warnings.
 
 **Since:** 12
 
@@ -120,7 +120,7 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncLockCallback](arkts-arkts-locks-asynclockcallback-t.md)&lt;T&gt; | Yes |
 | mode | [AsyncLockMode](arkts-arkts-locks-asynclockmode-e.md) | Yes |
@@ -130,14 +130,14 @@ Perform an operation with the acquired lock.The method acquires the lock first, 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T \| U&gt; |
+| Promise & lt;T \ | U & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200031](../errorcode-utils.md#10200031-calling-lockasync-timed-out) |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| [10200031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200031-calling-lockasync-timed-out) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## query
 
@@ -157,7 +157,7 @@ Query information about the specified lock.
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [name](#name) | string | Yes |
 
@@ -171,7 +171,7 @@ Query information about the specified lock.
 
 | Error Code ID |
 | --- |
-| [10200030](../errorcode-utils.md#10200030-lock-does-not-exist) |
+| [10200030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200030-lock-does-not-exist) |
 
 ## queryAll
 
@@ -213,7 +213,7 @@ Find or create an instance of AsyncLock using the specified name.
 
 **Parameters:**
 
-| [Name](#name) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [name](#name) | string | Yes |
 

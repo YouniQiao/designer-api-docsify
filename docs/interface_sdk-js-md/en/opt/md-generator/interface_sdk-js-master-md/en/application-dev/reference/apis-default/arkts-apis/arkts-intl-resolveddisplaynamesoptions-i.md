@@ -6,7 +6,7 @@
 fallback: DisplayNamesFallback
 ```
 
-**Type:** DisplayNamesFallback
+**Type:** [DisplayNamesFallback](arkts-intl-displaynamesfallback-t.md)
 
 ## languageDisplay
 
@@ -14,7 +14,7 @@ fallback: DisplayNamesFallback
 languageDisplay?: DisplayNamesLanguageDisplay
 ```
 
-**Type:** DisplayNamesLanguageDisplay
+**Type:** [DisplayNamesLanguageDisplay](arkts-intl-displaynameslanguagedisplay-t.md)
 
 ## locale
 
@@ -38,4 +38,4 @@ style: RelativeTimeFormatStyle
 type: DisplayNamesType
 ```
 
-**Type:** DisplayNamesType
+**Type:** [DisplayNamesType](arkts-intl-displaynamestype-t.md)

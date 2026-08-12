@@ -4,7 +4,7 @@ MakerNoteHuaweiMetadata implements Metadata
 
 来自Huawei相机的照片元数据。
 
-**继承/实现关系：** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md)
+**继承/实现关系：** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **起始版本：** 23
 
@@ -18,7 +18,7 @@ MakerNoteHuaweiMetadata implements Metadata
 clone(): Promise<MakerNoteHuaweiMetadata>
 ```
 
-对[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)元数据进行克隆。使用Promise异步回调。
+对[MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata)元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 static createInstance(): MakerNoteHuaweiMetadata
 ```
 
-返回[MakerNoteHuaweiMetadata](arkts-image-image-makernotehuaweimetadata-c.md)的空实例。
+返回[MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata)的空实例。
 
 **起始版本：** 23
 
@@ -76,7 +76,7 @@ getAllProperties(): Promise<Record<string, string | null>>
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 ## getBlob
 
@@ -98,7 +98,7 @@ getBlob(): Promise<ArrayBuffer>
 
 | 类型 |
 | --- |
-| Promise&lt;ArrayBuffer&gt; |
+| Promise & lt;ArrayBuffer & gt; |
 
 ## getProperties
 
@@ -108,7 +108,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 获取图像中属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
 
 **起始版本：** 23
 
@@ -122,19 +122,19 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| key | Array&lt;string&gt; | 是 |
+| key | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;Record&lt;string, string \| null&gt;&gt; |
+| Promise & lt;Record & lt;string, string \ | null & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## setBlob
 
@@ -162,13 +162,13 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600206](../errorcode-image.md#7600206-无效参数) |
+| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
 
 ## setProperties
 
@@ -178,7 +178,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 批量设置图片元数据中的指定属性的值。使用Promise异步回调。
 
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md)。
+要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
 
 **起始版本：** 23
 
@@ -192,19 +192,19 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| records | Record&lt;string, string \| null&gt; | 是 |
+| records | Record & lt;string, string \ | null & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## burstNumber
 
@@ -322,7 +322,7 @@ focusMode?: FocusMode
 
 镜头对焦控制策略，决定相机如何调整焦距。
 
-**类型：** [FocusMode](../../apis-camera-kit/arkts-apis/arkts-camera-camera-focusmode-e.md)
+**类型：** FocusMode
 
 **起始版本：** 23
 
@@ -754,7 +754,7 @@ xmageTop?: number
 xmageWatermarkMode?: number
 ```
 
-XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md)。
+XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md#image)。
 
 **类型：** number
 

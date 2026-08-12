@@ -19,9 +19,9 @@ Enumerates the value types.
 | number |
 | string |
 | boolean |
-| Array&lt;number&gt; |
-| Array&lt;string&gt; |
-| Array&lt;boolean&gt; |
+| Array & lt;number & gt; |
+| Array & lt;string & gt; |
+| Array & lt;boolean & gt; |
 | Uint8Array |
 | object |
 | bigint |

@@ -2,8 +2,8 @@
 
 画刷对象，用于设置图形的填充样式，包括颜色、抗锯齿、混合模式、颜色滤波器、蒙版滤波器、着色器效果、阴影层效果及图像滤波器等，并支持获取颜色、透明度、抗锯齿等属性及重置画刷为初始状态。
 
-画刷需通过Canvas的[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachbrush)方法绑定到画布后生效，绘制完成后通过  
-[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachbrush)方法解绑；画刷用于图形填充，画笔（Pen）用于图形描边，详见[Pen](arkts-arkgraphics2d-drawing-pen-c.md)。
+画刷需通过Canvas的[attachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#attachBrush)方法绑定到画布后生效，绘制完成后通过  
+[detachBrush](arkts-arkgraphics2d-drawing-canvas-c.md#detachBrush)方法解绑；画刷用于图形填充，画笔（Pen）用于图形描边，详见[Pen](arkts-arkgraphics2d-drawing-pen-c.md#Pen)。
 
 > **说明：**
 > 
@@ -55,7 +55,7 @@ constructor(brush: Brush)
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## getAlpha
 
@@ -103,7 +103,7 @@ getColor(): common2D.Color
 getColor4f(): common2D.Color4f
 ```
 
-获取画刷的颜色，与[getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor)的区别是返回值类型为浮点数，适用于需要浮点数类型的场景。
+获取画刷的颜色，与[getColor](#getColor)的区别是返回值类型为浮点数，适用于需要浮点数类型的场景。
 
 **起始版本：** 20
 
@@ -143,7 +143,7 @@ getColorFilter(): ColorFilter
 getHexColor(): number
 ```
 
-获取画刷颜色的16进制ARGB格式值。与[getColor](arkts-arkgraphics2d-drawing-brush-c.md#getcolor)的区别是返回值类型为16进制ARGB格式的32位无符号整数。
+获取画刷颜色的16进制ARGB格式值。与[getColor](#getColor)的区别是返回值类型为16进制ARGB格式的32位无符号整数。
 
 **起始版本：** 18
 
@@ -215,7 +215,7 @@ setAlpha(alpha: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setAntiAlias
 
@@ -241,7 +241,7 @@ setAntiAlias(aa: boolean): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setBlendMode
 
@@ -267,7 +267,7 @@ setBlendMode(mode: BlendMode): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setColor
 
@@ -293,7 +293,7 @@ setColor(color: common2D.Color): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setColor
 
@@ -301,7 +301,7 @@ setColor(color: common2D.Color): void
 setColor(alpha: number, red: number, green: number, blue: number): void
 ```
 
-设置画刷的颜色。性能优于[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor)接口，推荐使用本接口。
+设置画刷的颜色。性能优于[setColor](#setColor)接口，推荐使用本接口。
 
 **起始版本：** 12
 
@@ -322,7 +322,7 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setColor
 
@@ -330,7 +330,7 @@ setColor(alpha: number, red: number, green: number, blue: number): void
 setColor(color: number): void
 ```
 
-设置画刷的颜色。与[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor)的区别是支持通过16进制ARGB数值直接设置颜色。
+设置画刷的颜色。与[setColor](#setColor)的区别是支持通过16进制ARGB数值直接设置颜色。
 
 **起始版本：** 18
 
@@ -348,7 +348,7 @@ setColor(color: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setColor4f
 
@@ -356,7 +356,7 @@ setColor(color: number): void
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-设置画刷的颜色以及标准色域。与[setColor](arkts-arkgraphics2d-drawing-brush-c.md#setcolor)的区别是可以单独设置色域，适用于需要单独设置色域的场景。
+设置画刷的颜色以及标准色域。与[setColor](#setColor)的区别是可以单独设置色域，适用于需要单独设置色域的场景。
 
 **起始版本：** 20
 
@@ -389,13 +389,13 @@ setColorFilter(filter: ColorFilter | null): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| filter | [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) \| null | 是 |
+| filter | ColorFilter \| null | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setImageFilter
 
@@ -421,7 +421,7 @@ setImageFilter(filter: ImageFilter | null): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setMaskFilter
 
@@ -447,7 +447,7 @@ setMaskFilter(filter: MaskFilter | null): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setShaderEffect
 
@@ -473,7 +473,7 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
 
 ## setShadowLayer
 
@@ -481,7 +481,7 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 setShadowLayer(shadowLayer: ShadowLayer | null): void
 ```
 
-设置画刷的阴影层效果。当前仅在通过Canvas的[drawTextBlob](arkts-arkgraphics2d-drawing-canvas-c.md#drawtextblob)等方法绘制文字时生效。
+设置画刷的阴影层效果。当前仅在通过Canvas的[drawTextBlob](arkts-arkgraphics2d-drawing-canvas-c.md#drawTextBlob)等方法绘制文字时生效。
 
 **起始版本：** 12
 
@@ -499,4 +499,4 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |

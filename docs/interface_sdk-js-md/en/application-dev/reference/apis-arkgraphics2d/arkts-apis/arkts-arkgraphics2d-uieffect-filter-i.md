@@ -13,7 +13,7 @@ Filter effect class, used to apply corresponding effects to specified components
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from 'kits/@kit.ArkGraphics2D';
+import { uiEffect } from '@kit.ArkGraphics2D';
 ```
 
 ## blur
@@ -48,7 +48,7 @@ Adds a blur effect to the component.
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
+| Filter | Returns the Filter with the blur effect attached, supporting chained calls to add other effects. |
 
 ## Examples
 
@@ -123,14 +123,14 @@ The maximum supported brightness boost multiple is calculated as the device's cu
 
 | Type | Description |
 | --- | --- |
-| [Filter](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-filter-i.md) | Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
+| Filter | Returns the Filter with the HDR brightening effect attached, supporting chained calls to add other effects. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 23 |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 24 and later |
+| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 20 - 23 |
 
 ## Examples
 

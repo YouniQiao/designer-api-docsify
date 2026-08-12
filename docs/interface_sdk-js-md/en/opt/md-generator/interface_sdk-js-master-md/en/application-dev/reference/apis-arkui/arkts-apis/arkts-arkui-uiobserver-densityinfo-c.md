@@ -11,7 +11,7 @@ Provides the information contained in the callback when the screen pixel density
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from 'kits/@kit.ArkUI';
+import { uiObserver } from '@kit.ArkUI';
 ```
 
 ## context
@@ -22,7 +22,7 @@ context: UIContext
 
 Context corresponding to the page when the screen pixel density changes.
 
-**Type:** [UIContext](../arkts-components/arkts-arkui-uicontext-t.md)
+**Type:** UIContext
 
 **Since:** 12
 

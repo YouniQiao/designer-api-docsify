@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getFontUnicodeSet
@@ -30,7 +30,7 @@ An empty array is returned if the font file is not found, the font file path is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| Resource | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \\$rawfile('file name in the resources/rawfile directory of the project'). |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query, which must be "file:// + absolute path of the font file" or \\$rawfile('file name in the resources/rawfile directory of the project'). |
 | index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the font to load when the font file format is ttc/otc. The value ranges from 0 to count-1, where count is the number of fonts contained in the font file. For non-ttc/otc files, the index can only be 0. If this parameter is negative or exceeds the actual index range of the font file, an empty array is returned. |
 
 **Return value:**

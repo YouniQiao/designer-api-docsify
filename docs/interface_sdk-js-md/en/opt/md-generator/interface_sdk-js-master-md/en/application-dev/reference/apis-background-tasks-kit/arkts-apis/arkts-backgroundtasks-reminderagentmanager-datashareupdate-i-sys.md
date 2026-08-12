@@ -16,7 +16,7 @@ The data provider needs to set the ID, read/write permissions, and basic informa
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## equalTo

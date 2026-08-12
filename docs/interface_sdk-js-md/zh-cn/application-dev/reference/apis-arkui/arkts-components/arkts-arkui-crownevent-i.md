@@ -18,7 +18,7 @@ action: CrownAction
 
 表冠动作。
 
-**类型：** [CrownAction](../arkts-apis/arkts-arkui-crownaction-e.md)
+**类型：** CrownAction
 
 **起始版本：** 18
 
@@ -90,7 +90,7 @@ stopPropagation: Callback<void>
 
 阻止[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 18
 

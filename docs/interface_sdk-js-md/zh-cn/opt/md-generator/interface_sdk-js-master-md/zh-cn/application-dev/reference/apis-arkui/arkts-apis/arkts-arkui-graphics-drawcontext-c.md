@@ -36,7 +36,7 @@ get size(): Size
 
 获取画布的宽度和高度。
 
-**类型：** [Size](arkts-arkui-window-size-i.md)
+**类型：** [Size](arkts-arkui-graphics-size-i.md)
 
 **起始版本：** 11
 
@@ -56,7 +56,7 @@ get sizeInPixel(): Size
 
 获取以px为单位的画布的宽度和高度。
 
-**类型：** [Size](arkts-arkui-window-size-i.md)
+**类型：** [Size](arkts-arkui-graphics-size-i.md)
 
 **起始版本：** 12
 

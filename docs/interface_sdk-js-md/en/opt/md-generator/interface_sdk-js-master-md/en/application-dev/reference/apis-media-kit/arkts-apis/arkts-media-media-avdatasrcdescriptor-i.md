@@ -11,7 +11,7 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 ## Modules to Import
 
 ```TypeScript
-import { media } from 'kits/@kit.MediaKit';
+import { media } from '@kit.MediaKit';
 ```
 
 ## callback

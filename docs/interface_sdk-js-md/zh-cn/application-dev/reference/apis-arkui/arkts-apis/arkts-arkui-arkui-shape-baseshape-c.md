@@ -1,8 +1,8 @@
 # BaseShape
 
-继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)。
+继承自[CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)。
 
-**继承/实现关系：** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**继承/实现关系：** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ size(size: SizeOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | [SizeOptions](arkts-arkui-sizeoptions-i.md) | 是 | 形状的大小。 |
+| size | [SizeOptions](arkts-arkui-units-sizeoptions-i.md) | 是 | 形状的大小。 |
 
 **返回值：**
 

@@ -28,7 +28,7 @@ A constructor used to create a text decorative line style.
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes |
 
@@ -52,7 +52,7 @@ Constructor of a text decoration line style, including additional configuration 
 
 **Parameters:**
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](#type) | Mandatory |
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes |
 | [options](#options) | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | No |
@@ -105,7 +105,7 @@ readonly style?: TextDecorationStyle
 
 Style of the text decorative line.
 
-**Type:** [TextDecorationStyle](arkts-arkui-textdecorationstyle-e.md)
+**Type:** TextDecorationStyle
 
 **Since:** 12
 
@@ -145,7 +145,7 @@ readonly type: TextDecorationType
 
 Type of the text decorative line.
 
-**Type:** [TextDecorationType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textdecorationtype-e.md)
+**Type:** TextDecorationType
 
 **Since:** 12
 

@@ -13,7 +13,7 @@ Remote device operation methods.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from 'kits/@kit.ConnectivityKit';
+import { remoteDevice } from '@kit.ConnectivityKit';
 ```
 
 ## getAcbState
@@ -40,7 +40,7 @@ Gets the ACB connection state.
 
 | Type | Description |
 | --- | --- |
-| [AcbState](arkts-connectivity-remotedevice-acbstate-t.md) | Returns the ACB connection state. |
+| AcbState | Returns the ACB connection state. |
 
 **Error codes:**
 
@@ -48,7 +48,7 @@ Gets the ACB connection state.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getConnectionState
 
@@ -74,7 +74,7 @@ Gets the profile connection state.
 
 | Type | Description |
 | --- | --- |
-| [ConnectionState](arkts-connectivity-ssap-connectionstate-t.md) | Returns the connection state. |
+| ConnectionState | Returns the connection state. |
 
 **Error codes:**
 
@@ -82,7 +82,7 @@ Gets the profile connection state.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceClass
 
@@ -108,7 +108,7 @@ Gets the type of the NearLink device.
 
 | Type | Description |
 | --- | --- |
-| [DeviceClass](arkts-connectivity-connection-deviceclass-i.md) | Indicates the type of the NearLink device. |
+| DeviceClass | Indicates the type of the NearLink device. |
 
 **Error codes:**
 
@@ -116,7 +116,7 @@ Gets the type of the NearLink device.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceInformation
 
@@ -150,7 +150,7 @@ Obtains the remote device information.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceName
 
@@ -184,7 +184,7 @@ Gets the name of the NearLink device.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getPairingState
 
@@ -210,7 +210,7 @@ Gets the pairing state.
 
 | Type | Description |
 | --- | --- |
-| [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | Returns the pairing state. |
+| PairingState | Returns the pairing state. |
 
 **Error codes:**
 
@@ -218,7 +218,7 @@ Gets the pairing state.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## startPairing
 
@@ -252,5 +252,5 @@ Initiate pairing to remote NearLink device.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -1,9 +1,9 @@
 # WriteStream
 
-文件可写流，需要先通过[fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createwritestream)方法来构建一个WriteStream实例。WriteStream继承自数据流基类  
-[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)。
+文件可写流，需要先通过[fileIo.createWriteStream](arkts-corefile-fileio-createwritestream-f.md#createWriteStream)方法来构建一个WriteStream实例。WriteStream继承自数据流基类  
+[stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)。
 
-**继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md/arkts-arkts-stream-writable-c.md)
+**继承/实现关系：** WriteStream extends [stream.Writable](../../apis-arkts/arkts-apis/arkts-arkts-stream-writable-c.md#Writable)
 
 **起始版本：** 23
 
@@ -77,7 +77,7 @@ seek(offset: long, whence?: WhenceType): long
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | offset | long | 是 | 相对偏移位置，单位为Byte。 |
-| whence | [WhenceType](arkts-corefile-fileio-whencetype-e.md) | 否 | = WhenceType.SEEK_SET] - Where to start the offset. &lt;br&gt;The default value is SEEK_SET, which indicates the beginning of the file. |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | 否 | = WhenceType.SEEK_SET] - Where to start the offset. &lt;br&gt;The default value is SEEK_SET, which indicates the beginning of the file. |
 
 **返回值：**
 
@@ -90,7 +90,7 @@ seek(offset: long, whence?: WhenceType): long
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
 | 13900026 | Illegal seek |
 | 13900042 | Unknown error |
 

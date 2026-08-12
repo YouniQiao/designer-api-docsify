@@ -2,7 +2,7 @@
 
 Define DotIndicator, the indicator type is dot.
 
-**继承/实现关系：** DotIndicator extends [Indicator](../arkts-components/arkts-arkui-indicator-c.md/arkts-arkui-indicator-c.md)
+**继承/实现关系：** DotIndicator extends [Indicator](arkts-arkui-swiper-indicator-c.md#Indicator)
 
 **起始版本：** 23
 

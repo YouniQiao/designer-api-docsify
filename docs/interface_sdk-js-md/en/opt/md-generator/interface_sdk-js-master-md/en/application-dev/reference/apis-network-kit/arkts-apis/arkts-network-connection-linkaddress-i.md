@@ -11,7 +11,7 @@ Defines network link information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from 'kits/@kit.NetworkKit';
+import { connection } from '@kit.NetworkKit';
 ```
 
 ## address
@@ -22,7 +22,7 @@ address: NetAddress
 
 Link address.
 
-**Type:** [NetAddress](arkts-network-connection-netaddress-i.md)
+**Type:** NetAddress
 
 **Since:** 8
 

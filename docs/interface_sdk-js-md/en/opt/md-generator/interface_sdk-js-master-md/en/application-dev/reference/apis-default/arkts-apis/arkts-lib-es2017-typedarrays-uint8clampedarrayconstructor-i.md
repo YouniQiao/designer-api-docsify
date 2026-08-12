@@ -10,4 +10,4 @@ new (): Uint8ClampedArray
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Uint8ClampedArray](arkts-lib-es5-uint8clampedarray-i.md) |
+| [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-typeduarrays-uint8clampedarray-c.md) |

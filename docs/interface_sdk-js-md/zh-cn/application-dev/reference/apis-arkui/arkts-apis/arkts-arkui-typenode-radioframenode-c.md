@@ -34,11 +34,11 @@ abstract initialize(value: RadioOptions): RadioAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RadioOptions](../arkts-components/arkts-arkui-radiooptions-i.md) | 是 |  |
+| value | RadioOptions | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) |  |
+| RadioAttribute |  |
 

@@ -41,10 +41,10 @@ Displaying the text selection menu in a separate window is not supported for win
 Displaying the text selection menu in a separate window is not supported in the previewer.
 
 Displaying the text selection menu in a separate window is not supported in  
-[UIExtension](arkts-arkui-uiextension.md).
+[UIExtension](arkts-arkui-uiextension.md#uiExtension).
 
-When a text component is displayed in a child window of [Popup](arkts-arkui-advanced-popup.md),  
-[Dialog](arkts-arkui-advanced-dialog.md), [Toast](../../../ui/arkts-create-toast.md), or [Menu](./menu),the corresponding text selection menu cannot be displayed in a separate window.
+When a text component is displayed in a child window of [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup),  
+[Dialog](@ohos.arkui.advanced.Dialog), [Toast](../../../ui/arkts-create-toast.md), or [Menu](./menu),the corresponding text selection menu cannot be displayed in a separate window.
 
 When **autoFill** is available for **TextInput** or **TextArea**, the corresponding text selection menu cannot be displayed in a separate window.
 

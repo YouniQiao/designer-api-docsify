@@ -13,7 +13,7 @@ Wi-Fi connection information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## chload
@@ -104,7 +104,7 @@ suppState: SuppState
 
 The state of the supplicant of this Wi-Fi connection.
 
-**Type:** [SuppState](arkts-connectivity-wifi-suppstate-e-sys.md)
+**Type:** SuppState
 
 **Since:** 9
 

@@ -29,5 +29,5 @@ Create a FrameNode of LoadingProgress type.On API 26.0.0 and above, It can also 
 
 | Type | Description |
 | --- | --- |
-| [LoadingProgress](arkts-arkui-typenode-loadingprogress-t.md) | Return LoadingProgress type FrameNode. |
+| LoadingProgress | Return LoadingProgress type FrameNode. |
 

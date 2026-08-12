@@ -26,13 +26,13 @@ Defines Tabs Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TabsOptions](arkts-arkui-tabs-tabsoptions-i.md) | No | tabs constructor options |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TabsAttribute](../arkts-components/arkts-arkui-tabs-attribute.md) |  |
+| [TabsAttribute](arkts-arkui-tabs-tabsattribute-i.md) |  |
 
 
 ## Tabs
@@ -62,12 +62,12 @@ Defines Tabs Component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;TabsAttribute&gt; | Yes | tabs attribute instance |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TabsAttribute](arkts-arkui-tabs-tabsattribute-i.md)&gt; | Yes | tabs attribute instance |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TabsAttribute](../arkts-components/arkts-arkui-tabs-attribute.md) |  |
+| [TabsAttribute](arkts-arkui-tabs-tabsattribute-i.md) |  |
 

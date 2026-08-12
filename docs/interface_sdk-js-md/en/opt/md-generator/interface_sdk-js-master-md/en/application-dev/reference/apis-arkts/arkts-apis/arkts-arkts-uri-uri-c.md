@@ -11,7 +11,7 @@ URI Represents a Uniform Resource Identifier (URI) reference.
 ## Modules to Import
 
 ```TypeScript
-import { uri } from 'kits/@kit.ArkTS';
+import { uri } from '@kit.ArkTS';
 ```
 
 ## addEncodedSegment
@@ -296,13 +296,13 @@ A constructor used to create a URI instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| uri | string | Yes |
+| [uri](arkts-uri.md) | string | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 
@@ -336,8 +336,8 @@ Creates a URI based on the provided scheme, scheme-specific-part, and fragment c
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [scheme](#scheme) | string | Yes |
-| [ssp](#ssp) | string | Yes |
-| [fragment](#fragment) | string | Yes |
+| [ssp](arkts-arkts-uri-uri-c.md) | string | Yes |
+| [fragment](arkts-arkts-uri-uri-c.md) | string | Yes |
 
 **Return value:**
 
@@ -364,7 +364,7 @@ Check whether this URI is equivalent to other URI objects.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.uri.URI.equalsTo
+**Substitutes:** [equalsTo](#equalsTo)
 
 <!--Device-URI-equals(other: URI): boolean--><!--Device-URI-equals(other: URI): boolean-End-->
 

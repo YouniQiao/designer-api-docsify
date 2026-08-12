@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthExtensionAbility } from 'kits/@kit.UserAuthenticationKit';
+import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary

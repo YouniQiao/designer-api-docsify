@@ -2,7 +2,7 @@
 
 Represents an error thrown when a method is passed an illegal argument.
 
-**Inheritance/Implementation:** IllegalArgumentError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** IllegalArgumentError extends [Error](Error)
 
 **Since:** 26.0.0
 

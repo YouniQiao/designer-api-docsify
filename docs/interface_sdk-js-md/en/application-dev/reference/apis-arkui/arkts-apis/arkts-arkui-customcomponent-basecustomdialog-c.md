@@ -2,7 +2,7 @@
 
 Definition of base custom dialog class.
 
-**Inheritance/Implementation:** BaseCustomDialog extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md)
+**Inheritance/Implementation:** BaseCustomDialog extends [ExtendableComponent](arkts-arkui-extendablecomponent-extendablecomponent-c.md#ExtendableComponent)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ Implementation for creating a custom dialog
 | --- | --- | --- | --- |
 | factory | () =&gt; S | Yes | factory to create instance of custom dialog |
 | initializers | () =&gt; S_Options | No | initial data for all the fields in custom dialog |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | tail closure for custom dialog |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | tail closure for custom dialog |
 
 ## constructor
 
@@ -67,5 +67,5 @@ Constructor to use to create a custom dialog instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | useSharedStorage | boolean | No | determine whether to use the LocalStorage instance object returned by UIContext.getSharedLocalStorage() interface. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | localStorage instance. |
+| storage | LocalStorage | No | localStorage instance. |
 

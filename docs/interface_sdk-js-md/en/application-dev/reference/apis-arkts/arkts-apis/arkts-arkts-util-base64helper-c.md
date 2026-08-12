@@ -13,7 +13,7 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 ## Modules to Import
 
 ```TypeScript
-import { util } from 'kits/@kit.ArkTS';
+import { util } from '@kit.ArkTS';
 ```
 
 ## constructor

@@ -11,7 +11,7 @@ Describes the data returned by the operation of proactive triggering a WantAgent
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from 'kits/@kit.AbilityKit';
+import { WantAgent } from '@kit.AbilityKit';
 ```
 
 ## extraInfo
@@ -76,7 +76,7 @@ info: WantAgent
 
 WantAgent object that is triggered.
 
-**Type:** [WantAgent](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent-wantagent-i.md)
+**Type:** [WantAgent](arkts-ability-wantagent-t.md)
 
 **Since:** 9
 

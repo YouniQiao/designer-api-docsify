@@ -2,7 +2,7 @@
 
 Defines the XComponent attribute.
 
-**Inheritance/Implementation:** XComponentAttribute extends [CommonMethod](arkts-arkui-common-commonmethod-i.md)
+**Inheritance/Implementation:** XComponentAttribute extends [CommonMethod](CommonMethod)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Call attributeModifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[XComponentAttribute](arkts-arkui-xcomponent-xcomponentattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -155,7 +155,7 @@ Set hdrBrightness for XComponent.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | brightness | double \| undefined | Yes | control the brightness of HDR video |
-| type | [HdrType](../../apis-media-kit/arkts-apis/arkts-media-media-hdrtype-e.md) | No | the HDR type of the XComponent |
+| type | [HdrType](arkts-arkui-xcomponent-hdrtype-e.md) | No | the HDR type of the XComponent |
 
 **Return value:**
 
@@ -245,7 +245,7 @@ Sets xcomponent options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| XComponentOptions \| NativeXComponentParameters | Yes | The options to create an XComponent |
+| params | [XComponentParameters](arkts-arkui-xcomponent-xcomponentparameters-i.md) \| [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md) \| [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md) | Yes | The options to create an XComponent |
 
 **Return value:**
 

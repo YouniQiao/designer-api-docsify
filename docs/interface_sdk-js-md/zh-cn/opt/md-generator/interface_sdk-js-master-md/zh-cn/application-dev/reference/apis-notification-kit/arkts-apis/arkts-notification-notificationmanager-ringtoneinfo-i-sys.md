@@ -13,7 +13,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from 'kits/@kit.NotificationKit';
+import { notificationManager } from '@kit.NotificationKit';
 ```
 
 ## ringtoneFileName
@@ -60,7 +60,7 @@ ringtoneType: RingtoneType
 
 铃声的类型。
 
-**类型：** [RingtoneType](../../apis-audio-kit/arkts-apis/arkts-audio-systemsoundmanager-ringtonetype-e.md)
+**类型：** RingtoneType
 
 **起始版本：** 21
 

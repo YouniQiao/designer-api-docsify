@@ -13,7 +13,7 @@ Defines the discovery events information of mDNS services.
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from 'kits/@kit.NetworkKit';
+import { mdns } from '@kit.NetworkKit';
 ```
 
 ## errorCode

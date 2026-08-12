@@ -18,7 +18,7 @@ style?: ProgressStyle
 
 指定进度条样式。
 
-从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md)替代。
+从API version 7开始支持，从API version 8开始废弃。建议使用[type](arkts-arkui-progresstype-e.md#ProgressType)替代。
 
 默认值：ProgressStyle.Linear
 
@@ -30,7 +30,7 @@ style?: ProgressStyle
 
 **废弃版本：** 8
 
-**替代接口：** [type](arkts-arkui-progressoptions-i.md#type)
+**替代接口：** [type](#type)
 
 <!--Device-ProgressOptions-style?: ProgressStyle--><!--Device-ProgressOptions-style?: ProgressStyle-End-->
 

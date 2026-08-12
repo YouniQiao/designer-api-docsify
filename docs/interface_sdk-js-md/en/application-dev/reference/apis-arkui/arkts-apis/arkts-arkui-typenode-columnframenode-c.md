@@ -34,11 +34,11 @@ Initialize Column FrameNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ColumnOptions](../arkts-components/arkts-arkui-columnoptions-i.md) \| ColumnOptionsV2 | No | Column options. |
+| options | ColumnOptions \| ColumnOptionsV2 | No | Column options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) |  |
+| ColumnAttribute |  |
 

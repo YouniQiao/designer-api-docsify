@@ -18,7 +18,7 @@ preventDefault?: Callback<void>
 
 Prevents the default paste event.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** Callback&lt;void&gt;
 
 **Since:** 11
 

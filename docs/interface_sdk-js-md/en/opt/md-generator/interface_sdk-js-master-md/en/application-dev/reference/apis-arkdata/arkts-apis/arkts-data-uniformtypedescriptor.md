@@ -13,7 +13,7 @@ The **uniformTypeDescriptor** module abstracts and defines uniform data types.
 ## Modules to Import
 
 ```TypeScript
-import { uniformTypeDescriptor } from 'kits/@kit.ArkData';
+import { uniformTypeDescriptor } from '@kit.ArkData';
 ```
 
 ## Summary

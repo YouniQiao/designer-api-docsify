@@ -26,7 +26,7 @@ Creates a DistortionComponent with content.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DistortionComponentOptions](../arkts-apis/arkts-arkui-distortioncomponent-distortioncomponentoptions-i-sys.md) | 否 | DistortionComponent Options. |
+| options | [DistortionComponentOptions](arkts-arkui-distortioncomponentoptions-i-sys.md) | 否 | DistortionComponent Options. |
 
 ## 汇总
 

@@ -46,7 +46,7 @@ Implementation for creating a custom component
 | factory | () =&gt; S | Yes | factory to create instance of custom component |
 | initializers | () =&gt; S_Options | No | initial data for all the fields in custom component |
 | reuseId | string | No | reuse id for reusable. Only valid if custom component decorated with @Reusable |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | tail closure for custom component |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | tail closure for custom component |
 
 ## _invokeImpl
 
@@ -83,7 +83,7 @@ Implementation for creating a custom component
 | factory | () =&gt; S | Yes | factory to create instance of custom component |
 | initializers | () =&gt; S_Options | No | initial data for all the fields in custom component |
 | reuseId | string | No | reuse id for reusable. Only valid if custom component decorated with @Reusable |
-| content | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | No | tail closure for custom component |
+| content | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | tail closure for custom component |
 | options | [CustomComponentV1InvokeOptions](arkts-arkui-customcomponent-customcomponentv1invokeoptions-i.md) | No | additional invoke options |
 
 ## aboutToReuse
@@ -133,5 +133,5 @@ Constructor to use to create a customComponent instance.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | useSharedStorage | boolean | No | determine whether to use the LocalStorage instance object returned by UIContext.getSharedLocalStorage() interface. |
-| storage | [LocalStorage](arkts-arkui-localstorage-c.md) | No | localStorage instance. |
+| storage | LocalStorage | No | localStorage instance. |
 

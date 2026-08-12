@@ -55,17 +55,17 @@ updater?: ParticleUpdaterOptions
 属性变化配置。属性变化类型type有三类：
 
 1、当type为ParticleUpdater.NONE，表示无变化，则config类型为  
-[ParticlePropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlepropertyupdaterconfigs-i.md/arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.NONE]。
+[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.NONE]。
 
 2、当type为ParticleUpdater.RANDOM，表示变化类型为随机变化，则config类型为  
-[ParticlePropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlepropertyupdaterconfigs-i.md/arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM]。
+[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.RANDOM]。
 
 3、当type为ParticleUpdater.CURVE，表示变化类型为曲线变化，则config类型为  
-[ParticlePropertyUpdaterConfigs](../arkts-components/arkts-arkui-particlepropertyupdaterconfigs-i.md/arkts-arkui-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE] 
+[ParticlePropertyUpdaterConfigs](arkts-arkui-particlepropertyupdaterconfigs-t.md#ParticlePropertyUpdaterConfigs)[ParticleUpdater.CURVE] 
 
 默认值：type默认为ParticleUpdater.NONE。
 
-**类型：** [ParticleUpdaterOptions](../arkts-components/arkts-arkui-particleupdateroptions-i.md)
+**类型：** [ParticleUpdaterOptions](arkts-arkui-particle-particleupdateroptions-i.md)
 
 **默认值：** {type:UPDATER.NONE;config:undefined}
 

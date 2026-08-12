@@ -16,7 +16,7 @@ header?: ComponentContent
 
 ArcList的头部组件，用于在列表顶部显示标题或自定义内容。不设置时不显示头部组件。
 
-**类型：** [ComponentContent](arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 18
 
@@ -60,8 +60,8 @@ scroller?: Scroller
 
 **说明：**
 
-不允许和其他滚动类组件，如：[List](../../apis-arkui/arkts-components/arkts-arkui-list-i)、[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-i)、  
-[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-i)和[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-water_flow-i)绑定同一个滚动控制对象。
+不允许和其他滚动类组件，如：[List](./@internal/component/ets/list)、[Grid](./@internal/component/ets/grid)、  
+[Scroll](./@internal/component/ets/scroll)和[WaterFlow](./@internal/component/ets/water_flow)绑定同一个滚动控制对象。
 
 **类型：** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 

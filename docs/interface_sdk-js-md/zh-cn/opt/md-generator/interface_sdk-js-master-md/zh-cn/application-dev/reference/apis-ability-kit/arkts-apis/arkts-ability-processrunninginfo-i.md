@@ -1,13 +1,13 @@
 # ProcessRunningInfo
 
 运行进程信息，可以通过appManager中  
-[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getprocessrunninginfos)方法来获取运行进程信息。
+[getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md#getProcessRunningInfos)方法来获取运行进程信息。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** ProcessInformation/ProcessInformation
+**替代接口：** [ProcessInformation/ProcessInformation](ProcessInformation/ProcessInformation)
 
 <!--Device-unnamed-export interface ProcessRunningInfo--><!--Device-unnamed-export interface ProcessRunningInfo-End-->
 
@@ -29,7 +29,7 @@ bundleNames: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [ProcessInformation:ProcessInformation.bundleNames](arkts-ability-processinformation-i.md#bundlenames)
+**替代接口：** [bundleNames](arkts-ability-processinformation-i.md#bundleNames)
 
 <!--Device-ProcessRunningInfo-bundleNames: Array<string>--><!--Device-ProcessRunningInfo-bundleNames: Array<string>-End-->
 
@@ -51,7 +51,7 @@ pid: number
 
 **废弃版本：** 9
 
-**替代接口：** [ProcessInformation:ProcessInformation.pid](arkts-ability-processinformation-i.md#pid)
+**替代接口：** [pid](arkts-ability-processinformation-i.md#pid)
 
 <!--Device-ProcessRunningInfo-pid: number--><!--Device-ProcessRunningInfo-pid: number-End-->
 
@@ -73,7 +73,7 @@ processName: string
 
 **废弃版本：** 9
 
-**替代接口：** [ProcessInformation:ProcessInformation.processName](arkts-ability-processinformation-i.md#processname)
+**替代接口：** [processName](arkts-ability-processinformation-i.md#processName)
 
 <!--Device-ProcessRunningInfo-processName: string--><!--Device-ProcessRunningInfo-processName: string-End-->
 
@@ -95,7 +95,7 @@ uid: number
 
 **废弃版本：** 9
 
-**替代接口：** [ProcessInformation:ProcessInformation.uid](arkts-ability-processinformation-i.md#uid)
+**替代接口：** [uid](arkts-ability-processinformation-i.md#uid)
 
 <!--Device-ProcessRunningInfo-uid: number--><!--Device-ProcessRunningInfo-uid: number-End-->
 

@@ -1,8 +1,8 @@
 # RichEditorStyledStringController
 
-使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md)。
+使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#RichEditorBaseController)。
 
-**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md) implements [StyledStringController](arkts-arkui-textcommon-styledstringcontroller-i.md)
+**继承/实现关系：** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#RichEditorBaseController) implements [StyledStringController](StyledStringController)
 
 **起始版本：** 23
 
@@ -58,7 +58,7 @@ getStyledString(): MutableStyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
 
 ## onContentChanged
 
@@ -82,7 +82,7 @@ onContentChanged(listener: StyledStringChangedListener): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| listener | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | 是 | 文本内容变化回调监听器。 |
+| listener | [StyledStringChangedListener](arkts-arkui-textcommon-styledstringchangedlistener-i.md) | 是 | 文本内容变化回调监听器。 |
 
 ## setStyledString
 
@@ -106,5 +106,5 @@ setStyledString(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md)也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](arkts-arkui-mutablestyledstring-c.md#MutableStyledString)也可以作为入参值。 |
 

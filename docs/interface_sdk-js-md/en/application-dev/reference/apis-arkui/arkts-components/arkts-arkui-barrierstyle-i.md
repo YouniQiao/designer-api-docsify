@@ -24,7 +24,7 @@ Default value: **BarrierDirection.LEFT**
 
 Invalid values are treated as the default value.
 
-**Type:** [BarrierDirection](../arkts-apis/arkts-arkui-relativecontainer-barrierdirection-e.md)
+**Type:** [BarrierDirection](arkts-arkui-barrierdirection-e.md)
 
 **Since:** 12
 

@@ -5,8 +5,8 @@
  >
  > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
  > - Menu组件需和
- > [bindMenu](arkts-arkui-common-commonmethod-i.md#bindmenu)或
- > [bindContextMenu](arkts-arkui-common-commonmethod-i.md#bindcontextmenu)
+ > [bindMenu](CommonMethod#bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions))或
+ > [bindContextMenu](CommonMethod#bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions))
  > 方法配合使用，不支持作为普通组件单独使用。
  ###### 子组件
  包含[MenuItem](menu_item)、[MenuItemGroup](menu_item_group)子组件。
@@ -17,7 +17,7 @@
  >
  > - 菜单和菜单项宽度计算规则：
  > >
- > >   - 布局过程中，期望每个菜单项的宽度一致。若子组件设置了宽度，则以[constraintSize](arkts-arkui-common-commonmethod-i.md#constraintsize)为准。
+ > >   - 布局过程中，期望每个菜单项的宽度一致。若子组件设置了宽度，则以[constraintSize](CommonMethod#constraintSize)为准。
  > >
  > >   - Menu不设置宽度的情况：Menu会对子组件MenuItem、MenuItemGroup设置默认2栅格的宽度，若菜单项内容区比2栅格宽，则会自适应撑开。
  > >
@@ -25,7 +25,7 @@
  > >
  > >   - Menu支持设置的最小宽度为64vp。
  >
- > - Menu不支持的通用属性：[外描边设置](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)下的属性、[shadow](arkts-arkui-common-commonmethod-i.md#shadow)。
+ > - Menu不支持的通用属性：[外描边设置](common)下的属性、[shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))。
 
 
 ## 汇总
@@ -40,7 +40,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [MenuAttribute](arkts-arkui-menu-menuattribute-i.md) | 除支持[通用属性](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)外，还支持以下属性： |
+| [MenuAttribute](arkts-arkui-menu-menuattribute-i.md) | 除支持[通用属性](common)外，还支持以下属性： |
 
 ### 枚举
 

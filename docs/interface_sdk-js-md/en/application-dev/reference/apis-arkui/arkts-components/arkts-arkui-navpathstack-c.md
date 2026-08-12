@@ -248,7 +248,7 @@ When a **Navigation** component is nested (directly or indirectly) inside anothe
 
 | Type | Description |
 | --- | --- |
-| [NavPathStack](../arkts-apis/arkts-arkui-navigation-navpathstack-c.md) | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
+| [NavPathStack](arkts-arkui-navpathstack-c.md) | Navigation path stack of the outer **Navigation** component in which the current **Navigation** component is nested. If there is no outer **Navigation** component., **null** is returned. |
 
 ## getPathStack
 
@@ -274,7 +274,7 @@ Obtains the array of route page information from this routing stack.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;NavPathInfo&gt; | Array of route page information in the current routing stack. |
+| Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Array of route page information in the current routing stack. |
 
 ## moveIndexToTop
 
@@ -604,9 +604,9 @@ Preloads navigation destination page specified by **info**.The preload page will
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -618,7 +618,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the
+> You are not advised to use stack operations in [aboutToAppear](BaseCustomComponent#aboutToAppear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -651,10 +651,10 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestination
 
@@ -662,11 +662,11 @@ Pushes the navigation destination page specified by **info** onto the routing st
 pushDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter,different behaviors will be implemented.
+Pushes the navigation destination page specified by **info** onto the routing stack. This API uses a promise to return the result. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode) specified in the **options** parameter,different behaviors will be implemented.
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the
+> You are not advised to use stack operations in [aboutToAppear](BaseCustomComponent#aboutToAppear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -687,7 +687,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | No | Routing stack operation options. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 **Return value:**
 
@@ -699,10 +699,10 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -714,7 +714,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the
+> You are not advised to use stack operations in [aboutToAppear](BaseCustomComponent#aboutToAppear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -748,10 +748,10 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushDestinationByName
 
@@ -763,7 +763,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 > **NOTE：**
 > 
-> You are not advised to use stack operations in [aboutToAppear](arkts-arkui-basecustomcomponent-c.md#abouttoappear), as the
+> You are not advised to use stack operations in [aboutToAppear](BaseCustomComponent#aboutToAppear), as the
 > page has not yet finished building at this stage, which may lead to issues such as white screens or navigation
 > failures.
 
@@ -785,7 +785,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex). |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](#pop-1), [popToName](#popToName-1), or [popToIndex](#popToIndex-1). |
 | animated | boolean | No | Whether to enable the transition animation.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **true |
 
 **Return value:**
@@ -798,10 +798,10 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## pushPath
 
@@ -837,7 +837,7 @@ pushPath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
 Pushes the navigation destination page specified by **info** onto the routing stack. Depending on the  
-[LaunchMode](arkts-arkui-launchmode-e.md) specified in the **options** parameter, different behaviors will be implemented.
+[LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode) specified in the **options** parameter, different behaviors will be implemented.
 
 **Since:** 12
 
@@ -856,7 +856,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | No | Routing stack operation options. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 ## pushPathByName
 
@@ -912,7 +912,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;PopInfo&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#poptoname), or [popToIndex](arkts-arkui-navpathstack-c.md#poptoindex). |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](#pop-1), [popToName](#popToName-1), or [popToIndex](#popToIndex-1). |
 | animated | boolean | No | Whether to enable the transition animation.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **true |
 
 ## removeByIndexes
@@ -986,8 +986,8 @@ removeByNavDestinationId(navDestinationId: string): boolean
 ```
 
 Removes the navigation destination page specified by **navDestinationId** from the routing stack.  
-**navDestinationId** can be obtained from the [onReady](../arkts-apis/arkts-arkui-navdestination-navdestinationattribute-i.md/arkts-arkui-navdestination-navdestinationattribute-i.md#onready) callback of  
-**NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md/arkts-arkui-uiobserver-navdestinationinfo-i.md).
+**navDestinationId** can be obtained from the [onReady](NavDestinationAttribute#onReady) callback of  
+**NavDestination** or from [NavDestinationInfo](../arkts-apis/arkts-arkui-uiobserver-navdestinationinfo-i.md#NavDestinationInfo).
 
 **Since:** 12
 
@@ -1019,7 +1019,7 @@ Removes the navigation destination page specified by **navDestinationId** from t
 replaceDestination(info: NavPathInfo, options?: NavigationOptions): Promise<void>
 ```
 
-Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md) specified in **options**.
+Performs a replacement operation on the routing stack. This API uses a promise to return the result. Its behavior varies depending on the value of [LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode) specified in **options**.
 
 **Since:** 18
 
@@ -1038,7 +1038,7 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
-| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | No | Routing stack operation options. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 **Return value:**
 
@@ -1050,10 +1050,10 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
-| [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
+| [100006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
 ## replacePath
 
@@ -1088,7 +1088,7 @@ Replaces the top of the routing stack with the navigation destination page speci
 replacePath(info: NavPathInfo, options?: NavigationOptions): void
 ```
 
-Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md) specified in the  
+Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-arkui-launchmode-e.md#LaunchMode) specified in the  
 **options** parameter, different behaviors will be implemented.
 
 **Since:** 12
@@ -1108,7 +1108,7 @@ Replaces the top page on the routing stack. Depending on the [LaunchMode](arkts-
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
-| options | [NavigationOptions](../arkts-apis/arkts-arkui-navigation-navigationoptions-i.md) | No | Routing stack operation options. |
+| options | [NavigationOptions](arkts-arkui-navigationoptions-i.md) | No | Routing stack operation options. |
 
 ## replacePathByName
 
@@ -1162,7 +1162,7 @@ Sets the interception callback for navigation page redirection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| interception | [NavigationInterception](../arkts-apis/arkts-arkui-navigation-navigationinterception-i.md) | Yes | Object to be intercepted during navigation redirection. |
+| interception | [NavigationInterception](arkts-arkui-navigationinterception-i.md) | Yes | Object to be intercepted during navigation redirection. |
 
 ## setPathStack
 
@@ -1182,9 +1182,9 @@ Updates the array of route page information in this routing stack to the specifi
 > triggered from the top to the bottom of the stack. This differs from the triggering order of other push APIs,
 > which are triggered from the bottom to the top of the stack.
 > 
-> 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md).
+> 3. You can operate existing pages using **navDestinationId** (unique ID) in [NavPathInfo](arkts-arkui-navpathinfo-c.md#NavPathInfo).
 > This ID is system-generated and globally unique (it can be obtained using the
-> [getPathStack](arkts-arkui-navpathstack-c.md#getpathstack) API and should not be manually reassigned). If the specified ID
+> [getPathStack](#getPathStack) API and should not be manually reassigned). If the specified ID
 > does not exist in the current routing stack, it indicates a new page. If it exists and the corresponding name is
 > the same, it indicates reuse of an existing page.
 
@@ -1204,7 +1204,7 @@ Updates the array of route page information in this routing stack to the specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pathStack | Array&lt;NavPathInfo&gt; | Yes | Array of route page information in the current routing stack.&lt;br&gt;**NOTE：**&lt;br&gt;The array length is not limited. |
+| pathStack | Array&lt;[NavPathInfo](arkts-arkui-navpathinfo-c.md)&gt; | Yes | Array of route page information in the current routing stack.&lt;br&gt;**NOTE：**&lt;br&gt;The array length is not limited. |
 | animated | boolean | No | Whether to enable the transition animation.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **true |
 
 ## size

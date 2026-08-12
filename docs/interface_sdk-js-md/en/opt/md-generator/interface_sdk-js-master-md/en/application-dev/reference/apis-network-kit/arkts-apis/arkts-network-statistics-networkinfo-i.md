@@ -11,7 +11,7 @@ Parameters for obtaining detailed information on specified network traffic usage
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from 'kits/@kit.NetworkKit';
+import { statistics } from '@kit.NetworkKit';
 ```
 
 ## endTime
@@ -70,7 +70,7 @@ type: NetBearType
 
 Network type for querying traffic.
 
-**Type:** [NetBearType](arkts-network-statistics-netbeartype-t.md)
+**Type:** NetBearType
 
 **Since:** 22
 

@@ -1,8 +1,8 @@
 # PreviewOutput
 
-预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。
+预览输出类。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)。
 
-**继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md)
+**继承/实现关系：** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
 **起始版本：** 10
 
@@ -16,7 +16,7 @@
 addDeferredSurface(surfaceId: string): void
 ```
 
-配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitconfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
+配置延迟预览的Surface，可以在[commitConfig](arkts-camera-camera-session-i.md#commitConfig)配流和[start](arkts-camera-camera-session-i.md#start)启流之后运行。
 
 **起始版本：** 24
 
@@ -36,8 +36,8 @@ addDeferredSurface(surfaceId: string): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## enableBandwidthCompression
 
@@ -47,11 +47,11 @@ enableBandwidthCompression(enabled: boolean): void
 
 使能预览带宽压缩。
 
-使能之前，可先使用方法[isBandwidthCompressionSupported](arkts-camera-camera-previewoutput-i.md#isbandwidthcompressionsupported)对设备是否支持预览带宽压缩进行检查。
+使能之前，可先使用方法[isBandwidthCompressionSupported](#isBandwidthCompressionSupported)对设备是否支持预览带宽压缩进行检查。
 
 > **说明：**
 > 
-> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流
+> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之前调用，否则会影响预览流
 > 出流格式。
 
 **起始版本：** 23
@@ -72,9 +72,9 @@ enableBandwidthCompression(enabled: boolean): void
 
 | 错误码ID |
 | --- |
-| [7400102](../errorcode-camera.md#7400102-非法操作) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getActiveFrameRate
 
@@ -84,7 +84,7 @@ getActiveFrameRate(): FrameRateRange
 
 获取已设置的帧率范围。
 
-使用[setFrameRate](arkts-camera-camera-previewoutput-i.md#setframerate)接口对预览流设置过帧率后可查询。
+使用[setFrameRate](#setFrameRate)接口对预览流设置过帧率后可查询。
 
 **起始版本：** 12
 
@@ -126,7 +126,7 @@ getActiveProfile(): Profile
 
 | 错误码ID |
 | --- |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getPreviewRotation
 
@@ -167,8 +167,8 @@ getPreviewRotation(displayRotation?: number): ImageRotation
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## getSupportedFrameRates
 
@@ -190,7 +190,7 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 | 类型 |
 | --- |
-| Array&lt;FrameRateRange&gt; |
+| Array&lt;[FrameRateRange](arkts-camera-camera-frameraterange-i.md)&gt; |
 
 ## isBandwidthCompressionSupported
 
@@ -400,11 +400,11 @@ setFrameRate(minFps: number, maxFps: number): void
 
 设置预览流帧率范围，设置的范围必须在支持的帧率范围内。
 
-进行设置前，可通过[getSupportedFrameRates](arkts-camera-camera-previewoutput-i.md#getsupportedframerates)接口查询支持的帧率范围。
+进行设置前，可通过[getSupportedFrameRates](#getSupportedFrameRates)接口查询支持的帧率范围。
 
 > **说明：**
 > 
-> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md)或[VideoSession](arkts-camera-camera-videosession-i.md)模式下支持。
+> 仅在[PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession)或[VideoSession](arkts-camera-camera-videosession-i.md#VideoSession)模式下支持。
 
 **起始版本：** 12
 
@@ -425,8 +425,8 @@ setFrameRate(minFps: number, maxFps: number): void
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400110](../errorcode-camera.md#7400110-与当前配置存在冲突) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400110](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-与当前配置存在冲突) |
 
 ## setLogViewAssistEnable
 
@@ -434,11 +434,11 @@ setFrameRate(minFps: number, maxFps: number): void
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](arkts-camera-camera-previewoutput-i.md#islogviewassistsupported)查询设备是否支持预览辅助监看。
+LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupported](#isLogViewAssistSupported)查询设备是否支持预览辅助监看。
 
 > **说明：**
 > 
-> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之后调用。
+> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig)接口之后调用。
 > 
 > - 预览辅助监看效果仅支持1080P及以下分辨率。
 
@@ -462,9 +462,9 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 
 | 错误码ID |
 | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## setPreviewRotation
 
@@ -493,8 +493,8 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 
 | 错误码ID |
 | --- |
-| [7400101](../errorcode-camera.md#7400101-无效入参) |
-| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
+| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
 
 ## start
 
@@ -512,7 +512,7 @@ start(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.start](arkts-camera-camera-session-i.md#start)(callback:
+**替代接口：** [start](camera.Session.start(callback:)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -528,7 +528,7 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## start
 
@@ -546,7 +546,7 @@ start(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.start](arkts-camera-camera-session-i.md#start)()
+**替代接口：** [start](arkts-camera-camera-session-i.md#start)()
 
 <!--Device-PreviewOutput-start(): Promise<void>--><!--Device-PreviewOutput-start(): Promise<void>-End-->
 
@@ -556,13 +556,13 @@ start(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
 
 ## stop
 
@@ -580,7 +580,7 @@ stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)(callback:
+**替代接口：** [stop](camera.Session.stop(callback:)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -608,7 +608,7 @@ stop(): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [camera.Session.stop](arkts-camera-camera-session-i.md#stop)()
+**替代接口：** [stop](arkts-camera-camera-session-i.md#stop)()
 
 <!--Device-PreviewOutput-stop(): Promise<void>--><!--Device-PreviewOutput-stop(): Promise<void>-End-->
 
@@ -618,4 +618,4 @@ stop(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |

@@ -20,7 +20,7 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 
 **废弃版本：** 9
 
-**替代接口：** ohos.url.URL.parseURL
+**替代接口：** [parseURL](#parseURL)
 
 <!--Device-URL-constructor(url: string, base?: string | URL)--><!--Device-URL-constructor(url: string, base?: string | URL)-End-->
 
@@ -30,7 +30,7 @@ URL的构造函数。与parseURL方法功能相同，但parseURL为静态工厂�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| url | string | 是 |
+| [url](arkts-url.md) | string | 是 |
 | base | string \| [URL](arkts-arkts-url-url-c.md) | 否 |
 
 ## constructor
@@ -75,7 +75,7 @@ static parseURL(url: string, base?: string | URL): URL
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| url | string | 是 |
+| [url](arkts-url.md) | string | 是 |
 | base | string \| [URL](arkts-arkts-url-url-c.md) | 否 |
 
 **返回值：**
@@ -88,7 +88,7 @@ static parseURL(url: string, base?: string | URL): URL
 
 | 错误码ID |
 | --- |
-| [10200002](../errorcode-utils.md#10200002-参数解析错误) |
+| [10200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-参数解析错误) |
 
 ## 示例
 
@@ -384,7 +384,7 @@ readonly searchParams: URLSearchParams
 
 **废弃版本：** 9
 
-**替代接口：** ohos.url.URLParams
+**替代接口：** [URLParams](arkts-arkts-url-urlparams-c.md#URLParams)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

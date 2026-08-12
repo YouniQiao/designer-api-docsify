@@ -97,7 +97,7 @@ operationType?: wantAgent.OperationType
 
 **废弃版本：** 11
 
-**替代接口：** [WantAgentInfo.actionType](arkts-ability-wantagentinfo-wantagentinfo-i.md#actiontype)
+**替代接口：** [actionType](#actionType)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -139,7 +139,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 
 **废弃版本：** 11
 
-**替代接口：** [WantAgentInfo.actionFlags](arkts-ability-wantagentinfo-wantagentinfo-i.md#actionflags)
+**替代接口：** [actionFlags](#actionFlags)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

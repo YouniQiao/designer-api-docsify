@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { customConfig } from 'kits/@kit.BasicServicesKit';
+import { customConfig } from '@kit.BasicServicesKit';
 ```
 
 ## getChannelId

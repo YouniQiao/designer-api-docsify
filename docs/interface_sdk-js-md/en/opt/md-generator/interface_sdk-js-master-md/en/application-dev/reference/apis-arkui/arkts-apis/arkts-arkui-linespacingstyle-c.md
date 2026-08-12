@@ -45,7 +45,7 @@ Text line spacing.
 
 Value range: [0, +∞)
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
 **Type:** number
 

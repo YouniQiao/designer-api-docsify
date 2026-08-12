@@ -13,7 +13,7 @@ Defines the camera prelaunch configuration.Currently, the configuration is used 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from 'kits/@kit.CameraKit';
+import { camera } from '@kit.CameraKit';
 ```
 
 ## activeTime
@@ -42,7 +42,7 @@ cameraDevice: CameraDevice
 
 Camera device.
 
-**Type:** [CameraDevice](arkts-camera-camera-cameradevice-i-sys.md)
+**Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
 **Since:** 10
 

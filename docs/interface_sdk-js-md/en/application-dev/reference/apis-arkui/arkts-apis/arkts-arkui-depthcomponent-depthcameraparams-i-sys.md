@@ -20,7 +20,7 @@ cameraBufferCrop?: CameraBufferCrop
 
 Camera buffer crop parameters.
 
-**Type:** [CameraBufferCrop](../arkts-components/arkts-arkui-camerabuffercrop-i-sys.md)
+**Type:** [CameraBufferCrop](arkts-arkui-depthcomponent-camerabuffercrop-i-sys.md)
 
 **Since:** 26.0.0
 

@@ -2,7 +2,7 @@
 
 A Map subclass with keys restricted to numbers, strings, or enums
 
-**Inheritance/Implementation:** Record extends [Map<K, V>](arkts-arkts-collections-map-c.md#set)
+**Inheritance/Implementation:** Record extends [Map<K, V>](Map<K, V>)
 
 **Since:** 24
 

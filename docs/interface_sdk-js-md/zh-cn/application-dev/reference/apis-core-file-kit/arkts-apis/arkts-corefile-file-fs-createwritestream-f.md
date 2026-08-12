@@ -27,7 +27,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 
 | 类型 | 说明 |
 | --- | --- |
-| [WriteStream](arkts-corefile-fileio-writestream-c.md) | 文件可写流。 |
+| [WriteStream](arkts-corefile-file-fs-writestream-c.md) | 文件可写流。 |
 
 **错误码：**
 
@@ -42,7 +42,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

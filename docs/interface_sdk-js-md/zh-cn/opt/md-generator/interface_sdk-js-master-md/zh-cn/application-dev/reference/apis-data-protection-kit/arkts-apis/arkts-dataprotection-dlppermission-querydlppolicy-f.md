@@ -6,8 +6,8 @@
 function queryDlpPolicy(dlpFd: number): Promise<string>
 ```
 
-在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)和  
-[CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md)信息。使用Promise异步回调。
+在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md#DLPProperty)和  
+[CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md#CustomProperty)信息。使用Promise异步回调。
 
 该接口可用于在查看DLP文件权限配置等场景中，获取文件的策略信息以便进行分析。
 
@@ -33,23 +33,23 @@ function queryDlpPolicy(dlpFd: number): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
-| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
-| [19100001](../errorcode-dlp.md#19100001-入参错误) |
-| [19100005](../errorcode-dlp.md#19100005-凭据认证服务器错误) |
-| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
-| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../errorcode-universal.md#201-权限校验失败) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
-| [19100009](../errorcode-dlp.md#19100009-操作dlp文件失败) |
-| [19100008](../errorcode-dlp.md#19100008-非dlp文件) |
-| [19100013](../errorcode-dlp.md#19100013-用户无权限) |
+| [19100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) |
+| [19100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) |
+| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
+| [19100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-凭据认证服务器错误) |
+| [19100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) |
+| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [19100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-操作dlp文件失败) |
+| [19100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100008-非dlp文件) |
+| [19100013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100013-用户无权限) |
 
 ## 示例
 

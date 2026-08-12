@@ -34,5 +34,5 @@ abstract initialize(): RelativeContainerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |  |
+| RelativeContainerAttribute |  |
 

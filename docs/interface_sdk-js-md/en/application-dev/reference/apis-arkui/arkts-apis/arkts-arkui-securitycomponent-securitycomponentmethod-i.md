@@ -64,7 +64,7 @@ This property provides additional context or explanation for the component,helpi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource \| undefined | Yes | Accessibility description. |
+| description | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Accessibility description. |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Sets the accessibility role, which represents the custom type of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| role | [SecurityComponentRoleType](arkts-arkui-securitycomponentroletype-e.md) \| undefined | Yes | Component type of the accessibility feature. |
+| role | [SecurityComponentRoleType](arkts-arkui-securitycomponent-securitycomponentroletype-e.md) \| undefined | Yes | Component type of the accessibility feature. |
 
 **Return value:**
 
@@ -184,7 +184,7 @@ Specifies the alignRules of relative container
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignRule | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) \| LocalizedAlignRuleOptions \| undefined | Yes |  |
+| alignRule | [AlignRuleOption](../arkts-components/arkts-arkui-alignruleoption-i.md) \| [LocalizedAlignRuleOptions](../arkts-components/arkts-arkui-localizedalignruleoptions-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -545,7 +545,7 @@ Font family of the inner text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource \| undefined | Yes | Indicates the font family of the text in the security component. |
+| value | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Indicates the font family of the text in the security component. |
 
 **Return value:**
 
@@ -635,7 +635,7 @@ Font weight of the inner text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int \| FontWeight \| string \| Resource \| undefined | Yes | Font weight of the text in the security component. |
+| value | int \| [FontWeight](arkts-arkui-fontweight-e.md) \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Font weight of the text in the security component. |
 
 **Return value:**
 
@@ -815,7 +815,7 @@ Layout direction of the icon and text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) \| undefined | Yes | Indicates the layout direction of the icon and text. |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponent-securitycomponentlayoutdirection-e.md) \| undefined | Yes | Indicates the layout direction of the icon and text. |
 
 **Return value:**
 
@@ -875,7 +875,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double \| Resource \| undefined | Yes | Maximum font scale factor to set. |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Maximum font scale factor to set. |
 
 **Return value:**
 
@@ -905,7 +905,7 @@ Called when the maximum font size of the font is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | double \| string \| Resource \| undefined | Yes |  |
+| maxSize | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -935,7 +935,7 @@ Called when the maximum number of lines of text is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | int \| Resource \| undefined | Yes |  |
+| line | int \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -965,7 +965,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double \| Resource \| undefined | Yes | Minimum font scale factor to set. |
+| scale | double \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes | Minimum font scale factor to set. |
 
 **Return value:**
 
@@ -995,7 +995,7 @@ Called when the minimum font size of the font is set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | double \| string \| Resource \| undefined | Yes |  |
+| minSize | double \| string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -1025,7 +1025,7 @@ Coordinate offset relative to the layout completion position.Setting this attrib
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Position](arkts-arkui-position-i.md) \| Edges \| LocalizedEdges \| undefined | Yes |  |
+| value | [Position](arkts-arkui-position-i.md) \| [Edges](arkts-arkui-edges-i.md) \| [LocalizedEdges](arkts-arkui-localizededges-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -1055,7 +1055,7 @@ Padding between the background border and icon/inner text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| Dimension \| undefined | Yes | Indicates the padding of the security component. |
+| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the padding of the security component. |
 
 **Return value:**
 

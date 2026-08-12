@@ -38,7 +38,7 @@ request: WebResourceRequest
 
 The information of request.
 
-**Type:** [WebResourceRequest](../arkts-apis/arkts-arkweb-web-webresourcerequest-c.md)
+**Type:** [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md)
 
 **Since:** 12
 

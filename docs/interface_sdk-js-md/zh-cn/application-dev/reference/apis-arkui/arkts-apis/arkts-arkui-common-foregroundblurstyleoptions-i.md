@@ -2,7 +2,7 @@
 
 Defines the options of ForegroundBlurStyle
 
-**继承/实现关系：** ForegroundBlurStyleOptions extends [BlurStyleOptions](../arkts-components/arkts-arkui-blurstyleoptions-i.md/arkts-arkui-blurstyleoptions-i.md)
+**继承/实现关系：** ForegroundBlurStyleOptions extends [BlurStyleOptions](arkts-arkui-common-blurstyleoptions-i.md#BlurStyleOptions)
 
 **起始版本：** 23
 

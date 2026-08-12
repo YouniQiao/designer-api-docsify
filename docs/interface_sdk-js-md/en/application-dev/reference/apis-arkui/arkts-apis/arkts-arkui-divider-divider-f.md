@@ -51,7 +51,7 @@ Defines Divider Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DividerAttribute&gt; | Yes | the callback to set up component's attributes. |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DividerAttribute](arkts-arkui-divider-dividerattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

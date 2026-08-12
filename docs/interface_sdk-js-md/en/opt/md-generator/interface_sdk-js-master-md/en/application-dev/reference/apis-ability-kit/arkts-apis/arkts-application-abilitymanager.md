@@ -6,7 +6,7 @@ The AbilityManager module provides APIs for obtaining, adding, and modifying abi
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.app.ability.abilityManager/abilityManager
+**Substitutes:** [abilityManager/abilityManager](ohos.app.ability.abilityManager/abilityManager)
 
 <!--Device-unnamed-declare namespace abilityManager--><!--Device-unnamed-declare namespace abilityManager-End-->
 

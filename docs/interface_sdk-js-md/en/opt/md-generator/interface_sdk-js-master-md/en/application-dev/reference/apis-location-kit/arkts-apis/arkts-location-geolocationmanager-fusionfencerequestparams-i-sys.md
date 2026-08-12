@@ -13,7 +13,7 @@ Indicates fusion fence request params.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## cellFences
@@ -24,7 +24,7 @@ cellFences?: Array<CellFence>
 
 Indicates CELL fence array.
 
-**Type:** Array&lt;CellFence&gt;
+**Type:** Array&lt;[CellFence](arkts-location-geolocationmanager-cellfence-i-sys.md)&gt;
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ fenceTransitionCallback: Callback<FusionFenceTransition>
 
 Indicates the callback for reporting the fence transition status.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;FusionFenceTransition&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md)&gt;
 
 **Since:** 26.0.0
 
@@ -82,7 +82,7 @@ Indicates the callback for reporting the fence transition status.
 fenceType: number
 ```
 
-Indicates fusion fence type.This field is in bitmap format. Multiple types of fences can be transferred.The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md).The value range is all integers.
+Indicates fusion fence type.This field is in bitmap format. Multiple types of fences can be transferred.The definition of each bit is as follows: [FusionFenceType](arkts-location-geolocationmanager-fusionfencetype-e-sys.md#FusionFenceType).The value range is all integers.
 
 **Type:** number
 
@@ -104,7 +104,7 @@ gnssFences?: Array<GnssFence>
 
 Indicates GNSS fence array.
 
-**Type:** Array&lt;GnssFence&gt;
+**Type:** Array&lt;[GnssFence](arkts-location-geolocationmanager-gnssfence-i-sys.md)&gt;
 
 **Since:** 26.0.0
 
@@ -162,7 +162,7 @@ Indicates time for which a device is dwelling in the geofence, in milliseconds.I
 monitorTransitionEvents: number
 ```
 
-Indicates geofence transition status monitored.This field is in bitmap format.The definition of each bit is as follows {@link geoLocationManager.GeofenceTransitionEvent}.The value range is all integers.
+Indicates geofence transition status monitored.This field is in bitmap format.The definition of each bit is as follows [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md#GeofenceTransitionEvent).The value range is all integers.
 
 **Type:** number
 
@@ -184,7 +184,7 @@ poiLocation: Point
 
 Indicates the location of POI.
 
-**Type:** [Point](../../apis-test-kit/arkts-apis/arkts-test-uitest-point-i.md)
+**Type:** Point
 
 **Since:** 26.0.0
 
@@ -244,7 +244,7 @@ wifiFences?: Array<WifiFence>
 
 Indicates Wi-Fi fence array.
 
-**Type:** Array&lt;WifiFence&gt;
+**Type:** Array&lt;[WifiFence](arkts-location-geolocationmanager-wififence-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

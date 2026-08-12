@@ -18,7 +18,7 @@ The callback of onOverrideErrorPage.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| errorPageEvent | [OnErrorReceiveEvent](../arkts-components/arkts-arkweb-onerrorreceiveevent-i.md) | 是 | The information of error. |
+| errorPageEvent | [OnErrorReceiveEvent](arkts-arkweb-web-onerrorreceiveevent-i.md) | 是 | The information of error. |
 
 **返回值：**
 

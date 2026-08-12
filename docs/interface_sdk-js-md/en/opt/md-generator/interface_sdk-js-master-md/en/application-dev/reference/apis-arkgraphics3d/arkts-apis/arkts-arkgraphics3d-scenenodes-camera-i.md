@@ -2,7 +2,7 @@
 
 Defines camera.
 
-**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
+**Inheritance/Implementation:** Camera extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
 **Since:** 12
 
@@ -30,6 +30,29 @@ Get the projection matrix of this camera.
 | --- |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
 
+## Examples
+
+```TypeScript
+import { Scene, SceneResourceFactory, SceneNodeParameters, Camera, Mat4x4 } from '@kit.ArkGraphics3D';
+
+function GetProjectionMatrix(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"))
+    .then(async (result: Scene) => {
+      if (!result.root) {
+        return;
+      }
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
+      // Create a camera.
+      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
+      camera.enabled = true;
+      // Obtain the projection matrix of the camera.
+      let projectionMatrix: Mat4x4 = camera.getProjectionMatrix();
+    });
+}
+```
+
 ## getViewMatrix
 
 ```TypeScript
@@ -49,6 +72,29 @@ Get the view matrix of this camera.
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) |
+
+## Examples
+
+```TypeScript
+import { Scene, SceneResourceFactory, SceneNodeParameters, Camera, Mat4x4 } from '@kit.ArkGraphics3D';
+
+function GetViewMatrix(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"))
+    .then(async (result: Scene) => {
+      if (!result.root) {
+        return;
+      }
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
+      // Create a camera.
+      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
+      camera.enabled = true;
+      // Obtain the view matrix of the camera.
+      let viewMatrix: Mat4x4 = camera.getViewMatrix();
+    });
+}
+```
 
 ## raycast
 
@@ -76,6 +122,120 @@ Casts a ray from a specific position on the screen to detect and retrieve inform
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | Promise&lt;[RaycastResult](arkts-arkgraphics3d-scene-raycastresult-i.md)[]&gt; |
+
+## Examples
+
+```TypeScript
+import { SceneNodeParameters, Camera, SceneResourceFactory, Scene, Node, Vec2, Vec3, Quaternion,
+  RaycastParameters } from '@kit.ArkGraphics3D';
+
+function Raycast(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"))
+    .then(async (result: Scene) => {
+      if (!result.root) {
+        return;
+      }
+      let node: Node | null | undefined = result.root.getNodeByPath("rootNode_/Unnamed Node 1/AnimatedCube");
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      let sceneCameraParameter: SceneNodeParameters = { name: "camera1" };
+      // Create a camera.
+      let camera: Camera = await sceneFactory.createCamera(sceneCameraParameter);
+      camera.enabled = true;
+      // Set the camera view.
+      lookAt(camera, { x: 0, y: 0, z: -3 }, { x: 0, y: 0, z: 0 }, { x: 0, y: 1, z: 0 });
+
+      let viewPos: Vec2 = { x: 0.5, y: 0.5 };
+      let raycastParams: RaycastParameters = {};
+      if (node) {
+        raycastParams.rootNode = node;
+      }
+      return camera.raycast(viewPos, raycastParams);
+    });
+}
+
+// Vector subtraction, which returns the result of l - r.
+function Sub(l: Vec3, r: Vec3): Vec3 {
+  return { x: l.x - r.x, y: l.y - r.y, z: l.z - r.z };
+}
+// Vector dot product, which returns the inner product of l and r.
+function Dot(l: Vec3, r: Vec3): number {
+  return l.x * r.x + l.y * r.y + r.z * l.z;
+}
+// Vector normalization, which returns the unit vector of l.
+function Normalize(l: Vec3): Vec3 {
+  let d = Math.sqrt(Dot(l, l));
+  return { x: l.x / d, y: l.y / d, z: l.z / d };
+}
+// Vector cross product, which returns the cross product of l and r.
+function Cross(l: Vec3, r: Vec3): Vec3 {
+  return { x: (l.y * r.z - l.z * r.y), y: (l.z * r.x - l.x * r.z), z: (l.x * r.y - l.y * r.x) };
+}
+// Quaternion scalar multiplication, which returns the result of quaternion l multiplied by scalar d.
+function Mul(l: Quaternion, d: number): Quaternion {
+  return {
+    x: l.x * d,
+    y: l.y * d,
+    z: l.z * d,
+    w: l.w * d
+  };
+}
+// lookAt function: sets the position and orientation of the node to look from the eye position toward the center position, with up as the up direction.
+function lookAt(node: Node, eye: Vec3, center: Vec3, up: Vec3) {
+
+  let t: number;
+
+  let q: Quaternion = {
+    x: 0.0,
+    y: 0.0,
+    z: 0.0,
+    w: 0.0
+  };
+  let f = Normalize(Sub(center, eye));
+  let m0 = Normalize(Cross(f, up));
+  let m1 = Cross(m0, f);
+  let m2: Vec3 = { x: -f.x, y: -f.y, z: -f.z };
+  if (m2.z < 0) {
+    if (m0.x > m1.y) {
+      t = 1.0 + m0.x - m1.y - m2.z;
+      q = {
+        x: t,
+        y: m0.y + m1.x,
+        z: m2.x + m0.z,
+        w: m1.z - m2.y
+      };
+    } else {
+      t = 1.0 - m0.x + m1.y - m2.z;
+      q = {
+        x: m0.y + m1.x,
+        y: t,
+        z: m1.z + m2.y,
+        w: m2.x - m0.z
+      };
+    }
+  } else {
+    if (m0.x < -m1.y) {
+      t = 1.0 - m0.x - m1.y + m2.z;
+      q = {
+        x: m2.x + m0.z,
+        y: m1.z + m2.y,
+        z: t,
+        w: m0.y - m1.x
+      };
+    } else {
+      t = 1.0 + m0.x + m1.y + m2.z;
+      q = {
+        x: m1.z - m2.y,
+        y: m2.x - m0.z,
+        z: m0.y - m1.x,
+        w: t
+      }
+    }
+  }
+  node.position = eye;
+  node.rotation = Mul(q, 0.5 / Math.sqrt(t));
+}
+```
 
 ## clearColor
 

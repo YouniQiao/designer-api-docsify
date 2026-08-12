@@ -18,7 +18,7 @@ A typed array of 64-bit unsigned integer values. The contents are initialized to
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;bigint&gt; |  |
+| IterableIterator&lt;bigint&gt; |  |
 
 ## copyWithin
 
@@ -62,7 +62,7 @@ Yields index, value pairs for every entry in the array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;[number, bigint]&gt; |  |
+| IterableIterator&lt;[number, bigint]&gt; |  |
 
 ## every
 
@@ -299,7 +299,7 @@ Yields each index in the array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;number&gt; |  |
+| IterableIterator&lt;number&gt; |  |
 
 ## lastIndexOf
 
@@ -483,7 +483,7 @@ Sets a value or an array of values.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| array | [ArrayLike](../../apis-arkts/arkts-apis/arkts-arkts-arraylike-i.md)&lt;bigint&gt; | Yes |  |
+| array | ArrayLike&lt;bigint&gt; | Yes |  |
 | offset | number | No |  |
 
 ## slice
@@ -655,7 +655,7 @@ Yields each value in the array.
 
 | Type | Description |
 | --- | --- |
-| [IterableIterator](../../apis-arkts/arkts-apis/arkts-arkts-iterator-iterableiterator-i.md)&lt;bigint&gt; |  |
+| IterableIterator&lt;bigint&gt; |  |
 
 ## BYTES_PER_ELEMENT
 
@@ -699,7 +699,7 @@ readonly buffer: ArrayBufferLike
 
 The ArrayBuffer instance referenced by the array.
 
-**Type:** [ArrayBufferLike](../../apis-arkts/arkts-apis/arkts-arkts-arraybufferlike-t.md)
+**Type:** ArrayBufferLike
 
 **ArkTS mode:** ArkTS-Dyn only
 

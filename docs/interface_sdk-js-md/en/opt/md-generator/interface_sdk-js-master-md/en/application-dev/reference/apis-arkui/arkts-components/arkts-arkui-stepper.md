@@ -23,7 +23,7 @@ Creates a **Stepper** component.
 
 **Deprecated since:** 22
 
-**Substitutes:** <!--SUBSTITUTE_API-->Swiper.SwiperAttribute#index<!--/SUBSTITUTE_API-->
+**Substitutes:** [index](Swiper.SwiperAttribute#index)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

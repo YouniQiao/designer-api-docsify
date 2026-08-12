@@ -11,7 +11,7 @@ Indicates call state and number.
 ## Modules to Import
 
 ```TypeScript
-import { observer } from 'kits/@kit.TelephonyKit';
+import { observer } from '@kit.TelephonyKit';
 ```
 
 ## number
@@ -38,7 +38,7 @@ state: CallState
 
 Indicates call state.
 
-**Type:** [CallState](arkts-telephony-call-callstate-e.md)
+**Type:** CallState
 
 **Since:** 11
 

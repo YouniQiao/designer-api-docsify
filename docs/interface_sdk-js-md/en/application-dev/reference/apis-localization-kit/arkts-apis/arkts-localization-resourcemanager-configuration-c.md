@@ -13,7 +13,7 @@ Defines the device configuration.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from 'kits/@kit.LocalizationKit';
+import { resourceManager } from '@kit.LocalizationKit';
 ```
 
 ## colorMode
@@ -24,7 +24,7 @@ colorMode: ColorMode
 
 Color mode.
 
-**Type:** [ColorMode](../../apis-arkui/arkts-apis/arkts-arkui-storageproperty-colormode-e.md)
+**Type:** ColorMode
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ deviceType: DeviceType
 
 Device type.
 
-**Type:** [DeviceType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-devicetype-e.md)
+**Type:** DeviceType
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ direction: Direction
 
 Screen orientation modes.
 
-**Type:** [Direction](../../apis-mdm-kit/arkts-apis/arkts-mdm-networkmanager-direction-e.md)
+**Type:** Direction
 
 **Since:** 6
 
@@ -144,7 +144,7 @@ screenDensity: ScreenDensity
 
 Screen density
 
-**Type:** [ScreenDensity](../../apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md)
+**Type:** ScreenDensity
 
 **Since:** 12
 

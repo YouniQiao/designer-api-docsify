@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableResourceManager } from 'kits/@kit.LocalizationKit';
+import { sendableResourceManager } from '@kit.LocalizationKit';
 ```
 
 ## sendableResourceToResource
@@ -26,7 +26,7 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| resource | [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md) | Yes |
+| resource | [SendableResource](arkts-localization-sendableresource-sendableresource-i.md) | Yes |
 
 **Return value:**
 
@@ -38,7 +38,7 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 | Error Code ID |
 | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
 
 ## Examples
 

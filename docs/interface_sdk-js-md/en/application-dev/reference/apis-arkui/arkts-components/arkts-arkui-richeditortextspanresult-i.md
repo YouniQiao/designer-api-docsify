@@ -40,7 +40,7 @@ paragraphStyle?: RichEditorParagraphStyle
 
 Paragraph style.
 
-**Type:** [RichEditorParagraphStyle](../arkts-apis/arkts-arkui-richeditor-richeditorparagraphstyle-i.md)
+**Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 12
 
@@ -106,7 +106,7 @@ symbolSpanStyle?: RichEditorSymbolSpanStyle
 
 Style of the **SymbolSpan** component.
 
-**Type:** [RichEditorSymbolSpanStyle](../arkts-apis/arkts-arkui-richeditor-richeditorsymbolspanstyle-i.md)
+**Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 
 **Since:** 11
 
@@ -128,7 +128,7 @@ textStyle: RichEditorTextStyleResult
 
 Text span style.
 
-**Type:** [RichEditorTextStyleResult](../arkts-apis/arkts-arkui-richeditor-richeditortextstyleresult-i.md)
+**Type:** [RichEditorTextStyleResult](arkts-arkui-richeditortextstyleresult-i.md)
 
 **Since:** 10
 
@@ -196,7 +196,7 @@ valueResource?: Resource
 
 Content of the **SymbolSpan** component.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** Resource
 
 **Since:** 11
 

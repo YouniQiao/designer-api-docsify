@@ -1,12 +1,12 @@
 # ApplicationContext
 
-ApplicationContext作为应用上下文，继承自[Context](arkts-ability-context-t.md)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
+ApplicationContext作为应用上下文，继承自[Context](./../app/context)，提供了应用生命周期监听、进程管理、应用环境设置等应用级别的管控能力。
 
 > **说明：**
 > 
 > 本模块接口仅可在Stage模型下使用。
 
-**继承/实现关系：** ApplicationContext extends [Context](arkts-ability-context-t.md)
+**继承/实现关系：** ApplicationContext extends [Context](Context)
 
 **起始版本：** 9
 
@@ -41,14 +41,29 @@ clearUpApplicationData(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 清理当前应用的应用文件路径下的所有数据
+    applicationContext.clearUpApplicationData();
+  }
+}
+```
 
 ## clearUpApplicationData
 
@@ -77,15 +92,34 @@ clearUpApplicationData(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 清理当前应用的应用文件路径下的所有数据
+    applicationContext.clearUpApplicationData(error => {
+      if (error) {
+        console.error(`Failed to clear up application data. Code: ${error.code}, message: ${error.message}`);
+      }
+    });
+  }
+}
+```
 
 ## getAllRunningInstanceKeys
 
@@ -107,15 +141,37 @@ getAllRunningInstanceKeys(): Promise<Array<string>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;string&gt;&gt; |
+| Promise & lt;Array & lt;string & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000078](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 获取应用的所有多实例的唯一实例标识
+      applicationContext.getAllRunningInstanceKeys();
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getAllRunningInstanceKeys fail, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## getAllWindowStages
 
@@ -141,7 +197,35 @@ getAllWindowStages(): Promise<Array<window.WindowStage>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;window.WindowStage&gt;&gt; |
+| Promise & lt;Array & lt;window.WindowStage & gt; & gt; |
+
+## 示例
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 获取应用当前进程内的所有WindowStage对象
+      applicationContext.getAllWindowStages().then((data: window.WindowStage[]) => {
+        let windowStage: window.WindowStage[] = data;
+        console.info(`WindowStages size ${windowStage.length}`);
+      }).catch((error: BusinessError) => {
+        console.error(`getAllWindowStages error, code: ${error.code}, error msg: ${error.message}`);
+      });
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getAllWindowStages fail, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```
 
 ## getCurrentAppCloneIndex
 
@@ -171,8 +255,27 @@ getCurrentAppCloneIndex(): number
 
 | 错误码ID |
 | --- |
-| [16000071](../errorcode-ability.md#16000071-不支持应用分身模式) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000071](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-不支持应用分身模式) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 获取当前应用的分身索引
+      let appCloneIndex = applicationContext.getCurrentAppCloneIndex();
+    } catch (error) {
+      console.error(`Failed to get current app clone index. Code: ${error.code}, message: ${error.message}`);
+    }
+  }
+}
+```
 
 ## getCurrentInstanceKey
 
@@ -200,8 +303,32 @@ getCurrentInstanceKey(): string
 
 | 错误码ID |
 | --- |
-| [16000078](../errorcode-ability.md#16000078-不支持应用多实例) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000078](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-不支持应用多实例) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    let currentInstanceKey = '';
+    try {
+      // 获取当前应用多实例的唯一实例标识
+      currentInstanceKey = applicationContext.getCurrentInstanceKey();
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getCurrentInstanceKey fail, code: ${code}, msg: ${message}`);
+    }
+    console.info(`currentInstanceKey: ${currentInstanceKey}`);
+  }
+}
+```
 
 ## getRunningProcessInformation
 
@@ -225,15 +352,35 @@ getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;ProcessInformation&gt;&gt; |
+| Promise & lt;Array & lt;ProcessInformation & gt; & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 获取运行中的进程信息
+    applicationContext.getRunningProcessInformation().then((data) => {
+      console.info(`The process running information is: ${JSON.stringify(data)}`);
+    }).catch((error: BusinessError) => {
+      console.error(`error code: ${error.code}, error msg: ${error.message}`);
+    });
+  }
+}
+```
 
 ## getRunningProcessInformation
 
@@ -257,15 +404,36 @@ getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | 是 |
+| callback | AsyncCallback & lt;Array & lt;ProcessInformation & gt; & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onForeground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 获取运行中的进程信息
+    applicationContext.getRunningProcessInformation((err, data) => {
+      if (err) {
+        console.error(`Failed to get running process information. Code: ${err.code}, message: ${err.message}`);
+      } else {
+        console.info(`The process running information is: ${JSON.stringify(data)}`);
+      }
+    });
+  }
+}
+```
 
 ## killAllProcesses
 
@@ -277,7 +445,7 @@ killAllProcesses(): Promise<void>
 
 > **说明：**
 > 
-> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
+> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf)接口。
 
 **起始版本：** 9
 
@@ -293,14 +461,29 @@ killAllProcesses(): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 终止应用的所有进程
+    applicationContext.killAllProcesses();
+  }
+}
+```
 
 ## killAllProcesses
 
@@ -312,7 +495,7 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 
 > **说明：**
 > 
-> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
+> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf)接口。
 
 **起始版本：** 14
 
@@ -334,14 +517,31 @@ killAllProcesses(clearPageStack: boolean): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+let isClearPageStack = false;
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 终止应用的所有进程,并清除页面堆栈
+    applicationContext.killAllProcesses(isClearPageStack);
+  }
+}
+```
 
 ## killAllProcesses
 
@@ -353,7 +553,7 @@ killAllProcesses(callback: AsyncCallback<void>): void
 
 > **说明：**
 > 
-> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateself)接口。
+> 该接口用于应用异常场景中强制退出应用。如需正常退出应用，可以使用[terminateSelf()](arkts-ability-uiabilitycontext-c.md#terminateSelf)接口。
 
 **起始版本：** 9
 
@@ -369,14 +569,33 @@ killAllProcesses(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+
+export default class MyAbility extends UIAbility {
+  onBackground() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 终止应用的所有进程
+    applicationContext.killAllProcesses(error => {
+      if (error) {
+        console.error(`Failed to kill all processes. Code: ${error.code}, message: ${error.message}`);
+      }
+    });
+  }
+}
+```
 
 ## off('abilityLifecycle')
 
@@ -402,13 +621,42 @@ off(type: 'abilityLifecycle', callbackId: number, callback: AsyncCallback<void>)
 | --- | --- | --- |
 | type | 'abilityLifecycle' | 是 |
 | callbackId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class EntryAbility extends UIAbility {
+  onDestroy() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    console.info(`stage applicationContext: ${applicationContext}`);
+    try {
+      // 取消监听应用内UIAbility生命周期
+      applicationContext.off('abilityLifecycle', lifecycleId, (error, data) => {
+        if (error) {
+          console.error(`Failed to unregister abilityLifecycle callback. Code: ${error.code}, message: ${error.message}`);
+        } else {
+          console.info(`unregisterAbilityLifecycleCallback success, data: ${JSON.stringify(data)}`);
+        }
+      });
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('abilityLifecycle')
 
@@ -439,13 +687,36 @@ off(type: 'abilityLifecycle', callbackId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    console.info(`stage applicationContext: ${applicationContext}`);
+    try {
+      // 取消监听应用内UIAbility生命周期
+      applicationContext.off('abilityLifecycle', lifecycleId);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('environment')
 
@@ -471,13 +742,41 @@ off(type: 'environment', callbackId: number, callback: AsyncCallback<void>): voi
 | --- | --- | --- |
 | type | 'environment' | 是 |
 | callbackId | number | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+| callback | AsyncCallback & lt;void & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class EntryAbility extends UIAbility {
+  onDestroy() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 取消对系统环境变化的监听
+      applicationContext.off('environment', callbackId, (error, data) => {
+        if (error) {
+          console.error(`Failed to unregister environment callback. Code: ${error.code}, message: ${error.message}`);
+        } else {
+          console.info(`unregisterEnvironmentCallback success, data: ${JSON.stringify(data)}`);
+        }
+      });
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('environment')
 
@@ -508,13 +807,35 @@ off(type: 'environment', callbackId: number): Promise<void>
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 取消对系统环境变化的监听
+      applicationContext.off('environment', callbackId);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## off('applicationStateChange')
 
@@ -545,7 +866,39 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+假定已使用[ApplicationContext.on('applicationStateChange')](#applicationcontextonapplicationstatechange10)方法注册名为applicationStateChangeCallback回调，下面示例展示如何取消对应的事件监听。
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+  onApplicationForeground() {
+    console.info('applicationStateChangeCallback onApplicationForeground');
+  },
+  onApplicationBackground() {
+    console.info('applicationStateChangeCallback onApplicationBackground');
+  }
+};
+
+export default class MyAbility extends UIAbility {
+  onDestroy() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 本例中的callback参数取值为ApplicationStateChangeCallback，需要替换为实际值。
+      // 如果callback字段不传入参数，则取消所有已注册的该类型事件的监听。
+      applicationContext.off('applicationStateChange', applicationStateChangeCallback);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+  }
+}
+```
 
 ## offSystemConfigurationUpdated
 
@@ -553,7 +906,7 @@ off(type: 'applicationStateChange', callback?: ApplicationStateChangeCallback): 
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
+取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)的变化。仅支持主线程调用。
 
 &lt;p&gt;**NOTE：**:&lt;br&gt;It can be called only by the main thread.&lt;/p&gt;
 
@@ -572,6 +925,57 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | callback | systemConfiguration.UpdatedCallback | 否 |
+
+## 示例
+
+```TypeScript
+import { UIAbility, systemConfiguration, ConfigurationConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let callBack: systemConfiguration.UpdatedCallback = {
+      onColorModeUpdated(colorMode: ConfigurationConstant.ColorMode) {
+        console.info(`system configuration updated colormode:` + colorMode);
+      },
+      onFontSizeScaleUpdated(fontSizeScale: number) {
+        console.info(`system configuration updated ability:` + fontSizeScale);
+      },
+      onFontWeightScaleUpdated(fontWeightScale: number) {
+        console.info(`system configuration updated ability:` + fontWeightScale);
+      },
+      onMCCUpdated(mcc: string) {
+        console.info(`system configuration updated ability:` + mcc);
+      },
+      onMNCUpdated(mnc: string) {
+        console.info(`system configuration updated ability:` + mnc);
+      },
+      onLanguageUpdated(language: string) {
+        console.info(`system configuration updated ability:` + language);
+      },
+      onFontIdUpdated(fontId: string) {
+        console.info(`system configuration updated ability:` + fontId);
+      },
+      onHasPointerDeviceUpdated(hasPointerDevice: boolean) {
+        console.info(`system configuration updated ability:` + hasPointerDevice);
+      },
+      onLocaleUpdated(locale: string) {
+        console.info(`system configuration updated ability:` + locale);
+      }
+    }
+    // 1.通过context属性获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext取消监听
+      applicationContext.offSystemConfigurationUpdated(callBack);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`offSystemConfigurationUpdated finish`);
+  }
+}
+```
 
 ## on('abilityLifecycle')
 
@@ -608,7 +1012,65 @@ on(type: 'abilityLifecycle', callback: AbilityLifecycleCallback): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility, AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let lifecycleId: number;
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let abilityLifecycleCallback: AbilityLifecycleCallback = {
+      onAbilityCreate(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityCreate ability: ${ability}`);
+      },
+      onWindowStageCreate(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageCreate ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageCreate windowStage: ${windowStage}`);
+      },
+      onWindowStageActive(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageActive ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageActive windowStage: ${windowStage}`);
+      },
+      onWindowStageInactive(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageInactive ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageInactive windowStage: ${windowStage}`);
+      },
+      onWindowStageDestroy(ability, windowStage) {
+        console.info(`AbilityLifecycleCallback onWindowStageDestroy ability: ${ability}`);
+        console.info(`AbilityLifecycleCallback onWindowStageDestroy windowStage: ${windowStage}`);
+      },
+      onAbilityDestroy(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityDestroy ability: ${ability}`);
+      },
+      onAbilityForeground(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityForeground ability: ${ability}`);
+      },
+      onAbilityBackground(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityBackground ability: ${ability}`);
+      },
+      onAbilityContinue(ability) {
+        console.info(`AbilityLifecycleCallback onAbilityContinue ability: ${ability}`);
+      }
+    }
+    // 1.通过context属性获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册监听应用内生命周期
+      lifecycleId = applicationContext.on('abilityLifecycle', abilityLifecycleCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerAbilityLifecycleCallback lifecycleId: ${lifecycleId}`);
+  }
+}
+```
 
 ## on('environment')
 
@@ -620,14 +1082,14 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 > **说明：**
 > 
-> - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)也可以实现对系统环境变量的监听。相较
-> 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口，当前接口的使用场景更
+> - 使用[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate)也可以实现对系统环境变量的监听。相较
+> 于Ability的[onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate)接口，当前接口的使用场景更
 > 加灵活，不仅可以在应用组件中使用，还可以在页面中使用，但是支持订阅的环境变量与Ability的
-> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onconfigurationupdate)接口存在差异，如不支持订阅direction
-> 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)中各个环境变量的说明。
+> [onConfigurationUpdate](arkts-ability-app-ability-ability-ability-c.md#onConfigurationUpdate)接口存在差异，如不支持订阅direction
+> 、screenDensity、displayId，详见[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)中各个环境变量的说明。
 > 
-> - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](arkts-ability-applicationcontext-c.md#setlanguage)接口设置应用的语言，即便系统语
-> 言发生变化，系统也不再触发当前接口的[callback](arkts-app-ability-environmentcallback.md)回调。详见
+> - 当前接口在实际触发时存在一定限制。例如如果开发者通过[setLanguage](#setLanguage)接口设置应用的语言，即便系统语
+> 言发生变化，系统也不再触发当前接口的[callback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md#EnvironmentCallback)回调。详见
 > [使用场景](../../../application-models/subscribe-system-environment-variable-changes.md#使用场景)。
 
 **起始版本：** 9
@@ -657,7 +1119,40 @@ on(type: 'environment', callback: EnvironmentCallback): number
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility, EnvironmentCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let callbackId: number;
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let environmentCallback: EnvironmentCallback = {
+      onConfigurationUpdated(config) {
+        console.info(`onConfigurationUpdated config: ${JSON.stringify(config)}`);
+      },
+      onMemoryLevel(level) {
+        console.info(`onMemoryLevel level: ${level}`);
+      }
+    };
+    // 1.获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册监听系统环境变化
+      callbackId = applicationContext.on('environment', environmentCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info(`registerEnvironmentCallback callbackId: ${callbackId}`);
+  }
+}
+```
 
 ## on('applicationStateChange')
 
@@ -688,7 +1183,39 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+
+## 示例
+
+```TypeScript
+import { UIAbility, ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbility extends UIAbility {
+  onCreate() {
+    console.info('MyAbility onCreate');
+    let applicationStateChangeCallback: ApplicationStateChangeCallback = {
+      onApplicationForeground() {
+        console.info('applicationStateChangeCallback onApplicationForeground');
+      },
+      onApplicationBackground() {
+        console.info('applicationStateChangeCallback onApplicationBackground');
+      }
+    }
+
+    // 1.获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册当前应用进程状态监听
+      applicationContext.on('applicationStateChange', applicationStateChangeCallback);
+    } catch (paramError) {
+      console.error(`error code: ${(paramError as BusinessError).code}, error msg: ${(paramError as BusinessError).message}`);
+    }
+    console.info('Register applicationStateChangeCallback');
+  }
+}
+```
 
 ## onSystemConfigurationUpdated
 
@@ -696,7 +1223,7 @@ on(type: 'applicationStateChange', callback: ApplicationStateChangeCallback): vo
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-注册监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。使用callback异步回调。仅支持主线程调用。
+注册监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)的变化。使用callback异步回调。仅支持主线程调用。
 
 > **说明：**
 > 
@@ -718,6 +1245,57 @@ onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): voi
 | --- | --- | --- |
 | callback | systemConfiguration.UpdatedCallback | 是 |
 
+## 示例
+
+```TypeScript
+import { UIAbility, systemConfiguration, ConfigurationConstant } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let callBack: systemConfiguration.UpdatedCallback = {
+      onColorModeUpdated(colorMode: ConfigurationConstant.ColorMode) {
+        console.info(`system configuration updated colormode:` + colorMode);
+      },
+      onFontSizeScaleUpdated(fontSizeScale: number) {
+        console.info(`system configuration updated ability:` + fontSizeScale);
+      },
+      onFontWeightScaleUpdated(fontWeightScale: number) {
+        console.info(`system configuration updated ability:` + fontWeightScale);
+      },
+      onLanguageUpdated(language: string) {
+        console.info(`system configuration updated ability:` + language);
+      },
+      onFontIdUpdated(fontId: string) {
+        console.info(`system configuration updated ability:` + fontId);
+      },
+      onMCCUpdated(mcc: string) {
+        console.info(`system configuration updated ability:` + mcc);
+      },
+      onMNCUpdated(mnc: string) {
+        console.info(`system configuration updated ability:` + mnc);
+      },
+      onHasPointerDeviceUpdated(hasPointerDevice: boolean) {
+        console.info(`system configuration updated ability:` + hasPointerDevice);
+      },
+      onLocaleUpdated(locale: string) {
+        console.info(`system configuration updated ability:` + locale);
+      }
+    }
+    // 1.通过context属性获取applicationContext
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 2.通过applicationContext注册监听
+      applicationContext.onSystemConfigurationUpdated(callBack);
+    } catch (paramError) {
+      console.error(`error: ${(paramError as BusinessError).code}, ${(paramError as BusinessError).message}`);
+    }
+    console.info(`onSystemConfigurationUpdated finish`);
+  }
+}
+```
+
 ## restartApp
 
 ```TypeScript
@@ -731,10 +1309,10 @@ restartApp(want: Want): void
 > 通过该接口重启应用时，不会触发应用中Ability的onDestroy生命周期回调。
 > 
 > 在原子化服务调用本接口成功后的3秒内，再次调用本接口、
-> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartselfatomicservice)
-> 或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任一接口，系统将返回错误码16000064。
+> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartSelfAtomicService)
+> 或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp)接口中的任一接口，系统将返回错误码16000064。
 > 
-> 在应用调用本接口成功后的3秒内，若再次调用本接口或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartapp)接口中的任
+> 在应用调用本接口成功后的3秒内，若再次调用本接口或[UIAbilityContext.restartApp()](arkts-ability-uiabilitycontext-c.md#restartApp)接口中的任
 > 一接口，系统将返回错误码16000064。
 
 **起始版本：** 12
@@ -757,11 +1335,56 @@ restartApp(want: Want): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
-| [16000064](../errorcode-ability.md#16000064-重启应用频繁) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000063](../errorcode-ability.md#16000063-重启应用指定组件无效) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
+| [16000064](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000064-重启应用频繁) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000063](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000063-重启应用指定组件无效) |
+
+## 示例
+
+```TypeScript
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { common, Want } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'restartApp';
+  private context = this.getUIContext().getHostContext()?.getApplicationContext() as common.ApplicationContext;
+
+  build() {
+    RelativeContainer() {
+      Text(this.message)
+        .id('HelloWorld')
+        .fontSize($r('app.float.page_text_font_size'))
+        .fontWeight(FontWeight.Bold)
+        .alignRules({
+          center: { anchor: '__container__', align: VerticalAlign.Center },
+          middle: { anchor: '__container__', align: HorizontalAlign.Center }
+        })
+        .onClick(() => {
+          let want: Want = {
+            bundleName: 'com.example.myapplication',
+            abilityName: 'EntryAbility'
+          };
+          if (this.context) {
+            try {
+              // 重启应用并拉起指定UIAbility
+              this.context.restartApp(want);
+            } catch (err) {
+              hilog.error(0x0000, 'testTag', `restart failed: ${err.code}, ${err.message}`);
+            }
+          } else {
+            hilog.error(0x0000, 'testTag', '%{public}s', 'AppContext is null');
+          }
+        })
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
 
 ## setColorMode
 
@@ -774,7 +1397,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 > **说明：**
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)生命周期中通过
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 11
@@ -797,8 +1420,32 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility, ConfigurationConstant } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info("Ability onWindowStageCreate");
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+      // 获取应用上下文
+      let applicationContext = this.context.getApplicationContext();
+      // 设置应用为深色模式
+      applicationContext.setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+    });
+  }
+}
+```
 
 ## setFont
 
@@ -811,7 +1458,7 @@ setFont(font: string): void
 > **说明：**
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)生命周期中通过
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 12
@@ -832,8 +1479,43 @@ setFont(font: string): void
 
 | 错误码ID |
 | --- |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = 'Hello World';
+  context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  aboutToAppear() {
+    this.getUIContext().getFont().registerFont({
+      familyName: 'fontName',
+      familySrc: $rawfile('font/medium.ttf')  // 'font/medium.ttf'仅作为示例，实际使用时请替换为真实的字体资源文件。
+    });
+
+    // 设置应用使用注册的自定义字体
+    this.context.getApplicationContext().setFont('fontName');
+  }
+
+  build() {
+    Row() {
+      Column() {
+        Text(this.message)
+          .fontSize(50)
+          .fontWeight(50)
+      }
+      .width('100%')
+    }
+    .height('100%')
+  }
+}
+```
 
 ## setFontSizeScale
 
@@ -857,7 +1539,28 @@ setFontSizeScale(fontSizeScale: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| fontSizeScale | number | 是 |
+| [fontSizeScale](arkts-ability-app-ability-configuration-configuration-i.md) | number | 是 |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        return;
+      }
+      // 获取应用上下文
+      let applicationContext = this.context.getApplicationContext();
+      // 设置应用字体大小缩放比例
+      applicationContext.setFontSizeScale(2);
+    });
+  }
+}
+```
 
 ## setLanguage
 
@@ -870,7 +1573,7 @@ setLanguage(language: string): void
 > **说明：**
 > 
 > 调用该接口前，需要确保窗口已完成创建、且UIAbility对应的页面已完成加载，即在
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate)生命周期中通过
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate)生命周期中通过
 > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法加载页面之后调用。
 
 **起始版本：** 11
@@ -893,7 +1596,31 @@ setLanguage(language: string): void
 
 | 错误码ID |
 | --- |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class MyAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    console.info("Ability onWindowStageCreate");
+    windowStage.loadContent('pages/Index', (err, data) => {
+      if (err.code) {
+        console.error(`Failed to load the content. Code: ${err.code}, message: ${err.message}`);
+        return;
+      }
+      console.info(`Succeeded in loading the content. Data: ${JSON.stringify(data)}`);
+    });
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    // 设置应用语言为中文
+    applicationContext.setLanguage('zh-cn');
+  }
+}
+```
 
 ## setSupportedProcessCache
 
@@ -909,7 +1636,7 @@ setSupportedProcessCache(isSupported : boolean): void
 > 
 > - 该接口仅表示应用自身是否为缓存后快速启动做好了准备，还需综合其他条件来判断最终是否为应用启用快速启动。
 > 
-> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)的`onCreate()
+> - 为了确保该接口在进程退出前生效，调用时机应尽量提前。建议在[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage)的`onCreate()
 > `中调用该接口。
 > 
 > - 在同一进程多次调用该接口时，会以最后一次调用的结果为准。当存在多个AbilityStage时，为了确保结果符合预期，需要在各个AbilityStage中分别调用该接口并配置相同的取值。
@@ -926,13 +1653,35 @@ setSupportedProcessCache(isSupported : boolean): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| isSupported | boolean | 是 |
+| [isSupported](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-runninglock-issupported-f.md) | boolean | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+
+## 示例
+
+```TypeScript
+import { AbilityStage, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  onCreate() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      // 设置当前应用进程支持进程资源的缓存
+      applicationContext.setSupportedProcessCache(true);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`setSupportedProcessCache fail, code: ${code}, msg: ${message}`);
+    }
+  }
+}
+```

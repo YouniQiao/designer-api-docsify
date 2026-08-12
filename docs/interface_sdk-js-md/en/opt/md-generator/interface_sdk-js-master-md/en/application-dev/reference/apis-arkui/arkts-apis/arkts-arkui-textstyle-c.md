@@ -104,7 +104,7 @@ readonly fontSize?: number
 
 Font size of the styled string.
 
-Unit: [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)
+Unit: [vp](common)
 
 **Type:** number
 
@@ -126,7 +126,7 @@ readonly fontStyle?: FontStyle
 
 Font style of the styled string.
 
-**Type:** [FontStyle](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontstyle-e.md)
+**Type:** FontStyle
 
 **Since:** 12
 
@@ -236,7 +236,7 @@ readonly strokeWidth?: number
 
 Text stroke width of the styled string.
 
-Default value: **0**, in [vp](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md).
+Default value: **0**, in [vp](common).
 
 **Type:** number
 

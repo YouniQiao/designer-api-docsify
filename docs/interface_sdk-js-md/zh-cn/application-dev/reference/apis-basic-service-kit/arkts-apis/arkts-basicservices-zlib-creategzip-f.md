@@ -22,7 +22,7 @@ function createGZip(): Promise<GZip>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;GZip&gt; | Promise对象。返回GZip对象实例。 |
+| Promise&lt;[GZip](arkts-basicservices-zlib-gzip-i.md)&gt; | Promise对象。返回GZip对象实例。 |
 
 ## 示例
 

@@ -18,7 +18,7 @@
 onEvent: (info: SysEventInfo) => void
 ```
 
-订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md)) => void。
+订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo)) => void。
 
 **起始版本：** 9
 

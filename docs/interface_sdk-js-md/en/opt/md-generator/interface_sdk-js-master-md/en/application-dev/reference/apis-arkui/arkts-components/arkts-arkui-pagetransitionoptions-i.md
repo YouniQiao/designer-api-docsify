@@ -19,11 +19,11 @@ Animation curve.
 You are advised to specify the curve using the **Curve** or **ICurve** type.
 
 For the string type, this parameter indicates an animation interpolation curve. For available values, see the   
-**curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md).
+**curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#AnimateParam).
 
 Default value: **Curve.Linear**
 
-**Type:** [Curve](../arkts-apis/arkts-arkui-curve-e.md) \| string \| ICurve
+**Type:** Curve \| string \| ICurve
 
 **Default:** Curve.Linear
 

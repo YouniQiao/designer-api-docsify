@@ -38,7 +38,7 @@ requestKeyboardReason?: RequestKeyboardReason
 
 该属性由编辑框应用设置，如果没有设置或设置非法值，则默认没有特定的原因触发键盘请求。
 
-**类型：** [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md)
+**类型：** RequestKeyboardReason
 
 **起始版本：** 19
 

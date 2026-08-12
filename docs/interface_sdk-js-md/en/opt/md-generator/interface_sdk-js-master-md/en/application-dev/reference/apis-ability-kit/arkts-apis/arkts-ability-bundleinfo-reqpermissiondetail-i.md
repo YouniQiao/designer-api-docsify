@@ -93,7 +93,7 @@ usedScene: UsedScene
 
 Use scenario and timing for using the permission.
 
-**Type:** [UsedScene](arkts-ability-bundlemanager-usedscene-t.md)
+**Type:** [UsedScene](arkts-ability-bundleinfo-usedscene-i.md)
 
 **Since:** 9
 

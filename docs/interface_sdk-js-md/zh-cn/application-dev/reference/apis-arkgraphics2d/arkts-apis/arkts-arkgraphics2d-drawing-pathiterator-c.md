@@ -38,7 +38,7 @@ constructor(path: Path)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | [Path](arkts-arkgraphics2d-drawing-path-c.md) | 是 | 迭代器绑定的路径对象，绑定后迭代器将遍历该路径中的操作指令， 可通过next、peek、hasNext等方法读取路径的操作类型和坐标数据。 |
+| path | Path | 是 | 迭代器绑定的路径对象，绑定后迭代器将遍历该路径中的操作指令， 可通过next、peek、hasNext等方法读取路径的操作类型和坐标数据。 |
 
 ## hasNext
 
@@ -68,7 +68,7 @@ hasNext(): boolean
 next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 ```
 
-返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](arkts-arkgraphics2d-drawing-pathiterator-c.md#peek)。通常与[hasNext](arkts-arkgraphics2d-drawing-pathiterator-c.md#hasnext)方法配合使用实现路径遍历。
+返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](#peek)。通常与[hasNext](#hasNext)方法配合使用实现路径遍历。
 
 **起始版本：** 18
 
@@ -95,7 +95,7 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## next
 
@@ -103,7 +103,7 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 ```
 
-返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](arkts-arkgraphics2d-drawing-pathiterator-c.md#peek)。通常与[hasNext](arkts-arkgraphics2d-drawing-pathiterator-c.md#hasnext)方法配合使用实现路径遍历。
+返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](#peek)。通常与[hasNext](#hasNext)方法配合使用实现路径遍历。
 
 **起始版本：** 23
 
@@ -130,7 +130,7 @@ next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## peek
 

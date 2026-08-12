@@ -14,13 +14,13 @@ Creates a new Promise.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| executor | (resolve: (value: T \| [PromiseLike&lt;T&gt;) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | Yes |
+| executor | (resolve: (value: T \| [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt;) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## all
 
@@ -42,7 +42,7 @@ Creates a Promise that is resolved with an array of results when all of the prov
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;{ -readonly [P in keyof T]: Awaited&lt;T[P]&gt; }&gt; |
+| Promise & lt;{ -readonly [P in keyof T]: Awaited & lt;T[P] & gt; } & gt; |
 
 ## race
 
@@ -64,7 +64,7 @@ Creates a Promise that is resolved or rejected when any of the provided Promises
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T[number]&gt;&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T[number]&gt;&gt; |
 
 ## reject
 
@@ -86,7 +86,7 @@ Creates a new rejected promise for the provided reason.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;T&gt; |
+| Promise & lt;T & gt; |
 
 ## resolve
 
@@ -102,7 +102,7 @@ Creates a new resolved promise.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## resolve
 
@@ -124,7 +124,7 @@ Creates a new resolved promise for the provided value.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt; |
 
 ## resolve
 
@@ -140,13 +140,13 @@ Creates a new resolved promise for the provided value.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | T \| [PromiseLike&lt;T&gt;](../../apis-arkts/arkts-apis/arkts-arkts-promise-promiselike-i.md) | Yes |
+| value | T \| [PromiseLike](arkts-lib-es5-promiselike-i.md)&lt;T&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;Awaited&lt;T&gt;&gt; |
+| Promise&lt;[Awaited](arkts-awaited-t.md)&lt;T&gt;&gt; |
 
 ## prototype
 

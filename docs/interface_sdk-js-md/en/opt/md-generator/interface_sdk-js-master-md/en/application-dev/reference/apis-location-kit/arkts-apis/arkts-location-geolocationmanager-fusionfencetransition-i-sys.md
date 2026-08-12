@@ -13,7 +13,7 @@ Indicates fusion fence transition information.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from 'kits/@kit.LocationKit';
+import { geoLocationManager } from '@kit.LocationKit';
 ```
 
 ## identifier
@@ -64,7 +64,7 @@ transitionEvent: GeofenceTransitionEvent
 
 Indicates the fence transition event.
 
-**Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e-sys.md)
+**Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)
 
 **Since:** 26.0.0
 

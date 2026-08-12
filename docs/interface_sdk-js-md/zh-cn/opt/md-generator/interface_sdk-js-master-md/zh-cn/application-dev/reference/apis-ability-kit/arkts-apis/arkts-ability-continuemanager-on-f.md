@@ -22,13 +22,13 @@ function on(type: 'prepareContinue', context: Context, callback: AsyncCallback<C
 | --- | --- | --- |
 | type | 'prepareContinue' | 是 |
 | context | [Context](arkts-ability-context-c.md) | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ContinueResultInfo&gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
+| [16300501](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) |
 
 ## 示例
 

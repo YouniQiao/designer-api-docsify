@@ -1,8 +1,8 @@
 # PanGestureHandlerOptions
 
-滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)。
+滑动手势处理器配置参数。继承自[BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md#BaseHandlerOptions)。
 
-**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-basehandleroptions-i.md)
+**继承/实现关系：** PanGestureHandlerOptions extends [BaseHandlerOptions](arkts-arkui-gesture-basehandleroptions-i.md#BaseHandlerOptions)
 
 **起始版本：** 23
 
@@ -22,7 +22,7 @@ direction?: PanDirection
 
 默认值：PanDirection.All
 
-**类型：** [PanDirection](arkts-arkui-pandirection-e.md)
+**类型：** [PanDirection](arkts-arkui-gesture-pandirection-e.md)
 
 **起始版本：** 23
 
@@ -46,7 +46,7 @@ distance?: double
 
 **说明：**
 
-[Tabs组件](../../apis-ability-kit/arkts-apis/arkts-app-ability-common.md/arkts-app-ability-common.md)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
+[Tabs组件](./common)滑动与该滑动手势事件同时存在时，可将distance值设为1，使拖动更灵敏，避免造成事件错乱。
 
 取值范围：[0, +∞)，当设定的值小于0时，按默认值处理。
 

@@ -13,7 +13,7 @@ Provides a callback for setting the modal dialog box request result.
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from 'kits/@kit.AbilityKit';
+import { dialogRequest } from '@kit.AbilityKit';
 ```
 
 ## setRequestResult
@@ -38,13 +38,13 @@ Sets the result of the request for the modal dialog box.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [RequestResult](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-requestresult-i-sys.md) | Yes | Request result to set. |
+| result | RequestResult | Yes | Request result to set. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

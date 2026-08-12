@@ -62,7 +62,7 @@ downloadInfo?: RequestDownloadInfo
 
 默认值：null
 
-**类型：** [RequestDownloadInfo](../arkts-components/arkts-arkui-requestdownloadinfo-t.md)
+**类型：** [RequestDownloadInfo](arkts-arkui-requestdownloadinfo-t.md)
 
 **起始版本：** 23
 

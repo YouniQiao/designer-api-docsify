@@ -24,7 +24,7 @@ When the tab is a bottom tab, the default font is in 10.0 fp size, 'HarmonyOS Sa
 
 The default font size of the bottom tab page is 12.0 fp since API version 12.
 
-**Type:** [Font](../arkts-apis/arkts-arkui-arkui-uicontext-font-c.md)
+**Type:** Font
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ heightAdaptivePolicy?: TextHeightAdaptivePolicy
 
 How the adaptive height is determined for the label text. By default, the **maxLines** settings are prioritized.
 
-**Type:** [TextHeightAdaptivePolicy](../arkts-apis/arkts-arkui-enums-textheightadaptivepolicy-e.md)
+**Type:** TextHeightAdaptivePolicy
 
 **Since:** 10
 
@@ -144,7 +144,7 @@ overflow?: TextOverflow
 
 Display mode when the label text is too long. By default, an ellipsis (...) is used to represent text overflow.
 
-**Type:** [TextOverflow](../arkts-apis/arkts-arkui-enums-textoverflow-e.md)
+**Type:** TextOverflow
 
 **Since:** 10
 
@@ -168,7 +168,7 @@ Font color of the label text when it is selected.
 
 Default value: **#FF007DFF**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #FF007DFF
 
@@ -194,7 +194,7 @@ Font color of the label text when it is not selected.
 
 Default value: **#99182431**
 
-**Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+**Type:** ResourceColor
 
 **Default:** #99182431
 

@@ -26,13 +26,13 @@ export declare function DynamicComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DynamicOptions](../arkts-components/arkts-arkui-dynamicoptions-i-sys.md) | 是 | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。 |
+| options | [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md) | 是 | DynamicComponent的构造配置参数，用于配置要加载的Abc页面入口、运行Worker及显示选项。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DynamicComponentAttribute](../arkts-components/arkts-arkui-dynamiccomponent-attribute.md) |  |
+| [DynamicComponentAttribute](arkts-arkui-dynamiccomponent-dynamiccomponentattribute-i-sys.md) |  |
 
 
 ## DynamicComponent
@@ -63,11 +63,11 @@ export declare function DynamicComponent(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;DynamicComponentAttribute&gt; | 是 | 用于设置DynamicComponent属性的回调。 |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[DynamicComponentAttribute](arkts-arkui-dynamiccomponent-dynamiccomponentattribute-i-sys.md)&gt; | 是 | 用于设置DynamicComponent属性的回调。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DynamicComponentAttribute](../arkts-components/arkts-arkui-dynamiccomponent-attribute.md) | DynamicComponent的属性。 |
+| [DynamicComponentAttribute](arkts-arkui-dynamiccomponent-dynamiccomponentattribute-i-sys.md) | DynamicComponent的属性。 |
 

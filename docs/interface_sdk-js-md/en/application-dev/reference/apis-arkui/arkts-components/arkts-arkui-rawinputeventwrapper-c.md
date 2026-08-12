@@ -11,11 +11,11 @@ This class is an abstract class. Developers cannot create instances on their own
 > **NOTE：**
 > 
 > Since the listener is executed before events are dispatched to specific components, some fields in the event will
-> not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md), coordinates relative to the component
-> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getcurrentlocalposition)
-> and [stopPropagation](arkts-arkui-touchevent-i.md#stoppropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventdefault) and
-> [getHistoricalPoints](arkts-arkui-touchevent-i.md#gethistoricalpoints) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metakey)
-> attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getmodifierkeystate) method of **KeyEvent**.
+> not provide valid values: the trigger object [target](arkts-arkui-eventtarget-i.md#EventTarget), coordinates relative to the component
+> [x](arkts-arkui-mouseevent-i.md#x) and [y](arkts-arkui-mouseevent-i.md#y), [getCurrentLocalPosition](arkts-arkui-touchobject-i.md#getCurrentLocalPosition)
+> and [stopPropagation](arkts-arkui-touchevent-i.md#stopPropagation) methods, [preventDefault](arkts-arkui-touchevent-i.md#preventDefault) and
+> [getHistoricalPoints](arkts-arkui-touchevent-i.md#getHistoricalPoints) methods of **TouchEvent**, as well as the [metaKey](arkts-arkui-keyevent-i.md#metaKey)
+> attribute and [getModifierKeyState](arkts-arkui-keyevent-i.md#getModifierKeyState) method of **KeyEvent**.
 
 **Since:** 26.0.0
 
@@ -49,7 +49,7 @@ Obtains the key event.
 
 | Type | Description |
 | --- | --- |
-| [KeyEvent](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
+| [KeyEvent](arkts-arkui-keyevent-i.md) | Key event object if it is a key event, or **null** otherwise. |
 
 ## asMouseEvent
 
@@ -101,7 +101,7 @@ Obtains the touch event.
 
 | Type | Description |
 | --- | --- |
-| [TouchEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-touchevent-touchevent-i.md) | Touch event object if it is a touch event, or **null** otherwise. |
+| [TouchEvent](arkts-arkui-touchevent-i.md) | Touch event object if it is a touch event, or **null** otherwise. |
 
 ## isKeyEvent
 

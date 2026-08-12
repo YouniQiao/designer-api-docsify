@@ -2,7 +2,7 @@
 
 Represents an error that occurs when assertion fails.
 
-**Inheritance/Implementation:** AssertionError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** AssertionError extends [Error](Error)
 
 **Since:** 26.0.0
 

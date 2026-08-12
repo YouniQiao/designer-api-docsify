@@ -107,7 +107,7 @@ level?: notification.SlotLevel
 
 **废弃版本：** 20
 
-**替代接口：** [NotificationSlot#notificationLevel](arkts-notification-notificationslot-notificationslot-i.md#notificationlevel)
+**替代接口：** [notificationLevel](#notificationLevel)
 
 <!--Device-NotificationSlot-level?: notification.SlotLevel--><!--Device-NotificationSlot-level?: notification.SlotLevel-End-->
 
@@ -240,7 +240,7 @@ type?: notification.SlotType
 
 **废弃版本：** 11
 
-**替代接口：** [NotificationSlot#notificationType](arkts-notification-notificationslot-notificationslot-i.md#notificationtype)
+**替代接口：** [notificationType](#notificationType)
 
 <!--Device-NotificationSlot-type?: notification.SlotType--><!--Device-NotificationSlot-type?: notification.SlotType-End-->
 

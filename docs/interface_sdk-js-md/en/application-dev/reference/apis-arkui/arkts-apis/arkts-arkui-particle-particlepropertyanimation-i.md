@@ -18,7 +18,7 @@ curve?: Curve | ICurve
 
 Curve of the particle animation.
 
-**Type:** [Curve](arkts-arkui-curve-e.md) \| ICurve
+**Type:** [Curve](arkts-arkui-curve-e.md) \| [ICurve](../arkts-components/arkts-arkui-icurve-i.md)
 
 **Default:** Curve.Linear
 

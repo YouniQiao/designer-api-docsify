@@ -1,7 +1,7 @@
 # UIServiceHostProxy（系统接口）
 
 UIServiceHostProxy提供代理能力，可以将数据从  
-[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端发送到客户端。
+[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility)服务端发送到客户端。
 
 > **说明：**
 > 
@@ -21,7 +21,7 @@ UIServiceHostProxy提供代理能力，可以将数据从
 sendData(data: Record<string, Object>): void
 ```
 
-从[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md)服务端给客户端发送数据。
+从[UIServiceExtension](arkts-ability-app-ability-uiserviceextensionability-uiserviceextensionability-c-sys.md#UIServiceExtensionAbility)服务端给客户端发送数据。
 
 **起始版本：** 14
 
@@ -37,12 +37,40 @@ sendData(data: Record<string, Object>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| data | Record&lt;string, Object&gt; | 是 |
+| data | Record & lt;string, Object & gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) |
-| [16000050](../errorcode-ability.md#16000050-内部错误) |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { common, UIServiceExtensionAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+const TAG: string = '[UiServiceExtensionAbility] ';
+
+export default class MyUiServiceExtensionAbility extends UIServiceExtensionAbility {
+  // 数据发送处理
+  onData(proxy: common.UIServiceHostProxy, data: Record<string, Object>) {
+    console.info(TAG + `onData ${JSON.stringify(data)}`);
+    // 定义发送数据内容
+    let formData: Record<string, string> = {
+      'proxyData': 'proxyData'
+    };
+    try {
+      // 发送数据到UIServiceExtension的服务端
+      proxy.sendData(formData);
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let msg = (err as BusinessError).message;
+      console.error(`${TAG} sendData failed, err code: ${code}, err msg: ${msg}.`);
+    }
+  }
+}
+```

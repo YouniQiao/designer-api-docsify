@@ -24,4 +24,4 @@ type QueryMediaTabContentEvent = (tabId: string) => Promise<MediaTabContent>
 
 | 类型 |
 | --- |
-| Promise&lt;MediaTabContent&gt; |
+| Promise&lt;[MediaTabContent](arkts-avsession-avmusictemplate-mediatabcontent-i.md)&gt; |

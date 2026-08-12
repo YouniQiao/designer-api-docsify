@@ -18,7 +18,7 @@ anchor: MotionBlurAnchor
 
 Coordinates of the motion blur anchor. They must be the same as those of the animation scaling anchor.
 
-**Type:** [MotionBlurAnchor](../arkts-apis/arkts-arkui-common-motionbluranchor-i.md)
+**Type:** [MotionBlurAnchor](arkts-arkui-motionbluranchor-i.md)
 
 **Since:** 12
 

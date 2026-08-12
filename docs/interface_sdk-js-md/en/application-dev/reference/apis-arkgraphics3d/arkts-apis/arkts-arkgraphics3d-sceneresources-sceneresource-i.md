@@ -26,6 +26,30 @@ Release scene resource.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
+## Examples
+
+```TypeScript
+import { Shader, SceneResourceParameters, SceneResourceFactory, Scene } from '@kit.ArkGraphics3D';
+
+function destroy(): void {
+  // Load scene resources, which supports .gltf and .glb formats. The path and file name can be customized based on the specific project resources.
+  let scene: Promise<Scene> = Scene.load($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"));
+  scene.then(async (result: Scene) => {
+    if (result) {
+      let sceneFactory: SceneResourceFactory = result.getResourceFactory();
+      // Create shader resources. The path and file name can be customized based on the specific project resources.
+      let sceneResourceParameter: SceneResourceParameters = { name: "shaderResource",
+        uri: $rawfile("shaders/custom_shader/custom_material_sample.shader") };
+      let shader: Promise<Shader> = sceneFactory.createShader(sceneResourceParameter);
+      shader.then(async (shaderResult:Shader) => {
+         // Release the resource.
+         shaderResult.destroy();
+      });
+    }
+  });
+}
+```
+
 ## name
 
 ```TypeScript
@@ -70,7 +94,7 @@ readonly uri?: ResourceStr
 
 Scene resource uri.
 
-**Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**Type:** ResourceStr
 
 **Since:** 12
 

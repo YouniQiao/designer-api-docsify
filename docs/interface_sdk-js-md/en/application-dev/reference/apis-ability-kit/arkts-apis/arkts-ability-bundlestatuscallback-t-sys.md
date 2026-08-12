@@ -12,7 +12,7 @@ Contains basic Ability information, which uniquely identifies a launcher StatusC
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bundle.bundleMonitor/bundleMonitor.BundleChangedInfo
+**Substitutes:** [BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md#BundleChangedInfo)
 
 <!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback--><!--Device-unnamed-export type BundleStatusCallback = _BundleStatusCallback-End-->
 

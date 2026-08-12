@@ -26,11 +26,11 @@ Defines Checkbox Component.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [CheckboxOptions](arkts-arkui-checkbox-checkboxoptions-i.md) | 否 | the options of Checkbox. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |  |
+| [CheckboxAttribute](arkts-arkui-checkbox-checkboxattribute-i.md) |  |
 

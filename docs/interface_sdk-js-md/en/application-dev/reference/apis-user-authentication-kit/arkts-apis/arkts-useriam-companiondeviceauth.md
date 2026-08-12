@@ -25,7 +25,7 @@ This module applies to the following scenarios:
 ## Modules to Import
 
 ```TypeScript
-import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
+import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 ```
 
 ## Summary
@@ -50,7 +50,7 @@ import { companionDeviceAuth } from 'kits/@kit.UserAuthenticationKit';
 | [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md) | Defines the device service ID. It uniquely identifies a device and its user, including the device ID type, device ID, and user ID. |
 | [DeviceSelectResult](arkts-userauthentication-companiondeviceauth-deviceselectresult-i-sys.md) | Returns the result of companion device selection. It is used to return the device information and extended context selected by the user in the device selection callback. |
 | [DeviceStatus](arkts-userauthentication-companiondeviceauth-devicestatus-i-sys.md) | Defines the device status information. It describes the current status of the companion device, including the device service ID, user name, model information, device name, online status, and list of supported service IDs. |
-| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling  [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getstatusmonitor). |
+| [StatusMonitor](arkts-userauthentication-companiondeviceauth-statusmonitor-i-sys.md) | Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling  [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor). |
 | [TemplateStatus](arkts-userauthentication-companiondeviceauth-templatestatus-i-sys.md) | Describes the complete status information about a registered companion device authentication template, including the template ID, data confirmation status, validity, user ID, time when the template is added, supported services,and associated device status. |
 <!--DelEnd-->
 

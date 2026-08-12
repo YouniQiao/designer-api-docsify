@@ -70,7 +70,7 @@ innerRadius: LengthMetrics
 
 The inner radius of the annulus
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 20
 
@@ -90,7 +90,7 @@ outerRadius: LengthMetrics
 
 The outer radius of the annulus
 
-**类型：** [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 20
 

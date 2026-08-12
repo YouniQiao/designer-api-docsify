@@ -25,12 +25,12 @@ Defines Select Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | Array&lt;SelectOption&gt; | 是 | the options of Select. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| options | Array&lt;[SelectOption](arkts-arkui-select-selectoption-i.md)&gt; | 是 | the options of Select. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md) |  |
+| [SelectAttribute](arkts-arkui-select-selectattribute-i.md) |  |
 

@@ -1,6 +1,6 @@
 # LastExitReason
 
-Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。
+Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onCreate)方法根据launchParam.lastExitReason的不同类型执行相应操作。
 
 **起始版本：** 9
 
@@ -44,7 +44,7 @@ Ability组件未响应。
 
 **废弃版本：** 10
 
-**替代接口：** [AbilityConstant.LastExitReason.APP_FREEZE](arkts-ability-abilityconstant-lastexitreason-e.md#app_freeze)
+**替代接口：** [APP_FREEZE](#APP_FREEZE)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -162,7 +162,7 @@ PERFORMANCE_CONTROL = 6
 RESOURCE_CONTROL = 7
 ```
 
-系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md)获取，可能原因如下: 
+系统资源使用不当导致的应用程序退出。具体错误原因可以通过[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam)获取，可能原因如下: 
 
 - CPU Highload，CPU高负载。  
 - CPU_EXT Highload，快速CPU负载检测。  

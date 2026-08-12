@@ -18,7 +18,7 @@ The data provider needs to set the ID, read/write permissions, and basic informa
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## equalTo
@@ -29,7 +29,7 @@ equalTo: Record<string, double | string | boolean>
 
 Filter criteria. Currently, only **equalTo** is supported.
 
-**Type:** ArkTS-Dyn: [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, double \| string \| boolean&gt;
+**Type:** ArkTS-Dyn: Record&lt;string, number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, double \| string \| boolean&gt;
 
 **Since:** 11
 

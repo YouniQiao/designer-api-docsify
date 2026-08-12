@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from 'kits/@kit.BasicServicesKit';
+import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
 ## off('colorChange')
@@ -29,7 +29,7 @@ Unregisters a listener for wallpaper color changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'colorChange' | Yes | incoming colorChange table delete receiver to pick up a color change wallpaper wallpaper color changes |
-| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | No | provides dominant colors of the wallpaper. |
+| callback | (colors: Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | No | provides dominant colors of the wallpaper. |
 
 ## Examples
 

@@ -2,7 +2,7 @@
 
 直线绘制组件属性。
 
-**继承/实现关系：** LineAttribute extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md)
+**继承/实现关系：** LineAttribute extends [CommonShapeMethod](CommonShapeMethod)
 
 **起始版本：** 23
 
@@ -34,7 +34,7 @@ default attributeModifier(modifier: AttributeModifier<LineAttribute> | Attribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;LineAttribute&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[LineAttribute](arkts-arkui-line-lineattribute-i.md)&gt; \| [AttributeModifier](../arkts-components/arkts-arkui-attributemodifier-i.md)&lt;[CommonMethod](../arkts-components/arkts-arkui-commonmethod-c.md)&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -94,7 +94,7 @@ default setLineOptions(options?: LineOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [LineOptions](../arkts-components/arkts-arkui-lineoptions-i.md) | 否 | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [LineOptions](arkts-arkui-line-lineoptions-i.md) | 否 | Line绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 

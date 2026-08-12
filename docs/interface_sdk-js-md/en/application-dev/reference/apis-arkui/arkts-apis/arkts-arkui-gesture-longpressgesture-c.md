@@ -2,7 +2,7 @@
 
 Defines LongPressGesture.
 
-**Inheritance/Implementation:** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md)
+**Inheritance/Implementation:** LongPressGesture extends [Gesture](arkts-arkui-gesture-gesture-c.md#Gesture)
 
 **Since:** 23
 
@@ -65,7 +65,7 @@ LongPress gesture recognition success callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -95,7 +95,7 @@ The LongPress gesture is successfully recognized and a callback is triggered whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 
@@ -125,7 +125,7 @@ The LongPress gesture is successfully recognized. When the finger is lifted, the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;GestureEvent&gt; | Yes |  |
+| event | [Callback](../arkts-components/arkts-arkui-callback-i.md)&lt;[GestureEvent](arkts-arkui-gesture-gestureevent-i.md)&gt; | Yes |  |
 
 **Return value:**
 

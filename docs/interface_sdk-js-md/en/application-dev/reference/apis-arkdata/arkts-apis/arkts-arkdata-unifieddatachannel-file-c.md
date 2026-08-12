@@ -1,10 +1,10 @@
 # File
 
-Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md) and a base class of the data of the file type. You are advised to use the child class of **File**, for example,   
-[Image](arkts-arkdata-unifieddatachannel-image-c.md), [Video](arkts-arkdata-unifieddatachannel-video-c.md), and   
-[Folder](arkts-arkdata-unifieddatachannel-folder-c.md), to describe data.
+Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord) and a base class of the data of the file type. You are advised to use the child class of **File**, for example,   
+[Image](arkts-arkdata-unifieddatachannel-image-c.md#Image), [Video](arkts-arkdata-unifieddatachannel-video-c.md#Video), and   
+[Folder](arkts-arkdata-unifieddatachannel-folder-c.md#Folder), to describe data.
 
-**Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md)
+**Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)
 
 **Since:** 10
 
@@ -17,7 +17,7 @@ Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-u
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from 'kits/@kit.ArkData';
+import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
 ## details
@@ -38,7 +38,7 @@ A dictionary type object, where both the key and value are of the string type an
 
 The default value is an empty dictionary object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** Record&lt;string, string&gt;
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
 
 Defines URI authorization policies for drag intention.
 
-**Type:** Array&lt;UriPermission&gt;
+**Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
 
 **Since:** 26.0.0
 

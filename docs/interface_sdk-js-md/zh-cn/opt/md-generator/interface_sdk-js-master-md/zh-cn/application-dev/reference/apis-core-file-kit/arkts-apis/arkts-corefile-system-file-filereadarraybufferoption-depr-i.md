@@ -55,7 +55,7 @@ fail?: (data: string, code: number) => void
 success?: (data: FileReadArrayBufferResponse) => void
 ```
 
-接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md)。
+接口调用成功的回调函数。返回[FileReadArrayBufferResponse](arkts-corefile-system-file-filereadarraybufferresponse-depr-i.md#FileReadArrayBufferResponse)。
 
 **起始版本：** 3
 

@@ -30,7 +30,7 @@ Defines the QRCode component.
 
 | Type | Description |
 | --- | --- |
-| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
+| [QRCodeAttribute](arkts-arkui-qrcode-qrcodeattribute-i.md) |  |
 
 
 ## QRCode
@@ -59,11 +59,11 @@ Defines QRCode Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;QRCodeAttribute&gt; | Yes | QRCode attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[QRCodeAttribute](arkts-arkui-qrcode-qrcodeattribute-i.md)&gt; | Yes | QRCode attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [QRCodeAttribute](../arkts-components/arkts-arkui-qrcode-attribute.md) |  |
+| [QRCodeAttribute](arkts-arkui-qrcode-qrcodeattribute-i.md) |  |
 

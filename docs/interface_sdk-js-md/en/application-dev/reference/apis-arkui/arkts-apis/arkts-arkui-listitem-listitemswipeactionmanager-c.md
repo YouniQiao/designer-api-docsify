@@ -38,8 +38,8 @@ Collapse the swipe action
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
+| [106203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 
 ## expand
 
@@ -70,6 +70,6 @@ Expand the swipe action
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
-| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
+| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
+| [106203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 

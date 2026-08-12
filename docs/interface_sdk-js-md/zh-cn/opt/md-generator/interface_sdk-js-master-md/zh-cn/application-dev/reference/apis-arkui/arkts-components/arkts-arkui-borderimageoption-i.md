@@ -46,9 +46,9 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 设置负数时取默认值。
 
-参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md/arkts-arkui-length-t.md)时，统一设置四条边框的向外延伸距离。
+参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md#Length)时，统一设置四条边框的向外延伸距离。
 
-参数类型为[EdgeWidths](../arkts-apis/arkts-arkui-graphics-edgewidths-f.md/arkts-arkui-graphics-edgewidths-f.md#edgewidths)时：
+参数类型为[EdgeWidths](EdgeWidths)时：
 
 - Top：设置边框图片上边框向外延伸的距离。
 
@@ -58,7 +58,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 - Right：设置边框图片右边框向外延伸的距离。
 
-参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md/arkts-arkui-localizededgewidths-i.md)&lt;sup&gt;12+&lt;/sup&gt;时：
+参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md#LocalizedEdgeWidths)&lt;sup&gt;12+&lt;/sup&gt;时：
 
 - Top：设置边框图片上边框向外延伸的距离。
 
@@ -72,7 +72,7 @@ outset?: Length | EdgeWidths | LocalizedEdgeWidths
 
 从右至左显示语言模式下为设置边框图片左边框向外延伸的距离。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -124,9 +124,9 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 设置负数时取默认值。
 
-参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md/arkts-arkui-length-t.md)时，统一设置四个角的宽高。
+参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md#Length)时，统一设置四个角的宽高。
 
-参数类型为[EdgeWidths](../arkts-apis/arkts-arkui-graphics-edgewidths-f.md/arkts-arkui-graphics-edgewidths-f.md#edgewidths)时：
+参数类型为[EdgeWidths](EdgeWidths)时：
 
 - Top：设置图片上侧被切割的高。
 
@@ -136,7 +136,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 - Right：设置图片右侧被切割的宽。
 
-参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md/arkts-arkui-localizededgewidths-i.md)&lt;sup&gt;12+&lt;/sup&gt;时：
+参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md#LocalizedEdgeWidths)&lt;sup&gt;12+&lt;/sup&gt;时：
 
 - Top：设置图片上侧被切割的高。
 
@@ -150,7 +150,7 @@ slice?: Length | EdgeWidths | LocalizedEdgeWidths
 
 从右至左显示语言模式下为设置图片左侧被切割的宽。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 
@@ -178,7 +178,7 @@ source?: string | Resource | LinearGradient
 
 边框图源仅适用于容器组件，如[Row](./row)、[Column](./column)、[Flex](./flex)，在非容器组件上使用会失效。
 
-**类型：** string \| Resource \| LinearGradient
+**类型：** string \| Resource \| [LinearGradient](arkts-arkui-lineargradient-i.md)
 
 **起始版本：** 11
 
@@ -204,9 +204,9 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 设置负数时取默认值。
 
-参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md/arkts-arkui-length-t.md)时，统一设置四条边框的宽度。
+参数类型为[Length](../arkts-apis/arkts-arkui-length-t.md#Length)时，统一设置四条边框的宽度。
 
-参数类型为[EdgeWidths](../arkts-apis/arkts-arkui-graphics-edgewidths-f.md/arkts-arkui-graphics-edgewidths-f.md#edgewidths)时：
+参数类型为[EdgeWidths](EdgeWidths)时：
 
 - Top：设置图片边框上边框的宽。
 
@@ -216,7 +216,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 - Right：设置图片边框右边框的宽。
 
-参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md/arkts-arkui-localizededgewidths-i.md)&lt;sup&gt;12+&lt;/sup&gt;时：
+参数类型为[LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md#LocalizedEdgeWidths)&lt;sup&gt;12+&lt;/sup&gt;时：
 
 - Top：设置图片边框上边框的宽。
 
@@ -230,7 +230,7 @@ width?: Length | EdgeWidths | LocalizedEdgeWidths
 
 从右至左显示语言模式下为设置图片边框左边框的宽。
 
-**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** [Length](../arkts-apis/arkts-arkui-length-t.md) \| EdgeWidths \| [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
 **默认值：** 0
 

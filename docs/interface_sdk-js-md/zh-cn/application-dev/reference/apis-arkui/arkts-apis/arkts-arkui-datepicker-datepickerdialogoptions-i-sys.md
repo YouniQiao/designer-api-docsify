@@ -2,9 +2,9 @@
 
 日期选择器弹窗选项。
 
-继承自[DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md)。
+继承自[DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md#DatePickerOptions)。
 
-**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md)
+**继承/实现关系：** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepicker-datepickeroptions-i.md#DatePickerOptions)
 
 **起始版本：** 23
 

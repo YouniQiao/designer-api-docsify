@@ -22,7 +22,7 @@ The **performanceMonitor** module provides APIs for monitoring performance metri
 ## Modules to Import
 
 ```TypeScript
-import { performanceMonitor } from 'kits/@kit.ArkUI';
+import { performanceMonitor } from '@kit.ArkUI';
 ```
 
 ## Summary

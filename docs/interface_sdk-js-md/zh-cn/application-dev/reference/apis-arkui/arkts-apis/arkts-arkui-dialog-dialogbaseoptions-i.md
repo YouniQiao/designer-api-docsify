@@ -144,7 +144,7 @@ backgroundBlurStyle?: BlurStyle
 
 对话框的背景模糊样式。&lt;br&gt;设置为BlurStyle.NONE将禁用背景模糊。
 
-**类型：** [BlurStyle](../arkts-components/arkts-arkui-blurstyle-e.md)
+**类型：** BlurStyle
 
 **默认值：** BlurStyle.COMPONENT_ULTRA_THICK
 
@@ -168,7 +168,7 @@ backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 
 带选项的背景模糊样式。
 
-**类型：** [BackgroundBlurStyleOptions](arkts-arkui-common-backgroundblurstyleoptions-i.md)
+**类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 26.1.0
 
@@ -190,7 +190,7 @@ backgroundColor?: ResourceColor
 
 对话框的背景颜色。&lt;br&gt;当backgroundColor设置为非透明色时，backgroundBlurStyle必须设置为BlurStyle.NONE。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **默认值：** Color.Transparent
 
@@ -214,7 +214,7 @@ backgroundEffect?: BackgroundEffectOptions
 
 带选项的背景效果。
 
-**类型：** [BackgroundEffectOptions](arkts-arkui-common-backgroundeffectoptions-i.md)
+**类型：** BackgroundEffectOptions
 
 **起始版本：** 26.1.0
 
@@ -236,7 +236,7 @@ borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 
 对话框的边框颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| EdgeColors \| LocalizedEdgeColors
+**类型：** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
 
 **默认值：** Color.Black
 
@@ -260,7 +260,7 @@ borderRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 
 背景的边框半径。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| LocalizedBorderRadiuses
+**类型：** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
 
 **默认值：** { topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }
 
@@ -284,7 +284,7 @@ borderStyle?: BorderStyle | EdgeStyles
 
 对话框边框样式。
 
-**类型：** [BorderStyle](arkts-arkui-borderstyle-e.md) \| EdgeStyles
+**类型：** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
 
 **默认值：** BorderStyle.Solid
 
@@ -308,7 +308,7 @@ borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 
 对话框边框宽度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| EdgeWidths \| LocalizedEdgeWidths
+**类型：** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
 
 **默认值：** 0
 
@@ -354,7 +354,7 @@ dialogTransition?: TransitionEffect
 
 用于打开/关闭对话框内容区域的对话框过渡动效参数。
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** TransitionEffect
 
 **起始版本：** 26.1.0
 
@@ -376,7 +376,7 @@ displayModeInSubWindow?: DialogDisplayMode
 
 定义在子窗口中显示时的对话框显示模式。
 
-**类型：** [DialogDisplayMode](arkts-arkui-enums-dialogdisplaymode-e.md)
+**类型：** DialogDisplayMode
 
 **默认值：** DialogDisplayMode.SCREEN_BASED
 
@@ -448,7 +448,7 @@ height?: Dimension
 
 对话框的高度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 26.1.0
 
@@ -470,7 +470,7 @@ hoverModeArea?: HoverModeAreaType
 
 悬停模式下对话框的显示区域。
 
-**类型：** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
+**类型：** HoverModeAreaType
 
 **默认值：** HoverModeAreaType.BOTTOM_SCREEN
 
@@ -494,7 +494,7 @@ immersiveMode?: ImmersiveMode
 
 页面级对话框蒙层效果。
 
-**类型：** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
+**类型：** ImmersiveMode
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -542,7 +542,7 @@ keyboardAvoidDistance?: LengthMetrics
 
 对话框与系统键盘之间的距离。
 
-**类型：** [LengthMetrics](arkts-arkui-lengthmetrics-t.md)
+**类型：** LengthMetrics
 
 **起始版本：** 26.1.0
 
@@ -564,7 +564,7 @@ keyboardAvoidMode?: KeyboardAvoidMode
 
 键盘避让模式。
 
-**类型：** [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md)
+**类型：** KeyboardAvoidMode
 
 **默认值：** KeyboardAvoidMode.DEFAULT
 
@@ -588,7 +588,7 @@ levelMode?: LevelMode
 
 对话框的显示级别。
 
-**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
+**类型：** LevelMode
 
 **默认值：** LevelMode.OVERLAY
 
@@ -612,7 +612,7 @@ levelOrder?: LevelOrder
 
 对话框的显示顺序。
 
-**类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
+**类型：** LevelOrder
 
 **默认值：** The value returned by LevelOrder.clamp(0)
 
@@ -658,7 +658,7 @@ maskColor?: ResourceColor
 
 对话框的蒙层颜色。
 
-**类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
+**类型：** ResourceColor
 
 **起始版本：** 26.1.0
 
@@ -680,7 +680,7 @@ maskRect?: Rectangle
 
 对话框的蒙层区域。
 
-**类型：** [Rectangle](arkts-arkui-common-rectangle-i.md)
+**类型：** Rectangle
 
 **默认值：** { x: 0, y: 0, width: '100%', height: '100%' }
 
@@ -704,7 +704,7 @@ maskTransition?: TransitionEffect
 
 用于打开/关闭遮罩的蒙层过渡动效参数。
 
-**类型：** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
+**类型：** TransitionEffect
 
 **起始版本：** 26.1.0
 
@@ -726,7 +726,7 @@ offset?: Offset
 
 对话框相对于对齐位置的偏移。
 
-**类型：** [Offset](arkts-arkui-units-offset-i.md)
+**类型：** Offset
 
 **起始版本：** 26.1.0
 
@@ -748,7 +748,7 @@ onWillDismiss?: Callback<DialogDismissal>
 
 对话框交互关闭的回调。&lt;br&gt;如果注册了此回调，则用户点击后对话框不会立即关闭遮罩或返回按钮。回调中的reason参数用于判断是否可以关闭对话框。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;DialogDismissal&gt;
+**类型：** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
 **起始版本：** 26.1.0
 
@@ -770,7 +770,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 对话框的阴影。
 
-**类型：** [ShadowOptions](arkts-arkui-common-shadowoptions-i.md) \| ShadowStyle
+**类型：** ShadowOptions \| ShadowStyle
 
 **起始版本：** 26.1.0
 
@@ -816,7 +816,7 @@ systemMaterial?: SystemUiMaterial
 
 为对话框设置系统样式材质。不同的材料有不同的效果，会影响背景色、边框、阴影和对话框的其他视觉属性。
 
-**类型：** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**类型：** SystemUiMaterial
 
 **起始版本：** 26.1.0
 
@@ -838,7 +838,7 @@ width?: Dimension
 
 对话框的宽度。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **起始版本：** 26.1.0
 

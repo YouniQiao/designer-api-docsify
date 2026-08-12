@@ -11,7 +11,7 @@ Provides the ImageProcessor type, including the processing function.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from 'kits/@kit.ImageKit';
+import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
 ## enhanceDetail
@@ -37,21 +37,21 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes |
 | width | number | Yes |
 | height | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 
@@ -89,21 +89,21 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes |
 | scale | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;image.PixelMap&gt; |
+| Promise & lt;image.PixelMap & gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 
@@ -142,7 +142,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | sourceImage | image.PixelMap | Yes |
 | width | number | Yes |
 | height | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
@@ -154,10 +154,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) |
+| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 
@@ -195,7 +195,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes |
 | scale | number | Yes |
-| level | [QualityLevel](../../apis-camera-kit/arkts-apis/arkts-camera-camera-qualitylevel-e.md) | No |
+| level | [QualityLevel](arkts-image-videoprocessingengine-qualitylevel-e.md) | No |
 
 **Return value:**
 
@@ -207,10 +207,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID |
 | --- |
-| [801](../../apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
-| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) |
+| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 

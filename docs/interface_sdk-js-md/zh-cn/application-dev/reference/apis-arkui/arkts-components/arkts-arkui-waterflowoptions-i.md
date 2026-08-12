@@ -18,7 +18,7 @@ footer?: CustomBuilder
 
 设置WaterFlow尾部组件，用于在瀑布流末尾显示自定义内容（如加载提示、底部标识等）。不设置时不显示尾部组件。
 
-**类型：** [CustomBuilder](../arkts-apis/arkts-arkui-custombuilder-t.md)
+**类型：** CustomBuilder
 
 **起始版本：** 9
 
@@ -38,7 +38,7 @@ footerContent?: ComponentContent
 
 设置WaterFlow尾部组件。该参数的优先级高于参数footer，即同时设置footer和footerContent时，以footerContent设置的组件为准。
 
-**类型：** [ComponentContent](../arkts-apis/arkts-arkui-componentcontent-c.md)
+**类型：** ComponentContent
 
 **起始版本：** 18
 
@@ -60,7 +60,7 @@ layoutMode?: WaterFlowLayoutMode
 
 设置WaterFlow的布局模式，根据使用场景选择更切合的模式。
 
-**类型：** [WaterFlowLayoutMode](../arkts-apis/arkts-arkui-waterflow-waterflowlayoutmode-e.md)
+**类型：** [WaterFlowLayoutMode](arkts-arkui-waterflowlayoutmode-e.md)
 
 **默认值：** ALWAYS_TOP_DOWN
 
@@ -86,7 +86,7 @@ scroller?: Scroller
 
 &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;br&gt;不允许和其他滚动类组件，如：ArcList、List、Grid、Scroll和WaterFlow绑定同一个滚动控制对象。&lt;/p&gt;
 
-**类型：** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**类型：** Scroller
 
 **起始版本：** 9
 

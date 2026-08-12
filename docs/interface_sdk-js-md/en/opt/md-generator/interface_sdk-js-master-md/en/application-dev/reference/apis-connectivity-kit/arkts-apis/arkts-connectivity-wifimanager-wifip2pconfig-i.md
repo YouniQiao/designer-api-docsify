@@ -11,7 +11,7 @@ P2P config.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## deviceAddress
@@ -54,7 +54,7 @@ goBand: GroupOwnerBand
 
 Group owner band
 
-**Type:** [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md)
+**Type:** GroupOwnerBand
 
 **Since:** 9
 

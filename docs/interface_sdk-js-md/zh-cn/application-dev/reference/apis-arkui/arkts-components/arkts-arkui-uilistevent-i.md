@@ -1,10 +1,10 @@
 # UIListEvent
 
-frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给List节点设置滚动事件。
+frameNode中[getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-1)方法的返回值，可用于给List节点设置滚动事件。
 
-UIListEvent继承于[UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)。
+UIListEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。
 
-**继承/实现关系：** UIListEvent extends [UIScrollableCommonEvent](../arkts-apis/arkts-arkui-common-uiscrollablecommonevent-i.md/arkts-arkui-common-uiscrollablecommonevent-i.md)
+**继承/实现关系：** UIListEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
 
 **起始版本：** 19
 
@@ -40,7 +40,7 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnScrollCallback](arkts-arkui-onscrollcallback-t.md) \| undefined | 是 | onDidScroll事件的回调函数。 |
+| callback | OnScrollCallback \| undefined | 是 | onDidScroll事件的回调函数。 |
 
 ## setOnScrollIndex
 
@@ -68,7 +68,7 @@ setOnScrollIndex(callback: OnListScrollIndexCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnListScrollIndexCallback](../arkts-apis/arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。 |
+| callback | [OnListScrollIndexCallback](arkts-arkui-onlistscrollindexcallback-t.md) \| undefined | 是 | onScrollIndex事件的回调函数。 |
 
 ## setOnScrollVisibleContentChange
 
@@ -96,7 +96,7 @@ setOnScrollVisibleContentChange(callback: OnScrollVisibleContentChangeCallback |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnScrollVisibleContentChangeCallback](../arkts-apis/arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | 是 | onScrollVisibleContentChange事件的回调函数。 |
+| callback | [OnScrollVisibleContentChangeCallback](arkts-arkui-onscrollvisiblecontentchangecallback-t.md) \| undefined | 是 | onScrollVisibleContentChange事件的回调函数。 |
 
 ## setOnWillScroll
 
@@ -124,5 +124,5 @@ setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnWillScrollCallback](arkts-arkui-onwillscrollcallback-t.md) \| undefined | 是 | onWillScroll事件的回调函数。 |
+| callback | OnWillScrollCallback \| undefined | 是 | onWillScroll事件的回调函数。 |
 

@@ -2,7 +2,7 @@
 
 Represents an error that occurs when the available memory is not sufficient to create the activation frame
 
-**Inheritance/Implementation:** StackOverflowError extends [Error](arkts-arkts-error-c.md)
+**Inheritance/Implementation:** StackOverflowError extends [Error](Error)
 
 **Since:** 26.0.0
 

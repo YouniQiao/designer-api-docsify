@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ExceptionPrompt, MarginType, PromptOptions } from 'kits/@kit.ArkUI';
+import { ExceptionPrompt, MarginType, PromptOptions } from '@kit.ArkUI';
 ```
 
 ## Summary

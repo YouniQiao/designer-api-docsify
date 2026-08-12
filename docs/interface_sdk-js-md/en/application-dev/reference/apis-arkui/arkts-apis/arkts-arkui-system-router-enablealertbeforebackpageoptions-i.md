@@ -8,7 +8,7 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#EnableAlertOptions
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions-End-->
 
@@ -17,7 +17,7 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from 'kits/@kit.ArkUI';
+import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
 ```
 
 ## cancel
@@ -34,7 +34,7 @@ Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#EnableAlertOptions
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -60,7 +60,7 @@ Called when the dialog box is closed.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#EnableAlertOptions
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -80,7 +80,7 @@ Called when the **OK** button in the confirm dialog box is clicked. **errMsg** i
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router#EnableAlertOptions
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 
@@ -108,7 +108,7 @@ Content displayed in the confirm dialog box.
 
 **Deprecated since:** 8
 
-**Substitutes:** ohos.router.EnableAlertOptions#message
+**Substitutes:** [message](ohos.router.EnableAlertOptions#message)
 
 <!--Device-EnableAlertBeforeBackPageOptions-message: string--><!--Device-EnableAlertBeforeBackPageOptions-message: string-End-->
 

@@ -2,7 +2,7 @@
 
 可扩展的GridItem组件。
 
-**继承/实现关系：** ExtendableGridItem implements [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md/arkts-arkui-griditem-attribute.md)
+**继承/实现关系：** ExtendableGridItem implements [GridItemAttribute](arkts-arkui-griditem-griditemattribute-i.md#GridItemAttribute)
 
 **起始版本：** 26.0.0
 
@@ -39,8 +39,8 @@ static $_instantiate<T extends ExtendableGridItem>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| value | [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 **返回值：**
 
@@ -76,9 +76,9 @@ static _instantiateImpl<T extends ExtendableGridItem>(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
+| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
 | factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
 
 ## setGridItemOptions
 
@@ -102,7 +102,7 @@ public setGridItemOptions(value?: GridItemOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [GridItemOptions](../arkts-components/arkts-arkui-griditemoptions-i.md) | 否 |  |
+| value | [GridItemOptions](arkts-arkui-griditem-griditemoptions-i.md) | 否 |  |
 
 **返回值：**
 

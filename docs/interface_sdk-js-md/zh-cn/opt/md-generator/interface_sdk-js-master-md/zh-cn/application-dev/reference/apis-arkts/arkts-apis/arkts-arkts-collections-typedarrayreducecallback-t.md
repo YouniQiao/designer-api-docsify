@@ -20,7 +20,7 @@ ArkTS TypedArray归约函数类型。
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | previousValue | AccType | 是 |
-| currentValue | ElementType | 是 |
+| [currentValue](../../apis-notification-kit/arkts-apis/arkts-notification-notificationcontent-notificationprogress-i.md) | ElementType | 是 |
 | currentIndex | number | 是 |
 | array | ArrayType | 是 |
 

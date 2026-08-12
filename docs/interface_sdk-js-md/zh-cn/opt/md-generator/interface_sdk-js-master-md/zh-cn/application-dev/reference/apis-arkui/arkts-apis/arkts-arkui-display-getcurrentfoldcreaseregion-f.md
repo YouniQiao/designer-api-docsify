@@ -26,7 +26,7 @@ function getCurrentFoldCreaseRegion(): FoldCreaseRegion
 
 | 错误码ID |
 | --- |
-| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
 
 ## 示例
 

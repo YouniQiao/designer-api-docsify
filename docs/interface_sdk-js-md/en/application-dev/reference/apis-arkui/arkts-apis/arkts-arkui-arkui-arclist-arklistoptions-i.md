@@ -13,7 +13,7 @@ Defines the arc list options.
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from 'kits/@kit.ArkUI';
+import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
 ## header
@@ -60,7 +60,7 @@ scroller?: Scroller
 
 Describes the controller for scrollable container.
 
-**Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
+**Type:** Scroller
 
 **Since:** 23
 

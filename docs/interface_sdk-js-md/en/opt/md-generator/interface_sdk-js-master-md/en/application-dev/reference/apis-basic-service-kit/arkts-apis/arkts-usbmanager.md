@@ -4,13 +4,13 @@ The **usbManager** module provides USB device management functions, including US
 
 > **NOTE：**
 > 
-> Perform the following steps when using the APIs with the [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) parameter:
+> Perform the following steps when using the APIs with the [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe) parameter:
 > **Before use**:
-> 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getdevices) to obtain the USB device list.
-> 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestright) to request the temporary device access permission.
-> 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectdevice) to obtain [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md) as an input parameter.
+> 1. Call [usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices) to obtain the USB device list.
+> 2. Call [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight) to request the temporary device access permission.
+> 3. Call [usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice) to obtain [usbManager.USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md#USBDevicePipe) as an input parameter.
 > **After use**:
-> Call [usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closepipe) to close a USB device pipe.
+> Call [usbManager.closePipe](arkts-basicservices-usbmanager-closepipe-f.md#closePipe) to close a USB device pipe.
 > 
 
 **Since:** 9
@@ -22,7 +22,7 @@ The **usbManager** module provides USB device management functions, including US
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from 'kits/@kit.BasicServicesKit';
+import { usbManager } from '@kit.BasicServicesKit';
 ```
 
 ## Summary

@@ -38,7 +38,7 @@ background?: ColorMetrics
 
 默认值跟随buttonStyle。
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -160,7 +160,7 @@ fontColor?: ColorMetrics
 
 默认值跟随buttonStyle。
 
-**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**类型：** ColorMetrics
 
 **起始版本：** 18
 
@@ -206,7 +206,7 @@ textAlign?: TextAlign
 
 默认值：TextAlign.Start
 
-**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **默认值：** { TextAlign.Start }
 

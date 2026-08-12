@@ -66,7 +66,7 @@ Gesture type.
 
 Returns **-1** for built-in gestures of unexposed types.
 
-**Type:** GestureControl.GestureType
+**Type:** [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)
 
 **Since:** 11
 

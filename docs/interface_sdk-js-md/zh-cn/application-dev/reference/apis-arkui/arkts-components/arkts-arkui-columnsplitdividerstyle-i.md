@@ -6,7 +6,7 @@
 > 
 > 与[RowSplit](./row_split)相同，ColumnSplit的分割线可调整上下两侧子组件的高度，子组件的高度调整范围受其最大最小高度限制。
 > 
-> 支持[clip](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#clip)、[margin](../arkts-apis/arkts-arkui-common-commonmethod-i.md/arkts-arkui-common-commonmethod-i.md#margin)等通用属性，未设置clip属性时，其默认值为true。
+> 支持[clip](CommonMethod#clip(value: boolean))、[margin](CommonMethod#margin)等通用属性，未设置clip属性时，其默认值为true。
 
 **起始版本：** 10
 
@@ -31,7 +31,7 @@ endMargin?: Dimension
 非法值：按默认值处理，此时  
 [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)接口获取到的属性值为undefined。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 0
 
@@ -62,7 +62,7 @@ startMargin?: Dimension
 非法值：按默认值处理，此时  
 [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)接口获取到的属性值为undefined。
 
-**类型：** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
+**类型：** Dimension
 
 **默认值：** 0
 

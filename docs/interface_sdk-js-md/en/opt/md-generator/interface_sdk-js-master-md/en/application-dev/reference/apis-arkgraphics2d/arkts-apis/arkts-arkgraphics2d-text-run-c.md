@@ -1,9 +1,9 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md)class.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)class.
 
-Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getglyphruns) of the  
-[TextLine](arkts-arkgraphics2d-text-textline-c.md) class to create a **Run** object.
+Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the  
+[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class to create a **Run** object.
 
 **Since:** 12
 
@@ -14,7 +14,7 @@ Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-ar
 ## Modules to Import
 
 ```TypeScript
-import { text } from 'kits/@kit.ArkGraphics2D';
+import { text } from '@kit.ArkGraphics2D';
 ```
 
 ## getAdvances
@@ -43,7 +43,7 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## Examples
 
@@ -130,7 +130,7 @@ Obtains the index of each glyph in this run.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## Examples
 
@@ -164,7 +164,7 @@ Obtains the index of each glyph in the specified range of this run.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## Examples
 
@@ -252,7 +252,7 @@ Obtains the offset of each glyph in this run relative to its index.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## Examples
 
@@ -280,7 +280,7 @@ Obtains the position of each glyph relative to the respective line in this run.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## Examples
 
@@ -314,7 +314,7 @@ Obtains the position array of each glyph relative to the respective line within 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;common2D.Point&gt; |
+| Array & lt;common2D.Point & gt; |
 
 ## Examples
 
@@ -370,7 +370,7 @@ Obtains an array of character indices for glyphs within a specified range of thi
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;number&gt; |
+| Array & lt;number & gt; |
 
 ## Examples
 
@@ -480,7 +480,7 @@ Obtains the text style of this typesetting unit.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md) |
+| [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md) |
 
 ## Examples
 

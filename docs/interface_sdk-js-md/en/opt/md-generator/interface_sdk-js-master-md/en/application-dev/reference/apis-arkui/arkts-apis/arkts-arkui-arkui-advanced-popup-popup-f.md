@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from 'kits/@kit.ArkUI';
+import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
 ```
 
 ## Popup
@@ -28,4 +28,4 @@ export declare function Popup(options: PopupOptions): void
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [PopupOptions](../arkts-components/arkts-arkui-popupoptions-i.md) | Yes |
+| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes |

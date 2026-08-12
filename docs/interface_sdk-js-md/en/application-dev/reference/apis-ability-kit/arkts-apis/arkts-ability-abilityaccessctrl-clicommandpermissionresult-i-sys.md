@@ -15,7 +15,7 @@ Represents the permission information of a single CLI command.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from 'kits/@kit.AbilityKit';
+import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 ```
 
 ## requiredCliPermissions
@@ -26,7 +26,7 @@ requiredCliPermissions: Array<CliPermissionDetail>
 
 List of CLI permission information that the current CLI command depends on.
 
-**Type:** Array&lt;CliPermissionDetail&gt;
+**Type:** Array&lt;[CliPermissionDetail](arkts-ability-abilityaccessctrl-clipermissiondetail-i-sys.md)&gt;
 
 **Since:** 26.0.0
 

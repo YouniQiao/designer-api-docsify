@@ -57,7 +57,7 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](./app/context)。 |
 
 ## 示例
 
@@ -111,7 +111,7 @@ constructor(context: Context, window: window.Window)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-t.md/arkts-ability-context-t.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](./app/context)。 |
 | window | window.Window | 是 | 应用创建的窗口实例。 |
 
 ## 示例
@@ -157,8 +157,8 @@ ArkTS-Sta:
 getSelectedIndex(): int
 ```
 
-获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()](arkts-corefile-picker-documentviewpicker-c.md#save)时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
-[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md)里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
+获取保存成功后的文件后缀类型的下标。该方法只在调用 [save()](#save)时使用生效，其他场景下不适用。该方法需要配置参数[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#DocumentSaveOptions)。该方法返回的是所选后缀类型的下标(number)。所选的后缀类型是开发者所传的参数  
+[DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md#DocumentSaveOptions)里的某个后缀类型。如果没有传参，并且调用了getSelectedIndex()方法，返回值为-1。
 
 **起始版本：** 14
 

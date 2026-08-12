@@ -18,7 +18,7 @@ message: ConsoleMessage
 
 Console message information of the event.
 
-**类型：** [ConsoleMessage](../arkts-components/arkts-arkweb-consolemessage-c.md)
+**类型：** [ConsoleMessage](arkts-arkweb-web-consolemessage-c.md)
 
 **起始版本：** 23
 

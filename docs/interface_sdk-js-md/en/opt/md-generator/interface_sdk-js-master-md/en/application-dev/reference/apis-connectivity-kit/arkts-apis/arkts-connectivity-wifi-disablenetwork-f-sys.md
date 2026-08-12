@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from 'kits/@kit.ConnectivityKit';
+import { wifi } from '@kit.ConnectivityKit';
 ```
 
 ## disableNetwork
@@ -20,7 +20,7 @@ Disables a specified network.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.wifiManager/wifiManager.disableDeviceConfig
+**Substitutes:** [disableDeviceConfig](ohos.wifiManager/wifiManager.disableDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

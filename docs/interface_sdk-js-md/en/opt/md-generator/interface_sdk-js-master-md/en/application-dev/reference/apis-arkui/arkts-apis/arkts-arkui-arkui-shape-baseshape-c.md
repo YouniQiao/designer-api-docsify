@@ -1,6 +1,6 @@
 # BaseShape
 
-This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md).
+This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
 
 **Inheritance/Implementation:** BaseShape extends [CommonShapeMethod<T>](CommonShapeMethod<T>)
 
@@ -13,7 +13,7 @@ This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapeme
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## height

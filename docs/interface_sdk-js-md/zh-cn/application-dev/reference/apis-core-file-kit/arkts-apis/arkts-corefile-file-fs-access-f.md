@@ -118,7 +118,7 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 | --- | --- | --- | --- |
 | path | string | 是 | 文件或目录应用沙箱路径。 |
 | mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | 是 | 文件或目录校验的权限。 |
-| flag | [AccessFlagType](arkts-corefile-fileio-accessflagtype-e.md) | 是 | 文件或目录校验的位置。 |
+| flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | 是 | 文件或目录校验的位置。 |
 
 **返回值：**
 
@@ -131,7 +131,7 @@ declare function access(path: string, mode: AccessModeType, flag: AccessFlagType
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../apis-contacts-kit/errorcode-contacts.md#401-系统内部错误) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
 | 13900023 | Text file busy |
 | 13900033 | Too many symbolic links encountered |

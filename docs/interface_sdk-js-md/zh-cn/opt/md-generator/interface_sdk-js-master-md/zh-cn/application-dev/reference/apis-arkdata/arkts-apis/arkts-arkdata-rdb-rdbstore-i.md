@@ -3,13 +3,13 @@
 提供管理关系数据库（RDB）方法的接口。
 
 在使用以下相关接口前，请使用  
-[executeSql](arkts-arkdata-rdb-rdbstore-i.md#executesql)接口初始化数据库表结构和相关数据。
+[executeSql](#executeSql)接口初始化数据库表结构和相关数据。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md)
+**替代接口：** [RdbStore](arkts-arkdata-relationalstore-rdbstore-i.md#RdbStore)
 
 <!--Device-rdb-interface RdbStore--><!--Device-rdb-interface RdbStore-End-->
 
@@ -27,7 +27,7 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<number>): void-End-->
 
@@ -38,7 +38,7 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
 
 ## 示例
@@ -103,7 +103,7 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchinsert)
+**替代接口：** [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert)
 
 <!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>--><!--Device-RdbStore-batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>-End-->
 
@@ -114,13 +114,13 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | table | string | 是 |
-| values | Array&lt;ValuesBucket&gt; | 是 |
+| values | Array & lt;ValuesBucket & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 
@@ -183,7 +183,7 @@ beginTransaction(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#begintransaction)
+**替代接口：** [beginTransaction](arkts-arkdata-relationalstore-rdbstore-i.md#beginTransaction)
 
 <!--Device-RdbStore-beginTransaction(): void--><!--Device-RdbStore-beginTransaction(): void-End-->
 
@@ -230,7 +230,7 @@ commit(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
+**替代接口：** [commit](arkts-arkdata-relationalstore-rdbstore-i.md#commit)
 
 <!--Device-RdbStore-commit(): void--><!--Device-RdbStore-commit(): void-End-->
 
@@ -277,7 +277,7 @@ delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+**替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-delete(predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -316,7 +316,7 @@ delete(predicates: RdbPredicates): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
+**替代接口：** [delete](arkts-arkdata-relationalstore-rdbstore-i.md#delete)
 
 <!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-delete(predicates: RdbPredicates): Promise<number>-End-->
 
@@ -332,7 +332,7 @@ delete(predicates: RdbPredicates): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 
@@ -359,7 +359,7 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void--><!--Device-RdbStore-executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void>): void-End-->
 
@@ -370,7 +370,7 @@ executeSql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| bindArgs | Array&lt;ValueType&gt; | 是 |
+| bindArgs | Array & lt;ValueType & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
@@ -398,7 +398,7 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executesql)
+**替代接口：** [executeSql](arkts-arkdata-relationalstore-rdbstore-i.md#executeSql)
 
 <!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>--><!--Device-RdbStore-executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>-End-->
 
@@ -409,13 +409,13 @@ executeSql(sql: string, bindArgs?: Array<ValueType>): Promise<void>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| bindArgs | Array&lt;ValueType&gt; | 否 |
+| bindArgs | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -441,7 +441,7 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+**替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-RdbStore-insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): void-End-->
 
@@ -496,7 +496,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
+**替代接口：** [insert](arkts-arkdata-relationalstore-rdbstore-i.md#insert)
 
 <!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>--><!--Device-RdbStore-insert(table: string, values: ValuesBucket): Promise<number>-End-->
 
@@ -513,7 +513,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 
@@ -554,14 +554,14 @@ obtainDistributedTableName(device: string, table: string, callback: AsyncCallbac
 > **说明：**
 > 
 > 其中device通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
+**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -614,14 +614,14 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 > **说明：**
 > 
 > 其中device通过调用&lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#gettrusteddevicelistsync)
+> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
 > 方法得到。&lt;!--RP1End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtaindistributedtablename)
+**替代接口：** [obtainDistributedTableName](arkts-arkdata-relationalstore-rdbstore-i.md#obtainDistributedTableName)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -640,7 +640,7 @@ obtainDistributedTableName(device: string, table: string): Promise<string>
 
 | 类型 |
 | --- |
-| Promise&lt;string&gt; |
+| Promise & lt;string & gt; |
 
 ## 示例
 
@@ -679,7 +679,7 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.data.relationalStore:relationalStore.RdbStore.off
+**替代接口：** [off](@ohos.data.relationalStore:relationalStore.RdbStore.off)
 
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -721,7 +721,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 
 **废弃版本：** 9
 
-**替代接口：** @ohos.data.relationalStore:relationalStore.RdbStore.on
+**替代接口：** [on](@ohos.data.relationalStore:relationalStore.RdbStore.on)
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -763,7 +763,7 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+**替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -774,7 +774,7 @@ query(predicates: RdbPredicates, columns: Array<string>, callback: AsyncCallback
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array&lt;string&gt; | 是 |
+| columns | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
 
 ## 示例
@@ -804,7 +804,7 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
+**替代接口：** [query](arkts-arkdata-relationalstore-rdbstore-i.md#query)
 
 <!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>--><!--Device-RdbStore-query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>-End-->
 
@@ -815,13 +815,13 @@ query(predicates: RdbPredicates, columns?: Array<string>): Promise<ResultSet>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | predicates | [RdbPredicates](arkts-arkdata-rdb-rdbpredicates-c.md) | 是 |
-| columns | Array&lt;string&gt; | 否 |
+| columns | Array & lt;string & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ResultSet&gt; |
+| Promise & lt;ResultSet & gt; |
 
 ## 示例
 
@@ -849,7 +849,7 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void--><!--Device-RdbStore-querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<ResultSet>): void-End-->
 
@@ -860,7 +860,7 @@ querySql(sql: string, bindArgs: Array<ValueType>, callback: AsyncCallback<Result
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| bindArgs | Array&lt;ValueType&gt; | 是 |
+| bindArgs | Array & lt;ValueType & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ResultSet&gt; | 是 |
 
 ## 示例
@@ -888,7 +888,7 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querysql)
+**替代接口：** [querySql](arkts-arkdata-relationalstore-rdbstore-i.md#querySql)
 
 <!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>--><!--Device-RdbStore-querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>-End-->
 
@@ -899,13 +899,13 @@ querySql(sql: string, bindArgs?: Array<ValueType>): Promise<ResultSet>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | sql | string | 是 |
-| bindArgs | Array&lt;ValueType&gt; | 否 |
+| bindArgs | Array & lt;ValueType & gt; | 否 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;ResultSet&gt; |
+| Promise & lt;ResultSet & gt; |
 
 ## 示例
 
@@ -931,7 +931,7 @@ rollBack(): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollback)
+**替代接口：** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollBack)
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 
@@ -983,7 +983,7 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
+**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -995,7 +995,7 @@ setDistributedTables(tables: Array<string>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tables | Array&lt;string&gt; | 是 |
+| [tables](arkts-arkdata-cloudextension-database-i-sys.md) | Array & lt;string & gt; | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 ## 示例
@@ -1022,7 +1022,7 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setdistributedtables)
+**替代接口：** [setDistributedTables](arkts-arkdata-relationalstore-rdbstore-i.md#setDistributedTables)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1034,13 +1034,13 @@ setDistributedTables(tables: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| tables | Array&lt;string&gt; | 是 |
+| [tables](arkts-arkdata-cloudextension-database-i-sys.md) | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 ## 示例
 
@@ -1065,7 +1065,7 @@ sync(mode: SyncMode, predicates: RdbPredicates, callback: AsyncCallback<Array<[s
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+**替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1126,7 +1126,7 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
+**替代接口：** [sync](arkts-arkdata-relationalstore-rdbstore-i.md#sync)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1145,7 +1145,7 @@ sync(mode: SyncMode, predicates: RdbPredicates): Promise<Array<[string, number]>
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;[string, number]&gt;&gt; |
+| Promise & lt;Array & lt;[string, number] & gt; & gt; |
 
 ## 示例
 
@@ -1191,7 +1191,7 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+**替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<number>): void-End-->
 
@@ -1248,7 +1248,7 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.data.relationalStore:relationalStore.RdbStore.update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
+**替代接口：** [update](arkts-arkdata-relationalstore-rdbstore-i.md#update)
 
 <!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>--><!--Device-RdbStore-update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>-End-->
 
@@ -1265,7 +1265,7 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 | 类型 |
 | --- |
-| Promise&lt;number&gt; |
+| Promise & lt;number & gt; |
 
 ## 示例
 

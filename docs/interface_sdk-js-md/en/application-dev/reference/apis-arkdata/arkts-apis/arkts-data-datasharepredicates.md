@@ -7,7 +7,7 @@ The APIs provided by **DataSharePredicates** correspond to the filter criteria o
 **DataSharePredicates** applies to the following scenario:
 
 - It is used as a search criterion in the media file management service. For details, see  
-[FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md) in the fetch options of the album management. In this scenario, you do not need to pay attention to the database type.
+[FetchOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions) in the fetch options of the album management. In this scenario, you do not need to pay attention to the database type.
 
 &lt;!--Del--&gt;
 
@@ -30,7 +30,7 @@ The APIs provided by **DataSharePredicates** correspond to the filter criteria o
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from 'kits/@kit.ArkData';
+import { dataSharePredicates } from '@kit.ArkData';
 ```
 
 ## Summary

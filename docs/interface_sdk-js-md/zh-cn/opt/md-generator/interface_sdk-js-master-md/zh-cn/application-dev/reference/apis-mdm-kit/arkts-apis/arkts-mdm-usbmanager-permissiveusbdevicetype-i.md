@@ -2,10 +2,10 @@
 
 USB设备类型信息，支持部分字段匹配。
 
-- 与[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md)相比，本接口的subClass、protocol、descriptor字段为可选字段，实现更灵活的USB设备禁用策略。  
+- 与[UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md#UsbDeviceType)相比，本接口的subClass、protocol、descriptor字段为可选字段，实现更灵活的USB设备禁用策略。  
 - 支持仅根据baseClass字段进行匹配。  
 - 支持配置多个字段，多个字段同时满足才匹配。  
-- 可通过[getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md/arkts-basicservices-usbmanager-getdevices-f.md#getdevices)接口获取已接入主设备的USB设备列表，并从返回值列表中查找当前设备的类型信息。
+- 可通过[getDevices](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-usbmanager-getdevices-f.md#getDevices)接口获取已接入主设备的USB设备列表，并从返回值列表中查找当前设备的类型信息。
 
 **起始版本：** 26.0.0
 

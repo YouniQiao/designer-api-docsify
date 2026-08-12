@@ -11,7 +11,7 @@ Provides the flag attributes of this window.
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from 'kits/@kit.TestKit';
+import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
 ```
 
 ## active
@@ -40,7 +40,7 @@ actived?: boolean
 
 Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
 
-This API is supported since API version 9 and deprecated since API version 11. You are advised to use{@link WindowFilter#active} instead.
+This API is supported since API version 9 and deprecated since API version 11. You are advised to use[active](#active) instead.
 
 **Type:** boolean
 
@@ -48,7 +48,7 @@ This API is supported since API version 9 and deprecated since API version 11. Y
 
 **Deprecated since:** 11
 
-**Substitutes:** ohos.UiTest.WindowFilter#active
+**Substitutes:** [active](ohos.UiTest.WindowFilter#active)
 
 <!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 

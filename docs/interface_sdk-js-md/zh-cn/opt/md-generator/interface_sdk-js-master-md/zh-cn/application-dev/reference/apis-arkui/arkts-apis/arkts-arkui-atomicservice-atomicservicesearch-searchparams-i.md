@@ -82,7 +82,7 @@ cancelIcon?: IconOptions
 
 当style为CancelButtonStyle.CONSTANT时，默认显示清除样式。
 
-**类型：** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md)
+**类型：** IconOptions
 
 **起始版本：** 18
 
@@ -136,7 +136,7 @@ copyOptions?: CopyOptions
 
 输入的文本是否可复制。默认值：`CopyOptions.LocalDevice`，支持设备内复制。
 
-**类型：** [CopyOptions](arkts-arkui-copyoptions-e.md)
+**类型：** CopyOptions
 
 **起始版本：** 18
 
@@ -246,7 +246,7 @@ enterKeyType?: EnterKeyType
 
 输入法回车键类型。默认值：`EnterKeyType.Search`。
 
-**类型：** [EnterKeyType](../arkts-components/arkts-arkui-enterkeytype-e.md)
+**类型：** EnterKeyType
 
 **起始版本：** 18
 
@@ -422,7 +422,7 @@ onCopy?: Callback<string>
 
 进行复制操作时，触发该回调，string为被复制的文本内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
 
@@ -440,7 +440,7 @@ onCut?: Callback<string>
 
 进行剪切操作时，触发该回调，string为被剪切的文本内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt;
+**类型：** Callback&lt;string&gt;
 
 **起始版本：** 18
 
@@ -458,7 +458,7 @@ onDidDelete?: Callback<DeleteValue>
 
 在删除完成时触发该回调，在onWillDelete之后触发。当onWillDelete返回false拦截删除操作时，该回调不触发。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeleteValue&gt;
+**类型：** Callback&lt;[DeleteValue](arkts-arkui-deletevalue-i.md)&gt;
 
 **起始版本：** 18
 
@@ -476,7 +476,7 @@ onDidInsert?: Callback<InsertValue>
 
 在输入完成时触发该回调，在onWillInsert之后触发。当onWillInsert返回false拦截插入操作时，该回调不触发。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InsertValue&gt;
+**类型：** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md)&gt;
 
 **起始版本：** 18
 
@@ -494,7 +494,7 @@ onEditChange?: Callback<boolean>
 
 输入状态变化时，触发该回调。有光标时为编辑态，无光标时为非编辑态。isEditing为true表示正在输入。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;
+**类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 18
 
@@ -512,7 +512,7 @@ onSubmit?: Callback<string> | SearchSubmitCallback
 
 点击搜索图标、搜索按钮或者按下软键盘搜索按钮时触发该回调。string为当前搜索框中输入的文本内容。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; \| SearchSubmitCallback
+**类型：** Callback&lt;string&gt; \| [SearchSubmitCallback](../arkts-components/arkts-arkui-searchsubmitcallback-t.md)
 
 **起始版本：** 18
 
@@ -530,7 +530,7 @@ onWillDelete?: Callback<DeleteValue, boolean>
 
 在将要删除时，触发该回调。true表示正常删除，false表示不删除。默认值为`undefined`。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;DeleteValue, boolean&gt;
+**类型：** Callback&lt;[DeleteValue](arkts-arkui-deletevalue-i.md), boolean&gt;
 
 **起始版本：** 18
 
@@ -548,7 +548,7 @@ onWillInsert?: Callback<InsertValue, boolean>
 
 在将要输入时，触发该回调。true表示将输入内容正常插入结果字符串，false表示不插入。默认值为`undefined`。当enablePreviewText为true时，不触发本回调。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;InsertValue, boolean&gt;
+**类型：** Callback&lt;[InsertValue](arkts-arkui-insertvalue-i.md), boolean&gt;
 
 **起始版本：** 18
 
@@ -584,7 +584,7 @@ placeholderFont?: Font
 
 设置placeholder文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
-**类型：** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 18
 
@@ -646,7 +646,7 @@ searchIcon?: IconOptions | SymbolGlyphModifier
 
 深色模式默认值：`{size: '16vp', color: '#99ffffff', src: ' '}`。
 
-**类型：** [IconOptions](../arkts-components/arkts-arkui-iconoptions-i.md) \| SymbolGlyphModifier
+**类型：** IconOptions \| [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 18
 
@@ -700,7 +700,7 @@ textAlign?: TextAlign
 
 文本在搜索框中的对齐方式。默认值：`TextAlign.Start`。
 
-**类型：** [TextAlign](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-textalign-e.md)
+**类型：** TextAlign
 
 **起始版本：** 18
 
@@ -718,7 +718,7 @@ textFont?: Font
 
 设置搜索框内输入文本样式，包括字体大小、字体粗细、字体族、字体风格。目前仅支持默认字体族。默认值：`{size: \$r('sys.float.ohos_id_text_size_body1')}`。
 
-**类型：** [Font](arkts-arkui-arkui-uicontext-font-c.md)
+**类型：** Font
 
 **起始版本：** 18
 

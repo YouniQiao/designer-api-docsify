@@ -5,7 +5,7 @@ VideoControllerAsync是VideoController的异步版本，可以通过Promise获�
 > **说明：**
 > 
 > VideoControllerAsync提供命令执行结果。与VideoController相比，[start](arkts-arkui-videocontroller-c.md#start)、
-> [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](arkts-arkui-videocontrollerasync-c.md#reset)等播
+> [pause](arkts-arkui-videocontroller-c.md#pause)、[stop](arkts-arkui-videocontroller-c.md#stop)、[reset](#reset)等播
 > 放控制命令为异步执行，请求后立即返回不阻塞当前线程，可通过Promise的then和catch方法处理命令执行结果。
 
 ## 导入对象
@@ -172,8 +172,8 @@ setCurrentTime(value: double, seekMode?: SeekMode)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 视频播放进度位置。 &lt;br&gt;取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md)] &lt;br&gt;当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 &lt;br&gt;单位：s |
-| seekMode | [SeekMode](../arkts-apis/arkts-arkui-video-seekmode-e.md) | 否 | 跳转模式。 &lt;br&gt;异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 &lt;br&gt;默认值：PreviousKeyframe |
+| value | double | 是 | 视频播放进度位置。 &lt;br&gt;取值范围：[0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)] &lt;br&gt;当设置value大于duration时，进度跳转至最后；当设置value小于0时，不会进行进度跳转。 &lt;br&gt;单位：s |
+| seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | 否 | 跳转模式。 &lt;br&gt;异常值undefined、null、NaN和Infinity按PreviousKeyframe处理。 &lt;br&gt;默认值：PreviousKeyframe |
 
 ## start
 

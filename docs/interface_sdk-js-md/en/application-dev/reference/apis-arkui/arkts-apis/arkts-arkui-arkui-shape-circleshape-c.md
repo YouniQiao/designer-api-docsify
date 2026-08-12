@@ -2,7 +2,7 @@
 
 Defines a circle drawing class.
 
-**Inheritance/Implementation:** CircleShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md)
+**Inheritance/Implementation:** CircleShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Defines a circle drawing class.
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from 'kits/@kit.ArkUI';
+import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ```
 
 ## constructor

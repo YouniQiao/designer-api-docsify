@@ -14,7 +14,7 @@ Obtains the number of active notifications of this application. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getActiveNotificationCount
+**Substitutes:** [getActiveNotificationCount](ohos.notificationManager/notificationManager#getActiveNotificationCount)
 
 <!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void--><!--Device-notification-function getActiveNotificationCount(callback: AsyncCallback<number>): void-End-->
 
@@ -24,7 +24,7 @@ Obtains the number of active notifications of this application. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 
 ## getActiveNotificationCount
@@ -41,7 +41,7 @@ Obtains the number of active notifications of this application. This API uses a 
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.notificationManager/notificationManager#getActiveNotificationCount
+**Substitutes:** [getActiveNotificationCount](ohos.notificationManager/notificationManager#getActiveNotificationCount)
 
 <!--Device-notification-function getActiveNotificationCount(): Promise<number>--><!--Device-notification-function getActiveNotificationCount(): Promise<number>-End-->
 

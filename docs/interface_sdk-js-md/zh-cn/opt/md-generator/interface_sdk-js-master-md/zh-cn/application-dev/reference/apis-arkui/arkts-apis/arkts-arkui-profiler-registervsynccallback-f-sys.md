@@ -20,4 +20,4 @@ function registerVsyncCallback(callback: (info: string) => void): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | (info: string) =&gt; void | 是 |
+| callback | (info: string) = & gt; void | 是 |

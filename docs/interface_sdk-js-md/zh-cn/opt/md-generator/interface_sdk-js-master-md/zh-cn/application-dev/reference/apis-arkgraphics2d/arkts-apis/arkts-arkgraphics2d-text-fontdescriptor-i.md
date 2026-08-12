@@ -364,7 +364,7 @@ variationAxisRecords?: Array<FontVariationAxis>
 
 字体可变轴记录数组，用于描述字体支持的可变轴信息。非可变字体此字段为undefined。
 
-**类型：** Array&lt;FontVariationAxis&gt;
+**类型：** Array&lt;[FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md)&gt;
 
 **起始版本：** 24
 
@@ -382,7 +382,7 @@ variationInstanceRecords?: Array<FontVariationInstance>
 
 字体可变实例记录数组，用于描述字体支持的可变实例信息。非可变字体此字段为undefined。
 
-**类型：** Array&lt;FontVariationInstance&gt;
+**类型：** Array&lt;[FontVariationInstance](arkts-arkgraphics2d-text-fontvariationinstance-i.md)&gt;
 
 **起始版本：** 24
 
@@ -418,7 +418,7 @@ weight?: FontWeight
 
 字体字重，默认值为0。
 
-**类型：** [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md)
+**类型：** FontWeight
 
 **起始版本：** 14
 

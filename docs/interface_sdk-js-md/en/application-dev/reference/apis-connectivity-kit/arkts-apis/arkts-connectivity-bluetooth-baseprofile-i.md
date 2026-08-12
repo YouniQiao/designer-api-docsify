@@ -8,7 +8,7 @@ Base interface of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BaseProfile
+**Substitutes:** [BaseProfile](ohos.bluetoothManager/bluetoothManager.BaseProfile)
 
 <!--Device-bluetooth-interface BaseProfile--><!--Device-bluetooth-interface BaseProfile-End-->
 
@@ -17,7 +17,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from 'kits/@kit.ConnectivityKit';
+import { bluetooth } from '@kit.ConnectivityKit';
 ```
 
 ## getConnectionDevices
@@ -34,7 +34,7 @@ Obtains the connected devices list of profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BaseProfile#getConnectionDevices
+**Substitutes:** [getConnectionDevices](ohos.bluetoothManager/bluetoothManager.BaseProfile#getConnectionDevices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -69,7 +69,7 @@ Obtains the profile state of device.
 
 **Deprecated since:** 9
 
-**Substitutes:** ohos.bluetoothManager/bluetoothManager.BaseProfile#getDeviceState
+**Substitutes:** [getDeviceState](ohos.bluetoothManager/bluetoothManager.BaseProfile#getDeviceState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -87,7 +87,7 @@ Obtains the profile state of device.
 
 | Type | Description |
 | --- | --- |
-| [ProfileConnectionState](arkts-connectivity-baseprofile-profileconnectionstate-t.md) | Returns { |
+| ProfileConnectionState | Returns { |
 
 ## Examples
 

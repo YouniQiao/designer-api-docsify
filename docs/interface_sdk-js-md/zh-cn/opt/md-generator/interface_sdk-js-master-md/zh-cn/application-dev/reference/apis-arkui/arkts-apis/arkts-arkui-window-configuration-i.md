@@ -124,7 +124,7 @@ windowType: WindowType
 
 窗口类型。
 
-**类型：** [WindowType](../../apis-accessibility-kit/arkts-apis/arkts-accessibility-windowtype-t.md)
+**类型：** WindowType
 
 **起始版本：** 9
 

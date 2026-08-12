@@ -15,7 +15,7 @@ Wi-Fi hotspot configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from 'kits/@kit.ConnectivityKit';
+import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 ## band
@@ -126,7 +126,7 @@ securityType: WifiSecurityType
 
 The encryption mode of the Wi-Fi hotspot
 
-**Type:** [WifiSecurityType](../../apis-mdm-kit/arkts-apis/arkts-mdm-wifimanager-wifisecuritytype-e.md)
+**Type:** WifiSecurityType
 
 **Since:** 9
 

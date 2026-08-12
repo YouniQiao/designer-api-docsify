@@ -8,7 +8,7 @@ function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: numbe
 
 标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。
 
-finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace)对应参数值一致。
+finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)对应参数值一致。
 
 **起始版本：** 19
 

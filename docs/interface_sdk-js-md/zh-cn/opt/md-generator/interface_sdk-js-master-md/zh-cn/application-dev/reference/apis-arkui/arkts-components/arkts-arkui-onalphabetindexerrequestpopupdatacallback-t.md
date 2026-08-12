@@ -26,4 +26,4 @@ declare type OnAlphabetIndexerRequestPopupDataCallback  = (index: number) => Arr
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |

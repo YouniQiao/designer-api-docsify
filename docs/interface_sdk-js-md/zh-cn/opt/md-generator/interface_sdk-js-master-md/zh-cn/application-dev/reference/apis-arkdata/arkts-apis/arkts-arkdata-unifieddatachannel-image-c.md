@@ -1,8 +1,8 @@
 # Image
 
-图片类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md)的子类，用于描述图片文件。
+图片类型数据，是[File](arkts-arkdata-unifieddatachannel-file-c.md#File)的子类，用于描述图片文件。
 
-**继承/实现关系：** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md)
+**继承/实现关系：** Image extends [File](arkts-arkdata-unifieddatachannel-file-c.md#File)
 
 **起始版本：** 10
 
@@ -16,7 +16,7 @@
 set imageUri(value: string)
 ```
 
-本地图片数据uri或网络图片uri，本地图片数据uri可通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md/arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath)函数获取。
+本地图片数据uri或网络图片uri，本地图片数据uri可通过[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath)函数获取。
 
 **类型：** string
 

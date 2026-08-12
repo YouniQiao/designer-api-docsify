@@ -34,11 +34,11 @@ abstract initialize(value: Array<SelectOption>): SelectAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;[SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)&gt; | 是 |  |
+| value | Array&lt;SelectOption&gt; | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [SelectAttribute](../arkts-components/arkts-arkui-select-attribute.md) |  |
+| SelectAttribute |  |
 

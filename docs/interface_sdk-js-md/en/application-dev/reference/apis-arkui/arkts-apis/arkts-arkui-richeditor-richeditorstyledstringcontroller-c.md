@@ -2,7 +2,7 @@
 
 Provides Controller for RichEditor with StyledString.
 
-**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md) and implements [StyledStringController](arkts-arkui-textcommon-styledstringcontroller-i.md)
+**Inheritance/Implementation:** RichEditorStyledStringController extends [RichEditorBaseController](arkts-arkui-richeditor-richeditorbasecontroller-c.md#RichEditorBaseController) and implements [StyledStringController](StyledStringController)
 
 **Since:** 23
 
@@ -34,7 +34,7 @@ Get the selection in the StyledString of the RichEditor.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorRange](../arkts-components/arkts-arkui-richeditorrange-i.md) |  |
+| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) |  |
 
 ## getStyledString
 
@@ -58,7 +58,7 @@ Get the StyledString of the RichEditor.
 
 | Type | Description |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-mutablestyledstring-c.md) |  |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) |  |
 
 ## onContentChanged
 
@@ -82,7 +82,7 @@ Register content changed listener
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| listener | [StyledStringChangedListener](arkts-arkui-styledstringchangedlistener-i.md) | Yes | content changed listener. |
+| listener | [StyledStringChangedListener](arkts-arkui-textcommon-styledstringchangedlistener-i.md) | Yes | content changed listener. |
 
 ## setStyledString
 
@@ -106,5 +106,5 @@ Set the StyledString of the RichEditor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-c.md) | Yes | StyledString. |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | Yes | StyledString. |
 

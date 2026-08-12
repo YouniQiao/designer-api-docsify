@@ -22,17 +22,17 @@ function evictModuleFilePages(moduleNames: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| moduleNames | Array&lt;string&gt; | 是 |
+| moduleNames | Array & lt;string & gt; | 是 |
 
 **返回值：**
 
 | 类型 |
 | --- |
-| Promise&lt;void&gt; |
+| Promise & lt;void & gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [16000164](../errorcode-ability.md#16000164-解析配置文件失败) |
-| [16000163](../errorcode-ability.md#16000163-文件类型错误) |
+| [16000164](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000164-解析配置文件失败) |
+| [16000163](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000163-文件类型错误) |

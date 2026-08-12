@@ -18,7 +18,7 @@ child: Scroller
 
 可滚动容器组件的控制器，child对应的组件需要是parent对应组件的子组件，且组件间存在嵌套滚动关系。
 
-**类型：** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**类型：** Scroller
 
 **起始版本：** 14
 
@@ -40,7 +40,7 @@ parent: Scroller
 
 可滚动容器组件的控制器。
 
-**类型：** [Scroller](../arkts-apis/arkts-arkui-scroll-scroller-c.md)
+**类型：** Scroller
 
 **起始版本：** 14
 

@@ -24,13 +24,13 @@ Defines Search Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SearchOptions](../arkts-components/arkts-arkui-searchoptions-i.md) | No |  |
+| options | [SearchOptions](arkts-arkui-search-searchoptions-i.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md) |  |
+| [SearchAttribute](arkts-arkui-search-searchattribute-i.md) |  |
 
 
 ## Search
@@ -59,11 +59,11 @@ Defines Search Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](../arkts-components/arkts-arkui-custombuildert-t.md)&lt;SearchAttribute&gt; | Yes | Search attribute instance |
+| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SearchAttribute](arkts-arkui-search-searchattribute-i.md)&gt; | Yes | Search attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SearchAttribute](../arkts-components/arkts-arkui-search-attribute.md) |  |
+| [SearchAttribute](arkts-arkui-search-searchattribute-i.md) |  |
 

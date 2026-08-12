@@ -13,7 +13,7 @@ Defines the subscription/unsubscription result of the changes in the published d
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from 'kits/@kit.ArkData';
+import { dataShare } from '@kit.ArkData';
 ```
 
 ## bundleName
@@ -44,7 +44,7 @@ data: Array<PublishedItem>
 
 Data of the callback.
 
-**Type:** Array&lt;PublishedItem&gt;
+**Type:** Array&lt;[PublishedItem](arkts-arkdata-datashare-publisheditem-i.md)&gt;
 
 **Since:** 10
 

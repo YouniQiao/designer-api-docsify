@@ -3,7 +3,7 @@
 > **说明：**
 > 
 > 从API version 12开始支持，从API version 20开始废弃，建议使用
-> [editMenuOptions](../arkts-apis/arkts-arkweb-web-webattribute-i.md/arkts-arkweb-web-webattribute-i.md#editmenuoptions)替代。
+> [editMenuOptions](WebAttribute#editmenuoptions)替代。
 > 自定义菜单扩展项。
 
 **起始版本：** 12
@@ -12,7 +12,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](EditMenuOptions)
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -32,7 +32,7 @@ action: (selectedText: {plainText: string}) => void
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +54,7 @@ content: ResourceStr
 
 显示内容。
 
-**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -62,7 +62,7 @@ content: ResourceStr
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +78,7 @@ startIcon?: ResourceStr
 
 显示图标。默认值为空，不显示图标。
 
-**类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
+**类型：** ResourceStr
 
 **起始版本：** 12
 
@@ -86,7 +86,7 @@ startIcon?: ResourceStr
 
 **废弃版本：** 20
 
-**替代接口：** [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-textcommon-editmenuoptions-i.md/arkts-arkui-textcommon-editmenuoptions-i.md)
+**替代接口：** [EditMenuOptions](EditMenuOptions)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

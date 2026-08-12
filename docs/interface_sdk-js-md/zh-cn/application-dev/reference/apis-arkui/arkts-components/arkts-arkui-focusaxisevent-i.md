@@ -1,8 +1,8 @@
 # FocusAxisEvent
 
-焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md)。
+焦点轴事件的对象说明，继承于[BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)。
 
-**继承/实现关系：** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md)
+**继承/实现关系：** FocusAxisEvent extends [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent)
 
 **起始版本：** 15
 
@@ -20,7 +20,7 @@ axisMap: Map<AxisModel, number>
 
 焦点轴事件的轴值表。
 
-**类型：** Map&lt;[AxisModel](../arkts-apis/arkts-arkui-axismodel-e.md), number&gt;
+**类型：** Map&lt;AxisModel, number&gt;
 
 **起始版本：** 15
 
@@ -42,7 +42,7 @@ stopPropagation: Callback<void>
 
 阻塞[事件冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)传递。
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**类型：** [Callback](arkts-arkui-callback-i.md)&lt;void&gt;
 
 **起始版本：** 15
 

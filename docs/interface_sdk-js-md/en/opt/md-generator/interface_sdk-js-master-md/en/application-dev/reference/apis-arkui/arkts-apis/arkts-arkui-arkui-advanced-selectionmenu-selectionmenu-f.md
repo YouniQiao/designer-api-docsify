@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from 'kits/@kit.ArkUI';
+import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu, ExpandedMenuOptions } from '@kit.ArkUI';
 ```
 
 ## SelectionMenu
@@ -13,7 +13,7 @@ export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
 Defines a **SelectionMenu** component. When the input parameter is empty, both the component and its content area have a zero size, making the component invisible. For example, when a **SelectionMenu** component activated via right  
--click is bound to a [RichEditor](../../apis-arkui/arkts-components/arkts-arkui-rich_editor-i) component using  
+-click is bound to a [RichEditor](./@internal/component/ets/rich_editor) component using  
 [bindSelectionMenu](RichEditorAttribute#bindSelectionMenu), it will not be displayed when the **RichEditor**component receives a right-click event.
 
 **Since:** 11

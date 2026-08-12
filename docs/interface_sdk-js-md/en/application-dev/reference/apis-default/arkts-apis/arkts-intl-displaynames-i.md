@@ -46,5 +46,5 @@ Returns a new object with properties reflecting the locale and style formatting 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedDisplayNamesOptions](../../apis-arkts/arkts-apis/arkts-arkts-intl-resolveddisplaynamesoptions-i.md) |  |
+| ResolvedDisplayNamesOptions |  |
 

@@ -39,7 +39,7 @@ readonly navDestinationName: string
 readonly navigationId: string
 ```
 
-表示与意图绑定[Navigation](../../apis-arkui/arkts-components/arkts-arkui-navigation-i)的id。
+表示与意图绑定[Navigation](@internal/component/ets/navigation)的id。
 
 **类型：** string
 

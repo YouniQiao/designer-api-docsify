@@ -6,7 +6,7 @@
 const ABILITY_MANAGER: long
 ```
 
-����������ǩ��hitrace�����й��߶�ӦtagName:ability��
+能力管理标签，hitrace命令行工具对应tagName:ability。
 
 **起始版本：** 12
 
@@ -22,7 +22,7 @@ const ABILITY_MANAGER: long
 const ARK: long
 ```
 
-JSVM�������ǩ��hitrace�����й��߶�ӦtagName:ark��
+JSVM虚拟机标签，hitrace命令行工具对应tagName:ark。
 
 **起始版本：** 12
 
@@ -38,7 +38,7 @@ JSVM�������ǩ��hitrace�����й��߶�ӦtagName:ar
 const ARKUI: long
 ```
 
-ArkUI������ܱ�ǩ��hitrace�����й��߶�ӦtagName:ace��
+ArkUI开发框架标签，hitrace命令行工具对应tagName:ace。
 
 **起始版本：** 12
 
@@ -54,7 +54,7 @@ ArkUI������ܱ�ǩ��hitrace�����й��߶�ӦtagName
 const AUDIO: long
 ```
 
-��Ƶģ���ǩ��hitrace�����й��߶�ӦtagName:zaudio��
+音频模块标签，hitrace命令行工具对应tagName:zaudio。
 
 **起始版本：** 12
 
@@ -70,7 +70,7 @@ const AUDIO: long
 const BLUETOOTH: long
 ```
 
-������ǩ��hitrace�����й��߶�ӦtagName:bluetooth��
+蓝牙标签，hitrace命令行工具对应tagName:bluetooth。
 
 **起始版本：** 12
 
@@ -86,7 +86,7 @@ const BLUETOOTH: long
 const CAMERA: long
 ```
 
-���ģ���ǩ��hitrace�����й��߶�ӦtagName:zcamera��
+相机模块标签，hitrace命令行工具对应tagName:zcamera。
 
 **起始版本：** 12
 
@@ -102,7 +102,7 @@ const CAMERA: long
 const COMMON_LIBRARY: long
 ```
 
-��������ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:commonlibrary��
+公共库子系统标签，hitrace命令行工具对应tagName:commonlibrary。
 
 **起始版本：** 12
 
@@ -118,7 +118,7 @@ const COMMON_LIBRARY: long
 const DISTRIBUTED_AUDIO: long
 ```
 
-�ֲ�ʽ��Ƶ��ǩ��hitrace�����й��߶�ӦtagName:daudio��
+分布式音频标签，hitrace命令行工具对应tagName:daudio。
 
 **起始版本：** 12
 
@@ -134,7 +134,7 @@ const DISTRIBUTED_AUDIO: long
 const DISTRIBUTED_CAMERA: long
 ```
 
-�ֲ�ʽ�����ǩ��hitrace�����й��߶�ӦtagName:dcamera��
+分布式相机标签，hitrace命令行工具对应tagName:dcamera。
 
 **起始版本：** 12
 
@@ -150,7 +150,7 @@ const DISTRIBUTED_CAMERA: long
 const DISTRIBUTED_DATA: long
 ```
 
-�ֲ�ʽ���ݹ���ģ���ǩ��hitrace�����й��߶�ӦtagName:distributeddatamgr��
+分布式数据管理模块标签，hitrace命令行工具对应tagName:distributeddatamgr。
 
 **起始版本：** 12
 
@@ -166,7 +166,7 @@ const DISTRIBUTED_DATA: long
 const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long
 ```
 
-�ֲ�ʽӲ���豸������ǩ��hitrace�����й��߶�ӦtagName:devicemanager��
+分布式硬件设备管理标签，hitrace命令行工具对应tagName:devicemanager。
 
 **起始版本：** 12
 
@@ -182,7 +182,7 @@ const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long
 const DISTRIBUTED_HARDWARE_FRAMEWORK: long
 ```
 
-�ֲ�ʽӲ����ܱ�ǩ��hitrace�����й��߶�ӦtagName:dhfwk��
+分布式硬件框架标签，hitrace命令行工具对应tagName:dhfwk。
 
 **起始版本：** 12
 
@@ -198,7 +198,7 @@ const DISTRIBUTED_HARDWARE_FRAMEWORK: long
 const DISTRIBUTED_INPUT: long
 ```
 
-�ֲ�ʽ�����ǩ��hitrace�����й��߶�ӦtagName:dinput��
+分布式输入标签，hitrace命令行工具对应tagName:dinput。
 
 **起始版本：** 12
 
@@ -214,7 +214,7 @@ const DISTRIBUTED_INPUT: long
 const DISTRIBUTED_SCHEDULER: long
 ```
 
-�ֲ�ʽ��������ǩ��hitrace�����й��߶�ӦtagName:dsched��
+分布式调度器标签，hitrace命令行工具对应tagName:dsched。
 
 **起始版本：** 12
 
@@ -230,7 +230,7 @@ const DISTRIBUTED_SCHEDULER: long
 const DISTRIBUTED_SCREEN: long
 ```
 
-�ֲ�ʽ��Ļ��ǩ��hitrace�����й��߶�ӦtagName:dscreen��
+分布式屏幕标签，hitrace命令行工具对应tagName:dscreen。
 
 **起始版本：** 12
 
@@ -246,7 +246,7 @@ const DISTRIBUTED_SCREEN: long
 const FFRT: long
 ```
 
-FFRT�����ǩ��hitrace�����й��߶�ӦtagName:ffrt��
+FFRT任务标签，hitrace命令行工具对应tagName:ffrt。
 
 **起始版本：** 12
 
@@ -262,7 +262,7 @@ FFRT�����ǩ��hitrace�����й��߶�ӦtagName:ffrt��
 const FILE_MANAGEMENT: long
 ```
 
-�ļ�����ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:filemanagement��
+文件管理系统标签，hitrace命令行工具对应tagName:filemanagement。
 
 **起始版本：** 12
 
@@ -278,7 +278,7 @@ const FILE_MANAGEMENT: long
 const GLOBAL_RESOURCE_MANAGER: long
 ```
 
-ȫ����Դ������ǩ��hitrace�����й��߶�ӦtagName:gresource��
+全局资源管理标签，hitrace命令行工具对应tagName:gresource。
 
 **起始版本：** 12
 
@@ -294,7 +294,7 @@ const GLOBAL_RESOURCE_MANAGER: long
 const GRAPHICS: long
 ```
 
-ͼ��ģ���ǩ��hitrace�����й��߶�ӦtagName:graphic��
+图形模块标签，hitrace命令行工具对应tagName:graphic。
 
 **起始版本：** 12
 
@@ -310,7 +310,7 @@ const GRAPHICS: long
 const HDF: long
 ```
 
-HDF��ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:hdf��
+HDF子系统标签，hitrace命令行工具对应tagName:hdf。
 
 **起始版本：** 12
 
@@ -326,7 +326,7 @@ HDF��ϵͳ��ǩ��hitrace�����й��߶�ӦtagName:hdf��
 const IMAGE: long
 ```
 
-ͼƬģ���ǩ��hitrace�����й��߶�ӦtagName:zimage��
+图片模块标签，hitrace命令行工具对应tagName:zimage。
 
 **起始版本：** 12
 
@@ -342,7 +342,7 @@ const IMAGE: long
 const MEDIA: long
 ```
 
-ý��ģ���ǩ��hitrace�����й��߶�ӦtagName:zmedia��
+媒体模块标签，hitrace命令行工具对应tagName:zmedia。
 
 **起始版本：** 12
 
@@ -358,7 +358,7 @@ const MEDIA: long
 const MISC: long
 ```
 
-MISCģ���ǩ��hitrace�����й��߶�ӦtagName:misc��
+MISC模块标签，hitrace命令行工具对应tagName:misc。
 
 **起始版本：** 12
 
@@ -374,7 +374,7 @@ MISCģ���ǩ��hitrace�����й��߶�ӦtagName:misc��
 const MULTIMODAL_INPUT: long
 ```
 
-��ģ̬����ģ���ǩ��hitrace�����й��߶�ӦtagName:multimodalinput��
+多模态输入模块标签，hitrace命令行工具对应tagName:multimodalinput。
 
 **起始版本：** 12
 
@@ -390,7 +390,7 @@ const MULTIMODAL_INPUT: long
 const NET: long
 ```
 
-�����ǩ��hitrace�����й��߶�ӦtagName:net��
+网络标签，hitrace命令行工具对应tagName:net。
 
 **起始版本：** 12
 
@@ -406,7 +406,7 @@ const NET: long
 const NOTIFICATION: long
 ```
 
-֪ͨģ���ǩ��hitrace�����й��߶�ӦtagName:notification��
+通知模块标签，hitrace命令行工具对应tagName:notification。
 
 **起始版本：** 12
 
@@ -422,7 +422,7 @@ const NOTIFICATION: long
 const NWEB: long
 ```
 
-Nweb��ǩ��hitrace�����й��߶�ӦtagName:nweb��
+Nweb标签，hitrace命令行工具对应tagName:nweb。
 
 **起始版本：** 12
 
@@ -438,7 +438,7 @@ Nweb��ǩ��hitrace�����й��߶�ӦtagName:nweb��
 const OHOS: long
 ```
 
-OHOSͨ�ñ�ǩ��hitrace�����й��߶�ӦtagName:ohos��
+OHOS通用标签，hitrace命令行工具对应tagName:ohos。
 
 **起始版本：** 12
 
@@ -454,7 +454,7 @@ OHOSͨ�ñ�ǩ��hitrace�����й��߶�ӦtagName:ohos��
 const POWER_MANAGER: long
 ```
 
-��Դ������ǩ��hitrace�����й��߶�ӦtagName:power��
+电源管理标签，hitrace命令行工具对应tagName:power。
 
 **起始版本：** 12
 
@@ -470,7 +470,7 @@ const POWER_MANAGER: long
 const RPC: long
 ```
 
-RPC��ǩ��hitrace�����й��߶�ӦtagName:rpc��
+RPC标签，hitrace命令行工具对应tagName:rpc。
 
 **起始版本：** 12
 
@@ -486,7 +486,7 @@ RPC��ǩ��hitrace�����й��߶�ӦtagName:rpc��
 const SAMGR: long
 ```
 
-ϵͳ����������ǩ��hitrace�����й��߶�ӦtagName:samgr��
+系统能力管理标签，hitrace命令行工具对应tagName:samgr。
 
 **起始版本：** 12
 
@@ -502,7 +502,7 @@ const SAMGR: long
 const WINDOW_MANAGER: long
 ```
 
-���ڹ�����ǩ��hitrace�����й��߶�ӦtagName:window��
+窗口管理标签，hitrace命令行工具对应tagName:window。
 
 **起始版本：** 12
 

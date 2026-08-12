@@ -21,7 +21,7 @@ function off(type: 'colorChange', callback?: (colors: Array<RgbaColor>, wallpape
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'colorChange' | 是 |
-| callback | (colors: Array&lt;RgbaColor&gt;, wallpaperType: WallpaperType) =&gt; void | 否 |
+| callback | (colors: Array&lt;[RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)&gt;, wallpaperType: WallpaperType) =&gt; void | 否 |
 
 ## 示例
 

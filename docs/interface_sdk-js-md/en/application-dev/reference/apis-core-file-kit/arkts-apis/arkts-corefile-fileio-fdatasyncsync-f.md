@@ -14,7 +14,7 @@ Synchronizes the data of a file. This API returns the result synchronously.
 
 **Deprecated since:** 9
 
-**Substitutes:** [@ohos.file.fs:fdatasyncSync](arkts-corefile-fileio-fdatasyncsync-f.md#fdatasyncsync)
+**Substitutes:** [fdatasyncSync](arkts-corefile-file-fs-fdatasyncsync-f.md#fdatasyncSync)
 
 <!--Device-unnamed-declare function fdatasyncSync(fd: number): void--><!--Device-unnamed-declare function fdatasyncSync(fd: number): void-End-->
 

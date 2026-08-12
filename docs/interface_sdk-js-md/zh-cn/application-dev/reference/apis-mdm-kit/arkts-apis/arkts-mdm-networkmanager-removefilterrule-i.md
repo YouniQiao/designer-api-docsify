@@ -18,7 +18,7 @@ action?: Action
 
 接收或者丢弃数据包。
 
-**类型：** [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md)
+**类型：** Action
 
 **起始版本：** 10
 
@@ -78,7 +78,7 @@ direction: Direction
 
 规则链。
 
-**类型：** [Direction](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-direction-e.md)
+**类型：** Direction
 
 **起始版本：** 10
 
@@ -98,7 +98,7 @@ protocol?: Protocol
 
 网络协议。
 
-**类型：** [Protocol](arkts-mdm-networkmanager-protocol-e.md)
+**类型：** Protocol
 
 **起始版本：** 10
 

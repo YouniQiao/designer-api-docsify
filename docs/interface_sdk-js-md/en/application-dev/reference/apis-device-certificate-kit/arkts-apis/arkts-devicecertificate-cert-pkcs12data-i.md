@@ -13,7 +13,7 @@ P12(PKCS #12) data, which includes private key, certificate, and other certifica
 ## Modules to Import
 
 ```TypeScript
-import { cert } from 'kits/@kit.DeviceCertificateKit';
+import { cert } from '@kit.DeviceCertificateKit';
 ```
 
 ## cert
@@ -24,7 +24,7 @@ cert?: X509Cert
 
 The certificate that matches the private key.
 
-**Type:** [X509Cert](../../apis-network-kit/arkts-apis/arkts-network-http-x509cert-t.md)
+**Type:** X509Cert
 
 **Since:** 18
 

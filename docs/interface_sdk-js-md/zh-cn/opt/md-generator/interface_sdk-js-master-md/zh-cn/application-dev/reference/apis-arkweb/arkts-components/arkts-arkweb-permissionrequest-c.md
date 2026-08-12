@@ -60,7 +60,7 @@ Gets the resource that the webpage is trying to access.
 
 | 类型 |
 | --- |
-| Array&lt;string&gt; |
+| Array & lt;string & gt; |
 
 ## getOrigin
 
@@ -104,4 +104,4 @@ Grant origin access to a given resource.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| resources | Array&lt;string&gt; | 是 |
+| resources | Array & lt;string & gt; | 是 |

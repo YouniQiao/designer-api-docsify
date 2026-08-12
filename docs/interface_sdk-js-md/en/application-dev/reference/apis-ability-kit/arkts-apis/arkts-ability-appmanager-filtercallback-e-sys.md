@@ -1,6 +1,6 @@
 # FilterCallback (System API)
 
-Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md) to filter  the callbacks you want to listen for.
+Enumerates the callbacks to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#AppStateFilter) to filter  the callbacks you want to listen for.
 
 **Since:** 21
 

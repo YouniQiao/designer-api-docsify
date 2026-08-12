@@ -21,7 +21,6 @@
 | 名称 |
 | --- |
 | [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiavailable) |
-| [apiAvailable](arkts-basicservices-deviceinfo-apiavailable-f.md#apiavailable-1) |
 
 ### 枚举
 

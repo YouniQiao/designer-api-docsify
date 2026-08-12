@@ -15,7 +15,7 @@ Defines the agent-powered reminder state information, for which notifications ar
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from 'kits/@kit.BackgroundTasksKit';
+import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
 ## buttonType
@@ -26,7 +26,7 @@ buttonType: ActionButtonType
 
 Button type.
 
-**Type:** [ActionButtonType](arkts-backgroundtasks-reminderagentmanager-actionbuttontype-e.md)
+**Type:** ActionButtonType
 
 **Since:** 23
 

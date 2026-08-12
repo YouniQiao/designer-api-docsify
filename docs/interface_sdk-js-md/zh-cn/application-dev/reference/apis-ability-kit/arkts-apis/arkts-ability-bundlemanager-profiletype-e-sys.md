@@ -36,7 +36,7 @@ INTENT_PROFILE = 1
 CLOUD_PROFILE = 8
 ```
 
-[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md/arkts-file-cloudsync.md)配置文件。26.0.0
+[端云同步](../../apis-core-file-kit/arkts-apis/arkts-file-cloudsync.md#cloudSync)配置文件。26.0.0
 
 **起始版本：** 26.0.0
 

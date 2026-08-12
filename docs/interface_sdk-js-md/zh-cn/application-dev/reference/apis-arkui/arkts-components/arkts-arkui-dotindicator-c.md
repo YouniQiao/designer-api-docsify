@@ -1,6 +1,6 @@
 # DotIndicator
 
-构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md)。
+构造圆点指示器的样式，继承自[Indicator](arkts-arkui-indicator-c.md#Indicator)。
 
 **继承/实现关系：** DotIndicator extends [Indicator<DotIndicator>](Indicator<DotIndicator>)
 
@@ -38,13 +38,13 @@ Swiper组件圆点导航指示器的颜色。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 设置Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#1A182431'，浅灰色。 |
+| value | ResourceColor | 是 | 设置Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#1A182431'，浅灰色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## constructor
 
@@ -101,13 +101,13 @@ indicatorIcon(iconList: Array<IndicatorIconInfo>): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| iconList | Array&lt;IndicatorIconInfo&gt; | 是 | 需要设置的导航点索引。 |
+| iconList | Array&lt;[IndicatorIconInfo](arkts-arkui-indicatoriconinfo-i.md)&gt; | 是 | 需要设置的导航点索引。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回DotIndicator。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回DotIndicator。 |
 
 ## itemHeight
 
@@ -135,13 +135,13 @@ Swiper组件圆点导航指示器的高。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | Length | 是 | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## itemWidth
 
@@ -169,13 +169,13 @@ Swiper组件圆点导航指示器的宽。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | Length | 是 | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## mask
 
@@ -209,7 +209,7 @@ mask(value: boolean): DotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## maxDisplayCount
 
@@ -241,7 +241,7 @@ maxDisplayCount(maxDisplayCount: number): DotIndicator
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedColor
 
@@ -269,13 +269,13 @@ selectedColor(value: ResourceColor): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 设置选中Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#007DFF'，蓝色。 |
+| value | ResourceColor | 是 | 设置选中Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#007DFF'，蓝色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedItemHeight
 
@@ -303,13 +303,13 @@ selectedItemHeight(value: Length): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | Length | 是 | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## selectedItemWidth
 
@@ -337,13 +337,13 @@ selectedItemWidth(value: Length): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
+| value | Length | 是 | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 
 ## space
 
@@ -371,11 +371,11 @@ space(space: LengthMetrics): DotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 | 设置圆点导航点间距，不支持设置百分比。&lt;br/&gt;默认值：PC/2in1设备上为10，其他设备为8。&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：[0, +∞) |
+| space | LengthMetrics | 是 | 设置圆点导航点间距，不支持设置百分比。&lt;br/&gt;默认值：PC/2in1设备上为10，其他设备为8。&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：[0, +∞) |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DotIndicator](../arkts-apis/arkts-arkui-swiper-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
+| [DotIndicator](arkts-arkui-dotindicator-c.md) | 返回当前圆点指示器，用于支持链式调用配置其他导航点属性。 |
 

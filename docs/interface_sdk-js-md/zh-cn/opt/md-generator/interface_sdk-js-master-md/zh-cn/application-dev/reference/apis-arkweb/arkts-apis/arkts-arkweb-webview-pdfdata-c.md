@@ -1,6 +1,6 @@
 # PdfData
 
-Defines the callback of createPdf, related to {@link createPDF} method.
+Defines the callback of createPdf, related to [createPDF](createPDF) method.
 
 **起始版本：** 14
 

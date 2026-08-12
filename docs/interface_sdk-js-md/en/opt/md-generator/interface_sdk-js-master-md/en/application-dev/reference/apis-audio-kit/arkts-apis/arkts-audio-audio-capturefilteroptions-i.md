@@ -6,7 +6,7 @@ Defines the options for filtering the played audio streams to be recorded.
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-audio-interface CaptureFilterOptions--><!--Device-audio-interface CaptureFilterOptions-End-->
 
@@ -15,7 +15,7 @@ Defines the options for filtering the played audio streams to be recorded.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from 'kits/@kit.AudioKit';
+import { audio } from '@kit.AudioKit';
 ```
 
 ## usages
@@ -26,13 +26,13 @@ usages: Array<StreamUsage>
 
 Filter by stream usages. But not allow to capture voice streams.
 
-**Type:** Array&lt;StreamUsage&gt;
+**Type:** Array&lt;[StreamUsage](arkts-audio-audio-streamusage-e.md)&gt;
 
 **Since:** 11
 
 **Deprecated since:** 12
 
-**Substitutes:** OH_AVScreenCapture
+**Substitutes:** [OH_AVScreenCapture](OH_AVScreenCapture)
 
 <!--Device-CaptureFilterOptions-usages: Array<StreamUsage>--><!--Device-CaptureFilterOptions-usages: Array<StreamUsage>-End-->
 

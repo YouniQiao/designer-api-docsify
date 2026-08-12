@@ -14,7 +14,7 @@ function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.statvfs:statfs.getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes)
+**替代接口：** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
 
 <!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -58,7 +58,7 @@ function getTotalBytes(path: string): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [@ohos.file.statvfs:statfs.getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes)
+**替代接口：** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
 
 <!--Device-Statfs-function getTotalBytes(path: string): Promise<number>--><!--Device-Statfs-function getTotalBytes(path: string): Promise<number>-End-->
 

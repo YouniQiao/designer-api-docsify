@@ -28,14 +28,14 @@ export declare function Button(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | label | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 按钮文本内容。&lt;br/&gt;**说明：** 当文本字符的长度超过按钮本身的宽度时，文本将会被截断。 |
-| options | [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 否 | 配置按钮的显示样式。&lt;br/&gt; 未设置时，则按照ButtonOptions中各参数的默认值配置。 |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 否 | 配置按钮的显示样式。&lt;br/&gt; 未设置时，则按照ButtonOptions中各参数的默认值配置。 |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) |  |
 
 
 ## Button
@@ -63,12 +63,12 @@ Defines Button Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md) | 否 | the options of Button. |
-| content_ | [CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md) | 否 | container |
+| options | [ButtonOptions](arkts-arkui-button-buttonoptions-i.md) | 否 | the options of Button. |
+| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ButtonAttribute](../arkts-components/arkts-arkui-button-attribute.md) |  |
+| [ButtonAttribute](arkts-arkui-button-buttonattribute-i.md) |  |
 

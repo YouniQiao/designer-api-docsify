@@ -38,7 +38,7 @@ decorationStyle?: TextDecorationStyle
 
 装饰线样式，默认为SOLID。
 
-**类型：** [TextDecorationStyle](../../apis-arkui/arkts-apis/arkts-arkui-enums-textdecorationstyle-e.md)
+**类型：** TextDecorationStyle
 
 **起始版本：** 12
 
@@ -78,7 +78,7 @@ textDecoration?: TextDecorationType
 
 装饰线类型，默认为NONE。
 
-**类型：** [TextDecorationType](arkts-arkgraphics2d-text-textdecorationtype-e.md)
+**类型：** TextDecorationType
 
 **起始版本：** 12
 

@@ -1,7 +1,7 @@
 # BuilderNode
 
-class BuilderNode\&lt;T = undefined&gt;BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过BuilderNode的[getFrameNode](arkts-arkui-buildernode-c.md#getframenode)方法和[FrameNode](arkts-arkui-framenode-c.md)的  
-[getRenderNode](arkts-arkui-framenode-c.md#getrendernode)方法获取RenderNode，并通过[RenderNode](arkts-arkui-rendernode-c.md)的接口对其进行属性设置与子节点操作。
+class BuilderNode\&lt;T = undefined&gt;BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过BuilderNode的[getFrameNode](#getFrameNode)方法和[FrameNode](FrameNode)的  
+[getRenderNode](arkts-arkui-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](arkts-arkui-rendernode-c.md#RenderNode)的接口对其进行属性设置与子节点操作。
 
 **起始版本：** 23
 
@@ -37,7 +37,7 @@ build(builder: WrappedBuilder<CustomBuilder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;[CustomBuilder](../arkts-components/arkts-arkui-custombuilder-t.md)&gt; | 是 | 创建对应节点树的时候所需的无状态UI方法 [@Builder（ArkTS-Sta）](../../../ui/arkts-v1.2-user-defined-arktsNode-builderNode.md)封装的WrappedBuilder对象。 |
+| builder | WrappedBuilder&lt;CustomBuilder&gt; | 是 | 创建对应节点树的时候所需的无状态UI方法 [@Builder（ArkTS-Sta）](../../../ui/arkts-v1.2-user-defined-arktsNode-builderNode.md)封装的WrappedBuilder对象。 |
 
 ## build
 
@@ -72,7 +72,7 @@ build(builder: WrappedBuilder<CustomBuilderT<T>>, arg: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | 在构建节点树时所需的无状态UI方法 [@Builder（ArkTS-Sta）](../../../ui/arkts-v1.2-user-defined-arktsNode-builderNode.md)封装的WrappedBuilder对象。 |
+| builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | 在构建节点树时所需的无状态UI方法 [@Builder（ArkTS-Sta）](../../../ui/arkts-v1.2-user-defined-arktsNode-builderNode.md)封装的WrappedBuilder对象。 |
 | arg | T | 是 | builder的入参。当前仅支持一个入参，且入参对象类型与@Builder定义的入参类型保持一致。 |
 
 ## build
@@ -105,7 +105,7 @@ build(builder: WrappedBuilder<CustomBuilderT<T>>, arg: T, options: BuildOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | [WrappedBuilder](../arkts-components/arkts-arkui-wrappedbuilder-c.md)&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | 用于构建对应节点树的无状态UI方法 [@Builder（ArkTS-Sta）](../../../ui/arkts-v1.2-user-defined-arktsNode-builderNode.md)封装的WrappedBuilder对象。 |
+| builder | WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; | 是 | 用于构建对应节点树的无状态UI方法 [@Builder（ArkTS-Sta）](../../../ui/arkts-v1.2-user-defined-arktsNode-builderNode.md)封装的WrappedBuilder对象。 |
 | arg | T | 是 | builder的入参。 |
 | options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | 是 | 该值无效，默认支持@Builder参数不一致，且行为与@Builder的行为保持一致。 |
 
@@ -165,7 +165,7 @@ dispose(): void
 getFrameNode(): FrameNode | null
 ```
 
-获取BuilderNode中的[FrameNode](arkts-arkui-framenode-c.md)。在BuilderNode执行build操作之后，才会生成FrameNode。
+获取BuilderNode中的[FrameNode](FrameNode)。在BuilderNode执行build操作之后，才会生成FrameNode。
 
 **起始版本：** 23
 
@@ -253,16 +253,16 @@ offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对�
 > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
 > - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看
-> [onTouch](arkts-arkui-common-commonmethod-i.md#ontouch)。
+> [onTouch](CommonMethod#onTouch)。
 > 
-> - 注入事件为轴事件[（AxisEvent）](arkts-arkui-common-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发[RotationGesture](arkts-arkui-gesture-gesture-c.md)。
+> - 注入事件为轴事件[（AxisEvent）](AxisEvent)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发[RotationGesture](gesture)。
 > 
 > - 转发的事件会在被分发到的目标组件所在的子树里做touchtest，并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。
 > 
-> - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的[TouchType](arkts-arkui-enums-touchtype-e.md)中DOWN和UP字段都要
+> - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的[TouchType](TouchType)中DOWN和UP字段都要
 > 有，防止出现未定义行为。
 > 
-> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)已经处理过坐标系变换，可以将事件直接下发。
+> - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)已经处理过坐标系变换，可以将事件直接下发。
 > 
 > - postTouchEvent接口需要提供手势坐标相对于post事件对端内的局部坐标，postInputEvent接口需要提供手势坐标相对于post事件对端内的窗口坐标。
 > 
@@ -306,15 +306,15 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 > 
 > - 传入的坐标值单位需要转换为px，坐标转换示例可以参考下面示例代码。
 > 
-> - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，[TouchType](arkts-arkui-enums-touchtype-e.md)不会发生变化，规格可查看
-> [onTouch](arkts-arkui-common-commonmethod-i.md#ontouch)。
+> - 系统在处理鼠标左键点击事件时将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，[TouchType](TouchType)不会发生变化，规格可查看
+> [onTouch](CommonMethod#onTouch)。
 > 
-> - 注入事件为轴事件[AxisEvent](arkts-arkui-common-axisevent-i.md)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势[RotationGesture](arkts-arkui-gesture-gesture-c.md)。
+> - 注入事件为轴事件[AxisEvent](AxisEvent)时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发旋转手势[RotationGesture](gesture)。
 > 
 > - 转发的事件会在被分发到的目标组件及其子组件里做事件处理，并触发对应手势。可以通过入参控制当前组件和目标组件手势是否为竞争关系。
 > 
 > - 如果event转化为对应的事件后，该事件为开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的
-> [TouchType](arkts-arkui-enums-touchtype-e.md)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
+> [TouchType](TouchType)中必须同时包含DOWN和UP两个字段，防止出现程序异常或意外崩溃。
 > 
 > - 支持同一个事件转发多次&lt;!--Del--&gt;，不支持[UIExtensionComponent](ui_extension_component)调用本接口&lt;!--DelEnd--&gt;。
 
@@ -333,7 +333,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 | 用于事件分发的输入事件。 |
-| competitionStrategy | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | 否 | The competition strategy. |
+| competitionStrategy | CompetitionStrategy | 否 | The competition strategy. |
 
 **返回值：**
 
@@ -351,7 +351,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。
 
-OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getpositiontoparent)获取。OffsetB为point点相对于buildNode的偏移量，可以通过  
+OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getPositionToParent)获取。OffsetB为point点相对于buildNode的偏移量，可以通过  
 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。
 
 ![postTouchEvent](../../../reference/apis-arkui/figures/postTouchEvent.PNG)
@@ -360,7 +360,7 @@ OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[
 > 
 > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。
 > 
-> - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md/arkts-web-webview.md)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
+> - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。
 > 
 > - 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt;
 > 
@@ -382,7 +382,7 @@ OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | [TouchEvent](../arkts-components/arkts-arkui-touchevent-i.md) | 是 | 触摸事件。 |
+| event | TouchEvent | 是 | 触摸事件。 |
 
 **返回值：**
 
@@ -458,7 +458,7 @@ update(arg: T): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arg | T | 是 | 用于更新BuilderNode的参数，和[build](arkts-arkui-buildernode-c.md)调用时传入的参数类型一致。 |
+| arg | T | 是 | 用于更新BuilderNode的参数，和[build](#BuilderNode)调用时传入的参数类型一致。 |
 
 ## updateConfiguration
 
@@ -467,7 +467,7 @@ updateConfiguration(): void
 ```
 
 传递系统环境变化事件，触发节点的全量更新。系统环境变化的相关信息请参见  
-[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md/arkts-ability-app-ability-configuration-configuration-i.md)。
+[@ohos.app.ability.Configuration (环境变量)](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-configuration-configuration-i.md#Configuration)。
 
 > **说明：**
 > 
